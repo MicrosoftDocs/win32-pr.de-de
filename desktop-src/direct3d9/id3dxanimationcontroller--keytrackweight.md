@@ -1,7 +1,7 @@
 ---
-description: Legt einen Ereignis Schlüssel fest, mit dem die Gewichtung eines Animations Titels geändert wird. Die Gewichtung wird als Multiplikator verwendet, wenn mehrere Titel zusammen kombiniert werden.
+description: Legt einen Ereignisschlüssel fest, der die Gewichtung einer Animationsspur ändert. Die Gewichtung wird als Multiplikator verwendet, wenn mehrere Spuren kombiniert werden.
 ms.assetid: fb2859de-9e77-49dd-be48-a50e22e2fc3a
-title: 'ID3DXAnimationController:: keytrackweight-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::KeyTrackWeight-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 74f5e38392f6b4ac192f02b9d85421c8357a16ee
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 16bd95c675486b17f3071a279a01916e3db557c598830282f4d5b288dbc1f0fa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026630"
 ---
-# <a name="id3dxanimationcontrollerkeytrackweight-method"></a>ID3DXAnimationController:: keytrackweight-Methode
+# <a name="id3dxanimationcontrollerkeytrackweight-method"></a>ID3DXAnimationController::KeyTrackWeight-Methode
 
-Legt einen Ereignis Schlüssel fest, mit dem die Gewichtung eines Animations Titels geändert wird. Die Gewichtung wird als Multiplikator verwendet, wenn mehrere Titel zusammen kombiniert werden.
+Legt einen Ereignisschlüssel fest, der die Gewichtung einer Animationsspur ändert. Die Gewichtung wird als Multiplikator verwendet, wenn mehrere Spuren kombiniert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ D3DXEVENTHANDLE KeyTrackWeight(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner des zu ändernden Titels.
+Bezeichner der zu ändernden Spur.
 
 </dd> <dt>
 
-*Newweight* \[ in\]
+*NewWeight* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Neue Gewichtung des Titels.
+Neue Gewichtung der Spur.
 
 </dd> <dt>
 
-*StartTime* \[ in\]
+*StartTime* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Globaler Zeit Schlüssel. Gibt die globale Zeit an, zu der die Änderung stattfindet.
+Globaler Zeitschlüssel. Gibt die globale Zeit an, zu der die Änderung stattfindet.
 
 </dd> <dt>
 
-*Dauer* \[ in\]
+*Dauer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Übergangszeit, die angibt, wie lange der reibungslose Übergang dauert.
+Übergangszeit, die angibt, wie lange der reibungslose Übergang dauern wird.
 
 </dd> <dt>
 
-*Übergang* \[ in\]
+*Übergang* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXTRANSITION- \_ Typ**](./d3dxtransition-type.md)**
+Typ: **[ **D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md)**
 
-Gibt den für den Übergang zwischen Gewichtungen verwendeten transitionstyp an. Siehe [**D3DXTRANSITION \_ Type**](./d3dxtransition-type.md).
+Gibt den Übergangstyp an, der für den Übergang zwischen Gewichtungen verwendet wird. Siehe [**D3DXTRANSITION \_ TYPE**](./d3dxtransition-type.md).
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Gibt den für den Übergang zwischen Gewichtungen verwendeten transitionstyp an.
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für das Priority Blend-Ereignis. **Null** wird zurückgegeben, wenn mindestens ein Eingabeparameter ungültig ist oder kein freies Ereignis verfügbar ist.
+Ereignishand handle für das Prioritätsmischungsereignis. **NULL** wird zurückgegeben, wenn mindestens einer der Eingabeparameter ungültig ist oder kein kostenloses Ereignis verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Gewichtung wird wie ein Multiplikator verwendet, um zu bestimmen, wie viel von dieser Spur mit anderen Spuren verknüpft werden muss.
+Die Gewichtung wird wie ein Multiplikator verwendet, um zu bestimmen, wie viel dieser Spur mit anderen Spuren kombiniert werden soll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Die Gewichtung wird wie ein Multiplikator verwendet, um zu bestimmen, wie viel v
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

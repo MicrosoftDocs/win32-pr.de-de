@@ -3,23 +3,23 @@ title: Die OnPaint-Methode
 description: Die OnPaint-Methode
 ms.assetid: 4b335362-4430-4b05-8aea-7de8df9cc91f
 keywords:
-- Windows Media Player-Plug-ins, OnPaint-Methode
-- Plug-ins, OnPaint-Methode
-- Benutzeroberflächen-Plug-ins, OnPaint-Methode
-- UI-Plug-ins, OnPaint-Methode
+- Windows Media Player-Plug-Ins, OnPaint-Methode
+- Plug-Ins, OnPaint-Methode
+- Benutzeroberflächen-Plug-Ins, OnPaint-Methode
+- Benutzeroberflächen-Plug-Ins, OnPaint-Methode
 - OnPaint-Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22641c34bb2edab30c1bf97011e893bc1d9d44a6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: aa5e121cdaeac1c7589e58b1613a8d25bdff4f44f6db2375bcbdc34da20929e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001950"
 ---
 # <a name="the-onpaint-method"></a>Die OnPaint-Methode
 
-Die OnPaint-Methode wird immer dann aufgerufen, wenn sich das Plug-in-Fenster selbst zeichnen soll. Dies tritt auf, wenn das Plug-in-Fenster eine WM \_ Paint-Meldung empfängt, die der OnPaint-Methode in der zuvor beschriebenen Meldungs Zuordnung zugeordnet ist. Der Assistent stellt eine Implementierung dieser Methode bereit, die den Hintergrund schwarz zeichnet und den Namen des Plug-ins im Plug-in-Fenster platziert. Die einzige Änderung, die für das Such Benutzeroberflächen-Plug-in erforderlich ist, ist das Entfernen des Codes, in dem der Text angezeigt wird.
+Die OnPaint-Methode wird immer dann aufgerufen, wenn das Plug-In-Fenster sich selbst zeichnen soll. Dies tritt auf, wenn das Plug-In-Fenster eine WM PAINT-Nachricht empfängt, die der OnPaint-Methode in der zuvor beschriebenen \_ Meldungszuordnung zugeordnet ist. Der Assistent bietet eine Implementierung dieser Methode, die den Hintergrund schwarz zeichnet und den Namen des Plug-Ins im Plug-In-Fenster platziert. Die einzige Änderung, die für das Search UI-Plug-In erforderlich ist, ist das Entfernen des Codes, der den Text anzeigt.
 
 Der folgende Code wird verwendet, um diese Methode zu implementieren:
 
@@ -55,12 +55,12 @@ LRESULT OnPaint(UINT nMsg, WPARAM wParam,
 
 <dl> <dt>
 
-[**Implementieren von cpluginwindow**](implementing-cpluginwindow.md)
+[**Implementieren von CPluginWindow**](implementing-cpluginwindow.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

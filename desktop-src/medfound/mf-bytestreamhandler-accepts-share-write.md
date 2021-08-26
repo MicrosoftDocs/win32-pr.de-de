@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob ein Byte Strom Handler einen Bytestream verwenden kann, der zum Schreiben durch einen anderen Thread geöffnet ist.
+description: Gibt an, ob ein Bytestreamhandler einen Bytestream verwenden kann, der zum Schreiben durch einen anderen Thread geöffnet wird.
 ms.assetid: d9d97880-a563-420c-b598-c3ebd1ae8b74
-title: MF_BYTESTREAMHANDLER_ACCEPTS_SHARE_WRITE-Attribut (mspdl. h)
+title: MF_BYTESTREAMHANDLER_ACCEPTS_SHARE_WRITE -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b46a3402585cbce9c1d1464ceb9fb161527673c5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89ea9b6cf1d126fca44066e7d3292227ecf0ce01f3419b377b6d66b67845f990
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941030"
 ---
-# <a name="mf_bytestreamhandler_accepts_share_write-attribute"></a>MF \_ bytestreamhandler \_ akzeptiert \_ Freigabe- \_ Schreib Attribute
+# <a name="mf_bytestreamhandler_accepts_share_write-attribute"></a>MF \_ BYTESTREAMHANDLER \_ AKZEPTIERT SHARE \_ \_ WRITE-Attribut
 
-Gibt an, ob ein Byte Strom Handler einen Bytestream verwenden kann, der zum Schreiben durch einen anderen Thread geöffnet ist.
+Gibt an, ob ein Bytestreamhandler einen Bytestream verwenden kann, der zum Schreiben durch einen anderen Thread geöffnet wird.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,21 +21,21 @@ Gibt an, ob ein Byte Strom Handler einen Bytestream verwenden kann, der zum Schr
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bytestreamhandler können dieses Attribut unterstützen. Um das Attribut zu erhalten oder festzulegen, Fragen Sie zuerst den bytestreamhandler für die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle ab. Anschließend wird [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) oder [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32) aufgerufen.
+Bytestreamhandler können dieses Attribut unterstützen. Um das Attribut zu erhalten oder fest zu legen, fragen Sie zunächst den Bytestreamhandler für die [**BENUTZERDEFINIERTEAttributes-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) ab. Rufen Sie [**dann DIE ATTRIBUTEattribute::GetUINT32 oder**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) DIE ATTRIBUTE [**auf::SetUINT32.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-Wenn dieses Attribut **true** ist, bedeutet dies, dass der Byte Datenstrom Handler aus einem Stream lesen kann, während ein anderer Thread in denselben Stream schreibt. Wenn ein Stream zum Schreiben durch einen anderen Thread geöffnet wird, gibt die [**imfbytestream:: getfunktionalitäten**](/windows/desktop/api/mfobjects/nf-mfobjects-imfbytestream-getcapabilities) -Methode das **mfbytestream-freigabeflag für die \_ Freigabe \_** zurück.
+Wenn dieses Attribut **TRUE ist,** bedeutet dies, dass der Bytestreamhandler aus einem Stream lesen kann, während ein anderer Thread in den gleichen Stream schreibt. Wenn ein Stream für das Schreiben durch einen anderen Thread geöffnet wird, gibt die [**METHODE THREADSByteStream::GetCapabilities**](/windows/desktop/api/mfobjects/nf-mfobjects-imfbytestream-getcapabilities) das **MFBYTESTREAM \_ SHARE \_ WRITE-Flag** zurück.
 
-Dieses Attribut wirkt sich auf die Quell Auflösung aus. Wenn für einen Bytestream das **\_ \_ kennschreibflag für die mfbytestream-Freigabe** festgelegt ist, übergibt der [quellresolver](source-resolver.md) diesen Stream nicht an einen Byte Datenstrom-Handler, es sei denn, der Handler hat den MF \_ bytestreamhandler \_ akzeptiert das \_ \_ Attribut für Freigabe Schreibzugriff auf **true**
+Dieses Attribut wirkt sich auf die Quellauflösung aus. Wenn für einen Bytestream das **MFBYTESTREAM \_ SHARE \_ WRITE-Flag** festgelegt ist, über gibt der Quellre [resolver](source-resolver.md) diesen Stream nicht an einen Bytestreamhandler weiter, es sei denn, für den Handler ist das MF \_ BYTESTREAMHANDLER ACCEPTS SHARE WRITE-Attribut auf \_ \_ \_ **TRUE** festgelegt.
 
-Das **MF Bytestream- \_ Freigabe \_ Schreib** Flag ist ein Hinweis darauf, dass sich die Länge des Streams ändern kann, während der Handler aus ihm liest.
+Das **MFBYTESTREAM \_ SHARE \_ WRITE-Flag** ist ein Hinweis darauf, dass sich die Länge des Streams ändern kann, während der Handler daraus liest.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                     |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server 2008 \[ \| R2-Desktop-Apps\]<br/>                     |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -53,10 +53,10 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Schema Handler und Byte-Stream Handler](scheme-handlers-and-byte-stream-handlers.md)
+[Schemahandler und Byte-Stream Handler](scheme-handlers-and-byte-stream-handlers.md)
 </dt> </dl>
 
  

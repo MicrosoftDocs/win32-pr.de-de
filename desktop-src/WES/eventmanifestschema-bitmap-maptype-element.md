@@ -1,9 +1,9 @@
 ---
-title: Bitmap-Element (maptype)
-description: Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichen folgen Werte zuordnen.
+title: bitMap-Element (MapType)
+description: Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichenfolgenwerte zuordnen.
 ms.assetid: 23e636a1-4945-4515-941a-6a2403167da9
 keywords:
-- Bitmap-Element-Ereignisprotokoll
+- bitMap-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8d06910f3064fd8b51d090dd33e6735e35bd6177
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fe64dde4074cd8cab2d091d582a88552eb9c1377a632dc7692a0ab959fe11bff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032380"
 ---
-# <a name="bitmap-maptype-element"></a>Bitmap-Element (maptype)
+# <a name="bitmap-maptype-element"></a>bitMap-Element (MapType)
 
-Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichen folgen Werte zuordnen.
+Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichenfolgenwerte zuordnen.
 
 ``` syntax
 <xs:element name="bitMap"
@@ -30,7 +30,7 @@ Definiert eine Liste von Name-Wert-Paaren, die Bitwerte und Zeichen folgen Werte
  />
 ```
 
-Das **Bitmap** -Element wird durch den komplexen [**maptype**](eventmanifestschema-maptype-complextype.md) -Typ definiert.
+Das **bitMap-Element** wird durch den komplexen [**MapType-Typ**](eventmanifestschema-maptype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Bitmap** -Element wird durch den komplexen [**maptype**](eventmanifestsche
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Bitmap** -Element wird durch den komplexen [**maptype**](eventmanifestsche
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Zuordnungen (ProviderType)**](eventmanifestschema-maps-providertype-element.md)
+[**maps (ProviderType)**](eventmanifestschema-maps-providertype-element.md)
 </dt> </dl>
 
  

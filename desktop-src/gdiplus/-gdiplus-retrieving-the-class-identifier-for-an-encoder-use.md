@@ -1,19 +1,19 @@
 ---
-description: Die Funktion getencoderclsid im folgenden Beispiel empfängt den MIME-Typ eines Encoders und gibt den Klassen Bezeichner (CLSID) dieses Encoders zurück.
+description: Die Funktion GetEncoderClsid im folgenden Beispiel empfängt den MIME-Typ eines Encoders und gibt den Klassenbezeichner (CLSID) dieses Encoders zurück.
 ms.assetid: f78dac7c-4bc1-4614-8a26-d99d5619399a
-title: Abrufen des Klassen Bezeichners für einen Encoder
+title: Abrufen des Klassenbezeichners für einen Encoder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a03193bfa9f2e86e92f66a649280828f12d4807c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a40c31c7ad997ed3e7525ff247019f6a41c681b9523dc523105bd5ba6c7ca6d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014710"
 ---
-# <a name="retrieving-the-class-identifier-for-an-encoder"></a>Abrufen des Klassen Bezeichners für einen Encoder
+# <a name="retrieving-the-class-identifier-for-an-encoder"></a>Abrufen des Klassenbezeichners für einen Encoder
 
-Die Funktion getencoderclsid im folgenden Beispiel empfängt den MIME-Typ eines Encoders und gibt den Klassen Bezeichner (**CLSID**) dieses Encoders zurück. Die MIME-Typen der in Windows GDI+ integrierten Codierern lauten wie folgt:
+Die Funktion GetEncoderClsid im folgenden Beispiel empfängt den MIME-Typ eines Encoders und gibt den Klassenbezeichner (**CLSID**) dieses Encoders zurück. Die MIME-Typen der in Windows GDI+ sind wie folgt:
 
 -   image/bmp
 -   image/jpeg
@@ -21,7 +21,7 @@ Die Funktion getencoderclsid im folgenden Beispiel empfängt den MIME-Typ eines 
 -   image/tiff
 -   image/png
 
-Die-Funktion ruft [**GetImageEncoders**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimageencoders) auf, um ein Array von [**ImageCodecInfo**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-imagecodecinfo) -Objekten zu erhalten. Wenn eines der **ImageCodecInfo** -Objekte in diesem Array den angeforderten Encoder darstellt, gibt die Funktion den Index des **ImageCodecInfo** -Objekts zurück und kopiert die **CLSID** in die Variable, auf die von **pclsid** verwiesen wird. Wenn die Funktion fehlschlägt, wird – 1 zurückgegeben.
+Die Funktion ruft [**GetImageEncoders auf,**](/windows/desktop/api/Gdiplusimagecodec/nf-gdiplusimagecodec-getimageencoders) um ein Array von [**ImageCodecInfo-Objekten zu**](/windows/win32/api/gdiplusimaging/nl-gdiplusimaging-imagecodecinfo) erhalten. Wenn eines der **ImageCodecInfo-Objekte** in diesem Array den angeforderten Encoder darstellt, gibt die Funktion den Index des **ImageCodecInfo-Objekts** zurück und kopiert die **CLSID** in die Variable, auf die **pClsid zeigt.** Wenn die Funktion fehlschlägt, wird –1 zurückgegeben.
 
 
 ```
@@ -59,7 +59,7 @@ int GetEncoderClsid(const WCHAR* format, CLSID* pClsid)
 
 
 
-Die folgende Konsolenanwendung ruft die getencoderclsid-Funktion auf, um die **CLSID** des PNG-Encoders zu ermitteln:
+Die folgende Konsolenanwendung ruft die GetEncoderClsid-Funktion auf, um die **CLSID** des PNG-Encoders zu bestimmen:
 
 
 ```
@@ -102,7 +102,7 @@ INT main()
 
 
 
-Wenn Sie die vorherige Konsolenanwendung ausführen, erhalten Sie eine Ausgabe wie die folgende:
+Wenn Sie die vorherige Konsolenanwendung ausführen, erhalten Sie eine Ausgabe ähnlich der folgenden:
 
 
 ```

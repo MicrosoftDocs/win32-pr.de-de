@@ -1,7 +1,7 @@
 ---
-description: Die Rollen Sammlung bezieht sich immer auf ein Objekt in der Anwendungs Auflistung. Sie enthält ein-Objekt für jede Rolle, die der Anwendung zugewiesen ist, mit der Sie verknüpft ist.
+description: Die Roles-Auflistung ist immer mit einem Objekt in der Anwendungssammlung verknüpft. Sie enthält ein -Objekt für jede Rolle, die der Anwendung zugewiesen ist, mit der sie verknüpft ist.
 ms.assetid: 87f39c2a-ad66-4390-9220-06751dcebd95
-title: Rollen Sammlung
+title: Rollensammlung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,39 +12,39 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: f676a53f5fe54e42ca2a489ad834b9c91e4e0ef5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 133477d82f718b992a628bde8af58f22d8d50a9e4974816c7c8f56be7ba8e33f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120029470"
 ---
-# <a name="roles-collection"></a>Rollen Sammlung
+# <a name="roles-collection"></a>Rollensammlung
 
-Die **Rollen** Sammlung bezieht sich immer auf ein Objekt in der [**Anwendungs**](applications.md) Auflistung. Sie enthält ein-Objekt für jede Rolle, die der Anwendung zugewiesen ist, mit der Sie verknüpft ist.
+Die **Roles-Auflistung** ist immer mit einem Objekt in der [**Anwendungssammlung**](applications.md) verknüpft. Sie enthält ein -Objekt für jede Rolle, die der Anwendung zugewiesen ist, mit der sie verknüpft ist.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts.
+Diese Sammlung unterstützt die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **Rollen** Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **Roles-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
--   [**Usersinrole**](usersinrole.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
+-   [**UsersInRole**](usersinrole.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Anwendungen**](applications.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
 -   [Beschreibung](#description)
 -   [Name](#name)
@@ -56,10 +56,10 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 | Eingabe | Wert |
 |----------------|----------------------------|
 | BESCHREIBUNG    | Eine Beschreibung der Rolle. |
-| Access         | ReadWrite                  |
+| Zugriff         | ReadWrite                  |
 | type           | String                     |
 | Standard        | ""                         |
-| Minimalsystem | Windows 2000               |
+| Mindestsystem | Windows 2000               |
 
 
 
@@ -71,11 +71,11 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Der Name der Rolle. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) -oder [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | WriteOnce                                                                                                                                                                                                                                                   |
+| BESCHREIBUNG    | Der Name der Rolle. Zusätzliche Leerzeichen am Anfang und Ende der Zeichenfolge werden entfernt. Diese Eigenschaft wird zurückgegeben, wenn die [**Key-**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) oder [**Name-Eigenschaftsmethode**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | WriteOnce                                                                                                                                                                                                                                                   |
 | type           | String                                                                                                                                                                                                                                                      |
 | Standard        | "Neue Rolle"                                                                                                                                                                                                                                                  |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                                                |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                                                |
 
 
 
@@ -85,7 +85,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

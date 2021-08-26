@@ -4,16 +4,16 @@ ms.assetid: 4dc77cfa-0cab-4055-9e11-f036e2d1dcca
 title: Benutzerdefinierte Dateiformate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 361dca97fcd34b30e3c29d6ba189ad26968d4fbb
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a478e7818701008c31d1d0c5a6e4924540ed818be19f7b50fe3ed278aa6f3ba6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998690"
 ---
 # <a name="custom-file-formats"></a>Benutzerdefinierte Dateiformate
 
-Wenn Sie einen benutzerdefinierten MUX-oder Datei Schreiber Filter haben, der ihr eigenes Dateiformat unterstützt, können Sie die CLSID als ersten Parameter der [**ICaptureGraphBuilder2:: setoutputfilename**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) -Methode angeben:
+Wenn Sie über einen benutzerdefinierten Mux- oder Dateiwriterfilter verfügen, der Ihr eigenes Dateiformat unterstützt, können Sie die CLSID als ersten Parameter der [**ICaptureGraphBuilder2::SetOutputFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename) angeben:
 
 
 ```C++
@@ -25,7 +25,7 @@ hr = pBuild->SetOutputFileName(&CLSID_MyCustomMuxFilter,
 
 
 
-Weitere Informationen zu dieser Verwendung finden Sie unter [**ICaptureGraphBuilder2:: setoutputfilename**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename).
+Weitere Informationen zu dieser Verwendung finden Sie unter [**ICaptureGraphBuilder2::SetOutputFileName**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setoutputfilename).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

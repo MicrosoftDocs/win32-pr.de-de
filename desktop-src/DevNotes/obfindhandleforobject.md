@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Objekt Handle für das angegebene Objekt ab, das dem angegebenen Prozess zugeordnet ist.
+description: Ruft ein Objekthandle für das angegebene Objekt ab, das dem angegebenen Prozess zugeordnet ist.
 ms.assetid: c7b371c3-02c0-4137-ad9d-dd07a74fe2a5
-title: Obfindlenker forobject-Funktion (ntosp. h)
+title: ObFindHandleForObject-Funktion (Ntosp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - Ntoskrnl.lib
 - Ntoskrnl.dll
-ms.openlocfilehash: 7ba87d05d4264f3bb160bae16053a338e38e2145
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 481def34e3e8656205eefe96058fe3c7558d2c898c7e05ddc78f9a67435c507e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984150"
 ---
-# <a name="obfindhandleforobject-function"></a>Obfindlenker forobject-Funktion
+# <a name="obfindhandleforobject-function"></a>ObFindHandleForObject-Funktion
 
-\[Diese Funktion ist veraltet und kann in zukünftigen Versionen von Windows geändert werden oder nicht verfügbar sein. Vermeiden Sie die Verwendung dieser Funktion.\]
+\[Diese Funktion ist veraltet und kann in zukünftigen Versionen von Windows geändert oder nicht verfügbar sein. Vermeiden Sie die Verwendung dieser Funktion.\]
 
-Ruft ein Objekt Handle für das angegebene Objekt ab, das dem angegebenen Prozess zugeordnet ist.
+Ruft ein Objekthandle für das angegebene Objekt ab, das dem angegebenen Prozess zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,48 +46,48 @@ BOOLEAN WINAPI ObFindHandleForObject(
 
 <dl> <dt>
 
-*Prozess* \[ in\]
+*Prozess* \[ In\]
 </dt> <dd>
 
-Der Prozess. Dieses Handle wird von der **iogetcurrentprocess** -oder der **psgetcurrentprocess** -Funktion zurückgegeben.
+Der Prozess. Dieses Handle wird von der **IoGetCurrentProcess-** oder **PsGetCurrentProcess-Funktion** zurückgegeben.
 
 </dd> <dt>
 
-*Objekt* \[ in\]
+*Objekt* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf das-Objekt.
+Ein Zeiger auf das -Objekt.
 
 </dd> <dt>
 
-*"Reserved1"* \[ in, optional\]
+*Reserviert1* \[ in, optional\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*"Reserved2"* \[ in, optional\]
+*Reserviert2* \[ in, optional\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*Handle* \[ vorgenommen\]
+*Handle* \[ out\]
 </dt> <dd>
 
-Das Objekt handle.
+Das Objekthandle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Funktion gibt **true** zurück, wenn eine Entsprechung gefunden wird, andernfalls **false** .
+Die Funktion gibt **TRUE** zurück, wenn eine Übereinstimmung gefunden wird, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist in Ntoskrnl.exe verfügbar und kann nur aus dem Kernel Modus aufgerufen werden. Die entsprechende Import Bibliothek ist über das Windows-Treiberkit (WDK) verfügbar.
+Diese Funktion ist in Ntoskrnl.exe verfügbar und kann nur im Kernelmodus aufgerufen werden. Die entsprechende Importbibliothek ist über das Windows Driver Kit (WDK) verfügbar.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,10 +95,10 @@ Diese Funktion ist in Ntoskrnl.exe verfügbar und kann nur aus dem Kernel Modus 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Nzu SP. h</dt> </dl>      |
-| Bibliothek<br/>                  | <dl> <dt>Nzu-nl. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Ntosp.h</dt> </dl>      |
+| Bibliothek<br/>                  | <dl> <dt>Ntoskrnl.lib</dt> </dl> |
 
 
 

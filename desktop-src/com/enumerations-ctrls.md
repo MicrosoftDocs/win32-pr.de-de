@@ -1,25 +1,25 @@
 ---
-title: Enumerationen (strukturierter Speicher)
-description: Die folgenden Enumerationen werden verwendet, um com-Standardobjekte und-Eigenschaften Seiten zu erstellen.
+title: Enumerationen (structured Storage)
+description: Die folgenden Enumerationen werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 ms.assetid: 999b014e-9671-4c0e-a546-c1fb0955b3d3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c81f75861f163349ab9167dceaf3c8504abf4b72
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: adaf1294903f806c535b2f461eb39cf2e2b77d0f1e947ad924bac6047dec7ea7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030010"
 ---
-# <a name="enumerations-structured-storage"></a>Enumerationen (strukturierter Speicher)
+# <a name="enumerations-structured-storage"></a>Enumerationen (structured Storage)
 
-Die folgenden Enumerationen werden verwendet, um com-Standardobjekte und-Eigenschaften Seiten zu erstellen.
+Die folgenden Enumerationen werden verwendet, um COM-Standardobjekte und Eigenschaftenseiten zu erstellen.
 
--   [**Guidkind**](/windows/win32/api/ocidl/ne-ocidl-guidkind)
--   [**Keymodifier**](/previous-versions/windows/desktop/legacy/ms683763(v=vs.85))
--   [**Pictureattribute**](/windows/win32/api/ocidl/ne-ocidl-pictureattributes)
--   [**Pointerinaktiv**](/windows/win32/api/ocidl/ne-ocidl-pointerinactive)
--   [**Qacontainerflags**](/windows/win32/api/ocidl/ne-ocidl-qacontainerflags)
+-   [**GUIDKIND**](/windows/win32/api/ocidl/ne-ocidl-guidkind)
+-   [**KEYMODIFIERS**](/previous-versions/windows/desktop/legacy/ms683763(v=vs.85))
+-   [**PICTUREATTRIBUTES**](/windows/win32/api/ocidl/ne-ocidl-pictureattributes)
+-   [**POINTRINACTIVE**](/windows/win32/api/ocidl/ne-ocidl-pointerinactive)
+-   [**QACONTAINERFLAGS**](/windows/win32/api/ocidl/ne-ocidl-qacontainerflags)
 
  
 

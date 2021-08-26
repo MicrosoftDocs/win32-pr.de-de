@@ -1,11 +1,11 @@
 ---
 title: ISearchDesktop ExecuteSQLQuery-Methode
-description: Nimmt einen Zeiger auf eine Zeichenfolge, die eine Structured Query Language (SQL)-Abfrage und deren Attribute enthält, und gibt einen Zeiger auf die Rückgabe Menge zurück.
+description: Verwendet einen Zeiger auf eine Zeichenfolge, die eine strukturierte Abfragesprache-Abfrage (SQL) und deren Attribute enthält, und gibt einen Zeiger auf den Rückgabesatz zurück.
 ms.assetid: df3f473b-0bee-4035-abf8-dbe5249ef0ed
 keywords:
-- ExecuteSQLQuery-Methode ältere Windows-Umgebungs Features
-- ExecuteSQLQuery-Methode Legacy-Windows-Umgebungs Features, ISearchDesktop-Schnittstelle
-- ISearchDesktop Interface, ältere Windows-Umgebungs Funktionen, ExecuteSQLQuery-Methode
+- Funktionen der Legacy-Windows ExecuteSQLQuery-Methode
+- ExecuteSQLQuery-Methode– Legacy Windows Umgebungsfeatures, ISearchDesktop-Schnittstelle
+- ISearchDesktop-Schnittstelle Legacy Windows Umgebungsfeatures, ExecuteSQLQuery-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,28 +15,28 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f0b13ff361d07f99efe1366e2201d610eac10523
-ms.sourcegitcommit: b9a94cea8f83153214af4c09509e1cc61a1bb616
+ms.openlocfilehash: ec436a427958988e7605673b12b3fd8dc6fd3e1a54ab61cc5f542f0494c34923
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "103724011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014290"
 ---
-# <a name="isearchdesktopexecutesqlquery-method"></a>ISearchDesktop:: ExecuteSQLQuery-Methode
+# <a name="isearchdesktopexecutesqlquery-method"></a>ISearchDesktop::ExecuteSQLQuery-Methode
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
-Nimmt einen Zeiger auf eine Zeichenfolge, die eine Structured Query Language (SQL)-Abfrage und deren Attribute enthält, und gibt einen Zeiger auf die Rückgabe Menge zurück.
+Verwendet einen Zeiger auf eine Zeichenfolge, die eine strukturierte Abfragesprache-Abfrage (SQL) und deren Attribute enthält, und gibt einen Zeiger auf den Rückgabesatz zurück.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT ExecuteSQLQuery(
-  [in]  LPCWSTR *pdwAttributes,
-  [in]  LPCWSTR pwszURL,
-  [out] ppidUrl *ppidUrl
+  [in]  LPCWSTR *pdwAttributes,
+  [in]  LPCWSTR pwszURL,
+  [out] ppidUrl *ppidUrl
 );
 ```
 
@@ -46,7 +46,7 @@ HRESULT ExecuteSQLQuery(
 
 <dl> <dt>
 
-*pdwattributes* \[ in\]
+*pdwAttributes* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR \***
@@ -55,21 +55,21 @@ Eine Zeichenfolge, die die anderen Attribute für die Abfrage enthält.
 
 </dd> <dt>
 
-*pwszurl* \[ in\]
+*pwszURL* \[ In\]
 </dt> <dd>
 
 Typ: **LPCWSTR**
 
-Eine Zeichenfolge, die die SQL-Abfrage enthält.
+Eine Zeichenfolge, die die SQL enthält.
 
 </dd> <dt>
 
-*ppidurl* \[ vorgenommen\]
+*ppidUrl* \[ out\]
 </dt> <dd>
 
-Typ: **ppidurl \***
+Typ: **ppidUrl \***
 
-Wenn diese Methode erfolgreich zurückgegeben wird, enthält Sie einen Zeiger auf das zurückgegebene Recordset.
+Enthält nach erfolgreicher Rückgabe dieser Methode einen Zeiger auf das zurückgegebene Recordset.
 
 </dd> </dl>
 
@@ -77,11 +77,11 @@ Wenn diese Methode erfolgreich zurückgegeben wird, enthält Sie einen Zeiger au
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
- 
+ 
 
- 
+ 
 
 
 

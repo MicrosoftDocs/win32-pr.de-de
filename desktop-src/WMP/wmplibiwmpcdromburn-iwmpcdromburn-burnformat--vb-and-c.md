@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn burnformat (Eigenschaft)
-description: Die burnformat-Eigenschaft ruft einen Wert ab, der den Typ der zu brennenden CD angibt.
+title: IWMPC über die burnFormat-Eigenschaft "BurnFormat"
+description: Die burnFormat-Eigenschaft ruft einen Wert ab, der den Typ der zu verwertenden CD angibt.
 ms.assetid: f60fcbd2-5d34-46f3-a2e2-29dac2ecf689
 keywords:
-- burnformat-Eigenschaften Fenster Media Player
-- burnformat-Eigenschaft, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, burnformat (Eigenschaft)
+- burnFormat-Eigenschaft Windows Media Player
+- burnFormat-Eigenschaft Windows Media Player , IWMPC über die Schnittstelle
+- IWMPC über die Schnittstelle Windows Media Player , burnFormat-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 17e379727376b1ce272a95cd77c688fa611b291a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93d5dc4ff27b3650ee37f16a7e90eb535ebe373401363f8c93bd16d09061b7a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000540"
 ---
-# <a name="iwmpcdromburnburnformat-property"></a>Iwmpcdromburn:: burnformat (Eigenschaft)
+# <a name="iwmpcdromburnburnformat-property"></a>IWMPC über die Eigenschaft"::burnFormat"
 
-Die **burnformat** -Eigenschaft ruft einen Wert ab, der den Typ der zu brennenden CD angibt.
+Die **burnFormat-Eigenschaft** ruft einen Wert ab, der den Typ der zu verwertenden CD angibt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,7 +49,7 @@ Public ReadOnly Property burnFormat As WMPBurnFormat
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **WMPLib. wmpburnformat** , bei dem es sich um einen Wert aus der **wmpburnformat** -Enumeration handelt, der den Typ der zu brennenden CD angibt.
+Ein **WMPLib.WMP EnumerationFormat,** das ein Wert aus der **WMP Enumeration Ist,** der den Typ der zu verwertenden CD angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,18 +59,18 @@ Ein **WMPLib. wmpburnformat** , bei dem es sich um einen Wert aus der **wmpburnf
 |----------------------|----------------------------------------------------------------------------------------------------------------|
 | Version<br/>   | Windows Media Player 11<br/>                                                                             |
 | Namespace<br/> | **WMPLib**<br/>                                                                                          |
-| Assembly<br/>  | <dl> <dt>Interop. WMPLib (Interop.WMPLib.dll)</dt> </dl> |
+| Assembly<br/>  | <dl> <dt>Interop.WMPLib (Interop.WMPLib.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCorpora Überl-Schnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Wmpburnformat**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnformat)
+[**WMP Auswendformat**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnformat)
 </dt> </dl>
 
  

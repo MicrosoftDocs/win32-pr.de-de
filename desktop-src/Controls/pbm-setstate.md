@@ -1,9 +1,9 @@
 ---
-title: PBM_SETSTATE Meldung (kommstrg. h)
+title: PBM_SETSTATE Meldung (Commctrl.h)
 description: Legt den Status der Statusanzeige fest.
 ms.assetid: 4626f334-db74-4618-8fc7-e6f21c88ca19
 keywords:
-- Windows-Steuerelemente für PBM_SETSTATE Meldung
+- PBM_SETSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c91e94bcc909957264eff776e56d3580b2c36ad
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 794006517eaa23789f3a25425b1213fede7f8dde9893587def02ebc9605b28f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986060"
 ---
-# <a name="pbm_setstate-message"></a>PBM- \_ SetState-Nachricht
+# <a name="pbm_setstate-message"></a>PBM \_ SETSTATE-Nachricht
 
 Legt den Status der Statusanzeige fest.
 
@@ -38,9 +38,9 @@ Status der Statusanzeige, die festgelegt wird. Einer der folgenden Werte.
 
 | Wert                                                                                                                                                   | Bedeutung                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| <span id="PBST_NORMAL"></span><span id="pbst_normal"></span><dl> <dt>**PBST \_ Normal**</dt> </dl> | Läuft.<br/> |
-| <span id="PBST_ERROR"></span><span id="pbst_error"></span><dl> <dt>**PBST- \_ Fehler**</dt> </dl>    | Fehler.<br/>       |
-| <span id="PBST_PAUSED"></span><span id="pbst_paused"></span><dl> <dt>**PBST \_ angehalten**</dt> </dl> | Angehalten.<br/>      |
+| <span id="PBST_NORMAL"></span><span id="pbst_normal"></span><dl> <dt>**PBST \_ NORMAL**</dt> </dl> | Läuft.<br/> |
+| <span id="PBST_ERROR"></span><span id="pbst_error"></span><dl> <dt>**\_PBST-FEHLER**</dt> </dl>    | Fehler.<br/>       |
+| <span id="PBST_PAUSED"></span><span id="pbst_paused"></span><dl> <dt>**PBST \_ ANGEHALTEN**</dt> </dl> | Angehalten.<br/>      |
 
 
 
@@ -61,9 +61,9 @@ Gibt den vorherigen Zustand zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

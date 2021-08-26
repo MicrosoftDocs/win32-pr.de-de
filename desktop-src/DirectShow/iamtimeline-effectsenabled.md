@@ -1,7 +1,7 @@
 ---
-description: Die effectsenabled-Methode bestimmt, ob Effekte aktiviert sind. Wenn Effekte deaktiviert sind, verbleiben Sie in der Zeitachse, werden jedoch nicht gerendert.
+description: Die EffectsEnabled-Methode bestimmt, ob Effekte aktiviert sind. Wenn Effekte deaktiviert sind, verbleiben sie auf der Zeitachse, werden aber nicht gerendert.
 ms.assetid: fd8bb2aa-9c10-4a85-9e9d-1b342fbce03b
-title: 'Iamtimeline:: effectsenabled-Methode (qedit. h)'
+title: IAMTimeline::EffectsEnabled-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: d988e8a4c10dc6dba52269c6729b8d7fea1f090e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e63561c62f3cbaf7a3a257179167e657ee4d10c6206b6d74062039362b272aef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905280"
 ---
-# <a name="iamtimelineeffectsenabled-method"></a>Iamtimeline:: effectsenabled-Methode
+# <a name="iamtimelineeffectsenabled-method"></a>IAMTimeline::EffectsEnabled-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `EffectsEnabled` Methode bestimmt, ob Effekte aktiviert sind. Wenn Effekte deaktiviert sind, verbleiben Sie in der Zeitachse, werden jedoch nicht gerendert.
+Die `EffectsEnabled` -Methode bestimmt, ob Effekte aktiviert sind. Wenn Effekte deaktiviert sind, verbleiben sie auf der Zeitachse, werden aber nicht gerendert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT EffectsEnabled(
 
 <dl> <dt>
 
-*pfaktivierte* 
+*pfEnabled* 
 </dt> <dd>
 
-Empfängt einen booleschen Wert, der angibt, ob Effekte aktiviert sind. **True** gibt an, dass Effekte aktiviert sind. **False** gibt an, dass Effekte deaktiviert werden.
+Empfängt einen booleschen Wert, der angibt, ob Effekte aktiviert sind. True **gibt an,** dass Effekte aktiviert sind. False **gibt an,** dass Effekte deaktiviert sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,10 +83,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iamtimeline-Schnittstelle**](iamtimeline.md)
+[**IAMTimeline-Schnittstelle**](iamtimeline.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

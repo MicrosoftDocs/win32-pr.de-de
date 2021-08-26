@@ -1,7 +1,7 @@
 ---
-description: Die checkinputtype-Methode überprüft, ob ein angegebener Medientyp für die Eingabe zulässig ist.
+description: Die CheckInputType-Methode überprüft, ob ein angegebener Medientyp für die Eingabe akzeptabel ist.
 ms.assetid: 11f156f7-add2-45be-a0d3-05d21f596b89
-title: Ctransformfilter. checkinputtype-Methode (Transfrm. h)
+title: CTransformFilter.CheckInputType-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 63c48a0502ee074b0940f85386dca0619a3ad12d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6ef410ac8d96160b39ca9b7103e5125be8619169ba6b287a32b8769e57a0cbf4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053620"
 ---
-# <a name="ctransformfiltercheckinputtype-method"></a>Ctransformfilter. checkinputtype-Methode
+# <a name="ctransformfiltercheckinputtype-method"></a>CTransformFilter.CheckInputType-Methode
 
-Die- `CheckInputType` Methode überprüft, ob ein angegebener Medientyp für die Eingabe zulässig ist.
+Die `CheckInputType` -Methode überprüft, ob ein angegebener Medientyp für die Eingabe akzeptabel ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ virtual HRESULT CheckInputType(
 
 <dl> <dt>
 
-*MTiN* 
+*Mtin* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                              |
 |------------------------------------------------------------------------------------------------------------|------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Der Medientyp ist akzeptabel.<br/>     |
-| <dl> <dt>**VFW \_ E- \_ Typ \_ nicht \_ akzeptiert**</dt> </dl> | Der Medientyp ist nicht zulässig.<br/> |
+| <dl> <dt>**VFW \_ \_ E-TYP \_ NICHT \_ AKZEPTIERT**</dt> </dl> | Der Medientyp ist nicht akzeptabel.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss von der abgeleiteten Klasse implementiert werden. Gibt S \_ OK zurück, wenn das vorgeschlagene Eingabeformat zulässig ist, andernfalls einen Fehlercode.
+Die abgeleitete Klasse muss diese Methode implementieren. Geben Sie S \_ OK zurück, wenn das vorgeschlagene Eingabeformat akzeptabel ist, andernfalls ein Fehlercode.
 
-Diese Methode muss nicht überprüfen, ob das Eingabeformat mit dem Ausgabeformat (sofern vorhanden) kompatibel ist. Die Eingabe-PIN überprüft dies durch Aufrufen der [**checktransform**](ctransformfilter-checktransform.md) -Methode.
+Diese Methode muss nicht überprüfen, ob das Eingabeformat mit dem Ausgabeformat kompatibel ist (sofern verfügbar). Der Eingabepin überprüft dies durch Aufrufen der [**CheckTransform-Methode.**](ctransformfilter-checktransform.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Diese Methode muss nicht überprüfen, ob das Eingabeformat mit dem Ausgabeforma
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Diese Methode muss nicht überprüfen, ob das Eingabeformat mit dem Ausgabeforma
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

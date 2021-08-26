@@ -1,15 +1,15 @@
 ---
 description: AppInit_DLLs in Windows 7 und Windows Server 2008 R2
 ms.assetid: 6d1f9703-6dc9-4fdc-b52f-e6bb60a2fe8d
-title: AppInit_DLLs unter Windows 7
+title: AppInit_DLLs in Windows 7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4820fcb9840bbec139ff78f3c6cc082b2dca4eeb
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8741039952b0ea15d32b19bc48d4197ea13751bc492ff82fc8e67b1662d0b682
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108088708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031070"
 ---
 # <a name="appinit_dlls-in-windows-7-and-windows-server-2008-r2"></a>\_AppInit-DLLs in Windows 7 und Windows Server 2008 R2
 
@@ -26,10 +26,10 @@ ms.locfileid: "108088708"
 
 
 
-## <a name="feature-impact"></a>Auswirkung von Features
+## <a name="feature-impact"></a>Auswirkungen auf Features
 
- **Schweregrad:** Niedrig  
-**Häufigkeit** – Niedrig  
+ **Schweregrad –** Niedrig  
+**Häufigkeit** : Niedrig  
 
 
 
@@ -37,11 +37,11 @@ ms.locfileid: "108088708"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-AppInit-DLLs sind ein Mechanismus, mit dem eine beliebige Liste von DLLs in jeden Benutzermodusprozess im \_ System geladen werden kann. Microsoft ändert die AppInit-DLLs in Windows 7 und Windows Server 2008 R2, um eine neue Codesignaturanforderung hinzuzufügen. Dies hilft, die Zuverlässigkeit und Leistung des Systems zu verbessern und den Einblick in den Ursprung der Software zu verbessern.
+\_AppInit-DLLs sind ein Mechanismus, mit dem eine beliebige Liste von DLLs in jeden Benutzermodusprozess im System geladen werden kann. Microsoft ändert die AppInit-DLLs in Windows 7 und Windows Server 2008 R2, um eine neue Codesignaturanforderung hinzuzufügen. Dies trägt zur Verbesserung der Zuverlässigkeit und Leistung des Systems sowie zur Verbesserung des Einblicks in den Ursprung der Software bei.
 
 ## <a name="configuration"></a>Konfiguration
 
-Werte, die unter dem Windows-Schlüssel HKEY LOCAL MACHINE SOFTWARE Microsoft Windows NT CurrentVersion In der Registrierung gespeichert sind, bestimmen das Verhalten der \_ \_ \\ \\ \\ \\ \\ AppInit-DLLs-Infrastruktur. \_ In der folgenden Tabelle werden diese Registrierungswerte beschrieben:
+Werte, die unter dem Schlüssel HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows NT CurrentVersion Windows in der Registrierung gespeichert \_ \\ \\ \\ \\ \\ sind, bestimmen das Verhalten der AppInit-DLLs-Infrastruktur. \_ In der folgenden Tabelle werden diese Registrierungswerte beschrieben:
 
 
 
@@ -59,16 +59,16 @@ Werte, die unter dem Windows-Schlüssel HKEY LOCAL MACHINE SOFTWARE Microsoft Wi
 </td>
 <td rowspan="2">Aktiviert oder deaktiviert global AppInit_DLLs.${REMOVE}$<br />
 </td>
-<td>0x0 : AppInit_DLLs sind deaktiviert.</td>
+<td>0x0: AppInit_DLLs sind deaktiviert.</td>
 </tr>
 <tr class="even">
-<td>0x1 : AppInit_DLLs sind aktiviert.</td>
+<td>0x1: AppInit_DLLs sind aktiviert.</td>
 
 
 </tr>
 <tr class="odd">
 <td>AppInit_DLLs (REG_SZ)</td>
-<td>Durch Leerzeichen oder Kommas getrennte Liste der zu ladenden DLLs. Der vollständige Pfad zur DLL sollte mithilfe von Kurznamen angegeben werden.</td>
+<td>Durch Leerzeichen oder Kommas getrennte Liste der zu ladenden DLLs. Der vollständige Pfad zur DLL sollte unter Verwendung von Kurznamen angegeben werden.</td>
 <td>C:\ PROGRA~1\WID288~1\MICROS~1.DLL</td>
 </tr>
 <tr class="even">
@@ -92,17 +92,17 @@ Werte, die unter dem Windows-Schlüssel HKEY LOCAL MACHINE SOFTWARE Microsoft Wi
 
 **Windows 7**
 
-Alle DLLs, die von der \_ AppInit-DLLs-Infrastruktur geladen werden, sollten mit Code signiert sein. Aus Gründen der Anwendungskompatibilität lädt das Windows 7-Betriebssystem alle AppInit-DLLs. Microsoft empfiehlt jedoch, dass alle Anwendungsentwickler ihre DLLs codesignieren, um die Zuverlässigkeit von Windows zu verbessern und die Codesignaturerzwingung in zukünftigen Versionen von Windows vorzubereiten. Der Registrierungsschlüssel RequireSignedAppInit \_ DLLs steuert dieses Verhalten, und sein Wert unter Windows 7 ist standardmäßig auf 0 festgelegt.
+Alle DLLs, die von der \_ AppInit-DLLs-Infrastruktur geladen werden, sollten mit Code signiert sein. Aus Gründen der Anwendungskompatibilität lädt das Windows 7-Betriebssystem alle AppInit-DLLs. Microsoft empfiehlt jedoch, dass alle Anwendungsentwickler ihre DLLs codieren, um die Zuverlässigkeit der Windows zu verbessern und die Codesignaturerzwingung in zukünftigen Versionen von Windows vorzubereiten. Der Registrierungsschlüssel RequireSignedAppInit \_ DLLs steuert dieses Verhalten, und sein Wert für Windows 7 ist standardmäßig auf 0 festgelegt.
 
 **Windows Server 2008 R2**
 
-Alle DLLs, die von der \_ AppInit-DLLs-Infrastruktur geladen werden, müssen mit Code signiert sein. Der Registrierungsschlüssel RequireSignedAppInit \_ DLLs steuert dieses Verhalten, und sein Wert unter Windows Server 2008 R2 ist standardmäßig auf 1 festgelegt.
+Alle DLLs, die von der \_ AppInit-DLLs-Infrastruktur geladen werden, müssen mit Code signiert sein. Der Registrierungsschlüssel RequireSignedAppInit \_ DLLs steuert dieses Verhalten, und sein Wert auf Windows Server 2008 R2 ist standardmäßig auf 1 festgelegt.
 
 ## <a name="links-to-other-resources"></a>Links zu anderen Ressourcen
 
 <dl>
 
-[AppInit-DLLs unter Windows 7 und Windows Server 2008 R2](/windows-hardware/drivers/install/)  
+[AppInit-DLLs in Windows 7 und Windows Server 2008 R2](/windows-hardware/drivers/install/)  
 </dl>
 
  

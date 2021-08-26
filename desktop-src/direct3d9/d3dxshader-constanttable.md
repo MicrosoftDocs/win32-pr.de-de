@@ -1,7 +1,7 @@
 ---
-description: Hilfsstruktur zum Verwalten einer shaderkonstantentabelle. Dies kann auch mithilfe von ID3DXConstantTable erfolgen.
+description: Hilfsstruktur zum Verwalten einer Shaderkonstantentabelle. Dies kann auch mit ID3DXConstantTable erfolgen.
 ms.assetid: cc6d66e4-c600-420b-b7b5-1bd10ecb22f9
-title: D3DXSHADER_CONSTANTTABLE-Struktur (D3dx9shader. h)
+title: D3DXSHADER_CONSTANTTABLE-Struktur (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9shader.h
-ms.openlocfilehash: ef4fe6cf9af924d9ae6c358f72bf49f93d85f29d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f423eba3187c6bbc5c17d4ba9284e4e1b2048a016b8a11744b83b46e4d8522af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367363"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027290"
 ---
-# <a name="d3dxshader_constanttable-structure"></a>D3DXSHADER \_ constanables-Struktur
+# <a name="d3dxshader_constanttable-structure"></a>D3DXSHADER \_ CONSTANTTABLE-Struktur
 
-Hilfsstruktur zum Verwalten einer shaderkonstantentabelle. Dies kann auch mithilfe von [**ID3DXConstantTable**](id3dxconstanttable.md)erfolgen.
+Hilfsstruktur zum Verwalten einer Shaderkonstantentabelle. Dies kann auch mit [**id3DXConstantTable**](id3dxconstanttable.md)erfolgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,7 +52,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Größe der Struktur. Siehe Hinweise.
+Größe der -Struktur. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset vom Anfang dieser-Struktur in Bytes zur Zeichenfolge, die den Namen des Erstellers enthält.
+Offset vom Anfang dieser Struktur in Bytes zu der Zeichenfolge, die den Namen des Erstellers enthält.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Shader-Version.
+Shaderversion.
 
 </dd> <dt>
 
@@ -85,18 +85,18 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Konstanten.
+Anzahl von Konstanten.
 
 </dd> <dt>
 
-**Constantinfo**
+**ConstantInfo**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Array konstanter Informationen, D3DXSHADER \_ constantinfo \[ *Konstanten* \] . Weitere Informationen finden Sie unter [**D3DXSHADER \_ constantinfo**](d3dxshader-constantinfo.md).
+Array von Konstanteninformationen, D3DXSHADER \_ \[ *CONSTANTINFO-Konstanten.* \] Siehe [**D3DXSHADER \_ CONSTANTINFO**](d3dxshader-constantinfo.md).
 
 </dd> <dt>
 
@@ -107,7 +107,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die [D3DXSHADER Flags](d3dxshader-flags.md) -Flags, mit denen der Shader kompiliert wird.
+Die [D3DXSHADER-Flags,](d3dxshader-flags.md) die zum Kompilieren des Shaders verwendet werden.
 
 </dd> <dt>
 
@@ -118,17 +118,17 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Offset in der Zeichenfolge, die das Ziel enthält.
+Offset in die Zeichenfolge, die das Ziel enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Shader-konstanteninformationen sind in einer durch Tabstopps getrennten Tabelle mit Kommentaren enthalten. Alle Offsets werden in Bytes vom Anfang der Struktur gemessen. Einträge in der Konstanten Tabelle werden nach Ersteller in aufsteigender Reihenfolge sortiert.
+Shaderkonstanteninformationen sind in einer durch Tabstopps getrennten Tabelle mit Kommentaren enthalten. Alle Offsets werden ab dem Anfang der Struktur in Bytes gemessen. Einträge in der konstanten Tabelle werden in aufsteigender Reihenfolge nach Creator sortiert.
 
-Eine Shader-Konstante Tabelle kann mit den [**ID3DXConstantTable**](id3dxconstanttable.md) -Schnittstellen verwaltet werden. Alternativ dazu können Sie die Konstante Tabelle mit **D3DXSHADER \_ CONSTAN/verwalten**.
+Eine Shaderkonstantentabelle kann mit den [**ID3DXConstantTable-Schnittstellen**](id3dxconstanttable.md) verwaltet werden. Alternativ können Sie die Konstantentabelle mit **D3DXSHADER \_ CONSTANTTABLE** verwalten.
 
-Dieses Größen Element wird häufig mit folgendem initialisiert:
+Dieser Größenmember wird häufig mit folgendem Code initialisiert:
 
 
 ```
@@ -144,11 +144,11 @@ constantTable.Size = sizeof(D3DXSHADER_CONSTANTTABLE)
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9shader. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9shader.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

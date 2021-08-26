@@ -1,24 +1,24 @@
 ---
 description: Die CurrentTime-Eigenschaft ruft die aktuelle Wiedergabezeit ab.
 ms.assetid: 94f94eb1-49fa-4b8c-95a6-da307b0abd62
-title: CurrentTime (Eigenschaft)
+title: CurrentTime-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95fa779eb6f4999fa6e093e1a07d07171c7920fa
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7d49db59d7b53bff217a31da4ef0bf20548e99ca2fecc6dc277bc5217f1e2340
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106341091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998830"
 ---
-# <a name="currenttime-property"></a>CurrentTime (Eigenschaft)
+# <a name="currenttime-property"></a>CurrentTime-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `CurrentTime` Eigenschaft ruft die aktuelle Wiedergabezeit ab.
+Die `CurrentTime` -Eigenschaft ruft die aktuelle Wiedergabezeit ab.
 
 ``` syntax
 [ sCurTime = ] MSWebDVD.CurrentTime
@@ -26,17 +26,17 @@ Die- `CurrentTime` Eigenschaft ruft die aktuelle Wiedergabezeit ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine **Zeichenfolge** mit 11 Zeichen zurück, die die aktuelle Wiedergabezeit im Format "*hh: mm: SS: FF*" (Stunden, Minuten, Sekunden, Rahmen) darstellt.
+Gibt eine Zeichenfolge mit 11 **Zeichen** zurück, die die aktuelle Wiedergabezeit im Format *"hh:mm:ss:ff"*(Stunden, Minuten, Sekunden, Frames) darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und weist keinen Standardwert auf.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Totaltitletime**](totaltitletime-property.md)
+[**TotalTitleTime**](totaltitletime-property.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die aktuelle maximale Anzahl der zu löschenden Delta Frames.
+description: Die aktuelle maximale Anzahl der zu verdringten Deltaframes.
 ms.assetid: d14c594e-55ab-42c2-bdb0-6829f71d02dd
-title: 'Cvideotransformfilter:: m_nWaitForKey Member (vtrans. h)'
+title: CVideoTransformFilter::m_nWaitForKey-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a168a26816825c33c0e047d93cc8b14ebd0f3536
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 83cb78b233385e502d6508212492c54865aca28990ae079e4bf588776bd83fe5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998540"
 ---
-# <a name="cvideotransformfilterm_nwaitforkey-member"></a>Cvideotransformfilter:: m \_ nwaitforkey-Member
+# <a name="cvideotransformfilterm_nwaitforkey-member"></a>CVideoTransformFilter::m \_ nWaitForKey-Member
 
-Die aktuelle maximale Anzahl der zu löschenden Delta Frames. Obwohl diese Variable größer als 0 (null) ist, löscht der Filter Frames, bis ein Keyframe erreicht wird. Für jeden abgelegten Rahmen verringert der Filter diese Variable um eins, wodurch verhindert wird, dass der Filter eine übermäßige Anzahl von Frames löscht. Nach 30 Delta Frames in einer Zeile ohne Keyframes beginnt der Filter erneut mit der Übermittlung von Frames.
+Die aktuelle maximale Anzahl der zu verdringten Deltaframes. Diese Variable ist zwar größer als 0 (null), der Filter verdrungen jedoch Frames, bis sie einen Keyframe erreicht. Für jeden gelöschten Frame dekrementiert der Filter diese Variable um 1, wodurch verhindert wird, dass der Filter eine übermäßige Anzahl von Frames verdrungen. Nach 30 Deltaframes in einer Zeile ohne Keyframes beginnt der Filter erneut mit der Bereitstellung von Frames.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ int m_nWaitForKey;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (einschließlich Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ int m_nWaitForKey;
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

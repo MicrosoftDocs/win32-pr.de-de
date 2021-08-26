@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: ac3adf2ab0b7536a637805a6878f01f9f6d5bf25
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 87d755c74109c85d988c7e20eb07ff6b47b22fa7ae87fe1e46d7dc1cea4f52d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985190"
 ---
 # <a name="id3dxtexturegutterhelpergetheight-method"></a>ID3DXTextureGutterHelper::GetHeight-Methode
 
@@ -48,14 +48,14 @@ Gibt die Höhe der Textur in Pixel zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

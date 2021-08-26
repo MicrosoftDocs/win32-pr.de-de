@@ -1,7 +1,7 @@
 ---
 description: Die AddAfter-Methode fügt eine Liste nach der angegebenen Position ein.
 ms.assetid: c2a2e599-0a83-4eb0-aceb-c483f153ba7e
-title: Cbaselist. AddAfter-Methode (wxlist. h)
+title: CBaseList.AddAfter-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4fdab54a124986b462e0ef592bba888e27c09b53
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 28351e1e0762b8e45bc9bf2ba1fe3624c67339e9b8bcf59ec5a919850a853061
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983501"
 ---
-# <a name="cbaselistaddafter-method"></a>Cbaselist. AddAfter-Methode
+# <a name="cbaselistaddafter-method"></a>CBaseList.AddAfter-Methode
 
-Die- `AddAfter` Methode fügt eine Liste nach der angegebenen Position ein.
+Die `AddAfter` -Methode fügt eine Liste nach der angegebenen Position ein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,24 +46,24 @@ BOOL AddAfter(
 *pos* 
 </dt> <dd>
 
-Die Position, an der die Liste eingefügt werden soll.
+Position, nach der die Liste eingefügt werden soll.
 
 </dd> <dt>
 
-*pList* 
+*Plist* 
 </dt> <dd>
 
-Ein Zeiger auf die einzufügende Liste.
+Zeiger auf die einzufügende Liste.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vorhandene positionsindikatoren, einschließlich der im *POS* -Parameter angegebenen, bleiben gültig. Wenn die Methode fehlschlägt, wurden möglicherweise einige der Elemente hinzugefügt.
+Vorhandene Positionsindikatoren, einschließlich der im *pos-Parameter* angegebenen, bleiben gültig. Wenn die Methode fehlschlägt, wurden möglicherweise einige der Elemente hinzugefügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Vorhandene positionsindikatoren, einschließlich der im *POS* -Parameter angegeb
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

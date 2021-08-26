@@ -1,19 +1,19 @@
 ---
-description: Diese API wird zum Verwalten von Echt Zeit Arbeitswarteschlangen verwendet.
+description: Diese API wird zum Verwalten von Echtzeitarbeitswarteschlangen verwendet.
 ms.assetid: 1B83BB28-8451-4A65-9D82-6212C3DF0BE4
-title: Real-Time-Arbeits Warteschlangen-API
+title: Real-Time Work-Warteschlangen-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51225e78367a0120274e945b7e8eb2dc012f1e87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 786ad5efabe481282efce67ea4cc77b7c9ec347c62d6ee374aa17068d93a45a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032040"
 ---
-# <a name="real-time-work-queue-api"></a>Real-Time-Arbeits Warteschlangen-API
+# <a name="real-time-work-queue-api"></a>Real-Time Work-Warteschlangen-API
 
-Diese API wird zum Verwalten von Echt Zeit Arbeitswarteschlangen verwendet.
+Diese API wird zum Verwalten von Echtzeitarbeitswarteschlangen verwendet.
 
  
 

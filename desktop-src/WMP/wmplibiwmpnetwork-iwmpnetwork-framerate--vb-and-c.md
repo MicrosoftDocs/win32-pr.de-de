@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork-Framerate (Eigenschaft)
-description: Die Framerate-Eigenschaft ruft die aktuelle Video Frame Rate ab.
+title: IWMPNetwork frameRate-Eigenschaft
+description: Die frameRate-Eigenschaft ruft die aktuelle Videobildrate ab.
 ms.assetid: 800ecf3d-3b2c-48f9-8fc4-c7c32757749a
 keywords:
-- Eigenschaften Fenster "Framerate" Media Player
-- Framerate-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, Framerate (Eigenschaft)
+- frameRate-Eigenschaft Windows Media Player
+- frameRate-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , frameRate-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c338a116588fa9f1c552feff15f220e08b0f66e0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3169cc21eee2317da45db3cb3ca9ceffffa01c85479312defe63cda1fa09796f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956160"
 ---
-# <a name="iwmpnetworkframerate-property"></a>Iwmpnetwork:: Framerate (Eigenschaft)
+# <a name="iwmpnetworkframerate-property"></a>IWMPNetwork::frameRate-Eigenschaft
 
-Die **Framerate** -Eigenschaft ruft die aktuelle Video Frame Rate ab.
+Die **frameRate-Eigenschaft** ruft die aktuelle Videobildrate ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,20 +46,20 @@ Public ReadOnly Property frameRate As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, bei dem es sich um die aktuelle Frame Rate in Frames pro hundert Sekunden handelt.
+Eine **System.Int32-Datei,** die die aktuelle Bildfrequenz in Frames pro hundert Sekunden ist.
 
 > [!Note]  
-> Obwohl die **encodecodframerate** -Eigenschaft die codierte Frame Rate in Frames pro Sekunde misst, misst die Framerate-Eigenschaft die aktuelle **Framerate** in Frames pro hundert Sekunden. Siehe Hinweise.
+> Obwohl die **encodedFrameRate-Eigenschaft** die codierte Framerate in Frames pro Sekunde misst, misst die **frameRate-Eigenschaft** die aktuelle Bildfrequenz in Frames pro hundert Sekunden. Siehe Hinweise.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der aktuelle Frameraten Wert wird in Frames pro hundert Sekunden zurückgegeben. Der Wert 2998 gibt z. b. 29,98 Frames pro Sekunde (fps) an.
+Der aktuelle Bildfrequenzwert wird in Frames pro hundert Sekunden zurückgegeben. Der Wert 2998 gibt beispielsweise 29,98 Frames pro Sekunde (fps) an.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **Framerate** verwendet, um die beim Codieren der Datei angegebene Framerate anzuzeigen. Die Informationen werden in einer Bezeichnung als Reaktion auf das **PlayStateChange** -Ereignis angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **frameRate** verwendet, um die Framerate anzuzeigen, die beim Codieren der Datei angegeben wurde. Die Informationen werden als Reaktion auf das **PlayStateChange-Ereignis** in einer Bezeichnung angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -117,7 +117,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -127,10 +127,10 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork. encodedframerate (VB und c#)**](wmplibiwmpnetwork-iwmpnetwork-encodedframerate--vb-and-c.md)
+[**IWMPNetwork.encodedFrameRate (VB und C#)**](wmplibiwmpnetwork-iwmpnetwork-encodedframerate--vb-and-c.md)
 </dt> </dl>
 
  

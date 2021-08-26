@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RSTINFO. pfnstatus-Eigenschaft'
-title: JET_RSTINFO. pfnstatus-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_RSTINFO.pfnStatus-Eigenschaft.'
+title: JET_RSTINFO.pfnStatus-Eigenschaft
 TOCTitle: 'pfnStatus property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_RSTINFO.pfnStatus
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_rstinfo.pfnstatus(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 57b400e91867d4408fcdb93b979d1a39d8e7eb76
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0a4a74518b50358dc2e6317009684db356562d54927012c6af433f4172bd4f4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967584"
 ---
-# <a name="jet_rstinfopfnstatus-property"></a>JET_RSTINFO. pfnstatus-Eigenschaft
+# <a name="jet_rstinfopfnstatus-property"></a>JET_RSTINFO.pfnStatus-Eigenschaft
 
-Ruft den Rückruf ab oder legt ihn fest, der die Status Funktion abruft oder festlegt.
+Ruft den Rückruf auf ruft die Statusfunktion ab oder legt ihn fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public JET_PFNSTATUS pfnStatus { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_PFNSTATUS](./jet-pfnstatus-delegate.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_PFNSTATUS](./jet-pfnstatus-delegate.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RSTINFO-Klasse](./jet-rstinfo-class.md)
 
-[Mitglieder JET_RSTINFO](./jet-rstinfo-members.md)
+[JET_RSTINFO Mitglieder](./jet-rstinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

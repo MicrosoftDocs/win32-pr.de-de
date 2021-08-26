@@ -1,11 +1,11 @@
 ---
-title: Iwmpsettings-Rate (Eigenschaft)
-description: Mit der Eigenschaft Rate wird die aktuelle Wiedergabe Rate für Video abgerufen oder festgelegt.
+title: IWMPSettings-Rate-Eigenschaft
+description: Die Rate-Eigenschaft ruft die aktuelle Wiedergaberate für Video ab oder legt sie fest.
 ms.assetid: 7baa667b-52e5-4419-8e12-c3627a417b20
 keywords:
-- Rate der Eigenschaften Fenster Media Player
-- Rate der Eigenschaften Fenster Media Player, iwmpsettings-Schnittstelle
-- Iwmpsettings-Schnittstelle, Windows-Media Player, Rate-Eigenschaft
+- rate-Eigenschaft Windows Media Player
+- rate-Eigenschaft Windows Media Player , IWMPSettings-Schnittstelle
+- IWMPSettings-Schnittstelle Windows Media Player , rate-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f502bebdbd22523858637f8abccbe203db104cbe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cc053861b9061df676455e10b011cd0ffe0fe9f06052b129ec163e00d4c8d71f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999700"
 ---
-# <a name="iwmpsettingsrate-property"></a>Iwmpsettings:: Rate (Eigenschaft)
+# <a name="iwmpsettingsrate-property"></a>IWMPSettings::rate-Eigenschaft
 
-Mit der Eigenschaft **Rate** wird die aktuelle Wiedergabe Rate für Video abgerufen oder festgelegt.
+Die **Rate-Eigenschaft** ruft die aktuelle Wiedergaberate für Video ab oder legt sie fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ Public Property rate As System.Double
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Double** -Wert, der die Wiedergabe Rate mit dem Standardwert 1,0 ist.
+Eine **System.Double-Datei,** die die Wiedergaberate mit einem Standardwert von 1,0 ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der von dieser Eigenschaft abgerufene Wert fungiert als Multiplikatorwert, mit dem Sie ein Medien Element schneller oder langsamer wiedergeben können. Der Standardwert 1,0 gibt die erstellte Geschwindigkeit an.
+Der von dieser Eigenschaft abgerufene Wert fungiert als Multiplikatorwert, mit dem Sie ein Medienelement schneller oder langsamer wiedergeben können. Der Standardwert 1,0 gibt die erstellte Geschwindigkeit an.
 
-Beachten Sie, dass eine Audiospur bei Raten, die niedriger als 0,5 oder höher als 1,5 sind, schwer zu verstehen ist. Eine Wiedergabe Rate von 2 gibt die doppelte Geschwindigkeit der Wiedergabe an.
+Beachten Sie, dass eine Audiospur mit Raten kleiner als 0,5 oder höher als 1,5 schwer zu verstehen ist. Eine Wiedergaberate von 2 gibt das Doppelte der normalen Wiedergabegeschwindigkeit an.
 
-Windows Media Player versucht, die am effektivsten der folgenden vier verschiedenen Wiedergabe Modi zu verwenden.
+Windows Media Player versucht, die effektivsten der folgenden vier verschiedenen Wiedergabemodi zu verwenden.
 
--   Smooth Videowiedergabe mit gestelltem Audiobereich
--   Smooth-Videowiedergabe mit nicht gebeibehaltung audiotonhöhe
--   Smooth Videowiedergabe ohne Audiodaten
--   Keyframe-Videowiedergabe ohne Audiodaten
+-   Smooth video playback with audio pitch maintained (Reibungslose Videowiedergabe mit beibehaltener Audiowiedergabe)
+-   Smooth video playback with audio pitch not maintained (Reibungslose Videowiedergabe mit nicht verwalteter Audiowiedergabe)
+-   Reibungslose Videowiedergabe ohne Audio
+-   Keyframe-Videowiedergabe ohne Audio
 
-Der von Windows Media Player gewählte Modus hängt von zahlreichen Faktoren ab, einschließlich Dateityp und-Speicherort, Betriebssystem, Netzwerk und Server.
+Der von Windows Media Player gewählte Modus hängt von zahlreichen Faktoren ab, einschließlich Dateityp und Speicherort, Betriebssystem, Netzwerk und Server.
 
-Es gelten auch weitere Überlegungen, abhängig vom Format des digitalen Mediums, das zum Erstellen des Inhalts verwendet wird:
+Abhängig vom digitalen Medienformat, das zum Erstellen des Inhalts verwendet wird, gelten auch andere Überlegungen:
 
--   **Windows Media Video (WMV) und ASF.** Optimale Werte für die **Rate** -Eigenschaft liegen zwischen 1 und 10 oder zwischen 1 und 10 für Reverse-Play. Werte zwischen 0,5 und 1,0 oder zwischen-0,5 und 1,0 funktionieren möglicherweise auch in Fällen, in denen audiotonhöhe beibehalten werden kann, z. b. bei der Wiedergabe von Dateien auf dem lokalen Computer. Werte mit einer absoluten Größe von mehr als 10 sind zulässig, sind jedoch nicht sehr sinnvoll.
--   **Andere Videoformate.** Die **Rate** -Eigenschaft kann zwischen 0 und 9 liegen. Negative Werte sind nicht zulässig. Werte kleiner als 1 stellen eine langsame Bewegung dar. Werte oberhalb von 9 sind zulässig, sind jedoch nicht sehr sinnvoll.
+-   **Windows Media Video (WMV) und ASF.** Die optimalen Werte für die **Rate-Eigenschaft** liegen zwischen 1 und 10 bzw. zwischen 1 und 10 für das Reverseplay. Werte von 0,5 bis 1,0 oder von -0,5 bis -1,0 können auch in Fällen gut funktionieren, in denen audio pitch beibehalten werden kann, z. B. beim Wiedergeben von Dateien, die sich auf dem lokalen Computer befinden. Werte mit einer absoluten Größe größer als 10 sind zulässig, aber nicht sehr aussagekräftig.
+-   **Andere Videoformate.** Die **Rate-Eigenschaft** kann zwischen 0 und 9 liegen. Negative Werte sind nicht zulässig. Werte kleiner als 1 stellen langsame Bewegung dar. Werte über 9 sind zulässig, aber nicht sehr aussagekräftig.
 
-Die **iwmpcontrols. FastForward** -Methode ändert den Wert von **Rate** in 5,0, während die **iwmpcontrols. fastreverse** -Methode den Wert von **Rate** in 5,0 ändert.
+Die **IWMPControls.fastForward-Methode** ändert den Wert der **Rate** in 5.0, während die **IWMPControls.fastReverse-Methode** den Wert der **Rate** in 5,0 ändert.
 
-Die Wiedergabe Rate einiger digitaler Medienformate kann nicht geändert werden. Verwenden Sie die **iwmpsettings. IsAvailable** -Eigenschaft (in c# die **iwmpsettings. get \_ IsAvailable** -Methode), um zu ermitteln, ob diese Eigenschaft für ein bestimmtes Medien Element angegeben werden kann.
+Die Wiedergaberate einiger digitaler Medienformate kann nicht geändert werden. Verwenden Sie die **IWMPSettings.isAvailable-Eigenschaft** (in C# die **IWMPSettings.get \_ isAvailable-Methode),** um zu ermitteln, ob diese Eigenschaft für ein bestimmtes Medienelement angegeben werden kann.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein numerisches UpDown-Steuerelement verwendet, das es dem Benutzer ermöglicht, die Wiedergabegeschwindigkeit des aktuellen Mediums zu ändern. Wenn der Benutzer auf die nach-oben-oder nach-unten-Pfeile des Steuer Elements klickt, wird die Eigenschaft **Rate** auf den neuen Wert festgelegt. Der mögliche Wertebereich im Steuerelement ist 0,5 (halbe Geschwindigkeit) bis 2,0 (doppelte Geschwindigkeit). Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird ein numerisches Updown-Steuerelement verwendet, mit dem der Benutzer die Wiedergabegeschwindigkeit der aktuellen Medien ändern kann. Wenn der Benutzer auf die Pfeile nach oben oder unten des Steuerelements klickt, wird die **Rate-Eigenschaft** auf den neuen Wert festgelegt. Der mögliche Wertebereich im Steuerelement ist 0,5 (Halbgeschwindigkeit) bis 2,0 (Doppelte Geschwindigkeit). Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -122,29 +122,29 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcontrols. FastForward (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-fastforward--vb-and-c.md)
+[**IWMPControls.fastForward (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-fastforward--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. fastreverse (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-fastreverse--vb-and-c.md)
+[**IWMPControls.fastReverse (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-fastreverse--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings-Schnittstelle (VB und c#)**](iwmpsettings--vb-and-c.md)
+[**IWMPSettings-Schnittstelle (VB und C#)**](iwmpsettings--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. IsAvailable (VB und c#)**](iwmpsettings-isavailable--vb-and-c.md)
+[**IWMPSettings.isAvailable (VB und C#)**](iwmpsettings-isavailable--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpsettings. stumm (VB und c#)**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)
+[**IWMPSettings.mute (VB und C#)**](wmplibiwmpsettings-iwmpsettings-mute--vb-and-c.md)
 </dt> </dl>
 
  

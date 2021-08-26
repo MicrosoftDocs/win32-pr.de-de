@@ -17,12 +17,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4a2e69bab38bb8b68c15ed93b2bee721c35a7600
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a438919674f805f59cb6e2cac6e76cb6367f03ce12fa2ceb0787527e56adb83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980830"
 ---
 # <a name="cim_serialcontroller-class-hyper-v-management"></a>CIM_SerialController-Klasse (Hyper-V-Verwaltung)
 
@@ -43,35 +43,35 @@ class CIM_SerialController : CIM_Controller
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SerialController** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ SerialController-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ SerialController** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ SerialController-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Capabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| serielle Ports \| 004,7 "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SerialController**".**Capabilitybeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Serial Ports \| 004.7"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SerialController**.**CapabilityDescriptions**")
 </dt> </dl>
 
-Die Kompatibilität der Chip Ebene für den seriellen Controller. Diese Eigenschaft beschreibt die Pufferung und andere Funktionen des seriellen Controllers, die möglicherweise in der Chip Hardware enthalten sind.
+Die Kompatibilität des Chipgrads für den seriellen Controller. Diese Eigenschaft beschreibt die Pufferung und andere Funktionen des seriellen Controllers, die der Chiphardware inhärent sein können.
 
 <dt>
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -85,7 +85,7 @@ Die Kompatibilität der Chip Ebene für den seriellen Controller. Diese Eigensch
 
 <span id="XT_AT_Compatible"></span><span id="xt_at_compatible"></span><span id="XT_AT_COMPATIBLE"></span>
 
-**XT/kompatibel** (3)
+**XT/AT-kompatibel** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -99,14 +99,14 @@ Die Kompatibilität der Chip Ebene für den seriellen Controller. Diese Eigensch
 
 <span id="16550_Compatible"></span><span id="16550_compatible"></span><span id="16550_COMPATIBLE"></span>
 
-**16550 kompatibel** (5)
+**16550 Kompatibel** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="16550A_Compatible"></span><span id="16550a_compatible"></span><span id="16550A_COMPATIBLE"></span>
 
-**16550kompatibel** (6)
+**16550A Kompatibel** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -127,48 +127,48 @@ Die Kompatibilität der Chip Ebene für den seriellen Controller. Diese Eigensch
 
 </dd> <dt>
 
-**Capabilitybeschreibungen**
+**CapabilityDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SerialController**.**Funktionen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ SerialController**.**Funktionen**")
 </dt> </dl>
 
-Ein Array, das Ausführlichere Erläuterungen zu seriellen Controller Features im Funktions **Array enthält** . Die Elemente im **capabilitybeschreibungen** -Array korrelieren mit denen im Funktions **Array.**
+Ein Array, das ausführlichere Erklärungen für die Funktionen des seriellen Controllers im **Capabilities-Array** enthält. Die Elemente im **CapabilityDescriptions-Array** korrelieren mit denen im **Capabilities-Array.**
 
 </dd> <dt>
 
-**Maxbaudrate**
+**MaxBaudRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| serielle Ports \| 004,6 "), **Punit** (" Bit/Sekunde ")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Serial Ports \| 004.6"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Die maximale Baudrate in (Bits pro Sekunde), die vom seriellen Controller unterstützt wird.
+Die maximale Baudrate in Bits pro Sekunde, die vom seriellen Controller unterstützt wird.
 
 </dd> <dt>
 
-**Security**
+**Sicherheit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| serielle Ports \| 004,9 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF Serial Ports \| 004.9")
 </dt> </dl>
 
 Die Betriebssicherheit für den Controller.
@@ -177,7 +177,7 @@ Die Betriebssicherheit für den Controller.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -212,7 +212,7 @@ Die Betriebssicherheit für den Controller.
 
 <span id="Boot_Bypass"></span><span id="boot_bypass"></span><span id="BOOT_BYPASS"></span>
 
-**Start Umgehung** (6)
+**Startumgehung** (6)
 
 
 </dt> <dd></dd> </dl>
@@ -227,8 +227,8 @@ Die Betriebssicherheit für den Controller.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -237,7 +237,7 @@ Die Betriebssicherheit für den Controller.
 
 <dl> <dt>
 
-[**CIM- \_ Controller**](cim-controller.md)
+[**\_CIM-Controller**](cim-controller.md)
 </dt> </dl>
 
  

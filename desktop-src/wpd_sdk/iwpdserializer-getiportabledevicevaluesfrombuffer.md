@@ -1,7 +1,7 @@
 ---
-description: Die getiportabledevicevaluesfrombuffer-Methode deserialisiert ein Bytearray in eine iportabledevicevalues-Schnittstelle.
+description: Die GetIPortableDeviceValuesFromBuffer-Methode deserialisiert ein Bytearray in eine IPortableDeviceValues-Schnittstelle.
 ms.assetid: 93bea711-74d5-407a-a707-a3abe47bc2cd
-title: 'Iwpdserializer:: getiportabledevicevaluesfrombuffer-Methode (portabledevicetypes. h)'
+title: IWpdSerializer::GetIPortableDeviceValuesFromBuffer-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 639a9455349e1d016b71d9c9717940695e9c0a85
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac33bf0cfb04363d40e4efeff13db1cb2504ce2dcb7ece4d9b10ac3d08dff83f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365902"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054960"
 ---
-# <a name="iwpdserializergetiportabledevicevaluesfrombuffer-method"></a>Iwpdserializer:: getiportabledevicevaluesfrombuffer-Methode
+# <a name="iwpdserializergetiportabledevicevaluesfrombuffer-method"></a>IWpdSerializer::GetIPortableDeviceValuesFromBuffer-Methode
 
-Die **getiportabledevicevaluesfrombuffer** -Methode deserialisiert ein Bytearray in eine **iportabledevicevalues** -Schnittstelle.
+Die **GetIPortableDeviceValuesFromBuffer-Methode** deserialisiert ein Bytearray in eine **IPortableDeviceValues-Schnittstelle.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,38 +42,38 @@ HRESULT GetIPortableDeviceValuesFromBuffer(
 
 <dl> <dt>
 
-*pbuffer* \[ in\]
+*pBuffer* \[ In\]
 </dt> <dd>
 
 Zeiger auf den zu deserialisierenden Puffer.
 
 </dd> <dt>
 
-*dwinputbufferlength* \[ in\]
+*dwInputBufferLength* \[ In\]
 </dt> <dd>
 
-**DWORD** , das die Größe des Puffers in Bytes angibt.
+**DWORD,** das die Größe des Puffers in Bytes angibt.
 
 </dd> <dt>
 
-*ppparameams* \[ vorgenommen\]
+*ppParams* \[ out\]
 </dt> <dd>
 
-Die Adresse einer Variablen, die einen Zeiger auf eine [**iportablede vicevalues**](iportabledevicevalues.md) -Schnittstelle empfängt, die aus dem Puffer erstellt wurde. Die Anwendung ist für das Aufrufen von **Release** auf der Schnittstelle verantwortlich.
+Adresse einer Variablen, die einen Zeiger auf eine [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md) empfängt, die aus dem Puffer erstellt wurde. Die Anwendung ist für den Aufruf von **Release auf** der Schnittstelle verantwortlich.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                                          |
 |----------------------------------------------------------------------------------------------|------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Methode wurde erfolgreich ausgeführt.<br/>                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | Ein erforderliches Zeigerargument war **null**.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Es ist ein nicht spezifizierter Konvertierungs Fehler aufgetreten.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    | Ein erforderliches Zeigerargument war **NULL.**<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Es ist ein nicht angegebener Konvertierungsfehler aufgetreten.<br/> |
 
 
 
@@ -85,8 +85,8 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
@@ -94,7 +94,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Iwpdserializer-Schnittstelle**](iwpdserializer.md)
+[**IWpdSerializer-Schnittstelle**](iwpdserializer.md)
 </dt> </dl>
 
  

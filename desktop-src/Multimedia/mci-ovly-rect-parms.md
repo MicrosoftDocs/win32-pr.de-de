@@ -1,6 +1,6 @@
 ---
-title: MCI_OVLY_RECT_PARMS-Struktur (mciapi. h)
-description: Die MCI \_ \_ -Struktur für den OVLY Rect \_ -Inhalt enthält Positionsinformationen für die MCI \_ Put-und MCI \_ -Befehle für Video Überlagerungs Geräte.
+title: MCI_OVLY_RECT_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ OVLY \_ RECT \_ PARMS-Struktur enthält Positionierungsinformationen für die Befehle MCI \_ PUT und MCI \_ WHERE für Videoüberlagerungsgeräte.
 ms.assetid: 1cfd8e51-c76f-4a1c-905c-efacbd8146f4
 keywords:
 - MCI_OVLY_RECT_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68a6b51d980b6ca0a3c223f414571a42b2e3ae3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5cfd55b2950f6d4268a9af5ee5bdc7fc9c378c4dbaeaa569406339263a2cf85e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039110"
 ---
-# <a name="mci_ovly_rect_parms-structure"></a>MCI \_ OVLY \_ Rect- \_ Struktur
+# <a name="mci_ovly_rect_parms-structure"></a>MCI \_ OVLY \_ RECT \_ PARMS-Struktur
 
-Die MCI-Struktur für den **\_ OVLY \_ \_ Rect** -Inhalt enthält Positionsinformationen für die [**MCI \_ Put**](mci-put.md) -und [**MCI \_**](mci-where.md) -Befehle für Video Überlagerungs Geräte.
+Die **MCI \_ OVLY \_ RECT \_ PARMS-Struktur** enthält Positionierungsinformationen für die [**Befehle MCI \_ PUT**](mci-put.md) und [**MCI \_ WHERE**](mci-where.md) für Videoüberlagerungsgeräte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**RC**
+**Rc**
 </dt> <dd>
 
-Rechteck, das Positionsinformationen enthält. [Rect](/previous-versions//ms536136(v=vs.85)) -Strukturen werden in MCI anders behandelt als in anderen Teilen von Windows. in MCI enthält **RC. Right** die Breite des Rechtecks und **RC. Bottom** enthält die Höhe des Rechtecks.
+Rechteck mit Positionierungsinformationen. [RECT-Strukturen](/previous-versions//ms536136(v=vs.85)) werden in MCI anders behandelt als in anderen Teilen von Windows. in MCI enthält **rc.right** die Breite des Rechtecks und **rc.bottom** die Höhe.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -75,16 +75,16 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Put**](mci-put.md)
+[**MCI \_ PUT**](mci-put.md)
 </dt> <dt>
 
-[**MCI, \_ wobei**](mci-where.md)
+[**MCI \_ WHERE**](mci-where.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

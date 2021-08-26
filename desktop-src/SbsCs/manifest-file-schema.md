@@ -1,19 +1,19 @@
 ---
-description: Im folgenden finden Sie die komplette Auflistung des Manifest-Datei Schemas.
+description: Im Folgenden ist die vollständige Auflistung des Manifestdateischemas angegeben.
 ms.assetid: 5a4040a4-66ed-44ea-a07f-6410f88d1446
-title: Manifest-Datei Schema
+title: Manifestdateischema
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9feb29c5a0f018408b8ed7f1872fb97c85e19b15
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: ec4c3e82d196485da5fe4803ba70a4cb1081c38585625399e01e5f02244bd02c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106367337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977350"
 ---
-# <a name="manifest-file-schema"></a>Manifest-Datei Schema
+# <a name="manifest-file-schema"></a>Manifestdateischema
 
-Im folgenden finden Sie die komplette Auflistung des Manifest-Datei Schemas.
+Im Folgenden ist die vollständige Auflistung des Manifestdateischemas angegeben.
 
 ```xml syntax
 <?xml version="1.0" ?> 

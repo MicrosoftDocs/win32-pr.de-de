@@ -1,32 +1,32 @@
 ---
-description: Inhaltsverzeichnis Funktionen (Inhaltsverzeichnis)
+description: Inhaltsverzeichnisparserfunktionen
 ms.assetid: 507aaf9c-c4ab-47e0-8cfa-2f249bcb3b7b
-title: Inhaltsverzeichnis Funktionen (Inhaltsverzeichnis)
+title: Inhaltsverzeichnisparserfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94dec5a33036927aafc3548017d970bbab48301a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb421d56ebe604a42b5c2d531f4ce3ecc24e7d09d2e5b8a3ff2c7feff428e34d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953130"
 ---
-# <a name="table-of-contents-parser-functions"></a>Inhaltsverzeichnis Funktionen (Inhaltsverzeichnis)
+# <a name="table-of-contents-parser-functions"></a>Inhaltsverzeichnisparserfunktionen
 
-Die folgenden Funktionen, die in wmcodecdsp. h deklariert werden, dienen nur zur internen Verwendung.
+Die folgenden Funktionen, die in WmCodecDsp.h deklariert sind, sind nur zur internen Verwendung.
 
--   **"Kreatefleio"**
--   **"Kreateinhalts"**
--   **"Kreatedeccollection"**
--   **"In der zentrale"**
--   **"Auflistungs Liste"**
--   **"Kreatedecparser"**
+-   **CreateFileIo**
+-   **CreateToc**
+-   **CreateTocCollection**
+-   **CreateTocEntry**
+-   **CreateTocEntryList**
+-   **CreateTocParser**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Inhaltsverzeichnis Verweis (Inhaltsverzeichnis)](toc-parser-reference.md)
+[Inhaltsverzeichnisparserreferenz](toc-parser-reference.md)
 </dt> </dl>
 
  

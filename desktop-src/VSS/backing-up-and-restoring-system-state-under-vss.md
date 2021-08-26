@@ -1,17 +1,17 @@
 ---
 description: Hinweis Dieses Thema gilt nur für Windows Server 2003 R2 und Windows Server 2003 mit Service Pack 1 (SP1).
 ms.assetid: a192d9a7-1c65-4251-acb1-4df03ebfe910
-title: Sichern und Wiederherstellen des System Status in Windows Server 2003 R2 und Windows Server 2003 SP1
+title: Sichern und Wiederherstellen des Systemstatus in Windows Server 2003 R2 und Windows Server 2003 SP1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de2fdb50e3f719a5208c2894f5659f927bcc922d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4803acc5981cc74084789064bd276baa28b35c0ffe225e49d2b65ba5485e51a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032950"
 ---
-# <a name="backing-up-and-restoring-system-state-in-windows-server-2003-r2-and-windows-server-2003-sp1"></a>Sichern und Wiederherstellen des System Status in Windows Server 2003 R2 und Windows Server 2003 SP1
+# <a name="backing-up-and-restoring-system-state-in-windows-server-2003-r2-and-windows-server-2003-sp1"></a>Sichern und Wiederherstellen des Systemstatus in Windows Server 2003 R2 und Windows Server 2003 SP1
 
 > [!Note]  
 > Dieses Thema gilt nur für Windows Server 2003 R2 und Windows Server 2003 mit Service Pack 1 (SP1). Informationen zu anderen Betriebssystemversionen finden Sie unter [Sichern und Wiederherstellen des Systemstatus](locating-additional-system-files.md).
@@ -19,87 +19,87 @@ ms.locfileid: "103960737"
  
 
 > [!Note]  
-> Microsoft bietet keinen technischen Support für Entwickler oder IT-Experten für die Implementierung von Online-Systemstatus Wiederherstellungen unter Windows (alle Versionen). Weitere Informationen zur Verwendung von von Microsoft bereitgestellten APIs und Prozeduren zum Implementieren von Online-Systemstatus Wiederherstellungen finden Sie in den Communityressourcen im [MSDN Community Center](https://msdn.microsoft.com/community/default.aspx).
+> Microsoft bietet keinen technischen Support für Entwickler oder IT-Mitarbeiter bei der Implementierung von Online-Systemstatuswiederherstellungen auf Windows (alle Releases). Informationen zur Verwendung von von Microsoft bereitgestellten APIs und Verfahren zum Implementieren von Online-Systemstatuswiederherstellungen finden Sie in den Communityressourcen, die im [MSDN Community Center verfügbar sind.](https://msdn.microsoft.com/community/default.aspx)
 
  
 
-Beim Ausführen einer VSS-Sicherung oder-Wiederherstellung wird der Windows-Systemstatus als eine Sammlung mehrerer wichtiger Betriebssystem Elemente und der zugehörigen Dateien definiert. Diese Elemente sollten immer von Sicherungs-und Wiederherstellungs Vorgängen als Einheit behandelt werden.
+Beim Ausführen einer VSS-Sicherung oder -Wiederherstellung wird der Windows-Systemstatus als Sammlung mehrerer wichtiger Betriebssystemelemente und ihrer Dateien definiert. Diese Elemente sollten immer von Sicherungs- und Wiederherstellungsvorgängen als Einheit behandelt werden.
 
-In Windows Server 2003 R2 und Windows Server 2003 mit SP1 gibt es keine Windows-API, mit der diese Objekte als eins behandelt werden. Daher wird empfohlen, dass die anfordernde Personen über ein eigenes Systemstatus Objekt verfügen, damit diese Komponenten konsistent verarbeitet werden können.
+In Windows Server 2003 R2 und Windows Server 2003 mit SP1 gibt es keine Windows-API, die diese Objekte als eins behandelt. Daher wird empfohlen, dass anfordernde Personen über ein eigenes Systemstatusobjekt verfügen, damit sie diese Komponenten konsistent verarbeiten können.
 
-Da VSS unter Versionen von Windows ausgeführt wird, auf denen der [*Systemdatei Schutz*](vssgloss-s.md) (WFP) Systemstatus Dateien vor Beschädigungen schützt, sind spezielle Schritte erforderlich, um den Systemstatus zu sichern und wiederherzustellen.
+Da VSS in Versionen von Windows ausgeführt wird, bei denen [*systemdateischutz (System File Protection,*](vssgloss-s.md) WFP) Systemstatusdateien vor Beschädigungen schützt, sind spezielle Schritte zum Sichern und Wiederherstellen des Systemstatus erforderlich.
 
-Der System Status besteht aus den folgenden Elementen:
+Der Systemstatus umfasst Folgendes:
 
--   Alle durch WFP geschützten Dateien, Startdateien einschließlich NTLDR-, ntdetect-und leistungsindikatorenkonfigurationen
--   Die Active Directory (ADSI) (auf Systemen, die Domänen Controller sind)
--   Der Ordner "System Volume" (SYSVOL), der vom Datei Replikations Dienst (File Replication Service, FRS) repliziert wird (auf Systemen mit Domänen Controllern
--   Zertifikat Server (auf Systemen, die eine Zertifizierungsstelle bereitstellen)
--   Cluster Datenbank (auf Systemen, die ein Knoten eines Windows-Clusters sind)
+-   Alle durch WFP geschützten Dateien, Startdateien einschließlich ntldr-, ntdetect- und Leistungsindikatorkonfigurationen
+-   Active Directory (ADSI) (auf Systemen, die Domänencontroller sind)
+-   Der Systemvolumeordner (SYSVOL), der vom Dateireplikationsdienst (File Replication Service, FRS) repliziert wird (auf Systemen, die Domänencontroller sind)
+-   Zertifikatserver (auf Systemen, die die Zertifizierungsstelle bereitstellen)
+-   Clusterdatenbank (auf Systemen, die ein Knoten eines Windows sind)
 -   Registrierungsdienst
--   Com+-Klassen Registrierungsdatenbank
+-   COM+-Klassenregistrierungsdatenbank
 
-Der Systemstatus kann in beliebiger Reihenfolge gesichert werden.
+Der Systemstatus kann in beliebiger Reihenfolge sichern werden.
 
-Allerdings sollte die Wiederherstellung des Systemstatus zuerst Startdateien ersetzen und den System Abschnitt (Hive) der Registrierung als letzten Schritt im Prozess ausführen und kann in der folgenden Reihenfolge vorkommen:
+Die Wiederherstellung des Systemstatus sollte jedoch zuerst Startdateien ersetzen und den Systemabschnitt (Hive) der Registrierung als letzten Schritt im Prozess commiten. Dies kann in der folgenden Reihenfolge erfolgen:
 
-1.  Stellen Sie die Startdateien wieder her.
-2.  Com+-Klassen Registrierungsdatenbank
-3.  Stellen Sie SYSVOL, den Zertifikat Server und die Cluster Datenbanken (falls erforderlich) wieder her.
-4.  Restore Active Directory (falls erforderlich).
-5.  Stellen Sie die Registrierung wieder her.
+1.  Wiederherstellen der Startdateien.
+2.  COM+-Klassenregistrierungsdatenbank
+3.  Stellen Sie bei Bedarf SYSVOL-, Zertifikatserver- und Clusterdatenbanken wieder her.
+4.  Stellen Sie Active Directory wieder her (falls erforderlich).
+5.  Stellen Sie die Registrierung wieder auf.
 
-Einige Systemdienste, z. b. die Zertifizierungsstelle, haben konventionelle VSS-Writer und befolgen die VSS-Sicherungs-und-Wiederherstellungs Algorithmen. Andere, wie z. b. die Registrierung, erfordern benutzerdefinierte Sicherungs-oder Wiederherstellungs Vorgänge. Weitere Informationen finden Sie unter [benutzerdefinierte Sicherungen und](custom-backups-and-restores.md)Wiederherstellungen.
+Einige Systemdienste, z. B. die Zertifizierungsstelle, verfügen über herkömmliche VSS Writer und folgen den VSS-Sicherungs- und -Wiederherstellungsalgorithmen. Andere, z. B. die Registrierung, erfordern benutzerdefinierte Sicherungs- oder Wiederherstellungsvorgänge. Weitere Informationen finden Sie unter [Benutzerdefinierte Sicherungen und Wiederherstellungen.](custom-backups-and-restores.md)
 
-## <a name="vss-backup-and-restores-of-boot-and-system-files"></a>VSS-Sicherung und-Wiederherstellung von Start-und System Dateien
+## <a name="vss-backup-and-restores-of-boot-and-system-files"></a>VSS-Sicherung und -Wiederherstellungen von Start- und Systemdateien
 
-Die Start-und Systemdateien sollten nur als einzelne Entität gesichert und wieder hergestellt werden.
+Die Start- und Systemdateien sollten nur als einzelne Entität sichern und wiederhergestellt werden.
 
-Ein Anforderer kann auf sichere Weise schattenkopierte Versionen dieser Dateien verwenden und muss sicherstellen, dass das System Volume und das Startgerät als [*Schatten kopiert*](vssgloss-s.md)werden.
+Ein An anfordernde Benutzer kann schattenkopiert Versionen dieser Dateien sicher verwenden und sollte sicherstellen, dass das Systemvolumen und das Startgerät [*schattenkopiert werden.*](vssgloss-s.md)
 
-Die System-und Startdateien umfassen Folgendes:
+Die System- und Startdateien umfassen Folgendes:
 
--   Die Core-Startdateien: <dl> NtLdr.exe  
+-   Die wichtigsten Startdateien: <dl> NtLdr.exe  
     Boot.ini  
     NtDetect.com  
-    NtBootDD.sys (sofern vorhanden)  
+    NtBootDD.sys (falls vorhanden)  
     </dl>
--   The WFP service catalog file must be backed up prior to backing up the WFP files, and it is found under: <dl> % SystemRoot% System32-Stammverzeichnis \\ \\ \\ {F750E6C3-38EE-11d1-85E5-00C04FC295EE} </dl>
--   Alle Dateien, die vom [*System Datei Schutz*](vssgloss-s.md) geschützt und durch [**SfcGetNextProtectedFile**](/windows/win32/api/sfc/nf-sfc-sfcgetnextprotectedfile) aufgelistet werden (siehe VSS-Wiederherstellungs Vorgänge von WFP-geschützten Dateien) -   : <dl> % Systemroot% \\ system32 \\ perf? 00?. Hütte  
-    % Systemroot% \\ system32 \\ perf? 00?. BAK </dl>
--   Falls vorhanden, sollte die Internet Information Server (IIS)-Metabasisdatei in Sicherungs-und Wiederherstellungs Vorgänge eingeschlossen werden, da Sie einen von Microsoft Exchange und anderen Netzwerkanwendungen verwendeten Status enthält. Diese Datei befindet sich unter: <dl> % Systemroot% \\ system32 \\ inetsrv \\ MetaBase. bin </dl>
--   Wenn die IIS-Metabasisdatei gesichert ist, sollten Schlüssel zum Aktivieren von Anwendungen zum Lesen bestimmter verschlüsselter Einträge als Teil des Systemstatus wieder hergestellt werden. Die Dateien finden Sie unter: <dl> % Systemroot% \\ system32 \\ Microsoft \\ Protect\\\*  
-    % ALLUSERSPROFILE% \\ Microsoft \\ Crypto \\ RSA \\ MachineKeys\\\* </dl>
--Beim Sichern von Start-und Systemdateien ist es möglicherweise erforderlich, das DOS-Startgerät zu ermitteln, indem Sie die folgenden Schritte ausführen: 1. Suchen der Systempartition unter **HKEY \_ local \_ Machine** \\ **System** \\ **Setup** \\ **Systempartition**.
-    2.  Übergeben Sie die System Stamm-Umgebungsvariable (% SystemRoot%). zum Abrufen des NT-Geräte namens an den Mount Manager.
+-   The WFP service catalog file must be backed up prior to backing up the WFP files, and it is found under: <dl> %SystemRoot% \\ System32 \\ CatRoot \\ {F750E6C3-38EE-11D1-85E5-00C04FC295EE} </dl>
+-Alle Dateien, [](vssgloss-s.md) die durch systemdateischutzgeschützt und von [**SfcGetNextProtectedFile**](/windows/win32/api/sfc/nf-sfc-sfcgetnextprotectedfile) aufzählt werden (siehe VSS-Wiederherstellungsvorgänge von WFP-geschützten Dateien) Die Konfigurationsdateien des - Leistungsindikators: <dl> %SystemRoot% \\ System32 \\ Perf?00?. Dat  
+    %SystemRoot% \\ System32 \\ Perf?00?. Bak </dl>
+-Falls vorhanden, sollte die IIS-Metabasisdatei (Internet Information Server) in Sicherungs- und Wiederherstellungsvorgänge eingeschlossen werden, da sie den Zustand enthält, der von Microsoft Exchange und anderen Netzwerkanwendungen verwendet wird. Diese Datei befindet sich unter: <dl> %SystemRoot% \\ System32 \\ InetSrv \\ Metabase.bin </dl>
+-   Wenn die IIS-Metabasisdatei sicherungsbasiert ist, sollten Schlüssel, mit denen Anwendungen bestimmte verschlüsselte Einträge lesen können, als Teil des Systemstatus wiederhergestellt werden. Die Dateien finden Sie unter: <dl> %SystemRoot% \\ System32 \\ Microsoft \\ Protect\\\*  
+    %AllUsersProfile% \\ Microsoft Crypto RSA \\ \\ \\ MachineKeys\\\* </dl>
+-Beim Sichern von Start- und Systemdateien kann es erforderlich sein, das DOS-Startgerät wie folgt zu bestimmen: Suchen Sie die Systempartition unter 1. **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\  \\ **Setup SystemPartition**.
+    2.  Übergeben Sie die Systemstammumgebungsvariable (%SystemRoot%) an den Bereitstellungs-Manager, um den NT-Gerätenamen zu erhalten.
 
-## <a name="vss-restore-operations-of-wfp-protected-files"></a>VSS-Wiederherstellungs Vorgänge von WFP-geschützten Dateien
+## <a name="vss-restore-operations-of-wfp-protected-files"></a>VSS-Wiederherstellungsvorgänge von WFP-geschützten Dateien
 
-Der WFP-Dienst ist so konzipiert, dass die versehentliche oder schrittweise Ersetzung von Systemdateien verhindert wird. Daher müssen spezielle Schritte ausgeführt werden, um WFP-Daten wiederherzustellen.
+Der WFP-Dienst ist darauf ausgelegt, versehentliche oder unbeabsichtigte Ersetzungen von Systemdateien zu verhindern. Daher müssen besondere Schritte durchgeführt werden, um WFP-Daten wiederherzustellen.
 
-Der bedeutet, dass der WFP-Writer beim Definieren seines Writer-Metadatendokuments die **VSS- \_ RME- \_ Wiederherstellung \_ beim \_** Wiederherstellen des Dokuments angeben soll. Wenn ein Anforderer feststellt, dass der WFP-Writer diese Wiederherstellungsmethode nicht angeben konnte, weist dies auf einen Writer-Fehler hin.
+Bedeutet, dass der WFP-Writer die **VSS \_ RME \_ RESTORE AT \_ \_ REBOOT-Wiederherstellungsmethode** angeben sollte, wenn er sein Writer-Metadatendokument definiert. Wenn eine Anfordernde feststellt, dass der WFP-Writer diese Wiederherstellungsmethode nicht angeben konnte, weist dies auf einen Writerfehler hin.
 
-Ein Anforderer muss beim Neustart eine Wiederherstellungsmethode der **VSS- \_ RME- \_ Wiederherstellung \_ \_** implementieren, indem er die Win32-Funktion " [**muvefileex**](/windows/win32/api/winbase/nf-winbase-movefileexa) " mit dem Parameter "verzögertes Verschieben von" in " **muvefile \_ \_ \_** " Die wiederhergestellten Dateien werden erst nach dem Neustart des Systems in die eigentlichen System Dateiverzeichnisse kopiert. Das Überschreiben geschützter Systemdateien findet nur statt, wenn der Wert des folgenden Registrierungs Eintrags von **reg \_ Word** auf 1 festgelegt ist:
+Eine Anfordernde sollte eine Wiederherstellungsmethode von **VSS \_ RME \_ RESTORE AT \_ \_ REBOOT** implementieren, indem sie die Win32-Funktion [**MoveFileEx**](/windows/win32/api/winbase/nf-winbase-movefileexa) mit dem **MOVEFILE DELAY UNTIL \_ \_ \_ REBOOT-Parameter** verwendet, um Systemdateien zu ersetzen. Die wiederhergestellten Dateien werden erst nach dem Systemneustart in die eigentlichen Systemdateiverzeichnisse kopiert. Das Überschreiben geschützter Systemdateien erfolgt nur, wenn der Wert des folgenden **REG WORD-Registrierungseintrags \_** auf 1 festgelegt ist:
 
-**HKEY \_ Lokaler \_ Computer** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Session Manager** \\ **allowprotectedrenames** = 1
+**HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **Session Manager** \\ **AllowProtected Steuerelement** = 1
 
-Dieser Wert muss vor jedem Start festgelegt werden, bei dem geschützte Dateien über " [**muvefileex**](/windows/win32/api/winbase/nf-winbase-movefileexa) " ersetzt und nach dem Neustart gelöscht werden.
+Dieser Wert muss vor jedem Start festgelegt werden, bei dem geschützte Dateien über [**MoveFileEx**](/windows/win32/api/winbase/nf-winbase-movefileexa) ersetzt und nach dem Neustart gelöscht werden.
 
-Das System-dllcache-Verzeichnis sollte auch mit der Sicherung und Wiederherstellung des Start Datentyps gesichert oder wieder hergestellt werden, und es befindet sich in dem Registrierungs Eintrag **reg \_ Expand \_ SZ** :
+Das Dllcache-Systemverzeichnis sollte ebenfalls gesichert oder wiederhergestellt werden, mit Sicherung und Wiederherstellung des Startvolumens, und es wird durch Untersuchen des **Registrierungseintrags REG \_ EXPAND \_ SZ** gefunden:
 
-**HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **Winlogon** \\ **sfcdllcache**<dl> <dt>
+**HKEY \_ LOCAL \_ MACHINE** \\ **Software** \\ **Microsoft** \\ **Windows NT** \\ **CurrentVersion** \\ **WinLogon** \\ **SfcDllCache**<dl> <dt>
 
                   Data type
-</dt> <dd>                  REG \_ Expand \_ SZ</dd> </dl>
+</dt> <dd>                  REG \_ EXPAND \_ SZ</dd> </dl>
 
-Der Inhalt des Verzeichnisses System dllcache wird mithilfe der Systemdatei Prüfung (SFC) an der Eingabeaufforderung neu erstellt:
+Der Inhalt des Dllcache-Verzeichnisses des Systems wird mithilfe des Systemdatei-Überprüfungsprogramm (SFC) an der Eingabeaufforderung neu erstellt:
 
--   Die Option **/scanonce** scannt alle geschützten Dateien beim nächsten Systemstart.
--   Die Option **/scannow** scannt alle geschützten Dateien sofort.
+-   Mit **der Option /SCANONCE** werden alle geschützten Dateien beim nächsten Systemstart überprüft.
+-   Mit **der Option /SCANNOW** werden alle geschützten Dateien sofort überprüft.
 
-Alle geschützten Dateien werden überprüft, und alle ungültigen Versionen werden im Verzeichnis und im Dllcache-Speicherort ersetzt.
+Alle geschützten Dateien werden überprüft, und alle ungültigen Versionen werden sowohl im Verzeichnis als auch im DLLCache-Speicherort ersetzt.
 
-Es gibt vier Dateien, die Teil des WFP sind und nicht mit den WFP-Dateien wieder hergestellt werden können:
+Es gibt vier Dateien, die Teil des WFP sind und nicht mit den WFP-Dateien wiederhergestellt werden können:
 
 <dl> Ctl3dv2.dll  
 DtcSetup.exe  
@@ -107,7 +107,7 @@ NtDll.dll
 Smss.exe  
 </dl>
 
-Diese Dateien helfen bei der Wiederherstellung der WFP-Dateien, sodass eine zirkuläre Abhängigkeit vorliegt. Zurzeit gibt es keine Möglichkeit, diese Dateien wiederherzustellen, außer um Windows neu zu installieren.
+Diese Dateien helfen beim Wiederherstellen der WFP-Dateien, und daher besteht eine zirkuläre Abhängigkeit. Derzeit gibt es keine Möglichkeit, diese Dateien wiederherzustellen, mit ausnahme der Neuinstallation Windows.
 
  
 

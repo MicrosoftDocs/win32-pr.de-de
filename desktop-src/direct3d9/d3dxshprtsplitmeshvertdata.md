@@ -1,7 +1,7 @@
 ---
 description: D3DXSHPRTSPLITMESHVERTDATA-Struktur
 ms.assetid: 8799a680-bf5f-42cc-91aa-1a6aed164ca5
-title: D3DXSHPRTSPLITMESHVERTDATA-Struktur (D3dx9mesh. h)
+title: D3DXSHPRTSPLITMESHVERTDATA-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 55424929a3d415fc1b89f7a1af53be849cf90185
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cc32ee70cd1685351f8cca8860d9d45ab4ea597affed2fbe7cf078d44a8ed437
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027060"
 ---
 # <a name="d3dxshprtsplitmeshvertdata-structure"></a>D3DXSHPRTSPLITMESHVERTDATA-Struktur
 
@@ -39,42 +39,42 @@ typedef struct D3DXSHPRTSPLITMESHVERTDATA {
 
 <dl> <dt>
 
-**uvertremap**
+**uVertRemap**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Scheitelpunkt im ursprünglichen Mesh, dies entspricht.
+Scheitelpunkt im ursprünglichen Gitternetz, dem dies entspricht.
 
 </dd> <dt>
 
-**usubcluster**
+**uSubCluster**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Cluster Index relativ zum Supercluster.
+Clusterindex relativ zum Supercluster.
 
 </dd> <dt>
 
-**ucvertstatus**
+**ucVertStatus**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-1, wenn der Scheitelpunkt gültige Daten aufweist, 0 (null), wenn er "Full" ist.
+1, wenn der Scheitelpunkt gültige Daten hat, 0, wenn er "full" ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In [**D3DXSHPRTCompSplitMeshSC**](d3dxshprtcompsplitmeshsc.md)zugeordnet.
+In [**D3DXSHPRTCompSplitMeshSC zugeordnet.**](d3dxshprtcompsplitmeshsc.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ In [**D3DXSHPRTCompSplitMeshSC**](d3dxshprtcompsplitmeshsc.md)zugeordnet.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 

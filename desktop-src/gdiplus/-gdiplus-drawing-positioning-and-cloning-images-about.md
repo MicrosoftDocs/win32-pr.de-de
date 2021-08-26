@@ -4,18 +4,18 @@ ms.assetid: 0ad2a132-6db6-4099-81a2-10e1cd1b1f61
 title: Zeichnen, Positionieren und Klonen von Bildern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aa265a8f75cbfcaf0ff614ded4466482e5b986b6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: e37e53ce3937d4f10b91a92e64feec57c6b39e718e7b551e4e4130569d4dd90d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015150"
 ---
 # <a name="drawing-positioning-and-cloning-images"></a>Zeichnen, Positionieren und Klonen von Bildern
 
-Sie können die [**Image**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -Klasse verwenden, um Rasterbilder (Bitmaps) und Vektorbilder (Metadateien) zu laden und anzuzeigen. Zum Anzeigen eines Bilds benötigen Sie ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt und ein **Bild** Objekt. Das **Grafik** Objekt stellt die [**Grafik::D rawImage**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inint_inint)) -Methode bereit, die die Adresse des **Image** -Objekts als Argument empfängt.
+Sie können die [**Image-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) verwenden, um Rasterbilder (Bitmaps) und Vektorbilder (Metadateien) zu laden und anzuzeigen. Um ein Bild anzuzeigen, benötigen Sie ein [**Grafikobjekt**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) und ein **Bildobjekt.** Das **Graphics-Objekt** stellt die [**Graphics::D rawImage-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inint_inint)) bereit, die die Adresse des **Image-Objekts** als Argument empfängt.
 
-Im folgenden Beispiel wird ein [**Image**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus der Datei Climber.jpg erstellt und dann das Bild angezeigt. Der Zielpunkt für die obere linke Ecke des Bilds (10, 10) wird im zweiten und dritten Parameter der [**Grafik::D rawImage**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inint_inint)) -Methode angegeben.
+Im folgenden Beispiel wird ein [**Image-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) aus der Datei Climber.jpg erstellt und dann das Bild angezeigt. Der Zielpunkt für die obere linke Ecke des Bilds (10, 10) wird im zweiten und dritten Parameter der [**Graphics::D rawImage-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawimage(inimage_inint_inint)) angegeben.
 
 
 ```
@@ -25,13 +25,13 @@ myGraphics.DrawImage(&myImage, 10, 10);
 
 
 
-Der vorangehende Code hat zusammen mit einer bestimmten Datei (Climber.jpg) die folgende Ausgabe erzeugt.
+Der vorangehende Code erzeugte zusammen mit einer bestimmten Datei Climber.jpg die folgende Ausgabe.
 
-![Screenshot eines Fensters mit einem Foto](images/aboutgdip03-art04.png)
+![Screenshot eines Fensters, das ein Foto enthält](images/aboutgdip03-art04.png)
 
-Sie können [**Bild**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) Objekte aus einer Vielzahl von Grafikdatei Formaten erstellen: BMP, GIF, JPEG, EXIF, PNG, TIFF, WMF, EMF und Symbol.
+Sie können [**Bildobjekte**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) aus einer Vielzahl von Grafikdateiformaten erstellen: BMP, GIF, JPEG, Exif, PNG, TIFF, WMF, EMF und ICON.
 
-Im folgenden Beispiel werden [**Bild**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) Objekte aus einer Vielzahl von Dateitypen erstellt und dann die Bilder angezeigt.
+Im folgenden Beispiel werden [**Bildobjekte**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) aus einer Vielzahl von Dateitypen erstellt und dann die Bilder angezeigt.
 
 
 ```
@@ -52,7 +52,7 @@ myGraphics.DrawImage(&myTIFF, 300, 200);
 
 
 
-Die [**Image**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) -Klasse stellt eine [**Image:: Clone**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-image-clone) -Methode bereit, die Sie verwenden können, um eine Kopie eines vorhandenen **Bilds**, einer [**Metadatendatei**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-metafile)oder eines [**Bitmap**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) -Objekts zu erstellen. Die [Clone](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-bitmap-clone(inconstrectf__inpixelformat)) -Methode wird in der **Bitmap** -Klasse überladen, und eine der Variationen verfügt über einen Quell Rechteck Parameter, mit dem Sie den Teil des ursprünglichen Bilds angeben können, den Sie kopieren möchten. Im folgenden Beispiel wird ein **Bitmap** -Objekt erstellt, indem die obere Hälfte eines vorhandenen **Bitmap** -Objekts geklont wird. Anschließend werden beide Bilder angezeigt.
+Die [**Image-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) stellt eine [**Image::Clone-Methode**](/windows/win32/api/Gdiplusheaders/nf-gdiplusheaders-image-clone) bereit, mit der Sie eine Kopie eines vorhandenen **Bild-,** [**Metadatei-**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-metafile)oder [**Bitmapobjekts**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) erstellen können. Die [Clone-Methode](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-bitmap-clone(inconstrectf__inpixelformat)) wird in der **Bitmap-Klasse** überladen, und eine der Variationen verfügt über einen Quellrechteckparameter, mit dem Sie den Teil des ursprünglichen Bilds angeben können, das Sie kopieren möchten. Im folgenden Beispiel wird ein **Bitmap-Objekt** erstellt, indem die obere Hälfte eines vorhandenen **Bitmap-Objekts** klont wird. Anschließend werden beide Bilder angezeigt.
 
 
 ```
@@ -71,9 +71,9 @@ myGraphics.DrawImage(secondBitmap, 100, 10);
 
 
 
-Der vorangehende Code hat zusammen mit einer bestimmten Datei (Spiral.png) die folgende Ausgabe erzeugt.
+Der vorangehende Code erzeugte zusammen mit einer bestimmten Datei Spiral.png die folgende Ausgabe.
 
-![Abbildung eines Bilds, gefolgt von der oberen Hälfte des ursprünglicher-Bilds](images/aboutgdip03-art05.png)
+![Abbildung eines Bilds, gefolgt von der oberen Hälfte des Orignal-Bilds](images/aboutgdip03-art05.png)
 
  
 

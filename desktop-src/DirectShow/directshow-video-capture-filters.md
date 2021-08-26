@@ -1,69 +1,69 @@
 ---
-description: DirectShow-Video Erfassungs Filter
+description: DirectShow-Videoerfassungsfilter
 ms.assetid: e4d1452d-ceac-4b5c-b9ba-ad4722ecff76
-title: DirectShow-Video Erfassungs Filter
+title: DirectShow-Videoerfassungsfilter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 238f18dd77bc40011fa9fc0dbab3192ea81a223f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7cafe2815376ddb2a099c309228ba1bf24ae9315f305edb7312b88dd1196f82f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966330"
 ---
-# <a name="directshow-video-capture-filters"></a>DirectShow-Video Erfassungs Filter
+# <a name="directshow-video-capture-filters"></a>DirectShow-Videoerfassungsfilter
 
-Erfassungs Filter in DirectShow verfügen über einige Funktionen, die Sie von anderen Arten von Filtern unterscheiden. Obwohl der [Erfassungs Diagramm](capture-graph-builder.md) -Generator viele der Details verbirgt, empfiehlt es sich, diesen Abschnitt zu lesen, um ein allgemeines Verständnis von DirectShow-Erfassungs Diagrammen zu erhalten.
+Erfassungsfilter in DirectShow verfügen über einige Features, die sie von anderen Arten von Filtern unterscheiden. Obwohl [der Capture Graph Builder](capture-graph-builder.md) viele der Details ausblendet, ist es eine gute Idee, diesen Abschnitt zu lesen, um ein allgemeines Verständnis von DirectShow-Erfassungsdiagrammen zu erhalten.
 
-**PIN-Kategorien**
+**Anheften von Kategorien**
 
-Ein Erfassungs Filter verfügt häufig über zwei oder mehr Ausgabe Pins, die dieselbe Art von Daten bereitstellt, z. –. eine Vorschau-PIN und eine Aufzeichnungs-PIN. Aus diesem Grund sind Medientypen keine gute Methode, um die Pins zu unterscheiden. Stattdessen werden die Pins durch ihre Funktionalität unterschieden, die mithilfe einer GUID identifiziert wird, die als *Pin-Kategorie* bezeichnet wird.
+Ein Erfassungsfilter verfügt häufig über zwei oder mehr Ausgabepins, die die gleiche Art von Daten liefern, z. B. einen Vorschaupin und einen Aufnahmepin. Daher sind Medientypen keine gute Möglichkeit, die Stecknadeln zu unterscheiden. Stattdessen unterscheiden sich die Stecknadeln durch ihre Funktionalität, die mithilfe einer GUID identifiziert wird, die als *Stecknadelkategorie bezeichnet wird.*
 
-Eine Erläuterung zum Abfragen von Pins für Ihre Kategorie finden Sie unter [Arbeiten mit PIN-Kategorien](working-with-pin-categories.md). Bei den meisten Anwendungen müssen Pins jedoch nicht direkt abgefragt werden. Stattdessen verwenden verschiedene [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Methoden Parameter, die die anzuarbeitende Pin-Kategorie angeben. Der Erfassungs Diagramm-Generator wird automatisch nach der richtigen PIN fest.
+Eine Diskussion über das Abfragen von Pins für ihre Kategorie finden Sie unter [Working with Pin Categories](working-with-pin-categories.md). Für die meisten Anwendungen müssen Sie Pins jedoch nicht direkt abfragen. Stattdessen übernehmen verschiedene [**ICaptureGraphBuilder2-Methoden**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) Parameter, die die Pinkategorie angeben, für die der Betrieb durchgeführt werden soll. Der Capture Graph Builder sucht automatisch den richtigen Pin.
 
-**Pins für Vorschau und Erfassung**
+**Vorschau von Pins und Erfassungspins**
 
-Einige Video Erfassungsgeräte verfügen über separate Ausgabe Pins für Vorschau und Erfassung. Die Vorschau-PIN wird zum Rendering von Videos auf dem Bildschirm verwendet, während die Erfassungs-PIN zum Schreiben von Videos in eine Datei verwendet wird.
+Einige Videoaufnahmegeräte verfügen über separate Ausgabepins für Vorschau und Erfassung. Der Vorschaupin wird verwendet, um Videos auf dem Bildschirm zu rendern, während der Aufnahmepin verwendet wird, um Videos in eine Datei zu schreiben.
 
-Eine Vorschau-PIN und eine Aufzeichnungs-PIN haben die folgenden Unterschiede:
+Ein Vorschaupin und ein Aufnahmepin haben die folgenden Unterschiede:
 
--   Eine Vorschau-Pin löscht Frames nach Bedarf, um den Durchsatz auf der Erfassungs-Pin aufrechtzuerhalten.
--   Jedem Frame aus einer Aufzeichnungs-PIN wird ein Zeitstempel mit der streamzeit angezeigt, zu der der Rahmen aufgezeichnet wurde. Eine Vorschau-Pin hat keine Zeitstempel für die von ihr bereitgestellten Beispiele.
+-   Ein Vorschaupin löscht Frames nach Bedarf, um den Durchsatz auf dem Erfassungspin zu erhalten.
+-   Jeder Frame eines Aufnahmepins wird mit dem Zeitstempel der Streamzeit versehen, zu der der Frame erfasst wurde. Ein Vorschaupin nimmt keinen Zeitstempel für die von ihm zu liefernden Beispiele vor.
 
-Der Grund dafür, dass Vorschau Rahmen nicht über Zeitstempel verfügen, besteht darin, dass das Filter Diagramm eine kleine Menge an Latenz in den Datenstrom einführt. Wenn die Erfassungs Zeit als Präsentationszeit verwendet wird, behandelt der Videorenderer jede Stichprobe als etwas spät. Dies kann bewirken, dass der Videorenderer Frames abfängt, während er versucht, den Vorgang zu wiederholen. Durch das Entfernen der Zeitstempel wird sichergestellt, dass der Renderer die einzelnen Beispiele beim Eintreffen anzeigt, ohne Frames zu verwerfen.
+Der Grund dafür, dass Vorschauframes keine Zeitstempel haben, ist, dass das Filterdiagramm eine geringe Latenz in den Stream einfing. Wenn die Erfassungszeit als Präsentationszeit verwendet wird, behandelt der Videorenderer jedes Beispiel als etwas spät. Dies kann dazu führen, dass der Videorenderer Frames verdrungen, während er versucht, den Aufholbedarf zu finden. Durch das Entfernen der Zeitstempel wird sichergestellt, dass der Renderer jedes Beispiel beim Eintreffen zeigt, ohne Frames zu löschen.
 
-Die PIN-Kategorie für Vorschau Pins ist Pin \_ Category \_ Preview. Die Kategorie für Erfassungs Pins ist die Erfassung der PIN- \_ Kategorie \_ .
+Die Pinkategorie für Vorschaupins ist PIN \_ CATEGORY \_ PREVIEW. Die Kategorie für Erfassungspins ist PIN \_ CATEGORY \_ CAPTURE.
 
-**VideoPort-Pins**
+**Videoport-Pins**
 
-Ein Videoport ist eine Hardware Verbindung zwischen einem Videogerät (z. b. einem analogen TV-Tuner) und der Grafikkarte. Ein Videoport ermöglicht dem Gerät das Senden von Videodaten direkt an die Grafikkarte. Das Video wird auf dem Bildschirm mithilfe einer Hardware Überlagerung angezeigt. Ein Videoport kann ein tatsächliches Kabel sein, das zwei Geräte auf separaten Karten verbindet. oder es handelt sich möglicherweise um eine hart verdrahtete Verbindung auf derselben Karte.
+Ein Videoport ist eine Hardwareverbindung zwischen einem Videogerät (z. B. einem analogen TV-Tuner) und der Grafikkarte. Mit einem Videoport kann das Gerät Videodaten direkt an die Grafikkarte senden. Das Video wird auf dem Bildschirm mithilfe einer Hardwareüberlagerung angezeigt. Ein Videoport kann ein tatsächliches Kabel sein, das zwei Geräte auf separaten Karten verbindet. Oder es kann sich um eine festverkabelte Verbindung auf derselben Karte geben.
 
-Der Vorteil eines Video Anschlusses besteht darin, dass das Video direkt in den Videospeicher übergeht, ohne dass die CPU funktioniert. Allerdings haben videports einige Nachteile:
+Der Vorteil eines Videoports ist, dass das Video direkt in den Videospeicher übergeht, ohne dass die CPU arbeitet. Videoports haben jedoch einige Nachteile:
 
--   Ein Videoport verwendet immer die Überlagerungs Oberfläche während der Erfassung, unabhängig davon, ob Sie das Video in der Vorschau anzeigen möchten.
--   Das Kippen zwischen Frames erfolgt automatisch, wodurch es schwierig wird, das Kippen mit anderen Video Vorgängen zu synchronisieren.
+-   Ein Videoport verwendet während der Erfassung immer die Überlagerungsoberfläche, unabhängig davon, ob Sie eine Vorschau des Videos anzeigen möchten.
+-   Das Kippen zwischen Frames erfolgt automatisch, wodurch es schwierig ist, den Flip mit anderen Videovorgängen zu synchronisieren.
 
-Wenn ein Aufzeichnungsgerät einen Videoport verwendet, hat der Erfassungs Filter anstelle einer Vorschau-Pin eine Videoport-PIN. Die PIN-Kategorie für Videoport Pins lautet "Pin \_ Category \_ Videoport".
+Wenn ein Aufnahmegerät einen Videoport verwendet, verfügt der Erfassungsfilter über einen Videoportanschluss und nicht über einen Vorschaupin. Die Pinkategorie für Videoportpins ist PIN \_ CATEGORY \_ VIDEOPORT.
 
-Jeder Erfassungs Filter hat mindestens eine Erfassungs-PIN. Außerdem verfügt er möglicherweise über eine Vorschau-PIN oder eine Videoport-PIN, aber nicht beides. Filter können über mehrere Erfassungs Pins und Vorschau Pins verfügen, von denen jeder einen separaten Medientyp bereitstellt. Daher kann ein einzelner Filter eine Video Erfassungs-PIN, eine Video Vorschau-PIN, eine audioerfassungs-PIN und eine Audiovorschau-Pin enthalten. (Es gibt jedoch nichts, was einem Videoport für Audiodaten entspricht.)
+Jeder Erfassungsfilter verfügt über mindestens einen Aufnahmepin. Darüber hinaus kann es einen Vorschaupin oder einen Videoportanschluss geben, aber nie beides. Filter können über mehrere Aufnahmepins und Vorschaupins verfügen, die jeweils einen separaten Medientyp bereitstellen. Daher kann ein einzelner Filter einen Videoaufnahmepin, einen Pin für die Videovorschau, einen Audioaufnahmepin und einen Audiovorschaupin haben. (Es gibt jedoch nichts, was einem Videoport für Audiodaten entspricht.)
 
-**WDM-Upstream-Filter**
+**WDM-Upstreamfilter**
 
-Für Windows-Treibermodell-Geräte (WDM) sind möglicherweise einige zusätzliche Filter für den Erfassungs Filter erforderlich. Diese Filter umfassen Folgendes:
+Windows Treibermodellgeräte (WDM) erfordern möglicherweise einige zusätzliche Filter vor dem Erfassungsfilter. Diese Filter umfassen Folgendes:
 
--   [TV-Tuner-Filter](tv-tuner-filter.md). Steuert die Optimierung für analoge TV-Tuner.
--   [TV-Audiofilter](tv-audio-filter.md). Steuert die Audioeinstellungen für analoge TV-Tuner.
--   Der [Querbalken Filter für die analoge Video](analog-video-crossbar-filter.md)-. Leitet Video-und Audiosignale über das Hardware Gerät weiter. Ein Gerät kann z. b. über mehrere Eingaben verfügen, z. b. S-Video und zusammengesetztes Video. Der Querbalken Filter ermöglicht der Anwendung, die Eingabe auszuwählen.
+-   [TV Tuner Filter](tv-tuner-filter.md). Steuert die Optimierung für analoge TV-Tuner.
+-   [TV-Audiofilter](tv-audio-filter.md). Steuert Audioeinstellungen für analoge TV-Tuner.
+-   [Analog Video Crossbar Filter](analog-video-crossbar-filter.md). Leitet Video- und Audiosignale über das Hardwaregerät weiter. Beispielsweise kann ein Gerät über mehrere Eingaben verfügen, z. B. S-Video und zusammengesetztes Video. Mit dem Kreuzleistenfilter kann die Anwendung die Eingabe auswählen.
 
-Obwohl es sich hierbei um separate Filter in DirectShow handelt, stellen Sie in der Regel dasselbe Hardware Gerät dar. Jeder Filter steuert eine andere Funktion des Geräts. Die Filter sind durch Pins verbunden, aber keine Mediendaten werden über die PIN-Verbindungen verschoben. Daher wird durch das Einrichten eines Medientyps keine Verbindung mit den Pins dieser Filter hergestellt. Stattdessen werden GUID-Werte namens " *Mediums*" verwendet. Mittlere GUIDs sind für einen bestimmten Geräte-Mini Treiber eindeutig definiert. Beispielsweise unterstützen der TV-Tuner-Filter und der Video Erfassungs Filter für die gleiche TV-Karte beide das gleiche Medium, das es der Anwendung ermöglicht, das Diagramm ordnungsgemäß zu erstellen.
+Obwohl es sich hierbei um separate Filter in DirectShow handelt, stellen sie in der Regel dasselbe Hardwaregerät dar. Jeder Filter steuert eine andere Funktion des Geräts. Die Filter sind durch Stecknadeln verbunden, aber keine Mediendaten werden über die Stecknadelverbindungen bewegt. Aus diesem Grund stellen die Stecknadeln dieser Filter keine Verbindung durch Festlegen eines Medientyps wieder. Stattdessen verwenden sie GUID-Werte, die als *mittel bezeichnet werden.* Mittlere GUIDs werden für einen bestimmten Geräte-Minitreiber eindeutig definiert. Beispielsweise unterstützen der FILTER TV Tuner und der Video Capture-Filter für dieselbe TV-Karte das gleiche Medium, wodurch die Anwendung das Diagramm ordnungsgemäß erstellen kann.
 
-Wenn Sie **ICaptureGraphBuilder2** verwenden, um die Erfassungs Diagramme zu erstellen, werden diese Filter in der Praxis automatisch dem Diagramm hinzugefügt. Eine ausführlichere Erläuterung finden Sie unter [WDM-Klassen Treiber Filter](wdm-class-driver-filters.md).
+In der Praxis werden diese Filter automatisch dem Diagramm hinzugefügt, solange Sie **ICaptureGraphBuilder2** zum Erstellen Ihrer Erfassungsdiagramme verwenden. Eine ausführlichere Erläuterung finden Sie unter [WDM-Klassentreiberfilter](wdm-class-driver-filters.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Video Erfassung in DirectShow](about-video-capture-in-directshow.md)
+[Informationen zur Videoaufnahme in DirectShow](about-video-capture-in-directshow.md)
 </dt> </dl>
 
  

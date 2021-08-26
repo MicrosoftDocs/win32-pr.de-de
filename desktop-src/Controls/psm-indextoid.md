@@ -1,9 +1,9 @@
 ---
-title: PSM_INDEXTOID Meldung (prsht. h)
-description: Nimmt den Index einer Eigenschaften Blattseite an und gibt die zugehörige Ressourcen-ID zurück. Sie können diese Nachricht explizit senden oder das propsheet- \_ indextoid-Makro verwenden.
+title: PSM_INDEXTOID-Nachricht (Prsht.h)
+description: Übernimmt den Index einer Eigenschaftenblattseite und gibt dessen Ressourcen-ID zurück. Sie können diese Nachricht explizit senden oder das \_ PropSheet IndexToId-Makro verwenden.
 ms.assetid: c153675a-360f-4916-aa0b-500636dd9022
 keywords:
-- Windows-Steuerelemente für PSM_INDEXTOID Meldung
+- PSM_INDEXTOID Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 643861ecb6dc11d949483defc282d6d65648bdca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc7a26cd97d324ae9bb4cfee85df00387c59293c7de8817b67da5605a207f07f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985720"
 ---
-# <a name="psm_indextoid-message"></a>PSM- \_ indextoid-Nachricht
+# <a name="psm_indextoid-message"></a>PSM \_ INDEXTOID-Nachricht
 
-Nimmt den Index einer Eigenschaften Blattseite an und gibt die zugehörige Ressourcen-ID zurück. Sie können diese Nachricht explizit senden oder das [**propsheet- \_ indextoid**](/windows/desktop/api/Prsht/nf-prsht-propsheet_indextoid) -Makro verwenden.
+Übernimmt den Index einer Eigenschaftenblattseite und gibt dessen Ressourcen-ID zurück. Sie können diese Nachricht explizit senden oder das [**PropSheet \_ IndexToId-Makro**](/windows/desktop/api/Prsht/nf-prsht-propsheet_indextoid) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Nimmt den Index einer Eigenschaften Blattseite an und gibt die zugehörige Resso
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index der Seite.
+Nullbasierter Index der Seite.
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung die Ressourcen-ID der Eigenschaften Blattseite zurück, die von *wParam* angegeben wurde. Andernfalls wird 0 (null) zurückgegeben.
+Gibt die Ressourcen-ID der Eigenschaftenblattseite zurück, die von *wParam* angegeben wird, falls erfolgreich. Andernfalls wird 0 (null) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt bei erfolgreicher Ausführung die Ressourcen-ID der Eigenschaften Blattseit
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

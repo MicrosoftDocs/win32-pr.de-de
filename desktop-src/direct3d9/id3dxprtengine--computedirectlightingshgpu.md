@@ -1,7 +1,7 @@
 ---
-description: Verwendet die GPU, um den direkten Beleuchtungs Beitrag zu 3D-Objekten zu berechnen, wobei die Quell Ausstrahlung durch eine Glanz förmige Näherung (SH) dargestellt wird. Das Berechnen der Beleuchtung auf der GPU ist in der Regel viel schneller als auf der CPU.
+description: Verwendet die GPU, um den direkten Beleuchtungsbeitrag zu 3D-Objekten zu berechnen, bei denen die Quelllichtleistung durch eine pherische Schwingung (SH) dargestellt wird. Die Berechnung der Beleuchtung auf der GPU ist in der Regel viel schneller als auf der CPU.
 ms.assetid: ccea5a5e-23f1-4fdf-bce8-9bfc35d45257
-title: 'ID3DXPRTEngine:: computedirectlightingshgpu-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ComputeDirectLightingSLKPU-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e56dd807d28ba6952cd20c971b675b83687a3015
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 14dc76cb8ac3875101c42beb581c7eb2b96eb7511c85e7f76cd034658afcca3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365352"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985580"
 ---
-# <a name="id3dxprtenginecomputedirectlightingshgpu-method"></a>ID3DXPRTEngine:: computedirectlightingshgpu-Methode
+# <a name="id3dxprtenginecomputedirectlightingshgpu-method"></a>ID3DXPRTEngine::ComputeDirectLightingSLKPU-Methode
 
-Verwendet die GPU, um den direkten Beleuchtungs Beitrag zu 3D-Objekten zu berechnen, wobei die Quell Ausstrahlung durch eine Glanz förmige Näherung (SH) dargestellt wird. Das Berechnen der Beleuchtung auf der GPU ist in der Regel viel schneller als auf der CPU.
+Verwendet die GPU, um den direkten Beleuchtungsbeitrag zu 3D-Objekten zu berechnen, bei denen die Quelllichtleistung durch eine pherische Schwingung (SH) dargestellt wird. Die Berechnung der Beleuchtung auf der GPU ist in der Regel viel schneller als auf der CPU.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,62 +45,62 @@ HRESULT ComputeDirectLightingSHGPU(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf das [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Geräte Objekt, das verwendet wird, um die Simulation auf der GPU auszuführen. Das Gerät muss [PS \_ 2 \_ 0](../direct3dhlsl/dx9-graphics-reference-asm-ps-2-0.md) Pixel Shader unterstützen.
+Zeiger auf das [**IDirect3DDevice9-Geräteobjekt,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) das zum Ausführen der Simulation auf der GPU verwendet wird. Das Gerät muss Shader [mit \_ ps 2 \_ 0](../direct3dhlsl/dx9-graphics-reference-asm-ps-2-0.md) Pixel unterstützen.
 
 > [!Note]  
-> Rückruf Funktionen dürfen nicht das [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Geräte Objekt verwenden, das vom GPU-Simulator verwendet wird.
+> Rückruffunktionen sollten nicht das [**IDirect3DDevice9-Geräteobjekt**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) verwenden, das vom GPU-Simulator verwendet wird.
 
  
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der GPU-Simulations Parameter, der die Auflösung des Schatten-z-Puffers definiert. Muss auf einen der Konstanten Werte aus [**D3DXSHGPUSIMOPT**](./d3dxshgpusimopt.md)festgelegt werden. Der D3DXSHGPUSIMOPT \_ HighQuality-Wert kann mit einem der D3DXSHGPUSIMOPT shadowresxxx-Werte kombiniert werden, um die Simulation mit einer höheren Genauigkeit zu spezifiken \_ .
+GPU-Simulationsparameter, der die Auflösung des Schatten-Z-Puffers definiert. Sollte auf einen der konstanten Werte aus [**D3DXSLKPUSLIPPT festgelegt werden.**](./d3dxshgpusimopt.md) Zur Spezifikation einer Simulation mit höherer Genauigkeit kann der D3DXSLKPUSKATPT HIGHQUALITY-Wert mit einem der \_ D3DXSLKPUSLIPPT \_ SHADOWRESxxx-Werte kombiniert werden.
 
 </dd> <dt>
 
-*Reihenfolge* \[ in\]
+*Bestellung* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Evaluierung. Muss im Bereich von [D3DXSH \_ minorder](other-d3dx-constants.md) bis D3DXSH \_ maxorder (einschließlich) liegen. Die Auswertung generiert die Koeffizienten der Bestellung. Der Bewertungs Grad ist Order-1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
-*Zbias* \[ in\]
+*ZBias* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-In normaler Richtung ausrichten.
+Voreingenommenheit in normaler Richtung.
 
 </dd> <dt>
 
-*Zanglebias* \[ in\]
+*ZAngleBias* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Wird in normaler Richtung gemessen und um eins abzüglich des Kosinus des Winkels mit dem Lichtstrahl skaliert.
+Voreingenommenheit in normaler Richtung, skaliert um eins minus dem Kosinus des Winkels mit dem Lichtstrahl.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt. Dieser Puffer muss über die richtige Anzahl von Farbkanälen verfügen, die für die Simulation reserviert werden.
+Zeiger auf ein [**ID3DXPRTBuffer-Objekt.**](id3dxprtbuffer.md) Für diesen Puffer muss die richtige Anzahl von Farbkanälen für die Simulation zugeordnet sein.
 
 </dd> </dl>
 
@@ -108,13 +108,13 @@ Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt. Dieser Puffer mu
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Methode wird die Albedo-Methode nicht mit dem Lichtsignal multipliziert, und nur das eingehende Licht ist in den Simulator integriert. Indem Sie Albedo nicht multiplizieren, können Sie Albedo-Variation in einer präziseren Skalierung als die Quell Strahlung modellieren und dadurch genauere Ergebnisse aus der Komprimierung erzielen.
+Bei dieser Methode wird der Albedo nicht mit dem Lichtsignal multipliziert, und nur eingehendes Licht ist in den Simulator integriert. Wenn Sie die Albedo nicht multiplizieren, können Sie Albedo-Variationen mit einer feineren Skala als die Quellbreite modellieren, wodurch genauere Ergebnisse der Komprimierung erzielt werden.
 
-Rufen Sie [**multiplyalbedo**](id3dxprtengine--multiplyalbedo.md) auf, um die einzelnen PRT-Vektoren (preberechneten Radiance Transfer) von Albedo zu multiplizieren.
+Rufen [**Sie MultiplyAlbedo auf,**](id3dxprtengine--multiplyalbedo.md) um jeden vorberechnungeten PRT-Vektor (Radiance Transfer) mit dem Albedo zu multiplizieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,8 +122,8 @@ Rufen Sie [**multiplyalbedo**](id3dxprtengine--multiplyalbedo.md) auf, um die ei
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

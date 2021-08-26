@@ -13,12 +13,12 @@ api_type:
 - DllExport
 api_location:
 - Mscoree.dll
-ms.openlocfilehash: 3a2fd8ab6aef8d0309748cbbf37d56ccd032b050
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 123d4036713d6c1c5b7f7a08026d29d7d34126c28c5c2c1fceb94eb01baf9609
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001240"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim-Funktion
 
@@ -42,17 +42,17 @@ HRESULT LoadLibraryShim(
 
 <dl> <dt>
 
-*szDllName* \[ in\]
+*szDllName* \[ In\]
 </dt> <dd>
 
-Der Name der dll, die aus dem .NET Framework geladen werden soll.
+Der Name der DLL, die aus dem .NET Framework geladen werden soll.
 
 </dd> <dt>
 
-*szVersion* \[ in\]
+*szVersion* \[ In\]
 </dt> <dd>
 
-Die Version der zu ladenden DLL. Wenn *szVersion* **null** ist, wird die aktuelle Version der angegebenen DLL geladen.
+Die Version der zu ladenden DLL. Wenn *szVersion* **NULL** ist, wird die neueste Version der angegebenen DLL geladen.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Reserviert.
 
 </dd> <dt>
 
-*phModDll* \[ vorgenommen\]
+*phModDll* \[ out\]
 </dt> <dd>
 
 Ein Handle für das Modul.
@@ -72,13 +72,13 @@ Ein Handle für das Modul.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird zum Laden von Bibliothek-DLLs verwendet, die in der .NET Framework weitervertreibbaren Pakets enthalten sind, nicht von benutzergenerierten DLLs.
+Diese Funktion wird verwendet, um Bibliotheks-DLLs zu laden, die im .NET Framework verteilbaren Paket enthalten sind, nicht vom Benutzer generierte DLLs.
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

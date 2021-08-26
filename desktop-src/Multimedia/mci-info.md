@@ -1,9 +1,9 @@
 ---
-title: MCI_INFO Befehl (MMSYSTEM. h)
-description: Der MCI- \_ Info-Befehl ruft Zeichen folgen Informationen von einem Gerät ab.
+title: MCI_INFO Befehl (Mmsystem.h)
+description: Der \_ MCI INFO-Befehl ruft Zeichenfolgeninformationen von einem Gerät ab.
 ms.assetid: aed3fed3-87b9-4673-9171-4f57770d765c
 keywords:
-- MCI_INFO Befehl Windows-Multimedia
+- MCI_INFO Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9f6ba5be1c2a4ce94b880a87a468c594bc5b676
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 18d53acbdfeb0c13b4b9e201d1bea23008dfbaa83221007152181fe685d09957
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105710"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039199"
 ---
-# <a name="mci_info-command"></a>MCI- \_ Info-Befehl
+# <a name="mci_info-command"></a>MCI \_ INFO-Befehl
 
-Der MCI- \_ Info-Befehl ruft Zeichen folgen Informationen von einem Gerät ab. Alle Geräte erkennen diesen Befehl. Informationen werden im **lpstraureturn** -Member der Struktur zurückgegeben, die von *lpInfo* identifiziert wird. Der **dwretsize** -Member gibt die Pufferlänge für die zurückgegebenen Daten an.
+Der \_ MCI INFO-Befehl ruft Zeichenfolgeninformationen von einem Gerät ab. Dieser Befehl wird von allen Geräten erkannt. Informationen werden im **lpstrReturn-Member** der durch *lpInfo* identifizierten Struktur zurückgegeben. Der **dwRetSize-Member** gibt die Pufferlänge für die zurückgegebenen Daten an.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,218 +43,218 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI \_ -Benachrichtigung, MCI \_ -Wartezeit oder, für Digital Video-und VCR-Geräte, MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder, für Digital Video- und VCR-Geräte, MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpInfo"></span><span id="lpinfo"></span><span id="LPINFO"></span>*Puffer lpInfo*
+<span id="lpInfo"></span><span id="lpinfo"></span><span id="LPINFO"></span>*lpInfo*
 </dt> <dd>
 
-Zeiger auf eine [**MCI \_ - \_ Info**](mci-info-parms.md) -Parameter Struktur. (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ INFO \_ PARMS-Struktur.**](mci-info-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende zusätzliche Standard-und Befehls spezifische Flag gilt für alle Geräte, die MCI-Informationen unterstützen \_ :
+Das folgende zusätzliche Standard- und Befehlsflag gilt für alle Geräte, die MCI \_ INFO unterstützen:
 
 <dl> <dt>
 
-<span id="MCI_INFO_PRODUCT"></span><span id="mci_info_product"></span>MCI- \_ Informations \_ Produkt
+<span id="MCI_INFO_PRODUCT"></span><span id="mci_info_product"></span>MCI \_ INFO \_ PRODUCT
 </dt> <dd>
 
-Ruft eine Beschreibung der Hardware ab, die einem Gerät zugeordnet ist. Geräte sollten eine Beschreibung angeben, mit der sowohl der Treiber als auch die verwendete Hardware identifiziert werden.
+Ruft eine Beschreibung der Hardware ab, die einem Gerät zugeordnet ist. Geräte sollten eine Beschreibung bereitstellen, die sowohl den Treiber als auch die verwendete Hardware identifiziert.
 
 </dd> </dl>
 
-Die folgenden zusätzlichen Flags gelten für den **CDAudio** -Gerätetyp:
+Die folgenden zusätzlichen Flags gelten für den **Cdaudio-Gerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_INFO_MEDIA_IDENTITY"></span><span id="mci_info_media_identity"></span>MCI- \_ Info \_ Medien \_ Identität
+<span id="MCI_INFO_MEDIA_IDENTITY"></span><span id="mci_info_media_identity"></span>MCI \_ INFO \_ MEDIA \_ IDENTITY
 </dt> <dd>
 
-Erzeugt einen eindeutigen Bezeichner für die AudioCD, die derzeit in dem abgefragten Player geladen wird. Dieses Flag gibt eine Zeichenfolge mit 16 hexadezimalen Ziffern zurück.
+Erzeugt einen eindeutigen Bezeichner für die Audio-CD, die derzeit in den abgefragten Player geladen ist. Dieses Flag gibt eine Zeichenfolge mit 16 Hexadezimalziffern zurück.
 
 </dd> <dt>
 
-<span id="MCI_INFO_MEDIA_UPC"></span><span id="mci_info_media_upc"></span>MCI- \_ Info \_ Medien ( \_ UPC)
+<span id="MCI_INFO_MEDIA_UPC"></span><span id="mci_info_media_upc"></span>MCI \_ INFO \_ MEDIA \_ UPC
 </dt> <dd>
 
-Erzeugt den universellen Produkt Code (Universal Product Code, UPC), der auf einer AudioCD codiert ist. Der UPC ist eine Zeichenfolge mit Ziffern. Sie ist möglicherweise nicht für alle CDs verfügbar.
+Erzeugt den Universal Product Code (UPC), der auf einer Audio-CD codiert ist. Der UPC ist eine Zeichenfolge von Ziffern. Sie ist möglicherweise nicht für alle CDs verfügbar.
 
 </dd> </dl>
 
-Die folgenden zusätzlichen Flags gelten für den **Digitalvideo** -Gerätetyp:
+Die folgenden zusätzlichen Flags gelten für den **Gerätetyp digitalvideo:**
 
 <dl> <dt>
 
-<span id="MCI_DGV_INFO_ITEM"></span><span id="mci_dgv_info_item"></span>MCI- \_ DGV- \_ Info \_ Element
+<span id="MCI_DGV_INFO_ITEM"></span><span id="mci_dgv_info_item"></span>MCI \_ DGV \_ INFO \_ ITEM
 </dt> <dd>
 
-Eine-Konstante, die angibt, dass die gewünschten Informationen im **dwitem** -Member der durch *lpInfo* identifizierten-Struktur enthalten sind. Die folgenden Konstanten sind für Digital Video-Geräte definiert:
+Eine Konstante, die die gewünschten Informationen angibt, ist im **dwItem-Member** der durch *lpInfo* identifizierten Struktur enthalten. Die folgenden Konstanten werden für Digitalvideogeräte definiert:
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_AUDIO_ALG"></span><span id="mci_dgv_info_audio_alg"></span>MCI \_ DGV \_ Info \_ \_ audioalg
+<span id="MCI_DGV_INFO_AUDIO_ALG"></span><span id="mci_dgv_info_audio_alg"></span>MCI \_ DGV \_ INFO \_ AUDIO \_ ALG
 </dt> <dd>
 
-Gibt den Namen für den aktuellen Audiokomprimierungs Algorithmus zurück.
+Gibt den Namen für den aktuellen Audiokomprimierungsalgorithmus zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_AUDIO_QUALITY"></span><span id="mci_dgv_info_audio_quality"></span>MCI \_ \_ -DGV \_ -Info- \_ Audioqualität
+<span id="MCI_DGV_INFO_AUDIO_QUALITY"></span><span id="mci_dgv_info_audio_quality"></span>MCI \_ DGV \_ INFO \_ AUDIO \_ QUALITY
 </dt> <dd>
 
-Gibt den Namen für den aktuellen audioqualitätsdeskriptor zurück.
+Gibt den Namen für den aktuellen Audioqualitätsdeskriptor zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_STILL_ALG"></span><span id="mci_dgv_info_still_alg"></span>MCI- \_ DGV- \_ Informationen sind \_ immer noch \_ alg
+<span id="MCI_DGV_INFO_STILL_ALG"></span><span id="mci_dgv_info_still_alg"></span>MCI \_ DGV \_ INFO \_ STILL \_ ALG
 </dt> <dd>
 
-Gibt den Namen für den aktuellen immer noch Bild Komprimierungs Algorithmus zurück.
+Gibt den Namen für den aktuellen Algorithmus für die Komprimierung von Standbildern zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_STILL_QUALITY"></span><span id="mci_dgv_info_still_quality"></span>MCI- \_ DGV- \_ Informationen \_ weiterhin \_ Qualität
+<span id="MCI_DGV_INFO_STILL_QUALITY"></span><span id="mci_dgv_info_still_quality"></span>MCI \_ DGV \_ INFO \_ STILL \_ QUALITY
 </dt> <dd>
 
-Gibt den Namen für den aktuellen immer noch Bild Qualitäts Deskriptor zurück.
+Gibt den Namen für den aktuellen Imagequalitätsdeskriptor zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_USAGE"></span><span id="mci_dgv_info_usage"></span>MCI- \_ DGV- \_ Informations \_ Verwendung
+<span id="MCI_DGV_INFO_USAGE"></span><span id="mci_dgv_info_usage"></span>VERWENDUNG \_ VON MCI-DGV-INFORMATIONEN \_ \_
 </dt> <dd>
 
-Gibt eine Zeichenfolge zurück, in der die Nutzungseinschränkungen beschrieben werden, die möglicherweise vom Besitzer der visuellen oder hörbaren Daten im Arbeitsbereich auferlegt werden.
+Gibt eine Zeichenfolge zurück, die Nutzungseinschränkungen beschreibt, die vom Besitzer der visuellen oder akustischen Daten im Arbeitsbereich erzwungen werden können.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_VIDEO_ALG"></span><span id="mci_dgv_info_video_alg"></span>MCI \_ DGV \_ Info \_ Video \_ alg
+<span id="MCI_DGV_INFO_VIDEO_ALG"></span><span id="mci_dgv_info_video_alg"></span>MCI \_ DGV \_ INFO \_ VIDEO \_ ALG
 </dt> <dd>
 
-Gibt den Namen für den aktuellen Video Komprimierungs Algorithmus zurück.
+Gibt den Namen für den aktuellen Videokomprimierungsalgorithmus zurück.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_VIDEO_QUALITY"></span><span id="mci_dgv_info_video_quality"></span>MCI- \_ DGV- \_ \_ Video \_ Qualität
+<span id="MCI_DGV_INFO_VIDEO_QUALITY"></span><span id="mci_dgv_info_video_quality"></span>MCI \_ DGV \_ INFO \_ VIDEO \_ QUALITY
 </dt> <dd>
 
-Gibt den Namen für den aktuellen Video Qualitäts Deskriptor zurück.
+Gibt den Namen für den aktuellen Videoqualitätsdeskriptor zurück.
 
 </dd> <dt>
 
-<span id="MCI_INFO_VERSION"></span><span id="mci_info_version"></span>MCI- \_ Informations \_ Version
+<span id="MCI_INFO_VERSION"></span><span id="mci_info_version"></span>MCI \_ INFO \_ VERSION
 </dt> <dd>
 
-Gibt die releaseebene des Gerätetreibers und der Hardware zurück. Gerätetreiber Entwickler müssen die Syntax der zurückgegebenen Zeichenfolge dokumentieren.
+Gibt die Releaseebene des Gerätetreibers und der Hardware zurück. Gerätetreiberentwickler müssen die Syntax der zurückgegebenen Zeichenfolge dokumentieren.
 
 </dd> <dt>
 
-<span id="MCI_DGV_INFO_TEXT"></span><span id="mci_dgv_info_text"></span>MCI- \_ DGV- \_ Info \_ Text
+<span id="MCI_DGV_INFO_TEXT"></span><span id="mci_dgv_info_text"></span>MCI \_ DGV \_ INFO \_ TEXT
 </dt> <dd>
 
-Ruft die Beschriftung des Fensters ab.
+Ruft die Fensterbeschriftung ab.
 
 </dd> <dt>
 
-<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>MCI \_ - \_ Infodatei
+<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>\_MCI-INFODATEI \_
 </dt> <dd>
 
-Ruft den Pfad und den Dateinamen der letzten mit dem Befehl " [MCI \_ Öffnen](mci-open.md) " oder " [MCI \_ Laden](mci-load.md) " angegebenen Datei ab. Wenn keine Datei angegeben wurde, gibt das Gerät eine NULL-terminierte Zeichenfolge zurück. Dieses Flag wird nur von Geräten unterstützt, die " **true** " zurückgeben, um das MCI- \_ Flag "getdevcaps \_ verwendet Dateien" \_ des Befehls [MCI \_ getdevcaps](mci-getdevcaps.md) zu verwenden.
+Ruft den Pfad und den Dateinamen der letzten Datei ab, die mit dem [MCI \_ OPEN-](mci-open.md) oder [MCI \_ LOAD-Befehl](mci-load.md) angegeben wurde. Wenn keine Datei angegeben wurde, gibt das Gerät eine auf NULL endende Zeichenfolge zurück. Dieses Flag wird nur von Geräten unterstützt, die **TRUE** an das MCI \_ GETDEVCAPS \_ USES \_ FILES-Flag des [MCI \_ GETDEVCAPS-Befehls](mci-getdevcaps.md) zurückgeben.
 
 </dd> </dl>
 
-Für Digital Video-Geräte verweist *lpInfo* auf eine [**MCI- \_ DGV \_ - \_ Informations**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_info_parmsa) Parameter Struktur.
+Für Digitalvideogeräte verweist *lpInfo* auf eine [**MCI \_ DGV \_ INFO \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_info_parmsa)
 
-Die folgenden zusätzlichen Flags gelten für den Typ des **Sequencer** -Geräts:
+Die folgenden zusätzlichen Flags gelten für den **Sequencergerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_INFO_COPYRIGHT"></span><span id="mci_info_copyright"></span>MCI- \_ Informationen \_ Copyright
+<span id="MCI_INFO_COPYRIGHT"></span><span id="mci_info_copyright"></span>MCI \_ INFO \_ COPYRIGHT
 </dt> <dd>
 
-Ruft den Urheberrechts Hinweis der MIDI-Datei aus dem Copyright-Meta-Ereignis ab.
+Ruft den COPYRIGHT-Hinweis für die DATEI COPYRIGHT aus dem Copyrightmetaereignis ab.
 
 </dd> <dt>
 
-<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>MCI \_ - \_ Infodatei
+<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>\_MCI-INFODATEI \_
 </dt> <dd>
 
-Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird nur von Geräten unterstützt, die " **true** " zurückgeben, wenn Sie den [MCI \_ getdevcaps](mci-getdevcaps.md) -Befehl mit dem Flag "MCI \_ getdevcaps \_ verwendet Files" aufrufen \_ .
+Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird nur von Geräten unterstützt, die **TRUE** zurückgeben, wenn Sie den [MCI \_ GETDEVCAPS-Befehl](mci-getdevcaps.md) mit dem \_ MCI GETDEVCAPS \_ USES \_ FILES-Flag aufrufen.
 
 </dd> <dt>
 
-<span id="MCI_INFO_NAME"></span><span id="mci_info_name"></span>MCI- \_ Informations \_ Name
+<span id="MCI_INFO_NAME"></span><span id="mci_info_name"></span>\_MCI-INFONAME \_
 </dt> <dd>
 
-Ruft den Sequenznamen aus dem Meta-Ereignis für das Sequenz-/Track-Name ab.
+Ruft den Sequenznamen aus dem Sequenz-/Nachverfolgungsnamen-Metaereignis ab.
 
 </dd> </dl>
 
-Das folgende zusätzliche Flag gilt für den **VCR** -Gerätetyp:
+Das folgende zusätzliche Flag  gilt für den Vcr-Gerätetyp:
 
 <dl> <dt>
 
-<span id="MCI_VCR_INFO_VERSION"></span><span id="mci_vcr_info_version"></span>MCI \_ VCR- \_ Informations \_ Version
+<span id="MCI_VCR_INFO_VERSION"></span><span id="mci_vcr_info_version"></span>MCI \_ VCR \_ INFO \_ VERSION
 </dt> <dd>
 
-Legt den **lpstraureturn** -Member der [**MCI- \_ Info- \_**](mci-info-parms.md) Parameter-Struktur auf die Versionsnummer fest. Legt außerdem den **dwretsize** -Member auf die Länge der Zeichenfolge fest, auf die verwiesen wird.
+Legt **den lpstrReturn-Member** der [**MCI INFO \_ \_ PARMS-Struktur**](mci-info-parms.md) so fest, dass er auf die Versionsnummer verweist. Legt außerdem das **dwRetSize-Element** auf die Länge der Zeichenfolge fest, auf die verwiesen wird.
 
 </dd> </dl>
 
-Die folgenden zusätzlichen Flags gelten für den **Überlagerungs** Gerätetyp:
+Die folgenden zusätzlichen Flags gelten für den **Überlagerungsgerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>MCI \_ - \_ Infodatei
+<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>\_MCI-INFODATEI \_
 </dt> <dd>
 
-Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird nur von Geräten unterstützt, die " **true** " zurückgeben, um das MCI- \_ Flag "getdevcaps \_ verwendet Dateien" \_ des Befehls [MCI \_ getdevcaps](mci-getdevcaps.md) zu verwenden.
+Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird nur von Geräten unterstützt, die **TRUE** an das MCI \_ GETDEVCAPS \_ USES \_ FILES-Flag des [MCI \_ GETDEVCAPS-Befehls](mci-getdevcaps.md) zurückgeben.
 
 </dd> <dt>
 
-<span id="MCI_OVLY_INFO_TEXT"></span><span id="mci_ovly_info_text"></span>MCI- \_ OVLY- \_ Info \_ Text
+<span id="MCI_OVLY_INFO_TEXT"></span><span id="mci_ovly_info_text"></span>MCI \_ OVLY \_ INFO \_ TEXT
 </dt> <dd>
 
-Ruft die Beschriftung des Fensters ab, das dem Video Überlagerungs Gerät zugeordnet ist.
+Ruft die Beschriftung des Fensters ab, das dem Videoüberlagerungsgerät zugeordnet ist.
 
 </dd> </dl>
 
-Die folgenden zusätzlichen Flags gelten für den **waveaudiogerätetyp** :
+Die folgenden zusätzlichen Flags gelten für den **Waveaudio-Gerätetyp:**
 
 <dl> <dt>
 
-<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>MCI \_ - \_ Infodatei
+<span id="MCI_INFO_FILE"></span><span id="mci_info_file"></span>\_MCI-INFODATEI \_
 </dt> <dd>
 
-Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird von Geräten unterstützt, die " **true** " zurückgeben, wenn Sie den [MCI \_ getdevcaps](mci-getdevcaps.md) -Befehl mit dem Flag "MCI \_ getdevcaps \_ verwendet Files" aufrufen \_ .
+Ruft den Dateinamen der aktuellen Datei ab. Dieses Flag wird von Geräten unterstützt, die **TRUE** zurückgeben, wenn Sie den [MCI \_ GETDEVCAPS-Befehl](mci-getdevcaps.md) mit dem \_ MCI GETDEVCAPS \_ USES \_ FILES-Flag aufrufen.
 
 </dd> <dt>
 
-<span id="MCI_WAVE_INPUT"></span><span id="mci_wave_input"></span>MCI- \_ Wave- \_ Eingabe
+<span id="MCI_WAVE_INPUT"></span><span id="mci_wave_input"></span>MCI \_ WAVE \_ INPUT
 </dt> <dd>
 
 Ruft den Produktnamen der aktuellen Eingabe ab.
 
 </dd> <dt>
 
-<span id="MCI_WAVE_OUTPUT"></span><span id="mci_wave_output"></span>MCI- \_ Wave- \_ Ausgabe
+<span id="MCI_WAVE_OUTPUT"></span><span id="mci_wave_output"></span>MCI \_ \_ WAVE-AUSGABE
 </dt> <dd>
 
 Ruft den Produktnamen der aktuellen Ausgabe ab, und sein Wert ist gerätespezifisch.
@@ -269,7 +269,7 @@ Ruft den Produktnamen der aktuellen Ausgabe ab, und sein Wert ist gerätespezifi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -277,7 +277,7 @@ Ruft den Produktnamen der aktuellen Ausgabe ab, und sein Wert ist gerätespezifi
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)
