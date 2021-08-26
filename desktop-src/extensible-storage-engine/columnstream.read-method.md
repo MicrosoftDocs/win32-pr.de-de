@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: columnstream. Read-Methode'
-title: Columnstream. Read-Methode
+description: 'Weitere Informationen finden Sie unter: ColumnStream.Read-Methode'
+title: ColumnStream.Read-Methode
 TOCTitle: 'Read method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.ColumnStream.Read(System.Byte[],System.Int32,System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.columnstream.read(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4e407a9069807d10eaabf4f7ac3fce3919576bc7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34c2bd13a2cc436ea192433e4f70098e328d1658a484c5dca9b092fe18f99a50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119976622"
 ---
-# <a name="columnstreamread-method"></a>Columnstream. Read-Methode
+# <a name="columnstreamread-method"></a>ColumnStream.Read-Methode
 
 Liest eine Bytesequenz aus dem aktuellen Stream und setzt die Position in diesem Stream um die Anzahl der gelesenen Bytes nach vorn.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -69,35 +69,35 @@ public override int Read(
 #### <a name="parameters"></a>Parameter
 
   - Puffer  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Der Puffer, in den gelesen werden soll.
 
 <!-- end list -->
 
   - offset  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Der Offset im Puffer, in den gelesen werden soll.
 
 <!-- end list -->
 
   - count  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Anzahl der zu lesenden Bytes.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 Die Anzahl der in den Puffer gelesenen Bytes.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnstream-Klasse](./columnstream-class.md)
+[ColumnStream-Klasse](./columnstream-class.md)
 
-[Columnstream-Member](./columnstream-members.md)
+[ColumnStream-Member](./columnstream-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

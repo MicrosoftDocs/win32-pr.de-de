@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvownermapalleseryexistsexception-Klasse'
-title: Esentslvownermapalleseryexistsexception-Klasse
+description: 'Weitere Informationen zu: EsentSLVOwnerMapAlreadyExistsException-Klasse'
+title: EsentSLVOwnerMapAlreadyExistsException-Klasse
 TOCTitle: EsentSLVOwnerMapAlreadyExistsException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentSLVOwnerMapAlreadyExistsException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvownermapalreadyexistsexception(v=EXCHG.10)
@@ -24,27 +24,27 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fb84b71028998d3f3df881f0d3b681432c3d6292
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 511872e5374a66711945456bebeec22cd1533fc65048cdf3b6cade86812c16c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119970340"
 ---
-# <a name="esentslvownermapalreadyexistsexception-class"></a>Esentslvownermapalleseryexistsexception-Klasse
+# <a name="esentslvownermapalreadyexistsexception-class"></a>EsentSLVOwnerMapAlreadyExistsException-Klasse
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentslvownermapalleseryexistsexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentSLVOwnerMapAlreadyExistsException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,8 +68,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvownermapalleseryexistsexception-Elemente](./esentslvownermapalreadyexistsexception-members.md)
+[EsentSLVOwnerMapAlreadyExistsException-Member](./esentslvownermapalreadyexistsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

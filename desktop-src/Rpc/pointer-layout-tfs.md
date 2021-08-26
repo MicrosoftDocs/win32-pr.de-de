@@ -1,23 +1,23 @@
 ---
-title: Zeiger Layout
-description: Das Zeiger Layout beschreibt Zeiger einer Struktur oder eines Arrays.
+title: Zeigerlayout
+description: Zeigerlayout beschreibt Zeiger einer Struktur oder eines Arrays.
 ms.assetid: 1a4984c1-97b9-4e95-a17e-851b67fa94a3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f26a6639b0c4b56c911be1e688995aaf3fb9d2d8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6616cc7d1000b042c6039b2abf3f79d4900cd0e5fadac748881666610b139c57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019192"
 ---
-# <a name="pointer-layout"></a>Zeiger Layout
+# <a name="pointer-layout"></a>Zeigerlayout
 
-Das Zeiger Layout beschreibt Zeiger einer Struktur oder eines Arrays.
+Zeigerlayout beschreibt Zeiger einer Struktur oder eines Arrays.
 
-## <a name="pointer_layout"></a>Zeiger \_ Layout<>
+## <a name="pointer_layout"></a>Zeigerlayout \_<>
 
-Ein Zeiger \_ Layout<> Feld besteht aus der Format \_ \_ Zeichenfolge FC FC, gefolgt von einer oder mehreren Zeiger Beschreibungen, die später beschrieben werden, und endet mit einem FC- \_ endformatzeichen:
+Ein \_ Zeigerlayout<> Feld besteht aus den Formatzeichen FC \_ PP FC \_ PAD, gefolgt von einer oder mehreren Zeigerbeschreibungen, wie weiter unten beschrieben, und endet mit einem FC \_ END-Formatzeichen:
 
 ``` syntax
 FC_PP
@@ -26,37 +26,37 @@ FC_PAD
 FC_END
 ```
 
-Ein \_ zeigerinstanzlayout \_<> Feld ist eine Format Zeichenfolge, die einzelne oder mehrere Instanzen von Zeigern beschreibt. Die folgenden Felder werden in diesen Deskriptoren verwendet:
+Ein \_ \_ Zeigerinstanzlayout<> Feld ist eine Formatzeichenfolge, die einzelne oder mehrere Instanzen von Zeigern beschreibt. Die folgenden Felder werden in diesen Deskriptoren verwendet:
 
--   Offset \_ im \_ Speicher
+-   Offset \_ im \_ Arbeitsspeicher
 
-    Der Offset mit Vorzeichen für die Position des Zeigers im Arbeitsspeicher. Bei einem Zeiger in einer Struktur ist dieser Offset ein negativer Offset vom Ende der Struktur (das Ende des nicht konformen Teils der konformen Strukturen). für Arrays erfolgt der Offset vom Anfang des Arrays.
+    Der Offset mit Vorzeichen zur Position des Zeigers im Arbeitsspeicher. Bei einem Zeiger, der sich in einer -Struktur befindet, ist dieser Offset ein negativer Offset vom Ende der Struktur (das Ende des nicht konformen Teils konformer Strukturen). bei Arrays ist der Offset vom Anfang des Arrays.
 
 -   Offset \_ im \_ Puffer
 
-    Der Offset mit Vorzeichen an der Position des Zeigers im Puffer. Bei einem Zeiger in einer Struktur ist dieser Offset ein negativer Offset vom Ende der Struktur (das Ende des nicht konformen Teils der konformen Strukturen): bei Arrays erfolgt der Offset vom Anfang des Arrays.
+    Der Offset mit Vorzeichen zur Position des Zeigers im Puffer. Bei einem Zeiger, der sich in einer -Struktur befindet, ist dieser Offset ein negativer Offset vom Ende der Struktur (das Ende des nicht konformanten Teils konformer Strukturen): Bei Arrays ist der Offset vom Anfang des Arrays.
 
 -   Offset \_ zu \_ Array
 
-    Offset von einer einschließenden Struktur zum eingebetteten Array, dessen Zeiger behandelt werden. Bei Arrays der obersten Ebene ist dieses Feld immer 0 (null).
+    Offset von einer einschließenden Struktur zu dem eingebetteten Array, dessen Zeiger behandelt werden. Bei Arrays der obersten Ebene ist dieses Feld immer 0 (null).
 
 -   Iterationen
 
-    Die Gesamtanzahl von Zeigern, die das gleiche Layout aufweisen<> beschrieben.
+    Gesamtzahl der Zeiger, die das gleiche Layout aufweisen,<> beschrieben.
 
 -   increment
 
-    Inkrement zwischen aufeinander folgenden Zeigern während einer Wiederholung.
+    Inkrementieren zwischen aufeinander folgenden Zeigern während eines REPEAT-Vorgangs.
 
--   Anzahl \_ von \_ Zeigern
+-   Anzahl \_ der \_ Zeiger
 
-    Die Anzahl der unterschiedlichen Zeiger in einer Wiederholungs Instanz.
+    Anzahl verschiedener Zeiger in einer Wiederholungsinstanz.
 
--   Zeiger \_ Beschreibung
+-   \_Zeigerbeschreibung
 
-    Zeiger Beschreibung.
+    Zeigerbeschreibung.
 
-Alle Zeiger instanzlayouts verwenden die folgende einzelne Zeiger \_ Instanz<8>:
+Alle Zeigerinstanzlayouts verwenden die folgende Einzelzeigerinstanz \_<8>:
 
 ``` syntax
 offset_to_pointer_in_memory<2> 
@@ -64,7 +64,7 @@ offset_to_pointer_in_buffer<2>
 pointer_description<4>
 ```
 
-Die folgenden Instanzdeskriptoren sind verfügbar:
+Es folgen Instanzdeskriptoren:
 
 **Einzelne Instanz eines Zeigers auf einen einfachen Typ:**
 
@@ -73,7 +73,7 @@ FC_NO_REPEAT FC_PAD
 pointer_instance<8>
 ```
 
-**Wiederholungs Zeiger korrigiert:**
+**Wiederholungszeiger korrigiert:**
 
 ``` syntax
 FC_FIXED_REPEAT FC_PAD 
@@ -84,7 +84,7 @@ number_of_pointers<2>
 { pointer_instance<8> }*
 ```
 
-**Variabler Wiederholungs Zeiger:**
+**Variabler Wiederholungszeiger:**
 
 ``` syntax
 FC_VARIABLE_REPEAT (FC_FIXED_OFFSET | FC_VARIABLE_OFFSET) 
@@ -94,89 +94,89 @@ number_of_pointers<2>
 { pointer_instance<8> }*
 ```
 
-Für die wiederholten Wiederholungs-und Wiederholungs Zeiger Instanzen gibt es einen Satz von Offset-und Zeiger Beschreibungen für jeden Zeiger in der Wiederholungs Instanz.
+Für feste Repeat- und Variable Repeat-Zeigerinstanzen gibt es eine Reihe von Offset- und Zeigerbeschreibungen für jeden Zeiger in der Wiederholungsinstanz.
 
-## <a name="pointers-layout-design-issues"></a>Entwurfs Probleme beim Layout von Zeigern
+## <a name="pointers-layout-design-issues"></a>Layoutentwurfsprobleme bei Zeigern
 
-In diesem Abschnitt werden Probleme im Zusammenhang mit der Verarbeitung von kompatiblen Strukturen und eingebetteten Zeigern behandelt. Das Problem besteht darin, dass der Compiler Zeiger Layouts für Strukturen und Arrays mit einiger Redundanz generiert. Dies ist von Vorteil, da die Informationen hilfreich sind. eine konforme Struktur kann z. b. ein Zeiger Layout durchlaufen, um alle Zeiger aus der Struktur zu bedienen, und aus dem konformen Array, das Teil der konformen Struktur ist. Es gibt jedoch einige eingebettete Situationen, bei denen die NDR-Engine zusätzliche Aufgaben ausführen muss, um alle Zeiger Layouts in der richtigen Reihenfolge zu verarbeiten, wobei jeder Zeiger genau einmal verarbeitet wird.
+In diesem Abschnitt werden Probleme im Zusammenhang mit der Verarbeitung konformer Strukturen und eingebetteter Zeiger behandelt. Das Problem besteht darin, dass der Compiler Zeigerlayouts für Strukturen und Arrays mit einiger Redundanz generiert. Dies ist von Vorteil, da die Informationen nützlich sind und daher beispielsweise eine konforme Struktur ein Zeigerlayout durchgehen kann, um alle Zeiger aus der Struktur und aus dem konformen Array zu bedienen, das Teil der konformen Struktur ist. Es gibt jedoch einige eingebettete Situationen, in denen die NDR-Engine zusätzliche Aufgaben ausführen muss, um alle Zeigerlayouts in der richtigen Sequenz zu verarbeiten und jeden Zeiger genau einmal zu verarbeiten.
 
 ## <a name="what-the-compiler-generates"></a>Was der Compiler generiert
 
-Jedes in diesem Abschnitt erörterte Objekt verfügt über Zeiger, z. b. enthält eine konforme Struktur Zeiger sowohl im Struktur Teil als auch in den Array Elementen. Das-Element ist eine einfache Struktur mit einem-Zeiger.
+Jedes in diesem Abschnitt erläuterte Objekt verfügt über Zeiger, sodass beispielsweise eine konforme Struktur Zeiger im Strukturteil sowie in den Arrayelementen enthält. Das -Element ist eine einfache -Struktur mit einem Zeiger.
 
 1.  Konforme Struktur, einzelne Ebene
 
-    Der konforme Deskriptor verfügt über einen PP-Teil, in dem alle Zeiger sowohl aus der Struktur als auch aus dem Array beschrieben werden. Die Elementliste enthält den FC " \_ Long" an Stelle eines Zeigers. Die Beschreibung des caretzarararrays hat Elemente, die einen eingebetteten \_ komplexen und keinen Zeiger Deskriptoren verwenden. Das Element hat immer noch seinen einzelnen Zeiger Deskriptor. Das Zeiger Layout liegt vor dem Element Layout in einer konformen Struktur und einfachen Struktur Deskriptoren.
+    Der konforme Deskriptor verfügt über einen PP-Teil, in dem alle Zeiger sowohl aus der Struktur als auch aus dem Array beschrieben werden. Die Memberliste enthält FC \_ LONG anstelle eines Zeigers. Der CARRAY-Arraydeskriptor verfügt über Elemente durch die Verwendung eines eingebetteten \_ komplexen und überhaupt keine Zeigerdeskriptoren. Das Element verfügt weiterhin über einen einzelnen Zeigerdeskriptor. Zeigerlayout steht vor dem Elementlayout in einer konformen Struktur und einfachen Strukturdeskriptoren.
 
-2.  Konforme Struktur, mindestens zwei Ebenen
+2.  Konforme Struktur, zwei oder mehr Ebenen
 
-    Die PP-Beschreibung enthält Zeiger von allen Ebenen. Die gleiche Array Beschreibung wird wieder verwendet wie die interne konforme Struktur. Die Elementliste enthält den FC " \_ Long" an Stelle eines Zeigers. Eine eingebettete Struktur kommt durch die Verwendung eines eingebetteten komplexen. Der konforme Struktur Deskriptor wird unverändert wieder verwendet. Die Größe des flachen Teils der Struktur wird ebenfalls vervollständigt, was bedeutet, dass die Struktur Größe der obersten Ebene die flache Größe der eingebetteten Struktur einschließt.
+    Die PP-Beschreibung enthält Zeiger von allen Ebenen. Es verwendet dieselbe Arraybeschreibung wie die interne konforme Struktur. Die Memberliste enthält FC \_ LONG anstelle eines Zeigers. Eine eingebettete Struktur wird durch die Verwendung eines eingebetteten komplexen -Komplexes bezeichnet. Der konforme Strukturdeskriptor wird wie benutzbar wiederverwendet. Die Größe des flachen Teils der -Struktur ist ebenfalls vollständig. Dies bedeutet, dass die Strukturgröße der obersten Ebene die Flachgröße der eingebetteten Struktur enthalten würde.
 
 3.  Komplexe Struktur, einzelne Ebene
 
-    Zeiger Elemente werden durch einen FC- \_ Zeiger gekennzeichnet. Das Zeiger Layout ist so vereinfacht, dass für jeden FC- \_ Zeiger Eintrag in der Liste ein Zeiger Deskriptor (4 Bytes) vorhanden ist. Das Zeiger Layout wird parallel zu einem Element Durchlauf durchlaufen, d. h. ein FC- \_ Zeiger bewirkt, dass die nächste Zeiger Beschreibung verarbeitet wird. Das CArray-Array weist das Zeiger Layout mit allen Deskriptoren des Arrays und dann das-Element durch die Verwendung eines eingebetteten komplexen auf. Der Element Deskriptor wird wieder verwendet. Die Größe des flachen Teils der Struktur wird beendet. Das heißt, die flache Größe der Struktur der obersten Ebene enthält die flache Größe der eingebetteten Struktur. Das Element Layout liegt vor dem Zeiger Layout für komplexe Strukturen.
+    Zeigermember werden durch FC \_ POINTER markiert. Das Zeigerlayout ist so vereinfacht, dass für jeden FC POINTER-Eintrag in der Liste ein Zeigerdeskriptor (4 Bytes) vorhanden \_ ist. Das Zeigerlayout wird parallel zu einer Memberbegehung ausgeführt, d. h., ein FC POINTER bewirkt, dass \_ die nächste Zeigerbeschreibung verarbeitet wird. Das CARRAY-Array verfügt über ein Zeigerlayout mit allen Deskriptoren des Arrays und dann mithilfe eines eingebetteten komplexen Elements. Der Elementdeskriptor wird wiederverwendet. Die Größe des flachen Teils der Struktur ist abgeschlossen. Mit anderen Worten: Die Flachgröße der Struktur der obersten Ebene schließt die Flachgröße der eingebetteten Struktur ein. Das Elementlayout ist dem Zeigerlayout für komplexe Strukturen vorangestellt.
 
-    Daher unterscheidet sich die Beschreibung des konformen Arrays in Abhängigkeit davon, ob es sich um ein Array innerhalb einer konformen Struktur oder innerhalb einer komplexen Struktur handelt.
+    Daher unterscheidet sich die Generierung konformer Arraybeschreibungen, je nachdem, ob es sich um ein Array innerhalb einer konformen Struktur oder innerhalb einer komplexen Struktur handelt.
 
-4.  Komplexe Struktur, mindestens zwei Ebenen, Komplex in Komplex
+4.  Komplexe Struktur, 2 oder mehr Ebenen, komplex in komplex
 
-    Die komplexe Struktur der obersten Ebene verfügt über die Member-Zeiger, die eingebettete komplexe Struktur hat ihre Member-Zeiger. Der konforme Struktur Deskriptor wird wieder verwendet. Der Array Deskriptor von oben ist das wiederverwendete Array aus der eingebetteten-Struktur.
+    Die komplexe Struktur der obersten Ebene verfügt über Memberzeiger, die eingebettete komplexe Struktur über ihre Memberzeiger. Der konforme Strukturdeskriptor wird wiederverwendet. Der Arraydeskriptor von oben ist das wiederverwendete Array aus der eingebetteten Struktur.
 
-5.  Komplexe Struktur mit einer eingebetteten konformen Struktur
+5.  Komplexe Struktur mit eingebetteter konformer Struktur
 
-    Die oberste = ebenenkonforme Struktur verfügt über die Member-Zeiger. Der konforme Struktur Deskriptor wird unverändert wieder verwendet. Der Array Deskriptor wird aus der eingebetteten konformen Struktur wieder verwendet. Das heißt, es enthält keine Zeiger auf den Array Deskriptor. Das-Element hat seinen Zeiger Deskriptor.
+    Die konforme Struktur der obersten Ebene verfügt über Memberzeiger. Der konforme Strukturdeskriptor wird wie benutzbar wiederverwendet. Der Arraydeskriptor wird aus der eingebetteten konformen Struktur wiederverwendet. Mit anderen Worten, es weist keine Zeiger auf den Arraydeskriptor auf. Das Element verfügt über einen Zeigerdeskriptor.
 
 6.  Arrays von Strukturen mit Zeigern
 
-    Ein Array von einfachen Strukturen mit Zeigern wird als smfarray oder CArray generiert, abhängig davon, ob die Größe des Arrays groß ist. in beiden Fällen weist es jedoch ein gezeichtes Zeiger Layout auf (eine \_ wiederholte Wiederholung oder eine \_ wiederholte Variable). Das Zeiger Layout ist vor dem Element Layout.
+    Ein Array einfacher Strukturen mit Zeigern wird als SMFARRAY oder CARRAY generiert, je nachdem, ob das Array dimensioniert ist, aber in beiden Fällen verfügt es über ein Zeigerlayout, das vollständig ist (FIXED \_ REPEAT oder VARIABLE \_ REPEAT). Das Zeigerlayout steht vor dem Elementlayout.
 
-    Ein Array komplexer Strukturen mit Zeigern wird \_ unabhängig davon, ob es sich um ein fester oder eine Größe handelt, als falsch Array generiert, und in beiden Fällen ist kein Zeiger Layout vorhanden.
+    Ein Array komplexer Strukturen mit Zeigern wird als BOGUS ARRAY generiert, \_ unabhängig davon, ob es festgelegt oder dimensioniert ist und in beiden Fällen über kein Zeigerlayout verfügt.
 
-## <a name="what-the-ndr-engine-does"></a>Funktionsweise der NDR-Engine
+## <a name="what-the-ndr-engine-does"></a>Leistung der NDR-Engine
 
 In diesem Abschnitt wird das Verhalten der NDR-Engine beschrieben.
 
-**Der marshallingdurchlauf**
+**Der Marshallingdurchlauf**
 
-1.  Konforme Strukturen und eingebettete konforme Struktur.
+1.  Konforme Strukturen und eingebettete konforme Strukturen.
 
-    Die Struktur der obersten Ebene verhält sich wie eine Struktur mit einer Ebene.
+    Die Struktur der obersten Ebene verhält sich wie eine Struktur auf einer einzelnen Ebene.
 
-2.  Eingebettete komplexe Struktur mit konformem Array
+2.  Eingebettete komplexe Struktur mit konformen Arrays
 
-    Jede komplexe Struktur erzwingt, dass die äußere Struktur eine komplexe Struktur ist. Die eingebettete Struktur Marshalls nie das Array. Jede Struktur durchläuft immer eingebettete Zeiger, indem Member einfach gemarshallert werden und ein Member, der als FC- \_ Zeiger auftritt.
+    Jede komplexe Struktur erzwingt, dass die äußere Struktur eine komplexe Struktur ist. Eingebettete Strukturen marshallen ihr Array nie. Jede Struktur durchläuft immer eingebettete Zeiger, indem einfach Member gemarshallt werden und ein Member ein FC \_ POINTER ist.
 
-3.  Komplexe Struktur mit konformen Struktur
+3.  Komplexe Struktur mit konformer Struktur
 
-    Die am meisten eingebettete konforme Struktur marshallziert das konforme Array und alle pointierten. Die NDR-Engine wird nicht zu tieferen, in die Struktur eingefügten Strukturen herab laufen, wenn vorhanden. Dadurch wird die Lösung vereinfacht, da eine konforme Struktur ein Blatt Objekt ist, so weit das Marshalling von eingebetteten Objekten betrifft. Die komplexe Struktur der obersten Ebene überspringt das Marshalling von Arrays.
+    Die oberste eingebettete konforme Struktur marshallt das konforme Array und alle Pointees. Die NDR-Engine stürzt niemals zu tiefer geschachtelten konformen Strukturen ab, sofern vorhanden. dies vereinfacht die Lösung, da eine konforme Struktur ein Blattobjekt im Hinblick auf das Marshalling eingebetteter Objekte ist. Die komplexe Struktur der obersten Ebene überspringt das Marshalling des Arrays.
 
-**Nicht Marshalling, übertragen und Freigeben von Durchläufen**
+**Aufheben desMarshalings, Auffüllens und Freigebens von Läufen**
 
-Das Marshalling ist symmetrisch zum Marshalling. der erste Vorgang, der für komplexe Strukturen durchführt, besteht darin, die Position des poinrats im Puffer zu ermitteln, indem die Funktion **ndrcomplexstructbuffersize** aufgerufen wird. Anschließend werden die pointees parallel entfernt. Dadurch wird das gleiche Schema zum ordnungsgemäßen Marshalling der pointierten für die Verwendung ermöglicht. Es sollte keine Verwirrung bezüglich der großen Objekte und Unions bestehen. das Speicher Abbild sollte nicht für Größen Objekte und Unions verwendet werden, sondern nur für den Pufferinhalt.
+Unmarshaling ist symmetrisch zum Marshalling. Der erste Vorgang, der für komplexe Strukturen ausgeführt wird, besteht darin, die Position der Pointees im Puffer durch Aufrufen der **NdrComplexStructBufferSize-Funktion** zu ermitteln. Anschließend werden pointes parallel entmarshalsiert, sodass das gleiche Schema für die korrekte Verwendung der Pointees entmarshalingt werden kann. Es sollte keine Verwirrung hinsichtlich der Größe von Objekten und Unions bestehen. Das Speicherbild sollte nicht nur für den Pufferinhalt für Objekte und Unions verwendet werden, deren Größe festgelegt ist.
 
-Die Flags, die verwendet werden, um das Marshalling und das Marshalling ordnungsgemäß durchzuführen, werden auf die gleiche Weise wie bei der Überprüfung und Freigabe verwendet, um sicherzustellen, dass pointierten genau einmal durchlaufen werden.
+Die Flags, die zum ordnungsgemäßen Marshalling und Aufheben des Marshallings verwendet werden, werden auf die gleiche Weise beim Auffüllen und Freigeben verwendet, um sicherzustellen, dass Pointees genau einmal ausgeführt werden.
 
-**Erfolgs Übergabe**
+**Endianesspass**
 
-Zunächst ähnelt der gegen übergebene Pass einem Marshalling/Unmarshalling. zum Verarbeiten komplexer Strukturen sind zwei Durchgänge erforderlich. First Pass konvertiert den flachen Teil und findet die Position des pointierten im Puffer ähnlich der Art, wie bufsizing diesen Vorgang für das Marshalling durchführt. Der zweite Durchlauf konvertiert dann die pointierten.
+Zunächst ähnelt der Endianess-Pass dem Marshalling/Unmarshaling. zwei Durchläufe sind erforderlich, um komplexe Strukturen zu verarbeiten. Der erste Durchlauf konvertiert den flachen Teil und sucht die Position der Pointees im Puffer, ähnlich wie bei der Füllung dieses Vorgangs zum Aufheben desMarshalings. Der zweite Durchlauf konvertiert dann die Pointees.
 
-Endianess-Pässe unterscheiden sich wie folgt: jede Struktur und jeder Member muss abgestuft werden, bis das Blatt Element oder Element ein einfacher Typ ist. Dies unterscheidet sich vom nicht Mars Hallen. beim nicht Marshalling gibt es z. b. nie eine Notwendigkeit, konforme Strukturen zu verarbeiten, die in konforme Strukturen eingebettet sind, oder ein beliebiges Member der konformen Struktur. Ein weiteres Problem ist, dass es sich bei der Konvertierung nicht um einen idempotenten Vorgang handelt – daher könnte der Unmarshalling-Durchlauf das rückgängig machen einiger Teile ohne Schaden wiederholen, während die Konvertierung für eine strikte einmal pro einfachen Typ durchgeführt werden muss.
+Endianessdurchläufe unterscheiden sich wie folgt: Jede Struktur und jedes Element muss abgestuft werden, bis der Blattmember oder das Element ein einfacher Typ ist. Dies unterscheidet sich vom Unmarshaling. In unmarshaling ist es beispielsweise nie erforderlich, konforme Strukturen zu verarbeiten, die in konforme Strukturen eingebettet sind, oder ein beliebiges Element der konformen Struktur. Ein weiteres Problem besteht darin, dass die Konvertierung kein idempotenter Vorgang ist. Daher kann der Unmarshalingdurchlauf das Unmarshaling einiger Teile ohne Schaden wiederholen, während die Konvertierung ausschließlich einmal pro beliebigem einfachen Typ durchgeführt werden muss.
 
-Daher kann der-Algorithmus für die erneute Anmeldung wie folgt zusammengefasst werden. Der NDR hat eine Vorstellung von der Konzept Struktur der obersten Ebene und ein Flag, um dies nach Bedarf zu markieren. Wenn Sie das erste Mal durchlaufen, z. b. zum Konvertieren des flachen Teils und zum Abrufen der Position der poindanten, wird dieser Begriff nicht verwendet. Der NDR würde die flachen Teile aller Ebenen von Strukturen durchlaufen und nie die Zeiger Verarbeitung Unternehmen. Schließlich würde der NDR das Array auf der obersten Ebene in eine flache Konvertierung konvertieren.
+Daher kann der Endianess-Algorithmus wie folgt zusammengefasst werden. NDR verfügt über ein Konzept der konformen Struktur der obersten Ebene und ein Flag, um dies entsprechend zu kennzeichnen. Beim ersten Durchgehen, z. B. um den flachen Teil zu konvertieren und die Position der Zeiger zu erhalten, wird dieses Konzept nicht verwendet. NDR würde durch die flachen Teile aller Ebenen von Strukturen absteigen und nie in die Zeigerverarbeitung übersteigen. Schließlich würde NDR das Array auf oberster Ebene flach konvertieren.
 
-Wenn Sie das zweite Mal durchlaufen, wird das-Flag verwendet, um die Übergabe des eingebetteten Zeigers zu markieren, um zu vermeiden, dass tiefere Ebenen der konformen Strukturen eingegeben werden, und dann die oberste konforme Struktur. Auf diese Weise würde das-Flag das gängige Marshalling/Unmarshalling-Verhalten erzwingen, um zu vermeiden, dass es zu tieferen Ebenen von konformen Strukturen absteigend wird.
+Beim zweiten Durchgang wird das -Flag verwendet, um den Pass des eingebetteten Zeigers zu markieren, um zu vermeiden, dass tiefere Ebenen der konformen Strukturen und dann die am häufigsten konforme Struktur eintreten. Auf diese Weise würde das Flag das allgemeine Marshalling-/Unmarshalingverhalten erzwingen, wodurch vermieden wird, dass in tiefere Ebenen von konformen Strukturen absteigend.
 
-Der zweite Durchlauf für komplexe Strukturen mit konformen Arrays funktioniert wie folgt: die komplexen Strukturen funktionieren in der üblichen Weise. Dies bedeutet, dass tiefere Ebenen nie Ihre konformen Größe oder Ihre konformen Arrays untersuchen oder überspringen und stattdessen einfach Ihre Member durchlaufen, ohne das Array zu berühren.
+Der zweite Durchgang für komplexe Strukturen mit konformen Arrays funktioniert wie folgt: Die komplexen Strukturen funktionieren wie folgt. Dies bedeutet, dass tiefere Ebenen niemals ihre konforme Größe oder ihre konformen Arrays betrachten oder überspringen würden und stattdessen einfach ihre Member durchlassen würden, ohne das Array zu berühren.
 
-Bei komplexen Strukturen mit konformen Strukturen muss die konforme Struktur beachten, ob Sie die oberste Ebene ist und ob Sie sich in einer komplexen Struktur befindet. Der flache Teil des Arrays wird von der obersten konformen Struktur verarbeitet. Beim zweiten Durchlauf würde die am meisten übergebene Struktur den flachen Teil überspringen und das Zeiger Layout durchlaufen und zurückgeben. Die oberste komplexe Struktur würde den flachen Teil überspringen und auch das Zeiger Layout überspringen.
+Bei komplexen Strukturen mit konformen Strukturen muss die konforme Struktur wissen, ob sie sich auf der obersten Ebene befindet und sich in einer komplexen Struktur befindet. Der flache Teil des Arrays wird von der am häufigsten konformen -Struktur verarbeitet. Im zweiten Durchgang würde die oberste konforme Struktur den flachen Teil überspringen und das Zeigerlayout durchgehen und zurückgeben. Die oberste komplexe Struktur würde ihren flachen Teil überspringen und auch das Zeigerlayout überspringen.
 
-**Der robuste Aspekt der nicht Umwahl enden Exemplarische Vorgehensweise**
+**Der robuste Aspekt der Endianess-Walks**
 
-Der einstufige Durchlauf prüft auf die üblichen nicht korrelierten Bedingungen und führt andere Prüfungen in einer nicht korrelierten Art aus. Die Überprüfungen, die auf korrelierte Werte abzielen (z. b. das Größen Anpassungs Argument und die konformen Größe), können nicht mit diesem Schritt ausgeführt werden. Sie werden später, wenn das Marshalling erfolgt, ausgeführt.
+Die Exemplarische Endianess überprüft die üblichen Out-of-the-Buffer-Bedingungen und führt andere Überprüfungen nicht korrelierter Natur durch. Die Überprüfungen, die auf korrelierte Werte abzielen (z. B. das Größenargument im Vergleich zur konformen Größe), können nicht mit diesem Schritt ausgeführt werden. sie werden später ausgeführt, wenn dasMarshaling nicht mehr ausgeführt wird.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Channel-Element (channelellisttype)
-description: Definiert einen Kanal, zu dem Ereignisse protokolliert werden können.
+title: channel (ChannelListType)-Element
+description: Definiert einen Kanal, in dem Ereignisse protokolliert werden können.
 ms.assetid: 4af740d7-2ab8-4f3e-86b3-501e5a6a60f6
 keywords:
-- Channel-Element-Ereignisprotokoll
+- Channelelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6c90d1f831157d2a4a2d4f3519b4e1baa07d6af2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f19e90f3f66aa017ecb7183e1ad3dc5c614832b8ec2f832d4ec6656674f0ea7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032310"
 ---
-# <a name="channel-channellisttype-element"></a>Channel-Element (channelellisttype)
+# <a name="channel-channellisttype-element"></a>channel (ChannelListType)-Element
 
-Definiert einen Kanal, zu dem Ereignisse protokolliert werden können.
+Definiert einen Kanal, in dem Ereignisse protokolliert werden können.
 
 ``` syntax
 <xs:element name="channel"
@@ -30,7 +30,7 @@ Definiert einen Kanal, zu dem Ereignisse protokolliert werden können.
  />
 ```
 
-Das **Channel** -Element wird durch den komplexen [**channelellisttype**](eventmanifestschema-channellisttype-complextype.md) -Typ definiert.
+Das **Channelelement** wird vom komplexen [**ChannelListType-Typ**](eventmanifestschema-channellisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Channel** -Element wird durch den komplexen [**channelellisttype**](eventm
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,10 +50,10 @@ Das **Channel** -Element wird durch den komplexen [**channelellisttype**](eventm
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**Kanäle (ProviderType)**](eventmanifestschema-channels-providertype-element.md)
+[**channels (ProviderType)**](eventmanifestschema-channels-providertype-element.md)
 </dt> <dt>
 
-[**Kanäle (metadataType)**](eventmanifestschema-channels-metadatatype-element.md)
+[**channels (MetadataType)**](eventmanifestschema-channels-metadatatype-element.md)
 </dt> </dl>
 
  

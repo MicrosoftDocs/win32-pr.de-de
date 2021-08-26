@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn sich die Auswahl von frei Hand Eingaben innerhalb des InkPicture-Steuer Elements geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, Ausschneide-und Einfüge Prozeduren oder die Auswahl Eigenschaft.
+description: Tritt ein, wenn sich die Auswahl von Freihand im InkPicture-Steuerelement geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeprozeduren oder die Selection-Eigenschaft.
 ms.assetid: e300ec91-e8f3-473f-b526-efeafafaa32a
-title: InkPicture. SelectionChanged-Ereignis (msink AUT. h)
+title: InkPicture.SelectionChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14594efe4e5ecda64167ec9a0e075fc60d8e9a19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a1fce27d9aa0dd043c5e474d790c1bd9737a9c10bffbed3eff6a287be67030f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939000"
 ---
-# <a name="inkpictureselectionchanged-event"></a>InkPicture. SelectionChanged-Ereignis
+# <a name="inkpictureselectionchanged-event"></a>InkPicture.SelectionChanged-Ereignis
 
-Tritt auf, wenn sich die Auswahl von frei Hand Eingaben innerhalb des [InkPicture](inkpicture-control-reference.md) -Steuer Elements geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, Ausschneide-und Einfüge Prozeduren oder die [**Auswahl**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection) Eigenschaft.
+Tritt ein, wenn sich die Auswahl von Freihand im [InkPicture-Steuerelement](inkpicture-control-reference.md) geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeprozeduren oder die [**Selection-Eigenschaft.**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection)
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,15 +26,15 @@ void SelectionChanged();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu diesem Ereignis finden Sie unter dem [**SelectionChanged**](inkoverlay-selectionchanged.md) -Ereignis des [**InkOverlay**](inkoverlay-class.md) -Objekts, das über die gleiche Funktionalität verfügt.
+Weitere Informationen zu diesem Ereignis finden Sie im [**SelectionChanged-Ereignis**](inkoverlay-selectionchanged.md) des [**InkOverlay-Objekts,**](inkoverlay-class.md) das über die gleiche Funktionalität verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,9 +42,9 @@ Weitere Informationen zu diesem Ereignis finden Sie unter dem [**SelectionChange
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -53,10 +53,10 @@ Weitere Informationen zu diesem Ereignis finden Sie unter dem [**SelectionChange
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> <dt>
 
-[**Bild-Steuerelement für Auswahl Eigenschaften \[\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection)
+[**Selection Property \[ InkPicture-Steuerelement\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkpicture-get_selection)
 </dt> </dl>
 
  

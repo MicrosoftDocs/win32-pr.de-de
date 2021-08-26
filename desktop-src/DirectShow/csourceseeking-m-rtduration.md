@@ -1,7 +1,7 @@
 ---
-description: 'Dauer des Streams. Standardmäßig wird der Wert auf den Wert der csourceseeking:: m rtstoppt-Element Variablen festgelegt \_ .'
+description: Dauer des Streams. Standardmäßig wird der Wert auf den Wert der Membervariablen CSourceSeeking::m \_ rtStop festgelegt.
 ms.assetid: a87b321e-3179-4485-969b-bf12cb634b43
-title: 'Csourceseeking:: m_rtDuration Member (ctlutil. h)'
+title: CSourceSeeking::m_rtDuration Member (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e188a29689a6dd1a54ef401f8bd2677e30989972
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6aa62a3cdf906a4e9666b7786c08e49fca250ef042d187902132410cc2f0abaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053970"
 ---
-# <a name="csourceseekingm_rtduration-member"></a>Csourceseeking:: m \_ rtduration-Member
+# <a name="csourceseekingm_rtduration-member"></a>CSourceSeeking::m \_ rtDuration-Member
 
-Dauer des Streams. Standardmäßig wird der Wert auf den Wert der [**csourceseeking:: m \_ rtstoppt**](csourceseeking-m-rtstop.md) -Element Variablen festgelegt.
+Dauer des Streams. Standardmäßig wird der Wert auf den Wert der [**Membervariablen CSourceSeeking::m \_ rtStop**](csourceseeking-m-rtstop.md) festgelegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ CRefTime m_rtDuration;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Variable gedrückt.
+Halten Sie den **Abschnitt "m \_ pLock** critical" vor dem Zugriff auf diese Variable.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

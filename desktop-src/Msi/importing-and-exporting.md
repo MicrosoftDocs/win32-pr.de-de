@@ -1,23 +1,23 @@
 ---
-description: Mit dem Installationsprogramm können Sie ein Textarchiv in eine aktive Datenbank importieren und eine Datenbankdatei in ein Textarchiv exportieren. Dies kann für textbasierte Quell Code Verwaltungssysteme nützlich sein.
+description: Sie können das Installationsprogramm verwenden, um ein Textarchiv in eine aktive Datenbank zu importieren und eine Datenbankdatei in ein Textarchiv zu exportieren. Dies kann für textbasierte Quellcodeverwaltungssysteme nützlich sein.
 ms.assetid: 1025da16-9e1f-4fb4-9ce1-f992970eb903
 title: Importieren und Exportieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb778f4a0fe415686c80f2609f63958ae042d920
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0bfd141506729be6b4197c3ee3d607bf8aaf36abb1ba0b517fe8d5deb44fdf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043790"
 ---
 # <a name="importing-and-exporting"></a>Importieren und Exportieren
 
-Mit dem Installationsprogramm können Sie ein Textarchiv in eine aktive Datenbank importieren und eine Datenbankdatei in ein Textarchiv exportieren. Dies kann für textbasierte Quell Code Verwaltungssysteme nützlich sein.
+Sie können das Installationsprogramm verwenden, um ein Textarchiv in eine aktive Datenbank zu importieren und eine Datenbankdatei in ein Textarchiv zu exportieren. Dies kann für textbasierte Quellcodeverwaltungssysteme nützlich sein.
 
-Um ein Textarchiv in eine aktive Datenbank zu importieren, müssen Sie die Funktion [**msidatabaseimport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseimporta) abrufen.
+Um ein Textarchiv in eine aktive Datenbank zu importieren, rufen Sie die [**MsiDatabaseImport-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseimporta) auf.
 
-Wenn Sie eine Datenbankdatei in ein Textarchiv exportieren möchten, müssen Sie die Funktion [**msidatabaseexport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta) anrufen.
+Um eine Datenbankdatei in ein Textarchiv zu exportieren, rufen Sie die [**MsiDatabaseExport-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta) auf.
 
  
 

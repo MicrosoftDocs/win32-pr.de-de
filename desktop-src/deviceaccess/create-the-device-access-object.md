@@ -4,20 +4,20 @@ description: In diesem Thema wird erläutert, wie Sie das Gerätezugriffsobjekt 
 ms.assetid: 26619A25-67FE-44DC-82DD-36076326748D
 ms.topic: article
 ms.date: 02/11/2020
-ms.openlocfilehash: 9fee82f84a9325472928de69513e5f8e1c3ea1d1
-ms.sourcegitcommit: 1f917afc149b5cc449a4a25a87de311e4842734b
+ms.openlocfilehash: c90252e2a906928706fa8577e133a019482976b4d5dd8e4a7cb1ebd4fb245ec8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113689213"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120029097"
 ---
 # <a name="implement-the-device-access-object"></a>Implementieren des Gerätezugriffsobjekts
 
 In diesem Thema wird erläutert, wie Sie das Gerätezugriffsobjekt instanziieren und für den Zugriff auf ein Gerät verwenden. Die instanziierte Klasse implementiert die [**Schnittstellen IDeviceIoControl**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) und [**ICreateDeviceAccessAsync.**](/windows/win32/api/Deviceaccess/nn-deviceaccess-icreatedeviceaccessasync)
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1"></a>Schritt 1
+### <a name="step-1"></a>Schritt 1
 
 Um das Gerätezugriffsobjekt zu instanziieren, müssen Sie zuerst die [**CreateDeviceAccessInstance-Funktion**](/windows/win32/api/deviceaccess/nf-deviceaccess-createdeviceaccessinstance) aufrufen. Wenn **CreateDeviceAccessInstance** erfolgreich ist, können Sie die [**Wait-Methode**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-wait) aufrufen, um auf den Abschluss des asynchronen Vorgangs zu warten. Wenn **Wait** erfolgreich ist, können Sie ein [**IDeviceIoControl-Objekt**](/windows/win32/api/Deviceaccess/nn-deviceaccess-ideviceiocontrol) (oder den entsprechenden Fehler) aus der [**GetResult-Methode**](/windows/win32/api/Deviceaccess/nf-deviceaccess-icreatedeviceaccessasync-getresult) abrufen.
 
@@ -80,7 +80,7 @@ Return Value:
 
 
 
-### <a name="step-2"></a>Schritt 2
+### <a name="step-2"></a>Schritt 2
 
 Dies ist ein Beispiel für einen Aufruf der **DeviceIoControlSync-Methode.**
 

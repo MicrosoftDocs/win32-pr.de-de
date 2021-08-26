@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentBadColumnIdException-Konstruktor'
+description: 'Weitere Informationen zu: EsentBadColumnIdException-Konstruktor'
 title: EsentBadColumnIdException-Konstruktor
 TOCTitle: 'EsentBadColumnIdException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadColumnIdException.#ctor
@@ -52,7 +52,7 @@ Dim instance As New EsentBadColumnIdException()
 public EsentBadColumnIdException()
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 #### <a name="reference"></a>Verweis
 

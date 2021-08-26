@@ -4,12 +4,12 @@ ms.assetid: d5450ff9-085f-4345-87af-bf6c87931755
 title: MFPKEY_COLORCONV_SRCLEFT-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c3168125390cef6472ebc6ae6bf71ea426976c2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 879f66fc98b15831de18d2d14be49eca859b9be58aacbb08dd21fab5ef90e2c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940140"
 ---
 # <a name="mfpkey_colorconv_srcleft-property"></a>MFPKEY \_ COLORCONV \_ SRCLEFT-Eigenschaft
 
@@ -31,15 +31,15 @@ VT \_ I4
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

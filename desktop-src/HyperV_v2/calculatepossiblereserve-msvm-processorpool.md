@@ -1,7 +1,7 @@
 ---
-description: Diese Methode wird verwendet, um die tatsächliche Reserve zu finden, bei der der Eingabeparameter die Anzahl der Prozessoren virtueller Maschinen ist, für die die Reservierung berechnet wird.
+description: Diese Methode wird verwendet, um die tatsächliche Reserve zu ermitteln, wobei der Eingabeparameter die Anzahl der VM-Prozessoren ist, für die die Reserve berechnet wird.
 ms.assetid: C0497900-00F3-4975-9D12-C82C13C03D8E
-title: Calculatepossiblereserve-Methode der Msvm_ProcessorPool-Klasse
+title: CalculatePossibleReserve-Methode der Msvm_ProcessorPool-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c7f88bcf3295b1792fca6be88ae0c9282b72646e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06cfa01dd89392c05f460462d8bda5898b47d90b6e027fa885bf039f62488cc3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042070"
 ---
-# <a name="calculatepossiblereserve-method-of-the-msvm_processorpool-class"></a>Calculatepossiblereserve-Methode der MSVM \_ processorpool-Klasse
+# <a name="calculatepossiblereserve-method-of-the-msvm_processorpool-class"></a>CalculatePossibleReserve-Methode der Msvm \_ ProcessorPool-Klasse
 
-Diese Methode wird verwendet, um die tatsächliche Reserve zu finden, bei der der Eingabeparameter die Anzahl der Prozessoren virtueller Maschinen ist, für die die Reservierung berechnet wird. Diese Methode ist erforderlich, da die Reservierung von Prozessorressourcen stark von der Anzahl der Prozessoren abhängig ist, die parallel geplant werden müssen.
+Diese Methode wird verwendet, um die tatsächliche Reserve zu ermitteln, wobei der Eingabeparameter die Anzahl der VM-Prozessoren ist, für die die Reserve berechnet wird. Diese Methode ist erforderlich, da die Reservierung von Prozessorressourcen stark von der Anzahl der Prozessoren abhängt, die parallel geplant werden müssen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,24 +39,24 @@ uint32 CalculatePossibleReserve(
 
 <dl> <dt>
 
-*ProcessorCount* \[ in\]
+*ProcessorCount* \[ In\]
 </dt> <dd>
 
-Typ: **UInt16**
+Typ: **uint16**
 
-Die Anzahl der Prozessoren virtueller Maschinen, für die die Reservierung berechnet wird. Der Maximalwert für diese Eigenschaft ist die Anzahl logischer Prozessoren für den Host Computer.
+Die Anzahl der VM-Prozessoren, für die die Reserve berechnet wird. Der Maximale Wert für diese Eigenschaft ist die Logische Prozessoranzahl für den Hostcomputer.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Die CPU-Ressourcen Menge, die für einen virtuellen Computer reserviert werden kann.
+Die Menge der CPU-Ressourcen, die für einen virtuellen Computer reserviert werden können.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM \_ processorpool**](msvm-processorpool.md) -Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**Msvm \_ ProcessorPool-Klasse**](msvm-processorpool.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,19 +64,19 @@ Der Zugriff auf die [**MSVM \_ processorpool**](msvm-processorpool.md) -Klasse k
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ processorpool**](msvm-processorpool.md)
+[**Msvm \_ ProcessorPool**](msvm-processorpool.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Das SelectionTree-Steuerelement verwendet das selectionpathon-Ereignis, um einen booleschen Wert zu veröffentlichen, der angibt, ob dem aktuell ausgewählten Feature ein Auswahl Pfad zugeordnet ist. Dieses Ereignis sollte in der Tabelle EventMapping erstellt werden.
+description: Das SelectionTree-Steuerelement verwendet das SelectionPathOn-Ereignis, um einen booleschen Wert zu veröffentlichen, der angibt, ob dem aktuell ausgewählten Feature ein Auswahlpfad zugeordnet ist. Dieses Ereignis sollte in der EventMapping-Tabelle verfasst werden.
 ms.assetid: 441b9416-066a-429b-92d2-555584a20fa2
-title: Selectionpathon ControlEvent
+title: SelectionPathOn ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9882ea534a0d4c91a0107ce3949363350a17fbea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fea32926117c200f466bd2c40ac611e7ccbc47fb6a231a5dcf93ffa2ee0446b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040430"
 ---
-# <a name="selectionpathon-controlevent"></a>Selectionpathon ControlEvent
+# <a name="selectionpathon-controlevent"></a>SelectionPathOn ControlEvent
 
-Das [SelectionTree-Steuer](selectiontree-control.md) Element verwendet das selectionpathon-Ereignis, um einen booleschen Wert zu veröffentlichen, der angibt, ob dem aktuell ausgewählten Feature ein Auswahl Pfad zugeordnet ist. Dieses Ereignis sollte in der [Tabelle EventMapping](eventmapping-table.md)erstellt werden.
+Das [SelectionTree-Steuerelement](selectiontree-control.md) verwendet das SelectionPathOn-Ereignis, um einen booleschen Wert zu veröffentlichen, der angibt, ob dem aktuell ausgewählten Feature ein Auswahlpfad zugeordnet ist. Dieses Ereignis sollte in der [EventMapping-Tabelle verfasst werden.](eventmapping-table.md)
 
 Dieses Ereignis kann sich nur auf Steuerelemente auswirken, die sich im gleichen Dialogfeld wie das SelectionTree-Steuerelement befinden.
 
-Diese ControlEvent erfordert, dass die Benutzeroberfläche auf der [*vollständigen*](f-gly.md) Benutzeroberfläche ausgeführt wird. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzer*](r-gly.md) Oberfläche oder [*grundlegender Benutzeroberfläche*](b-gly.md). Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf der vollständigen [*Benutzeroberflächenebene ausgeführt*](f-gly.md) werden. Dieses Ereignis funktioniert nicht mit einer reduzierten [*Benutzeroberfläche oder*](r-gly.md) einer [*einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
 
-Der seleclevent "selectionpathon" wird nie während einer [Wartungs Installation](maintenance-installation.md)veröffentlicht.
+Das SelectionPathOn ControlEvent wird nie während einer [Wartungsinstallation veröffentlicht.](maintenance-installation.md)
 
 ## <a name="published-by"></a>Veröffentlicht von
 
@@ -35,7 +35,7 @@ Keine.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Ein [Text](text-control.md) Steuerelement im gleichen modalen Dialogfeld wie die SelectionTree sollte das Ereignis über die [EventMapping-Tabelle](eventmapping-table.md)abonnieren. Das Text Steuerelement zeigt die Beschriftung des Auswahl Pfads an. Dieses Text Steuerelement ist abhängig vom Ereignis sichtbar oder ausgeblendet.
+Ein [Text-Steuerelement](text-control.md) im gleichen modalen Dialogfeld wie selectionTree sollte das Ereignis über die [EventMapping-Tabelle abonnieren.](eventmapping-table.md) Das Textsteuerfeld zeigt die Beschriftung des Auswahlpfads an. Dieses Textsteuerfeld ist je nach Ereignis sichtbar oder ausgeblendet.
 
  
 

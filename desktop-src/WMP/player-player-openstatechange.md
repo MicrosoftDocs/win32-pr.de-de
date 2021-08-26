@@ -1,11 +1,11 @@
 ---
-title: Player. OpenStateChange-Ereignis
-description: Das OpenStateChange-Ereignis tritt auf, wenn die openstate-Eigenschaft den Wert ändert. | Player. OpenStateChange-Ereignis
+title: Player.OpenStateChange-Ereignis
+description: Das OpenStateChange-Ereignis tritt auf, wenn die openState-Eigenschaft den Wert ändert. | Player.OpenStateChange-Ereignis
 ms.assetid: b6b840ab-72c7-4150-a259-1e7d8afcec81
 keywords:
-- Media Player für OpenStateChange-Ereignisfenster
-- OpenStateChange-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player der Player-Klasse, OpenStateChange-Ereignis
+- OpenStateChange-Ereignis Windows Media Player
+- OpenStateChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , OpenStateChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 020a25a811623b9f7d7dd8f316c470cada6a142b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b65436dee60a5207e09a57a39c32dc479ce110e1dafb07a7dbd7cab86e4f0a92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003220"
 ---
-# <a name="playeropenstatechange-event"></a>Player. OpenStateChange-Ereignis
+# <a name="playeropenstatechange-event"></a>Player.OpenStateChange-Ereignis
 
-Das **OpenStateChange** -Ereignis tritt auf, wenn die **openstate** -Eigenschaft den Wert ändert.
+Das **OpenStateChange-Ereignis** tritt auf, wenn die **openState-Eigenschaft** den Wert ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Player.OpenStateChange(
 *NewState* 
 </dt> <dd>
 
-**Zahl** (**Long**), die den neuen geöffneten Zustand angibt. Eine Tabelle mit Werten finden Sie unter [openstate](player-openstate.md) .
+**Number** (**long**), die den neuen geöffneten Zustand angibt. Eine Tabelle mit Werten finden Sie unter [openState.](player-openstate.md)
 
 </dd> </dl>
 
@@ -53,13 +53,13 @@ Player.OpenStateChange(
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Windows-Media Player können mehrere offene Zustände durchlaufen, während versucht wird, eine Netzwerkdatei zu öffnen, z. b. das Auffinden des Servers, das Herstellen einer Verbindung mit dem Server und schließlich das Öffnen der Datei. Dieses Ereignis wird jedes Mal ausgelöst, wenn sich der Status des geöffneten Zustands ändert.
+Windows Media Player können mehrere offene Zustände durchlaufen, während versucht wird, eine Netzwerkdatei zu öffnen, z. B. den Server zu suchen, eine Verbindung mit dem Server herzustellen und schließlich die Datei zu öffnen. Dieses Ereignis wird jedes Mal ausgelöst, wenn sich der Öffnungszustand ändert.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
-Es ist nicht garantiert, dass Windows-Media Player Zustände in einer bestimmten Reihenfolge auftreten. Außerdem treten nicht alle Zustände notwendigerweise während einer Sequenz von Ereignissen auf. Sie sollten keinen Code schreiben, der auf der Status Reihenfolge basiert.
+Windows Media Player Zustände werden in keiner bestimmten Reihenfolge garantiert. Darüber hinaus tritt nicht jeder Zustand notwendigerweise während einer Abfolge von Ereignissen auf. Sie sollten keinen Code schreiben, der von der Zustandsreihenfolge abhängt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,19 +67,19 @@ Es ist nicht garantiert, dass Windows-Media Player Zustände in einer bestimmten
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. openstate**](player-openstate.md)
+[**Player.openState**](player-openstate.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: CBaseStreamControl.CBaseStreamControl-Konstruktor – Konstruktormethode.
+description: 'CBaseStreamControl.CBaseStreamControl-Konstruktor : Konstruktormethode.'
 ms.assetid: c0eff80f-04d3-4919-bb27-1b76c1bd1cce
 title: CBaseStreamControl.CBaseStreamControl-Konstruktor (Strmctl.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4c6521bec65e0182b8eb48eb5d3efe9ea609c6a7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f5a6f00fbe3e6a1b230935a208e47497a7e64d508e3cca8228df6471172a7bd5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983390"
 ---
 # <a name="cbasestreamcontrolcbasestreamcontrol-constructor"></a>CBaseStreamControl.CBaseStreamControl-Konstruktor
 
@@ -53,14 +53,14 @@ Zeiger auf einen **HRESULT-Wert.** Wenn der Konstruktor fehlschlägt, empfängt 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

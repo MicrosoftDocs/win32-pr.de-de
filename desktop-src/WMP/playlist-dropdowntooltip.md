@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. dropdowntooltip
-description: Das dropdowntooltip-Attribut gibt die QuickInfo an oder ruft Sie ab, die angezeigt wird, wenn der Benutzer auf die Dropdown Liste der Wiedergabelisten Elemente zeigt.
+title: PLAYLIST.dropDownToolTip
+description: Das dropDownToolTip-Attribut gibt die QuickInfo an, die angezeigt wird, wenn der Benutzer auf die Dropdownliste des PLAYLIST-Elements zeigt, oder ruft sie ab.
 ms.assetid: 36eefea4-9f34-4428-bac6-e3e1a8b8f20d
 keywords:
-- Wiedergabelisten. dropdowntooltip-Fenster Media Player
+- PLAYLIST.dropDownToolTip Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39cc6f92293750713dde2bfb5eaf097576e6c00e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ca6af0e1e253a1645cc3d4e8914867ef0ec583cc19d26ae1e000a527b7cf838
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003150"
 ---
-# <a name="playlistdropdowntooltip"></a>Wiedergabeliste. dropdowntooltip
+# <a name="playlistdropdowntooltip"></a>PLAYLIST.dropDownToolTip
 
-Das **dropdowntooltip** -Attribut gibt die QuickInfo an oder ruft Sie ab, die angezeigt wird, wenn der Benutzer auf die Dropdown Liste der **Wiedergabe** Listenelemente zeigt.
+Das **dropDownToolTip-Attribut** gibt die QuickInfo an, die angezeigt wird, wenn der Benutzer auf die Dropdownliste des **PLAYLIST-Elements** zeigt, oder ruft sie ab.
 
 ``` syntax
         elementID.dropDownToolTip
@@ -29,9 +29,9 @@ Das **dropdowntooltip** -Attribut gibt die QuickInfo an oder ruft Sie ab, die an
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit dem Standardwert "Anzeigen von Wiedergabelisten, Audiodaten, Videos oder Radiostationen".
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff mit dem Standardwert "Wiedergabelisten, Audio, Video oder Radiosender anzeigen".
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine QuickInfo angezeigt.
 
@@ -41,15 +41,15 @@ Wenn dieses Attribut auf "" (leere Zeichenfolge) festgelegt ist, wird keine Quic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

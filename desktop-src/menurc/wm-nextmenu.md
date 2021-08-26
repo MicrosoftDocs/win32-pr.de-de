@@ -1,9 +1,9 @@
 ---
-title: WM_NEXTMENU Meldung (Winuser. h)
-description: Wird an eine Anwendung gesendet, wenn mit der nach-rechts-oder der nach-links-Taste zwischen der Menüleiste und dem Systemmenü gewechselt wird.
+title: WM_NEXTMENU (Winuser.h)
+description: Wird an eine Anwendung gesendet, wenn die NACH-RECHTS- oder NACH-LINKS-TASTE verwendet wird, um zwischen der Menüleiste und dem Systemmenü zu wechseln.
 ms.assetid: 3fa50fd3-47a6-4dae-9ceb-2abb6626e0a6
 keywords:
-- WM_NEXTMENU von Meldungs Menüs und anderen Ressourcen
+- WM_NEXTMENU von Nachrichtenmenüs und anderen Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ecb8efe8c80a3355a30ab0abf28019f87b33963
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 635ce19efbcfdfd8451f929affbbe0fe2b2c000bc4912977062f3fba2c54e9c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952080"
 ---
-# <a name="wm_nextmenu-message"></a>WM- \_ nextmenu-Meldung
+# <a name="wm_nextmenu-message"></a>WM \_ NEXTMENU-Nachricht
 
-Wird an eine Anwendung gesendet, wenn mit der nach-rechts-oder der nach-links-Taste zwischen der Menüleiste und dem Systemmenü gewechselt wird.
+Wird an eine Anwendung gesendet, wenn die NACH-RECHTS- oder NACH-LINKS-TASTE verwendet wird, um zwischen der Menüleiste und dem Systemmenü zu wechseln.
 
 
 ```C++
@@ -39,20 +39,20 @@ Wird an eine Anwendung gesendet, wenn mit der nach-rechts-oder der nach-links-Ta
 *wParam* 
 </dt> <dd>
 
-Der Code für den virtuellen Schlüssel des Schlüssels. Siehe [**virtuelle Schlüssel Codes**](/windows/desktop/inputdev/virtual-key-codes).
+Der Virtuelle Schlüsselcode des Schlüssels. Weitere Informationen [**finden Sie unter Codes für virtuelle Schlüssel.**](/windows/desktop/inputdev/virtual-key-codes)
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**mdinextmenu**](/windows/win32/api/winuser/ns-winuser-mdinextmenu) -Struktur, die Informationen über das zu aktivierende Menü enthält.
+Ein Zeiger auf eine [**MDINEXTMENU-Struktur,**](/windows/win32/api/winuser/ns-winuser-mdinextmenu) die Informationen über das zu aktivierende Menü enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie auf diese Meldung reagieren, kann die Anwendung das Menü angeben, zu dem im **hmenunext** -Member von [**mdinextmenu**](/windows/win32/api/winuser/ns-winuser-mdinextmenu) gewechselt werden soll, und das Fenster, um die Menü Benachrichtigungs Meldungen im **hwndnext** -Member der **mdinextmenu** -Struktur zu empfangen. Beide Elemente müssen festgelegt werden, damit die Änderungen wirksam werden (Sie sind anfänglich **null**).
+Als Reaktion auf diese Nachricht kann die Anwendung das Menü angeben, zu dem im **hmenuNext-Member** von [**MDINEXTMENU**](/windows/win32/api/winuser/ns-winuser-mdinextmenu) und im Fenster die Menübenachrichtigungsmeldungen im **hwndNext-Member** der **MDINEXTMENU-Struktur** empfangen werden sollen. Sie müssen beide Member festlegen, damit die Änderungen wirksam werden (sie sind anfänglich **NULL).**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,7 +62,7 @@ Wenn Sie auf diese Meldung reagieren, kann die Anwendung das Menü angeben, zu d
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -70,13 +70,13 @@ Wenn Sie auf diese Meldung reagieren, kann die Anwendung das Menü angeben, zu d
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Mdinextmenu**](/windows/win32/api/winuser/ns-winuser-mdinextmenu)
+[**MDINEXTMENU**](/windows/win32/api/winuser/ns-winuser-mdinextmenu)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Menüs](menus.md)

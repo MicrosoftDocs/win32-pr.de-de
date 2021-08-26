@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter sprechen
-description: Iagentcharacter sprechen
+title: IAgentCharacter Speak
+description: IAgentCharacter Speak
 ms.assetid: 3c4baf83-9e69-4048-bdaf-4ead8ea8e7cd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03e290ab9037ee6f261445d4dfd00a206213cd26
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 693b40a00b34173976410391249d3fac1a7f0684e34a6e2ae82afbd8b8169ce0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104516769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014210"
 ---
-# <a name="iagentcharacterspeak"></a>Iagentcharacter:: sprechen
+# <a name="iagentcharacterspeak"></a>IAgentCharacter::Speak
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT Speak(
@@ -23,53 +23,53 @@ HRESULT Speak(
 );
 ```
 
-Spricht den Text oder die Audiodatei.
+Spricht den Text oder die Sounddatei.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszText"></span><span id="bsztext"></span><span id="BSZTEXT"></span>*bsztext*
+<span id="bszText"></span><span id="bsztext"></span><span id="BSZTEXT"></span>*bszText*
 </dt> <dd>
 
-Der Text, in dem das Zeichen gesprochen werden soll.
+Der Text, den das Zeichen sprechen soll.
 
 </dd> <dt>
 
-<span id="bszURL"></span><span id="bszurl"></span><span id="BSZURL"></span>*bszurl*
+<span id="bszURL"></span><span id="bszurl"></span><span id="BSZURL"></span>*bszURL*
 </dt> <dd>
 
-Die URL (oder Datei Spezifikation) einer Audiodatei, die für die gesprochene Ausgabe verwendet werden soll. Hierbei kann es sich um eine Standard Sounddatei () handeln. WAV) oder linguistisch erweiterte Audiodatei (. Lwv).
+Die URL (oder Dateispezifikation) einer Sounddatei, die für gesprochene Ausgaben verwendet werden soll. Dabei kann es sich um eine Standard-Sounddatei (. WAV) oder linguistisch erweiterte Sounddatei (. LWV).
 
 </dd> <dt>
 
-<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwreqid*
+<span id="pdwReqID"></span><span id="pdwreqid"></span><span id="PDWREQID"></span>*pdwReqID*
 </dt> <dd>
 
-Adresse einer Variablen, die die [**Sprech**](/windows/desktop/lwef/iagentcharacter--speak) Anforderungs-ID empfängt.
+Adresse einer Variablen, die die [**Speak-Anforderungs-ID**](/windows/desktop/lwef/iagentcharacter--speak) empfängt.
 
 </dd> </dl>
 
-Um diese Methode mit einem Zeichen zu verwenden, das für die Verwendung einer TTS-Engine (Text-to-Speech) konfiguriert ist. Geben Sie einfach den *bsztext* -Parameter an. Sie können vertikale Balken Zeichen ( \| ) in den *bsztext* -Parameter einschließen, um alternative Zeichen folgen festzulegen, sodass jedes Mal, wenn der Server die Methode verarbeitet, nach dem Zufallsprinzip eine andere Zeichenfolge ausgewählt wird. Die Unterstützung der TTS-Ausgabe wird definiert, wenn das Zeichen mit dem Microsoft-Agent-Zeichen-Editor kompiliert wird.
+Um diese Methode mit einem Zeichen zu verwenden, das für die Spracherkennung mithilfe einer TTS-Engine (Text-to-Speech) konfiguriert ist; geben Sie einfach den *bszText-Parameter* an. Sie können vertikale Balkenzeichen ( ) in den \| *bszText-Parameter* integrieren, um alternative Zeichenfolgen zu bestimmen, sodass bei jeder Serverprozessierung der Methode nach dem Zufallsprinzip eine andere Zeichenfolge ausgewählt wird. Die Unterstützung der TTS-Ausgabe wird definiert, wenn das Zeichen mit dem Microsoft Agent-Zeichen-Editor kompiliert wird.
 
-Wenn Sie die Ausgabe der Audiodatei für das Zeichen verwenden möchten, geben Sie den Speicherort für die Datei im Parameter *bszurl* an. Wenn Sie das HTTP-Protokoll verwenden, um eine Audiodatei herunterzuladen, verwenden Sie die [**Prepare**](/windows/desktop/lwef/iagentcharacter--prepare) -Methode, um die Verfügbarkeit der Datei vor der Verwendung dieser Methode sicherzustellen. Sie können den *bsztext* -Parameter verwenden, um die Wörter anzugeben, die in der Wort Sprechblase des Zeichens angezeigt werden. Wenn Sie eine linguistisch erweiterte Audiodatei () angeben. Lwv) für den *bszurl* -Parameter und keinen Text angeben, verwendet der *bsztext* -Parameter den in der Datei gespeicherten Text.
+Wenn Sie die Sounddateiausgabe für das Zeichen verwenden möchten, geben Sie den Speicherort für die Datei im *bszURL-Parameter* an. Wenn Sie das HTTP-Protokoll zum Herunterladen [](/windows/desktop/lwef/iagentcharacter--prepare) einer Sounddatei verwenden, verwenden Sie die Prepare-Methode, um die Verfügbarkeit der Datei sicherzustellen, bevor Sie diese Methode verwenden. Sie können den *bszText-Parameter* verwenden, um die Wörter anzugeben, die im Wortsprechblasen des Zeichens angezeigt werden. Wenn Sie eine linguistisch erweiterte Sounddatei angeben (. LWV) für den *bszURL-Parameter,* und geben Sie keinen Text an. Der *bszText-Parameter* verwendet den in der Datei gespeicherten Text.
 
-Die [**Sprech Methode verwendet die zuletzt**](/windows/desktop/lwef/iagentcharacter--speak) ausgespielte Animation, um zu bestimmen, welche sprechende Animation abgespielt werden soll. Wenn Sie dem " **sprechen** "-Befehl beispielsweise ein [**iagentcharacter**](iagentcharacter--play.md) -Element vorangestellt haben::P Lay "**gestureright**", wird der Server " **gestureright** " und dann die **gestureright** -Animation durch gesprochen. Wenn die letzte Animation keine sprach Animation enthält, gibt der Microsoft-Agent die Animation wieder, die dem **Sprech** Zustand des Zeichens zugewiesen ist.
+Die [**Speak-Methode**](/windows/desktop/lwef/iagentcharacter--speak) verwendet die zuletzt abgespielte Animation, um zu bestimmen, welche Sprechanimation abgespielt werden soll. Wenn Sie beispielsweise dem **Speak-Befehl** eine [**IAgentCharacter::P lay**](iagentcharacter--play.md) "**GestureRight**" vorangehenden, gibt der Server **GestureRight** und dann die **GestureRight-Sprechanimation** wieder. Wenn die zuletzt gezeigte Animation keine Sprechanimation auf hat, gibt Microsoft Agent die Animation wieder, die dem Sprechzustand des **Zeichens zugewiesen** ist.
 
-Wenn Sie " [**sprechen**](/windows/desktop/lwef/iagentcharacter--speak) " aufrufen und der Audiokanal ausgelastet ist, wird die Audioausgabe des Zeichens nicht gehört, aber der Text wird in der Wort Sprechblase angezeigt. Die [aktivierte](enabled-property.md) -Eigenschaft der Word-Sprechblase muss auch **true** sein, damit der Text angezeigt wird.
+Wenn Sie [**Speak aufrufen**](/windows/desktop/lwef/iagentcharacter--speak) und der Audiokanal ausgelastet ist, wird die Audioausgabe des Zeichens nicht gehört, aber der Text wird im Wortsprechblasen angezeigt. Die Enabled-Eigenschaft [des](enabled-property.md) Wortsprechblasens muss auch **True sein,** damit der Text angezeigt wird.
 
-Das automatische Wörter brechen des Microsoft-Agents in der Word-Sprechblase, unterbricht Wörter mit Leerzeichen (z. b. Leerzeichen und Registerkarten). Es kann jedoch sein, dass ein Wort auch an die Sprechblase angepasst wird. Fügen Sie in Sprachen wie Japanisch, Chinesisch und Thailändisch, in denen Leerzeichen nicht zum Abbrechen von Wörtern verwendet werden, ein Unicode-Zeichen mit 0 (null) Zeichen (0x200b) zwischen Zeichen ein, um logische Wort Umbrüche zu definieren.
+Der automatische Wortumbruch von Microsoft Agent in der Wörtersprechblase unterbricht Wörter mitHilfe von Leerzeichen (z. B. Leerzeichen und Tabulator). Es kann jedoch auch ein Wort zum Einpassen in den Sprechblasen geben. Fügen Sie in Sprachen wie Japanisch, Chinesisch und Thailändisch, in denen Leerzeichen nicht zum Aufbrechen von Wörtern verwendet werden, ein Unicode-Leerzeichen mit einer Breite von null (0x200B) zwischen Zeichen ein, um logische Wörterumbrüche zu definieren.
 
 > [!Note]  
-> Legen Sie die Sprach-ID des Zeichens (mit [**iagentcharakteriex:: setlanguageid**](iagentcharacterex--setlanguageid.md) ) fest, bevor Sie die Sprech Methode verwenden, um die entsprechende Textanzeige innerhalb der Word- [**Sprech**](/windows/desktop/lwef/iagentcharacter--speak) Blase sicherzustellen.
+> Legen Sie die Sprach-ID des Zeichens fest [**(mithilfe von IAgentCharacterEx::SetLanguageID,**](iagentcharacterex--setlanguageid.md) bevor Sie die [**Speak-Methode**](/windows/desktop/lwef/iagentcharacter--speak) verwenden, um eine entsprechende Textanzeige innerhalb des Wortsprechblasens sicherzustellen.
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter::P Lay**](iagentcharacter--play.md), [**iagentballoon:: GetEnabled**](iagentballoon--getenabled.md), [**iagentcharacter::P repare**](iagentcharacter--prepare.md)
+[**IAgentCharacter::P lay**](iagentcharacter--play.md), [**IAgentBalloon::GetEnabled**](iagentballoon--getenabled.md), [**IAgentCharacter::P repare**](iagentcharacter--prepare.md)
 
 
- 
+ 
 
- 
+ 

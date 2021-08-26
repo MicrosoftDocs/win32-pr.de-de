@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: d053c6d26df600fdf09d54eb66866014478845be
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f0ffb6a440e58221edc272a919522b3d4f44b68cf3ac49102185e0759bb11b89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952240"
 ---
 # <a name="d3dxvector4-structure-d3dx9mathh"></a>D3DXVECTOR4-Struktur (D3dx9math.h)
 
@@ -64,7 +64,7 @@ Die y-Komponente.
 
 </dd> <dt>
 
-**z**
+**Z**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -86,7 +86,7 @@ Die w--Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="d3dxvector4-extensions"></a>D3DXVECTOR4-Erweiterungen
 
@@ -168,13 +168,13 @@ public:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

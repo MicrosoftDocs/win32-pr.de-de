@@ -1,19 +1,19 @@
 ---
-description: Im Diagramm werden Daten gepuffert, oder die Pufferung der Daten wurde beendet.
+description: Das Diagramm puffert Daten oder hat die Pufferung von Daten beendet.
 ms.assetid: 39e8b151-0323-42b3-99f0-3dcd230925c8
-title: EC_BUFFERING_DATA (DShow. h)
+title: EC_BUFFERING_DATA (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1395a10458abd7a29fdb65e7ab55fba62328d6d5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3dc937973db8435657d131ff4adea83892bf87681bb3db9b7d016565f5c38670
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965970"
 ---
-# <a name="ec_buffering_data"></a>EC- \_ Puffer \_ Daten
+# <a name="ec_buffering_data"></a>EC \_ BUFFERING \_ DATA
 
-Im Diagramm werden Daten gepuffert, oder die Pufferung der Daten wurde beendet.
+Das Diagramm puffert Daten oder hat die Pufferung von Daten beendet.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,7 +22,7 @@ Im Diagramm werden Daten gepuffert, oder die Pufferung der Daten wurde beendet.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-(**Bool**) **True** , wenn das Diagramm mit dem Puffer beginnt, oder **false** , wenn das Diagramm die Pufferung beendet hat.
+(**BOOL**) **TRUE,** wenn der Puffer für das Diagramm beginnt, oder **FALSE,** wenn die Pufferung des Graphen beendet wurde.
 
 </dd> <dt>
 
@@ -37,9 +37,9 @@ Keinen.
 
 Keine.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Filter kann dieses Ereignis senden, wenn Daten aus einer externen Quelle gepuffert werden müssen. (Beispielsweise kann es sein, dass Daten aus einem Netzwerk geladen werden.) Die Anwendung kann dieses Ereignis verwenden, um die Benutzeroberfläche anzupassen.
+Ein Filter kann dieses Ereignis senden, wenn daten aus einer externen Quelle gepuffert werden müssen. (Dies kann z. B. das Laden von Daten aus einem Netzwerk sein.) Die Anwendung kann dieses Ereignis verwenden, um die Benutzeroberfläche anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,7 +47,7 @@ Ein Filter kann dieses Ereignis senden, wenn Daten aus einer externen Quelle gep
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -55,10 +55,10 @@ Ein Filter kann dieses Ereignis senden, wenn Daten aus einer externen Quelle gep
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

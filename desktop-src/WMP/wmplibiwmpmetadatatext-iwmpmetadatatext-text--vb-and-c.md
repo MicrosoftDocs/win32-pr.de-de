@@ -1,11 +1,11 @@
 ---
-title: IWMPMetadataText Text (Eigenschaft)
-description: Die Text-Eigenschaft ruft den metadatentext ab.
+title: IWMPMetadataText-Texteigenschaft
+description: Die text-Eigenschaft ruft den Metadatentext ab.
 ms.assetid: 9e91178a-219a-4b0c-a410-9b4feb84e9e3
 keywords:
-- Text-Eigenschaften Fenster Media Player
-- Text-Eigenschaft, Windows Media Player, IWMPMetadataText-Schnittstelle
-- IWMPMetadataText Interface, Windows Media Player, Text-Eigenschaft
+- text-Eigenschaft Windows Media Player
+- text-Eigenschaft Windows Media Player , IWMPMetadataText-Schnittstelle
+- IWMPMetadataText-Schnittstelle Windows Media Player , Texteigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26d2aeee7a138223155f19748141cb0948f008b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3022a6b604956fdfda6f42b838bb7803d848a2188c7865e7e7c9fa67b73bf1a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372270"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119956330"
 ---
-# <a name="iwmpmetadatatexttext-property"></a>IWMPMetadataText:: Text-Eigenschaft
+# <a name="iwmpmetadatatexttext-property"></a>IWMPMetadataText::text-Eigenschaft
 
-Die- `text` Eigenschaft ruft den metadatentext ab.
+Die `text` -Eigenschaft ruft den Metadatentext ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property text As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System. String** , die den metadatentext ist.
+Eine **System.String,** bei der es sich um den Metadatentext handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibl
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -68,7 +68,7 @@ Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibl
 
 <dl> <dt>
 
-[**IWMPMetadataText-Schnittstelle (VB und c#)**](iwmpmetadatatext--vb-and-c.md)
+[**IWMPMetadataText-Schnittstelle (VB und C#)**](iwmpmetadatatext--vb-and-c.md)
 </dt> </dl>
 
  

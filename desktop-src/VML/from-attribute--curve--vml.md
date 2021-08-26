@@ -1,50 +1,50 @@
 ---
-title: From-Attribut (Kurve) (VML)
-description: From-Attribut (Kurve) (VML)
+title: From-Attribut (Curve)(VML)
+description: From-Attribut (Curve)(VML)
 ms.assetid: 70e940c1-3fa8-4a30-9ca8-584483cea485
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61d5f78dee46192efed48172a7d1f4d9cc77582f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4df431e9239f185ce83771f7822fe98e5bf491bd84a1deb7b869df7d3d2f235e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905497"
 ---
-# <a name="from-attribute-curvevml"></a>From-Attribut (Kurve) (VML)
+# <a name="from-attribute-curvevml"></a>From-Attribut (Curve)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
 Definiert den Anfangspunkt einer Kurve. Lese-/Schreibzugriff. **VgVector2D**.
 
 **Gilt für**
 
-[FF](msdn-online-vml-curve-element.md)
+[Kurve](msdn-online-vml-curve-element.md)
 
 **Tagsyntax**
 
-<v: *Element* from = " *Expression* " >
+<v: *element* from=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . from = "*Ausdruck*"
+*element* .from="*expression*"
 
-*Ausdruck* = *Element*. from
+*expression* = *Element*.from
 
 **Anmerkungen**
 
-Definiert den Anfangspunkt einer kubischen Bézier-Kurve im Koordinaten Bereich des übergeordneten Elements. Wenn das übergeordnete Element kein VML-Element ist, ist die Standard [Einheit](msdn-online-vml-units.md) ein Pixel (in, cm, mm, PT, kann jedoch auch der PC angegeben werden). Der Standardwert ist 0, 0.
+Definiert den Anfangspunkt einer kubischen Bézierkurve im Koordinatenbereich des übergeordneten Elements. Wenn das übergeordnete Element kein VML-Element ist, ist die [Standardeinheit](msdn-online-vml-units.md) ein Pixel (aber in, cm, mm, pt, pc kann auch angegeben werden). Der Standardwert ist 0,0.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Kurve wird Lächeln. Sie beginnt auf der linken Seite und endet auf der rechten Seite. Die beiden Kontrollpunkte sind auf dem Weg, um die Kurve nach unten zu ziehen, um die Darstellung eines Lächelns zu gestalten.
+Die Kurve ist lächelnd. Er beginnt links und endet auf der rechten Seite. Die beiden Kontrollpunkte werden entlang des Wegs vererbt, um die Kurve nach unten zu ziehen, um ein Lächeln zu erhalten.
 
 
 ```HTML
@@ -56,6 +56,6 @@ Die Kurve wird Lächeln. Sie beginnt auf der linken Seite und endet auf der rech
 
 
 
- 
+ 
 
- 
+ 

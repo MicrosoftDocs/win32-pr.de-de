@@ -4,34 +4,34 @@ ms.assetid: 19f58237-9cad-4feb-b439-77b183d14dcf
 title: Spaltendatentypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 894596e7b9226ee0efc202bb11f236619b808d0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c47a30d7d7c1f07bd7e651939bf1e7931284febab9f3b70168afdbf26dcba3f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078020"
 ---
 # <a name="column-data-types"></a>Spaltendatentypen
 
-Die Spalten der Datenbanktabellen werden in einem der folgenden Datentypen formatiert:
+Die Spalten der Datenbanktabellen sind in einem der folgenden Datentypen formatiert:
 
 -   [Text](text.md)
 -   [Großbuchstaben](uppercase.md)
 -   [Kleinbuchstaben](lowercase.md)
 -   [Integer](integer.md)
--   [Doubleiteger](doubleinteger.md)
+-   [DoubleInteger](doubleinteger.md)
 -   [Uhrzeit/Datum](time-date.md)
--   [Bezeichner](identifier.md)
+-   [Identifier](identifier.md)
 -   [Eigenschaft](property.md)
 -   [Filename](filename.md)
--   [Platzhalter Dateiname](wildcardfilename.md)
--   [Pfad](path.md)
+-   [WildCardFilename](wildcardfilename.md)
+-   [Path](path.md)
 -   [Paths](paths.md)
--   [Anypath](anypath.md)
+-   [AnyPath](anypath.md)
 -   [DefaultDir](defaultdir.md)
--   [Regfad](regpath.md)
--   [Großformatige](formatted.md)
--   [Formattedsddltext](formattedsddltext.md)
+-   [RegPath](regpath.md)
+-   [Formatiert](formatted.md)
+-   [FormattedSDDLText](formattedsddltext.md)
 -   [Vorlage](template.md)
 -   [Condition](condition.md)
 -   [GUID](guid.md)
@@ -39,7 +39,7 @@ Die Spalten der Datenbanktabellen werden in einem der folgenden Datentypen forma
 -   [Sprache](language.md)
 -   [Binär (Binary)](binary.md)
 -   [CustomSource](customsource.md)
--   [KEs](cabinet.md)
+-   [Kabinett](cabinet.md)
 -   [Tastenkombination](shortcut.md)
 
  

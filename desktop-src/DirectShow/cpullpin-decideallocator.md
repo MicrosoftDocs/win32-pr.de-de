@@ -1,7 +1,7 @@
 ---
-description: Die decidezuzuordcator-Methode aushandiert eine Zuweisung mit der Ausgabepin.
+description: Die DecideAllocator-Methode handelt eine Zuweisung mit dem Ausgabepin aus.
 ms.assetid: 5c04f440-b177-4caa-989f-3aa783c4b348
-title: Cpullpin. decidezucator-Methode (pullpin. h)
+title: CPullPin.DecideAllocator-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 91ffa139b916b1594e0729a0f8d52f07c62eda12
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e02fe78631c6ddee01b7acc96d761f71b80e8d3e1738d2ed6f6ae40d70b0c5d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371682"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055060"
 ---
-# <a name="cpullpindecideallocator-method"></a>Cpullpin. decidezucator-Methode
+# <a name="cpullpindecideallocator-method"></a>CPullPin.DecideAllocator-Methode
 
-Die- `DecideAllocator` Methode aushandiert eine Zuweisung mit der Ausgabepin.
+Die `DecideAllocator` -Methode handelt eine Zuweisung mit dem Ausgabepin aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,27 +43,27 @@ virtual HRESULT DecideAllocator(
 
 <dl> <dt>
 
-*palloc* 
+*pAlloc* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle der bevorzugten Zuweisung der Eingabe-PIN oder **null**.
+Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der bevorzugten Zuweisung des Eingabepins oder **NULL.**
 
 </dd> <dt>
 
-*p-Eigenschaften* 
+*pProps* 
 </dt> <dd>
 
-Zeiger auf eine optionale [**\_ zuordnereigenschafts**](/windows/win32/api/strmif/ns-strmif-allocator_properties) -Struktur, die die Puffer Anforderungen der Eingabe-PIN enthält.
+Zeiger auf eine optionale [**ALLOCATOR \_ PROPERTIES-Struktur,**](/windows/win32/api/strmif/ns-strmif-allocator_properties) die die Pufferanforderungen des Eingabepins enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen Fehlercode zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, oder andernfalls einen Fehlercode.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die Methode [**iasynkreader:: requestzuweisung**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-requestallocator) auf, um eine Zuweisung auszuhandeln. Er übergibt den *palloc* -Parameter direkt an die **requestzuweisung** -Methode. Der Parameter " *prequiers* " wird an **requestzuweisung** übergeben, wenn " *prequiors* " nicht **null** ist. Andernfalls wird eine **zuordnereigenschaftenstruktur \_** mit einer Standard Anforderung von drei 64-KB-Puffern erstellt.
+Diese Methode ruft die [**IAsyncReader::RequestAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-iasyncreader-requestallocator) auf, um eine Zuweisung auszuhandeln. Der *pAlloc-Parameter* wird direkt an die **RequestAllocator-Methode** übergeben. Der *pProps-Parameter* wird an **RequestAllocator** übergeben, wenn *pProps* ungleich **NULL** ist. Andernfalls wird eine **ALLOCATOR \_ PROPERTIES-Struktur** mit einer Standardanforderung von drei 64.000 Puffern erstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Methode ruft die Methode [**iasynkreader:: requestzuweisung**](/windows/de
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,10 +80,10 @@ Diese Methode ruft die Methode [**iasynkreader:: requestzuweisung**](/windows/de
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> <dt>
 
-[**Cpullpin:: Connect**](cpullpin-connect.md)
+[**CPullPin::Verbinden**](cpullpin-connect.md)
 </dt> </dl>
 
  

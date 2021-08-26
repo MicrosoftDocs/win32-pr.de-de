@@ -1,9 +1,9 @@
 ---
-title: WM_MENUSELECT Meldung (Winuser. h)
-description: Wird an das Besitzer Fenster eines Menüs gesendet, wenn der Benutzer ein Menü Element auswählt.
+title: WM_MENUSELECT Meldung (Winuser.h)
+description: Wird an das Besitzerfenster eines Menüs gesendet, wenn der Benutzer ein Menüelement auswählt.
 ms.assetid: 57684a19-dfaa-4e0c-a8ff-010533322cb0
 keywords:
-- WM_MENUSELECT von Meldungs Menüs und anderen Ressourcen
+- WM_MENUSELECT Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bdee9187ba2074944b3611fee10f5a22c2cc25ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1708aabf8ea12bf20c919f1306672358c2966a3d23aa0badccb1f4592c543f3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952220"
 ---
-# <a name="wm_menuselect-message"></a>WM- \_ MenuSelect-Meldung
+# <a name="wm_menuselect-message"></a>WM \_ MENUSELECT-Meldung
 
-Wird an das Besitzer Fenster eines Menüs gesendet, wenn der Benutzer ein Menü Element auswählt.
+Wird an das Besitzerfenster eines Menüs gesendet, wenn der Benutzer ein Menüelement auswählt.
 
 
 ```C++
@@ -39,23 +39,23 @@ Wird an das Besitzer Fenster eines Menüs gesendet, wenn der Benutzer ein Menü 
 *wParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt das Menü Element oder den unter Menü Index an. Wenn das ausgewählte Element ein Befehls Element ist, enthält dieser Parameter den Bezeichner des Menü Elements. Wenn das ausgewählte Element ein Dropdown Menü oder ein Untermenü öffnet, enthält dieser Parameter den Index des Dropdown Menüs oder des Untermenüs im Hauptmenü, und der *LPARAM* -Parameter enthält das Handle für das Hauptmenü (geklickt). Verwenden Sie die [**getsubmenu**](/windows/desktop/api/Winuser/nf-winuser-getsubmenu) -Funktion, um das Menü Handle im Dropdown Menü oder Untermenü zu erhalten.
+Das Wort mit niedriger Reihenfolge gibt das Menüelement oder den Untermenüindex an. Wenn das ausgewählte Element ein Befehlselement ist, enthält dieser Parameter den Bezeichner des Menüelements. Wenn das ausgewählte Element ein Dropdownmenü oder Untermenü öffnet, enthält dieser Parameter den Index des Dropdownmenüs oder des Untermenüs im Hauptmenü, und der *Parameter lParam* enthält das Handle für das Hauptmenü (geklickt). Verwenden Sie die [**GetSubMenu-Funktion,**](/windows/desktop/api/Winuser/nf-winuser-getsubmenu) um das Menühandle zum Dropdownmenü oder Untermenü abzurufen.
 
-Das höchst wertige Wort gibt mindestens ein menüflags an. Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Das Wort in hoher Reihenfolge gibt ein oder mehrere Menüflags an. Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 
 
 | Wert                                                                                                                                                                                                                             | Bedeutung                                                                                                                            |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="MF_BITMAP"></span><span id="mf_bitmap"></span><dl> <dt>**MF \_ Bitmap**</dt> <dt>0x00000004l</dt> </dl>                | Element zeigt eine Bitmap an.<br/>                                                                                                 |
-| <span id="MF_CHECKED"></span><span id="mf_checked"></span><dl> <dt>**MF \_**</dt> <dt>0x00000008l</dt> wurde geprüft. </dl>             | Das Element ist aktiviert.<br/>                                                                                                        |
-| <span id="MF_DISABLED"></span><span id="mf_disabled"></span><dl> <dt>**MF \_**</dt> <dt>0x00000002l</dt> deaktiviert </dl>          | Element ist deaktiviert.<br/>                                                                                                       |
-| <span id="MF_GRAYED"></span><span id="mf_grayed"></span><dl> <dt>**MF \_**</dt>Abgeblendet <dt>0x00000001l</dt> </dl>                | Das Element ist ausgegraut.<br/>                                                                                                         |
-| <span id="MF_HILITE"></span><span id="mf_hilite"></span><dl> <dt>**MF \_ Hilite**</dt> <dt>0x00000080l</dt> </dl>                | Das Element ist hervorgehoben.<br/>                                                                                                    |
-| <span id="MF_MOUSESELECT"></span><span id="mf_mouseselect"></span><dl> <dt>**MF \_ Mouseselect**</dt> <dt>0x00008000l</dt> </dl> | Das Element wird mit der Maus ausgewählt.<br/>                                                                                        |
-| <span id="MF_OWNERDRAW"></span><span id="mf_ownerdraw"></span><dl> <dt>**MF \_ Besitzdraw**</dt> <dt>0x00000100l</dt> </dl>       | Item ist ein vom Besitzer gezeichnetes Element.<br/>                                                                                            |
-| <span id="MF_POPUP"></span><span id="mf_popup"></span><dl> <dt>**MF \_ Popup**</dt> <dt>0x00000010l</dt> </dl>                   | Element öffnet ein Dropdown Menü oder ein Untermenü.<br/>                                                                                 |
-| <span id="MF_SYSMENU"></span><span id="mf_sysmenu"></span><dl> <dt>**MF \_ Sysmenu**</dt> <dt>0x00002000l</dt> </dl>             | Das Element ist im Menü Fenster enthalten. Der *LPARAM* -Parameter enthält ein Handle für das Menü, das der Nachricht zugeordnet ist.<br/> |
+| <span id="MF_BITMAP"></span><span id="mf_bitmap"></span><dl> <dt>**MF \_ BITMAP**</dt> <dt>0x00000004L</dt> </dl>                | Element zeigt eine Bitmap an.<br/>                                                                                                 |
+| <span id="MF_CHECKED"></span><span id="mf_checked"></span><dl> <dt>**MF \_ CHECKED**</dt> <dt>0x00000008L</dt> </dl>             | Das Element ist aktiviert.<br/>                                                                                                        |
+| <span id="MF_DISABLED"></span><span id="mf_disabled"></span><dl> <dt>**MF \_ DISABLED**</dt> <dt>0x00000002L</dt> </dl>          | Element ist deaktiviert.<br/>                                                                                                       |
+| <span id="MF_GRAYED"></span><span id="mf_grayed"></span><dl> <dt>**MF \_ GRAYED**</dt> <dt>0x00000001L</dt> </dl>                | Das Element ist abgeblendet.<br/>                                                                                                         |
+| <span id="MF_HILITE"></span><span id="mf_hilite"></span><dl> <dt>**MF \_ HILITE**</dt> <dt>0x00000080L</dt> </dl>                | Das Element ist hervorgehoben.<br/>                                                                                                    |
+| <span id="MF_MOUSESELECT"></span><span id="mf_mouseselect"></span><dl> <dt>**MF \_ MOUSESELECT**</dt> <dt>0x00008000L</dt> </dl> | Das Element wird mit der Maus ausgewählt.<br/>                                                                                        |
+| <span id="MF_OWNERDRAW"></span><span id="mf_ownerdraw"></span><dl> <dt>**MF \_ OWNERDRAW**</dt> <dt>0x00000100L</dt> </dl>       | Das Element ist ein vom Besitzer gezeichnetes Element.<br/>                                                                                            |
+| <span id="MF_POPUP"></span><span id="mf_popup"></span><dl> <dt>**MF \_ POPUP**</dt> <dt>0x00000010L</dt> </dl>                   | Das Element öffnet ein Dropdownmenü oder Untermenü.<br/>                                                                                 |
+| <span id="MF_SYSMENU"></span><span id="mf_sysmenu"></span><dl> <dt>**MF \_ SYSMENU**</dt> <dt>0x00002000L</dt> </dl>             | Das Element ist im Fenstermenü enthalten. Der *lParam-Parameter* enthält ein Handle für das Menü, das der Nachricht zugeordnet ist.<br/> |
 
 
 
@@ -72,13 +72,13 @@ Ein Handle für das Menü, auf das geklickt wurde.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das hochwertige Wort von *wParam* den Wert 0xFFFF enthält und der *LPARAM* -Parameter **null** enthält, hat das System das Menü geschlossen.
+Wenn das Wort in hoher Reihenfolge von *wParam* 0xFFFF enthält und der *lParam-Parameter* **NULL** enthält, hat das System das Menü geschlossen.
 
-Verwenden Sie nicht den Wert 1 für das hochwertige Wort von *wParam*, da dieser Wert als (**uint**) [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))(*wParam*) angegeben wird. Wenn der Wert 0xFFFF ist, wird er aufgrund der Umwandlung in einen **uint** als 0X0000FFFF, nicht als 1 interpretiert.
+Verwenden Sie nicht den Wert 1 für das Wort der hohen Ordnung von *wParam,* da dieser Wert als (**UINT**) [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))(*wParam*) angegeben ist. Wenn der Wert 0xFFFF ist, wird er aufgrund der Umwandlung in einen **UINT** als 0x0000FFFF und nicht als 1 interpretiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,7 +88,7 @@ Verwenden Sie nicht den Wert 1 für das hochwertige Wort von *wParam*, da dieser
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -96,10 +96,10 @@ Verwenden Sie nicht den Wert 1 für das hochwertige Wort von *wParam*, da dieser
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Getsubmenu**](/windows/desktop/api/Winuser/nf-winuser-getsubmenu)
+[**GetSubMenu**](/windows/desktop/api/Winuser/nf-winuser-getsubmenu)
 </dt> <dt>
 
 [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
@@ -108,7 +108,7 @@ Verwenden Sie nicht den Wert 1 für das hochwertige Wort von *wParam*, da dieser
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Tastaturkürzel](keyboard-accelerators.md)

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Größe eines Scheitel Punkts aus der Scheitelpunkt Deklaration zurück.
+description: Gibt die Größe eines Scheitelpunkts aus der Scheitelpunktdeklaration zurück.
 ms.assetid: a2524f96-103e-43ab-bdcb-b99e7402fd89
-title: D3DXGetDeclVertexSize-Funktion (D3DX9Mesh. h)
+title: D3DXGetDeclVertexSize-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: c962064faa61dc7045b0111c5efbf1d1bea9fd40
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1c120e0089c350133372526f1b030eb1a94ede5a511ba44fb21b5ae320aa7090
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986860"
 ---
 # <a name="d3dxgetdeclvertexsize-function"></a>D3DXGetDeclVertexSize-Funktion
 
-Gibt die Größe eines Scheitel Punkts aus der Scheitelpunkt Deklaration zurück.
+Gibt die Größe eines Scheitelpunkts aus der Scheitelpunktdeklaration zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,29 +41,29 @@ UINT D3DXGetDeclVertexSize(
 
 <dl> <dt>
 
-*pdecl* \[ in\]
+*pDecl* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
+Typ: **const [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) \***
 
-Ein Zeiger auf die Vertexdeklaration. Siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md).
+Ein Zeiger auf die Scheitelpunktdeklaration. Siehe [**D3DVERTEXELEMENT9**](d3dvertexelement9.md).
 
 </dd> <dt>
 
-*Stream* \[ in\]
+*Streamen* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der null basierte streamindex.
+Der nullbasierte Streamindex.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Vertex-Deklarations Größe in Byte.
+Die Größe der Scheitelpunktdeklaration in Bytes.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Die Vertex-Deklarations Größe in Byte.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,33 +1,33 @@
 ---
-description: Gibt eine zwischen Rahmenbreite für codiertes Video an.
+description: Gibt eine zwischengeschaltete Framebreite für codiertes Video an.
 ms.assetid: 805bd587-31af-49b8-b5ab-2dcf2a3f81c5
-title: MFPKEY_FORCEFRAMEWIDTH-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_FORCEFRAMEWIDTH-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea4c8c7ac025de1c089c592a591136df966797d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8d04e30f5fd5d2ecc7055553e17eaf86199b62be8d3dd861b9f82246947212f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939835"
 ---
-# <a name="mfpkey_forceframewidth-property"></a>Mfpkey \_ forceframewidth (Eigenschaft)
+# <a name="mfpkey_forceframewidth-property"></a>MFPKEY \_ FORCEFRAMEWIDTH-Eigenschaft
 
-Gibt eine zwischen Rahmenbreite für codiertes Video an.
+Gibt eine zwischengeschaltete Framebreite für codiertes Video an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcforceframewidth
+g \_ wszWMVCForceFrameWidth
 
 ## <a name="data-type"></a>Datentyp
 
 VT \_ I4
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert und die Eigenschaft [mfpkey \_ forceframeheight](mfpkey-forceframeheightproperty.md) festlegen, um zu erzwingen, dass der Encoder den Videostream mit einer Frame Größe codiert, die kleiner als die Eingabe-oder Ausgabe Frame Größen ist. Beim decodierten wird die Größe des Videos an die ursprüngliche Eingabe Auflösung angepasst.
+Sie können diesen Wert und die [MFPKEY \_ FORCEFRAMEHEIGHT-Eigenschaft](mfpkey-forceframeheightproperty.md) festlegen, um zu erzwingen, dass der Encoder den Videostream mit einer Framegröße codiert, die kleiner als die Größe des Eingabe- oder Ausgabeframes ist. Bei der Decodierung wird die Größe des Videos auf die ursprüngliche Eingabeauflösung geändert.
 
-Gültige Frame Dimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Frame Dimensionen müssen durch 2 teilbar sein.
+Gültige Rahmendimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Rahmendimensionen müssen durch 2 teilbar sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Gültige Frame Dimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Frame Dimens
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Gültige Frame Dimensionen auf beiden Achsen sind 2 bis 8192 Pixel. Frame Dimens
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

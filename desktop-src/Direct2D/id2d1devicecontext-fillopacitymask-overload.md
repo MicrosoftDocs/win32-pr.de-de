@@ -1,9 +1,9 @@
 ---
-title: ID2D1DeviceContext fillopacitymask-Methoden
-description: Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinsel Deckkraft wird von der Maske moduliert. Der Renderziel-Antialiasing-Modus muss auf Alias festgelegt werden.
+title: ID2D1DeviceContext FillOpacityMask-Methoden
+description: Füllen Sie mithilfe des Alphakanals der angegebenen Deckkraftmaskenbitmap. Die Pinseldurchlässigkeit wird durch die Maske moduliert. Der Renderziel-Antialiasingmodus muss auf aliased festgelegt werden.
 ms.assetid: 79844FCE-BD42-4F57-B51B-A0ECC490A471
 keywords:
-- Fillopacitymask-Methoden Direct2D
+- FillOpacityMask-Methoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: bed73db9efdb2ee1a284a8ca151b7b1f5d1c2759
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 377fc9f87117f34893a07c8a302875001e9e91efb3ff74d967519fa98cfec52c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967020"
 ---
-# <a name="id2d1devicecontextfillopacitymask-methods"></a>ID2D1DeviceContext:: fillopacitymask-Methoden
+# <a name="id2d1devicecontextfillopacitymask-methods"></a>ID2D1DeviceContext::FillOpacityMask-Methoden
 
-Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinsel Deckkraft wird von der Maske moduliert. Der Renderziel-Antialiasing-Modus muss auf Alias festgelegt werden.
+Füllen Sie mithilfe des Alphakanals der angegebenen Deckkraftmaskenbitmap. Die Pinseldurchlässigkeit wird durch die Maske moduliert. Der Renderziel-Antialiasingmodus muss auf aliased festgelegt werden.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,9 +29,9 @@ Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinse
 
 | Methode                                                                                                                        | BESCHREIBUNG                                                                                                                                                                               |
 |:------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Fillopacitymask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ Rect \_ f \* , D2D1 \_ Rect \_ f \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) | Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinsel Deckkraft wird von der Maske moduliert. Der Renderziel-Antialiasing-Modus muss auf Alias festgelegt werden.<br/> |
-| [**Fillopacitymask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ Rect \_ f&, D2D1 \_ Rect \_ f&)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f__constd2d1_rect_f_))  | Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinsel Deckkraft wird von der Maske moduliert. Der Renderziel-Antialiasing-Modus muss auf Alias festgelegt werden.<br/> |
-| [**Fillopacitymask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ Rect \_ f&, D2D1 \_ Rect \_ f \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f__constd2d1_rect_f)) | Füllen Sie den Alphakanal der angegebenen Deckkraft Maske-Bitmap aus. Die Pinsel Deckkraft wird von der Maske moduliert. Der Renderziel-Antialiasing-Modus muss auf Alias festgelegt werden.<br/> |
+| [**FillOpacityMask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ RECT F , \_ \* D2D1 \_ RECT F \_ \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) | Füllen Sie mithilfe des Alphakanals der angegebenen Deckkraftmaskenbitmap. Die Pinseldurchlässigkeit wird durch die Maske moduliert. Der Renderziel-Antialiasingmodus muss auf aliased festgelegt werden.<br/> |
+| [**FillOpacityMask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ RECT F \_&, D2D1 \_ RECT F \_&)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f__constd2d1_rect_f_))  | Füllen Sie mithilfe des Alphakanals der angegebenen Deckkraftmaskenbitmap. Die Pinseldurchlässigkeit wird durch die Maske moduliert. Der Renderziel-Antialiasingmodus muss auf aliased festgelegt werden.<br/> |
+| [**FillOpacityMask (ID2D1Bitmap \* , ID2D1Brush \* , D2D1 \_ RECT F \_&, D2D1 \_ RECT F \_ \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f__constd2d1_rect_f)) | Füllen Sie mithilfe des Alphakanals der angegebenen Deckkraftmaskenbitmap. Die Pinseldurchlässigkeit wird durch die Maske moduliert. Der Renderziel-Antialiasingmodus muss auf aliased festgelegt werden.<br/> |
 
 
 

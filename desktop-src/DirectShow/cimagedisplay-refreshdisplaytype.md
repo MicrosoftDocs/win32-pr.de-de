@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Aktualisierungs Methode" aktualisiert das Videoformat des Objekts entsprechend der angegebenen Anzeige.
+description: Die RefreshDisplayType-Methode aktualisiert das Videoformat des Objekts so, dass es mit der angegebenen Anzeige übereinstimmen kann.
 ms.assetid: cc2bdfeb-80f1-4fb6-859d-977d644a5e08
-title: Cimagedisplay. erfrischend Display Type-Methode (winutil. h)
+title: CImageDisplay.RefreshDisplayType-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9f8010dcfe490363903ff455bedb61254b69b825
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9184d5e8a0e0ad6c0242ec1dc4b7590f1bc0d39a0a9cd6a09b2676563a2796e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055470"
 ---
-# <a name="cimagedisplayrefreshdisplaytype-method"></a>Cimagedisplay. erfrischend Display Type-Methode
+# <a name="cimagedisplayrefreshdisplaytype-method"></a>CImageDisplay.RefreshDisplayType-Methode
 
-Die `RefreshDisplayType` -Methode aktualisiert das Videoformat des Objekts entsprechend der angegebenen Anzeige.
+Die `RefreshDisplayType` -Methode aktualisiert das Videoformat des Objekts so, dass es mit der angegebenen Anzeige übereinstimmen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ HRESULT RefreshDisplayType(
 
 <dl> <dt>
 
-*szdevicename* 
+*szDeviceName* 
 </dt> <dd>
 
-Zeiger auf eine Zeichenfolge, die den Namen des Anzeige Geräts enthält, wie von der GDI-Funktion " **EnumDisplayDevices** " zurückgegeben. Legen Sie diesen Parameter auf **null** fest, um das Haupt Anzeigegerät zu verwenden.
+Zeiger auf eine Zeichenfolge, die den Namen des Anzeigegeräts enthält, wie von der **GDI-Funktion EnumDisplayDevices** zurückgegeben. Um das Hauptanzeigegerät zu verwenden, legen Sie diesen Parameter auf **NULL fest.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück, oder E \_ schlägt fehl, wenn er nicht erfolgreich war.
+Gibt S \_ OK zurück, wenn erfolgreich, oder E \_ FAIL, wenn nicht erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode initialisiert den **m- \_ Anzeige** Member mit einem Videotyp, der dem Anzeigemodus auf dem angegebenen Gerät entspricht.
+Diese Methode initialisiert den **m \_ Display-Member** mit einem Videotyp, der dem Anzeigemodus auf dem angegebenen Gerät entspricht.
 
-Ruft diese Methode immer dann auf, wenn eine "WM \_ Display Changed"-Meldung empfangen wird, oder um ein sekundäres Anzeigegerät anzugeben.
+Rufen Sie diese Methode auf, wenn eine WM \_ DISPLAYCHANGED-Nachricht empfangen wird, oder , um ein sekundäres Anzeigegerät anzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Ruft diese Methode immer dann auf, wenn eine "WM \_ Display Changed"-Meldung emp
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Ruft diese Methode immer dann auf, wenn eine "WM \_ Display Changed"-Meldung emp
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

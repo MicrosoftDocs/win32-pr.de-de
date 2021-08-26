@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Kopie der Sicherheits Beschreibung ab, die den angegebenen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur schützt.
+description: Ruft eine Kopie der Sicherheitsbeschreibung ab, die den angegebenen offenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur schützt.
 ms.assetid: 676d5be5-d9d8-48c6-848a-917d1a0474c6
-title: Orgetkeysecurity-Funktion (offreg. h)
+title: ORGetKeySecurity-Funktion (Offreg.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Offreg.dll
-ms.openlocfilehash: 13594493af2e7992471d13dce30f0a848501c4bb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 786321db22c513e7698fcd1661d173ccb5fdf76f1b09d9dd3e739ddf3fb2ca47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984160"
 ---
-# <a name="orgetkeysecurity-function"></a>Orgetkeysecurity-Funktion
+# <a name="orgetkeysecurity-function"></a>ORGetKeySecurity-Funktion
 
-Ruft eine Kopie der Sicherheits Beschreibung ab, die den angegebenen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur schützt.
+Ruft eine Kopie der Sicherheitsbeschreibung ab, die den angegebenen offenen Registrierungsschlüssel in einer Offlineregistrierungsstruktur schützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,41 +42,41 @@ DWORD ORGetKeySecurity(
 
 <dl> <dt>
 
-*Handle* \[ in\]
+*Handle* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offline Registrierungs Struktur.
+Ein Handle für einen geöffneten Registrierungsschlüssel in einer Offlineregistrierungsstruktur.
 
 </dd> <dt>
 
-*Securityinformation* \[ in\]
+*SecurityInformation* \[ In\]
 </dt> <dd>
 
-Ein [Sicherheits \_ Informations](../secauthz/security-information.md) Wert, der die angeforderten Sicherheitsinformationen angibt.
+Ein [SECURITY \_ INFORMATION-Wert,](../secauthz/security-information.md) der die angeforderten Sicherheitsinformationen angibt.
 
 </dd> <dt>
 
-*psecuritydescriptor* \[ Out, optional\]
+*pSecurityDescriptor* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine Kopie der angeforderten Sicherheits Beschreibung empfängt. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf einen Puffer, der eine Kopie des angeforderten Sicherheitsdeskriptors empfängt. Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*lpcbsecuritydescriptor* \[ in, out\]
+*lpcbSecurityDescriptor* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Größe des Puffers in Bytes angibt, auf den der *psecuritydescriptor* -Parameter verweist. Wenn die Funktion zurückgibt, enthält die Variable die Anzahl der in den Puffer geschriebenen Bytes.
+Ein Zeiger auf eine Variable, die die Größe des Puffers in Bytes angibt, auf den der *pSecurityDescriptor-Parameter* zeigt. Wenn die Funktion zurückgegeben wird, enthält die Variable die Anzahl der bytes, die in den Puffer geschrieben wurden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion den Fehler \_ Erfolg zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion ERROR \_ SUCCESS zurück.
 
-Wenn die Funktion fehlschlägt, wird ein Fehlercode ungleich NULL zurückgegeben, der in WinError. h definiert ist. Sie können die [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ Flag Format Message \_ from System verwenden \_ , um eine generische Beschreibung des Fehlers zu erhalten.
+Wenn die Funktion fehlschlägt, wird ein Fehlercode ungleich 0 (null) zurückgegeben, der in "Winerror.h" definiert ist. Sie können die [FormatMessage-Funktion](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ FORMAT MESSAGE FROM \_ \_ SYSTEM-Flag verwenden, um eine generische Beschreibung des Fehlers abzurufen.
 
-Wenn der durch den *psecuritydescriptor* -Parameter angegebene Puffer zu klein ist, gibt die Funktion Fehler \_ unzureichenden Puffer zurück, \_ und der *lpcbsecuritydescriptor* -Parameter enthält die Anzahl der Bytes, die für die angeforderte Sicherheits Beschreibung benötigt werden.
+Wenn der vom *pSecurityDescriptor-Parameter* angegebene Puffer zu klein ist, gibt die Funktion ERROR INSUFFICIENT BUFFER zurück, \_ \_ und der *lpcbSecurityDescriptor-Parameter* enthält die Anzahl der Bytes, die für den angeforderten Sicherheitsdeskriptor erforderlich sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,26 +84,26 @@ Wenn der durch den *psecuritydescriptor* -Parameter angegebene Puffer zu klein i
 
 | Anforderung | Wert |
 |----------------------------|---------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | Windows-offline Registrierungs Bibliothek, Version 1,0 oder höher<br/>                      |
-| Header<br/>          | <dl> <dt>Offreg. h</dt> </dl>   |
+| Verteilbare Komponente<br/> | Windows Offline registry library version 1.0 or later (Offlineregistrierungsbibliothek, Version 1.0 oder höher)<br/>                      |
+| Header<br/>          | <dl> <dt>Offreg.h</dt> </dl>   |
 | DLL<br/>             | <dl> <dt>Offreg.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ordeletekey**](ordeletekey.md)
+[**ORDeleteKey**](ordeletekey.md)
 </dt> <dt>
 
-[**Oropenkey**](oropenkey.md)
+[**OROpenKey**](oropenkey.md)
 </dt> <dt>
 
-[**Orsetkeysecurity**](orsetkeysecurity.md)
+[**ORSetKeySecurity**](orsetkeysecurity.md)
 </dt> <dt>
 
-[Sicherheits \_ Informationen](../secauthz/security-information.md)
+[\_SICHERHEITSINFORMATIONEN](../secauthz/security-information.md)
 </dt> </dl>
 
  

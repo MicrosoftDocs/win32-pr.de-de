@@ -1,7 +1,7 @@
 ---
-description: Die findpin-Methode ruft die PIN mit dem angegebenen Bezeichner ab.
+description: Die FindPin-Methode ruft den Pin mit dem angegebenen Bezeichner ab.
 ms.assetid: d07a298f-ddb0-44eb-85ca-81735875cdf3
-title: Cbaserderderer. findpin-Methode (renbase. h)
+title: CBaseRenderer.FindPin-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d6e6789a91f34d95933ae7869e1588eeb14b6006
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0f639e5d68b11b6a7a65ccfe0d0c6465f822d591b0c4dfd0f4916072fde40856
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043770"
 ---
-# <a name="cbaserendererfindpin-method"></a>Cbaserderderer. findpin-Methode
+# <a name="cbaserendererfindpin-method"></a>CBaseRenderer.FindPin-Methode
 
-Die- `FindPin` Methode ruft die PIN mit dem angegebenen Bezeichner ab.
+Die `FindPin` -Methode ruft den Pin mit dem angegebenen Bezeichner ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,36 +46,36 @@ HRESULT FindPin(
 *Id* 
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, mit NULL endender breit Zeichen Zeichenfolge, die die PIN identifiziert. Muss L "in" lauten.
+Zeiger auf eine konstante, mit NULL beendete Breitzeichenzeichenfolge, die den Pin identifiziert. Muss L"In" sein.
 
 </dd> <dt>
 
-*pppin* 
+*ppPin* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der PIN empfängt. Wenn die Methode fehlschlägt, wird *\* pppin* auf **null** festgelegt.
+Adresse einer Variablen, die einen Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Pins empfängt. Wenn die Methode fehlschlägt, *\* wird ppPin* auf **NULL festgelegt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                           |
 |---------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>         | **Null** -Zeigerargument.<br/> |
-| <dl> <dt>**VFW \_ E \_ nicht \_ gefunden**</dt> </dl> | Nicht gefunden:<br/>                 |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>         |  NULL-Zeigerargument.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ GEFUNDEN**</dt> </dl> | Nicht gefunden:<br/>                 |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**cbasefilter:: findpin**](cbasefilter-findpin.md) -Methode. Die einzige PIN des Filters (die Eingabe-PIN) heißt "in".
+Diese Methode überschreibt die [**CBaseFilter::FindPin-Methode.**](cbasefilter-findpin.md) Der einzige Pin des Filters (der Eingabepin) heißt "In".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Diese Methode überschreibt die [**cbasefilter:: findpin**](cbasefilter-findpin.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -92,7 +92,7 @@ Diese Methode überschreibt die [**cbasefilter:: findpin**](cbasefilter-findpin.
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

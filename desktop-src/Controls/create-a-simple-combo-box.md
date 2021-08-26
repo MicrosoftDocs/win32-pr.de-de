@@ -1,41 +1,41 @@
 ---
-title: Erstellen eines einfachen Kombinations Felds
-description: In diesem Thema wird beschrieben, wie Elemente aus einem einfachen Kombinations Feld erstellt, hinzugefügt und abgerufen werden.
+title: Erstellen eines einfachen Kombinationsfelds
+description: In diesem Thema wird beschrieben, wie Elemente in einem einfachen Kombinationsfeld erstellt, hinzugefügt und daraus abgerufen werden.
 ms.assetid: E432AEC0-6C06-40C7-BBFE-B66C21DB8ACA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4175d435ac78795e7020fd84099d512cc65be20
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: eb1ab672e0beea90d07eadf05f14ffdc4a8181a4da7bf7940af50b00ddc69cde
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474373"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920810"
 ---
-# <a name="how-to-create-a-simple-combo-box"></a>Erstellen eines einfachen Kombinations Felds
+# <a name="how-to-create-a-simple-combo-box"></a>Erstellen eines einfachen Kombinationsfelds
 
-In diesem Thema wird beschrieben, wie Elemente aus einem einfachen Kombinations Feld erstellt, hinzugefügt und abgerufen werden. Die zugehörigen Codebeispiele veranschaulichen, wie die folgenden Funktionen durchgeführt werden:
+In diesem Thema wird beschrieben, wie Elemente in einem einfachen Kombinationsfeld erstellt, hinzugefügt und daraus abgerufen werden. Die zugehörigen Codebeispiele veranschaulichen insbesondere die Ausführung der folgenden Funktionen:
 
--   Dynamisches Erstellen eines einfachen Kombinations Felds in einem übergeordneten Fenster.
--   Fügen Sie dem Kombinations Feld eine Liste von Elementen hinzu, und zeigen Sie ein ursprüngliches Element im Auswahlfeld des Kombinations Felds an.
--   Erkennen, wenn der Benutzer ein Element aus dem Kombinations Feld ausgewählt hat.
--   Ruft das ausgewählte Element aus dem Kombinations Feld ab.
+-   Dynamisches Erstellen eines einfachen Kombinationsfelds in einem übergeordneten Fenster.
+-   Fügen Sie dem Kombinationsfeld eine Liste von Elementen hinzu, und zeigen Sie ein erstes Element im Auswahlfeld des Kombinationsfelds an.
+-   Erkennen, wenn der Benutzer ein Element aus dem Kombinationsfeld ausgewählt hat.
+-   Rufen Sie das ausgewählte Element aus dem Kombinationsfeld ab.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-an-instance-of-the-combo-box"></a>Schritt 1: Erstellen Sie eine Instanz des Kombinations Felds.
+### <a name="step-1-create-an-instance-of-the-combo-box"></a>Schritt 1: Erstellen Sie eine Instanz des Kombinationsfelds.
 
-In der Beispielanwendung wird die Funktion "up [**Window**](/windows/desktop/api/winuser/nf-winuser-createwindowa) " aufgerufen, um ein untergeordnetes Fenster des Anwendungsfensters zu erstellen. Der Stil des [**WC- \_ ComboBox**](common-control-window-classes.md) -Fensters gibt an, dass es sich um ein Kombinations Feld handelt.
+Die Beispielanwendung ruft die [**CreateWindow-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowa) auf, um ein untergeordnetes Fenster des Anwendungsfensters zu erstellen. Der [**WC \_ COMBOBOX-Fensterstil**](common-control-window-classes.md) gibt an, dass es sich um ein Kombinationsfeld handelt.
 
 
 ```C++
@@ -60,9 +60,9 @@ In der Beispielanwendung wird die Funktion "up [**Window**](/windows/desktop/api
 
 
 
-### <a name="step-2-load-the-combo-box-with-the-item-list"></a>Schritt 2: Laden Sie das Kombinations Feld mit der Elementliste.
+### <a name="step-2-load-the-combo-box-with-the-item-list"></a>Schritt 2: Laden sie das Kombinationsfeld mit der Elementliste.
 
-Die Anwendung sendet eine [**CB \_ AddString**](cb-addstring.md) -Nachricht für jedes Element in der Liste. Nachdem die Liste geladen wurde, sendet die Anwendung die [**CB- \_ setcurrsel**](cb-setcursel.md) -Nachricht, um ein erstes Element im Kombinations Feldauswahl Feld anzuzeigen.
+Die Anwendung sendet eine [**CB \_ ADDSTRING-Nachricht**](cb-addstring.md) für jedes Element in der Liste. Nachdem die Liste geladen wurde, sendet die Anwendung die [**CB \_ SETCURSEL-Meldung,**](cb-setcursel.md) um ein erstes Element im Kombinationsfeldauswahlfeld anzuzeigen.
 
 
 ```C++
@@ -95,14 +95,14 @@ SendMessage(hWndComboBox, CB_SETCURSEL, (WPARAM)2, (LPARAM)0);
 
 
 
-### <a name="step-3-detect-when-the-user-selects-an-item-and-retrieve-it-from-the-combo-box"></a>Schritt 3: erkennen, wenn der Benutzer ein Element auswählt und aus dem Kombinations Feld abruft.
+### <a name="step-3-detect-when-the-user-selects-an-item-and-retrieve-it-from-the-combo-box"></a>Schritt 3: Erkennen, wenn der Benutzer ein Element auswählt und aus dem Kombinationsfeld abruft.
 
-Wenn der Benutzer eine Auswahl aus der Liste trifft, sendet das Kombinations Feld eine [CBN- \_ selChange](cbn-selchange.md) -Benachrichtigung über eine WM- [**\_ Befehls**](/windows/desktop/menurc/wm-command) Meldung an das übergeordnete Fenster. Die Anwendung ruft das Handle für das Kombinations Feld aus dem *LPARAM* -Feld der Benachrichtigungs Meldung ab und sendet [**eine \_ CB getcurrsel**](cb-getcursel.md) -Meldung an das Kombinations Feld, um den Index des ausgewählten Listen Elements abzurufen. Nachdem der Element Index abgerufen wurde, sendet die Anwendung eine [**CB \_ getlbtext**](cb-getlbtext.md) -Nachricht, um das Element zu erhalten. Anschließend wird das Element in einem Meldungs Feld angezeigt.
+Wenn der Benutzer eine Auswahl aus der Liste trifft, sendet das Kombinationsfeld über eine [**WM \_ COMMAND-Nachricht**](/windows/desktop/menurc/wm-command) eine [CBN \_ SELCHANGE-Benachrichtigung](cbn-selchange.md) an das übergeordnete Fenster. Die Anwendung ruft das Handle für das Kombinationsfeld aus dem *lParam-Feld* der Benachrichtigungsmeldung ab und sendet eine [**CB \_ GETCURSEL-Nachricht**](cb-getcursel.md) an das Kombinationsfeld, um den Index des ausgewählten Listenelements abzurufen. Nach dem Abrufen des Elementindex sendet die Anwendung eine [**CB \_ GETLBTEXT-Nachricht,**](cb-getlbtext.md) um das Element zu erhalten. Anschließend wird das Element in einem Meldungsfeld angezeigt.
 
 > [!Note]  
-> Die [CBN \_ selChange](cbn-selchange.md) -Benachrichtigung wird gesendet und verarbeitet, bevor das Element in das Kombinations Feldauswahl Feld eingefügt wird. Als Ergebnis wird das ausgewählte Element in diesem Beispiel erst im Auswahlfeld angezeigt, wenn das Meldungs Feld geschlossen ist.
+> Die [CBN \_ SELCHANGE-Benachrichtigung](cbn-selchange.md) wird gesendet und verarbeitet, bevor das Element in das Auswahlfeld des Kombinationsfelds platziert wird. Daher wird das ausgewählte Element in diesem Beispiel erst im Auswahlfeld angezeigt, nachdem das Meldungsfeld geschlossen wurde.
 
- 
+ 
 
 
 ```C++
@@ -486,18 +486,18 @@ LRESULT CALLBACK DemoApp::WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM
 
 <dl> <dt>
 
-[Informationen zu Kombinations Feldern](about-combo-boxes.md)
+[Informationen zu Kombinationsfeldern](about-combo-boxes.md)
 </dt> <dt>
 
-[Referenz für ComboBox-Steuerelement](bumper-combobox-combobox-control-reference.md)
+[ComboBox-Steuerelementreferenz](bumper-combobox-combobox-control-reference.md)
 </dt> <dt>
 
-[Verwenden von Kombinations Feldern](using-combo-boxes.md)
+[Verwenden von Kombinationsfeldern](using-combo-boxes.md)
 </dt> <dt>
 
 [ComboBox](combo-boxes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: Ivmmouse-Click-Methode (vpccominterfaces. h)
-description: Simuliert das Klicken auf die Maustaste.
+title: IVMMouse Click-Methode (VPCCOMInterfaces.h)
+description: Simuliert einen Mausklick.
 ms.assetid: f16e36d6-34ca-4d65-95e4-1a6660d0abd0
 keywords:
-- Klicken Sie auf method Virtual PC.
-- Klicken Sie auf Methode Virtual PC, ivmmouse Interface.
-- Ivmmouse Interface Virtual PC, klicken Sie auf Methode.
+- Klicken Sie auf die Methode Virtueller PC.
+- Klicken Sie auf die Methode Virtual PC , IVMMouse-Schnittstelle.
+- IVMMouse-Schnittstelle Virtueller PC, Click-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad3ea1b861db0a92ad92e689770182d225778aee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 53d1d1aaf538ac6b30a27df904729f2ad3187ebde29cb915c3d7ef35d1e9cf57
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974249"
 ---
-# <a name="ivmmouseclick-method"></a>Ivmmouse:: Click-Methode
+# <a name="ivmmouseclick-method"></a>IVMMouse::Click-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Simuliert das Klicken auf die Maustaste.
+Simuliert einen Mausklick.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT Click(
 
 <dl> <dt>
 
-*ButtonIndex* \[ in\]
+*buttonIndex* \[ In\]
 </dt> <dd>
 
-Der Index der Schaltfläche, auf die geklickt wird. Eine Liste der Werte finden Sie unter [**vmmousetbutton**](vmmousebutton.md).
+Der Index der Schaltfläche, auf die geklickt wird. Eine Liste der Werte finden Sie unter [**VMMouseButton**](vmmousebutton.md).
 
 </dd> </dl>
 
@@ -60,10 +60,10 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                        | BESCHREIBUNG                                                                                                                                       |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                              | Der Vorgang wurde durchgeführt.<br/>                                                                                                          |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>             | Der-Parameter ist **null**.<br/>                                                                                                             |
-| <dl> <dt>**VM \_ E \_ - \_ VM \_ führt**</dt> <dt>0xa0040206</dt> nicht aus </dl>   | Der virtuelle Computer, an den dieses Mausgerät angefügt ist, wird zurzeit nicht ausgeführt.<br/>                                                   |
-| <dl> <dt>**VM \_ E \_ Maus \_ nicht \_ aktiv**</dt> <dt>0xa0040800</dt> </dl> | Der Vorgang konnte nicht abgeschlossen werden, da das Mausgerät nicht eingeschaltet ist oder derzeit nicht auf dem virtuellen Computer aktiv ist.<br/> |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                      |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>             | Der Parameter ist **NULL.**<br/>                                                                                                             |
+| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ 0XA0040206**</dt> <dt></dt> </dl>   | Der virtuelle Computer, an den dieses Mausgerät angefügt ist, wird derzeit nicht ausgeführt.<br/>                                                   |
+| <dl> <dt>**VM \_ E \_ MOUSE NOT ACTIVE \_ \_ 0xA0040800**</dt> <dt></dt> </dl> | Der Vorgang konnte nicht abgeschlossen werden, weil das Mausgerät nicht hochgefahren wird oder derzeit auf dem virtuellen Computer nicht aktiv ist.<br/> |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>        | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                      |
 
 
 
@@ -75,12 +75,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
 
 
 
@@ -88,7 +88,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmmouse**](ivmmouse.md)
+[**IVMMouse**](ivmmouse.md)
 </dt> </dl>
 
  

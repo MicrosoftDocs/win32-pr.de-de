@@ -1,23 +1,23 @@
 ---
-description: Gibt an, ob der Codec beim Codieren die konservative perzeptive Optimierung verwenden soll.
+description: Gibt an, ob der Codec bei der Codierung eine konservative Perzepptuelloptimierung verwenden soll.
 ms.assetid: f44fd932-d8f8-46c7-b17c-27e6141408ab
-title: MFPKEY_PERCEPTUALOPTLEVEL-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_PERCEPTUALOPTLEVEL-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d86857ca9d7e4205afc0baf9c212e92606511ffc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f9eb74ae025dbddbdea7f76c2af8b15e912cf80ebd06e810a5214bf9798d1bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953850"
 ---
-# <a name="mfpkey_perceptualoptlevel-property"></a>Mfpkey- \_ Eigenschaft ' peraloptlevel '
+# <a name="mfpkey_perceptualoptlevel-property"></a>MFPKEY \_ PERCEPTUALOPTLEVEL-Eigenschaft
 
-Gibt an, ob der Codec beim Codieren die konservative perzeptive Optimierung verwenden soll.
+Gibt an, ob der Codec bei der Codierung eine konservative Perzepptuelloptimierung verwenden soll.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcperperaloptlevel
+g \_ wszWMVCPerceptualOptLevel
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,13 +27,13 @@ VT \_ I4
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die konservative perzeptive Optimierung ist ein Prozess, bei dem der Codec versucht, "wichtige" und "unbedeutende" Bereiche im Videoframe zu identifizieren. Nachdem Sie diese Bereiche des Frames identifiziert haben, erhält der Codec die Qualität wichtiger Regionen auf Kosten der Qualität wichtiger Regionen.
+Die konservativ wahrnehmliche Optimierung ist ein Prozess, bei dem der Codec versucht, "wichtige" und "unwichtige" Bereiche im Videoframe zu identifizieren. Nachdem diese Bereiche des Rahmens identifiziert wurden, hat der Codec der Qualität wichtiger Regionen eine höhere Priorität, was auf Kosten der Qualität unwichtiger Regionen geht.
 
-Die perzeptive Optimierung hebt hervor, dass das Bild für das menschliche Auge richtig angezeigt wird, anstatt auf eine strikte mathematische Genauigkeit zu beharren.
+Die perzeptische Optimierung legt den Wert darauf, dass das Bild für das menschliche Auge korrekt angezeigt wird, anstatt sich mit strikter mathematischer Genauigkeit zu begnähren.
 
-Die Ergebnisse der Optimierung variieren in Abhängigkeit vom Typ des codierten Videos erheblich. Diese Funktion eignet sich gut für die Codierung mit geringem Bitrate und niedriger Auflösung (z. b. Webstreaming), sollte aber wahrscheinlich vermieden werden, wenn Sie auf die Archivierung von Videoqualität abzielen.
+Die Ergebnisse der Optimierung variieren je nach Art des zu codierten Videos erheblich. Dieses Feature eignet sich möglicherweise gut für die Codierung mit niedriger Bitrate und niedriger Auflösung (z. B. Webstreaming), sollte aber bei der Archivierung von Videoqualität wahrscheinlich vermieden werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Die Ergebnisse der Optimierung variieren in Abhängigkeit vom Typ des codierten 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Die Ergebnisse der Optimierung variieren in Abhängigkeit vom Typ des codierten 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

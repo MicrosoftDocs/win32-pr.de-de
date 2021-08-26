@@ -1,26 +1,26 @@
 ---
-title: Fügen eines Schiebereglers
-description: Fügen eines Schiebereglers
+title: Hinzufügen eines Schiebereglers
+description: Hinzufügen eines Schiebereglers
 ms.assetid: 7062d580-a9d1-4fd7-bc28-db2615464838
 keywords:
-- Erstellen von Skins, Schieberegler
+- Erstellen von Skins, Schiebereglern
 - Windows Media Player Skins, Schieberegler
 - Skins, Schieberegler
 - Schieberegler in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3efcae55b3826b69a7c88fed5a23a262526c9dd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c6c3644e1b243188664295bbc00101a74377cbef17632217ff0a81dac0d377a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004379"
 ---
-# <a name="adding-a-slider"></a>Fügen eines Schiebereglers
+# <a name="adding-a-slider"></a>Hinzufügen eines Schiebereglers
 
-Sie können einen Schieberegler hinzufügen, um die aktuelle Position des Mediums anzuzeigen. Außerdem können Sie den Benutzer aktivieren, um die Position in der aktuellen Mediendatei zu ändern.
+Sie können einen Schieberegler hinzufügen, um die aktuelle Position des Mediums zu zeigen, und dem Benutzer ermöglichen, die Position in der aktuellen Mediendatei zu ändern.
 
-Zuerst müssen Sie das **Slider** -Element hinzufügen:
+Zuerst müssen Sie das **SLIDER-Element** hinzufügen:
 
 
 ```C++
@@ -42,9 +42,9 @@ Zuerst müssen Sie das **Slider** -Element hinzufügen:
 
 
 
-Dadurch wird ein Maximalwert basierend auf der Dauer der aktuellen Mediendatei festgelegt. Hierbei wird ein kleines Ziehpunkt für das Ziehpunkt-Bild verwendet Der Hintergrund des Schiebereglers wird rot angezeigt, und der Vordergrund wird blau dargestellt. Wenn der Benutzer das Ziehpunkt Bild an eine neue Position zieht und die Maustaste loslässt, werden die Medien an diese Position geändert.
+Dadurch wird ein Maximalwert basierend auf der Dauer der aktuellen Mediendatei definiert. Dabei wird eine kleine Bitmap mit einem Ingerabbild verwendet, die nur ein grünes Quadrat mit 10 Pixeln und 10 Pixeln ist. Der Hintergrund des Schiebereglers ist rot und der Vordergrund blau. Wenn der Benutzer das Ziehbild an eine neue Position zieht und die Maustaste loslässt, ändert sich das Medium in diese Position.
 
-Der Schieberegler wird jedoch nicht von sich selbst verschoben, es sei denn, Sie messen die aktuelle Position mit dem **CurrentPosition \_ OnChange** -Attribut des **Controls** -Elements, das in das **Player** -Element eingebettet ist.
+Der Schieberegler wird jedoch nur dann allein bewegt, wenn Sie die aktuelle Position mit dem **currentPosition \_ onchange-Attribut** des **CONTROLS-Elements** messen, das in das **PLAYER-Element eingebettet** ist.
 
 
 ```C++
@@ -60,20 +60,20 @@ Der Schieberegler wird jedoch nicht von sich selbst verschoben, es sei denn, Sie
 
 
 
-Wenn sich die Position des Mediums ändert, wird ein Ereignis ausgelöst, das dann die Codezeile ausführt, die den Wert des Schiebereglers an die aktuelle Position des Mediums ändert.
+Wenn sich die Position des Mediums ändert, wird ein Ereignis mit der Codezeile ausgeführt, die den Wert des Schiebereglers in die aktuelle Position des Mediums ändert.
 
-Sie können im Abschnitt "Sample" des SDK einen ähnlichen Schieberegler für den Schieberegler sehen.
+Eine ähnliche Arbeitsschieberegler-Skin finden Sie im Beispielabschnitt des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Leitfaden zum Erstellen von Skin**](skin-creation-guide.md)
+[**Handbuch zur Erstellung von Skins**](skin-creation-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

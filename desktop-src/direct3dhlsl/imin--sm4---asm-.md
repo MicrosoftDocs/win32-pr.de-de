@@ -1,23 +1,23 @@
 ---
-title: Imin (SM4-ASM)
-description: Die minimale Komponenten Weise Ganzzahl.
+title: imin (sm4 - asm)
+description: Komponentenweise ganzzahliger Mindestwert.
 ms.assetid: 8EDD5503-76D5-4078-BFBA-1DA9260C6E68
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 942384e7a988e4919a483e09c75e476d5a6917ba
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 0188b23700393034ad2187636d8d5bf846b8b8523b5336699443475c094fd26e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982390"
 ---
-# <a name="imin-sm4---asm"></a>Imin (SM4-ASM)
+# <a name="imin-sm4---asm"></a>imin (sm4 - asm)
 
-Die minimale Komponenten Weise Ganzzahl.
+Komponentenweise ganzzahliger Mindestwert.
 
 
 
-| Imin dest \[ . mask \] , \[  - \] src0 \[ . Swizzle \] , \[ - \] Quelle1 \[ . Swizzle \] , |
+| imin dest \[ .mask \] , \[  - \] src0 \[ .swizzle \] , \[ - \] src1 \[ .swizzle \] , |
 |--------------------------------------------------------------------|
 
 
@@ -28,19 +28,19 @@ Die minimale Komponenten Weise Ganzzahl.
 
 | Element                                                            | BESCHREIBUNG                                                                                             |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[im \] Ergebnis des Vorgangs.<br/> *dest*  =  *src0*  <  *Quelle1* ? *src0* : *Quelle1*<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Wert, der mit *Quelle1* verglichen werden soll.<br/>                                                       |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[im \] Wert, der mit *src0* verglichen werden soll.<br/>                                                       |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs.<br/> *dest*  =  *src0*  <  *src1* ? *src0* : *src1*<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der wert, der mit *src1 verglichen werden soll.*<br/>                                                       |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Der wert, der mit *src0 verglichen werden soll.*<br/>                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der optionale Negation-Modifizierer für Quell Operanden nimmt die Ergänzung von 2 vor dem Ausführen des Vorgangs an.
+Der optionale Negatmodifizierer für Quelloperatoren nimmt vor dem Ausführen des Vorgangs ein Komplement von 2 an.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -52,20 +52,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

@@ -1,28 +1,28 @@
 ---
-description: Zeigt, wie Videos von einer Videokamera in einer Datei aufgezeichnet werden.
+description: Zeigt, wie Videos von einer Videokamera in einer Datei erfasst werden.
 ms.assetid: 910eb010-07df-4384-a489-3c268e4cd531
-title: MF-Datei Beispiel
+title: MFCaptureToFile-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a0f8d8bb71eabb1faeb72bd8ce345b7a3eea0fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a1d5a588a573d7e2bc89fab25383210b275476a5285e377d651e44ecef47896
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940340"
 ---
-# <a name="mfcapturetofile-sample"></a>MF-Datei Beispiel
+# <a name="mfcapturetofile-sample"></a>MFCaptureToFile-Beispiel
 
-Zeigt, wie Videos von einer Videokamera in einer Datei aufgezeichnet werden.
+Zeigt, wie Videos von einer Videokamera in einer Datei erfasst werden.
 
 ## <a name="apis-demonstrated"></a>Gezeigte APIs
 
 In diesem Beispiel werden die folgenden APIs veranschaulicht.
 
--   [**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
--   [**Imbersink Writer**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsinkwriter)
--   [**IMFSourceReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
--   [**Mfenumschlag**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
+-   [**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
+-   [**ÜBERPRÜFENSinkWriter**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsinkwriter)
+-   [**SOURCEReader**](/windows/desktop/api/mfreadwrite/nn-mfreadwrite-imfsourcereader)
+-   [**MFEnumDeviceSources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ In diesem Beispiel werden die folgenden APIs veranschaulicht.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Dieses Beispiel ist im [GitHub-Repository für klassische Windows-Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/MFCaptureToFile)verfügbar.
+Dieses Beispiel ist im [github-Repository Windows klassischen Beispiele](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/multimedia/mediafoundation/MFCaptureToFile)verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

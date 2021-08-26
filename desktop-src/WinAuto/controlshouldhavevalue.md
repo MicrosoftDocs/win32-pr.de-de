@@ -1,21 +1,21 @@
 ---
-title: Controlschuldhavevalue
-description: Controlschuldhavevalue
+title: ControlShouldHaveValue
+description: ControlShouldHaveValue
 ms.assetid: 90C37CC5-21D2-4D26-B6D9-2C95C52127BF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b078712319ffcfde386df519837ba467ca2fcf4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1c6ced460fac38552e0b82396e6bbbcf92e90c341e40b289e332a3f188c7e4ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998740"
 ---
-# <a name="controlshouldhavevalue"></a>Controlschuldhavevalue
+# <a name="controlshouldhavevalue"></a>ControlShouldHaveValue
 
 ## <a name="text"></a>Text
 
-Ein Steuerelement mit der Rolle {0} muss über einen Wert verfügen, aber get \_ accValue ist nicht implementiert.
+Ein Steuerelement mit der Rolle {0} "" sollte einen Wert haben, \_ "get accValue" ist jedoch nicht implementiert.
 
 ## <a name="type"></a>type
 
@@ -23,37 +23,37 @@ Fehler
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Ein Element stellt auf der Grundlage der zugewiesenen MSAA-Rolle nicht erwartungsgemäß einen Wert bereit. Dies impliziert, dass das Element nicht über die [**get \_ accValue**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue) -Methode verfügt. Die folgenden MSAA-Rollen sollten beispielsweise alle einen Wert bereitstellen.
+Ein Element stellt einen Wert nicht wie erwartet basierend auf der zugewiesenen MSAA-Rolle dar, was bedeutet, dass die [**get \_ accValue-Methode**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accvalue) für das Element nicht implementiert ist. Beispielsweise sollten alle folgenden MSAA-Rollen einen Wert liefern.
 
--   Kombinations \_ Feld "Rollen System" \_
--   Rollen \_ System- \_ IPAddress
--   Rollen \_ System \_ Link
--   Rollen \_ System \_ outlineitem
--   Rollen \_ System- \_ ProgressBar
--   \_ \_ Schieberegler für Rollen System
--   \_SpinButton für Rollen System \_
--   Rollen \_ System- \_ Scrollleiste
--   Rollen \_ System \_ Text
+-   KOMBINATIONSFELD \_ \_ "ROLLENSYSTEM"
+-   \_ \_ ROLLENSYSTEM-IPADDRESS
+-   ROLE \_ SYSTEM \_ LINK
+-   ROLE \_ SYSTEM \_ OUTLINEITEM
+-   STATUSLEISTE \_ DES \_ ROLLENSYSTEMS
+-   \_ \_ ROLLENSYSTEMSCHIEBEREGLER
+-   ROLE \_ SYSTEM \_ SPINBUTTON
+-   \_ \_ ROLLENSYSTEM-BILDLAUFLEISTE
+-   \_ \_ ROLLENSYSTEMTEXT
 
-Dieses Problem ist ein Problem für Personen, die sich auf einen Bildschirm und eine Tastatur für die Navigation verlassen, da ein Element mit einem systeminternen Wert in der Lage sein muss, diesen Wert an einen Benutzer zu melden.
+Dieses Problem ist ein Problem für Benutzer, die für die Navigation eine Sprachausgabe und Tastatur verwenden, da ein Element mit einem systeminternen Wert in der Lage sein muss, diesen Wert einem Benutzer zu melden.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
-Für das-Element oder das übergeordnete Element ist eine MSAA-Rolle inadäquat festgelegt.
+Für das Element oder das übergeordnete Element ist eine MSAA-Rolle nicht angemessen festgelegt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**IAccessible:: get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)
+[**IAccessible::get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)
 </dt> <dt>
 
-[**Objekt Rollen**](object-roles.md)
+[**Objektrollen**](object-roles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

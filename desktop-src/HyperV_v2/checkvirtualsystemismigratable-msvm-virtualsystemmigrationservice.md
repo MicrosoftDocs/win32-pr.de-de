@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 1aed843f3f0f4c6c30eb6125cdd5859cdba902d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7da99fc5fe2eb69ff93ce85fa2335ca63a36291975b1349097e1586fe15e2cf1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041930"
 ---
-# <a name="checkvirtualsystemismigratable-method-of-the-msvm_virtualsystemmigrationservice-class"></a>CheckVirtualSystemIsMigratable-Methode der MSVM \_ virtualsystemmigrationservice-Klasse
+# <a name="checkvirtualsystemismigratable-method-of-the-msvm_virtualsystemmigrationservice-class"></a>CheckVirtualSystemIsMigratable-Methode der Msvm \_ VirtualSystemMigrationService-Klasse
 
 Bestimmt, ob das angegebene virtuelle System migriert werden kann.
 
@@ -44,45 +44,45 @@ uint32 CheckVirtualSystemIsMigratable(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine Instanz der [**CIM \_ Computersystem**](cim-computersystem.md) -Klasse, die den virtuellen Computer zum Testen der Migrations Fähigkeit von darstellt.
+Ein Verweis auf eine Instanz der [**\_ CIM-ComputerSystem-Klasse,**](cim-computersystem.md) die den virtuellen Computer darstellt, der die Migrationsfähigkeit von testen soll.
 
 </dd> <dt>
 
-*Destinationhost* \[ in\]
+*DestinationHost* \[ In\]
 </dt> <dd>
 
-Der Name des Host Systems für die Migration. Das Format dieses Namens wird von der **destinationhostformatssupported** -Eigenschaft der [**MSVM \_ virtualsystemmigrationfunktionalitäten**](msvm-virtualsystemmigrationcapabilities.md) -Klasse angegeben, die dieser Klasse zugeordnet ist.
+Der Name des Hostsystems für die Migration. Das Format dieses Namens wird von der **DestinationHostFormatsSupported-Eigenschaft** der [**Msvm \_ VirtualSystemMigrationCapabilities-Klasse**](msvm-virtualsystemmigrationcapabilities.md) angegeben, die dieser Klasse zugeordnet ist.
 
 </dd> <dt>
 
-*Migrationsettingdata* \[ in\]
+*MigrationSettingData* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ virtualsystemmigrationsettingdata**](msvm-virtualsystemmigrationsettingdata.md) -Klasse, die Einstellungen für den Migrations Vorgang darstellt.
+Eine eingebettete Instanz der [**Msvm \_ VirtualSystemMigrationSettingData-Klasse,**](msvm-virtualsystemmigrationsettingdata.md) die Einstellungen für den Migrationsvorgang darstellt.
 
 </dd> <dt>
 
-*Newsystemsettingdata* \[ in\]
+*NewSystemSettingData* \[ In\]
 </dt> <dd>
 
-Eine eingebettete Instanz der [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Klasse, die neue Eigenschaften darstellt, die für das virtuelle System nach der Migration gelten.
+Eine eingebettete Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die neue Eigenschaften darstellt, die nach der Migration auf das virtuelle System anwendbar sind.
 
 </dd> <dt>
 
-*Newresourcesettingdata* \[ in\]
+*NewResourceSettingData* \[ In\]
 </dt> <dd>
 
-Ein Array von Zeichen folgen, die eine eingebettete Instanz der [**MSVM \_ resourcezucationsettingdata**](msvm-resourceallocationsettingdata.md) -Klasse enthalten, die die neuen Eigenschaften darstellt, die für virtuelle Ressourcen des virtuellen Systems nach der Migration gelten.
+Ein Array von Zeichenfolgen, das eine eingebettete Instanz der [**Msvm \_ ResourceAllocationSettingData-Klasse**](msvm-resourceallocationsettingdata.md) enthält, die die neuen Eigenschaften darstellt, die nach der Migration auf virtuelle Ressourcen des virtuellen Systems anwendbar sind.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -92,10 +92,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 <dl> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -104,28 +104,28 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -134,19 +134,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md)
+[**Msvm \_ VirtualSystemMigrationService**](msvm-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

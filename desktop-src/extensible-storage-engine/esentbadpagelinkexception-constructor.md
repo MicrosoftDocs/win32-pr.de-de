@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentbadpagelinkexception-Konstruktor'
-title: Esentbadpagelinkexception-Konstruktor
+description: 'Weitere Informationen zu: EsentBadPageLinkException-Konstruktor'
+title: EsentBadPageLinkException-Konstruktor
 TOCTitle: 'EsentBadPageLinkException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadPageLinkException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadpagelinkexception.esentbadpagelinkexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: df3d5e45ca9cd72e5914c62475c1bddfb4ac1c61
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5bc325091ed2530e3e0689d0d63324581f8f7e450b3bd809583e175b95f0e24a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975877"
 ---
-# <a name="esentbadpagelinkexception-constructor"></a>Esentbadpagelinkexception-Konstruktor
+# <a name="esentbadpagelinkexception-constructor"></a>EsentBadPageLinkException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbadpagelinkexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadPageLinkException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentBadPageLinkException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadpagelinkexception-Klasse](./esentbadpagelinkexception-class.md)
+[EsentBadPageLinkException-Klasse](./esentbadpagelinkexception-class.md)
 
-[Esentbadpagelinkexception-Member](./esentbadpagelinkexception-members.md)
+[EsentBadPageLinkException-Member](./esentbadpagelinkexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

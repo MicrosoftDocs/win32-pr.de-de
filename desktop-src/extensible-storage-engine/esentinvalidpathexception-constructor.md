@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentinvalidpathexception-Konstruktor'
-title: Esentinvalidpathexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidPathException-Konstruktor'
+title: EsentInvalidPathException-Konstruktor
 TOCTitle: 'EsentInvalidPathException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidPathException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidpathexception.esentinvalidpathexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 465640acc683d8167e7f3b8e400d4a7dbe091e69
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ff2b2b0851437d60a7282a498db03679b2bb7fbc0dfb0cfba21da4be67d0f02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019773"
 ---
-# <a name="esentinvalidpathexception-constructor"></a>Esentinvalidpathexception-Konstruktor
+# <a name="esentinvalidpathexception-constructor"></a>EsentInvalidPathException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidpathexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidPathException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidPathException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidpathexception-Klasse](./esentinvalidpathexception-class.md)
+[EsentInvalidPathException-Klasse](./esentinvalidpathexception-class.md)
 
-[Esentinvalidpathexception-Member](./esentinvalidpathexception-members.md)
+[EsentInvalidPathException-Member](./esentinvalidpathexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

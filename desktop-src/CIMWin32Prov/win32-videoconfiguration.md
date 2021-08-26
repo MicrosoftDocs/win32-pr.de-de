@@ -1,5 +1,5 @@
 ---
-description: Die Win32- \_ videoconfiguration-Klasse ist nicht aktiv. Es werden keine Instanzen zurückgegeben, da es von keinem Anbieter unterstützt wird.
+description: Die Win32 \_ VideoConfiguration-Klasse ist nicht aktiv. Es werden keine Instanzen zurückgegeben, da kein Anbieter sie unterstützt.
 ms.assetid: 8dd15e8a-ff9b-4e75-bae9-8c80548301ab
 ms.tgt_platform: multiple
 title: Win32_VideoConfiguration-Klasse
@@ -44,18 +44,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 96ad4206cc50953a135b23257526ffb5cdc59b6e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7d951a8927458fa12398682ce63963dd71949d70e4db3a426dfc93ad14c78bf7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922620"
 ---
-# <a name="win32_videoconfiguration-class"></a>Win32- \_ videoconfiguration-Klasse
+# <a name="win32_videoconfiguration-class"></a>Win32 \_ VideoConfiguration-Klasse
 
-Die **Win32- \_ videoconfiguration** -Klasse ist nicht aktiv. Es werden keine Instanzen zurückgegeben, da es von keinem Anbieter unterstützt wird.
+Die **Win32 \_ VideoConfiguration-Klasse** ist nicht aktiv. Es werden keine Instanzen zurückgegeben, da kein Anbieter sie unterstützt.
 
-Die **Win32- \_ videoconfiguration** -Klasse stellt eine Konfiguration eines Video Subsystems dar. Diese Klasse ist zugunsten der Eigenschaften in den [**Win32- \_ Videocontroller**](win32-videocontroller.md)-, [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md)-und [**CIM- \_ videocontrollerresolution**](cim-videocontrollerresolution.md) -Klassen veraltet.
+Die **Win32 \_ VideoConfiguration-Klasse** stellt eine Konfiguration eines Videosubsystems dar. Diese Klasse wurde zugunsten der Eigenschaften in den Klassen [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md)und [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md) als veraltet eingestuft.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -100,497 +100,497 @@ class Win32_VideoConfiguration : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ videoconfiguration** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ VideoConfiguration-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ videoconfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ VideoConfiguration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ActualColorResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| colorres"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits pro Pixel")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| COLORRES"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits pro Pixel")
 </dt> </dl>
 
 Gibt die aktuelle Farbtiefe der Videoanzeige an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **AdapterChipType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \\ \\ Info \| chiptype")
+Qualifizierer: [**VERALTET**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ \\ \\ Services-Klasse \\ \\ Info \| ChipType")
 </dt> </dl>
 
-Enthält den Namen des Adapter Chips.
+Enthält den Namen des Adapterchips.
 
-Beispiel: S3
+Beispiel: s3
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
-**AdapterCompatibility**
+**AdapterKompatibilität**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**deprecated**](../wmisdk/standard-wmi-qualifiers.md), [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**Schlüssel,**](../wmisdk/key-qualifier.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Gibt den Namen des Herstellers des Adapters an. Dieser Name kann verwendet werden, um die Kompatibilität dieses Geräts mit den Anforderungen des Computer Systems zu vergleichen.
+Gibt den Namen des Herstellers des Adapters an. Dieser Name kann verwendet werden, um die Kompatibilität dieses Geräts mit den Anforderungen des Computersystems zu vergleichen.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **AdapterDACType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \\ \\ Info \| dactype")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ \\ \\ Services-Klasse \\ \\ Info \| DACType")
 </dt> </dl>
 
-Gibt den Namen des im Adapter verwendeten Digital-to-Analog-Chips (DAC) an.
+Gibt den Namen des digital-to-analog-Chips (DAC) an, der im Adapter verwendet wird.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **AdapterDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
 Enthält eine Beschreibung oder einen beschreibenden Namen der Grafikkarte.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **AdapterRAM**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \\ \\ Info \| videomemory"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bytes")
+Qualifizierer: [**DEPRECATED**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Class \\ \\ Info \\ \\ \| VideoMemory"), [**Units**](../wmisdk/standard-qualifiers.md) ("bytes")
 </dt> </dl>
 
-Gibt die Arbeitsspeicher Größe der Grafikkarte an.
+Gibt die Arbeitsspeichergröße der Grafikkarte an.
 
 Beispiel: 16777216
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **AdapterType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Hardware \\ \\ Description \\ \\ System \\ \\ Display Controller \\ \\ 0 \\ \\ Identifier")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| HARDWARE Description System \\ \\ \\ \\ \\ \\ DisplayController \\ \\ 0 \\ \\ Identifier")
 </dt> </dl>
 
 Gibt den Typ der Grafikkarte an.
 
 Zeichensatz: Alphanumerisch
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
-**Bitsper Pixel**
+**BitsPerPixel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| bitspixel")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| BITSPIXEL")
 </dt> </dl>
 
-Gibt die tatsächliche Anzahl von Bits pro Pixel an, die die Anzeige darstellt. Dies kann auf die aktuelle Video Einstellung (dargestellt durch die ActualColorResolution-Eigenschaft) des Benutzers skaliert werden.
+Gibt die tatsächliche Anzahl von Bits pro Pixel an, die die Anzeige darstellen. Dies kann auf die aktuelle Videoeinstellung (dargestellt durch die ActualColorResolution-Eigenschaft) des Benutzers skaliert werden.
 
 Beispiel: 8
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des aktuellen-Objekts.
+Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
-**Colorplane**
+**ColorPlanes**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| Plane")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| PLANES")
 </dt> </dl>
 
-Gibt die aktuelle Anzahl von Farbebenen an, die in der Videoanzeige verwendet werden. Eine Farb Ebene ist eine andere Möglichkeit zur Darstellung von Pixel Farben. Anstatt jedem Pixel einen einzelnen RGB-Wert zuzuweisen, trennen Farbebenen die Grafik in jede der primären Farbkomponenten (rotes grünes blau) und speichern Sie in ihren eigenen Flächen. Dies ermöglicht eine höhere Farbtiefe auf 8-und 16-Bit-Videosystemen. Vorhandene Grafik Systeme verfügen über den bitwidth, der groß genug ist, um farbausführungsinformationen zu speichern, sodass nur eine Farb Ebene erforderlich ist.
+Gibt die aktuelle Anzahl von Farbebenen an, die in der Videoanzeige verwendet werden. Eine Farbebene ist eine weitere Möglichkeit, Pixelfarben darzustellen. Anstatt jedem Pixel einen einzelnen RGB-Wert zuzuweisen, trennen Farbebenen die Grafik in jede der primären Farbkomponenten (Rotgrünblau) und speichern sie in ihren eigenen Ebenen. Dies ermöglicht größere Farbtiefe auf 8- und 16-Bit-Videosystemen. Bei vorhandenen Grafiksystemen ist die Bitbreite groß genug, um Farbtiefeinformationen zu speichern, sodass nur eine Farbebene erforderlich ist.
 
 Beispiel: 1
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **ColorTableEntries**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| numcolors")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| NUMCOLORS")
 </dt> </dl>
 
-Gibt die Anzahl der Farbindizes in einer Farbtabelle für eine Videoanzeige an. Diese Eigenschaft wird verwendet, wenn das Gerät über eine Farbtiefe von höchstens 8 Bits pro Pixel verfügt. Bei Geräten mit größerer Farbtiefe wird-1 zurückgegeben.
+Gibt die Anzahl der Farbindizes in einer Farbtabelle für eine Videoanzeige an. Diese Eigenschaft wird verwendet, wenn das Gerät eine Farbtiefe von maximal 8 Bits pro Pixel aufweist. Für Geräte mit höheren Farbtiefe wird -1 zurückgegeben.
 
 Beispiel: 256
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten der entsprechenden Eigenschaften, die in [**Win32 \_ VideoController, Win32**](win32-videocontroller.md) [**\_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)enthalten sind, als veraltet bezeichnet.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Textbeschreibung des aktuellen-Objekts.
+Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
-**Geräte Einstellungs Stifte**
+**DeviceSpecificPens**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| numpens")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| NUMPENS")
 </dt> </dl>
 
-Gibt die aktuelle Anzahl von gerätespezifischen Stiften an. Der Wert 0xFFFFFFFF bedeutet, dass das Gerät keine Stifte unterstützt. Stifte werden zum Zeichnen von Linien und Rändern von polygonalen Objekten verwendet.
+Gibt die aktuelle Anzahl gerätespezifischer Stifte an. Der Wert 0xFFFFFFFF bedeutet, dass das Gerät keine Stifte unterstützt. Stifte werden verwendet, um Linien und die Reihenfolgen polygonaler Objekte zu zeichnen.
 
 Beispiel: 3
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Driverdate**
+**DriverDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \\ \\ AdapterDescription \| driverdate")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry-System \| \\ \\ CurrentControlSet \\ \\ \\ \\ \\ \\ Services-KlassenadapterDescription \| DriverDate")
 </dt> </dl>
 
-Gibt das Datum und die Uhrzeit an, zu der der aktuelle Videotreiber installiert wurde.
+Gibt das Datum und die Uhrzeit der Installation des aktuellen Videotreibers an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **HorizontalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| horzres")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| HORZRES")
 </dt> </dl>
 
-Gibt die aktuelle Anzahl der Pixel in der horizontalen Richtung (X-Achse) der Anzeige an.
+Gibt die aktuelle Anzahl von Pixeln in horizontaler Richtung (X-Achse) der Anzeige an.
 
 Beispiel: 1024
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**INFFILENAME**
+**InfFilename**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \| INFPath")
+Qualifizierer: [**DEPRECATED**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Class \\ \\ \| InfPath")
 </dt> </dl>
 
-Gibt den Pfad zur INF-Datei des Video Treibers an.
+Gibt den Pfad zur INF-Datei des Videotreibers an.
 
-Beispiel: C: \\ Windows \\ system32 \\ Drivers
+Beispiel: C: \\ Windows \\ System32-Treiber \\
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **InfSection**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \| InfSection")
+Qualifizierer: [**DEPRECATED**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Class \\ \\ \| InfSection")
 </dt> </dl>
 
-Gibt den Abschnitt der INF-Datei an, in der sich die Win32-Videoinformationen befinden.
+Gibt den Abschnitt der INF-Datei an, in dem sich die Win32-Videoinformationen befinden.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **InstalledDisplayDrivers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \\ \\ Class \\ \\ defaule \| drv")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Class \\ \\ \\ \\ Defaule \| drv")
 </dt> </dl>
 
-Gibt den Namen des installierten Video Treibers an.
+Gibt den Namen des installierten Videotreibers an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Monitorhersteller**
+**MonitorManufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Gibt den Namen des Herstellers des Anzeige Geräts an.
+Gibt den Namen des Herstellers des Anzeigegeräts an.
 
 Beispiel: NEC
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Monitortyp**
+**MonitorType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| Hardware \\ \\ Description \\ \\ System \\ \\ monitorperipherie \\ \\ 0 \| Identifier")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| HARDWARE Description System \\ \\ \\ \\ \\ \\ MonitorPeripheral \\ \\ 0 \| Identifier")
 </dt> </dl>
 
-Gibt den Modellnamen des Anzeige Geräts an.
+Gibt den Modellnamen des Anzeigegeräts an.
 
-Beispiel: NEC 5F-GP
+Beispiel: NEC 5FGp
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**deprecated**](../wmisdk/standard-wmi-qualifiers.md), [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**Schlüssel,**](../wmisdk/key-qualifier.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Enthält einen identifizierenden Namen für die Video Konfigurationsklasse.
+Enthält einen identifizierenden Namen für die Videokonfigurationsklasse.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Pixelsperxlogicalzoll**
+**PixelsPerXLogicalInch**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| logpixelsx")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| LOGPIXELSX")
 </dt> </dl>
 
 Gibt die Anzahl der Pixel pro logischem Zoll entlang der X-Achse (horizontale Richtung) der Anzeige an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Pixelsperylogicalzoll**
+**PixelsPerYLogicalInch**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| logpixelsy")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| LOGPIXELSY")
 </dt> </dl>
 
-Gibt die Anzahl der Pixel pro logischem Zoll entlang der Y-Achse (vertikale Richtung) der Anzeige an.
+Gibt die Anzahl von Pixeln pro logischem Zoll entlang der Y-Achse (vertikale Richtung) der Anzeige an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **RefreshRate**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| VRefresh")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| VREFRESH")
 </dt> </dl>
 
-Gibt die Aktualisierungsrate der Video Konfiguration an. Der Wert 0 oder 1 gibt an, dass ein Standardsatz verwendet wird.
+Gibt die Aktualisierungsrate der Videokonfiguration an. Der Wert 0 oder 1 gibt an, dass eine Standardrate verwendet wird.
 
 Beispiel: 72
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Scanmode**
+**ScanMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \| Device0 \| DefaultSettings. interschnür")
+Qualifizierer: [**VERALTET**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services \| Device0 \| DefaultSettings.Interlaced")
 </dt> </dl>
 
-Gibt an, ob das Anzeigegerät mit Zeilen Sprung verbunden ist.
+Gibt an, ob das Anzeigegerät geschachtelt ist.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 <dt>
 
 <span id="Non_Interlaced"></span><span id="non_interlaced"></span><span id="NON_INTERLACED"></span>
 
-**Nicht** Zeilen Sprung ("nicht Zeilen Sprung")
+**Nicht-Interlaced** ("Non Interlaced")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interlaced"></span><span id="interlaced"></span><span id="INTERLACED"></span>
 
-Zeilen **Sprung ("** Zeilen Sprung")
+**Interlaced** ("Interlaced")
 
 
 </dt> <dd></dd> </dl>
@@ -600,94 +600,94 @@ Zeilen **Sprung ("** Zeilen Sprung")
 **ScreenHeight**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| vertsize"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Millimeter")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| VERTSIZE"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Millimeter")
 </dt> </dl>
 
 Gibt die Höhe des physischen Bildschirms an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
-**Bildschirmbreite**
+**ScreenWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| horzsize"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Millimeter")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Gerätekontextfunktionen \| \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| HORZSIZE"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Millimeter")
 </dt> </dl>
 
 Gibt die Breite des physischen Bildschirms an.
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Bezeichner, durch den das aktuelle-Objekt bekannt ist.
+Bezeichner, unter dem das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM- \_ Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 
 </dd> <dt>
 
 **SystemPaletteEntries**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| SIZEPALETTE")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| SIZEPALETTE")
 </dt> </dl>
 
-Gibt die aktuelle Anzahl von Farb Indexeinträgen an, die für die Verwendung durch das System reserviert sind. Dieser Wert ist nur für Anzeigeeinstellungen gültig, die eine indizierte Palette verwenden. Indizierte Paletten werden nicht für Farbtiefe verwendet, die größer als 8 Bits pro Pixel ist. Wenn die Farbtiefe mehr als 8 Bits pro Pixel beträgt, wird dieser Wert auf **null** festgelegt.
+Bezeichnet die aktuelle Anzahl von Farbindexeinträgen, die für die Systemnutzung reserviert sind. Dieser Wert ist nur für Anzeigeeinstellungen gültig, die eine indizierte Palette verwenden. Indizierte Paletten werden nicht für Farbtiefen von mehr als 8 Bits pro Pixel verwendet. Wenn die Farbtiefe mehr als 8 Bits pro Pixel beträgt, wird dieser Wert auf **NULL festgelegt.**
 
 Beispiel: 20
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> <dt>
 
 **VerticalResolution**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](../wmisdk/standard-wmi-qualifiers.md), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| vertres")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Context Functions \| [**GetDeviceCaps**](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) \| VERTRES")
 </dt> </dl>
 
-Gibt die aktuelle Anzahl der Pixel in vertikaler Richtung (Y-Achse) der Anzeige an.
+Gibt die aktuelle Anzahl von Pixeln in vertikaler Richtung (Y-Achse) der Anzeige an.
 
 Beispiel: 768
 
-Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft (en) im [**Win32- \_ Videocontroller**](win32-videocontroller.md), [**Win32 \_ Desktopmonitor**](win32-desktopmonitor.md) und//oder [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md)zu bevorzugen.
+Diese Eigenschaft wurde zugunsten einer entsprechenden Eigenschaft veraltet, die in [**Win32 \_ VideoController,**](win32-videocontroller.md) [**Win32 \_ DesktopMonitor**](win32-desktopmonitor.md) und/oder [**CIM \_ VideoControllerResolution enthalten ist.**](cim-videocontrollerresolution.md)
 
 </dd> </dl>
 
@@ -699,8 +699,8 @@ Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -709,7 +709,7 @@ Diese Eigenschaft wurde als veraltet markiert, um eine entsprechende Eigenschaft
 
 <dl> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> </dl>
 
  

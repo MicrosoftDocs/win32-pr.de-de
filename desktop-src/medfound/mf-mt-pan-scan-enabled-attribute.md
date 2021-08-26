@@ -1,35 +1,35 @@
 ---
-description: Gibt an, ob der Pan/Scan-Modus aktiviert ist.
+description: Gibt an, ob der Schwenk-/Scanmodus aktiviert ist.
 ms.assetid: 9e8746c6-13a4-4cf7-9748-82223d9529fa
-title: MF_MT_PAN_SCAN_ENABLED-Attribut (mfapi. h)
+title: MF_MT_PAN_SCAN_ENABLED -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b347c898ce827ff37796a9698e843f6321db8a1d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee1e78c38cd15f5d735d49b5689905a40d74614b46817a8621ce1dabcdc5a1b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955490"
 ---
-# <a name="mf_mt_pan_scan_enabled-attribute"></a>Das MF \_ MT \_ Pan Scan- \_ \_ aktiviertes Attribut
+# <a name="mf_mt_pan_scan_enabled-attribute"></a>MF \_ MT PAN SCAN \_ \_ \_ ENABLED-Attribut
 
-Gibt an, ob der Pan/Scan-Modus aktiviert ist.
+Gibt an, ob der Schwenk-/Scanmodus aktiviert ist.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut den Wert **true** hat, sollte nur der Pan/Scan-Bereich des Videos angezeigt werden. Der Pan/Scan-Bereich wird durch das [**MF \_ MT \_ Pan \_ Scan \_ Aperture**](mf-mt-pan-scan-aperture-attribute.md) -Attribut angegeben.
+Wenn dieses Attribut **TRUE ist,** sollte nur der Schwenk-/Scanbereich des Videos angezeigt werden. Der Schwenk-/Scanbereich wird durch das [**MF \_ MT PAN \_ SCAN \_ \_ APERTURE-Attribut**](mf-mt-pan-scan-aperture-attribute.md) angegeben.
 
-Wenn dieses Attribut **false** ist oder nicht festgelegt ist, sollte die gesamte Anzeige Öffnung des Videos angezeigt werden. Die Anzeige Öffnung wird durch das [**MF \_ MT- \_ minimale \_ Display \_ Aperture**](mf-mt-minimum-display-aperture-attribute.md) -Attribut angegeben.
+Wenn dieses Attribut FALSE **ist** oder nicht festgelegt ist, sollte die gesamte Anzeigeperperkette des Videos angezeigt werden. Die Anzeigeblende wird durch das [**MF \_ MT MINIMUM \_ DISPLAY \_ \_ APERTURE-Attribut**](mf-mt-minimum-display-aperture-attribute.md) angegeben.
 
-Wenn Sie dieses Attribut auf " **true**" festlegen, legen Sie auch den Wert des [**MF \_ MT \_ Pan \_ Scan \_ Aperture**](mf-mt-pan-scan-aperture-attribute.md) -Attributs fest.
+Wenn Sie dieses Attribut auf **TRUE festlegen,** legen Sie auch den Wert des [**MF \_ MT PAN \_ SCAN \_ \_ APERTURE-Attributs**](mf-mt-pan-scan-aperture-attribute.md) fest.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -47,22 +47,22 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
-[Bildseiten Verhältnis](picture-aspect-ratio.md)
+[Bild-Seitenverhältnis](picture-aspect-ratio.md)
 </dt> </dl>
 
  

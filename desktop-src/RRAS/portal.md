@@ -4,12 +4,12 @@ description: Routing- und RAS-Dienst
 ms.assetid: fa0a183a-0254-401e-8b78-441cb3f83e8b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 49d81e743f640e600588413f0c15c44e0410c5ea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2d827150b84806afe4a9290436620def7675ee03163bf5f63c0c0d6556932a1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120029000"
 ---
 # <a name="routing-and-remote-access-service"></a>Routing- und RAS-Dienst
 
@@ -23,7 +23,7 @@ Entwickler können die Routingprotokoll-APIs verwenden, um Routingprotokolle zu 
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die Routing- und RAS-Dienst-APIs sind für die Verwendung durch C/C++-Programmierer konzipiert. Programmierer sollten auch mit Netzwerkkonzepten vertraut sein.
+Die Routing- und Remotezugriffsdienst-APIs sind für die Verwendung durch C/C++-Programmierer konzipiert. Programmierer sollten auch mit Netzwerkkonzepten vertraut sein.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
@@ -35,7 +35,7 @@ Ausführlichere Informationen dazu, welche Betriebssysteme eine bestimmte Funkti
 
 | Thema                                                                                                             | BESCHREIBUNG                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| [Architektur der Routing- und RAS-Dienste](routing-and-remote-access-services-architecture.md)<br/> | Übersicht über die Architektur der Routing- und RAS-Dienste.<br/>                                           |
+| [Routing- und Remote-Access Services-Architektur](routing-and-remote-access-services-architecture.md)<br/> | Übersicht über die Routing- und Remote-Access Services-Architektur.<br/>                                           |
 | [Routing- und Remotezugriffsregistrierungslayout](routing-and-remote-access-registry-layout.md)<br/>             | Beispiel für ein Registrierungslayout für den Routerdienst<br/>                                                          |
 | [Fehlercodes für Routing und Remotezugriff](routing-and-remote-access-error-codes.md)<br/>                     | Liste aller Fehlercodes für Routing und Remotezugriff.<br/>                                                         |
 | [Remotezugriff](remote-access-start-page.md)<br/>                                                          | Dokumentation zu RAS- und RAS-Verwaltungs-APIs.<br/>                                                         |

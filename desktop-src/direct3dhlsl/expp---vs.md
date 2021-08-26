@@ -1,6 +1,6 @@
 ---
-title: EXPP-vs
-description: Stellt eine exponentielle partielle Genauigkeit von 2X bereit.
+title: expp im Vergleich zu
+description: Stellt eine 2x-Teilgenauigkeit mit exponentieller Genauigkeit zur
 ms.assetid: ac080ac9-5dfd-49e4-92ea-50bb26844ff6
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,51 +9,51 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0d57e2723c90eee8df728aa540baeab86932e773
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: e8717edc045f50cc572d675dbec405b01fda49503349e9716210dfcae23fb277
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982450"
 ---
-# <a name="expp---vs"></a>EXPP-vs
+# <a name="expp---vs"></a>expp im Vergleich zu
 
-Stellt eine exponentielle partielle Genauigkeit 2<sup>x</sup>bereit.
+Stellt eine partielle Genauigkeit von exponentiell 2<sup>x zur</sup>
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| EXPP DST, src. Stuben|Teenie|z|Löw |
+| expp dst, src. {x\|y\|z\|w} |
 |----------------------------|
 
 
 
- 
+ 
 
 Hierbei gilt:
 
--   DST ist das Ziel Register.
--   src ist ein Quell Register. Das Quell Register erfordert die explizite Verwendung von replizierten Strichen, d. h. genau einer der x-, y-,. z-,. w-Swizzle-Komponenten (oder r,. g,. b,. a-äquivalente) muss angegeben werden.
--   {x \| y \| z \| w} ist das erforderliche Replizieren von replizieren für das Quell Register.
+-   dst ist das Zielregister.
+-   src ist ein Quellregister. Das Quellregister erfordert die explizite Verwendung von "replicate swizzle", d.h. genau eine der .x-, .y-, .z-, .w swizzle-Komponenten (oder die Entsprechungen .r, .g, .b, .a) muss angegeben werden.
+-   {x \| y \| z \| w} ist die erforderliche Replikation von Swizzle im Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| EXPP                   | x    | x    | x    | x     | x    | x     |
+| expp                   | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 ### <a name="vs_1_1"></a>vs \_ 1 \_ 1
 
-Die [Exp-vs-](exp---vs.md) Anweisung ist abhängig von den Scheitelpunkt-Shader-Versionen unterschiedlich.
+Die [Anweisung exp - vs](exp---vs.md) funktioniert je nach Vertex-Shaderversion unterschiedlich.
 
-In vs \_ 1 \_ 1 ergibt die EXPP-Anweisung die folgenden Ergebnisse:
+Im Vergleich \_ zu \_ 1 1 liefert die expp-Anweisung die folgenden Ergebnisse:
 
 
 ```
@@ -67,7 +67,7 @@ dest.w = 1
 
 
 
-In vs \_ 2 \_ 0 und aufwärts führt die EXPP-Anweisung die folgenden Ergebnisse aus:
+In vs \_ 2 \_ 0 und up gibt die expp-Anweisung die folgenden Ergebnisse aus:
 
 
 ```
@@ -80,7 +80,7 @@ dest.x = dest.y = dest.z = dest.y = pow(2, v) (partial-precision)
 
 ### <a name="vs_2_0"></a>vs \_ 2 \_ 0
 
-In vs \_ 2 \_ 0 und oben funktioniert die-Anweisung wie folgt:
+In vs \_ 2 \_ 0 und up funktioniert die Anweisung wie die folgenden:
 
 
 ```
@@ -91,18 +91,18 @@ dest.x = dest.y = dest.z = dest.y = pow( 2, V ) (partial-precision)
 
 
 
-Die-Anweisung bietet mindestens 10 Bits an Genauigkeit.
+Die -Anweisung stellt mindestens 10 Bits Genauigkeit zur Verfügung.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

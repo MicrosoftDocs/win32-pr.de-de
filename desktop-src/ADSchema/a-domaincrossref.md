@@ -1,11 +1,11 @@
 ---
-title: Domain-Cross-ref-Attribut
-description: Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querverweis Objekt der vertrauenswürdigen Domäne.
+title: Domänenübergreifendes Ref-Attribut
+description: Dies ist ein Verweis von einem vertrauenswürdigen Domänenobjekt auf das Querverweisobjekt der vertrauenswürdigen Domäne.
 ms.assetid: aa6fe6f9-a45c-448c-9fc5-17bc2994c764
 ms.tgt_platform: multiple
 keywords:
-- Domänen-Kreuz Verweis Attribut-AD-Schema
-- domaincrossref-Attribut, AD-Schema
+- AD-Schema für domänenübergreifende Ref-Attribute
+- DomainCrossRef-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b85e1293ce8141a3614c9401dbb34c1031de5935
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: eba4cecd6bc89a83b309c314dfdb3bee0968a2e8dd089da7e2f1e2afe5901aa0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077730"
 ---
-# <a name="domain-cross-ref-attribute"></a>Domain-Cross-ref-Attribut
+# <a name="domain-cross-ref-attribute"></a>Domänenübergreifendes Ref-Attribut
 
-Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querverweis Objekt der vertrauenswürdigen Domäne.
+Dies ist ein Verweis von einem vertrauenswürdigen Domänenobjekt auf das Querverweisobjekt der vertrauenswürdigen Domäne.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | Domäne-Kreuz Verweis                        |
-| LDAP-Display-Name | domaincrossref                          |
+| CN                | Domänenübergreifende Ref                        |
+| Ldap-Anzeigename | domainCrossRef                          |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.472                  |
 | System-ID-GUID    | b000ea7b-a086-11d0-afdd-00c04fd930c9    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
@@ -43,7 +43,7 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,11 +57,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -70,7 +70,7 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,11 +78,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -99,11 +99,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -120,11 +120,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -141,11 +141,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |
@@ -162,11 +162,11 @@ Dies ist ein Verweis von einem vertrauenswürdigen Domänen Objekt auf das Querv
 |------------------------|------------------------------------------------------|
 | Link-ID                | \-                                                   |
 | MAPI-Id                | \-                                                   |
-| System-Only            | False                                                |
-| Ist-einwertig       | Richtig                                                 |
-| Ist indiziert             | False                                                |
-| Im globalen Katalog      | False                                                |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                         |
+| System-Only            | Falsch                                                |
+| Ist einwertig       | Richtig                                                 |
+| Ist indiziert             | Falsch                                                |
+| Im globalen Katalog      | Falsch                                                |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                         |
 | Range-Lower            | \-                                                   |
 | Range-Upper            | \-                                                   |
 | Search-Flags           | 0x00000000                                           |

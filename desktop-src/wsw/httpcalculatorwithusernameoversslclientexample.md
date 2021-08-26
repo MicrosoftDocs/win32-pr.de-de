@@ -1,29 +1,29 @@
 ---
-title: Httpcalculatorwithusernameoversslcliumtexample
-description: Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy verwendet, um mit einem Rechner Dienst zu kommunizieren, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus.
+title: HttpCalculatorWithUsernameOverSslClientExample
+description: Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy verwendet, um mit einem Rechnerdienst zu sprechen, mit Benutzername über SSL-Sicherheit im gemischten Modus.
 ms.assetid: 82f27502-0f18-4b30-9da1-9191e34366c6
 keywords:
-- Httpcalculatorwithusernameoversslcliumtexample Native-Web-Services
-- Wwsapi
+- HttpCalculatorWithUsernameOverSslClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f344278b5ef72748f5cea375c931dbded47b5970
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: caac29f9cca33d439d65ec6745f3dd108db11355839d644a64f914279a3f9bdd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054690"
 ---
-# <a name="httpcalculatorwithusernameoversslclientexample"></a>Httpcalculatorwithusernameoversslcliumtexample
+# <a name="httpcalculatorwithusernameoversslclientexample"></a>HttpCalculatorWithUsernameOverSslClientExample
 
-Dieses Beispiel zeigt einen HTTP-Client, der den Dienst Proxy verwendet, um mit einem Rechner Dienst zu kommunizieren, mit dem Benutzernamen über SSL-Sicherheit im gemischten Modus. In diesem Setup wird die Transport Verbindung von SSL geschützt (signiert, verschlüsselt), der auch die Server Authentifizierung bereitstellt. Die Client Authentifizierung wird von einem Paar aus Benutzername und Kennwort in einem WS-Security-Header in der Nachricht bereitgestellt.
+Dieses Beispiel zeigt einen HTTP-Client, der einen Dienstproxy verwendet, um mit einem Rechnerdienst zu sprechen, mit Benutzername über SSL-Sicherheit im gemischten Modus. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar in einem WS-Security-Header in der Nachricht bereitgestellt.
 
--   [Calculatorclientusernameoverssl. cpp](#calculatorclientusernameoversslcpp)
--   [CalculatorService. WSDL](#calculatorservicewsdl)
+-   [CalculatorClientUserNameOverSsl.cpp](#calculatorclientusernameoversslcpp)
+-   [CalculatorService.wsdl](#calculatorservicewsdl)
 -   [Makefile](#makefile)
 
-## <a name="calculatorclientusernameoversslcpp"></a>Calculatorclientusernameoverssl. cpp
+## <a name="calculatorclientusernameoversslcpp"></a>CalculatorClientUserNameOverSsl.cpp
 
 
 ```C++
@@ -230,7 +230,7 @@ Exit:
 
 
 
-## <a name="calculatorservicewsdl"></a>CalculatorService. WSDL
+## <a name="calculatorservicewsdl"></a>CalculatorService.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -355,9 +355,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

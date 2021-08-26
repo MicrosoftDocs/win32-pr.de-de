@@ -1,14 +1,14 @@
 ---
-title: Typen von Wiedergabelisten
-description: Typen von Wiedergabelisten
+title: Arten von Wiedergabelisten
+description: Arten von Wiedergabelisten
 ms.assetid: 292c51e6-ae19-4b8c-a52a-45c9f860c14f
 keywords:
-- Windows Media Metadatei-Wiedergabelisten, Informationen zu
+- Windows Medienmetadatei-Wiedergabelisten,Informationen
 - Wiedergabelisten, Informationen
-- Metadatei-Wiedergabelisten, Informationen
-- Windows Media Metadatei-Wiedergabelisten, Typen
+- Metafile-Wiedergabelisten, Informationen
+- Windows Medienmetadatei-Wiedergabelisten, Typen
 - Wiedergabelisten, Typen
-- Metadatei-Wiedergabelisten, Typen
+- Metafile-Wiedergabelisten, Typen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -16,36 +16,36 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f5fde41caeace1fe49018ab1f6f3e86384d377ca
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1bb49eda25bd0804571732a81073a448048cd43d0597b03acf1bfa1554c88be2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001680"
 ---
-# <a name="types-of-playlists"></a>Typen von Wiedergabelisten
+# <a name="types-of-playlists"></a>Arten von Wiedergabelisten
 
-Windows Media Metadatei-Wiedergabelisten, die in diesem Dokument einfach als Wiedergabelisten bezeichnet werden, haben die Erweiterungen ". wax", ". wvx" oder ". asx". Wiedergabelisten mit diesen Erweiterungen werden verwendet, um auf Windows Media-Dateien mit der Dateinamenerweiterung ". wma", ". wmv" und ". ASF" zuzugreifen.
+Windows Medienmetadatei-Wiedergabelisten, die in diesem Dokument einfach als Wiedergabelisten bezeichnet werden, verfügen über erweiterungen .extensions, .wvx oder .asx. Wiedergabelisten mit diesen Erweiterungen werden für den Zugriff auf Windows Mediendateien mit WMA-, WMV- bzw. ASF-Dateinamenerweiterungen verwendet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Metadatenerweiterungs-Richtlinien**](metafile-extension-guidelines.md)
+[**Richtlinien für Metafileerweiterungen**](metafile-extension-guidelines.md)
 </dt> <dt>
 
 [**Verwenden von Metafile-Wiedergabelisten**](using-metafile-playlists.md)
 </dt> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Leitfaden für Windows Media-Metadateien**](windows-media-metafile-guide.md)
+[**Windows Media Metafile Guide**](windows-media-metafile-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

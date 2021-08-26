@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlogfilebeschädigen TException-Konstruktor'
-title: Esentlogfilebeschädigen TException-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLogFileCorruptException-Konstruktor'
+title: EsentLogFileCorruptException-Konstruktor
 TOCTitle: 'EsentLogFileCorruptException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLogFileCorruptException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlogfilecorruptexception.esentlogfilecorruptexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cc074602792f6d88dcc3c465174000595273232b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8b11e31a0b5fbcad79511457f6debc64859a890f71563d297763d43d8c80099
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019591"
 ---
-# <a name="esentlogfilecorruptexception-constructor"></a>Esentlogfilebeschädigen TException-Konstruktor
+# <a name="esentlogfilecorruptexception-constructor"></a>EsentLogFileCorruptException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlogfilebeschädigte TException-Klasse.
+Initialisiert eine neue Instanz der EsentLogFileCorruptException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLogFileCorruptException()
 public EsentLogFileCorruptException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlogfilebeschädigen TException-Klasse](./esentlogfilecorruptexception-class.md)
+[EsentLogFileCorruptException-Klasse](./esentlogfilecorruptexception-class.md)
 
-[Esentlogfilebeschädigte TException-Elemente](./esentlogfilecorruptexception-members.md)
+[EsentLogFileCorruptException-Member](./esentlogfilecorruptexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,9 +1,9 @@
 ---
-title: TTM_POPUP Meldung (kommstrg. h)
-description: Bewirkt, dass die QuickInfo an den Koordinaten der letzten Maus Meldung angezeigt wird.
+title: TTM_POPUP (Commctrl.h)
+description: Bewirkt, dass die QuickInfo an den Koordinaten der letzten Mausnachricht angezeigt wird.
 ms.assetid: 6b7b430b-4f59-49f9-bd3f-70099485fac8
 keywords:
-- Windows-Steuerelemente für TTM_POPUP Meldung
+- TTM_POPUP meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dabcbf710b57cdb110eb349a928bdceaf389dbb1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8ba2668af3ba53618147b1afccfdbb71347e3074ca113b68fde00bb61c32d3d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967830"
 ---
-# <a name="ttm_popup-message"></a>TTM- \_ Popup Meldung
+# <a name="ttm_popup-message"></a>\_TTM-POPUPmeldung
 
-Bewirkt, dass die QuickInfo an den Koordinaten der letzten Maus Meldung angezeigt wird.
+Bewirkt, dass die QuickInfo an den Koordinaten der letzten Mausnachricht angezeigt wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,10 +39,10 @@ Bewirkt, dass die QuickInfo an den Koordinaten der letzten Maus Meldung angezeig
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -52,9 +52,9 @@ Der Rückgabewert wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

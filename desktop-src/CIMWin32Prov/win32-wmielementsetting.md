@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse für die Win32 wmielementsetting-Zuordnung verknüpft einen Dienst, der im Windows-System ausgeführt wird, und die verwendeten WMI-Einstellungen.
+description: Die WMI-Zuordnungsklasse "Win32 WMIElementSetting" bezieht sich auf einen Dienst, der im Windows system ausgeführt wird, und auf die \_ WMI-Einstellungen, die verwendet werden können.
 ms.assetid: 00e9f882-5f54-4042-a916-2f90ed9a37c0
 ms.tgt_platform: multiple
 title: Win32_WMIElementSetting-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - Wbemcore.dll
-ms.openlocfilehash: 41f79614fd0931759d502bbd61c7f4143e9e7dc9
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f46a9d5fd7c3f0baace1f763b9912f49fbcf318ffd07fa7cbf3138d04d8621f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922540"
 ---
-# <a name="win32_wmielementsetting-class"></a>Win32 \_ wmielementsetting-Klasse
+# <a name="win32_wmielementsetting-class"></a>Win32 \_ WMIElementSetting-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für die **Win32 \_ wmielementsetting** -Zuordnung verknüpft einen Dienst, der im Windows-System ausgeführt wird, und die verwendeten WMI-Einstellungen.
+Die **WMI-Zuordnungsklasse \_ Win32 WMIElementSetting** bezieht sich auf einen Dienst, der im Windows-System ausgeführt wird, und auf die WMI-Einstellungen, die verwendet werden können. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_WMIElementSetting : CIM_ElementSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ wmielementsetting** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ WMIElementSetting-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ wmielementsetting** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ WMIElementSetting-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ Dienst**
+Datentyp: **Win32-Dienst \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32- \_ Dienst")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Service")
 </dt> </dl>
 
-Verweis auf die Instanz, die den Windows-Dienst mithilfe von WMI-Eigenschaften darstellt oder diese darstellt.
+Verweis auf die -Instanz, die den Windows mithilfe von WMI-Eigenschaften darstellt oder darauf hinweist.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ wmisetting**
+Datentyp: **Win32 \_ WMISetting**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**override**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ wmisetting")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**Override**](../wmisdk/standard-qualifiers.md) ("Setting"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ WMISetting")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die für den Windows-Dienst verfügbaren WMI-Einstellungen darstellt.
+Verweis auf die -Instanz, die die WMI-Einstellungen darstellt, die für den Windows sind.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ wmielementsetting** -Klasse wird von [**CIM \_ Element Setting**](cim-elementsetting.md)abgeleitet.
+Die **Win32 \_ WMIElementSetting-Klasse** wird von [**CIM \_ ElementSetting abgeleitet.**](cim-elementsetting.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die **Win32- \_ wmielementsetting** -Klasse wird von [**CIM \_ Element Setting**
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemcore.dll</dt> </dl> |
 
 
@@ -106,10 +106,10 @@ Die **Win32- \_ wmielementsetting** -Klasse wird von [**CIM \_ Element Setting**
 
 <dl> <dt>
 
-[**CIM- \_ Element Setting**](cim-elementsetting.md)
+[**\_CIM-ElementSetting**](cim-elementsetting.md)
 </dt> <dt>
 
-[WMI-Dienst Verwaltungs Klassen](./wmi-service-management-classes.md)
+[WMI-Dienstverwaltungsklassen](./wmi-service-management-classes.md)
 </dt> </dl>
 
  

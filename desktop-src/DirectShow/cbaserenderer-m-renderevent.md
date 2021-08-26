@@ -1,7 +1,7 @@
 ---
-description: Das Ereignis, mit dem das Rendering geplant wird.
+description: Ereignis, das zum Planen des Renderings verwendet wird.
 ms.assetid: c1fe0d3b-b9b1-48d1-bc54-6d2e9f03e4cd
-title: 'Cbaserenderer:: m_RenderEvent Member (renbase. h)'
+title: CBaseRenderer::m_RenderEvent-Mitglied (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 55e341bde6653c05277f01ae6c7df81a62282132
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: be688003009d99919495702883cbe7d87501d08fc28b4b60fbf5f502ba00083b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043750"
 ---
-# <a name="cbaserendererm_renderevent-member"></a>Cbaserenderer:: m \_ renderevent-Member
+# <a name="cbaserendererm_renderevent-member"></a>CBaseRenderer::m \_ RenderEvent-Member
 
-Das Ereignis, mit dem das Rendering geplant wird.
+Ereignis, das zum Planen des Renderings verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CAMEvent m_RenderEvent;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CAMEvent m_RenderEvent;
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

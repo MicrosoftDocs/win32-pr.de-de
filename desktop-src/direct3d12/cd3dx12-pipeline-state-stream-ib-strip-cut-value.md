@@ -1,6 +1,6 @@
 ---
-title: CD3DX12_PIPELINE_STATE_STREAM_IB_STRIP_CUT_VALUE-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die verwendet wird, um den Wert des Index Puffer Streifens als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+title: CD3DX12_PIPELINE_STATE_STREAM_IB_STRIP_CUT_VALUE-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, die verwendet wird, um den Indexpufferstrip-Schnittwert als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 ms.assetid: AF8F0919-4601-4A95-832A-5E1DA0304939
 keywords:
 - CD3DX12_PIPELINE_STATE_STREAM_IB_STRIP_CUT_VALUE Struktur
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86c14924828c924b3bbbca3bb1a5f822437ec4c9
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1e204b4f89cced7cf0bd5cdcb21702c37c241a81abfbc12d8644eafdb3c7c7ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988410"
 ---
-# <a name="cd3dx12_pipeline_state_stream_ib_strip_cut_value-structure"></a>CD3DX12 \_ Pipeline \_ State Stream-Datenstrom-Wert der IB-Bereichs \_ \_ \_ \_ Kürzung \_
+# <a name="cd3dx12_pipeline_state_stream_ib_strip_cut_value-structure"></a>CD3DX12 \_ PIPELINE STATE STREAM IB STRIP CUT \_ \_ \_ \_ \_ \_ VALUE-Struktur
 
-Eine hilfsstruktur, die verwendet wird, um den Wert des Index Puffer Streifens als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+Eine Hilfsstruktur, die verwendet wird, um den Indexpufferstrip-Schnittwert als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ struct CD3DX12_PIPELINE_STATE_STREAM_IB_STRIP_CUT_VALUE {
 
 <dl> <dt>
 
-**CD3DX12- \_ Pipeline- \_ \_ \_ \_ \_ Ausschneide \_ Wert des Pipeline Zustandsdaten Stroms**
+**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ IB \_ STRIP \_ CUT \_ VALUE**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines Datenstrom-Enumerationswerts für den CD3DX12 \_ Pipeline- \_ Statusdaten \_ Strom \_ \_ \_ \_ .
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ PIPELINE STATE STREAM IB STRIP CUT \_ \_ \_ \_ \_ \_ VALUE.
 
 </dd> <dt>
 
-**CD3DX12-Daten \_ Strom des Pipeline- \_ \_ \_ \_ \_ \_ statusausschnitts (D3D12- \_ Index- \_ Puffer Strip- \_ \_ Ausschneide \_ Wert Konstanten Konstante &i)**
+**CD3DX12 \_ PIPELINE STATE STREAM IB STRIP CUT VALUE \_ \_ \_ \_ \_ \_ (D3D12 \_ INDEX BUFFER STRIP CUT VALUE \_ \_ \_ \_ const &i)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Pipeline- \_ statusausschneide Werts (Pipeline State) \_ \_ \_ \_ \_ , initialisiert mit einem untergeordneten Typ des **D3D12 \_ Pipeline \_ State \_ unter Objekt- \_ \_ \_ \_ \_ Werts** und aus den aus *i* kopierten Daten, einer [**D3D12 \_ Index \_ Puffer \_ Strip \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_index_buffer_strip_cut_value) -Struktur
+Erstellt eine neue Instanz einer CD3DX12 \_ PIPELINE STATE STREAM IB STRIP CUT \_ \_ \_ \_ \_ \_ VALUE, initialisiert mit einem Unterobjekttyp von **D3D12 \_ PIPELINE STATE \_ \_ SUBOBJECT TYPE IB STRIP \_ \_ CUT \_ \_ \_ VALUE** und Unterobjektdaten, die aus *i*, einer [**D3D12 \_ INDEX BUFFER STRIP CUT \_ \_ \_ \_ VALUE-Struktur,**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_index_buffer_strip_cut_value) kopiert wurden.
 
 </dd> <dt>
 
-**Operator = (D3D12 \_ Index- \_ Puffer \_ Strip- \_ Ausschneide \_ Wert konstant& i)**
+**operator=(D3D12 \_ INDEX BUFFER STRIP CUT VALUE \_ \_ \_ \_ const& i)**
 </dt> <dd>
 
-Kopier Zuweisungs Operator.
+Kopierzuweisungsoperator.
 
 </dd> <dt>
 
-**Operator D3D12 der \_ Index \_ Puffer Strip- \_ \_ Ausschneide \_ Wert () konstant.**
+**Operator D3D12 \_ INDEX BUFFER STRIP CUT \_ \_ \_ \_ VALUE() const**
 </dt> <dd>
 
-Implizite Konvertierung in eine [**D3D12 \_ Index- \_ Puffer \_ Strip- \_ Ausschneide \_ Wert**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_index_buffer_strip_cut_value) Struktur.
+Implizite Konvertierung in eine [**D3D12 \_ INDEX BUFFER STRIP CUT \_ \_ \_ \_ VALUE-Struktur.**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_index_buffer_strip_cut_value)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-\_Der CD3DX12 \_ - \_ Pipeline \_ -Status-Stream \_ \_ \_ -Wert des Pipeline-Ausschnitts ist eine typedef-Spezialisierung der untergeordneten Pipeline für den [**CD3DX12 \_ Pipeline \_ State \_ Stream \_**](cd3dx12-pipeline-state-stream-subobject.md) und ist wie folgt definiert:
+CD3DX12 \_ PIPELINE STATE STREAM IB STRIP CUT VALUE ist eine \_ \_ \_ \_ \_ \_ Typdefinitionsspezialisierung der [**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ SUBOBJECT-Vorlage**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
 
 
 ```C++
@@ -91,7 +91,7 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<D3D12_INDEX_BUFFER_STRIP_CUT_VAL
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -102,10 +102,10 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<D3D12_INDEX_BUFFER_STRIP_CUT_VAL
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)
 </dt> <dt>
 
-[**CD3DX12 \_ Pipeline State-Datenstrom-unter \_ \_ \_ Objekt**](cd3dx12-pipeline-state-stream-subobject.md)
+[**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ SUBOBJECT**](cd3dx12-pipeline-state-stream-subobject.md)
 </dt> <dt>
 
-[**D3D12 \_ Pipeline \_ Status-unter Objekt- \_ \_ Typ**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
+[**D3D12 \_ PIPELINE \_ STATE \_ SUBOBJECT \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
 </dt> </dl>
 
  

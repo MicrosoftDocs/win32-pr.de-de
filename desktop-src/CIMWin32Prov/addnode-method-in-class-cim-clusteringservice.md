@@ -14,23 +14,23 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1769ebb876fd2ae99c800a61b80d339a850ab232
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e81c9be0723befc105ce9976ea8f2d1bddb859d7e4a83fd5fde3a1dfe93bfe35
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077680"
 ---
-# <a name="addnode-method-of-the-cim_clusteringservice-class"></a>AddNode-Methode der CIM \_ clusteringservice-Klasse
+# <a name="addnode-method-of-the-cim_clusteringservice-class"></a>AddNode-Methode der CIM \_ ClusteringService-Klasse
 
-Mit der **AddNode** -Methode wird ein neues Computersystem in einen Cluster integriert. Der hinzu zufügende Knoten wird als Parameter für die-Methode angegeben.
+Die **AddNode-Methode** bringt ein neues Computersystem in einen Cluster. Der hinzuzufügende Knoten wird der -Methode als Parameter angegeben.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ uint32 AddNode(
 
 <dl> <dt>
 
-*CS* \[ in\]
+*CS* \[ In\]
 </dt> <dd>
 
 Verweis auf das Computersystem, das dem Cluster hinzugefügt werden soll.
@@ -56,15 +56,15 @@ Verweis auf das Computersystem, das dem Cluster hinzugefügt werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn der Vorgang nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.
+Gibt bei Erfolg den Wert 0 (null) zurück, 1 (eins), wenn der Vorgang nicht unterstützt wird, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zurzeit nicht von WMI implementiert. Um diese Methode verwenden zu können, müssen Sie Sie in Ihrem eigenen Anbieter implementieren.
+Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -72,8 +72,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -82,10 +82,10 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ clusteringservice**](addnode-method-in-class-cim-clusteringservice.md)
+[**CIM \_ ClusteringService**](addnode-method-in-class-cim-clusteringservice.md)
 </dt> <dt>
 
-[**CIM- \_ clusteringservice**](cim-clusteringservice.md)
+[**CIM \_ ClusteringService**](cim-clusteringservice.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSphereBoundProbe-Funktion (D3DX10math.h): Bestimmt, ob ein Strahl das Volumen des umgebenden Felds einer Kugel überschneidet.'
+description: 'D3DXSphereBoundProbe-Funktion (D3DX10math.h): Bestimmt, ob ein Strahl das Volumen des Begrenzungsfelds einer Kugel schneidet.'
 ms.assetid: 5984a1a6-d36c-4a05-8c74-0ece7443356c
 title: D3DXSphereBoundProbe-Funktion (D3DX10math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: fb5a329e39631dff626ff1c7945ad4b05f9dcd58
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 39e2b3871365cddd70b942f6d9d9f0fc9af85eca23944f388e3afd6ad9b4fc63
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989960"
 ---
 # <a name="d3dxsphereboundprobe-function-d3dx10mathh"></a>D3DXSphereBoundProbe-Funktion (D3DX10math.h)
 
-Bestimmt, ob ein Strahl das Volumen des umgebenden Felds einer Kugel überschneidet.
+Bestimmt, ob ein Strahl das Volumen des Begrenzungsfelds einer Kugel schneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ BOOL D3DXSphereBoundProbe(
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Mittelpunktkoordinate der Kugel angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Mittelpunktkoordinate der Kugel.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Radius der Kugel.
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Ursprungskoordinate des Strahls angibt.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Ursprungskoordinate des Strahls.
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Urspru
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Richtung des Strahls angibt. Dieser Vektor sollte nicht (0,0,0) sein, muss aber nicht normalisiert werden.
+Zeiger auf eine [**D3DXVECTOR3-Struktur**](d3d10-d3dxvector3.md) unter Angabe der Richtung des Strahls. Dieser Vektor sollte nicht (0,0,0) sein, muss aber nicht normalisiert werden.
 
 </dd> </dl>
 
@@ -83,9 +83,9 @@ Zeiger auf eine [**D3DXVECTOR3-Struktur,**](d3d10-d3dxvector3.md) die die Richtu
 
 Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-Gibt **TRUE** zurück, wenn der Strahl das Volumen des umgebenden Felds der Kugel überschneidet. Andernfalls gibt **FALSE** zurück.
+Gibt **TRUE zurück,** wenn der Strahl das Volumen des Begrenzungsfelds der Kugel schneidet. Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **D3DXSphereBoundProbe** bestimmt, ob der Strahl das Volumen des Begrenzungsfelds der Kugel überschneidet, nicht nur die Oberfläche der Kugel.
 
@@ -93,7 +93,7 @@ Gibt **TRUE** zurück, wenn der Strahl das Volumen des umgebenden Felds der Kuge
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

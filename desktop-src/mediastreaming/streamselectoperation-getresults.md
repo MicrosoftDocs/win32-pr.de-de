@@ -1,11 +1,11 @@
 ---
-title: Streamselectoperation. GetResults-Methode
-description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von selectbeststreamasync gestartet wurde.
+title: StreamSelectOperation.GetResults-Methode
+description: Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von SelectBestStreamAsync gestartet wurde.
 ms.assetid: 2D9887E7-17C8-4161-984F-FA44591D2052
 keywords:
-- GetResults-Methode Medien Streaming-API
-- GetResults-Methode Medien Streaming-API, streamselectoperation-Schnittstelle
-- Streamselectoperation-Schnittstelle Medien Streaming-API, GetResults-Methode
+- 'GetResults-Methode: Media Streaming-API'
+- 'GetResults-Methode: Media Streaming-API, StreamSelectOperation-Schnittstelle'
+- StreamSelectOperation-Schnittstelle Medienstreaming-API, GetResults-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c52479949413d32ca54654f355a06a2dee70866e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 022e75a57b9b38cff2a1e477d78a164767ab8cbcd4e1d3a159e8f61c8972fb95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106342124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952480"
 ---
-# <a name="streamselectoperationgetresults-method"></a>Streamselectoperation. GetResults-Methode
+# <a name="streamselectoperationgetresults-method"></a>StreamSelectOperation.GetResults-Methode
 
-Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**selectbeststreamasync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))gestartet wurde.
+Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**SelectBestStreamAsync gestartet wurde.**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,12 +41,12 @@ HRESULT GetResults(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*value* \[ out, retval\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,7 +62,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Streamselectoperation**](streamselectoperation.md)
+[**StreamSelectOperation**](streamselectoperation.md)
 </dt> </dl>
 
  

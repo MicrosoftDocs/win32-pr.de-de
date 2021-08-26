@@ -1,11 +1,11 @@
 ---
-title: DNS-notify-seconreplikat-Attribut
-description: Das DNS-notify-seconreplikat-Attribut wird derzeit nicht verwendet.
+title: Dns-Notify-Secondaries-Attribut
+description: Das Attribut Dns-Notify-Secondaries wird derzeit nicht verwendet.
 ms.assetid: 4230cc77-6f58-4cf8-ad3e-7a3234c99540
 ms.tgt_platform: multiple
 keywords:
-- DNS-notify-Attribut für sekundäre Replikate AD-Schema
-- dnsnotifysecon-Attribut AD-Schema
+- AD-Schema des Dns-Notify-Secondaries-Attributs
+- DNSNotifySecondaries-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9106ce3a83cee835f2c8ef4cd837728e34975f5
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e64a82ac12932b6b79914970ba1e1a847e4fac4c90bfd07cbb8be596c88c5a8e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077919"
 ---
-# <a name="dns-notify-secondaries-attribute"></a>DNS-notify-seconreplikat-Attribut
+# <a name="dns-notify-secondaries-attribute"></a>Dns-Notify-Secondaries-Attribut
 
-Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
+Das **Attribut Dns-Notify-Secondaries** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DNS-notify-sekundäre Replikate               |
-| LDAP-Display-Name | dnsnotifysecon-Replikate                 |
+| CN                | Dns-Notify-Secondaries               |
+| Ldap-Anzeigename | dnsNotifySecondaries                 |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.381               |
 | System-ID-GUID    | e0fa1e68-9b45-11d0-afdd-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -120,11 +120,11 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -141,11 +141,11 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -162,11 +162,11 @@ Das **DNS-notify-seconreplikat** -Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Is-Single-Valued       | Falsch                                    |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |

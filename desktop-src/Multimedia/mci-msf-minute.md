@@ -1,9 +1,9 @@
 ---
-title: MCI_MSF_MINUTE-Makro (mciapi. h)
-description: Das MCI- \_ MSF \_ -Minute-Makro ruft die Minuten Komponente von einem Parameter ab, der die Informationen zu den Informationen über die gepackten Minuten/Sekunden/Frames (MSF
+title: MCI_MSF_MINUTE -Makro (Mciapi.h)
+description: Das MCI MSF MINUTE-Makro ruft die Minutenkomponente aus einem Parameter ab, der gepackte \_ \_ MSF-Informationen (Minutes/Seconds/Frames) enthält.
 ms.assetid: 60ac6662-d828-4635-a019-2603199523c5
 keywords:
-- MCI_MSF_MINUTE Makro Windows Multimedia
+- MCI_MSF_MINUTE-Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f65f978c13fc1b3fbf86266c35786b21612c4e7c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8423e63c7e155c072b496a9bf13c332619f96e8c6780cac6fae266f6a924c9f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344105"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039140"
 ---
-# <a name="mci_msf_minute-macro"></a>MCI- \_ MSF- \_ Minute-Makro
+# <a name="mci_msf_minute-macro"></a>\_MCI-MSF \_ MINUTE-Makro
 
-Das **MCI- \_ MSF- \_ Minute** -Makro ruft die Minuten Komponente von einem Parameter ab, der die Informationen zu den Informationen über die gepackten Minuten/Sekunden/Frames (MSF
+Das **MCI \_ MSF \_ MINUTE-Makro** ruft die Minutenkomponente aus einem Parameter ab, der gepackte MSF-Informationen (Minutes/Seconds/Frames) enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ BYTE MCI_MSF_MINUTE(
 
 <dl> <dt>
 
-*dwmsf* 
+*dwMSF* 
 </dt> <dd>
 
-Uhrzeit im MSF-Format.
+Zeit im MSF-Format.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Minuten Komponente der angegebenen MSF-Informationen zurück.
+Gibt die Minutenkomponente der angegebenen MSF-Informationen zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeit im MSF-Format wird als **DWORD** -Wert mit dem niedrigsten signifikanten Byte, das Minuten enthält, dem nächst bedeutsamen Byte, das Sekunden enthält, und dem nächstniedrigsten Byte mit Frames ausgedrückt. Das signifikanteste Byte wird nicht verwendet.
+Die Zeit im MSF-Format wird als **DWORD-Wert** mit dem am wenigsten signifikanten Byte mit Minuten, dem nächsten am wenigsten signifikanten Byte mit Sekunden und dem nächsten am wenigsten signifikanten Byte ausgedrückt, das Frames enthält. Das wichtigste Byte wird nicht verwendet.
 
-Das **MCI \_ MSF \_ Minute** -Makro wird wie folgt definiert:
+Das **MCI \_ MSF \_ MINUTE-Makro** ist wie folgt definiert:
 
 
 ```C++
@@ -72,7 +72,7 @@ Das **MCI \_ MSF \_ Minute** -Makro wird wie folgt definiert:
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Das **MCI \_ MSF \_ Minute** -Makro wird wie folgt definiert:
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Makros](mci-macros.md)

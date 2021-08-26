@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -memorywithmedia-Klasse ordnet physischen Speicher einem physischen Medium und der zugehörigen Cartridge zu. Der Arbeitsspeicher bietet Medien Identifikation und speichert benutzerspezifische Daten.
+description: Die CIM \_ MemoryWithMedia-Klasse ordnet physischen Speicher einem physischen Medium und dessen Bänder zu. Der Arbeitsspeicher ermöglicht die Medienidentifikation und speichert benutzerspezifische Daten.
 ms.assetid: 99806d2d-6575-431d-9149-dc8ea767146c
 ms.tgt_platform: multiple
 title: CIM_MemoryWithMedia-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3b990f8ba842f313449b6f24f4e2ce59787f7841
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: eff54c8ac48c9e6e998e720815a9a3529f5484f8a089e8ea510559d2e7cfa488
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921410"
 ---
-# <a name="cim_memorywithmedia-class"></a>CIM \_ memorywithmedia-Klasse
+# <a name="cim_memorywithmedia-class"></a>CIM \_ MemoryWithMedia-Klasse
 
-Die **CIM- \_ memorywithmedia** -Klasse ordnet physischen Speicher einem physischen Medium und der zugehörigen Cartridge zu. Der Arbeitsspeicher bietet Medien Identifikation und speichert benutzerspezifische Daten.
+Die **CIM \_ MemoryWithMedia-Klasse** ordnet physischen Speicher einem physischen Medium und dessen Bänder zu. Der Arbeitsspeicher ermöglicht die Medienidentifikation und speichert benutzerspezifische Daten.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,17 +47,17 @@ class CIM_MemoryWithMedia : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ memorywithmedia** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MemoryWithMedia-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ memorywithmedia** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MemoryWithMedia-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ PhysicalMemory**
@@ -66,36 +66,36 @@ Datentyp: **CIM \_ PhysicalMemory**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Ein [**CIM- \_ PhysicalMemory**](cim-physicalmemory.md) , der den physischen Medien zugeordneten Arbeitsspeicher beschreibt.
+Ein [**\_ CIM PhysicalMemory,**](cim-physicalmemory.md) das den Speicher beschreibt, der physischen Medien zugeordnet ist.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ physicalmedia**
+Datentyp: **CIM \_ PhysicalMedia**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ physicalmedia**](cim-physicalmedia.md) , das die physischen Medien beschreibt.
+Ein [**\_ CIM PhysicalMedia,**](cim-physicalmedia.md) das die physischen Medien beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**CIM \_ Memorywithmedia** wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)geerbt.
+**CIM \_ MemoryWithMedia** wird von [**\_ CIM-Abhängigkeit**](cim-dependency.md)geerbt.
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

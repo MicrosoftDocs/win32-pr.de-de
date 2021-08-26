@@ -1,7 +1,7 @@
 ---
-description: Mit der DrawImage-Methode wird ein Videorahmen im Videofenster gezeichnet.
+description: Die DrawImage-Methode zeichnet einen Videorahmen im Videofenster.
 ms.assetid: 22e7f59c-90f7-4e0c-8993-eea1eaf58fba
-title: Cdrawimage. DrawImage-Methode (winutil. h)
+title: CDrawImage.DrawImage-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d219eb82ab2cf1929605eee4045c2f278022ad98
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2791d20b906f2a2adce31ce99b9e7498854c8fca00ade4507db0207e04b2cde
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043605"
 ---
-# <a name="cdrawimagedrawimage-method"></a>Cdrawimage. DrawImage-Methode
+# <a name="cdrawimagedrawimage-method"></a>CDrawImage.DrawImage-Methode
 
-Die- `DrawImage` Methode zeichnet einen Videoframe im Videofenster.
+Die `DrawImage` -Methode zeichnet einen Videorahmen im Videofenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,22 +42,22 @@ BOOL DrawImage(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Ein Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels, das das Bild enthält.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels, das das Bild enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode delegiert an [**cdrawimage:: fastrinender**](cdrawimage-fastrender.md) oder [**cdrawimage:: slowrendering**](cdrawimage-slowrender.md), je nachdem, ob der Filter die Zuweisung besitzt, die das Beispiel bereitgestellt hat. Wenn der Filter die Zuweisung besitzt, ist das Beispiel garantiert ein [**cimagesample**](cimagesample.md) -Objekt. In diesem Fall verwendet das Beispiel den gemeinsam genutzten Speicher, der von GDI zugeordnet wird, und das Image kann entweder mithilfe von **BitBLT** oder **StretchBlt** gezeichnet werden. Andernfalls müssen die Bilder mithilfe der langsameren Funktionen **SetDIBitsToDevice** oder **StretchDIBits** gezeichnet werden.
+Diese Methode delegiert an [**CDrawImage::FastRender**](cdrawimage-fastrender.md) oder [**CDrawImage::SlowRender,**](cdrawimage-slowrender.md)je nachdem, ob der Filter die Zuweisung besitzt, die das Beispiel bereitgestellt hat. Wenn der Filter die Zuweisung besitzt, ist das Beispiel garantiert ein [**CImageSample-Objekt.**](cimagesample.md) In diesem Fall verwendet das Beispiel freigegebenen Arbeitsspeicher, der von GDI belegt wird, und das Bild kann entweder mit **BitBlt** oder **StretchBlt** gezeichnet werden. Andernfalls müssen die Bilder mithilfe der **langsameren Funktionen SetDIBitsToDevice** oder **StretchDIBits** gezeichnet werden.
 
-In Debugbuilds ruft diese Methode **displaysampletimes** auf, um die Zeitstempel des Beispiels über das Video Bild zu zeichnen.
+In Debugbuilds ruft diese Methode **DisplaySampleTimes** auf, um die Zeitstempel des Beispiels über das Videobild zu zeichnen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ In Debugbuilds ruft diese Methode **displaysampletimes** auf, um die Zeitstempel
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,10 +74,10 @@ In Debugbuilds ruft diese Methode **displaysampletimes** auf, um die Zeitstempel
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: usingimagezuordcator**](cdrawimage-usingimageallocator.md)
+[**CDrawImage::UsingImageAllocator**](cdrawimage-usingimageallocator.md)
 </dt> </dl>
 
  

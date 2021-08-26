@@ -1,12 +1,12 @@
 ---
 title: GetStringProperty-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
-description: Ruft eine Zeichen folgen Eigenschaft aus einer Sammlung virtueller Desktops ab.
+description: Ruft eine Zeichenfolgeneigenschaft aus einer Sammlung virtueller Desktops ab.
 ms.assetid: 4a122fc5-1635-4d74-a90d-2347c0714fc7
 ms.tgt_platform: multiple
 keywords:
 - GetStringProperty-Methode Remotedesktopdienste
-- GetStringProperty-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, GetStringProperty-Methode
+- GetStringProperty-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste , GetStringProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d242d973d7ec8d320ed589933567b337a035f0e5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4a0fae8a36110ffe2caccb9937ce67cf1b9d1515473eb6d7e0a2efec64dccfc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033730"
 ---
-# <a name="getstringproperty-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>GetStringProperty-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="getstringproperty-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>GetStringProperty-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
-Ruft eine Zeichen folgen Eigenschaft aus einer Sammlung virtueller Desktops ab.
+Ruft eine Zeichenfolgeneigenschaft aus einer Sammlung virtueller Desktops ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 GetStringProperty(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
 Ein Schlüssel, der die abzurufende Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*Wert* \[ vorgenommen\]
+*Wert* \[ out\]
 </dt> <dd>
 
 Eine Zeichenfolge, die den abgerufenen Wert empfängt.
@@ -60,7 +60,7 @@ Eine Zeichenfolge, die den abgerufenen Wert empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,8 +70,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -80,7 +80,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

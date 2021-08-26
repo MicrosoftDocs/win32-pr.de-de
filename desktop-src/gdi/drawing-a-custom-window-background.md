@@ -1,21 +1,21 @@
 ---
-description: Sie können Ihren eigenen Fenster Hintergrund zeichnen, anstatt das System für Sie zu zeichnen.
+description: Sie können Ihren eigenen Fensterhintergrund zeichnen, anstatt das System für Sie zeichnen zu lassen.
 ms.assetid: 72a342dc-2766-4ec9-b4c6-5ac3c550ea25
-title: Zeichnen eines benutzerdefinierten Fenster Hintergrunds
+title: Zeichnen eines benutzerdefinierten Fensterhintergrunds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 437a88bec680a6f35e84f5444fc90a45f98da533
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b4248f7d7a1ae27ae09c93e95734fd72285028e1185b6d35110e5141fcbf88c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966010"
 ---
-# <a name="drawing-a-custom-window-background"></a>Zeichnen eines benutzerdefinierten Fenster Hintergrunds
+# <a name="drawing-a-custom-window-background"></a>Zeichnen eines benutzerdefinierten Fensterhintergrunds
 
-Sie können Ihren eigenen Fenster Hintergrund zeichnen, anstatt das System für Sie zu zeichnen. Die meisten Anwendungen geben ein Pinsel handle oder einen System Farbwert für den klassenhintergrund Pinsel beim Registrieren der Fenster Klasse an. Das System verwendet den Pinsel oder die Farbe zum Zeichnen des Hintergrunds. Wenn Sie den klassenhintergrund Pinsel jedoch auf **null** festlegen, sendet das System immer dann eine [**WM- \_ erasebkgnd**](../winmsg/wm-erasebkgnd.md) -Meldung an die Fenster Prozedur, wenn der Hintergrund des Fensters gezeichnet werden muss, sodass Sie einen benutzerdefinierten Hintergrund zeichnen können.
+Sie können Ihren eigenen Fensterhintergrund zeichnen, anstatt das System für Sie zeichnen zu lassen. Die meisten Anwendungen geben beim Registrieren der Fensterklasse einen Pinselhandle oder einen Systemfarbwert für den Hintergrundpinsel der Klasse an. das System verwendet den Pinsel oder die Farbe, um den Hintergrund zu zeichnen. Wenn Sie den Hintergrundpinsel der Klasse auf **NULL** festlegen, sendet das System jedoch immer dann eine [**WM \_ ERASEBKGND-Meldung**](../winmsg/wm-erasebkgnd.md) an Ihre Fensterprozedur, wenn der Fensterhintergrund gezeichnet werden muss, sodass Sie einen benutzerdefinierten Hintergrund zeichnen können.
 
-Im folgenden Beispiel zeichnet die Fenster Prozedur ein großes Prüf Board-Muster, das sauber in das Fenster passt. Die Prozedur füllt den Client Bereich mit einem weißen Pinsel und zeichnet dann 13 20-bis-20 Rechtecke mit einem grauen Pinsel. Der Anzeigegeräte Kontext, der beim Zeichnen des Hintergrunds verwendet werden soll, wird im *wParam* -Parameter für die Nachricht angegeben.
+Im folgenden Beispiel zeichnet die Fensterprozedur ein großes Checkerboardmuster, das gut in das Fenster passt. Die Prozedur füllt den Clientbereich mit einem weißen Pinsel und zeichnet dann 20 mal 20 Rechtecken mit einem grauen Pinsel. Der Anzeigegerätekontext, der beim Zeichnen des Hintergrunds verwendet werden soll, wird im *wParam-Parameter* für die Nachricht angegeben.
 
 
 ```C++
@@ -50,7 +50,7 @@ case WM_ERASEBKGND:
 
 
 
-Wenn die Anwendung ein eigenes minimiertes Fenster zeichnet, sendet das System auch die " [**WM \_ erasebkgnd**](../winmsg/wm-erasebkgnd.md) "-Meldung an die Fenster Prozedur, um den Hintergrund für das minimierte Fenster zu zeichnen. Sie können das gleiche Verfahren verwenden, das von [**WM \_ Paint**](wm-paint.md) verwendet wird, um zu bestimmen, ob das Fenster minimiert ist, und die Funktion [**isienic**](/windows/win32/api/winuser/nf-winuser-isiconic) aufzurufen und den Rückgabewert **true** zu überprüfen.
+Wenn die Anwendung ein eigenes minimiertes Fenster zeichnet, sendet das System auch die [**WM \_ ERASEBKGND-Nachricht**](../winmsg/wm-erasebkgnd.md) an die Fensterprozedur, um den Hintergrund für das minimierte Fenster zu zeichnen. Sie können die gleiche Technik verwenden, die von [**WM \_ PAINT**](wm-paint.md) verwendet wird, um zu bestimmen, ob das Fenster minimiert ist, d. h. die [**IsIconic-Funktion**](/windows/win32/api/winuser/nf-winuser-isiconic) aufzurufen und den Rückgabewert **TRUE** zu überprüfen.
 
  
 

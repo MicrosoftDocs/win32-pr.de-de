@@ -1,36 +1,36 @@
 ---
-description: In diesem Beispielprogramm wird veranschaulicht, wie frei Hand Eingaben vergrößert und angezeigt werden.
+description: Dieses Beispielprogramm veranschaulicht das Zoomen und Scrollen von Ink.
 ms.assetid: d3b5668a-29bf-4846-8ab0-1bda7b6160f9
-title: Ink Zoom-Beispiel
+title: Zoombeispiel für Ink
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f20253a3f56b2a03b5a6dad45ab9a8b72090b5ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3d786fe502e1510a44df39049e845f05694a1befae0d4a21bcfa2ba2bd2b19b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939440"
 ---
-# <a name="ink-zoom-sample"></a>Ink Zoom-Beispiel
+# <a name="ink-zoom-sample"></a>Zoombeispiel für Ink
 
-In diesem Beispielprogramm wird veranschaulicht, wie frei Hand Eingaben vergrößert und angezeigt werden. Insbesondere ermöglicht der Benutzer das Vergrößern und Verkleinern von frei Hand Eingaben in Inkrementen. Außerdem wird veranschaulicht, wie Sie mithilfe eines Zoom Rechtecks in eine bestimmte Region zoomen. Schließlich wird in diesem Beispiel veranschaulicht, wie frei Hand Eingaben mit unterschiedlichen Zoom Verhältnissen gesammelt werden und wie der Bildlauf innerhalb des gezogenen Zeichnungs Bereichs eingerichtet wird.
+Dieses Beispielprogramm veranschaulicht das Zoomen und Scrollen von Ink. Insbesondere ermöglicht es dem Benutzer, die Ink-Funktion in Schritten zu vergrößern und zu verkleinern. Außerdem wird veranschaulicht, wie sie mithilfe eines Zoomrechtecks in einen bestimmten Bereich zoomen. Schließlich wird in diesem Beispiel veranschaulicht, wie Sie Ink mit unterschiedlichen Zoomverhältnis erfassen und das Scrollen innerhalb des vergrößerten Zeichnungsbereichs einrichten.
 
-Im Beispiel werden die Ansichts-und Objekt Transformationen des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) verwendet, um Zoom und Bildlauf auszuführen. Die Ansichts Transformation gilt für die Punkte und die Stift Breite. Die Objekt Transformation gilt nur für Punkte. Der Benutzer kann steuern, welche Transformation verwendet wird, indem er im Menü Modus die Breite für das Pen-Breite-Element ändert.
+Im Beispiel werden die Ansichts- und Objekttransformationen des [Rendererobjekts](/previous-versions/ms828481(v=msdn.10)) zum Zoomen und Scrollen verwendet. Die Ansichtstransformation gilt für die Punkte und die Stiftbreite. Die Objekttransformation gilt nur für die Punkte. Der Benutzer kann steuern, welche Transformation verwendet wird, indem er das Element Skalierungsstiftbreite im Menü Modus ändert.
 
 > [!Note]  
-> Es ist problematisch, einige com-Aufrufe für bestimmte Schnittstellen Methoden auszuführen (z. b.[**inkrenderer. SetViewTransform**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-setviewtransform) und [**inkrenderer. SetObjectTransform**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-setobjecttransform)), wenn eine Nachricht gesendet wurde. Wenn Nachrichten gesendet werden, müssen Sie in die Warteschlange Nachrichten gemarshallt werden. Um dieses Szenario zu beheben, testen Sie, ob Sie eine Nachricht von Post verarbeiten, indem Sie [**insendmesssageex**](/windows/desktop/api/winuser/nf-winuser-insendmessageex) aufrufen und die Nachricht an Sie senden, wenn die Nachricht gesendet wurde.
+> Es ist problematisch, einige COM-Aufrufe für bestimmte Schnittstellenmethoden (z. B.[**InkRenderer.SetViewTransform**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-setviewtransform) und [**InkRenderer.SetObjectTransform)**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-setobjecttransform)durchzuführen, wenn eine Nachricht gesendet wurde. Wenn Nachrichten GESENDET werden, müssen sie in die POST-Nachrichtenwarteschlange ge marshallt werden. Um dieses Szenario zu behandeln, testen Sie, ob Sie eine Nachricht von POST behandeln, indem Sie [**InSendMesssageEx**](/windows/desktop/api/winuser/nf-winuser-insendmessageex) aufrufen und die Nachricht an sich selbst senden, wenn die Nachricht GESENDET wurde.
 
  
 
-In diesem Beispiel werden die folgenden Funktionen verwendet:
+In diesem Beispiel werden die folgenden Features verwendet:
 
--   Das [InkCollector](/previous-versions/ms583683(v=vs.100)) -Objekt
--   Die [SetViewTransform](/previous-versions/ms828514(v=msdn.10)) -Methode des [Renderer](/previous-versions/ms828481(v=msdn.10)) -Objekts
--   Die [SetObjectTransform](/previous-versions/ms828513(v=msdn.10)) -Methode des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) .
+-   Das [InkCollector-Objekt](/previous-versions/ms583683(v=vs.100))
+-   Die [SetViewTransform-Methode des Rendererobjekts](/previous-versions/ms828514(v=msdn.10)) [](/previous-versions/ms828481(v=msdn.10))
+-   Die [SetObjectTransform-Methode des Rendererobjekts](/previous-versions/ms828513(v=msdn.10)) [](/previous-versions/ms828481(v=msdn.10))
 
 ## <a name="initializing-the-form"></a>Initialisieren des Formulars
 
-Zunächst wird im Beispiel auf die Tablet PC-Automatisierungs Schnittstellen verwiesen, die im Windows Vista-oder Windows XP Tablet PC Edition Software Development Kit (SDK) bereitgestellt werden.
+Zunächst verweist das Beispiel auf die Benutzeroberflächen der Tablet PC-Automatisierung, die im Windows Vista oder Windows XP Tablet PC Edition Software Development Kit (SDK) bereitgestellt werden.
 
 
 ```C++
@@ -39,7 +39,7 @@ using Microsoft.Ink;
 
 
 
-Das Beispiel deklariert einen [InkCollector](/previous-versions/ms583683(v=vs.100)), `myInkCollector` und einige private Member, um die Skalierung zu unterstützen.
+Im Beispiel werden ein [InkCollector,](/previous-versions/ms583683(v=vs.100))und einige private Member deklariert, um `myInkCollector` die Skalierung zu unterstützen.
 
 
 ```C++
@@ -63,7 +63,7 @@ private const float MediumInkWidth = 100;
 
 
 
-Anschließend [wird im Beispiel](/previous-versions/ms583683(v=vs.100)) der [Lade](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) Ereignishandler des Formulars erstellt und aktiviert. Außerdem wird die [Width](/previous-versions/ms837941(v=msdn.10)) -Eigenschaft der [DefaultDrawingAttributes](/previous-versions/ms836500(v=msdn.10)) -Eigenschaft des InkCollector-Objekts festgelegt. Schließlich werden die Schiebe leisten Bereiche definiert, und die-Methode der Anwendung `UpdateZoomAndScroll` wird aufgerufen.
+Anschließend erstellt und aktiviert das Beispiel den [InkCollector](/previous-versions/ms583683(v=vs.100)) im [Load-Ereignishandler des](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) Formulars. Außerdem wird die [Width-Eigenschaft](/previous-versions/ms837941(v=msdn.10)) der [DefaultDrawingAttributes-Eigenschaft des InkCollector-Objekts](/previous-versions/ms836500(v=msdn.10)) festgelegt. Schließlich werden die Scrollleistenbereiche definiert und die `UpdateZoomAndScroll` -Methode der Anwendung aufgerufen.
 
 
 ```C++
@@ -95,16 +95,16 @@ private void InkZoom_Load(object sender, System.EventArgs e)
 
 
 
-## <a name="updating-the-zoom-and-scroll-values"></a>Aktualisieren von Zoom-und Bild Lauf Werten
+## <a name="updating-the-zoom-and-scroll-values"></a>Aktualisieren der Zoom- und Bildlaufwerte
 
-Der Zeichenbereich des frei Hand Sammlers ist von vielen Ereignissen betroffen. In der- `UpdateZoomAndScroll` Methode wird eine Transformationsmatrix verwendet, um den frei Hand Sammler innerhalb des Fensters zu skalieren und zu übersetzen.
+Der Zeichnungsbereich des Ink-Collectors wird von vielen Ereignissen beeinflusst. In der -Methode wird eine Transformationsmatrix verwendet, um den Ink-Collector innerhalb des Fensters zu skalieren `UpdateZoomAndScroll` und zu übersetzen.
 
 > [!Note]  
-> Die [SetViewTransform](/previous-versions/ms828514(v=msdn.10)) -Methode des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) wendet die Transformation auf die Striche und die Stift Breite an, während die [SetObjectTransform](/previous-versions/ms828513(v=msdn.10)) -Methode nur die Transformation auf die Striche anwendet.
+> Die [SetViewTransform-Methode](/previous-versions/ms828514(v=msdn.10)) des [Rendererobjekts](/previous-versions/ms828481(v=msdn.10)) wendet die Transformation sowohl auf die Striche als auch auf die Stiftbreite an, während die [SetObjectTransform-Methode](/previous-versions/ms828513(v=msdn.10)) die Transformation nur auf die Striche angewendet.
 
  
 
-Schließlich wird die-Methode der Anwendung `UpdateScrollBars` aufgerufen, und das Formular wird zum Aktualisieren gezwungen.
+Schließlich wird die -Methode `UpdateScrollBars` der Anwendung aufgerufen, und das Formular wird aktualisiert.
 
 
 ```C++
@@ -139,7 +139,7 @@ Refresh();
 
 ## <a name="managing-the-scroll-bars"></a>Verwalten der Scrollleisten
 
-Die-Methode richtet die Bild Lauf leisten so ein, dass Sie `UpdateScrollBars` ordnungsgemäß mit der aktuellen Fenstergröße, der Zoomeinstellung und der Scrollposition innerhalb von [InkCollector](/previous-versions/ms583683(v=vs.100))funktionieren. Diese Methode berechnet die großen Änderungen und kleinen Änderungs Werte für die vertikalen und horizontalen Scrollleisten. Außerdem wird der aktuelle Wert der Scrollleisten berechnet und ob Sie sichtbar sein sollten. Die [Pixel toinkspace](/previous-versions/ms828505(v=msdn.10)) -Methode des [rendererobjekts](/previous-versions/ms828481(v=msdn.10)) behandelt die Konvertierung von Pixeln in den Zoom-Koordinaten Bereich und die Konten für die Skalierung und den Bildlauf, die durch die Ansichts-und Objekt Transformationen angewendet werden.
+Die -Methode richtet die Scrollleisten so ein, dass sie ordnungsgemäß mit der aktuellen Fenstergröße, Zoomeinstellung und Bildlaufposition im `UpdateScrollBars` [InkCollector funktionieren.](/previous-versions/ms583683(v=vs.100)) Diese Methode berechnet die werte für große änderungen und kleine Änderungen für die vertikalen und horizontalen Scrollleisten. Außerdem wird der aktuelle Wert der Scrollleisten berechnet und ob sie sichtbar sein sollen. Die [PixelToInkSpace-Methode](/previous-versions/ms828505(v=msdn.10)) des [Rendererobjekts](/previous-versions/ms828481(v=msdn.10)) verarbeitet die Konvertierung von Pixeln in den vergrößerten Koordinatenbereich und übernimmt alle Skalierungs- und Bildlaufs, die durch die Ansichts- und Objekttransformationen angewendet werden.
 
 
 ```C++
@@ -193,13 +193,13 @@ if(vScrollBar.Visible && (vScrollBar.Value + vScrollBar.LargeChange > vScrollBar
 
 
 
-## <a name="zooming-to-a-rectangle"></a>Zoomen zu einem Rechteck
+## <a name="zooming-to-a-rectangle"></a>Zoomen auf ein Rechteck
 
-Der `pnlDrawingArea` Panel-Ereignishandler verwaltet das Zeichnen des Rechtecks in das Fenster. Wenn der Befehl Zoom to Rect im Menü Modus aktiviert ist, ruft der [MouseUp](/previous-versions/ms567618(v=vs.100)) -Ereignishandler die-Methode der Anwendung auf `ZoomToRectangle` . Die `ZoomToRectangle` -Methode berechnet die Breite und Höhe des Rechtecks, prüft auf begrenzungsbedingungen, aktualisiert die ScrollBar-Werte und den Skalierungsfaktor und ruft dann die-Methode der Anwendung `UpdateZoomAndScroll` auf, um die neuen Einstellungen anzuwenden.
+Die `pnlDrawingArea` Panelereignishandler verwalten das Zeichnen des Rechtecks in das Fenster. Wenn der Befehl Zoom To Rect im Menü Modus aktiviert ist, ruft der [MouseUp-Ereignishandler](/previous-versions/ms567618(v=vs.100)) die -Methode der Anwendung `ZoomToRectangle` auf. Die -Methode berechnet die Breite und Höhe des Rechtecks, prüft auf Begrenzungsbedingungen, aktualisiert die Werte der Scrollleiste und den Skalierungsfaktor und ruft dann die -Methode der Anwendung auf, um die neuen Einstellungen `ZoomToRectangle` `UpdateZoomAndScroll` anzuwenden.
 
 ## <a name="closing-the-form"></a>Schließen des Formulars
 
-Die [verwerfen-Methode des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector](/previous-versions/ms583683(v=vs.100)) -Objekt frei.
+Die Dispose-Methode [des Formulars](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) gibt das [InkCollector-Objekt](/previous-versions/ms583683(v=vs.100)) zurück.
 
  
 

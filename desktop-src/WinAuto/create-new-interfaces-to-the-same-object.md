@@ -4,18 +4,18 @@ description: Erstellen neuer Schnittstellen für dasselbe Objekt
 ms.assetid: 127c44b6-51a6-4fd6-9edc-9fbe0d08d458
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b641eed3918af3acbf399427ad5f7427112f399
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7aae1d6328b6d803e4d20207381fe596c5f584fee8281e1e6651ffc2325fb044
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998710"
 ---
 # <a name="create-new-interfaces-to-the-same-object"></a>Erstellen neuer Schnittstellen für dasselbe Objekt
 
-In diesem Szenario antwortet der Server auf jede [**objID- \_ Client**](object-identifiers.md) Anforderung, indem er einen neuen Schnittstellen Zeiger auf das gleiche Objekt erhält.
+In diesem Szenario antwortet der Server auf jede [**\_ OBJID-CLIENTanforderung,**](object-identifiers.md) indem er einen neuen Schnittstellenzeiger auf dasselbe Objekt abruft.
 
-Im folgenden Beispielcode ist *m \_ puiobj* ein Zeiger auf ein Objekt, das mehr als eine Component Object Model (com)-Schnittstelle unterstützt. Obwohl ein vorhandenes Objekt wieder verwendet wird, wird jedes Mal ein neuer Schnittstellen Zeiger erstellt, wenn das Objekt abgerufen wird, sodass der Verweis Zähler dekrementiert werden muss.
+Im folgenden Beispielcode ist *m \_ pUIObj* ein Zeiger auf ein Objekt, das mehr als eine com-Schnittstelle (Component Object Model) unterstützt. Obwohl ein vorhandenes Objekt wiederverwendet wird, wird jedes Mal, wenn das Objekt abgerufen wird, ein neuer Schnittstellenzeiger erstellt, sodass die Verweisanzahl dekrementiert werden muss.
 
 
 ```C++
@@ -38,9 +38,9 @@ case WM_GETOBJECT:
 
 
 
- 
+ 
 
- 
+ 
 
 
 
