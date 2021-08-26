@@ -1,7 +1,7 @@
 ---
 description: Enthält die Attributdaten für eine Datei.
 ms.assetid: f23f801c-826c-4269-bf96-0e01430484f4
-title: Attrinfo-Struktur
+title: ATTRINFO-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,14 +12,14 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 01c061330db3e97989e0700452fd4a205488a9fc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 090f2ab58d8bf1eb4e379166086d31389b533712a3df23f987bba1331f990891
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103730"
 ---
-# <a name="attrinfo-structure"></a>Attrinfo-Struktur
+# <a name="attrinfo-structure"></a>ATTRINFO-Struktur
 
 Enthält die Attributdaten für eine Datei.
 
@@ -44,10 +44,10 @@ typedef struct tagATTRINFO {
 
 <dl> <dt>
 
-**tattrierer**
+**tAttrID**
 </dt> <dd>
 
-Der Attributtyp. Siehe [Tagtypen](tag-types.md).
+Der Attributtyp. Weitere Informationen [finden Sie unter TAG-Typen.](tag-types.md)
 
 </dd> <dt>
 
@@ -60,8 +60,8 @@ Die Flags für dieses Attribut.
 
 | Wert                                                                                                                                                                                                                                           | Bedeutung                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| <span id="ATTRIBUTE_AVAILABLE"></span><span id="attribute_available"></span><dl> <dt>**Attribut \_ Verfügbare**</dt> <dt>0x00000001</dt> </dl> | Das-Attribut ist verfügbar.<br/>                             |
-| <span id="ATTRIBUTE_FAILED"></span><span id="attribute_failed"></span><dl> <dt>**Attribut \_**</dt>Fehler bei <dt>0x00000002</dt> . </dl>          | Der-Rückruf ist fehlgeschlagen, da das-Attribut nicht verfügbar ist.<br/> |
+| <span id="ATTRIBUTE_AVAILABLE"></span><span id="attribute_available"></span><dl> <dt>**ATTRIBUTE \_ VERFÜGBARE**</dt> <dt>0X00000001</dt> </dl> | Das -Attribut ist verfügbar.<br/>                             |
+| <span id="ATTRIBUTE_FAILED"></span><span id="attribute_failed"></span><dl> <dt>**ATTRIBUTE \_ FEHLER**</dt> <dt>0x00000002</dt> </dl>          | Fehler beim Aufruf, weil das Attribut nicht verfügbar ist.<br/> |
 
 
 
@@ -69,24 +69,24 @@ Die Flags für dieses Attribut.
 
 </dd> <dt>
 
-**ullattr**
+**ullAttr**
 </dt> <dd>
 
-Ein **QWORD** -Wert (wenn der Tagtyp **\_ \_ QWORD** ist).
+Ein **QWORD-Wert** (wenn der Tagtyp **TAG TYPE \_ \_ QWORD ist).**
 
 </dd> <dt>
 
-**dwattr**
+**dwAttr**
 </dt> <dd>
 
-Ein **DWORD** -Wert (wenn der Tagtyp **\_ \_ DWORD** ist).
+Ein **DWORD-Wert** (wenn der Tagtyp **TAG TYPE \_ \_ DWORD ist).**
 
 </dd> <dt>
 
-**lpattr**
+**lpAttr**
 </dt> <dd>
 
-Ein Zeiger auf eine Zeichenfolge (wenn der Tagtyp **" \_ TagType \_**" ist).
+Ein Zeiger auf eine Zeichenfolge (wenn der Tagtyp **TAG \_ TYPE \_ STRINGREF ist).**
 
 </dd> </dl>
 
@@ -96,8 +96,8 @@ Ein Zeiger auf eine Zeichenfolge (wenn der Tagtyp **" \_ TagType \_**" ist).
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -105,13 +105,13 @@ Ein Zeiger auf eine Zeichenfolge (wenn der Tagtyp **" \_ TagType \_**" ist).
 
 <dl> <dt>
 
-[**Sdbformatattribute**](sdbformatattribute.md)
+[**SdbFormatAttribute**](sdbformatattribute.md)
 </dt> <dt>
 
-[**Sdbfrefileattribute**](sdbfreefileattributes.md)
+[**SdbFreeFileAttributes**](sdbfreefileattributes.md)
 </dt> <dt>
 
-[**Sdbgetfileattribute**](sdbgetfileattributes.md)
+[**SdbGetFileAttributes**](sdbgetfileattributes.md)
 </dt> </dl>
 
  

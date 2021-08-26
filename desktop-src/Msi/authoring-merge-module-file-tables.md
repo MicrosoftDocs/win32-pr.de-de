@@ -1,36 +1,36 @@
 ---
-description: Eine Dateitabelle ist in jedem Mergemodul erforderlich und sollte über einen Datensatz für jede Datei verfügen, die vom Mergemodul an das Ziel Installationspaket übermittelt wird.
+description: Eine Dateitabelle ist in jedem Mergemodul erforderlich und sollte einen Datensatz für jede Datei enthalten, die vom Mergemodul an das Zielinstallationspaket übermittelt wird.
 ms.assetid: 436933c7-6e5d-4b4e-9147-c60a26871dbe
-title: Erstellen von Mergemodul-Datei Tabellen
+title: Erstellen von Mergemodul-Dateitabellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e2687ed69c1a0362f96db896a5fdf4237ac4681
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 715fe570a96015f62e45b0c2924b2a83be8eefc067e5d054decd59110b7797c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042154"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045470"
 ---
-# <a name="authoring-merge-module-file-tables"></a>Erstellen von Mergemodul-Datei Tabellen
+# <a name="authoring-merge-module-file-tables"></a>Erstellen von Mergemodul-Dateitabellen
 
-Eine [Dateitabelle](file-table.md) ist in jedem Mergemodul erforderlich und sollte über einen Datensatz für jede Datei verfügen, die vom Mergemodul an das Ziel Installationspaket übermittelt wird. Wenn das Mergemodul in eine MSI-Datei zusammengeführt wird, wird jede Datei in der Dateitabelle des Mergemoduls in einer CAB- [*Datei*](c-gly.md) in der MSM-Datei gespeichert. Der Name der CAB-Module in einem Mergemodul lautet immer wie folgt: MergeModule.CABinet.
+Eine [Dateitabelle](file-table.md) ist in jedem Mergemodul erforderlich und sollte einen Datensatz für jede Datei enthalten, die vom Mergemodul an das Zielinstallationspaket übermittelt wird. Wenn das Mergemodul in einer .msi zusammengeführt wird, wird jede Datei in der Dateitabelle des Mergemoduls in einer [*CABINET-Datei*](c-gly.md) in der MSM-Datei gespeichert. Der Name des Schränkchens in einem Mergemodul ist immer der folgende: MergeModule.CABinet.
 
-Weitere Informationen finden Sie unter [Erstellen von MergeModule.CABinet](generating-mergemodule-cabinet-cabinet-files.md)-CAB-Dateien.
+Weitere Informationen finden Sie unter [Generating MergeModule.CABinet Cabinet Files](generating-mergemodule-cabinet-cabinet-files.md).
 
--   Da die Dateien eines Mergemoduls immer in einer CAB-Datei gespeichert werden, ist es nicht erforderlich, die Bitflags **msidbfileattributesnoncompressed** oder **msidbfileattributescompressed** in der Spalte Attribute der [Dateitabelle](file-table.md)festzulegen.
--   Die Namen der Dateien in MergeModule.CABinet müssen mit dem Primärschlüssel in der [Dateitabelle](file-table.md)des Mergemoduls identisch sein.
+-   Da die Dateien eines Mergemoduls immer in einer cabinet-Datei gespeichert werden, ist es nicht erforderlich, die **msidbFileAttributesNoncompressed-** oder **msidbFileAttributesCompressed-Bitflags** in der Attributes -Spalte der [Dateitabelle zu setzen.](file-table.md)
+-   Die Namen der Dateien in MergeModule.CABinet müssen mit dem Primärschlüssel in der Dateitabelle des [Mergemoduls übereinstimmen.](file-table.md)
 
-    Die Datei Spalte ist der Primärschlüssel der [Dateitabelle](file-table.md) , und die Einträge in diesem Feld müssen der Konvention folgen, die unter [Benennen von primär Schlüsseln in mergemoduldatenbanken](naming-primary-keys-in-merge-module-databases.md)beschrieben wird.
+    Die Spalte Datei ist der [](file-table.md) Primärschlüssel der Dateitabelle, und die Einträge in diesem Feld müssen der Konvention folgen, die unter Naming Primary Keys in Merge Module Databases (Benennen von Primärschlüsseln [in Mergemoduldatenbanken) beschrieben ist.](naming-primary-keys-in-merge-module-databases.md)
 
--   Datei Sequenznummern werden in der Sequence-Spalte der [File-Tabelle](file-table.md)angegeben.
+-   Dateisequenznummern werden in der Spalte Sequenz der [Dateitabelle angegeben.](file-table.md)
 
-    Dateien müssen in der [Dateitabelle](file-table.md) des Merge-Moduls in derselben Reihenfolge aufgelistet werden, in der Sie in MergeModule.CABinet gespeichert sind. Die Sequenznummern von Dateien müssen nicht aufeinander folgen, aber Sie müssen derselben Reihenfolge wie die Dateien entsprechen, die in der CAB-Datei gespeichert werden. Beispielsweise können die ersten, zweiten und dritten Dateien, die in der CAB-Datei gespeichert sind, über die Sequenznummer 100, 200 und 300 verfügen.
+    Dateien müssen in der Dateitabelle des Mergemoduls [in](file-table.md) derselben Reihenfolge aufgeführt werden, in der sie in MergeModule.CABwerden. Die Sequenznummern von Dateien müssen nicht aufeinanderfolgende sein, sie müssen jedoch der gleichen Reihenfolge folgen wie die Dateien, die in der Schränkung gespeichert sind. Beispielsweise kann die erste, zweite und dritte Im Schränk gespeicherte Datei die Sequenznummern 100, 200 und 300 haben.
 
--   Das Installationsprogramm überspringt zusätzliche Dateien, die in MergeModule.CABinet enthalten sind und nicht in der [Dateitabelle](file-table.md)aufgeführt sind.
+-   Der Installer überspringt zusätzliche Dateien, die in MergeModule.CABinet enthalten sind, die nicht in der [Dateitabelle aufgeführt sind.](file-table.md)
 
-    Eine CAB-Datei kann alle Dateien enthalten, die für ein Mergemodul erforderlich sind, das mehrere Sprachen mithilfe von Transformationen unterstützt. Allen Sprachdateien kann eine eindeutige Sequenznummer in der CAB-Datei zugewiesen werden, und dann kann eine Transformation Dateien hinzufügen oder aus der [Dateitabelle](file-table.md) entfernen, wenn dies für eine bestimmte Sprache erforderlich ist. Weitere Informationen finden Sie unter [Erstellen mehrerer sprachmergemodule](authoring-multiple-language-merge-modules.md).
+    Eine Cabinet-Datei kann alle Dateien enthalten, die für ein Mergemodul erforderlich sind, das mehrere Sprachen mithilfe von Transformationen unterstützt. Allen Sprachdateien kann eine eindeutige Sequenznummer in der Schränkung gegeben werden, [](file-table.md) und dann kann eine Transformation Dateien der Dateitabelle hinzufügen oder daraus entfernen, wenn sie für eine bestimmte Sprache benötigt werden. Weitere Informationen finden Sie unter [Erstellen mehrerer Sprachzusammenführungsmodule.](authoring-multiple-language-merge-modules.md)
 
-Weitere Informationen finden Sie unter [File Table](file-table.md).
+Weitere Informationen finden Sie unter [Dateitabelle.](file-table.md)
 
  
 

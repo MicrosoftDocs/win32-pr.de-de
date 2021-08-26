@@ -1,17 +1,17 @@
 ---
-title: Implementieren von NAP-Unterstützung für EAP-Methoden
+title: Implementieren der NAP-Unterstützung für EAP-Methoden
 description: Erfahren Sie, wie Sie NAP-Unterstützung für ein EAPHost-Supplicant implementieren. Weitere verfügbare Ressourcen finden Sie unter EAPHost-bezogene NAP-Themen.
 ms.assetid: c25e4f03-759a-47a7-8b35-bbe669501c5c
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cff84c24aeb475b83146f2c56e9e139fd930eac27656349c594f05d91c1036fb
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 00860057baeedbfdbae1939ab402db6f28fd74bd
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118273314"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812391"
 ---
-# <a name="implementing-nap-support-for-eap-methods"></a>Implementieren von NAP-Unterstützung für EAP-Methoden
+# <a name="implementing-nap-support-for-eap-methods"></a>Implementieren der NAP-Unterstützung für EAP-Methoden
 
 In diesem Thema wird erläutert, wie NAP für ein EAPHost-Supplicant implementiert wird. In Windows Vista und Windows Server 2008 ist ein NAP-Erzwingungsclient (NAP EC) für [authentifizierte 802.1X-Verbindungen](/previous-versions/windows/embedded/ms890287(v=msdn.10)) verfügbar.
 
@@ -24,7 +24,7 @@ Die Rückruffunktion verwendet zwei Parameter.
 -   Eine GUID, die die der Authentifizierung zugeordnete Schnittstelle eindeutig identifiziert.
 -   Ein VOID-Zeiger auf eine nicht transparente Datenstruktur, die vom Supplicant bereitgestellt wird.
 
-EAPHost wird die von supplicant bereitgestellte Rückruffunktion mit der eindeutigen Schnittstellen-GUID und dem VOID-Zeiger aufrufen, wenn sich der Quarantänezustand des Computers ändert. Wenn EAPHost die vom Supplicant bereitgestellte Rückruffunktion aufruft, antwortet der Supplicant, indem die logische Netzwerkverbindung, die durch den GUID/VOID-Zeiger der Schnittstelle identifiziert wird, geschlossen wird und die Authentifizierung mithilfe von **EapHostPeerBeginSession** erneut beginnt.
+EAPHost wird die vom Supplicant bereitgestellte Rückruffunktion mit der eindeutigen Schnittstellen-GUID und dem VOID-Zeiger aufrufen, wenn sich der Quarantänezustand des Computers ändert. Wenn EAPHost die vom Supplicant bereitgestellte Rückruffunktion aufruft, antwortet der Supplicant, indem die logische Netzwerkverbindung, die durch den GUID/VOID-Zeiger der Schnittstelle identifiziert wird, geschlossen wird und die Authentifizierung mithilfe von **EapHostPeerBeginSession** erneut beginnt.
 
 EAPHost kann die von der Supplicant bereitgestellte Rückruffunktion jederzeit aufrufen: vor, während einer aktiven Authentifizierung oder nach Abschluss der Authentifizierung (nachdem [**EapHostPeerEndSession**](/previous-versions/windows/desktop/api/eappapis/nf-eappapis-eaphostpeerendsession) aufgerufen wurde, jedoch nicht vor dem Aufruf von [**EapHostPeerClearConnection).**](/previous-versions/windows/desktop/api/eappapis/nf-eappapis-eaphostpeerclearconnection) Der Supplicant sollte immer reagieren, indem er die logische Netzwerkverbindung abfängt und sich erneut authentifiziert.
 
@@ -36,7 +36,7 @@ Informationen zur EAPHost-API finden Sie in den folgenden Themen.
 
 -   [**\_EAP-ATTRIBUTTYP \_**](/windows/desktop/api/eaptypes/ne-eaptypes-eap_attribute_type)
 -   [**\_EAP-FEHLER**](/windows/desktop/api/eaptypes/ns-eaptypes-eap_error)
--   [Häufig gestellte Fragen zu EAPHost Supplicant](eaphost-supplicant-frequently-asked-questions.md)
+-   [Häufig gestellte Fragen zu EAPHost Supplicant](eaphost-supplicant-frequently-asked-questions.yml)
 -   [**EAP-Methodeneigenschaften**](eap-method-properties.md)
 -   [**EapHostPeerBeginSession**](/previous-versions/windows/desktop/api/eappapis/nf-eappapis-eaphostpeerbeginsession)
 -   [**Fehler- und Informationskonst constants im Zusammenhang mit EAP**](eap-related-error-and-information-constants.md)

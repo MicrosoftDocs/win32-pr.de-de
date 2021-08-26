@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings redirectdrives (Eigenschaft)
-description: Gibt an, ob die Umleitung von Festplatten Laufwerken zulässig ist.
+title: IMsRdpClientAdvancedSettings RedirectDrives-Eigenschaft
+description: Gibt an, ob die Umleitung von Datenträgerlaufwerken zulässig ist.
 ms.assetid: 5ed4cd28-4a1f-4d3b-9f9d-bf44a8483209
 ms.tgt_platform: multiple
 keywords:
-- Redirectdrives-Eigenschaft Remotedesktopdienste
-- Redirectdrives-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, redirectdrives (Eigenschaft)
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, Eigenschaft redirectdrives
-- Redirectdrives-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, Eigenschaft redirectdrives
+- RedirectDrives-Eigenschaft Remotedesktopdienste
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
+- RedirectDrives-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RedirectDrives-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c83d24ae4ea4dae2760c1e468f4fa8b326a94c38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f2cca4aece1da6d609ab90e306252346c9fea54e9960d70efb0bd3c7adaad012
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125700"
 ---
-# <a name="imsrdpclientadvancedsettingsredirectdrives-property"></a>Imsrdpclientadvancedsettings:: redirectdrives (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingsredirectdrives-property"></a>IMsRdpClientAdvancedSettings::RedirectDrives-Eigenschaft
 
-Gibt an, ob die Umleitung von Festplatten Laufwerken zulässig ist.
+Gibt an, ob die Umleitung von Datenträgerlaufwerken zulässig ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,13 +84,13 @@ HRESULT get_RedirectDrives(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf **Variant \_ true** fest, um eine Umleitung zuzulassen, andernfalls **\_ false** . **Variant \_ TRUE** fordert den Benutzer auf, die Umleitung zur Verbindungszeit zu bestätigen, aus Sicherheitsgründen.
+Legen Sie diesen Parameter auf **VARIANT \_ TRUE** fest, um die Umleitung zuzulassen, andernfalls **VARIANT \_ FALSE.** **VARIANT \_ TRUE** fordert den Benutzer aus Sicherheitsgründen auf, die Umleitung zur Verbindungszeit zu bestätigen.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -104,7 +104,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

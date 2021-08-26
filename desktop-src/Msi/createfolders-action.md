@@ -1,41 +1,41 @@
 ---
-description: Mit der Aktion "Aktionen erstellen" werden leere Ordner für Komponenten erstellt, die für die Installation festgelegt sind.
+description: Die Aktion CreateFolders erstellt leere Ordner für Komponenten, die für die Installation festgelegt sind.
 ms.assetid: 3982eac8-8272-4fb4-870c-390a0b6bd9a1
-title: Aktion "kreatefolders"
+title: CreateFolders-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 349388bf07fe867fc2cd88df6b5c7a76d28a1bf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 61182143488627c4724e470bf7f5158ed524cb4bc344c972c6744d14f773f6cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366241"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105270"
 ---
-# <a name="createfolders-action"></a>Aktion "kreatefolders"
+# <a name="createfolders-action"></a>CreateFolders-Aktion
 
-Mit der Aktion "Aktionen erstellen" werden leere Ordner für Komponenten erstellt, die für die Installation festgelegt sind. Das Installationsprogramm erstellt Ordner für Komponenten, die lokal ausgeführt werden und von der Quelle ausgeführt werden. Neu erstellte Ordner werden mit dem entsprechenden Komponenten Bezeichner registriert.
+Die Aktion CreateFolders erstellt leere Ordner für Komponenten, die für die Installation festgelegt sind. Das Installationsprogramm erstellt Ordner für Komponenten, die lokal und aus der Quelle ausgeführt werden. Neu erstellte Ordner werden mit dem entsprechenden Komponentenbezeichner registriert.
 
-Mit der Aktion "Up Folder" werden die Tabelle "die [Tabelle](createfolder-table.md) " und die [Komponenten Tabelle](component-table.md)abgefragt.
+Die CreateFolders-Aktion fragt die [CreateFolder-Tabelle und](createfolder-table.md) die [Component-Tabelle ab.](component-table.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion "up Folders" muss entweder vor der Aktion " [InstallFiles](installfiles-action.md) " oder vor einer Aktion ausgeführt werden, durch die Dateien zu Ordnern hinzugefügt werden.
+Die CreateFolders-Aktion muss entweder vor der [InstallFiles-Aktion](installfiles-action.md) oder vor jeder Aktion ausgeführt werden, die Dateien zu Ordnern hinzufügt.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Beschreibung der Aktionsdaten |
 |-------|----------------------------------------|
-| \[1\] | Verzeichnis Bezeichner des Ordners.        |
+| \[1\] | Verzeichnisbezeichner des Ordners.        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Deinstallieren der Anwendung werden von der Aktion "Aktionen erstellen" erstellte Ordner nicht automatisch entfernt. Der Installer entfernt nur Ordner, wenn die Aktion [RemoveFolders](removefolders-action.md) in der Aktions Sequenz enthalten ist.
+Das Installationsprogramm entfernt ordner, die während einer Deinstallation der Anwendung von der CreateFolders-Aktion erstellt wurden, nicht automatisch. Das Installationsprogramm entfernt Ordner nur, wenn die [RemoveFolders-Aktion](removefolders-action.md) in der Aktionssequenz enthalten ist.
 
  
 

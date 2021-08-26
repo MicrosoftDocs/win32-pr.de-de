@@ -1,9 +1,9 @@
 ---
-title: TCM_SETTOOLTIPS Meldung (kommstrg. h)
-description: Weist einem Registerkarten-Steuerelement ein ToolTip-Steuerelement zu. Sie können diese Nachricht explizit oder mithilfe des tabctrl- \_ Makros SetToolTips senden.
+title: TCM_SETTOOLTIPS Nachricht (Commctrl.h)
+description: Weist einem Registerkartensteuerelement ein QuickInfo-Steuerelement zu. Sie können diese Nachricht explizit oder mithilfe des \_ TabCtrl-Makros SetToolTips senden.
 ms.assetid: c1b173b1-9da6-441a-a2b6-3875e2c343f8
 keywords:
-- Windows-Steuerelemente für TCM_SETTOOLTIPS Meldung
+- TCM_SETTOOLTIPS Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25e00166fb97c49c33b22811d28b79165bed4e9b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c8bfec3b7272ceae3dcbf1781e3bb17a988f2252b3c0a74822677bff6ea39209
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104690"
 ---
-# <a name="tcm_settooltips-message"></a>TCM- \_ SetToolTips-Meldung
+# <a name="tcm_settooltips-message"></a>TCM \_ SETTOOLTIPS-Nachricht
 
-Weist einem Registerkarten-Steuerelement ein ToolTip-Steuerelement zu. Sie können diese Nachricht explizit oder mithilfe des [**tabctrl-Makros \_ SetToolTips**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_settooltips) senden.
+Weist einem Registerkartensteuerelement ein QuickInfo-Steuerelement zu. Sie können diese Nachricht explizit oder mithilfe des [**\_ TabCtrl-Makros SetToolTips**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_settooltips) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -43,9 +43,9 @@ Handle für das QuickInfo-Steuerelement.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können das QuickInfo-Steuerelement, das einem Registerkarten-Steuerelement zugeordnet ist, mithilfe der [**TCM \_ gettooltips**](tcm-gettooltips.md) -Nachricht abrufen
+Sie können das QuickInfo-Steuerelement abrufen, das einem Registerkartensteuerelement zugeordnet ist, indem Sie die [**TCM \_ GETTOOLTIPS-Nachricht**](tcm-gettooltips.md) verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Sie können das QuickInfo-Steuerelement, das einem Registerkarten-Steuerelement 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,26 +1,26 @@
 ---
-description: Einer der Hauptzwecke des Zugriffs auf eine Auflistung besteht darin, ein Element aus der Auflistung zu entfernen. Sie können ein Element aus einer Sammlung entfernen, indem Sie die Methode "Swap. Remove" aufrufen. Diese Methode ist für "errbewbjectset" oder "errbemmethodset" nicht verfügbar.
+description: Einer der Hauptzwecke für den Zugriff auf eine Auflistung ist das Entfernen eines Elements aus der Auflistung. Sie können ein Element mit einem Aufruf der SWbemPropertySet.Remove-Methode aus einer Auflistung entfernen. Diese Methode ist für SWbemObjectSet oder SWbemMethodSet nicht verfügbar.
 ms.assetid: 4a71029c-9fe1-4348-9f78-daa345728e8d
 ms.tgt_platform: multiple
 title: Entfernen eines einzelnen Elements aus einer WMI-Sammlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6dabeb3ff2e7e70cf6fe25f1ddfb0b14032119d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50364173aff9f28362878e84d5f3ddb496e430521dc5b1bb92bbc11e7e6b528c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995900"
 ---
 # <a name="removing-a-single-item-from-a-wmi-collection"></a>Entfernen eines einzelnen Elements aus einer WMI-Sammlung
 
-Einer der Hauptzwecke des Zugriffs auf eine Auflistung besteht darin, ein Element aus der Auflistung zu entfernen. Sie können ein Element aus einer Sammlung entfernen, indem Sie die Methode " [**Swap. Remove**](swbempropertyset-remove.md) " aufrufen. Diese Methode ist für " [**errbewbjectset**](swbemobjectset.md) " oder " [**errbemmethodset**](swbemmethodset.md)" nicht verfügbar.
+Einer der Hauptzwecke für den Zugriff auf eine Auflistung ist das Entfernen eines Elements aus der Auflistung. Sie können ein Element mit einem Aufruf der [**SWbemPropertySet.Remove-Methode**](swbempropertyset-remove.md) aus einer Auflistung entfernen. Diese Methode ist für [**SWbemObjectSet oder**](swbemobjectset.md) [**SWbemMethodSet nicht verfügbar.**](swbemmethodset.md)
 
-Elemente werden nach dem Namen aus dem Austausch von " [**Swap PropertySet**](swbempropertyset.md)", " [**Swap-set**](swbemqualifierset.md)" und " [**Swap namedvalueset**](swbemnamedvalueset.md)" entfernt. Allerdings werden Elemente in " [**taubemaktualisierungs**](swbemrefresher.md) " durch einen Index entfernt und von der Konstanten, die den Berechtigungs Namen darstellt, von " [**taubemprivilegeset**](swbemprivilegeset.md) " entfernt.
+Elemente werden nach Namen aus [**SWbemPropertySet,**](swbempropertyset.md) [**SWbemQualifierSet**](swbemqualifierset.md)und [**SWbemNamedValueSet entfernt.**](swbemnamedvalueset.md) Elemente in [**SWbemRefresher**](swbemrefresher.md) werden jedoch nach Index und [**aus SWbemPrivilegeSet**](swbemprivilegeset.md) durch die Konstante entfernt, die den Berechtigungsnamen darstellt.
 
-**So entfernen Sie ein Element aus einer Sammlung**
+**So entfernen Sie ein Element aus einer Auflistung**
 
--   Im folgenden Codebeispiel wird veranschaulicht, wie das Element mit einem Aufrufen der Methode " [**Swap. Remove**](swbempropertyset-remove.md) " entfernt wird.
+-   Das folgende Codebeispiel zeigt, wie das Element mit einem Aufruf der [**SWbemPropertySet.Remove-Methode entfernt**](swbempropertyset-remove.md) wird.
 
     ```VB
     oclass.Properties_.Remove "Prop2"
@@ -28,7 +28,7 @@ Elemente werden nach dem Namen aus dem Austausch von " [**Swap PropertySet**](sw
 
     
 
-    Im folgenden Beispiel wird eine neue Klasse mit dem Namen "newclass" im Stamm \\ -Standard Namespace erstellt und drei Eigenschaften hinzugefügt. Das Skript verwendet dann den Code aus dem vorherigen Beispiel, um die zweite Eigenschaft zu löschen.
+    Im folgenden Beispiel wird eine neue Klasse namens "NewClass" im Stamm-Standardnamespace erstellt und ihr \\ drei Eigenschaften hinzufügt. Das Skript verwendet dann den Code aus dem vorherigen Beispiel, um die zweite Eigenschaft zu löschen.
 
     ```VB
     ' Obtain an empty class and name it
@@ -63,7 +63,7 @@ Elemente werden nach dem Namen aus dem Austausch von " [**Swap PropertySet**](sw
 
     
 
-Weitere Informationen finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md), [zugreifen auf eine](accessing-a-collection.md)Auflistung und [Entfernen mehrerer Elemente aus einer](removing-multiple-items-from-a-collection.md)Auflistung.
+Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen,](manipulating-class-and-instance-information.md)Zugreifen auf eine [Auflistung](accessing-a-collection.md)und Entfernen mehrerer Elemente aus [einer Auflistung.](removing-multiple-items-from-a-collection.md)
 
  
 

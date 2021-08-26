@@ -1,7 +1,7 @@
 ---
-description: Die get \_ biterrorrate-Methode ruft eine ungefähre Bitfehlerrate für das Video ab.
+description: Die get \_ BitErrorRate-Methode ruft eine ungefähre Bitfehlerrate für das Video ab.
 ms.assetid: 4078611c-6e09-47c8-8e1c-f33bc6ddca79
-title: CBaseControlVideo.get_BitErrorRate-Methode (ctlutil. h)
+title: CBaseControlVideo.get_BitErrorRate -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 9ae15a882f6dcd8840519f9067223dde3e925f6a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2602d203ca5a418dcc889d26932cd28be78d984390e71cff996e6fd3938030a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057290"
 ---
-# <a name="cbasecontrolvideoget_biterrorrate-method"></a>Cbasecontrolvideo. get \_ biterrorrate-Methode
+# <a name="cbasecontrolvideoget_biterrorrate-method"></a>CBaseControlVideo.get \_ BitErrorRate-Methode
 
-Die- `get_BitErrorRate` Methode ruft eine ungefähre Bitfehlerrate für das Video ab.
+Die `get_BitErrorRate` -Methode ruft eine ungefähre Bitfehlerrate für das Video ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT get_BitErrorRate(
 
 <dl> <dt>
 
-*pbiterrorrate* 
+*pBitErrorRate* 
 </dt> <dd>
 
-Zeiger auf die Bitfehlerrate (ein Fehler für ungefähr diese viele Bits).
+Zeiger auf die Bitfehlerrate (ein Fehler für ungefähr so viele Bits).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn \_ nicht genügend Arbeitsspeicher verfügbar ist, wird noError zurückgegeben, wenn der Vorgang erfolgreich war.
+Gibt NOERROR zurück, wenn erfolgreich, oder E \_ OUTOFMEMORY, wenn nicht genügend Arbeitsspeicher verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ biterrorrate**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_biterrorrate) -Methode. Sie ruft die rein virtuelle [**cbasecontrolvideo:: getvideoformat**](cbasecontrolvideo-getvideoformat.md) -Methode auf, um die [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur aus der abgeleiteten Klasse abzurufen.
+Diese Memberfunktion implementiert die [**IBasicVideo::get \_ BitErrorRate-Methode.**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_biterrorrate) Sie ruft die rein virtuelle [**CBaseControlVideo::GetVideoFormat-Methode**](cbasecontrolvideo-getvideoformat.md) auf, um die [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) aus der abgeleiteten Klasse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ biterrorrate**](
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ biterrorrate**](
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

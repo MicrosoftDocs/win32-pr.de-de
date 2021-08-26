@@ -1,19 +1,19 @@
 ---
-description: Getdec-Funktion zum Erstellen eines Inhaltsverzeichnisses
+description: GetToc-Funktion zum Generieren eines Inhaltsverzeichnisses
 ms.assetid: f2f312ff-3519-4269-8252-eb52d2bc2e56
-title: Getdec-Funktion zum Erstellen eines Inhaltsverzeichnisses
+title: GetToc-Funktion zum Generieren eines Inhaltsverzeichnisses
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b24da42f39ba5a499492bac8a166ffcfa883aab
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0f1d70317c77bf73df12983946abafc10675b6f63f62759335604871df3633d1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061575"
 ---
-# <a name="gettoc-function-for-generating-a-table-of-contents"></a>Getdec-Funktion zum Erstellen eines Inhaltsverzeichnisses
+# <a name="gettoc-function-for-generating-a-table-of-contents"></a>GetToc-Funktion zum Generieren eines Inhaltsverzeichnisses
 
-Die folgende Funktion ist eine Hilfsfunktion in einem Beispielprogramm, das unter [Automatisches Erstellen eines Inhaltsverzeichnisses](generating-a-table-of-contents-automatically.md)erläutert wird.
+Die folgende Funktion ist eine Hilfsfunktion in einem Beispielprogramm, das unter [Generating a Table of Contents Automatically (Automatisches Generieren eines Inhaltsverzeichnisses)](generating-a-table-of-contents-automatically.md)erläutert wird.
 
 
 ```C++
@@ -72,7 +72,7 @@ HRESULT GetToc(IDMOWrapperFilter* pWrap, IToc** ppToc)
 
 <dl> <dt>
 
-[Automatisches Erstellen eines Inhaltsverzeichnisses](generating-a-table-of-contents-automatically.md)
+[Automatisches Generieren eines Inhaltsverzeichnisses](generating-a-table-of-contents-automatically.md)
 </dt> </dl>
 
  

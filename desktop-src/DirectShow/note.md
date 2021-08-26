@@ -1,7 +1,7 @@
 ---
-description: Das Note-Makro sendet eine Zeichenfolge an den debugausgabespeicherort. Wird in Einzelhandels Builds ignoriert.
+description: Das NOTE-Makro sendet eine Zeichenfolge an den Debugausgabespeicherort. Wird in Einzelhandelsbuilds ignoriert.
 ms.assetid: 8b85861a-b4d6-4cc6-9ac9-77d06f173869
-title: Hinweis (wxdebug. h)
+title: HINWEIS (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 898d31c48807c3bf0826dc643d89126db36b0f0b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0becacba37f3f474577c36a694539de77795f1c19ccf3b1655cb80370be9e297
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050920"
 ---
 # <a name="note"></a>HINWEIS
 
-Das- `NOTE` Makro sendet eine Zeichenfolge an den debugausgabeort. Wird in Einzelhandels Builds ignoriert.
+Das `NOTE` Makro sendet eine Zeichenfolge an den Debugausgabespeicherort. Wird in Einzelhandelsbuilds ignoriert.
 
 ``` syntax
 NOTE(
@@ -42,23 +42,23 @@ NOTEn(
 
 <dl> <dt>
 
-<span id="pFormat"></span><span id="pformat"></span><span id="PFORMAT"></span>*pformat*
+<span id="pFormat"></span><span id="pformat"></span><span id="PFORMAT"></span>*pFormat*
 </dt> <dd>
 
-Eine Format Zeichenfolge im printf-Format.
+Eine Formatzeichenfolge im printf-Format.
 
 </dd> <dt>
 
 <span id="arg1arg5"></span><span id="ARG1ARG5"></span>*arg1*–*arg5*
 </dt> <dd>
 
-Zusätzliche Argumente für die Format Zeichenfolge. Die Anzahl der Argumente muss mit dem Namen des Makros identisch sein. Beispielsweise übernimmt **NOTE1** ein Argument, und **NOTE5** übernimmt fünf Argumente.
+Zusätzliche Argumente für die Formatzeichenfolge. Die Anzahl der Argumente muss mit dem Makronamen übereinstimmen. Note1  verwendet beispielsweise ein Argument, **NOTE5** fünf Argumente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Makros sind Varianten des [**dbglog**](dbglog.md) -Makros. Sie generieren Protokoll-Ablauf \_ Verfolgungs Meldungen der Ebene 5.
+Diese Makros sind Varianten des [**DbgLog-Makros.**](dbglog.md) Sie generieren LOG TRACE-Meldungen der Ebene \_ 5.
 
 ## <a name="example"></a>Beispiel
 
@@ -76,8 +76,8 @@ NOTE2("Width: %d, Height: %d", width, height);
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ NOTE2("Width: %d, Height: %d", width, height);
 
 <dl> <dt>
 
-[Debug-Ausgabefunktionen](debug-output-functions.md)
+[Debuggen von Ausgabefunktionen](debug-output-functions.md)
 </dt> </dl>
 
  

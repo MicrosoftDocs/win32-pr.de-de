@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-Symbol Methode
-description: Gibt einen Vektor von ideviceicon-Schnittstellen zurück.
+title: IBasicDevice Icons-Methode
+description: Gibt einen Vektor von IDeviceIcon-Schnittstellen zurück.
 ms.assetid: 0C083AF3-FE22-4A8E-87B7-0FFA7B65ADBD
 keywords:
-- Symbol Methode Medien Streaming-API
-- Symbol Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, Symbol-Methode
+- Symbolmethode Medienstreaming-API
+- Symbolmethode Medienstreaming-API , IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , Icons-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3fb6e4b708b4e38ffb39f152308cec7b885a772f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6fdb514b2f6ab09a2c0024d37ed32e9968fe08dd7f16aefe40298ac2ba5497c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060440"
 ---
-# <a name="ibasicdeviceicons-method"></a>Ibasicdevice:: Icons-Methode
+# <a name="ibasicdeviceicons-method"></a>IBasicDevice::Icons-Methode
 
-Gibt einen Vektor von [**ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) -Schnittstellen zurück.
+Gibt einen Vektor von [**IDeviceIcon-Schnittstellen**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT Icons(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Empfängt eine Aufzähl Bare Auflistung von [**ideviceicon**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon) -Schnittstellen Zeigern.
+Empfängt eine aufzählbare Auflistung von [**IDeviceIcon-Schnittstellenzeigern.**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-ideviceicon)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

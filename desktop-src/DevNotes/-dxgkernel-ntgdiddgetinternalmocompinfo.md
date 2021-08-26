@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht dem Treiber, zu melden, dass er den Anzeige Speicher intern zum Durchführen der Bewegungskompensation zuordnet.
+description: Ermöglicht dem Treiber, zu melden, dass er intern Anzeigespeicher zuteilen kann, um eine Bewegungsausgleichsleistung durchzuführen.
 ms.assetid: cf2878ae-7eff-4214-bb9e-e8b608831108
-title: Ntgdiddgetinternalmocompinfo-Funktion (ntgdi. h)
+title: NtGdiDdGetInternalMoCompInfo-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: a9ddbb7843c7a1142ac6cd9906ef1ed3265e5d11
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 323c6d36284032f5d9fb1ee73b90393ed3d00c0c8247002c1f8b0f42484784fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103860"
 ---
-# <a name="ntgdiddgetinternalmocompinfo-function"></a>Ntgdiddgetinternalmocompinfo-Funktion
+# <a name="ntgdiddgetinternalmocompinfo-function"></a>NtGdiDdGetInternalMoCompInfo-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. Diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Ermöglicht dem Treiber, zu melden, dass er den Anzeige Speicher intern zum Durchführen der Bewegungskompensation zuordnet.
+Ermöglicht dem Treiber, zu melden, dass er intern Anzeigespeicher zuteilen kann, um eine Bewegungsausgleichsleistung durchzuführen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,36 +45,36 @@ DWORD APIENTRY NtGdiDdGetInternalMoCompInfo(
 
 <dl> <dt>
 
-*hdirectdraw* \[ in\]
+*hDirectDraw* \[ In\]
 </dt> <dd>
 
-Handle für das zuvor erstellte Kernel Modus-DirectDraw-Objekt.
+Handle für zuvor erstelltes DirectDraw-Objekt im Kernelmodus.
 
 </dd> <dt>
 
-*pugetinternaldata* \[ in, out\]
+*puGetInternalData* \[ in, out\]
 </dt> <dd>
 
-Zeiger auf eine [**DD \_ getinternalmocompdata**](/windows/win32/api/ddrawint/ns-ddrawint-dd_getinternalmocompdata) -Struktur, die die internen Arbeitsspeicher Anforderungen enthält.
+Zeiger auf eine [**DD \_ GETINTERNALMOCOMPDATA-Struktur,**](/windows/win32/api/ddrawint/ns-ddrawint-dd_getinternalmocompdata) die die internen Speicheranforderungen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ntgdiddgetinternalmocompinfo** gibt einen der folgenden Rückruf Codes zurück.
+**NtGdiDdGetInternalMoCompInfo gibt** einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ddhal- \_ Treiber \_ behandelt**</dt> </dl>    | Der Treiber hat den Vorgang durchgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, fährt DirectDraw oder Direct3D mit der-Funktion fort. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
-| <dl> <dt>**ddhal- \_ Treiber \_ nothandled**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementieren muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls behandelt DirectDraw oder Direct3D den Vorgang so, als ob der Treiber Rückruf nicht durch Ausführen der geräteunabhängigen DirectDraw-oder Direct3D-Implementierung definiert wurde.<br/> |
+| <dl> <dt>**\_DDHAL-TREIBER \_ BEHANDELT**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen finden Sie im Microsoft DirectX Video Acceleration Driver Development Kit (DDK).
 
@@ -86,7 +86,7 @@ Weitere Informationen finden Sie im Microsoft DirectX Video Acceleration Driver 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -94,7 +94,7 @@ Weitere Informationen finden Sie im Microsoft DirectX Video Acceleration Driver 
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Clientunterstützung auf niedriger Grafikebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

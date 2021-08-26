@@ -1,9 +1,9 @@
 ---
-title: Taskplaner-Schema
-description: Das Taskplaner Schema definiert gültiges XML, das zum Registrieren von Tasks beim Taskplaner-Dienst verwendet wird. Entwickler können Ihren eigenen XML-Code erstellen, ihn anhand dieses Schemas überprüfen und Aufgaben mithilfe der Methode "ITaskFolder RegisterTask" registrieren.
+title: Taskplaner Schema
+description: Das Taskplaner Schema definiert gültige XML-Daten, die zum Registrieren von Aufgaben beim Taskplaner-Dienst verwendet werden. Entwickler können ihren eigenen XML-Code erstellen, anhand dieses Schemas überprüfen und Aufgaben mithilfe der ITaskFolder RegisterTask-Methode registrieren.
 ms.assetid: 9b1b8e34-c635-413a-a230-79a58017cf21
 keywords:
-- Taskplaner Taskplaner, Referenz, XML-Schema
+- Taskplaner Taskplaner , Verweis, XML-Schema
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -11,23 +11,23 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 143633fbc983a4ff828c3406b5015995b4bc7842
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: 7b03744b864aea8903cb77482d2ce377186266be5ad160c2c037f996d7b5ed91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "104101182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080370"
 ---
-# <a name="task-scheduler-schema"></a>Taskplaner-Schema
+# <a name="task-scheduler-schema"></a>Taskplaner Schema
 
-Das Taskplaner Schema definiert gültiges XML, das zum Registrieren von Tasks beim Taskplaner-Dienst verwendet wird. Entwickler können Ihren eigenen XML-Code erstellen, ihn anhand dieses Schemas überprüfen und Aufgaben mit der [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Methode registrieren.
+Das Taskplaner Schema definiert gültige XML-Daten, die zum Registrieren von Aufgaben beim Taskplaner-Dienst verwendet werden. Entwickler können ihren eigenen XML-Code erstellen, anhand dieses Schemas überprüfen und Aufgaben mithilfe der [**ITaskFolder::RegisterTask-Methode**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) registrieren.
 
-Die Typen und Elemente des Taskplaner Schemas sind in den folgenden Abschnitten einzeln dokumentiert.
+Die Typen und Elemente des Taskplaner Schemas werden in den folgenden Abschnitten einzeln dokumentiert.
 
--   [Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
--   [Einfache Typen von Taskplaner Schemas](task-scheduler-schema-simple-types.md)
--   [Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
--   [Schema Gruppen Taskplaner](task-scheduler-schema-groups.md)
+-   [Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
+-   [Taskplaner schema simple types (Einfache Schematypen)](task-scheduler-schema-simple-types.md)
+-   [komplexe Typen Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+-   [Taskplaner Schemagruppen](task-scheduler-schema-groups.md)
 
 Das gesamte Taskplaner Schema wird durch die folgende XSD-Datei definiert.
 
@@ -695,9 +695,9 @@ Das gesamte Taskplaner Schema wird durch die folgende XSD-Datei definiert.
 
 
 
- 
+ 
 
- 
+ 
 
 
 

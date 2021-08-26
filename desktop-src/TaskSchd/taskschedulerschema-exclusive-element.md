@@ -1,9 +1,9 @@
 ---
-title: Exklusives Element
-description: Gibt an, ob der Taskplaner die Aufgabe während der automatischen Wartung im exklusiven Modus starten muss.
+title: Exclusive-Element
+description: Gibt an, ob der Taskplaner den Task während der automatischen Wartung im exklusiven Modus starten muss.
 ms.assetid: F690FD8F-BCCB-456D-92E3-25A262D6DCF1
 keywords:
-- Exklusives Element Taskplaner
+- Exklusive Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4e0cd7cf5b2a5ce3aa68f92834aa45563000945d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aab796abfdcad67a348b6d42186732d402bbe8eeeb359ac772588fe809dbf73c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991330"
 ---
-# <a name="exclusive-element"></a>Exklusives Element
+# <a name="exclusive-element"></a>Exclusive-Element
 
-Gibt an, ob der Taskplaner die Aufgabe während der automatischen Wartung im exklusiven Modus starten muss.
+Gibt an, ob der Taskplaner den Task während der automatischen Wartung im exklusiven Modus starten muss.
 
-Die Exklusivität wird nur zwischen anderen Wartungs Tasks garantiert und erteilt keine Reihenfolge Priorität der Aufgabe. Wenn die Exklusivität nicht angegeben wird, wird die Aufgabe parallel mit anderen Wartungs Tasks gestartet.
+Die Reihenfolge wird nur zwischen anderen Wartungsaufgaben garantiert und gewährt keine Reihenfolgenpriorität der Aufgabe. Wenn keine Intervalle angegeben werden, wird der Task parallel zu anderen Wartungsaufgaben gestartet.
 
 ``` syntax
 <xs:element name="Exclusive"
@@ -34,25 +34,25 @@ Die Exklusivität wird nur zwischen anderen Wartungs Tasks garantiert und erteil
  />
 ```
 
-Das **exklusive** Element wird durch den komplexen Typ [**maintenancesettingstype**](taskschedulerschema-maintenancesettingstype-complextype.md) definiert.
+Das **Exclusive-Element** wird durch den komplexen [**MaintenanceSettingsType-Typ**](taskschedulerschema-maintenancesettingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                                          | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                                    |
+| Element                                                                                                                          | Abgeleitet von                                                                               | Beschreibung                                                                                                    |
 |----------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [**Maintenancesettings (maintenancesettingstype)**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md) | [**maintenancesettingstype**](taskschedulerschema-maintenancesettingstype-complextype.md) | Gibt die Task Einstellungen an, mit denen der Taskplaner während der automatischen Wartung gestartet wird.<br/> |
+| [**MaintenanceSettings (maintenanceSettingsType)**](taskschedulerschema-maintenancesettings-maintenancesettingstype-element.md) | [**maintenanceSettingsType**](taskschedulerschema-maintenancesettingstype-complextype.md) | Gibt die Aufgabeneinstellungen an, die der Taskplaner verwendet, um den Task während der automatischen Wartung zu starten.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der C++-Programmierung wird diese Einstellung für den Leerlauf mithilfe der [**imaintenancesettings:: Exclusive**](/windows/desktop/api/Taskschd/nf-taskschd-imaintenancesettings-get_exclusive) -Eigenschaft angegeben.
+Bei der C++-Programmierung wird diese Leerlaufeinstellung mithilfe der [**IMaintenanceSettings::Exclusive-Eigenschaft**](/windows/desktop/api/Taskschd/nf-taskschd-imaintenancesettings-get_exclusive) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert den Wartungs Task mit der Stichtag Anforderung auf 15 Tage.
+Der folgende XML-Code definiert den Wartungs task, für den die Stichtaganforderung auf 15 Tage festgelegt ist.
 
 
 ```XML
@@ -71,16 +71,16 @@ Der folgende XML-Code definiert den Wartungs Task mit der Stichtag Anforderung a
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

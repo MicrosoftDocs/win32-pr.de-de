@@ -1,31 +1,31 @@
 ---
-title: String-Attribut (RPC)
-description: Das \ String \-Attribut und der Remote Prozedur Aufruf (RPC).
+title: Zeichenfolgenattribut (RPC)
+description: Das Attribut \string\ und der Remoteprozeduraufruf (RPC).
 ms.assetid: 794e03f2-b1e9-42dc-8536-9ced5c0e3dad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e413c0b3b8f5a379dc3448f07aed4a5a7a6aba07
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9e58b0750169a89f34840333f1ea55ee2ee096b24f3b87e425035f04ca759849
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127700"
 ---
-# <a name="string-attribute-rpc"></a>String-Attribut (RPC)
+# <a name="string-attribute-rpc"></a>Zeichenfolgenattribut (RPC)
 
-Das \[ [String](/windows/desktop/Midl/string) - \] Attribut gibt an, dass der-Parameter ein Zeiger auf ein Array vom Typ [char](/windows/desktop/Midl/char-idl), [Byte](/windows/desktop/Midl/byte)oder **w \_ char** ist. Wie bei einem konformen Array wird die Größe eines **\[ Zeichen \]** folgen Parameters zur Laufzeit bestimmt. Anders als bei einem konformen Array muss der Entwickler nicht die Länge angeben, die dem Array zugeordnet ist – das **\[ Zeichen \]** folgen Attribut weist den Stub an, die Array Größe durch Aufrufen von " **strinlen**" zu bestimmen. Ein **\[ Zeichen \]** folgen Attribut kann nicht gleichzeitig verwendet werden, wenn die \[ [ \_ Länge](/windows/desktop/Midl/length-is) \] oder die \[ [Last Attribute \_ ist](/windows/desktop/Midl/last-is) \] .
+Das \[ [Zeichenfolgenattribut](/windows/desktop/Midl/string) gibt an, dass der -Parameter ein Zeiger auf ein Array vom Typ \] [char,](/windows/desktop/Midl/char-idl) [byte](/windows/desktop/Midl/byte)oder **w char \_ ist.** Wie bei einem konformen Array wird die Größe eines **\[ Zeichenfolgenparameters \]** zur Laufzeit bestimmt. Im Gegensatz zu einem konformen Array muss der Entwickler die **\[ \]** dem Array zugeordnete Länge nicht angeben. Das Zeichenfolgenattribut weist den Stub an, die Arraygröße durch Aufrufen von **strlen zu bestimmen.** Ein **\[ \] Zeichenfolgenattribut** kann nicht gleichzeitig mit der Länge oder dem letzten Attribut \[ [ \_](/windows/desktop/Midl/length-is) \] \[ [ \_ verwendet](/windows/desktop/Midl/last-is) \] werden.
 
-Die Kombination aus **\[ Zeichen \]** folgen Attribut weist den Stub an, die Zeichenfolge nur vom Client an den Server zu übergeben. Die Menge an Arbeitsspeicher, die auf dem Server belegt wird, entspricht der übertragenen Zeichen folgen Größe Plus 1.
+Die **\[ Kombination \] aus in- und Zeichenfolgenattribut** leitet den Stub an, die Zeichenfolge nur vom Client an den Server zu übergeben. Der auf dem Server zugeordnete Arbeitsspeicher ist mit der übertragenen Zeichenfolgengröße plus 1 identisch.
 
-Die \[ [out](/windows/desktop/Midl/out-idl)-, **String** - \] Attribute leiten den Stub so an, dass die Zeichenfolge nur vom Server an den Client übergeben wird. Der Entwurf der Programmiersprache C setzt darauf, dass alle **\[ out \]** -Parameter Zeiger sein müssen.
+Die \[ [Zeichenfolgenattribute out](/windows/desktop/Midl/out-idl)und führen den Stub so aus, dass die Zeichenfolge nur vom  \] Server an den Client übergeben wird. Der Wertaufrufentwurf der Programmiersprache C weist darauf hin, dass alle **\[ \] out-Parameter** Zeiger sein müssen.
 
-Der **\[ out \]** -Parameter muss ein Zeiger sein, und standardmäßig handelt es sich bei allen Zeiger Parametern um Verweis Zeiger. Der Verweis Zeiger wird während des Aufrufes nicht geändert – er verweist auf denselben Speicher wie vor dem-Befehl. Für Zeichen folgen Zeiger bedeutet die zusätzliche Einschränkung des Verweis Zeigers, dass der Client vor dem Ausführen des Remote Prozedur Aufrufes ausreichend gültigen Speicher zuweisen muss. Die stubzeichen übertragen die Zeichenfolge, die **\[ von den Zeichen \]** folgen Attributen out in den bereits auf der Clientseite zugewiesenen Speicher angegeben wird.
+Der **\[ \] out-Parameter** muss ein Zeiger sein, und standardmäßig sind alle Zeigerparameter Verweiszeiger. Der Verweiszeiger ändert sich während des Aufrufs nicht. Er verweist auf denselben Arbeitsspeicher wie vor dem Aufruf. Bei Zeichenfolgenzeigern bedeutet die zusätzliche Einschränkung des Verweiszeigers, dass der Client ausreichend gültigen Arbeitsspeicher zuordnen muss, bevor der Remoteprozeduraufruf ausgeführt wird. Die Stubs übertragen die Zeichenfolge, die die Zeichenfolgenattribute **\[ out angeben, \]** in den Arbeitsspeicher, der bereits auf der Clientseite zugeordnet ist.
 
-In den folgenden Themen werden die Prototypen für Remote Prozedur Parameter für Zeichen folgen beschrieben:
+In den folgenden Themen werden die Prototypen von Remoteprozedurparametern für Zeichenfolgen beschrieben:
 
--   [\[in, out, Zeichen folgen \] Prototyp](-in-out-string-prototype.md)
--   [\[in, String \] und \[ out, Zeichen folgen \] Prototyp](-in-string-and-out-string-prototype.md)
+-   [\[in, out, string \] Prototype](-in-out-string-prototype.md)
+-   [\[in, string \] und \[ out, string \] Prototype](-in-string-and-out-string-prototype.md)
 
- 
+ 
 
- 
+ 

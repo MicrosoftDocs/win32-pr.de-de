@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentcallback getfixupinfo-Methode (napsystemhealthagent. h)
-description: Wird von NAPAgent aufgerufen, um den Zustand des Systemintegritäts-Agents zu ermitteln, während er eine sohresponse verarbeitet.
+title: INapSystemHealthAgentCallback GetFixupInfo-Methode (NapSystemHealthAgent.h)
+description: Wird vom NapAgent aufgerufen, um den Zustand des Systemzustands-Agents zu bestimmen, während er eine SoHResponse verarbeitet.
 ms.assetid: cf919b56-3d40-4c49-9c91-25c20ae5ccda
 keywords:
-- Getfixupinfo-Methode NAP
-- Getfixupinfo-Methode NAP, inapsystemhealthagentcallback-Schnittstelle
-- Inapsystemhealthagentcallback-Schnittstelle NAP, getfixupinfo-Methode
+- NAP-Methode "GetFixupInfo"
+- GetFixupInfo-Methode NAP, INapSystemHealthAgentCallback-Schnittstelle
+- INapSystemHealthAgentCallback-Schnittstelle NAP , GetFixupInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1227cbe870c722189c995bff0c967eb187548cd1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9d82f84acbc759f8459c7eeb904ab4f08a108093fa30c3b27c033fbfef1dcf15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037750"
 ---
-# <a name="inapsystemhealthagentcallbackgetfixupinfo-method"></a>Inapsystemhealthagentcallback:: getfixupinfo-Methode
+# <a name="inapsystemhealthagentcallbackgetfixupinfo-method"></a>INapSystemHealthAgentCallback::GetFixupInfo-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthagentcallback:: getfixupinfo** -Methode wird vom NAPAgent aufgerufen, um den Status des Systemintegritäts-Agents zu ermitteln, während er eine [**sohresponse**](/windows/win32/api/naptypes/ns-naptypes-soh)verarbeitet.
+Die **INapSystemHealthAgentCallback::GetFixupInfo-Methode** wird vom NapAgent aufgerufen, um den Zustand des Systemzustands-Agents zu bestimmen, während er eine [**SoHResponse**](/windows/win32/api/naptypes/ns-naptypes-soh)verarbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,10 +47,10 @@ HRESULT GetFixupInfo(
 
 <dl> <dt>
 
-*Info* \[ vorgenommen\]
+*Info zu* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**fixupinfo**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) -Struktur, die den Korrektur Status des Agents enthält.
+Ein Zeiger auf einen Zeiger auf eine [**FixupInfo-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) die den Fixupstatus des Agents enthält.
 
 </dd> </dl>
 
@@ -68,11 +68,11 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Rückruf Methode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
+Diese Rückrufmethode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
 
-Der Systemintegritäts-Agent muss " **S \_ OK** " sofort ohne Blockierung zurückgeben.
+Der Systemzustands-Agent muss **S \_ OK** sofort ohne Blockierung zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,10 +80,10 @@ Der Systemintegritäts-Agent muss " **S \_ OK** " sofort ohne Blockierung zurüc
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Der Systemintegritäts-Agent muss " **S \_ OK** " sofort ohne Blockierung zurüc
 
 <dl> <dt>
 
-[**Inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md)
+[**INapSystemHealthAgentCallback**](inapsystemhealthagentcallback.md)
 </dt> </dl>
 
  

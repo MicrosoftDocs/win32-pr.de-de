@@ -1,9 +1,9 @@
 ---
-title: g_wszWMVCFrameInterpolationSupported (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMVCFrameInterpolationSupported (wmcodecdsp. h)
+title: g_wszWMVCFrameInterpolationSupported (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCFrameInterpolationSupported (Wmcodecdsp.h)
 ms.assetid: c0d8f222-9f50-486b-acee-a1c685199fab
 keywords:
-- g_wszWMVCFrameInterpolationSupported Windows Media-Format
+- g_wszWMVCFrameInterpolationSupported Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 470e100892174cd9e7f4c5534ec97e9d2a575350
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 97f188b174018aa26ceca2b3954b4964b9f42085e8d6085f62bf139018d53263
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006700"
 ---
-# <a name="g_wszwmvcframeinterpolationsupported"></a>g \_ wszwmvcframeinterpolationsupported
+# <a name="g_wszwmvcframeinterpolationsupported"></a>g \_ wszWMVCFrameInterpolationSupported
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

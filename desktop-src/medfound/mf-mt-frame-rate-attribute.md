@@ -1,35 +1,35 @@
 ---
-description: Die Framerate eines Video Medientyps in Frames pro Sekunde.
+description: Bildfrequenz eines Videomedientyps in Frames pro Sekunde.
 ms.assetid: 8336559c-06f1-478e-b921-e9eae7425230
-title: MF_MT_FRAME_RATE-Attribut (mfapi. h)
+title: MF_MT_FRAME_RATE Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8df2ef4268bd643d9f65eb16c3f7257bcaceb1d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bb49da7667286c17bfa500a8a90a9f7083e786483120e40ba2d635710668a4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113810"
 ---
-# <a name="mf_mt_frame_rate-attribute"></a>MF- \_ MT- \_ Frame \_ Raten Attribut
+# <a name="mf_mt_frame_rate-attribute"></a>MF \_ MT \_ FRAME \_ RATE-Attribut
 
-Die Framerate eines Video Medientyps in Frames pro Sekunde.
+Bildfrequenz eines Videomedientyps in Frames pro Sekunde.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Framerate wird als Verhältnis ausgedrückt. Die oberen 32 Bits des Attribut Werts enthalten den Zähler, und die unteren 32 Bits enthalten den Nenner. Wenn die Framerate z. b. 30 Frames pro Sekunde (fps) ist, ist das Verhältnis 30/1. Wenn die Framerate 29,97 fps beträgt, ist das Verhältnis 30.000/1001.
+Die Bildfrequenz wird als Verhältnis ausgedrückt. Die oberen 32 Bits des Attributwerts enthalten den Zähler und die unteren 32 Bits den Nenner. Wenn die Bildfrequenz beispielsweise 30 Frames pro Sekunde (fps) beträgt, beträgt das Verhältnis 30/1. Wenn die Bildfrequenz 29,97 fps beträgt, beträgt das Verhältnis 30.000/1001.
 
-Verwenden Sie die [**mfsetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio) -Funktion, um den Wert festzulegen. Um den Wert zu erhalten, verwenden Sie die [**mfgetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio) -Funktion.
+Verwenden Sie zum Festlegen des Werts die [**MFSetAttributeRatio-Funktion.**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio) Verwenden Sie die [**MFGetAttributeRatio-Funktion,**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio) um den Wert abzurufen.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Framerate für einen Video Medientyp festgelegt.
+Im folgenden Beispiel wird die Bildfrequenz für einen Videomedientyp festgelegt.
 
 
 ```
@@ -51,7 +51,7 @@ inline HRESULT SetFrameRate(
 
 
 
-Im folgenden Beispiel wird die Frame Rate aus einem Video Medientyp abgerufen.
+Im folgenden Beispiel wird die Bildfrequenz von einem Videomedientyp abgeleitet.
 
 
 ```
@@ -79,9 +79,9 @@ inline HRESULT GetFrameRate(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -92,16 +92,16 @@ inline HRESULT GetFrameRate(
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
-[**Mfaveragetimeperframeumframerate**](/windows/desktop/api/mfapi/nf-mfapi-mfaveragetimeperframetoframerate)
+[**MFAverageTimePerFrameToFrameRate**](/windows/desktop/api/mfapi/nf-mfapi-mfaveragetimeperframetoframerate)
 </dt> <dt>
 
-[**Mfframerateesaveragetimeperframe**](/windows/desktop/api/mfapi/nf-mfapi-mfframeratetoaveragetimeperframe)
+[**MFFrameRateToAverageTimePerFrame**](/windows/desktop/api/mfapi/nf-mfapi-mfframeratetoaveragetimeperframe)
 </dt> </dl>
 
  

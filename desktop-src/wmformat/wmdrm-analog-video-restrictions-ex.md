@@ -1,10 +1,10 @@
 ---
-title: WMDRM_ANALOG_VIDEO_RESTRICTIONS_EX Struktur (wmdrmsdk. h)
-description: Die WMDRM-unterschiedlichen \_ analogen \_ Video \_ Einschränkungen \_ in der Struktur enthalten erweiterte Informationen zu einer Einschränkung für die Wiedergabe von Inhalten als analoges Video.
+title: WMDRM_ANALOG_VIDEO_RESTRICTIONS_EX -Struktur (Wmdrmsdk.h)
+description: Die WMDRM ANALOG VIDEO RESTRICTIONS EX-Struktur enthält erweiterte Informationen zu einer Einschränkung für die Wiedergabe von \_ \_ Inhalten als \_ \_ analoges Video.
 ms.assetid: fe9092fe-a717-4377-9653-1cc07795319f
 keywords:
-- WMDRM_ANALOG_VIDEO_RESTRICTIONS_EX Struktur-Windows Media-Format
-- Struktur des Windows-Medien Formats
+- WMDRM_ANALOG_VIDEO_RESTRICTIONS_EX struktur windows media format
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59c9ca5f58cf2adadeb5a6a0618457472cde976c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0e9cbacff2d330c869c35eb7a3d1ca46ae6c80a030495ffec42eabc3726436c6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006540"
 ---
-# <a name="wmdrm_analog_video_restrictions_ex-structure"></a>WMDRM \_ - \_ Einschränkungen für analoge Videos Ex- \_ \_ Struktur
+# <a name="wmdrm_analog_video_restrictions_ex-structure"></a>WMDRM \_ ANALOG VIDEO RESTRICTIONS EX \_ \_ \_ structure
 
-Die **WMDRM-unterschiedlichen \_ analogen \_ Video \_ Einschränkungen \_** in der Struktur enthalten erweiterte Informationen zu einer Einschränkung für die Wiedergabe von Inhalten als analoges Video.
+Die **WMDRM \_ ANALOG VIDEO RESTRICTIONS \_ \_ \_ EX-Struktur** enthält erweiterte Informationen zu einer Einschränkung für die Wiedergabe von Inhalten als analoges Video.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,24 +51,24 @@ Versionsnummer:
 
 </dd> <dt>
 
-**guidrestrictionid**
+**guidRestrictionID**
 </dt> <dd>
 
 Einschränkungs-ID.
 
 </dd> <dt>
 
-**cbrestrictiondata**
+**cbRestrictionData**
 </dt> <dd>
 
-Größe der Einschränkungs Daten in Bytes.
+Größe der Einschränkungsdaten in Bytes.
 
 </dd> <dt>
 
-**pbrestrictiondata**
+**pbRestrictionData**
 </dt> <dd>
 
-Einschränkungs Daten.
+Einschränkungsdaten.
 
 </dd> </dl>
 
@@ -82,18 +82,18 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Strukturen**](drm-structures.md)
 </dt> <dt>
 
-[**\_Einschränkungen für analoge \_ Videos \_ in WMDRM**](wmdrm-analog-video-restrictions.md)
+[**WMDRM – \_ EINSCHRÄNKUNGEN FÜR \_ ANALOGE \_ VIDEOS**](wmdrm-analog-video-restrictions.md)
 </dt> </dl>
 
  

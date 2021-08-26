@@ -1,35 +1,35 @@
 ---
 title: Erstellen von Deskriptoren
-description: Beschreibt und zeigt Beispiele für das Erstellen von Index-, Vertex-und konstantenpuffersichten. Shader-Ressource, Renderziel, unsortierter Zugriff, Streamausgabe-und tiefen Schablonen Ansichten; und Samplers. Alle Methoden zum Erstellen von Deskriptoren sind frei Thread.
+description: Beschreibt und zeigt Beispiele zum Erstellen von Index-, Scheitelpunkt- und Konstantenpufferansichten. Shaderressource, Renderziel, ungeordneter Zugriff, Streamausgabe und Tiefenschablonenansichten; und Sampler. Alle Methoden zum Erstellen von Deskriptoren sind frei gethreadt.
 ms.assetid: 0D360A7C-8A2F-49E1-A5CC-98C958B59D1C
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aac9aab5dde0f5ca0864fcc1627ade984c6b6ccf
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 915cf1d92165f6d802bf4e8698180675a3edb32bd77da0510f4d9b52d6e044b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104548677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069710"
 ---
 # <a name="creating-descriptors"></a>Erstellen von Deskriptoren
 
-Beschreibt und zeigt Beispiele für das Erstellen von Index-, Vertex-und konstantenpuffersichten. Shader-Ressource, Renderziel, unsortierter Zugriff, Streamausgabe-und tiefen Schablonen Ansichten; und Samplers. Alle Methoden zum Erstellen von Deskriptoren sind frei Thread.
+Beschreibt und zeigt Beispiele zum Erstellen von Index-, Scheitelpunkt- und Konstantenpufferansichten. Shaderressource, Renderziel, ungeordneter Zugriff, Streamausgabe und Tiefenschablonenansichten; und Sampler. Alle Methoden zum Erstellen von Deskriptoren sind frei gethreadt.
 
--   [Index Puffer Ansicht](#index-buffer-view)
--   [Vertex-Puffer Ansicht](#vertex-buffer-view)
+-   [Indexpufferansicht](#index-buffer-view)
+-   [Vertexpufferansicht](#vertex-buffer-view)
 -   [Shader-Ressourcenansicht](#shader-resource-view)
--   [Konstante Puffer Ansicht](#constant-buffer-view)
+-   [Konstantenpufferansicht](#constant-buffer-view)
 -   [Sampler](#sampler)
--   [Ansicht für ungeordnete Zugriffe](#unordered-access-view)
--   [Stream-Ausgabe Ansicht](#stream-output-view)
--   [Ansicht des Renderziels](#render-target-view)
--   [Ansicht der tiefen Schablone](#depth-stencil-view)
--   [Verwandte Themen](#related-topics)
+-   [Ungeordnete Zugriffsansicht](#unordered-access-view)
+-   [Streamausgabeansicht](#stream-output-view)
+-   [Renderzielansicht](#render-target-view)
+-   [Tiefenschablonenansicht](#depth-stencil-view)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="index-buffer-view"></a>Index Puffer Ansicht
+## <a name="index-buffer-view"></a>Indexpufferansicht
 
-Füllen Sie zum Erstellen einer Index Puffer Ansicht eine [**D3D12- \_ Index \_ Puffer \_ Ansichts**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view) Struktur aus:
+Um eine Indexpufferansicht zu erstellen, füllen Sie eine [**D3D12 \_ INDEX \_ BUFFER \_ VIEW-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_index_buffer_view) aus:
 
 ``` syntax
 typedef struct D3D12_INDEX_BUFFER_VIEW
@@ -40,15 +40,15 @@ typedef struct D3D12_INDEX_BUFFER_VIEW
 }   D3D12_INDEX_BUFFER_VIEW;
 ```
 
-Legen Sie den Speicherort ( [**getgpuvirtualaddress**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress)) und die Größe des Puffers fest. Beachten Sie dabei, dass die \_ virtuelle D3D12 GPU- \_ \_ Adresse wie folgt definiert ist:
+Legen Sie den Speicherort [**(GetGPUVirtualAddress)**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress)und die Größe des Puffers fest, und notieren Sie, dass D3D12 \_ GPU VIRTUAL ADDRESS wie folgt definiert \_ \_ ist:
 
 `typedef UINT64 D3D12_GPU_VIRTUAL_ADDRESS;`
 
-Weitere Informationen finden Sie in der [**DXGI- \_ formatenum**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) . In der Regel kann für einen Index Puffer folgende Definition verwendet werden:
+Weitere Informationen finden Sie in der [**DXGI \_ FORMAT-Enumeration.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) In der Regel kann für einen Indexpuffer die folgende Definition verwendet werden:
 
 `const DXGI_FORMAT StandardIndexFormat = DXGI_FORMAT_R32_UINT;`
 
-Schließlich wird [**ID3D12GraphicsCommandList:: iasetindexbuffer**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetindexbuffer)aufgerufen.
+Rufen Sie abschließend [**ID3D12GraphicsCommandList::IASetIndexBuffer auf.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetindexbuffer)
 
 Beispiel:
 
@@ -62,9 +62,9 @@ m_indexBufferView.Format = SampleAssets::StandardIndexFormat;
 
 
 
-## <a name="vertex-buffer-view"></a>Vertex-Puffer Ansicht
+## <a name="vertex-buffer-view"></a>Vertexpufferansicht
 
-Füllen Sie eine [**D3D12 \_ Vertex- \_ Puffer \_ Ansichts**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view) Struktur aus, um eine Vertex-Puffer Ansicht zu erstellen:
+Um eine Scheitelpunktpufferansicht zu erstellen, füllen Sie eine [**D3D12 \_ VERTEX \_ BUFFER \_ VIEW-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_vertex_buffer_view) aus:
 
 ``` syntax
 typedef struct D3D12_VERTEX_BUFFER_VIEW {
@@ -74,11 +74,11 @@ typedef struct D3D12_VERTEX_BUFFER_VIEW {
 } D3D12_VERTEX_BUFFER_VIEW;
 ```
 
-Legen Sie den Speicherort ( [**getgpuvirtualaddress**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress)) und die Größe des Puffers fest. Beachten Sie dabei, dass die \_ virtuelle D3D12 GPU- \_ \_ Adresse wie folgt definiert ist:
+Legen Sie den Speicherort [**(GetGPUVirtualAddress)**](/windows/desktop/api/d3d12/nf-d3d12-id3d12resource-getgpuvirtualaddress)und die Größe des Puffers fest, und notieren Sie, dass D3D12 \_ GPU VIRTUAL ADDRESS wie folgt definiert \_ \_ ist:
 
 `typedef UINT64 D3D12_GPU_VIRTUAL_ADDRESS;`
 
-Der Stride-Wert ist in der Regel die Größe einer einzelnen Scheitelpunkt Datenstruktur, z `sizeof(Vertex);` . b., und dann [**ID3D12GraphicsCommandList:: iasetvertexbuffers**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers)aufrufen.
+Der Schritt ist in der Regel die Größe einer einzelnen Vertexdatenstruktur, z. B. `sizeof(Vertex);` , und rufen Sie dann [**ID3D12GraphicsCommandList::IASetVertexBuffers auf.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers)
 
 Beispiel:
 
@@ -94,7 +94,7 @@ m_vertexBufferView.StrideInBytes = SampleAssets::StandardVertexStride;
 
 ## <a name="shader-resource-view"></a>Shader-Ressourcenansicht
 
-Füllen Sie zum Erstellen einer shaderressourcenansicht eine [**D3D12 \_ Shader \_ Resource \_ View \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc) -Struktur Struktur aus:
+Um eine Shaderressourcenansicht zu erstellen, füllen Sie eine [**D3D12 \_ SHADER \_ RESOURCE VIEW \_ \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc) aus:
 
 ``` syntax
 typedef struct D3D12_SHADER_RESOURCE_VIEW_DESC  
@@ -118,25 +118,25 @@ typedef struct D3D12_SHADER_RESOURCE_VIEW_DESC
     }   D3D12_SHADER_RESOURCE_VIEW_DESC; 
 ```
 
-Das `ViewDimension` Feld ist auf 0 (null) oder einen Wert der [**D3D12- \_ Puffer- \_ SRV- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_buffer_srv_flags) -Enumeration festgelegt.
+Das `ViewDimension` Feld ist auf 0 (null) oder einen Wert der Enumeration [**D3D12 \_ BUFFER \_ SRV \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_buffer_srv_flags) festgelegt.
 
-Zu den Aufständen und Strukturen, auf die von der [**D3D12- \_ Shader- \_ Ressourcen \_ Ansicht \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc) verwiesen wird, gehören:
+Die Enumerationen und Strukturen, auf die von [**D3D12 \_ SHADER \_ RESOURCE VIEW \_ \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_shader_resource_view_desc) verwiesen wird, sind:
 
--   [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
--   [**D3D12- \_ Puffer- \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_srv)
+-   [**\_DXGI-FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+-   [**D3D12 \_ BUFFER \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_srv)
 -   [**D3D12 \_ TEX1D \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_srv)
--   [**D3D12 \_ TEX1D- \_ Array ( \_ SRV)**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_srv)
+-   [**D3D12 \_ TEX1D \_ ARRAY \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_srv)
 -   [**D3D12 \_ TEX2D \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_srv)
--   [**D3D12 \_ TEX2D- \_ Array ( \_ SRV)**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_srv)
+-   [**D3D12 \_ TEX2D \_ ARRAY \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_srv)
 -   [**D3D12 \_ TEX2DMS \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_srv)
--   [**D3D12 \_ TEX2DMS- \_ Array ( \_ SRV)**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_srv)
+-   [**D3D12 \_ TEX2DMS \_ ARRAY \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_srv)
 -   [**D3D12 \_ TEX3D \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex3d_srv)
--   [**D3D12 \_ Texcube- \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texcube_srv)
--   [**D3D12 \_ Texcube- \_ array \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texcube_array_srv)
+-   [**D3D12 \_ TEXCUBE \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texcube_srv)
+-   [**D3D12 \_ TEXCUBE \_ ARRAY \_ SRV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texcube_array_srv)
 
-Beachten Sie, dass "float" `ResourceMinLODClamp` zu Srvs für Tex1D/2D/3D/Cube hinzugefügt wurde. In D3D11 war es eine Eigenschaft einer Ressource, aber dies entsprach nicht der Implementierung von Hardware. `StructureByteStride` wurde zu Buffer Srvs hinzugefügt, wobei in D3D11 eine Eigenschaft der Ressource war. Wenn der Stride-Wert ungleich 0 (null) ist, gibt eine strukturierte Puffer Ansicht an, und das Format muss auf das DXGI-Format Unknown festgelegt werden \_ \_ .
+Beachten Sie unten, dass float `ResourceMinLODClamp` zu SRVs für Tex1D/2D/3D/Cube hinzugefügt wurde. In D3D11 war es eine Eigenschaft einer Ressource, aber dies stimmte nicht mit der Implementierung in der Hardware überein. `StructureByteStride` wurde Puffer-SRVs hinzugefügt, wobei es sich in D3D11 um eine Eigenschaft der Ressource handelte. Wenn der Schritt ungleich 0 (null) ist, gibt dies eine strukturierte Pufferansicht an, und das Format muss auf DXGI FORMAT UNKNOWN festgelegt \_ \_ werden.
 
-Zum Schluss rufen Sie zum Erstellen der Shader-Ressourcen Ansicht [**ID3D12Device:: | ateshaderresourceview**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview)auf.
+Rufen Sie zum Erstellen der Shaderressourcenansicht schließlich [**ID3D12Device::CreateShaderResourceView**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createshaderresourceview)auf.
 
 Beispiel:
 
@@ -155,9 +155,9 @@ m_device->CreateShaderResourceView(m_textures[i].Get(), &srvDesc, cbvSrvHandle);
 
 
 
-## <a name="constant-buffer-view"></a>Konstante Puffer Ansicht
+## <a name="constant-buffer-view"></a>Konstantenpufferansicht
 
-Füllen Sie zum Erstellen einer Konstanten Puffer Ansicht die Struktur [**einer \_ Konstanten \_ Puffer \_ Ansicht \_ D3D12**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_constant_buffer_view_desc) aus:
+Füllen Sie zum Erstellen einer konstanten Pufferansicht eine [**D3D12 \_ CONSTANT BUFFER VIEW \_ \_ \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_constant_buffer_view_desc) aus:
 
 ``` syntax
 typedef struct D3D12_CONSTANT_BUFFER_VIEW_DESC {
@@ -166,7 +166,7 @@ typedef struct D3D12_CONSTANT_BUFFER_VIEW_DESC {
 } D3D12_CONSTANT_BUFFER_VIEW_DESC;
 ```
 
-Dann rufe ich [**ID3D12Device:: kreateconstantbufferview auf**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview).
+Rufen Sie dann [**ID3D12Device::CreateConstantBufferView**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createconstantbufferview)auf.
 
 Beispiel:
 
@@ -183,7 +183,7 @@ m_device->CreateConstantBufferView(&cbvDesc, m_cbvHeap->GetCPUDescriptorHandleFo
 
 ## <a name="sampler"></a>Sampler
 
-Füllen Sie zum Erstellen eines Beispiels eine [**D3D12 \_ Sampler \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_sampler_desc) -Erstellungs Struktur aus:
+Füllen Sie zum Erstellen eines Beispiels eine [**D3D12 \_ SAMPLER \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_sampler_desc) aus:
 
 ``` syntax
 typedef struct D3D12_SAMPLER_DESC
@@ -201,15 +201,15 @@ typedef struct D3D12_SAMPLER_DESC
 } D3D12_SAMPLER_DESC;
 ```
 
-Weitere Informationen zum Ausfüllen dieser Struktur finden Sie in den folgenden Auffüllungen:
+Informationen zum Ausfüllen dieser Struktur finden Sie in den folgenden Enumerationen:
 
--   [**D3D12- \_ Filter**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter)
--   [**D3D12 \_ - \_ Filtertyp**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter_type)
--   [**D3D12 \_ - \_ Reduzierungs \_ Typen**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter_reduction_type)
--   [**D3D12- \_ Textur \_ Adress \_ Modus**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_address_mode)
--   [**D3D12 \_ Vergleichs- \_ Func**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_comparison_func)
+-   [**D3D12-FILTER \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter)
+-   [**\_D3D12-FILTERTYP \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter_type)
+-   [**D3D12 \_ FILTER \_ REDUCTION \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_filter_reduction_type)
+-   [**D3D12 \_ \_ TEXTURADRESSMODUS \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_texture_address_mode)
+-   [**\_D3D12-VERGLEICHS-FUNC \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_comparison_func)
 
-Nennen Sie schließlich [**ID3D12Device::**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsampler)"".
+Rufen Sie abschließend [**ID3D12Device::CreateSampler**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createsampler)auf.
 
 Beispiel:
 
@@ -231,9 +231,9 @@ m_device->CreateSampler(&samplerDesc, m_samplerHeap->GetCPUDescriptorHandleForHe
 
 
 
-## <a name="unordered-access-view"></a>Ansicht für ungeordnete Zugriffe
+## <a name="unordered-access-view"></a>Ungeordnete Zugriffsansicht
 
-Füllen Sie zum Erstellen einer Ansicht mit ungeordneten Zugriffen eine nicht [**geordnete zugriffsansichts \_ \_ \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_unordered_access_view_desc) Struktur aus:
+Um eine ungeordnete Zugriffsansicht zu erstellen, füllen Sie eine [**D3D12 \_ UNORDERED \_ ACCESS VIEW \_ \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_unordered_access_view_desc) aus:
 
 ``` syntax
 typedef struct D3D12_UNORDERED_ACCESS_VIEW_DESC
@@ -253,21 +253,21 @@ typedef struct D3D12_UNORDERED_ACCESS_VIEW_DESC
 } D3D12_UNORDERED_ACCESS_VIEW_DESC;
 ```
 
-Das- `ViewDimension` Feld ist auf 0 (null) oder einen Wert der [**D3D12 buffer- \_ \_ UAV- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_buffer_uav_flags) -Enumeration festgelegt.
+Das `ViewDimension` Feld ist auf 0 (null) oder einen Wert der Enumeration [**D3D12 \_ BUFFER \_ UAV \_ FLAGS**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_buffer_uav_flags) festgelegt.
 
-Weitere Informationen finden Sie in den folgenden Aufständen und Strukturen:
+Weitere Informationen finden Sie in den folgenden Enumerationen und Strukturen:
 
--   [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
--   [**D3D12- \_ Puffer- \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_uav)
+-   [**\_DXGI-FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+-   [**D3D12 \_ BUFFER \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_uav)
 -   [**D3D12 \_ TEX1D \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_uav)
--   [**D3D12 \_ TEX1D \_ array- \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_uav)
+-   [**D3D12 \_ TEX1D \_ ARRAY \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_uav)
 -   [**D3D12 \_ TEX2D \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_uav)
--   [**D3D12 \_ TEX2D \_ array- \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_uav)
+-   [**D3D12 \_ TEX2D \_ ARRAY \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_uav)
 -   [**D3D12 \_ TEX3D \_ UAV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex3d_uav)
 
-`StructureByteStride` wurde zu Puffer-UAVs hinzugefügt, wobei in D3D11 eine Eigenschaft der Ressource war. Wenn der Stride-Wert ungleich 0 (null) ist, gibt eine strukturierte Puffer Ansicht an, und das Format muss auf das DXGI-Format Unknown festgelegt werden \_ \_ .
+`StructureByteStride` wurde Puffer-UAVs hinzugefügt, wobei es sich in D3D11 um eine Eigenschaft der Ressource handelte. Wenn der Schritt ungleich 0 (null) ist, gibt dies eine strukturierte Pufferansicht an, und das Format muss auf DXGI FORMAT UNKNOWN festgelegt \_ \_ werden.
 
-Zum Schluss wird [**ID3D12Device:: | ateunorderedaccessview**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview)aufgerufen.
+Rufen Sie abschließend [**ID3D12Device::CreateUnorderedAccessView**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createunorderedaccessview)auf.
 
 Beispiel:
 
@@ -325,9 +325,9 @@ m_processedCommandBufferCounterReset->Unmap(0, nullptr);
 
 
 
-## <a name="stream-output-view"></a>Stream-Ausgabe Ansicht
+## <a name="stream-output-view"></a>Streamausgabeansicht
 
-Füllen Sie zum Erstellen einer Stream-Ausgabe Ansicht eine [**D3D12 \_ Stream- \_ Ausgabe \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_stream_output_desc) -Struktur aus.
+Um eine Streamausgabeansicht zu erstellen, füllen Sie eine [**D3D12 \_ STREAM \_ OUTPUT \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_stream_output_desc) aus.
 
 ``` syntax
 typedef struct D3D12_STREAM_OUTPUT_DESC  
@@ -340,11 +340,11 @@ typedef struct D3D12_STREAM_OUTPUT_DESC
     }   D3D12_STREAM_OUTPUT_DESC;  
 ```
 
-Klicken Sie dann auf [**ID3D12GraphicsCommandList:: sosettargets**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-sosettargets).
+Rufen Sie dann [**ID3D12GraphicsCommandList::SOSetTargets auf.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-sosettargets)
 
-## <a name="render-target-view"></a>Ansicht des Renderziels
+## <a name="render-target-view"></a>Renderzielansicht
 
-Um eine renderzielansicht zu erstellen, füllen Sie die DESC-Struktur einer [**D3D12- \_ \_ renderzielsicht \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_render_target_view_desc) aus.
+Um eine Renderzielansicht zu erstellen, füllen Sie eine [**D3D12 \_ RENDER TARGET VIEW \_ \_ \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_render_target_view_desc) aus.
 
 ``` syntax
 typedef struct D3D12_RENDER_TARGET_VIEW_DESC
@@ -366,21 +366,21 @@ typedef struct D3D12_RENDER_TARGET_VIEW_DESC
 } D3D12_RENDER_TARGET_VIEW_DESC;
 ```
 
-Das- `ViewDimension` Feld ist auf 0 (null) oder einen Wert der [**D3D12 \_ RTV- \_ Dimensions**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_rtv_dimension) Enumeration festgelegt.
+Das `ViewDimension` Feld ist auf 0 (null) oder einen Wert der Enumeration [**D3D12 \_ RTV \_ DIMENSION**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_rtv_dimension) festgelegt.
 
-Weitere Informationen finden Sie in den folgenden Aufständen und Strukturen:
+Weitere Informationen finden Sie in den folgenden Enumerationen und Strukturen:
 
--   [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
--   [**D3D12 \_ \_ -Puffer-RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_rtv)
+-   [**\_DXGI-FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+-   [**D3D12 \_ BUFFER \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_buffer_rtv)
 -   [**D3D12 \_ TEX1D \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_rtv)
--   [**D3D12 \_ TEX1D \_ array \_ -RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_rtv)
+-   [**D3D12 \_ TEX1D \_ ARRAY \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_rtv)
 -   [**D3D12 \_ TEX2D \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_rtv)
 -   [**D3D12 \_ TEX2DMS \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_rtv)
--   [**D3D12 \_ TEX2D \_ array \_ -RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_rtv)
--   [**D3D12 \_ TEX2DMS \_ array \_ -RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_rtv)
+-   [**D3D12 \_ TEX2D \_ ARRAY \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_rtv)
+-   [**D3D12 \_ TEX2DMS \_ ARRAY \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_rtv)
 -   [**D3D12 \_ TEX3D \_ RTV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex3d_rtv)
 
-Zum Schluss wird [**ID3D12Device:: ":: kreaterendertargetview**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrendertargetview)" aufgerufen.
+Rufen Sie abschließend [**ID3D12Device::CreateRenderTargetView auf.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createrendertargetview)
 
 Beispiel:
 
@@ -412,9 +412,9 @@ Beispiel:
 
 
 
-## <a name="depth-stencil-view"></a>Ansicht der tiefen Schablone
+## <a name="depth-stencil-view"></a>Tiefenschablonenansicht
 
-Füllen Sie zum Erstellen einer Ansicht der tiefen Schablone die Struktur der Struktur der [**D3D12- \_ tiefen \_ Schablone \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_depth_stencil_view_desc) aus:
+Um eine Tiefenschablonenansicht zu erstellen, füllen Sie eine [**D3D12 \_ DEPTH \_ STENCIL \_ VIEW \_ DESC-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_depth_stencil_view_desc) aus:
 
 ``` syntax
 typedef struct D3D12_DEPTH_STENCIL_VIEW_DESC  
@@ -434,19 +434,19 @@ typedef struct D3D12_DEPTH_STENCIL_VIEW_DESC
     }   D3D12_DEPTH_STENCIL_VIEW_DESC;  
 ```
 
-Das- `ViewDimension` Feld ist auf 0 (null) oder einen Wert der [**D3D12 DSV- \_ \_ Dimensions**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_dsv_dimension) Enumeration festgelegt. Informationen zu den Flageinstellungen finden Sie in der [**D3D12 \_ DSV- \_ Flags**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_dsv_flags) -Enumeration.
+Das `ViewDimension` Feld ist auf 0 (null) oder einen Wert der [**D3D12 \_ DSV \_ DIMENSION-Enumeration**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_dsv_dimension) festgelegt. Die Flageinstellungen finden Sie in der [**D3D12 \_ DSV \_ FLAGS-Enumeration.**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_dsv_flags)
 
-Weitere Informationen finden Sie in den folgenden Aufständen und Strukturen:
+Weitere Informationen finden Sie in den folgenden Aufzählen und Strukturen:
 
--   [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+-   [**\_DXGI-FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 -   [**D3D12 \_ TEX1D \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_dsv)
--   [**D3D12 \_ TEX1D \_ array- \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_dsv)
+-   [**D3D12 \_ TEX1D \_ ARRAY \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex1d_array_dsv)
 -   [**D3D12 \_ TEX2D \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_dsv)
--   [**D3D12 \_ TEX2D \_ array- \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_dsv)
+-   [**D3D12 \_ TEX2D \_ ARRAY \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2d_array_dsv)
 -   [**D3D12 \_ TEX2DMS \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_dsv)
--   [**D3D12 \_ TEX2DMS \_ array- \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_dsv)
+-   [**D3D12 \_ TEX2DMS \_ ARRAY \_ DSV**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tex2dms_array_dsv)
 
-Zum Schluss wird [**ID3D12Device:: | atedepthstencilview**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createdepthstencilview)aufgerufen.
+Rufen Sie abschließend [**ID3D12Device::CreateDepthStencilView auf.**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createdepthstencilview)
 
 Beispiel:
 
@@ -479,7 +479,7 @@ Beispiel:
 
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
@@ -489,6 +489,6 @@ Beispiel:
 [Deskriptorheaps](descriptor-heaps.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

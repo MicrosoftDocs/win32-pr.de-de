@@ -1,25 +1,25 @@
 ---
-description: 'Die Windows Server 2003-Version von VSS unterstützt nicht mehr Folgendes:'
+description: 'Das Windows Server 2003-Release von VSS unterstützt Folgendes nicht mehr:'
 ms.assetid: 01993cae-433e-4d01-b805-f97592369575
-title: Aus Windows Server 2003 entfernte Funktionen
+title: Aus Windows Server 2003 entfernte Funktionalität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 181d053420f0fc947ebad024c0eaf2bbaf32f3e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb7cd2cbfce24717bdd0bf0c36db1c5d8ff7faddebd5b7795cff6640b74df3c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006360"
 ---
-# <a name="functionality-removed-from-windows-server-2003"></a>Aus Windows Server 2003 entfernte Funktionen
+# <a name="functionality-removed-from-windows-server-2003"></a>Aus Windows Server 2003 entfernte Funktionalität
 
-Die Windows Server 2003-Version von VSS unterstützt nicht mehr Folgendes:
+Das Windows Server 2003-Release von VSS unterstützt Folgendes nicht mehr:
 
--   Writer können bei Wiederherstellungs Vorgängen keine neuen Datei Wiederherstellungs Ziele ([*neue Zielspeicher Orte*](vssgloss-n.md)) angeben.
--   Das erneute Bereitstellen einer verfügbar gemachten Schatten Kopie als beschreibbares Volume wird nicht mehr unterstützt. Die **IVssBackupComponents:: remountreadwrite** -Methode ist nicht mehr verfügbar.
--   Writer können nicht explizit enthaltene Dateien angeben (mithilfe von [**ivsskreatewritermetadata:: addincludefiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addincludefiles)). Dateien können einer Komponente nur als Teil eines Datei Satzes mithilfe von [**ivsskreateschreitermetadata:: addfilestofilegroup**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup), [**ivsskreateschreitermetadata:: adddatabasefiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**ivsskreateschreitermetadata:: adddatabaselogfiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles)hinzugefügt werden.
+-   Writer können bei Wiederherstellungsvorgängen keine neuen Dateiwiederherstellungsziele [*(neue Zielspeicherorte)*](vssgloss-n.md)angeben.
+-   Die erneute Bereitstellung einer verfügbar gemachten Schattenkopie als beschreibbares Volume wird nicht mehr unterstützt. Die **IVssBackupComponents::RemountReadWrite-Methode** ist nicht mehr verfügbar.
+-   Writer können keine explizit eingeschlossenen Dateien angeben (mit [**IVssCreateWriterMetadata::AddIncludeFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addincludefiles)). Dateien können einer Komponente nur als Teil eines Dateisatzes hinzugefügt werden, indem [**IVssCreateWriterMetadata::AddFilesToFileGroup,**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addfilestofilegroup) [**IVssCreateWriterMetadata::AddDatabaseFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabasefiles)oder [**IVssCreateWriterMetadata::AddDatabaseLogFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-adddatabaselogfiles)verwendet werden.
 
-    Dateien können mithilfe von [**ivsskreateschreitermetadata:: addexcludefiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addexcludefiles)weiterhin explizit aus einer Komponente ausgeschlossen werden.
+    Dateien können mithilfe von [**IVssCreateWriterMetadata::AddExcludeFiles**](/windows/desktop/api/VsWriter/nf-vswriter-ivsscreatewritermetadata-addexcludefiles)weiterhin explizit aus einer Komponente ausgeschlossen werden.
 
  
 

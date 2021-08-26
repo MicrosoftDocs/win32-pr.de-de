@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_DeliveryOptimization02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ DeliveryOptimization02-Klasse stellt die verfügbaren Übermittlungs Optimierungs Richtlinien dar.
+description: Die MDM \_ Policy \_ Config01 \_ DeliveryOptimization02-Klasse stellt die verfügbaren Übermittlungsoptimierungsrichtlinien dar.
 ms.assetid: 10dfb751-f044-4f30-90e0-af0fcb0931fb
 keywords:
 - MDM_Policy_Config01_DeliveryOptimization02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fb9675f87a5bf9951e125bded69ae5eb10feb0b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3f9aad502667bcdba9a5983341dde0d3515900c66a94968dfa86ce402af27b0a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103307"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104250"
 ---
-# <a name="mdm_policy_config01_deliveryoptimization02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ DeliveryOptimization02-Klasse
+# <a name="mdm_policy_config01_deliveryoptimization02-class"></a>MDM \_ Policy \_ Config01 \_ DeliveryOptimization02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ DeliveryOptimization02** -Klasse stellt die verfügbaren Übermittlungs Optimierungs Richtlinien dar.
+Die **MDM \_ Policy \_ Config01 \_ DeliveryOptimization02-Klasse** stellt die verfügbaren Übermittlungsoptimierungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -62,17 +62,17 @@ class MDM_Policy_Config01_DeliveryOptimization02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ DeliveryOptimization02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ DeliveryOptimization02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ DeliveryOptimization02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ DeliveryOptimization02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Doabsolutemaxcachesize](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize)
+[DOAbsoluteMaxCacheSize](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -83,7 +83,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Doallowvpnpeercaching](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doallowvpnpeercaching)
+[DOAllowVPNPeerCaching](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doallowvpnpeercaching)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -94,10 +94,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Docachehost](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)
+[DOCacheHost](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -105,29 +105,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dodownloadmode](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodownloadmode)
-</dt> <dd> <dl> <dt>
-
-Datentyp: **sint32**
-</dt> <dt>
-
-Zugriffstyp: Lesen/Schreiben
-</dt> </dl>
-
-</dd> <dt>
-
-[Dogroupid](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dogroupid)
-</dt> <dd> <dl> <dt>
-
-Datentyp: **Zeichenfolge**
-</dt> <dt>
-
-Zugriffstyp: Lesen/Schreiben
-</dt> </dl>
-
-</dd> <dt>
-
-[Domaxcacheage](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)
+[DODownloadMode](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodownloadmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -138,7 +116,18 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domaxcachesize](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)
+[DOGroupID](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dogroupid)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **string**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+[DOMaxCacheAge](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -149,7 +138,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domaxdownloadbandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxdownloadbandwidth)
+[DOMaxCacheSize](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -160,7 +149,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domaxuploadbandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxuploadbandwidth)
+[DOMaxDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxdownloadbandwidth)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -171,7 +160,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dominbackgroundqos](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbackgroundqos)
+[DOMaxUploadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxuploadbandwidth)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -182,7 +171,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dominbatteryprozagezudepwedtoupload](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload)
+[DOMinBackgroundQos](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbackgroundqos)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -193,7 +182,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domindisksizezuweisung wedtopeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer)
+[DOMinBatteryPercentageAllowedToUpload](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -204,7 +193,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dominfilesizetocache](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)
+[DOMinDiskSizeAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -215,7 +204,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dominramallowedtopeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer)
+[DOMinFileSizeToCache](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -226,18 +215,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domodifycachedrive](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive)
-</dt> <dd> <dl> <dt>
-
-Datentyp: **Zeichenfolge**
-</dt> <dt>
-
-Zugriffstyp: Lesen/Schreiben
-</dt> </dl>
-
-</dd> <dt>
-
-[Domonthlyuploaddatacap](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domonthlyuploaddatacap)
+[DOMinRAMAllowedToPeer](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -248,7 +226,29 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Dopercentagemaxdownloadbandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxdownloadbandwidth)
+[DOModifyCacheDrive](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **string**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+[DOMonthlyUploadDataCap](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domonthlyuploaddatacap)
+</dt> <dd> <dl> <dt>
+
+Datentyp: **sint32**
+</dt> <dt>
+
+Zugriffstyp: Lesen/Schreiben
+</dt> </dl>
+
+</dd> <dt>
+
+[DOPercentageMaxDownloadBandwidth](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dopercentagemaxdownloadbandwidth)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -262,32 +262,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "deliveryoptimization".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse lautet die Zeichenfolge "DeliveryOptimization".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/config".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/Policy/Config".
 
 </dd> </dl>
 
@@ -297,10 +297,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -309,7 +309,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

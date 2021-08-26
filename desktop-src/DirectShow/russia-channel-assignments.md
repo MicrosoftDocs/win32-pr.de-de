@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für Russische Föderation
+description: In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Russland verwendet werden.
 ms.assetid: 7585ce79-39ef-4174-833a-c314289fec43
-title: Channel-Zuweisungen für Russland
+title: Zuweisungen des Kanals in Russland
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 099e1f6929077a9370b543e1725d700ccdd24229
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9e336b3b6c5b0e8afba56625014a6798284c7a16fcef5a147d381f916a178ba3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078920"
 ---
-# <a name="russia-channel-assignments"></a>Channel-Zuweisungen für Russland
+# <a name="russia-channel-assignments"></a>Zuweisungen des Kanals in Russland
 
-In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für Russische Föderation
+In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Russland verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Unicable Frequency-Tabelle](unicable-frequency-table.md) verwendet.
 
--   [Übertragungs Zuweisungen](#broadcast-assignments)
--   [Kabel Zuweisungen](#cable-assignments)
+-   [Broadcastzuweisungen](#broadcast-assignments)
+-   [Kabelzuweisungen](#cable-assignments)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="broadcast-assignments"></a>Übertragungs Zuweisungen
+## <a name="broadcast-assignments"></a>Broadcastzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -91,7 +91,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
        783250000L,      // 60 TVK60
 ```
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -242,7 +242,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

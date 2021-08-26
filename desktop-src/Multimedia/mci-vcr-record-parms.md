@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_RECORD_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Daten Satz \_ Parameter enthält Parameter für den MCI- \_ Datensatz-Befehl für Video-Kassetten-Recorder.
+title: MCI_VCR_RECORD_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ RECORD \_ PARMS-Struktur enthält Parameter für den MCI \_ RECORD-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: a95a6dab-9854-4c44-989a-032dff680106
 keywords:
 - MCI_VCR_RECORD_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4089b6b7977959b5eb0d0ac60dd4e612b17b823d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e1b613c2b64bae1395b3fc402816145c0ef690801b9fd6402201198f7ff28a6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038230"
 ---
-# <a name="mci_vcr_record_parms-structure"></a>Struktur von MCI \_ VCR- \_ Daten Satz- \_ Parametern
+# <a name="mci_vcr_record_parms-structure"></a>MCI \_ VCR \_ RECORD \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Daten Satz \_** Parameter enthält Parameter für den [**MCI- \_ Datensatz**](mci-record.md) -Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ RECORD \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ RECORD-Befehl**](mci-record.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ typedef struct tagMCI_VCR_RECORD_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwfrom**
+**dwFrom**
 </dt> <dd>
 
-Wiedergabe Position
+Position, aus der wiedergegeben werden soll.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position der Wiedergabe.
+Position, an der wiedergegeben werden soll.
 
 </dd> <dt>
 
-**dwat**
+**dwAt**
 </dt> <dd>
 
-Zeitwert, der sich auf den [**MCI- \_ Datensatz**](mci-record.md) oder den [**MCI \_**](mci-cue.md) -Hinweis Befehl auswirkt. Bei einem **MCI- \_ Datensatz** ist dies der Zeitpunkt, zu dem die Aufzeichnung beginnt. Bei **MCI \_**-Hinweis ist dies die Zeit, zu der das cubegerät die in **dwfrom** angegebene Position erreicht.
+Zeitwert, der sich auf den [**MCI \_ RECORD-**](mci-record.md) oder [**MCI \_ CUE-Befehl**](mci-cue.md) auswirkt. Für **MCI \_ RECORD** ist dies der Zeitpunkt, zu dem die Aufzeichnung beginnt. Für **MCI \_ CUE** ist dies der Zeitpunkt, zu dem das gerät mit dem Cuing die in **dwFrom** angegebene Position erreicht.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Positionen werden im aktuellen Zeitformat angegeben.
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -93,16 +93,16 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ -Hinweis**](mci-cue.md)
+[**MCI \_ CUE**](mci-cue.md)
 </dt> <dt>
 
-[**MCI- \_ Datensatz**](mci-record.md)
+[**MCI \_ RECORD**](mci-record.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

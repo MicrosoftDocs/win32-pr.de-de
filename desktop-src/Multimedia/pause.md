@@ -1,9 +1,9 @@
 ---
-title: Befehl "anhalten"
-description: Der Pause-Befehl hält Wiedergabe oder Aufzeichnung an.
+title: Befehl "pause"
+description: Der Befehl zum Anhalten hält die Wiedergabe oder Aufzeichnung an.
 ms.assetid: 8fa1a40d-fdb1-4c9f-a8db-9dd6a0d83b87
 keywords:
-- Befehl "Pause" Windows Multimedia
+- Befehl "pause" Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25957defa4db514ce84f2e013dcc3751e21779b8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05f91441113d060a98219263e49388b99396fa2eeeb78d8f3eabdd6c71d8a3a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038090"
 ---
-# <a name="pause-command"></a>Befehl "anhalten"
+# <a name="pause-command"></a>Befehl "pause"
 
-Der Pause-Befehl hält Wiedergabe oder Aufzeichnung an. Die meisten Treiber behalten die aktuelle Position bei und setzen schließlich die Wiedergabe oder Aufzeichnung an dieser Position fort. CD-Audiodateien, Digital Video, MIDI Sequencer, VCR, Videodisk und Waveform-Audiogeräte erkennen diesen Befehl.
+Der Befehl zum Anhalten hält die Wiedergabe oder Aufzeichnung an. Die meisten Treiber behalten die aktuelle Position bei und setzen die Wiedergabe oder Aufzeichnung an dieser Position schließlich wieder auf. CD-Audio- und Digitalvideogeräte, DIE SEQUENCEr-, VCR-, videodisc- und waveform-audio-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -38,27 +38,27 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei den Treibern mcicda, mciseq und mcipionr funktioniert der Befehl Pause genauso wie der Befehl zum [stoppen](stop.md) .
+Mit den Treibern MCICDA, MCISEQ und MCIPIONR funktioniert der Befehl zum Anhalten genauso wie der [Befehl zum Beenden.](stop.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -83,10 +83,10 @@ pause mysound
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [stop](stop.md)

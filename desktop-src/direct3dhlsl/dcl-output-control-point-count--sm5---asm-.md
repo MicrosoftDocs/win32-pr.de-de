@@ -1,23 +1,23 @@
 ---
-title: dcl_output_control_point_count (SM5-ASM)
-description: Deklariert die Anzahl der Ausgabe Kontrollpunkte des Hull-Shader.
+title: dcl_output_control_point_count (sm5 - asm)
+description: Deklariert die Anzahl der Ausgabekontrollpunkt des Hüllen-Shaders.
 ms.assetid: 51E8117F-1802-413B-9820-04D5CEBE2DB6
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 147f8f7021252f07cdb6dd0f225555ff0f23d54b
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 93dc28a2af3ac50c835fa7ec38d7d344029af76a11cb2b84945dbf5009d68473
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104038372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024700"
 ---
-# <a name="dcl_output_control_point_count-sm5---asm"></a>Anzahl der DCL \_ \_ -Ausgabe Kontroll \_ Punkte \_ (SM5-ASM)
+# <a name="dcl_output_control_point_count-sm5---asm"></a>dcl \_ output control point count \_ \_ \_ (sm5 - asm)
 
-Deklariert die Anzahl der Ausgabe Kontrollpunkte des Hull-Shader.
+Deklariert die Anzahl der Ausgabekontrollpunkt des Hüllen-Shaders.
 
 
 
-| DCL \_ - \_ Ausgabe \_ Kontrollpunkt- \_ Anzahl N |
+| dcl \_ output control point count \_ \_ \_ N |
 |--------------------------------------|
 
 
@@ -28,42 +28,42 @@ Deklariert die Anzahl der Ausgabe Kontrollpunkte des Hull-Shader.
 
 | Element                                                   | BESCHREIBUNG                                                                                    |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/> | \[in \] einem ganzzahligen Wert von 0 bis 32, der die Anzahl von Ausgabe Kontrollpunkten angibt.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/> | \[in \] Ein ganzzahliger Wert zwischen 0 und 32, der die Anzahl der Ausgabekontrollpunkt angibt.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Hull-Shader kann 0-Kontrollpunkte ausgeben, wenn Sie nicht benötigt werden.
+Der Hüllen-Shader kann 0 Kontrollpunkte ausstellen, wenn sie nicht benötigt werden.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle                 | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf                 | Domain | Geometrie | Pixel | Compute |
 |--------|----------------------|--------|----------|-------|---------|
-|        | Deklarations Abschnitt |        |          |       |         |
+|        | Abschnitt "Deklarationen" |        |          |       |         |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

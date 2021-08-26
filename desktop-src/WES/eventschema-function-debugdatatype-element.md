@@ -1,6 +1,6 @@
 ---
-title: Function-Element ("Debug DataType")
-description: Der Name der Funktion, die die Ablauf Verfolgungs Meldung protokolliert hat.
+title: Function (DebugDataType)-Element
+description: Der Name der Funktion, die die Ablaufverfolgungsmeldung protokolliert hat.
 ms.assetid: fc9b232f-698b-450a-b779-9f39a6cf5e8c
 keywords:
 - Function-Element EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d582f0e66f1efb75f39c5c7572d998acc0249b50
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a9f1f768013d9136594c7408a0b1e56e8cb78e107f52e03bf3d5b7d2ccc7c38
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005520"
 ---
-# <a name="function-debugdatatype-element"></a>Function-Element ("Debug DataType")
+# <a name="function-debugdatatype-element"></a>Function (DebugDataType)-Element
 
-Der Name der Funktion, die die Ablauf Verfolgungs Meldung protokolliert hat.
+Der Name der Funktion, die die Ablaufverfolgungsmeldung protokolliert hat.
 
 ``` syntax
 <xs:element name="Function"
@@ -31,7 +31,7 @@ Der Name der Funktion, die die Ablauf Verfolgungs Meldung protokolliert hat.
  />
 ```
 
-Das **Function** -Element wird durch den komplexen Typ [**debugdatatype**](eventschema-debugdatatype-complextype.md) definiert.
+Das **Function-Element** wird vom komplexen [**DebugDataType-Typ**](eventschema-debugdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Das **Function** -Element wird durch den komplexen Typ [**debugdatatype**](event
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

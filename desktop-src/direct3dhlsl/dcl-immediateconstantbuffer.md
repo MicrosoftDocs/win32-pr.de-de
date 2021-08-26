@@ -1,6 +1,6 @@
 ---
-title: dcl_immediateConstantBuffer (SM4-ASM)
-description: DCL \_ unmittelateconstantbuffer (SM4-ASM)
+title: dcl_immediateConstantBuffer (sm4 – asm)
+description: dcl \_ immediateConstantBuffer (sm4 – asm)
 ms.assetid: 55e21ab1-0749-4200-8e68-bb098e935dac
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,40 +9,40 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 6f4b4868f3b07285465abb9080688adf6129e1bf
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 781a792257b23a3d89cfa432ccc1ead9e5d756159beb428defc3404ba32df47c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024800"
 ---
-# <a name="dcl_immediateconstantbuffer-sm4---asm"></a>DCL \_ unmittelateconstantbuffer (SM4-ASM)
+# <a name="dcl_immediateconstantbuffer-sm4---asm"></a>dcl \_ immediateConstantBuffer (sm4 – asm)
 
-Deklariert einen direkt Konstanten Shader-Puffer.
+Deklariert einen Direktkonstantenpuffer eines Shaders.
 
 
 
-| DCL \_ unmittelateconstantbuffer- *Wert (e)* |
+| dcl \_ *immediateConstantBuffer-Wert(e)* |
 |-----------------------------------------|
 
 
 
- 
+ 
 
 <dl> <dt>
 
-<span id="value_s_"></span><span id="VALUE_S_"></span>*Wert (e)*
+<span id="value_s_"></span><span id="VALUE_S_"></span>*value(s)*
 </dt> <dd>
 
-\[im \] Puffer muss mindestens ein Wert, jedoch nicht mehr als 4096 Werte enthalten sein.
+\[in \] Der Puffer darf mindestens einen Wert enthalten, jedoch nicht mehr als 4096 Werte.
 
 </dd> </dl>
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Ein Shader ist ein unmittelbar konstanter Puffer zulässig. Der Zugriff auf einen unmittelbar Konstanten Puffer erfolgt genau wie ein konstanter Puffer mit dynamischer Indizierung.
+Ein Shader ist für einen Unmittelbarkonstantenpuffer zulässig. Auf einen Unmittelbarkonstantenpuffer wird genau wie auf einen konstanten Puffer mit dynamischer Indizierung zugegriffen.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -52,39 +52,39 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
 
 
- 
+ 
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Sie können keinen Shader in der Assemblysprache mit shader Model 4 erstellen.
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

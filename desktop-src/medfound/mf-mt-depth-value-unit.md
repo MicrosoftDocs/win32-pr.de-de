@@ -1,35 +1,35 @@
 ---
-description: Ein-Wert, der die Einheiten für einen tiefen Wert in einem Videoframe definiert.
+description: Ein -Wert, der die Einheiten für einen Tiefenwert in einem Videoframe definiert.
 ms.assetid: 0D7238F3-C224-48BD-8654-B3182DFB244C
-title: MF_MT_DEPTH_VALUE_UNIT-Attribut (mfapi. h)
+title: MF_MT_DEPTH_VALUE_UNIT -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f6086a34f62c26b3fe1fa611318792c9056a50c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca57fa5cf72be266ac58ee504b1d4b7c4f2506646f33295e468d2ed0781ab8d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060640"
 ---
-# <a name="mf_mt_depth_value_unit-attribute"></a>Einheiten Attribut des MF- \_ MT- \_ tiefen \_ Werts \_
+# <a name="mf_mt_depth_value_unit-attribute"></a>MF \_ MT DEPTH VALUE \_ \_ \_ UNIT-Attribut
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Ein-Wert, der die Einheiten für einen tiefen Wert in einem Videoframe definiert.
+Ein -Wert, der die Einheiten für einen Tiefenwert in einem Videoframe definiert.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Einheits Wert ist ein UINT64-Wert in Nanometer im Bereich von 1E-9-Meter. Wenn dieser Wert nicht vorhanden ist, ist der Standardwert der Einheit 1E-3, was bedeutet, dass jede Pixelebene in einem physischen Raum in 1 Millimeter gemessen wird.
+Der Einheitenwert ist ein UINT64-Wert in "1e" und "9 Meter". Wenn dieser Wert nicht vorhanden ist, ist der Standardwert der Einheit 1e-3, was angibt, dass jede Pixelebene im physischen Raum in 1 Millimeter gemessen wird.
 
-Tiefen Kameras können die Tiefe aller Pixel nicht verstehen. Wenn die Zuverlässigkeit eines Pixels aufgrund von Material, Okklusion, außerhalb des gültigen Bereichs usw. gering ist, kann der tiefen Wert dieses Pixels ungültig sein.
+Tiefenkameras können die Tiefe aller Pixel nicht ermitteln. Wenn die Konfidenz eines Pixels aufgrund von Material, Okklusion oder nicht dem zulässigen Bereich usw. niedrig ist, kann der Tiefenwert dieses Pixels ungültig sein.
 
-Wenn ein tiefen Pixel Wert 0 ist, ist das Pixel ungültig.
+Wenn ein Tiefenpixelwert 0 ist, ist das Pixel ungültig.
 
-Bei einigen tiefen Kameras werden Bitmasken Metadaten für jedes Pixel zusätzlich zum tiefen Wert anfügen, um den Grund für die Ungültigkeit der Pixel Tiefe aufgrund von Material, Okklusion oder außerhalb des gültigen Bereichs usw. darzustellen. Es wird empfohlen, solche Metadaten nicht als Bits im tiefen Wert anzufügen, da dies in der Regel zu Schwierigkeiten führt, wenn Sie solche Werte in Pixel-Shader verwenden. Stattdessen. Es wird empfohlen, dass Sie einen separaten 8-Bit-Image Puffer mit derselben Auflösung verwenden und ihn als Attribut von [**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)anfügen. Diese Metadaten sind für jeden Hersteller der Kamera unterschiedlich und werden nicht von der Plattform standardisiert. Wir empfehlen die Verwendung von vollständigen 16 Bits für den Tiefen Wert zur einfacheren Verarbeitung von downstreamvorgängen und die Verwendung eines Fixed-Werts wie 0 für die Invalidierung.
+Einige Tiefenkameras fügen Bitmaskenmetadaten für jedes Pixel zusätzlich zum Tiefenwert an, um den Grund dafür zu darstellen, warum die Tiefe des Pixels ungültig ist, aufgrund von Material, Okklusion oder Nicht-Bereich usw. Es wird empfohlen, das Anfügen solcher Metadaten als Tiefenwertbits zu vermeiden, da dies in der Regel zu Schwierigkeiten bei der Verwendung solcher Werte im Pixel-Shader führt. Statt. Es wird empfohlen, einen separaten 8-Bit-Bildpuffer mit der gleichen Auflösung zu verwenden und ihn als Attribut des [**8-Bit-Bildpuffers zu anfügen.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) Diese Metadaten variieren für jeden Kameraanbieter und werden nicht von der Plattform standardisiert. Es wird empfohlen, vollständige 16 Bits für den Tiefenwert zu verwenden, um die Verarbeitung nachgelagert zu vereinfachen, und einen festen Wert wie 0 für die Invalidierung zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,9 +37,9 @@ Bei einigen tiefen Kameras werden Bitmasken Metadaten für jedes Pixel zusätzli
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                      |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                      |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 

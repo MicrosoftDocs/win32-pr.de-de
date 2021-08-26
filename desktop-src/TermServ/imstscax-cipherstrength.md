@@ -1,30 +1,30 @@
 ---
-title: Imstscax cipherstärke (Eigenschaft)
-description: Ruft die maximale Verschlüsselungsstärke des aktuellen Steuer Elements ab.
+title: IMsTscAx CipherStrength-Eigenschaft
+description: Ruft die maximale Verschlüsselungsstärke des aktuellen Steuerelements ab.
 ms.assetid: 94efe3e5-4074-4187-b58a-b812f37f3622
 ms.tgt_platform: multiple
 keywords:
-- Eigenschaft "cipherstärke" Remotedesktopdienste
-- Eigenschaften Remotedesktopdienste cipherstärke, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, cipherstärke (Eigenschaft)
-- Cipherstärke-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
-- Eigenschaften Remotedesktopdienste cipherstärke, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, Eigenschaft "cipherstärke"
+- CipherStrength-Eigenschaft Remotedesktopdienste
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
+- CipherStrength-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , CipherStrength-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 401cf3796d349aaa6764eae46a371a9d485f763c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4b66418f2e956afcf6c5b9f1f9a0d5971119e7fddae1c1d46d115f4bbe0e6391
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125440"
 ---
-# <a name="imstscaxcipherstrength-property"></a>Imstscax:: cipherstärke (Eigenschaft)
+# <a name="imstscaxcipherstrength-property"></a>IMsTscAx::CipherStrength-Eigenschaft
 
-Ruft die maximale Verschlüsselungsstärke des aktuellen Steuer Elements ab.
+Ruft die maximale Verschlüsselungsstärke des aktuellen Steuerelements ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -84,11 +84,11 @@ Die Verschlüsselungsstärke.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Remotedesktop-Webverbindung ist die Verschlüsselungsstärke immer 128, da das Remotedesktop ActiveX-Steuerelement die Verschlüsselung bis einschließlich 128 Bits unterstützt. Das 128-Bit-Steuerelement kann weiterhin eine Verbindung mit 56 Bit Encryption Remotedesktop-Sitzungshost (RD-Sitzungshost)-Servern herstellen.
+Für Remotedesktop-Webverbindung beträgt die Verschlüsselungsstärke immer 128, da das Remotedesktop ActiveX-Steuerelement die Verschlüsselung bis einschließlich 128 Bit unterstützt. Das 128-Bit-Steuerelement kann weiterhin eine Verbindung mit 56-Bit-Verschlüsselungsservern Remotedesktop-Sitzungshost (RD-Sitzungshost) herstellen.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -102,7 +102,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -110,7 +110,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -137,7 +137,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> </dl>
 
  

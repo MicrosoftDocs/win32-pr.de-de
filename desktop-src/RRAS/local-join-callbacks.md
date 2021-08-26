@@ -1,25 +1,25 @@
 ---
-title: Lokale joinrückrufe
-description: Nachdem der Multicast-Gruppen-Manager von IGMP benachrichtigt wurde, dass neue Empfänger für eine Gruppe auf einer Schnittstelle vorhanden sind, ruft der Multicast-Gruppen-Manager den pmgm- \_ \_ Rückruf Rückruf \_ Rückruf auf das Routing Protokoll auf, der die Schnittstelle besitzt, sofern vorhanden.
+title: Rückrufe für lokale Joins
+description: Nachdem der Multicastgruppen-Manager von IGMP benachrichtigt wurde, dass neue Empfänger für eine Gruppe auf einer Schnittstelle vorhanden sind, ruft der Multicastgruppen-Manager den PMGM \_ LOCAL \_ JOIN \_ CALLBACK-Rückruf für das Routingprotokoll auf, das die Schnittstelle besitzt, sofern vorhanden.
 ms.assetid: 136f86e0-380d-4158-a9dd-c6de1c7f6689
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c97f0e16e08bc3781b946a51f69d2b0d65b3272
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 17b3464aa645a6ab110acef09f238ffca97f781a38cc6c2602a39e7c66316490
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074070"
 ---
-# <a name="local-join-callbacks"></a>Lokale joinrückrufe
+# <a name="local-join-callbacks"></a>Rückrufe für lokale Joins
 
-Nachdem der Multicast-Gruppen-Manager von IGMP benachrichtigt wurde, dass neue Empfänger für eine Gruppe auf einer Schnittstelle vorhanden sind, ruft der Multicast-Gruppen-Manager den [**pmgm- \_ \_ \_ Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_local_join_callback) Rückruf Rückruf auf das Routing Protokoll auf, der die Schnittstelle besitzt, sofern vorhanden. Dieser Rückruf benachrichtigt das Routing Protokoll über die Änderung.
+Nachdem der Multicastgruppen-Manager von IGMP benachrichtigt wurde, dass neue Empfänger für eine Gruppe auf einer Schnittstelle vorhanden sind, ruft der Multicastgruppen-Manager den [**PMGM \_ LOCAL \_ JOIN \_ CALLBACK-Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_local_join_callback) für das Routingprotokoll auf, das die Schnittstelle besitzt, sofern vorhanden. Dieser Rückruf benachrichtigt das Routingprotokoll über die Änderung.
 
-Dieser Rückruf und der [**lokale pmgm- \_ \_ \_ Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_local_leave_callback) Rückruf werden verwendet, um die Weiterleitung zwischen IGMP und Routing Protokollen zu synchronisieren.
+Dieser Rückruf und der [**PMGM \_ LOCAL \_ LEAVE \_ CALLBACK-Rückruf**](/windows/desktop/api/Mgm/nc-mgm-pmgm_local_leave_callback) werden verwendet, um die Weiterleitung zwischen IGMP und Routingprotokollen zu synchronisieren.
 
- 
+ 
 
- 
+ 
 
 
 

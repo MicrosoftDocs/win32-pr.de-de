@@ -1,22 +1,22 @@
 ---
-description: Ruft ein Handle für bereits vorhandene Anmelde Informationen eines Sicherheits Prinzipals ab, der Schannel verwendet.
+description: Übernimmt ein Handle für bereits vorhandene Anmeldeinformationen eines Sicherheitsprinzipals, der Schannel verwendet.
 ms.assetid: 0f006670-a1e5-47ed-baf5-ed55bd42b468
-title: AcquireCredentialsHandle (SChannel)-Funktion (SSPI. h)
+title: AcquireCredentialsHandle-Funktion (Schannel) (Sspi.h)
 ms.topic: reference
 ms.date: 07/25/2019
-ms.openlocfilehash: 5b7de49e76cf5b09611790a12826f1a13fc38e62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2fb9812817e27576667f7fa0ff5312eea8cea41743cbfc9e5b03267f837011f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101440"
 ---
-# <a name="acquirecredentialshandle-schannel-function"></a>AcquireCredentialsHandle-Funktion (SChannel)
+# <a name="acquirecredentialshandle-schannel-function"></a>AcquireCredentialsHandle-Funktion (Schannel)
 
-Die Funktion **AcquireCredentialsHandle (SChannel)** Ruft ein Handle für bereits vorhandene Anmelde Informationen eines [*Sicherheits Prinzipals*](../secgloss/s-gly.md)ab. Dieses Handle ist für die Funktionen [**InitializeSecurityContext (SChannel)**](initializesecuritycontext--schannel.md) und [**akzeptsecuritycontext (SChannel)**](acceptsecuritycontext--schannel.md) erforderlich. Hierbei kann es sich um bereits vorhandene *Anmelde* Informationen handeln, die über eine System Anmeldung eingerichtet werden, die hier nicht beschrieben wird, oder der Aufrufer kann Alternative Anmelde Informationen bereitstellen.
+Die **AcquireCredentialsHandle (Schannel)-Funktion** übernimmt ein Handle für bereits vorhandene Anmeldeinformationen eines [*Sicherheitsprinzipals.*](../secgloss/s-gly.md) Dieses Handle ist für die Funktionen [**InitializeSecurityContext (Schannel)**](initializesecuritycontext--schannel.md) und [**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) erforderlich. Dies können entweder bereits vorhandene *Anmeldeinformationen* sein, die über eine Systemanmeldung eingerichtet werden, die hier nicht beschrieben wird, oder der Aufrufer kann alternative Anmeldeinformationen bereitstellen.
 
 > [!Note]  
-> Dabei handelt es sich nicht um eine "beim Netzwerk anmelden", und es ist nicht beabsichtigt, Anmelde Informationen zu sammeln.
+> Dies ist keine "Anmeldung beim Netzwerk" und impliziert nicht das Sammeln von Anmeldeinformationen.
 
  
 
@@ -43,40 +43,40 @@ SECURITY_STATUS SEC_Entry AcquireCredentialsHandle(
 
 <dl> <dt>
 
-*pszprincipal* \[ in, optional\]
+*pszPrincipal* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Prinzipals angibt, auf dessen Anmelde Informationen das Handle verweist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Prinzipals angibt, auf dessen Anmeldeinformationen das Handle verweist.
 
-Wenn der Schannel SSP verwendet wird, wird dieser Parameter nicht verwendet und sollte auf **null** festgelegt werden.
+Bei Verwendung des Schannel-SSP wird dieser Parameter nicht verwendet und sollte auf **NULL** festgelegt werden.
 
 > [!Note]  
-> Wenn der Prozess, der das Handle anfordert, keinen Zugriff auf die Anmelde Informationen hat, gibt die Funktion einen Fehler zurück. Eine NULL-Zeichenfolge gibt an, dass der Prozess ein Handle für die Anmelde Informationen des Benutzers erfordert, in dessen [*Sicherheitskontext*](../secgloss/s-gly.md) er ausgeführt wird.
+> Wenn der Prozess, der das Handle anfordert, keinen Zugriff auf die Anmeldeinformationen hat, gibt die Funktion einen Fehler zurück. Eine NULL-Zeichenfolge gibt an, dass der Prozess ein Handle für die Anmeldeinformationen des Benutzers erfordert, unter dessen [*Sicherheitskontext*](../secgloss/s-gly.md) er ausgeführt wird.
 
  
 
 </dd> <dt>
 
-*pszpackage* \[ in\]
+*pszPackage* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des [*Sicherheitspakets*](../secgloss/s-gly.md) angibt, mit dem diese Anmelde Informationen verwendet werden. Dies ist ein [*Sicherheitspaket*](../secgloss/s-gly.md) Name, der im **Name** -Member einer [**secpkginfo**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) -Struktur zurückgegeben wird, die von der [**enumeratesecuritypackages**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) -Funktion zurückgegeben wird. Nachdem ein Kontext eingerichtet wurde, kann [**QueryContextAttributes (SChannel)**](querycontextattributes--schannel.md) aufgerufen werden, wobei *ulattribute* auf secpkg \_ attr Package Info festgelegt ist, \_ \_ um Informationen zum verwendeten [*Sicherheitspaket*](../secgloss/s-gly.md) zurückzugeben.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des [*Sicherheitspakets*](../secgloss/s-gly.md) angibt, mit dem diese Anmeldeinformationen verwendet werden. Dies ist ein [*Sicherheitspaketname,*](../secgloss/s-gly.md) der im **Name-Member** einer [**SecPkgInfo-Struktur**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) zurückgegeben wird, die von der [**EnumerateSecurityPackages-Funktion**](/windows/win32/api/sspi/ns-sspi-secpkginfoa) zurückgegeben wird. Nachdem ein Kontext eingerichtet wurde, kann [**QueryContextAttributes (Schannel)**](querycontextattributes--schannel.md) aufgerufen werden, wobei *ulAttribute* auf SECPKG ATTR PACKAGE INFO festgelegt \_ \_ \_ ist, um Informationen zum verwendeten [*Sicherheitspaket*](../secgloss/s-gly.md) zurückzugeben.
 
-Wenn Sie den Schannel SSP verwenden, legen Sie diesen Parameter auf unisp \_ Name fest.
+Wenn Sie den Schannel-SSP verwenden, legen Sie diesen Parameter auf UNISP \_ NAME fest.
 
 </dd> <dt>
 
-*"f"* \[ in\]
+*fCredentialUse* \[ In\]
 </dt> <dd>
 
-Ein Flag, das angibt, wie diese Anmelde Informationen verwendet werden. Dieser Parameter kann einen der folgenden Werte annehmen.
+Ein Flag, das angibt, wie diese Anmeldeinformationen verwendet werden. Dieser Parameter kann einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                               | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SECPKG_CRED_INBOUND"></span><span id="secpkg_cred_inbound"></span><dl> <dt>**secpkg-in \_ \_ eingehender Richtung**</dt> </dl>    | Überprüfen Sie die Anmelde Informationen eines eingehenden Servers. Eingehende Anmelde Informationen können mithilfe einer authentifizier enden Zertifizierungsstelle überprüft werden, wenn [**InitializeSecurityContext (SChannel)**](initializesecuritycontext--schannel.md) oder [**Accept-SecurityContext (SChannel)**](acceptsecuritycontext--schannel.md) aufgerufen wird. Wenn eine solche Autorität nicht verfügbar ist, schlägt die Funktion fehl und gibt SEK \_ \_ . E keine \_ authentifizier Ende Zertifizierungs \_ Stelle zurück. Die Validierung ist Paket spezifisch.<br/> |
-| <span id="SECPKG_CRED_OUTBOUND"></span><span id="secpkg_cred_outbound"></span><dl> <dt>**Outbound für secpkg-Datenverkehr \_ \_**</dt> </dl> | Ermöglicht die Vorbereitung eines ausgehenden Tokens durch lokale Client Anmelde Informationen.<br/>                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="SECPKG_CRED_INBOUND"></span><span id="secpkg_cred_inbound"></span><dl> <dt>**SECPKG \_ CRED \_ INBOUND**</dt> </dl>    | Überprüfen Sie die Anmeldeinformationen eines eingehenden Servers. Eingehende Anmeldeinformationen können mithilfe einer Authentifizierungsstelle überprüft werden, wenn [**InitializeSecurityContext (Schannel)**](initializesecuritycontext--schannel.md) oder [**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) aufgerufen wird. Wenn eine solche Autorität nicht verfügbar ist, schlägt die Funktion fehl und gibt SEC \_ E \_ NO \_ AUTHENTICATING AUTHORITY \_ zurück. Die Überprüfung ist paketspezifisch.<br/> |
+| <span id="SECPKG_CRED_OUTBOUND"></span><span id="secpkg_cred_outbound"></span><dl> <dt>**SECPKG \_ CRED \_ OUTBOUND**</dt> </dl> | Gestatten Sie einem lokalen Client, ein ausgehendes Token vorzubereiten.<br/>                                                                                                                                                                                                                                                                                                                                                                                            |
 
 
 
@@ -84,57 +84,57 @@ Ein Flag, das angibt, wie diese Anmelde Informationen verwendet werden. Dieser P
 
 </dd> <dt>
 
-*pvlogonid* \[ in, optional\]
+*pvLogonID* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf einen [*lokal eindeutigen Bezeichner*](../secgloss/l-gly.md) (LUID), der den Benutzer identifiziert. Dieser Parameter wird für Dateisystem Prozesse, z. b. netzwerkredirectors, bereitgestellt. Dieser Parameter kann **NULL** sein.
+Ein Zeiger auf einen [*lokal eindeutigen Bezeichner*](../secgloss/l-gly.md) (LUID), der den Benutzer identifiziert. Dieser Parameter wird für Dateisystemprozesse wie Netzwerkumleitungen bereitgestellt. Dieser Parameter kann **NULL** sein.
 
-Wenn der Schannel SSP verwendet wird, wird dieser Parameter nicht verwendet und sollte auf **null** festgelegt werden.
+Bei Verwendung des Schannel-SSP wird dieser Parameter nicht verwendet und sollte auf **NULL** festgelegt werden.
 
 </dd> <dt>
 
-*pauthdata* \[ in, optional\]
+*pAuthData* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf Paket spezifische Daten. Dieser Parameter kann **null** sein, was darauf hinweist, dass die Standard Anmelde Informationen für das [*Sicherheitspaket*](../secgloss/s-gly.md) verwendet werden müssen. Um die angegebenen Anmelde Informationen zu verwenden, übergeben Sie eine [**sec- \_ Winnt-Authentifizierungs \_ \_ Identitäts**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) Struktur, die diese Anmelde Informationen enthält, in diesem Parameter. Die RPC-Laufzeit übergibt alle in [**rpcbindingsetauthinfo**](/windows/win32/api/rpcdce/nf-rpcdce-rpcbindingsetauthinfo)bereitgestellten.
+Ein Zeiger auf paketspezifische Daten. Dieser Parameter kann **NULL** sein, was angibt, dass die Standardanmeldeinformationen für dieses [*Sicherheitspaket*](../secgloss/s-gly.md) verwendet werden müssen. Um bereitgestellte Anmeldeinformationen zu verwenden, übergeben Sie eine [**SEC \_ WINNT-AUTH \_ \_ IDENTITY-Struktur,**](/windows/win32/api/sspi/ns-sspi-sec_winnt_auth_identity_a) die diese Anmeldeinformationen in diesem Parameter enthält. Die RPC-Laufzeit übergibt alles, was in [**RpcBindingSetAuthInfo**](/windows/win32/api/rpcdce/nf-rpcdce-rpcbindingsetauthinfo)bereitgestellt wurde.
 
-Geben Sie bei Verwendung des Schannel-SSP eine [**SCH_CREDENTIALS**](/windows/win32/api/schannel/ns-schannel-sch_credentials) Struktur an, die das zu verwendende Protokoll und die Einstellungen für verschiedene anpassbare channelfeatures angibt.
+Wenn Sie den Schannel-SSP verwenden, geben Sie eine [**SCH_CREDENTIALS**](/windows/win32/api/schannel/ns-schannel-sch_credentials) Struktur an, die das zu verwendende Protokoll und die Einstellungen für verschiedene anpassbare Kanalfeatures angibt.
 
 </dd> <dt>
 
-*pgetkeyfn* \[ in, optional\]
+*pGetKeyFn* \[ in, optional\]
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und sollte auf **null** festgelegt werden.
+Dieser Parameter wird nicht verwendet und sollte auf **NULL** festgelegt werden.
 
 </dd> <dt>
 
-*pvgetkeyargument* \[ in, optional\]
+*pvGetKeyArgument* \[ in, optional\]
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und sollte auf **null** festgelegt werden.
+Dieser Parameter wird nicht verwendet und sollte auf **NULL** festgelegt werden.
 
 </dd> <dt>
 
-*phcredential* \[ vorgenommen\]
+*phCredential* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine " [kredhandle](sspi-handles.md) "-Struktur, die das Handle für die Anmelde Informationen empfängt.
+Ein Zeiger auf eine [CredHandle-Struktur](sspi-handles.md) zum Empfangen des Anmeldeinformationshandles.
 
 </dd> <dt>
 
-*ptsexpiry* \[ Out, optional\]
+*ptsExpiry* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Zeitstempel**](timestamp.md) Struktur, die die Uhrzeit empfängt, zu der die zurückgegebenen Anmelde Informationen ablaufen. Der in dieser **Zeitstempel** Struktur zurückgegebene Wert hängt von der [*eingeschränkten Delegierung*](../secgloss/s-gly.md)ab. Das [*Sicherheitspaket*](../secgloss/s-gly.md) muss diesen Wert in der Ortszeit zurückgeben.
+Ein Zeiger auf eine [**TimeStamp-Struktur,**](timestamp.md) die den Zeitpunkt empfängt, zu dem die zurückgegebenen Anmeldeinformationen ablaufen. Der in dieser **TimeStamp-Struktur** zurückgegebene Wert hängt von der [*eingeschränkten Delegierung*](../secgloss/s-gly.md)ab. Das [*Sicherheitspaket*](../secgloss/s-gly.md) muss diesen Wert in Ortszeit zurückgeben.
 
-Bei Verwendung des Schannel-SSP ist dieser Parameter optional. Wenn die Anmelde Informationen, die für die Authentifizierung verwendet werden sollen, ein Zertifikat sind, erhält dieser Parameter die Ablaufzeit für dieses Zertifikat. Wenn kein Zertifikat angegeben wurde, wird ein maximaler Zeitwert zurückgegeben.
+Bei Verwendung des Schannel-SSP ist dieser Parameter optional. Wenn die für die Authentifizierung zu verwendenden Anmeldeinformationen ein Zertifikat sind, erhält dieser Parameter die Ablaufzeit für dieses Zertifikat. Wenn kein Zertifikat angegeben wurde, wird ein maximaler Zeitwert zurückgegeben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion sec \_ E \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion SEC \_ E \_ OK zurück.
 
 Wenn die Funktion fehlschlägt, wird einer der folgenden Fehlercodes zurückgegeben.
 
@@ -142,31 +142,31 @@ Wenn die Funktion fehlschlägt, wird einer der folgenden Fehlercodes zurückgege
 
 | Rückgabecode                                                                                                 | Beschreibung                                                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**SEK \_ b \_ nicht genügend Arbeits \_ Speicher**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abzuschließen.<br/>                                                                  |
-| <dl> <dt>**Sek. \_ E ( \_ interner \_ Fehler)**</dt> </dl>      | Es ist ein Fehler aufgetreten, der keinem SSPI-Fehlercode zugeordnet wurde.<br/>                                                                               |
-| <dl> <dt>**s \_ E \_ keine \_ Anmelde Informationen**</dt> </dl>      | In der [*eingeschränkten Delegierung*](../secgloss/s-gly.md)sind keine Anmelde Informationen verfügbar.<br/> |
-| <dl> <dt>**Sek. \_ E \_ nicht \_ Besitzer**</dt> </dl>           | Der Aufrufer der Funktion verfügt nicht über die erforderlichen Anmelde Informationen.<br/>                                                                     |
-| <dl> <dt>**Sek. \_ E \_ secpkg \_ nicht \_ gefunden**</dt> </dl>   | Das angeforderte [*Sicherheitspaket*](../secgloss/s-gly.md) ist nicht vorhanden.<br/>                                                                                          |
-| <dl> <dt>**SEK \_ . \_ unbekannte \_ Anmelde Informationen**</dt> </dl> | Die für das Paket angegebenen Anmelde Informationen wurden nicht erkannt.<br/>                                                                            |
+| <dl> <dt>**SEC \_ E \_ INSUFFICIENT \_ MEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Aktion abzuschließen.<br/>                                                                  |
+| <dl> <dt>**\_INTERNER \_ SEC \_ E-FEHLER**</dt> </dl>      | Fehler, der keinem SSPI-Fehlercode zugeordnet wurde.<br/>                                                                               |
+| <dl> <dt>**SEC \_ E \_ NO \_ CREDENTIALS**</dt> </dl>      | In der [*eingeschränkten Delegierung*](../secgloss/s-gly.md)sind keine Anmeldeinformationen verfügbar.<br/> |
+| <dl> <dt>**SEC \_ E \_ NOT \_ OWNER**</dt> </dl>           | Der Aufrufer der Funktion verfügt nicht über die erforderlichen Anmeldeinformationen.<br/>                                                                     |
+| <dl> <dt>**SEC \_ E \_ SECPKG \_ NICHT \_ GEFUNDEN**</dt> </dl>   | Das angeforderte [*Sicherheitspaket*](../secgloss/s-gly.md) ist nicht vorhanden.<br/>                                                                                          |
+| <dl> <dt>**SEC \_ E \_ UNKNOWN \_ CREDENTIALS**</dt> </dl> | Die für das Paket angegebenen Anmeldeinformationen wurden nicht erkannt.<br/>                                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion **AcquireCredentialsHandle (SChannel)** gibt ein Handle für die Anmelde Informationen eines Prinzipals (z. b. einen Benutzer oder Client) zurück, der von einer bestimmten [*eingeschränkten Delegierung*](../secgloss/s-gly.md)verwendet wird. Dies kann das Handle für bereits vorhandene Anmelde Informationen sein, oder die Funktion kann einen neuen Satz von Anmelde Informationen erstellen und zurückgeben. Dieses Handle kann in nachfolgenden Aufrufen der Funktionen " [**akzeptsecuritycontext" (SChannel)**](acceptsecuritycontext--schannel.md) und " [**InitializeSecurityContext" (SChannel)**](initializesecuritycontext--schannel.md) verwendet werden.
+Die **AcquireCredentialsHandle (Schannel)-Funktion** gibt ein Handle für die Anmeldeinformationen eines Prinzipals zurück, z. B. eines Benutzers oder Clients, wie von einer bestimmten [*eingeschränkten Delegierung*](../secgloss/s-gly.md)verwendet. Dies kann das Handle für bereits vorhandene Anmeldeinformationen sein, oder die Funktion kann einen neuen Satz von Anmeldeinformationen erstellen und zurückgeben. Dieses Handle kann in nachfolgenden Aufrufen der Funktionen [**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) und [**InitializeSecurityContext (Schannel)**](initializesecuritycontext--schannel.md) verwendet werden.
 
-Im Allgemeinen gestattet **AcquireCredentialsHandle (SChannel)** einem Prozess nicht das Abrufen eines Handles für die Anmelde Informationen anderer Benutzer, die am gleichen Computer angemeldet sind. Allerdings hat ein Aufrufer mit der Berechtigung "SE \_ TCB \_ Name" die Option, den [*Anmelde Bezeichner*](../secgloss/l-gly.md) (LUID) eines beliebigen vorhandenen Anmelde Sitzungs Tokens anzugeben, um ein Handle für die Anmelde Informationen dieser Sitzung zu erhalten. [](../secgloss/s-gly.md) Diese wird in der Regel von Kernelmodusmodulen verwendet, die im Auftrag eines angemeldeten Benutzers agieren müssen.
+Im Allgemeinen lässt **AcquireCredentialsHandle (Schannel)** nicht zu, dass ein Prozess ein Handle für die Anmeldeinformationen anderer Benutzer erhält, die auf demselben Computer angemeldet sind. Ein Aufrufer mit SE \_ TCB \_ [*NAME-Berechtigung*](../secgloss/s-gly.md) hat jedoch die Möglichkeit, den [*Anmeldebezeichner*](../secgloss/l-gly.md) (LUID) eines vorhandenen Anmeldesitzungstokens anzugeben, um ein Handle für die Anmeldeinformationen dieser Sitzung abzurufen. In der Regel wird dies von Kernelmodusmodulen verwendet, die im Namen eines angemeldeten Benutzers agieren müssen.
 
-Ein Paket kann die Funktion in *pgetkeyfn* aufrufen, die vom RPC-Lauf Zeit Transport bereitgestellt wird. Wenn der Transport die Rückruffunktion zum Abrufen von Anmelde Informationen nicht unterstützt, muss dieser Parameter **null** sein.
+Ein Paket ruft möglicherweise die Funktion in *pGetKeyFn auf,* die vom RPC-Laufzeittransport bereitgestellt wird. Wenn der Transport das Konzept des Rückrufs zum Abrufen von Anmeldeinformationen nicht unterstützt, muss dieser Parameter **NULL** sein.
 
-Bei kernelmodusaufrufern müssen die folgenden Unterschiede beachtet werden:
+Bei Kernelmodusaufrufern müssen die folgenden Unterschiede beachtet werden:
 
--   Die beiden Zeichen folgen Parameter müssen [*Unicode*](../secgloss/u-gly.md) -Zeichen folgen sein.
--   Die Puffer Werte müssen im virtuellen Arbeitsspeicher des Prozesses zugeordnet werden, nicht aus dem Pool.
+-   Die beiden Zeichenfolgenparameter müssen [*Unicode-Zeichenfolgen*](../secgloss/u-gly.md) sein.
+-   Die Pufferwerte müssen im virtuellen Prozessspeicher und nicht aus dem Pool zugeordnet werden.
 
-Wenn Sie die zurückgegebenen Anmelde Informationen nicht mehr verwenden, geben Sie den von den Anmelde Informationen genutzten Arbeitsspeicher frei, indem Sie die [**freecredentialshandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle) -Funktion aufrufen.
+Wenn Sie die zurückgegebenen Anmeldeinformationen verwendet haben, können Sie den von den Anmeldeinformationen verwendeten Arbeitsspeicher freigeben, indem Sie die [**FreeCredentialsHandle-Funktion**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -174,12 +174,12 @@ Wenn Sie die zurückgegebenen Anmelde Informationen nicht mehr verwenden, geben 
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>SSPI. h (Include Security. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Secur32. lib</dt> </dl>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Sspi.h (include Security.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Secur32.lib</dt> </dl>                 |
 | DLL<br/>                      | <dl> <dt>Secur32.dll</dt> </dl>                 |
-| Unicode- und ANSI-Name<br/>   | **Acquirecredentialshandlew** (Unicode) und **AcquireCredentialsHandleA** (ANSI)<br/>            |
+| Unicode- und ANSI-Name<br/>   | **AcquireCredentialsHandleW** (Unicode) und **AcquireCredentialsHandleA** (ANSI)<br/>            |
 
 
 
@@ -187,13 +187,13 @@ Wenn Sie die zurückgegebenen Anmelde Informationen nicht mehr verwenden, geben 
 
 <dl> <dt>
 
-[**Akzeptsecuritycontext (SChannel)**](acceptsecuritycontext--schannel.md)
+[**AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md)
 </dt> <dt>
 
-[**Freecredentialshandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle)
+[**FreeCredentialsHandle**](/windows/win32/api/sspi/nf-sspi-freecredentialshandle)
 </dt> </dl>
 
-[**InitializeSecurityContext (SChannel)**](initializesecuritycontext--schannel.md)
+[**InitializeSecurityContext (Schannel)**](initializesecuritycontext--schannel.md)
 </dt> <dt>
 
 [**SCH_CREDENTIALS**](/windows/win32/api/schannel/ns-schannel-sch_credentials)

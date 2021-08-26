@@ -1,9 +1,9 @@
 ---
-title: TDN_CREATED Benachrichtigungs Code (kommctrl. h)
-description: Wird vom Aufgaben Dialogfeld gesendet, nachdem das Dialogfeld erstellt und vor dem anzeigen angezeigt wurde. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_CREATED Benachrichtigungscode (Commctrl.h)
+description: Wird vom Aufgabendialogfeld gesendet, nachdem das Dialogfeld erstellt wurde und bevor es angezeigt wird. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: cfe13db3-9c3c-425c-a6ef-17c5cb33eeb6
 keywords:
-- Windows-Steuerelemente für TDN_CREATED Benachrichtigungs
+- TDN_CREATED Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a25aa40af6b2cb002f2da7aab7c71fd68702ae65
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a66541d60923b19ae70519919fd3d8217d99ff95515bb30c98efaf8c02afd93
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104480"
 ---
-# <a name="tdn_created-notification-code"></a>Von TDN \_ erstellter Benachrichtigungs Code
+# <a name="tdn_created-notification-code"></a>TDN \_ CREATED-Benachrichtigungscode
 
-Wird vom Aufgaben Dialogfeld gesendet, nachdem das Dialogfeld erstellt und vor dem anzeigen angezeigt wurde. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird vom Aufgabendialogfeld gesendet, nachdem das Dialogfeld erstellt wurde und bevor es angezeigt wird. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) registriert werden kann.
 
 
 ```C++
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

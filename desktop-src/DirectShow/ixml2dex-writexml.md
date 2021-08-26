@@ -1,7 +1,7 @@
 ---
-description: Die Methode "Write texml" übersetzt eine Zeitachse in eine XML-Zeichenfolge.
+description: Die WriteXML-Methode übersetzt eine Zeitachse in eine XML-Zeichenfolge.
 ms.assetid: 1039c6fc-b2ba-4052-90b6-b7468b94c071
-title: 'IXml2Dex:: Write texml-Methode (qedit. h)'
+title: IXml2Dex::WriteXML-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 4ab8a4421244f2c2ee21c5243923f5d0827317e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a5285faad36f83dbab693c63a0c96ca2b1d2b6a25220bb601a9527aac9dc5ac1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051290"
 ---
-# <a name="ixml2dexwritexml-method"></a>IXml2Dex:: Write texml-Methode
+# <a name="ixml2dexwritexml-method"></a>IXml2Dex::WriteXML-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `WriteXML` Methode übersetzt eine Zeitachse in eine XML-Zeichenfolge.
+Die `WriteXML` -Methode übersetzt eine Zeitachse in eine XML-Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,14 +46,14 @@ HRESULT WriteXML(
 
 <dl> <dt>
 
-*ptimeline* 
+*pTimeline* 
 </dt> <dd>
 
-Zeiger auf die **IUnknown** -Schnittstelle des Timeline-Objekts.
+Zeiger auf die **IUnknown-Schnittstelle des Zeitachsenobjekts.**
 
 </dd> <dt>
 
-*pbstrauxml* 
+*pbstrXML* 
 </dt> <dd>
 
 Zeiger auf eine Variable vom Typ BSTR, die die XML-Zeichenfolge empfängt, die die Zeitachse beschreibt.
@@ -62,19 +62,19 @@ Zeiger auf eine Variable vom Typ BSTR, die die XML-Zeichenfolge empfängt, die d
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück. Wenn nicht genügend Arbeitsspeicher für die Konvertierung vorhanden ist, wird E \_ outoiden Speicher zurückgegeben. Andernfalls wird ein anderer Fehlercode zurückgegeben.
+Gibt S \_ OK zurück, wenn erfolgreich. Wenn nicht genügend Arbeitsspeicher für die Konvertierung verfügbar ist, gibt E \_ OUTOFMEMORY zurück. Andernfalls wird ein weiterer Fehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString** aufzurufen, um den Arbeitsspeicher freizugeben.
+Die -Methode ordnet Arbeitsspeicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString aufrufen,** um den Arbeitsspeicher frei zu machen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -84,20 +84,20 @@ Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFr
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Internet Explorer 4,0 oder höher<br/>                                               |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | Internet Explorer 4.0 oder höher<br/>                                               |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IXml2Dex-Schnittstelle**](ixml2dex.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

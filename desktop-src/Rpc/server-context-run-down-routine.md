@@ -1,31 +1,31 @@
 ---
-title: Server Kontext-Lauf-ab-Routine
-description: Wenn die Kommunikation unterbrochen wird, während der Server im Auftrag des Clients den Kontext beibehält, ist möglicherweise eine cleanuproutine erforderlich, um den Zustand des Servers im Auftrag eines bestimmten Clients zu bereinigen.
+title: Run-down-Routine für Den Serverkontext
+description: Wenn die Kommunikation unterbricht, während der Server den Kontext im Auftrag des Clients verwaltet, ist möglicherweise eine Bereinigungsroutine erforderlich, um den vom Server verwalteten Zustand im Namen eines bestimmten Clients zu bereinigt.
 ms.assetid: b39654e4-6f03-43a0-8a5d-6f24bd0a529c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73ad8afb7f698a258d7c4403143e74d566f813a5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ef3bab4477555e5a304627d026c7471874af50daceb9fe3e4484928c290a55d6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037407"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035490"
 ---
-# <a name="server-context-run-down-routine"></a>Server Kontext-Lauf-ab-Routine
+# <a name="server-context-run-down-routine"></a>Run-down-Routine für Den Serverkontext
 
-Wenn die Kommunikation unterbrochen wird, während der Server im Auftrag des Clients den Kontext beibehält, ist möglicherweise eine cleanuproutine erforderlich, um den Zustand des Servers im Auftrag eines bestimmten Clients zu bereinigen. Diese cleanuproutine wird als *Kontext-Lauf Routine Routine* bezeichnet. Wenn eine Verbindung unterbrochen wird, wird diese Routine vom Serverstub und der Lauf Zeit Bibliothek für jedes Kontext Handle aufgerufen, das vom Client geöffnet wurde.
+Wenn die Kommunikation unterbricht, während der Server den Kontext im Auftrag des Clients verwaltet, ist möglicherweise eine Bereinigungsroutine erforderlich, um den vom Server verwalteten Zustand im Namen eines bestimmten Clients zu bereinigt. Diese Bereinigungsroutine wird als *Kontext-Run-Down-Routine bezeichnet.* Wenn eine Verbindung unterbricht, rufen der Serverstub und die Laufzeitbibliothek diese Routine auf jedem kontextbasierten Handle auf, das vom Client geöffnet wird.
 
-Die Kontext-Lauf Zeit Routine ist erforderlich und wird implizit deklariert und benannt, wenn Sie das \[ **Kontext \_ handle** - \] Attribut auf eine Typdefinition anwenden. Der Server Ruft die Kontext-run-down-Routine nicht auf, wenn das \[ **Kontext \_ handle** - \] Attribut direkt auf einen Parameter angewendet wurde.
+Die Run-Down-Routine des Kontexts ist erforderlich und wird implizit deklariert und benannt, wenn Sie das Kontexthandpunktattribut auf \[ **\_** \] eine Typdefinition anwenden. Der Server wird die Run-Down-Routine des Kontexts nicht aufrufen, wenn das \[ **Context \_ Handle-Attribut** \] direkt auf einen Parameter angewendet wurde.
 
-Die Syntax der Kontext-laufbetrieb Routine ist:
+Die Routinesyntax für die Kontext run-down ist:
 
 ``` syntax
 void __RPC_USER type-id_rundown (type-id);
 ```
 
-Beachten Sie, dass der Typname den Namen der Kontext-run-down-Routine bestimmt.
+Beachten Sie, dass der Typname den Namen der Kontext-Run-Down-Routine bestimmt.
 
-Das folgende Code Fragment stellt eine Beispiel-Kontext-Lauf Routine Routine dar. , die die im Beispiel verwendete remoteclose-Prozedur in der [Schnittstellen Entwicklung mithilfe von Kontext Handles](interface-development-using-context-handles.md), der [Server Entwicklung mithilfe von Kontext](server-development-using-context-handles.md)Handles und der [Client Entwicklung mithilfe von Kontext Handles](client-development-using-context-handles.md)aufruft. Diese Prozedur schließt das Datei Handle, gibt den der Datei zugeordneten Arbeitsspeicher frei und weist dem Kontext Handle den Wert **null** zu. Das Zuweisen von **null** ist das Ergebnis des Aufrufs der Funktion remoteclose und ist in einem-Lauf Fall Szenario nicht erforderlich. Die RPC-Laufzeit bereinigt den Status, unabhängig davon, ob das Kontext Handle auf **null** festgelegt ist.
+Das folgende Codefragment stellt eine Beispielkontext-Run-Down-Routine vor. , die die RemoteClose-Prozedur aufruft, die im Beispiel unter Schnittstellenentwicklung [mithilfe](interface-development-using-context-handles.md)von Kontexthandles, [Serverentwicklung mit](server-development-using-context-handles.md)Kontexthandles und Cliententwicklung mithilfe von [Kontexthandles verwendet wird.](client-development-using-context-handles.md) Diese Prozedur schließt das Dateihand handle, gibt den der Datei zugeordneten Arbeitsspeicher frei und weist dem Kontexthand handle **NULL** zu. Das Zuweisen **von NULL** ist das Ergebnis des Aufrufs der RemoteClose-Funktion und in einem Run-Down-Szenario nicht erforderlich. Die RPC-Laufzeit bereinigt ihren Zustand unabhängig davon, ob das Kontexthand handle auf **NULL festgelegt ist.**
 
 ``` syntax
 //file: cxhndp.c (fragment of file containing remote procedures)
@@ -39,9 +39,9 @@ void __RPC_USER PCONTEXT_HANDLE_TYPE_rundown(
 }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

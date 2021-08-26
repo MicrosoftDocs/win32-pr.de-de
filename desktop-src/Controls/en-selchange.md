@@ -1,9 +1,9 @@
 ---
-title: EN_SELCHANGE Benachrichtigungs Code (RichEdit. h)
-description: Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass sich die aktuelle Auswahl geändert hat. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs \_ Meldung.
+title: EN_SELCHANGE Benachrichtigungscode (Richedit.h)
+description: Benachrichtigt das übergeordnete Fenster eines Rich Edit-Steuerelements, dass sich die aktuelle Auswahl geändert hat. Ein Rich-Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer WM \_ NOTIFY-Nachricht.
 ms.assetid: 53d47b53-a73c-4652-889c-2374f8e99382
 keywords:
-- Windows-Steuerelemente für EN_SELCHANGE Benachrichtigungs
+- EN_SELCHANGE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79dfcf951f88fa1e10f4723bd9843421f0e20ae5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e9a2398abd5058f57eeef6ad73f559a723e7df29315d38dfc9794a707740c89f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743032"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047420"
 ---
-# <a name="en_selchange-notification-code"></a>EN \_ selChange-Benachrichtigungs Code
+# <a name="en_selchange-notification-code"></a>EN \_ SELCHANGE-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Rich-Edit-Steuer Elements, dass sich die aktuelle Auswahl geändert hat. Ein Rich Edit-Steuerelement sendet diesen Benachrichtigungs Code in Form einer WM-Benachrichtigungs Meldung. [**\_**](wm-notify.md)
+Benachrichtigt das übergeordnete Fenster eines Rich Edit-Steuerelements, dass sich die aktuelle Auswahl geändert hat. Ein Rich-Edit-Steuerelement sendet diesen Benachrichtigungscode in Form einer [**WM \_ NOTIFY-Nachricht.**](wm-notify.md)
 
 
 ```C++
@@ -41,19 +41,19 @@ EN_SELCHANGE
 *lParam* 
 </dt> <dd>
 
-Eine [**selChange**](/windows/desktop/api/Richedit/ns-richedit-selchange) -Struktur, die Informationen über die Auswahl empfängt.
+Eine [**SELCHANGE-Struktur,**](/windows/desktop/api/Richedit/ns-richedit-selchange) die Informationen zur Auswahl empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Benachrichtigungs Code gibt keinen Wert zurück.
+Dieser Benachrichtigungscode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um en \_ selChange-Benachrichtigungs Codes zu erhalten, geben Sie [**ENM \_ selChange**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der Nachricht [**EM \_**](em-seteventmask.md) -Abmeldung gesendet wird.
+Um EN \_ SELCHANGE-Benachrichtigungscodes zu empfangen, geben Sie [**ENM \_ SELCHANGE**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht**](em-seteventmask.md) gesendet wird.
 
-Dieser Benachrichtigungs Code wird gesendet, wenn sich die Position der Einfügemarke ändert und kein Text ausgewählt ist (die Auswahl ist leer). Die Position der Einfügemarke kann sich ändern, wenn der Benutzer auf die Maus, die Typen klickt oder eine Pfeiltaste drückt.
+Dieser Benachrichtigungscode wird gesendet, wenn sich die Position des Caretzeichens ändert und kein Text ausgewählt wird (die Auswahl ist leer). Die Caretposition kann sich ändern, wenn der Benutzer mit der Maus klickt, eine Pfeiltaste eingibt oder drückt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Dieser Benachrichtigungs Code wird gesendet, wenn sich die Position der Einfüge
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -71,13 +71,13 @@ Dieser Benachrichtigungs Code wird gesendet, wenn sich die Position der Einfüge
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**SelChange**](/windows/desktop/api/Richedit/ns-richedit-selchange)
+[**SELCHANGE**](/windows/desktop/api/Richedit/ns-richedit-selchange)
 </dt> <dt>
 
-[**WM- \_ Benachrichtigung**](wm-notify.md)
+[**WM \_ NOTIFY**](wm-notify.md)
 </dt> </dl>
 
  

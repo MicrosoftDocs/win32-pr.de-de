@@ -1,23 +1,23 @@
 ---
-description: Autoren sollten die Validierung für jedes neue oder neu geänderte Mergemodul ausführen, bevor Sie versuchen, das Modul zum ersten Mal in eine Installations Datenbank zu mergen.
+description: Autoren sollten die Validierung für jedes neue oder neu geänderte Mergemodul ausführen, bevor sie versuchen, das Modul zum ersten Mal in einer Installationsdatenbank zusammen zu führen.
 ms.assetid: 8d6794af-403a-416e-8ace-1af3f193414b
-title: Validieren von Mergemodulen
+title: Überprüfen von Mergemodulen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d8bbe7f1c1ea32baa39cadd7c729f3a8ca3ac17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af5a226f72e35ce4ee76599444e86ef80bd71a8866ca80eef2a5da04a87fb79a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995799"
 ---
-# <a name="validating-merge-modules"></a>Validieren von Mergemodulen
+# <a name="validating-merge-modules"></a>Überprüfen von Mergemodulen
 
-Autoren sollten die Validierung für jedes neue oder neu geänderte Mergemodul ausführen, bevor Sie versuchen, das Modul zum ersten Mal in eine Installations Datenbank zu mergen. Die mergemodulvalidierung funktioniert auf dieselbe Weise wie die [Paket](package-validation.md) Überprüfung, verwendet jedoch einen anderen Satz [interner Konsistenz](internal-consistency-evaluators-ices.md) Auswertungen (ICES), die für Mergemodule spezifisch sind. Weitere Informationen zu diesen Merge-Modul-ICES finden Sie unter [Merge Module Ice Reference](merge-module-ice-reference.md).
+Autoren sollten die Validierung für jedes neue oder neu geänderte Mergemodul ausführen, bevor sie versuchen, das Modul zum ersten Mal in einer Installationsdatenbank zusammen zu führen. Die Überprüfung des Mergemoduls [](package-validation.md) funktioniert auf die gleiche Weise wie die Paketvalidierung, verwendet jedoch einen anderen Satz von internen Konsistenzauswertungen (Internal [Consistency Evaluators,](internal-consistency-evaluators-ices.md) ICEs), die für das Zusammenführen von Modulen spezifisch sind. Weitere Informationen zu diesen MERGE-Modul-ICEs finden Sie unter [Merge Module ICE Reference](merge-module-ice-reference.md).
 
-Das Mergemodul "ICES" wird in der Datei "Merge Module. Cub" (Mergemod. CUB) gespeichert. Bei der Installation des Orca-Tools oder msival2 werden auch die Dateien "Logo. Cub", "Darice. Cub" und "Mergemod. Cub" bereitstellt.
+Mergemodul-ICEs werden in der CUB-Datei des Mergemoduls "Mergemod.cub" gespeichert. Bei der Installation des Orca-Tools oder von ms merger2 werden auch die Dateien Logo.cub, Darice.cub und Mergemod.cub angezeigt.
 
-Weitere Informationen finden Sie unter [Merge Module Ice Reference](merge-module-ice-reference.md).
+Weitere Informationen finden Sie unter [Merge Module ICE Reference (ICE-Referenz zum Mergemodul).](merge-module-ice-reference.md)
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Mit der setstartend-Methode werden die Start-und Endzeit Zeiten des Objekts relativ zum übergeordneten Element des Objekts festgelegt.
+description: Die SetStartStop-Methode legt die Start- und Stoppzeiten des Objekts relativ zum übergeordneten Element des Objekts fest.
 ms.assetid: 6275a36b-f963-4916-bf60-ea68008ad153
-title: 'Iamtimelineobj:: setstartstation-Methode (qedit. h)'
+title: IAMTimelineObj::SetStartStop-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: e7839417a0406fc2702fb0fbd593edc92fa80437
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e2806d926c9842f5900f46f923f4cbdf8caa47f112e1832077ab7d2b80a9341c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052450"
 ---
-# <a name="iamtimelineobjsetstartstop-method"></a>Iamtimelineobj:: setstartstation-Methode
+# <a name="iamtimelineobjsetstartstop-method"></a>IAMTimelineObj::SetStartStop-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `SetStartStop` -Methode legt die Start-und Endzeit Zeiten des Objekts relativ zum übergeordneten Element des Objekts fest.
+Die `SetStartStop` -Methode legt die Start- und Stoppzeiten des Objekts relativ zum übergeordneten Element des Objekts fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,45 +46,45 @@ HRESULT SetStartStop(
 
 <dl> <dt>
 
-*Starten* 
+*Start* 
 </dt> <dd>
 
-Neue Startzeit in 100-Nanosecond-Einheiten oder – 1, um die vorhandene Startzeit beizubehalten.
+Neue Startzeit in Einheiten von 100 Nanosekunden oder –1, um die vorhandene Startzeit zu behalten.
 
 </dd> <dt>
 
 *Beenden* 
 </dt> <dd>
 
-Neue Endzeit, in 100-Nanosecond-Einheiten oder – 1, um die vorhandene Endzeit beizubehalten.
+Neue Stoppzeit in Einheiten von 100 Nanosekunden oder –1, um die vorhandene Stoppzeit zu behalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück:
+Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                  |
 |----------------------------------------------------------------------------------------------|------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Ungültiges Argument.<br/> |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>    | Nicht implementiert.<br/>  |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiges Argument.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>    | Nicht implementiert.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird von nachverfolgen, Kompositionen und Gruppen nicht implementiert. Für diese Objekte ist die Startzeit immer 0 (null), und die Endzeit ist die maximale Endzeit der Objekte, die Sie enthalten.
+Spuren, Kompositionen und Gruppen implementieren diese Methode nicht. Für diese Objekte ist die Startzeit immer 0 (null), und die Stoppzeit ist die maximale Stoppzeit der objekte, die sie enthalten.
 
-Legen Sie keine Überlappungs Zeiten für Quell Objekte innerhalb desselben Titels fest. Dies kann zu nicht definiertem Verhalten führen.
+Legen Sie keine überlappenden Zeiten für Quellobjekte innerhalb derselben Spur fest. Dies kann zu nicht definierten Verhaltensweisen führen.
 
-Bei Quell Objekten sind Start-und Endzeiten unabhängig von den Start-und Endzeiten des Mediums. Wenn Sie ein Wertepaar ändern, ändert sich das andere nicht. Um die Start-und Endzeit des Mediums festzulegen, müssen Sie die [**iamtimelinesrc:: setmediatimes**](iamtimelinesrc-setmediatimes.md) -Methode aufrufen. Weitere Informationen finden Sie unter [Zeit in DirectShow-Bearbeitungs Diensten](time-in-directshow-editing-services.md).
+Bei Quellobjekten sind die Start- und Stoppzeiten unabhängig von den Start- und Stoppzeiten der Medien. Das Ändern eines Wertepaars ändert das andere nicht. Rufen Sie zum Festlegen der Start- und Stoppzeiten der Medien die [**IAMTimelineSrc::SetMediaTimes-Methode**](iamtimelinesrc-setmediatimes.md) auf. Weitere Informationen finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
 
-Um Frame-exakte Ausschnitte und Übergänge zu erhalten, legen Sie die Parameter *Start* und *Ende* auf Frame-Begrenzungen fest. Sie können die [**iamtimelineobj:: fixtimes**](iamtimelineobj-fixtimes.md) -Methode verwenden, um einen Zeitwert in die nächste Frame Grenze zu konvertieren, oder Sie können die folgende Funktion verwenden, um von der Frame Nummer in die Verweis Zeit zu konvertieren:
+Um framegenaue Schnitte und Übergänge zu erhalten, legen Sie die *Parameter Start* und *Stop* auf Rahmengrenzen fest. Sie können die [**IAMTimelineObj::FixTimes-Methode**](iamtimelineobj-fixtimes.md) verwenden, um einen Zeitwert in die nächste Framegrenze zu konvertieren, oder sie können die folgende Funktion verwenden, um die Framenummer in die Verweiszeit zu konvertieren:
 
 
 ```C++
@@ -105,12 +105,12 @@ REFERENCE_TIME inline FrameNumToTime(LONGLONG frame, double fps)
 
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -120,8 +120,8 @@ REFERENCE_TIME inline FrameNumToTime(LONGLONG frame, double fps)
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -129,10 +129,10 @@ REFERENCE_TIME inline FrameNumToTime(LONGLONG frame, double fps)
 
 <dl> <dt>
 
-[**Iamtimelineobj-Schnittstelle**](iamtimelineobj.md)
+[**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

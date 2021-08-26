@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentinvalidparameterexception-Konstruktor'
-title: Esentinvalidparameterexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidParameterException-Konstruktor'
+title: EsentInvalidParameterException-Konstruktor
 TOCTitle: 'EsentInvalidParameterException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidParameterException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidparameterexception.esentinvalidparameterexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ff0cdd14738d1571c1a5e9b45ebbde5f4a349c93
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50bda9a630ea89c603c7ce9a7ea9e88aaaa3f962ba14096414b6294d2571105f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064530"
 ---
-# <a name="esentinvalidparameterexception-constructor"></a>Esentinvalidparameterexception-Konstruktor
+# <a name="esentinvalidparameterexception-constructor"></a>EsentInvalidParameterException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidparameterexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidParameterException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidParameterException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidparameterexception-Klasse](./esentinvalidparameterexception-class.md)
+[EsentInvalidParameterException-Klasse](./esentinvalidparameterexception-class.md)
 
-[Esentinvalidparameterexception-Member](./esentinvalidparameterexception-members.md)
+[EsentInvalidParameterException-Member](./esentinvalidparameterexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

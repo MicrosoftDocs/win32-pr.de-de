@@ -1,11 +1,11 @@
 ---
-title: RegistrationInfo. Source (Eigenschaft)
-description: Ruft bei der Skripterstellung ab oder legt fest, wo die Aufgabe aus stammt. Beispielsweise kann eine Aufgabe aus einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer stammen.
+title: RegistrationInfo.Source(Eigenschaft)
+description: Für die Skripterstellung ruft ab oder legt fest, woher die Aufgabe stammt. Beispielsweise kann eine Aufgabe von einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer stammen.
 ms.assetid: b5bd987f-5c9f-4af0-99e2-aec92951f2be
 keywords:
-- Quell Eigenschaft Taskplaner
-- Quell Eigenschaft Taskplaner, RegistrationInfo-Objekt
-- RegistrationInfo-Objekt Taskplaner, Quell Eigenschaft
+- Quelleigenschafts-Taskplaner
+- Quelleigenschaft Taskplaner , RegistrationInfo-Objekt
+- RegistrationInfo-Taskplaner , Source-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d360a20d1f0f4736db4dd6f136a579178a65ca70
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 97320d63823599e52327533afdba62f795622263e57878515ddd7ade9c98070b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126030"
 ---
-# <a name="registrationinfosource-property"></a>RegistrationInfo. Source (Eigenschaft)
+# <a name="registrationinfosource-property"></a>RegistrationInfo.Source(Eigenschaft)
 
-Ruft bei der Skripterstellung ab oder legt fest, wo die Aufgabe aus stammt. Beispielsweise kann eine Aufgabe aus einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer stammen.
+Für die Skripterstellung ruft ab oder legt fest, woher die Aufgabe stammt. Beispielsweise kann eine Aufgabe von einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer stammen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,13 +38,13 @@ RegistrationInfo.Source As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Ursprung der Aufgabe aus. Beispielsweise aus einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer.
+Woher die Aufgabe stammt. Beispielsweise aus einer Komponente, einem Dienst, einer Anwendung oder einem Benutzer.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe werden die Informationen zur Task Quelle mithilfe des [**Quell**](taskschedulerschema-source-registrationinfotype-element.md) Elements des Taskplaner Schemas angegeben.
+Beim Lesen oder Schreiben von XML für einen Task werden die Informationen der Taskquelle mithilfe des [**Source-Elements**](taskschedulerschema-source-registrationinfotype-element.md) des Taskplaner angegeben.
 
-Beim Festlegen dieses Eigenschafts Werts kann der Wert aus Text bestehen, der aus einer DLL-Datei der Ressource abgerufen wird. Eine spezialisierte Zeichenfolge wird verwendet, um auf den Text aus der Ressourcen Datei zu verweisen. Das Format der Zeichenfolge ist $ (@ \[ dll \] , \[ ResourceId \] ), wobei \[ dll \] der Pfad zur DLL-Datei, die die Ressource enthält, und \[ ResourceId der \] Bezeichner für den Ressourcen Text ist. Wenn z. b. der Wert dieser Eigenschaft auf $ (@% systemroot% \\ system32 \\ResourceName.dll,-101) festgelegt wird, wird die-Eigenschaft auf den Wert des Ressourcen Texts mit einem Bezeichner gleich-101 in der Datei% SystemRoot% \\ system32ResourceName.dll festgelegt \\ .
+Beim Festlegen dieses Eigenschaftswerts kann der Wert Text sein, der aus einer Ressourcendatei .dll wird. Eine spezialisierte Zeichenfolge wird verwendet, um auf den Text aus der Ressourcendatei zu verweisen. Das Format der Zeichenfolge ist $(@ Dll , ResourceID ), wobei DLL der Pfad zur .dll-Datei ist, die die Ressource enthält, und ResourceID der Bezeichner für den \[ \] \[ \] \[ \] \[ \] Ressourcentext ist. Wenn Sie diesen Eigenschaftswert beispielsweise auf $(@ %SystemRoot% System32ResourceName.dll, -101) festlegen, wird die -Eigenschaft auf den Wert des Ressourcentexts mit einem Bezeichner gleich \\ \\ -101 in der Datei %SystemRoot% \\ System32 \\ResourceName.dll festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Beim Festlegen dieses Eigenschafts Werts kann der Wert aus Text bestehen, der au
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

@@ -1,9 +1,9 @@
 ---
-title: EM_SETWORDWRAPMODE Meldung (RichEdit. h)
-description: Legt die Optionen für Wort Umbruch und Wörter Trennung für ein Rich-Edit-Steuerelement fest.
+title: EM_SETWORDWRAPMODE Nachricht (Richedit.h)
+description: Legt die Optionen "Zeilenumbruch" und "Wortumbruch" für ein Umfassendes Bearbeitungssteuerelement fest.
 ms.assetid: 43703ac8-6ae5-470b-9156-e60330ef97c4
 keywords:
-- Windows-Steuerelemente für EM_SETWORDWRAPMODE Meldung
+- EM_SETWORDWRAPMODE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf1dc6f064f52bf2a5f58c71db099f38b9350e63
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a0b5c750bb83f4f3fb0c1acfc82b67677c36094df461d10787186177fc891df2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047980"
 ---
-# <a name="em_setwordwrapmode-message"></a>EM \_ setwordwrapmode-Meldung
+# <a name="em_setwordwrapmode-message"></a>EM \_ SETWORDWRAPMODE-Meldung
 
-Legt die Optionen für Wort Umbruch und Wörter Trennung für ein Rich-Edit-Steuerelement fest.
+Legt die Optionen "Zeilenumbruch" und "Wortumbruch" für ein Umfassendes Bearbeitungssteuerelement fest.
 
 > [!Note]  
-> Diese Meldung wird nur in asiatischen Sprachversionen von Microsoft Rich Edit 1,0 unterstützt. Sie wird in späteren Versionen nicht unterstützt.
+> Diese Meldung wird nur in asiatisch-sprachigen Versionen von Microsoft Rich Edit 1.0 unterstützt. In späteren Versionen wird dies nicht unterstützt.
 
  
 
@@ -43,12 +43,12 @@ Gibt einen oder mehrere der folgenden Werte an.
 
 | Wert                                                                                                                                                         | Bedeutung                                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| <span id="WBF_WORDWRAP"></span><span id="wbf_wordwrap"></span><dl> <dt>**WBF- \_ WordWrap**</dt> </dl>    | Ermöglicht asiatische-spezifische Zeilenumbruch Vorgänge, wie z. b. Kinsoku in Japanisch. <br/>                                 |
-| <span id="WBF_WORDBREAK"></span><span id="wbf_wordbreak"></span><dl> <dt>**WBF- \_ WordBreak**</dt> </dl> | Ermöglicht englische Wörter brechende Vorgänge in Japanisch und Chinesisch. Aktiviert den Vorgang zum Durchsuchen von Hangeul-Wörtern.<br/> |
-| <span id="WBF_OVERFLOW"></span><span id="wbf_overflow"></span><dl> <dt>**WBF- \_ Überlauf**</dt> </dl>    | Erkennt eine Überlauf Interpunktions Zeichen. (Wird zurzeit nicht unterstützt.)<br/>                                                |
-| <span id="WBF_LEVEL1"></span><span id="wbf_level1"></span><dl> <dt>**WBF- \_ Level1**</dt> </dl>          | Legt die Satzzeichen Tabelle der Ebene 1 als Standard fest.<br/>                                                         |
-| <span id="WBF_LEVEL2"></span><span id="wbf_level2"></span><dl> <dt>**WBF- \_ Level2**</dt> </dl>          | Legt die Satzzeichen Tabelle der Ebene 2 als Standard fest.<br/>                                                         |
-| <span id="WBF_CUSTOM"></span><span id="wbf_custom"></span><dl> <dt>**\_benutzerdefiniertes WBF**</dt> </dl>          | Legt die Anwendungs definierte Interpunktions Tabelle fest.<br/>                                                            |
+| <span id="WBF_WORDWRAP"></span><span id="wbf_wordwrap"></span><dl> <dt>**WBF \_ WORDWRAP**</dt> </dl>    | Aktiviert asiatisch spezifische Zeilenumbruchvorgänge, z. B. Kinsoku auf Japanisch. <br/>                                 |
+| <span id="WBF_WORDBREAK"></span><span id="wbf_wordbreak"></span><dl> <dt>**WBF \_ WORDBREAK**</dt> </dl> | Aktiviert englische Wörterbruchvorgänge in Japanisch und Chinesisch. Aktiviert den Hangeul-Vorgang zum Abbrechen von Wörtern.<br/> |
+| <span id="WBF_OVERFLOW"></span><span id="wbf_overflow"></span><dl> <dt>**WBF \_ OVERFLOW**</dt> </dl>    | Erkennt Überlaufpunktion. (Derzeit nicht unterstützt.)<br/>                                                |
+| <span id="WBF_LEVEL1"></span><span id="wbf_level1"></span><dl> <dt>**WBF \_ LEVEL1**</dt> </dl>          | Legt die Satzzeichentabelle level 1 als Standard fest.<br/>                                                         |
+| <span id="WBF_LEVEL2"></span><span id="wbf_level2"></span><dl> <dt>**WBF \_ LEVEL2**</dt> </dl>          | Legt die Satzzeichentabelle der Ebene 2 als Standardwert fest.<br/>                                                         |
+| <span id="WBF_CUSTOM"></span><span id="wbf_custom"></span><dl> <dt>**WBF \_ CUSTOM**</dt> </dl>          | Legt die anwendungsdefinierte Interpunktionstabelle fest.<br/>                                                            |
 
 
 
@@ -59,17 +59,17 @@ Gibt einen oder mehrere der folgenden Werte an.
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung gibt die aktuellen Optionen für Wort Umbruch und Wörter Trennung zurück.
+Diese Meldung gibt die aktuellen Zeilenumbruch- und Wörterumbruchoptionen zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht darf nicht von der von der Anwendung definierten Wörter Trennung gesendet werden.
+Diese Meldung darf nicht von der von der Anwendung definierten Wörterbruchprozedur gesendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Diese Nachricht darf nicht von der von der Anwendung definierten Wörter Trennun
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

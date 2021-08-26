@@ -1,7 +1,7 @@
 ---
-description: Der Operator-= subtrahiert eine Verweis Zeit von einer anderen.
+description: Der Operator -= subtrahiert eine Verweiszeit von einer anderen.
 ms.assetid: 5b0ec72e-87d8-4562-96b1-40e4f5036fd4
-title: Methode "kref time. Operator-=" (Ref time. h)
+title: CRefTime.operator-= -Methode (Reftime.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3bf66abe11d5c61edbb70118020d882c82b08847
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 854831c2ed9cf5b636160dccaf002a7ea9ac37ebaa5e970f8b63dd3f112cdda6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108040"
 ---
-# <a name="creftimeoperator--method"></a>Methode "kref time. Operator-="
+# <a name="creftimeoperator--method"></a>CRefTime.operator-=-Methode
 
-Der Operator-= subtrahiert eine Verweis Zeit von einer anderen.
+Der Operator -= subtrahiert eine Verweiszeit von einer anderen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CRefTime& operator-=(
 
 <dl> <dt>
 
-*RT* \[ atur\]
+*rt* \[ Ref\]
 </dt> <dd>
 
-Verweis **auf ein-** Objekt.
+Verweis auf ein **CRefTime-Objekt.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Verweis auf das-Objekt zurück.
+Gibt einen Verweis auf das -Objekt zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt einen Verweis auf das-Objekt zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref time. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Reftime.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

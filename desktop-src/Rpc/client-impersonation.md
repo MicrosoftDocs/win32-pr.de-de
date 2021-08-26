@@ -1,39 +1,39 @@
 ---
-title: Client Identitätswechsel (RPC)
-description: Der Identitätswechsel ist in einer verteilten Computerumgebung hilfreich, wenn Server Client Anforderungen an andere Server Prozesse oder an das Betriebssystem übergeben müssen.
+title: Clientpersonation (RPC)
+description: Identitätswechsel ist in einer verteilten Computingumgebung nützlich, wenn Server Clientanforderungen an andere Serverprozesse oder das Betriebssystem übergeben müssen.
 ms.assetid: 49d833d8-c61c-4746-91cf-c0753847cd3d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d03ad3b4d9e2984708e8b274ab9bc57c3235808b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 73061a35c61a22a4d238e902c3dcb298e3ac0affaf4b0929c83311145a684f1e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022824"
 ---
 # <a name="client-impersonation"></a>Clientidentitätswechsel
 
-Der Identitätswechsel ist in einer verteilten Computerumgebung hilfreich, wenn Server Client Anforderungen an andere Server Prozesse oder an das Betriebssystem übergeben müssen. In diesem Fall nimmt ein Server einen Identitätswechsel für den Sicherheitskontext des Clients vor. Andere Server Prozesse können dann die Anforderung so verarbeiten, als ob Sie vom ursprünglichen Client erstellt wurde.
+Identitätswechsel ist in einer verteilten Computingumgebung nützlich, wenn Server Clientanforderungen an andere Serverprozesse oder das Betriebssystem übergeben müssen. In diesem Fall wird von einem Server die Identität des Sicherheitskontexts des Clients angenommen. Andere Serverprozesse können die Anforderung dann so verarbeiten, als würde sie vom ursprünglichen Client gestellt.
 
-![der Server nimmt die Identität eines aufrufenden Clients an, wenn er im Auftrag des Clients nachfolgende Aufrufe ausführt.](images/impr.png)
+![server imitiert die Identität eines aufrufenden Clients, wenn er nachfolgende Aufrufe im Namen des Clients sendet.](images/impr.png)
 
-Beispielsweise sendet ein Client eine Anforderung an Server a. Wenn Server a Server b Abfragen muss, um die Anforderung abzuschließen, nimmt Server a die Identität des Client Sicherheits Kontexts an und sendet die Anforderung an Server b im Auftrag des Clients. Server B verwendet den Sicherheitskontext des ursprünglichen Clients anstelle der Sicherheitsidentität für Server A, um zu bestimmen, ob die Aufgabe ausgeführt werden soll.
+Beispielsweise sendet ein Client eine Anforderung an Server A. Wenn Server A Server B abfragen muss, um die Anforderung auszuführen, wird von Server A die Identität des Clientsicherheitskontexts angenommen und die Anforderung im Namen des Clients an Server B gesendet. Server B verwendet den Sicherheitskontext des ursprünglichen Clients anstelle der Sicherheitsidentität für Server A, um zu bestimmen, ob die Aufgabe abgeschlossen werden soll.
 
-Der Server ruft [**RpcImpersonateClient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcimpersonateclient) auf, um die Sicherheit für den Server Thread mit dem Client Sicherheitskontext zu überschreiben. Nachdem die Aufgabe abgeschlossen ist, ruft der Server [**rpkrevertstoself**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoself) oder [**rpkrevertstarselfex**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoselfex) auf, um den für den Server Thread definierten Sicherheitskontext wiederherzustellen.
+Der Server ruft [**RpcImpersonateClient**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcimpersonateclient) auf, um die Sicherheit für den Serverthread mit dem Clientsicherheitskontext zu überschreiben. Nach Abschluss der Aufgabe ruft der Server [**RpcRevertToSelf**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoself) oder [**RpcRevertToSelfEx**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcreverttoselfex) auf, um den für den Serverthread definierten Sicherheitskontext wiederherzustellen.
 
-Bei der Bindung kann der Client Quality of Service-Informationen zur Sicherheit angeben, die angibt, wie der Server die Identität des Clients annehmen kann. Beispielsweise kann der Client mit einer der-Einstellungen angeben, dass der Server die Identität des Servers nicht annehmen darf. Weitere Informationen finden Sie unter [Quality of Service](quality-of-service.md).
+Bei der Bindung kann der Client Quality-of-Service-Informationen zur Sicherheit angeben, die angeben, wie der Server die Identität des Clients imitieren kann. Mit einer der Einstellungen kann der Client z. B. angeben, dass der Server die Identität nicht angenommen haben darf. Weitere Informationen finden Sie unter [Quality of Service](quality-of-service.md).
 
-Die Funktion, andere Server beim Annehmen der Identität des ursprünglichen Clients aufzurufen, wird als *Delegierung* bezeichnet. Bei Verwendung der Delegierung kann ein Server, der die Identität eines Clients annimmt, einen anderen Server aufrufen und Netzwerk Aufrufe mit den Anmelde Informationen des Clients durchführen. Das heißt aus der Perspektive des zweiten Servers, dass Anforderungen vom ersten Server nicht von den Anforderungen des Clients unterschieden werden können. Die Delegierung wird nicht von allen Sicherheitsanbietern unterstützt. Microsoft umfasst nur einen Sicherheitsanbieter, der die Delegierung unterstützt: Kerberos.
+Die Funktion zum Aufrufen anderer Server beim Identitätswechsel des ursprünglichen Clients wird delegierung *genannt.* Wenn die Delegierung verwendet wird, kann ein Server, der die Identität eines Clients anspricht, einen anderen Server aufrufen und Netzwerkaufrufe mit den Anmeldeinformationen des Clients ausführen. Aus Sicht des zweiten Servers sind Anforderungen, die vom ersten Server gesendet werden, nicht von Anforderungen vom Client zu unterscheiden. Nicht alle Sicherheitsanbieter unterstützen die Delegierung. Microsoft stellt nur einen Sicherheitsanbieter zur Verfügung, der die Delegierung unterstützt: Kerberos.
 
-Die Delegierung kann aufgrund der Berechtigungen, die der Client während eines Remote Prozedur Aufrufes dem Server erteilt, eine gefährliche Möglichkeit darstellen. Der Grund hierfür ist, dass Kerberos Aufrufe mit der Identitätswechsel Ebene nur dann zulässt, wenn eine gegenseitige Authentifizierung angefordert wird. Domänen Administratoren können die Computer einschränken, auf die Aufrufe mit Delegierungs Identitätswechsel Ebene vorgenommen werden, um zu verhindern, dass ahnungslose Clients Aufrufe an Server durchführen, die ihre Anmelde Informationen missbrauchen.
+Die Delegierung kann aufgrund der Berechtigungen, die der Client dem Server während eines Remoteprozeduraufrufs gewährt, eine gefährliche Funktion sein. Aus diesem Grund lässt Kerberos Aufrufe mit der Identitätswechselebene der Delegierung nur zu, wenn gegenseitige Authentifizierung angefordert wird. Domänenadministratoren können die Computer einschränken, auf die Aufrufe mit Delegierungswechselebene ausgeführt werden, um zu verhindern, dass unsichere Clients Aufrufe an Server senden, die ihre Anmeldeinformationen missbrauchen könnten.
 
-Eine Ausnahme von der Delegierungs Regel besteht: Aufrufe mit [**Ncalrpc**](/windows/desktop/Midl/ncalrpc). Wenn diese Aufrufe durchgeführt werden, erhält der Server Delegierungs Rechte, auch wenn eine Identitätswechsel Ebene mit Identitätswechsel angegeben wird. Das heißt, ein Server kann andere Server im Namen des Clients anrufen. Dies funktioniert nur für einen Remote-Rückruf. Wenn der Client A z. b. den lokalen Server-lb mithilfe des lokalen **Ncalrpc** -Servers aufruft, kann er einen Identitätswechsel durchgeführt und Remote Server RB aufrufen RB kann im Auftrag von Client A agieren, aber nur auf dem Remote Computer, auf dem RB ausgeführt wird. Es kann keinen weiteren Netzwerk Aufruf an den Remote Computer C ausführen, es sei denn, der Lastenausgleich hat beim Aufruf von RB eine Identitätswechsel Ebene angegeben.
+Eine Ausnahme von der Delegierungsregel besteht: Aufrufe mit [**ncalrpc**](/windows/desktop/Midl/ncalrpc). Wenn diese Aufrufe ausgeführt werden, erhält der Server Delegierungsrechte, auch wenn eine Identitätswechselebene des Identitätswechsels angegeben ist. Das heißt, ein Server kann andere Server im Namen des Clients aufrufen. Dies funktioniert nur für einen Remoteaufruf. Wenn Client A beispielsweise den lokalen Server LB mithilfe des **lokalen ncalrpc-Servers** aufruft, kann LB die Identität des Remoteservers RB imitieren und aufrufen. RB kann im Auftrag von Client A agieren, jedoch nur auf dem Remotecomputer, auf dem RB ausgeführt wird. Ein weiterer Netzwerkaufruf an Den Remotecomputer C ist nur möglich, wenn LB beim Aufruf von RB eine Identitätswechselebene des Delegaten angegeben hat.
 
 > [!Note]  
-> Der Begriff *Identitäts* Wechsel stellt zwei überlappende Bedeutungen dar. Die erste Bedeutung des Identitäts Wechsels ist der allgemeine Prozess der Durchsetzung von im Auftrag eines Clients. Die zweite Bedeutung ist die spezifische Identitätswechsel Ebene, die als Identitätswechsel bezeichnet wird. Im allgemeinen verdeutlicht der Kontext des Texts die Bedeutung.
+> Der Begriff *Identitätswechsel stellt* zwei überlappende Bedeutungen dar. Die erste Bedeutung des Identitätswechsels ist der allgemeine Prozess des Handelns im Auftrag eines Clients. Die zweite Bedeutung ist die spezifische Identitätswechselebene namens Identitätswechsel. Der Kontext des Texts verdeutlicht im Allgemeinen die Bedeutung.
 
- 
+ 
 
- 
+ 
 
- 
+ 

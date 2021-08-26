@@ -1,7 +1,7 @@
 ---
-description: Mit der setcutpoint-Methode wird die Uhrzeit festgelegt, zu der der Übergang von einer Quelle zum nächsten erfolgt, wenn der Übergang als Ausschneiden gerendert wird.
+description: Die SetCutPoint-Methode legt die Zeit fest, zu der der Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang als Schnitt gerendert wird.
 ms.assetid: 2660f4a8-e249-45d7-8866-02a9f2ef52b8
-title: 'Iamtimelinetrans:: setcutpoint-Methode (qedit. h)'
+title: IAMTimelineTrans::SetCutPoint-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: c1dad934d373a52b7e6c076c8c20dc8e1c6809ac
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2c411925ebe10ad35641e38ae2332605d7691ae24f0cc96ff716bd7d00e6603f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052070"
 ---
-# <a name="iamtimelinetranssetcutpoint-method"></a>Iamtimelinetrans:: setcutpoint-Methode
+# <a name="iamtimelinetranssetcutpoint-method"></a>IAMTimelineTrans::SetCutPoint-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SetCutPoint` Methode legt die Zeit fest, zu der der Übergang von einer Quelle zum nächsten abbricht, wenn der Übergang als Ausschneiden gerendert wird.
+Die `SetCutPoint` -Methode legt die Zeit fest, zu der der Übergang von einer Quelle zur nächsten schneidet, wenn der Übergang als Schnitt gerendert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT SetCutPoint(
 
 <dl> <dt>
 
-*Tltime* 
+*TLTime* 
 </dt> <dd>
 
-Der Ausschneide Punkt relativ zum Anfang des Übergangs in 100-Nanosecond-Einheiten. Wenn der Wert außerhalb der Grenzen des Übergangs liegt, wird er auf die nächste gültige Zeit abgeschnitten.
+Schnittpunkt relativ zum Beginn des Übergangs in Einheiten von 100 Nanosekunden. Wenn der Wert außerhalb der Grenzen des Übergangs liegt, wird er auf die nächste gültige Zeit abgeschnitten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist der Ausschneide Punkt die Mitte des Übergangs. Bei einem Übergang, der eine Sekunde umfasst, beträgt der Standard Ausschneide Punkt z. b. 0,5 Sekunden in den Übergang.
+Standardmäßig ist der Schnittpunkt die Mitte des Übergangs. Bei einem Übergang, der sich über eine Sekunde erstreckt, beträgt der Standardmäßige Schnittpunkt beispielsweise 0,5 Sekunden in den Übergang.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Standardmäßig ist der Ausschneide Punkt die Mitte des Übergangs. Bei einem Ü
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Standardmäßig ist der Ausschneide Punkt die Mitte des Übergangs. Bei einem Ü
 
 <dl> <dt>
 
-[**Iamtimelinetrans-Schnittstelle**](iamtimelinetrans.md)
+[**IAMTimelineTrans-Schnittstelle**](iamtimelinetrans.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

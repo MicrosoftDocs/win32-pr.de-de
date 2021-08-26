@@ -1,27 +1,27 @@
 ---
-title: Registrieren für Anwendungs Neustart
-description: Zum Registrieren der Anwendung, die neu gestartet werden soll, müssen Sie die RegisterApplicationRestart-Funktion aufrufen.
+title: Registrieren für den Anwendungsneustart
+description: Um ihre Anwendung für den Neustart zu registrieren, rufen Sie die RegisterApplicationRestart-Funktion auf.
 ms.assetid: 4dfbced7-77db-4042-823f-b4b81b2b27a6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 717f8984f26570284a70b40eef70a9d6f753d66a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fe5777d3ed6b99d421f7eba6b5b104b92a1c2c71462c675b2573f18da0ba69f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024570"
 ---
-# <a name="registering-for-application-restart"></a>Registrieren für Anwendungs Neustart
+# <a name="registering-for-application-restart"></a>Registrieren für den Anwendungsneustart
 
-Zum Registrieren der Anwendung, die neu gestartet werden soll, müssen Sie die [**RegisterApplicationRestart**](/windows/win32/api/winbase/nf-winbase-registerapplicationrestart) -Funktion aufrufen. [Windows-Fehlerberichterstattung (wer)](/windows/desktop/wer/windows-error-reporting) startet die Anwendung neu, wenn Sie mindestens 60 Sekunden lang ausgeführt wurde, bevor Sie nicht mehr reagiert oder auf eine nicht behandelte Ausnahme stößt.
+Um ihre Anwendung für den Neustart zu registrieren, rufen Sie die [**RegisterApplicationRestart-Funktion**](/windows/win32/api/winbase/nf-winbase-registerapplicationrestart) auf. [Windows-Fehlerberichterstattung (WER)](/windows/desktop/wer/windows-error-reporting) startet Ihre Anwendung neu, wenn sie seit mindestens 60 Sekunden ausgeführt wird, bevor sie nicht mehr reagiert oder eine nicht behandelte Ausnahme auftritt.
 
-Sie sollten auch die [Registrierung für die Wiederherstellung](registering-for-application-recovery.md)in Erwägung gezogen werden, um Daten und Zustandsinformationen zu speichern, die hilfreich sein können, wenn wer die Anwendung neu startet. Wer startet die Anwendung neu, nachdem der Wiederherstellungs Vorgang abgeschlossen ist, wenn Sie sich auch für die Wiederherstellung registrieren.
+Sie sollten auch die Registrierung für die [Wiederherstellung](registering-for-application-recovery.md)in Betracht ziehen, mit der Sie Daten und Zustandsinformationen speichern können, die beim Neustart Ihrer Anwendung durch WER hilfreich sein können. Wer startet die Anwendung nach Abschluss des Wiederherstellungsprozesses neu, wenn Sie sich auch für die Wiederherstellung registrieren.
 
-Nachdem der Wiederherstellungs Vorgang abgeschlossen ist, beendet wer die Anwendung und startet Sie neu. Bei Konsolen Anwendungen wird die Anwendung in einem separaten Konsolenfenster gestartet, das geschlossen wird, wenn die Anwendung beendet wird.
+Nach Abschluss des Wiederherstellungsprozesses beendet WER die Anwendung und startet sie dann neu. Bei Konsolenanwendungen wird die Anwendung in einem separaten Konsolenfenster gestartet, das geschlossen wird, wenn die Anwendung beendet wird.
 
-**Hinweis für Autoren des Anwendungs Installers:** Die Registrierung für den Neustart der Anwendung bewirkt auch, dass Windows die Anwendung nach dem Neustart des Computers automatisch neu startet, wenn der Computer aufgrund eines Software Updates neu gestartet wird. Damit dies funktioniert, muss das Installationsprogramm der Anwendung die [**ExitWindowsEx**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) -Funktion mit dem \_ festgelegten EWX restartapps-Flag oder der [**InitiateShutdown**](/windows/desktop/api/winreg/nf-winreg-initiateshutdowna) -Funktion mit dem \_ festgelegten Flag Shutdown restartapps aufzurufen.
+**Hinweis für Anwendungsinstallationsprogrammautoren:** Die Registrierung für den Anwendungsneustart führt auch dazu, dass Windows die Anwendung nach dem Neustart des Computers automatisch neu startet, wenn der Computer aufgrund eines Softwareupdates neu gestartet wird. Damit dies funktioniert, muss das Installationsprogramm der Anwendung die [**ExitWindowsEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) mit \_ dem EWX RESTARTAPPS-Flag oder die [**InitiateShutdown-Funktion**](/windows/desktop/api/winreg/nf-winreg-initiateshutdowna) mit dem \_ Shutdown RESTARTAPPS-Flag aufrufen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie registrieren, damit wer die Anwendung neu startet. Das Beispiel verursacht eine Zugriffsverletzung nach der Registrierung für den Neustart der Anwendung. Die Zugriffsverletzung wird von Windows-Fehlerberichterstattung übernommen und zeigt die Benutzeroberflächen für die Fehlerberichterstattung, einschließlich Neustart der Anwendung. Er sollte in einem Konsolenfenster ohne Befehlszeilenargumente ausgeführt werden.
+Das folgende Beispiel zeigt, wie Sie sich registrieren, damit WER Ihre Anwendung neu startet. Das Beispiel verursacht eine Zugriffsverletzung nach der Registrierung für den Anwendungsneustart. Die Zugriffsverletzung wird von Windows-Fehlerberichterstattung übernommen und veranschaulicht die Benutzeroberfläche für die Fehlerberichterstattung, einschließlich des Anwendungsneustarts. Sie sollte in einem Konsolenfenster ohne Befehlszeilenargumente ausgeführt werden.
 
 
 ```C++
@@ -240,6 +240,6 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 

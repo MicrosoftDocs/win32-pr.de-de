@@ -1,58 +1,58 @@
 ---
 title: Routerkonfigurationsfunktionen
-description: Verwenden Sie beim Entwickeln von Software zum Konfigurieren von Windows-Routern die folgenden Funktionen.
+description: Verwenden Sie beim Entwickeln von Software die folgenden Funktionen, um Windows Router zu konfigurieren.
 ms.assetid: fb65885c-7c3b-4c90-9516-388f09703c90
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09ccc9ffafc257112a4692d20a47dd37a43c4204
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bf242f28fd7e398d05076dbdb7f023be9d4b1b1f9d540117efea5917a2c43b90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081200"
 ---
 # <a name="router-configuration-functions"></a>Routerkonfigurationsfunktionen
 
-Verwenden Sie beim Entwickeln von Software zum Konfigurieren von Windows-Routern die folgenden Funktionen.
+Verwenden Sie beim Entwickeln von Software die folgenden Funktionen, um Windows Router zu konfigurieren.
 
--   [**Mprconfigbufferfree**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigbufferfree)
--   [**Mprconfigfiltergetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltergetinfo)
--   [**Mprconfigfiltersetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltersetinfo)
--   [**Mprconfiggetfriendlyname**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetfriendlyname)
--   [**Mprconfiggetguidname**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetguidname)
--   [**Mprconfiginterfaecreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacecreate)
--   [**Mprconfiginterfacedelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacedelete)
--   [**Mprconfiginterfacereum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfaceenum)
--   [**Mprconfiginterfacegetcustominfoex**](/windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacegetcustominfoex)
--   [**Mprconfiginterfacegethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegethandle)
--   [**Mprconfiginterfacegetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegetinfo)
--   [**Mprconfiginterfakesetcustominfoex**](/windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacesetcustominfoex)
--   [**Mprconfiginterfakesetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacesetinfo)
--   [**Mprconfiginterfacetransportadd**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportadd)
--   [**Mprconfiginterfacetransportenum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportenum)
--   [**Mprconfiginterfacetransportgethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgethandle)
--   [**Mprconfiginterfacetransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgetinfo)
--   [**Mprconfiginterfacetransportremove**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportremove)
--   [**Mprconfiginterfacetransportantinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportsetinfo)
--   [**Mprconfigserverbackup**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverbackup)
--   [**Mprconfigserverconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverconnect)
--   [**Mprconfigserverdisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverdisconnect)
--   [**Mprconfigservergetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfo)
--   [**Mprconfigservergetinfoex**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfoex)
--   [**Mprconfigserverinstall**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverinstall)
--   [**Mprconfigserverrestore**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverrestore)
--   [**Mprconfigserverabfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfo)
--   [**Mprconfigserverab.**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfoex)
--   [**Mprconfigtransportcreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportcreate)
--   [**Mprconfigtransportdelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportdelete)
--   [**Mprconfigtransportenum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportenum)
--   [**Mprconfigtransportgethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgethandle)
--   [**Mprconfigtransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgetinfo)
--   [**Mprconfigtransporteintinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportsetinfo)
+-   [**MprConfigBufferFree**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigbufferfree)
+-   [**MprConfigFilterGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltergetinfo)
+-   [**MprConfigFilterSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigfiltersetinfo)
+-   [**MprConfigGetFriendlyName**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetfriendlyname)
+-   [**MprConfigGetGuidName**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiggetguidname)
+-   [**MprConfigInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacecreate)
+-   [**MprConfigInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacedelete)
+-   [**MprConfigInterfaceEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfaceenum)
+-   [**MprConfigInterfaceGetCustomInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacegetcustominfoex)
+-   [**MprConfigInterfaceGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegethandle)
+-   [**MprConfigInterfaceGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacegetinfo)
+-   [**MprConfigInterfaceSetCustomInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mprconfiginterfacesetcustominfoex)
+-   [**MprConfigInterfaceSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacesetinfo)
+-   [**MprConfigInterfaceTransportAdd**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportadd)
+-   [**MprConfigInterfaceTransportEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportenum)
+-   [**MprConfigInterfaceTransportGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgethandle)
+-   [**MprConfigInterfaceTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportgetinfo)
+-   [**MprConfigInterfaceTransportRemove**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportremove)
+-   [**MprConfigInterfaceTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfiginterfacetransportsetinfo)
+-   [**MprConfigServerBackup**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverbackup)
+-   [**MprConfigServerConnect**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverconnect)
+-   [**MprConfigServerDisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverdisconnect)
+-   [**MprConfigServerGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfo)
+-   [**MprConfigServerGetInfoEx**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigservergetinfoex)
+-   [**MprConfigServerInstall**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverinstall)
+-   [**MprConfigServerRestore**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserverrestore)
+-   [**MprConfigServerSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfo)
+-   [**MprConfigServerSetInfoEx**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigserversetinfoex)
+-   [**MprConfigTransportCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportcreate)
+-   [**MprConfigTransportDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportdelete)
+-   [**MprConfigTransportEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportenum)
+-   [**MprConfigTransportGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgethandle)
+-   [**MprConfigTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgetinfo)
+-   [**MprConfigTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportsetinfo)
 
- 
+ 
 
- 
+ 
 
 
 

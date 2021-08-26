@@ -1,9 +1,9 @@
 ---
-title: 'Outputpatch:: Operator-Funktion'
-description: 'Gibt den n-ten Steuerungspunkt im Patch zurück. | Outputpatch:: Operator-Funktion'
+title: OutputPatch::Operator-Funktion
+description: Gibt den n. Kontrollpunkt im Patch zurück. | OutputPatch::Operator-Funktion
 ms.assetid: 3ac15fe8-8bab-46a2-8826-61ade927c99e
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8194713dc4967151991fab95000fa70c40122f26
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 684925491ce7b5ac50cb293b3c8a0270557c9b9e65fcfcde63e9699127bc7ed0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023470"
 ---
-# <a name="outputpatchoperator--function"></a>Outputpatch:: Operator-Funktion
+# <a name="outputpatchoperator--function"></a>OutputPatch::Operator-Funktion
 
-Gibt den *n*-<sup>ten Steuerungspunkt</sup> im Patch zurück.
+Gibt den<sup>n-th-Kontrollpunkt</sup> im Patch zurück. 
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ T Operator[](
 
 Typ: **uint**
 
-Der Eingabe Index.
+Der Eingabeindex.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Der Eingabe Index.
 
 Typ: **T**
 
-Der *n*-<sup>te Steuerungspunkt</sup> .
+Der *n-te*<sup></sup> Kontrollpunkt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | x    | x      |          |       |         |
 
@@ -65,14 +65,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Outputpatch](sm5-object-outputpatch.md)
+[OutputPatch](sm5-object-outputpatch.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

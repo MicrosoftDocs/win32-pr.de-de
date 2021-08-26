@@ -1,19 +1,19 @@
 ---
-description: Direct3D ermöglicht die Auswahl eines Schattierungs Modus gleichzeitig.
+description: Direct3D ermöglicht die gleichzeitige Auswahl eines Schattierungsmodus.
 ms.assetid: 9531947d-4cd8-43c3-8825-4c48a0d69395
-title: Festlegen des Schattierungs Modus (Direct3D 9)
+title: Festlegen des Schattierungsmodus (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62f93d79e4507d9e9d08569e5cbd75bb8b42aa4f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 769908513d4388fafae73f5a6788aef37c3ac9456a00f2e3280c57e04c18b462
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068960"
 ---
-# <a name="setting-the-shading-mode-direct3d-9"></a>Festlegen des Schattierungs Modus (Direct3D 9)
+# <a name="setting-the-shading-mode-direct3d-9"></a>Festlegen des Schattierungsmodus (Direct3D 9)
 
-Direct3D ermöglicht die Auswahl eines Schattierungs Modus gleichzeitig. Standardmäßig ist die Option "Gouraud-Schattierung" ausgewählt. In C++ können Sie den Schattierungs Modus ändern, indem Sie die Methode [**IDirect3DDevice9:: settrenderstate**](/windows/desktop/api) aufrufen. Legen Sie den *State* -Parameter auf D3DRS \_ SHADEMODE fest. Der *State* -Parameter muss auf einen Member der [**D3DSHADEMODE**](./d3dshademode.md) -Enumeration festgelegt werden. Die folgenden Beispielcode Beispiele veranschaulichen, wie der aktuelle Schattierungs Modus einer Direct3D-Anwendung auf den flachen oder den Gouraud-Schattierungs Modus festgelegt werden kann.
+Direct3D ermöglicht die gleichzeitige Auswahl eines Schattierungsmodus. Standardmäßig ist Die Gouraud-Schattierung ausgewählt. In C++ können Sie den Schattierungsmodus ändern, indem Sie die [**IDirect3DDevice9::SetRenderState-Methode**](/windows/desktop/api) aufrufen. Legen Sie den *State-Parameter* auf D3DRS \_ SHADEMODE fest. Der *State-Parameter* muss auf einen Member der [**D3DSHADEMODE-Enumeration**](./d3dshademode.md) festgelegt werden. Die folgenden Beispielcodebeispiele veranschaulichen, wie der aktuelle Schattierungsmodus einer Direct3D-Anwendung auf den Schattierungsmodus "Flat" oder "Gouraud" festgelegt werden kann.
 
 
 ```

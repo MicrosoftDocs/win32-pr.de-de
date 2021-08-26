@@ -1,5 +1,5 @@
 ---
-description: 'StartService-Methode der Msvm_ImageManagementService Klasse: Startet den Dienst.'
+description: 'StartService-Methode der Msvm_ImageManagementService-Klasse: Startet den Dienst.'
 ms.assetid: d1e11947-4f48-404f-a359-627a3b7716fd
 title: StartService-Methode der Msvm_ImageManagementService-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5fb895687960348bf030efe5f668f7a914157ff5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ec12863893e603f7f6fe00d9b619386420ee69d40ea31fc586c00e12ce75af9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046570"
 ---
 # <a name="startservice-method-of-the-msvm_imagemanagementservice-class"></a>StartService-Methode der Msvm \_ ImageManagementService-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

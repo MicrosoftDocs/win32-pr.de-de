@@ -1,32 +1,32 @@
 ---
 title: Entwickeln des Servers
-description: Wenn Sie ein Serverprogramm für eine verteilte Anwendung erstellen, müssen Sie die Header Datei und den Serverstub verwenden, die der Mittelwert Compiler generiert.
+description: Wenn Sie ein Serverprogramm für eine verteilte Anwendung erstellen, müssen Sie die Headerdatei und den Serverstub verwenden, die der MIDL-Compiler generiert.
 ms.assetid: 2b7b14f5-5692-41b8-bb98-7edd36309d21
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, entwickeln des Servers
+- Remoteprozeduraufruf RPC , Tasks, Entwickeln des Servers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fc3405c52c48f531572ab159ad083bad93f95e0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: efeba77168abe53e1df823f416c80a015cc63bc7b89c79a0a86d79174a7c78fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316076"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073404"
 ---
 # <a name="developing-the-server"></a>Entwickeln des Servers
 
-Wenn Sie ein Serverprogramm für eine verteilte Anwendung erstellen, müssen Sie die Header Datei und den Serverstub verwenden, die der Mittelwert Compiler generiert. Weitere Informationen finden Sie unter [entwickeln der-Schnittstelle](developing-the-interface.md). Fügen Sie die Header Datei in die C-Programmdatei des Servers ein. Kompilieren Sie den Serverstub mit den C-Quelldateien, aus denen sich Ihre Anwendung zusammensetzt. Verknüpfen Sie die resultierenden Objektdateien mit der Import Bibliothek. Dieser Vorgang wird in der folgenden Abbildung veranschaulicht.
+Wenn Sie ein Serverprogramm für eine verteilte Anwendung erstellen, müssen Sie die Headerdatei und den Serverstub verwenden, die der MIDL-Compiler generiert. Weitere Informationen finden Sie unter [Entwickeln der Schnittstelle](developing-the-interface.md). Schließen Sie die Headerdatei in die C-Programmdatei Ihres Servers ein. Kompilieren Sie den Serverstub mit den C-Quelldateien, aus denen ihre Anwendung besteht. Verknüpfen Sie die resultierenden Objektdateien mit der Importbibliothek. Dieser Vorgang wird im folgenden Diagramm veranschaulicht.
 
-![Prozess der Erstellung eines Server Programms für eine verteilte Anwendung](images/srvrdev.png)
+![Prozess der Erstellung eines Serverprogramms für eine verteilte Anwendung](images/srvrdev.png)
 
-Wie Sie im Beispiel in der Abbildung sehen können, wurde eine Mittel l-Datei mit dem Namen MyApp. idl verwendet, um die-Schnittstelle zu definieren. Der mittlerer l-Compiler hat MyApp. idl verwendet, um MyApp \_ s. c und MyApp. h zu entwickeln. Außerdem wird eine C-Quelldatei für den Clientstub erstellt, die für diese besondere Erörterung jedoch nicht relevant ist. Die C-Quelldatei für das Serverprogramm (in diesem Fall mysrvr. C) muss die Datei "MyApp. h" enthalten. Außerdem müssen Sie die Dateien "RPC. h" und "Rpcndr. h" einschließen.
+Wie Sie im Beispiel in der Abbildung sehen können, wurde eine MIDL-Datei mit dem Namen MyApp.idl verwendet, um die Schnittstelle zu definieren. Der MIDL-Compiler hat MyApp.idl verwendet, um MyApp \_ s.c und MyApp.h zu erstellen. Außerdem wird eine C-Quelldatei für den Clientstub erzeugt, aber dies ist für diese spezielle Diskussion nicht relevant. Die C-Quelldatei für das Serverprogramm (in diesem Fall Mysrvr.c) muss die Datei Myapp.h enthalten. Außerdem müssen die Dateien Rpc.h und Rpcndr.h eingeschlossen werden.
 
-Die Serveranwendung wurde in zwei Dateien (mysrvr. c und rprocs. c) entwickelt. Die Datei mysrvr. c enthält die Funktionen, die zum Einrichten und Ausführen des Server Programms erforderlich sind. Die vom Serverprogramm angebotenen Remote Prozeduren sind in der Datei rprocs. c enthalten.
+Die Serveranwendung wurde in zwei Dateien entwickelt: Mysrvr.c und Rprocs.c. Die Datei Mysrvr.c enthält die Funktionen, die zum Einrichten und Ausführen des Serverprogramms erforderlich sind. Die Remoteprozeduren, die das Serverprogramm bietet, sind in der Datei Rprocs.c enthalten.
 
-Die Dateien mysrvr. c und rprocs. c wurden zusammen mit MyApp \_ s. c kompiliert, um Objektdateien zu erstellen. Die Objektdateien wurden dann mit der RPC-Lauf Zeit Bibliothek und allen anderen Bibliotheken verknüpft, die Sie möglicherweise benötigen. Das Ergebnis ist ein ausführbares Serverprogramm mit dem Namen Mysrvr.exe.
+Die Dateien Mysrvr.c und Rprocs.c wurden zusammen mit Myapp \_ s.c kompiliert, um Objektdateien zu erstellen. Die Objektdateien wurden dann mit der RPC-Laufzeitbibliothek und allen anderen Bibliotheken verknüpft, die sie möglicherweise benötigen. Das Ergebnis ist ein ausführbares Serverprogramm mit dem Namen Mysrvr.exe.
 
-Wenn Sie die IDL-Datei nicht im Modus "Open Software Foundation (OSF)" ([**/OSF**](/windows/desktop/Midl/-osf)) kompilieren, muss das Serverprogramm eine Funktion zum Zuordnen von Speicher und eine Funktion zum Aufheben der Zuordnung bereitstellen. Für Windows 2000 und höhere Versionen von Windows lautet der empfohlene Modus [**/Oicf**](/windows/desktop/Midl/-oi). Weitere Informationen finden Sie unter [zuweisen und](how-memory-is-allocated-and-deallocated.md)Aufheben der Zuordnung von Arbeitsspeicher sowie [Zeiger und Speicher Belegung](pointers-and-memory-allocation.md).
+Wenn Sie Ihre IDL-Datei nicht im OSF-Kompatibilitätsmodus (Open Software Foundation) kompilieren ([**/osf),**](/windows/desktop/Midl/-osf)muss Ihr Serverprogramm eine Funktion zum Zuordnen von Arbeitsspeicher und eine Funktion für die Zuordnung bereitstellen. Für Windows 2000 und höhere Versionen von Windows wird der Modus [**/Oicf**](/windows/desktop/Midl/-oi)empfohlen. Weitere Informationen finden Sie unter [How Memory Is Allocated and Deallocated](how-memory-is-allocated-and-deallocated.md), und [Pointers and Memory Allocation](pointers-and-memory-allocation.md).
 
- 
+ 
 
- 
+ 

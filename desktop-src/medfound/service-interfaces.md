@@ -1,80 +1,80 @@
 ---
-description: Dienst Schnittstellen
+description: Dienstschnittstellen
 ms.assetid: 264a0e86-49e9-4777-956b-a83e9db52a25
-title: Dienst Schnittstellen
+title: Dienstschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31687cc1c1283eb59c7731743eaf4ece0127b392
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d99155eb5cfb8c435281a5f23567759931cc53fae3743d9c76ce7be75f68c380
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349082"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060411"
 ---
-# <a name="service-interfaces"></a>Dienst Schnittstellen
+# <a name="service-interfaces"></a>Dienstschnittstellen
 
-Einige Schnittstellen in Media Foundation müssen durch Aufrufen von [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) abgerufen werden, anstatt durch Aufrufen von **QueryInterface**. Die [**GetService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) -Methode funktioniert wie QueryInterface, aber mit den folgenden unterschieden:
+Einige Schnittstellen in Media Foundation müssen abgerufen werden, indem [**SIE VOMGETService::GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) aufrufen, anstatt **queryInterface** aufzurufen. Die [**GetService-Methode**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) funktioniert wie QueryInterface, jedoch mit den folgenden Unterschieden:
 
--   Zusätzlich zum Schnittstellen Bezeichner wird eine dienstbezeichnerguid benötigt.
--   Es kann einen Zeiger auf ein anderes Objekt zurückgeben, das die-Schnittstelle implementiert, anstatt einen Zeiger auf das ursprüngliche Objekt zurückzugeben, das abgefragt wird.
+-   Zusätzlich zum Schnittstellenbezeichner wird eine Dienstbezeichner-GUID verwendet.
+-   Sie kann einen Zeiger auf ein anderes Objekt zurückgeben, das die -Schnittstelle implementiert, anstatt einen Zeiger auf das ursprüngliche Objekt zurückzugeben, das abgefragt wird.
 
 > [!Note]  
-> Die [**imfgetservice**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) -Schnittstelle ähnelt der **IServiceProvider** -Schnittstelle, die in einigen anderen APIs verwendet wird.
+> Die [**INTERFACESGetService-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) ähnelt der **IServiceProvider-Schnittstelle,** die in einigen anderen APIs verwendet wird.
 
  
 
-Bei einem *Dienst* handelt es sich um eine bestimmte Schnittstelle, die von einer bestimmten Objektklasse über die [**IMF GetService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) -Schnittstelle abgerufen wird Die folgenden Dienste sind definiert.
+Ein *Dienst* ist eine bestimmte Schnittstelle, die von einer bestimmten Klasse von -Objekten über die [**INTERFACESGetService-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) abgerufen wird. Die folgenden Dienste sind definiert.
 
 
 
-| Dienst Bezeichner                          | Schnittstelle                                                                                                                                | Objekte, die diesen Dienst möglicherweise verfügbar machen                                                                                                            |
+| Dienstbezeichner                          | Schnittstelle                                                                                                                                | Objekte, die diesen Dienst verfügbar machen könnten                                                                                                            |
 |---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| MF \_ - \_ Metadatenanbieter- \_ Dienst             | [**IMFMetadataProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadataprovider)                                                                                       | Medienquellen                                                                                                                                     |
-| MF- \_ MediaSource- \_ Dienst                    | [**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                                                                                                 | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
-| MF- \_ PMP- \_ Server \_ Kontext                    | [**Imfpmpserver**](/windows/desktop/api/mfidl/nn-mfidl-imfpmpserver)                                                                                                     | PMP-Medien Sitzung (Protected Media Path).                                                                                                         |
-| MF \_ Quality \_ Services                       | [**IMF-Empfehlung**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)                                                                                             | Medienquellen:                                                                                                                                    |
-| MF- \_ Raten \_ Steuerungs \_ Dienst                  | [**Imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)                                                                                                 | Medienquellen, Medien Sitzung                                                                                                                      |
-| MF- \_ Raten \_ Steuerungs \_ Dienst                  | [**Imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)                                                                                                 | Medienquellen, Medien senken, Medien Sitzung                                                                                                         |
-| MF- \_ Remote \_ Proxy                           | [**Imfremoteproxy**](/windows/desktop/api/mfidl/nn-mfidl-imfremoteproxy)                                                                                                 | Proxys für Remote Objekte.                                                                                                                       |
-| MF- \_ Sami- \_ Dienst                           | [**Imsasamistyle**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle)                                                                                                     | Synchronisierte samische Medienaustausch-Medienquelle (Sami).                                                                                    |
-| Anbieter Dienst für die MF- \_ Quell \_ Präsentation \_ \_ | [**Imfmediasourcepresentationprovider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcepresentationprovider)                                                         | Sequencer-Quelle                                                                                                                                  |
-| MF- \_ Zeit Code \_ Dienst                       | [**IMF timecodetranslation**](/windows/desktop/api/mfidl/nn-mfidl-imftimecodetranslate)                                                                                     | ASF-Medienquelle.                                                                                                                                 |
-| MF- \_ toponode- \_ Attribut-Editor- \_ \_ Dienst    | [**Imftopologynoentattributeeditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor)                                                                 | Mediensitzung                                                                                                                                     |
-| im MF- \_ \_ Objekt                         | [**IMFByteStream**](/windows/desktop/api/mfobjects/nn-mfobjects-imfbytestream)                                                                                                   | Umschließende Objekte                                                                                                                                   |
-| mit MF \_ umschließtem \_ Puffer \_ Dienst                |                                                                                                                                          | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
-| umschließtes MF- \_ \_ Beispiel \_ Servic                 |                                                                                                                                          | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
-| MF- \_ workqueue- \_ Dienste                     | [**IMF workqueueservices**](/windows/desktop/api/mfidl/nn-mfidl-imfworkqueueservices)                                                                                     | Mediensitzung                                                                                                                                     |
-| MF- \_ Dienst "savejob" \_                     | [**Imsasavejob**](/windows/desktop/api/mfidl/nn-mfidl-imfsavejob)                                                                                                         | Bytestreams                                                                                                                                      |
-| MF-Quell \_ Statistik \_ Dienst            | **IPropertyStore**                                                                                                                       | Netzwerkquelle. Verwenden Sie diesen Dienst zum Abrufen von Netzwerk Statistiken. Weitere Informationen finden Sie unter [**MF-Quell \_ Statistik Eigenschaft**](mfnetsource-statistics-property.md). |
-| Mr \_ - \_ \_ audiorichtliniendienst                  | [**IMF audiopolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy)                                                                                                 | Audiorenderer                                                                                                                                    |
-| Mr- \_ Puffer \_ Dienst                         | **IDirect3DSurface9**                                                                                                                    | DirectX-Oberflächen Puffer                                                                                                                           |
-| \_Erfassungs \_ Richtlinien \_ - \_ volumedienst        | [**Imbersimpleaudiovolume**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume)                                                                                     | Quelle für Audioerfassung                                                                                                                              |
-| \_ \_ \_ richtlinienvolumedienst                 | [**Imbersimpleaudiovolume**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume)                                                                                     | Audiorenderer                                                                                                                                    |
-| Mr- \_ Stream- \_ \_ volumedienst                 | [**IMF audiostreamvolume**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiostreamvolume)                                                                                     | Audiorenderer                                                                                                                                    |
-| Mr- \_ Video \_ Beschleunigungs \_ Dienst            | [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9), [ **idirectxvideoaccelerationservice**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideoaccelerationservice) | Erweiterter Videorenderer (EVR)                                                                                                                     |
-| Mr- \_ Video \_ Beschleunigungs \_ Dienst            | [**Idirectxvideomemoryconfiguration**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration)                                                             | Eingabe Pins im DirectShow-EVR-Filter                                                                                                           |
-| Mr- \_ Video \_ Beschleunigungs \_ Dienst            | [**IMF videosamplezuordcator-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfvideosampleallocator)                                                                     | EVR-senken von Datenströmen.                                                                                                                                 |
-| Mr- \_ Video- \_ Mixer- \_ Dienst                   | Verschiedene Schnittstellen, die vom EVR-Mixer verfügbar gemacht werden Siehe [Verwenden der Video-Mixer](using-the-video-mixer-controls.md)-Steuerelemente.                   | EVR                                                                                                                                               |
-| Mr- \_ Video- \_ Rendering- \_ Dienst                  | Verschiedene Schnittstellen, die vom EVR Presenter verfügbar gemacht werden. Weitere Informationen finden [Sie unter Verwenden der Video Anzeige Steuerelemente](using-the-video-display-controls.md).           | EVR                                                                                                                                               |
+| MF \_ METADATA \_ PROVIDER \_ SERVICE             | [**PILLARMetadataProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadataprovider)                                                                                       | Medienquellen                                                                                                                                     |
+| MF \_ MEDIASOURCE \_ SERVICE                    | [**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)                                                                                                 | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
+| MF \_ \_ PMP-SERVERKONTEXT \_                    | [**IMFPMPServer**](/windows/desktop/api/mfidl/nn-mfidl-imfpmpserver)                                                                                                     | PMP-Mediensitzung (Protected Media Path).                                                                                                         |
+| MF \_ QUALITY \_ SERVICES                       | [**HAPQualityAdvise**](/windows/desktop/api/mfidl/nn-mfidl-imfqualityadvise)                                                                                             | Medienquellen.                                                                                                                                    |
+| MF \_ RATE \_ CONTROL \_ SERVICE                  | [**THICKNESSRateControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)                                                                                                 | Medienquellen, Mediensitzung                                                                                                                      |
+| MF \_ RATE \_ CONTROL \_ SERVICE                  | [**1000000000**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)                                                                                                 | Medienquellen, Mediensenken, Mediensitzung                                                                                                         |
+| MF \_ REMOTE \_ PROXY                           | [**TRIESRemoteProxy**](/windows/desktop/api/mfidl/nn-mfidl-imfremoteproxy)                                                                                                 | Proxys für Remoteobjekte.                                                                                                                       |
+| MF \_ SAMI \_ SERVICE                           | [**ERMITSCHNITTSAMIStyle**](/windows/desktop/api/mfidl/nn-mfidl-imfsamistyle)                                                                                                     | SAMI-Medienquelle (Synchronized Accessible Media Interchange).                                                                                    |
+| MF \_ SOURCE \_ PRESENTATION \_ PROVIDER \_ SERVICE | [**IMFMediaSourcePresentationProvider**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasourcepresentationprovider)                                                         | Sequencerquelle                                                                                                                                  |
+| MF \_ TIMECODE \_ SERVICE                       | [**CODTIMECODETranslate**](/windows/desktop/api/mfidl/nn-mfidl-imftimecodetranslate)                                                                                     | ASF-Medienquelle.                                                                                                                                 |
+| MF \_ \_ TOPONODE-ATTRIBUT-EDITOR-DIENST \_ \_    | [**TOPTOPOLOGYNodeAttributeEditor**](/windows/desktop/api/mfidl/nn-mfidl-imftopologynodeattributeeditor)                                                                 | Mediensitzung                                                                                                                                     |
+| MF \_ WRAPPED \_ OBJECT                         | [**GIGABYTEByteStream**](/windows/desktop/api/mfobjects/nn-mfobjects-imfbytestream)                                                                                                   | Umschlossene Objekte                                                                                                                                   |
+| MF \_ WRAPPED \_ BUFFER \_ SERVICE                |                                                                                                                                          | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
+| MF \_ WRAPPED \_ SAMPLE \_ SERVICEC                 |                                                                                                                                          | Wird in Windows 8.1 und höher unterstützt.<br/>                                                                                                    |
+| MF \_ WORKQUEUE \_ SERVICES                     | [**MENUWorkQueueServices**](/windows/desktop/api/mfidl/nn-mfidl-imfworkqueueservices)                                                                                     | Mediensitzung                                                                                                                                     |
+| MFNET \_ \_ SAVEJOB-DIENST                     | [**1000000000000**](/windows/desktop/api/mfidl/nn-mfidl-imfsavejob)                                                                                                         | Bytestreams                                                                                                                                      |
+| MFNETSOURCE \_ STATISTICS \_ SERVICE            | **Ipropertystore**                                                                                                                       | Netzwerkquelle. Verwenden Sie diesen Dienst, um Netzwerkstatistiken abzurufen. Siehe [**MFNETSOURCE \_ STATISTICS-Eigenschaft.**](mfnetsource-statistics-property.md) |
+| \_ \_ MR-AUDIORICHTLINIENDIENST \_                  | [**VERALTENAudioPolicy**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiopolicy)                                                                                                 | Audiorenderer                                                                                                                                    |
+| MR \_ BUFFER \_ SERVICE                         | **IDirect3DSurface9**                                                                                                                    | DirectX-Oberflächenpuffer                                                                                                                           |
+| MR \_ CAPTURE \_ POLICY \_ VOLUME \_ SERVICE        | [**VERALTENSimpleAudioVolume**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume)                                                                                     | Audioaufnahmequelle                                                                                                                              |
+| MR \_ POLICY \_ VOLUME \_ SERVICE                 | [**VERALTENSimpleAudioVolume**](/windows/desktop/api/mfidl/nn-mfidl-imfsimpleaudiovolume)                                                                                     | Audiorenderer                                                                                                                                    |
+| MR \_ STREAM \_ VOLUME \_ SERVICE                 | [**VERALTENAudioStreamVolume**](/windows/desktop/api/mfidl/nn-mfidl-imfaudiostreamvolume)                                                                                     | Audiorenderer                                                                                                                                    |
+| \_ \_ MR-VIDEOBESCHLEUNIGUNGSDIENST \_            | [**IDirect3DDeviceManager9**](/windows/desktop/api/dxva2api/nn-dxva2api-idirect3ddevicemanager9), [ **IDirectXVideoAccelerationService**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideoaccelerationservice) | Erweiterter Videorenderer (EVR)                                                                                                                     |
+| \_ \_ MR-VIDEOBESCHLEUNIGUNGSDIENST \_            | [**IDirectXVideoMemoryConfiguration**](/windows/desktop/api/dxva2api/nn-dxva2api-idirectxvideomemoryconfiguration)                                                             | Eingabepins für den DirectShow EVR-Filter                                                                                                           |
+| \_ \_ MR-VIDEOBESCHLEUNIGUNGSDIENST \_            | [**DINNERVideoSampleAllocator-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfvideosampleallocator)                                                                     | EVR-Streamsenken.                                                                                                                                 |
+| MR \_ VIDEO \_ MIXER \_ SERVICE                   | Verschiedene Schnittstellen, die vom EVR-Mixer verfügbar gemacht werden. Weitere Informationen finden Sie [unter Verwenden der Video Mixer-Steuerelemente.](using-the-video-mixer-controls.md)                   | Evr                                                                                                                                               |
+| MR \_ VIDEO \_ RENDER \_ SERVICE                  | Verschiedene Schnittstellen, die vom EVR-Presenter verfügbar gemacht werden. Weitere Informationen finden Sie [unter Verwenden der Videoanzeigesteuerelemente.](using-the-video-display-controls.md)           | Evr                                                                                                                                               |
 
 
 
  
 
-Sie müssen [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) verwenden, um die in dieser Tabelle aufgelisteten Schnittstellen aus den in dieser Tabelle aufgeführten Objekten zu erhalten.
+Sie müssen [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) verwenden, um die in dieser Tabelle aufgeführten Schnittstellen aus den in dieser Tabelle aufgeführten Objekten abzurufen.
 
-In einigen Fällen wird eine Schnittstelle als Dienst durch eine Klasse von Objekten zurückgegeben und von einer anderen Klasse von Objekten über **QueryInterface** zurückgegeben. Die Referenzseiten für jede Schnittstelle geben an, wann [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) verwendet werden soll und wann **QueryInterface** verwendet werden soll.
+In einigen Fällen wird eine Schnittstelle als Dienst von einer Klasse von -Objekten und über **QueryInterface** von einer anderen Klasse von -Objekten zurückgegeben. Die Referenzseiten für jede Schnittstelle geben an, wann [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) und wann **QueryInterface** verwendet werden soll.
 
 > [!Caution]  
-> Ein Objekt kann so implementiert werden, dass es eine Dienst Schnittstelle über **QueryInterface** und [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)zurückgibt. Die Verwendung von **QueryInterface** , wenn **GetService** erforderlich ist, kann jedoch später zu Kompatibilitätsproblemen führen.
+> Ein Objekt kann so implementiert werden, dass es eine Dienstschnittstelle über **QueryInterface** und [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)zurückgibt. Die Verwendung **von QueryInterface,** **wenn GetService** erforderlich ist, kann jedoch später zu Kompatibilitätsproblemen führen.
 
  
 
-Die [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) -Funktion ist eine Hilfsfunktion, die ein Objekt für [**imfgetservice**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) abfragt und dann die [**GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) -Methode des Objekts aufruft.
+Die [**MFGetService-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) ist eine Hilfsfunktion, die ein Objekt für [**DENTGETService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) abfragt und dann die [**GetService-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice) des Objekts aufruft.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Medien Sitzung für [**IMF GetService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) abgefragt, und die [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle wird abgerufen.
+Im folgenden Beispiel wird die Media Session für [**DEN BERGETService abgefragt**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) und die [**BERRATEControl-Schnittstelle abgefragt.**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
 
 
 ```C++
@@ -105,7 +105,7 @@ SAFE_RELEASE(pRateControl);
 
 
 
-Das folgende Beispiel entspricht dem vorherigen Beispiel, verwendet jedoch die [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice) -Funktion.
+Das folgende Beispiel entspricht dem vorherigen Beispiel, verwendet jedoch die [**MFGetService-Funktion.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
 
 ```C++
@@ -133,7 +133,7 @@ SAFE_RELEASE(pRateControl);
 
 <dl> <dt>
 
-[**IMF GetService-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
+[**BENUTZEROBERFLÄCHEGetService-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
 </dt> <dt>
 
 [Media Foundation Plattform-APIs](media-foundation-platform-apis.md)

@@ -1,5 +1,5 @@
 ---
-description: Wird vom Microsoft Internet Explorer-System Ereignis Benachrichtigungsdienst (Sens) verwendet, um auf den Ereignisdaten Speicher zuzugreifen. Diese Schnittstelle erweitert die ieventsystem-Schnittstelle.
+description: Wird vom Microsoft Internet Explorer System Event Notification Service (SENS) für den Zugriff auf den Ereignisdatenspeicher verwendet. Diese Schnittstelle erweitert die IEventSystem-Schnittstelle.
 ms.assetid: ad3c38a6-fa2d-4fcd-8782-1fac7595e829
 title: IEventSystem2-Schnittstelle
 ms.topic: reference
@@ -12,49 +12,49 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 3a174c9457dc347257677e8111772ad14f0dc9fd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6ecee3137750da9f86b61696799a3a7c6e7177beb2b92fb386712a6c90f69d07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070600"
 ---
 # <a name="ieventsystem2-interface"></a>IEventSystem2-Schnittstelle
 
-Wird vom Microsoft Internet Explorer-System Ereignis Benachrichtigungsdienst (Sens) verwendet, um auf den Ereignisdaten Speicher zuzugreifen. Diese Schnittstelle erweitert die [**ieventsystem**](/windows/desktop/api/EventSys/nn-eventsys-ieventsystem) -Schnittstelle.
+Wird vom Microsoft Internet Explorer System Event Notification Service (SENS) für den Zugriff auf den Ereignisdatenspeicher verwendet. Diese Schnittstelle erweitert die [**IEventSystem-Schnittstelle.**](/windows/desktop/api/EventSys/nn-eventsys-ieventsystem)
 
 ## <a name="when-to-implement"></a>Gründe für die Implementierung
 
-Sie müssen die **IEventSystem2** -Schnittstelle nicht implementieren. Ein vom System bereitgestelltes Ereignis Systemobjekt (CLSID \_ ceventsystem) implementiert **IEventSystem2**.
+Sie müssen die **IEventSystem2-Schnittstelle nicht** implementieren. Ein vom System bereitgestelltes Ereignissystemobjekt (CLSID \_ CEventSystem) implementiert **IEventSystem2.**
 
 ## <a name="when-to-use"></a>Verwendung
 
-Wenn Sie "Sens" verwenden, können Sie die **IEventSystem2** -Methoden zum Hinzufügen und Entfernen von Objekten aus dem Ereignisspeicher und zum Abrufen von Objekten aus dem Ereignisspeicher verwenden.
+Wenn Sie SENS verwenden, können Sie die Methoden von **IEventSystem2** aufrufen, um Dem Ereignisspeicher Objekte hinzuzufügen und daraus zu entfernen und Objekte aus dem Ereignisspeicher zu erhalten.
 
-Da [**ieventpublisher**](/windows/desktop/api/eventsys/nn-eventsys-ieventpublisher) und das Verleger Objekt nicht mehr unterstützt werden, wird [**ieventobjectchange**](/windows/desktop/api/Eventsys/nn-eventsys-ieventobjectchange) nicht in der [**changedpublisher**](/windows/desktop/api/Eventsys/nf-eventsys-ieventobjectchange-changedpublisher) -Methode aufgerufen.
+Da [**IEventPublisher**](/windows/desktop/api/eventsys/nn-eventsys-ieventpublisher) und das Publisher-Objekt nicht mehr unterstützt werden, [**wird IEventObjectChange**](/windows/desktop/api/Eventsys/nn-eventsys-ieventobjectchange) für die [**ChangedPublisher-Methode nicht aufgerufen.**](/windows/desktop/api/Eventsys/nf-eventsys-ieventobjectchange-changedpublisher)
 
 ## <a name="members"></a>Member
 
-Die **IEventSystem2** -Schnittstelle erbt von **ieventsystem**. **IEventSystem2** verfügt auch über die folgenden Typen von Membern:
+Die **IEventSystem2-Schnittstelle** erbt von **IEventSystem**. **IEventSystem2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IEventSystem2** -Schnittstelle verfügt über diese Methoden.
+Die **IEventSystem2-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                         | BESCHREIBUNG                                                                       |
 |:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
-| [**GetVersion**](ieventsystem2-getversion.md)                                 | Ruft die Versionsnummer des Ereignis Systems ab.<br/>                      |
-| [**Verifytransientabonnenten**](ieventsystem2-verifytransientsubscribers.md) | Überprüft, ob alle vorübergehenden Abonnenten im Datenspeicher vorhanden sind.<br/> |
+| [**Getversion**](ieventsystem2-getversion.md)                                 | Ruft die Versionsnummer des Ereignissystems ab.<br/>                      |
+| [**VerifyTransientSubscribers**](ieventsystem2-verifytransientsubscribers.md) | Überprüft das Vorhandensein aller vorübergehenden Abonnenten im Datenspeicher.<br/> |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -69,7 +69,7 @@ Die **IEventSystem2** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**Ieventsystem**](/windows/desktop/api/EventSys/nn-eventsys-ieventsystem)
+[**IEventSystem**](/windows/desktop/api/EventSys/nn-eventsys-ieventsystem)
 </dt> </dl>
 
  

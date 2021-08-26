@@ -1,9 +1,9 @@
 ---
-title: MCM_SETCURSEL Meldung (kommstrg. h)
-description: Legt das aktuell ausgewählte Datum für ein Monatskalender-Steuerelement fest. Wenn das angegebene Datum nicht in der Ansicht enthalten ist, aktualisiert das Steuerelement die Anzeige, um es anzuzeigen. Sie können diese Nachricht explizit oder mit dem monthcal \_ setcurrsel-Makro senden.
+title: MCM_SETCURSEL (Commctrl.h)
+description: Legt das aktuell ausgewählte Datum für ein Monatskalender-Steuerelement fest. Wenn das angegebene Datum nicht angezeigt wird, aktualisiert das Steuerelement die Anzeige, um sie anzuzeigen. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ SetCurSel-Makros senden.
 ms.assetid: 2a9f82a1-66d9-44dd-b60f-b588b4688316
 keywords:
-- Windows-Steuerelemente für MCM_SETCURSEL Meldung
+- MCM_SETCURSEL message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cceff48fbc4ffdb7446277d506c369e1bd89c92b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e63238f11f93e56c18e1897fcdd3cb96977f23fe16bde19123b5c063f99c0ff0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061890"
 ---
-# <a name="mcm_setcursel-message"></a>MCM- \_ setcurrsel-Meldung
+# <a name="mcm_setcursel-message"></a>MCM \_ SETCURSEL-Nachricht
 
-Legt das aktuell ausgewählte Datum für ein Monatskalender-Steuerelement fest. Wenn das angegebene Datum nicht in der Ansicht enthalten ist, aktualisiert das Steuerelement die Anzeige, um es anzuzeigen. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ setcurrsel**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcursel) -Makro senden.
+Legt das aktuell ausgewählte Datum für ein Monatskalender-Steuerelement fest. Wenn das angegebene Datum nicht angezeigt wird, aktualisiert das Steuerelement die Anzeige, um sie anzuzeigen. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ SetCurSel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcursel) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt das aktuell ausgewählte Datum für ein Monatskalender-Steuerelement fest. 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die das Datum enthält, das als aktuelle Auswahl festgelegt werden soll.
+Zeiger auf eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die das Datum enthält, das als aktuelle Auswahl festgelegt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Nachricht schlägt fehl, wenn Sie auf ein Monatskalender-Steuerelement angewendet wird, das das [**MCS- \_ MultiSelect**](month-calendar-control-styles.md) -Format verwendet.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück. Diese Meldung wird nicht angezeigt, wenn sie auf ein Monatskalender-Steuerelement angewendet wird, das den [**MCS \_ MULTISELECT-Stil**](month-calendar-control-styles.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Na
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. Diese Na
 
 <dl> <dt>
 
-[Uhrzeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
+[Zeiten im Monatskalender-Steuerelement](month-calendar-controls.md)
 </dt> </dl>
 
  

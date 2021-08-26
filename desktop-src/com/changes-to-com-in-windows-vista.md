@@ -1,28 +1,28 @@
 ---
-title: Änderungen an com in Windows Vista
+title: Änderungen an COM in Windows Vista
 ms.assetid: b0f843ff-b50f-4cff-8e74-89bfcea8ce62
-description: 'Weitere Informationen: Änderungen an com in Windows Vista'
+description: 'Weitere Informationen: Änderungen an COM in Windows Vista'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c23af13b1ae6c4724558f5593019549ddf117af5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: eb032c020d1a92f837a683f2c68441809595b56a82f8f2ba2f725d76ea8c65e6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096990"
 ---
-# <a name="changes-to-com-in-windows-vista"></a>Änderungen an com in Windows Vista
+# <a name="changes-to-com-in-windows-vista"></a>Änderungen an COM in Windows Vista
 
-Die folgenden Änderungen wurden an com in Windows Vista vorgenommen:
+Die folgenden Änderungen wurden an COM in Windows Vista vorgenommen:
 
--   Mit dem com-Erweiterungs Moniker können Anwendungen, die unter einem eingeschränkten Benutzerkonto (LUA) ausgeführt werden, com-Klassen mit erhöhten Funktionen aktivieren. Weitere Informationen finden Sie [unter com-Erweiterungs Moniker](the-com-elevation-moniker.md).
--   Wenn Sie eine Anwendung installieren, die COM-Aufrufe auf einem Windows Vista-Computer ausführt, und Sie beabsichtigen, die Anwendung als Administrator auszuführen, müssen Sie die Anwendung pro Computer anstatt pro Benutzer installieren, oder Sie funktioniert nicht ordnungsgemäß.
+-   Mit dem COM-Moniker für erhöhte Rechte können Anwendungen, die unter einem eingeschränkten Benutzerkonto (LUA) ausgeführt werden, COM-Klassen mit erhöhten Funktionen aktivieren. Weitere Informationen finden Sie unter [Der COM-Moniker für Rechteerweiterungen.](the-com-elevation-moniker.md)
+-   Wenn Sie eine Anwendung installieren, die COM-Aufrufe auf einem Windows Vista-Computer aufruft, und sie als Administrator ausführen möchten, müssen Sie die Anwendung pro Computer statt pro Benutzer installieren, da sie nicht ordnungsgemäß funktioniert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Änderungen an com in Windows 7](changes-to-com-in-windows-7.md)
+[Änderungen an COM in Windows 7](changes-to-com-in-windows-7.md)
 </dt> </dl>
 
  

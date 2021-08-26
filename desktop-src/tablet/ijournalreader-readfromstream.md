@@ -1,7 +1,7 @@
 ---
-description: Nimmt einen Stream in eine Journal Notiz Datei und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.
+description: Führt einen Stream in eine Journalnotizdatei aus und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.
 ms.assetid: 5a169dfe-b102-4aef-9efe-5db2cd2fb96f
-title: 'Ijournalreader:: lesefromstream-Methode (Journal. h)'
+title: IJournalReader::ReadFromStream-Methode (Journal.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - COM
 api_location:
 - Journal.dll
-ms.openlocfilehash: 258ac30b8857fa4ef24bd86a08c7e402229f4bff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7dbe9d7929f616914d06cad237f486677cd8e5616cb04bf28a5836751ca0a3c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057850"
 ---
-# <a name="ijournalreaderreadfromstream-method"></a>Ijournalreader:: lesefromstream-Methode
+# <a name="ijournalreaderreadfromstream-method"></a>IJournalReader::ReadFromStream-Methode
 
-Nimmt einen Stream in eine Journal Notiz Datei und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.
+Führt einen Stream in eine Journalnotizdatei aus und gibt einen XML-Stream zurück, der den Inhalt des Dokuments darstellt.
 
 > [!Note]  
-> Die Journal Leser Komponente kann keine Windows-Journal Dateien lesen, die von Computern mit Windows 7 oder höher erstellt wurden. Die ijournalreader-Schnittstelle sollte als veraltet oder veraltet betrachtet werden und sollte nicht verwendet werden.
+> Die Journalreaderkomponente kann Windows Journaldateien nicht lesen, die von Computern erstellt wurden, auf denen Windows 7 oder höher ausgeführt wird. Die IJournalReader-Schnittstelle sollte als veraltet oder veraltet betrachtet und nicht verwendet werden.
 
  
 
@@ -45,31 +45,31 @@ HRESULT ReadFromStream(
 
 <dl> <dt>
 
-*pjournalfilestream* \[ in\]
+*pJournalFileStream* \[ In\]
 </dt> <dd>
 
-Ein [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Objekt, das die zu lesende Journal Datei darstellt.
+Ein [**IStream-Objekt,**](/windows/desktop/api/objidl/nn-objidl-istream) das die zu lesende Journaldatei darstellt.
 
 </dd> <dt>
 
-*ppxmlstream* \[ Out, retval\]
+*ppXmlStream* \[ out, retval\]
 </dt> <dd>
 
-Ein Zeiger auf die Adresse eines [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Objekts, das den XML-Stream empfängt, der durchlesen der Journal Datei erstellt wird.
+Ein Zeiger auf die Adresse eines [**IStream-Objekts,**](/windows/desktop/api/objidl/nn-objidl-istream) das den xml-Stream empfängt, der durch Lesen der Journaldatei erstellt wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Streams werden verwendet, um den direkten Zugriff auf das Dateisystem zu vermeiden und die Entscheidung zu treffen, welche XML-Methode verwendet werden soll.
+Streams werden verwendet, um direkten Zugriff auf das Dateisystem zu vermeiden und die Wahl zu ermöglichen, in welcher XML-Analysemethode verwendet werden soll.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel eines Handlers für das [**Click**](/dotnet/api/system.windows.forms.control.click?view=netcore-3.1) -Ereignis einer Schaltfläche wird eine Instanz der [**ijournalreader-Schnittstellen**](ijournalreader.md) Schnittstelle erstellt und verwendet, um eine vorhandene Journal Datei zu lesen.
+Im folgenden Beispiel eines Handlers für das [**Click-Ereignis**](/dotnet/api/system.windows.forms.control.click?view=netcore-3.1) einer Schaltfläche wird eine Instanz der [**Schnittstelle IJournalReader Interface**](ijournalreader.md) erstellt und zum Lesen einer vorhandenen Journaldatei verwendet.
 
 
 ```C++
@@ -154,9 +154,9 @@ void CJntlReaderMFCDlg::OnBnClickedButton1()
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                         |
-| Header<br/>                   | <dl> <dt>Journal. h (erfordert auch Journal \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Journal.h (erfordert auch Journal \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Journal.dll</dt> </dl>                            |
 
 
@@ -165,10 +165,10 @@ void CJntlReaderMFCDlg::OnBnClickedButton1()
 
 <dl> <dt>
 
-[**Ijournalreader-Schnittstelle**](ijournalreader.md)
+[**IJournalReader-Schnittstelle**](ijournalreader.md)
 </dt> <dt>
 
-[Schema Referenz für Journal Reader](journal-reader-schema-reference.md)
+[Schemareferenz für Journalleser](journal-reader-schema-reference.md)
 </dt> </dl>
 
  
