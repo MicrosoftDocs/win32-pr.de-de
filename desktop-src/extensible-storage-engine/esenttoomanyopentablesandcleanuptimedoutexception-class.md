@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanyopentablesandcleanuptimedoutexception-Klasse'
-title: Esentesomanyopentablesandcleanuptimedoutexception-Klasse
+description: 'Weitere Informationen zu: EsentTooManyOpenTablesAndCleanupTimedOutException-Klasse'
+title: EsentTooManyOpenTablesAndCleanupTimedOutException-Klasse
 TOCTitle: EsentTooManyOpenTablesAndCleanupTimedOutException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTooManyOpenTablesAndCleanupTimedOutException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanyopentablesandcleanuptimedoutexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ddfcf7f09a98e62b44265c263fd835cace699e8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 229972a3200942f2b2864aefff3d6bc1031863f7875c69bc6994a73facb7c9f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017980"
 ---
-# <a name="esenttoomanyopentablesandcleanuptimedoutexception-class"></a>Esentesomanyopentablesandcleanuptimedoutexception-Klasse
+# <a name="esenttoomanyopentablesandcleanuptimedoutexception-class"></a>EsentTooManyOpenTablesAndCleanupTimedOutException-Klasse
 
-Basisklasse für JET_err. "Entomanyopentablesandcleanuptimedout"-Ausnahmen.
+Basisklasse für JET_err. TooManyOpenTablesAndCleanupTimedOut-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentesomanyopentablesandcleanuptimedoutexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentTooManyOpenTablesAndCleanupTimedOutException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentesomanyopentablesandcleanuptimedoutexception-Elemente](./esenttoomanyopentablesandcleanuptimedoutexception-members.md)
+[EsentTooManyOpenTablesAndCleanupTimedOutException-Member](./esenttoomanyopentablesandcleanuptimedoutexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

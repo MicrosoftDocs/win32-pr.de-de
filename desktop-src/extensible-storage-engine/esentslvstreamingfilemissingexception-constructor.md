@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvstreamingfilemissingexception-Konstruktor'
-title: Esentslvstreamingfilemissingexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVStreamingFileMissingException-Konstruktor'
+title: EsentSLVStreamingFileMissingException-Konstruktor
 TOCTitle: 'EsentSLVStreamingFileMissingException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVStreamingFileMissingException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvstreamingfilemissingexception.esentslvstreamingfilemissingexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cd0480b22c96da3c06e21176e9e84a23cf3c4e5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24fd36ca1a35cf718fff72b84f129853e5631bd4dcbfa91a84d1a3d55839db42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120018080"
 ---
-# <a name="esentslvstreamingfilemissingexception-constructor"></a>Esentslvstreamingfilemissingexception-Konstruktor
+# <a name="esentslvstreamingfilemissingexception-constructor"></a>EsentSLVStreamingFileMissingException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public EsentSLVStreamingFileMissingException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvstreamingfilemissingexception-Klasse](./esentslvstreamingfilemissingexception-class.md)
+[EsentSLVStreamingFileMissingException-Klasse](./esentslvstreamingfilemissingexception-class.md)
 
-[Esentslvstreamingfilemissingexception-Elemente](./esentslvstreamingfilemissingexception-members.md)
+[EsentSLVStreamingFileMissingException-Member](./esentslvstreamingfilemissingexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

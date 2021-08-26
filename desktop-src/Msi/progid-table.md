@@ -1,31 +1,31 @@
 ---
-description: Die ProgID-Tabelle enthält Informationen zu Programm-IDs und Versions unabhängigen Programm-IDs, die als Teil der Produktankündigung generiert werden müssen.
+description: Die Tabelle ProgId enthält Informationen zu Programm-IDs und versionsunabhängigen Programm-IDs, die im Rahmen der Produktankündigung generiert werden müssen.
 ms.assetid: 66a7e170-6f70-4db7-98f4-8a074471b9f2
-title: ProgID-Tabelle
+title: ProgId-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 293ce3748f691b664d55b0a1158a574472388202
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fbed8baea9bd8421757cf2e31f0ba06679db3394c95f732537a7e230c02b5ee8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042060"
 ---
-# <a name="progid-table"></a>ProgID-Tabelle
+# <a name="progid-table"></a>ProgId-Tabelle
 
-Die ProgID-Tabelle enthält Informationen zu Programm-IDs und Versions unabhängigen Programm-IDs, die als Teil der Produktankündigung generiert werden müssen.
+Die Tabelle ProgId enthält Informationen zu Programm-IDs und versionsunabhängigen Programm-IDs, die im Rahmen der Produktankündigung generiert werden müssen.
 
-Die ProgID-Tabelle weist die folgenden Spalten auf.
+Die Tabelle ProgId enthält die folgenden Spalten.
 
 
 
-| Spalte         | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte         | Typ                         | Key | Nullwerte zulässig |
 |----------------|------------------------------|-----|----------|
 | ProgId         | [Text](text.md)             | J   | N        |
-| ProgID \_ übergeordnet | [Text](text.md)             | N   | J        |
+| ProgId \_ Parent | [Text](text.md)             | N   | J        |
 | Klasse\_        | [GUID](guid.md)             | N   | J        |
 | BESCHREIBUNG    | [Text](text.md)             | N   | J        |
-| Symbol\_         | [Bezeichner](identifier.md) | N   | J        |
+| Symbol\_         | [Identifier](identifier.md) | N   | J        |
 | IconIndex      | [Integer](integer.md)       | N   | J        |
 
 
@@ -36,24 +36,24 @@ Die ProgID-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="ProgId"></span><span id="progid"></span><span id="PROGID"></span>ProgID
+<span id="ProgId"></span><span id="progid"></span><span id="PROGID"></span>Progid
 </dt> <dd>
 
-Die Programm-ID oder Versions unabhängige Programm-ID. Die in der ProgID-Tabelle aufgeführten ProgIDs werden registriert, wenn die in der Class-Spalte der Tabelle aufgeführte CLSID \_ angekündigt oder installiert wird. Wenn die ProgID für die Registrierung ausgewählt ist, werden alle ProgIDs, die auf diese Zeile über die übergeordnete ProgID-Spalte verweisen, \_ ebenfalls für die Registrierung ausgewählt.
+Die Programm-ID oder versionsunabhängige Programm-ID. ProgIds, die in der ProgId-Tabelle aufgeführt sind, werden registriert, wenn die CLSID, die in der Spalte Klasse dieser Tabelle aufgeführt \_ ist, angekündigt oder installiert werden soll. Wenn die ProgId für die Registrierung ausgewählt ist, werden alle ProgIds, die über die Spalte ProgId Parent auf diese Zeile verweisen, ebenfalls für die \_ Registrierung ausgewählt.
 
 </dd> <dt>
 
-<span id="ProgId_Parent"></span><span id="progid_parent"></span><span id="PROGID_PARENT"></span>ProgID \_ übergeordnet
+<span id="ProgId_Parent"></span><span id="progid_parent"></span><span id="PROGID_PARENT"></span>ProgId \_ Parent
 </dt> <dd>
 
-Nur für Versions unabhängige Programm-IDs definiert. Dieses Feld ist ein Fremdschlüssel in die ProgID-Spalte. Um eine Versions unabhängige Programm-ID zu definieren, geben Sie die entsprechende ProgID in die übergeordnete ProgID- \_ Spalte ein. Wenn die ProgID für die Installation ausgewählt ist, werden die entsprechenden Versions unabhängigen ProgIDs, die über die übergeordnete Spalte ProgID verknüpft \_ sind, ebenfalls für die Registrierung ausgewählt.
+Nur für versionsunabhängige Programm-IDs definiert. Dieses Feld ist ein Fremdschlüssel in der ProgId-Spalte. Um eine versionsunabhängige Programm-ID zu definieren, geben Sie die entsprechende ProgId in die Spalte ProgId \_ Parent ein. Wenn die ProgId für die Installation ausgewählt ist, werden die entsprechenden versionsunabhängigen ProgIds, die über die Spalte ProgId Parent zugeordnet sind, ebenfalls für die \_ Registrierung ausgewählt.
 
 </dd> <dt>
 
-<span id="Class_"></span><span id="class_"></span><span id="CLASS_"></span>Klassi\_
+<span id="Class_"></span><span id="class_"></span><span id="CLASS_"></span>Klasse\_
 </dt> <dd>
 
-Ein optionaler Fremdschlüssel in die [Klassen Tabelle](class-table.md). Diese Spalte muss für eine Versions unabhängige ProgID NULL sein. Wenn der Klassen \_ Wert für eine ProgID NULL ist, wird die ProgID registriert, wenn Sie in der ProgID-Spalte einer Zeile in der [Erweiterungs Tabelle](extension-table.md) angezeigt wird und der Erweiterung mindestens ein Verb in der [Verb Tabelle](verb-table.md)zugeordnet ist. Bei der auf diese Weise für die Registrierung ausgewählten ProgIDs werden andere Programm-IDs, die auf die aktuelle ProgID verweisen, nicht mithilfe des ProgID- \_ Standardwerts installiert.
+Ein optionaler Fremdschlüssel in der [Class-Tabelle.](class-table.md) Diese Spalte muss null für eine versionsunabhängige ProgId sein. Wenn der \_ Class-Wert für eine ProgId NULL ist, wird die ProgId registriert, wenn sie in der ProgId-Spalte einer Zeile in der [Extension-Tabelle](extension-table.md) angezeigt wird und der Erweiterung mindestens ein Verb in der [Verb-Tabelle](verb-table.md)zugeordnet ist. ProgIds, die auf diese Weise für die Registrierung ausgewählt wurden, installieren keine anderen ProgIds, die über den ProgId-Standardwert auf die aktuelle ProgId \_ verweisen.
 
 </dd> <dt>
 
@@ -64,25 +64,25 @@ Eine optionale lokalisierte Beschreibung der zugeordneten Programm-ID.
 
 </dd> <dt>
 
-<span id="Icon_"></span><span id="icon_"></span><span id="ICON_"></span>Angezeigt\_
+<span id="Icon_"></span><span id="icon_"></span><span id="ICON_"></span>Symbol\_
 </dt> <dd>
 
-Ein optionaler Fremdschlüssel in der [Symboltabelle](icon-table.md) , der die Symbol Datei angibt, die dieser ProgID zugeordnet ist. Diese wird unter dem DefaultIcon-Schlüssel geschrieben, der dieser ProgID zugeordnet ist. Diese Spalte muss für eine Versions unabhängige ProgID NULL sein.
+Ein optionaler Fremdschlüssel in der [Symboltabelle,](icon-table.md) der die Symboldatei angibt, die dieser ProgId zugeordnet ist. Dies wird unter dem DefaultIcon-Schlüssel geschrieben, der dieser ProgId zugeordnet ist. Diese Spalte muss null für eine versionsunabhängige ProgId sein.
 
 </dd> <dt>
 
 <span id="IconIndex"></span><span id="iconindex"></span><span id="ICONINDEX"></span>IconIndex
 </dt> <dd>
 
-Der Symbol Index in die Symbol Datei. Diese Spalte muss für eine Versions unabhängige ProgID NULL sein.
+Der Symbolindex in der Symboldatei. Diese Spalte muss null für eine versionsunabhängige ProgId sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Aktionen [registerprogidinfo](registerprogidinfo-action.md) und [unregisterprogidinfo](unregisterprogidinfo-action.md) in [*Sequenz Tabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Weitere Informationen zum Verwenden von *Sequenz Tabellen* finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Die Aktionen [RegisterProgIdInfo](registerprogidinfo-action.md) und [UnregisterProgIdInfo](unregisterprogidinfo-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen* finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

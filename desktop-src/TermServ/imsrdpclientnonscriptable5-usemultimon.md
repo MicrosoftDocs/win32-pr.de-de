@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientNonScriptable5 usemultimon (Eigenschaft)
+title: IMsRdpClientNonScriptable5 UseMultimon-Eigenschaft
 description: Gibt an, ob das Remotedesktop ActiveX-Steuerelement mehrere Monitore verwenden soll.
 ms.assetid: 7832E025-80F6-4B4B-9829-C2D2EF2D8C37
 ms.tgt_platform: multiple
 keywords:
-- Usemultimon-Eigenschaft Remotedesktopdienste
-- Usemultimon-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste, usemultimon-Eigenschaft
+- UseMultimon-Eigenschaft Remotedesktopdienste
+- UseMultimon-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , UseMultimon-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 941a2991ef5591176cd2508bbb6a097fecabebf0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8335d4424931b38d5d967e3ad910785e68184668eceda79011ff2c213517a8eb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033280"
 ---
-# <a name="imsrdpclientnonscriptable5usemultimon-property"></a>IMsRdpClientNonScriptable5:: usemultimon-Eigenschaft
+# <a name="imsrdpclientnonscriptable5usemultimon-property"></a>IMsRdpClientNonScriptable5::UseMultimon-Eigenschaft
 
-Gibt an, ob das Remotedesktop ActiveX-Steuerelement mehrere Monitore verwenden soll. Wenn diese Eigenschaft **Variant \_ true** enthält, werden vom Steuerelement mehrere Monitore verwendet. Wenn diese Eigenschaft **Variant \_ false** enthält, werden vom Steuerelement nicht mehrere Monitore verwendet.
+Gibt an, ob das Remotedesktop ActiveX-Steuerelement mehrere Monitore verwenden soll. Wenn diese Eigenschaft **VARIANT \_ TRUE** enthält, verwendet das Steuerelement mehrere Monitore. Wenn diese Eigenschaft **VARIANT \_ FALSE** enthält, verwendet das Steuerelement nicht mehrere Monitore.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_UseMultimon(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt den neuen Eigenschafts Wert an.
+Gibt den neuen Eigenschaftswert an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Gibt den neuen Eigenschafts Wert an.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2<br/>                                                             |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>        |
-| IID<br/>                      | IID \_ IMsRdpClientNonScriptable5 ist als 4f 6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
+| IID<br/>                      | \_IID-IMsRdpClientNonScriptable5 ist als 4f6996d5-d7b1-412c-b0ff-063718566907 definiert.<br/> |
 
 
 

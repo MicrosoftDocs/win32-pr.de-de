@@ -1,6 +1,6 @@
 ---
 title: Bluetooth und getaddrinfo
-description: Die getaddrinfo-Funktion stellt die Übersetzung vom Hostnamen in die Adresse für IP-basierte Transporte bereit. Da die getaddrinfo-Funktion spezifisch für IP-basierte Transporte ist, tritt bei Bluetooth Sockets ein Fehler auf.
+description: Die getaddrinfo-Funktion ermöglicht die Übersetzung von Hostname zu Adresse für IP-basierte Transporte. Da die getaddrinfo-Funktion für IP-basierte Transporte spezifisch ist, schlägt sie auf Bluetooth fehl.
 ms.assetid: e17d8542-d4bc-499c-bae4-1f41bff493c3
 keywords:
 - Bluetooth und getaddrinfo Bluetooth
@@ -15,9 +15,9 @@ ms.locfileid: "120004530"
 ---
 # <a name="bluetooth-and-getaddrinfo"></a>Bluetooth und getaddrinfo
 
-Die [**getaddrinfo-Funktion**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) stellt die Übersetzung vom Hostnamen in die Adresse für IP-basierte Transporte bereit. Da die **getaddrinfo-Funktion** spezifisch für IP-basierte Transporte ist, tritt bei Bluetooth Sockets ein Fehler auf.
+Die [**getaddrinfo-Funktion**](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo) ermöglicht die Übersetzung von Hostname zu Adresse für IP-basierte Transporte. Da die **getaddrinfo-Funktion** für IP-basierte Transporte spezifisch ist, schlägt sie auf Bluetooth fehl.
 
-Verwenden Sie zum Durchführen der Übersetzung von Hostname zu Adresse für Bluetooth Sockets die [**WSALookupServiceBegin-Funktion**](bluetooth-and-wsalookupservicebegin-for-device-inquiry.md) mit **\_ LUP-CONTAINERn,** um Remotegeräte abzufragen, und suchen Sie dann nach einem bestimmten übereinstimmenden Remotenamen und einer entsprechenden Adresse.
+Um die Übersetzung von Hostname zu Adresse für Bluetooth-Sockets durchzuführen, verwenden Sie die [**WSALookupServiceBegin-Funktion**](bluetooth-and-wsalookupservicebegin-for-device-inquiry.md) mit **\_ LUP-CONTAINERn,** um Remotegeräte abfragt und dann nach einem bestimmten übereinstimmenden Remotenamen und einer entsprechenden Adresse zu suchen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

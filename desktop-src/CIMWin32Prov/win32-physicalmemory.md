@@ -1,5 +1,5 @@
 ---
-description: Stellt ein physisches Speichergerät dar, das sich auf einem Computersystem befindet und dem Betriebssystem zur Verfügung steht.
+description: Stellt ein physisches Speichergerät dar, das sich auf einem Computersystem befindet und für das Betriebssystem verfügbar ist.
 ms.assetid: 34baca53-ab85-4e06-9853-71b904ede4ab
 ms.tgt_platform: multiple
 title: Win32_PhysicalMemory-Klasse
@@ -50,18 +50,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e026c3c3d0a29bbbd10ed2b5565708f0bcb0900c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5559de847cf15b60e3af27f8b092605b8ca8c3bfd874d27ebab7a0edda454d14
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119972210"
 ---
 # <a name="win32_physicalmemory-class"></a>Win32 \_ PhysicalMemory-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) für den **Win32 \_ PhysicalMemory** stellt ein physisches Speichergerät dar, das sich auf einem Computersystem befindet und dem Betriebssystem zur Verfügung steht.
+Die **WMI-Klasse \_ Win32 PhysicalMemory** stellt ein physisches Speichergerät dar, das sich auf einem Computersystem befindet und für das Betriebssystem verfügbar ist. [](../wmisdk/retrieving-a-class.md)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -110,231 +110,231 @@ class Win32_PhysicalMemory : CIM_PhysicalMemory
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ PhysicalMemory** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ PhysicalMemory-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ PhysicalMemory** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ PhysicalMemory-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Attribute**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17- \| Attribute")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Attributes")
 </dt> </dl>
 
-SMBIOS-Type 17: Attribute. Stellt den Rang dar.
+SMBIOS: Geben Sie 17 – Attribute ein. Stellt den RANK dar.
 
-Dieser Wert stammt aus dem **Attributmember** der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Attributes-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008** und Windows Vista: Diese Eigenschaft wird nicht unterstützt, bevor Windows Server 2016 und Windows 10.
 
 </dd> <dt>
 
-**Banklabel**
+**BankLabel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,4 ")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.4")
 </dt> </dl>
 
-Physisch Bezeichnung Bank, auf der sich der Speicher befindet.
+Physisch bezeichnete Bank, in der sich der Arbeitsspeicher befindet.
 
 Beispiele: "Bank 0", "Bank A"
 
-Dieser Wert stammt aus dem **Bank Locator** -Member der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Bank Locator-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
 </dd> <dt>
 
 **Capacity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,5 "), [**Einheiten**](../wmisdk/standard-qualifiers.md) (Bytes)
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.5"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bytes")
 </dt> </dl>
 
-Gesamtkapazität des physischen Speichers – (in Bytes).
+Gesamtkapazität des physischen Speichers – in Bytes.
 
-Dieser Wert stammt aus der **Speichergeräte** Struktur in den SMBIOS-Versionsinformationen. Für SMBIOS-Versionen 2,1 bis 2,6 ergibt sich der Wert aus dem **size** -Member. Für SMBIOS, Version 2.7 und höher, wird der Wert aus dem **erweiterten Größen** Element abgeleitet.
+Dieser Wert stammt aus der **Speichergerätestruktur** in den SMBIOS-Versionsinformationen. Für die SMBIOS-Versionen 2.1 bis 2.6 stammt der Wert vom **Size-Member.** Für SMBIOS Version 2.7 und mehr stammt der Wert vom **Member "Erweiterte** Größe".
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](../wmisdk/creating-a-wmi-script.md).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](../wmisdk/creating-a-wmi-script.md)
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Caption")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Caption")
 </dt> </dl>
 
-Kurze Beschreibung des Objekts – eine einzeilige Zeichenfolge.
+Kurze Beschreibung des -Objekts– eine einzeilenbasierte Zeichenfolge.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Konfigurations Geschwindigkeit**
+**ConfiguredClockSpeed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 17 \| konfigurierte Speicher Taktgeschwindigkeit")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Configured Memory Clock Speed")
 </dt> </dl>
 
-Die konfigurierte Taktfrequenz des Speichergeräts in Megahertz (MHz) oder 0 (null), wenn die Geschwindigkeit unbekannt ist.
+Die konfigurierte Taktgeschwindigkeit des Speichergeräts in Megahertz (MHz) oder 0, wenn die Geschwindigkeit unbekannt ist.
 
-Dieser Wert stammt aus dem **konfigurierten speicherclock-Geschwindigkeits** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Configured Memory Clock Speed-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008** und Windows Vista: Diese Eigenschaft wird nicht unterstützt, bevor Windows Server 2016 und Windows 10.
 
 </dd> <dt>
 
-**Konfiguriert**
+**ConfiguredVoltage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| konfigurierte Spannung")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Configured voltage")
 </dt> </dl>
 
-Konfigurierte Spannung für dieses Gerät (in Millivolt) oder 0 (null), wenn die Spannung unbekannt ist.
+Konfigurierte Spannung für dieses Gerät in Millisekunden oder 0, wenn die Spannung unbekannt ist.
 
-Dieser Wert stammt aus dem **konfigurierten Spannungs** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **konfigurierten Spannungs-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008** und Windows Vista: Diese Eigenschaft wird nicht unterstützt, bevor Windows Server 2016 und Windows 10.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](../wmisdk/standard-wmi-qualifiers.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](../wmisdk/standard-wmi-qualifiers.md) [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **DataWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,8 "), [**Einheiten**](../wmisdk/standard-qualifiers.md) (" Bits ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.8"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits")
 </dt> </dl>
 
-Daten Breite des physischen Speichers – in Bits. Eine Daten Breite von 0 (null) und eine Gesamtbreite von 8 (acht) gibt an, dass der Arbeitsspeicher ausschließlich zur Bereitstellung von Fehlerkorrektur Bits verwendet wird.
+Datenbreite des physischen Speichers in Bits. Eine Datenbreite von 0 (null) und eine Gesamtbreite von 8 (acht) gibt an, dass der Arbeitsspeicher ausschließlich zur Bereitstellung von Fehlerkorrekturbits verwendet wird.
 
-Dieser Wert stammt aus dem **datenwidth** -Member der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Datenbreiten-Member** der **Speichergerätestruktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Description")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Description")
 </dt> </dl>
 
-Die Beschreibung eines Objekts.
+Beschreibung eines Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **DeviceLocator**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Device Locator")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Device Locator")
 </dt> </dl>
 
-Die Bezeichnung des Sockets oder der Verbindungs Platine, die den Arbeitsspeicher enthält.
+Bezeichnung des Sockets oder der Leitungsplatine, die den Arbeitsspeicher enthält.
 
 Beispiel: "SIMM 3"
 
-Dieser Wert stammt aus dem **geräterlocatormember** der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Device Locator-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
 </dd> <dt>
 
-**Formfaktor**
+**FormFactor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,6 ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.6")
 </dt> </dl>
 
-Der Implementierungs Formfaktor für den Chip.
+Implementierungsformfaktor für den Chip.
 
-Dieser Wert stammt aus dem **Form Faktor** -Member der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Form Factor-Element** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird vom [**CIM- \_ Chip**](cim-chip.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Chip geerbt.**](cim-chip.md)
 
 <dt>
 
@@ -356,7 +356,7 @@ Unbekannt
 
 </dt> <dd>
 
-Sonstiges
+Andere
 
 </dd> <dt>
 
@@ -367,7 +367,7 @@ Sonstiges
 
 </dt> <dd>
 
-Fen
+Sip
 
 </dd> <dt>
 
@@ -400,7 +400,7 @@ ZIP
 
 </dt> <dd>
 
-Soj
+SOJ
 
 </dd> <dt>
 
@@ -422,7 +422,7 @@ Proprietär
 
 </dt> <dd>
 
-SIMM
+Simm
 
 </dd> <dt>
 
@@ -433,7 +433,7 @@ SIMM
 
 </dt> <dd>
 
-DIMM
+Dimm
 
 </dd> <dt>
 
@@ -444,7 +444,7 @@ DIMM
 
 </dt> <dd>
 
-Wahrheits Satz
+Tsop
 
 </dd> <dt>
 
@@ -455,7 +455,7 @@ Wahrheits Satz
 
 </dt> <dd>
 
-Besetzten
+Pga
 
 </dd> <dt>
 
@@ -466,7 +466,7 @@ Besetzten
 
 </dt> <dd>
 
-RIMM
+Rimm
 
 </dd> <dt>
 
@@ -477,7 +477,7 @@ RIMM
 
 </dt> <dd>
 
-SODIMM
+Sodimm
 
 </dd> <dt>
 
@@ -488,7 +488,7 @@ SODIMM
 
 </dt> <dd>
 
-Srimm
+SRIMM
 
 </dd> <dt>
 
@@ -499,7 +499,7 @@ Srimm
 
 </dt> <dd>
 
-Tenden
+Smd
 
 </dd> <dt>
 
@@ -521,7 +521,7 @@ SSMP
 
 </dt> <dd>
 
-QFP
+Qfp
 
 </dd> <dt>
 
@@ -532,7 +532,7 @@ QFP
 
 </dt> <dd>
 
-TQFP
+Tqfp
 
 </dd> <dt>
 
@@ -554,7 +554,7 @@ SOIC
 
 </dt> <dd>
 
-LCC
+Lcc
 
 </dd> <dt>
 
@@ -565,7 +565,7 @@ LCC
 
 </dt> <dd>
 
-PLCC
+Plcc
 
 </dd> <dt>
 
@@ -576,7 +576,7 @@ PLCC
 
 </dt> <dd>
 
-BGA
+Bga
 
 </dd> <dt>
 
@@ -587,7 +587,7 @@ BGA
 
 </dt> <dd>
 
-Fpbga
+FPBGA
 
 </dd> <dt>
 
@@ -604,77 +604,77 @@ LGA
 
 </dd> <dt>
 
-**"Anappable"**
+**HotSwappable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass diese physische Medien Komponente durch eine physisch andere, aber entsprechende ersetzt werden kann, während das enthaltende Paket die Stromversorgung hat. Beispielsweise kann eine Lüfter-Komponente so entworfen werden, dass Sie im laufenden Betrieb ausgetauscht wird. Alle Komponenten, bei denen es sich um eine ausgetauschte Komponente handelt, sind von Natur aus austauschbar und austauschbar.
+True **gibt an,** dass diese physische Medienkomponente durch eine physisch unterschiedliche, aber äquivalente Komponente ersetzt werden kann, während auf das enthaltende Paket die Energie angewendet wird. Beispielsweise kann eine Lüfterkomponente so entworfen werden, dass sie hot-swaped ist. Alle Komponenten, die im Hot-Swap-System ausgetauscht werden können, sind grundsätzlich austauschbar und austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent geerbt.**](cim-physicalcomponent.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](../wmisdk/standard-qualifiers.md) (" Install Date ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Für diese Eigenschaft ist kein Wert erforderlich, um anzugeben, dass das Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft benötigt keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InterleaveDataDepth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 20 \| verschachtelte Datentiefe")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 20 \| Interleaved Data Depth")
 </dt> </dl>
 
-Ganze 16-Bit-Ganzzahl ohne Vorzeichen: maximale Anzahl aufeinander folgender Daten Zeilen, auf die in einer einzelnen überlappenden Übertragung vom Arbeitsspeicher Gerät zugegriffen wird. Wenn der Wert 0 (null) ist, wird der Arbeitsspeicher nicht überlappt.
+16-Bit-Ganzzahl ohne Vorzeichen maximale Anzahl aufeinanderfolgender Datenzeilen, auf die in einer einzelnen überlappten Übertragung vom Speichergerät zugegriffen wird. Wenn der Wert 0 (null) ist, ist der Arbeitsspeicher nicht übereinander.
 
 </dd> <dt>
 
-**Interleaveposition**
+**InterleavePosition**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". Zugeordnete DMTF- \| Speichergeräte Adressen \| 001,7 ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| Memory Device Mapped Addresses \| 001.7")
 </dt> </dl>
 
-Die Position des physischen Speichers in einem Interleave. Beispielsweise gibt der Wert "1" in einem 2:1-Interleave an, dass sich der Speicher an der "geraden" Position befindet.
+Position des physischen Speichers in einer Verwebung. Bei einem 2:1-Interleave gibt der Wert "1" beispielsweise an, dass sich der Arbeitsspeicher an der "gleichmäßigen" Position befindet.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
 <dt>
 
 0
 </dt> <dd>
 
-Nicht Interleaved
+Nicht interleaved
 
 </dd> <dt>
 
@@ -703,54 +703,54 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Der Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
+Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist.
 
-Dieser Wert stammt vom **Hersteller** Mitglied der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Manufacturer-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Maxspannung**
+**MaxVoltage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 17 \| Maximale Spannung")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Maximum voltage")
 </dt> </dl>
 
-Die maximale Betriebsspannung für dieses Gerät (in Millivolt) oder 0 (null), wenn die Spannung unbekannt ist.
+Die maximale Betriebsspannung für dieses Gerät in Millisekunden oder 0, wenn die Spannung unbekannt ist.
 
-Dieser Wert stammt aus dem **Maximum-Spannungs** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Maximum-Spannungs-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird nicht unterstützt, bevor Windows Server 2016 und Windows 10.
 
 </dd> <dt>
 
 **MemoryType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,9 ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.9")
 </dt> </dl>
 
-Typ des physischen Speichers. Dies ist ein CIM-Wert, der dem SMBIOS-Wert zugeordnet ist. Die Eigenschaft **smbiosmemorytype** enthält den unformatierten SMBIOS-Arbeitsspeichertyp.
+Typ des physischen Speichers. Dies ist ein CIM-Wert, der dem SMBIOS-Wert zugeordnet ist. Die **SMBIOSMemoryType-Eigenschaft** enthält den unformatten SMBIOS-Speichertyp.
 
-Dieser Wert stammt aus dem **Speichertyp** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Memory Type-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
 <dt>
 
@@ -777,7 +777,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 <span id="Synchronous_DRAM"></span><span id="synchronous_dram"></span><span id="SYNCHRONOUS_DRAM"></span>
 
-<span id="Synchronous_DRAM"></span><span id="synchronous_dram"></span><span id="SYNCHRONOUS_DRAM"></span>**Synchroner DRAM** (3)
+<span id="Synchronous_DRAM"></span><span id="synchronous_dram"></span><span id="SYNCHRONOUS_DRAM"></span>**Synchrones DRAM** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -791,7 +791,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 <span id="EDO"></span><span id="edo"></span>
 
-<span id="EDO"></span><span id="edo"></span>**Edo** (5)
+<span id="EDO"></span><span id="edo"></span>**EDO** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -826,7 +826,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 <span id="ROM"></span><span id="rom"></span>
 
-<span id="ROM"></span><span id="rom"></span>**Rom** (10)
+<span id="ROM"></span><span id="rom"></span>**ROM** (10)
 
 
 </dt> <dd></dd> <dt>
@@ -847,7 +847,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 <span id="FEPROM"></span><span id="feprom"></span>
 
-<span id="FEPROM"></span><span id="feprom"></span>**Feprom** (13)
+<span id="FEPROM"></span><span id="feprom"></span>**FEPROM** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -868,7 +868,7 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 <span id="3DRAM"></span><span id="3dram"></span>
 
-<span id="3DRAM"></span><span id="3dram"></span>**3dram** (16)
+<span id="3DRAM"></span><span id="3dram"></span>**3DRAM** (16)
 
 
 </dt> <dd></dd> <dt>
@@ -908,25 +908,25 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 
 </dt> <dd>
 
-DDR2 – ist möglicherweise nicht verfügbar.
+DDR2– Ist möglicherweise nicht verfügbar.
 
 </dd> <dt>
 
 <span id="DDR2_FB-DIMM"></span><span id="ddr2_fb-dimm"></span>
 
-<span id="DDR2_FB-DIMM"></span><span id="ddr2_fb-dimm"></span>**DDR2 FB-DIMM** (22)
+<span id="DDR2_FB-DIMM"></span><span id="ddr2_fb-dimm"></span>**DDR2 FB-DIM** (22)
 
 
 </dt> <dd>
 
-DDR2 – FB-DIMM ist möglicherweise nicht verfügbar.
+DDR2 – FB-DIM, möglicherweise nicht verfügbar.
 
 </dd> <dt>
 
 24
 </dt> <dd>
 
-"DDR3 –" ist möglicherweise nicht verfügbar.
+DDR3– Ist möglicherweise nicht verfügbar.
 
 </dd> <dt>
 
@@ -943,211 +943,211 @@ FBD2
 
 </dd> <dt>
 
-**Minspannung**
+**MinVoltage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 20 \| minimale Spannung")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 20 \| Minimum voltage")
 </dt> </dl>
 
-Die minimale Betriebsspannung für dieses Gerät (in Millivolt) oder 0 (null), wenn die Spannung unbekannt ist.
+Die Mindestbetriebsspannung für dieses Gerät in Millisekunden oder 0, wenn die Spannung unbekannt ist.
 
-Dieser Wert stammt aus dem **minimalen Spannungs** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Minimum-Spannungs-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
+**Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird nicht unterstützt, bevor Windows Server 2016 und Windows 10.
 
 </dd> <dt>
 
 **Modell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Der Name für das physische Element.
+Name für das physische Element.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](../wmisdk/standard-qualifiers.md) ("Name")
+Qualifizierer: [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Name")
 </dt> </dl>
 
-Die Bezeichnung für das-Objekt. Bei einer Unterklasse kann die Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung für das -Objekt. Bei Unterklassen kann die Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Daten, über die Informationen zu Asset-Tags hinausgehen, die zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel hierfür sind Barcode-Daten, die einem Element zugeordnet sind, das auch über ein Bestands Kennzeichen verfügt. Wenn nur Barcode Daten verfügbar und eindeutig sind oder als Element Schlüssel verwendet werden können, ist diese Eigenschaft **null** , und die Barcode Daten werden als Klassen Schlüssel in der Tag-Eigenschaft verwendet.
+Zusätzliche Daten, die über Assettaginformationen hinausgehen und zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel sind Balkencodedaten, die einem Element zugeordnet sind, das auch über ein Assettag verfügt. Wenn nur Balkencodedaten verfügbar sind und eindeutig sind oder als Elementschlüssel verwendet werden können, ist diese Eigenschaft **NULL,** und die Barcodedaten werden als Klassenschlüssel in der Tageigenschaft verwendet.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **PartNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (256)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wurde, die für das Erstellen oder die Herstellung des physischen Elements verantwortlich ist
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements zuständig ist.
 
-Dieser Wert stammt aus dem **Teil Nummern** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Part Number-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Positioninrow**
+**PositionInRow**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". Zugeordnete DMTF- \| Speichergeräte Adressen \| 001,6 ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. DMTF \| Memory Device Mapped Addresses \| 001.6")
 </dt> </dl>
 
-Die Position des physischen Speichers in einer Zeile. Wenn z. b. 2 8-Bit-Speichergeräte zum bilden einer 16-Bit-Zeile benötigt werden, bedeutet der Wert 2 (zwei), dass dieser Speicher das zweite Gerät ist – 0 (null) ist ein ungültiger Wert für diese Eigenschaft.
+Position des physischen Speichers in einer Zeile. Wenn beispielsweise zwei 8-Bit-Speichergeräte eine 16-Bit-Zeile bilden, bedeutet der Wert 2 (zwei), dass dieser Speicher das zweite Gerät ist– 0 (null) ist ein ungültiger Wert für diese Eigenschaft.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalMemory geerbt.**](cim-physicalmemory.md)
 
 </dd> <dt>
 
-**Poweredon**
+**PoweredOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das physische Element eingeschaltet ist.
+True **gibt an,** dass das physische Element eingeschaltet wird.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
-**Ab**
+**Abnehmbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass eine physische Komponente Wechsel Datenträger ist (wenn Sie so konzipiert ist, dass Sie in den physischen Container übernommen wird, in dem Sie normalerweise gefunden wird, ohne dass die Funktion der gesamten Paket Erstellung beeinträchtigt wird). Eine Komponente kann weiterhin Wechsel Datenträger durchgeführt werden, wenn die Stromversorgung deaktiviert werden muss. Wenn Power "on" sein kann und die Komponente entfernt wurde, ist das Element austauschbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein aktualisierbarer Prozessor Chip entfernt werden.
+True **gibt** an, dass eine physische Komponente wechselbar ist (wenn sie so konzipiert ist, dass sie in den physischen Container, in dem sie sich normalerweise befindet, ein- und aus dem Container entfernt wird, ohne die Funktion der Gesamtpaketierung zu beeinträchtigen). Eine Komponente kann weiterhin wechselbar sein, wenn die Stromversorgung "aus" sein muss, um das Entfernen durchzuführen. Wenn die Stromversorgung "ein" sein kann und die Komponente entfernt werden kann, ist das Element wechselbar und kann mit hot ausgetauscht werden. Beispielsweise ist ein erweiterbarer Prozessorchip wechselbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent geerbt.**](cim-physicalcomponent.md)
 
 </dd> <dt>
 
-**Replaceable**
+**Austauschbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass diese physische Medien Komponente durch eine physisch andere ersetzt werden kann. Beispielsweise ist für einige Computersysteme das Upgrade des Hauptprozessor-Chips auf eine höhere Bewertungsstufe möglich. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle wechselkomponenten sind von Natur aus ersetzbar.
+True **gibt an,** dass diese physische Medienkomponente durch eine physisch andere ersetzt werden kann. Einige Computersysteme ermöglichen z. B. das Upgrade des Hauptprozessorchips auf eine der höheren Taktwerte. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle Wechselkomponenten sind grundsätzlich austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent geerbt.**](cim-physicalcomponent.md)
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Vom Hersteller zugewiesene Nummer, um das physische Element zu identifizieren.
+Vom Hersteller zugeordnete Zahl, um das physische Element zu identifizieren.
 
-Dieser Wert stammt aus dem **Seriennummern** Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Serial Number-Member** der **Memory Device-Struktur** in den SMBIOS-Informationen.
 
-Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalElement geerbt.**](cim-physicalelement.md)
 
 </dd> <dt>
 
 **SKU**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
-Die Stock Keeping Unit-Nummer für das physische Element.
+Lagerhaltungseinheitennummer für das physische Element.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Smbiosmemorytype**
+**SMBIOSMemoryType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS- \| Typ 17- \| \_ Arbeitsspeichertyp")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS-Typ \| 17 \| \_ Arbeitsspeichertyp")
 </dt> </dl>
 
-Der unformatierte SMBIOS-Arbeitsspeichertyp. Der Wert der **MemoryType** -Eigenschaft ist ein CIM-Wert, der dem SMBIOS-Wert zugeordnet ist.
+Der SMBIOS-Rohdatenspeichertyp. Der Wert der **MemoryType-Eigenschaft** ist ein CIM-Wert, der dem SMBIOS-Wert zugeordnet ist.
 
 **Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 und Windows Vista:** Diese Eigenschaft wird vor Windows Server 2016 und Windows 10 nicht unterstützt.
 
@@ -1156,18 +1156,18 @@ Der unformatierte SMBIOS-Arbeitsspeichertyp. Der Wert der **MemoryType** -Eigens
 **Geschwindigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](../wmisdk/standard-qualifiers.md) ("nanoseconds")
+Qualifizierer: [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Nanosekunden")
 </dt> </dl>
 
 Geschwindigkeit des physischen Speichers – in Nanosekunden.
 
-Dieser Wert stammt aus dem **Geschwindigkeits** Mitglied der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Speed-Member** der **Speichergerätestruktur** in den SMBIOS-Informationen.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
 
@@ -1176,20 +1176,20 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (10), [**Display Name**](../wmisdk/standard-qualifiers.md) ("Status")
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (10), [**DisplayName**](../wmisdk/standard-qualifiers.md) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
-Mögliche Werte sind.
+Die möglichen Werte sind.
 
 <dt>
 
@@ -1209,35 +1209,35 @@ Mögliche Werte sind.
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1251,28 +1251,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -1282,36 +1282,36 @@ Wird **beendet ("wird angehalten** ")
 **Tag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**maxlen**](../wmisdk/standard-qualifiers.md) (256), [**override**](../wmisdk/standard-qualifiers.md) ("Tag"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI")
+Qualifizierer: [**Key**](../wmisdk/key-qualifier.md), [**MaxLen**](../wmisdk/standard-qualifiers.md) (256), [**Override**](../wmisdk/standard-qualifiers.md) ("Tag"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI")
 </dt> </dl>
 
-Eindeutiger Bezeichner für das physische Speichergerät, das durch eine Instanz von **Win32 \_ PhysicalMemory** repräsentiert wird. Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
+Eindeutiger Bezeichner für das physische Speichergerät, das durch eine Instanz von **Win32 \_ PhysicalMemory** dargestellt wird. Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
-Beispiel: "physischer Speicher 1"
+Beispiel: "Physischer Speicher 1"
 
 </dd> <dt>
 
 **TotalWidth**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("MIF". DMTF- \| Speichergerät \| 002,7 "), [**Einheiten**](../wmisdk/standard-qualifiers.md) (" Bits ")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("MIF. \|DMTF-Speichergerät \| 002.7"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bits")
 </dt> </dl>
 
-Gesamtbreite des physischen Speichers (in Bits), einschließlich der Check-oder Error-Korrektur Bits. Wenn keine Fehlerkorrektur Bits vorhanden sind, sollte der Wert in dieser Eigenschaft mit den Angaben für die **DataWidth** -Eigenschaft identisch sein.
+Gesamtbreite des physischen Speichers in Bits, einschließlich Überprüfungs- oder Fehlerkorrekturbits. Wenn keine Fehlerkorrekturbits vorhanden sind, sollte der Wert in dieser Eigenschaft mit dem für die **DataWidth-Eigenschaft** angegebenen Wert übereinstimmen.
 
-Dieser Wert stammt aus dem **Total Width** -Element der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Element Gesamtbreite** der **Speichergerätestruktur** in den SMBIOS-Informationen.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)geerbt.
 
@@ -1320,18 +1320,18 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)gee
 **TypeDetail**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Type Details")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("SMBIOS \| Type 17 \| Type Detail")
 </dt> </dl>
 
-Typ des dargestellten physischen Speichers.
+Typ des dargestellten physischen Arbeitsspeichers.
 
-Dieser Wert stammt vom **typdetailmember** der **Speichergeräte** Struktur in den SMBIOS-Informationen.
+Dieser Wert stammt aus dem **Typdetailmember** der **Speichergerätestruktur** in den SMBIOS-Informationen.
 
 <dt>
 
@@ -1344,7 +1344,7 @@ Dieser Wert stammt vom **typdetailmember** der **Speichergeräte** Struktur in d
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (2)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -1358,7 +1358,7 @@ Dieser Wert stammt vom **typdetailmember** der **Speichergeräte** Struktur in d
 
 <span id="Fast-paged"></span><span id="fast-paged"></span><span id="FAST-PAGED"></span>
 
-<span id="Fast-paged"></span><span id="fast-paged"></span><span id="FAST-PAGED"></span>**Schnell Auslagerung(** 8)
+<span id="Fast-paged"></span><span id="fast-paged"></span><span id="FAST-PAGED"></span>**Fast-paged** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -1379,7 +1379,7 @@ Dieser Wert stammt vom **typdetailmember** der **Speichergeräte** Struktur in d
 
 <span id="RAMBUS"></span><span id="rambus"></span>
 
-<span id="RAMBUS"></span><span id="rambus"></span>**Rambus** (64)
+<span id="RAMBUS"></span><span id="rambus"></span>**RAMBUS** (64)
 
 
 </dt> <dd></dd> <dt>
@@ -1393,21 +1393,21 @@ Dieser Wert stammt vom **typdetailmember** der **Speichergeräte** Struktur in d
 
 <span id="CMOS"></span><span id="cmos"></span>
 
-<span id="CMOS"></span><span id="cmos"></span>**CMOS** (256)
+<span id="CMOS"></span><span id="cmos"></span>**SENSORS** (256)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="EDO"></span><span id="edo"></span>
 
-<span id="EDO"></span><span id="edo"></span>**Edo** (512)
+<span id="EDO"></span><span id="edo"></span>**EDO** (512)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Window_DRAM"></span><span id="window_dram"></span><span id="WINDOW_DRAM"></span>
 
-<span id="Window_DRAM"></span><span id="window_dram"></span><span id="WINDOW_DRAM"></span>**Fenster DRAM** (1024)
+<span id="Window_DRAM"></span><span id="window_dram"></span><span id="WINDOW_DRAM"></span>**Fenster-DRAM** (1024)
 
 
 </dt> <dd></dd> <dt>
@@ -1435,13 +1435,13 @@ Nicht volatil
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](../wmisdk/standard-qualifiers.md) (64)
+Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 </dt> </dl>
 
 Version des physischen Elements.
@@ -1450,17 +1450,17 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ PhysicalMemory** -Klasse wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)abgeleitet.
+Die **Win32 \_ PhysicalMemory-Klasse** wird von [**CIM \_ PhysicalMemory**](cim-physicalmemory.md)abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
-Das PowerShell [-Beispiel Get-ComputerInfo-Query Computer Info from Local/Remote Computers-(WMI)](https://Gallery.TechNet.Microsoft.Com/Get-ComputerInfo-Query-23dd6042) in der TechNet Gallery verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ PhysicalMemory**, um Informationen über ein lokales oder Remote System anzuzeigen.
+Das [PowerShell-Beispiel Get-ComputerInfo – Query Computer Info From Local/Remote Computers - (WMI)](https://Gallery.TechNet.Microsoft.Com/Get-ComputerInfo-Query-23dd6042) im TechNet Gallery verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ PhysicalMemory,** um Informationen zu einem lokalen oder Remotesystem anzuzeigen.
 
-Das PowerShell-Beispiel für [Server Berichte](https://Gallery.TechNet.Microsoft.Com/Server-Report-7b4ac2fb) in der TechNet Gallery verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ PhysicalMemory**, um Server Informationen zu erfassen und in Word-Dokumenten zu veröffentlichen.
+Das PowerShell-Beispiel für [Serverbericht](https://Gallery.TechNet.Microsoft.Com/Server-Report-7b4ac2fb) im TechNet-Katalog verwendet eine Reihe von Aufrufen von Hardware und Software, einschließlich **Win32 \_ PhysicalMemory,** um Serverinformationen zu sammeln und im Word-Dokument zu veröffentlichen.
 
-Das folgende PowerShell-Beispielcode ruft Informationen zum physischen Speicher des lokalen Computers ab.
+Im folgenden PowerShell-Codebeispiel werden Informationen zum physischen Arbeitsspeicher des lokalen Computers abgerufen.
 
 
 ```PowerShell
@@ -1622,20 +1622,20 @@ $mt=get-WMIMemoryType($stick.MemoryType)
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ PhysicalMemory**](cim-physicalmemory.md)
+[**CIM \_ PhysicalMemory**](cim-physicalmemory.md)
 </dt> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> </dl>
 
  

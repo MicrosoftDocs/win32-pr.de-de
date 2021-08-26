@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentkeyismadeexception-Konstruktor'
-title: Esentkeyismadeexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentKeyIsKeyIsKeyException-Konstruktor'
+title: EsentKeyIsKeyIsKeyException-Konstruktor
 TOCTitle: 'EsentKeyIsMadeException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentKeyIsMadeException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentkeyismadeexception.esentkeyismadeexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 037d30bed22bd25781e426aa507b4ecab9f18645
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e302a77a4bc60e27cc212fa784de4c19323c168ef604426ffc2537b47cd54e3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019730"
 ---
-# <a name="esentkeyismadeexception-constructor"></a>Esentkeyismadeexception-Konstruktor
+# <a name="esentkeyismadeexception-constructor"></a>EsentKeyIsKeyIsKeyException-Konstruktor
 
-Initialisiert eine neue Instanz der esentkeyismadeexception-Klasse.
+Initialisiert eine neue Instanz der EsentKeyIsAndroception-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentKeyIsMadeException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentkeyismadeexception-Klasse](./esentkeyismadeexception-class.md)
+[EsentKeyIsAndroception-Klasse](./esentkeyismadeexception-class.md)
 
-[Esentkeyismaentexception-Member](./esentkeyismadeexception-members.md)
+[EsentKeyIsAndroception-Member](./esentkeyismadeexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

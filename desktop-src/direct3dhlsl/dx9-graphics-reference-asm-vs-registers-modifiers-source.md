@@ -1,6 +1,6 @@
 ---
-title: Vertex-Shader-Quell Registrierungs Modifiers
-description: Quellmodifiziererer können angewendet werden, um die aus einem Quell Register gelesenen Daten zu ändern, bevor die Daten von der Anweisung verwendet werden.
+title: Vertex-Shader-Quellregistermodifizierer
+description: Quellmodifizierer können angewendet werden, um die aus einem Quellregister gelesenen Daten zu ändern, bevor die Daten von der Anweisung verwendet werden.
 ms.assetid: 516ff7ca-0071-44ac-a246-612a9faa7e7b
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,72 +9,72 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 49c663741da50620e03cfde9f13d67a0c0063453
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3f50942d32691d9dc76aa30ddcef36df390fccfe058c31af3527c0eafe0d7df0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067980"
 ---
-# <a name="vertex-shader-source-register-modifiers"></a>Vertex-Shader-Quell Registrierungs Modifiers
+# <a name="vertex-shader-source-register-modifiers"></a>Vertex-Shader-Quellregistermodifizierer
 
-Quellmodifiziererer können angewendet werden, um die aus einem Quell Register gelesenen Daten zu ändern, bevor die Daten von der Anweisung verwendet werden.
+Quellmodifizierer können angewendet werden, um die aus einem Quellregister gelesenen Daten zu ändern, bevor die Daten von der Anweisung verwendet werden.
 
 ## <a name="negate"></a>Negate
 
-Negieren Sie den Inhalt des Quell Registers.
+Negieren Sie den Inhalt des Quellregisters.
 
 
 
 | Komponentenmodifizierer | BESCHREIBUNG     |
 |--------------------|-----------------|
-| \- r               | Quell Negation |
+| \- R               | Quell negation |
 
 
 
- 
+ 
 
-Der Negation-Modifizierer kann nicht für das zweite Quell Register dieser Anweisungen verwendet werden: [m3x2-vs](m3x2---vs.md), [M3x3-vs](m3x3---vs.md), [M3x4-vs](m3x4---vs.md), [m4x3-vs](m4x3---vs.md), [M4x4-vs](m4x4---vs.md).
+Der Negationmodifizierer kann nicht im zweiten Quellregister dieser Anweisungen verwendet werden: [m3x2 – vs](m3x2---vs.md), [m3x3 – vs](m3x3---vs.md), [m3x4 – vs](m3x4---vs.md), [m4x3 – vs](m4x3---vs.md), [m4x4 – vs](m4x4---vs.md).
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | \-                     | x    | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
 ## <a name="absolute-value"></a>Absoluter Wert
 
-Nehmen Sie den absoluten Wert des Register.
+Nehmen Sie den absoluten Wert des Registers.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
 | abs                    |      |      |      |       | x    | x     |
 
 
 
- 
+ 
 
-Wenn ein Shader der Version 3 aus mindestens einem konstanten float-Register (c \# ) liest, muss einer der folgenden Werte zutreffen.
+Wenn ein Shader der Version 3 aus einem oder mehreren konstanten float-Registern (c) liest, \# muss eines der folgenden Punkte zutreffen.
 
--   Alle Konstanten Gleit Komma Register müssen den ABS-Modifizierer verwenden.
--   Keines der Konstanten Gleit Komma Register kann den ABS-Modifizierer verwenden.
+-   Alle konstanten Gleitkommaregister müssen den Abs-Modifizierer verwenden.
+-   Keiner der konstanten Gleitkommaregister kann den Abs-Modifizierer verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-registermodifiziererer](dx9-graphics-reference-asm-vs-registers-modifiers.md)
+[Vertex-Shader-Registermodifizierer](dx9-graphics-reference-asm-vs-registers-modifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

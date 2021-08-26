@@ -1,7 +1,7 @@
 ---
-description: 'D3DX10_IMAGE_INFO struktur: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.'
+description: 'D3DX10_IMAGE_INFO-Struktur: Gibt eine Beschreibung des ursprünglichen Inhalts einer Bilddatei zurück.'
 ms.assetid: 40d89166-cc11-490d-867c-ae5db23a0784
-title: D3DX10_IMAGE_INFO -Struktur (D3DX10.h)
+title: D3DX10_IMAGE_INFO-Struktur (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10.h
-ms.openlocfilehash: 228ddf777217e9e61369b0a7fc3b3eb1ca012b1d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bf3aa2eeb3e908a76e05588940927fff53dd1583c937d95a1c862f6021bd630f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989520"
 ---
 # <a name="d3dx10_image_info-structure"></a>D3DX10 \_ IMAGE \_ INFO-Struktur
 
@@ -87,7 +87,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Größe des Texturarrays. *ArraySize ist* für ein einzelnes Bild 1.
+Größe des Texturarrays. *ArraySize* ist für ein einzelnes Bild 1.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Mipmapebenen im originalen Bild.
+Anzahl der Mipmapebenen im ursprünglichen Bild.
 
 </dd> <dt>
 
@@ -150,7 +150,7 @@ Stellt das Format der Bilddatei dar. Weitere Informationen finden Sie unter [**D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10.h</dt> </dl> |
 

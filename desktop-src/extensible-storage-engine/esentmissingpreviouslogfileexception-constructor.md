@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie im esentmissingpreviouslogfileexception-Konstruktor.
-title: Esentmissingpreviouslogfileexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentMissingPreviousLogFileException-Konstruktor'
+title: EsentMissingPreviousLogFileException-Konstruktor
 TOCTitle: 'EsentMissingPreviousLogFileException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMissingPreviousLogFileException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentmissingpreviouslogfileexception.esentmissingpreviouslogfileexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bc32dcbe4f77bdcc8c8a8ba051020d90dc546b8a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f3e3e0c64f54bb4a7b0a82becbd5ca943f5342dcc728a032d7b3bdc034585dd2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019204"
 ---
-# <a name="esentmissingpreviouslogfileexception-constructor"></a>Esentmissingpreviouslogfileexception-Konstruktor
+# <a name="esentmissingpreviouslogfileexception-constructor"></a>EsentMissingPreviousLogFileException-Konstruktor
 
-Initialisiert eine neue Instanz der esentmissingpreviouslogfileexception-Klasse.
+Initialisiert eine neue Instanz der EsentMissingPreviousLogFileException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentMissingPreviousLogFileException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentmissingpreviouslogfileexception-Klasse](./esentmissingpreviouslogfileexception-class.md)
+[EsentMissingPreviousLogFileException-Klasse](./esentmissingpreviouslogfileexception-class.md)
 
-[Esentmissingpreviouslogfileexception-Member](./esentmissingpreviouslogfileexception-members.md)
+[EsentMissingPreviousLogFileException-Member](./esentmissingpreviouslogfileexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

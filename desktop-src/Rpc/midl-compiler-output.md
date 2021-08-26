@@ -1,36 +1,36 @@
 ---
-title: Mittel l-Compilerausgabe
-description: Wenn die IDL-und ACF-Dateien als Eingabe erstellt werden, generiert der-compilercompiler bis zu fünf Quelldateien der C-Sprache.
+title: MIDL-Compilerausgabe
+description: Mit den IDL- und ACF-Dateien als Eingabe generiert der MIDL-Compiler bis zu fünf C-Sprachquelldateien.
 ms.assetid: 151bd643-1da0-4b33-b8a3-3d7037e63319
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebb45bb369ea9d5faa695bf2658f3bafe2b3cb3d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0aea74b77d8e709d8a71d3c84f457d301bb38d8c35bdccaa77e9e3033d08ed70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120019690"
 ---
-# <a name="midl-compiler-output"></a>Mittel l-Compilerausgabe
+# <a name="midl-compiler-output"></a>MIDL-Compilerausgabe
 
-Wenn die IDL-und ACF-Dateien als Eingabe erstellt werden, generiert der-compilercompiler bis zu fünf Quelldateien der C-Sprache. Standardmäßig verwendet der mittlerer l-Compiler den Basis Dateinamen der IDL-Datei als Teil der generierten Stubdateien. Wenn im Basis Dateinamen mehr als sechs Zeichen vorhanden sind, akzeptieren einige Dateisysteme möglicherweise nicht den vollständigen Stub-Namen. In der folgenden Tabelle sind die für Dateinamen verwendeten Konventionen aufgeführt.
+Mit den IDL- und ACF-Dateien als Eingabe generiert der MIDL-Compiler bis zu fünf C-Sprachquelldateien. Standardmäßig verwendet der MIDL-Compiler den Basisdateinamen der IDL-Datei als Teil der generierten Stubdateien. Wenn mehr als sechs Zeichen im Basisdateinamen vorhanden sind, akzeptieren einige Dateisysteme möglicherweise nicht den vollständigen Stubnamen. Die folgende Tabelle zeigt Konventionen, die für Dateinamen verwendet werden.
 
 
 
-| File        | Standardabschnitt des Basis Dateinamens | Beispiel      |
+| Datei        | Standardteil des Basisdateinamens | Beispiel      |
 |-------------|-----------------------------------|--------------|
-| IDL-Datei    | ---                               | ABCDEFGH. idl |
-| Header      | .h                                | Abcdef. h     |
-| Clientstub | \_c. c                             | Abcdef \_ c. c  |
-| Server-Stub | \_s. c                             | Abcdef \_ s. c  |
+| IDL-Datei    | ---                               | Abcdefgh.idl |
+| Header      | .h                                | Abcdef.h     |
+| Clientstub | \_Cc                             | Abcdef \_ c.c  |
+| Serverstub | \_Nk                             | Abcdef \_ s.c  |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

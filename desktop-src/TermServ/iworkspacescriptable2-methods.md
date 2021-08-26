@@ -5,38 +5,38 @@ ms.assetid: A1E973E6-DB7E-4BF8-8C10-C920BD3947AE
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d15aeb9b5339242cd9a34700ecb9779b7caf695
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5a2f345200831d875b1c0f5a287171a1e3c73b8e09bd73c65a7eb13ce5f9e14f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989430"
 ---
 # <a name="iworkspacescriptable2-methods"></a>IWorkspaceScriptable2-Methoden
 
-Die [**IWorkspaceScriptable2**](/windows/desktop/api/workspaceruntime/nn-workspaceruntime-iworkspacescriptable2) -Schnittstelle unterstützt die folgenden Methoden.
+Die [**IWorkspaceScriptable2-Schnittstelle**](/windows/desktop/api/workspaceruntime/nn-workspaceruntime-iworkspacescriptable2) unterstützt die folgenden Methoden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Startworkspaceex-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspacescriptable2-startworkspaceex)
+[**StartWorkspaceEx-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspacescriptable2-startworkspaceex)
 </dt> <dd>
 
-Ordnet Benutzer Anmelde Informationen und Zertifikate einer Verbindungs-ID zu. enthält auch zusätzliche Sicherheits-und Benutzeroberflächen Elemente.
+Ordnet Benutzeranmeldeinformationen und Zertifikate einer Verbindungs-ID zu. enthält auch zusätzliche Sicherheits- und Benutzeroberflächenelemente.
 
 </dd> <dt>
 
-[**Resourceverworfen-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspacescriptable2-resourcedismissed)
+[**ResourceDismissed-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspacescriptable2-resourcedismissed)
 </dt> <dd>
 
 Benachrichtigt den Benutzer, dass eine Ressource deaktiviert oder anderweitig verworfen wurde.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

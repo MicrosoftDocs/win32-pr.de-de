@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um codierte Daten zu decodieren. Dies wird in der Regel zum Laden von Ressourcen aus Dateisystemen wie ZIP-Dateien verwendet. Beim Laden von einer nicht komprimierten Ressource muss für die Debug-Phase keine Arbeit ausgeführt werden.
+description: Wird zum Dekomprimieren codierter Daten verwendet. In der Regel wird dies verwendet, um Ressourcen aus Dateisystemen wie ZIP-Dateien zu laden. Beim Laden aus einer nicht komprimierten Ressource muss die Dekomprimierungsphase keine Arbeit mehr tun.
 ms.assetid: 7f7e3ffd-8dac-403f-813b-d6d21d146fa7
-title: ID3DX10DataLoader::D eComPress-Methode (d3dx10. h)
+title: ID3DX10DataLoader::D ecompress-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: e6f711722852cba4b671cc84416055d279fd7cc6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c9e532bae8cb121fc93f3fdf2a5a1ee23e597c66599277b73b3b36b15ebbb963
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106373518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989120"
 ---
-# <a name="id3dx10dataloaderdecompress-method"></a>ID3DX10DataLoader::D eComPress-Methode
+# <a name="id3dx10dataloaderdecompress-method"></a>ID3DX10DataLoader::D ecompress-Methode
 
-Wird verwendet, um codierte Daten zu decodieren. Dies wird in der Regel zum Laden von Ressourcen aus Dateisystemen wie ZIP-Dateien verwendet. Beim Laden von einer nicht komprimierten Ressource muss für die Debug-Phase keine Arbeit ausgeführt werden.
+Wird zum Dekomprimieren codierter Daten verwendet. In der Regel wird dies verwendet, um Ressourcen aus Dateisystemen wie ZIP-Dateien zu laden. Beim Laden aus einer nicht komprimierten Ressource muss die Dekomprimierungsphase keine Arbeit mehr tun.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT Decompress(
 
 <dl> <dt>
 
-*ppData* \[ vorgenommen\]
+*ppData* \[ out\]
 </dt> <dd>
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Zeiger auf die zu entkomprimierenden Rohdaten.
+Zeiger auf die zu dekomprimierenden Rohdaten.
 
 </dd> <dt>
 
-*pcbytes* \[ in\]
+*pcBytes* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)\***
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)\***
 
-Die Größe der Daten, auf die von ppData verwiesen wird.
+Die Größe der Daten, auf die ppData zeigt.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Die Größe der Daten, auf die von ppData verwiesen wird.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**ID3DX10DataLoader-Schnittstelle**](id3dx10dataloader.md) kann geerbt und deren Member neu definiert werden. DECOMPRESS konnte neu definiert werden, um Ihre eigenen benutzerdefinierten Dateiformate zu unterstützen.
+[**Die ID3DX10DataLoader-Schnittstelle**](id3dx10dataloader.md) kann geerbt und ihre Member neu definiert werden. Dekomprimieren kann neu definiert werden, um Ihre eigenen benutzerdefinierten Dateiformate zu unterstützen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Die [**ID3DX10DataLoader-Schnittstelle**](id3dx10dataloader.md) kann geerbt und 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

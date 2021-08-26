@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvfileunknownexception-Konstruktor'
-title: Esentslvfileunknownexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVFileUnknownException-Konstruktor'
+title: EsentSLVFileUnknownException-Konstruktor
 TOCTitle: 'EsentSLVFileUnknownException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVFileUnknownException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvfileunknownexception.esentslvfileunknownexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 42367e27244fc57d9c5a5ac3d0d8c1ce4bbc49bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f8f646e45f4b41212e4ca2aff74765e506cdec8f0b323325fb2b7925fb2e9f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120018140"
 ---
-# <a name="esentslvfileunknownexception-constructor"></a>Esentslvfileunknownexception-Konstruktor
+# <a name="esentslvfileunknownexception-constructor"></a>EsentSLVFileUnknownException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public EsentSLVFileUnknownException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvfileunknownexception-Klasse](./esentslvfileunknownexception-class.md)
+[EsentSLVFileUnknownException-Klasse](./esentslvfileunknownexception-class.md)
 
-[Esentslvfileunknownexception-Elemente](./esentslvfileunknownexception-members.md)
+[EsentSLVFileUnknownException-Member](./esentslvfileunknownexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

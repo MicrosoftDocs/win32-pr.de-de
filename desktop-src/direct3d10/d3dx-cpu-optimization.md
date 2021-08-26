@@ -1,7 +1,7 @@
 ---
-description: Gibt an, dass der Anweisungs Satz D3DX derzeit für optimiert ist.
+description: Gibt den Anweisungssatz an, für den D3DX derzeit optimiert ist.
 ms.assetid: 5fc97028-4a9d-4bc7-9c90-236a70e570e1
-title: D3DX_CPU_OPTIMIZATION-Enumeration (D3DX10Math. h)
+title: D3DX_CPU_OPTIMIZATION-Enumeration (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 208422604e79b3ef7a87b548e7d71eceedd9fb78
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7bb36b3aeb448933416148b087cb7e82619beef04186637c0bb3fa944a143da5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989540"
 ---
-# <a name="d3dx_cpu_optimization-enumeration"></a>D3DX- \_ CPU- \_ Optimierungs Enumeration
+# <a name="d3dx_cpu_optimization-enumeration"></a>D3DX \_ CPU \_ OPTIMIZATION-Enumeration
 
-Gibt an, dass der Anweisungs Satz D3DX derzeit für optimiert ist.
+Gibt den Anweisungssatz an, für den D3DX derzeit optimiert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ typedef enum _D3DX_CPU_OPTIMIZATION {
 
 <dl> <dt>
 
-<span id="D3DX_NOT_OPTIMIZED"></span><span id="d3dx_not_optimized"></span>**D3DX \_ nicht \_ optimiert**
+<span id="D3DX_NOT_OPTIMIZED"></span><span id="d3dx_not_optimized"></span>**D3DX \_ NICHT \_ OPTIMIERT**
 </dt> <dd>
 
-Nicht optimieren.
+Optimieren Sie nicht.
 
 </dd> <dt>
 
-<span id="D3DX_3DNOW_OPTIMIZED"></span><span id="d3dx_3dnow_optimized"></span>**D3DX \_ 3DNow \_ optimiert**
+<span id="D3DX_3DNOW_OPTIMIZED"></span><span id="d3dx_3dnow_optimized"></span>**D3DX \_ 3DNOW \_ OPTIMIERT**
 </dt> <dd>
 
-Optimieren Sie für ein 3dnow! der Anweisungs Satz.
+Optimieren für 3DNow! -Anweisungssatz.
 
 </dd> <dt>
 
-<span id="D3DX_SSE2_OPTIMIZED"></span><span id="d3dx_sse2_optimized"></span>**D3DX \_ SSE2 \_ optimiert**
+<span id="D3DX_SSE2_OPTIMIZED"></span><span id="d3dx_sse2_optimized"></span>**D3DX \_ SSE2 \_ OPTIMIERT**
 </dt> <dd>
 
-Für einen SSE2-Anweisungs Satz optimieren.
+Optimieren sie für einen SSE2-Anweisungssatz.
 
 </dd> <dt>
 
-<span id="D3DX_SSE_OPTIMIZED"></span><span id="d3dx_sse_optimized"></span>**D3DX \_ SSE \_ optimiert**
+<span id="D3DX_SSE_OPTIMIZED"></span><span id="d3dx_sse_optimized"></span>**D3DX \_ SSE \_ OPTIMIZED**
 </dt> <dd>
 
-Optimieren für einen SSE-Anweisungs Satz.
+Optimieren für einen SSE-Anweisungssatz.
 
 </dd> </dl>
 
@@ -76,11 +76,11 @@ Optimieren für einen SSE-Anweisungs Satz.
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

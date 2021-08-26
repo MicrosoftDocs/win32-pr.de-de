@@ -1,7 +1,7 @@
 ---
-description: Erstellen Sie ein Lade Modul für asynchrone Speicher.
+description: Erstellen Sie ein asynchrones Speicherladeprogramm.
 ms.assetid: 92177390-cb09-445e-9828-806a23ef91b5
-title: D3DX10CreateAsyncMemoryLoader-Funktion (D3DX10Async. h)
+title: D3DX10CreateAsyncMemoryLoader-Funktion (D3DX10Async.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Async.h
-ms.openlocfilehash: 0219026eabfcff6dfcec0df4721716302f09f5e7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 897977147157c754c0f0da1c68e5e64b3fa64ea792c573c1f901aca6aec433fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989230"
 ---
 # <a name="d3dx10createasyncmemoryloader-function"></a>D3DX10CreateAsyncMemoryLoader-Funktion
 
-Erstellen Sie ein Lade Modul für asynchrone Speicher.
+Erstellen Sie ein asynchrones Speicherladeprogramm.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT D3DX10CreateAsyncMemoryLoader(
 
 <dl> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
 Zeiger auf die Daten.
 
 </dd> <dt>
 
-*cbData* \[ in\]
+*cbData* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)**
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)**
 
 Größe der Daten.
 
 </dd> <dt>
 
-*ppdataloader* \[ vorgenommen\]
+*ppDataLoader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10DataLoader**](id3dx10dataloader.md)\*\***
 
-Die Adresse eines Zeigers auf den asynchronen Datenprozessor (siehe [**ID3DX10DataProcessor Interface**](id3dx10dataprocessor.md)).
+Die Adresse eines Zeigers auf den asynchronen Datenprozessor (siehe [**ID3DX10DataProcessor-Schnittstelle).**](id3dx10dataprocessor.md)
 
 </dd> </dl>
 
@@ -72,7 +72,7 @@ Die Adresse eines Zeigers auf den asynchronen Datenprozessor (siehe [**ID3DX10Da
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Async. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Async.h</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

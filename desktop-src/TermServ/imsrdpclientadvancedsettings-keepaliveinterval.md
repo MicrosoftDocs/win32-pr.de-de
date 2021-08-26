@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings keepAliveInterval (Eigenschaft)
+title: IMsRdpClientAdvancedSettings keepAliveInterval-Eigenschaft
 description: Gibt ein Intervall in Millisekunden an, in dem der Client Keep-Alive-Nachrichten an den Server sendet.
 ms.assetid: 0d1b7d8f-f81c-4591-bb08-adab307e87fe
 ms.tgt_platform: multiple
 keywords:
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste
-- keepAliveInterval-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, keepAliveInterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
-- keepaliveingeterval-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, keepaliveingeterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
+- keepAliveInterval-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , keepAliveInterval-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,18 +54,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d15412b5b1803aadcffa08a8617742e0c90b1a0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1dad34455d1203fb353672b8ef3797866b8ad2aa8b5686f71f769eccc5f3c9ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033300"
 ---
-# <a name="imsrdpclientadvancedsettingskeepaliveinterval-property"></a>Imsrdpclientadvancedsettings:: keepAliveInterval-Eigenschaft
+# <a name="imsrdpclientadvancedsettingskeepaliveinterval-property"></a>IMsRdpClientAdvancedSettings::keepAliveInterval-Eigenschaft
 
 Gibt ein Intervall in Millisekunden an, in dem der Client Keep-Alive-Nachrichten an den Server sendet.
 
-Eine Gruppenrichtlinien Einstellung, die angibt, ob persistente Clientverbindungen mit dem Server zulässig sind, können diese Eigenschafts Einstellung überschreiben.
+Eine Gruppenrichtlinieneinstellung, die angibt, ob permanente Clientverbindungen mit dem Server zulässig sind, kann diese Eigenschafteneinstellung überschreiben.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -86,13 +86,13 @@ HRESULT get_keepAliveInterval(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das neue Intervall in Millisekunden. Der Standardwert der-Eigenschaft ist 0 (null), wodurch Keep-Alive-Nachrichten deaktiviert werden. Der minimale gültige Wert dieser Eigenschaft ist 10.000, der 10 Sekunden darstellt.
+Das neue Intervall in Millisekunden. Der Standardwert der -Eigenschaft ist 0 (null), wodurch Keep-Alive-Nachrichten deaktiviert werden. Der mindestens gültige Wert dieser Eigenschaft ist 10.000, was 10 Sekunden darstellt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,7 +106,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

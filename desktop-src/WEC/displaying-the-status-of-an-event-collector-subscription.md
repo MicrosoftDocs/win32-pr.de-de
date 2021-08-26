@@ -1,45 +1,45 @@
 ---
-title: Anzeigen des Status eines Ereignis Sammler Abonnements
-description: Sie können den Status eines Ereignis Sammler Abonnements anzeigen. Der Status umfasst die Verfügbarkeit des Abonnements, den letzten Fehler, der für das Abonnement aufgetreten ist, den Zeitpunkt des letzten Fehlers und das nächste Mal, wenn das Abonnement wiederholt wird.
+title: Anzeigen des Status eines Ereignissammlerabonnements
+description: Sie können den Status eines Ereignissammlerabonnements anzeigen. Der Status umfasst die Verfügbarkeit des Abonnements, den letzten Fehler, der für das Abonnement aufgetreten ist, den Zeitpunkt des letzten Fehlers und das nächste Mal, wenn das Abonnement wiederholt wird.
 ms.assetid: e1c3c3ed-2f7c-433d-a51d-66c2abd2e961
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d7c806d72d4945e2e45384b91bc94fbef3ed08b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2a6efd0268ef571d8f9ad984bb70a9e69e489e6349f8af0ee9e47e9aa18a1cc5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032650"
 ---
-# <a name="displaying-the-status-of-an-event-collector-subscription"></a>Anzeigen des Status eines Ereignis Sammler Abonnements
+# <a name="displaying-the-status-of-an-event-collector-subscription"></a>Anzeigen des Status eines Ereignissammlerabonnements
 
-Sie können den Status eines Ereignis Sammler Abonnements anzeigen. Der Status umfasst die Verfügbarkeit des Abonnements, den letzten Fehler, der für das Abonnement aufgetreten ist, den Zeitpunkt des letzten Fehlers und das nächste Mal, wenn das Abonnement wiederholt wird.
+Sie können den Status eines Ereignissammlerabonnements anzeigen. Der Status umfasst die Verfügbarkeit des Abonnements, den letzten Fehler, der für das Abonnement aufgetreten ist, den Zeitpunkt des letzten Fehlers und das nächste Mal, wenn das Abonnement wiederholt wird.
 
 > [!Note]
 >
 > Sie können dieses Beispiel verwenden, um den Status eines Abonnements anzuzeigen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> **wecutil GR** - *Abonnement Name*
+> **wecutil gr** *SubscriptionName*
 
- 
+ 
 
-Sie benötigen den Namen eines Abonnements, um seinen Status anzuzeigen. Um die Namen der aktuellen Abonnements auf einem lokalen Computer aufzulisten, können Sie das Beispiel C++ in [Auflisten von Event Collector-Abonnements](listing-event-collector-subscriptions.md)verwenden, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+Sie benötigen den Namen eines Abonnements, um seinen Status anzuzeigen. Um die Namen der aktuellen Abonnements auf einem lokalen Computer aufzulisten, können Sie das C++-Beispiel in in [Listing Event Collector Subscriptions (Auflisten von Ereignissammlerabonnements)](listing-event-collector-subscriptions.md)verwenden oder den folgenden Befehl an der Eingabeaufforderung eingeben:
 
-**wecutil**
+**wecutil es**
 
-Im folgenden Beispiel wird die Vorgehensweise zum Anzeigen des Status eines Ereignis Sammler Abonnements befolgt:
+Im folgenden Beispiel wird ein Verfahren zum Anzeigen des Status eines Ereignissammlerabonnements verwendet:
 
-**So zeigen Sie den Status eines Ereignis Sammler Abonnements an**
+**So zeigen Sie den Status eines Ereignissammlerabonnements an**
 
-1.  Öffnen Sie das Abonnement, indem Sie den Abonnement Namen und die Zugriffsrechte als Parameter für die [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) -Funktion angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows-Ereignis Sammler Konstanten**](windows-event-collector-constants.md).
-2.  Rufen Sie den Status des Abonnements ab, indem Sie die [**ecgetabonneptionruntimestatus**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) -Funktion aufrufen (beim Aufrufen der-Funktion keine Ereignis Quelle angeben).
-3.  Rufen Sie das Ereignis Quellen Array des Abonnements ab, indem Sie die [**ecgetabonptionruntimestatus**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) -Funktion aufrufen und das ecabonptionruntimestatuseventsources-Flag übergeben.
-4.  Rufen Sie die Statusinformationen für jede Ereignis Quelle ab, indem Sie die [**ecgetabonneptionruntimestatus**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) -Funktion aufrufen und den Ereignis Quellen Namen übergeben. Weitere Informationen zu den Statusinformationen, die abgerufen werden können, finden Sie in der Enumeration des [**EC- \_ Abonnements \_ Lauf Zeit \_ Status info- \_ \_ ID**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_runtime_status_info_id) .
-5.  Drucken Sie die Statusinformationen für das Abonnement.
-6.  Schließen Sie das Abonnement, indem Sie die [**ecclose**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) -Funktion aufrufen.
+1.  Öffnen Sie das Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) bereitstellen. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten.**](windows-event-collector-constants.md)
+2.  Rufen Sie den Status des Abonnements ab, indem Sie die [**EcGetSubscriptionRunTimeStatus-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) aufrufen (geben Sie beim Aufrufen der Funktion keine Ereignisquelle an).
+3.  Rufen Sie das Ereignisquellenarray des Abonnements ab, indem Sie die [**EcGetSubscriptionRunTimeStatus-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) aufrufen und das EcSubscriptionRunTimeStatusEventSources-Flag übergeben.
+4.  Rufen Sie die Statusinformationen für jede Ereignisquelle ab, indem Sie die [**EcGetSubscriptionRunTimeStatus-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecgetsubscriptionruntimestatus) aufrufen und den Namen der Ereignisquelle übergeben. Weitere Informationen zu den Statusinformationen, die abgerufen werden können, finden Sie in der [**EC SUBSCRIPTION RUNTIME STATUS INFO \_ \_ \_ \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_runtime_status_info_id)
+5.  Drucken Sie die Statusinformationen für das Abonnement aus.
+6.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie der Status eines Ereignis Sammler Abonnements angezeigt wird.
+Das folgende C++-Codebeispiel zeigt, wie der Status eines Event Collector-Abonnements angezeigt wird.
 
 
 ```C++
@@ -429,15 +429,15 @@ std::wstring ConvertEcDateTime( ULONGLONG code )
 
 <dl> <dt>
 
-[Auflisten von Event Collector-Abonnements](listing-event-collector-subscriptions.md)
+[Auflisten von Ereignissammlerabonnements](listing-event-collector-subscriptions.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

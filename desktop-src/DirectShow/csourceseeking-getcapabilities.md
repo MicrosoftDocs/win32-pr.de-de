@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f1f354381c4c99cf880c75cbbc4b13355e386030
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 96e3a637673a91ebc98e48777b8f42bdcbf02654a0c264037a66b4121f5b80ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054340"
 ---
 # <a name="csourceseekinggetcapabilities-method"></a>CSourceSeeking.GetCapabilities-Methode
 
@@ -58,28 +58,28 @@ Gibt einen der in der folgenden Tabelle aufgeführten **HRESULT-Werte** zurück.
 | Rückgabecode                                                                               | Beschreibung                       |
 |-------------------------------------------------------------------------------------------|-----------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                |
-| <dl> <dt>**\_E-ZEIGER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerwert**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Suchfunktionen werden von der [**CSourceSeeking::m \_ dwSeekingCaps-Membervariablen**](csourceseeking-m-dwseekingcaps.md) angegeben.
+Die Suchfunktionen werden durch die [**Membervariable CSourceSeeking::m \_ dwSeekingCaps**](csourceseeking-m-dwseekingcaps.md) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

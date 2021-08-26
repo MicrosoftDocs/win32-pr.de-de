@@ -1,6 +1,6 @@
 ---
 title: MDM_EnterpriseAPN_Settings01-Klasse
-description: Die MDM \_ enterpriseapn \_ Settings01-Klasse wird vom Unternehmen verwendet, um globale APN-Einstellungen zu ändern.
+description: Die MDM \_ EnterpriseAPN Settings01-Klasse wird vom Unternehmen verwendet, \_ um globale APN-Einstellungen zu ändern.
 ms.assetid: 3f2d3d38-c389-4945-b519-5f2d7dedb86c
 keywords:
 - MDM_EnterpriseAPN_Settings01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74704451790690df8f9cc11fec8bc1ed80d3c2dd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6150e86f798e9408117daac5966f1efdecae4063ae3c4665b3f7577c1e2f31e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053530"
 ---
-# <a name="mdm_enterpriseapn_settings01-class"></a>MDM \_ enterpriseapn \_ Settings01-Klasse
+# <a name="mdm_enterpriseapn_settings01-class"></a>MDM \_ EnterpriseAPN \_ Settings01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ enterpriseapn \_ Settings01** -Klasse wird vom Unternehmen verwendet, um globale APN-Einstellungen zu ändern.
+Die **MDM \_ EnterpriseAPN \_ Settings01-Klasse** wird vom Unternehmen verwendet, um globale APN-Einstellungen zu ändern.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,20 +47,20 @@ class MDM_EnterpriseAPN_Settings01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ enterpriseapn \_ Settings01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ EnterpriseAPN \_ Settings01-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ enterpriseapn \_ Settings01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ EnterpriseAPN \_ Settings01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-["Zuweisung"](/windows/client-management/mdm/enterpriseapn-csp#enterpriseapn-settings-allowusercontrol)
+[AllowUserControl](/windows/client-management/mdm/enterpriseapn-csp#enterpriseapn-settings-allowusercontrol)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -68,10 +68,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Hideview](/windows/client-management/mdm/enterpriseapn-csp#enterpriseapn-settings-hideview)
+[HideView](/windows/client-management/mdm/enterpriseapn-csp#enterpriseapn-settings-hideview)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -82,7 +82,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -95,10 +95,10 @@ Knoten, der globale APN-Einstellungen enthält.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -107,7 +107,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/EnterpriseAPN/Settings".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/EnterpriseAPN/Einstellungen"
 
 </dd> </dl>
 
@@ -117,10 +117,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

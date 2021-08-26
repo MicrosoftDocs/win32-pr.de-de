@@ -1,6 +1,6 @@
 ---
 title: cosh
-description: Gibt den hyperbolischen Kosinus des angegebenen-Werts zurück.
+description: Gibt den hyperbolischen Kosinus des angegebenen Werts zurück.
 ms.assetid: ed68c461-de91-4ce4-a424-8ab28ee43f23
 keywords:
 - cosh HLSL
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3bd6cad2b79e849d8f20bbaf5baa6cfc7db0b702
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6344d57112979f901df0506924618b982452bce2580596f5e78d8ee65d148c4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104993583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068310"
 ---
 # <a name="cosh"></a>cosh
 
-Gibt den hyperbolischen Kosinus des angegebenen-Werts zurück.
+Gibt den hyperbolischen Kosinus des angegebenen Werts zurück.
 
 
 
-| *ret* cosh (*x*) |
+| *ret* cosh(*x*) |
 |-----------------|
 
 
@@ -39,7 +39,7 @@ Gibt den hyperbolischen Kosinus des angegebenen-Werts zurück.
 
 | Element                                                   | BESCHREIBUNG                                        |
 |--------------------------------------------------------|----------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert im Bogenmaße.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert im Bogenmaß.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Gibt den hyperbolischen Kosinus des angegebenen-Werts zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der hyperbolische Kosinus des *x* -Parameters.
+Der hyperbolische Kosinus des *x-Parameters.*
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -55,33 +55,33 @@ Der hyperbolische Kosinus des *x* -Parameters.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja       |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1  |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1  |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

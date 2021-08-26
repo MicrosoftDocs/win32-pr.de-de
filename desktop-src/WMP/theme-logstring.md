@@ -1,9 +1,9 @@
 ---
-title: Theme. LogString
-description: Die logstring-Methode protokolliert eine benutzerdefinierte Zeichenfolge in der Fehler Datei, wenn die Protokollierung aktiviert ist.
+title: THEME.logString
+description: Die logString-Methode protokolliert eine benutzerdefinierte Zeichenfolge in der Fehlerdatei, wenn die Protokollierung aktiviert ist.
 ms.assetid: ce187ac9-170f-41b0-8a86-18fc6a1b22b5
 keywords:
-- Design. LogString-Windows-Media Player
+- THEME.logString Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 273cd08d41d0ce3302f64719d67155cff963e6a1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bec56c84f857f715c41a8000eccd195db0b6123fb636a52956adb7c3e66bcfc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001780"
 ---
-# <a name="themelogstring"></a>Theme. LogString
+# <a name="themelogstring"></a>THEME.logString
 
-Die **logstring** -Methode protokolliert eine benutzerdefinierte Zeichenfolge in der Fehler Datei, wenn die Protokollierung aktiviert ist.
+Die **logString-Methode** protokolliert eine benutzerdefinierte Zeichenfolge in der Fehlerdatei, wenn die Protokollierung aktiviert ist.
 
 ``` syntax
         theme.logString(message)
@@ -35,7 +35,7 @@ Die **logstring** -Methode protokolliert eine benutzerdefinierte Zeichenfolge in
 <span id="message"></span><span id="MESSAGE"></span>*Nachricht*
 </dt> <dd>
 
-Eine **Zeichenfolge** , die die zu protokollieren Meldung angibt.
+Eine **Zeichenfolge,** die die zu protokollierende Meldung angibt.
 
 </dd> </dl>
 
@@ -49,15 +49,15 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> </dl>
 
  

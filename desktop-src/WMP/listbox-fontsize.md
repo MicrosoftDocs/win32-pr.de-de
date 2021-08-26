@@ -1,9 +1,9 @@
 ---
 title: LISTBOX.fontSize
-description: Das fontSize-Attribut gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
+description: Das attribut fontSize gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
 ms.assetid: e7756249-5295-4564-8ba6-dd28d5104024
 keywords:
-- LISTBOX.fontSize-Windows Media Player
+- LISTBOX.fontSize Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "120003410"
 ---
 # <a name="listboxfontsize"></a>LISTBOX.fontSize
 
-Das **fontSize-Attribut** gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
+Das **attribut fontSize** gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
 
 ``` syntax
         elementID.fontSize
@@ -29,7 +29,7 @@ Das **fontSize-Attribut** gibt den Schriftgrad für das Listenfeld-Steuerelement
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Schriftgrad in Punkten an gibt.  Der Standardwert ist 10.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Schriftgrad in Punkten angibt.  Der Standardwert ist 10.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Schriftgrad in 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

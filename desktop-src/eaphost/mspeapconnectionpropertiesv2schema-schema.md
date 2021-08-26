@@ -1,6 +1,6 @@
 ---
 title: mspeapconnectionpropertiesv2-Schema
-description: Definiert die Konfigurationsdaten für die Authentifizierung mithilfe von "Protected Extensible Authentication Protocol (Peer)" in Windows 7 und höheren Versionen von Windows.
+description: Definiert Authentifizierungskonfigurationsdaten mithilfe von PEAP (Protected Extensible Authentication Protocol) in Windows 7 und höher von Windows.
 ms.assetid: 0ccd42b0-6875-46e5-844e-db82073b4860
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,33 +9,33 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bc0b179874ff30074e1412a7bd6ddc898eca0c8b
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: d4e32b2a9ae464fdedae8f0c3d4dd39348f27d8264b66f4c822daca47dc9b2f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103857851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067210"
 ---
 # <a name="mspeapconnectionpropertiesv2-schema"></a>mspeapconnectionpropertiesv2-Schema
 
-Das mspeapconnectionpropertiesv2-Schema definiert die Authentifizierungs Konfigurationsdaten mithilfe von PAP (Protected Extensible Authentication Protocol) in Windows 7 und höheren Versionen von Windows.
+Das mspeapconnectionpropertiesv2-Schema definiert Authentifizierungskonfigurationsdaten mithilfe von PEAP (Protected Extensible Authentication Protocol) in Windows 7 und höher von Windows.
 
--   [mspeapconnectionpropertiesv2-Schema Elemente](mspeapconnectionpropertiesv2schema-elements.md)
--   [komplexe mspeapconnectionpropertiesv2-Schema Typen](mspeapconnectionpropertiesv2schema-complex-types.md)
+-   [mspeapconnectionpropertiesv2-Schemaelemente](mspeapconnectionpropertiesv2schema-elements.md)
+-   [Komplexe mspeapconnectionpropertiesv2-Schematypen](mspeapconnectionpropertiesv2schema-complex-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapconnectionpropertiesv1-Schema](mspeapconnectionpropertiesv1schema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

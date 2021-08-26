@@ -1,5 +1,5 @@
 ---
-description: Definiert eine Verbindung, die derzeit aktiviert und konfiguriert ist, um die Kommunikation zwischen zwei CIM \_ serviceaccesspoint-Objekten bereitzustellen.
+description: Definiert eine Verbindung, die derzeit aktiviert und für die Kommunikation zwischen zwei CIM \_ ServiceAccessPoint-Objekten konfiguriert ist.
 ms.assetid: 03f8e43f-a77b-46e2-bb7d-c29758c65aee
 title: CIM_ActiveConnection-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 644e8aaae1368e4164ceca7f7db29e343116c93c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a2961779744e90d0e4281e53c3d78c92081993027deb6c435846abbffb41b110
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041760"
 ---
 # <a name="cim_activeconnection-class"></a>CIM \_ ActiveConnection-Klasse
 
-Definiert eine Verbindung, die derzeit aktiviert und konfiguriert ist, um die Kommunikation zwischen zwei **CIM \_ serviceaccesspoint** -Objekten bereitzustellen. **CIM \_ ActiveConnection** wird verwendet, wenn die Verbindung nicht als **CIM \_ managedelta** -Objekt behandelt wird. Dienst Zugriffspunkte, die über eine aktive Verbindung verbunden sind, befinden sich in der Regel auf derselben Netzwerk-oder Anwendungsebene.
+Definiert eine Verbindung, die derzeit aktiviert und für die Kommunikation zwischen zwei **CIM \_ ServiceAccessPoint-Objekten** konfiguriert ist. **CIM \_ ActiveConnection** wird verwendet, wenn die Verbindung nicht als **CIM \_ ManagedElement-Objekt** behandelt wird. Dienstzugriffspunkte, die über eine aktive Verbindung verbunden sind, befinden sich in der Regel auf derselben Netzwerk- oder Anwendungsschicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,96 +45,96 @@ class CIM_ActiveConnection : CIM_SAPSAPDependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ActiveConnection** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ActiveConnection-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ ActiveConnection** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ActiveConnection-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Der Dienst Zugriffspunkt, der über die aktive Verbindung mit dem anderen Dienst Zugriffspunkt verbunden ist. **CIM \_ Serviceaccesspoint** -Objekt. Bei einer unidirektionalen Verbindung handelt es sich bei diesem Zugriffspunkt um den Zugriffspunkt, der Daten überträgt.
+Der Dienstzugriffspunkt, der über die aktive Verbindung mit dem anderen Dienstzugriffspunkt verbunden ist. **CIM \_ ServiceAccessPoint-Objekt.** Bei einer unidirektionalen Verbindung ist dieser Zugriffspunkt der, der Daten überträgt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ serviceaccesspoint**
+Datentyp: **CIM \_ ServiceAccessPoint**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Der Dienst Zugriffspunkt, der für die Kommunikation oder die aktive Kommunikation mit dem Dienst Zugriffspunkt konfiguriert ist, der in der **Vorgänger** Eigenschaft angegeben ist. Bei einer unidirektionalen Verbindung ist dieser Zugriffspunkt derjenige, der Daten empfängt.
+Der Dienstzugriffspunkt, der für die Kommunikation konfiguriert ist oder aktiv mit dem Dienstzugriffspunkt kommuniziert, der in der **Vorgängereigenschaft** angegeben ist. Bei einer unidirektionalen Verbindung ist dieser Zugriffspunkt der, der Daten empfängt.
 
 </dd> <dt>
 
-**Isunidirektional**
+**IsUnidirectional**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True, wenn die Verbindung unidirektional ist. false, wenn die Verbindung bidirektional ist. Wenn die Verbindung unidirektional ist, gibt die **Vorgänger** Eigenschaft den Zugriffspunkt an, der Daten überträgt. Bei einer bidirektionalen Verbindung kann der **Vorgänger** entweder einen Zugriffspunkt angeben, der der Verbindung zugewiesen ist.
+TRUE, wenn die Verbindung unidirektional ist; FALSE, wenn die Verbindung bidirektional ist. Wenn die Verbindung unidirektional ist, gibt die **Eigenschaft Vorgänger** den Zugriffspunkt an, der Daten überträgt. In einer bidirektionalen Verbindung kann **Antecedent** einen der Verbindung zugewiesenen Zugriffspunkt angeben.
 
 </dd> <dt>
 
-**Othertrafficdescription**
+**OtherTrafficDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ActiveConnection**".**Traffictype**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ActiveConnection**.**TrafficType**")
 </dt> </dl>
 
 > [!Note]  
-> Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, dass Sie diese Informationen in der Adressierungs-, Protokoll-und grundlegenden Funktionalität der Endpunkte angeben.
+> Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, diese Informationen in der Adressierung, dem Protokoll und den grundlegenden Funktionen der Endpunkte anzugeben.
 
  
 
-Eine Beschreibung des Datenverkehrs Typs, der angegeben wird, wenn die **traffictype** -Eigenschaft auf "1" (sonstige) festgelegt ist.
+Eine Beschreibung des Datenverkehrstyps, der angegeben wird, wenn die **TrafficType-Eigenschaft** auf "1" (Sonstige) festgelegt ist.
 
 </dd> <dt>
 
 **TrafficType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("kein Wert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ActiveConnection**".**Othertrafficdescription**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("Kein Wert"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ ActiveConnection**.**OtherTrafficDescription**")
 </dt> </dl>
 
 > [!Note]  
-> Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, dass Sie diese Informationen in der Adressierungs-, Protokoll-und grundlegenden Funktionalität der Endpunkte angeben.
+> Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, diese Informationen in der Adressierung, dem Protokoll und den grundlegenden Funktionen der Endpunkte anzugeben.
 
  
 
@@ -151,7 +151,7 @@ Der Typ des Datenverkehrs, der über diese Verbindung übertragen wird.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -194,8 +194,8 @@ Der Typ des Datenverkehrs, der über diese Verbindung übertragen wird.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -204,7 +204,7 @@ Der Typ des Datenverkehrs, der über diese Verbindung übertragen wird.
 
 <dl> <dt>
 
-[**CIM \_ sapsapabhängigkeit**](cim-sapsapdependency.md)
+[**CIM \_ SAPSAPDependency**](cim-sapsapdependency.md)
 </dt> </dl>
 
  

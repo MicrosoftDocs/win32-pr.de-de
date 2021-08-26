@@ -1,33 +1,33 @@
 ---
-title: Iwtsprodecollicenseconnetction-Methoden
-description: Die iwtsprodecollicenseconnetction-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IWTSProtocolLicenseConnection-Methoden
+description: Die IWTSProtocolLicenseConnection-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 6DE1A6DF-7B03-4568-959C-D18884D19D33
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c40ffdb3f83abb2312b4cec273d34d6f57d062a4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6144bdd6ff3e51e44e1a17dc741a2b42eb59a861ab8c9ffbe008ec934d32af53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989340"
 ---
-# <a name="iwtsprotocollicenseconnection-methods"></a>Iwtsprodecollicenseconnetction-Methoden
+# <a name="iwtsprotocollicenseconnection-methods"></a>IWTSProtocolLicenseConnection-Methoden
 
-\[Iwtsprodecollicenseconnetction ist nicht mehr für die Verwendung ab Windows Server 2012 verfügbar.\]
+\[IWTSProtocolLicenseConnection ist ab diesem Windows Server 2012.\]
 
-Die [**iwtsprodecollicenseconnetction**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocollicenseconnection) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWTSProtocolLicenseConnection-Schnittstelle**](/windows/desktop/api/wtsprotocol/nn-wtsprotocol-iwtsprotocollicenseconnection) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Protocolcomplete-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-protocolcomplete)
--   [**Requestclientlicense-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-requestclientlicense)
--   [**Requestlicensingfunktionen-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-requestlicensingcapabilities)
--   [**Sendclientlicense-Methode**](/windows/desktop/api/wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-sendclientlicense)
+-   [**ProtocolComplete-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-protocolcomplete)
+-   [**RequestClientLicense-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-requestclientlicense)
+-   [**RequestLicensingCapabilities-Methode**](/windows/desktop/api/Wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-requestlicensingcapabilities)
+-   [**SendClientLicense-Methode**](/windows/desktop/api/wtsprotocol/nf-wtsprotocol-iwtsprotocollicenseconnection-sendclientlicense)
 
- 
+ 
 
- 
+ 
 
 
 
