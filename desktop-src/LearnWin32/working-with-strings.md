@@ -4,16 +4,16 @@ description: Arbeiten mit Zeichenfolgen
 ms.assetid: 876ff8bb-67c3-4dcc-aa94-7fbd915c67dc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4661c6b07a267d90e0fca05d04354c018be04527
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b1850d531a1cff713ec71a7e96399f029794545db9b695abe5b826ed63f0f080
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075200"
 ---
 # <a name="working-with-strings"></a>Arbeiten mit Zeichenfolgen
 
-Windows unterstützt nativ Unicode-Zeichenfolgen für Benutzeroberflächenelemente, Dateinamen usw. Unicode ist die bevorzugte Zeichencodierung, da alle Zeichensätze und Sprachen unterstützt werden. Windows stellt Unicode-Zeichen mit UTF-16-Codierung dar, in der jedes Zeichen als 16-Bit-Wert codiert wird. UTF-16-Zeichen werden als *Breitzeichen* bezeichnet, um sie von 8-Bit-ANSI-Zeichen zu unterscheiden. Der Visual C++ Compiler unterstützt den integrierten Datentyp **wchar \_ t** für Breitzeichen. Die Headerdatei WinNT.h definiert auch die folgende **Typedef.**
+Windows unterstützt nativ Unicode-Zeichenfolgen für Benutzeroberflächenelemente, Dateinamen usw. Unicode ist die bevorzugte Zeichencodierung, da sie alle Zeichensätze und Sprachen unterstützt. Windows stellt Unicode-Zeichen mit UTF-16-Codierung dar, bei der jedes Zeichen als 16-Bit-Wert codiert wird. UTF-16-Zeichen werden als *Breitzeichen* bezeichnet, um sie von 8-Bit-ANSI-Zeichen zu unterscheiden. Der Visual C++-Compiler unterstützt den integrierten Datentyp **wchar \_ t** für Breitzeichen. Die Headerdatei WinNT.h definiert auch die folgende **Typedef.**
 
 
 ```C++
@@ -22,7 +22,7 @@ typedef wchar_t WCHAR;
 
 
 
-Beide Versionen werden im MSDN-Beispielcode angezeigt. Um ein Breitzeichenliteral oder ein Zeichenfolgenliteral mit Breitzeichen zu deklarieren, setzen Sie **L** vor das Literal.
+Sie sehen beide Versionen im MSDN-Beispielcode. Um ein Breitzeichenliteral oder ein Breitzeichen-Zeichenfolgenliteral zu deklarieren, setzen **Sie L** vor das Literal.
 
 
 ```C++
@@ -32,14 +32,14 @@ wchar_t *str = L"hello";
 
 
 
-Im Folgenden finden Sie einige weitere zeichenfolgenbezogene Typedefs:
+Hier sind einige andere zeichenfolgenbezogene Typdefinitionen, die Sie sehen werden:
 
 
 
 | TypeDef                   | Definition       |
 |---------------------------|------------------|
 | **CHAR**                  | `char`           |
-| **PSTR** oder **LPSTR**     | `char*`          |
+| **PSTR oder** **LPSTR**     | `char*`          |
 | **PCSTR** oder **LPCSTR**   | `const char*`    |
 | **PWSTR** oder **LPWSTR**   | `wchar_t*`       |
 | **PCWSTR** oder **LPCWSTR** | `const wchar_t*` |
@@ -50,12 +50,12 @@ Im Folgenden finden Sie einige weitere zeichenfolgenbezogene Typedefs:
 
 ## <a name="unicode-and-ansi-functions"></a>Unicode- und ANSI-Funktionen
 
-Als Microsoft Die Unicode-Unterstützung für Windows eingeführt hat, wurde der Übergang vereinfacht, indem zwei parallele APIs zur Verfügung gestellt wurden: eine für ANSI-Zeichenfolgen und die andere für Unicode-Zeichenfolgen. Es gibt beispielsweise zwei Funktionen, um den Text der Titelleiste eines Fensters festzulegen:
+Als Microsoft Unicode-Unterstützung für Windows eingeführt hat, wurde der Übergang vereinfacht, indem zwei parallele Sätze von APIs zur Verfügung stellten: eine für ANSI-Zeichenfolgen und die andere für Unicode-Zeichenfolgen. Beispielsweise gibt es zwei Funktionen, um den Text der Titelleiste eines Fensters zu festlegen:
 
--   **SetWindowTextA** verwendet eine ANSI-Zeichenfolge.
--   **SetWindowTextW** verwendet eine Unicode-Zeichenfolge.
+-   **SetWindowTextA verwendet** eine ANSI-Zeichenfolge.
+-   **SetWindowTextW verwendet** eine Unicode-Zeichenfolge.
 
-Intern übersetzt die ANSI-Version die Zeichenfolge in Unicode. Die Windows-Header definieren auch ein Makro, das in die Unicode-Version aufgelöst wird, wenn das Präprozessorsymbol `UNICODE` definiert ist, oder andernfalls die ANSI-Version.
+Intern übersetzt die ANSI-Version die Zeichenfolge in Unicode. Die Windows-Header definieren auch ein Makro, das in die Unicode-Version auflöset, wenn das Präprozessorsymbol definiert ist, andernfalls die `UNICODE` ANSI-Version.
 
 
 ```C++
@@ -74,7 +74,7 @@ Neue Anwendungen sollten immer die Unicode-Versionen aufrufen. Viele Weltsprache
 
 ## <a name="tchars"></a>TCHARs
 
-Wenn Anwendungen sowohl Windows NT als auch Windows 95, Windows 98 und Windows Me unterstützen mussten, war es hilfreich, je nach Zielplattform den gleichen Code für ANSI- oder Unicode-Zeichenfolgen zu kompilieren. Zu diesem Zweck stellt Windows SDK Makros zur Verfügung, die Zeichenfolgen je nach Plattform Unicode oder ANSI zuordnen.
+Wenn Anwendungen sowohl Windows NT als auch Windows 95, Windows 98 und Windows Me unterstützen mussten, war es hilfreich, je nach Zielplattform den gleichen Code für ANSI- oder Unicode-Zeichenfolgen zu kompilieren. Zu diesem Zweck stellt das Windows SDK Makros bereit, die Zeichenfolgen je nach Plattform Unicode oder ANSI zuordnen.
 
 
 

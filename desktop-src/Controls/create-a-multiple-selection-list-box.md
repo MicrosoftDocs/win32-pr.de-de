@@ -1,45 +1,45 @@
 ---
-title: So erstellen Sie ein Multiple-Selection Listenfeld
-description: In diesem Thema wird veranschaulicht, wie Sie den Inhalt eines Verzeichnisses in einem Listenfeld Mehrfachauswahl anzeigen und darauf zugreifen können.
+title: Erstellen eines Multiple-Selection Listenfelds
+description: In diesem Thema wird veranschaulicht, wie sie den Inhalt eines Verzeichnisses in einem Listenfeld mit mehrfacher Auswahl anzeigen und darauf zugreifen.
 ms.assetid: 5192E171-8CEF-4921-9378-A7C3A52A9024
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: abd47b1d582d53a66bc77284927aef4230043e92
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 3f375ca2df82f851401baec79683a54ff28cf14e7a004d08cb0885e60fb036d1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920860"
 ---
-# <a name="how-to-create-a-multiple-selection-list-box"></a>So erstellen Sie ein Multiple-Selection Listenfeld
+# <a name="how-to-create-a-multiple-selection-list-box"></a>Erstellen eines Multiple-Selection Listenfelds
 
-In diesem Thema wird veranschaulicht, wie Sie den Inhalt eines Verzeichnisses in einem Listenfeld Mehrfachauswahl anzeigen und darauf zugreifen können. Im Listenfeld Mehrfachauswahl kann der Benutzer mehrere Elemente gleichzeitig auswählen.
+In diesem Thema wird veranschaulicht, wie sie den Inhalt eines Verzeichnisses in einem Listenfeld mit mehrfacher Auswahl anzeigen und darauf zugreifen. In einem Listenfeld mit mehrfacher Auswahl kann der Benutzer mehrere Elemente gleichzeitig auswählen.
 
-Mit dem C++-Codebeispiel in diesem Thema kann ein Benutzer eine Liste der Dateien im aktuellen Verzeichnis anzeigen, eine Gruppe von Dateien aus der Liste auswählen und diese löschen.
+Das C++-Codebeispiel in diesem Thema ermöglicht es einem Benutzer, eine Liste von Dateien im aktuellen Verzeichnis anzuzeigen, eine Gruppe von Dateien aus der Liste auszuwählen und diese zu löschen.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Die Verzeichnis Auflistungs Anwendung muss die folgenden Aufgaben im Listenfeld – Verwandte Aufgaben ausführen:
+Die Anwendung für die Verzeichnisauflistung muss die folgenden Aufgaben im Zusammenhang mit listenfeldbezogenen Aufgaben ausführen:
 
 -   Initialisieren Sie das Listenfeld.
 -   Rufen Sie die Auswahl des Benutzers aus dem Listenfeld ab.
 -   Entfernen Sie die Dateinamen aus dem Listenfeld, nachdem die ausgewählten Dateien gelöscht wurden.
 
-Im folgenden C++-Codebeispiel initialisiert die Dialogfeld Prozedur das Listenfeld Mehrfachauswahl (IDC \_ FileList) mithilfe der [**dlgdirlist**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista) -Funktion, um das Listenfeld mit den Namen aller Dateien im aktuellen Verzeichnis auszufüllen.
+Im folgenden C++-Codebeispiel initialisiert die Dialogfeldprozedur das Listenfeld mit mehrfacher Auswahl (IDC \_ FILELIST), indem die [**DlgDirList-Funktion**](/windows/desktop/api/Winuser/nf-winuser-dlgdirlista) verwendet wird, um das Listenfeld mit den Namen aller Dateien im aktuellen Verzeichnis zu füllen.
 
-Wenn der Benutzer eine Gruppe von Dateien auswählt und auf die Schaltfläche **Löschen** klickt, sendet die Dialogfeld Prozedur die [**lb- \_ getselcount**](lb-getselcount.md) -Nachricht, um die Anzahl ausgewählter Dateien abzurufen, und die [**lb \_ getselitems**](lb-getselitems.md) -Nachricht, um ein Array ausgewählter Listenfeld Elemente abzurufen. Nach dem Löschen einer Datei entfernt die Dialogfeld Prozedur das entsprechende Element aus dem Listenfeld, indem die [**lb- \_ deletestring**](lb-deletestring.md) -Nachricht gesendet wird.
+Wenn der Benutzer eine Gruppe von Dateien auswählt und die Schaltfläche **Löschen** auswählt, sendet die Dialogfeldprozedur die [**LB \_ GETSELCOUNT-Nachricht,**](lb-getselcount.md) um die Anzahl der ausgewählten Dateien abzurufen, und die [**LB \_ GETSELITEMS-Nachricht,**](lb-getselitems.md) um ein Array ausgewählter Listenfeldelemente abzurufen. Nach dem Löschen einer Datei entfernt die Dialogfeldprozedur das entsprechende Element aus dem Listenfeld, indem die [**LB \_ DELETESTRING-Nachricht**](lb-deletestring.md) gesendet wird.
 
 
 
@@ -152,7 +152,7 @@ INT_PTR CALLBACK DlgDelFilesProc(HWND hDlg, UINT message,
 
 <dl> <dt>
 
-[Listenfeld-Steuerelement Verweis](bumper-list-box-list-box-control-reference.md)
+[Referenz zum Listenfeld-Steuerelement](bumper-list-box-list-box-control-reference.md)
 </dt> <dt>
 
 [Informationen zu Listenfeldern](about-list-boxes.md)

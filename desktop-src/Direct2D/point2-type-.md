@@ -14,14 +14,14 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d925cc5676e6f0c9a8fb27a3ba2a12591ee87a5a72d5937e365fa57179e47ce1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: e79208c0e68736ae91d623622c13bbeb624ab760
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118160376"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887195"
 ---
-# <a name="point2type-function"></a><Type>Point2-Funktion
+# <a name="point2lttypegt-function"></a>&lt;Point2-Typfunktion &gt;
 
 Erstellt einen Punkt, der seine Koordinaten unter Verwendung des angegebenen Datentyps speichert.
 
@@ -52,7 +52,7 @@ typename TypeTraits<Type>::Point Point2(
 | Parameter | Beschreibung                    |
 |-----------|--------------------------------|
 | x         | Die x-Koordinate des Punkts. |
-| j         | Die y-Koordinate des Punkts. |
+| Y         | Die y-Koordinate des Punkts. |
 
 
 
@@ -62,15 +62,15 @@ typename TypeTraits<Type>::Point Point2(
 
 Ein Punkt, der die angegebene x-Koordinate und y-Koordinate enthält.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für Windows Vista-Desktop-Apps \[ \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 Windows Vista mit SP2 und Plattformupdate für Windows \[ \| Vista-Desktop-Apps UWP-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 R2, Windows Server 2008 mit SP2 und Plattformupdate für Windows Server 2008-Desktop-Apps \[ \| UWP-Apps\]<br/> |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1 und Windows Runtime-Apps\]<br/>                                                  |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/>                                                  |
 | Header<br/>                   | <dl> <dt>D2d1helper.h</dt> </dl>                                                  |
 | Bibliothek<br/>                  | <dl> <dt>D2d1.lib</dt> </dl>                                                      |
 | DLL<br/>                      | <dl> <dt>D2d1.dll</dt> </dl>                                                      |

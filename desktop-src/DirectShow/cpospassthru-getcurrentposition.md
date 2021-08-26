@@ -1,7 +1,7 @@
 ---
-description: 'Die GetCurrentPosition-Methode ruft die aktuelle Position relativ zur Gesamtdauer des Streams ab. Diese Methode implementiert die imediaseeking:: GetCurrentPosition-Methode.'
+description: Die GetCurrentPosition-Methode ruft die aktuelle Position relativ zur Gesamtdauer des Streams ab. Diese Methode implementiert die IMediaSeeking::GetCurrentPosition-Methode.
 ms.assetid: 07020182-2199-4153-9bab-f30d112bc09f
-title: Cpospassthru. GetCurrentPosition-Methode (ctlutil. h)
+title: CPosPassThru.GetCurrentPosition-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5cdbd93edf7630499f6585fbbf6e34a70bed68c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a43477d019639b4e1de5c2aa40f18c99f7b902498c671f8106d5832c43b11584
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084160"
 ---
-# <a name="cpospassthrugetcurrentposition-method"></a>Cpospassthru. GetCurrentPosition-Methode
+# <a name="cpospassthrugetcurrentposition-method"></a>CPosPassThru.GetCurrentPosition-Methode
 
-Die- `GetCurrentPosition` Methode ruft die aktuelle Position relativ zur Gesamtdauer des Streams ab. Diese Methode implementiert die [**imediaseeking:: GetCurrentPosition**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcurrentposition) -Methode.
+Die `GetCurrentPosition` -Methode ruft die aktuelle Position relativ zur Gesamtdauer des Streams ab. Diese Methode implementiert die [**IMediaSeeking::GetCurrentPosition-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcurrentposition)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,34 +42,34 @@ HRESULT GetCurrentPosition(
 
 <dl> <dt>
 
-*pcurrent* 
+*pCurrent* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die aktuelle Position in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die aktuelle Position in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Tabelle aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                           |
 |-------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl> | Die Methode wird nicht unterstützt.<br/>   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl> | Die -Methode wird nicht unterstützt.<br/>   |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerargument.**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die [**cpospassthru:: getmediatime**](cpospassthru-getmediatime.md) -Methode auf, um die aktuelle Position abzurufen. Wenn **getmediatime** fehlschlägt, ruft die Methode **imediaseeking:: GetCurrentPosition** für die verbundene PIN auf.
+Diese Methode ruft die [**CPosPassThru::GetMediaTime-Methode**](cpospassthru-getmediatime.md) auf, um die neueste Position abzurufen. Wenn **GetMediaTime** fehlschlägt, ruft die -Methode **IMediaSeeking::GetCurrentPosition** auf dem verbundenen Pin auf.
 
-Die **getmediatime** -Methode schlägt standardmäßig in der Basisklasse fehl. Wenn der Filter die aktuelle Position zwischenspeichert, überschreiben Sie **getmediatime** , um den zwischengespeicherten Wert zurückzugeben.
+Die **GetMediaTime-Methode** schlägt in der Basisklasse standardmäßig fehl. Wenn Ihr Filter die aktuelle Position zwischenspeichert, überschreiben **Sie GetMediaTime,** um den zwischengespeicherten Wert zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,8 +77,8 @@ Die **getmediatime** -Methode schlägt standardmäßig in der Basisklasse fehl. 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -86,7 +86,7 @@ Die **getmediatime** -Methode schlägt standardmäßig in der Basisklasse fehl. 
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

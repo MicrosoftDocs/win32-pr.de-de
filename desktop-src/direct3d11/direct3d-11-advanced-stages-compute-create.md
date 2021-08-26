@@ -1,23 +1,23 @@
 ---
 title: Erstellen eines Compute-Shaders
-description: In diesem Thema wird gezeigt, wie ein Compute-Shader erstellt wird.
+description: In diesem Thema wird gezeigt, wie Sie einen Compute-Shader erstellen.
 ms.assetid: 6114dd90-626b-4c9e-9da5-7d2d33153e79
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64e6dc39476b83a9bd810cc7bb85231174ec1b18
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: eea5e0ab6309dd441d33fc20b13d0ef31642b62f
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104316743"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884466"
 ---
 # <a name="how-to-create-a-compute-shader"></a>Vorgehensweise: Erstellen eines Compute-Shaders
 
-Ein Compute-Shader ist ein von Microsoft High Level Shader Language (HLSL) programmierbarer Shader, der einen generalisierten Eingabe-und Ausgabe Speicherzugriff verwendet, um praktisch jede Art von Berechnung zu unterstützen. In diesem Thema wird gezeigt, wie ein Compute-Shader erstellt wird. Die COMPUTE-Shader-Technologie wird auch als DirectCompute-Technologie bezeichnet.
+Ein Compute-Shader ist ein programmierbarer HLSL-Shader (High Level Shader Language) von Microsoft, der generalisierten Eingabe- und Ausgabespeicherzugriff verwendet, um praktisch jede Art von Berechnung zu unterstützen. In diesem Thema wird gezeigt, wie Sie einen Compute-Shader erstellen. Die Compute-Shadertechnologie wird auch als DirectCompute-Technologie bezeichnet.
 
 **So erstellen Sie einen Compute-Shader:**
 
-1.  Kompilieren Sie den HLSL-Shader-Code durch Aufrufen von [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile).
+1.  Kompilieren Sie den HLSL-Shadercode, indem Sie [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile)aufrufen.
     ```
         UINT flags = D3DCOMPILE_ENABLE_STRICTNESS;
     #if defined( DEBUG ) || defined( _DEBUG )
@@ -39,7 +39,7 @@ Ein Compute-Shader ist ein von Microsoft High Level Shader Language (HLSL) progr
 
     
 
-2.  Erstellen Sie einen Compute-Shader mithilfe von [**ID3D11Device:: kreatecomputeshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createcomputeshader).
+2.  Erstellen Sie einen Computeshader mit [**id3D11Device::CreateComputeShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createcomputeshader).
     ```
     ID3D11ComputeShader* g_pFinalPassCS = NULL;
     pd3dDevice->CreateComputeShader( pBlobFinalPassCS->GetBufferPointer(), 
@@ -49,12 +49,12 @@ Ein Compute-Shader ist ein von Microsoft High Level Shader Language (HLSL) progr
 
     
 
-Im folgenden Codebeispiel wird gezeigt, wie ein Compute-Shader kompiliert und erstellt wird.
+Das folgende Codebeispiel zeigt, wie Sie einen Compute-Shader kompilieren und erstellen.
 
 > [!Note]  
-> In diesem Beispielcode benötigen Sie den Windows SDK 8,0 und die Datei d3dcompiler \_44.dll aus dem Ordner% Program \_ file% \\ Windows Kits \\ 8,0 \\ Redist \\ D3D \\ <arch> in Ihrem Pfad.
+> Für diesen Beispielcode benötigen Sie das Windows SDK 8.0 und die d3dcompiler-44.dll-Datei \_ aus dem Ordner %PROGRAM \_ FILE% Windows Kits \\ \\ 8.0 \\ Redist \\ D3D \\ &lt; arch in Ihrem &gt; Pfad.
 
- 
+ 
 
 
 ```cpp
@@ -188,7 +188,7 @@ int main()
 
 
 
-Im vorangehenden Codebeispiel wird der COMPUTE-Shader-Code in der Datei "examplecompute. HLSL" kompiliert. Im folgenden finden Sie den Code in "examplecompute. HLSL":
+Im obigen Codebeispiel wird der Compute-Shadercode in der Datei ExampleCompute.hlsl kompiliert. Hier ist der Code in ExampleCompute.hlsl:
 
 
 ```hlsl
@@ -269,5 +269,5 @@ void CSMain( uint3 DTid : SV_DispatchThreadID )
 ## <a name="related-topics"></a>Zugehörige Themen
 
 * [Übersicht über Compute-Shader](direct3d-11-advanced-stages-compute-shader.md)
-* [Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+* [Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 * [BasicCompute11-Beispielanwendung](https://github.com/walbourn/directx-sdk-samples/tree/master/BasicCompute11)

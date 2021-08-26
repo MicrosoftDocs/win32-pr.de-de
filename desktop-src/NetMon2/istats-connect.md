@@ -1,7 +1,7 @@
 ---
-description: 'IStats::Connect-Methode: Die Connect-Methode verbindet den NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung zur Verfügung.'
+description: 'IStats::Verbinden-Methode: Die Verbinden-Methode verbindet die NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung bereit.'
 ms.assetid: 29a12df7-9c81-40ff-ac12-33ce1de833b1
-title: IStats::Connect-Methode (Netmon.h)
+title: IStats::Verbinden-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 0719b6ff56aaa8c0be02f86d62ac23d4003aa3d6
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e6521e77453ec77f81422c7903b1a394512a4c1b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098478"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471186"
 ---
-# <a name="istatsconnect-method"></a>IStats::Connect-Methode
+# <a name="istatsconnect-method"></a>IStats::Verbinden-Methode
 
-Die **Connect-Methode** verbindet den NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung zur Verfügung.
+Die **Verbinden-Methode** verbindet das NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen für die Verbindung bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,118 +46,74 @@ HRESULT STDMETHODCALLTYPE Connect(
 *hInputBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das die NIC angibt, mit der das NPP eine Verbindung herstellt, und die Konfigurationsinformationen für diese Verbindung angibt.
+Handle für das BLOB, das die NIC angibt, mit der das NPP eine Verbindung herstellt, und die Konfigurationsinformationen für diese Verbindung.
 
 </dd> <dt>
 
 *StatusCallbackProc* \[ In\]
 </dt> <dd>
 
-Adresse der Rückruffunktion des Benutzers, die Statusaktualisierungen wie Trigger empfängt. Wenn keine Rückruffunktion verwendet wird, legen Sie diesen Parameter und den *UserContext-Parameter* auf **NULL fest.**
+Adresse der Rückruffunktion des Benutzers, die Statusupdates wie Trigger empfängt. Wenn keine Rückruffunktion verwendet wird, legen Sie diesen Parameter und den *UserContext-Parameter* auf **NULL** fest.
 
 </dd> <dt>
 
 *UserContext* \[ In\]
 </dt> <dd>
 
-Wert, der übergeben wird, wenn die Rückruffunktion des Benutzers aufgerufen wird. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein This-Zeiger. Wenn keine Rückruffunktion angegeben wird, legen Sie diesen Parameter und den *StatusCallbackProc-Parameter* auf **NULL fest.**
+Wert, der übergeben wird, wenn die Rückruffunktion des Benutzers aufgerufen wird. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein "this"-Zeiger. Wenn keine Rückruffunktion angegeben ist, legen Sie diesen Parameter und den *StatusCallbackProc-Parameter* auf **NULL** fest.
 
 </dd> <dt>
 
 *hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für ein Fehlerblob, das zusätzliche Fehlerinformationen enthält.
+Behandeln sie ein Fehlerblob, das zusätzliche Fehlerinformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich der Fehler, die vom internen **IStats::Configure-Aufruf zurückgegeben** werden):
+Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich der Fehler, die vom internen **IStats::Configure-Aufruf** zurückgegeben werden):
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Rückgabecode</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_ALREADY_CONNECTED</strong></dt> </dl></td>
-<td>Diese Instanz des NPP-COM-Objekts ist bereits mit dem Netzwerk verbunden.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_BLOB_CONVERSION_ERROR</strong></dt> </dl></td>
-<td>Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_BLOB_ENTRY_DOES_NOT_EXIST</strong></dt> </dl></td>
-<td>Dem durch den <em>hInputBlob-Parameter</em> angegebenen Eingabeblob fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den <strong>Aufruf IStats::Connect</strong> oder <strong>IStats::Configure</strong> generiert werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_BLOB_NOT_INITIALIZED</strong></dt> </dl></td>
-<td>Die <strong>CreateBlob-Funktion</strong> wurde nicht aufgerufen. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_BLOB_STRING_INVALID</strong></dt> </dl></td>
-<td>Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_ILLEGAL_TRIGGER</strong></dt> </dl></td>
-<td>Der Triggerteil des Eingabeblobs ist beschädigt. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_INVALID_BLOB</strong></dt> </dl></td>
-<td>Das in <em>hInputBlob</em> angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_NO_DEFAULT_CAPTURE_DIRECTORY</strong></dt> </dl></td>
-<td>Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie zum Festlegen des Erfassungsverzeichnisses den folgenden Pfad. <br/>
-<pre class="syntax" data-space="preserve"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\nm\Parameters\CapturePath</code></pre></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_OUT_OF_MEMORY</strong></dt> </dl></td>
-<td>Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher war nicht verfügbar. Dieser Fehler wird durch den <strong>Aufruf IStats::Configure</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_TIMEOUT</strong></dt> </dl></td>
-<td>Für die Anforderung ist ein Time out erfolgt. Dieser Fehler wird durch den <strong>Aufruf IStats::Configure</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_UPLEVEL_BLOB</strong></dt> </dl></td>
-<td>Die In <em>hInputBlob</em> angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den <strong>Aufruf IStats::Configure</strong> generiert.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Rückgabecode | Beschreibung | 
+|-------------|-------------|
+| <dl><dt><strong>NMERR_ALREADY_CONNECTED</strong></dt></dl> | Diese Instanz des NPP-COM-Objekts ist bereits mit dem Netzwerk verbunden.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_CONVERSION_ERROR</strong></dt></dl> | Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_ENTRY_DOES_NOT_EXIST</strong></dt></dl> | Dem durch den <em>hInputBlob-Parameter</em> angegebenen Eingabeblob fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den <strong>Aufruf IStats::Verbinden</strong> oder <strong>IStats::Configure</strong> generiert werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_NOT_INITIALIZED</strong></dt></dl> | Die <strong>CreateBlob-Funktion</strong> wurde nicht aufgerufen. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_STRING_INVALID</strong></dt></dl> | Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_ILLEGAL_TRIGGER</strong></dt></dl> | Der Triggerteil des Eingabeblobs ist beschädigt. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_INVALID_BLOB</strong></dt></dl> | Das in <em>hInputBlob</em> angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_NO_DEFAULT_CAPTURE_DIRECTORY</strong></dt></dl> | Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie den folgenden Pfad, um das Erfassungsverzeichnis festzulegen. <br /><pre class="syntax" data-space="preserve"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\nm\Parameters\CapturePath</code></pre> | 
+| <dl><dt><strong>NMERR_OUT_OF_MEMORY</strong></dt></dl> | Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher war nicht verfügbar. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_TIMEOUT</strong></dt></dl> | Für die Anforderung ist ein Time out aufgetreten. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_UPLEVEL_BLOB</strong></dt></dl> | Die In <em>hInputBlob</em> angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den <strong>IStats::Configure-Aufruf</strong> generiert.<br /> | 
+
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die **Connect-Methode** aufgerufen wird, ruft Netzwerkmonitor **die IStats::Configure-Methode** automatisch auf, indem das vom *hInputBlob-Parameter* bereitgestellte BLOB verwendet wird. Beachten Sie, dass alle Fehlercodes, die durch den Aufruf von **IStats::Configure** zurückgegeben werden, zurückgegeben und vom **IStats::Connect-Aufruf zurückgegeben** werden.
+Wenn die **Verbinden-Methode** aufgerufen wird, ruft Netzwerkmonitor automatisch die **IStats::Configure-Methode** auf, indem sie das blob verwendet, das vom *hInputBlob-Parameter* bereitgestellt wird. Beachten Sie, dass alle Fehlercodes, die durch den Aufruf von **IStats::Configure** zurückgegeben werden, vom **IStats::Verbinden-Aufruf** zurückgegeben werden.
 
-Diese Methode muss aufgerufen werden, bevor Sie mit dem Erfassen von Frames beginnen können. Beachten Sie, dass Sie beim Herstellen einer Verbindung mit dem Netzwerk mit dieser Methode weiterhin die **IStats-Schnittstelle** verwenden müssen, um Frames zu erfassen.
+Diese Methode muss aufgerufen werden, bevor Sie mit der Erfassung von Frames beginnen können. Beachten Sie Folgendes: Wenn Sie mit dieser Methode eine Verbindung mit dem Netzwerk herstellen, müssen Sie weiterhin die **IStats-Schnittstelle** verwenden, um Frames zu erfassen.
 
-Das von *hInputBlob* angegebene EingabeBLOB kann durch Aufrufen der **Methoden GetNPPBlobFromUI,** **GetNPPBlobTable** und **SelectNPPBlobFromTable** ermittelt werden.
+Das von *hInputBlob* angegebene Eingabeblob kann durch Aufrufen der Methoden **GetNPPBlobFromUI,** **GetNPPBlobTable** und **SelectNPPBlobFromTable** abgerufen werden.
 
-Das vom *hErrorBlob-Parameter* zurückgegebene FehlerBLOB enthält Einträge, die Netzwerkmonitor in dem in *hInputBlob* angegebenen EingabeBLOB nicht verstehen oder finden konnten. Das zurückgegebene Fehlerblob enthält Fehlerinformationen, die die Anwendung für die Problembehandlung verwenden kann. Wenn beispielsweise NMERR BLOB ENTRY DOES NOT EXIST zurückgegeben wird, wird der Eintrag, den Netzwerkmonitor nicht finden konnte, \_ \_ in das zurückgegebene \_ \_ FehlerBLOB \_ eingeschlossen.
+Das vom *hErrorBlob-Parameter* zurückgegebene Fehlerblob enthält Einträge, die Netzwerkmonitor nicht verstehen oder im Eingabe-BLOB finden konnten, das in *hInputBlob* angegeben ist. Das zurückgegebene Fehlerblob enthält Fehlerinformationen, die die Anwendung für die Problembehandlung verwenden kann. Wenn z. B. NMERR \_ BLOB ENTRY DOES NOT EXIST zurückgegeben \_ \_ \_ \_ wird, ist der Eintrag, den Netzwerkmonitor nicht finden konnten, im zurückgegebenen Fehlerblob enthalten.
 
 
 
 | Informationen über                                             | Finden Sie unter                                                                          |
 |-------------------------------------------------------------------|------------------------------------------------------------------------------|
-| Abrufen des Eingabeblobs, das eine Netzwerkschnittstellenkarte darstellt | [Auswählen einer Netzwerkschnittstellenkarte](selecting-a-network-interface-card.md) |
+| Abrufen des Eingabe-BLOB, das eine Netzwerkschnittstellenkarte darstellt | [Auswählen einer Netzwerkschnittstellenkarte](selecting-a-network-interface-card.md) |
 
 
 
@@ -167,7 +123,7 @@ Das vom *hErrorBlob-Parameter* zurückgegebene FehlerBLOB enthält Einträge, di
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |

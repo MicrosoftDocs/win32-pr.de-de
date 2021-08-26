@@ -1,7 +1,7 @@
 ---
-description: Enthält eine Auflistung von-Objekten, die die ianalysiswarning-Schnittstelle implementieren und die das Ergebnis eines frei Hand Analyse Vorgangs sind.
+description: Enthält eine Auflistung von -Objekten, die die IAnalysisWarning-Schnittstelle implementieren und das Ergebnis eines Ink-Analyse-Vorgangs sind.
 ms.assetid: 2118c18b-d316-4e91-8652-62969115e8b5
-title: Ianalysiswarning-Schnittstelle (iacom. h)
+title: IAnalysisWarnings-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,33 +13,33 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 938d406ea90d86cc05ac84b69304b7a85e0e54fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6a14e11400c6af564ccab86fc08746b8185fefba98aa472544981534b902f8ad
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057950"
 ---
-# <a name="ianalysiswarnings-interface"></a>Ianalysiswarning-Schnittstelle
+# <a name="ianalysiswarnings-interface"></a>IAnalysisWarnings-Schnittstelle
 
-Enthält eine Auflistung von-Objekten, die die [**ianalysiswarning**](ianalysiswarning.md) -Schnittstelle implementieren und die das Ergebnis eines frei Hand Analyse Vorgangs sind.
+Enthält eine Auflistung von -Objekten, die die [**IAnalysisWarning-Schnittstelle**](ianalysiswarning.md) implementieren und das Ergebnis eines Ink-Analyse-Vorgangs sind.
 
 ## <a name="members"></a>Member
 
-Die **ianalysiswarning** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ianalysiswarning** verfügt auch über die folgenden Typen von Membern:
+Die **IAnalysisWarnings-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IAnalysisWarnings verfügt** auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ianalysiswarning** -Schnittstelle verfügt über diese Methoden.
+Die **IAnalysisWarnings-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                             | BESCHREIBUNG                                                                                                                                |
 |:-------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getanalysiswarning**](ianalysiswarnings-getanalysiswarning.md) | Ruft das [**ianalysiswarning**](ianalysiswarning.md) -Objekt am angegebenen Index ab.<br/>                                       |
-| [**GetCount**](ianalysiswarnings-getcount.md)                     | Ruft die Anzahl der [**ianalysiswarning**](ianalysiswarning.md) -Objekte ab, die in der **ianalysiswarning** -Auflistung enthalten sind.<br/> |
+| [**GetAnalysisWarning**](ianalysiswarnings-getanalysiswarning.md) | Ruft das [**IAnalysisWarning-Objekt**](ianalysiswarning.md) am angegebenen Index ab.<br/>                                       |
+| [**GetCount**](ianalysiswarnings-getcount.md)                     | Ruft die Anzahl der [**IAnalysisWarning-Objekte**](ianalysiswarning.md) ab, die in der **IAnalysisWarnings-Auflistung enthalten** sind.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Die **ianalysiswarning** -Schnittstelle verfügt über diese Methoden.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Gliederung eines Ereignis Handlers für das [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis. Der Handler überprüft [**ianalysisstatus:: iserfolg**](ianalysisstatus-issuccessful.md). Wenn der Analyse Vorgang Warnungen generiert hat, durchläuft der Handler die Auflistung von [**ianalysiswarning**](ianalysiswarning.md) -Objekten.
+Das folgende Beispiel zeigt eine Gliederung eines Ereignishandlers für das [**\_ IAnalysisEvents::Results-Ereignis.**](-ianalysisevents-results.md) Der Handler überprüft [**IAnalysisStatus::IsSuccessful.**](ianalysisstatus-issuccessful.md) Wenn der Analysevorgang Warnungen generiert hat, durchfing der Handler die Auflistung von [**IAnalysisWarning-Objekten.**](ianalysiswarning.md)
 
 
 ```C++
@@ -134,9 +134,9 @@ STDMETHODIMP CMyClass::Results(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -145,13 +145,13 @@ STDMETHODIMP CMyClass::Results(
 
 <dl> <dt>
 
-[**Ianalysisstatus**](ianalysisstatus.md)
+[**IAnalysisStatus**](ianalysisstatus.md)
 </dt> <dt>
 
-[**Ianalysiswarning**](ianalysiswarning.md)
+[**IAnalysisWarning**](ianalysiswarning.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

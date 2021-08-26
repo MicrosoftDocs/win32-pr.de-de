@@ -1,6 +1,6 @@
 ---
-title: Windows-Ereignisprotokoll-Fehler Konstanten (Winerror. h)
-description: Im folgenden finden Sie die Fehlercodes, die vom Windows-Ereignisprotokoll definiert werden.
+title: Windows Ereignisprotokollfehlerkonst constants (WinError.h)
+description: Im Folgenden finden Sie die Fehlercodes, die Windows Ereignisprotokoll definiert.
 ms.assetid: 889ea4ae-dede-45d5-9293-cec85d81f010
 topic_type:
 - apiref
@@ -49,20 +49,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: efa5443d98c53d6abedbe3a0027e8e2e524ae9df
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e0f6f0bd3e2805c02dad78c064b56a443bfbb596cf42f25e9b52ac7ba584f123
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031940"
 ---
-# <a name="windows-event-log-error-constants"></a>Fehler Konstanten im Windows-Ereignisprotokoll
+# <a name="windows-event-log-error-constants"></a>Windows Ereignisprotokollfehlerkonst constants
 
-Im folgenden finden Sie die Fehlercodes, die vom Windows-Ereignisprotokoll definiert werden.
+Im Folgenden finden Sie die Fehlercodes, die Windows Ereignisprotokoll definiert.
 
 <dl> <dt>
 
-<span id="ERROR_EVT_INVALID_CHANNEL_PATH"></span><span id="error_evt_invalid_channel_path"></span>**Fehler beim Auftreten eines \_ \_ ungültigen \_ Kanal \_ Pfads.**
+<span id="ERROR_EVT_INVALID_CHANNEL_PATH"></span><span id="error_evt_invalid_channel_path"></span>**FEHLER \_ EVT \_ \_ UNGÜLTIGER \_ KANALPFAD**
 </dt> <dd> <dl> <dt>
 
 15000
@@ -75,7 +75,7 @@ Der angegebene Kanalpfad ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_QUERY"></span><span id="error_evt_invalid_query"></span>**Fehler beim Auftreten einer \_ \_ ungültigen \_ Abfrage**
+<span id="ERROR_EVT_INVALID_QUERY"></span><span id="error_evt_invalid_query"></span>**FEHLER \_ EVT \_ UNGÜLTIGE \_ ABFRAGE**
 </dt> <dd> <dl> <dt>
 
 15001
@@ -88,7 +88,7 @@ Die angegebene Abfrage ist ungültig.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_PUBLISHER_METADATA_NOT_FOUND"></span><span id="error_evt_publisher_metadata_not_found"></span>**Fehler beim Auftreten von \_ \_ Verleger \_ Metadaten \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_PUBLISHER_METADATA_NOT_FOUND"></span><span id="error_evt_publisher_metadata_not_found"></span>**FEHLER \_ EVT \_ PUBLISHER METADATA NOT \_ \_ \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 15002
@@ -96,12 +96,12 @@ Die angegebene Abfrage ist ungültig.
 
 
 
-Die Anbieter Metadaten wurden in der Ressource nicht gefunden.
+Die Anbietermetadaten können in der Ressource nicht gefunden werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_EVENT_TEMPLATE_NOT_FOUND"></span><span id="error_evt_event_template_not_found"></span>**Fehler \_ Ereignis Vorlage "Fehler Ereignis" wurde \_ \_ \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_EVENT_TEMPLATE_NOT_FOUND"></span><span id="error_evt_event_template_not_found"></span>**FEHLER \_ \_ EVT-EREIGNISVORLAGE \_ \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 15003
@@ -109,12 +109,12 @@ Die Anbieter Metadaten wurden in der Ressource nicht gefunden.
 
 
 
-Die Vorlage für eine Ereignis Definition wurde in der Ressource nicht gefunden.
+Die Vorlage für eine Ereignisdefinition wurde in der Ressource nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_PUBLISHER_NAME"></span><span id="error_evt_invalid_publisher_name"></span>**\_ \_ ungültiger \_ Herausgeber \_ Name**
+<span id="ERROR_EVT_INVALID_PUBLISHER_NAME"></span><span id="error_evt_invalid_publisher_name"></span>**FEHLER \_ EVT \_ UNGÜLTIGER \_ \_ HERAUSGEBERNAME**
 </dt> <dd> <dl> <dt>
 
 15004
@@ -122,12 +122,12 @@ Die Vorlage für eine Ereignis Definition wurde in der Ressource nicht gefunden.
 
 
 
-Der angegebene Anbieter Name ist ungültig.
+Der angegebene Anbietername ist ungültig.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_EVENT_DATA"></span><span id="error_evt_invalid_event_data"></span>**Fehler beim Auftreten von \_ \_ ungültigen \_ Ereignis \_ Daten.**
+<span id="ERROR_EVT_INVALID_EVENT_DATA"></span><span id="error_evt_invalid_event_data"></span>**FEHLER \_ EVT \_ INVALID EVENT \_ \_ DATA**
 </dt> <dd> <dl> <dt>
 
 15005
@@ -135,12 +135,12 @@ Der angegebene Anbieter Name ist ungültig.
 
 
 
-Die Ereignisdaten, die vom Anbieter ausgelöst werden, sind nicht mit der Definition der Ereignis Vorlage im Manifest des Anbieters kompatibel.
+Die vom Anbieter ausgelösten Ereignisdaten sind nicht mit der Ereignisvorlagendefinition im Manifest des Anbieters kompatibel.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_CHANNEL_NOT_FOUND"></span><span id="error_evt_channel_not_found"></span>**Fehler beim \_ EVT- \_ Kanal \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_CHANNEL_NOT_FOUND"></span><span id="error_evt_channel_not_found"></span>**FEHLER \_ \_ EVT-KANAL \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 15007
@@ -148,12 +148,12 @@ Die Ereignisdaten, die vom Anbieter ausgelöst werden, sind nicht mit der Defini
 
 
 
-Der angegebene Kanal wurde nicht gefunden. Überprüfen Sie die Kanal Konfiguration.
+Der angegebene Kanal wurde nicht gefunden. Überprüfen Sie die Kanalkonfiguration.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_MALFORMED_XML_TEXT"></span><span id="error_evt_malformed_xml_text"></span>**fehlerhafter \_ \_ XML- \_ \_ Text Fehler.**
+<span id="ERROR_EVT_MALFORMED_XML_TEXT"></span><span id="error_evt_malformed_xml_text"></span>**FEHLER \_ EVT \_ FALSCH FORMATIERTEN \_ \_ XML-TEXT**
 </dt> <dd> <dl> <dt>
 
 15008
@@ -161,12 +161,12 @@ Der angegebene Kanal wurde nicht gefunden. Überprüfen Sie die Kanal Konfigurat
 
 
 
-Der angegebene XML-Text war nicht wohl geformt. Weitere Informationen erhalten Sie, wenn Sie die [**evtgetextendedstatus**](/windows/desktop/api/WinEvt/nf-winevt-evtgetextendedstatus) -Funktion aufrufen.
+Der angegebene XML-Text war nicht wohlgeformt. Um weitere Informationen zu erhalten, rufen Sie die [**EvtGetExtendedStatus-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtgetextendedstatus) auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL"></span><span id="error_evt_subscription_to_direct_channel"></span>**Fehler " \_ evt"- \_ Abonnement \_ für \_ direkten \_ Kanal**
+<span id="ERROR_EVT_SUBSCRIPTION_TO_DIRECT_CHANNEL"></span><span id="error_evt_subscription_to_direct_channel"></span>**FEHLER BEIM \_ \_ EVT-ABONNEMENT \_ ZUM DIREKTEN \_ \_ KANAL**
 </dt> <dd> <dl> <dt>
 
 15009
@@ -174,12 +174,12 @@ Der angegebene XML-Text war nicht wohl geformt. Weitere Informationen erhalten S
 
 
 
-Sie können einen analytischen oder Debug-Kanal nicht abonnieren. die Ereignisse für einen Analyse-oder Debugkanal gelangen direkt in eine Protokolldatei und können nicht abonniert werden.
+Sie können keinen Analyse- oder Debugkanal abonnieren. Die Ereignisse für einen Analyse- oder Debugkanal werden direkt an eine Protokolldatei übertragen und können nicht abonniert werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_CONFIGURATION_ERROR"></span><span id="error_evt_configuration_error"></span>**Fehler bei \_ EVT- \_ Konfigurations \_ Fehler**
+<span id="ERROR_EVT_CONFIGURATION_ERROR"></span><span id="error_evt_configuration_error"></span>**FEHLER \_ BEIM \_ EVT-KONFIGURATIONSFEHLER \_**
 </dt> <dd> <dl> <dt>
 
 15010
@@ -192,7 +192,7 @@ Konfigurationsfehler.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_QUERY_RESULT_STALE"></span><span id="error_evt_query_result_stale"></span>**Fehler beim auslassen der \_ \_ Abfrage \_ Ergebnisse \_**
+<span id="ERROR_EVT_QUERY_RESULT_STALE"></span><span id="error_evt_query_result_stale"></span>**FEHLER \_ EVT \_ QUERY RESULT \_ \_ STALE**
 </dt> <dd> <dl> <dt>
 
 15011
@@ -200,12 +200,12 @@ Konfigurationsfehler.
 
 
 
-Das Abfrageergebnis ist ungültig. Dies kann darauf zurückzuführen sein, dass das Protokoll gelöscht oder ein Rollback ausgeführt wird, nachdem das Abfrageergebnis erstellt wurde. Geben Sie das Abfrageergebnis Objekt frei, und wiederholen Sie die Abfrage.
+Das Abfrageergebnis ist ungültig. Dies kann daran liegt, dass das Protokoll nach dem Erstellen des Abfrageergebnisses bzw. rolliert wird. Geben Sie das Abfrageergebnisobjekt frei, und führen Sie die Abfrage erneut aus.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_QUERY_RESULT_INVALID_POSITION"></span><span id="error_evt_query_result_invalid_position"></span>**Fehler bei der \_ \_ Abfrage \_ Ergebnis \_ ungültige \_ Position**
+<span id="ERROR_EVT_QUERY_RESULT_INVALID_POSITION"></span><span id="error_evt_query_result_invalid_position"></span>**FEHLER \_ BEIM \_ EVT-ABFRAGEERGEBNIS \_ \_ UNGÜLTIGE \_ POSITION**
 </dt> <dd> <dl> <dt>
 
 15012
@@ -213,12 +213,12 @@ Das Abfrageergebnis ist ungültig. Dies kann darauf zurückzuführen sein, dass 
 
 
 
-Der Cursor für das Abfrageergebnis verweist nicht auf eine gültige Position.
+Der Cursor für das Abfrageergebniszeigert nicht auf eine gültige Position.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_NON_VALIDATING_MSXML"></span><span id="error_evt_non_validating_msxml"></span>**Fehler beim \_ \_ nicht \_ Validieren von \_ MSXML.**
+<span id="ERROR_EVT_NON_VALIDATING_MSXML"></span><span id="error_evt_non_validating_msxml"></span>**FEHLER \_ EVT \_ NICHT ÜBERPRÜFEN \_ MSXML \_**
 </dt> <dd> <dl> <dt>
 
 15013
@@ -226,12 +226,12 @@ Der Cursor für das Abfrageergebnis verweist nicht auf eine gültige Position.
 
 
 
-Der registrierte MSXML-Parser unterstützt keine Validierung.
+Der registrierte MSXML Parser unterstützt keine Validierung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_ALREADYSCOPED"></span><span id="error_evt_filter_alreadyscoped"></span>**Fehler beim Filtern von " \_ \_ \_ alread-scoped".**
+<span id="ERROR_EVT_FILTER_ALREADYSCOPED"></span><span id="error_evt_filter_alreadyscoped"></span>**FEHLER \_ EVT \_ FILTER \_ ALREADYSCOPED**
 </dt> <dd> <dl> <dt>
 
 15014
@@ -239,12 +239,12 @@ Der registrierte MSXML-Parser unterstützt keine Validierung.
 
 
 
-Auf einen Ausdruck kann nur dann eine Änderung des Bereichs Vorgangs angewendet werden, wenn der Ausdruck zu einer Knotengruppe ausgewertet wird und nicht bereits Teil einer anderen Änderung des Bereichs Vorgangs ist.
+Auf einen Ausdruck kann nur dann eine Änderung des Bereichsvorgang folgen, wenn der Ausdruck zu einem Knotensatz ausgewertet wird und nicht bereits Teil einer anderen Änderung des Bereichsvorgang ist.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_NOTELTSET"></span><span id="error_evt_filter_noteltset"></span>**Fehler beim \_ \_ Filtern von \_ noteltset.**
+<span id="ERROR_EVT_FILTER_NOTELTSET"></span><span id="error_evt_filter_noteltset"></span>**FEHLER \_ EVT \_ FILTER \_ NOTELTSET**
 </dt> <dd> <dl> <dt>
 
 15015
@@ -252,12 +252,12 @@ Auf einen Ausdruck kann nur dann eine Änderung des Bereichs Vorgangs angewendet
 
 
 
-Ein Schritt Vorgang kann nicht von einem Begriff durchgeführt werden, der keinen Element Satz darstellt.
+Ein Schrittvorgang kann nicht aus einem Begriff durchgeführt werden, der keinen Elementsatz repräsentiert.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_INVARG"></span><span id="error_evt_filter_invarg"></span>**Fehler " \_ EVT Filter"- \_ Filter \_**
+<span id="ERROR_EVT_FILTER_INVARG"></span><span id="error_evt_filter_invarg"></span>**FEHLER \_ BEIM \_ EVT-FILTER \_ INVARG**
 </dt> <dd> <dl> <dt>
 
 15016
@@ -265,12 +265,12 @@ Ein Schritt Vorgang kann nicht von einem Begriff durchgeführt werden, der keine
 
 
 
-Die Argumente auf der linken Seite eines binären Operators müssen entweder Attribute, Knoten oder Variablen sein, und die Argumente auf der rechten Seite müssen Konstanten sein.
+Die Argumente auf der linken Seite eines binären Operators müssen Attribute, Knoten oder Variablen sein, und die Argumente auf der rechten Seite müssen Konstanten sein.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_INVTEST"></span><span id="error_evt_filter_invtest"></span>**Fehler beim \_ \_ Filter zum Filtern \_ .**
+<span id="ERROR_EVT_FILTER_INVTEST"></span><span id="error_evt_filter_invtest"></span>**FEHLER \_ BEIM \_ EVT-FILTER \_ INVTEST**
 </dt> <dd> <dl> <dt>
 
 15017
@@ -278,12 +278,12 @@ Die Argumente auf der linken Seite eines binären Operators müssen entweder Att
 
 
 
-Ein Schritt Vorgang muss entweder einen Knoten Test oder, im Falle eines Prädikats, einen algebraischen Ausdruck einschließen, mit dem jeder Knoten in der Knotengruppe, der durch den vorherigen Knoten Satz identifiziert wird, getestet werden kann.
+Ein Schrittvorgang muss entweder einen Knotentest oder im Fall eines Prädikats einen algebraischen Ausdruck umfassen, mit dem jeder Knoten in der Knotensatz, der durch die vorangehende Knotensatz identifiziert wird, überprüft werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_INVTYPE"></span><span id="error_evt_filter_invtype"></span>**\_ \_ Fehlertyp \_ Filtertyp Filtern**
+<span id="ERROR_EVT_FILTER_INVTYPE"></span><span id="error_evt_filter_invtype"></span>**FEHLER \_ BEIM \_ EVT-FILTER \_ INVTYPE**
 </dt> <dd> <dl> <dt>
 
 15018
@@ -296,7 +296,7 @@ Dieser Datentyp wird nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_PARSEERR"></span><span id="error_evt_filter_parseerr"></span>**Fehler beim \_ \_ Filtern der \_ parameterr**
+<span id="ERROR_EVT_FILTER_PARSEERR"></span><span id="error_evt_filter_parseerr"></span>**FEHLER \_ EVT \_ FILTER \_ PARSEERR**
 </dt> <dd> <dl> <dt>
 
 15019
@@ -304,12 +304,12 @@ Dieser Datentyp wird nicht unterstützt.
 
 
 
-An der angegebenen Position ist ein Syntax Fehler aufgetreten.
+An der angegebenen Position ist ein Syntaxfehler aufgetreten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_UNSUPPORTEDOP"></span><span id="error_evt_filter_unsupportedop"></span>**Fehler beim Filtern von " \_ \_ \_ unsupportedop".**
+<span id="ERROR_EVT_FILTER_UNSUPPORTEDOP"></span><span id="error_evt_filter_unsupportedop"></span>**FEHLER \_ EVT \_ FILTER \_ UNSUPPORTEDOP**
 </dt> <dd> <dl> <dt>
 
 15020
@@ -322,7 +322,7 @@ Dieser Operator wird von dieser Implementierung des Filters nicht unterstützt.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_UNEXPECTEDTOKEN"></span><span id="error_evt_filter_unexpectedtoken"></span>**Fehler beim Filtern von " \_ \_ \_ unexpectedtoken".**
+<span id="ERROR_EVT_FILTER_UNEXPECTEDTOKEN"></span><span id="error_evt_filter_unexpectedtoken"></span>**FEHLER \_ EVT \_ FILTER \_ UNEXPECTEDTOKEN**
 </dt> <dd> <dl> <dt>
 
 15021
@@ -330,12 +330,12 @@ Dieser Operator wird von dieser Implementierung des Filters nicht unterstützt.
 
 
 
-Unerwartetes Token.
+Das gefundene Token war unerwartet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL"></span><span id="error_evt_invalid_operation_over_enabled_direct_channel"></span>**Fehler durch \_ \_ ungültigen \_ Vorgang \_ über \_ aktiviertem \_ direkt \_ Kanal**
+<span id="ERROR_EVT_INVALID_OPERATION_OVER_ENABLED_DIRECT_CHANNEL"></span><span id="error_evt_invalid_operation_over_enabled_direct_channel"></span>**FEHLER \_ EVT \_ \_ UNGÜLTIGER VORGANG \_ ÜBER \_ AKTIVIERTEN DIREKTEN \_ \_ KANAL**
 </dt> <dd> <dl> <dt>
 
 15022
@@ -343,12 +343,12 @@ Unerwartetes Token.
 
 
 
-Der angeforderte Vorgang kann nicht über einen aktivierten Analyse-oder Debugkanal ausgeführt werden. Sie müssen den Kanal deaktivieren, bevor Sie den angeforderten Vorgang ausführen.
+Der angeforderte Vorgang kann nicht über einen aktivierten Analyse- oder Debugkanal ausgeführt werden. Sie müssen den Kanal deaktivieren, bevor Sie den angeforderten Vorgang ausführen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_CHANNEL_PROPERTY_VALUE"></span><span id="error_evt_invalid_channel_property_value"></span>**Error \_ EVT \_ ungültiger \_ \_ channeleigenschafts \_ Wert.**
+<span id="ERROR_EVT_INVALID_CHANNEL_PROPERTY_VALUE"></span><span id="error_evt_invalid_channel_property_value"></span>**FEHLER \_ EVT \_ UNGÜLTIGER \_ \_ \_ KANALEIGENSCHAFTSWERT**
 </dt> <dd> <dl> <dt>
 
 15023
@@ -356,12 +356,12 @@ Der angeforderte Vorgang kann nicht über einen aktivierten Analyse-oder Debugka
 
 
 
-Die Channeleigenschaft enthält einen ungültigen Wert. Der Werttyp ist möglicherweise nicht gültig, der Wert liegt möglicherweise außerhalb des gültigen Bereichs, oder der Wert kann nicht aktualisiert werden oder wird für diesen Kanaltyp nicht unterstützt.
+Die Channeleigenschaft enthält einen ungültigen Wert. Der Typ des Werts ist möglicherweise ungültig, der Wert liegt möglicherweise nicht im gültigen Bereich, oder der Wert kann nicht aktualisiert werden oder wird für diesen Kanaltyp nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_INVALID_PUBLISHER_PROPERTY_VALUE"></span><span id="error_evt_invalid_publisher_property_value"></span>**Error \_ EVT \_ ungültiger \_ Verleger \_ Eigenschafts \_ Wert.**
+<span id="ERROR_EVT_INVALID_PUBLISHER_PROPERTY_VALUE"></span><span id="error_evt_invalid_publisher_property_value"></span>**FEHLER \_ EVT \_ UNGÜLTIGER \_ \_ \_ VERLEGEREIGENSCHAFTSWERT**
 </dt> <dd> <dl> <dt>
 
 15024
@@ -369,12 +369,12 @@ Die Channeleigenschaft enthält einen ungültigen Wert. Der Werttyp ist möglich
 
 
 
-Die Provider-Eigenschaft enthält einen ungültigen Wert. Der Werttyp ist möglicherweise nicht gültig, der Wert liegt möglicherweise außerhalb des gültigen Bereichs, oder der Wert kann nicht aktualisiert werden oder wird für diesen Anbietertyp nicht unterstützt.
+Die Anbietereigenschaft enthält einen ungültigen Wert. Der Typ des Werts ist möglicherweise ungültig, der Wert liegt möglicherweise nicht im gültigen Bereich, oder der Wert kann nicht aktualisiert werden oder wird für diesen Anbietertyp nicht unterstützt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_CHANNEL_CANNOT_ACTIVATE"></span><span id="error_evt_channel_cannot_activate"></span>**\_fehlerevt- \_ Kanal \_ kann nicht \_ aktiviert werden.**
+<span id="ERROR_EVT_CHANNEL_CANNOT_ACTIVATE"></span><span id="error_evt_channel_cannot_activate"></span>**\_FEHLER: \_ EVT-KANAL \_ KANN NICHT AKTIVIERT \_ WERDEN**
 </dt> <dd> <dl> <dt>
 
 15025
@@ -382,12 +382,12 @@ Die Provider-Eigenschaft enthält einen ungültigen Wert. Der Werttyp ist mögli
 
 
 
-Der Kanal konnte nicht aktiviert werden.
+Fehler beim Aktivieren des Kanals.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_TOO_COMPLEX"></span><span id="error_evt_filter_too_complex"></span>**Fehler beim \_ \_ Filter \_ zu \_ Komplex.**
+<span id="ERROR_EVT_FILTER_TOO_COMPLEX"></span><span id="error_evt_filter_too_complex"></span>**FEHLER \_ BEIM \_ EVT-FILTER \_ ZU \_ KOMPLEX**
 </dt> <dd> <dl> <dt>
 
 15026
@@ -395,12 +395,12 @@ Der Kanal konnte nicht aktiviert werden.
 
 
 
-Der XPath-Ausdruck hat unterstützte Komplexität überschritten. Vereinfachen Sie den Ausdruck, oder Teilen Sie ihn in zwei oder mehr einfache Ausdrücke auf.
+Der XPath-Ausdruck hat die unterstützte Komplexität überschritten. Vereinfachen Sie den Ausdruck, oder teilen Sie ihn in zwei oder mehr einfache Ausdrücke auf.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_MESSAGE_NOT_FOUND"></span><span id="error_evt_message_not_found"></span>**Fehler \_ Meldung "evt" wurde \_ \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_MESSAGE_NOT_FOUND"></span><span id="error_evt_message_not_found"></span>**FEHLER \_ EVT \_ MESSAGE NOT \_ \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 15027
@@ -408,12 +408,12 @@ Der XPath-Ausdruck hat unterstützte Komplexität überschritten. Vereinfachen S
 
 
 
-Die Nachrichten Ressource ist vorhanden, aber die Nachricht wurde nicht in der Zeichenfolge oder in der Nachrichten Tabelle gefunden.
+Die Nachrichtenressource ist vorhanden, aber die Nachricht wurde in der Zeichenfolge oder Meldungstabelle nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_MESSAGE_ID_NOT_FOUND"></span><span id="error_evt_message_id_not_found"></span>**Fehler- \_ EVT-nach \_ richten- \_ ID \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_MESSAGE_ID_NOT_FOUND"></span><span id="error_evt_message_id_not_found"></span>**FEHLER \_ EVT \_ MESSAGE ID NOT \_ \_ \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 15028
@@ -421,12 +421,12 @@ Die Nachrichten Ressource ist vorhanden, aber die Nachricht wurde nicht in der Z
 
 
 
-Die Nachrichten-ID wurde nicht gefunden.
+Der Nachrichtenbezeichner wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_UNRESOLVED_VALUE_INSERT"></span><span id="error_evt_unresolved_value_insert"></span>**Fehler beim Einfügen von nicht aufgelösten \_ \_ \_ Werten. \_**
+<span id="ERROR_EVT_UNRESOLVED_VALUE_INSERT"></span><span id="error_evt_unresolved_value_insert"></span>**FEHLER \_ BEIM EINFÜGEN EINES NICHT \_ \_ AUFGELÖSTEN \_ WERTS**
 </dt> <dd> <dl> <dt>
 
 15029
@@ -434,12 +434,12 @@ Die Nachrichten-ID wurde nicht gefunden.
 
 
 
-Die Ersetzungs Zeichenfolge für den Einfügeindex wurde nicht gefunden.
+Die Ersetzungszeichenfolge für den Einfügeindex wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_UNRESOLVED_PARAMETER_INSERT"></span><span id="error_evt_unresolved_parameter_insert"></span>**Fehler beim \_ Einfügen nicht \_ aufgelöster \_ Parameter \_ .**
+<span id="ERROR_EVT_UNRESOLVED_PARAMETER_INSERT"></span><span id="error_evt_unresolved_parameter_insert"></span>**FEHLER \_ BEIM EINFÜGEN DES NICHT \_ \_ AUFGELÖSTEN PARAMETERS \_ EVT**
 </dt> <dd> <dl> <dt>
 
 15030
@@ -447,12 +447,12 @@ Die Ersetzungs Zeichenfolge für den Einfügeindex wurde nicht gefunden.
 
 
 
-Die Beschreibungs Zeichenfolge für den Parameter Verweis (%1) wurde nicht gefunden.
+Die Beschreibungszeichenfolge für den Parameterverweis (%1) wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_MAX_INSERTS_REACHED"></span><span id="error_evt_max_inserts_reached"></span>**\_Maximale Anzahl von \_ \_ Einfügungen des \_ Fehlers**
+<span id="ERROR_EVT_MAX_INSERTS_REACHED"></span><span id="error_evt_max_inserts_reached"></span>**FEHLER \_ EVT \_ MAX \_ INSERTS \_ ERREICHT**
 </dt> <dd> <dl> <dt>
 
 15031
@@ -460,12 +460,12 @@ Die Beschreibungs Zeichenfolge für den Parameter Verweis (%1) wurde nicht gefun
 
 
 
-Die maximal zulässige Anzahl von Ersetzungen wurde erreicht.
+Die maximale Anzahl von Ersetzungen wurde erreicht.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_EVENT_DEFINITION_NOT_FOUND"></span><span id="error_evt_event_definition_not_found"></span>**Fehler \_ Ereignis- \_ Ereignis \_ Definition \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_EVENT_DEFINITION_NOT_FOUND"></span><span id="error_evt_event_definition_not_found"></span>**FEHLER \_ \_ EVT-EREIGNISDEFINITION \_ \_ NICHT \_ GEFUNDEN**
 </dt> <dd> <dl> <dt>
 
 15032
@@ -473,12 +473,12 @@ Die maximal zulässige Anzahl von Ersetzungen wurde erreicht.
 
 
 
-Die Ereignis Definition für den Ereignis Bezeichner wurde nicht gefunden.
+Die Ereignisdefinition für den Ereignisbezeichner wurde nicht gefunden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_MESSAGE_LOCALE_NOT_FOUND"></span><span id="error_evt_message_locale_not_found"></span>**Fehler beim \_ EVT-Nachrichten Gebiets Schema \_ \_ \_ nicht \_ gefunden.**
+<span id="ERROR_EVT_MESSAGE_LOCALE_NOT_FOUND"></span><span id="error_evt_message_locale_not_found"></span>**FEHLER \_ EVT \_ MESSAGE \_ LOCALE NOT \_ \_ FOUND**
 </dt> <dd> <dl> <dt>
 
 15033
@@ -486,12 +486,12 @@ Die Ereignis Definition für den Ereignis Bezeichner wurde nicht gefunden.
 
 
 
-Die Gebiets Schema spezifische Ressource für die gewünschte Nachricht ist nicht vorhanden.
+Die lokale Ressource für die gewünschte Nachricht ist nicht vorhanden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_VERSION_TOO_OLD"></span><span id="error_evt_version_too_old"></span>**Fehler- \_ EVT- \_ Version \_ zu \_ alt**
+<span id="ERROR_EVT_VERSION_TOO_OLD"></span><span id="error_evt_version_too_old"></span>**FEHLER \_ \_ EVT-VERSION \_ ZU \_ ALT**
 </dt> <dd> <dl> <dt>
 
 15034
@@ -504,7 +504,7 @@ Die Ressource ist zu alt, um kompatibel zu sein.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_VERSION_TOO_NEW"></span><span id="error_evt_version_too_new"></span>**Fehler- \_ EVT- \_ Version \_ zu \_ neu**
+<span id="ERROR_EVT_VERSION_TOO_NEW"></span><span id="error_evt_version_too_new"></span>**FEHLER \_ \_ EVT-VERSION \_ ZU \_ NEU**
 </dt> <dd> <dl> <dt>
 
 15035
@@ -517,7 +517,7 @@ Die Ressource ist zu neu, um kompatibel zu sein.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_CANNOT_OPEN_CHANNEL_OF_QUERY"></span><span id="error_evt_cannot_open_channel_of_query"></span>**Fehler \_ EVT \_ kann \_ den \_ Kanal \_ der \_ Abfrage nicht öffnen.**
+<span id="ERROR_EVT_CANNOT_OPEN_CHANNEL_OF_QUERY"></span><span id="error_evt_cannot_open_channel_of_query"></span>**FEHLER \_ BEIM ÖFFNEN DES \_ \_ \_ ABFRAGEKANALS \_ DURCH \_ EVT**
 </dt> <dd> <dl> <dt>
 
 15036
@@ -530,7 +530,7 @@ Der Kanal am angegebenen Index der Abfrage kann nicht geöffnet werden.
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_PUBLISHER_DISABLED"></span><span id="error_evt_publisher_disabled"></span>**Fehler beim \_ Deaktivieren des \_ Verlegers \_**
+<span id="ERROR_EVT_PUBLISHER_DISABLED"></span><span id="error_evt_publisher_disabled"></span>**FEHLER \_ EVT \_ PUBLISHER \_ DISABLED**
 </dt> <dd> <dl> <dt>
 
 15037
@@ -538,12 +538,12 @@ Der Kanal am angegebenen Index der Abfrage kann nicht geöffnet werden.
 
 
 
-Der Anbieter wurde deaktiviert, und die zugehörigen Ressourcen sind nicht verfügbar. Dies kann vorkommen, wenn der Anbieter deinstalliert oder aktualisiert wird.
+Der Anbieter wurde deaktiviert, und seine Ressourcen sind nicht verfügbar. Dies kann auftreten, wenn der Anbieter deinstalliert oder aktualisiert wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="ERROR_EVT_FILTER_OUT_OF_RANGE"></span><span id="error_evt_filter_out_of_range"></span>**Fehler beim \_ \_ Filtern \_ \_ im \_ Bereich.**
+<span id="ERROR_EVT_FILTER_OUT_OF_RANGE"></span><span id="error_evt_filter_out_of_range"></span>**FEHLER \_ EVT \_ FILTER OUT OF \_ \_ \_ RANGE**
 </dt> <dd> <dl> <dt>
 
 15038
@@ -551,7 +551,7 @@ Der Anbieter wurde deaktiviert, und die zugehörigen Ressourcen sind nicht verf�
 
 
 
-Es wurde versucht, einen numerischen Typ zu erstellen, der außerhalb des gültigen Bereichs liegt.
+Es wurde versucht, einen numerischen Typ zu erstellen, der sich außerhalb seines gültigen Bereichs befindet.
 
 
 </dt> </dl> </dd> </dl>
@@ -562,9 +562,9 @@ Es wurde versucht, einen numerischen Typ zu erstellen, der außerhalb des gülti
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Winerror. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>WinError.h</dt> </dl> |
 
 
 

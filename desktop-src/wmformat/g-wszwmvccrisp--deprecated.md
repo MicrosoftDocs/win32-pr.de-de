@@ -1,9 +1,9 @@
 ---
-title: g_wszWMVCCrisp (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMVCCrisp (wmcodecdsp. h)
+title: g_wszWMVCCrisp (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCCrisp (Wmcodecdsp.h)
 ms.assetid: 2a7527ac-6057-47a1-ab3b-5ccdd6fe8586
 keywords:
-- g_wszWMVCCrisp Windows Media-Format
+- g_wszWMVCCrisp Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbd32fcd21102a329c3e83c4a4e9785f078c3e4e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eaf0153694869098579309277a9ab4e7975fa7d0cfbd96daddfe7e575719ceff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110450"
 ---
-# <a name="g_wszwmvccrisp"></a>g \_ wszwmvccrisp
+# <a name="g_wszwmvccrisp"></a>g \_ wszWMVCCrisp
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

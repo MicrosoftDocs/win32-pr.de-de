@@ -1,9 +1,9 @@
 ---
-title: Befehl "Speichern"
-description: Mit dem Befehl "Speichern" wird eine MCI-Datei gespeichert. Video-Overlay-und Waveform-Audiogeräte erkennen diesen Befehl. Obwohl Digital-Video-Geräte und MIDI-Sequencer diesen Befehl ebenfalls erkennen, unterstützen die MCIAVI-und mciseq-Treiber dies nicht.
+title: Befehl "speichern"
+description: Mit dem Befehl save wird eine MCI-Datei gespeichert. Videoüberlagerungs- und Waveform-Audiogeräte erkennen diesen Befehl. Obwohl digital-video-Geräte und DANN-Sequencer diesen Befehl ebenfalls erkennen, unterstützen die MCIAVI- und MCISEQ-Treiber ihn nicht.
 ms.assetid: cae199b3-4ac4-49e0-9213-12d816b2f865
 keywords:
-- Befehl "Speichern" Windows Multimedia
+- Save-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0029ad03c1b7fe855e8485b2719b11628fac1103
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a0c7b4fb75f78f8468a204217f5a4fa1593a1c50d5db541a83070a7faed41cc5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037480"
 ---
-# <a name="save-command"></a>Befehl "Speichern"
+# <a name="save-command"></a>Befehl "speichern"
 
-Mit dem Befehl "Speichern" wird eine MCI-Datei gespeichert. Video-Overlay-und Waveform-Audiogeräte erkennen diesen Befehl. Obwohl Digital-Video-Geräte und MIDI-Sequencer diesen Befehl ebenfalls erkennen, unterstützen die MCIAVI-und mciseq-Treiber dies nicht.
+Mit dem Befehl save wird eine MCI-Datei gespeichert. Videoüberlagerungs- und Waveform-Audiogeräte erkennen diesen Befehl. Obwohl digital-video-Geräte und DANN-Sequencer diesen Befehl ebenfalls erkennen, unterstützen die MCIAVI- und MCISEQ-Treiber ihn nicht.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,41 +39,41 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszFilename"></span><span id="lpszfilename"></span><span id="LPSZFILENAME"></span>*lpszfilename*
+<span id="lpszFilename"></span><span id="lpszfilename"></span><span id="LPSZFILENAME"></span>*lpszFilename*
 </dt> <dd>
 
-Flag, das den Namen der zu speichernden Datei und optional zusätzliche Flags angibt, die den Speichervorgang verändern. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den **Save** -Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag, das den Namen der zu speichernden Datei an und optional zusätzliche Flags an, die den Speichervorgang ändern. In der folgenden Tabelle sind die Gerätetypen aufgeführt, die den **Speicherbefehl** und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung              | Bedeutung               |
 |--------------|----------------------|-----------------------|
-| Digitalvideo | beim *Rechteck* Abbrechen | *Dateiname* keepreserve |
-| overlay      | at- *Rechteck*       | *filename*            |
+| digitalvideo | Abbruch beim *Rechteck* | *filename* keepreserve |
+| overlay      | am *Rechteck*       | *filename*            |
 | sequencer    | *filename*           |                       |
-| waveaudiodatei    | *filename*           |                       |
+| Waveaudio    | *filename*           |                       |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszfilename** -Parameter und deren Bedeutung angegeben werden können.
+In der folgenden Tabelle sind die Flags, die im **lpszFilename-Parameter angegeben** werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 | Wert          | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| abort          | Beendet einen aktuell ausgeführten **Speicher** Vorgang. Wenn diese Option verwendet wird, muss dies das einzige vorhandene Element sein.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| at- *Rechteck* | Gibt ein Rechteck relativ zum Frame Puffer Ursprung an. Das *Rechteck* wird als *x1 y1 x2 Y2* angegeben. Die Koordinaten *x1 y1* geben die linke obere Ecke an, und die Koordinaten *x2 Y2* geben die Breite und Höhe an. Für Digital Video-Geräte wird der [Erfassungs](capture.md) Befehl verwendet, um den Inhalt des Frame Puffers aufzuzeichnen.<br/>                                                                                                                                               |
-| *filename*     | Gibt den Dateinamen an, der der Datendatei zugewiesen werden soll. Wenn kein Pfad angegeben ist, wird die Datei auf dem Datenträger und im Verzeichnis abgelegt, das zuvor im expliziten oder impliziten [Reserve](reserve.md) Befehl angegeben wurde. Wenn **Reserve** nicht ausgestellt wurde, sind das Standard Laufwerk und das Standardverzeichnis diejenigen, die der Aufgabe der Anwendung zugeordnet sind. Wenn ein Pfad angegeben ist, muss sich das Gerät möglicherweise auf dem Laufwerk befinden, das von der expliziten oder impliziten **Reserve** angegeben wird. Dieses Flag ist erforderlich. |
-| keepreserve    | Gibt an, dass nicht verwendeter Speicherplatz, der vom ursprünglichen **Reserve** Befehl übrig geblieben ist, nicht aufgehoben wird.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| abort          | Beendet einen **speichervorgang,** der in Bearbeitung ist. Bei Verwendung muss dies das einzige Element sein, das vorhanden ist.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| am *Rechteck* | Gibt ein Rechteck relativ zum Framepuffer-Ursprung an. Das *Rechteck* wird als *X1 Y1 X2 Y2 angegeben.* Die Koordinaten *X1 Y1 geben* die obere linke Ecke und die *Koordinaten X2 Y2* die Breite und Höhe an. Bei Digitalvideogeräten wird der [Erfassungsbefehl](capture.md) verwendet, um den Inhalt des Framepuffers zu erfassen.<br/>                                                                                                                                               |
+| *filename*     | Gibt den Dateinamen an, der der Datendatei zugewiesen werden soll. Wenn kein Pfad angegeben wird, wird die Datei auf dem Datenträger und im Verzeichnis platziert, das zuvor für den expliziten oder impliziten Reservebefehl [angegeben](reserve.md) wurde. Wenn **die** Reserve nicht ausgestellt wurde, sind das Standardlaufwerk und das Standardverzeichnis diejenigen, die der Aufgabe der Anwendung zugeordnet sind. Wenn ein Pfad angegeben wird, kann es für das Gerät erforderlich sein, dass er sich auf dem Laufwerk befindet, das durch die explizite oder implizite Reserve **angegeben wird.** Dieses Flag ist erforderlich. |
+| keepreserve    | Gibt an, dass nicht verwendeter  Speicherplatz, der vom ursprünglichen Reservebefehl übrig bleibt, nicht entfernt wird.                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 
 
@@ -81,24 +81,24 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszfilename** -
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die *filename* -Variable ist erforderlich, wenn das Gerät mithilfe des "neuen" Geräte Bezeichners geöffnet wurde.
+Die *Dateinamenvariable* ist erforderlich, wenn das Gerät mit der Geräte-ID "new" geöffnet wurde.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl speichert den gesamten Video Puffer in einer Datei namens vcapfile. TGA.
+Der folgende Befehl speichert den gesamten Videopuffer in einer Datei mit dem Namen VCAPFILE. Tga.
 
 ``` syntax
 save vboard c:\vcap\vcapfile.tga
@@ -119,13 +119,13 @@ save vboard c:\vcap\vcapfile.tga
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
-[einver](capture.md)
+[Erfassen](capture.md)
 </dt> <dt>
 
 [Reserve](reserve.md)

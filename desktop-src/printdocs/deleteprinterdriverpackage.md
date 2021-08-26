@@ -1,7 +1,7 @@
 ---
-description: Löscht ein Druckertreiber Paket aus dem Treiber Speicher.
+description: Löscht ein Druckertreiberpaket aus dem Treiberspeicher.
 ms.assetid: a43a94d1-097e-457c-bce9-d4c434ecfa93
-title: Deleteprinterdriverpackage-Funktion (winspool. h)
+title: DeletePrinterDriverPackage-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: 54d1cda53795f4feab60e397ce7e38402f22374f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7247f4f0ef4d1f77f00664792d0b7b36bc991b19d437017b54db676731ccc70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112550"
 ---
-# <a name="deleteprinterdriverpackage-function"></a>Deleteprinterdriverpackage-Funktion
+# <a name="deleteprinterdriverpackage-function"></a>DeletePrinterDriverPackage-Funktion
 
-Löscht ein Druckertreiber Paket aus dem Treiber Speicher.
+Löscht ein Druckertreiberpaket aus dem Treiberspeicher.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,51 +43,51 @@ HRESULT DeletePrinterDriverPackage(
 
 <dl> <dt>
 
-*pszserver* \[ in\]
+*pszServer* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Namen des Drucker Servers angibt, von dem das Treiber Paket gelöscht wird. Ein **null** -Zeiger Wert bedeutet den lokalen Computer.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Namen des Druckerservers angibt, von dem das Treiberpaket gelöscht wird. Ein  NULL-Zeigerwert bedeutet den lokalen Computer.
 
 </dd> <dt>
 
-*pszinfpath* \[ in\]
+*pszInfPath* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die den Pfad zur INF-Datei des Treibers angibt \* .
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die den Pfad zur INF-Datei des \* Treibers angibt.
 
 </dd> <dt>
 
-*pszenvironment* \[ in\]
+*pszEnvironment* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante, auf NULL abschließende Zeichenfolge, die die Prozessorarchitektur angibt (z. b. Windows NT x86). Dieser Wert kann **null** sein.
+Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge, die die Prozessorarchitektur angibt (z. B. Windows NT x86). Dies kann **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-S \_ OK, wenn der Vorgang erfolgreich ist.
+S \_ OK, wenn der Vorgang erfolgreich war.
 
-E \_ AccessDenied, wenn das Paket mit Windows ausgeliefert wurde.
+E \_ ACCESSDENIED, wenn das Paket im Lieferumfang Windows.
 
-HRESULT- \_ Code (Fehler \_ Druck \_ Treiber Paket wird \_ \_ \_ verwendet), wenn das Paket verwendet wird.
+HRESULT \_ CODE (ERROR \_ PRINT DRIVER PACKAGE IN \_ \_ \_ \_ USE), wenn das Paket verwendet wird.
 
-Andernfalls enthält das **HRESULT** einen Fehlercode.
+**Andernfalls enthält das HRESULT** einen Fehlercode.
 
-Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung](../com/error-handling-in-com.md).
+Weitere Informationen zu COM-Fehlercodes finden Sie unter [Fehlerbehandlung.](../com/error-handling-in-com.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Der Treiber Speicher ist in der Regel% windir% \\ INF oder% windir% \\ system32 \\ DriverStore \\ FileRepository.
+Der Treiberspeicher ist in der Regel %windir% \\ inf oder %windir% \\ System32 \\ DriverStore \\ FileRepository.
 
-Ein Treiber Paket, das mit Windows ausgeliefert wurde, kann mit dieser Funktion nicht entfernt werden.
+Ein Treiberpaket, das im Lieferumfang Windows, kann mit dieser Funktion nicht entfernt werden.
 
-Der Benutzer muss über Administrator Berechtigungen für die Druckerverwaltung verfügen.
+Der Benutzer muss über Druckerverwaltungsberechtigungen verfügen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,16 +95,16 @@ Der Benutzer muss über Administrator Berechtigungen für die Druckerverwaltung 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 | Unicode- und ANSI-Name<br/>   | **DeletePrinterDriverPackageW** (Unicode) und **DeletePrinterDriverPackageA** (ANSI)<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

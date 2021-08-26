@@ -1,45 +1,45 @@
 ---
-title: Rechte Konstanten
-description: Rechte Konstanten
+title: Rechtekonstanten
+description: Rechtekonstanten
 ms.assetid: fb20dc57-25da-4613-a324-e081ba87df73
 keywords:
-- Windows Media-Format-SDK, Konstanten
+- Windows Medienformat-SDK, Konstanten
 - Digital Rights Management (DRM), Konstanten
 - DRM (Digital Rights Management), Konstanten
-- Erweiterte APIs für den DRM-Client, Konstanten
+- Erweiterte DRM-Client-APIs, Konstanten
 - Erweiterte Client-APIs, Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1349da53b63b1b7df59c13e0e69f7fdbf47ee3f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 088c3130551a6798900ea77cc3628cb784ff7c70b418795157b203ab2f71b64e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110140"
 ---
-# <a name="rights-constants"></a>Rechte Konstanten
+# <a name="rights-constants"></a>Rechtekonstanten
 
-Die in der folgenden Tabelle aufgeführten Konstanten dienen zum Identifizieren von DRM-Aktionen und zum Erstellen von Listen mit Aktionen.
+Die in der folgenden Tabelle aufgeführten Konstanten werden verwendet, um DRM-Aktionen zu identifizieren und Listen von Aktionen zu erstellen.
 
 
 
-| Konstante                                        | BESCHREIBUNG                                                                                                                                                                                                                                                    |
+| Konstante                                        | Beschreibung                                                                                                                                                                                                                                                    |
 |-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| g \_ wszwmdrm- \_ Aktions Listen- \_ Tag                    | Definiert den XML-Elementnamen für eine Aktionsliste.                                                                                                                                                                                                               |
-| g \_ wszwmdrm \_ Action- \_ Tag                        | Definiert den XML-Elementnamen für einen Eintrag in einer Aktionsliste.                                                                                                                                                                                                   |
-| g \_ wszwmdrm \_ right- \_ Wiedergabe                    | Definiert die Zeichenfolge, mit der Inhalt wiedergegeben werden soll.                                                                                                                                                                                                              |
-| g \_ wszwmdrm- \_ Rechte \_ Kopie                        | Definiert die Zeichenfolge für das Recht, Inhalte zu kopieren.                                                                                                                                                                                                              |
-| g \_ wszwmdrm \_ right \_ Playlist \_ Burn              | Definiert die Zeichenfolge für das Recht, Inhalte als Teil einer Wiedergabeliste auf CD zu brennen.                                                                                                                                                                                  |
-| g \_ wszwmdrm \_ right \_ Create \_ Miniatur \_ Bild    | Definiert die Zeichenfolge für das Recht, ein Miniaturbild aus Videoinhalten zu erstellen.                                                                                                                                                                               |
-| g \_ wszwmdrm \_ - \_ Rechte \_ auf \_ CD kopieren                | Definiert die Zeichenfolge für das Recht, Inhalte auf eine CD zu kopieren. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, von der Berechtigung "Kopieren" und der Wiedergabeliste "Burn" abgedeckt werden.                                     |
-| g \_ wszwmdrm- \_ Rechte \_ Kopie \_ auf \_ SDMI- \_ Gerät kopieren      | Definiert die Zeichenfolge für das Recht, Inhalte auf ein Gerät zu kopieren, das der Secure Digital Music Initiative (SDMI) entspricht. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, von der Berechtigung zum Kopieren abgedeckt werden. |
-| g \_ wszwmdrm- \_ Rechte \_ Kopie \_ auf nicht- \_ \_ SDMI- \_ Gerät kopieren | Definiert die Zeichenfolge für das Recht, auf ein Gerät zu kopieren, das nicht der Secure Digital Music Initiative (SDMI) entspricht. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, von der Berechtigung zum Kopieren abgedeckt werden. |
-| g \_ wszwmdrm- \_ Rechte \_ Sicherung                      | Definiert die Zeichenfolge für das Recht zum Sichern der Lizenz.                                                                                                                                                                                                        |
-| g \_ wszwmdrm \_ right \_ COLLABORATIVE \_ Play         | Definiert die Zeichenfolge für das Recht, Inhalte über ein Netzwerk als Teil einer freigegebenen Wiedergabeliste wiederzugeben.                                                                                                                                                                  |
+| g \_ wszWMDRM \_ ACTIONLIST \_ TAG                    | Definiert den XML-Elementnamen für eine Aktionsliste.                                                                                                                                                                                                               |
+| g \_ wszWMDRM \_ ACTION \_ TAG                        | Definiert den XML-Elementnamen für einen Eintrag in einer Aktionsliste.                                                                                                                                                                                                   |
+| g \_ wszWMDRM \_ RIGHT \_ PLAYBACK                    | Definiert die Zeichenfolge für das Recht zum Wiedergeben von Inhalten.                                                                                                                                                                                                              |
+| g \_ wszWMDRM \_ RIGHT \_ COPY                        | Definiert die Zeichenfolge für das Recht zum Kopieren von Inhalt.                                                                                                                                                                                                              |
+| g \_ wszWMDRM \_ RIGHT PLAYLIST \_ \_ BURN              | Definiert die Zeichenfolge für das Recht, Inhalt als Teil einer Wiedergabeliste auf CD zu verketten.                                                                                                                                                                                  |
+| g \_ wszWMDRM \_ RIGHT CREATE THUMBNAIL \_ \_ \_ IMAGE    | Definiert die Zeichenfolge für die Rechte, um ein Miniaturbild aus Videoinhalten zu erstellen.                                                                                                                                                                               |
+| g \_ wszWMDRM \_ RIGHT COPY TO \_ \_ \_ CD                | Definiert die Zeichenfolge für das Recht, Inhalt auf eine CD zu kopieren. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, durch das Kopierrecht und das Wiedergabelisten-Burn-Recht abgedeckt werden.                                     |
+| g \_ wszWMDRM \_ RIGHT COPY TO \_ \_ \_ SDMI \_ DEVICE      | Definiert die Zeichenfolge für das Recht, Inhalte auf ein Gerät zu kopieren, das der Secure Digital Musik Initiative (SDMI) entspricht. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, durch das Kopierrecht abgedeckt werden. |
+| g \_ wszWMDRM \_ RIGHT COPY TO NON \_ \_ \_ \_ SDMI \_ DEVICE | Definiert die Zeichenfolge für das Recht, auf ein Gerät zu kopieren, das nicht der Secure Digital Musik Initiative (SDMI) entspricht. Neue Lizenzen sollten dieses Recht nicht verwenden. Stattdessen sollten alle Rechte, die die Berechtigung zum Kopieren von Inhalten erteilen, durch das Kopierrecht abgedeckt werden. |
+| g \_ wszWMDRM \_ RIGHT \_ BACKUP                      | Definiert die Zeichenfolge für das Recht zum Sichern der Lizenz.                                                                                                                                                                                                        |
+| g \_ wszWMDRM \_ RIGHT COLLABORATIVE \_ \_ PLAY         | Definiert die Zeichenfolge für das Recht zum Wiedergeben von Inhalten über ein Netzwerk als Teil einer freigegebenen Wiedergabeliste.                                                                                                                                                                  |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -48,9 +48,9 @@ Die in der folgenden Tabelle aufgeführten Konstanten dienen zum Identifizieren 
 [**Konstanten**](constants.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

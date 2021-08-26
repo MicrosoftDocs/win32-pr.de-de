@@ -4,18 +4,18 @@ ms.assetid: 9bab0e43-6e9f-4cdb-bfd0-cdafcc12d526
 title: Importieren des öffentlichen Schlüssels für Treiber
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 222b9c62bd9babe0a01a0e6a9b3a50747ab3b039
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: eebaa4d2d6b5de54eec5ef40070c5ecfb805494a2e937cbbc709f4e44656f55f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042845"
 ---
 # <a name="importing-the-drivers-public-key"></a>Importieren des öffentlichen Schlüssels für Treiber
 
-Der öffentliche RSA-Schlüssel des Treibers ist in den "Modulus"-und "Exponent"-Tags des Blatt Knotens des Zertifikats enthalten. Beide Werte sind Base64-codiert und müssen decodiert werden. Wenn Sie CryptoAPI von Microsoft verwenden, müssen Sie den Schlüssel in einen Kryptografiedienstanbieter (kryptografischen Service Provider, CSP) importieren, bei dem es sich um das Modul handelt, das die kryptografischen Algorithmen implementiert.
+Der öffentliche RSA-Schlüssel des Treibers ist in den Tags Modulus und Exponent des Blattknotens des Zertifikats enthalten. Beide Werte sind base64-codiert und müssen decodiert werden. Wenn Sie die CryptoAPI von Microsoft verwenden, müssen Sie den Schlüssel in einen Kryptografiedienstanbieter (Cryptographic Service Provider, CSP) importieren. Dabei handelt es sich um das Modul, das die kryptografischen Algorithmen implementiert.
 
-Um den Modulo und die Exponenten von der Base64-Codierung in binäre Arrays zu konvertieren, verwenden Sie die Funktion " **cryptstringdebinary** ", wie im folgenden Code gezeigt. Ruft die-Funktion einmal auf, um die Größe des Bytearrays abzurufen. Weisen Sie dann den Puffer zu, und nennen Sie die Funktion erneut.
+Verwenden Sie die **CryptStringToBinary-Funktion,** wie im folgenden Code gezeigt, um die Modulus und Exponenten aus der Base64-Codierung in binäre Arrays zu konvertieren. Rufen Sie die Funktion einmal auf, um die Größe des Bytearrays abzurufen. Ordnen Sie dann den Puffer zu, und rufen Sie die Funktion erneut auf.
 
 
 ```C++
@@ -40,9 +40,9 @@ BYTE *pbBuffer = new BYTE [cbLen];
 
 
 
-Das Base64-codierte Array ist in Big-Endian-Reihenfolge, während die CryptoAPI die Zahl in Little-Endian-Reihenfolge erwartet, daher müssen Sie die Byte Reihenfolge des Arrays austauschen, das von " **cryptstringesbinary**" zurückgegeben wird. Der Modulo beträgt 256 Bytes, das decodierte Bytearray kann jedoch weniger als 256 Byte betragen. Wenn dies der Fall ist, müssen Sie ein neues Array mit einer Größe von 256 Bytes zuordnen, die Daten in das neue Array kopieren und die Vorderseite des Arrays mit Nullen auffüllen. Der Exponent ist ein DWORD-Wert (4 Byte).
+Das Base64-codierte Array befindet sich in Big-Endian-Reihenfolge, während die CryptoAPI die Zahl in Little-Endian-Reihenfolge erwartet. Daher müssen Sie die Bytereihenfolge des Arrays austauschen, das von **CryptStringToBinary** zurückgegeben wird. Der Modulus beträgt 256 Bytes, aber das decodierte Bytearray kann kleiner als 256 Bytes sein. Wenn ja, müssen Sie ein neues Array mit 256 Bytes zuordnen, die Daten in das neue Array kopieren und die Front des Arrays mit Nullen aufgefüllt. Der Exponent ist ein DWORD-Wert (4 Byte).
 
-Nachdem Sie die Werte Modulo und Exponent angegeben haben, können Sie den Schlüssel in den Standard-Kryptografiedienstanbieter (CSP) importieren, wie im folgenden Code gezeigt:
+Nachdem Sie über die Modulus- und Exponentenwerte verfügen, können Sie den Schlüssel in den Standardmäßigen Kryptografiedienstanbieter (CSP) importieren, wie im folgenden Code gezeigt:
 
 
 ```C++
@@ -90,13 +90,13 @@ CryptImportKey(hCSP, pBlob, cbKeyBlob, 0, 0, &hRSAKey)
 
 
 
-Nun können Sie die CryptoAPI verwenden, um Befehle und Status Anforderungen mit dem öffentlichen Schlüssel des Treibers zu verschlüsseln.
+Jetzt können Sie die CryptoAPI verwenden, um Befehle und Statusanforderungen mit dem öffentlichen Schlüssel des Treibers zu verschlüsseln.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Certified Output Protection-Protokolls (COPP)](using-certified-output-protection-protocol--copp.md)
+[Verwenden von Certified Output Protection Protocol (COPP)](using-certified-output-protection-protocol--copp.md)
 </dt> </dl>
 
  

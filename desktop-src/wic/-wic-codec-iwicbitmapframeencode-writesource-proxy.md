@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die "Write tesource"-Methode.
+description: Proxyfunktion für die WriteSource-Methode.
 ms.assetid: d95ad80f-7a26-45a7-8103-2673989143b7
 title: IWICBitmapFrameEncode_WriteSource_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 9eb5ab9db9341d138c72d350304407966a6293d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8fe4970fbc6d50e19b917fe9364169089199ac17fa5ca15be1e65ec0c0e71b8f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090042"
 ---
-# <a name="iwicbitmapframeencode_writesource_proxy-function"></a>IWICBitmapFrameEncode- \_ \_ Proxy Funktion für schreibgeschützte Datenquelle
+# <a name="iwicbitmapframeencode_writesource_proxy-function"></a>IWICBitmapFrameEncode \_ \_ WriteSource-Proxyfunktion
 
-Proxy Funktion für die " [**Write tesource**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writesource) "-Methode.
+Proxyfunktion für die [**WriteSource-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-writesource)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,38 +42,38 @@ HRESULT IWICBitmapFrameEncode_WriteSource_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicbitmapframecocode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) \** _
+Typ: **[ **IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)\***
 
-Zeiger auf dieses [_ *IWICBitmapFrameEncode* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode) -Objekt.
+Zeiger auf dieses [**IWICBitmapFrameEncode-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)
 
 </dd> <dt>
 
-*pibitmapsource* \[ in\]
+*pIBitmapSource* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) \** _
+Typ: **[ **IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)\***
 
-Die zu codierende Bitmap-Quelle.
+Die zu codierende Bitmapquelle.
 
 </dd> <dt>
 
-_prc * \[ in\]
+*prc* \[ In\]
 </dt> <dd>
 
-Typ: **[**WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect) \** _
+Typ: **[ **WICRect**](/windows/desktop/api/Wincodec/ns-wincodec-wicrect)\***
 
-Das Größen Rechteck der Bitmapquelle.
+Das Größenrechteck der Bitmapquelle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -83,9 +83,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

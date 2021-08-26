@@ -1,7 +1,7 @@
 ---
-description: 'StartService-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse: Startet den Dienst.'
+description: 'StartService-Methode der Msvm_VirtualEthernetSwitchManagementService Klasse: Startet den Dienst.'
 ms.assetid: 8b232523-3311-47a9-949a-3bbb9944d80f
-title: StartService-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
+title: StartService-Methode der Msvm_VirtualEthernetSwitchManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: d58ec579d13edd87b0a952d8b9e26ad387622d3b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 8e15dcf329a2ef4192ef9bd04ee9a275d0437787e4d14338bb1d6e3bf270d409
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075280"
 ---
 # <a name="startservice-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>StartService-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
@@ -53,17 +53,17 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

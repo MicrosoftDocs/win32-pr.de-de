@@ -1,29 +1,29 @@
 ---
-description: Es wird dringend empfohlen, die Validierung für jedes neue oder neu geänderte Installationspaket auszuführen, bevor Sie versuchen, das Paket zum ersten Mal zu installieren.
+description: Es wird dringend empfohlen, die Überprüfung für jedes neue oder neu geänderte Installationspaket vor dem erstmaligen Installieren des Pakets ausführen.
 ms.assetid: 47168c0b-82ab-4f1b-84d7-98c8f64d6da0
 title: Paketvalidierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 058fbd5bff08701f9603938a631de4e8a59857d8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca2fb8fe877f68a1c787458e7703fb59f035031fc68bba1d75f24e86851aac7c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074850"
 ---
 # <a name="package-validation"></a>Paketvalidierung
 
-Es wird dringend empfohlen, die Validierung für jedes neue oder neu geänderte Installationspaket auszuführen, bevor Sie versuchen, das Paket zum ersten Mal zu installieren.
+Es wird dringend empfohlen, die Überprüfung für jedes neue oder neu geänderte Installationspaket vor dem erstmaligen Installieren des Pakets ausführen.
 
-Die Paket Validierung umfasst die folgenden drei Prozesse:
+Die Paketvalidierung umfasst die folgenden drei Prozesse:
 
--   [Interne Validierung](internal-validation.md)
--   [Zeichen folgen-Pool-Validierung](string-pool-validation.md)
--   [Interne Konsistenz Auswertung-ICES](internal-consistency-evaluators-ices.md)
+-   [Interne Überprüfung](internal-validation.md)
+-   [Überprüfung des Zeichenfolgenpools](string-pool-validation.md)
+-   [Interne Konsistenzauswertungen – ICEs](internal-consistency-evaluators-ices.md)
 
-Mergemodule sollten mithilfe der in [Validieren von Mergemodulen](validating-merge-modules.md)beschriebenen Methode überprüft werden.
+Mergemodule sollten mithilfe der unter Validating Merge Modules (Überprüfen von Mergemodulen) [beschriebenen Methode überprüft werden.](validating-merge-modules.md)
 
-Evalcom2.dll stellt ein COM-Objekt bereit, das Validierungs Vorgänge für Installationspakete und Mergemodule implementiert. Das Hauptobjekt implementiert Schnittstellen für C/C++-Programme. Weitere Informationen finden Sie unter [Validation Automation](validation-automation.md).
+Evalcom2.dll stellt ein COM-Objekt zur Verfügung, das Validierungsvorgänge für Installationspakete und Mergemodule implementiert. Das Hauptobjekt implementiert Schnittstellen für C/C++-Programme. Weitere Informationen finden Sie unter [Validierungsautomatisierung.](validation-automation.md)
 
  
 

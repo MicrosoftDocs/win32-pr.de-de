@@ -1,7 +1,7 @@
 ---
 description: Schreibt einen DWORD-Wert in die angegebene Datenbank.
 ms.assetid: 2ecbfcac-5bb1-4129-9501-79210672aa1b
-title: Sdbschreitedwordtag-Funktion
+title: SdbWriteDWORDTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 5b549a91037aa308b5b88d0e3e2a51e153002bd5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 730d171f964205638b44d5676e39abc20fb40426f7721fa6a5060d80c58805a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044790"
 ---
-# <a name="sdbwritedwordtag-function"></a>Sdbschreitedwordtag-Funktion
+# <a name="sdbwritedwordtag-function"></a>SdbWriteDWORDTag-Funktion
 
-Schreibt einen **DWORD** -Wert in die angegebene Datenbank.
+Schreibt einen **DWORD-Wert** in die angegebene Datenbank.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ BOOL WINAPI SdbWriteDWORDTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*ttag* \[ in\]
+*tTag* \[ In\]
 </dt> <dd>
 
-Das-Tag für den Eintrag. Dieses Tag muss den Typ " **Tag \_ Type \_ DWORD**" aufweisen.
+Das TAG für den Eintrag. Dieses TAG muss vom Typ **TAG \_ TYPE \_ DWORD** sein.
 
 </dd> <dt>
 
-*dwdata* \[ in\]
+*dwData* \[ In\]
 </dt> <dd>
 
 Der Wert.
@@ -64,7 +64,7 @@ Der Wert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE** bei Erfolg oder **FALSE** bei Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -82,16 +82,16 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 <dl> <dt>
 
-[**Sdbschreitebinarytag**](sdbwritebinarytag.md)
+[**SdbWriteBinaryTag**](sdbwritebinarytag.md)
 </dt> <dt>
 
-[**Sdbschreiteqwordtag**](sdbwriteqwordtag.md)
+[**SdbWriteQWORDTag**](sdbwriteqwordtag.md)
 </dt> <dt>
 
-[**Sdbschreitestringtag**](sdbwritestringtag.md)
+[**SdbWriteStringTag**](sdbwritestringtag.md)
 </dt> <dt>
 
-[**Sdbschreitewordtag**](sdbwritewordtag.md)
+[**SdbWriteWORDTag**](sdbwritewordtag.md)
 </dt> </dl>
 
  

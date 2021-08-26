@@ -4,12 +4,12 @@ ms.assetid: c51cd9bd-3c55-4eec-ab67-172765adc51c
 title: ServiceControl-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24b8531fb70c1887d77ae9b09bf3fe7e59de0c7878dfac44707df942e838f4f4
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 1b0c360991ce4a72698ac1b667d82a98ba64b7a0
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120039980"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885683"
 ---
 # <a name="servicecontrol-table"></a>ServiceControl-Tabelle
 
@@ -24,11 +24,11 @@ Die ServiceControl-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte         | Typ                         | Key | Nullwerte zulässig |
+| Spalte         | Typ                         | Schlüssel | Nullwerte zulässig |
 |----------------|------------------------------|-----|----------|
 | ServiceControl | [Identifier](identifier.md) | J   | N        |
 | Name           | [Formatiert](formatted.md)   | N   | N        |
-| Ereignis          | [Integer](integer.md)       | N   | N        |
+| event          | [Integer](integer.md)       | N   | N        |
 | Argumente      | [Formatiert](formatted.md)   | N   | J        |
 | Warten           | [Integer](integer.md)       | N   | J        |
 | Komponente\_    | [Identifier](identifier.md) | N   | N        |
@@ -66,11 +66,11 @@ Die folgenden Werte werden nur während einer Installation verwendet.
 
 
 
-| Konstante                           | Hexadezimal | Decimal | BESCHREIBUNG                                                                        |
+| Konstante                           | Hexadezimal | Decimal | Beschreibung                                                                        |
 |------------------------------------|-------------|---------|------------------------------------------------------------------------------------|
 | **msidbServiceControlEventStart**  | 0x001       | 1       | Startet den Dienst während der [StartServices-Aktion](startservices-action.md).    |
 | **msidbServiceControlEventStop**   | 0x002       | 2       | Beendet den Dienst während der [StopServices-Aktion.](stopservices-action.md)       |
-| (none)                             | 0x004       | 4       | <reserved>                                                                   |
+| (none)                             | 0x004       | 4       | &lt;Reserviert&gt;                                                                   |
 | **msidbServiceControlEventDelete** | 0x008       | 8       | Löscht den Dienst während der [DeleteServices-Aktion](deleteservices-action.md). |
 
 
@@ -81,11 +81,11 @@ Die folgenden Werte werden nur während einer Deinstallation verwendet.
 
 
 
-| Konstante                                    | Hexadezimal | Decimal | BESCHREIBUNG                                                                        |
+| Konstante                                    | Hexadezimal | Decimal | Beschreibung                                                                        |
 |---------------------------------------------|-------------|---------|------------------------------------------------------------------------------------|
 | **msidbServiceControlEventUninstallStart**  | 0x010       | 16      | Startet den Dienst während der [StartServices-Aktion](startservices-action.md).    |
 | **msidbServiceControlEventUninstallStop**   | 0x020       | 32      | Beendet den Dienst während der [StopServices-Aktion.](stopservices-action.md)       |
-| (none)                                      | 0x040       | 64      | <reserved>                                                                   |
+| (none)                                      | 0x040       | 64      | &lt;Reserviert&gt;                                                                   |
 | **msidbServiceControlEventUninstallDelete** | 0x080       | 128     | Löscht den Dienst während der [DeleteServices-Aktion](deleteservices-action.md). |
 
 
@@ -117,11 +117,11 @@ Externer Schlüssel zu Spalte 1 der [Komponententabelle.](component-table.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Die [Aktionen StartServices,](startservices-action.md) [StopServices](stopservices-action.md)und [DeleteServices](deleteservices-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen finden* Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
+Die Aktionen [StartServices,](startservices-action.md) [StopServices](stopservices-action.md)und [DeleteServices](deleteservices-action.md) in [*Sequenztabellen*](s-gly.md) verarbeiten die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen* finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-Verwenden Sie die Spalte Name, um Dienste zu starten, zu beenden oder zu löschen, die durch die Installation ersetzt werden oder von einem neuen Dienst abhängig sind, der installiert wird. Wenn Sie beispielsweise MyService in die Spalte ServiceControl eingeben, kann dieser Dienst mit MyComponent in der Spalte Komponente \_ verknüpfen. Wenn das Bitfeld in der Spalte Ereignis für den Start während der Installation festgelegt ist, startet das Installationsprogramm MyService bei der Installation von MyComponent.
+Verwenden Sie die Spalte Name, um Dienste zu starten, zu beenden oder zu löschen, die durch die Installation ersetzt werden oder von einem neuen Dienst abhängig sind, der installiert wird. Wenn Sie z. B. MyService in die ServiceControl-Spalte eingeben, kann dieser Dienst mit MyComponent in der Spalte Component (Komponente) gebunden \_ werden. Wenn das Bitfeld in der Spalte Ereignis für den Start während der Installation festgelegt ist, startet das Installationsprogramm MyService bei der Installation von MyComponent.
 
-## <a name="validation"></a>Überprüfung
+## <a name="validation"></a>Validierung
 
 <dl>
 

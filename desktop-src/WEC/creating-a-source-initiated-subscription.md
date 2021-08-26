@@ -1,31 +1,31 @@
 ---
-title: Erstellen eines von der Quelle initiierten Abonnements
-description: Mit quellenin initiierten Abonnements können Sie ein Abonnement auf einem Ereignissammlercomputer definieren, ohne die Ereignisquellencomputer zu definieren. Anschließend können mehrere Remoteereignisquellencomputer (mithilfe einer Gruppenrichtlinieneinstellung) eingerichtet werden, um Ereignisse an den Ereignissammlercomputer weiter zu übertragen. Bevor ein lokaler Computer Ereignisse abonnieren und ein Remotecomputer Ereignisse weiterleiten kann, müssen beide Computer für die Ereignissammlung und Ereignisweiterleitung eingerichtet werden. Weitere Informationen zum Konfigurieren der Computer finden Sie unter Einrichten eines von der Quelle initiierten Abonnements.
+title: Erstellen eines quellinitiiertes Abonnement
+description: Quellinitiierte Abonnements ermöglichen es Ihnen, ein Abonnement auf einem Ereignissammlercomputer zu definieren, ohne die Ereignisquellcomputer zu definieren. Anschließend können mehrere Remoteereignisquellcomputer (mithilfe einer Gruppenrichtlinieneinstellung) eingerichtet werden, um Ereignisse an den Ereignissammlercomputer weiterzuleiten. Bevor ein lokaler Computer Ereignisse abonnieren kann und ein Remotecomputer Ereignisse weiterleiten kann, müssen beide Computer für die Ereignissammlung und Ereignisweiterleitung eingerichtet werden. Weitere Informationen zum Konfigurieren der Computer finden Sie unter Einrichten eines von der Quelle initiierten Abonnements.
 ms.assetid: 489d3613-177f-4045-a055-2c1577ef2191
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ef0f3a40b3404441df40434c7ddb2f1bb6ac578caaf182c14d2825c6f99e7f9d
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 771a70758a57134cdaabd8a9a72e3ad43c8bb890
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118997970"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887288"
 ---
-# <a name="creating-a-source-initiated-subscription"></a>Erstellen eines von der Quelle initiierten Abonnements
+# <a name="creating-a-source-initiated-subscription"></a>Erstellen eines quellinitiiertes Abonnement
 
-Mit quellenin initiierten Abonnements können Sie ein Abonnement auf einem Ereignissammlercomputer definieren, ohne die Ereignisquellencomputer zu definieren. Anschließend können mehrere Remoteereignisquellencomputer (mithilfe einer Gruppenrichtlinieneinstellung) eingerichtet werden, um Ereignisse an den Ereignissammlercomputer weiter zu übertragen. Bevor ein lokaler Computer Ereignisse abonnieren und ein Remotecomputer Ereignisse weiterleiten kann, müssen beide Computer für die Ereignissammlung und Ereignisweiterleitung eingerichtet werden. Weitere Informationen zum Konfigurieren der Computer finden Sie unter Einrichten eines von der Quelle [initiierten Abonnements.](setting-up-a-source-initiated-subscription.md)
+Quellinitiierte Abonnements ermöglichen es Ihnen, ein Abonnement auf einem Ereignissammlercomputer zu definieren, ohne die Ereignisquellcomputer zu definieren. Anschließend können mehrere Remoteereignisquellcomputer (mithilfe einer Gruppenrichtlinieneinstellung) eingerichtet werden, um Ereignisse an den Ereignissammlercomputer weiterzuleiten. Bevor ein lokaler Computer Ereignisse abonnieren kann und ein Remotecomputer Ereignisse weiterleiten kann, müssen beide Computer für die Ereignissammlung und Ereignisweiterleitung eingerichtet werden. Weitere Informationen zum Konfigurieren der Computer finden Sie unter Einrichten eines von [der Quelle initiierten Abonnements.](setting-up-a-source-initiated-subscription.md)
 
 Das folgende Codebeispiel folgt einer Reihe von Schritten zum Erstellen eines von der Quelle initiierten Abonnements, bei dem sich die Ereignisquellen in derselben Domäne wie der Ereignissammlercomputer befinden.
 
 **So erstellen Sie programmgesteuert ein von der Quelle initiiertes Abonnement**
 
-1.  Öffnen Sie das Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten**](windows-event-collector-constants.md).
+1.  Öffnen Sie das Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) bereitstellen. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten.**](windows-event-collector-constants.md)
 2.  Legen Sie die Eigenschaften des Abonnements fest, indem Sie die [**EcSetSubscriptionProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsetsubscriptionproperty) aufrufen. Weitere Informationen zu Abonnementeigenschaften, die festgelegt werden können, finden Sie in der [**EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id)
 3.  Speichern Sie das Abonnement, indem Sie die [**EcSaveSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) aufrufen.
 4.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Das folgende C++-Beispiel zeigt, wie Sie ein von der Quelle initiiertes Abonnement erstellen:
+Das folgende C++-Beispiel zeigt, wie Sie ein quellinitiiertes Abonnement erstellen:
 
 
 ```C++
@@ -417,31 +417,31 @@ DWORD GetProperty(EC_HANDLE hSubscription,
 
 1.  Führen Sie auf dem Ereignissammlercomputer das folgende Verfahren aus:
 
-    1.  Führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um den Laufzeitstatus des Abonnements zu erhalten:
+    1.  Führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um den Laufzeitstatus des Abonnements abzurufen:
 
-        **wecutil gr***<subscriptionID>*
+        **wecutil gr** *&lt; subscriptionID &gt;*
 
-    2.  Stellen Sie sicher, dass die Ereignisquelle verbunden ist. Möglicherweise müssen Sie warten, bis das in der Richtlinie angegebene Aktualisierungsintervall beendet ist, nachdem Sie das Abonnement für die Zu verbindende Ereignisquelle erstellt haben.
-    3.  Führen Sie den folgenden Befehl aus, um die Abonnementinformationen zu erhalten:
+    2.  Vergewissern Sie sich, dass eine Verbindung mit der Ereignisquelle hergestellt wurde. Möglicherweise müssen Sie warten, bis das in der Richtlinie angegebene Aktualisierungsintervall beendet ist, nachdem Sie das Abonnement für die Verbindung der Ereignisquelle erstellt haben.
+    3.  Führen Sie den folgenden Befehl aus, um die Abonnementinformationen abzurufen:
 
-        **wecutil gs***<subscriptionID>*
+        **wecutil gs** *&lt; subscriptionID &gt;*
 
-    4.  Erhalten Sie den DeliveryMaxItems-Wert aus den Abonnementinformationen.
+    4.  Abrufen des Werts DeliveryMaxItems aus den Abonnementinformationen.
 
-2.  Geben Sie auf dem Ereignisquellencomputer die Ereignisse aus, die der Abfrage aus dem Ereignisabonnement entsprechen. Die DeliveryMaxItems-Anzahl von Ereignissen muss ausgelöst werden, damit die Ereignisse weitergeleitet werden.
+2.  Auslösen Sie auf dem Ereignisquellcomputer die Ereignisse, die mit der Abfrage aus dem Ereignisabonnement übereinstimmen. Die DeliveryMaxItems-Anzahl von Ereignissen muss ausgelöst werden, damit die Ereignisse weitergeleitet werden.
 3.  Überprüfen Sie auf dem Ereignissammlercomputer, ob die Ereignisse an das ForwardedEvents-Protokoll oder an das im Abonnement angegebene Protokoll weitergeleitet wurden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konfigurieren von Computern zum Weitergeleiteten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
+[Konfigurieren von Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 </dt> <dt>
 
 [Einrichten eines von der Quelle initiierten Abonnements](setting-up-a-source-initiated-subscription.md)
 </dt> <dt>
 
-[Windows Referenz zum Ereignissammler](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
  

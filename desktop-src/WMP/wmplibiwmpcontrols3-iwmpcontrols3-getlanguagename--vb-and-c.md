@@ -1,11 +1,11 @@
 ---
-title: IWMPControls3 getlanguagename-Methode
-description: Die getlanguagename-Methode gibt den Namen der Audiosprache mit dem angegebenen Gebiets Schema Bezeichner (LCID) zurück.
+title: IWMPControls3 getLanguageName-Methode
+description: Die getLanguageName-Methode gibt den Namen der Audiosprache mit dem angegebenen Gebietsschemabezeichner (LCID) zurück.
 ms.assetid: a0651e8d-0ba1-4fff-93f0-fe097231723e
 keywords:
-- getlanguagename-Methode, Windows-Media Player
-- getlanguagename-Methode, Windows Media Player, IWMPControls3-Schnittstelle
-- IWMPControls3 Interface, Windows Media Player, getlanguagename-Methode
+- getLanguageName-Methode Windows Media Player
+- getLanguageName-Methode Windows Media Player , IWMPControls3-Schnittstelle
+- IWMPControls3-Schnittstelle Windows Media Player , getLanguageName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d93bf97c7b5213e3d196897de1c3ebcfa6e6d2c5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c6850bd73c9add044bdb845d17341745c7546918f7824b611ed2f018f66139d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000490"
 ---
-# <a name="iwmpcontrols3getlanguagename-method"></a>IWMPControls3:: getlanguagename-Methode
+# <a name="iwmpcontrols3getlanguagename-method"></a>IWMPControls3::getLanguageName-Methode
 
-Die **getlanguagename** -Methode gibt den Namen der Audiosprache mit dem angegebenen Gebiets Schema Bezeichner (LCID) zurück.
+Die **getLanguageName-Methode** gibt den Namen der Audiosprache mit dem angegebenen Gebietsschemabezeichner (LCID) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,22 +53,22 @@ Implements IWMPControls3.getLanguageName
 
 <dl> <dt>
 
-*llangid* \[ in\]
+*lLangID* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der die LCID ist.
+Eine **System.Int32-Datei,** die die LCID ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. String** -Wert, der der Name der Audiosprache ist.
+Eine **System.String,die** der Name der Audiosprache ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine LCID identifiziert eindeutig einen bestimmten Sprach Dialekt, der als Gebiets Schema bezeichnet wird.
+Eine LCID identifiziert eindeutig einen bestimmten Sprachdialekt, der als Gebietsschema bezeichnet wird.
 
-Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzige Ausgabe.
+Für Windows medienbasierten Inhalt unterstützen Eigenschaften und Methoden im Zusammenhang mit der Sprachauswahl nur eine einzelne Ausgabe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,32 +76,32 @@ Bei Windows Media-basierten Inhalten unterstützen Eigenschaften und Methoden im
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPControls3-Schnittstelle (VB und c#)**](iwmpcontrols3--vb-and-c.md)
+[**IWMPControls3-Schnittstelle (VB und C#)**](iwmpcontrols3--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. audiolanguagecount (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-audiolanguagecount--vb-and-c.md)
+[**IWMPControls3.audioLanguageCount (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-audiolanguagecount--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. currentaudiolanguage (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguage--vb-and-c.md)
+[**IWMPControls3.currentAudioLanguage (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguage--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. currentaudiolanguageindex (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguageindex--vb-and-c.md)
+[**IWMPControls3.currentAudioLanguageIndex (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-currentaudiolanguageindex--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. getaudiolanguagedescription (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguagedescription--vb-and-c.md)
+[**IWMPControls3.getAudioLanguageDescription (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguagedescription--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPControls3. getaudiolanguageid (VB und c#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguageid--vb-and-c.md)
+[**IWMPControls3.getAudioLanguageID (VB und C#)**](wmplibiwmpcontrols3-iwmpcontrols3-getaudiolanguageid--vb-and-c.md)
 </dt> </dl>
 
  

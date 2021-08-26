@@ -4,12 +4,12 @@ ms.assetid: b0113527-f22c-4519-b1cf-fea54bff4090
 title: Schemahandler und Byte-Stream Handler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc7bde81a02762cd9c82e0a7d031582c856da6984ab231775580ddf249caca23
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2f5cbb2ee0af93e456e86b6eab16ff44705f5380
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118058229"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881780"
 ---
 # <a name="scheme-handlers-and-byte-stream-handlers"></a>Schemahandler und Byte-Stream Handler
 
@@ -47,11 +47,11 @@ HKEY_LOCAL_MACHINE
                   {00000000-0000-0000-0000-000000000000} = REG_SZ
 ```
 
-dabei *<scheme>* ist das URL-Schema, das der Handler analysieren soll. Das Schema enthält das nachfolgende Zeichen ":". Beispiel: "http:".
+Dabei ist *&lt; scheme &gt;* das URL-Schema, das der Handler analysieren soll. Das Schema enthält das nachfolgende Zeichen ":". Beispiel: "http:".
 
 Um einen neuen Schemahandler zu registrieren, fügen Sie einen Eintrag hinzu, dessen Name die CLSID des Schemahandlers ist, in kanonischer Zeichenfolgenform: `{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}` . Der Wert des Eintrags ist eine Zeichenfolge (REG \_ SZ), die eine kurze Beschreibung des Handlers enthält, z. B. "Mein Schemahandler". Der wichtige Teil des Eintrags ist die CLSID. Der Quellre resolver erstellt den Handler durch Aufrufen von **CoCreateInstance** mit dieser CLSID.
 
-Schemahandler machen die [**INTERFACESSchemeHandler-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfschemehandler) verfügbar. Wenn der Quellre resolver einen Schemahandler findet, der dem URL-Schema entspricht, ruft der Quellre resolver [**DENSCHEMEHandler::BeginCreateObject**](/windows/desktop/api/mfidl/nf-mfidl-imfschemehandler-begincreateobject)auf und übergibt die ursprüngliche URL. Der Schemahandler öffnet die URL und versucht, den Inhalt zu analysieren. An diesem Punkt verfügt der Schemahandler über zwei Optionen:
+Schemahandler machen die [**HANDLERSchemeHandler-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfschemehandler) verfügbar. Wenn der Quellre resolver einen Schemahandler findet, der dem URL-Schema entspricht, ruft der Quellre resolver [**DENSCHEMEHandler::BeginCreateObject**](/windows/desktop/api/mfidl/nf-mfidl-imfschemehandler-begincreateobject)auf und übergibt die ursprüngliche URL. Der Schemahandler öffnet die URL und versucht, den Inhalt zu analysieren. An diesem Punkt verfügt der Schemahandler über zwei Optionen:
 
 -   Erstellen Sie eine Medienquelle.
 -   Erstellen Sie einen Bytestream.
@@ -60,7 +60,7 @@ Wenn eine Medienquelle erstellt wird, gibt der Quell resolver die Medienquelle a
 
 ## <a name="byte-stream-handlers"></a>Byte-Stream Handler
 
-Bytestreamhandler werden verwendet, wenn die Anwendung [**DEN HANDLERSOURCEResolver::CreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfrombytestream) oder die asynchrone Entsprechung [**BeginCreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream)aufruft. Sie werden auch verwendet, wenn ein Schemahandler einen Bytestream zurückgibt, wie zuvor beschrieben.
+Bytestreamhandler werden verwendet, wenn die Anwendung [**DEN SOURCESourceResolver::CreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfrombytestream) oder die asynchrone Entsprechung [**BeginCreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfrombytestream)aufruft. Sie werden auch verwendet, wenn ein Schemahandler einen Bytestream zurückgibt, wie zuvor beschrieben.
 
 Wie bei Schemahandlern werden byte-stream-Handler in der Registrierung aufgeführt. Sie werden entweder nach Dateinamenerweiterung oder MIME-Typ (oder beidem) unter den folgenden Schlüsseln aufgeführt:
 
@@ -84,11 +84,11 @@ HKEY_LOCAL_MACHINE
                   {00000000-0000-0000-0000-000000000000} = REG_SZ
 ```
 
-dabei *<ExtensionOrMimeType>* ist die Dateinamenerweiterung oder der MIME-Typ. Dateierweiterungen enthalten das anfängliche Zeichen ".". Beispiel: ".wmv".
+*&lt; dabei ist ExtensionOrMimeType &gt;* die Dateinamenerweiterung oder der MIME-Typ. Dateierweiterungen enthalten das anfängliche Zeichen ".". Beispiel: ".wmv".
 
 Die Dateinamenerweiterung ist Teil der URL, die von der Anwendung bereitgestellt wird. Der MIME-Typ kann über das [**MF \_ BYTESTREAM \_ CONTENT \_ TYPE-Attribut**](mf-bytestream-content-type-attribute.md) im Bytestream verfügbar sein.
 
-Um einen neuen Bytestreamhandler zu registrieren, fügen Sie einen Eintrag hinzu, dessen Name die CLSID des Handlers ist, in kanonischer Zeichenfolgenform. Der Wert des Eintrags ist eine Zeichenfolge (REG \_ SZ), die eine kurze Beschreibung des Handlers enthält, z. B. "My Byte-Stream Handler". Der Quellre resolver ruft **CoCreateInstance** auf, um den Handler aus der CLSID zu erstellen. Sie können denselben Handler unter mehreren Erweiterungen oder MIME-Typen registrieren.
+Um einen neuen Bytestreamhandler zu registrieren, fügen Sie in kanonischer Zeichenfolgenform einen Eintrag hinzu, dessen Name die CLSID des Handlers ist. Der Wert des Eintrags ist eine Zeichenfolge (REG \_ SZ), die eine kurze Beschreibung des Handlers enthält, z. B. "My Byte-Stream Handler". Der Quellre resolver ruft **CoCreateInstance** auf, um den Handler aus der CLSID zu erstellen. Sie können denselben Handler unter mehreren Erweiterungen oder MIME-Typen registrieren.
 
 Bytestreamhandler machen die [**INTERFACESByteStreamHandler-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreamhandler) verfügbar. Wenn der Quellre resolver einen übereinstimmenden Bytestreamhandler findet, ruft er [**DENBYTEStreamHandler::BeginCreateObject**](/windows/desktop/api/mfidl/nf-mfidl-imfbytestreamhandler-begincreateobject)auf. Die Eingabe für diese Methode ist ein Zeiger auf den Bytestream sowie ggf. die ursprüngliche URL. Der Bytestreamhandler liest aus dem Bytestream, bis er genügend Daten analysiert, um die Medienquelle zu erstellen.
 

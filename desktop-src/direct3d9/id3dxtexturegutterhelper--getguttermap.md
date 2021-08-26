@@ -1,7 +1,7 @@
 ---
-description: Empfängt einen Texel-Klassen Wert, der Texttypen entsprechend der Position jedes Texttyps angibt.
+description: Empfängt einen Texelklassenwert, der die Texelklasse entsprechend dem Standort jedes Texels angibt.
 ms.assetid: 450739a8-e30c-4e56-9560-8cb705a75672
-title: 'ID3DXTextureGutterHelper:: getguttermap-Methode (D3DX9Mesh. h)'
+title: ID3DXTextureGutterHelper::GetGutterMap-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9d973e716c598eaceaf7f75e6694a35691df4266
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8ef2ed7b088e54dd82b1cc99422e1488139199ffe034e810de8e0a0bdb242f46
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095690"
 ---
-# <a name="id3dxtexturegutterhelpergetguttermap-method"></a>ID3DXTextureGutterHelper:: getguttermap-Methode
+# <a name="id3dxtexturegutterhelpergetguttermap-method"></a>ID3DXTextureGutterHelper::GetGutterMap-Methode
 
-Empfängt einen Texel-Klassen Wert, der Texttypen entsprechend der Position jedes Texttyps angibt.
+Empfängt einen Texelklassenwert, der die Texelklasse entsprechend dem Standort jedes Texels angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ HRESULT GetGutterMap(
 
 <dl> <dt>
 
-*pgutterdata* \[ in, out\]
+*pGutterData* \[ in, out\]
 </dt> <dd>
 
-Type: **[ **Byte**](../winprog/windows-data-types.md)\***
+Typ: **[ **BYTE**](../winprog/windows-data-types.md)\***
 
-Zeiger auf die Texel-Klasse. Mögliche Texel-Klassen: Es ist keine Texel-Klasse 3 vorhanden.
+Zeiger auf die Texelklasse. Folgende Texelklassen sind möglich. Es gibt keine Texelklasse 3.
 
 
 
-| Texel-Klasse | Textsort                                                                                                                                                                                                                                                                                                                                                                |
+| Texel-Klasse | Texel-Standort                                                                                                                                                                                                                                                                                                                                                                |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0           | Ungültiger Punkt; Texel wird nicht verwendet.                                                                                                                                                                                                                                                                                                                                        |
 | 1           | Innerhalb des Dreiecks.                                                                                                                                                                                                                                                                                                                                                              |
-| 2           | Im bundbundbereich.                                                                                                                                                                                                                                                                                                                                                                |
-| 4           | Im bundbundbereich; Texel wird als vollständiges Beispiel in der [**ID3DXTextureGutterHelper:: applyguttersfloat**](id3dxtexturegutterhelper--applyguttersfloat.md), [**ID3DXTextureGutterHelper:: applygutterstex**](id3dxtexturegutterhelper--applygutterstex.md)-Methode oder der [**ID3DXTextureGutterHelper:: applyguttersprt**](id3dxtexturegutterhelper--applyguttersprt.md) -Methode ausgewertet. |
+| 2           | Innerhalb des Bundstegs.                                                                                                                                                                                                                                                                                                                                                                |
+| 4           | Innerhalb des Bundstegs; texel wird als vollständiges Beispiel in den Methoden [**ID3DXTextureGutterHelper::ApplyGuttersFloat,**](id3dxtexturegutterhelper--applyguttersfloat.md) [**ID3DXTextureGutterHelper::ApplyGuttersTex**](id3dxtexturegutterhelper--applygutterstex.md)oder [**ID3DXTextureGutterHelper::ApplyGuttersPRT**](id3dxtexturegutterhelper--applyguttersprt.md) ausgewertet. |
 
 
 
@@ -66,11 +66,11 @@ Zeiger auf die Texel-Klasse. Mögliche Texel-Klassen: Es ist keine Texel-Klasse 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ invalidcall
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben. D3DERR \_ INVALIDCALL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung muss pgutterdata zuordnen und verwalten, wobei die Größe von angegeben wird:
+Die Anwendung muss pGutterData zuordnen und verwalten, wobei die Größe wie folgt angegeben ist:
 
 
 ```
@@ -79,7 +79,7 @@ texture width * texture height * sizeof(BYTE)
 
 
 
-Textur Breite und-Höhe werden von [**ID3DXTextureGutterHelper:: getWidth**](id3dxtexturegutterhelper--getwidth.md) und [**ID3DXTextureGutterHelper:: GetHeight**](id3dxtexturegutterhelper--getheight.md)zurückgegeben.
+Texturbreite und -höhe werden von [**ID3DXTextureGutterHelper::GetWidth**](id3dxtexturegutterhelper--getwidth.md) und [**ID3DXTextureGutterHelper::GetHeight**](id3dxtexturegutterhelper--getheight.md)zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Textur Breite und-Höhe werden von [**ID3DXTextureGutterHelper:: getWidth**](id3
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

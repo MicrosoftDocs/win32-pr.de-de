@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. GetFolders (Eigenschaft)
-description: Ruft bei der Skripterstellung alle Unterordner im Ordner ab.
+title: TaskFolder.GetFolders-Eigenschaft
+description: Ruft für die Skripterstellung alle Unterordner im Ordner ab.
 ms.assetid: eddbae57-9a25-4336-b100-78d525ad9d0b
 keywords:
 - GetFolders-Eigenschaft Taskplaner
-- GetFolders-Eigenschaft Taskplaner, Task Folder-Objekt
-- Task Folder-Objekt Taskplaner, GetFolders-Eigenschaft
+- GetFolders-Eigenschaft Taskplaner , TaskFolder-Objekt
+- TaskFolder-Objekt Taskplaner , GetFolders-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4fd1affbf24cc2eaf7b17687a078eedd58e2eae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 35df6188929f2f0355f3060c32b56ca1b1e15f2434fe5175976515258a7cf970
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100080"
 ---
-# <a name="taskfoldergetfolders-property"></a>Taskfolder. GetFolders (Eigenschaft)
+# <a name="taskfoldergetfolders-property"></a>TaskFolder.GetFolders-Eigenschaft
 
-Ruft bei der Skripterstellung alle Unterordner im Ordner ab.
+Ruft für die Skripterstellung alle Unterordner im Ordner ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ TaskFolder.GetFolders( _
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -58,7 +58,7 @@ TaskFolder.GetFolders( _
 
 <dl> <dt>
 
-[**Taskfoldercollection**](taskfoldercollection.md)
+[**TaskFolderCollection**](taskfoldercollection.md)
 </dt> </dl>
 
  

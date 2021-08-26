@@ -1,28 +1,28 @@
 ---
-description: Dieses Thema wird dargestellt, weil die erste Dokumentation der IPassportManager3-Schnittstelle nicht zwei Methoden in der vtable enthielt. Diese Informationen werden nur im Interesse einer umfassenden Dokumentation bereitgestellt.
+description: Dieses Thema wird vorgestellt, da die anfängliche Dokumentation der IPassportManager3-Schnittstelle nicht zwei Methoden in der vtable enthält. Diese Informationen werden nur im Interesse einer vollständigen Dokumentation bereitgestellt.
 ms.assetid: 04936141-81ac-42e8-afee-2e42c071aab5
-title: IPassportManager3-Add-ons
+title: IPassportManager3-Add-Ons
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 045d988d2e66b4cdf748b4294bbaa4bc5bb2b01b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 634b5f575dc357e4ed8cb4f9a2ad9f80b402ddafa9ea1cd6f7c49f1a154d2c6e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001700"
 ---
-# <a name="ipassportmanager3-add-ons"></a>IPassportManager3-Add-ons
+# <a name="ipassportmanager3-add-ons"></a>IPassportManager3-Add-Ons
 
-Dieses Thema wird dargestellt, weil die erste Dokumentation der [**IPassportManager3**](/previous-versions/ms817681(v=msdn.10)) -Schnittstelle nicht zwei Methoden in der vtable enthielt. Diese Informationen werden nur im Interesse einer umfassenden Dokumentation bereitgestellt.
+Dieses Thema wird vorgestellt, da die anfängliche Dokumentation der [**IPassportManager3-Schnittstelle**](/previous-versions/ms817681(v=msdn.10)) nicht zwei Methoden in der vtable enthält. Diese Informationen werden nur im Interesse einer vollständigen Dokumentation bereitgestellt.
 
-## <a name="additional-ipassport-manager3-methods"></a>Zusätzliche ipassport manager3-Methoden
+## <a name="additional-ipassport-manager3-methods"></a>Zusätzliche IPassport Manager3-Methoden
 
 
 
 | Methode                                              | BESCHREIBUNG                                                     |
 |-----------------------------------------------------|-----------------------------------------------------------------|
-| [**get- \_ Option**](ipassportmanager3-get-option.md) | Ruft den Wert einer bestimmten .NET Passport-Anmeldeoption ab. |
-| [**Put- \_ Option**](ipassportmanager3-put-option.md) | Legt eine bestimmte .NET Passport-Anmeldeoption fest.                   |
+| [**\_get-Option**](ipassportmanager3-get-option.md) | Ruft den Wert einer bestimmten .NET Passport-Anmeldeoption ab. |
+| [**\_put-Option**](ipassportmanager3-put-option.md) | Legt eine bestimmte .NET Passport-Anmeldeoption fest.                   |
 
 
 

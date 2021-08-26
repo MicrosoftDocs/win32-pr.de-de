@@ -1,7 +1,7 @@
 ---
-description: Stellt die folgenden Operator Überladungen und Typumwandlungen für D3DXCOLOR-Strukturen bereit.
+description: Stellt die folgenden Operatorüberladungen und Typcasts für D3DXCOLOR-Strukturen zur Verfügung.
 ms.assetid: 89780c6f-c78b-4ebe-876a-6dbc37b598ef
-title: D3DXCOLOR Extensions (D3dx9math. h)
+title: D3DXCOLOR-Erweiterungen (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 7f457332f371b2c452a465c5b831774488301c6f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7a07d697192d838298f76205aeb3010fda7bf6a08f58f39fe58893444f604231
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096290"
 ---
 # <a name="d3dxcolor-extensions"></a>D3DXCOLOR-Erweiterungen
 
-Stellt die folgenden Operator Überladungen und Typumwandlungen für [**D3DXCOLOR**](d3dxcolor.md) -Strukturen bereit.
+Stellt die folgenden Operatorüberladungen und Typcasts für [**D3DXCOLOR-Strukturen**](d3dxcolor.md) zur Verfügung.
 
 ``` syntax
 typedef struct D3DXCOLOR
@@ -80,12 +80,12 @@ Abgeleitete Typen: \* LPD3DXCOLOR
 
 Weitere Informationen zu Strukturmembern finden Sie unter [**D3DXCOLOR**](d3dxcolor.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9math. INL implementiert.
+Operatorüberladungen und Typcasts für diese Struktur werden in d3dx9math.inl implementiert.
 
 > [!Note]  
-> Der D3DXCOLOR ()-Konstruktor stürzt zur Laufzeit ab, wenn Sie ihn in Microsoft Visual Studio 2010 mit der [Compileroption Lauf Zeit Fehlerüberprüfungen (/RTCc)](/previous-versions/visualstudio/visual-studio-2010/8wtf2dfz(v=vs.100)) im Debugmodus ausführen.
+> Der D3DXCOLOR()-Konstruktor stürzt zur Laufzeit ab, wenn Sie ihn im Debugmodus in Microsoft Visual Studio 2010 mit der Compileroption [Laufzeitfehlerüberprüfungen (/RTCc)](/previous-versions/visualstudio/visual-studio-2010/8wtf2dfz(v=vs.100)) ausführen.
 
  
 
@@ -95,7 +95,7 @@ Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9ma
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: BCM_GETSPLITINFO Meldung (kommstrg. h)
-description: Ruft Informationen für ein unterteilte Schaltflächen Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des Schaltflächen \_ getsplitinfo-Makros.
+title: BCM_GETSPLITINFO (Commctrl.h)
+description: Ruft Informationen für ein Steuerelement für geteilte Schaltflächen ab. Senden Sie diese Nachricht explizit oder mithilfe des \_ Button GetSplitInfo-Makros.
 ms.assetid: d608440d-b8d8-4e32-9128-08b7566b185c
 keywords:
-- Windows-Steuerelemente für BCM_GETSPLITINFO Meldung
+- BCM_GETSPLITINFO meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 162c5522fcb432e3d512f688ae24aa12d4d0d8e1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1ee0771c8999c6a805931a93ed28c245082d18e538856fde42b69622ee73f9a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119921640"
 ---
-# <a name="bcm_getsplitinfo-message"></a>BCM \_ getsplitinfo-Meldung
+# <a name="bcm_getsplitinfo-message"></a>BCM \_ GETSPLITINFO-Nachricht
 
-Ruft Informationen für ein unterteilte Schaltflächen Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**Schaltflächen \_ getsplitinfo**](/windows/desktop/api/Commctrl/nf-commctrl-button_getsplitinfo) -Makros.
+Ruft Informationen für ein Steuerelement für geteilte Schaltflächen ab. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ Button GetSplitInfo-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-button_getsplitinfo)
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,20 +36,20 @@ Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
+*lParam* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**\_ splitinfo**](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) -Struktur der Schaltfläche, um Informationen über die Schaltfläche zu erhalten. Der Aufrufer ist dafür verantwortlich, den Arbeitsspeicher für die Struktur zuzuordnen. Legen Sie den **Mask** -Member dieser Struktur fest, um zu bestimmen, welche Informationen empfangen werden sollen.
+Ein Zeiger auf eine [**BUTTON \_ SPLITINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) um Informationen über die Schaltfläche zu empfangen. Der Aufrufer ist für die Zuweisung des Arbeitsspeichers für die -Struktur verantwortlich. Legen  Sie den Masken-Member dieser -Struktur fest, um zu bestimmen, welche Informationen empfangen werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton**](button-styles.md) und [**SB \_ defsplitbutton**](button-styles.md) .
+Verwenden Sie diese Meldung nur mit den [**Schaltflächenstilen BS \_ SPLITBUTTON**](button-styles.md) und [**BS \_ DEFSPLITBUTTON.**](button-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -67,13 +67,13 @@ Verwenden Sie diese Meldung nur mit den Schaltflächen Stilen [**\_ SplitButton*
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [Schaltflächenstile](button-styles.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Schaltflächentypen](button-types-and-styles.md)

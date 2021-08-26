@@ -1,28 +1,28 @@
 ---
-title: Zuordnung von RSS-Feeds zu Windows Media Device Manager-Eigenschaften
-description: Zuordnung von RSS-Feeds zu Windows Media Device Manager-Eigenschaften
+title: Zuordnen von RSS-Feeds zu Windows Medieneigenschaften Geräte-Manager
+description: Zuordnen von RSS-Feeds zu Windows Medieneigenschaften Geräte-Manager
 ms.assetid: 354c98ab-1392-476f-a650-75b948dc971a
 keywords:
-- Windows Media Device Manager, RSS-Feeds
-- Device Manager, RSS-Feeds
-- Programmier Handbuch, RSS-Feeds
-- Desktop Anwendungen, RSS-Feeds
-- Erstellen von Windows Media Device Manager-Anwendungen, RSS-Feeds
+- Windows Medien Geräte-Manager, RSS-Feeds
+- Geräte-Manager,RSS-Feeds
+- Programmierhandbuch, RSS-Feeds
+- Desktopanwendungen, RSS-Feeds
+- Erstellen von Windows Media Geräte-Manager-Anwendungen, RSS-Feeds
 - RSS-Feeds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c3a81d52b4099d77542963d2e87ae5b7dc26b034
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 355515217db31740603d5c6323ef8455da4b29ee80bec508897d2d4df5d59bde
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031680"
 ---
-# <a name="mapping-rss-feeds-to-windows-media-device-manager-properties"></a>Zuordnung von RSS-Feeds zu Windows Media Device Manager-Eigenschaften
+# <a name="mapping-rss-feeds-to-windows-media-device-manager-properties"></a>Zuordnen von RSS-Feeds zu Windows Medieneigenschaften Geräte-Manager
 
-Windows Media Player 11 stellt eine RSS-Aggregator-Funktion bereit, die es Benutzern ermöglicht, Inhalte aus Podcasts auf ihren Computern zu speichern. In diesem Thema werden die in einem RSS-Feed gefundenen XML-Elemente beschrieben. Außerdem werden diese RSS-Elemente den Windows Media Device Manager-Eigenschaften zugeordnet.
+Windows Media Player 11 bietet ein RSS-Aggregatorfeature, mit dem Benutzer Inhalte aus Podcasts auf ihren Computern speichern können. In diesem Thema werden die XML-Elemente in einem RSS-Feed beschrieben. Darüber hinaus werden diese RSS-Elemente Windows Media Geräte-Manager-Eigenschaften zugeordnet.
 
-Die Elemente in einem RSS-Feed verfügen über die folgende Hierarchie und Attribute:
+Die Elemente in einem RSS-Feed weisen die folgende Hierarchie und die folgenden Attribute auf:
 
 
 ```C++
@@ -80,80 +80,80 @@ Die Elemente in einem RSS-Feed verfügen über die folgende Hierarchie und Attri
 
 
 
-In der folgenden Tabelle sind die Channelelemente in einem RSS-Feed und die entsprechenden Eigenschaften des Windows Media-Device Manager aufgeführt.
+In der folgenden Tabelle sind die Kanalelemente in einem RSS-Feed und die entsprechenden Windows Media Geräte-Manager-Eigenschaften aufgeführt.
 
 
 
-| Channel-Element | Status         | Zugehörige Windows Media Device Manager-Eigenschaft   |
+| Channel-Element | Status         | Entsprechende Windows Media Geräte-Manager-Eigenschaft   |
 |-----------------|----------------|-------------------------------------------------------|
-| category        | Optional       | [g \_ wszwmdmgenre](metadata-constants.md)             |
+| category        | Optional       | [g \_ wszWMDMGenre](metadata-constants.md)             |
 | cloud           | Nicht verfügbar | Nicht verfügbar                                        |
-| Copyright       | Optional       | [g \_ wszwmdmprovidercopyright](metadata-constants.md) |
-| description     | Erforderlich       | [g \_ wszwmdmdescription](metadata-constants.md)       |
+| Copyright       | Optional       | [g \_ wszWMDMProviderCopyright](metadata-constants.md) |
+| description     | Erforderlich       | [g \_ wszWMDMDescription](metadata-constants.md)       |
 | Docs            | Nicht verfügbar | Nicht verfügbar                                        |
 | Generator       | Nicht verfügbar | Nicht verfügbar                                        |
 | language        | Nicht verfügbar | Nicht verfügbar                                        |
-| lastBuildDate   | Optional       | [g \_ wszwmdmlastmodifieddate](metadata-constants.md)  |
-| link            | Erforderlich       | [g \_ wszwmdmdestinationurl](metadata-constants.md)    |
-| managingEditor  | Optional       | [g \_ wszwmdmeditor](metadata-constants.md)            |
-| pubDate         | Optional       | [g \_ wszwmdmyear](metadata-constants.md)              |
+| lastBuildDate   | Optional       | [g \_ wszWMDMLastModifiedDate](metadata-constants.md)  |
+| link            | Erforderlich       | [g \_ wszWMDMDestinationURL](metadata-constants.md)    |
+| managingEditor  | Optional       | [g \_ wszWMDMEditor](metadata-constants.md)            |
+| Pubdate         | Optional       | [g \_ wszWMDMYear](metadata-constants.md)              |
 | rating          | Nicht verfügbar | Nicht verfügbar                                        |
-| skipdays        | Nicht verfügbar | Nicht verfügbar                                        |
-| skiphours       | Nicht verfügbar | Nicht verfügbar                                        |
-| TextInput       | Nicht verfügbar | Nicht verfügbar                                        |
-| title           | Erforderlich       | [g \_ wszwmdmtitle](metadata-constants.md)             |
-| ttl             | Optional       | [g \_ wszwmdmtimeeslive](metadata-constants.md)        |
-| webMaster       | Optional       | [g \_ wszwmdmwebmaster](metadata-constants.md)         |
+| skipDays        | Nicht verfügbar | Nicht verfügbar                                        |
+| skipHours       | Nicht verfügbar | Nicht verfügbar                                        |
+| Textinput       | Nicht verfügbar | Nicht verfügbar                                        |
+| title           | Erforderlich       | [g \_ wszWMDMTitle](metadata-constants.md)             |
+| ttl             | Optional       | [g \_ wszWMDMTimeToLive](metadata-constants.md)        |
+| Webmaster       | Optional       | [g \_ wszWMDMWebMaster](metadata-constants.md)         |
 
 
 
- 
+ 
 
 In der folgenden Tabelle sind die Bildelemente in einem RSS-Feed und die entsprechenden WMDM-Eigenschaften aufgeführt.
 
 
 
-| Image-Element | Status   | Zugehörige Windows Media Device Manager-Eigenschaft |
+| Image-Element | Status   | Entsprechende Windows Media Geräte-Manager-Eigenschaft |
 |---------------|----------|-----------------------------------------------------|
-| description   | Optional | [g \_ wszwmdmdescription](metadata-constants.md)     |
-| height        | Optional | [g \_ wszwmdmheight](metadata-constants.md)          |
-| link          | Optional | [g \_ wszwmdmdestinationurl](metadata-constants.md)  |
-| title         | Optional | [g \_ wszwmdmtitle](metadata-constants.md)           |
-| url           | Optional | [g \_ wszwmdmsourceurl](metadata-constants.md)       |
-| width         | Optional | [g \_ wszwmdmwidth](metadata-constants.md)           |
+| description   | Optional | [g \_ wszWMDMDescription](metadata-constants.md)     |
+| height        | Optional | [g \_ wszWMDMHeight](metadata-constants.md)          |
+| link          | Optional | [g \_ wszWMDMDestinationURL](metadata-constants.md)  |
+| title         | Optional | [g \_ wszWMDMTitle](metadata-constants.md)           |
+| URL           | Optional | [g \_ wszWMDMSourceURL](metadata-constants.md)       |
+| width         | Optional | [g \_ wszWMDMWidth](metadata-constants.md)           |
 
 
 
- 
+ 
 
-In der folgenden Tabelle sind die Element Elemente in einem RSS-Feed und die entsprechenden Eigenschaften des Windows Media-Device Manager aufgeführt.
+In der folgenden Tabelle sind die Elementelemente in einem RSS-Feed und die entsprechenden Windows Media Geräte-Manager-Eigenschaften aufgeführt.
 
 
 
-| Item-Element | Attribut   | Status         | Zugehörige Windows Media Device Manager-Eigenschaft            |
+| Item-Element | attribute   | Status         | Entsprechende Windows Media Geräte-Manager-Eigenschaft            |
 |--------------|-------------|----------------|----------------------------------------------------------------|
-| author       |             | Optional       | [g \_ wszwmdmauthor](metadata-constants.md)                     |
-| category     |             | Optional       | [g \_ wszwmdmgenre](metadata-constants.md)                      |
+| author       |             | Optional       | [g \_ wszWMDMAuthor](metadata-constants.md)                     |
+| category     |             | Optional       | [g \_ wszWMDMGenre](metadata-constants.md)                      |
 |              | Domäne      | Nicht verfügbar | Nicht verfügbar                                                 |
-| description  |             | Optional       | [g \_ wszwmdmdescription](metadata-constants.md)                |
-| ungs    |             | Optional       | Nicht verfügbar                                                 |
-|              | length      | Erforderlich       | [g \_ wszwmdmfilesize](metadata-constants.md)                   |
-|              | type        | Erforderlich       | (Der MIME-Typ sollte dem Eigenschafts Inhaltstyp zugeordnet werden.) |
-|              | url         | Erforderlich       | [g \_ wszwmdmsourceurl](metadata-constants.md)                  |
-| guid         |             | Optional       | [g \_ wszwmdmediaguid](metadata-constants.md)                   |
-|              | ispermalink | Nicht verfügbar | Nicht verfügbar                                                 |
-| link         |             | Optional       | [g \_ wszwmdmdestinationurl](metadata-constants.md)             |
-| pubDate      |             | Optional       | [g \_ wszwmdmyear](metadata-constants.md)                       |
+| description  |             | Optional       | [g \_ wszWMDMDescription](metadata-constants.md)                |
+| Gehäuse    |             | Optional       | Nicht verfügbar                                                 |
+|              | length      | Erforderlich       | [g \_ wszWMDMFileSize](metadata-constants.md)                   |
+|              | type        | Erforderlich       | (Der MIME-Typ sollte dem Inhaltstyp der Eigenschaft zugeordnet werden.) |
+|              | URL         | Erforderlich       | [g \_ wszWMDMSourceURL](metadata-constants.md)                  |
+| guid         |             | Optional       | [g \_ wszWMDMediaGuid](metadata-constants.md)                   |
+|              | isPermaLink | Nicht verfügbar | Nicht verfügbar                                                 |
+| link         |             | Optional       | [g \_ wszWMDMDestinationURL](metadata-constants.md)             |
+| Pubdate      |             | Optional       | [g \_ wszWMDMYear](metadata-constants.md)                       |
 | source       |             | Nicht verfügbar | Nicht verfügbar                                                 |
-| title        |             | Optional       | [g \_ wszwmdmtitle](metadata-constants.md)                      |
+| title        |             | Optional       | [g \_ wszWMDMTitle](metadata-constants.md)                      |
 
 
 
- 
+ 
 
 Beispiel
 
-Das folgende Beispiel zeigt einen kompletten RSS-Feed für einen fiktiven Podcast, der vom CEO eines Veröffentlichungs Unternehmens bereitgestellt wird.
+Das folgende Beispiel zeigt einen vollständigen RSS-Feed für einen fiktiven Podcast, der vom CEO eines Veröffentlichungsunternehmens bereitgestellt wird.
 
 
 ```C++
@@ -204,93 +204,93 @@ Das folgende Beispiel zeigt einen kompletten RSS-Feed für einen fiktiven Podcas
 
 
 
-Zuordnung von RSS-Channel-Elementen zu Windows Media Device Manager-Eigenschafts Werten
+Zuordnen von RSS-Kanalelementen zu Windows Media Geräte-Manager-Eigenschaftswerten
 
-In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-channelelementen im vorherigen Beispiel bestimmten Windows Media Device Manager-Eigenschaften zugeordnet werden.
+In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Kanalelementen im vorherigen Beispiel bestimmten Eigenschaften Windows Media Geräte-Manager werden.
 
 
 
-| Windows Media Device Manager-Eigenschaft                    | Wert                                                                                         |
+| Windows Media Geräte-Manager-Eigenschaft                    | Wert                                                                                         |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| [g \_ wszwmdmauthordate](metadata-constants.md)           | Fr, 9. Juni 2006 14:00:28 (EDT)                                                                 |
-| [g \_ wszwmdmdescription](metadata-constants.md)          | Lucerne Publishing CEO Peter Bankow befasst sich mit den neuesten Trends in Online Veröffentlichungen. |
-| [g \_ wszwmdmdestination- \_ URL](metadata-constants.md)     | https://www.lucernepublishing/services/podcasting                                              |
-| [g \_ wszwmdmeditor](metadata-constants.md)               | someone@example.com                                                                           |
-| [g \_ wszwmdmfilekreationdate](metadata-constants.md)     | Fr, 9. Juni 2006 14:00:28 (EDT)                                                                 |
-| [g \_ wszwmdmfilename](metadata-constants.md)             | Die digitale Veröffentlichung                                                                       |
-| [g \_ wszwmdmfilesize](metadata-constants.md)             | 13.790                                                                                        |
-| [g \_ wszwmdmformatcode](metadata-constants.md)           | WMDM- \_ Formatcode- \_ Medien Umwandlung \_                                                                 |
-| [g \_ wszwmdmgenre](metadata-constants.md)                | News                                                                                          |
-| [g \_ wszwmdmlast-Änderungs \_ \_ Datum](metadata-constants.md) | Fr, 9. Juni 2006 14:00:28 (EDT)                                                                 |
-| [g \_ wszwmdmlastmodifieddate](metadata-constants.md)     | Fr, 9. Juni 2006 14:00:28 (EDT)                                                                 |
-| [g \_ wszwmdmprovidercopyright](metadata-constants.md)    | 2006 Lucerne Publishing LP, LLLP. Alle Rechte vorbehalten.                                        |
-| [g \_ wszwmdmtimeeslive](metadata-constants.md)           | 240                                                                                           |
-| [g \_ wszwmdmtitle](metadata-constants.md)                | Die digitale Veröffentlichung                                                                       |
-| [g \_ wszwmdmwebmaster](metadata-constants.md)            | someone@example.com                                                                           |
-| [g \_ wszwmdmyear](metadata-constants.md)                 | Fr, 9. Juni 2006 14:00:28 (EDT)                                                                 |
+| [g \_ wszWMDMAuthorDate](metadata-constants.md)           | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
+| [g \_ wszWMDMDESCRIPTION](metadata-constants.md)          | Peter Bankov, CEO von Lucerne Publishing, wirf einen Blick auf die neuesten Trends in Onlineveröffentlichungen. |
+| [g \_ wszWMDMDESTINATION \_ URL](metadata-constants.md)     | https://www.lucernepublishing/services/podcasting                                              |
+| [g \_ wszWMDMEDITOR](metadata-constants.md)               | someone@example.com                                                                           |
+| [g \_ wszWMDMFileCreationDate](metadata-constants.md)     | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
+| [g \_ wszWMDMFileName](metadata-constants.md)             | Die digitale Veröffentlichung                                                                       |
+| [g \_ wszWMDMFileSize](metadata-constants.md)             | 13,790                                                                                        |
+| [g \_ wszWMDMFormatCode](metadata-constants.md)           | WMDM \_ FORMATCODE \_ MEDIA \_ CAST                                                                 |
+| [g \_ wszWMDMGENRE](metadata-constants.md)                | News                                                                                          |
+| [g \_ wszWMDMLAST \_ MODIFIED \_ DATE](metadata-constants.md) | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
+| [g \_ wszWMDMLastModifiedDate](metadata-constants.md)     | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
+| [g \_ wszWMDMProviderCopyright](metadata-constants.md)    | 2006 Lucerne Publishing LP, LLLP. Alle Rechte vorbehalten.                                        |
+| [g \_ wszWMDMTimeToLive](metadata-constants.md)           | 240                                                                                           |
+| [g \_ wszWMDMTitle](metadata-constants.md)                | Die digitale Veröffentlichung                                                                       |
+| [g \_ wszWMDMWEBMASTER](metadata-constants.md)            | someone@example.com                                                                           |
+| [g \_ wszWMDMYear](metadata-constants.md)                 | Fr, 9. Juni 2006 14:00:28 EDT                                                                 |
 
 
 
- 
+ 
 
-Zuordnung von RSS-Bildelementen zu Windows Media Device Manager-Eigenschafts Werten
+Zuordnen von RSS-Bildelementen zu Windows Media Geräte-Manager-Eigenschaftswerten
 
-In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Bildelementen im vorherigen Beispiel bestimmten Windows Media Device Manager-Eigenschaften zugeordnet werden.
+In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Bildelementen im vorherigen Beispiel bestimmten Eigenschaften Windows Media Geräte-Manager werden.
 
 
 
-| Windows Media Device Manager-Eigenschaft                | Wert                                            |
+| Windows Media Geräte-Manager-Eigenschaft                | Wert                                            |
 |------------------------------------------------------|--------------------------------------------------|
-| [g \_ wszwmdmalbumcoverformat](metadata-constants.md) | WPD- \_ Objekt \_ Format \_ GIF                         |
-| [g \_ wszwmdmalbumcoversize](metadata-constants.md)   | 512                                              |
-| [g \_ wszwmdmdescription](metadata-constants.md)      | Lucerne-Logo                                     |
-| [g \_ wszwmdmdestinationurl](metadata-constants.md)   | www.lucernepublishing.com/community/podcasts   |
-| [g \_ wszwmdmheight](metadata-constants.md)           | 300                                              |
-| [g \_ wszwmdmsourceurl](metadata-constants.md)        | https://www.lucernepublishing.com/images/logo.gif |
-| [g \_ wszwmdmtitle](metadata-constants.md)            | Lucerne Publishing                               |
-| [g \_ wszwmdmwidth](metadata-constants.md)            | 300                                              |
+| [g \_ wszWMDMWiederherstellenFormat](metadata-constants.md) | \_WPD-OBJEKTFORMAT \_ \_ GIF                         |
+| [g \_ wszWMDMWiederherstellenSize](metadata-constants.md)   | 512                                              |
+| [g \_ wszWMDMDescription](metadata-constants.md)      | Lucerne-Logo                                     |
+| [g \_ wszWMDMDestinationURL](metadata-constants.md)   | www.lucernepublishing.com/community/podcasts   |
+| [g \_ wszWMDMHeight](metadata-constants.md)           | 300                                              |
+| [g \_ wszWMDMSourceURL](metadata-constants.md)        | https://www.lucernepublishing.com/images/logo.gif |
+| [g \_ wszWMDMTitle](metadata-constants.md)            | Lucerne Publishing                               |
+| [g \_ wszWMDMWidth](metadata-constants.md)            | 300                                              |
 
 
 
- 
+ 
 
-Zuordnung von RSS-Element Elementen zu Windows Media Device Manager-Eigenschafts Werten
+Zuordnen von RSS-Elementelementen zu Windows Media Geräte-Manager-Eigenschaftswerten
 
-In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS-Element Elementen im vorherigen Beispiel bestimmten Windows Media Device Manager-Eigenschaften zugeordnet werden.
+In der folgenden Tabelle wird beschrieben, wie die Werte in den RSS Item-Elementen im vorherigen Beispiel bestimmten Eigenschaften Windows Media Geräte-Manager werden.
 
 
 
-| Windows Media Device Manager-Eigenschaft                | Wert                                                                                                                               |
+| Windows Media Geräte-Manager-Eigenschaft                | Wert                                                                                                                               |
 |------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| [g \_ wszwmdmauthor](metadata-constants.md)           | Luzerner                                                                                                                             |
-| [g \_ wszwmdmauthordate](metadata-constants.md)       | Thur, 1. Juni 2006 14:00:28 (EDT)                                                                                                      |
-| [g \_ wszwmdmdescription](metadata-constants.md)      | Online Veröffentlichungen werden rasch geändert. Ein Publishing House-CEO untersucht die Trends der letzten fünf Jahre und deren Auswirkungen. |
-| [g \_ wszwmdmdestinationurl](metadata-constants.md)   | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
-| [g \_ wszwmdmduration](metadata-constants.md)         | 120325445                                                                                                                           |
-| [g \_ wszwmdmfilekreationdate](metadata-constants.md) | Thur, 1. Juni 2006 14:00:28 (EDT)                                                                                                      |
-| [g \_ wszwmdmfilesize](metadata-constants.md)         | 10329011                                                                                                                            |
-| [g \_ wszwmdmformatcode](metadata-constants.md)       | WMDM \_ Formatcode \_ MP3                                                                                                               |
-| [g \_ wszwmdmgenre](metadata-constants.md)            | News                                                                                                                                |
-| [g \_ wszwmdmlastmodifieddate](metadata-constants.md) | Thur, 1. Juni 2006 14:00:28 (EDT)                                                                                                      |
-| [g \_ wszwmdmmediaguid](metadata-constants.md)        | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
-| [g \_ wszwmdmsourceurl](metadata-constants.md)        | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
-| [g \_ wszwmdmtitle](metadata-constants.md)            | Die digitale Veröffentlichung                                                                                                             |
-| [g \_ wszwmdmyear](metadata-constants.md)             | Thur, 1. Juni 2006 14:00:28 (EDT)                                                                                                      |
+| [g \_ wszWMDMAuthor](metadata-constants.md)           | Luzern                                                                                                                             |
+| [g \_ wszWMDMAuthorDate](metadata-constants.md)       | Ite, 1. Juni 2006, 14:00:28 EDT                                                                                                      |
+| [g \_ wszWMDMDescription](metadata-constants.md)      | Onlineveröffentlichungen ändern sich schnell. Ein CEO eines Herausgebers untersucht die Trends der letzten fünf Jahre und deren Auswirkungen. |
+| [g \_ wszWMDMDestinationURL](metadata-constants.md)   | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
+| [g \_ wszWMDMDuration](metadata-constants.md)         | 120325445                                                                                                                           |
+| [g \_ wszWMDMFileCreationDate](metadata-constants.md) | Ite, 1. Juni 2006, 14:00:28 EDT                                                                                                      |
+| [g \_ wszWMDMFileSize](metadata-constants.md)         | 10329011                                                                                                                            |
+| [g \_ wszWMDMFormatCode](metadata-constants.md)       | WMDM \_ FORMATCODE \_ MP3                                                                                                               |
+| [g \_ wszWMDMGenre](metadata-constants.md)            | News                                                                                                                                |
+| [g \_ wszWMDMLastModifiedDate](metadata-constants.md) | Ite, 1. Juni 2006, 14:00:28 EDT                                                                                                      |
+| [g \_ wszWMDMMediaGuid](metadata-constants.md)        | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
+| [g \_ wszWMDMSourceURL](metadata-constants.md)        | https://www.lucernepublishing/services/podcasting/digital.publishing/audio/2006/06/digital0601.mp3                                   |
+| [g \_ wszWMDMTitle](metadata-constants.md)            | Die digitale Veröffentlichung                                                                                                             |
+| [g \_ wszWMDMYear](metadata-constants.md)             | Ite, 1. Juni 2006, 14:00:28 EDT                                                                                                      |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Metadatenkonstanten**](metadata-constants.md)
+[**Metadatenkonst constants**](metadata-constants.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

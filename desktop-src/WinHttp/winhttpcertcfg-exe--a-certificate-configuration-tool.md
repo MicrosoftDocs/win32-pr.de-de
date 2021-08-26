@@ -1,21 +1,21 @@
 ---
-description: Mit dem Zertifikatkonfigurationstool microsoft Windows HTTP Services (WinHTTP) &\# 0034;WinHttpCertCfg.exe&0034; können Administratoren Clientzertifikate in jedem Zertifikatspeicher installieren und konfigurieren, auf den das \# Internet Server Web Application Manager-Konto (IWAM) zugreifen kann. Das Tool entfällt auch die Notwendigkeit, besondere Maßnahmen für Konten wie das IWAM-Konto zu unternehmen, um zugriff auf Zertifikate zu erhalten, wenn sie Active Server Pages (ASP) verwenden.
+description: Mit dem Zertifikatkonfigurationstool microsoft Windows HTTP Services (WinHTTP) &\# 0034;WinHttpCertCfg.exe&0034; können Administratoren Clientzertifikate in jedem Zertifikatspeicher installieren und konfigurieren, auf den das \# Internet Server Web Application Manager-Konto (IWAM) zugreifen kann. Das Tool entfällt auch die Notwendigkeit, besondere Maßnahmen für Konten wie das IWAM-Konto zu unternehmen, um zugriff auf Zertifikate zu erhalten, wenn Sie Active Server Pages (ASP) verwenden.
 ms.assetid: e4c2afc2-0fd3-4bdd-812e-f112958e1576
 title: WinHttpCertCfg.exe, ein Zertifikatkonfigurationstool
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51ce9978f6e2ffcafa1357a45dbeff80c12bf0e6ea2f7f3fb9656376b33dfb23
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 21b8fbfadd6cf0282f63b26c8dd40d5ef96b5f54
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117743798"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466427"
 ---
 # <a name="winhttpcertcfgexe-a-certificate-configuration-tool"></a>WinHttpCertCfg.exe, ein Zertifikatkonfigurationstool
 
-Mit dem [Zertifikatkonfigurationstool "WinHttpCertCfg.exe" von Microsoft Windows HTTP Services (WinHTTP)](about-winhttp.md) können Administratoren Clientzertifikate [](glossary.md) in jedem Zertifikatspeicher installieren und konfigurieren, auf den das Internet Server Web Application Manager-Konto (IWAM) zugreifen kann. Das Tool entfällt auch die Notwendigkeit, besondere Maßnahmen für Konten wie das IWAM-Konto zu unternehmen, um zugriff auf Zertifikate zu erhalten, wenn sie Active Server Pages (ASP) verwenden.
+Mit dem [Zertifikatkonfigurationstool "WinHttpCertCfg.exe" von Microsoft Windows HTTP Services (WinHTTP)](about-winhttp.md) können Administratoren Clientzertifikate [](glossary.md) in jedem Zertifikatspeicher installieren und konfigurieren, auf den das Internet Server Web Application Manager-Konto (IWAM) zugreifen kann. Das Tool entfällt auch die Notwendigkeit, besondere Maßnahmen für Konten wie das IWAM-Konto zu unternehmen, um zugriff auf Zertifikate zu erhalten, wenn Sie Active Server Pages (ASP) verwenden.
 
-Mit Microsoft Management Console (MMC) können Administratoren Clientzertifikate auf einen lokalen Computer importieren. Beim Importieren eines Zertifikats wird jedoch nicht automatisch Zugriff auf den privaten Schlüssel für andere Konten gewährt. Dieser private Schlüssel ist für die Clientzertifikatauthentifizierung erforderlich. Das WinHTTP-Zertifikatkonfigurationstool (Microsoft Windows HTTP Services) bietet die Möglichkeit, bei Bedarf Zugriff auf zusätzliche Konten wie das IWAM-Konto zu gewähren.
+Mit Microsoft Management Console (MMC) können Administratoren Clientzertifikate auf einen lokalen Computer importieren. Beim Importieren eines Zertifikats wird jedoch nicht automatisch Zugriff auf den privaten Schlüssel für andere Konten gewährt. Dieser private Schlüssel ist für die Clientzertifikatauthentifizierung erforderlich. Das Microsoft Windows-Zertifikatkonfigurationstool (WinHTTP) bietet die Möglichkeit, bei Bedarf Zugriff auf zusätzliche Konten zu gewähren, z. B. das IWAM-Konto.
 
 -   [Verwenden des Zertifikatkonfigurationstools](#using-the-certificate-configuration-tool)
 -   [Beispiele](#examples)
@@ -36,61 +36,19 @@ In der folgenden Tabelle sind die Parameter für das Konfigurationstool aufgefü
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>-?</td>
-<td>Zeigt Syntaxdaten an.</td>
-</tr>
-<tr class="even">
-<td>-i</td>
-<td>Gibt an, dass das Zertifikat aus einer PFX-Datei (Personal Information Exchange) importiert werden soll. Auf diesen Parameter muss der Name der Datei folgen. Wenn dieser Parameter angegeben wird, &quot; müssen -a &quot; und &quot; -c ebenfalls angegeben &quot; werden.</td>
-</tr>
-<tr class="odd">
-<td>-g</td>
-<td>Gibt an, dass zugriff auf einen privaten Schlüssel gewährt wird. Wenn dieser Parameter angegeben wird, &quot; müssen &quot; -a, &quot; -c und &quot; &quot; -s ebenfalls angegeben &quot; werden.</td>
-</tr>
-<tr class="even">
-<td>-r</td>
-<td>Gibt an, dass der Zugriff für einen privaten Schlüssel entfernt wird. Wenn dieser Parameter angegeben wird, &quot; müssen &quot; -a, &quot; -c und &quot; &quot; -s ebenfalls angegeben &quot; werden.</td>
-</tr>
-<tr class="odd">
-<td>-l</td>
-<td>Gibt an, dass Konten mit Zugriff auf einen privaten Schlüssel aufgelistet werden. Wenn dieser Parameter angegeben wird, &quot; müssen -c &quot; und &quot; -s ebenfalls angegeben &quot; werden.</td>
-</tr>
-<tr class="even">
-<td>-a</td>
-<td>Gibt das Benutzerkonto auf dem Computer an, der konfiguriert wird. Dies kann ein lokaler Computer oder ein Domänenkonto sein, z. B. &quot; IWAM_TESTMACHINE &quot; , &quot; TESTUSER &quot; oder &quot; TESTDOMAIN\DOMAINUSER &quot; .</td>
-</tr>
-<tr class="odd">
-<td>-c</td>
-<td>Gibt den Speicherort und den Namen des <a href="glossary.md"><em>Zertifikatspeichers an.</em></a> Verwenden &quot; LOCAL_MACHINE &quot; oder &quot; &quot; CURRENT_USER, um zu bestimmen, welcher Registrierungszweig für den Speicherort verwendet werden soll. Der <em>Zertifikatspeicher</em> kann ein beliebiger auf dem Computer installierter sein. Typische Namensbeispiele sind &quot; &quot; MY, &quot; Root und &quot; &quot; &quot; TrustedPeople. Speicherort und Name <em></em> des Zertifikatspeichers sind durch einen rückwärts gerichteten Schrägstrich getrennt, z. B. &quot; LOCAL_MACHINE\Root. &quot;
-<blockquote>
-[!Note]<br />
-Obwohl der CURRENT_USER-Branch der Registrierung mit diesem Parameter angegeben werden kann, ist die Erweiterung des Zugriffs auf private Schlüssel in erster Linie für Zertifikate vorgesehen, die in einem Zertifikatspeicher eines lokalen Computers installiert sind, auf den mehrere Benutzer zugreifen &quot; &quot; können. <a href="glossary.md"><em></em></a>
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>-S</td>
-<td>Gibt eine Suchzeichenfolge an, bei der die Groß-/Kleinschreibung nicht beachtet wird, um das erste aufzählte Zertifikat mit einem Betreffnamen zu suchen, der diese Teilzeichenfolge enthält.</td>
-</tr>
-<tr class="odd">
-<td>-p</td>
-<td>Gibt ein Kennwort an, das zum Importieren des Zertifikats und des privaten Schlüssels verwendet wird. Dies wird nur mit der Importoption verwendet.</td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | BESCHREIBUNG | 
+|-----------|-------------|
+| -? | Zeigt Syntaxdaten an. | 
+| -i | Gibt an, dass das Zertifikat aus einer PFX-Datei (Personal Information Exchange) importiert werden soll. Auf diesen Parameter muss der Name der Datei folgen. Wenn dieser Parameter angegeben wird, müssen auch "-a" und "-c" angegeben werden. | 
+| -g | Gibt an, dass zugriff auf einen privaten Schlüssel gewährt wird. Wenn dieser Parameter angegeben wird, müssen auch "-a", "-c" und "-s" angegeben werden. | 
+| -r | Gibt an, dass der Zugriff für einen privaten Schlüssel entfernt wird. Wenn dieser Parameter angegeben wird, müssen auch "-a", "-c" und "-s" angegeben werden. | 
+| -l | Gibt an, dass Konten mit Zugriff auf einen privaten Schlüssel aufgelistet werden. Wenn dieser Parameter angegeben wird, müssen auch "-c" und "-s" angegeben werden. | 
+| -a | Gibt das Benutzerkonto auf dem Computer an, der konfiguriert wird. Dies kann ein lokaler Computer oder ein Domänenkonto sein, z. B. "IWAM_TESTMACHINE", "TESTUSER" oder "TESTDOMAIN\DOMAINUSER". | 
+| -c | Gibt den Speicherort und den Namen des <a href="glossary.md"><em>Zertifikatspeichers an.</em></a> Verwenden Sie "LOCAL_MACHINE" oder "CURRENT_USER", um zu bestimmen, welcher Registrierungszweig für den Speicherort verwendet werden soll. Der <em>Zertifikatspeicher</em> kann ein beliebiger auf dem Computer installierter sein. Typische Namensbeispiele sind "MY", "Root" und "TrustedPeople". Speicherort und Name des <em>Zertifikatspeichers</em> sind durch einen rückwärts gerichteten Schrägstrich getrennt, z. B. "LOCAL_MACHINE\Root".<blockquote>[!Note]<br />Obwohl der "CURRENT_USER"-Branch der Registrierung mit diesem Parameter angegeben werden kann, ist die Erweiterung des Zugriffs <a href="glossary.md"><em></em></a> auf private Schlüssel in erster Linie für Zertifikate vorgesehen, die in einem Zertifikatspeicher eines lokalen Computers installiert sind, auf die mehrere Benutzer zugreifen können.</blockquote><br /> | 
+| -S | Gibt eine Suchzeichenfolge an, bei der die Groß-/Kleinschreibung nicht beachtet wird, um das erste aufzählte Zertifikat mit einem Betreffnamen zu suchen, der diese Teilzeichenfolge enthält. | 
+| -p | Gibt ein Kennwort an, das zum Importieren des Zertifikats und des privaten Schlüssels verwendet wird. Dies wird nur mit der Importoption verwendet. | 
+
 
 
 

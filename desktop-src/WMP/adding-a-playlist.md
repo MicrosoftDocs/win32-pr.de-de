@@ -4,27 +4,27 @@ description: Hinzufügen einer Wiedergabeliste
 ms.assetid: be0c2cac-245d-4435-87d9-4f17076e005a
 keywords:
 - Erstellen von Skins, Wiedergabelisten
-- Windows Media Player Skins, Wiedergabelisten
+- Windows Media Player skins,playlists
 - Skins, Wiedergabelisten
-- Wiedergabelisten, Skins
-- Metadatei-Wiedergabelisten, Skins
-- Windows Media Metadatei-Wiedergabelisten, Skins
+- Wiedergabelisten,Skins
+- Metafile-Wiedergabelisten,Skins
+- Windows Wiedergabelisten von Medienmetadateien, Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c42a4bc253d4b1a3ba9b8fe0f31ca16b0d522956
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e23d9198f1f913b83cef40cea9f6ec47976f9f1e08a5e54257ab16df63e538b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031590"
 ---
 # <a name="adding-a-playlist"></a>Hinzufügen einer Wiedergabeliste
 
-Mithilfe von Wiedergabelisten können Sie aus den Sammlungen ihrer Audiodaten und Videos auswählen.
+Sie können Wiedergabelisten verwenden, um aus Sammlungen Ihrer Audio- und Videodateien zu wählen.
 
-Wenn Sie die Grafik von ihrer ersten Skin verwenden, können Sie einige Änderungen an der Skin-Definitionsdatei vornehmen.
+Mithilfe der Grafik aus Ihrer ersten Skin können Sie einige Änderungen an der Skindefinitionsdatei vornehmen.
 
-Der erste Schritt besteht darin, die Shell zu verwenden, die für die meisten Skins verwendet wird:
+Der erste Schritt besteht in der Verwendung der Shell, die Sie für die meisten Skins verwenden:
 
 
 ```C++
@@ -47,7 +47,7 @@ Der erste Schritt besteht darin, die Shell zu verwenden, die für die meisten Sk
 
 
 
-Fügen Sie nun eine zweite **Ansicht** hinzu, die eine Wiedergabeliste enthält. Platzieren Sie den folgenden Code nach dem </VIEW> des Shellcodes.
+Fügen Sie nun eine zweite **VIEW hinzu,** die eine Wiedergabeliste enthält. Platzieren Sie den folgenden Code nach dem </VIEW> des Shellcodes.
 
 
 ```C++
@@ -60,7 +60,7 @@ Fügen Sie nun eine zweite **Ansicht** hinzu, die eine Wiedergabeliste enthält.
 
 
 
-Sie müssen dieser zweiten Ansicht eine ID zuordnen, damit Sie später darauf verweisen können. Fügen Sie ein playelement und ein stopelement hinzu. Diese vordefinierten Schaltflächen machen das Leben einfacher.
+Sie müssen dieser zweiten Ansicht eine ID geben, damit Sie später darauf verweisen können. Fügen Sie ein PLAYELEMENT und ein STOPELEMENT hinzu. Diese vordefinierten Schaltflächen erleichtern das Leben.
 
 
 ```C++
@@ -74,7 +74,7 @@ Sie müssen dieser zweiten Ansicht eine ID zuordnen, damit Sie später darauf ve
 
 
 
-Fügen Sie schließlich dem playelement ein OnClick-Ereignis hinzu, um eine Wiedergabeliste in der zweiten Ansicht anzuzeigen:
+Fügen Sie abschließend dem PLAYELEMENT ein onClick-Ereignis hinzu, um eine Wiedergabeliste in der zweiten Ansicht anzuzeigen:
 
 
 ```C++
@@ -84,18 +84,18 @@ Fügen Sie schließlich dem playelement ein OnClick-Ereignis hinzu, um eine Wied
 
 
 
-Im Beispiel Abschnitt des SDK sehen Sie eine ähnliche funktionierende Wiedergabeliste.
+Eine ähnliche Arbeitswiedergabelisten-Skin finden Sie im Beispielabschnitt des SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Leitfaden zum Erstellen von Skin**](skin-creation-guide.md)
+[**Handbuch zur Erstellung von Skins**](skin-creation-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

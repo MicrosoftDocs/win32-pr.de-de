@@ -1,43 +1,43 @@
 ---
 title: Serialisierungsdienste
-description: Microsoft RPC unterstützt zwei Methoden zum Codieren und Decodieren von Daten, kollektiv als Serialisieren von Daten bezeichnet.
+description: Microsoft RPC unterstützt zwei Methoden zum Codieren und Decodieren von Daten, die zusammen als Serialisieren von Daten bezeichnet werden.
 ms.assetid: 36d6ea16-7d01-436e-ac32-610c3ddb8b8d
 keywords:
-- Remote Prozedur Aufruf RPC, beschrieben, Serialisierung
+- Rpc-Aufruf einer Remoteprozedur , beschrieben, Serialisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fc5b877e29f7a7f6cd102663017f64bebfdff04
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cc54e6daf4ace5ffb3ee5d22886a570ae1e9ab1ae834cfac12a91d234c331e20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035530"
 ---
 # <a name="serialization-services"></a>Serialisierungsdienste
 
-Microsoft RPC unterstützt zwei Methoden zum Codieren und Decodieren von Daten, kollektiv als *Serialisieren von Daten* bezeichnet. Serialisierung bedeutet, dass die Daten von den von Ihnen kontrollierten Puffern gemarshallt und aus diesen entfernt werden. Dies unterscheidet sich von der herkömmlichen Verwendung von RPC, bei der die stubvorgänge und die RPC-Lauf Zeit Bibliothek die vollständige Kontrolle über die marshallingpuffer haben und der Prozess transparent ist. Sie können den Puffer für die Speicherung auf permanenten Medien, Verschlüsselung usw. verwenden. Beim Codieren von Daten werden die Daten in einen Puffer gemarshallt, und der Puffer wird an Sie übergeben. Beim Decodieren von Daten geben Sie einen marshallingpuffer mit darin befindlichen Daten an, und die Daten werden aus dem Puffer in den Arbeitsspeicher gemarshallt. Sie können auf einer Prozedur oder einem Typ serialisieren.
+Microsoft RPC unterstützt zwei Methoden zum Codieren und Decodieren von Daten, die zusammen als *Serialisieren von Daten bezeichnet werden.* Serialisierung bedeutet, dass die Daten in Puffer gemarshallt und aus Puffern, die Sie steuern, nicht gemarshallt werden. Dies unterscheidet sich von der herkömmlichen Verwendung von RPC, bei der die Stubs und die RPC-Laufzeitbibliothek die vollständige Kontrolle über die Marshallingpuffer haben und der Prozess transparent ist. Sie können den Puffer für die Speicherung auf permanenten Medien, Verschlüsselung und so weiter verwenden. Wenn Sie Daten codieren, marshallen die RPC-Stubs die Daten in einen Puffer und übergeben den Puffer an Sie. Wenn Sie Daten decodieren, geben Sie einen Marshallingpuffer mit Daten an, und die Daten werden aus dem Puffer in den Arbeitsspeicher entmarshaliert. Sie können auf Prozedur- oder Typbasis serialisieren.
 
 > [!Note]  
-> Der Begriff *Pickeln* wird häufig von Entwicklern verwendet, um die Serialisierung zu beschreiben. Die Windows SDK Beispiele enthalten ein Verzeichnis namens "pickle", das die Beispiel Programme für die RPC-Serialisierung *beibehält* .
+> Der Begriff *Pickling* wird häufig von Entwicklern verwendet, um die Serialisierung zu beschreiben. Tatsächlich enthalten die Windows SDK-Beispiele ein Verzeichnis namens *pickle,* das die RPC-Serialisierungsbeispielprogramme beibwahrt.
 
- 
+ 
 
-Die Serialisierung nutzt die RPC-Mechanismen für das Mars Hallen und das Marshalling von Daten zu anderen Zwecken. Anstatt mehrere e/a-Vorgänge zum Serialisieren einer Gruppe von Objekten in einen Stream zu verwenden, kann eine Anwendung z. b. die Leistung optimieren, indem mehrere Objekte verschiedener Typen in einen Puffer serialisiert und anschließend der gesamte Puffer in einem einzigen Vorgang geschrieben wird. Die Funktionen, die serialisierungshandles manipulieren, sind unabhängig vom Typ der verwendeten Serialisierung.
+Die Serialisierung nutzt die RPC-Mechanismen zum Marshallen und Unmarshaling von Daten für andere Zwecke. Anstatt beispielsweise mehrere E/A-Vorgänge zum Serialisieren einer Gruppe von Objekten in einen Stream zu verwenden, kann eine Anwendung die Leistung optimieren, indem mehrere Objekte verschiedener Typen in einen Puffer serialisiert und dann der gesamte Puffer in einem einzigen Vorgang geschrieben wird. Die Funktionen, die Serialisierungshandles bearbeiten, sind unabhängig vom Serialisierungstyp, den Sie verwenden.
 
-Ein weiteres Beispiel: Wenn Sie einen Netzwerk Transportmechanismus außer RPC verwenden müssen, z. b. Microsoft Windows Sockets (Winsock). Mit der RPC-Serialisierung kann das Programmaufrufe an Funktionen ausführen, die Ihre Daten in Puffer Mars Hallen, und diese Daten dann mithilfe von Winsock übertragen. Wenn Ihre Anwendung Daten empfängt, kann Sie den RPC-Serialisierungsmechanismus verwenden, um Daten aus Puffern zu entsperren, die von den Winsock-Routinen gefüllt werden. Dies bietet Ihnen viele Vorteile von Anwendungen im RPC-Stil und ermöglicht gleichzeitig die Verwendung von nicht-RPC-Transportmechanismen.
+Ein weiteres Beispiel ist die Verwendung eines Netzwerktransportmechanismus neben RPC, z. B. Microsoft Windows Sockets (Winsock). Mit der RPC-Serialisierung kann Ihr Programm Funktionen aufrufen, die Ihre Daten in Puffer marshallen und diese Daten dann mit Winsock übertragen. Wenn Ihre Anwendung Daten empfängt, kann sie den RPC-Serialisierungsmechanismus verwenden, um Daten aus Puffern, die von den Winsock-Routinen gefüllt werden, zu entmarshalieren. Dadurch erhalten Sie viele Vorteile von ANWENDUNGEN im RPC-Stil und ermöglichen gleichzeitig die Verwendung von Nicht-RPC-Transportmechanismen.
 
-Sie können die Serialisierung auch für Zwecke verwenden, die nicht mit der Netzwerkkommunikation verknüpft sind. Nachdem Sie z. b. die RPC-Codierungs Funktionen zum Mars Hallen von Daten in einen Puffer verwendet haben, können Sie Sie in einer Datei speichern, die von einer anderen Anwendung verwendet werden kann. Sie können Sie auch verschlüsseln. Sie können damit sogar eine Hardware-und betriebssystemunabhängige Darstellung von Daten in einer-Datenbank speichern.
+Sie können die Serialisierung auch für Zwecke verwenden, die nicht mit der Netzwerkkommunikation in Zusammenhang stehen. Wenn Sie beispielsweise die RPC-Codierungsfunktionen zum Marshallen von Daten in einen Puffer verwenden, können Sie sie in einer Datei zur Verwendung durch eine andere Anwendung speichern. Sie können sie auch verschlüsseln. Sie können sie sogar verwenden, um eine hardware- und betriebssystemunabhängige Darstellung von Daten in einer Datenbank zu speichern.
 
-Die folgenden Themen enthalten eine Erläuterung der Serialisierungsdienste, die von Microsoft RPC unterstützt werden:
+In den folgenden Themen werden die Serialisierungsdienste behandelt, die von Microsoft RPC unterstützt werden:
 
 -   [Verwenden von Serialisierungsdiensten](using-serialization-services.md)
--   [Prozessserialisierung](procedure-serialization.md)
+-   [Prozedurserialisierung](procedure-serialization.md)
 -   [Typserialisierung](type-serialization.md)
 -   [Serialisierungshandles](serialization-handles.md)
 
- 
+ 
 
- 
+ 
 
 
 

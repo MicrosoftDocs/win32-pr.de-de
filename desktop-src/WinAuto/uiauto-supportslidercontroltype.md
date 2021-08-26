@@ -1,155 +1,130 @@
 ---
-title: Slider-Steuerelement Typen
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Schieberegler-Steuerelement Typen.
+title: Schieberegler-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den Schieberegler-Steuerelementtyp.
 ms.assetid: dc7bef7a-b68c-4184-a9e7-745bb41b592e
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für den Schieberegler
-- Benutzeroberflächenautomatisierungs-, Slider-Steuerelement
-- Benutzeroberflächenautomatisierungs-Struktur für Schieberegler-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den Slider-Steuerelement
-- UI-Automatisierung, Steuerelement Muster für den Schieberegler-Steuerelement
-- UI-Automatisierung, Ereignisse für den Schieberegler-Steuerelement
-- Baumstrukturen, Schieberegler-Steuerelement Typen
-- Eigenschaften, Schieberegler-Steuerelement Typen
-- Steuerelement Muster, Schieberegler-Steuerelement Typen
-- Ereignisse, Schieberegler-Steuerelement Typen
-- Unterstützung für den Slider-Steuerelement
+- Benutzeroberflächenautomatisierung,Unterstützung für den Schieberegler-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Slider-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für Schieberegler-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den Schieberegler-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den Schieberegler-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für Schieberegler-Steuerelementtyp
+- Strukturstrukturen,Schieberegler-Steuerelementtyp
+- Eigenschaften,Schieberegler-Steuerelementtyp
+- Steuerelementmuster, Schieberegler-Steuerelementtyp
+- events,Slider-Steuerelementtyp
+- Unterstützung für den Schieberegler-Steuerelementtyp
 - Schiebereglersteuerungstyp
-- Steuerelement Typen, Baumstruktur für den Schieberegler-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für Schieberegler-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für Schieberegler
-- Steuerelement Typen, Schieberegler
+- Steuerelementtypen,Struktur für Schieberegler-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für Schieberegler-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für Schieberegler
+- Steuerelementtypen, Schieberegler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5be8e82dfc8f011363086745368ed1693c45a6aa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 354217323ba4c3c59e416f7b9c36661d8ffe8a77
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947845"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472876"
 ---
-# <a name="slider-control-type"></a>Slider-Steuerelement Typen
+# <a name="slider-control-type"></a>Schieberegler-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **Schieberegler** -Steuerelement Typen.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung unterstützung für den **Schieberegler-Steuerelementtyp.**
 
-Ein Schieberegler-Steuerelement ist ein zusammengesetztes Steuerelement mit Schaltflächen, mit denen ein Benutzer einen numerischen Bereich festlegen oder einen Satz von Elementen auswählen kann.
+Ein Schieberegler-Steuerelement ist ein zusammengesetztes Steuerelement mit Schaltflächen, mit denen ein Benutzer einen numerischen Bereich festlegen oder aus einer Gruppe von Elementen auswählen kann.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **Schieberegler** -Steuerelement Typen definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Schieberegler-Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Unterstützung der Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **Schieberegler-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Schiebereglersteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle ist eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Schieberegler-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Schieberegler
-<ul>
-<li>Schaltfläche (2 oder 4)</li>
-<li>Thumb (1)</li>
-<li>Listenelement (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>Schieberegler
-<ul>
-<li>Listenelement (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf Schiebereglersteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
- 
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>Schieberegler<ul><li>Schaltfläche (2 oder 4)</li><li>Thumb (1)</li><li>Listenelement (beliebige Anzahl)</li></ul></li></ul> | <ul><li>Schieberegler<ul><li>Listenelement (beliebige Anzahl)</li></ul></li></ul> | 
+
+
+
+
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für Schieberegler-Steuerelemente besonders relevant ist Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für Schiebereglersteuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Notizen                                                                                                                                                                                                                          |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Hinweise                                                                                                                                                                                                                          |
 |---------------------------------------------------------------------------------------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                                                   |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                                       |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Die Mehrzahl der Schieberegler-Steuerelemente müssen den [**UIA \_ E \_ noclickablepoint**](uiauto-error-codes.md) -Fehler zurückgeben, da das gesamte umgebende Rechteck des Schieberegler-Steuer Elements durch untergeordnete Steuerelemente belegt wird. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **Schieberegler** | Dieser Wert ist für alle Frameworks gleich.                                                                                                                                                                                     |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Das Schieberegler-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                                           |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Das Schieberegler-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                                           |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Die untergeordneten Elemente (Schaltflächen und Thumb) eines Schieberegler-Steuer Elements sollten niemals den Fokus haben. Der Fokus sollte immer auf dem Schieberegler-Steuerelement selbst bleiben.       |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Siehe Hinweise. | Wenn dem Steuerelement eine statische Text Bezeichnung zugeordnet ist, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen. Wenn das Text Steuerelement eine Unterkomponente eines anderen Steuer Elements ist, wird keine **LabeledBy** -Eigenschaft festgelegt.   |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge für den Steuerungstyp des **Schiebereglers** . Der Standardwert ist "Slider" für en-US oder Englisch (USA).                                                                                             |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Der Name des Schieberegler-Steuer Elements wird in der Regel aus einer statischen Text Bezeichnung generiert. Wenn keine statische Text Bezeichnung vorhanden ist, muss der Anwendungsentwickler einen Eigenschafts Wert für den **Namen** zuweisen.                              |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                                                   |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                                       |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Die meisten Schieberegler-Steuerelemente müssen den [**UIA \_ E \_ NOCLICKABLEPOINT-Fehler**](uiauto-error-codes.md) zurückgeben, da das gesamte umgebundene Rechteck des Schieberegler-Steuerelements von untergeordneten Steuerelementen belegt wird. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Schieberegler** | Dieser Wert ist für alle Frameworks gleich.                                                                                                                                                                                     |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Das Schieberegler-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                           |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Das Schieberegler-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                                           |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Die unteren (Schaltflächen und Thumb) eines Schieberegler-Steuerelements sollten nie den Fokus haben. Der Fokus sollte immer auf dem Schieberegler-Steuerelement selbst bleiben.       |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise. | Wenn dem Steuerelement eine statische Textbezeichnung zugeordnet ist, muss diese Eigenschaft einen Verweis auf dieses Steuerelement verfügbar machen. Wenn das Textsteuerfeld eine Unterkomponenten eines anderen Steuerelements ist, ist keine **LabeledBy-Eigenschaft** festgelegt.   |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **Schieberegler-Steuerelementtyp** entspricht. Der Standardwert ist "Schieberegler" für en-US oder Englisch (USA).                                                                                             |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Der Name des Schieberegler-Steuerelements wird in der Regel aus einer statischen Textbezeichnung generiert. Wenn es keine statische Textbezeichnung gibt,  muss der Anwendungsentwickler einen Eigenschaftswert für Name zuweisen.                              |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Steuerelement Muster aufgelistet, die von allen Slider-Steuerelementen unterstützt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von allen Schieberegler-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
-| Steuerelementmuster/Mustereigenschaft                          | Unterstützung/Wert | Notizen                                                                                                                                                                                                                                                                                                      |
+| Steuerelementmuster/Mustereigenschaft                          | Unterstützung/Wert | Hinweise                                                                                                                                                                                                                                                                                                      |
 |-----------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) | Depends (Abhängig)       | Ein Schieberegler muss das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster unterstützen, wenn der Inhalt auf einen Wert in einem numerischen Bereich festgelegt werden kann.                                                                                                                                                 |
-| [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)   | Depends (Abhängig)       | Ein Schieberegler sollte das [Auswahl](uiauto-implementingselection.md) Steuerelement Muster unterstützen, wenn der Inhalt einen Wert unter einem diskreten Satz von Optionen darstellt. Wenn das Selection-Steuerelementmuster unterstützt wird, muss die entsprechende Auswahl als ein oder mehrere untergeordnete Listenelemente des Schiebereglers verfügbar gemacht werden. |
-| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)           | Depends (Abhängig)       | Ein Schieberegler muss das [value](uiauto-implementingvalue.md) -Steuerelement Muster unterstützen, wenn der Inhalt einen Wert unter einem diskreten Satz von Optionen darstellt.                                                                                                                                                     |
+| [**IRangeValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-irangevalueprovider) | Depends (Abhängig)       | Ein Schieberegler sollte das [RangeValue-Steuerelementmuster](uiauto-implementingrangevalue.md) unterstützen, wenn der Inhalt auf einen Wert innerhalb eines numerischen Bereichs festgelegt werden kann.                                                                                                                                                 |
+| [**ISelectionProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iselectionprovider)   | Depends (Abhängig)       | Ein Schieberegler sollte das [Selection-Steuerelementmuster](uiauto-implementingselection.md) unterstützen, wenn der Inhalt einen Wert aus einem diskreten Satz von Optionen darstellt. Wenn das Selection-Steuerelementmuster unterstützt wird, muss die entsprechende Auswahl als ein oder mehrere untergeordnete Listenelemente des Schiebereglers verfügbar gemacht werden. |
+| [**IValueProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-ivalueprovider)           | Depends (Abhängig)       | Ein Schieberegler sollte das [Value-Steuerelementmuster](uiauto-implementingvalue.md) unterstützen, wenn der Inhalt einen Wert aus einem diskreten Satz von Optionen darstellt.                                                                                                                                                     |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die Schieberegler-Steuerelemente zur Unterstützung Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die Schiebereglersteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ Rangevaluevaluepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.        | Wenn das Steuerelement das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA- \_ Auswahl \_ invalidatedeventid**](uiauto-event-ids.md)                                       | Wenn das Steuerelement das [Selection](uiauto-implementingselection.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.     |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
-| [**UIA \_ Valuevaluepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis.                  | Wenn das Steuerelement das [value](uiauto-implementingvalue.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen.             |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ RangeValueValuePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md)        | Wenn das Steuerelement das [RangeValue-Steuerelementmuster](uiauto-implementingrangevalue.md) unterstützt, muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ Selection \_ InvalidatedEventId**](uiauto-event-ids.md)                                       | Wenn das Steuerelement das [Selection-Steuerelementmuster](uiauto-implementingselection.md) unterstützt, muss es dieses Ereignis unterstützen.     |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ Durch die ValueValuePropertyId-Eigenschaft**](uiauto-control-pattern-propids.md) geändertes Ereignis.                  | Wenn das Steuerelement das [Value-Steuerelementmuster](uiauto-implementingvalue.md) unterstützt, muss es dieses Ereignis unterstützen.             |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -158,9 +133,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

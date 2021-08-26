@@ -1,33 +1,33 @@
 ---
-description: Gibt die MPEG-Audioschicht an. Diese Eigenschaft gilt für MPEG-Audioencoder.
+description: Gibt die MPEG-Audioebene an. Diese Eigenschaft gilt für MPEG-Audioencoder.
 ms.assetid: cdfe21f6-44aa-4450-99a6-58b23f4b588a
-title: Avencmpalayer-Eigenschaft (codecapi. h)
+title: AVEncMPALayer-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a81835ff021f690980290698c0706ee7cbdbf7e8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c5654f0d5d2cc5c7d07c05bc2823e4f3b83cc907a1ec46bf29bee76249901cc5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087600"
 ---
-# <a name="avencmpalayer-property"></a>Avencmpalayer (Eigenschaft)
+# <a name="avencmpalayer-property"></a>AVEncMPALayer-Eigenschaft
 
-Gibt die MPEG-Audioschicht an. Diese Eigenschaft gilt für MPEG-Audioencoder.
+Gibt die MPEG-Audioebene an. Diese Eigenschaft gilt für MPEG-Audioencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmpalayer**
+**CODECAPI \_ AVEncMPALayer**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavencmpalayer**](/windows/win32/api/codecapi/ne-codecapi-eavencmpalayer) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVEncMPALayer-Enumeration.**](/windows/win32/api/codecapi/ne-codecapi-eavencmpalayer)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencmpalayer**](/windows/win
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Der Wert dieser Eigenschaft ist ein Member der [**eavencmpalayer**](/windows/win
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

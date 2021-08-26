@@ -1,9 +1,9 @@
 ---
-title: STM_GETICON Meldung (Winuser. h)
-description: Eine Anwendung sendet die STM \_ GetIcon-Nachricht, um ein Handle für das Symbol abzurufen, das einem statischen Steuerelement mit dem SS-Symbolstil zugeordnet ist \_ .
+title: STM_GETICON Meldung (Winuser.h)
+description: Eine Anwendung sendet die STM \_ GETICON-Nachricht, um ein Handle für das Symbol abzurufen, das einem statischen Steuerelement zugeordnet ist, das über das \_ SS-SYMBOLformat verfügt.
 ms.assetid: e6b0a006-696b-401d-b894-b1db697c8939
 keywords:
-- Windows-Steuerelemente für STM_GETICON Meldung
+- STM_GETICON Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f64f55d2a2f8315b99526e51a69891f6f0056e8b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d33aab01e668f4b77e36a0a62b8eab75f3ee5db82188416c295c04cdf9bcb078
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084950"
 ---
-# <a name="stm_geticon-message"></a>STM- \_ GetIcon-Nachricht
+# <a name="stm_geticon-message"></a>STM \_ GETICON-Nachricht
 
-Eine Anwendung sendet die **STM \_ GetIcon** -Nachricht, um ein Handle für das Symbol abzurufen, das einem statischen Steuerelement mit dem SS-Symbolstil zugeordnet ist \_ .
+Eine Anwendung sendet die **STM \_ GETICON-Nachricht,** um ein Handle für das Symbol abzurufen, das einem statischen Steuerelement zugeordnet ist, das über das SS-SYMBOLformat \_ verfügt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,17 +45,17 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein Handle für das Symbol, oder **null** , wenn entweder das statische Steuerelement kein zugeordnetes Symbol aufweist oder wenn ein Fehler aufgetreten ist.
+Der Rückgabewert ist ein Handle für das Symbol oder **NULL,** wenn dem statischen Steuerelement kein Symbol zugeordnet ist oder ein Fehler aufgetreten ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Der Rückgabewert ist ein Handle für das Symbol, oder **null** , wenn entweder 
 
 <dl> <dt>
 
-[**STM \_ -Ziel**](stm-seticon.md)
+[**STM \_ SETICON**](stm-seticon.md)
 </dt> </dl>
 
  

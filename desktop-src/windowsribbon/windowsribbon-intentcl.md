@@ -14,16 +14,16 @@ keywords:
 - Kompilieren Windows Menübandmarkups
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85534a05b3bde59cc2ec0eec482d8c3b47e898d39ad988c595fbac33eb5e9f36
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: cefd64103ceb501e8f4d23e937a242e910b0cad5
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119932564"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884904"
 ---
 # <a name="compiling-ribbon-markup"></a>Kompilieren von Menübandmarkup
 
-Damit das Windows Menübandframework die [Menüband-Markupdatei](windowsribbon-schema.md) nutzen kann, muss die Markupdatei in eine Ressourcendatei im Binärformat kompiliert werden. Ein dedizierter Markupcompiler, der UI COMMAND Compiler (UICC), ist zu diesem Zweck im Windows Software Development Kit (SDK) (7.0 oder höher) enthalten. Zusätzlich zum Kompilieren der binären Version des Markups generiert UICC eine ID-Definitionsheaderdatei (.h), die alle Markupelemente für die Menübandhostanwendung und eine Ressourcendatei (RC) verfügbar macht, mit der Image- und Zeichenfolgenressourcen zur Buildzeit mit der Hostanwendung verknüpft werden.
+Damit das Windows Menübandframework die [Menüband-Markupdatei](windowsribbon-schema.md) nutzen kann, muss die Markupdatei in eine Binärformatressourcendatei kompiliert werden. Ein dedizierter Markupcompiler, der UICC (UI Command Compiler), ist zu diesem Zweck im Windows Software Development Kit (SDK) (7.0 oder höher) enthalten. Zusätzlich zum Kompilieren der binären Version des Markups generiert UICC eine ID-Definitionsheaderdatei (.h), die alle Markupelemente für die Menübandhostanwendung und eine Ressourcendatei (RC) verfügbar macht, mit der Image- und Zeichenfolgenressourcen zur Buildzeit mit der Hostanwendung verknüpft werden.
 
 -   [Compilerworkflow](#compiler-workflow)
 -   [Befehlszeilensyntax](#command-line-syntax)
@@ -61,8 +61,8 @@ Die Argumente und Optionen für dieses Tool werden in der folgenden Tabelle besc
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -72,8 +72,8 @@ Die Argumente und Optionen für dieses Tool werden in der folgenden Tabelle besc
 </thead>
 <tbody>
 <tr class="odd">
-<td>/header:<headerFile></td>
-<td>Generieren Sie eine Headerdatei namens <headerFile> , die die Ressourcensymbole der Markupbefehls-ID enthält. Wenn sie nicht angegeben wird, wird keine Headerdatei generiert.</td>
+<td>/header: &lt; headerFile&gt;</td>
+<td>Generieren Sie eine Headerdatei namens &lt; &gt; headerFile, die die Ressourcensymbole der Markupbefehls-ID enthält. Wenn sie nicht angegeben wird, wird keine Headerdatei generiert.</td>
 </tr>
 <tr class="even">
 <td>/res:<resourceFile></td>

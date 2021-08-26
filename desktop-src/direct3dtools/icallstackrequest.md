@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: dcb3864e16a06891e7fad8ebe59de7dc8f58bde51d2345d10ba2270ac92b480c
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 86abba7eeda4dc16e371dedd0ab01b4d94a9aabd
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119562330"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122631928"
 ---
 # <a name="span-idvspixengineicallstackrequestspanicallstackrequest-interface"></a><span id="vspixengine.icallstackrequest"></span>ICallStackRequest-Schnittstelle
 
@@ -38,13 +38,13 @@ Die **ICallStackRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.*
 
 Die **ICallStackRequest-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/icallstackrequest-requestasync-eventid-icallstackcallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung zum Abrufen der Aufruflisten-RVAs (relative virtuelle Adressen) des angegebenen Ereignisses.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/icallstackrequest-requestasync-eventid-icallstackcallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td style="text-align: left;"><p>Eine asynchrone Anforderung zum Abrufen der Aufruflisten-RVAs (relative virtuelle Adressen) des angegebenen Ereignisses.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

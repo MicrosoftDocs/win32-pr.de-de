@@ -1,52 +1,52 @@
 ---
-title: Autoconvertto
-description: Gibt die automatische Konvertierung einer bestimmten Klasse von Objekten in eine neue Klasse von Objekten an.
+title: AutoConvertTo
+description: Gibt die automatische Konvertierung einer angegebenen Klasse von -Objekten in eine neue Klasse von -Objekten an.
 ms.assetid: e34b799b-0d23-4034-ba79-49e92ec4dea7
 keywords:
-- Autoconvertto-Registrierungsschlüssel com
+- COM-Registrierungsschlüssel "AutoConvertTo"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 160f6591ed318ad7622e0bf3c0af5187f95d3be3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d5ea2b32445bb7107dcbfdc2aec8aee518fdd474674e76fdbd820265d06b6160
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097050"
 ---
-# <a name="autoconvertto"></a>Autoconvertto
+# <a name="autoconvertto"></a>AutoConvertTo
 
-Gibt die automatische Konvertierung einer bestimmten Klasse von Objekten in eine neue Klasse von Objekten an.
+Gibt die automatische Konvertierung einer angegebenen Klasse von -Objekten in eine neue Klasse von -Objekten an.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
-   {CLSID}
-      AutoConvertTo = value
+   {CLSID}
+      AutoConvertTo = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ SZ** -Wert, der den Klassen Bezeichner des Objekts angibt, in das das angegebene Objekt oder die Klasse von Objekten konvertiert werden soll.
+Dies ist ein **REG \_ SZ-Wert,** der den Klassenbezeichner des Objekts angibt, in das das gegebene Objekt oder die Klasse von Objekten konvertiert werden soll.
 
-Dieser Schlüssel wird normalerweise zum automatischen Konvertieren von Dateien verwendet, die von einer älteren Version einer Anwendung erstellt wurden, in eine neuere Version der Anwendung.
+Dieser Schlüssel wird in der Regel verwendet, um Dateien, die von einer älteren Version einer Anwendung erstellt wurden, automatisch in eine neuere Version der Anwendung zu konvertieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Oledoautoconvert**](/windows/desktop/api/Ole2/nf-ole2-oledoautoconvert)
+[**OleDoAutoConvert**](/windows/desktop/api/Ole2/nf-ole2-oledoautoconvert)
 </dt> <dt>
 
-[**Olegetautoconvert**](/windows/desktop/api/Ole2/nf-ole2-olegetautoconvert)
+[**OleGetAutoConvert**](/windows/desktop/api/Ole2/nf-ole2-olegetautoconvert)
 </dt> <dt>
 
-[**Olesetautoconvert**](/windows/desktop/api/Ole2/nf-ole2-olesetautoconvert)
+[**OleSetAutoConvert**](/windows/desktop/api/Ole2/nf-ole2-olesetautoconvert)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

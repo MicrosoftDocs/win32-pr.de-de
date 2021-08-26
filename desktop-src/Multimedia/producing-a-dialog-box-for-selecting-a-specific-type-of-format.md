@@ -1,29 +1,29 @@
 ---
-title: Erstellen eines Dialog Felds zum Auswählen eines bestimmten Format Typs
-description: Erstellen eines Dialog Felds zum Auswählen eines bestimmten Format Typs
+title: Erstellen eines Dialogfelds zum Auswählen eines bestimmten Formattyps
+description: Erstellen eines Dialogfelds zum Auswählen eines bestimmten Formattyps
 ms.assetid: e454f9d6-5cbf-4e1b-937e-771cf1dd38ba
 keywords:
 - Audiokomprimierungs-Manager (ACM), Erstellen von Dialogfeldern
-- ACM (Audiokomprimierungs-Manager), Erstellen von Dialogfeldern
+- ACM (Audiokomprimierungs-Manager),Erstellen von Dialogfeldern
 - ACM-Beispiele, Erstellen von Dialogfeldern
 - Erstellen von Dialogfeldern
-- acmformatchoose-Funktion
-- Audiokomprimierungs-Manager (ACM), auswählen von Format Typen
-- ACM (Audiokomprimierungs-Manager), auswählen von Format Typen
-- ACM-Beispiele, auswählen von Format Typen
-- Auswählen von Format Typen
+- acmFormatChoose-Funktion
+- Audiokomprimierungs-Manager (ACM), Auswählen von Formattypen
+- ACM (Audiokomprimierungs-Manager),Auswählen von Formattypen
+- ACM-Beispiele, Auswählen von Formattypen
+- Auswählen von Formattypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfc5d73d1b03f22923e6001d65898c05e2bd853e
-ms.sourcegitcommit: cb844c9ab17577ce171fd7b03add668645867bc7
+ms.openlocfilehash: 06f25f7b196fcb9462a3b61dd8e351ed75276c7df7bf46cec233dd8eac7deda5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "104314434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037650"
 ---
-# <a name="producing-a-dialog-box-for-selecting-a-specific-type-of-format"></a>Erstellen eines Dialog Felds zum Auswählen eines bestimmten Format Typs
+# <a name="producing-a-dialog-box-for-selecting-a-specific-type-of-format"></a>Erstellen eines Dialogfelds zum Auswählen eines bestimmten Formattyps
 
-Möglicherweise möchten Sie, dass eine Anwendung es dem Benutzer ermöglicht, ein Format aus einer eingeschränkten Liste von Formaten in einem Dialogfeld auszuwählen. Einschränkungen können die Anzahl der Kanäle, die Samplingrate, das Waveform-Audioformat oder die Anzahl der Bits pro Stichprobe einschränken. In all diesen Fällen können Sie die Liste mithilfe der [**acmformatchoose**](/windows/desktop/api/Msacm/nf-msacm-acmformatchoose) -Funktion generieren und die Member **fdwenum** und **pwfxenum** der [**acmformatchoose**](/windows/win32/api/msacm/ns-msacm-acmformatchoose) -Struktur festlegen. Dieser Prozess wird anhand des folgenden Beispiels veranschaulicht.
+Möglicherweise möchten Sie, dass eine Anwendung dem Benutzer ermöglicht, ein Format aus einer eingeschränkten Liste von Formaten in einem Dialogfeld auszuwählen. Einschränkungen können die Anzahl der Kanäle, die Samplingrate, das Formattag waveform-audio oder die Anzahl der Bits pro Stichprobe einschränken. In all diesen Fällen können Sie die Liste mithilfe der Funktion [**acmFormatChoose**](/windows/desktop/api/Msacm/nf-msacm-acmformatchoose) generieren und die Member **fdwEnum** und **pwfxEnum** der [**ACMFORMATCHOOSE-Struktur**](/windows/win32/api/msacm/ns-msacm-acmformatchoose) festlegen. Dieser Prozess wird anhand des folgenden Beispiels veranschaulicht.
 
 
 ```C++
@@ -61,9 +61,9 @@ if ((MMSYSERR_NOERROR != mmr) && (ACMERR_CANCELED != mmr))
 
 
 
- 
+ 
 
- 
+ 
 
 
 

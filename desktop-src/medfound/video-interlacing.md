@@ -1,109 +1,82 @@
 ---
-description: Videointerlacing
+description: Video Interlacing
 ms.assetid: 2911ae57-1703-4a9d-bd33-94af1e0f8804
-title: Videointerlacing
+title: Video Interlacing
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c3724316c1190c2fe01c8debdc8bd4c85a0ba8810eb62a0690e19c087a06352
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 340c727f8faaaf20ff82eff58d0c651601071dea
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118972619"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474336"
 ---
-# <a name="video-interlacing"></a>Videointerlacing
+# <a name="video-interlacing"></a>Video Interlacing
 
-In diesem Thema wird beschrieben, wie Medienquellen und Decoder videoübergreifende Inhalte verarbeiten sollten.
+In diesem Thema wird beschrieben, wie Medienquellen und Decoder mit Interlacing-Videoinhalten umgehen sollten.
 
-Um videoverschachtelte Videos ordnungsgemäß zu decodieren und zu rendern, sind die folgenden Informationen erforderlich:
+Um Interlaced-Videos ordnungsgemäß zu decodieren und zu rendern, sind die folgenden Informationen erforderlich:
 
--   Progressiv oder interlaced. Ein Videostream kann progressive Frames, Interlacingframes oder eine Kombination aus beidem enthalten.
+-   Progressiv oder Interlacing. Ein Videostream kann progressive Frames, Interlacingframes oder eine Kombination aus beidem enthalten.
 
 -   Felddominanz. Felddominanz beschreibt, welches Feld zuerst angezeigt wird, das obere feld oder das untere Feld.
 
--   Wiederholen Sie das erste Feld. Dieses Flag wird beim 3:2-Pulldown verwendet, wenn der Frame progressiv ist, der Stream jedoch übersprungen wird. In diesem Kontext kann das erste Feld das obere oder untere Feld sein.
+-   Wiederholen Sie das erste Feld. Dieses Flag wird im 3:2-Pulldown verwendet, wenn der Frame progressiv ist, der Stream jedoch interlaced ist. In diesem Kontext kann das erste Feld das obere oder untere Feld sein.
 
--   Verschachtelte Felder oder einzelne Felder. Ein Beispiel kann entweder ein einzelnes Feld oder zwei überlappende Felder enthalten. Wenn ein Beispiel ein einzelnes Feld enthält, entspricht die Höhe der Stichprobe der Hälfte der Rahmenhöhe, da die Stichprobe nur die Hälfte der Scanzeilen für einen Frame enthält. Verschachtelte Felder werden empfohlen, sofern die Merkmale des Quellinhalts nichts anderes vorschreiben.
+-   Überlappte Felder oder einzelne Felder. Ein Beispiel kann entweder ein einzelnes Feld oder zwei überlappte Felder enthalten. Wenn ein Beispiel ein einzelnes Feld enthält, ist die Stichprobenhöhe die Hälfte der Framehöhe, da das Beispiel nur die Hälfte der Scanlinien für einen Frame enthält. Überlappte Felder werden empfohlen, sofern die Merkmale des Quellinhalts nichts anderes vorschreiben.
 
-Jedes dieser Merkmale kann sich von einem Beispiel zum nächsten ändern. Videokomponenten müssen jedoch etwas über den gesamten Inhalt wissen, bevor das Streaming beginnt. Wenn das Video z. B. übersprungen wird, muss der erweiterte Videorenderer (EVR) Videospeicher für das Deinterlacing reservieren. Wenn es sich bei dem Video um vollständig progressive Frames handelt, kann die EVR die Renderingpipeline optimieren. Das Hinzufügen eines Deinterlacingschritts zur Pipeline erhöht die Renderinglatenz.
+Jedes dieser Merkmale kann sich von einem Beispiel in das nächste ändern. Videokomponenten müssen jedoch etwas über den gesamten Inhalt wissen, bevor das Streaming beginnt. Wenn das Video z. B. als Interlacing angezeigt wird, muss der erweiterte Videorenderer (EVR) Videospeicher für das Deinterlacing reservieren. Wenn es sich bei dem Video um vollständig progressive Frames handelt, kann der EVR die Renderingpipeline optimieren. Das Hinzufügen eines Deinterlacingschritts zur Pipeline erhöht die Renderinglatenz.
 
 Informationen zum Interlacing werden an zwei Stellen gespeichert:
 
 -   Allgemeine Informationen zum Interlacing in einem Stream werden im Medientyp platziert. Weitere Informationen zu Medientypen finden Sie unter [Medientypen.](media-types.md)
 
--   Informationen, die sich mit jedem Beispiel ändern können, werden als Attribut in das Beispiel aufgenommen. Weitere Informationen zu Beispielen finden Sie unter [Medienbeispiele.](media-samples.md)
+-   Informationen, die sich mit den einzelnen Stichproben ändern können, werden im Beispiel als Attribut platziert. Weitere Informationen zu Beispielen finden Sie unter [Medienbeispiele.](media-samples.md)
 
 ## <a name="interlace-information-in-the-media-type"></a>Interlace-Informationen im Medientyp
 
-Das [**MF \_ MT \_ INTERLACE \_ MODE-Attribut**](mf-mt-interlace-mode-attribute.md) für den Medientyp beschreibt, wie der Stream als Ganzes per Interlacing übertragen wird. Der Wert dieses Attributs ist ein Member der [**MFVideoInterlaceMode-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideointerlacemode) Ein Videomedientyp sollte immer über dieses Attribut verfügen.
+Das [**MF \_ MT \_ INTERLACE \_ MODE-Attribut**](mf-mt-interlace-mode-attribute.md) für den Medientyp beschreibt, wie der Stream als Ganzes verschachtelt wird. Der Wert dieses Attributs ist ein Member der [**MFVideoInterlaceMode-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideointerlacemode) Ein Videomedientyp sollte immer über dieses Attribut verfügen.
 
 -   Wenn der Stream nur progressive Frames ohne Interlacingframes enthält, verwenden Sie MFVideoInterlace \_ Progressive.
--   Wenn der Stream nur Frames mit Zeilensprung enthält und jedes Beispiel zwei verschachtelte Felder enthält, verwenden Sie MFVideoInterlace \_ FieldInterleavedUpperFirst oder MFVideoInterlace \_ FieldInterleavedLowerFirst.
--   Wenn der Stream nur Interlacingframes enthält und jedes Beispiel ein einzelnes Feld enthält, verwenden Sie MFVideoInterlace \_ FieldSingleUpper oder MFVideoInterlace \_ FieldSingleLower. Wenn die Felder zwischen oben und unten wechseln, spielt es keine Rolle, welcher dieser beiden Werte verwendet wird. Wenn das Format nur obere felder oder einfach niedrigere Felder enthält, legen Sie den Wert fest, der dem Inhalt entspricht.
--   Wenn der Stream eine Mischung aus geschachtelten und progressiven Frames enthält oder die Felddominanz wechselt, legen Sie den Medientyp auf MFVideoInterlace \_ MixedInterlaceOrProgressive fest. Verwenden Sie Beispielattribute, um jeden Frame zu beschreiben.
+-   Wenn der Stream nur Zwischenebenenframes enthält und jedes Beispiel zwei verschachtelte Felder enthält, verwenden Sie MFVideoInterlace \_ FieldInterleavedUpperFirst oder MFVideoInterlace \_ FieldInterleavedLowerFirst.
+-   Wenn der Stream nur Frames mit Interlacing enthält und jedes Beispiel ein einzelnes Feld enthält, verwenden Sie MFVideoInterlace \_ FieldSingleUpper oder MFVideoInterlace \_ FieldSingleLower. Wenn die Felder zwischen oben und unten wechseln, spielt es keine Rolle, welcher dieser beiden Werte verwendet wird. Wenn das Format nur obere oder nur niedrigere Felder enthält, legen Sie den Wert fest, der dem Inhalt entspricht.
+-   Wenn der Stream eine Mischung aus Geschachtelten und progressiven Frames enthält oder die Felddominanz wechselt, legen Sie den Medientyp auf MFVideoInterlace \_ MixedInterlaceOrProgressive fest. Verwenden Sie Beispielattribute, um jeden Frame zu beschreiben.
 
-In der folgenden Tabelle ist dieses Attribut zusammengefasst.
+In der folgenden Tabelle wird dieses Attribut zusammengefasst.
 
 
 
 | MF \_ MT \_ INTERLACE-MODUS \_                       | Interlaced? | Beispiele                                  | Erstes Feld    |
 |-----------------------------------------------|-------------|------------------------------------------|----------------|
-| MFVideoInterlace \_ Progressive                 | Nein          | Progressiver Frame                        | Nicht verfügbar |
-| MFVideoInterlace \_ FieldInterleavedUpperFirst  | Ja         | Verschachtelte Felder                       | Erste Obere    |
-| MFVideoInterlace \_ FieldInterleavedLowerFirst  | Ja         | Verschachtelte Felder                       | Lower first (Niedriger zuerst)    |
+| MFVideoInterlace \_ Progressive                 | Nein          | Progressiver Frame                        | Nicht zutreffend |
+| MFVideoInterlace \_ FieldInterleavedUpperFirst  | Ja         | Überlappte Felder                       | Erste Obere    |
+| MFVideoInterlace \_ FieldInterleavedLowerFirst  | Ja         | Überlappte Felder                       | Lower first    |
 | MFVideoInterlace \_ FieldSingleUpper            | Ja         | Einzelfeld                             | Erste Obere    |
-| MFVideoInterlace \_ FieldSingleLower            | Ja         | Einzelfeld                             | Lower first (Niedriger zuerst)    |
-| MFVideoInterlace \_ MixedInterlaceOrProgressive | Kann variieren    | Verschachtelte Felder oder progressive Frames | Kann variieren       |
+| MFVideoInterlace \_ FieldSingleLower            | Ja         | Einzelfeld                             | Lower first    |
+| MFVideoInterlace \_ MixedInterlaceOrProgressive | Kann variieren    | Überlappte Felder oder progressive Frames | Kann variieren       |
 
 
 
  
 
-Verschachtelte Felder und einzelne Felder können nicht gemischt werden. Der Wechsel von einem zu einem anderen erfordert eine Änderung des Medientyps.
+Überlappte Felder und einzelne Felder können nicht gemischt werden. Der Wechsel von einem zum anderen erfordert eine Änderung des Medientyps.
 
 ## <a name="interlace-flags-on-samples"></a>Interlace-Flags in Beispielen
 
-Informationen, die sich von einem Beispiel zum nächsten ändern können, werden mithilfe von Beispielattributen angegeben. Verwenden Sie die [**INTERFACESSample-Schnittstelle,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) um diese Attribute abzurufen oder festzulegen.
+Informationen, die sich von einem Beispiel zum nächsten ändern können, werden mithilfe von Beispielattributen angegeben. Verwenden Sie [**die BERDsample-Schnittstelle,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) um diese Attribute zu erhalten oder zu festlegen.
 
-Alle in diesem Abschnitt aufgeführten Interlacingattribute verfügen über boolesche Werte. Tatsächlich kann jedes dieser Attribute drei Werte aufweisen: **ENTWEDER TRUE,** **FALSE** oder nicht festgelegt. Wenn kein Attribut festgelegt ist, wird der Wert aus dem Medientyp übernommen. Wenn ein Attribut festgelegt ist, überschreibt der Wert den Medientyp. Einige Kombinationen von Flags und Medientypen sind ungültig.
+Alle in diesem Abschnitt aufgeführten Interlacingattribute verfügen über boolesche Werte. Jedes dieser Attribute kann über drei Werte verfügen: **TRUE,** **FALSE** oder nicht festgelegt. Wenn kein Attribut festgelegt ist, wird der Wert vom Medientyp übernommen. Wenn ein Attribut festgelegt ist, überschreibt der Wert den Medientyp. Einige Kombinationen von Flags und Medientypen sind ungültig.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>attribute</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="mfsampleextension-interlaced-attribute.md">MFSampleExtension_Interlaced</a></td>
-<td>True <strong></strong>gibt an, dass der Frame übersprungen wird. False <strong></strong>gibt an, dass der Frame progressiv ist.<br/> Legen Sie dieses Attribut für jedes Beispiel fest, wenn der Medientyp MFVideoInterlace_MixedInterlaceOrProgressive ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="mfsampleextension-bottomfieldfirst-attribute.md">MFSampleExtension_BottomFieldFirst</a></td>
-<td>Die Bedeutung dieses Flags hängt davon ab, ob die Beispiele überlappende Felder oder einzelne Felder enthalten.<br/>
-<ul>
-<li>Verschachtelte Felder: Bei <strong>TRUE</strong>wird zuerst das untere Feld angezeigt. False <strong></strong>gibt an, dass das obere Feld zuerst ist.<br/></li>
-<li>Einzelne Felder: Bei <strong>TRUE</strong>enthält das Beispiel ein niedrigeres Feld. False <strong></strong>gibt an, dass das Beispiel ein oberes Feld enthält.<br/></li>
-</ul>
-Legen Sie dieses Attribut für jedes Interlacebeispiel fest, wenn der Medientyp MFVideoInterlace_FieldSingleUpper, MFVideoInterlace_FieldSingleLower oder MFVideoInterlace_MixedInterlaceOrProgressive ist.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="mfsampleextension-repeatfirstfield-attribute.md">MFSampleExtension_RepeatFirstField</a></td>
-<td>True <strong></strong>gibt an, dass das erste Feld wiederholt wird. Wenn <strong>FALSE</strong> oder nicht festgelegt ist, wird das erste Feld nicht wiederholt.</td>
-</tr>
-<tr class="even">
-<td><a href="mfsampleextension-singlefield-attribute.md">MFSampleExtension_SingleField</a></td>
-<td>True <strong></strong>gibt an, dass das Beispiel ein einzelnes Feld enthält. False <strong></strong>gibt an, dass das Beispiel überlappende Felder enthält.</td>
-</tr>
-</tbody>
-</table>
+
+| Attribut | BESCHREIBUNG | 
+|-----------|-------------|
+| <a href="mfsampleextension-interlaced-attribute.md">MFSampleExtension_Interlaced</a> | True <strong>gibt an,</strong>dass der Frame als Interlacing angezeigt wird. False <strong>gibt an,</strong>dass der Frame progressiv ist.<br /> Legen Sie dieses Attribut für jedes Beispiel fest, wenn der Medientyp MFVideoInterlace_MixedInterlaceOrProgressive.<br /> | 
+| <a href="mfsampleextension-bottomfieldfirst-attribute.md">MFSampleExtension_BottomFieldFirst</a> | Die Bedeutung dieses Flags hängt davon ab, ob die Beispiele überlappte Felder oder einzelne Felder enthalten.<br /><ul><li>Überlappte Felder: Bei <strong>TRUE</strong>wird zuerst das untere Feld angezeigt. False <strong>gibt</strong>an, dass das obere Feld zuerst angezeigt wird.<br /></li><li>Einzelne Felder: True <strong>gibt an,</strong>dass das Beispiel ein unteres Feld enthält. False <strong>gibt an,</strong>dass das Beispiel ein oberes Feld enthält.<br /></li></ul>Legen Sie dieses Attribut für jedes Interlace-Beispiel fest, wenn der Medientyp MFVideoInterlace_FieldSingleUpper, MFVideoInterlace_FieldSingleLower oder MFVideoInterlace_MixedInterlaceOrProgressive.<br /> | 
+| <a href="mfsampleextension-repeatfirstfield-attribute.md">MFSampleExtension_RepeatFirstField</a> | True <strong>gibt an,</strong>dass das erste Feld wiederholt wird. Wenn <strong>FALSE</strong> oder nicht festgelegt ist, wird das erste Feld nicht wiederholt. | 
+| <a href="mfsampleextension-singlefield-attribute.md">MFSampleExtension_SingleField</a> | True <strong>gibt an,</strong>dass das Beispiel ein einzelnes Feld enthält. False <strong>gibt an,</strong>dass das Beispiel überlappte Felder enthält. | 
+
 
 
 
@@ -113,7 +86,7 @@ Die folgende Tabelle zeigt, welche Flags je nach Medientyp erforderlich, optiona
 
 
 
-| Medientyp         | Verschachteltes Flag                      | BottomFieldFirst-Flag                    | RepeatFirstField-Flag | SingleField-Flag                     |
+| Medientyp         | Verschachtelte Flags                      | BottomFieldFirst-Flag                    | RepeatFirstField-Flag | SingleField-Flag                     |
 |--------------------|--------------------------------------|------------------------------------------|-----------------------|--------------------------------------|
 | progressiv        | Optional; wenn festgelegt, muss **FALSE** sein. | Legen Sie keinen Wert fest.                              | Legen Sie keinen Wert fest.           | Legen Sie keinen Wert fest.                          |
 | Verschachtelte Felder | Optional; wenn festgelegt, muss **TRUE** sein.  | Optional; wenn festgelegt, muss mit dem Medientyp übereinstimmen. | Legen Sie keinen Wert fest.           | Optional; wenn festgelegt, muss **FALSE** sein. |
@@ -140,7 +113,7 @@ Dieser Abschnitt enthält Empfehlungen für verschiedene Inhaltstypen.
 
 -   Legen Sie die Attribute **MFSampleExtension \_ BottomFieldFirst,** **MFSampleExtension \_ RepeatFirstField** oder **MFSampleExtension \_ SingleField** nicht fest.
 
-2. Das Video besteht aus allen übersprungenen Feldern mit der gleichen Felddominanz. Beispiele enthalten verschachtelte Felder.
+2. Das Video ist alles übersprungene Felder mit der gleichen Felddominanz. Beispiele enthalten verschachtelte Felder.
 
 -   Legen Sie den Medientyp auf MFVideoInterlace \_ FieldInterleavedUpperFirst oder MFVideoInterlace \_ FieldInterleavedLowerFirst fest.
 
@@ -150,7 +123,7 @@ Dieser Abschnitt enthält Empfehlungen für verschiedene Inhaltstypen.
 
 -   Legen Sie das **Attribut MFSampleExtension \_ RepeatFirstField** nicht fest, oder legen Sie es für jeden Frame auf **FALSE** fest.
 
--   Legen Sie das **ATTRIBUT MFSampleExtension \_ SingleField** nicht fest, oder legen Sie es für jeden Frame auf **FALSE** fest.
+-   Legen Sie das **Attribut MFSampleExtension \_ SingleField** nicht fest, oder legen Sie es für jeden Frame auf **FALSE** fest.
 
 3. Das Video enthält eine Mischung aus übersprungenen und progressiven Frames mit wiederholten Feldern und unterschiedlicher Felddominanz (z. B. DVD-Video).
 
@@ -158,7 +131,7 @@ Dieser Abschnitt enthält Empfehlungen für verschiedene Inhaltstypen.
 
 -   Legen Sie für jeden Frame die Attribute **MFSampleExtension \_ Interlaced,** **MFSampleExtension \_ BottomFieldFirst** und **MFSampleExtension \_ RepeatFirstField** fest.
 
--   Legen Sie das **ATTRIBUT MFSampleExtension \_ SingleField** nicht fest, oder legen Sie es für jeden Frame auf **FALSE** fest.
+-   Legen Sie das **Attribut MFSampleExtension \_ SingleField** nicht fest, oder legen Sie es für jeden Frame auf **FALSE** fest.
 
 4. Das Video ist übersprungen, und die Beispiele enthalten einzelne Felder.
 
@@ -205,7 +178,7 @@ Verwenden Sie für MPEG-2-Inhalte die folgenden Zuordnungen, um die MPEG-2-Flags
 
  
 
-**Oberstes \_ Feld \_ zuerst**
+**oberstes \_ Feld \_ zuerst**
 
 
 
@@ -231,7 +204,7 @@ Verwenden Sie für MPEG-2-Inhalte die folgenden Zuordnungen, um die MPEG-2-Flags
 
  
 
-## <a name="single-field-samples"></a>Single-Field Beispiele
+## <a name="single-field-samples"></a>beispiele für Single-Field
 
 Wenn der Medientyp MFVideoInterlace \_ FieldSingleUpper oder MFVideoInterlace \_ FieldSingleLower ist, bedeutet dies, dass jedes Beispiel ein einzelnes Feld enthält. Der Medientyp beschreibt jedoch den gesamten Frame. Daher enthält jeder Puffer nur die Hälfte der Im Medientyp angegebenen Feldzeilen. Wenn der Medientyp das Video beispielsweise als 720 × 480 beschreibt, enthält jedes Feld 240 Scanzeilen, und daher enthält jeder Puffer nur 240 Pixelzeilen. Wenn Sie eine Komponente schreiben, die Medientypen mit Einfeldbeispielen akzeptiert, müssen Sie diese Tatsache berücksichtigen, wenn Sie auf die Daten im Puffer zugreifen.
 
@@ -239,7 +212,7 @@ Die gleiche Regel gilt für die geometrische Öffnung[(MF \_ MT GEOMETRIC \_ \_ 
 
 ## <a name="directshow-mappings"></a>DirectShow-Zuordnungen
 
-In DirectShow sind Informationen zum Pro-Beispiel-Interlacing im **dwTypeSpecificFlags-Member** der **AM \_ SAMPLE2 \_ PROPERTIES-Struktur** enthalten. Die folgende Tabelle zeigt die entsprechenden Attribute für Media Foundation.
+In DirectShow sind Informationen zum Pro-Sample-Interlacing im **dwTypeSpecificFlags-Member** der **AM \_ SAMPLE2 \_ PROPERTIES-Struktur** enthalten. Die folgende Tabelle zeigt die entsprechenden Attribute für Media Foundation.
 
 
 

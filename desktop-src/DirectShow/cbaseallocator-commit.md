@@ -1,7 +1,7 @@
 ---
-description: 'Die Commit-Methode ordnet den Speicher für die Puffer zu. Diese Methode implementiert die imemzuzucator:: Commit-Methode.'
+description: Die Commit-Methode weist den Arbeitsspeicher für die Puffer zu. Diese Methode implementiert die IMemAllocator::Commit-Methode.
 ms.assetid: e8c36276-0229-428f-b030-978651ab7534
-title: Cbasezucator. Commit-Methode (amfilter. h)
+title: CBaseAllocator.Commit-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b49fae72e5588105b1235c1f0c461d5cc45cfa2b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba9c373a15d5200d6466fef5c519a59a1052c8e5854ebe38c5a8b027d21188a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087580"
 ---
-# <a name="cbaseallocatorcommit-method"></a>Cbasezucator. Commit-Methode
+# <a name="cbaseallocatorcommit-method"></a>CBaseAllocator.Commit-Methode
 
-Die- `Commit` Methode ordnet den Speicher für die Puffer zu. Diese Methode implementiert die [**imemzuzucator:: Commit**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-commit) -Methode.
+Die `Commit` -Methode weist den Arbeitsspeicher für die Puffer zu. Diese Methode implementiert die [**IMemAllocator::Commit-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-commit)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,26 +42,26 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind in der folgenden Liste aufgeführt.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind diese in der folgenden Liste.
 
 
 
 | Rückgabecode                                                                                       | Beschreibung                                        |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>              | Erfolg.<br/>                                |
-| <dl> <dt>**VFW \_ E \_ sizenotset**</dt> </dl> | Die Puffer Anforderungen wurden nicht angegeben.<br/> |
+| <dl> <dt>**VFW \_ E \_ SIZENOTSET**</dt> </dl> | Pufferanforderungen wurden nicht angegeben.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie vor dem Aufrufen dieser Methode die [**cbasezucator:: SetProperties**](cbaseallocator-setproperties.md) -Methode auf, um die Puffer Anforderungen anzugeben.
+Rufen Sie vor dem Aufrufen dieser Methode die [**CBaseAllocator::SetProperties-Methode**](cbaseallocator-setproperties.md) auf, um die Pufferanforderungen anzugeben.
 
-Diese Methode ruft die virtuelle Methode [**cbaseallocator:: Alloc**](cbaseallocator-alloc.md) auf, um den Speicher für die Puffer zuzuweisen. Abgeleitete Klassen können die **Zuweisung** überschreiben. Wenn ein Decommit-Vorgang aussteht, wird er abgebrochen.
+Diese Methode ruft die virtuelle Methode [**CBaseAllocator::Alloc**](cbaseallocator-alloc.md) auf, um den Arbeitsspeicher für die Puffer zu reservieren. Abgeleitete Klassen können **Alloc überschreiben.** Wenn ein Decommitvorgang aussteht, wird er abgebrochen.
 
-Sie müssen diese Methode aufrufen, bevor Sie die [**cbasezucator:: GetBuffer**](cbaseallocator-getbuffer.md) -Methode aufrufen.
+Sie müssen diese Methode aufrufen, bevor Sie [**die CBaseAllocator::GetBuffer-Methode**](cbaseallocator-getbuffer.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,8 +69,8 @@ Sie müssen diese Methode aufrufen, bevor Sie die [**cbasezucator:: GetBuffer**]
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -78,7 +78,7 @@ Sie müssen diese Methode aufrufen, bevor Sie die [**cbasezucator:: GetBuffer**]
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

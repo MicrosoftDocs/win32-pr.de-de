@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ rebootaction-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ RebootAction-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: A2ADB2F4-9E96-448F-9BAD-0DBB71EA72AE
 ms.tgt_platform: multiple
-title: CIM_RebootAction Methoden
+title: CIM_RebootAction-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1475b17e3a97ea224bac31113abcde780944a0ef
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 97faca47322cdebc91ac8869fc6917924acea7221bd5f9c5ad689ad53c07175d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920850"
 ---
-# <a name="cim_rebootaction-methods"></a>CIM- \_ rebootaction-Methoden
+# <a name="cim_rebootaction-methods"></a>CIM \_ RebootAction-Methoden
 
-Die [**CIM \_ rebootaction**](cim-rebootaction.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ RebootAction-Klasse**](cim-rebootaction.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

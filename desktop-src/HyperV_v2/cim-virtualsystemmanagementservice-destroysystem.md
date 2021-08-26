@@ -1,7 +1,7 @@
 ---
 description: Zerstört ein virtuelles System.
 ms.assetid: 8d2504dc-ce23-4257-9dfd-6a35dfd84b2d
-title: DestroySystem-Methode der CIM_VirtualSystemManagementService-Klasse
+title: DestroySystem-Methode der CIM_VirtualSystemManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,7 +24,7 @@ ms.locfileid: "119980550"
 
 Zerstört ein virtuelles System.
 
-Das virtuelle System, auf das verwiesen wird, wird zerstört, einschließlich aller Darin enthaltenen Elemente. Virtuelle Ressourcen werden an ihre Ressourcenpools zurückgegeben, was die Zerstörung dieser Ressourcen nach sich ziehen kann (implementierungsabhängig). Wenn das virtuelle System beim Aufrufen des Vorgangs aktiv ist, wird es zuerst deaktiviert und dann zerstört. Wenn Momentaufnahmen aus dem virtuellen System erstellt wurden, werden diese ebenfalls zerstört.
+Das virtuelle System, auf das verwiesen wird, wird zerstört, einschließlich aller elemente, auf die es verweist. Virtuelle Ressourcen werden an ihre Ressourcenpools zurückgegeben, was die Zerstörung dieser Ressourcen (implementierungsabhängig) bedeuten kann. Wenn das virtuelle System aktiv ist, wenn der Vorgang aufgerufen wird, wird es zuerst deaktiviert und dann zerstört. Wenn Momentaufnahmen aus dem virtuellen System erstellt wurden, werden diese auch zerstört.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ uint32 DestroySystem(
 *AffectedSystem* \[ In\]
 </dt> <dd>
 
-Verweis auf eine Instanz der [**Klasse CIM \_ ComputerSystem, die**](cim-computersystem.md) das zu zerstörende virtuelle Computersystem darstellt.
+Verweis auf eine Instanz der Klasse [**CIM \_ ComputerSystem,**](cim-computersystem.md) die das zu zerstörende virtuelle Computersystem darstellt.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
@@ -83,7 +83,7 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 **DMTF Reserved** (..)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftragsstart** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Reservierte Methode** (4097..32767)
@@ -100,13 +100,13 @@ Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

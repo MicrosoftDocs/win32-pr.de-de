@@ -55,12 +55,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 4af759cf621f5afbaef90924351ad24a232889b1d81048f0e1372630c74f98f3
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 1f7cefc27c0e4adc507276d118bcca95c274d121
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118950089"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886620"
 ---
 # <a name="msvm_summaryinformation-class"></a>Msvm \_ SummaryInformation-Klasse
 
@@ -377,13 +377,13 @@ InstanceID ist eine optionale Eigenschaft, die verwendet werden kann, um eine In
 
 Um die Eindeutigkeit innerhalb des NameSpace sicherzustellen, sollte der Wert von InstanceID mit dem folgenden "bevorzugten" Algorithmus erstellt werden:
 
-<OrgID>:<LocalID>
+&lt;OrgID &gt; : &lt; LocalID&gt;
 
-Wobei und durch einen Doppelpunkt (:)) getrennt sind und wo einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten muss, der im Besitz der Geschäftseinheit ist, die die InstanceID erstellt oder definiert, oder die eine registrierte ID ist, die der Geschäftseinheit von einer anerkannten globalen Autorität zugewiesen <OrgID> <LocalID> <OrgID> wird. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schemaklassennamen.) Darüber hinaus darf zur Sicherstellung der <OrgID> Eindeutigkeit keinen Doppelpunkt (:). Bei Verwendung dieses Algorithmus muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen und <OrgID> angezeigt <LocalID> werden.
+Dabei sind OrgID und LocalID durch einen Doppelpunkt &lt; &gt; &lt; &gt; (:)) getrennt, und dabei muss &lt; OrgID einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen &gt; enthalten, der im Besitz der Geschäftseinheit ist, die die InstanceID erstellt oder definiert, oder bei der es sich um eine registrierte ID handelt, die der Geschäftseinheit von einer erkannten globalen Autorität zugewiesen wird. (Diese Anforderung ähnelt der <Schema Name> \_ <Class Name> Struktur von Schemaklassennamen.) Um die Eindeutigkeit sicherzustellen, darf &lt; OrgID &gt; außerdem keinen Doppelpunkt (:). Bei Verwendung dieses Algorithmus muss der erste Doppelpunkt, der in InstanceID angezeigt wird, zwischen &lt; OrgID &gt; und &lt; LocalID angezeigt &gt; werden.
 
-<LocalID> wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende (reale) Elemente zu identifizieren. Wenn nicht NULL festgelegt ist und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceID nicht für instanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erzeugt werden.
+&lt;LocalID wird von der Geschäftsentität ausgewählt und sollte nicht wiederverwendet werden, um verschiedene zugrunde liegende &gt; (reale) Elemente zu identifizieren. Wenn nicht NULL festgelegt ist und der oben genannte "bevorzugte" Algorithmus nicht verwendet wird, muss die definierende Entität sicherstellen, dass die resultierende InstanceID nicht für instanceIDs wiederverwendet wird, die von diesem oder anderen Anbietern für den NameSpace dieser Instanz erzeugt werden.
 
-Wenn für DMTF-definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus mit dem auf <OrgID> CIM festgelegten verwendet werden.
+Wenn der Wert für DMTF-definierte Instanzen nicht auf NULL festgelegt ist, muss der "bevorzugte" Algorithmus mit der OrgID verwendet werden, die &lt; &gt; auf CIM festgelegt ist.
 
 > [!Note]  
 > Hinzugefügt in Windows 10.
@@ -428,7 +428,7 @@ Gibt an, ob die auf dem virtuellen Computer installierten Integrationsdienste au
 
 </dd> <dt>
 
-**Arbeitsspeicher verfügbar**
+**MemoryAvailable**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -437,9 +437,9 @@ Datentyp: **sint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Prozentsatz des aktuellen Arbeitsspeichers, der für den virtuellen Computer verfügbar ist. Wenn dynamischer Arbeitsspeicher für einen virtuellen Computer aktiviert ist, stellt diese Eigenschaft das Verhältnis des verfügbaren Arbeitsspeichers des virtuellen Computers zum gesamten physischen Speicher dar, der dem virtuellen Computer zugewiesen ist. Wenn ein virtueller Computer über keinen verfügbaren Arbeitsspeicher verfügt, ist diese Eigenschaft negativ und enthält das Verhältnis des Arbeitsspeichers, der für den virtuellen Computer benötigt wird, zum gesamten physischen Arbeitsspeicher, der dem virtuellen Computer zugewiesen ist.
+Der Prozentsatz des aktuellen Arbeitsspeichers, der für den virtuellen Computer verfügbar ist. Wenn dynamischer Arbeitsspeicher für einen virtuellen Computer aktiviert ist, stellt diese Eigenschaft das Verhältnis des verfügbaren Arbeitsspeichers des virtuellen Computers zum gesamten physischen Arbeitsspeicher dar, der dem virtuellen Computer zugewiesen ist. Wenn ein virtueller Computer über keinen verfügbaren Arbeitsspeicher verfügt, ist diese Eigenschaft negativ und enthält das Verhältnis des für den virtuellen Computer benötigten Arbeitsspeichers zum gesamten physischen Arbeitsspeicher, der dem virtuellen Computer zugewiesen ist.
 
-Diese Eigenschaft ist für Instanzen der **Msvm \_ SummaryInformation-Klasse** ungültig, die virtuelle Computer darstellen, für die kein dynamischer Arbeitsspeicher aktiviert ist.
+Diese Eigenschaft ist nicht gültig für Instanzen der **Msvm \_ SummaryInformation-Klasse,** die virtuelle Computer darstellen, für die dynamischer Arbeitsspeicher nicht aktiviert ist.
 
 Diese Eigenschaft ist für Instanzen der **Msvm \_ SummaryInformation-Klasse** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
@@ -454,7 +454,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob der Arbeitsspeicher eines oder mehrerer NUMA-Knoten (Virtual Nonuniform Memory Access) des virtuellen Computers mehrere physische NUMA-Knoten des Hostcomputersystems umfasst. Enthält **True,** wenn der Arbeitsspeicher mehrere physische NUMA-Knoten umfasst, **andernfalls FALSE.**
+Gibt an, ob der Arbeitsspeicher eines oder mehrerer virtueller NUMA-Knoten (Nonuniform Memory Access) des virtuellen Computers mehrere physische NUMA-Knoten des hostenden Computersystems umfasst. Enthält **TRUE,** wenn der Arbeitsspeicher mehrere physische NUMA-Knoten umfasst, **andernfalls FALSE.**
 
 </dd> <dt>
 
@@ -474,7 +474,7 @@ Die aktuelle Speicherauslastung des virtuellen Computers in Megabyte. Diese Eige
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -484,16 +484,16 @@ Der eindeutige Name für den virtuellen Computer oder die Momentaufnahme.
 
 </dd> <dt>
 
-**Notizen**
+**Hinweise**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die dem virtuellen Computer oder der Momentaufnahme zugeordneten Hinweise.
+Die dem virtuellen Computer oder der Momentaufnahme zugeordneten Notizen.
 
 </dd> <dt>
 
@@ -513,29 +513,29 @@ Die Gesamtzahl der virtuellen Prozessoren, die dem virtuellen Computer oder der 
 **OperationalStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16-Array**
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Der aktuelle Betriebsstatus des virtuellen Computers. Mögliche Werte finden Sie in der **OperationalStatus-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
+Der aktuelle Betriebsstatus des virtuellen Computers. Mögliche Werte finden Sie in der **OperationalStatus-Eigenschaft** der [**\_ Msvm ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 </dd> <dt>
 
 **OtherEnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 festgelegt ist. Diese Eigenschaft wird auf **NULL** festgelegt, wenn **EnabledState** ein anderer Wert als 1 ist.
+Eine Zeichenfolge, die den aktivierten oder deaktivierten Zustand des Elements beschreibt, wenn die **EnabledState-Eigenschaft** auf 1 festgelegt ist. Diese Eigenschaft wird auf NULL **festgelegt,** wenn **EnabledState** ein anderer Wert als 1 ist.
 
 </dd> <dt>
 
@@ -555,16 +555,16 @@ Die aktuelle Prozessorauslastung des virtuellen Computers in Prozent. Diese Eige
 **ProcessorLoadHistory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16-Array**
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
-Ein Array der vorherigen 100 Beispiele der Prozessornutzung in Prozent für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
+Ein Array der vorherigen 100 Stichproben der Prozessorauslastung in Prozent für den virtuellen Computer. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
@@ -583,7 +583,7 @@ Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) (
 Die Replikationszustand für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationHealth-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 > [!Note]  
-> Diese Eigenschaft ist ab Windows 8.1 veraltet. Verwenden Sie stattdessen **ReplicationHealthEx.**
+> Diese Eigenschaft ist veraltet, beginnend mit Windows 8.1; Verwenden Sie stattdessen **replicationHealthEx.**
 
  
 
@@ -598,7 +598,7 @@ Die Replikationszustand für den virtuellen Computer. Mögliche Werte finden Sie
 
 <span id="Ok"></span><span id="ok"></span><span id="OK"></span>
 
-**Ok** (1)
+**OK** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -622,13 +622,13 @@ Die Replikationszustand für den virtuellen Computer. Mögliche Werte finden Sie
 **ReplicationHealthEx**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint16-Array**
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Das Array von Replikationszustandswerten für die verschiedenen Replikationsbeziehungen des virtuellen Computers. Mögliche Werte finden Sie in der **ReplicationHealth-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md)
@@ -644,7 +644,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 
 <span id="Ok"></span><span id="ok"></span><span id="OK"></span>
 
-**Ok** (1)
+**OK** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -674,13 +674,13 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Replikationstyp für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationMode-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
+Der Replikationstyp für den virtuellen Computer. Mögliche Werte finden Sie in der **ReplicationMode-Eigenschaft** der [**\_ Msvm ComputerSystem-Klasse.**](msvm-computersystem.md)
 
 <dt>
 
 <span id="None"></span><span id="none"></span><span id="NONE"></span>
 
-**None** (0)
+**Keine** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -724,12 +724,12 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Für den primären oder erweiterten virtuellen Replikatcomputer ist dies die ID des primären Replikationsanbieters. Bei einem virtuellen Replikatcomputer und bei aktivierter erweiterter Replikation ist dies die Anbieter-ID für die erweiterte Beziehung.
 
-**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
+**Windows 8.1:** Dieser Wert wird erst unterstützt, wenn Windows 8.1 und Windows Server 2012 R2.
 
 </dd> <dt>
 
@@ -856,7 +856,7 @@ Datentyp: **uint16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Das Array von Replikationszustandswerten für die verschiedenen Replikationsbeziehungen des virtuellen Computers. Mögliche Werte finden Sie in der **ReplicationState-Eigenschaft** der [**Msvm \_ ReplicationRelationship-Klasse.**](msvm-replicationrelationship.md)
@@ -976,7 +976,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -990,7 +990,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1004,7 +1004,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1012,13 +1012,13 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 
 <span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>
 
-<span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>**Repurpose replication in progress (18) (Replikation in Bearbeitung** (18))
+<span id="Repurpose_replication_in_progress"></span><span id="repurpose_replication_in_progress"></span><span id="REPURPOSE_REPLICATION_IN_PROGRESS"></span>**Replikation wird neuverwendet** (18)
 
 
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1032,7 +1032,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1046,7 +1046,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1060,7 +1060,7 @@ Das Array von Replikationszustandswerten für die verschiedenen Replikationsbezi
 </dt> <dd>
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
@@ -1080,13 +1080,13 @@ Zugriffstyp: Schreibgeschützt
 Gibt an, ob die Abschirmung für den virtuellen Computer konfiguriert ist.
 
 > [!Note]  
-> In Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
+> Hinzugefügt in Windows 10 Version 1703 und Windows Server 2016.
 
  
 
 </dd> <dt>
 
-**Momentaufnahmen**
+**Snapshots**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ VirtualSystemSettingData-Array**
@@ -1095,7 +1095,7 @@ Datentyp: **CIM \_ VirtualSystemSettingData-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Ein Array von [**Msvm \_ VirtualSystemSettingData-Instanzen,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahmen für den virtuellen Computer darstellen. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation,** die eine Momentaufnahme eines virtuellen Computers darstellen, ungültig.
@@ -1111,7 +1111,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indiziert")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed")
 </dt> </dl>
 
 Zeichenfolgen, die die entsprechenden **OperationalStatus-Arraywerte** beschreiben. Dies entspricht der **StatusDescriptions-Eigenschaft** der [**Msvm \_ ComputerSystem-Klasse.**](msvm-computersystem.md)
@@ -1127,7 +1127,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob paging der zweiten Ebene aktiv ist. Enthält **True,** wenn paging der zweiten Ebene aktiv ist, **andernfalls False.**
+Gibt an, ob paging auf zweiter Ebene aktiv ist. Enthält **True,** wenn paging der zweiten Ebene aktiv ist, **andernfalls False.**
 
 </dd> <dt>
 
@@ -1172,7 +1172,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**Msvm \_ SummaryInformation**.**ThumbnailImage**")
 </dt> </dl>
 
-Die Höhe des Bilds in Pixel in der ThumbnailImage-Eigenschaft.
+Die Höhe des Bilds in pixel in der ThumbnailImage-Eigenschaft.
 
 > [!Note]  
 > In Windows 10 hinzugefügt.
@@ -1211,14 +1211,14 @@ Datentyp: **uint64**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeitspanne seit dem letzten Start des virtuellen Computers. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
+Die Zeit seit dem letzten Start des virtuellen Computers. Diese Eigenschaft ist für Instanzen von **Msvm \_ SummaryInformation** ungültig, die eine Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1254,7 +1254,7 @@ Zeichenfolgen, die die Benutzerfreundlichen Namen der virtuellen Switches angebe
 **VirtualSystemSubType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1286,7 +1286,7 @@ Der Untertyp des virtuellen Systems.
 
 Der Zugriff auf die **Msvm \_ SummaryInformation-Klasse** kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -1300,7 +1300,7 @@ Der Zugriff auf die **Msvm \_ SummaryInformation-Klasse** kann durch UAC-Filteru
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

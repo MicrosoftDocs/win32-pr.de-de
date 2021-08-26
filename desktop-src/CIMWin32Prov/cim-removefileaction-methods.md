@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ removefileaction-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ RemoveFileAction-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: F761D6FE-E29C-488F-930C-A939B582E2CA
 ms.tgt_platform: multiple
-title: CIM_RemoveFileAction Methoden
+title: CIM_RemoveFileAction-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12626f70c2abc878beddeeac3980b37a5a8df411
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: eb1cbaffdd5e4546340ae93f5dbe166c39945f4bd18ec125f37fdc8436edff81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920400"
 ---
-# <a name="cim_removefileaction-methods"></a>CIM \_ removefileaction-Methoden
+# <a name="cim_removefileaction-methods"></a>CIM \_ RemoveFileAction-Methoden
 
-Die [**CIM \_ removefileaction**](cim-removefileaction.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ RemoveFileAction-Klasse**](cim-removefileaction.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

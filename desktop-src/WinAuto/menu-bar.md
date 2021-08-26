@@ -1,33 +1,33 @@
 ---
-title: Menüleiste (MSAA UI-Element Referenz)
-description: Eine Menüleiste ist der Bereich eines Fensters direkt unterhalb der Titelleiste, die Menü Elemente enthält, z. b. Datei, bearbeiten, Fenster und Hilfe.
+title: Menüleiste (MSAA UI-Elementreferenz)
+description: Eine Menüleiste ist der Bereich eines Fensters direkt unter der Titelleiste, der Menüelemente wie Datei, Bearbeiten, Fenster und Hilfe enthält.
 ms.assetid: 63b496c7-ae3b-49b5-8c22-41fc9a8f3981
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a239a0bb5f860132ba0f9b9393129c2c7a093dae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1212ba3c56673ab638e5aeedcc0ce20aea68dda2ad55e0904906d9f809c234ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998410"
 ---
-# <a name="menu-bar-msaa-ui-element-reference"></a>Menüleiste (MSAA UI-Element Referenz)
+# <a name="menu-bar-msaa-ui-element-reference"></a>Menüleiste (MSAA UI-Elementreferenz)
 
 > [!Note]  
-> In diesem Thema werden **Menü** leisten Objekte für den MSAA-Benutzeroberflächen-Element Verweis beschrieben. Das Erstellen von **Menü** leisten Objekten in verschiedenen Benutzeroberflächen-Frameworks wird hier nicht beschrieben. Weitere Informationen finden Sie in der API-Referenz Dokumentation für das von Ihnen verwendete UI-Framework.
+> In diesem Thema werden **Menüleistenobjekte** für die MSAA UI-Elementreferenz beschrieben. Das Erstellen von **Menüleistenobjekten** in verschiedenen Benutzeroberflächenframeworks wird hier nicht beschrieben. Informationen zum verwendeten BENUTZERoberflächenframework finden Sie in der API-Referenzdokumentation.
 
  
 
-Eine Menüleiste ist der Bereich eines Fensters direkt unterhalb der Titelleiste, die Menü Elemente enthält, z. b. **Datei**, **Bearbeiten**, **Fenster** und **Hilfe**. Microsoft Active Accessibility erstellt außerdem ein Menüleisten Objekt für ein Systemmenü, das das Menü in der oberen linken Ecke der Titelleiste darstellt und Menü Elemente wie **Wiederherstellung**, **verschieben**, **Größe**, **minimieren** und **maximieren** enthält.
+Eine Menüleiste ist der Bereich eines Fensters direkt unterhalb der Titelleiste, der Menüelemente wie **Datei,** **Bearbeiten,** **Fenster** und **Hilfe** enthält. Microsoft Active Accessibility erstellt auch ein Menüleistenobjekt für ein Systemmenü, das das Menü in der oberen linken Ecke der Titelleiste darstellt und Menüelemente wie **Wiederherstellen,** **Verschieben,** **Größe,** **Minimieren** und **Maximieren** enthält.
 
 > [!Note]  
-> Da Menüleisten-Steuerelemente keinen Fokus erhalten, werden die [**accSelect**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) -und [**get- \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus) -Methoden für dieses Steuerelement nicht unterstützt.
+> Da Menüleistensteuerelemente keinen Fokus erhalten, werden die [**accSelect-**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-accselect) und [**\_ get accFocus-Methoden**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus) für dieses Steuerelement nicht unterstützt.
 
  
 
 ## <a name="iaccessible-methods"></a>IAccessible-Methoden
 
-Menüleisten-Steuerelemente unterstützen die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Methoden:
+Menüleistensteuerelemente unterstützen die folgenden [**IAccessible-Methoden:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 -   [**accHitTest**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acchittest)
 -   [**accLocation**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-acclocation)
@@ -36,32 +36,32 @@ Menüleisten-Steuerelemente unterstützen die folgenden [**IAccessible**](/windo
 
 ## <a name="iaccessible-properties"></a>IAccessible-Eigenschaften
 
-Menüleisten-Steuerelemente unterstützen die folgenden [**IAccessible**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) -Eigenschaften:
+Menüleisten-Steuerelemente unterstützen die folgenden [**IAccessible-Eigenschaften:**](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 
 
 
 | Eigenschaft                                                                             | Kommentare                                                                                                                                                                                                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_accChild erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)                       | Ruft das [**IDispatch**](idispatch-interface.md) für das angegebene Menü Element ab. Die untergeordneten IDs für die Menü Elemente werden sequenziell von links nach rechts nummeriert, beginnend mit einem.                                                                                                                                                                                             |
-| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)             | Die **childCount** -Eigenschaft ist die Anzahl der Menü Elemente in der Menüleiste. Die **childCount** -Eigenschaft für ein Systemmenü ist 1.                                                                                                                                                                                                                                                   |
-| [**get- \_ accdescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)           | Die **Description** -Eigenschaft für eine Menüleiste ist "enthält Befehle zum Bearbeiten der aktuellen Ansicht oder des aktuellen Dokuments". Die **Description** -Eigenschaft für ein Systemmenü ist "enthält Befehle zum Bearbeiten des Fensters".                                                                                                                                                                   |
-| [**get \_ accdefaultaction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)       |                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**\_Zugriffs Fokus erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)                       |                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**\_accHelp erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)                         |                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**\_accHelpTopic erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)               |                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**\_accKeyboardShortcut erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) | Die **KeyboardShortcut** -Eigenschaft für eine Menüleiste unterhalb der Titelleiste ist "alt". Die **KeyboardShortcut** -Eigenschaft für ein Systemmenü ist "Alt + Leertaste".                                                                                                                                                                                                                             |
-| [**\_accName erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                         | Die **Name** -Eigenschaft für eine Menüleiste unterhalb der Titelleiste lautet "Anwendung". Die **Name** -Eigenschaft für ein Systemmenü ist "System".                                                                                                                                                                                                                                                |
-| [**\_accParent erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)                     |                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**get- \_ Zugriffs Rolle**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                         | Die **Role** -Eigenschaft ist [**Rollen \_ System- \_ Menüleiste**](object-roles.md).                                                                                                                                                                                                                                                                                      |
-| [**\_accState erhalten**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                       | Die **State** -Eigenschaft ist eine Kombination aus einem oder mehreren der folgenden [Werte](object-state-constants.md): Zustands System-System eigenes Zustands [**\_ \_**](object-state-constants.md) System mit \| [**\_ \_ Fokus**](object-state-constants.md) \| [**\_ \_**](object-state-constants.md)<br/> |
+| [**get \_ accChild**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchild)                       | Ruft den [**IDispatch**](idispatch-interface.md) für das angegebene Menüelement ab. Die untergeordneten IDs für die Menüelemente werden sequenziell von links nach rechts nummeriert, beginnend mit 1.                                                                                                                                                                                             |
+| [**get \_ accChildCount**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accchildcount)             | Die **ChildCount-Eigenschaft** ist die Anzahl der Menüelemente auf der Menüleiste. Die **ChildCount-Eigenschaft** für ein Systemmenü ist eins.                                                                                                                                                                                                                                                   |
+| [**get \_ accDescription**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdescription)           | Die **Description-Eigenschaft** für eine Menüleiste lautet "Enthält Befehle zum Bearbeiten der aktuellen Ansicht oder des aktuellen Dokuments". Die **Description-Eigenschaft** für ein Systemmenü lautet "Enthält Befehle zum Bearbeiten des Fensters".                                                                                                                                                                   |
+| [**get \_ accDefaultAction**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accdefaultaction)       |                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accFocus**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accfocus)                       |                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accHelp**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelp)                         |                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accHelpTopic**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acchelptopic)               |                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accKeyboardShortcut**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) | Die **KeyboardShortcut-Eigenschaft** für eine Menüleiste unter der Titelleiste ist "ALT". Die **KeyboardShortcut-Eigenschaft** für ein Systemmenü lautet "ALT+LEERTASTE".                                                                                                                                                                                                                             |
+| [**get \_ accName**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accname)                         | Die **Name-Eigenschaft** für eine Menüleiste unter der Titelleiste lautet "Anwendung". Die **Name-Eigenschaft** für ein Systemmenü lautet "System".                                                                                                                                                                                                                                                |
+| [**get \_ accParent**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accparent)                     |                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**get \_ accRole**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accrole)                         | Die **Role-Eigenschaft** ist [**ROLE SYSTEM \_ \_ MENUBAR.**](object-roles.md)                                                                                                                                                                                                                                                                                      |
+| [**get \_ accState**](/windows/desktop/api/Oleacc/nf-oleacc-iaccessible-get_accstate)                       | Die **State-Eigenschaft** ist eine Kombination aus einem oder mehreren der folgenden [Werte:](object-state-constants.md) [**STATE SYSTEM \_ \_ INVISIBLE**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSED**](object-state-constants.md) \| [**STATE SYSTEM \_ \_ FOCUSABLE**](object-state-constants.md)<br/> |
 
 
 
  
 
-## <a name="notes"></a>Notizen
+## <a name="notes"></a>Hinweise
 
-Das System löst mehr als ein [**\_ \_ MenuStart**](event-constants.md) -Ereignis für das Ereignis System aus, das nicht immer über ein entsprechendes [**Ereignis \_ System- \_ MenuEnd**](event-constants.md) -Ereignis verfügt. Darüber hinaus löst das System das [**Ereignis System " \_ \_ menupopupstart**](event-constants.md) " und das [**Ereignis \_ System " \_ menupopupend**](event-constants.md) " nicht konsistent aus. Dies ist ein bekanntes Problem und wird behandelt.
+Das System löst mehr als ein [**\_ EREIGNISSYSTEM \_ MENUSTART-Ereignis**](event-constants.md) aus, das nicht immer über ein entsprechendes [**EVENT SYSTEM \_ \_ MENUEND-Ereignis**](event-constants.md) verfügt. Darüber hinaus löst das System die Ereignisse [**EVENT \_ SYSTEM \_ MENUPOPUPSTART**](event-constants.md) und [**EVENT SYSTEM \_ \_ MENUPOPUPEND**](event-constants.md) nicht konsistent aus. Dies ist ein bekanntes Problem, das behoben wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -70,10 +70,10 @@ Das System löst mehr als ein [**\_ \_ MenuStart**](event-constants.md) -Ereigni
 [IAccessible-Schnittstelle](/windows/desktop/api/oleacc/nn-oleacc-iaccessible)
 </dt> <dt>
 
-[**Menü Element**](menu-item.md)
+[**Menüelement**](menu-item.md)
 </dt> <dt>
 
-[**Popup Menü**](pop-up-menu.md)
+[**Popupmenü**](pop-up-menu.md)
 </dt> </dl>
 
  

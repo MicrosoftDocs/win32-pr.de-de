@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_COLUMNBASE. grbit-Eigenschaft.
-title: JET_COLUMNBASE. grbit-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_COLUMNBASE.grbit-Eigenschaft'
+title: JET_COLUMNBASE.grbit-Eigenschaft
 TOCTitle: 'grbit property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_COLUMNBASE.grbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_columnbase.grbit(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6a91cfdbcfd54996d5cb0ab1e955efafd09f2022
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ef2062acb86c4be98dca3e3299b73dce14b1a4134b559954af8db0c87e1603b0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116220"
 ---
-# <a name="jet_columnbasegrbit-property"></a>JET_COLUMNBASE. grbit-Eigenschaft
+# <a name="jet_columnbasegrbit-property"></a>JET_COLUMNBASE.grbit-Eigenschaft
 
-Ruft die Spalten Optionen ab.
+Ruft die Spaltenoptionen ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public ColumndefGrbit grbit { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. columndefgrbit](./columndefgrbit-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.ColumndefGrbit](./columndefgrbit-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COLUMNBASE-Klasse](./jet-columnbase-class.md)
 
-[Mitglieder JET_COLUMNBASE](./jet-columnbase-members.md)
+[JET_COLUMNBASE Member](./jet-columnbase-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

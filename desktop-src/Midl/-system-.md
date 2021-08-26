@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31def6297a1a91f6ed28943290a66b544dc368d5a00a91932035a338af50bac5
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 01b6455807aedb99d7bd525c69fffc524dbe25d4
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118643778"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882784"
 ---
-# <a name="system-switch"></a>/<system> Wechseln
+# <a name="ltsystemgt-switch"></a>/&lt;&gt;Systemschalter
 
-Der **/<system>** Schalter leitet den MIDL-Compiler an, eine Typbibliothek für das angegebene System zu generieren. Der Standardwert ist das aktuelle Betriebssystem.
+Der **/ &lt; Systemschalter &gt;** leitet den MIDL-Compiler an, eine Typbibliothek für das angegebene System zu generieren. Der Standardwert ist das aktuelle Betriebssystem.
 
 ``` syntax
 midl /{win32 | ia64 | amd64}
@@ -71,7 +71,7 @@ Eine auf American Micro Devices basierende 64-Bit-Windows-Umgebung wie Windows 2
 
 ## <a name="remarks"></a>Hinweise
 
-Der Schalter ist funktionell identisch mit der MIDL/env-Option und wird vom MIDL-Compiler ausschließlich aus Gründen der Abwärtskompatibilität **/<system>** mit MkTypLib [](-env.md) erkannt. Wenn Sie ein neues Makefile generieren, verwenden Sie den **Schalter /env.**
+Der **/ &lt; Systemschalter &gt;** ist funktionell identisch mit der MIDL-Option [**/env**](-env.md) und wird vom MIDL-Compiler ausschließlich aus Gründen der Abwärtskompatibilität mit MkTypLib erkannt. Wenn Sie ein neues Makefile generieren, verwenden Sie den **Schalter /env.**
 
 ## <a name="examples"></a>Beispiele
 

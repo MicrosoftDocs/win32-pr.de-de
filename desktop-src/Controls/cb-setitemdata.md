@@ -1,9 +1,9 @@
 ---
-title: CB_SETITEMDATA Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ SetItemData-Nachricht, um den Wert festzulegen, der mit dem angegebenen Element in einem Kombinations Feld verknüpft ist.
+title: CB_SETITEMDATA (Winuser.h)
+description: Eine Anwendung sendet eine CB SETITEMDATA-Nachricht, um den Wert festzulegen, der dem angegebenen \_ Element in einem Kombinationsfeld zugeordnet ist.
 ms.assetid: 8be9eb57-a635-4c52-9838-556368813c74
 keywords:
-- Windows-Steuerelemente für CB_SETITEMDATA Meldung
+- CB_SETITEMDATA meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbb1603f9906ebf30a391b57bd812dc2002136c4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7abd50db9050178bc5d8d3b8ff556bce90f340fdb8d6692a514b0348aceeeab3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089010"
 ---
-# <a name="cb_setitemdata-message"></a>CB- \_ Nachricht
+# <a name="cb_setitemdata-message"></a>CB \_ SETITEMDATA-Nachricht
 
-Eine Anwendung sendet eine **CB \_ SetItemData** -Nachricht, um den Wert festzulegen, der mit dem angegebenen Element in einem Kombinations Feld verknüpft ist.
+Eine Anwendung sendet eine **CB \_ SETITEMDATA-Nachricht,** um den Wert festzulegen, der dem angegebenen Element in einem Kombinationsfeld zugeordnet ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet eine **CB \_ SetItemData** -Nachricht, um den Wert festzul
 *wParam* 
 </dt> <dd>
 
-Gibt den NULL basierten Index des Elements an.
+Gibt den nullbasierten Index des Elements an.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Gibt den neuen Wert an, der dem Element zugeordnet werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn ein Fehler auftritt, ist der Rückgabewert CB \_ Err.
+Wenn ein Fehler auftritt, ist der Rückgabewert CB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich das angegebene Element in einem vom Besitzer gezeichneten Kombinations Feld befindet, das ohne den [**CBS \_ hasstrings**](combo-box-styles.md) -Stil erstellt wurde, ersetzt diese Meldung den Wert im *LPARAM* -Parameter der [**CB \_ AddString**](cb-addstring.md) -oder [**CB \_ InsertString**](cb-insertstring.md) -Nachricht, die das Element dem Kombinations Feld hinzugefügt hat.
+Wenn sich das angegebene Element in einem vom Besitzer gezeichneten Kombinationsfeld befindet, das ohne den [**CBS \_ HASSTRINGS-Stil**](combo-box-styles.md) erstellt wurde, ersetzt diese Meldung den Wert im *lParam-Parameter* der [**CB \_ ADDSTRING-**](cb-addstring.md) oder [**CB \_ INSERTSTRING-Meldung,**](cb-insertstring.md) die das Element dem Kombinationsfeld hinzugefügt hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn sich das angegebene Element in einem vom Besitzer gezeichneten Kombinations
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,16 +67,16 @@ Wenn sich das angegebene Element in einem vom Besitzer gezeichneten Kombinations
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ AddString**](cb-addstring.md)
+[**CB \_ ADDSTRING**](cb-addstring.md)
 </dt> <dt>
 
-[**CB \_ GetItemData**](cb-getitemdata.md)
+[**CB \_ GETITEMDATA**](cb-getitemdata.md)
 </dt> <dt>
 
-[**CB \_ InsertString**](cb-insertstring.md)
+[**CB \_ INSERTSTRING**](cb-insertstring.md)
 </dt> </dl>
 
  

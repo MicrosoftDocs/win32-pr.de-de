@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixRotationX-Funktion (D3dx9math.h): Erstellt eine Matrix, die um die X-Achse gedreht wird.'
+description: 'D3DXMatrixRotationX-Funktion (D3dx9math.h): Erstellt eine Matrix, die sich um die x-Achse dreht.'
 ms.assetid: 45a2668d-787f-4354-882a-94a72edaa543
 title: D3DXMatrixRotationX-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a4f51f8acab7caddd4571d60f7deae795440f02a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 72ef42d63a67cfb4328e0f73897ca6ac3b38e3e4275b9192eddfb14fe8cd2e62
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119080"
 ---
 # <a name="d3dxmatrixrotationx-function-d3dx9mathh"></a>D3DXMatrixRotationX-Funktion (D3dx9math.h)
 
-Erstellt eine Matrix, die um die X-Achse gedreht wird.
+Erstellt eine Matrix, die sich um die x-Achse dreht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die das Ergebnis des Vo
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entlang der Drehachse zum Ursprung hin betrachtet werden.
+Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn die Drehachse zum Ursprung hin betrachtet wird.
 
 </dd> </dl>
 
@@ -63,24 +63,24 @@ Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie entla
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\***
 
-Zeiger auf eine [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die um die X-Achse gedreht wurde.
+Zeiger auf eine um die X-Achse gedrehte [**D3DXMATRIX-Struktur.**](d3dxmatrix.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter zurückgegeben* wird. Auf diese Weise kann die **D3DXMatrixRotationX-Funktion** als Parameter für eine andere Funktion verwendet werden.
+Der Rückgabewert für diese Funktion ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird. Auf diese Weise kann die **D3DXMatrixRotationX-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

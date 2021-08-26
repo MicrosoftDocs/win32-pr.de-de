@@ -1,7 +1,7 @@
 ---
-description: Die deletemediatype-Funktion löscht eine zugeordnete am- \_ \_ Medientyp Struktur, einschließlich des Format Blocks.
+description: Die DeleteMediaType-Funktion löscht eine zugeordnete AM \_ MEDIA \_ TYPE-Struktur, einschließlich des Formatblocks.
 ms.assetid: 970f6b2b-2bf5-418d-b4ae-637561cd6765
-title: Deletemediatype-Funktion (mtype. h)
+title: DeleteMediaType-Funktion (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: db0de399ab1be7808370a6d0da57c4c3ca7b8de1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6035b65d6bf292f6ca35c4323ac5ad90c747b0cfd4bfa756b1f054d7b693d998
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119998390"
 ---
-# <a name="deletemediatype-function"></a>Deletemediatype-Funktion
+# <a name="deletemediatype-function"></a>DeleteMediaType-Funktion
 
-Die **deletemediatype** -Funktion löscht eine zugeordnete [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, einschließlich des Format Blocks.
+Die **DeleteMediaType-Funktion** löscht eine zugeordnete [**AM MEDIA \_ \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) einschließlich des Formatblocks.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void WINAPI DeleteMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur.
+Ein Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Ein Zeiger auf eine [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strm
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Funktion, um eine beliebige Medientyp Struktur freizugeben, die entweder mithilfe von [**cotaskmemzugc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) oder mit dem Wert von " [**kreatemediatype**](createmediatype.md)
+Verwenden Sie diese Funktion, um jede Medientypstruktur freizugeben, die entweder mit [**CoTaskMemAlloc**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) oder [**CreateMediaType**](createmediatype.md)zugeordnet wurde.
 
-Diese Funktion ist in der [DirectShow-Basisklassen](directshow-base-classes.md) Bibliothek definiert. Wenn Sie keine Verknüpfung mit der Basisklassen Bibliothek herstellen möchten, können Sie den folgenden Code verwenden:
+Diese Funktion ist in der [DirectShow-Basisklassenbibliothek](directshow-base-classes.md) definiert. Wenn Sie keine Verknüpfung mit der Basisklassenbibliothek verwenden möchten, können Sie den folgenden Code verwenden:
 
 
 ```C++
@@ -101,19 +101,19 @@ void _DeleteMediaType(AM_MEDIA_TYPE *pmt)
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Freimediatype**](freemediatype.md)
+[**FreeMediaType**](freemediatype.md)
 </dt> <dt>
 
-[**Medientyp Funktionen**](media-type-functions.md)
+[**Medientypfunktionen**](media-type-functions.md)
 </dt> </dl>
 
  

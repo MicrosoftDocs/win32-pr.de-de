@@ -1,7 +1,7 @@
 ---
-description: Bricht alle ausstehenden Eingabe-und Ausgabe Vorgänge (e/a-Vorgänge) ab, die vom aufrufenden Thread für die angegebene Datei ausgegeben werden.
+description: Bricht alle ausstehenden Eingabe- und Ausgabevorgänge (E/A) ab, die vom aufrufenden Thread für die angegebene Datei ausgegeben werden.
 ms.assetid: b28162dc-0da8-41c6-9901-29381d2d72c4
-title: CancelIo-Funktion (ioapi. h)
+title: CancelIo-Funktion (IoAPI.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_location:
 - KernelBase.dll
 - MinKernelBase.dll
 - api-ms-win-downlevel-kernel32-l1-1-0.dll
-ms.openlocfilehash: adb1ab95b30b31670a6ff5a4cc0e0205943f7683
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 900a47d51df882ce1f2931489ea93b5e3b4c498b8d5cc0f35e521e015e12c1d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075340"
 ---
 # <a name="cancelio-function"></a>CancelIo-Funktion
 
-Bricht alle ausstehenden Eingabe-und Ausgabe Vorgänge (e/a-Vorgänge) ab, die vom aufrufenden Thread für die angegebene Datei ausgegeben werden. Mit der-Funktion werden keine e/a-Vorgänge abgebrochen, die von anderen Threads für ein Datei Handle ausgegeben werden.
+Bricht alle ausstehenden Eingabe- und Ausgabevorgänge (E/A) ab, die vom aufrufenden Thread für die angegebene Datei ausgegeben werden. Die Funktion bricht keine E/A-Vorgänge ab, die andere Threads für ein Dateihand handle ausführen.
 
-Zum Abbrechen von e/a-Vorgängen von einem anderen Thread verwenden Sie die Funktion [**CancelIoEx**](cancelioex-func.md) .
+Verwenden Sie zum Abbrechen von E/A-Vorgängen aus einem anderen Thread [**die CancelIoEx-Funktion.**](cancelioex-func.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ BOOL WINAPI CancelIo(
 
 <dl> <dt>
 
-*hFile* \[ in\]
+*hFile* \[ In\]
 </dt> <dd>
 
 Ein Handle für die Datei.
 
-Die-Funktion bricht alle ausstehenden e/a-Vorgänge für dieses Datei Handle ab.
+Die Funktion bricht alle ausstehenden E/A-Vorgänge für dieses Dateihand handle ab.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich Null. Der Abbruch Vorgang für alle ausstehenden e/a-Vorgänge, die vom aufrufenden Thread für das angegebene Datei Handle ausgegeben wurden, wurde erfolgreich angefordert. Der Thread kann die [**gedeverlappedresult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) -Funktion verwenden, um zu bestimmen, wann die e/a-Vorgänge selbst abgeschlossen wurden.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich Null. Der Abbrichtvorgang für alle ausstehenden E/A-Vorgänge, die vom aufrufenden Thread für das angegebene Dateihand handle ausgegeben wurden, wurde erfolgreich angefordert. Der Thread kann die [**GetOverlappedResult-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) verwenden, um zu bestimmen, wann die E/A-Vorgänge selbst abgeschlossen wurden.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert 0 (null). Um erweiterte Fehlerinformationen abzurufen, müssen Sie die [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion aufrufen.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert 0 (null). Um erweiterte Fehlerinformationen zu erhalten, rufen Sie die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn für das angegebene Datei Handle ausstehende e/a-Vorgänge ausgeführt werden und diese vom aufrufenden Thread ausgegeben werden, werden diese von der **CancelIo** -Funktion abgebrochen. **CancelIo** bricht nur ausstehende e/a-Vorgänge für das Handle ab, ändert den Zustand des Handles nicht. Dies bedeutet, dass Sie sich nicht auf den Zustand des Handles verlassen können, weil Sie nicht wissen, ob der Vorgang erfolgreich abgeschlossen wurde oder abgebrochen wurde.
+Wenn für das angegebene Dateihand handle ausstehende E/A-Vorgänge ausgeführt werden und diese vom aufrufenden Thread ausgegeben werden, bricht die **CancelIo-Funktion** sie ab. **CancelIo** bricht nur ausstehende E/A für das Handle ab. Der Zustand des Handles wird nicht geändert. Dies bedeutet, dass Sie sich nicht auf den Status des Handle verlassen können, da Sie nicht wissen, ob der Vorgang erfolgreich abgeschlossen oder abgebrochen wurde.
 
-Die e/a-Vorgänge müssen als überlappende e/a-Vorgänge ausgegeben werden. Wenn dies nicht der Fall ist, werden die e/a-Vorgänge nicht zurückgegeben, damit der Thread die **CancelIo** -Funktion aufruft. Das Aufrufen der **CancelIo** -Funktion mit einem Datei Handle, das nicht mit einem überlappenden **\_ Dateiflag \_** geöffnet wurde, bewirkt nichts.
+Die E/A-Vorgänge müssen als überlappende E/A-Vorgänge ausgegeben werden. Falls nicht, werden die E/A-Vorgänge nicht zurückgerufen, damit der Thread die **CancelIo-Funktion aufrufen** kann. Das Aufrufen **der CancelIo-Funktion** mit einem Dateihandl, das nicht mit **FILE FLAG \_ \_ OVERLAPPED geöffnet** wird, führt nichts aus.
 
-Alle e/a-Vorgänge, die abgebrochen werden, werden mit dem Fehler **\_ Vorgang \_ abgebrochen**, und alle Abschluss Benachrichtigungen für die e/a-Vorgänge treten in der Regel auf.
+Alle E/A-Vorgänge, die abgebrochen werden, werden mit dem Fehler **ERROR \_ OPERATION \_ ABORTED** abgeschlossen, und alle Abschlussbenachrichtigungen für die E/A-Vorgänge treten normal auf.
 
 In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Technologien unterstützt.
 
@@ -74,25 +74,25 @@ In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Techn
 
 | Technologie                                           | Unterstützt      |
 |------------------------------------------------------|----------------|
-| Server Message Block-Protokoll (SMB) 3,0<br/>   | Ja<br/> |
-| SMB 3,0 transparent Failover (TFO)<br/>        | Ja<br/> |
-| SMB 3,0 mit Dateifreigaben mit horizontaler Skalierung (also)<br/>   | Ja<br/> |
-| Freigegebenes Clustervolume Datei System (csvfs)<br/> | Ja<br/> |
+| Server Message Block (SMB) 3.0-Protokoll<br/>   | Ja<br/> |
+| SMB 3.0 Transparent Failover (TFO)<br/>        | Ja<br/> |
+| SMB 3.0 mit Dateifreigaben mit aufskalieren (SO)<br/>   | Ja<br/> |
+| Freigegebenes Clustervolume Dateisystem (CsvFS)<br/> | Ja<br/> |
 | Robustes Dateisystem (Resilient File System, ReFS)<br/>              | Ja<br/> |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[UWP-Apps für Windows XP-Desktop-Apps \|\]<br/>                                                                                                                                                                                                                                                       |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 \[ -Desktop-Apps \| UWP-apps\]<br/>                                                                                                                                                                                                                                              |
-| Header<br/>                   | <dl> <dt>Ioapi. h (Include Windows. h); </dt> <dt>Winbase. h unter Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[XP-Desktop-Apps \| UWP-Apps\]<br/>                                                                                                                                                                                                                                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2003-Desktop-Apps \|\]<br/>                                                                                                                                                                                                                                              |
+| Header<br/>                   | <dl> <dt>IoAPI.h (include Windows.h);</dt> <dt>WinBase.h auf Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista, Windows Server 2003 und Windows XP (einschließlich Windows.h)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Kernel32.lib</dt> </dl>                                                                                                                                                                                                                  |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl>                                                                                                                                                                                                                  |
 
@@ -111,16 +111,16 @@ In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Techn
 [**CreateFile**](/windows/desktop/api/FileAPI/nf-fileapi-createfilea)
 </dt> <dt>
 
-[**DeviceIoControl**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
+[**Deviceiocontrol**](/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol)
 </dt> <dt>
 
 [Dateiverwaltungsfunktionen](file-management-functions.md)
 </dt> <dt>
 
-[**Lockfileex**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex)
+[**LockFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-lockfileex)
 </dt> <dt>
 
-[**"Read directoriychangesw"**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw)
+[**ReadDirectoryChangesW**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw)
 </dt> <dt>
 
 [**ReadFile**](/windows/desktop/api/FileAPI/nf-fileapi-readfile)
@@ -129,7 +129,7 @@ In Windows 8 und Windows Server 2012 wird diese Funktion von den folgenden Techn
 [**ReadFileEx**](/windows/desktop/api/FileAPI/nf-fileapi-readfileex)
 </dt> <dt>
 
-[Synchrone und asynchrone e/a](synchronous-and-asynchronous-i-o.md)
+[Synchrone und asynchrone E/A](synchronous-and-asynchronous-i-o.md)
 </dt> <dt>
 
 [**WriteFile**](/windows/desktop/api/FileAPI/nf-fileapi-writefile)

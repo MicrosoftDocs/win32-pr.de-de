@@ -1,23 +1,23 @@
 ---
 title: Kompilieren eines Shaders
-description: In diesem Thema wird gezeigt, wie Sie die D3DCompileFromFile-Funktion zur Laufzeit verwenden, um Shader-Code zu kompilieren.
+description: In diesem Thema wird gezeigt, wie Sie die D3DCompileFromFile-Funktion zur Laufzeit verwenden, um Shadercode zu kompilieren.
 ms.assetid: A2CE368F-E72A-453D-BA4D-3D1D53DDDEE0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bb5eadb1d6627f553a9d769e6a0f43ab3ebe3a9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a0ccda5ee552ed1c7cb40802d92a4562b85c7f36
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728736"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880656"
 ---
-# <a name="how-to-compile-a-shader"></a>Gewusst wie: Kompilieren eines Shaders
+# <a name="how-to-compile-a-shader"></a>How To: Compile a Shader
 
-In der Regel verwenden Sie den [fxc.exe](/windows/desktop/direct3dtools/fxc) HLSL-Code Compiler als Teil des Buildprozesses, um Shader-Code zu kompilieren. Weitere Informationen hierzu finden Sie unter [Kompilieren von Shadern](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-part1). In diesem Thema wird gezeigt, wie Sie die [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile) -Funktion zur Laufzeit verwenden, um Shader-Code zu kompilieren.
+In der Regel verwenden Sie den [fxc.exe](/windows/desktop/direct3dtools/fxc) HLSL-Codecompiler als Teil des Buildprozesses, um Shadercode zu kompilieren. Weitere Informationen hierzu finden Sie unter [Kompilieren von Shadern.](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-part1) In diesem Thema wird gezeigt, wie Sie die [**D3DCompileFromFile-Funktion**](/windows/desktop/direct3dhlsl/d3dcompilefromfile) zur Laufzeit verwenden, um Shadercode zu kompilieren.
 
 **So kompilieren Sie einen Shader:**
 
--   Kompilieren Sie den HLSL-Shader-Code durch Aufrufen von [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile).
+-   Kompilieren Sie HLSL-Shadercode, indem [**Sie D3DCompileFromFile aufrufen.**](/windows/desktop/direct3dhlsl/d3dcompilefromfile)
     ```C++
         UINT flags = D3DCOMPILE_ENABLE_STRICTNESS;
     #if defined( DEBUG ) || defined( _DEBUG )
@@ -39,12 +39,12 @@ In der Regel verwenden Sie den [fxc.exe](/windows/desktop/direct3dtools/fxc) HLS
 
     
 
-Im folgenden Codebeispiel wird gezeigt, wie verschiedene Shader kompiliert werden.
+Das folgende Codebeispiel zeigt, wie verschiedene Shader kompiliert werden.
 
 > [!Note]  
-> In diesem Beispielcode benötigen Sie den Windows SDK 8,0 und die Datei d3dcompiler \_44.dll aus dem Ordner% Program \_ file% \\ Windows Kits \\ 8,0 \\ Redist \\ D3D \\ <arch> in Ihrem Pfad. Windows Store-Apps unterstützen die Kompilierung von Laufzeiten für die Entwicklung, aber nicht für die
+> Für diesen Beispielcode benötigen Sie das Windows SDK 8.0 und die datei d3dcompiler44.dll aus dem \_ Ordner %PROGRAM \_ FILE% \\ Windows Kits \\ 8.0 \\ Redist \\ D3D \\ &lt; arch in &gt; Ihrem Pfad. Windows Store-Apps unterstützen die Laufzeitkompilierung für die Entwicklung, aber nicht für die Bereitstellung.
 
- 
+ 
 
 
 ```C++
@@ -131,7 +131,7 @@ int main()
 
 
 
-Im vorangehenden Codebeispiel werden die Pixel-und Vertex-Shader-Code Blöcke in den \_ Dateien BasicHLSL11 PS. HLSL und BasicHLSL11 \_ vs. HLSL kompiliert. Dies ist der Code in BasicHLSL11 \_ PS. HLSL:
+Im vorangehenden Codebeispiel werden die Codeblöcke für Pixel- und Vertex-Shader in den Vs.hlsl-Dateien BasicHLSL11 \_ PS.hlsl und BasicHLSL11 \_ kompiliert. Hier ist der Code in BasicHLSL11 \_ PS.hlsl:
 
 
 ```hlsl
@@ -188,7 +188,7 @@ float4 PSMain( PS_INPUT Input ) : SV_TARGET
 
 
 
-Dies ist der Code in BasicHLSL11 im \_ Vergleich zu HLSL:
+Hier ist der Code in BasicHLSL11 \_ VS.hlsl:
 
 
 ```hlsl
@@ -247,9 +247,9 @@ VS_OUTPUT VSMain( VS_INPUT Input )
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

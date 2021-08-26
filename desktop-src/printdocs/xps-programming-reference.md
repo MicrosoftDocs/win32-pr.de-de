@@ -1,26 +1,26 @@
 ---
-description: XPS-Dokument-API-Referenz
+description: REFERENZ ZUR XPS-Dokument-API
 ms.assetid: 99cf64c8-44ea-4686-81cd-ccadb4e3cd7f
-title: XPS-Dokument-API-Referenz
+title: REFERENZ ZUR XPS-Dokument-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a48305ee7805566aec7a53c0631d64051e76a888
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f6335380d496c947b1bb36a9b401dcf41a4ad0308be12666d099c8013e4a1a23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112080"
 ---
-# <a name="xps-document-api-reference"></a>XPS-Dokument-API-Referenz
+# <a name="xps-document-api-reference"></a>REFERENZ ZUR XPS-Dokument-API
 
 ## <a name="contents"></a>Inhalte
 
 <dl>
 
-[XPS-Dokument Schnittstellen](document-object-model-interfaces.md)  
-[XPS-Dokument Strukturen](document-object-model-structures.md)  
-[XPS-dokumentenumerationen](document-object-model-enumerations.md)  
-[XPS-Dokument Fehler](xps-document-errors.md)  
+[XPS-Dokumentschnittstellen](document-object-model-interfaces.md)  
+[XPS-Dokumentstrukturen](document-object-model-structures.md)  
+[XPS-Dokumentenumeration](document-object-model-enumerations.md)  
+[XPS-Dokumentfehler](xps-document-errors.md)  
 </dl>
 
 ## <a name="related-topics"></a>Zugehörige Themen

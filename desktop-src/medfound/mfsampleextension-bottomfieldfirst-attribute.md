@@ -1,45 +1,45 @@
 ---
-description: Gibt die Feld Dominanz für einen verschachtelten Videorahmen an.
+description: Gibt die Felddominanz für einen Geschachtelten Videoframe an.
 ms.assetid: 680c42e4-2808-46ed-98a8-c77b14a55def
-title: MFSampleExtension_BottomFieldFirst-Attribut (mfapi. h)
+title: MFSampleExtension_BottomFieldFirst -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e608160c92fa53e8cde6adee1831d6c3e8789bc4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b56ab0a9847977ea25d93190911bbf2280629f0219eba3d4c4ddfb492e9fdcd9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113070"
 ---
-# <a name="mfsampleextension_bottomfieldfirst-attribute"></a>MF Sample Extension \_ bottomfieldfirst-Attribut
+# <a name="mfsampleextension_bottomfieldfirst-attribute"></a>MFSampleExtension \_ BottomFieldFirst-Attribut
 
-Gibt die Feld Dominanz für einen verschachtelten Videorahmen an. Dieses Attribut gilt für Medien Beispiele.
+Gibt die Felddominanz für einen Geschachtelten Videoframe an. Dieses Attribut gilt für Medienbeispiele.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DURCHSCHN.Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Videorahmen Zeilen Sprung enthält und das Beispiel zwei verschachtelte Felder enthält, gibt dieses Attribut an, welches Feld zuerst angezeigt wird. **True** gibt an, dass das untere Feld das erste Mal ist. **False** gibt an, dass das oberste Feld zuerst ist.
+Wenn der Videoframe geschachtelt ist und das Beispiel zwei verschachtelte Felder enthält, gibt dieses Attribut an, welches Feld zuerst angezeigt wird. True **gibt an,** dass das untere Feld zum ersten Mal angezeigt wird. False **gibt an,** dass das oberste Feld zuerst angezeigt wird.
 
-Wenn der Frame Zeilen Sprung ist und das Beispiel ein einzelnes Feld enthält, gibt dieses Attribut an, welches Feld das Beispiel enthält. **True** gibt an, dass das Beispiel das untere Feld enthält. Wenn der Wert **false** ist, enthält das Beispiel das oberste Feld.
+Wenn der Frame ein Interlacing ist und das Beispiel ein einzelnes Feld enthält, gibt dieses Attribut an, welches Feld das Beispiel enthält. True **gibt an,** dass das Beispiel das untere Feld enthält. False **gibt an,** dass das Beispiel das oberste Feld enthält.
 
-Wenn der Frame progressiv ist, beschreibt dieses Attribut, wie die Felder angeordnet werden sollen, wenn die Ausgabe mit Zeilen Sprung versehen wird. **True** gibt an, dass das untere Feld zuerst ausgegeben werden soll. Wenn **false**, sollte das oberste Feld zuerst ausgegeben werden.
+Wenn der Frame progressiv ist, beschreibt dieses Attribut, wie die Felder beim Verschachteln der Ausgabe geordnet werden sollen. True **gibt an,** dass das untere Feld zuerst ausgegeben werden sollte. False **gibt** an, dass das oberste Feld zuerst ausgegeben werden sollte.
 
-Wenn dieses Attribut nicht festgelegt wird, beschreibt der Medientyp die Feld Dominanz.
+Wenn dieses Attribut nicht festgelegt ist, beschreibt der Medientyp die Felddominanz.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,9 +47,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -57,16 +57,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> <dt>
 
-[Video-Interlacing](video-interlacing.md)
+[Video Interlacing](video-interlacing.md)
 </dt> </dl>
 
  

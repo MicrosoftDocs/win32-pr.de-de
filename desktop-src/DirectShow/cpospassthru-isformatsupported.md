@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6bd4b90bbe86e7ba05aa48fb7888c946babd8ed9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4d4ae6cee00879d9778380e76249ddc786f40be007081bb5aa8d78a4da2f4f58
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084090"
 ---
 # <a name="cpospassthruisformatsupported-method"></a>CPosPassThru.IsFormatSupported-Methode
 
@@ -45,33 +45,33 @@ HRESULT IsFormatSupported(
 *pFormat* 
 </dt> <dd>
 
-Zeiger auf eine Zeitformat-GUID.
+Zeiger auf eine GUID im Zeitformat.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> <dt>
 
-[**Zeitformat-GUIDs**](time-format-guids.md)
+[**GUIDs im Zeitformat**](time-format-guids.md)
 </dt> </dl>
 
  

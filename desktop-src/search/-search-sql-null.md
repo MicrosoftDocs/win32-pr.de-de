@@ -1,21 +1,21 @@
 ---
-description: Das NULL-Prädikat gibt an, ob das Dokument über einen Wert für die Spalte verfügt.
+description: Das NULL-Prädikat gibt an, ob das Dokument über einen Wert für die angegebene Spalte verfügt.
 ms.assetid: 078ffd99-2020-4da2-8968-301dba8cc436
 title: NULL-Prädikat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea02a04313ac2b86afe809633bee5ad2cbcf764e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0bd80ea6cba2009b398c8cdd0a2926240e3ce78309ca3f8511fb6ba286f44a64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058120"
 ---
 # <a name="null-predicate"></a>NULL-Prädikat
 
-Das **null** -Prädikat gibt an, ob das Dokument über einen Wert für die Spalte verfügt.
+Das **NULL-Prädikat** gibt an, ob das Dokument über einen Wert für die angegebene Spalte verfügt.
 
-Das **null** -Prädikat weist die folgende Syntax auf:
+Das **NULL-Prädikat** weist die folgende Syntax auf:
 
 
 ```
@@ -24,16 +24,16 @@ Das **null** -Prädikat weist die folgende Syntax auf:
 
 
 
-Das optionale not-Schlüsselwort negiert das Ergebnis. Die Spalte kann ein regulärer oder Begrenzungs [Bezeichner](-search-sql-identifiers.md)sein.
+Das optionale NOT-Schlüsselwort negiert das Ergebnis. Die Spalte kann ein regulärer oder durch Trennzeichen getrennter [Bezeichner](-search-sql-identifiers.md)sein.
 
 > [!IMPORTANT]
-> Um zu testen, ob eine Spalte den **null** -Wert aufweist, müssen Sie das **null** -Prädikat verwenden. Die Verwendung des **null** -Werts in einem Vergleichs Prädikat ist ungültig. "Where column is **null**" ist richtig. "Where Column = **null**" ist ungültig.
+> Um zu testen, ob eine Spalte über den **NULL-Wert** verfügt, müssen Sie das **NULL-Prädikat** verwenden. Es ist nicht gültig, den **NULL-Wert** in einem Vergleichsprädikat zu verwenden. "WHERE column IS **NULL"** ist richtig. "WHERE column = **NULL**" ist ungültig.
 
  
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel werden Dokumente zurückgegeben, die keinen System. Video. Director-Wert aufweisen.
+Im folgenden Beispiel werden Dokumente zurückgegeben, die keinen System.Video.Director-Wert aufweisen.
 
 
 ```
@@ -52,19 +52,19 @@ Im folgenden Beispiel werden Dokumente zurückgegeben, die keinen System. Video.
 [LIKE-Prädikat](-search-sql-like.md)
 </dt> <dt>
 
-[Vergleich von literalen Werten](-search-sql-literalvaluecomparison.md)
+[Literalwertvergleich](-search-sql-literalvaluecomparison.md)
 </dt> <dt>
 
-[Mehrwertige Vergleiche (Array)](-search-sql-multivaluedcomparisons.md)
+[Mehrwertige Vergleiche (ARRAY)](-search-sql-multivaluedcomparisons.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-voll Text Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

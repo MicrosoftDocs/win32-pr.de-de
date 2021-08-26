@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Messaging02-Klasse
-description: Die MDM \_ -Richtlinie \_ Result01 \_ Messaging02-Klasse stellt die SMS-Sicherungs-und-Wiederherstellungs-und-Messaging überall dar.
+description: Die \_ \_ Result01 Messaging02-Klasse der MDM-Richtlinie \_ stellt die Textnachricht back up and restore und Messaging Everywhere dar.
 ms.assetid: cdc92999-3a2b-4653-b64f-79e19abe5559
 keywords:
 - MDM_Policy_Result01_Messaging02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: afd0eda84b9e2492243b2af85457450b0e443a93
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa2b16379a6d7fa9c58469c2a047f4d3bf5753fab78f5cc980acc258bf3ee849
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045690"
 ---
-# <a name="mdm_policy_result01_messaging02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Messaging02-Klasse
+# <a name="mdm_policy_result01_messaging02-class"></a>MDM \_ Policy \_ Result01 \_ Messaging02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM \_ -Richtlinie \_ Result01 \_ Messaging02-Klasse stellt die SMS-Sicherungs-und-Wiederherstellungs-und-Messaging überall dar.
+Die \_ \_ Result01 Messaging02-Klasse der MDM-Richtlinie \_ stellt die Textnachricht back up and restore und Messaging Everywhere dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_Result01_Messaging02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Messaging02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Policy \_ Result01 \_ Messaging02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Messaging02** -Klasse verfügt über diese Eigenschaften.
+Die **KLASSE MDM Policy \_ \_ Result01 \_ Messaging02** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowmessagesync](/windows/client-management/mdm/policy-csp-messaging#messaging-allowmessagesync)
+[AllowMessageSync](/windows/client-management/mdm/policy-csp-messaging#messaging-allowmessagesync)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -70,27 +70,27 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

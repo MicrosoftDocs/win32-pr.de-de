@@ -1,7 +1,7 @@
 ---
-description: 'Die getpin-Methode ruft eine PIN ab. Diese Methode implementiert die rein virtuelle cbasefilter:: getpin-Methode.'
+description: Die GetPin-Methode ruft eine Stecknadel ab. Diese Methode implementiert die rein virtuelle CBaseFilter::GetPin-Methode.
 ms.assetid: 7f30a1ba-8e7b-4bde-9f4d-a85b3a2122e9
-title: CSource. getpin-Methode (Quelle. h)
+title: CSource.GetPin-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f11ff79c9d2d535a3370183b7f36bae25c5e1383
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c5b7548eca20f9ec6d9e03d0e708ead1b106f543ca8cac108700c64c9352ea3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087080"
 ---
-# <a name="csourcegetpin-method"></a>CSource. getpin-Methode
+# <a name="csourcegetpin-method"></a>CSource.GetPin-Methode
 
-Die- `GetPin` Methode ruft eine PIN ab. Diese Methode implementiert die rein virtuelle [**cbasefilter:: getpin**](cbasefilter-getpin.md) -Methode.
+Die `GetPin` -Methode ruft einen Pin ab. Diese Methode implementiert die rein virtuelle [**CBaseFilter::GetPin-Methode.**](cbasefilter-getpin.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ CBasePin* GetPin(
 *n* 
 </dt> <dd>
 
-Die Nummer der angegebenen PIN.
+Nummer des angegebenen Pins.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Zeiger auf das [**cbasepin**](cbasepin.md) -Objekt zurück, das die PIN implementiert, oder **null** , wenn der Index außerhalb des gültigen Bereichs liegt.
+Gibt den Zeiger auf das [**CBasePin-Objekt**](cbasepin.md) zurück, das den Pin implementiert, oder **NULL,** wenn der Index außerhalb des Zulässigkeitsbereichs liegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den Zeiger auf das [**cbasepin**](cbasepin.md) -Objekt zurück, das die PIN
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

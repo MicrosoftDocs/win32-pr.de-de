@@ -1,27 +1,27 @@
 ---
-description: Wenn eine Tabelle im Mergemodul in der Tabelle "moduleignoretable" aufgeführt ist, wird Sie nicht in die MSI-Datei zusammengeführt.
+description: Wenn eine Tabelle im Mergemodul in der Tabelle ModuleIgnoreTable aufgeführt ist, wird sie nicht mit der datei .msi zusammengeführt.
 ms.assetid: 9ff87993-74f6-4436-b0a9-d7ebed6555bd
-title: Moduleignoretable-Tabelle
+title: ModuleIgnoreTable-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7b0191f616eced187411a148e40e0ae6575cca6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 46337b74f6822b374314a9248f0377ec63359c6576a6ca1398a931d27e548138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042858"
 ---
-# <a name="moduleignoretable-table"></a>Moduleignoretable-Tabelle
+# <a name="moduleignoretable-table"></a>ModuleIgnoreTable-Tabelle
 
-Wenn eine Tabelle im Mergemodul in der Tabelle "moduleignoretable" aufgeführt ist, wird Sie nicht in die MSI-Datei zusammengeführt. Wenn die Tabelle bereits in der MSI-Datei vorhanden ist, wird Sie nicht durch den Merge geändert. Die Tabellen in der moduleignoretable können daher Daten enthalten, die nach dem Merge nicht benötigt werden.
+Wenn eine Tabelle im Mergemodul in der Tabelle ModuleIgnoreTable aufgeführt ist, wird sie nicht mit der datei .msi zusammengeführt. Wenn die Tabelle bereits in der .msi Datei vorhanden ist, wird sie durch den Merge nicht geändert. Die Tabellen in moduleIgnoreTable können daher Daten enthalten, die nach der Zusammenführung nicht mehr benötigt werden.
 
-Die moduleignoretable-Tabelle weist die folgenden Spalten auf.
+Die Tabelle ModuleIgnoreTable enthält die folgenden Spalten.
 
 
 
-| Spalte | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte | Typ                         | Key | Nullwerte zulässig |
 |--------|------------------------------|-----|----------|
-| Tabelle  | [Bezeichner](identifier.md) | J   | Nein       |
+| Tabelle  | [Identifier](identifier.md) | J   | Nein       |
 
 
 
@@ -31,16 +31,16 @@ Die moduleignoretable-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Glaub
+<span id="Table"></span><span id="table"></span><span id="TABLE"></span>Tabelle
 </dt> <dd>
 
-Der Name der Tabelle im Mergemodul, die nicht in der MSI-Datei zusammengeführt werden soll.
+Der Name der Tabelle im Mergemodul, die nicht mit der datei .msi zusammengeführt werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Größe der MSM-Datei zu minimieren, wird empfohlen, dass Entwickler nicht verwendete Tabellen aus Modulen entfernen, die für die Verteilung vorgesehen sind, anstatt diese Tabellen in der Tabelle "moduleignoretable" aufzulisten.
+Um die Größe der MSM-Datei zu minimieren, sollten Entwickler nicht verwendete Tabellen aus Modulen entfernen, die für die Weiterverteilung vorgesehen sind, anstatt diese Tabellen in der Tabelle ModuleIgnoreTable aufzulisten.
 
  
 

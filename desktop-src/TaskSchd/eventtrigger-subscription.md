@@ -1,11 +1,11 @@
 ---
-title: EventTrigger. Abonnement (Eigenschaft)
-description: Ruft bei der Skripterstellung eine Abfrage Zeichenfolge ab, die das Ereignis identifiziert, das den-Triggern auslöst
+title: EventTrigger.Subscription-Eigenschaft
+description: Ruft für die Skripterstellung eine Abfragezeichenfolge ab, die das Ereignis identifiziert, das den Trigger auslöst, oder legt diese fest.
 ms.assetid: 31d32426-3dd7-41f9-89cc-b13767871b74
 keywords:
-- Abonnement Eigenschaft Taskplaner
-- Abonnement Eigenschaft Taskplaner, EventTrigger-Objekt
-- EventTrigger-Objekt Taskplaner, Abonnement Eigenschaft
+- Taskplaner der Abonnementeigenschaft
+- Subscription-Eigenschaft Taskplaner , EventTrigger-Objekt
+- EventTrigger-Objekt Taskplaner , Subscription-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68ad05576e248d3ad6c2551a8654a9198ca3c0f0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d83225faa022de6e4a0823be3db971c71da503a885a46c1941fc1e5578f711b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100230"
 ---
-# <a name="eventtriggersubscription-property"></a>EventTrigger. Abonnement (Eigenschaft)
+# <a name="eventtriggersubscription-property"></a>EventTrigger.Subscription-Eigenschaft
 
-Ruft bei der Skripterstellung eine Abfrage Zeichenfolge ab, die das Ereignis identifiziert, das den-Triggern auslöst
+Ruft für die Skripterstellung eine Abfragezeichenfolge ab, die das Ereignis identifiziert, das den Trigger auslöst, oder legt diese fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,17 +38,17 @@ EventTrigger.Subscription As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Abfrage Zeichenfolge, die das Ereignis identifiziert, das den-Triggern auslöst.
+Eine Abfragezeichenfolge, die das Ereignis identifiziert, das den Trigger auslöst.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder schreiben Ihrer eigenen XML-Daten für eine Aufgabe wird das Ereignis Abonnement mit dem [**Abonnement**](taskschedulerschema-subscription-eventtriggertype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben Eigener XML-Code für eine Aufgabe wird das Ereignisabonnement mithilfe des [**Subscription-Elements**](taskschedulerschema-subscription-eventtriggertype-element.md) des Taskplaner Schemas angegeben.
 
-Weitere Informationen zum Schreiben einer Abfrage Zeichenfolge für bestimmte Ereignisse finden Sie unter [Ereignis Auswahl](/previous-versions//aa385231(v=vs.85)) und [Abonnieren von Ereignissen](../wes/subscribing-to-events.md).
+Weitere Informationen zum Schreiben einer Abfragezeichenfolge für bestimmte Ereignisse finden Sie unter [Ereignisauswahl](/previous-versions//aa385231(v=vs.85)) und [Abonnieren von Ereignissen.](../wes/subscribing-to-events.md)
 
 ## <a name="examples"></a>Beispiele
 
-Die folgende Abfrage Zeichenfolge definiert ein Abonnement für alle Ereignisse der Ebene 2 im System Kanal:
+Die folgende Abfragezeichenfolge definiert ein Abonnement für alle Ereignisse der Ebene 2 im Systemkanal:
 
 
 ```XML
@@ -67,9 +67,9 @@ Die folgende Abfrage Zeichenfolge definiert ein Abonnement für alle Ereignisse 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

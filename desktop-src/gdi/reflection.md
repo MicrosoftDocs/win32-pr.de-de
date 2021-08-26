@@ -1,31 +1,31 @@
 ---
-description: Einige Anwendungen stellen Funktionen bereit, die im Client Bereich gezeichnete Objekte widerspiegeln (oder Spiegeln).
+description: Einige Anwendungen bieten Features, die im Clientbereich gezeichnete Objekte widerspiegeln (oder spiegeln).
 ms.assetid: 2205dc3c-ca4b-4a0a-be3e-0332ce8467a0
 title: Spiegelung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d8e327af098a4e232e2a6734b37a17a1ac85f19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f03d872273e7d0b9f23d9ffb31c6304c8b59b59eda80c7181802120f89c0d764
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092700"
 ---
 # <a name="reflection"></a>Spiegelung
 
-Einige Anwendungen stellen Funktionen bereit, die im Client Bereich gezeichnete Objekte widerspiegeln (oder Spiegeln). Anwendungen, die Reflektionsfunktionen enthalten, verwenden die [**setworldtransform**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) -Funktion, um die entsprechenden Werte in der Welt Raum Transformation auf die Seiten Raum Transformation festzulegen. Diese Funktion empfängt einen Zeiger auf eine [**XForm**](/windows/win32/api/wingdi/ns-wingdi-xform) -Struktur, die die entsprechenden Werte enthält. Die eM11-und eM22-Member von XForm geben die horizontalen bzw. vertikalen reflektionskomponenten an.
+Einige Anwendungen bieten Features, die im Clientbereich gezeichnete Objekte widerspiegeln (oder spiegeln). Anwendungen, die Reflektionsfunktionen enthalten, verwenden die [**SetWorldTransform-Funktion,**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) um die entsprechenden Werte im Weltraum auf die Transformation im Seitenbereich festzulegen. Diese Funktion empfängt einen Zeiger auf eine [**XFORM-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-xform) die die entsprechenden Werte enthält. Die Elemente eM11 und eM22 von XFORM geben die horizontalen bzw. vertikalen Reflektionskomponenten an.
 
-Die *reflektionstransformation* erstellt ein Spiegelbild eines Objekts in Bezug auf die x-oder y-Achse. Kurz gesagt, die Reflektion ist nur eine negative Skalierung. Um eine horizontale Reflektion zu schaffen, werden x-Koordinaten mit 1 multipliziert. Um eine vertikale Reflektion zu schaffen, werden y-Koordinaten mit 1 multipliziert.
+Die *Reflektionstransformation* erstellt ein Spiegelbild eines Objekts in Bezug auf die x- oder y-Achse. Kurz gesagt: Reflektion ist nur eine negative Skalierung. Um eine horizontale Reflektion zu erzeugen, werden x-Koordinaten mit 1 multipliziert. Um eine vertikale Reflektion zu erzeugen, werden y-Koordinaten mit 1 multipliziert.
 
-Die horizontale Reflektion kann durch den folgenden Algorithmus dargestellt werden:
+Horizontale Reflektion kann durch den folgenden Algorithmus dargestellt werden:
 
 ``` syntax
 x' = -x 
 ```
 
-Dabei ist x die x-Koordinate, und x ' ist das Ergebnis der Reflektion.
+wobei x die x-Koordinate und x' das Ergebnis der Reflektion ist.
 
-Die 2 x 2-Matrix, die die horizontale Reflektion erzeugt hat, enthält die folgenden Werte:
+Die 2-by-2-Matrix, die horizontale Reflektion erzeugt hat, enthält die folgenden Werte:
 
 ``` syntax
 |-1    0| 
@@ -38,16 +38,16 @@ Die vertikale Reflektion kann durch den folgenden Algorithmus dargestellt werden
 y' = -y 
 ```
 
-Dabei ist y die y-Koordinate, und y ' ist das Ergebnis der Reflektion.
+wobei y die y-Koordinate und y' das Ergebnis der Reflektion ist.
 
-Die 2 x 2-Matrix, die die vertikale Reflektion erzeugt hat, enthält die folgenden Werte:
+Die 2-by-2-Matrix, die vertikale Reflektion erzeugt hat, enthält die folgenden Werte:
 
 ``` syntax
 |1    0| 
 |0   -1| 
 ```
 
-Die Vorgänge für die horizontale Reflektion und die vertikale Reflektion können mithilfe der folgenden 2-bis-2-Matrix in einem einzelnen Vorgang kombiniert werden:
+Die horizontalen und vertikalen Reflektionsvorgänge können mithilfe der folgenden 2-mal-2-Matrix zu einem einzelnen Vorgang kombiniert werden:
 
 ``` syntax
 |-1    0| 

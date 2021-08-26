@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für das Datei Informations Ereignis. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für das Dateiinformationsereignis. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 41ae1f8a-a90f-43d0-a848-a2c095f046d4
 title: FileIo_Info-Klasse
 ms.topic: reference
@@ -18,18 +18,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 985986132abe432e1adefb51939b8ace1aa48c8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a77d135fa5140f5d8d51a26164cd96009f06bacee654d13bec8dbaa9dcd76a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120042000"
 ---
-# <a name="fileio_info-class"></a>Klasse "fleio \_ Info"
+# <a name="fileio_info-class"></a>FileIo \_ Info-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für das Datei Informations Ereignis.
+Diese Klasse ist die Ereignistypklasse für das Dateiinformationsereignis.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,128 +48,128 @@ class FileIo_Info : FileIo
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ Info** " verfügt über diese Typen von Membern:
+Die **FileIo \_ Info-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **fleio \_ Info** " verfügt über diese Eigenschaften.
+Die **FileIo \_ Info-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ExtraInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), Zeiger
+Qualifizierer: WmiDataId(5), Zeiger
 </dt> </dl>
 
-Bei filedispositioninformation-Anforderungen enthält dieses Feld die angeforderte Disposition. Bei fileendoffileinformation-und filezugecationinformation-Anforderungen enthält dieses Feld die angegebene Dateigröße.
+Für FileDispositionInformation-Anforderungen enthält dieses Feld die angeforderte Disposition. Für FileEndOfFileInformation- und FileAllocationInformation-Anforderungen enthält dieses Feld die angegebene Dateigröße.
 
 </dd> <dt>
 
-**Filekey**
+**FileKey**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Um den Dateinamen zu ermitteln, vergleichen Sie den Wert dieser Eigenschaft mit der **FileObject** -Eigenschaft eines [**FileIO- \_ namens**](fileio-name.md) Ereignisses.
+Um den Dateinamen zu bestimmen, passen Sie den Wert dieser Eigenschaft mit der **FileObject-Eigenschaft** eines [**FileIo \_ Name-Ereignisses**](fileio-name.md) an.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Ein Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Datei Objektinstanz zwischen Ereignissen zum Erstellen und Schließen von Dateien verwendet werden kann.
+Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Dateiobjektinstanz zwischen Ereignissen zum Erstellen und Schließen von Dateien verwendet werden kann.
 
 </dd> <dt>
 
-**Infoclass**
+**InfoClass**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Die angeforderte Datei Informations Klasse.
+Angeforderte Dateiinformationsklasse.
 
 </dd> <dt>
 
-**Unpptr**
+**IrpPtr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität.
+E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität.
 
 </dd> <dt>
 
-**TTiD**
+**TTID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Thread Bezeichner des Threads, der den Vorgang ausführt.
+Threadbezeichner des Threads, der den Vorgang ausgeführt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Festlegen von Informationen und Abfrage Informations Ereignissen geben an, dass die Dateiattribute festgelegt oder abgefragt wurden. Wenn ein FSCTL-Befehl ausgegeben wird, wird ein Ereignis für die Dateisystem Steuerung (fscontrol) aufgezeichnet.
+Ereignisse zum Festlegen von Informationen und Abfrageinformationen geben an, dass die Dateiattribute festgelegt oder abgefragt wurden. Ein Ereignis der Dateisystemsteuerung (FILE SYSTEM Control, FSControl) wird aufgezeichnet, wenn ein FSCTL-Befehl ausgegeben wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

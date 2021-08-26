@@ -1,19 +1,19 @@
 ---
-description: Verwenden von Secure Socket Extensions
+description: Verwenden von Secure Socket-Erweiterungen
 ms.assetid: d5e2f9d0-c61f-42d3-b62b-6c75b221ae24
-title: Verwenden von Secure Socket Extensions
+title: Verwenden von Secure Socket-Erweiterungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d8a9abf9f3e9feee9e47a9925de08e49c66e821
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ad8c9569631303c2b9cc12d3e70b4c5483d461a5d60d8810033ffd49be5743c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960625"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121170"
 ---
-# <a name="using-secure-socket-extensions"></a>Verwenden von Secure Socket Extensions
+# <a name="using-secure-socket-extensions"></a>Verwenden von Secure Socket-Erweiterungen
 
-Der folgende Beispielcode veranschaulicht die Verwendung der Funktionen der Winsock-Secure Socket-Erweiterung.
+Der folgende Beispielcode veranschaulicht die Verwendung der Winsock Secure Socket-Erweiterungsfunktionen.
 
 ## <a name="securing-a-socket"></a>Sichern eines Sockets
 
@@ -282,19 +282,19 @@ int QueryTcpSocketSecurity(IN SOCKET sock)
 
 <dl> <dt>
 
-[Informationen zur Windows-Filter Plattform](../fwp/about-windows-filtering-platform.md)
+[Informationen Windows Filterplattform](../fwp/about-windows-filtering-platform.md)
 </dt> <dt>
 
-[Erweiterte Winsock-Beispiele mit Secure Socket Extensions](advanced-winsock-samples-using-secure-socket-extensions.md)
+[Erweiterte Winsock-Beispiele mit Secure Socket-Erweiterungen](advanced-winsock-samples-using-secure-socket-extensions.md)
 </dt> <dt>
 
-[Durchsetzung der Anwendungsschicht (ALE)](../fwp/application-layer-enforcement--ale-.md)
+[Erzwingung der Anwendungsschicht (Application Layer Enforcement, ALE)](../fwp/application-layer-enforcement--ale-.md)
 </dt> <dt>
 
-[IPSec-Konfiguration](../fwp/ipsec-configuration.md)
+[IPsec-Konfiguration](../fwp/ipsec-configuration.md)
 </dt> <dt>
 
-[IPSec-Funktionen](../fwp/fwp-ipsec-functions.md)
+[IPsec-Funktionen](../fwp/fwp-ipsec-functions.md)
 </dt> <dt>
 
 [Security Support Provider Interface (SSPI)](../rpc/security-support-provider-interface-sspi-.md)
@@ -303,7 +303,7 @@ int QueryTcpSocketSecurity(IN SOCKET sock)
 [Windows-Filterplattform](../fwp/windows-filtering-platform-start-page.md)
 </dt> <dt>
 
-[API-Funktionen der Windows-Filter Plattform](../fwp/fwp-functions.md)
+[Windows Filtern von Plattform-API-Funktionen](../fwp/fwp-functions.md)
 </dt> <dt>
 
 [Winsock Secure Socket Extensions](winsock-secure-socket-extensions.md)
