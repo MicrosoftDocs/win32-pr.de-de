@@ -1,36 +1,36 @@
 ---
-title: Senden von System-Exclusive Nachrichten
-description: Senden von System-Exclusive Nachrichten
+title: Senden System-Exclusive Nachrichten
+description: Senden System-Exclusive Nachrichten
 ms.assetid: 2bb95e4e-004e-46c8-9c56-25436fcc7f6c
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Senden von Nachrichten
-- MIDI (Digital Instrumentation Digital Interface), Senden von Nachrichten
-- Abspielen von MIDI-Dateien, Senden von Nachrichten
-- Senden von MIDI-Meldungen
-- Digital Instrumentation Digital Interface (MIDI), System exklusive Meldungen
-- MIDI (Digital Instrumentation Digital Interface), System exklusive Nachrichten
-- Abspielen von MIDI-Dateien, System exklusive Nachrichten
-- System exklusive MIDI-Nachrichten
+- Instruments Instrument Digital Interface (KEYBOARD), Senden von Nachrichten
+- KEYBOARD (Instruments Instrument Digital Interface), Senden von Nachrichten
+- Wiedergeben von DANN-Dateien, Senden von Nachrichten
+- Senden von SIGNAL-Nachrichten
+- Instruments Instrument Digital Interface (LUS), system-exklusive Nachrichten
+- LUS (Instrument Digital Interface), ausschließliche Systemnachrichten
+- Wiedergeben von DANN-Dateien, exklusive Systemmeldungen
+- system-exclusive-SYSTEMS-Nachrichten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 073ebc0fe111ef19e2edb098e6bdb170c13abc3e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: aad97371f56c042e5acd230aba6144f5f9734a594b370a791422b2e8f8148861
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037260"
 ---
-# <a name="sending-system-exclusive-messages"></a>Senden von System-Exclusive Nachrichten
+# <a name="sending-system-exclusive-messages"></a>Senden System-Exclusive Nachrichten
 
-System exklusive System-Nachrichten sind die einzigen MIDI-Nachrichten, die nicht in einen einzelnen Double Word-Wert passen. System exklusive Nachrichten können eine beliebige Länge aufweisen. Windows stellt die [**midioutlongmsg**](/windows/win32/api/mmeapi/nf-mmeapi-midioutlongmsg) -Funktion zum Senden von System exklusiven Nachrichten an die MIDI-Ausgabegeräte bereit. Verwenden Sie die [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur, um System exklusive Systemdaten Blöcke anzugeben.
+DIE system-exklusiven Nachrichten sind die einzigen VOMT-Nachrichten, die nicht in einen einzelnen Doublewordwert passen. System-exklusive Nachrichten können eine beliebige Länge haben. Windows stellt die [**funktion "sollenOutLongMsg"**](/windows/win32/api/mmeapi/nf-mmeapi-midioutlongmsg) zum Senden von system-exklusiven Nachrichten an DIE-Ausgabegeräte zur Verfügung. Verwenden Sie zum Angeben von exklusiven SYSTEM-EXKLUSIVEn [**Datenblöcken die BLOCKHDR-Struktur.**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr)
 
-Nachdem Sie einen System exklusiven Datenblock mithilfe von **midioutlongmsg** gesendet haben, müssen Sie warten, bis der Gerätetreiber mit dem Datenblock fertig ist, bevor Sie ihn freigeben. Wenn Sie mehrere Datenblöcke senden, müssen Sie den Abschluss der einzelnen Datenblöcke überwachen, damit Sie wissen, wann zusätzliche Blöcke gesendet werden sollen. Informationen zu den verschiedenen Techniken zum Überwachen der Datenblock Vervollständigung finden Sie unter [Verwalten von MIDI-Datenblöcken](managing-midi-data-blocks.md).
+Nachdem Sie einen system-exklusiven Datenblock **mithilfe von "blocksOutLongMsg"** gesendet haben, müssen Sie warten, bis der Gerätetreiber mit dem Datenblock fertig ist, bevor Sie ihn wieder frei geben. Wenn Sie mehrere Datenblöcke senden, müssen Sie die Vervollständigung jedes Datenblocks überwachen, damit Sie wissen, wann zusätzliche Blöcke gesendet werden sollen. Informationen zu verschiedenen Techniken zum Überwachen der Datenblockvervollständigung finden Sie unter [Verwalten von BLOCK-Datenblöcken.](managing-midi-data-blocks.md)
 
 > [!Note]  
-> Alle anderen Bytes als eine System-Real-Time-Nachricht beenden eine System exklusive Nachricht. Wenn Sie mehrere Datenblöcke verwenden, um eine einzelne System exklusive Nachricht zu senden, senden Sie keine anderen als System-Real-Time-Meldungen zwischen den Datenblöcken.
+> Jedes andere STATUS-Byte als eine System-Echtzeitmeldung beendet eine system-exklusive Nachricht. Wenn Sie mehrere Datenblöcke verwenden, um eine einzelne system-exklusive Nachricht zu senden, senden Sie keine ANDEREN NACHRICHTEN als System-Echtzeitnachrichten zwischen Datenblöcken.
 
- 
+ 
 
- 
+ 
 
- 
+ 

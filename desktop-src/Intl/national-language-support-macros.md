@@ -1,33 +1,33 @@
 ---
-description: 'NLS stellt die folgenden Makros bereit: ist " \_ High \_ surrogateis \_ Low \_ surrogateis", " \_ \_ untlangidfromlcidmakelangidmakelcidmakesortlcidprimarylangidmendfromlcidsortversionfromlcidsublangid"'
+description: 'NLS stellt die folgenden Makros bereit: IS \_ HIGH \_ SURROGATEIS \_ LOW \_ SURROGATEIS \_ SURROGATE \_ PAIRLANGIDFROMLCIDMAKELANGIDMAKELCIDMAKESORTLCIDPRIMARYLANGIDSORTIDFROMLCIDSORTVERSIONFROMLCIDSUBLANGID'
 ms.assetid: 45440464-0628-473b-861a-e8be7452700c
-title: Unterstützung für nationale Sprachunterstützung
+title: Unterstützungsmakros für nationale Sprachen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ccb437ce969a36b6b09c51cee54ce87ecb74c39c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb270b42e8c5fa67dd66a3be129397fcde59eebf8b7c1e384de2553d6c478a89
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041110"
 ---
-# <a name="national-language-support-macros"></a>Unterstützung für nationale Sprachunterstützung
+# <a name="national-language-support-macros"></a>Unterstützungsmakros für nationale Sprachen
 
 NLS stellt die folgenden Makros bereit:
 
 <dl>
 
-[**ist ein \_ hohes \_ Ersatz Zeichen**](/windows/desktop/api/Winnls/nf-winnls-is_high_surrogate)  
-[**ist ein \_ niedriges \_ Ersatz Zeichen**](/windows/desktop/api/Winnls/nf-winnls-is_low_surrogate)  
-[**ist \_ Ersatz Zeichen \_ paar**](/windows/desktop/api/Winnls/nf-winnls-is_surrogate_pair)  
-[**Langidfromlcid**](/windows/desktop/api/Winnt/nf-winnt-langidfromlcid)  
-[**Makelangid**](/windows/desktop/api/Winnt/nf-winnt-makelangid)  
+[**IS \_ HIGH \_ SURROGATE**](/windows/desktop/api/Winnls/nf-winnls-is_high_surrogate)  
+[**IS \_ LOW \_ SURROGATE**](/windows/desktop/api/Winnls/nf-winnls-is_low_surrogate)  
+[**IST \_ \_ ERSATZZEICHENPAAR**](/windows/desktop/api/Winnls/nf-winnls-is_surrogate_pair)  
+[**LANGIDFROMLCID**](/windows/desktop/api/Winnt/nf-winnt-langidfromlcid)  
+[**MAKELANGID**](/windows/desktop/api/Winnt/nf-winnt-makelangid)  
 [**MAKELCID**](/windows/desktop/api/Winnt/nf-winnt-makelcid)  
-[**Makesortlcid**](/windows/desktop/api/Winnt/nf-winnt-makesortlcid)  
-[**Primarylangid**](/windows/desktop/api/Winnt/nf-winnt-primarylangid)  
-[**"Mendfromlcid"**](/windows/desktop/api/Winnt/nf-winnt-sortidfromlcid)  
-[**Sortversionfromlcid**](/windows/desktop/api/Winnt/nf-winnt-sortversionfromlcid)  
-[**Sublangid**](/windows/desktop/api/Winnt/nf-winnt-sublangid)  
+[**MAKESORTLCID**](/windows/desktop/api/Winnt/nf-winnt-makesortlcid)  
+[**PRIMARYLANGID**](/windows/desktop/api/Winnt/nf-winnt-primarylangid)  
+[**SORTIDFROMLCID**](/windows/desktop/api/Winnt/nf-winnt-sortidfromlcid)  
+[**SORTVERSIONFROMLCID**](/windows/desktop/api/Winnt/nf-winnt-sortversionfromlcid)  
+[**SUBLANGID**](/windows/desktop/api/Winnt/nf-winnt-sublangid)  
 </dl>
 
  

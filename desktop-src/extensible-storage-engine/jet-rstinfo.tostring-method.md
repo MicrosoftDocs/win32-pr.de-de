@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RSTINFO. Methode "destring"'
-title: JET_RSTINFO. Methode "destring"
+description: 'Weitere Informationen finden Sie unter: JET_RSTINFO. ToString-Methode'
+title: JET_RSTINFO. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_RSTINFO.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_rstinfo.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e364b665ee993c6d0933d95fc2bacbea62a94fa5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9fcb2203be9a88bdf9eac8e32ccaf22be2aed6e8e5aaf7d7bf8e96e4b70fb846
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016560"
 ---
-# <a name="jet_rstinfotostring-method"></a>JET_RSTINFO. Methode "destring"
+# <a name="jet_rstinfotostring-method"></a>JET_RSTINFO. ToString-Methode
 
-Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die den aktuellen [JET_RSTINFO](./jet-rstinfo-class.md)darstellt.
+Gibt eine [Zeichenfolge](/dotnet/api/system.string) zurück, die die [aktuelle](./jet-rstinfo-class.md)JET_RSTINFO.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Eine [Zeichenfolge](/dotnet/api/system.string) , die den aktuellen [JET_RSTINFO](./jet-rstinfo-class.md)darstellt.  
+Typ: [System.String](/dotnet/api/system.string)  
+Eine [Zeichenfolge,](/dotnet/api/system.string) die die [aktuelle](./jet-rstinfo-class.md)JET_RSTINFO.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_RSTINFO-Klasse](./jet-rstinfo-class.md)
 
-[Mitglieder JET_RSTINFO](./jet-rstinfo-members.md)
+[JET_RSTINFO Member](./jet-rstinfo-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das bei dem Versuch generiert wird, Dateien aus dem Web herunterzuladen. Dieses Ereignis wird von Anwendungen generiert, die von Eltern Steuerelementen angefordert werden.
+description: Benutzerspezifisches Ereignis, das beim Versuch generiert wird, Dateien aus dem Web herunterzuladen. Dieses Ereignis wird von Anwendungen generiert, die von der Jugendschutz-Steuerung aufgefordert werden.
 ms.assetid: 2291fc75-55e5-417e-b393-748750a5b3d6
-title: WPCEVENT_WEB_FILEDOWNLOAD-Ereignis (wpcevent. h)
+title: WPCEVENT_WEB_FILEDOWNLOAD -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66bb04a53589a1cae41e2ba7d7a9c00835452e87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7430b87e7c227fe351e3182f344c60ece0b5a3138b94fe19fee950f96ec24b6a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112710"
 ---
-# <a name="wpcevent_web_filedownload-event"></a>Wpcevent \_ - \_ webfiledownload-Ereignis
+# <a name="wpcevent_web_filedownload-event"></a>WPCEVENT \_ WEB \_ FILEDOWNLOAD-Ereignis
 
-Pro-Benutzer-Ereignis, das bei dem Versuch generiert wird, Dateien aus dem Web herunterzuladen. Dieses Ereignis wird von Anwendungen generiert, die von Eltern Steuerelementen angefordert werden.
+Benutzerspezifisches Ereignis, das beim Versuch generiert wird, Dateien aus dem Web herunterzuladen. Dieses Ereignis wird von Anwendungen generiert, die von der Jugendschutz-Steuerung aufgefordert werden.
 
 
 ```C++
@@ -29,32 +29,32 @@ const EVENT_DESCRIPTOR WPCEVENT_WEB_FILEDOWNLOAD = {0xa, 0x0, 0x10, 0x4, 0x18, 0
 *URL* 
 </dt> <dd>
 
-Die URL-Quelle, die versucht, herunterzuladen.
+Die URL-Quelle, die heruntergeladen werden soll.
 
 </dd> <dt>
 
 *AppName* 
 </dt> <dd>
 
-Der Name der Anwendung, die das Ereignis erzeugt.
+Der Name der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *Version* 
 </dt> <dd>
 
-Die Version der Anwendung, die das Ereignis erzeugt.
+Die Version der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
-*Gesperrt* 
+*Blockiert* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse für die Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
 
 </dd> <dt>
 
-*Pfad* 
+*Path* 
 </dt> <dd>
 
 Der Zielpfad für die Datei.
@@ -67,20 +67,20 @@ Der Zielpfad für die Datei.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

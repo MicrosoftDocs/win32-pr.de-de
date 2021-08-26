@@ -1,56 +1,56 @@
 ---
-description: Gibt an, ob der sprach Erfassungs-DSP eine Mikrofon-zuschließung anwendet.
+description: Gibt an, ob der Voice Capture-DSP den Mikrofongewinn umgibt.
 ms.assetid: b9f0bcc7-57ab-4339-bf1d-2b12c8744f01
-title: MFPKEY_WMAAECMA_MIC_GAIN_BOUNDER-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_MIC_GAIN_BOUNDER-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c1b09f2095f5accb44e4e0edaff2b8c94941d3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7d00e906ec953e2fd00d9c288336c322c2d0dc07ea1c2d74a014ab78ae21acd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120113150"
 ---
-# <a name="mfpkey_wmaaecma_mic_gain_bounder-property"></a>Mfpkey \_ wmaaecma \_ MIC \_ - \_ bounter-Eigenschaft
+# <a name="mfpkey_wmaaecma_mic_gain_bounder-property"></a>MFPKEY \_ WMAAECMA \_ MIC GAIN \_ \_ BOUNDER-Eigenschaft
 
-Gibt an, ob der sprach Erfassungs-DSP eine Mikrofon-zuschließung anwendet.
+Gibt an, ob der Voice Capture-DSP den Mikrofongewinn umgibt.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-Variant \_ true
+VARIANT \_ TRUE
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Voice Capture-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Mikrofon-Gewinngrenze stellt sicher, dass das Mikrofon über das richtige Maß an Gewinn verfügt. Wenn der Gewinn zu hoch ist, ist das erfasste Signal möglicherweise erschöpft und wird abgeschnitten. Clipping ist ein nichtlinearer Effekt, der dazu führt, dass der Algorithmus für den akustische Echo Abbruch (AEC) fehlschlägt. Wenn der Gewinn zu niedrig ist, ist das Signal-zu-Rauschen-Verhältnis gering, was auch bewirken kann, dass der AEC-Algorithmus fehlschlägt oder nicht gut funktioniert.
+Durch die Mikrofongewinngrenze wird sichergestellt, dass das Mikrofon den richtigen Gewinn hat. Wenn der Gewinn zu hoch ist, ist das erfasste Signal möglicherweise übersättigt und wird abgeschnitten. Clipping ist ein nicht linearer Effekt, der dazu führen wird, dass der AEC-Algorithmus (Acoustic Echo Cancellation) fehlschlägt. Wenn der Gewinn zu niedrig ist, ist das Signal-Rausch-Verhältnis niedrig, was auch dazu führen kann, dass der AEC-Algorithmus fehlschlägt oder nicht gut funktioniert.
 
-Diese Eigenschaft kann die folgenden Werte aufweisen.
+Diese Eigenschaft kann die folgenden Werte haben.
 
 
 
-| Wert          | BESCHREIBUNG                       |
+| Wert          | Beschreibung                       |
 |----------------|-----------------------------------|
-| Variant \_ true  | Ermöglicht das Begrenzen des Mikrofons.  |
-| Variant \_ false | Deaktivieren Sie das Ende des Mikrofons. |
+| VARIANT \_ TRUE  | Aktivieren Sie die Mikrofon-Verstärkungsgrenze.  |
+| VARIANT \_ FALSE | Deaktivieren Sie die Mikrofongewinngrenze. |
 
 
 
  
 
-Der Standardwert dieser Eigenschaft ist Variant \_ true (aktiviert).
+Der Standardwert dieser Eigenschaft ist VARIANT \_ TRUE (aktiviert).
 
-Das Begrenzen des Mikrofons wird nur angewendet, wenn der DSP im Quell Modus betrieben wird. Im Filter Modus muss die Anwendung sicherstellen, dass das Mikrofon über die richtige Gewinn Ebene verfügt.
+Die Mikrofongewinngrenze gilt nur, wenn der DSP im Quellmodus arbeitet. Im Filtermodus muss die Anwendung sicherstellen, dass das Mikrofon über die richtige Verstärkungsebene verfügt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,20 +58,20 @@ Das Begrenzen des Mikrofons wird nur angewendet, wenn der DSP im Quell Modus bet
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Voice Capture-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

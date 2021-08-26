@@ -1,26 +1,26 @@
 ---
-title: VML-Grayscale-Attribut
-description: VML-Grayscale-Attribut
+title: VML GrayScale-Attribut
+description: VML GrayScale-Attribut
 ms.assetid: 0715b78c-f529-422e-9064-7b99324e60de
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1c4b5da616ec5f96eeb226ecb2ba18202874f67
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 683371e2441ffa93f96dc8f727e4eed293954b1897267db8848aa39ffa497af8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099210"
 ---
-# <a name="vml-grayscale-attribute"></a>VML-Grayscale-Attribut
+# <a name="vml-grayscale-attribute"></a>VML GrayScale-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Bild im Graustufen Modus angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Bild im Graustufenmodus angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,25 +28,25 @@ Bestimmt, ob ein Bild im Graustufen Modus angezeigt wird. Lese-/Schreibzugriff. 
 
 **Tagsyntax**
 
-<v: *Element* Grayscale = " *Ausdruck* " >
+<v: *element* grayscale=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Grayscale = "*Ausdruck*"
+*element* .grayscale="*expression*"
 
-*Ausdruck* = *Element*. Grayscale
+*expression* = *.grayscale-Element*
 
 **Anmerkungen**
 
-Wenn der Wert **true** ist, wird das Bild in Graustufen anstelle der Farbe angezeigt. Der Standardwert ist **False**.
+**True** gibt an, dass das Bild in Graustufen statt in Farbe angezeigt wird. Der Standardwert ist **False**.
 
-Der Wert basiert auf der CCIR-Empfehlung 709, die eine höhere grüne Gewichtung begünstigt und detailliertere Ergebnisse für die natürliche Farbe erzeugt.
+Der Wert basiert auf der CCIR-Empfehlung 709, die ein größeres grünes Gewicht bevorzugt und mehr ansprechende Ergebnisse für natürliche Farbe erzeugt.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Das Bild wird in Graustufen anstelle der Farbe angezeigt.
+Das Bild wird in Graustufen statt in Farbe angezeigt.
 
 
 ```HTML
@@ -61,6 +61,6 @@ Das Bild wird in Graustufen anstelle der Farbe angezeigt.
 
 
 
- 
+ 
 
- 
+ 

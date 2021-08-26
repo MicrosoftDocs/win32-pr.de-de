@@ -1,36 +1,36 @@
 ---
-title: Arbeiten mit Zustands Image Indizes
-description: Häufig gibt es Verwirrung beim Festlegen und Abrufen des Zustands Bild Indexes in einem Strukturansicht-Steuerelement.
+title: Arbeiten mit Zustandsbildindizes
+description: Häufig gibt es Verwirrung darüber, wie der Statusbildindex in einem Strukturansicht-Steuerelement festgelegt und abgerufen wird.
 ms.assetid: 2666D922-9957-4A75-BFDA-038720F1EEDC
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: be84035907b69ba98ed60a33046f1a58fd2b47b2
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 04504019f79a388b6c21f940724de884d8516263daf6d410a841a96fc2e557b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "103723685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059300"
 ---
-# <a name="how-to-work-with-state-image-indexes"></a>Arbeiten mit Zustands Image Indizes
+# <a name="how-to-work-with-state-image-indexes"></a>Arbeiten mit Zustandsbildindizes
 
-Häufig gibt es Verwirrung beim Festlegen und Abrufen des Zustands Bild Indexes in einem Strukturansicht-Steuerelement. In den folgenden Beispielen wird die richtige Methode zum Festlegen und Abrufen des Zustands Bild Indexes veranschaulicht. In den Beispielen wird davon ausgegangen, dass im Strukturansicht-Steuerelement nur zwei Status Bild Indizes vorhanden sind, deaktiviert und überprüft werden. Wenn die Anwendung mehr als zwei enthält, müssen diese Funktionen geändert werden, um diesen Fall zu verarbeiten.
+Häufig gibt es Verwirrung darüber, wie der Statusbildindex in einem Strukturansicht-Steuerelement festgelegt und abgerufen wird. Die folgenden Beispiele veranschaulichen die richtige Methode zum Festlegen und Abrufen des Statusbildindexes. In den Beispielen wird davon ausgegangen, dass im Strukturansicht-Steuerelement nur zwei Statusbildindizes (deaktiviert und aktiviert) verfügbar sind. Wenn Ihre Anwendung mehr als zwei enthält, müssen diese Funktionen geändert werden, um diesen Fall zu behandeln.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="set-a-tree-view-items-check-state"></a>Festlegen des Prüf Zustands eines Tree-View Elements
+### <a name="set-a-tree-view-items-check-state"></a>Festlegen des Tree-View des Elements
 
-Im folgenden Beispiel wird veranschaulicht, wie der Prüf Zustand eines Struktur Ansichts Elements festgelegt wird.
+Im folgenden Beispiel wird veranschaulicht, wie der Überprüfungszustand eines Strukturansichtselements festgelegt wird.
 
 
 ```C++
@@ -53,9 +53,9 @@ Im folgenden Beispiel wird veranschaulicht, wie der Prüf Zustand eines Struktur
 
 
 
-### <a name="retrieve-a-tree-view-items-check-state"></a>Abrufen des Prüf Zustands eines Tree-View Elements
+### <a name="retrieve-a-tree-view-items-check-state"></a>Abrufen des Tree-View eines Elements
 
-Im folgenden Beispiel wird veranschaulicht, wie der Prüf Zustand eines Struktur Ansichts Elements abgerufen wird.
+Im folgenden Beispiel wird veranschaulicht, wie der Überprüfungszustand eines Strukturansichtselements abgerufen wird.
 
 
 ```C++
@@ -85,12 +85,12 @@ Im folgenden Beispiel wird veranschaulicht, wie der Prüf Zustand eines Struktur
 [Verwenden von Tree-View Steuerelementen](using-treeview.md)
 </dt> <dt>
 
-[Custdtv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View-Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
+[CustDTv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TCM_GETROWCOUNT Meldung (kommstrg. h)
-description: Ruft die aktuelle Anzahl der Zeilen von Registerkarten in einem Registerkarten-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des tabctrl \_ GetRowCount-Makros senden.
+title: TCM_GETROWCOUNT (Commctrl.h)
+description: Ruft die aktuelle Anzahl von Zeilen von Registerkarten in einem Registerkarten-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des TabCtrl \_ GetRowCount-Makros senden.
 ms.assetid: ef104374-1030-46c3-876e-083df73854ab
 keywords:
-- Windows-Steuerelemente für TCM_GETROWCOUNT Meldung
+- TCM_GETROWCOUNT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9bc3d9985591a08b96be2f21d55b8a6cade9b7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9e67b2ac40834075b31ccf2415a52c96448b8143dde3d6bc67f9c515e1f601a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104870"
 ---
-# <a name="tcm_getrowcount-message"></a>TCM \_ GetRowCount-Nachricht
+# <a name="tcm_getrowcount-message"></a>TCM \_ GETROWCOUNT-Nachricht
 
-Ruft die aktuelle Anzahl der Zeilen von Registerkarten in einem Registerkarten-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**tabctrl \_ GetRowCount**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getrowcount) -Makros senden.
+Ruft die aktuelle Anzahl von Zeilen von Registerkarten in einem Registerkarten-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**TabCtrl \_ GetRowCount-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getrowcount) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,9 +39,9 @@ Ruft die aktuelle Anzahl der Zeilen von Registerkarten in einem Registerkarten-S
 
 Gibt die Anzahl der Zeilen von Registerkarten zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur Registerkarten-Steuerelemente, die den [**\_ mehrzeiligen TCS**](tab-control-styles.md) -Stil aufweisen, können mehrere Zeilen mit Registerkarten aufweisen
+Nur Registerkartensteuerelemente mit [**dem TCS \_ MULTILINE-Stil**](tab-control-styles.md) können mehrere Zeilen mit Registerkarten enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Nur Registerkarten-Steuerelemente, die den [**\_ mehrzeiligen TCS**](tab-control
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

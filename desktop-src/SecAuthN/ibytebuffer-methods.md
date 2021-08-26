@@ -1,19 +1,19 @@
 ---
-description: Die ibytebuffer-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IByteBuffer-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 1FB8CBD5-973D-466E-B44D-D1E2B97E3B93
-title: Ibytebuffer-Methoden
+title: IByteBuffer-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a3ac8a230ab4ab350de7066031471e49fcca1cfb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b490b82054490987052f5058cb40de72e787dba5053dd104c89423cfea6c451
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073280"
 ---
-# <a name="ibytebuffer-methods"></a>Ibytebuffer-Methoden
+# <a name="ibytebuffer-methods"></a>IByteBuffer-Methoden
 
-Die [**ibytebuffer**](ibytebuffer.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IByteBuffer-Schnittstelle**](ibytebuffer.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

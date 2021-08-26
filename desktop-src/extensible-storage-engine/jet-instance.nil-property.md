@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INSTANCE. Nil-Eigenschaft'
+description: 'Weitere Informationen finden Sie unter: JET_INSTANCE. Nil-Eigenschaft'
 title: JET_INSTANCE. Nil-Eigenschaft
 TOCTitle: 'Nil property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INSTANCE.Nil
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2a2ec46d6c8a9104cd9e9581fcb46059a82cc63c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c688a684dcc46f5b768a21fc26ef9de059a0f0251ddf005ad47abef0040795e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016750"
 ---
 # <a name="jet_instancenil-property"></a>JET_INSTANCE. Nil-Eigenschaft
 
-Ruft eine NULL-JET_INSTANCE ab.
+Ruft eine NULL-JET_INSTANCE.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,14 +57,14 @@ public static JET_INSTANCE Nil { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_INSTANCE Struktur](./jet-instance-structure.md)
+[JET_INSTANCE-Struktur](./jet-instance-structure.md)
 
-[Mitglieder JET_INSTANCE](./jet-instance-members.md)
+[JET_INSTANCE Mitglieder](./jet-instance-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,8 +1,8 @@
 ---
-description: Das onobjectput-Ereignis eines slibemsink-Objekts wird ausgelöst, wenn ein asynchroner Put-Vorgang beendet ist. Dieses Ereignis gibt den Objekt Pfad der-Instanz oder der gespeicherten-Klasse zurück.
+description: Das OnObjectPut-Ereignis eines SWbemSink-Objekts wird ausgelöst, wenn ein asynchroner Put-Vorgang abgeschlossen ist. Dieses Ereignis gibt den Objektpfad der Instanz oder der gespeicherten Klasse zurück.
 ms.assetid: 2046dd03-ac2c-49fa-b1ad-a458967709e5
 ms.tgt_platform: multiple
-title: 'Iswbemsinkevents:: onobjectput-Ereignis (wbemdisp. h)'
+title: ISWbemSinkEvents::OnObjectPut-Ereignis (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: c6ed42105efe407558d80cd108e657e396e88763
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81f012d6156e6ec17c609bec5be2bc355a0bd9bf197b139a7da2a494285a1c87
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030400"
 ---
-# <a name="iswbemsinkeventsonobjectput-event"></a>Iswbemsinkevents:: onobjectput-Ereignis
+# <a name="iswbemsinkeventsonobjectput-event"></a>ISWbemSinkEvents::OnObjectPut-Ereignis
 
-Das **onobjectput** -Ereignis eines [**slibemsink**](swbemsink.md) -Objekts wird ausgelöst, wenn ein asynchroner Put-Vorgang beendet ist. Dieses Ereignis gibt den Objekt Pfad der-Instanz oder der gespeicherten-Klasse zurück.
+Das **OnObjectPut-Ereignis** eines [**SWbemSink-Objekts**](swbemsink.md) wird ausgelöst, wenn ein asynchroner Put-Vorgang abgeschlossen ist. Dieses Ereignis gibt den Objektpfad der Instanz oder der gespeicherten Klasse zurück.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ SWbemSink.OnObjectPut( _
 
 <dl> <dt>
 
-*objwbefubjectpath* 
+*objWbemObjectPath* 
 </dt> <dd>
 
-Ein Objekt vom Typ " [**errbemubjectpath**](swbemobjectpath.md) ", das den Objekt Pfad der Instanz oder Klasse enthält, die der Put-Vorgang in WMI schreibt.
+Ein [**SWbemObjectPath-Objekt,**](swbemobjectpath.md) das den Objektpfad der Instanz oder Klasse enthält, die der Put-Vorgang in WMI schreibt.
 
 </dd> <dt>
 
-*objwbemasynccontext* 
+*objWbemAsyncContext* 
 </dt> <dd>
 
-Ein " [**taubemnamedvalueset**](swbemnamedvalueset.md) "-Objekt, das an den ursprünglichen asynchronen-Befehl übergeben wird. Verwenden Sie diesen Parameter, um den Ursprung des asynchronen Aufrufs zu identifizieren, der dieses Ereignis auslöst, wenn mehrere asynchrone Aufrufe mithilfe dieser Objekt Senke durchgeführt werden.
+Ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das an den ursprünglichen asynchronen Aufruf übergeben wird. Verwenden Sie diesen Parameter, um den Ursprung des asynchronen Aufrufs zu identifizieren, der dieses Ereignis auslöst, wenn mehrere asynchrone Aufrufe mit dieser Objektsenke erfolgen.
 
 </dd> </dl>
 
@@ -64,35 +64,35 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss des **onobjectput** -Ereignisses kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der folgenden Fehlercodes enthalten.
+Nach Abschluss des **OnObjectPut-Ereignisses** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der folgenden Fehlercodes enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> <dt>
 
-**wbemErrTransportFailure** -2147749909 (0x80041015)
+**wbemErrTransportFailure** – 2147749909 (0x80041015)
 </dt> <dd>
 
-Netzwerkfehler. der normale Betrieb wird verhindert.
+Netzwerkfehler, der den normalen Betrieb verhindert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, verwenden Sie entweder semisynchrone Kommunikation oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke bereitzustellen. Dies stellt Sicherheitsrisiken für Ihre Skripts und Anwendungen dar. Um die Risiken zu vermeiden, verwenden Sie entweder semisynchrone Kommunikation oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 
@@ -104,11 +104,11 @@ Netzwerkfehler. der normale Betrieb wird verhindert.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Wbemdisp. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wbemdisp.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-senbemsink<br/>                                                             |
-| IID<br/>                      | IID \_ iswbemsinkevents<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemSink<br/>                                                             |
+| IID<br/>                      | IID \_ ISWbemSinkEvents<br/>                                                        |
 
 
 
@@ -116,7 +116,7 @@ Netzwerkfehler. der normale Betrieb wird verhindert.
 
 <dl> <dt>
 
-[**Swap-Senke**](swbemsink.md)
+[**SWbemSink**](swbemsink.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Anlage auf einer bestimmten Smartcard oder einem Leser frei, der von attachbyhandle bzw. attachbyifd zugeordnet wird.
+description: Gibt die Anlage an eine bestimmte Smartcard oder einen reader frei, die bzw. der von AttachByHandle bzw. AttachByIFD zugeordnet wird.
 ms.assetid: 601b35a6-9094-4786-b94c-5cd1283feef5
-title: Iscardmanage::D Etach-Methode
+title: ISCardManage::D etach-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: bc5a48f76a643447b3e3d836d61ad7a769c56ff6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 067c8e9f3e8cee607281d5f0a80ca813e91b425e63c15d3c1d47661acbbd04d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014090"
 ---
-# <a name="iscardmanagedetach-method"></a>Iscardmanage::D Etach-Methode
+# <a name="iscardmanagedetach-method"></a>ISCardManage::D etach-Methode
 
-\[Die **Detach** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Detach-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Detach** -Methode gibt die Anlage auf eine bestimmte [*Smartcard*](../secgloss/s-gly.md) oder einen [*Leser*](../secgloss/r-gly.md) frei, der von [**attachbyhandle**](iscardmanage-attachbyhandle.md) bzw. [**attachbyifd**](iscardmanage-attachbyifd.md) zugeordnet ist.
+Die **Detach-Methode** gibt die Anlage an eine bestimmte [*Smartcard*](../secgloss/s-gly.md) oder einen [*bestimmten Reader*](../secgloss/r-gly.md) frei, die bzw. der von [**AttachByHandle**](iscardmanage-attachbyhandle.md) bzw. [**AttachByIFD**](iscardmanage-attachbyifd.md) zugeordnet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,28 +40,28 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-So fügen Sie einen smartcardanrufe an [](iscardmanage-attachbyhandle.md) [](iscardmanage-attachbyifd.md)
+Um eine Smartcard anzufügen, rufen [**Sie AttachByHandle**](iscardmanage-attachbyhandle.md) oder [**AttachByIFD auf.**](iscardmanage-attachbyifd.md)
 
-Um erneut eine Verbindung mit der Smartcard herzustellen, ohne **Detach** und [**attachbyhandle**](iscardmanage-attachbyhandle.md)aufzurufen, rufen Sie [**Verbindung**](iscardmanage-reconnect.md)auf.
+Um erneut eine Verbindung mit der Smartcard herzustellen, ohne **Detach** und [**AttachByHandle**](iscardmanage-attachbyhandle.md)aufzurufen, rufen [**Sie Erneut verbinden**](iscardmanage-reconnect.md)auf.
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardmanage**](iscardmanage.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardManage**](iscardmanage.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,10 +69,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -80,13 +80,13 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Attachbyhandle**](iscardmanage-attachbyhandle.md)
+[**AttachByHandle**](iscardmanage-attachbyhandle.md)
 </dt> <dt>
 
-[**Attachbyifd**](iscardmanage-attachbyifd.md)
+[**AttachByIFD**](iscardmanage-attachbyifd.md)
 </dt> <dt>
 
-[**Iscardmanage**](iscardmanage.md)
+[**ISCardManage**](iscardmanage.md)
 </dt> <dt>
 
 [**Verbindung wiederherstellen**](iscardmanage-reconnect.md)

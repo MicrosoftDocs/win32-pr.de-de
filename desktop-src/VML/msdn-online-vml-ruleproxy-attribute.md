@@ -1,34 +1,34 @@
 ---
-title: VML ruleproxy-Attribut
-description: VML ruleproxy-Attribut
+title: VML RuleProxy-Attribut
+description: VML RuleProxy-Attribut
 ms.assetid: 040e80f8-65b6-491d-812d-421800801374
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50c76116fc1f31c379f15c3229fcbe70dc7938f7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 42fe97afee190d87b5e6f8b74d942a72d3bf11914373931e32cbb9459915b7d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339514"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099130"
 ---
-# <a name="vml-ruleproxy-attribute"></a>VML ruleproxy-Attribut
+# <a name="vml-ruleproxy-attribute"></a>VML RuleProxy-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Proxy für die Regel-Engine verwendet wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Proxy für die Regel-Engine verwendet wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* ruleproxy = " *Ausdruck* " >
+<v: *element* ruleproxy=" *ausdruck* ">
 
 **Anmerkungen**
 
@@ -49,6 +49,6 @@ Ein Proxy wird verwendet, um die Form zu verarbeiten.
 
 
 
- 
+ 
 
- 
+ 

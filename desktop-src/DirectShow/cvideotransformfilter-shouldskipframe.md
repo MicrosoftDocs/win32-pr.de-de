@@ -1,7 +1,7 @@
 ---
-description: Die Methode "schuldskipframe" bestimmt, ob der Filter eine angegebene Stichprobe löschen soll.
+description: Die ShouldSkipFrame-Methode bestimmt, ob der Filter ein angegebenes Beispiel ablegen soll.
 ms.assetid: 49f86f7d-28b1-443e-a238-692da96d60fb
-title: Cvideotransformfilter. schuldskipframe-Methode (vtrans. h)
+title: CVideoTransformFilter.ShouldSkipFrame-Methode (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7f845ac7ae52537bfadfb6c913537b32e4d44171
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26a0c35be9914641abfa053cd1ee00f46bb09222aecbebc55d45900331a2ee81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075940"
 ---
-# <a name="cvideotransformfiltershouldskipframe-method"></a>Cvideotransformfilter. schuldskipframe-Methode
+# <a name="cvideotransformfiltershouldskipframe-method"></a>CVideoTransformFilter.ShouldSkipFrame-Methode
 
-Die- `ShouldSkipFrame` Methode bestimmt, ob der Filter eine angegebene Stichprobe löschen soll.
+Die `ShouldSkipFrame` -Methode bestimmt, ob der Filter ein angegebenes Beispiel ablegen soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,42 +42,42 @@ BOOL ShouldSkipFrame(
 
 <dl> <dt>
 
-*kehren* 
+*Pin* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn der Filter dieses Beispiel löschen soll, oder " **false** ", wenn der Filter dieses Beispiel verarbeiten soll.
+Gibt **TRUE zurück,** wenn der Filter dieses Beispiel ablegen soll, oder **FALSE,** wenn der Filter dieses Beispiel verarbeiten soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt " **true** " zurück, wenn die folgenden Bedingungen erfüllt sind:
+Diese Methode gibt **TRUE zurück,** wenn die folgenden Bedingungen erfüllt sind:
 
--   Das Beispiel enthält Zeitstempel.
--   Die durchschnittliche Decodierungs Zeit beträgt mindestens 25% der Rahmen Dauer.
--   Der Renderer ist zurzeit mindestens ein Frame spät, wie er über Qualitäts Meldungen gemeldet wird.
--   Das überspringen zum nächsten Keyframe bewirkt nicht, dass der Frame frühzeitig mehr als einen Frame antrifft.
+-   Das Beispiel verfügt über Zeitstempel.
+-   Die durchschnittliche Decodierungszeit beträgt mindestens 25 % der Framedauer.
+-   Der Renderer hat derzeit mindestens einen Frame zu spät, wie durch Qualitätsmeldungen gemeldet.
+-   Das Überspringen auf den nächsten Keyframe würde nicht dazu führen, dass der Frame früh mehr als einen Frame erreicht.
 
-Im Rahmen dieser Berechnung zeichnet der Filter bei der Verarbeitung von Daten die folgenden Informationen auf:
+Für diese Berechnung zeichnet der Filter beim Verarbeiten von Daten die folgenden Informationen auf:
 
--   Die durchschnittliche Decodierungs Zeit in den letzten 20 Frames (**m \_ itravgdecode**)
--   Die Anzahl der Frames seit dem letzten **Keyframe (m \_ nframessincekeyframe**).
--   Eine Schätzung der Anzahl von Frames zwischen **\_ Keyframes (m nkeyframeperiod**)
+-   Die durchschnittliche Decodierungszeit in den letzten 20 Frames (**m \_ itrAvgDecode**)
+-   Die Anzahl der Frames seit dem letzten Keyframe (**m \_ nFramesSinceKeyFrame**)
+-   Eine Schätzung, wie viele Frames sich zwischen Keyframes befinden (**m \_ nKeyFramePeriod**)
 
-Nachdem der Filter einen Frame gelöscht hat, wird er fortgesetzt, bis er den nächsten Keyframe erreicht. Wenn diese Methode **true** zurückgibt, sendet Sie auch ein [**EC- \_ Qualitäts \_ Änderungs**](ec-quality-change.md) Ereignis an den Filter Graph-Manager.
+Sobald der Filter einen Frame abstürzt, werden Frames so lange abfällt, bis er den nächsten Keyframe erreicht. Wenn diese Methode **TRUE zurückgibt,** sendet sie auch ein [**EC QUALITY \_ \_ CHANGE-Ereignis**](ec-quality-change.md) an den Filter Graph Manager.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (einschließlich Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Nachdem der Filter einen Frame gelöscht hat, wird er fortgesetzt, bis er den n�
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

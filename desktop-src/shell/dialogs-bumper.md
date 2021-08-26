@@ -9,17 +9,17 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 528d510cd963a1acfa55b9fa7eb89d515919006f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f10341946039c02b6b782be041e841cd41609ba786f97eeb15a82b7d7c4c6f30
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111830"
 ---
 # <a name="dialogs"></a>Dialogfelder
 
--   [Dialog Feld für allgemeine Elemente](common-file-dialog.md)
--   [Die ID eines Ordners wird erhalten.](folder-id.md)
+-   [Dialogfeld "Allgemeines Element"](common-file-dialog.md)
+-   [Abrufen der ID eines Ordners](folder-id.md)
 
  
 

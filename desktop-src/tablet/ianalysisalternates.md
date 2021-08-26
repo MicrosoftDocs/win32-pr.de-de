@@ -1,7 +1,7 @@
 ---
-description: Enthält eine Auflistung von-Objekten, die die ianalysisalternate-Schnittstelle implementieren und die das Ergebnis der frei Hand Analyse sind.
+description: Enthält eine Auflistung von -Objekten, die die IAnalysisAlternate-Schnittstelle implementieren und das Ergebnis der Ink-Analyse sind.
 ms.assetid: 53802a62-4425-40fd-bf48-0da55ea8ffbe
-title: Ianalysisalteraten-Schnittstelle (iacom. h)
+title: IAnalysisAlternates-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,41 +13,41 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 4e43feaa40f519707531894936bf34ce19e57723
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2643ef8ea90d029aee6bd0673931d27e9987b0af0a898e854cb87d74a89c0af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058090"
 ---
-# <a name="ianalysisalternates-interface"></a>Ianalysisalteraten-Schnittstelle
+# <a name="ianalysisalternates-interface"></a>IAnalysisAlternates-Schnittstelle
 
-Enthält eine Auflistung von-Objekten, die die [**ianalysisalternate**](ianalysisalternate.md) -Schnittstelle implementieren und die das Ergebnis der frei Hand Analyse sind.
+Enthält eine Auflistung von -Objekten, die die [**IAnalysisAlternate-Schnittstelle**](ianalysisalternate.md) implementieren und das Ergebnis der Ink-Analyse sind.
 
 ## <a name="members"></a>Member
 
-Die **ianalysisalteraten** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ianalysisalteraten** verfügt auch über die folgenden Typen von Membern:
+Die **IAnalysisAlternates-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IAnalysisAlternates** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ianalysisalteraten** -Schnittstelle verfügt über diese Methoden.
+Die **IAnalysisAlternates-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                   | BESCHREIBUNG                                                                                                                                      |
 |:-------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getanalysisalternate**](ianalysisalternates-getanalysisalternate.md) | Ruft das [**ianalysisalternate**](ianalysisalternate.md) -Objekt am angegebenen Index in der Collection ab.<br/>                   |
-| [**GetCount**](ianalysisalternates-getcount.md)                         | Ruft die Anzahl der [**ianalysisalternate**](ianalysisalternate.md) -Objekte ab, die in der **ianalysisalteraten** -Auflistung enthalten sind.<br/> |
+| [**GetAnalysisAlternate**](ianalysisalternates-getanalysisalternate.md) | Ruft das [**IAnalysisAlternate-Objekt**](ianalysisalternate.md) am angegebenen Index in der Auflistung ab.<br/>                   |
+| [**GetCount**](ianalysisalternates-getcount.md)                         | Ruft die Anzahl der [**IAnalysisAlternate-Objekte**](ianalysisalternate.md) ab, die in der **IAnalysisAlternates-Auflistung enthalten** sind.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle entspricht der [**System. Windows. Ink. AnalysisCore. AnalysisAlternateBaseCollection**](/previous-versions/ms610094(v=vs.100)) -Klasse in der .NET Framework.
+Diese Schnittstelle entspricht der [**System.Windows. Ink.AnalysisCore.AnalysisAlternateBaseCollection-Klasse**](/previous-versions/ms610094(v=vs.100)) im .NET Framework.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Diese Schnittstelle entspricht der [**System. Windows. Ink. AnalysisCore. Analys
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -66,19 +66,19 @@ Diese Schnittstelle entspricht der [**System. Windows. Ink. AnalysisCore. Analys
 
 <dl> <dt>
 
-[**Ianalysisalternate**](ianalysisalternate.md)
+[**IAnalysisAlternate**](ianalysisalternate.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getalteraten-Methode**](iinkanalyzer-getalternates.md)
+[**IInkAnalyzer::GetAlternates-Methode**](iinkanalyzer-getalternates.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getalternatesforcontextnodes-Methode**](iinkanalyzer-getalternatesforcontextnodes.md)
+[**IInkAnalyzer::GetAlternatesForContextNodes-Methode**](iinkanalyzer-getalternatesforcontextnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getalternatesforstrokes-Methode**](iinkanalyzer-getalternatesforstrokes.md)
+[**IInkAnalyzer::GetAlternatesForStrokes-Methode**](iinkanalyzer-getalternatesforstrokes.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,16 +1,16 @@
 ---
-title: IMsRdpClientAdvancedSettings6 enablekredsspsupport (Eigenschaft)
-description: Gibt an, ob der Credential Security Service Provider (kredssp) für diese Verbindung aktiviert ist.
+title: IMsRdpClientAdvancedSettings6 EnableCredSspSupport (Eigenschaft)
+description: Gibt an, ob der Credential Security Service Provider (CredSSP) für diese Verbindung aktiviert ist.
 ms.assetid: 3BC8A265-7AEA-4C9C-9730-7710E1A3159D
 ms.tgt_platform: multiple
 keywords:
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
-- Enablekredsspsupport-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, enablekredsspsupport (Eigenschaft)
+- EnableCredSspSupport-Remotedesktopdienste
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , EnableCredSspSupport (Eigenschaft)
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , EnableCredSspSupport (Eigenschaft)
+- EnableCredSspSupport-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , EnableCredSspSupport (Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -29,16 +29,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b73ad2b024cd0f8bbcafd6ba05be093c5953d54
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8a05ac2c45ee035e17f0fc715b42f7752a11ca92dd2bce7f54a3a81c7b723d29
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072400"
 ---
-# <a name="imsrdpclientadvancedsettings6enablecredsspsupport-property"></a>IMsRdpClientAdvancedSettings6:: enablekredsspsupport (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings6enablecredsspsupport-property"></a>IMsRdpClientAdvancedSettings6::EnableCredSspSupport (Eigenschaft)
 
-Gibt an, ob der Credential Security Service Provider (kredssp) für diese Verbindung aktiviert ist.
+Gibt an, ob der Credential Security Service Provider (CredSSP) für diese Verbindung aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -59,13 +59,13 @@ HRESULT get_EnableCredSspSupport(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, ob "kredssp" für diese Verbindung aktiviert ist. Legen Sie den Wert auf **Variant \_ true** fest, wenn Sie den Wert für "kredssp **" oder \_**
+Gibt an, ob CredSSP für diese Verbindung aktiviert ist. Legen Sie auf **VARIANT \_ TRUE fest,** um CredSSP oder **VARIANT FALSE \_ zu** aktivieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wird nur von Remotedesktopverbindung 6,1-und 7,0-Clients unterstützt.
+Diese Eigenschaft wird nur von Remotedesktopverbindung 6.1- und 7.0-Clients unterstützt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

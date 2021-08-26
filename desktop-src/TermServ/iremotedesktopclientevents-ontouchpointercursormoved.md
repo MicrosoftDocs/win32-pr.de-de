@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents ontouchpointercurrsorverschote-Methode
-description: Wird aufgerufen, wenn der Fingerabdruck Cursor verschoben wurde und die EventsEnabled-Eigenschaft auf true festgelegt ist.
+title: IRemoteDesktopClientEvents OnTouchPointerCursorMoved-Methode
+description: Wird aufgerufen, wenn der Touchzeigercursor verschoben wurde und die EventsEnabled-Eigenschaft auf TRUE festgelegt ist.
 ms.assetid: 55A6AC99-0723-4215-9428-D2DAAC77A74A
 ms.tgt_platform: multiple
 keywords:
-- Ontouchpointercursor-Methode Remotedesktopdienste
-- Ontouchpointercurrsorverschoder Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, ontouchpointercurrsorverschote-Methode
+- OnTouchPointerCursorMoved-Remotedesktopdienste
+- OnTouchPointerCursorMoved-Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnTouchPointerCursorMoved-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae347e19942bf0c82112e5cec6a3fb4fe131349f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4a7c6d542031ab375d7e960b82bb36ba52ea6c9ecab58764c13595871687a731
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072300"
 ---
-# <a name="iremotedesktopclienteventsontouchpointercursormoved-method"></a>Iremotedesktopclientevents:: ontouchpointercurrsorverschote-Methode
+# <a name="iremotedesktopclienteventsontouchpointercursormoved-method"></a>IRemoteDesktopClientEvents::OnTouchPointerCursorMoved-Methode
 
-Wird aufgerufen, wenn der Fingerabdruck Cursor verschoben wurde und die [**EventsEnabled**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) -Eigenschaft auf true festgelegt ist.
+Wird aufgerufen, wenn der Touchzeigercursor verschoben wurde und die [**EventsEnabled-Eigenschaft**](/windows/win32/api/rdpappcontainerclient/nf-rdpappcontainerclient-iremotedesktopclienttouchpointer-get_eventsenabled) auf TRUE festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ void OnTouchPointerCursorMoved(
 *x* \[ in\]
 </dt> <dd></dd> <dt>
 
-*j* \[ in\]
+*y* \[ in\]
 </dt> <dd></dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
@@ -64,7 +64,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

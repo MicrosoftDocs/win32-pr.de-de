@@ -1,56 +1,56 @@
 ---
-description: Während einer Windows Installer Installation kann das Installationsprogramm nach einer Datei suchen und eine Eigenschaft mit dem Pfad der Datei erstellen.
+description: Während einer installation Windows Installer kann das Installationsprogramm nach einer Datei suchen und eine Eigenschaft erstellen, die den Pfad der Datei enthält.
 ms.assetid: 6587b349-852d-4d4e-a8d4-76dfb0ef0f0b
-title: Suchen nach einer Datei und Erstellen einer Eigenschaft mit dem Pfad der Datei
+title: Suchen nach einer Datei und Erstellen einer Eigenschaft, die den Pfad der Datei enthält
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed742ee874c2e4b76137e9f17e90fbf54e9729f1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57d1315616c6d2ea24052ddad85c005d53716f8b130f4aa2d23d69754c946416
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041140"
 ---
-# <a name="searching-for-a-file-and-creating-a-property-holding-the-files-path"></a>Suchen nach einer Datei und Erstellen einer Eigenschaft mit dem Pfad der Datei
+# <a name="searching-for-a-file-and-creating-a-property-holding-the-files-path"></a>Suchen nach einer Datei und Erstellen einer Eigenschaft, die den Pfad der Datei enthält
 
-**So suchen Sie nach einer Datei und erstellen eine Eigenschaft, die den Pfad der Datei enthält**
+**So suchen Sie nach einer Datei und erstellen eine Eigenschaft, die den Pfad dieser Datei enthält**
 
-1.  Suchen Sie zuerst nach der Datei, indem Sie die Datei Signatur und den Namen in der [Signatur Tabelle](signature-table.md)auflisten.
+1.  Suchen Sie zunächst nach der Datei, indem Sie die Dateisignatur und den Namen in der [Signaturtabelle auflisten.](signature-table.md)
 
-    Die restlichen Felder dieses Datensatzes können leer gelassen werden, um eine Suche nach einer beliebigen Version von MyApp.exe anzugeben.
+    Die restlichen Felder dieses Datensatzes können leer gelassen werden, um eine Suche nach einer beliebigen Version von MyApp.exe.
 
-    [Signatur Tabelle](signature-table.md) (partiell)
+    [Signaturtabelle](signature-table.md) (partiell)
 
     
 
     | Signatur          | Dateiname            |
     |--------------------|----------------------|
-    | Appfile<br/> | MyApp.exe<br/> |
+    | AppFile<br/> | MyApp.exe<br/> |
 
     
 
      
 
-2.  Geben Sie als nächstes den Pfad der Datei an, nach der in der [drlocator-Tabelle](drlocator-table.md)gesucht wird.
+2.  Geben Sie als Nächstes den Pfad der Datei an, nach der in der [DrLocator-Tabelle gesucht wird.](drlocator-table.md)
 
-    Da appfolder nicht in der [Signatur Tabelle](signature-table.md)aufgeführt ist, stellt das Installationsprogramm fest, dass appfolder ein Ordner und keine Datei ist.
+    Da AppFolder nicht in der Signaturtabelle [aufgeführt](signature-table.md)ist, bestimmt der Installer, dass AppFolder ein Ordner und keine Datei ist.
 
-    [Drlocator-Tabelle](drlocator-table.md)
+    [DrLocator-Tabelle](drlocator-table.md)
 
     
 
     | Signatur            | Parent             | Pfad | Tiefe |
     |----------------------|--------------------|------|-------|
-    | Appfile<br/>   |                    |      |       |
-    | Appfolder<br/> | Appfile<br/> |      |       |
+    | AppFile<br/>   |                    |      |       |
+    | AppFolder<br/> | AppFile<br/> |      |       |
 
     
 
      
 
-3.  Füllen Sie schließlich die [AppSearch-Tabelle](appsearch-table.md) auf, damit die [AppSearch-Aktion](appsearch-action.md) den Pfad von appfolder zurückgibt.
+3.  Füllen Sie abschließend die [AppSearch-Tabelle auf,](appsearch-table.md) damit die [AppSearch-Aktion](appsearch-action.md) den Pfad von AppFolder zurückgibt.
 
-    Nachdem das Installationsprogramm die AppSearch-Aktion ausgeführt hat, ist der Wert von "MyFolder" der vollständige Pfad von "appfolder".
+    Nachdem der Installer die AppSearch-Aktion ausgeführt hat, ist der Wert von MYFOLDER der vollständige Pfad von AppFolder.
 
     [AppSearch-Tabelle](appsearch-table.md) (partiell)
 
@@ -58,7 +58,7 @@ ms.locfileid: "103866064"
 
     | Eigenschaft            | Signatur            |
     |---------------------|----------------------|
-    | MYFOLDER<br/> | Appfolder<br/> |
+    | Myfolder<br/> | AppFolder<br/> |
 
     
 

@@ -1,7 +1,7 @@
 ---
-description: Die incrementpaletteversion-Methode erhöht die palettenversion. Ruft diese Methode auf, wenn der Medientyp in ein neues Format geändert wird.
+description: Die IncrementPaletteVersion-Methode erhöht die Palettenversion. Rufen Sie diese Methode auf, wenn sich der Medientyp in ein neues palettiertes Format ändert.
 ms.assetid: 1ce77f97-d225-45f5-a259-1dcca1272d15
-title: Cdrawimage. incrementpaletteversion-Methode (winutil. h)
+title: CDrawImage.IncrementPaletteVersion-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 21b4220ec98c5b083913e92f5749866f629a4854
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7884c4d552920a9e5650d2a092b7fffc43a1c67bf03916eab7bb72da3a87946a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076400"
 ---
-# <a name="cdrawimageincrementpaletteversion-method"></a>Cdrawimage. incrementpaletteversion-Methode
+# <a name="cdrawimageincrementpaletteversion-method"></a>CDrawImage.IncrementPaletteVersion-Methode
 
-Die- `IncrementPaletteVersion` Methode erhöht die palettenversion. Ruft diese Methode auf, wenn der Medientyp in ein neues Format geändert wird.
+Die `IncrementPaletteVersion` -Methode erhöht die Palettenversion. Rufen Sie diese Methode auf, wenn sich der Medientyp in ein neues palettiertes Format ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,18 +44,18 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erhöht den Wert der **m \_ paletteversion** -Member-Variablen.
+Diese Methode erhöht den Wert der **m PaletteVersion-Membervariablen. \_**
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Diese Methode erhöht den Wert der **m \_ paletteversion** -Member-Variablen.
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> <dt>
 
-[**Cdrawimage:: getpaletteversion**](cdrawimage-getpaletteversion.md)
+[**CDrawImage::GetPaletteVersion**](cdrawimage-getpaletteversion.md)
 </dt> <dt>
 
-[**Cdrawimage:: resetpaletteversion**](cdrawimage-resetpaletteversion.md)
+[**CDrawImage::ResetPaletteVersion**](cdrawimage-resetpaletteversion.md)
 </dt> </dl>
 
  

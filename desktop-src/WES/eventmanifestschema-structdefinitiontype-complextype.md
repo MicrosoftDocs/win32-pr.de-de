@@ -1,9 +1,9 @@
 ---
 title: Komplexer StructDefinitionType-Typ
-description: Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mit dem-Ereignis einschließen möchten. | Komplexer StructDefinitionType-Typ
+description: Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält, die In das Ereignis eingeschlossen werden soll. | Komplexer StructDefinitionType-Typ
 ms.assetid: eb6b3682-1035-472b-8027-583d43c31748
 keywords:
-- StructDefinitionType komplexer Typ (Ereignisprotokoll)
+- Komplexer StructDefinitionType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 01e739077d38dec94c0a407e5779bec90369ffb9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 035b8abe5440ffb80b902e1f4b1564b2fb80b77ee34b20f4f068d298b251478a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106366406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124250"
 ---
 # <a name="structdefinitiontype-complex-type"></a>Komplexer StructDefinitionType-Typ
 
-Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mit dem-Ereignis einschließen möchten.
+Definiert eine -Struktur, die ein oder mehrere Datenelemente enthält, die In das Ereignis eingeschlossen werden soll.
 
 ``` syntax
 <xs:complexType name="StructDefinitionType"
@@ -57,9 +57,9 @@ Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mi
 
 
 
-| Element                                                               | type                                                                             | BESCHREIBUNG                                                               |
+| Element                                                               | type                                                                             | Beschreibung                                                               |
 |-----------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------------------|
-| [**Vorrats**](eventmanifestschema-data-structdefinitiontype-element.md) | [**DataDefinitionType**](eventmanifestschema-datadefinitiontype-complextype.md) | Definiert ein Datenelement, das Sie in die Struktur einschließen möchten.<br/> |
+| [**Daten**](eventmanifestschema-data-structdefinitiontype-element.md) | [**DataDefinitionType**](eventmanifestschema-datadefinitiontype-complextype.md) | Definiert ein Datenelement, das Sie in die -Struktur ein-/ausdingen möchten.<br/> |
 
 
 
@@ -67,19 +67,19 @@ Definiert eine-Struktur, die ein oder mehrere Datenelemente enthält, die Sie mi
 
 
 
-| Name   | type                                                            | BESCHREIBUNG                                                                                                                                                                                                                                                                               |
+| Name   | type                                                            | Beschreibung                                                                                                                                                                                                                                                                               |
 |--------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| count  | [**"Count Type"**](eventmanifestschema-counttype-simpletype.md)   | Die Anzahl der Elemente in einem Array von-Strukturen. Dieses Attribut gibt an, dass die Struktur ein Array von Strukturen definiert. Sie können die tatsächliche Anzahl oder den Namen eines Datenelements außerhalb der Struktur angeben, die die Anzahl enthält. <br/>                               |
-| length | [**Längen-Typ**](eventmanifestschema-lengthtype-simpletype.md) | Nicht verfügbar.<br/> **Windows Server 2008 und Windows Vista:** Die Länge dieser-Struktur in Bytes. Ab Windows 7 nicht verfügbar.<br/>                                                                                                                            |
-| name   | Zeichenfolge                                                          | Der Name der-Struktur. Sie können den Namen verwenden, um auf das Datenelement in Ihrem XML-Fragment zu verweisen, wenn Sie einen [**UserData**](eventmanifestschema-userdata-templateitemtype-element.md) -Abschnitt in ihrer Vorlage angeben.<br/> **Windows Vista:** Dieses Attribut ist optional.<br/> |
+| count  | [**CountType**](eventmanifestschema-counttype-simpletype.md)   | Die Anzahl der Elemente in einem Array von -Strukturen. Dieses Attribut gibt an, dass die -Struktur ein Array von -Strukturen definiert. Sie können die tatsächliche Anzahl oder den Namen eines Datenelements außerhalb der Struktur angeben, die die Anzahl enthält. <br/>                               |
+| length | [**LengthType**](eventmanifestschema-lengthtype-simpletype.md) | Nicht verfügbar.<br/> **Windows Server 2008 und Windows Vista:** Die Länge dieser -Struktur in Bytes. Ab 7 Windows nicht mehr verfügbar.<br/>                                                                                                                            |
+| name   | Zeichenfolge                                                          | Der Name der -Struktur. Sie können den Namen verwenden, um auf das Datenelement in Ihrem XML-Fragment zu verweisen, wenn Sie einen [**UserData-Abschnitt**](eventmanifestschema-userdata-templateitemtype-element.md) in Ihrer Vorlage angeben.<br/> **Windows Vista:** Dieses Attribut ist optional.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anbieter schreiben die Struktur als BLOB und nicht als einzelne Member der Struktur. Wenn die C-Struktur, die Sie schreiben, Zeiger enthält (z. b. ein Zeiger vom Typ LPWSTR), enthalten die Ereignisdaten den Zeiger Wert, nicht die dereferenzierten Daten.
+Anbieter schreiben die Struktur als Blob und nicht als einzelne Member der Struktur. Wenn die C-Struktur, die Sie schreiben, Zeiger enthält (z. B. ein Zeiger vom Typ LPWSTR), enthalten die Ereignisdaten den Zeigerwert, nicht die dereferenzierten Daten.
 
-Strukturen sollten nicht verwendet werden, stattdessen sollten Sie für jedes Elementdaten Elemente definieren und diese separat schreiben. Wenn Sie sich dafür entscheiden, die Struktur zu verwenden, sollte die Struktur nur ganzzahlige Typen enthalten, und Sie müssen sicherstellen, dass die Elemente der Struktur an einer 8-Byte-Grenze ausgerichtet sind. Wenn Sie dies nicht tun, erhalten Sie wahrscheinlich Ausrichtungsfehler, wenn Sie versuchen, auf die Daten zuzugreifen. Verwenden Sie die \# pragma pack ()-Direktive, um die Ausrichtung an einer 8-Byte-Grenze zu erzwingen.
+Sie sollten keine Strukturen verwenden, sondern Datenelemente für jedes Member definieren und separat schreiben. Wenn Sie sich für die Verwendung der -Struktur entscheiden, sollte die -Struktur nur integrale Typen enthalten, und Sie müssen sicherstellen, dass die Member der -Struktur an einer 8-Byte-Grenze ausgerichtet sind. Anderst erhalten Sie wahrscheinlich Ausrichtungsfehler, wenn Sie versuchen, auf die Daten zu zugreifen. Erwägen Sie die \# Verwendung der pragma pack()-Direktive, um die Ausrichtung an einer 8-Byte-Grenze zu erzwingen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Strukturen sollten nicht verwendet werden, stattdessen sollten Sie für jedes El
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

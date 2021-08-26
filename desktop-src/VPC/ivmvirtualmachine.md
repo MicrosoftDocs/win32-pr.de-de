@@ -1,10 +1,10 @@
 ---
-title: Ivmvirtualmachine-Schnittstelle (vpccominterfaces. h)
-description: Definiert die Schnittstelle für eine virtuelle Maschine.
+title: IVMVirtualMachine-Schnittstelle (VPCCOMInterfaces.h)
+description: Definiert die Schnittstelle für einen virtuellen Computer.
 ms.assetid: c1c243f2-0fb7-4249-8dc9-f0b70059e78f
 keywords:
-- Ivmvirtualmachine Interface Virtual PC
-- Virtueller Computer für ivmvirtualmachine Interface, beschrieben
+- IVMVirtualMachine-Schnittstelle Virtueller PC
+- IVMVirtualMachine-Schnittstelle Virtueller PC , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,58 +15,58 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 006fe414a662c3d6d556aba68712aa0b428d9b5e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b6f2f50c5279bafd12d8edd01a47e9cbcb1a3cc3bb2b89ea140e46cf06c0aa06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124680"
 ---
-# <a name="ivmvirtualmachine-interface"></a>Ivmvirtualmachine-Schnittstelle
+# <a name="ivmvirtualmachine-interface"></a>IVMVirtualMachine-Schnittstelle
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Definiert die Schnittstelle für eine virtuelle Maschine. **Ivmvirtualmachine** kann Clients über Ereignisse über die ausgehende Schnittstelle [**ivmvirtualmachineevents**](ivmvirtualmachineevents.md) benachrichtigen. **Ivmvirtualmachine** -Objekte werden von [**ivmvirtualpc**](ivmvirtualpc.md) -Methoden wie z. b. " [**kreatevirtualmachine**](ivmvirtualpc-createvirtualmachine.md)", " [**registervirtualmachine**](ivmvirtualpc-registervirtualmachine.md)" und " [**findvirtualmachine**](ivmvirtualpc-findvirtualmachine.md)" zurückgegeben. Sie können auch ein **ivmvirtualmachine** -Objekt aus dem [**ivmvirtualmachinecollection**](ivmvirtualmachinecollection.md) -Objekt abrufen, das von der [**ivmvirtualpc:: VirtualMachines**](ivmvirtualpc-virtualmachines.md) -Eigenschaft zurückgegeben wird.
+Definiert die Schnittstelle für einen virtuellen Computer. **IVMVirtualMachine** kann Clients über die [**ausgehende SCHNITTSTELLE IVMVirtualMachineEvents**](ivmvirtualmachineevents.md) über Ereignisse benachrichtigen. **IVMVirtualMachine-Objekte** werden von [**IVMVirtualPC-Methoden**](ivmvirtualpc.md) wie [**CreateVirtualMachine,**](ivmvirtualpc-createvirtualmachine.md) [**RegisterVirtualMachine**](ivmvirtualpc-registervirtualmachine.md)und [**FindVirtualMachine**](ivmvirtualpc-findvirtualmachine.md)zurückgegeben. Sie können auch ein **IVMVirtualMachine-Objekt** aus dem [**IVMVirtualMachineCollection-Objekt**](ivmvirtualmachinecollection.md) abrufen, das von der [**IVMVirtualPC::VirtualMachines-Eigenschaft**](ivmvirtualpc-virtualmachines.md) zurückgegeben wird.
 
 ## <a name="members"></a>Member
 
-Die **ivmvirtualmachine** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ivmvirtualmachine** verfügt auch über die folgenden Typen von Membern:
+Die **IVMVirtualMachine-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IVMVirtualMachine** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **ivmvirtualmachine** -Schnittstelle verfügt über diese Methoden.
+Die **IVMVirtualMachine-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                           | BESCHREIBUNG                                                                                                |
+| Methode                                                                           | Beschreibung                                                                                                |
 |:---------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
-| [**AddDVDROMDrive**](ivmvirtualmachine-adddvdromdrive.md)                       | Fügt ein neues CD-oder DVD-Laufwerk zum virtuellen Computer hinzu.<br/>                                              |
-| [**AddHardDiskConnection**](ivmvirtualmachine-addharddiskconnection.md)         | Fügt der virtuellen Maschine eine neue Festplatten Verbindung hinzu.<br/>                                         |
-| [**Addnetworkadapter**](ivmvirtualmachine-addnetworkadapter.md)                 | Fügt der virtuellen Maschine eine Netzwerkschnittstelle hinzu.<br/>                                                |
-| [**Attach-bdevice**](ivmvirtualmachine-attachusbdevice.md)                     | Fügt ein USB-Gerät an einen virtuellen Computer an.<br/>                                                     |
-| [**Detachobdevice**](ivmvirtualmachine-detachusbdevice.md)                     | Gibt ein USB-Gerät von einem virtuellen Computer frei.<br/>                                                   |
-| [**Verwerfen von dsavedstate**](ivmvirtualmachine-discardsavedstate.md)                 | Verwirft alle gespeicherten Zustandsinformationen für eine gespeicherte virtuelle Maschine.<br/>                               |
-| [**Verwerfen von dodisks**](ivmvirtualmachine-discardundodisks.md)                   | Verwirft die virtuellen Rückgängig-Datenträger.<br/>                                                                |
-| [**Getactivationvalue**](ivmvirtualmachine-getactivationvalue.md)               | Ruft den Wert der angegebenen Aktivierungs Einstellung für diesen virtuellen Computer ab.<br/>               |
+| [**AddDVDRIVEDrive**](ivmvirtualmachine-adddvdromdrive.md)                       | Fügt dem virtuellen Computer ein neues CD- oder DVD-Laufwerk hinzu.<br/>                                              |
+| [**AddHardDiskConnection**](ivmvirtualmachine-addharddiskconnection.md)         | Fügt dem virtuellen Computer eine neue Festplattenverbindung hinzu.<br/>                                         |
+| [**AddNetworkAdapter**](ivmvirtualmachine-addnetworkadapter.md)                 | Fügt dem virtuellen Computer eine Netzwerkschnittstelle hinzu.<br/>                                                |
+| [**AttachUSBDevice**](ivmvirtualmachine-attachusbdevice.md)                     | Fügt ein USB-Gerät an einen virtuellen Computer an.<br/>                                                     |
+| [**DetachUSBDevice**](ivmvirtualmachine-detachusbdevice.md)                     | Gibt ein USB-Gerät von einem virtuellen Computer frei.<br/>                                                   |
+| [**DiscardSavedState**](ivmvirtualmachine-discardsavedstate.md)                 | Verwirft alle gespeicherten Statusinformationen für einen gespeicherten virtuellen Computer.<br/>                               |
+| [**DiscardUndoDisks**](ivmvirtualmachine-discardundodisks.md)                   | Verwirft die virtuellen Rückgängigdatenträger.<br/>                                                                |
+| [**GetActivationValue**](ivmvirtualmachine-getactivationvalue.md)               | Ruft den Wert der angegebenen Aktivierungseinstellung für diesen virtuellen Computer ab.<br/>               |
 | [**GetConfigurationValue**](ivmvirtualmachine-getconfigurationvalue.md)         | Ruft den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer ab.<br/>            |
-| [**Mergeundodisks**](ivmvirtualmachine-mergeundodisks.md)                       | Führt die virtuellen Rückgängig-Datenträger zusammen.<br/>                                                                  |
+| [**MergeUndoDisks**](ivmvirtualmachine-mergeundodisks.md)                       | Führt die virtuellen Rückgängigdatenträger zusammen.<br/>                                                                  |
 | [**Anhalten**](ivmvirtualmachine-pause.md)                                         | Hält den virtuellen Computer an.<br/>                                                                     |
-| [**Removeactivationvalue**](ivmvirtualmachine-removeactivationvalue.md)         | Entfernt den Wert der angegebenen Aktivierungs Einstellung für diesen virtuellen Computer.<br/>                 |
-| [**Removeconfigurationvalue**](ivmvirtualmachine-removeconfigurationvalue.md)   | Entfernt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer.<br/>              |
-| [**Removedvdromdrive**](ivmvirtualmachine-removedvdromdrive.md)                 | Entfernt das angegebene CD-oder DVD-Laufwerk von der virtuellen Maschine.<br/>                                 |
-| [**Removeharddiskconnection**](ivmvirtualmachine-removeharddiskconnection.md)   | Entfernt die angegebene Festplatten Verbindung von der virtuellen Maschine.<br/>                            |
-| [**Removenetworkadapter**](ivmvirtualmachine-removenetworkadapter.md)           | Entfernt eine Netzwerkschnittstelle von der virtuellen Maschine.<br/>                                           |
+| [**RemoveActivationValue**](ivmvirtualmachine-removeactivationvalue.md)         | Entfernt den Wert der angegebenen Aktivierungseinstellung für diesen virtuellen Computer.<br/>                 |
+| [**RemoveConfigurationValue**](ivmvirtualmachine-removeconfigurationvalue.md)   | Entfernt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer.<br/>              |
+| [**RemoveDVAFFINDrive**](ivmvirtualmachine-removedvdromdrive.md)                 | Entfernt das angegebene CD- oder DVD-Laufwerk vom virtuellen Computer.<br/>                                 |
+| [**RemoveHardDiskConnection**](ivmvirtualmachine-removeharddiskconnection.md)   | Entfernt die angegebene Festplattenverbindung vom virtuellen Computer.<br/>                            |
+| [**RemoveNetworkAdapter**](ivmvirtualmachine-removenetworkadapter.md)           | Entfernt eine Netzwerkschnittstelle vom virtuellen Computer.<br/>                                           |
 | [**Zurücksetzen**](ivmvirtualmachine-reset.md)                                         | Setzt den virtuellen Computer zurück.<br/>                                                                     |
 | [**Fortsetzen**](ivmvirtualmachine-resume.md)                                       | Setzt den virtuellen Computer fort.<br/>                                                                    |
-| [**Speichern**](ivmvirtualmachine-save.md)                                           | Speichert den Zustand der virtuellen Maschine.<br/>                                                                |
-| [**Der Wert von "".**](ivmvirtualmachine-setactivationvalue.md)               | Legt den Wert der angegebenen Aktivierungs Einstellung für diesen virtuellen Computer fest.<br/>                    |
-| [**Setconfigurationvalue**](ivmvirtualmachine-setconfigurationvalue.md)         | Legt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer fest.<br/>                 |
-| [**Startcommunicationchannel**](ivmvirtualmachine-startcommunicationchannel.md) | Richtet einen Kommunikationskanal zwischen Host und Gast ein.<br/>                                         |
-| [**Start**](ivmvirtualmachine-startup.md)                                     | Startet die virtuelle Maschine entweder aus dem nicht initialisierten oder gespeicherten Zustand.<br/>                        |
-| [**Startup2**](ivmvirtualmachine-startup2.md)                                   | Startet die virtuelle Maschine entweder über den nicht initialisierten oder gespeicherten Zustand mit erweiterten Optionen.<br/> |
+| [**Speichern**](ivmvirtualmachine-save.md)                                           | Speichert den Status des virtuellen Computers.<br/>                                                                |
+| [**SetActivationValue**](ivmvirtualmachine-setactivationvalue.md)               | Legt den Wert der angegebenen Aktivierungseinstellung für diesen virtuellen Computer fest.<br/>                    |
+| [**SetConfigurationValue**](ivmvirtualmachine-setconfigurationvalue.md)         | Legt den Wert der angegebenen Konfigurationseinstellung für diesen virtuellen Computer fest.<br/>                 |
+| [**StartCommunicationChannel**](ivmvirtualmachine-startcommunicationchannel.md) | Richtet einen Kommunikationskanal zwischen Host und Gast ein.<br/>                                         |
+| [**Start**](ivmvirtualmachine-startup.md)                                     | Startet den virtuellen Computer aus dem nicht initialisierten oder gespeicherten Zustand.<br/>                        |
+| [**Startup2**](ivmvirtualmachine-startup2.md)                                   | Startet den virtuellen Computer entweder aus dem nicht initialisierten oder gespeicherten Zustand mit erweiterten Optionen.<br/> |
 | [**TurnOff**](ivmvirtualmachine-turnoff.md)                                     | Der virtuelle Computer wird heruntergefahren.<br/>                                                                  |
 
 
@@ -75,45 +75,45 @@ Die **ivmvirtualmachine** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ivmvirtualmachine** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IVMVirtualMachine-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                            | Zugriffstyp           | BESCHREIBUNG                                                                                                                                    |
+| Eigenschaft                                                                            | Zugriffstyp           | Beschreibung                                                                                                                                    |
 |:------------------------------------------------------------------------------------|:----------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [**FERIN**](ivmvirtualmachine-accountant.md)<br/>                       | Schreibgeschützt<br/>  | Ein Buchhalter für diesen virtuellen Computer.<br/>                                                                                             |
-| [**"Attacheddrivetypes"**](ivmvirtualmachine-attacheddrivetypes.md)<br/>       | Schreibgeschützt<br/>  | Ein Array, das den Typ des Laufwerks angibt, das an die einzelnen Speicherorte der virtuellen Maschine angehängt ist.<br/>                                             |
-| [**Baseboardserialnumber**](ivmvirtualmachine-baseboardserialnumber.md)<br/> | Lesen/Schreiben<br/> | Die Seriennummer des Basis Boards.<br/>                                                                                                       |
-| [**Biosguid**](ivmvirtualmachine-biosguid.md)<br/>                           | Lesen/Schreiben<br/> | Die BIOS-GUID.<br/>                                                                                                                      |
+| [**Buchhalter**](ivmvirtualmachine-accountant.md)<br/>                       | Schreibgeschützt<br/>  | Ein Fiktiver für diesen virtuellen Computer.<br/>                                                                                             |
+| [**AttachedDriveTypes**](ivmvirtualmachine-attacheddrivetypes.md)<br/>       | Schreibgeschützt<br/>  | Ein Array, das den Typ des Laufwerks angibt, das an jeden Speicherort auf dem virtuellen Computer angefügt ist.<br/>                                             |
+| [**BaseBoardSerialNumber**](ivmvirtualmachine-baseboardserialnumber.md)<br/> | Lesen/Schreiben<br/> | Die Seriennummer des Basisboards.<br/>                                                                                                       |
+| [**BIOSGUID**](ivmvirtualmachine-biosguid.md)<br/>                           | Lesen/Schreiben<br/> | Die BIOS-GUID.<br/>                                                                                                                      |
 | [**BIOSSerialNumber**](ivmvirtualmachine-biosserialnumber.md)<br/>           | Lesen/Schreiben<br/> | Die BIOS-Seriennummer.<br/>                                                                                                             |
-| [**Chassisassettag**](ivmvirtualmachine-chassisassettag.md)<br/>             | Lesen/Schreiben<br/> | Das Chassis-Bestands Kennzeichen.<br/>                                                                                                              |
-| [**Chassisserialnumber**](ivmvirtualmachine-chassisserialnumber.md)<br/>     | Lesen/Schreiben<br/> | Die Seriennummer des Chassis.<br/>                                                                                                          |
+| [**ChassisAssetTag**](ivmvirtualmachine-chassisassettag.md)<br/>             | Lesen/Schreiben<br/> | Das Chassis-Ressourcentag.<br/>                                                                                                              |
+| [**ChassisSerialNumber**](ivmvirtualmachine-chassisserialnumber.md)<br/>     | Lesen/Schreiben<br/> | Die Seriennummer des Gehäuses.<br/>                                                                                                          |
 | [**ConfigID**](ivmvirtualmachine-configid.md)<br/>                           | Schreibgeschützt<br/>  | Der eindeutige Bezeichner für den virtuellen Computer.<br/>                                                                                      |
-| [**Ausgestellten**](ivmvirtualmachine-display.md)<br/>                             | Schreibgeschützt<br/>  | Die Videoanzeige für den virtuellen Computer.<br/>                                                                                          |
-| [**Dvdromdrives**](ivmvirtualmachine-dvdromdrives.md)<br/>                   | Schreibgeschützt<br/>  | Eine Aufzähl Bare Sammlung von CD-und DVD-Laufwerken, die an den virtuellen Computer angefügt sind.<br/>                                                      |
-| [**Datei**](ivmvirtualmachine-file.md)<br/>                                   | Schreibgeschützt<br/>  | Der voll qualifizierte Pfad der VMC-Datei für die Konfiguration der virtuellen Maschine.<br/>                                                    |
-| [**Floppydrives**](ivmvirtualmachine-floppydrives.md)<br/>                   | Schreibgeschützt<br/>  | Eine Aufzähl Bare Auflistung von Diskettenlaufwerken, die an den virtuellen Computer angefügt sind.<br/>                                                          |
-| [**Guestos**](ivmvirtualmachine-guestos.md)<br/>                             | Schreibgeschützt<br/>  | Das Gast Betriebssystem für diesen virtuellen Computer.<br/>                                                                                |
-| [**Harddiskconnections**](ivmvirtualmachine-harddiskconnections.md)<br/>     | Schreibgeschützt<br/>  | Eine Aufzähl Bare Auflistung von Festplatten Verbindungen.<br/>                                                                                  |
-| [**Has3DNow**](ivmvirtualmachine-has3dnow.md)<br/>                           | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den 3DNow-Anweisungs Satz unterstützt.<br/>                                                                 |
-| [**Hasmmx**](ivmvirtualmachine-hasmmx.md)<br/>                               | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den MMX-Anweisungs Satz unterstützt.<br/>                                                                   |
-| [**Schwierigkeiten**](ivmvirtualmachine-hassse.md)<br/>                               | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den SSE-Anweisungs Satz unterstützt.<br/>                                                                   |
-| [**HasSSE2**](ivmvirtualmachine-hassse2.md)<br/>                             | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den SSE2-Anweisungs Satz unterstützt.<br/>                                                                  |
-| [**Tastatur**](ivmvirtualmachine-keyboard.md)<br/>                           | Schreibgeschützt<br/>  | Das Tastatur Gerät für den virtuellen Computer.<br/>                                                                                        |
-| [**Arbeitsspeicher**](ivmvirtualmachine-memory.md)<br/>                               | Lesen/Schreiben<br/> | Die Menge an physischem Arbeitsspeicher auf dem virtuellen Computer in Megabyte.<br/>                                                                 |
+| [**Anzeige**](ivmvirtualmachine-display.md)<br/>                             | Schreibgeschützt<br/>  | Die Videoanzeige für den virtuellen Computer.<br/>                                                                                          |
+| [**DVDROMDrives**](ivmvirtualmachine-dvdromdrives.md)<br/>                   | Schreibgeschützt<br/>  | Eine aufzählbare Sammlung von CD- und DVD-Laufwerken, die an den virtuellen Computer angefügt sind.<br/>                                                      |
+| [**Datei**](ivmvirtualmachine-file.md)<br/>                                   | Schreibgeschützt<br/>  | Der vollqualifizierte Pfad der VMC-Datei für die Konfiguration des virtuellen Computers.<br/>                                                    |
+| [**FloppyDrives**](ivmvirtualmachine-floppydrives.md)<br/>                   | Schreibgeschützt<br/>  | Eine aufzählbare Sammlung von Diskettenlaufwerken, die an den virtuellen Computer angefügt sind.<br/>                                                          |
+| [**GuestOS**](ivmvirtualmachine-guestos.md)<br/>                             | Schreibgeschützt<br/>  | Das Gastbetriebssystem für diesen virtuellen Computer.<br/>                                                                                |
+| [**HardDiskConnections**](ivmvirtualmachine-harddiskconnections.md)<br/>     | Schreibgeschützt<br/>  | Eine aufzählbare Auflistung von Festplattenverbindungen.<br/>                                                                                  |
+| [**Has3DNow**](ivmvirtualmachine-has3dnow.md)<br/>                           | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den 3DNow-Anweisungssatz unterstützt.<br/>                                                                 |
+| [**HasMMX**](ivmvirtualmachine-hasmmx.md)<br/>                               | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den MMX-Anweisungssatz unterstützt.<br/>                                                                   |
+| [**HasSSE**](ivmvirtualmachine-hassse.md)<br/>                               | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den SSE-Anweisungssatz unterstützt.<br/>                                                                   |
+| [**HasSSE2**](ivmvirtualmachine-hassse2.md)<br/>                             | Schreibgeschützt<br/>  | Gibt an, ob der Prozessor den SSE2-Anweisungssatz unterstützt.<br/>                                                                  |
+| [**Tastatur**](ivmvirtualmachine-keyboard.md)<br/>                           | Schreibgeschützt<br/>  | Das Tastaturgerät für den virtuellen Computer.<br/>                                                                                        |
+| [**Speicher**](ivmvirtualmachine-memory.md)<br/>                               | Lesen/Schreiben<br/> | Die Menge des physischen Arbeitsspeichers auf dem virtuellen Computer in Megabyte.<br/>                                                                 |
 | [**Maus**](ivmvirtualmachine-mouse.md)<br/>                                 | Schreibgeschützt<br/>  | Das Mausgerät für den virtuellen Computer.<br/>                                                                                           |
-| [**Name**](ivmvirtualmachine-name.md)<br/>                                   | Lesen/Schreiben<br/> | Der Name der Konfiguration der virtuellen Maschine.<br/>                                                                                      |
-| [**Netzwerkadapter**](ivmvirtualmachine-networkadapters.md)<br/>             | Schreibgeschützt<br/>  | Eine Aufzähl Bare Auflistung von NICs, die an den virtuellen Computer angefügt sind.<br/>                                                                   |
-| [**Notizen**](ivmvirtualmachine-notes.md)<br/>                                 | Lesen/Schreiben<br/> | Die Anmerkungen für den virtuellen Computer.<br/>                                                                                                  |
-| [**Parallelports**](ivmvirtualmachine-parallelports.md)<br/>                 | Schreibgeschützt<br/>  | Eine Aufzähl Bare Auflistung paralleler Ports.<br/>                                                                                         |
+| [**Name**](ivmvirtualmachine-name.md)<br/>                                   | Lesen/Schreiben<br/> | Der Name der Konfiguration des virtuellen Computers.<br/>                                                                                      |
+| [**NetworkAdapters**](ivmvirtualmachine-networkadapters.md)<br/>             | Schreibgeschützt<br/>  | Eine aufzählbare Auflistung von NICs, die an den virtuellen Computer angefügt sind.<br/>                                                                   |
+| [**Hinweise**](ivmvirtualmachine-notes.md)<br/>                                 | Lesen/Schreiben<br/> | Die Hinweise für den virtuellen Computer.<br/>                                                                                                  |
+| [**ParallelPorts**](ivmvirtualmachine-parallelports.md)<br/>                 | Schreibgeschützt<br/>  | Eine aufzählbare Auflistung paralleler Ports.<br/>                                                                                         |
 | [**ProcessorSpeed**](ivmvirtualmachine-processorspeed.md)<br/>               | Schreibgeschützt<br/>  | Die Geschwindigkeit des Prozessors in Megahertz (MHz).<br/>                                                                                     |
-| [**Rdppipename**](ivmvirtualmachine-rdppipename.md)<br/>                     | Schreibgeschützt<br/>  | Der Name der RDP-Verbindungs Named Pipe, die für Videos und Eingaben verwendet werden.<br/>                                                                     |
-| [**Savedstatefilepath**](ivmvirtualmachine-savedstatefilepath.md)<br/>       | Schreibgeschützt<br/>  | Der vollständige Pfad zur gespeicherten Zustands Datei.<br/>                                                                                              |
-| [**SerialPorts**](ivmvirtualmachine-serialports.md)<br/>                     | Schreibgeschützt<br/>  | Eine Aufzähl Bare Auflistung von seriellen Anschlüssen.<br/>                                                                                           |
-| [**Shutdownaktiononquit**](ivmvirtualmachine-shutdownactiononquit.md)<br/>   | Lesen/Schreiben<br/> | Die Aktion, die auf dieser virtuellen Maschine ausgeführt werden soll, wenn Sie ausgeführt wird, wenn Windows Virtual PC beendet wird.<br/>                                |
-| [**State**](ivmvirtualmachine-state.md)<br/>                                 | Schreibgeschützt<br/>  | Der aktuelle Zustand der virtuellen Maschine.<br/>                                                                                           |
-| [**Rückgängig gemacht**](ivmvirtualmachine-undoable.md)<br/>                           | Lesen/Schreiben<br/> | Gibt an, ob die rückgängig-Laufwerke für Festplatten aktiviert sind, die mit dem virtuellen Computer verbunden sind.<br/>                                      |
-| [**Nicht doaction**](ivmvirtualmachine-undoaction.md)<br/>                       | Lesen/Schreiben<br/> | Die Standardaktion, die auf allen rückgängig-Laufwerken ausgeführt werden soll, wenn der virtuelle Computer innerhalb des Gast Betriebssystems heruntergefahren wird.<br/> |
+| [**RdpPipeName**](ivmvirtualmachine-rdppipename.md)<br/>                     | Schreibgeschützt<br/>  | Name der RDP-Verbindungs-Named Pipe, die für Video und Eingabe verwendet wird.<br/>                                                                     |
+| [**SavedStateFilePath**](ivmvirtualmachine-savedstatefilepath.md)<br/>       | Schreibgeschützt<br/>  | Der vollständige Pfad zur gespeicherten Zustandsdatei.<br/>                                                                                              |
+| [**SerialPorts**](ivmvirtualmachine-serialports.md)<br/>                     | Schreibgeschützt<br/>  | Eine aufzählbare Auflistung von seriellen Anschlüssen.<br/>                                                                                           |
+| [**ShutdownActionOnQuit**](ivmvirtualmachine-shutdownactiononquit.md)<br/>   | Lesen/Schreiben<br/> | Die Aktion, die auf diesem virtuellen Computer ausgeführt werden soll, wenn er ausgeführt wird, wenn Windows Virtueller PC beendet wird.<br/>                                |
+| [**State**](ivmvirtualmachine-state.md)<br/>                                 | Schreibgeschützt<br/>  | Der aktuelle Status des virtuellen Computers.<br/>                                                                                           |
+| [**Rückgängigbar**](ivmvirtualmachine-undoable.md)<br/>                           | Lesen/Schreiben<br/> | Gibt an, ob die Rückgängig-Laufwerke für Festplatten aktiviert sind, die mit dem virtuellen Computer verbunden sind.<br/>                                      |
+| [**Undoaction**](ivmvirtualmachine-undoaction.md)<br/>                       | Lesen/Schreiben<br/> | Die Standardaktion, die auf allen rückgängig zu machenden Laufwerken ausgeführt werden soll, wenn der virtuelle Computer aus dem Gastbetriebssystem heruntergefahren wird.<br/> |
 
 
 
@@ -125,12 +125,12 @@ Die **ivmvirtualmachine** -Schnittstelle verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 

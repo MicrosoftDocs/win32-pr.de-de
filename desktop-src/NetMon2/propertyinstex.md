@@ -1,7 +1,7 @@
 ---
-description: Die propertyinstex-Struktur definiert eine frei Form erweiterte Eigenschafts Instanz.
+description: Die PROPERTYINSTEX-Struktur definiert eine Freiforminstanz für erweiterte Eigenschaften.
 ms.assetid: a2316baf-07e2-4617-bb35-e20cfb11fbcb
-title: Propertyinstex-Struktur (Netmon. h)
+title: PROPERTYINSTEX-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: f7b196d30e96f9d047f7f923d969d65a918aa4f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 533169a98d17c56a32df56f77c30d403d0dbb28c6a51159debc9692a505da52b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036970"
 ---
-# <a name="propertyinstex-structure"></a>Propertyinstex-Struktur
+# <a name="propertyinstex-structure"></a>PROPERTYINSTEX-Struktur
 
-Die **propertyinstex** -Struktur definiert eine frei Form erweiterte Eigenschafts Instanz.
+Die **PROPERTYINSTEX-Struktur** definiert eine Freiforminstanz für erweiterte Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,14 +56,14 @@ Länge der Daten in Bytes.
 
 </dd> <dt>
 
-**Verlängert**
+**LengthEx**
 </dt> <dd>
 
 Länge der erweiterten Daten.
 
 </dd> <dt>
 
-**lpdata**
+**lpData**
 </dt> <dd>
 
 Zeiger auf die erweiterten Daten.
@@ -73,42 +73,42 @@ Zeiger auf die erweiterten Daten.
 **Byte**
 </dt> <dd>
 
-Zeiger auf die **Bytedaten** .
+Zeiger auf die **BYTE-Daten.**
 
 </dd> <dt>
 
 **Word**
 </dt> <dd>
 
-Zeiger auf das **Word** -Daten.
+Zeiger auf die **WORD-Daten.**
 
 </dd> <dt>
 
-**DWORD**
+**Dword**
 </dt> <dd>
 
-Zeiger auf die **DWORD** -Daten.
+Zeiger auf die **DWORD-Daten.**
 
 </dd> <dt>
 
-**' Largeint**
+**LargeInt**
 </dt> <dd>
 
-Zeiger auf die **largeint** -Daten.
+Zeiger auf die **LARGEINT-Daten.**
 
 </dd> <dt>
 
-**SysTime**
+**Systime**
 </dt> <dd>
 
-Zeiger auf die **SYSTEMTIME** -Daten.
+Zeiger auf die **SYSTEMTIME-Daten.**
 
 </dd> <dt>
 
-**Typedstring**
+**TypedString**
 </dt> <dd>
 
-Eine typisierte Zeichenfolge, die möglicherweise über erweiterte Daten verfügt.
+Eine typisierte Zeichenfolge, die möglicherweise erweiterte Daten enthält.
 
 </dd> </dl>
 
@@ -120,7 +120,7 @@ Eine typisierte Zeichenfolge, die möglicherweise über erweiterte Daten verfüg
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

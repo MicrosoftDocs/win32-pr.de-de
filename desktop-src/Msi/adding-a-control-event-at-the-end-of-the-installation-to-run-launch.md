@@ -1,19 +1,19 @@
 ---
-description: Das Installationsprogramm führt die Installations-Assistenten Sequenz des Beispiels nur dann aus, wenn die vollständige Benutzeroberflächen Ebene zum Installieren der Anwendung verwendet wird.
+description: Das Installationsprogramm führt die Sequenz des Installations-Assistenten des Beispiels nur aus, wenn die vollständige Benutzeroberflächenebene zum Installieren der Anwendung verwendet wird.
 ms.assetid: 323d62ae-333b-49fd-96a1-55b228c8ab2c
-title: Hinzufügen eines Steuerungs Ereignisses am Ende der Installation zum Ausführen des Starts
+title: Hinzufügen eines Steuerelementereignisses am Ende der Installation zum Ausführen des Starts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 545901c4cfd0936f63078d5ad56586022fb4ec4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0cf2a32a30187ea263bd2e3530e6eaae7d236e111826cbcab2461746d9c8e48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959549"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078220"
 ---
-# <a name="adding-a-control-event-at-the-end-of-the-installation-to-run-launch"></a>Hinzufügen eines Steuerungs Ereignisses am Ende der Installation zum Ausführen des Starts
+# <a name="adding-a-control-event-at-the-end-of-the-installation-to-run-launch"></a>Hinzufügen eines Steuerelementereignisses am Ende der Installation zum Ausführen des Starts
 
-Das Installationsprogramm führt die Installations-Assistenten Sequenz des Beispiels nur dann aus, wenn die [*vollständige Benutzer*](f-gly.md) Oberflächenebene zum Installieren der Anwendung verwendet wird. Das letzte Dialogfeld der Beispiel dialogsequenz ist ein [Exit-Dialog](exit-dialog.md) Feld mit dem Namen Exitdialog. Wenn ein Benutzer mit der Schaltfläche OK in Exitdialog interagiert, wird zuerst ein [EndDialog-ControlEvent](enddialog-controlevent.md) veröffentlicht, das die Steuerung an den Installer zurückgibt. Das-Steuerelement veröffentlicht dann einen [doaction-ControlEvent](doaction-controlevent.md) , der die benutzerdefinierte Aktion "Launch" ausführt. Jedes Steuerelement Ereignis erfordert einen Datensatz in der [ControlEvent-Tabelle](controlevent-table.md). Weitere Informationen finden Sie unter [ControlEvent Overview](controlevent-overview.md).
+Das Installationsprogramm führt die Sequenz des Installations-Assistenten des Beispiels nur aus, wenn die [*vollständige Benutzeroberflächenebene*](f-gly.md) zum Installieren der Anwendung verwendet wird. Das letzte Dialogfeld der Beispieldialogsequenz ist ein [ExitDialog](exit-dialog.md) mit dem Namen ExitDialog. Wenn ein Benutzer mit der Schaltfläche OK in ExitDialog interagiert, wird zuerst ein [EndDialog ControlEvent](enddialog-controlevent.md) veröffentlicht, das das Steuerelement an das Installationsprogramm zurückgibt. Das Steuerelement veröffentlicht dann ein [DoAction ControlEvent,](doaction-controlevent.md) das die benutzerdefinierte Aktion Starten ausführt. Jedes Steuerelementereignis erfordert einen Datensatz in der [ControlEvent-Tabelle](controlevent-table.md). Weitere Informationen finden Sie [unter Übersicht über ControlEvent.](controlevent-overview.md)
 
 [ControlEvent-Tabelle](controlevent-table.md)
 
@@ -21,16 +21,16 @@ Das Installationsprogramm führt die Installations-Assistenten Sequenz des Beisp
 
 | Dialog     | Steuerelement\_ | Ereignis     | Argument | Bedingung                     | Sortieren |
 |------------|-----------|-----------|----------|-------------------------------|----------|
-| Exitdialog | OK        | EndDialog | Rückgabewert   | 1                             | 1        |
-| Exitdialog | OK        | DoAction  | Starten   | Nicht installiert und $Tutorial = 3 | 2        |
+| ExitDialog | OK        | EndDialog | Rückgabewert   | 1                             | 1        |
+| ExitDialog | OK        | DoAction  | Starten   | NICHT installiert UND $Tutorial=3 | 2        |
 
 
 
  
 
-Die Bedingung im doaction-Steuerelement stellt sicher, dass die benutzerdefinierte Aktion nur während der ersten Installation der Anwendung ausgeführt wird und lokal installiert wird. Der Ausdruck $Tutorial = 3 bedeutet, dass der Aktionszustand der tutorialkomponente auf Local festgelegt ist. Siehe [Syntax der Bedingungs Anweisung](conditional-statement-syntax.md).
+Die Bedingung im DoAction-Steuerelement stellt sicher, dass die benutzerdefinierte Aktion nur während der ersten Installation der Anwendung ausgeführt wird und lokal installiert wird. Der Ausdruck $Tutorial=3 bedeutet, dass der Aktionsstatus der Tutorialkomponente auf local festgelegt ist. Weitere Informationen finden Sie unter [Syntax der bedingten Anweisung.](conditional-statement-syntax.md)
 
-Dadurch wird das Beispiel abgeschlossen.
+Damit wird das Beispiel abgeschlossen.
 
  
 

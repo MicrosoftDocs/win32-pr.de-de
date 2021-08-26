@@ -1,36 +1,36 @@
 ---
-description: Sie verfügen jetzt über alle wesentlichen Elemente, die erforderlich sind, um im-Namespace zu navigieren.
+description: Sie verfügen nun über alle wesentlichen Elemente, die zum Navigieren an einer beliebigen Stelle im Namespace erforderlich sind.
 ms.assetid: bd9f903d-bea6-494f-af81-d90457dc2647
 title: Navigieren im Namespace
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d24993369222fb32f9de6c79a0c998b1d7be9f2e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2778fc21df12e9228f9335a52c04556e97563cba5f8a4cb6b82eb779944c451
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111480"
 ---
 # <a name="navigating-the-namespace"></a>Navigieren im Namespace
 
-Sie verfügen jetzt über alle wesentlichen Elemente, die erforderlich sind, um im-Namespace zu navigieren. Die einfachste Möglichkeit zum Einstieg besteht darin, dass Ihre Anwendung [**shgetdesktopfolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetdesktopfolder) aufruft, um die [**IShellFolder**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) -Schnittstelle des Desktops abzurufen. Wenn Sie dann nach unten durch den-Namespace navigieren möchten, kann die Anwendung die folgenden Schritte ausführen:
+Sie verfügen nun über alle wesentlichen Elemente, die zum Navigieren an einer beliebigen Stelle im Namespace erforderlich sind. Die einfachste Möglichkeit zum Starten besteht darin, dass Ihre Anwendung [**SHGetDesktopFolder**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shgetdesktopfolder) aufruft, um die [**IShellFolder-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) des Desktops abzurufen. Um dann nach unten durch den Namespace zu navigieren, kann Ihre Anwendung die folgenden Schritte ausführen:
 
-1.  Listet den Inhalt des Ordners auf.
-2.  Legen Sie fest, welche Objekte Unterordner sind, und wählen Sie einen aus.
-3.  Binden Sie an den Unterordner, um die [**IShellFolder**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) -Schnittstelle abzurufen.
+1.  Aufzählen des Ordnerinhalts.
+2.  Bestimmen Sie, welche Objekte Unterordner sind, und wählen Sie eines aus.
+3.  Binden Sie an den Unterordner, um seine [**IShellFolder-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) abzurufen.
 
-Wiederholen Sie diese Schritte so oft wie erforderlich, um das Ziel zu erreichen.
+Wiederholen Sie diese Schritte so oft wie nötig, um das Ziel zu erreichen.
 
-## <a name="a-simple-example-of-namespace-navigation"></a>Ein einfaches Beispiel für die Namespace Navigation
+## <a name="a-simple-example-of-namespace-navigation"></a>Ein einfaches Beispiel für die Namespacenavigation
 
-Der folgende Teil des Beispielcodes ist eine einfache Konsolenanwendung, die eine Reihe von Verfahren veranschaulicht, die in den vorherigen Abschnitten erläutert werden. Die Fehlerüberprüfung wurde aus Gründen der Übersichtlichkeit ausgelassen. Die Anwendung führt die folgenden Aufgaben durch:
+Der folgende Codeausschnitt ist eine einfache Konsolenanwendung, die eine Reihe der verfahren veranschaulicht, die in den vorherigen Abschnitten erläutert wurden. Die Fehlerüberprüfung wurde aus Gründen der Übersichtlichkeit ausgelassen. Die Anwendung führt die folgenden Aufgaben durch:
 
-1.  Ruft die [**IShellFolder**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) -Schnittstelle des Programmdatei Ordners ab ([mithilfe der IShellFolder-Schnittstelle](folder-info.md)).
-2.  Listet den Inhalt des Ordners auf ([Listet den Inhalt eines Ordners auf](folder-info.md)).
-3.  Bestimmt alle anzeigen Amen und druckt sie ([bestimmen von anzeigen Amen und anderen Eigenschaften](folder-info.md)).
-4.  Sucht nach einem Unterordner ([mit einem Zeiger auf die IShellFolder-Schnittstelle eines unter Ordners](folder-info.md)).
-5.  Bindet an den ersten untergeordneten Ordner, der gefunden wird (das[erhalten eines Zeigers auf die IShellFolder-Schnittstelle eines unter Ordners](folder-info.md)).
-6.  Gibt die anzeigen amen der Objekte im Unterordner aus.
+1.  Ruft die [**IShellFolder-Schnittstelle**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellfolder) des Ordners Programme ab ([mithilfe der IShellFolder-Schnittstelle](folder-info.md)).
+2.  Listet den Inhalt des Ordners auf ([Aufzählen des Inhalts eines Ordners](folder-info.md)).
+3.  Bestimmt alle Anzeigenamen und gibt sie aus ([Bestimmen von Anzeigenamen und anderen Eigenschaften](folder-info.md)).
+4.  Sucht nach einem Unterordner ([Abrufen eines Zeigers auf die IShellFolder-Schnittstelle eines Unterordners](folder-info.md)).
+5.  Bindet an den ersten gefundenen Unterordner ( Abrufen eines Zeigers auf die[IShellFolder-Schnittstelle eines Unterordners](folder-info.md)).
+6.  Gibt die Anzeigenamen der Objekte im Unterordner aus.
 
 
 ```

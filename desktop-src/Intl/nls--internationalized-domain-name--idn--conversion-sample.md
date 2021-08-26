@@ -1,25 +1,25 @@
 ---
-description: Die in diesem Thema beschriebene Beispielanwendung veranschaulicht, wie bestimmte nls-Funktionen verwendet werden können, um internationalisierte Domänen Namen (IDNs) zu konvertieren.
+description: Die in diesem Thema beschriebene Beispielanwendung veranschaulicht, wie bestimmte NLS-Funktionen verwendet werden können, um internationalisierte Domänennamen (IDNs) zu konvertieren.
 ms.assetid: 9739efa5-8b88-4f9c-983d-806968caf9d5
-title: 'NLS: Beispiel für die Konvertierung von internationalisierten Domänen Namen'
+title: 'NLS: Beispiel für die Konvertierung von internationalisierten Domänennamen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90173b1ea6bd35b89d2cd6d6b723e419c97e7a77
-ms.sourcegitcommit: 9c8ddec1e955f181beecad0478c1fb79013b5e9d
+ms.openlocfilehash: 905c8eb11d4de1a5118a873df845feae2687d1ab44de2129f8be30a0c6e92217
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "106354877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120040890"
 ---
-# <a name="nls-internationalized-domain-name-conversion-sample"></a>NLS: Beispiel für die Konvertierung von internationalisierten Domänen Namen
+# <a name="nls-internationalized-domain-name-conversion-sample"></a>NLS: Beispiel für die Konvertierung von internationalisierten Domänennamen
 
-Die in diesem Thema beschriebene Beispielanwendung veranschaulicht, wie bestimmte nls-Funktionen verwendet werden können, um [internationalisierte Domänen Namen (IDNs)](handling-internationalized-domain-names--idns.md)zu konvertieren. Diese Anwendung veranschaulicht die folgenden NLS API Funktionen:
+Die in diesem Thema beschriebene Beispielanwendung veranschaulicht, wie bestimmte NLS-Funktionen verwendet werden können, um internationalisierte Domänennamen [(IDNs) zu konvertieren.](handling-internationalized-domain-names--idns.md) Diese Anwendung veranschaulicht die folgenden NLS API Funktionen:
 
--   [**Idnto ASCII**](/windows/desktop/api/Winnls/nf-winnls-idntoascii)
--   [**Idntonameprepunicode**](/windows/desktop/api/Winnls/nf-winnls-idntonameprepunicode)
--   [**Idnzu Unicode**](/windows/desktop/api/Winnls/nf-winnls-idntounicode)
+-   [**IdnToAscii**](/windows/desktop/api/Winnls/nf-winnls-idntoascii)
+-   [**IdnToNameprepUnicode**](/windows/desktop/api/Winnls/nf-winnls-idntonameprepunicode)
+-   [**IdnToUnicode**](/windows/desktop/api/Winnls/nf-winnls-idntounicode)
 
-Beachten Sie in der Beispielausgabe, dass "ExAmPlE.com" für das kyrillische Beispiel in "" "" "" "" "" "" "" "" "" "," "," "
+Beachten Sie in der Beispielausgabe, dass "ExAmPlE.cOm" für das kyrillische Beispiel in " beim Kyrillisch example.com" konvertiert wird.
 
 
 ```C++

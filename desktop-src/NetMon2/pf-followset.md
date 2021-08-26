@@ -1,7 +1,7 @@
 ---
-description: Die PF-nach \_ Verfolgungs Struktur definiert die Protokolle, die möglicherweise vor oder nach einem Protokoll stehen.
+description: Die PF \_ FOLLOWSET-Struktur definiert die Protokolle, die einem Protokoll voran- oder folgen können.
 ms.assetid: ef444af9-edae-4547-9548-8a682c279f08
-title: PF_FOLLOWSET Struktur (Netmon. h)
+title: PF_FOLLOWSET -Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: f5c286d3b137df24f7da7f0fc5ae269a7a3d946d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d404e602e78452a38343a6e62fce8c5b16941270eaa2825de8339f583c064a8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036830"
 ---
-# <a name="pf_followset-structure"></a>PF-nach Verfolgungs \_ Struktur
+# <a name="pf_followset-structure"></a>PF \_ FOLLOWSET-Struktur
 
-Die **PF \_** -nach Verfolgungs Struktur definiert die Protokolle, die möglicherweise vor oder nach einem Protokoll stehen.
+Die **PF \_ FOLLOWSET-Struktur** definiert die Protokolle, die einem Protokoll voran- oder folgen können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ typedef struct _PF_FOLLOWSET {
 
 <dl> <dt>
 
-**nentries**
+**nEntries**
 </dt> <dd>
 
 Anzahl der Protokolle in der Liste.
@@ -50,15 +50,15 @@ Anzahl der Protokolle in der Liste.
 **Eingabe**
 </dt> <dd>
 
-[ \_ Ein](pf-followentry.md) Array von PF-nach Verfolgungs Strukturen, die die einzelnen Protokolle beschreiben.
+Array von [PF \_ FOLLOWENTRY-Strukturen,](pf-followentry.md) die jedes Protokoll beschreiben.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [PF \_ parserinfo](pf-parserinfo.md) -Struktur verwendet die PF-nach Verfolgungs Struktur, um die Protokolle aufzulisten, die möglicherweise dem vom Parser erkannten Protokoll vorangestellt sind. **\_**
+Die [PF \_ PARSERINFO-Struktur](pf-parserinfo.md) verwendet die **PF \_ FOLLOWSET-Struktur,** um die Protokolle auflisten, die dem vom Parser erkannten Protokoll voran- oder folgen können.
 
-In Netzwerkmonitor werden die Informationen in der **PF- \_ nachfolg** enden Struktur verwendet, um die folgenden Sätze spezifischer Parser zu aktualisieren. Die PF-nach Verfolgungs Struktur muss mithilfe von **heapzuw** zugeordnet werden. **\_**
+Netzwerkmonitor verwendet die Informationen in der **PF \_ FOLLOWSET-Struktur,** um die folgenden Sätze bestimmter Parser zu aktualisieren. Die **PF \_ FOLLOWSET-Struktur** muss mithilfe von **HeapAlloc zugeordnet werden.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ In Netzwerkmonitor werden die Informationen in der **PF- \_ nachfolg** enden Str
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -76,10 +76,10 @@ In Netzwerkmonitor werden die Informationen in der **PF- \_ nachfolg** enden Str
 
 <dl> <dt>
 
-[PF-nach \_ Verfolgung](pf-followentry.md)
+[PF \_ FOLLOWENTRY](pf-followentry.md)
 </dt> <dt>
 
-[PF-Parameter \_ Info](pf-parserinfo.md)
+[PF \_ PARSERINFO](pf-parserinfo.md)
 </dt> </dl>
 
  

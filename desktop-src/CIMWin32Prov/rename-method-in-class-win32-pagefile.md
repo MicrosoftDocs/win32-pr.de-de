@@ -1,8 +1,8 @@
 ---
-description: Benennt die im Objekt Pfad angegebene Auslagerungs Datei um.
+description: Benennt die im Objektpfad angegebene Auslagerungsdatei um.
 ms.assetid: 6a98e05f-337e-4224-a847-f01913031b20
 ms.tgt_platform: multiple
-title: Rename-Methode der Win32_PageFile-Klasse
+title: Umbenennen der Methode der Win32_PageFile-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 7c9ba8162cd115a567e9e9010420c558061fed08
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c47bda2b5466111594617a9f3fc0faa9d2dbf55e4452509015cbbe368ef15cba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077430"
 ---
-# <a name="rename-method-of-the-win32_pagefile-class"></a>Rename-Methode der Win32- \_ Pagefile-Klasse
+# <a name="rename-method-of-the-win32_pagefile-class"></a>Rename-Methode der Win32 \_ PageFile-Klasse
 
-Die Methode zum **Umbenennen** der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) benennt die im Objekt Pfad angegebene Auslagerungs Datei um. Ein umbenennen wird nicht unterstützt, wenn sich das Ziel auf einem anderen Laufwerk befindet oder wenn eine vorhandene logische Datei überschrieben werden muss.
+Die [Methode WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) umbenennen benennt die im Objektpfad angegebene Auslagerungsdatei um.  Eine Umbenennung wird nicht unterstützt, wenn sich das Ziel auf einem anderen Laufwerk befindet oder wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,18 +42,18 @@ uint32 Rename(
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Voll qualifizierter neuer Name der Datei (oder des Verzeichnisses).
+Vollqualifizierter neuer Name der Datei (oder des Verzeichnisses).
 
-Beispiel: c: \\ Temp \\newfile.txt
+Beispiel: c: \\ temp \\newfile.txt
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich umbenannt wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich umbenannt wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -74,7 +74,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -123,7 +123,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -137,7 +137,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -148,7 +148,7 @@ Ein angegebener Parameter ist ungültig.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -156,8 +156,8 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -169,7 +169,7 @@ Ein angegebener Parameter ist ungültig.
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Pagefile**](win32-pagefile.md)
+[**Win32 \_ PageFile**](win32-pagefile.md)
 </dt> </dl>
 
  

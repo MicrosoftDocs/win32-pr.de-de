@@ -1,30 +1,30 @@
 ---
-title: Imstscax horizontalscrollbarvisible (Eigenschaft)
-description: Gibt an, ob das Steuerelement eine horizontale Schiebe Leiste angezeigt hat.
+title: IMsTscAx HorizontalScrollBarVisible (Eigenschaft)
+description: Gibt an, ob das Steuerelement eine horizontale Bildlaufleiste angezeigt hat.
 ms.assetid: d3c22c5f-321f-476e-bcdb-224eb988a7bb
 ms.tgt_platform: multiple
 keywords:
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, imstscax-Schnittstelle
-- Imstscax-Schnittstelle Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
-- Horizontalscrollbarvisible-Eigenschaft Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, horizontalscrollbarvisible (Eigenschaft)
+- Eigenschafteneigenschaft "HorizontalScrollBarVisible Remotedesktopdienste
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsTscAx-Schnittstelle
+- IMsTscAx-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible -Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible -Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
+- HorizontalScrollBarVisible-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , HorizontalScrollBarVisible-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08fa2abb97a28af013e5791bcbd643f3f479d5c6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ae77499f685bb8b55e02fbf5c2eae0a1909469a3db6353a7914b1b8f0bcabe68
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125400"
 ---
-# <a name="imstscaxhorizontalscrollbarvisible-property"></a>Imstscax:: horizontalscrollbarvisible (Eigenschaft)
+# <a name="imstscaxhorizontalscrollbarvisible-property"></a>IMsTscAx::HorizontalScrollBarVisible (Eigenschaft)
 
-Gibt an, ob das Steuerelement eine horizontale Schiebe Leiste angezeigt hat.
+Gibt an, ob das Steuerelement eine horizontale Bildlaufleiste angezeigt hat.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -80,15 +80,15 @@ HRESULT get_HorizontalScrollBarVisible(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieses Parameters ist **true** , wenn die horizontale Schiebe Leiste sichtbar ist, andernfalls **false** .
+Der Wert dieses Parameters ist **TRUE,** wenn die horizontale Scrollleiste sichtbar ist, **andernfalls FALSE.**
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Geben Sie **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das-Steuerelement zeigt automatisch eine horizontale Schiebe Leiste an, wenn die Breite des-Steuer Elements kleiner als die Desktop Breite ist.
+Das Steuerelement zeigt automatisch eine horizontale Scrollleiste an, wenn die Breite des Steuerelements kleiner als die Desktopbreite ist.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -102,7 +102,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscax ist als 8c11efae-92c3-11d1-bc1e-00c04fa31489 definiert.<br/>            |
+| IID<br/>                      | IID \_ IMsTscAx ist als 8C11EFAE-92C3-11D1-BC1E-00C04FA31489 definiert.<br/>            |
 
 
 
@@ -110,7 +110,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -137,10 +137,10 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient9**](imsrdpclient9.md)
 </dt> <dt>
 
-[**Imstscax**](imstscax-interface.md)
+[**IMsTscAx**](imstscax-interface.md)
 </dt> <dt>
 
-[**Verticalscrollbarvisible**](imstscax-verticalscrollbarvisible.md)
+[**VerticalScrollBarVisible**](imstscax-verticalscrollbarvisible.md)
 </dt> </dl>
 
  

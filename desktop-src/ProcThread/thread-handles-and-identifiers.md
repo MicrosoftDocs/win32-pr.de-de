@@ -1,27 +1,27 @@
 ---
-description: Wenn ein neuer Thread durch die Funktion "foratethread" oder "forateremotethread" erstellt wird, wird ein Handle für den Thread zurückgegeben.
+description: Wenn ein neuer Thread von der CreateThread- oder CreateRemoteThread-Funktion erstellt wird, wird ein Handle für den Thread zurückgegeben.
 ms.assetid: ff91fe27-9773-4185-bc1e-57e897be3821
-title: Thread Handles und-Bezeichner
+title: Threadhandles und -bezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 501d449bdb34d158ad14e52409967d4ef17f62f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6058388f450b4b44c371fc26b132ea785b22c29bc0a2fd86875f563371608512
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865055"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120031630"
 ---
-# <a name="thread-handles-and-identifiers"></a>Thread Handles und-Bezeichner
+# <a name="thread-handles-and-identifiers"></a>Threadhandles und -bezeichner
 
-Wenn ein neuer Thread durch die Funktion " [**foratethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " oder " [**forateremotethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) " erstellt wird, wird ein Handle für den Thread zurückgegeben. Standardmäßig verfügt dieses Handle über vollständige Zugriffsrechte, und – unterliegt der Sicherheits Zugriffs Überprüfung – kann in allen Funktionen verwendet werden, die ein Thread handle akzeptieren. Dieses Handle kann von untergeordneten Prozessen geerbt werden, abhängig von dem Vererbungs Flag, das bei der Erstellung angegeben wird. Das Handle kann durch [**duplitorehandle**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)dupliziert werden, sodass Sie ein Thread Handle mit einer Teilmenge der Zugriffsrechte erstellen können. Das Handle ist bis zum Schließen gültig, auch nachdem der Thread, den es darstellt, beendet wurde.
+Wenn ein neuer Thread von der [**CreateThread-**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) oder [**CreateRemoteThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) erstellt wird, wird ein Handle für den Thread zurückgegeben. Standardmäßig verfügt dieses Handle über Vollzugriffsrechte und kann – je nach Überprüfung des Sicherheitszugriffs – in jeder der Funktionen verwendet werden, die ein Threadhandle akzeptieren. Dieses Handle kann von untergeordneten Prozessen geerbt werden, abhängig vom Vererbungsflag, das beim Erstellen angegeben wird. Das Handle kann von [**DuplicateHandle**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)dupliziert werden, wodurch Sie ein Threadhandle mit einer Teilmenge der Zugriffsrechte erstellen können. Das Handle ist bis zum Schließen gültig, auch nachdem der von ihm dargestellte Thread beendet wurde.
 
-Die Funktionen " [**foratethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) " und " [**forateremotethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) " geben auch einen Bezeichner zurück, der den Thread im gesamten System eindeutig identifiziert. Ein Thread kann die [**GetCurrentThreadID**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthreadid) -Funktion verwenden, um einen eigenen Thread Bezeichner zu erhalten. Die Bezeichner sind ab dem Zeitpunkt gültig, zu dem der Thread erstellt wird, bis der Thread beendet wurde. Beachten Sie, dass der Thread Bezeichner niemals 0 sein wird.
+Die Funktionen [**CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) und [**CreateRemoteThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread) geben auch einen Bezeichner zurück, der den Thread im gesamten System eindeutig identifiziert. Ein Thread kann die [**GetCurrentThreadId-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthreadid) verwenden, um seinen eigenen Threadbezeichner abzurufen. Die Bezeichner sind von der Erstellung des Threads bis zum Beenden des Threads gültig. Beachten Sie, dass kein Threadbezeichner jemals 0 ist.
 
-Wenn Sie einen Thread Bezeichner haben, können Sie das Thread handle abrufen, indem Sie die [**openthread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openthread) -Funktion aufrufen. Mit **openthread** können Sie die Zugriffsrechte des Handles angeben und angeben, ob es vererbt werden kann.
+Wenn Sie über einen Threadbezeichner verfügen, können Sie das Threadhandle abrufen, indem Sie die [**OpenThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openthread) aufrufen. **Mit OpenThread** können Sie die Zugriffsrechte des Handles angeben und angeben, ob es geerbt werden kann.
 
-Ein Thread kann die [**GetCurrentThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) -Funktion verwenden, um ein *Pseudo handle* zum eigenen Thread Objekt abzurufen. Dieses Pseudo Handle ist nur für den aufrufenden Prozess gültig. Sie kann nicht für die Verwendung durch andere Prozesse geerbt oder dupliziert werden. Um das eigentliche Handle für den Thread mit einem Pseudo Handle zu erhalten, verwenden Sie die [**duplitorandle**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) -Funktion.
+Ein Thread kann die [**GetCurrentThread-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) verwenden, um ein *Pseudohandle* für sein eigenes Threadobjekt abzurufen. Dieses Pseudohandle ist nur für den aufrufenden Prozess gültig. sie kann nicht für die Verwendung durch andere Prozesse geerbt oder dupliziert werden. Verwenden Sie die [**DuplicateHandle-Funktion,**](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle) um das echte Handle für den Thread mit einem Pseudohandle abzurufen.
 
-Um die Threads eines Prozesses aufzulisten, verwenden Sie die [**Thread32First**](/windows/win32/api/tlhelp32/nf-tlhelp32-thread32first) -Funktion und die [**Thread32Next**](/windows/win32/api/tlhelp32/nf-tlhelp32-thread32next) -Funktion.
+Um die Threads eines Prozesses aufzuzählen, verwenden Sie die Funktionen [**Thread32First**](/windows/win32/api/tlhelp32/nf-tlhelp32-thread32first) und [**Thread32Next.**](/windows/win32/api/tlhelp32/nf-tlhelp32-thread32next)
 
  
 

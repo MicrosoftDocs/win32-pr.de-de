@@ -3,54 +3,54 @@ title: 'WCS-Farbdarstellungsmodell: Profilschema und Algorithmus'
 description: 'WCS-Farbdarstellungsmodell: Profilschema und Algorithmus'
 ms.assetid: 017588fe-cec9-4178-a912-7950cefc036c
 keywords:
-- Windows Color System (WCS), Color Appearance Model Profile (Camp)
-- WCS (Windows Color System), Color Appearance Model Profile (Camp)
-- Bild Farbverwaltung, Farbdarstellung-Modell Profil (Camp)
-- Farbverwaltung, Farbdarstellung-Modell Profil (Camp)
-- Farben, Farbdarstellung-Modell Profil (Camp)
-- Windows Color System (WCS), profile
-- WCS (Windows Color System), profile
-- Bildfarben Verwaltung, profile
-- Farbverwaltung, profile
-- Farben, profile
-- Farbdarstellung-Modell Profil (Camp)
-- Camp (Farbdarstellung-Modell Profil)
-- Schemas, Color Appearance Model Profile (Camp)
-- Algorithmen, Farbdarstellung-Modell Profil (Camp)
-- Modell Profil für WCS-Farbdarstellung
+- Windows Color System (WCS), Farbdarstellungsmodellprofil (COLOR)
+- WCS (Windows Color System), Farbdarstellungsmodellprofil (COLOR)
+- Bildfarbverwaltung, Farbdarstellungsmodellprofil (COLOR)
+- Farbverwaltung, Farbdarstellungsmodellprofil (COLOR)
+- Farben, Farbdarstellungsmodellprofil (COLOR)
+- Windows Color System (WCS), Profile
+- WCS (Windows Color System), Profile
+- Bildfarbverwaltung, Profile
+- Farbverwaltung, Profile
+- Farben, Profile
+- Farbdarstellungsmodellprofil (COLOR)
+- COLOR (Farbdarstellungsmodellprofil)
+- Schemas, Farbdarstellungsmodellprofil (COLOR)
+- Algorithmen, Farbdarstellungsmodellprofil (COLOR)
+- WCS-Farbdarstellungsmodellprofil
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a928aebcfe02f1db39de2452a0b49e5c888bccc
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: 042cf74d264a7b5d40fdc30fec44784680a67b95363b579d0c7bebc7ececcedb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "106354250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090098"
 ---
 # <a name="wcs-color-appearance-model-profile-schema-and-algorithm"></a>WCS-Farbdarstellungsmodell: Profilschema und Algorithmus
 
 [Übersicht](#overview)
 
-[Architektur des Farbdarstellung-Modell Profils (Camp)](#color-appearance-model-profile-architecture)
+[COLOR-Architektur (Color Appearance Model Profile)](#color-appearance-model-profile-architecture)
 
-[Das Lager Schema](#the-camp-schema)
+[DAS SCHEMA DES SCHEMAS](#the-camp-schema)
 
-[Die Lager Schema Elemente](#the-camp-schema-elements)
+[DIE SCHEMAELEMENTE DES SCHEMAS](#the-camp-schema-elements)
 
-[Der Camp-Algorithmus](#the-camp-algorithm)
+[Der ALGORITHM-Algorithmus](#the-camp-algorithm)
 
 ### <a name="overview"></a>Übersicht
 
-Dieses Schema wird verwendet, um den Inhalt eines Farbdarstellung-Modell Profils (Camp) anzugeben. Die zugehörigen baselinealgorithmen werden in den folgenden Abschnitten beschrieben.
+Dieses Schema wird verwendet, um den Inhalt eines Farbdarstellungsmodellprofils (COLOR) anzugeben. Die zugeordneten Baselinealgorithmen werden in den folgenden Abschnitten beschrieben.
 
-Das Camp besteht aus XML-Tags, die parametrimetrische Werte für die Modell Variablen "CIECAM02 Baseline Color Appearance" bereitstellen. Ausführliche Informationen zu den Bereichen für Parameter finden Sie in den grundlegenden Farbdarstellung und der CIECAM02-Empfehlung.
+Die COLOR besteht aus XML-Tags, die parametrische Werte für die Variablen des CIECAM02-Baselinefarbdarstellungsmodells bereitstellen. Details zu den Bereichen für Parameter finden Sie in der Spezifikation des Basisfarbdarstellungsmodells und der CIECAM02-Empfehlung.
 
-### <a name="color-appearance-model-profile-architecture"></a>Architektur des Farbdarstellung-Modell Profils
+### <a name="color-appearance-model-profile-architecture"></a>Architektur des Farbdarstellungsmodellprofils
 
-![Diagramm, das die von X M L-Tags erstellte Architektur des Lager Profils anzeigt.](images/camp-image002new.png)
+![Diagramm, das die PROFILarchitektur VON X M L-Tags zeigt.](images/camp-image002new.png)
 
-### <a name="the-camp-schema"></a>Das Lager Schema
+### <a name="the-camp-schema"></a>DAS SCHEMA DES SCHEMAS
 
 
 ```C++
@@ -137,134 +137,134 @@ Das Camp besteht aus XML-Tags, die parametrimetrische Werte für die Modell Vari
 
 
 
-## <a name="the-camp-schema-elements"></a>Die Lager Schema Elemente
+## <a name="the-camp-schema-elements"></a>DIE SCHEMAELEMENTE DES SCHEMAS
 
-## <a name="colorappearancemodel"></a>Colorerscheinungs ancemodel
+## <a name="colorappearancemodel"></a>ColorAppearanceModel
 
 Dieses Element ist eine Sequenz von:
 
-1.  Profilnamen Zeichenfolge,
-2.  optionale Beschreibungs Zeichenfolge,
-3.  optionale Autor Zeichenfolge,
-4.  Viewingconditions-Element.
+1.  ProfileName-Zeichenfolge,
+2.  optionale Beschreibungszeichenfolge,
+3.  optionale Erstellungszeichenfolge,
+4.  ViewingConditions-Element.
 
-Überprüfungs **Bedingungen:** Jedes untergeordnete Element wird anhand seines eigenen Typs überprüft. Zeichen folgen Längen sind auf 10.000 Zeichen beschränkt.
+**Überprüfungsbedingungen:** Jedes Unterelement wird durch seinen eigenen Typ überprüft. Zeichenfolgenlängen sind auf 10.000 Zeichen beschränkt.
 
 ## <a name="namespace"></a>Namespace
 
-xmlns: Cam = " http://schemas.microsoft.com/windows/2005/02/color/ColorAppearanceModel "
+xmlns:cam=" http://schemas.microsoft.com/windows/2005/02/color/ColorAppearanceModel "
 
-targetNamespace = " http://schemas.microsoft.com/windows/2005/02/color/ColorAppearanceModel "
+targetNamespace=" http://schemas.microsoft.com/windows/2005/02/color/ColorAppearanceModel "
 
 ## <a name="version"></a>Version
 
-Version &gt; 0,1 oder &lt; = "1,0" mit der ersten Version von Windows Vista.
+Version &gt; 0.1 oder &lt; = "1.0" mit der ersten Version von Windows Vista.
 
-Überprüfungs **Bedingungen:** Jeder Versions Wert &lt; = 2,0 ist ebenfalls gültig, um nicht unterbrechende Änderungen im Format zu unterstützen.
+**Überprüfungsbedingungen:** Jeder Versionswert &lt; =2.0 ist auch gültig, um nicht breaking changes am Format zu unterstützen.
 
 ## <a name="documentation"></a>Dokumentation
 
-Profil Schema für Farbdarstellung des Modells.
+Profilschema des Farbdarstellungsmodells.
 
-Copyright (C) Microsoft. Alle Rechte vorbehalten.
+Copyright (C) Microsoft. All rights reserved.
 
-Überprüfungs **Bedingungen:** Jedes untergeordnete Element wird anhand seines eigenen Typs überprüft.
+**Überprüfungsbedingungen:** Jedes Unterelement wird durch seinen eigenen Typ überprüft.
 
-## <a name="surroundtype"></a>Surroundtype
+## <a name="surroundtype"></a>SurroundType
 
-Dieses Element ist entweder eine Enumeration von "Average", "Dim" oder "Dark" CIECAM02 Parametern oder die tatsächlichen quantitativen Parameter aus der CIECAM02-Empfehlung c, Auswirkung der umschließenden.
+Dieses Element ist entweder eine Enumeration der CIECAM02-Parameter "Average", "Dim" oder "Dark" oder die tatsächlichen quantitativen Parameter aus der CIECAM02-Empfehlung c, Auswirkung der Umgebung.
 
-Überprüfungs **Bedingungen:** Der c-Parameter kann zwischen 0,525 und 0,69 liegen.
+**Überprüfungsbedingungen:** Der c-Parameter kann zwischen 0,525 und 0,69 liegen.
 
-## <a name="viewingconditions"></a>Viewingconditions
+## <a name="viewingconditions"></a>ViewingConditions
 
-Dieses Element besteht aus den folgenden untergeordneten Elementen:
+Dieses Element besteht aus den folgenden Unterelementen:
 
 
 
-| Element                    | type           |
+| Element                    | Typ           |
 |----------------------------|----------------|
-| WhitePoint                 | Whitepointtype |
+| Weißtons                 | WhitePointType |
 | Hintergrund                 | CIEXYZ         |
-| Kur                   | Surroundtype   |
-| "Luminanceofadaptingfield"   | float          |
-| Degreeof-Anpassung         | float          |
-| Normalizetomediawhitepoint | Boolean        |
+| Surround                   | SurroundType   |
+| LuminanceOfAdaptingField   | float          |
+| DegreeOfAdaptation         | float          |
+| NormalizeToMediaWhitePoint | Boolesch        |
 
 
 
  
 
-Überprüfungs **Bedingungen:** CIEXYZ-unter Elemente werden von nonnegativexyztype überprüft. Der Wert für "luminanceofadaptingfield" ist maximal 10.000 CD/m ^ 2. Degreeofadaptions kann zwischen 0,0 und 1,0 liegen. Der normalizetomediawhitepoint-Wert kann entweder "true" oder "false" lauten. Wenn das Subelement normalizetomediawhitepoint nicht vorhanden ist, wird standardmäßig "true" verwendet. Weitere Informationen finden Sie im folgenden Abschnitt zu den lageralgorithmen.
+**Überprüfungsbedingungen:** CIEXYZ-Unterelemente werden durch NonNegativeXYZType überprüft. LuminanceOfAdaptingField ist maximal 10.000cd/m^2. DegreeOfAdaptation kann zwischen 0,0 und 1,0 liegen. Der NormalizeToMediaWhitePoint-Wert kann entweder "true" oder "false" sein. Wenn das Unterelement NormalizeToMediaWhitePoint nicht vorhanden ist, wird standardmäßig "true" verwendet. Weitere Informationen finden Sie im folgenden ABSCHNITT ZUM ALGORITHMUS.
 
-## <a name="whitepointtype"></a>Whitepointtype
+## <a name="whitepointtype"></a>WhitePointType
 
-Dieses Element ist entweder eine Enumeration des Cie Light-Quell Werts ("D50", "D65", "a", "F2") oder ein "CIEXYZ"-Unterelement.
+Dieses Element ist entweder eine Enumeration des CIE-Lichtquellenwerts ("D50", "D65", "A" oder "F2") oder ein CIEXYZ-Unterelement.
 
-Überprüfungs **Bedingungen:** Jedes untergeordnete Element wird anhand seines eigenen Typs überprüft.
+**Überprüfungsbedingungen:** Jedes Unterelement wird durch seinen eigenen Typ überprüft.
 
-## <a name="ciexyztype"></a>Ciexyztype
+## <a name="ciexyztype"></a>CIEXYZType
 
-Das ciexyztype-Element besteht aus drei nicht-negativefloattype-IEEE-Gleit Komma Elementen mit dem Namen "X", "Y" und "Z". Bei diesen Messungen kann es sich entweder um absolute (nicht relative) CIEXYZ 1931-reflektierte Werte oder absolute (nicht relative) CIEXYZ 1931 Direct-Werte (Transmissive) in den quadratischen Einheiten von Kerzen pro Meter handelt.
+Das CIEXYZType-Element besteht aus drei NonNegativeFloatType IEEE-Gleitkommaelementen mit einfacher Genauigkeit mit den Namen "X", "Y" und "Z". Diese Messungen können entweder absolute (nicht relative) CIEXYZ 1931 reflektierende Werte oder absolute (nicht relative) CIEXYZ 1931 direkte (transmissive) Werte in Candelas pro Quadrateinheiten pro Meter sein.
 
-Überprüfungs **Bedingungen:** Dies bedeutet, dass nur reale Werte gültig sind, und negative CIEXYZ-Mess Werte sind ungültig. Da es sich hierbei um absolute Werte handelt, können Werte weit über 1,0 f hinaus reichen. Ein angemessener Grenzwert für jeden X-, Y-oder Z-Wert wird willkürlich auf 10000.0 f festgelegt.
+**Überprüfungsbedingungen:** Dies bedeutet, dass nur reale Werte gültig sind und negative CIEXYZ-Messwerte ungültig sind. Da es sich hierbei um absolute Werte handelt, können Werte weit über 1,0f liegen. Ein angemessener Grenzwert für jeden X-, Y- oder Z-Wert wird willkürlich auf 10000,0f festgelegt.
 
  
 
-### <a name="the-camp-algorithm"></a>Der Camp-Algorithmus
+### <a name="the-camp-algorithm"></a>Der ALGORITHM-Algorithmus
 
-Das Farb Darstellungs Modell (Color Appearance Model, CAM) basiert auf den Modellen der Cie CIECAM02 Color-Darstellung.
+Das Farbdarstellungsmodell (COLOR) basiert auf den Formeln des CIE CIE CIECAM02-Farbdarstellungsmodells.
 
-Diese Klasse implementiert die Farbdarstellung von Modellen. Beachten Sie, dass die WCS-CAM *nicht* mithilfe eines Plug-ins ersetzt werden kann. Es ist ein Entwurfs Ziel, nur ein Farb Darstellungs Modell zu haben. Der Cam basiert auf CIECAM02-Empfehlungen.
+Diese Klasse implementiert die Farbdarstellungsmodellierung. Beachten Sie, dass das WCS-PLUG-IN *nicht* ersetzt werden kann, z. B. mithilfe eines Plug-Ins. Es ist ein Entwurfsziel, nur ein Farbdarstellungsmodell zu verwenden. Der FOKUS basiert auf CIECAM02-Empfehlungen.
 
-CIECAM02 kann auf zwei Arten verwendet werden. In der Richtung "farbige Metrik-zu-Darstellung" wird eine Zuordnung zwischen dem Bereich "Cie XYZ" und dem Leerraum bereitstellt. In der Richtung "Darstellung bis farbige Metrik" erfolgt die Zuordnung aus dem Farb Darstellungs Raum zurück zu XYZ-Leerraum. Die Farbdarstellung korreliert Helligkeit, J, Chroma, C und Hue, h. Diese drei Werte bilden ein zylindrisches Koordinatensystem. Häufig ist es leichter, in einem rechteckigen Koordinatensystem zu arbeiten, also Compute a = c cos h und b = c Sin h, um CIECAM02 Jab zu geben.
+CIECAM02 kann auf zwei Arten verwendet werden. In der Colorimetric-to-Appearance-Richtung wird eine Zuordnung vom CIE XYZ-Raum zum Farbdarstellungsbereich ermöglicht. In der Farbgebungsrichtung wird der Farbdarstellungsbereich wieder dem XYZ-Raum zugeordnet. Die Farbdarstellung korreliert Helligkeit, J, Glanz, C und Farbton, h. Diese drei Werte bilden ein koordinatenförmiges Koordinatensystem. Häufig ist es praktischer, in einem rechteckigen Koordinatensystem zu arbeiten. Berechnen Sie also a = C cos h und b = C sin h, um CIECAM02 Jab zu erhalten.
 
-Sie können die Werte der Cam-Helligkeit größer als 100 verwenden. Das Cie-Komitee, das CIECAM02 formuliert hat, entsprach nicht dem Verhalten der Helligkeit-Achse für Eingabewerte mit einer Leuchtkraft, die größer ist als der übergebene weiße Punkt; Das heißt, für Eingabe-y-Werte, die größer sind als der Wert des angenommenen y-Punkts. Das Experimentieren hat ergeben, dass sich die Leuchtkraft Gleichungen in CIECAM02 für solche Werte in angemessener Weise Verhalten. Die Helligkeit nimmt exponentiell zu und folgt dem gleichen Exponent (ungefähr 1/3).
+Sie können DIE LIGHTNESS-Werte größer als 100 verwenden. Der CIE-Ausschuss, der CIECAM02 formuliert hat, hat sich nicht mit dem Verhalten der Helligkeitsachse für Eingabewerte befasst, deren Leuchtdichte größer als der angenommene Weißpunkt ist. Das heißt, für Eingabewerte von Y, die größer als der übernommene weißer Punkt Y-Wert sind. Experimente haben gezeigt, dass sich die Leuchtdichtegleichungen in CIECAM02 für solche Werte angemessen verhalten. Die Lichtheit nimmt exponentiell zu und folgt demselben Exponenten (ungefähr 1/3).
 
-Manchmal möchten Benutzer die Art und Weise ändern, in der der Grad der Anpassung (D) berechnet wird. Der WCS-Entwurf ermöglicht es Benutzern, diese Berechnung zu steuern, indem der Wert für degreeofadaption in den Parametern der Anzeige Bedingungen geändert wird.
+Benutzer möchten manchmal ändern, wie der Grad der Anpassung (D) berechnet wird. Mit dem WCS-Entwurf können Benutzer diese Berechnung steuern, indem sie den DegreeOfadaptation-Wert in den Parametern der Anzeigebedingungen ändern.
 
-Um den von den Benutzern, die von den Ansprüchen im Zusammenwirken von Benutzern eine konsistente Übereinstimmung bieten, zu gewährleisten, 1,0 ist die degreeofadaption in den Standard Camps Dies führt zu besseren Ergebnissen in allen Fällen als bei mincd absolute, bei denen WCS die degreeofadaption (über degreeofadaption =-1) berechnen könnte.
+Um eine konsistentere Übereinstimmung mit den VOM BENUTZER beeinflussten Erwartungen zu bieten, ist degreeOfAdaptation in der Standardeinstellung 1.0. Dies führt in allen Anderen Fällen als MinCD Absolute zu besseren Ergebnissen, in denen WCS möglicherweise den DegreeOfAdaptation (über degreeOfAdaptation = -1) berechnen soll.
 
-Anstatt einen umschließenden Wert "Average", "Dim" und "Dark" zu verwenden, wird ein kontinuierlicher Umschließungs Wert bereitgestellt, der aus dem Wert c berechnet wird. Der Wert von c muss ein float-Wert zwischen 0,525 und 0,69 sein.
+Anstatt den Umschließwert "Average", "Dim" und "Dark" zu verwenden, wird ein kontinuierlicher Umschließungswert bereitgestellt, der aus dem Wert c berechnet wird. Der Wert von c muss ein Gleitkommawert zwischen 0,525 und 0,69 sein.
 
-Aus *c* können *NC* und *F* berechnet werden. dabei wird die schrittweise lineare interpolung zwischen den Werten verwendet, die bereits für "Average", "Dim" und "Dark" bereitgestellt wurden. Dies modelliert die Darstellung in Abbildung 1 von Cie 159:2004, der CIECAM02-Spezifikation.
+Von *c* aus können *Nc* und *F* mithilfe einer stückweise linearen Interpolation zwischen den Werten berechnet werden, die bereits für "Average", "Dim" und "Dark" bereitgestellt wurden. Hier wird das modelliert, was in Abbildung 1 von CIE 159:2004, der CIECAM02-Spezifikation, dargestellt ist.
 
 
 
-| degreeof-Anpassung                     | Verhalten                                                                       |
+| degreeOfAdaption                     | Verhalten                                                                       |
 |--------------------------------------|--------------------------------------------------------------------------------|
-| -1.0                                 | ![Zeigt eine Formel für das Standardverhalten c I E c a M 02 an.](images/camp-image006.png)Dies ist das Standardverhalten von CIECAM02.<br/> |
-| 0,0 &lt; = degreeof-Anpassung &lt; = 1,0 | *D* = degreeof-Anpassung (der vom Benutzer bereitgestellte Wert)                      |
+| -1.0                                 | ![Zeigt eine Formel für das Standardverhalten von C I E C A M 02 an.](images/camp-image006.png)Dies ist das Standardverhalten von CIECAM02.<br/> |
+| 0,0 &lt; = degreeOfAdaption &lt; = 1,0 | *D* = degreeOfAdaptation (der vom Benutzer angegebene Wert)                      |
 
 
 
  
 
-Eine bestimmte Menge an Fehlerüberprüfung wurde auch der-Implementierung hinzugefügt. Die folgenden Gleichung Zahlen werden in der Definition von Cie 159:2004 von CIECAM02 verwendet.
+Der Implementierung wurde auch eine bestimmte Anzahl von Fehlerüberprüfungen hinzugefügt. Die folgenden Gleichungszahlen werden in der CIE 159:2004-Definition von CIECAM02 verwendet.
 
-**Farbige metricin-ancecolors**
+**ColorimetricToAppearanceColors**
 
-Die Eingabewerte werden auf eine nicht zurechtheit geprüft: Wenn X oder Z &lt; 0,0 oder Y &lt; -1,0, ist das HRESULT E \_ invalidArg. Wenn-1,0 &lt; = Y &lt; 0,0, werden J, C und h alle auf 0,0 festgelegt.
+Die Eingabewerte werden auf Angemessenes überprüft: Wenn X oder Z &lt; 0,0 oder Y &lt; -1,0, dann ist das HRESULT E \_ INVALIDARG. Wenn -1.0 &lt; = Y &lt; 0.0 ist, werden J, C und h alle auf 0,0 festgelegt.
 
-Es gibt bestimmte interne Bedingungen, die zu Fehlern führen können. Anstatt solche Ergebnisse zu erzeugen, werden die internen Ergebnisse abgeschnitten, um Werte im Gültigkeitsbereich zu erzeugen. Dies geschieht bei Spezifikationen von Farben, die dunkel und unverändersch sind: in Gleichung 7,23, wenn ein Wert von &lt; 0, a = 0. In Gleichung 7,26, wenn t &lt; 0, t = 0.
+Es gibt bestimmte interne Bedingungen, die zu Fehlerergebnissen führen können. Anstatt solche Ergebnisse zu erzeugen, werden die internen Ergebnisse abgeschnitten, um Werte innerhalb des Bereichs zu erzeugen. Dies geschieht bei Spezifikationen von Farben, die dunkel und unergründlich versunken sind: In Gleichung 7.23, wenn A &lt; 0, A = 0. In Gleichung 7.26, wenn t &lt; 0, t = 0.
 
-**Anzeige von "Erscheinungsbild"**
+**AppearanceToColorimetricColors**
 
-Die Eingabewerte werden auf eine nicht zurechtheit geprüft. Bei c &lt; 0, c &gt; 300 oder J &gt; 500 ist das HRESULT E \_ invalidArg.
+Die Eingabewerte werden auf Sinnvolles überprüft. Wenn C &lt; 0, C &gt; 300 oder J &gt; 500, dann ist das HRESULT E \_ INVALIDARG.
 
-*R '<sub>a;</sub>*, *G '<sub>a;</sub>* und *B '<sub>a;</sub>*, (Gleichungen 8,19-8,21) werden auf den Bereich 399,9 zugeschnitten.
+*R'<sub>a;</sub>*, *G'<sub>a;</sub>* und *B'<sub>a;</sub>*, (Gleichungen 8.19 - 8.21) werden auf den Bereich 399.9 abgeschnitten.
 
-Für alle Farbdarstellung-Modell profile (CAMPs) prüft die WCS-Engine den angenommenen weißen Punkt. Wenn y nicht 100,0 ist, wird der übergelagene weiße Punkt so skaliert, dass y gleich 100,0 ist. Die gleiche Skalierung wird auf den Hintergrund Wert angewendet. Der Skalierungsfaktor ist 100,0/adoptedwhitepoint. Y. Der Faktor für die Skalierung wird auf die einzelnen X-, Y-und Z-Dateien angewendet. Wenn das normalizetomediawhitepoint-Feld auf "true" festgelegt ist, oder wenn es nicht im Camp vorhanden ist, skaliert die Engine auch alle Eingabe Farben für Geräte Farben in devicetocolormetric, sodass der Y-Wert des Mediums mit dem Medien Medium 100,0 lautet. Geräte Farben von colormetrictodevice werden durch die multiplikative Umkehrung dieses Skalierungsfaktors skaliert. Wenn das normalizetomediawhitepoint-Flag auf "false" festgelegt ist, werden die farbige Metrikdaten nicht skaliert.
+Für alle COLOR Appearance Model Profiles (NAPPs) untersucht die WCS-Engine den übernommenen Weißpunkt. Wenn Y nicht 100,0 ist, wird der übernommene Weißpunkt skaliert, sodass Y gleich 100,0 ist. Die gleiche Skalierung wird auf den Hintergrundwert angewendet. Der Skalierungsfaktor ist 100.0/adoptWhitePoint.Y. Der gleiche Skalierungsfaktor wird auf alle X-, Y- und Z-Skalierungsfaktor angewendet. Wenn das Feld NormalizeToMediaWhitePoint auf "True" festgelegt ist, oder wenn es nicht im FELD vorhanden ist, skaliert die Engine auch alle Gerätefarbeneingaben auf DeviceToColorimetric, sodass der Y-Wert des Gerätemedien-Weißpunkts gleich 100,0 ist. Gerätefarben, die von ColorimetricToDevice kommen, werden durch die multiplikative Umkehrung dieses Skalierungsfaktors skaliert. Wenn das NormalizeToMediaWhitePoint-Flag auf "False" festgelegt ist, werden die Farbmetrikdaten nicht skaliert.
 
-Bei einigen Aufgaben ist es sinnvoll, die farbmetrikwerte aus devicedecolormetric zu skalieren. Die hyperbolische Glanz Gleichungen in der CAM sind tatsächlich für eine weiße Punktbeleuchtung von 100,0 konzipiert. Die einzige Stelle, an der ein Unterschied in der absoluten Leuchtkraft (bzw. Beleuchtung) wiedergegeben wird, ist die Helligkeit des Anpassungs Felds. Daher muss der Cam mit einem weißen Punkt Y von 100,0 initialisiert werden. Wenn jedoch der mittlere weiße Punkt des Geräte Modells als gehostdeter weißer Punkt verwendet wird, müssen alle vom Gerät ausgehenden Farben entsprechend skaliert werden, oder das Gerät weiß nicht mit dem J-Wert 100,0. Daher müssen die Y-Werte in den Messungen skaliert werden. Die Maßwerte können vor dem Initialisieren des Geräte Modells skaliert werden. Die Ergebnisse befinden sich bereits im richtigen Bereich. Dies würde jedoch das Testen des Geräte Modells erschweren, da die ausgehenden Werte skaliert werden müssen. Bei Aufgaben, bei denen der Mittelpunkt des Mediums weiß, dass es sich um ein echtes weiß handelt, ist das normalisieren durch den Geräte Medien-weißen Punkt wünschenswert.
+Bei einigen Aufgaben ist es sinnvoll, die colorimetric-Werte aus DeviceToColorimetric zu skalieren. Die hyperbolischen Lichtheitsgleichungen in der WEBCAM sind wirklich für eine Weißpunkt-Leuchtdichte von 100,0 konzipiert. Der einzige Ort, an dem ein Unterschied in der absoluten Luminanz (oder Derstanz) ins Spiel kommt, ist die Leuchtdichte des anpassenden Felds. Daher muss dieCAM mit einem weißen Punkt Y von 100.0 initialisiert werden. Wenn jedoch der mittlere Weißpunkt des Gerätemodells als übernommener weißer Punkt verwendet wird, müssen alle Farben, die vom Gerät stammen, entsprechend skaliert werden, oder das Gerät weiß wird nicht mit dem J-Wert 100,0 angezeigt. Daher müssen die Y-Werte in den Messungen skaliert werden. Die Messwerte könnten vor der Initialisierung des Gerätemodells skaliert werden. Die Ergebnisse liegen dann bereits im richtigen Bereich. Dies würde jedoch das Testen des Gerätemodells erschweren, da die auskommenden Werte eine Skalierung erfordern würden. Für Aufgaben, bei denen der mittlere Weißpunkt des Geräts als richtig weiß wahrgenommen wird, ist eine Normalisierung durch den Gerätemedien-Weißpunkt wünschenswert.
 
-Der Cam wird direkt aus dem Camp initialisiert. Dies ermöglicht Entwicklern eine gewisse Flexibilität bei der Initialisierung der Cam, basierend auf der Aufgabe, die Sie ausführen möchten. In einigen Aufgaben ignorieren Beobachter alle Chroma in den Medien weißen Punkten, da Sie erkennen, dass die Quell-und Zielmedien "weiß" sind. In solchen Fällen möchten Entwickler die Forward-und inverse-Cams mit ihren jeweiligen Medien weißen Punkten initialisieren. In einigen Fällen können Beobachter die Farbe der Medien Hintergründe vergleichen. In diesen Fällen empfiehlt es sich, eine CAM für beide Geräte zu verwenden, und es kann wünschenswert sein, die farbmetrikwerte jedes Geräts nach dem mittleren weißen Punkt des Geräts zu skalieren. Dann führen die verschiedenen Werte für den Wert des Mediums in CIECAM02 zu unterschiedlichen Darstellungs Werten.
+DieCAM wird direkt aus der DABEI-Instanz initialisiert. Dies ermöglicht Entwicklern ein gewisses Maß an Flexibilität bei der Initialisierung der TASK basierend auf der Aufgabe, die sie ausführen möchten. In einigen Aufgaben ignorieren Beobachter alle White Points in den Medien, da sie kognitiv "wissen", dass die Quell- und Zielmedien "weiß" sind. In solchen Fällen möchten Entwickler die Vorwärts- und umgekehrten CAMs mit ihren jeweiligen Medien-White points initialisieren. In einigen Fällen vergleichen Beobachter möglicherweise die Farbe der Medienhintergrund. In diesen Fällen empfiehlt es sich, für beide Geräte ein EINZIGES ZU VERWENDEN, und es kann wünschenswert sein, die Farbmetrikwerte der einzelnen Geräte nicht nach dem mittleren Weißpunkt des Geräts zu skalieren. Dann führen die verschiedenen Tristimuluswerte des Mediums zu unterschiedlichen Darstellungswerten in CIECAM02.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konzepte der grundlegenden Farbverwaltung](basic-color-management-concepts.md)
+[Grundlegende Konzepte der Farbverwaltung](basic-color-management-concepts.md)
 </dt> <dt>
 
 [Windows Color System: Schemas und Algorithmen](windows-color-system-schemas-and-algorithms.md)

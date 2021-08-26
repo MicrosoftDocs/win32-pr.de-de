@@ -1,9 +1,9 @@
 ---
-title: TDM_CLICK_RADIO_BUTTON Meldung (kommstrg. h)
-description: Simuliert die Aktion eines Options Felds in einem Aufgaben Dialogfeld.
+title: TDM_CLICK_RADIO_BUTTON Meldung (Commctrl.h)
+description: Simuliert die Aktion eines Optionsfeldklicks in einem Aufgabendialogfeld.
 ms.assetid: ad1616fc-f64d-4575-8bd1-7ce63185d725
 keywords:
-- Windows-Steuerelemente für TDM_CLICK_RADIO_BUTTON Meldung
+- TDM_CLICK_RADIO_BUTTON Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b76d465b1b937359a3d312a401914d497f9c9b22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 80c1eb7e72030a3c2dadc61bfd90027dab032c3342a25c72e4da9dd9a7338142
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104660"
 ---
-# <a name="tdm_click_radio_button-message"></a>TDM-Click-Optionsfeld \_ \_ \_ Meldung
+# <a name="tdm_click_radio_button-message"></a>TDM CLICK RADIO BUTTON message (TDM \_ CLICK \_ RADIO \_ BUTTON-Meldung)
 
-Simuliert die Aktion eines Options Felds in einem Aufgaben Dialogfeld.
+Simuliert die Aktion eines Optionsfeldklicks in einem Aufgabendialogfeld.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Ein **int** -Wert, der die ID des Options Felds angibt, auf das geklickt werden soll.
+Ein **int-Wert,** der die ID des Optionsfelds angibt, auf das geklickt werden soll.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
 Muss Null sein.
@@ -47,9 +47,9 @@ Muss Null sein.
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die angegebene Optionsfeld-ID wird an die [**taskdialogcallbackproc**](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback) -Rückruffunktion als Teil eines von [TDN \_ \_ \_ angeklickten](tdn-radio-button-clicked.md) Benachrichtigungs Codes gesendet. Nachdem die Rückruffunktion zurückgegeben wurde, wird das Optionsfeld ausgewählt.
+Die angegebene Optionsfeld-ID wird als Teil eines [TDN RADIO BUTTON \_ \_ CLICKED-Benachrichtigungscodes \_](tdn-radio-button-clicked.md) an die [**Rückruffunktion TaskDialogCallbackProc**](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback) gesendet. Nachdem die Rückruffunktion zurückgegeben wurde, wird das Optionsfeld ausgewählt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die angegebene Optionsfeld-ID wird an die [**taskdialogcallbackproc**](/windows/
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

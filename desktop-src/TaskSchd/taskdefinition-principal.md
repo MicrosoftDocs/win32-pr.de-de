@@ -1,11 +1,11 @@
 ---
-title: Taskdefinition. Principal (Eigenschaft)
-description: Dient zum Abrufen oder Festlegen des Prinzipals für den Task, der die Sicherheits Anmelde Informationen für den Task bereitstellt.
+title: TaskDefinition.Principal-Eigenschaft
+description: Ruft für die Skripterstellung den Prinzipal für den Task ab, der die Sicherheitsanmeldeinformationen für den Task bereitstellt, oder legt diesen fest.
 ms.assetid: ed706616-50a1-40b2-8e02-6f548e1b714e
 keywords:
-- Prinzipal Eigenschaft Taskplaner
-- Principal Property Taskplaner, Task Definition-Objekt
-- Taskdefinition-Objekt Taskplaner, Prinzipal Eigenschaft
+- Taskplaner der Prinzipaleigenschaft
+- Prinzipaleigenschaft Taskplaner , TaskDefinition-Objekt
+- TaskDefinition-Objekt Taskplaner , Principal-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a3a58074a7b56c77661b360333f5721a04ff6a0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec41b6c1b2f55b73d8cbe22954f2e6097f4ad2ae1fd7dd25836b016744279cdb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080310"
 ---
-# <a name="taskdefinitionprincipal-property"></a>Taskdefinition. Principal (Eigenschaft)
+# <a name="taskdefinitionprincipal-property"></a>TaskDefinition.Principal-Eigenschaft
 
-Dient zum Abrufen oder Festlegen des Prinzipals für den Task, der die Sicherheits Anmelde Informationen für den Task bereitstellt.
+Ruft für die Skripterstellung den Prinzipal für den Task ab, der die Sicherheitsanmeldeinformationen für den Task bereitstellt, oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,7 +40,7 @@ TaskDefinition.Principal As Principal
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Prinzipal für den Task, der die Sicherheits Anmelde Informationen für den Task bereitstellt.
+Der Prinzipal für den Task, der die Sicherheitsanmeldeinformationen für den Task bereitstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,9 +48,9 @@ Der Prinzipal für den Task, der die Sicherheits Anmelde Informationen für den 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

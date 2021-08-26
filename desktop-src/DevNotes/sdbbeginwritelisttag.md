@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein neues listentag für Schreibvorgänge.
+description: Erstellt ein neues Listentag für Schreibvorgänge.
 ms.assetid: 3a52e2f2-9648-45fb-b487-ccfe5ed24f7f
-title: Sdbbeginschreitelisttag-Funktion
+title: SdbBeginWriteListTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: a9dcf6bdd3798b18e08b796eb268f93dc4ec6bbc
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 448b57e73bec0115d4c2ae87be96630cad6542833da66a2de8e02037c264de83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058580"
 ---
-# <a name="sdbbeginwritelisttag-function"></a>Sdbbeginschreitelisttag-Funktion
+# <a name="sdbbeginwritelisttag-function"></a>SdbBeginWriteListTag-Funktion
 
-Erstellt ein neues listentag für Schreibvorgänge.
+Erstellt ein neues Listentag für Schreibvorgänge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ TAGID WINAPI SdbBeginWriteListTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*ttag* \[ in\]
+*tTag* \[ In\]
 </dt> <dd>
 
-Das-Tag für den neuen Eintrag. Dieser Wert muss vom Typ " **\_ Tagtyp \_ Liste**" sein.
+Das TAG für den neuen Eintrag. Dieser Wert muss vom Typ **\_ \_ TAGTYPLISTE** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt bei einem Fehler die [**TagID**](tagid.md) der neuen Liste bei Erfolg oder **TagID \_ null** zurück.
+Die Funktion gibt die [**TAGID**](tagid.md) der neuen Liste bei Erfolg oder **TAGID \_ NULL** bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Die-Funktion gibt bei einem Fehler die [**TagID**](tagid.md) der neuen Liste bei
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -74,22 +74,22 @@ Die-Funktion gibt bei einem Fehler die [**TagID**](tagid.md) der neuen Liste bei
 
 <dl> <dt>
 
-[**Sdbclosedatabase**](sdbclosedatabase.md)
+[**SdbCloseDatabase**](sdbclosedatabase.md)
 </dt> <dt>
 
-[**Sdbclosedatabasewrite**](sdbclosedatabasewrite.md)
+[**SdbCloseDatabaseWrite**](sdbclosedatabasewrite.md)
 </dt> <dt>
 
-[**Sdbendschreitelisttag**](sdbendwritelisttag.md)
+[**SdbEndWriteListTag**](sdbendwritelisttag.md)
 </dt> <dt>
 
-[**Tag**](tag.md)
+[**Etikett**](tag.md)
 </dt> <dt>
 
-[Tagtypen](tag-types.md)
+[TAG-Typen](tag-types.md)
 </dt> <dt>
 
-[**TagID**](tagid.md)
+[**TAGID**](tagid.md)
 </dt> </dl>
 
  

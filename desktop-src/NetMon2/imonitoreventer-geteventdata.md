@@ -1,7 +1,7 @@
 ---
-description: Die geteventdata-Methode ordnet Speicherplatz für die nmeventdata-und nmcolumninfo-Strukturen zu.
+description: Die GetEventData-Methode ordnet Speicherplatz für die NMEVENTDATA- und NMCOLUMNINFO-Strukturen zu.
 ms.assetid: b24a2a30-4543-4311-87ec-66872463aed7
-title: 'Imonitoreventer:: geteventdata-Methode (Netmon. h)'
+title: IMonitorEventer::GetEventData-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Netmon.h
-ms.openlocfilehash: be1654c38f51fa62909e10c12900c087bf0842fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a089e57ac5f66187f97dfa6ae7533aeda620632bdbf35c7b5bf3a34d4654b0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037370"
 ---
-# <a name="imonitoreventergeteventdata-method"></a>Imonitoreventer:: geteventdata-Methode
+# <a name="imonitoreventergeteventdata-method"></a>IMonitorEventer::GetEventData-Methode
 
-Die **geteventdata** -Methode ordnet Speicherplatz für die [nmeventdata](nmeventdata.md) -und [nmcolumninfo](nmcolumninfo.md) -Strukturen zu.
+Die **GetEventData-Methode** ordnet Speicherplatz für die [NMEVENTDATA-](nmeventdata.md) und [NMCOLUMNINFO-Strukturen](nmcolumninfo.md) zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT GetEventData(
 
 <dl> <dt>
 
-*bnumcolumns* \[ in\]
+*bNumColumns* \[ In\]
 </dt> <dd>
 
-Anzahl der **nmcolumninfo** -Strukturen, die benötigt werden.
+Anzahl der erforderlichen **NMCOLUMNINFO-Strukturen.**
 
 </dd> <dt>
 
-*ppnmeventdata* \[ vorgenommen\]
+*ppNMEventData* \[ out\]
 </dt> <dd>
 
-Die Adresse der **nmeventdata** -Struktur, die zurückgegeben wird.
+Adresse der **NMEVENTDATA-Struktur,** die zurückgegeben wird.
 
 </dd> </dl>
 
@@ -58,11 +58,11 @@ Die Adresse der **nmeventdata** -Struktur, die zurückgegeben wird.
 
 Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert nmerr nicht genügend Arbeits \_ \_ \_ Speicher.
+Wenn die Methode nicht erfolgreich ist, lautet der Rückgabewert NMERR \_ OUT \_ OF \_ MEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Monitore verwenden diese Methode, um Speicher für die Struktur von Ereignisdaten und Spalten Informationen zuzuweisen. Informationen zum Freigeben von Arbeitsspeicher, der einer **nmeventdata** -Struktur zugeordnet ist, finden Sie unter [imonitoreventer:: freeeventdata](imonitoreventer-freeeventdata.md).
+Monitore rufen diese Methode auf, um Speicher für die Ereignisdaten- und Spalteninformationsstrukturen zuzuordnen. Informationen zum Freigeben von Arbeitsspeicher für eine **NMEVENTDATA-Struktur** finden Sie unter [IMonitorEventer::FreeEventData.](imonitoreventer-freeeventdata.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,7 +72,7 @@ Monitore verwenden diese Methode, um Speicher für die Struktur von Ereignisdate
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -80,16 +80,16 @@ Monitore verwenden diese Methode, um Speicher für die Struktur von Ereignisdate
 
 <dl> <dt>
 
-[Imonitoreventer Enter](imonitoreventer.md)
+[IMonitorEventer](imonitoreventer.md)
 </dt> <dt>
 
-[Imonitoreventer:: freeventdata](imonitoreventer-freeeventdata.md)
+[IMonitorEventer::FreeEventData](imonitoreventer-freeeventdata.md)
 </dt> <dt>
 
-[Nmeventdata](nmeventdata.md)
+[NMEVENTDATA](nmeventdata.md)
 </dt> <dt>
 
-[Nmcolumninfo](nmcolumninfo.md)
+[NMCOLUMNINFO](nmcolumninfo.md)
 </dt> </dl>
 
  
