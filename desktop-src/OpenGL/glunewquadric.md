@@ -1,9 +1,9 @@
 ---
-title: glunewquadric-Funktion (glu. h)
-description: Die Funktion "glunewquadric" erstellt ein Quadric-Objekt.
+title: gluNewQuadric-Funktion (Glu.h)
+description: Die gluNewQuadric-Funktion erstellt ein Quadric-Objekt.
 ms.assetid: 5a4289bf-b57a-4c74-b0e3-b7536671e4df
 keywords:
-- glunewquadric-Funktion OpenGL
+- gluNewQuadric-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: affedc7dcebd2b7925449e22cc1b902e88d936f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66fed28c555d327bffa18d8f9100a6f5e9824b714bff1308e6b2dab20b5d3671
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036270"
 ---
-# <a name="glunewquadric-function"></a>glunewquadric-Funktion
+# <a name="glunewquadric-function"></a>gluNewQuadric-Funktion
 
-Die Funktion " **glunewquadric** " erstellt ein Quadric-Objekt.
+Die **gluNewQuadric-Funktion erstellt** ein Quadric-Objekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,9 +38,9 @@ GLUquadric* WINAPI gluNewQuadric(void);
 
 Diese Funktion besitzt keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glunewquadric** " erstellt einen Zeiger auf ein neues Quadric-Objekt und gibt diesen zurück. Verweisen Sie auf dieses Objekt, wenn Sie Quadric-Rendering-und-Steuerungsfunktionen aufrufen. Der Rückgabewert 0 (null) bedeutet, dass nicht genügend Arbeitsspeicher vorhanden ist, um dem-Objekt zuzuordnen.
+Die **gluNewQuadric-Funktion erstellt** einen Zeiger auf ein neues Quadric-Objekt und gibt einen Zeiger zurück. Verweisen Sie beim Aufrufen von Quadric-Rendering- und Steuerelementfunktionen auf dieses Objekt. Der Rückgabewert 0 (null) bedeutet, dass nicht genügend Arbeitsspeicher für das Objekt vorhanden ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,44 +50,44 @@ Die Funktion " **glunewquadric** " erstellt einen Zeiger auf ein neues Quadric-O
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**gluzylinder**](glucylinder.md)
+[**gluCylinder**](glucylinder.md)
 </dt> <dt>
 
-[**gludeletequadric**](gludeletequadric.md)
+[**gluDeleteQuadric**](gludeletequadric.md)
 </dt> <dt>
 
-[**gludisk**](gludisk.md)
+[**gluDisk**](gludisk.md)
 </dt> <dt>
 
-[**glupartialdisk**](glupartialdisk.md)
+[**gluPartialDisk**](glupartialdisk.md)
 </dt> <dt>
 
-[*gluvierccallback*](gluquadric.md)
+[*gluQuadricCallback*](gluquadric.md)
 </dt> <dt>
 
-[**gluquadricdrawstyle**](gluquadricdrawstyle.md)
+[**gluQuadricDrawStyle**](gluquadricdrawstyle.md)
 </dt> <dt>
 
-[**gluquadricnormals**](gluquadricnormals.md)
+[**gluQuadricNormals**](gluquadricnormals.md)
 </dt> <dt>
 
-[**gluquadricorientation**](gluquadricorientation.md)
+[**gluQuadricOrientation**](gluquadricorientation.md)
 </dt> <dt>
 
-[**gluquadrictexture**](gluquadrictexture.md)
+[**gluQuadricTexture**](gluquadrictexture.md)
 </dt> <dt>
 
-[**glusphere**](glusphere.md)
+[**gluSphere**](glusphere.md)
 </dt> </dl>
 
  

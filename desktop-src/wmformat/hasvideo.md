@@ -1,9 +1,9 @@
 ---
 title: HasVideo
-description: Das hasVideo-Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Datei Videodaten Ströme enthält.
+description: Das HasVideo-Attribut ist ein Attribut auf Dateiebene, das an gibt, ob die Datei Videostreams enthält.
 ms.assetid: 206ac048-c119-4d80-97c5-1623a3d6aa5b
 keywords:
-- HasVideo-Windows Media-Format
+- HasVideo-Fenstermedienformat
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98e40f65bb525656c24053ceb2470ee41c5873b8
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7c7baa1ea9de8e8ff217b1c0725864e9eaa34804f3e2f3e563b5e5b453d05e5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006670"
 ---
 # <a name="hasvideo"></a>HasVideo
 
-Das **hasVideo** -Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Datei Videodaten Ströme enthält.
+Das **HasVideo-Attribut** ist ein Attribut auf Dateiebene, das an gibt, ob die Datei Videostreams enthält.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmhasvideo
+g \_ wszWMHasVideo
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist ein codiertes Attribut.
 
-Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und gibt seine normale Bedeutung nicht an die Objekte des Windows Media Format SDK aus.
+Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und vermittelt den Objekten des Windows Media Format SDK nicht seine normale Bedeutung.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribu
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

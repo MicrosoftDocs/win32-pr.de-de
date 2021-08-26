@@ -1,35 +1,35 @@
 ---
-title: Arbeiten mit DirectX-Geräte Ressourcen
-description: Erfahren Sie mehr über die Rolle der Microsoft DirectX Graphics Infrastructure (DXGI) in Ihrem Windows Store DirectX-Spiel.
+title: Arbeiten mit DirectX-Geräteressourcen
+description: Machen Sie sich mit der Rolle des Microsoft DirectX Graphic Infrastructure (DXGI) in Ihrem DirectX Windows Store Spiel aus.
 ms.assetid: 24c0c81d-6b55-4116-868a-154addf0f04c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 096e2be6f957d99bc6e5055f845c14448ecd647f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 600af9c5ca2d2ba8ce8a7b078c769e195c4a7898384d102a21be3aaaf2c936bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068660"
 ---
-# <a name="work-with-directx-device-resources"></a>Arbeiten mit DirectX-Geräte Ressourcen
+# <a name="work-with-directx-device-resources"></a>Arbeiten mit DirectX-Geräteressourcen
 
-Erfahren Sie mehr über die Rolle der Microsoft DirectX Graphics Infrastructure (DXGI) in Ihrem Windows Store DirectX-Spiel. DXGI ist ein Satz von APIs, die zum Konfigurieren und Verwalten von Grafik-und Grafikadapter Ressourcen auf niedriger Ebene verwendet werden. Ohne diese Methode haben Sie keine Möglichkeit, die Grafik des Spiels in ein Fenster zu zeichnen.
+Machen Sie sich mit der Rolle des Microsoft DirectX Graphic Infrastructure (DXGI) in Ihrem DirectX Windows Store Spiel aus. DXGI ist eine Gruppe von APIs, die zum Konfigurieren und Verwalten von Grafik- und Grafikkartenressourcen auf niedriger Ebene verwendet werden. Ohne sie hätten Sie keine Möglichkeit, die Grafiken Ihres Spiels in ein Fenster zu zeichnen.
 
-Betrachten Sie DXGI auf diese Weise: um direkt auf die GPU zuzugreifen und ihre Ressourcen zu verwalten, müssen Sie eine Möglichkeit haben, Sie für Ihre APP zu beschreiben. Die wichtigste Information, die Sie über die GPU benötigen, ist der Ort zum Zeichnen von Pixeln, damit diese Pixel an den Bildschirm gesendet werden können. Dies wird in der Regel als "BackBuffer" bezeichnet – ein Speicherort im GPU-Speicher, in dem Sie die Pixel zeichnen und dann "geflippt" oder "getauscht" und an den Bildschirm mit einem Aktualisierungs Signal gesendet werden können. Mit DXGI können Sie diesen Speicherort und die Möglichkeit zur Verwendung dieses Puffers abrufen (die als *SwapChain* bezeichnet wird, da es sich um eine Kette von austauschbaren Puffern handelt, die mehrere Puffer Strategien zulässt).
+Stellen Sie sich DXGI auf diese Weise vor: Um direkt auf die GPU zu zugreifen und ihre Ressourcen zu verwalten, müssen Sie eine Möglichkeit haben, sie für Ihre App zu beschreiben. Die wichtigste Information, die Sie über die GPU benötigen, ist der Ort zum Zeichnen von Pixeln, damit diese Pixel an den Bildschirm gesendet werden können. In der Regel wird dies als "Backpuffer" bezeichnet– eine Position im GPU-Arbeitsspeicher, an der Sie die Pixel zeichnen und dann "gekippt" oder "getauscht" und bei einem Aktualisierungssignal an den Bildschirm senden können. MIT DXGI können Sie diesen Speicherort und die  Mittel zur Verwendung dieses Puffers (als Austauschkette bezeichnet) erhalten, da es sich um eine Kette aus austauschbaren Puffern handelt, die mehrere Pufferstrategien ermöglichen.
 
-Um dies zu erreichen, benötigen Sie Zugriff zum Schreiben in die Swapkette und ein Handle für das Fenster, in dem der aktuelle Hintergrund Puffer für die SwapChain angezeigt wird. Sie müssen auch die beiden verbinden, um sicherzustellen, dass das Betriebssystem das Fenster mit dem Inhalt des Hintergrund Puffers aktualisiert, wenn Sie dies anfordern.
+Dazu benötigen Sie Zugriff auf das Schreiben in die Swapkette und ein Handle für das Fenster, das den aktuellen Hintergrundpuffer für die Swapkette zeigt. Sie müssen auch die beiden verbinden, um sicherzustellen, dass das Betriebssystem das Fenster mit dem Inhalt des Hintergrundpuffers aktualisiert, wenn Sie dies anfordern.
 
-Der Gesamtprozess zum Zeichnen auf dem Bildschirm lautet wie folgt:
+Der gesamte Prozess zum Zeichnen auf dem Bildschirm ist wie folgt:
 
--   Sie erhalten ein [**corewindow-Fenster**](/uwp/api/Windows.UI.Core.CoreWindow) für Ihre APP.
--   Sie erhalten eine Schnittstelle für das Direct3D-Gerät und den Kontext.
--   Erstellen Sie die Swapkette, um Ihr gerendertes Bild im [**corewindow**](/uwp/api/Windows.UI.Core.CoreWindow)anzuzeigen.
--   Erstellen Sie ein Renderziel zum Zeichnen, und füllen Sie es mit Pixel.
--   Präsentieren Sie die Swapkette!
+-   Erhalten Sie [**ein CoreWindow-Gerät**](/uwp/api/Windows.UI.Core.CoreWindow) für Ihre App.
+-   Hier erhalten Sie eine Schnittstelle für das Direct3D-Gerät und den Kontext.
+-   Erstellen Sie die Swapkette, um das gerenderte Bild im [**CoreWindow anzuzeigen.**](/uwp/api/Windows.UI.Core.CoreWindow)
+-   Erstellen Sie ein Renderziel zum Zeichnen, und füllen Sie es mit Pixeln auf.
+-   Präsentieren Sie die Auslagerungskette!
 
-## <a name="create-a-window-for-your-app"></a>Erstellen eines Fensters für Ihre APP
+## <a name="create-a-window-for-your-app"></a>Erstellen eines Fensters für Ihre App
 
-Zuerst muss ein Fenster erstellt werden. Erstellen Sie zunächst eine Fenster Klasse, indem Sie eine Instanz von [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa)auffüllen, und registrieren Sie Sie dann mithilfe von [**registerClass**](/windows/desktop/api/winuser/nf-winuser-registerclassa). Die Fenster Klasse enthält wichtige Eigenschaften des Fensters, einschließlich des verwendeten Symbols, der statischen Nachrichten Verarbeitungs Funktion (mehr dazu später) und eines eindeutigen Namens für die Fenster Klasse.
+Zunächst müssen wir ein Fenster erstellen. Erstellen Sie zunächst eine Fensterklasse, indem Sie eine Instanz von [**WNDCLASS**](/windows/win32/api/winuser/ns-winuser-wndclassa)aufpopulieren und sie dann mit [**registerClass registrieren.**](/windows/desktop/api/winuser/nf-winuser-registerclassa) Die Fensterklasse enthält wichtige Eigenschaften des Fensters, einschließlich des von ihm verwendeten Symbols, der statischen Nachrichtenverarbeitungsfunktion (mehr dazu später) und eines eindeutigen Namens für die Fensterklasse.
 
 
 ```C++
@@ -67,7 +67,7 @@ if(!RegisterClass(&wndClass))
 
 
 
-Als Nächstes erstellen Sie das Fenster. Wir müssen außerdem Größen Informationen für das Fenster und den Namen der soeben erstellten Fenster Klasse angeben. Wenn Sie " [**kreatewindow**](/windows/desktop/api/winuser/nf-winuser-createwindowa)" aufrufen, erhalten Sie einen nicht transparenten Zeiger auf das Fenster, das als HWND bezeichnet wird. Sie müssen den HWND-Zeiger behalten und ihn jedes Mal verwenden, wenn Sie auf das Fenster verweisen müssen, einschließlich zerstören oder neu erstellen, und (besonders wichtig) Wenn Sie die DXGI-SwapChain erstellen, die Sie zum Zeichnen im Fenster verwenden.
+Als Nächstes erstellen Sie das Fenster. Wir müssen auch Größeninformationen für das Fenster und den Namen der fenster-Klasse angeben, die wir gerade erstellt haben. Wenn Sie [**CreateWindow aufrufen,**](/windows/desktop/api/winuser/nf-winuser-createwindowa)erhalten Sie einen nicht transparenten Zeiger auf das Fenster, das als HWND bezeichnet wird. Sie müssen den HWND-Zeiger behalten und ihn immer dann verwenden, wenn Sie auf das Fenster verweisen müssen, einschließlich des Zerstörens oder Neuererstellens, und (besonders wichtig) beim Erstellen der DXGI-Swapkette, die Sie zum Zeichnen im Fenster verwenden.
 
 
 ```C++
@@ -110,7 +110,7 @@ if(m_hWnd == NULL)
 
 
 
-Das Windows-Desktop-App-Modell enthält einen Hook in die Windows-Nachrichten Schleife. Sie müssen ihre Hauptprogramm Schleife auf diesem Hook basieren, indem Sie eine "staticwindowproc"-Funktion schreiben, um windowingereignisse zu verarbeiten. Dabei muss es sich um eine statische Funktion handeln, da Windows Sie außerhalb des Kontexts einer beliebigen Klasseninstanz aufruft. Hier ist ein sehr einfaches Beispiel für eine statische Nachrichten Verarbeitungs Funktion.
+Das Windows Desktop-App-Modell enthält einen Hook in Windows Nachrichtenschleife. Sie müssen Ihre Hauptprogrammschleife von diesem Hook abschalten, indem Sie eine "StaticWindowProc"-Funktion schreiben, um Fensterereignisse zu verarbeiten. Dies muss eine statische Funktion sein, da Windows außerhalb des Kontexts einer Klasseninstanz aufruft. Hier ist ein sehr einfaches Beispiel für eine statische Nachrichtenverarbeitungsfunktion.
 
 
 ```C++
@@ -150,9 +150,9 @@ LRESULT CALLBACK MainClass::StaticWindowProc(
 
 
 
-In diesem einfachen Beispiel werden nur die Programm Beendigungs Bedingungen überprüft: [**WM \_ Close**](/windows/desktop/winmsg/wm-close), gesendet, wenn das Fenster geschlossen werden soll, und [**WM \_ Destroy**](/windows/desktop/winmsg/wm-destroy), das gesendet wird, nachdem das Fenster tatsächlich vom Bildschirm entfernt wurde. Eine vollständige, Produktions-app muss auch andere windowingereignisse verarbeiten – die vollständige Liste der Fenster-Ereignisse finden Sie unter [Fenster Benachrichtigungen](/windows/desktop/winmsg/window-notifications).
+In diesem einfachen Beispiel wird nur auf Programmabstiegsbedingungen überprüft: [**WM \_ CLOSE**](/windows/desktop/winmsg/wm-close), wird gesendet, wenn das Fenster geschlossen werden soll, und [**WM \_ DESTROY**](/windows/desktop/winmsg/wm-destroy), das gesendet wird, nachdem das Fenster tatsächlich vom Bildschirm entfernt wurde. Eine vollständige Produktions-App muss auch andere Fensterereignisse verarbeiten. Eine vollständige Liste der Fensterereignisse finden Sie unter [Fensterbenachrichtigungen.](/windows/desktop/winmsg/window-notifications)
 
-Die Hauptprogramm Schleife selbst muss Windows-Meldungen bestätigen, indem es Windows die Möglichkeit erhält, den statischen Nachrichten proc auszuführen. Helfen Sie, das Programm effizient auszuführen, indem Sie das Verhalten auslassen: jede Iteration sollte neue Windows-Meldungen verarbeiten, wenn Sie verfügbar sind, und wenn sich keine Nachrichten in der Warteschlange befinden, sollte ein neuer Frame renderert werden. Hier ist ein sehr einfaches Beispiel:
+Die Hauptprogrammschleife selbst muss die Windows bestätigen, indem sie Windows die Möglichkeit zum Ausführen der statischen Nachrichtenproc ermöglicht. Unterstützen Sie die effiziente Ausführung des Programms, indem Sie das Verhalten forking: Jede Iteration sollte neue Windows-Nachrichten verarbeiten, wenn sie verfügbar sind, und wenn sich keine Nachrichten in der Warteschlange befinden, sollte ein neuer Frame gerendert werden. Hier ist ein sehr einfaches Beispiel:
 
 
 ```C++
@@ -189,13 +189,13 @@ while (WM_QUIT != msg.message)
 
 
 
-## <a name="get-an-interface-for-the-direct3d-device-and-context"></a>Eine Schnittstelle für das Direct3D-Gerät und den Kontext erhalten
+## <a name="get-an-interface-for-the-direct3d-device-and-context"></a>Hier erhalten Sie eine Schnittstelle für das Direct3D-Gerät und den Kontext.
 
-Der erste Schritt bei der Verwendung von Direct3D besteht darin, eine Schnittstelle für die Direct3D-Hardware (die GPU) zu erwerben, die als Instanzen von [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) und [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2)dargestellt wird. Bei der ersten handelt es sich um eine virtuelle Darstellung der GPU-Ressourcen. letztere ist eine geräteunabhängige Abstraktion der Renderingpipeline und des Prozesses. Im folgenden finden Sie eine einfache Möglichkeit: **ID3D11Device** enthält die Grafik Methoden, die Sie nur selten aufzurufen, normalerweise vor dem Auftreten eines Renderings, um die Ressourcen zu erhalten und zu konfigurieren, die Sie benötigen, um mit dem Zeichnen von Pixeln zu beginnen. **Verknüpfung id3d11devicecontext aus** hingegen enthält die Methoden, die Sie für jeden Frame aufrufen: Laden in Puffer und Sichten und andere Ressourcen, Ändern der Ausgabe von Fusion-und Raster-Status, Verwalten von Shadern und Zeichnen der Ergebnisse der Übergabe dieser Ressourcen über die Zustände und Shader.
+Der erste Schritt bei der Verwendung von Direct3D besteht im Erwerben einer Schnittstelle für die Direct3D-Hardware (GPU), die als Instanzen von [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) und [**ID3D11DeviceContext**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2)dargestellt wird. Erstere ist eine virtuelle Darstellung der GPU-Ressourcen, und die zweite ist eine geräteunabhängige Abstraktion der Renderingpipeline und des Renderingprozesses. Dies ist eine einfache Möglichkeit, sich dies zu weisen: **ID3D11Device** enthält die Grafikmethoden, die Sie selten aufrufen, in der Regel vor einem Rendering, um die Ressourcen zu erhalten und zu konfigurieren, die Sie zum Zeichnen von Pixeln benötigen. **ID3D11DeviceContext** enthält hingegen die Methoden, die Sie jeden Frame aufrufen: Laden von Puffern und Ansichten und anderen Ressourcen, Ändern des Ausgabe merger- und rasterizer-Zustands, Verwalten von Shadern und Zeichnen der Ergebnisse der Übergabe dieser Ressourcen durch die Zustände und Shader.
 
-Es gibt einen sehr wichtigen Teil dieses Prozesses: das Festlegen der Funktionsebene. Die Featureebene informiert DirectX über die minimale Hardwareebene, die ihre App unterstützt, wobei die D3D \_ \_ Featureebene \_ 9 \_ 1 als niedrigste featuremenge und die D3D- \_ Funktions \_ Ebene \_ 11 \_ 1 als die aktuelle höchste Stufe hat. Sie sollten 9 \_ 1 als minimal unterstützen, wenn Sie die größtmögliche Zielgruppe erreichen möchten. Nehmen Sie sich etwas Zeit, um auf Direct3D- [featureebenen](/previous-versions/windows/apps/hh994923(v=win.10)) zu lesen und die Mindest-und höchst Funktionsebenen zu bewerten, die Ihr Spiel unterstützen soll, und um die Auswirkungen ihrer Wahl zu verstehen.
+Es gibt einen sehr wichtigen Teil dieses Prozesses: das Festlegen der Featureebene. Die Featureebene informiert DirectX über die Mindesthardware, die Ihre App unterstützt, mit D3D FEATURE LEVEL 9 1 als niedrigstem Featuresatz und \_ \_ \_ \_ D3D \_ FEATURE LEVEL \_ \_ 11 1 als \_ aktuellem höchstwert. Sie sollten mindestens 9 1 unterstützen, wenn \_ Sie eine möglichst große Zielgruppe erreichen möchten. Nehmen Sie sich etwas Zeit, [](/previous-versions/windows/apps/hh994923(v=win.10)) um sich mit den Direct3D-Featureebenen durchlesen und die minimalen und maximalen Featureebenen, die Ihr Spiel unterstützen soll, selbst zu bewerten und die Auswirkungen Ihrer Wahl zu verstehen.
 
-Rufen Sie Verweise (Zeiger) auf das Direct3D-Gerät und den Gerätekontext ab, und speichern Sie Sie als Variablen auf Klassenebene in der **deviceresources** -Instanz (als **comptr** -intelligente Zeiger). Verwenden Sie diese Verweise, wenn Sie auf das Direct3D-Gerät oder den Gerätekontext zugreifen müssen.
+Abrufen von Verweisen (Zeigern) auf den Direct3D-Geräte- und -Gerätekontext und Speichern dieser Verweise als Variablen auf Klassenebene auf der **DeviceResources-Instanz** (als intelligente **ComPtr-Zeiger).** Verwenden Sie diese Verweise immer dann, wenn Sie auf das Direct3D-Gerät oder den Direct3D-Gerätekontext zugreifen müssen.
 
 
 ```C++
@@ -248,24 +248,24 @@ context.As(&m_pd3dDeviceContext);
 
 
 
-## <a name="create-the-swap-chain"></a>Austausch Kette erstellen
+## <a name="create-the-swap-chain"></a>Erstellen der Swapkette
 
-Okay: Sie verfügen über ein Fenster, in dem Sie zeichnen können, und Sie verfügen über eine Schnittstelle zum Senden von Daten und zum Übergeben von Befehlen an die GPU. Sehen wir uns nun an, wie Sie zusammengeführt werden.
+Ok: Sie haben ein Fenster zum Zeichnen, und Sie verfügen über eine Schnittstelle zum Senden von Daten und Zum Senden von Befehlen an die GPU. Sehen wir uns nun an, wie sie zusammenkommen.
 
-Zuerst teilen Sie DXGI mit, welche Werte für die Eigenschaften der Austausch Kette verwendet werden sollen. Verwenden Sie hierfür eine [**DXGI \_ - \_ SwapChain \_**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) -Struktur. Sechs Felder sind besonders wichtig für Desktop-Apps:
+Zuerst teilen Sie DXGI mit, welche Werte für die Eigenschaften der Austauschkette verwendet werden. Verwenden Sie dazu eine [**DXGI \_ SWAP CHAIN \_ \_ DESC-Struktur.**](/windows/desktop/api/dxgi/ns-dxgi-dxgi_swap_chain_desc) Sechs Felder sind besonders wichtig für Desktop-Apps:
 
--   **Windowed**: gibt an, ob die Austausch Kette voll Bildschirm ist oder auf das Fenster zugeschnitten ist. Legen Sie diese Einstellung auf "true" fest, um die Austausch Kette in dem zuvor erstellten Fenster abzulegen.
--   **Bufferusage**: Legen Sie dies auf die Ausgabe des DXGI- \_ Verwendungs \_ \_ Renderziels fest \_ . Dies weist darauf hin, dass die SwapChain eine Zeichen Oberfläche ist, die es Ihnen ermöglicht, Sie als Direct3D-Renderziel zu verwenden.
--   **SwapEffect**: Legen Sie diese Einstellung auf den DXGI- \_ Swap- \_ Effekt als \_ \_ sequenziell fest.
--   **Format**: das \_ \_ B8G8R8A8 unorm-Format im DXGI-Format gibt die \_ 32-Bit-Farbe an: 8 Bits für jeden der drei RGB-Farbkanäle und 8 Bits für den Alphakanal.
--   **BUFFERCOUNT**: Legen Sie diese Einstellung auf "2" fest, um ein herkömmliches Verhalten mit doppelter puffert zu vermeiden. Legen Sie für die Puffer Anzahl den Wert 3 fest, wenn Ihr Grafik Inhalt mehr als einen Monitor Aktualisierungszyklen zum Renderingvorgang für einen einzelnen Frame benötigt (z. b. 60 Hz, wenn der Schwellenwert größer als 16 ms ist)
--   **SampleDesc**: Dieses Feld steuert das Multisampling. Legen Sie **Anzahl** auf 1 und **Qualität** für Swapketten des Flip-Modells auf 0 fest. (Um multisamplinggrad mit Flip-Model-Austausch Ketten zu verwenden, zeichnen Sie ein separates multisamplinggrad-Renderziel, und lösen Sie dieses Ziel dann in der SwapChain direkt vor der Präsentation auf. Beispielcode wird in [Multisampling in Windows Store-Apps](/previous-versions/windows/apps/dn458384(v=win.10))bereitgestellt.)
+-   **Windowed**: Gibt an, ob die Auslagerungskette im Vollbildmodus oder im Fenster abgeschnitten ist. Legen Sie dies auf TRUE fest, um die Auslagerungskette in das fenster zu setzen, das Sie zuvor erstellt haben.
+-   **BufferUsage:** Legen Sie dies auf DXGI \_ USAGE RENDER TARGET OUTPUT \_ \_ \_ fest. Dies gibt an, dass die Swapkette eine Zeichenoberfläche ist, sodass Sie sie als Direct3D-Renderziel verwenden können.
+-   **SwapEffect:** Legen Sie dies auf DXGI \_ SWAP EFFECT FLIP SEQUENTIAL \_ \_ \_ fest.
+-   **Format:** Das DXGI \_ FORMAT \_ B8G8R8A8 \_ UNORM-Format gibt eine 32-Bit-Farbe an: 8 Bits für jeden der drei RGB-Farbkanäle und 8 Bits für den Alphakanal.
+-   **BufferCount:** Legen Sie dies auf 2 fest, um ein herkömmliches Verhalten mit doppelter Pufferung zu vermeiden. Legen Sie die Pufferanzahl auf 3 fest, wenn ihr Grafikinhalt mehr als einen Monitoraktualisierungszyklus benötigt, um einen einzelnen Frame zu rendern (bei 60 Hz beträgt der Schwellenwert beispielsweise mehr als 16 ms).
+-   **SampleDesc:** Dieses Feld steuert multisampling. Legen **Sie Anzahl** auf 1 und **Qualität** für Flip-Modell-Austauschketten auf 0 fest. (Um Multisampling mit Swapketten für Flip-Modelle zu verwenden, zeichnen Sie auf ein separates Renderziel mit mehrerenAmplings, und lösen Sie dieses Ziel dann kurz vor der Präsentation in die Swapkette auf. Beispielcode wird in [Multisampling in Windows Store-Apps bereitgestellt.)](/previous-versions/windows/apps/dn458384(v=win.10))
 
-Nachdem Sie eine Konfiguration für die SwapChain angegeben haben, müssen Sie die gleiche DXGI-Factory verwenden, die das Direct3D-Gerät (und den Gerätekontext) erstellt hat, um die Swapkette zu erstellen.
+Nachdem Sie eine Konfiguration für die Austauschkette angegeben haben, müssen Sie dieselbe DXGI-Factory verwenden, die das Direct3D-Gerät (und den Gerätekontext) erstellt hat, um die Austauschkette zu erstellen.
 
-**Kurzform:  **
+**Kurzform: **
 
-Beziehen Sie den zuvor erstellten [**ID3D11Device**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) -Verweis. Upcast Sie in [**"idxgidevice3**](/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) (sofern nicht bereits geschehen), und rufen Sie dann [**idxgidevice:: GetAdapter**](/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-getadapter) auf, um den DXGI-Adapter abzurufen. Abrufen der übergeordneten Factory für diesen Adapter durch Aufrufen von [**IDXGIFactory2:: GetParent**](/windows/desktop/api/dxgi/nf-dxgi-idxgiobject-getparent) ([**IDXGIFactory2**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) erbt von [**idxgiobject**](/windows/desktop/api/dxgi/nn-dxgi-idxgiobject)) – jetzt können Sie diese Factory verwenden, um die [**Swapkette durch Aufrufen von createswapchaparent HWND**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd)zu erstellen, wie im folgenden Codebeispiel gezeigt.
+Erhalten Sie [**den ID3D11Device-Verweis,**](/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) den Sie zuvor erstellt haben. Übertragen Sie sie in [**IDXGIDevice3**](/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) (falls noch nicht vorhanden), und rufen Sie [**dann IDXGIDevice::GetAdapter**](/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-getadapter) auf, um den DXGI-Adapter zu erhalten. Rufen Sie die übergeordnete Factory für diesen Adapter ab, indem Sie [**IDXGIFactory2::GetParent**](/windows/desktop/api/dxgi/nf-dxgi-idxgiobject-getparent) aufrufen ([**IDXGIFactory2**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) erbt von [**IDXGIObject**](/windows/desktop/api/dxgi/nn-dxgi-idxgiobject)). Nun können Sie diese Factory verwenden, um die Auslagerungskette zu erstellen, indem Sie [**CreateSwapChainForHwnd**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforhwnd)aufrufen, wie im folgenden Codebeispiel zu sehen.
 
 
 ```C++
@@ -304,17 +304,17 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn Sie gerade erst beginnen, ist es wahrscheinlich, dass die hier gezeigte Konfiguration verwendet wird. Wenn Sie nun bereits mit früheren Versionen von DirectX vertraut sind, stellen Sie möglicherweise Folgendes in Frage: "Warum haben wir das Gerät nicht erstellt und die Kette nicht gleichzeitig ausgetauscht, sondern nicht durch alle diese Klassen zurück?" Die Antwort ist die Effizienz: Austausch Ketten sind Direct3D Geräte Ressourcen, und Geräte Ressourcen sind an das jeweilige Direct3D-Gerät gebunden, von dem Sie erstellt wurden. Wenn Sie ein neues Gerät mit einer neuen austauschkette erstellen, müssen Sie alle Geräte Ressourcen mithilfe des neuen Direct3D-Geräts neu erstellen. Wenn Sie also die SwapChain mit derselben Factory erstellen (wie oben gezeigt), können Sie die Swapkette neu erstellen und weiterhin die Direct3D-Geräte Ressourcen verwenden, die Sie bereits geladen haben!
+Wenn Sie gerade erst beginnen, ist es wahrscheinlich am besten, die hier gezeigte Konfiguration zu verwenden. Wenn Sie nun bereits mit früheren Versionen von DirectX vertraut sind, fragen Sie sich vielleicht: "Warum haben wir das Gerät nicht gleichzeitig erstellt und die Kette ausgetauscht, anstatt alle diese Klassen zu durchgehen?" Die Antwort ist Effizienz: Austauschketten sind Direct3D-Geräteressourcen, und Geräteressourcen sind an das bestimmte Direct3D-Gerät gebunden, von dem sie erstellt wurden. Wenn Sie ein neues Gerät mit einer neuen Austauschkette erstellen, müssen Sie alle Geräteressourcen mit dem neuen Direct3D-Gerät neu erstellen. Indem Sie also die Swapkette mit derselben Factory erstellen (wie oben gezeigt), können Sie die Swapkette neu erstellen und weiterhin die Direct3D-Geräteressourcen verwenden, die Sie bereits geladen haben.
 
-Nun haben Sie ein Fenster vom Betriebssystem, eine Möglichkeit für den Zugriff auf die GPU und deren Ressourcen und eine SwapChain zum Anzeigen der renderingergebnisse. Alles, was übrig bleibt, besteht darin, die gesamte Aufgabe zu verbinden.
+Sie verfügen nun über ein Fenster des Betriebssystems, eine Möglichkeit, auf die GPU und ihre Ressourcen zu zugreifen, und eine Austauschkette, um die Renderingergebnisse anzuzeigen. Alles, was noch übrig bleibt, ist, das Ganze zusammen zu verkabeln!
 
-## <a name="create-a-render-target-for-drawing"></a>Renderziel zum Zeichnen erstellen
+## <a name="create-a-render-target-for-drawing"></a>Erstellen eines Renderziels zum Zeichnen
 
-Die Shader-Pipeline benötigt eine Ressource, in der Pixel gezeichnet werden. Die einfachste Möglichkeit zum Erstellen dieser Ressource besteht darin, eine [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) -Ressource als Hintergrund Puffer zu definieren, in den der Pixelshader gezeichnet werden soll, und dann diese Textur in der SwapChain zu lesen.
+Die Shaderpipeline benötigt eine Ressource, in die Pixel gepunktet werden können. Die einfachste Möglichkeit, diese Ressource zu erstellen, besteht im Definieren einer [**ID3D11Texture2D-Ressource**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) als Hintergrundpuffer für den Pixel-Shader, in den der Shader gelost werden soll, und anschließendes Lesen dieser Textur in die Auslagerungskette.
 
-Zu diesem Zweck erstellen Sie eine renderzielansicht . In Direct3D ist eine Sicht eine Möglichkeit, auf eine bestimmte Ressource zuzugreifen. In diesem Fall ermöglicht die-Sicht dem Pixelshader das Schreiben in die Textur, während er die pro-Pixel-Vorgänge abschließt.
+Dazu erstellen Sie eine *Renderzielansicht.* In Direct3D ist eine Ansicht eine Möglichkeit, auf eine bestimmte Ressource zu zugreifen. In diesem Fall ermöglicht die Ansicht dem Pixel-Shader, in die Textur zu schreiben, während er seine Vorgänge pro Pixel ab schließt.
 
-Sehen wir uns den Code für diese an. Wenn Sie die Ausgabe des DXGI- \_ Verwendungs \_ \_ Renderziels \_ in der SwapChain festlegen, wird dadurch die zugrunde liegende Direct3D-Ressource als Zeichen Oberfläche verwendet. Um unsere renderzielansicht zu erhalten, muss lediglich der Hintergrund Puffer aus der Swapkette und eine renderzielansicht erstellt werden, die an die backpufferressource gebunden ist.
+Sehen wir uns den Code dafür an. Wenn Sie DXGI USAGE RENDER TARGET OUTPUT für die Swapkette festlegen, wurde die zugrunde liegende \_ \_ \_ \_ Direct3D-Ressource als Zeichenoberfläche verwendet. Um unsere Renderzielansicht zu erhalten, müssen wir nur den Backpuffer aus der Swapkette erhalten und eine Renderzielansicht erstellen, die an die Backpufferressource gebunden ist.
 
 
 ```C++
@@ -334,9 +334,9 @@ m_pBackBuffer->GetDesc(&m_bbDesc);
 
 
 
-Erstellen Sie außerdem einen *tiefen Schablonen Puffer*. Ein tiefen Schablone-Puffer ist nur eine bestimmte Form der [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) -Ressource, die normalerweise verwendet wird, um zu bestimmen, welche Pixel während der rasterisierung auf der Grundlage der Entfernung der Objekte in der Szene von der Kamera gezeichnet werden. Ein tiefen Schablone-Puffer kann auch für Schablonen Effekte verwendet werden, bei denen bestimmte Pixel während der rasterisierung verworfen oder ignoriert werden. Dieser Puffer muss dieselbe Größe aufweisen wie das Renderziel. Beachten Sie, dass Sie die Rahmen Puffer Tiefe der tiefen Schablone nicht lesen oder Rendern können, da Sie ausschließlich von der Shader-Pipeline vor und während der endgültigen rasterisierung verwendet wird.
+Erstellen Sie außerdem *einen Tiefen-Schablonenpuffer.* Ein Tiefen-Schablonenpuffer ist nur eine bestimmte Form der [**ID3D11Texture2D-Ressource,**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) die in der Regel verwendet wird, um zu bestimmen, welche Pixel während der Rasterung die Zeichnen-Priorität haben, basierend auf dem Abstand der Objekte in der Szene von der Kamera. Ein Tiefen-Schablonenpuffer kann auch für Schabloneneffekte verwendet werden, bei denen bestimmte Pixel während der Rasterung verworfen oder ignoriert werden. Dieser Puffer muss die gleiche Größe wie das Renderziel haben. Beachten Sie, dass Sie die Tiefenschablonentextur des Framepuffers nicht lesen oder in diese rendern können, da sie ausschließlich von der Shaderpipeline vor und während der endgültigen Rasterung verwendet wird.
 
-Erstellen Sie außerdem eine Ansicht für den tiefen Schablone-Puffer als [**ID3D11DepthStencilView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview). Die Ansicht teilt der Shader-Pipeline mit, wie die zugrunde liegende [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) -Ressource interpretiert werden soll. Wenn Sie diese Ansicht nicht bereitstellen, werden keine pro-Pixel-tiefen Tests durchgeführt, und die Objekte in Ihrer Szene erscheinen möglicherweise sehr wenig.
+Erstellen Sie außerdem eine Ansicht für den Tiefen-Schablonenpuffer als [**ID3D11DepthStencilView.**](/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilview) Die Ansicht teilt der Shaderpipeline mit, wie die zugrunde liegende [**ID3D11Texture2D-Ressource**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) interpretiert werden soll. Wenn Sie diese Ansicht also nicht zur Verfügung stellen, werden keine Tiefentests pro Pixel durchgeführt, und die Objekte in Ihrer Szene können zumindest ein wenig nach außen erscheinen!
 
 
 ```C++
@@ -366,7 +366,7 @@ m_pd3dDevice->CreateDepthStencilView(
 
 
 
-Der letzte Schritt besteht darin, einen Viewport zu erstellen. Definiert das sichtbare Rechteck des Hintergrund Puffers, der auf dem Bildschirm angezeigt wird. Sie können den Teil des Puffers ändern, der auf dem Bildschirm angezeigt wird, indem Sie die Parameter für den Viewport ändern. Dieser Code bezieht sich auf die gesamte Fenstergröße – oder auf die Bildschirmauflösung, bei voll Bildaustausch Ketten. Wenn Sie Spaß machen, ändern Sie die angegebenen Koordinaten Werte, und beobachten Sie die Ergebnisse.
+Der letzte Schritt besteht im Erstellen eines Viewports. Dadurch wird das sichtbare Rechteck des auf dem Bildschirm angezeigten Hintergrundpuffers definiert. Sie können den Teil des Puffers ändern, der auf dem Bildschirm angezeigt wird, indem Sie die Parameter des Viewports ändern. Dieser Code ist auf die gesamte Fenstergröße oder die Bildschirmauflösung im Fall von Vollbild-Auslagerungsketten festgelegt. Ändern Sie aus Spaß die angegebenen Koordinatenwerte, und beobachten Sie die Ergebnisse.
 
 
 ```C++
@@ -384,9 +384,9 @@ m_pd3dDeviceContext->RSSetViewports(
 
 
 
-Und das ist, wie Sie in einem Fenster von nichts zum Zeichnen von Pixeln gelangen! Wenn Sie beginnen, sollten Sie sich damit vertraut machen, wie DirectX, über DXGI, die Kernressourcen verwaltet, die Sie für das Zeichnen von Pixeln benötigen.
+Und so gehen Sie von nichts zum Zeichnen von Pixeln in einem Fenster! Wenn Sie beginnen, ist es eine gute Idee, sich damit vertraut zu machen, wie DirectX über DXGI die Kernressourcen verwaltet, die Sie zum Zeichnen von Pixeln benötigen.
 
-Als nächstes betrachten Sie die Struktur der Grafik Pipeline. Siehe Grundlegendes [zur Renderingpipeline der DirectX-App-Vorlage](understand-the-directx-11-2-graphics-pipeline.md).
+Als Nächstes sehen Sie sich die Struktur der Grafikpipeline an. Weitere [Informationen finden Sie unter Verstehen der Renderingpipeline der DirectX-App-Vorlage.](understand-the-directx-11-2-graphics-pipeline.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -395,9 +395,9 @@ Als nächstes betrachten Sie die Struktur der Grafik Pipeline. Siehe Grundlegend
 **Als Nächstes**
 </dt> <dt>
 
-[Arbeiten mit Shader und Shaderressourcen](work-with-shaders-and-shader-resources.md)
+[Arbeiten mit Shadern und Shaderressourcen](work-with-shaders-and-shader-resources.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

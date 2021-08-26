@@ -1,25 +1,25 @@
 ---
-title: Autorisierungs Funktionen (RPC)
-description: Jedes Mal, wenn ein Serverprogramm eine Client Anforderung für den Zugriff auf eine der Verwaltungs Remote Prozeduren empfängt, ruft die RPC-Lauf Zeit Bibliothek eine standardmäßige Autorisierungs Funktion auf.
+title: Autorisierungsfunktionen (RPC)
+description: Jedes Mal, wenn ein Serverprogramm eine Clientanforderung für den Zugriff auf eines der Remoteverwaltungsprozeduren empfängt, ruft die RPC-Laufzeitbibliothek eine Standardautorisierungsfunktion auf.
 ms.assetid: e3edbf6f-2876-49ac-a93e-14fd0b5adf53
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 490c06ba8e40f132c17986edaef4dc02bbe056d7
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: 47234f83ae76ab6ee29ed434099ba3e4a7dbb3f9c7a01a2448d0cb0dad0267dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104038296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023411"
 ---
-# <a name="authorization-functions"></a>Autorisierungs Funktionen
+# <a name="authorization-functions"></a>Autorisierungsfunktionen
 
-Jedes Mal, wenn ein Serverprogramm eine Client Anforderung für den Zugriff auf eine der Verwaltungs Remote Prozeduren empfängt, ruft die RPC-Lauf Zeit Bibliothek eine standardmäßige Autorisierungs Funktion auf. Diese Funktion verwendet den SSP, um die Anmelde Informationen des Clients zu überprüfen und die Anforderung zu autorisieren oder abzulehnen.
+Jedes Mal, wenn ein Serverprogramm eine Clientanforderung für den Zugriff auf eines der Remoteverwaltungsprozeduren empfängt, ruft die RPC-Laufzeitbibliothek eine Standardautorisierungsfunktion auf. Diese Funktion verwendet den SSP, um die Anmeldeinformationen des Clients zu überprüfen und die Anforderung zu autorisieren oder abzulehnen.
 
-Das Serverprogramm kann die von der SSP bereitgestellte Autorisierungs Funktion überschreiben. Rufen Sie die [**RpcMgmtSetAuthorizationFn**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtsetauthorizationfn) -Funktion auf, und übergeben Sie Sie an die Adresse der Autorisierungs Funktion. Nachdem das Serverprogramm die Autorisierungs Funktion festgelegt hat, ruft die RPC-Lauf Zeit Bibliothek Sie jedes Mal auf, wenn das Serverprogramm eine Client Anforderung an eine der Verwaltungsfunktionen empfängt. Weitere Informationen finden Sie unter [**RpcMgmtIsServerListening**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtisserverlistening), [**RpcMgmtStopServerListening**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtstopserverlistening), [**RpcMgmtInqIfIds**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqifids), [**RpcMgmtInqServerPrincName**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname)und [**RpcMgmtInqStats**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqstats).
+Ihr Serverprogramm kann die autorisierungsfunktion überschreiben, die der SSP bietet. Rufen Sie die [**Funktion RpcMgmtSetAuthorizationFn**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtsetauthorizationfn) auf, und übergeben Sie sie an die Adresse Ihrer Autorisierungsfunktion. Sobald das Serverprogramm die Autorisierungsfunktion legt, ruft die RPC-Laufzeitbibliothek sie jedes Mal auf, wenn das Serverprogramm eine Clientanforderung an eine der Verwaltungsfunktionen empfängt. Weitere Informationen finden Sie unter [**RpcMgmtIsServerListening**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtisserverlistening), [**RpcMgmtStopServerListening**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtstopserverlistening), [**RpcMgmtInqIfIds**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqifids), [**RpcMgmtInqServerPrincName**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqserverprincname)und [**RpcMgmtInqStats**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcmgmtinqstats).
 
- 
+ 
 
- 
+ 
 
 
 

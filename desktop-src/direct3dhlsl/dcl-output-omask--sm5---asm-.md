@@ -1,23 +1,23 @@
 ---
-title: dcl_output omask (SM5-ASM)
-description: Deklarieren Sie ein Ausgabe Register, das vom Shader geschrieben werden soll.
+title: dcl_output oMask (sm5 - asm)
+description: Deklarieren Sie ein Ausgaberegister, das vom Shader geschrieben werden soll.
 ms.assetid: 23FC5FA3-F550-4CD1-9AA9-86738818686F
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1831a47680a06eba085f61badfe56529eed4ba32
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 8a6860904b557bc21a5202bbfd60105852adc260580457afb02b4fe6d92352b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068510"
 ---
-# <a name="dcl_output-omask-sm5---asm"></a>DCL- \_ Ausgabe-omask (SM5-ASM)
+# <a name="dcl_output-omask-sm5---asm"></a>dcl \_ output oMask (sm5 - asm)
 
-Deklarieren Sie ein Ausgabe Register, das vom Shader geschrieben werden soll.
+Deklarieren Sie ein Ausgaberegister, das vom Shader geschrieben werden soll.
 
 
 
-| DCL- \_ Ausgabe o \# \[ . Mask\] |
+| dcl \_ output o \# \[ .mask\] |
 |--------------------------|
 
 
@@ -28,13 +28,13 @@ Deklarieren Sie ein Ausgabe Register, das vom Shader geschrieben werden soll.
 
 | Element                                                   | BESCHREIBUNG                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="o"></span><span id="O"></span>*'*<br/> | \[im \] Ausgabe Register.<br/> |
+| <span id="o"></span><span id="O"></span>*O*<br/> | \[in \] Das Ausgaberegister.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 ```
@@ -46,14 +46,14 @@ Example:
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   Die Komponenten Maske kann eine beliebige Teilmenge von \[ xyzw sein \] . Lücken zwischen den Komponenten zu belassen, verschwendet jedoch Speicherplatz.
--   Es ist zulässig, eine in der nächsten Phase für die Eingabe deklarierte übergeordnete Komponente der Komponenten Maske zu deklarieren. Sich gegenseitig ausschließende Masken sind jedoch nicht zulässig. Der Vertex-Shader gibt "O3. XY" aus, d. h., der Pixelshader, der "v3. z" ist, ist ungültig, aber die Eingabe von "v3. x", "v3. y" oder "v3.
+-   Die Komponentenmaske kann eine beliebige Teilmenge von \[ xyzw \] sein. Durch das Verlassen von Lücken zwischen Komponenten wird jedoch Platz verschwendet.
+-   Es ist gesetzlich, eine Obermenge der Komponentenmaske zu deklarieren, die für die Eingabe in der nächsten Phase deklariert wird. Sich gegenseitig ausschließende Masken sind jedoch nicht zulässig. Der Vertex-Shader, der o3.xy ausausgabet, bedeutet, dass der Pixel-Shader, der v3.z einträgt, ungültig ist, die Eingabe von v3.x oder v3.y oder v3.xy jedoch gültig ist.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     |         |
 
@@ -61,20 +61,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

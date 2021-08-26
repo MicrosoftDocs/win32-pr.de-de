@@ -1,7 +1,7 @@
 ---
-Description: Ruft den DWORD-Wert für die angegebene TagID ab.
+Description: Ruft den DWORD-Wert für die angegebene TAGID ab.
 ms.assetid: 6610e101-9068-4812-b0ca-528658b62535
-title: Sdbreaddwordtag-Funktion
+title: SdbReadDWORDTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 0f1f7acc113bc40388d62927b6d98f8ff7bdebf1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ce168aab7755dcd11f145caf44678a489bca152753ea010edbd7387b3e730f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044950"
 ---
-# <a name="sdbreaddwordtag-function"></a>Sdbreaddwordtag-Funktion
+# <a name="sdbreaddwordtag-function"></a>SdbReadDWORDTag-Funktion
 
-Ruft den **DWORD** -Wert für die angegebene **TagID** ab.
+Ruft den **DWORD-Wert** für die angegebene **TAGID** ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ DWORD WINAPI SdbReadDWORDTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiwhat* \[ in\]
+*tiWhich* \[ In\]
 </dt> <dd>
 
-Die **TagID** , die den abzurufenden Daten entspricht.
+Die **TAGID,** die den abzurufenden Daten entspricht.
 
 </dd> <dt>
 
-*dwdefault* \[ in\]
+*dwDefault* \[ In\]
 </dt> <dd>
 
 Der Standardwert, der bei einem Fehler zurückgegeben werden soll.
@@ -64,7 +64,7 @@ Der Standardwert, der bei einem Fehler zurückgegeben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt bei einem Fehler den Wert bei Erfolg oder *dwdefault* zurück.
+Die Funktion gibt den Wert bei Erfolg oder *dwDefault* bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,8 +72,8 @@ Die-Funktion gibt bei einem Fehler den Wert bei Erfolg oder *dwdefault* zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -82,16 +82,16 @@ Die-Funktion gibt bei einem Fehler den Wert bei Erfolg oder *dwdefault* zurück.
 
 <dl> <dt>
 
-[**Sdbgetbinarytagdata**](sdbgetbinarytagdata.md)
+[**SdbGetBinaryTagData**](sdbgetbinarytagdata.md)
 </dt> <dt>
 
-[**Sdbgetstringtagptr**](sdbgetstringtagptr.md)
+[**SdbGetStringTagPtr**](sdbgetstringtagptr.md)
 </dt> <dt>
 
-[**Sdbreadqwordtag**](sdbreadqwordtag.md)
+[**SdbReadQWORDTag**](sdbreadqwordtag.md)
 </dt> <dt>
 
-[**Sdbreadstringtag**](sdbreadstringtag.md)
+[**SdbReadStringTag**](sdbreadstringtag.md)
 </dt> </dl>
 
  

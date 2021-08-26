@@ -1,19 +1,19 @@
 ---
-title: Suchen nach Routen mithilfe eines Präfix Baums
-description: Der folgende Beispielcode zeigt, wie Sie mit rtmgetarstspecificdestination und rtmgetlessspecificdestination die Präfix Struktur in der Routing Tabelle durchlaufen.
+title: Suchen nach Routen mithilfe einer Präfixstruktur
+description: Der folgende Beispielcode zeigt, wie Sie rtmGetMostSpecificDestination und RtmGetLessSpecificDestination verwenden, um die Präfixstruktur in der Routingtabelle nach oben zu verfolgen.
 ms.assetid: 14e8e87f-c76c-48ad-93b5-0d8a711148d6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a4c2f5573718dafa4be4d95e309e95546123027
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fa132946812a5f945c1aca31c1e20518348f3b3140030c631a5f0f9c62b2db19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035600"
 ---
-# <a name="search-for-routes-using-a-prefix-tree"></a>Suchen nach Routen mithilfe eines Präfix Baums
+# <a name="search-for-routes-using-a-prefix-tree"></a>Suchen nach Routen mithilfe einer Präfixstruktur
 
-Der folgende Beispielcode zeigt, wie Sie mit [**rtmgetarstspecificdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetmostspecificdestination) und [**rtmgetlessspecificdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlessspecificdestination) die Präfix Struktur in der Routing Tabelle durchlaufen.
+Der folgende Beispielcode zeigt, wie [**Sie rtmGetMostSpecificDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetmostspecificdestination) und [**RtmGetLessSpecificDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlessspecificdestination) verwenden, um die Präfixstruktur in der Routingtabelle nach oben zu verfolgen.
 
 
 ```C++
@@ -81,9 +81,9 @@ while (Status == NO_ERROR)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

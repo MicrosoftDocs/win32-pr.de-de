@@ -1,7 +1,7 @@
 ---
-description: Ruft die global eindeutigen Bezeichner (GUIDs) für die Eigenschaften ab, die von diesem iinkanalysiserkenzer für Analyseergebnisse generiert werden können.
+description: Ruft die GUIDs (Globally Unique Identifiers) für die Eigenschaften ab, die dieser IInkAnalysisRecognizer für Analyseergebnisse generieren kann.
 ms.assetid: 3a36bc6c-5067-4291-9119-bc6836d32c21
-title: 'Iinkanalysiserkenzer:: GetSupportedProperties-Methode (iacom. h)'
+title: IInkAnalysisRecognizer::GetSupportedProperties-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 5507e135241285b8f316d3ff3c2a4ef4d904296f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fce33317a234d82d6045dbefa93ed582d31d92f6ff54abe9ef87949559a5d269
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958972"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057860"
 ---
-# <a name="iinkanalysisrecognizergetsupportedproperties-method"></a>Iinkanalysiserkenzer:: GetSupportedProperties-Methode
+# <a name="iinkanalysisrecognizergetsupportedproperties-method"></a>IInkAnalysisRecognizer::GetSupportedProperties-Methode
 
-Ruft die global eindeutigen Bezeichner (GUIDs) für die Eigenschaften ab, die von diesem [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) für Analyseergebnisse generiert werden können.
+Ruft die GUIDs (Globally Unique Identifiers) für die Eigenschaften ab, die dieser [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) für Analyseergebnisse generieren kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,32 +40,32 @@ HRESULT GetSupportedProperties(
 
 <dl> <dt>
 
-*pulpropertiescount* \[ in, out\]
+*pulPropertiesCount* \[ in, out\]
 </dt> <dd>
 
-Die Anzahl der GUIDs in *ppproperties*.
+Die Anzahl der GUIDs in *ppProperties*.
 
 </dd> <dt>
 
-*ppproperties* \[ vorgenommen\]
+*ppProperties* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die GUIDs von Eigenschaften, die von diesem [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) für Analyseergebnisse generiert werden können.
+Ein Zeiger auf die GUIDs von Eigenschaften, die dieser [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) für Analyseergebnisse generieren kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher von \* *ppproperties* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Arbeitsspeicherverlust zu vermeiden, verwenden Sie [**CoTaskMemFree,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *ppProperties* frei zu geben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
-Eine Erkennung kann Zeilenmetriken, Zeilennummern, Vertrauens Ebenen usw. unterstützen. Eine umfassende Liste der Eigenschaften, die von einer Erkennung unterstützt werden können, finden Sie unter [erkentionproperty-Konstanten](recognitionproperty-constants.md).
+Eine Recognizer kann Linienmetriken, Zeilennummern, Konfidenzstufen und so weiter unterstützen. Eine vollständige Liste der Eigenschaften, die von einer Erkennung unterstützt werden können, finden Sie unter [RecognitionProperty Constants](recognitionproperty-constants.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,9 +73,9 @@ Eine Erkennung kann Zeilenmetriken, Zeilennummern, Vertrauens Ebenen usw. unters
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -84,13 +84,13 @@ Eine Erkennung kann Zeilenmetriken, Zeilennummern, Vertrauens Ebenen usw. unters
 
 <dl> <dt>
 
-[**Iinkanalysiserkenzer**](iinkanalysisrecognizer.md)
+[**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md)
 </dt> <dt>
 
-[Erkentionproperty-Konstanten](recognitionproperty-constants.md)
+[RecognitionProperty-Konstanten](recognitionproperty-constants.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

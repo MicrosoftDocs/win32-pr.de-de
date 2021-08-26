@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_SUBRESOURCE_FOOTPRINT-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die die einfache Initialisierung einer D3D12-unter Ressourcen-Speicherplatz \_ \_ Struktur ermöglicht.
+title: CD3DX12_SUBRESOURCE_FOOTPRINT-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ SUBRESOURCE \_ FOOTPRINT-Struktur zu ermöglichen.
 ms.assetid: 17266FB0-41B5-4A70-A896-206B54F5E76F
 keywords:
-- CD3DX12_SUBRESOURCE_FOOTPRINT Struktur
+- CD3DX12_SUBRESOURCE_FOOTPRINT-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab58e9a007d736222d9525d7a064456a1a9a7f14
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d32c3da3e133a5509543ffaa4fbf80b4c565730f13d3b9e92753658c96efcfcd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370402"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069730"
 ---
-# <a name="cd3dx12_subresource_footprint-structure"></a>CD3DX12 unter Ressourcen-Speicherplatz \_ \_ Struktur
+# <a name="cd3dx12_subresource_footprint-structure"></a>CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT-Struktur
 
-Eine hilfsstruktur, die die einfache Initialisierung einer [**D3D12 \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint) -unter Ressourcen-Speicherplatz Struktur ermöglicht.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ SUBRESOURCE \_ FOOTPRINT-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,52 +45,52 @@ struct CD3DX12_SUBRESOURCE_FOOTPRINT  : public D3D12_SUBRESOURCE_FOOTPRINT{
 
 <dl> <dt>
 
-**CD3DX12 Ressourcen \_ \_ Bedarf ()**
+**CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12-Ressourcen Speicherplatzes \_ \_ .
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ \_ SUBRESOURCE-SPEICHERBEDARFs.
 
 </dd> <dt>
 
-**expliziter CD3DX12 Ressourcen \_ \_ Bedarf (konstant D3D12 Ressourcenbedarf bei der unter Quelle \_ \_ &o)**
+**explicit CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT(const D3D12 \_ SUBRESOURCE \_ FOOTPRINT &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12-Speicherplatzes \_ \_ , der mit dem Inhalt einer anderen [**D3D12 \_ subresource \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint) -Speicherplatz Struktur initialisiert wurde.
+Erstellt eine neue Instanz eines CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ SUBRESOURCE \_ FOOTPRINT-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint)
 
 </dd> <dt>
 
-**CD3DX12 \_ subresource-Speicher \_ Bedarf (DXGI- \_ Format Format, uint-Breite, uint-Höhe, uint-Tiefe, uint-rowpitch)**
+**CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT(DXGI \_ FORMAT format, UINT width, UINT height, UINT depth, UINT rowPitch)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12-Speicherplatzes für \_ die unter Quelle \_ und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT und initialisiert die folgenden Parameter:
 
-[**DXGI \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Format
+[**DXGI \_ FORMAT-Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
-Uint-Breite
+UINT-Breite
 
-Uint-Höhe
+UINT-Höhe
 
-Uint-Tiefe
+UINT-Tiefe
 
-Uint-rowpitch
+UINT rowPitch
 
 </dd> <dt>
 
-**expliziter CD3DX12- \_ \_ Ressourcenbedarf (konstant D3D12 \_ Ressourcen- \_& resdesc, uint rowpitch)**
+**explicit CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT(const D3D12 \_ RESOURCE \_ DESC& resDesc, UINT rowPitch)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12-Speicherplatzes für \_ die unter Quelle \_ und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ SUBRESOURCE \_ FOOTPRINT und initialisiert die folgenden Parameter:
 
-[**D3D12 \_ Ressourcen \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc) -& resdesc
+[**D3D12 \_ RESOURCE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)& resDesc
 
-Uint-rowpitch
+UINT rowPitch
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 Ressourcenbedarf für unter Ressourcen \_ \_& () Konstanten**
+**operator const D3D12 \_ SUBRESOURCE \_ FOOTPRINT&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -100,7 +100,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 <dl> <dt>
 
-[**D3D12 Ressourcen \_ \_ Bedarf**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint)
+[**D3D12 \_ SUBRESOURCE \_ FOOTPRINT**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_footprint)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

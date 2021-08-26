@@ -1,23 +1,23 @@
 ---
-description: Festlegen von Eigenschaften für die Audioerfassung
+description: Festlegen von Audioaufnahmeeigenschaften
 ms.assetid: 81400072-91d7-4db4-86d3-d072663e691f
-title: Festlegen von Eigenschaften für die Audioerfassung
+title: Festlegen von Audioaufnahmeeigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31afe61d4641906391934bafe4c3acb8a911a9fe
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 0230f3a9679871380f6eecf09ad5589bfc02c13e0d1433bab8e3b4075de2cf5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078810"
 ---
-# <a name="setting-audio-capture-properties"></a>Festlegen von Eigenschaften für die Audioerfassung
+# <a name="setting-audio-capture-properties"></a>Festlegen von Audioaufnahmeeigenschaften
 
-Jede Eingabe-PIN im audioerfassungs Filter macht die [**IAMAudioInputMixer**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) -Schnittstelle verfügbar. Verwenden Sie diese Schnittstelle, um eine bestimmte Eingabe zu aktivieren bzw. zu deaktivieren, indem Sie die [**IAMAudioInputMixer::p UT- \_ Aktivierungs**](/windows/desktop/api/Strmif/nf-strmif-iamaudioinputmixer-put_enable) Methode für die PIN aufrufen. Verwenden Sie diese Schnittstelle auch, um die Eigenschaften einer Eingabe festzulegen, z. b. die Bass-, Treble-und volumeebenen. Wenn Sie mehrere Eingaben gleichzeitig erfassen, können Sie die Gesamtzahl der Bass-, Treble-und volumeebenen über die **IAMAudioInputMixer** -Schnittstelle im Filter selbst steuern.
+Jeder Eingabepin im Audioaufnahmefilter macht die [**IAMAudioInputMixer-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) verfügbar. Verwenden Sie diese Schnittstelle, um eine bestimmte Eingabe zu aktivieren oder zu deaktivieren, indem Sie die [**IAMAudioInputMixer::p ut \_ Enable-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamaudioinputmixer-put_enable) für den Pin aufrufen. Verwenden Sie diese Schnittstelle auch zum Festlegen von Eigenschaften einer Eingabe, z. B. der Pegel "1", "Treble" und "Volume". Wenn Sie mehrere Eingaben gleichzeitig erfassen, können Sie über die **IAMAudioInputMixer-Schnittstelle** für den Filter selbst die Gesamtebenen "3" und "Treble" steuern.
 
-Die verfügbaren Stichproben Raten und Audioformate für die Erfassung werden vom Treiber bestimmt. Verwenden Sie die [**iamstreamconfig**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig) -Schnittstelle in der Ausgabe-PIN des audioerfassungs Filters, um die verfügbaren Stichproben Raten und-Formate aufzulisten und das gewünschte Format festzulegen. Der Filter kann eine Downstreamverbindung mit einem beliebigen Filter herstellen, der den Medientyp der Ausgabepin akzeptiert.
+Die verfügbaren Samplingraten und Audioformate für die Erfassung werden vom Treiber bestimmt. Verwenden Sie [**die IAMStreamConfig-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamstreamconfig) auf dem Ausgabepin des Audioaufnahmefilters, um die verfügbaren Samplingraten und -formate aufzählen und das gewünschte Format festlegen. Der Filter kann eine Downstream-Verbindung mit jedem Filter herstellen, der den Medientyp des Ausgabepins akzeptiert.
 
-Der audioerfassungs Filter macht auch die [**iambufferaushandlung**](/windows/desktop/api/Strmif/nn-strmif-iambuffernegotiation) -Schnittstelle verfügbar. Diese Schnittstelle ist nützlich, um die Latenzzeit in der Audiovorschau zu steuern. Standardmäßig verwendet der audioerfassungs Filter eine halbsekunden-Puffergröße. Diese Puffergröße eignet sich optimal für die Erfassung, verursacht jedoch eine Vorschau Verzögerung von einer halben Sekunde. Um die Latenz zu verringern, müssen Sie die [**iambufferaushandlung:: sugerloerproperties**](/windows/desktop/api/Strmif/nf-strmif-iambuffernegotiation-suggestallocatorproperties) -Methode abrufen, bevor Sie die Ausgabe-PIN des audioerfassungs Filters verbinden. Diese Methode nimmt einen Zeiger auf die Struktur der [**\_ zuordnereigenschaften**](/windows/win32/api/strmif/ns-strmif-allocator_properties) an. Verwenden Sie das **cbbuffer** -Element, um die Puffergröße in Bytes anzugeben. Ein 80 millisekundenpuffer ist im Allgemeinen sicher, aber Puffer mit 30 oder 40 Millisekunden sind möglicherweise ausreichend. Wenn die Puffer zu klein sind, wird die Audioqualität beeinträchtigt.
+Der Audioaufnahmefilter macht auch die [**IAMBufferNegotiation-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iambuffernegotiation) verfügbar. Diese Schnittstelle ist nützlich, um die Latenz in der Audiovorschau zu steuern. Standardmäßig verwendet der Audioaufnahmefilter eine Puffergröße von einer halben Sekunde. Diese Puffergröße ist für die Erfassung optimal, verursacht jedoch eine Vorschauverzögerung von einer Halben Sekunde. Um die Latenz zu reduzieren, rufen Sie die [**IAMBufferNegotiation::SuggestAllocatorProperties-Methode**](/windows/desktop/api/Strmif/nf-strmif-iambuffernegotiation-suggestallocatorproperties) auf, bevor Sie den Ausgabepin des Audioerfassungsfilters verbinden. Diese Methode verwendet einen Zeiger auf die [**ALLOCATOR \_ PROPERTIES-Struktur.**](/windows/win32/api/strmif/ns-strmif-allocator_properties) Verwenden Sie **den cbBuffer-Member,** um die Puffergröße in Bytes anzugeben. Ein Puffer von 80 Millisekunden ist im Allgemeinen sicher, aber Puffer von 30 oder 40 Millisekunden können ausreichend sein. Wenn die Puffer zu klein sind, wird die Soundqualität beeinträchtigt.
 
  
 

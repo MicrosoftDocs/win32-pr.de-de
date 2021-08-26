@@ -1,25 +1,25 @@
 ---
 title: Erweiterte Fehlerinformationen für den Benutzer
-description: Wenn erweiterte Fehlerinformationen verfügbar sind, müssen die Komponenten, die an der Erstellung der erweiterten Fehlerinformationen beteiligt sind, das Problem leichter finden.
+description: Wenn erweiterte Fehlerinformationen verfügbar sind, müssen die Komponenten, die an der Erstellung der erweiterten Fehlerinformationen beteiligt sind, das Problem leicht finden.
 ms.assetid: 10c54f53-f449-4e7d-ba84-7b000beaee22
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d6f52e45e3f181c5aaa0db196f9ce791581cc38
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b4d2c7a67bb678472fbd3abbf90e0885590c795e2ffc46213a7acbb397da149c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856303"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021305"
 ---
 # <a name="extended-error-information-for-the-user"></a>Erweiterte Fehlerinformationen für den Benutzer
 
-Wenn erweiterte Fehlerinformationen verfügbar sind, müssen die Komponenten, die an der Erstellung der erweiterten Fehlerinformationen beteiligt sind, das Problem leichter finden. Der erste Schritt besteht darin, den letzten erweiterten Fehler Daten Satz zu überprüfen und zu ermitteln, auf welchem Computer und an welchem Prozess das Problem aufgetreten ist. Dies ist häufig die Ursache für den RPC \_ - \_ \* Fehler. Suchen Sie den Erkennungs Speicherort, und legen Sie fest, was die Parameter für diesen Erkennungs Speicherort bedeuten. Normalerweise geben Sie einen Fehler eines Funktions Aufrufes oder einer bestimmten Überprüfung an. Legen Sie von dort aus fest, warum die Funktion oder die Überprüfung fehlschlägt, und ergreifen Sie Korrekturmaßnahmen.
+Wenn erweiterte Fehlerinformationen verfügbar sind, müssen die Komponenten, die an der Erstellung der erweiterten Fehlerinformationen beteiligt sind, das Problem leicht finden. Im ersten Schritt überprüfen Sie den letzten erweiterten Fehlerdatensatz und bestimmen, auf welchem Computer und welchem Prozess das Problem aufgetreten ist. Dies ist häufig die Ursache des \_ \_ RPC-S-Fehlers. \* Suchen Sie den Erkennungsspeicherort, und bestimmen Sie, was die Parameter für diesen Erkennungsstandort bedeuten. In der Regel weisen sie auf einen Fehler eines Funktionsaufrufs oder einer bestimmten Überprüfung hin. Ermitteln Sie von dort aus, warum die Funktion oder Überprüfung fehlschlägt, und ergreifen Sie Korrekturmaßnahmen.
 
-Die Datensätze vor dem letzten Datensatz geben den Pfad an, in dem der Fehler aufgetreten ist, und dienen in der Regel als Integritätsprüfung und nicht als hilfsanmeldungs Prozess.
+Die Datensätze vor dem letzten Datensatz geben den Pfad an, über den der Fehler eingetroffen ist, und dienen im Allgemeinen als Überprüfung der Fehlerbehebung und nicht als Hilfe beim Problembehandlungsprozess.
 
- 
+ 
 
- 
+ 
 
 
 

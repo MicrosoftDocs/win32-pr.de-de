@@ -1,5 +1,5 @@
 ---
-description: Speichert Informationen zu Ereignis Abonnements und ruft Sie ab. Diese Schnittstelle erweitert die IEventSubscription2-Schnittstelle.
+description: Speichert Informationen zu Ereignisabonnements und ruft sie ab. Diese Schnittstelle erweitert die IEventSubscription2-Schnittstelle.
 ms.assetid: fd1c136e-6e4e-42ca-a951-4aa5fcdfaa49
 title: IEventSubscription3-Schnittstelle
 ms.topic: reference
@@ -12,43 +12,43 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 94225faf957b2eac3388422d74df3cfdb8bf6d90
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cbb6c5b19ed6116c59642e8dc5c0aa8eabf4800b066904f2132c7d182f2b7bbd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070630"
 ---
 # <a name="ieventsubscription3-interface"></a>IEventSubscription3-Schnittstelle
 
-Speichert Informationen zu Ereignis Abonnements und ruft Sie ab. Diese Schnittstelle erweitert die [**IEventSubscription2**](ieventsubscription2.md) -Schnittstelle.
+Speichert Informationen zu Ereignisabonnements und ruft sie ab. Diese Schnittstelle erweitert die [**IEventSubscription2-Schnittstelle.**](ieventsubscription2.md)
 
 ## <a name="when-to-implement"></a>Gründe für die Implementierung
 
-Sie müssen die **IEventSubscription3** -Schnittstelle nicht implementieren. Eine vom System bereitgestellte Ereignis Objektklasse (CLSID \_ ceventabonnement) implementiert **IEventSubscription3**.
+Sie müssen die **IEventSubscription3-Schnittstelle** nicht implementieren. Eine vom System bereitgestellte Ereignisobjektklasse (CLSID \_ CEventSubscription) implementiert **IEventSubscription3.**
 
 ## <a name="when-to-use"></a>Verwendung
 
-Das [com+-Ereignis](com--events.md) System verwendet diese Schnittstelle zum Abrufen von Informationen zu einzelnen Abonnements.
+Das [COM+-Ereignissystem](com--events.md) verwendet diese Schnittstelle, um Informationen zu einzelnen Abonnements abzurufen.
 
 ## <a name="members"></a>Member
 
-Die **IEventSubscription3** -Schnittstelle erbt von **IEventSubscription2**. **IEventSubscription3** verfügt auch über die folgenden Typen von Membern:
+Die **IEventSubscription3-Schnittstelle** erbt von **IEventSubscription2.** **IEventSubscription3** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **IEventSubscription3** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IEventSubscription3-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                                  | Zugriffstyp           | BESCHREIBUNG                                                |
 |:------------------------------------------------------------------------------------------|:----------------------|:-----------------------------------------------------------|
-| [**Eventclassapplicationid**](ieventsubscription3-eventclassapplicationid.md)<br/> | Lesen/Schreiben<br/> | Die Anwendungs-GUID des Ereignis Klassen Objekts.<br/> |
-| [**Eventclasspartitionid**](ieventsubscription3-eventclasspartitionid.md)<br/>     | Lesen/Schreiben<br/> | Die Partitions-GUID des Ereignis Klassen Objekts.<br/>   |
-| [**Abonnement-ID**](ieventsubscription3-subscriberapplicationid.md)<br/> | Lesen/Schreiben<br/> | Die Anwendungs-GUID des Abonnenten.<br/>         |
-| [**Abonnement-ID**](ieventsubscription3-subscriberpartitionid.md)<br/>     | Lesen/Schreiben<br/> | Die Partitions-GUID des Abonnenten.<br/>           |
+| [**EventClassApplicationID**](ieventsubscription3-eventclassapplicationid.md)<br/> | Lesen/Schreiben<br/> | Die Anwendungs-GUID des Ereignisklassenobjekts.<br/> |
+| [**EventClassPartitionID**](ieventsubscription3-eventclasspartitionid.md)<br/>     | Lesen/Schreiben<br/> | Die Partitions-GUID des Ereignisklassenobjekts.<br/>   |
+| [**SubscriberApplicationID**](ieventsubscription3-subscriberapplicationid.md)<br/> | Lesen/Schreiben<br/> | Die Anwendungs-GUID des Abonnenten.<br/>         |
+| [**SubscriberPartitionID**](ieventsubscription3-subscriberpartitionid.md)<br/>     | Lesen/Schreiben<br/> | Die Partitions-GUID des Abonnenten.<br/>           |
 
 
 

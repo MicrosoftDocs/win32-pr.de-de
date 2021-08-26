@@ -1,7 +1,7 @@
 ---
-description: Lädt die AppHelp-Ressourcen Datei.
+description: Lädt die Apphelp-Ressourcendatei.
 ms.assetid: fca50e00-9324-410a-a572-69441f332593
-title: Sdbopenapphelpresourcefile-Funktion
+title: SdbOpenApphelpResourceFile-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 2f1dfb1695e25bfb82e01ffa4f9eac4e245a6ffa
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ab865a29e0879119ca50cf4177aa7649bd82a83e70c07e1b7068a5d8fcd2cc30
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044990"
 ---
-# <a name="sdbopenapphelpresourcefile-function"></a>Sdbopenapphelpresourcefile-Funktion
+# <a name="sdbopenapphelpresourcefile-function"></a>SdbOpenApphelpResourceFile-Funktion
 
-Lädt die AppHelp-Ressourcen Datei.
+Lädt die Apphelp-Ressourcendatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HMODULE WINAPI SdbOpenApphelpResourceFile(
 
 <dl> <dt>
 
-*pwszacresourcefile* \[ in, optional\]
+*pwszACResourceFile* \[ in, optional\]
 </dt> <dd>
 
-Der Pfad zur Ressourcen Datei. Wenn dieser Parameter **null** ist, wird die lokale Ressourcen-DLL geöffnet.
+Der Pfad zur Ressourcendatei. Wenn dieser Parameter **NULL ist,** wird die lokale Ressourcen-DLL geöffnet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt ein Handle für die geöffnete Ressourcen Datei zurück.
+Die Funktion gibt ein Handle für die geöffnete Ressourcendatei zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Die-Funktion gibt ein Handle für die geöffnete Ressourcen Datei zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 

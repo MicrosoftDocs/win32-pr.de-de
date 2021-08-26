@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentalleseryinitializedexception-Klasse'
-title: Esentalleseryinitializedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentAlreadyInitializedException-Klasse'
+title: EsentAlreadyInitializedException-Klasse
 TOCTitle: EsentAlreadyInitializedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentAlreadyInitializedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentalreadyinitializedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ffc1cb0a1de8b3e7873ec48fce26507cfc45dd3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9d4da0b0d93e85cdd4d7210aed7ecd009cda725e3bcacfe5befc966453989043
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352445"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021550"
 ---
-# <a name="esentalreadyinitializedexception-class"></a>Esentalleseryinitializedexception-Klasse
+# <a name="esentalreadyinitializedexception-class"></a>EsentAlreadyInitializedException-Klasse
 
-Basisklasse für JET_err. "Alleseryinitialized"-Ausnahmen.
+Basisklasse für JET_err. Bereits initialisierte Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentalleseryinitializedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentAlreadyInitializedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentalleseryinitializedexception-Elemente](./esentalreadyinitializedexception-members.md)
+[EsentAlreadyInitializedException-Member](./esentalreadyinitializedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

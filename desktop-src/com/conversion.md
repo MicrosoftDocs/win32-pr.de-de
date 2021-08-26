@@ -1,45 +1,45 @@
 ---
 title: Konvertierung
-description: Wird vom Dialogfeld konvertieren verwendet, um die Formate zu ermitteln, die eine Anwendung lesen und schreiben kann.
+description: Wird vom Dialogfeld Konvertieren verwendet, um die Formate zu bestimmen, die eine Anwendung lesen und schreiben kann.
 ms.assetid: ff12c4b3-9548-4135-aaf4-d8b49f9aed41
 keywords:
-- COM für Konvertierungs Registrierungsschlüssel
+- Konvertierungsregistrierungsschlüssel COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce7f3a87594513c37a558d21fb7d001fc393763d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 272090fb48b214daecd6350e6966350861366341fae055298a2fb2c90c9fb983
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993482"
 ---
 # <a name="conversion"></a>Konvertierung
 
-Wird vom Dialogfeld **konvertieren** verwendet, um die Formate zu ermitteln, die eine Anwendung lesen und schreiben kann.
+Wird vom Dialogfeld **Konvertieren** verwendet, um die Formate zu bestimmen, die eine Anwendung lesen und schreiben kann.
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID
-   {CLSID}
-      Conversion
-         Readable
-            Main = rformat, ...
-         ReadWritable
-            Main = rwformat, ...
+   {CLSID}
+      Conversion
+         Readable
+            Main = rformat, ...
+         ReadWritable
+            Main = rwformat, ...
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konvertierungs Informationen werden im Dialogfeld **konvertieren** verwendet, um zu bestimmen, welche Formate eine Anwendung lesen und schreiben kann. Ein durch Trennzeichen getrenntes Dateiformat wird durch eine Zahl angegeben, wenn es sich um eines der in Windows. h definierten Zwischenablage Formate handelt. Eine Zeichenfolge gibt an, dass das Format in Windows. h (privat) nicht definiert ist. In diesem Fall ist das lesbare und beschreibbare Format CF \_ Umriss (privat).
+Konvertierungsinformationen werden im Dialogfeld **Konvertieren** verwendet, um zu bestimmen, welche Formate eine Anwendung lesen und schreiben kann. Ein durch Trennzeichen getrenntes Dateiformat wird durch eine Zahl angegeben, wenn es eines der in "Windows.h" definierten Zwischenablageformate ist. Eine Zeichenfolge gibt an, dass das Format nicht in Windows.h (privat) definiert ist. In diesem Fall ist das lesbare und schreibbare Format CF \_ OUTLINE (privat).
 
-Der *rformat* -Wert gibt das Dateiformat an, das von einer Anwendung gelesen werden kann (Konvertieren von).
+Der *rformat-Wert* gibt das Dateiformat an, das eine Anwendung lesen kann (aus konvertieren).
 
-Der Wert *rwformat* gibt das Dateiformat an, das von einer Anwendung gelesen und geschrieben werden kann (aktivieren als).
+Der *rwformat-Wert* gibt das Dateiformat an, das eine Anwendung lesen und schreiben kann (aktivieren als).
 
- 
+ 
 
- 
+ 
 
 
 

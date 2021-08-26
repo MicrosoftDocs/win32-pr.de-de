@@ -1,9 +1,9 @@
 ---
-title: Task (DefinitionType)-Element
-description: Definiert ein Aufgaben spezifisches Ereignis, das von Ihrem Anbieter protokolliert werden kann. | Task (DefinitionType)-Element
+title: task (DefinitionType)-Element
+description: Definiert ein aufgabenspezifisches Ereignis, das Ihr Anbieter protokollieren kann. | task (DefinitionType)-Element
 ms.assetid: 0e880720-1896-43cf-b702-cabca8ab1430
 keywords:
-- Task-Element-Ereignisprotokoll
+- Taskelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 35fe629c17b8ede4064de3fb11d05c8e8c84f202
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9cdd0cfbf1cd9295b3ac3ff1cc12c087819974c82c7510c7558519aec471b18e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005950"
 ---
-# <a name="task-definitiontype-element"></a>Task (DefinitionType)-Element
+# <a name="task-definitiontype-element"></a>task (DefinitionType)-Element
 
-\[Beginnend mit dem Nachrichten Compiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, ist dieses Element nicht mehr verfügbar.\]
+\[Ab dem Nachrichtencompiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, ist dieses Element nicht mehr verfügbar.\]
 
-Definiert ein Aufgaben spezifisches Ereignis, das von Ihrem Anbieter protokolliert werden kann.
+Definiert ein aufgabenspezifisches Ereignis, das Ihr Anbieter protokollieren kann.
 
 ``` syntax
 <xs:element name="task"
@@ -32,7 +32,7 @@ Definiert ein Aufgaben spezifisches Ereignis, das von Ihrem Anbieter protokollie
  />
 ```
 
-Das **Task** -Element wird durch den komplexen [**DefinitionType**](eventmanifestschema-definitiontype-complextype.md) -Typ definiert.
+Das **Taskelement** wird vom komplexen [**DefinitionType-Typ**](eventmanifestschema-definitiontype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,19 +40,19 @@ Das **Task** -Element wird durch den komplexen [**DefinitionType**](eventmanifes
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Ereignisse (ProviderType)**](eventmanifestschema-events-providertype-element.md)
+[**events (ProviderType)**](eventmanifestschema-events-providertype-element.md)
 </dt> </dl>
 
  

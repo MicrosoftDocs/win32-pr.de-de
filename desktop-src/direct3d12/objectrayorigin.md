@@ -1,7 +1,7 @@
 ---
-description: Der Objekt Raum Ursprung für das aktuelle Ray.
+description: Der Objektraumursprung für den aktuellen Strahl.
 ms.assetid: ''
-title: Objectrayorigin
+title: ObjectRayOrigin
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,16 +12,16 @@ api_name:
 - ObjectRayOrigin
 api_type:
 - NA
-ms.openlocfilehash: b64d3f2e6648d47659f180bf2aa3c1e912882677
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: e580709f9b9c343990c8fcc122fb178e438a0bed344589630ffdba518548f402
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069480"
 ---
-# <a name="objectrayorigin"></a>Objectrayorigin
+# <a name="objectrayorigin"></a>ObjectRayOrigin
 
-Der Objekt Raum Ursprung für das aktuelle Ray. Objekt-Space bezieht sich auf den Raum der aktuellen Beschleunigungs Struktur der untersten Ebene.
+Der Objektraumursprung für den aktuellen Strahl. Objektbereich bezieht sich auf den Raum der aktuellen Beschleunigungsstruktur der unteren Ebene.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,9 +30,9 @@ float3 ObjectRayOrigin();
 
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion kann von den folgenden Raytracing-shadertypen aufgerufen werden:
+Diese Funktion kann von den folgenden Raytracing-Shadertypen aufgerufen werden:
 
 * [**Any Hit-Shader**](any-hit-shader.md)
 * [**Closest Hit-Shader**](closest-hit-shader.md)

@@ -1,25 +1,25 @@
 ---
-description: Die Methode "ltalias" konfiguriert einen standardmäßigen H. 323-Alias für die Adresse. Dieser Alias wird im H. 323-Setup Austausch verwendet, damit die andere Partei den Namen dieser Partei kennt.
+description: Die SetAlias-Methode konfiguriert einen H.323-Standardalias für die Adresse. Dieser Alias wird im H.323-Aufrufsetupaustausch verwendet, damit die andere Partei den Namen dieser Partei kennt.
 ms.assetid: 09608214-7346-4ee8-bbfd-0877d3ad0766
-title: IH323LineEx::/talias-Methode (H323priv. h)
+title: IH323LineEx::SetAlias-Methode (H323priv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7341d177297cf95f46d07e503244f06b2c4dea71
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 464c6707c3221fda1ef245e0302731ee7c6a1cf274c7ecac537c55f7f48437a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992190"
 ---
-# <a name="ih323lineexsetalias-method"></a>IH323LineEx::/talias-Methode
+# <a name="ih323lineexsetalias-method"></a>IH323LineEx::SetAlias-Methode
 
-\[Der **Server ist für** die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems nicht verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**SetAlias** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Methode " **ltalias** " konfiguriert einen standardmäßigen H. 323-Alias für die Adresse. Dieser Alias wird im H. 323-Setup Austausch verwendet, damit die andere Partei den Namen dieser Partei kennt.
+Die **SetAlias-Methode** konfiguriert einen H.323-Standardalias für die Adresse. Dieser Alias wird im H.323-Aufrufsetupaustausch verwendet, damit die andere Partei den Namen dieser Partei kennt.
 
 Wenn Sie diese Methode ein zweites Mal aufrufen, wird der vorherige Alias überschrieben.
 
-Der für diese Schnittstelle festgelegte Alias wird nur verwendet, wenn es keine andere Möglichkeit gibt, dass der TSP einen richtigen Alias findet. Wenn die Gatekeeper-Unterstützung in der Zukunft dem TSP hinzugefügt wird, überschreibt der Alias, der für den Gatekeeper registriert ist oder von Gatekeeper zugewiesen wurde, das, was durch diese Methode festgelegt wird.
+Der für diese Schnittstelle festgelegte Alias wird nur verwendet, wenn es für den TSP keine andere Möglichkeit gibt, einen richtigen Alias zu finden. Wenn dem TSP in Zukunft Gatekeeper-Unterstützung hinzugefügt wird, überschreibt der alias, der beim Gatekeeper registriert oder vom Gatekeeper zugewiesen wird, alles, was über diese Methode festgelegt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,17 +37,17 @@ HRESULT SetAlias(
 
 <dl> <dt>
 
-"-"  \[ in\]
+*strAlias* \[ In\]
 </dt> <dd>
 
-Der zu verwendende Alias in Unicode. **Null** -Beendigung ist nicht erforderlich.
+Der in Unicode zu verwendende Alias. **Die NULL-Terminierung** ist nicht erforderlich.
 
 </dd> <dt>
 
-*dwLength* \[ in\]
+*dwLength* \[ In\]
 </dt> <dd>
 
-Die Länge des Alias Namens in Anzahl von Zeichen, einschließlich des **null** -Terminator.
+Die Länge des Aliasnamens in Der  Anzahl von Zeichen, einschließlich des NULL-Abschlusszeichens.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                               | Beschreibung                                                                                                                      |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Methode war erfolgreich.<br/>                                                                                                     |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | Die Anzahl von Zeichen, die in *dwLength* angegeben wird, überschreitet die tatsächliche Anzahl von Zeichen *im Parameter "* -Parameter".<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | Die anzahl der in *dwLength* angegebenen Zeichen überschreitet die tatsächliche Anzahl von Zeichen im *strAlias-Parameter.*<br/> |
 
 
 
@@ -72,9 +72,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>H323priv. h</dt> </dl> |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>H323priv.h</dt> </dl> |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl>  |
 
 

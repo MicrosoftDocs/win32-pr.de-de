@@ -1,25 +1,25 @@
 ---
-title: Kontext Code Beispiel für glx-Rendering
-description: Das folgende Codebeispiel zeigt, wie ein X-Window-System-OpenGL-Programm glx-renderingkontextfunktionen verwendet
+title: GLX-Renderingkontextcodebeispiel
+description: Das folgende Codebeispiel zeigt, wie ein X Window System OpenGL-Programm GLX-Renderingkontextfunktionen verwendet.
 ms.assetid: 6cee5e5f-ee2f-4fe4-a988-402802e4a1b8
 keywords:
-- renderingkontexte
-- Portieren auf OpenGL, renderingkontexte
-- OpenGL-portieren, Rendern von Kontexten
-- X-Fenster System, renderingkontexte
-- Glx-Funktionen, renderingkontexte
+- Renderingkontexte
+- Portieren zu OpenGL, Rendern von Kontexten
+- OpenGL-Portierung, Renderingkontexte
+- X-Fenstersystem, Renderingkontexte
+- GLX-Funktionen, Renderingkontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03259cb9b540db3076a0baa4122906e5aeb3e8f4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5c15ef1c1e1eddba86da56f8036adfa0724d8c997ba5f4c262f3d14446e86441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339385"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035270"
 ---
-# <a name="glx-rendering-context-code-sample"></a>Kontext Code Beispiel für glx-Rendering
+# <a name="glx-rendering-context-code-sample"></a>GLX-Renderingkontextcodebeispiel
 
-Das folgende Codebeispiel zeigt, wie ein X-Window-System-OpenGL-Programm glx-renderingkontextfunktionen verwendet
+Das folgende Codebeispiel zeigt, wie ein X Window System OpenGL-Programm GLX-Renderingkontextfunktionen verwendet.
 
 
 ```C++
@@ -50,9 +50,9 @@ glXDestroyContext(dpy, cx);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

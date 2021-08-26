@@ -1,28 +1,28 @@
 ---
-description: Die Tabelle "| atefolder" enthält Verweise auf Ordner, die für eine bestimmte Komponente explizit erstellt werden müssen.
+description: Die CreateFolder-Tabelle enthält Verweise auf Ordner, die explizit für eine bestimmte Komponente erstellt werden müssen.
 ms.assetid: b17b470b-6971-4124-8ec3-73914fdea95f
-title: Tabelle "Buildordner"
+title: CreateFolder-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc286b32b48e0db9e5b991ab10af663c51538bf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c4cb926f6df388241a9c779328346a6e1bfb9fba4b365afce778c6e0b7a2548
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045090"
 ---
-# <a name="createfolder-table"></a>Tabelle "Buildordner"
+# <a name="createfolder-table"></a>CreateFolder-Tabelle
 
-Die Tabelle "| atefolder" enthält Verweise auf Ordner, die für eine bestimmte Komponente explizit erstellt werden müssen.
+Die CreateFolder-Tabelle enthält Verweise auf Ordner, die explizit für eine bestimmte Komponente erstellt werden müssen.
 
-Die Tabelle "| atefolder" weist die folgenden Spalten auf.
+Die CreateFolder-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| Verzeichnis\_ | [Bezeichner](identifier.md) | J   | N        |
-| Komponente\_ | [Bezeichner](identifier.md) | J   | N        |
+| Verzeichnis\_ | [Identifier](identifier.md) | J   | N        |
+| Komponente\_ | [Identifier](identifier.md) | J   | N        |
 
 
 
@@ -32,31 +32,31 @@ Die Tabelle "| atefolder" weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Directory_"></span><span id="directory_"></span><span id="DIRECTORY_"></span>Befinden\_
+<span id="Directory_"></span><span id="directory_"></span><span id="DIRECTORY_"></span>Verzeichnis\_
 </dt> <dd>
 
-Externer Schlüssel in der ersten Spalte der [Verzeichnis Tabelle](directory-table.md).
+Externer Schlüssel in der ersten Spalte der [Verzeichnistabelle](directory-table.md).
 
 </dd> <dt>
 
-<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Zulieferern\_
+<span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel in die erste Spalte der [Komponenten Tabelle](component-table.md).
+Externer Schlüssel in der ersten Spalte der [Component-Tabelle.](component-table.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Ordner in dieser Tabelle werden bei der Installation der Komponente erstellt. Es wurde versucht, diese Ordner nur zu entfernen, wenn die Komponente deinstalliert oder in "Run-From-Source" verschoben wurde. Wenn die Ordner leer werden, wird keine automatische Entfernung ausgelöst. Im Gegensatz dazu werden Ordner, die vom Installer erstellt, aber nicht in dieser Tabelle aufgelistet werden, entfernt, wenn Sie leer sind.
+Die Ordner in dieser Tabelle werden erstellt, wenn die Komponente installiert wird. Es wird nur versucht, diese Ordner zu entfernen, wenn die Komponente deinstalliert oder in die Quelle "Run-from-Source" verschoben wird. Wenn die Ordner leer werden, wird kein automatisches Entfernen ausgelöst. Im Gegensatz dazu werden ordner, die vom Installationsprogramm erstellt, aber nicht in dieser Tabelle aufgeführt sind, entfernt, wenn sie leer werden.
 
-Da Ordner, die vom Installationsprogramm erstellt werden, gelöscht werden, wenn Sie leer sind, müssen Sie einen Eintrag in der Tabelle "| atefolder" erstellen, um eine Komponente zu installieren, die aus einem leeren Ordner besteht.
+Da vom Installationsprogramm erstellte Ordner gelöscht werden, wenn sie leer werden, müssen Sie einen Eintrag in der CreateFolder-Tabelle erstellen, um eine Komponente zu installieren, die aus einem leeren Ordner besteht.
 
-Auf diese Tabelle wird verwiesen, wenn [die Aktion "die Aktion"](createfolders-action.md) oder " [RemoveFolders](removefolders-action.md) " aufgerufen wird.
+Auf diese Tabelle wird verwiesen, wenn die [CreateFolders-Aktion](createfolders-action.md) oder die [RemoveFolders-Aktion](removefolders-action.md) aufgerufen wird.
 
-Informationen zum Sichern eines Ordners finden Sie in der Tabelle " [msilockpermissionsex](msilockpermissionsex-table.md) " und der [Tabelle "lockberechtigungs](lockpermissions-table.md)Tabelle".
+Informationen zum Schützen eines Ordners finden Sie in der [MsiLockPermissionsEx-Tabelle](msilockpermissionsex-table.md) und [der LockPermissions-Tabelle.](lockpermissions-table.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

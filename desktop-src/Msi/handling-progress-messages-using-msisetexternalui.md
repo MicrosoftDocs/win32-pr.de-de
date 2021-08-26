@@ -1,22 +1,22 @@
 ---
-description: Im folgenden Beispiel wird veranschaulicht, wie ein einfacher Rückruf Handler zum Empfangen von Windows Installer Fortschrittsmeldungen während einer-Installation codiert wird.
+description: Im folgenden Beispiel wird veranschaulicht, wie ein einfacher Rückrufhandler codiert wird, um während einer Installation Windows Installer-Statusmeldungen zu empfangen.
 ms.assetid: ae1589ae-0ad7-4314-8bf1-c8ad51eac5a2
-title: Verarbeiten von Statusmeldungen mithilfe von "msieintexternalui"
+title: Behandeln von Statusmeldungen mit msiSetExternalUI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 30cab15cbbed030ecaa43f7c034df4661555243d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87a0d91a38bc89511a3119a30bdd3b229b1094ce2aa834c17ea84a9cc6aabb59
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044220"
 ---
-# <a name="handling-progress-messages-using-msisetexternalui"></a>Verarbeiten von Statusmeldungen mithilfe von "msieintexternalui"
+# <a name="handling-progress-messages-using-msisetexternalui"></a>Behandeln von Statusmeldungen mit msiSetExternalUI
 
-Im folgenden Beispiel wird veranschaulicht, wie ein einfacher Rückruf Handler zum Empfangen von Windows Installer Fortschrittsmeldungen während einer-Installation codiert wird.
+Im folgenden Beispiel wird veranschaulicht, wie ein einfacher Rückrufhandler codiert wird, um während einer Installation Windows Installer-Statusmeldungen zu empfangen.
 
 > [!Note]  
-> Bei Verwendung von " [**msisetexternalui**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia) " mit dem Nachrichtentyp "installmessage \_ FilesInUse" enthält die an die externe UI-Handlerfunktion gesendete Nachricht keine Informationen zu verwendeten Dateien oder vom Dialogfeld " [FilesInUse](filesinuse-dialog.md) " verwendeten Fenstertitel. Verwenden Sie zum Abrufen von Informationen [**msiztexternaluirecord**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) .
+> Wenn Sie [**MsiSetExternalUI**](/windows/desktop/api/Msi/nf-msi-msisetexternaluia) mit dem Nachrichtentyp INSTALLMESSAGE FILESINUSE verwenden, enthält die an die externe Benutzeroberflächenhandlerfunktion gesendete Meldung keine Informationen über verwendete Dateien oder Fenstertitel, die vom \_ [Dialogfeld FilesInUse](filesinuse-dialog.md) verwendet werden. Sie sollten [**MsiSetExternalUIRecord verwenden,**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) um Informationen zu erhalten.
 
  
 

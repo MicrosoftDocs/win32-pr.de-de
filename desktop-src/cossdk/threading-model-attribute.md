@@ -1,46 +1,46 @@
 ---
-description: Com+ verwaltet Threads für Sie. Jede COM-Komponente verfügt über eine ThreadingModel-Eigenschaft, die Sie beim Entwickeln der Komponente angeben können. Diese Eigenschaft bestimmt, wie die Komponenten Objekte Threads zur Methoden Ausführung zugewiesen werden.
+description: COM+ verwaltet Threads für Sie. Jede COM-Komponente verfügt über eine ThreadingModel-Eigenschaft, die Sie beim Entwickeln der Komponente angeben können. Diese Eigenschaft bestimmt, wie die Komponentenobjekte Threads für die Methodenausführung zugewiesen werden.
 ms.assetid: 5fae8475-3d2e-4939-80a7-bc9a677a50b3
-title: Threading Modell-Attribut
+title: Threadingmodellattribut
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91960a753b29ac5f5209a5bafa31c362f3dfe08d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: dba6ae625e4413516066f7180a4eb6870fe4f90df38947fc2476cfbcc7dfadb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104392998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070240"
 ---
-# <a name="threading-model-attribute"></a>Threading Modell-Attribut
+# <a name="threading-model-attribute"></a>Threadingmodellattribut
 
-Com+ verwaltet Threads für Sie. Jede COM-Komponente verfügt über eine **ThreadingModel** -Eigenschaft, die Sie beim Entwickeln der Komponente angeben können. Diese Eigenschaft bestimmt, wie die Objekte der Komponente Threads zur Methoden Ausführung zugewiesen werden.
+COM+ verwaltet Threads für Sie. Jede COM-Komponente verfügt über eine **ThreadingModel-Eigenschaft,** die Sie beim Entwickeln der Komponente angeben können. Diese Eigenschaft bestimmt, wie die Objekte der Komponente Threads für die Methodenausführung zugewiesen werden.
 
-Mithilfe des Verwaltungs Programms Komponenten Dienste können Sie die Threading-Model-Eigenschaft anzeigen, indem Sie mit der rechten Maustaste auf eine Komponente im Ordner **Komponenten** klicken, auf **Eigenschaften** klicken und dann **auf die Register** Karte Parallelität klicken. Unter dem **Threading Modell** sind folgende Werte möglich:
+Sie können das Component Services-Verwaltungstool verwenden, um die threading-model-Eigenschaft zu sehen, indem Sie mit  der rechten Maustaste auf eine Komponente im Ordner **Komponenten** klicken, auf **Eigenschaften** klicken und dann auf die Registerkarte Parallelität klicken. Unter **Threadingmodell** lauten die möglichen Werte wie folgt:
 
--   **Haupt Thread Apartment**
--   **Single Thread-Apartment**
--   **Kostenloses Thread Apartment**
+-   **Hauptthread-Apartment**
+-   **SingleThread-Apartment**
+-   **Free Thread Apartment**
 -   **Neutrales Apartment**
--   **Beliebige Wohnungen**
+-   **Beliebiges Apartment**
 
-Das bevorzugte Threading Modell für com+ ist das [neutrale Apartment](neutral-apartments.md). Wenn Sie jedoch kein Threading Modell für Ihre Komponente angeben, verwendet com+ das Haupt Thread-Apartment, das die Standardeinstellung ist.
+Das bevorzugte Threadingmodell für COM+ ist das [neutrale Apartment](neutral-apartments.md). Wenn Sie jedoch kein Threadingmodell für Ihre Komponente angeben, verwendet COM+ das Hauptthread-Apartment, das die Standardeinstellung ist.
 
 > [!Note]  
-> Ausführlichere Informationen finden Sie unter [auswählen des Threading Modells](/windows/desktop/com/choosing-the-threading-model).
+> Ausführlichere Informationen finden Sie unter [Auswählen des Threadingmodells.](/windows/desktop/com/choosing-the-threading-model)
 
  
 
-In der folgenden Tabelle wird das Programmiermodell für Apartments in com+ angezeigt.
+Die folgende Tabelle zeigt das Programmiermodell für Apartment in COM+.
 
 
 
-| Modell                     | Apartment                                                 | Kostenlos                               | Both                               | Neutral                      | Nicht angegeben                      |
+| Modell                     | Wohnung                                                 | Free                               | Beide                               | Neutral                      | Nicht angegeben                      |
 |---------------------------|-----------------------------------------------------------|------------------------------------|------------------------------------|------------------------------|------------------------------------|
-| Single Thread, nicht Haupt | In aktuellem Apartment erstellt                              | Im Multithread-Apartment erstellt | In aktuellem Apartment erstellt       | In neutralem Apartment erstellt | Erstellt in Haupt Thread-Apartment |
-| Single Thread, Main     | In aktuellem Apartment erstellt                              | Im Multithread-Apartment erstellt | In aktuellem Apartment erstellt       | In neutralem Apartment erstellt | In aktuellem Apartment erstellt       |
-| Multithread             | Erstellt im Single Thread-Host-Apartment                 | Im Multithread-Apartment erstellt | Im Multithread-Apartment erstellt | In neutralem Apartment erstellt | Erstellt in Haupt Thread-Apartment |
-| Neutral (auf STA-Thread)   | Erstellt im Single Thread-Host für diesen Thread | Im Multithread-Apartment erstellt | In neutralem Apartment erstellt       | In neutralem Apartment erstellt | Erstellt in Haupt Thread-Apartment |
-| Neutral (im MTA-Thread)   | Erstellt im Single Thread-Host-Apartment                 | Im Multithread-Apartment erstellt | In neutralem Apartment erstellt       | In neutralem Apartment erstellt | Erstellt in Haupt Thread-Apartment |
+| Singlethreading, nicht Main | Erstellt im aktuellen Apartment                              | In Multithread-Apartment erstellt | Erstellt im aktuellen Apartment       | In neutralem Apartment erstellt | Erstellt im Hauptthread-Apartment |
+| Singlethreading, Main     | Erstellt im aktuellen Apartment                              | In Multithread-Apartment erstellt | Erstellt im aktuellen Apartment       | In neutralem Apartment erstellt | Erstellt im aktuellen Apartment       |
+| Multithreaded             | Erstellt im Singlethread-Apartment des Hosts                 | In Multithread-Apartment erstellt | In Multithread-Apartment erstellt | In neutralem Apartment erstellt | Erstellt im Hauptthread-Apartment |
+| Neutral (im STA-Thread)   | Erstellt im Singlethread-Host-Apartment für diesen Thread | In Multithread-Apartment erstellt | In neutralem Apartment erstellt       | In neutralem Apartment erstellt | Erstellt im Hauptthread-Apartment |
+| Neutral (im MTA-Thread)   | Erstellt im Singlethread-Apartment des Hosts                 | In Multithread-Apartment erstellt | In neutralem Apartment erstellt       | In neutralem Apartment erstellt | Erstellt im Hauptthread-Apartment |
 
 
 
@@ -50,7 +50,7 @@ In der folgenden Tabelle wird das Programmiermodell für Apartments in com+ ange
 
 <dl> <dt>
 
-[**Threading Model**](components.md)
+[**ThreadingModel**](components.md)
 </dt> </dl>
 
  

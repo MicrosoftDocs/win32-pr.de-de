@@ -4,39 +4,39 @@ ms.assetid: 174847c8-4545-4f61-ae13-42bdec1405e7
 title: Übergeben von Objekten als Parameter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a58e012138bc65cec481f714ac216bb8227fb924
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c47669d3e3e5af572b6dfd50dcbbefacf5c008971f276408fa87b37ccbed9a1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070380"
 ---
 # <a name="passing-objects-as-parameters"></a>Übergeben von Objekten als Parameter
 
-Der Dienst "com+-Warteschlangen Komponenten" ermöglicht keine Warteschlangen für jede vorhandene COM-Komponente. Es gibt Einschränkungen für die Typen von Methoden, die in die Warteschlange eingereiht werden können. Aufgrund von Messaging Einschränkungen müssen Methoden den folgenden Regeln entsprechen:
+Der COM+-Komponentendienst in der Warteschlange aktiviert nicht das Warteschlangening für jede vorhandene COM-Komponente. Es gibt Einschränkungen hinsichtlich der Methodentypen, die in die Warteschlange eingereiht werden können. Aufgrund von Messagingeinschränkungen müssen Methoden die folgenden Regeln einhalten:
 
--   Sie müssen nur Eingabeparameter enthalten.
--   Sie müssen kein anwendungsspezifisches Ergebnis zurückgeben.
+-   Sie dürfen nur Eingabeparameter enthalten.
+-   Sie dürfen kein anwendungsspezifisches Ergebnis zurückgeben.
 
-Außerdem gibt es Einschränkungen hinsichtlich der Typen von Eingabe Parametern, die an eine in der Warteschlange eingereihte Komponente weitergegeben werden können. Zur Laufzeit verpackt der Dienst für in der Warteschlange befindliche Komponenten die Argumente auf dem Client und übergibt Sie mithilfe [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))an die Serverkomponente. Einfache Typen, z. b. ganze Zahlen und boolesche Werte, können problemlos gemarshallt werden – komplexere Typen können ohne Hilfe nicht gemarshallt werden.
+Darüber hinaus gibt es Einschränkungen hinsichtlich der Typen von Eingabeparametern, die an eine Komponente in der Warteschlange übergeben werden können. Zur Laufzeit packt der Komponentendienst in der Warteschlange die Argumente auf dem Client und übergibt sie mithilfe von [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))an die Serverkomponente. Einfache Typen, z. B. ganze Zahlen und Boolesche Werte, können problemlos gemarshallt werden– komplexere Typen können nicht ohne Hilfe gemarshallt werden.
 
-Wenn ein Objekt über den Methoden Aufrufder in der Warteschlange befindlichen Komponente als Parameter übergeben wird, übergibt der Client das Objekt an den Recorder. Die Aufzeichnung Marshalls das Objekt in eine Message Queuing Nachricht und übergibt sie an den Listener. Nachdem der Listener die Nachricht übernommen und an den Player weitergeleitet hat, muss der Spieler das Objekt neu installieren, um es an den vom Client angegebenen Methoden Befehl zu verteilen. Basierend auf der Lebensdauer des Clients und des Servers in einer in der Warteschlange befindlichen Umgebung besteht die Auswirkung darauf, dass diese Objekte nach Wert marshallt werden müssen. Da com+ keine Pass-by-Value-Semantik für com-Standardobjekte bereitstellt, benötigen der Recorder und der Player Hilfe von der Komponente, um das Objekt zu Mars Hallen und das Objekt zu entsperren.
+Wenn ein Objekt über den Methodenaufruf einer Komponente in der Warteschlange als Parameter übergeben wird, übergibt der Client das Objekt an den Recorder. Die Aufzeichnung marshallt das -Objekt in eine Message Queuing Nachricht und übergibt es an den Listener. Nachdem der Listener die Nachricht aufgenommen und an den Player übergeben hat, muss der Player das Objekt neu initialisiert haben, um es an den vom Client angegebenen Methodenaufruf zu senden. Basierend auf der Lebensdauer des Clients und Servers in einer Umgebung in der Warteschlange müssen diese Objekte als Wert gemarshallt werden können. Da COM+ keine Pass-by-Value-Semantik für COM-Standardobjekte bereitstellt, benötigen die Aufzeichnung und der Player Hilfe von der Komponente, um das Objekt zu marshallen und zu entfernen.
 
-Objekt Verweise, die [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) unterstützen, können als Parameter für Methodenaufrufe von in der Warteschlange befindlichen Komponenten verwendet werden. Das Objekt kann keine Annahmen darüber machen, wann es neu installiert wird. Beispielsweise ist der Server möglicherweise nicht verfügbar, oder die Serverkomponente wird erst später am Tag gestartet. Bei Objekten, die **IPersistStream** nicht unterstützen, wird ein Fehler zurückgegeben.
+Objektverweise, die [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) unterstützen, können als Parameter für Methodenaufrufe auf Komponenten in der Warteschlange verwendet werden. Das Objekt kann keine Annahmen darüber treffen, wann es erneut instanziiert wird. Beispielsweise ist der Server möglicherweise nicht verfügbar, oder die Serverkomponente wird möglicherweise erst später am Tag gestartet. Objekte, die **IPersistStream** nicht unterstützen, geben einen Fehler zurück.
 
-## <a name="visual-basic-persistable-objects"></a>Visual Basic Persistable-Objekte
+## <a name="visual-basic-persistable-objects"></a>Visual Basic Persistente Objekte
 
-Microsoft Visual Basic 6 ermöglicht das Erstellen persierbarer Objekte. Diese Objekte unterstützen [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) und können als Parameter an in die Warteschlange eingereihte Komponenten Methodenaufrufe übermittelt werden. Bevor ein Visual Basic Objekt an eine in der Warteschlange eingereihte Komponente weitergeleitet werden kann, muss das persistbare Objekt initialisiert werden. Dies kann auf eine der beiden folgenden Arten erfolgen:
+Microsoft Visual Basic 6 ermöglicht das Erstellen von persistenten Objekten. Diese Objekte unterstützen [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) und können als Parameter an Aufrufe von Komponentenmethoden in der Warteschlange übergeben werden. Bevor ein Visual Basic-Objekt an eine Komponente in der Warteschlange übergeben werden kann, muss das persistente Objekt initialisiert werden. Dies kann auf eine der folgenden beiden Arten erfolgen:
 
--   Wenn die Anwendung, die das persistbare Objekt erstellt, in Visual Basic geschrieben wird, verarbeitet die Visual Basic-Laufzeit die Objekt Initialisierung automatisch.
--   Wenn die Anwendung, die das Visual Basic permanenten-Objekt erstellt, in einer anderen Sprache als Visual Basic geschrieben wird, z. b. Microsoft Visual C++, muss die Anwendung die Komponente explizit initialisieren, indem die [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) -Schnittstelle des permanenten Objekts abgefragt oder die [**IPersistStreamInit:: InitNew**](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew)-Methode oder die [**IPersistStream:: Load**](/windows/desktop/api/objidl/nf-objidl-ipersiststream-load) -Methode aufgerufen wird.
+-   Wenn die Anwendung, die das persistente Objekt erstellt, in Visual Basic geschrieben wird, verarbeitet die Visual Basic Runtime die Objektinitialisierung automatisch.
+-   Wenn die Anwendung, die das Visual Basic persistente Objekt erstellt, in einer anderen Sprache als Visual Basic geschrieben wird, z. B. Microsoft Visual C++, muss die Anwendung die Komponente explizit initialisieren, indem sie entweder die [**IPersistStream-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-ipersiststream) des persistenten Objekts abfragt oder die [**IPersistStreamInit::InitNew**](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew)-Methode oder die [**IPersistStream::Load-Methode**](/windows/desktop/api/objidl/nf-objidl-ipersiststream-load) aufruft.
 
-## <a name="ado-recordsets-and-ole-db-rowsets"></a>ADO-Recordsets und OLE DB-Rowsets
+## <a name="ado-recordsets-and-ole-db-rowsets"></a>ADO-Recordsets und OLE DB Rowsets
 
-Durch die Übergabe von ADO- **Recordset** -oder OLE DB-Rowsetobjekten zwischen Komponenten kann eine Komponente die Ergebnisse der von einer anderen Komponente ausgeführten Abfragen verarbeiten. Dies ist hilfreich, wenn Sie eine Anwendung auf mehreren Computern bereitstellen. **Recordset** -und Rowsetobjekte können als Methoden Parameter an Komponenten in der Warteschlange mit den folgenden Einschränkungen übermittelt werden:
+Das Übergeben von **ADO-Recordset-** oder OLE DB Rowsetobjekten zwischen Komponenten ermöglicht einer Komponente die Verarbeitung der Ergebnisse von Abfragen, die von einer anderen Komponente ausgeführt werden. Dies ist hilfreich, wenn Sie eine Anwendung auf mehreren Computern bereitstellen. **Recordset-** und Rowsetobjekte können mit den folgenden Einschränkungen als Methodenparameter an Komponenten in der Warteschlange übergeben werden:
 
--   Server seitige **Recordset** -Objekte können nicht mithilfe von [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream)gemarshallt werden. Nur Client seitige Recordsetobjekte können als Parameter an einen in der Warteschlange eingereihten Komponenten Methoden aufgerufen werden. 
--   Wenn Sie direkt mit OLE DB arbeiten, muss das OLE DB-Rowset als Client seitiges Rowset definiert werden.
+-   Serverseitige **Recordsetobjekte** können nicht mit [**IPersistStream**](/windows/desktop/api/objidl/nn-objidl-ipersiststream)gemarshallt werden. Nur clientseitige **Recordsetobjekte** können als Parameter an einen Methodenaufruf einer Komponente in der Warteschlange übergeben werden.
+-   Wenn Sie direkt mit OLE DB arbeiten, muss das OLE DB Rowset als clientseitiges Rowset definiert werden.
 
  
 

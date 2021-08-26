@@ -1,7 +1,7 @@
 ---
-description: Die get \_ sourceLeft-Methode ruft die linke Koordinate des aktuellen Quell Rechtecks ab.
+description: Die get \_ SourceLeft-Methode ruft die linke Koordinate des aktuellen Quellrechtecks ab.
 ms.assetid: dbfb1850-6e49-481c-b26a-22ccb9e4455a
-title: CBaseControlVideo.get_SourceLeft-Methode (ctlutil. h)
+title: CBaseControlVideo.get_SourceLeft -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d2b7ff62617b9fa378511dba2838f0dcbdb25dbf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 195c968b93f57bed0a8bb611b642ab19e7024cb4d67e49bf84c643dc8e340432
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057100"
 ---
-# <a name="cbasecontrolvideoget_sourceleft-method"></a>Cbasecontrolvideo. get \_ sourceLeft-Methode
+# <a name="cbasecontrolvideoget_sourceleft-method"></a>CBaseControlVideo.get \_ SourceLeft-Methode
 
-Die- `get_SourceLeft` Methode ruft die linke Koordinate des aktuellen Quell Rechtecks ab.
+Die `get_SourceLeft` -Methode ruft die linke Koordinate des aktuellen Quellrechtecks ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,33 +42,33 @@ HRESULT get_SourceLeft(
 
 <dl> <dt>
 
-*psourceleft* 
+*pSourceLeft* 
 </dt> <dd>
 
-Ein Zeiger auf die linke Koordinate des aktuellen Quell Rechtecks.
+Zeiger auf die linke Koordinate des aktuellen Quellrechtecks.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte oder ein anderer nicht aufgeführter Wert sein.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler.<br/>                                                              |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>                                            |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler.<br/>                                                              |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>             |  NULL-Zeigerargument.<br/>                                            |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Stecknadeln nicht verbunden sind.<br/> |
 | <dl> <dt>**NOERROR**</dt> </dl>                | Erfolg.<br/>                                                              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle ändern. Das Quell Rechteck wirkt sich darauf aus, welcher Abschnitt der systemeigenen Videoquelle auf der Anzeige angezeigt wird. Das Ziel Rechteck wirkt sich darauf aus, wo das Video bei der Wiedergabe angezeigt wird. Das Ziel Rechteck ist relativ zum Client Bereich des Fensters, in dem es abgespielt wird. Die linke obere Ecke des Fensters ist Koordinaten (0,0).
+Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBasicVideo-Schnittstelle**](/windows/desktop/api/Control/nn-control-ibasicvideo) ändern. Das Quellrechteck wirkt sich darauf aus, welcher Abschnitt der nativen Videoquelle auf der Anzeige angezeigt wird. Das Zielrechteck wirkt sich darauf aus, wo das Video angezeigt wird, wenn es abgespielt wird. Das Zielrechteck ist relativ zum Clientbereich des Fensters, in dem es abspielt. Die obere linke Ecke des Fensters ist koordinate (0,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der gültige Werte für das Type-Attribut des Inhalts Element- \[ Journal Readers definiert \] .
+description: Definiert den Typ, der gültige Werte für das Type-Attribut des Content-Elements \[ Journal Reader \] definiert.
 ms.assetid: f38f7a7e-a517-4156-9c60-e1b6d35baa07
-title: Einfacher contenttypetype-Typ
+title: Einfacher ContentTypeType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 55297be38dfd75f9ca11bfb6213cd99d52d2a7e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83b49427e65bb5190554a0c995bec119de1230f0baab869ea4c5ce48dc5616f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008970"
 ---
-# <a name="contenttypetype-simple-type"></a>Einfacher contenttypetype-Typ
+# <a name="contenttypetype-simple-type"></a>Einfacher ContentTypeType-Typ
 
-Definiert den Typ, der gültige Werte für das *Type* -Attribut des [Inhalts Element- \[ Journal \] Readers](content-element--journal-reader.md)definiert.
+Definiert den Typ, der gültige Werte für das *Type-Attribut* des [Content-Elements \[ Journal Reader definiert. \]](content-element--journal-reader.md)
 
 ``` syntax
 <xs:simpleType name="ContentTypeType">
@@ -37,15 +37,15 @@ Definiert den Typ, der gültige Werte für das *Type* -Attribut des [Inhalts Ele
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **contenttypetype** -Typ ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
+Der **einfache ContentTypeType-Typ** ist eine Zeichenfolge, die durch das folgende Muster eingeschränkt ist:
 
 -   `Normal|Inert`
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Gültige Werte sind "Normal" und "inert".
+Gültige Werte sind "Normal" und "Inert".
 
-Wenn der Typ "inert" ist, ist der enthaltene Inhalt eine Journal Seite, bei der es sich um den schreibgeschützten/nicht bearbeitbaren "Hintergrund" für das Dokument handelt. Dieser Fehler tritt auf, wenn ein Dokument mithilfe des Druckertreibers für den Journal Hinweis Writer erstellt wird.
+Wenn der Typ "Inert" ist, ist der enthaltene Inhalt eine Journalseite, die der schreibgeschützte/nicht bearbeitbare "Hintergrund" für das Dokument ist. Dies tritt auf, wenn ein Dokument mit dem Druckertreiber Journal Note Writer erstellt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,7 +53,7 @@ Wenn der Typ "inert" ist, ist der enthaltene Inhalt eine Journal Seite, bei der 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

@@ -1,35 +1,35 @@
 ---
-title: Entwickeln von RPC-Anwendungen
-description: Erstellen einer verteilten Remote Prozedur Aufruf-Anwendung (RPC).
+title: Erstellen von RPC-Anwendungen
+description: Erstellen einer verteilten RPC-Anwendung (Remote Procedure Call).
 ms.assetid: 6491d69b-b93a-45bb-9f41-d97f8b2c9516
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, entwickeln von Anwendungen
+- Remoteprozeduraufruf RPC , Aufgaben, Erstellen von Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c65b68523b383aefad17a4ec9b729030fb5e0b1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c2b391e38e9cefb3e0526d04bfe581aec94cd976fc377f0ae986cbb8e45bf895
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023030"
 ---
-# <a name="building-rpc-applications"></a>Entwickeln von RPC-Anwendungen
+# <a name="building-rpc-applications"></a>Erstellen von RPC-Anwendungen
 
-Das Verfahren zum Aufbauen einer verteilten Remote Prozedur Aufruf-Anwendung (RPC) variiert in Abhängigkeit von folgenden Schritten geringfügig:
+Das Verfahren zum Erstellen einer RPC-Anwendung (Distributed Remote Procedure Call) variiert je nach:
 
--   Die Betriebssystem Plattform, auf der Sie entwickeln.
+-   Die Betriebssystemplattform, auf der Sie entwickeln.
 -   Die Zielplattform.
--   Die Version des compl-und C-oder C++-Compilers, die Sie verwenden.
+-   Die Version des MIDL- und C- oder C++-Compilers, die Sie verwenden.
 -   Die API-Bibliotheken, die Sie verwenden.
 
-In diesem Abschnitt wird erläutert, wie Client-/Serveranwendungen mit dem Microsoft-Remote Prozedur Rückruf aufgebaut werden. Sie enthält die Informationen in den folgenden Themen:
+In diesem Abschnitt wird der Prozess zum Erstellen von Client-/Serveranwendungen mit dem Microsoft-Remoteprozeduraufruf erläutert. Die Informationen werden in den folgenden Themen präsentiert:
 
--   [Allgemeine buildprozedur](general-build-procedure.md)
+-   [Allgemeine Buildprozedur](general-build-procedure.md)
 -   [Ausnahmebehandlung](exception-handling.md)
 
- 
+ 
 
- 
+ 
 
 
 

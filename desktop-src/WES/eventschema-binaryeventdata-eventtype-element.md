@@ -1,9 +1,9 @@
 ---
-title: Binaryeventdata (EventType)-Element
+title: BinaryEventData (EventType)-Element
 description: Enthält die Ereignisdaten als binäres Blob.
 ms.assetid: 6b083604-e97e-4fb5-bf98-5897cafc2b68
 keywords:
-- Binaryeventdata-Element EventLog
+- BinaryEventData-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 148d7e42a1600863ad422d689e3b229b7e77ef9d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5feab3a41752e132ce503bd293cbef32774272d5739205cb74f126972bcbee8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005590"
 ---
-# <a name="binaryeventdata-eventtype-element"></a>Binaryeventdata (EventType)-Element
+# <a name="binaryeventdata-eventtype-element"></a>BinaryEventData (EventType)-Element
 
 Enthält die Ereignisdaten als binäres Blob.
 
@@ -30,7 +30,7 @@ Enthält die Ereignisdaten als binäres Blob.
  />
 ```
 
-Das **binaryeventdata** -Element wird durch den komplexen [**eventType**](eventschema-eventtype-complextype.md) -Typ definiert.
+Das **BinaryEventData-Element** wird durch den komplexen [**EventType-Typ**](eventschema-eventtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,12 +38,12 @@ Das **binaryeventdata** -Element wird durch den komplexen [**eventType**](events
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

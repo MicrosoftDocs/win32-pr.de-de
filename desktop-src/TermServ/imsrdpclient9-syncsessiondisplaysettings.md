@@ -1,14 +1,14 @@
 ---
-title: IMsRdpClient9 syncsessiondisplaysettings-Methode
-description: Synchronisiert Sitzungs Anzeigeeinstellungen.
+title: IMsRdpClient9 SyncSessionDisplaySettings-Methode
+description: Synchronisiert Einstellungen für die Sitzungsanzeige.
 ms.assetid: cc2c497f-665a-458d-895b-21dd21977890
 ms.tgt_platform: multiple
 keywords:
-- Syncsessiondisplaysettings-Methode Remotedesktopdienste
-- Syncsessiondisplaysettings-Methode Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, syncsessiondisplaysettings-Methode
-- Syncsessiondisplaysettings-Methode Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, syncsessiondisplaysettings-Methode
+- SyncSessionDisplaySettings-Remotedesktopdienste
+- SyncSessionDisplaySettings-Methode Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , SyncSessionDisplaySettings-Methode
+- SyncSessionDisplaySettings-Methode Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , SyncSessionDisplaySettings-Methode
 topic_type:
 - apiref
 api_name:
@@ -20,16 +20,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4429f966c00fb608416d541bec229defeca3e5b4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a81a8021c4e0b7af0de000b96d5b2b094f5894b84746dedf98f699a693a6bddd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990370"
 ---
-# <a name="imsrdpclient9syncsessiondisplaysettings-method"></a>IMsRdpClient9:: syncsessiondisplaysettings-Methode
+# <a name="imsrdpclient9syncsessiondisplaysettings-method"></a>IMsRdpClient9::SyncSessionDisplaySettings-Methode
 
-Synchronisiert Sitzungs Anzeigeeinstellungen.
+Synchronisiert Einstellungen für die Sitzungsanzeige.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                                                                                                                                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>                                                                                                                                                                                  |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>                                                                                                                                                                                  |
-| IID<br/>                      | CLSID \_ MsRdpClient9 ist als 301b94ba-5d25-4a12-bffe-3b6e7a616585 definiert<br/> CLSID \_ MsRdpClient9NotSafeForScripting ist als 8b918b82-7985-4c24-89df-c33ad2bbfbcd definiert.<br/> IID \_ IMsRdpClient9 ist als 28904001-04b6-436C-a55b-0af1a0883dc9 definiert.<br/> |
+| IID<br/>                      | CLSID \_ MsRdpClient9 ist als 301B94BA-5D25-4A12-BFFE-3B6E7A616585 definiert.<br/> CLSID \_ MsRdpClient9NotSafeForScripting ist als 8B918B82-7985-4C24-89DF-C33AD2BBFBCD definiert.<br/> IID \_ IMsRdpClient9 ist als 28904001-04B6-436C-A55B-0AF1A0883DC9 definiert.<br/> |
 
 
 

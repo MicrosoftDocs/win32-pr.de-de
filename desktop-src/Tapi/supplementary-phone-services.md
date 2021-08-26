@@ -1,19 +1,19 @@
 ---
-description: Ergänzende Telefondienste sind eine Reihe von erweiterten Diensten, die über die grundlegenden Telefondienste hinausgehen, die von Telefongeräten unterstützt werden
+description: Bei ergänzenden Telefondiensten handelt es sich um eine Reihe erweiterter Dienste, die über grundlegende Telefondienste hinausgehen und von Telefongeräten unterstützt werden.
 ms.assetid: e8bcb5f4-a843-4fe1-828e-6a771f31af4e
-title: Ergänzende Telefondienste
+title: Ergänzende Telefon Dienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8d58c8916cd857b52facb690a6ef723abefe3d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f41718059ce3087110d03d76894862972f74496b7d3655a8ee7bdd7320ce1840
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034340"
 ---
-# <a name="supplementary-phone-services"></a>Ergänzende Telefondienste
+# <a name="supplementary-phone-services"></a>Ergänzende Telefon Dienste
 
-Ergänzende Telefondienste sind eine Reihe von erweiterten Diensten, die über die grundlegenden Telefondienste hinausgehen, die von Telefongeräten unterstützt werden In der Regel enthält diese Gruppe die folgenden Geräte Features: "Port [Switch](/previous-versions/windows/desktop/legacy/ms725202(v=vs.85))", "Display", "Display", " [Display](/previous-versions/windows/desktop/legacy/ms725186(v=vs.85))", "-Schalt [Flächen](/previous-versions/windows/desktop/legacy/ms725182(v=vs.85)) [",](buttons.md) ["besondere](/previous-versions/windows/desktop/legacy/ms725264(v=vs.85)) [Lampen](/previous-versions/windows/desktop/legacy/ms725210(v=vs.85))" und "Möglichkeit zum Überprüfen des [Status](/previous-versions/windows/desktop/legacy/ms725508(v=vs.85))
+Bei ergänzenden Telefondiensten handelt es sich um eine Reihe erweiterter Dienste, die über grundlegende Telefondienste hinausgehen und von Telefongeräten unterstützt werden. In der Regel umfasst dieser Satz die folgenden Gerätefeatures: [Hookswitch,](/previous-versions/windows/desktop/legacy/ms725202(v=vs.85)) [Display,](/previous-versions/windows/desktop/legacy/ms725186(v=vs.85))Glühring, [](/previous-versions/windows/desktop/legacy/ms725264(v=vs.85))Schaltflächen, [](buttons.md)charakteristische Leiste, [](/previous-versions/windows/desktop/legacy/ms725210(v=vs.85))Datenbereich [und](/previous-versions/windows/desktop/legacy/ms725182(v=vs.85))die Möglichkeit, den Anrufstatus zu [überprüfen.](/previous-versions/windows/desktop/legacy/ms725508(v=vs.85))
 
  
 

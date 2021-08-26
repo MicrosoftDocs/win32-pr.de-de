@@ -1,9 +1,9 @@
 ---
-title: Rtmaddroute-Funktion (RTM. h)
-description: Die rtmaddroute-Funktion fügt einen Routen Eintrag hinzu oder aktualisiert einen vorhandenen Routen Eintrag.
+title: RtmAddRoute-Funktion (Rtm.h)
+description: Die RtmAddRoute-Funktion fügt einen Routeneintrag hinzu oder aktualisiert einen vorhandenen Routeneintrag.
 ms.assetid: 09a9b57d-f10b-40b7-a3c1-2e0613f29431
 keywords:
-- Rtmaddroute-Funktion (RAS)
+- RtmAddRoute-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a0c3ee68c9b026fc37457819777e69d2be7984e9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d36b96e94ba2803664e3ff4c4fce6f4f95317c33ce5ab9ccd755c95c8d23fa21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035930"
 ---
-# <a name="rtmaddroute-function"></a>Rtmaddroute-Funktion
+# <a name="rtmaddroute-function"></a>RtmAddRoute-Funktion
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die **rtmaddroute** -Funktion fügt einen Routen Eintrag hinzu oder aktualisiert einen vorhandenen Routen Eintrag.
+Die **RtmAddRoute-Funktion** fügt einen Routeneintrag hinzu oder aktualisiert einen vorhandenen Routeneintrag.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,28 +47,28 @@ DWORD RtmAddRoute(
 
 <dl> <dt>
 
-*Clienthandle* \[ in\]
+*ClientHandle* \[ In\]
 </dt> <dd>
 
-Handle, das den Client identifiziert, und damit das Routing Protokoll, das die Route hinzugefügt oder aktualisiert hat. Rufen Sie dieses Handle durch Aufrufen von [**rtmregisterclient**](rtmregisterclient.md)ab.
+Handle, das den Client und damit das Routingprotokoll identifiziert, der die Route hinzugefügt oder aktualisiert hat. Rufen Sie dieses Handle ab, indem [**Sie RtmRegisterClient aufrufen.**](rtmregisterclient.md)
 
 </dd> <dt>
 
-*Route* \[ in\]
+*Route* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine Protokoll familienspezifische Struktur, die die neue oder aktualisierte Route angibt. Die folgenden Felder werden vom Routing Tabellen-Manager verwendet, um die Routing Tabelle zu aktualisieren:
+Zeiger auf eine protokollfamilienspezifische Struktur, die die neue oder aktualisierte Route angibt. Die folgenden Felder werden vom Routingtabellen-Manager verwendet, um die Routingtabelle zu aktualisieren:
 
 
 
 | Wert                                                                                                                                                                                                                                 | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RR_Network"></span><span id="rr_network"></span><span id="RR_NETWORK"></span><dl> <dt>**RR- \_ Netzwerk**</dt> </dl>                                                     | Gibt die Zielnetzwerk Nummer an.<br/>                                                                                                                                                                                                                                                                                                                                                      |
-| <span id="RR_InterfaceID"></span><span id="rr_interfaceid"></span><span id="RR_INTERFACEID"></span><dl> <dt>**RR- \_ interfakeid**</dt> </dl>                                     | Gibt den Index der Schnittstelle an, über die die Route empfangen wurde.<br/>                                                                                                                                                                                                                                                                                                                     |
-| <span id="RR_NextHopAddress"></span><span id="rr_nexthopaddress"></span><span id="RR_NEXTHOPADDRESS"></span><dl> <dt>**RR \_ NextHopAddress**</dt> </dl>                         | Gibt die Adresse des Routers für den nächsten Hop an.<br/>                                                                                                                                                                                                                                                                                                                                                  |
-| <span id="RR_FamilySpecificData"></span><span id="rr_familyspecificdata"></span><span id="RR_FAMILYSPECIFICDATA"></span><dl> <dt>**RR \_ familyspecificdata**</dt> </dl>         | Gibt Daten an, die für die Protokollfamilie spezifisch sind. Obwohl die Daten für den Routing Tabellen-Manager transparent sind, werden Sie beim Vergleichen von Routen zum ermitteln, ob sich die Routeninformationen geändert haben, berücksichtigt. Die Daten werden auch verwendet, um Metrikwerte festzulegen, die unabhängig vom Routing Protokoll sind. Folglich werden diese Daten verwendet, um die beste Route für das Zielnetzwerk zu ermitteln.<br/> |
-| <span id="RR_ProtocolSpecificData"></span><span id="rr_protocolspecificdata"></span><span id="RR_PROTOCOLSPECIFICDATA"></span><dl> <dt>**RR \_ protocolspecificdata**</dt> </dl> | Gibt Daten an, die für das Routing Protokoll spezifisch sind, das die Route bereitgestellt hat.<br/>                                                                                                                                                                                                                                                                                                              |
-| <span id="RR_TimeStamp"></span><span id="rr_timestamp"></span><span id="RR_TIMESTAMP"></span><dl> <dt>**RR- \_ Zeitstempel**</dt> </dl>                                             | Gibt die aktuelle Systemzeit an. Dieses Feld wird vom Routing Tabellen-Manager festgelegt.<br/>                                                                                                                                                                                                                                                                                                             |
+| <span id="RR_Network"></span><span id="rr_network"></span><span id="RR_NETWORK"></span><dl> <dt>**\_RR-Netzwerk**</dt> </dl>                                                     | Gibt die Zielnetzwerknummer an.<br/>                                                                                                                                                                                                                                                                                                                                                      |
+| <span id="RR_InterfaceID"></span><span id="rr_interfaceid"></span><span id="RR_INTERFACEID"></span><dl> <dt>**\_RR-Schnittstellen-ID**</dt> </dl>                                     | Gibt den Index der Schnittstelle an, über die die Route empfangen wurde.<br/>                                                                                                                                                                                                                                                                                                                     |
+| <span id="RR_NextHopAddress"></span><span id="rr_nexthopaddress"></span><span id="RR_NEXTHOPADDRESS"></span><dl> <dt>**RR \_ NextHopAddress**</dt> </dl>                         | Gibt die Adresse des Routers des nächsten Hops an.<br/>                                                                                                                                                                                                                                                                                                                                                  |
+| <span id="RR_FamilySpecificData"></span><span id="rr_familyspecificdata"></span><span id="RR_FAMILYSPECIFICDATA"></span><dl> <dt>**RR \_ FamilySpecificData**</dt> </dl>         | Gibt Daten an, die für die Protokollfamilie spezifisch sind. Obwohl die Daten für den Routingtabellen-Manager transparent sind, werden sie beim Vergleichen von Routen berücksichtigt, um festzustellen, ob sich Routeninformationen geändert haben. Die Daten werden auch zum Festlegen von Metrikwerten verwendet, die unabhängig vom Routingprotokoll sind. Folglich werden diese Daten verwendet, um die beste Route für das Zielnetzwerk zu ermitteln.<br/> |
+| <span id="RR_ProtocolSpecificData"></span><span id="rr_protocolspecificdata"></span><span id="RR_PROTOCOLSPECIFICDATA"></span><dl> <dt>**RR \_ ProtocolSpecificData**</dt> </dl> | Gibt Daten an, die spezifisch für das Routingprotokoll sind, das die Route bereitgestellt hat.<br/>                                                                                                                                                                                                                                                                                                              |
+| <span id="RR_TimeStamp"></span><span id="rr_timestamp"></span><span id="RR_TIMESTAMP"></span><dl> <dt>**\_RR-Zeitstempel**</dt> </dl>                                             | Gibt die aktuelle Systemzeit an. Dieses Feld wird vom Routingtabellen-Manager festgelegt.<br/>                                                                                                                                                                                                                                                                                                             |
 
 
 
@@ -76,49 +76,49 @@ Zeiger auf eine Protokoll familienspezifische Struktur, die die neue oder aktual
 
 </dd> <dt>
 
-*Timeto-Live* \[ in\]
+*TimeToLive* \[ In\]
 </dt> <dd>
 
-Gibt die Anzahl der Sekunden an, die die angegebene Route in der Routing Tabelle aufbewahrt werden soll. Wenn dieser Parameter auf unendlich festgelegt ist, wird die Route so lange beibehalten, bis Sie explizit gelöscht wird. Das aktuelle Limit für *Timeto Live* beträgt 2147483 Sek. (24 + Tage).
+Gibt an, wie viele Sekunden die angegebene Route in der Routingtabelle beibehalten werden soll. Wenn dieser Parameter auf INFINITE festgelegt ist, wird die Route beibehalten, bis sie explizit gelöscht wird. Der aktuelle Grenzwert für *TimeToLive* beträgt 2147483 Sekunde (24+ Tage).
 
 </dd> <dt>
 
-*Flags* \[ vorgenommen\]
+*Flags* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine **DWORD** -Variable. Der Wert dieser Variablen wird vom Routing Tabellen-Manager festgelegt. Der Wert gibt den Typ der Änderung an und welche Informationen in den bereitgestellten Puffern zurückgegeben wurden. Bei diesem Parameter handelt es sich um einen der folgenden Parameter.
+Zeiger auf eine **DWORD-Variable.** Der Wert dieser Variablen wird vom Routingtabellen-Manager festgelegt. Der Wert gibt den Typ der Änderung an und gibt an, welche Informationen in den bereitgestellten Puffern zurückgegeben wurden. Dieser Parameter ist einer der folgenden.
 
 
 
 | Flags                                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                                    |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RTM_NO_CHANGE"></span><span id="rtm_no_change"></span><dl> <dt>**RTM \_ keine \_ Änderung**</dt> </dl>             | Das Hinzufügen oder aktualisieren hat entweder keinen der wichtigen Routen Parameter geändert, oder der betroffene Routen Eintrag ist nicht die beste Route zwischen den Einträgen für das Zielnetzwerk.<br/>                                                                                                          |
-| <span id="RTM_ROUTE_ADDED"></span><span id="rtm_route_added"></span><dl> <dt>**RTM- \_ Route \_ hinzugefügt**</dt> </dl>       | Die Route wurde für das Zielnetzwerk hinzugefügt. Der Parameter " *currbestroute* " verweist auf die Informationen für die hinzugefügte Route.<br/>                                                                                                                                                                    |
-| <span id="RTM_ROUTE_CHANGED"></span><span id="rtm_route_changed"></span><dl> <dt>**RTM- \_ Route \_ geändert**</dt> </dl> | Mindestens einer der wichtigen Parameter wurde geändert, um die beste Route zum Zielnetzwerk zu erzielen. Die wichtigsten Parameter sind: <br/> Protokoll Bezeichner<br/> Schnittstellen Index<br/> Adresse des nächsten Hops<br/> Protokoll familienspezifische Daten (einschließlich Routingmetriken)<br/> |
+| <span id="RTM_NO_CHANGE"></span><span id="rtm_no_change"></span><dl> <dt>**RTM \_ KEINE \_ ÄNDERUNG**</dt> </dl>             | Das Additions- oder Update hat entweder keinen der signifikanten Routenparameter geändert, oder der betroffene Routeneintrag ist nicht die beste Route unter den Einträgen für das Zielnetzwerk.<br/>                                                                                                          |
+| <span id="RTM_ROUTE_ADDED"></span><span id="rtm_route_added"></span><dl> <dt>**\_RTM-ROUTE \_ HINZUGEFÜGT**</dt> </dl>       | Die Route wurde für das Zielnetzwerk hinzugefügt. Der *CurBestRoute-Parameter* verweist auf die Informationen für die hinzugefügte Route.<br/>                                                                                                                                                                    |
+| <span id="RTM_ROUTE_CHANGED"></span><span id="rtm_route_changed"></span><dl> <dt>**\_RTM-ROUTE \_ GEÄNDERT**</dt> </dl> | Mindestens einer der signifikanten Parameter wurde für die beste Route zum Zielnetzwerk geändert. Die wichtigsten Parameter sind: <br/> Protokollbezeichner<br/> Schnittstellenindex<br/> Adresse des nächsten Hops<br/> Protokollfamilienspezifische Daten (einschließlich Routenmetriken)<br/> |
 
 
 
  
 
-Der *prevbestroute* -Parameter verweist auf die Routeninformationen wie vor der Änderung. Der Parameter " *currbestroute* " zeigt auf die aktuellen Routeninformationen (d. h. nach Änderung).
+Der *PrevBestRoute-Parameter* verweist auf die Routeninformationen wie vor der Änderung. Der *CurBestRoute-Parameter* verweist auf die aktuellen Routeninformationen (d. h. nach der Änderung).
 
 </dd> <dt>
 
-*Cursor Route* \[ vorgenommen\]
+*CurBestRoute* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die die aktuellen Informationen über die beste Route empfängt, sofern vorhanden. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. b. IP oder IPX.
+Zeiger auf eine -Struktur, die die aktuellen Informationen zur besten Route empfängt, sofern dies der Fall ist. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. B. IP oder IPX.
 
-Dieser Parameter ist optional. Wenn der Aufrufer **null** für diesen Parameter angibt, werden die aktuellen Informationen zur optimalen Route nicht zurückgegeben.
+Dieser Parameter ist optional. Wenn der Aufrufer NULL **für diesen** Parameter angibt, werden die aktuellen Informationen zur besten Route nicht zurückgegeben.
 
 </dd> <dt>
 
-*Prevbestroute* \[ vorgenommen\]
+*PrevBestRoute* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die die vorherigen Informationen über die beste Route empfängt, sofern vorhanden. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. b. IP oder IPX.
+Zeiger auf eine -Struktur, die die vorherigen Informationen zur besten Route empfängt, sofern diese enthalten sind. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. B. IP oder IPX.
 
-Dieser Parameter ist optional. Wenn der Aufrufer für diesen Parameter **null** angibt, werden die vorherigen Informationen zur optimalen Route nicht zurückgegeben.
+Dieser Parameter ist optional. Wenn der Aufrufer NULL **für** diesen Parameter angibt, werden die vorherigen Informationen zur besten Route nicht zurückgegeben.
 
 </dd> </dl>
 
@@ -130,19 +130,19 @@ Der Rückgabewert ist einer der folgenden Codes.
 
 | Wert                                                                                                       | BESCHREIBUNG                                                             |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| <dl> <dt>**kein \_ Fehler**</dt> </dl>                    | Die Route wurde erfolgreich hinzugefügt oder aktualisiert.<br/>                 |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ handle**</dt> </dl>       | Der Clienthandle-Parameter ist kein gültiges Handle.<br/>           |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>    | Die Routen Struktur enthält einen ungültigen Parameter.<br/>           |
-| <dl> <dt>**Fehler \_ keine \_ System \_ Ressourcen**</dt> </dl> | Es sind nicht genügend Ressourcen vorhanden, um den Vorgang auszuführen.<br/> |
-| <dl> <dt>**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**</dt> </dl>   | Es ist nicht genügend Arbeitsspeicher zum Zuordnen des Routen Eintrags vorhanden.<br/>    |
+| <dl> <dt>**NO \_ ERROR**</dt> </dl>                    | Die Route wurde erfolgreich hinzugefügt oder aktualisiert.<br/>                 |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGES \_ HANDLE**</dt> </dl>       | Der Clienthandpunktparameter ist kein gültiges Handle.<br/>           |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>    | Die Routenstruktur enthält einen ungültigen Parameter.<br/>           |
+| <dl> <dt>**FEHLER: \_ \_ KEINE \_ SYSTEMRESSOURCEN**</dt> </dl> | Es sind nicht genügend Ressourcen zum Durchführen des Vorgangs verfügbar.<br/> |
+| <dl> <dt>**FEHLER: \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>   | Es ist nicht genügend Arbeitsspeicher zum Zuordnen des Routeneintrags verfügbar.<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Funktion generiert eine Weiterleitungs Änderungs Meldung, wenn sich die beste Route zu einem Zielnetzwerk aufgrund dieses Vorgangs geändert hat. Die Weiterleitungs Änderungs Meldung wird jedoch nicht an den Client gesendet, von dem dieser aufgerufen wird. Stattdessen werden relevante Informationen von dieser Funktion direkt über die *Flags*, die Parameter " *currbestroute*" und " *prevbestroute* " an den Client zurückgegeben.
+Die Funktion generiert eine Routenänderungsmeldung, wenn sich die beste Route zu einem Zielnetzwerk als Ergebnis dieses Vorgangs geändert hat. Die Meldung zur Routenänderung wird jedoch nicht an den Client gesendet, der diesen Aufruf vorsandt. Stattdessen werden relevante Informationen von dieser Funktion über die Parameter *Flags,* *CurBestRoute* und *PrevBestRoute* direkt an diesen Client zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -152,9 +152,9 @@ Die-Funktion generiert eine Weiterleitungs Änderungs Meldung, wenn sich die bes
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>RTM. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Rtm.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Rtm.dll</dt> </dl> |
 
 
@@ -163,16 +163,16 @@ Die-Funktion generiert eine Weiterleitungs Änderungs Meldung, wenn sich die bes
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Referenz zu Routingtabellen-Manager, Version 1](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Funktionen der Routing-Tabellen-Manager-Version 1](routing-table-manager-version-1-functions.md)
+[Funktionen des Routingtabellen-Managers, Version 1](routing-table-manager-version-1-functions.md)
 </dt> <dt>
 
-[**Rtmdeleteroute**](rtmdeleteroute.md)
+[**RtmDeleteRoute**](rtmdeleteroute.md)
 </dt> <dt>
 
-[**Rtmde queueroutechangemess**](rtmdequeueroutechangemessage.md)
+[**RtmDequeueRouteChangeMessage**](rtmdequeueroutechangemessage.md)
 </dt> </dl>
 
  

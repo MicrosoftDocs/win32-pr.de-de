@@ -1,7 +1,7 @@
 ---
-description: Berechnet das Produkt von zwei sphärischen Oberschwingungen-Funktionen (f und g). Beide Funktionen sind in der Reihenfolge N = 2.
+description: Berechnet das Produkt von zwei sphärischen Funktionen (f und g). Beide Funktionen haben die Reihenfolge N = 2.
 ms.assetid: 9e0942ce-e39d-4147-9472-cda8a97fd390
-title: D3DXSHMultiply2-Funktion (D3DX10Math. h)
+title: D3DXSHMultiply2-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: a72cdf7eb28b06e11b4901ebd048af143dfbdb5c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c6fba685a763a00e529e70b7c0f08a97706f3c5f2be4dba7c923ed5b4b102742
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070000"
 ---
-# <a name="d3dxshmultiply2-function-d3dx10mathh"></a>D3DXSHMultiply2-Funktion (D3DX10Math. h)
+# <a name="d3dxshmultiply2-function-d3dx10mathh"></a>D3DXSHMultiply2-Funktion (D3DX10Math.h)
 
-Berechnet das Produkt von zwei sphärischen Oberschwingungen-Funktionen (*f* und *g*). Beide Funktionen sind in der Reihenfolge N = 2.
+Berechnet das Produkt von zwei sphärischen Funktionen (*f* und *g*). Beide Funktionen haben die Reihenfolge N = 2.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,42 +42,42 @@ FLOAT* D3DXSHMultiply2(
 
 <dl> <dt>
 
-*Pout* \[ in\]
+*pOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf die Ausgabe-SH-Koeffizienten – die Basis Funktion *Y* LM wird in l ² + *m* + l gespeichert. Die Reihenfolge *n* bestimmt die Länge des Arrays, bei der immer *N*² Koeffizienten vorhanden sein sollten.
+Zeiger auf die AUSGABE-SH-Koeffizienten: Die Basisfunktion *Y* lm wird bei l² + *m* + l gespeichert. Die Reihenfolge *N* bestimmt die Länge des Arrays, wobei immer *N ²-Koeffizienten* vorhanden sein sollten.
 
 </dd> <dt>
 
-*PF* \[ in\]
+*pF* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Geben Sie SH Koeffizienten für die erste Funktion ein.
+Eingabe-SH-Koeffizienten für die erste Funktion.
 
 </dd> <dt>
 
-*PG* \[ in\]
+*pG* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zweiter Satz von Eingabe-SH-Koeffizienten.
+Zweiter Satz von SH-Eingabekoeffizienten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten.
+Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Produkt der beiden SH-Funktionen von Order N = 2 generiert eine sh-Funktion der Reihenfolge 2 × *N* -1 = 3, die Ergebnisse werden jedoch abgeschnitten. Dies bedeutet, dass das Produkt sich ( *f* × *g*  =   × × *f* ), aber nicht zuordnen lässt ( *f* × (*g* × *h*) ≠ ( *f* × *g*) × *h* ).
+Das Produkt zweier SH-Funktionen der Reihenfolge N = 2 generiert eine SH-Funktion der Reihenfolge 2 × *N* - 1 = 3, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt ( *f* × *g*  =  *g* × *f* ) kommutiert, aber nicht ( *f* × (*g* × *h*) ≠ ( *f* × *g*) × *h* ) zugeordnet wird.
 
 Diese Funktion verwendet die folgende Gleichung:
 
@@ -88,7 +88,7 @@ pOut[i] = int(y_i(s) * f(s) * g(s))
 
 
 
-dabei \_ ist y i (s) die Funktion "ITH sh", und f (s) und g (s) verwenden die folgende sh-Funktion:
+wobei y \_ i(s) die ith SH-Basisfunktion ist und wobei f(s) und g(s) die folgende SH-Funktion verwenden:
 
 
 ```
@@ -103,8 +103,8 @@ sum_i(y_i(s)*c_i)
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 

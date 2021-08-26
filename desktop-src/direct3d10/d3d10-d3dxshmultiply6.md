@@ -1,7 +1,7 @@
 ---
-description: Berechnet das Produkt von zwei sphärischen Oberschwingungen-Funktionen (f und g). Beide Funktionen sind in der Reihenfolge N = 6.
+description: Berechnet das Produkt von zwei sphärischen Funktionen (f und g). Beide Funktionen haben die Reihenfolge N = 6.
 ms.assetid: 3b68b238-c1ae-4ab8-89ed-bdf815463143
-title: D3DXSHMultiply6-Funktion (D3DX10Math. h)
+title: D3DXSHMultiply6-Funktion (D3DX10Math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 0768bb8be1f2f23693a431a2c0ea8f3d5a6846d2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b442d6d8c64d7c1ef0b202bd2cfa5d6d625280eb7320609a11ea89420c2bc215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990000"
 ---
 # <a name="d3dxshmultiply6-function"></a>D3DXSHMultiply6-Funktion
 
-Berechnet das Produkt von zwei sphärischen Oberschwingungen-Funktionen (f und g). Beide Funktionen sind in der Reihenfolge N = 6.
+Berechnet das Produkt von zwei sphärischen Funktionen (f und g). Beide Funktionen haben die Reihenfolge N = 6.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,42 +42,42 @@ FLOAT* D3DXSHMultiply6(
 
 <dl> <dt>
 
-*Pout* \[ in\]
+*pOut* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf die Ausgabe-SH-Koeffizienten – die Basis Funktion *Y* LM wird in l ² + *m* + l gespeichert. Die Reihenfolge *n* bestimmt die Länge des Arrays, bei der immer *N*² Koeffizienten vorhanden sein sollten.
+Zeiger auf die AUSGABE-SH-Koeffizienten: Die Basisfunktion *Y* lm wird bei l² + *m* + l gespeichert. Die Reihenfolge *N* bestimmt die Länge des Arrays, wobei immer *N ²-Koeffizienten* vorhanden sein sollten.
 
 </dd> <dt>
 
-*PF* \[ in\]
+*pF* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Geben Sie SH Koeffizienten für die erste Funktion ein.
+Eingabe-SH-Koeffizienten für die erste Funktion.
 
 </dd> <dt>
 
-*PG* \[ in\]
+*pG* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**float**](../winprog/windows-data-types.md) \***
+Typ: **const [**FLOAT**](../winprog/windows-data-types.md) \***
 
-Zweiter Satz von Eingabe-SH-Koeffizienten.
+Zweiter Satz von SH-Eingabekoeffizienten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **float**](../winprog/windows-data-types.md)\***
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabe Koeffizienten.
+Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Produkt der beiden SH-Funktionen von Order N = 6 generiert eine sh-Funktion der Reihenfolge 2 × *N* -1 = 11, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt sich ( *f* × *g*  =   × × *f* ), aber nicht zuordnen lässt ( *f* × ( *g* × *h* ) ≠ ( *f* × *g* ) × *h* ).
+Das Produkt von zwei SH-Funktionen der Reihenfolge N = 6 generiert eine SH-Funktion der Reihenfolge 2 × *N* - 1 = 11, aber die Ergebnisse werden abgeschnitten. Dies bedeutet, dass das Produkt ( *f* × *g*  =  *g* × *f* ) kommutiert, aber nicht ( *f* × ( *g* × *h* ) ≠ ( *f* × *g* ) × *h* ) zuordt.
 
 Diese Funktion verwendet die folgende Gleichung:
 
@@ -88,7 +88,7 @@ pOut[i] = int(y_i(s) * f(s) * g(s))
 
 
 
-dabei \_ ist y i (s) die Funktion "ITH sh", und f (s) und g (s) verwenden die folgende sh-Funktion:
+wobei y \_ i(s) die ith SH-Basisfunktion ist und wobei f(s) und g(s) die folgende SH-Funktion verwenden:
 
 
 ```
@@ -103,8 +103,8 @@ sum_i(y_i(s)*c_i)
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX10Math. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 

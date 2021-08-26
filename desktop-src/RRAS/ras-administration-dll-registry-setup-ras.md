@@ -1,19 +1,19 @@
 ---
-title: Setup der RAS-Verwaltungs-DLL-Registrierung
-description: Machen Sie sich mit den Anforderungen für die Registrierung einer RAS-Verwaltungs-DLL (Remote Access Service) eines Drittanbieters bei RAS bewusst.
+title: Setup der RAS-Administration-DLL-Registrierung
+description: Hier finden Sie Informationen zu den Anforderungen für die Registrierung einer RAS-Verwaltungs-DLL (Remote Access Service) eines Drittanbieters mit RAS.
 ms.assetid: 8108a0ac-8562-4251-99be-5f2b2f5c67c4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed0af8e4b189de69f254429c18beb4756e01ad56
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 1e40ed8fe4fe853c12e33e6168cb72cf1b3ec5b33afc92e8767731a13ec37412
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112406713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036364"
 ---
-# <a name="ras-administration-dll-registry-setup"></a>Setup der RAS-Verwaltungs-DLL-Registrierung
+# <a name="ras-administration-dll-registry-setup"></a>Setup der RAS-Administration-DLL-Registrierung
 
-Das Setupprogramm für eine RAS-Verwaltungs-DLL eines Drittanbieters muss die DLL bei RAS registrieren, indem Informationen unter dem folgenden Schlüssel in der Registrierung zur Verfügung gestellt werden.
+Das Setupprogramm für eine RAS-Verwaltungs-DLL eines Drittanbieters muss die DLL mit RAS registrieren, indem informationen unter dem folgenden Schlüssel in der Registrierung zur Verfügung stellen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -23,7 +23,7 @@ HKEY_LOCAL_MACHINE
             AdminDll
 ```
 
-Legen Sie zum Registrieren der DLL die folgenden Werte unter diesem Schlüssel fest.
+Legen Sie die folgenden Werte unter diesem Schlüssel fest, um die DLL zu registrieren.
 
 
 
@@ -36,7 +36,7 @@ Legen Sie zum Registrieren der DLL die folgenden Werte unter diesem Schlüssel f
 
  
 
-Der Registrierungseintrag für eine RAS-Verwaltungs-DLL eines fiktiven Unternehmens mit dem Namen ProElecron, Inc. kann beispielsweise wie im Folgenden beschrieben sein:
+Der Registrierungseintrag für eine RAS-Verwaltungs-DLL eines fiktiven Unternehmens mit dem Namen ProElectron, Inc. könnte beispielsweise wie im folgenden Beispiel sein:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
             AdminDll
 ```
 
-*DisplayName* : **REG \_ SZ** : ProElecron RAS Admin DLL
+*DisplayName* : **REG \_ SZ** : ProElecweiter RAS-Administrator-DLL
 
 *DLLPath* : **REG \_ SZ** : C: \\ nt \\ system32 \\ntwkadm.dll
 

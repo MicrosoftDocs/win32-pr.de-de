@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfilename otfoundexception-Konstruktor'
-title: Esentfilename otfoundexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentFileNotFoundException-Konstruktor'
+title: EsentFileNotFoundException-Konstruktor
 TOCTitle: 'EsentFileNotFoundException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFileNotFoundException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfilenotfoundexception.esentfilenotfoundexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e8b15076cba5e3d0c0ecfff84a76e8a5f4d4234c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92e1afcc398a642d27b5b82228970cdc0f87196218dd9f8d374e034c8b027b6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020430"
 ---
-# <a name="esentfilenotfoundexception-constructor"></a>Esentfilename otfoundexception-Konstruktor
+# <a name="esentfilenotfoundexception-constructor"></a>EsentFileNotFoundException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfilename otfoundexception-Klasse.
+Initialisiert eine neue Instanz der EsentFileNotFoundException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentFileNotFoundException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfilename otfoundexception-Klasse](./esentfilenotfoundexception-class.md)
+[EsentFileNotFoundException-Klasse](./esentfilenotfoundexception-class.md)
 
-[Esentfilename otfoundexception-Elemente](./esentfilenotfoundexception-members.md)
+[EsentFileNotFoundException-Member](./esentfilenotfoundexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

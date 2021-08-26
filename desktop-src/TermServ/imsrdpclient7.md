@@ -29,7 +29,7 @@ Stellt die Methoden und Eigenschaften zur Konfiguration und Verwendung des Clien
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClient7-Schnittstelle** erbt von [**IMsRdpClient6**](imsrdpclient6.md). **IMsRdpClient7** verfügt auch über diese Typen von Membern:
+Die **IMsRdpClient7-Schnittstelle** erbt von [**IMsRdpClient6**](imsrdpclient6.md). **IMsRdpClient7** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -40,7 +40,7 @@ Die **IMsRdpClient7-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                               | BESCHREIBUNG                                                         |
+| Methode                                               | Beschreibung                                                         |
 |:-----------------------------------------------------|:--------------------------------------------------------------------|
 | [**GetStatusText**](imsrdpclient7-getstatustext.md) | Ruft den Statustext für den angegebenen Statuscode ab.<br/> |
 
@@ -54,7 +54,7 @@ Die **IMsRdpClient7-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                  | Zugriffstyp          | BESCHREIBUNG                                                                                                                |
+| Eigenschaft                                                                  | Zugriffstyp          | Beschreibung                                                                                                                |
 |:--------------------------------------------------------------------------|:---------------------|:---------------------------------------------------------------------------------------------------------------------------|
 | [**AdvancedSettings8**](imsrdpclient7-advancedsettings8.md)<br/>   | Schreibgeschützt<br/> | Ein Objekt, das die [**IMsRdpClientAdvancedSettings7-Schnittstelle**](imsrdpclientadvancedsettings7.md) unterstützt.<br/>   |
 | [**RemoteProgram2**](imsrdpclient7-remoteprogram2.md)<br/>         | Schreibgeschützt<br/> | Ein Objekt, das die [**ITSRemoteProgram2-Schnittstelle**](itsremoteprogram2.md) unterstützt.<br/>                           |

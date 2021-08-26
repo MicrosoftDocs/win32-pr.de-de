@@ -1,11 +1,11 @@
 ---
 title: IMsRdpCameraRedirConfig DeviceExists-Eigenschaft
-description: Gibt an, ob das Kamera Gerät zurzeit vorhanden ist (d. h., die Kamera ist verbunden).
+description: Gibt an, ob das Kameragerät derzeit vorhanden ist (d. h., die Kamera ist verbunden).
 ms.tgt_platform: multiple
 keywords:
-- Deviceist-Eigenschaft Remotedesktopdienste
-- Deviceexistiert-Eigenschaft Remotedesktopdienste, imsrdpcameraredirconfig-Schnittstelle
-- Imsrdpcameraredirconfig-Schnittstelle Remotedesktopdienste, deviceist-Eigenschaft
+- DeviceExists-Remotedesktopdienste
+- DeviceExists-Eigenschaft Remotedesktopdienste , IMsRdpCameraRedirConfig-Schnittstelle
+- IMsRdpCameraRedirConfig-Schnittstelle Remotedesktopdienste , DeviceExists-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 368b2d46e6dfc2c32c0bb294edceda31f8a58f4e
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: 617c91491d88736ca60218d71f9dd5aa02ad0f9faeefdda6b872ba9262cec587
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "104480563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990660"
 ---
-# <a name="imsrdpcameraredirconfigdeviceexists-property"></a>Imsrdpcameraredirconfig::D eviceist-Eigenschaft
+# <a name="imsrdpcameraredirconfigdeviceexists-property"></a>IMsRdpCameraRedirConfig::D eviceExists(Eigenschaft)
 
-Gibt an, ob das Kamera Gerät zurzeit vorhanden ist (d. h., die Kamera ist verbunden).
+Gibt an, ob das Kameragerät derzeit vorhanden ist (d. h., die Kamera ist verbunden).
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ HRESULT get_DeviceExists(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Wert, der angibt, ob das Kamera Gerät zurzeit vorhanden ist (d. h., die Kamera ist verbunden).
+Ein -Wert, der angibt, ob das Kameragerät derzeit vorhanden ist (d. h., die Kamera ist verbunden).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Ein Wert, der angibt, ob das Kamera Gerät zurzeit vorhanden ist (d. h., die Kam
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ imsrdpcameraredirconfig ist als 09750604-D625-47c1-9bcd-F09F735705D7 definiert.            |
+| IID                      | IID \_ IMsRdpCameraRedirConfig ist als 09750604-D625-47C1-9FCD-F09F735705D7 definiert.            |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

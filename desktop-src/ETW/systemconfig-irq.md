@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Interrupt Request (UNQ)-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für INTERRUPT-Anforderungsereignisse (IRQ). Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 9d4692e8-f19f-478c-a003-396722e426c3
 title: SystemConfig_IRQ-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e1dd674c34c06259bc343615c17d165be3f57d32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3da720de11aa7dbbd759131a521e44e546b7cad6d2525565c81d0aa6920dd0ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078290"
 ---
-# <a name="systemconfig_irq-class"></a>SystemConfig- \_ Klasse "UNQ"
+# <a name="systemconfig_irq-class"></a>SystemConfig \_ IRQ-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Interrupt Request (UNQ)-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für INTERRUPT-Anforderungsereignisse (IRQ).
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ class SystemConfig_IRQ : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig-Klasse " \_ UNQ** " verfügt über diese Typen von Membern:
+Die **SystemConfig \_ IRQ-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig-Klasse " \_ UNQ** " verfügt über diese Eigenschaften.
+Die **SystemConfig \_ IRQ-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -63,73 +63,73 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(4), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Die Beschreibung des Geräts oder der Software, die die Anforderung sendet.
+Beschreibung des Geräts oder der Software, von dem die Anforderung gestellt wird.
 
 </dd> <dt>
 
-**Devicedescriptionlen**
+**DeviceDescriptionLen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Länge in Zeichen der Zeichenfolge in **devicedescription**.
+Länge der Zeichenfolge in **DeviceDescription** in Zeichen.
 
 </dd> <dt>
 
-**Unqaffinität**
+**IRQAffinity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-UNQ-Affinitäts Maske. Die Affinitäts Maske identifiziert die spezifischen Prozessoren (oder Gruppen von Prozessoren), die die UNQ empfangen können.
+IRQ-Affinitätsmaske. Die Affinitätsmaske identifiziert die spezifischen Prozessoren (oder Prozessorgruppen), die den IRQ empfangen können.
 
 </dd> <dt>
 
-**Unqnum**
+**IRQNum**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Die Zeilennummer der Interrupt-Anforderung.
+Nummer der Interruptanforderungszeile.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

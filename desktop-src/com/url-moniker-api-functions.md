@@ -1,36 +1,36 @@
 ---
-title: URL-monikerfunktionen
-description: URL-monikerfunktionen
+title: URL-Monikerfunktionen
+description: URL-Monikerfunktionen
 ms.assetid: 773743d3-9434-4ec9-b85c-9b971e37682f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2db726d8ce6a101b0b97fbe2128e074ee5e892e3
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: bd4dc19d47a933e9f93516630b25fdab2f64b21cb3755ac9fd5bbdfa7edaba51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992040"
 ---
-# <a name="url-moniker-functions"></a>URL-monikerfunktionen
+# <a name="url-moniker-functions"></a>URL-Monikerfunktionen
 
-URL-monikerfunktionen isolieren Entwickler vor den Komplexitäten zum Erstellen, verwalten und Verwenden von URL-Monikern. Diese Funktionen lauten wie folgt:
+URL-Monikerfunktionen isolieren Entwickler von der Komplexität beim Erstellen, Verwalten und Verwenden von URL-Monikern. Diese Funktionen lauten wie folgt:
 
--   [**"Kreateurlmoniker"**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775102(v=vs.85))
+-   [**CreateURLMoniker**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775102(v=vs.85))
 -   [**IsValidURL**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775112(v=vs.85))
--   [**Register mediatypes**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775118(v=vs.85))
--   [**"Kreateformatenumerator"**](/windows/desktop/api/Urlmon/nf-urlmon-createformatenumerator)
--   [**Registerformatenumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775116(v=vs.85))
--   [**Revokeformatenumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775121(v=vs.85))
--   [**Registermediatypeclass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775117(v=vs.85))
--   [**Findmediatypeclass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775106(v=vs.85))
--   [**Getclassfileormime**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775108(v=vs.85))
--   [**Urlmksesessionoption**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775125(v=vs.85))
+-   [**RegisterMediaTypes**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775118(v=vs.85))
+-   [**CreateFormatEnumerator**](/windows/desktop/api/Urlmon/nf-urlmon-createformatenumerator)
+-   [**RegisterFormatEnumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775116(v=vs.85))
+-   [**RevokeFormatEnumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775121(v=vs.85))
+-   [**RegisterMediaTypeClass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775117(v=vs.85))
+-   [**FindMediaTypeClass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775106(v=vs.85))
+-   [**GetClassFileOrMime**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775108(v=vs.85))
+-   [**UrlMkSetSessionOption**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775125(v=vs.85))
 
-Diese Funktionen können wie folgt aussehen:
+Ihre Vertrautheit mit diesen Funktionen kann wie folgt lauten:
 
--   Wenn Sie URL-Moniker in eigenständigen Anwendungen verwenden, sollten Sie sich mit " [**kreateurlmoniker**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775102(v=vs.85)) " und " [**IsValidURL**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775112(v=vs.85)) " vertraut machen. Wenn Sie ein ActiveX-Steuerelement erstellen, sollten Sie [**ibindhost:: aufatemoniker**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775075(v=vs.85)) anstelle von " **kreateurlmoniker**" verwenden.
--   Wenn Sie eine MIME-Aushandlung mit URL-Monikern ausführen, können Sie sich mit [**registermediatypes**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775118(v=vs.85)), [**kreateformatenumerator**](/windows/desktop/api/Urlmon/nf-urlmon-createformatenumerator), [**registerformatenumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775116(v=vs.85))und [**revokeformatenumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775121(v=vs.85)) vertraut machen.
--   Machen Sie sich mit [**registermediatypeclass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775117(v=vs.85)), [**findmediatypeclass**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775106(v=vs.85)), [**getclassfileormime**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775108(v=vs.85))und [**urlmksesessionoption**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775125(v=vs.85)) vertraut, wenn Sie sowohl mit URL-Monikern als auch mit com eine bedeutende Umgebung haben.
+-   Machen Sie sich [**mit CreateURLMoniker**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775102(v=vs.85)) und [**IsValidURL**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775112(v=vs.85)) vertraut, wenn Sie URL-Moniker in eigenständigen Anwendungen verwenden. Wenn Sie ein ActiveX erstellen, sollten Sie [**IBindHost::CreateMoniker anstelle**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775075(v=vs.85)) von **CreateURLMoniker verwenden.**
+-   Machen Sie sich mit [**RegisterMediaTypes,**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775118(v=vs.85)) [**CreateFormatEnumerator,**](/windows/desktop/api/Urlmon/nf-urlmon-createformatenumerator) [**RegisterFormatEnumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775116(v=vs.85))und [**RevokeFormatEnumerator**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775121(v=vs.85)) vertraut, wenn Sie MIME-Aushandlung mit URL-Monikern ausführen.
+-   Machen Sie sich nur dann mit [**RegisterMediaTypeClass,**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775117(v=vs.85)) [**FindMediaTypeClass,**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775106(v=vs.85)) [**GetClassFileOrMime**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775108(v=vs.85))und [**UrlMkSetSessionOption**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775125(v=vs.85)) vertraut, wenn Sie sowohl mit URL-Monikern als auch mit COM über erhebliche Erfahrung verfügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -39,6 +39,6 @@ Diese Funktionen können wie folgt aussehen:
 [URL-Moniker](url-monikers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

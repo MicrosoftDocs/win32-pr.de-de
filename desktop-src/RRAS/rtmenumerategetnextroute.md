@@ -1,9 +1,9 @@
 ---
-title: Rtmenenerategetnextroute-Funktion (RTM. h)
-description: Die rtmenumerategetnextroute-Funktion gibt den Eintrag für die nächste Route in der Enumeration zurück, die durch einen Aufruf von rtmkreateenumerationhandle gestartet wird.
+title: RtmEnumerateGetNextRoute-Funktion (Rtm.h)
+description: Die RtmEnumerateGetNextRoute-Funktion gibt den Eintrag der nächsten Route in der Enumeration zurück, der durch einen Aufruf von RtmCreateEnumerationHandle gestartet wurde.
 ms.assetid: fff6fb58-8a37-49f0-abc5-354b5bc340f8
 keywords:
-- Rtmenumschlag-Funktion (RAS)
+- RtmEnumerateGetNextRoute-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e74cc5aa15c1014056075e876efca296556066d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6105340003c6240b49acec4699fa7b229d11963116367ab0fa0c069211b6fd1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035870"
 ---
-# <a name="rtmenumerategetnextroute-function"></a>Rtmenenerategetnextroute-Funktion
+# <a name="rtmenumerategetnextroute-function"></a>RtmEnumerateGetNextRoute-Funktion
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die **rtmenumerategetnextroute** -Funktion gibt den Eintrag für die nächste Route in der Enumeration zurück, die durch einen Aufruf von [**rtmkreateenumerationhandle**](rtmcreateenumerationhandle.md)gestartet wird.
+Die **RtmEnumerateGetNextRoute-Funktion** gibt den Next-Route-Eintrag in der -Enumeration zurück, der durch einen Aufruf von [**RtmCreateEnumerationHandle gestartet wurde.**](rtmcreateenumerationhandle.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,23 +43,23 @@ DWORD RtmEnumerateGetNextRoute(
 
 <dl> <dt>
 
-*Enumerationhandle* \[ in\]
+*EnumerationHandle* \[ In\]
 </dt> <dd>
 
-Handle, das die Enumeration identifiziert und den Gültigkeitsbereich angibt. Rufen Sie dieses Handle durch Aufrufen von [**rtmcreateenumerationhandle**](rtmcreateenumerationhandle.md)ab.
+Handle, das die Enumeration identifiziert und ihren Bereich angibt. Rufen Sie dieses Handle ab, [**indem Sie RtmCreateEnumerationHandle aufrufen.**](rtmcreateenumerationhandle.md)
 
 </dd> <dt>
 
-*Route* \[ vorgenommen\]
+*Route* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine Protokoll familienspezifische Routen Struktur ( [**RTM \_ -IP- \_ Route**](rtm-ip-route.md) oder [**RTM \_ IPX- \_ Route**](rtm-ipx-route.md)). Diese Struktur empfängt die nächste Route in der-Enumeration.
+Zeiger auf eine protokollfamilienspezifische Routenstruktur ( [**RTM \_ IP \_ ROUTE**](rtm-ip-route.md) oder [**RTM \_ IPX \_ ROUTE**](rtm-ipx-route.md)). Diese Struktur erhält die nächste Route in der -Enumeration.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert kein \_ Fehler.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NO \_ ERROR.
 
 Wenn die Funktion fehlschlägt, ist der Rückgabewert einer der folgenden Fehlercodes.
 
@@ -67,17 +67,17 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert einer der folgenden Fehler
 
 | Wert                                                                                                       | BESCHREIBUNG                                                             |
 |-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| <dl> <dt>**Fehler bei \_ ungültigem \_ handle**</dt> </dl>       | Der *enumerationhandle* -Parameter ist ungültig.<br/>              |
-| <dl> <dt>**Fehler \_ keine \_ weiteren \_ Routen**</dt> </dl>      | In der-Enumeration sind keine weiteren Routen vorhanden.<br/>                 |
-| <dl> <dt>**Fehler \_ keine \_ System \_ Ressourcen**</dt> </dl> | Es sind nicht genügend Ressourcen vorhanden, um den Vorgang auszuführen.<br/> |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGES \_ HANDLE**</dt> </dl>       | Der *EnumerationHandle-Parameter* ist ungültig.<br/>              |
+| <dl> <dt>**FEHLER: \_ \_ KEINE ROUTEN \_ MEHR**</dt> </dl>      | Die -Enumeration enthält keine Routen mehr.<br/>                 |
+| <dl> <dt>**FEHLER: \_ \_ KEINE \_ SYSTEMRESSOURCEN**</dt> </dl> | Es sind nicht genügend Ressourcen zum Durchführen des Vorgangs verfügbar.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl Routen nicht in einer bestimmten Reihenfolge zurückgegeben werden, wird jede Route in der Enumeration nur einmal zurückgegeben.
+Obwohl Routen nicht in einer bestimmten Reihenfolge zurückgegeben werden, wird jede Route in der -Enumeration nur einmal zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,9 +87,9 @@ Obwohl Routen nicht in einer bestimmten Reihenfolge zurückgegeben werden, wird 
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>RTM. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Rtm.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Rtm.dll</dt> </dl> |
 
 
@@ -98,22 +98,22 @@ Obwohl Routen nicht in einer bestimmten Reihenfolge zurückgegeben werden, wird 
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Routing Table Manager Version 1 Reference](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Funktionen der Routing-Tabellen-Manager-Version 1](routing-table-manager-version-1-functions.md)
+[Routingtabellen-Manager- Version 1-Funktionen](routing-table-manager-version-1-functions.md)
 </dt> <dt>
 
-[**RTM \_ -IP- \_ Route**](rtm-ip-route.md)
+[**\_RTM-IP-ROUTE \_**](rtm-ip-route.md)
 </dt> <dt>
 
-[**RTM- \_ IPX- \_ Route**](rtm-ipx-route.md)
+[**\_RTM-IPX-ROUTE \_**](rtm-ipx-route.md)
 </dt> <dt>
 
-[**Rtmcloseenumerationhandle**](rtmcloseenumerationhandle.md)
+[**RtmCloseEnumerationHandle**](rtmcloseenumerationhandle.md)
 </dt> <dt>
 
-[**Rtmkreateenumerationhandle**](rtmcreateenumerationhandle.md)
+[**RtmCreateEnumerationHandle**](rtmcreateenumerationhandle.md)
 </dt> </dl>
 
  

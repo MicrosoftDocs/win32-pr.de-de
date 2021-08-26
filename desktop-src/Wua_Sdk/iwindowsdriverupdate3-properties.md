@@ -4,30 +4,30 @@ ms.assetid: a4526bb3-1652-4808-becd-a686afb2dd7e
 title: IWindowsDriverUpdate3-Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c0e665b332357c906173d8d5aac164182d085b84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9577f8e4d4a9d53a5b4ebb5a041e7c08e970778d10d75dbd18a8297460e57038
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106338963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119994340"
 ---
 # <a name="iwindowsdriverupdate3-properties"></a>IWindowsDriverUpdate3-Eigenschaften
 
-Die **IWindowsDriverUpdate3** -Schnittstelle definiert die folgende Eigenschaft.
+Die **IWindowsDriverUpdate3-Schnittstelle** definiert die folgende Eigenschaft.
 
 
 
-| Eigenschaft                                               | BESCHREIBUNG                                                                                                             |
+| Eigenschaft                                               | Beschreibung                                                                                                             |
 |--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**Browhalbonly**](/windows/desktop/api/Wuapi/nf-wuapi-iwindowsdriverupdate3-get_browseonly) | Ruft einen booleschen Wert ab, der angibt, ob ein Update nur durch Durchsuchen der verfügbaren Updates erkannt werden kann. |
+| [**BrowseOnly**](/windows/desktop/api/Wuapi/nf-wuapi-iwindowsdriverupdate3-get_browseonly) | Ruft einen booleschen Wert ab, der angibt, ob ein Update nur durch Durchsuchen der verfügbaren Updates gefunden werden kann. |
 
 
 
  
 
-Informationen zu den Membern, die von dieser Schnittstelle geerbt werden, finden Sie in der folgenden Schnittstelle.
+Informationen zu den von dieser Schnittstelle geerbten Membern finden Sie auf der folgenden Schnittstelle.
 
--   [**Iwindowsdriverupdate**](/windows/desktop/api/Wuapi/nn-wuapi-iwindowsdriverupdate)
+-   [**IWindowsDriverUpdate**](/windows/desktop/api/Wuapi/nn-wuapi-iwindowsdriverupdate)
 -   [**IWindowsDriverUpdate2**](/windows/desktop/api/Wuapi/nn-wuapi-iwindowsdriverupdate2)
 
  

@@ -1,47 +1,47 @@
 ---
-description: Ein Modell, das die Lautstärke des orientierten Sounds beschreibt.
+description: Ein Modell, das die Lautheit des orientierten Sounds beschreibt.
 ms.assetid: 15252358-d932-22f4-f13a-8e4b8487dd86
-title: Audiokegel
+title: Soundkegel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 215659ab08c33066abfade2faf206f6360a51051
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d1dc6b55ce1cc98b1875dff7079a0a304ef77c5567966808a4678f01f2297ea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005774"
 ---
-# <a name="sound-cones"></a>Audiokegel
+# <a name="sound-cones"></a>Soundkegel
 
-Ein Modell, das die Lautstärke des orientierten Sounds beschreibt.
+Ein Modell, das die Lautheit des orientierten Sounds beschreibt.
 
-Ein Sound ohne Ausrichtung hat dieselbe Amplitude in der angegebenen Entfernung in alle Richtungen. Ein Sound mit einer Ausrichtung ist in der Richtung der Ausrichtung laut Loudest. Das Modell, das die Lautstärke des orientierten Sounds beschreibt, wird als audiokegel bezeichnet. Audiokegel bestehen aus einem inneren (oder inneren) Kegel und einem äußeren (oder äußeren) Kegel. Der äußere Kegelwinkel muss immer größer oder gleich dem inneren Kegelwinkel sein.
+Ein Sound ohne Ausrichtung hat in einer bestimmten Entfernung in alle Richtungen dieselbe Amplitude. Ein Sound mit einer Ausrichtung ist in Richtung der Ausrichtung am lautesten. Das Modell, das die Lautheit des ausgerichteten Sounds beschreibt, wird als Soundkegel bezeichnet. Soundkegel besteht aus einem inneren (oder inneren) Kegel und einem äußeren (oder äußeren) Kegel. Der Außenkegelwinkel muss immer gleich oder größer als der innere Kegelwinkel sein.
 
-In jedem Winkel im Inneren Kegel wird das Volume des Sounds auf das innere Kegel Volume festgelegt. Dabei wird das Basis Volume des Puffers, die Entfernung vom Listener, die Ausrichtung des Listener, wenn der Listener über einen eigenen Kegel verfügt usw. berücksichtigt.
+Bei jedem Winkel innerhalb des inneren Kegels wird die Lautstärke des Sounds auf das innere Kegelvolumen festgelegt. Dies berücksichtigt das grundlegende Volume des Puffers, den Abstand zum Listener, die Ausrichtung des Listeners, wenn der Listener über einen eigenen Kegel verfügt, und so weiter.
 
-In jedem Winkel außerhalb des äußeren Kegel wird das normale Volume durch einen von der Anwendung festgelegten Faktor gedämpft. Die Volumeebene für außen Kegel wird als lineare Amplitude-Scaler ausgedrückt: 1,0 f stellt keine auf das ursprüngliche Signal angewendete Dämpfung dar, 0,5 f bezeichnet eine Dämpfung von 6 dB, und 0,0 f führt zu einer Ruhe Minderung. Die Verstärkung (Volume > 1,0 f) ist ebenfalls zulässig und wird nicht geklammert. Der gültige volumebereich ist tatsächlich 0,0 f bis 2,0 f.
+Bei jedem Winkel außerhalb des äußeren Kegels wird das normale Volumen durch einen von der Anwendung festgelegten Faktor abgedämpft. Die Außenkegelvolumenebene wird als linearer Amplitudenskalierer ausgedrückt: 1,0 f stellt keine Dämpfung dar, die auf das ursprüngliche Signal angewendet wird, 0,5 f steht für eine Dämpfung von 6 dB, und 0,0 f führt zu Stille. Die Verstärkung (Volume > 1.0 f) ist ebenfalls zulässig und wird nicht geklammert. Der gültige Volumebereich liegt tatsächlich zwischen 0,0 f und 2,0 f.
 
-Zwischen dem inneren und äußeren Kegel besteht eine Übergangszone zwischen dem inneren Volume und dem externen Volume. Das Volume nähert sich dem äußeren Volume des Cone, wenn sich der Winkel vergrößert.
+Zwischen den inneren und äußeren Kegeln ist eine Zone des Übergangs vom inneren Volume zum externen Volume. Das Volume nähert sich dem äußeren Volume des Kegels, wenn der Winkel zunimmt.
 
-Kegel können andere Parameter als das Volume beeinflussen. Der niedrige Durchlauf Filter und die sendersendeebene können ebenfalls beeinträchtigt werden, sodass die Technik noch dramatischer wird. Beispielsweise kann mit einem Kegel auf dem Listener alle Klänge hinter dem Listener angegeben werden, um einen wenig gedämpften Wert zu erhalten, und einen geringfügig höheren Inhalt für das Direct-Verhältnis zu erhalten. Diese stellen weitere Hinweise bereit, dass der Sound hinter dem Benutzer liegt. Dadurch wird der Realismus verbessert.
+Kegel können sich auf andere Parameter als das Volume auswirken. Der Niedrige-Durch-Filter und die Sendeebene des Halles können ebenfalls betroffen sein, wodurch die Technik noch drastischer wird. Bei einer Kegelung auf dem Listener kann beispielsweise angegeben werden, dass alle Sounds hinter dem Listener ein wenig muffiert werden und einen etwas höheren Inhalt im Verhältnis von Hall zu direktem Verhältnis haben. Diese bieten weitere Hinweise darauf, dass sich der Sound hinter dem Benutzer befindet. Dadurch wird der Realismus verbessert.
 
-In der folgenden Abbildung ist das Konzept der Sound Kegel dargestellt.
+Die folgende Abbildung zeigt das Konzept von Soundkegeln.
 
-![audiokegel](images/common-audio-concepts-sound-cones.png)
+![Soundkegel](images/common-audio-concepts-sound-cones.png)
 
-Wenn Sie audiokegel ordnungsgemäß entwerfen, können Sie Ihre Anwendung mit dramatischen Effekten versehen. Sie können z. b. eine Audioquelle in der Mitte eines Raums positionieren und deren Ausrichtung auf eine öffnende Tür in einem Gang festlegen. Legen Sie dann den Winkel des inneren Kegel so fest, dass er sich auf die Breite der Tür erstreckt, den äußeren Kegel etwas breiter macht und schließlich das äußere Kegel Volume als nicht hörbar festgelegt wird. Ein Listener, der sich entlang des Flurs bewegt, wird den Sound nur dann hören, wenn er sich in der Nähe der Der Sound ist laut laudest, wenn der Listener vor dem öffnenden Tor übergibt.
+Das ordnungsgemäße Entwerfen von Soundkegeln kann Ihrer Anwendung drastische Effekte hinzufügen. Beispielsweise können Sie eine Soundquelle in der Mitte eines Raums positionieren und ihre Ausrichtung auf eine offene Tür in einem Hall festlegen. Legen Sie dann den Winkel des Inneren Kegels so fest, dass er sich auf die Breite des Einganges erstreckt, den Außenkegel etwas breiter macht und schließlich das äußere Kegelvolumen auf unhörbar festlegen. Ein Listener, der sich entlang des Halles bewegt, beginnt, den Sound erst zu hören, wenn er sich in der Nähe des Eingangs befindet. Der Sound wird am lautesten sein, wenn der Listener vor der offenen Tür übergeht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Allgemeine audiokonzepte](common-audio-concepts.md)
+[Allgemeine Audiokonzepte](common-audio-concepts.md)
 </dt> <dt>
 
 [X3DAudio](x3daudio-overview.md)
 </dt> <dt>
 
-[**X3DAUDIO- \_ Kegel**](/windows/desktop/api/x3daudio/ns-x3daudio-x3daudio_cone)
+[**X3DAUDIO \_ CONE**](/windows/desktop/api/x3daudio/ns-x3daudio-x3daudio_cone)
 </dt> </dl>
 
  

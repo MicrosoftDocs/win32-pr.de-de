@@ -1,19 +1,19 @@
 ---
-title: Verwenden der Route Hold-Down Status
-description: Der folgende Beispielcode zeigt, wie ein Ziel für den Hold-Down-Zustand markiert wird und wie eine zielenumeration erstellt wird, die Routen enthält, die sich im Hold-Down-Zustand befinden.
+title: Verwenden des Route Hold-Down State
+description: Der folgende Beispielcode zeigt, wie sie ein Ziel für den Zurückhaltungszustand markieren und eine Zielenumeration erstellen, die Routen enthält, die sich im Zurückhaltungszustand befinden.
 ms.assetid: bdc97fad-4805-4432-96ca-9225a51c92eb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bcdff6b05f254b03d5aff30b177135702d64f3db
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: efed37238afff1606585f044b1f8366213a79dc0ea88a3622f231a01f37a1f96
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035540"
 ---
-# <a name="use-the-route-hold-down-state"></a>Verwenden der Route Hold-Down Status
+# <a name="use-the-route-hold-down-state"></a>Verwenden des Route Hold-Down State
 
-Der folgende Beispielcode zeigt, wie ein Ziel für den Hold-Down-Zustand markiert wird und wie eine zielenumeration erstellt wird, die Routen enthält, die sich im Hold-Down-Zustand befinden.
+Der folgende Beispielcode zeigt, wie sie ein Ziel für den Zurückhaltungszustand markieren und eine Zielenumeration erstellen, die Routen enthält, die sich im Zurückhaltungszustand befinden.
 
 
 ```C++
@@ -123,9 +123,9 @@ if (Status == NO_ERROR)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

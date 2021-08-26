@@ -1,21 +1,21 @@
 ---
 title: Windows-Versionsprüfung
-description: Die Betriebssystemversion wurde mit dem Windows 10-Betriebssystem Release inkrementiert.
+description: Die Betriebssystemversion wurde mit dem Betriebssystemversions Windows 10 erhöht.
 ms.assetid: 55BB7B44-1AFD-456D-9380-38B4D26E5EF6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 93ea1e65ed97859486bdd0a18fe53ee44a653faf
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 710f59313f05dac95e5953c6013108987dc9bf8ad84d7eb7d8bca67a5391996b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104102491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007880"
 ---
 # <a name="windows-version-check"></a>Windows-Versionsprüfung
 
-Die Betriebssystemversion wurde mit dem Windows 10-Betriebssystem Release inkrementiert. Dies bedeutet, dass die interne Versionsnummer für Windows 10 auch in 10,0 geändert wurde. Die Anwendungs- und Gerätekompatibilität nach einer Änderung der Betriebssystemversion aufrechtzuerhalten, war uns schon immer sehr wichtig. Bei den meisten App-Kategorien (ohne Kernel Abhängigkeiten) wirkt sich die Änderung nicht negativ auf die APP-Funktionalität aus, und vorhandene apps funktionieren unter Windows 10 weiterhin einwandfrei.
+Die Betriebssystemversion wurde mit dem Betriebssystemversions Windows 10 erhöht. Dies bedeutet, dass die interne Versionsnummer für Windows 10 auch in 10.0 geändert wurde. Die Anwendungs- und Gerätekompatibilität nach einer Änderung der Betriebssystemversion aufrechtzuerhalten, war uns schon immer sehr wichtig. Bei den meisten App-Kategorien (ohne Kernelabhängigkeiten) wirkt sich die Änderung nicht negativ auf die App-Funktionalität aus, und vorhandene Apps funktionieren weiterhin einwandfrei Windows 10.
 
-## <a name="manifestations"></a>Kundgebungen
+## <a name="manifestations"></a>Manifestationen
 
 Inwieweit sich diese Änderung auswirkt, richtet sich nach der jeweiligen App. Dies bedeutet, dass alle Apps, die die Betriebssystemversion überprüfen, eine höhere Versionsnummer erhalten, was sich wie folgt äußern kann:
 
@@ -26,18 +26,18 @@ Inwieweit sich diese Änderung auswirkt, richtet sich nach der jeweiligen App. D
 Einige Apps überprüfen die Version und geben einfach eine Warnung an den Benutzer aus. Es gibt jedoch auch Apps, für die eine Versionsprüfung unumgänglich ist (in den Treibern oder im Kernelmodus, um eine Erkennung zu vermeiden). In diesen Fällen verursacht die App beim Auffinden einer falschen Version einen Fehler. Wir empfehlen statt einer Versionsprüfung eines der folgenden Verfahren:
 
 -   Wenn die App von bestimmten API-Funktionen abhängig ist, stellen Sie sicher, dass sie auf die richtige API-Version ausgerichtet ist.
--   Die Versionsnummer von ntddi (NT-Gerätetreiber Schnittstelle) wird nur erhöht, wenn sich die Ziel Funktionalität in der API ändert. Stellen Sie sicher, dass Sie die Änderung mithilfe von apiset oder einer anderen verfügbar gemachten API erkennen, wie Sie vom Featureteam erstellt wurde, und verwenden Sie die Version nicht als Proxy für ein Feature oder eine Korrektur. Wenn für bedeutende Änderungen keine ordnungsgemäße Prüfung verfügbar gemacht wird, liegt ein Fehler vor.
--   Stellen Sie sicher, dass die APP nicht auf ungerade Weise auf eine Version prüft, wie z. b. über die Registrierung, Dateiversionen, Offsets, Kernel Modus, Treiber oder andere Mittel. Wenn die APP unbedingt die Version überprüfen muss, verwenden Sie die GetVersion-APIs, die die Haupt-, neben-und Buildnummer zurückgeben.
--   Wenn Sie die GetVersion-API oder andere Versions Hilfsobjekte wie [verifyversioninfo](/windows/desktop/api/winbase/nf-winbase-verifyversioninfoa)verwenden, denken Sie daran, dass sich das Verhalten dieser API beginnend mit Windows 8.1 geändert hat. Weitere Informationen finden Sie in [der API-Dokumentation](../SysInfo/version-helper-apis.md) .
--   Wenn Sie apps wie Antischadsoftware oder Firewall besitzen, sollten Sie über ihre üblichen Feedback Kanäle und über das Windows Insider-Programm arbeiten.
+-   Die Versionsnummer von NTDDI (NT-Gerätetreiberschnittstelle) wird nur erhöht, wenn sich die Zielfunktionalität in der API ändert. Stellen Sie sicher, dass Sie die Änderung über APISet oder eine andere verfügbar gemachte API erkennen, die vom Featureteam erstellt wurde, und die Version nicht als Proxy für ein Feature oder eine Korrektur verwenden. Wenn für bedeutende Änderungen keine ordnungsgemäße Prüfung verfügbar gemacht wird, liegt ein Fehler vor.
+-   Stellen Sie sicher, dass die App NICHT auf ungerade Weise auf Version überprüft, z. B. über die Registrierung, Dateiversionen, Offsets, den Kernelmodus, Treiber oder andere Mittel. Wenn die App unbedingt die Version überprüfen muss, verwenden Sie die GetVersion-APIs, die die Haupt-, Neben- und Buildnummer zurückgeben sollten.
+-   Wenn Sie die GetVersion-API oder andere Versionshilfefunktionen wie [VerifyVersionInfo](/windows/desktop/api/winbase/nf-winbase-verifyversioninfoa)verwenden, denken Sie daran, dass sich das Verhalten dieser API ab dem Windows 8.1. Weitere Informationen finden [Sie in der API-Dokumentation.](../SysInfo/version-helper-apis.md)
+-   Wenn Sie Apps wie Antischadsoftware oder Firewall besitzen, sollten Sie ihre üblichen Feedbackkanäle und das Windows Insider-Programm verwenden.
 
-## <a name="declaring-windows-10-compatibility-with-an-app-manifest"></a>Deklarieren der Windows 10-Kompatibilität mit einem App-Manifest
+## <a name="declaring-windows-10-compatibility-with-an-app-manifest"></a>Deklarieren Windows 10 Kompatibilität mit einem App-Manifest
 
-Wenn Ihre APP mit Windows 10 kompatibel ist, kann Sie diese Tatsache im APP- [Manifest (ausführbare Datei)](/windows/compatibility/application-executable-manifest) für die ausführbare Datei der APP deklarieren. Dadurch wird dem System mitgeteilt, dass Ihre APP die System Versionsnummer 10,0 von Windows 10 versteht (sodass die GetVersion-API keine frühere Version zurückgibt). Außerdem kann das System andere Kompatibilitäts Verhalten deaktivieren, die auf apps angewendet werden, die keine Windows 10-Kompatibilität deklarieren.
+Wenn Ihre App mit Windows 10 kompatibel ist, kann sie diese Tatsache im [App-Manifest (ausführbares Manifest)](/windows/compatibility/application-executable-manifest) für die ausführbare Datei der App deklarieren. Dadurch wird dem System angezeigt, dass Ihre App die Systemversionsnummer 10.0 von Windows 10 versteht (sodass die GetVersion-API keine frühere Version zurück gibt) und das System auch andere Kompatibilitätsverhalten deaktivieren kann, die auf Apps angewendet werden, die keine Windows 10-Kompatibilität deklarieren.
 
-Um die Windows 10-Kompatibilität in einem App-Manifest zu deklarieren, müssen Sie einen [ **&lt; Kompatibilitäts &gt;** Abschnitt](../SbsCs/application-manifests.md#compatibility) des Manifests hinzufügen, sofern noch nicht vorhanden. Fügen Sie dann **&lt; SupportedOS &gt;** -Elemente für Windows 10 und jede andere Windows-Version hinzu, die von ihrer App unterstützt wird.
+Um Windows 10-Kompatibilität in einem App-Manifest zu deklarieren, [ **&lt; &gt;**](../SbsCs/application-manifests.md#compatibility) müssen Sie einen Kompatibilitätsabschnitt des Manifests hinzufügen, sofern noch nicht vorhanden, und dann **&lt; &gt; unterstützteOS-Elemente** für Windows 10 und jede andere Windows-Version hinzufügen, die Sie deklarieren möchten, dass Ihre App unterstützt.
 
-Das folgende Beispiel zeigt eine APP-Manifest-Datei für eine APP, die alle Versionen von Windows von Windows Vista bis Windows 10 unterstützt:
+Das folgende Beispiel zeigt eine App-Manifestdatei für eine App, die alle Versionen von Windows von Windows Vista bis Windows 10:
 
 ```XML
 <!-- example.exe.manifest -->
@@ -67,12 +67,12 @@ Das folgende Beispiel zeigt eine APP-Manifest-Datei für eine APP, die alle Vers
 </assembly>
 ```
 
-Die oben markierte Zeile `* ADD THIS LINE *` zeigt, wie Sie Ihre Anwendung für Windows 10 genau ausrichten können.
+Die oben markierte Zeile zeigt, wie Sie Ihre Anwendung genau auf `* ADD THIS LINE *` die Windows 10.
 
-Das Deklarieren der Unterstützung für Windows 10 in Ihrem App-Manifest hat keine Auswirkung, wenn Sie Ihre APP unter früheren Betriebssystemen ausführen.
+Das Deklarieren der Windows 10 in Ihrem App-Manifest hat keine Auswirkungen, wenn Sie Ihre App auf vorherigen Betriebssystemen ausführen.
 
 ## <a name="resources"></a>Ressourcen
 
--   [Download des Anwendungskompatibilitäts-Toolkits: Herunterladen des Windows ADK für Windows 10](https://download.microsoft.com/download/9/A/E/9AE69DD5-BA93-44E0-864E-180F5E700AB4/adk/adksetup.exe)
--   [Bekannte Kompatibilitäts Korrekturen, Kompatibilitäts Modi und AppHelp-Meldungen](/previous-versions/windows/it-pro/windows-7/cc765984(v=ws.10))
--   [API für Versions Hilfsprogramme](../sysinfo/version-helper-apis.md)
+-   [Download des Anwendungskompatibilitätstoolkits: Laden Sie das Windows ADK für Windows 10](https://download.microsoft.com/download/9/A/E/9AE69DD5-BA93-44E0-864E-180F5E700AB4/adk/adksetup.exe)
+-   [Bekannte Kompatibilitätskorrekturen, Kompatibilitätsmodi und AppHelp-Meldungen](/previous-versions/windows/it-pro/windows-7/cc765984(v=ws.10))
+-   [Versionshilfe-API](../sysinfo/version-helper-apis.md)

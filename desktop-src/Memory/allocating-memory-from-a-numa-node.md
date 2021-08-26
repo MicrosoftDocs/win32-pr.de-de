@@ -1,19 +1,19 @@
 ---
-description: Der folgende Beispielcode veranschaulicht die Verwendung der NUMA-Funktionen "getnumahighestnodenzuber", "getnumaprocessornode" und "virtualdepcexnuma".
+description: Der folgende Beispielcode veranschaulicht die Verwendung der NUMA-Funktionen GetNumaHighestNodeNumber, GetNumaProcessorNode und VirtualAllocExNuma.
 ms.assetid: df025b35-fb6b-4987-806e-9c76e6b130a1
-title: Belegen von Speicher aus einem NUMA-Knoten
+title: Zuordnen von Arbeitsspeicher aus einem NUMA-Knoten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5eb4a9af260c9d8b28a6bf83fa37744a85d5d4d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7d6f845b5b071b48561c18aab81848bee1bb36675bff1ca2f634b46c291f066
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078250"
 ---
-# <a name="allocating-memory-from-a-numa-node"></a>Belegen von Speicher aus einem NUMA-Knoten
+# <a name="allocating-memory-from-a-numa-node"></a>Zuordnen von Arbeitsspeicher aus einem NUMA-Knoten
 
-Der folgende Beispielcode veranschaulicht die Verwendung der NUMA-Funktionen " [**getnumahighestnodenzuber**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumahighestnodenumber)", " [**getnumaprocessornode**](/windows/win32/api/winbase/nf-winbase-getnumaprocessornode)" und " [**virtualdepcexnuma**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocexnuma)". Außerdem wird veranschaulicht, wie die [**queryworkingsettex**](/windows/win32/api/psapi/nf-psapi-queryworkingsetex) -Funktion verwendet wird, um den NUMA-Knoten abzurufen, auf dem Seiten zugeordnet werden.
+Der folgende Beispielcode veranschaulicht die Verwendung der NUMA-Funktionen [**GetNumaHighestNodeNumber**](/windows/win32/api/systemtopologyapi/nf-systemtopologyapi-getnumahighestnodenumber), [**GetNumaProcessorNode**](/windows/win32/api/winbase/nf-winbase-getnumaprocessornode)und [**VirtualAllocExNuma**](/windows/win32/api/memoryapi/nf-memoryapi-virtualallocexnuma). Außerdem wird die Verwendung der [**QueryWorkingSetEx-Funktion**](/windows/win32/api/psapi/nf-psapi-queryworkingsetex) zum Abrufen des NUMA-Knotens veranschaulicht, auf dem Seiten zugeordnet werden.
 
 
 ```C++

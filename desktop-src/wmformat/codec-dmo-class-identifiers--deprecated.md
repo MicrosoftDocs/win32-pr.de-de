@@ -1,9 +1,9 @@
 ---
-title: Codec-DMO-Klassen Bezeichner
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Codec-DMO-Klassen Bezeichner
+title: Codec DMO-Klassenbezeichner
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Codec DMO-Klassenbezeichner
 ms.assetid: 2e0f52b0-da22-4e1d-8ed5-842125a2daa7
 keywords:
-- Codec-DMO-Klassen Bezeichner Windows Media-Format
+- Codec DMO Klassenbezeichner windows Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 525b91c93a520dd0e68279768cce9e43b6ce8262
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d4907f0fbf1fcad38c3f619cdc42233acde8c9cc677b4b21872d5ec23e0cffb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961438"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007100"
 ---
-# <a name="codec-dmo-class-identifiers"></a>Codec-DMO-Klassen Bezeichner
+# <a name="codec-dmo-class-identifiers"></a>Codec DMO-Klassenbezeichner
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

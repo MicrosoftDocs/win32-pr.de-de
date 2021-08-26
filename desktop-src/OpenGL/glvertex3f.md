@@ -1,6 +1,6 @@
 ---
-title: glVertex3f-Funktion (GL. h)
-description: Gibt einen Scheitelpunkt an. | glVertex3f-Funktion (GL. h)
+title: glVertex3f-Funktion (Gl.h)
+description: Gibt einen Scheitelpunkt an. | glVertex3f-Funktion (Gl.h)
 ms.assetid: 9833ef82-1ac8-45d4-b3e0-9c06cb07862d
 keywords:
 - glVertex3f-Funktion OpenGL
@@ -14,12 +14,12 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23b891b4d982d41fa61fa2eccc341979d181635e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9a11d1ec244e02c15dbb17422e9b0371b3451114cb347cfb0c25d4dbdcb2622d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106355128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035970"
 ---
 # <a name="glvertex3f-function"></a>glVertex3f-Funktion
 
@@ -45,21 +45,21 @@ void WINAPI glVertex3f(
 *x* 
 </dt> <dd>
 
-Gibt die x-Koordinate eines Scheitel Punkts an.
+Gibt die x-Koordinate eines Scheitelpunkts an.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Gibt die y-Koordinate eines Scheitel Punkts an.
+Gibt die y-Koordinate eines Scheitelpunkts an.
 
 </dd> <dt>
 
-*z* 
+*Z* 
 </dt> <dd>
 
-Gibt die z-Koordinate eines Scheitel Punkts an.
+Gibt die Z-Koordinate eines Scheitelpunkts an.
 
 </dd> </dl>
 
@@ -67,9 +67,9 @@ Gibt die z-Koordinate eines Scheitel Punkts an.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die glVertex-Funktions Befehle werden innerhalb von [**glBegin**](glbegin.md)- / [**glEnd**](glend.md) -Paaren zum Angeben von Punkt-, Linien-und Polygon Scheitel Punkten verwendet. Die aktuellen Farben, normalen und Texturkoordinaten werden dem Scheitelpunkt zugeordnet, wenn glVertex aufgerufen wird. Wenn nur *x* und *y* angegeben werden, wird für *z* standardmäßig 0,0 und für *w* der Standardwert 1,0 verwendet. Wenn *x*, *y* und *z* angegeben werden, wird *der Standardwert* 1,0 verwendet. Das Aufrufen von glVertex außerhalb eines **glBegin**- / **glEnd** -Paars führt zu undefiniertem Verhalten.
+Die glVertex-Funktionsbefehle werden in [**glBegin**](glbegin.md) / [**glEnd-Paaren**](glend.md) verwendet, um Punkt-, Linien- und Polygonvertices anzugeben. Die aktuellen Farb-, Normal- und Texturkoordinaten werden dem Scheitelpunkt zugeordnet, wenn glVertex aufgerufen wird. Wenn nur *x* und *y angegeben* werden, *wird z* standardmäßig auf 0,0 und *w* auf 1,0 festgelegt. Wenn *x,* *y* und z angegeben *werden,* *wird w* standardmäßig auf 1,0 festgelegt. Das Aufrufen von glVertex außerhalb eines **glBegin** / **glEnd-Paars** führt zu nicht definiertem Verhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Die glVertex-Funktions Befehle werden innerhalb von [**glBegin**](glbegin.md)- /
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -95,31 +95,31 @@ Die glVertex-Funktions Befehle werden innerhalb von [**glBegin**](glbegin.md)- /
 [**glCallList**](glcalllist.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
-[**gledgeflag**](gledgeflag-functions.md)
+[**glEdgeFlag**](gledgeflag-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**glrect**](glrect-functions.md)
+[**glRect**](glrect-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> </dl>
 
  

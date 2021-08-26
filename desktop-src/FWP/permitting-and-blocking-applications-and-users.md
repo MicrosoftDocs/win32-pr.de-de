@@ -1,19 +1,19 @@
 ---
 title: Zulassen und Blockieren von Anwendungen und Benutzern
-description: Der folgende Beispielcode veranschaulicht, wie Sie einen Filter hinzufügen, der nach Benutzer-oder Anwendungs-ID ausgewertet wird.
+description: Der folgende Beispielcode veranschaulicht das Hinzufügen eines Filters, der nach Benutzer- oder Anwendungs-ID ausgewertet wird.
 ms.assetid: f1ca483e-cf60-499f-8a4a-29656ed9503a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f00ddd6f1d5f7a7515abbdb32047c530dd5c3db4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 8aa513809b294451235c5e14cf8b7c79bf41ca754b27134e9366ffce77b4c7cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078490"
 ---
 # <a name="permitting-and-blocking-applications-and-users"></a>Zulassen und Blockieren von Anwendungen und Benutzern
 
-Der folgende Beispielcode veranschaulicht, wie Sie einen Filter hinzufügen, der nach Benutzer-oder Anwendungs-ID ausgewertet wird.
+Der folgende Beispielcode veranschaulicht das Hinzufügen eines Filters, der nach Benutzer- oder Anwendungs-ID ausgewertet wird.
 
 
 ```C++
@@ -152,12 +152,12 @@ CLEANUP:
 
 <dl> <dt>
 
-[**Filterbedingungen, die auf jeder Filter Ebene verfügbar sind**](filtering-conditions-available-at-each-filtering-layer.md)
+[**Auf jeder Filterebene verfügbare Filterbedingungen**](filtering-conditions-available-at-each-filtering-layer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

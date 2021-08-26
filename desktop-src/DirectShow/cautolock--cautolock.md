@@ -1,7 +1,7 @@
 ---
-description: Dekonstruktormethode. Der Dekonstruktor entsperrt das Objekt des kritischen Abschnitts.
+description: Destruktormethode. Der Destruktor entsperrt das kritische Abschnittsobjekt.
 ms.assetid: 1148613e-03de-4c40-b7e5-cf5e9ca80f27
-title: Cautolock. ~ cautolock-debugtor (wxutil. h)
+title: CAutoLock.~CAutoLock-Destruktor (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4bace2c4a7c79755249e78fbecd0238e6f5961bd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 81ccad647e47f5805c8cdc7bc070c336864ec455275396631338d8265d5b144c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057530"
 ---
-# <a name="cautolockcautolock-destructor"></a>Cautolock. ~ cautolock-Dekonstruktor
+# <a name="cautolockcautolock-destructor"></a>CAutoLock.~CAutoLock-Destruktor
 
-Dekonstruktormethode. Der Dekonstruktor entsperrt das Objekt des kritischen Abschnitts.
+Destruktormethode. Der Destruktor entsperrt das kritische Abschnittsobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ Dekonstruktormethode. Der Dekonstruktor entsperrt das Objekt des kritischen Absc
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Dekonstruktormethode. Der Dekonstruktor entsperrt das Objekt des kritischen Absc
 
 <dl> <dt>
 
-[**Cautolock-Klasse**](cautolock.md)
+[**CAutoLock-Klasse**](cautolock.md)
 </dt> </dl>
 
  

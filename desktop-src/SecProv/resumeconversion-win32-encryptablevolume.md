@@ -1,7 +1,7 @@
 ---
-description: Nimmt die Verschlüsselung oder Entschlüsselung eines Volumes wieder auf.
+description: Setzt die Verschlüsselung oder Entschlüsselung eines Volumes fort.
 ms.assetid: e37f3e32-5510-431e-9782-11908e65300d
-title: Resumeconversion-Methode der Win32_EncryptableVolume-Klasse
+title: ResumeConversion-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: eafa700f86e51310096835e2f24b53a28e66f800
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1b3908f77b72f7f9a5ca0583193784ba054a50ab59aa63dad1c13b9f03317e5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992670"
 ---
-# <a name="resumeconversion-method-of-the-win32_encryptablevolume-class"></a>Resumeconversion-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="resumeconversion-method-of-the-win32_encryptablevolume-class"></a>ResumeConversion-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **resumeconversion** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " nimmt die Verschlüsselung oder Entschlüsselung eines Volumes wieder auf.
+Die **ResumeConversion-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) setzt die Verschlüsselung oder Entschlüsselung eines Volumes fort.
 
 > [!Note]  
-> Wenn die Festplatte die Hardware Verschlüsselung unterstützt, kann diese Funktion nur einen Zurücksetzungs Vorgang fortsetzen. Weitere Informationen finden Sie unter " [**pauseconversion**](pauseconversion-win32-encryptablevolume.md)".
+> Wenn der Datenträger die Hardwareverschlüsselung unterstützt, kann diese Funktion nur einen Zurücksetzungsvorgang fortsetzen. Weitere Informationen finden Sie unter [**PauseConversion**](pauseconversion-win32-encryptablevolume.md).
 
  
 
@@ -44,28 +44,28 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
+Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn er fehlschlägt.
 
-Wenn diese Methode auf einem vollständig verschlüsselten oder vollständig entschlüsselten Volume verwendet wird, oder wenn auf dem Volume bereits eine Verschlüsselung/Entschlüsselung ausgeführt wird, wird 0 zurückgegeben, wenn keine anderen Fehler auftreten.
+Wenn diese Methode auf einem vollständig verschlüsselten oder vollständig entschlüsselten Volume verwendet wird oder die Verschlüsselung/Entschlüsselung auf dem Volume bereits ausgeführt wird, wird 0 zurückgegeben, sofern keine anderen Fehler auftreten.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                                  | BESCHREIBUNG                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                  | Die Methode war erfolgreich.<br/> |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/>      |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl> | Das Volume ist gesperrt.<br/>      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode auf einem Volume mit angehaltenen Verschlüsselung/Entschlüsselung verwendet wird, bewirkt die erfolgreiche Ausführung dieser Methode, dass [**getkonversionstatus**](getconversionstatus-win32-encryptablevolume.md) anzeigt, dass die Verschlüsselung oder Entschlüsselung ausgeführt wird.
+Wenn diese Methode auf einem Volume mit angehaltener Verschlüsselung/Entschlüsselung verwendet wird, bewirkt die erfolgreiche Ausführung dieser Methode, dass [**GetConversionStatus**](getconversionstatus-win32-encryptablevolume.md) angibt, dass die Verschlüsselung oder Entschlüsselung ausgeführt wird.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,10 +73,10 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, nur Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CIMV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
@@ -84,7 +84,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

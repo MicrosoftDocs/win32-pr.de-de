@@ -1,7 +1,7 @@
 ---
-description: Die setwaiting-Methode erhöht die Anzahl der wartenden Threads.
+description: Die SetWaiting-Methode erhöht die Anzahl der wartenden Threads.
 ms.assetid: 4aec6177-fb32-44be-a58e-41a4f4aaf4f2
-title: Cbasezucator. setwaiting-Methode (amfilter. h)
+title: CBaseAllocator.SetWaiting-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 92cba22e128a76f7884050d74a7819142c696dc9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 674528b6da53b7835e437afac9a0564f91785b2f9a13f132e87a6763b80881c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057460"
 ---
-# <a name="cbaseallocatorsetwaiting-method"></a>Cbasezucator. setwaiting-Methode
+# <a name="cbaseallocatorsetwaiting-method"></a>CBaseAllocator.SetWaiting-Methode
 
-Die- `SetWaiting` Methode erhöht die Anzahl der wartenden Threads.
+Die `SetWaiting` -Methode erhöht die Anzahl der wartenden Threads.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode erhöht die Member-Variable [**cbasezucator:: m \_ lwaiting**](cbaseallocator-m-lwaiting.md) . Wenn ein Thread in der [**cbasezucator:: GetBuffer**](cbaseallocator-getbuffer.md) -Methode blockiert ist, ruft die Zuweisung auf `SetWaiting` und wartet dann darauf, dass das [**cbasezucator:: m \_ hsem**](cbaseallocator-m-hsem.md) -Semaphor signalisiert wird. Die [**cbasezucator:: ReleaseBuffer**](cbaseallocator-releasebuffer.md) -Methode signalisiert dem Semaphor und legt *m \_ lwaiting* auf NULL fest.
+Diese Methode erhöht die [**Membervariable CBaseAllocator::m \_ lWaiting.**](cbaseallocator-m-lwaiting.md) Wenn ein Thread in der [**CBaseAllocator::GetBuffer-Methode**](cbaseallocator-getbuffer.md) blockiert wird, ruft die Zuweisung auf `SetWaiting` und wartet dann, bis das [**CBaseAllocator::m \_ hSem-Semaphor**](cbaseallocator-m-hsem.md) signalisiert wird. Die [**CBaseAllocator::ReleaseBuffer-Methode**](cbaseallocator-releasebuffer.md) signalisiert das Semaphor und legt *m \_ lWaiting* wieder auf 0 (null) fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode erhöht die Member-Variable [**cbasezucator:: m \_ lwaiting**](cba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode erhöht die Member-Variable [**cbasezucator:: m \_ lwaiting**](cba
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

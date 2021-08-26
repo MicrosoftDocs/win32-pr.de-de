@@ -1,11 +1,11 @@
 ---
 title: Win32_TSAccount-Klasse
-description: Ermöglicht das Löschen eines Kontos, das im Win32-Terminal vorhanden ist, \_ sowie das Ändern vorhandener Berechtigungen.
+description: Ermöglicht das Löschen eines Kontos, das im Win32-Terminal vorhanden ist, und \_ das Ändern vorhandener Berechtigungen.
 ms.assetid: fd4d8a0f-685b-4619-84f1-faefbabd04ba
 ms.tgt_platform: multiple
 keywords:
-- Win32_TSAccount-Klasse Remotedesktopdienste
-- Win32_TSAccount Klasse Remotedesktopdienste, beschrieben
+- Win32_TSAccount-Remotedesktopdienste
+- Win32_TSAccount klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -28,18 +28,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10fed32943cf89728081e2443dfffe2e3762298d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 51dd20046f24f8dbe27d884b04d688b70629fd06509d7a7b5e5a492eb97087a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008529"
 ---
-# <a name="win32_tsaccount-class"></a>Win32-Klasse "- \_ Konto"
+# <a name="win32_tsaccount-class"></a>Win32 \_ TSAccount-Klasse
 
-Die WMI-Klasse für das **Win32- \_ Konto** ermöglicht das Löschen eines Kontos, das im [**Win32- \_ Terminal**](win32-terminal.md) vorhanden ist, und das Ändern vorhandener Berechtigungen.
+Die **WMI-Klasse Win32 \_ TSAccount** ermöglicht das Löschen eines Kontos, das im [**Win32-Terminal \_**](win32-terminal.md) vorhanden ist, und das Ändern vorhandener Berechtigungen.
 
-Die folgende Syntax wird aus dem MOF-Code vereinfacht und umfasst alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu-Methoden finden Sie in der Tabelle mit den Methoden weiter unten in diesem Thema.
+Die folgende Syntax wird von MOF-Code vereinfacht und enthält alle definierten und geerbten Eigenschaften in alphabetischer Reihenfolge. Referenzinformationen zu Methoden finden Sie in der Tabelle der Methoden weiter unten in diesem Thema.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,22 +64,22 @@ class Win32_TSAccount : Win32_TerminalSetting
 
 ## <a name="members"></a>Member
 
-Die Win32-Klasse " **\_ zaccount** " verfügt über diese Typen von Membern:
+Die **Win32 \_ TSAccount-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die Win32-Klasse " **\_ zaccount** " verfügt über diese Methoden.
+Die **Win32 \_ TSAccount-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                   | BESCHREIBUNG                                                                                  |
 |:-------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**Lösch**](win32-tsaccount-delete.md)                                 | Löscht den angegebenen Benutzer, die angegebene Gruppe oder das angegebene Computer Konto.<br/>                           |
-| [**Modifyauditberechtigungs-**](win32-tsaccount-modifyauditpermissions.md) | Ändert die Granularität des Satzes von Überwachungs Berechtigungen für das angegebene Konto.<br/> |
-| [**Modify-Berechtigungen**](win32-tsaccount-modifypermissions.md)           | Legt einen präziseteren Berechtigungs Satz für das angegebene Konto fest.<br/>                     |
+| [**Löschen**](win32-tsaccount-delete.md)                                 | Löscht das angegebene Benutzer-, Gruppen- oder Computerkonto.<br/>                           |
+| [**ModifyAuditPermissions**](win32-tsaccount-modifyauditpermissions.md) | Ändert die Granularität des Sets von Überwachungsberechtigungen des angegebenen Kontos.<br/> |
+| [**ModifyPermissions**](win32-tsaccount-modifypermissions.md)           | Legt einen präziseren Berechtigungssatz für das angegebene Konto fest.<br/>                     |
 
 
 
@@ -87,14 +87,14 @@ Die Win32-Klasse " **\_ zaccount** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_** -Klasse "-Konto" verfügt über diese Eigenschaften.
+Die **Win32 \_ TSAccount-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AccountName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -103,82 +103,82 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der aktuelle Name des Kontos. Der Domänen Name ist enthalten.
+Der aktuelle Name des Kontos. Der Domänenname ist enthalten.
 
 </dd> <dt>
 
-**Auditfail**
+**AuditFail**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die [Remotedesktop-Sitzungshost Services-Berechtigungen](terminal-services-permissions.md) an, die auf eine Fehlerbedingung überprüft werden. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere Werte der **permissionsallowed** -Eigenschaft festgelegt werden kann.
+Gibt die Remotedesktop-Sitzungshost [Services-Berechtigungen an,](terminal-services-permissions.md) die auf eine Fehlerbedingung überwacht werden. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere Werte der **PermissionsAllowed-Eigenschaft festgelegt werden** kann.
 
 <dt>
 
 <span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>
 
-**WinStation \_ Abfrage = 0x1** (0)
+**WINSTATION \_ QUERY=0x1** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SET_0x2"></span><span id="winstation_set_0x2"></span><span id="WINSTATION_SET_0X2"></span>
 
-**WinStation \_ Set = 0x2** (1)
+**WINSTATION \_ SET=0x2** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGOFF_0x4"></span><span id="winstation_logoff_0x4"></span><span id="WINSTATION_LOGOFF_0X4"></span>
 
-**WinStation \_ Abmeldung = 0x4** (2)
+**WINSTATION \_ LOGOFF=0x4** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0xF008"></span><span id="winstation_virtual___standard_rights_required___0xf008"></span><span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0XF008"></span>
 
-**WinStation \_ \| Erforderliche virtuelle Standard \_ Rechte \_ = 0xF 008** (3)
+**WINSTATION \_ VIRTUAL \| STANDARD RIGHTS REQUIRED = \_ \_ 0xF008** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SHADOW_0x10"></span><span id="winstation_shadow_0x10"></span><span id="WINSTATION_SHADOW_0X10"></span>
 
-**WinStation \_ Shadow = 0x10** (4)
+**WINSTATION \_ SHADOW=0x10** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGON_0x20"></span><span id="winstation_logon_0x20"></span><span id="WINSTATION_LOGON_0X20"></span>
 
-**WinStation \_ Login = 0x20** (5)
+**WINSTATION \_ LOGON=0x20** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_MSG_0x80"></span><span id="winstation_msg_0x80"></span><span id="WINSTATION_MSG_0X80"></span>
 
-**WinStation \_ MSG = 0x80** (6)
+**WINSTATION \_ MSG=0x80** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_CONNECT_0x100"></span><span id="winstation_connect_0x100"></span><span id="WINSTATION_CONNECT_0X100"></span>
 
-**WinStation \_ Connect = 0x100** (7)
+**WINSTATION \_ CONNECT=0x100** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_DISCONNECT_0x200"></span><span id="winstation_disconnect_0x200"></span><span id="WINSTATION_DISCONNECT_0X200"></span>
 
-**WinStation \_ Disconnect = 0x200** (8)
+**WINSTATION \_ DISCONNECT=0x200** (8)
 
 
 </dt> <dd></dd> </dl>
@@ -188,68 +188,68 @@ Gibt die [Remotedesktop-Sitzungshost Services-Berechtigungen](terminal-services-
 **AuditSuccess**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die auf eine Erfolgs Bedingung überprüft werden. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere Werte der **permissionsallowed** -Eigenschaft festgelegt werden kann.
+Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die auf eine Erfolgsbedingung überwacht werden. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere Werte der **PermissionsAllowed-Eigenschaft festgelegt werden** kann.
 
 <dt>
 
 <span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>
 
-**WinStation \_ Abfrage = 0x1** (0)
+**WINSTATION \_ QUERY=0x1** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SET_0x2"></span><span id="winstation_set_0x2"></span><span id="WINSTATION_SET_0X2"></span>
 
-**WinStation \_ Set = 0x2** (1)
+**WINSTATION \_ SET=0x2** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGOFF_0x4WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0xF008"></span><span id="winstation_logoff_0x4winstation_virtual___standard_rights_required___0xf008"></span><span id="WINSTATION_LOGOFF_0X4WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0XF008"></span>
 
-**WinStation \_ Abmeldung = 0x4winstation \_ virtuelle \| Standard \_ Rechte \_ erforderlich = 0xF 008** (2)
+**WINSTATION \_ LOGOFF=0x4WINSTATION \_ VIRTUAL STANDARD RIGHTS REQUIRED = \| \_ \_ 0xF008** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SHADOW_0x10"></span><span id="winstation_shadow_0x10"></span><span id="WINSTATION_SHADOW_0X10"></span>
 
-**WinStation \_ Shadow = 0x10** (3)
+**WINSTATION \_ SHADOW=0x10** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGON_0x20"></span><span id="winstation_logon_0x20"></span><span id="WINSTATION_LOGON_0X20"></span>
 
-**WinStation \_ Login = 0x20** (4)
+**WINSTATION \_ LOGON=0x20** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_MSG_0x80"></span><span id="winstation_msg_0x80"></span><span id="WINSTATION_MSG_0X80"></span>
 
-**WinStation \_ MSG = 0x80** (5)
+**WINSTATION \_ MSG=0x80** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_CONNECT_0x100"></span><span id="winstation_connect_0x100"></span><span id="WINSTATION_CONNECT_0X100"></span>
 
-**WinStation \_ Connect = 0x100** (6)
+**WINSTATION \_ CONNECT=0x100** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_DISCONNECT_0x200"></span><span id="winstation_disconnect_0x200"></span><span id="WINSTATION_DISCONNECT_0X200"></span>
 
-**WinStation \_ Disconnect = 0x200** (7)
+**WINSTATION \_ DISCONNECT=0x200** (7)
 
 
 </dt> <dd></dd> </dl>
@@ -259,25 +259,25 @@ Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die auf eine Erfo
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Beschreibung (einzeilige Zeichenfolge) des-Objekts.
+Kurze Beschreibung (einzeilenbasierte Zeichenfolge) des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -285,32 +285,32 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 ")
+Qualifizierer: [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5")
 </dt> </dl>
 
-Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Das Datum, an dem das Objekt installiert wurde. Ein fehlender Wert gibt nicht an, dass das Objekt nicht installiert ist.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -318,37 +318,37 @@ Zugriffstyp: Schreibgeschützt
 
 Der Name des Objekts.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Permissionsallowed**
+**BerechtigungenAllowed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die für das Konto zulässigen [Remotedesktopdienste Berechtigungen](terminal-services-permissions.md) an. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere der folgenden Werte festgelegt werden kann.
+Gibt die Remotedesktopdienste [Berechtigungen an,](terminal-services-permissions.md) die für das Konto zulässig sind. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere der folgenden Werte festgelegt werden kann.
 
 <dt>
 
 <span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>
 
-<span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>**WinStation \_ Abfrage = 0x1** (1)
+<span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>**WINSTATION \_ QUERY=0x1** (1)
 
 
 </dt> <dd>
 
-Berechtigung zum Abfragen von Informationen über eine Sitzung.
+Berechtigung zum Abfragen von Informationen zu einer Sitzung.
 
 </dd> <dt>
 
 <span id="WINSTATION_SET"></span><span id="winstation_set"></span>
 
-<span id="WINSTATION_SET"></span><span id="winstation_set"></span>**WinStation \_ Set** (2)
+<span id="WINSTATION_SET"></span><span id="winstation_set"></span>**WINSTATION \_ SET** (2)
 
 
 </dt> <dd>
@@ -359,40 +359,40 @@ Berechtigung zum Ändern von Verbindungsparametern.
 
 <span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>
 
-<span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>**WinStation \_ Zurücksetzen** (64)
+<span id="WINSTATION_RESET"></span><span id="winstation_reset"></span>**WINSTATION \_ RESET** (64)
 
 
 </dt> <dd>
 
-Berechtigung zum Zurücksetzen oder Beenden einer Sitzung oder einer Verbindung.
+Berechtigung zum Zurücksetzen oder Beenden einer Sitzung oder Verbindung.
 
 </dd> <dt>
 
 <span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>
 
-<span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>**WinStation \_ \| \_ \_ Erforderliche virtuelle Standard Rechte** (983048)
+<span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED"></span><span id="winstation_virtual___standard_rights_required"></span>**WINSTATION \_ VIRTUAL \| STANDARD \_ RIGHTS \_ REQUIRED** (983048)
 
 
 </dt> <dd>
 
-Berechtigung zum Verwenden von virtuellen Kanälen. Virtuelle Kanäle ermöglichen den Zugriff von einem Serverprogramm auf Client Geräte.
+Berechtigung zum Verwenden virtueller Kanäle. Virtuelle Kanäle ermöglichen den Zugriff von einem Serverprogramm auf Clientgeräte.
 
 </dd> <dt>
 
 <span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>
 
-<span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>**WinStation \_ Schatten** (16)
+<span id="WINSTATION_SHADOW"></span><span id="winstation_shadow"></span>**WINSTATION \_ SHADOW** (16)
 
 
 </dt> <dd>
 
-Berechtigung, um die Sitzung eines anderen Benutzers zu überschatten oder Remote zu steuern.
+Berechtigung zum Überschatten oder Remotesteuerung der Sitzung eines anderen Benutzers.
 
 </dd> <dt>
 
 <span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>
 
-<span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>**WinStation \_ Anmelden** (32)
+<span id="WINSTATION_LOGON"></span><span id="winstation_logon"></span>**WINSTATION \_ LOGON** (32)
 
 
 </dt> <dd>
@@ -403,29 +403,29 @@ Berechtigung zum Anmelden bei einer Sitzung auf dem Server.
 
 <span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>
 
-<span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>**WinStation \_ Abmeldung (4** )
+<span id="WINSTATION_LOGOFF"></span><span id="winstation_logoff"></span>**WINSTATION \_ LOGOFF** (4)
 
 
 </dt> <dd>
 
-Berechtigung zum Abmelden eines Benutzers von einer Sitzung.
+Berechtigung zum Abmelden eines Benutzers aus einer Sitzung.
 
 </dd> <dt>
 
 <span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>
 
-<span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>**WinStation \_ Meldung (128** )
+<span id="WINSTATION_MSG"></span><span id="winstation_msg"></span>**WINSTATION \_ MSG** (128)
 
 
 </dt> <dd>
 
-Die Berechtigung zum Senden einer Nachricht an die Sitzung eines anderen Benutzers.
+Berechtigung zum Senden einer Nachricht an die Sitzung eines anderen Benutzers.
 
 </dd> <dt>
 
 <span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>
 
-<span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>**WinStation \_ Verbinden** (256)
+<span id="WINSTATION_CONNECT"></span><span id="winstation_connect"></span>**WINSTATION \_ CONNECT** (256)
 
 
 </dt> <dd>
@@ -436,7 +436,7 @@ Berechtigung zum Herstellen einer Verbindung mit einer anderen Sitzung.
 
 <span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>
 
-<span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>**WinStation \_ Verbindung trennen** (512)
+<span id="WINSTATION_DISCONNECT"></span><span id="winstation_disconnect"></span>**WINSTATION \_ DISCONNECT** (512)
 
 
 </dt> <dd>
@@ -447,78 +447,78 @@ Berechtigung zum Trennen einer Sitzung.
 
 </dd> <dt>
 
-**Permissionsverweigert**
+**PermissionsDenied**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die für das Konto nicht zulässig sind. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere Werte der **permissionsallowed** -Eigenschaft festgelegt werden kann.
+Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die für das Konto nicht zulässig sind. Der Wert dieser Eigenschaft ist eine Bitmaske, die auf einen oder mehrere der Werte der **PermissionsAllowed-Eigenschaft** festgelegt werden kann.
 
 <dt>
 
 <span id="WINSTATION_QUERY_0x1"></span><span id="winstation_query_0x1"></span><span id="WINSTATION_QUERY_0X1"></span>
 
-**WinStation \_ Abfrage = 0x1** (0)
+**WINSTATION \_ QUERY=0x1** (0)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SET_0x2"></span><span id="winstation_set_0x2"></span><span id="WINSTATION_SET_0X2"></span>
 
-**WinStation \_ Set = 0x2** (1)
+**WINSTATION \_ SET=0x2** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGOFF_0x4"></span><span id="winstation_logoff_0x4"></span><span id="WINSTATION_LOGOFF_0X4"></span>
 
-**WinStation \_ Abmeldung = 0x4** (2)
+**WINSTATION \_ LOGOFF=0x4** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0xF008"></span><span id="winstation_virtual___standard_rights_required___0xf008"></span><span id="WINSTATION_VIRTUAL___STANDARD_RIGHTS_REQUIRED___0XF008"></span>
 
-**WinStation \_ \| Erforderliche virtuelle Standard \_ Rechte \_ = 0xF 008** (3)
+**WINSTATION \_ VIRTUAL \| STANDARD RIGHTS REQUIRED = \_ \_ 0xF008** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_SHADOW_0x10"></span><span id="winstation_shadow_0x10"></span><span id="WINSTATION_SHADOW_0X10"></span>
 
-**WinStation \_ Shadow = 0x10** (4)
+**WINSTATION \_ SHADOW=0x10** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_LOGON_0x20"></span><span id="winstation_logon_0x20"></span><span id="WINSTATION_LOGON_0X20"></span>
 
-**WinStation \_ Login = 0x20** (5)
+**WINSTATION \_ LOGON=0x20** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_MSG_0x80"></span><span id="winstation_msg_0x80"></span><span id="WINSTATION_MSG_0X80"></span>
 
-**WinStation \_ MSG = 0x80** (6)
+**WINSTATION \_ MSG=0x80** (6)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_CONNECT_0x100"></span><span id="winstation_connect_0x100"></span><span id="WINSTATION_CONNECT_0X100"></span>
 
-**WinStation \_ Connect = 0x100** (7)
+**WINSTATION \_ CONNECT=0x100** (7)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WINSTATION_DISCONNECT_0x200"></span><span id="winstation_disconnect_0x200"></span><span id="WINSTATION_DISCONNECT_0X200"></span>
 
-**WinStation \_ Disconnect = 0x200** (8)
+**WINSTATION \_ DISCONNECT=0x200** (8)
 
 
 </dt> <dd></dd> </dl>
@@ -528,29 +528,29 @@ Gibt die RD-Sitzungshost serverspezifischen Berechtigungen an, die für das Kont
 **SID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die [Sicherheits](/windows/desktop/SecAuthZ/security-identifiers) -IDs des Kontos an.
+Gibt die [Sicherheits-IDs](/windows/desktop/SecAuthZ/security-identifiers) des Kontos an.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -614,10 +614,10 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 
 </dd> <dt>
 
-**Terminal Name**
+**TerminalName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -629,9 +629,9 @@ Diese Eigenschaft wird von [**Win32 \_ TerminalSetting**](win32-terminalsetting.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Herstellen einer Verbindung mit dem \\ root \\ CIMV2 \\ TerminalServices-Namespace muss die Authentifizierungs Ebene den Datenschutz für das Paket enthalten. Bei C/C++-aufrufen wäre dies eine Authentifizierungs Ebene der **RPC- \_ c- \_ authn- \_ Ebene \_ Pkt- \_ Datenschutz**. Bei Visual Basic-und Skript aufrufen wäre dies eine Authentifizierungs Ebene von **wbemauthenticationlevelpktprivacy** oder "PKTPRIVACY" mit einem Wert von 6. Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird gezeigt, wie eine Verbindung mit einem Remote Computer mit Paket Datenschutz hergestellt wird.
+Um eine Verbindung mit dem \\ \\ CIMV2 \\ TerminalServices-Stammnamespace herzustellen, muss die Authentifizierungsebene Paketdatenschutz enthalten. Bei C/C++-Aufrufen wäre dies eine Authentifizierungsebene von **RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY**. Bei Visual Basic- und Skriptaufrufen wäre dies die Authentifizierungsebene **WbemAuthenticationLevelPktPrivacy** oder "pktPrivacy" mit dem Wert 6. Das folgende Beispiel Visual Basic Scripting Edition (VBScript) zeigt, wie Sie eine Verbindung mit einem Remotecomputer mit Paketschutz herstellen.
 
 
 ```VB
@@ -642,7 +642,7 @@ Set objServices = GetObject( _
 
 
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für WMI-Klassen (Windows Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -653,7 +653,7 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 

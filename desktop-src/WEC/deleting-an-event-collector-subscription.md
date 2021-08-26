@@ -1,34 +1,34 @@
 ---
-title: Löschen eines Ereignis Sammler Abonnements
-description: Sie können ein Ereignis Sammler Abonnement von einem lokalen Computer löschen.
+title: Löschen eines Ereignissammlerabonnements
+description: Sie können ein Ereignissammlerabonnement von einem lokalen Computer löschen.
 ms.assetid: d3102149-906d-4286-85c8-e5b1eb6dd382
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 47cec036625bbb94e33e71af0f1d9808ad9252a4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9edf2f9dda2b6393ab147d5f58ff8f889952eaeb7f31f82080558697f117f3c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006090"
 ---
-# <a name="deleting-an-event-collector-subscription"></a>Löschen eines Ereignis Sammler Abonnements
+# <a name="deleting-an-event-collector-subscription"></a>Löschen eines Ereignissammlerabonnements
 
-Sie können ein Ereignis Sammler Abonnement von einem lokalen Computer löschen. Sie müssen den Namen des Abonnements kennen, bevor Sie es löschen können. Weitere Informationen zum Auflisten der aktuellen Abonnements auf einem lokalen Computer finden Sie unter Auflisten von [Event Collector-Abonnements](listing-event-collector-subscriptions.md), oder geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
+Sie können ein Ereignissammlerabonnement von einem lokalen Computer löschen. Sie müssen den Namen des Abonnements kennen, bevor Sie es löschen können. Weitere Informationen zum Auflisten der aktuellen Abonnements auf einem lokalen Computer finden Sie unter Auflisten von [Ereignissammlerabonnements,](listing-event-collector-subscriptions.md)oder geben Sie den folgenden Befehl an der Eingabeaufforderung ein:
 
-**wecutil**
+**wecutil es**
 
 > [!Note]
 >
-> Sie können dieses Beispiel verwenden, um ein Ereignis Sammler Abonnement zu löschen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
+> Sie können dieses Beispiel verwenden, um ein Ereignissammlerabonnement zu löschen, oder Sie können den folgenden Befehl an der Eingabeaufforderung eingeben:
 >
-> *Abonnement Name* für **wecutil DS**
+> **wecutil ds** *SubscriptionName*
 
- 
+ 
 
-Nachdem Sie den Namen des zu löschenden Event Collector-Abonnements abgerufen haben, können Sie den Namen des Abonnements als Parameter für [**ecdelta etesubdesigniangeben**](/windows/desktop/api/Evcoll/nf-evcoll-ecdeletesubscription).
+Nachdem Sie den Namen des zu löschenden Event Collector-Abonnements abgerufen haben, können Sie den Namen des Abonnements als Parameter für [**EcDeleteSubscription**](/windows/desktop/api/Evcoll/nf-evcoll-ecdeletesubscription)angeben.
 
-Im folgenden C++-Codebeispiel wird veranschaulicht, wie ein Ereignis Sammler Abonnement gelöscht wird.
+Das folgende C++-Codebeispiel zeigt, wie Sie ein Ereignissammlerabonnement löschen.
 
 
 ```C++
@@ -78,15 +78,15 @@ void __cdecl wmain()
 
 <dl> <dt>
 
-[Auflisten von Event Collector-Abonnements](listing-event-collector-subscriptions.md)
+[Auflisten von Ereignissammlerabonnements](listing-event-collector-subscriptions.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

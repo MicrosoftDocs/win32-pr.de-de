@@ -1,26 +1,26 @@
 ---
-title: Rotation-Attribut (Lock) (VML)
-description: Rotation-Attribut (Lock) (VML)
+title: Rotationsattribut (Lock)(VML)
+description: Rotationsattribut (Lock)(VML)
 ms.assetid: eed5388e-9e05-473c-9213-af63473deaaa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d8514881c90c1489e09c85af16a26cc0cf538a6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 47717f09ac20d4b5250041157cab5ca323497031cc1ea81fb0a8d4bdb26ac16e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104517078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007490"
 ---
-# <a name="rotation-attribute-lockvml"></a>Rotation-Attribut (Lock) (VML)
+# <a name="rotation-attribute-lockvml"></a>Rotationsattribut (Lock)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Drehung von Formen in einem Editor zulässig ist. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob die Drehung von Formen in einem Editor zulässig ist. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Bestimmt, ob die Drehung von Formen in einem Editor zulässig ist. Lese-/Schreib
 
 **Tagsyntax**
 
-<o: *Element* Rotation = " *Ausdruck* " >
+<o: *element* rotation=" *ausdruck* ">
 
 **Anmerkungen**
 
-**True** gibt an, dass die Rotation von Formen in einem Editor nicht zulässig ist. Der Standardwert ist **False**.
+True **gibt an,** dass die Drehung von Formen in einem Editor nicht zulässig ist. Der Standardwert ist **False**.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

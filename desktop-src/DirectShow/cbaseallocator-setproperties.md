@@ -1,7 +1,7 @@
 ---
-description: 'Die SetProperties-Methode gibt die Anzahl der zuzuordnenden Puffer und die Größe der einzelnen Puffer an. Diese Methode implementiert die imemzuzucator:: SetProperties-Methode.'
+description: Die SetProperties-Methode gibt die Anzahl der zuzuordnenden Puffer und die Größe der einzelnen Puffer an. Diese Methode implementiert die IMemAllocator::SetProperties-Methode.
 ms.assetid: f53c22a4-c01d-4d2f-81f0-bedf8f2ae5f0
-title: Cbasezucator. SetProperties-Methode (amfilter. h)
+title: CBaseAllocator.SetProperties-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 000da3ee359ad727e3af972fc4aa6d0dbbb9133e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d81ee1c29f1c9e2cc9927f926144a7427b5e94f72406f94ce65f7d4a20e2ab32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057480"
 ---
-# <a name="cbaseallocatorsetproperties-method"></a>Cbasezucator. SetProperties-Methode
+# <a name="cbaseallocatorsetproperties-method"></a>CBaseAllocator.SetProperties-Methode
 
-Die `SetProperties` -Methode gibt die Anzahl der zuzuordnenden Puffer und die Größe der einzelnen Puffer an. Diese Methode implementiert die [**imemzuzucator:: SetProperties**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-setproperties) -Methode.
+Die `SetProperties` -Methode gibt die Anzahl der zuzuordnenden Puffer und die Größe jedes Puffers an. Diese Methode implementiert die [**IMemAllocator::SetProperties-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-setproperties)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,42 +46,42 @@ HRESULT SetProperties(
 *pRequest* 
 </dt> <dd>
 
-Zeiger auf eine [**\_ zuordnereigenschafts**](/windows/win32/api/strmif/ns-strmif-allocator_properties) -Struktur, die die Puffer Anforderungen enthält.
+Zeiger auf eine [**ALLOCATOR \_ PROPERTIES-Struktur,**](/windows/win32/api/strmif/ns-strmif-allocator_properties) die die Pufferanforderungen enthält.
 
 </dd> <dt>
 
-*pactual* 
+*pActual* 
 </dt> <dd>
 
-Ein Zeiger auf eine **\_ zuordnereigenschafts** -Struktur, die die tatsächlichen Puffer Eigenschaften empfängt.
+Zeiger auf eine **ALLOCATOR \_ PROPERTIES-Struktur,** die die tatsächlichen Puffereigenschaften empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                 | Beschreibung                                                           |
 |-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                        | Erfolg.<br/>                                                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                   | **Null** -Zeigerargument.<br/>                                 |
-| <dl> <dt>**VFW \_ E \_ \_ hat bereits ein Commit ausgeführt**</dt> </dl>   | Der zugewiesene Arbeitsspeicher kann nicht geändert werden, solange der Filter aktiv ist.<br/> |
-| <dl> <dt>**VFW \_ E \_ badalign**</dt> </dl>             | Es wurde eine ungültige Ausrichtung angegeben.<br/>                        |
-| <dl> <dt>**ausstehende VFW \_ E- \_ Puffer \_**</dt> </dl> | Mindestens ein Puffer ist noch aktiv.<br/>                      |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>                   | **NULL-Zeigerargument.**<br/>                                 |
+| <dl> <dt>**VFW \_ E \_ ALREADY \_ COMMITTED**</dt> </dl>   | Der zugeordnete Arbeitsspeicher kann nicht geändert werden, während der Filter aktiv ist.<br/> |
+| <dl> <dt>**VFW \_ E \_ BADALIGN**</dt> </dl>             | Es wurde eine ungültige Ausrichtung angegeben.<br/>                        |
+| <dl> <dt>**VFW \_ E \_ BUFFERS \_ OUTSTANDING**</dt> </dl> | Mindestens ein Puffer ist noch aktiv.<br/>                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt die Puffer Anforderungen an, weist jedoch keine Puffer zu. Nennen Sie die [**cbaseallocator:: Commit**](cbaseallocator-commit.md) -Methode, um Puffer zuzuweisen.
+Diese Methode gibt die Pufferanforderungen an, ordnet jedoch keine Puffer zu. Rufen Sie die [**CBaseAllocator::Commit-Methode**](cbaseallocator-commit.md) auf, um Puffer zuzuordnen.
 
-Der Aufrufer ordnet zwei \_ zuordnereigenschafts-Strukturen zu. Der *pRequest* -Parameter enthält die Puffer Anforderungen des Aufrufers, einschließlich der Anzahl der Puffer und der Größe der einzelnen Puffer. Wenn die Methode zurückgibt, enthält der *pactual* -Parameter die tatsächlichen Puffer Eigenschaften, wie von der Zuweisung festgelegt. In der Basisklasse entsprechen die tatsächlichen Eigenschaften immer den angeforderten Eigenschaften, wenn Sie davon ausgehen, dass die Methode erfolgreich ist. Abgeleitete Klassen können dieses Verhalten überschreiben.
+Der Aufrufer ordnet zwei ALLOCATOR \_ PROPERTIES-Strukturen zu. Der *pRequest-Parameter* enthält die Pufferanforderungen des Aufrufers, einschließlich der Anzahl der Puffer und der Größe jedes Puffers. Wenn die Methode zurückgegeben wird, enthält der *pActual-Parameter* die tatsächlichen Puffereigenschaften, die von der Zuweisung festgelegt werden. In der Basisklasse stimmen die tatsächlichen Eigenschaften immer mit den angeforderten Eigenschaften überein, sofern die Methode erfolgreich ist. Abgeleitete Klassen können dieses Verhalten überschreiben.
 
-Für die Zuweisung darf kein Commit ausgeführt werden, und es dürfen keine ausstehenden Puffer vorhanden sein. In der Basisklasse muss die Ausrichtung gleich 1 sein. Die [**cmemzuordcator**](cmemallocator.md) -Klasse überschreibt diese Anforderung.
+Für die Zuweisung darf kein Commit ausgeführt werden, und es dürfen keine ausstehenden Puffer vorhanden sein. In der Basisklasse muss die Ausrichtung gleich 1 sein. Die [**CMemAllocator-Klasse**](cmemallocator.md) überschreibt diese Anforderung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,8 +89,8 @@ Für die Zuweisung darf kein Commit ausgeführt werden, und es dürfen keine aus
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -98,7 +98,7 @@ Für die Zuweisung darf kein Commit ausgeführt werden, und es dürfen keine aus
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

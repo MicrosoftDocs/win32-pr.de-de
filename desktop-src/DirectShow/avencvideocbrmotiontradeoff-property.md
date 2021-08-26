@@ -1,29 +1,29 @@
 ---
-description: Gibt den Kompromiss zwischen Bewegung und noch Bildern an. Diese Eigenschaft gilt nur für den Modus für die Konstante Bitrate (CBR).
+description: Gibt den Kompromiss zwischen Bewegungs- und Stillbildern an. Diese Eigenschaft gilt nur für den Steuerungsmodus mit konstanter Bitrate (CONSTANT Bit Rate, CBR).
 ms.assetid: e657e971-4624-4c87-ad51-6bf0cd1f9246
-title: Avencvideocbrmutiontradeoff-Eigenschaft (codecapi. h)
+title: AVEncVideoCBRMotionMotionMotionoff-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b746559f48858f995cbd87184a2f13ada33db7c4
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 21d3db1f310de6468b57d469fbf699919ab86429e7242344622ca498b9e59f39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057940"
 ---
-# <a name="avencvideocbrmotiontradeoff-property"></a>Avencvideocbrmutiontradeoff (Eigenschaft)
+# <a name="avencvideocbrmotiontradeoff-property"></a>AVEncVideoCBRMotionMotionMotionoff (Eigenschaft)
 
-Gibt den Kompromiss zwischen Bewegung und noch Bildern an. Diese Eigenschaft gilt nur für den Modus für die Konstante Bitrate (CBR).
+Gibt den Kompromiss zwischen Bewegungs- und Stillbildern an. Diese Eigenschaft gilt nur für den Steuerungsmodus mit konstanter Bitrate (CONSTANT Bit Rate, CBR).
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencvideocbrmutiontradeoff**
+**CODECAPI \_ AVEncVideoCBRMotionMotionMotionoff**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
@@ -33,8 +33,8 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
 | Wert | BESCHREIBUNG               |
 |-------|---------------------------|
-| 0     | Für Images optimieren |
-| 100   | Für Bewegung optimieren.      |
+| 0     | Optimieren für Still-Images |
+| 100   | Optimieren sie für Bewegung.      |
 
 
 
@@ -46,9 +46,9 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -56,10 +56,10 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-title: Code Beispiel für das glx-Pixel Format
-description: Das folgende Codebeispiel zeigt, wie ein X-Window-System-OpenGL-Programmfunktionen für die visuelle und Pixel Formatierung von glx verwendet.
+title: GLX-Pixelformatcodebeispiel
+description: Das folgende Codebeispiel zeigt, wie ein X Window System OpenGL-Programm GLX-Visual-/Pixelformatierungsfunktionen verwendet.
 ms.assetid: f01193a9-c0ff-4399-a86e-06bb4603b3f1
 keywords:
-- Portieren auf OpenGL, Pixel
-- OpenGL-portieren, Pixel
-- X-Fenster System, Pixel
-- Glx-Funktionen, Pixel
-- Pixel, glx-Beispiel
+- Portieren zu OpenGL, Pixel
+- OpenGL-Portierung, Pixel
+- X-Fenstersystem, Pixel
+- GLX-Funktionen, Pixel
+- Pixel, GLX-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f0ab6464d54e696c136a6c987b94124f52b0ee2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 312b95fb2ff4719c9ecda863b67ac926905b09d0e4b8aecbcc673a03c18c307a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035386"
 ---
-# <a name="glx-pixel-format-code-sample"></a>Code Beispiel für das glx-Pixel Format
+# <a name="glx-pixel-format-code-sample"></a>GLX-Pixelformatcodebeispiel
 
-Das folgende Codebeispiel zeigt, wie ein X-Window-System-OpenGL-Programmfunktionen für die visuelle und Pixel Formatierung von glx verwendet.
+Das folgende Codebeispiel zeigt, wie ein X Window System OpenGL-Programm GLX-Visual-/Pixelformatierungsfunktionen verwendet.
 
 
 ```C++
@@ -38,11 +38,11 @@ static int attributes[] = {GLX_DEPTH_SIZE, 16, GLX_DOUBLEBUFFER, None};
 
 
 
-Das visuelle Element kann verwendet werden, um ein Fenster und einen renderingkontext zu erstellen.
+Das Visual kann verwendet werden, um ein Fenster und einen Renderingkontext zu erstellen.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,34 +1,34 @@
 ---
-title: Schnittstellen Entwicklung mithilfe von Kontext Handles
-description: In der Regel erstellen Sie ein Kontext Handle, indem Sie das \ Context \_ handle \-Attribut für eine Typdefinition in der IDL-Datei angeben.
+title: Schnittstellenentwicklung mit Kontexthandles
+description: In der Regel erstellen Sie ein Kontexthandle, indem Sie das \_ \context handle\-Attribut für eine Typdefinition in der IDL-Datei angeben.
 ms.assetid: e4caf91f-f92d-4aef-a20f-0a3073230640
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8474d533b27ba1543a9d522dfa4478d306b33cf2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 77e65e36384bda3d81526d5891eca92a77a67402e7cd3aa7af8b61e061a9d3b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020470"
 ---
-# <a name="interface-development-using-context-handles"></a>Schnittstellen Entwicklung mithilfe von Kontext Handles
+# <a name="interface-development-using-context-handles"></a>Schnittstellenentwicklung mit Kontexthandles
 
-In der Regel erstellen Sie ein Kontext Handle, indem Sie das \[ [**Kontext \_ handle**](/windows/desktop/Midl/context-handle) - \] Attribut für eine Typdefinition in der IDL-Datei angeben. Die Typdefinition gibt auch implizit eine Kontext-Lauf Ablaufroutine an, die Sie bereitstellen müssen. Wenn die Kommunikation zwischen dem Client und dem Server unterbrochen wird, ruft die Server Laufzeit diese Routine auf, um alle erforderlichen Bereinigungs Vorgänge auszuführen. Weitere Informationen zu Kontext-run-down-Routinen finden Sie unter [Server Context-Lauf-ab-Routine](server-context-run-down-routine.md).
+In der Regel erstellen Sie ein Kontexthandle, indem Sie das \[ [**\_ Kontexthandleat**](/windows/desktop/Midl/context-handle) \] für eine Typdefinition in der IDL-Datei angeben. Die Typdefinition gibt auch implizit eine Kontext-Run-Down-Routine an, die Sie bereitstellen müssen. Wenn die Kommunikation zwischen Client und Server unterbrochen wird, ruft die Serverlaufzeit diese Routine auf, um alle erforderlichen Bereinigungen durchzuführen. Weitere Informationen zu Kontext-Run-Down-Routinen finden Sie unter [Run-down Routine für Serverkontext.](server-context-run-down-routine.md)
 
-Eine Schnittstelle, die ein Kontext Handle verwendet, muss über ein Bindungs Handle für die anfängliche Bindung verfügen, das durchgeführt werden muss, bevor der Server ein Kontext Handle zurückgeben kann. Sie können ein automatisches, implizites oder explizites Bindungs Handle verwenden, um die Bindung zu erstellen und den Kontext festzulegen.
+Eine Schnittstelle, die ein Kontexthandle verwendet, muss über ein Bindungshandle für die erste Bindung verfügen, das erfolgen muss, bevor der Server ein Kontexthandle zurückgeben kann. Sie können ein automatisches, implizites oder explizites Bindungshandle verwenden, um die Bindung zu erstellen und den Kontext einzurichten.
 
-Ein Kontext Handle muss den [**void \***](/windows/desktop/Midl/void) -Typ oder einen Typ aufweisen, der in " [**void \***](/windows/desktop/Midl/void)" aufgelöst wird. Das Serverprogramm wandelt es in den erforderlichen Typ um.
+Ein Kontexthandle muss vom [ * *\* void* _-Typ](/windows/desktop/Midl/void) sein, oder ein Typ, der in [_ *void \** *](/windows/desktop/Midl/void)aufgelöst wird. Das Serverprogramm gibt ihn in den erforderlichen Typ um.
 
 > [!Note]  
-> Die Verwendung von \[ [**in**](/windows/desktop/Midl/in), [**out**](/windows/desktop/Midl/out-idl) \] für Kontext handle-Parameter wird davon abgeraten, mit Ausnahme von Routinen, die Kontext Handles schließen. Wenn Kontext handle-Parameter, die \[ [**in**](/windows/desktop/Midl/in)gekennzeichnet [](/windows/desktop/Midl/out-idl) \] sind, verwendet werden, übergeben Sie kein **null** -oder nicht initialisiertes Kontext Handle vom Client an den Server. Stattdessen sollte ein **null** -Zeiger auf ein Kontext Handle übermittelt werden. Beachten Sie, dass die in markierten Kontext handle-Parameter \[ [](/windows/desktop/Midl/in) \] keine **null** -Zeiger akzeptieren.
+> Von der Verwendung von \[ [**in**](/windows/desktop/Midl/in)für [](/windows/desktop/Midl/out-idl) \] Kontexthandleparameter wird abgeraten, mit Ausnahme von Routinen, die Kontexthandles schließen. Wenn context in markierte Parameter \[ [](/windows/desktop/Midl/in)behandelt, wird [**out**](/windows/desktop/Midl/out-idl) \] verwendet. Übergeben Sie kein **NULL-** oder nicht initialisiertes Kontexthandle vom Client an den Server. Stattdessen sollte ein **NULL-Zeiger** auf ein Kontexthandle übergeben werden. Beachten Sie, dass Kontexthandleparameter, die in markiert \[ [](/windows/desktop/Midl/in) \] sind, **keine NULL-Zeiger** akzeptieren.
 
- 
+ 
 
-Das folgende Fragment einer Beispiel Schnittstellen Definition zeigt, wie eine verteilte Anwendung ein Kontext Handle verwenden kann, um einen Server zu öffnen und eine Datendatei für jeden Client zu aktualisieren.
+Das folgende Fragment einer Beispielschnittstellendefinition zeigt, wie eine verteilte Anwendung ein Kontexthandle verwenden kann, um einen Server zu öffnen und eine Datendatei für jeden Client zu aktualisieren.
 
-Die-Schnittstelle muss einen Remote Prozedur aufrufsbefehl enthalten, um das Handle zu initialisieren und es auf einen Wert ungleich **null** festzulegen. In diesem Beispiel führt die remoteopen-Funktion diesen Vorgang aus. Er gibt das Kontext Handle mit einem \[ [**out**](/windows/desktop/Midl/out-idl) - \] direktionalen Attribut an. Alternativ könnten Sie das Kontext Handle als Rückgabewert der Prozedur zurückgeben. In diesem Beispiel übergeben wir das Kontext Handle in der Parameterliste.
+Die Schnittstelle muss einen Remoteprozeduraufruf enthalten, um das Handle zu initialisieren und auf einen Wert ungleich **NULL** festzulegen. In diesem Beispiel führt die RemoteOpen-Funktion diesen Vorgang aus. Sie gibt das Kontexthandle mit einem \[ [**direktionalen Attribut für die Richtung "Out"**](/windows/desktop/Midl/out-idl) \] an. Alternativ können Sie das Kontexthandle als Rückgabewert der Prozedur zurückgeben. In diesem Beispiel übergeben wir jedoch das Kontexthandle über die Parameterliste.
 
-In diesem Beispiel handelt es sich bei den Kontextinformationen um ein Datei handle. Der aktuelle Speicherort in der Datei wird nachverfolgt. Die-Schnittstelle verpackt das Datei Handle als Kontext Handle und übergibt es als Parameter an Remote Prozedur Aufrufe. Eine-Struktur enthält den Dateinamen und das Datei handle.
+In diesem Beispiel handelt es sich bei den Kontextinformationen um ein Dateihandle. Der aktuelle Speicherort in der Datei wird nachverfolgt. Die Schnittstelle packt das Dateihandle als Kontexthandle und übergibt es als Parameter an Remoteprozeduraufrufe. Eine -Struktur enthält den Dateinamen und das Dateihandle.
 
 ``` syntax
 /* file: cxhndl.idl (fragment of interface definition file) */
@@ -46,10 +46,10 @@ void RemoteRead(
 short RemoteClose([in, out] PPCONTEXT_HANDLE_TYPE pphContext);
 ```
 
-Die Funktion remoteopen erstellt ein gültiges Kontext Handle, das nicht **null** ist. Er übergibt das Kontext Handle an den Client. Nachfolgende Remote Prozedur Aufrufe, wie z. b. RemoteRead, verwenden das Kontext Handle als in-Zeiger.
+Die RemoteOpen-Funktion erstellt ein gültiges Kontexthandle ungleich **NULL.** Es übergibt das Kontexthandle an den Client. Nachfolgende Remoteprozeduraufrufe, z. B. RemoteRead, verwenden das Kontexthandle als in-Zeiger.
 
-Zusätzlich zu der Remote Prozedur, mit der das Kontext Handle initialisiert wird, muss die-Schnittstelle eine Prozedur enthalten, die den Server Kontext freigibt und das Kontext Handle auf **null** festlegt. Im vorherigen Beispiel führt die remoteclose-Funktion diesen Vorgang aus.
+Zusätzlich zur Remoteprozedur, die das Kontexthandle initialisiert, muss die Schnittstelle eine Prozedur enthalten, die den Serverkontext freigibt und das Kontexthandle auf **NULL** festlegt. Im vorherigen Beispiel führt die RemoteClose-Funktion diesen Vorgang aus.
 
- 
+ 
 
- 
+ 

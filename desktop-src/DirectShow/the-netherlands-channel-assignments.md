@@ -1,25 +1,25 @@
 ---
-description: In diesem Thema sind die Häufigkeits Tabellen aufgeführt, die für die Optimierung des analogen TV für die Niederlande in
+description: In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für die Niederlande verwendet werden.
 ms.assetid: bdbd88f0-43d8-456d-87ca-37e718c08ec4
-title: Die niederländische Kanal Zuweisungen
+title: Die Kanalzuweisungen in Den Niederlande
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b341bc99bbab99f2d78abee21dfbfca1f9a852aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f9c47777b404a152271fc494f460ecd3f3d9ca8daa59a84064b0d977958948d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078760"
 ---
-# <a name="the-netherlands-channel-assignments"></a>Die niederländische Kanal Zuweisungen
+# <a name="the-netherlands-channel-assignments"></a>Die Kanalzuweisungen in Den Niederlande
 
-In diesem Thema sind die Häufigkeits Tabellen aufgeführt, die für die Optimierung des analogen TV für die Niederlande in
+In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für die Niederlande verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle Unicable Frequency](unicable-frequency-table.md) verwendet.
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -522,7 +522,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

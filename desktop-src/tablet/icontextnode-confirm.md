@@ -1,7 +1,7 @@
 ---
-description: Ändert den bestäalisierungstyp, der steuert, was das iinkanalyzer-Objekt über den icontextnode ändern kann.
+description: Ändert den Bestätigungstyp, der steuert, was das IInkAnalyzer-Objekt über den IContextNode ändern kann.
 ms.assetid: a506f27e-3909-453e-a2f3-10d4c04d78a4
-title: 'Icontextnode:: Confirm-Methode (iacom. h)'
+title: IContextNode::Confirm-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 3703bb735c0707c412b7c1e41c43819904d83ce8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 248eb78f364f7e938d78846c3e830cc170587961b81dfedcc046e10c59e4fd18
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008450"
 ---
-# <a name="icontextnodeconfirm-method"></a>Icontextnode:: Confirm-Methode
+# <a name="icontextnodeconfirm-method"></a>IContextNode::Confirm-Methode
 
-Ändert den bestäalisierungstyp, der steuert, was das [**iinkanalyzer**](iinkanalyzer.md) -Objekt über den [**icontextnode**](icontextnode.md)ändern kann.
+Ändert den Bestätigungstyp, der steuert, was das [**IInkAnalyzer-Objekt**](iinkanalyzer.md) über den [**IContextNode**](icontextnode.md)ändern kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,30 +39,30 @@ HRESULT Confirm(
 
 <dl> <dt>
 
-*confirmedtype* \[ in\]
+*confirmedType* \[ In\]
 </dt> <dd>
 
-Der [**ConfirmationType**](confirmationtype.md) , der auf den Knoten angewendet wird.
+Der [**ConfirmationType,**](confirmationtype.md) der auf den Knoten angewendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um dem Endbenutzer zu ermöglichen, zu bestätigen, dass die Striche von [**iinkanalyzer**](iinkanalyzer.md) ordnungsgemäß analysiert wurden. Nachdem **icontextnode:: Confirm** aufgerufen wurde, werden die [**icontextnode**](icontextnode.md) -Objekte für diese Striche von **iinkanalyzer** während der späteren Analyse nicht geändert.
+Verwenden Sie diese Methode, damit der Endbenutzer bestätigen kann, dass [**IInkAnalyzer**](iinkanalyzer.md) die Striche ordnungsgemäß analysiert hat. Nachdem **IContextNode::Confirm** aufgerufen wurde, ändert **IInkAnalyzer** die [**IContextNode-Objekte**](icontextnode.md) für diese Striche während der späteren Analyse nicht.
 
-Verwenden Sie **icontextnode:: Confirm** , wenn der Benutzer die Analyseergebnisse bestätigt hat und nicht möchten, dass [**iinkanalyzer**](iinkanalyzer.md) einen [**icontextnode**](icontextnode.md) während der späteren Analyse ändert. Wenn der Benutzer z. b. das Wort "in" schreibt und die Anwendung die [**iinkanalyzer::**](iinkanalyzer-analyze.md)Analytics-Methode aufruft, generiert die Ink Analyzer einen inkWord-Knoten mit dem Wert "to". Wenn der Benutzer dann "Me" nach "to" als ein Wort hinzufügt und die Anwendung die **iinkanalyzer:: Analysis-Methode** erneut aufruft, kann der Ink Analyzer den vorherigen "InkWord"-Knoten entfernen und einen neuen inkWord-Knoten mit dem Wert "Tome" erstellen. Wenn jedoch nach dem ersten **iinkanalyzer**-Ansichts Befehl: Analysemethode: die Anwendung ruft **icontextnode:: Confirm** für den inkWord-Knoten für "to" mit dem [**ConfirmationType**](confirmationtype.md) -Wert **NodeTypeAndProperties** auf, bevor der Benutzer "Me" hinzufügt. wenn die Anwendung die **iinkanalyzer::** Analytics-Methode aufruft, wird der "to"-Knoten von der Ink Analyzer nicht entfernt oder geändert. Stattdessen erkennt der Ink Analyzer möglicherweise zwei inkWord-Knoten für "to" und "Me".
+Verwenden Sie **IContextNode::Confirm,** wenn der Benutzer die Analyseergebnisse bestätigt hat und [**IInkAnalyzer**](iinkanalyzer.md) während der späteren Analyse keinen [**IContextNode**](icontextnode.md) ändern soll. Wenn der Benutzer beispielsweise das Wort "to" schreibt und dann die Anwendung [**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)aufruft, generiert das Freihandanalyseprogramm einen InkWord-Knoten mit dem Wert "to". Wenn der Benutzer dann "me" nach "to" als ein Wort hinzufügt und die Anwendung die **IInkAnalyzer::Analyze-Methode** erneut aufruft, entfernt die Freihandanalyse möglicherweise den vorherigen InkWord-Knoten und erstellt einen neuen InkWord-Knoten mit dem Wert "tome". Wenn die Anwendung jedoch nach dem ersten Aufruf der **IInkAnalyzer::Analyze-Methode** **IContextNode::Confirm** auf dem InkWord-Knoten für "to" mit dem [**ConfirmationType-Wert**](confirmationtype.md) **NodeTypeAndProperties** aufruft, bevor der Benutzer das "me" hinzufügt, entfernt oder ändert das Ink-Analyzer den Knoten "to", wenn die Anwendung **die IInkAnalyzer::Analyze-Methode** aufruft. Stattdessen erkennt das Ink-Analyseprogramm möglicherweise zwei InkWord-Knoten für "to" und "me".
 
-[**Icontextnode**](icontextnode.md) kann nur Objekte des Typs InkWord und InkDrawing bestätigen (siehe [Kontext Knoten Typen](context-node-types.md)). **Icontextnode:: Confirm** gibt **E \_ invalidArg** zurück, wenn der Knoten kein Blattknoten ist.
+[**IContextNode**](icontextnode.md) kann nur Objekte vom Typ InkWord und InkDrawing bestätigen (siehe [Kontextknotentypen](context-node-types.md)). **IContextNode::Confirm** gibt **E \_ INVALIDARG** zurück, wenn der Knoten kein Blattknoten ist.
 
-Die [**iinkanalyzer:: RemoveStroke-Methode**](iinkanalyzer-removestroke.md) und die [**iinkanalyzer:: RemoveStrokes-Methode**](iinkanalyzer-removestrokes.md) löschen jeden Knoten, von dem Sie die Strich Daten entfernen.
+[**IInkAnalyzer::RemoveStroke-Methode**](iinkanalyzer-removestroke.md) und [**IInkAnalyzer::RemoveStrokes-Methode**](iinkanalyzer-removestrokes.md) bestätigen jeden Knoten, aus dem Strichdaten entfernt werden.
 
-[**Icontextnode:: setstrokes**](icontextnode-setstrokes.md), [**iinkanalyzer:: SetStrokesType**](iinkanalyzer-setstrokestype.md)und [**iinkanalyzer:: SetStrokeType**](iinkanalyzer-setstroketype.md) geben **Core \_ E \_ InvalidOperation** zurück, wenn das [**icontextnode**](icontextnode.md) -Objekt bereits bestätigt ist.
+[**IContextNode::SetStrokes**](icontextnode-setstrokes.md), [**IInkAnalyzer::SetStrokesType**](iinkanalyzer-setstrokestype.md)und [**IInkAnalyzer::SetStrokeType**](iinkanalyzer-setstroketype.md) geben **CORE E \_ \_ INVALIDOPERATION** zurück, wenn das [**IContextNode-Objekt**](icontextnode.md) bereits bestätigt wurde.
 
-[**Icontextnode::**](icontextnode-reparentstrokebyidtonode.md) Analyse Name gibt einen Fehler zurück, wenn der Quell-oder Zielknoten bestätigt ist.
+[**IContextNode::ReparentStrokeByIdToNode**](icontextnode-reparentstrokebyidtonode.md) gibt einen Fehler zurück, wenn der Quell- oder Zielknoten bestätigt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,24 +70,24 @@ Die [**iinkanalyzer:: RemoveStroke-Methode**](iinkanalyzer-removestroke.md) und 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: isconfirmed**](icontextnode-isconfirmed.md)
+[**IContextNode::IsConfirmed**](icontextnode-isconfirmed.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-title: Client seitiges asynchrones RPC
-description: Navigationsseite für die Client seitige asynchrone Funktions Behandlung mit Remote Prozedur Aufruf (RPC).
+title: Clientseitiger asynchroner RPC
+description: Navigationsseite für die clientseitige asynchrone Funktionsbehandlung mit Remoteprozeduraufruf (RPC).
 ms.assetid: f3e958b6-65c8-4bdb-a5e2-4f47f7beea78
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a9dabfc3b434aabfbfdb3a9cef0300b694c7c222
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 4a7c258daf16f75f55ce33bac005cd6856e91c4ff2467b40997f6a8395448f49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022654"
 ---
-# <a name="client-side-asynchronous-rpc"></a>Client seitiges asynchrones RPC
+# <a name="client-side-asynchronous-rpc"></a>Clientseitiger asynchroner RPC
 
-Die Client seitige asynchrone Funktions Verarbeitung umfasst drei Hauptaufgaben:
+Die clientseitige asynchrone Funktionsbehandlung besteht aus drei hauptbezogenen Aufgaben:
 
--   [Ausführen des asynchronen Aufrufes](making-the-asynchronous-call.md)
+-   [Erstellen des asynchronen Aufrufs](making-the-asynchronous-call.md)
 -   [Warten auf die asynchrone Antwort](waiting-for-the-asynchronous-reply.md)
 -   [Empfangen der asynchronen Antwort](receiving-the-asynchronous-reply.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,34 +1,34 @@
 ---
-title: Client Anwendungs Referenz
-description: Funktionen, Strukturen und andere Typen, die Sie zum Erstellen von Client Anwendungen verwenden können, die mit dem Windows-Biometrieframework interagieren.
+title: Clientanwendungsreferenz
+description: Funktionen, Strukturen und andere Typen, die Sie verwenden können, um Clientanwendungen zu erstellen, die mit dem biometrischen Framework Windows interagieren.
 ms.assetid: 3a4e1aec-b92e-445e-b597-886b01a1b267
 keywords:
-- Windows-Biometrieframework API-Windows-Biometrieframework-API, Client Anwendungs Referenz
+- Windows Biometrieframework-API Windows Biometrieframework-API, Clientanwendungsreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 291aaf3b14aeccaf140799e029deb12a2c08781f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 682834171f813fa655f27be0a8cf9cfd5f4c24340b08f6c312a29673ec659956
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993970"
 ---
-# <a name="client-application-reference"></a>Client Anwendungs Referenz
+# <a name="client-application-reference"></a>Clientanwendungsreferenz
 
-Die folgenden Themen enthalten Funktionen, Strukturen und andere Typen, die Sie zum Erstellen von Client Anwendungen verwenden können, die mit dem Windows-Biometrieframework interagieren. Weitere Informationen zum Erstellen von benutzerdefinierten Plug-Ins finden Sie unter [Plug-in-Referenz](plug-in-reference.md).
+Die folgenden Themen enthalten Funktionen, Strukturen und andere Typen, mit denen Sie Clientanwendungen erstellen können, die mit dem biometrischen Framework Windows interagieren. Informationen zum Erstellen benutzerdefinierter Plug-Ins finden Sie unter [Plug-In-Referenz.](plug-in-reference.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                                         | BESCHREIBUNG                                                                                                |
+| Thema                                                                                         | Beschreibung                                                                                                |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [Client Anwendungsfunktionen](client-application-functions.md)<br/>                   | Funktionen, die für die Client Anwendungsentwicklung durch die Windows-Biometrieframework-API unterstützt werden<br/>  |
-| [Rückruf Funktionen für Client Anwendungen](client-application-callback-functions.md)<br/> | Zwei Arten von Rückruf Signaturen.<br/>                                                               |
-| [Client Anwendungs Strukturen](client-application-structures.md)<br/>                 | Strukturen, die für die Client Anwendungsentwicklung durch die Windows-Biometrieframework-API unterstützt werden<br/> |
-| [Enumerationen von Client Anwendungen](client-application-enumerations.md)<br/>             | Enumerationen, die von der Windows-Biometrieframework-API unterstützt werden.<br/>                         |
-| [Client Anwendungs Unions](client-application-unions.md)<br/>                         | Unions, die von der Windows-Biometrieframework-API unterstützt werden.<br/>                               |
-| [Client Anwendungs Konstanten](client-application-constants.md)<br/>                   | Konstanten, die in der Header Datei "winbio \_ types. h" definiert sind.<br/>                                           |
+| [Clientanwendungsfunktionen](client-application-functions.md)<br/>                   | Funktionen, die für die Clientanwendungsentwicklung von der Windows Biometrieframework-API unterstützt werden.<br/>  |
+| [Rückruffunktionen für Clientanwendungen](client-application-callback-functions.md)<br/> | Zwei Typen von Rückrufsignaturen.<br/>                                                               |
+| [Clientanwendungsstrukturen](client-application-structures.md)<br/>                 | Strukturen, die für die Clientanwendungsentwicklung von der Windows Biometrieframework-API unterstützt werden.<br/> |
+| [Clientanwendungsenumeration](client-application-enumerations.md)<br/>             | Enumerationen, die von der biometrischen Framework-API Windows werden.<br/>                         |
+| [Clientanwendungs-Unions](client-application-unions.md)<br/>                         | Unions, die von der API für das biometrische Framework Windows werden.<br/>                               |
+| [Clientanwendungskonstant](client-application-constants.md)<br/>                   | Konstanten, die in der Headerdatei Winbio \_ types.h definiert sind.<br/>                                           |
 
 
 
@@ -38,7 +38,7 @@ Die folgenden Themen enthalten Funktionen, Strukturen und andere Typen, die Sie 
 
 <dl> <dt>
 
-[API-Referenz für Windows-Biometrieframework](biometric-service-api-reference.md)
+[Windows Biometrieframework-API-Referenz](biometric-service-api-reference.md)
 </dt> </dl>
 
  

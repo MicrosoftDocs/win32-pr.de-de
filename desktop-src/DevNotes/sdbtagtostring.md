@@ -1,7 +1,7 @@
 ---
-description: Ruft den anzeigen amen des angegebenen Tags ab.
+description: Ruft den Anzeigenamen des angegebenen TAGS ab.
 ms.assetid: e382d443-aab2-476c-90dd-7ab38e737f52
-title: Sdbtagto String-Funktion
+title: SdbTagToString-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 5c781db801077bcef001a860c4ff08c4455daff0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 22ddb526e332b335e88ecc7aaa770615220f6b0dde838386093e2813fe964e17
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044840"
 ---
-# <a name="sdbtagtostring-function"></a>Sdbtagto String-Funktion
+# <a name="sdbtagtostring-function"></a>SdbTagToString-Funktion
 
-Ruft den anzeigen amen des angegebenen Tags ab.
+Ruft den Anzeigenamen des angegebenen TAGS ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ LPCTSTR WINAPI SdbTagToString(
 
 <dl> <dt>
 
-*Tag* \[ in\]
+*tag* \[ In\]
 </dt> <dd>
 
-Das-Tag.
+Das TAG.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt einen Zeiger auf die NULL-terminierte Zeichenfolge oder "invalidtag" zurück.
+Die Funktion gibt einen Zeiger auf die auf NULL endende Zeichenfolge oder "InvalidTag" zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Die-Funktion gibt einen Zeiger auf die NULL-terminierte Zeichenfolge oder "inval
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -66,7 +66,7 @@ Die-Funktion gibt einen Zeiger auf die NULL-terminierte Zeichenfolge oder "inval
 
 <dl> <dt>
 
-[**Tag**](tag.md)
+[**Etikett**](tag.md)
 </dt> </dl>
 
  

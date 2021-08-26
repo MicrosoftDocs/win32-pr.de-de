@@ -1,7 +1,7 @@
 ---
-description: Gibt den bevorzugten Authentifizierungstyp für den Endpunkt des Diensts zurück.
+description: Gibt den bevorzugten Authentifizierungstokentyp für den Endpunkt des Diensts zurück.
 ms.assetid: DF60C49A-89FE-4EEB-8E82-C2C43F2D2F2A
-title: 'Iupdateendpointauthprovider:: getpreferredendpointdekentype-Methode (updateendpointauth. h)'
+title: IUpdateEndpointAuthProvider::GetPreferredEndpointTokenType-Methode (UpdateEndpointAuth.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - UpdateEndpointAuth.dll
-ms.openlocfilehash: 670835ee3c2dfd01ae46a7cf78395959ea9a26de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9b7d15d6d27170106118c720d25567389884c50e27aac202adedf00290236c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119994580"
 ---
-# <a name="iupdateendpointauthprovidergetpreferredendpointtokentype-method"></a>Iupdateendpointauthprovider:: getpreferredendpointdekentype-Methode
+# <a name="iupdateendpointauthprovidergetpreferredendpointtokentype-method"></a>IUpdateEndpointAuthProvider::GetPreferredEndpointTokenType-Methode
 
-Gibt den bevorzugten Authentifizierungstyp für den Endpunkt des Diensts zurück.
+Gibt den bevorzugten Authentifizierungstokentyp für den Endpunkt des Diensts zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,41 +42,41 @@ HRESULT GetPreferredEndpointTokenType(
 
 <dl> <dt>
 
-*serviceid* \[ in\]
+*serviceId* \[ In\]
 </dt> <dd>
 
 Identifiziert den zu aktualisierenden Dienst.
 
 </dd> <dt>
 
-*EndpointType* \[ in\]
+*endpointType* \[ In\]
 </dt> <dd>
 
 Identifiziert den Typ des Endpunkts, der zum Herstellen einer Verbindung mit dem Dienst erforderlich ist.
 
 </dd> <dt>
 
-*ulrequestedtypes* \[ in\]
+*ulRequestedTypes* \[ In\]
 </dt> <dd>
 
 Identifiziert den ORed-Satz von Token, die vom Endpunkt unterstützt werden.
 
 </dd> <dt>
 
-*pulpreferredykentypes* \[ vorgenommen\]
+*pulPreferredTokenTypes* \[ out\]
 </dt> <dd>
 
-Geben Sie den bevorzugten Satz an authentifizierungstokentypen an. (Auf 0 festgelegt, um anzugeben, dass kein Authentifizierungs Token erforderlich ist).
+Geben Sie den ORed-Satz von Authentifizierungstokentypen an, die bevorzugt werden. (Legen Sie diesen Wert auf 0 fest, um anzugeben, dass kein Authentifizierungstoken erforderlich ist.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK zurück. Andernfalls wird ein com-oder Windows-Fehlercode zurückgegeben.
+Gibt S \_ OK zurück, wenn erfolgreich. Andernfalls wird ein COM- oder Windows zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode zurückgegeben wird, wählt WUA einen Tokentyp aus den bevorzugten Typen aus und übergibt ihn an den TokenType-Parameter der [**getendpointtoken**](iupdateendpointauthprovider-getendpointtoken.md) -Methode.
+Wenn diese Methode zurückgegeben wird, wählt WUA einen Tokentyp aus den bevorzugten Typen aus und übergibt ihn an den tokenType-Parameter der [**GetEndpointToken-Methode.**](iupdateendpointauthprovider-getendpointtoken.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,23 +84,23 @@ Wenn diese Methode zurückgegeben wird, wählt WUA einen Tokentyp aus den bevorz
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>                   |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>                |
-| Header<br/>                   | <dl> <dt>Updateendpointauth. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Updateendpointauth. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Updateendpointauth. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>                   |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>                |
+| Header<br/>                   | <dl> <dt>UpdateEndpointAuth.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>UpdateEndpointAuth.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>UpdateEndpointAuth.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>UpdateEndpointAuth.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iupdateendpointauthprovider**](iupdateendpointauthprovider.md)
+[**IUpdateEndpointAuthProvider**](iupdateendpointauthprovider.md)
 </dt> <dt>
 
-[**Getendpointtoken**](iupdateendpointauthprovider-getendpointtoken.md)
+[**GetEndpointToken**](iupdateendpointauthprovider-getendpointtoken.md)
 </dt> </dl>
 
  
