@@ -1,19 +1,19 @@
 ---
-description: Das optionale boolesche <includeInStartMenuScope> Element gibt an, ob dieser Suchconnector im Startmenü-Suchbereich enthalten sein soll.
+description: Das optionale boolesche Element gibt an, ob dieser Suchconnector in den <includeInStartMenuScope> Suchbereich Startmenü werden soll.
 ms.assetid: 934a3834-9ddc-4c15-b738-68ea74adc24c
-title: includeinstartmenus-Element (Suchconnector-Schema)
+title: includeInStartMenuScope-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 126d10a2b69dcec5057e732679c8531fd6e82bca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60941ef06f3f7220c7bbbae652f5e8256c6256660ea8e9ece2ddd330858958b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119937950"
 ---
-# <a name="includeinstartmenuscope-element-search-connector-schema"></a>includeinstartmenus-Element (Suchconnector-Schema)
+# <a name="includeinstartmenuscope-element-search-connector-schema"></a>includeInStartMenuScope-Element (Search Connector Schema)
 
-Das optionale boolesche <includeInStartMenuScope> Element gibt an, ob dieser Suchconnector im Startmenü-Suchbereich enthalten sein soll. Der Standardwert ist true für Suchconnectors, die das Dateisystem als Datenquelle verwenden, und false für Suchconnectors, die von Eigenschaften Handlern verwendet werden. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das optionale boolesche Element gibt an, ob dieser Suchconnector in den <includeInStartMenuScope> Suchbereich Startmenü werden soll. Der Standardwert ist true für Suchconnectors, die das Dateisystem als Datenquelle verwenden, und false für Suchconnectors, die von Eigenschaftenhandlern verwendet werden. Dieses Element verfügt über keine untergeordneten Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,15 +39,15 @@ Das optionale boolesche <includeInStartMenuScope> Element gibt an, ob dieser Suc
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------------------------------|----------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) |                |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Suchconnector in den Startmenü Bereich einschließen, können Benutzer ihren Speicherort über das Suchfeld im Startmenü durchsuchen.
+Wenn Sie den Suchconnector in den bereich Startmenü, können Benutzer Ihren Standort über das Suchfeld im Startmenü.
 
 ## <a name="example"></a>Beispiel
 

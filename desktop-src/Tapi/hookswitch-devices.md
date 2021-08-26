@@ -1,34 +1,34 @@
 ---
-description: Ein Telefongerät kann über mehrere Geräte vom Typ "Gerätewechsel" verfügen.
+description: Ein Telefongerät kann über mehrere Hookswitch-Geräte verfügen.
 ms.assetid: 39e3f24d-55d8-4830-8599-383954c8a107
-title: Gerätewechsel Geräte
+title: Hookswitch-Geräte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69ad6f839ec9078831ffe0b04849be2a4393c9d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3ca5c9f605731780068b9ad5a5b35d913213006c62d127e6a3b15d1ffc5fe1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013100"
 ---
-# <a name="hookswitch-devices"></a>Gerätewechsel Geräte
+# <a name="hookswitch-devices"></a>Hookswitch-Geräte
 
-Ein Telefongerät kann über mehrere Geräte vom Typ "Gerätewechsel" verfügen. Ein "huokswitch" ist der Schalter, der ein Gerät von der Telefonleitung verbindet oder trennt. Beispielsweise ist dies der Schalter, der automatisch aktiviert wird, wenn ein Benutzer den Empfänger von der Wiege auf einen neuen Wählton anhebt. TAPI definiert drei Typen von "huokswitch"-Geräten für ein Telefon: "Handy", "Speakerphone" und "Headset". Jedes Gerät für den Gerätewechsel verfügt über einen Sprecher und eine Mikrofon Komponente und arbeitet in einem von vier "huokswitch"-Modi:
+Ein Telefongerät kann über mehrere Hookswitch-Geräte verfügen. Ein Hookschalter ist der Switch, der ein Gerät von der Telefonleitung verbindet oder trennt. Bei einem Telefon ist dies z. B. der Schalter, der automatisch aktiviert wird, wenn ein Benutzer den Empfänger aus der Taste hebt, um einen neuen Wählton zu erhalten. TAPI definiert drei Arten von Hookswitch-Geräten für ein Smartphone: Mobiltelefon, Lautsprecher und Headset. Jedes Hookswitchgerät verfügt über einen Lautsprecher und eine Mikrofonkomponente und arbeitet in einem von vier Hookswitchmodi:
 
--   **OnHook** Das Gerät "huokswitch" ist OnHook, und sowohl das Mikrofon als auch der Sprecher sind deaktiviert.
--   **Nur Mikrofon** Das Gerät "huokswitch" ist OFFHOOK, das Mikrofon ist aktiviert, und der Referent ist stumm.
--   **Nur Sprecher** Das Gerät für den Gerätewechsel ist OFFHOOK, das Mikrofon ist stumm und der Referent ist aktiviert.
--   **Mikrofon und Redner** Das Gerät "huokswitch" ist OFFHOOK, und sowohl das Mikrofon als auch der Sprecher sind aktiviert.
+-   **Onhook** Das Hookswitch-Gerät ist onhook, und sowohl das Mikrofon als auch der Lautsprecher sind deaktiviert.
+-   **Nur Mikrofon** Das Hookswitchgerät ist offhook, das Mikrofon ist aktiviert, und der Lautsprecher ist stumm.
+-   **Nur Sprecher** Das Hookswitchgerät ist offhook, das Mikrofon ist stumm, und der Lautsprecher ist aktiviert.
+-   **Mikrofon und Lautsprecher** Das Hookswitch-Gerät ist offhook, und mikrofon und speaker sind aktiviert.
 
-Die [**phonesethookswitch**](/windows/desktop/api/Tapi/nf-tapi-phonesethookswitch) -Funktion wird verwendet, um den hookswitch-Modus eines oder mehrerer hookswitch-Geräte auf einem geöffneten Telefongerät festzulegen. Wenn Sie z. b. die Mikrofon-oder Lautsprecher Komponente eines Host Host Geräts stumm oder entstumm schalten möchten, verwenden Sie " **phonesethookswitch** " mit dem entsprechenden "Host"-Modus. Die [**phonegethookswitch**](/windows/desktop/api/Tapi/nf-tapi-phonegethookswitch) -Funktion kann verwendet werden, um den hookswitch-Modus eines hookswitch-Geräts eines geöffneten Telefon Geräts abzufragen.
+Die [**phoneSetHookSwitch-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonesethookswitch) wird verwendet, um den Hookswitchmodus eines oder mehrere hookswitch-Geräte eines offenen Telefongeräts zu aktivieren. Verwenden Sie beispielsweise **phoneSetHookSwitch** mit dem entsprechenden Hookswitch-Modus, um das Mikrofon oder die Lautsprecherkomponente eines Hookswitch-Geräts zu stummschalten oder zu entmutigen. Die [**phoneGetHookSwitch-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonegethookswitch) kann verwendet werden, um den Hookswitch-Modus eines Hookswitch-Geräts eines offenen Telefongeräts abfragt.
 
-Wenn der Modus des Geräte-App-Geräts manuell geändert wird, z. b. durch das Übertragen des Telefons von seiner Wiege, wird eine [**Telefon \_ Zustands**](phone-state.md) Meldung an die Anwendung gesendet, um die Anwendung über die Statusänderung zu benachrichtigen. Die Parameter für diese Nachricht geben Aufschluss über die Änderung.
+Wenn der Modus des Hookswitchgeräts eines Telefons manuell geändert wird, z. B. durch Heben des Handsets aus der Sperre, wird eine [**PHONE \_ STATE-Nachricht**](phone-state.md) an die Anwendung gesendet, um die Anwendung über die Zustandsänderung zu benachrichtigen. Parameter für diese Meldung geben einen Hinweis auf die Änderung an.
 
-Das Volume der Redner Komponente eines "huokswitch"-Geräts kann mit " [**phonesetvolume**](/windows/desktop/api/Tapi/nf-tapi-phonesetvolume)" festgelegt werden. Die volumeeinstellung unterscheidet sich von "stumm Schaltung" in, dass das stumm Schaltung eines Referenten und spätere entmutierung die Lautstärke Einstellung des Sprechers beibehält. Die Funktion " [**phonegetvolume**](/windows/desktop/api/Tapi/nf-tapi-phonegetvolume) " kann verwendet werden, um die aktuelle volumeeinstellung des Sprechers eines hookswitch-Geräts eines geöffneten Telefon Geräts zurückzugeben.
+Die Lautstärke der Sprecherkomponente eines Hookswitch-Geräts kann mit [**phoneSetVolume festgelegt werden.**](/windows/desktop/api/Tapi/nf-tapi-phonesetvolume) Die Lautstärkeeinstellung ist anders als stumm geschaltet, da die Lautstärkeeinstellung des Lautsprechers beibehalten wird, wenn ein Sprecher stummgeschaltet und später entmutiert wird. Die [**phoneGetVolume-Funktion**](/windows/desktop/api/Tapi/nf-tapi-phonegetvolume) kann verwendet werden, um die aktuelle Volumeeinstellung des Lautsprechers eines hookswitch-Geräts eines offenen Telefongeräts zurück zu geben.
 
-Die Mikrofon Komponente eines "huokswitch"-Geräts kann auch durch einen Gewinn gesteuert werden. Der Wert für die Einstellung "gewinnen" unterscheidet sich von "stumm schalten", da der stumm Schaltung eines Mikrofons und spätere entmutierung die Einstellung für das Mikrofon beibehalten wird Verwenden Sie " [**phonesetget**](/windows/desktop/api/Tapi/nf-tapi-phonesetgain) ", um den Zuwachs des Mikrofons eines geöffnenden Telefon Geräts für ein geöffnetes Gerät festzulegen, und [**phonegetget**](/windows/desktop/api/Tapi/nf-tapi-phonegetgain) , um die erstellungseterlage eines geöffnenden Telefons für ein geöffnetes Telefon zurückzugeben.
+Die Mikrofonkomponente eines Hookschaltergeräts kann ebenfalls gesteuert werden. Die Gain-Einstellung ist anders als stumm geschaltet, da das Stummschalten eines Mikrofons und das spätere Entmuting die Verstärkungseinstellung des Mikrofons beibehalten. Verwenden [**Sie phoneSetGain**](/windows/desktop/api/Tapi/nf-tapi-phonesetgain) zum Festlegen des Mikrofons eines Hookswitchgeräts eines geöffneten Telefongeräts und [**phoneGetGain,**](/windows/desktop/api/Tapi/nf-tapi-phonegetgain) um die Verstärkungseinstellung des Mikrofons eines hookswitch-Geräts eines geöffneten Telefons zurückzuerhalten.
 
-Wenn das Volume oder der Gewinn des hookswitch-Geräts eines Telefons geändert wird, wird eine Telefon \_ Zustands Meldung an die Anwendungsfunktion gesendet, um die Anwendung über die Statusänderung zu benachrichtigen. Die Parameter für diese Nachricht geben Aufschluss über die Änderung.
+Wenn die Lautstärke oder der Gewinn des Hookswitchgeräts eines Telefons geändert wird, wird eine PHONE STATE-Nachricht an die Anwendungsfunktion gesendet, um die Anwendung über die \_ Zustandsänderung zu benachrichtigen. Parameter für diese Meldung geben einen Hinweis auf die Änderung an.
 
  
 

@@ -1,19 +1,19 @@
 ---
-description: Ereignis pro Benutzer zur Protokollierung der Initiierung von Konversationen durch Instant Messaging-Clients.
+description: Benutzerspezifisches Ereignis, das für die Protokollierung der Initiierung von Konversationen durch Instant Messaging-Clients bereitgestellt wird.
 ms.assetid: b2cd1d37-9993-4990-83b7-b147a109e4af
-title: WPCEVENT_IM_INVITATION-Ereignis (wpcevent. h)
+title: WPCEVENT_IM_INVITATION Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 87c9d7e90eaa901b5e18a072e03e3112ee8c2934
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f29b1adc556e29e03f7c8a189567b98055187f80d1574e201c54e3af0c1c0aca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951390"
 ---
-# <a name="wpcevent_im_invitation-event"></a>Wpcevent \_ im- \_ Einladungs Ereignis
+# <a name="wpcevent_im_invitation-event"></a>WPCEVENT \_ IM \_ INVITATION-Ereignis
 
-Ereignis pro Benutzer zur Protokollierung der Initiierung von Konversationen durch Instant Messaging-Clients.
+Benutzerspezifisches Ereignis, das für die Protokollierung der Initiierung von Konversationen durch Instant Messaging-Clients bereitgestellt wird.
 
 
 ```C++
@@ -29,63 +29,63 @@ const EVENT_DESCRIPTOR WPCEVENT_IM_INVITATION = {0x7, 0x0, 0x10, 0x4, 0x16, 0x7,
 *AppName* 
 </dt> <dd>
 
-Der Name der Anwendung, die das Ereignis erzeugt.
+Der Name der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Versions Zeichenfolge für die Anwendung, die das Ereignis erzeugt.
+Die Versionszeichenfolge für die Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AccountName* 
 </dt> <dd>
 
-Die Identitäts Zeichenfolge für das Instant Messaging-Konto.
+Die Identitätszeichenfolge des Instant Messaging-Kontos.
 
 </dd> <dt>
 
-*Geseld* 
+*ConvID* 
 </dt> <dd>
 
 Der Bezeichner für die Konversation.
 
 </dd> <dt>
 
-*Requestingip* 
+*Anfordern vonIP* 
 </dt> <dd>
 
-Eine Zeichenfolge, die die IP-Adresse des Computers enthält, von dem die Einladung gesendet wird.
+Eine Zeichenfolge, die die IP-Adresse des Computers enthält, der die Einladung sendet.
 
 </dd> <dt>
 
 *Sender* 
 </dt> <dd>
 
-Die Identitäts Zeichenfolge für das Instant Messaging-Konto für das Konto, von dem die Einladung ausgegeben wird.
+Die Identitätszeichenfolge des Instant Messaging-Kontos für das Konto, das die Einladung ausgibt.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse für die Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
 
 </dd> <dt>
 
-*Anzahl der Mitarbeiter* 
+*RecipCount* 
 </dt> <dd>
 
-Die Anzahl der Empfänger, die die Einladung erhalten und deren Identitäten im Feld Empfänger definiert sind.
+Die Anzahl der Empfänger, die die Einladung erhalten und für die identitäten im Feld "Empfänger" definiert sind.
 
 </dd> <dt>
 
 *Recipient* 
 </dt> <dd>
 
-Eine durch Trennzeichen getrennte Zeichenfolge, die für die Empfänger der Einladung Instant Messaging-Konto Identitäts Zeichenfolgen enthält.
+Eine durch Trennzeichen getrennte Zeichenfolge, die Identitätszeichenfolgen für das Instant Messaging-Konto für die Empfänger der Einladung enthält.
 
 </dd> </dl>
 
@@ -95,9 +95,9 @@ Eine durch Trennzeichen getrennte Zeichenfolge, die für die Empfänger der Einl
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -105,10 +105,10 @@ Eine durch Trennzeichen getrennte Zeichenfolge, die für die Empfänger der Einl
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Fontdirentry-Struktur
-description: Enthält Informationen über eine einzelne Schriftart in einer Schriftart Ressourcengruppe. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: FONTDIRENTRY-Struktur
+description: Enthält Informationen zu einer einzelnen Schriftart in einer Schriftartressourcengruppe. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 ms.assetid: 0ada2afe-b299-4ef2-99b7-96da10ee218a
 keywords:
-- Fontdirentry-Struktur Menüs und weitere Ressourcen
+- FONTDIRENTRY-StrukturMenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1cee72a490fd2b94b1c810797f656d81418c0f71
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e236104730dbbfe79ec0ed3d18cbb465402ed8827c6037a2457bec18faf63024
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886740"
 ---
-# <a name="fontdirentry-structure"></a>Fontdirentry-Struktur
+# <a name="fontdirentry-structure"></a>FONTDIRENTRY-Struktur
 
-Enthält Informationen über eine einzelne Schriftart in einer Schriftart Ressourcengruppe. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält Informationen zu einer einzelnen Schriftart in einer Schriftartressourcengruppe. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,18 +68,18 @@ typedef struct {
 
 <dl> <dt>
 
-**dfversion**
+**dfVersion**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Eine benutzerdefinierte Versionsnummer für die Ressourcen Daten, die Tools zum Lesen und Schreiben von Ressourcen Dateien verwenden können.
+Eine benutzerdefinierte Versionsnummer für die Ressourcendaten, die Tools zum Lesen und Schreiben von Ressourcendateien verwenden können.
 
 </dd> <dt>
 
-**dfsize**
+**dfSize**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -90,197 +90,197 @@ Die Größe der Datei (in Bytes).
 
 </dd> <dt>
 
-**dfcopyright \[ 60\]**
+**dfCopyright \[ 60\]**
 </dt> <dd>
 
-Typ: **char**
+Typ: **CHAR**
 
 </dd> <dd>
 
-Die Copyright Informationen des Schriftart Lieferanten.
+Die Copyrightinformationen des Schriftartanbieters.
 
 </dd> <dt>
 
-**dftype**
+**dfType**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ der Schriftart Datei.
+Der Typ der Schriftartdatei.
 
 </dd> <dt>
 
-**dfpoints**
+**dfPoints**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Punktgröße, bei der dieser Zeichensatz am besten aussieht.
+Die Punktgröße, an der dieser Zeichensatz am besten aussieht.
 
 </dd> <dt>
 
-**dfvertres**
+**dfVertRes**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die vertikale Auflösung in Punkten pro Zoll, bei der dieser Zeichensatz digitalisiert wurde.
+Die vertikale Auflösung in Punkt pro Zoll, bei der dieser Zeichensatz digitalisiert wurde.
 
 </dd> <dt>
 
 **dfHorizRes**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die horizontale Auflösung in Punkten pro Zoll, bei der dieser Zeichensatz digitalisiert wurde.
+Die horizontale Auflösung in Punkt pro Zoll, bei der dieser Zeichensatz digitalisiert wurde.
 
 </dd> <dt>
 
-**dfascent**
+**dfAscent**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Abstand zwischen dem oberen Rand einer Zeichen Definitions Zelle und der Baseline der typografischen Schriftart.
+Der Abstand vom oberen Rand einer Zeichendefinitionszelle zur Baseline der typografischen Schriftart.
 
 </dd> <dt>
 
-**dfinternalleading**
+**dfInternalLeading**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Menge der führenden innerhalb der durch das **dfpixheight** -Member festgelegten Begrenzungen. In diesem Bereich können Akzente und andere diakritische Zeichen auftreten.
+Die Menge der führenden Innerhalb der Begrenzungen, die vom **dfPixHeight-Member** festgelegt werden. Akzente und andere diakritische Zeichen können in diesem Bereich auftreten.
 
 </dd> <dt>
 
-**dfexternalleading**
+**dfExternalLeading**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Menge der zusätzlichen führenden, die von der Anwendung zwischen Zeilen hinzugefügt werden.
+Die Menge der zusätzlichen führenden Werte, die die Anwendung zwischen Zeilen hinzufügt.
 
 </dd> <dt>
 
-**dsptalic**
+**dfItalic**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Eine kursiv Schrift, wenn nicht gleich 0 (null).
+Eine italische Schriftart, wenn nicht gleich 0 (null) ist.
 
 </dd> <dt>
 
-**dfunderline**
+**dfUnderline**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Eine unterstrichene Schriftart, wenn ungleich 0 (null).
+Eine unterstrichene Schriftart, wenn nicht gleich 0 (null) ist.
 
 </dd> <dt>
 
-**dfstrikeout**
+**dfStrikeOut**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Eine ausstrich Schriftart, wenn nicht gleich 0 (null).
+Eine durchsstrichene Schriftart, wenn nicht gleich 0 (null) ist.
 
 </dd> <dt>
 
-**dfweight**
+**dfWeight**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Gewichtung der Schriftart im Bereich von 0 bis 1000. 400 ist z. b. Roman, und 700 ist fett formatiert. Wenn dieser Wert 0 (null) ist, wird eine Standard Gewichtung verwendet. Weitere definierte Werte finden Sie in der Beschreibung der [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur.
+Die Gewichtung der Schriftart im Bereich von 0 bis 1000. Beispielsweise ist 400 roman und 700 fett. Wenn dieser Wert 0 (null) ist, wird eine Standardgewichtung verwendet. Weitere definierte Werte finden Sie in der Beschreibung der [**LOGFONT-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 
 </dd> <dt>
 
-**dfcharset**
+**dfCharSet**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Der Zeichensatz der Schriftart. Informationen zu vordefinierten Werten finden Sie in der Beschreibung der [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur.
+Der Zeichensatz der Schriftart. Vordefinierte Werte finden Sie in der Beschreibung der [**LOGFONT-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 
 </dd> <dt>
 
-**dfpixwidth**
+**dfPixWidth**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Breite des Rasters, in dem eine Vektor Schriftart digitalisiert wurde. Wenn das Element bei Raster Schriftarten nicht gleich 0 (null) ist, stellt es die Breite für alle Zeichen in der Bitmap dar. Wenn der Member gleich 0 (null) ist, weist die Schriftart Zeichen variabler Breite auf.
+Die Breite des Rasters, auf dem eine Vektorschriftart digitalisiert wurde. Wenn der Member für Rasterschriftarten ungleich 0 (null) ist, stellt er die Breite für alle Zeichen in der Bitmap dar. Wenn der Member gleich 0 (null) ist, weist die Schriftart Zeichen variabler Breite auf.
 
 </dd> <dt>
 
-**dfpixheight**
+**dfPixHeight**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Höhe der Zeichen Bitmap für Raster Schriftarten oder die Höhe des Rasters, in dem eine Vektor Schriftart digitalisiert wurde.
+Die Höhe der Zeichenbitmap für Rasterschriftarten oder die Höhe des Rasters, auf dem eine Vektorschriftart digitalisiert wurde.
 
 </dd> <dt>
 
-**dfpitchandfamily**
+**dfPitchAndFamily**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Die Tonhöhe und die Familie der Schriftart. Weitere Informationen finden Sie in der Beschreibung der [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur.
+Die Tonhöhe und die Familie der Schriftart. Weitere Informationen finden Sie in der Beschreibung der [**LOGFONT-Struktur.**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 
 </dd> <dt>
 
-**dfavgwidth**
+**dfAvgWidth**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die durchschnittliche Breite der Zeichen in der Schriftart (im Allgemeinen als Breite des Buchstaben x definiert). Dieser Wert enthält nicht den für Fett-oder kursiv Zeichen erforderlichen Überlauf.
+Die durchschnittliche Breite von Zeichen in der Schriftart (im Allgemeinen als Breite des Buchstabens x definiert). Dieser Wert enthält nicht den Überhänge, der für fette oder kursiv formatierte Zeichen erforderlich ist.
 
 </dd> <dt>
 
-**dfmaxwidth**
+**dfMaxWidth**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
@@ -288,121 +288,121 @@ Die Breite des breitesten Zeichens in der Schriftart.
 
 </dd> <dt>
 
-**dffirstchar**
+**dfFirstChar**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Der erste Zeichencode, der in der Schriftart definiert ist.
+Der erste in der Schriftart definierte Zeichencode.
 
 </dd> <dt>
 
-**dflastchar**
+**dfLastChar**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Der letzte Zeichencode, der in der Schriftart definiert ist.
+Der letzte in der Schriftart definierte Zeichencode.
 
 </dd> <dt>
 
-**dfdefaultchar**
+**dfDefaultChar**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Das Zeichen, das nicht in der Schriftart, sondern in Zeichen ersetzt werden soll.
+Das Zeichen, das zeichenweise ersetzt werden soll, die nicht in der Schriftart enthalten sind.
 
 </dd> <dt>
 
-**dfbreakchar**
+**dfBreakChar**
 </dt> <dd>
 
-Type: **Byte**
+Typ: **BYTE**
 
 </dd> <dd>
 
-Das Zeichen, das zum Definieren von Wort Umbrüchen für die Textausrichtung verwendet wird.
+Das Zeichen, das zum Definieren von Wortumbrüchen für die Textgrundlegende verwendet wird.
 
 </dd> <dt>
 
-**dfwidthbytes**
+**dfWidthBytes**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die Anzahl der Bytes in jeder Zeile der Bitmap. Dieser Wert ist immer, auch wenn die Zeilen an Wortgrenzen beginnen. Bei Vektor Schriftarten hat dieser Member keine Bedeutung.
+Die Anzahl der Bytes in jeder Zeile der Bitmap. Dieser Wert ist immer gleich, sodass die Zeilen an Wortgrenzen beginnen. Für Vektorschriftarten hat dieser Member keine Bedeutung.
 
 </dd> <dt>
 
-**dfdevice**
+**dfDevice**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Offset in der Datei mit einer auf NULL endenden Zeichenfolge, die einen Gerätenamen angibt. Bei einer generischen Schriftart ist dieser Wert 0 (null).
+Der Offset in der Datei zu einer auf NULL endenden Zeichenfolge, die einen Gerätenamen angibt. Bei einer generischen Schriftart ist dieser Wert 0 (null).
 
 </dd> <dt>
 
-**dfface**
+**dfFace**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Offset in der Datei mit einer auf NULL endenden Zeichenfolge, die die Schriftart benennt.
+Der Offset in der Datei zu einer auf NULL beendeten Zeichenfolge, die die Schriftart benennt.
 
 </dd> <dt>
 
-**dfreserved**
+**dfReserved**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Dieser Member ist reserviert.
+Dieses Mitglied ist reserviert.
 
 </dd> <dt>
 
-**szdevicename**
+**szDeviceName**
 </dt> <dd>
 
-Typ: **char**
+Typ: **CHAR**
 
 </dd> <dd>
 
-Der Name des Geräts, wenn diese Schriftart Datei für ein bestimmtes Gerät bestimmt ist.
+Der Name des Geräts, wenn diese Schriftartdatei für ein bestimmtes Gerät festgelegt ist.
 
 </dd> <dt>
 
-**szfakename**
+**szFaceName**
 </dt> <dd>
 
-Typ: **char**
+Typ: **CHAR**
 
 </dd> <dd>
 
-Der Schriftart Name der Schriftart.
+Der Schriftartname der Schriftart.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt eine **fontdirentry** -Struktur für jede Schriftart in der RES-Datei. Anwendungen, die RES-Dateien mit Schriftart Ressourcen generieren, müssen der Datei auch eine **fontdirentry** -Struktur für jede Schriftart hinzufügen.
+Es gibt eine **FONTDIRENTRY-Struktur** für jede Schriftart in der RES-Datei. Anwendungen, die RES-Dateien mit Schriftartressourcen generieren, müssen der Datei außerdem eine **FONTDIRENTRY-Struktur** für jede Schriftart hinzufügen.
 
-Schriftart Deklarationen können mit anderen Ressourcen Deklarationen in gemischt werden. RC-Datei, da Schriftarten in der RES-Datei nicht zusammenhängend sein müssen.
+Schriftartdeklarationen können mit anderen Ressourcendeklarationen im gemischt werden. RC-Datei, da Schriftarten in der RES-Datei nicht zusammenhängend sein müssen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -419,16 +419,16 @@ Schriftart Deklarationen können mit anderen Ressourcen Deklarationen in gemisch
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Direntry**](direntry.md)
+[**DIRENTRY**](direntry.md)
 </dt> <dt>
 
-[**Fontgrouphdr**](fontgrouphdr.md)
+[**FONTGROUPHDR**](fontgrouphdr.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)
@@ -437,7 +437,7 @@ Schriftart Deklarationen können mit anderen Ressourcen Deklarationen in gemisch
 **Andere Ressourcen**
 </dt> <dt>
 
-[**"LogFont"**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
+[**Logfont**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 </dt> </dl>
 
  

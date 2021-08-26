@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: bda01d02db2a93a90c63f206b723a55df2373418
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0048624b79daa6948851fd9a56142b97c7e185caa9bbcbdeb6c2c1b19f591eb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916630"
 ---
 # <a name="cbasepindisconnect-method"></a>CBasePin.Disconnect-Methode
 
-Die `Disconnect` -Methode unterbricht die aktuelle Stecknadelverbindung. Diese Methode implementiert die [**IPin::D isconnect-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect)
+Die `Disconnect` -Methode unterbricht die aktuelle Pinverbindung. Diese Methode implementiert die [**IPin::D isconnect-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,15 +48,15 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folge
 
 | Rückgabecode                                                                                         | Beschreibung                                                                        |
 |-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ FALSE**</dt> </dl>             | Die Stecknadel war nicht verbunden.<br/>                                              |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>             | Die Stecknadel wurde nicht verbunden.<br/>                                              |
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Erfolg.<br/>                                                                |
-| <dl> <dt>**VFW \_ E \_ NICHT \_ BEENDET**</dt> </dl> | Der Filter ist aktiv, und der Pin unterstützt keine dynamische Wiederherstellung der Verbindung.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ BEENDET**</dt> </dl> | Der Filter ist aktiv, und der Pin unterstützt keine dynamische wiederhergestellte Verbindung.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Basisklasse delegiert den Großteil der Arbeit an die [**CBasePin::D isconnectInternal-Methode.**](cbasepin-disconnectinternal.md)
 
@@ -64,14 +64,14 @@ Die Basisklasse delegiert den Großteil der Arbeit an die [**CBasePin::D isconne
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

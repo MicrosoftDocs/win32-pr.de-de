@@ -1,33 +1,33 @@
 ---
-description: Gibt ein Fenster an, in dem die Medien-Engine den OPM-Schutz (Output Protection Manager) anwenden soll.
+description: Gibt ein Fenster an, in dem die Medien-Engine OPM-Schutz (Output Protection Manager) anwenden kann.
 ms.assetid: E5271D72-FE16-4D28-9BBA-1440C7CE0921
-title: MF_MEDIA_ENGINE_OPM_HWND-Attribut (MF mediaengine. h)
+title: MF_MEDIA_ENGINE_OPM_HWND -Attribut (Mfmediaengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d60dd38f4f9eaca3e4eefbf84142c1509463f9b9
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 2e1079e7b9503c73ea678e4f9fd3642ec94fe43a1326e6f33a635f81d1bc1a64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013070"
 ---
-# <a name="mf_media_engine_opm_hwnd-attribute"></a>\_ \_ \_ OPM- \_ HWND-Attribut der MF-Medien-Engine
+# <a name="mf_media_engine_opm_hwnd-attribute"></a>OPM \_ \_ \_ \_ HWND-Attribut der MF-MEDIEN-ENGINE
 
-Gibt ein Fenster an, in dem die Medien-Engine den OPM-Schutz ( [Output Protection Manager](output-protection-manager.md) ) anwenden soll.
+Gibt ein Fenster an, in dem die Medien-Engine OPM-Schutz [(Output Protection Manager)](output-protection-manager.md) anwenden kann.
 
 ## <a name="data-type"></a>Datentyp
 
-**HWND** als **UINT64** gespeichert
+**HWND als** **UINT64 gespeichert**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) -Methode verwendet, um die Medien-Engine zu initialisieren.
+Dieses Attribut wird zusammen mit der [**METHODE FÜR DIETMEDIAEngineClassFactory::CreateInstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) verwendet, um die Medien-Engine zu initialisieren.
 
-Um den OPM-Schutz für die Videowiedergabe zu aktivieren, muss die Anwendung einen der folgenden Schritte ausführen:
+Um OPM-Schutz für die Videowiedergabe zu aktivieren, muss die Anwendung einen der folgenden Schritte unternehmen:
 
--   Legen Sie [das \_ \_ \_ \_ HWND](mf-media-engine-playback-hwnd.md) -Attribut der MF-Medien-Engine beim Erstellen der Medien-Engine fest.
--   Legen Sie \_ \_ \_ \_ beim Erstellen der Medien-Engine das OPM-HWND-Attribut der MF-Medien-Engine fest
--   Nach dem Erstellen der Medien-Engine, aber vor dem Anzeigen geschützter Inhalte, muss [**imfmediaengineprotectedcontent::**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineprotectedcontent-setopmwindow) Setup-Window aufgerufen werden.
+-   Legen Sie das [MF \_ MEDIA ENGINE PLAYBACK \_ \_ \_ HWND-Attribut](mf-media-engine-playback-hwnd.md) fest, wenn Sie die Medien-Engine erstellen.
+-   Legen Sie das MF \_ MEDIA \_ ENGINE \_ OPM \_ HWND-Attribut fest, wenn Sie die Medien-Engine erstellen.
+-   Rufen [**Sie ZU jedem Zeitpunkt NACH**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineprotectedcontent-setopmwindow) dem Erstellen der Medien-Engine, aber bevor geschützter Inhalt angezeigt wird, DEN AUFRUF ZU EINEM BELIEBIGEN ZEITPUNKT AUF.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Um den OPM-Schutz für die Videowiedergabe zu aktivieren, muss die Anwendung ein
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>MF mediaengine. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmediaengine.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Um den OPM-Schutz für die Videowiedergabe zu aktivieren, muss die Anwendung ein
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Medien-Engine-Attribute](media-engine-attributes.md)

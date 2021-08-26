@@ -1,9 +1,9 @@
 ---
-title: TB_BUTTONSTRUCTSIZE Meldung (kommstrg. h)
+title: TB_BUTTONSTRUCTSIZE Meldung (Commctrl.h)
 description: Gibt die Größe der TBBUTTON-Struktur an.
 ms.assetid: 4e63a075-4191-44c1-8df6-38fce51d4be5
 keywords:
-- Windows-Steuerelemente für TB_BUTTONSTRUCTSIZE Meldung
+- TB_BUTTONSTRUCTSIZE Meldung Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7187c1f4cb45306fd293c7eb74ef8807f395ba22
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ceed10eec9038b338d060f28acdab8a10aa88aecef6b264b6d6d0682168f4937
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104041015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919140"
 ---
-# <a name="tb_buttonstructsize-message"></a>TB \_ buttonstructsize-Meldung
+# <a name="tb_buttonstructsize-message"></a>TB \_ BUTTONSTRUCTSIZE-Nachricht
 
-Gibt die Größe der [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Struktur an.
+Gibt die Größe der [**TBBUTTON-Struktur**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) an.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Gibt die Größe der [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tb
 *wParam* 
 </dt> <dd>
 
-Größe der [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Struktur in Bytes.
+Größe der [**TBBUTTON-Struktur**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) in Bytes.
 
 </dd> <dt>
 
@@ -43,11 +43,11 @@ Größe der [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das System verwendet die Größe, um zu bestimmen, welche Version der Common Control Dynamic Link Library (dll) verwendet wird.
+Das System verwendet die Größe, um zu bestimmen, welche Version der DLL (Common Control Dynamic Link Library) verwendet wird.
 
-Wenn eine Anwendung die Funktion "up- [**windowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) " verwendet, um die Symbolleiste zu erstellen, muss die Anwendung diese Nachricht vor dem Senden der Meldung " [**TB \_ AddBitmap**](tb-addbitmap.md) " oder " [**TB \_ AddButtons**](tb-addbuttons.md) " an die Symbolleiste senden. Die Funktion " [**kreatetoolbarex**](/windows/desktop/api/Commctrl/nf-commctrl-createtoolbarex) " sendet automatisch **TB " \_ buttonstructsize**", und die Größe der [**TBBUTTON**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) -Struktur ist ein Parameter der Funktion.
+Wenn eine Anwendung die [**CreateWindowEx-Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) verwendet, um die Symbolleiste zu erstellen, muss die Anwendung diese Nachricht an die Symbolleiste senden, bevor die [**TB \_ ADDBITMAP-**](tb-addbitmap.md) oder [**TB \_ ADDBUTTONS-Nachricht**](tb-addbuttons.md) gesendet wird. Die [**CreateToolbarEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-createtoolbarex) sendet automatisch **TB \_ BUTTONSTRUCTSIZE,** und die Größe der [**TBBUTTON-Struktur**](/windows/desktop/api/Commctrl/ns-commctrl-tbbutton) ist ein Parameter der Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn eine Anwendung die Funktion "up- [**windowex**](/windows/desktop/api/winuse
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

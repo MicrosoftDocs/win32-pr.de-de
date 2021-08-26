@@ -1,7 +1,7 @@
 ---
-description: Fordert Ereignisse für den Bericht "Civic Address" an
+description: Fordert Ereignisse zum Melden von Bürgeradressen an.
 ms.assetid: cb02f611-7cda-405f-aeee-833b7385a4be
-title: LocationDisp. civicaddressreportfactory. listenforreports-Methode (locationapi. h)
+title: LocationDisp.CivicAddressReportFactory.ListenForReports-Methode (Locationapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - locationapi.h
-ms.openlocfilehash: 02315f8b2f7fced76c3d0d1330df246af6bad4b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 218684dcdb1c79b3b1a37517a4369ad492031cae1badfb9f0b16bbb6933289d8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979770"
 ---
-# <a name="locationdispcivicaddressreportfactorylistenforreports-method"></a>LocationDisp. civicaddressreportfactory. listenforreports-Methode
+# <a name="locationdispcivicaddressreportfactorylistenforreports-method"></a>LocationDisp.CivicAddressReportFactory.ListenForReports-Methode
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location-API-Objektmodell steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Um über eine Desktopanwendung auf den Speicherort zu zugreifen, verwenden Sie [**die Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
-Fordert Ereignisse für den Bericht "Civic Address" an
+Fordert Ereignisse zum Melden von Bürgeradressen an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,20 +41,20 @@ LocationDisp.CivicAddressReportFactory.ListenForReports(
 
 <dl> <dt>
 
-*requestedreportinterval* 
-</dt> <dd> Number (**doppeltes Wort**), das die angeforderte Zeit zwischen den Ereignissen des öffentlichen Adress Berichts (in Millisekunden) darstellt. Siehe Hinweise.</dd> </dl>
+*requestedReportInterval* 
+</dt> <dd> Zahl (**Doppeltes Wort**), die die angeforderte Zeit zwischen Denkberichtsereignissen in Millisekunden darstellt. Siehe Hinweise.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Speicherort Anbieter ist nicht erforderlich, um die gewünschte Genauigkeit anzugeben. Lesen Sie den Wert der [**reportinterval**](locationdisp-civicaddressreportfactory-reportinterval.md) -Eigenschaft, um die Einstellung für das tatsächliche Berichts Intervall zu ermitteln.
+Der Standortanbieter muss nicht die von Ihnen geforderte Genauigkeit bereitstellen. Lesen Sie den Wert der [**ReportInterval-Eigenschaft,**](locationdisp-civicaddressreportfactory-reportinterval.md) um die Einstellung true report interval zu finden.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter Überwachen von [Ereignissen zu öffentlichen Adress Berichten](/uwp/api/Windows.Devices.Geolocation).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Listening for Civic Address Report Events](/uwp/api/Windows.Devices.Geolocation).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,17 +62,17 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter Überwachen von
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                |
-| Header<br/>                   | <dl> <dt>Locationapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Locationapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Newcivicaddressreport-Ereignis**](newcivicaddressreport.md)
+[**NewCivicAddressReport-Ereignis**](newcivicaddressreport.md)
 </dt> </dl>
 
  

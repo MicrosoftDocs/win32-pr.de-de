@@ -1,8 +1,8 @@
 ---
-description: Die iwbeporbjectsink-Schnittstelle erstellt eine Sink-Schnittstelle, die alle Arten von Benachrichtigungen innerhalb des WMI-Programmiermodells empfangen kann.
+description: Die IWbemObjectSink-Schnittstelle erstellt eine Senkenschnittstelle, die alle Arten von Benachrichtigungen innerhalb des WMI-Programmiermodells empfangen kann.
 ms.assetid: 987aea1d-912a-4691-987f-181c1ef1a8a9
 ms.tgt_platform: multiple
-title: Iwbemubjectsink-Schnittstelle (wbemcli. h)
+title: IWbemObjectSink-Schnittstelle (Wbemcli.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,61 +14,61 @@ api_type:
 - COM
 api_location:
 - Fastprox.dll
-ms.openlocfilehash: 980865605eadfd5e4cb61a511317dec7838b8e47
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6bfce21edca92c95276f382d16007f8b319b9f3b80fc5c3c721f7232ea0b4618
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368237"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996540"
 ---
-# <a name="iwbemobjectsink-interface"></a>Iwbemubjectsink-Schnittstelle
+# <a name="iwbemobjectsink-interface"></a>IWbemObjectSink-Schnittstelle
 
-Die **iwbeporbjectsink** -Schnittstelle erstellt eine Sink-Schnittstelle, die alle Arten von Benachrichtigungen innerhalb des WMI-Programmiermodells empfangen kann. Clients müssen diese Schnittstelle implementieren, um sowohl die Ergebnisse der [asynchronen Methoden](making-an-asynchronous-call-with-c--.md) von [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices)als auch bestimmte Arten von Ereignis Benachrichtigungen zu empfangen. Anbieter verwenden, implementieren diese Schnittstelle jedoch nicht, um der WMI Ereignisse und Objekte bereitzustellen.
+Die **IWbemObjectSink-Schnittstelle** erstellt eine Senkenschnittstelle, die alle Arten von Benachrichtigungen innerhalb des WMI-Programmiermodells empfangen kann. Clients müssen diese Schnittstelle implementieren, um sowohl die Ergebnisse der [asynchronen](making-an-asynchronous-call-with-c--.md) Methoden von [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices)als auch bestimmte Typen von Ereignisbenachrichtigungen zu empfangen. Anbieter verwenden diese Schnittstelle, implementieren sie aber nicht, um Ereignisse und Objekte für WMI zur Verfügung zu stellen.
 
-In der Regel wird von Anbietern eine von WMI bereitgestellte Implementierung aufgerufen. In diesen Fällen [**geben**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) Sie an, um-Objekte für den WMI-Dienst bereitzustellen. Anschließend wird [**SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) aufgerufen, um das Ende der Benachrichtigungs Sequenz anzugeben. Sie können auch **SetStatus** aufrufen, um Fehler anzugeben, wenn die Senke keine Objekte enthält.
+Anbieter rufen in der Regel eine Implementierung auf, die ihnen von WMI bereitgestellt wird. Rufen Sie in diesen Fällen [**Angeben auf,**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) um Dem WMI-Dienst Objekte zur Verfügung zu stellen. Rufen Sie anschließend [**SetStatus auf,**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) um das Ende der Benachrichtigungssequenz anzugeben. Sie können **setStatus** auch aufrufen, um Fehler anzugeben, wenn die Senke keine Objekte enthält.
 
-Beim Programmieren von asynchronen WMI-Clients stellt der Benutzer die-Implementierung bereit. WMI Ruft die Methoden zum Übermitteln von Objekten auf und legt den Status des Ergebnisses fest.
+Beim Programmieren asynchroner Clients von WMI stellt der Benutzer die Implementierung zur Verfügung. WMI ruft die Methoden auf, um Objekte zu liefern und den Status des Ergebnisses fest zu legen.
 
 > [!Note]  
-> Wenn eine Client Anwendung die gleiche Senke-Schnittstelle in zwei unterschiedlichen asynchronen Aufrufen übergibt, garantiert WMI nicht die Reihenfolge des Rückrufs. Client Anwendungen, die überlappende asynchrone Aufrufe durchführen, sollten entweder unterschiedliche Sink-Objekte übergeben oder Ihre Aufrufe serialisieren.
+> Wenn eine Clientanwendung dieselbe Senkenschnittstelle in zwei verschiedenen überlappenden asynchronen Aufrufen übergibt, garantiert WMI die Reihenfolge des Rückrufs nicht. Clientanwendungen, die überlappende asynchrone Aufrufe ausführen, sollten entweder verschiedene Senkenobjekte übergeben oder ihre Aufrufe serialisieren.
 
  
 
 > [!Note]  
-> Da der Rückruf für die Senke möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Client zurückgegeben wird, empfiehlt es sich, anstelle der asynchronen Kommunikation semisynchrone anstelle der asynchronen Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Da der Rückruf an die Senke möglicherweise nicht auf der vom Client benötigten Authentifizierungsebene zurückgegeben wird, wird empfohlen, anstelle der asynchronen Kommunikation eine semisynchrone Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 
 ## <a name="members"></a>Member
 
-Die **iwbeporbjectsink** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWbemObjectSink-Schnittstelle** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwbemubjectsink** -Schnittstelle verfügt über diese Methoden.
+Die **IWbemObjectSink-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                         | BESCHREIBUNG                                                                                                             |
 |:-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**Aufgezeigt**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate)   | Empfängt Benachrichtigungsobjekte.<br/>                                                                               |
-| [**SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) | Wird von Quellen aufgerufen, um das Ende einer Benachrichtigungs Sequenz anzugeben, oder, um andere Statuscodes an die Senke zu senden.<br/> |
+| [**Anzugeben**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate)   | Empfängt Benachrichtigungsobjekte.<br/>                                                                               |
+| [**SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) | Wird von Quellen aufgerufen, um das Ende einer Benachrichtigungssequenz anzugeben oder andere Statuscodes an die Senke zu senden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie eine Ereignis-Abonnement-Senke (**iwbewbjectsink** oder [**iwbemeventsink**](iwbemeventsink.md)) implementieren, sollten Sie in der Methode " [**angeben**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) " oder " [**SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) " für das senkentabbild keine WMI aufrufen. Beispiels [**Weise kann das Aufrufen von**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) [**IWbemServices:: cancelasynccall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) zum Abbrechen der Senke aus einer Implementierung von den WMI-Zustand beeinträchtigen. Um ein Ereignis Abonnement abzubrechen, legen Sie ein Flag fest, und rufen Sie **IWbemServices:: cancelasynccall** von einem anderen Thread oder Objekt auf. Bei Implementierungen, die sich nicht auf eine Ereignis Senke beziehen, wie z. b. Object-, enum-und Abfrage-Abruf Werte, können Sie einen Rückruf in WMI durchlaufen.
+Rufen Sie beim Implementieren einer Ereignisabonnementsenke **(IWbemObjectSink** oder [**IWbemEventSink)**](iwbemeventsink.md)nicht in WMI aus den [**Methoden Indicate**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) oder [**SetStatus**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-setstatus) für das Senkenobjekt auf. Beispielsweise kann der Aufruf [**von IWbemServices::CancelAsyncCall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) zum Abbrechen der Senke innerhalb einer Implementierung von [**Indicate**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) den WMI-Zustand beeinträchtigen. Um ein Ereignisabonnement zu kündigen, legen Sie ein Flag fest, und rufen **Sie IWbemServices::CancelAsyncCall von** einem anderen Thread oder Objekt aus auf. Für Implementierungen, die nicht mit einer Ereignissenke verknüpft sind, z. B. Objekt-, Enum- und Abfrageabrufe, können Sie einen Rückruf in WMI ausführen.
 
-Sink-Implementierungen sollten die Ereignis Benachrichtigung innerhalb von 100 MS verarbeiten, weil der WMI-Thread, der die Ereignis Benachrichtigung übermittelt, erst dann andere Aufgaben ausführen kann, wenn die Verarbeitung des Sink-Objekts abgeschlossen ist. Wenn für die Benachrichtigung eine große Menge an Verarbeitung erforderlich ist, kann die Senke eine interne Warteschlange für einen anderen Thread verwenden, um die Verarbeitung zu verarbeiten.
+Senkenimplementierungen sollten die Ereignisbenachrichtigung innerhalb von 100 MSEC verarbeiten, da der WMI-Thread, der die Ereignisbenachrichtigung übergibt, keine anderen Arbeiten mehr tun kann, bis die Verarbeitung des Senkenobjekts abgeschlossen ist. Wenn die Benachrichtigung eine große Menge an Verarbeitung erfordert, kann die Senke eine interne Warteschlange für einen anderen Thread verwenden, um die Verarbeitung zu verarbeiten.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel ist eine einfache Implementierung einer Objekt Senke. Dieses Beispiel kann mit [**IWbemServices:: ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) oder [**IWbemServices:: | ateinstanceenumasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync) verwendet werden, um die zurückgegebenen Instanzen zu empfangen:
+Das folgende Codebeispiel ist eine einfache Implementierung einer Objektsenke. Dieses Beispiel kann mit [**IWbemServices::ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) oder [**IWbemServices::CreateInstanceEnumAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync) verwendet werden, um die zurückgegebenen Instanzen zu empfangen:
 
 
 ```C++
@@ -168,8 +168,8 @@ HRESULT QuerySink::SetStatus(
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                           |
-| Header<br/>                   | <dl> <dt>Wbemcli. h (Include wbemittell. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Wbemuuid. lib</dt> </dl>                  |
+| Header<br/>                   | <dl> <dt>Wbemcli.h (einschließlich Wbemidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Wbemuuid.lib</dt> </dl>                  |
 | DLL<br/>                      | <dl> <dt>Fastprox.dll</dt> </dl>                  |
 
 
@@ -181,13 +181,13 @@ HRESULT QuerySink::SetStatus(
 [COM-API für WMI](com-api-for-wmi.md)
 </dt> <dt>
 
-[Erstellen eines asynchronen Aufrufes mit C++](making-an-asynchronous-call-with-c--.md)
+[Ausführen eines asynchronen Aufrufs mit C++](making-an-asynchronous-call-with-c--.md)
 </dt> <dt>
 
-[Festlegen der Sicherheit für einen asynchronen-Befehl](setting-security-on-an-asynchronous-call.md)
+[Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen für die Dauer der Anwendung](receiving-events-for-the-duration-of-your-application.md)
+[Empfangen von Ereignissen für die Dauer Ihrer Anwendung](receiving-events-for-the-duration-of-your-application.md)
 </dt> </dl>
 
  

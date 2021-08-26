@@ -1,9 +1,9 @@
 ---
-title: Provider (renderinginfotype)-Element
-description: Die gerenderte Nachrichten Zeichenfolge für den Anbieter.
+title: Provider(RenderingInfoType)-Element
+description: Die gerenderte Meldungszeichenfolge für den Anbieter.
 ms.assetid: ee50b96b-35a7-4e5d-b9bf-700204627000
 keywords:
-- Anbieter Element-Ereignisprotokoll
+- Provider-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5927fa3cf7a1ed397d1a8daa03f38a812372b6ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d545ee6a1038902f7a4f48f61e06235b9938fe590e9cdc2408b51ec4a9216048
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040260"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904400"
 ---
-# <a name="provider-renderinginfotype-element"></a>Provider (renderinginfotype)-Element
+# <a name="provider-renderinginfotype-element"></a>Provider(RenderingInfoType)-Element
 
-Die gerenderte Nachrichten Zeichenfolge für den Anbieter.
+Die gerenderte Meldungszeichenfolge für den Anbieter.
 
 ``` syntax
 <xs:element name="Provider"
@@ -30,7 +30,7 @@ Die gerenderte Nachrichten Zeichenfolge für den Anbieter.
  />
 ```
 
-Das **Provider** -Element wird durch den komplexen [**renderinginfotype**](eventschema-renderingtype-complextype.md) -Typ definiert.
+Das **Provider-Element** wird durch den komplexen [**RenderingInfoType-Typ**](eventschema-renderingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Provider** -Element wird durch den komplexen [**renderinginfotype**](event
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Provider** -Element wird durch den komplexen [**renderinginfotype**](event
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Renderinginfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
+[**RenderingInfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
 </dt> </dl>
 
  

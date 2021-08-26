@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. trubasslevel
-description: Das trubasslevel-Attribut gibt die SRS-TruBass-Ebene an oder ruft Sie ab.
+title: EQUALIZERSETTINGS.truBassLevel
+description: Das truBassLevel-Attribut gibt die SRS TruBass-Ebene an oder ruft sie ab.
 ms.assetid: 9f8c9dbe-d535-42af-8ea7-74fc10526fba
 keywords:
-- Fenster "equalizersettings. trubasslevel" Media Player
+- EQUALIZERSETTINGS.truBassLevel Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48a262d90b9363f18b20922f92f77960f3b0b882
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c17fdb293ee081c99055a88fcd8a6ffeb420c9eb922be655f92df04c71058af2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901950"
 ---
-# <a name="equalizersettingstrubasslevel"></a>Equalizersettings. trubasslevel
+# <a name="equalizersettingstrubasslevel"></a>EQUALIZERSETTINGS.truBassLevel
 
-Das **trubasslevel** -Attribut gibt die SRS-TruBass-Ebene an oder ruft Sie ab.
+Das **truBassLevel-Attribut** gibt die SRS TruBass-Ebene an oder ruft sie ab.
 
 ``` syntax
         elementID.truBassLevel
@@ -29,11 +29,11 @@ Das **trubasslevel** -Attribut gibt die SRS-TruBass-Ebene an oder ruft Sie ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die zwischen 0 und 100 und dem Standardwert 50 liegt. 
+Dieses Attribut ist eine  Lese-/Schreibnummer **(lang**) im Bereich von 0 bis 100 mit einem Standardwert von 50.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-TruBass ist ein Effekt, der den Sound der Bass Ebenen der Audiospur erweitert. Dieses Attribut wird ignoriert, wenn **enhancedaudiowert** auf false festgelegt ist.
+TruBass ist ein Effekt, der den Sound der Ebenen der Audiospur verbessert. Dieses Attribut wird ignoriert, wenn **enhancedAudio** auf FALSE festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ TruBass ist ein Effekt, der den Sound der Bass Ebenen der Audiospur erweitert. D
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
@@ -49,10 +49,10 @@ TruBass ist ein Effekt, der den Sound der Bass Ebenen der Audiospur erweitert. D
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. enhancedaudio**](equalizersettings-enhancedaudio.md)
+[**EQUALIZERSETTINGS.enhancedAudio**](equalizersettings-enhancedaudio.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM_POINTERROUTEDAWAY Meldung
-description: Tritt für den Prozess auf, der Eingaben empfängt, wenn die Zeiger Eingabe an einen anderen Prozess weitergeleitet wird. Addcontentwithcrossprocesschaining).
+title: WM_POINTERROUTEDAWAY-Nachricht
+description: Tritt auf dem Prozess ein, der Eingaben empfängt, wenn die Zeigereingabe an einen anderen Prozess geroutet wird. AddContentWithCrossProcessChaining).
 ms.assetid: 06F8152C-0DA0-4820-835E-07AD35B24310
 keywords:
-- Eingabe Meldungen und Benachrichtigungen der WM_POINTERROUTEDAWAY Nachricht
+- 'WM_POINTERROUTEDAWAY-Nachricht: Eingabemeldungen und Benachrichtigungen'
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 3c099c02338aa70817d75717064e0b99ac13c96b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6df21a5464aa44621c2eca760690806237f9e75a79c5f695d3df5b7604a6878
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964220"
 ---
-# <a name="wm_pointerroutedaway-message"></a>WM_POINTERROUTEDAWAY Meldung
+# <a name="wm_pointerroutedaway-message"></a>WM_POINTERROUTEDAWAY-Nachricht
 
-Tritt für den Prozess auf, der Eingaben empfängt, wenn die Zeiger Eingabe an einen anderen Prozess weitergeleitet wird.
+Tritt auf dem Prozess ein, der Eingaben empfängt, wenn die Zeigereingabe an einen anderen Prozess geroutet wird.
 
-Wird gesendet, wenn die Zeiger Eingabe von einem Prozess in einen anderen über Inhalt übergeht, der für prozessübergreifende Verkettung konfiguriert ist ([**addcontentwithcrossprocesschaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)).
+Wird gesendet, wenn Zeigereingaben von einem Prozess in einen anderen über den für prozessübergreifende Verkettung konfigurierten Inhalt übertragen werden ([**AddContentWithCrossProcessChaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)).
 
-Diese Meldung wird an den Prozess gesendet, der derzeit Zeiger Eingaben empfängt.
+Diese Meldung wird an den Prozess gesendet, der derzeit Zeigereingaben empfängt.
 
 
 ```C++
@@ -58,9 +58,9 @@ Nicht verwendet.
 
 NULL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird nicht mit einer [**WM_POINTERUP**](wm-pointerup.md) Nachricht oder einer [**WM_POINTERCAPTURECHANGED**](wm-pointercapturechanged.md) Nachricht gesendet.
+Diese Nachricht wird weder [](wm-pointerup.md) mit einer WM_POINTERUP noch mit [**einer**](wm-pointercapturechanged.md) WM_POINTERCAPTURECHANGED gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,13 +68,13 @@ Diese Meldung wird nicht mit einer [**WM_POINTERUP**](wm-pointerup.md) Nachricht
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

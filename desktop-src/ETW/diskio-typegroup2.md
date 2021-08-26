@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse, die den Anfang der Datenträger-e/a-Lese-, Schreib-und Lösch Ereignisse markiert. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse, die den Anfang der Datenträger-E/A-Lese-, Schreib- und Leerungsereignisse markiert. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 96543ef9-cc2b-4d9a-86a8-f2458439e4d8
 title: DiskIo_TypeGroup2-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ea08f32106c935be628bcdcd22e39ab92a0566e6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60c1f2be2e90ddb8b3d7a396bfa925f0b7e83181effe7fb8c947bd911133f441
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963140"
 ---
-# <a name="diskio_typegroup2-class"></a>Diskio \_ TypeGroup2-Klasse
+# <a name="diskio_typegroup2-class"></a>DiskIo \_ TypeGroup2-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse, die den Anfang der Datenträger-e/a-Lese-, Schreib-und Lösch Ereignisse markiert.
+Diese Klasse ist die Ereignistypklasse, die den Anfang der Datenträger-E/A-Lese-, Schreib- und Leerungsereignisse markiert.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,42 +40,42 @@ class DiskIo_TypeGroup2 : DiskIo
 
 ## <a name="members"></a>Member
 
-Die **diskio \_ TypeGroup2** -Klasse verfügt über diese Typen von Membern:
+Die **DiskIo \_ TypeGroup2-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **diskio \_ TypeGroup2** -Klasse verfügt über diese Eigenschaften.
+Die **DiskIo \_ TypeGroup2-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (1), [**Zeiger**](event-tracing-mof-qualifiers.md)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (1), [**Zeiger**](event-tracing-mof-qualifiers.md)
 </dt> </dl>
 
-E/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität.
+E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität.
 
 </dd> <dt>
 
-**Issuingthreadid**
+**IssuingThreadId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (2)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (2)
 </dt> </dl>
 
 Der Bezeichner des ausstellenden Threads.
@@ -84,22 +84,22 @@ Der Bezeichner des ausstellenden Threads.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

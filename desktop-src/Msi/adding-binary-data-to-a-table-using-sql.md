@@ -1,21 +1,21 @@
 ---
-description: Binärdaten können nicht direkt mithilfe der INSERT INTO-oder Update SQL-Abfragen in eine Tabelle eingefügt werden.
+description: Binärdaten können nicht direkt mithilfe der INSERT INTO- oder UPDATE-Abfragen in SQL eingefügt werden.
 ms.assetid: cc055de8-eaba-48eb-a982-4d584ac7a881
-title: Hinzufügen von Binärdaten zu einer Tabelle mithilfe von SQL
+title: Hinzufügen von Binärdaten zu einer Tabelle mit SQL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 491bfe57354b4faf9f7c385bc4e14c64ad366f1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 005b7de98fa62ae6e79378831802b8a5a9c95b1d0f3d33dd353fd5403ad600ca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996950"
 ---
-# <a name="adding-binary-data-to-a-table-using-sql"></a>Hinzufügen von Binärdaten zu einer Tabelle mithilfe von SQL
+# <a name="adding-binary-data-to-a-table-using-sql"></a>Hinzufügen von Binärdaten zu einer Tabelle mit SQL
 
-Binärdaten können nicht direkt mithilfe der INSERT INTO-oder Update SQL-Abfragen in eine Tabelle eingefügt werden. Um einer Tabelle Binärdaten hinzuzufügen, müssen Sie zuerst die Parameter Markierung (?) in der Abfrage als Platzhalter für den binären Wert verwenden. Die Ausführung der Abfrage sollte einen Datensatz einschließen, der die Binärdaten in einem der Felder enthält.
+Binärdaten können nicht direkt mithilfe der INSERT INTO- oder UPDATE-Abfragen in SQL eingefügt werden. Um einer Tabelle Binärdaten hinzuzufügen, müssen Sie zuerst den Parametermarker (?) in der Abfrage als Platzhalter für den Binärwert verwenden. Die Ausführung der Abfrage sollte einen Datensatz enthalten, der die Binärdaten in einem der Felder enthält.
 
-Ein Marker ist ein Parameter Verweis auf einen Wert, der von einem mit der Abfrage übermittelten Datensatz bereitgestellt wird. Sie wird in der SQL-Anweisung durch ein Fragezeichen (?) dargestellt.
+Ein Marker ist ein Parameterverweis auf einen Wert, der von einem mit der Abfrage übermittelten Datensatz bereitgestellt wird. Sie wird in der SQL durch ein Fragezeichen (?) dargestellt.
 
 Der folgende Beispielcode fügt einer Tabelle Binärdaten hinzu.
 
@@ -105,7 +105,7 @@ Database.Commit ' save changes
 [SQL-Syntax](sql-syntax.md)
 </dt> <dt>
 
-[Beispiele für Datenbankabfragen mit SQL und Skript](examples-of-database-queries-using-sql-and-script.md)
+[Beispiele für Datenbankabfragen mit SQL und Skripts](examples-of-database-queries-using-sql-and-script.md)
 </dt> </dl>
 
  

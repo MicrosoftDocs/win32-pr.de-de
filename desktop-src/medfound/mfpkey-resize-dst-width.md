@@ -1,19 +1,19 @@
 ---
-description: Gibt die Breite des Ziel Rechtecks in Pixel an.
+description: Gibt die Breite des Zielrechtecks in Pixel an.
 ms.assetid: 8f0066ca-c464-480d-b38f-3c1134fc51b7
-title: MFPKEY_RESIZE_DST_WIDTH-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_RESIZE_DST_WIDTH-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d1837de9180fd20a7fea5921bfa08bc2adfc35a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e3da156b3c7b9ae698c5b189cfd35cde501fb956b093a2a312add3cec52674d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131232"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887658"
 ---
-# <a name="mfpkey_resize_dst_width-property"></a>Mfpkey- \_ Eigenschaft zur Größenänderung der \_ DST- \_ Breite
+# <a name="mfpkey_resize_dst_width-property"></a>MFPKEY \_ RESIZE \_ DST \_ WIDTH-Eigenschaft
 
-Gibt die Breite des Ziel Rechtecks in Pixel an.
+Gibt die Breite des Zielrechtecks in Pixel an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -33,9 +33,9 @@ VT \_ I4
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -43,7 +43,7 @@ VT \_ I4
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

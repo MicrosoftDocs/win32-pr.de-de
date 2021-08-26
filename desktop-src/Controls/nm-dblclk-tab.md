@@ -1,9 +1,9 @@
 ---
-title: NM_DBLCLK (Registerkarte) Benachrichtigungs Code (kommstrg. h)
-description: Benachrichtigt ein übergeordnetes Fenster eines Registerkarten-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_DBLCLK Benachrichtigungscode (Registerkarte) (Commctrl.h)
+description: Benachrichtigt ein übergeordnetes Fenster eines Registerkartensteuerelements, dass der Benutzer auf die linke Maustaste im Steuerelement doppelklickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: fd99f195-ceac-47e8-b584-d814b055fa21
 keywords:
-- Windows-Steuerelemente (Registerkarte) NM_DBLCLK
+- NM_DBLCLK -Benachrichtigungscode (Registerkarte) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74c8171696e57684be55e6e42792666ae206d890
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61c100b266ea0e409b9d48846e81d1a5bf9a07de0c6473800b4f2251942bc94b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919690"
 ---
-# <a name="nm_dblclk-tab-notification-code"></a>NM- \_ dblclk (Registerkarte)-Benachrichtigungs Code
+# <a name="nm_dblclk-tab-notification-code"></a>NM \_ DBLCLK -Benachrichtigungscode (Registerkarte)
 
-Benachrichtigt ein übergeordnetes Fenster eines Registerkarten-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt ein übergeordnetes Fenster eines Registerkartensteuerelements, dass der Benutzer auf die linke Maustaste im Steuerelement doppelklickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_DBLCLK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung nicht zuzulassen, oder NULL, um die Standard Verarbeitung zuzulassen
+Geben Sie einen Wert ungleich 0 (null) zurück, um die Standardverarbeitung nicht zuzulassen, oder 0 (null), um die Standardverarbeitung zuzulassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung nicht zu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

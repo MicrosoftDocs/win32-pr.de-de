@@ -1,40 +1,40 @@
 ---
 title: Erstellen einer QuickInfo für einen rechteckigen Bereich
-description: Im folgenden Beispiel wird veranschaulicht, wie ein Standardmäßiges QuickInfo-Steuerelement für den gesamten Client Bereich eines Fensters erstellt wird.
+description: Im folgenden Beispiel wird veranschaulicht, wie Sie ein standardmäßiges QuickInfo-Steuerelement für den gesamten Clientbereich eines Fensters erstellen.
 ms.assetid: 6AF1CE6E-AD63-4F84-9759-14FE4F16092B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f8daf62bf2ba85c8750fd07a1b9122b0360fc11
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c9be19be187e8c09b3aeb618e1c3518c7c15ca66816cbbb751abe43aa0b9172a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920694"
 ---
 # <a name="how-to-create-a-tooltip-for-a-rectangular-area"></a>Erstellen einer QuickInfo für einen rechteckigen Bereich
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Standardmäßiges QuickInfo-Steuerelement für den gesamten Client Bereich eines Fensters erstellt wird.
+Im folgenden Beispiel wird veranschaulicht, wie Sie ein standardmäßiges QuickInfo-Steuerelement für den gesamten Clientbereich eines Fensters erstellen.
 
-Die folgende Abbildung zeigt die QuickInfo, die angezeigt wird, wenn sich der Mauszeiger innerhalb des Client Fensters eines Dialog Felds befindet. Das Handle des Dialog Felds wurde an die im vorherigen Beispiel gezeigte Funktion weitergeleitet.
+Die folgende Abbildung zeigt die QuickInfo, die angezeigt wird, wenn sich der Mauszeiger im Clientfenster eines Dialogfelds befindet. Das Handle des Dialogfelds wurde an die im vorherigen Beispiel gezeigte Funktion übergeben.
 
-![Screenshot eines Dialog Felds der Mauszeiger befindet sich innerhalb des Client Fensters, und eine QuickInfo ist sichtbar.](images/tt-rectangle.png)
+![Screenshot eines Dialogfelds Der Mauszeiger befindet sich im Clientfenster, und eine QuickInfo ist sichtbar.](images/tt-rectangle.png)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="create-a-tooltip-for-a-rectangular-area"></a>Erstellen einer QuickInfo für einen rechteckigen Bereich
 
-Im folgenden Beispiel wird veranschaulicht, wie ein Standardmäßiges QuickInfo-Steuerelement für den gesamten Client Bereich eines Fensters erstellt wird.
+Im folgenden Beispiel wird veranschaulicht, wie Sie ein standardmäßiges QuickInfo-Steuerelement für den gesamten Clientbereich eines Fensters erstellen.
 
 
 ```C++
@@ -71,12 +71,12 @@ void CreateToolTipForRect(HWND hwndParent)
 
 <dl> <dt>
 
-[Verwenden von Quick Infos](using-tooltip-contro.md)
+[Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

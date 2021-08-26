@@ -1,21 +1,21 @@
 ---
-description: Erfahren Sie mehr über das JobPrimaryCoverFront-Element, das das front-Coversheet beschreibt. Der gesamte Auftrag hat ein einzelnes primäres Blatt.
+description: Erfahren Sie mehr über das JobPrimaryCoverFront-Element, das das Front cover sheet beschreibt. Der gesamte Auftrag hat ein einzelnes primäres Blatt.
 ms.assetid: 270b16f6-677c-430a-aa69-1b5c6dfd3ba4
 title: JobPrimaryCoverFront
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c60aef4a70404ce6777b9bfe2848fddffa4e89d
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 37b2e9224ff9d621d893dd16409138c359c0ee6c69e795141e36d9e812d4258a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948610"
 ---
 # <a name="jobprimarycoverfront"></a>JobPrimaryCoverFront
 
 Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt das Front-Cover-Blatt (Anfang). Der gesamte Auftrag hat ein einzelnes primäres Blatt. Das Titelblatt sollte auf der ersten Seite des Auftrags auf pageMediaSize und PageMediaType gedruckt werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. JobDuplexAllDocumentsContiguously, JobNUpAllDocumentsContiguously) integriert werden, wie in der angegebenen Option angegeben.
+Beschreibt das Front-Cover-Blatt (Anfang). Der gesamte Auftrag hat ein einzelnes primäres Blatt. Das Titelblatt sollte auf den SeitenMediaSize und PageMediaType gedruckt werden, die für die erste Seite des Auftrags verwendet werden. Das Coversheet sollte in Verarbeitungsoptionen (z. B. JobDuplexAllDocumentsContiguously, JobNUpAllDocumentsContiguously) integriert werden, wie in der angegebenen Option angegeben.
 
 -   [Elementinformationen](#element-information)
 -   [Strukturelle Inhalte](#structural-content)
@@ -27,7 +27,7 @@ Beschreibt das Front-Cover-Blatt (Anfang). Der gesamte Auftrag hat ein einzelnes
 
 | Name | Wert |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Elementtyp <br/>   | Komponente<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Bereichspräfix <br/> | Auftrag<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Hinweise <br/>          | XPS-kompatible Benutzer MÜSSEN erzwingen, dass ein URI-Verweis auf eine Ressource, z. B. ein Bild oder Farbprofil, entweder in einem Druckfunktionendokument oder printTicket auf einen Teilenamen (einen relativen URI zum Paketstamm) innerhalb desselben XPS-Dokumentpakets verweisen muss, das das resultierende PrintTicket enthält. Ein kompatibler XPS-Consumer DARF KEINEN URI verwenden, der nicht mit der Partnamenssyntax kompatibel ist. Diese Einstellungen sind XPS-spezifisch. <br/> URIs, auf die entweder in einem Druckfunktionendokument oder printTicket verwiesen wird, DÜRFEN NICHT als URLs aufgelöst werden. Dies ist unsicher, da sie möglicherweise nicht wie beabsichtigt gelöst werden und zu schädlichen Sicherheitsrisiken für treiber und betriebssystem könnten.<br/> |
 

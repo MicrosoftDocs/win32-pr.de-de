@@ -1,38 +1,38 @@
 ---
-title: Schaltflächen Platzierung
-description: Schaltflächen Platzierung
+title: Schaltflächenplatzierung
+description: Schaltflächenplatzierung
 ms.assetid: 104f4dfb-8452-4dcc-9d48-cd754318083c
 keywords:
-- Windows Media Player Mobile Skins, Art Dateien
-- Skins, Art Dateien
-- Dateien für Skins, Art
-- kunstdateien für Skins, Schaltflächen Platzierung
-- Windows Media Player Mobile Skins, Schaltflächen Platzierung
-- Skins, Schaltflächen Platzierung
-- Platzierung der Schaltfläche in Skins
+- Windows Media Player Mobile Skins,Art-Dateien
+- Skins,Art-Dateien
+- Dateien für Skins,Art
+- Artdateien für Skins, Platzierung von Schaltflächen
+- Windows Media Player Mobile Skins, Schaltflächenplatzierung
+- Skins, Schaltflächenplatzierung
+- Schaltflächenplatzierung in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe14e941e620f80906bb78f86c30f1beceeb66fb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d93bc748d2b88cf46c18414916ae9cf563edde112a94e89723105600f68de57d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902380"
 ---
-# <a name="button-placement"></a>Schaltflächen Platzierung
+# <a name="button-placement"></a>Schaltflächenplatzierung
 
-Obwohl Sie Schaltflächen als beliebige Form zeichnen können, werden Sie intern als eine rechteckige äußere Grenze behandelt. Vermeiden Sie aus diesem Grund überlappende Schaltflächen Koordinaten, da unerwartete Ergebnisse auftreten können.
+Obwohl Sie Schaltflächen so zeichnen können, dass sie eine beliebige Form haben, werden sie intern als rechteckige äußere Begrenzung behandelt. Vermeiden Sie aus diesem Grund überlappende Schaltflächenkoordinaten, da unerwartete Ergebnisse auftreten können.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Kunstdateien**](art-files.md)
+[**Art-Dateien**](art-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

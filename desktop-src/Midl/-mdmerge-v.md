@@ -1,9 +1,9 @@
 ---
-title: /v-Schalter
-description: Der/v-Schalter gibt an, dass metadatentypverweise überprüft werden.
+title: /v-Switch
+description: Der Schalter /v gibt an, dass Metadatentypverweise überprüft werden.
 ms.assetid: AC522044-68CE-423D-B2E8-6864CD0B528E
 keywords:
-- /v-Schalter-Mittel l
+- /v switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4efd1ba12e11b7bdfdda31b0e9c9670c97d5cc4c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d8c1c11494798cbef77d876ce10ba1a40454ad515d3a449f97bd6ab1348da2ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979690"
 ---
-# <a name="v-switch"></a>/v-Schalter
+# <a name="v-switch"></a>/v-Switch
 
-Der **/v** -Schalter gibt an, dass metadatentypverweise überprüft werden.
+Der **Schalter /v** gibt an, dass Metadatentypverweise überprüft werden.
 
 ``` syntax
 mdmerge /v 
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
 ## <a name="remarks"></a>Bemerkungen
 
 ## <a name="examples"></a>Beispiele
 
-**mdmerge-/v**
+**mdmerge /v**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,11 +48,11 @@ Dieser Switch hat keine Parameter.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

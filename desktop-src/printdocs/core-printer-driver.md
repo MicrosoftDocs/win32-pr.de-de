@@ -1,7 +1,7 @@
 ---
-description: Stellt einen Druckertreiber dar, von dem andere Druckertreiber abhängig sind.
+description: Stellt einen Druckertreiber dar, von dem andere Druckertreiber abhängen.
 ms.assetid: b03f9ac1-7ad2-4aee-b496-e1ee15ba7d38
-title: CORE_PRINTER_DRIVER Struktur (winspool. h)
+title: CORE_PRINTER_DRIVER-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 786fa3491919659fca60700cfb086023c3fdef3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 18ac3dba88d9cf781393b01b6594777426b7195e6f68afa0fd00a5bddb01f129
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950400"
 ---
-# <a name="core_printer_driver-structure"></a>Struktur des Kern \_ Drucker \_ Treibers
+# <a name="core_printer_driver-structure"></a>CORE \_ PRINTER \_ DRIVER-Struktur
 
-Stellt einen Druckertreiber dar, von dem andere Druckertreiber abhängig sind.
+Stellt einen Druckertreiber dar, von dem andere Druckertreiber abhängen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ typedef struct _CORE_PRINTER_DRIVER {
 
 <dl> <dt>
 
-**Coredriverguid**
+**CoreDriverGUID**
 </dt> <dd>
 
-Die GUID des Haupt Druckertreibers.
+Die GUID des Kerndruckertreibers.
 
 </dd> <dt>
 
-**ftdriverdate**
+**ftDriverDate**
 </dt> <dd>
 
-Das Datum und die Uhrzeit der neuesten Version des Haupt Druckertreibers.
+Datum und Uhrzeit der neuesten Version des Kerndruckertreibers.
 
 </dd> <dt>
 
-**dwldriverversion**
+**dwlDriverVersion**
 </dt> <dd>
 
-Die Versions-ID der neuesten Version des Haupt Druckertreibers.
+Die Versions-ID der neuesten Version des Kerndruckertreibers.
 
 </dd> <dt>
 
-**szpackageid, \[ maximaler \_ Pfad\]**
+**szPackageID \[ MAX \_ PATH\]**
 </dt> <dd>
 
-Der Pfad zum Treiber Paket, das den Kern Druckertreiber enthält.
+Der Pfad zum Treiberpaket, das den Kerndruckertreiber enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur kann den Basis Treiber eines Herstellers darstellen, von dem die Treiber für verschiedene Druckermodelle abhängig sind.
+Diese Struktur kann den Basistreiber eines Herstellers darstellen, von dem die Treiber für verschiedene Druckermodelle abhängig sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,10 +82,10 @@ Diese Struktur kann den Basis Treiber eines Herstellers darstellen, von dem die 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Core \_ Printer \_ driverw** (Unicode) und **\_ Core \_ Printer \_ drivera** (ANSI)<br/>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ CORE \_ PRINTER \_ DRIVERW** (Unicode) und **\_ CORE PRINTER \_ \_ DRIVERA** (ANSI)<br/>                 |
 
 
 
@@ -96,7 +96,7 @@ Diese Struktur kann den Basis Treiber eines Herstellers darstellen, von dem die 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> </dl>
 
  

@@ -1,27 +1,27 @@
 ---
-description: Auflisten von Objekten in einem Filter Diagramm
+description: Aufzählen von Objekten in einem Graph
 ms.assetid: 04a3dbc8-33c4-4b70-930e-686be2f8301f
-title: Auflisten von Objekten in einem Filter Diagramm
+title: Aufzählen von Objekten in einem Graph
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2369cd3400d3b7fc9944662ed6d32fd67234af90
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: aa6206a583daaa984ef67af297c11c125128e58fec410ec1251afaca3987f582
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965470"
 ---
-# <a name="enumerating-objects-in-a-filter-graph"></a>Auflisten von Objekten in einem Filter Diagramm
+# <a name="enumerating-objects-in-a-filter-graph"></a>Aufzählen von Objekten in einem Graph
 
-Möglicherweise muss eine Anwendung einen bestimmten Filter im Filter Diagramm oder sogar eine bestimmte PIN für einen Filter finden. Beispielsweise kann eine Schnittstelle verwendet werden, die von einem bestimmten Filter verfügbar gemacht wird. Oder es kann ein spezielles Filter Diagramm erstellt werden, und es müssen Methoden auf einzelnen Pins aufgerufen werden, um die Filter zu verbinden. Zu diesem Zweck stellt DirectShow mehrere Methoden zum Aufzählen von Objekten in einem Filter Diagramm bereit.
+Eine Anwendung muss möglicherweise einen bestimmten Filter im Filterdiagramm oder sogar einen bestimmten Pin auf einem Filter suchen. Beispielsweise kann eine Schnittstelle verwendet werden, die ein bestimmter Filter verfügbar macht. Oder sie erstellt ein spezialisiertes Filterdiagramm und muss Methoden für einzelne Stecknadeln aufrufen, um die Filter zu verbinden. Zu diesem Zweck stellt DirectShow mehrere Methoden zum Aufzählen von Objekten in einem Filterdiagramm zur Verfügung.
 
-Die in diesem Abschnitt erläuterten Enumeratoren befolgen das Standardformular, das von com-enumerationsschnittstellen verwendet wird. Weitere Informationen finden Sie im Thema "IEnumXXXX" im Platform SDK. Informationen zum Auflisten von Filtern, die auf dem Computer des Benutzers registriert sind, jedoch noch nicht im Filter Diagramm aufgeführt sind, finden Sie unter Auflisten von [Geräten und Filtern](enumerating-devices-and-filters.md).
+Die in diesem Abschnitt erläuterten Enumeratoren folgen der Standardform, die von COM-Enumerationsschnittstellen verwendet wird. Weitere Informationen finden Sie im Thema "IEnumXXXX" im Platform SDK. Informationen zum Aufzählen von Filtern, die auf dem Computer des Benutzers registriert sind, aber noch nicht im Filterdiagramm enthalten sind, finden Sie unter Aufzählen von Geräten [und Filtern.](enumerating-devices-and-filters.md)
 
 Dieser Artikel enthält folgende Themen:
 
--   [Auflisten von Filtern](enumerating-filters.md)
--   [Auflisten von Pins](enumerating-pins.md)
--   [Auflisten von Medientypen](enumerating-media-types.md)
+-   [Aufzählen von Filtern](enumerating-filters.md)
+-   [Aufzählen von Pins](enumerating-pins.md)
+-   [Aufzählen von Medientypen](enumerating-media-types.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

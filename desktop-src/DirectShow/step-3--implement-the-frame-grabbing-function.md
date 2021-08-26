@@ -1,30 +1,30 @@
 ---
-description: Schritt 3 Implementieren der Frame-Grabbing-Funktion
+description: 'Schritt 3: Implementieren der Frame-Grabbing Funktion'
 ms.assetid: 4ec2e4a4-3ab0-45f1-b29a-313599fe9e7d
-title: Schritt 3 Implementieren der Frame-Grabbing-Funktion
+title: 'Schritt 3: Implementieren der Frame-Grabbing Funktion'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a97f585ff365e40ec611a9e11ce365839aa87be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a75410c48765e9437cd328a220ccbecf2c207bdaae5242a9e41060bc13fa02eb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867088"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904094"
 ---
-# <a name="step-3-implement-the-frame-grabbing-function"></a>Schritt 3: Implementieren der Frame-Grabbing-Funktion
+# <a name="step-3-implement-the-frame-grabbing-function"></a>Schritt 3: Implementieren der Frame-Grabbing Funktion
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Dieses Thema ist Schritt 3 zum Durchlaufen [eines Poster Frame](grabbing-a-poster-frame.md).
+Dieses Thema ist Schritt 3 von [Grabbing a Poster Frame](grabbing-a-poster-frame.md).
 
-Der nächste Schritt ist die Implementierung der getbitmap-Funktion, die mithilfe des Medien Detektors einen Poster-Frame verwendet. Führen Sie in dieser Funktion die folgenden Schritte aus:
+Der nächste Schritt besteht in der Implementierung der GetBitmap-Funktion, die media detector verwendet, um einen Posterrahmen zu greifen. Führen Sie in dieser Funktion die folgenden Schritte aus:
 
-1.  Erstellen Sie den Medien Detektor.
+1.  Erstellen Sie die Medienerkennung.
 2.  Geben Sie eine Mediendatei an.
-3.  Untersuchen Sie jeden Stream in der Datei. Wenn es sich um einen Videostream handelt, erhalten Sie die systemeigenen Dimensionen des Videos.
-4.  Rufen Sie einen Poster-Frame ab, der die Suchzeit und die Ziel Dimension angibt.
+3.  Untersuchen Sie jeden Stream in der Datei. Wenn es sich um einen Videostream handelt, erhalten Sie die nativen Dimensionen des Videos.
+4.  Beziehen Sie einen Posterrahmen, und geben Sie dabei die Suchzeit und die Zieldimension an.
 
-Erstellen Sie das Medien Erkennungs Objekt, indem Sie [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)aufrufen:
+Erstellen Sie das Media Detector-Objekt, indem [**Sie CoCreateInstance aufrufen:**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
 
 ```C++
@@ -34,7 +34,7 @@ hr = pDet.CoCreateInstance(__uuidof(MediaDet));
 
 
 
-Geben Sie einen Dateinamen an, und verwenden Sie dabei die [**imediadet::p UT \_ -Datei**](imediadet-put-filename.md) namens Methode. Diese Methode nimmt einen **BSTR** -Parameter an.
+Geben Sie mithilfe der [**IMediaDet::p ut \_ Filename-Methode einen Dateinamen**](imediadet-put-filename.md) an. Diese Methode akzeptiert einen **BSTR-Parameter.**
 
 
 ```C++
@@ -43,7 +43,7 @@ hr = pDet->put_Filename(bstrFilename);
 
 
 
-Holen Sie sich die Anzahl der Streams, und durchlaufen Sie jeden Stream, indem Sie den Medientyp überprüfen. Die [**imediadet:: get \_ outputstreams**](imediadet-get-outputstreams.md) -Methode ruft die Anzahl der Streams ab, und die [**imediadet::p UT \_ currentstream**](imediadet-put-currentstream.md) -Methode gibt an, welcher Stream untersucht werden soll. Beenden Sie die Schleife für den ersten Videostream.
+Sie können die Anzahl der Streams erhalten und jeden Stream durchschleifen, um den Medientyp zu überprüfen. Die [**IMediaDet::get \_ OutputStreams-Methode**](imediadet-get-outputstreams.md) ruft die Anzahl der Streams ab, und die [**IMediaDet::p ut \_ CurrentStream-Methode**](imediadet-put-currentstream.md) gibt an, welcher Stream untersucht werden soll. Beenden Sie die Schleife im ersten Videostream.
 
 
 ```C++
@@ -68,7 +68,7 @@ if (!bFound) return VFW_E_INVALIDMEDIATYPE;
 
 Wenn kein Videostream gefunden wurde, wird die Funktion beendet.
 
-Im vorherigen Code gibt die [**imediadet:: get \_ Streamtype**](imediadet-get-streamtype.md) -Methode nur die GUID des Haupt Typs zurück. Dies ist praktisch, wenn Sie den gesamten Medientyp nicht überprüfen müssen. Um die Video Dimensionen zu erhalten, ist es jedoch notwendig, den Format Block zu untersuchen, sodass der vollständige Medientyp erforderlich ist. Sie können dies abrufen, indem Sie die [**imediadet:: get \_ streammediatype**](imediadet-get-streammediatype.md) -Methode aufrufen, die eine [**am \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur füllt. Der Medien Detektor konvertiert alle Videodaten Ströme mit einem [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Format Block in ein unkomprimiertes Format.
+Im vorherigen Code gibt die [**IMediaDet::get \_ StreamType-Methode**](imediadet-get-streamtype.md) nur die Haupttyp-GUID zurück. Dies ist praktisch, wenn Sie den vollständigen Medientyp nicht untersuchen müssen. Um die Videodimensionen zu erhalten, ist es jedoch erforderlich, den Formatblock zu untersuchen, damit der vollständige Medientyp benötigt wird. Sie können dies abrufen, indem Sie die [**Methode IMediaDet::get \_ StreamMediaType**](imediadet-get-streammediatype.md) aufrufen, die eine [**AM MEDIA \_ \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) auffüllt. Die Medienerkennung konvertiert alle Videostreams mit einem [**VIDEOINFOHEADER-Formatblock**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) in ein unkomprimiertes Format.
 
 
 ```C++
@@ -92,9 +92,9 @@ FreeMediaType(mt);
 
 
 
-Die [**get \_ streammediatype**](imediadet-get-streammediatype.md) -Methode ordnet den Format Block zu, der vom Aufrufer freigegeben werden muss. In diesem Beispiel wird die Funktion " [**fremediatype**](freemediatype.md) " aus der Basisklassen Bibliothek verwendet.
+Die [**methode \_ get StreamMediaType**](imediadet-get-streammediatype.md) ordnet den Formatblock zu, den der Aufrufer freigibt. In diesem Beispiel wird die [**FreeMediaType-Funktion**](freemediatype.md) aus der Basisklassenbibliothek verwendet.
 
-Nun können Sie den Poster-Frame erhalten. Aufrufen Sie zuerst die [**imediadet:: getbitmapbits**](imediadet-getbitmapbits.md) -Methode mit einem **null** -Zeiger für den Puffer:
+Jetzt können Sie den Posterrahmen erhalten. Rufen Sie zuerst die [**IMediaDet::GetBitmapBits-Methode**](imediadet-getbitmapbits.md) mit einem **NULL-Zeiger** für den Puffer auf:
 
 
 ```C++
@@ -104,9 +104,9 @@ hr = pDet->GetBitmapBits(0, &lSize, NULL, width, height);
 
 
 
-Dieser Rückruf gibt die erforderliche Puffergröße im *LSIZE* -Parameter zurück. Der erste Parameter gibt die streamzeit an, nach der gesucht werden soll. in diesem Beispiel wird die Zeit NULL verwendet. Für Breite und Höhe verwendet dieses Beispiel die systemeigenen Video Dimensionen, die Sie zuvor erhalten haben. Wenn Sie andere Werte angeben, wird die Bitmap vom Medien Detektor entsprechend gestreckt.
+Dieser Aufruf gibt die erforderliche Puffergröße im *lSize-Parameter* zurück. Der erste Parameter gibt die Zu suchzeit des Streams an. In diesem Beispiel wird die Zeit 0 (null) verwendet. Für die Breite und Höhe werden in diesem Beispiel die zuvor erhaltenen nativen Videodimensionen verwendet. Wenn Sie andere Werte angeben, streckt die Medienerkennung die Bitmap, um eine Übereinstimmung zu erhalten.
 
-Wenn die Methode erfolgreich ist, weisen Sie den Puffer zu, und wiederholen Sie dann [**getbitmapbits**](imediadet-getbitmapbits.md) :
+Wenn die Methode erfolgreich ist, ordnen Sie den Puffer zu, und rufen [**Sie GetBitmapBits erneut**](imediadet-getbitmapbits.md) auf:
 
 
 ```C++
@@ -122,7 +122,7 @@ if (SUCCEEDED(hr))
 
 
 
-Hier finden Sie die gesamte Funktion, mit einer etwas besseren Fehlerbehandlung.
+Hier ist die vollständige Funktion mit etwas besserer Fehlerbehandlung.
 
 
 ```C++
@@ -215,13 +215,13 @@ HRESULT GetBitmap(LPTSTR pszFileName, BITMAPINFOHEADER** ppbmih)
 
 
 
-Weiter: [Schritt 4: Zeichnen der Bitmap im Client Bereich](step-4--draw-the-bitmap-on-the-client-area.md)
+Weiter: [Schritt 4: Zeichnen der Bitmap im Clientbereich](step-4--draw-the-bitmap-on-the-client-area.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ein Poster-Frame wird gepackt.](grabbing-a-poster-frame.md)
+[Greifen eines Posterrahmens](grabbing-a-poster-frame.md)
 </dt> </dl>
 
  

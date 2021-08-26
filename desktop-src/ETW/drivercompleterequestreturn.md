@@ -1,7 +1,7 @@
 ---
-description: Bei dieser Klasse handelt es sich um die Ereignistyp Klasse für zurückgegebene Ereignisse der Treiber Complete Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Ereignisse zur Anforderungsrückgabe vom Typ "Driver Complete". Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 04505f8c-a11e-4bf7-91c0-fca1b5846d80
-title: Drivercompleterequestreturn-Klasse
+title: DriverCompleteRequestReturn-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: c147573578e067b7fb1b588545a1d9f231e35f3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be19cd1a4b8f7cf4957d08f9ccebf01c5e8646ade06cce9708e645c1a7ea2a5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901210"
 ---
-# <a name="drivercompleterequestreturn-class"></a>Drivercompleterequestreturn-Klasse
+# <a name="drivercompleterequestreturn-class"></a>DriverCompleteRequestReturn-Klasse
 
-Bei dieser Klasse handelt es sich um die Ereignistyp Klasse für zurückgegebene Ereignisse der Treiber Complete
+Diese Klasse ist die Ereignistypklasse für Ereignisse zur Anforderungsrückgabe vom Typ "Driver Complete".
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,64 +40,64 @@ class DriverCompleteRequestReturn : DiskIo
 
 ## <a name="members"></a>Member
 
-Die **drivercompleterequestreturn** -Klasse verfügt über diese Typen von Membern:
+Die **DriverCompleteRequestReturn-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **drivercompleterequestreturn** -Klasse verfügt über diese Eigenschaften.
+Die **DriverCompleteRequestReturn-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**IRP**
+**Irp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket.
+E/A-Anforderungspaket.
 
 </dd> <dt>
 
-**Uniqmatchid**
+**UniqMatchId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Ein Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiber Ereignissen, z. b. dem [**drivercompleterequest**](drivercompleterequest.md) -Ereignis, zu korrelieren.
+Bezeichner, der die Anforderung eindeutig identifiziert. Verwenden Sie diesen Bezeichner, um mit den anderen Treiberereignissen zu korrelieren, z. B. dem [**DriverCompleteRequest-Ereignis.**](drivercompleterequest.md)
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Sowie**](diskio.md)
+[**DiskIo**](diskio.md)
 </dt> </dl>
 
  

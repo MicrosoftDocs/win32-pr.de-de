@@ -3,51 +3,51 @@ title: Informationen zur Synchronisierungs-Engine
 description: Informationen zur Synchronisierungs-Engine
 ms.assetid: bb57ffb0-3833-463b-b66c-c23224fa2ba7
 keywords:
-- Windows Media Player, Synchronisierungs Modul
-- Windows Media Player-Objektmodell, Synchronisierungs Modul
-- Objektmodell, Synchronisierungs Modul
-- Windows Media Player ActiveX-Steuerelement, Synchronisierungs Modul
-- ActiveX-Steuerelement, Synchronisierungs Modul
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisierungs Modul
-- Windows Media Player Mobile, Synchronisierungs Modul
-- Synchronisieren von Geräten, Synchronisierungs Modul
-- Geräte Synchronisierung, Synchronisierungs Modul
-- Synchronisierungs Modul
+- Windows Media Player,Synchronisierungs-Engine
+- Windows Media Player-Objektmodell, Synchronisierungs-Engine
+- Objektmodell, Synchronisierungs-Engine
+- Windows Media Player ActiveX,Synchronisierungs-Engine
+- ActiveX,Synchronisierungs-Engine
+- Windows Media Player Mobile ActiveX,Synchronisierungs-Engine
+- Windows Media Player Mobil, Synchronisierungsmodul
+- Synchronisieren von Geräten, Synchronisierungsmodul
+- Gerätesynchronisierung, Synchronisierungsmodul
+- Synchronisierungs-Engine
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfe0768c4805b074fdaf628a25daf47b9ced97ee
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 3ccac14f6416b080ae22407930d720df84bd5b4dc399892b9a2d8678d03eee6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104389898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119903070"
 ---
 # <a name="about-the-synchronization-engine"></a>Informationen zur Synchronisierungs-Engine
 
-Das Synchronisierungs Modul ist die Komponente von Windows Media Player, die das Kopieren von Inhalten digitaler Medien auf tragbare Geräte verwaltet. Windows Media Player unterstützt eine einzelne Instanz der Synchronisierungs-Engine für jedes Gerät. Sie müssen eine Remote Instanz des Windows Media Player-Steuer Elements verwenden, um Synchronisierungs Tasks Programm gesteuert auszuführen. Tatsächlich werden die Synchronisierungs-Engine-Instanzen von Ihrem Programm mit Windows Media Player und allen anderen Programmen gemeinsam genutzt, die die Player-Schnittstellen für die Geräte Synchronisierung verwenden.
+Die Synchronisierungs-Engine ist die Komponente Windows Media Player, die das Kopieren digitaler Medieninhalte auf portable Geräte verwaltet. Windows Media Player unterstützt eine einzelne Instanz der Synchronisierungs-Engine für jedes Gerät. Sie müssen eine Remoteinstanz des -Steuerelements Windows Media Player, um Synchronisierungsaufgaben programmgesteuert auszuführen. Das Programm teilt die Instanzen der Synchronisierungs-Engine mit Windows Media Player und allen anderen Programmen, die die Player-Schnittstellen für die Gerätesynchronisierung verwenden.
 
-Sie können [iwmpsyncdevice:: Start](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-start) und [iwmpsyncdevice::](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-stop) End verwenden, um zu steuern, wann das Synchronisierungs Modul funktioniert. In den meisten Fällen sollten Sie diese Methoden nicht verwenden. Stattdessen sollten Sie zulassen, dass das Synchronisierungs Modul seine Arbeit automatisch plant. Die Methoden zum **starten** und **Abbrechen** sind vorhanden, damit Sie Sie verwenden können, wenn das Programm die Windows Media Player-Benutzeroberfläche ersetzen soll. In diesem Fall empfiehlt es sich, eine Schaltfläche zum Starten und Abbrechen ähnlich der eines Windows-Media Player bereitzustellen, die auf der Registerkarte **Geräte** bereitgestellt wird.
+Sie können [IWMPSyncDevice::start und](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-start) [IWMPSyncDevice::stop](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-stop) verwenden, um zu steuern, wann die Synchronisierungs-Engine ihre Arbeit übernimmt. In den meisten Fällen sollten Sie diese Methoden nicht verwenden. Stattdessen sollten Sie die Synchronisierungs-Engine ihre Arbeit automatisch planen lassen. Die **Start-** **und Stop-Methoden** sind vorhanden, sodass Sie sie verwenden können, wenn Ihr Programm die Benutzeroberfläche Windows Media Player ersetzen soll. In diesem Fall sollten Sie eine Schaltfläche zum Starten/Beenden bereitstellen, die der Schaltfläche ähnelt, die Windows Media Player registerkarte **Geräte angezeigt** wird.
 
-Sie können den Synchronisierungs Fortschritt für ein Gerät überwachen, indem Sie [iwmpsyncdevice:: get \_ Progress](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_progress)abrufen. Diese Methode ruft einen Fortschritts Wert für den gesamten Synchronisierungs Prozess mit einem bestimmten Gerät ab. Der abgerufene Wert ist eine Zahl, die den Prozentsatz der abgeschlossenen Synchronisierung darstellt. Es gibt zwei Ereignisse, die Sie im Zusammenhang mit der Synchronisierung erhalten können. Wenn ein Problem auftritt, werden Sie durch das Ereignis " **entvicesyncerror** " benachrichtigt. Das **devicesyncstatechange** -Ereignis warnt Sie, wenn das Synchronisierungs Modul den Status für das aktuelle Gerät geändert hat.
+Sie können den Synchronisierungsfortschritt für ein Gerät überwachen, indem Sie [IWMPSyncDevice::get \_ progressabgleichen.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice-get_progress) Diese Methode ruft einen Statuswert für den gesamten Synchronisierungsprozess mit einem bestimmten Gerät ab. Der abgerufene Wert ist eine Zahl, die den Prozentsatz der abgeschlossenen Synchronisierung darstellt. Sie können zwei Ereignisse empfangen, die sich auf die Synchronisierung bezieht. Das **DeviceSyncError-Ereignis** benachrichtigt Sie, wenn ein Problem auftritt. Das **Ereignis DeviceSyncStateChange** warnt Sie, wenn sich der Status der Synchronisierungs-Engine für das aktuelle Gerät geändert hat.
 
-Sie können die Menge an Gerätespeicher einschränken, die Windows Media Player für die Synchronisierung verwendet, indem Sie [IWMPSyncDevice2:: abtiteminfo](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice2-setiteminfo) mit dem Attribut " **prozentuspacereserved** " aufrufen. Die Verwendung dieser Schnittstelle erfordert Windows Media Player 11.
+Sie können die Menge an Gerätespeicher begrenzen, die Windows Media Player für die Synchronisierung verwendet, indem [Sie IWMPSyncDevice2::setItemInfo](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpsyncdevice2-setiteminfo) mit dem **PercentSpaceReserved-Attribut** aufrufen. Die Verwendung dieser Schnittstelle erfordert Windows Media Player 11.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen zur Geräte Synchronisierung**](about-device-synchronization.md)
+[**Informationen zur Gerätesynchronisierung**](about-device-synchronization.md)
 </dt> <dt>
 
 [**IWMPEvents2-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpevents2)
 </dt> <dt>
 
-[**Anzeigen des Synchronisierungs Status**](showing-synchronization-progress.md)
+[**Anzeigen des Synchronisierungsfortschritts**](showing-synchronization-progress.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

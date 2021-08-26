@@ -1,23 +1,23 @@
 ---
-title: udiv (SM4-ASM)
-description: Unterteilung ohne Vorzeichen.
+title: udiv (sm4 - asm)
+description: Division einer ganzen Zahl ohne Vorzeichen.
 ms.assetid: 87C81418-0F74-4C67-9D4A-DA952EFD008E
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07a3dd2f4170a3c8fe522af12d412cfae49396da
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 87b1320d0518034129efe2222a42aa2694df0422db524da0714377cb43a2b9a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948980"
 ---
-# <a name="udiv-sm4---asm"></a>udiv (SM4-ASM)
+# <a name="udiv-sm4---asm"></a>udiv (sm4 - asm)
 
-Unterteilung ohne Vorzeichen.
+Division einer ganzen Zahl ohne Vorzeichen.
 
 
 
-| udiv destquot \[ . mask \] , de Strem \[ . mask \] , src0 \[ . Swizzle \] , Quelle1 \[ . Swizzle\] |
+| udiv destQUOT \[ .mask \] , destREM \[ .mask \] , src0 \[ .swizzle \] , src1 \[ .swizzle\] |
 |------------------------------------------------------------------------------|
 
 
@@ -28,24 +28,24 @@ Unterteilung ohne Vorzeichen.
 
 | Element                                                                                                   | BESCHREIBUNG                                                |
 |--------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-| <span id="destQUOT"></span><span id="destquot"></span><span id="DESTQUOT"></span>*destquot*<br/> | \[in \] der Adresse des resultierenden Quotienten.<br/>   |
-| <span id="destREM"></span><span id="destrem"></span><span id="DESTREM"></span>*"Debug"*<br/>     | \[in \] der Adresse des resultierenden Restwerts.<br/>  |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                        | \[in \] den Komponenten, die durch *Quelle1* dividiert werden sollen.<br/>  |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/>                                        | \[in \] den Komponenten by welche to Divide *src0*.<br/> |
+| <span id="destQUOT"></span><span id="destquot"></span><span id="DESTQUOT"></span>*destQUOT*<br/> | \[in \] Die Adresse des resultierenden Quotienten.<br/>   |
+| <span id="destREM"></span><span id="destrem"></span><span id="DESTREM"></span>*destREM*<br/>     | \[in \] Die Adresse des resultierenden Rests.<br/>  |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/>                                        | \[in \] Die Komponenten, die durch *src1 geteilt werden sollen.*<br/>  |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/>                                        | \[in \] The components by whch to divide *src0*.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt eine Komponenten Weise unsignierte Teilung des 32-Bit-Operanden *src0* durch den 32-Bit-Operanden *Quelle1* aus. Die Ergebnisse der Teilungen sind die 32-Bit-Quotienten in " *destquot* " und 32-Bit-Rest-Werten, die in " *de Strem*" platziert werden.
+Diese Anweisung führt eine komponentenweise Unterteilung des 32-Bit-Operanden *src0* durch den 32-Bit-Operanden *src1 aus.* Die Ergebnisse der Divisionen sind die 32-Bit-Quotienten, die in *destQUOT* platziert werden, und die 32-Bit-Reste, die in *destREM platziert werden.*
 
-Division durch Null gibt 0xFFFFFFFF für den Quotienten und den Rest zurück.
+Division durch 0 gibt 0xffffffff für Quotient und Rest zurück.
 
-Sie können entweder *destquot* oder *Destrem* als NULL angeben, anstatt ein Register anzugeben, wenn der Quotienten oder Rest nicht benötigt wird.
+Sie können entweder *destQUOT* oder *destREM* als NULL angeben, anstatt ein Register anzugeben, wenn der Quotient oder Rest nicht benötigt wird.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -57,20 +57,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

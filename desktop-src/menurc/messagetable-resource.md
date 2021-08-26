@@ -1,9 +1,9 @@
 ---
-title: Messagetable-Ressource
-description: Definiert die ID und die Datei der Nachrichten Tabellen Ressource einer Anwendung. Nachrichten Tabellen sind spezielle Zeichen folgen Ressourcen, die bei der Ereignisprotokollierung und mit der FormatMessage-Funktion verwendet werden. Die Datei enthält eine binäre Nachrichten Tabelle, die vom Nachrichten Compiler generiert wurde, MC.EXE.
+title: MESSAGETABLE-Ressource
+description: Definiert die ID und datei der Nachrichtentabellenressource einer Anwendung. Nachrichtentabellen sind spezielle Zeichenfolgenressourcen, die in der Ereignisprotokollierung und mit der FormatMessage-Funktion verwendet werden. Die Datei enthält eine vom Nachrichtencompiler generierte binäre Nachrichtentabelle MC.EXE.
 ms.assetid: c379cfff-23bf-4750-8d7a-d5c3c6783921
 keywords:
-- Messagetable-Ressourcen Menüs und andere Ressourcen
+- MESSAGETABLE-Ressourcenmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36281f7f6415465a6741f461574bca29c681cbfa
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 378860e10ab6da929147e13a8120ee169204276e3c609b20176c22df9de15dd4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886720"
 ---
-# <a name="messagetable-resource"></a>Messagetable-Ressource
+# <a name="messagetable-resource"></a>MESSAGETABLE-Ressource
 
-Definiert die ID und die Datei der Nachrichten Tabellen Ressource einer Anwendung. Nachrichten Tabellen sind spezielle Zeichen folgen Ressourcen, die bei der Ereignisprotokollierung und mit der [**FormatMessage**](/windows/desktop/api/winbase/nf-winbase-formatmessage) -Funktion verwendet werden. Die Datei enthält eine binäre Nachrichten Tabelle, die vom Nachrichten Compiler generiert wurde, MC.EXE.
+Definiert die ID und datei der Nachrichtentabellenressource einer Anwendung. Nachrichtentabellen sind spezielle Zeichenfolgenressourcen, die in der Ereignisprotokollierung und mit der [**FormatMessage-Funktion**](/windows/desktop/api/winbase/nf-winbase-formatmessage) verwendet werden. Die Datei enthält eine vom Nachrichtencompiler generierte binäre Nachrichtentabelle MC.EXE.
 
-Der Nachrichten Compiler generiert außerdem eine Ressourcen Skriptdatei, die die **messagetable** -Anweisungen enthält, die Sie zum Einschließen der Nachrichten Tabellen Ressourcen in die kompilierte Ressourcen Datei benötigen. Verwenden Sie die [**\# include**](-include.md) -Direktive, um dieses Ressourcen Skript in Ihr Hauptressourcen Skript einzubeziehen.
+Der Nachrichtencompiler generiert auch eine Ressourcenskriptdatei, die die **MESSAGETABLE-Anweisungen** enthält, die Sie zum Einschließen der Nachrichtentabellenressourcen in die kompilierte Ressourcendatei benötigen. Verwenden Sie die [**\# include-Direktive,**](-include.md) um dieses Ressourcenskript in Ihr Hauptressourcenskript einzufügen.
 
 ``` syntax
 nameID MESSAGETABLE filename
@@ -33,25 +33,25 @@ nameID MESSAGETABLE filename
 
 <dl> <dt>
 
-<span id="nameID"></span><span id="nameid"></span><span id="NAMEID"></span>*NameID*
+<span id="nameID"></span><span id="nameid"></span><span id="NAMEID"></span>*nameID*
 </dt> <dd>
 
-Eindeutiger Name oder ein 16-Bit-Ganzzahl-Wert ohne Vorzeichen, der die Ressource identifiziert.
+Eindeutiger Name oder ein 16-Bit-Ganzzahlwert ohne Vorzeichen, der die Ressource identifiziert.
 
 </dd> <dt>
 
-<span id="filename"></span><span id="FILENAME"></span>*Einfügen*
+<span id="filename"></span><span id="FILENAME"></span>*Dateiname*
 </dt> <dd>
 
-Der Name der Datei, die die Ressource enthält. Der Name muss ein gültiger Dateiname sein. Es muss sich um einen vollständigen Pfad handeln, wenn sich die Datei nicht im aktuellen Arbeitsverzeichnis befindet.
+Name der Datei, die die Ressource enthält. Der Name muss ein gültiger Dateiname sein. Es muss sich um einen vollständigen Pfad handeln, wenn sich die Datei nicht im aktuellen Arbeitsverzeichnis befindet.
 
 </dd> </dl>
 
-Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [allgemeine Ressourcen Attribute](common-resource-attributes.md).
+Bestimmte Attribute werden auch aus Gründen der Abwärtskompatibilität unterstützt. Weitere Informationen finden Sie unter [Allgemeine Ressourcenattribute.](common-resource-attributes.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine **messagetable** -Ressource definiert:
+Im folgenden Beispiel wird eine **MESSAGETABLE-Ressource** definiert:
 
 ``` syntax
 1  MESSAGETABLE MSG00409.bin
@@ -61,9 +61,9 @@ Im folgenden Beispiel wird eine **messagetable** -Ressource definiert:
 
 <dl> <dt>
 
-[**STRINGTABLE**](stringtable-resource.md)
+[**Stringtable**](stringtable-resource.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die connecttoprinterdlg-Funktion zeigt ein Dialogfeld an, mit dem Benutzer in einem Netzwerk nach Druckern suchen und eine Verbindung mit Ihnen herstellen können.
+description: Die ConnectToPrinterDlg-Funktion zeigt ein Dialogfeld an, in dem Benutzer Drucker in einem Netzwerk durchsuchen und eine Verbindung mit ihnen herstellen können.
 ms.assetid: 7cb9108b-8b65-4af3-88c8-a69771ed8e3f
-title: Connecttoprinterdlg-Funktion (winspool. h)
+title: ConnectToPrinterDlg-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - WinSpool.drv
-ms.openlocfilehash: 9af428533d111300d31f6529a0a030fc3b81ee7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7bbeda17f5cbafa46785577243df9e50b3bf7109631166ffb8894bbb678393e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950430"
 ---
-# <a name="connecttoprinterdlg-function"></a>Connecttoprinterdlg-Funktion
+# <a name="connecttoprinterdlg-function"></a>ConnectToPrinterDlg-Funktion
 
-Die **connecttoprinterdlg** -Funktion zeigt ein Dialogfeld an, mit dem Benutzer in einem Netzwerk nach Druckern suchen und eine Verbindung mit Ihnen herstellen können. Wenn der Benutzer einen Drucker auswählt, versucht die Funktion, eine Verbindung damit herzustellen. Wenn ein geeigneter Treiber nicht auf dem Server installiert ist, erhält der Benutzer die Möglichkeit, einen Drucker lokal zu erstellen.
+Die **ConnectToPrinterDlg-Funktion** zeigt ein Dialogfeld an, in dem Benutzer Drucker in einem Netzwerk durchsuchen und eine Verbindung mit ihnen herstellen können. Wenn der Benutzer einen Drucker auswählt, versucht die Funktion, eine Verbindung mit ihm herzustellen. Wenn kein geeigneter Treiber auf dem Server installiert ist, erhält der Benutzer die Möglichkeit, einen Drucker lokal zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,36 +40,36 @@ HANDLE ConnectToPrinterDlg(
 
 <dl> <dt>
 
-*HWND* \[ in\]
+*hwnd* \[ In\]
 </dt> <dd>
 
-Gibt das übergeordnete Fenster des Dialog Felds an.
+Gibt das übergeordnete Fenster des Dialogfelds an.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Dieser Parameter ist reserviert und muss NULL sein.
+Dieser Parameter ist reserviert und muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird und der Benutzer einen Drucker auswählt, ist der Rückgabewert ein Handle für den ausgewählten Drucker.
+Wenn die Funktion erfolgreich ist und der Benutzer einen Drucker auswählt, ist der Rückgabewert ein Handle für den ausgewählten Drucker.
 
-Wenn die Funktion fehlschlägt oder der Benutzer das Dialogfeld abbricht, ohne einen Drucker auszuwählen, ist der Rückgabewert **null**.
+Wenn die Funktion fehlschlägt oder der Benutzer das Dialogfeld ohne Auswahl eines Druckers abbricht, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Die **connecttoprinterdlg** -Funktion versucht, eine Verbindung mit dem ausgewählten Drucker herzustellen. Wenn auf dem Server, auf dem der Drucker residiert, jedoch kein geeigneter Treiber installiert ist, bietet die Funktion dem Benutzer die Möglichkeit, einen Drucker lokal zu erstellen. Eine aufrufenden Anwendung kann ermitteln, ob die Funktion einen Drucker lokal erstellt hat, indem Sie [**GetPrinter**](getprinter.md) mit einer [**Drucker \_ Info \_ 2**](printer-info-2.md) -Struktur aufgerufen hat, und dann den **Attributmember** der Struktur untersucht.
+Die **ConnectToPrinterDlg-Funktion** versucht, eine Verbindung mit dem ausgewählten Drucker herzustellen. Wenn auf dem Server, auf dem sich der Drucker befindet, jedoch kein geeigneter Treiber installiert ist, bietet die Funktion dem Benutzer die Möglichkeit, einen Drucker lokal zu erstellen. Eine aufrufende Anwendung kann bestimmen, ob die Funktion einen Drucker lokal erstellt hat, indem [**GetPrinter**](getprinter.md) mit einer [**PRINTER INFO \_ \_ 2-Struktur**](printer-info-2.md) aufruft und dann das **Attributes-Member** dieser Struktur untersucht wird.
 
-Eine Anwendung sollte [**deleteprinter**](deleteprinter.md) aufrufen, um einen lokalen Drucker zu löschen. Eine Anwendung sollte [**deleteprinterconnection**](deleteprinterconnection.md) aufrufen, um eine Verbindung mit einem Drucker zu löschen.
+Eine Anwendung sollte [**DeletePrinter aufrufen,**](deleteprinter.md) um einen lokalen Drucker zu löschen. Eine Anwendung sollte [**DeletePrinterConnection aufrufen,**](deleteprinterconnection.md) um eine Verbindung mit einem Drucker zu löschen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,9 +79,9 @@ Eine Anwendung sollte [**deleteprinter**](deleteprinter.md) aufrufen, um einen l
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>WinSpool.drv</dt> </dl>                   |
 
 
 
@@ -95,22 +95,22 @@ Eine Anwendung sollte [**deleteprinter**](deleteprinter.md) aufrufen, um einen l
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**"AddPrinterConnection"**](addprinterconnection.md)
+[**AddPrinterConnection**](addprinterconnection.md)
 </dt> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Deleteprinter**](deleteprinter.md)
+[**DeletePrinter**](deleteprinter.md)
 </dt> <dt>
 
-[**Deleteprinterconnection**](deleteprinterconnection.md)
+[**DeletePrinterConnection**](deleteprinterconnection.md)
 </dt> <dt>
 
 [**GetPrinter**](getprinter.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 2**](printer-info-2.md)
+[**DRUCKERINFORMATIONEN \_ \_ 2**](printer-info-2.md)
 </dt> </dl>
 
  

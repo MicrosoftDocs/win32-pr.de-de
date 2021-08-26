@@ -1,31 +1,31 @@
 ---
-description: Wird von der Sequencer-Quelle ausgelöst, wenn ein Segment abgeschlossen wird, gefolgt von einem anderen Segment. Wenn das abschließende Segment abgeschlossen ist, löst die Sequencer-Quelle ein meendof Presentation-Ereignis aus.
+description: Wird von der Sequencerquelle ausgelöst, wenn ein Segment abgeschlossen wird, gefolgt von einem anderen Segment. Wenn das letzte Segment abgeschlossen ist, löst die Sequencerquelle ein MEEndOfPresentation-Ereignis aus.
 ms.assetid: 1be13c9a-d454-4642-b26b-556f2461b705
-title: Meendofpresentationsegment-Ereignis (mfobjects. h)
+title: MEEndOfPresentationSegment-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d3608f51f3ff66e21261cc40d1f8cf690c92c4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b82f646ca76dbb6cc3cd8dc9e95dbaca2c55c504af261924918dbf790411e7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013700"
 ---
-# <a name="meendofpresentationsegment-event"></a>Meendof presentationsegment-Ereignis
+# <a name="meendofpresentationsegment-event"></a>MEEndOfPresentationSegment-Ereignis
 
-Wird von der Sequencer-Quelle ausgelöst, wenn ein Segment abgeschlossen wird, gefolgt von einem anderen Segment. Wenn das abschließende Segment abgeschlossen ist, löst die Sequencer-Quelle ein [meendof Presentation](meendofpresentation.md) -Ereignis aus.
+Wird von der Sequencerquelle ausgelöst, wenn ein Segment abgeschlossen wird, gefolgt von einem anderen Segment. Wenn das letzte Segment abgeschlossen ist, löst die Sequencerquelle ein [MEEndOfPresentation-Ereignis](meendofpresentation.md) aus.
 
-Die Medien Sitzung leitet dieses Ereignis an die Anwendung weiter.
+Die Mediensitzung leitet dieses Ereignis an die Anwendung weiter.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
-| VARTYPE              | BESCHREIBUNG                           |
+| VARTYPE              | Beschreibung                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -35,9 +35,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                                               | BESCHREIBUNG                                                                          |
+| attribute                                                                                               | Beschreibung                                                                          |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [**die MF- \_ Ereignis \_ Quell \_ Topologie wurde \_ abgebrochen**](mf-event-source-topology-canceled-attribute.md)<br/> | Gibt an, ob die Sequencer-Quelle dieses Segment abgebrochen hat.<br/> <br/> |
+| [**\_ \_ MF-EREIGNISQUELLENTOPOLOGIE \_ \_ ABGEBROCHEN**](mf-event-source-topology-canceled-attribute.md)<br/> | Gibt an, ob die Sequencerquelle dieses Segment abgebrochen hat.<br/> <br/> |
 
 
 
@@ -47,9 +47,9 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -57,13 +57,13 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation-Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Informationen über die Sequencer-Quelle](about-the-sequencer-source.md)
+[Informationen zur Sequencerquelle](about-the-sequencer-source.md)
 </dt> <dt>
 
-[Sequencer-Quell Ereignisse](sequencer-source-events.md)
+[Sequencer-Quellereignisse](sequencer-source-events.md)
 </dt> </dl>
 
  

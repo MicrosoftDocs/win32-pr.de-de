@@ -1,31 +1,31 @@
 ---
-description: TAPI dividiert Kommunikationsdienste in Basic, ergänzend und erweitert. Weitere Informationen finden Sie unter TAPI-Dienst Ebenen.
+description: TAPI unterteilt Kommunikationsdienste in Basic, Supplemental und Extended. Weitere Informationen finden Sie unter TAPI-Dienstebenen.
 ms.assetid: e2e6b113-b6b0-43a1-ac95-6e8e188a6120
-title: TSPI-Dienst Ebenen
+title: TSPI-Dienstebenen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d829199bdcfce350d82f3c56cbbf9414fc46b35b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6c72f09f7a076364918815ba5fdb79591f6f5b12382ac2aa529e0859eec53f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012130"
 ---
-# <a name="tspi-levels-of-service"></a>TSPI-Dienst Ebenen
+# <a name="tspi-levels-of-service"></a>TSPI-Dienstebenen
 
-TAPI dividiert Kommunikationsdienste in Basic, ergänzend und erweitert. Weitere Informationen finden Sie [unter TAPI-Dienst Ebenen](./tapi-levels-of-service.md) .
+TAPI unterteilt Kommunikationsdienste in Basic, Supplemental und Extended. Weitere Informationen [finden Sie unter TAPI-Dienstebenen.](./tapi-levels-of-service.md)
 
-Ein TSP ist erforderlich, um alle grundlegenden Telefoniefunktionen zu implementieren. Die [grundlegenden Telefoniefunktionen von TSPI](tspi-basic-telephony-functions.md) enthalten eine Zusammenfassung dieser Funktionen.
+Ein TSP ist erforderlich, um alle grundlegenden Telefoniefunktionen zu implementieren. [TSPI Basic-Telefoniefunktionen](tspi-basic-telephony-functions.md) enthält eine Zusammenfassung dieser Funktionen.
 
-Ergänzende Telefoniefunktionen enthalten Features, die auf modernen PBXs, wie z. b. Hold, Transfer, Conference, Park usw., gefunden werden. Ein Dienstanbieter sollte einen ergänzenden Telefoniedienst nur dann bereitstellen, wenn er die genaue Bedeutung implementieren kann, wie er von TAPI definiert wurde. Andernfalls sollte die Funktion als erweiterter Telefoniedienst bereitgestellt werden. Alle ergänzenden Features sind optional. Ein Dienstanbieter gibt an, welche Dienste er durch Antworten auf Funktionen wie [**TSPI \_ linegetdevcaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevcaps) oder [**TSPI \_ linegetaddresscaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddresscaps)unterstützt. Ein einzelner zusätzlicher Dienst kann aus mehreren Funktionsaufrufen und Nachrichten bestehen. Telefongeräte Dienste sind Teil der ergänzenden Telefonie.
+Die ergänzende Telefonie umfasst Features, die auf modernen PBX-Dateien zu finden sind, z. B. Hold, Transfer, Conference, Park und so weiter. Ein Dienstanbieter sollte nur dann einen ergänzenden Telefoniedienst bereitstellen, wenn er die genaue Bedeutung gemäß DER TAPI implementieren kann. Falls nicht, sollte das Feature als erweiterter Telefoniedienst bereitgestellt werden. Alle ergänzenden Features sind optional. Ein Dienstanbieter gibt an, welche Dienste er durch Antworten auf Funktionen wie [**TSPI \_ lineGetDevCaps**](/windows/win32/api/tspi/nf-tspi-tspi_linegetdevcaps) oder [**TSPI \_ lineGetAddressCaps unterstützt.**](/windows/win32/api/tspi/nf-tspi-tspi_linegetaddresscaps) Ein einzelner ergänzender Dienst kann aus mehreren Funktionsaufrufen und Nachrichten bestehen. Telefon Gerätedienste sind Teil der ergänzenden Telefonie.
 
-Erweiterte Telefoniedienste ermöglichen es einem Anbieter, gerätespezifische Funktionen zu implementieren. Der Dienstanbieter muss die Erweiterungen mithilfe eines *Erweiterungs Bezeichners* eindeutig identifizieren. Anwendungen rufen und verwenden diesen eindeutigen Bezeichner, um zu bestimmen, welche Erweiterungen der Dienstanbieter unterstützt.
+Erweiterte Telefoniedienste ermöglichen es einem Anbieter, gerätespezifische Funktionen zu implementieren. Der Dienstanbieter muss die Erweiterungen mithilfe eines *Erweiterungsbezeichners eindeutig identifizieren.* Anwendungen rufen diesen eindeutigen Bezeichner ab und verwenden diesen, um zu bestimmen, welche Erweiterungen der Dienstanbieter unterstützt.
 
-Die Erweiterungen können auf mehrere Hersteller angewendet werden. Spezielle Funktionen und Meldungen wie [**linedevspecific**](/windows/win32/api/tapi/nf-tapi-linedevspecific) und [**phonedevspecific**](/windows/win32/api/tapi/nf-tapi-phonedevspecific) werden in TAPI bereitgestellt. Sie werden verwendet, um die Erweiterung des Funktions Satzes (im Gegensatz zu Enumerationen, Bitflags und Daten Strukturmembern) zuzulassen, die vom Dienstanbieter unterstützt werden. Die Parameter für jede Funktion werden auch vom Dienstanbieter definiert.
+Die Erweiterungen können für mehrere Hersteller gelten. Spezielle Funktionen und Meldungen wie [**lineDevSpecific**](/windows/win32/api/tapi/nf-tapi-linedevspecific) und [**phoneDevSpecific**](/windows/win32/api/tapi/nf-tapi-phonedevspecific) werden in TAPI bereitgestellt. Sie werden verwendet, um die Erweiterung der Vom Dienstanbieter unterstützten Funktionen zu ermöglichen (im Gegensatz zu Enumerationen, Bitflags und Datenstrukturmembern). Die Parameter für jede Funktion werden auch vom Dienstanbieter definiert.
 
-Ein Bezeichner wird einem Satz von Erweiterungen (vor der Verteilung) zugewiesen, nicht für jede einzelne Instanz einer Implementierung dieser Erweiterungen. Das Hilfsprogramm "extidgen" in TSPI generiert eindeutige Erweiterungs Bezeichner für Dienstanbieter. Dabei wird eine Ethernet-Adapter Adresse, eine Zufallszahl und die Tageszeit verwendet, um einen Bezeichner zu generieren. Daher ist es äußerst unwahrscheinlich, dass der resultierende Erweiterungs Bezeichner mit einem anderen Dienstanbieter in Konflikt steht. Daher ist es nicht erforderlich, dass Anbieter Erweiterungs-IDs registrieren.
+Ein Bezeichner wird einem Satz von Erweiterungen (vor der Verteilung) zugewiesen, nicht jeder einzelnen Instanz einer Implementierung dieser Erweiterungen. Das EXTIDGEN-Hilfsprogramm in TSPI generiert eindeutige Erweiterungsbezeichner für Dienstanbieter. Es werden eine Ethernet-Adapteradresse, eine Zufallszahl und die Tageszeit zum Generieren eines Bezeichners verwendet. Daher ist es äußerst unwahrscheinlich, dass der resultierende Erweiterungsbezeichner mit anderen Dienstanbietern in Konflikt steht. Daher müssen Anbieter keine Erweiterungsbezeichner registrieren.
 
-Das Hilfsprogramm "extidgen" generiert keine Erweiterungs Bezeichner, es sei denn, auf dem Computer, auf dem es ausgeführt wird, wird auch NetBIOS oder andere Netzwerk Software ausgeführt.
+Das EXTIDGEN-Hilfsprogramm generiert keine Erweiterungsbezeichner, es sei denn, auf dem Computer, auf dem es ausgeführt wird, wird auch NetBIOS oder andere Netzwerksoftware ausgeführt.
 
  
 

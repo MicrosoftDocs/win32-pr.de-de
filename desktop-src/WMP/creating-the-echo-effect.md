@@ -1,39 +1,26 @@
 ---
-title: Erstellen des Echo Effekts
-description: Erstellen des Echo Effekts
+title: Erstellen des Echoeffekts
+description: Erstellen des Echoeffekts
 ms.assetid: 3fac6c74-8221-4656-997b-0f903fae85b7
 keywords:
-- Windows Media Player-Plug-ins, Echo Sample DoProcess Output-Methode
-- Plug-ins, Echo Sample DoProcess Output-Methode
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample DoProcess Output-Methode
-- DSP-Plug-ins, Echo Sample DoProcess Output-Methode
-- Echo DSP-Plug-in-Beispiel, DoProcess Output-Methode
-- Plug-in-Beispiel für ECHO DSP, Erstellen eines ECHO Effekts
+- Windows Media Player-Plug-Ins,Echo-Beispiel-DoProcessOutput-Methode
+- Plug-Ins,Echo-Beispielmethode "DoProcessOutput"
+- Plug-Ins für die digitale Signalverarbeitung,Echo-Beispielmethode "DoProcessOutput"
+- DSP-Plug-Ins,Echo-Beispielmethode "DoProcessOutput"
+- Echo DSP-Plug-In-Beispiel, DoProcessOutput-Methode
+- Echo DSP-Plug-In-Beispiel, Erstellen eines Echoeffekts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e978562ff4cdee016f92409d183990cd4bb178b9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fcb79b5be53f391854f38ce9aeba1c1bbff61ed2c0a982395c7063ff53146760
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902290"
 ---
-# <a name="creating-the-echo-effect"></a>Erstellen des Echo Effekts
+# <a name="creating-the-echo-effect"></a>Erstellen des Echoeffekts
 
-Sie müssen zunächst den Code aus dem Assistenten Beispiel entfernen, der die Audiodatei skaliert. Entfernen Sie den folgenden Code aus dem 8-Bit-Abschnitt:
-
-
-```C++
-// Apply scale factor to sample.
-i = int( ((double) i) * m_dwDelayTime );
-
-```
-
-
-
-(Denken Sie daran, dass m "m" \_ durch m \_ dwdelta-Time ersetzt wurde.)
-
-Entfernen Sie den folgenden Code aus dem 16-Bit-Abschnitt:
+Sie müssen zuerst den Code aus dem Assistentenbeispiel entfernen, das die Audiodatei skaliert. Entfernen Sie aus dem 8-Bit-Abschnitt den folgenden Code:
 
 
 ```C++
@@ -44,7 +31,20 @@ i = int( ((double) i) * m_dwDelayTime );
 
 
 
-Die im Beispielcode des Plug-in-Assistenten bereitgestellte Implementierung von " **DoProcess Output** " erstellt eine while-Schleife, die ein Mal für jedes Beispiel im von Windows Media Player bereitgestellten Eingabepuffer iteriert. Diese Schleife funktioniert auf die gleiche Weise für 8-Bit-und 16-Bit-Audiodaten, obwohl jeweils eine separate Schleife erforderlich ist. In jedem Fall wird die Schleife mit folgendem Test initiiert:
+(Denken Sie daran, dass m \_ fScaleFactor durch m \_ dwDelayTime ersetzt wurde.)
+
+Entfernen Sie aus dem 16-Bit-Abschnitt den folgenden Code:
+
+
+```C++
+// Apply scale factor to sample.
+i = int( ((double) i) * m_dwDelayTime );
+
+```
+
+
+
+Die Implementierung von **DoProcessOutput,** die vom Beispielcode des Plug-In-Assistenten bereitgestellt wird, erstellt eine while-Schleife, die einmal für jedes Beispiel im Eingabepuffer iteriert, der von Windows Media Player. Diese Schleife funktioniert sowohl für 8-Bit- als auch für 16-Bit-Audio auf die gleiche Weise, obwohl jeweils eine separate Schleife erforderlich ist. In jedem Fall wird die Schleife mit dem folgenden Test initiiert:
 
 
 ```C++
@@ -54,13 +54,13 @@ while (dwSamplesToProcess--)
 
 
 
-In der Schleife sind die Verarbeitungs Routinen für 8-Bit-und 16-Bit-Audiodaten sehr ähnlich. Der Hauptunterschied besteht darin, dass der Code im 8-Bit-Abschnitt den Bereich der Datenwerte in-128 bis 127 ändert und dann den Bereich wieder zurück konvertiert, bevor die Daten in den Ausgabepuffer geschrieben werden. Dies ist wichtig, um die Symmetrie des Audiowellen Formulars während der Verarbeitung beizubehalten.
+Sobald sie sich innerhalb der Schleife befinden, sind die Verarbeitungsroutinen für 8-Bit- und 16-Bit-Audio sehr ähnlich. Der Hauptunterschied besteht in dem Code im 8-Bit-Abschnitt, der den Bereich der Datenwerte in -128 bis 127 ändert und dann den Bereich wieder zurück konvertiert, bevor die Daten in den Ausgabepuffer geschrieben werden. Dies ist wichtig, um die Symmetrie der Audio-Wellenform während der Verarbeitung zu erhalten.
 
-Nun können Sie beginnen, Code in der Verarbeitungs Schleife hinzuzufügen und zu ersetzen.
+Nun können Sie damit beginnen, Code in der Verarbeitungsschleife hinzuzufügen und zu ersetzen.
 
 ## <a name="retrieve-a-sample-from-the-input-buffer"></a>Abrufen eines Beispiels aus dem Eingabepuffer
 
-Während jeder Iterationen der Schleife wird eine einzelne Stichprobe aus dem Eingabepuffer abgerufen. Für 8-Bit-Audiodaten wird das Beispiel in den neuen Bereich verschoben, und der Zeiger auf den Eingabepuffer wird auf das nächste Beispiel erweitert. Der folgende Code wird vom Plug-in-Assistenten angezeigt:
+Bei jeder Iteration der Schleife wird ein einzelnes Beispiel aus dem Eingabepuffer abgerufen. Bei 8-Bit-Audiodaten wird das Beispiel in den neuen Bereich verschoben, und dann wird der Zeiger auf den Eingabepuffer auf das nächste Beispiel erweitert. Der folgende Code wurde aus dem Plug-In-Assistenten erstellt:
 
 
 ```C++
@@ -71,7 +71,7 @@ int i = (*pbInputData++) - 128;
 
 
 
-Bei einem 16-Bit-audiovorgang ist der Prozess mit Ausnahme der Normalisierung identisch:
+Bei 16-Bit-Audiodaten ist der Prozess mit Ausnahme der Normalisierung identisch:
 
 
 ```C++
@@ -82,11 +82,11 @@ int i = *pwInputData++;
 
 
 
-Beachten Sie, dass die Zeiger im 16-Bit-Code in den Typ **Short** konvertiert wurden.
+Denken Sie daran, dass die Zeiger im 16-Bit-Code in den Typ short konvertiert **wurden.**
 
-## <a name="retrieve-a-sample-from-the-delay-buffer"></a>Abrufen eines Beispiels aus dem Verzögerungs Puffer
+## <a name="retrieve-a-sample-from-the-delay-buffer"></a>Abrufen eines Beispiels aus dem Verzögerungspuffer
 
-Rufen Sie als nächstes eine einzelne Stichprobe aus dem verzögerten Puffer ab. Für 8-Bit-Code werden die Verzögerungs Proben in ihrem nativen Bereich von 0 bis 255 gespeichert. Der folgende Code, den Sie hinzufügen müssen, Ruft ein 8-Bit-Verzögerungs Beispiel ab:
+Rufen Sie als Nächstes eine einzelne Stichprobe aus dem Verzögerungspuffer ab. Für 8-Bit-Code werden die Verzögerungsbeispiele im nativen Bereich von 0 bis 255 gespeichert. Der folgende Code, den Sie hinzufügen müssen, ruft ein 8-Bit-Verzögerungsbeispiel ab:
 
 
 ```C++
@@ -97,7 +97,7 @@ int delay = m_pbDelayPointer[0] - 128;
 
 
 
-Bei einem 16-Bit-audiovorgang ist der Prozess ähnlich:
+Bei 16-Bit-Audiodaten sieht der Prozess ähnlich aus:
 
 
 ```C++
@@ -108,9 +108,9 @@ int delay = *pwDelayPointer;
 
 
 
-## <a name="write-the-input-sample-to-the-delay-buffer"></a>Eingabe Beispiel in den Verzögerungs Puffer schreiben
+## <a name="write-the-input-sample-to-the-delay-buffer"></a>Schreiben des Eingabebeispiels in den Verzögerungspuffer
 
-Nun müssen Sie das Eingabe Beispiel im Verzögerungs Puffer an dem Speicherort speichern, von dem aus Sie das Verzögerungs Beispiel abgerufen haben. Im folgenden finden Sie den Code, den Sie für 8-Bit-Audiodaten hinzufügen müssen:
+Nun müssen Sie das Eingabebeispiel im Verzögerungspuffer an der gleichen Position speichern, von der Sie das Verzögerungsbeispiel abgerufen haben. Der folgende Code muss für 8-Bit-Audio hinzugefügt werden:
 
 
 ```C++
@@ -132,9 +132,9 @@ Dies ist der Code, der für den 16-Bit-Abschnitt hinzugefügt werden soll:
 
 
 
-## <a name="move-the-delay-buffer-pointer"></a>Verschieben des Verzögerungs Puffer Zeigers
+## <a name="move-the-delay-buffer-pointer"></a>Verschieben des Verzögerungspufferzeigers
 
-Nachdem die Arbeit im Verzögerungs Puffer für diese Iterationen abgeschlossen ist, können Sie den verschiebbaren Zeiger auf den Verzögerungs Puffer verschieben. Wenn der Zeiger das Ende des Kreis Puffers erreicht, müssen Sie seinen Wert ändern, um auf den Anfang des Puffers zu zeigen. Um dies für 8-Bit-Audiodaten zu erreichen, verwenden Sie den folgenden Code:
+Nachdem die Arbeit im Verzögerungspuffer für diese Iteration abgeschlossen ist, können Sie den verschiebbaren Zeiger auf den Verzögerungspuffer bewegen. Wenn der Zeiger das Ende des zirkulären Puffers erreicht, müssen Sie seinen Wert ändern, um auf den Kopf des Puffers zu zeigen. Verwenden Sie den folgenden Code, um dies für 8-Bit-Audio zu tun:
 
 
 ```C++
@@ -148,7 +148,7 @@ if (++m_pbDelayPointer > pbEOFDelayBuffer)
 
 
 
-Dies ist der Code für den 16-Bit-Abschnitt:
+Hier ist der Code für den 16-Bit-Abschnitt:
 
 
 ```C++
@@ -162,7 +162,7 @@ if (++pwDelayPointer > pwEOFDelayBuffer)
 
 
 
-Da der Zeiger im 16-Bit-Abschnitt wirklich eine Kopie der Element Variablen ist, müssen Sie daran denken, den Wert in der Element Variablen mit der neuen Adresse zu aktualisieren. Wenn Sie dies nicht tun, zeigt der Verzögerungs Puffer Zeiger wiederholt auf den Anfang des Puffers, und Ihr Echo Effekt funktioniert nicht erwartungsgemäß. Fügen Sie dem 16-Bit-Abschnitt den folgenden Code hinzu:
+Da der Zeiger im 16-Bit-Abschnitt tatsächlich eine Kopie der Membervariablen ist, müssen Sie daran denken, den Wert in der Membervariablen mit der neuen Adresse zu aktualisieren. Wenn Sie dies nicht tun, wird der Verzögerungspufferzeiger wiederholt auf den Kopf des Puffers zeigen, und Ihr Echoeffekt funktioniert nicht wie erwartet. Fügen Sie dem 16-Bit-Abschnitt den folgenden Code hinzu:
 
 
 ```C++
@@ -173,9 +173,9 @@ m_pbDelayPointer = (BYTE *) pwDelayPointer;
 
 
 
-## <a name="mix-the-input-sample-with-the-delay-sample"></a>Mischen der Eingabe Stichprobe mit dem Delay-Beispiel
+## <a name="mix-the-input-sample-with-the-delay-sample"></a>Kombinieren des Eingabebeispiels mit dem Verzögerungsbeispiel
 
-Hier verwenden Sie die Werte für "nass Mischung" und "Dry Mix", um das abschließende Ausgabe Beispiel zu erstellen. Sie multiplizieren einfach jede Stichprobe mit dem Gleit Komma Wert, der den Prozentsatz des endgültigen Signals für das Beispiel darstellt. Multiplizieren Sie die Eingabe Stichprobe mit dem Wert, der in m-Datei- \_ Mischungs Mischung gespeichert ist, Multiplizieren Sie das Verzögerungs Beispiel mit dem in m "m" \_ . Fügen Sie dann die beiden Werte hinzu. Der Code, den Sie hinzufügen müssen, ist für die 8-Bit-und 16-Bit-Abschnitte identisch:
+Hier verwenden Sie die Vermischungswerte und die Dry Mix-Werte, um das endgültige Ausgabebeispiel zu erstellen. Sie multiplizieren einfach jede Stichprobe mit dem Gleitkommawert, der den Prozentsatz des letzten Signals für die Stichprobe darstellt. Multiplizieren Sie das Eingabebeispiel mit dem in m fDryMix gespeicherten Wert. Multiplizieren Sie die Verzögerungsstichprobe mit dem \_ in m \_ fWetMix gespeicherten Wert. Fügen Sie dann die beiden Werte hinzu. Der Code, den Sie hinzufügen müssen, ist für die 8-Bit- und 16-Bit-Abschnitte identisch:
 
 
 ```C++
@@ -188,7 +188,7 @@ i = (int)((i * m_fDryMix ) + (delay * m_fWetMix));
 
 ## <a name="write-the-data-to-the-output-buffer"></a>Schreiben der Daten in den Ausgabepuffer
 
-Kopieren Sie schließlich das gemischte Beispiel in den Ausgabepuffer, und fahren Sie dann mit dem Ausgabepuffer Zeiger fort. Für 8-Bit-Audiodaten verwendet der Plug-in-Assistent den folgenden Code, um das Beispiel in seinen ursprünglichen Bereich zurückzusetzen:
+Kopieren Sie abschließend das gemischte Beispiel in den Ausgabepuffer, und geben Sie dann den Ausgabepufferzeiger ein. Für 8-Bit-Audiodaten verwendet der Plug-In-Assistent den folgenden Code, um das Beispiel in den ursprünglichen Bereich zurück zu geben:
 
 
 ```C++
@@ -199,7 +199,7 @@ Kopieren Sie schließlich das gemischte Beispiel in den Ausgabepuffer, und fahre
 
 
 
-Für 16-Bit-Audiodaten verwendet der Assistent den folgenden Code als letzten Schritt in der Verarbeitungs Schleife:
+Für 16-Bit-Audio verwendet der Assistent den folgenden Code als letzten Schritt in der Verarbeitungsschleife:
 
 
 ```C++
@@ -214,12 +214,12 @@ Für 16-Bit-Audiodaten verwendet der Assistent den folgenden Code als letzten Sc
 
 <dl> <dt>
 
-[**Implementieren von Cecho::D oprocess Output**](implementing-cecho--doprocessoutput.md)
+[**Implementieren von CEcho::D oProcessOutput**](implementing-cecho--doprocessoutput.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

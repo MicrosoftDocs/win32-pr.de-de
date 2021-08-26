@@ -1,7 +1,7 @@
 ---
 description: Fordert eine Überprüfung des Benutzers an.
 ms.assetid: e8b7155c-3444-4aa8-8a15-3b3624a44a77
-title: 'Iscardverify:: Verify-Methode'
+title: ISCardVerify::Verify-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 68f3a97df672d97e635180f41405a75c4cb84661
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb78439e782f9d0d01d7eb886a81cb46572f4ee351468f5f4b359279fcca5fa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013470"
 ---
-# <a name="iscardverifyverify-method"></a>Iscardverify:: Verify-Methode
+# <a name="iscardverifyverify-method"></a>ISCardVerify::Verify-Methode
 
-\[Die **Verifizierungs** Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Verify-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Verify** -Methode fordert eine Überprüfung des Benutzers an.
+Die **Verify-Methode** fordert eine Überprüfung des Benutzers an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,55 +42,55 @@ HRESULT Verify(
 
 <dl> <dt>
 
-*pcode* \[ in\]
+*pCode* \[ In\]
 </dt> <dd>
 
-Enthält den Code, der für die [*Smartcard*](../secgloss/s-gly.md) im CHV-Prozess (Karteninhaber Überprüfung) angezeigt werden soll.
+Enthält den Code, der der [*Smartcard*](../secgloss/s-gly.md) im CHV-Prozess (Überprüfung des Karteninhabers) angezeigt werden soll.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Code Global oder lokal ist.
+Gibt an, ob der Code global oder lokal ist.
 
 <dl><span id="SC_FL_IHV_GLOBAL"></span><span id="sc_fl_ihv_global"></span><dt>
 
-**SC \_ FL \_ IHV \_ Global**
+**SC \_ FL \_ IHV \_ GLOBAL**
 </dt><span id="SC_FL_IHV_LOCAL"></span><span id="sc_fl_ihv_local"></span><dt>
 
-**SC \_ FL \_ IHV \_ local**
+**SC \_ FL \_ IHV \_ LOCAL**
 </dt> </dl> </dd> <dt>
 
-*lref* \[ in\]
+*lRef* \[ In\]
 </dt> <dd>
 
-Smartcardspezifischer Verweis.
+Smartcardspezifische Referenz.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **Verify** -Methode gibt einen der folgenden Werte zurück:
+Die **Verify-Methode** gibt einen der folgenden Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardverify**](iscardverify.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardVerify.**](iscardverify.md)
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,10 +98,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -109,7 +109,7 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Iscardverify**](iscardverify.md)
+[**ISCardVerify**](iscardverify.md)
 </dt> </dl>
 
  

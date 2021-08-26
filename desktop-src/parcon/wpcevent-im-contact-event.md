@@ -1,19 +1,19 @@
 ---
-description: Ereignis pro Benutzer, das von einem Instant Messaging-Client generiert wird, wenn Kontaktinformationen in Jugendschutz Elementen hinzugefügt, geändert oder entfernt werden.
+description: Benutzerspezifisches Ereignis, das von einem Instant Messaging-Client generiert wird, wenn Kontaktinformationen in der Jugendschutz-Instanz hinzugefügt, geändert oder entfernt werden.
 ms.assetid: 0a016542-306e-48b4-8b0c-b9e4e915513e
-title: WPCEVENT_IM_CONTACT-Ereignis (wpcevent. h)
+title: WPCEVENT_IM_CONTACT -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9747f7ede57f7a1d77af0f0e8e5425401ee32b36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: baac4bf5648b27f2e8d446a79bb2d90d52f0aac416e30d031d3b81d430a6927b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951447"
 ---
-# <a name="wpcevent_im_contact-event"></a>Wpcevent \_ im- \_ Kontakt Ereignis
+# <a name="wpcevent_im_contact-event"></a>WPCEVENT \_ IM \_ CONTACT-Ereignis
 
-Ereignis pro Benutzer, das von einem Instant Messaging-Client generiert wird, wenn Kontaktinformationen in Jugendschutz Elementen hinzugefügt, geändert oder entfernt werden.
+Benutzerspezifisches Ereignis, das von einem Instant Messaging-Client generiert wird, wenn Kontaktinformationen in der Jugendschutz-Instanz hinzugefügt, geändert oder entfernt werden.
 
 
 ```C++
@@ -29,56 +29,56 @@ const EVENT_DESCRIPTOR WPCEVENT_IM_CONTACT = {0xf, 0x0, 0x10, 0x4, 0x16, 0xf, 0x
 *AppName* 
 </dt> <dd>
 
-Der Name der Instant Messaging-Anwendung, die das Ereignis erzeugt.
+Der Name der Instant Messaging-Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Version der Anwendung, die das Ereignis erzeugt.
+Die Version der Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AccountName* 
 </dt> <dd>
 
-Der Instant Messaging-Kontoname für diesen Benutzer.
+Der Name des Instant Messaging-Kontos für diesen Benutzer.
 
 </dd> <dt>
 
 *OldName* 
 </dt> <dd>
 
-Der vorherige Name des Instant Messaging-Kontos, wenn es gelöscht oder geändert wurde.
+Der vorherige Name des Instant Messaging-Kontos, sofern gelöscht oder geändert.
 
 </dd> <dt>
 
-*Oldid* 
+*OldID* 
 </dt> <dd>
 
-Die ID, die dem vorherigen Instant Messaging-Kontonamen zugeordnet ist.
+Die ID, die dem vorherigen Namen des Instant Messaging-Kontos zugeordnet ist.
 
 </dd> <dt>
 
-*NewName* 
+*Newname* 
 </dt> <dd>
 
-Der neue Instant Messaging-Kontoname, wenn er hinzugefügt oder geändert wird.
+Der name des neuen Instant Messaging-Kontos, sofern hinzugefügt oder geändert.
 
 </dd> <dt>
 
-*NEWID* 
+*Newid* 
 </dt> <dd>
 
-Die ID, die dem neuen Instant Messaging-Kontonamen zugeordnet ist.
+Die ID, die dem neuen Namen des Instant Messaging-Kontos zugeordnet ist.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse nicht verwendet werden und welche Steuerelemente verwendet werden.
 
 </dd> </dl>
 
@@ -88,9 +88,9 @@ Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpceve
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -98,10 +98,10 @@ Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpceve
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

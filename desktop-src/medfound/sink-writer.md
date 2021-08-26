@@ -1,38 +1,38 @@
 ---
-description: Der senkwriter ist eine Komponente zum Codieren von Audiodateien oder Videodateien.
+description: Der Senkenwriter ist eine Komponente zum Codieren von Audio- oder Videodateien.
 ms.assetid: 23AF25B8-B94C-48BC-83D8-5863ACFFD4CA
-title: Senke-Writer
+title: Sink Writer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6b30d75e369de343bae61ba56dfd05c0d5d12a4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a1cfa60abb9b107030aba18e30175592d637c7676ff44781d62b3f5c1509351
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887354"
 ---
-# <a name="sink-writer"></a>Senke-Writer
+# <a name="sink-writer"></a>Sink Writer
 
-Der senkwriter ist eine Komponente zum Codieren von Audiodateien oder Videodateien.
+Der Senkenwriter ist eine Komponente zum Codieren von Audio- oder Videodateien.
 
-Das folgende Diagramm zeigt, wie eine Anwendung den senkwriter zum Codieren der Audiodatei und der Audiodatei verwendet.
+Das folgende Diagramm zeigt auf hoher Ebene, wie eine Anwendung den Senkenwriter verwendet, um die Audio-/Videodatei zu codieren.
 
-![ein Diagramm, das den Senke-Writer anzeigt.](images/encoding09.png)
+![Ein Diagramm, das den Senkenwriter zeigt.](images/encoding09.png)
 
-Der Senke Writer hostet eine Medien Senke und optional einen oder mehrere Encoder. Die Encoder konvertieren unkomprimierte Audiodaten oder Videodaten in codierte Bitstreams. Die Medien Senke gibt die Bitstreams in einer Datei aus. Der Senke-Writer führt die folgenden Aufgaben aus:
+Der Senkenwriter hostet eine Mediensenke und optional einen oder mehrere Encoder. Die Encoder konvertieren unkomprimierte Audio- oder Videodaten in codierte Bitstreams. Die Mediensenke gibt die Bitstreams in eine Datei aus. Der Senkenwriter führt die folgenden Aufgaben aus:
 
--   Lädt die Medien Senke.
--   Findet und lädt die Encoder.
--   Verwaltet den Datenfluss zu den Encodern und der Medien Senke.
+-   Lädt die Mediensenke.
+-   Sucht und lädt die Encoder.
+-   Verwaltet den Datenfluss zu den Encodern und der Mediensenke.
 
-Die Anwendung übergibt Audiodaten und Videodaten als Eingabe an den senkwriter. Es spielt keine Rolle, wie die Anwendung die Eingabedaten abruft oder generiert. Eine Möglichkeit ist die Verwendung des [Quell Readers](source-reader.md), wie in der folgenden Abbildung dargestellt. Der sendende Writer erfordert jedoch nicht die Verwendung des Quell Readers. Diese beiden Komponenten sind unabhängig voneinander.
+Die Anwendung übergibt Audio-/Videodaten als Eingabe an den Senkenwriter. Es spielt keine Rolle, wie die Anwendung die Eingabedaten erhält oder generiert. Eine Möglichkeit besteht darin, den [Quellleser](source-reader.md)zu verwenden, wie im folgenden Diagramm dargestellt. Der Senkenwriter erfordert jedoch nicht die Verwendung des Quelllesers. Diese beiden Komponenten sind unabhängig.
 
-![ein Diagramm, in dem der Quell-und der Senke Writer angezeigt werden.](images/encoding02.png)
+![Ein Diagramm, das den Quellleser und den Senkenwriter zeigt.](images/encoding02.png)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Verwenden des Senke Writers](using-the-sink-writer.md)
--   [Tutorial: Verwenden des senkwriter zum Codieren von Videos](tutorial--using-the-sink-writer-to-encode-video.md)
+-   [Verwenden des Senkenwriters](using-the-sink-writer.md)
+-   [Tutorial: Verwenden des Sink Writer zum Codieren von Videos](tutorial--using-the-sink-writer-to-encode-video.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

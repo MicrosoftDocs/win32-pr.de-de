@@ -1,21 +1,21 @@
 ---
-description: 'Sie können die Gammakorrektur für einen Farbverlaufs Pinsel aktivieren, indem Sie true an die PathGradientBrush:: setgammacorrection-Methode dieses Pinsels übergeben.'
+description: Sie können die Gammakorrektur für einen Farbverlaufspinsel aktivieren, indem Sie TRUE an die PathGradientBrush::SetGammaCorrection-Methode dieses Pinsels übergeben.
 ms.assetid: 47472e41-f469-44f4-8b39-cf3982b79f9e
-title: Anwenden der Gamma Korrektur auf einen Farbverlauf
+title: Anwenden der Gammakorrektur auf einen Farbverlauf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80e51673e8be4fd289286ce5e4e3e8f7c5469724
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eae76306e5c68804d76777d9fc80c65d06904702487a8b60f80659b9d16a96ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888540"
 ---
-# <a name="applying-gamma-correction-to-a-gradient"></a>Anwenden der Gamma Korrektur auf einen Farbverlauf
+# <a name="applying-gamma-correction-to-a-gradient"></a>Anwenden der Gammakorrektur auf einen Farbverlauf
 
-Sie können die Gammakorrektur für einen Farbverlaufs Pinsel aktivieren, indem Sie **true** an die [**PathGradientBrush:: setgammacorrection**](/windows/desktop/api/Gdipluspath/nf-gdipluspath-pathgradientbrush-setgammacorrection) -Methode dieses Pinsels übergeben. Sie können die Gammakorrektur deaktivieren, indem Sie **false** an die **PathGradientBrush:: setgammacorrection** -Methode übergeben. Die Gamma Korrektur ist standardmäßig deaktiviert.
+Sie können die Gammakorrektur für einen Farbverlaufspinsel aktivieren, indem Sie **TRUE** an die [**PathGradientBrush::SetGammaCorrection-Methode**](/windows/desktop/api/Gdipluspath/nf-gdipluspath-pathgradientbrush-setgammacorrection) dieses Pinsels übergeben. Sie können die Gammakorrektur deaktivieren, indem Sie **FALSE** an die **PathGradientBrush::SetGammaCorrection-Methode** übergeben. Die Gammakorrektur ist standardmäßig deaktiviert.
 
-Im folgenden Beispiel wird ein linearer Farbverlaufs Pinsel erstellt und mithilfe dieses Pinsels zwei Rechtecke gefüllt. Das erste Rechteck wird ohne Gammakorrektur gefüllt, und das zweite Rechteck ist mit der Gammakorrektur gefüllt.
+Im folgenden Beispiel wird ein linearer Farbverlaufspinsel erstellt und dieser Pinsel verwendet, um zwei Rechtecke auszufüllen. Das erste Rechteck wird ohne Gammakorrektur gefüllt, und das zweite Rechteck wird mit Gammakorrektur gefüllt.
 
 
 ```
@@ -32,11 +32,11 @@ graphics.FillRectangle(&linGrBrush, 0, 60, 200, 50);
 
 
 
-Die folgende Abbildung zeigt die zwei gefüllten Rechtecke. Das obere Rechteck, das keine Gammakorrektur hat, wird in der Mitte dunkel angezeigt. Das untere Rechteck, das über eine Gammakorrektur verfügt, scheint eine einheitlichere Intensität zu haben.
+Die folgende Abbildung zeigt die beiden ausgefüllten Rechtecke. Das obere Rechteck ohne Gammakorrektur wird in der Mitte dunkel angezeigt. Das untere Rechteck mit Gammakorrektur scheint eine einheitlichere Intensität zu haben.
 
-![Abbildung mit zwei Rechtecke: die farbige Füllung der ersten variiert in der Intensität, die Füllung der zweiten variiert weniger](images/gammagradient1.png)
+![Abbildung mit zwei Rechtecke: Die farbige Füllung des ersten variiert in der Intensität, die Füllung des zweiten unterscheidet sich weniger.](images/gammagradient1.png)
 
-Im folgenden Beispiel wird ein Pfad Farbverlaufs Pinsel basierend auf einem sternförmigen Pfad erstellt. Im Code wird der Pfad Farbverlaufs Pinsel mit deaktivierter Gammakorrektur (Standardeinstellung) verwendet, um den Pfad auszufüllen. Dann übergibt der Code " **true** " an die [**PathGradientBrush:: setgammacorrection**](/windows/desktop/api/Gdipluspath/nf-gdipluspath-pathgradientbrush-setgammacorrection) -Methode, um die Gammakorrektur für den Pfad Farbverlaufs Pinsel zu aktivieren. Der-Befehl " [**Graphics:: TranslateTransform**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-translatetransform) " legt die globale Transformation eines [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts fest, sodass der nachfolgende aufzurufende [**Grafik:: FillPath**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpath) einen Stern füllt, der sich rechts vom ersten Stern befindet.
+Im folgenden Beispiel wird ein Pfadfarbepinsel basierend auf einem sternförmigen Pfad erstellt. Der Code verwendet den Pfadverlaufspinsel mit deaktivierter Gammakorrektur (Standardeinstellung), um den Pfad zu füllen. Anschließend übergibt der Code **TRUE** an die [**PathGradientBrush::SetGammaCorrection-Methode,**](/windows/desktop/api/Gdipluspath/nf-gdipluspath-pathgradientbrush-setgammacorrection) um die Gammakorrektur für den Pfadfarbverlaufspinsel zu ermöglichen. Der Aufruf von [**Graphics::TranslateTransform**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-translatetransform) legt die Welttransformation eines [**Graphics-Objekts**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) fest, sodass der nachfolgende Aufruf von [**Graphics::FillPath**](/windows/desktop/api/Gdiplusgraphics/nf-gdiplusgraphics-graphics-fillpath) einen Stern auffüllt, der sich rechts vom ersten Stern befindet.
 
 
 ```
@@ -76,9 +76,9 @@ graphics.FillPath(&pthGrBrush, &path);
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Der Stern auf der rechten Seite verfügt über eine Gammakorrektur. Beachten Sie, dass der Stern auf der linken Seite, der nicht über eine Gammakorrektur verfügt, Bereiche enthält, die dunkel erscheinen.
+Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Der Stern auf der rechten Seite weist eine Gammakorrektur auf. Beachten Sie, dass der Stern auf der linken Seite, der keine Gammakorrektur aufwies, dunkle Bereiche aufwies.
 
-![Abbildung von 2 5-pointiert beginnt mit farbiger Farbverlaufsfüllung. der erste verfügt über dunkle Bereiche, die zweite nicht](images/gammagradient2.png)
+![Abbildung von zwei Fünf-Point-Starts mit farbiger Farbverlaufsfüllung; Die erste hat dunkle Bereiche, die zweite nicht.](images/gammagradient2.png)
 
  
 

@@ -1,25 +1,25 @@
 ---
-description: Leistungs Objekte können einen oder mehrere Zähler definieren.
+description: Leistungsobjekte können einen oder mehrere Leistungsindikatoren definieren.
 ms.assetid: a3a598b2-5623-4472-a814-620c6a003a7e
-title: Abrufen von Counter-Daten
+title: Abrufen von Indikatordaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f932408471b23dd413a3b8cece63d533b1ba5426
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19109aac1a4b661e08be7f70418d19355649a0b4fb04e4a9d39fac610068cea3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962300"
 ---
-# <a name="retrieving-counter-data"></a>Abrufen von Counter-Daten
+# <a name="retrieving-counter-data"></a>Abrufen von Indikatordaten
 
-Leistungs Objekte können einen oder mehrere Zähler definieren. Die Indikator Daten für die Leistungsindikatoren befinden sich im Leistungsindikator [**\_ \_ Block**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_block) -Speicherblock. Der Speicherort des Indikator Blocks innerhalb des Objekt Blocks hängt davon ab, ob das Objekt Zähler für einzelne Instanzen oder für mehrere Instanzen enthält. Weitere Informationen finden Sie unter [Leistungsdaten Format](performance-data-format.md).
+Leistungsobjekte können einen oder mehrere Leistungsindikatoren definieren. Die Indikatordaten für die Leistungsindikatoren befinden sich im [**PERF \_ COUNTER BLOCK-Speicherblock. \_**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_block) Die Position des Indikatorblocks innerhalb des Objektblocks hängt davon ab, ob das Objekt Leistungsindikatoren einzelner Instanzen oder mehrere Instanzzähler enthält. Weitere Informationen finden Sie unter [Format der Leistungsdaten.](performance-data-format.md)
 
-Sie verwenden die **counteroffset** -und **countersize** -Member der [**perf-Indikator \_ \_ Definition**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_definition) , um auf die Daten des Indikators innerhalb des Indikator Blocks zuzugreifen. Derzeit sind die Leistungsdaten auf die Datentypen **DWORD** und **ULONGLONG** beschränkt (Dies sind die einzigen Typen, die vom Leistungs Tool unterstützt werden).
+Sie verwenden die **CounterOffset-** und **CounterSize-Member** der [**PERF \_ COUNTER \_ DEFINITION,**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_definition) um auf die Daten des Indikators innerhalb des Indikatorblocks zu zugreifen. Leistungsindikatordaten sind derzeit auf **DWORD-** und **ULONGLONG-Datentypen** beschränkt (dies sind die einzigen Typen, die vom Leistungstool unterstützt werden).
 
-Der **CounterType** -Member der Leistungsindikator [**\_ \_ Definition**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_definition) gibt Aufschluss darüber, welche weiteren Informationen Sie aus dem Leistungs Objekt benötigen, um die Indikator Daten zu verwenden. Für einige Leistungsindikatoren können Sie die Indikator Daten direkt verwenden. für andere können Sie jedoch Zeit Basisinformationen oder Daten von einem anderen Leistungsindikator benötigen, um einen anzeigbaren Wert zu berechnen.
+Der **CounterType-Member** von [**PERF \_ COUNTER \_ DEFINITION**](/windows/desktop/api/Winperf/ns-winperf-perf_counter_definition) teilt Ihnen mit, welche anderen Informationen Sie vom Leistungsobjekt benötigen, um die Indikatordaten zu verwenden. Bei einigen Leistungsindikatoren können Sie die Indikatordaten direkt verwenden, für andere benötigen Sie jedoch möglicherweise Zeitbasisinformationen oder Daten aus einem anderen Indikator, um einen anzeigebaren Wert zu berechnen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie den Counter-Typ verwenden können, um die Informationen zu bestimmen, die Sie aus den Leistungsdaten für einen Leistungswert abrufen müssen, um einen anzeigbaren Leistungs Zählers zu berechnen. Ein Beispiel für das Berechnen eines anzeigbaren Werts auf der Grundlage des-Leistungs Zählers finden Sie unter Berechnen von Leistungs [Werten](calculating-counter-values.md).
+Im folgenden Beispiel wird gezeigt, wie sie den Indikatortyp verwenden, um die Informationen zu bestimmen, die Sie aus den Leistungsdaten für einen Leistungsindikator abrufen müssen, um einen darstellbaren Indikatorwert zu berechnen. Ein Beispiel, das einen anzeigebaren Wert basierend auf dem Indikatortyp berechnet, finden Sie unter [Berechnen von Indikatorwerten.](calculating-counter-values.md)
 
 
 ```C++

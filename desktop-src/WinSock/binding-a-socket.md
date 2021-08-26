@@ -4,22 +4,22 @@ ms.assetid: d08fb1a5-af17-4116-8757-ba0a513fb323
 title: Binden eines Sockets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc71ad25837a070074fefa2e3693c5546839ec17
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cda9e745395209228584ea5535864cca57e30494b2e30bfff02fe2abc527ed5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996919"
 ---
 # <a name="binding-a-socket"></a>Binden eines Sockets
 
-Damit ein Server Clientverbindungen akzeptiert, muss er an eine Netzwerkadresse im System gebunden werden. Der folgende Code veranschaulicht, wie ein bereits erstelltes Socket an eine IP-Adresse und einen Port gebunden wird. Client Anwendungen verwenden die IP-Adresse und den Port, um eine Verbindung mit dem Host Netzwerk herzustellen.
+Damit ein Server Clientverbindungen akzeptiert, muss er an eine Netzwerkadresse im System gebunden werden. Der folgende Code veranschaulicht, wie sie einen Socket, der bereits erstellt wurde, an eine IP-Adresse und einen Port binden. Clientanwendungen verwenden die IP-Adresse und den Port, um eine Verbindung mit dem Hostnetzwerk herzustellen.
 
 ## <a name="to-bind-a-socket"></a>So binden Sie einen Socket
 
-Die [**sockaddr**](sockaddr-2.md) -Struktur enthält Informationen bezüglich der Adressfamilie, der IP-Adresse und der Portnummer.
+Die [**Sockaddr-Struktur**](sockaddr-2.md) enthält Informationen zur Adressfamilie, ip-Adresse und Portnummer.
 
-Aufrufen der [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion und übergeben der erstellten **Socket** -und [**sockaddr**](sockaddr-2.md) -Struktur, die von der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion als Parameter zurückgegeben wird. Suchen Sie nach allgemeinen Fehlern.
+Rufen Sie die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) auf, und übergeben Sie den erstellten **Socket** und die [**sockaddr-Struktur,**](sockaddr-2.md) die von der [**getaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) zurückgegeben werden, als Parameter. Überprüfen Sie, ob allgemeine Fehler vorliegen.
 
 
 ```C++
@@ -36,7 +36,7 @@ Aufrufen der [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion 
 
 
 
-Nachdem die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion aufgerufen wurde, werden die von der [**getaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) -Funktion zurückgegebenen Adressinformationen nicht mehr benötigt. Die [**freeaddrinfo**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfo) -Funktion wird aufgerufen, um den von der **getaddrinfo** -Funktion zugeordneten Arbeitsspeicher für diese Adressinformationen freizugeben.
+Nachdem die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) aufgerufen wurde, werden die von der [**getaddrinfo-Funktion zurückgegebenen**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-getaddrinfo) Adressinformationen nicht mehr benötigt. Die [**freeaddrinfo-Funktion**](/windows/desktop/api/Ws2tcpip/nf-ws2tcpip-freeaddrinfo) wird aufgerufen, um den von der **getaddrinfo-Funktion belegten** Arbeitsspeicher für diese Adressinformationen freizugeben.
 
 
 ```C++
@@ -46,16 +46,16 @@ Nachdem die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion a
 
 
 
-Nächster Schritt: [lauschen an einem Socket](listening-on-a-socket.md)
+Nächster Schritt: [Lauschen an einem Socket](listening-on-a-socket.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einstieg in Winsock](getting-started-with-winsock.md)
+[Erste Schritte mit Winsock](getting-started-with-winsock.md)
 </dt> <dt>
 
-[Winsock-Server Anwendung](winsock-server-application.md)
+[Winsock-Serveranwendung](winsock-server-application.md)
 </dt> <dt>
 
 [Erstellen eines Sockets für den Server](creating-a-socket-for-the-server.md)

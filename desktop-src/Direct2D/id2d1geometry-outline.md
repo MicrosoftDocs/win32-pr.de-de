@@ -1,9 +1,9 @@
 ---
-title: ID2D1Geometry Gliederungs Methoden
-description: Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein ID2D1SimplifiedGeometrySink-.
+title: ID2D1Geometry Outline-Methoden
+description: Berechnet die Kontur der Geometrie und schreibt das Ergebnis in id2D1SimplifiedGeometrySink.
 ms.assetid: ec92db79-a1aa-4661-9e75-45a1763af370
 keywords:
-- Gliederungs Methoden Direct2D
+- Konturmethoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -13,43 +13,43 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
-ms.openlocfilehash: 40d4ff1122d4a00e11ea35914f001b6dc9e06e4a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3c10a777d33e0a8c9a9fa033ca2615ce2d45b2badd292757e90f88074e131549
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917910"
 ---
-# <a name="id2d1geometryoutline-methods"></a>ID2D1Geometry:: Outline-Methoden
+# <a name="id2d1geometryoutline-methods"></a>ID2D1Geometry::Outline-Methoden
 
-Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)-.
+Berechnet die Kontur der Geometrie und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                                                                          | BESCHREIBUNG                                                                                                                                      |
+| Methode                                                                                                                                                          | Beschreibung                                                                                                                                      |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Umriss (D2D1 \_ Matrix \_ 3x2 \_ F&, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))              | Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)-. <br/> |
-| [**Umriss (D2D1 \_ Matrix \_ 3x2 \_ F \* , ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))             | Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)-.<br/>  |
-| [**Umriss (D2D1 \_ Matrix \_ 3x2 \_ F&, float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__float_id2d1simplifiedgeometrysink))  | Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)-.<br/>  |
-| [**Umriss (D2D1 \_ Matrix \_ 3x2 \_ F \* , float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Berechnet den Umriss der Geometrie und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)-.<br/>  |
+| [**Outline(D2D1 \_ MATRIX \_ 3X2 \_ F&,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))              | Berechnet die Kontur der Geometrie und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink). <br/> |
+| [**Outline(D2D1 \_ MATRIX \_ 3X2 \_ F \* ,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))             | Berechnet die Kontur der Geometrie und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/>  |
+| [**Outline(D2D1 \_ MATRIX \_ 3X2 \_ F&,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__float_id2d1simplifiedgeometrysink))  | Berechnet die Kontur der Geometrie und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/>  |
+| [**Outline(D2D1 \_ MATRIX \_ 3X2 \_ F \* ,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Berechnet die Kontur der Geometrie und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/>  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Gliederungs [**Methode ermöglicht dem**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink)) Aufrufer das Entwickeln einer Geometrie mit einer äquivalenten Füllung für die Eingabe Geometrie mit den folgenden zusätzlichen Eigenschaften:
+Mit [**der Outline-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink)) kann der Aufrufer eine Geometrie mit einer entsprechenden Füllung der Eingabegeometrie mit den folgenden zusätzlichen Eigenschaften erzeugen:
 
--   Die Ausgabe Geometrie enthält keine Querschnitte. Das heißt, Segmente können sich berühren, aber nie überschreiten.
--   Die äußersten Zahlen in der Ausgabe Geometrie werden gegen den Uhrzeigersinn ausgerichtet.
--   Die Ausgabe Geometrie ist invariant im Füllmodus. Das heißt, die Füllung der Geometrie hängt nicht von der Auswahl des Füll Modus ab. Weitere Informationen zum Füll Modus finden Sie unter [**D2D1 \_ Fill \_ Mode**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_fill_mode).
+-   Die Ausgabegeometrie enthält keine Transverse-Schnittmengen. Das heißt, Segmente können sich berühren, aber nie kreuzen.
+-   Die äußersten Abbildungen in der Ausgabegeometrie sind alle gegen den Uhrzeigersinn ausgerichtet.
+-   Die Ausgabegeometrie ist invarianter Füllmodus. Das heißt, die Füllung der Geometrie hängt nicht von der Auswahl des Füllmodus ab. Weitere Informationen zum Füllmodus finden Sie unter [**D2D1 \_ FILL \_ MODE**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_fill_mode).
 
-Außerdem kann die Gliederungs [**Methode nützlich**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink)) sein, um redundante Teile der genannten Geometrien zu entfernen, um komplexe Geometrien zu vereinfachen. Sie kann auch in Kombination mit [**ID2D1GeometryGroup**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrygroup) nützlich sein, um gleichzeitig Unions zwischen mehreren Geometrien zu erstellen.
+Darüber hinaus kann die [**Outline-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-outline(constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink)) nützlich sein, um redundante Teile der genannten Geometrien zu entfernen, um komplexe Geometrien zu vereinfachen. Es kann auch in Kombination mit [**ID2D1GeometryGroup**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrygroup) nützlich sein, unions zwischen mehreren Geometrien gleichzeitig zu erstellen.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Code zeigt, **wie Sie mit** Gliederung eine äquivalente Geometrie ohne selbst Austausch Vorgänge erstellen. Sie verwendet die standardmäßige Vereinfachungs Toleranz und sollte daher nicht mit sehr kleinen Geometrien verwendet werden.
+Der folgende Code zeigt, wie Sie **mithilfe** von Outline eine äquivalente Geometrie ohne Selbstschnitte erstellen. Sie verwendet die standardmäßige Vereinfachungstoleranz und sollte daher nicht mit sehr kleinen Geometrien verwendet werden.
 
 
 ```C++
@@ -103,12 +103,12 @@ HRESULT D2DOutline(
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

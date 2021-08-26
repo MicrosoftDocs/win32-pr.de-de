@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ runningos-Klasse stellt das aktuell ausgeführte Betriebssystem dar. Höchstens ein Betriebssystem kann zu einem beliebigen Zeitpunkt auf einem Computersystem ausgeführt werden. das Computersystem ist möglicherweise nicht gestartet, oder sein Betriebssystem ist unbekannt.
+description: Die CIM \_ RunningOS-Klasse stellt das derzeit ausgeführte Betriebssystem dar. Mindestens ein Betriebssystem kann jederzeit auf einem Computersystem ausgeführt werden. Das Computersystem ist möglicherweise derzeit nicht gestartet, oder das Betriebssystem ist unbekannt.
 ms.assetid: 93e3d425-d751-4252-aa81-7d6774c8f8c5
 ms.tgt_platform: multiple
 title: CIM_RunningOS-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1ff86af88342a1b8f0147ecd9721765794faf39e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6d69db4bbf0d5edcaed6ed6fbcaef724b6ef72d606a89c40c5a309713680606f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920330"
 ---
-# <a name="cim_runningos-class"></a>CIM \_ runningos-Klasse
+# <a name="cim_runningos-class"></a>CIM \_ RunningOS-Klasse
 
-Die **CIM \_ runningos** -Klasse stellt das aktuell ausgeführte Betriebssystem dar. Höchstens ein Betriebssystem kann zu einem beliebigen Zeitpunkt auf einem Computersystem ausgeführt werden. das Computersystem ist möglicherweise nicht gestartet, oder sein Betriebssystem ist unbekannt.
+Die **CIM \_ RunningOS-Klasse** stellt das derzeit ausgeführte Betriebssystem dar. Mindestens ein Betriebssystem kann jederzeit auf einem Computersystem ausgeführt werden. Das Computersystem ist möglicherweise derzeit nicht gestartet, oder das Betriebssystem ist unbekannt.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,17 +47,17 @@ class CIM_RunningOS : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ runningos** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ RunningOS-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ runningos** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ RunningOS-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ OperatingSystem**
@@ -66,36 +66,36 @@ Datentyp: **CIM \_ OperatingSystem**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
+Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM- \_ OperatingSystem**](cim-operatingsystem.md) , das das zurzeit auf dem Computersystem laufende Betriebssystem beschreibt.
+Ein [**\_ CIM-Betriebssystem,**](cim-operatingsystem.md) das das derzeit auf dem Computersystem ausgeführte Betriebssystem beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
+Qualifizierer: [**Max(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent")
 </dt> </dl>
 
-Ein [**CIM- \_ Computersystem**](cim-computersystem.md) , das das Computersystem beschreibt.
+Ein [**\_ CIM-ComputerSystem,**](cim-computersystem.md) das das Computersystem beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ runningos** -Klasse wird von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **CIM \_ RunningOS-Klasse** wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](cim-dependency.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,8 +105,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -115,7 +115,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

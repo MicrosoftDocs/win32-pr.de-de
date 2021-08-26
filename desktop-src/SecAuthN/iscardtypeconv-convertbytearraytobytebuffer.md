@@ -1,7 +1,7 @@
 ---
-description: Konvertiert ein typisches C/C++-Bytearray in einen universellen Puffer von Bytes (IStream-Objekt).
+description: Konvertiert ein typisches C/C++-Bytearray in einen universellen Bytepuffer (IStream-Objekt).
 ms.assetid: 512c561a-63f1-463e-9bae-9bec1ebdbe9b
-title: 'Iscardtypekonv:: convertbytearraydebytebuffer-Methode (scarddat. h)'
+title: ISCardTypeConv::ConvertByteArrayToByteBuffer-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 406e7aecb7e86802ad67c07669ca199b158ad954
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5616dc56ac893d6298e12014f3ee31d38bf1c55fb5367f354bf97da704ade0c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867839"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013810"
 ---
-# <a name="iscardtypeconvconvertbytearraytobytebuffer-method"></a>Iscardtypekonv:: convertbytearraydebytebuffer-Methode
+# <a name="iscardtypeconvconvertbytearraytobytebuffer-method"></a>ISCardTypeConv::ConvertByteArrayToByteBuffer-Methode
 
-\[Die **convertbytearraytobytebuffer** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ConvertByteArrayToByteBuffer-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **convertbytearrayesbytebuffer** -Methode konvertiert ein typisches C/C++-Bytearray in einen universellen Puffer von Bytes (**IStream** -Objekt).
+Die **ConvertByteArrayToByteBuffer-Methode** konvertiert ein typisches C/C++-Bytearray in einen universellen Bytepuffer **(IStream-Objekt).**
 
-Der erstellte Byte Puffer ist ein Datenstrom, der über einem Speicherblock zugeordnet ist. Verwenden Sie die von der **IStream** -Schnittstelle bereitgestellten Methoden, um auf den Puffer zuzugreifen oder ihn zu verwalten. Ein eindeutiges Feature zu dieser Array Implementierung besteht darin, dass beim aufruft der **IStream:: Release** -Methode der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
+Der erstellte Bytepuffer ist ein Stream, der einem Speicherblock zugeordnet ist. Um auf den Puffer zu zugreifen oder diesen zu verwalten, verwenden Sie die methoden, die von der **IStream-Schnittstelle bereitgestellt** werden. Ein einzigartiges Feature dieser Arrayimplementierung ist, dass beim Aufrufen der **IStream::Release-Methode** der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,47 +45,47 @@ HRESULT ConvertByteArrayToByteBuffer(
 
 <dl> <dt>
 
-*pbyarray* \[ in\]
+*pbyArray* \[ In\]
 </dt> <dd>
 
-Zeiger auf das Bytearray, das konvertiert werden soll.
+Zeiger auf das zu konvertierte Bytearray.
 
 </dd> <dt>
 
-*dwarraysize* \[ in\]
+*dwArraySize* \[ In\]
 </dt> <dd>
 
-Größe des Byte Arrays, das konvertiert werden soll.
+Größe des zu konvertierten Bytearrays.
 
 </dd> <dt>
 
-*ppbybuffer* \[ vorgenommen\]
+*ppbyBuffer* \[ out\]
 </dt> <dd>
 
-Zeiger auf das **IStream** -Objekt, das zurückgegeben werden soll.
+Zeiger auf das **IStream-Objekt,** das zurückgegeben werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Der Arbeitsspeicher wurde erfolgreich zugewiesen.<br/>                                                        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher erfolgreich zugeordnet.<br/>                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Fehler mit einem oder mehr parametern vor, die an die Funktion übergeben werden.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein Parameter vom Zeigertyp war falsch.<br/>                                            |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zugewiesene Arbeitsspeicher ist beweglicher. Verwenden Sie die **IStream:: Release** -Methode, um den Arbeitsspeicher freizugeben.
+Der zugeordnete Arbeitsspeicher ist verschiebbar. Verwenden Sie die **IStream::Release-Methode,** um den Arbeitsspeicher frei zu geben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,14 +93,14 @@ Der zugewiesene Arbeitsspeicher ist beweglicher. Verwenden Sie die **IStream:: R
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardtypec ist als 53b6aa63-3F 56-11D0-916b-00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardTypeConv ist als 53B6AA63-3F56-11D0-916B-00AA00C18068 definiert.<br/>       |
 
 
 
@@ -108,7 +108,7 @@ Der zugewiesene Arbeitsspeicher ist beweglicher. Verwenden Sie die **IStream:: R
 
 <dl> <dt>
 
-[**Iscardtypeconfiguration**](iscardtypeconv.md)
+[**ISCardTypeConv**](iscardtypeconv.md)
 </dt> <dt>
 
 [Smartcard-Rückgabewerte](authentication-return-values.md)

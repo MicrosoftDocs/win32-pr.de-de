@@ -1,9 +1,9 @@
 ---
-title: Level (renderinginfotype)-Element
-description: Die gerenderte Meldungs Zeichenfolge der im Ereignis angegebenen Ebene.
+title: Level-Element (RenderingInfoType)
+description: Die gerenderte Meldungszeichenfolge der im -Ereignis angegebenen Ebene.
 ms.assetid: 68584df8-989d-4f53-9f5c-11a4e1e5524b
 keywords:
-- Ereignisprotokoll für Ebene-Element
+- Level-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 42d10818b3edabc85492029c2a82819777f5cfa1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 254a51779c14e481c370030a565ce22a858106d6616e877b537a67262aacd9f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904670"
 ---
-# <a name="level-renderinginfotype-element"></a>Level (renderinginfotype)-Element
+# <a name="level-renderinginfotype-element"></a>Level-Element (RenderingInfoType)
 
-Die gerenderte Meldungs Zeichenfolge der im Ereignis angegebenen Ebene.
+Die gerenderte Meldungszeichenfolge der im -Ereignis angegebenen Ebene.
 
 ``` syntax
 <xs:element name="Level"
@@ -30,7 +30,7 @@ Die gerenderte Meldungs Zeichenfolge der im Ereignis angegebenen Ebene.
  />
 ```
 
-Das **Level** -Element wird durch den komplexen [**renderinginfotype**](eventschema-renderingtype-complextype.md) -Typ definiert.
+Das **Level-Element** wird durch den komplexen [**RenderingInfoType-Typ**](eventschema-renderingtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Level** -Element wird durch den komplexen [**renderinginfotype**](eventsch
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Level** -Element wird durch den komplexen [**renderinginfotype**](eventsch
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Renderinginfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
+[**RenderingInfo (EventType)**](eventschema-renderinginfo-eventtype-element.md)
 </dt> </dl>
 
  

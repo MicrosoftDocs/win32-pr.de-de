@@ -3,7 +3,7 @@ title: SB_SETUNICODEFORMAT (Commctrl.h)
 description: 'SB_SETUNICODEFORMAT Meldung: Legt das Unicode-Zeichenformatflag für das Steuerelement fest. Mit dieser Meldung können Sie den vom Steuerelement zur Laufzeit verwendeten Zeichensatz ändern, anstatt das Steuerelement neu erstellen zu müssen.'
 ms.assetid: 022e7138-c12f-4c59-82da-2ac6d276fa77
 keywords:
-- SB_SETUNICODEFORMAT Meldung Windows-Steuerelemente
+- SB_SETUNICODEFORMAT meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 278a5645928a51732b87c12447bb2524bfadfbcd
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 0a96177950dd97ee69de499d121b7e8e68b844f61e6c124cfd0911dbe06dc21d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919500"
 ---
 # <a name="sb_setunicodeformat-message"></a>SB \_ SETUNICODEFORMAT-Nachricht
 
@@ -43,7 +43,7 @@ Bestimmt den Zeichensatz, der vom -Steuerelement verwendet wird. Wenn dieser Wer
 
 Gibt das vorherige Unicode-Formatflag für das Steuerelement zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETUNICODEFORMAT.**](ccm-setunicodeformat.md)
 
@@ -51,15 +51,15 @@ Eine Erläuterung dieser Meldung finden Sie in den Anmerkungen zu [**CCM \_ SETU
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

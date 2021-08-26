@@ -1,9 +1,9 @@
 ---
-title: HexInt32Type Simple Type (Ereignis Schema)
-description: Definiert einen 4-Byte-hexadezimal-Typ. | HexInt32Type Simple Type (Ereignis Schema)
+title: HexInt32Type Simple Type (Ereignisschema)
+description: Definiert einen Hexadezimaltyp mit 4 Byte. | HexInt32Type Simple Type (Ereignisschema)
 ms.assetid: f4b5226d-2a5e-4756-b4c5-30cfbf13568e
 keywords:
-- HexInt32Type einfaches Ereignisprotokoll
+- HexInt32Type, einfacher Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5c9bd7a11d0e648cc451ec837f0f8711ca334d59
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 25c977bca3ecf7b883b87a535b40b44024ded2a54025bdcb1ac107254ce932fe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904750"
 ---
-# <a name="hexint32type-simple-type-event-schema"></a>HexInt32Type Simple Type (Ereignis Schema)
+# <a name="hexint32type-simple-type-event-schema"></a>HexInt32Type Simple Type (Ereignisschema)
 
-Definiert einen 4-Byte-hexadezimal-Typ.
+Definiert einen Hexadezimaltyp mit 4 Byte.
 
 ``` syntax
 <xs:simpleType name="HexInt32Type">
@@ -38,11 +38,11 @@ Definiert einen 4-Byte-hexadezimal-Typ.
 
 ## <a name="patterns"></a>Muster
 
-Der einfache **HexInt32Type** -Typ ist eine **Zeichenfolge** , die durch das folgende Muster eingeschränkt ist:
+Der einfache **HexInt32Type-Typ** ist eine **Zeichenfolge,** die durch das folgende Muster eingeschränkt ist:
 
 -   `0[xX][0-9A-Fa-f]{1,8}`
 
-    Der Wert kann zwischen 1 und acht hexadezimal Zeichen (z. b. 0xA oder 0xac7bd361) enthalten.
+    Der Wert kann ein bis acht Hexadezimalzeichen enthalten (z. B. 0xa oder 0xac7bd361).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der einfache **HexInt32Type** -Typ ist eine **Zeichenfolge** , die durch das fol
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

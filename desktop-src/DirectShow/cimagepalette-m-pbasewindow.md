@@ -1,7 +1,7 @@
 ---
-description: Die m \_ pbasewindow-Member-Variable ist ein Zeiger auf das cbasewindow-Objekt, das das Fenster verwaltet.
+description: Die \_ m pBaseWindow-Membervariable ist ein Zeiger auf das CBaseWindow-Objekt, das das Fenster verwaltet.
 ms.assetid: 972cc986-a01b-4f7f-801e-829a1653fed7
-title: 'Cimagepalette:: m_pBaseWindow Member (winutil. h)'
+title: CImagePalette::m_pBaseWindow-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d046fd38cbc75cfdeb1ed3bf3e9ac35ab4e4820a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1978ab29ded8b5875803f82c42660f9912458ccaeccdbea04a02c108327645c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916290"
 ---
-# <a name="cimagepalettem_pbasewindow-member"></a>Cimagepalette:: m \_ pbasewindow-Member
+# <a name="cimagepalettem_pbasewindow-member"></a>CImagePalette::m \_ pBaseWindow-Member
 
-Die `m_pBaseWindow` Member-Variable ist ein Zeiger auf das [**cbasewindow**](cbasewindow.md) -Objekt, das das Fenster verwaltet.
+Die `m_pBaseWindow` Membervariable ist ein Zeiger auf das [**CBaseWindow-Objekt,**](cbasewindow.md) das das Fenster verwaltet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CBaseWindow *m_pBaseWindow;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CBaseWindow *m_pBaseWindow;
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

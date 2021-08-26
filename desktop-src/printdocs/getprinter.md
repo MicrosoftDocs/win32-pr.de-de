@@ -1,7 +1,7 @@
 ---
-description: Die GetPrinter-Funktion Ruft Informationen zu einem angegebenen Drucker ab.
+description: Die GetPrinter-Funktion ruft Informationen zu einem angegebenen Drucker ab.
 ms.assetid: f162edbb-83ee-40c3-8710-9c867301d652
-title: GetPrinter-Funktion (winspool. h)
+title: GetPrinter-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,16 +19,16 @@ api_location:
 - Ext-MS-Win-printer-Winspool-l1-1-1.dll
 - Ext-MS-Win-Printer-WinSpool-l1-1-2.dll
 - Ext-MS-Win-Printer-WinSpool-L1-1-3.dll
-ms.openlocfilehash: e99b3574762b84b830845da8149b0406664b6da7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6823795ea715ac72dfdb7150dac08fd7feb34445fcfab94412cb2dd0c6bd7a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119949089"
 ---
 # <a name="getprinter-function"></a>GetPrinter-Funktion
 
-Die **GetPrinter** -Funktion Ruft Informationen zu einem angegebenen Drucker ab.
+Die **GetPrinter-Funktion** ruft Informationen zu einem angegebenen Drucker ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,42 +49,42 @@ BOOL GetPrinter(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, für den die Funktion Informationen abruft. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für den Drucker, für den die Funktion Informationen abruft. Verwenden Sie die [**OpenPrinter-**](openprinter.md) oder [**AddPrinter-Funktion,**](addprinter.md) um ein Druckerhandle abzurufen.
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*Ebene* \[ In\]
 </dt> <dd>
 
-Die Ebene oder der Typ der Struktur, die die Funktion in dem Puffer speichert, auf den *pprinter* zeigt.
+Die Ebene oder der Typ der Struktur, die die Funktion in dem Puffer speichert, auf den *pPrinter* zeigt.
 
 Dieser Wert kann 1, 2, 3, 4, 5, 6, 7, 8 oder 9 sein.
 
 </dd> <dt>
 
-*pprinter* \[ vorgenommen\]
+*pPrinter* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine-Struktur mit Informationen über den angegebenen Drucker empfängt. Der Puffer muss groß genug sein, um die Struktur und alle Zeichen folgen oder andere Daten zu empfangen, auf die die Strukturmember zeigen. Wenn der Puffer zu klein ist, gibt der Parameter *pcbrequired* die erforderliche Puffergröße zurück.
+Ein Zeiger auf einen Puffer, der eine -Struktur empfängt, die Informationen zum angegebenen Drucker enthält. Der Puffer muss groß genug sein, um die -Struktur und alle Zeichenfolgen oder andere Daten zu empfangen, auf die die Strukturmember zeigen. Wenn der Puffer zu klein ist, gibt der *Parameter "pwNeeded"* die erforderliche Puffergröße zurück.
 
-Der Typ der Struktur wird durch den Wert der *Ebene* bestimmt.
+Der Typ der Struktur wird durch den Wert von *Ebene* bestimmt.
 
 
 
 | Ebene                                                                                                | Struktur                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Eine Struktur von [**Drucker Informationen \_ \_ 1**](printer-info-1.md) , die allgemeine Drucker Informationen enthält.<br/>                                                                                                        |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Eine " [**Printer \_ Info \_ 2**](printer-info-2.md) "-Struktur, die ausführliche Informationen über den Drucker enthält.<br/>                                                                                             |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | Eine [**Drucker \_ Info \_ 3**](printer-info-3.md) -Struktur, die die Sicherheitsinformationen des Druckers enthält.<br/>                                                                                                 |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Eine [**Drucker \_ Info \_ 4**](printer-info-4.md) -Struktur, die die minimalen Drucker Informationen enthält, einschließlich des Drucker namens, des Server namens und der Angabe, ob der Drucker Remote oder lokal ist.<br/> |
-| <span id="5"></span><dl> <dt>**5**</dt> </dl> | Eine [**Drucker \_ Info \_ 5**](printer-info-5.md) -Struktur, die Drucker Informationen enthält, wie z. b. Drucker Attribute und Timeout Einstellungen.<br/>                                                               |
-| <span id="6"></span><dl> <dt>**6**</dt> </dl> | Eine [**Drucker \_ Info \_ 6**](printer-info-6.md) -Struktur, die den Statuswert eines Druckers angibt.<br/>                                                                                                      |
-| <span id="7"></span><dl> <dt>**7**</dt> </dl> | Eine [**Drucker \_ Info \_ 7**](printer-info-7.md) -Struktur, die angibt, ob der Drucker im Verzeichnisdienst veröffentlicht wird.<br/>                                                                      |
-| <span id="8"></span><dl> <dt>**8**</dt> </dl> | Eine [**Drucker \_ Info \_ 8**](printer-info-8.md) -Struktur, die die globalen Standarddrucker Einstellungen angibt.<br/>                                                                                                |
-| <span id="9"></span><dl> <dt>**9**</dt> </dl> | Eine [**Drucker \_ Info \_ 9**](printer-info-9.md) -Struktur, die die Standarddrucker Einstellungen pro Benutzer angibt.<br/>                                                                                              |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 1-Struktur,**](printer-info-1.md) die allgemeine Druckerinformationen enthält.<br/>                                                                                                        |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 2-Struktur,**](printer-info-2.md) die ausführliche Informationen zum Drucker enthält.<br/>                                                                                             |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 3-Struktur,**](printer-info-3.md) die die Sicherheitsinformationen des Druckers enthält.<br/>                                                                                                 |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 4-Struktur**](printer-info-4.md) mit minimalen Druckerinformationen, einschließlich des Druckernamens, des Servernamens und der Angabe, ob der Drucker remote oder lokal ist.<br/> |
+| <span id="5"></span><dl> <dt>**5**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 5-Struktur,**](printer-info-5.md) die Druckerinformationen wie Druckerattribute und Time out-Einstellungen enthält.<br/>                                                               |
+| <span id="6"></span><dl> <dt>**6**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 6-Struktur,**](printer-info-6.md) die den Statuswert eines Druckers angibt.<br/>                                                                                                      |
+| <span id="7"></span><dl> <dt>**7**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 7-Struktur,**](printer-info-7.md) die angibt, ob der Drucker im Verzeichnisdienst veröffentlicht wird.<br/>                                                                      |
+| <span id="8"></span><dl> <dt>**8**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 8-Struktur,**](printer-info-8.md) die die globalen Standarddruckereinstellungen angibt.<br/>                                                                                                |
+| <span id="9"></span><dl> <dt>**9**</dt> </dl> | Eine [**PRINTER \_ INFO \_ 9-Struktur,**](printer-info-9.md) die die Standarddruckereinstellungen pro Benutzer angibt.<br/>                                                                                              |
 
 
 
@@ -92,17 +92,17 @@ Der Typ der Struktur wird durch den Wert der *Ebene* bestimmt.
 
 </dd> <dt>
 
-*cbbuf* \[ in\]
+*cbBuf* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pprinter* zeigt.
+Die Größe des Puffers in Bytes, auf den *pPrinter* zeigt.
 
 </dd> <dt>
 
-*pcbbenötigte* \[ vorgenommen\]
+*"Needed"* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die von der Funktion auf die Größe (in Bytes) der Drucker Informationen festgelegt wird. Wenn *cbbuf* kleiner ist als dieser Wert, schlägt **GetPrinter** fehl, und der Wert stellt die erforderliche Puffergröße dar. Wenn *cbbuf* größer oder gleich diesem Wert ist, ist **GetPrinter** erfolgreich, und der Wert stellt die Anzahl von Bytes dar, die im Puffer gespeichert werden.
+Ein Zeiger auf eine Variable, die die Funktion auf die Größe der Druckerinformationen in Bytes festlegt. Wenn *cbBuf* kleiner als dieser Wert ist, schlägt **GetPrinter** fehl, und der Wert stellt die erforderliche Puffergröße dar. Wenn *cbBuf* gleich oder größer als dieser Wert ist, ist **GetPrinter** erfolgreich, und der Wert stellt die Anzahl der im Puffer gespeicherten Bytes dar.
 
 </dd> </dl>
 
@@ -112,43 +112,43 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-Der **pdevmode** -Member in den Strukturen [**Printer \_ Info \_ 2**](printer-info-2.md), [**Printer \_ Info \_ 8**](printer-info-8.md)und [**Printer \_ Info \_ 9**](printer-info-9.md) kann **null** sein. Wenn dies der Fall ist, kann der Drucker erst wieder verwendet werden, wenn der Treiber erfolgreich erneut installiert wurde.
+Der **pDevMode-Member** in den Strukturen [**PRINTER INFO \_ \_ 2,**](printer-info-2.md) [**PRINTER INFO \_ \_ 8**](printer-info-8.md)und [**PRINTER INFO \_ \_ 9**](printer-info-9.md) kann **NULL** sein. In diesem Fall kann der Drucker erst verwendet werden, wenn der Treiber erfolgreich neu installiert wurde.
 
-Für die [**Drucker \_ Info \_ 2**](printer-info-2.md) -und [**Printer \_ Info \_ 3**](printer-info-3.md) -Strukturen, die einen Zeiger auf eine Sicherheits Beschreibung enthalten, ruft die Funktion nur die Komponenten der Sicherheits Beschreibung ab, für die der Aufrufer über Leseberechtigung verfügt. Zum Abrufen bestimmter sicherheitsbeschreibungkomponenten müssen Sie die erforderlichen Zugriffsrechte angeben, wenn Sie die [**OpenPrinter**](openprinter.md) -Funktion aufrufen, um ein Handle für den Drucker abzurufen. In der folgenden Tabelle sind die zum Lesen der verschiedenen sicherheitsbeschreibungkomponenten erforderlichen Zugriffsrechte aufgeführt.
+Für die Strukturen [**PRINTER \_ INFO \_ 2**](printer-info-2.md) und [**PRINTER INFO \_ \_ 3,**](printer-info-3.md) die einen Zeiger auf einen Sicherheitsdeskriptor enthalten, ruft die Funktion nur die Komponenten des Sicherheitsdeskriptors ab, die der Aufrufer lesen darf. Um bestimmte Sicherheitsbeschreibungskomponenten abzurufen, müssen Sie die erforderlichen Zugriffsrechte angeben, wenn Sie die [**OpenPrinter-Funktion**](openprinter.md) aufrufen, um ein Handle für den Drucker abzurufen. In der folgenden Tabelle sind die Zugriffsrechte aufgeführt, die zum Lesen der verschiedenen Sicherheitsbeschreibungskomponenten erforderlich sind.
 
 
 
-| Zugriffsrecht                        | Sicherheitsbeschreibungerkomponente                                                                 |
+| Zugriffsrecht                        | Sicherheitsbeschreibungskomponente                                                                 |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Lese \_ Steuerelement<br/>            | Besitzer<br/> Primäre Gruppe<br/> Freigegebene Zugriffs Steuerungs Liste (DACL)<br/> |
-| Zugreifen auf die \_ System \_ Sicherheit<br/> | System Zugriffs Steuerungs Liste (SACL)<br/>                                                  |
+| \_READ-STEUERELEMENT<br/>            | Besitzer<br/> Primäre Gruppe<br/> Dacl (Discretionary Access Control List)<br/> |
+| ZUGREIFEN AUF \_ \_ SYSTEMSICHERHEIT<br/> | Systemzugriffssteuerungsliste (SACL)<br/>                                                  |
 
 
 
  
 
-Wenn Sie Ebene 7 angeben, gibt das **dwAction** -Mitglied von [**Printer \_ Info \_ 7**](printer-info-7.md) einen der folgenden Werte zurück, um anzugeben, ob der Drucker im Verzeichnisdienst veröffentlicht wird.
+Wenn Sie Ebene 7 angeben, gibt das **dwAction-Element** von [**PRINTER INFO \_ \_ 7**](printer-info-7.md) einen der folgenden Werte zurück, um anzugeben, ob der Drucker im Verzeichnisdienst veröffentlicht wird.
 
 
 
 | dwAction-Wert     | Bedeutung                                                                                                                                                                                                                                                  |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| dsprint- \_ Veröffentlichung   | Der Drucker wird veröffentlicht. Das **pszobjectguid** -Element enthält die GUID des Verzeichnisdienste-druckwarteschlangenobjekts, das dem Drucker zugeordnet ist.                                                                                                       |
-| dsprint- \_ Veröffentlichung aufheben | Der Drucker ist nicht veröffentlicht.                                                                                                                                                                                                                            |
-| dsprint \_ Ausstehend   | Gibt an, dass das System versucht, einen Veröffentlichungs-oder unveröffentlichungsvorgang abzuschließen. Wenn ein [**SetPrinter**](setprinter.md) -Rückruf einen Drucker nicht veröffentlichen oder nicht veröffentlichen kann, werden im Hintergrund weitere Versuche unternommen, den Vorgang abzuschließen. |
+| DSPRINT \_ PUBLISH   | Der Drucker wird veröffentlicht. Das **pszObjectGUID-Element** enthält die GUID des Druckwarteschlangenobjekts der Verzeichnisdienste, das dem Drucker zugeordnet ist.                                                                                                       |
+| DSPRINT \_ UNPUBLISH | Der Drucker wird nicht veröffentlicht.                                                                                                                                                                                                                            |
+| DSPRINT \_ AUSSTEHEND   | Gibt an, dass das System versucht, einen Veröffentlichungs- oder Nichtveröffentlichungsvorgang abzuschließen. Wenn ein [**SetPrinter-Aufruf**](setprinter.md) einen Drucker nicht veröffentlichen oder die Veröffentlichung aufheben kann, unternimmt das System weitere Versuche, den Vorgang im Hintergrund abzuschließen. |
 
 
 
  
 
-Ab Windows Vista werden die von **GetPrinter** zurückgegebenen Druckerdaten aus einem lokalen Cache abgerufen, wenn sich *hprinter* auf einen Drucker bezieht, der von einem Druckserver gehostet wird, und mindestens eine offene Verbindung zum Druckserver vorhanden ist. In allen anderen Konfigurationen werden die Druckerdaten vom Druckserver abgefragt.
+Ab Windows Vista werden die von **GetPrinter** zurückgegebenen Druckerdaten aus einem lokalen Cache abgerufen, wenn *hPrinter* auf einen Drucker verweist, der von einem Druckerserver gehostet wird und mindestens eine offene Verbindung mit dem Druckerserver besteht. In allen anderen Konfigurationen werden die Druckerdaten vom Druckerserver abgefragt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -158,10 +158,10 @@ Ab Windows Vista werden die von **GetPrinter** zurückgegebenen Druckerdaten aus
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Getprinterw** (Unicode) und **getprintera** (ANSI)<br/>                                           |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **GetPrinterW** (Unicode) und **GetPrinterA** (ANSI)<br/>                                           |
 
 
 
@@ -175,43 +175,43 @@ Ab Windows Vista werden die von **GetPrinter** zurückgegebenen Druckerdaten aus
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Abbruch Drucker**](abortprinter.md)
+[**AbortPrinter**](abortprinter.md)
 </dt> <dt>
 
 [**AddPrinter**](addprinter.md)
 </dt> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Deleteprinter**](deleteprinter.md)
+[**DeletePrinter**](deleteprinter.md)
 </dt> <dt>
 
-[**Enumdrucker**](enumprinters.md)
+[**EnumPrinters**](enumprinters.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 1**](printer-info-1.md)
+[**DRUCKERINFORMATIONEN \_ \_ 1**](printer-info-1.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 2**](printer-info-2.md)
+[**DRUCKERINFORMATIONEN \_ \_ 2**](printer-info-2.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 3**](printer-info-3.md)
+[**DRUCKERINFORMATIONEN \_ \_ 3**](printer-info-3.md)
 </dt> <dt>
 
-[**Drucker \_ Info \_ 4**](printer-info-4.md)
+[**DRUCKERINFORMATIONEN \_ \_ 4**](printer-info-4.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 5**](printer-info-5.md)
+[**DRUCKERINFORMATIONEN \_ \_ 5**](printer-info-5.md)
 </dt> <dt>
 
-[**Drucker \_ Info \_ 7**](printer-info-7.md)
+[**DRUCKERINFORMATIONEN \_ \_ 7**](printer-info-7.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 8**](printer-info-8.md)
+[**DRUCKERINFORMATIONEN \_ \_ 8**](printer-info-8.md)
 </dt> <dt>
 
-[**Drucker \_ Informationen \_ 9**](printer-info-9.md)
+[**DRUCKERINFORMATIONEN \_ \_ 9**](printer-info-9.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)

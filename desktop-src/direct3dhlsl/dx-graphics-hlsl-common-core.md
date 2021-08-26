@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 66c1f763c4771a8406acd2f3401445d1a29cde79
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 9c2d1851025cb051a21a997f5e3a4987d3b6309e148248b3ea55c6b9ca6ad31c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950480"
 ---
 # <a name="common-shader-core"></a>Common-Shader Core
 
-In Shader Model 4 implementieren alle Shaderstufen die gleiche Basisfunktionalität mit einem gemeinsamen Shaderkern. Darüber hinaus bietet jede der drei Shaderstufen (Scheitelpunkt, Geometrie und Pixel) funktionen, die für jede Stufe spezifisch sind, z. B. die Möglichkeit, neue Primitive aus der Geometrie-Shader-Stufe zu generieren oder ein bestimmtes Pixel in der Pixel-Shader-Stufe zu verwerfen. Das folgende Diagramm zeigt, wie Daten durch eine Shaderphase fließen, und die Beziehung zwischen dem gemeinsamen Shaderkern und Shaderspeicherressourcen.
+In ShaderModell 4 implementieren alle Shaderstufen die gleiche Basisfunktionalität mit einem gemeinsamen Shaderkern. Darüber hinaus bietet jede der drei Shaderstufen (Scheitelpunkt, Geometrie und Pixel) funktionen, die für jede Stufe spezifisch sind, z. B. die Möglichkeit, neue Primitive aus der Geometrie-Shaderstufe zu generieren oder ein bestimmtes Pixel in der Pixelschattenstufe zu verwerfen. Das folgende Diagramm zeigt, wie Daten durch eine Shaderphase fließen, und die Beziehung zwischen dem gemeinsamen Shaderkern und Shaderspeicherressourcen.
 
 ![Diagramm des Datenflusses in einer Shaderphase](images/d3d10-shader-unit.png)
 
@@ -27,7 +27,7 @@ In Shader Model 4 implementieren alle Shaderstufen die gleiche Basisfunktionalit
 -   **Shadercode:** Shader können aus dem Arbeitsspeicher lesen, Vektor-Gleitkomma- und ganzzahlige arithmetische Operationen oder Flusssteuerungsvorgänge ausführen. Es gibt keine Beschränkung für die Anzahl von Anweisungen, die in einem Shader implementiert werden können.
 -   **Sampler:** Sampler definieren, wie Texturen entnommen und gefiltert werden. Bis zu 16 Sampler können gleichzeitig an einen Shader gebunden werden.
 -   **Texturen:** Texturen können mit Samplern gefiltert oder direkt mit der systeminternen Load-Funktion pro Texel [gelesen](dx-graphics-hlsl-to-load.md) werden.
--   **Puffer:** Puffer werden nie gefiltert, können jedoch direkt mit der systeminternen Load-Funktion pro Element aus dem [Arbeitsspeicher](dx-graphics-hlsl-to-load.md) gelesen werden. Bis zu 128 Textur- und Pufferressourcen (kombiniert) können gleichzeitig an einen Shader gebunden werden.
+-   **Puffer:** Puffer werden nie gefiltert, können jedoch direkt mit der systeminternen Load-Funktion pro Element aus [dem](dx-graphics-hlsl-to-load.md) Arbeitsspeicher gelesen werden. Bis zu 128 Textur- und Pufferressourcen (kombiniert) können gleichzeitig an einen Shader gebunden werden.
 -   **Konstantenpuffer:** Konstante Puffer sind für Shaderkonstuntervariablen optimiert. Bis zu 16 konstante Puffer können gleichzeitig an eine Shaderphase gebunden werden. Sie sind für eine häufigere Aktualisierung der CPU konzipiert. daher gelten zusätzliche Größen-, Layout- und Zugriffseinschränkungen.
 
 
@@ -69,7 +69,7 @@ Der allgemeine Shaderkern unterstützt die folgenden bitweise Operatoren:
 | >>  | Rechtsverschiebung       |
 | &         | Logisches UND       |
 | \|        | Logisches ODER.        |
-| ^         | Logischer Xor       |
+| ^         | Logisches Xor       |
 | <<= | Left shift Equal  |
 | >>= | Rechtsverschiebung gleich |
 | &=        | Und gleich         |
@@ -84,7 +84,7 @@ Bitweise Operatoren werden so definiert, dass sie nur für **int-** und **uint-D
 
 ## <a name="binary-casts"></a>Binäre Casts
 
-Die Umwandlung zwischen einer ganzen Zahl und einem Gleitkommatyp konvertiert den numerischen Wert nach C-Abschneideregeln. Die Umwandlung eines Werts aus einem **float-Wert** in einen **int-Wert** und zurück in einen **float-Wert** ist eine verlustbewegte Konvertierung, die von der Genauigkeit des Zieldatentyps abhängig ist. Hier sind einige der Konvertierungsfunktionen: [**asfloat (DirectX HLSL),**](dx-graphics-hlsl-asfloat.md) [**asint (DirectX HLSL)**](dx-graphics-hlsl-asint.md), [**asuint (DirectX HLSL)**](dx-graphics-hlsl-asuint.md).
+Die Umwandlung zwischen einer ganzen Zahl und einem Gleitkommatyp konvertiert den numerischen Wert nach C-Abschneideregeln. Die Umwandlung eines Werts von **einem float-Wert** in einen **int-Wert** und zurück in einen **float-Wert** ist eine verlustbewegte Konvertierung, die von der Genauigkeit des Zieldatentyps abhängig ist. Hier sind einige der Konvertierungsfunktionen: [**asfloat (DirectX HLSL),**](dx-graphics-hlsl-asfloat.md) [**asint (DirectX HLSL)**](dx-graphics-hlsl-asint.md), [**asuint (DirectX HLSL)**](dx-graphics-hlsl-asuint.md).
 
 Binäre Casts können auch mit systeminternen HLSL-Funktionen ausgeführt werden. Diese bewirken, dass der Compiler die Bitdarstellung einer Zahl im Zieldatentyp neu interpretiert.
 

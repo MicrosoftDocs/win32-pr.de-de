@@ -1,9 +1,9 @@
 ---
-title: Mrmindexfileautoqualifiziererfunktion (mrmresourceingedexer. h)
-description: Indiziert eine Ressourcen Datei, die zu einer UWP-App gehört. Leitet eine Liste von Ressourcen Qualifizierern aus dem filePath-Parameter ab. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme.
+title: MrmIndexFileAutoQualifiers-Funktion (MrmResourceIndexer.h)
+description: Indiziert eine Ressourcendatei, die zu einer UWP-App gehört. Abgeleitet eine Liste von Ressourcenqualifizierern aus dem filePath-Parameter. Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung (Package Resource Indexing, PRI) und benutzerdefinierte Buildsysteme.
 ms.assetid: CEA4D845-987C-48D6-B80E-9F055363FFE0
 keywords:
-- Funktions Menüs und andere Ressourcen für die mrmindexfileautoqualifizierer
+- MrmIndexFileAutoQualifiers-Funktionsmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 65254a8715073060e9b4fc1578b68d54ae987958
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a10dbdb564f7e2d830d1edea59be6ca6f11b72d2650a937f96b6d305b6c7f61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886730"
 ---
-# <a name="mrmindexfileautoqualifiers-function"></a>Mrmindexfileautoqualifizierer-Funktion
+# <a name="mrmindexfileautoqualifiers-function"></a>MrmIndexFileAutoQualifiers-Funktion
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Indiziert eine Ressourcen Datei, die zu einer UWP-App gehört. Leitet eine Liste von Ressourcen Qualifizierern aus dem *FilePath* -Parameter ab. Weitere Informationen und szenariobasierte Exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter API für [Paket Ressourcen Indizierung (PRI) und benutzerdefinierte Buildsysteme](/windows/uwp/app-resources/pri-apis-custom-build-systems).
+Indiziert eine Ressourcendatei, die zu einer UWP-App gehört. Abgeleitet eine Liste von Ressourcenqualifizierern aus dem *filePath-Parameter.* Weitere Informationen und szenariobasierte exemplarische Vorgehensweisen zur Verwendung dieser APIs finden Sie unter APIs für die Paketressourcenindizierung und benutzerdefinierte [Buildsysteme.](/windows/uwp/app-resources/pri-apis-custom-build-systems)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ HRESULT HRESULT MrmIndexFileAutoQualifiers(
 
 <dl> <dt>
 
-*Indexer* \[ in\]
+*Indexer* \[ In\]
 </dt> <dd>
 
-Typ: **[ **mrmresourceindexerhandle**](mrmresourceindexerhandle.md)**
+Typ: **[ **MrmResourceIndexerHandle**](mrmresourceindexerhandle.md)**
 
-Ein Handle, das den ressourcenindexer identifiziert, der die Ressourcen Datei indiziert.
+Ein Handle, das den Ressourcenindexer identifiziert, der die Ressourcendatei indiziert.
 
 </dd> <dt>
 
-*FilePath* \[ in\]
+*filePath* \[ In\]
 </dt> <dd>
 
-Typ: **pcwstr**
+Typ: **PCWSTR**
 
-Ein relativer Pfad zu einer Datei, die eine Ressource enthält, die Sie indizieren möchten. Dieser Pfad ist relativ zum Projektstamm der UWP-APP, für die Sie pri-Dateien erstellen. Der Projektstamm ist der Wert von *projectroot* , den Sie an [**mrmkreateresourceingedexer**](mrmcreateresourceindexer.md)übergeben haben.
+Ein relativer Pfad zu einer Datei, die eine Ressource enthält, die Sie indizieren möchten. Dieser Pfad ist relativ zum Projektstamm der UWP-App, für die Sie PRI-Dateien generieren. Dieser Projektstamm ist der Wert von *projectRoot,* den Sie an [**MrmCreateResourceIndexer übergeben haben.**](mrmcreateresourceindexer.md)
 
 </dd> </dl>
 
@@ -65,13 +65,13 @@ Ein relativer Pfad zu einer Datei, die eine Ressource enthält, die Sie indizier
 
 Typ: **HRESULT**
 
-S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros Success () oder failed () (in WinError. h definiert), um den Erfolg oder Misserfolg zu ermitteln.
+S \_ OK, wenn die Funktion erfolgreich war, andernfalls ein anderer Wert. Verwenden Sie die Makros SUCCEEDED() oder FAILED() (definiert in winerror.h), um den Erfolg oder Fehler zu bestimmen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Dateinamen Segment von *FilePath* wird als Ressourcen Name verwendet. und Ressourcen Qualifizierer werden aus dem Pfad abgeleitet. Wenn Sie z. b. L "Images \\ de-de \\ Scale-100 \\background.png" an *FilePath* übergeben, fügt der ressourcenindexer eine Ressource mit dem Namen "background.png" mit den Ressourcen Qualifizierern "language-de-de" und "Scale-100" hinzu.
+Das Dateinamensegment von *filePath* wird als Ressourcenname verwendet. und Ressourcenqualifizierer werden von ihrem Pfad abgeleitet. Wenn Sie beispielsweise L"Images de-DE scale-100background.png" an filePath übergeben, fügt der Ressourcenindexer eine Ressource namens "background.png" mit den \\ \\ \\ Ressourcenqualifizierern "language-de-DE" und "scale-100" hinzu. 
 
-L "Files" wird als Name der Unterstruktur der Ressourcen Zuordnung für diese Ressource verwendet, wenn Sie später eine PRI-Datei von diesem ressourcenindexer generieren.
+L"Files" wird als Name der Ressourcenzuordnungsunterstruktur für diese Ressource verwendet, wenn Sie später eine PRI-Datei aus diesem Ressourcenindexer generieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,10 +79,10 @@ L "Files" wird als Name der Unterstruktur der Ressourcen Zuordnung für diese Re
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1803, \[ nur Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ -Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Mrmresourceingedexer. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mrmsupport. lib</dt> </dl>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1803 desktop apps only (Nur \[ Desktop-Apps der Version 1803)\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur \[ Serverdesktop-Apps\]<br/>                                                 |
+| Header<br/>                   | <dl> <dt>MrmResourceIndexer.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mrmsupport.lib</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Mrmsupport.dll</dt> </dl>       |
 
 

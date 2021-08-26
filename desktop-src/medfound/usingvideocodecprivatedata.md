@@ -1,25 +1,25 @@
 ---
-description: Verwenden von privaten Videocodec-Daten
+description: Verwenden privater Videocodec-Daten
 ms.assetid: 0cc24fe4-a5b6-4805-8c8e-3066d12ec4bd
-title: Verwenden von privaten Videocodec-Daten (Microsoft Media Foundation)
+title: Verwenden privater Videocodec-Daten (Microsoft Media Foundation)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83e86fc31a50d2c4e553b5947717ea930698d812
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7e417d4d83cc3ae3174e1bbf3310a6abb2900e2c5f3323192a8d17643e4066f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887090"
 ---
-# <a name="using-video-codec-private-data-microsoft-media-foundation"></a>Verwenden von privaten Videocodec-Daten (Microsoft Media Foundation)
+# <a name="using-video-codec-private-data-microsoft-media-foundation"></a>Verwenden privater Videocodec-Daten (Microsoft Media Foundation)
 
-Die von den Windows Media Video 9-Codecs erzeugte komprimierte Ausgabe kann nicht ordnungsgemäß dekomprimiert werden, ohne dass einige Daten vom Encoder bereitgestellt werden. Diese Daten, die als Codec private-Daten bezeichnet werden, müssen an den Ausgabe Medientyp angehängt werden. Sie können die privaten Codec-Daten abrufen, indem Sie die Methoden der [iwmcodecprivatedata](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-iwmcodecprivatedata) -Schnittstelle aufrufen. Übergeben Sie die anderweitig abgeschlossene [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur an [iwmcodecprivatedata:: setpartialoutputtype](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprivatedata-setpartialoutputtype). Nennen Sie anschließend [iwmcodecprivatedata:: getprivatedata](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprivatedata-getprivatedata) zweimal, einmal, um die Größe der Daten abzurufen, und dann erneut, um die Daten in einen Puffer dieser Größe zu kopieren. Erstellen Sie einen neuen Puffer zum Speichern der [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur mit den privaten Daten, und kopieren Sie die Struktur und die Daten in diesen Puffer. Legen Sie schließlich den **pbformat** -Member der **DMO \_ - \_ Medientyp** Struktur auf die Adresse des neu erstellten Puffers fest, und legen Sie den **cbformat** -Member auf die kombinierte Größe (in Bytes) des **videoinfoheaders** und der privaten Daten fest.
+Die komprimierte Ausgabe, die von den Windows Media Video 9-Codecs erzeugt wird, kann nicht ordnungsgemäß dekomprimiert werden, ohne dass daten vom Encoder bereitgestellt werden. Diese Daten, die als private Codecdaten bezeichnet werden, müssen an den Ausgabemedientyp angefügt werden. Sie können die privaten Codecdaten abrufen, indem Sie die Methoden der [IWMCodecPrivateData-Schnittstelle](/windows/desktop/api/wmcodecdsp/nn-wmcodecdsp-iwmcodecprivatedata) aufrufen. Übergeben Sie die andernfalls vollständige [**DMO \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) an [IWMCodecPrivateData::SetPartialOutputType.](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprivatedata-setpartialoutputtype) Rufen Sie dann [zweimal IWMCodecPrivateData::GetPrivateData](/windows/desktop/api/wmcodecdsp/nf-wmcodecdsp-iwmcodecprivatedata-getprivatedata) auf, einmal, um die Größe der Daten abzurufen, und dann erneut, um die Daten in einen Puffer dieser Größe zu kopieren. Erstellen Sie einen neuen Puffer, um die [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) mit angefügten privaten Daten zu speichern, und kopieren Sie die Struktur und die Daten in diesen Puffer. Legen Sie abschließend den **pbFormat-Member** der **DMO MEDIA \_ \_ TYPE-Struktur** auf die Adresse des neu erstellten Puffers und den **cbFormat-Member** auf die kombinierte Größe des **VIDEOINFOHEADER** und der privaten Daten in Bytes fest.
 
-Wenn Sie mediafoundierung verwenden, können Sie eine [**DMO- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur über eine [**imfmediatype**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) -Schnittstelle erstellen, indem Sie [**mfcreateammediatypeer-frommfmediatype**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateammediatypefrommfmediatype)aufrufen.
+Wenn Sie MediaFoundation verwenden, können Sie eine [**DMO \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) aus einer [**INTERFACESMediaType-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) erstellen, indem Sie [**MFCreateAMMediaTypeFromMFMediaType**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateammediatypefrommfmediatype)aufrufen.
 
-Sie müssen die privaten Codec-Daten verwenden, die nach dem ersten Festlegen der Eigenschaften für den Encoder abgerufen wurden. Wenn Eigenschaften geändert werden, müssen Sie neue private Daten erhalten. Wenn Sie nicht die privaten Daten verwenden, die abgerufen wurden, nachdem alle Eigenschaften für die Codierungs Sitzung festgelegt wurden, ist der Decoder möglicherweise nicht in der Lage, die Daten zu dekomprimieren.
+Sie müssen die privaten Codecdaten verwenden, die sie nach dem ersten Festlegen der Eigenschaften im Encoder erhalten haben. Wenn Eigenschaften geändert werden, müssen Sie neue private Daten abrufen. Wenn Sie die privaten Daten nicht verwenden, die abgerufen werden, nachdem alle Eigenschaften für die Codierungssitzung festgelegt wurden, kann der Decoder die Daten möglicherweise nicht dekomprimieren.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie die privaten Daten für einen Videotyp abrufen:
+Im folgenden Codebeispiel wird veranschaulicht, wie sie die privaten Daten für einen Videotyp abrufen:
 
 
 ```
@@ -99,7 +99,7 @@ Exit:
 
 
 > [!Note]  
-> Die privaten Codec-Daten, die von einem Video Encoder übermittelt werden, sind nicht garantiert identisch mit den privaten Daten, die von einer anderen Implementierung desselben Codecs für die gleiche Konfiguration bereitgestellt werden. Dieser Wert muss immer mithilfe der in diesem Thema beschriebenen Schritte generiert werden. Kopieren Sie die privaten Daten niemals aus einer anderen Datei.
+> Die privaten Codecdaten, die von einem Videoencoder bereitgestellt werden, sind nicht garantiert identisch mit den privaten Daten, die von einer anderen Implementierung desselben Codecs für dieselbe Konfiguration bereitgestellt werden. Sie müssen diesen Wert immer mithilfe der Schritte in diesem Thema generieren. Kopieren Sie die privaten Daten niemals aus einer anderen Datei.
 
  
 
@@ -107,7 +107,7 @@ Exit:
 
 <dl> <dt>
 
-[Konfigurieren der Video Codierung](configuringvideoencoding.md)
+[Konfigurieren der Videocodierung](configuringvideoencoding.md)
 </dt> <dt>
 
 [Arbeiten mit Videos](workingwithvideo.md)

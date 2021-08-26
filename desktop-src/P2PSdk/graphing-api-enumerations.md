@@ -1,29 +1,29 @@
 ---
-description: 'Die graphende-API verwendet die folgenden Konstanten:'
+description: 'Die Graphing-API verwendet die folgenden Konstanten:'
 ms.assetid: 84345690-37f2-4072-be3e-b0a610133408
-title: Grafisch ersetzende API-Konstanten
+title: Graphing-API-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8beaf8f0e31e36832bc1002f10b8266a46af1866
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad69ff09846a528a444fef7b646d1a57640f977a093bc65e6cff2f0106a298d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349229"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119887620"
 ---
-# <a name="graphing-api-constants"></a>Grafisch ersetzende API-Konstanten
+# <a name="graphing-api-constants"></a>Graphing-API-Konstanten
 
-Die graphende-API verwendet die folgenden Konstanten:
+Die Graphing-API verwendet die folgenden Konstanten:
 
 
 
 | Konstante                                                          | BESCHREIBUNG                                                       |
 |-------------------------------------------------------------------|-------------------------------------------------------------------|
-| [**Peer \_ Graph \_ - \_ Ereignistyp**](/windows/desktop/api/P2P/ne-p2p-peer_graph_event_type)         | Gibt Peer Ereignis Typen an, für die die Anwendung benachrichtigt werden soll. |
-| [**Peer \_ Graph \_ - \_ Eigenschaftenflags**](/windows/desktop/api/P2P/ne-p2p-peer_graph_property_flags) | Gibt die Eigenschaften eines Peer Diagramms an.                             |
-| [**Peer \_ Diagramm \_ Bereich**](/windows/desktop/api/P2P/ne-p2p-peer_graph_scope)                    | Gibt den Netzwerkbereich eines Peer Diagramms an.                      |
-| [**Peer \_ Graph \_ - \_ Statusflags**](/windows/desktop/api/P2P/ne-p2p-peer_graph_status_flags)     | Gibt den aktuellen Status eines Knotens innerhalb des Peer Diagramms an.     |
-| [**\_ \_ Änderungstyp für Peer Knoten \_**](/windows/desktop/api/P2P/ne-p2p-peer_node_change_type)         | Gibt die Typen der Peer Knoten Diagramm-Statusänderungen an.            |
+| [**PEER \_ \_ GRAPH-EREIGNISTYP \_**](/windows/desktop/api/P2P/ne-p2p-peer_graph_event_type)         | Gibt Peerereignistypen an, für die die Anwendung benachrichtigt werden soll. |
+| [**PEER \_ \_ GRAPH-EIGENSCHAFTENFLAGS \_**](/windows/desktop/api/P2P/ne-p2p-peer_graph_property_flags) | Gibt die Eigenschaften eines Peerdiagramms an.                             |
+| [**PEER \_ \_ GRAPH-BEREICH**](/windows/desktop/api/P2P/ne-p2p-peer_graph_scope)                    | Gibt den Netzwerkbereich eines Peerdiagramms an.                      |
+| [**PEER \_ \_ GRAPH-STATUSFLAGS \_**](/windows/desktop/api/P2P/ne-p2p-peer_graph_status_flags)     | Gibt den aktuellen Status eines Knotens im Peerdiagramm an.     |
+| [**\_ \_ PEERKNOTENÄNDERUNGSTYP \_**](/windows/desktop/api/P2P/ne-p2p-peer_node_change_type)         | Gibt die Typen von Peerknotendiagramm-Statusänderungen an.            |
 
 
 

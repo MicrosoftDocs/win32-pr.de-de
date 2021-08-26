@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn ein oder mehrere Striche aus der inkstrokes-Auflistung gelöscht werden.
+description: Tritt ein, wenn ein oder mehrere Striche aus der Sammlung InkStrokes gelöscht werden.
 ms.assetid: 58d78143-c733-45dc-ae5f-fe13136010db
-title: Inkstrokes. StrokesRemoved-Ereignis (msink AUT. h)
+title: InkStrokes.StrokesRemoved-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86448f9676e07a11effe683ecd883874791ff3b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 69a5c4f7d53f88c50efd77e537cfa311f08ab168abdb4a05392286fb6c0b6b4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934860"
 ---
-# <a name="inkstrokesstrokesremoved-event"></a>Inkstrokes. StrokesRemoved-Ereignis
+# <a name="inkstrokesstrokesremoved-event"></a>InkStrokes.StrokesRemoved-Ereignis
 
-Tritt auf, wenn ein oder mehrere Striche aus der [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung gelöscht werden.
+Tritt ein, wenn ein oder mehrere Striche aus der [Sammlung InkStrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) gelöscht werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,12 +30,12 @@ void StrokesRemoved(
 
 <dl> <dt>
 
-*StrokeIds* \[ in\]
+*StrokeIds* \[ In\]
 </dt> <dd>
 
-Das ganzzahlige Array von bezeichgern für jedes [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekt, das bei Auftreten dieses Ereignisses gelöscht wird.
+Das ganzzahlige Array von Bezeichnern für jedes [**IInkStrokeDisp-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) das gelöscht wird, wenn dieses Ereignis eintritt.
 
-Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-Bibliothek](using-the-com-library.md).
+Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der COM-Bibliothek.](using-the-com-library.md)
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Weitere Informationen zur VARIANT-Struktur finden Sie unter [Verwenden der com-B
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ iinkevents-Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID" \_ .
+Diese Ereignismethode wird in der \_ IInkEvents-Schnittstelle definiert. Die \_ IInkEvents-Schnittstelle implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ SEStrokesRemoved.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -64,10 +64,10 @@ Diese Ereignismethode wird in der \_ iinkevents-Schnittstelle definiert. Die \_ 
 
 <dl> <dt>
 
-[Inkstrokes-Auflistung](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85))
+[InkStrokes-Sammlung](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85))
 </dt> <dt>
 
-[**Methode "inkstrokes" der Methode entfernen \[\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokes-remove)
+[**Remove Method \[ InkStrokes Collection\]**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokes-remove)
 </dt> <dt>
 
 [**InkDisp-Klasse**](inkdisp-class.md)

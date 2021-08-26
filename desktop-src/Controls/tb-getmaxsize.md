@@ -1,9 +1,9 @@
 ---
-title: TB_GETMAXSIZE Meldung (kommstrg. h)
-description: Ruft die Gesamtgröße aller sichtbaren Schaltflächen und Trennzeichen auf der Symbolleiste ab.
+title: TB_GETMAXSIZE (Commctrl.h)
+description: Ruft die Gesamtgröße aller sichtbaren Schaltflächen und Trennzeichen in der Symbolleiste ab.
 ms.assetid: 560e6ce2-00ef-46c3-b1d8-fbe0ac79c888
 keywords:
-- Windows-Steuerelemente für TB_GETMAXSIZE Meldung
+- TB_GETMAXSIZE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4829e65d90c04181369dd73b9c54634f1077144
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 511d5726f117bbda183f55af5570fb75c2df3c78f5f6132dcefb406ee8fa7b70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346318"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918680"
 ---
-# <a name="tb_getmaxsize-message"></a>TB \_ getmaxsize-Nachricht
+# <a name="tb_getmaxsize-message"></a>TB \_ GETMAXSIZE-Nachricht
 
-Ruft die Gesamtgröße aller sichtbaren Schaltflächen und Trennzeichen auf der Symbolleiste ab.
+Ruft die Gesamtgröße aller sichtbaren Schaltflächen und Trennzeichen in der Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft die Gesamtgröße aller sichtbaren Schaltflächen und Trennzeichen auf der 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Größen**](/previous-versions//dd145106(v=vs.85)) Struktur, die die Größe der Elemente empfängt.
+Zeiger auf eine [**SIZE-Struktur,**](/previous-versions//dd145106(v=vs.85)) die die Größe der Elemente empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

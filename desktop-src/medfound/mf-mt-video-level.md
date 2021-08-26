@@ -1,33 +1,33 @@
 ---
-description: Gibt die MPEG-2-oder H. 264-Ebene in einem Video Medientyp an. Hierbei handelt es sich um einen Alias der MF- \_ \_ \_ .
+description: Gibt die MPEG-2- oder H.264-Ebene in einem Videomedientyp an. Dies ist ein Alias von MF \_ MT \_ MPEG2 \_ LEVEL.
 ms.assetid: 23786FC8-ACA4-4F6A-98BA-57A8C76BD4C6
-title: MF_MT_VIDEO_LEVEL-Attribut (mfapi. h)
+title: MF_MT_VIDEO_LEVEL -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca2c5eb00390df1b5c18cab7e04a5f7449f84fc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b40f1ebc6834373e00253f494e3fc76c20c343af17d754c7c4fe642b802d16ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363394"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012770"
 ---
-# <a name="mf_mt_video_level-attribute"></a>MF- \_ MT- \_ Attribut auf Video \_ Ebene
+# <a name="mf_mt_video_level-attribute"></a>MF \_ MT \_ VIDEO \_ LEVEL-Attribut
 
-Gibt die MPEG-2-oder H. 264-Ebene in einem Video Medientyp an. Hierbei handelt es sich um einen Alias der [MF \_ \_ \_ ](mf-mt-mpeg2-level-attribute.md)-.
+Gibt die MPEG-2- oder H.264-Ebene in einem Videomedientyp an. Dies ist ein Alias von [MF \_ MT \_ MPEG2 \_ LEVEL](mf-mt-mpeg2-level-attribute.md).
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**H. 264-Encoder:**
+**H.264-Encoder:**
 
-Die unterstützten Ebenen werden um [**eAVEncH264VLevel5 \_ 2**](/windows/desktop/api/codecapi/ne-codecapi-eavench264vlevel)erweitert.
+Die unterstützten Ebenen werden um [**eAVEncH264VLevel5 \_ 2 erweitert.**](/windows/desktop/api/codecapi/ne-codecapi-eavench264vlevel)
 
-Standardwert: empfohlen wird empfohlen, die minimale Ebene für die Video Codierungs Konfiguration einschließlich Auflösung, Framerate usw. auszuwählen.
+Standard: Die empfohlene Standardeinstellung ist die Auswahl der Mindeststufe für die Videocodierungskonfiguration, einschließlich Auflösung, Bildfrequenz usw.
 
-Empfohlene Standardeinstellung: Wählen Sie die minimale Ebene für die Video Codierungs Konfiguration aus, einschließlich Auflösung, Framerate usw.
+Empfohlener Standardwert: Wählen Sie die Mindeststufe für die Videocodierungskonfiguration aus, einschließlich Auflösung, Bildfrequenz usw.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Empfohlene Standardeinstellung: Wählen Sie die minimale Ebene für die Video Co
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Empfohlene Standardeinstellung: Wählen Sie die minimale Ebene für die Video Co
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

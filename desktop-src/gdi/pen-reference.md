@@ -1,22 +1,22 @@
 ---
-description: 'Die folgenden Elemente werden mit-Stiften verwendet:'
+description: 'Die folgenden Elemente werden mit Stiften verwendet:'
 ms.assetid: 12ffa080-6b02-4213-93f6-276d7aa5c52c
-title: Stift Verweis
+title: Stiftreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b5ca4ee56330768568d0eb41473df0c95199025
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 167277d71a50731ed8097aff78afdc803a1535bae47bdad416808ada3bf01c24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965510"
 ---
-# <a name="pen-reference"></a>Stift Verweis
+# <a name="pen-reference"></a>Stiftreferenz
 
-Die folgenden Elemente werden mit-Stiften verwendet:
+Die folgenden Elemente werden mit Stiften verwendet:
 
--   [Stift Funktionen](pen-functions.md)
--   [Pen-Strukturen](pen-structures.md)
+-   [Stiftfunktionen](pen-functions.md)
+-   [Stiftstrukturen](pen-structures.md)
 
  
 

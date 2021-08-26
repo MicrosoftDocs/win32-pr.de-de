@@ -1,19 +1,19 @@
 ---
-description: Die TSPI-zeilige \_ calldevspecific-Nachricht wird an die LineEvent-Rückruffunktion gesendet, um TAPI über gerätespezifische Ereignisse zu benachrichtigen, die bei einem Aufruf auftreten.
+description: Die TSPI LINE \_ CALLDEVSPECIFIC-Nachricht wird an die RÜCKRUFfunktion LINEEVENT gesendet, um TAPI über gerätespezifische Ereignisse zu benachrichtigen, die bei einem Aufruf auftreten.
 ms.assetid: accd753a-3be0-4c7d-bbc7-d294d1381144
-title: LINE_CALLDEVSPECIFIC Meldung (TSPI. h)
+title: LINE_CALLDEVSPECIFIC Meldung (Tspi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a48bf8a54a1f326fe7bb27c82349e5575c8bbf6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9930da3c30d51781b10b28ed7a712cb681950eaea1a387212a5e0894658a9125
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012600"
 ---
-# <a name="line_calldevspecific-message"></a>Zeile \_ calldevspecific Message
+# <a name="line_calldevspecific-message"></a>LINE \_ CALLDEVSPECIFIC-Nachricht
 
-Die TSPI- **zeilige \_ calldevspecific** -Nachricht wird an die [**LineEvent**](/windows/win32/api/tspi/nc-tspi-lineevent) -Rückruffunktion gesendet, um TAPI über gerätespezifische Ereignisse zu benachrichtigen, die bei einem Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der Parameter *dwParam1* through *dwParam3* sind gerätespezifisch.
+Die TSPI **LINE \_ CALLDEVSPECIFIC-Nachricht** wird an die [**RÜCKRUFfunktion LINEEVENT**](/windows/win32/api/tspi/nc-tspi-lineevent) gesendet, um TAPI über gerätespezifische Ereignisse zu benachrichtigen, die bei einem Aufruf auftreten. Die Bedeutung der Nachricht und die Interpretation der *dwParam1-Parameter* bis *dwParam3* sind gerätespezifisch.
 
 
 ```C++
@@ -26,24 +26,24 @@ Die TSPI- **zeilige \_ calldevspecific** -Nachricht wird an die [**LineEvent**](
 
 <dl> <dt>
 
-*htline* 
+*htLine* 
 </dt> <dd>
 
-Das nicht transparente TAPI-Objekt Handle für das liniengerät.
+Das nicht transparente TAPI-Objekthandle für das Liniengerät.
 
 </dd> <dt>
 
-*"htcall"* 
+*htCall* 
 </dt> <dd>
 
-Das nicht transparente TAPI-Objekt Handle für das anrufgerät.
+Das nicht transparente TAPI-Objekthandle für das Anrufgerät.
 
 </dd> <dt>
 
-*dwmsg* 
+*dwMsg* 
 </dt> <dd>
 
-Die Wert Zeile \_ calldevspecific.
+Der Wert LINE \_ CALLDEVSPECIFIC.
 
 </dd> <dt>
 
@@ -68,13 +68,13 @@ Gerätespezifisch.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **line \_ calldevspecific** -Nachricht wird von einem Dienstanbieter in Verbindung mit der [**TSPI \_ linedevspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific) -Funktion verwendet. Seine Bedeutung ist gerätespezifisch.
+Die **LINE \_ CALLDEVSPECIFIC-Nachricht** wird von einem Dienstanbieter in Verbindung mit der [**\_ TSPI-Funktion lineDevSpecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific) verwendet. Seine Bedeutung ist gerätespezifisch.
 
-TAPI sendet die [**\_ DevSpecific-Zeilen**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85)) Nachricht als Antwort auf den Empfang dieser Nachricht von einem Dienstanbieter an Anwendungen. Die Parameter " *htline* " und " *htcall"* werden als *hdevice* -Parameter auf der TAPI-Ebene in den entsprechenden *hcallcenter* übersetzt. Die Parameter *dwParam1*, *dwParam2* und *dwParam3* werden unverändert übermittelt.
+TAPI sendet die [**LINE \_ DEVSPECIFIC-Nachricht**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85)) als Reaktion auf den Empfang dieser Nachricht von einem Dienstanbieter an Anwendungen. Die Parameter *htLine* und *htCall* werden in den entsprechenden *hCall-Parameter* als *hDevice-Parameter* auf TAPI-Ebene übersetzt. Die Parameter *dwParam1,* *dwParam2* und *dwParam3* werden unverändert übergeben.
 
-Es gibt keine direkt entsprechende Meldung auf der TAPI-Ebene, obwohl diese Meldung sehr ähnlich ist wie " [**line \_ DevSpecific**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85))". Auf der TSPI-Ebene werden die gerätespezifischen Nachrichten zwischen den Berichterstattungs Ereignissen in Zeilen und Adressen und den Bericht Erstellungs Ereignissen bei Aufrufen aufgeteilt.
+Es gibt keine direkt entsprechende Nachricht auf TAPI-Ebene, obwohl diese Meldung sehr ähnlich wie [**LINE \_ DEVSPECIFIC**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85))ist. Auf TSPI-Ebene werden die gerätespezifischen Nachrichten zwischen den Nachrichten, die Ereignisse in Zeilen und Adressen melden, und denen, die Ereignisse bei Aufrufen melden, aufgeteilt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Es gibt keine direkt entsprechende Meldung auf der TAPI-Ebene, obwohl diese Meld
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TSPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tspi.h</dt> </dl> |
 
 
 
@@ -91,13 +91,13 @@ Es gibt keine direkt entsprechende Meldung auf der TAPI-Ebene, obwohl diese Meld
 
 <dl> <dt>
 
-[**Linien- \_ DevSpecific**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85))
+[**LINE \_ DEVSPECIFIC**](/previous-versions/windows/desktop/legacy/ms725225(v=vs.85))
 </dt> <dt>
 
-[**LineEvent**](/windows/win32/api/tspi/nc-tspi-lineevent)
+[**LINEEVENT**](/windows/win32/api/tspi/nc-tspi-lineevent)
 </dt> <dt>
 
-[**TSPI \_ linedevspecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific)
+[**TSPI \_ lineDevSpecific**](/windows/win32/api/tspi/nf-tspi-tspi_linedevspecific)
 </dt> </dl>
 
  

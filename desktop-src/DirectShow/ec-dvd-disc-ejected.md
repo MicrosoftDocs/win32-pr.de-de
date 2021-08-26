@@ -1,7 +1,7 @@
 ---
-description: Signalisiert, dass ein DVD-Laufwerk ausworfen wurde.
+description: Signalisiert, dass ein DVD-Datenträger ausjiziert wurde.
 ms.assetid: 031156c2-f0f0-4a9e-b792-4d656ec49aef
-title: EC_DVD_DISC_EJECTED (dvdevcode. h)
+title: EC_DVD_DISC_EJECTED (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: ab6c1333245b589d4f13bafcba89eada3ef98ab0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba262ca68ce9d76e9963fb54c325e9b7ba4dcf8352c9ede13c652bf0059e794a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965740"
 ---
-# <a name="ec_dvd_disc_ejected"></a>EC- \_ DVD- \_ CD- \_ aussteht
+# <a name="ec_dvd_disc_ejected"></a>EC \_ DVD \_ DISC \_ EJECTED
 
-Signalisiert, dass ein DVD-Laufwerk ausworfen wurde.
+Signalisiert, dass ein DVD-Datenträger ausjiziert wurde.
 
 ## <a name="parameters"></a>Parameter
 
@@ -42,9 +42,9 @@ Keinen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Wiedergabe wird automatisch beendet, wenn ein Laufwerk aussteht. Die Anwendung muss als Reaktion auf dieses Ereignis keine besonderen Aktionen ausführen.
+Die Wiedergabe wird automatisch beendet, wenn ein Datenträger ausjiziert wird. Die Anwendung muss als Reaktion auf dieses Ereignis keine besonderen Maßnahmen ergreifen.
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -54,21 +54,21 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

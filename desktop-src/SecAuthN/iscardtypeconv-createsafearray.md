@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Automation SafeArray mit nicht signierten Zeichen (Bytes).
+description: Erstellt ein Automation SAFEARRAY-Zeichen ohne Vorzeichen (Bytes).
 ms.assetid: 67cc8cd1-95be-4498-ac25-6c418089af27
-title: 'Iscardtypekonv:: kreatesafearray-Methode (scarddat. h)'
+title: ISCardTypeConv::CreateSafeArray-Methode (Hidddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 6bc27a3f50f0740eca178787fd021f76c9b6729e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50b1adc227e651f3ce3b904389b57812cfb9dedee235f07057425880c0c8e32f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013740"
 ---
-# <a name="iscardtypeconvcreatesafearray-method"></a>Iscardtypekonv:: kreatesafearray-Methode
+# <a name="iscardtypeconvcreatesafearray-method"></a>ISCardTypeConv::CreateSafeArray-Methode
 
-\[Die Methode " **kreatesafearray** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **CreateSafeArray-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die Methode " **kreatesafearray** " erstellt ein Automation SafeArray mit nicht signierten Zeichen (Bytes).
+Die **CreateSafeArray-Methode** erstellt ein Automation SAFEARRAY mit Zeichen ohne Vorzeichen (Bytes).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,14 +42,14 @@ HRESULT CreateSafeArray(
 
 <dl> <dt>
 
-*nzuweisung* \[ in\]
+*nAllocSize* \[ In\]
 </dt> <dd>
 
-Größe des Arbeitsspeichers in Bytes, der für das Array zugeordnet werden soll.
+Größe des Arbeitsspeichers in Bytes, der dem Array zugeordnet werden soll.
 
 </dd> <dt>
 
-*p-Ray* \[ vorgenommen\]
+*ppArray* \[ out\]
 </dt> <dd>
 
 Zeiger auf das SAFEARRAY-Objekt, das zurückgegeben werden soll.
@@ -58,25 +58,25 @@ Zeiger auf das SAFEARRAY-Objekt, das zurückgegeben werden soll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück:
+Die -Methode gibt einen der folgenden möglichen Werte zurück:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Der Arbeitsspeicher wurde erfolgreich zugewiesen.<br/>                                                        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher wurde erfolgreich zugeordnet.<br/>                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Problem mit einem oder mehreren parametern vor, die an die Funktion übergeben werden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher zum Erfüllen der Anforderung.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um ein typisches C/C++-Bytearray zu erstellen, rufen Sie " [**kreatebytearray**](iscardtypeconv-createbytearray.md)" auf.
+Um ein typisches C/C++-Bytearray zu erstellen, rufen [**Sie CreateByteArray**](iscardtypeconv-createbytearray.md)auf.
 
-Um einen universellen Puffer von Bytes zu erstellen, die einem **IStream** -Objekt ([**ibytebuffer**](ibytebuffer.md)) zugeordnet sind, rufen Sie " [**kreatebytebuffer**](iscardtypeconv-createbytebuffer.md)" auf.
+Um einen universellen Puffer von Bytes zu erstellen, der einem **IStream** [**(IByteBuffer**](ibytebuffer.md))-Objekt zugeordnet ist, rufen [**Sie CreateByteBuffer**](iscardtypeconv-createbytebuffer.md)auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,14 +84,14 @@ Um einen universellen Puffer von Bytes zu erstellen, die einem **IStream** -Obje
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardtypec ist als 53b6aa63-3F 56-11D0-916b-00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardTypeConv ist als 53B6AA63-3F56-11D0-916B-00AA00C18068 definiert.<br/>       |
 
 
 
@@ -99,16 +99,16 @@ Um einen universellen Puffer von Bytes zu erstellen, die einem **IStream** -Obje
 
 <dl> <dt>
 
-[**Iscardtypeconfiguration**](iscardtypeconv.md)
+[**ISCardTypeConv**](iscardtypeconv.md)
 </dt> <dt>
 
 [Smartcard-Rückgabewerte](authentication-return-values.md)
 </dt> <dt>
 
-[**"Kreatebytearray"**](iscardtypeconv-createbytearray.md)
+[**CreateByteArray**](iscardtypeconv-createbytearray.md)
 </dt> <dt>
 
-[**"Kreatebytebuffer"**](iscardtypeconv-createbytebuffer.md)
+[**CreateByteBuffer**](iscardtypeconv-createbytebuffer.md)
 </dt> </dl>
 
  

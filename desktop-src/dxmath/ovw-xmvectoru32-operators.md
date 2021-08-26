@@ -4,16 +4,16 @@ ms.assetid: 5b451eec-d9ec-456c-b7bb-c02f8c168dce
 title: XMVECTORU32-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5476ad1dc9bc2bfcbce1d87f0552245f583d5ef0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 07f8e350211335498668a29ae9db39d69d4f2ec5f920fcf9020597d16121ca23
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948600"
 ---
 # <a name="xmvectoru32-operators"></a>XMVECTORU32-Operatoren
 
-Die folgenden Operatoren werden von der [**XMVECTORU32**](xmvectoru32-data-type.md) -Struktur verfügbar gemacht.
+Die folgenden Operatoren werden von der [**XMVECTORU32-Struktur**](xmvectoru32-data-type.md) verfügbar gemacht.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,8 +26,8 @@ Die folgenden Operatoren werden von der [**XMVECTORU32**](xmvectoru32-data-type.
 
 | Methoden                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Operator \_ \_ m128i**](/previous-versions/windows/desktop/legacy/ee421369(v=vs.85))<br/> | Gibt das Objekt zurück, das die aktuelle Instanz von implementiert [**XMVECTORU32**](xmvectoru32-data-type.md) in eine [ \_ \_ m128i](/cpp/cpp/m128i) -Instanz von Windows-Systemen, die \[ nur [SSE](/previous-versions/visualstudio/visual-studio-2010/t467de55(v=vs.100)) unterstützt.\]<br/> |
-| [**Operator xmvector**](/previous-versions/windows/desktop/legacy/ee421370(v=vs.85))<br/> | Gibt die Instanz von zurück, die `XMVECTOR` die aktuelle Instanz von implementiert `XMVECTORU32` .<br/>                                                                                                                                                                                                         |
+| [**Operator \_ \_ m128i**](/previous-versions/windows/desktop/legacy/ee421369(v=vs.85))<br/> | Gibt das Objekt zurück, das die aktuelle Instanz von [**XMVECTORU32**](xmvectoru32-data-type.md) in eine [ \_ \_ m128i-Instanz](/cpp/cpp/m128i) von Windows, die \[ nur [SSE](/previous-versions/visualstudio/visual-studio-2010/t467de55(v=vs.100)) unterstützen.\]<br/> |
+| [**Operator XMVECTOR**](/previous-versions/windows/desktop/legacy/ee421370(v=vs.85))<br/> | Gibt die Instanz von `XMVECTOR` zurück, die die aktuelle Instanz von implementieren. `XMVECTORU32`<br/>                                                                                                                                                                                                         |
 
 
 

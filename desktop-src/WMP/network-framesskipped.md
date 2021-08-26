@@ -1,9 +1,9 @@
 ---
-title: Network. framesskipped
-description: Die framesskipped-Eigenschaft ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
+title: Network.framesSkipped
+description: Die framesSkipped-Eigenschaft ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
 ms.assetid: fc7561a4-1e52-4192-b8df-ed2fb407fb78
 keywords:
-- Netzwerk. framesskipped Windows Media Player
+- Network.framesSkipped-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f33b778fffce071c47cb455f09e468243abab6a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1031585feae5fa2c7fdd9f5fb64bf958e77b8029d502f3e99476024276a652cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365491"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901670"
 ---
-# <a name="networkframesskipped"></a>Network. framesskipped
+# <a name="networkframesskipped"></a>Network.framesSkipped
 
-Die **framesskipped** -Eigenschaft ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
+Die **framesSkipped-Eigenschaft** ruft die Gesamtanzahl der Frames ab, die während der Wiedergabe übersprungen wurden.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **framesskipped**
+*Player*. *network*. **framesSkipped**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **framesskipped** zum Anzeigen der Gesamtzahl der Rahmen, die während der Wiedergabe ausgelassen werden, wenn der Benutzer auf eine Schaltfläche klickt. Die Informationen werden in einem HTML-div-Code angezeigt, der mit ID = "FS" erstellt wurde. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *Network* verwendet. **framesSkipped** zum Anzeigen der Gesamtanzahl von Frames, die während der Wiedergabe übersprungen wurden, wenn der Benutzer auf eine Schaltfläche klickt. Die Informationen werden in einem HTML-DIV angezeigt, das mit der ID " FS" erstellt wurde. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -54,7 +54,7 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **framesskipped** zum An
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -63,7 +63,7 @@ Im folgenden JScript-Beispiel wird *Network* verwendet. **framesskipped** zum An
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> </dl>
 
  

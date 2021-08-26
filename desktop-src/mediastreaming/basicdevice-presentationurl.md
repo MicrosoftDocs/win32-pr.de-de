@@ -1,11 +1,11 @@
 ---
-title: Basicdevice. presentationurl-Eigenschaft
+title: BasicDevice.PresentationUrl-Eigenschaft
 description: Ruft die Präsentations-URL des Geräts ab.
 ms.assetid: 106892F9-2F2D-4B44-A6A0-D0CC36E21117
 keywords:
-- Presentationurl-Eigenschaft Medien Streaming-API
-- Presentationurl-Eigenschaft Medien Streaming-API, basicdevice-Schnittstelle
-- Basicdevice-Schnittstelle Medien Streaming-API, presentationurl-Eigenschaft
+- PresentationUrl-Eigenschaft Medienstreaming-API
+- PresentationUrl-Eigenschaft Medienstreaming-API, BasicDevice-Schnittstelle
+- Media Streaming-API der BasicDevice-Schnittstelle, PresentationUrl-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 69c1de9a72ae14160b49676daa3ea1afb2425edf
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: c392ca16f8c43b4f658e8ac0c07f2b95084aa59e836fac5d32dec0122bc80dcc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101586"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011920"
 ---
-# <a name="basicdevicepresentationurl-property"></a>Basicdevice. presentationurl-Eigenschaft
+# <a name="basicdevicepresentationurl-property"></a>BasicDevice.PresentationUrl-Eigenschaft
 
 Ruft die Präsentations-URL des Geräts ab.
 
@@ -33,7 +33,7 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ```C++
 HRESULT get_PresentationUrl(
-  [out] HSTRING *value
+  [out] HSTRING *value
 );
 ```
 
@@ -47,9 +47,9 @@ Ein Zeiger auf die Präsentations-URL des Geräts.
 
 <dl> <dt>
 
-[**Basicdevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
+[**BasicDevice**](/previous-versions/windows/desktop/legacy/hh828813(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

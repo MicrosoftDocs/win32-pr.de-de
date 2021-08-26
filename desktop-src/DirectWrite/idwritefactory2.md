@@ -1,10 +1,10 @@
 ---
 title: IDWriteFactory2-Schnittstelle
-description: Die Root Factory-Schnittstelle für alle DirectWrite-Objekte.
+description: Die Stammfactoryschnittstelle für alle DirectWrite-Objekte.
 ms.assetid: 1D3EEC28-EAB3-4FA2-98E9-7A8FDAF6E6FE
 keywords:
-- IDWriteFactory1 Interface Direct Write
-- IDWriteFactory1 Interface Direct Write, beschrieben
+- Direktes Schreiben der IDWriteFactory1-Schnittstelle
+- IDWriteFactory1 interface Direct Write , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,36 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb7d5ba0f8d480981ab6ebea6dcdbd955b7b967e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 370292387f2c42e3f749e24a063e05bb24280ec5c8e8941a430f996fe7f349da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902800"
 ---
 # <a name="idwritefactory2-interface"></a>IDWriteFactory2-Schnittstelle
 
-Die Root Factory-Schnittstelle für alle [DirectWrite](direct-write-portal.md) -Objekte.
+Die Stammfactoryschnittstelle [](direct-write-portal.md) für alle DirectWrite-Objekte.
 
 ## <a name="members"></a>Member
 
-Die **IDWriteFactory1** -Schnittstelle erbt von [**IDWriteFactory1**](/windows/win32/api/dwrite_1/nn-dwrite_1-idwritefactory1). **IDWriteFactory2** verfügt auch über die folgenden Typen von Membern:
+Die **IDWriteFactory1-Schnittstelle** erbt von [**IDWriteFactory1.**](/windows/win32/api/dwrite_1/nn-dwrite_1-idwritefactory1) **IDWriteFactory2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IDWriteFactory1** -Schnittstelle verfügt über diese Methoden.
+Die **IDWriteFactory1-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                             | BESCHREIBUNG                                                                                                |
 |:-----------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
-| [**"Kreatecustomrenderingpara"**](idwritefactory2-createcustomrenderingparams.md) | Erstellt ein Renderparameter-Objekt mit den angegebenen Eigenschaften.<br/>                            |
-| [**"Kreatefontfallbackbuilder"**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefactory2-createfontfallbackbuilder)     | Erstellt ein Schriftart Fall Back Builder-Objekt.<br/>                                                         |
-| [**"Kreateglyphrunanalysis"**](idwritefactory2-createglyphrunanalysis.md)           | Erstellt ein Symbol zum Ausführen von Symbolen, das Informationen kapselt, die zum renderischen Ausführen von Symbolen verwendet werden.<br/> |
-| [**Getsystemfontfallback**](idwritefactory2-getsystemfontfallback.md)             | Erstellt ein Schriftart Fall Back Objekt aus der System Schriftart-fallbackliste.<br/>                              |
-| [**Translatecolorglyphrun**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefactory2-translatecolorglyphrun)           | Diese Methode wird für eine Glyphe-Ausführung aufgerufen, um Sie in mehrere Farb Symbol Ausführungen umzuwandeln.<br/>           |
+| [**CreateCustomRenderingParams**](idwritefactory2-createcustomrenderingparams.md) | Erstellt ein Renderingparameterobjekt mit den angegebenen Eigenschaften.<br/>                            |
+| [**CreateFontFallbackBuilder**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefactory2-createfontfallbackbuilder)     | Erstellt ein Schriftartfallback-Generatorobjekt.<br/>                                                         |
+| [**CreateGlyphRunAnalysis**](idwritefactory2-createglyphrunanalysis.md)           | Erstellt ein Glyphenlaufanalyseobjekt, das Informationen kapselt, die zum Rendern einer Glyphenlauf verwendet werden.<br/> |
+| [**GetSystemFontFallback**](idwritefactory2-getsystemfontfallback.md)             | Erstellt ein Schriftartfallbackobjekt aus der Fallbackliste der Systemschriftart.<br/>                              |
+| [**TranslateColorGlyphRun**](/windows/win32/api/dwrite_2/nf-dwrite_2-idwritefactory2-translatecolorglyphrun)           | Diese Methode wird für eine Glyphen-Ausführung aufgerufen, um sie in mehrere Farbglyphenläufe zu übersetzen.<br/>           |
 
 
 
@@ -56,10 +56,10 @@ Die **IDWriteFactory1** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
@@ -71,7 +71,7 @@ Die **IDWriteFactory1** -Schnittstelle verfügt über diese Methoden.
 [**IDWriteFactory1**](/windows/win32/api/dwrite_1/nn-dwrite_1-idwritefactory1)
 </dt> <dt>
 
-[**Idschreitefactory**](/windows/win32/api/dwrite/nn-dwrite-idwritefactory)
+[**IDWriteFactory**](/windows/win32/api/dwrite/nn-dwrite-idwritefactory)
 </dt> </dl>
 
  

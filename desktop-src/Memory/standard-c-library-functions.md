@@ -1,19 +1,19 @@
 ---
-description: Anwendungen können die Speicherverwaltungsfunktionen der C-Lauf Zeit Bibliothek (malloc, Free usw.) und C++ (neu, löschen usw.) sicher verwenden.
+description: Anwendungen können die Speicherverwaltungsfeatures der C-Laufzeitbibliothek (malloc, free und so weiter) und C++ (neu, löschen und so weiter) sicher verwenden.
 ms.assetid: c58ed263-577d-47c5-93cb-5a7c83604171
-title: Standard-C-Bibliotheksfunktionen
+title: C-Standardbibliotheksfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 303333b32f5645f19d8d22a072d25692cea4607f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f1447a64f00fbd1b4cccf70f7589f267ebba526d66528d7342da68068f81ebfa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963210"
 ---
-# <a name="standard-c-library-functions"></a>Standard-C-Bibliotheksfunktionen
+# <a name="standard-c-library-functions"></a>C-Standardbibliotheksfunktionen
 
-Anwendungen können die Speicherverwaltungsfunktionen der C-Lauf Zeit Bibliothek (**malloc**, **Free** usw.) und C++ (**neu**, **Löschen** usw.) sicher verwenden. Die Funktionen der C-Lauf Zeit Bibliothek haben nicht die potenziellen Probleme, die Sie unter 16-Bit-Fenstern haben. Die Speicherverwaltung ist kein Problem mehr, da das System Arbeitsspeicher freigeben kann, indem Seiten des physischen Speichers verschoben werden, ohne dass sich dies auf die virtuellen Adressen auswirkt. Ebenso ist der Unterschied zwischen Near-und Far-Zeigern nicht mehr relevant. Daher können Sie die Standard-C-Bibliotheksfunktionen für die Speicherverwaltung verwenden. Die Speicherverwaltungsfunktionen bieten jedoch Funktionen, die in der C-Lauf Zeit Bibliothek nicht verfügbar sind.
+Anwendungen können die Speicherverwaltungsfeatures der C-Laufzeitbibliothek **(malloc,** **free** und so weiter) und C++**(neu,** **löschen** und so weiter) sicher verwenden. Die C-Laufzeitbibliotheksfunktionen haben nicht die potenziellen Probleme, die unter 16-Bit-Windows. Die Speicherverwaltung ist kein Problem mehr, da das System den Speicher durch Verschieben von Seiten des physischen Speichers ohne Auswirkungen auf die virtuellen Adressen verwalten kann. Ebenso ist der Unterschied zwischen nah und fernen Zeigern nicht mehr relevant. Daher können Sie die C-Standardbibliotheksfunktionen für die Speicherverwaltung verwenden. Die Speicherverwaltungsfunktionen bieten jedoch Funktionen, die in der C-Laufzeitbibliothek nicht verfügbar sind.
 
  
 

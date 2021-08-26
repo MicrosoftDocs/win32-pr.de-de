@@ -1,9 +1,9 @@
 ---
-title: NM_LDOWN (Symbolleisten-) Benachrichtigungs Code (kommstrg. h)
-description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass die linke Maustaste gedrückt wurde. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_LDOWN -Benachrichtigungscode (Symbolleiste) (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass die linke Maustaste gedrückt wurde. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: f5b356fb-265b-4eb0-a5a3-2a22d688f847
 keywords:
-- NM_LDOWN (Symbolleiste) Benachrichtigungs Code Windows-Steuerelemente
+- NM_LDOWN -Benachrichtigungscode (Symbolleiste) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e60f1f05d85aa8885acf31a36098056d68612ba2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6cf283e8b3e0d1ed780a80d5608849bc42f200b61a5a94692c0924cb2e6241a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919650"
 ---
-# <a name="nm_ldown-toolbar-notification-code"></a>NM- \_ ldown-Benachrichtigungs Code (Symbolleiste)
+# <a name="nm_ldown-toolbar-notification-code"></a>NM \_ LDOWN-Benachrichtigungscode (Symbolleiste)
 
-Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass die linke Maustaste gedrückt wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass die linke Maustaste gedrückt wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,17 +41,17 @@ NM_LDOWN
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmmouse**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) -Struktur, die Informationen zu diesem Benachrichtigungs Code enthält. Wenn auf ein Symbolleisten Element auf die Maus geklickt wurde, enthält das Element **dwitemspec** den Element Bezeichner, und der **dwitemdata** -Member enthält die Elementdaten. Wenn die Maus auf ein Trennzeichen oder Leerraum auf der Symbolleiste geklickt wurde, enthält das Element **dwitemspec** -1.
+Zeiger auf eine [**NMMOUSE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) die Informationen zu diesem Benachrichtigungscode enthält. Wenn mit der Maus auf ein Symbolleistenelement geklickt wurde, enthält das **element dwItemSpec-Element** den Elementbezeichner und das **dwItemData-Element** die Elementdaten. Wenn auf der Symbolleiste auf ein Trennzeichen oder Leerzeichen geklickt wurde, enthält das **dwItemSpec-Element** -1.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **false** zurück, damit das Symbolleisten-Steuerelement die Standard Verarbeitung des Ereignisses ausführen kann, oder **true** , um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
+Gibt **FALSE** zurück, damit das Symbolleistensteuerelement die Standardverarbeitung des Ereignisses ausführen kann, oder **TRUE,** um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Benachrichtigung wird gesendet, nachdem der Benachrichtigungs Code für die [TBN- \_ Dropdown](tbn-dropdown.md) Liste gesendet wurde.
+Diese Benachrichtigung wird gesendet, nachdem der [ \_ TBN-DROPDOWN-Benachrichtigungscode](tbn-dropdown.md) gesendet wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Diese Benachrichtigung wird gesendet, nachdem der Benachrichtigungs Code für di
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

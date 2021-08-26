@@ -1,9 +1,9 @@
 ---
-title: LVM_ENSUREVISIBLE Meldung (kommstrg. h)
-description: Stellt sicher, dass ein Listen Ansichts Element entweder vollständig oder teilweise sichtbar ist, und führt ggf. einen Bildlauf im Listenansicht-Steuerelement durch Sie können diese Nachricht explizit oder mithilfe des ListView \_ EnsureVisible-Makros senden.
+title: LVM_ENSUREVISIBLE (Commctrl.h)
+description: Stellt sicher, dass ein Listenansichtselement entweder vollständig oder teilweise sichtbar ist, und führt bei Bedarf einen Bildlauf durch das Listenansichtssteuerelement durch. Sie können diese Nachricht explizit oder mithilfe des Makros ListView \_ EnsureVisible senden.
 ms.assetid: 3564b6e6-b8b6-401b-85bc-8bd6261fc054
 keywords:
-- Windows-Steuerelemente für LVM_ENSUREVISIBLE Meldung
+- LVM_ENSUREVISIBLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d0ff4009399988f20f3e162114f91e4cff02820
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: baeefaf90f0a4562fb187024b2c6f8676c68fb9d46377a4ced900bda6cfd3dfd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920300"
 ---
-# <a name="lvm_ensurevisible-message"></a>LVM \_ EnsureVisible-Meldung
+# <a name="lvm_ensurevisible-message"></a>LVM \_ ENSUREVISIBLE-Nachricht
 
-Stellt sicher, dass ein Listen Ansichts Element entweder vollständig oder teilweise sichtbar ist, und führt ggf. einen Bildlauf im Listenansicht-Steuerelement durch Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ EnsureVisible**](/windows/desktop/api/Commctrl/nf-commctrl-listview_ensurevisible) -Makros senden.
+Stellt sicher, dass ein Listenansichtselement entweder vollständig oder teilweise sichtbar ist, und führt bei Bedarf einen Bildlauf durch das Listenansichtssteuerelement durch. Sie können diese Nachricht explizit oder mithilfe des [**Makros ListView \_ EnsureVisible**](/windows/desktop/api/Commctrl/nf-commctrl-listview_ensurevisible) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Stellt sicher, dass ein Listen Ansichts Element entweder vollständig oder teilw
 *wParam* 
 </dt> <dd>
 
-Der Index des Listen Ansichts Elements.
+Der Index des Listenansichtselements.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein-Wert, der angibt, ob das Element vollständig sichtbar sein muss. Wenn dieser Parameter **true** ist, wird kein Bildlauf durchgeführt, wenn das Element mindestens teilweise sichtbar ist.
+Ein -Wert, der an gibt, ob das Element vollständig sichtbar sein muss. Wenn dieser Parameter **TRUE ist,** erfolgt kein Bildlauf, wenn das Element zumindest teilweise sichtbar ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Meldung schlägt fehl, wenn der Fenster Stil [**LVS \_ NoScroll**](list-view-window-styles.md)enthält.
+Die Meldung schlägt fehl, wenn der Fensterstil [**LVS \_ NOSCROLL enthält.**](list-view-window-styles.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Die Meldung schlägt fehl, wenn der Fenster Stil [**LVS \_ NoScroll**](list-view
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

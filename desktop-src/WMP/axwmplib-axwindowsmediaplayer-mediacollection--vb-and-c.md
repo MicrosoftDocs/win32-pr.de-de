@@ -1,11 +1,11 @@
 ---
-title: AxWindowsMediaPlayer. mediacollection (Eigenschaft)
-description: Die mediacollection-Eigenschaft ruft eine iwmpmediacollection-Schnittstelle ab, die eine Möglichkeit bietet, eine große Sammlung von Medien Elementen zu organisieren.
+title: AxWindowsMediaPlayer.mediaCollection -Eigenschaft
+description: Die mediaCollection-Eigenschaft ruft eine IWMPMediaCollection-Schnittstelle ab, die eine Möglichkeit bietet, eine große Sammlung von Medienelementen zu organisieren.
 ms.assetid: ec37e1da-a843-4b89-88fc-ec9255baa98a
 keywords:
-- mediacollection-Eigenschaft, Windows-Media Player
-- mediacollection-Eigenschaft, Windows Media Player, AxWindowsMediaPlayer-Klasse
-- AxWindowsMediaPlayer-Klasse, Windows Media Player, mediacollection (Eigenschaft)
+- mediaCollection-Windows Media Player
+- mediaCollection-Eigenschaft Windows Media Player , AxWindowsMediaPlayer-Klasse
+- AxWindowsMediaPlayer-Klasse Windows Media Player , mediaCollection-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f6501dd5dda8e60b8ba1a5f2667f6b581cbdfd90
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86ad0cc720c49926ddbd75fe71d47738a9e8af43fa97670a0b9915a50716ed0b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902630"
 ---
-# <a name="axwindowsmediaplayermediacollection-property"></a>AxWindowsMediaPlayer. mediacollection (Eigenschaft)
+# <a name="axwindowsmediaplayermediacollection-property"></a>AxWindowsMediaPlayer.mediaCollection -Eigenschaft
 
-Die mediacollection-Eigenschaft ruft eine **iwmpmediacollection** -Schnittstelle ab, die eine Möglichkeit bietet, eine große Sammlung von Medien Elementen zu organisieren.
+Die mediaCollection-Eigenschaft ruft eine **IWMPMediaCollection-Schnittstelle** ab, die eine Möglichkeit bietet, eine große Sammlung von Medienelementen zu organisieren.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -48,11 +48,11 @@ Public ReadOnly Property mediaCollection As IWMPMediaCollection
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die WMPLib. iwmpmediacollection-Schnittstelle zu einer Auflistung von Medien Elementen.
+Die WMPLib.IWMPMediaCollection-Schnittstelle für eine Sammlung von Medienelementen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,16 +70,16 @@ Zum Abrufen des Werts dieser Eigenschaft ist Lesezugriff auf die Bibliothek erfo
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. mediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.mediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-mediaaccessrights--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPSettings2. requestmediaaccessrights (VB und c#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
+[**IWMPSettings2.requestMediaAccessRights (VB und C#)**](wmplibiwmpsettings2-iwmpsettings2-requestmediaaccessrights--vb-and-c.md)
 </dt> </dl>
 
  

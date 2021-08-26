@@ -1,8 +1,8 @@
 ---
-description: Eigenschafts Qualifizierer geben Informationen über den Leistungs Bezeichner an, dem die Eigenschaft zugeordnet wird.
+description: Eigenschaftenqualifizierer geben Informationen zum Leistungsindikator an, dem die Eigenschaft zusteuert.
 ms.assetid: f1761f71-af4e-4b89-aba7-b7f294c30ffc
 ms.tgt_platform: multiple
-title: Eigenschafts Qualifizierer für Leistungs Objektklassen
+title: Eigenschaftenqualifizierer für Leistungsindikatorklassen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,72 +10,72 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4e060d072c34d248f9faf634aec7710f5638721b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 105bd010704364dc3865b2e704b3daeaafdb29a772d4f3b3fe036b88da2d43cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996180"
 ---
-# <a name="property-qualifiers-for-performance-counter-classes"></a>Eigenschafts Qualifizierer für Leistungs Objektklassen
+# <a name="property-qualifiers-for-performance-counter-classes"></a>Eigenschaftenqualifizierer für Leistungsindikatorklassen
 
-Eigenschafts Qualifizierer geben Informationen über den Leistungs Bezeichner an, dem die Eigenschaft zugeordnet wird.
+Eigenschaftenqualifizierer geben Informationen zum Leistungsindikator an, dem die Eigenschaft zusteuert.
 
--   [Eigenschaften Qualifizierer für formatierte und formatierte Leistungsklassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
--   [Eigenschafts Qualifizierer für rohleistungs Klassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
--   [Eigenschafts Qualifizierer für formatierte Leistungsklassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
--   [Interpretieren von Eigenschaften Qualifizierern](#how-to-interpret-property-qualifiers)
+-   [Eigenschaftenqualifizierer für Unformatierte und formatierte Leistungsklassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
+-   [Eigenschaftenqualifizierer für Rohleistungsklassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
+-   [Eigenschaftenqualifizierer für formatierte Leistungsklassen](#property-qualifiers-for-raw-and-formatted-performance-classes)
+-   [Interpretieren von Eigenschaftsqualifizierern](#how-to-interpret-property-qualifiers)
 -   [Zugehörige Themen](#related-topics)
 
-Der Leistungsdaten Träger ist Teil eines Leistungs [**Objekts, das \_**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) durch einen Leistungs Leistungs Leistungs- [Leistungs Leistungs Leistungs](/windows/desktop/CIMWin32Prov/performance-counter-classes) -Leistungs Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs-Leistungs Leistungs-Objekt – \\
+Der Leistungsindikator ist Teil eines Leistungsobjekts, das durch eine WMI-Leistungsindikatorklasse dargestellt wird. Leistungsindikatorspezifische Qualifizierer werden automatisch vom WbemPerfClass-Anbieter an [**Win32 \_ PerfRawData-Klassen**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) und -Eigenschaften in Root [](/windows/desktop/CIMWin32Prov/performance-counter-classes) \\ CIMv2 angefügt.
 
-Diese Informationen gelten für alle Instanzen der Performance-Klasse. Einige Qualifizierer mit **booleschen** Werten, die immer false sind, sind möglicherweise nicht für bestimmte Klassen vorhanden.
+Diese Informationen gelten für alle Instanzen der Leistungsklasse. Einige Qualifizierer **mit booleschen Werten,** die immer FALSE sind, sind für bestimmte Klassen möglicherweise nicht vorhanden.
 
-## <a name="property-qualifiers-for-raw-and-formatted-performance-classes"></a>Eigenschaften Qualifizierer für formatierte und formatierte Leistungsklassen
+## <a name="property-qualifiers-for-raw-and-formatted-performance-classes"></a>Eigenschaftenqualifizierer für Unformatierte und formatierte Leistungsklassen
 
-In der folgenden Liste sind die Qualifizierer aufgeführt, die für Eigenschaften in Klassen gelten, die entweder von [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) oder [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleitet werden.
+In der folgenden Liste sind Qualifizierer aufgeführt, die für Eigenschaften in Klassen gelten, die entweder von [**Win32 \_ PerfRawData**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) oder [**Win32 \_ PerfFormattedData abgeleitet sind.**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)
 
 <dl> <dt>
 
-<span id="CounterType"></span><span id="countertype"></span><span id="COUNTERTYPE"></span>[**Counter Type**](countertype-qualifier.md)
+<span id="CounterType"></span><span id="countertype"></span><span id="COUNTERTYPE"></span>[**Countertype**](countertype-qualifier.md)
 </dt> <dd>
 
 **sint32**
 
-Ganzzahliger Wert in der Enumeration des Zählers, wie in Winperf. h oder Perflib. h definiert. Der [**Counter Type**](countertype-qualifier.md)-Qualifizierer gibt die Formel oder den Algorithmus zum Berechnen des Werts an, der im System Monitor für den Indikator angezeigt wird, den die Eigenschaft darstellt.
+Ganzzahliger Wert in der Enumeration des Indikatortyps, wie in Winperf.h oder Perflib.h definiert. Der [**CounterType-Qualifizierer**](countertype-qualifier.md)gibt die Formel oder den Algorithmus an, mit der bzw. dem der im Systemmonitor angezeigte Wert für den Zähler berechnet wird, den die Eigenschaft darstellt.
 
 </dd> <dt>
 
-<span id="DisplayName"></span><span id="displayname"></span><span id="DISPLAYNAME"></span>**Display Name**
+<span id="DisplayName"></span><span id="displayname"></span><span id="DISPLAYNAME"></span>**Displayname**
 </dt> <dd>
 
 **string**
 
-Der Name des Leistungs Zählers, wie durch das Leistungsdaten-Hilfsprogramm (PDH) angegeben.
+Der Name des Leistungsindikators, wie von Performance Data Helper (PDH) angegeben.
 
 </dd> <dt>
 
-<span id="HelpIndex"></span><span id="helpindex"></span><span id="HELPINDEX"></span>**Helpindex**
+<span id="HelpIndex"></span><span id="helpindex"></span><span id="HELPINDEX"></span>**HelpIndex**
 </dt> <dd>
 
 **sint32**
 
-Nicht verwendet. Enthält immer 0.
+Wird nicht verwendet. Enthält immer 0.
 
 </dd> <dt>
 
-<span id="PerfIndex"></span><span id="perfindex"></span><span id="PERFINDEX"></span>**Perfindex**
+<span id="PerfIndex"></span><span id="perfindex"></span><span id="PERFINDEX"></span>**PerfIndex**
 </dt> <dd>
 
 **sint32**
 
-Nicht verwendet. Enthält immer 0.
+Wird nicht verwendet. Enthält immer 0.
 
 </dd> </dl>
 
-## <a name="property-qualifiers-for-raw-performance-classes"></a>Eigenschafts Qualifizierer für rohleistungs Klassen
+## <a name="property-qualifiers-for-raw-performance-classes"></a>Eigenschaftenqualifizierer für Rohleistungsklassen
 
-In der folgenden Liste sind die Qualifizierer aufgeführt, die für alle Eigenschaften von Klassen gelten, die von [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata)abgeleitet werden.
+In der folgenden Liste sind Qualifizierer aufgeführt, die für alle Eigenschaften von Klassen gelten, die von [**Win32 \_ PerfRawData abgeleitet sind.**](/windows/desktop/CIMWin32Prov/win32-perfrawdata)
 
 <dl> <dt>
 
@@ -84,16 +84,16 @@ In der folgenden Liste sind die Qualifizierer aufgeführt, die für alle Eigensc
 
 **boolean**
 
-Gibt an, ob diese Eigenschaft der in Listenfeldern zu verwendende Standardwert ist. Dieser Qualifizierer ist für die Leistungsindikatoren der Version 6,0 standardmäßig auf **false** eingestellt, da Sie keine Daten dafür bereitstellen. Weitere Informationen finden Sie unter [Performance Counters](/windows/desktop/PerfCtrs/performance-counters-portal).
+Gibt an, ob diese Eigenschaft der Standardindikator ist, der in Listenfeldern verwendet werden soll. Dieser Qualifizierer ist für Die Leistungsindikatoren Version 6.0 standardmäßig auf **False** festgelegt, da er keine Daten dafür liefert. Weitere Informationen finden Sie unter [Performance Counters](/windows/desktop/PerfCtrs/performance-counters-portal).
 
 </dd> <dt>
 
-<span id="DefaultScale"></span><span id="defaultscale"></span><span id="DEFAULTSCALE"></span>**DEFAULTSCALE**
+<span id="DefaultScale"></span><span id="defaultscale"></span><span id="DEFAULTSCALE"></span>**DefaultScale**
 </dt> <dd>
 
 **sint32**
 
-Die Potenz von 10, die für die Anzeige des Zählers verwendet werden soll. Bei 0 (null) beträgt der geschätzte Höchstwert 10 ^ 0 oder 1.
+Die Leistung von 10, die für die Anzeige des Leistungsindikators verwendet werden soll. Für 0 (null) beträgt der geschätzte Höchstwert 10^0 oder 1.
 
 </dd> <dt>
 
@@ -102,87 +102,87 @@ Die Potenz von 10, die für die Anzeige des Zählers verwendet werden soll. Bei 
 
 **sint32**
 
-Zielgruppe des Wissens. Nicht verwendet. Der Wert ist immer 100.
+Kenntnisstand der Zielgruppe. Wird nicht verwendet. Der Wert ist immer 100.
 
 </dd> </dl>
 
-## <a name="property-qualifiers-for-formatted-performance-classes"></a>Eigenschafts Qualifizierer für formatierte Leistungsklassen
+## <a name="property-qualifiers-for-formatted-performance-classes"></a>Eigenschaftenqualifizierer für formatierte Leistungsklassen
 
-In der folgenden Liste sind die Qualifizierer aufgelistet, die für alle Eigenschaften von Klassen gelten, die von [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleitet werden.
+In der folgenden Liste sind Qualifizierer aufgeführt, die für alle Eigenschaften von Klassen gelten, die von [**Win32 \_ PerfFormattedData abgeleitet sind.**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)
 
 <dl> <dt>
 
-<span id="CookingType"></span><span id="cookingtype"></span><span id="COOKINGTYPE"></span>**Cookingtype**
+<span id="CookingType"></span><span id="cookingtype"></span><span id="COOKINGTYPE"></span>**Durchdungstyp**
 </dt> <dd>
 
 **string**
 
-Der Formel-Typ, mit dem das Ergebnis erzeugt wird. Jeder zähtertyp verwendet die anderen Eigenschaften Qualifizierer, um das als Wert der aktuellen Eigenschaft angezeigte Ergebnis zu berechnen. Die Qualifizierer " **Counter**", " **perftimestamp**" und " **perftimefreq** " sind Eigenschaften in einer RAW-Klasse zugeordnet, die die Daten bereitstellen
+Formeltyp, der zum Erzeugen des Ergebnisses verwendet wird. Jeder Indikatortyp verwendet die anderen Eigenschaftenqualifizierer, um das als Wert der aktuellen Eigenschaft angezeigte Ergebnis zu berechnen. Die Qualifizierer **Counter,** **PerfTimeStamp** und **PerfTimeFreq** werden Eigenschaften in einer rohen Klasse, die die Daten liefert, zuordnen.
 
-Weitere Informationen finden Sie unter [Counter Type-Qualifizierer](countertype-qualifier.md).
+Weitere Informationen finden Sie unter [CounterType-Qualifizierer](countertype-qualifier.md).
 
 </dd> <dt>
 
-<span id="Counter"></span><span id="counter"></span><span id="COUNTER"></span>**Indikator**
+<span id="Counter"></span><span id="counter"></span><span id="COUNTER"></span>**Zähler**
 </dt> <dd>
 
 **string**
 
-Der Name einer erforderlichen Eigenschaft in der entsprechenden RAW-Klasse, die als Leistungswert in der Koch Formel verwendet werden soll. Der Wert muss der Eigenschaftsname der Datenquellen Eigenschaft in der entsprechenden RAW-Klasse sein.
+Der Name einer erforderlichen Eigenschaft in der entsprechenden rohen Klasse, die als Indikatorwert in der Formel für die Formel verwendet werden soll. Der Wert muss der Eigenschaftenname der Datenquelleneigenschaft in der entsprechenden rohen Klasse sein.
 
 </dd> <dt>
 
-<span id="PerfTimeStamp"></span><span id="perftimestamp"></span><span id="PERFTIMESTAMP"></span>**Perftimestamp**
+<span id="PerfTimeStamp"></span><span id="perftimestamp"></span><span id="PERFTIMESTAMP"></span>**PerfTimeStamp**
 </dt> <dd>
 
 **string**
 
-Der Name einer Eigenschaft in einer RAW-Klasse, die als Häufigkeit in der Koch Formel verwendet werden soll. Der entsprechende Standardwert auf Klassenebene wird verwendet, wenn dieser Qualifizierer für die Eigenschaft nicht vorhanden ist. Die Häufigkeit stellt die Ticks pro Sekunde des Zeitstempels dar.
+Der Name einer Eigenschaft in einer rohen Klasse, die als Häufigkeit in der Formel für die Formel für Die Formel verwendet werden soll. Der entsprechende Standardwert auf Klassenebene wird verwendet, wenn dieser Qualifizierer für die Eigenschaft nicht vorhanden ist. Die Häufigkeit stellt die Ticks pro Sekunde des Zeitstempels dar.
 
 </dd> <dt>
 
-<span id="PerfTimeFreq"></span><span id="perftimefreq"></span><span id="PERFTIMEFREQ"></span>**Perftimefreq**
+<span id="PerfTimeFreq"></span><span id="perftimefreq"></span><span id="PERFTIMEFREQ"></span>**PerfTimeFreq**
 </dt> <dd>
 
 **string**
 
-Der Name einer Eigenschaft in einer RAW-Klasse, die in der Koch Formel als Zeitstempel verwendet werden soll. Der geeignete Standardwert auf Klassenebene wird verwendet, wenn dieser Qualifizierer für die Eigenschaft nicht vorhanden ist. Ein automatisch generierter Zeitstempel kann einen Fehler in einer Berechnung verursachen, da der Zeitstempel ein Näherungswert ist und keinen mehr Aufwand verursacht, der durch das Marshalling und die tatsächliche Datenerfassung verursacht wird.
+Name einer Eigenschaft in einer rohen Klasse, die als Zeitstempel in der Formel für die Formel der Formel verwendet werden soll. Der entsprechende Standardwert auf Klassenebene wird verwendet, wenn dieser Qualifizierer für die Eigenschaft nicht vorhanden ist. Ein automatisch generierter Zeitstempel führt möglicherweise zu einem Fehler in einer Berechnung, da der Zeitstempel eine Näherung ist und den Mehraufwand durch Marshalling und die tatsächliche Datensammlung nicht berücksichtigt.
 
 </dd> </dl>
 
-## <a name="how-to-interpret-property-qualifiers"></a>Interpretieren von Eigenschaften Qualifizierern
+## <a name="how-to-interpret-property-qualifiers"></a>Interpretieren von Eigenschaftsqualifizierern
 
-Eigenschaften in den [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) -Klassen enthalten die berechneten Daten, die von der [formatierten Leistungs Datenanbieter](formatted-performance-data-provider.md)bereitgestellt werden. Der Eigenschafts Wert ist das abschließende berechnete Ergebnis. Die Qualifizierer stellen eine Anleitung bereit.
+Eigenschaften in den [**Win32 \_ PerfFormattedData-Klassen**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) enthalten die berechneten Daten, die von [der Formatted Performance Datenanbieter.](formatted-performance-data-provider.md) Der Eigenschaftswert ist das berechnete Endergebnis. Die Qualifizierer geben ein Rezept an.
 
-Der **Counter** -und der **Basis** Qualifizierer zeigen auf die Datenquellen, und **cookingtype** gibt die Formel an, mit der das Ergebnis erzeugt wird. Der Zeitstempel und die Stichproben Häufigkeit stammen auch aus der entsprechenden RAW-Klasse und sind in **perftimestamp** und **perftimefreq** benannt.
+Die  **Qualifizierer Counter** und Base zeigen auf die Datenquellen, **und Der Zählertyp** gibt die Formel an, die zum Erzeugen des Ergebnisses verwendet wird. Der Zeitstempel und die Stichprobenhäufigkeit stammen ebenfalls aus der entsprechenden rohen Klasse und werden in **PerfTimeStamp** und **PerfTimeFreq benannt.**
 
-Beispielsweise enthält eine der formatierten Klassen, die von WMI, [**Win32 \_ perfformatteddata \_ perfdisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md), bereitgestellt wird, eine Eigenschaft mit dem Namen **avgdiskbytesperread**. Der Name der Eigenschaft in der formatierten Klasse muss mit der Eigenschaft in der RAW-Klasse identisch sein. Die **avgdiskbytesperread** -Eigenschaft verfügt über die folgenden Qualifizierer.
+Beispielsweise enthält eine der von WMI bereitgestellten formatierten Klassen [**Win32 \_ PerfFormattedData \_ PerfDisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md)eine Eigenschaft namens **AvgDiskBytesPerRead.** Der Name der Eigenschaft in der formatierten Klasse muss mit der Eigenschaft in der rohen Klasse identisch sein. Die **AvgDiskBytesPerRead-Eigenschaft** verfügt über die folgenden Qualifizierer.
 
-In der folgenden Liste sind die verfügbaren Eigenschafts Qualifizierer für Eigenschaften aller von [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)abgeleiteten Klassen aufgeführt.
+In der folgenden Liste sind die verfügbaren Eigenschaftenqualifizierer für Eigenschaften aller Klassen aufgeführt, die von [**Win32 \_ PerfFormattedData abgeleitet wurden.**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)
 
 
 
 | Qualifizierer         | Wert                     |
 |-------------------|---------------------------|
-| **Cookingtype**   | Durchschn. \_ Durchschnittswert \_       |
-| **Leistungsindikator**       | Avgdiskbytesperread       |
-| **Perftimestamp** | Zeitstempel ( \_ PerfTime)       |
-| **Perftimefreq**  | \_PerfTime-Häufigkeit       |
-| **Perfindex**     | 408                       |
-| **Helpindex**     | 409                       |
-| **Sock**          | Avgdiskbytesperread- \_ Basis |
+| **Durchdungstyp**   | PERF \_ AVERAGE \_ BULK       |
+| **Leistungsindikator**       | AvgDiskBytesPerRead       |
+| **PerfTimeStamp** | Timestamp \_ PerfTime       |
+| **PerfTimeFreq**  | Frequency \_ PerfTime       |
+| **PerfIndex**     | 408                       |
+| **HelpIndex**     | 409                       |
+| **Basis**          | AvgDiskBytesPerRead-Basis \_ |
 
 
 
  
 
-Die **avgdiskbytesperread** -Eigenschaft meldet die durchschnittliche Anzahl von Bytes, die während Lesevorgängen vom Datenträger übertragen werden. Die Formel für die durchschnittliche Leistungsdauer \_ \_ ist:
+Die **AvgDiskBytesPerRead-Eigenschaft** meldet die durchschnittliche Anzahl von Bytes, die während Lesevorgängen vom Datenträger übertragen werden. Die Formel für PERF \_ AVERAGE \_ BULK ist:
 
-(Sample2-sample1)/(Base sample2-Base sample1)
+(Sample2 – Sample1) / (Basisbeispiel2 – Basisbeispiel1)
 
-Der Lesevorgang wird mit der durch **perftimefreq** angegebenen Häufigkeit mit dem **perftimestamp** -Wert, der das aktuelle Beispiel anzeigt, abgefragt. Die Rohdaten des Leistungsindikators in Bytes werden von der **avgdiskbytesperread** -Eigenschaft in der [**Win32 \_ perfrawdata \_ perfdisk \_ LogicalDisk**](./retrieving-raw-and-formatted-performance-data.md) -Klasse entnommen. Die Basis Anzahl der Vorgangs Daten wird von der **avgdiskbytesperread- \_ Basis** Eigenschaft in derselben Klasse entnommen.
+Die Stichprobenentnahme für den Lesevorgang wird mit der von **PerfTimeFreq** angegebenen Häufigkeit durchgeführt, und der **PerfTimeStamp-Wert** gibt das neueste Beispiel an. Die rohen Indikatordaten in Bytes werden aus der **AvgDiskBytesPerRead-Eigenschaft** in der [**Win32 \_ PerfRawData \_ PerfDisk \_ LogicalDisk-Klasse**](./retrieving-raw-and-formatted-performance-data.md) übernommen. Die Basisanzahl der Betriebsdaten wird aus der **AvgDiskBytesPerRead \_ Base-Eigenschaft** in derselben Klasse übernommen.
 
-Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](obtaining-statistical-performance-data.md) und über [Wachen von Leistungsdaten](monitoring-performance-data.md).
+Weitere Informationen finden Sie unter [Abrufen statistischer Leistungsdaten und](obtaining-statistical-performance-data.md) [Überwachen von Leistungsdaten.](monitoring-performance-data.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -191,16 +191,16 @@ Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](ob
 [Überwachen von Leistungsdaten](monitoring-performance-data.md)
 </dt> <dt>
 
-[Für WMI-Leistungsklassen spezifische Qualifizierer](qualifiers-specific-to-wmi-performance-classes.md)
+[Spezifische Qualifizierer für WMI-Leistungsklassen](qualifiers-specific-to-wmi-performance-classes.md)
 </dt> <dt>
 
-[Leistungs Leistungsdaten-Klassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
+[Leistungsindikatorklassen](/windows/desktop/CIMWin32Prov/performance-counter-classes)
 </dt> <dt>
 
 [Zugreifen auf vorinstallierte WMI-Leistungsklassen](accessing-wmi-preinstalled-performance-classes.md)
 </dt> <dt>
 
-[WMI-Tasks: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
+[WMI-Aufgaben: Leistungsüberwachung](wmi-tasks--performance-monitoring.md)
 </dt> </dl>
 
  

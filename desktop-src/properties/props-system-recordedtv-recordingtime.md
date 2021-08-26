@@ -4,16 +4,16 @@ ms.assetid: 7df8a958-b844-4b56-93a7-cc6c1dbf1e8f
 title: System.RecordedTV.RecordingTime
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 24623da0f20a29edb6ef630b03c7031865593ee7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e7dc783b727db98ceb3213738f2251be1bfe29b43b612f538cebbc7fc8ec9e6a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938170"
 ---
 # <a name="systemrecordedtvrecordingtime"></a>System.RecordedTV.RecordingTime
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -28,7 +28,7 @@ propertyDescription
       type = DateTime
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

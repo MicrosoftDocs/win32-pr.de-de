@@ -4,16 +4,16 @@ ms.assetid: 528763a2-c0f2-4981-91dc-dd17987f5bd5
 title: Leeren von Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 750ddd052c18928d53511d9e955122d2d66ee59d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c8a435bf40ae9f71b35707935812c3a935a95df1904db00a652634b171f20a10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965460"
 ---
 # <a name="flushing-data"></a>Leeren von Daten
 
-Der folgende Pseudo Code zeigt, wie die [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -Methode implementiert wird:
+Der folgende Pseudocode zeigt, wie die [**IPin::BeginFlush-Methode implementiert**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) wird:
 
 
 ```C++
@@ -49,13 +49,13 @@ HRESULT CMyInputPin::BeginFlush()
 
 
 
-Wenn das leeren gestartet wird, übernimmt die **beginflush** -Methode die Filter Sperre, die die Zustandsänderung serialisiert. Es ist noch nicht sicher, die streamingsperre zu übernehmen, da das leeren im Anwendungs Thread erfolgt und sich der streamingingthread in der Mitte eines **Empfangs** Aufrufens befinden kann. Die PIN muss gewährleisten, dass der **Empfangs** Vorgang nicht blockiert wird und dass alle nachfolgenden **Empfangs** Aufrufe fehlschlagen. Die [**cbaseinputpin:: beginflush**](cbaseinputpin-beginflush.md) -Methode legt das interne Flag [**cbaseinputpin:: m \_ bflush**](cbaseinputpin-m-bflushing.md)fest. Wenn das-Flag den Wert **true** hat, schlägt die **Receive** -Methode fehl.
+Wenn das Leeren beginnt, verwendet die **BeginFlush-Methode** die Filtersperre, die die Zustandsänderung serialisiert. Es ist noch nicht sicher, die Streamingsperre zu verwenden, da das Leeren im Anwendungsthread erfolgt und sich der Streamingthread möglicherweise in der Mitte eines **Receive-Aufrufs** befindet. Die Pin muss garantieren, dass **Receive** nicht blockiert wird und dass alle nachfolgenden Aufrufe von **Receive** fehlschlagen. Die [**CBaseInputPin::BeginFlush-Methode**](cbaseinputpin-beginflush.md) legt das interne Flag [**CBaseInputPin::m \_ bFlushing fest.**](cbaseinputpin-m-bflushing.md) Wenn das Flag **TRUE ist,** schlägt die **Receive-Methode** fehl.
 
-Durch die Bereitstellung des **beginflush** -Aufrufs nach unten stellt die PIN sicher, dass alle downstreamfilter Ihre Beispiele freigeben und von **Empfangs** Aufrufen zurückgegeben werden. Dadurch wird sichergestellt, dass die Eingabe-PIN nicht blockiert wird, um auf **GetBuffer** oder **Receive** zu warten. Wenn die **Receive** -Methode der PIN jemals auf ein Ereignis wartet (z. b. zum Abrufen von Ressourcen), sollte die **beginflush** -Methode die Wartezeit erzwingen, indem das-Ereignis festgelegt wird. An diesem Punkt wird die **Receive** -Methode garantiert zurückgegeben, und das **m \_ bgeleert** -Flag verhindert, dass neue **Empfangs** Aufrufe durchgeführt werden.
+Durch die Bereitstellung des **BeginFlush-Aufrufs** nachgeschaltet stellt der Pin sicher, dass alle Downstreamfilter ihre Stichproben frei geben und von **Receive-Aufrufen zurückgeben.** Dadurch wird wiederum sichergestellt, dass der Eingabepin nicht blockiert wird und auf **GetBuffer oder** **Receive wartet.** Wenn die **Receive-Methode** Ihres Pins jemals auf ein Ereignis wartet (z. B. um Ressourcen zu erhalten), sollte die **BeginFlush-Methode** erzwingen, dass der Warte-Prozess beendet wird, indem das -Ereignis festlegen. An diesem Punkt wird garantiert, dass die **Receive-Methode** zurückkommt, und das **Flag m \_ bFlushing** verhindert, dass neue **Receive-Aufrufe** arbeiten.
 
-Für einige Filter ist dies alles, was **beginflush** tun muss. Die **endflush** -Methode signalisiert dem Filter, dass Sie die Beispiele erneut empfangen kann. Andere Filter müssen möglicherweise Variablen oder Ressourcen in **beginflush** verwenden, die auch beim **Empfang** verwendet werden. In diesem Fall sollte der Filter zuerst die streamingsperre enthalten. Stellen Sie sicher, dass Sie dies vor den vorherigen Schritten nicht durchführen, da Sie möglicherweise einen Deadlock verursachen.
+Bei einigen Filtern ist dies alles, was **BeginFlush** tun muss. Die **EndFlush-Methode** signalisiert dem Filter, dass sie wieder Stichproben empfangen kann. Andere Filter müssen möglicherweise Variablen oder Ressourcen in **BeginFlush verwenden,** die auch in **Receive verwendet werden.** In diesem Fall sollte der Filter zuerst die Streamingsperre halten. Achten Sie darauf, dies nicht vor einem der vorherigen Schritte zu tun, da Sie möglicherweise einen Deadlock verursachen.
 
-Die **endflush** -Methode enthält die Filter Sperre und gibt den nachfolgenden Rückruf aus:
+Die **EndFlush-Methode** enthält die Filtersperre und gibt den Aufruf nachgeschaltet weiter:
 
 
 ```C++
@@ -70,7 +70,7 @@ HRESULT CMyInputPin::EndFlush()
 
 
 
-Die [**cbaseinputpin:: endflush**](cbaseinputpin-endflush.md) -Methode setzt das **m \_ bflush** -Flag auf " **false**" zurück. Dadurch kann die **Receive** -Methode erneut Beispiele empfangen. Dies sollte der letzte Schritt in **endflush** sein, da die PIN keine Stichproben erhalten darf, bis der Löschvorgang vollständig ist und alle downstreamfilter benachrichtigt werden.
+Die [**CBaseInputPin::EndFlush-Methode**](cbaseinputpin-endflush.md) setzt das **m \_ bFlushing-Flag** auf **FALSE** zurück, wodurch die **Receive-Methode** wieder Mit dem Empfang von Stichproben beginnen kann. Dies sollte der letzte Schritt in **EndFlush** sein, da der Pin keine Stichproben empfangen darf, bis das Leeren abgeschlossen ist und alle Downstreamfilter benachrichtigt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
