@@ -1,41 +1,41 @@
 ---
-description: Erfahren Sie mehr über das benutzerkonfigurierbare PageMediaSize-Element. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
+description: Erfahren Sie mehr über das vom Benutzer konfigurierbare PageMediaSize-Element. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
 ms.assetid: 6f99f54b-c401-42ea-8715-95a2aad73042
 title: Pagemediasize
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 907f6a76932e17b6d60a67a65c3cfa657282b60c
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 075e6e683d9de419ea115c2873aff09698b784a19a86b6d0969a094c4f0636bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948244"
 ---
 # <a name="pagemediasize"></a>Pagemediasize
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Beschreibt die für die Ausgabe verwendeten physischen Mediendimensionen.
+Beschreibt die physischen Mediendimensionen, die für die Ausgabe verwendet werden.
 
-Das folgende Diagramm veranschaulicht die Verwendung von PageMediaSize-Variablen (option ISOA4 wird als Beispiel verwendet).
+Das folgende Diagramm veranschaulicht die Verwendung der PageMediaSize-Variablen (die Option ISOA4 wird als Beispiel verwendet).
 
-![Diagramm, das die Seitendimensionen zeigt](images/local-1594393517-pagemediasizepic.gif)
+![Ein Diagramm, das die Seitendimensionen zeigt](images/local-1594393517-pagemediasizepic.gif)
 
 -   [Elementinformationen](#element-information)
--   [Strukturelle Inhalte](#structural-content)
--   [Extensible Markup Language (XML)-Inhalt](#extensible-markup-language-xml-content)
+-   [Strukturell](#structural-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
 | Name                 | Wert        |
 |----------------------|--------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Seite<br/>    |
 | Hinweise <br/>          | Keine<br/>    |
 
-## <a name="structural-content"></a>Strukturelle Inhalte
+## <a name="structural-content"></a>Strukturell
 
-Die XML-Struktur dieses Elements ist:
+Die XML-Struktur dieses Elements lautet:
 
 ``` syntax
 <psf:Feature name="psk:PageMediaSize">
@@ -59,27 +59,27 @@ Die XML-Struktur dieses Elements ist:
 
 ## <a name="structure-variables"></a>Strukturvariablen
 
-In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
+In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
 
 
 
 | Name                                | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                                                                   |
 |-------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>           | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Gibt den Namen des Mediums an. Die Benennung sollte die folgende Konvention verwenden: " \_ OptionNameStandard \_ "" \_ OptionNameCommonName \_ "" \_ OptionNameDescriptor \_ ".<br/> |
-| \_IdentityOptionValue\_<br/>  | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>                                                                                              |
+| \_Optionname\_<br/>           | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Gibt den Namen des Mediums an. Die Benennung sollte die folgende Konvention verwenden: " \_ OptionNameStandard \_ "" \_ OptionNameCommonName \_ "" \_ OptionNameDescriptor \_ ".<br/> |
+| \_IdentityOptionValue\_<br/>  | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                                                              |
 | \_OptionNameStandard\_<br/>   | Zeichenfolge<br/>  | Buchstaben<br/> | "ISO", "JIS", "Japan", "NorthAmerica", "OtherMetric", "PRC", keine.<br/>                                                                                                         | Gibt an, ob die Mediengröße durch einen bestimmten Standard definiert ist.<br/>                                                                                               |
-| \_OptionNameCommonName\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch [Namespaces in XML definiert.](https://www.w3.org/TR/1999/REC-xml-names-19990114/) Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der allgemeine Name für die Mediengröße.<br/>                                                                                                                                |
-| \_OptionNameDescriptor\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/> | Big, Envelope, Extra, Plus, Rotated, Sheet, 'none'.<br/>                                                                                                              | Big, Envelope, Extra, Plus, Rotated, Sheet, 'none'.<br/>                                                                                                  |
-| \_MediaSizeWidth\_<br/>       | integer<br/> | Mikron<br/>    | Größer als 0, kleiner als die maximale Unterstützungsmediengröße für das Gerät.<br/>                                                                                                           | Gibt die Breite des physischen Mediums an.<br/>                                                                                                                     |
-| \_MediaSizeHeight\_<br/>      | integer<br/> | Mikron<br/>    | Größer als 0, kleiner als die maximale Unterstützungsmediengröße für das Gerät.<br/>                                                                                                           | Gibt die Höhe des physischen Mediums an.<br/>                                                                                                                    |
+| \_OptionNameCommonName\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Allgemeiner Name für die Mediengröße.<br/>                                                                                                                                |
+| \_OptionNameDescriptor\_<br/> | Zeichenfolge<br/>  | Buchstaben<br/> | "Big", "Envelope", "Extra", "Plus", "Rotated", "Sheet", "none".<br/>                                                                                                              | "Big", "Envelope", "Extra", "Plus", "Rotated", "Sheet", "none".<br/>                                                                                                  |
+| \_MediaSizeWidth\_<br/>       | integer<br/> | Mikron<br/>    | Größer als 0, kleiner als die maximale Unterstützung der Mediengröße für das Gerät.<br/>                                                                                                           | Gibt die Breite des physischen Mediums an.<br/>                                                                                                                     |
+| \_MediaSizeHeight\_<br/>      | integer<br/> | Mikron<br/>    | Größer als 0, kleiner als die maximale Unterstützung der Mediengröße für das Gerät.<br/>                                                                                                           | Gibt die Höhe des physischen Mediums an.<br/>                                                                                                                    |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language (XML)-Inhalt
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
-Die Schlüsselwörter des öffentlichen Druckschemas werden im -Namespace `https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords` definiert. Der öffentliche Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
+Die Schlüsselwörter für das öffentliche Druckschema werden im `https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords` -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 
 ``` syntax
 <psf:Feature name="psk:PageMediaSize">

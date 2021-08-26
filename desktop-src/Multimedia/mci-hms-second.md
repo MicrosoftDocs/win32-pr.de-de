@@ -1,9 +1,9 @@
 ---
-title: MCI_HMS_SECOND-Makro (mciapi. h)
-description: Das MCI-Element für die \_ HMS \_ -Sekunde ruft die Sekunden Komponente von einem Parameter ab, der die Informationen zu den Informationen zu den gepackten Stunden/Minuten/Sekunden (
+title: MCI_HMS_SECOND Makro (Mciapi.h)
+description: Das MCI \_ HMS \_ SECOND-Makro ruft die Sekundenkomponente aus einem Parameter ab, der gepackte Informationen zu Stunden/Minuten/Sekunden (HMS) enthält.
 ms.assetid: b6895bec-524f-4345-ae65-e75168855df2
 keywords:
-- MCI_HMS_SECOND Makro Windows Multimedia
+- MCI_HMS_SECOND-Makro Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 30b869141d6480ba0d986450ce950097ba240009
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc61747d891d3c91afd5e4cb7f9a16eef44e13eb3de275bbf9575d8a4f584d40
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039230"
 ---
-# <a name="mci_hms_second-macro"></a>MCI- \_ HMS- \_ zweites Makro
+# <a name="mci_hms_second-macro"></a>MCI \_ HMS \_ SECOND-Makro
 
-Das MCI-Element für die **\_ HMS- \_ Sekunde** Ruft die Sekunden Komponente von einem Parameter ab, der die Informationen zu den Informationen zu den gepackten Stunden/Minuten/Sekunden (
+Das **MCI \_ HMS \_ SECOND-Makro** ruft die Sekundenkomponente aus einem Parameter ab, der gepackte Informationen zu Stunden/Minuten/Sekunden (HMS) enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,22 +40,22 @@ BYTE MCI_HMS_SECOND(
 
 <dl> <dt>
 
-*dwhms* 
+*dwHMS* 
 </dt> <dd>
 
-Zeit im "HMS"-Format.
+Zeit im HMS-Format.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Sekunden Komponente der angegebenen HMS-Informationen zurück.
+Gibt die Sekundenkomponente der angegebenen HMS-Informationen zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Zeit im "HMS"-Format wird als **DWORD** -Wert mit dem niedrigsten signifikanten Byte, das Stunden enthält, dem nächst bedeutsamen Byte, das Minuten enthält, und dem nächstniedrigsten Byte mit Sekunden ausgedrückt. Das signifikanteste Byte wird nicht verwendet.
+Die Zeit im HMS-Format wird als **DWORD-Wert** mit dem am wenigsten signifikanten Byte mit Stunden, dem nächstwertigen Byte mit Minuten und dem nächstletzten Byte mit Sekunden ausgedrückt. Das wichtigste Byte wird nicht verwendet.
 
-Das **MCI-Element " \_ HMS \_ Second** " ist wie folgt definiert:
+Das **MCI \_ HMS \_ SECOND-Makro** ist wie folgt definiert:
 
 
 ```C++
@@ -72,7 +72,7 @@ Das **MCI-Element " \_ HMS \_ Second** " ist wie folgt definiert:
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Das **MCI-Element " \_ HMS \_ Second** " ist wie folgt definiert:
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Makros](mci-macros.md)

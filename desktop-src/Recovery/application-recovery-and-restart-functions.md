@@ -1,37 +1,37 @@
 ---
-title: Funktionen für die Anwendungs Wiederherstellung und Neustart
-description: 'Anwendungs Wiederherstellung und Neustart definiert die folgenden Funktionen:'
+title: Anwendungswiederherstellungs- und Neustartfunktionen
+description: Anwendungswiederherstellung und Neustart definiert die folgenden Funktionen.
 ms.assetid: 17de24d1-32fe-4b2d-a224-3730af73c892
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6f9f5fb41f2ef694b4d99044a8756ff0bb66c3f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5df0a2139a24c3e69ae328533d6bf8b1baeee2043bc82b9f8d50f4272a16e2f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024620"
 ---
-# <a name="application-recovery-and-restart-functions"></a>Funktionen für die Anwendungs Wiederherstellung und Neustart
+# <a name="application-recovery-and-restart-functions"></a>Anwendungswiederherstellungs- und Neustartfunktionen
 
-Anwendungs Wiederherstellung und Neustart definiert die folgenden Funktionen:
+Anwendungswiederherstellung und Neustart definieren die folgenden Funktionen:
 
 
 
 | Funktion                                                                               | BESCHREIBUNG                                                                                |
 |----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Applicationwiederherstellungsfertig**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryfinished)                     | Gibt an, dass die aufrufenden Anwendung die Datenwiederherstellung abgeschlossen hat.                    |
-| [**Applicationwiederherstellungsinprogress**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryinprogress)                 | Gibt an, dass die aufrufende Anwendung weiterhin Daten wieder hergestellt.                      |
-| [**Getapplicationwiederherstellungsrückruf**](/windows/win32/api/winbase/nf-winbase-getapplicationrecoverycallback)               | Ruft einen Zeiger auf die Wiederherstellungs Rückruf Routine ab, die für den angegebenen Prozess registriert ist. |
-| [**Getapplicationrestartsettings**](/windows/win32/api/winbase/nf-winbase-getapplicationrestartsettings)                 | Ruft die für den angegebenen Prozess registrierten Neustart Informationen ab.                    |
-| [**Registerapplicationwiederherstellungsrückruf**](/windows/win32/api/winbase/nf-winbase-registerapplicationrecoverycallback)     | Registriert die aktive Instanz einer Anwendung für die Wiederherstellung.                              |
+| [**ApplicationRecoveryFinished**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryfinished)                     | Gibt an, dass die aufrufende Anwendung die Datenwiederherstellung abgeschlossen hat.                    |
+| [**ApplicationRecoveryInProgress**](/windows/win32/api/winbase/nf-winbase-applicationrecoveryinprogress)                 | Gibt an, dass die aufrufende Anwendung weiterhin Daten wiederherstellt.                      |
+| [**GetApplicationRecoveryCallback**](/windows/win32/api/winbase/nf-winbase-getapplicationrecoverycallback)               | Ruft einen Zeiger auf die Für den angegebenen Prozess registrierte Wiederherstellungsrückrufroutine ab. |
+| [**GetApplicationRestartSettings**](/windows/win32/api/winbase/nf-winbase-getapplicationrestartsettings)                 | Ruft die für den angegebenen Prozess registrierten Neustartinformationen ab.                    |
+| [**RegisterApplicationRecoveryCallback**](/windows/win32/api/winbase/nf-winbase-registerapplicationrecoverycallback)     | Registriert die aktive Instanz einer Anwendung für die Wiederherstellung.                              |
 | [**RegisterApplicationRestart**](/windows/win32/api/winbase/nf-winbase-registerapplicationrestart)                       | Registriert die aktive Instanz einer Anwendung für den Neustart.                               |
-| [**Unregisterapplicationwiederherstellungsrückruf**](/windows/win32/api/winbase/nf-winbase-unregisterapplicationrecoverycallback) | Entfernt die aktive Instanz einer Anwendung aus der Wiederherstellungs Liste.                      |
-| [**Unregisterapplicationrestart**](/windows/win32/api/winbase/nf-winbase-unregisterapplicationrestart)                   | Entfernt die aktive Instanz einer Anwendung aus der Neustart Liste.                       |
+| [**UnregisterApplicationRecoveryCallback**](/windows/win32/api/winbase/nf-winbase-unregisterapplicationrecoverycallback) | Entfernt die aktive Instanz einer Anwendung aus der Wiederherstellungsliste.                      |
+| [**UnregisterApplicationRestart**](/windows/win32/api/winbase/nf-winbase-unregisterapplicationrestart)                   | Entfernt die aktive Instanz einer Anwendung aus der Neustartliste.                       |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

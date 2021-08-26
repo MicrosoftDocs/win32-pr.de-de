@@ -1,10 +1,10 @@
 ---
-title: Ibackgroundcopycallback-Schnittstelle (deliveryoptimization. h)
-description: Implementieren Sie die ibackgroundcopycallback-Schnittstelle, um eine Benachrichtigung zu erhalten, dass ein Auftrag abgeschlossen ist, geändert wurde oder fehlerhaft ist. Clients verwenden diese Schnittstelle, anstatt den Status des Auftrags abzufragen.
+title: IBackgroundCopyCallback-Schnittstelle (Deliveryoptimization.h)
+description: Implementieren Sie die IBackgroundCopyCallback-Schnittstelle, um eine Benachrichtigung zu erhalten, dass ein Auftrag abgeschlossen ist, geändert wurde oder einen Fehler auft. Clients verwenden diese Schnittstelle, anstatt den Status des Auftrags ab umfragen.
 ms.assetid: CF85D852-1B4E-4BC2-B6A6-0035ED3C439C
 keywords:
-- Ibackgroundcopycallback-Schnittstelle
-- Ibackgroundcopycallback-Schnittstelle, beschrieben
+- IBackgroundCopyCallback-Schnittstelle
+- IBackgroundCopyCallback-Schnittstelle, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,44 +16,44 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4169acec87e4d1e8a31eecaa4f93b9404aafb714
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 165a1edcdb6bd70de8fad379fcc89d5afc36776348fd7751277614229a23377e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953640"
 ---
-# <a name="ibackgroundcopycallback-interface"></a>Ibackgroundcopycallback-Schnittstelle
+# <a name="ibackgroundcopycallback-interface"></a>IBackgroundCopyCallback-Schnittstelle
 
-Implementieren Sie die **ibackgroundcopycallback** -Schnittstelle, um eine Benachrichtigung zu erhalten, dass ein Auftrag abgeschlossen ist, geändert wurde oder fehlerhaft ist. Clients verwenden diese Schnittstelle, anstatt den Status des Auftrags abzufragen.
+Implementieren Sie **die IBackgroundCopyCallback-Schnittstelle,** um eine Benachrichtigung zu erhalten, dass ein Auftrag abgeschlossen ist, geändert wurde oder einen Fehler auft. Clients verwenden diese Schnittstelle, anstatt den Status des Auftrags ab umfragen.
 
 ## <a name="members"></a>Member
 
-Die **ibackgroundcopycallback** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ibackgroundcopycallback** verfügt auch über die folgenden Typen von Membern:
+Die **IBackgroundCopyCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IBackgroundCopyCallback** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ibackgroundcopycallback** -Schnittstelle verfügt über diese Methoden.
+Die **IBackgroundCopyCallback-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                    | BESCHREIBUNG                                                                       |
 |:--------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
-| [**Joberror**](ibackgroundcopycallback-joberror-method.md)               | Wird aufgerufen, wenn ein Fehler auftritt.<br/>                                           |
-| [**Jobmodifizierung**](ibackgroundcopycallback-jobmodification-method.md) | Wird aufgerufen, wenn ein Auftrag geändert wird.<br/>                                         |
-| [**Jobübertragene**](ibackgroundcopycallback-jobtransferred.md)          | Wird aufgerufen, wenn alle Dateien im Auftrag erfolgreich übertragen wurden.<br/> |
+| [**JobError**](ibackgroundcopycallback-joberror-method.md)               | Wird aufgerufen, wenn ein Fehler auftritt.<br/>                                           |
+| [**JobModification**](ibackgroundcopycallback-jobmodification-method.md) | Wird aufgerufen, wenn ein Auftrag geändert wird.<br/>                                         |
+| [**JobTransferred**](ibackgroundcopycallback-jobtransferred.md)          | Wird aufgerufen, wenn alle Dateien im Auftrag erfolgreich übertragen wurden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Benachrichtigungen zu empfangen, rufen Sie die [**ibackgroundcopyjob:: setnotifyinterface**](ibackgroundcopyjob-setnotifyinterface.md) -Methode auf, um den Schnittstellen Zeiger auf die **ibackgroundcopycallback** -Implementierung anzugeben. Um anzugeben, welche Benachrichtigungen Sie empfangen möchten, müssen Sie die [**ibackgroundcopyjob:: setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md) -Methode aufrufen.
+Rufen Sie zum Empfangen von Benachrichtigungen die [**IBackgroundCopyJob::SetNotifyInterface-Methode**](ibackgroundcopyjob-setnotifyinterface.md) auf, um den Schnittstellenzeiger auf Ihre **IBackgroundCopyCallback-Implementierung** anzugeben. Um anzugeben, welche Benachrichtigungen Sie empfangen möchten, rufen Sie die [**IBackgroundCopyJob::SetNotifyFlags-Methode**](ibackgroundcopyjob-setnotifyflags.md) auf.
 
-Ruft ihre Rückrufe auf, solange der Schnittstellen Zeiger gültig ist. Die Benachrichtigungs Schnittstelle ist nicht mehr gültig, wenn die Anwendung beendet wird. Behält die Benachrichtigungs Schnittstelle nicht bei. Folglich sollte der Initialisierungs Prozess ihrer Anwendung die [**setnotifyinterface**](ibackgroundcopyjob-setnotifyinterface.md) -Methode für die vorhandenen Aufträge aufrufen, für die Sie eine Benachrichtigung erhalten möchten.
+DO rufen Ihre Rückrufe auf, solange der Schnittstellenzeiger gültig ist. Die Benachrichtigungsschnittstelle ist nicht mehr gültig, wenn Ihre Anwendung beendet wird. DIE Benachrichtigungsschnittstelle wird nicht beibehalten. Daher sollte der Initialisierungsprozess Ihrer Anwendung die [**SetNotifyInterface-Methode**](ibackgroundcopyjob-setnotifyinterface.md) für die vorhandenen Aufträge aufrufen, für die Sie eine Benachrichtigung erhalten möchten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,13 +61,13 @@ Ruft ihre Rückrufe auf, solange der Schnittstellen Zeiger gültig ist. Die Bena
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97ea99c7-0186-4ad4-8df9-c5b4e0ed6b22 definiert.<br/>          |
+| IID<br/>                      | IID_IBackgroundCopyCallback ist als 97EA99C7-0186-4AD4-8DF9-C5B4E0ED6B22 definiert.<br/>          |
 
 
 
@@ -78,10 +78,10 @@ Ruft ihre Rückrufe auf, solange der Schnittstellen Zeiger gültig ist. Die Bena
 [**IBackgroundCopyJob**](ibackgroundcopyjob-.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: setnotifyflags**](ibackgroundcopyjob-setnotifyflags.md)
+[**IBackgroundCopyJob::SetNotifyFlags**](ibackgroundcopyjob-setnotifyflags.md)
 </dt> <dt>
 
-[**Ibackgroundcopyjob:: setnotifyinterface**](ibackgroundcopyjob-setnotifyinterface.md)
+[**IBackgroundCopyJob::SetNotifyInterface**](ibackgroundcopyjob-setnotifyinterface.md)
 </dt> </dl>
 
  

@@ -4,49 +4,49 @@ ms.assetid: ce773140-7e50-4b72-8cb5-e34cba51644d
 title: Festlegen von Eigenschaften für Effekte und Übergänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4ddd129eb9d4ab24ebef6f5c760a4211f26c9a6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1305eb7860b5519b14cfeebc349643c2662db3f133c0bf3424d1d71ccf85753c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904260"
 ---
 # <a name="setting-properties-on-effects-and-transitions"></a>Festlegen von Eigenschaften für Effekte und Übergänge
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Viele [DirectShow-Bearbeitungs Dienste](directshow-editing-services.md) haben Auswirkungen und Übergängen unterstützen Eigenschaften, die ihr Verhalten steuern. Eine Anwendung kann den Wert einer Eigenschaft mithilfe der [**ipropertysetter**](ipropertysetter.md) -Schnittstelle festlegen. Das zugrunde liegende Effekt-oder Übergangs Objekt muss **IDispatch** zum Festlegen der Eigenschaften unterstützen. Mit Video Effekten und-Übergängen kann die Anwendung einen Wertebereich festlegen, der sich im Laufe der Zeit ändert. (Sie können z. b. einen zurücksetzenübergang festlegen, um über den Frame hin und her zu wechseln.) Mit Audioeffekten ist der Wert der Eigenschaft statisch und kann sich im Laufe der Zeit nicht ändern. Die einzige Ausnahme ist der [volumeumschlags](volume-envelope-effect.md) Effekt, der eine dynamische Eigenschaft für die Volumeebene unterstützt.
+Viele [DirectShow Editing Services-Effekte](directshow-editing-services.md) und -Übergänge unterstützen Eigenschaften, die ihr Verhalten steuern. Eine Anwendung kann den Wert einer Eigenschaft mithilfe der [**IPropertySetter-Schnittstelle**](ipropertysetter.md) festlegen. Das zugrunde liegende Effekt- oder Übergangsobjekt muss **IDispatch** zum Festlegen der Eigenschaften unterstützen. Mit Videoeffekten und Übergängen kann die Anwendung einen Bereich von Werten festlegen, die sich im Laufe der Zeit ändern. (Sie können z. B. einen Löschübergang festlegen, um zwischen den Rahmen zu wechseln.) Bei Audioeffekten ist der Wert der -Eigenschaft statisch und kann sich im Laufe der Zeit nicht ändern. Die einzige Ausnahme ist der [Effekt VolumeUmschlag,](volume-envelope-effect.md) der eine dynamische Eigenschaft für die Volumeebene unterstützt.
 
 Führen Sie die folgenden Schritte aus, um eine Eigenschaft festzulegen.
 
-1.  Erstellen Sie eine Instanz des Eigenschaften Setters (CLSID \_ propertysetter).
-2.  Füllen Sie die Struktur von [**Dexter \_ param**](dexter-param.md) -und [**Dexter- \_ Werten**](dexter-value.md) mit den Eigenschaften Daten aus. Diese Strukturen werden im folgenden erläutert.
-3.  Übergeben Sie die " [**Dexter \_ param**](dexter-param.md) "-und " [**Dexter \_ value**](dexter-value.md) "-Strukturen an die [**ipropertysetter:: addprop**](ipropertysetter-addprop.md) -Methode.
+1.  Erstellen Sie eine Instanz des Eigenschaftensetters (CLSID \_ PropertySetter).
+2.  Füllen Sie [**die DEXTER \_ PARAM-**](dexter-param.md) und [**DEXTER \_ VALUE-Strukturen**](dexter-value.md) mit den Eigenschaftsdaten. Diese Strukturen werden im Folgenden erläutert.
+3.  Übergeben Sie die [**DEXTER \_ PARAM-**](dexter-param.md) und [**DEXTER \_ VALUE-Strukturen**](dexter-value.md) an die [**IPropertySetter::AddProp-Methode.**](ipropertysetter-addprop.md)
 4.  Wiederholen Sie die Schritte 2 und 3 für jede Eigenschaft, die Sie festlegen möchten.
-5.  Übergeben Sie den [**ipropertysetter**](ipropertysetter.md) -Schnittstellen Zeiger an die [**iamtimelineobj:: setpropertysetter**](iamtimelineobj-setpropertysetter.md) -Methode.
+5.  Übergeben Sie den [**IPropertySetter-Schnittstellenzeiger**](ipropertysetter.md) an die [**IAMTimelineObj::SetPropertySetter-Methode.**](iamtimelineobj-setpropertysetter.md)
 
-Die " [**Dexter \_ param**](dexter-param.md) "-Struktur gibt an, welche Eigenschaft festgelegt wird. Sie enthält die folgenden Member.
+Die [**DEXTER \_ PARAM-Struktur**](dexter-param.md) gibt an, welche Eigenschaft festgelegt wird. Sie enthält die folgenden Member.
 
--   **Name**: Name der Eigenschaft
--   **DISPID**: reserviert, muss NULL sein.
--   **nvalues**: Anzahl der Werte
+-   **Name:** Name der Eigenschaft
+-   **dispID:** Reserviert, muss 0 (null) sein
+-   **nValues:** Anzahl der Werte
 
-Die \_ Wert Struktur von "Dexter" gibt den Wert einer Eigenschaft zu einem bestimmten Zeitpunkt an. Sie enthält die folgenden Member.
+Die DEXTER \_ VALUE-Struktur gibt den Wert einer Eigenschaft zu einem bestimmten Zeitpunkt an. Sie enthält die folgenden Member.
 
--   **v**: Variant-Typ, der einen neuen Wert für die-Eigenschaft angibt. Der **VT** -Member dieser Variante definiert den Datentyp der Eigenschaft. Weitere Informationen zum **Variant** -Typ finden Sie in der Windows SDK.
--   **RT**: Verweis Zeit, wenn die Eigenschaft diesen Wert annimmt, relativ zur Startzeit des Effekts oder Übergangs. Die Startzeit des Effekts oder Übergangs bezieht sich auf die Startzeit des übergeordneten Objekts.
--   **dwinterp**: Flag, das angibt, wie die-Eigenschaft vom vorherigen Wert in den neuen Wert geändert wird. Mit dem dexterf- \_ springflag springt die Eigenschaft zum angegebenen Zeitpunkt sofort in den neuen Wert. Beim dexterf- \_ interinterpolate-Flag wird die-Eigenschaft linear aus dem vorherigen Wert interpoliert.
+-   **v:** VARIANT-Typ, der einen neuen Wert für die Eigenschaft angibt. Der **vt-Member** dieses VARIANT definiert den Datentyp der Eigenschaft. Weitere Informationen zum **VARIANT-Typ** finden Sie im Windows SDK.
+-   **rt**: Die Referenzzeit, zu der die Eigenschaft diesen Wert annimmt, relativ zur Startzeit des Effekts oder Übergangs. Die Startzeit des Effekts oder Übergangs ist relativ zur Startzeit des übergeordneten Objekts.
+-   **dwInterp:** Flag, das angibt, wie sich die Eigenschaft vom vorherigen Wert in den neuen Wert ändert. Mit dem DEXTERF \_ JUMP-Flag springt die Eigenschaft sofort zum neuen Wert zum angegebenen Zeitpunkt. Mit dem DEXTERF \_ INTERPOLATE-Flag wird die -Eigenschaft linear aus dem vorherigen Wert interpoliert.
 
-Wenn Sie das **VT** -Element auf VT \_ BSTR festlegen, führt der Eigenschaften Setter alle notwendigen Konvertierungen aus. Fügen Sie für Gleit Komma Werte die führende Null vor der Dezimalstelle ein. Beispielsweise 0,3, nicht. 3.
+Wenn Sie den **vt-Member** auf VT \_ BSTR festlegen, nimmt der Eigenschaftensetter alle erforderlichen Konvertierungen vor. Schließen Sie für Gleitkommawerte die führende Null vor der Dezimalstelle ein. Beispiel: 0.3, nicht .3.
 
 > [!Note]  
-> Anwendungen sollten die Konvertierung von **BSTR**-s in numerische Werte vermeiden. Wenn die Eigenschaft einen numerischen Wert aufweist, verwenden Sie den entsprechenden numerischen **Variant** -Typ.
+> Anwendungen sollten die Konvertierung von **BSTR-Werten** in numerische Werte vermeiden. Wenn die Eigenschaft über einen numerischen Wert verfügt, ist die Verwendung des entsprechenden numerischen **VARIANT-Typs** möglich.
 
  
 
-Der Wert einer Eigenschaft kann sich im Laufe der Zeit ändern, sodass die [**ipropertysetter:: addprop**](ipropertysetter-addprop.md) -Methode eine einzelne " [**Dexter \_ param**](dexter-param.md) "-Struktur und einen Zeiger auf ein Array von " [**Dexter \_ value**](dexter-value.md) "-Strukturen annimmt. Das Array definiert einen Satz zeitbasierter Werte für die-Eigenschaft. Die Elemente des Arrays müssen sich in aufsteigender Zeitreihen Folge befinden, und der **nvalues** -Member der "Dexter \_ Param"-Struktur muss der Länge des Arrays entsprechen.
+Der Wert einer Eigenschaft kann sich im Laufe der Zeit ändern, sodass die [**IPropertySetter::AddProp-Methode**](ipropertysetter-addprop.md) eine einzelne [**DEXTER \_ PARAM-Struktur**](dexter-param.md) und einen Zeiger auf ein Array von [**DEXTER \_ VALUE-Strukturen**](dexter-value.md) verwendet. Das -Array definiert einen Satz zeitbasierter Werte für die -Eigenschaft. Die Member des Arrays müssen in aufsteigender Zeitreihenfolge sein, und der **nValues-Member** der DEXTER \_ PARAM-Struktur muss der Länge des Arrays entsprechen.
 
-Im folgenden Codebeispiel werden Eigenschafts Daten für den [SMPTE](smpte-wipe-transition.md) -Umleitungs Übergang erstellt. Der Code wird auf 120 festgelegt, wodurch ein Oval-zurücksetzen erstellt wird. Die Verweis Zeit wird auf NULL festgelegt, was den Beginn des Übergangs angibt.
+Im folgenden Codebeispiel werden Eigenschaftsdaten für den [SMPTE Wipe-Übergang](smpte-wipe-transition.md) erstellt. Der Zurücksetzungscode wird auf 120 festgelegt, wodurch ein ovales Zurücksetzen erstellt wird. Die Referenzzeit wird auf 0 (null) festgelegt, was den Beginn des Übergangs angibt.
 
 
 ```C++
@@ -87,11 +87,11 @@ pProp->Release();
 
 
 
-**Dynamisch veränderliche Eigenschaften**
+**Dynamisches Ändern von Eigenschaften**
 
-Nachdem Sie ein Video Bearbeitungs Projekt gerenkt haben, ist es möglich, die Eigenschaften eines Effekts oder Übergangs Objekts während der Ausführung des Diagramms zu ändern. Dies ist jedoch nur möglich, wenn Sie Eigenschaften für dieses Objekt festlegen, bevor die Anwendung den Namen " [**unenderengine:: connectfrontend**](irenderengine-connectfrontend.md)" hat. Wenn dies der Fall ist, können Sie [**iamtimelineobj:: getpropertysetter**](iamtimelineobj-getpropertysetter.md) für den Effekt oder Übergang aufrufen, die Eigenschaften löschen oder ändern, und die Änderungen werden dynamisch durchgeführt, wenn das Diagramm ausgeführt wird. Während der Änderung können visuelle Anomalien auftreten, daher wird dies nur für die Vorschau empfohlen. Ändern Sie die Eigenschaften nicht, während Sie das Projekt in eine Datei schreiben.
+Nachdem Sie ein Videobearbeitungsprojekt gerendert haben, können Sie die Eigenschaften eines Effekt- oder Übergangsobjekts ändern, während das Diagramm ausgeführt wird. Dies ist jedoch nur möglich, wenn Sie Eigenschaften für dieses Objekt vor der Anwendung mit dem Namen [**IRenderEngine::ConnectFrontEnd**](irenderengine-connectfrontend.md)festlegen. Wenn dies der Fall ist, können Sie [**IAMTimelineObj::GetPropertySetter**](iamtimelineobj-getpropertysetter.md) für den Effekt oder Übergang aufrufen, die Eigenschaften löschen oder ändern, und die Änderungen werden dynamisch ausgeführt, während das Diagramm ausgeführt wird. Während der Änderung können visuelle Anomalien auftreten, daher wird dies nur für die Vorschau empfohlen. Ändern Sie die Eigenschaften nicht, während Sie das Projekt in eine Datei schreiben.
 
-Wenn Sie keine Eigenschaften für den Effekt oder das Übergangs Objekt festgelegt haben, bevor Sie **connectfrontend** aufgerufen haben, können Sie ihm während der Ausführung des Diagramms keine Eigenschaften hinzufügen.
+Wenn Sie keine Eigenschaften für das Effekt- oder Übergangsobjekt festgelegt haben, bevor Sie **ConnectFrontEnd** aufgerufen haben, können Sie ihr keine Eigenschaften hinzufügen, während das Diagramm ausgeführt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

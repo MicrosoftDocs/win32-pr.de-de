@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Height-Methode ruft die Höhe des Ziel Rechtecks ab.
+description: Die Get \_ Height-Methode ruft die Höhe des Zielrechtecks ab.
 ms.assetid: af555a7b-de0a-4c44-9623-f1ec8b44969a
-title: 'Idxtcompositor:: get_Height-Methode (qedit. h)'
+title: IDxtCompositor::get_Height-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 1901264572f0deb3453738789f3d2cf2413fb401
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7cade79a3af6a09e67ad89cef8fddc156b601729f001facce227866a21d9814f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051890"
 ---
-# <a name="idxtcompositorget_height-method"></a>Idxtcompositor:: get \_ Height-Methode
+# <a name="idxtcompositorget_height-method"></a>IDxtCompositor::get \_ Height-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `get_Height` Methode ruft die Höhe des Ziel Rechtecks ab.
+Die `get_Height` -Methode ruft die Höhe des Zielrechtecks ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT get_Height(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt die Höhe des Ziel Rechtecks in Pixel.
+Empfängt die Höhe des Zielrechtecks in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idxtcompositor-Schnittstelle**](idxtcompositor.md)
+[**IDxtCompositor-Schnittstelle**](idxtcompositor.md)
 </dt> </dl>
 
  

@@ -49,14 +49,14 @@ typedef enum D3DTRANSFORMSTATETYPE {
 
 <dl> <dt>
 
-<span id="D3DTS_VIEW"></span><span id="d3dts_view"></span>**\_D3DTS-ANSICHT**
+<span id="D3DTS_VIEW"></span><span id="d3dts_view"></span>**D3DTS-ANSICHT \_**
 </dt> <dd>
 
-Identifiziert die Transformationsmatrix, die als Transformationsmatrix für die Ansicht festgelegt wird. Der Standardwert ist **NULL** (die Identitätsmatrix).
+Identifiziert die Transformationsmatrix, die als Ansichtstransformationsmatrix festgelegt wird. Der Standardwert ist **NULL** (die Identitätsmatrix).
 
 </dd> <dt>
 
-<span id="D3DTS_PROJECTION"></span><span id="d3dts_projection"></span>**\_D3DTS-PROJEKTION**
+<span id="D3DTS_PROJECTION"></span><span id="d3dts_projection"></span>**D3DTS-PROJEKTION \_**
 </dt> <dd>
 
 Identifiziert die Transformationsmatrix, die als Projektionstransformationsmatrix festgelegt wird. Der Standardwert ist **NULL** (die Identitätsmatrix).
@@ -122,7 +122,7 @@ Identifiziert die Transformationsmatrix, die für die angegebene Texturphase fes
 <span id="D3DTS_FORCE_DWORD"></span><span id="d3dts_force_dword"></span>**D3DTS \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -135,7 +135,7 @@ Die Transformationszustände im Bereich von 256 bis 511 sind für die Speicherun
 | Makros                                                  | BESCHREIBUNG                                                                                                                                                                      |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**D3DTS \_ WORLD**](d3dts-world.md)                     | Entspricht D3DTS \_ WORLDMATRIX(0).                                                                                                                                  |
-| [**D3DTS \_ WORLDMATRIX**](d3dts-worldmatrix.md) (Index) | Identifiziert die Transformationsmatrix, die für die Weltmatrix am Index festgelegt werden soll. Mehrere Weltmatrizen werden nur für vertex blending verwendet. Andernfalls wird nur D3DTS \_ WORLD verwendet. |
+| [**D3DTS \_ WORLDMATRIX**](d3dts-worldmatrix.md) (Index) | Identifiziert die Transformationsmatrix, die für die Weltmatrix am Index festgelegt werden soll. Mehrere Weltmatrizen werden nur für Scheitelpunktmischungen verwendet. Andernfalls wird nur D3DTS \_ WORLD verwendet. |
 
 
 
@@ -151,7 +151,7 @@ Die Transformationszustände im Bereich von 256 bis 511 sind für die Speicherun
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

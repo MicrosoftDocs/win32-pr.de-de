@@ -4,12 +4,12 @@ ms.assetid: 41bc10fe-6c00-44c5-ba9a-10414b31cbdf
 title: XML-Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d410dcb1476d90568bee10c7c1e41ee7a9bee2e7
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: 7bf76889fdf38c6636b4beb5ba566b18af69e34c
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113548818"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622976"
 ---
 # <a name="xml-attributes"></a>XML-Attribute
 
@@ -23,10 +23,10 @@ Private Parteien dürfen zwar keine neuen Definitionen in den Namespace einer an
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

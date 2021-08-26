@@ -13,17 +13,17 @@ api_type:
 - HeaderDef
 api_location:
 - Qedit.h
-ms.openlocfilehash: 64647cbcbcc836c400890fb173a29c76f8723029
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 2686c64b3251616ac8cefbe81a77282e5b1a7c6847ef965b6361759118b74756
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050880"
 ---
 # <a name="null-renderer-filter"></a>NULL-Rendererfilter
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
@@ -41,18 +41,18 @@ Der Nullrendererfilter ist ein Renderer, der jedes empfangene Beispiel verwirft,
 | Filtern von CLSID                             | CLSID \_ NullRenderer                                                                                                  |
 | CLSID der Eigenschaftenseite                      | Keine Eigenschaftenseite.                                                                                                    |
 | Ausführbare Datei                               | Qedit.dll                                                                                                            |
-| [Verdienst](merit.md)                       | NICHT \_ \_ VERWENDEN \_                                                                                                  |
+| [Verdienst](merit.md)                       | NOT USE (NICHT \_ \_ \_ VERWENDEN)                                                                                                  |
 | [Filterkategorie](filter-categories.md) | CLSID \_ LegacyAmFilterCategory                                                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie diesen Filter, wenn ein Ausgabepin im Diagramm eine Downstreamverbindung erfordert, Sie die Daten jedoch nicht von diesem Pin rendern möchten. Indem Sie den Ausgabepin mit dem NULL-Renderer verbinden, schließen Sie die Verbindung ab, ohne die Daten zu rendern.
 
-Obwohl dieser Filter keine Stichproben rendert, wartet er auf die Präsentationszeit der einzelnen Stichproben, bevor das Beispiel verworfen wird. Daher wird das Diagramm mit der normalen Rate ausgeführt. Wenn das Diagramm so schnell wie möglich ausgeführt werden soll, legen Sie die Referenzuhr auf **NULL fest.** Weitere Informationen finden Sie unter [Setting the Graph Clock](setting-the-graph-clock.md).
+Obwohl dieser Filter keine Stichproben rendert, wartet er auf die Präsentationszeit der einzelnen Stichproben, bevor das Beispiel verworfen wird. Daher wird das Diagramm mit der normalen Rate ausgeführt. Wenn sie möchten, dass das Diagramm so schnell wie möglich ausgeführt wird, legen Sie die Verweisuhr auf **NULL** fest. Weitere Informationen finden Sie unter [Festlegen der Graph Uhr](setting-the-graph-clock.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Obwohl dieser Filter keine Stichproben rendert, wartet er auf die Präsentations
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[DirectShow Editing Services Objects](directshow-editing-services-objects.md)
+[DirectShow Editing Services-Objekte](directshow-editing-services-objects.md)
 </dt> </dl>
 
  

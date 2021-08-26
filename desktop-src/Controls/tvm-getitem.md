@@ -1,9 +1,9 @@
 ---
-title: TVM_GETITEM Meldung (Commctrl.h)
+title: TVM_GETITEM (Commctrl.h)
 description: Ruft einige oder alle Attribute eines Strukturansichtselements ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetItem-Makros senden.
 ms.assetid: e26ec000-967d-46de-8f71-6ebc36fefe5e
 keywords:
-- TVM_GETITEM Windows-Steuerelemente für Nachrichten
+- TVM_GETITEM von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -37,19 +37,19 @@ Ruft einige oder alle Attribute eines Strukturansichtselements ab. Sie können d
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die die abzurufenden Informationen angibt und Informationen über das Element empfängt. Ab [Version 4.71](common-control-versions.md) können Sie stattdessen eine [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) verwenden.
+Zeiger auf eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die die Informationen zum Abrufen und Empfangen von Informationen über das Element angibt. Ab [Version 4.71](common-control-versions.md) können Sie stattdessen eine [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) verwenden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Nachricht gesendet wird, identifiziert der **hItem-Member** der [**TVITEM-**](/windows/win32/api/commctrl/ns-commctrl-tvitema) oder [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) das Element, zu dem Informationen abgerufen werden sollen, und der **Maskenmember** gibt die abzurufenden Attribute an.
+Wenn die Nachricht gesendet wird, identifiziert das **hItem-Element** der [**TVITEM-**](/windows/win32/api/commctrl/ns-commctrl-tvitema) oder [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) das Element, über das Informationen abgerufen werden, und das Maskenelement gibt die abzurufenden Attribute an. 
 
-Wenn das TVIF \_ TEXT-Flag im **Maskenmember** der [**TVITEM-**](/windows/win32/api/commctrl/ns-commctrl-tvitema) oder [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) festgelegt ist, muss das **pszText-Element** auf einen gültigen Puffer zeigen, und das **cchTextMax-Element** muss auf die Anzahl der Zeichen in diesem Puffer festgelegt werden.
+Wenn das TVIF TEXT-Flag im Maskenmitglied der \_ [**TVITEM-**](/windows/win32/api/commctrl/ns-commctrl-tvitema) oder [**TVITEMEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa) festgelegt ist, muss das  **pszText-Member** auf einen gültigen Puffer zeigen, und das **cchTextMax-Member** muss auf die Anzahl der Zeichen in diesem Puffer festgelegt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,7 +57,7 @@ Wenn das TVIF \_ TEXT-Flag im **Maskenmember** der [**TVITEM-**](/windows/win32/
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **TVM \_ GETITEMW** (Unicode) und **TVM \_ GETITEMA** (ANSI)<br/>                   |

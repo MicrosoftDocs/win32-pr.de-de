@@ -3,7 +3,7 @@ title: while-Anweisung
 description: Führt einen Anweisungsblock aus, bis der bedingte Ausdruck fehlschlägt.
 ms.assetid: 0fe420db-3c09-40bd-b689-f85c02e2f817
 keywords:
-- while-Anweisung HLSL
+- while Statement HLSL
 topic_type:
 - apiref
 api_name:
@@ -24,7 +24,7 @@ ms.locfileid: "119983160"
 
 Führt einen Anweisungsblock aus, bis der bedingte Ausdruck fehlschlägt.
 
-\[*Attribut* \] while ( *Bedingt* ) { *Anweisungsblock;*}
+\[*Attribut* \] while ( *Conditional* ) { *Statement Block*; }
 
 
 
@@ -43,10 +43,10 @@ Ein optionaler Parameter, der steuert, wie die Anweisung kompiliert wird.
 
 | attribute             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| unroll(x)             | Entrollt die Schleife, bis die Ausführung beendet wird. Optional können Sie angeben, wie oft die Schleife maximal ausgeführt werden kann.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| loop                  | Verwenden Sie Flow-Control-Anweisungen im kompilierten Shader. Die Schleife wird nicht gerollt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| fastopt               | Reduziert die Kompilierzeit, erzeugt jedoch weniger aggressive Optimierungen. Wenn Sie dieses Attribut verwenden, werden die Schleifen vom Compiler nicht gerollt.<br/> Dieses Attribut wirkt sich nur auf Shadermodellziele aus, die [Break-Anweisungen](dx-graphics-hlsl-break.md) unterstützen. Dieses Attribut ist im Shadermodell im Vergleich [ \_ zu 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md) und [Shadermodell 3 und](dx-graphics-hlsl-sm3.md) höher verfügbar. Dies ist besonders nützlich in [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher, wenn der Compiler Schleifen kompiliert. Der Compiler simuliert standardmäßig Schleifen, um zu bewerten, ob er deren Registrierung wieder aufzeilen kann. Wenn sie nicht möchten, dass der Compiler Schleifen aufrollt, verwenden Sie dieses Attribut, um die Kompilierzeit zu reduzieren.<br/> |
-| \_UAV-Bedingung \_ zulassen | Ermöglicht es, dass eine Beendigungsbedingung für eine Compute-Shaderschleife auf einem UAV-Lese-Wert basiert. Die Schleife darf keine systeminternen Synchronisierungseinstellungen enthalten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| unroll(x)             | Entrollt die Schleife, bis sie nicht mehr ausgeführt wird. Optional können Sie angeben, wie oft die Schleife maximal ausgeführt werden kann.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| loop                  | Verwenden Sie Flusssteuerungsanweisungen im kompilierten Shader. Die Schleife darf nicht entladen werden.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| fastopt               | Reduziert die Kompilierzeit, erzeugt aber weniger aggressive Optimierungen. Wenn Sie dieses Attribut verwenden, wird der Compiler die Registrierung von Schleifen nicht aufheben.<br/> Dieses Attribut wirkt sich nur auf Shadermodellziele aus, die [Unterbrechungsanweisungen](dx-graphics-hlsl-break.md) unterstützen. Dieses Attribut ist im Shadermodell [im Vergleich \_ zu 2 \_ x](dx9-graphics-reference-asm-vs-2-x.md) und [im Shadermodell 3](dx-graphics-hlsl-sm3.md) und höher verfügbar. Dies ist besonders nützlich im [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höher, wenn der Compiler Schleifen kompiliert. Der Compiler simuliert standardmäßig Schleifen, um zu bewerten, ob sie die Registrierung aufheben können. Wenn der Compiler die Registrierung von Schleifen nicht aufheben soll, verwenden Sie dieses Attribut, um die Kompilierzeit zu verkürzen.<br/> |
+| \_UAV-Bedingung zulassen \_ | Ermöglicht, dass die Beendigungsbedingung einer Compute-Shaderschleife auf einem UAV-Lesezustand basiert. Die Schleife darf keine systeminternen Synchronisierungsfunktionen enthalten.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 
 
@@ -64,11 +64,11 @@ Ein bedingter [Ausdruck.](dx-graphics-hlsl-expressions.md) Wenn der Ausdruck zu 
 <span id="Statement_Block"></span><span id="statement_block"></span><span id="STATEMENT_BLOCK"></span>*Anweisungsblock*
 </dt> <dd>
 
-Mindestens eine [Anweisung](dx-graphics-hlsl-statement-blocks.md).
+Mindestens eine [-Anweisungen.](dx-graphics-hlsl-statement-blocks.md)
 
 </dd> </dl>
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

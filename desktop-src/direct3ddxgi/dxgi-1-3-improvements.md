@@ -1,5 +1,5 @@
 ---
-description: Die folgende Funktionalität wurde in Microsoft DirectX Graphic Infrastructure (DXGI) 1.3 hinzugefügt, das ab Windows 8.1.
+description: Die folgende Funktionalität wurde in Microsoft DirectX Graphic Infrastructure (DXGI) 1.3 hinzugefügt, die ab Windows 8.1.
 ms.assetid: 56816212-2B6A-41EC-B57D-29DEBBF440E7
 title: DXGI 1.3 Improvements
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "119984120"
 ---
 # <a name="dxgi-13-improvements"></a>DXGI 1.3 Improvements
 
-Die folgende Funktionalität wurde in Microsoft DirectX Graphic Infrastructure (DXGI) 1.3 hinzugefügt, das ab Windows 8.1.
+Die folgende Funktionalität wurde in Microsoft DirectX Graphic Infrastructure (DXGI) 1.3 hinzugefügt, die ab Windows 8.1.
 
 ## <a name="trim-dxgi-adapter-memory-usage"></a>Kürzen der Speicherauslastung des DXGI-Adapters
 
-Ab version Windows 8.1 DXGI 1.3 die Funktion zum Leeren und Los freigaben nicht verwendeter Arbeitsspeicherressourcen, die vom DXGI-Adapter zugeordnet werden. Auf diese Weise können Apps temporären Speicher während des Aussetzens frei geben, was die Wahrscheinlichkeit verringert, dass die App beendet wird, um Ressourcen für andere Apps frei zu geben. Wenn die App fortgesetzt wird, erstellen Gerätetreiber, die Trim unterstützen, Ressourcen bei Bedarf neu. Ab Windows 8.1 müssen alle Direct3D-Geräte, die von einer App erstellt werden, [**IDXGIDevice3::Trim**](/windows/desktop/api/DXGI1_3/nf-dxgi1_3-idxgidevice3-trim) aufrufen, wenn sie angehalten werden, um den Speicherbedarf zu reduzieren und die Wahrscheinlichkeit zu verringern, dass die App beendet wird, um Systemressourcen wieder verfügbar zu machen.
+Ab version Windows 8.1 DXGI 1.3 die Funktion zum Leeren und Los freigaben nicht verwendeter Speicherressourcen, die vom DXGI-Adapter zugeordnet werden. Auf diese Weise können Apps temporären Speicher während des Aussetzens frei geben, was die Wahrscheinlichkeit verringert, dass die App beendet wird, um Ressourcen für andere Apps frei zu geben. Wenn die App fortgesetzt wird, erstellen Gerätetreiber, die Trim unterstützen, Ressourcen bei Bedarf neu. Ab Windows 8.1 müssen alle Direct3D-Geräte, die von einer App erstellt werden, [**IDXGIDevice3::Trim**](/windows/desktop/api/DXGI1_3/nf-dxgi1_3-idxgidevice3-trim) aufrufen, wenn sie angehalten werden, um den Speicherbedarf zu reduzieren und die Wahrscheinlichkeit zu verringern, dass die App beendet wird, um Systemressourcen wieder verfügbar zu machen.
 
 ## <a name="multi-plane-overlays"></a>Überlagerungen mit mehreren Ebenen
 

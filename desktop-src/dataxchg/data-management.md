@@ -1,36 +1,36 @@
 ---
 title: Datenverwaltung
-description: In diesem Thema wird erläutert, wie Speicher Objekte Daten von einer Anwendung an eine andere übergeben.
+description: In diesem Thema wird erläutert, wie Speicherobjekte Daten von einer Anwendung an eine andere übergeben.
 ms.assetid: 32919f27-4699-4831-8837-c5160b1daf4e
 keywords:
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch (DDE)
-- Dynamischer Datenaustausch (DDE), Datenverwaltung
-- DDE (dynamischer Datenaustausch), Datenverwaltung
-- Datenaustausch, dynamischer Datenaustausch (DDE)
-- Windows-Benutzeroberfläche, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
-- Dynamischer Datenaustausch Management Library (Ddeml), Datenverwaltung
-- Ddeml (dynamischer Datenaustausch-Verwaltungs Bibliothek), Datenverwaltung
-- Datenaustausch, dynamischer Datenaustausch Verwaltungs Bibliothek (Ddeml)
-- Dynamischer Datenaustausch (DDE), Objekte
-- DDE (dynamischer Datenaustausch), Objekte
-- Dynamischer Datenaustausch Management Library (Ddeml), Objekte
-- Ddeml (dynamischer Datenaustausch-Verwaltungs Bibliothek), Objekte
+- Windows Benutzeroberfläche,dynamische Daten Exchange (DDE)
+- dynamische Daten Exchange (DDE), Datenverwaltung
+- DDE (dynamische Daten Exchange),Datenverwaltung
+- Datenaustausch,dynamische Daten Exchange (DDE)
+- Windows Benutzeroberfläche,dynamische Daten Exchange Management Library (DDEML)
+- dynamische Daten Exchange Management Library (DDEML), Datenverwaltung
+- DDEML (dynamische Daten Exchange Management Library),Datenverwaltung
+- Datenaustausch,dynamische Daten Exchange-Verwaltungsbibliothek (DDEML)
+- dynamische Daten Exchange (DDE), Objekte
+- DDE (dynamische Daten Exchange),Objekte
+- dynamische Daten Exchange Management Library (DDEML), Objects
+- DDEML (dynamische Daten Exchange Management Library),Objects
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc5178f636cf4b75111d4fc48e17fd144400a91
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 85dc9b8ccd82d184866ac9ed28f15bdeac424ec0bf9bd7767a520dea69bc4d11
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953740"
 ---
 # <a name="data-management"></a>Datenverwaltung
 
-Da dynamischer Datenaustausch (DDE) Arbeitsspeicher Objekte verwendet, um Daten von einer Anwendung an eine andere zu übergeben, bietet die dynamischer Datenaustausch Management Library (Ddeml) eine Reihe von Funktionen, die DDE-Anwendungen zum Erstellen und Verwalten von DDE-Objekten verwenden können.
+Da dynamische Daten Exchange (DDE) Speicherobjekte verwendet, um Daten von einer Anwendung an eine andere zu übergeben, stellt die dynamische Daten Exchange Management Library (DDEML) eine Reihe von Funktionen bereit, mit denen DDE-Anwendungen DDE-Objekte erstellen und verwalten können.
 
-Alle Transaktionen, die den Datenaustausch betreffen, erfordern, dass die Anwendung die Daten bereitstellt, um einen lokalen Puffer mit den Daten zu erstellen und dann die Funktion [**ddecreatedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle) aufzurufen. Diese Funktion weist ein DDE-Objekt zu, kopiert die Daten aus dem Puffer in das-Objekt und gibt ein Daten Handle zurück. Ein Daten Handle ist ein **DWORD** -Wert, der von der Ddeml verwendet wird, um den Zugriff auf Daten im DDE-Objekt bereitzustellen. Um die Daten in einem DDE-Objekt freizugeben, übergibt eine Anwendung das Daten Handle an die Ddeml, und die Ddeml übergibt das Handle an die DDE-Rückruffunktion der Anwendung, die die Daten Transaktion empfängt.
+Für alle Transaktionen, die den Datenaustausch beinhalten, muss die Anwendung die Daten bereitstellen, um einen lokalen Puffer mit den Daten zu erstellen und dann die [**DdeCreateDataHandle-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle) aufzurufen. Diese Funktion ordnet ein DDE-Objekt zu, kopiert die Daten aus dem Puffer in das -Objekt und gibt ein Datenhandle zurück. Ein Datenhandle ist ein **DWORD-Wert,** den die DDEML verwendet, um Zugriff auf Daten im DDE-Objekt bereitzustellen. Um die Daten in einem DDE-Objekt freizugeben, übergibt eine Anwendung das Datenhandle an die DDEML, und die DDEML übergibt das Handle an die DDE-Rückruffunktion der Anwendung, die die Datentransaktion empfängt.
 
-Im folgenden Beispiel wird gezeigt, wie ein DDE-Objekt erstellt und ein Handle für das-Objekt abgerufen wird. Während der [**xD \_ advreq**](xtyp-advreq.md) -Transaktion konvertiert die Rückruffunktion die aktuelle Uhrzeit in eine ASCII-Zeichenfolge, kopiert die Zeichenfolge in einen lokalen Puffer und erstellt dann ein DDE-Objekt, das die Zeichenfolge enthält. Die Rückruffunktion gibt das Handle für das DDE-Objekt (hddedata) an die Ddeml zurück, die das Handle an die Client Anwendung übergibt.
+Das folgende Beispiel zeigt, wie Sie ein DDE-Objekt erstellen und ein Handle für das -Objekt abrufen. Während der [**XTYP \_ ADOAQ-Transaktion**](xtyp-advreq.md) konvertiert die Rückruffunktion die aktuelle Zeit in eine ASCII-Zeichenfolge, kopiert die Zeichenfolge in einen lokalen Puffer und erstellt dann ein DDE-Objekt, das die Zeichenfolge enthält. Die Rückruffunktion gibt das Handle für das DDE-Objekt (HDDEDATA) an die DDEML zurück, das das Handle an die Clientanwendung übergibt.
 
 
 ```
@@ -142,9 +142,9 @@ DWORD dwData2;
 
 
 
-Die empfangende Anwendung erhält einen Zeiger auf das DDE-Objekt, indem das Daten Handle an die [**DDE AccessData**](/windows/desktop/api/Ddeml/nf-ddeml-ddeaccessdata) -Funktion übergeben wird. Der von **DDE AccessData** zurückgegebene Zeiger bietet schreibgeschützten Zugriff. Die Anwendung sollte den Zeiger verwenden, um die Daten zu überprüfen, und dann die [**ddeunaccessdata**](/windows/desktop/api/Ddeml/nf-ddeml-ddeunaccessdata) -Funktion aufzurufen, um den Zeiger für ungültig zu erklären. Die Anwendung kann die Daten mithilfe der [**DDE GetData**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata) -Funktion in einen lokalen Puffer kopieren.
+Die empfangende Anwendung ruft einen Zeiger auf das DDE-Objekt ab, indem das Datenhandle an die [**DdeAccessData-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeaccessdata) übergeben wird. Der von **DdeAccessData** zurückgegebene Zeiger bietet schreibgeschützten Zugriff. Die Anwendung sollte den Zeiger verwenden, um die Daten zu überprüfen, und dann die [**DdeUnaccessData-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeunaccessdata) aufrufen, um den Zeiger ungültig zu machen. Die Anwendung kann die Daten mithilfe der [**DdeGetData-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddegetdata) in einen lokalen Puffer kopieren.
 
-Im folgenden Beispiel wird ein Zeiger auf das DDE-Objekt abgerufen, das durch den *hdata* -Parameter identifiziert wird, und der Inhalt wird in einen lokalen Puffer kopiert. Anschließend wird der Zeiger für ungültig erklärt.
+Das folgende Beispiel ruft einen Zeiger auf das DDE-Objekt ab, das durch den *hData-Parameter* identifiziert wird, kopiert den Inhalt in einen lokalen Puffer und macht dann den Zeiger ungültig.
 
 
 ```
@@ -166,15 +166,15 @@ case XTYP_ADVDATA:
 
 
 
-Normalerweise wird das Handle in der Erstellungs Anwendung ungültig, wenn eine Anwendung, die ein Daten Handle erstellt hat, dieses Handle an die Ddeml übergibt. Diese Situation ist kein Problem, wenn die Anwendung Daten nur mit einer einzigen Anwendung gemeinsam verwenden muss. Wenn eine Anwendung die gleichen Daten mit mehreren Anwendungen gemeinsam verwenden muss, sollte die Erstellungs Anwendung jedoch das hdata- \_ Flag appowned in [**ddecreatedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)angeben. Dadurch erhält der Besitz des DDE-Objekts für die Erstellungs Anwendung, und die Ddeml verhindert, dass das Daten Handle ungültig wird. Die Anwendung kann dann das Daten handle beliebig oft nach dem Aufruf von **ddecreatedatahandle** übergeben.
+Wenn eine Anwendung, die ein Datenhandle erstellt hat, dieses Handle an die DDEML übergibt, wird das Handle in der erstellenden Anwendung in der Regel ungültig. Diese Situation ist kein Problem, wenn die Anwendung Daten nur für eine einzelne Anwendung freigeben muss. Wenn eine Anwendung jedoch dieselben Daten für mehrere Anwendungen freigeben muss, sollte die erstellende Anwendung das HDATA \_ APPOWNED-Flag in [**DdeCreateDataHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)angeben. Dadurch erhält die erstellende Anwendung den Besitz des DDE-Objekts und verhindert, dass die DDEML das Datenhandle ungültig macht. Die Anwendung kann das Datenhandle dann beliebig oft übergeben, nachdem **DdeCreateDataHandle** nur einmal aufgerufen wurde.
 
-Wenn eine Anwendung das Flag hdata \_ appowned im *afcmd* -Parameter von [**ddecreatedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)angibt, muss Sie die [**ddefreedatahandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddefreedatahandle) -Funktion aufrufen, um das Speicher Handle freizugeben, unabhängig davon, ob es das Handle an die Ddeml übergeben hat. Bevor die Anwendung beendet wird, muss Sie **ddefreedatahandle** zum Freigeben von Daten Handles, die Sie erstellt, aber nicht an die Ddeml übergeben hat, abrufen.
+Wenn eine Anwendung das HDATA \_ APPOWNED-Flag im *afCmd-Parameter* von [**DdeCreateDataHandle**](/windows/desktop/api/Ddeml/nf-ddeml-ddecreatedatahandle)angibt, muss sie die [**DdeFreeDataHandle-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddefreedatahandle) aufrufen, um das Speicherhandle freizugeben, unabhängig davon, ob das Handle an die DDEML übergeben wurde. Bevor sie beendet wird, muss eine Anwendung **DdeFreeDataHandle** aufrufen, um alle datenhandles freigibt, die sie erstellt, aber nicht an die DDEML übergeben hat.
 
-Eine Anwendung, die noch nicht das Handle an ein DDE-Objekt an die Ddeml übermittelt hat, kann dem Objektdaten hinzufügen oder Daten im Objekt überschreiben, indem die [**ddeadddata**](/windows/desktop/api/Ddeml/nf-ddeml-ddeadddata) -Funktion verwendet wird. In der Regel verwendet eine Anwendung **ddeadddata** , um ein nicht initialisiertes DDE-Objekt zu füllen. Wenn eine Anwendung ein Daten Handle an die Ddeml übergibt, kann das von dem Handle identifizierte DDE-Objekt nicht geändert werden. Sie kann nur freigegeben werden.
+Eine Anwendung, die das Handle noch nicht an ein DDE-Objekt an die DDEML übergeben hat, kann dem Objekt Daten hinzufügen oder Daten im Objekt mithilfe der [**DdeAddData-Funktion**](/windows/desktop/api/Ddeml/nf-ddeml-ddeadddata) überschreiben. In der Regel verwendet eine Anwendung **DdeAddData,** um ein nicht initialisiertes DDE-Objekt auszufüllen. Nachdem eine Anwendung ein Datenhandle an die DDEML übergeben hat, kann das durch das Handle identifizierte DDE-Objekt nicht mehr geändert werden. sie kann nur freigegeben werden.
 
- 
+ 
 
- 
+ 
 
 
 

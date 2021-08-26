@@ -1,23 +1,23 @@
 ---
-title: dcl_uav_typed (SM5-ASM)
-description: Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_typed (SM5-ASM)
+title: dcl_uav_typed (sm5 - asm)
+description: Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader. | dcl_uav_typed (sm5 - asm)
 ms.assetid: F9F5583F-E3D0-447F-9227-BBB1B4E71934
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b789714c7ec825620b73e387fa8a4dd73e1a590d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 3ec321389f8c8296bda8ccd1eba947b5ba38adc80c94b3c8c0685b069fcdafbf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950580"
 ---
-# <a name="dcl_uav_typed-sm5---asm"></a>DCL \_ -UAV- \_ typisiert (SM5-ASM)
+# <a name="dcl_uav_typed-sm5---asm"></a>dcl \_ uav \_ typed (sm5 - asm)
 
-Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durch einen Shader.
+Deklarieren Sie eine ungeordnete Zugriffsansicht (UAV) für die Verwendung durch einen Shader.
 
 
 
-| DCL \_ UAV \_ typisiertes \[ \_ GLC \] dstuav, Dimension, Typ |
+| dcl \_ uav \_ typed \[ \_ glc \] dstUAV, dimension, type |
 |--------------------------------------------------|
 
 
@@ -28,29 +28,29 @@ Deklarieren Sie eine ungeordnete Zugriffs Ansicht (UAV) für die Verwendung durc
 
 | Element                                                                                           | BESCHREIBUNG                                                                                       |
 |------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstuav*<br/> | \[in \] der UAV.<br/>                                                                        |
-| <span id="dimension"></span><span id="DIMENSION"></span>*Maß*<br/>                 | \[in \] gibt an, wie viele Dimensionen die Anweisungen für den Zugriff auf die UAV bereitstellen.<br/> |
-| <span id="type"></span><span id="TYPE"></span>*Sorte*<br/>                                | \[in \] der UAV-Art.<br/>                                                            |
+| <span id="dstUAV"></span><span id="dstuav"></span><span id="DSTUAV"></span>*dstUAV*<br/> | \[im \] UAV.<br/>                                                                        |
+| <span id="dimension"></span><span id="DIMENSION"></span>*Dimension*<br/>                 | \[in \] Gibt an, wie viele Dimensionen die Anweisungen, die auf die UAV zugreifen, bereitstellen.<br/> |
+| <span id="type"></span><span id="TYPE"></span>*Typ*<br/>                                | \[in \] Der Typ des UAV.<br/>                                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-*dstuav* wird \# als Verweis auf eine unorderedaccessview deklariert, die an den UAV-Slot \# an der API gebunden werden muss.
+*dstUAV ist* ein u-Register, das als Verweis auf eine UnorderedAccessView deklariert wird, die an den UAV-Slot in der \# API gebunden werden \# muss.
 
-Die Dimension muss Buffer, Texture1D, Texture1DArray, Texture2D, Texture2DArray oder Texture3D lauten. Dies gibt an, wie viele Dimensionen alle Anweisungen, die auf die UAV zugreifen, bereitstellen: 1 (Texture1D, Buffer), 2 (Texture1DArray, Texture2D) oder 3 (Texture2DArray, Texture3D).
+Die Dimension muss buffer, Texture1D, Texture1DArray, Texture2D, Texture2DArray oder Texture3D sein. Dies gibt an, wie viele Dimensionen anweisungen, die auf den UAV zugreifen, bereitstellen: 1 (Texture1D, Buffer), 2 (Texture1DArray, Texture2D) oder 3 (Texture2DArray, Texture3D).
 
-Typ: {unorm, snorm, uint, Sint, float}. Vorgänge, die mit der deklarierten u ausgeführt \# werden, müssen mit dem hier deklarierten Typ kompatibel sein, und die an Slot gebundene UAV \# muss ebenfalls denselben Typ aufweisen.
+Typ: {UNORM, SNORM, UINT, SINT, FLOAT}. Vorgänge, die mit dem deklarierten u durchgeführt werden, müssen mit dem hier deklarierten Typ kompatibel sein, und die an den Slot gebundene UAV muss \# \# ebenfalls denselben Typ haben.
 
-Das \_ GLC-Flag steht für "Global kohärent". Das Fehlen von \_ GLC bedeutet, dass die UAV im COMPUTE-Shader nur als "zusammenhängender Gruppe" oder "lokal kohärent" in einem einzelnen Pixelshader-Aufruf deklariert wird.
+Das \_ glc-Flag steht für "global zusammenhängende". Das Fehlen von glc bedeutet, dass die UAV im Compute-Shader nur als "gruppenreigent" oder bei einem Aufruf eines Einzelnen Pixel-Shaders \_ als "lokal zusammenhängend" deklariert wird.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | X     | X       |
 
@@ -58,11 +58,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese Anweisung für alle Shader-Phasen für die Direct3D 11,1-Laufzeit, die ab Windows 8 verfügbar ist.
+Da UAVs in allen Shaderstufen für Direct3D 11.1 verfügbar sind, gilt diese Anweisung für alle Shaderstufen für die Direct3D 11.1-Runtime, die ab Windows 8.
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -71,24 +71,24 @@ Da UAVs in allen Shader-Phasen für Direct3D 11,1 verfügbar sind, gilt diese An
  
 
 > [!Note]  
-> Diese Anweisung wird in Compute-Shader 4. x nicht unterstützt.
+> Diese Anweisung wird in Compute-Shader 4.x nicht unterstützt.
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

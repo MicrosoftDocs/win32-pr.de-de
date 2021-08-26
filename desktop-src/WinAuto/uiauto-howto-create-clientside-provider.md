@@ -1,27 +1,27 @@
 ---
-title: Erstellen eines Benutzeroberflächenautomatisierungs-Anbieters für Client-Side (Proxy)
-description: Dieses Thema enthält Beispielcode, der zeigt, wie ein Client seitiger Microsoft UI Automation-Anbieter implementiert wird.
+title: Erstellen eines Client-Side (Proxy) Benutzeroberflächenautomatisierung Anbieters
+description: Dieses Thema enthält Beispielcode, der zeigt, wie sie einen clientseitigen Microsoft Benutzeroberflächenautomatisierung implementieren.
 ms.assetid: 37e54a0f-3d41-4f47-ba73-7f1bf6c365e7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62a0b32ae60d6364ea6eac18fae991d1d600e61c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7d7623a21681bdb1765d96d89e19b4089b59ab042865dbe5fdd39c37c635e432
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955740"
 ---
-# <a name="how-to-create-a-client-side-proxy-ui-automation-provider"></a>Erstellen eines Benutzeroberflächenautomatisierungs-Anbieters für Client-Side (Proxy)
+# <a name="how-to-create-a-client-side-proxy-ui-automation-provider"></a>Erstellen eines Client-Side (Proxy) Benutzeroberflächenautomatisierung Anbieters
 
-Dieses Thema enthält Beispielcode, der zeigt, wie ein Client seitiger Microsoft UI Automation-Anbieter implementiert wird.
+Dieses Thema enthält Beispielcode, der zeigt, wie sie einen clientseitigen Microsoft Benutzeroberflächenautomatisierung implementieren.
 
--   [Beispiel 1: Auflisten der proxyfactory-Tabelle](#example-1-enumerating-the-proxy-factory-table)
--   [Beispiel 2: Implementieren eines einfachen Proxys für Schaltflächen-Steuerelemente](#example-2-implementing-a-simple-proxy-for-button-controls)
+-   [Beispiel 1: Aufzählen der Proxy Factory-Tabelle](#example-1-enumerating-the-proxy-factory-table)
+-   [Beispiel 2: Implementieren eines einfachen Proxys für Schaltflächensteuerelemente](#example-2-implementing-a-simple-proxy-for-button-controls)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="example-1-enumerating-the-proxy-factory-table"></a>Beispiel 1: Auflisten der proxyfactory-Tabelle
+## <a name="example-1-enumerating-the-proxy-factory-table"></a>Beispiel 1: Aufzählen der Proxy Factory-Tabelle
 
-Der folgende Beispielcode listet die Einträge in der proxyfactorytabelle auf und zeigt den Klassennamen des unterstützten Steuer Elements an. Für Proxys, die nicht mit dem Betriebssystem bereitgestellt werden, wird der Bildname angezeigt.
+Der folgende Beispielcode listet die Einträge in der Proxy factory-Tabelle auf und zeigt den Klassennamen des unterstützten Steuerelements an. Für Proxys, die nicht mit dem Betriebssystem bereitgestellt werden, wird der Imagename angezeigt.
 
 
 ```C++
@@ -70,9 +70,9 @@ HRESULT GetProxyTable()
 
 
 
-## <a name="example-2-implementing-a-simple-proxy-for-button-controls"></a>Beispiel 2: Implementieren eines einfachen Proxys für Schaltflächen-Steuerelemente
+## <a name="example-2-implementing-a-simple-proxy-for-button-controls"></a>Beispiel 2: Implementieren eines einfachen Proxys für Schaltflächensteuerelemente
 
-Der folgende Beispielcode implementiert einen einfachen Proxy für Steuerelemente, die den Klassennamen "Button" aufweisen, und fügt der proxyfactorytabelle einen Eintrag für den Proxy hinzu. In diesem Beispiel wird das Dialogfeld Schriftart von Editor verwendet, um den Proxy zu veranschaulichen.
+Der folgende Beispielcode implementiert einen einfachen Proxy für Steuerelemente, die den Klassennamen "Button" haben, und fügt der Proxy factory-Tabelle einen Eintrag für den Proxy hinzu. In diesem Beispiel wird das Dialogfeld Schriftart von Editor, um den Proxy zu veranschaulichen.
 
 
 ```C++
@@ -366,18 +366,18 @@ cleanup:
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Implementieren eines Client-Side Benutzeroberflächenautomatisierungs-Anbieters](uiauto-serversideprovider.md)
+[Implementieren eines Client-Side Benutzeroberflächenautomatisierung Anbieters](uiauto-serversideprovider.md)
 </dt> <dt>
 
-[Gewusst-wie-Themen für Benutzeroberflächenautomatisierungs-Anbieter](uiauto-howto-topics-for-uiautomation-providers.md)
+[How-To Topics for Benutzeroberflächenautomatisierung Providers](uiauto-howto-topics-for-uiautomation-providers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

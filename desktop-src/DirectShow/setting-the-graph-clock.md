@@ -1,23 +1,23 @@
 ---
-description: Festlegen der diagrammuhr
+description: Festlegen der Graph Uhr
 ms.assetid: 23deab26-6c9a-4f94-b750-11c9b1a14ce3
-title: Festlegen der diagrammuhr
+title: Festlegen der Graph Uhr
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfe98c8dce1ab5f94664fbe1406c682e5d4e50b8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7ab93fcefe4ba88aa7724bf59b775c493313783b2f4ad3801925e16b9a1818c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904140"
 ---
-# <a name="setting-the-graph-clock"></a>Festlegen der diagrammuhr
+# <a name="setting-the-graph-clock"></a>Festlegen der Graph Uhr
 
-Beim Erstellen eines Filter Diagramms wählt der Filter Diagramm-Manager automatisch eine Referenzuhr für das Diagramm aus. Alle Filter im Diagramm werden mit der Referenzuhr synchronisiert. Insbesondere rendererfilter verwenden die Referenzzeit, um die Präsentationszeit der einzelnen Stichproben zu bestimmen.
+Wenn Sie ein Filterdiagramm erstellen, wählt der Filter-Graph-Manager automatisch eine Referenzuhr für das Diagramm aus. Alle Filter im Diagramm werden mit der Referenzuhr synchronisiert. Insbesondere verwenden Rendererfilter die Referenzuhr, um die Präsentationszeit der einzelnen Stichproben zu bestimmen.
 
-Es gibt in der Regel keinen Grund dafür, dass eine Anwendung die Auswahl der Referenzuhr des Filter-Graph-Managers außer Kraft setzt. Dies ist jedoch möglich, indem Sie die [**imediafilter:: setsyncsource**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) -Methode für den Filter Graph-Manager aufrufen. Diese Methode nimmt einen Zeiger auf die **IReferenceClock** -Schnittstelle der Uhr. Ruft die-Methode auf, während das Diagramm angehalten wird.
+Es gibt in der Regel keinen Grund dafür, dass eine Anwendung den Filter Graph die Auswahl der Verweisuhr durch den Manager außer Kraft setzt. Sie können dies jedoch tun, indem Sie die [**IMediaFilter::SetSyncSource-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-setsyncsource) im Filter Graph Manager aufrufen. Diese Methode verwendet einen Zeiger auf die **IReferenceClock-Schnittstelle der** Uhr. Rufen Sie die -Methode auf, während das Diagramm beendet wird.
 
-Wenn ein Filter eine Uhr bereitstellt, können Sie den **IReferenceClock** -Zeiger abrufen, indem Sie **QueryInterface** für den Filter aufrufen. Alternativ können Sie eine externe verweisuhr implementieren, die nicht von einem Filter bereitgestellt wird, solange die externe Uhr **IReferenceClock** implementiert. Das folgende Beispiel zeigt, wie Sie eine Uhr angeben:
+Wenn ein Filter eine Uhr enthält, können Sie den **IReferenceClock-Zeiger** durch Aufrufen **von QueryInterface für** den Filter erhalten. Alternativ können Sie eine externe Referenzuhr implementieren, die nicht von einem Filter bereitgestellt wird, solange Ihre externe Uhr **IReferenceClock implementiert.** Das folgende Beispiel zeigt, wie eine Uhr angegeben wird:
 
 
 ```C++
@@ -45,9 +45,9 @@ if (SUCCEEDED(hr))
 
 
 
-In diesem Beispiel wird davon ausgegangen, dass "conatemyprivateclock" eine Anwendungs definierte Funktion ist, die eine Uhr erstellt und einen **IReferenceClock** -Zeiger zurückgibt.
+In diesem Beispiel wird davon ausgegangen, dass CreateMyPrivateClock eine anwendungsdefinierte Funktion ist, die eine Uhr erstellt und einen **IReferenceClock-Zeiger** zurückgibt.
 
-Sie können auch festlegen, dass das Filter Diagramm ohne Uhr ausgeführt wird, indem Sie **setsyncsource** mit dem Wert **null** aufrufen. Wenn keine Uhr vorhanden ist, wird das Diagramm so schnell wie möglich ausgeführt. Ohne Uhr warten rendererfilter nicht auf die Präsentationszeit eines Beispiels. Stattdessen wird jedes Beispiel so bald wie möglich dargestellt. Das Festlegen des Diagramms, das ohne eine Uhr ausgeführt wird, ist nützlich, wenn Sie Daten schnell verarbeiten möchten, anstatt Sie in Echtzeit anzuzeigen.
+Sie können auch festlegen, dass das Filterdiagramm ohne Uhr ausgeführt wird, indem **Sie SetSyncSource mit** dem Wert **NULL aufrufen.** Wenn keine Uhr verfügbar ist, wird das Diagramm so schnell wie möglich ausgeführt. Ohne Uhr warten Rendererfilter nicht auf die Präsentationszeit eines Beispiels. Stattdessen rendern sie jedes Beispiel, sobald es eintrifft. Das Festlegen der Ausführung des Graphen ohne Uhr ist nützlich, wenn Sie Daten schnell verarbeiten möchten, anstatt sie in Echtzeit in der Vorschau anzuzeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -56,10 +56,10 @@ Sie können auch festlegen, dass das Filter Diagramm ohne Uhr ausgeführt wird, 
 [Grundlegende DirectShow-Aufgaben](basic-directshow-tasks.md)
 </dt> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> <dt>
 
-[Uhrzeit und Uhren in DirectShow](time-and-clocks-in-directshow.md)
+[Zeit und Uhren in DirectShow](time-and-clocks-in-directshow.md)
 </dt> </dl>
 
  

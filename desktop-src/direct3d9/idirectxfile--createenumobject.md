@@ -47,7 +47,7 @@ HRESULT CreateEnumObject(
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf Daten, deren Inhalt vom Wert von dwLoadOptions abhängt
+Zeiger auf Daten, deren Inhalt vom Wert von dwLoadOptions abhängig ist
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Zeiger auf Daten, deren Inhalt vom Wert von dwLoadOptions abhängt
 
 Typ: **[ **DXFILELOADOPTIONS**](dxfile.md)**
 
-Wert, der die Quelle der Daten angibt. Dieser Wert kann eines der DXFILELOAD \_ xxx-Flags in [DXFILE-Konstanten sein.](dxfile.md)
+Ein Wert, der die Quelle der Daten angibt. Dieser Wert kann eines der DXFILELOAD \_ xxx-Flags in [DXFILE-Konstanten sein.](dxfile.md)
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Adresse eines Zeigers auf eine [**IDirectXFileEnumObject-Schnittstelle,**](idire
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADALLOC, DXFILEERR \_ BADFILEFLOATSIZE, DXFILEERR \_ BADFILETYPE, DXFILEERR \_ BADFILEVERSION, DXFILEERR \_ BADRESOURCE, DXFILEERR \_ BADVALUE, DXFILEERR \_ FILENOTFOUND, DXFILEERR \_ RESOURCENOTFOUND, DXFILEERR \_ URLNOTFOUND.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert DXFILE \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADALLOC, DXFILEERR \_ BADFILEFLOATSIZE, DXFILEERR \_ BADFILETYPE, DXFILEERR \_ BADFILEVERSION, DXFILEERR \_ BADRESOURCE, DXFILEERR \_ BADVALUE, DXFILEERR \_ FILENOTFOUND, DXFILEERR \_ RESOURCENOTFOUND, DXFILEERR \_ URLNOTFOUND.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -90,7 +90,7 @@ Verwenden Sie nach der Verwendung dieser Methode eine der IDirectXFileEnumObject
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

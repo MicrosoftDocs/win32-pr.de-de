@@ -1,17 +1,17 @@
 ---
 description: Gibt das aktuelle Eingabeformat für den Decoder an.
 ms.assetid: 8fddf8c3-268e-4706-9003-e4bfb03d5278
-title: Avdeccommoninputformat-Eigenschaft (codecapi. h)
+title: AVDecCommonInputFormat-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7432d2a48727ec144d4206d4a11bfe65ce2c5d2a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 187e923be9c53cebbb55663d55ec6351be38f84c33f8c03277f587d61a4db719
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079490"
 ---
-# <a name="avdeccommoninputformat-property"></a>Avdeccommoninputformat (Eigenschaft)
+# <a name="avdeccommoninputformat-property"></a>AVDecCommonInputFormat (Eigenschaft)
 
 Gibt das aktuelle Eingabeformat für den Decoder an.
 
@@ -23,39 +23,39 @@ Diese Eigenschaft ist schreibgeschützt.
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdeccommoninputformat**
+**CODECAPI \_ AVDecCommonInputFormat**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein **BSTR** -Wert, der die Zeichen folgen Darstellung einer GUID enthält. Die folgenden GUIDs sind definiert.
+Der Wert dieser Eigenschaft ist ein **BSTR,** der die Zeichenfolgendarstellung einer GUID enthält. Die folgenden GUIDs sind definiert.
 
 
 
 | **GUID**                                            | BESCHREIBUNG                                    |
 |-----------------------------------------------------|------------------------------------------------|
-| **Codecapi- \_ GUID \_ avdecaudioinputaac**              | "Advanced audiocoding" (AAC)                    |
-| **Codecapi- \_ GUID \_ avdecaudioinputdolbydigitalplus** | Dolby Digital Plus-Audiodatei                       |
-| **Codecapi- \_ GUID \_ avdecaudioinputdolby**            | Dolby-Audiodatei                                    |
-| **Codecapi- \_ GUID \_ avdecaudioinputdts**              | DTS-Audiodaten                                      |
-| **Codecapi \_ GUID \_ avdecaudioinpuderaac**            | High-Efficiency erweiterte Audiocodierung (HE-AAC) |
-| **Codecapi- \_ GUID \_ avdecaudioinputmpeg**             | MPEG-Audiodatei                                     |
-| **Codecapi- \_ GUID \_ avdecaudioinputpcm**              | PCM-Audiodatei                                      |
-| **Codecapi- \_ GUID \_ avdecaudioinputwma**              | Windows Media Audio                            |
-| **Codecapi- \_ GUID \_ avdecaudioinputwmapro**           | Windows Media Audio 9 Professional (WMA Pro)   |
+| **CODECAPI \_ GUID \_ AVDecAudioInputAAC**              | Erweiterte Audiocodierung (Advanced Audio Coding, AAC)                    |
+| **CODECAPI \_ GUID \_ AVDecAudioInput ÜberdigitalPlus** | Dolby Digital Plus-Audio                       |
+| **\_CODECAPI-GUID \_ AVDecAudioInputStellbarby**            | Dolby-Audio                                    |
+| **CODECAPI \_ GUID \_ AVDecAudioInputDTS**              | DTS-Audio                                      |
+| **\_CODECAPI-GUID \_ AVDecAudioInputHEAAC**            | High-Efficiency Advanced Audio Coding (HE-AAC) |
+| **CODECAPI \_ GUID \_ AVDecAudioInputMPEG**             | MPEG-Audio                                     |
+| **CODECAPI \_ GUID \_ AVDecAudioInputPCM**              | PCM-Audio                                      |
+| **CODECAPI \_ GUID \_ AVDecAudioInputWMA**              | Windows Media Audio                            |
+| **CODECAPI \_ GUID \_ AVDecAudioInputWMAPro**           | Windows Media Audio 9 Professional (WMA Pro)   |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -63,10 +63,10 @@ Der Wert dieser Eigenschaft ist ein **BSTR** -Wert, der die Zeichen folgen Darst
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

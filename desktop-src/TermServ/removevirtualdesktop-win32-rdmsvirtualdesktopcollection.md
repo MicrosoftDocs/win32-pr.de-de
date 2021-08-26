@@ -1,12 +1,12 @@
 ---
-title: Removevirtualdesktop-Methode der Win32_RDMSVirtualDesktopCollection-Klasse
+title: RemoveVirtualDesktop-Methode der Win32_RDMSVirtualDesktopCollection Klasse
 description: Entfernt einen virtuellen Desktop aus der Sammlung virtueller Desktops.
 ms.assetid: 287ebbb2-86db-4b4a-8dbb-ac5472789e72
 ms.tgt_platform: multiple
 keywords:
-- Removevirtualdesktop-Methode Remotedesktopdienste
-- Removevirtualdesktop-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktopCollection-Klasse
-- Win32_RDMSVirtualDesktopCollection-Klasse Remotedesktopdienste, removevirtualdesktop-Methode
+- RemoveVirtualDesktop-Remotedesktopdienste
+- RemoveVirtualDesktop-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktopCollection-Klasse
+- Win32_RDMSVirtualDesktopCollection klasse Remotedesktopdienste , RemoveVirtualDesktop-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a468de22d571fa52d37c2ad51d40d492af35384a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b3deefa38d7c7fcfc3f7942eb809b2ca14e96ea14ee4f2e014cdf3e0069a6ab9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009180"
 ---
-# <a name="removevirtualdesktop-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>Removevirtualdesktop-Methode der Win32 \_ rdmsvirtualdesktopcollection-Klasse
+# <a name="removevirtualdesktop-method-of-the-win32_rdmsvirtualdesktopcollection-class"></a>RemoveVirtualDesktop-Methode der Win32 \_ RDMSVirtualDesktopCollection-Klasse
 
 Entfernt einen virtuellen Desktop aus der Sammlung virtueller Desktops.
 
@@ -43,7 +43,7 @@ uint32 RemoveVirtualDesktop(
 
 <dl> <dt>
 
-*VMName* \[ in\]
+*VMName* \[ In\]
 </dt> <dd>
 
 Der Name des virtuellen Computers, der den virtuellen Desktop hostet.
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktopcollection**](win32-rdmsvirtualdesktopcollection.md)
+[**Win32 \_ RDMSVirtualDesktopCollection**](win32-rdmsvirtualdesktopcollection.md)
 </dt> </dl>
 
  

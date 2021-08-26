@@ -13,7 +13,7 @@ ms.locfileid: "119984510"
 ---
 # <a name="about-basic-debugging"></a>Grundlegendes zum Debuggen
 
-Die [Debugfunktionen können](debugging-functions.md) verwendet werden, um einen einfachen, ereignisgesteuerten Debugger zu erstellen. *Ereignisgesteuert bedeutet,* dass der Debugger jedes Mal benachrichtigt wird, wenn bestimmte Ereignisse in dem Prozess auftreten, der debuggt wird. Mit der Benachrichtigung kann der Debugger entsprechende Aktionen als Reaktion auf die Ereignisse ausführen.
+Die [Debugfunktionen können](debugging-functions.md) verwendet werden, um einen einfachen, ereignisgesteuerten Debugger zu erstellen. *Ereignisgesteuert bedeutet,* dass der Debugger jedes Mal benachrichtigt wird, wenn bestimmte Ereignisse im prozessspezifischen Debuggen auftreten. Mit der Benachrichtigung kann der Debugger entsprechende Aktionen als Reaktion auf die Ereignisse ausführen.
 
 Eine Übersicht über Debugbegriffe finden Sie unter [Debugterminologie](debugging-terminology.md).
 

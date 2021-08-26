@@ -1,6 +1,6 @@
 ---
 title: firstbithigh-Funktion
-description: Ruft den Speicherort des ersten festgelegten Bits ab dem höchsten bestellbit ab und arbeitet nach unten pro Komponente.
+description: Ruft die Position des ersten festgelegten Bits ab dem bit mit der höchsten Reihenfolge ab und arbeitet nach unten pro Komponente.
 ms.assetid: 0fa89a9e-1706-44f7-8dd3-c37af5c11ddc
 keywords:
 - firstbithigh-Funktion HLSL
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4da4956aa3a12d064566a3767423f42039b01355
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1c62b6f090126887930415fc408da4f4a6c17bc4a99429db61fd298960c07e6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119949700"
 ---
 # <a name="firstbithigh-function"></a>firstbithigh-Funktion
 
-Ruft den Speicherort des ersten festgelegten Bits ab dem höchsten bestellbit ab und arbeitet nach unten pro Komponente.
+Ruft die Position des ersten festgelegten Bits ab dem bit mit der höchsten Reihenfolge ab und arbeitet nach unten pro Komponente.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 int firstbithigh(
-  in int value
+  in int value
 );
 ```
 
@@ -36,7 +36,7 @@ int firstbithigh(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **[ **int**](/windows/desktop/WinProg/windows-data-types)**
@@ -49,13 +49,13 @@ Der Eingabewert.
 
 Typ: **[ **int**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Speicherort des ersten festgelegten Bits.
+Die Position des ersten festgelegten Bits.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei einer Ganzzahl mit Vorzeichen ist das erste bedeutende Bit für eine negative Zahl 0 (null).
+Für eine ganze Zahl mit Vorzeichen ist das erste signifikante Bit 0 (null) für eine negative Zahl.
 
-Außerdem sind die folgenden überladenen Versionen verfügbar:
+Die folgenden überladenen Versionen sind ebenfalls verfügbar:
 
 ``` syntax
 int2 firstbithigh(int2 value);
@@ -67,42 +67,42 @@ uint3 firstbithigh(uint3 value);
 uint4 firstbithigh(uint4 value);
 ```
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

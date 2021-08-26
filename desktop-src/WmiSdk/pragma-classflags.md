@@ -1,5 +1,5 @@
 ---
-description: Steuert die Art und Weise, wie WMI Klassen abhängig von den angegebenen Flags erstellt oder aktualisiert.
+description: Steuert die Art und Weise, wie WMI Klassen erstellt oder aktualisiert, abhängig von den angegebenen Flags.
 ms.assetid: ec535662-be14-44dc-ba0f-f9d2cbf630ea
 ms.tgt_platform: multiple
 title: pragma classflags
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 422185e3b1549d28e6d7004e2032675148d2408e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fd2b8ec75bd0521ce31af1ee7ce9dba2d9498890f9b5ddc768463f733322cda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119996320"
 ---
 # <a name="pragma-classflags"></a>pragma classflags
 
-Der **pragma classflags** -Präprozessorbefehl steuert die Art und Weise, wie WMI Klassen abhängig von den angegebenen Flags erstellt oder aktualisiert.
+Der **Präprozessorbefehl pragma classflags** steuert die Art und Weise, wie WMI Klassen erstellt oder aktualisiert, je nach den angegebenen Flags.
 
-Im folgenden wird die Syntax für diesen Befehl beschrieben:
+Im Folgenden wird die Syntax für diesen Befehl beschrieben:
 
 
 ```mof
@@ -33,16 +33,16 @@ Im folgenden wird die Syntax für diesen Befehl beschrieben:
 
 
 
-Das *\[ Flag \]* muss mindestens eines der folgenden Argumente aufweisen. Sie können alle Flags kombinieren, die einander nicht widersprechen.
+*\[ Das \] Flag* muss mindestens eines der folgenden Argumente sein. Sie können alle Flags kombinieren, die einander nicht widerspricht.
 
 
 
 | Flag        | Beschreibung                                                                                                                                                                                                                                                                                                                                                     |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | createonly  | Weist den Compiler an, keine Änderungen an vorhandenen Klassen vorzunehmen, und beendet eine Kompilierung, wenn eine in der MOF-Datei angegebene Klasse bereits in WMI vorhanden ist.                                                                                                                                                                                                        |
-| ForceUpdate | Erzwingt das Aktualisieren von Klassen, wenn widersprüchliche untergeordnete Klassen vorhanden sind. Wenn Sie z. b. einen Klassen Qualifizierer in einer untergeordneten Klasse definieren und die Basisklasse versucht, denselben Qualifizierer hinzuzufügen, bewirkt die Verwendung dieses Flags, dass der Compiler diesen Konflikt durch Löschen des in Konflikt stehenden Qualifizierers in der untergeordneten Klasse löst. Wenn die untergeordnete Klasse über Instanzen verfügt, schlägt die Aktualisierung fehl. |
-| safeupdate  | Ermöglicht dem Compiler, Klassen zu aktualisieren, auch wenn untergeordnete Klassen vorhanden sind, wenn die Änderung keine Konflikte mit untergeordneten Klassen verursacht. Mithilfe dieses Flags können Sie z. b. einer Basisklasse eine neue Eigenschaft hinzufügen, ohne dass die Eigenschaft auch einer bereits vorhandenen untergeordneten Klasse hinzugefügt werden muss. Wenn die untergeordneten Klassen Instanzen aufweisen, schlägt die Aktualisierung fehl.                           |
-| updateonly  | Weist den Compiler an, keine neuen Klassen zu erstellen, und bewirkt, dass der Compiler die Kompilierung beendet, wenn eine in der MOF-Datei angegebene Klasse nicht vorhanden ist.                                                                                                                                                                                                  |
+| Forceupdate | Erzwingt Aktualisierungen von Klassen, wenn in Konflikt stehende untergeordnete Klassen vorhanden sind. Wenn Sie z. B. einen Klassenqualifizierer in einer untergeordneten Klasse definieren und die Basisklasse versucht, den gleichen Qualifizierer hinzuzufügen, bewirkt die Verwendung dieses Flags, dass der Compiler diesen Konflikt löst, indem der in Konflikt stehtde Qualifizierer in der untergeordneten Klasse gelöscht wird. Wenn die untergeordnete Klasse Über -Instanzen verfügt, schlägt das Update fehl. |
+| Safeupdate  | Ermöglicht dem Compiler, Klassen auch dann zu aktualisieren, wenn untergeordnete Klassen vorhanden sind, wenn die Änderung keine Konflikte mit untergeordneten Klassen verursacht. Mit diesem Flag können Sie z. B. einer Basisklasse eine neue Eigenschaft hinzufügen, ohne die Eigenschaft auch einer bereits vorhandenen untergeordneten Klasse hinzufügen zu müssen. Wenn die untergeordneten Klassen Über -Instanzen verfügen, schlägt das Update fehl.                           |
+| updateonly  | Weist den Compiler an, keine neuen Klassen zu erstellen, und bewirkt, dass der Compiler die Kompilierung beendet, wenn keine in der MOF-Datei angegebene Klasse vorhanden ist.                                                                                                                                                                                                  |
 
 
 
@@ -50,7 +50,7 @@ Das *\[ Flag \]* muss mindestens eines der folgenden Argumente aufweisen. Sie k�
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie Sie diesen Befehl mit den Flags updateonly und ForceUpdate verwenden können.
+Im folgenden Beispiel wird die Verwendung dieses Befehls mit den Flags updateonly und forceupdate veranschaulicht.
 
 
 ```mof
@@ -70,7 +70,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie diesen Befehl mit den Flags updateon
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

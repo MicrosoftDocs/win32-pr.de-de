@@ -1,7 +1,7 @@
 ---
-description: Dieser Operator multipliziert eine Verweis Zeit mit einem Wert.
+description: Dieser Operator multipliziert eine Verweiszeit mit einem Wert.
 ms.assetid: f575fd41-1d3e-43a6-abf8-8e64093e408e
-title: Coaref time. Operator *-Methode (ctlutil. h)
+title: COARefTime.operator*-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c62a4282f7a43ba3d7ba35daf81530f8b246be32
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 57060f3b0436422c34ba947c0025cc6796d534e16ff64be029e68ab140faa4af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079350"
 ---
-# <a name="coareftimeoperator-method"></a>Coaref time. Operator- \* Methode
+# <a name="coareftimeoperator-method"></a>COARefTime.operator-Methode \*
 
-Dieser Operator multipliziert eine Verweis Zeit mit einem Wert.
+Dieser Operator multipliziert eine Verweiszeit mit einem Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,16 +51,16 @@ Multiplikator.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein neues **coareftime** -Objekt zurück, das dem Produkt dieses Objekts und **l** entspricht.
+Gibt ein neues **COARefTime-Objekt** zurück, das dem Produkt dieses Objekts und **l** entspricht.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt ein neues **coareftime** -Objekt zurück, das dem Produkt dieses Objekts un
 
 <dl> <dt>
 
-[**Coaref Time-Klasse**](coareftime.md)
+[**COARefTime-Klasse**](coareftime.md)
 </dt> </dl>
 
  

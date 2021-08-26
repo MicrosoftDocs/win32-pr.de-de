@@ -1,31 +1,31 @@
 ---
 title: Installieren einer EAP-Methode
-description: Befolgen Sie die nachfolgenden Anweisungen, um eine vom Benutzer implementierte EAP-Methode auf einem Client Computer mit EAPHost zu installieren.
+description: Befolgen Sie die anweisungen unten, um eine vom Benutzer implementierte EAP-Methode auf einem Clientcomputer zu installieren, auf dem EAPHost ausgeführt wird.
 ms.assetid: c353550f-73a7-4195-81ea-544f74abc880
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e93e7796c216b5f60b7a46768ed9db9ca913482d
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e047c5a8f0bc4cedcc207016d6f66530b392869839dda128635cd31ac459011a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103726288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021580"
 ---
 # <a name="installing-an-eap-method"></a>Installieren einer EAP-Methode
 
-Befolgen Sie die nachfolgenden Anweisungen, um eine vom Benutzer implementierte EAP-Methode auf einem Client Computer mit EAPHost zu installieren.
+Befolgen Sie die anweisungen unten, um eine vom Benutzer implementierte EAP-Methode auf einem Clientcomputer zu installieren, auf dem EAPHost ausgeführt wird.
 
--   Implementieren Sie [**DllRegisterServer**](/windows/win32/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) für Ihre EAP-Methoden-dll. Mit diesen Funktionen werden die entsprechenden Registrierungsschlüssel für die EAP-Methode während der Installation und des Prozesses (deinstallieren) hinzugefügt und entfernt.
+-   Implementieren Sie [**DllRegisterServer**](/windows/win32/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/win32/api/olectl/nf-olectl-dllunregisterserver) für Ihre EAP-Methoden-DLL. Diese Funktionen fügen während der Installation und (Deinstallation) die entsprechenden Registrierungsschlüssel für Ihre EAP-Methode hinzu und entfernen sie.
 
-    Informationen zu den spezifischen Registrierungs Schlüsseln, die der Installation einer EAP-Methode zugeordnet sind, finden Sie im Thema [Registrierungs Konfiguration für EAP-Methoden](registry-keys-for-eap-methods.md) .
+    Informationen zu den spezifischen Registrierungsschlüsseln, die der Installation einer EAP-Methode zugeordnet sind, finden Sie im Thema [Registrierungskonfiguration für EAP-Methoden.](registry-keys-for-eap-methods.md)
 
--   Installieren Sie die dll, die die EAP-Methoden Implementierung enthält, mit dem folgenden Konsolen Befehl.
+-   Installieren Sie die DLL, die die Implementierung der EAP-Methode enthält, mit dem folgenden Konsolenbefehl.
 
-     *&lt; Name &gt;* derregsvr32.exe-dll
+    **regsvr32.exe** *&lt; DLL-Name &gt;*
 
-    Verwenden Sie zum Deinstallieren der DLL den folgenden Konsolen Befehl:
+    Verwenden Sie den folgenden Konsolenbefehl, um die DLL zu deinstallieren:
 
-    *&lt; Name &gt;* der **regsvr32.exe** **/u** -dll
+    **regsvr32.exe** *&lt; /u-DLL-Name &gt;* 
 
 -   Starten Sie den EAPHost-Dienst neu.
 
@@ -36,6 +36,6 @@ Befolgen Sie die nachfolgenden Anweisungen, um eine vom Benutzer implementierte 
 [Verwenden von EAPHost](using-eap-host.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

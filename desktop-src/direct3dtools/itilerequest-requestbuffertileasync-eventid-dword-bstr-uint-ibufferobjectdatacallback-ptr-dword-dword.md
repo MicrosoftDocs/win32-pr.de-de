@@ -1,10 +1,10 @@
 ---
-description: Fordert an, den Rohinhalt einer Kachel zu erhalten.
+description: Fordert an, den rohen Inhalt einer Kachel zu erhalten.
 MS-HAID: vspixengine.ITileRequest_RequestBufferTileAsync_EventID_DWORD_BSTR_UINT_IBufferObjectDataCallback_ptr_DWORD_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Itilerequest:: requestbuffertileasync-Methode'
+title: ITileRequest::RequestBufferTileAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 2D68766F-1BED-439E-AC51-790471DA4F70
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 83f013b4bc3235ece2850c75324333e4b59d298f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: fe9b93e5762942d26325df0816a08d0a4d2101e8
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213995"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624746"
 ---
-# <a name="span-idvspixengineitilerequest_requestbuffertileasync_eventid_dword_bstr_uint_ibufferobjectdatacallback_ptr_dword_dwordspanitilerequestrequestbuffertileasync-method"></a><span id="vspixengine.itilerequest_requestbuffertileasync_eventid_dword_bstr_uint_ibufferobjectdatacallback_ptr_dword_dword"></span>Itilerequest:: requestbuffertileasync-Methode
+# <a name="span-idvspixengineitilerequest_requestbuffertileasync_eventid_dword_bstr_uint_ibufferobjectdatacallback_ptr_dword_dwordspanitilerequestrequestbuffertileasync-method"></a><span id="vspixengine.itilerequest_requestbuffertileasync_eventid_dword_bstr_uint_ibufferobjectdatacallback_ptr_dword_dword"></span>ITileRequest::RequestBufferTileAsync-Methode
 
-Fordert an, den Rohinhalt einer Kachel zu erhalten.
+Fordert an, den rohen Inhalt einer Kachel zu erhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ HRESULT RequestBufferTileAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*EventID*   
-Das angegebene Ereignis, mit dem der Inhalt der Kachel abgeglichen werden soll (z. b. ein Renderziel kann sich im Laufe der Zeit ändern).
+*Eventid*   
+Das angegebene Ereignis, mit dem der Inhalt der Kachel übereinstimmen soll (z. B. kann sich ein Renderziel im Laufe der Zeit ändern).
 
-*Requesteddatauid*   
+*RequestedDataUID*   
 Die Adresse der angegebenen Kachel.
 
 *Datei*   
-Eine com-Zeichenfolge, die den Pfadnamen der Datei enthält, in die Ergebnisse geschrieben werden.
+Eine COM-Zeichenfolge, die den Pfadnamen der Datei enthält, in die Ergebnisse geschrieben werden.
 
-*tileingedex*   
+*tileIndex*   
 Der Index der angegebenen Kachel.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
+*progressIntervalMsecs*   
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Itilerequest**](/windows/desktop/direct3dtools/itilerequest)
+[**ITileRequest**](/windows/desktop/direct3dtools/itilerequest)
 
  
 

@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d19cd5b98ce39470860cc481ab05e4bb41adc9a4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 21bafde8c148ea8249672dd26a244dec152ed0e9fc5ce5fbb769e5cae6c92b74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008890"
 ---
 # <a name="shellshowbrowserbar-method"></a>Shell.ShowBrowserBar-Methode
 
@@ -83,7 +83,7 @@ Typ: **\* Variant**
 
 Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie können eine der standardmäßigen Explorer-Balken anzeigen, indem Sie den *sCLSID-Parameter* auf die CLSID dieser Explorer-Leiste festlegen. Die standardmäßigen Explorer-Balken und ihre CLSID-Zeichenfolgen lauten wie folgt:
 
@@ -94,19 +94,19 @@ Sie können eine der standardmäßigen Explorer-Balken anzeigen, indem Sie den *
 | Favoriten    | {EFA24E61-B078-11d0-89E4-00C04FC9E26E} |
 | Ordner      | {EFA24E64-B078-11d0-89E4-00C04FC9E26E} |
 | Verlauf      | {EFA24E62-B078-11d0-89E4-00C04FC9E26E} |
-| Suche       | {30D02401-6A81-11d0-8274-00C04FD5AE38} |
+| Suchen,       | {30D02401-6A81-11d0-8274-00C04FD5AE38} |
 
 
 
  
 
-Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **Shell.ShowBrowserBar** zum Anzeigen der Browserleiste **Favoriten** gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
+In den folgenden Beispielen wird die Verwendung von **Shell.ShowBrowserBar** zum Anzeigen der **Browserleiste Favoriten** gezeigt. Die Verwendung wird für JScript VBScript angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -147,10 +147,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

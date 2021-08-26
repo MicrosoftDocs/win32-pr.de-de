@@ -1,19 +1,19 @@
 ---
-description: Active Directory Verbunddienst (AD FS) ist ein Authentifizierungs-und Autorisierungs Dienst, der unter Windows Server ausgeführt wird. AD FS bietet Benutzern Single Sign-on Zugriff zwischen Unternehmensumgebungen und Webanwendungen.
+description: Active Directory Verbunddienst (AD FS) ist ein Authentifizierungs- und Autorisierungsdienst, der auf Windows Server ausgeführt wird. AD FS ermöglicht Benutzern den Zugriff auf einmaliges Anmelden zwischen Unternehmensumgebungen und Webanwendungen.
 ms.assetid: bc8dd039-31d4-42d5-ac3a-91e72c05b6a9
 title: Active Directory-Verbunddienste (AD FS)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ed3b096b2eba651be4f5ce8a21a4345b872203e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c7b885bbe8c9d904969152ea074cdc40fefe1a2abc1352bab393e828a40600f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073190"
 ---
 # <a name="active-directory-federation-services"></a>Active Directory-Verbunddienste (AD FS)
 
-Active Directory Verbunddienst (AD FS) ist ein Authentifizierungs-und Autorisierungs Dienst, der unter Windows Server ausgeführt wird. AD FS bietet Benutzern Single Sign-on Zugriff zwischen Unternehmensumgebungen und Webanwendungen.
+Active Directory Verbunddienst (AD FS) ist ein Authentifizierungs- und Autorisierungsdienst, der auf Windows Server ausgeführt wird. AD FS ermöglicht Benutzern den Zugriff auf einmaliges Anmelden zwischen Unternehmensumgebungen und Webanwendungen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -22,7 +22,7 @@ Active Directory Verbunddienst (AD FS) ist ein Authentifizierungs-und Autorisier
 [Active Directory-Verbunddienste: Übersicht](/previous-versions/windows/desktop/legacy/ms674895(v=vs.85))
 </dt> <dd>
 
-Übersicht über AD FS.
+Übersichtsinformationen zu AD FS.
 
 </dd> <dt>
 
@@ -37,7 +37,7 @@ APIs, die zum Entwickeln von Anwendungen verwendet werden, die AD FS verwenden.
 
 <dl> <dt>
 
-[Zugriffs Verwaltungsdienste](access-management-services.md)
+[Zugriffsverwaltungsdienste](access-management-services.md)
 </dt> </dl>
 
  

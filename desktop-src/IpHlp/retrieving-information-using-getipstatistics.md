@@ -1,25 +1,25 @@
 ---
-description: Die GetIpStatistics-Funktion füllt einen Zeiger auf eine MIB \_ -ipstats-Struktur mit Informationen über die aktuelle IP-Statistik aus, die dem System zugeordnet ist.
+description: Die GetIpStatistics-Funktion füllt einen Zeiger auf eine MIB-IPSTATS-Struktur mit Informationen zu den aktuellen IP-Statistiken, die \_ dem System zugeordnet sind.
 ms.assetid: 2b65a817-3f80-426f-ada0-bf4b34a410ed
-title: Abrufen von Informationen mithilfe von GetIpStatistics
+title: Abrufen von Informationen mit getIpStatistics
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c6267c3939548c8f8ea9ab2705ea1769360748e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c383c49b316eb48e240a8272957dae8ee3ec1671304df8d466b869b7bf4ec0a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050270"
 ---
-# <a name="retrieving-information-using-getipstatistics"></a>Abrufen von Informationen mithilfe von GetIpStatistics
+# <a name="retrieving-information-using-getipstatistics"></a>Abrufen von Informationen mit getIpStatistics
 
-Die [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) -Funktion füllt einen Zeiger auf eine [**MIB- \_ ipstats**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) -Struktur mit Informationen über die aktuelle IP-Statistik aus, die dem System zugeordnet ist.
+Die [**GetIpStatistics-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) füllt einen Zeiger auf eine [**\_ MIB-IPSTATS-Struktur**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) mit Informationen zu den aktuellen IP-Statistiken, die dem System zugeordnet sind.
 
-**So verwenden Sie "GetIpStatistics"**
+**So verwenden Sie GetIpStatistics**
 
-1.  Deklarieren Sie einige erforderliche Variablen.
+1.  Deklarieren Sie einige benötigte Variablen.
 
-    Deklarieren Sie eine **DWORD** -Variable `dwRetval` , die für Fehler Überprüfungs Funktionsaufrufe verwendet. Deklarieren Sie einen Zeiger auf eine [**MIB- \_ ipstats**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) -Variable mit dem Namen *pStats*, und weisen Sie der Struktur Arbeitsspeicher zu. Überprüfen Sie, ob Arbeitsspeicher zugeordnet werden konnte.
+    Deklarieren Sie **eine DWORD-Variable,** `dwRetval` die für Funktionsaufrufe zur Fehlerüberprüfung verwendet wird. Deklarieren Sie einen Zeiger auf eine [**\_ MIB-IPSTATS-Variable**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) namens *pStats,* und weisen Sie Arbeitsspeicher für die Struktur zu. Überprüfen Sie, ob Arbeitsspeicher zugeordnet werden kann.
 
     ```C++
     MIB_IPSTATS  *pStats;
@@ -34,7 +34,7 @@ Die [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatist
 
     
 
-2.  Rufen Sie die Funktion [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) mit dem *pStats* -Parameter auf, um IP-Statistiken für den lokalen Computer abzurufen. Überprüfen Sie auf Fehler, und geben Sie den Fehlerwert in der **DWORD** -Variablen zurück `dwRetval` . Wenn ein Fehler auftritt, `dwRetval` kann die Variable für eine umfassendere Fehlerüberprüfung und Berichterstellung verwendet werden.
+2.  Rufen Sie [**die GetIpStatistics-Funktion**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) mit dem *pStats-Parameter* auf, um IP-Statistiken für den lokalen Computer abzurufen. Überprüfen Sie auf Fehler, und geben Sie den Fehlerwert in der **DWORD-Variablen** `dwRetval` zurück. Wenn ein Fehler auftritt, kann die Variable für umfangreichere `dwRetval` Fehlerüberprüfungen und -berichte verwendet werden.
     ```C++
     dwRetVal = GetIpStatistics(pStats);
     if (dwRetVal != NO_ERROR) {
@@ -44,7 +44,7 @@ Die [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatist
 
     
 
-3.  Wenn der Aufrufen von [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) erfolgreich war, können Sie einige der Daten in der [**MIB- \_ ipstats**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) -Struktur ausgeben, auf die der *pStats* -Parameter verweist.
+3.  Wenn der Aufruf von [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatistics) erfolgreich war, geben Sie einige der Daten in der [**\_ MIB-IPSTATS-Struktur**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) aus, auf die der *pStats-Parameter* zeigt.
     ```C++
     printf("Number of interfaces:   %ld\n", pStats->dwNumIf);
     printf("Number of IP addresses: %ld\n", pStats->dwNumAddr);
@@ -54,7 +54,7 @@ Die [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatist
 
     
 
-4.  Gibt den für die [**MIB- \_ ipstats**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) -Struktur zugeordneten Arbeitsspeicher frei, auf den der *pStats* -Parameter verweist. Dies sollte erfolgen, wenn die Anwendung die Daten nicht mehr benötigt, die vom *pStats* -Parameter zurückgegeben werden.
+4.  Geben Sie den Für die [**\_ MIB-IPSTATS-Struktur zugeordneten Arbeitsspeicher**](/windows/win32/api/ipmib/ns-ipmib-mib_ipstats_lh) frei, auf den der *pStats-Parameter* zeigt. Dies sollte erfolgen, sobald die Anwendung die vom *pStats-Parameter* zurückgegebenen Daten nicht mehr benötigt.
     ```C++
     if (pStats)
         free(pStats);
@@ -62,9 +62,9 @@ Die [**GetIpStatistics**](/windows/desktop/api/Iphlpapi/nf-iphlpapi-getipstatist
 
     
 
-Nächster Schritt: [Abrufen von Informationen mithilfe von GetTcpStatistics](retrieving-information-using-gettcpstatistics.md)
+Nächster Schritt: [Abrufen von Informationen mit GetTcpStatistics](retrieving-information-using-gettcpstatistics.md)
 
-Vorheriger Schritt: [Verwalten von IP-Adressen mit addipaddress und deleteipaddress](managing-ip-addresses-using-addipaddress-and-deleteipaddress.md)
+Vorheriger Schritt: [Verwalten von IP-Adressen mit addIPAddress und DeleteIPAddress](managing-ip-addresses-using-addipaddress-and-deleteipaddress.md)
 
  
 

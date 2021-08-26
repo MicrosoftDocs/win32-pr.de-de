@@ -49,7 +49,7 @@ HRESULT D3DXSaveSurfaceToFileInMemory(
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf einen [**ID3DXBuffer,**](id3dxbuffer.md) der das Bild speichert.
+Adresse eines Zeigers auf einen [**ID3DXBuffer,**](id3dxbuffer.md) der das Bild speichern soll.
 
 </dd> <dt>
 
@@ -58,7 +58,7 @@ Adresse eines Zeigers auf einen [**ID3DXBuffer,**](id3dxbuffer.md) der das Bild 
 
 Typ: **[ **D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md)**
 
-[**D3DXIMAGE \_ FILEFORMAT,**](./d3dximage-fileformat.md) das das beim Speichern zu verwendende Dateiformat angibt. Diese Funktion unterstützt das Speichern in allen **D3DXIMAGE \_ FILEFORMAT-Formaten** mit Ausnahme von Portable Pixmap (.ppm) und Targa/Truevision Graphics Adapter (.tga).
+[**D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md) gibt das Dateiformat an, das beim Speichern verwendet werden soll. Diese Funktion unterstützt das Speichern in allen **D3DXIMAGE \_ FILEFORMAT-Formaten** mit Ausnahme von Portable Pixmap (.ppm) und Targa/Truevision Graphics Adapter (.tga).
 
 </dd> <dt>
 
@@ -67,7 +67,7 @@ Typ: **[ **D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md)**
 
 Typ: **[ **LPDIRECT3DSURFACE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9)**
 
-Zeiger auf die [**IDirect3DSurface9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) die das zu speichernde Image enthält.
+Zeiger auf die [**IDirect3DSurface9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) die das zu speichernde Bild enthält.
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi
 
 Typ: **const [**RECT**](/previous-versions//dd162897(v=vs.85)) \***
 
-Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt das Quellrechteck an. Legen Sie diesen Parameter auf **NULL** fest, um das gesamte Bild anzugeben.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt das Quellrechteck an. Legen Sie diesen Parameter auf **NULL fest,** um das gesamte Bild anzugeben.
 
 </dd> </dl>
 
@@ -93,7 +93,7 @@ Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL.
 
 ## <a name="remarks"></a>Hinweise
 

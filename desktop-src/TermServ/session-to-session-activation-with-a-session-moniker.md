@@ -18,7 +18,7 @@ Die Sitzungs-zu-Sitzung-Aktivierung (auch als sitzungsübergreifende Aktivierung
 
 Distributed COM (DCOM) ermöglicht die Objektaktivierung pro Sitzung mithilfe eines vom System bereitgestellten [Sitzungsmonikers.](session-monikers.md) Andere vom System bereitgestellte Moniker umfassen [Dateimoniker,](../com/file-monikers.md) [Elementmoniker,](../com/item-monikers.md)generische zusammengesetzte [Moniker,](../com/composite-monikers.md)Antimoniker, [Zeigermoniker](../com/pointer-monikers.md)und [URL-Moniker.](../com/url-monikers.md) [](../com/anti-monikers.md)
 
-Um den Sitzungsmoniker verwenden zu können, muss die DCOM-Anwendung so festgelegt werden, dass sie als interaktiver Benutzer ausgeführt wird. Sie können dies festlegen, indem Sie das Verwaltungstool für Komponentendienste verwenden, die Eigenschaften der DCOM-Anwendung anzeigen und auf der Registerkarte Identität die Option **Der** interaktive Benutzer **auswählen.** Weitere Informationen zu den möglichen Sicherheitsrisiken im Zusammenhang mit dem Festlegen einer DCOM-Anwendung, die als interaktiver Benutzer in einer Remotedesktopdienste-Umgebung ausgeführt wird, finden Sie im Abschnitt "Anwendungsidentität (COM)" der COM-Dokumentation im Platform Software Development Kit (SDK).
+Um den Sitzungsmoniker verwenden zu können, muss die DCOM-Anwendung so festgelegt werden, dass sie als interaktiver Benutzer ausgeführt wird. Dies kann festgelegt werden, indem Sie das Verwaltungstool für Komponentendienste verwenden, die Eigenschaften der DCOM-Anwendung anzeigen und auf der Registerkarte Identität die Option **Der** interaktive Benutzer **auswählen.** Weitere Informationen zu den möglichen Sicherheitsrisiken im Zusammenhang mit dem Festlegen einer DCOM-Anwendung für die Ausführung als interaktiver Benutzer in einer Remotedesktopdienste-Umgebung finden Sie im Abschnitt "Anwendungsidentität (COM)" der COM-Dokumentation im Platform Software Development Kit (SDK).
 
 Wenn ein anderer Benutzertyp zum Ausführen der Anwendung ausgewählt ist, wird der Sitzungsmoniker von der Anwendung ignoriert. Der Sitzungsmoniker wird auch von COM+-Serveranwendungen ignoriert. Weitere Informationen zu anderen Methoden zum Auswählen des Benutzertyps zum Ausführen der Anwendung finden Sie in der COM-Dokumentation im Platform SDK.
 
@@ -32,7 +32,7 @@ Um einen Sitzungsmoniker zu erstellen, müssen Sie die Sitzungs-ID der Remotedes
     "Session:[digits]!clsid:[class id]"
     ```
 
-    Dabei *stellen Ziffern die Sitzungs-ID* der Sitzung dar, in der der Serverprozess gestartet wird, und wobei die Klassen-ID die Klassen-ID des Servers darstellt.  Beachten Sie, dass die Sitzungs-ID eine Basis-10-Zahl ist.
+    dabei *stellen Ziffern die Sitzungs-ID* der Sitzung dar, in der der Serverprozess gestartet wird, und wobei die Klassen-ID die Klassen-ID des Servers darstellt.  Beachten Sie, dass die Sitzungs-ID eine Basis-10-Zahl ist.
 
     Bei Computern, auf denen Windows XP oder höher ausgeführt wird, führt die Verwendung der folgenden Syntax dazu, dass COM die Aktivierung an die derzeit aktive physische Konsolensitzung sendet, unabhängig von der Sitzungs-ID:
 

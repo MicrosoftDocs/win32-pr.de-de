@@ -1,9 +1,9 @@
 ---
-title: ICM_DRAW_STOP Meldung (VFW. h)
-description: Mit der ICM \_ Draw- \_ Meldung wird ein renderingertreiber benachrichtigt, um die interne Uhr für die zeitliche Steuerung von Zeichnungs Frames anzuhalten. Sie können diese Nachricht explizit oder mithilfe des icdrawstopemakros senden.
+title: ICM_DRAW_STOP-Nachricht (Vfw.h)
+description: Die ICM \_ DRAW \_ STOP-Nachricht benachrichtigt einen Renderingtreiber, seine interne Uhr für die Zeitsteuerung von Zeichnungsframes zu beenden. Sie können diese Nachricht explizit oder mithilfe des ICDrawStop-Makros senden.
 ms.assetid: 9ffda595-e3d6-48f0-9487-69f7e95979c2
 keywords:
-- ICM_DRAW_STOP-Nachricht (Multimedia)
+- ICM_DRAW_STOP nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b3bde99dfcf483e67aa6a601de2718814cc22439
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41bdb8fbc9a0cddf470733fa35b2f25dc62675175cbb40c427d0b160074c5409
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038790"
 ---
-# <a name="icm_draw_stop-message"></a>ICM- \_ Zeichnungs \_ Ende (Meldung)
+# <a name="icm_draw_stop-message"></a>\_ICM DRAW \_ STOP-Nachricht
 
-Mit der **ICM \_ Draw \_** -Meldung wird ein renderingertreiber benachrichtigt, um die interne Uhr für die zeitliche Steuerung von Zeichnungs Frames anzuhalten. Sie können diese Nachricht explizit oder mithilfe des [**icdrawstopemakros**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop) senden.
+Die **ICM \_ DRAW \_ STOP-Nachricht** benachrichtigt einen Renderingtreiber, seine interne Uhr für die Zeitsteuerung von Zeichnungsframes zu beenden. Sie können diese Nachricht explizit oder mithilfe des [**ICDrawStop-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdrawstop) senden.
 
 
 ```C++
@@ -38,7 +38,7 @@ lParam = 0;
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Meldung wird von Hardware verwendet, die eine eigene asynchrone Dekomprimierung, zeitliche Steuerung und Zeichnung ausführt.
 
@@ -50,18 +50,18 @@ Diese Meldung wird von Hardware verwendet, die eine eigene asynchrone Dekomprimi
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

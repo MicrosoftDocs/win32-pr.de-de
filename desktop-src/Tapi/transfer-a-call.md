@@ -1,24 +1,24 @@
 ---
-description: Im folgenden Codebeispiel wird eine-aufrufübertragung veranschaulicht.
+description: Im folgenden Codebeispiel wird eine Aufrufübertragung veranschaulicht.
 ms.assetid: 05862605-2600-4cdf-8390-e24e4e8586f3
-title: Übertragen von Anrufen
+title: Übertragen eines Anrufs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dd1d537efd33ea2df4ddb9ad3e9b55b633cca18f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e71d6e6fd9dc275a6d4c00e84806132cabf756effcb41e7a704b20929bc46d1a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072830"
 ---
-# <a name="transfer-a-call"></a>Übertragen von Anrufen
+# <a name="transfer-a-call"></a>Übertragen eines Anrufs
 
-Im folgenden Codebeispiel wird eine-aufrufübertragung veranschaulicht.
+Im folgenden Codebeispiel wird eine Aufrufübertragung veranschaulicht.
 
-Bevor Sie dieses Codebeispiel verwenden, muss ein-Vorgang ausgeführt werden, und Sie müssen die Vorgänge in Ausführen [eines Aufrufes](make-a-call.md) ausführen oder einen-Befehl [empfangen](receive-a-call.md).
+Bevor Sie dieses Codebeispiel verwenden, muss ein Aufruf ausgeführt werden, und Sie müssen die Vorgänge unter [Aufruf](make-a-call.md) tätigen oder [Anruf empfangen](receive-a-call.md)ausführen.
 
 > [!Note]  
-> Dieses Beispiel enthält nicht die Fehlerüberprüfung und die Releases, die für Produktionscode geeignet sind.
+> Dieses Beispiel verfügt nicht über die Fehlerüberprüfung und releases, die für Produktionscode geeignet sind.
 
  
 
@@ -60,13 +60,13 @@ hr = pConsultCall->Finish(FM_ASTRANSFER);
 
 <dl> <dt>
 
-[**Itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
+[**ITCallInfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
 </dt> <dt>
 
-[**Itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
+[**ITBasicCallControl**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
 </dt> <dt>
 
-[**Itcallhub**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallhub)
+[**ITCallHub**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallhub)
 </dt> </dl>
 
  

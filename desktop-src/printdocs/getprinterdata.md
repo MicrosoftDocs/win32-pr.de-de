@@ -1,7 +1,7 @@
 ---
-description: Die getprinterdata-Funktion ruft Konfigurationsdaten für den angegebenen Drucker oder Druckserver ab.
+description: Die GetPrinterData-Funktion ruft Konfigurationsdaten für den angegebenen Drucker oder Druckerserver ab.
 ms.assetid: b5a44b27-a4aa-4e58-9a64-05be87d12ab5
-title: Getprinterdata-Funktion (winspool. h)
+title: GetPrinterData-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_location:
 - Winspool.drv
 - Ext-MS-Win-Printer-WinSpool-l1-1-2.dll
 - Ext-MS-Win-Printer-WinSpool-L1-1-3.dll
-ms.openlocfilehash: cb18936d6d3c1d82f4a52a874883cdcdfaae4815
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4cf7d1d1b668974f792c6535f1667f127c78541f4786b32201209553e452c2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948790"
 ---
-# <a name="getprinterdata-function"></a>Getprinterdata-Funktion
+# <a name="getprinterdata-function"></a>GetPrinterData-Funktion
 
-Die **getprinterdata** -Funktion ruft Konfigurationsdaten für den angegebenen Drucker oder Druckserver ab.
+Die **GetPrinterData-Funktion** ruft Konfigurationsdaten für den angegebenen Drucker oder Druckerserver ab.
 
-In Windows 2000 und neueren Versionen von Windows entspricht das Aufrufen von **getprinterdata** dem Aufrufen von [**getprinterdataex**](/windows/desktop/printdocs/getprinterdataex) , wobei der *pkeyname* -Parameter auf "printerdriverdata" festgelegt ist.
+In Windows 2000 und höher von Windows entspricht der Aufruf von **GetPrinterData** dem Aufrufen von [**GetPrinterDataEx,**](/windows/desktop/printdocs/getprinterdataex) wobei der *Parameter pKeyName* auf "PrinterDriverData" festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,143 +50,143 @@ DWORD GetPrinterData(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker oder Druckserver, für das die Funktion Konfigurationsdaten abruft. Verwenden Sie die Funktion " [**OpenPrinter**](openprinter.md)", " [**OpenPrinter2**](openprinter2.md)" oder " [**addprinter**](addprinter.md) ", um ein Drucker Handle abzurufen.
+Ein Handle für den Drucker oder Druckerserver, für den die Funktion Konfigurationsdaten abruft. Verwenden Sie die [**Funktion OpenPrinter,**](openprinter.md) [**OpenPrinter2**](openprinter2.md)oder [**AddPrinter,**](addprinter.md) um ein Druckerhandle abzurufen.
 
 </dd> <dt>
 
-*pvaluename* \[ in\]
+*pValueName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die die abzurufenden Daten identifiziert.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die die abzurufenden Daten identifiziert.
 
-Bei Druckern ist diese Zeichenfolge der Name eines Registrierungs Werts unter dem Schlüssel "printerdriverdata" des Druckers in der Registrierung.
+Bei Druckern ist diese Zeichenfolge der Name eines Registrierungswerts unter dem Druckerschlüssel "PrinterDriverData" in der Registrierung.
 
-Bei Druckservern handelt es sich bei dieser Zeichenfolge um eine der vordefinierten Zeichen folgen, die im folgenden Abschnitt mit Hinweisen aufgeführt sind.
+Bei Druckservern ist diese Zeichenfolge eine der vordefinierten Zeichenfolgen, die im folgenden Abschnitt "Hinweise" aufgeführt sind.
 
 </dd> <dt>
 
-*pType* \[ vorgenommen\]
+*pType* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen Wert empfängt, der den Typ der in *pData* abgerufenen Daten angibt. Die-Funktion gibt den Typ zurück, der im [**setprinterdata**](setprinterdata.md) -oder [**setprinterdataex**](setprinterdataex.md) -aufrufen angegeben ist, der die Daten gespeichert hat. Legen Sie diesen Parameter auf **null** fest, wenn Sie den-Datentyp nicht benötigen.
+Ein Zeiger auf eine Variable, die einen Wert empfängt, der den Typ der in *pData* abgerufenen Daten angibt. Die Funktion gibt den im [**SetPrinterData-**](setprinterdata.md) oder [**SetPrinterDataEx-Aufruf**](setprinterdataex.md) angegebenen Typ zurück, der die Daten gespeichert hat. Legen Sie diesen Parameter auf **NULL** fest, wenn Sie den Datentyp nicht benötigen.
 
 </dd> <dt>
 
-*pData* \[ vorgenommen\]
+*pData* \[ out\]
 </dt> <dd>
 
 Ein Zeiger auf einen Puffer, der die Konfigurationsdaten empfängt.
 
 </dd> <dt>
 
-*nSize* \[ in\]
+*nSize* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Puffers, auf den *pData* verweist.
+Die Größe des Puffers in Bytes, auf den *pData* verweist.
 
 </dd> <dt>
 
-*pcbbenötigte* \[ vorgenommen\]
+*"Needed"* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Größe der Konfigurationsdaten in Bytes empfängt. Wenn die von *nSize* angegebene Puffergröße zu klein ist, gibt die Funktion **Fehler \_ Weitere \_ Daten** zurück, und *pcbrequired* gibt die erforderliche Puffergröße an.
+Ein Zeiger auf eine Variable, die die Größe der Konfigurationsdaten in Bytes empfängt. Wenn die von *nSize* angegebene Puffergröße zu klein ist, gibt die Funktion **ERROR \_ MORE \_ DATA** zurück, und *"pwNeeded"* gibt die erforderliche Puffergröße an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **Fehler \_ erfolgreich**. Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlerwert.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert **ERROR \_ SUCCESS**. Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-**Getprinterdata** ruft Drucker Konfigurationsdaten ab, die von der [**setprinterdataex**](setprinterdataex.md) -Funktion oder der [**setprinterdata**](setprinterdata.md) -Funktion festgelegt wurden.
+**GetPrinterData** ruft Druckerkonfigurationsdaten ab, die von der [**SetPrinterDataEx-**](setprinterdataex.md) oder [**SetPrinterData-Funktion**](setprinterdata.md) festgelegt wurden.
 
-**Getprinterdata** löst möglicherweise einen Windows-Befehl an [**getprinterdatafromport**](/previous-versions//ff550506(v=vs.85))aus, der in die Registrierung schreiben könnte. Wenn dies der Fall ist, können Nebeneffekte auftreten, z. b. das Auslösen einer Update-oder upgradedrucker-Ereignis-ID 20 im Client, wenn der Drucker in einem Netzwerk freigegeben ist.
+**GetPrinterData** löst möglicherweise einen Windows Aufruf von [**GetPrinterDataFromPort aus,**](/previous-versions//ff550506(v=vs.85))der möglicherweise in die Registrierung schreibt. Wenn dies der Fall ist, können Nebeneffekte auftreten, z. B. das Auslösen eines Updates oder ein Upgrade der Druckerereignis-ID 20 auf dem Client, wenn der Drucker in einem Netzwerk freigegeben ist.
 
-Wenn *hprinter* ein Handle für einen Druckserver ist, kann *pvaluename* einen der folgenden vordefinierten Werte angeben.
+Wenn *hPrinter* ein Handle für einen Druckserver ist, kann *pValueName* einen der folgenden vordefinierten Werte angeben.
 
 
 
 | Wert                                                               | Kommentare                                                                                                                                                                                                                        |
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **splreg \_ Allow \_ User \_ manageforms**                                | Windows XP mit Service Pack 2 (SP2) und höher<br/> Windows Server 2003 mit Service Pack 1 (SP1) und höher<br/>                                                                                                    |
-| **splreg- \_ Architektur**                                            |                                                                                                                                                                                                                                 |
-| **splreg \_ Beep \_ aktiviert**                                           |                                                                                                                                                                                                                                 |
-| **splreg \_ - \_ Standard \_ Spoolverzeichnis**                               |                                                                                                                                                                                                                                 |
-| **Name der splreg \_ DNS- \_ Maschine \_**                                      |                                                                                                                                                                                                                                 |
-| **splreg \_ DS \_ vorhanden**                                             | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn sich der Computer in einer DS-Domäne befindet, andernfalls 0.<br/>                                                                                                                         |
-| **splreg \_ DS \_ \_ für \_ Benutzer vorhanden**                                  | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn der Benutzer bei einer DS-Domäne angemeldet ist, andernfalls 0.<br/>                                                                                                                   |
-| **splreg- \_ Ereignis \_ Protokoll**                                              |                                                                                                                                                                                                                                 |
-| **splreg- \_ Haupt \_ Version**                                          |                                                                                                                                                                                                                                 |
-| **splreg- \_ neben \_ Version**                                          |                                                                                                                                                                                                                                 |
-| **splreg \_ net- \_ Popup**                                              | Wird in Windows Server 2003 und höher nicht unterstützt.<br/>                                                                                                                                                                       |
-| **splreg \_ net- \_ Popup \_ auf \_ Computer**                                | Bei erfolgreicher Rückgabe enthält *pData* 1, wenn Auftrags Benachrichtigungen an den Client Computer gesendet werden sollen, oder 0, wenn Auftrags Benachrichtigungen an den Benutzer gesendet werden sollen.<br/> Wird in Windows Server 2003 und höher nicht unterstützt.<br/> |
-| **splreg \_ OS- \_ Version**                                             | Windows XP und höher<br/>                                                                                                                                                                                                 |
-| **splreg \_ OS \_ versionex**                                           |                                                                                                                                                                                                                                 |
-| **standardmäßige \_ \_ Thread \_ Priorität \_ für den splreg-Port**                         |                                                                                                                                                                                                                                 |
-| **\_ \_ Thread \_ Priorität des splreg-Ports**                                  |                                                                                                                                                                                                                                 |
-| **splreg \_ - \_ drucktreiberisolations- \_ \_ Gruppen**                        | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **Dauer der \_ Druck \_ Treiber \_ Isolation \_ \_ vor \_ der Wiederverwendung**         | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **maximale Anzahl von Objekten für die \_ Druck \_ Treiber \_ Isolation \_ \_ \_ vor \_ der Wiederverwendung** | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **Leerlauf Timeout der splreg- \_ Druck \_ Treiber \_ Isolation \_ \_**                 | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **Ausführungs Richtlinie der splreg- \_ Druck \_ Treiber \_ Isolation \_ \_**             | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **Außerkraftsetzungs Richtlinie für die splreg- \_ Druck \_ Treiber \_ Isolation \_ \_**              | Windows 7 und höher<br/>                                                                                                                                                                                                  |
-| **splreg- \_ Remote \_ Fax**                                             | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn der Faxdienst Remote Clients unterstützt, andernfalls 0.<br/>                                                                                                               |
-| **splreg- \_ Wiederholungs- \_ Popup**                                            | Bei erfolgreicher Rückgabe enthält *pData* 1, wenn der Server für die Wiederherstellung von Popup Fenstern für alle Aufträge festgelegt ist, oder 0, wenn der Server keine Popup Fenster für alle Aufträge erneut versucht.<br/> Wird in Windows Server 2003 und höher nicht unterstützt.<br/> |
-| **splreg \_ Scheduler \_ Thread \_ Priorität**                             |                                                                                                                                                                                                                                 |
-| **standardmäßige \_ \_ Thread \_ Priorität \_ für den splreg-Scheduler**                    |                                                                                                                                                                                                                                 |
-| **splreg \_ websharemgmt**                                            | Windows Server 2003 und höher<br/>                                                                                                                                                                                        |
+| **SPLREG \_ ALLOW \_ USER \_ MANAGEFORMS**                                | Windows XP mit Service Pack 2 (SP2) und höher<br/> Windows Server 2003 mit Service Pack 1 (SP1) und höher<br/>                                                                                                    |
+| **\_SPLREG-ARCHITEKTUR**                                            |                                                                                                                                                                                                                                 |
+| **SPLREG \_ BEEP \_ AKTIVIERT**                                           |                                                                                                                                                                                                                                 |
+| **SPLREG \_ DEFAULT \_ SPOOL \_ DIRECTORY**                               |                                                                                                                                                                                                                                 |
+| **NAME DES \_ SPLREG-DNS-COMPUTERS \_ \_**                                      |                                                                                                                                                                                                                                 |
+| **SPLREG \_ DS \_ PRESENT**                                             | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn sich der Computer in einer DS-Domäne befindet, andernfalls 0.<br/>                                                                                                                         |
+| **SPLREG \_ DS \_ PRESENT \_ FOR \_ USER**                                  | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn der Benutzer bei einer DS-Domäne angemeldet ist, andernfalls 0.<br/>                                                                                                                   |
+| **\_SPLREG-EREIGNISPROTOKOLL \_**                                              |                                                                                                                                                                                                                                 |
+| **\_SPLREG-HAUPTVERSION \_**                                          |                                                                                                                                                                                                                                 |
+| **\_SPLREG-NEBENVERSION \_**                                          |                                                                                                                                                                                                                                 |
+| **SPLREG \_ NET \_ POPUP**                                              | In Windows Server 2003 und höher nicht unterstützt<br/>                                                                                                                                                                       |
+| **SPLREG \_ NET \_ POPUP \_ TO \_ COMPUTER**                                | Bei erfolgreicher Rückgabe enthält *pData* 1, wenn Auftragsbenachrichtigungen an den Clientcomputer gesendet werden sollen, oder 0, wenn Auftragsbenachrichtigungen an den Benutzer gesendet werden sollen.<br/> In Windows Server 2003 und höher nicht unterstützt<br/> |
+| **\_SPLREG-BETRIEBSSYSTEMVERSION \_**                                             | Windows XP und höher<br/>                                                                                                                                                                                                 |
+| **SPLREG \_ OS \_ VERSIONEX**                                           |                                                                                                                                                                                                                                 |
+| **SPLREG \_ PORT \_ THREAD \_ PRIORITY \_ DEFAULT**                         |                                                                                                                                                                                                                                 |
+| **PRIORITÄT DES \_ SPLREG-PORTTHREADS \_ \_**                                  |                                                                                                                                                                                                                                 |
+| **ISOLATIONSGRUPPEN FÜR \_ SPLREG-DRUCKERTREIBER \_ \_ \_**                        | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **\_ISOLATIONSZEIT DES SPLREG-DRUCKERTREIBERS \_ VOR DEM \_ \_ \_ \_ WIEDERVERWENDEN**         | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **SPLREG \_ PRINT \_ DRIVER \_ ISOLATION \_ MAX \_ OBJECTS \_ BEFORE \_ RECYCLE** | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **ISOLATION DES \_ SPLREG-DRUCKERTREIBERS \_ \_ IM \_ \_ LEERLAUFTIMEOUT**                 | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **\_ \_ \_ \_ ISOLATIONSAUSFÜHRUNGSRICHTLINIE FÜR \_ SPLREG-DRUCKERTREIBER**             | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **SPLREG \_ PRINT \_ DRIVER \_ ISOLATION \_ OVERRIDE \_ POLICY**              | Windows 7 und höher<br/>                                                                                                                                                                                                  |
+| **SPLREG \_ REMOTE \_ FAX**                                             | Bei erfolgreicher Rückgabe enthält *pData* 0x0001, wenn der FAX-Dienst Remoteclients unterstützt, andernfalls 0.<br/>                                                                                                               |
+| **SPLREG \_ RETRY \_ POPUP**                                            | Bei erfolgreicher Rückgabe enthält *pData* 1, wenn der Server so festgelegt ist, dass popupfenster für alle Aufträge erneut versucht werden, oder 0, wenn der Server keine Popupfenster für alle Aufträge erneut versucht.<br/> In Windows Server 2003 und höher nicht unterstützt<br/> |
+| **PRIORITÄT DES SPLREG \_ \_ SCHEDULER-THREADS \_**                             |                                                                                                                                                                                                                                 |
+| **SPLREG \_ SCHEDULER \_ THREAD \_ PRIORITY \_ DEFAULT**                    |                                                                                                                                                                                                                                 |
+| **SPLREG \_ WEBSHAREMGMT**                                            | Windows Server 2003 und höher<br/>                                                                                                                                                                                        |
 
 
 
  
 
-Die folgenden Werte von *pvaluename* geben das Druck Verhalten des Pools an, wenn ein Fehler auftritt.
+Die folgenden Werte von *pValueName* geben das Druckverhalten des Pools an, wenn ein Fehler auftritt.
 
 
 
 | Wert                                       | Kommentare                                                                                                                                                                                              |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **\_Fehler beim Fehler "splreg Restart \_ Job \_ on \_ Pool \_ ".**   | Der Wert von *pData* gibt die Zeit in Sekunden an, nach der ein Auftrag an einem anderen Port neu gestartet wird, nachdem ein Fehler aufgetreten ist. Diese Einstellung wird mit dem **Auftrag "splreg \_ Restart" \_ \_ bei \_ \_ aktiviertem Pool** verwendet.<br/> |
-| **splreg- \_ Neustart \_ Auftrag \_ für \_ Pool \_ aktiviert** | Ein Wert ungleich 0 (null) in *pData* gibt an, dass der **Fehler "splreg \_ Restart \_ Job \_ on \_ Pool \_** " aktiviert ist.<br/>                                                                                            |
+| **SPLREG \_ RESTART JOB ON POOL ERROR \_ (SPLREG-NEUSTARTAUFTRAG \_ BEI \_ \_ POOLFEHLER)**   | Der Wert von *pData* gibt die Zeit in Sekunden an, zu der ein Auftrag nach einem Fehler an einem anderen Port neu gestartet wird. Diese Einstellung wird mit **SPLREG \_ RESTART JOB ON POOL \_ \_ \_ \_ ENABLED** verwendet.<br/> |
+| **\_SPLREG-NEUSTARTAUFTRAG \_ \_ FÜR POOL \_ \_ AKTIVIERT** | Ein Wert ungleich 0 (null) in *pData* gibt an, dass **SPLREG \_ RESTART JOB ON \_ POOL \_ \_ \_ ERROR** aktiviert ist.<br/>                                                                                            |
 
 
 
  
 
-Die im Fehler des **Auftrags "splreg \_ Restart \_ Job \_ on \_ Pool \_** " angegebene Zeit ist eine minimale Zeit. Die tatsächliche Zeit kann je nach den folgenden Port Monitoreinstellungen, bei denen es sich um Registrierungs Werte unter diesem Registrierungsschlüssel handelt, länger sein:
+Die in **SPLREG \_ RESTART JOB ON POOL \_ \_ \_ \_ ERROR** angegebene Zeit ist eine Mindestzeit. Die tatsächliche Zeit kann abhängig von den folgenden Portmonitoreinstellungen länger sein, bei denen es sich um Registrierungswerte unter diesem Registrierungsschlüssel handelt:
 
-**HKLM \\ System \\ CurrentControlSet \\ Control \\ Print \\ Monitors \\ < *Monitorname* > \\ Ports**
+**HKLM \\ SYSTEM \\ CurrentControlSet-Steuerelement \\ \\ \\ \\ < *Druckmonitore MonitorName-Ports* > \\**
 
-Aufrufen der [**RegQueryValueEx**](/windows/win32/api/winreg/nf-winreg-regqueryvalueexa) -Funktion, um diese Werte abzufragen.
+Rufen Sie die [**RegQueryValueEx-Funktion**](/windows/win32/api/winreg/nf-winreg-regqueryvalueexa) auf, um diese Werte abzufragen.
 
 
 
-| Port Monitor Einstellung     | Datentyp      | Bedeutung                                                                                                        |
+| Portmonitoreinstellung     | Datentyp      | Bedeutung                                                                                                        |
 |--------------------------|----------------|----------------------------------------------------------------------------------------------------------------|
-| **Statusupdateaktivierte**  | **REG \_ DWORD** | Wenn ein Wert ungleich NULL ist, wird es dem Port Monitor ermöglicht, den Spooler mit dem Port Status zu aktualisieren.<br/>            |
-| **Statusupdateinterval** | **REG \_ DWORD** | Gibt das Intervall (in Minuten) an, in dem der Port Monitor den Spooler mit dem Port Status aktualisiert.<br/> |
+| **StatusUpdateEnabled**  | **REG \_ DWORD** | Wenn ein Wert ungleich 0 (null) ist, kann der Portmonitor den Spooler mit dem Portstatus aktualisieren.<br/>            |
+| **StatusUpdateInterval** | **REG \_ DWORD** | Gibt das Intervall in Minuten an, in dem der Portmonitor den Spooler mit dem Portstatus aktualisiert.<br/> |
 
 
 
  
 
-In Windows 7 und höheren Versionen von Windows werden Druckaufträge, die an einen Druckserver gesendet werden, standardmäßig auf dem Client gerendert. Die folgenden Werte konfigurieren das Client seitige Rendering von Druckaufträgen und können gelesen werden, wenn Sie die folgenden Werte in " *pvaluename*" festlegen.
+In Windows 7 und neueren Versionen von Windows werden Druckaufträge, die an einen Druckerserver gesendet werden, standardmäßig auf dem Client gerendert. Die folgenden Werte konfigurieren das clientseitige Rendering eines Druckauftrags und können gelesen werden, wenn Sie die folgenden Werte in *pValueName festlegen.*
 
 
 
 | Einstellung                      | Datentyp      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **EMF despoolingsetting**     | **REG \_ DWORD** | Der Wert 0 (null), oder wenn dieser Wert nicht in der Registrierung vorhanden ist, aktiviert das Client seitige Standard Rendering von Druckaufträgen.<br/> Der Wert 1 deaktiviert das Client seitige Rendering von Druckaufträgen.<br/>                                                                                                                                                                                                          |
-| **Forceclientsiderderdering** | **REG \_ DWORD** | Der Wert 0 oder, wenn dieser Wert nicht in der Registrierung vorhanden ist, bewirkt, dass die Druckaufträge auf dem Client gerendert werden. Wenn ein Druckauftrag nicht auf dem Client gerendert werden kann, wird er auf dem Server gerendert. Wenn ein Druckauftrag nicht auf dem Server gerendert werden kann, tritt ein Fehler auf.<br/> Bei einem Wert von 1 werden Druckaufträge auf dem Client ausgegeben. Wenn ein Druckauftrag nicht auf dem Client gerendert werden kann, tritt ein Fehler auf.<br/> |
+| **EMFDespoolingSetting**     | **REG \_ DWORD** | Der Wert 0 oder , wenn dieser Wert nicht in der Registrierung vorhanden ist, aktiviert das clientseitige Standardrendering von Druckaufträgen.<br/> Der Wert 1 deaktiviert das clientseitige Rendering von Druckaufträgen.<br/>                                                                                                                                                                                                          |
+| **ForceClientSideRendering** | **REG \_ DWORD** | Der Wert 0 oder , wenn dieser Wert nicht in der Registrierung vorhanden ist, verursacht, dass die Druckaufträge auf dem Client gerendert werden. Wenn ein Druckauftrag auf dem Client nicht gerendert werden kann, wird er auf dem Server gerendert. Wenn ein Druckauftrag nicht auf dem Server gerendert werden kann, wird ein Fehler angezeigt.<br/> Der Wert 1 rendert Druckaufträge auf dem Client. Wenn ein Druckauftrag nicht auf dem Client gerendert werden kann, wird ein Fehler angezeigt.<br/> |
 
 
 
@@ -200,10 +200,10 @@ In Windows 7 und höheren Versionen von Windows werden Druckaufträge, die an ei
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Getprinterdataw** (Unicode) und **getprinterdataa** (ANSI)<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **GetPrinterDataW** (Unicode) und **GetPrinterDataA** (ANSI)<br/>                                   |
 
 
 
@@ -217,7 +217,7 @@ In Windows 7 und höheren Versionen von Windows werden Druckaufträge, die an ei
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Getprinterdataex**](getprinterdataex.md)
+[**GetPrinterDataEx**](getprinterdataex.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -226,13 +226,13 @@ In Windows 7 und höheren Versionen von Windows werden Druckaufträge, die an ei
 [**SetPrinter**](setprinter.md)
 </dt> <dt>
 
-[**Setprinterdata**](setprinterdata.md)
+[**SetPrinterData**](setprinterdata.md)
 </dt> <dt>
 
-[**Setprinterdataex**](setprinterdataex.md)
+[**SetPrinterDataEx**](setprinterdataex.md)
 </dt> <dt>
 
-[**PrintProcessor-Ober \_ Grenzen \_ 1**](printprocessor-caps-1.md)
+[**PRINTPROCESSOR \_ CAPS \_ 1**](printprocessor-caps-1.md)
 </dt> </dl>
 
  

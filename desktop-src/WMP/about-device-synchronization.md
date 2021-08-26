@@ -1,47 +1,47 @@
 ---
-title: Informationen zur Geräte Synchronisierung
-description: Informationen zur Geräte Synchronisierung
+title: Informationen zur Gerätesynchronisierung
+description: Informationen zur Gerätesynchronisierung
 ms.assetid: 87976357-f819-41ac-9645-36e799876881
 keywords:
-- Windows Media Player, Synchronisieren von Geräten
-- Windows Media Player-Objektmodell, Synchronisieren von Geräten
+- Windows Media Player,Synchronisieren von Geräten
+- Windows Media Player Objektmodell, Synchronisieren von Geräten
 - Objektmodell, Synchronisieren von Geräten
-- Windows Media Player ActiveX-Steuerelement, Synchronisieren von Geräten
-- ActiveX-Steuerelement, Synchronisieren von Geräten
-- Windows Media Player Mobile ActiveX-Steuerelement, Synchronisieren von Geräten
-- Windows Media Player Mobile, Synchronisieren von Geräten
-- Synchronisieren von Geräten, Informationen zu
-- Geräte Synchronisierung, Informationen zu
+- Windows Media Player ActiveX,Synchronisieren von Geräten
+- ActiveX,Synchronisieren von Geräten
+- Windows Media Player Mobile ActiveX,Synchronisieren von Geräten
+- Windows Media Player Mobil,Synchronisieren von Geräten
+- Synchronisieren von Geräten, Informationen
+- Gerätesynchronisierung, Informationen
 - Synchronisieren von Geräten, manuelle Übertragung
-- Geräte Synchronisierung, manuelle Übertragung
+- Gerätesynchronisierung, manuelle Übertragung
 - Synchronisieren von Geräten, automatische Synchronisierung
-- Geräte Synchronisierung, automatische Synchronisierung
+- Gerätesynchronisierung, automatische Synchronisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0ad6b6526698def2f7d58ec7afc04c8e22e89c7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eed6a03781121a58bee36fd9ff1f74bf21a85347f81384f30c2db5afb4ef3e1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119903560"
 ---
-# <a name="about-device-synchronization"></a>Informationen zur Geräte Synchronisierung
+# <a name="about-device-synchronization"></a>Informationen zur Gerätesynchronisierung
 
-In Windows Media Player 10 wurde ein neues Modell für die Synchronisierung von Inhalten digitaler Medien mit tragbaren Geräten eingeführt. Aus Sicht des Benutzers bedeutet dies, dass Sie angeben können, welche Wiedergabelisten (einschließlich automatischer Wiedergabelisten) automatisch mit Geräten synchronisiert werden sollen. Sie können auch den Inhalt digitaler Medien manuell auf Geräte übertragen. Aus Sicht des Entwicklers bedeutet dies, dass neue Funktionen verfügbar gemacht werden, die Sie in Ihren Anwendungen nutzen können. Zu diesem Zweck müssen Sie eine Remote Instanz des Windows Media Player-Steuer Elements erstellen.
+Windows Media Player 10 wurde ein neues Modell für die Synchronisierung digitaler Medieninhalte mit portablen Geräten eingeführt. Aus Sicht des Benutzers bedeutet dies, dass Sie angeben können, welche Wiedergabelisten (einschließlich automatischer Wiedergabelisten) automatisch mit Geräten synchronisiert werden. Sie können digitale Medieninhalte auch manuell auf Geräte übertragen. Aus Sicht des Entwicklers bedeutet dies, dass neue Funktionen verfügbar gemacht werden, die Sie in Ihren Anwendungen nutzen können. Hierzu müssen Sie eine Remoteinstanz des -Steuerelements Windows Media Player erstellen.
 
-Es gibt zwei Möglichkeiten, wie ein Benutzer Digital Media-Inhalte auf ein Gerät kopieren kann:
+Es gibt zwei Möglichkeiten, wie ein Benutzer digitale Medieninhalte auf ein Gerät kopieren kann:
 
--   **Manuelle Übertragung.** Der Benutzer wählt den Inhalt digitaler Medien in der Bibliothek aus und initiiert dann eine Übertragung des Inhalts auf das Gerät. Dies ist vergleichbar mit der Funktionalität, die in früheren Versionen von Windows Media Player bereitgestellt wurde. Das Windows Media Player SDK bietet keine Methoden zum Übertragen digitaler Medien auf ein Gerät.
--   **Automatische Synchronisierung.** Der Benutzer gibt Wiedergabelisten an, die automatisch mit dem Gerät synchronisiert werden. Dies ist ein Feature von Windows Media Player 10 oder höher. Das Windows Media Player SDK bietet Funktionen zum Verwalten der automatischen Synchronisierung. Mit dieser Funktion können Sie eine benutzerdefinierte Benutzeroberfläche für Ihre Anwendung erstellen, um anzugeben, wie die Geräte Synchronisierung durchgeführt wird, und um den Benutzern Statusinformationen bereitzustellen.
+-   **Manuelle Übertragung.** Der Benutzer wählt digitale Medieninhalte in der Bibliothek aus und initiiert dann eine Übertragung des Inhalts auf das Gerät. Dies ähnelt der Funktionalität, die von früheren Versionen von bereitgestellt Windows Media Player. Das Windows Media Player SDK bietet keine Methoden zum Übertragen digitaler Medien auf ein Gerät.
+-   **Automatische Synchronisierung.** Der Benutzer gibt Wiedergabelisten an, die automatisch mit dem Gerät synchronisiert werden. Dies ist ein Feature von Windows Media Player 10 oder höher. Das Windows Media Player SDK bietet Funktionen zum Verwalten der automatischen Synchronisierung. Diese Funktionalität ist so konzipiert, dass Sie eine benutzerdefinierte Benutzeroberfläche für Ihre Anwendung erstellen können, um anzugeben, wie die Gerätesynchronisierung erfolgt, und um Benutzern Statusinformationen zur Verfügung zu stellen.
 
-Damit die automatische Synchronisierung funktioniert, muss zwischen Windows Media Player und dem Gerät eine besondere Beziehung hergestellt werden. Diese Beziehung wird als *Partnerschaft* bezeichnet.
+Damit die automatische Synchronisierung funktioniert, muss eine besondere Beziehung zwischen dem Windows Media Player und dem Gerät eingerichtet werden. Diese Beziehung wird als Partnerschaft *bezeichnet.*
 
-In den folgenden Abschnitten finden Sie weitere Informationen zur Geräte Synchronisierung.
+Die folgenden Abschnitte enthalten weitere Informationen zur Gerätesynchronisierung.
 
 -   [Informationen zu Geräten](about-devices.md)
 -   [Informationen zu Partnerschaften](about-partnerships.md)
 -   [Informationen zur Synchronisierungs-Engine](about-the-synchronization-engine.md)
--   [Informationen zur Wiedergabeliste](about-playlist-synchronization.md)
+-   [Informationen zur Wiedergabelistensynchronisierung](about-playlist-synchronization.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -53,12 +53,12 @@ In den folgenden Abschnitten finden Sie weitere Informationen zur Geräte Synchr
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)
 </dt> <dt>
 
-[**Arbeiten mit tragbaren Geräten**](working-with-portable-devices.md)
+[**Arbeiten mit portablen Geräten**](working-with-portable-devices.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

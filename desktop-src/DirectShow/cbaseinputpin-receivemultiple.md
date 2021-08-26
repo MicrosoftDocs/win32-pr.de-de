@@ -1,7 +1,7 @@
 ---
-description: 'Die receivemultiple-Methode empfängt ein Array von-Beispielen. Diese Methode implementiert die IMemInputPin:: receivemultiple-Methode.'
+description: Die ReceiveMultiple-Methode empfängt ein Array von Beispielen. Diese Methode implementiert die IMemInputPin::ReceiveMultiple-Methode.
 ms.assetid: 21e757c7-f623-4ccb-8e37-512ee4dd7aa7
-title: Cbaseinputpin. receivemultiple-Methode (amfilter. h)
+title: CBaseInputPin.ReceiveMultiple-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5725b7d8b70c8f7c61eb44231812997a903ba41a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 63d71f47978a2eefdcbdacbe1c31bfe69c732c24a0479357b35aa1ddd2b0a9de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079400"
 ---
-# <a name="cbaseinputpinreceivemultiple-method"></a>Cbaseinputpin. receivemultiple-Methode
+# <a name="cbaseinputpinreceivemultiple-method"></a>CBaseInputPin.ReceiveMultiple-Methode
 
-Die- `ReceiveMultiple` Methode empfängt ein Array von-Beispielen. Diese Methode implementiert die [**IMemInputPin:: receivemultiple**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple) -Methode.
+Die `ReceiveMultiple` -Methode empfängt ein Array von Stichproben. Diese Methode implementiert die [**IMemInputPin::ReceiveMultiple-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,58 +44,58 @@ HRESULT ReceiveMultiple(
 
 <dl> <dt>
 
-*psamples* 
+*pSamples* 
 </dt> <dd>
 
-Die Adresse eines Arrays von [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Zeigern der Größe *nsamples*.
+Adresse eines Arrays von [**IMediaSample-Zeigern**](/windows/desktop/api/Strmif/nn-strmif-imediasample) der Größe *nSamples*.
 
 </dd> <dt>
 
-*nsamples* 
+*nSamples* 
 </dt> <dd>
 
-Anzahl der zu verarbeitenden Stichproben.
+Anzahl der zu verarbeitenden Beispiele.
 
 </dd> <dt>
 
-*nsamplesprocgelassene* 
+*nSamplesProcessed* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der verarbeiteten Beispiele empfängt.
+Zeiger auf eine Variable, die die Anzahl der verarbeiteten Stichproben empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                |
 |---------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                    | Erfolg.<br/>                                        |
-| <dl> <dt>**S \_ false**</dt> </dl>                 | PIN wird zurzeit geleert. Das Beispiel wurde zurückgewiesen.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>               | **Null** -Zeigerargument.<br/>                      |
-| <dl> <dt>**VFW \_ E \_ invalidmediatype**</dt> </dl> | Ungültiger Medientyp.<br/>                             |
-| <dl> <dt>**VFW \_ E \_ Lauf \_ Zeitfehler**</dt> </dl>   | Laufzeitfehler.<br/>                      |
-| <dl> <dt>**VFW \_ E \_ falscher \_ Zustand**</dt> </dl>     | Die PIN wurde beendet.<br/>                             |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                 | Pin wird gerade geleert. Das Beispiel wurde abgelehnt.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>               |  NULL-Zeigerargument.<br/>                      |
+| <dl> <dt>**VFW \_ E \_ INVALIDMEDIATYPE**</dt> </dl> | Ungültiger Medientyp.<br/>                             |
+| <dl> <dt>**VFW \_ \_ E-LAUFZEITFEHLER \_**</dt> </dl>   | Es ist ein Laufzeitfehler aufgetreten.<br/>                      |
+| <dl> <dt>**VFW \_ E \_ WRONG \_ STATE**</dt> </dl>     | Die Stecknadel wird beendet.<br/>                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode verhält sich wie die [**cbasinput PIN:: Receive**](cbaseinputpin-receive.md) -Methode, empfängt jedoch ein Array von Beispielen. In der Basisklasse durchläuft die-Methode das Array und ruft mit jedem Beispiel **Receive** auf. Überschreiben Sie diese Funktion, wenn der Filter Batches von Beispielen effizienter verarbeiten kann, als Sie nacheinander verarbeitet werden.
+Diese Methode verhält sich wie die [**CBaseInputPin::Receive-Methode,**](cbaseinputpin-receive.md) empfängt jedoch ein Array von Beispielen. In der Basisklasse durchfing die -Methode das Array und ruft **Receive mit** jedem Beispiel auf. Überschreiben Sie diese Funktion, wenn Ihr Filter Batches von Stichproben effizienter verarbeiten kann, als sie nach und nach zu verarbeiten.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -103,7 +103,7 @@ Diese Methode verhält sich wie die [**cbasinput PIN:: Receive**](cbaseinputpin-
 
 <dl> <dt>
 
-[**Cbaseingeputpin-Klasse**](cbaseinputpin.md)
+[**CBaseInputPin-Klasse**](cbaseinputpin.md)
 </dt> </dl>
 
  

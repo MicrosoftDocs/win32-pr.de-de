@@ -4,12 +4,12 @@ ms.assetid: 36a7c360-2d26-46b9-b829-0fb35b36c79c
 title: DocumentBinding
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf2b8f44c90cdef37a6599bf25904949748c82ba
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: e8d7b3ed43aed1111d39e02e09f9f4ee658938b45053d64bec3beda4490f87b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119949870"
 ---
 # <a name="documentbinding"></a>DocumentBinding
 
@@ -19,7 +19,7 @@ Beschreibt die Bindungsmethode. Jedes Dokument ist separat gebunden. DocumentBin
 
 -   [Elementinformationen](#element-information)
 -   [Strukturell](#structural-content)
--   [xml-Inhalt (Extensible Markup Language)](#extensible-markup-language-xml-content)
+-   [Extensible Markup Language -Inhalt (XML)](#extensible-markup-language-xml-content)
 
 ## <a name="element-information"></a>Elementinformationen
 
@@ -27,7 +27,7 @@ Beschreibt die Bindungsmethode. Jedes Dokument ist separat gebunden. DocumentBin
 
 | Name | Wert |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Elementtyp <br/>   | Funktion<br/>                                                                                                                              |
+| Elementtyp <br/>   | Komponente<br/>                                                                                                                              |
 | Bereichspräfix <br/> | Dokument<br/>                                                                                                                             |
 | Hinweise <br/>          | Top, Bottom, Left und Right sind relativ zu PageImageableSize, wobei TopLeft durch den Ursprung der x-Achse und der y-Achse gekennzeichnet ist.<br/> |
 
@@ -63,15 +63,15 @@ In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten
 
 | Name                               | Datentyp          | Einheit                  | Unterstützte Werte                                                                                                                                                                      | Zusammenfassung                                                                                                                                                                |
 |------------------------------------|--------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben ist, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                                     |
+| \_Optionname\_<br/>          | Zeichenfolge<br/>  | Buchstaben<br/> | Gültiger vollqualifizierte Name, wie von [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                                                     |
 | \_IdentityOptionValue\_<br/> | Zeichenfolge<br/>  | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                               | Definiert eine Option, die diese Funktion deaktiviert, wenn sie ausgewählt wird.<br/>                                                                                           |
-| \_BindingGutterValue\_<br/>  | Integer<br/> | Mikron<br/>    | Größer oder gleich 0.<br/>                                                                                                                                                | Definiert den minimalen Bindungssteg für die angegebene Endbindung. Der Bundsteg wird relativ zum Rand der physischen Mediendimension in Mikron gemessen.<br/> |
+| \_BindingGutterValue\_<br/>  | Integer<br/> | Mikron<br/>    | Größer als oder gleich 0.<br/>                                                                                                                                                | Definiert den minimalen Bindungssteg für die angegebene Endbindung. Der Bundsteg wird relativ zum Rand der physischen Mediendimension in Mikron gemessen.<br/> |
 
 
 
  
 
-## <a name="extensible-markup-language-xml-content"></a>xml-Inhalt (Extensible Markup Language)
+## <a name="extensible-markup-language-xml-content"></a>Extensible Markup Language -Inhalt (XML)
 
 Die Schlüsselwörter für das öffentliche Druckschema werden im https://schemas.microsoft.com/windows/2003/08/printing/printschemakeywords -Namespace definiert. Der Inhalt des öffentlichen Extensible Markup Language (XML) für dieses Schlüsselwort ist unten definiert:
 

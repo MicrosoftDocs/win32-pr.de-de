@@ -1,30 +1,30 @@
 ---
-title: Imsrdpclient-FullScreen-Eigenschaft
-description: Bestimmt, ob sich das Client Steuerelement im Vollbildmodus befindet.
+title: IMsRdpClient FullScreen (Eigenschaft)
+description: Bestimmt, ob sich das Clientsteuer steuerelement im Vollbildmodus befindet.
 ms.assetid: 64fe2835-c00e-4d21-812d-dcf160147d93
 ms.tgt_platform: multiple
 keywords:
-- Voll Bildeigenschaften Remotedesktopdienste
-- Voll Bildeigenschaften Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
-- Voll Bildeigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste
+- FullScreen-Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
+- FullScreen-Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , FullScreen-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -64,16 +64,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1adbc8e11d2cc4fb4a8071372777a01d81b5edad
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c52e3d2349a4d3b0121b05a3a0424126b754757c1b0b356042a90c28ce9923ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010070"
 ---
-# <a name="imsrdpclientfullscreen-property"></a>Imsrdpclient:: FullScreen-Eigenschaft
+# <a name="imsrdpclientfullscreen-property"></a>IMsRdpClient::FullScreen -Eigenschaft
 
-Bestimmt, ob sich das Client Steuerelement im Vollbildmodus befindet.
+Bestimmt, ob sich das Clientsteuer steuerelement im Vollbildmodus befindet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -94,17 +94,17 @@ HRESULT get_FullScreen(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-**True** , um in den Vollbildmodus zu wechseln, **false** , um den Vollbildmodus zu verlassen und zum Fenstermodus zurückzukehren.
+**True,** um in den Vollbildmodus zu wechseln, **FALSE,** um den Vollbildmodus zu verlassen und in den Fenstermodus zurückzukehren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Wenn die Methoden erfolgreich sind, wird **S \_ OK** zurückgegeben. Jeder andere **HRESULT** -Wert gibt an, dass der-Fehler aufgetreten ist.
+Wenn die Methoden erfolgreich sind, **wird S \_ OK** zurückgegeben. Jeder andere **HRESULT-Wert** gibt an, dass der Aufruf fehlgeschlagen ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Sie können diese Eigenschaft festlegen, wenn das Steuerelement verbunden ist.
 
-Sie müssen die [**IMsRdpClientNonScriptable3::p UT \_ connectionbartext**](imsrdpclientnonscriptable3-connectionbartext.md) -Methode anrufen, bevor Sie die [**imstscsecuredsettings::p UT- \_ voll Bild**](imstscsecuredsettings-fullscreen.md) Methode oder die **imsrdpclient::p UT- \_ voll Bild** Methode aufzurufen.
+Sie müssen die [**IMsRdpClientNonScriptable3::p ut \_ ConnectionBarText-Methode aufrufen,**](imsrdpclientnonscriptable3-connectionbartext.md) bevor Sie die [**IMsTscSecuredSettings::p ut \_ Fullscreen-Methode**](imstscsecuredsettings-fullscreen.md) oder die **IMsRdpClient::p ut \_ Fullscreen-Methode** aufrufen.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -118,15 +118,15 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpClient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)

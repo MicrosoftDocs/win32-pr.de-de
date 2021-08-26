@@ -4,7 +4,7 @@ MS-HAID: vspixengine.Experiment
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Experiment Struktur
+title: Experimentstruktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 632F1F92-3E32-4B0A-8E38-2613694C267F
@@ -17,14 +17,14 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: e932d2f2b60a72ca167f3f6edd7f4ddae9b68710
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1ebe9ab0232104886078256effdfaf5534144dc30421dab2ac2359ef390c0a69
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118150"
 ---
-# <a name="span-idvspixengineexperimentspanexperiment-structure"></a><span id="vspixengine.experiment"></span>Experiment Struktur
+# <a name="span-idvspixengineexperimentspanexperiment-structure"></a><span id="vspixengine.experiment"></span>Experimentstruktur
 
 Stellt Informationen zu einem Experiment (Erfassung) dar.
 
@@ -37,36 +37,36 @@ Stellt Informationen zu einem Experiment (Erfassung) dar.
 
 ## <a name="members"></a>Member
 
-**ProcessID**  
+**Processid**  
 Die zugeordnete Prozess-ID.
 
 **applicationName**  
-Eine com-Zeichenfolge mit dem Namen der Anwendung, für die das Experiment ausgeführt werden soll.
+Eine COM-Zeichenfolge, die den Namen der Anwendung enthält, für die das Experiment ausgeführt werden soll.
 
 **commandLineArguments**  
-Eine com-Zeichenfolge, die die Befehlszeilenargumente enthält.
+Eine COM-Zeichenfolge, die die Befehlszeilenargumente enthält.
 
 **workingDirectory**  
-Eine com-Zeichenfolge, die den Pfad des Arbeitsverzeichnisses enthält.
+Eine COM-Zeichenfolge, die den Pfad des Arbeitsverzeichnisses enthält.
 
-**temppixrunfile**  
-Eine com-Zeichenfolge, die den filePath der zum Ausführen des Experiments verwendeten temporären Datei enthält.
+**tempPixRunFile**  
+Eine COM-Zeichenfolge, die den Dateipfad der temporären Datei enthält, die zum Ausführen des Experiments verwendet wird.
 
-**Startoption**  
+**startOption**  
 Die dem Experiment zugeordnete Startoption.
 
-**experimentstyp**  
+**experimentType**  
 Die Art des Experiments (Erfassung).
 
-**uilocale**  
-Die ID des Gebiets Schemas, das während der Überlagerung (Erfassung) für UI-Überlagerungs Elemente verwendet wird. Diese wird vom Host (z. b. Visual Studio Grafikdiagnose) an die Aufzeichnungs-Engine übermittelt.
+**uiLocale**  
+Die ID des Gebietsschemas, das während der Erfassung für UI-Überlagerungselemente verwendet wird. Dies wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
 
 **registryRoot**  
-Eine com-Zeichenfolge, die den Registrierungs Stamm enthält. Diese wird vom Host (z. b. Visual Studio Grafikdiagnose) an die Aufzeichnungs-Engine übermittelt.
+Eine COM-Zeichenfolge, die den Registrierungsstamm enthält. Dies wird vom Host (z. B. Visual Studio Grafikdiagnose) an die Erfassungs-Engine übergeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

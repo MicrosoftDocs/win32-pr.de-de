@@ -1,7 +1,7 @@
 ---
-description: Ruft die ID-Eigenschaften für die IInkStrokeDisp-Objekte des entsprechenden Worts, der Zeile, des Absatzes oder der Zeichnung ab, die durch eine Handschrift Analyse bestimmt werden.
+description: Ruft die Id-Eigenschaften für die IInkStrokeDisp-Objekte des entsprechenden Worts, der Zeile, des Absatzes oder der Zeichnung ab, die von der Freihandanalyse bestimmt werden.
 ms.assetid: f05ffa3b-2a47-46fe-bb8f-e682aa094b69
-title: Calldivideresultstrokeids-Funktion
+title: CallDivideResultsStrokeIds-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: ee690c9564df3b8c75eca6eec8eeb88b7531f4ef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64b3e4180a34c45890408f8ba92cc79465fffa7f1028152e27f8d5c0aa40e3e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009130"
 ---
-# <a name="calldivideresultsstrokeids-function"></a>Calldivideresultstrokeids-Funktion
+# <a name="calldivideresultsstrokeids-function"></a>CallDivideResultsStrokeIds-Funktion
 
-Ruft die [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) -Eigenschaften für die [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte des entsprechenden Worts, der Zeile, des Absatzes oder der Zeichnung ab, die durch eine Handschrift Analyse bestimmt werden.
+Ruft die [**Id-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) des entsprechenden Worts, der Zeile, des Absatzes oder der Zeichnung ab, die von der Freihandanalyse bestimmt werden.
 
-Diese Funktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Funktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,38 +46,38 @@ HRESULT WINAPI CallDivideResultsStrokeIds(
 
 <dl> <dt>
 
-*hdivider* \[ in\]
+*hDivider* \[ In\]
 </dt> <dd>
 
-Ein Handle für das [Divider](the-divider-object.md) -Objekt.
+Ein Handle für das [Divider-Objekt.](the-divider-object.md)
 
 </dd> <dt>
 
-*awordstrokeids \[ \]* \[out\]
+*aWordStrokeIds \[ \]* \[out\]
 </dt> <dd>
 
-Ein Array der Strich-IDs der frei Hand Eingaben im Wort.
+Ein Array der Strich-IDs der Ink im Wort.
 
 </dd> <dt>
 
-*alinestrokeids \[ \]* \[out\]
+*aLineStrokeIds \[ \]* \[out\]
 </dt> <dd>
 
-Ein Array der Strich-IDs der frei Hand Eingabe in der Zeile.
+Ein Array der Strich-IDs der Ink in der Zeile.
 
 </dd> <dt>
 
-*aparagphstrokeids \[ \]* \[out\]
+*aParagraphStrokeIds \[ \]* \[out\]
 </dt> <dd>
 
-Ein Array der Strich-IDs der frei Hand Eingaben im Absatz.
+Ein Array der Strich-IDs der Ink im Absatz.
 
 </dd> <dt>
 
-*adrawingstrokeids \[ \]* \[out\]
+*aDrawingStrokeIds \[ \]* \[out\]
 </dt> <dd>
 
-Ein Array der Strich-IDs der frei Hand Eingaben in der Zeichnung.
+Ein Array der Strich-IDs der Ink in der Zeichnung.
 
 </dd> </dl>
 
@@ -90,7 +90,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                  | Beschreibung                                     |
 |----------------------------------------------------------------------------------------------|-------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Die Funktion wurde erfolgreich ausgeführt.<br/>              |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl> | Der *hdivider* -Parameter ist ungültig.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Der *hDivider-Parameter* ist ungültig.<br/> |
 
 
 
@@ -102,7 +102,7 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

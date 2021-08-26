@@ -4,12 +4,12 @@ ms.assetid: 7912c682-c179-453b-8a34-e87958217500
 title: D3DPMISCCAPS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4517b9a1596fb5410fe79339a9ecba0d29909c8e572104248e6e658ba183e05
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ee88ba03b3c0a6d51c0100b20768df4cbf632d46
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119850250"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624536"
 ---
 # <a name="d3dpmisccaps"></a>D3DPMISCCAPS
 
@@ -19,9 +19,9 @@ Verschiedene primitive Treiberfunktionsflags.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -42,7 +42,7 @@ Verschiedene primitive Treiberfunktionsflags.
 <tr class="even">
 <td>D3DPMISCCAPS_CULLCW</td>
 <td>0x00000020L</td>
-<td>Der Treiber unterstützt das Culling des Dreiecks im Uhrzeigersinn durch D3DRS_CULLMODE Zustand. (Dies gilt nur für Dreiecksprimitive.) Dieses Flag entspricht dem D3DCULL_CW Member des <a href="/windows/desktop/direct3d9/d3dcull"><strong>aufzählten D3DCULL-Typs.</strong></a></td>
+<td>Der Treiber unterstützt im Uhrzeigersinn dreiecksweises Culling durch D3DRS_CULLMODE Zustand. (Dies gilt nur für Dreiecksprimitive.) Dieses Flag entspricht dem D3DCULL_CW Member des <a href="/windows/desktop/direct3d9/d3dcull"><strong>aufzählten D3DCULL-Typs.</strong></a></td>
 </tr>
 <tr class="odd">
 <td>D3DPMISCCAPS_CULLCCW</td>
@@ -62,7 +62,7 @@ Verschiedene primitive Treiberfunktionsflags.
 <tr class="even">
 <td>D3DPMISCCAPS_CLIPTLVERTS</td>
 <td>0x00000200L</td>
-<td>Geräteclips nach transformierten Scheitelpunktprimitiven. Geben D3DUSAGE_DONOTCLIP an, wenn die Pipeline keine Beschneidungs- oder Abschneide-Einstellungen verwenden soll. In diesem Fall muss möglicherweise zur Zeichnen-Zeit zusätzliche Softwareclips ausgeführt werden, was erfordert, dass sich der Scheitelpunktpuffer im Systemspeicher befingt.<br/></td>
+<td>Geräteclips nach transformierten Scheitelpunktprimitiven. Geben D3DUSAGE_DONOTCLIP an, wenn die Pipeline keine Beschneidungsausschneiden soll. In diesem Fall muss möglicherweise zur Zeichnen-Zeit zusätzliche Softwareclips ausgeführt werden, was erfordert, dass sich der Scheitelpunktpuffer im Systemspeicher befingt.<br/></td>
 </tr>
 <tr class="odd">
 <td>D3DPMISCCAPS_TSSARGTEMP</td>
@@ -126,7 +126,7 @@ Verschiedene primitive Treiberfunktionsflags.
 <tr class="odd">
 <td>D3DPMISCCAPS_FOGVERTEXCLAMPED</td>
 <td>0x00100000L</td>
-<td>Geräteklammern Blendfaktor pro Scheitelpunkt.</td>
+<td>Gerät klammert Blendfaktor pro Scheitelpunkt.</td>
 </tr>
 </tbody>
 </table>

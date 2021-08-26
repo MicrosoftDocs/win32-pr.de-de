@@ -1,24 +1,24 @@
 ---
-title: Zeichnen von Daten wird vorbereitet
-description: Zeichnen von Daten wird vorbereitet
+title: Vorbereiten des Zeichnens von Daten
+description: Vorbereiten des Zeichnens von Daten
 ms.assetid: 98adcee4-06c0-4684-bd9e-e030e3f9a59d
 keywords:
-- Videokomprimierungs-Manager (VCM), zeichnen
-- VCM (Videokomprimierungs-Manager), zeichnen
-- Icdrawbegin-Makro
-- Icdrawend-Makro
+- Videokomprimierungs-Manager (VCM), Zeichnen
+- VCM (Videokomprimierungs-Manager), Zeichnen
+- ICDrawBegin-Makro
+- ICDrawEnd-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de20d23c0ded51d1933918c16da3f8827b77f796
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c32c87c751705dea6dc6e00c2f48635d685d87f7d900422efb980b22012e052e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037900"
 ---
-# <a name="preparing-to-draw-data"></a>Zeichnen von Daten wird vorbereitet
+# <a name="preparing-to-draw-data"></a>Vorbereiten des Zeichnens von Daten
 
-Das folgende Beispiel zeigt die Initialisierungs Sequenz, die den Dekompressor anweist, den voll Bildschirm zu zeichnen. Sie verwendet die Makros [**icdrawbegin**](/windows/desktop/api/Vfw/nf-vfw-icdrawbegin) und [**icdrawend**](/windows/desktop/api/Vfw/nf-vfw-icdrawend) .
+Das folgende Beispiel zeigt die Initialisierungssequenz, die den Dekomprimator anweisen soll, den Vollbildmodus zu zeichnen. Dabei werden die [**Makros ICDrawBegin**](/windows/desktop/api/Vfw/nf-vfw-icdrawbegin) und [**ICDrawEnd**](/windows/desktop/api/Vfw/nf-vfw-icdrawend) verwendet.
 
 
 ```C++
@@ -50,9 +50,9 @@ else
 
 
 
- 
+ 
 
- 
+ 
 
 
 

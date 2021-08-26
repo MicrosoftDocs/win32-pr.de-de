@@ -1,19 +1,19 @@
 ---
 title: Arrayattribute
-description: Es gibt eine enge Beziehung zwischen Arrays und Zeigern in der Programmiersprache C.
+description: Es besteht eine enge Beziehung zwischen Arrays und Zeigern in der Programmiersprache C.
 ms.assetid: 0d65c993-63e4-42ae-ae24-6c19a71386a1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5ed669a2a81528afa84b41a1be25a0c84f70fbe
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8ba7bdaa08352a96987066313d4db074872f28b71ec0be0856a32522a849029c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073520"
 ---
 # <a name="array-attributes"></a>Arrayattribute
 
-Es gibt eine enge Beziehung zwischen Arrays und Zeigern in der Programmiersprache C. Wenn ein Array Name als Parameter an eine Funktion übergeben wird, wird er als Zeiger auf das erste Element des Arrays behandelt, wie im folgenden Beispiel gezeigt:
+Es besteht eine enge Beziehung zwischen Arrays und Zeigern in der Programmiersprache C. Wenn ein Arrayname als Parameter an eine Funktion übergeben wird, wird er wie im folgenden Beispiel gezeigt als Zeiger auf das erste Element des Arrays behandelt:
 
 
 ```C++
@@ -30,7 +30,7 @@ void main(void)
 
 
 
-In einem lokalen-Befehl können Sie den Zeiger Parameter verwenden, um den Arbeitsspeicher zu durchsuchen und den Inhalt anderer Adressen zu untersuchen:
+In einem lokalen Aufruf können Sie den Zeigerparameter verwenden, um durch den Arbeitsspeicher zu märzen und den Inhalt anderer Adressen zu untersuchen:
 
 
 ```C++
@@ -46,30 +46,30 @@ void fLocal1(char * pch1)
 
 
 
-Wenn ein Client einen Zeiger an eine Remote Prozedur übergibt, überträgt der Clientstub den Zeiger und die Daten, auf die er verweist. Wenn der Zeiger nicht auf seine entsprechenden Daten beschränkt ist, muss der gesamte Arbeitsspeicher des Clients mit jedem Remote-Befehl übertragen werden. Durch erzwingen der starken Typisierung in der Schnittstellen Definition schränkt die Client-Stub-Verarbeitung von der Mittell auf die Daten ein, die dem angegebenen Zeiger entsprechen.
+Wenn ein Client einen Zeiger auf eine Remoteprozedur übergibt, überträgt der Clientstub sowohl den Zeiger als auch die Daten, auf die er zeigt. Sofern der Zeiger nicht auf die entsprechenden Daten beschränkt ist, muss bei jedem Remoteaufruf der clientseitige Arbeitsspeicher übertragen werden. Durch erzwingen der starken Eingabe in der Schnittstellendefinition schränkt MIDL die Clientstubverarbeitung auf die Daten ein, die dem angegebenen Zeiger entsprechen.
 
-Die Größe des Arrays und der Bereich der Array Elemente, die an den Remote Computer übertragen werden, können konstant oder variabel sein. Wenn diese Werte variabel sind und daher zur Laufzeit bestimmt werden, müssen Sie Attribute in der IDL-Datei verwenden, um anzugeben, wie viele Array Elemente übertragen werden sollen. Die folgenden Mittell-Attribute unterstützen Array Begrenzungen.
+Die Größe des Arrays und der Bereich von Arrayelementen, die an den Remotecomputer übertragen werden, können konstant oder variabel sein. Wenn diese Werte variabel sind und daher zur Laufzeit bestimmt werden, müssen Sie Attribute in der IDL-Datei verwenden, um anzugeben, wie viele Arrayelemente übertragen werden sollen. Die folgenden MIDL-Attribute unterstützen Array-Begrenzungen.
 
 
 
-| Attribut                             | BESCHREIBUNG                                             | Standard |
+| attribute                             | BESCHREIBUNG                                             | Standard |
 |---------------------------------------|---------------------------------------------------------|---------|
-| \[der [ **erste \_ ist**](/windows/desktop/Midl/first-is)\]   | Der Index des ersten übertragenen Array Elements.           | 0       |
-| \[[ **Letzter \_ ist**](/windows/desktop/Midl/last-is)\]     | Der Index des letzten übertragenen Array Elements.            | \-      |
-| \[[ **Länge \_ ist**](/windows/desktop/Midl/length-is)\] | Gesamtanzahl der übertragenen Array Elemente.             | \-      |
-| \[[ **Max \_ ist**](/windows/desktop/Midl/max-is)\]       | Höchster gültiger Array Indexwert.                        | \-      |
-| \[[ **Min \_ ist**](/windows/desktop/Midl/min-is)\]       | Niedrigster gültiger Array Indexwert.                         | 0       |
-| \[[ **Größe \_** :](/windows/desktop/Midl/size-is)\]     | Die Gesamtanzahl der für das Array zugeordneten Array Elemente. | \-      |
+| \[[ **first \_ is**](/windows/desktop/Midl/first-is)\]   | Index des ersten übertragenen Arrayelements.           | 0       |
+| \[[ **last \_ is**](/windows/desktop/Midl/last-is)\]     | Index des letzten übertragenen Arrayelements.            | \-      |
+| \[[ **length \_ ist**](/windows/desktop/Midl/length-is)\] | Gesamtanzahl der übertragenen Arrayelemente.             | \-      |
+| \[[ **max \_ is**](/windows/desktop/Midl/max-is)\]       | Der höchste gültige Arrayindexwert.                        | \-      |
+| \[[ **min \_ is**](/windows/desktop/Midl/min-is)\]       | Niedrigster gültiger Arrayindexwert.                         | 0       |
+| \[[ **size \_ ist**](/windows/desktop/Midl/size-is)\]     | Gesamtanzahl der Arrayelemente, die dem Array zugeordnet sind. | \-      |
 
 
 
- 
+ 
 
 > [!Note]  
-> Das **Min \_ is** -Attribut ist in RPC nicht implementiert. Der minimale Array Index wird immer als 0 (null) behandelt.
+> Das **min \_ is-Attribut** ist in RPC nicht implementiert. Der minimale Arrayindex wird immer als 0 (null) behandelt.
 
- 
+ 
 
- 
+ 
 
- 
+ 

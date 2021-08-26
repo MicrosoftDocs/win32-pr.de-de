@@ -4,22 +4,22 @@ ms.assetid: d368b552-7ed3-4334-b97b-ff49d6c331c3
 title: Identifizieren gültiger DVD-Vorgänge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 444595e402dc73a3468946b820f031dabaecc2f2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5fd1b99a38949ca0ff54d391e9ad5458bbe854a5c4af4140b15deaf4177147aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051980"
 ---
 # <a name="identifying-valid-dvd-operations"></a>Identifizieren gültiger DVD-Vorgänge
 
-Verschiedene Faktoren bestimmen, ob ein angegebener DVD-Vorgang durchgeführt werden kann:
+Mehrere Faktoren bestimmen, ob Sie einen bestimmten DVD-Vorgang ausführen können:
 
--   Die aktuelle Domäne. Einige Befehle sind nur in bestimmten Domänen gültig. Wenn sich die Domäne ändert, sendet der Navigator ein EC- \_ DVD- \_ Domänen \_ Änderungs Ereignis. Sie können auch [**IDvdInfo2:: GetCurrentDomain**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getcurrentdomain) aufrufen, um die aktuelle Domäne abzurufen.
--   UOPs-Flags. Dies sind Flags, die auf die Festplatte geschrieben werden und angeben, welche Vorgänge zulässig sind. Wenn sich die Flags ändern, sendet der Navigator ein \_ gültiges UOPs-Änderungs Ereignis für eine EC-DVD \_ \_ \_ mit den neuen Flags. Sie können auch [**IDvdInfo2:: getcurrentuops**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getcurrentuops) aufrufen, um die aktuellen UOPs-Flags zu erhalten.
--   DVD-Inhalt. Einige Befehle sind möglicherweise auf Grundlage des Inhalts der DVD nicht relevant. Beispielsweise kann die [**IDvdControl2:: selectangle**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectangle) -Methode gemäß der aktuellen Domäne und den UOPs-Flags zulässig sein, aber das Video hat möglicherweise nur einen Winkel. In diesem Fall ist der **selectangle** -Befehl zulässig, ist jedoch keine sinnvolle Option.
+-   Die aktuelle Domäne. Einige Befehle sind nur in bestimmten Domänen gültig. Wenn sich die Domäne ändert, sendet der Navigator ein EC \_ DVD \_ DOMAIN \_ CHANGE-Ereignis. Sie können auch [**IDvdInfo2::GetCurrentDomain**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getcurrentdomain) aufrufen, um die aktuelle Domäne zu erhalten.
+-   UOPS-Flags. Dies sind Flags, die auf den Datenträger geschrieben werden und angeben, welche Vorgänge zulässig sind. Wenn sich die Flags ändern, sendet der Navigator ein EC \_ DVD \_ VALID \_ UOPS \_ CHANGE-Ereignis mit den neuen Flags. Sie können auch [**IDvdInfo2::GetCurrentUOPS**](/windows/desktop/api/Strmif/nf-strmif-idvdinfo2-getcurrentuops) aufrufen, um die aktuellen UOPS-Flags zu erhalten.
+-   DVD-Inhalt. Einige Befehle sind basierend auf dem Inhalt der DVD möglicherweise nicht relevant. Beispielsweise kann die [**IDvdControl2::SelectAngle-Methode**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectangle) gemäß der aktuellen Domäne und den UOPS-Flags zulässig sein, aber das Video kann nur einen Winkel haben. In diesem Fall ist der **SelectAngle-Aufruf** zulässig, ist aber keine sinnvolle Option.
 
-Wenn Sie zweifelhaft sind, gestatten Sie eine Aktion. Im schlimmsten Fall tritt bei der [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) -Methode ein Fehler auf, und Sie können dem Benutzer Feedback geben. Das Feedback sollte relativ unaufdringlich sein. Beispielsweise können Sie ein kleines rotes X blinken, um den Benutzer zu benachrichtigen. Der DVD-Navigator gibt VFW \_ e \_ DVD \_ invaliddomain zurück, wenn die Domäne einen Vorgang untersagt, und VFW \_ e \_ DVD-Vorgang wird verhindert, \_ \_ Wenn die UOPs-Flags einen Vorgang verbieten.
+Lassen Sie im Zweifelsfall eine Aktion zu. Im schlimmsten Fall kann [**die IDvdControl2-Methode**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) nicht verwendet werden, und Sie können dem Benutzer Feedback geben. Das Feedback sollte relativ unauffällig sein. Beispielsweise können Sie ein kleines rotes X blinken, um den Benutzer zu warnen. Der DVD-Navigator gibt die VFW-E-DVD INVALIDDOMAIN zurück, wenn die Domäne einen Vorgang verhindert, und VFW E DVD OPERATION BEFIEED, wenn die \_ \_ \_ \_ \_ \_ \_ UOPS-Flags einen Vorgang verhindern.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

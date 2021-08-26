@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_ERR'
+description: 'Weitere Informationen zu: JET_ERR'
 title: JET_ERR
 TOCTitle: JET_ERR
 ms:assetid: cd9cb876-251c-458d-a015-8e9045e77fc9
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 35120be9a26dcbdc8d012cd12c871ddcf8f71555
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: f341f88a192fee6de55e0077778abde83493e35e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106363193"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482276"
 ---
 # <a name="jet_err"></a>JET_ERR
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_err"></a>JET_ERR
 
-Der **JET_ERR** -Datentyp enthält einen [Fehlercode für die erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md).
+Der **JET_ERR-Datentyp** enthält den [Extensible Storage Engine-Fehlercode](./extensible-storage-engine-error-codes.md).
 
 ```cpp
 typedef long JET_ERR;
@@ -39,38 +39,21 @@ typedef long JET_ERR;
 
 JET_ERR
 
-Ein NULL-Wert (entspricht JET_errSuccess) gibt an, dass der-Befehl erfolgreich ausgeführt wurde. Ein positiver Wert warnt vor einer nicht schwerwiegenden Bedingung, die während eines anderweitig erfolgreichen Aufrufes aufgetreten ist. Ein negativer Wert gibt an, dass der-Befehl fehlgeschlagen ist.
+Ein Wert von 0 (entspricht JET_errSuccess) gibt an, dass der Aufruf erfolgreich war. Ein positiver Wert warnt vor einer nicht schwerwiegenden Bedingung, die während eines ansonsten erfolgreichen Aufrufs aufgetreten ist. Ein negativer Wert gibt an, dass der Aufruf fehlgeschlagen ist.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Informationen zum Zurückgeben von Fehlern als HRESULTs finden Sie unter [Fehler des Extensible Storage Engine](./extensible-storage-engine-errors.md). Informationen zu Flags zum Konfigurieren der Datenbank für die Fehlerbehandlung finden Sie unter Parameter für die [Fehlerbehandlung](./error-handling-parameters.md).
+Informationen zum Zurückgeben von Fehlern als HRESULTs finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md). Informationen zu Flags zum Konfigurieren der Datenbank zur Behandlung von Fehlern finden Sie unter [Fehlerbehandlungsparameter](./error-handling-parameters.md).
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
-[Fehler Codes für erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md)  
-[Fehler Behandlungsparameter](./error-handling-parameters.md)
+[Erweiterbare Storage-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Extensible Storage Engine Error Codes (Erweiterbare Storage-Engine-Fehlercodes)](./extensible-storage-engine-error-codes.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)

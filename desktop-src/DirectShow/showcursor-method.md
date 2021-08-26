@@ -1,15 +1,15 @@
 ---
-description: Die ShowCursor-Methode macht den Cursor sichtbar, wenn sich das mswebdvd-Objekt im Vollbildmodus befindet.
+description: Die ShowCursor-Methode macht den Cursor sichtbar, wenn sich das MSWebDVD-Objekt im Vollbildmodus befindet.
 ms.assetid: 3a611cc8-7979-473d-bd0f-f4ca43701c63
 title: ShowCursor-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 917c1d0d2724259fc19baf72ab6b3844cddc3419
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3013392a5dcea2b3c4c9af8ee94d54c540814b5f4221563429ee7c837dcdddd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050520"
 ---
 # <a name="showcursor-method"></a>ShowCursor-Methode
 
@@ -18,7 +18,7 @@ ms.locfileid: "103860315"
 
  
 
-Die- `ShowCursor` Methode macht den Cursor sichtbar, wenn sich das **mswebdvd** -Objekt im Vollbildmodus befindet.
+Die `ShowCursor` -Methode macht den Cursor sichtbar, wenn sich das **MSWebDVD-Objekt** im Vollbildmodus befindet.
 
 ``` syntax
 MSWebDVD.ShowCursor(bShow)
@@ -50,9 +50,9 @@ Gibt an, ob der Cursor als boolescher Wert angezeigt werden soll.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die DVD-Anzeige in den Vollbildmodus wechselt, verschwindet der Cursor innerhalb von 3 bis 5 Sekunden. Verwenden Sie diese Methode, um den Cursor wieder sichtbar zu machen, wenn die Steuerelemente der Anwendung im Vollbildmodus sichtbar sind.
+Wenn die DVD-Anzeige in den Vollbildmodus wechselt, verschwindet der Cursor innerhalb von 3 bis 5 Sekunden. Verwenden Sie diese Methode, um den Cursor wieder sichtbar zu machen, wenn die Steuerelementschaltflächen Ihrer Anwendung im Vollbildmodus sichtbar sind.
 
  
 

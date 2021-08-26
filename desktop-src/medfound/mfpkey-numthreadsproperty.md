@@ -1,23 +1,23 @@
 ---
 description: Gibt die Anzahl der Threads an, die vom Encoder verwendet werden.
 ms.assetid: 2f463cba-2512-455d-9ce1-8797682d4d67
-title: MFPKEY_NUMTHREADS-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_NUMTHREADS-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c93f6d38e3bb79bbb692f9bec1b1dc0edb232d0b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4ac8b6ec040ba07a2e38b1e9d8e2df6cf0fcbfcdbba14481e9b50379ecc10df5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953910"
 ---
-# <a name="mfpkey_numthreads-property"></a>Mfpkey- \_ numThreads (Eigenschaft)
+# <a name="mfpkey_numthreads-property"></a>MFPKEY \_ NUMTHREADS-Eigenschaft
 
 Gibt die Anzahl der Threads an, die vom Encoder verwendet werden.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcnumthreads
+g \_ wszWMVCNumThreads
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,13 +27,13 @@ VT \_ I4
 
 1
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert soll die Codierung in mehrere Threads aufteilen, um die Vorteile von Computern mit mehreren Prozessoren zu nutzen. Wenn Codierungs Aufgaben in mehrere Threads aufgeteilt werden, kann dies zu einer geringfügigen Abnahme der Qualität im Vergleich zu einem einzelnen Thread führen.
+Dieser Wert soll die Codierung in mehrere Threads unterteilen, um Computer mit mehreren Prozessoren zu nutzen. Das Aufteilen von Codierungsaufgaben in mehrere Threads kann im Vergleich zu einem einzelnen Thread zu einem geringfügigen Qualitätsverlust führen.
 
-Für den Video Encoder (wmvencod.dll), der mit Windows XP und Windows Vista veröffentlicht wurde, sollte diese Eigenschaft auf 1, 2 oder 4 festgelegt werden. Andere Werte werden abgerundet.
+Für den Videoencoder (wmvencod.dll), der mit Windows XP und Windows Vista veröffentlicht wurde, sollte diese Eigenschaft auf 1, 2 oder 4 festgelegt werden. Andere Werte werden abgerundet.
 
-Für den Video Encoder (wmvencod.dll), der mit Windows 7 veröffentlicht wurde, sollte diese Eigenschaft auf 1, 2, 4 oder 8 festgelegt werden. Andere Werte werden abgerundet.
+Für den Videoencoder (wmvencod.dll), der mit Windows 7 veröffentlicht wurde, sollte diese Eigenschaft auf 1, 2, 4 oder 8 festgelegt werden. Andere Werte werden abgerundet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,9 +41,9 @@ Für den Video Encoder (wmvencod.dll), der mit Windows 7 veröffentlicht wurde, 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Für den Video Encoder (wmvencod.dll), der mit Windows 7 veröffentlicht wurde, 
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

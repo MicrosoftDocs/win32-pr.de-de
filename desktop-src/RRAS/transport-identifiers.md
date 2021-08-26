@@ -1,33 +1,33 @@
 ---
-title: Transport-IDs
-description: Die folgenden Transport-IDs (oder Protokoll Familien) werden ebenfalls in MPRAPI. h aufgeführt.
+title: Transportbezeichner
+description: Die folgenden Transportbezeichner (oder Protokollfamilienbezeichner) sind auch in Mprapi.h aufgeführt.
 ms.assetid: 7720c34f-0558-49de-8f82-13a67e2c8c69
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb09684ebb56834cbe642c422ad611a8fb331a36
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b512feb0dfdf19a4c7cc198fbd13fa8d3bfbbd7d39f4247944a957c1bf6a19f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025490"
 ---
-# <a name="transport-identifiers"></a>Transport-IDs
+# <a name="transport-identifiers"></a>Transportbezeichner
 
-Die folgenden Transport-IDs (oder Protokoll Familien) werden ebenfalls in MPRAPI. h aufgeführt.
+Die folgenden Transportbezeichner (oder Protokollfamilienbezeichner) sind auch in Mprapi.h aufgeführt.
 
 
 
 | Wert      | Transport (Protokollfamilie)                               |
 |------------|-----------------------------------------------------------|
-| PID- \_ atalk | AppleTalk                                                 |
-| PID \_ -IP    | Internet Protokoll, Version 4                               |
-| PID- \_ IPX   | Internet Paket Austausch                                  |
-| PID- \_ NBF   | NetBIOS-Frames-Protokoll                                   |
-| PID- \_ IPv6  | Windows Server 2008 oder höher: Internet Protokollversion 6 |
+| PID \_ ATALK | Appletalk                                                 |
+| \_PID-IP    | Internetprotokoll, Version 4                               |
+| PID \_ IPX   | Internet packet Exchange                                  |
+| PID \_ NBF   | NetBIOS-Framesprotokoll                                   |
+| PID \_ IPV6  | Windows Server 2008 oder höher: Internetprotokoll, Version 6 |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ Die folgenden Transport-IDs (oder Protokoll Familien) werden ebenfalls in MPRAPI
 [MIB-Referenz zur Routerverwaltung](router-management-mib-reference.md)
 </dt> <dt>
 
-[Transport-und Protokoll Konstanten](transport-and-protocol-constants.md)
+[Transport- und Protokollkonst constants](transport-and-protocol-constants.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

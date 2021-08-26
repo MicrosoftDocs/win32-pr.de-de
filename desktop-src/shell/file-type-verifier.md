@@ -1,36 +1,36 @@
 ---
-description: Der Dateityp Verifier ist ein Tool, mit dem unabhängige Softwarehersteller überprüfen können, ob Ihre eindeutigen Dateitypen ordnungsgemäß implementiert werden.
+description: Die Dateityp-Überprüfung ist ein Tool, mit dem unabhängige Softwarehersteller (INDEPENDENT Software Vendors, ISVs) überprüfen können, ob ihre eindeutigen Dateitypen ordnungsgemäß implementiert sind.
 ms.assetid: 1BD7452B-2DF5-44e9-9B09-C29ABFFA5F93
-title: Dateityp Überprüfung
+title: Dateitypverifizierer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c8e4a588e4889241762a9d8e0567d4a4542c0255
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ad3d3e66d85413a209c6899ce16061fa1fd46468fa32462026485d49b7326dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009510"
 ---
-# <a name="file-type-verifier"></a>Dateityp Überprüfung
+# <a name="file-type-verifier"></a>Dateitypverifizierer
 
-Der Dateityp Verifier ist ein Tool, mit dem unabhängige Softwarehersteller überprüfen können, ob Ihre eindeutigen Dateitypen ordnungsgemäß implementiert werden. Hochwertige Implementierungen ihrer Dateityp Handler sind für eine gute Benutzer Leistung von entscheidender Bedeutung, da Benutzer in Windows-Explorer auf vielerlei Weise mit Ihrem Dateiformat interagieren. Benutzer können voll Text suchen durchführen, nach benutzerdefinierten Metadaten sortieren oder umfassende Miniaturansichten und Vorschau Versionen Ihres Datei Formats anzeigen.
+Die Dateityp-Überprüfung ist ein Tool, mit dem unabhängige Softwarehersteller (INDEPENDENT Software Vendors, ISVs) überprüfen können, ob ihre eindeutigen Dateitypen ordnungsgemäß implementiert sind. Qualitativ hochwertige Implementierungen Ihrer Dateityphandler sind entscheidend für eine gute Benutzererfahrung, da Benutzer im Explorer auf viele Arten mit Ihrem Dateiformat Windows interagieren. Benutzer können Volltextsuchen durchführen, nach benutzerdefinierten Metadaten sortieren oder umfangreiche Miniaturansichten und Vorschauen Ihres Dateiformats anzeigen.
 
-Anweisungen zur Verwendung der Dateityp Überprüfung finden Sie unter [Verwenden des Dateityp-verifizierers](how-to-use-the-file-type-verifier.md).
+Anweisungen zur Verwendung der Dateitypverifizierer finden Sie unter [How To Use the File Type Verifier](how-to-use-the-file-type-verifier.md).
 
-## <a name="about-the-file-type-verifier-tool"></a>Informationen zum Dateityp-Verifier-Tool
+## <a name="about-the-file-type-verifier-tool"></a>Informationen zum Tool zum Verifizieren von Dateitypen
 
-Der Dateityp Verifier ist ein Programm, das als Teil des [Windows 7 SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx)verfügbar ist. Es wurde entwickelt, um Entwicklern zu helfen, die benutzerdefinierte Windows- [Dateitypen](fa-file-types.md) erstellen, um potenzielle Probleme mit ihren Dateitypen zu erkennen. Obwohl der Dateityp Verifier nur unter Windows 7 und höher ausgeführt wird, gelten die Regeln, die vom Dateityp Verifier erzwungen werden, für alle Windows-Versionen, auf denen die von ihm überprüfen Features verfügbar sind.
+File Type Verifier ist ein Programm, das als Teil des sdk Windows [7 verfügbar ist.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Es soll Entwicklern helfen, benutzerdefinierte [Windows-Dateitypen zu](fa-file-types.md) erstellen, um potenzielle Probleme mit ihren Dateitypen zu erkennen. Obwohl die Dateitypüberprüfung nur unter Windows 7 und höher ausgeführt wird, gelten die Regeln, die von der Dateitypüberprüfung erzwungen werden, für alle Versionen von Windows, in denen die überprüften Funktionen verfügbar sind.
 
-Die Dateityp Überprüfung führt verschiedene Tests für den Dateityp aus, um sicherzustellen, dass Sie ordnungsgemäß registriert ist, und stellt die entsprechenden [Dateityp Handler](fa-file-extensions.md) bereit, um den Dateityp in Windows-Explorer ordnungsgemäß anzuzeigen, und wenn dies der Fall ist, wird die Indizierung des Datei Inhalts unterstützt.
+Der Dateitypverifizierer führt mehrere Tests für den Dateityp aus, um zu überprüfen, ob er ordnungsgemäß registriert ist, und stellt die entsprechenden Dateityphandler zum ordnungsgemäßen Anzeigen des [Dateityps](fa-file-extensions.md) im Windows-Explorer und gegebenenfalls zur Unterstützung der Indizierung des Dateiinhalts zur Auswahl.
 
-Der Dateityp Verifier testet Folgendes:
+Die Dateitypprüfung testet Folgendes:
 
--   [Vorschau Handler](building-preview-handlers.md)
--   [Miniatur Ansichts Handler](building-thumbnail-providers.md)
--   [Eigenschaften Handler](../search/-search-3x-wds-extidx-propertyhandlers.md)
--   [Verb Handler](fa-verbs.md)
+-   [Vorschauhandler](building-preview-handlers.md)
+-   [Miniaturansichtshandler](building-thumbnail-providers.md)
+-   [Eigenschaftenhandler](../search/-search-3x-wds-extidx-propertyhandlers.md)
+-   [Verbhandler](fa-verbs.md)
 -   [Filter (IFilter)](../search/-search-3x-wds-extidx-filters.md)
--   [Kind-Zuordnungen](../properties/building-property-handlers-user-friendly-kind-names.md)
+-   [Artzuordnungen](../properties/building-property-handlers-user-friendly-kind-names.md)
 -   [Wahrgenommene Typen](fa-perceivedtypes.md)
 -   [Wichtige Eigenschaften](../search/-shell-systemdefinedpropertiesforfileformats.md)
 
@@ -38,10 +38,10 @@ Der Dateityp Verifier testet Folgendes:
 
 <dl> <dt>
 
-[Verwenden des Dateityp-verifizierers](how-to-use-the-file-type-verifier.md)
+[Verwenden der Dateitypverifizierer](how-to-use-the-file-type-verifier.md)
 </dt> <dt>
 
-[Anwendungs Registrierung](app-registration.md)
+[Anwendungsregistrierung](app-registration.md)
 </dt> <dt>
 
 [Dateitypen](fa-file-types.md)
@@ -50,10 +50,10 @@ Der Dateityp Verifier testet Folgendes:
 [Funktionsweise von Dateizuordnungen](fa-how-work.md)
 </dt> <dt>
 
-[Inhaltsansicht nach Dateityp oder-Art](prophand-content-view.md)
+[Inhaltsansicht nach Dateityp oder Art](prophand-content-view.md)
 </dt> <dt>
 
-[Dateityp Handler](fa-file-extensions.md)
+[Dateityphandler](fa-file-extensions.md)
 </dt> <dt>
 
 [Programmgesteuerte Bezeichner](fa-progids.md)
@@ -62,7 +62,7 @@ Der Dateityp Verifier testet Folgendes:
 [Wahrgenommene Typen](fa-perceivedtypes.md)
 </dt> <dt>
 
-[Zuordnungs Arrays](fa-associationarray.md)
+[Zuordnungsarrays](fa-associationarray.md)
 </dt> </dl>
 
  

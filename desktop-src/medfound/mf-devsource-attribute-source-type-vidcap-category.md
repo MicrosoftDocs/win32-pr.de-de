@@ -1,19 +1,19 @@
 ---
-description: Gibt die Gerätekategorie für ein Video Erfassungsgerät an.
+description: Gibt die Gerätekategorie für ein Videoaufnahmegerät an.
 ms.assetid: 008ff9df-ebe0-4efd-a62c-24f4a4239ebd
-title: MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_CATEGORY-Attribut (mspdl. h)
+title: MF_DEVSOURCE_ATTRIBUTE_SOURCE_TYPE_VIDCAP_CATEGORY -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc65af267df38486f6ad7859d16aff4de5973a27
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 140a9055bdc8081d5cdea1931b199dcd00f537e73051f30790f036be4af57fb0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060790"
 ---
-# <a name="mf_devsource_attribute_source_type_vidcap_category-attribute"></a>MF \_ devsource \_ - \_ Attribut \_ Quelltyp \_ VidCap \_ Category-Attribut
+# <a name="mf_devsource_attribute_source_type_vidcap_category-attribute"></a>MF \_ \_ DEVSOURCE-ATTRIBUT \_ SOURCE TYPE \_ \_ VIDCAP \_ CATEGORY-Attribut
 
-Gibt die Gerätekategorie für ein Video Erfassungsgerät an.
+Gibt die Gerätekategorie für ein Videoaufnahmegerät an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,7 +25,7 @@ Der folgende Wert ist definiert.
 
 | Wert                                                                                                                                                                                                                                                             | Bedeutung                          |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
-| <span id="CLSID_VideoInputDeviceCategory"></span><span id="clsid_videoinputdevicecategory"></span><span id="CLSID_VIDEOINPUTDEVICECATEGORY"></span><dl> <dt>**CLSID \_ videoinputentvicecategory**</dt> </dl> | Video Erfassungsgerät.<br/> |
+| <span id="CLSID_VideoInputDeviceCategory"></span><span id="clsid_videoinputdevicecategory"></span><span id="CLSID_VIDEOINPUTDEVICECATEGORY"></span><dl> <dt>**CLSID \_ VideoInputDeviceCategory**</dt> </dl> | Videoaufnahmegerät.<br/> |
 
 
 
@@ -33,22 +33,22 @@ Der folgende Wert ist definiert.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, wenden Sie [**imfattributes:: GetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)an.
+Um dieses Attribut zu erhalten, rufen [**Sie DANNATTRIBUTEs::GetGUID auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
 
-Um dieses Attribut festzulegen, wenden Sie [**imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)an.
+Rufen Sie ZUM Festlegen dieses [**Attributs DEN WERTATTRIBUTEs::SetGUID auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Attribut als Eingabe für die [**mfenumtvicesources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources) -Funktion, wenn Sie Video Erfassungsgeräte aufzählen.
+Verwenden Sie dieses Attribut als Eingabe für die [**MFEnumDeviceSources-Funktion,**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources) wenn Sie Videoaufnahmegeräte aufzählen.
 
-Außerdem wird dieses Attribut für die Aktivierungs Objekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
+Darüber hinaus wird dieses Attribut für die Aktivierungsobjekte festgelegt, die von den folgenden Funktionen zurückgegeben werden:
 
--   [**MF | atedevicesourceaktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
--   [**Mfenumschlag**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
+-   [**MFCreateDeviceSourceActivate**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatedevicesourceactivate)
+-   [**MFEnumDeviceSources**](/windows/desktop/api/mfidl/nf-mfidl-mfenumdevicesources)
 
-Das-Attribut gilt nur für Video Erfassungsgeräte.
+Das -Attribut gilt nur für Videoaufnahmegeräte.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -66,13 +66,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Audio-/Videoaufzeichnung](audio-video-capture.md)
 </dt> <dt>
 
-[Geräte Attribute erfassen](capture-device-attributes.md)
+[Erfassen von Geräteattributen](capture-device-attributes.md)
 </dt> </dl>
 
  

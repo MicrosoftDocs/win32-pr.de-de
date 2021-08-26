@@ -1,21 +1,21 @@
 ---
-description: Bei der Beleuchtung durch eine Lichtquelle werden glänzende Objekte, die stark reflektierenden Materialien verwenden, Glanzlichter erhalten.
+description: Wenn sie von einer Lichtquelle gespiegelt werden, erhalten helle Objekte – diejenigen, die stark reflektierende Materialien verwenden – Glanzlichter.
 ms.assetid: cea53131-1e2e-4389-80fd-ef5a0d068703
-title: Glanzlichter Karten (Direct3D 9)
+title: Specular Light Karten (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d55b4bf34baae0e73c2d072d62470533fc99827a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 05362eb4c0b79ebb980a6c0acb1607713765a446c0ef27823ae0e648cef88d68
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026100"
 ---
-# <a name="specular-light-maps-direct3d-9"></a>Glanzlichter Karten (Direct3D 9)
+# <a name="specular-light-maps-direct3d-9"></a>Specular Light Karten (Direct3D 9)
 
-Bei der Beleuchtung durch eine Lichtquelle werden glänzende Objekte, die stark reflektierenden Materialien verwenden, Glanzlichter erhalten. In einigen Fällen sind die Glanzlichter, die vom Beleuchtungs Modul erzeugt werden, nicht exakt. Um eine ansprechendere Hervorhebung zu schaffen, wenden viele Direct3D-Anwendungen Glanzlicht Zuordnungen auf primitive an.
+Wenn sie von einer Lichtquelle gespiegelt werden, erhalten helle Objekte – diejenigen, die stark reflektierende Materialien verwenden – Glanzlichter. In einigen Fällen sind die vom Beleuchtungsmodul erzeugten Glanzlichter nicht genau. Um eine ansprechendere Hervorhebung zu erzeugen, wenden viele Direct3D-Anwendungen Glanzlichtzuordnungen auf Primitive an.
 
-Fügen Sie zum Durchführen einer Glanzlicht Zuordnung der Textur des primitiven die Glanz Karte hinzu, und führen Sie dann die RGB-lichtkarte modulieren (multipliziert mit) aus.
+Fügen Sie zum Durchführen der Specular Light Mapping (Lichtkartierung mit Specular) der Textur des Primitivs die Lichtkarte hinzu, und modulieren Sie dann die RGB-Lichtkarte (multiplizieren Sie das Ergebnis mit ).
 
 Im folgenden Codebeispiel wird dieser Prozess in C++ veranschaulicht.
 
@@ -60,7 +60,7 @@ d3dDevice->SetTextureStageState(2,D3DTSS_COLORARG2, D3DTA_CURRENT );
 
 <dl> <dt>
 
-[Einfache Zuordnung mit Texturen](light-mapping-with-textures.md)
+[Light Mapping with Textures](light-mapping-with-textures.md)
 </dt> </dl>
 
  

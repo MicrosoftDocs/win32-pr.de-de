@@ -1,6 +1,6 @@
 ---
-title: abs – vs
-description: Berechnet den absoluten Wert. | abs – vs
+title: abs – im Vergleich zu
+description: Berechnet den absoluten Wert. | abs – im Vergleich zu
 ms.assetid: d3b4cf06-dc87-4c71-aa2d-5ade4cf98caa
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 612ed14fb538a419a0e7f0b1cf07904d654bb010
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 59ba7ad170df49b252140b14452862bdf14c2b713ac457548c8f085a0fb50881
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110343315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025090"
 ---
-# <a name="abs---vs"></a>abs – vs
+# <a name="abs---vs"></a>abs – im Vergleich zu
 
 Berechnet den absoluten Wert.
 
@@ -57,7 +57,7 @@ dest.w = abs(src.w)
 
 <dl> <dt>
 
-[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
  

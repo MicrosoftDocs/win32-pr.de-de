@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3275e6de398c42d29424b2a1f9b0c750989357ef21c10d5db1e1680e7adb0836
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 08353f4d6c743d92eff08f83e90babb9cc9d075f
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118707268"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623926"
 ---
 # <a name="dropdownbutton-element"></a>DropDownButton-Element
 
 Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribbon-controls-dropdownbutton.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <DropDownButton
@@ -40,17 +40,17 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -66,7 +66,7 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -77,18 +77,18 @@ Stellt ein standardmäßiges [Dropdown-Schaltflächen-Steuerelement](windowsribb
 
 
 
-| Element                                                                             | BESCHREIBUNG                                        |
+| Element                                                                             | Beschreibung                                        |
 |-------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**ComboBox**](windowsribbon-element-combobox.md)<br/>                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| **DropDownButton**<br/>                                                       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>         | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                           | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                       | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**Kombinationsfeld**](windowsribbon-element-combobox.md)<br/>                       | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| **DropDownButton**<br/>                                                       | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/> | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>         | Kann ein oder mehrere Male auftreten<br/> <br/> |
 | [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                     | Muss mindestens einmal auftreten.<br/> <br/>    |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                 | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/>   | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>               | Kann ein oder mehrere Male auftreten<br/> <br/> |
 
 
 
@@ -170,7 +170,7 @@ Dieser Codeabschnitt zeigt die **DropDownButton-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,10 +1,10 @@
 ---
-description: Fordert an, ein Experiment (Capture) für den angegebenen Prozess auszuführen.
+description: Anforderungen zum Ausführen eines Experiments (Erfassung) für den angegebenen Prozess.
 MS-HAID: vspixengine.IRunExperimentCallback\_ResultCallback\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ununexperimentcallback:: resultCallback-Methode'
+title: IRunExperimentCallback::ResultCallback-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: C00034DF-5F51-49A2-B49A-62F98EA48F46
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 2ac6838e7103970d588814bdc5a39e9e26fd4a33
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a8eac603821c546f79734a615afb31dcb92fe0ac
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346590"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625586"
 ---
-# <a name="span-idvspixengineirunexperimentcallback_resultcallback_dwordspanirunexperimentcallbackresultcallback-method"></a><span id="vspixengine.irunexperimentcallback_resultcallback_dword"></span>Ununexperimentcallback:: resultCallback-Methode
+# <a name="span-idvspixengineirunexperimentcallback_resultcallback_dwordspanirunexperimentcallbackresultcallback-method"></a><span id="vspixengine.irunexperimentcallback_resultcallback_dword"></span>IRunExperimentCallback::ResultCallback-Methode
 
-Fordert an, ein Experiment (Capture) für den angegebenen Prozess auszuführen.
+Anforderungen zum Ausführen eines Experiments (Erfassung) für den angegebenen Prozess.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,15 +44,15 @@ Der angegebene Prozess.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Unexperiment Rückruf**](/windows/desktop/direct3dtools/irunexperimentcallback)
+[**IRunExperimentCallback**](/windows/desktop/direct3dtools/irunexperimentcallback)
 
  
 

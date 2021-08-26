@@ -1,9 +1,9 @@
 ---
-title: PBM_SETMARQUEE (Commctrl.h)
-description: Legt die Statusleiste auf den Festzeltmodus fest. Dies bewirkt, dass sich die Statusleiste wie ein Festzelt bewegt.
+title: PBM_SETMARQUEE Meldung (Commctrl.h)
+description: Legt die Statusanzeige auf den Festlaufmodus fest. Dies bewirkt, dass sich die Statusanzeige wie ein Marquee bewegt.
 ms.assetid: 6501bcb9-a711-470f-874f-f3484d3613b6
 keywords:
-- PBM_SETMARQUEE message Windows Controls
+- PBM_SETMARQUEE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119986140"
 ---
 # <a name="pbm_setmarquee-message"></a>PBM \_ SETMARQUEE-Nachricht
 
-Legt die Statusleiste auf den Festzeltmodus fest. Dies bewirkt, dass sich die Statusleiste wie ein Festzelt bewegt.
+Legt die Statusanzeige auf den Festlaufmodus fest. Dies bewirkt, dass sich die Statusanzeige wie ein Marquee bewegt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,25 +32,25 @@ Legt die Statusleiste auf den Festzeltmodus fest. Dies bewirkt, dass sich die St
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob der Festzeltmodus aktiviert oder deaktiviert werden soll.
+Gibt an, ob der Festlaufmodus aktiviert oder deaktiviert werden soll.
 
 </dd> <dt>
 
 *lParam* 
-</dt> <dd>Zeit in Millisekunden zwischen Aktualisierungen der Festzeltanimation. Wenn dieser Parameter 0 (null) ist, wird die Festzeltanimation alle 30 Millisekunden aktualisiert.</dd> </dl>
+</dt> <dd>Zeit in Millisekunden zwischen Aktualisierungen der Marquee-Animation. Wenn dieser Parameter 0 (null) ist, wird die Marquee-Animation alle 30 Millisekunden aktualisiert.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **TRUE zurück.**
+Gibt immer **TRUE** zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Meldung, wenn Sie den Fortschritt bis zum Abschluss nicht kennen, aber angeben möchten, dass der Fortschritt erzielt wird.
+Verwenden Sie diese Meldung, wenn Sie den Fortschritt bis zum Abschluss nicht kennen, aber angeben möchten, dass der Fortschritt erfolgt.
 
 Senden Sie die **PBM \_ SETMARQUEE-Nachricht,** um die Animation zu starten oder zu beenden.
 
 > [!Note]  
-> Sie müssen den Steuerelementstil auf [**PBS \_ MARQUEE festlegen,**](progress-bar-control-styles.md) bevor Sie versuchen, die Animation zu starten.
+> Sie müssen den Steuerelementstil auf [**PBS \_ MARQUEE**](progress-bar-control-styles.md) festlegen, bevor Sie versuchen, die Animation zu starten.
 
  
 
@@ -65,7 +65,7 @@ Senden Sie die **PBM \_ SETMARQUEE-Nachricht,** um die Animation zu starten oder
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

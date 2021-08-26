@@ -1,7 +1,7 @@
 ---
-description: Die getvideoformat-Methode ruft ein Video Beispiel ab, das das aktuelle Videoformat darstellt.
+description: Die GetVideoFormat-Methode ruft ein Videobeispiel ab, das das aktuelle Videoformat darstellt.
 ms.assetid: f7457c5b-037c-4a63-963e-0fc6086609a4
-title: Cbasecontrolvideo. getvideoformat-Methode (ctlutil. h)
+title: CBaseControlVideo.GetVideoFormat-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d84b64818a02a60073fc21411e4a99bde07a6e00
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e37a59b8d002a9c081de74c4974dca1f86d1c9d0a5f7f7b0caca11be6c026d3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052770"
 ---
-# <a name="cbasecontrolvideogetvideoformat-method"></a>Cbasecontrolvideo. getvideoformat-Methode
+# <a name="cbasecontrolvideogetvideoformat-method"></a>CBaseControlVideo.GetVideoFormat-Methode
 
-Die- `GetVideoFormat` Methode ruft ein Video Beispiel ab, das das aktuelle Videoformat darstellt.
+Die `GetVideoFormat` -Methode ruft ein Videobeispiel ab, das das aktuelle Videoformat darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Zeiger auf eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur zurück, die das aktuelle Videoformat enthält.
+Gibt einen Zeiger auf eine [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) zurück, die das aktuelle Videoformat enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um bestimmte Informationen über [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo)zurückzugeben und zu überprüfen, muss das Objekt das aktuelle Videoformat kennen. Diese Informationen werden abgerufen, indem diese reine virtuelle Methode aufgerufen wird, die von abgeleiteten Klassen überschrieben werden muss. Diese Member-Funktion wird von den folgenden [**cbasecontrolvideo**](cbasecontrolvideo.md) -Element Funktionen aufgerufen.
+Um bestimmte Informationen über [**IBasicVideo**](/windows/desktop/api/Control/nn-control-ibasicvideo)zurück- und zu überprüfen, muss das Objekt das aktuelle Videoformat kennen. Sie ruft diese Informationen ab, indem diese reine virtuelle Methode, die abgeleitete Klassen überschreiben müssen, aufruft. Diese Memberfunktion wird von den folgenden [**CBaseControlVideo-Memberfunktionen**](cbasecontrolvideo.md) aufgerufen.
 
--   [**Cbasecontrolvideo:: onvideosizechange**](cbasecontrolvideo-onvideosizechange.md)
--   [**Cbasecontrolvideo:: \_ avgtimeperframe abrufen**](cbasecontrolvideo-get-avgtimeperframe.md)
--   [**Cbasecontrolvideo:: get- \_ Bitrate**](cbasecontrolvideo-get-bitrate.md)
--   [**Cbasecontrolvideo:: get \_ biterrorrate**](cbasecontrolvideo-get-biterrorrate.md)
--   [**Cbasecontrolvideo:: get \_ videowidth**](cbasecontrolvideo-get-videowidth.md)
--   [**Cbasecontrolvideo:: get \_ videoheight**](cbasecontrolvideo-get-videoheight.md)
--   [**Cbasecontrolvideo:: getvideopaletteentries**](cbasecontrolvideo-getvideopaletteentries.md)
--   [**Cbasecontrolvideo:: getvideosize**](cbasecontrolvideo-getvideosize.md)
+-   [**CBaseControlVideo::OnVideoSizeChange**](cbasecontrolvideo-onvideosizechange.md)
+-   [**CBaseControlVideo::get \_ AvgTimePerFrame**](cbasecontrolvideo-get-avgtimeperframe.md)
+-   [**CBaseControlVideo::get \_ BitRate**](cbasecontrolvideo-get-bitrate.md)
+-   [**CBaseControlVideo::get \_ BitErrorRate**](cbasecontrolvideo-get-biterrorrate.md)
+-   [**CBaseControlVideo::get \_ VideoWidth**](cbasecontrolvideo-get-videowidth.md)
+-   [**CBaseControlVideo::get \_ VideoHeight**](cbasecontrolvideo-get-videoheight.md)
+-   [**CBaseControlVideo::GetVideoPaletteEntries**](cbasecontrolvideo-getvideopaletteentries.md)
+-   [**CBaseControlVideo::GetVideoSize**](cbasecontrolvideo-getvideosize.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Um bestimmte Informationen über [**ibasicvideo**](/windows/desktop/api/Control/
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Um bestimmte Informationen über [**ibasicvideo**](/windows/desktop/api/Control/
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

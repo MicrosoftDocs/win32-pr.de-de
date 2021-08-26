@@ -1,19 +1,19 @@
 ---
-title: " in, String und Out, Zeichen folgen Prototyp"
-description: Der folgende Funktionsprototyp verwendet die beiden Parameter a \ in, String \ Parameter und a \ Out, String \ Parameter.
+title: " in, string und out, string Prototype"
+description: 'Der folgende Funktionsprototyp verwendet zwei Parameter: "\in", "string\parameter" und "\out", "string\".'
 ms.assetid: acb0ec4f-1846-4fa2-98c2-2081b52a8260
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c216197fb33a666029429d98761b3219b27b176
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 498d12c85130bba8d7d8dcddfc400e2a90fa2d0e2c3cb11c4a7d89696cfe9aa4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103949056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073620"
 ---
-# <a name="in-string-and-out-string-prototype"></a>\[in, String \] und \[ out, Zeichen folgen \] Prototyp
+# <a name="in-string-and-out-string-prototype"></a>\[in, string \] und \[ out, string \] Prototype
 
-Der folgende Funktionsprototyp verwendet zwei Parameter: einen \[ [**in**](/windows/desktop/Midl/in), einen [**Zeichen**](/windows/desktop/Midl/string) folgen \] Parameter und einen \[ [**out**](/windows/desktop/Midl/out-idl)- **Zeichen** folgen \] Parameter.
+Der folgende Funktionsprototyp verwendet zwei Parameter: \[ [**einen in**](/windows/desktop/Midl/in), [**einen Zeichenfolgenparameter**](/windows/desktop/Midl/string) \] und einen \[ [**out-Zeichenfolgenparameter.**](/windows/desktop/Midl/out-idl)  \]
 
 ``` syntax
 void Analyze(
@@ -21,10 +21,10 @@ void Analyze(
     [out, string, size_is(STRSIZE)]    *pszOutput);
 ```
 
-Der erste Parameter ist \[ nur [**in**](/windows/desktop/Midl/in) \] . Diese Eingabe Zeichenfolge wird nur vom Client an den Server übertragen. Der Server verwendet ihn als Grundlage für die weitere Verarbeitung. Die Zeichenfolge wird nicht geändert und wird vom Client nicht erneut benötigt, sodass Sie nicht an den Client zurückgegeben werden muss.
+Der erste Parameter ist \[ [**nur in**](/windows/desktop/Midl/in) \] . Diese Eingabezeichenfolge wird nur vom Client an den Server übertragen. Der Server verwendet ihn als Grundlage für die weitere Verarbeitung. Die Zeichenfolge wird nicht geändert und wird vom Client nicht erneut benötigt, sodass sie nicht an den Client zurückgegeben werden muss.
 
-Der zweite Parameter, der die Antwort des Arztes darstellt, ist \[ [](/windows/desktop/Midl/out-idl) \] nur out. Diese Antwort Zeichenfolge wird nur vom Server an den Client übermittelt. Die Zuordnungs Größe wird bereitgestellt, damit die Server-stubspeicher für Sie Speicher belegen können. Da *pszoutput* ein \[ [**ref**](/windows/desktop/Midl/ref) - \] Zeiger ist, muss dem Client vor dem-Befehl ausreichend Arbeitsspeicher für die Zeichenfolge zugeordnet werden. Die Antwort Zeichenfolge wird in diesen Bereich des Arbeitsspeichers geschrieben, wenn die Remote Prozedur zurückgibt.
+Der zweite Parameter, der die Antwort des Ärztes darstellt, \[ [**ist nur**](/windows/desktop/Midl/out-idl) \] out. Diese Antwortzeichenfolge wird nur vom Server an den Client übertragen. Die Zuordnungsgröße wird bereitgestellt, damit die Serverstubs Arbeitsspeicher dafür zuordnen können. Da *pszOutput* ein \[ [**Verweiszeiger**](/windows/desktop/Midl/ref) ist, muss dem Client vor dem Aufruf ausreichend Arbeitsspeicher für die \] Zeichenfolge zugeordnet sein. Die Antwortzeichenfolge wird in diesen Speicherbereich geschrieben, wenn die Remoteprozedur zurückgegeben wird.
 
- 
+ 
 
- 
+ 

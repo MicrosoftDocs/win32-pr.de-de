@@ -1,9 +1,9 @@
 ---
-title: LVM_SETINFOTIP Meldung (kommstrg. h)
-description: Legt den QuickInfo-Text in verzögerter Antwort auf die LVN \_ getinfotip-Benachrichtigung fest.
+title: LVM_SETINFOTIP (Commctrl.h)
+description: Legt QuickInfo-Text in verzögerter Antwort auf die \_ LVN-GETINFOTIP-Benachrichtigung fest.
 ms.assetid: 3dbf6a9a-52ec-4619-9c70-041e75942e20
 keywords:
-- Windows-Steuerelemente für LVM_SETINFOTIP Meldung
+- LVM_SETINFOTIP meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 90827766a6f1218dbbd631ed4eaf6b2989257944
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ef739535e399550911adfbe86d7376d3efeb77cd797ba807b24ee682d1f3fe3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119919900"
 ---
-# <a name="lvm_setinfotip-message"></a>LVM- \_ Nachricht
+# <a name="lvm_setinfotip-message"></a>LVM \_ SETINFOTIP-Nachricht
 
-Legt den QuickInfo-Text in verzögerter Antwort auf die [LVN \_ getinfotip](lvn-getinfotip.md) -Benachrichtigung fest.
+Legt QuickInfo-Text in verzögerter Antwort auf die [ \_ LVN-GETINFOTIP-Benachrichtigung](lvn-getinfotip.md) fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -33,24 +33,24 @@ Legt den QuickInfo-Text in verzögerter Antwort auf die [LVN \_ getinfotip](lvn-
 </dt> <dd>Muss Null sein.</dd> <dt>
 
 *lParam* 
-</dt> <dd>Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip">lvsetinfotip</a> -Struktur, die die festzulegenden Informationen enthält.</dd> </dl>
+</dt> <dd>Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip">LVSETINFOTIP-Struktur,</a> die die festgelegten Informationen enthält.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn der QuickInfo-Text erfolgreich festgelegt wurde, andernfalls **false** .
+Gibt **TRUE zurück,** wenn der QuickInfo-Text erfolgreich festgelegt wurde, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **LVM \_ setinfotip** -Nachricht ermöglicht einer Anwendung das Berechnen von Infotipps im Hintergrund, indem die folgenden Schritte ausgeführt werden:
+Mit **der LVM \_ SETINFOTIP-Nachricht** kann eine Anwendung Infotips im Hintergrund berechnen, indem die folgenden Schritte ausgeführt werden:
 
-1.  Legen Sie als Antwort auf die [LVN \_ getinfotip](lvn-getinfotip.md) -Benachrichtigung den **pszText** -Member der [**nmlvgetinfotip**](/windows/win32/api/commctrl/ns-commctrl-nmlvgetinfotipa) -Struktur auf eine leere Zeichenfolge fest, und geben Sie 0 zurück.
-2.  Im Hintergrund berechnen Sie den infotip.
-3.  Nachdem Sie den Infotipp berechnet haben, senden Sie die LVM-Nachricht " **\_ stinfotip** ". Legen Sie dabei den **pszText** -Member der " [**LV* tinfotip**](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip) "-Struktur auf die Infotipp-und die **iItem** -und **iSubItem** -Elemente auf das Element und das Unterelement fest, für das der Infotipp gilt
+1.  Legen Sie als Reaktion auf [die LVN \_ GETINFOTIP-Benachrichtigung](lvn-getinfotip.md) das **pszText-Element** der [**NMLVGETINFOTIP-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmlvgetinfotipa) auf eine leere Zeichenfolge fest, und geben Sie 0 zurück.
+2.  Berechnen Sie im Hintergrund den Infotip.
+3.  Senden Sie nach dem Berechnen des Infotips die **LVM \_ SETINFOTIP-Nachricht,** indem Sie das **pszText-Element** der [**LVSETINFOTIP-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip) auf den Infotip und die **iItem-** und **iSubItem-Elemente** auf das Element und Unterelement festlegen, für das der Infotip gilt.
 
-Der Text, der an die LVM-Nachricht " **mesfotip \_** " weitergeleitet wird, wird nur angezeigt, wenn sich das von der Struktur " [**LV* tinfotip**](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip) " beschriebene Element und Unterelement noch in einem Zustand befinden, der einen InfoTipp erfordert
+Der an die **LVM \_ SETINFOTIP-Nachricht** übergebene Text wird nur angezeigt, wenn sich das von der [**LVSETINFOTIP-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvsetinfotip) beschriebene Element und Unterelement noch in einem Zustand befinden, der einen Infotip erfordert.
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -60,9 +60,9 @@ Der Text, der an die LVM-Nachricht " **mesfotip \_** " weitergeleitet wird, wird
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

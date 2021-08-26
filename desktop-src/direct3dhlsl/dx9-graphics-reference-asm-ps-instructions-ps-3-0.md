@@ -1,6 +1,6 @@
 ---
 title: ps_3_0-Anweisungen
-description: Dieser Abschnitt enthält Referenzinformationen für die Anweisungen in Version 3 0 des \_ Pixelshader.
+description: Dieser Abschnitt enthält Referenzinformationen zu den Anweisungen für die Pixel-Shaderversion 3 \_ 0.
 ms.assetid: 36972b9b-a4e7-45b4-83f5-959e75d270de
 ms.topic: article
 ms.date: 05/31/2018
@@ -16,18 +16,18 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "119982860"
 ---
-# <a name="ps_3_0-instructions"></a>ps \_ 3 \_ 0-Anweisungen
+# <a name="ps_3_0-instructions"></a>ps \_ 3 \_ 0 Instructions
 
-Dieser Abschnitt enthält Referenzinformationen für die Anweisungen in Version 3 0 des \_ Pixelshader.
+Dieser Abschnitt enthält Referenzinformationen zu den Anweisungen für die Pixel-Shaderversion 3 \_ 0.
 
-Es gibt mehrere Arten von Pixelshaderanweisungen, wie in der Tabelle gezeigt. Spalten auf der rechten Seite bedeuten Folgendes:
+Es gibt verschiedene Arten von Shaderanweisungen für Pixel, wie in der Tabelle gezeigt. Spalten auf der rechten Seite bedeuten Folgendes:
 
 -   Anweisungsslots: Anzahl von Anweisungsslots, die von jeder Anweisung verwendet werden.
--   Setup: Ein Pixelshader muss über eine Versionsanweisung verfügen und muss die erste Anweisung sein.
--   Arithmetisch: Diese Anweisungen stellen die mathematischen Operationen in einem Shader bereit.
--   Textur: Diese Anweisungen werden verwendet, um Texturdaten zu laden und zu probieren sowie Texturkoordinaten zu ändern.
--   Flow-Steuerelement: Diese Anweisungen bieten statische und dynamische Flusssteuerung für die Ausführung von Anweisungen.
--   Neu: Diese Anweisungen sind für diese Version neu.
+-   Setup: Ein Pixel-Shader muss über eine Versionsanweisung verfügen, und er muss die erste Anweisung sein.
+-   Arithmetisch: Diese Anweisungen stellen die mathematischen Operationen in einem Shader zur Verfügung.
+-   Textur: Diese Anweisungen werden zum Laden und Abtasten von Texturdaten und zum Ändern von Texturkoordinaten verwendet.
+-   Flow- und Ablaufsteuerung: Diese Anweisungen bieten statische und dynamische Flusssteuerung für die Ausführung von Anweisungen.
+-   Neu: Diese Anweisungen sind neu in dieser Version.
 
 ## <a name="instruction-set"></a>Instruktionssatz
 
@@ -35,26 +35,26 @@ Es gibt mehrere Arten von Pixelshaderanweisungen, wie in der Tabelle gezeigt. Sp
 
 | Name                                                             | BESCHREIBUNG                                                                          | Anweisungsslots | Einrichten | Arithmetik | Struktur | Flusssteuerung | Neu |
 |------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------|-------|------------|---------|--------------|-----|
-| [abs – ps](abs---ps.md)                                         | Absoluter Wert                                                                       | 1                 |       | x          |         |              |     |
-| [add – ps](add---ps.md)                                         | Hinzufügen von zwei Vektoren                                                                      | 1                 |       | x          |         |              |     |
+| [abs - ps](abs---ps.md)                                         | Absoluter Wert                                                                       | 1                 |       | x          |         |              |     |
+| [add - ps](add---ps.md)                                         | Hinzufügen von zwei Vektoren                                                                      | 1                 |       | x          |         |              |     |
 | [break – ps](break---ps.md)                                     | Break out of a loop... endloop oder rep... endrep-Block                                  | 1                 |       |            |         | x            |     |
-| [break \_ comp - ps](break-comp---ps.md)                          | Bedingtes Unterbrechen einer Schleife... endloop oder rep... endrep-Block mit einem Vergleich | 3                 |       |            |         | x            |     |
-| [breakp – ps](break-p---ps.md)                                  | break out of a loop... endloop oder rep... endrep-Block basierend auf einem Prädikat            | 3                 |       |            |         | x            |     |
-| [call - ps](call---ps.md)                                       | Aufrufen einer Unterroutine                                                                    | 2                 |       |            |         | x            |     |
+| [break \_ comp - ps](break-comp---ps.md)                          | Bedingtes Ausbrechen einer Schleife... endloop oder rep... endrep-Block mit einem Vergleich | 3                 |       |            |         | x            |     |
+| [breakp – ps](break-p---ps.md)                                  | Break out of a loop... endloop oder rep... endrep-Block basierend auf einem Prädikat            | 3                 |       |            |         | x            |     |
+| [call – ps](call---ps.md)                                       | Aufrufen einer Unterroutine                                                                    | 2                 |       |            |         | x            |     |
 | [callnz bool – ps](callnz-bool---ps.md)                         | Aufrufen einer Unterroutine, wenn ein boolescher Register nicht 0 (null) ist                                  | 3                 |       |            |         | x            |     |
 | [callnz pred - ps](callnz-pred---ps.md)                         | Aufrufen einer Unterroutine, wenn ein Prädikatregister nicht 0 (null) ist                                | 3                 |       |            |         | x            |     |
-| [cmp – ps](cmp---ps.md)                                         | Vergleichen der Quelle mit 0                                                                  | 1                 |       | x          |         |              |     |
+| [cmp - ps](cmp---ps.md)                                         | Vergleichen der Quelle mit 0                                                                  | 1                 |       | x          |         |              |     |
 | [crs - ps](crs---ps.md)                                         | Produktübergreifend                                                                        | 2                 |       | x          |         |              |     |
-| [dcl \_ samplerType (sm2, sm3 – ps asm)](dcl-samplertype---ps.md) | Deklarieren der Texturdimension für einen Sampler                                          | 0                 | x     |            |         |              |     |
-| [\_dcl-Semantik (sm3 – ps asm)](dcl-usage---ps.md)              | Deklarieren von Eingabe- und Ausgaberegistern                                                   | 0                 | x     |            |         |              | x   |
-| [def - ps](def---ps.md)                                         | Definieren von Konstanten                                                                     | 0                 | x     |            |         |              |     |
+| [dcl \_ samplerType (sm2, sm3 - ps asm)](dcl-samplertype---ps.md) | Deklarieren der Texturdimension für einen Sampler                                          | 0                 | x     |            |         |              |     |
+| [dcl \_ semantics (sm3 - ps asm)](dcl-usage---ps.md)              | Deklarieren von Eingabe- und Ausgaberegistern                                                   | 0                 | x     |            |         |              | x   |
+| [def – ps](def---ps.md)                                         | Definieren von Konstanten                                                                     | 0                 | x     |            |         |              |     |
 | [defb – ps](defb---ps.md)                                       | Definieren einer booleschen Konstante                                                            | 0                 | x     |            |         |              |     |
 | [defi – ps](defi---ps.md)                                       | Definieren einer ganzzahligen Konstante                                                           | 0                 | x     |            |         |              |     |
 | [dp2add – ps](dp2add---ps.md)                                   | 2D-Punktprodukt und Hinzufügen                                                               | 2                 |       | x          |         |              |     |
 | [dp3 – ps](dp3---ps.md)                                         | 3D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
 | [dp4 – ps](dp4---ps.md)                                         | 4D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
 | [dsx – ps](dsx---ps.md)                                         | Änderungsrate in x-Richtung                                                    | 2                 |       | x          |         |              |     |
-| [dsy – ps](dsy---ps.md)                                         | Änderungsrate in y-Richtung                                                    | 2                 |       | x          |         |              |     |
+| [dsy - ps](dsy---ps.md)                                         | Änderungsrate in y-Richtung                                                    | 2                 |       | x          |         |              |     |
 | [else – ps](else---ps.md)                                       | Starten eines else-Blocks                                                                  | 1                 |       |            |         | x            |     |
 | [endif – ps](endif---ps.md)                                     | Beenden sie eine if... else-Block                                                               | 1                 |       |            |         | x            |     |
 | [endloop – ps](endloop---ps.md)                                 | Beenden einer Schleife                                                                           | 2                 |       |            |         | x            | x   |
@@ -70,9 +70,9 @@ Es gibt mehrere Arten von Pixelshaderanweisungen, wie in der Tabelle gezeigt. Sp
 | [lrp – ps](lrp---ps.md)                                         | Lineare Interpolation                                                                   | 2                 |       | x          |         |              |     |
 | [m3x2 – ps](m3x2---ps.md)                                       | 3x2 multiplizieren                                                                         | 2                 |       | x          |         |              |     |
 | [m3x3 – ps](m3x3---ps.md)                                       | 3x3 Multiplikation                                                                         | 3                 |       | x          |         |              |     |
-| [m3x4 – ps](m3x4---ps.md)                                       | Multiplikation von 3 x 4                                                                         | 4                 |       | x          |         |              |     |
+| [m3x4 – ps](m3x4---ps.md)                                       | 3x4 Multiplikation                                                                         | 4                 |       | x          |         |              |     |
 | [m4x3 – ps](m4x3---ps.md)                                       | 4x3 multiplizieren                                                                         | 3                 |       | x          |         |              |     |
-| [m4x4 – ps](m4x4---ps.md)                                       | Multiplikation von 4 x 4                                                                         | 4                 |       | x          |         |              |     |
+| [m4x4 – ps](m4x4---ps.md)                                       | 4x4-Multiplikation                                                                         | 4                 |       | x          |         |              |     |
 | [mad – ps](mad---ps.md)                                         | Multiplizieren und Hinzufügen                                                                     | 1                 |       | x          |         |              |     |
 | [max – ps](max---ps.md)                                         | Maximum                                                                              | 1                 |       | x          |         |              |     |
 | [min – ps](min---ps.md)                                         | Minimum                                                                              | 1                 |       | x          |         |              |     |
@@ -110,7 +110,7 @@ Hinweise:
 
 <dl> <dt>
 
-[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

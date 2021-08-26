@@ -1,114 +1,114 @@
 ---
-description: In diesem Thema wird beschrieben, wie Media Foundation Transformationen Zeitstempel verarbeiten sollten.
+description: In diesem Thema wird beschrieben, Media Foundation Transformationen Zeitstempel verarbeiten sollten.
 ms.assetid: 4ab576ce-becd-4736-921e-e463c0dff841
 title: Zeitstempel und Dauer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2323c11fa0e3ec2b2b2d5ba1cefe4f5d5fa80c5b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22452e8b6b8094e643126f479f13b2c447db584588f3be1c1aa6595b3e7e2bb7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130465"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119953200"
 ---
 # <a name="time-stamps-and-durations"></a>Zeitstempel und Dauer
 
-In diesem Thema wird beschrieben, wie [Media Foundation Transformationen](media-foundation-transforms.md) Zeitstempel verarbeiten sollten.
+In diesem Thema wird [beschrieben, Media Foundation Transformationen](media-foundation-transforms.md) Zeitstempel verarbeiten sollten.
 
-Ein MFT muss in allen Ausgabe Beispielen als genau einen Zeitstempel und eine Dauer festgelegt werden. Bei einem einfachen MFT, das einen Eingabepuffer annimmt und ihn vollständig in einem Ausgabepuffer verarbeitet, sollte der MFT den Zeitstempel und die Dauer direkt aus dem Eingabe Beispiel in das Ausgabe Beispiel kopieren. Viele Transformationen sind jedoch komplexer als dies und erfordern möglicherweise komplexere Berechnungen der Ausgabezeit. Alle MFTs sollten die folgenden grundlegenden Regeln beachten:
+Ein MFT muss einen Zeitstempel und eine Dauer für alle Ausgabebeispiele so genau wie möglich festlegen. Bei einem einfachen MFT, der einen Eingabepuffer verwendet und vollständig in einen Ausgabepuffer verarbeitet, sollte MFT einfach den Zeitstempel und die Dauer direkt aus dem Eingabebeispiel in das Ausgabebeispiel kopieren. Viele Transformationen sind jedoch komplexer als diese und erfordern möglicherweise komplexere Berechnungen der Ausgabezeit. Alle MFTs sollten die folgenden grundlegenden Regeln beachten:
 
--   Ein MFT sollte versuchen, einen Zeitstempel und eine Dauer für alle nicht komprimierten Video-oder audioausgabebeispiele abzulegen, wenn ein präziser Zeitstempel oder eine Dauer für die Eingabe Stichproben angegeben ist oder berechnet werden kann. Für einige Ausgabezeit Stempel ist möglicherweise eine Interpolations Zeit erforderlich, insbesondere für Decoder.
--   Die Zeitstempel und die Dauer der Eingabe Stichproben sollten in den Ausgabe Beispielen so weit wie möglich beibehalten werden.
--   Die Ausgabezeit Stempel oder-Zeiträume stimmen möglicherweise nicht mit der Eingabe ab, da die MFT Daten zurückgibt oder die Ausgabe in andere Teile als die Eingabe abbricht. In diesem Fall sollte der MFT den Ausgabezeit Stempel aus dem frühesten Eingabe Beispiel berechnen, der Daten enthält, die zum Erstellen des Ausgabe Beispiels verwendet werden. Fügen Sie zum Berechnen des Ausgabezeit Stempels der Dauer der Daten, die bereits aus diesem Beispiel transformiert wurden, den Eingabe Zeitstempel des entsprechenden Eingabe Beispiels hinzu. Im zweiten Beispiel am Ende dieses Abschnitts wird diese Idee veranschaulicht.
--   Wenn die Eingabe Beispiele eine Dauer aufweisen, sollte diese Dauer beibehalten werden. Wenn eine Eingabe Stichprobe keine Dauer hat, sollte der MFT nach Möglichkeit eine Dauer berechnen, die aus der Größe des Ausgabepuffers oder der durch den Medientyp gegebenen Daten Rate besteht.
--   Berechnete Zeiträume sollten abgeschnitten (abgerundet), nicht auf das nächste Inkrement gerundet werden. Die Pipeline verfügt über genügend Slack, um Zeiträume zu verarbeiten, die etwas ungenau sind, aber es ist einfacher für die Pipeline, eine Dauer zu verarbeiten, die 1% zu kurz ist als eine Dauer von 1% zu lang. Das heißt, es gibt keinen Grund, die Dauer absichtlich zu verkürzen, außer durch Rundung.
+-   Ein MFT sollte versuchen, einen Zeitstempel und eine Dauer für alle nicht komprimierten Video- oder Audioausgabebeispiele zu verwenden, wenn ein genauer Zeitstempel oder eine genaue Dauer für die Eingabebeispiele angegeben oder berechnet werden kann. Interpolation kann für einige Ausgabezeitstempel erforderlich sein, insbesondere für Decoder.
+-   Die Zeitstempel und die Dauer der Eingabebeispiele sollten in den Ausgabebeispielen so weit wie möglich beibehalten werden.
+-   Die Ausgabezeitstempel oder -daueren passen möglicherweise nicht zur Eingabe, da MFT Daten zurück hält oder die Ausgabe in andere Teile als die Eingabe unterbricht. In diesem Fall sollte MFT den Ausgabezeitstempel aus dem frühesten Eingabebeispiel berechnen, das Daten enthält, die zum Erstellen des Ausgabebeispiels verwendet wurden. Um den Ausgabezeitstempel zu berechnen, fügen Sie den Eingabezeitstempel des entsprechenden Eingabebeispiels der Dauer der Daten hinzu, die bereits aus dieser Stichprobe transformiert wurden. Im zweiten Beispiel am Ende dieses Abschnitts wird diese Idee veranschaulicht.
+-   Wenn die Eingabebeispiele eine Dauer haben, sollte diese Dauer beibehalten werden. Wenn ein Eingabebeispiel nicht über eine Dauer verfügt, sollte der MFT nach Möglichkeit eine Dauer aus der Größe des Ausgabepuffers oder der vom Medientyp angegebenen Datenrate berechnen.
+-   Berechnete Dauer sollten abgeschnitten (abgerundet) und nicht auf das nächste Inkrement gerundet werden. Die Pipeline verfügt über genügend Slack für die Behandlung geringfügig ungenauer Dauer, aber es ist einfacher für die Pipeline, eine Dauer zu verarbeiten, die 1 % zu kurz ist als eine Dauer, die 1 % zu lang ist. Es gibt jedoch keinen Grund, die Dauer absichtlich zu kürzen, ab hinaus durch Runden.
 
 ### <a name="decoders"></a>Decoder
 
-Ein Decoder konvertiert komprimierte Pakete in unkomprimierte Daten. Da die Ausgabe nicht komprimiert ist, haben Decoder eine besondere Verpflichtung, die Zeitstempel und die Dauer zu korrigieren. Einige komprimierte Formate, insbesondere MPEG-2, haben keine Zeitstempel für alle Eingabe Pakete und haben häufig keine Dauer für ein Paket. Bei diesen Formaten ist der Decoder dafür verantwortlich, einen gültigen Zeitstempel und eine Dauer für jedes Ausgabe Beispiel zu setzen, indem er die impliziten Dauer der gesamten Ausgabe seit dem letzten Zeitstempel-Eingabe Beispiel summiert.
+Ein Decoder konvertiert komprimierte Pakete in nicht komprimierte Daten. Da die Ausgabe unkomprimiert ist, haben Decoder eine besondere Verpflichtung, die Zeitstempel und Die Dauer zu korrigieren. Einige komprimierte Formate, insbesondere MPEG-2, verfügen nicht über Zeitstempel für alle Eingabepakete und haben häufig keine Dauer für pakete. Bei diesen Formaten ist der Decoder dafür verantwortlich, einen gültigen Zeitstempel und eine gültige Dauer für jede Ausgabestichprobe zu verwenden, indem die impliziten Daueren der gesamten Ausgabe seit dem letzten Zeitstempel-Eingabebeispiel summiert werden.
 
-Wenn die Dauer für Videos nicht im komprimierten Format verfügbar ist, sollte der Decoder die Dauer als Umkehrung der Framerate berechnen, in 100-Nanosecond-Einheiten konvertiert und abgerundet werden.
+Wenn die Dauer für Videos nicht im komprimierten Format verfügbar ist, sollte der Decoder die Dauer als Umkehrung der Bildfrequenz berechnen, in Einheiten von 100 Nanosekunden konvertiert und abgerundet werden.
 
-Wenn die Dauer für Audiodaten nicht im komprimierten Format verfügbar ist, sollte der Decoder die Dauer als Umkehrung der audiobeispielrate multipliziert mit der Anzahl der Stichproben im Ausgabepuffer, in 100-Nanosecond-Einheiten konvertiert und abgerundet werden.
+Wenn die Dauer für Audiodaten nicht im komprimierten Format verfügbar ist, sollte der Decoder die Dauer als Umkehrung der Audioabtastrate multipliziert mit der Anzahl der Stichproben im Ausgabepuffer berechnen, in Einheiten von 100 Nanosekunden konvertiert und abgerundet werden.
 
-Eine Transformation sollte nur dann eine Stichprobe ohne einen Zeitstempel ausgeben, wenn die MFT nie einen Zeitstempel für ein Eingabe Beispiel erhalten hat, oder wenn es keine Möglichkeit gibt, einen exakten Ausgabezeit Stempel aus dem vorherigen Eingabe Zeitstempel zu berechnen.
+Eine Transformation sollte nur dann eine Stichprobe ohne Zeitstempel aus geben, wenn MFT noch nie einen Zeitstempel für ein Eingabebeispiel erhalten hat oder wenn es keine Möglichkeit gibt, einen genauen Ausgabezeitstempel aus dem vorherigen Eingabezeitstempel zu berechnen.
 
 ### <a name="audio-decoders"></a>Audiodecoder
 
-Für Audiodecoder wird die Dauer der einzelnen Ausgabe Stichprobe aus der audiosamplingrate und der Anzahl der PCM-Stichproben pro Kanal im Ausgabepuffer berechnet.
+Bei Audiodecodern wird die Dauer jedes Ausgabebeispiels anhand der Audio-Samplingrate und der Anzahl der PCM-Stichproben pro Kanal im Ausgabepuffer berechnet.
 
-Die korrekte Methode zum Berechnen der Ausgabezeit Stempel hängt davon ab, ob die Eingabe Beispiele Zeitstempel enthalten.
+Die richtige Methode zum Berechnen von Ausgabezeitstempeln hängt davon ab, ob die Eingabebeispiele Zeitstempel enthalten.
 
-Wenn die Eingabe Beispiele Zeitstempel enthalten, berechnet der Decoder die Ausgabezeit Stempel aus den Eingabe Zeitstempeln wie folgt:
+Wenn die Eingabebeispiele Zeitstempel enthalten, berechnet der Decoder die Ausgabezeitstempel wie folgt aus den Eingabezeitstempeln:
 
--   Wenn jeder Eingabepuffer eine oder mehrere vollständige komprimierte Frames ohne partielle Frames enthält, entspricht der Ausgabezeit Stempel dem Eingabe Zeitstempel abzüglich der bekannten Latenz des Decoders. Ein Dolby Digital (AC-3)-Decoder hat z. b. eine Latenz von 256 PCM-Stichproben. Bei der Samplingrate von 48-kHz beträgt die Latenz z. b. 5,33 Millisekunden (MS). Wenn der Eingabe Zeitstempel also 1000 ms beträgt, lautet der Ausgabezeit Stempel 1000 – 5,33 = 994,66 ms. Wenn der Eingabepuffer mehr als einen vollständigen komprimierten Frame enthält, erzeugt der Decoder ein Ausgabe Beispiel für jeden Frame im Eingabe Beispiel. Alle Ausgabe Beispiele werden ordnungsgemäß mit einem Zeitstempel versehen, sodass keine Lücken vorhanden sind.
--   Abhängig vom Transport Format kann ein Eingabepuffer partielle Frames enthalten. Ein Puffer kann z. b. einen Teil eines Frames aus dem vorherigen Eingabepuffer enthalten, gefolgt von einem oder mehreren abgeschlossenen Frames, gefolgt vom Anfang des nächsten Frames. In diesem Fall ist es im allgemeinen richtig, anzunehmen, dass der Eingabe Zeitstempel dem ersten Frame entspricht, der innerhalb des Puffers beginnt. (Das heißt, ein partieller Frame, der im vorherigen Puffer gestartet wurde, ist nicht im Zeitstempel des aktuellen Puffers enthalten.) Berechnen Sie den Ausgabezeit Stempel entsprechend.
+-   Wenn jeder Eingabepuffer einen oder mehrere vollständige komprimierte Frames ohne partielle Frames enthält, entspricht der Ausgabezeitstempel dem Eingabezeitstempel abzüglich der bekannten Latenz des Decoders. Beispielsweise hat ein Dolby Digital-Decoder (AC-3) eine Latenz von 256 PCM-Beispielen. Bei einer Samplingrate von 48 kHz beträgt die Latenz beispielsweise 5,33 Millisekunden (msec). Wenn der Eingabezeitstempel also 1.000 msec beträgt, beträgt der Ausgabezeitstempel 1000 – 5,33 = 994,66 msec. Wenn der Eingabepuffer mehr als einen gesamten komprimierten Frame enthält, erzeugt der Decoder ein Ausgabebeispiel für jeden Frame im Eingabebeispiel. Alle Ausgabebeispiele werden ordnungsgemäß mit einem Zeitstempel versehen, sodass keine Lücken bestehen.
+-   Je nach Transportformat kann ein Eingabepuffer partielle Frames enthalten. Beispielsweise kann ein Puffer einen Teil eines Frames aus dem vorherigen Eingabepuffer enthalten, gefolgt von einem oder mehr vollständigen Frames, gefolgt vom Anfang des nächsten Frames. In diesem Fall ist es in der Regel richtig, davon auszugehen, dass der Eingabezeitstempel dem ersten Frame entspricht, der innerhalb des Puffers beginnt. (Das heißt, ein teiler Frame, der im vorherigen Puffer gestartet wurde, ist nicht im Zeitstempel für den aktuellen Puffer enthalten.) Berechnen Sie den Ausgabezeitstempel entsprechend.
 
-Wenn die Eingabe Beispiele keine Zeitstempel enthalten:
+Wenn die Eingabebeispiele keine Zeitstempel enthalten:
 
--   Der Decoder sollte seine eigenen Zeitstempel generieren und den ersten Ausgabezeit Stempel auf NULL festlegen.
--   Die Stichproben Dauer wird anhand der Anzahl von Ausgabe Beispielen im Puffer und der Stichprobenrate berechnet.
--   Nachfolgende Zeitstempel werden aus dem vorherigen Zeitstempel und der Dauer berechnet: Aktueller Zeitstempel + aktuelle Dauer = nächster Zeitstempel. Es sollten keine Lücken in den Ausgabezeit Stempeln vorliegen.
+-   Der Decoder sollte seine eigenen Zeitstempel generieren und den ersten Ausgabezeitstempel auf 0 (null) festlegen.
+-   Die Stichprobendauer wird aus der Anzahl der Ausgabestichproben im Puffer und der Abtastrate berechnet.
+-   Nachfolgende Zeitstempel werden aus dem vorherigen Zeitstempel und der Dauer berechnet: Aktueller Zeitstempel + aktuelle Dauer = nächster Zeitstempel. Es sollten keine Lücken in den Ausgabezeitstempeln bestehen.
 
-Wenn der Eingabedaten Strom Anfangszeit Stempel enthält, aber aus irgendeinem Grund zu keinem Zeitstempel wechselt, sollte der Decoder weiterhin seine eigenen Ausgabezeit Stempel generieren, sodass Sie kontinuierlich sind und keine Lücke vorhanden ist.
+Wenn der Eingabestream anfänglich Zeitstempel enthält, aber aus irgendeinem Grund zu keinen Zeitstempeln wechselt, sollte der Decoder weiterhin seine eigenen Ausgabezeitstempel generieren, damit sie kontinuierlich sind und keine Lücke besteht.
 
-Wenn der Eingabedaten Strom Zeitstempel enthält, aber es gibt Lücken in den Zeiten, gibt der Decoder diese Lücken einfach weiter. Anders ausgedrückt: der Decoder sollte nicht versuchen, inkonsistente Zeitstempel im Eingabestream zu korrigieren.
+Wenn der Eingabestream Zeitstempel enthält, aber Lücken in den Zeiten bestehen, gibt der Decoder diese Lücken einfach weiter. Anders ausgedrückt: Der Decoder sollte nicht versuchen, inkonsistente Zeitstempel im Eingabestream zu korrigieren.
 
 ### <a name="mixers"></a>Mischer
 
 > [!Note]  
-> In Windows Vista unterstützt die Media Foundation Pipeline keine MFTs mit mehr als einer Eingabe. MFTs mit mehreren Eingaben werden in Windows 7 unterstützt.
+> In Windows Vista unterstützt die Media Foundation-Pipeline keine MFTs mit mehr als einer Eingabe. MFTs mit mehreren Eingaben werden in Windows 7 unterstützt.
 
  
 
-Ein Mixer nimmt mehrere Eingaben an und mischt sie in eine Ausgabe ein. Wenn die Eingabedaten Ströme nicht vollständig von der Rate gesperrt sind oder leicht zeitgleich versetzt werden, kann die festgelegte Zeit in der Ausgabe mehrdeutig sein. Im folgenden finden Sie einige Richtlinien, abhängig vom Medientyp:
+Ein Mixer nimmt mehrere Eingaben und gemischt sie in einer Ausgabe. Wenn die Eingabestreams nicht vollständig mit der Rate gesperrt sind oder in der Zeit leicht voneinander entfernt werden, kann es zu Mehrdeutigkeiten darüber kommen, welche Zeit für die Ausgabe festgelegt werden soll. Abhängig vom Medientyp finden Sie hier einige Richtlinien:
 
--   Audio. Beim Start oder unmittelbar nach einer Ableitung oder Leerung sollte ein Audiomixer warten, bis Ausgabe Beispiele erzeugt werden, bis er ein Eingabe Beispiel für alle erforderlichen Eingabedaten Ströme erhalten hat. An diesem Punkt sollte der früheste Zeitstempel der anfänglichen Stichproben ausgewählt werden, der als Grundlage für die Ausgabezeit Stempel verwendet werden soll. Die anderen Streams sollten mit Ruhe aufgefüllt werden, um eine beliebige Zeit Abweichung zu bilden. Wenn eine Stichprobe in einem optionalen Eingabedaten Strom empfangen wird, sollte Sie auch in die Berechnung einbezogen werden. Ab diesem Zeitpunkt sollte der MFT eine kontinuierliche und ununterbrochene Kette von Ausgabezeit Stempeln entwickeln. Im Allgemeinen sollte der MFT nicht versuchen, einen Datenstrom in Relation zu einem anderen zu übertragen. Stattdessen sollte die Ausgabezeit Stempel aus dem Baseline-Zeitstempel, der Ausgabe Rate und den Puffergrößen berechnet werden. Wenn eine andere Ableitung oder Leerung auftritt, sollte der MFT seine Baseline-Zeitstempel zurücksetzen.
+-   Audio. Beim Start oder unmittelbar nach einem Leeren oder Leeren sollte ein Audiomixer warten, bis Ausgabebeispiele erzeugt werden, bis er ein Eingabebeispiel für alle erforderlichen Eingabestreams erhalten hat. An diesem Punkt sollte der früheste Zeitstempel der ersten Stichproben als Baseline für die Ausgabezeitstempel verwendet werden. Die anderen Datenströme sollten mit Stille aufschlossen werden, um jede Zeitabweichung zu dämpfen. Wenn eine Stichprobe für einen optionalen Eingabestream empfangen wird, sollte sie auch in die Berechnung einbezogen werden. Ab diesem Zeitpunkt sollte MFT eine kontinuierliche und ununterbrochene Kette von Ausgabezeitstempeln erzeugen. Im Allgemeinen sollte MFT nicht versuchen, eine Datenstromdrift relativ zu einem anderen zu berücksichtigen. Stattdessen sollten die Ausgabezeitstempel aus dem Baselinezeitstempel, der Ausgaberate und den Puffergrößen berechnet werden. Wenn ein weiterer Leerungs- oder Leerungsstempel auftritt, sollte der MFT seine Baselinezeitstempel zurücksetzen.
 
--   Video. Beim Start oder unmittelbar nach einer Ableitung oder Leerung sollte ein Video-Mixer warten, bis Ausgabe Beispiele erzeugt werden, bis er ein Eingabe Beispiel für alle erforderlichen Eingabedaten Ströme erhalten hat. An diesem Punkt sollte der früheste Zeitstempel der anfänglichen Stichproben ausgewählt werden, der als Grundlage für die Ausgabezeit Stempel verwendet werden soll. Im Allgemeinen sollte Sie sich darauf konzentrieren, kontinuierliche und reguläre Ausgabezeit Stempel und die Dauer zu korrigieren, auch wenn die Eingabe nicht so regulär ist, wenn dies durch wiederholte Eingabe Frames notwendig ist.
+-   Video. Beim Start oder unmittelbar nach einem Leeren oder Leeren sollte ein Videomixer warten, bis Ausgabebeispiele erzeugt werden, bis er ein Eingabebeispiel für alle erforderlichen Eingabestreams erhalten hat. An diesem Punkt sollte der früheste Zeitstempel der ersten Stichproben als Baseline für die Ausgabezeitstempel verwendet werden. Im Allgemeinen sollte versucht werden, fortlaufende und reguläre Ausgabezeitstempel und feste Dauer zu behalten, auch wenn die Eingabe nicht so normal ist, wenn dies erforderlich ist, indem eingabeframes wiederholt werden.
 
 ### <a name="encoders"></a>Encoder
 
-Ein Encoder konvertiert unkomprimierte Audiodaten oder Videos in komprimierte Pakete. Ein Encoder sollte die folgenden Richtlinien befolgen:
+Ein Encoder konvertiert unkomprimierte Audio- oder Videodaten in komprimierte Pakete. Ein Encoder sollte die folgenden Richtlinien befolgen:
 
--   Der Encoder muss den Konventionen des Ausgabeformats folgen. Wenn das Format in der Regel nicht jedes Beispiel mit einem Zeitstempel versehen wird, wie in MPEG-2, benötigen nicht alle Ausgabe Beispiele einen Zeitstempel und eine Dauer.
+-   Der Encoder sollte die Konventionen des Ausgabeformats befolgen. Wenn das Format nicht in der Regel einen Zeitstempel für jede Stichprobe enthält, wie in MPEG-2, benötigt nicht jedes Ausgabebeispiel einen Zeitstempel und eine Dauer.
 
--   Die Eingabe Zeitstempel sollten im Ausgabeformat beibehalten werden, wenn das Format über Felder für Zeitstempel verfügt, es sei denn, es handelt sich um bessere Zeit Informationen, die von einer anderen Quelle verfügbar sind, z. b. die Anwendung selbst.
+-   Die Eingabezeitstempel sollten im Ausgabeformat beibehalten werden, wenn das Format Felder für Zeitstempel enthält, es sei denn, bessere Zeitinformationen sind von einer anderen Quelle wie der Anwendung selbst verfügbar.
 
-### <a name="multiplexers"></a>Multiplexers (
+### <a name="multiplexers"></a>Multiplexer
 
 > [!Note]  
-> In Windows Vista unterstützt die Media Foundation Pipeline keine MFTs mit mehr als einer Eingabe. MFTs mit mehreren Eingaben werden in Windows 7 unterstützt.
+> In Windows Vista unterstützt die Media Foundation-Pipeline keine MFTs mit mehr als einer Eingabe. MFTs mit mehreren Eingaben werden in Windows 7 unterstützt.
 
  
 
-Ein Multiplexer kombiniert zwei unterschiedliche Audio-oder Videostreams zu einem verschachtelten Format, wie z. b. AVI oder MPEG-2-Transportstream. Ein Multiplexer sollte folgende Richtlinien befolgen:
+Ein Multiplexer kombiniert zwei verschiedene Audio- oder Videostreams in einem überlappten Format, z. B. AVI oder MPEG-2 Transport Stream. Ein Multiplexer sollte die folgenden Richtlinien befolgen:
 
--   Der Multiplexer muss den Konventionen des Ausgabeformats folgen. Wenn das Format in der Regel nicht jedes Beispiel mit einem Zeitstempel versehen wird, wie in MPEG-2, benötigen nicht alle Ausgabe Beispiele einen Zeitstempel und eine Dauer.
+-   Der Multiplexer sollte die Konventionen des Ausgabeformats befolgen. Wenn das Format nicht in der Regel einen Zeitstempel für jede Stichprobe enthält, wie in MPEG-2, benötigt nicht jedes Ausgabebeispiel einen Zeitstempel und eine Dauer.
 
--   Der Zeitstempel sollte die früheste Zeit für einen Frame, der in diesem Paket beginnt, oder die Uhrzeit des ersten audiobeispiels widerspiegeln, die von diesem Paket decodiert wird. Ignorieren Sie diese Richtlinie, wenn Sie mit den Konventionen des Ausgabeformats in Konflikt steht.
+-   Der Zeitstempel sollte die früheste Zeit widerspiegeln, die auf einem beliebigen Frame platziert wird, der in diesem Paket beginnt, oder die Zeit des ersten Audiobeispiels, das aus diesem Paket decodiert würde. Ignorieren Sie diese Richtlinie, wenn sie mit den Konventionen des Ausgabeformats in Konflikt steht.
 
 ### <a name="demultiplexers"></a>Demultiplexer
 
-Ein Demultiplexer teilt ein überlappendes Format (z. b. AVI oder MPEG-2-Transportstream) in die zugrunde liegenden Audiodaten Ströme auf.
+Ein Demultiplexer teilt ein verleerter Format, z. B. AVI oder MPEG-2 Transport Stream, in die zugrunde liegenden Audio- und Videostreams auf.
 
-Wenn das Format bestimmte Zeitstempel Informationen enthält, die verwendet werden können, um genaue Ausgabezeit Stempel basierend auf den Eingabe Zeitstempeln zu berechnen, sollten diese Informationen verwendet werden. Wenn das Format jedoch Zeiten in einer vollständig anderen Basis enthält, die keine Beziehung zu den Eingabe Zeitstempeln haben, und ein präziser Offset zum Eingabe Zeitstempel nicht berechnet werden kann, sollten die eigenen Zeiten des Formats ignoriert werden.
+Wenn das Format bestimmte Zeitstempelinformationen enthält, die verwendet werden können, um genaue Ausgabezeitstempel basierend auf den Eingabezeitstempeln zu berechnen, sollten diese Informationen verwendet werden. Wenn das Format jedoch Zeiten in einer völlig anderen Basis enthält, die keine Beziehung zu den Eingabezeitstempeln haben und ein genauer Offset zum Eingabezeitstempel nicht berechnet werden kann, sollten die eigenen Zeiten des Formats ignoriert werden.
 
-Wenn das Format keine verwendbaren Zeitstempel Informationen enthält, sollte der Demultiplexer diese Regeln befolgen:
+Wenn das Format keine nutzbaren Zeitstempelinformationen enthält, sollte der Demultiplexer die folgenden Regeln befolgen:
 
--   Nicht komprimierte Ausgabestreams sollten nach Möglichkeit über gültige Zeitstempel und Dauer verfügen, die anhand des nächstgelegenen vorherigen Eingabe Zeitstempels berechnet werden.
+-   Unkomprimierte Ausgabestreams sollten nach Möglichkeit gültige Zeitstempel und Dauer haben, die aus dem nächstgelegenen vorherigen Eingabezeitstempel berechnet werden.
 
--   Komprimierte Ausgabestreams sollten Zeitstempel nur für das erste Ausgabe Beispiel aufweisen, das aus einem Eingabe Beispiel mit einem Zeitstempel abgeleitet ist. Wenn das Eingabe Beispiel keinen Zeitstempel hat, sollten keine Ausgabe Beispiele, die von diesem Eingabe Beispiel abgeleitet werden, über einen Zeitstempel verfügen. Wenn das Eingabe Beispiel in mehrere Ausgabe Beispiele aufgeteilt ist, sollte nur das erste Ausgabe Beispiel einen Zeitstempel aufweisen, und der Rest sollte keine Zeitstempel enthalten.
+-   Komprimierte Ausgabestreams sollten nur Zeitstempel für das erste Ausgabebeispiel haben, das aus einem Eingabebeispiel mit einem Zeitstempel abgeleitet wurde. Wenn das Eingabebeispiel nicht über einen Zeitstempel verfügt, sollten keine Ausgabebeispiele, die aus diesem Eingabebeispiel abgeleitet wurden, einen Zeitstempel haben. Wenn das Eingabebeispiel in mehrere Ausgabebeispiele zerbrochen ist, sollte nur das erste Ausgabebeispiel einen Zeitstempel und der Rest keine Zeitstempel haben.
 
 ### <a name="examples"></a>Beispiele
 
-Beispiel 1: Angenommen, ein Videoeffekt nimmt immer einen nicht komprimierten Eingabe Rahmen an, wendet den Effekt an und kopiert ihn in die Ausgabe. Er hält niemals Frames zurück oder puffert Eingaben. Diese MFT kopiert einfach den Zeitstempel und die Dauer aus dem Eingabe Beispiel in das Ausgabe Beispiel, sofern diese verfügbar sind, und führt überhaupt keine Zeit Berechnungen durch.
+Beispiel 1: Angenommen, ein Videoeffekt nimmt immer einen unkomprimierten Eingaberahmen an, wendet den Effekt an und kopiert ihn in die Ausgabe. Er hält niemals Frames zurück oder puffert eingaben. Dieser MFT kopiert einfach den Zeitstempel und die Dauer aus dem Eingabebeispiel in das Ausgabebeispiel, sofern diese verfügbar sind, und führt keine Zeitberechnungen durch.
 
-Beispiel 2: Nehmen wir an, dass ein Audioeffekt alle 10 Millisekunden (MS) jedes Eingabe Puffers transformiert und die zusätzlichen 10 MS zum kombinieren mit dem nächsten Puffer speichert. Es wird ein Datenstrom von Beispielen abgerufen, die alle eine Dauer von 50 ms haben. Die Eingabe Zeiten sind in der folgenden Tabelle aufgeführt.
+Beispiel 2: Angenommen, ein Audioeffekt transformiert alle bis auf 10 Millisekunden (ms) jedes Eingabepuffers und spart die zusätzlichen 10 ms für die Kombination mit dem nächsten Puffer. Sie ruft einen Datenstrom von Stichproben ab, die alle eine Dauer von 50 ms haben. Die Eingabezeiten werden in der folgenden Tabelle angezeigt.
 
 
 
-| Beispiel | Eingabe Zeit | Eingabe Dauer | Ausgabezeit | Ausgabe Dauer |
+| Beispiel | Eingabezeit | Eingabedauer | Ausgabezeit | Ausgabedauer |
 |--------|------------|----------------|-------------|-----------------|
 | 1      | 20         | 50             | 20          | 40              |
 | 2      | 70         | 50             | 60          | 50              |
@@ -119,15 +119,15 @@ Beispiel 2: Nehmen wir an, dass ein Audioeffekt alle 10 Millisekunden (MS) jedes
 
  
 
-Beachten Sie die 1-MS-Abweichung zwischen der tatsächlichen Dauer von Stichprobe 2 und der impliziten Dauer basierend auf dem nächsten Zeitstempel (121? 70 = 51).
+Beachten Sie die Abweichung von 1 ms zwischen der tatsächlichen Dauer von Stichprobe 2 und der impliziten Dauer basierend auf dem nächsten Zeitstempel (121 ? 70 = 51).
 
-Da der MFT 10 MS zurückhält, gibt er die ersten 40 ms der Eingabe Stichprobe 1 als Ausgabe Beispiel 1 mit einem Zeitstempel von 20 ms und einer Dauer von 40 ms aus.
+Da der MFT 10 ms zurückhält, gibt er die ersten 40 ms der Eingabestichprobe 1 als Ausgabebeispiel 1 mit einem Zeitstempel von 20 ms und einer Dauer von 40 ms aus.
 
-Ausgabe Beispiel 2 kombiniert die 10 MS, die zuvor mit 40 ms der Eingabe Stichprobe 2 zurück gehalten wurden. Dieses Beispiel erhält einen Zeitstempel von 60 ms (der Zeitstempel des vorherigen Eingabe Beispiels, 20 ms, zuzüglich der Dauer der Daten, die aus diesem Beispiel bereits verarbeitet wurden, 40 ms). Es erhält eine Dauer von 50 ms.
+Ausgabebeispiel 2 kombiniert die zuvor zurückgehaltenen 10 ms mit 40 ms des Eingabebeispiels 2. Dieses Beispiel erhält einen Zeitstempel von 60 ms (der Zeitstempel des vorherigen Eingabebeispiels, 20 ms, plus die Dauer der daten, die bereits aus diesem Beispiel verarbeitet wurden, 40 ms). Es wird eine Dauer von 50 ms angegeben.
 
-Ebenso hat das nächste Beispiel einen Zeitstempel von 110ms (70ms + 40 ms) mit einer Dauer von 50 ms.
+Analog dazu hat das nächste Beispiel einen Zeitstempel von 110 ms (70 ms + 40 ms) mit einer Dauer von 50 ms.
 
-Die nächste Berechnung ist interessanter. Der implizite Zeitstempel aus der vorherigen Ausgabezeit und Dauer beträgt 160 MS (Zeitstempel 110 ms + Dauer 50 ms). Allerdings sollte der Ausgabezeit Stempel aus dem Eingabe Zeitstempel des frühesten Eingabe Beispiels berechnet werden, das das Ausgabe Beispiel zeitlich überlappt, zuzüglich der Länge der Daten, die bereits aus diesem Beispiel verarbeitet wurden. Das nächstgelegene überlappende Eingabe Beispiel ist das Beispiel 4 (Zeitstempel = 171), aber dies ist nicht das früheste. Das früheste überlappende Beispiel ist Sample 3 (Zeitstempel = 121). Wenn die 40 ms hinzugefügt werden, die aus diesem Beispiel bereits verarbeitet wurden, ist das Ergebnis 161.
+Die nächste Berechnung ist interessanter. Der implizite Zeitstempel aus der vorherigen Ausgabezeit und Dauer beträgt 160 ms (Zeitstempel 110 ms + Dauer 50 ms). Der Ausgabezeitstempel sollte jedoch anhand des Eingabezeitstempels des frühesten Eingabebeispiels berechnet werden, das die Ausgabestichprobe zeitlich überlappt, sowie aus der Länge aller Daten, die bereits aus dieser Stichprobe verarbeitet wurden. Das nächstgelegene überlappende Eingabebeispiel ist die Stichprobe 4 (Zeitstempel = 171), aber dies ist nicht das früheste. Die früheste überlappende Stichprobe ist Beispiel 3 (Zeitstempel = 121). Wenn Sie die 40 ms hinzufügen, die bereits aus diesem Beispiel verarbeitet wurden, ergibt sich das Ergebnis 161.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

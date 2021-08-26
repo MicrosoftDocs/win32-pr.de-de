@@ -1,7 +1,7 @@
 ---
-description: In der doc \_ Info \_ 1-Struktur wird ein Dokument beschrieben, das gedruckt wird.
+description: Die \_ DOC INFO \_ 1-Struktur beschreibt ein Dokument, das gedruckt wird.
 ms.assetid: 142d988b-dd74-4312-8b27-331a7ec70344
-title: DOC_INFO_1 Struktur (winspool. h)
+title: DOC_INFO_1-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 6f905a89163b46743a92c8616ee0fa3d0564590c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f534031da1c8f8f50309d4a2db0bfa39fe272ac34f59d1b490c24026d8fee261
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950000"
 ---
-# <a name="doc_info_1-structure"></a>DOC \_ Info \_ 1-Struktur
+# <a name="doc_info_1-structure"></a>\_DOC INFO \_ 1-Struktur
 
-In der **doc \_ Info \_ 1** -Struktur wird ein Dokument beschrieben, das gedruckt wird.
+Die **DOC \_ INFO \_ 1-Struktur** beschreibt ein Dokument, das gedruckt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ typedef struct _DOC_INFO_1 {
 
 <dl> <dt>
 
-**pdocname**
+**pDocName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Dokuments angibt.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Dokuments angibt.
 
 </dd> <dt>
 
-**poutputfile**
+**pOutputFile**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen einer Ausgabedatei angibt. Legen Sie diese Einstellung auf **null** fest, um Sie auf einen Drucker zu drucken.
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen einer Ausgabedatei angibt. Um auf einem Drucker zu drucken, legen Sie diesen auf **NULL** fest.
 
 </dd> <dt>
 
-**pdatatype**
+**pDatatype**
 </dt> <dd>
 
 Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, der zum Aufzeichnen des Dokuments verwendet wird.
@@ -72,8 +72,8 @@ Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Doc \_ Info \_ 1W** (Unicode) und **\_ doc \_ Info \_ 1a** (ANSI)<br/>                                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ DOC \_ INFO \_ 1W** (Unicode) und **\_ DOC INFO \_ \_ 1A** (ANSI)<br/>                                   |
 
 
 
@@ -84,7 +84,7 @@ Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp identifiziert, d
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**StartDocPrinter**](startdocprinter.md)

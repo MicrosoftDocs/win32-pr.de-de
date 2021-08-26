@@ -3,7 +3,7 @@ title: NM_RELEASEDCAPTURE Benachrichtigungscode (Commctrl.h)
 description: Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement die Mausaufnahme freigibt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 222a3be1-20f1-43c6-b982-852512209a45
 keywords:
-- NM_RELEASEDCAPTURE Benachrichtigungscode Windows Controls
+- NM_RELEASEDCAPTURE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
