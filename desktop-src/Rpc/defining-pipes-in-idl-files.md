@@ -1,23 +1,23 @@
 ---
 title: Definieren von Pipes in IDL-Dateien
-description: Wenn eine Pipe in einer IDL-Datei definiert ist, generiert der Mittelwert Compiler eine Pipe-Steuerungsstruktur, deren Member Zeiger auf Push-, Pull-und Zuordnungs Prozeduren sowie eine Zustands Variable sind, die diese Prozeduren koordiniert.
+description: Wenn eine Pipe in einer IDL-Datei definiert ist, generiert der MIDL-Compiler eine Pipesteuerelementstruktur, deren Member Zeiger auf Push-, Pull- und Alloc-Prozeduren sowie eine Zustandsvariable sind, die diese Prozeduren koordiniert.
 ms.assetid: f6c282e4-3056-48c4-bd12-dfcae6d238d7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 115be7fc5d00458d13df102afebe9ba5b55de070
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: bbd237690f45fd6ca73d62f54a5dccf0409f4424e1e96407c116b39ef5d882a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022070"
 ---
 # <a name="defining-pipes-in-idl-files"></a>Definieren von Pipes in IDL-Dateien
 
-Wenn eine Pipe in einer IDL-Datei definiert ist, generiert der Mittelwert Compiler eine Pipe-Steuerungsstruktur, deren Member Zeiger auf Push-, Pull-und Zuordnungs Prozeduren sowie eine Zustands Variable sind, die diese Prozeduren koordiniert. Die Client Anwendung initialisiert die Felder in der Pipe-Steuerelement Struktur, behält deren Zustands Variable bei und verwaltet die Datenübertragung mit eigenen Push-, Pull-und Zuordnungsfunktionen. Der Client-Stub-Code ruft diese Anwendungsfunktionen während der Datenübertragung in Schleifen auf. Bei einer Eingabe Pipe marshunscht der Clientstub die Übertragungsdaten und überträgt sie an den Serverstub. Bei einer Ausgabe Pipe werden die Daten vom Clientstub in einen Puffer entmarshunpliziert, und ein Zeiger an den Puffer wird an die Client Anwendung zurückgeleitet.
+Wenn eine Pipe in einer IDL-Datei definiert ist, generiert der MIDL-Compiler eine Pipesteuerelementstruktur, deren Member Zeiger auf Push-, Pull- und Alloc-Prozeduren sowie eine Zustandsvariable sind, die diese Prozeduren koordiniert. Die Clientanwendung initialisiert die Felder in der Pipesteuerelementstruktur, verwaltet ihre Zustandsvariable und verwaltet die Datenübertragung mit eigenen Push-, Pull- und Alloc-Funktionen. Der Clientstubcode ruft diese Anwendungsfunktionen während der Datenübertragung in Schleifen auf. Bei einer Eingabepipe marshallt der Clientstub die Übertragungsdaten und überträgt sie an den Serverstub. Bei einer Ausgabepipe entpackt der Clientstub die Daten in einen Puffer und übergibt einen Zeiger auf diesen Puffer zurück an die Clientanwendung.
 
-Der Server-Stub-Code initialisiert die Felder der Pipe-Steuerelement Struktur mit einer Statusvariablen sowie Zeiger auf Push-und Pull-Routinen. Der Server-Stub verwaltet den Status und verwaltet seinen privaten Speicher für die Übertragungsdaten. Die Serveranwendung ruft während des Remote Prozedur Aufrufs die Pull-und pushroutinen in Schleifen auf, da Sie Daten vom Clientstub empfängt und abmarshalls oder Daten an den Client-Stub überträgt.
+Der Serverstubcode initialisiert die Felder der Pipesteuerelementstruktur in eine Zustandsvariable sowie Zeiger auf Push- und Pullroutinen. Der Serverstub verwaltet den Zustand und den privaten Speicher für die Übertragungsdaten. Die Serveranwendung ruft die Pull- und Pushroutinen während des Remoteprozeduraufrufs in Schleifen auf, während sie Daten vom Clientstub empfängt und entfernt oder marshallt und überträgt Daten an den Clientstub.
 
-Die folgende Beispiel-IDL-Datei definiert eine lange Pipe des pipetyps \_ , deren Elementgröße als **Long**-Wert definiert ist. Außerdem werden Funktionsprototypen für die Remote Prozedur Aufrufe von inpipe und outpipe zum Senden bzw. empfangen von Daten deklariert. Wenn der Mittell-Compiler die IDL-Datei verarbeitet, generiert er die im Beispiel gezeigte Header Datei.
+Die folgende IDL-Beispieldatei definiert einen Pipetyp LONG \_ PIPE, dessen Elementgröße als **long** definiert ist. Außerdem werden Funktionsprototypen für die Remoteprozeduraufrufe InPipe und OutPipe deklariert, um Daten zu senden bzw. zu empfangen. Wenn der MIDL-Compiler die IDL-Datei verarbeitet, generiert er die im Beispiel gezeigte Headerdatei.
 
 ## <a name="example"></a>Beispiel
 
@@ -60,12 +60,12 @@ void OutPipe(
 
 <dl> <dt>
 
-[Kanal](/windows/desktop/Midl/pipe)
+[Rohr](/windows/desktop/Midl/pipe)
 </dt> <dt>
 
 [**/Oi**](/windows/desktop/Midl/-oi)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

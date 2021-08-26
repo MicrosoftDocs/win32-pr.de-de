@@ -4,12 +4,12 @@ ms.assetid: 6e9b5825-2db7-40a5-ac33-26c3b417fac9
 title: System.Contact.OtherAddress2Person
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 613da15d829b816274157ec1ad17515493113443
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1a13ddc236990e682c5eaf560f4fe4ef7ab768462bb9c2d5f45fe4e2cb237b54
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108101408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011090"
 ---
 # <a name="systemcontactotheraddress2street"></a>System.Contact.OtherAddress2Person
 
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

@@ -28,7 +28,7 @@ Definiert den Ursprung des Blickpunkts innerhalb des Begrenzungsfelds der Form. 
 
 **Tagsyntax**
 
-<o: *element* viewpointorigin=" *expression* ">
+<o: *element* viewpointorigin="-Ausdruck "> 
 
 **Skriptsyntax**
 

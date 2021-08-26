@@ -4,24 +4,24 @@ ms.assetid: 98244af1-5934-4d1c-b9c3-7a414b065fe7
 title: VMR-Betriebsmodi
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43427c4119bb912d2bc2cf92b1c740b1d22e1bf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88e7a1fa378ff781a712f71c877c32991cf19683a81daa10ff9b2fbbea40e7c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049370"
 ---
 # <a name="vmr-modes-of-operation"></a>VMR-Betriebsmodi
 
-Die Komponentenarchitektur von VMR ermöglicht es Anwendungen, diese auf verschiedene Weise zu konfigurieren, je nachdem, wie das Rendering durchgeführt werden soll. In der folgenden Tabelle werden die drei präsentationsmodi und die beiden-Mischungs Modi und die Komponenten aufgeführt, die für die einzelnen Konfigurationen vorhanden sind.
+Die Komponentenarchitektur der VMR ermöglicht Es Anwendungen, sie auf verschiedene Weise zu konfigurieren, je nachdem, wie das Rendering durchgeführt werden soll. Die folgende Tabelle zeigt die drei Präsentationsmodi und die beiden Mischungsmodi sowie die Komponenten, die für jede Konfiguration vorhanden sind.
 
 
 
-| Mode       | Einzelner Stream                                                                     | Mehrere Streams (Mischungs Modus)                                                                                             |
+| Mode       | Einzelner Stream                                                                     | Mehrere Streams (Gemischter Modus)                                                                                             |
 |------------|-----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Fenster   | Zuordnung-presentercore-Synchronisierungs Einheit<br/> Fenster-Manager<br/> | Mixercompositor\*<br/> Zuordnung-Presenter<br/> Core-Synchronisierungs Einheit<br/> Fenster-Manager<br/> |
-| Fensterlose | Zuordnung-presentercore-Synchronisierungs Einheit<br/>                           | Mixercompositor\*<br/> Zuordnung-Presenter<br/> Core-Synchronisierungs Einheit<br/>                           |
-| Renderlos | Zuordnung von "Zuweisung-Presenter" (von Anwendung bereitgestellt) Core-Synchronisierungs Einheit<br/> | Mixercompositor\*<br/> Zuordnung-Presenter (von Anwendung bereitgestellt)<br/> Core-Synchronisierungs Einheit<br/> |
+| Fenstermodus   | Allocator-presenterCore Synchronization Unit<br/> Fenster-Manager<br/> | MixerCompositor\*<br/> Allocator-Presenter<br/> Kernsynchronisierungseinheit<br/> Fenster-Manager<br/> |
+| Fensterlosen | Allocator-presenterCore Synchronization Unit<br/>                           | MixerCompositor\*<br/> Allocator-Presenter<br/> Kernsynchronisierungseinheit<br/>                           |
+| Renderlos | Allocator-Presenter (von Anwendung bereitgestellt)Core Synchronization Unit<br/> | MixerCompositor\*<br/> Allocator-Presenter (bereitgestellt von der Anwendung)<br/> Kernsynchronisierungseinheit<br/> |
 
 
 
@@ -29,18 +29,18 @@ Die Komponentenarchitektur von VMR ermöglicht es Anwendungen, diese auf verschi
 
 \* Gibt an, dass die Anwendung über die Option verfügt, eine benutzerdefinierte Komponente bereitzustellen oder die Standardkomponente zu verwenden.
 
-Bei allen Konfigurationen sollten Sie sich beim Erstellen von Filter Diagrammen mit der VMR nicht merken, dass Sie die VMR vor dem verbinden konfigurieren müssen.
+In allen Konfigurationen ist der wichtigste Punkt, den Sie beim Erstellen von Filterdiagrammen mit der VMR beachten sollten, dass Sie die VMR konfigurieren müssen, bevor Sie eine Verbindung herstellen.
 
-Für alle Konfigurationen können Pins nicht dynamisch hinzugefügt oder entfernt werden, nachdem die VMR mit dem upstreamfilter verbunden ist, Sie können jedoch verbunden und getrennt werden. Wenn die Anwendung nicht sicher ist, wie viele Pins benötigt werden, sollte die VMR für die maximal benötigte Anzahl konfiguriert werden. Das vorhanden sein von nicht verwendeten Eingabe Pins für den Filter beeinträchtigt nicht die Renderingleistung. Im Gegensatz zum alten Überlagerungs-Mixer hat VMR keine Ausgabe-PIN, da es keinen separaten Filter für die Fensterverwaltung erfordert.
+Für alle Konfigurationen können Pins nicht dynamisch hinzugefügt oder entfernt werden, nachdem die VMR mit dem Upstreamfilter verbunden wurde, aber sie können verbunden und getrennt werden. Wenn die Anwendung nicht sicher ist, wie viele Pins benötigt werden, sollte sie die VMR für die maximal erforderliche Anzahl konfigurieren. Das Vorhandensein von nicht verwendeten Eingabepins im Filter beeinträchtigt nicht die Renderingleistung. Im Gegensatz zum alten Overlay-Mixer verfügt die VMR über keinen Ausgabepin, da kein separater Filter für die Fensterverwaltung erforderlich ist.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie den VMR für einen bestimmten Modus konfigurieren:
+In den folgenden Abschnitten wird beschrieben, wie Sie die VMR für einen bestimmten Modus konfigurieren:
 
--   [VMR-Fenstermodus (Kompatibilitätsmodus)](vmr-windowed--compatibility--mode.md)
--   [Fensterloser VMR-Modus](vmr-windowless-mode.md)
--   [VMR mit mehreren Streams (Mischungs Modus)](vmr-with-multiple-streams--mixing-mode.md)
--   [YUV-Mischungs Modus](yuv-mixing-mode.md)
--   [Positionieren und Verschieben von Video Rechtecke im Kompositions Bereich](positioning-and-moving-video-rectangles-in-composition-space.md)
--   [VMR-renderlosen Wiedergabemodus (benutzerdefinierter Zuweiser)](vmr-renderless-playback-mode--custom-allocator-presenters.md)
+-   [VMR-Fenstermodus (Kompatibilität)](vmr-windowed--compatibility--mode.md)
+-   [VMR-Modus ohne Fenster](vmr-windowless-mode.md)
+-   [VMR mit mehreren Streams (Gemischter Modus)](vmr-with-multiple-streams--mixing-mode.md)
+-   [YUV-Gemischtmodus](yuv-mixing-mode.md)
+-   [Positionieren und Verschieben von Videorechtecke im Kompositionsbereich](positioning-and-moving-video-rectangles-in-composition-space.md)
+-   [VMR Renderless Playback Mode (Custom Allocator-Presenters)](vmr-renderless-playback-mode--custom-allocator-presenters.md)
 -   [Exklusiver DirectDraw-Modus](directdraw-exclusive-mode.md)
 
  

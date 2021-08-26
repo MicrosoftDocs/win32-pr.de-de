@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ stopTime-Methode legt die Zeit fest, zu der die Wiedergabe in Relation zur Dauer des Streams beendet wird. Diese Methode implementiert die imediaposition::p UT \_ stopTime-Methode.
+description: Die \_ put StopTime-Methode legt die Zeit fest, zu der die Wiedergabe beendet wird, relativ zur Dauer des Streams. Diese Methode implementiert die IMediaPosition::p ut \_ StopTime-Methode.
 ms.assetid: 0a344cad-df93-47f1-8c7f-5d5ef775b850
-title: CPosPassThru.put_StopTime-Methode (ctlutil. h)
+title: CPosPassThru.put_StopTime-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4f5763700947596a0fb437ba3840df058d4d3239
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d91d49f2517a3d3b9efc50d70ace1b75562b50df8acda7c48826e7c088439928
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055090"
 ---
-# <a name="cpospassthruput_stoptime-method"></a>Cpospassthru. Put \_ stopTime-Methode
+# <a name="cpospassthruput_stoptime-method"></a>CPosPassThru.put \_ StopTime-Methode
 
-Die- `put_StopTime` Methode legt die Uhrzeit fest, zu der die Wiedergabe in Relation zur Dauer des Streams beendet wird. Diese Methode implementiert die [**imediaposition::p UT \_ stopTime**](/windows/desktop/api/Control/nf-control-imediaposition-put_stoptime) -Methode.
+Die `put_StopTime` -Methode legt die Zeit fest, zu der die Wiedergabe beendet wird, relativ zur Dauer des Streams. Diese Methode implementiert die [**IMediaPosition::p ut \_ StopTime-Methode.**](/windows/desktop/api/Control/nf-control-imediaposition-put_stoptime)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT put_StopTime(
 
 <dl> <dt>
 
-*lltime* 
+*llTime* 
 </dt> <dd>
 
-Endzeit als **Double** -Wert in Sekunden.
+Beendigungszeit als **Double-Wert** in Sekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

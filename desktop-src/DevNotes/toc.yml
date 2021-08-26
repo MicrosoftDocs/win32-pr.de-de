@@ -139,7 +139,7 @@
             - name: Referenz zur Ressourcenenumeration
               href: resource-enumeration-reference.md
               items:
-                - name: Ressourcenenumerationen
+                - name: Ressourcenenumerationsenumeration
                   href: resource-enumeration-enumerations.md
                   items:
                     - name: eAvrfResourceTypes
@@ -217,14 +217,14 @@
         - name: Verwenden der Cabinet-API
           href: using-the-cabinet-api.md
           items:
-            - name: Erstellen eines Schränkens
+            - name: Erstellen eines Schränks
               href: creating-a-cabinet.md
             - name: Extrahieren von Dateien aus einem Schränk
               href: extracting-files-from-a-cabinet.md
-        - name: Referenz zur Cabinet-API
+        - name: Referenz zur Cab-API
           href: cabinet-api-reference.md
           items:
-            - name: Funktionen der Cabinet-API
+            - name: Cabinet-API-Funktionen
               href: cabinet-api-functions.md
               items:
                 - name: DeleteExtractedFiles
@@ -235,7 +235,7 @@
                   href: extract.md
                 - name: FCIAddFile
                   href: /windows/desktop/api/Fci/nf-fci-fciaddfile
-                - name: FCIErzeugen
+                - name: FCIErzählen
                   href: /windows/desktop/api/Fci/nf-fci-fcicreate
                 - name: FCIDestroy
                   href: /windows/desktop/api/Fci/nf-fci-fcidestroy
@@ -245,7 +245,7 @@
                   href: /windows/desktop/api/Fci/nf-fci-fciflushfolder
                 - name: FDICopy
                   href: /windows/desktop/api/Fdi/nf-fdi-fdicopy
-                - name: FDIErzeugen
+                - name: FDIErkreate
                   href: /windows/desktop/api/Fdi/nf-fdi-fdicreate
                 - name: FDIDestroy
                   href: /windows/desktop/api/Fdi/nf-fdi-fdidestroy
@@ -255,7 +255,7 @@
                   href: /windows/desktop/api/Fdi/nf-fdi-fditruncatecabinet
                 - name: GetDllVersion
                   href: getdllversion.md
-            - name: Makros der Cabinet-API
+            - name: Cab-API-Makros
               href: cabinet-api-macros.md
               items:
                 - name: FNALLOC
@@ -302,7 +302,7 @@
                   href: /windows/desktop/api/fdi/nf-fdi-fnwrite
                 - name: TCOMPfromLZXWindow
                   href: /windows/desktop/api/fdi_fci_types/nf-fdi_fci_types-tcompfromlzxwindow
-            - name: Strukturen der Cabinet-API
+            - name: Cab-API-Strukturen
               href: cabinet-api-structures.md
               items:
                 - name: CABINETDLLVERSIONINFO
@@ -327,15 +327,15 @@
               href: /previous-versions//bb963829(v=vs.85)
             - name: ProcessTasks
               href: /previous-versions//bb963828(v=vs.85)
-            - name: LSEnumProcessWOW
+            - name: VDMEnumProcessWOW
               href: /windows/desktop/api/VdmDbg/nf-vdmdbg-vdmenumprocesswow
-            - name: LSEnumTaskWOWEx
+            - name: VDMEnumTaskWOWEx
               href: /windows/desktop/api/VdmDbg/nf-vdmdbg-vdmenumtaskwowex
         - name: SymbolServer
           href: /previous-versions//ff797950(v=vs.85)
         - name: SymbolServerCallback
           href: /windows/desktop/api/DbgHelp/nc-dbghelp-psymbolservercallbackproc
-        - name: SymbolServerClose
+        - name: SymbolServerVerknüpfung
           href: /previous-versions//ff797952(v=vs.85)
         - name: SymbolServerGetOptionData
           href: /previous-versions//mt732697(v=vs.85)
@@ -436,25 +436,25 @@
           href: /windows/win32/api/Fhcfg/ne-fhcfg-fh_target_drive_types
         - name: FH_TARGET_PROPERTY_TYPE
           href: /windows/win32/api/Fhcfg/ne-fhcfg-fh_target_property_type
-        - name: HbConfigMgr
+        - name: Automatischer Konfigurations-/Konfigurations-Mgr-Befehl
           href: fhconfigmgr.md
         - name: FhManagew.exe
           href: fhmanagew-exe.md
-        - name: HbesReassociation
+        - name: Verknüpfen von
           href: fhreassociation.md
-        - name: HbServiceClosePipe
+        - name: KsserviceClosePipe
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhserviceclosepipe
-        - name: HbserviceOpenPipe
+        - name: ServicesServiceOpenPipe
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhserviceopenpipe
-        - name: HbServiceReloadConfiguration
+        - name: Automatischer DienstReloadConfiguration
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhservicereloadconfiguration
-        - name: HbServiceBlockBackup
+        - name: ServiceBlockBackup
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhserviceblockbackup
-        - name: HbServiceStartBackup
+        - name: ServicesServiceStartBackup
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhservicestartbackup
-        - name: HbServiceStopBackup
+        - name: ServicesServiceStopBackup
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhservicestopbackup
-        - name: HbServiceUnblockBackup
+        - name: UnkServiceUnblockBackup
           href: /windows/desktop/api/FhSvcCtl/nf-fhsvcctl-fhserviceunblockbackup
         - name: IFhConfigMgr
           href: /windows/desktop/api/Fhcfg/nn-fhcfg-ifhconfigmgr
@@ -599,7 +599,7 @@
           href: pimestylefromattr.md
         - name: RGBFromIMEColorStyle
           href: rgbfromimecolorstyle.md
-    - name: Grafik-Low-Level-Clientunterstützung
+    - name: Grafikunterstützung Low-Level Clientunterstützung
       href: '-dxgkernel-low-level-client-support.md'
       items:
         - name: DCIBeginAccess
@@ -1373,18 +1373,18 @@
       items:
         - name: AddLocalAlternateComputerName
           href: addlocalalternatecomputername.md
-        - name: Hilfsbibliothek
+        - name: Aux Library
           href: aux-library.md
           items:
             - name: AuxKlibInitialize
               href: auxklibinitialize-func.md
             - name: AuxKlibQueryModuleInformation
               href: auxklibquerymoduleinformation-func.md
-            - name: AuxLinbInitialize
+            - name: AuxMerkenbInitialize
               href: /windows/desktop/api/Aux_ulib/nf-aux_ulib-auxulibinitialize
-            - name: AuxLimbIsDLLSynchronization Durchschn.
+            - name: AuxFederbIsDLLSynchronizationHeld
               href: /windows/desktop/api/Aux_ulib/nf-aux_ulib-auxulibisdllsynchronizationheld
-            - name: AuxLimbSetSystemFileCacheSize
+            - name: AuxMetabSetSystemFileCacheSize
               href: /windows/desktop/api/Aux_ulib/nf-aux_ulib-auxulibsetsystemfilecachesize
             - name: AUX_MODULE_BASIC_INFO
               href: aux-module-basic-info-struct.md
@@ -1401,7 +1401,7 @@
               href: resolvedelayloadsfromdll.md
         - name: Erkennen Kernel-Mode Rückrufe
           href: detecting-kernel-mode-callbacks.md
-        - name: DLL-Ladebenachrichtigung
+        - name: DLL-Benachrichtigung zum Laden
           href: dll-load-notification.md
           items:
             - name: LdrDllNotification
@@ -1455,7 +1455,7 @@
               href: rtlextendedintegermultiply.md
             - name: RtlExtendedLargeIntegerDivide
               href: rtlextendedlargeintegerdivide.md
-            - name: RtlRerklärenException
+            - name: RtlRaisException
               href: /windows/desktop/api/RtlSupportApi/nf-rtlsupportapi-rtlraiseexception
         - name: SetThreadStackGuarantee (KernelBase)
           href: /previous-versions//ee388307(v=vs.85)
@@ -1463,7 +1463,7 @@
           href: sndvol32-exe-.md
         - name: uaw_wcslen
           href: /windows/desktop/api/stralign/nf-stralign-uaw_wcslen
-        - name: Skil
+        - name: Sommernl
           href: winternl.md
           items:
             - name: Aufrufen interner APIs

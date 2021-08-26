@@ -1,9 +1,9 @@
 ---
-title: ACN_STOP Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Animations Steuer Elements, dass der zugehörige AVI-Clip beendet wurde. Dieser Benachrichtigungs Code wird in Form einer WM- \_ Befehlsnachricht gesendet.
+title: ACN_STOP Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Animationssteuerelements, dass die Wiedergabe des zugeordneten AVI-Clips beendet wurde. Dieser Benachrichtigungscode wird in Form einer WM \_ COMMAND-Nachricht gesendet.
 ms.assetid: 2f21a2ec-975f-4592-8b21-956bd5311ef4
 keywords:
-- Windows-Steuerelemente für ACN_STOP Benachrichtigungs
+- ACN_STOP Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cbdb27677439b7f08b489cba9024d44f3ebee6d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 96ba1fe51f4ceaae6e145de43a0e1104903c90b2d573c43d7aa7904f1d8f7ae1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922090"
 ---
-# <a name="acn_stop-notification-code"></a>ACN- \_ anstoppbenachrichtigungs Code
+# <a name="acn_stop-notification-code"></a>ACN \_ STOP-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Animations Steuer Elements, dass der zugehörige AVI-Clip beendet wurde. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Befehls**](/windows/desktop/menurc/wm-command) Nachricht gesendet.
+Benachrichtigt das übergeordnete Fenster eines Animationssteuerelements, dass die Wiedergabe des zugeordneten AVI-Clips beendet wurde. Dieser Benachrichtigungscode wird in Form einer [**WM \_ COMMAND-Nachricht**](/windows/desktop/menurc/wm-command) gesendet.
 
 
 ```C++
@@ -42,14 +42,14 @@ ACN_STOP
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Animations Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Animationssteuerelements. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein **HWND** , das das Handle für das Animations Steuerelement angibt.
+Ein **HWND,** der das Handle für das Animationssteuerelement angibt.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Ein **HWND** , das das Handle für das Animations Steuerelement angibt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

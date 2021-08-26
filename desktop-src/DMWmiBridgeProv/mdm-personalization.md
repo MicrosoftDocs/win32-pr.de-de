@@ -1,6 +1,6 @@
 ---
 title: MDM_Personalization-Klasse
-description: Die MDM \_ -Personalisierungs Klasse wird verwendet, um den Sperrbildschirm und die Desktop Hintergrundbilder festzulegen. Durch Festlegen dieser Richtlinien wird auch verhindert, dass der Benutzer das Image ändert.
+description: Die \_ MDM-Personalisierungsklasse wird verwendet, um die Sperrbildschirm- und Desktophintergrundbilder festzulegen. Das Festlegen dieser Richtlinien verhindert auch, dass der Benutzer das Image ändert.
 ms.assetid: 99b60767-b321-4ec6-9802-76221d26c830
 keywords:
 - MDM_Personalization-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f78986422cce15d750e1ae678aef352bbb369bfc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c0039021d8c05599f91513344d4cbee010944e0944f08f0b258294d91e9714f5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967510"
 ---
-# <a name="mdm_personalization-class"></a>MDM- \_ Personalisierungs Klasse
+# <a name="mdm_personalization-class"></a>\_MDM-Personalisierungsklasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM \_ -Personalisierungs Klasse wird verwendet, um den Sperrbildschirm und die Desktop Hintergrundbilder festzulegen. Durch Festlegen dieser Richtlinien wird auch verhindert, dass der Benutzer das Image ändert.
+Die \_ MDM-Personalisierungsklasse wird verwendet, um die Sperrbildschirm- und Desktophintergrundbilder festzulegen. Das Festlegen dieser Richtlinien verhindert auch, dass der Benutzer das Image ändert.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -49,17 +49,17 @@ class MDM_Personalization
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Personalisierungs** Klasse verfügt über diese Typen von Membern:
+Die **\_ MDM-Personalisierungsklasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Personalisierungs** Klasse verfügt über diese Eigenschaften.
+Die **\_ MDM-Personalisierungsklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Desktopimagestatus](/windows/client-management/mdm/personalization-csp#desktopimagestatus)
+[DesktopImageStatus](/windows/client-management/mdm/personalization-csp#desktopimagestatus)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -70,10 +70,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Desktopimageurl](/windows/client-management/mdm/personalization-csp#desktopimageurl)
+[DesktopImageUrl](/windows/client-management/mdm/personalization-csp#desktopimageurl)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -84,18 +84,18 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Lockscreenimagestatus](/windows/client-management/mdm/personalization-csp#lockscreenimagestatus)
+[LockScreenImageStatus](/windows/client-management/mdm/personalization-csp#lockscreenimagestatus)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -106,10 +106,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockscreenimageurl](/windows/client-management/mdm/personalization-csp#lockscreenimageurl)
+[LockScreenImageUrl](/windows/client-management/mdm/personalization-csp#lockscreenimageurl)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -117,16 +117,16 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -137,10 +137,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

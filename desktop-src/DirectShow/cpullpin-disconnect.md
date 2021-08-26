@@ -1,7 +1,7 @@
 ---
-description: Die Disconnect-Methode unterbricht die Verbindung mit der Ausgabepin.
+description: Die Disconnect-Methode unterbricht die Verbindung mit dem Ausgabepin.
 ms.assetid: 6e362e32-7b74-4392-b46f-1ab47a30a07b
-title: Cpullpin. Disconnect-Methode (pullpin. h)
+title: CPullPin.Disconnect-Methode (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ec13a7f29a06bab4f79ddb58932796f8363adadc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0491bfba7e5b739a2b46674cc2f6506017810d4f1e51693d4478720c67a4a4da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120055070"
 ---
-# <a name="cpullpindisconnect-method"></a>Cpullpin. Disconnect-Methode
+# <a name="cpullpindisconnect-method"></a>CPullPin.Disconnect-Methode
 
-Die- `Disconnect` Methode unterbricht die Verbindung mit der Ausgabepin.
+Die `Disconnect` -Methode unterbricht die Verbindung mit dem Ausgabepin.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode unterbricht jede in der [**cpullpin:: Connect**](cpullpin-connect.md) -Methode hergestellte Verbindung. Nennen Sie diese Methode in Ihrer [**IPin::D isconnect**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect) -Methode. (Wenn Ihre PIN von [**cbasepin**](cbasepin.md)abgeleitet ist, überschreiben Sie [**cbasepin:: breakconnect**](cbasepin-breakconnect.md) , um diese Methode aufzurufen.)
+Diese Methode unterbricht alle Verbindungen, die in der [**CPullPin::Verbinden-Methode**](cpullpin-connect.md) hergestellt wurden. Rufen Sie diese Methode in Ihrer [**IPin::D isconnect-Methode**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect) auf. (Wenn Ihre Stecknadel von [**CBasePin**](cbasepin.md)abgeleitet ist, überschreiben Sie [**CBasePin::BreakConnect,**](cbasepin-breakconnect.md) um diese Methode aufzurufen.)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode unterbricht jede in der [**cpullpin:: Connect**](cpullpin-connect.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h</dt> </dl>                                                                                                       |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h</dt> </dl>                                                                                                       |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode unterbricht jede in der [**cpullpin:: Connect**](cpullpin-connect.
 
 <dl> <dt>
 
-[**Cpullpin-Klasse**](cpullpin.md)
+[**CPullPin-Klasse**](cpullpin.md)
 </dt> </dl>
 
  

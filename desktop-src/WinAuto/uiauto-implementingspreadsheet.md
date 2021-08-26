@@ -1,43 +1,43 @@
 ---
-title: Tabellen Steuerungs Muster
-description: Beschreibt Richtlinien und Konventionen für das Implementieren von ispreadsheetprovider, einschließlich Informationen zu-Methoden.
+title: Tabellenkalkulations-Steuerelementmuster
+description: Beschreibt Richtlinien und Konventionen für die Implementierung von ISpreadsheetProvider, einschließlich Informationen zu Methoden.
 ms.assetid: 4004D867-8367-486A-96ED-DE5B41D24935
 keywords:
-- Benutzeroberflächen Automatisierung, Implementieren eines Tabellen Steuerungs Musters
-- Benutzeroberflächenautomatisierungs-, Tabellen Steuerungs Muster
-- UI-Automatisierung, ispreadsheetprovider
+- Benutzeroberflächenautomatisierung,Implementieren des Tabellenkalkulations-Steuerelementmusters
+- Benutzeroberflächenautomatisierung, Tabellenkalkulations-Steuerelementmuster
+- Benutzeroberflächenautomatisierung,ISpreadsheetProvider
 - ISpreadsheetProvider
-- Implementieren des Steuerelement Musters der Benutzeroberflächen Automatisierung
-- Tabellen Steuerungs Muster
-- Steuerelement Muster, ispreadsheetprovider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-Tabelle
-- Steuerelement Muster, Tabelle
-- Schnittstellen, ispreadsheetprovider
+- Implementieren Benutzeroberflächenautomatisierung Tabellenkalkulations-Steuerelementmusters
+- Tabellenkalkulations-Steuerelementmuster
+- Steuerelementmuster,ISpreadsheetProvider
+- Steuerelementmuster,Implementieren Benutzeroberflächenautomatisierung Arbeitsblatts
+- Steuerelementmuster, Tabellenkalkulation
+- interfaces,ISpreadsheetProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4be34174745ccf91435db92665b98eb387f7241a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: d7991937f1530e28ed85227fbe19be13b628f9722d5609367e2f483c86a2bb70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098280"
 ---
-# <a name="spreadsheet-control-pattern"></a>Tabellen Steuerungs Muster
+# <a name="spreadsheet-control-pattern"></a>Tabellenkalkulations-Steuerelementmuster
 
-Beschreibt Richtlinien und Konventionen für das Implementieren von [**ispreadsheetprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider), einschließlich Informationen zu-Methoden. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet. Das **Tabellen** Steuerungs Muster wird verwendet, um den Inhalt einer Kalkulations Tabelle oder eines anderen Raster basierten Dokuments verfügbar zu machen.
+Beschreibt Richtlinien und Konventionen für die Implementierung von [**ISpreadsheetProvider,**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider)einschließlich Informationen zu Methoden. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet. Das  Tabellenkalkulations-Steuerelementmuster wird verwendet, um den Inhalt eines Arbeitsblatts oder eines anderen rasterbasierten Dokuments verfügbar zu machen.
 
-Das **Tabellen** Steuerelement-Muster ist eng mit dem [Raster](uiauto-implementinggrid.md) Steuerelement Muster verknüpft. Steuerelemente, die das **Tabellen** Steuerelement-Muster implementieren, sollten auch das Raster-Steuerelement Muster implementieren. Steuerelemente können ggf. auch das [Table](uiauto-implementingtable.md) -Steuerelement Muster implementieren. Beispiele für Steuerelemente, die diese Steuerelement Muster implementieren, finden Sie [unter Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md).
+Das  Tabellenkalkulations-Steuerelementmuster ist eng mit dem [Grid-Steuerelementmuster](uiauto-implementinggrid.md) verknüpft. -Steuerelemente,  die das Tabellenkalkulations-Steuerelementmuster implementieren, sollten auch das Grid-Steuerelementmuster implementieren. Steuerelemente können ggf. auch das [Tabellensteuerelementmuster](uiauto-implementingtable.md) implementieren. Beispiele für Steuerelemente, die diese Steuerelementmuster implementieren, finden Sie unter [Steuerelementtypen und deren unterstützte Steuerelementmuster.](uiauto-controlpatternmapping.md)
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Beachten Sie beim Implementieren des **Tabellen** Steuerelement-Musters die folgenden Richtlinien und Konventionen:
+Beachten Sie  beim Implementieren des Tabellenkalkulations-Steuerelementmusters die folgenden Richtlinien und Konventionen:
 
--   Wenn eine Kalkulations Tabelle die Schnittstelle [**ispreadsheetprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider) implementiert, muss die Zelle die [**ispreadsheetitemprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetitemprovider) -Schnittstelle implementieren.
--   Die [**ispreadsheetprovider:: GetItemByName**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-ispreadsheetprovider-getitembyname) -Methode soll die gleiche Art von Navigation bereitstellen, die eine Anwendung möglicherweise mit einer Funktion **zum Springen zur Bezeichnung** bereitstellt. Bei vielen Tabellen Kalkulations Programmen können bestimmte Zellen einen anzeigen Amen oder eine Bezeichnung erhalten. **GetItemByName** ermöglicht es dem Client, eine Zelle auf der Grundlage des anzeigen Amens zu suchen. Diese Methode sollte keine Zellen abrufen, die den Namenstext enthalten, da die Ergebnisse sehr mehrdeutig sein können. Wenn das Tabellen Kalkulations Programm zulässt, dass mehrere Zellen in derselben Tabelle denselben anzeigen Amen oder eine gleiche Bezeichnung aufweisen, ist das Verhalten der Microsoft-Benutzeroberflächen Automatisierung nicht definiert.
+-   Wenn ein Arbeitsblatt die [**ISpreadsheetProvider-Schnittstelle**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider) implementiert, müssen die Zellen die [**ISpreadsheetItemProvider-Schnittstelle**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetitemprovider) implementieren.
+-   Die [**ISpreadsheetProvider::GetItemByName-Methode**](/windows/desktop/api/uiautomationcore/nf-uiautomationcore-ispreadsheetprovider-getitembyname) soll die gleiche Art von Navigation bereitstellen, die eine Anwendung möglicherweise mit einem **Jump-to-Label-Feature** bereitstellt. In vielen Tabellenkalkulationsprogrammen können bestimmte Zellen einen Anzeigenamen oder eine Bezeichnung erhalten. **GetItemByName** ermöglicht dem Client, basierend auf seinem Anzeigenamen eine Zelle zu suchen. Diese Methode sollte keine Zellen abrufen, die den Namenstext enthalten, da die Ergebnisse sehr mehrdeutig sein können. Wenn das Arbeitsblattprogramm mehreren Zellen in einem Arbeitsblatt den gleichen Anzeigenamen oder die gleiche Bezeichnung zulässt, ist das Verhalten von Microsoft Benutzeroberflächenautomatisierung nicht definiert.
 
-## <a name="required-members-for-ispreadsheetprovider"></a>Erforderliche Member für **ispreadsheetprovider**
+## <a name="required-members-for-ispreadsheetprovider"></a>Erforderliche Member für **ISpreadsheetProvider**
 
-Die folgende Methode ist für die Implementierung der [**ispreadsheetprovider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider) -Schnittstelle erforderlich.
+Die folgende Methode ist für die Implementierung der [**ISpreadsheetProvider-Schnittstelle**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-ispreadsheetprovider) erforderlich.
 
 
 
@@ -47,7 +47,7 @@ Die folgende Methode ist für die Implementierung der [**ispreadsheetprovider**]
 
 
 
- 
+ 
 
 Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
@@ -55,7 +55,7 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
 <dl> <dt>
 
-[Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md)
+[Steuerelementtypen und deren unterstützte Steuerelementmuster](uiauto-controlpatternmapping.md)
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
@@ -64,6 +64,6 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

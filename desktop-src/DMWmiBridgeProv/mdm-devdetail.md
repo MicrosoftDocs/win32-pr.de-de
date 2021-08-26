@@ -1,6 +1,6 @@
 ---
 title: MDM_DevDetail-Klasse
-description: Die MDM \_ DevDetail-Klasse behandelt das-Verwaltungs Objekt, das gerätespezifische Parameter für den OMA DM-Server bereitstellt.
+description: Die MDM \_ DevDetail-Klasse verarbeitet das Verwaltungsobjekt, das gerätespezifische Parameter für den OMA DM-Server bietet.
 ms.assetid: 1a709051-656a-4900-b354-efbd208b46fc
 keywords:
 - MDM_DevDetail-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 751c4e147dd0b60398ed16eeb3eb60a8a768307f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8cfed95a5ecb40408e45c3697be181270ee0deb16e54fac9aea4b45aa96faa4d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053590"
 ---
 # <a name="mdm_devdetail-class"></a>MDM \_ DevDetail-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ DevDetail** -Klasse behandelt das-Verwaltungs Objekt, das gerätespezifische Parameter für den OMA DM-Server bereitstellt. Diese Geräteparameter werden nicht automatisch vom Client an den Server gesendet, Sie können jedoch mithilfe von OMA DM-Befehlen von Servern abgefragt werden.
+Die **MDM \_ DevDetail-Klasse** verarbeitet das Verwaltungsobjekt, das gerätespezifische Parameter für den OMA DM-Server bietet. Diese Geräteparameter werden nicht automatisch vom Client an den Server gesendet, können aber von Servern mithilfe von OMA DM-Befehlen abgefragt werden.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -51,20 +51,20 @@ class MDM_DevDetail
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ DevDetail** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ DevDetail-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ DevDetail** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ DevDetail-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Devyp](/windows/client-management/mdm/devdetail-csp#devtyp)
+[DevTyp](/windows/client-management/mdm/devdetail-csp#devtyp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,10 +72,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[F-](/windows/client-management/mdm/devdetail-csp#fwv)
+[FwV](/windows/client-management/mdm/devdetail-csp#fwv)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -83,10 +83,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[HWV](/windows/client-management/mdm/devdetail-csp#hwv)
+[Hwv](/windows/client-management/mdm/devdetail-csp#hwv)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -97,7 +97,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -106,14 +106,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse lautet die Zeichenfolge "DevDetail".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "DevDetail".
 
 </dd> <dt>
 
-[Lrgobj](/windows/client-management/mdm/devdetail-csp#lrgobj)
+[LrgObj](/windows/client-management/mdm/devdetail-csp#lrgobj)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -124,7 +124,7 @@ Zugriffstyp: Lesen/Schreiben
 [OEM](/windows/client-management/mdm/devdetail-csp#oem)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -132,10 +132,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -148,10 +148,10 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten.
 
 </dd> <dt>
 
-[Austauschen](/windows/client-management/mdm/devdetail-csp#swv)
+[Swv](/windows/client-management/mdm/devdetail-csp#swv)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -165,10 +165,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -177,7 +177,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

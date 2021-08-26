@@ -1,7 +1,7 @@
 ---
-description: 'Die SplitAt2-Methode teilt das Objekt zum angegebenen Zeitpunkt. Diese Methode entspricht iamtimelinesplitting:: splitat, aber nimmt einen reftime-Wert an.'
+description: Die SplitAt2-Methode teilt das Objekt zum angegebenen Zeitpunkt auf. Diese Methode entspricht IAMTimelineSplittable::SplitAt, verwendet jedoch einen REFTIME-Wert.
 ms.assetid: 33d240db-4ef8-455a-81a6-633ee12837c2
-title: 'Iamtimelinesplicustom:: SplitAt2-Methode (qedit. h)'
+title: IAMTimelineSplittable::SplitAt2-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: c0f941469983f2eaebf0363797fb54a81388bc51
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a9c3a5720ade42291037611c155c2cb9e834f0734e7af6e2c36277c409592143
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904910"
 ---
-# <a name="iamtimelinesplittablesplitat2-method"></a>Iamtimelinesplicustom:: SplitAt2-Methode
+# <a name="iamtimelinesplittablesplitat2-method"></a>IAMTimelineSplittable::SplitAt2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `SplitAt2` Methode teilt das Objekt zum angegebenen Zeitpunkt. Diese Methode entspricht [**iamtimelinesplitting:: splitat**](iamtimelinesplittable-splitat.md), aber nimmt einen [**reftime**](reftime.md) -Wert an.
+Die `SplitAt2` -Methode teilt das -Objekt zum angegebenen Zeitpunkt auf. Diese Methode entspricht [**IAMTimelineSplittable::SplitAt,**](iamtimelinesplittable-splitat.md)verwendet jedoch einen [**REFTIME-Wert.**](reftime.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,36 +48,36 @@ HRESULT SplitAt2(
 *Time* 
 </dt> <dd>
 
-Der Zeitpunkt, an dem das Objekt in Relation zum Anfang der Zeitachse geteilt werden soll (in Sekunden).
+Zeit, zu der das Objekt relativ zum Anfang der Zeitachse in Sekunden aufgeteilt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
+Gibt einen **HRESULT-Wert** zurück. Folgende Werte sind möglich:
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>       | Nichts zu teilen.<br/>                       |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>       | Nichts aufzuteilen.<br/>                       |
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Das Objekt ist zu diesem Zeitpunkt nicht vorhanden.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Das -Objekt ist zu diesem Zeitpunkt nicht vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -87,8 +87,8 @@ Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -96,10 +96,10 @@ Gibt einen **HRESULT** -Wert zurück. Folgende Werte sind möglich:
 
 <dl> <dt>
 
-[**Iamtimelinesplicustom-Schnittstelle**](iamtimelinesplittable.md)
+[**IAMTimelineSplittable-Schnittstelle**](iamtimelinesplittable.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

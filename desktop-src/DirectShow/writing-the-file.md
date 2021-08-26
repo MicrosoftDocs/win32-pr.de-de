@@ -4,25 +4,25 @@ ms.assetid: d3dbe6ab-810c-4798-a769-c3f00c52a93a
 title: Schreiben der Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bda23b144956ab5afca9dd733b29a6f9d639cddf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2cabb5575f371c6525e58cc8ede7d05c2701acc31be325af46e3b00e6e2d8d20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051399"
 ---
 # <a name="writing-the-file"></a>Schreiben der Datei
 
-Um die Datei zu schreiben, führen Sie einfach das Filter Diagramm aus, indem Sie die [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run) -Methode aufrufen. Warten Sie, bis die Wiedergabe vollständig ist, und beenden Sie das Diagramm explizit durch Aufrufen von [**IMediaControl:: beenden**](/windows/desktop/api/Control/nf-control-imediacontrol-stop); Andernfalls wird die Datei nicht ordnungsgemäß geschrieben.
+Um die Datei zu schreiben, führen Sie einfach das Filterdiagramm aus, indem Sie die [**IMediaControl::Run-Methode**](/windows/desktop/api/Control/nf-control-imediacontrol-run) aufrufen. Warten Sie, bis die Wiedergabe abgeschlossen ist, und beenden Sie den Graphen explizit, indem [**Sie IMediaControl::Stop aufrufen.**](/windows/desktop/api/Control/nf-control-imediacontrol-stop) Andernfalls wird die Datei nicht ordnungsgemäß geschrieben.
 
-Um den Fortschritt des Datei Schreibvorgangs anzuzeigen, Fragen Sie den MUX-Filter nach der [**imediaseeking**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) -Schnittstelle ab. Rufen Sie die [**imediaseeking:: getduration**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration) -Methode auf, um die Dauer der Datei abzurufen. Wenn das Diagramm ausgeführt wird, rufen Sie die [**imediaseeking:: GetCurrentPosition**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcurrentposition) -Methode regelmäßig auf, um die aktuelle Position des Diagramms im Stream abzurufen. Die aktuelle Position dividiert durch die Dauer gibt den Prozentsatz an.
+Um den Fortschritt des Dateischreibens anzuzeigen, fragen Sie den Mux-Filter für die [**IMediaSeeking-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediaseeking) ab. Rufen Sie [**die IMediaSeeking::GetDuration-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getduration) auf, um die Dauer der Datei abzurufen. Rufen Sie während der Ausführung des Graphen regelmäßig die [**IMediaSeeking::GetCurrentPosition-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getcurrentposition) auf, um die aktuelle Position des Graphen im Stream abzurufen. Die aktuelle Position dividiert durch die Dauer gibt den prozentsatz abgeschlossenen Prozentsatz an.
 
 > [!Note]  
-> Eine Anwendung fragt in der Regel den Filter Graph-Manager nach **imediaseeking** ab, aber das Schreiben von Dateien stellt eine Ausnahme von dieser Regel dar. Der Filter Graph-Manager berechnet die aktuelle Position von der Startposition und die Ausführungsdauer des Diagramms, was für die Wiedergabe von Dateien, jedoch nicht für das Schreiben von Dateien, korrekt ist. Um ein genaues Ergebnis zu erhalten, sollten Sie daher die Position aus dem MUX-Filter abrufen.
+> Eine Anwendung fragt in der Regel den Filter Graph Manager für **IMediaSeeking** ab, aber das Schreiben von Dateien ist eine Ausnahme von dieser Regel. Der Filter Graph Manager berechnet die aktuelle Position von der Anfangsposition und die Ausführung des Graphen, was für die Dateiwiedergabe, aber nicht für das Schreiben von Dateien korrekt ist. Um ein genaues Ergebnis zu erhalten, sollten Sie daher die Position aus dem MUX-Filter abrufen.
 
  
 
-Der folgende Code Ruft die Dauer der Datei ab, startet einen Timer, um die Benutzeroberfläche der Anwendung zu aktualisieren, und führt das Filter Diagramm aus. (Die Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit ausgelassen.)
+Der folgende Code ruft die Dauer der Datei ab, startet einen Timer zum Aktualisieren der Anwendungsbenutzeroberfläche und führt das Filterdiagramm aus. (Die Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit ausgelassen.)
 
 
 ```C++
@@ -53,7 +53,7 @@ pControl->Run();
 
 
 
-Wenn die Anwendung ein Timer-Ereignis empfängt, kann Sie die Benutzeroberfläche mit der aktuellen Position aktualisieren:
+Wenn die Anwendung ein Timerereignis empfängt, kann sie die Benutzeroberfläche mit der aktuellen Position aktualisieren:
 
 
 ```C++
@@ -70,7 +70,7 @@ void OnTimer(HWND hDlg, IMediaSeeking *pSeek)
 
 
 
-Wenn die Anwendung ein DirectShow-Abschluss Ereignis empfängt, sollte Sie das Diagramm beenden, wie im folgenden Code gezeigt:
+Wenn die Anwendung ein DirectShow-Abschlussereignis empfängt, sollte sie das Diagramm beenden, wie im folgenden Code gezeigt:
 
 
 ```C++

@@ -1,6 +1,6 @@
 ---
 title: Texture2DMS
-description: Texture2DMS Type (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen.
+description: Texture2DMS-Typ (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen.
 ms.assetid: afda7324-680e-432a-a445-d90bd708e5e0
 keywords:
 - Texture2DMS HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c16c69a4fa0fd35ce7b12d69f880daa4b8345d02
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: c62c156470046aee4312a0e6dab82eca9aeb5c82b4536138ecd5afe838995cf2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067540"
 ---
 # <a name="texture2dms"></a>Texture2DMS
 
-Texture2DMS Type (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen.
+Texture2DMS-Typ (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariablen.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -31,34 +31,34 @@ Texture2DMS Type (wie er in Shader Model 4 vorhanden ist) plus Ressourcenvariabl
 | Thema                                                                                    | BESCHREIBUNG                                                                                 |
 |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | [**GetDimensions**](sm5-object-texture2dms-getdimensions.md)<br/>                 | Gibt die Dimensionen der Ressource zurück.<br/>                                          |
-| [**Getsampleposition**](sm5-object-texture2dms-getsampleposition.md)<br/>         | Gibt die Beispiel Position für den bereitgestellten Beispiel Index zurück.<br/>                       |
-| [**Lade Methoden**](texture2dms-load.md)<br/>                                      | Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab.<br/>   |
-| [**Blutprobe. KOM\[\]\[\]**](sm5-object-texture2dms-sampleoperatorindex.md)<br/> | Ruft einen Wert aus der Ressource an dem Speicherort und dem angegebenen Beispiel Index ab.<br/>   |
-| [**KOM\[\]**](sm5-object-texture2dms-operator1.md)<br/>                      | Ruft einen Wert aus der Ressource an dem Speicherort ab, der im Beispiel Index 0 angegeben ist. <br/> |
+| [**GetSamplePosition**](sm5-object-texture2dms-getsampleposition.md)<br/>         | Gibt die Beispielposition für den bereitgestellten Beispielindex zurück.<br/>                       |
+| [**Laden von Methoden**](texture2dms-load.md)<br/>                                      | Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab.<br/>   |
+| [**Beispiel. Operator\[\]\[\]**](sm5-object-texture2dms-sampleoperatorindex.md)<br/> | Ruft einen Wert aus der Ressource am angegebenen Speicherort und Beispielindex ab.<br/>   |
+| [**Operator\[\]**](sm5-object-texture2dms-operator1.md)<br/>                      | Ruft einen Wert aus der Ressource an dem am Beispielindex 0 angegebenen Speicherort ab. <br/> |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Dieses Objekt wird in den folgenden shadermodellen unterstützt.
+Dieses Objekt wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell              | Unterstützt |
 |---------------------------|-----------|
-| Shadermodell 4 und höher | ja       |
+| Shadermodell 4 und höher | Ja       |
 
 
 
  
 
-Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
+Dieses Objekt wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -66,11 +66,11 @@ Dieses Objekt wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Shader Model 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
+[ShaderModell 5-Objekte](d3d11-graphics-reference-sm5-objects.md)
 </dt> </dl>
 
  

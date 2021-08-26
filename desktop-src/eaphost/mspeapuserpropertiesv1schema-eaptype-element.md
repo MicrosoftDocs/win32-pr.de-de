@@ -1,9 +1,9 @@
 ---
-title: Eaptype-Element (mspeapuserpropertiesv1schema)
-description: Dieses Element ist ein abgeleiteter Typ des eaptype-Elements aus dem baseeapuserpropertiesv1-Schema. Für mspeapuserpropertiesv1schema.
+title: EapType-Element (mspeapuserpropertiesv1schema)
+description: Dieses Element ist ein abgeleiteter Typ des EapType-Elements aus dem Baseeapuserpropertiesv1-Schema. Für mspeapuserpropertiesv1schema.
 ms.assetid: 921c1f95-900a-4fd2-bb42-341e5ba39b23
 keywords:
-- Eaptype-Element EAPHost
+- EapType-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ccedc72baf3a677acc3a318895defbc97bb26287
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: e27923d77a36b917b3356b7c5c79d408bc0a99d49d70967677b56a9047ed0b63
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106368280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067180"
 ---
-# <a name="eaptype-element-mspeapuserpropertiesv1schema"></a>Eaptype-Element (mspeapuserpropertiesv1schema)
+# <a name="eaptype-element-mspeapuserpropertiesv1schema"></a>EapType-Element (mspeapuserpropertiesv1schema)
 
-Das **eaptype** -Element ist ein abgeleiteter Typ des [**eaptype**](baseeapuserpropertiesv1schema-eaptype-element.md) -Elements aus dem [baseeapuserpropertiesv1](baseeapuserpropertiesv1schema-schema.md) -Schema.
+Das **EapType-Element** ist ein abgeleiteter Typ des [**EapType-Elements**](baseeapuserpropertiesv1schema-eaptype-element.md) aus dem [Baseeapuserpropertiesv1-Schema.](baseeapuserpropertiesv1schema-schema.md)
 
 ``` syntax
 <xs:element name="EapType
@@ -58,8 +58,8 @@ Das **eaptype** -Element ist ein abgeleiteter Typ des [**eaptype**](baseeapuserp
 
 | Element                                                                               | type                                                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                        |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**EAP**](baseeapuserpropertiesv1schema-eap-element.md)                              |                                                                                           | Das [**EAP**](baseeapuserpropertiesv1schema-eap-element.md) -Element identifiziert die innere Methode und die Anmelde Informationen, die mit dieser Methode verwendet werden sollen. Wenn die Peer-Konfiguration für den Zugriff auf den Peer-Gast Zugriff konfiguriert ist, ist dieses Element nicht vorhanden.<br/>                                  |
-| [**"Peer Erweiterungen"**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) | [**Peer-extensionstype**](mspeapuserpropertiesv1schema-peapextensionstype-complextype.md) | Das Element " [**Peer-Erweiterungen**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) " ermöglicht zukünftige Erweiterungen des Schemas. <br/> Das Element " [**Peer-Extensions**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) " ist optional.<br/> |
+| [**Eap**](baseeapuserpropertiesv1schema-eap-element.md)                              |                                                                                           | Das [**Eap-Element**](baseeapuserpropertiesv1schema-eap-element.md) identifiziert die innere Methode und die Anmeldeinformationen, die mit dieser Methode verwendet werden sollen. Wenn die PEAP-Konfiguration für den PEAP-Gastzugriff konfiguriert ist, fehlt dieses Element.<br/>                                  |
+| [**PeapExtensions**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) | [**PeapExtensionsType**](mspeapuserpropertiesv1schema-peapextensionstype-complextype.md) | Das [**PeapExtensions-Element**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) ermöglicht zukünftige Erweiterungen des Schemas. <br/> Das [**PeapExtensions-Element**](mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md) ist optional.<br/> |
 
 
 
@@ -69,8 +69,8 @@ Das **eaptype** -Element ist ein abgeleiteter Typ des [**eaptype**](baseeapuserp
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -78,7 +78,7 @@ Das **eaptype** -Element ist ein abgeleiteter Typ des [**eaptype**](baseeapuserp
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mspeapuserpropertiesv1-Schema](mspeapuserpropertiesv1schema-schema.md)

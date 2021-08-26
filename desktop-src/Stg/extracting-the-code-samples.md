@@ -1,21 +1,21 @@
 ---
-title: Extrahieren der Code Beispiele
-description: Obwohl die Codebeispiele in eine Reihe von Tutorial-Lektionen aufgeteilt sind, können die entsprechenden Beispiel Gruppierungen problemlos aus der Auflistung extrahiert werden.
+title: Extrahieren der Codebeispiele
+description: Obwohl die Codebeispiele in eine Reihe von Tutorial-Lektionen unterteilt sind, können die entsprechenden Beispielgruppierungen problemlos aus der Sammlung extrahiert werden.
 ms.assetid: f8e20e40-cfef-4844-8b28-5a11fdcd691a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a593cf36b2fa235813c291eb35307153b28a2aa4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 67093f4cfbbfab2a3c1681462627f02b504124ed15d1483b9f9d91ec5551d0e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034950"
 ---
-# <a name="extracting-the-code-samples"></a>Extrahieren der Code Beispiele
+# <a name="extracting-the-code-samples"></a>Extrahieren der Codebeispiele
 
-Obwohl die Codebeispiele in eine Reihe von Tutorial-Lektionen aufgeteilt sind, können die entsprechenden Beispiel Gruppierungen problemlos aus der Auflistung extrahiert werden. Die meisten der einzelnen Beispiel Verzeichnisse sind so konzipiert, dass Sie in Verbindung mit mindestens einem anderen Beispiel Verzeichnis funktionieren. Die Komponenten bezogenen Beispiele bestehen aus einem Client-und einem Server Paar, wobei der Server die Verwendung des Register Sample Utility erfordert. Im folgenden finden Sie eine Zusammenfassung der Beispiel Gruppierungen und die Vorgehensweise zum Extrahieren der einzelnen Gruppen als Erstell Bare Einheit. Kopieren Sie für jede Beispiel Gruppierung den Inhalt der angezeigten Verzeichnisse. Das \[ angezeigte übergeordnete Ziel \] Verzeichnis erfordert keinen Inhalt aus der Samples-Verzweigung. In den Menüs "Hilfe" in den laufenden Beispielen wird jedoch davon ausgegangen, dass das entsprechende Lernprogramm ausgeführt wird. HTM-Hilfedateien befinden sich in diesem übergeordneten \[ Ziel \] Verzeichnis.
+Obwohl die Codebeispiele in eine Reihe von Tutorial-Lektionen unterteilt sind, können die entsprechenden Beispielgruppierungen problemlos aus der Sammlung extrahiert werden. Die meisten der einzelnen Beispielverzeichnisse sind für die Zusammenarbeit mit mindestens einem anderen Beispielverzeichnis vorgesehen. Die komponentenbezogenen Beispiele bestehen aus einem Client- und einem Serverpaar, wobei der Server die Verwendung des REGISTER-Beispielhilfsprogramms erfordert. Hier finden Sie eine Zusammenfassung der Beispielgruppierungen und wie jede Gruppe als bearbeitbare Einheit extrahiert wird. Kopieren Sie für jede Beispielgruppierung den Inhalt der angezeigten Verzeichnisse. Das \[ angezeigte übergeordnete \] Zielverzeichnis erfordert keinen Inhalt aus dem Branch samples. Bei den Hilfemenüs in den ausgeführten Beispielen wird jedoch davon ausgegangen, dass sich das entsprechende Tutorial .HTM Hilfedateien in diesem übergeordneten \[ \] Zielverzeichnis befindet.
 
-Für die Win32-Anwendung "Read tut":
+Für die Win32 READTUT-Anwendung:
 
 ``` syntax
 [destination]
@@ -25,7 +25,7 @@ Für die Win32-Anwendung "Read tut":
     READTUT
 ```
 
-Für die Win32-exe-Skeleton-Anwendung:
+Für die Win32 EXE-Skeleton-Anwendung:
 
 ``` syntax
 [destination]
@@ -35,7 +35,7 @@ Für die Win32-exe-Skeleton-Anwendung:
     EXESKEL
 ```
 
-Für das Win32-DLL-Skelett:
+Für das Win32-DLL-Gerüst:
 
 ``` syntax
 [destination]
@@ -46,7 +46,7 @@ Für das Win32-DLL-Skelett:
     DLLUSER
 ```
 
-Für die grundlegenden com-Objekt Beispiele:
+Für die grundlegenden COM-Objektbeispiele:
 
 ``` syntax
 [destination]
@@ -57,7 +57,7 @@ Für die grundlegenden com-Objekt Beispiele:
     COMUSER
 ```
 
-Für die grundlegenden Client/Server-Beispiele für die Prozess interne dll-Komponente:
+Für die grundlegenden In-Process-DLL-Komponentenclient-/Serverbeispiele:
 
 ``` syntax
 [destination]
@@ -93,7 +93,7 @@ Für die standardmäßigen Marshallingbeispiele:
     MARSHAL2
 ```
 
-Für die Beispiele für den lokalen Client/Server außerhalb des Prozesses:
+Für die Out-of-Process-Beispiele für lokale Clients/Server:
 
 ``` syntax
 [destination]
@@ -106,7 +106,7 @@ Für die Beispiele für den lokalen Client/Server außerhalb des Prozesses:
     LOCCLIEN
 ```
 
-Für die Apartment Model-Client/Server-Beispiele:
+Für die Apartmentmodell-Client-/Serverbeispiele:
 
 ``` syntax
 [destination]
@@ -119,7 +119,7 @@ Für die Apartment Model-Client/Server-Beispiele:
     APTCLIEN
 ```
 
-Für die DCOM-Client/Server-Beispiele (verteiltes com):
+Für die DCOM-Client-/Serverbeispiele (Distributed COM):
 
 ``` syntax
 [destination]
@@ -132,7 +132,7 @@ Für die DCOM-Client/Server-Beispiele (verteiltes com):
     REMCLIEN
 ```
 
-Die Beispiele für die kostenlose Threading Client/Server:
+Für die Kostenlosen Threading-Client-/Serverbeispiele:
 
 ``` syntax
 [destination]
@@ -144,7 +144,7 @@ Die Beispiele für die kostenlose Threading Client/Server:
     FRECLIEN
 ```
 
-Für die Verbindungs fähigen COM-Objekt Client/Server-Beispiele:
+Für die Client-/Serverbeispiele für ein verbindungsfähiges COM-Objekt:
 
 ``` syntax
 [destination]
@@ -156,7 +156,7 @@ Für die Verbindungs fähigen COM-Objekt Client/Server-Beispiele:
     CONCLIEN
 ```
 
-Für die strukturierten Speicher Client/Server-Beispiele:
+Für die Strukturierte Speicherclient-/Serverbeispiele:
 
 ``` syntax
 [destination]
@@ -168,7 +168,7 @@ Für die strukturierten Speicher Client/Server-Beispiele:
     STOCLIEN
 ```
 
-Für die persistenten Objekt Client/Server-Beispiele:
+Für die Client-/Serverbeispiele für persistente Objekte:
 
 ``` syntax
 [destination]
@@ -182,7 +182,7 @@ Für die persistenten Objekt Client/Server-Beispiele:
     PERCLIEN
 ```
 
-Für die DCOM-Sicherheits Client/Server-Beispiele:
+Für die DCOM-Sicherheitsclient-/Serverbeispiele:
 
 ``` syntax
 [destination]
@@ -195,9 +195,9 @@ Für die DCOM-Sicherheits Client/Server-Beispiele:
     DCOMDRAW
 ```
 
- 
+ 
 
- 
+ 
 
 
 

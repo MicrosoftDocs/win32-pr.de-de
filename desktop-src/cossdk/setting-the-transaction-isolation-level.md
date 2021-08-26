@@ -1,32 +1,32 @@
 ---
-description: Mithilfe des Verwaltungs Programms Komponenten Dienste können Sie die Transaktions Isolationsstufe von Komponenten manuell festlegen, oder Sie können die Transaktions Isolationsstufe für eine Komponente mithilfe der com+-Verwaltungs Schnittstellen Programm gesteuert konfigurieren.
+description: Sie können die Transaktionsisolationsstufe von Komponenten manuell festlegen, indem Sie das Verwaltungstool Komponentendienste verwenden, oder Sie können die Transaktionsisolationsstufe für eine Komponente programmgesteuert konfigurieren, indem Sie die COM+-Verwaltungsschnittstellen verwenden.
 ms.assetid: 3ef5b805-334d-4803-be67-00c9e35cdcc6
 title: Festlegen der Transaktionsisolationsstufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08b0447af2591c4f4b3e8e76c017157c02908367
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 96af7017f8a46f11428bfacf7282a7d4ae61b4dc3c1fd5bb7e82588f8fff6110
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120029460"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Festlegen der Transaktionsisolationsstufe
 
-Mithilfe des Verwaltungs Programms Komponenten Dienste können Sie die Transaktions Isolationsstufe von Komponenten manuell festlegen, oder Sie können die Transaktions Isolationsstufe für eine Komponente mithilfe der [com+-Verwaltungs Schnittstellen](com--administration-interfaces.md)Programm gesteuert konfigurieren.
+Sie können die Transaktionsisolationsstufe von Komponenten manuell festlegen, indem Sie das Verwaltungstool komponentendienste verwenden, oder Sie können die Transaktionsisolationsstufe für eine Komponente programmgesteuert konfigurieren, indem Sie die [COM+-Verwaltungsschnittstellen verwenden.](com--administration-interfaces.md)
 
-Weitere Informationen zu Transaktions Isolations Stufen finden Sie unter [Konfigurieren von Transaktions Isolations Stufen](configuring-transaction-isolation-levels.md).
+Weitere Informationen zu Transaktionsisolationsstufen finden Sie unter [Konfigurieren von Transaktionsisolationsstufen.](configuring-transaction-isolation-levels.md)
 
-**So legen Sie die Transaktions Isolationsstufe mithilfe des Verwaltungs Tools "Komponenten Dienste" fest**
+**So legen Sie die Transaktionsisolationsstufe mit dem Component Services-Verwaltungstool fest**
 
-1.  Klicken Sie in der Konsolen Struktur mit der rechten Maustaste auf die Komponente, die Sie konfigurieren möchten, und klicken Sie dann auf **Eigenschaften**.
+1.  Klicken Sie in der Konsolenstruktur mit der rechten Maustaste auf die Komponente, die Sie konfigurieren möchten, und klicken Sie dann auf **Eigenschaften.**
 
-2.  Klicken Sie im Dialogfeld Komponenteneigenschaften auf die Registerkarte **Transaktionen** .
+2.  Klicken Sie im Dialogfeld Komponenteneigenschaften auf die **Registerkarte** Transaktionen.
 
-3.  Wählen Sie unter **Transaktions Isolationsstufe** den gewünschten Wert aus dem Dropdown Feld aus. Der Standardwert für alle Komponenten wird **serialisiert**.
+3.  Wählen **Sie unter Transaktionsisolationsstufe** im Dropdownfeld den wert aus, den Sie wünschen. Der Standardwert für alle Komponenten ist **Serialisiert.**
 
     > [!Note]  
-    > Wenn unter **Transaktionsunterstützung** entweder **deaktiviert** oder **nicht unterstützt** ausgewählt ist, kann die Transaktions Isolationsstufe nicht festgelegt werden.
+    > Wenn unter **Transaktionsunterstützung** die Option Deaktiviert oder **Nicht** unterstützt ausgewählt **ist,** können Sie die Transaktionsisolationsstufe nicht festlegen.
 
      
 
@@ -38,7 +38,7 @@ Sie müssen dieses Verfahren für jede Komponente wiederholen.
 
 <dl> <dt>
 
-[Konfigurieren von Transaktions Isolations Stufen](configuring-transaction-isolation-levels.md)
+[Konfigurieren von Transaktionsisolationsstufen](configuring-transaction-isolation-levels.md)
 </dt> </dl>
 
  

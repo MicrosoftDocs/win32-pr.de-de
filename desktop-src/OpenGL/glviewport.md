@@ -1,6 +1,6 @@
 ---
-title: glViewport-Funktion (GL. h)
-description: Die Funktion "glViewport" legt den Viewport fest.
+title: glViewport-Funktion (Gl.h)
+description: Die glViewport-Funktion legt den Viewport fest.
 ms.assetid: 11816b2f-ee18-42ef-a782-2e96699dd087
 keywords:
 - glViewport-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5e8eedb9c66211deda92ef6a84e8c1dd2073362
-ms.sourcegitcommit: 3bdf30edb314e0fcd17dc4ddbc70e4ec7d3596e6
+ms.openlocfilehash: 70fc727265ce4af1db2be808ae7eee3f59246874659a815c66292bcab3d7ecfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "104559284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035405"
 ---
 # <a name="glviewport-function"></a>glViewport-Funktion
 
-Die Funktion " **glViewport** " legt den Viewport fest.
+Die **glViewport-Funktion** legt den Viewport fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ Die linke untere Ecke des Viewportrechtecks in Pixel. Der Standardwert ist (0,0)
 *width* 
 </dt> <dd>
 
-Die Breite des Viewports. Wenn ein OpenGL-Kontext zum ersten Mal an ein Fenster angefügt wird, werden *Breite* und *Höhe* auf die Abmessungen dieses Fensters festgelegt.
+Die Breite des Viewports. Wenn ein OpenGL-Kontext zum ersten Mal an ein Fenster angefügt *wird,* werden Breite und *Höhe* auf die Abmessungen dieses Fensters festgelegt.
 
 </dd> <dt>
 
 *height* 
 </dt> <dd>
 
-Die Höhe des Viewports. Wenn ein OpenGL-Kontext zum ersten Mal an ein Fenster angefügt wird, werden *Breite* und *Höhe* auf die Abmessungen dieses Fensters festgelegt.
+Die Höhe des Viewports. Wenn ein OpenGL-Kontext zum ersten Mal an ein Fenster angefügt *wird,* werden Breite und *Höhe* auf die Abmessungen dieses Fensters festgelegt.
 
 </dd> </dl>
 
@@ -77,30 +77,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | Die *Breite* oder *Höhe* war negativ.<br/>                                                                                   |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | Breite *oder* *Höhe waren* negativ.<br/>                                                                                   |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glViewport** " gibt die affine Transformation von *x* und *y* von normalisierten Geräte Koordinaten zu Fenster Koordinaten an. Let (*x*<sub>ND</sub> , *y*<sub>ND</sub> ) sind normalisierte Geräte Koordinaten. Die Fenster Koordinaten (*x*<sub>w</sub> , *y*<sub>w</sub> ) werden dann wie folgt berechnet:
+Die **glViewport-Funktion** gibt die affine Transformation von *x* und *y* von normalisierten Gerätekoordinaten zu Fensterkoordinaten an. Lassen Sie (*x*<sub>nd</sub> , *y*<sub>nd</sub> ) normalisierte Gerätekoordinaten sein. Die Fensterkoordinaten (*x*<sub>w</sub> , *y*<sub>w</sub> ) werden dann wie folgt berechnet:
 
-![Gleichung, die die Berechnung der Fenster Koordinaten anzeigt.](images/view01.png)
+![Gleichung, die die Berechnung der Fensterkoordinaten zeigt.](images/view01.png)
 
-Breite und Höhe des Viewports werden automatisch an einen Bereich gebunden, der von der Implementierung abhängt. Dieser Bereich wird durch Aufrufen von **glget** mit dem Argument GL \_ Max \_ Viewport \_ DiMS abgefragt.
+Breite und Höhe des Viewports werden im Hintergrund an einen Bereich geklammert, der von der Implementierung abhängt. Dieser Bereich wird abgefragt, indem **glGet mit dem** Argument GL \_ MAX \_ VIEWPORT \_ DIMSgefragt wird.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glViewport** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glViewport ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Viewport
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ VIEWPORT
 
-**glget** mit dem Argument GL \_ Max \_ Viewport \_ DiMS
+**glGet** mit argument GL \_ MAX \_ VIEWPORT \_ DIMS
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,8 +110,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glViewpo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -123,7 +123,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glViewpo
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldepthrange**](gldepthrange.md)
+[**glDepthRange**](gldepthrange.md)
 </dt> </dl>
 
  

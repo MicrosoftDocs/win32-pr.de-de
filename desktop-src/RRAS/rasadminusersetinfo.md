@@ -1,9 +1,9 @@
 ---
-title: Rasadminusermentinfo-Funktion (rassapi. h)
-description: Die rasadminusersetinfo-Funktion legt die RAS-Berechtigungen und die Rückruf Telefonnummer für einen angegebenen Benutzer fest.
+title: RasAdminUserSetInfo-Funktion (Rassapi.h)
+description: Die RasAdminUserSetInfo-Funktion legt die RAS-Berechtigungen und die Rückruftelefonnummer für einen angegebenen Benutzer fest.
 ms.assetid: 5b049dfd-ecc8-47e4-82cc-71a875752714
 keywords:
-- Rasadminusereintinfo-Funktion (RAS)
+- RasAdminUserSetInfo-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 16d35f62713a3f4669db191891d2fb6b1694cabe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 51bc4b56b9aa606892002fbef0eda8036c45442c06ce06b8561afba57620b7a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028430"
 ---
-# <a name="rasadminusersetinfo-function"></a>Rasadminusermentinfo-Funktion
+# <a name="rasadminusersetinfo-function"></a>RasAdminUserSetInfo-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminusermentinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminusersetinfo) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Es wird ERROR \_ CALL NOT IMPLEMENTED auf Windows Server \_ \_ 2003 zurückgegeben. Anwendungen sollten die [**MprAdminUserSetInfo-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminusersetinfo) verwenden.\]
 
-Die **rasadminusersetinfo** -Funktion legt die RAS-Berechtigungen und die Rückruf Telefonnummer für einen angegebenen Benutzer fest.
+Die **RasAdminUserSetInfo-Funktion** legt die RAS-Berechtigungen und die Rückruftelefonnummer für einen angegebenen Benutzer fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ DWORD RasAdminUserSetInfo(
 
 <dl> <dt>
 
-*lpszuseraccountserver* \[ in\]
+*lpszUserAccountServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Unicode-Zeichenfolge, die den Namen des primären oder Sicherungs Domänen Controllers mit der Benutzerkonten Datenbank angibt. Verwenden Sie die [**rasadmingetuseraccountserver**](rasadmingetuseraccountserver.md) -Funktion, um diesen Servernamen abzurufen.
+Zeiger auf eine auf NULL beendete Unicode-Zeichenfolge, die den Namen des primären Domänencontrollers oder Sicherungsdomänencontrollers angibt, der über die Benutzerkontodatenbank verfügt. Verwenden Sie [**die RasAdminGetUserAccountServer-Funktion,**](rasadmingetuseraccountserver.md) um diesen Servernamen zu erhalten.
 
 </dd> <dt>
 
-*lpszuser* \[ in\]
+*lpszUser* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Unicode-Zeichenfolge, die den Namen des Benutzers angibt, für den RAS-Informationen festgelegt werden sollen.
+Zeiger auf eine mit NULL beendete Unicode-Zeichenfolge, die den Namen des Benutzers angibt, für den RAS-Informationen festgelegt werden sollen.
 
 </dd> <dt>
 
-*pRasUser0* \[ in\]
+*pRasUser0* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die [**RAS- \_ Benutzer- \_ 0**](ras-user-0-str.md) -Struktur, die die neuen RAS-Daten für den angegebenen Benutzer angibt.
+Zeiger auf die [**RAS \_ USER \_ 0-Struktur,**](ras-user-0-str.md) die die neuen RAS-Daten für den angegebenen Benutzer angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
 Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehlercodes sein.
 
@@ -75,19 +75,19 @@ Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Fehle
 
 | Wert                                                                                                           | BESCHREIBUNG                                                                                     |
 |-----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültige \_ Daten**</dt> </dl>             | Der *pRasUser0* -Puffer enthält ungültige Daten.<br/>                                        |
-| <dl> <dt>**Fehler \_ ungültige \_ Rückruf \_ Nummer.**</dt> </dl> | Die im *pRasUser0* -Puffer angegebene Rückrufnummer enthält ungültige Zeichen.<br/> |
-| <dl> <dt>**NERR \_ Buf-osmall**</dt> </dl>               | Nicht genügend Arbeitsspeicher zum Ausführen dieser Funktion.<br/>                                        |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGE \_ DATEN**</dt> </dl>             | Der *pRasUser0-Puffer* enthält ungültige Daten.<br/>                                        |
+| <dl> <dt>**FEHLER: \_ \_ UNGÜLTIGE \_ RÜCKRUFNUMMER**</dt> </dl> | Die im *pRasUser0-Puffer angegebene* Rückrufnummer enthält ungültige Zeichen.<br/> |
+| <dl> <dt>**NERR \_ BufTooSmall**</dt> </dl>               | Nicht genügend Arbeitsspeicher zum Ausführen dieser Funktion.<br/>                                        |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie [**getLastError nicht auf.**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Festlegen der RAS-Berechtigungen für einen Benutzer muss der **bfprivilege** -Member der [**RAS-Benutzer- \_ \_ 0**](ras-user-0-str.md) -Struktur mindestens eines der rückgabeflags angeben. Um z. b. die Berechtigungen eines Benutzers so festzulegen, dass Einwählberechtigungen, aber keine Rückruf Berechtigung zulässig sind, legen Sie **bfprivilege** auf raspriv \_ dialinprivilege \| raspriv \_ NoCallback fest.
+Beim Festlegen der RAS-Berechtigungen für einen Benutzer muss **das bfPrivilege-Mitglied** der [**RAS USER \_ \_ 0-Struktur**](ras-user-0-str.md) mindestens eines der Rückrufflags angeben. Legen Sie **bfPrivilege** beispielsweise auf RASPRIV \_ DialinPrivilege \| RASPRIV NoCallback fest, um die Berechtigungen eines Benutzers so zu festlegen, dass Einwahlberechtigungen, aber keine Rückrufberechtigungen zulässig \_ sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Beim Festlegen der RAS-Berechtigungen für einen Benutzer muss der **bfprivilege
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
@@ -107,19 +107,19 @@ Beim Festlegen der RAS-Berechtigungen für einen Benutzer muss der **bfprivilege
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
-[**RAS- \_ Benutzer \_ 0**](ras-user-0-str.md)
+[**\_RAS-BENUTZER \_ 0**](ras-user-0-str.md)
 </dt> <dt>
 
-[**Rasadmingetuseraccountserver**](rasadmingetuseraccountserver.md)
+[**RasAdminGetUserAccountServer**](rasadmingetuseraccountserver.md)
 </dt> <dt>
 
-[**Rasadminusergetinfo**](rasadminusergetinfo.md)
+[**RasAdminUserGetInfo**](rasadminusergetinfo.md)
 </dt> </dl>
 
  

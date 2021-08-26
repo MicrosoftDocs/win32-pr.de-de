@@ -1,5 +1,5 @@
 ---
-description: Ruft die Klassen-ID der vom Hersteller bereitgestellten Benutzeroberfläche für dieses Windows WIA-Hardwaregerät (Image Acquisition) ab. Der Wert ist eine Zeichenfolgendarstellung einer GUID.
+description: Ruft die Klassen-ID der vom Hersteller bereitgestellten Benutzeroberfläche für dieses WIA-Hardwaregerät (Windows Image Acquisition) ab. Der Wert ist eine Zeichenfolgendarstellung einer GUID.
 ms.assetid: 7a513399-c880-4485-ac62-876ba726aab4
 title: DeviceInfo.UIClsid-Eigenschaft
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "120007540"
 ---
 # <a name="deviceinfouiclsid-property"></a>DeviceInfo.UIClsid-Eigenschaft
 
-Ruft die Klassen-ID der vom Hersteller bereitgestellten Benutzeroberfläche für dieses Windows WIA-Hardwaregerät (Image Acquisition) ab. Der Wert ist eine Zeichenfolgendarstellung einer GUID.
+Ruft die Klassen-ID der vom Hersteller bereitgestellten Benutzeroberfläche für dieses WIA-Hardwaregerät (Windows Image Acquisition) ab. Der Wert ist eine Zeichenfolgendarstellung einer GUID.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ Zeichenfolge zum Empfangen der Klassen-ID.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 

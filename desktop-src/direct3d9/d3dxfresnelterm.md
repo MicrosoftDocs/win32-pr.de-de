@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 5472f9839928fd3b4c1830bc309c7f610d487864
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 15f0c5bac66d0c1b43bf3938e4ecb1f2fffd8dd235532b5dddc27eb5923ef5f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027650"
 ---
 # <a name="d3dxfresnelterm-function-d3dx9mathh"></a>D3DXFresnelTerm-Funktion (D3dx9math.h)
 
-Berechnen Sie den Fresnel-Begriff.
+Berechnen Sie den Fresnel-Ausdruck.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Der Wert muss zwischen 0 und 1 liegen.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Refraktionsindex eines Materials. Der Wert muss größer als 1 sein.
+Der Refractionindex eines Materials. Der Wert muss größer als 1 sein.
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ Der Refraktionsindex eines Materials. Der Wert muss größer als 1 sein.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Diese Funktion gibt den Fresnel-Begriff für unisiertes Licht zurück. CosTheta ist der Kosinus des Incidentwinkels.
+Diese Funktion gibt den Fresnel-Begriff für nicht polarisiertes Licht zurück. CosTheta ist der Kosinus des Vorfallwinkels.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-So finden Sie den Fresnel-Begriff (F):
+So suchen Sie den Fresnel-Begriff (F):
 
-Wenn A ein Winkel von 1 und B der Winkel der Refraktion ist, dann
+Wenn A der Neigungswinkel und B der Winkel der Refraction ist, dann
 
 
 ```
@@ -83,7 +83,7 @@ Let g   = (r2 + c2 - 1)1/2
 
 
 
-Wenn Sie dann mithilfe der Trig-Identitäten erweitern und vereinfachen, erhalten Sie:
+Wenn Sie dann die Trig-Identitäten erweitern und vereinfachen, erhalten Sie Folgendes:
 
 
 ```
@@ -96,7 +96,7 @@ F = 0.5 * (g + c)2 / (g - c)2 * ([c(g + c) - 1]2 / [c(g - c) + 1]2 + 1)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

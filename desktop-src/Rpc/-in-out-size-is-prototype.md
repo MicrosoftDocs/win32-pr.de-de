@@ -1,19 +1,19 @@
 ---
-title: " in-, out-, size_is-Prototyp"
-description: '\ in, out, size \_ ist \ Prototype verwendet ein Array mit nur einem zählenden Zeichen, das vom Client an den Server und vom Server an den Client übermittelt wird.'
+title: " in, out, size_is Prototype"
+description: '\ in, out, size is\ prototype verwendet ein Array mit einzel gezählten Zeichen, das vom Client an den Server und vom Server an den \_ Client übergeben wird.'
 ms.assetid: bce9a36f-9f7c-4438-9b5a-15b8877f74c0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37829ce0d5a4bb44fefa038e9ce71773f9c4c9bd
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a623dc39e9bd18fdd0c7bc02f008ccc1c16919362fd2a52e373abdde762eb726
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073640"
 ---
 # <a name="in-out-size_is-prototype"></a>\[in, out, size \_ ist \] Prototype
 
-Der folgende Funktionsprototyp verwendet ein Array mit einzelnen Zeichen, das auf beide Arten übermittelt wird: vom Client zum Server und von Server zu Client:
+Der folgende Funktionsprototyp verwendet ein Einzählungszeichenarray, das auf beide Arten übergeben wird: vom Client zum Server und vom Server zum Client:
 
 ``` syntax
 #define STRSIZE 500 //maximum string length
@@ -23,11 +23,11 @@ void Analyze(
     [in, out]  long *pcbSize);
 ```
 
-Als \[ [**in**](/windows/desktop/Midl/in) - \] Parameter muss " *achinout* " auf der Clientseite auf einen gültigen Speicher zeigen. Der Entwickler ordnet dem Array auf der Clientseite Arbeitsspeicher zu, bevor der Remote Prozedur Aufrufe durchführen wird.
+Als \[ [**in-Parameter**](/windows/desktop/Midl/in) \] muss *"sollenInOut"* auf einen gültigen Speicher auf clientseitiger Seite verweisen. Der Entwickler ordnet dem Array auf Clientseite zugeordneten Arbeitsspeicher zu, bevor er den Remoteprozeduraufruf vorgibt.
 
-Die Stub verwenden die \[ [**Größe \_**](/windows/desktop/Midl/size-is) des \] para  meters "-Parameter", um Arbeitsspeicher auf dem Server zuzuweisen, und verwenden dann die \[ [**Länge \_**](/windows/desktop/Midl/length-is) des \] Parameters " *pcbSize* ", um die Array Elemente in diesen Speicher zu übertragen Der Entwickler muss sicherstellen, dass der Client Code die **\[ Länge \_ ist \]** variabel festlegt, bevor die Remote Prozedur aufgerufen wird.
+Die Stubs verwenden den Parameter size is strsize, um Arbeitsspeicher auf dem Server zu reservieren, und verwenden dann den \[ [**\_**](/windows/desktop/Midl/size-is) \] length  \[ [**\_ is-Parameter**](/windows/desktop/Midl/length-is) \] *"sizeSize",* um die Arrayelemente in diesen Speicher zu übertragen. Der Entwickler muss vor dem Aufrufen der Remoteprozedur sicherstellen, dass der Clientcode die **\[ Länge \_ \]** als variable festgelegt hat.
 
-In einigen Fällen ist die Verwendung von separaten Parametern anstelle einer einzelnen Zeichenfolge für die Eingabe und Ausgabe effizienter und bietet Flexibilität. Dies wird im folgenden Beispiel veranschaulicht:
+In einigen Situationen ist die Verwendung separater Parameter anstelle einer einzelnen Zeichenfolge für die Eingabe und Ausgabe effizienter und bietet Flexibilität. Dies wird im nächsten Beispiel gezeigt:
 
 ``` syntax
 /* client */ 
@@ -39,9 +39,9 @@ cbSize = strlen(achInOut) + 1;   // transmit '\0' too
 Analyze(achInOut, &cbSize);
 ```
 
-Im vorherigen Beispiel wird das Zeichen Array "achinout" auch als out- \[ [](/windows/desktop/Midl/out-idl) \] Parameter verwendet. In C entspricht der Name des Arrays der Verwendung eines Zeigers. Standardmäßig handelt es sich bei allen Zeigern auf oberster Ebene um Verweis Zeiger – Sie ändern nicht den Wert und zeigen auf den gleichen Arbeitsspeicher Bereich auf dem Client vor und nach dem-Rückruf. Der gesamte Arbeitsspeicher, auf den die Remote Prozedur zugreift, muss der Größe entsprechen, die der Client vor dem-Befehl angibt, oder die stubweise generiert eine Ausnahme.
+Im vorherigen Beispiel wird das Zeichenarray "erhaltenInOut" auch als \[ [**out-Parameter**](/windows/desktop/Midl/out-idl) \] verwendet. In C entspricht der Name des Arrays der Verwendung eines Zeigers. Standardmäßig sind alle Zeiger der obersten Ebene Verweiszeler– sie ändern sich nicht im Wert und zeigen auf denselben Speicherbereich auf dem Client vor und nach dem Aufruf. Der Arbeitsspeicher, auf den die Remoteprozedur zutritt, muss der Vom Client vor dem Aufruf angegebenen Größe passen, oder die Stubs generieren eine Ausnahme.
 
-Vor der Rückgabe muss die Funktion "analysieren" auf dem Server den *pcbSize* -Parameter zurücksetzen, um die Anzahl der Elemente anzugeben, die der Server wie dargestellt an den Client übertragen wird:
+Vor der Rückgabe muss die Analyze-Funktion auf dem Server den *parameter "polarSize"* zurücksetzen, um die Anzahl der Elemente anzugeben, die der Server wie gezeigt an den Client überträgt:
 
 ``` syntax
 /* server */ 
@@ -53,6 +53,6 @@ Analyze(char * str, long * pcbSize)
 }
 ```
 
- 
+ 
 
- 
+ 

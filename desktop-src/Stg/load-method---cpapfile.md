@@ -1,23 +1,23 @@
 ---
-title: 'Load-Methode: cpapfile'
-description: Wenn diese Vorgänge erfolgreich ausgeführt wurden, wird die erhaltene IStorage-Schnittstelle freigegeben. Dadurch wird die Datei geschlossen, und es wird angegeben, dass die Datei bei anderen Client Vorgängen nicht offen gehalten ist. Sie wird bei Bedarf erneut geöffnet.
+title: Load-Methode – CPapFile
+description: Wenn diese Vorgänge erfolgreich sind, wird die abgerufene IStorage-Schnittstelle freigegeben. Dadurch wird die Datei geschlossen und angegeben, dass die Datei während anderer Clientvorgänge nicht geöffnet gehalten wird. Sie wird bei Bedarf erneut geöffnet.
 ms.assetid: 40f79adb-87f3-4b0e-9cfe-927a4bc9ada5
 keywords:
-- 'Load-Methode: cpapfile'
+- Load-Methode – CPapFile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fe70be7241fe1e1eaeb779317e11a76fb479f76
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 49eac23bcb79738a30b18eb87a4d8ef4598aba89de0748c58b433df28d614886
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103857004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034890"
 ---
-# <a name="load-method---cpapfile"></a>Load-Methode: cpapfile
+# <a name="load-method---cpapfile"></a>Load-Methode – CPapFile
 
-Wenn diese Vorgänge erfolgreich ausgeführt wurden, wird die erhaltene [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle freigegeben. Dadurch wird die Datei geschlossen, und es wird angegeben, dass die Datei bei anderen Client Vorgängen nicht offen gehalten ist. Sie wird bei Bedarf erneut geöffnet.
+Wenn diese Vorgänge erfolgreich sind, wird die abgerufene [**IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) freigegeben. Dadurch wird die Datei geschlossen und angegeben, dass die Datei während anderer Clientvorgänge nicht geöffnet gehalten wird. Sie wird bei Bedarf erneut geöffnet.
 
-Bei diesem Beispiel handelt es sich um die **cpapfile**-Methode zum  **Laden** von papfile. cpp.
+Dieses Beispiel ist die **CPapFile** **Load-Methode** aus Papfile.cpp.
 
 
 ```C++
@@ -81,31 +81,31 @@ HRESULT CPapFile::Load(
 
 
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Wie bei der [**Save**](save-method---cpapfile.md) -Methode wird beim Übergeben von **null** für den *pszFileName* -Parameter der gespeicherte Inhalt des Members **m \_ szcurrfilename** als Dateiname verwendet. Da eine vorhandene Datei geöffnet werden kann, wird zuerst die apputil **FileExist** -Funktion verwendet, um zu überprüfen, ob die Datei vorhanden ist. Wenn dies der Fall ist, wird die Standard Dienstfunktion " [**stgisstoragefile**](/windows/desktop/api/coml2api/nf-coml2api-stgisstoragefile) " aufgerufen, um das Format der Datei zu überprüfen, um festzustellen, ob es sich um eine gültige Verbund Datei handelt.
+Wie bei der [**Save-Methode**](save-method---cpapfile.md) wird der gespeicherte Inhalt von Member **m \_ szCurFileName** für den Dateinamen verwendet, wenn **NULL** für den *pszFileName-Parameter* übergeben wird. Da eine vorhandene Datei geöffnet werden kann, wird zuerst die APPUTIL **FileExist-Funktion** verwendet, um zu überprüfen, ob die Datei vorhanden ist. Falls vorhanden, wird die [**StgIsStorageFile-Standarddienstfunktion**](/windows/desktop/api/coml2api/nf-coml2api-stgisstoragefile) aufgerufen, um das Format der Datei zu überprüfen, um zu ermitteln, ob es sich um eine gültige Verbunddatei handelt.
 
-Wenn die Datei gültig ist, wird die Standard Dienstfunktion " [**StgOpenStorage**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorage) " aufgerufen, um die Datei zu öffnen und einen Zeiger auf eine [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle für Sie zurückzugeben.
+Wenn die Datei gültig ist, wird die [**StgOpenStorage-Standarddienstfunktion**](/windows/desktop/api/coml2api/nf-coml2api-stgopenstorage) aufgerufen, um die Datei zu öffnen und einen Zeiger auf eine [**IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) dafür zurückzugeben.
 
-Der erste Parameter ist der Name der zu öffnenden Verbund Datei. Wie beim " [**stganatedocfile**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) "-Befehl wird diese Zeichenfolge in der Unicode-Form erwartet. während der ANSI-Kompilierung wird ein apputil-Makro verwendet, um sicherzustellen, dass der ANSI-Parameter in den erwarteten Unicode-Parameter konvertiert wird.
+Der erste Parameter ist der Name der zu öffnende Verbunddatei. Wie beim [**StgCreateDocfile-Aufruf**](/windows/desktop/api/coml2api/nf-coml2api-stgcreatedocfile) wird diese Zeichenfolge im Unicode-Format erwartet, und während der ANSI-Kompilierung wird ein APPUTIL-Makro verwendet, um sicherzustellen, dass der ANSI-Parameter in den erwarteten Unicode-Code konvertiert wird.
 
-Der Speicher Parameter für die zweite Priorität ist **null**, was darauf hinweist, dass er in diesem Beispiel nicht verwendet wird.
+Der zweite Speicherparameter mit Priorität ist **NULL** und gibt an, dass er in diesem Beispiel nicht verwendet wird.
 
-Die zugriffsmodusflags werden als dritter Parameter übergeben, um anzugeben, welche Zugriffs Modi für die geöffnete Datei zulässig sind. [**STGM \_ Lesen**](stgm-constants.md) öffnet die Datei mit der Berechtigung schreibgeschützt. [**STGM \_ Direkt**](stgm-constants.md) öffnet die Datei für den direkten Zugriff im Gegensatz zum transaktiven Zugriff. [**STGM \_ Freigabe \_ exklusiv**](stgm-constants.md) öffnet die Datei für den exklusiven, nicht freigegebenen Gebrauch durch den Aufrufer.
+Die Zugriffsmodusflags werden als dritter Parameter übergeben, um anzugeben, welche Zugriffsmodi für die geöffnete Datei zulässig sind. [**STGM \_ READ**](stgm-constants.md) öffnet die Datei mit schreibgeschützter Berechtigung. [**STGM \_ DIRECT**](stgm-constants.md) öffnet die Datei für den direkten Zugriff und nicht für den transaktiven Zugriff. [**STGM \_ SHARE \_ EXCLUSIVE**](stgm-constants.md) öffnet die Datei für die exklusive, nicht freigegebene Verwendung durch den Aufrufer.
 
-Der vierte Element Ausschluss Parameter in **null**, der angibt, dass er in diesem Beispiel nicht verwendet wird.
+Der vierte Elementausschlussparameter in **NULL,** der angibt, dass er in diesem Beispiel nicht verwendet wird.
 
-Der fünfte Parameter ist für die zukünftige Verwendung reserviert und muss NULL sein.
+Der fünfte Parameter ist für die zukünftige Verwendung reserviert und muss 0 (null) sein.
 
-Die Adresse der Zeiger Variablen **m \_ pistorage** wird als der sechste Parameter übergeben. Wenn der-Rückruf erfolgreich zurückgegeben wurde, enthält **m \_ pistorage** einen Zeiger auf eine [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle. Dies ist die Schnittstelle, die für nachfolgende Vorgänge in der geöffneten Datei verwendet wird.
+Die Adresse der Zeigervariable **\_ m pIStorage** wird als sechster Parameter übergeben. Wenn der Aufruf erfolgreich zurückgegeben wird, enthält **m \_ pIStorage** einen Zeiger auf eine [**IStorage-Schnittstelle.**](/windows/desktop/api/Objidl/nn-objidl-istorage) Dies ist die Schnittstelle, die für alle nachfolgenden Vorgänge in der geöffneten Datei verwendet wird.
 
-Der wichtige Vorgang in diesem Fall besteht darin, dass das copaper-Objekt seine Zeichnungsdaten aus der Datei lädt. Dies erfolgt oben mithilfe der **Load** -Methode der [**iPaper**](ipaper-methods.md) -Schnittstelle von copaper. Wenn copaper das Laden der Daten mit dem bereitgestellten [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) erfolgreich durchläuft, wird der Name der Verbund Datei als neuer aktueller Dateiname in **m \_ szcurrfilename** kopiert.
+In diesem Fall ist es wichtig, dass das COPaper-Objekt seine Zeichnungsdaten aus der Datei lädt. Dies erfolgt oben mithilfe der **Load-Methode** der [**IPaper-Schnittstelle von COPaper.**](ipaper-methods.md) Wenn COPaper seine Daten mithilfe der bereitgestellten [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) laden kann, wird der Name der Verbunddatei als neuer aktueller Dateiname in **m \_ szCurFileName** kopiert.
 
-Wenn diese Vorgänge erfolgreich abgeschlossen wurden, wird die [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstelle freigegeben, die abgerufen wurde. Dadurch wird die Datei geschlossen und bedeutet, dass die Datei bei anderen Client Vorgängen nicht offen gehalten wird. Sie wird bei Bedarf erneut geöffnet.
+Wenn diese Vorgänge erfolgreich abgeschlossen wurden, wird die [**abgerufene IStorage-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istorage) freigegeben. Dadurch wird die Datei geschlossen und bedeutet, dass die Datei während anderer Clientvorgänge nicht geöffnet gehalten wird. Sie wird bei Bedarf erneut geöffnet.
 
- 
+ 
 
- 
+ 
 
 
 

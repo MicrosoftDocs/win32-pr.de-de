@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ chassisinrack-Zuordnung stellt die &\# 0034 dar, die&\# 0034;-Beziehung zwischen einem Gestell und einem darin enthaltenen Chassis enthält.
+description: Die \_ CIM-ChassisInRack-Zuordnung stellt die &\# 0034;enthaltende&0034; Beziehung zwischen einem Rack und einem darin \# enthaltenen Gehäuse dar.
 ms.assetid: 1c8a5058-58fe-42e0-b337-7e1a05120789
 ms.tgt_platform: multiple
 title: CIM_ChassisInRack-Klasse
@@ -18,23 +18,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: fd582991df30bc36cd71c4c3fa08d9a5a5153819
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 765b5e36fcb5f2cfe400d9dec9ba86d37cd29af8c756ae8416f7aece803f9052
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120065210"
 ---
-# <a name="cim_chassisinrack-class"></a>CIM \_ chassisinrack-Klasse
+# <a name="cim_chassisinrack-class"></a>\_CIM-Klasse "ChassisInRack"
 
-Die **CIM \_ chassisinrack** -Zuordnung stellt die "enthaltende" Beziehung zwischen einem Gestell und einem darin enthaltenen Chassis dar.
+Die **\_ CIM-ChassisInRack-Zuordnung** stellt die "enthaltende" Beziehung zwischen einem Rack und einem darin enthaltenden Gehäuse dar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,49 +51,49 @@ class CIM_ChassisInRack : CIM_Container
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ chassisinrack** -Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Klasse ChassisInRack** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ chassisinrack** -Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse ChassisInRack** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Bottomu**
+**BottomU**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("US")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Us")
 </dt> </dl>
 
-Eine ganze Zahl, die das niedrigste oder untere "U" angibt, in dem das Chassis eingebunden ist. Ein "U" ist eine Standard Maßeinheit für die Höhe eines Rasters oder einer Regal baren Komponente und ist gleich 1,75 Zoll oder 4,445 Zentimeter.
+Eine ganze Zahl, die das niedrigste oder unterste "U" angibt, in dem das Gehäuse eingebaut ist. Ein "U" ist eine Standardmessungseinheit für die Höhe eines Racks oder einer Rack-einstellbaren Komponente und entspricht 1,75 Zoll oder 4,445 Cm.
 
 </dd> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Rack**
+Datentyp: **\_ CIM-Rack**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Ein [**CIM- \_ Rack**](cim-rack.md) , das das Gestell beschreibt, das das Chassis enthält.
+Ein [**\_ CIM-Rack,**](cim-rack.md) das das Rack beschreibt, das das Gehäuse enthält.
 
 </dd> <dt>
 
-**Locationwithincontainer**
+**LocationWithinContainer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -102,35 +102,35 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine frei Form Zeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen in Bezug auf die stationären Elemente im Container (z. b. "Second Drive Bay from the Top"), Winkel, Höhen und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann anstelle der Instanziierung des [**CIM- \_ Speicherort**](cim-location.md) Objekts ergänzt oder verwendet werden.
+Freiformzeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen relativ zu den stationären Elementen im Container (z. B. "Zweiter Laufwerksschacht von oben"), Winkel, Höhe und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann das CIM Location-Objekt ergänzen oder verwenden, statt [**es \_ zu**](cim-location.md) instanziieren.
 
-Diese Eigenschaft wird vom [**CIM- \_ Container**](cim-container.md)geerbt.
+Diese Eigenschaft wird vom [**\_ CIM-Container geerbt.**](cim-container.md)
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Chassis**
+Datentyp: **\_ CIM-Gehäuse**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent")
 </dt> </dl>
 
-Ein [**CIM- \_ Chassis**](cim-chassis.md) , das das Chassis beschreibt, das in das Gestell eingebunden ist.
+Ein [**\_ CIM-Gehäuse,**](cim-chassis.md) das das im Rack eingebaute Gehäuse beschreibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ chassisinrack** -Klasse wird vom [**CIM- \_ Container**](cim-container.md)abgeleitet.
+Die **\_ CIM-Klasse ChassisInRack** wird von [**CIM Container \_ abgeleitet.**](cim-container.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -140,8 +140,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -150,7 +150,7 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 
 <dl> <dt>
 
-[**CIM- \_ Container**](cim-container.md)
+[**\_CIM-Container**](cim-container.md)
 </dt> </dl>
 
  

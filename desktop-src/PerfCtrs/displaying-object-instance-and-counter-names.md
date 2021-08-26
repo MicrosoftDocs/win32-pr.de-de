@@ -1,23 +1,23 @@
 ---
-description: Wenn Sie eine Liste von Objekten und deren Indikatoren auf einer Benutzeroberfläche anzeigen möchten, müssen Sie die Leistungsdaten abrufen.
+description: Wenn Sie eine Liste von Objekten und deren Leistungsindikatoren auf einer Benutzeroberfläche anzeigen möchten, müssen Sie die Leistungsdaten abrufen.
 ms.assetid: 0d122fa8-2ed8-4bd8-a52e-6cb20fe81741
-title: Anzeigen von Objekt-, Instanz-und Counter-Namen
+title: Anzeigen von Objekt-, Instanz- und Indikatornamen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 92c0b7808ede82110d28b80c371d5f88ced03912
-ms.sourcegitcommit: 3d718d8f69d3f86eaecf94c5705d761c5a9ef4a1
+ms.openlocfilehash: 1b31251b9efd9624b63543d0690e4ee7eadfb638995d3b0f265f6d059b83ef20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "103949204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033920"
 ---
-# <a name="displaying-object-instance-and-counter-names"></a>Anzeigen von Objekt-, Instanz-und Counter-Namen
+# <a name="displaying-object-instance-and-counter-names"></a>Anzeigen von Objekt-, Instanz- und Indikatornamen
 
-Wenn Sie eine Liste von Objekten und deren Indikatoren auf einer Benutzeroberfläche anzeigen möchten, müssen Sie die Leistungsdaten abrufen. Die Leistungsdaten enthalten eine Variable Anzahl von Leistungs Objekten und deren Instanzen und Leistungsindikatoren. Weitere Informationen zum Format der Leistungsdaten finden Sie unter [Leistungsdaten Format](performance-data-format.md).
+Wenn Sie eine Liste von Objekten und deren Leistungsindikatoren auf einer Benutzeroberfläche anzeigen möchten, müssen Sie die Leistungsdaten abrufen. Die Leistungsdaten enthalten eine variable Anzahl von Leistungsobjekten und deren Instanzen und Leistungsindikatoren. Informationen zum Format der Leistungsdaten finden Sie unter [Performance Data Format](performance-data-format.md).
 
-Die Leistungsdaten enthalten nicht die Objekt-und Leistungs Zählers. Stattdessen enthalten die Daten Indexwerte, mit denen Sie die Namen der Objekte und Leistungsindikatoren abrufen, die in Ressourcen gespeichert werden, die der Leistungsindikator Infrastruktur bekannt sind. Allerdings werden die Instanznamen in Leistungsdaten gespeichert. Ein Beispiel, in dem die Objekt-und Indikator Namen aus der Registrierung gelesen werden und eine Indextabelle für den späteren Zugriff auf die Namen erstellt wird, finden Sie unter Abrufen von Indikator [Namen und Hilfetext](retrieving-counter-names-and-help-text.md).
+Die Leistungsdaten enthalten nicht die Objekt- und Indikatornamen. Stattdessen enthalten die Daten Indexwerte, mit denen Sie die Namen der Objekte und Leistungsindikatoren abrufen, die in Ressourcen gespeichert werden, die der Leistungsindikatorinfrastruktur bekannt sind. Die Instanznamen werden jedoch in Leistungsdaten gespeichert. Ein Beispiel, das die Objekt- und Indikatornamen aus der Registrierung liest und eine Indextabelle für den späteren Zugriff auf die Namen erstellt, finden Sie unter Abrufen von Indikatornamen und [Hilfetext.](retrieving-counter-names-and-help-text.md)
 
-Im folgenden Beispiel wird gezeigt, wie das Objekt, die Instanz und die Leistungsdaten aus den Leistungsdaten abgerufen werden. Nachdem Sie die Objektnamen, die Instanznamen und die Indikator Namen abgerufen haben, sortiert das Beispiel die Objekte nach Namen, und sortiert die Instanzen und Leistungsindikatoren nach dem Namen. Im Beispiel werden dann die sortierten Listen ausgegeben.
+Das folgende Beispiel zeigt, wie Sie die Objekt-, Instanz- und Indikatorblöcke aus den Leistungsdaten abrufen. Nach dem Abrufen der Objektnamen, Instanznamen und Indikatornamen sortiert das Beispiel die Objekte nach Namen und sortiert für jedes Objekt seine Instanzen und Leistungsindikatoren nach Namen. Im Beispiel werden dann die sortierten Listen gedruckt.
 
 
 ```C++
@@ -819,9 +819,9 @@ void FreePerfObjects(PPERF_OBJECT pObjects, DWORD dwNumberOfObjects)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

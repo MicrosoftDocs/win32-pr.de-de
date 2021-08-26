@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 loadordergroupservicedependenassociation" verknüpft einen Basis Dienst und eine Gruppe der Lade Reihenfolge, von der der Dienst gestartet wird.
+description: Die \_ WMI-Zuordnungsklasse Win32 LoadOrderGroupServiceDependencies bezieht sich auf einen Basisdienst und eine Lastauftragsgruppe, von der der Dienst abhängt, um mit der Ausführung zu beginnen.
 ms.assetid: 56739b80-9028-4a2e-85ed-973a078860c1
 ms.tgt_platform: multiple
 title: Win32_LoadOrderGroupServiceDependencies-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: b95d1aa01def951802434e787931ce348d04ccb6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 55684bb5382c5e253c8f72b929674b9730ba7cab51a6c0cae9c27946fad5ff8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085790"
 ---
-# <a name="win32_loadordergroupservicedependencies-class"></a>Win32 \_ loadordergroupservicedependen-Klasse
+# <a name="win32_loadordergroupservicedependencies-class"></a>Win32 \_ LoadOrderGroupServiceDependencies-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ loadordergroupservicedependenassociation** " verknüpft einen Basis Dienst und eine Gruppe der Lade Reihenfolge, von der der Dienst gestartet wird.
+Die **WMI-Zuordnungsklasse \_ Win32 LoadOrderGroupServiceDependencies** bezieht sich auf einen Basisdienst und eine Lastauftragsgruppe, von der der Dienst abhängt, um mit der Ausführung zu beginnen. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ class Win32_LoadOrderGroupServiceDependencies : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ loadordergroupservicedependen-** Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ LoadOrderGroupServiceDependencies-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ loadordergroupservicedependen-** Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ LoadOrderGroupServiceDependencies-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Win32 \_ LoadOrderGroup**
@@ -61,32 +61,32 @@ Datentyp: **Win32 \_ LoadOrderGroup**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ LoadOrderGroup")
+Qualifizierer: [**schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ LoadOrderGroup")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Eigenschaften der Gruppe der Lade Reihenfolge darstellt, die gestartet werden muss, bevor der abhängige Basis Dienst dieser Klasse gestartet werden kann.
+Verweis auf die -Instanz, die die Eigenschaften der Ladeauftragsgruppe darstellt, die gestartet werden müssen, bevor der abhängige Basisdienst dieser Klasse gestartet werden kann.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ baseservice**
+Datentyp: **Win32 \_ BaseService**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ baseservice")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ BaseService")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Eigenschaften des Basis Dienes darstellt, der von der Gruppe der Lade Reihenfolge abhängig ist, damit Sie gestartet wird.
+Verweis auf die -Instanz, die die Eigenschaften des Basisdiensts darstellt, der von der Auslastungsauftragsgruppe abhängig ist, um mit der Ausführung zu beginnen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32-Klasse \_ loadordergroupservicedependenist** von der [**CIM- \_ Abhängigkeit**](cim-dependency.md)abgeleitet.
+Die **Win32 \_ LoadOrderGroupServiceDependencies-Klasse** wird von der [**CIM-Abhängigkeit \_ abgeleitet.**](cim-dependency.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die **Win32-Klasse \_ loadordergroupservicedependenist** von der [**CIM- \_ Abh�
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -106,7 +106,7 @@ Die **Win32-Klasse \_ loadordergroupservicedependenist** von der [**CIM- \_ Abh�
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

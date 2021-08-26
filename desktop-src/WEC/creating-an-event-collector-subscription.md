@@ -1,33 +1,33 @@
 ---
-title: Erstellen eines vom Collector initiierten Abonnements
-description: Mithilfe eines vom Collector initiierten Abonnements können Sie das Empfangen von Ereignissen auf einem lokalen Computer (dem Ereignis Sammler) abonnieren, die von Remote Computern (den Ereignis Quellen) weitergeleitet werden.
+title: Erstellen eines collectorinitiiertes Abonnement
+description: Sie können das Empfangen von Ereignissen auf einem lokalen Computer (dem Ereignissammler), die von Remotecomputern (den Ereignisquellen) weitergeleitet werden, mithilfe eines collector-initiierten Abonnements abonnieren.
 ms.assetid: 76f14e01-7a84-4c94-aea6-91189573eb89
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1359033b61d419f1147ca930f30d924b8429e31
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1b5fdcff469ad8f6dfef4f775e0c79da814e9f4c6e05a71a95b6ddf70446d4ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104209308"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006130"
 ---
-# <a name="creating-a-collector-initiated-subscription"></a>Erstellen eines vom Collector initiierten Abonnements
+# <a name="creating-a-collector-initiated-subscription"></a>Erstellen eines collectorinitiiertes Abonnement
 
-Mithilfe eines vom Collector initiierten Abonnements können Sie das Empfangen von Ereignissen auf einem lokalen Computer (dem Ereignis Sammler) abonnieren, die von Remote Computern (den Ereignis Quellen) weitergeleitet werden. In einem vom Collector initiierten Abonnement muss das Abonnement eine Liste aller Ereignis Quellen enthalten. Bevor ein Collector-Computer Ereignisse abonnieren kann und Ereignisse von einer Remote Ereignis Quelle weitergeleitet werden können, müssen beide Computer für Ereignis Erfassung und-Weiterleitung konfiguriert sein. Weitere Informationen zum Konfigurieren der Computer finden Sie unter Konfigurieren von [Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11)).
+Sie können das Empfangen von Ereignissen auf einem lokalen Computer (dem Ereignissammler), die von Remotecomputern (den Ereignisquellen) weitergeleitet werden, mithilfe eines collector-initiierten Abonnements abonnieren. In einem vom Collector initiierten Abonnement muss das Abonnement eine Liste aller Ereignisquellen enthalten. Bevor ein Collectorcomputer Ereignisse abonnieren kann und eine Remoteereignisquelle Ereignisse weiterleiten kann, müssen beide Computer für die Ereignissammlung und -weiterleitung konfiguriert werden. Weitere Informationen zum Konfigurieren der Computer finden Sie unter [Konfigurieren von Computern zum Weiterleiten und Sammeln von Ereignissen.](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 
-Im folgenden Codebeispiel wird eine Reihe von Schritten zum Erstellen eines vom Collector initiierten Abonnements befolgt:
+Das folgende Codebeispiel folgt einer Reihe von Schritten zum Erstellen eines collector-initiierten Abonnements:
 
-**So erstellen Sie ein vom Collector initiiertes Abonnement**
+**So erstellen Sie ein Collector-initiiertes Abonnement**
 
-1.  Öffnen Sie das Abonnement, indem Sie den Abonnement Namen und die Zugriffsrechte als Parameter für die [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) -Funktion angeben. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows-Ereignis Sammler Konstanten**](windows-event-collector-constants.md).
-2.  Legen Sie die Eigenschaften des Abonnements fest, indem Sie die [**ecsetabonptionproperty**](/windows/desktop/api/Evcoll/nf-evcoll-ecsetsubscriptionproperty) -Funktion aufrufen. Weitere Informationen zu den Abonnement Eigenschaften, die festgelegt werden können, finden Sie unter der [**\_ \_ Eigenschaft \_ ID**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id) -Enumeration für das EC-Abonnement.
-3.  Speichern Sie das Abonnement, indem Sie die [**ecsavesub-**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) Funktion aufrufen.
-4.  Schließen Sie das Abonnement, indem Sie die [**ecclose**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) -Funktion aufrufen.
+1.  Öffnen Sie das Abonnement, indem Sie den Abonnementnamen und die Zugriffsrechte als Parameter für die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) bereitstellen. Weitere Informationen zu Zugriffsrechten finden Sie unter [**Windows Event Collector-Konstanten.**](windows-event-collector-constants.md)
+2.  Legen Sie die Eigenschaften des Abonnements fest, indem Sie die [**EcSetSubscriptionProperty-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsetsubscriptionproperty) aufrufen. Weitere Informationen zu Abonnementeigenschaften, die festgelegt werden können, finden Sie in der [**EC \_ SUBSCRIPTION PROPERTY \_ \_ ID-Enumeration.**](/windows/desktop/api/Evcoll/ne-evcoll-ec_subscription_property_id)
+3.  Speichern Sie das Abonnement, indem Sie die [**EcSaveSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecsavesubscription) aufrufen.
+4.  Schließen Sie das Abonnement, indem Sie die [**EcClose-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecclose) aufrufen.
 
-Weitere Informationen zum Hinzufügen einer Ereignis Quelle finden [Sie unter Hinzufügen einer Ereignis Quelle zu einem Ereignis Sammler Abonnement](adding-an-event-source-to-an-event-collector-subscription.md).
+Weitere Informationen zum Hinzufügen einer Ereignisquelle finden Sie unter [Hinzufügen einer Ereignisquelle zu einem Ereignissammlerabonnement.](adding-an-event-source-to-an-event-collector-subscription.md)
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie ein vom Collector initiiertes Abonnement erstellt wird:
+Das folgende C++-Codebeispiel zeigt, wie Sie ein collector-initiiertes Abonnement erstellen:
 
 
 ```C++
@@ -513,21 +513,21 @@ DWORD GetProperty(EC_HANDLE hSubscription,
 
 **Überprüfen, ob das Abonnement ordnungsgemäß funktioniert**
 
-1.  Führen Sie auf dem Computer mit dem Ereignis Sammler die folgenden Schritte aus:
+1.  Führen Sie auf dem Ereignissammlercomputer das folgende Verfahren aus:
 
-    1.  Führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um den Lauf Zeit Status des Abonnements zu erhalten:
+    1.  Führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um den Laufzeitstatus des Abonnements abzurufen:
 
-        **wecutil GR***<subscriptionID>*
+        **wecutil gr***<subscriptionID>*
 
-    2.  Überprüfen Sie, ob die Ereignis Quelle verbunden ist. Möglicherweise müssen Sie warten, bis das Aktualisierungs Intervall, das in der Richtlinie angegeben ist, übersteigt, nachdem Sie das Abonnement erstellt haben, damit die Ereignis Quelle verbunden werden kann.
-    3.  Führen Sie den folgenden Befehl aus, um die Abonnement Informationen zu erhalten:
+    2.  Vergewissern Sie sich, dass eine Verbindung mit der Ereignisquelle hergestellt wurde. Möglicherweise müssen Sie warten, bis das in der Richtlinie angegebene Aktualisierungsintervall beendet ist, nachdem Sie das Abonnement für die Verbindung der Ereignisquelle erstellt haben.
+    3.  Führen Sie den folgenden Befehl aus, um die Abonnementinformationen abzurufen:
 
-        **wecutil-GS***<subscriptionID>*
+        **wecutil gs***<subscriptionID>*
 
-    4.  Den Wert deliverymaxitems aus den Abonnement Informationen erhalten.
+    4.  Abrufen des Werts DeliveryMaxItems aus den Abonnementinformationen.
 
-2.  Stellen Sie auf dem Ereignis Quellcomputer die Ereignisse aus dem Ereignis Abonnement aus, die der Abfrage entsprechen. Die Anzahl der deliverymaxitems-Ereignisse muss ausgelöst werden, damit die Ereignisse weitergeleitet werden.
-3.  Überprüfen Sie auf dem Ereignis Sammler Computer, ob die Ereignisse an das Protokoll ForwardedEvents oder an das im Abonnement angegebene Protokoll weitergeleitet wurden.
+2.  Auslösen Sie auf dem Ereignisquellcomputer die Ereignisse, die mit der Abfrage aus dem Ereignisabonnement übereinstimmen. Die DeliveryMaxItems-Anzahl von Ereignissen muss ausgelöst werden, damit die Ereignisse weitergeleitet werden.
+3.  Überprüfen Sie auf dem Ereignissammlercomputer, ob die Ereignisse an das ForwardedEvents-Protokoll oder an das im Abonnement angegebene Protokoll weitergeleitet wurden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -536,12 +536,12 @@ DWORD GetProperty(EC_HANDLE hSubscription,
 [Konfigurieren von Computern zum Weiterleiten und Sammeln von Ereignissen](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc748890(v=ws.11))
 </dt> <dt>
 
-[Hinzufügen einer Ereignis Quelle zu einem Ereignis Sammler Abonnement](adding-an-event-source-to-an-event-collector-subscription.md)
+[Hinzufügen einer Ereignisquelle zu einem Ereignissammlerabonnement](adding-an-event-source-to-an-event-collector-subscription.md)
 </dt> <dt>
 
-[Referenz zur Windows-Ereignis Sammlung](windows-event-collector-reference.md)
+[Windows Ereignissammlerreferenz](windows-event-collector-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

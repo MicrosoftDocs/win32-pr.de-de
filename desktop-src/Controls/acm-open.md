@@ -1,9 +1,9 @@
 ---
-title: ACM_OPEN Meldung (kommstrg. h)
-description: Öffnet einen AVI-Clip und zeigt seinen ersten Frame in einem Animations Steuerelement an. Sie können diese Nachricht explizit senden oder das Makro animieren \_ Open oder animieren \_ OpenEx verwenden. Wir empfehlen die Verwendung der Unicode-Version dieser Nachricht, ACM \_ openw.
+title: ACM_OPEN Meldung (Commctrl.h)
+description: Öffnet einen AVI-Clip und zeigt seinen ersten Frame in einem Animationssteuerelement an. Sie können diese Nachricht explizit senden oder das Makro "Animieren \_ öffnen" oder \_ "Animieren von OpenEx" verwenden. Es wird empfohlen, die Unicode-Version dieser Nachricht, ACM \_ OPENW, zu verwenden.
 ms.assetid: 87f476ce-bb27-4b5f-bfdf-dff84bd7e4f4
 keywords:
-- Windows-Steuerelemente für ACM_OPEN Meldung
+- ACM_OPEN Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0588c0e321efe5cace63baf4016dbaa97f735252
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c5af2bd996af159217c92d78102a97e5c530d34cf445d5ad34186cecb93ab85
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922170"
 ---
-# <a name="acm_open-message"></a>Geöffnete ACM- \_ Nachricht
+# <a name="acm_open-message"></a>ACM \_ OPEN-Nachricht
 
-Öffnet einen AVI-Clip und zeigt seinen ersten Frame in einem Animations Steuerelement an. Sie können diese Nachricht explizit senden oder das Makro [**animieren \_ Open**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) oder [**animieren \_ OpenEx**](/windows/desktop/api/Commctrl/nf-commctrl-animate_openex) verwenden. Wir empfehlen die Verwendung der Unicode-Version dieser Nachricht, ACM \_ openw.
+Öffnet einen AVI-Clip und zeigt seinen ersten Frame in einem Animationssteuerelement an. Sie können diese Nachricht explizit senden oder das [**Makro \_ "Animieren öffnen"**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) oder [**\_ "Animieren von OpenEx"**](/windows/desktop/api/Commctrl/nf-commctrl-animate_openex) verwenden. Es wird empfohlen, die Unicode-Version dieser Nachricht, ACM \_ OPENW, zu verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,30 +34,30 @@ ms.locfileid: "104391648"
 *wParam* 
 </dt> <dd>
 
-[Version 4,71](common-control-versions.md) und höher. Ein Instanzhandle für das Modul, von dem die Ressource geladen werden soll. Legen Sie diesen Wert auf **null** fest, damit das Steuerelement den HINSTANCE-Wert verwendet, der zum Erstellen des Fensters verwendet wird. Beachten Sie Folgendes: Wenn das Fenster durch eine DLL erstellt wird, ist der Standardwert für *wParam* der HINSTANCE-Wert der dll, nicht die Anwendung, die die DLL aufruft.
+[Version 4.71](common-control-versions.md) und höher. Ein Instanzhandle für das Modul, aus dem die Ressource geladen werden soll. Legen Sie diesen Wert auf **NULL** fest, damit das Steuerelement den HINSTANCE-Wert verwendet, der zum Erstellen des Fensters verwendet wird. Beachten Sie Folgendes: Wenn das Fenster von einer DLL erstellt wird, ist der Standardwert für *wParam* der HINSTANCE-Wert der DLL und nicht der Anwendung, die die DLL aufruft.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der den Pfad der AVI-Datei oder den Namen einer AVI-Ressource enthält. Alternativ kann dieser Parameter aus dem AVI-Ressourcen Bezeichner in [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) und NULL im [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))bestehen. Verwenden Sie das [**makeintresource**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) -Makro, um diesen Wert zu erstellen. Das-Steuerelement lädt die AVI-Ressource aus dem Modul, das vom Instanzhandle angegeben wurde [**, das an die Funktion**](/windows/desktop/api/winuser/nf-winuser-createwindowa) "-Funktion", " [**animieren \_ Create**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) " oder die Dialogfeld-Erstellungs Funktion, die das Steuerelement erstellt hat, In [Version 4,71](common-control-versions.md) und höher wird die Ressource aus dem Modul geladen, das von *wParam* angegeben wird. Eine AVI-Ressource muss den Typ "AVI" aufweisen. Wenn dieser Parameter **null** ist, schließt das System die AVI-Datei, die zuvor für das angegebene Animations Steuerelement geöffnet war, sofern vorhanden.
+Ein Zeiger auf einen Puffer, der den Pfad der AVI-Datei oder den Namen einer AVI-Ressource enthält. Alternativ kann dieser Parameter aus dem AVI-Ressourcenbezeichner in [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) und 0 (null) im [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))bestehen. Um diesen Wert zu erstellen, verwenden Sie das [**MAKEINTRESOURCE-Makro.**](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) Das Steuerelement lädt die AVI-Ressource aus dem Modul, das durch das Instanzhandle angegeben wird, das an die [**CreateWindow-Funktion,**](/windows/desktop/api/winuser/nf-winuser-createwindowa) das [**Makro Animieren \_ der Erstellung**](/windows/desktop/api/Commctrl/nf-commctrl-animate_create) oder die Funktion zum Erstellen des Dialogfelds übergeben wurde, die das Steuerelement erstellt hat. In [Version 4.71](common-control-versions.md) und höher wird die Ressource aus dem von *wParam* angegebenen Modul geladen. Eine AVI-Ressource muss den Typ "AVI" aufweisen. Wenn dieser Parameter **NULL** ist, schließt das System ggf. die AVI-Datei, die zuvor für das angegebene Animationssteuerelement geöffnet wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von *lpszname* angegebene AVI-Datei oder-Ressource darf kein Audioformat enthalten.
+Die von *lpszName* angegebene AVI-Datei oder -Ressource darf keine Audiodaten enthalten.
 
-Wir empfehlen die Verwendung der Unicode-Version dieser Nachricht, ACM \_ openw.
+Es wird empfohlen, die Unicode-Version dieser Nachricht, ACM \_ OPENW, zu verwenden.
 
-Sie können nur automatische AVI-Clips öffnen. \_Das Öffnen und [**Animieren von \_**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) ACM schlägt fehl, wenn *LPARAM* einen AVI-Clip angibt, der Sound enthält.
+Sie können nur automatische AVI-Clips öffnen. ACM \_ OPEN und Animate [**\_ Open**](/windows/desktop/api/Commctrl/nf-commctrl-animate_open) schlagen fehl, wenn *lParam* einen AVI-Clip angibt, der Sound enthält.
 
-Sie können Animation [**\_ Close**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close) verwenden, um eine AVI-Datei oder eine AVI-Ressource zu schließen, die zuvor für das angegebene Animations Steuerelement geöffnet wurde.
+Sie können [**Animate \_ Close**](/windows/desktop/api/Commctrl/nf-commctrl-animate_close) verwenden, um eine AVI-Datei oder EINE AVI-Ressource zu schließen, die zuvor für das angegebene Animationssteuerelement geöffnet wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,10 +65,10 @@ Sie können Animation [**\_ Close**](/windows/desktop/api/Commctrl/nf-commctrl-a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **ACM \_ Openw** (Unicode) und **ACM \_ Opena** (ANSI)<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **ACM \_ OPENW** (Unicode) und **ACM \_ OPENA** (ANSI)<br/>                         |
 
 
 

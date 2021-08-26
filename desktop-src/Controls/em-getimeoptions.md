@@ -1,9 +1,9 @@
 ---
-title: EM_GETIMEOPTIONS Meldung (RichEdit. h)
-description: Ruft die aktuellen IME-Optionen (Input Method Editor) ab.
+title: EM_GETIMEOPTIONS (Richedit.h)
+description: Ruft die aktuellen Optionen des Eingabemethode-Editors (IME) ab.
 ms.assetid: 81ec89b9-dabd-487e-805e-e3c2e58e3068
 keywords:
-- Windows-Steuerelemente für EM_GETIMEOPTIONS Meldung
+- EM_GETIMEOPTIONS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,19 +14,19 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bd805f2407fbe9e055df3d9174f106d33991aca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aea4513189014969dbfdf69a0ad257cbfde6a4ff99c2499f478c4865100a23c2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049060"
 ---
-# <a name="em_getimeoptions-message"></a>EM \_ getIMEOptions-Meldung
+# <a name="em_getimeoptions-message"></a>EM \_ GETIMEOPTIONS-Nachricht
 
-Ruft die aktuellen IME-Optionen (Input Method Editor) ab.
+Ruft die aktuellen Optionen des Eingabemethode-Editors (IME) ab.
 
 > [!Note]  
-> Diese Meldung wird nur in asiatischen Sprachversionen von Microsoft Rich Edit 1,0 unterstützt. Sie wird in höheren Versionen der Rich-Edit-Version nicht unterstützt.
+> Diese Meldung wird nur in asiatisch-sprachbasierten Versionen von Microsoft Rich Edit 1.0 unterstützt. Sie wird in späteren Versionen von Rich Edit nicht unterstützt.
 
  
 
@@ -50,7 +50,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung gibt einen oder mehrere der in der Nachricht [**EM \_ setimeoptions**](em-setimeoptions.md) beschriebenen IME-optionsflagwerte zurück.
+Diese Meldung gibt mindestens einen der in der EM SETIMEOPTIONS-Meldung beschriebenen WERTE für das [**\_ IME-Optionsflag**](em-setimeoptions.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,9 +58,9 @@ Diese Meldung gibt einen oder mehrere der in der Nachricht [**EM \_ setimeoption
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Diese Meldung gibt einen oder mehrere der in der Nachricht [**EM \_ setimeoption
 
 <dl> <dt>
 
-[**EM- \_ Zeit Optionen**](em-setimeoptions.md)
+[**EM \_ SETIMEOPTIONS**](em-setimeoptions.md)
 </dt> </dl>
 
  

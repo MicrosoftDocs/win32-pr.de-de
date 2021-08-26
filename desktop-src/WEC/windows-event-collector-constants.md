@@ -1,6 +1,6 @@
 ---
-title: Windows-Ereignis Sammler Konstanten (evcoll. h)
-description: Das Windows-Ereignis Sammler-SDK enthält die folgenden Konstanten.
+title: Windows Event Collector-Konstanten (Evcoll.h)
+description: Das Windows Event Collector SDK enthält die folgenden Konstanten.
 ms.assetid: 2ba862f9-6849-43b3-8914-e18ede1d63c0
 ms.tgt_platform: multiple
 topic_type:
@@ -19,33 +19,33 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf6e7e99186e2148bf6ec3400aadf760a79a2331
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d168ecb16c293c524c4dffcb16aee7db2924e23219e42d402939ab26b4bbecf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005980"
 ---
-# <a name="windows-event-collector-constants"></a>Windows-Ereignis Sammler Konstanten
+# <a name="windows-event-collector-constants"></a>Windows Event Collector-Konstanten
 
-Das Windows-Ereignis Sammler-SDK enthält die folgenden Konstanten.
+Das Windows Event Collector SDK enthält die folgenden Konstanten.
 
 <dl> <dt>
 
-<span id="EC_VARIANT_TYPE_MASK"></span><span id="ec_variant_type_mask"></span>**EC \_ Variant \_ Type \_ Mask**
+<span id="EC_VARIANT_TYPE_MASK"></span><span id="ec_variant_type_mask"></span>**EC \_ VARIANT \_ TYPE \_ MASK**
 </dt> <dd> <dl> <dt>
 
-0x7F
+0x7f
 </dt> <dt>
 
 
 
-Wird verwendet, um das arraybit aus der **Type** -Eigenschaft einer [**EC- \_ Variante**](/windows/desktop/api/Evcoll/ns-evcoll-ec_variant) zu maskieren, um den Typ des Variant-Werts zu extrahieren.
+Wird verwendet, um das Arraybit aus der **Type-Eigenschaft** einer [**EC \_ VARIANT-Eigenschaft**](/windows/desktop/api/Evcoll/ns-evcoll-ec_variant) zu maskieren, um den Typ des Variantwerts zu extrahieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_VARIANT_TYPE_ARRAY"></span><span id="ec_variant_type_array"></span>**Type-Array der EC- \_ Variante \_ \_**
+<span id="EC_VARIANT_TYPE_ARRAY"></span><span id="ec_variant_type_array"></span>**EC \_ VARIANT \_ TYPE \_ ARRAY**
 </dt> <dd> <dl> <dt>
 
 128 (0x80)
@@ -53,12 +53,12 @@ Wird verwendet, um das arraybit aus der **Type** -Eigenschaft einer [**EC- \_ Va
 
 
 
-Wenn dieses Bit in der **Type** -Eigenschaft einer EC- [**\_ Variante**](/windows/desktop/api/Evcoll/ns-evcoll-ec_variant)festgelegt wird, enthält die Variante einen Zeiger auf ein Array von Werten anstatt auf den Wert selbst.
+Wenn dieses Bit in der **Type-Eigenschaft** einer [**EC \_ VARIANT-Eigenschaft**](/windows/desktop/api/Evcoll/ns-evcoll-ec_variant)festgelegt ist, enthält die Variante einen Zeiger auf ein Array von Werten, anstatt auf den Wert selbst.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_READ_ACCESS"></span><span id="ec_read_access"></span>**EC- \_ Lese \_ Zugriff**
+<span id="EC_READ_ACCESS"></span><span id="ec_read_access"></span>**\_ \_ EC-LESEZUGRIFF**
 </dt> <dd> <dl> <dt>
 
 1
@@ -66,12 +66,12 @@ Wenn dieses Bit in der **Type** -Eigenschaft einer EC- [**\_ Variante**](/window
 
 
 
-Lese Zugriffs Steuerungs Berechtigung, die das Lesen von Informationen aus dem Ereignis Sammler ermöglicht.
+Lesezugriffssteuerungsberechtigung, mit der Informationen aus dem Ereignissammler gelesen werden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_WRITE_ACCESS"></span><span id="ec_write_access"></span>**EC- \_ Schreib \_ Zugriff**
+<span id="EC_WRITE_ACCESS"></span><span id="ec_write_access"></span>**\_ \_ EC-SCHREIBZUGRIFF**
 </dt> <dd> <dl> <dt>
 
 2
@@ -79,12 +79,12 @@ Lese Zugriffs Steuerungs Berechtigung, die das Lesen von Informationen aus dem E
 
 
 
-Berechtigung zum Schreiben der Zugriffs Steuerung, die das Schreiben von Informationen in den Ereignis Sammler ermöglicht.
+Schreibzugriffssteuerungsberechtigung, mit der Informationen in den Ereignissammler geschrieben werden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_OPEN_ALWAYS"></span><span id="ec_open_always"></span>**EC \_ \_ immer öffnen**
+<span id="EC_OPEN_ALWAYS"></span><span id="ec_open_always"></span>**EC \_ OPEN \_ ALWAYS**
 </dt> <dd> <dl> <dt>
 
 0
@@ -92,12 +92,12 @@ Berechtigung zum Schreiben der Zugriffs Steuerung, die das Schreiben von Informa
 
 
 
-Öffnet ein vorhandenes Abonnement oder erstellt das Abonnement, wenn es nicht vorhanden ist. Wird von der [**ecopenabonnementmethode**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) verwendet.
+Öffnet ein vorhandenes Abonnement oder erstellt das Abonnement, wenn es nicht vorhanden ist. Wird von der [**EcOpenSubscription-Methode**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) verwendet.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_CREATE_NEW"></span><span id="ec_create_new"></span>**EC \_ Create \_ New**
+<span id="EC_CREATE_NEW"></span><span id="ec_create_new"></span>**EC \_ CREATE \_ NEW**
 </dt> <dd> <dl> <dt>
 
 1
@@ -105,12 +105,12 @@ Berechtigung zum Schreiben der Zugriffs Steuerung, die das Schreiben von Informa
 
 
 
-Ein Flag, das an die Funktion [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) übermittelt wird und angibt, dass ein neues Abonnement erstellt werden soll.
+Ein Flag, das an die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) übergeben wird, um anzugeben, dass ein neues Abonnement erstellt werden soll.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="EC_OPEN_EXISTING"></span><span id="ec_open_existing"></span>**EC \_ Open \_ vorhanden**
+<span id="EC_OPEN_EXISTING"></span><span id="ec_open_existing"></span>**EC \_ OPEN \_ EXISTING**
 </dt> <dd> <dl> <dt>
 
 2
@@ -118,7 +118,7 @@ Ein Flag, das an die Funktion [**ecopenabonnement**](/windows/desktop/api/Evcoll
 
 
 
-Ein Flag, das an die Funktion [**ecopenabonnement**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) übermittelt wird und angibt, dass ein vorhandenes Abonnement geöffnet werden soll.
+Ein Flag, das an die [**EcOpenSubscription-Funktion**](/windows/desktop/api/Evcoll/nf-evcoll-ecopensubscription) übergeben wird, um anzugeben, dass ein vorhandenes Abonnement geöffnet werden soll.
 
 
 </dt> </dl> </dd> </dl>
@@ -131,7 +131,7 @@ Ein Flag, das an die Funktion [**ecopenabonnement**](/windows/desktop/api/Evcoll
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Evcoll. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Evcoll.h</dt> </dl> |
 
 
 

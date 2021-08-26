@@ -1,55 +1,55 @@
 ---
-title: Absturz Abbild Analyse
-description: Dieser technische Artikel enthält Informationen zum Schreiben und Verwenden eines minidumpdiensts.
+title: Absturzabbildanalyse
+description: Dieser technische Artikel enthält Informationen zum Schreiben und Verwenden eines Minidumps.
 ms.assetid: 575c4716-18c2-7b11-7308-aa2e3d8efac7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7558e47d08cb0183b8d9cefa5f22f0750fd1c598
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a3c68891e2e20938036bd016e6e786a2cdad0096ae44af0e8974a88052963be0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075520"
 ---
-# <a name="crash-dump-analysis"></a>Absturz Abbild Analyse
+# <a name="crash-dump-analysis"></a>Absturzabbildanalyse
 
-Vor der Freigabe können nicht alle Fehler gefunden werden. Dies bedeutet, dass nicht alle Fehler, die Ausnahmen auslösen, vor der Freigabe gefunden werden können. Glücklicherweise hat Microsoft in das Platform SDK eine Funktion integriert, um Entwicklern bei der Erfassung von Informationen zu Ausnahmen zu helfen, die von Benutzern erkannt werden. Die [**minidumpschreitedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion schreibt die erforderlichen Absturz Abbild Informationen in eine Datei, ohne den gesamten Prozessbereich zu speichern. Diese Datei mit Absturz Abbild Informationen wird als Minidump bezeichnet. Dieser technische Artikel enthält Informationen zum Schreiben und Verwenden eines minidumpdiensts.
+Nicht alle Fehler können vor der Veröffentlichung gefunden werden. Das bedeutet, dass nicht alle Fehler, die Ausnahmen auslösen, vor dem Release gefunden werden können. Glücklicherweise hat Microsoft eine Funktion in das Platform SDK integriert, mit der Entwickler Informationen zu Ausnahmen sammeln können, die von Benutzern erkannt werden. Die [**MiniDumpWriteDump-Funktion**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) schreibt die erforderlichen Absturzabbildinformationen in eine Datei, ohne den gesamten Prozessspeicherplatz zu sparen. Diese Absturzabbild-Informationsdatei wird als Minidump bezeichnet. Dieser technische Artikel enthält Informationen zum Schreiben und Verwenden eines Minidumps.
 
 -   [Schreiben eines Minidumps](#writing-a-minidump)
--   [Thread Sicherheit](#thread-safety)
--   [Schreiben eines minidumpcodes mit Code](#writing-a-minidump-with-code)
+-   [Threadsicherheit](#thread-safety)
+-   [Schreiben eines Minidumps mit Code](#writing-a-minidump-with-code)
 -   [Verwenden von Dumpchk.exe](#using-dumpchkexe)
--   [Analysieren eines minidumpdiensts](#analyzing-a-minidump)
-    -   [Verwenden des öffentlichen Symbol Servers von Microsoft](#using-the-microsoft-public-symbol-server)
+-   [Analysieren eines Minidumps](#analyzing-a-minidump)
+    -   [Verwenden des öffentlichen Microsoft-Symbolservers](#using-the-microsoft-public-symbol-server)
     -   [Debuggen eines Minidumps mit WinDbg](#debugging-a-minidump-with-windbg)
     -   [Verwenden von Copy-Protection Tools mit Minidumps](#using-copy-protection-tools-with-minidumps)
 -   [Zusammenfassung](#summary)
 
 ## <a name="writing-a-minidump"></a>Schreiben eines Minidumps
 
-Die grundlegenden Optionen zum Schreiben eines Minidumps lauten wie folgt:
+Die grundlegenden Optionen zum Schreiben eines Minidumps sind wie folgt:
 
--   Sie unternehmen nichts. Windows generiert automatisch ein Minidump, wenn ein Programm eine nicht behandelte Ausnahme auslöst. Die automatische Generierung eines minidumpdiensts ist seit Windows XP verfügbar. Wenn der Benutzer dies zulässt, wird das Minidump über Windows-Fehlerberichterstattung (wer) an Microsoft gesendet und nicht an den Entwickler. Entwickler können über das [Windows-Desktop Anwendungsprogramm](../appxpkg/windows-desktop-application-program.md)auf diese Minidumps zugreifen.
+-   Sie unternehmen nichts. Windows generiert automatisch einen Minidump, wenn ein Programm eine nicht behandelte Ausnahme auslöst. Die automatische Generierung eines Minidumps ist seit Windows XP verfügbar. Wenn der Benutzer dies zulässt, wird der Minidump über Windows-Fehlerberichterstattung (WER) an Microsoft und nicht an den Entwickler gesendet. Entwickler können über das [Windows Desktopanwendungsprogramm](../appxpkg/windows-desktop-application-program.md)auf diese Minidumps zugreifen.
 
-    Die Verwendung von wer erfordert Folgendes:
+    Die Verwendung von WER erfordert:
 
-    -   Entwickler zum Signieren Ihrer Anwendungen mit Authenticode
-    -   Anwendungen verfügen über eine gültige VERSIONINFO-Ressource in jeder ausführbaren Datei und dll.
+    -   Entwickler zum Signieren ihrer Anwendungen mit Authenticode
+    -   Anwendungen verfügen in jeder ausführbaren Datei und DLL über eine gültige VERSIONINFO-Ressource.
 
-    Wenn Sie eine benutzerdefinierte Routine für nicht behandelte Ausnahmen implementieren, werden Sie nachdrücklich aufgefordert, die [**Report Fault**](/windows/desktop/api/errorrep/nf-errorrep-reportfault) -Funktion im Ausnahmehandler zu verwenden, um auch einen automatisierten Minidump an wer zu senden. Die Funktion **Report Fault** behandelt alle Probleme, die beim Herstellen einer Verbindung mit und dem Senden des Minidump an wer auftreten. Das Senden von Minidumps an wer verstößt gegen die Anforderungen von Spielen für Windows.
+    Wenn Sie eine benutzerdefinierte Routine für nicht behandelte Ausnahmen implementieren, werden Sie dringend aufgefordert, die [**ReportFault-Funktion**](/windows/desktop/api/errorrep/nf-errorrep-reportfault) im Ausnahmehandler zu verwenden, um auch einen automatisierten Minidump an WER zu senden. Die **ReportFault-Funktion** behandelt alle Probleme beim Herstellen einer Verbindung mit und dem Senden des Minidumps an WER. Das Senden von Minidumps an WER verstößt gegen die Anforderungen von Games for Windows.
 
-    Weitere Informationen zur Funktionsweise von wer finden Sie unter [Funktionsweise von Windows-Fehlerberichterstattung](https://www.microsoft.com/whdc/maintain/WER/WERWorks.mspx). Eine Erläuterung der Registrierungsdetails finden Sie unter [Introducing Windows-Fehlerberichterstattung](https://msdn.microsoft.com/) in der MSDN- [ISV-Zone](https://msdn.microsoft.com/).
+    Weitere Informationen zur Funktionsweise von WER finden Sie unter [Funktionsweise von Windows-Fehlerberichterstattung](https://www.microsoft.com/whdc/maintain/WER/WERWorks.mspx). Eine Erläuterung der Registrierungsdetails finden Sie unter Introducing Windows-Fehlerberichterstattung on MSDN es ISV Zone [(Einführung in Windows-Fehlerberichterstattung](https://msdn.microsoft.com/) in der [ISV-Zone](https://msdn.microsoft.com/)von MSDN).
 
--   Verwenden Sie ein Produkt aus dem Microsoft Visual Studio Team System. Klicken Sie im Menü **Debuggen** auf **Dump speichern** unter, um eine Kopie eines dumpspeichers zu speichern. Die Verwendung eines lokal gespeicherten dumpdiensts ist nur eine Option für internes testen und Debuggen.
--   Fügen Sie Ihrem Projekt Code hinzu. Fügen Sie die [**minidumpbeschreib tedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion und den entsprechenden Code für die Ausnahmebehandlung hinzu, um ein Minidump direkt an den Entwickler zu speichern und zu senden. In diesem Artikel wird veranschaulicht, wie diese Option implementiert wird. Beachten Sie jedoch, dass **minidumpbeschreib tedump** derzeit nicht mit verwaltetem Code funktioniert und nur unter Windows XP, Windows Vista, Windows 7 verfügbar ist.
+-   Verwenden Sie ein Produkt aus dem Microsoft Visual Studio Team System. Klicken Sie im Menü **Debuggen** auf **Speicherabbild speichern unter** , um eine Kopie eines Speicherabbilds zu speichern. Die Verwendung eines lokal gespeicherten Speicherabbilds ist nur eine Option für das lokale Testen und Debuggen.
+-   Fügen Sie Code zu Ihrem Projekt hinzu. Fügen Sie die [**MiniDumpWriteDump-Funktion**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) und den entsprechenden Ausnahmebehandlungscode hinzu, um einen Minidump direkt an den Entwickler zu speichern und zu senden. In diesem Artikel wird veranschaulicht, wie Diese Option implementiert wird. Beachten Sie jedoch, dass **MiniDumpWriteDump** derzeit nicht mit verwaltetem Code funktioniert und nur auf Windows XP, Windows Vista Windows 7 verfügbar ist.
 
 ## <a name="thread-safety"></a>Threadsicherheit
 
-[**Minidumpschreitedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) ist Teil der DbgHelp-Bibliothek. Diese Bibliothek ist nicht Thread sicher, daher sollte jedes Programm, das **minidumpschreitedump** verwendet, alle Threads synchronisieren, bevor versucht wird, **minidumpschreitedump** aufzurufen.
+[**MiniDumpWriteDump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) ist Teil der DBGHELP-Bibliothek. Diese Bibliothek ist nicht threadsicher, daher sollte jedes Programm, das **MiniDumpWriteDump** verwendet, alle Threads synchronisieren, bevor versucht **wird, MiniDumpWriteDump** aufzurufen.
 
-## <a name="writing-a-minidump-with-code"></a>Schreiben eines minidumpcodes mit Code
+## <a name="writing-a-minidump-with-code"></a>Schreiben eines Minidumps mit Code
 
-Die tatsächliche Implementierung ist einfach. Im folgenden finden Sie ein einfaches Beispiel für die Verwendung von [**minidumpschreitedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump).
+Die tatsächliche Implementierung ist einfach. Im Folgenden wird ein einfaches Beispiel für die Verwendung von [**MiniDumpWriteDump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)veranschaulicht.
 
 
 ```C++
@@ -109,72 +109,72 @@ void SomeFunction()
 
 
 
-Dieses Beispiel veranschaulicht die grundlegende Verwendung von [**minidumpbeschreib tedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) und die minimalen Informationen, die erforderlich sind, um es aufzurufen. Der Name der Dumpdatei ist für den Entwickler. um Dateinamen Konflikte zu vermeiden, empfiehlt es sich jedoch, den Dateinamen aus dem Namen und der Versionsnummer der Anwendung, die Prozess-und Thread-IDs sowie das Datum und die Uhrzeit zu generieren. Dies trägt auch dazu bei, dass die Minidumps nach Anwendung und Version gruppiert bleiben. Der Entwickler kann entscheiden, wie viele Informationen zur Unterscheidung von Minidump-Dateinamen verwendet werden.
+In diesem Beispiel werden die grundlegende Verwendung von [**MiniDumpWriteDump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) und die für den Aufruf erforderlichen Mindestinformationen veranschaulicht. Der Name der Speicherabbilddatei liegt beim Entwickler. Um Dateinamenkonflikte zu vermeiden, empfiehlt es sich jedoch, den Dateinamen aus dem Namen und der Versionsnummer der Anwendung, den Prozess- und Thread-IDs sowie dem Datum und der Uhrzeit zu generieren. Dies hilft auch dabei, die Minidumps nach Anwendung und Version gruppiert zu halten. Der Entwickler muss entscheiden, wie viele Informationen zur Unterscheidung von Minidump-Dateinamen verwendet werden.
 
-Beachten Sie, dass der Pfadname im vorangehenden Beispiel durch Aufrufen der [**GetTempPath**](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) -Funktion generiert wurde, um den Pfad des für temporäre Dateien vorgesehenen Verzeichnisses abzurufen. Die Verwendung dieses Verzeichnisses funktioniert auch mit Benutzerkonten mit den geringsten Rechten. Außerdem wird verhindert, dass der Minidump Festplattenspeicher belegt, wenn er nicht mehr benötigt wird.
+Beachten Sie, dass der Pfadname im vorherigen Beispiel durch Aufrufen der [**GetTempPath-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-gettemppatha) generiert wurde, um den Pfad des Verzeichnisses abzurufen, das für temporäre Dateien festgelegt ist. Die Verwendung dieses Verzeichnisses funktioniert auch bei Benutzerkonten mit den geringsten Berechtigungen und verhindert außerdem, dass der Minidump Festplattenspeicher einnimmt, nachdem er nicht mehr benötigt wird.
 
-Wenn Sie das Produkt während des täglichen Buildvorgangs archivieren, achten Sie auch darauf, dass Sie Symbole für den Build einschließen, damit Sie ggf. eine alte Version des Produkts Debuggen können. Außerdem müssen Sie Maßnahmen ergreifen, um bei der Erstellung von Symbolen vollständige Compileroptimierungen zu erhalten. Dies können Sie erreichen, indem Sie die Eigenschaften des Projekts in der Entwicklungsumgebung öffnen und für die Releasekonfiguration Folgendes ausführen:
+Wenn Sie das Produkt während des täglichen Buildprozesses archivieren, stellen Sie außerdem sicher, dass Sie Symbole für den Build einschließen, damit Sie bei Bedarf eine alte Version des Produkts debuggen können. Sie müssen auch Schritte ausführen, um vollständige Compileroptimierungen beim Generieren von Symbolen beizubehalten. Öffnen Sie hierzu die Eigenschaften Ihres Projekts in der Entwicklungsumgebung, und gehen Sie für die Releasekonfiguration wie folgt vor:
 
-1.  Klicken Sie auf der linken Seite der Eigenschaften Seite des Projekts auf C/C++. In der Standardeinstellung werden **Allgemeine** Einstellungen angezeigt. Legen Sie auf der rechten Seite der Eigenschaften Seite des Projekts **Debug-Informations Format** auf **Programmdatenbank (/Zi)** fest.
-2.  Erweitern Sie auf der linken Seite der Eigenschaften Seite **Linker**, und klicken Sie dann auf **Debuggen**. Legen Sie auf der rechten Seite der Eigenschaften Seite **Debuginformationen generieren** auf **Ja (/Debug)** fest.
-3.  Klicken Sie auf **Optimierung**, und legen Sie **Verweise** auf **nicht referenzierte Daten (/opt: Ref)** fest.
-4.  Legen Sie **COMDAT-Faltung aktivieren** fest, um **Redundante COMDATs (/opt: ICF) zu entfernen**.
+1.  Klicken Sie links auf der Eigenschaftenseite des Projekts auf C/C++. Standardmäßig werden hier **allgemeine** Einstellungen angezeigt. Legen Sie rechts auf der Eigenschaftenseite des Projekts **Debuginformationsformat** auf **Programmdatenbank (/Zi)** fest.
+2.  Erweitern Sie links auf der Eigenschaftenseite **linker**, und klicken Sie dann auf **Debuggen.** Legen Sie auf der rechten Seite der Eigenschaftenseite **Debuginformationen generieren** auf **Ja (/DEBUG)** fest.
+3.  Klicken Sie auf **Optimierung**, und legen Sie **Verweise** auf Nicht **referenzierte Daten (/OPT:REF)** fest.
+4.  Legen **Sie COMDAT Folding aktivieren** fest, um **redundante COMDATs (/OPT:ICF)** zu entfernen.
 
-MSDN enthält ausführlichere Informationen zur [**Minidump- \_ Ausnahme \_ Informations**](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-minidump_exception_information) Struktur und der [**minidumpbeschreib tedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion.
+MSDN enthält ausführlichere Informationen zur [**MINIDUMP \_ EXCEPTION \_ INFORMATION-Struktur**](/windows/desktop/api/minidumpapiset/ns-minidumpapiset-minidump_exception_information) und zur [**MiniDumpWriteDump-Funktion.**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)
 
 ## <a name="using-dumpchkexe"></a>Verwenden von Dumpchk.exe
 
-Dumpchk.exe ist ein Befehlszeilenprogramm, das verwendet werden kann, um zu überprüfen, ob eine Dumpdatei ordnungsgemäß erstellt wurde. Wenn Dumpchk.exe einen Fehler generiert, ist die Dumpdatei beschädigt und kann nicht analysiert werden. Weitere Informationen zur Verwendung von Dumpchk.exe finden [Sie unter Verwenden von Dumpchk.exe zum Überprüfen einer Speicher](https://support.microsoft.com/kb/315271/)Abbild Datei.
+Dumpchk.exe ist ein Befehlszeilenprogramm, mit dem überprüft werden kann, ob eine Sicherungsdatei ordnungsgemäß erstellt wurde. Wenn Dumpchk.exe einen Fehler generiert, ist die Dumpdatei beschädigt und kann nicht analysiert werden. Informationen zur Verwendung von Dumpchk.exe finden Sie unter [Verwenden von Dumpchk.exe zum Überprüfen einer Speicherabbilddatei.](https://support.microsoft.com/kb/315271/)
 
-Dumpchk.exe ist auf der Windows XP-Produkt-CD enthalten und kann auf System Drive \\ Program Files-Support Tools installiert werden, \\ \\ indem Setup.exe im Ordner "Support \\ Tools" \\ auf der Windows XP-Produkt-CD ausgeführt wird. Sie können auch die neueste Version von Dumpchk.exe herunterladen, indem Sie die Debugtools herunterladen und installieren, die in den [Windows-Debugtools](https://www.microsoft.com/whdc/devtools/debugging/) unter [Windows Hardware Developer Central](https://www.microsoft.com/whdc/)verfügbar
+Dumpchk.exe ist auf der Windows XP-Produkt-CD enthalten und kann in den Supporttools für Systemlaufwerkprogrammdateien installiert werden, \\ indem Setup.exe im Ordner \\ \\ \\ Supporttools auf der \\ produkt-CD Windows XP ausgeführt wird. Sie können auch die neueste Version von Dumpchk.exe abrufen, indem Sie die Debugtools herunterladen und installieren, die über [Windows Debugtools](https://www.microsoft.com/whdc/devtools/debugging/) auf [Windows Hardware Developer Central](https://www.microsoft.com/whdc/)verfügbar sind.
 
-## <a name="analyzing-a-minidump"></a>Analysieren eines minidumpdiensts
+## <a name="analyzing-a-minidump"></a>Analysieren eines Minidumps
 
-Das Öffnen eines Minidump für die Analyse ist so einfach wie das Erstellen eines Minidump.
+Das Öffnen eines Minidumps für die Analyse ist so einfach wie das Erstellen eines Minidumps.
 
-**So analysieren Sie ein Minidump**
+**So analysieren Sie einen Minidump**
 
 1.  Öffnen Sie Visual Studio.
-2.  Klicken Sie im Menü **Datei** auf **Projekt öffnen**.
-3.  Legen Sie **Dateityp** auf **Dumpdateien** fest, navigieren Sie zu der Dumpdatei, wählen Sie Sie aus, und klicken Sie auf **Öffnen.**
+2.  Klicken Sie im Menü **Datei** auf **Project öffnen.**
+3.  Legen Sie **Dateien vom Typ** auf **Dumpdateien** fest, navigieren Sie zur Dumpdatei, wählen Sie sie aus, und klicken Sie auf **Öffnen.**
 4.  Führen Sie den Debugger aus.
 
 Der Debugger erstellt einen simulierten Prozess. Der simulierte Prozess wird bei der Anweisung angehalten, die den Absturz verursacht hat.
 
-### <a name="using-the-microsoft-public-symbol-server"></a>Verwenden des öffentlichen Symbol Servers von Microsoft
+### <a name="using-the-microsoft-public-symbol-server"></a>Verwenden des öffentlichen Microsoft-Symbolservers
 
-Um den Stapel für Abstürze auf Treiber-oder Systemebene zu erhalten, kann es erforderlich sein, Visual Studio so zu konfigurieren, dass er auf den öffentlichen Microsoft-Symbol Server verweist.
+Um den Stapel für Abstürze auf Treiber- oder Systemebene abzurufen, ist es möglicherweise erforderlich, Visual Studio so zu konfigurieren, dass er auf den öffentlichen Microsoft-Symbolserver verweist.
 
-**So legen Sie einen Pfad zum Microsoft-Symbol Server fest**
+**So legen Sie einen Pfad zum Microsoft-Symbolserver fest**
 
 1.  Klicken Sie im Menü **Debuggen** auf **Optionen**.
-2.  Öffnen Sie im Dialogfeld **Optionen** den Knoten **Debuggen** , und klicken Sie auf **Symbole**.
-3.  Stellen Sie sicher, dass Sie **die obigen Speicherorte nur durchsuchen, wenn Symbole manuell geladen werden** nicht ausgewählt ist, es sei denn, Sie möchten Symbole beim Debuggen manuell laden
-4.  Wenn Sie Symbole auf einem Remote Symbol Server verwenden, können Sie die Leistung verbessern, indem Sie ein lokales Verzeichnis angeben, in das Symbole kopiert werden können. Geben Sie hierzu einen Pfad für **das Zwischenspeichern von Symbolen von Symbol Server zu diesem Verzeichnis** ein. Zum Herstellen einer Verbindung mit dem öffentlichen Symbol Server von Microsoft müssen Sie diese Einstellung aktivieren. Beachten Sie Folgendes: Wenn Sie ein Programm auf einem Remote Computer Debuggen, verweist das Cache Verzeichnis auf ein Verzeichnis auf dem Remote Computer.
+2.  Öffnen **Sie** im Dialogfeld Optionen den Knoten **Debuggen,** und klicken Sie auf **Symbole.**
+3.  Stellen Sie sicher, dass **Die oben genannten Speicherorte nur dann suchen, wenn Symbole manuell geladen werden** nicht ausgewählt ist, es sei denn, Sie möchten Symbole beim Debuggen manuell laden.
+4.  Wenn Sie Symbole auf einem Remotesymbolserver verwenden, können Sie die Leistung verbessern, indem Sie ein lokales Verzeichnis angeben, in das Symbole kopiert werden können. Geben Sie hierzu einen Pfad für **Symbole zwischenspeichern vom Symbolserver zu diesem Verzeichnis** ein. Um eine Verbindung mit dem öffentlichen Microsoft-Symbolserver herzustellen, müssen Sie diese Einstellung aktivieren. Beachten Sie, dass sich das Cacheverzeichnis beim Debuggen eines Programms auf einem Remotecomputer auf ein Verzeichnis auf dem Remotecomputer bezieht.
 5.  Klicken Sie auf **OK**.
-6.  Da Sie den öffentlichen Microsoft-Symbol Server verwenden, wird das Dialogfeld Endbenutzer-Lizenzvertrag angezeigt. Klicken Sie auf **Ja** , um die Vereinbarung zu akzeptieren und Symbole in Ihren lokalen Cache herunterzuladen.
+6.  Da Sie den öffentlichen Microsoft-Symbolserver verwenden, wird das Dialogfeld Endbenutzer-Lizenzvertrag angezeigt. Klicken Sie auf **Ja,** um die Vereinbarung zu akzeptieren und Symbole in Ihren lokalen Cache herunterzuladen.
 
 ### <a name="debugging-a-minidump-with-windbg"></a>Debuggen eines Minidumps mit WinDbg
 
-Sie können auch WinDbg verwenden, einen Debugger, der Teil der Windows-Debuggingtools ist, um ein Minidump zu debuggen. WinDbg ermöglicht das Debuggen, ohne Visual Studio verwenden zu müssen. Informationen zum Herunterladen der Windows-Debuggingtools finden Sie unter Windows- [Debugtools](https://www.microsoft.com/whdc/devtools/debugging/) unter [Windows Hardware](https://www.microsoft.com/whdc/)
+Sie können auch WinDbg verwenden, einen Debugger, der Teil der Windows Debugtools ist, um einen Minidump zu debuggen. Mit WinDbg können Sie debuggen, ohne Visual Studio verwenden zu müssen. Informationen zum Herunterladen Windows Debugtools finden Sie unter [Windows Debugtools](https://www.microsoft.com/whdc/devtools/debugging/) auf [Windows Hardware Developer Central](https://www.microsoft.com/whdc/).
 
-Nachdem Sie die Windows-Debuggingtools installiert haben, müssen Sie den Symbol Pfad in WinDbg eingeben.
+Nach der Installation Windows Debugtools müssen Sie den Symbolpfad in WinDbg eingeben.
 
-**So geben Sie einen Symbol Pfad in WinDbg ein**
+**So geben Sie einen Symbolpfad in WinDbg ein**
 
-1.  Klicken Sie im Menü **Datei** auf **Symbol Pfad**.
-2.  Geben Sie im Fenster **Symbol Suchpfad** Folgendes ein:
+1.  Klicken Sie im Menü **Datei** auf **Symbolpfad**.
+2.  Geben Sie im Fenster **Symbolsuchepfad** Folgendes ein:
 
-    "SRV \* c: \\ Cache \* https://msdl.microsoft.com/download/symbols ;"
+    "srv \* c: \\ cache \* https://msdl.microsoft.com/download/symbols ;"
 
 ### <a name="using-copy-protection-tools-with-minidumps"></a>Verwenden von Copy-Protection Tools mit Minidumps
 
-Entwickler müssen auch wissen, wie sich das Kopierschutz Schema auf das Minidump auswirken könnte. Die meisten Kopierschutz Schemas verfügen über eigene, abzurufbare Tools, und es ist für den Entwickler zu erfahren, wie diese Tools mit [**minidumpschreitedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)verwendet werden.
+Entwickler müssen auch wissen, wie sich ihr Kopierschutzschema auf den Minidump auswirken kann. Die meisten Kopierschutzschemas verfügen über eigene Descramble-Tools, und der Entwickler muss lernen, wie diese Tools mit [**MiniDumpWriteDump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)verwendet werden.
 
 ## <a name="summary"></a>Zusammenfassung
 
-Die [**minidumpschreitedump**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) -Funktion kann ein äußerst nützliches Tool zum Erfassen und lösen von Fehlern sein, nachdem das Produkt veröffentlicht wurde. Durch das Schreiben eines benutzerdefinierten Ausnahme Handlers, der **MiniDumpWriteDump** verwendet, kann der Entwickler die Informationssammlung anpassen und den Debugprozess verbessern. Die-Funktion ist flexibel genug, um in jedem C++ basierten Projekt verwendet zu werden, und sollte als Teil des Stabilitäts Prozesses eines beliebigen Projekts betrachtet werden.
+Die [**MiniDumpWriteDump-Funktion**](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) kann ein äußerst nützliches Tool zum Sammeln und Beheben von Fehlern sein, nachdem das Produkt veröffentlicht wurde. Durch das Schreiben eines benutzerdefinierten Ausnahmehandlers, der **MiniDumpWriteDump** verwendet, kann der Entwickler die Informationssammlung anpassen und den Debugprozess verbessern. Die Funktion ist flexibel genug, um in jedem C++-basierten Projekt verwendet zu werden und sollte als Teil des Stabilitätsprozesses jedes Projekts betrachtet werden.
 
- 
+ 
 
- 
+ 

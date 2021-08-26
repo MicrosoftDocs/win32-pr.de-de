@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Alpha-Methode ruft den Alpha-Wert für das gesamte Bild ab.
+description: Die \_ Methode get Alpha ruft den Alphawert für das gesamte Bild ab.
 ms.assetid: ce891149-e964-4239-aeef-c9f4a8354563
-title: 'Idxtalphasetter:: get_Alpha-Methode (qedit. h)'
+title: IDxtAlphaSetter::get_Alpha-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 6182590d09df1c816a1a861df8be724798cc75da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 054e2a1745f96dc4d6ea846bed0448948fae8407dd6ab44d2796742e405f2e1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367013"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051970"
 ---
-# <a name="idxtalphasetterget_alpha-method"></a>Idxtalphasetter:: get \_ Alpha-Methode
+# <a name="idxtalphasetterget_alpha-method"></a>IDxtAlphaSetter::get \_ Alpha-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `get_Alpha` Methode ruft den Alpha-Wert für das gesamte Bild ab.
+Die `get_Alpha` -Methode ruft den Alphawert für das gesamte Bild ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,37 +45,37 @@ HRESULT get_Alpha(
 
 <dl> <dt>
 
-*Palpha* \[ Out, retval\]
+*pAlpha* \[ out, retval\]
 </dt> <dd>
 
-Empfängt den Alpha-Wert. Dieser Alpha Wert wird auf das gesamte Zielbild angewendet. Ein negativer Wert gibt an, dass kein Alpha Wert festgelegt ist.
+Empfängt den Alphawert. Dieser Alphawert wird auf das gesamte Zielbild angewendet. Ein negativer Wert gibt an, dass kein Alphawert festgelegt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                          |
 |-------------------------------------------------------------------------------------------|--------------------------------------|
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl> | **NULL-Zeigerargument**<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -85,8 +85,8 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -94,7 +94,7 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 <dl> <dt>
 
-[**Idxtalphasetter-Schnittstelle**](idxtalphasetter.md)
+[**IDxtAlphaSetter-Schnittstelle**](idxtalphasetter.md)
 </dt> </dl>
 
  

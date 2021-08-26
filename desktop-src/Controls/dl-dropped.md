@@ -1,9 +1,9 @@
 ---
-title: DL_DROPPED Benachrichtigungs Code (kommctrl. h)
-description: Signalisiert, dass der Benutzer einen Zieh Vorgang durch Loslassen der linken Maustaste abgeschlossen hat. Ein Drag List Box-Element sendet diesen Benachrichtigungs Code in Form einer Drag List-Nachricht an das übergeordnete Fenster. Weitere Informationen finden Sie unter Drag List Box Messages.
+title: DL_DROPPED Benachrichtigungscode (Commctrl.h)
+description: Signalisiert, dass der Benutzer einen Ziehvorgang abgeschlossen hat, indem die linke Maustaste losgelassen wird. Ein Ziehlistenfeld sendet diesen Benachrichtigungscode in Form einer Ziehlistenmeldung an das übergeordnete Fenster. Weitere Informationen finden Sie unter Drag List Box Messages.
 ms.assetid: 81b9b424-2735-407d-bac9-f03ea2f48b4e
 keywords:
-- Windows-Steuerelemente für DL_DROPPED Benachrichtigungs
+- DL_DROPPED Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1b2480360ea38a00c4dd8efe6eb84eed8999890
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c245cbb85a4e67845bd86a25b4cccb2f2aa0dc1d9d9613afd1d685037c5e1ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120002720"
 ---
-# <a name="dl_dropped-notification-code"></a>Benachrichtigungs Code für gelöschte DL \_
+# <a name="dl_dropped-notification-code"></a>DL \_ DROPPED-Benachrichtigungscode
 
-Signalisiert, dass der Benutzer einen Zieh Vorgang durch Loslassen der linken Maustaste abgeschlossen hat. Ein Drag List Box-Element sendet diesen Benachrichtigungs Code in Form einer Drag List-Nachricht an das übergeordnete Fenster. Weitere Informationen finden Sie unter [Drag List Box Messages](about-list-boxes.md).
+Signalisiert, dass der Benutzer einen Ziehvorgang abgeschlossen hat, indem die linke Maustaste losgelassen wird. Ein Ziehlistenfeld sendet diesen Benachrichtigungscode in Form einer Ziehlistenmeldung an das übergeordnete Fenster. Weitere Informationen finden Sie unter [Drag List Box Messages](about-list-boxes.md).
 
 
 ```C++
@@ -41,7 +41,7 @@ DL_DROPPED
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**draglistinfo**](/windows/win32/api/commctrl/ns-commctrl-draglistinfo) -Struktur, die den gelöschten DL \_ -Benachrichtigungs Code, das Handle für das Zieh Listenfeld und die Cursorposition enthält.
+Ein Zeiger auf eine [**DRAGLISTINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-draglistinfo) die den DL \_ DROPPED-Benachrichtigungscode, das Handle für das Ziehlistenfeld und die Cursorposition enthält.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Ein Zeiger auf eine [**draglistinfo**](/windows/win32/api/commctrl/ns-commctrl-d
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Benachrichtigungs Code wird normalerweise verarbeitet, indem das Element eingefügt wird, das vor dem Element unter dem Cursor in die Liste eingefügt wird. Um den Index des Elements an der Cursorposition abzurufen, verwenden Sie die [**lbitemfrompt**](/windows/desktop/api/Commctrl/nf-commctrl-lbitemfrompt) -Funktion. Beachten Sie, dass der \_ gesendete DL-Benachrichtigungs Code auch dann gesendet wird, wenn sich der Cursor nicht in einem Listenelement befindet. In diesem Fall gibt **lbitemfrompt** -1 zurück.
+Dieser Benachrichtigungscode wird normalerweise verarbeitet, indem das Element eingefügt wird, das in die Liste vor dem Element unter dem Cursor gezogen wird. Um den Index des Elements an der Cursorposition abzurufen, verwenden Sie die [**LBItemFromPt-Funktion.**](/windows/desktop/api/Commctrl/nf-commctrl-lbitemfrompt) Beachten Sie, dass der \_ DL DROPPED-Benachrichtigungscode auch dann gesendet wird, wenn sich der Cursor nicht in einem Listenelement befindet. In diesem Fall gibt **LBItemFromPt** -1 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Dieser Benachrichtigungs Code wird normalerweise verarbeitet, indem das Element 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

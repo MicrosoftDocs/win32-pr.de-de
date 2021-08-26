@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die TransformVectors-Methoden der Matrix Klasse aufgelistet. Eine umfassende Liste der Methoden für die Matrix Klasse finden Sie unter Matrix Methoden.
+description: In diesem Thema werden die TransformVectors-Methoden der Matrix-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Matrix-Klasse finden Sie unter Matrixmethoden.
 ms.assetid: 6a2ed6a7-825a-422b-b035-b88746f3ab5d
-title: Matrix. TransformVectors-Methoden (gdiplus Matrix. h)
+title: Matrix.TransformVectors-Methoden (Gdiplusmatrix.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 3bdb67d839163ffe2d26623a01fc186f8e885ca2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 732beef5da2fedb98db4c09ab851ea18973ba7a42c3946199bbdbe7562523241
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104982900"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119888810"
 ---
-# <a name="matrixtransformvectors-methods"></a>Matrix. TransformVectors-Methoden
+# <a name="matrixtransformvectors-methods"></a>Matrix.TransformVectors-Methoden
 
-In diesem Thema werden die TransformVectors-Methoden der [**Matrix**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Matrix** Klasse finden Sie unter [Matrix Methoden](-gdiplus-class-matrix-methods.md).
+In diesem Thema werden die TransformVectors-Methoden der [**Matrix-Klasse**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) aufgelistet. Eine vollständige Liste der Methoden für die **Matrix-Klasse** finden Sie unter [Matrixmethoden.](-gdiplus-class-matrix-methods.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,18 +21,18 @@ In diesem Thema werden die TransformVectors-Methoden der [**Matrix**](/windows/w
 
 | Methode                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                      |
 |:-------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**TransformVectors (Punkt \* , int)**](/windows/win32/api/gdiplusmatrix/nf-gdiplusmatrix-matrix-transformvectors(inoutpoint_inint))   | Die [**Matrix:: TransformVectors**](/windows/win32/api/gdiplusmatrix/nf-gdiplusmatrix-matrix-transformvectors(inoutpoint_inint)) -Methode multipliziert jeden Vektor in einem Array mit dieser Matrix. Die zu verschiebenden Elemente dieser Matrix (dritte Zeile) werden ignoriert. Jeder Vektor wird als Zeilen Matrix behandelt. Die Multiplikation wird mit der Zeilen Matrix auf der linken Seite und dieser Matrix auf der rechten Seite ausgeführt.<br/>  |
-| [**TransformVectors (PointF \* , int)**](/previous-versions//ms535319(v=vs.85)) | Die [**Matrix:: TransformVectors**](/previous-versions//ms535319(v=vs.85)) -Methode multipliziert jeden Vektor in einem Array mit dieser Matrix. Die zu verschiebenden Elemente dieser Matrix (dritte Zeile) werden ignoriert. Jeder Vektor wird als Zeilen Matrix behandelt. Die Multiplikation wird mit der Zeilen Matrix auf der linken Seite und dieser Matrix auf der rechten Seite ausgeführt.<br/> |
+| [**TransformVectors(Point \* , INT)**](/windows/win32/api/gdiplusmatrix/nf-gdiplusmatrix-matrix-transformvectors(inoutpoint_inint))   | Die [**Matrix::TransformVectors-Methode**](/windows/win32/api/gdiplusmatrix/nf-gdiplusmatrix-matrix-transformvectors(inoutpoint_inint)) multipliziert jeden Vektor in einem Array mit dieser Matrix. Die zu verschiebenden Elemente dieser Matrix (dritte Zeile) werden ignoriert. Jeder Vektor wird als Zeilenmatrix behandelt. Die Multiplikation wird mit der Zeilenmatrix links und dieser Matrix auf der rechten Seite ausgeführt.<br/>  |
+| [**TransformVectors(PointF, \* INT)**](/previous-versions//ms535319(v=vs.85)) | Die [**Matrix::TransformVectors-Methode**](/previous-versions//ms535319(v=vs.85)) multipliziert jeden Vektor in einem Array mit dieser Matrix. Die zu verschiebenden Elemente dieser Matrix (dritte Zeile) werden ignoriert. Jeder Vektor wird als Zeilenmatrix behandelt. Die Multiplikation wird mit der Zeilenmatrix links und dieser Matrix auf der rechten Seite ausgeführt.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdiplus Matrix. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusmatrix.h</dt> </dl> |
 
 
 

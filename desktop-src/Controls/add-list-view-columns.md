@@ -1,37 +1,37 @@
 ---
-title: Vorgehensweise beim Hinzufügen von List-View Spalten
-description: In diesem Thema wird veranschaulicht, wie Sie einem Listenansicht-Steuerelement Spalten hinzufügen.
+title: Hinzufügen von List-View Spalten
+description: In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Spalten hinzugefügt werden.
 ms.assetid: 9DBDFF56-7CD6-467C-AD2E-64213615E241
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75e478c57a31fdd7ad91e0089106e93c24c47d5c
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: ee71065729502410d189493527af0e3e37663a4a2aaf541852454af7fa4a5aac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922080"
 ---
-# <a name="how-to-add-list-view-columns"></a>Vorgehensweise beim Hinzufügen von List-View Spalten
+# <a name="how-to-add-list-view-columns"></a>Hinzufügen von List-View Spalten
 
-In diesem Thema wird veranschaulicht, wie Sie einem Listenansicht-Steuerelement Spalten hinzufügen. Spalten werden verwendet, um die Elemente und unter Elemente anzuzeigen, wenn sich ein Listenansicht-Steuerelement in der Berichtsansicht (Details) befindet. Text aus ausgewählten Spalten kann auch in der Kachel Ansicht angezeigt werden.
+In diesem Thema wird veranschaulicht, wie Einem Listenansicht-Steuerelement Spalten hinzugefügt werden. Spalten werden verwendet, um die Elemente und Unterelemente anzuzeigen, wenn sich ein Listenansicht-Steuerelement in der Berichtsansicht (Details) befindet. Text aus ausgewählten Spalten kann auch in der Kachelansicht angezeigt werden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Zum Hinzufügen einer Spalte zu einem Listenansicht-Steuerelement senden Sie die [**LVM- \_ InsertColumn**](lvm-insertcolumn.md) -Nachricht, oder verwenden Sie das [**ListView \_ InsertColumn**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) -Makro. Um eine Spalte zu löschen, verwenden Sie die " [**LVM \_ deleteColumn**](lvm-deletecolumn.md) "-Nachricht.
+Um einem Listenansicht-Steuerelement eine Spalte hinzuzufügen, senden Sie die [**LVM \_ INSERTCOLUMN-Nachricht,**](lvm-insertcolumn.md) oder verwenden Sie das [**ListView \_ InsertColumn-Makro.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) Um eine Spalte zu löschen, verwenden Sie die [**LVM \_ DELETECOLUMN-Meldung.**](lvm-deletecolumn.md)
 
-Im folgenden C++-Codebeispiel wird das [**ListView \_ InsertColumn**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) -Makro aufgerufen, um einem Listenansicht-Steuerelement Spalten hinzuzufügen. Die Spaltenüberschriften werden in der Header Datei der Anwendung als Zeichen folgen Ressourcen definiert, die nacheinander beginnend mit den IDs \_ FirstColumn nummeriert werden. Die Anzahl der Spalten wird in der Header Datei als **C- \_ Spalten** definiert.
+Im folgenden C++-Codebeispiel wird das [**ListView \_ InsertColumn-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_insertcolumn) zum Hinzufügen von Spalten zu einem Listenansicht-Steuerelement aufruft. Die Spaltenüberschriften werden in der Headerdatei der Anwendung als Zeichenfolgenressourcen definiert, die nacheinander beginnend mit IDS \_ FIRSTCOLUMN nummeriert werden. Die Anzahl der Spalten wird in der Headerdatei als **C \_ COLUMNS definiert.**
 
 
 ```C++
@@ -82,10 +82,10 @@ BOOL InitListViewColumns(HWND hWndListView)
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[List-View-Steuerelementreferenz](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen List-View Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
 [Verwenden von List-View Steuerelementen](using-list-view-controls.md)

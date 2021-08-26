@@ -1,11 +1,11 @@
 ---
-title: Print-Maximum-Resolution-unterstütztes Attribut
-description: Die maximale Drucker Auflösung.
+title: Print-Max-Resolution-Supported-Attribut
+description: Die maximale Druckerauflösung.
 ms.assetid: 0036d92f-47d1-471d-8bcf-f5a484ab8110
 ms.tgt_platform: multiple
 keywords:
-- Print-Max-Resolution-unterstütztes AD-Schema für Attribute
-- printmaxresolutionsupported-Attribut, AD-Schema
+- Print-Max-Resolution-Supported attribute AD Schema
+- printMaxResolutionSupported-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c99f1aef09f73473b3f1f325e4bc9728fe6ded14
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 9ed462cd8cde4020179ee7c63ae64289345cc45e3704a6185da81a7bf737ece1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120065678"
 ---
-# <a name="print-max-resolution-supported-attribute"></a>Print-Maximum-Resolution-unterstütztes Attribut
+# <a name="print-max-resolution-supported-attribute"></a>Print-Max-Resolution-Supported-Attribut
 
-Die maximale Drucker Auflösung.
+Die maximale Druckerauflösung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Print-Max-Resolution wird unterstützt       |
-| LDAP-Display-Name | printMaxResolutionSupported          |
+| CN                | Print-Max-Resolution-Supported       |
+| Ldap-Anzeigename | printMaxResolutionSupported          |
 | Size              | 4 Bytes                              |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.238               |
-| System-ID-GUID    | 281416cf-1968-11D0-a28f-00aa003049e2 |
+| System-Id-Guid    | 281416cf-1968-11d0-a28f-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die maximale Drucker Auflösung.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Is-Single-Valued       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die maximale Drucker Auflösung.
 |------------------------|------------------------------------------------|
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
-| System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
-| Ist indiziert             | False                                          |
+| System-Only            | Falsch                                          |
+| Ist einwertig       | Richtig                                           |
+| Ist indiziert             | Falsch                                          |
 | Im globalen Katalog      | Richtig                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

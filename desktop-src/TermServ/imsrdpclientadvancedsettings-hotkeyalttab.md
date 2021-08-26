@@ -1,25 +1,25 @@
 ---
-title: IMsRdpClientAdvancedSettings HotKeyAltTab-Eigenschaft
-description: Gibt den Virtuellen Schlüsselcode an, der ALT hinzugefügt werden soll, um den Hotkeyaustausch für ALT+TAB zu bestimmen.
+title: IMsRdpClientAdvancedSettings HotKeyAltTab (Eigenschaft)
+description: Gibt den virtuellen Schlüsselcode an, der alt hinzugefügt werden soll, um den Hotkey-Ersatz für ALT+TAB zu bestimmen.
 ms.assetid: d7066fb4-f53f-4e55-ba12-fb4078ece144
 ms.tgt_platform: multiple
 keywords:
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
 - IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
 - IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
 - HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
 - IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
 - HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
-- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- HotKeyAltTab-Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
 - IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
 topic_type:
 - apiref
@@ -61,11 +61,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "120009890"
 ---
-# <a name="imsrdpclientadvancedsettingshotkeyalttab-property"></a>IMsRdpClientAdvancedSettings::HotKeyAltTab-Eigenschaft
+# <a name="imsrdpclientadvancedsettingshotkeyalttab-property"></a>IMsRdpClientAdvancedSettings::HotKeyAltTab (Eigenschaft)
 
-Gibt den Virtuellen Schlüsselcode an, der ALT hinzugefügt werden soll, um den Hotkeyaustausch für ALT+TAB zu bestimmen.
+Gibt den virtuellen Schlüsselcode an, der alt hinzugefügt werden soll, um den Hotkey-Ersatz für ALT+TAB zu bestimmen.
 
-Diese Eigenschaft ist nur gültig, wenn die [**KeyboardHookMode-Eigenschaft**](imsrdpclientsecuredsettings-keyboardhookmode.md) nicht aktiviert ist.
+Diese Eigenschaft ist nur gültig, wenn [**die KeyboardHookMode-Eigenschaft**](imsrdpclientsecuredsettings-keyboardhookmode.md) nicht aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -86,15 +86,15 @@ HRESULT get_HotKeyAltTab(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code für virtuelle Schlüssel. **VK \_ PRIOR** ist der Standardwert, wobei ALT+PAGE UP als resultierende Sequenz verwendet wird.
+Der neue Virtuelle Schlüsselcode. **VK \_ PRIOR** ist der Standardwert, bei dem ALT+SEITE NACH OBEN als resultierende Sequenz angezeigt wird.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

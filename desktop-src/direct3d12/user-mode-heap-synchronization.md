@@ -1,34 +1,34 @@
 ---
-title: Multi-Engine-Synchronisierung
-description: In diesem Thema wird die Synchronisierung des Zugriffs auf mehrere unabhängige Engines in den meisten modernen GPUs erläutert.
+title: Synchronisierung mit mehreren Modulen
+description: In diesem Thema wird das Synchronisieren des Zugriffs auf die verschiedenen unabhängigen Engines in den meisten modernen GPUs erläutert.
 ms.assetid: 93903F50-A6CA-41C2-863D-68D645586B4C
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 09/25/2019
-ms.openlocfilehash: d60704e411a1ba45dd4902ad9101a416391743dd
-ms.sourcegitcommit: 622d149edf775af5a9633c2d12ccfddf7000b8fd
+ms.openlocfilehash: 2d250133d8cacb26d933d3774f397de4c949c72b7b58114759791c103d374c3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "104548633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119987550"
 ---
-# <a name="multi-engine-synchronization"></a>Multi-Engine-Synchronisierung
+# <a name="multi-engine-synchronization"></a>Synchronisierung mit mehreren Modulen
 
-Die meisten modernen GPUs enthalten mehrere unabhängige Engines, die spezialisierte Funktionen bereitstellen. Viele verfügen über ein oder mehrere dedizierte Kopier Module und eine COMPUTE-Engine, die sich in der Regel von der 3D-Engine unterscheidet. Jedes dieser Engines kann Befehle parallel untereinander ausführen. Direct3D 12 bietet differenzierten Zugriff auf 3D-, COMPUTE-und Kopier Module mithilfe von Warteschlangen und Befehlslisten.
+Die meisten modernen GPUs enthalten mehrere unabhängige Engines, die spezielle Funktionen bereitstellen. Viele verfügen über eine oder mehrere dedizierte Kopier-Engines und eine Compute-Engine, die sich in der Regel von der 3D-Engine unterscheidet. Jede dieser Engines kann Befehle parallel ausführen. Direct3D 12 bietet mithilfe von Warteschlangen und Befehlslisten differenzierten Zugriff auf die 3D-, Compute- und Kopier-Engines.
 
 ## <a name="gpu-engines"></a>GPU-Engines
 
-Das folgende Diagramm zeigt die CPU-Threads eines Titels, von denen jede eine oder mehrere der Copy-, COMPUTE-und 3D-Warteschlangen füllt. Die 3D-Warteschlange kann alle drei GPU-Engines steuern. Die COMPUTE-Warteschlange kann die COMPUTE-und Kopier Module steuern. und die Kopier Warteschlange ist einfach die Kopier-Engine.
+Das folgende Diagramm zeigt die CPU-Threads eines Titels, die jeweils eine oder mehrere der Kopier-, Compute- und 3D-Warteschlangen auffüllen. Die 3D-Warteschlange kann alle drei GPU-Engines steuern. Die Computewarteschlange kann die Compute- und Kopier-Engines steuern. und die Kopierwarteschlange einfach die Kopier-Engine.
 
-Da die verschiedenen Threads die Warteschlangen auffüllen, kann es keine einfache Garantie für die Ausführungsreihenfolge geben, daher ist es erforderlich, dass Synchronisierungs Mechanismen erforderlich sind, &mdash; Wenn der Titel Sie benötigt.
+Da die verschiedenen Threads die Warteschlangen auffüllen, gibt es keine einfache Garantie für die Ausführungsreihenfolge, weshalb Synchronisierungsmechanismen erforderlich &mdash; sind, wenn der Titel sie erfordert.
 
 ![vier Threads, die Befehle an drei Warteschlangen senden](images/gpu-engines.png)
 
-In der folgenden Abbildung wird veranschaulicht, wie ein Titel die Arbeit über mehrere GPU-Engines hinweg planen kann, einschließlich der zwischen Modul Synchronisierung, falls erforderlich: Er zeigt die Workloads pro Engine mit Abhängigkeiten zwischen den Engines. In diesem Beispiel kopiert die Copy-Engine zuerst eine Geometrie, die für das Rendering erforderlich ist. Die 3D-Engine wartet auf den Abschluss dieser Kopien und rendert einen vorab Durchlauf über die Geometrie. Diese wird dann von der COMPUTE-Engine verwendet. Die Ergebnisse der Verteilung der computeengine werden zusammen mit mehreren Textur Kopier Vorgängen für die Kopier [**-Engine von**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch)der 3D-Engine für den abschließenden [**Zeichnen**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced) -Befehl genutzt.
+Die folgende Abbildung zeigt, wie ein Titel die Arbeit über mehrere GPU-Engines hinweg planen kann, einschließlich der engineübergreifenden Synchronisierung, falls erforderlich: Es zeigt die Engine-bezogenen Workloads mit engineübergreifenden Abhängigkeiten. In diesem Beispiel kopiert die Kopier-Engine zunächst einige Geometrien, die für das Rendering erforderlich sind. Die 3D-Engine wartet auf den Abschluss dieser Kopien und rendert eine Vorabüberlauffunktion für die Geometrie. Dies wird dann von der Compute-Engine genutzt. Die Ergebnisse der Compute-Engine [**Dispatch**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch)werden zusammen mit mehreren Texturkopiervorgängen für die Kopier-Engine von der 3D-Engine für den endgültigen [**Draw-Aufruf**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced) genutzt.
 
-![Kopieren, Grafiken und Compute-Engines kommunizieren](images/gpu-sync.png)
+![Kopier-, Grafik- und Compute-Engines, die kommunizieren](images/gpu-sync.png)
 
-Der folgende Pseudo Code veranschaulicht, wie ein Titel eine solche Arbeitsauslastung übermitteln kann.
+Der folgende Pseudocode veranschaulicht, wie ein Titel eine solche Workload übermitteln kann.
 
 ``` syntax
 // Get per-engine contexts. Note that multiple queues may be exposed
@@ -54,7 +54,7 @@ renderEngine->Wait(copyFence, 102); // textures copied
 renderEngine->Draw(); // final render using buf1 as SRV, and tex[1-4] SRVs
 ```
 
-Der folgende Pseudo Code veranschaulicht die Synchronisierung zwischen den Kopier-und 3D-Engines, um eine Heap ähnliche Speicher Belegung über einen Ringpuffer zu erreichen. Titel haben die Flexibilität, das richtige Gleichgewicht zwischen der Maximierung der Parallelität (über einen großen Puffer) und der Reduzierung der Arbeitsspeicher Nutzung und Latenz (über einen kleinen Puffer) auszuwählen.
+Der folgende Pseudocode veranschaulicht die Synchronisierung zwischen den Kopier- und 3D-Engines, um eine heapähnliche Speicherbelegung über einen Ringpuffer zu erreichen. Titel haben die Flexibilität, das richtige Gleichgewicht zwischen der Maximierung der Parallelität (über einen großen Puffer) und der Reduzierung des Arbeitsspeicherverbrauchs und der Wartezeit (über einen kleinen Puffer) auszuwählen.
 
 ``` syntax
 device->CreateBuffer(&ringCB);
@@ -89,104 +89,104 @@ for(int i=1;i++){
 // renderEngine->Wait(fence2, 4); // fence2 == 3, wait
 ```
 
-## <a name="multi-engine-scenarios"></a>Szenarios mit mehreren Engines
+## <a name="multi-engine-scenarios"></a>Szenarien mit mehreren Engines
 
-Mit Direct3D 12 können Sie versehentlich zu Ineffizienzen führen, die durch unerwartete Synchronisierungs Verzögerungen verursacht werden. Außerdem können Sie die Synchronisierung auf einer höheren Ebene einführen, bei der die erforderliche Synchronisierung mit größerer Sicherheit bestimmt werden kann. Ein zweites Problem ist, dass mehrere-Engine-Adressen teure Vorgänge expliziter machen müssen. Dies schließt Übergänge zwischen 3D und Video ein, die aufgrund der Synchronisierung zwischen mehreren Kernel Kontexten traditionell aufwendig waren.
+Mit Direct3D 12 können Sie vermeiden, dass versehentlich Ineffizienzen auftreten, die durch unerwartete Synchronisierungsverzögerungen verursacht werden. Außerdem können Sie die Synchronisierung auf einer höheren Ebene einführen, wo die erforderliche Synchronisierung mit größerer Sicherheit bestimmt werden kann. Ein zweites Problem, bei dem mehrere Engine-Adressen adressiert werden, besteht darin, teure Vorgänge expliziter zu machen. Dazu gehören Übergänge zwischen 3D und Video, die aufgrund der Synchronisierung zwischen mehreren Kernelkontexten üblicherweise teuer waren.
 
-Insbesondere können die folgenden Szenarien mit Direct3D 12 adressiert werden.
+Insbesondere können die folgenden Szenarien mit Direct3D 12 behandelt werden.
 
--   GPU-Arbeit mit asynchroner und niedriger Priorität. Dies ermöglicht die gleichzeitige Ausführung von GPU-arbeiten mit niedriger Priorität und atomaren Vorgängen, die es einem GPU-Thread ermöglichen, die Ergebnisse eines anderen nicht synchronisierten Threads ohne Blockierung zu nutzen
--   Compute-Arbeit mit hoher Priorität. Mit background Compute ist es möglich, das 3D-Rendering zu unterbrechen, um eine kleine Menge von computeaufgaben mit hoher Priorität zu erledigen. Die Ergebnisse dieser Arbeit können frühzeitig zur weiteren Verarbeitung auf der CPU abgerufen werden.
--   Computearbeit im Hintergrund. Eine separate Warteschlange mit niedriger Priorität für computeworkloads ermöglicht es einer Anwendung, freie GPU-Zyklen zu verwenden, um eine Hintergrund Berechnung ohne negative Auswirkung auf die primären Renderingaufgaben auszuführen. Hintergrundaufgaben können die Dekomprimierung von Ressourcen oder das Aktualisieren von Simulationen oder beschleunigungsstrukturen umfassen. Hintergrundaufgaben sollten auf der CPU selten (ungefähr einmal pro Frame) synchronisiert werden, um das stecken bleiben oder verlangsamen der Vordergrund Arbeit zu vermeiden.
--   Streaming und Hochladen von Daten. Eine separate Kopier Warteschlange ersetzt die D3D11-Konzepte der Anfangsdaten und Aktualisierungs Ressourcen. Obwohl die Anwendung für weitere Details im Direct3D 12-Modell verantwortlich ist, ist diese Verantwortung in Kraft. Die Anwendung kann steuern, wie viel System Arbeitsspeicher für die Pufferung von uploaddaten aufgewendet wird. Die APP kann auswählen, wann und wie (CPU-und GPU-Leistung, Blockierung und nicht Blockierung) synchronisiert werden soll, und kann den Fortschritt nachverfolgen und die Menge der in der Warteschlange befindlichen Aufgaben steuern
--   Erhöhung der Parallelität. Anwendungen können tiefere Warteschlangen für hintergrundworkloads (z. b. Video Decodierung) verwenden, wenn Sie über separate Warteschlangen für Vordergrund arbeiten verfügen.
+-   Gpu-Vorgänge mit asynchroner und niedriger Priorität. Dies ermöglicht die gleichzeitige Ausführung von GPU-Arbeitsvorgängen mit niedriger Priorität und atomaren Vorgängen, die es einem GPU-Thread ermöglichen, die Ergebnisse eines anderen nicht synchronisierten Threads ohne Blockierung zu nutzen.
+-   Computearbeit mit hoher Priorität. Bei Der Hintergrundberechnung ist es möglich, das 3D-Rendering zu unterbrechen, um eine kleine Menge an Computeaufgaben mit hoher Priorität zu erledigen. Die Ergebnisse dieser Arbeit können frühzeitig für zusätzliche Verarbeitung auf der CPU abgerufen werden.
+-   Computeaufgaben im Hintergrund. Eine separate Warteschlange mit niedriger Priorität für Computeworkloads ermöglicht es einer Anwendung, freie GPU-Zyklen zu nutzen, um Hintergrundberechnungen ohne negative Auswirkungen auf die primären Renderingaufgaben (oder andere) Aufgaben auszuführen. Hintergrundaufgaben können die Dekomprimierung von Ressourcen oder das Aktualisieren von Simulationen oder Beschleunigungsstrukturen umfassen. Hintergrundaufgaben sollten auf der CPU selten (etwa einmal pro Frame) synchronisiert werden, um zu vermeiden, dass die Vordergrundarbeit angehalten oder verlangsamt wird.
+-   Streaming und Hochladen von Daten. Eine separate Kopierwarteschlange ersetzt die D3D11-Konzepte der anfänglichen Daten und der Aktualisierung von Ressourcen. Obwohl die Anwendung für weitere Details im Direct3D 12-Modell verantwortlich ist, ist diese Verantwortung mit Power power verbunden. Die Anwendung kann steuern, wie viel Systemarbeitsspeicher für das Puffern von Uploaddaten aufgewendet wird. Die App kann auswählen, wann und wie (CPU im Vergleich zu GPU, blockierend oder nicht blockierend) synchronisiert werden sollen. Außerdem kann sie den Fortschritt nachverfolgen und die Arbeitsmenge in der Warteschlange steuern.
+-   Erhöhte Parallelität. Anwendungen können tiefere Warteschlangen für Hintergrundworkloads (z. B. Videodecodierung) verwenden, wenn sie über separate Warteschlangen für Vordergrundarbeit verfügen.
 
-In Direct3D 12 ist das Konzept einer Befehls Warteschlange die API-Darstellung einer ungefähr seriellen Abfolge von Arbeitsaufgaben, die von der Anwendung übermittelt wird. Mithilfe von Barrieren und anderen Techniken können diese Aufgaben in einer Pipeline oder außerhalb der Reihenfolge ausgeführt werden, aber die Anwendung sieht nur eine einzelne Vervollständigungs Zeitachse. Dies entspricht dem unmittelbaren Kontext in D3D11.
+In Direct3D 12 ist das Konzept einer Befehlswarteschlange die API-Darstellung einer ungefähr seriellen Arbeitssequenz, die von der Anwendung übermittelt wird. Barrieren und andere Techniken ermöglichen die Ausführung dieser Arbeit in einer Pipeline oder in einer nicht ordnungsgemäßen Reihenfolge, aber die Anwendung sieht nur eine einzige Vervollständigungszeitachse. Dies entspricht dem unmittelbaren Kontext in D3D11.
 
 ## <a name="synchronization-apis"></a>Synchronisierungs-APIs
 
 ### <a name="devices-and-queues"></a>Geräte und Warteschlangen
 
-Das Gerät Direct3D 12 verfügt über Methoden zum Erstellen und Abrufen von Befehls Warteschlangen mit unterschiedlichen Typen und Prioritäten. Die meisten Anwendungen sollten die standardmäßigen Befehls Warteschlangen verwenden, da diese die gemeinsame Verwendung durch andere Komponenten ermöglichen. Anwendungen mit zusätzlichen Parallelitäts Anforderungen können zusätzliche Warteschlangen erstellen. Warteschlangen werden durch den von Ihnen genutzten Befehls Auflistungstyp angegeben.
+Das Direct3D 12-Gerät verfügt über Methoden zum Erstellen und Abrufen von Befehlswarteschlangen verschiedener Typen und Prioritäten. Die meisten Anwendungen sollten die Standardbefehlswarteschlangen verwenden, da diese die gemeinsame Nutzung durch andere Komponenten ermöglichen. Anwendungen mit zusätzlichen Parallelitätsanforderungen können zusätzliche Warteschlangen erstellen. Warteschlangen werden durch den Befehlslistentyp angegeben, den sie nutzen.
 
-Weitere Informationen finden Sie in den folgenden Erstellungs Methoden [**ID3D12Device**](/windows/win32/api/d3d12/nn-d3d12-id3d12device).
+Lesen Sie die folgenden Erstellungsmethoden von [**ID3D12Device**](/windows/win32/api/d3d12/nn-d3d12-id3d12device).
 
--   [**Erstellungscommandqueue**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandqueue) : erstellt eine Befehls Warteschlange basierend auf Informationen in der DESC-Struktur einer [**Direct3D 12- \_ Befehls \_ Warteschlange \_**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc) .
--   " [**Kreatecommandlist**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandlist) ": erstellt eine Befehlsliste vom Typ " [**Direct3D 12 \_ Command \_ List \_ Type**](/windows/win32/api/d3d12/ne-d3d12-d3d12_command_list_type)".
--   [**Kreatefence**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createfence) : erstellt einen Fence und notiert die Flags in [**Direct3D 12- \_ fence- \_ Flags**](/windows/win32/api/d3d12/ne-d3d12-d3d12_fence_flags). Zum Synchronisieren von Warteschlangen werden Zäune verwendet.
+-   [**CreateCommandQueue:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandqueue) Erstellt eine Befehlswarteschlange basierend auf Informationen in einer [**Direct3D 12 \_ COMMAND QUEUE \_ \_ DESC-Struktur.**](/windows/win32/api/d3d12/ns-d3d12-d3d12_command_queue_desc)
+-   [**CreateCommandList:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createcommandlist) Erstellt eine Befehlsliste vom Typ [**Direct3D 12 \_ COMMAND LIST \_ \_ TYPE**](/windows/win32/api/d3d12/ne-d3d12-d3d12_command_list_type).
+-   [**CreateFence:**](/windows/win32/api/d3d12/nf-d3d12-id3d12device-createfence) erstellt einen Fence und notiert die Flags in [**Direct3D 12 \_ FENCE \_ FLAGS**](/windows/win32/api/d3d12/ne-d3d12-d3d12_fence_flags). Umgrenzungen werden verwendet, um Warteschlangen zu synchronisieren.
 
-Warteschlangen aller Typen (3D, COMPUTE und Copy) verwenden die gleiche Schnittstelle und sind alle auf der Befehlsliste basierende.
+Warteschlangen aller Typen (3D, Compute und Kopiervorgang) verwenden dieselbe Schnittstelle und sind alle befehlslistenbasiert.
 
-Weitere Informationen finden Sie in den folgenden Methoden von [**ID3D12CommandQueue**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandqueue).
+Lesen Sie die folgenden Methoden von [**ID3D12CommandQueue**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandqueue).
 
--   [**Executecommandlists**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) : übermittelt ein Array von Befehlslisten zur Ausführung. Jede durch [**ID3D12CommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandlist)definierte Befehlsliste.
--   [**Signal**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal) : legt einen Fence Wert fest, wenn die Warteschlange (die auf der GPU ausgeführt wird) einen bestimmten Punkt erreicht.
--   [**Wait**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-wait) : die Warteschlange wartet, bis der angegebene Fence den angegebenen Wert erreicht.
+-   [**ExecuteCommandLists:**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-executecommandlists) Übermittelt ein Array von Befehlslisten zur Ausführung. Jede Befehlsliste, die durch [**ID3D12CommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandlist)definiert wird.
+-   [**Signal:**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal) Legt einen Fence-Wert fest, wenn die Warteschlange (die auf der GPU ausgeführt wird) einen bestimmten Punkt erreicht.
+-   [**Wait:**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-wait) Die Warteschlange wartet, bis die angegebene Umgrenzung den angegebenen Wert erreicht.
 
-Beachten Sie, dass Pakete nicht von Warteschlangen genutzt werden. Daher kann dieser Typ nicht zum Erstellen einer Warteschlange verwendet werden.
+Beachten Sie, dass Pakete nicht von Warteschlangen genutzt werden und dieser Typ daher nicht zum Erstellen einer Warteschlange verwendet werden kann.
 
 ### <a name="fences"></a>Zäune
 
-Die Multi-Engine-API stellt explizite APIs zum Erstellen und Synchronisieren mithilfe von Zäunen bereit. Ein Fence ist ein Synchronisierungs Konstrukt, das von einem UINT64-Wert gesteuert wird. Die Fence Werte werden von der Anwendung festgelegt. Durch einen Signal Vorgang werden der Fence-Wert und ein warte Vorgangs Block geändert, bis der Fence den angeforderten Wert erreicht hat. Ein Ereignis kann ausgelöst werden, wenn ein Fence einen bestimmten Wert erreicht.
+Die Multi-Engine-API stellt explizite APIs zum Erstellen und Synchronisieren mithilfe von Fences bereit. Ein Fence ist ein Synchronisierungskonstrukt, das durch einen UINT64-Wert gesteuert wird. Fence-Werte werden von der Anwendung festgelegt. Ein Signalvorgang ändert den Fence-Wert, und ein Wartevorgang blockiert, bis der Umgrenzungsvorgang den angeforderten Wert oder höher erreicht hat. Ein Ereignis kann ausgelöst werden, wenn ein Fence einen bestimmten Wert erreicht.
 
-Weitere Informationen finden Sie in den Methoden der [**ID3D12Fence**](/windows/win32/api/d3d12/nn-d3d12-id3d12fence) -Schnittstelle.
+Weitere Informationen finden Sie in den Methoden der [**ID3D12Fence-Schnittstelle.**](/windows/win32/api/d3d12/nn-d3d12-id3d12fence)
 
--   [**Getcompletedvalue**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue) : gibt den aktuellen Wert des Fence zurück.
--   [](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-seteventoncompletion) "Enumerationsvervollständigen": bewirkt, dass ein Ereignis ausgelöst wird, wenn der Fence einen bestimmten Wert erreicht.
--   [**Signal**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-signal) : legt den Fence auf den angegebenen Wert fest.
+-   [**GetCompletedValue:**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-getcompletedvalue) Gibt den aktuellen Wert des Fences zurück.
+-   [**SetEventOnCompletion:**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-seteventoncompletion) Bewirkt, dass ein Ereignis ausgelöst wird, wenn der Fence einen bestimmten Wert erreicht.
+-   [**Signal:**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-signal) Legt die Umgrenzung auf den angegebenen Wert fest.
 
-Durch Zäune wird der CPU-Zugriff auf den aktuellen Fence-Wert und CPU-warte Vorgänge und-Signale ermöglicht.
+Fences ermöglichen CPU-Zugriff auf den aktuellen Fence-Wert sowie CPU-Warte- und -Signale.
 
-Die [**Signal**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-signal) -Methode der [**ID3D12Fence**](/windows/win32/api/d3d12/nn-d3d12-id3d12fence) -Schnittstelle aktualisiert einen Fence von der CPU-Seite. Dieses Update erfolgt sofort. Die [**Signal**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal) -Methode auf [**ID3D12CommandQueue**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandqueue) aktualisiert einen Fence von der GPU-Seite. Dieses Update erfolgt, nachdem alle anderen Vorgänge in der Befehls Warteschlange abgeschlossen wurden.
+Die [**Signal-Methode**](/windows/win32/api/d3d12/nf-d3d12-id3d12fence-signal) auf der [**ID3D12Fence-Schnittstelle**](/windows/win32/api/d3d12/nn-d3d12-id3d12fence) aktualisiert einen Fence von der CPU-Seite. Dieses Update erfolgt sofort. Die [**Signal-Methode**](/windows/win32/api/d3d12/nf-d3d12-id3d12commandqueue-signal) für [**ID3D12CommandQueue**](/windows/win32/api/d3d12/nn-d3d12-id3d12commandqueue) aktualisiert einen Fence von der GPU-Seite. Dieses Update tritt auf, nachdem alle anderen Vorgänge in der Befehlswarteschlange abgeschlossen wurden.
 
-Alle Knoten in einem Setup mit mehreren Engines können alle Endpunkte lesen und darauf reagieren, die den richtigen Wert erreichen.
+Alle Knoten in einem Setup mit mehreren Engines können jeden Fence lesen und darauf reagieren, der den richtigen Wert erreicht.
 
-Anwendungen legen ihre eigenen Fence-Werte fest. ein guter Ausgangspunkt könnte einen Fence einmal pro Frame erhöhen.
+Anwendungen legen ihre eigenen Umgrenzungswerte fest. Ein guter Ausgangspunkt kann sein, einen Umgrenzungsgrenzwert einmal pro Frame zu erhöhen.
 
-Ein fence *kann* *zurück* gesetzt werden. Dies bedeutet, dass der Fence-Wert nicht allein erhöht werden muss. Wenn ein **Signal** Vorgang in eine Warteschlange für zwei unterschiedliche Befehls Warteschlangen eingereiht wird, oder wenn zwei CPU-Threads beide als **Signal** an einem Fence aufrufen, kann es zu einem Wettlauf kommen, um zu bestimmen, welches **Signal** zuletzt abgeschlossen wurde, und welcher Fence Wert dem Wert entspricht. Wenn ein Fence regger zurückgesetzt wird, werden alle neuen warte Vorgänge (einschließlich der Anforderungen an den "Abgleich" **) mit dem** neuen niedrigeren Fence-Wert verglichen und daher möglicherweise nicht erfüllt, auch wenn der Fence-Wert zuvor hoch genug war, um Sie zu erfüllen. Wenn ein racevorgang stattfindet, *wird* zwischen einem Wert, der einen ausstehenden warte Vorgang erfüllt, und einem niedrigeren Wert, der nicht ist, der Warte Vorgang unabhängig davon, welcher Wert später verbleibt, erfüllt.
+Ein *Umgrenzungsschutz kann* *neu eingegrenzt* werden. Dies bedeutet, dass der Fence-Wert nicht ausschließlich erhöht werden muss. Wenn ein **Signalvorgang** in zwei verschiedenen Befehlswarteschlangen in die Warteschlange eingereiht wird oder zwei CPU-Threads **signal** an einem Fence aufrufen, kann es zu einem Race kommen, um zu bestimmen, welches **Signal** zuletzt abgeschlossen wird. Daher ist der Fence-Wert der, der verbleibt. Wenn ein Fence erneut eingegrenzt wird, werden alle neuen Warteanforderungen (einschließlich **SetEventOnCompletion-Anforderungen)** mit dem neuen niedrigeren Fence-Wert verglichen und daher möglicherweise nicht erfüllt, auch wenn der Fence-Wert zuvor hoch genug war, um sie zu erfüllen. Wenn ein Race auftritt, zwischen einem Wert, der einen ausstehenden Wartewert erfüllt, und einem niedrigeren Wert, der dies nicht tut, *wird* der Wartewert unabhängig davon erfüllt, welcher Wert danach verbleibt.
 
-Die Fence-APIs bieten leistungsstarke Synchronisierungs Funktionen, können aber potenziell schwer zu debuggende Probleme führen. Es wird empfohlen, dass jeder Fence nur verwendet wird, um den Fortschritt in einer Zeitachse anzugeben, um die Ausführung von Races zwischen Signal
+Die Fence-APIs bieten leistungsstarke Synchronisierungsfunktionen, können aber potenziell schwierig zu debuggende Probleme darstellen. Es wird empfohlen, dass jeder Umgrenzungsschutz nur verwendet wird, um den Fortschritt auf einer Zeitachse anzugeben, um Fahrten zwischen Signalisierungssignalen zu verhindern.
 
-### <a name="copy-and-compute-command-lists"></a>Befehlslisten "Kopieren" und "Compute"
+### <a name="copy-and-compute-command-lists"></a>Kopieren und Berechnen von Befehlslisten
 
-Alle drei Typen der Befehlsliste verwenden die [**ID3D12GraphicsCommandList**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist) -Schnittstelle, es wird jedoch nur eine Teilmenge der Methoden für kopieren und berechnen unterstützt.
+Alle drei Typen von Befehlslisten verwenden die [**ID3D12GraphicsCommandList-Schnittstelle,**](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist) aber nur eine Teilmenge der Methoden wird für Kopieren und Berechnen unterstützt.
 
-In den Befehlslisten "Kopieren" und "Compute" können folgende Methoden verwendet werden.
+Kopier- und Computebefehlslisten können die folgenden Methoden verwenden.
 
 -   [**Schließen**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-close)
--   [**Copybufferregion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)
--   [**Copyresource**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
--   [**Copytextureregion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion)
--   [**Copytiles**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytiles)
--   [**Reset**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-reset)
--   [**Resourcebarrier**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier)
+-   [**CopyBufferRegion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copybufferregion)
+-   [**CopyResource**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copyresource)
+-   [**CopyTextureRegion**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytextureregion)
+-   [**CopyTiles**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-copytiles)
+-   [**Zurücksetzen**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-reset)
+-   [**ResourceBarrier**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier)
 
-Compute-Befehlslisten können auch die folgenden Methoden verwenden.
+Computebefehlslisten können auch die folgenden Methoden verwenden.
 
--   [**Clearstate**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearstate)
--   [**Clearunorderedaccessviewfloat**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearunorderedaccessviewfloat)
--   [**Clearunorderedaccessviewuint**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearunorderedaccessviewuint)
--   [**Verwerfen von Quelle**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-discardresource)
+-   [**ClearState**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearstate)
+-   [**ClearUnorderedAccessViewFloat**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearunorderedaccessviewfloat)
+-   [**ClearUnorderedAccessViewUint**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-clearunorderedaccessviewuint)
+-   [**DiscardResource**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-discardresource)
 -   [**Dispatch**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-dispatch)
--   [**Executin Direct**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect)
+-   [**ExecuteIndirect**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-executeindirect)
 -   [**SetComputeRoot32BitConstant**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputeroot32bitconstant)
 -   [**SetComputeRoot32BitConstants**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputeroot32bitconstants)
--   [**Setcomputerootconstantbufferview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootconstantbufferview)
--   [**Setcomputerootdescriptor Table**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable)
--   [**Setcomputerootshaderresourceview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootshaderresourceview)
--   [**Setcomputerootsignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature)
--   [**Setcomputerootunorderedaccessview**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootunorderedaccessview)
--   [**Setdescriptorheaps**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps)
--   [**Setpipelinestate**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)
--   [**Setprediation**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication)
+-   [**SetComputeRootConstantBufferView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootconstantbufferview)
+-   [**SetComputeRootDescriptorTable**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootdescriptortable)
+-   [**SetComputeRootShaderResourceView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootshaderresourceview)
+-   [**SetComputeRootSignature**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootsignature)
+-   [**SetComputeRootUnorderedAccessView**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setcomputerootunorderedaccessview)
+-   [**SetDescriptorHeaps**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setdescriptorheaps)
+-   [**SetPipelineState**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)
+-   [**SetPredication**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication)
 
-Compute-Befehlslisten müssen eine COMPUTE-PSO festlegen, wenn [**setpipelinestate**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)aufgerufen wird.
+Computebefehlslisten müssen beim Aufrufen von [**SetPipelineState**](/windows/win32/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)eine Compute-PSO festlegen.
 
-Bündel können nicht mit COMPUTE-oder Kopier Befehlslisten oder-Warteschlangen verwendet werden.
+Bundles können nicht mit Compute- oder Kopierbefehlslisten oder Warteschlangen verwendet werden.
 
-## <a name="pipelined-compute-and-graphics-example"></a>Beispiel für eine Pipeline und Grafiken mit Pipelines
+## <a name="pipelined-compute-and-graphics-example"></a>Pipeline-Compute- und Grafikbeispiel
 
-Dieses Beispiel zeigt, wie die Fence-Synchronisierung verwendet werden kann, um eine Pipeline von computeaufgaben in einer Warteschlange (auf die von verwiesen wird) zu erstellen `pComputeQueue` , die von Grafiken in der Warteschlange genutzt wird `pGraphicsQueue` Die COMPUTE-und Grafik Vorgänge werden mit der Grafik Warteschlange zusammengefasst, die das Ergebnis der computearbeit aus mehreren Frames zurückgibt, und ein CPU-Ereignis wird verwendet, um die Gesamtsumme der Arbeitsauslastung insgesamt zu drosseln.
+Dieses Beispiel zeigt, wie die Fence-Synchronisierung verwendet werden kann, um eine Pipeline von Computearbeit in einer Warteschlange zu erstellen (auf die von verwiesen `pComputeQueue` wird), die von Grafikarbeiten in der Warteschlange genutzt `pGraphicsQueue` wird. Die Compute- und Grafikarbeit wird mit der Grafikwarteschlange, die das Ergebnis der Computearbeit von mehreren Frames zurück verbraucht, in pipelined, und ein CPU-Ereignis wird verwendet, um die gesamt in die Warteschlange eingereihte Gesamtarbeit zu drosseln.
 
 ```cpp
 void PipelinedComputeGraphics()
@@ -229,17 +229,17 @@ void PipelinedComputeGraphics()
 }
 ```
 
-Um diese Pipeline zu unterstützen, muss ein Puffer mit `ComputeGraphicsLatency+1` unterschiedlichen Kopien der Daten vorhanden sein, die von der computewarteschlange an die Grafik Warteschlange übergeben werden. In den Befehlslisten müssen UAVs und Dereferenzierung verwendet werden, um die entsprechende "Version" der Daten im Puffer zu lesen und zu schreiben. Die computewarteschlange muss warten, bis die Grafik Warteschlange das Lesen aus den Daten für Frame N abgeschlossen hat, bevor Frame geschrieben werden kann `N+ComputeGraphicsLatency` .
+Um dieses Pipelining zu unterstützen, muss ein Puffer mit verschiedenen Kopien der Daten vorhanden sein, `ComputeGraphicsLatency+1` die von der Computewarteschlange an die Grafikwarteschlange übergeben werden. Die Befehlslisten müssen UAVs und dekonserieren, um aus der entsprechenden "Version" der Daten im Puffer zu lesen und zu schreiben. Die Computewarteschlange muss warten, bis die Grafikwarteschlange das Lesen aus den Daten für Frame N abgeschlossen hat, bevor sie Frame schreiben `N+ComputeGraphicsLatency` kann.
 
-Beachten Sie, dass die Menge an computewarteschlangen, die relativ zur CPU verwendet werden, nicht direkt von der erforderlichen Puffer Menge abhängig ist. in der Warteschlange von GPU funktioniert die Menge des verfügbaren Puffer Platzes jedoch weniger wertvoll.
+Beachten Sie, dass die Menge der Computewarteschlange relativ zur CPU nicht direkt von der menge der erforderlichen Pufferung abhängt. Das Queuing der GPU-Arbeit über die Menge des verfügbaren Pufferspeichers hinaus ist jedoch weniger nützlich.
 
-Eine alternative Methode, um die Dereferenzierung zu vermeiden, besteht darin, mehrere Befehlslisten zu erstellen, die den "umbenannten" Versionen der Daten entsprechen. Im nächsten Beispiel wird dieses Verfahren verwendet, während das vorherige Beispiel erweitert wird, damit die COMPUTE-und Grafik Warteschlangen asynchron ausgeführt werden können.
+Ein alternativer Mechanismus zur Vermeidung von Dekonsensierung besteht darin, mehrere Befehlslisten zu erstellen, die den einzelnen "umbenannten" Versionen der Daten entsprechen. Im nächsten Beispiel wird dieses Verfahren verwendet, während das vorherige Beispiel erweitert wird, damit die Compute- und Grafikwarteschlangen asynchroner ausgeführt werden können.
 
-## <a name="asynchronous-compute-and-graphics-example"></a>Beispiel für asynchrone COMPUTE und Grafiken
+## <a name="asynchronous-compute-and-graphics-example"></a>Beispiel für asynchrone Compute- und Grafikfunktionen
 
-Im nächsten Beispiel wird das asynchrone Rendering von Grafiken aus der computewarteschlange ermöglicht. Zwischen den beiden Phasen besteht immer noch eine Fixed-Menge an gepufferten Daten, die Grafik Arbeit erfolgt jedoch unabhängig voneinander und verwendet das aktuellste Ergebnis der computephase, wenn sich die Grafik Arbeit in der Warteschlange befindet. Dies wäre hilfreich, wenn die Grafik Arbeit von einer anderen Quelle, z. b. Benutzereingaben, aktualisiert wurde. Es müssen mehrere Befehlslisten vorhanden sein, damit die `ComputeGraphicsLatency` Rahmen der Grafik Arbeit gleichzeitig aktiv sein können, und die Funktion `UpdateGraphicsCommandList` stellt das Aktualisieren der Befehlsliste dar, um die neuesten Eingabedaten einzubeziehen und aus den Compute-Daten aus dem entsprechenden Puffer zu lesen.
+Im nächsten Beispiel können Grafiken asynchron aus der Computewarteschlange gerendert werden. Es gibt immer noch eine feste Menge gepufferter Daten zwischen den beiden Phasen, aber die Grafikarbeit wird jetzt unabhängig fortgesetzt und verwendet das aktuellste Ergebnis der Computephase, wie auf der CPU bekannt, wenn die Grafikarbeit in die Warteschlange eingereiht wird. Dies wäre nützlich, wenn die Grafikarbeit von einer anderen Quelle aktualisiert wird, z. B. benutzereingaben. Es müssen mehrere Befehlslisten vorhanden sein, damit die `ComputeGraphicsLatency` Frames der Grafikarbeit gleichzeitig verarbeitet werden können, und die Funktion `UpdateGraphicsCommandList` stellt das Aktualisieren der Befehlsliste dar, sodass die neuesten Eingabedaten eingeschlossen und aus den Computedaten aus dem entsprechenden Puffer gelesen werden.
 
-Die computewarteschlange muss immer noch warten, bis die Grafik Warteschlange mit den pipepuffern fertiggestellt ist, aber es wird ein Dritter fence ( `pGraphicsComputeFence` ) eingeführt, sodass der Fortschritt von Grafiken, die Compute-Arbeit und Grafik Fortschritt im Allgemeinen lesen, verfolgt werden kann Dies spiegelt die Tatsache wider, dass jetzt aufeinander folgende Grafik Frames aus demselben computeergebnis lesen oder ein computeergebnis überspringen könnten. Ein effizienterer, aber etwas komplizierteres Design würde nur den einzelnen Grafik Zaun verwenden und eine Zuordnung zu den von den einzelnen Grafik Frames verwendeten computeframes speichern.
+Die Computewarteschlange muss weiterhin warten, bis die Grafikwarteschlange mit den Pipepuffern abgeschlossen ist. Es wird jedoch ein dritter Umgrenzungsschritt `pGraphicsComputeFence` () eingeführt, damit der Fortschritt der Grafikleseleistung im Vergleich zum Grafikfortschritt im Allgemeinen nachverfolgt werden kann. Dies spiegelt die Tatsache wider, dass aufeinanderfolgende Grafikframes nun aus demselben Computeergebnis lesen oder ein Computeergebnis überspringen könnten. Ein effizienteres, aber etwas komplizierteres Design würde nur den einzelnen Grafikfeingrenzung verwenden und eine Zuordnung zu den Computeframes speichern, die von den einzelnen Grafikrahmen verwendet werden.
 
 ```cpp
 void AsyncPipelinedComputeGraphics()
@@ -323,31 +323,31 @@ void AsyncPipelinedComputeGraphics()
 }
 ```
 
-## <a name="multi-queue-resource-access"></a>Ressourcen Zugriff mit mehreren Warteschlangen
+## <a name="multi-queue-resource-access"></a>Ressourcenzugriff mit mehreren Warteschlangen
 
-Für den Zugriff auf eine Ressource in mehr als einer Warteschlange muss eine Anwendung den folgenden Regeln entsprechen.
+Um auf eine Ressource in mehr als einer Warteschlange zuzugreifen, muss eine Anwendung die folgenden Regeln einhalten.
 
--   Der Ressourcen Zugriff (siehe [**Direct3D 12 \_ Resource \_ States**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_states)) wird durch Queue Type class not Queue Object festgelegt. Es gibt zwei Typklassen von Queue: Compute/3D Queue ist eine Typklasse, Copy ist eine zweite Typklasse. Daher kann eine Ressource, die eine Barriere für den \_ Ressourcen Zustand "nicht Pixel- \_ Shader" in \_ einer 3D-Warteschlange aufweist, in diesem Zustand in jeder 3D-oder computewarteschlange verwendet werden, je nach Synchronisierungs Anforderungen, bei denen die meisten Schreibvorgänge serialisiert werden müssen. Die Ressourcen Zustände, die von den beiden Typklassen gemeinsam genutzt werden (Kopier \_ Quelle und Kopie \_ dest), werden für jede Typklasse als unterschiedliche Zustände angesehen. Wenn also eine Ressource in einer Kopier Warteschlange zum Kopieren dest wechselt, kann \_ Sie nicht als Kopier Ziel aus 3D-oder computewarteschlangen und umgekehrt aufgerufen werden.
+-   Der Ressourcenzugriff (siehe [**Direct3D 12 \_ RESOURCE \_ STATES)**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_states)wird von der Warteschlangentypklasse und nicht vom Warteschlangenobjekt bestimmt. Es gibt zwei Typklassen der Warteschlange: Compute-/3D-Warteschlange ist eine Typklasse, Copy ist eine zweite Typklasse. Daher kann eine Ressource mit einer Barriere für den \_ NON PIXEL \_ \_ SHADER-RESSOURCENstatus in einer 3D-Warteschlange in diesem Zustand in jeder 3D- oder Compute-Warteschlange verwendet werden. Dies unterliegt den Synchronisierungsanforderungen, die erfordern, dass die meisten Schreibvorgänge serialisiert werden müssen. Die Ressourcenzustände, die von den beiden Typklassen (COPY SOURCE und COPY DEST) gemeinsam genutzt \_ \_ werden, werden für jede Typklasse als unterschiedliche Status betrachtet. Wenn also eine Ressource in einer Kopierwarteschlange auf COPY DEST umgestellt \_ wird, ist sie nicht als Kopierziel aus 3D- oder Computewarteschlangen zugänglich und umgekehrt.
 
-    Zusammenfassend.
+    Zusammenfassung:
 
-    -   Ein Warteschlangen Objekt ist eine beliebige einzelne Warteschlange.
-    -   Eine Warteschlange "Type" ist eine dieser drei: COMPUTE, 3D und Copy.
-    -   Eine Warteschlange "Type class" ist eine der folgenden beiden: Compute/3D und Copy.
+    -   Ein Warteschlangenobjekt ist eine beliebige einzelne Warteschlange.
+    -   Ein Warteschlangentyp ist einer der folgenden drei Typen: Compute, 3D und Copy.
+    -   Eine "Typklasse" der Warteschlange ist eine dieser beiden Optionen: Compute/3D und Copy.
 
--   Die als Ausgangszustände verwendeten kopierflags (Kopie \_ dest und Copy \_ Source) stellen Zustände in der 3D/Compute Type-Klasse dar. Um eine Ressource anfänglich in einer Kopier Warteschlange zu verwenden, sollte Sie im allgemeinen Zustand beginnen. Der gemeinsame Zustand kann für alle Verwendungen in einer Kopier Warteschlange mithilfe der impliziten Zustandsübergänge verwendet werden. 
--   Obwohl der Ressourcen Status über alle Compute-und 3D-Warteschlangen hinweg gemeinsam genutzt wird, ist es nicht zulässig, gleichzeitig in verschiedene Warteschlangen in die Ressource zu schreiben. "Gleichzeitig" bedeutet "nicht synchronisiert", was bedeutet, dass die nicht synchronisierte Ausführung auf bestimmter Hardware nicht möglich ist. Die folgenden Regeln gelten.
+-   Die COPY-Flags (COPY \_ DEST und COPY SOURCE), die \_ als Anfangszustände verwendet werden, stellen Zustände in der 3D/Compute-Typklasse dar. Um eine Ressource anfänglich in einer Kopierwarteschlange zu verwenden, sollte sie im Status COMMON gestartet werden. Der COMMON-Zustand kann für alle Verwendungen in einer Kopierwarteschlange mithilfe der impliziten Zustandsübergänge verwendet werden. 
+-   Obwohl der Ressourcenzustand für alle Compute- und 3D-Warteschlangen freigegeben ist, ist es nicht zulässig, gleichzeitig in die Ressource in verschiedenen Warteschlangen zu schreiben. "Gleichzeitig" bedeutet hier, dass die nicht synchronisierte Ausführung auf einigen Hardwarekomponenten nicht möglich ist. Es gelten die folgenden Regeln.
 
     -   Nur eine Warteschlange kann gleichzeitig in eine Ressource schreiben.
-    -   Mehrere Warteschlangen können aus der Ressource lesen, solange Sie nicht die vom Writer geänderten Bytes lesen (das Lesen von gleichzeitig geschriebenen Bytes erzeugt nicht definierte Ergebnisse).
-    -   Ein Fence muss verwendet werden, um nach dem Schreiben zu synchronisieren, bevor eine andere Warteschlange die geschriebenen Bytes lesen oder Schreibzugriffe ausführen kann.
+    -   Mehrere Warteschlangen können aus der Ressource lesen, solange sie die vom Writer geänderten Bytes nicht lesen (das gleichzeitige Lesen von Bytes führt zu nicht definierten Ergebnissen).
+    -   Ein Fence muss nach dem Schreiben synchronisiert werden, bevor eine andere Warteschlange die geschriebenen Bytes lesen oder schreibzugriffen kann.
 
--   Die angezeigten backpuffer müssen sich im Status "Direct3D 12" im \_ Ressourcen Status "Allgemein" befinden \_ \_ . 
+-   Die angezeigten Hintergrundpuffer müssen sich im Zustand Direct3D 12 \_ RESOURCE \_ STATE COMMON \_ befinden. 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
-[Direct3D 12-Programmieranleitung](directx-12-programming-guide.md)
+[Direct3D 12-Programmierhandbuch](directx-12-programming-guide.md)
 
-[Verwenden von Ressourcen Barrieren zum Synchronisieren von Ressourcen Zuständen in Direct3D 12](using-resource-barriers-to-synchronize-resource-states-in-direct3d-12.md)
+[Verwenden von Ressourcenbarrieren zum Synchronisieren von Ressourcenzuständen in Direct3D 12](using-resource-barriers-to-synchronize-resource-states-in-direct3d-12.md)
 
-[Arbeitsspeicherverwaltung in Direct3D 12](memory-management.md)
+[Speicherverwaltung in Direct3D 12](memory-management.md)

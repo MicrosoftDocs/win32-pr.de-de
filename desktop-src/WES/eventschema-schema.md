@@ -1,7 +1,7 @@
 ---
 title: Ereignisschema
 ms.assetid: 36037697-b777-4e5c-99af-77964200a3e4
-description: 'Weitere Informationen finden Sie hier: Ereignis Schema'
+description: Weitere Informationen finden Sie unter Ereignisschema.
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,31 +9,31 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bfb26f6c71d544e0c0a6a4d833b40a5d15ae5485
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c08e22ad44cb1eec461ebe70361a8ee4640a7fdf5a7eb7040b2774a520be7a05
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904360"
 ---
 # <a name="event-schema"></a>Ereignisschema
 
-Das Ereignis Schema definiert die folgenden Elemente und Typen, mit denen die Elemente und Attribute eines protokollierten Ereignisses identifiziert werden:
+Das Ereignisschema definiert die folgenden Elemente und Typen, die die Elemente und Attribute eines protokollierten Ereignisses identifizieren:
 
--   [Eventschema-Elemente](eventschema-elements.md)
--   [Einfache eventschema-Typen](eventschema-simple-types.md)
--   [Komplexe eventschema-Typen](eventschema-complex-types.md)
+-   [EventSchema-Elemente](eventschema-elements.md)
+-   [Einfache EventSchema-Typen](eventschema-simple-types.md)
+-   [Komplexe EventSchema-Typen](eventschema-complex-types.md)
 
-Der Abschnitt "Elemente" enthält die Namen der Elemente, die in einem protokollierten Ereignis gefunden werden. Informationen zu den einzelnen Elementen finden Sie jedoch unter dem komplexen Typ, der das Element enthält.
+Der Abschnitt elements enthält die Namen der Elemente, die Sie in protokollierten Ereignissen finden würden. Um jedoch die Details für jedes Element zu erhalten, sehen Sie sich den komplexen Typ an, der das Element enthält.
 
-Der Windows SDK enthält das Schema in der \\ include- \\ Datei "Event. xsd".
+Das Windows SDK enthält das Schema in der \\ Include \\ Event.xsd-Datei.
 
-Sie können dieses Schema verwenden, um die Elemente und Attribute zu identifizieren, wenn Sie die [**EvtRender**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) -Funktion aufrufen, um bestimmte Abschnitte oder Eigenschaften des Ereignisses zu Rendering. Ein Beispiel für die Verwendung dieses Schemas beim Rendern von Ereignissen finden Sie unter [Rendern von Ereignissen](rendering-events.md).
+Sie können dieses Schema verwenden, um die Elemente und Attribute zu identifizieren, wenn Sie die [**EvtRender-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtrender) aufrufen, um bestimmte Abschnitte oder Eigenschaften des Ereignisses zu rendern. Ein Beispiel, das zeigt, wie dieses Schema beim Rendern von Ereignissen verwendet wird, finden Sie unter [Renderingereignisse](rendering-events.md).
 
-Zusätzlich zum Ereignis Schema definiert das Windows-Ereignisprotokoll auch die folgenden Schemas:
+Zusätzlich zum Ereignisschema definiert Windows Ereignisprotokoll auch die folgenden Schemas:
 
--   [Eventmanifest-Schema](eventmanifestschema-schema.md)– definiert die Elemente und Typen, die zum Schreiben eines Instrumentierungs Manifests verwendet werden.
--   [Abfrage Schema](queryschema-schema.md)– definiert die Elemente und Typen, mit denen eine Abfrage zum Abrufen von Ereignissen von einem oder mehreren Kanälen geschrieben wird.
+-   [EventManifest-Schema](eventmanifestschema-schema.md): Definiert die Elemente und Typen, die zum Schreiben eines Instrumentierungsmanifests verwendet werden.
+-   [Abfrageschema](queryschema-schema.md): Definiert die Elemente und Typen, die zum Schreiben einer Abfrage verwendet werden, um Ereignisse aus einem oder mehr Kanälen abzurufen.
 
  
 

@@ -1,11 +1,11 @@
 ---
-title: Aktioncollection. Remove-Methode
-description: Entfernt bei der Skripterstellung die angegebene Aktion aus der Auflistung.
+title: ActionCollection.Remove-Methode
+description: Für Skripts entfernt die angegebene Aktion aus der Auflistung.
 ms.assetid: ae1da6a9-5851-4ccb-80dc-75d7a99e7c6a
 keywords:
-- Remove-Methode Taskplaner
-- Remove-Methode Taskplaner, Aktions Sammlungsobjekt
-- Aktions Sammlungsobjekt Taskplaner, Methode entfernen
+- Entfernen von methoden Taskplaner
+- Entfernen der Methode Taskplaner , ActionCollection-Objekt
+- ActionCollection-Objekt Taskplaner , Remove-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e110f870f4f192051b47cb3b65f0ebb41a490708
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c0c176f41c59bd473e25e82082ada1934a25641e6144f4187e7f25075779b25a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011740"
 ---
-# <a name="actioncollectionremove-method"></a>Aktioncollection. Remove-Methode
+# <a name="actioncollectionremove-method"></a>ActionCollection.Remove-Methode
 
-Entfernt bei der Skripterstellung die angegebene Aktion aus der Auflistung.
+Für Skripts entfernt die angegebene Aktion aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ ActionCollection.Remove( _
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
 Der Index der zu entfernenden Aktion.
@@ -53,9 +53,9 @@ Der Index der zu entfernenden Aktion.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie beim Entfernen von Elementen, dass der Index für das erste Element in der Auflistung 1 ist und der Index für das letzte Element der Wert der Eigenschaft " [**Aktions Auflistung. count**](actioncollection-count.md) " ist.
+Beachten Sie beim Entfernen von Elementen, dass der Index für das erste Element in der Auflistung 1 und der Index für das letzte Element der Wert der [**ActionCollection.Count-Eigenschaft**](actioncollection-count.md) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Beachten Sie beim Entfernen von Elementen, dass der Index für das erste Element
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

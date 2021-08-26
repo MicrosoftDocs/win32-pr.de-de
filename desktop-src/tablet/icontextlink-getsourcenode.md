@@ -1,7 +1,7 @@
 ---
-description: Ruft das icontextnode-Objekt ab, das die Quelle für diesen icontextlink ist.
+description: Ruft das IContextNode-Objekt ab, das die Quelle für diesen IContextLink ist.
 ms.assetid: 2f55ae9c-9f63-4d49-9bf0-9e169b819e79
-title: 'Icontextlink:: getsourcenode-Methode (iacom. h)'
+title: IContextLink::GetSourceNode-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: eddab21740bf30c67e247cec89723bc47cd9dca1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 609f3012608586f7e6c3279cd0dab4232f58ca3e0e31145124622e87684e06f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940410"
 ---
-# <a name="icontextlinkgetsourcenode-method"></a>Icontextlink:: getsourcenode-Methode
+# <a name="icontextlinkgetsourcenode-method"></a>IContextLink::GetSourceNode-Methode
 
-Ruft das [**icontextnode**](icontextnode.md) -Objekt ab, das die Quelle für diesen [**icontextlink**](icontextlink.md)ist.
+Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das die Quelle für diesen [**IContextLink**](icontextlink.md)ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,27 +39,27 @@ HRESULT GetSourceNode(
 
 <dl> <dt>
 
-*ppsrccontextnodeid* \[ vorgenommen\]
+*ppSrcContextNodeId* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das [**icontextnode**](icontextnode.md) -Objekt, das die Quelle für diesen [**icontextlink**](icontextlink.md)ist.
+Ein Zeiger auf das [**IContextNode-Objekt,**](icontextnode.md) das die Quelle für diesen [**IContextLink**](icontextlink.md)ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppsrccontextnodeid* , wenn Sie den Quellknoten nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für \* *ppSrcContextNodeId* auf, wenn Sie den Quellknoten nicht mehr verwenden müssen.
 
  
 
-Wenn das [**icontextlink**](icontextlink.md) -Objekt zwischen einem Knoten mit Schreibvorgang und einem Knoten mit Zeichnung verknüpft ist, ist der Quellknoten in der Regel der Knoten, der die Zeichnung enthält.
+Wenn das [**IContextLink-Objekt**](icontextlink.md) eine Verknüpfung zwischen einem Knoten mit Schreib- und einem Knoten mit Zeichnung enthält, ist der Quellknoten im Allgemeinen der Knoten, der Zeichnungen enthält.
 
-Wenn das [**icontextlink**](icontextlink.md) -Objekt den Linktyp engeschlossen aufweist (siehe [**icontextlink:: getcontextlinkdirection**](icontextlink-getcontextlinkdirection.md)), ist der Quellknoten der Knoten, der den Zielknoten einschließt.
+Wenn das [**IContextLink-Objekt**](icontextlink.md) den Linktyp "Encloses" hat (siehe [**IContextLink::GetContextLinkDirection),**](icontextlink-getcontextlinkdirection.md)ist der Quellknoten der Knoten, der den Zielknoten einschließt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Wenn das [**icontextlink**](icontextlink.md) -Objekt den Linktyp engeschlossen a
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -78,16 +78,16 @@ Wenn das [**icontextlink**](icontextlink.md) -Objekt den Linktyp engeschlossen a
 
 <dl> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**Icontextlink:: getdestinationnode**](icontextlink-getdestinationnode.md)
+[**IContextLink::GetDestinationNode**](icontextlink-getdestinationnode.md)
 </dt> <dt>
 
-[**ContextLinkDirection**](contextlinkdirection.md)
+[**Contextlinkdirection**](contextlinkdirection.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

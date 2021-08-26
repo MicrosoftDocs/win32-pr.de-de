@@ -1,49 +1,49 @@
 ---
-title: Itssbresourcenotificationex-Methoden
-description: Die itssbresourcenotificationex-Schnittstellen stellen die folgenden Methoden zur Verfügung.
+title: ITsSbResourceNotificationEx-Methoden
+description: Die ITsSbResourceNotificationEx-Schnittstellen machen die folgenden Methoden verfügbar.
 ms.assetid: 78BC73ED-80A3-4938-881C-6938B6693DE8
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f17dd337c62bb6798e41c46c31bcec3f6ccc09a7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f749181d90160c62001f8895aef2c4e233fa67163cd05bcce54b9d5182f03901
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989990"
 ---
-# <a name="itssbresourcenotificationex-methods"></a>Itssbresourcenotificationex-Methoden
+# <a name="itssbresourcenotificationex-methods"></a>ITsSbResourceNotificationEx-Methoden
 
-Die [**itssbresourcenotificationex**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcenotificationex) -Schnittstellen stellen die folgenden Methoden zur Verfügung.
+Die [**ITsSbResourceNotificationEx-Schnittstellen**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcenotificationex) machen die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**Notifyclientconnectionstatechangeex-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifyclientconnectionstatechangeex)
+[**NotifyClientConnectionStateChangeEx-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifyclientconnectionstatechangeex)
 </dt> <dd>
 
-Benachrichtigt registrierte Plug-ins über Statusänderungen in einer Client Verbindung.
+Benachrichtigt registrierte Plug-Ins über Zustandsänderungen in einer Clientverbindung.
 
 </dd> <dt>
 
-[**Notifysessionchangeex-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifysessionchangeex)
+[**NotifySessionChangeEx-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifysessionchangeex)
 </dt> <dd>
 
-Benachrichtigt registrierte Plug-ins über Zustandsänderungen in einem Sitzungs Objekt.
+Benachrichtigt registrierte Plug-Ins über Zustandsänderungen in einem Sitzungsobjekt.
 
 </dd> <dt>
 
-[**Notifytargetchangeex-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifytargetchangeex)
+[**NotifyTargetChangeEx-Methode**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcenotificationex-notifytargetchangeex)
 </dt> <dd>
 
-Benachrichtigt registrierte Plug-ins über Zustandsänderungen in einem Zielobjekt.
+Benachrichtigt registrierte Plug-Ins über Zustandsänderungen in einem Zielobjekt.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

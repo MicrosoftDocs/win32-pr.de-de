@@ -1,9 +1,9 @@
 ---
-title: Theme. PlaySound
-description: Die PlaySound-Methode gibt die angegebene Audiodatei wieder.
+title: THEME.playSound
+description: Die playSound-Methode gibt die angegebene Sounddatei wieder.
 ms.assetid: 42675a66-0139-4e74-9abe-1b42017fc6fe
 keywords:
-- Design. PlaySound-Fenster Media Player
+- THEME.playSound Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8ceb30e5c47632a1358262019124fceae056294d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e9e6ac0cb7bdf4f8951bafbc89a0a41bf368afcd1021666eb7875739d1cd912e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372404"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001750"
 ---
-# <a name="themeplaysound"></a>Theme. PlaySound
+# <a name="themeplaysound"></a>THEME.playSound
 
-Die **PlaySound** -Methode gibt die angegebene Audiodatei wieder.
+Die **playSound-Methode** gibt die angegebene Sounddatei wieder.
 
 ``` syntax
         theme.playSound(soundFile)
@@ -35,7 +35,7 @@ Die **PlaySound** -Methode gibt die angegebene Audiodatei wieder.
 <span id="soundFile"></span><span id="soundfile"></span><span id="SOUNDFILE"></span>*soundFile*
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Namen der zu Wiedergabe enden Audiodatei angibt.
+Eine **Zeichenfolge,** die den Namen der wieder zu wiedergibtden Sounddatei angibt.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Eine **Zeichenfolge** , die den Namen der zu Wiedergabe enden Audiodatei angibt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ermöglicht das Hinzufügen von Soundeffekten zu einer Skin, wenn beispielsweise auf Schaltflächen geklickt wird. Der Sound wird vom Betriebssystem direkt und nicht von Windows Media Player abgespielt. Dies bedeutet, dass der Sound nicht mit Windows Media Player-Einstellungen und-Methoden gesteuert werden kann. er kann jedoch abgespielt werden, während Windows Media Player eine andere digitale Mediendatei wieder gibt.
+Mit dieser Methode können Sie einer Skin Soundeffekte hinzufügen, z. B. wenn auf Schaltflächen geklickt wird. Der Sound wird direkt vom Betriebssystem und nicht von Windows Media Player. Dies bedeutet, dass der Sound nicht mit Windows Media Player und Methoden gesteuert werden kann, aber er kann während der Wiedergabe Windows Media Player einer anderen digitalen Mediendatei abgespielt werden.
 
 Diese Methode unterstützt nur WAV-Dateien.
 
@@ -59,11 +59,11 @@ Diese Methode unterstützt nur WAV-Dateien.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die signaltimerfired-Methode löscht den Zeit Geber Bezeichner, der zum Planen des Rendering verwendet wurde.
+description: Die SignalTimerFired-Methode gibt den Timerbezeichner frei, der zum Planen des Renderings verwendet wird.
 ms.assetid: b8ae362e-fcda-4888-be32-8fb910d0f0db
-title: Cbaserderderer. signaltimerfired-Methode (renbase. h)
+title: CBaseRenderer.SignalTimerFired-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4dd29b37869fc6f07c2d876dfa0d1d306b04b111
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f08ed0e8348648d5d1af1127159b414b0ddbc40cfd470ff0834b7bc2b0723e9b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052360"
 ---
-# <a name="cbaserenderersignaltimerfired-method"></a>Cbaserderderer. signaltimerfired-Methode
+# <a name="cbaserenderersignaltimerfired-method"></a>CBaseRenderer.SignalTimerFired-Methode
 
-Die- `SignalTimerFired` Methode löscht den Zeit Geber Bezeichner, der für die Zeit Plan Rendering
+Die `SignalTimerFired` -Methode clears the timer identifier used to schedule rendering.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Filter ruft diese Methode auf, wenn der rendertimer aktiviert wird (siehe [**cbaserenderer:: waitforrendertime**](cbaserenderer-waitforrendertime.md)) oder wenn der Timer abgebrochen wird (siehe [**cbaserenderer:: cancelnotification**](cbaserenderer-cancelnotification.md)). Die-Methode setzt die Element Variable [**cbaserenderer:: m \_ DW-**](cbaserenderer-m-dwadvise.md) Member auf NULL zurück.
+Der Filter ruft diese Methode auf, wenn der Renderingtimer aktiviert wird (siehe [**CBaseRenderer::WaitForRenderTime),**](cbaserenderer-waitforrendertime.md)oder wenn der Timer abgebrochen wird (siehe [**CBaseRenderer::CancelNotification**](cbaserenderer-cancelnotification.md)). Die -Methode setzt die [**CBaseRenderer::m \_ dwAdvise-Membervariable**](cbaserenderer-m-dwadvise.md) auf 0 zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Der Filter ruft diese Methode auf, wenn der rendertimer aktiviert wird (siehe [*
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

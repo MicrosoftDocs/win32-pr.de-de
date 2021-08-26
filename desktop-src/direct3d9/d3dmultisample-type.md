@@ -1,7 +1,7 @@
 ---
-description: Definiert die Ebenen der multisamplinggrad-voll Szene, die auf dem Gerät angewendet werden können.
+description: Definiert die Ebenen der Vollszenen-Multisamplings, die das Gerät anwenden kann.
 ms.assetid: 1a3c1efe-f5b1-47a1-a5f5-ac49d318f3b8
-title: D3DMULTISAMPLE_TYPE-Enumeration (D3D9Types. h)
+title: D3DMULTISAMPLE_TYPE -Enumeration (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: da8f9c1c8bb3aa74c0ab22a5cc701e7d835898de
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e6173abf04f42b0632441b436706318796a5d0af758928e61dd3f19d30bda881
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027970"
 ---
-# <a name="d3dmultisample_type-enumeration"></a>D3DMULTISAMPLE- \_ Typenumeration
+# <a name="d3dmultisample_type-enumeration"></a>D3DMULTISAMPLE \_ TYPE-Enumeration
 
-Definiert die Ebenen der multisamplinggrad-voll Szene, die auf dem Gerät angewendet werden können.
+Definiert die Ebenen der Vollszenen-Multisamplings, die das Gerät anwenden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,164 +56,164 @@ typedef enum D3DMULTISAMPLE_TYPE {
 
 <dl> <dt>
 
-<span id="D3DMULTISAMPLE_NONE"></span><span id="d3dmultisample_none"></span>**D3DMULTISAMPLE \_ None**
+<span id="D3DMULTISAMPLE_NONE"></span><span id="d3dmultisample_none"></span>**D3DMULTISAMPLE \_ NONE**
 </dt> <dd>
 
-Es ist keine Ebene der multisamplinggrad-vollständige Szene verfügbar.
+Es ist keine Ebene für vollständige Szenen-Multisampling verfügbar.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_NONMASKABLE_"></span><span id="d3dmultisample_nonmaskable_"></span>**D3DMULTISAMPLE \_ Nonmaskable** 
+<span id="D3DMULTISAMPLE_NONMASKABLE_"></span><span id="d3dmultisample_nonmaskable_"></span>**D3DMULTISAMPLE \_ NONMASKABLE** 
 </dt> <dd>
 
-Aktiviert den Qualitäts Wert "Multisampling". Siehe Hinweise.
+Aktiviert den Multisample-Qualitätswert. Siehe Hinweise.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_2_SAMPLES"></span><span id="d3dmultisample_2_samples"></span>**D3DMULTISAMPLE \_ 2- \_ Beispiele**
+<span id="D3DMULTISAMPLE_2_SAMPLES"></span><span id="d3dmultisample_2_samples"></span>**BEISPIELE FÜR D3DMULTISAMPLE \_ 2 \_**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_3_SAMPLES"></span><span id="d3dmultisample_3_samples"></span>**D3DMULTISAMPLE \_ 3- \_ Beispiele**
+<span id="D3DMULTISAMPLE_3_SAMPLES"></span><span id="d3dmultisample_3_samples"></span>**D3DMULTISAMPLE \_ 3 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_4_SAMPLES"></span><span id="d3dmultisample_4_samples"></span>**D3DMULTISAMPLE \_ 4- \_ Beispiele**
+<span id="D3DMULTISAMPLE_4_SAMPLES"></span><span id="d3dmultisample_4_samples"></span>**D3DMULTISAMPLE \_ 4 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_5_SAMPLES"></span><span id="d3dmultisample_5_samples"></span>**D3DMULTISAMPLE \_ 5 \_ Beispiele**
+<span id="D3DMULTISAMPLE_5_SAMPLES"></span><span id="d3dmultisample_5_samples"></span>**D3DMULTISAMPLE \_ 5 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_6_SAMPLES"></span><span id="d3dmultisample_6_samples"></span>**D3DMULTISAMPLE \_ 6- \_ Beispiele**
+<span id="D3DMULTISAMPLE_6_SAMPLES"></span><span id="d3dmultisample_6_samples"></span>**D3DMULTISAMPLE \_ 6 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_7_SAMPLES"></span><span id="d3dmultisample_7_samples"></span>**D3DMULTISAMPLE \_ 7- \_ Beispiele**
+<span id="D3DMULTISAMPLE_7_SAMPLES"></span><span id="d3dmultisample_7_samples"></span>**BEISPIELE FÜR D3DMULTISAMPLE \_ 7 \_**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_8_SAMPLES"></span><span id="d3dmultisample_8_samples"></span>**D3DMULTISAMPLE \_ 8- \_ Beispiele**
+<span id="D3DMULTISAMPLE_8_SAMPLES"></span><span id="d3dmultisample_8_samples"></span>**D3DMULTISAMPLE \_ 8 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_9_SAMPLES"></span><span id="d3dmultisample_9_samples"></span>**D3DMULTISAMPLE \_ 9- \_ Beispiele**
+<span id="D3DMULTISAMPLE_9_SAMPLES"></span><span id="d3dmultisample_9_samples"></span>**D3DMULTISAMPLE \_ 9 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_10_SAMPLES"></span><span id="d3dmultisample_10_samples"></span>**D3DMULTISAMPLE \_ 10- \_ Beispiele**
+<span id="D3DMULTISAMPLE_10_SAMPLES"></span><span id="d3dmultisample_10_samples"></span>**BEISPIELE FÜR D3DMULTISAMPLE \_ 10 \_**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_11_SAMPLES"></span><span id="d3dmultisample_11_samples"></span>**D3DMULTISAMPLE \_ 11- \_ Beispiele**
+<span id="D3DMULTISAMPLE_11_SAMPLES"></span><span id="d3dmultisample_11_samples"></span>**BEISPIELE FÜR D3DMULTISAMPLE \_ 11 \_**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_12_SAMPLES"></span><span id="d3dmultisample_12_samples"></span>**D3DMULTISAMPLE \_ 12- \_ Beispiele**
+<span id="D3DMULTISAMPLE_12_SAMPLES"></span><span id="d3dmultisample_12_samples"></span>**D3DMULTISAMPLE \_ 12 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_13_SAMPLES"></span><span id="d3dmultisample_13_samples"></span>**D3DMULTISAMPLE \_ 13- \_ Beispiele**
+<span id="D3DMULTISAMPLE_13_SAMPLES"></span><span id="d3dmultisample_13_samples"></span>**D3DMULTISAMPLE \_ 13 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_14_SAMPLES"></span><span id="d3dmultisample_14_samples"></span>**D3DMULTISAMPLE \_ 14- \_ Beispiele**
+<span id="D3DMULTISAMPLE_14_SAMPLES"></span><span id="d3dmultisample_14_samples"></span>**D3DMULTISAMPLE \_ 14 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_15_SAMPLES"></span><span id="d3dmultisample_15_samples"></span>**D3DMULTISAMPLE \_ 15 \_ Beispiele**
+<span id="D3DMULTISAMPLE_15_SAMPLES"></span><span id="d3dmultisample_15_samples"></span>**D3DMULTISAMPLE \_ 15 \_ SAMPLES**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_16_SAMPLES"></span><span id="d3dmultisample_16_samples"></span>**D3DMULTISAMPLE \_ 16- \_ Beispiele**
+<span id="D3DMULTISAMPLE_16_SAMPLES"></span><span id="d3dmultisample_16_samples"></span>**D3DMULTISAMPLE 16 SAMPLES (BEISPIELE FÜR D3DMULTISAMPLE \_ \_ 16)**
 </dt> <dd>
 
-Verfügbare Ebene der multisamplinggrad-vollständige Szene.
+Level of full-scene multisampling available.
 
 </dd> <dt>
 
-<span id="D3DMULTISAMPLE_FORCE_DWORD"></span><span id="d3dmultisample_force_dword"></span>**D3DMULTISAMPLE \_ Erzwingen von \_ DWORD**
+<span id="D3DMULTISAMPLE_FORCE_DWORD"></span><span id="d3dmultisample_force_dword"></span>**D3DMULTISAMPLE \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zur Aktivierung der multisamplinggrad-Funktion für die vollständige Szene bei der [**IDirect3DDevice9:: Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset) -Zeit gibt es Rendering-Zustände, mit denen verschiedene Aspekte auf differenzierten Ebenen ein-und ausgeschaltet werden können.
+Zusätzlich zur Aktivierung der vollständigen Szenen-Multisampling bei [**IDirect3DDevice9::Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset) gibt es Renderzustände, die verschiedene Aspekte auf fein abgrenzenden Ebenen aktivieren und deaktivieren.
 
-Multisampling ist nur für eine Austausch Kette gültig, die mit dem D3DSWAPEFFECT DISCARD-Swap-Effekt erstellt oder zurückgesetzt wird \_ .
+Multisampling ist nur für eine Swapkette gültig, die mit dem Swapeffekt D3DSWAPEFFECT DISCARD erstellt oder \_ zurückgesetzt wird.
 
-Der Multisampling-Antialiasing-Wert kann mit den Parametern (oder unter Parametern) in den folgenden Methoden festgelegt werden.
+Der Multisample-Antialiasingwert kann mit den Parametern (oder Unterparametern) in den folgenden Methoden festgelegt werden.
 
 
 
-| Methode                                                                                             | Parameter                         | Unter Parameter                     |
+| Methode                                                                                             | Parameter                         | Unterparameter                     |
 |----------------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|
-| [**IDirect3D9:: checkdevicemultisampletype**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype)           | MultiSampleType und pqualitylevels |                                    |
-| [**IDirect3D9:: kreatedevice**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)                                       | ppresentationparameters            | MultiSampleType und pqualitylevels |
-| [**IDirect3DDevice9:: kreateadditionalswapchain**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createadditionalswapchain) | ppresentationparameters            | MultiSampleType und pqualitylevels |
-| [**IDirect3DDevice9:: kreatedepthstencilsurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface) | MultiSampleType und pqualitylevels |                                    |
-| [**IDirect3DDevice9:: anaterendertarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget)               | MultiSampleType und pqualitylevels |                                    |
-| [**IDirect3DDevice9:: Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)                                         | ppresentationparameters            | MultiSampleType und pqualitylevels |
+| [**IDirect3D9::CheckDeviceMultiSampleType**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype)           | MultiSampleType und pQualityLevels |                                    |
+| [**IDirect3D9::CreateDevice**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice)                                       | pPresentationParameters            | MultiSampleType und pQualityLevels |
+| [**IDirect3DDevice9::CreateAdditionalSwapChain**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createadditionalswapchain) | pPresentationParameters            | MultiSampleType und pQualityLevels |
+| [**IDirect3DDevice9::CreateDepthStencilSurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface) | MultiSampleType und pQualityLevels |                                    |
+| [**IDirect3DDevice9::CreateRenderTarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget)               | MultiSampleType und pQualityLevels |                                    |
+| [**IDirect3DDevice9::Reset**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-reset)                                         | pPresentationParameters            | MultiSampleType und pQualityLevels |
 
 
 
  
 
-Es ist nicht empfehlenswert, von einem Multisampling-Typ zu einem anderen zu wechseln, um die Qualität des Antialiasing zu erhöhen.
+Es ist keine bewährte Methode, von einem Multisampletyp zu einem anderen zu wechseln, um die Qualität des Antialiasings zu erhöhen.
 
-D3DMULTISAMPLE \_ None ermöglicht andere Auslagerungs Effekte als verwerfen, Sperren usw.
+D3DMULTISAMPLE NONE ermöglicht andere Auslagerungseffekte als \_ das Verwerfen, Sperren und so weiter.
 
-Unabhängig davon, ob das Anzeigegerät das hochskalierbaren multisamplinggrad unterstützt (mehr als ein Beispiel für ein Renderziel-Format mit mehreren Stichproben Plus Unterstützung für AntiAlias) oder lediglich eine nicht-maskierbarer-multisamplinggrad (nur Unterstützung für AntiAlias), stellt der Treiber für das Gerät die Anzahl der Qualitätsstufen für den D3DMULTISAMPLE \_ nicht maskierbarer Multiple-Sample-Typ Anwendungen, die nur multisamplinggrad für Antialiasing-Zwecke verwenden, müssen nur die Anzahl der nicht von der Treiber unterstützten Qualitäts Ebenen mit mehreren Stichproben Abfragen.
+Unabhängig davon, ob das Anzeigegerät maskierbare Multisamplings (mehr als ein Beispiel für ein Renderzielformat mit mehreren Stichproben plus Antialias-Unterstützung) oder einfach nicht maskierbare Multisamplings (nur Antialias-Unterstützung) unterstützt, stellt der Treiber für das Gerät die Anzahl der Qualitätsstufen für den D3DMULTISAMPLE \_ NONMASKABLE-Mehrfachbeispieltyp zur Verfügung. Anwendungen, die nur Multisampling für Antialiasingzwecke verwenden, müssen nur die Anzahl der nicht maskierbaren Qualitätsstufen mit mehreren Stichproben abfragen, die der Treiber unterstützt.
 
-Die vom Gerät unterstützten Qualitätsstufen können mit dem pqualitylevels-Parameter von [**IDirect3D9:: checkdevicemultisampletype**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype)abgerufen werden. Die Qualitätsstufen, die von der Anwendung verwendet werden, werden mit dem multisamplequality-Parameter von [**IDirect3DDevice9:: | atedepthstencilsurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface) und [**IDirect3DDevice9:: anaterendertarget**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget)festgelegt.
+Die vom Gerät unterstützten Qualitätsstufen können mit dem pQualityLevels-Parameter von [**IDirect3D9::CheckDeviceMultiSampleType ermittelt werden.**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-checkdevicemultisampletype) Die von der Anwendung verwendeten Qualitätsstufen werden mit dem MultiSampleQuality-Parameter von [**IDirect3DDevice9::CreateDepthStencilSurface**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface) und [**IDirect3DDevice9::CreateRenderTarget festgelegt.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createrendertarget)
 
-Unter D3DRS \_ multisamplemask finden Sie eine Erläuterung der nicht ordnungs fähigen Multisampling.
+Unter D3DRS \_ MULTISAMPLEMASK finden Sie Informationen zu maskierbaren Multisamplings.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -221,7 +221,7 @@ Unter D3DRS \_ multisamplemask finden Sie eine Erläuterung der nicht ordnungs f
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
@@ -232,10 +232,10 @@ Unter D3DRS \_ multisamplemask finden Sie eine Erläuterung der nicht ordnungs f
 [Direct3D-Enumerationen](dx9-graphics-reference-d3d-enums.md)
 </dt> <dt>
 
-[**D3DPRESENT- \_ Parameter**](d3dpresent-parameters.md)
+[**D3DPRESENT-PARAMETER \_**](d3dpresent-parameters.md)
 </dt> <dt>
 
-[**D3DSURFACE- \_ Abteilung**](d3dsurface-desc.md)
+[**D3DSURFACE \_ DESC**](d3dsurface-desc.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Enthält einen Wert, der zurückgegeben werden soll.
+description: Enthält einen polaren Wert, der zurückgegeben werden soll.
 ms.assetid: 432C10EF-AC08-4781-9BCA-A31E0DF12704
-title: PWM_PIN_GET_POLARITY_OUTPUT Struktur (PWM. h)
+title: PWM_PIN_GET_POLARITY_OUTPUT-Struktur (Pwm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Pwm.h
-ms.openlocfilehash: 81cf7b658a0024c3280db1523af34aaf2ef17262
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7d4c3103663ceac65deff7744b0cf45a21a787959cc6e866bde5ac8673f7f64a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984430"
 ---
-# <a name="pwm_pin_get_polarity_output-structure"></a>PWM- \_ Pin \_ Get Polarität- \_ \_ Ausgabestruktur
+# <a name="pwm_pin_get_polarity_output-structure"></a>PWM \_ PIN \_ GET \_ POLARITY \_ OUTPUT-Struktur
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Enthält einen Wert, der zurückgegeben werden soll.
+Enthält einen polaren Wert, der zurückgegeben werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ typedef struct _PWM_PIN_GET_POLARITY_OUTPUT {
 
 <dl> <dt>
 
-**Gan**
+**Polarität**
 </dt> <dd>
 
-Die Polarität der PIN oder des Kanals als [**PWM- \_ polationswert**](/windows/desktop/api/Pwm/ne-pwm-pwm_polarity) . Die Polarität ist entweder "hoch" oder "aktiv".
+Die Polarität des Pins oder Kanals als [**PWM \_ POLARITY-Wert.**](/windows/desktop/api/Pwm/ne-pwm-pwm_polarity) Die Polarität ist entweder Aktiv Hoch oder Aktiv Niedrig.
 
 </dd> </dl>
 
@@ -54,11 +54,11 @@ Die Polarität der PIN oder des Kanals als [**PWM- \_ polationswert**](/windows/
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                             |
 | KMDF-Mindestversion<br/>     | 1.19<br/>                                                                                  |
 | UMDF-Mindestversion<br/>     | 2.19<br/>                                                                                  |
-| Header<br/>                   | <dl> <dt>PWM. h (Include PWM. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Pwm.h (einschließlich Pwm.h)</dt> </dl> |
 
 
 
@@ -66,10 +66,10 @@ Die Polarität der PIN oder des Kanals als [**PWM- \_ polationswert**](/windows/
 
 <dl> <dt>
 
-[**IOCTL \_ PWM- \_ Pin \_ get \_ Polarität**](https://www.bing.com/search?q=**IOCTL\_PWM\_PIN\_GET\_POLARITY**)
+[**IOCTL \_ PWM \_ PIN \_ GET \_ POLARITY**](https://www.bing.com/search?q=**IOCTL\_PWM\_PIN\_GET\_POLARITY**)
 </dt> <dt>
 
-[**PWM- \_ Polarität**](/windows/win32/api/pwm/ne-pwm-pwm_polarity)
+[**PWM \_ POLARITY**](/windows/win32/api/pwm/ne-pwm-pwm_polarity)
 </dt> </dl>
 
  

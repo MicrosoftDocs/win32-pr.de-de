@@ -1,14 +1,14 @@
 ---
 title: Windows-Bereitstellungsdienste
-description: Bereitstellen Windows Betriebssystemen. Richten Sie neue Clients mit einer netzwerkbasierten Installation ein, ohne dass Administratoren jeden Computer besuchen oder direkt über CD- oder DVD-Medien installieren müssen.
+description: Stellen Sie Windows Betriebssystem bereit. Richten Sie neue Clients mit einer netzwerkbasierten Installation ein, ohne dass Administratoren jeden Computer besuchen oder direkt von CD- oder DVD-Medien installieren müssen.
 ms.assetid: 790abc27-03cc-4f93-bf04-a4eb37e614bb
 keywords:
-- Windows Bereitstellungsdienste Windows Bereitstellungsdiensten
-- Windows Deployment Services Windows Deployment Services , Startseite
-- Bereitstellungsdienste Windows Bereitstellungsdiensten
-- WDS Windows Deployment Services siehe Windows Deployment Services
-- Remoteinstallationsdienste Windows Bereitstellungsdienste siehe Windows Bereitstellungsdienste
-- RIS Windows Deployment Services siehe Windows Deployment Services
+- Windows Bereitstellungsdienste Windows Bereitstellungsdienste
+- Windows Bereitstellungsdienste Windows Bereitstellungsdienste, Startseite
+- Bereitstellungsdienste Windows Bereitstellungsdienste
+- WDS Windows Deployment Services Siehe Windows Deployment Services
+- Remoteinstallationsdienste Windows Bereitstellungsdienste Siehe Windows Deployment Services
+- RIS Windows Deployment Services Siehe Windows Deployment Services
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 100483541420015ed84a95543f2f94bafb2d509d44e6b321b53729caa94588cc
@@ -22,17 +22,17 @@ ms.locfileid: "119999510"
 
 ## <a name="purpose"></a>Zweck
 
-Windows Deployment Services (WDS) ist die überarbeitete Version der Remoteinstallationsdienste (Remote Installation Services, RIS). WDS ermöglicht die Bereitstellung Windows Betriebssystemen. Mit WDS können Sie neue Clients mit einer netzwerkbasierten Installation einrichten, ohne dass Administratoren jeden Computer besuchen oder direkt über CD- oder DVD-Medien installieren müssen.
+Windows Bereitstellungsdienste (Deployment Services, WDS) ist die überarbeitete Version der Remoteinstallationsdienste (REMOTE Installation Services, RIS). WDS ermöglicht die Bereitstellung von Windows Betriebssystemen. Sie können WDS verwenden, um neue Clients mit einer netzwerkbasierten Installation einzurichten, ohne dass Administratoren jeden Computer besuchen oder direkt von CD- oder DVD-Medien installieren müssen.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die primäre Entwicklergruppe der WDS-API ist für Gruppen, die benutzerdefinierte Tools und Prozesse für IT- und andere Computerverwaltungsgruppen entwickeln. In Umgebungen, in denen die standard Windows Deployment Services (WDS)-Lösung nicht verwendet werden kann, ermöglicht die WDS-API programmgesteuerten Zugriff auf einige WDS-Komponenten.
+Die primäre Entwicklergruppe der WDS-API ist für Gruppen, die benutzerdefinierte Tools und Prozesse für DIE IT und andere Computerverwaltungsgruppen entwickeln. In Umgebungen, in denen die Standardlösung Windows Deployment Services (WDS) nicht verwendet werden kann, ermöglicht die WDS-API den programmgesteuerten Zugriff auf einige WDS-Komponenten.
 
-Originalgerätehersteller (Original Equipment Manufacturers, OEMs), Systemgeneratoren und IT-Experten im Unternehmen, die Informationen zum Bereitstellen von Windows auf neuen Computern suchen, sollten die Informationen zur standardmäßigen WDS-Lösung (Windows Deployment Services) in der [Schritt-für-Schritt-Anleitung](/previous-versions/windows/it-pro/windows-vista/cc766320(v=ws.10)) zum Update von Windows Deployment Services und im [Windows Automated Installation Kit (CSK)](https://www.microsoft.com/download/details.aspx?id=10333)finden.
+Originalgerätehersteller (OEMs), Systementwickler und IT-Experten des Unternehmens, die Informationen zum Bereitstellen von Windows auf neuen Computern suchen, sollten die Informationen zur Standardlösung für Windows Deployment Services (WDS) in der [Schritt-für-Schritt-Anleitung](/previous-versions/windows/it-pro/windows-vista/cc766320(v=ws.10)) Windows Deployment Services Update und im [Windows Automated Installation Kit (OEMK)](https://www.microsoft.com/download/details.aspx?id=10333)anzeigen.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-WDS ist als Add-On für Windows Server 2003 mit Service Pack 1 (SP1) verfügbar und ab Windows Server 2003 mit Service Pack 2 (SP2) und Windows Server 2008 im Betriebssystem enthalten. Die WDS-PXE-Server-API erfordert die WDS-Serverrolle auf dem Server, um benutzerdefinierte PXE-Anbieter zu implementieren. Die WDS-Client-API erfordert die Microsoft Windows-Vorinstallationsumgebung (Windows PE 2.0) der Setupverarbeitung. Ein startbares RAMDISK-Image Windows PE 2.0 im . Das WIM-Format muss im Rahmen des Netzwerkstartprozesses heruntergeladen werden, um benutzerdefinierte WDS-Clients zu implementieren.
+WDS ist als Add-On für Windows Server 2003 mit Service Pack 1 (SP1) verfügbar und ab Windows Server 2003 mit Service Pack 2 (SP2) und Windows Server 2008 im Betriebssystem enthalten. Die WDS-PXE-Server-API erfordert die WDS-Serverrolle auf dem Server, um benutzerdefinierte PXE-Anbieter zu implementieren. Die WDS-Client-API erfordert die Phase der Einrichtung der Microsoft Windows Preinstallation Environment (Windows PE 2.0). Ein startbares RAMDISK-Image von Windows PE 2.0 in der . Das WIM-Format muss im Rahmen des Netzwerkstartprozesses heruntergeladen werden, um benutzerdefinierte WDS-Clients zu implementieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -41,7 +41,7 @@ WDS ist als Add-On für Windows Server 2003 mit Service Pack 1 (SP1) verfügbar 
 | Thema                                                                                                 | BESCHREIBUNG                                                                    |
 |-------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
 | [Informationen zur Windows Deployment Services-API](about-the-windows-deployment-services-api.md)<br/> | Allgemeine Informationen zur WDS-Server-API und WDS-Client-API.<br/>    |
-| [Windows Referenz zu Bereitstellungsdiensten](windows-deployment-services-reference.md)<br/>         | Beschreibt die Windows Und-Strukturen der Bereitstellungsdienste.<br/> |
+| [Windows Referenz zu Bereitstellungsdiensten](windows-deployment-services-reference.md)<br/>         | Beschreibt die Windows Deployment Services-Funktionen und -Strukturen.<br/> |
 
 
 

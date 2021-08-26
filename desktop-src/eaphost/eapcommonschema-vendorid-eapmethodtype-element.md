@@ -1,9 +1,9 @@
 ---
-title: VendorID (eapmethodtype)-Element
-description: Bezieht sich auf den Hersteller, der die-Methode definiert hat, wenn das Type (eapmethodtype)-Element 254 (eine erweiterte EAP-Methode) ist.
+title: VendorId (EapMethodType)-Element
+description: Bezieht sich auf den Anbieter, der die Methode definiert hat, wenn das Type-Element (EapMethodType) 254 (eine erweiterte EAP-Methode) ist.
 ms.assetid: 14992940-2fe5-4f85-91c0-1f61345ee90f
 keywords:
-- VendorID-Element EAPHost
+- VendorId-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9091cdbd7620baf6ec5dc893bd2100b2f04585ec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 29508121a9724a52df19038b82d97576a924c3c8bab49ac6801c1de51ec71919
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067300"
 ---
-# <a name="vendorid-eapmethodtype-element"></a>VendorID (eapmethodtype)-Element
+# <a name="vendorid-eapmethodtype-element"></a>VendorId (EapMethodType)-Element
 
-Das **VendorID (eapmethodtype)-** Element verweist auf den Hersteller, der die Methode definiert hat, wenn das [**Type (eapmethodtype)**](eapcommonschema-type-eapmethodtype-element.md) -Element 254 (eine erweiterte EAP-Methode) ist.
+Das **VendorId-Element (EapMethodType)** bezieht sich auf den Anbieter, der die Methode definiert hat, wenn das [**Type-Element (EapMethodType)**](eapcommonschema-type-eapmethodtype-element.md) 254 (eine erweiterte EAP-Methode) ist.
 
-**VendorID** ist optional. Bei Verwendung ist **VendorID** eine eindeutige Zahl, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
+Die **VendorId** ist optional. Bei Verwendung ist **vendorId eine** eindeutige Nummer, die von der Internet Assigned Numbers Authority (IANA) ausgegeben wird.
 
 ``` syntax
 <xs:element name="VendorId"
@@ -33,11 +33,11 @@ Das **VendorID (eapmethodtype)-** Element verweist auf den Hersteller, der die M
  />
 ```
 
-Das **VendorID-** Element wird durch den komplexen [**eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md) -Typ definiert.
+Das **VendorId-Element** wird durch den komplexen [**EapMethodType-Typ**](eapcommonschema-eapmethodtype-complextype.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md) " und " **VendorID** " müssen für eine bestimmte Methode nicht identisch sein.
+Die [**Elemente AuthorId**](eapcommonschema-authorid-eapmethodtype-element.md) **und VendorId** müssen für eine bestimmte Methode nicht identisch sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,8 +45,8 @@ Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md) 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -54,13 +54,13 @@ Die Elemente " [**AutorID**](eapcommonschema-authorid-eapmethodtype-element.md) 
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eapmethodtype**](eapcommonschema-eapmethodtype-complextype.md)
+[**EapMethodType**](eapcommonschema-eapmethodtype-complextype.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapcommon-Schema](eapcommonschema-schema.md)

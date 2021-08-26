@@ -1,7 +1,7 @@
 ---
-description: Beschreibt ein von einer Instanz von ID3DXRenderToEnvMap verwendetes Renderziel von einem Bildschirm.
+description: Beschreibt ein Off-Screen-Renderziel, das von einer Instanz von ID3DXRenderToEnvMap verwendet wird.
 ms.assetid: 805df4da-e882-4d54-bf2c-49cfcbc59ac6
-title: D3DXRTE_DESC-Struktur (D3dx9core. h)
+title: D3DXRTE_DESC -Struktur (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9core.h
-ms.openlocfilehash: 69a5957bc9338abac4441f65066a43efb7dabead
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 91efe4dff2b392310ed2fd6bdc30db12c883c5d08e6b2cf110c2cb29d73c54ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027280"
 ---
-# <a name="d3dxrte_desc-structure"></a>D3DXRTE- \_ Struktur
+# <a name="d3dxrte_desc-structure"></a>D3DXRTE \_ DESC-Struktur
 
-Beschreibt ein von einer Instanz von [**ID3DXRenderToEnvMap**](id3dxrendertoenvmap.md)verwendetes Renderziel von einem Bildschirm.
+Beschreibt ein Off-Screen-Renderziel, das von einer Instanz von [**ID3DXRenderToEnvMap verwendet wird.**](id3dxrendertoenvmap.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ typedef struct D3DXRTE_DESC {
 **Größe**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -57,11 +57,11 @@ Breite und Höhe in Pixel.
 **MipLevels**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Maximale Detailebene (LOD).
+Maximale Detailstufe (LOD).
 
 </dd> <dt>
 
@@ -72,35 +72,35 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Farb Puffer Format.
+Farbpufferformat.
 
 </dd> <dt>
 
-**Depthstencil**
+**Tiefenstencil**
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gibt an, ob der z-Puffer benötigt wird.
+Gibt an, ob der Z-Puffer benötigt wird.
 
 </dd> <dt>
 
-**Depthstencilformat**
+**DepthStencilFormat**
 </dt> <dd>
 
 Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Das Format des tiefen Puffers.
+Format des Tiefenpuffers.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird zum Zurückgeben der Erstellungs Parameter verwendet, die beim Erstellen eines [**ID3DXRenderToEnvMap**](id3dxrendertoenvmap.md) -Objekts verwendet werden.
+Diese Methode wird verwendet, um die Erstellungsparameter zurückzuerlangen, die beim Erstellen eines [**ID3DXRenderToEnvMap-Objekts verwendet**](id3dxrendertoenvmap.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,11 +108,11 @@ Diese Methode wird zum Zurückgeben der Erstellungs Parameter verwendet, die bei
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9core. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9core.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

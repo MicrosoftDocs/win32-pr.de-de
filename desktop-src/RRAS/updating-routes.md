@@ -1,26 +1,26 @@
 ---
 title: Aktualisieren von Routen
-description: Ein Client kann eine der folgenden Methoden verwenden, um die in ihm besitzenden Routen zu aktualisieren oder zu entfernen.
+description: Ein Client kann eine der folgenden Methoden verwenden, um Routen zu aktualisieren oder zu entfernen, die er besitzt.
 ms.assetid: b011d452-675d-4ddb-ba46-237ba5a5c178
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b4a1507b6ca4e5ea2a3f75d04f688fc5daeb967
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 10e882ceefabf26ab4fff437a68065bd61fc35ae9c140ab7ac26aca243705b90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025310"
 ---
 # <a name="updating-routes"></a>Aktualisieren von Routen
 
-Ein Client kann eine der folgenden Methoden verwenden, um die in ihm besitzenden Routen zu aktualisieren oder zu entfernen.
+Ein Client kann eine der folgenden Methoden verwenden, um Routen zu aktualisieren oder zu entfernen, die er besitzt.
 
--   [Aktualisieren von Routen mithilfe von rtmaddroutededest](updating-routes-using-rtmaddroutetodest.md)
--   [Direktes Aktualisieren von Routen mithilfe von rtmupdateandunlockroute](updating-routes-in-place-using-rtmupdateandunlockroute.md)
+-   [Aktualisieren von Routen mit rtmAddRouteToDest](updating-routes-using-rtmaddroutetodest.md)
+-   [Aktualisieren von Routen an Ort und Stelle mit rtmUpdateAndUnlockRoute](updating-routes-in-place-using-rtmupdateandunlockroute.md)
 
- 
+ 
 
- 
+ 
 
 
 

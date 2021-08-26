@@ -13,11 +13,11 @@ ms.locfileid: "119998120"
 ---
 # <a name="reuse-existing-pointers-to-objects"></a>Wiederverwenden vorhandener Zeiger auf Objekte
 
-In diesem Szenario antwortet der Server jedes Mal mit [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) demselben IAccessible-Schnittstellenzeiger auf eine [**OBJID-CLIENT-Anforderung. \_**](object-identifiers.md)
+In diesem Szenario antwortet der Server jedes Mal mit [](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) demselben IAccessible-Schnittstellenzeiger auf eine [**OBJID-CLIENTanforderung. \_**](object-identifiers.md)
 
-Im folgenden Beispielcode wird das Steuerelementobjekt aus den zusätzlichen Fensterdaten abgerufen, und eine -Methode des -Steuerelements wird aufgerufen, um das Objekt des Zugriffsservers (die anwendungsdefinierte AccServer-Klasse) abzurufen( sofern verfügbar). Wenn der Barrierefreiheitsserver noch nicht vorhanden ist, wird er erstellt.
+Im folgenden Beispielcode wird das Steuerelementobjekt aus den zusätzlichen Fensterdaten abgerufen, und eine Methode des Steuerelements wird aufgerufen, um das Zugriffsserverobjekt (die anwendungsdefinierte AccServer-Klasse) abzurufen, sofern vorhanden. Wenn der Barrierefreiheitsserver noch nicht vorhanden ist, wird er erstellt.
 
-Wenn das Barrierefreiheitsserverobjekt erstellt wird, hat es den Verweiszähler 1. [**LresultFromObject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject) erhöht die Verweisanzahl mehrmals, aber diese Verweise werden freigegeben, wenn der Client mit dem -Objekt fertig ist. Der Server gibt seinen Verweis frei, wenn das Steuerelementfenster zerstört wird.
+Wenn das Barrierefreiheitsserverobjekt erstellt wird, hat es den Verweiszähler 1. [**LresultFromObject**](/windows/desktop/api/Oleacc/nf-oleacc-lresultfromobject) erhöht den Verweiszähler mehrmals, aber diese Verweise werden freigegeben, wenn der Client mit dem -Objekt fertig ist. Der Server gibt seinen Verweis frei, wenn das Steuerungsfenster zerstört wird.
 
 
 ```C++

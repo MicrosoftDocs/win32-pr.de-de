@@ -1,26 +1,26 @@
 ---
-title: Color2-Attribut (Fill) (VML)
-description: Color2-Attribut (Fill) (VML)
+title: Color2-Attribut (Fill)(VML)
+description: Color2-Attribut (Fill)(VML)
 ms.assetid: 971c8783-8c7b-43c7-8b94-01159336eef6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5689bba52277b4056f57a171f3ffc1e197aa4c8b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8e651245ddf9fb2a3669c3529038b5d0d8cbb3922b8a112c201858d2efd786a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007890"
 ---
-# <a name="color2-attribute-fillvml"></a>Color2-Attribut (Fill) (VML)
+# <a name="color2-attribute-fillvml"></a>Color2-Attribut (Fill)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert eine zweite Farbe für Füllungen. Lese-/Schreibzugriff. [Vgcolor](msdn-online-vml-ivgcolor.md) .
+Definiert eine zweite Farbe für Füllungen. Lese-/Schreibzugriff. [VgColor](msdn-online-vml-ivgcolor.md) .
 
 **Gilt für**
 
@@ -28,23 +28,23 @@ Definiert eine zweite Farbe für Füllungen. Lese-/Schreibzugriff. [Vgcolor](msd
 
 **Tagsyntax**
 
-<v: *Element* color2 = " *Ausdruck* " >
+<v: *element* color2=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . color2 = "*Ausdruck*"
+*element* .color2="*expression*"
 
-*Ausdruck* = *Element*. color2
+*expression* = *Element*.color2
 
 **Anmerkungen**
 
-Eine zweite Farbe wird verwendet, wenn ein Fülltyp ein Muster oder ein Farbverlauf ist. Der Standardwert ist **weiß**.
+Eine zweite Farbe wird verwendet, wenn ein Fülltyp ein Muster oder ein Farbverlauf ist. Der Standardwert ist **Weiß.**
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Fülltyp der Form ist ein Muster, bei dem die Vordergrundfarbe durch das Quell Bild definiert wird, der transparente Hintergrund jedoch durch die zweite Farbe definiert ist.
+Der Fülltyp der Form ist ein Muster, bei dem die Vordergrundfüllung durch das Quellbild definiert wird, während der transparente Hintergrund durch die zweite Farbe definiert wird.
 
 
 ```HTML
@@ -59,6 +59,6 @@ Der Fülltyp der Form ist ein Muster, bei dem die Vordergrundfarbe durch das Que
 
 
 
- 
+ 
 
- 
+ 

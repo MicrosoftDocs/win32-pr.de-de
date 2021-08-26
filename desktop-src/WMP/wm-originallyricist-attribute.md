@@ -1,9 +1,9 @@
 ---
 title: WM/OriginalLyricist-Attribut
-description: Das WM-Attribut/Das Wm-Attribut ist der Name der Person, die die ursprünglichen Kompositionen geschrieben hat.
+description: Das WM/1-Attribut ist der Name der Person, die die ursprünglichen Stelen geschrieben hat.
 ms.assetid: 8b8d8f7d-fb1a-4f29-b015-c6d0fff4fb81
 keywords:
-- WM/OriginalLyricist Attribute Windows Media Player
+- WM/OriginalLyricist-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "120000920"
 ---
 # <a name="wmoriginallyricist-attribute"></a>WM/OriginalLyricist-Attribut
 
-Das **WM-Attribut/Das Wm-Attribut ist** der Name der Person, die die ursprünglichen Kompositionen geschrieben hat.
+Das **WM/1-Attribut** ist der Name der Person, die die ursprünglichen Stelen geschrieben hat.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -31,9 +31,9 @@ Das **WM-Attribut/Das Wm-Attribut ist** der Name der Person, die die ursprüngli
 
 Dieses Attribut wird nur in einer Musikdatei gespeichert, die sich nicht in der Bibliothek befindet.
 
-Die Windows Media Format SDK-Konstante für dieses Attribut lautet g \_ wszWMOriginalLyricist.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMOriginalLyricist.
 
-Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,11 +45,11 @@ Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Attributverweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

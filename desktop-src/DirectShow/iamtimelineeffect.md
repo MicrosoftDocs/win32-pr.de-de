@@ -1,7 +1,7 @@
 ---
-description: Die iamtimelineeffect-Schnittstelle stellt Methoden zum Bearbeiten von Audio-und Video Effekten in DirectShow-Bearbeitungs Diensten bereit.
+description: Die IAMTimelineEffect-Schnittstelle stellt Methoden zum Bearbeiten von Audio- und Videoeffekten in DirectShow Editing Services (DES) bereit.
 ms.assetid: 3cc8a5f8-3f57-4e2b-82dd-827e04c771f7
-title: Iamtimelineeffect-Schnittstelle (qedit. h)
+title: IAMTimelineEffect-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,62 +14,62 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 8b9936616b9c4487849053d36c6a63290bd16b5c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f710693c967e1f0ac73c69534e8ac90a65d6603e749cd2aeae6a355ed8517415
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052760"
 ---
-# <a name="iamtimelineeffect-interface"></a>Iamtimelineeffect-Schnittstelle
+# <a name="iamtimelineeffect-interface"></a>IAMTimelineEffect-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `IAMTimelineEffect` -Schnittstelle stellt Methoden zum Bearbeiten von Audio-und Video Effekten in [DirectShow-Bearbeitungs Diensten](directshow-editing-services.md) bereit. Einem Zeitachsen Objekt, das die [**iamtimelineeffectable**](iamtimelineeffectable.md) -Schnittstelle verfügbar macht, kann ein Effekt hinzugefügt werden. Um Eigenschaften für einen Effekt festzulegen, verwenden Sie die [**ipropertysetter**](ipropertysetter.md) -Schnittstelle.
+Die `IAMTimelineEffect` -Schnittstelle stellt Methoden zum Bearbeiten von Audio- und Videoeffekten in [DirectShow Editing Services](directshow-editing-services.md) (DES) bereit. Ein Effekt kann jedem Zeitachsenobjekt hinzugefügt werden, das die [**IAMTimelineEffectable-Schnittstelle**](iamtimelineeffectable.md) verfügbar macht. Verwenden Sie die [**IPropertySetter-Schnittstelle,**](ipropertysetter.md) um Eigenschaften für einen Effekt festzulegen.
 
-Das des des-Effekts-Objekts ist tatsächlich ein Wrapper für eines von zwei anderen Objekten:
+Das DES-Effektobjekt ist eigentlich ein Wrapper für eines von zwei anderen -Objekten:
 
--   Für Audioeffekte ist jeder DirectShow-audiowirkungs Filter.
--   Für Video Effekte und 1-Input-DirectX-Transformations Objekt.
+-   Für Audioeffekte jeden DirectShow-Audioeffektfilter.
+-   Für Videoeffekte und ein DirectX-Transformationsobjekt mit 1 Eingabe.
 
-Microsoft unterstützt die Entwicklung von DirectX-Transformations Objekten von Drittanbietern nicht mehr.
+Microsoft unterstützt nicht mehr die Entwicklung von DirectX Transform-Objekten von Drittanbietern.
 
-Um das Filter-oder DirectX-Transformations Objekt für einen Effekt anzugeben, müssen Sie die [**iamtimelineobj:: setsubobjectguid**](iamtimelineobj-setsubobjectguid.md) -Methode aufrufen.
+Um den Filter oder das DirectX-Transformationsobjekt für einen Effekt anzugeben, rufen Sie die [**IAMTimelineObj::SetSubObjectGUID-Methode**](iamtimelineobj-setsubobjectguid.md) auf.
 
-Um ein Effect-Objekt zu erstellen, rufen Sie [**iamtimeline:: kreateemptynode**](iamtimeline-createemptynode.md) mit dem Wert der Wert Zeitachse des \_ Haupt \_ Typs auf \_ . Sie können den zurückgegebenen [**iamtimelineobj**](iamtimelineobj.md) -Zeiger für die- `IAMTimelineEffect` Schnittstelle Abfragen.
+Um ein Effektobjekt zu erstellen, rufen [**Sie IAMTimeline::CreateEmptyNode**](iamtimeline-createemptynode.md) mit dem Wert TIMELINE \_ MAJOR TYPE EFFECT \_ \_ auf. Sie können den zurückgegebenen [**IAMTimelineObj-Zeiger**](iamtimelineobj.md) für die `IAMTimelineEffect` Schnittstelle abfragen.
 
 ## <a name="members"></a>Member
 
-Die **iamtimelineeffect** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iamtimelineeffect** verfügt auch über die folgenden Typen von Membern:
+Die **IAMTimelineEffect-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IAMTimelineEffect** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iamtimelineeffect** -Schnittstelle verfügt über diese Methoden.
+Die **IAMTimelineEffect-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                           | BESCHREIBUNG                                       |
 |:-----------------------------------------------------------------|:--------------------------------------------------|
-| [**Effectgetpriority**](iamtimelineeffect-effectgetpriority.md) | Ruft die Prioritäts Ebene des Effekts ab.<br/> |
+| [**EffectGetPriority**](iamtimelineeffect-effectgetpriority.md) | Ruft die Prioritätsebene des Effekts ab.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -79,8 +79,8 @@ Die **iamtimelineeffect** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

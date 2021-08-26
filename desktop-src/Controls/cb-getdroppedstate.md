@@ -1,9 +1,9 @@
 ---
-title: CB_GETDROPPEDSTATE Meldung (Winuser. h)
-description: Bestimmt, ob das Listenfeld eines Kombinations Felds gelöscht wird.
+title: CB_GETDROPPEDSTATE Meldung (Winuser.h)
+description: Bestimmt, ob das Listenfeld eines Kombinationsfelds gelöscht wird.
 ms.assetid: a3f4e352-298d-45ea-a5a7-007f1fc1a387
 keywords:
-- Windows-Steuerelemente für CB_GETDROPPEDSTATE Meldung
+- CB_GETDROPPEDSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ae321bbaa3078a04ffc97d4a8083a674d03d651
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a1674406b4dc5a4dd5e7985ba497fce8ef93e7c3480c050db0420b541c6d2ab6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104041022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089250"
 ---
-# <a name="cb_getdroppedstate-message"></a>CB \_ getdroppedstate-Meldung
+# <a name="cb_getdroppedstate-message"></a>CB \_ GETDROPPEDSTATE-Nachricht
 
-Bestimmt, ob das Listenfeld eines Kombinations Felds gelöscht wird.
+Bestimmt, ob das Listenfeld eines Kombinationsfelds gelöscht wird.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn das Listenfeld sichtbar ist, ist der Rückgabewert " **true**". Andernfalls ist Sie **false**.
+Wenn das Listenfeld sichtbar ist, ist der Rückgabewert **TRUE**. Andernfalls ist es **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn das Listenfeld sichtbar ist, ist der Rückgabewert " **true**". Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Wenn das Listenfeld sichtbar ist, ist der Rückgabewert " **true**". Andernfalls
 
 <dl> <dt>
 
-[**CB- \_ ShowDropDown**](cb-showdropdown.md)
+[**CB \_ SHOWDROPDOWN**](cb-showdropdown.md)
 </dt> </dl>
 
  

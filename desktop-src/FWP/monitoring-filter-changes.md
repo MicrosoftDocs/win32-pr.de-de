@@ -1,24 +1,24 @@
 ---
-title: Überwachen von Filter Änderungen
-description: Der folgende Beispielcode veranschaulicht, wie Sie das Hinzufügen und Löschen von Filtern überwachen, die sich auf eine Serveranwendung auswirken können.
+title: Überwachen von Filteränderungen
+description: Der folgende Beispielcode veranschaulicht, wie das Hinzufügen und Löschen von Filtern überwacht wird, die sich auf eine Serveranwendung auswirken können.
 ms.assetid: 7ca527e1-217a-4e97-86e9-23b484ffc25d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1d3793aa191f4723e99be69156ba88485500087
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c2187b75f2eb864a893e7878f594b1462c7c1e87234da605cd8299f151912653
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075400"
 ---
-# <a name="monitoring-filter-changes"></a>Überwachen von Filter Änderungen
+# <a name="monitoring-filter-changes"></a>Überwachen von Filteränderungen
 
-Der folgende Beispielcode veranschaulicht, wie Sie das Hinzufügen und Löschen von Filtern überwachen, die sich auf eine Serveranwendung auswirken können.
+Der folgende Beispielcode veranschaulicht, wie das Hinzufügen und Löschen von Filtern überwacht wird, die sich auf eine Serveranwendung auswirken können.
 
 > [!Note]  
-> Die Filterbedingungen sind identisch mit denen, die von der kompatible **isportallowed** -API unterstützt werden.
+> Die Filterbedingungen sind mit denen identisch, die von der downleveln **IsPortAllowed-API unterstützt** werden.
 
- 
+ 
 
 
 ```C++
@@ -198,9 +198,9 @@ CLEANUP:
 
 
 
- 
+ 
 
- 
+ 
 
 
 
