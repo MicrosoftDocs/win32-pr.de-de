@@ -1,19 +1,19 @@
 ---
-description: XMUDECN4A 4D-Vektor zum Speichern von nicht signierten, normalisierten Werten als 10-Bit-x-, y-und z-Komponenten und eine 2-Bit-w-Komponente ohne Vorzeichen.
+description: XMUDECN4A-4D-Vektor zum Speichern von nicht signierten, normalisierten Werten als x-,y- und z-Komponenten ohne Vorzeichen mit 10 Bit und eine 2-Bit-W-Komponente ohne Vorzeichen.
 ms.assetid: b788f66d-43e0-4300-b546-b6a710bee7e8
 title: XMUDECN4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3c6b5ad608ab38afe178badadd0d7dc00cf8560
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7575e9a3f145fa81baa8eb3c83f18a6a06639948a3065afa4e78c2b48970e88c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117600"
 ---
 # <a name="xmudecn4-extensions"></a>XMUDECN4-Erweiterungen
 
-[**XMUDECN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudecn4) Ein 4D-Vektor zum Speichern nicht signierter, normalisierter Werte als 10-Bit-x-, y-und z-Komponenten und eine 2-Bit-w-Komponente ohne Vorzeichen.
+[**XMUDECN4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmudecn4) Ein 4D-Vektor zum Speichern von nicht signierten, normalisierten Werten als 10-Bit-x-, y- und z-Komponenten ohne Vorzeichen und als 2-Bit-W-Komponente ohne Vorzeichen.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ ms.locfileid: "104130621"
 
 
 
-| Thema                                                       | BESCHREIBUNG                                    |
+| Thema                                                       | Beschreibung                                    |
 |-------------------------------------------------------------|------------------------------------------------|
-| [**XMUDECN4-Konstruktoren**](xmudecn4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMUDECN4` .<br/> |
-| [XMUDECN4-Operatoren](ovw-xmudecn4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMUDECN4` .<br/>    |
+| [**XMUDECN4-Konstruktoren**](xmudecn4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMUDECN4` werden.<br/> |
+| [XMUDECN4-Operatoren](ovw-xmudecn4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMUDECN4` werden.<br/>    |
 
 
 

@@ -1,19 +1,19 @@
 ---
-title: Eigenschaften von "Peer AP-TLS-Benutzer"
-description: Erfahren Sie mehr über die Benutzereigenschaften von "Peer AP-TLS". Sehen Sie sich ein Beispiel an, das eine Instanz des eaptlsuserpropertiesv1-Legacy Schemas ist.
+title: PEAP-TLS-Benutzereigenschaften
+description: Erfahren Sie mehr über die PEAP-TLS-Benutzereigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des Legacyschemas eaptlsuserpropertiesv1 ist.
 ms.assetid: f0fb00fa-4cf8-4490-ac59-a8252ddcb5ee
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32437c54d707c3d278e4494c2b5b4f56ed83c9d4
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 51657f1f98f2895df52e6c1592929dcff9066f9937e43764d917d7d3645713e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "106342382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117380"
 ---
-# <a name="peap-tls-user-properties"></a>Eigenschaften von "Peer AP-TLS-Benutzer"
+# <a name="peap-tls-user-properties"></a>PEAP-TLS-Benutzereigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsuserpropertiesv1](eaptlsuserpropertiesv1schema-schema.md) -Legacy Schemas.
+Dieses Beispiel ist eine Instanz des [Legacyschemas eaptlsuserpropertiesv1.](eaptlsuserpropertiesv1schema-schema.md)
 
 ``` syntax
   <?xml version="1.0" ?> 
@@ -53,12 +53,12 @@ Bei diesem Beispiel handelt es sich um eine Instanz des [eaptlsuserpropertiesv1]
 [Benutzereigenschaften](user-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

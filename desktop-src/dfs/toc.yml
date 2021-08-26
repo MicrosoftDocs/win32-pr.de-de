@@ -1,7 +1,7 @@
 - name: verteiltes Dateisystem
   href: distributed-file-system.md
   items:
-    - name: verteiltes Dateisystem (DFS)-Funktionen
+    - name: dfs-Funktionen (verteiltes Dateisystem)
       href: distributed-file-system-dfs-functions.md
     - name: Sicherheitsfunktionen
       href: security-functions.md
@@ -15,7 +15,7 @@
           items:
             - name: FSCTL_DFS_GET_PKT_ENTRY_STATE
               href: fsctl-dfs-get-pkt-entry-state.md
-        - name: verteiltes Dateisystem Enumerationen
+        - name: verteiltes Dateisystem-Enumerationen
           href: distributed-file-system-enumeration-types.md
           items:
             - name: DFS_NAMESPACE_VERSION_ORIGIN
@@ -80,9 +80,9 @@
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_2
             - name: _DFS_INFO_3-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_3
-            - name: _DFS_INFO_4 Struktur
+            - name: _DFS_INFO_4-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_4
-            - name: _DFS_INFO_5-Struktur
+            - name: _DFS_INFO_5 Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_5
             - name: _DFS_INFO_6-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_6
@@ -92,7 +92,7 @@
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_8
             - name: _DFS_INFO_9-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_9
-            - name: _DFS_INFO_50 Struktur
+            - name: _DFS_INFO_50-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_50
             - name: _DFS_INFO_100-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_100
@@ -106,17 +106,17 @@
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_104
             - name: _DFS_INFO_105-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_105
-            - name: _DFS_INFO_106-Struktur
+            - name: _DFS_INFO_106 Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_106
             - name: _DFS_INFO_107-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_107
             - name: _DFS_INFO_150-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_150
-            - name: _DFS_INFO_200-Struktur
+            - name: _DFS_INFO_200 Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_200
-            - name: _DFS_INFO_300 Struktur
+            - name: _DFS_INFO_300-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_info_300
-            - name: _DFS_STORAGE_INFO-Struktur
+            - name: _DFS_STORAGE_INFO Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_storage_info
             - name: _DFS_STORAGE_INFO_1-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_storage_info_1
@@ -124,5 +124,5 @@
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_supported_namespace_version_info
             - name: _DFS_TARGET_PRIORITY-Struktur
               href: /windows/win32/api/lmdfs/ns-lmdfs-dfs_target_priority
-            - name: _DFS_TARGET_PRIORITY_CLASS Enumeration
+            - name: _DFS_TARGET_PRIORITY_CLASS-Enumeration
               href: /windows/win32/api/lmdfs/ne-lmdfs-dfs_target_priority_class~r1

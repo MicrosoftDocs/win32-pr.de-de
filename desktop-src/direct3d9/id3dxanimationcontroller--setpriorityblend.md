@@ -1,7 +1,7 @@
 ---
-description: Legt die vom Animations Controller verwendete Prioritäts Mischungs Gewichtung fest.
+description: Legt die prioritätsvermischungsgewichtete Gewichtung fest, die vom Animationscontroller verwendet wird.
 ms.assetid: b053024b-f219-48b3-906e-161d9cf47556
-title: 'ID3DXAnimationController:: setpriorityblend-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetPriorityBlend-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a4c820858041c730f971ce2821698f86e6ff2c31
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e52c08d0731bc89135df4547fcfc88e94b56b826d2ccab338576a22651376d94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366675"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069110"
 ---
-# <a name="id3dxanimationcontrollersetpriorityblend-method"></a>ID3DXAnimationController:: setpriorityblend-Methode
+# <a name="id3dxanimationcontrollersetpriorityblend-method"></a>ID3DXAnimationController::SetPriorityBlend-Methode
 
-Legt die vom Animations Controller verwendete Prioritäts Mischungs Gewichtung fest.
+Legt die prioritätsvermischungsgewichtete Gewichtung fest, die vom Animationscontroller verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT SetPriorityBlend(
 
 <dl> <dt>
 
-*Blendweight* \[ in\]
+*BlendWeight* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Das vom Animations Controller verwendete Gewicht für die Prioritäts Mischung.
+Prioritätsmischungsgewichtung, die vom Animationscontroller verwendet wird.
 
 </dd> </dl>
 
@@ -53,20 +53,20 @@ Das vom Animations Controller verwendete Gewicht für die Prioritäts Mischung.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Blend-Gewichtung wird verwendet, um nachverfolgen mit hoher und niedriger Priorität zu kombinieren.
+Die Überblendgewichtung wird verwendet, um Titel mit hoher und niedriger Priorität miteinander zu mischen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -77,7 +77,7 @@ Die Blend-Gewichtung wird verwendet, um nachverfolgen mit hoher und niedriger Pr
 [ID3DXAnimationController](id3dxanimationcontroller.md)
 </dt> <dt>
 
-[**Getpriorityblend**](id3dxanimationcontroller--getpriorityblend.md)
+[**GetPriorityBlend**](id3dxanimationcontroller--getpriorityblend.md)
 </dt> </dl>
 
  

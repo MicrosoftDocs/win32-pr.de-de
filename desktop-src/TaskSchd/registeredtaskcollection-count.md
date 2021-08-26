@@ -1,11 +1,11 @@
 ---
-title: Registeredtaskcollection. Count-Eigenschaft
-description: Bei der Skripterstellung wird die Anzahl der registrierten Tasks in der Auflistung abgerufen.
+title: RegisteredTaskCollection.Count (Eigenschaft)
+description: Für die Skripterstellung ruft die Anzahl der registrierten Aufgaben in der Auflistung ab.
 ms.assetid: 0ac17870-97f8-4b86-90a3-1fb017877d7c
 keywords:
-- Count-Eigenschaft Taskplaner
-- Count-Eigenschaft Taskplaner, registeredtaskcollection-Objekt
-- Registeredtaskcollection-Objekt Taskplaner, Count-Eigenschaft
+- Count-Taskplaner
+- Count-Eigenschaft Taskplaner , RegisteredTaskCollection-Objekt
+- RegisteredTaskCollection-Objekt Taskplaner , Count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07616333bc4e0b87e54bee7000504746ebc2a936
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f945410be12c1324ec6bf36dd6209984e413bb1917f5a333b7c1887aace4afde
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100210"
 ---
-# <a name="registeredtaskcollectioncount-property"></a>Registeredtaskcollection. Count-Eigenschaft
+# <a name="registeredtaskcollectioncount-property"></a>RegisteredTaskCollection.Count (Eigenschaft)
 
-Bei der Skripterstellung wird die Anzahl der registrierten Tasks in der Auflistung abgerufen.
+Für die Skripterstellung ruft die Anzahl der registrierten Aufgaben in der Auflistung ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ RegisteredTaskCollection.Count As long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Anzahl der registrierten Tasks in der Auflistung.
+Die Anzahl der registrierten Aufgaben in der Auflistung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,9 +48,9 @@ Die Anzahl der registrierten Tasks in der Auflistung.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

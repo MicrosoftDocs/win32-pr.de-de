@@ -1,5 +1,5 @@
 ---
-description: D3DXSHEvalDirection-Funktion (D3DX10.h) – Wertet die SH-Basisfunktionen (SphericalIcals) aus einem Eingaberichtungsvektor aus.
+description: 'D3DXSHEvalDirection-Funktion (D3DX10.h): Wertet die SH-Basisfunktionen (Spherical Vector) aus einem Eingaberichtungsvektor aus.'
 ms.assetid: c86973cc-c5b0-4358-b7eb-5c31f38b5b5a
 title: D3DXSHEvalDirection-Funktion (D3DX10.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c7fa1f94d65ca8096a0398d71ca2f562b643d47a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bf52e29962e773798073ad6c779394318fcfcbc7186db5b4f0e6862a8e7b672c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070030"
 ---
 # <a name="d3dxshevaldirection-function-d3dx10h"></a>D3DXSHEvalDirection-Funktion (D3DX10.h)
 
-Wertet die SH-Basisfunktionen (PhericalIcal) aus einem Eingaberichtungsvektor aus.
+Wertet die SH-Basisfunktionen (Spherical Vector) aus einem Eingaberichtungsvektor aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ FLOAT* D3DXSHEvalDirection(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten (Spherical- oder Pherical-Rumpf). Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten (Spherical Veralten). Die Auswertung generiert Order²-Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Zeiger auf SH-Ausgabekoeffizienten (Spherical- oder Pherical-Rumpf). Die Auswert
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -65,7 +65,7 @@ Reihenfolge der SH-Auswertung. Muss im Bereich von D3DXSH \_ MINORDER bis D3DXSH
 
 Typ: **const [**D3DXVECTOR3**](../direct3d9/d3dxvector3.md) \***
 
-(x, y, z) Richtungsvektor, in dem die SH-Basisfunktionen ausgewertet werden. Muss normalisiert werden. Siehe Hinweise.
+(x, y, z) Richtungsvektor, in dem die SH-Basisfunktionen ausgewertet werden sollen. Muss normalisiert werden. Siehe Hinweise.
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten. Siehe Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
@@ -86,7 +86,7 @@ Auf der Kugel mit Einheitenradius kann die Richtung wie in der folgenden Abbildu
 
 ![Abbildung einer Kugel mit Einheitenradius](images/spherical-coordinates.png)
 
-Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert im Bereich von 0 bis 2 Pi, während phi von 0 bis Pi variiert.
+Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten (x, y, z) und sphärischen Koordinaten (Theta, Phi) auf der Einheitenkugel. Der Winkel theta variiert über den Bereich von 0 bis 2 Pi, während phi von 0 bis pi variiert.
 
 ![Gleichungen der Beziehung zwischen kartesischen und sphärischen Koordinaten](images/spherical-coordinates-equations.png)
 
@@ -94,14 +94,14 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen (x, y, z) u
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

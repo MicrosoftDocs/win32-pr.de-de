@@ -1,21 +1,21 @@
 ---
-description: Die GetRange-Methode ruft den Bereich gültiger Werte für eine angegebene audioeinstellungs Eigenschaft ab.
+description: Die GetRange-Methode ruft den Bereich gültiger Werte für eine bestimmte Audioeinstellungseigenschaft ab.
 ms.assetid: 09ee0c59-6ae6-47eb-a8cf-6b24e759d7fb
-title: 'Itaudiosettings:: GetRange-Methode (ipmsp. h)'
+title: ITAudioSettings::GetRange-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91dd4d7bed3134c17de9c5958c7e6184cd51918e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f08c9eed736725bd4200c79583dcc12abde11399ec272be04805881752b19119
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992010"
 ---
-# <a name="itaudiosettingsgetrange-method"></a>Itaudiosettings:: GetRange-Methode
+# <a name="itaudiosettingsgetrange-method"></a>ITAudioSettings::GetRange-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **GetRange** -Methode ruft den Bereich gültiger Werte für eine angegebene [**audioeinstellungs Eigenschaft**](audiosettingsproperty.md)ab.
+Die **GetRange-Methode** ruft den Bereich gültiger Werte für eine bestimmte [**Audioeinstellungseigenschaft**](audiosettingsproperty.md)ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,45 +32,45 @@ HRESULT get_Terminal(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**audiosettingsproperty**](audiosettingsproperty.md) -Enumeration.
+Member der [**AudioSettingsProperty-Enumeration.**](audiosettingsproperty.md)
 
 </dd> <dt>
 
-*plmin* \[ vorgenommen\]
+*plMin* \[ out\]
 </dt> <dd>
 
-Der minimale gültige Wert für die Input-Eigenschaft.
+Mindestens gültiger Wert für die Eingabeeigenschaft.
 
 </dd> <dt>
 
-*plmax* \[ vorgenommen\]
+*plMax* \[ out\]
 </dt> <dd>
 
-Maximal gültiger Wert für die Eingabe Eigenschaft.
+Maximal gültiger Wert für die Eingabeeigenschaft.
 
 </dd> <dt>
 
-*plsteppingdelta* \[ vorgenommen\]
+*plSteppingDelta* \[ out\]
 </dt> <dd>
 
-Inkrement, um den der Eigenschafts Wert vergrößert oder verkleinert werden kann.
+Inkrementieren, um das der Eigenschaftswert erhöht oder verringert werden kann.
 
 </dd> <dt>
 
-*pldefault* \[ vorgenommen\]
+*plDefault* \[ out\]
 </dt> <dd>
 
-Der Standardwert für den *Property* -Parameter.
+Standardwert für den *Property-Parameter.*
 
 </dd> <dt>
 
-*plflags* \[ vorgenommen\]
+*plFlags* \[ out\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der- *Eigenschafts* Wert gesteuert wird.
+Der Wert der [**TAPIControlFlags-Enumeration,**](tapicontrolflags.md) der angibt, wie der *Eigenschaftswert* gesteuert wird.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs vorhanden.<br/> |
 
 
 
@@ -95,9 +95,9 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
@@ -106,13 +106,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itaudiosettings**](itaudiosettings.md)
+[**ITAudioSettings**](itaudiosettings.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Audiosettingsproperty**](audiosettingsproperty.md)
+[**AudioSettingsProperty**](audiosettingsproperty.md)
 </dt> </dl>
 
  

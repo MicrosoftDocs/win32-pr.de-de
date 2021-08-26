@@ -1,7 +1,7 @@
 ---
-description: Legen Sie den Umfang der Auswirkung fest, den ein bestimmter Knochen über einem bestimmten Scheitelpunkt hat.
+description: Legen Sie den Einfluss eines bestimmten 1000-000-00-00-Scheitelpunkts auf einen bestimmten Scheitelpunkt fest.
 ms.assetid: adbdc784-c6b4-4e10-85c8-5e0b794d946f
-title: 'ID3DX10SkinInfo:: setboneingefluence-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::SetBoneInfluence-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d136ddf4491a2a00c029422512c671a5439ba47c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1bf2f2a6ec92a1e4551bdc22d43bd143c9da5c8114c44619c073a838de52c606
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069960"
 ---
-# <a name="id3dx10skininfosetboneinfluence-method"></a>ID3DX10SkinInfo:: setboneingefluence-Methode
+# <a name="id3dx10skininfosetboneinfluence-method"></a>ID3DX10SkinInfo::SetBoneInfluence-Methode
 
-Legen Sie den Umfang der Auswirkung fest, den ein bestimmter Knochen über einem bestimmten Scheitelpunkt hat.
+Legen Sie den Einfluss eines bestimmten 1000-000-00-00-Scheitelpunkts auf einen bestimmten Scheitelpunkt fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT SetBoneInfluence(
 
 <dl> <dt>
 
-*Boneingedex* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der einen vorhandenen Knochen Wert angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der einen vorhandenen Zeichner angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen Wert liegen.**](id3dx10skininfo-getnumbones.md)
 
 </dd> <dt>
 
-*Einflussfaktor ceindex* \[ in\]
+*InfluenceIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index in der Liste der in der Liste der von ihm Einfluss enden Scheitel Punkte.
+Ein Index in der Liste der Scheitelpunkt, die er beeinflusst.
 
 </dd> <dt>
 
-*Gewichtung* \[ in\]
+*Gewichtung* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Menge der Auswirkung zwischen 0 und 1, die der Knochen über dem Scheitelpunkt hat.
+Die Menge des Einflusses zwischen 0 und 1, die der Schwenk über den Scheitelpunkt hat.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Die Menge der Auswirkung zwischen 0 und 1, die der Knochen über dem Scheitelpun
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ invalidArg lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert E \_ INVALIDARG sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

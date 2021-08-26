@@ -13,17 +13,17 @@ ms.locfileid: "120127510"
 ---
 # <a name="installing-side-by-side-assemblies-as-shared-assemblies"></a>Installieren von nebenseitigen Assemblys als freigegebene Assemblys
 
-Im folgenden Verfahren wird beschrieben, wie Sie [nebenseitige](about-side-by-side-assemblies-.md) Assemblys als freigegebene [Assemblys installieren.](/windows/desktop/Msi/shared-assemblies)
+Im folgenden Verfahren wird beschrieben, wie Sie nebeneinander seitige Assemblys [als](about-side-by-side-assemblies-.md) freigegebene [Assemblys installieren.](/windows/desktop/Msi/shared-assemblies)
 
 **So installieren Sie eine side-by-side-Assembly als freigegebene Assembly**
 
-1.  Signieren Und erstellen Sie einen Katalog für die Dateien in der Assembly.
+1.  Signieren Sie einen Katalog für die Dateien in der Assembly, und erstellen Sie einen Katalog.
 
-    Dateien müssen signiert werden, um sie als side-by-side-Assemblys zu installieren. Weitere Informationen finden Sie unter [Erstellen signierter Dateien und Kataloge.](creating-signed-files-and-catalogs.md)
+    Dateien müssen signiert werden, um sie als side-by-side-Assemblys zu installieren. Weitere Informationen finden Sie unter [Erstellen von signierten Dateien und Katalogen.](creating-signed-files-and-catalogs.md)
 
 2.  Sie sollten freigegebene, nebenseitige Assemblys als Komponenten eines Pakets Windows Installer installieren. Dies kann das gleiche Installationspaket sein, das zum Installieren oder Aktualisieren Ihrer Anwendung verwendet wird. Wenn die freigegebene Assembly als Teil mehrerer Anwendungen ausgeliefert wird, sollten Sie ein Mergemodul bereitstellen, das in die Installationspakete dieser Anwendungen integriert werden kann, und einen Katalog für die Dateien in der Assembly erstellen.
 
-    Windows Installationsprogramm version 2.0 oder höher ist erforderlich, um Assemblys zu installieren. Weitere Informationen finden Sie im Windows [Installer](../msi/windows-installer-portal.md) SDK und in den Abschnitten unter [Installation von Win32-Assemblys.](../msi/installation-of-win32-assemblies.md)
+    Windows Installationsprogrammversion 2.0 oder höher ist erforderlich, um Assemblys zu installieren. Weitere Informationen finden Sie im Windows [Installer](../msi/windows-installer-portal.md) SDK und in den Abschnitten unter [Installation von Win32-Assemblys.](../msi/installation-of-win32-assemblies.md)
 
  
 

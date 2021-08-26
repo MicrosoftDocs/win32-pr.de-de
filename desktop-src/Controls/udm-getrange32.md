@@ -1,9 +1,9 @@
 ---
-title: UDM_GETRANGE32 Meldung (kommstrg. h)
-description: Ruft den 32-Bit-Bereich eines auf-ab-Steuer Elements ab.
+title: UDM_GETRANGE32 (Commctrl.h)
+description: Ruft den 32-Bit-Bereich eines Auf-Ab-Steuerelements ab.
 ms.assetid: a94b50c9-cd2f-430d-875f-720e51f544f1
 keywords:
-- Windows-Steuerelemente für UDM_GETRANGE32 Meldung
+- UDM_GETRANGE32 von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca418cd08dc4c81b3ff734d74f3ca9deeef7d848
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 72078327b7a580768321f14c1d512e097561ae3441667497a822dc8a8a28b4e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077100"
 ---
-# <a name="udm_getrange32-message"></a>UDM \_ GETRANGE32 Meldung
+# <a name="udm_getrange32-message"></a>UDM \_ GETRANGE32-Nachricht
 
-Ruft den 32-Bit-Bereich eines auf-ab-Steuer Elements ab.
+Ruft den 32-Bit-Bereich eines Auf-Ab-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,30 +32,30 @@ Ruft den 32-Bit-Bereich eines auf-ab-Steuer Elements ab.
 *wParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine Ganzzahl mit Vorzeichen, die die Untergrenze des auf-ab-Steuerelement Bereichs empfängt. Dieser Parameter kann **null** sein.
+Zeiger auf eine ganze Zahl mit Vorzeichen, die die Untergrenze des Steuerelementbereichs nach oben empfängt. Dieser Parameter kann NULL **sein.**
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine Ganzzahl mit Vorzeichen, die die Obergrenze des auf-ab-Steuerelement Bereichs empfängt. Dieser Parameter kann **null** sein.
+Zeiger auf eine ganze Zahl mit Vorzeichen, die die Obergrenze des Auf-Ab-Steuerelementbereichs empfängt. Dieser Parameter kann NULL **sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

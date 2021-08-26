@@ -15,7 +15,7 @@ ms.locfileid: "120097250"
 ---
 # <a name="chstringarrayinsertat-methods"></a>CHStringArray::InsertAt-Methoden
 
-\[Die [**CHStringArray-Klasse**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
+\[Die [**CHStringArray-Klasse**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) ist Teil des WMI-Anbieterframework, das jetzt im endgültigen Zustand betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
 Die **InsertAt-Methode** fügt ein Element (oder mehrere Kopien eines Elements) oder alle Elemente eines anderen Arrays an einem angegebenen Index ein.
 
@@ -25,7 +25,7 @@ Die **InsertAt-Methode** fügt ein Element (oder mehrere Kopien eines Elements) 
 
 | Methode                                                                               | BESCHREIBUNG                                                                                                             |
 |:-------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**InsertAt(int,LPCWSTR,int)**](/previous-versions/windows/desktop/legacy/aa385383(v=vs.85))       | Fügt ein oder mehrere Elemente an einem angegebenen Index in einem Array ein.<br/>                                               |
+| [**InsertAt(int,LPCWSTR,int)**](/previous-versions/windows/desktop/legacy/aa385383(v=vs.85))       | Fügt ein oder mehrere Elemente an einem angegebenen Index in ein Array ein.<br/>                                               |
 | [**InsertAt(int,CHStringArray \* )**](/windows/win32/api/chstrarr/nf-chstrarr-chstringarray-insertat(int_chstringarray)) | Fügt alle Elemente eines anderen [**CHStringArray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) an einem angegebenen Index in einem Array ein.<br/> |
 
 
@@ -44,7 +44,7 @@ Die **InsertAt-Methode** fügt ein Element (oder mehrere Kopien eines Elements) 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

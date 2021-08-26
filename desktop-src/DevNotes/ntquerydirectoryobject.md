@@ -1,7 +1,7 @@
 ---
-description: Ruft Informationen zum angegebenen Verzeichnis Objekt ab.
+description: Ruft Informationen zum angegebenen Verzeichnisobjekt ab.
 ms.assetid: a2c67c4d-4753-4d47-a404-31d067a78bf4
-title: Ntquerydirectoryobject-Funktion
+title: NtQueryDirectoryObject-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Ntdll.dll
-ms.openlocfilehash: 99567d4784b121631089e723e1bd736e60a9cf54
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 11c7240cf63fa2f7e13338a0e0459e172e41aa1ed71db90c661b8aad0915d670
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364866"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079670"
 ---
-# <a name="ntquerydirectoryobject-function"></a>Ntquerydirectoryobject-Funktion
+# <a name="ntquerydirectoryobject-function"></a>NtQueryDirectoryObject-Funktion
 
 \[Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Ruft Informationen zum angegebenen Verzeichnis Objekt ab.
+Ruft Informationen zum angegebenen Verzeichnisobjekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,49 +47,49 @@ NTSTATUS WINAPI NtQueryDirectoryObject(
 
 <dl> <dt>
 
-*Directoryhandle* \[ in\]
+*DirectoryHandle* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Verzeichnis Objekt.
+Ein Handle für das Verzeichnisobjekt.
 
 </dd> <dt>
 
-*Puffer* \[ Out, optional\]
+*Puffer* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die Verzeichnisinformationen empfängt. Dieser Puffer empfängt mindestens eine **Objekt \_ Verzeichnis \_ Informations** Struktur, die letzte **null** ist, gefolgt von Zeichen folgen, die die Namen der Verzeichniseinträge enthalten. Weitere Informationen finden Sie in den Hinweisen.
+Ein Zeiger auf einen Puffer, der die Verzeichnisinformationen empfängt. Dieser Puffer empfängt mindestens eine **OBJECT \_ DIRECTORY \_ INFORMATION-Struktur,** die letzte ist **NULL,** gefolgt von Zeichenfolgen, die die Namen der Verzeichniseinträge enthalten. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
-*Länge* \[ in\]
+*Länge* \[ In\]
 </dt> <dd>
 
 Die Größe des vom Benutzer bereitgestellten Ausgabepuffers in Bytes.
 
 </dd> <dt>
 
-*Returnsingleentry* \[ in\]
+*ReturnSingleEntry* \[ In\]
 </dt> <dd>
 
 Gibt an, ob die Funktion nur einen einzelnen Eintrag zurückgeben soll.
 
 </dd> <dt>
 
-*Restarstcan* \[ in\]
+*RestartScan* \[ In\]
 </dt> <dd>
 
-Gibt an, ob die Überprüfung neu gestartet oder die Enumeration mit den im *Kontext* Parameter übergebenen Informationen fortgesetzt werden soll.
+Gibt an, ob die Überprüfung neu gestartet oder die Enumeration mithilfe der im *Context-Parameter* übergebenen Informationen fortgesetzt werden soll.
 
 </dd> <dt>
 
 *Kontext* \[ in, out\]
 </dt> <dd>
 
-Der enumerationskontext.
+Der Enumerationskontext.
 
 </dd> <dt>
 
-*Returnlength* \[ Out, optional\]
+*ReturnLength* \[ out, optional\]
 </dt> <dd>
 
 Ein Zeiger auf eine Variable, die die Länge der im Ausgabepuffer zurückgegebenen Verzeichnisinformationen in Bytes empfängt.
@@ -98,11 +98,11 @@ Ein Zeiger auf eine Variable, die die Länge der im Ausgabepuffer zurückgegeben
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Funktion gibt **Status \_ Erfolg** oder einen Fehlerstatus zurück.
+Die Funktion gibt **STATUS \_ SUCCESS** oder einen Fehlerstatus zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie die Definition der **Objekt \_ Verzeichnis \_ Informations** Struktur.
+Im Folgenden wird die Definition der **OBJECT \_ DIRECTORY \_ INFORMATION-Struktur** angezeigt.
 
 ``` syntax
 typedef struct _OBJECT_DIRECTORY_INFORMATION {
@@ -111,7 +111,7 @@ typedef struct _OBJECT_DIRECTORY_INFORMATION {
 } OBJECT_DIRECTORY_INFORMATION, *POBJECT_DIRECTORY_INFORMATION;
 ```
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,7 +127,7 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 <dl> <dt>
 
-[**Ntopendirectoryobject**](ntopendirectoryobject.md)
+[**NtOpenDirectoryObject**](ntopendirectoryobject.md)
 </dt> </dl>
 
  

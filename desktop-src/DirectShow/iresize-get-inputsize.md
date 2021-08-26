@@ -1,7 +1,7 @@
 ---
-description: Die get \_ inputsize-Methode gibt die aktuelle Eingabe Größe des Filter Werts der Größenänderung zurück.
+description: Die get InputSize-Methode gibt die aktuelle Eingabegröße \_ des Größenfilters zurück.
 ms.assetid: 7066a044-52ea-4851-83f2-f1fb323c2251
-title: 'Iresize:: get_InputSize-Methode (qedit. h)'
+title: IResize::get_InputSize-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: fab61edf6dc4469f06437483172161fbbe77e76d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b862237f8c51bdf6c22ca9acb667199fadee33b37e425efabfe25bdb8a20dd6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078930"
 ---
-# <a name="iresizeget_inputsize-method"></a>Iresize:: get \_ inputsize-Methode
+# <a name="iresizeget_inputsize-method"></a>IResize::get \_ InputSize-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `get_InputSize` -Methode gibt die aktuelle Eingabe Größe des Filter der Größenänderung zurück.
+Die `get_InputSize` -Methode gibt die aktuelle Eingabegröße des Größenfilters zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,47 +46,47 @@ HRESULT get_InputSize(
 
 <dl> <dt>
 
-*piheight* \[ vorgenommen\]
+*piHeight* \[ out\]
 </dt> <dd>
 
-Empfängt die Höhe des Videos in Pixel.
+Empfängt die Videohöhe in Pixel.
 
 </dd> <dt>
 
-*piwidth* \[ vorgenommen\]
+*piWidth* \[ out\]
 </dt> <dd>
 
-Empfängt die Video Breite in Pixel.
+Empfängt die Videobreite in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Eingabe-PIN des Filters nicht verbunden ist, wird ein Fehlercode zurückgegeben. Andernfalls wird die Breite und Höhe des Videos zurückgegeben, wie durch den Medientyp der Eingabe-PIN angegeben.
+Wenn der Eingabepin des Filters nicht verbunden ist, geben Sie einen Fehlercode zurück. Andernfalls geben Sie die Breite und Höhe des Videos zurück, wie durch den Medientyp des Eingabepins angegeben.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | DirectX 9,0 oder höher<br/>                                                         |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | DirectX 9.0 oder höher<br/>                                                         |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -94,10 +94,10 @@ Wenn die Eingabe-PIN des Filters nicht verbunden ist, wird ein Fehlercode zurüc
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Iresize-Schnittstelle**](iresize.md)
+[**IResize-Schnittstelle**](iresize.md)
 </dt> </dl>
 
  

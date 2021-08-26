@@ -1,9 +1,9 @@
 ---
-title: UDM_GETPOS Meldung (kommstrg. h)
-description: Ruft die aktuelle Position eines auf-ab-Steuer Elements mit 16-Bit-Genauigkeit ab.
+title: UDM_GETPOS Meldung (Commctrl.h)
+description: Ruft die aktuelle Position eines Auf-Ab-Steuerelements mit 16-Bit-Genauigkeit ab.
 ms.assetid: 5f395de0-11b3-44f8-9bf4-42e27ce88a0c
 keywords:
-- Windows-Steuerelemente für UDM_GETPOS Meldung
+- UDM_GETPOS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8e78ad19289d85b93ebcb39a244a896ddb4f33f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e92ca5fe5d902980560b6879ac7c345230056987308a1e390b0af351281eac62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059780"
 ---
-# <a name="udm_getpos-message"></a>UDM- \_ GetPos-Nachricht
+# <a name="udm_getpos-message"></a>UDM \_ GETPOS-Nachricht
 
-Ruft die aktuelle Position eines auf-ab-Steuer Elements mit 16-Bit-Genauigkeit ab.
+Ruft die aktuelle Position eines Auf-Ab-Steuerelements mit 16-Bit-Genauigkeit ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,13 +37,13 @@ Ruft die aktuelle Position eines auf-ab-Steuer Elements mit 16-Bit-Genauigkeit a
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung wird das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) auf 0 (null) festgelegt, und das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) wird auf die aktuelle Position des Steuer Elements festgelegt. Wenn ein Fehler auftritt, wird das **HIWORD** auf einen Wert ungleich 0 (null) festgelegt.
+Bei Erfolg wird [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) auf 0 (null) und [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) auf die aktuelle Position des Steuerelements festgelegt. Wenn ein Fehler auftritt, wird **HIWORD** auf einen Wert ungleich 0 (null) festgelegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Verarbeitung dieser Nachricht aktualisiert das auf-ab-Steuerelement die aktuelle Position basierend auf der Beschriftung des Buddy-Fensters. Das auf-ab-Steuerelement gibt einen Fehler zurück, wenn kein Buddy-Fenster vorhanden ist oder wenn die Beschriftung einen ungültigen Wert oder einen Wert außerhalb des gültigen Bereichs angibt. Außerdem wird ein Fehlerflag im HIWORD der Rückgabe festgelegt, wenn das Steuerelement ohne den [**UDS- \_ setbuddyint**](up-down-control-styles.md) -Stil erstellt wird, obwohl es einen gültigen Positionswert im LoWord der Rückgabe zurückgibt.
+Bei der Verarbeitung dieser Meldung aktualisiert das Auf-Ab-Steuerelement seine aktuelle Position basierend auf der Beschriftung des Fensters "fenster". Das Auf-Ab-Steuerelement gibt einen Fehler zurück, wenn kein Fenster vorhanden ist oder wenn die Beschriftung einen ungültigen oder außerhalb des Bereichs liegenden Wert angibt. Außerdem wird im HIWORD der Rückgabe ein Fehlerflag festgelegt, wenn das Steuerelement ohne den [**UDS \_ SETBUDDYINT-Stil**](up-down-control-styles.md) erstellt wird, obwohl es einen gültigen Positionswert im LOWORD der Rückgabe zurückgibt.
 
-Wenn 32-Bit-Werte für ein auf-ab-Steuerelement mit [**UDM- \_ SETRANGE32**](udm-setrange32.md)aktiviert wurden, gibt diese Meldung nur die unteren 16 Bits der Position zurück. Um die vollständige 32-Bit-Position abzurufen, verwenden Sie [**UDM \_ GETPOS32**](udm-getpos32.md).
+Wenn 32-Bit-Werte für ein Auf-Ab-Steuerelement mit [**UDM \_ SETRANGE32**](udm-setrange32.md)aktiviert wurden, gibt diese Meldung nur die unteren 16 Bits der Position zurück. Verwenden Sie [**UDM \_ GETPOS32,**](udm-getpos32.md)um die vollständige 32-Bit-Position abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,9 +51,9 @@ Wenn 32-Bit-Werte für ein auf-ab-Steuerelement mit [**UDM- \_ SETRANGE32**](udm
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -61,16 +61,16 @@ Wenn 32-Bit-Werte für ein auf-ab-Steuerelement mit [**UDM- \_ SETRANGE32**](udm
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**UDM- \_ GetRange**](udm-getrange.md)
+[**UDM \_ GETRANGE**](udm-getrange.md)
 </dt> <dt>
 
 [**UDM \_ GETRANGE32**](udm-getrange32.md)
 </dt> <dt>
 
-[**UDM- \_ SetPos**](udm-setpos.md)
+[**UDM \_ SETPOS**](udm-setpos.md)
 </dt> <dt>
 
 [**UDM \_ SETRANGE32**](udm-setrange32.md)

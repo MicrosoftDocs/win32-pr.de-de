@@ -1,12 +1,12 @@
 ---
-title: Die Methode "stallowdwm" der Win32_TSClientSetting-Klasse
-description: Legt die allowdwm-Eigenschaft fest.
+title: SetAllowDwm-Methode der Win32_TSClientSetting-Klasse
+description: Legt die AllowDwm-Eigenschaft fest.
 ms.assetid: c70d3dc9-c109-4d77-be50-20a0352282d6
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "stallowdwm"
-- Remotedesktopdienste der Methode "" der Klasse "Win32_TSClientSetting"
-- Win32_TSClientSetting-Klasse Remotedesktopdienste,-Methode
+- SetAllowDwm-Methode Remotedesktopdienste
+- SetAllowDwm-Methode Remotedesktopdienste , Win32_TSClientSetting-Klasse
+- Win32_TSClientSetting-Klasse Remotedesktopdienste , SetAllowDwm-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 39441ba3244f206b057ba47c3cb6f765b5e80604
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 30e48373859e59464986aab85bf00d16a76a066bad12e3e38bf7b07275257016
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009030"
 ---
-# <a name="setallowdwm-method-of-the-win32_tsclientsetting-class"></a>Die "Set-lowdwm"-Methode der Win32- \_ Klasse "tsclientsetting"
+# <a name="setallowdwm-method-of-the-win32_tsclientsetting-class"></a>SetAllowDwm-Methode der Win32 \_ TSClientSetting-Klasse
 
-Legt die **allowdwm** -Eigenschaft fest.
+Legt die **AllowDwm-Eigenschaft** fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 SetAllowDwm(
 
 <dl> <dt>
 
-*Allowdwm* \[ in\]
+*AllowDwm* \[ In\]
 </dt> <dd>
 
-Der neue **allowdwm** -Eigenschafts Wert.
+Der neue **AllowDwm-Eigenschaftswert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) . Die-Methode gibt einen Fehler zurück, wenn die Verbindungseinstellungen des Benutzers vom Server überschrieben werden.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md) Die -Methode gibt einen Fehler zurück, wenn die Verbindungseinstellungen des Benutzers vom Server überschrieben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,16 +65,16 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                       |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tsclientsetting**](win32-tsclientsetting.md)
+[**Win32 \_ TSClientSetting**](win32-tsclientsetting.md)
 </dt> </dl>
 
  

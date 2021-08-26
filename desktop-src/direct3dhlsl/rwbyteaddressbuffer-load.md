@@ -34,7 +34,7 @@ Ruft einen Wert aus einem [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuff
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onauthenticationwarningverworfen-Methode
-description: Wird aufgerufen, nachdem ein ActiveX-Steuerelement ein Authentifizierungs Dialogfeld (z. b. das Dialogfeld Zertifikat Fehler) anzeigt.
+title: IMsTscAxEvents OnAuthenticationWarningDismissed-Methode
+description: Wird aufgerufen, nachdem ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld "Zertifikatfehler").
 ms.assetid: bf5dbe4a-9129-47b3-9808-ed09d9010099
 ms.tgt_platform: multiple
 keywords:
-- Onauthenticationwarningverwerfen-Methode Remotedesktopdienste
-- Onauthenticationwarningverwerfen-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onauthenticationwarningverworfen-Methode
+- OnAuthenticationWarningDismissed-Methode Remotedesktopdienste
+- OnAuthenticationWarningDismissed-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnAuthenticationWarningDismissed-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86bdadfdbc8e0a1387a1f3aaf712188689d0f808
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0a55af8450160e271e96c53d4d5a9d4390393ab7880d2c2bb143cf0e6a1cb3bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125230"
 ---
-# <a name="imstscaxeventsonauthenticationwarningdismissed-method"></a>Imstscaxevents:: onauthenticationwarningverwerfen-Methode
+# <a name="imstscaxeventsonauthenticationwarningdismissed-method"></a>IMsTscAxEvents::OnAuthenticationWarningDismissed-Methode
 
-Wird aufgerufen, nachdem ein ActiveX-Steuerelement ein Authentifizierungs Dialogfeld (z. b. das Dialogfeld Zertifikat Fehler) anzeigt.
+Wird aufgerufen, nachdem ein ActiveX-Steuerelement ein Authentifizierungsdialogfeld anzeigt (z. B. das Dialogfeld "Zertifikatfehler").
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +45,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei Bedarf kann die [**uiparameentwindowhandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md) -Eigenschaft der [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md) -Schnittstelle verwendet werden, um die in der [**onauthenticationwarningused**](imstscaxevents-onauthenticationwarningdisplayed.md) -Methode möglicherweise ausgeführten übergeordneten Objekte rückgängig zu machen.
+Bei Bedarf kann die [**UIParentWindowHandle-Eigenschaft**](imsrdpclientnonscriptable2-uiparentwindowhandle.md) der [**IMsRdpClientNonScriptable2-Schnittstelle**](imsrdpclientnonscriptable2.md) verwendet werden, um alle übergeordneten Daten wiezu kehren, die möglicherweise in der [**OnAuthenticationWarningDisplayed-Methode**](imstscaxevents-onauthenticationwarningdisplayed.md) durchgeführt wurden.
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -61,7 +61,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008, Windows Server 2008 mit SP1<br/>                           |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -69,13 +69,13 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Onauthenticationwarningangezeigte**](imstscaxevents-onauthenticationwarningdisplayed.md)
+[**OnAuthenticationWarningDisplayed**](imstscaxevents-onauthenticationwarningdisplayed.md)
 </dt> <dt>
 
-[**Uianentwindowhandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)
+[**UIParentWindowHandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)
 </dt> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

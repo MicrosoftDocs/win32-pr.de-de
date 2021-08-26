@@ -5,57 +5,57 @@ ms.assetid: 04864180-ad13-481c-a2a4-0332f19e95ff
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46511889b2ecfc2b807ef10fca886a82c4786d53
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cc9adf4bc2cad6b8a0858ac5785be52f77cae939fbaf41d4b9ea523d22260474
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074280"
 ---
 # <a name="alphabetical-listing"></a>Alphabetische Liste
 
-Dieses Thema listet die SDO-Enumerationstypen in alphabetischer Reihenfolge auf.
+In diesem Thema werden die SDO-Enumerationstypen in alphabetischer Reihenfolge aufgelistet.
 
--   [**Accountingproperties**](/windows/desktop/api/sdoias/ne-sdoias-accountingproperties)
--   [**Attributefilter**](/windows/desktop/api/sdoias/ne-sdoias-attributefilter)
--   [**ATTRIBUTEID**](/windows/desktop/api/sdoias/ne-sdoias-attributeid)
--   [**Attributeinfo**](/windows/desktop/api/sdoias/ne-sdoias-attributeinfo)
--   [**Attributeproperties**](/windows/desktop/api/sdoias/ne-sdoias-attributeproperties)
--   [**Attributerestrictions**](/windows/desktop/api/sdoias/ne-sdoias-attributerestrictions)
--   [**AttributeSyntax**](/windows/desktop/api/sdoias/ne-sdoias-attributesyntax)
--   [**\_Authentifizierungstyp**](/windows/desktop/api/SdoIas/ne-sdoias-authentication_type)
--   [**Clientproperties**](/windows/desktop/api/sdoias/ne-sdoias-clientproperties)
--   [**Conditionproperties**](/windows/desktop/api/sdoias/ne-sdoias-conditionproperties)
--   [**"Dizionaryproperties"**](/windows/desktop/api/sdoias/ne-sdoias-dictionaryproperties)
--   [**Eapwrapproperties**](/previous-versions/ms717032(v=vs.85))
--   [**Iascommonproperties**](/windows/desktop/api/sdoias/ne-sdoias-iascommonproperties)
--   [**Iascomponentproperties**](/windows/desktop/api/sdoias/ne-sdoias-iascomponentproperties)
--   [**Iasdatastore**](/windows/desktop/api/sdoias/ne-sdoias-iasdatastore)
--   [**Iasdomaintype**](/windows/win32/api/sdoias/ne-sdoias-iasdomaintype)
--   [**Iasostype**](/windows/desktop/api/sdoias/ne-sdoias-iasostype)
--   [**Iasproperties**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
--   [**\_Identitätstyp**](/windows/desktop/api/sdoias/ne-sdoias-identity_type)
--   [**Namesproperties**](/windows/desktop/api/sdoias/ne-sdoias-namesproperties)
--   [**Napproperties**](/windows/desktop/api/sdoias/ne-sdoias-napproperties)
--   [**Häufigkeit der neuen \_ Protokoll \_ Dateien \_**](/windows/desktop/api/sdoias/ne-sdoias-new_log_file_frequency)
--   [**Nteventlogproperties**](/windows/desktop/api/sdoias/ne-sdoias-nteventlogproperties)
--   [**Ntsamproperties**](/windows/desktop/api/sdoias/ne-sdoias-ntsamproperties)
--   [**Policyproperties**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties)
--   [**Profileproperties**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties)
--   [**Protocolproperties**](/windows/desktop/api/sdoias/ne-sdoias-protocolproperties)
--   [**Radiusproperties**](/windows/desktop/api/sdoias/ne-sdoias-radiusproperties)
--   [**Radiusproxyproperties**](/windows/desktop/api/sdoias/ne-sdoias-radiusproxyproperties)
--   [**Radiusservergroupproperties**](/windows/desktop/api/sdoias/ne-sdoias-radiusservergroupproperties)
--   [**Radiusserverproperties**](/windows/desktop/api/sdoias/ne-sdoias-radiusserverproperties)
--   [**Wiederbeheationservergroupproperties**](/windows/desktop/api/sdoias/ne-sdoias-remediationservergroupproperties)
--   [**Wiederbeheationserverproperties**](/windows/desktop/api/sdoias/ne-sdoias-remediationserverproperties)
--   [**Wiederbeheationserversproperties**](/windows/desktop/api/sdoias/ne-sdoias-remediationserversproperties)
--   [**\_Diensttyp**](/windows/desktop/api/sdoias/ne-sdoias-service_type)
--   [**SHV- \_ Kombinations \_ Typ**](/windows/desktop/api/sdoias/ne-sdoias-shv_combination_type)
--   [**Shvtemplateproperties**](/windows/desktop/api/sdoias/ne-sdoias-shvtemplateproperties)
--   [**Eigenschaften**](/windows/desktop/api/sdoias/ne-sdoias-userproperties)
--   [**Vendorproperties**](/windows/desktop/api/sdoias/ne-sdoias-vendorproperties)
+-   [**ACCOUNTINGPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-accountingproperties)
+-   [**ATTRIBUTEFILTER**](/windows/desktop/api/sdoias/ne-sdoias-attributefilter)
+-   [**Attributeid**](/windows/desktop/api/sdoias/ne-sdoias-attributeid)
+-   [**ATTRIBUTEINFO**](/windows/desktop/api/sdoias/ne-sdoias-attributeinfo)
+-   [**ATTRIBUTEPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-attributeproperties)
+-   [**ATTRIBUTERESTRICTIONS**](/windows/desktop/api/sdoias/ne-sdoias-attributerestrictions)
+-   [**ATTRIBUTESYNTAX**](/windows/desktop/api/sdoias/ne-sdoias-attributesyntax)
+-   [**\_AUTHENTIFIZIERUNGSTYP**](/windows/desktop/api/SdoIas/ne-sdoias-authentication_type)
+-   [**CLIENTEIGENSCHAFTEN**](/windows/desktop/api/sdoias/ne-sdoias-clientproperties)
+-   [**CONDITIONPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-conditionproperties)
+-   [**WÖRTERBUCHEIGENSCHAFTEN**](/windows/desktop/api/sdoias/ne-sdoias-dictionaryproperties)
+-   [**EAPWRAPPROPERTIES**](/previous-versions/ms717032(v=vs.85))
+-   [**IASCOMMONPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iascommonproperties)
+-   [**IASCOMPONENTPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iascomponentproperties)
+-   [**IASDATASTORE**](/windows/desktop/api/sdoias/ne-sdoias-iasdatastore)
+-   [**IASDOMAINTYPE**](/windows/win32/api/sdoias/ne-sdoias-iasdomaintype)
+-   [**IASOSTYPE**](/windows/desktop/api/sdoias/ne-sdoias-iasostype)
+-   [**IASPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-iasproperties)
+-   [**\_IDENTITÄTSTYP**](/windows/desktop/api/sdoias/ne-sdoias-identity_type)
+-   [**NAMESPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-namesproperties)
+-   [**NAPPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-napproperties)
+-   [**HÄUFIGKEIT \_ DER \_ NEUEN \_ PROTOKOLLDATEI**](/windows/desktop/api/sdoias/ne-sdoias-new_log_file_frequency)
+-   [**NTEVENTLOGPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-nteventlogproperties)
+-   [**NTSAMPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-ntsamproperties)
+-   [**POLICYPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-policyproperties)
+-   [**PROFILEPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-profileproperties)
+-   [**PROTOCOLPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-protocolproperties)
+-   [**RADIUSPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-radiusproperties)
+-   [**RADIUSPROXYPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-radiusproxyproperties)
+-   [**RADIUSSERVERGROUPPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-radiusservergroupproperties)
+-   [**RADIUSSERVERPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-radiusserverproperties)
+-   [**REMEDIATIONSERVERGROUPPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-remediationservergroupproperties)
+-   [**REMEDIATIONSERVERPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-remediationserverproperties)
+-   [**REMEDIATIONSERVERSPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-remediationserversproperties)
+-   [**\_DIENSTTYP**](/windows/desktop/api/sdoias/ne-sdoias-service_type)
+-   [**\_ \_ SHV-KOMBINATIONSTYP**](/windows/desktop/api/sdoias/ne-sdoias-shv_combination_type)
+-   [**SHVTEMPLATEPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-shvtemplateproperties)
+-   [**USERPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-userproperties)
+-   [**VENDORPROPERTIES**](/windows/desktop/api/sdoias/ne-sdoias-vendorproperties)
 
- 
+ 
 
- 
+ 

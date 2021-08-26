@@ -1,28 +1,28 @@
 ---
-description: Die AppSearch-Tabelle enthält die Eigenschaften, die für die Suche nach einer Datei mit einer bestimmten Datei Signatur erforderlich sind. Die AppSearch-Tabelle kann auch verwendet werden, um eine Eigenschaft auf den vorhandenen Wert eines Registrierungs-oder INI-Datei Eintrags festzulegen.
+description: Die Tabelle AppSearch enthält Eigenschaften, die für die Suche nach einer Datei mit einer bestimmten Dateisignatur erforderlich sind. Die AppSearch-Tabelle kann auch verwendet werden, um eine Eigenschaft auf den vorhandenen Wert einer Registrierung oder .ini Dateieintrags festzulegen.
 ms.assetid: d560096f-6baa-4fea-8786-f4e3d5ee6bf4
 title: AppSearch-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a9419a768a51364b4f22444288e6728a87289aa0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 450ab07a397366ca01e664b88321942e4f6a7800cd9e04c4d0cbbe048eed8b87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045650"
 ---
 # <a name="appsearch-table"></a>AppSearch-Tabelle
 
-Die AppSearch-Tabelle enthält die Eigenschaften, die für die Suche nach einer Datei mit einer bestimmten Datei Signatur erforderlich sind. Die AppSearch-Tabelle kann auch verwendet werden, um eine Eigenschaft auf den vorhandenen Wert eines Registrierungs-oder INI-Datei Eintrags festzulegen.
+Die Tabelle AppSearch enthält Eigenschaften, die für die Suche nach einer Datei mit einer bestimmten Dateisignatur erforderlich sind. Die AppSearch-Tabelle kann auch verwendet werden, um eine Eigenschaft auf den vorhandenen Wert einer Registrierung oder .ini Dateieintrags festzulegen.
 
-Die AppSearch-Tabelle weist die folgenden Spalten auf.
+Die Tabelle AppSearch enthält die folgenden Spalten.
 
 
 
-| Spalte      | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte      | Typ                         | Key | Nullwerte zulässig |
 |-------------|------------------------------|-----|----------|
-| Eigenschaft    | [Bezeichner](identifier.md) | J   | N        |
-| Signatur\_ | [Bezeichner](identifier.md) | J   | N        |
+| Eigenschaft    | [Identifier](identifier.md) | J   | N        |
+| Signatur\_ | [Identifier](identifier.md) | J   | N        |
 
 
 
@@ -32,31 +32,31 @@ Die AppSearch-Tabelle weist die folgenden Spalten auf.
 
 <dl> <dt>
 
-<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Property
+<span id="Property"></span><span id="property"></span><span id="PROPERTY"></span>Eigenschaft
 </dt> <dd>
 
-Durch das Ausführen der [AppSearch](appsearch-action.md) -Aktion wird diese Eigenschaft auf den Speicherort der Datei festgelegt, der in der Signatur Spalte angegeben ist \_ . Diese Eigenschaft wird festgelegt, wenn die Datei Signatur auf dem Computer des Benutzers vorhanden ist. Die in dieser Spalte verwendeten Eigenschaften müssen [öffentliche](public-properties.md) Eigenschaften sein und über einen Bezeichner verfügen, der keine Kleinbuchstaben enthält.
+Wenn Sie die [AppSearch-Aktion](appsearch-action.md) ausführen, wird diese Eigenschaft auf den Speicherort der Datei festgelegt, die durch die Spalte Signatur angegeben \_ wird. Diese Eigenschaft wird festgelegt, wenn die Dateisignatur auf dem Computer des Benutzers vorhanden ist. Die in dieser Spalte verwendeten Eigenschaften müssen [öffentliche](public-properties.md) Eigenschaften sein und einen Bezeichner aufweisen, der keine Kleinbuchstaben enthält.
 
-Die im Eigenschaften Feld aufgelistete Eigenschaft kann in der [Eigenschaften](property-table.md) Tabelle oder über die Befehlszeile initialisiert werden. Wenn die [AppSearch](appsearch-action.md) -Aktion die Signatur sucht, überschreibt der Installer den initialisierten Eigenschafts Wert mit dem gefundenen Wert. Wenn die Signatur nicht gefunden wird, wird der anfängliche Eigenschafts Wert verwendet. Wenn die Eigenschaft nie initialisiert wurde, wird die Eigenschaft nur festgelegt, wenn die Signatur gefunden wurde. Andernfalls ist die Eigenschaft nicht definiert.
+Die im Feld Eigenschaft aufgeführte Eigenschaft kann in der [Tabelle Property](property-table.md) oder über eine Befehlszeile initialisiert werden. Wenn die [AppSearch-Aktion](appsearch-action.md) die Signatur findet, überschreibt das Installationsprogramm den initialisierten Eigenschaftswert mit dem gefundenen Wert. Wenn die Signatur nicht gefunden wird, wird der anfängliche Eigenschaftswert verwendet. Wenn die Eigenschaft nie initialisiert wurde, wird die Eigenschaft nur festgelegt, wenn die Signatur gefunden wird. Andernfalls ist die Eigenschaft nicht definiert.
 
 </dd> <dt>
 
-<span id="Signature_"></span><span id="signature_"></span><span id="SIGNATURE_"></span>Unter\_
+<span id="Signature_"></span><span id="signature_"></span><span id="SIGNATURE_"></span>Signatur\_
 </dt> <dd>
 
-Die \_ Spalte Signatur enthält einen eindeutigen Bezeichner, der als Signatur bezeichnet wird, und ist auch ein externer Schlüssel in den Tabellen [reglocator](reglocator-table.md), [inilocator](inilocator-table.md), [complocator](complocator-table.md)und [drlocator](drlocator-table.md) . Wenn Sie nach einer Datei suchen, muss der Wert in dieser Spalte auch ein Fremdschlüssel in der [Signatur](signature-table.md) Tabelle sein. Wenn der Wert in dieser Spalte nicht in der Signatur Tabelle aufgeführt ist, ermittelt das Installationsprogramm, dass die Suche nach einem Verzeichnis erfolgt.
+Die Spalte Signatur \_ enthält einen eindeutigen Bezeichner namens Signatur und ist auch ein externer Schlüssel in den Tabellen [RegLocator,](reglocator-table.md) [IniLocator,](inilocator-table.md) [CompLocator](complocator-table.md)und [DrLocator.](drlocator-table.md) Bei der Suche nach einer Datei muss der Wert in dieser Spalte auch ein Fremdschlüssel in der [Signaturtabelle](signature-table.md) sein. Wenn der Wert in dieser Spalte nicht in der Signaturtabelle aufgeführt ist, ermittelt das Installationsprogramm, dass die Suche nach einem Verzeichnis erfolgt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [AppSearch](appsearch-action.md) -Aktion in [*Sequenz Tabellen*](s-gly.md) verarbeitet die Informationen in dieser Tabelle. Weitere Informationen zum Verwenden von *Sequenz Tabellen* finden Sie unter [Verwenden einer Sequenz Tabelle](using-a-sequence-table.md).
+Die [AppSearch-Aktion](appsearch-action.md) in [*Sequenztabellen*](s-gly.md) verarbeitet die Informationen in dieser Tabelle. Informationen zur Verwendung von *Sequenztabellen* finden Sie unter [Verwenden einer Sequenztabelle.](using-a-sequence-table.md)
 
-Die [AppSearch](appsearch-action.md) -Aktion sucht mithilfe der Tabelle " [complocator](complocator-table.md) " zuerst nach Signaturen, der Tabelle " [reglocator](reglocator-table.md) ", der zweiten Tabelle, der Tabelle " [inilocator](inilocator-table.md) " und schließlich der Tabelle " [drlocator](drlocator-table.md) ". Datei Signaturen werden in der [Signatur](signature-table.md) Tabelle aufgeführt. Eine Signatur, die nicht in der Signatur Tabelle ist, gibt ein Verzeichnis an, und die-Eigenschaft legt die-Eigenschaft auf den Verzeichnispfad für diese Signatur fest.
+Die [AppSearch-Aktion](appsearch-action.md) sucht zuerst mithilfe der [CompLocator-Tabelle,](complocator-table.md) der [RegLocator-Tabelle](reglocator-table.md) zweiten, der [IniLocator-Tabelle](inilocator-table.md) und schließlich der [DrLocator-Tabelle](drlocator-table.md) nach Signaturen. Dateisignaturen sind in der [Signaturtabelle](signature-table.md) aufgeführt. Eine Signatur, die sich nicht in der Signaturtabelle befindet, kennzeichnet ein Verzeichnis, und die Aktion legt die -Eigenschaft auf den Verzeichnispfad für diese Signatur fest.
 
-Weitere Informationen finden Sie [untersuchen nach vorhandenen Anwendungen, Dateien, Registrierungs Einträgen oder INI-Datei Einträgen](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md).
+Weitere Informationen finden Sie unter [Suchen nach vorhandenen Anwendungen, Dateien, Registrierungseinträgen oder .ini Dateieinträgen.](searching-for-existing-applications-files-registry-entries-or--ini-file-entries.md)
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

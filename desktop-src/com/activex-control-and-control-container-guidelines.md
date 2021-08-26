@@ -1,6 +1,6 @@
 ---
-title: ActiveX Richtlinien für Das Steuern und Steuern von Containern
-description: ActiveX Richtlinien für Das Steuern und Steuern von Containern
+title: ActiveX Steuerungs- und Steuerungscontainerrichtlinien
+description: ActiveX Steuerungs- und Steuerungscontainerrichtlinien
 ms.assetid: fffb71bd-fcb3-49b0-9e12-a30d4cf96a00
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,16 +11,16 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "120097090"
 ---
-# <a name="activex-control-and-control-container-guidelines"></a>ActiveX Richtlinien für Das Steuern und Steuern von Containern
+# <a name="activex-control-and-control-container-guidelines"></a>ActiveX Steuerungs- und Steuerungscontainerrichtlinien
 
-Die folgenden Themen enthalten Richtlinien für die Implementierung ActiveX Steuerelementen und Containern, die gut mit anderen Steuerelementen und Containern zusammenarbeiten. In diesem Abschnitt wird der Mindestsatz von Schnittstellen, Methoden und Features definiert, die für ActiveX Steuerelemente und Container erforderlich sind, um eine nahtlose und nützliche Interoperabilität zu erreichen.
+Die folgenden Themen enthalten Richtlinien für die Implementierung von ActiveX-Steuerelementen und -Containern, die gut mit anderen Steuerelementen und Containern zusammenarbeiten. In diesem Abschnitt wird der Mindestsatz von Schnittstellen, Methoden und Features definiert, die für ActiveX Steuerelemente und Container erforderlich sind, um eine nahtlose und nützliche Interoperabilität zu erreichen.
 
--   [Übersicht über Containerrichtlinien für Steuerelement und Steuerelement](overview-of-control-and-control-container-guidelines.md)
+-   [Übersicht über Steuerungs- und Steuerungscontainerrichtlinien](overview-of-control-and-control-container-guidelines.md)
 -   [Steuerelemente](controls.md)
 -   [Container](containers.md)
 -   [Komponentenkategorien](component-categories.md)
 -   [Allgemeine Richtlinien](general-guidelines.md)
--   [Ereigniskoordinatenübersetzung](event-coordinate-translation.md)
+-   [Übersetzung von Ereigniskoordinaten](event-coordinate-translation.md)
 -   [Standard-DISPIDS](standard-dispids.md)
 -   [Datenbindung](databinding.md)
 

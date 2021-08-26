@@ -90,7 +90,7 @@ Sampler können in einer konstanten Tabelle mehr als einmal angezeigt werden. Da
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Reset-Methode der Msvm_Memory - Fordert eine Zurücksetzung an.
+description: 'Reset-Methode der Msvm_Memory-Klasse: Fordert eine Zurücksetzung an.'
 ms.assetid: c21be284-acb0-46e3-9629-b1d95154f58b
-title: Reset-Methode der Msvm_Memory Klasse
+title: Reset-Methode der Msvm_Memory-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 8c966296c79a3215eb5b66c8825bb17d19854bd1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f9530594fb72c2186c1e69356e398fe94985f753a50404939b5d1d9367c720ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046520"
 ---
 # <a name="reset-method-of-the-msvm_memory-class"></a>Reset-Methode der Msvm \_ Memory-Klasse
 
@@ -53,21 +53,21 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Msvm-Arbeitsspeicher \_**](msvm-memory.md)
+[**\_Msvm-Arbeitsspeicher**](msvm-memory.md)
 </dt> </dl>
 
  

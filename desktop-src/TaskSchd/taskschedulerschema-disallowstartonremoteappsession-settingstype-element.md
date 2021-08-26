@@ -1,9 +1,9 @@
 ---
-title: Disallowstartonremoteappsession (settingstype)-Element
-description: Gibt an, dass der Task nicht gestartet wird, wenn er für die Durchführung in einer lokal (Schiene) lokalen Anwendung ausgelöst wird.
+title: DisallowStartOnRemoteAppSession (settingsType)-Element
+description: Gibt an, dass der Task nicht gestartet wird, wenn er ausgelöst wird, um in einer Rail-Sitzung (Remote Applications Integrated Locally) ausgeführt zu werden.
 ms.assetid: 8323d8d9-fb6a-4876-9967-cc2344c77de3
 keywords:
-- Disallowstartonremoteappsession-Element Taskplaner
+- DisallowStartOnRemoteAppSession-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 11e3d0a367f2385e78cf1ec56231bbf7632fe05b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d2f7834ecd57fa10aaaabfa21945f1e908834d535d50f94b4dd21e6ca45c0a62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010800"
 ---
-# <a name="disallowstartonremoteappsession-settingstype-element"></a>Disallowstartonremoteappsession (settingstype)-Element
+# <a name="disallowstartonremoteappsession-settingstype-element"></a>DisallowStartOnRemoteAppSession (settingsType)-Element
 
-Gibt an, dass der Task nicht gestartet wird, wenn er für die Durchführung in einer lokal (Schiene) lokalen Anwendung ausgelöst wird.
+Gibt an, dass der Task nicht gestartet wird, wenn er ausgelöst wird, um in einer Rail-Sitzung (Remote Applications Integrated Locally) ausgeführt zu werden.
 
 ``` syntax
 <xs:element name="DisallowStartOnRemoteAppSession"
@@ -32,27 +32,27 @@ Gibt an, dass der Task nicht gestartet wird, wenn er für die Durchführung in e
  />
 ```
 
-Das **disallowstartonremoteappsession** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **DisallowStartOnRemoteAppSession-Element** wird durch den komplexen [**settingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
+| Element                                                           | Abgeleitet von                                                         | Beschreibung                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Standardeinstellung für dieses Element ist false.
+Die Standardeinstellung für dieses Element ist False.
 
-Bei der C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**ITaskSettings2::D isallowstartonremoteappsession**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings2-get_disallowstartonremoteappsession) -Eigenschaft.
+Für die C++-Entwicklung erfolgt der Zugriff auf diese Informationen über die [**ITaskSettings2::D isallowStartOnRemoteAppSession-Eigenschaft.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings2-get_disallowstartonremoteappsession)
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das nicht zulässt, dass der Task gestartet wird, wenn die Aufgabe für die Durchführung in einer Eisenbahn Sitzung ausgelöst wird.
+Der folgende XML-Code definiert ein Einstellungselement, das den Task nicht starten kann, wenn die Ausführung des Tasks in einer RAIL-Sitzung ausgelöst wird.
 
 
 ```XML
@@ -70,16 +70,16 @@ Der folgende XML-Code definiert ein settings-Element, das nicht zulässt, dass d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

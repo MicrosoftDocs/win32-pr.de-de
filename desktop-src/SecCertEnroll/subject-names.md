@@ -1,19 +1,19 @@
 ---
-description: Das Feld Betreff einer PKCS \# 10-Zertifikat Anforderung enthält den Distinguished Name der Entität, die das Zertifikat anfordert.
+description: Das Betrefffeld einer PKCS \# 10-Zertifikatanforderung enthält den Distinguished Name der Entität, die das Zertifikat anfordert.
 ms.assetid: 6c35ce42-07be-4d47-a14e-ed5a361dbe33
 title: Antragstellernamen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 226c294e75477a3960cd0ad824a98b3556c34322
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6be70af23c524e71c1a9b22f43e391e4f5c8302fba70f24fba1f8268ebfda6e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101100"
 ---
 # <a name="subject-names"></a>Antragstellernamen
 
-Das Feld **Betreff** einer PKCS \# 10-Zertifikat Anforderung enthält den Distinguished Name der Entität, die das Zertifikat anfordert.
+Das **Betrefffeld** einer PKCS \# 10-Zertifikatanforderung enthält den Distinguished Name der Entität, die das Zertifikat anfordert.
 
 ``` syntax
 CertificationRequestInfo ::= SEQUENCE 
@@ -25,7 +25,7 @@ CertificationRequestInfo ::= SEQUENCE
 }
 ```
 
-Der Distinguished Name besteht aus einer Sequenz von relativen Distinguished Names (rDNS). Jeder RDN besteht aus einem Satz von Attributen, und jedes Attribut besteht aus einem Objekt Bezeichner und einem Wert. Der Datentyp des Werts wird durch die **directerystring** -Struktur identifiziert.
+Der Distinguished Name besteht aus einer Sequenz relativer Distinguished Names (RDNs). Jeder RDN besteht aus einem Satz von Attributen, und jedes Attribut besteht aus einem Objektbezeichner und einem Wert. Der Datentyp des Werts wird durch die **DirectoryString-Struktur** identifiziert.
 
 ``` syntax
 Name ::= SEQUENCE OF RelativeDistinguishedName
@@ -48,10 +48,10 @@ DirectoryString ::= CHOICE
 }
 ```
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Erstellen eines Antragsteller namens](creating-a-subject-name.md)
--   [Codieren eines Antragsteller namens](encoding-a-subject-name.md)
+-   [Erstellen eines Antragstellernamens](creating-a-subject-name.md)
+-   [Codieren eines Antragstellernamens](encoding-a-subject-name.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -3,7 +3,7 @@ title: break-Anweisung
 description: Beenden Sie die umgebende Schleife (do, for, while).
 ms.assetid: edd4c8d7-2338-4c63-876e-147c157aaf47
 keywords:
-- break-Anweisung HLSL
+- break Statement HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 56f90da8a6ec6d52b87ed53f8fca726d969e336b
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 888b5e0d65b5965bdca006a416123528be1bacb5f4cb39fa5f37c15a15ff9ad4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024520"
 ---
 # <a name="break-statement"></a>break-Anweisung
 
@@ -38,7 +38,7 @@ Keine
 
 <dl> <dt>
 
-[Flusssteuerung](dx-graphics-hlsl-flow-control.md)
+[Flow Steuerung](dx-graphics-hlsl-flow-control.md)
 </dt> </dl>
 
  

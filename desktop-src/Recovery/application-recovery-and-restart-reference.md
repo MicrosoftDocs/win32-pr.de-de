@@ -1,25 +1,25 @@
 ---
-title: Anwendungs Wiederherstellung und Neustart Referenz
-description: Anwendungs Wiederherstellung und Neustart definiert die folgenden Programmier Elemente.
+title: Referenz zu Anwendungswiederherstellung und -neustart
+description: Application Recovery und Restart definieren die folgenden Programmierelemente.
 ms.assetid: 6b6769a8-8dde-479f-b00f-31096ac34dde
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1227e9d05b056d7f349109e43efb6e28919c9aad
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9c7a7f6f56a05597874b5296e381ee52f1147f6ef9efd04ce0c3fe44bba6ed52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024583"
 ---
-# <a name="application-recovery-and-restart-reference"></a>Anwendungs Wiederherstellung und Neustart Referenz
+# <a name="application-recovery-and-restart-reference"></a>Referenz zu Anwendungswiederherstellung und -neustart
 
-Anwendungs Wiederherstellung und Neustart definiert die folgenden Programmier Elemente:
+Anwendungswiederherstellung und Neustart definieren die folgenden Programmierelemente:
 
--   [Funktionen für die Anwendungs Wiederherstellung und Neustart](application-recovery-and-restart-functions.md)
+-   [Anwendungswiederherstellungs- und Neustartfunktionen](application-recovery-and-restart-functions.md)
 
- 
+ 
 
- 
+ 
 
 
 

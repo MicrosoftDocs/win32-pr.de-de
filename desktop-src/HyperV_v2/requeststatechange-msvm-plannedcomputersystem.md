@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 172ec383473510a30ccde66b2617e8ef02ffdb72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 54ff75630e93392805d835032ca3405f97e0a26e58c1c61ab06ba18bb1a88856
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083090"
 ---
-# <a name="requeststatechange-method-of-the-msvm_plannedcomputersystem-class"></a>RequestStateChange-Methode der MSVM \_ plannedcomputersystem-Klasse
+# <a name="requeststatechange-method-of-the-msvm_plannedcomputersystem-class"></a>RequestStateChange-Methode der Msvm \_ PlannedComputerSystem-Klasse
 
 Fordert an, dass der Status des geplanten Systems in den angegebenen Wert geändert wird.
 
@@ -41,7 +41,7 @@ uint32 RequestStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
 Der angeforderte Zustand für das geplante System.
@@ -64,7 +64,7 @@ Der angeforderte Zustand für das geplante System.
 
 <span id="Shut_Down"></span><span id="shut_down"></span><span id="SHUT_DOWN"></span>
 
-**Herunter** fahren (4)
+**Herunterfahren** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -85,14 +85,14 @@ Der angeforderte Zustand für das geplante System.
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-Zurück **stellen (8** )
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-Still **legung (9** )
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -113,26 +113,26 @@ Still **legung (9** )
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (32768.65535)
+**Reservierter Anbieter** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und sollte **null** sein.
+Dieser Parameter wird nicht verwendet und sollte **NULL** sein.
 
 </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
 Dieser Parameter wird nicht verwendet.
@@ -150,13 +150,13 @@ Diese Methode gibt einen der folgenden Werte zurück.
 | <dl> <dt></dt> <dt>0</dt> </dl>     | Erfolg<br/>                                                                 |
 | <dl> <dt></dt><dt>4096</dt> </dl>  |                                                                                    |
 | <dl> <dt></dt><dt>32768</dt> </dl> |                                                                                    |
-| <dl> <dt></dt><dt>32769</dt> </dl> | Zugriff verweigert.<br/>                                                          |
+| <dl> <dt></dt><dt>32769</dt> </dl> | Zugriff verweigert:<br/>                                                          |
 | <dl> <dt></dt><dt>32770</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32771</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32772</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32773</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32774</dt> </dl> |                                                                                    |
-| <dl> <dt></dt><dt>32775</dt> </dl> | Der im *requestedstate* -Parameter angegebene Wert wird nicht unterstützt.<br/> |
+| <dl> <dt></dt><dt>32775</dt> </dl> | Der im *RequestedState-Parameter* angegebene Wert wird nicht unterstützt.<br/> |
 | <dl> <dt></dt><dt>32776</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32777</dt> </dl> |                                                                                    |
 | <dl> <dt></dt><dt>32778</dt> </dl> |                                                                                    |
@@ -165,16 +165,16 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -183,7 +183,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 <dl> <dt>
 
-[**MSVM \_ plannedcomputersystem**](msvm-plannedcomputersystem.md)
+[**Msvm \_ PlannedComputerSystem**](msvm-plannedcomputersystem.md)
 </dt> </dl>
 
  

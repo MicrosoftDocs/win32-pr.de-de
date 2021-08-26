@@ -1,9 +1,9 @@
 ---
-title: TBN_ENDADJUST Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Anpassung einer Symbolleiste beendet hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TBN_ENDADJUST Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Anpassung einer Symbolleiste beendet hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 9a7496ec-787d-4571-8eca-50d60383519b
 keywords:
-- Windows-Steuerelemente für TBN_ENDADJUST Benachrichtigungs
+- TBN_ENDADJUST Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 79ec420c535a207f02d12e17901efab1c18a11bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1441bf513455f4485947e41c35e8c49de85bb7769294f781b956c2af4a56e28b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061080"
 ---
-# <a name="tbn_endadjust-notification-code"></a>TBN- \_ endanpassungs-Benachrichtigungs Code
+# <a name="tbn_endadjust-notification-code"></a>TBN \_ ENDADJUST-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Anpassung einer Symbolleiste beendet hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster einer Symbolleiste, dass der Benutzer die Anpassung einer Symbolleiste beendet hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ TBN_ENDADJUST
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -55,9 +55,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

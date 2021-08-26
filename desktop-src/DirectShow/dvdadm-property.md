@@ -1,32 +1,32 @@
 ---
-description: Die dvdadm-Eigenschaft ermöglicht den Zugriff auf das msdvdadm-Objekt, das Methoden und Eigenschaften zum Speichern von Anwendungs-und Benutzerinformationen enthält.
+description: Die DVDAdm-Eigenschaft ermöglicht den Zugriff auf das MSDVDAdm-Objekt, das Methoden und Eigenschaften zum Speichern von Anwendungs- und Benutzerinformationen enthält.
 ms.assetid: eb73a851-7118-42f3-be99-1cf356d2e37a
-title: Dvdadm (Eigenschaft)
+title: DVDAdm-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c3d81742fc6e643d6ee805a76c14d07d45d1924
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5adedea036393e68456cfd9f035882ae9c335063030518e808c57bced6d5b5b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079160"
 ---
-# <a name="dvdadm-property"></a>Dvdadm (Eigenschaft)
+# <a name="dvdadm-property"></a>DVDAdm-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `DVDAdm` Eigenschaft ermöglicht den Zugriff auf das [msdvdadm](msdvdadm-object.md) -Objekt, das Methoden und Eigenschaften zum Speichern von Anwendungs-und Benutzerinformationen enthält.
+Die `DVDAdm` -Eigenschaft bietet Zugriff auf das [MSDVDAdm-Objekt,](msdvdadm-object.md) das Methoden und Eigenschaften zum Speichern von Anwendungs- und Benutzerinformationen enthält.
 
 ``` syntax
         MSWebDVD.DVDAdm
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und weist keinen Standardwert auf. Es ist nicht erforderlich, einen separaten Verweis auf das **msdvdadm** -Objekt zu erstellen. Um auf die Methoden und Eigenschaften des-Objekts zuzugreifen, verwenden Sie die- `DVDAdm` Eigenschaft, wie im folgenden Beispiel gezeigt.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert. Es ist nicht erforderlich, einen separaten Verweis auf das **MSDVDAdm-Objekt** zu erstellen. Um auf die Methoden und Eigenschaften des -Objekts zuzugreifen, verwenden Sie die `DVDAdm` -Eigenschaft, wie im folgenden Beispiel gezeigt.
 
 ## <a name="examples"></a>Beispiele
 

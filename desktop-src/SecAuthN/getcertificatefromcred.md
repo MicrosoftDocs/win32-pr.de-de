@@ -1,7 +1,7 @@
 ---
-description: Ruft das Zertifikat aus den Anmelde Informationen des Benutzers ab.
+description: Ruft das Zertifikat aus den Benutzeranmeldeinformationen ab.
 ms.assetid: 3C79D049-89DC-4AF5-8C0A-5B7EBBBD69D3
-title: Getcertifipeefromkred-Funktion (lsaidprov. h)
+title: GetCertificateFromCred-Funktion (Lsaidprov.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Lsaidprov.h
-ms.openlocfilehash: 1120e7859080657e2a04202e01a01464694a3450
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3660fd4cfb8baa3e025789a2cde9dc04dd7e1e1678b0516a56562f1ea5be43dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119994481"
 ---
-# <a name="getcertificatefromcred-function"></a>Getcertifipeefromkred-Funktion
+# <a name="getcertificatefromcred-function"></a>GetCertificateFromCred-Funktion
 
-Ruft das Zertifikat aus den Anmelde Informationen des Benutzers ab.
+Ruft das Zertifikat aus den Benutzeranmeldeinformationen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,68 +43,68 @@ NTSTATUS GetCertificateFromCred(
 
 <dl> <dt>
 
-*ProviderHandle* \[ in\]
+*ProviderHandle* \[ In\]
 </dt> <dd>
 
-Handle des Identitäts Anbieters.
+Identitätsanbieterhandle.
 
 </dd> <dt>
 
-*Clienttoken* \[ in\]
+*ClientToken* \[ In\]
 </dt> <dd>
 
-Das Token des Aufrufers, der das Zertifikat abruft.
+Token des Aufrufers, der das Zertifikat abruft.
 
 </dd> <dt>
 
-*Supplied-* \[ ID in\]
+*SuppliedCred* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine durch [**secpkg \_ angegebene \_**](/windows/desktop/api/Ntsecpkg/ns-ntsecpkg-secpkg_supplied_credential) Anmelde Informationsstruktur, die die Anmelde Informationen einer Online-ID enthält, deren Zertifikat angefordert wird. Der Identitäts Anbieter muss die Eingabedaten So validieren, als ob Sie aus einer nicht vertrauenswürdigen Quelle stammen.
+Ein Zeiger auf eine [**SECPKG \_ SUPPLIED \_ CREDENTIAL-Struktur,**](/windows/desktop/api/Ntsecpkg/ns-ntsecpkg-secpkg_supplied_credential) die die Anmeldeinformationen einer Online-ID enthält, deren Zertifikat angefordert wird. Der Identitätsanbieter muss die Eingabedaten so überprüfen, als ob sie aus einer nicht vertrauenswürdigen Quelle stammen.
 
 </dd> <dt>
 
-*Suppliedkredsize* \[ in\]
+*SuppliedCredSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *suppliedup-* Puffers in Bytes.
+Die Größe des *SuppliedCred-Puffers* in Bytes.
 
 </dd> <dt>
 
-*Certcontext* \[ vorgenommen\]
+*CertContext* \[ out\]
 </dt> <dd>
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist dieser Parameter ein Zeiger auf den zurückgegebenen ccert- \_ Kontext Zeiger. Wenn Sie die Verwendung des Zertifikat Kontexts abgeschlossen haben, geben Sie ihn durch Aufrufen der [**certfreecertifipriecontext**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext) -Funktion frei.
+Wenn die Funktion erfolgreich ist, ist dieser Parameter ein Zeiger auf den zurückgegebenen CCERT \_ CONTEXT-Zeiger. Wenn Sie die Verwendung des Zertifikatkontexts abgeschlossen haben, geben Sie ihn frei, indem Sie die [**CertFreeCertificateContext-Funktion**](/windows/desktop/api/wincrypt/nf-wincrypt-certfreecertificatecontext) aufrufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion Status \_ Erfolg zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion STATUS \_ SUCCESS zurück.
 
 Wenn die Funktion fehlschlägt, gibt die Funktion möglicherweise einen der folgenden NTSTATUS-Fehlercodes zurück.
 
 
 
-| Rückgabewert                                                                                            | BESCHREIBUNG                                                                                                                                                                            |
+| Rückgabewert                                                                                            | Beschreibung                                                                                                                                                                            |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>Status \_ \_ wird nicht unterstützt</dt> </dl>       | Der Identitäts Anbieter erkennt den Anmelde Informationstyp der angegebenen Anmelde Informationen nicht. Der nächste Identitäts Anbieter wird von LSA ausprobiert.<br/>                                           |
-| <dl> <dt>Fehler bei der Status \_ Anmeldung \_</dt> </dl>       | Die Anmelde Informationen sind falsch.<br/>                                                                                                                                                |
-| <dl> <dt>\_ungültiger \_ Parameter.</dt> </dl>   | Ein Parameter ist nicht gültig. Die Anmelde Informationen haben möglicherweise ein falsches Format und nicht die definierte [**secpkg- \_ \_**](/windows/desktop/api/Ntsecpkg/ns-ntsecpkg-secpkg_supplied_credential) Anmelde Informationsstruktur.<br/> |
-| <dl> <dt>Status \_ Netzwerk \_ nicht erreichbar</dt> </dl> | Der Identitäts Anbieter kann keine Verbindung mit der Cloud hergestellt werden, um das Zertifikat zu erhalten.<br/>                                                                                                   |
-| <dl> <dt>Status \_ Kennwort \_ abgelaufen</dt> </dl>    | Das Konto Kennwort ist abgelaufen.<br/>                                                                                                                                           |
-| <dl> <dt>Status \_ Konto \_ gesperrt \_</dt> </dl> | Das Konto wurde gesperrt. <br/>                                                                                                                                           |
-| <dl> <dt>Andere</dt> </dl>                       | Andere Anbieterspezifische Fehlercodes. <br/>                                                                                                                                       |
+| <dl> <dt>STATUS \_ WIRD NICHT \_ UNTERSTÜTZT</dt> </dl>       | Der Identitätsanbieter erkennt den Anmeldeinformationstyp der angegebenen Anmeldeinformationen nicht. LSA versucht den nächsten Identitätsanbieter.<br/>                                           |
+| <dl> <dt>FEHLER BEI DER \_ STATUSANMELDUNG \_</dt> </dl>       | Die Anmeldeinformationen sind falsch.<br/>                                                                                                                                                |
+| <dl> <dt>STATUS \_ UNGÜLTIGER \_ PARAMETER</dt> </dl>   | Ein Parameter ist nicht gültig. Die Anmeldeinformationen können in einem falschen Format und nicht in der definierten [**SECPKG \_ SUPPLIED \_ CREDENTIAL-Struktur vorliegen.**](/windows/desktop/api/Ntsecpkg/ns-ntsecpkg-secpkg_supplied_credential)<br/> |
+| <dl> <dt>STATUSNETZWERK \_ \_ NICHT ERREICHBAR</dt> </dl> | Der Identitätsanbieter kann sich nicht an die Cloud wenden, um das Zertifikat zu erhalten.<br/>                                                                                                   |
+| <dl> <dt>\_STATUSKENNWORT \_ ABGELAUFEN</dt> </dl>    | Das Kontokennwort ist abgelaufen.<br/>                                                                                                                                           |
+| <dl> <dt>STATUSKONTO \_ \_ GESPERRT \_</dt> </dl> | Das Konto wurde gesperrt. <br/>                                                                                                                                           |
+| <dl> <dt>Andere</dt> </dl>                       | Andere anbieterspezifische Fehlercodes. <br/>                                                                                                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie das Zertifikat aus der Cloud abrufen, sollte der Identitäts Anbieter überprüfen, ob für diesen Benutzer ein gültiges Zertifikat im Zertifikat Speicher des Benutzers vorhanden ist. Wenn ein gültiges Zertifikat vorhanden ist, sollte der Anbieter dieses Zertifikat zurückgeben, um unnötigen Netzwerkverkehr zu vermeiden.
+Vor dem Abrufen des Zertifikats aus der Cloud sollte der Identitätsanbieter überprüfen, ob im Zertifikatspeicher "MY" des Benutzers ein gültiges Zertifikat für diesen Benutzer vorhanden ist. Wenn ein gültiges Zertifikat vorhanden ist, sollte der Anbieter dieses Zertifikat zurückgeben, um unnötigen Netzwerkdatenverkehr zu vermeiden.
 
-Der Identitäts Anbieter kann das Zertifikat auch lokal zwischenspeichern, solange es vor dem aktuellen Benutzer geschützt ist.
+Der Identitätsanbieter kann das Zertifikat auch lokal zwischenspeichern, solange es vor dem aktuellen Benutzer geschützt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -112,9 +112,9 @@ Der Identitäts Anbieter kann das Zertifikat auch lokal zwischenspeichern, solan
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Lsaidprov. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Lsaidprov.h</dt> </dl> |
 
 
 

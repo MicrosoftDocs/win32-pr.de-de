@@ -1,7 +1,7 @@
 ---
-description: Ruft das Tag ab, das mit der angegebenen TagID verknüpft ist.
+description: Ruft das TAG ab, das der angegebenen TAGID zugeordnet ist.
 ms.assetid: 194d2035-fc2c-445d-a730-90db2ccea8af
-title: Sdbgettagfromtagid-Funktion
+title: SdbGetTagFromTagID-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: d81dac026a9b6acc921586aaded54c8c90ad5bdd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a7e58343cf9a863f6b3cecc7f9b6414414387e2f2b33859de1eb015d65f1a78b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126722"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058470"
 ---
-# <a name="sdbgettagfromtagid-function"></a>Sdbgettagfromtagid-Funktion
+# <a name="sdbgettagfromtagid-function"></a>SdbGetTagFromTagID-Funktion
 
-Ruft das Tag ab, das mit der angegebenen **TagID** verknüpft ist.
+Ruft das TAG ab, das der angegebenen **TAGID** zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ TAG WINAPI SdbGetTagFromTagID(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiwhat* \[ in\]
+*tiWhich* \[ In\]
 </dt> <dd>
 
-Die **TagID** für das Tag.
+Die **TAGID** für das TAG.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt das-Tag zurück.
+Die Funktion gibt das TAG zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Die-Funktion gibt das-Tag zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -74,10 +74,10 @@ Die-Funktion gibt das-Tag zurück.
 
 <dl> <dt>
 
-[**Tag**](tag.md)
+[**Etikett**](tag.md)
 </dt> <dt>
 
-[**TagID**](tagid.md)
+[**TAGID**](tagid.md)
 </dt> </dl>
 
  

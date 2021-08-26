@@ -1,25 +1,25 @@
 ---
-title: Verarbeiten der MM_WOM_DONE Nachricht
-description: Verarbeiten der von mm \_ WOM verarbeiteten \_ Nachricht
+title: Verarbeiten der MM_WOM_DONE-Nachricht
+description: Verarbeiten der MM \_ WOM \_ DONE-Nachricht
 ms.assetid: 215167d0-3020-453d-b6b3-cee5803836c9
 keywords:
-- Wellenform-Audiodaten, Meldungen
-- zusätzliches Audiomaterial, Meldungen
-- Wellenform-Audiodatei, MM_WOM_DONE Meldung
-- Zusatz Audiodatei, MM_WOM_DONE Meldung
+- Waveform-Audio, Nachrichten
+- Hilfsaudio, Nachrichten
+- Waveformaudio, MM_WOM_DONE Nachricht
+- Hilfsaudio, MM_WOM_DONE Nachricht
 - MM_WOM_DONE Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73e909777c115b6b10500e081a08bde6cfe24b00
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c6aca93f23ed74a4a4974633d8345f2e897535e156ccc03f46eb0da92a2d2fdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037860"
 ---
-# <a name="processing-the-mm_wom_done-message"></a>Verarbeiten der von mm \_ WOM verarbeiteten \_ Nachricht
+# <a name="processing-the-mm_wom_done-message"></a>Verarbeiten der MM \_ WOM \_ DONE-Nachricht
 
-Im folgenden Beispiel wird gezeigt, wie die Meldung [**mm \_ WOM \_ done**](mm-wom-done.md) verarbeitet wird. In diesem Beispiel wird davon ausgegangen, dass die Anwendung nicht mehrere Datenblöcke wieder gibt, sodass das Ausgabegerät nach der Wiedergabe eines einzelnen Datenblocks geschlossen werden kann.
+Das folgende Beispiel zeigt, wie die [**MM \_ WOM \_ DONE-Nachricht verarbeitet**](mm-wom-done.md) wird. In diesem Beispiel wird davon ausgegangen, dass die Anwendung nicht mehrere Datenblöcke wiedergibt, sodass sie das Ausgabegerät nach dem Wiedergeben eines einzelnen Datenblocks schließen kann.
 
 
 ```C++
@@ -47,9 +47,9 @@ switch (msg)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

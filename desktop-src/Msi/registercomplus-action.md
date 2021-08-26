@@ -1,31 +1,31 @@
 ---
-description: Die registercomplus-Aktion registriert com+-Anwendungen.
+description: Die Aktion RegisterComPlus registriert COM+-Anwendungen.
 ms.assetid: e42bb993-7079-4d5b-bb2e-c958e99e705e
-title: Registercomplus-Aktion
+title: RegisterComPlus-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fb824d67e776a99f8cd05c56f73f171f436c71d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 046d1f40293888d3a1be48a3c55fd5082b6073828c8d5cc7d34c464556986d4f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082640"
 ---
-# <a name="registercomplus-action"></a>Registercomplus-Aktion
+# <a name="registercomplus-action"></a>RegisterComPlus-Aktion
 
-Die registercomplus-Aktion registriert com+-Anwendungen.
+Die Aktion RegisterComPlus registriert COM+-Anwendungen.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die Aktion registercomplus muss der Aktion [InstallFiles](installfiles-action.md) und der [unregistercomplus](unregistercomplus-action.md)-Aktion folgen.
+Die RegisterComPlus-Aktion muss der [InstallFiles-Aktion](installfiles-action.md) und der [UnregisterComPlus-Aktion](unregistercomplus-action.md)folgen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten              |
+| Feld | Beschreibung der Aktionsdaten              |
 |-------|-----------------------------------------|
-| \[1\] | Anwendungs-ID der com+-Anwendung. |
+| \[1\] | Anwendungs-ID der COM+-Anwendung. |
 
 
 
@@ -35,13 +35,13 @@ Die Aktion registercomplus muss der Aktion [InstallFiles](installfiles-action.md
 
 <dl> <dt>
 
-[ComPlus-Tabelle](complus-table.md)
+[Complus-Tabelle](complus-table.md)
 </dt> <dt>
 
-[Unregistercomplus-Aktion](unregistercomplus-action.md)
+[UnregisterComPlus-Aktion](unregistercomplus-action.md)
 </dt> <dt>
 
-[Installieren einer COM+-Anwendung mit der Windows Installer](installing-a-com--application-with-the-windows-installer.md)
+[Installieren einer COM+-Anwendung mit dem Windows Installer](installing-a-com--application-with-the-windows-installer.md)
 </dt> </dl>
 
  

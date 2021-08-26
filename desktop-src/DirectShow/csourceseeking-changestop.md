@@ -1,7 +1,7 @@
 ---
-description: Die changestoppt-Methode wird aufgerufen, wenn die Position des Stopps geändert wird.
+description: Die ChangeStop-Methode wird aufgerufen, wenn sich die Stoppposition ändert.
 ms.assetid: 3d4a73a4-68e6-449c-9637-62cad937c4b4
-title: Csourceseeking. changestoppt-Methode (ctlutil. h)
+title: CSourceSeeking.ChangeStop-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: eefcc64b4692363c8caa8f39a3a0db9beb0d08b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 09473b5bbe20c6c31748f0079594424f7e0afa62e2594ff1cc80f33cb1f5e6bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103120"
 ---
-# <a name="csourceseekingchangestop-method"></a>Csourceseeking. changestoppt-Methode
+# <a name="csourceseekingchangestop-method"></a>CSourceSeeking.ChangeStop-Methode
 
-Die- `ChangeStop` Methode wird aufgerufen, wenn die Position des Stopps geändert wird.
+Die `ChangeStop` -Methode wird aufgerufen, wenn sich die Stoppposition ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**csourceseeking:: setpositions**](csourceseeking-setpositions.md) -Methode ruft diese Methode auf, wenn sich die Position des Stopps ändert. Diese Methode ist rein virtuell. Diese Klasse muss von der abgeleiteten Klasse implementiert werden. Das folgende Beispiel zeigt eine mögliche Implementierung:
+Die [**CSourceSeeking::SetPositions-Methode**](csourceseeking-setpositions.md) ruft diese Methode auf, wenn sich die Stoppposition ändert. Diese Methode ist rein virtuell. die abgeleitete Klasse muss sie implementieren. Das folgende Beispiel zeigt eine mögliche Implementierung:
 
 
 ```C++
@@ -65,8 +65,8 @@ HRESULT CMyStream::ChangeStop( )
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ HRESULT CMyStream::ChangeStop( )
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

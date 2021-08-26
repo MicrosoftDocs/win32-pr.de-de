@@ -1,32 +1,32 @@
 ---
-title: Starten eines einzelnen Zeit Geber Ereignisses
-description: Starten eines einzelnen Zeit Geber Ereignisses
+title: Starten eines einzelnen Timerereignisses
+description: Starten eines einzelnen Timerereignisses
 ms.assetid: 56010877-1a02-4a7b-b58c-9f96b169acb2
 keywords:
-- Multimedia-Timer, Veranstaltungen
+- Multimediatimer, Ereignisse
 - Timer, Ereignisse
-- Multimedia-Timer, starten von Ereignissen
-- Timer, starten von Ereignissen
-- timesetevent-Funktion
-- Starten von Timer-Ereignissen
-- Ereignisse mit nur einem Timer
+- Multimediatimer, Startereignisse
+- Timer, Startereignisse
+- timeSetEvent-Funktion
+- Startzeitgeberereignisse
+- Einzelne Timerereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c9d0024e3dfa9b0bda79f209abd9b81e89ad11c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 7dc3a4c69aefe8df3310c8ff974ef7592b435eabccd661bdbeb1ebbf85dc3c9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037170"
 ---
-# <a name="starting-a-single-timer-event"></a>Starten eines einzelnen Zeit Geber Ereignisses
+# <a name="starting-a-single-timer-event"></a>Starten eines einzelnen Timerereignisses
 
 > [!Note]  
-> In diesem Thema wird eine veraltete Funktion beschrieben. Neue Anwendungen sollten Zeit Geber [**mithilfe der Funktion**](/windows/desktop/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) "die Funktion" "von" "erstellt werden.
+> In diesem Thema wird eine veraltete Funktion beschrieben. Neue Anwendungen sollten die [**CreateTimerQueueTimer-Funktion**](/windows/desktop/api/threadpoollegacyapiset/nf-threadpoollegacyapiset-createtimerqueuetimer) verwenden, um Timer zu erstellen.
 
- 
+ 
 
-Um ein einzelnes Timer-Ereignis zu starten, rufen Sie die [**timesetevent**](/previous-versions//dd757634(v=vs.85)) -Funktion auf, und geben Sie die Zeitspanne vor dem Rückruf, die Auflösung, die Adresse der Rückruffunktion (siehe [**timeproc**](/previous-versions//dd757631(v=vs.85))) und die Benutzerdaten an, die mit der Rückruffunktion bereitgestellt werden sollen. Eine Anwendung kann eine Funktion wie die folgende verwenden, um ein einzelnes Timer-Ereignis zu starten.
+Um ein einzelnes Timerereignis zu starten, rufen Sie die [**timeSetEvent-Funktion**](/previous-versions//dd757634(v=vs.85)) auf. Geben Sie dabei die Zeitspanne vor dem Rückruf, die Auflösung, die Adresse der Rückruffunktion (siehe [**TimeProc)**](/previous-versions//dd757631(v=vs.85))und die Benutzerdaten an, die mit der Rückruffunktion angegeben werden sollen. Eine Anwendung kann eine Funktion wie die folgende verwenden, um ein einzelnes Timerereignis zu starten.
 
 
 ```C++
@@ -49,15 +49,15 @@ UINT SetTimerCallback(NPSEQ npSeq,  // sequencer data
 
 
 
-Ein Beispiel für die Rückruffunktion oneshotcallback finden Sie unter [Schreiben einer Timer-Rückruffunktion](writing-a-timer-callback-function.md).
+Ein Beispiel für die Rückruffunktion OneShotCallback finden Sie unter [Writing a Timer Callback Function](writing-a-timer-callback-function.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von multimeditimern](using-multimedia-timers.md)
+[Verwenden von Multimediatimern](using-multimedia-timers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

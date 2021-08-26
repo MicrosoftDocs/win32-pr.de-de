@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Effekts (Direct3D 11)
-description: Ein Effekt wird durch Laden des kompilierten Effekt-Bytecodes in das Effektframework erstellt. Im Gegensatz zu Effekten 10 muss der Effekt kompiliert werden, bevor der Effekt erstellt wird. In den Arbeitsspeicher geladene Effekte können durch Aufrufen von D3DX11CreateEffectFromMemory erstellt werden.
+description: Ein Effekt wird erstellt, indem der kompilierte Effekt-Bytecode in das Effektframework geladen wird. Im Gegensatz zu Effekten 10 muss der Effekt vor dem Erstellen des Effekts kompiliert werden. In den Arbeitsspeicher geladene Effekte können durch Aufrufen von D3DX11CreateEffectFromMemory erstellt werden.
 ms.assetid: 9aa734cc-1003-453c-b401-58ac5e708db8
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "120096400"
 ---
 # <a name="create-an-effect-direct3d-11"></a>Erstellen eines Effekts (Direct3D 11)
 
-Ein Effekt wird durch Laden des kompilierten Effekt-Bytecodes in das Effektframework erstellt. Im Gegensatz zu Effekten 10 muss der Effekt kompiliert werden, bevor der Effekt erstellt wird. In den Arbeitsspeicher geladene Effekte können durch Aufrufen von [**D3DX11CreateEffectFromMemory erstellt werden.**](d3dx11createeffectfrommemory.md)
+Ein Effekt wird erstellt, indem der kompilierte Effekt-Bytecode in das Effektframework geladen wird. Im Gegensatz zu Effekten 10 muss der Effekt vor dem Erstellen des Effekts kompiliert werden. In den Arbeitsspeicher geladene Effekte können durch Aufrufen von [**D3DX11CreateEffectFromMemory**](d3dx11createeffectfrommemory.md)erstellt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

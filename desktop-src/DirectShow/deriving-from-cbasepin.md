@@ -1,43 +1,43 @@
 ---
-description: Ableiten von cbasepin
+description: Ableiten von CBasePin
 ms.assetid: ef453bec-e5a9-4185-94e3-f934e748b11f
-title: Ableiten von cbasepin
+title: Ableiten von CBasePin
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82ab56da3ae326be175c9519b5248e53fa02b82f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b07eb76fc2913152a69ec729f49826e8b35f1524a3841c5e0d3085ea0634f646
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079260"
 ---
-# <a name="deriving-from-cbasepin"></a>Ableiten von cbasepin
+# <a name="deriving-from-cbasepin"></a>Ableiten von CBasePin
 
-Zum Implementieren einer PIN mit [**cbasepin**](cbasepin.md)müssen Sie eine neue Klasse von der Basisklasse ableiten und mehrere ihrer Methoden überschreiben. Sie müssen die folgenden Methoden überschreiben:
+Um einen Pin mit [**CBasePin**](cbasepin.md)zu implementieren, müssen Sie eine neue Klasse von der Basisklasse ableiten und mehrere ihrer Methoden überschreiben. Sie müssen die folgenden Methoden überschreiben:
 
--   [**Cbasepin:: checkmediatype**](cbasepin-checkmediatype.md)
--   [**Cbasepin:: getmediatype**](cbasepin-getmediatype.md)
+-   [**CBasePin::CheckMediaType**](cbasepin-checkmediatype.md)
+-   [**CBasePin::GetMediaType**](cbasepin-getmediatype.md)
 
-Sie müssen diese zusätzlichen Methoden wahrscheinlich außer Kraft setzen:
+Sie müssen wahrscheinlich diese zusätzlichen Methoden überschreiben:
 
--   [**Cbasepin:: Active**](cbasepin-active.md)
--   [**Cbasepin:: breakconnect**](cbasepin-breakconnect.md)
--   [**Cbasepin:: checkConnect**](cbasepin-checkconnect.md)
--   [**Cbasepin:: completeconnect**](cbasepin-completeconnect.md)
--   [**Cbasepin:: EndOf Stream**](cbasepin-endofstream.md)
--   [**Cbasepin:: inaktiv**](cbasepin-inactive.md)
--   [**Cbasepin:: notify**](cbasepin-notify.md)
--   [**Cbasepin:: Run**](cbasepin-run.md)
+-   [**CBasePin::Active**](cbasepin-active.md)
+-   [**CBasePin::BreakConnect**](cbasepin-breakconnect.md)
+-   [**CBasePin::CheckConnect**](cbasepin-checkconnect.md)
+-   [**CBasePin::CompleteConnect**](cbasepin-completeconnect.md)
+-   [**CBasePin::EndOfStream**](cbasepin-endofstream.md)
+-   [**CBasePin::Inactive**](cbasepin-inactive.md)
+-   [**CBasePin::Notify**](cbasepin-notify.md)
+-   [**CBasePin::Run**](cbasepin-run.md)
 
-Schließlich müssen Sie die [**IPin:: beginflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) -und [**IPin:: endflush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) -Methoden implementieren.
+Schließlich müssen Sie die [**Methoden IPin::BeginFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-beginflush) und [**IPin::EndFlush**](/windows/desktop/api/Strmif/nf-strmif-ipin-endflush) implementieren.
 
-Einige dieser Methoden werden in Basisklassen implementiert, die von **cbasepin** abgeleitet werden, z. b. [**cbaseingeputpin**](cbaseinputpin.md) und [**cbaseoutputpin**](cbaseoutputpin.md).
+Einige dieser Methoden werden in Basisklassen implementiert, die von **CBasePin** abgeleitet werden, z. B. [**CBaseInputPin**](cbaseinputpin.md) und [**CBaseOutputPin.**](cbaseoutputpin.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Cbasepin**](cbasepin.md)
+[**CBasePin**](cbasepin.md)
 </dt> </dl>
 
  

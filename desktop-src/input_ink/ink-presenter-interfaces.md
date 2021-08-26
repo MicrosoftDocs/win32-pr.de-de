@@ -1,29 +1,29 @@
 ---
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Ink Presenter-Schnittstellen.
+description: Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für Schnittstellen für die Ink-Darstellung.
 ms.assetid: 68172566-586C-41AC-82B8-5DBE8B50EC8F
-title: Ink Presenter-Schnittstellen
+title: Schnittstellen für die Ink-Präsentation
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 1839c8ebc0a7597ab7c5becaf7c7492128b4d6af
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0c1fb4cab0b8387dec7c75087a72719f72fbc85dc2776a5e20fc6d638fb02d95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092390"
 ---
-# <a name="ink-presenter-interfaces"></a>Ink Presenter-Schnittstellen
+# <a name="ink-presenter-interfaces"></a>Schnittstellen für die Ink-Präsentation
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Ink Presenter](ink-presenter.md) -Schnittstellen.
+Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für Schnittstellen für [die Ink-Darstellung.](ink-presenter.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema | BESCHREIBUNG |
 |---|---|
-| [**Iinkcommitrequesthandler**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkcommitrequesthandler)<br/> | Ermöglicht der APP (anstelle eines [**iinkpresenterdesktop-**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) Objekts) das Commit aller ausstehenden Microsoft directcomposition-Befehle an die visuelle [directcomposition](../directcomp/directcomposition-portal.md) -Struktur der app.<br/>   |
-| [**Iinkdesktophost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost)<br/>                   | Ermöglicht die Eingabe, Verarbeitung und das Rendering von Hand Eingaben durch die Erstellung eines App-Threads zum Hosten eines [**iinkpresenterdesktop-**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) Objekts und Einfügen in die visuelle [directcomposition](../directcomp/directcomposition-portal.md) -Struktur der app. <br/> |
-| [**Iinkhostworkitem**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkhostworkitem)<br/>                 | Stellt einen frei Hand Vorgang dar, der auf einem [**iinkdesktophost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) -Objekt Thread ausgeführt werden soll.<br/>                                                                                                                                                  |
-| [**Iinkpresenterdesktop**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop)<br/>         | Stellt eine [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) dar, die konfiguriert und in den visuellen [directcomposition](../directcomp/directcomposition-portal.md) -Baum der klassischen Windows-app eingefügt werden kann. <br/>                                        |
+| [**IInkCommitRequestHandler**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkcommitrequesthandler)<br/> | Ermöglicht Ihrer App (anstelle eines [**IInkPresenterDesktop-Objekts),**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) alle ausstehenden Microsoft DirectComposition-Befehle in der visuellen [DirectComposition-Struktur](../directcomp/directcomposition-portal.md) der App zu committen.<br/>   |
+| [**IInkDesktopHost**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkdesktophost)<br/>                   | Ermöglicht Freihandeingabe, -verarbeitung und -rendering durch die Erstellung eines App-Threads, um ein [**IInkPresenterDesktop-Objekt**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) zu hosten und es in die visuelle [DirectComposition-Struktur](../directcomp/directcomposition-portal.md) der App einzufügen. <br/> |
+| [**IInkHostWorkItem**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkhostworkitem)<br/>                 | Stellt einen Freihandvorgang dar, der für einen [**IInkDesktopHost-Objektthread**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop) ausgeführt werden soll.<br/>                                                                                                                                                  |
+| [**IInkPresenterDesktop**](/windows/win32/api/inkpresenterdesktop/nn-inkpresenterdesktop-iinkpresenterdesktop)<br/>         | Stellt einen [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) dar, der konfiguriert und in die visuelle [DirectComposition-Struktur](../directcomp/directcomposition-portal.md) der klassischen Windows-App eingefügt werden kann. <br/>                                        |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Ink Presenter](ink-presenter.md), [Stift-und tablettstiftinteraktionen](/windows/uwp/design/input/pen-and-stylus-interactions), Handschrift [Analyse Beispiel](/samples/microsoft/windows-universal-samples/inkanalysis/), [einfaches Beispiel zum Einfügen](/samples/microsoft/windows-universal-samples/simpleink/), Beispiel für [komplexe](/samples/microsoft/windows-universal-samples/complexink/) Erfassung
+[Ink-Presenter,](ink-presenter.md) [Stift- und Stiftinteraktionen,](/windows/uwp/design/input/pen-and-stylus-interactions) [Ink-Analysebeispiel,](/samples/microsoft/windows-universal-samples/inkanalysis/) [Einfaches Beispiel für Dasken,](/samples/microsoft/windows-universal-samples/simpleink/) [Komplexes Beispiel für Dasinken](/samples/microsoft/windows-universal-samples/complexink/)

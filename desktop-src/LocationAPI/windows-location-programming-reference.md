@@ -13,7 +13,7 @@ ms.locfileid: "120129770"
 ---
 # <a name="location-api-c-programming-reference"></a>C++-Programmierreferenz zur Speicherort-API
 
-\[Die Win32-Standort-API steht für die Verwendung in den Betriebssystemen zur Verfügung, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation) \]
+\[Die Win32-Speicherort-API ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation) \]
 
 In diesem Abschnitt werden COM-Schnittstellen und andere C++-Konstrukte für die Standortprogrammierung beschrieben.
 

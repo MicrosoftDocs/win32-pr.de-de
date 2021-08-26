@@ -1,19 +1,19 @@
 ---
-description: Die folgende Header Datei sollte sowohl in den Client-als auch in den Server-SSPI-Beispielen als sspiexample. h enthalten sein. Er deklariert Funktionen, die die Kommunikation mit dem Sicherheitspaket verarbeiten.
+description: Die folgende Headerdatei sollte sowohl im Client als auch in den SSPI-Beispielen des Servers als SspiExample.h enthalten sein. Sie deklariert Funktionen, die die Kommunikation mit dem Sicherheitspaket verarbeiten.
 ms.assetid: 358c2cd6-674b-4d70-9657-800b0d1b2fe7
-title: Header Datei für SSPI-Client und-Server
+title: Headerdatei für SSPI-Client und -Server
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75f2702186f7a0a9def4405890f39f588dbbfa84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6ba76283b2686ecde8a6e453c5c376f8589a78dccf9e740b381f89fc5ef4db21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101280"
 ---
-# <a name="header-file-for-sspi-client-and-server"></a>Header Datei für SSPI-Client und-Server
+# <a name="header-file-for-sspi-client-and-server"></a>Headerdatei für SSPI-Client und -Server
 
-Die folgende Header Datei sollte sowohl in den Client-als auch in den Server-SSPI-Beispielen als sspiexample. h enthalten sein. Er deklariert Funktionen, die die Kommunikation mit dem Sicherheitspaket verarbeiten.
+Die folgende Headerdatei sollte sowohl im Client als auch in den SSPI-Beispielen des Servers als SspiExample.h enthalten sein. Sie deklariert Funktionen, die die Kommunikation mit dem Sicherheitspaket verarbeiten.
 
 
 ```C++

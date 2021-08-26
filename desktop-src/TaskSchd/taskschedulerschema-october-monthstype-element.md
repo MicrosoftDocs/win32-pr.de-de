@@ -1,6 +1,6 @@
 ---
-title: Oktober-Element (monthstype)
-description: Gibt an, dass der Task im Oktober ausgeführt wird.
+title: October (monthsType)-Element
+description: Gibt an, dass die Aufgabe im Oktober ausgeführt wird.
 ms.assetid: 62c8bb3e-a70f-45b8-8d80-7a7eef9dfaeb
 keywords:
 - Oktober-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 79bf2a2dde46341f48808342ab6aefb78863524b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 65f14f0ccaa2831bc4aae24ce45a520f746a57b2e9d03d70b64714bafa69e25b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125730"
 ---
-# <a name="october-monthstype-element"></a>Oktober-Element (monthstype)
+# <a name="october-monthstype-element"></a>October (monthsType)-Element
 
-Gibt an, dass der Task im Oktober ausgeführt wird.
+Gibt an, dass die Aufgabe im Oktober ausgeführt wird.
 
 ``` syntax
 <xs:element name="October">
@@ -30,22 +30,22 @@ Gibt an, dass der Task im Oktober ausgeführt wird.
 </xs:element>
 ```
 
-Das **Oktober** -Element wird durch den komplexen [**monthstype**](taskschedulerschema-monthstype-complextype.md) -Typ definiert.
+Das **October-Element** wird durch den komplexen [**monthsType-Typ**](taskschedulerschema-monthstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                                          | Abgeleitet von                                                     | BESCHREIBUNG                                                                                                |
+| Element                                                                                                          | Abgeleitet von                                                     | Beschreibung                                                                                                |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**Monate (monthlydayosweekscheduletype)**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) | [**monthstype**](taskschedulerschema-monthstype-complextype.md) | Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
-| [**Monate (monthlyscheduletype)**](taskschedulerschema-months-monthlyscheduletype-element.md)                   | [**monthstype**](taskschedulerschema-monthstype-complextype.md) | Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Zeitplan ausgeführt wird.<br/>             |
+| [**Monate (monthlyDayOfWeekScheduleType)**](taskschedulerschema-months-monthlydayofweekscheduletype-element.md) | [**monthsType**](taskschedulerschema-monthstype-complextype.md) | Gibt die Monate des Jahres an, in denen der Task für einen monatlichen Wochentag ausgeführt wird.<br/> |
+| [**Monate (monthlyScheduleType)**](taskschedulerschema-months-monthlyscheduletype-element.md)                   | [**monthsType**](taskschedulerschema-monthstype-complextype.md) | Gibt die Monate des Jahres an, in denen die Aufgabe für einen monatlichen Zeitplan ausgeführt wird.<br/>             |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein Monatskalender definiert, in dem die Aufgabe im Oktober ausgeführt wird.
+Der folgende XML-Code definiert einen Kalender für Monate, in dem die Aufgabe im Oktober ausgeführt wird.
 
 
 ```XML
@@ -62,8 +62,8 @@ Im folgenden XML-Code wird ein Monatskalender definiert, in dem die Aufgabe im O
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -71,7 +71,7 @@ Im folgenden XML-Code wird ein Monatskalender definiert, in dem die Aufgabe im O
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

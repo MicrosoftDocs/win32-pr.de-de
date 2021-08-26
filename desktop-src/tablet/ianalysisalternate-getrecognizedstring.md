@@ -1,7 +1,7 @@
 ---
-description: Ruft den erkannten Zeichen folgen Wert des ianalysisalternate-Objekts ab.
+description: Ruft den erkannten Zeichenfolgenwert des IAnalysisAlternate-Objekts ab.
 ms.assetid: cdf41824-77a4-4c71-8712-f380a6cbf4c5
-title: 'Ianalysisalternate:: GetRecognizedString-Methode (iacom. h)'
+title: IAnalysisAlternate::GetRecognizedString-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 5489773b29ade35d4b7297065c1104bfecefa117
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79d0967d2653a68145a9a50c34134d176d78674c5ea5729230035edd65a5e6b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120008490"
 ---
-# <a name="ianalysisalternategetrecognizedstring-method"></a>Ianalysisalternate:: GetRecognizedString-Methode
+# <a name="ianalysisalternategetrecognizedstring-method"></a>IAnalysisAlternate::GetRecognizedString-Methode
 
-Ruft den erkannten Zeichen folgen Wert des [**ianalysisalternate**](ianalysisalternate.md) -Objekts ab.
+Ruft den erkannten [**Zeichenfolgenwert des IAnalysisAlternate-Objekts**](ianalysisalternate.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT GetRecognizedString(
 
 <dl> <dt>
 
-*pbstrauerkenzedstring* \[ vorgenommen\]
+*pbstrRecognizedString* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf den **BSTR** -Wert, der auf den erkannten Zeichen folgen Wert festgelegt ist.
+Ein Zeiger auf den **BSTR,** der auf den erkannten Zeichenfolgenwert festgelegt ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,9 +56,9 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -67,10 +67,10 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 <dl> <dt>
 
-[**Ianalysisalternate**](ianalysisalternate.md)
+[**IAnalysisAlternate**](ianalysisalternate.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: GetRecognizedString-Methode**](iinkanalyzer-getrecognizedstring.md)
+[**IInkAnalyzer::GetRecognizedString-Methode**](iinkanalyzer-getrecognizedstring.md)
 </dt> </dl>
 
  

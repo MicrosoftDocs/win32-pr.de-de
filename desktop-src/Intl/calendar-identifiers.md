@@ -1,138 +1,138 @@
 ---
-description: In diesem Thema werden die Kalender Bezeichner (Datentyp-Calid) definiert, die zur Angabe unterschiedlicher Kalender verwendet werden.
+description: In diesem Thema werden die Kalenderbezeichner (Datentyp CALID) definiert, die zum Angeben verschiedener Kalender verwendet werden.
 ms.assetid: ba2e841e-e24e-476a-851e-a29b3af4f04d
-title: Kalender Bezeichner
+title: Kalenderbezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab9b931aea4a186af0849dfe8f6642c53744d364
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f5f9f21aeff1143c4f981e3bfae20214f1b86e86307f7f32b103a19ef99b9803
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083030"
 ---
-# <a name="calendar-identifiers"></a>Kalender Bezeichner
+# <a name="calendar-identifiers"></a>Kalenderbezeichner
 
-In diesem Thema werden die Kalender Bezeichner (Datentyp-Calid) definiert, die zur Angabe unterschiedlicher Kalender verwendet werden. Ihre Anwendungen können diese Bezeichner verwenden, wenn Sie die folgenden nls-Funktionen und-Rückruf Funktionen verwenden, die über Parameter verfügen, die den Datentyp "Calid" akzeptieren:
+In diesem Thema werden die Kalenderbezeichner (Datentyp CALID) definiert, die zum Angeben verschiedener Kalender verwendet werden. Ihre Anwendungen können diese Bezeichner verwenden, wenn sie die folgenden NLS-Funktionen und Rückruffunktionen verwenden, die Parameter mit dem CALID-Datentyp aufweisen:
 
--   [**Convertsystemtimeumcaldatetime**](convertsystemtimetocaldatetime.md)
--   [**Enumcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa)
--   [**Enumcalendarinfoex**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa)
--   [**Enumcalendarinfoexex**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexex)
--   [**Enumcalendarinfoprocex**](/previous-versions/windows/desktop/legacy/dd317807(v=vs.85))
--   [**Enumdateformatsprocex**](/previous-versions/windows/desktop/legacy/dd317814(v=vs.85))
--   [**Getcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoa)
--   [**Getcalendarinfoex**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoex)
--   [**Getcalendarsupporteddaterange**](getcalendarsupporteddaterange.md)
--   [**Iscalendarleapyear**](iscalendarleapyear.md)
--   [**Setcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-setcalendarinfoa)
+-   [**ConvertSystemTimeToCalDateTime**](convertsystemtimetocaldatetime.md)
+-   [**EnumCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa)
+-   [**EnumCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa)
+-   [**EnumCalendarInfoExEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexex)
+-   [**EnumCalendarInfoProcEx**](/previous-versions/windows/desktop/legacy/dd317807(v=vs.85))
+-   [**EnumDateFormatsProcEx**](/previous-versions/windows/desktop/legacy/dd317814(v=vs.85))
+-   [**GetCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoa)
+-   [**GetCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoex)
+-   [**GetCalendarSupportedDateRange**](getcalendarsupporteddaterange.md)
+-   [**IsCalendarLeapYear**](iscalendarleapyear.md)
+-   [**SetCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-setcalendarinfoa)
 
 Die folgenden Werte sind definiert. Alle anderen Werte sind reserviert. Diese Werte können nicht miteinander kombiniert werden.
 
 
 
-Kalender-ID
+Kalenderbezeichner
 
 Bedeutung
 
 1
 
-Cal \_ Gregorianisch
+CAL \_ GREGORIAN
 
 Gregorianisch (lokalisiert)
 
 2
 
-Cal- \_ Gregorianisch \_
+CAL \_ GREGORIAN \_ US
 
-Gregorianisch (englische Zeichen folgen immer)
+Gregorianisch (englische Zeichenfolgen immer)
 
 3
 
-Cal \_ Japan
+CAL \_ JAPAN
 
-Japanischer Kaiser ERA
+Japanische Japanische Japanische Zeit
 
 4
 
-Cal- \_ Taiwan
+CAL \_ TAIWAN
 
 Taiwan-Kalender
 
 5
 
-Cal \_ Korea
+CAL \_ KOREA
 
-Koreanischer Tangun-Zeitraum
+Koreanische Tangunzeit
 
 6
 
-Cal- \_ Hijri
+CAL \_ HIJRI
 
-Hijri (Arabisch, Mond)
+Hijri (Arabischer Mondlandefeiler)
 
 7
 
-Cal- \_ Thai
+CAL \_ THAI
 
 Thailändisch
 
 8
 
-Cal- \_ Hebräisch
+CAL \_ HEBRÄISCH
 
-Hebräisch (Mond)
+Hebräisch (Lunar)
 
 9
 
-Cal \_ Gregorianisch ( \_ \_ Französisch)
+CAL \_ GREGORIAN \_ ME \_ FRENCH
 
 Gregorian Middle East French
 
 10
 
-Cal \_ Gregorianisch, \_ Arabisch
+CAL \_ \_ GREGORIANISCH ARABISCH
 
 Gregorian Arabic
 
 11
 
-Cal \_ Gregorianisch (in \_ \_ englischer Sprache)
+CAL \_ GREGORIAN \_ XLIT \_ ENGLISH
 
-Gregorianisch, transliterierte Englisch
+Gregorianisches transliteriertes Englisch
 
 12
 
-Cal \_ Gregorianischen \_ xlit \_ Französisch
+CAL \_ GREGORIAN \_ XLIT \_ FRENCH
 
-Gregorianisches transliterierte Französisch
+Gregorianisches transliteriertes Französisch
 
 23
 
-Cal-über- \_ Qura
+CAL \_ UMALQURA
 
-**Windows Vista und höher:** Um Al Qura-Kalender (Arabisch Mond)
+**Windows Vista und höher:** Um Al Qura-Kalender (arabischer Mondlandefzeichen)
 
 
 
  
 
 > [!Note]  
-> Die Lücke bei der Nummerierung zwischen den Bezeichner Cal \_ Gregorianisch \_ xlit \_ Französisch und Cal-über- \_ Qura ist beabsichtigt. Der Kenn Zeichner für Cal--über- \_ Qura ist 23, nicht 13.
+> Die Lücke bei der Nummerierung zwischen den Bezeichnern CAL \_ GREGORIAN \_ XLIT \_ FRENCH und CAL \_ UMALQURA ist beabsichtigt. Der Bezeichner für CAL \_ UMALQURA ist 23, nicht 13.
 
  
 
-Außerdem erlauben [**enumcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa) und [**enumcalendarinfoex**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa) die Verwendung des Werts \_ \_ Enumeration all Kalenders, um eine Enumeration aller anwendbaren Kalender anzufordern.
+Darüber hinaus ermöglichen [**EnumCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa) und [**EnumCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa) die Verwendung des Werts ENUM \_ ALL \_ CALENDARS, um eine Enumeration aller anwendbaren Kalender anzufordern.
 
 Wert
 
 Bedeutung
 
-0xFFFFFFFF
+0xffffffff
 
-\_alle Kalender aufzählen \_
+AUFZÄHLEN \_ ALLER \_ KALENDER
 
-Alle anwendbaren Kalender für das angegebene Gebiets Schema
+Alle anwendbaren Kalender für das angegebene Gebietsschema
 
 
 

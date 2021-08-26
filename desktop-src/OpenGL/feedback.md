@@ -1,21 +1,21 @@
 ---
 title: Feedback
-description: Im Feedback Modus generiert jedes primitive, das rasterisiert werden soll, einen Block von Werten, die in das Feedback Array kopiert werden.
+description: Im Feedbackmodus generiert jeder Primitive, der gerast werden soll, einen Block von Werten, der in das Feedbackarray kopiert wird.
 ms.assetid: 92f14fe2-71f7-4b59-94a5-9669e986fb30
 keywords:
-- Feedback Modus, OpenGL
+- Feedbackmodus,OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af46ecbef5c371c4c4344cb480ef77f4fcc6a7d3
-ms.sourcegitcommit: 628fda3e63fd1d513ce9a5f55be8bbc4af4b2a4b
+ms.openlocfilehash: cb5d307b9033a60a03b585cb4df6109293d3b9b0b276bde822ca595eb37fcd19
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106373426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082450"
 ---
-# <a name="feedback-mode"></a>Feedback Modus
+# <a name="feedback-mode"></a>Feedbackmodus
 
-Im Feedback Modus generiert jedes primitive, das rasterisiert werden soll, einen Block von Werten, die in das Feedback Array kopiert werden. Geben Sie dieses Array mit [**glfeedbackbuffer**](glfeedbackbuffer.md)an, das aufgerufen werden muss, bevor OpenGL in den Feedback Modus versetzt wird. Jeder Block von Werten beginnt mit einem Code, der den primitiven Typ anzeigt, gefolgt von Werten, die die Scheitel Punkte und zugeordneten Daten des primitiven beschreiben. Einträge werden auch für Bitmaps und Pixel Rechtecke geschrieben. Es ist nicht garantiert, dass die Werte in das Feedback Array geschrieben werden, bis Sie " [**glrendermode**](glrendermode.md) " aufgerufen haben, um OpenGL aus dem Feedback Modus zu nehmen. Sie können mit [**glpassthrough**](glpassthrough.md) einen Marker angeben, der im Feedback Modus zurückgegeben wird, als ob es sich um einen primitiven handelt.
+Im Feedbackmodus generiert jeder Primitive, der gerast werden soll, einen Block von Werten, der in das Feedbackarray kopiert wird. Stellen Sie für dieses Array [**glFeedbackBuffer**](glfeedbackbuffer.md)zur Verfügung, das Sie aufrufen müssen, bevor Sie OpenGL in den Feedbackmodus versetzen. Jeder Werteblock beginnt mit einem Code, der den primitiven Typ angibt, gefolgt von Werten, die die Scheitelpunkte des Primitivs und die zugehörigen Daten beschreiben. Einträge werden auch für Bitmaps und Pixelrechtecke geschrieben. Es ist nicht garantiert, dass Werte in das Feedbackarray geschrieben werden, bis Sie [**glRenderMode**](glrendermode.md) aufrufen, um OpenGL aus dem Feedbackmodus zu nehmen. Mit [**glPassThrough**](glpassthrough.md) können Sie einen Marker bereitstellen, der im Feedbackmodus zurückgegeben wird, als wäre es ein Primitiver.
 
  
 

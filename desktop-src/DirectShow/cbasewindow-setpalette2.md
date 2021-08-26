@@ -1,7 +1,7 @@
 ---
 description: Die SetPalette-Methode installiert eine Palette für das Fenster. Diese Methode hat keine Parameter.
 ms.assetid: 86eb34c6-85ff-4a40-8085-ea55dbc2727e
-title: Cbasewindow. SetPalette-Methode (winutil. h)-keine Parameter
+title: CBaseWindow.SetPalette-Methode (Winutil.h) – Keine Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1203b6aeedd39eb82d7188c4e5d5503b01d167fe
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: f15df65f6e427e467c14654a0e2745b84d774a5226b9a526193fc546261c5a0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104219730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052150"
 ---
-# <a name="cbasewindowsetpalette-method-winutilh---no-parameters"></a>Cbasewindow. SetPalette-Methode (winutil. h)-keine Parameter
+# <a name="cbasewindowsetpalette-method-winutilh---no-parameters"></a>CBaseWindow.SetPalette-Methode (Winutil.h) – Keine Parameter
 
-Mit der- `SetPalette` Methode wird eine Palette für das-Fenster installiert.
+Die `SetPalette` -Methode installiert eine Palette für das Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,39 +42,39 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                                                    |
 |-----------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl> | Ein interner-Befehl von " **gdiflush** " hat einen Fehler zurückgegeben.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Ein interner Aufruf von **GdiFlush hat** einen Fehler zurückgegeben.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die von der [**cbasewindow:: m \_ hpalette**](cbasewindow-m-hpalette.md) -Member-Variable angegebene Palette ist ausgewählt. Der Aufrufer muss die Gültigkeit von **m \_ hpalette** sicherstellen.
+Die palette, die von der [**CBaseWindow::m \_ hPalette-Membervariablen**](cbasewindow-m-hpalette.md) angegeben wird, wird ausgewählt. Der Aufrufer muss die Gültigkeit von **m \_ hPalette sicherstellen.**
 
-Wenn der Wert der [**cbasewindow:: m \_ bnorealize**](cbasewindow-m-bnorealize.md) -Element Variablen **false** (Standardeinstellung) ist, wählt diese Methode die Palette aus und erkennt Sie. Andernfalls wird die Palette ausgewählt, aber nicht erkannt. Das Objekt löscht keine zuvor verwendete Palette. Der Aufrufer ist für das Löschen von Paletten verantwortlich.
+Wenn der Wert der [**CBaseWindow::m \_ bNoRealize-Membervariable**](cbasewindow-m-bnorealize.md) **FALSE** (Standardeinstellung) ist, wählt diese Methode die Palette aus und erkennt sie. Andernfalls wird die Palette ausgewählt, aber nicht erkannt. Das -Objekt löscht keine vorherige Palette, die es verwendet hat. Der Aufrufer ist für das Löschen von Paletten verantwortlich.
 
-Jeder Thread kann diese Methode sicher aufzurufen, nicht nur den Thread, der das Fenster besitzt. Das Fenster sendet eine private Nachricht an sich selbst, wodurch ein Aufrufvorgang der [**cbasewindow:: onpalettechange**](cbasewindow-onpalettechange.md) -Methode ausgelöst wird.
+Jeder Thread kann diese Methode sicher aufrufen, nicht nur den Thread, der das Fenster besitzt. Das Fenster sendet eine private Nachricht an sich selbst, die einen Aufruf der [**CBaseWindow::OnPaletteChange-Methode**](cbasewindow-onpalettechange.md) auslöst.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |-|-|
-| Header | Winutil. h (Include Streams. h) |
-| Bibliothek| "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header | Winutil.h (include Streams.h) |
+| Bibliothek| Strmbase.lib (Einzelhandels-Builds); Strmbasd.lib (Debugbuilds) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

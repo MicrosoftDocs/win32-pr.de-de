@@ -1,7 +1,7 @@
 ---
-description: Die nmcolumninfo-Struktur definiert eine Spalte im oberen Bereich der Ereignisanzeige.
+description: Die NMCOLUMNINFO-Struktur definiert eine Spalte im oberen Bereich der Ereignisanzeige.
 ms.assetid: 21e0a129-464b-45b3-9c6b-6594e62fbce9
-title: Nmcolumninfo-Struktur (Netmon. h)
+title: NMCOLUMNINFO-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 2597b486590871f0af28736717d4c2f332aae342
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 95683eb812a2b8a668664f7ad8092a91c1940d2c3f7185225e8364959777538b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037120"
 ---
-# <a name="nmcolumninfo-structure"></a>Nmcolumninfo-Struktur
+# <a name="nmcolumninfo-structure"></a>NMCOLUMNINFO-Struktur
 
-Die **nmcolumninfo** -Struktur definiert eine Spalte im oberen Bereich der Ereignisanzeige.
+Die **NMCOLUMNINFO-Struktur** definiert eine Spalte im oberen Bereich der Ereignisanzeige.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ typedef struct {
 
 <dl> <dt>
 
-**szcolumnname**
+**szColumnName**
 </dt> <dd>
 
-Der anzeigbare Name einer bestimmten Spalte. Wenn der Name zu lang ist, wird er in der Standard Ereignisanzeige Konfiguration nicht vollständig angezeigt.
+Der anzeigebare Name einer bestimmten Spalte. Wenn der Name zu lang ist, wird er in der Standardkonfiguration nicht Ereignisanzeige angezeigt.
 
 </dd> <dt>
 
-**Variantdata**
+**VariantData**
 </dt> <dd>
 
 Die in die Spalte eingefügten Daten.
@@ -62,7 +62,7 @@ Die in die Spalte eingefügten Daten.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

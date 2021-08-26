@@ -1,11 +1,11 @@
 ---
 title: TaskNamedValuePair.Name-Eigenschaft
-description: Ruft bei der Skripterstellung den Namen ab, der einem Wert in einem Name-Wert-Paar zugeordnet ist, oder legt diesen fest.
+description: Für die Skripterstellung ruft den Namen ab, der einem Wert in einem Name-Wert-Paar zugeordnet ist, oder legt diesen fest.
 ms.assetid: 01da8980-297d-468e-ba55-fa8478bb9de9
 keywords:
-- Name-Eigenschaft Taskplaner
-- Name-Eigenschaft Taskplaner, tasknamedvaluepair-Objekt
-- Tasknamedvaluepair-Objekt Taskplaner, Name-Eigenschaft
+- Name-Taskplaner
+- Name-Eigenschaft Taskplaner , TaskNamedValuePair-Objekt
+- TaskNamedValuePair-Objekt Taskplaner , Name-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 442aa8bafc7859e9bfbb3f66776c54ebb4f1dc5c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: efc964b4463554411a8118a6d506a4988d8da098c290783449cf28b83bdbd090
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125900"
 ---
 # <a name="tasknamedvaluepairname-property"></a>TaskNamedValuePair.Name-Eigenschaft
 
-Ruft bei der Skripterstellung den Namen ab, der einem Wert in einem Name-Wert-Paar zugeordnet ist, oder legt diesen fest.
+Für die Skripterstellung ruft den Namen ab, der einem Wert in einem Name-Wert-Paar zugeordnet ist, oder legt diesen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ TaskNamedValuePair.Name As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name, der mit einem Wert in einem Name-Wert-Paar verknüpft ist.
+Der Name, der einem Wert in einem Name-Wert-Paar zugeordnet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,9 +46,9 @@ Der Name, der mit einem Wert in einem Name-Wert-Paar verknüpft ist.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

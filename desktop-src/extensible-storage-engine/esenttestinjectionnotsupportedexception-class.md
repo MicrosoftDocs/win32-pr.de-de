@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esenttestinjectionnotsupportedexception-Klasse'
-title: Esenttestinjectionnotsupportedexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentTestInjectionNotSupportedException-Klasse'
+title: EsentTestInjectionNotSupportedException-Klasse
 TOCTitle: EsentTestInjectionNotSupportedException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTestInjectionNotSupportedException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttestinjectionnotsupportedexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 07d640aa0429ac6fce63b07f873a26ea536a6261
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec7df505a27d3c3b72e36143cd2546450e9bb43d43aced465048a289950e18c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116540"
 ---
-# <a name="esenttestinjectionnotsupportedexception-class"></a>Esenttestinjectionnotsupportedexception-Klasse
+# <a name="esenttestinjectionnotsupportedexception-class"></a>EsentTestInjectionNotSupportedException-Klasse
 
-Basisklasse für JET_err. Testinjectionnotsupported-Ausnahmen.
+Basisklasse für JET_err. TestInjectionNotSupported-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esenttestinjectionnotsupportedexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentTestInjectionNotSupportedException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttestinjectionnotsupportedexception-Elemente](./esenttestinjectionnotsupportedexception-members.md)
+[EsentTestInjectionNotSupportedException-Member](./esenttestinjectionnotsupportedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

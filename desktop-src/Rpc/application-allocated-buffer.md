@@ -1,25 +1,25 @@
 ---
-title: Application-Allocated Puffer
-description: Das ACF-Attribut \ Byte \_ Anzahl \ weist die Stub an, einen vorab zugeordneten Puffer zu verwenden, der nicht von den Client-Unterstützungs Routinen zugeordnet oder freigegeben wird.
+title: Application-Allocated Buffer
+description: Das ACF-Attribut \byte count\ leitet die Stubs an, einen vorab zugeordneten Puffer zu verwenden, der nicht von den Clientunterstützungsroutinen zugeordnet oder \_ frei wird.
 ms.assetid: 1b370f74-394e-4e57-9749-83334be50f28
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db533495f16d37aca0bdae96035783650573a60f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9bb87390637cba57cbdf4021a43f4ec98ea64c3828c67dfdb615ffcd62dc8c16
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473916"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024180"
 ---
-# <a name="application-allocated-buffer"></a>Application-Allocated Puffer
+# <a name="application-allocated-buffer"></a>Application-Allocated Buffer
 
-Die Byte Anzahl der ACF-Attribute weist \[ [**\_**](/windows/desktop/Midl/byte-count) \] die Stub an, einen vorab zugeordneten Puffer zu verwenden, der nicht von den Client-Unterstützungs Routinen zugeordnet oder freigegeben wird. Das \[ **Byte \_ count** - \] Attribut wird auf einen Zeiger-oder Array Parameter angewendet, der auf den Puffer zeigt. Hierfür ist ein Parameter erforderlich, der die Puffergröße in Bytes angibt.
+Die \[ [**Byteanzahl \_**](/windows/desktop/Midl/byte-count) des ACF-Attributs leitet die Stubs an, einen vorab zugeordneten Puffer zu verwenden, der von den Clientunterstützungsroutinen nicht zugeordnet oder \] frei wird. Das \[ **\_ Byteanzahlattribut** \] wird auf einen Zeiger oder Arrayparameter angewendet, der auf den Puffer zeigt. Sie erfordert einen Parameter, der die Puffergröße in Bytes angibt.
 
-Der vom Client zugewiesene Speicherbereich kann komplexe Datenstrukturen mit mehreren Zeigern enthalten. Da der Speicherbereich zusammenhängend ist, muss die Anwendung nicht mehrere Aufrufe durchführen, um jeden Zeiger und jede Struktur einzeln freizugeben. Wie bei Verwendung des Attributs "Allocation" \[ [**(alle \_ Knoten)**](/windows/desktop/Midl/allocate) \] kann der Speicherbereich mit einem Rückruf der Speicher Belegungs Routine oder der kostenlosen Routine zugeordnet oder freigegeben werden. Anders als bei Verwendung des \[ Attributs " **zuordnen" (alle \_ Knoten)** \] wird der Puffer Parameter jedoch nicht vom Client-Stub, sondern von der Client Anwendung verwaltet.
+Der vom Client zugewiesene Speicherbereich kann komplexe Datenstrukturen mit mehreren Zeigern enthalten. Da der Speicherbereich zusammenhängend ist, muss die Anwendung nicht mehrere Aufrufe tätigen, um jeden Zeiger und jede Struktur einzeln frei zu geben. Wie bei Verwendung des \[ [**Attributs allocate(all \_ nodes)**](/windows/desktop/Midl/allocate) kann der Arbeitsspeicherbereich mit einem Aufruf der Speicherzuordnungsroutine oder der freien Routine zugeordnet oder \] freigerufen werden. Im Gegensatz zur Verwendung des \[ **Attributs allocate(all \_ nodes)** wird der Pufferparameter jedoch nicht vom Clientstub, \] sondern von der Clientanwendung verwaltet.
 
-Der Puffer muss ein \[ [](/windows/desktop/Midl/out-idl) \] nur-Out-Parameter sein, und die Pufferlänge in Byte muss ein \[ [](/windows/desktop/Midl/in) \] nur-der-Parameter sein. Das \[ [**Byte \_ count**](/windows/desktop/Midl/byte-count) - \] Attribut kann nur auf Zeiger Typen angewendet werden. Das \[ ACF-Attribut für die **Byte \_ Anzahl** \] ist eine Microsoft-Erweiterung für DCE-IDL und ist daher nicht verfügbar, wenn Sie mit dem [**/OSF**](/windows/desktop/Midl/-osf) -Schalter für mittlere Kompilierung kompilieren.
+Der Puffer muss ein \[ [](/windows/desktop/Midl/out-idl) \] out-only-Parameter sein, und die Pufferlänge in Bytes muss ein \[ [**in**](/windows/desktop/Midl/in) \] -only-Parameter sein. Das \[ [**\_ Byteanzahlattribut**](/windows/desktop/Midl/byte-count) \] kann nur auf Zeigertypen angewendet werden. Das Byteanzahl-ACF-Attribut ist eine Microsoft-Erweiterung für DCE-IDL und daher nicht verfügbar, wenn Sie mit dem \[ **\_** \] [**MIDL/osf-Switch kompilieren.**](/windows/desktop/Midl/-osf)
 
-Im folgenden Beispiel verwendet der Parameter *Proot* Byte Anzahl:
+Im folgenden Beispiel verwendet der *Parameter pRoot* die Byteanzahl:
 
 ``` syntax
 /* function prototype in IDL file (fragment) */
@@ -31,15 +31,15 @@ void SortNames(
 );
 ```
 
-Das \[ [**Byte \_ count**](/windows/desktop/Midl/byte-count) - \] Attribut wird in der ACF wie folgt angezeigt:
+Das \[ [**\_ Byteanzahlattribut**](/windows/desktop/Midl/byte-count) \] wird im ACF wie im folgenden Beispiel angezeigt:
 
 ``` syntax
 /* ACF file (fragment) */
 SortNames([byte_count(cBytes)] pRoot);
 ```
 
-Der von diesen IDL-und ACF-Dateien generierte Clientstub weist den Speicher für diesen Puffer nicht zu oder gibt diesen frei. Der Serverstub ordnet den Puffer zu und gibt ihn in einem einzelnen-Befehl mit dem angegebenen Size-Parameter frei. Wenn die Daten für die angegebene Puffergröße zu groß sind, wird eine Ausnahme ausgelöst.
+Der aus diesen IDL- und ACF-Dateien generierte Clientstub weist den Arbeitsspeicher für diesen Puffer nicht zu oder gibt diesen frei. Der Serverstub ordnet den Puffer in einem einzigen Aufruf zu und gibt ihn mithilfe des angegebenen Größenparameters frei. Wenn die Daten für die angegebene Puffergröße zu groß sind, wird eine Ausnahme ausgelöst.
 
- 
+ 
 
- 
+ 

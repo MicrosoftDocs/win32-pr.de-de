@@ -1,6 +1,6 @@
 ---
-title: glClear-Funktion (GL. h)
-description: Die Funktion "glClear" löscht Puffer in voreingestellten Werte.
+title: glClear-Funktion (Gl.h)
+description: Die glClear-Funktion gibt Puffer für vordefinierte Werte frei.
 ms.assetid: 9818f969-3145-45ea-aa9c-2abed953a8e0
 keywords:
 - glClear-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0db935e46c65c42976024a8afbb98028294710c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0bb48a1b2832a5f9c046bb450b7cfba9ec4f83a759b093df91f3ec2064f23a3d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082100"
 ---
 # <a name="glclear-function"></a>glClear-Funktion
 
-Die Funktion " **glClear** " löscht Puffer in voreingestellten Werte.
+Die **glClear-Funktion** gibt Puffer für vordefinierte Werte frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ void WINAPI glClear(
 *mask* 
 </dt> <dd>
 
-Bitweise OR-Operatoren von Masken, die die zu löschenden Puffer angeben. Die vier Masken sind wie folgt.
+Bitweise OR-Operatoren von Masken, die die zu löschenden Puffer angeben. Die vier Masken lauten wie folgt.
 
 
 
 | Wert                                                                                                                                                                                   | Bedeutung                                                     |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| <span id="GL_COLOR_BUFFER_BIT"></span><span id="gl_color_buffer_bit"></span><dl> <dt>**GL- \_ Farb \_ Puffer \_ Bit**</dt> </dl>       | Die aktuell für das Schreiben von Farben aktivierten Puffer.<br/> |
-| <span id="GL_DEPTH_BUFFER_BIT"></span><span id="gl_depth_buffer_bit"></span><dl> <dt>**GL- \_ Tiefe- \_ Puffer \_ Bit**</dt> </dl>       | Der tiefen Puffer.<br/>                                |
-| <span id="GL_ACCUM_BUFFER_BIT"></span><span id="gl_accum_buffer_bit"></span><dl> <dt>**GL- \_ Accum- \_ Puffer \_ Bit**</dt> </dl>       | Der Akkumulations Puffer.<br/>                         |
-| <span id="GL_STENCIL_BUFFER_BIT"></span><span id="gl_stencil_buffer_bit"></span><dl> <dt>**GL- \_ Schablone- \_ Puffer \_ Bit**</dt> </dl> | Der Schablonen Puffer.<br/>                              |
+| <span id="GL_COLOR_BUFFER_BIT"></span><span id="gl_color_buffer_bit"></span><dl> <dt>**GL \_ COLOR \_ BUFFER \_ BIT**</dt> </dl>       | Die Puffer, die derzeit für das Schreiben von Farben aktiviert sind.<br/> |
+| <span id="GL_DEPTH_BUFFER_BIT"></span><span id="gl_depth_buffer_bit"></span><dl> <dt>**GL \_ DEPTH \_ BUFFER \_ BIT**</dt> </dl>       | Der Tiefenpuffer.<br/>                                |
+| <span id="GL_ACCUM_BUFFER_BIT"></span><span id="gl_accum_buffer_bit"></span><dl> <dt>**\_ \_ GL-PUFFERBIT \_**</dt> </dl>       | Der Akkumulationspuffer.<br/>                         |
+| <span id="GL_STENCIL_BUFFER_BIT"></span><span id="gl_stencil_buffer_bit"></span><dl> <dt>**\_ \_ GL-SCHABLONENPUFFERBIT \_**</dt> </dl> | Der Schablonenpuffer.<br/>                              |
 
 
 
@@ -66,42 +66,42 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | Alle anderen Bits als die vier definierten Bits wurden in *Mask* festgelegt.<br/>                                                                |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | Ein anderes Bit als die vier definierten Bits wurde in der Maske *festgelegt.*<br/>                                                                |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der Funktion " **glClear** " wird der bitplane-Bereich des Fensters auf Werte festgelegt, die zuvor von [**glclearcolor**](glclearcolor.md), [**glclearindex**](glclearindex.md), [**glcleartiefe**](glcleardepth.md), [**glclearstencil**](glclearstencil.md)und [**glclearaccum**](glclearaccum.md)ausgewählt wurden. Sie können mehrere Farb Puffer gleichzeitig löschen, indem Sie mit [**gldrawbuffer**](gldrawbuffer.md)mehr als einen Puffer gleichzeitig auswählen.
+Die **glClear-Funktion** legt den Bitebenenbereich des Fensters auf Werte fest, die zuvor von [**glClearColor,**](glclearcolor.md) [**glClearIndex,**](glclearindex.md) [**glClearDepth,**](glcleardepth.md) [**glClearStencil**](glclearstencil.md)und [**glClearAccum**](glclearaccum.md)ausgewählt wurden. Sie können mehrere Farbpuffer gleichzeitig löschen, indem Sie mit [**glDrawBuffer**](gldrawbuffer.md)mehrere Puffer gleichzeitig auswählen.
 
-Der Pixel Besitz Test, die Scheren-Tests, die Dithering-und die Buffer-Schreibvorgänge wirken sich auf den Vorgang von **glClear** aus. Das Feld "Scheren" grenzt den gelöschten Bereich an. Die Funktion " **glClear** " ignoriert die Funktionen "Alpha", "Blend", "logischer Vorgang", "Schablone", "Textur Zuordnung" und " *z*-Pufferung".
+Der Pixelbesitztest, der Scissor-Test, das Dithering und die Puffer-Schreibmasken wirken sich auf den Betrieb **von glClear aus.** Das Scissor-Feld umrandet den frei werdenden Bereich. Die **glClear-Funktion** ignoriert die Alphafunktion, blend-Funktion, logische Operation, Schablone, Texturzuordnung und *z*-Pufferung.
 
-Die Funktion " **glClear** " hat ein einzelnes Argument (*Mask*), bei dem es sich um das bitweise OR von mehreren Werten handelt, die angeben, welcher Puffer gelöscht werden soll.
+Die **glClear-Funktion** verwendet ein einzelnes Argument (*mask*), das das bitweise OR mehrerer Werte ist, das angibt, welcher Puffer zu löschen ist.
 
-Der Wert, auf den der Puffer gelöscht wird, hängt von der Einstellung des Clear-Werts für diesen Puffer ab.
+Der Wert, für den jeder Puffer gepuffert wird, hängt von der Einstellung des eindeutigen Werts für diesen Puffer ab.
 
-Wenn kein Puffer vorhanden ist, hat ein **glClear** -Befehl, der an diesen Puffer gerichtet ist, keine Auswirkung.
+Wenn kein Puffer vorhanden ist, hat ein **glClear-Aufruf,** der an diesen Puffer gerichtet ist, keine Auswirkungen.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glClear** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glClear ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Accum \_ Clear \_ value
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument \_ GLGEM \_ CLEAR \_ VALUE
 
-**glget** mit Argument GL- \_ Tiefe \_ Clear- \_ Wert
+**glGet** mit Argument GL \_ DEPTH \_ CLEAR \_ VALUE
 
-**glget** mit Argument GL- \_ Index \_ Clear- \_ Wert
+**glGet mit** Argument GL \_ INDEX CLEAR \_ \_ VALUE
 
-**glget** mit dem Argument GL \_ Color \_ Clear \_ value
+**glGet mit** Argument GL \_ COLOR CLEAR \_ \_ VALUE
 
-**glget** mit dem Argument GL \_ Stencil \_ Clear \_ value
+**glGet** mit Argument GL \_ STENCIL \_ CLEAR \_ VALUE
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -109,8 +109,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glClear*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -119,28 +119,28 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glClear*
 
 <dl> <dt>
 
-[**glclearaccum**](glclearaccum.md)
+[**glClearAccum**](glclearaccum.md)
 </dt> <dt>
 
-[**glclearcolor**](glclearcolor.md)
+[**glClearColor**](glclearcolor.md)
 </dt> <dt>
 
-[**glcleartiefe**](glcleardepth.md)
+[**glClearDepth**](glcleardepth.md)
 </dt> <dt>
 
-[**glclearindex**](glclearindex.md)
+[**glClearIndex**](glclearindex.md)
 </dt> <dt>
 
-[**glclearstencil**](glclearstencil.md)
+[**glClearStencil**](glclearstencil.md)
 </dt> <dt>
 
-[**gldrawbuffer**](gldrawbuffer.md)
+[**glDrawBuffer**](gldrawbuffer.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glscissor**](glscissor.md)
+[**glScissor**](glscissor.md)
 </dt> </dl>
 
  

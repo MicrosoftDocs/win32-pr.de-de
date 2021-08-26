@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Ereignisbenachrichtigungsrückrufs
-description: Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungsbenachrichtigungsmeldungen vom RTM \_ EVENT \_ CALLBACK verwenden sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+description: Das folgende Verfahren beschreibt die Schritte, die der Client zum Empfangen von Änderungsbenachrichtigungen vom \_ RTM-EREIGNISRÜCKRUF verwenden \_ sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 ms.assetid: e079c585-6457-4c2c-82bd-e95d233c4aa6
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,16 +13,16 @@ ms.locfileid: "120127820"
 ---
 # <a name="use-the-event-notification-callback"></a>Verwenden des Ereignisbenachrichtigungsrückrufs
 
-Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungsbenachrichtigungsmeldungen vom RTM \_ EVENT \_ CALLBACK verwenden sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+Das folgende Verfahren beschreibt die Schritte, die der Client zum Empfangen von Änderungsbenachrichtigungen vom \_ RTM-EREIGNISRÜCKRUF verwenden \_ sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 
 **Abrufen der Änderungsbenachrichtigungsmeldungen**
 
-1.  Rufen [**Sie RtmGetChangedDests auf,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) um eine Reihe von Änderungen abzurufen.
+1.  Rufen Sie [**RtmGetChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) auf, um eine Reihe von Änderungen abzurufen.
 2.  Verarbeiten Sie die Änderungen.
-3.  Geben Sie die Ziele mit [**rtmReleaseChangedDests frei.**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)
+3.  Geben Sie die Ziele mit [**rtmReleaseChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)frei.
 4.  Wiederholen Sie die Schritte 1, 2 und 3, bis [**RtmGetChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) ERROR \_ NO MORE ITEMS \_ \_ zurückgibt.
 
-Der folgende Beispielcode zeigt, wie Sie einen [**RTM \_ EVENT \_ CALLBACK-Rückruf**](/windows/win32/api/rtmv2/nc-rtmv2-_event_callback) verarbeiten, der vom Routingtabellen-Manager empfangen wurde.
+Der folgende Beispielcode zeigt, wie ein vom Routingtabellen-Manager empfangener RÜCKRUF FÜR [**\_ \_ RTM-EREIGNISSE**](/windows/win32/api/rtmv2/nc-rtmv2-_event_callback) verarbeitet wird.
 
 
 ```C++

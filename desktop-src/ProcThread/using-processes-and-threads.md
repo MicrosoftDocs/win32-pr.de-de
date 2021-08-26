@@ -1,28 +1,28 @@
 ---
-description: In den folgenden Beispielen werden die Prozess-, Thread-und Fiber Funktionen veranschaulicht.
+description: In den folgenden Beispielen werden die Prozess-, Thread- und Fiberfunktionen veranschaulicht.
 ms.assetid: 472fc0ac-e840-433d-9f1a-510f202e723e
 title: Verwenden von Prozessen und Threads
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7b10a741ab8404c62095ae0c33199cef44a5993
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c64c6aa50d58958e30cf841a3b15edd08ed71fd3ea2b2f5781440633030e651a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081270"
 ---
 # <a name="using-processes-and-threads"></a>Verwenden von Prozessen und Threads
 
-In den folgenden Beispielen werden die Prozess-, Thread-und Fiber Funktionen veranschaulicht:
+Die folgenden Beispiele veranschaulichen die Prozess-, Thread- und Fiberfunktionen:
 
 -   [Erstellen von Prozessen](creating-processes.md)
 -   [Erstellen von Threads](creating-threads.md)
 -   [Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe](creating-a-child-process-with-redirected-input-and-output.md)
--   [Isolierte Benutzermodusprozesse](isolated-user-mode--ium--processes.md)
+-   [Isolierte Benutzermodusprozesse (Isolated User Mode, IUM)](isolated-user-mode--ium--processes.md)
 -   [Ändern von Umgebungsvariablen](changing-environment-variables.md)
--   [Verwenden des lokalen Thread Speichers](using-thread-local-storage.md)
+-   [Verwenden von lokalem Threadspeicher](using-thread-local-storage.md)
 -   [Verwenden von Fibers](using-fibers.md)
--   [Verwenden der Thread Pool Funktionen](using-the-thread-pool-functions.md)
+-   [Verwenden der Threadpoolfunktionen](using-the-thread-pool-functions.md)
 
  
 

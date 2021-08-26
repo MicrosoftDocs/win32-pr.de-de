@@ -1,9 +1,9 @@
 ---
-title: BCM_GETTEXTMARGIN Meldung (kommstrg. h)
-description: Ruft die Ränder ab, mit denen Text in einem Schaltflächen-Steuerelement gezeichnet wird. Sie können diese Nachricht explizit senden oder das gettextmargin-Makro der Schaltfläche verwenden \_ .
+title: BCM_GETTEXTMARGIN (Commctrl.h)
+description: Ruft die Ränder ab, die zum Zeichnen von Text in einem Schaltflächen-Steuerelement verwendet werden. Sie können diese Nachricht explizit senden oder das Button \_ GetTextMargin-Makro verwenden.
 ms.assetid: 6c141752-e636-41c4-9d05-df8b320ff59f
 keywords:
-- Windows-Steuerelemente für BCM_GETTEXTMARGIN Meldung
+- BCM_GETTEXTMARGIN der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d6a7d809207c21c74a36c796a9035ed0e3772481
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2ea871d0054558e1522011d4fdb00fdd3c82a0dd1562fe3420d3295bbab89a01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064410"
 ---
-# <a name="bcm_gettextmargin-message"></a>BCM \_ gettextmargin-Meldung
+# <a name="bcm_gettextmargin-message"></a>BCM \_ GETTEXTMARGIN-Nachricht
 
-Ruft die Ränder ab, mit denen Text in einem Schaltflächen-Steuerelement gezeichnet wird. Sie können diese Nachricht explizit senden oder das [**\_ gettextmargin**](/windows/desktop/api/Commctrl/nf-commctrl-button_gettextmargin) -Makro der Schaltfläche verwenden.
+Ruft die Ränder ab, die zum Zeichnen von Text in einem Schaltflächen-Steuerelement verwendet werden. Sie können diese Nachricht explizit senden oder das [**Button \_ GetTextMargin-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-button_gettextmargin) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,18 +39,18 @@ Nicht verwendet; muss 0 (null) sein.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Ränder enthält, die zum Zeichnen von Text verwendet werden sollen.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Ränder enthält, die zum Zeichnen von Text verwendet werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, wird **true** zurückgegeben. Andernfalls wird **false** zurückgegeben.
+Wenn die Meldung erfolgreich ist, wird **TRUE zurückgegeben.** Andernfalls wird **FALSE zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -60,9 +60,9 @@ Wenn die Nachricht erfolgreich ist, wird **true** zurückgegeben. Andernfalls wi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

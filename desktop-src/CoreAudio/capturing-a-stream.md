@@ -4,29 +4,29 @@ ms.assetid: 1d9072dc-4f9b-4111-a747-5eb33ad3ae5b
 title: Erfassen eines Streams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 371d4b92b97a26e81074edee68216255d576e614
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6dda6fd8527acbfff4072a2b79854eca4c32541f57d462b6073f9f6f39854ddb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059030"
 ---
 # <a name="capturing-a-stream"></a>Erfassen eines Streams
 
-Der Client ruft die Methoden in der [**iaudiocaptureclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient) -Schnittstelle auf, um erfasste Daten aus einem Endpunkt Puffer zu lesen. Der Client verwendet den Endpunkt Puffer mit dem Audiomodul im freigegebenen Modus und mit dem Audiogerät im exklusiven Modus. Um einen Endpunkt Puffer einer bestimmten Größe anzufordern, ruft der Client die [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Methode auf. Um die Größe des zugeordneten Puffers zu erhalten, der sich von der angeforderten Größe unterscheiden kann, ruft der Client die [**iaudioclient:: getBufferSize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getbuffersize) -Methode auf.
+Der Client ruft die Methoden in der [**IAudioCaptureClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient) auf, um erfasste Daten aus einem Endpunktpuffer zu lesen. Der Client teilt den Endpunktpuffer mit der Audio-Engine im freigegebenen Modus und mit dem Audiogerät im exklusiven Modus. Zum Anfordern eines Endpunktpuffers einer bestimmten Größe ruft der Client die [**IAudioClient::Initialize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) auf. Um die Größe des zugeordneten Puffers zu erhalten, die sich von der angeforderten Größe unterscheiden kann, ruft der Client die [**IAudioClient::GetBufferSize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getbuffersize) auf.
 
-Um einen Stream erfasster Daten über den Endpunkt Puffer zu verschieben, ruft der Client alternativ die [**iaudiocaptureclient:: GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) -Methode und die [**iaudiocaptureclient:: ReleaseBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer) -Methode auf. Der Client greift als eine Reihe von Datenpaketen auf die Daten im Endpunkt Puffer zu. Der **GetBuffer** -Befehl ruft das nächste Paket der aufgezeichneten Daten aus dem Puffer ab. Nachdem die Daten aus dem Paket gelesen wurden, ruft der Client **ReleaseBuffer** auf, um das Paket freizugeben und für mehr erfasste Daten verfügbar zu machen.
+Um einen Datenstrom erfasster Daten durch den Endpunktpuffer zu verschieben, ruft der Client alternativ die [**IAudioCaptureClient::GetBuffer-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) und die [**IAudioCaptureClient::ReleaseBuffer-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer) auf. Der Client greifen auf die Daten im Endpunktpuffer als eine Reihe von Datenpaketen zu. Der **GetBuffer-Aufruf** ruft das nächste Paket der erfassten Daten aus dem Puffer ab. Nach dem Lesen der Daten aus dem Paket ruft der Client **ReleaseBuffer** auf, um das Paket frei zu geben und für weitere erfasste Daten verfügbar zu machen.
 
-Die Paketgröße kann von einem [**GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) -aufrufen zum nächsten abweichen. Vor dem Aufrufen von **GetBuffer** hat der Client die Möglichkeit, die [**iaudiocaptureclient:: getnextpacketsize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getnextpacketsize) -Methode aufrufen, um die Größe des nächsten Pakets im Voraus zu erhalten. Außerdem kann der Client die [**iaudioclient:: getcurrentpadding**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getcurrentpadding) -Methode aufrufen, um die Gesamtmenge der aufgezeichneten Daten zu erhalten, die im Puffer verfügbar ist. Die Paketgröße ist immer kleiner oder gleich der Gesamtmenge der aufgezeichneten Daten im Puffer.
+Die Paketgröße kann von einem [**GetBuffer-Aufruf**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) bis zum nächsten variieren. Vor dem **Aufrufen von GetBuffer** kann der Client die [**IAudioCaptureClient::GetNextPacketSize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getnextpacketsize) aufrufen, um die Größe des nächsten Pakets im Voraus zu erhalten. Darüber hinaus kann der Client die [**IAudioClient::GetCurrentPadding-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getcurrentpadding) aufrufen, um die Gesamtmenge der erfassten Daten zu erhalten, die im Puffer verfügbar sind. Die Paketgröße ist immer kleiner oder gleich der Gesamtmenge der erfassten Daten im Puffer.
 
-Bei jedem Verarbeitungs Durchlauf hat der Client die Möglichkeit, die erfassten Daten auf eine der folgenden Arten zu verarbeiten:
+Während jeder Verarbeitung hat der Client die Möglichkeit, die erfassten Daten auf eine der folgenden Arten zu verarbeiten:
 
--   Der Client ruft alternativ [**GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) und [**ReleaseBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer)auf, wobei ein Paket mit jedem Paar von Aufrufen gelesen wird, bis **GetBuffer** den Wert von audcnt \_ S \_ bufferempty zurückgibt, wodurch angegeben wird, dass der Puffer leer ist.
--   Der Client ruft [**getnextpacketsize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getnextpacketsize) vor jedem Paar von Aufrufen von [**GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) und [**ReleaseBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer) auf, bis **getnextpacketsize** eine Paketgröße von 0 meldet, was angibt, dass der Puffer leer ist.
+-   Der Client ruft alternativ [**GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) und [**ReleaseBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer)auf und liest ein Paket mit jedem Aufrufpaar, bis **GetBuffer** AUDCNT \_ S BUFFEREMPTY zurückgibt, was angibt, dass der Puffer leer \_ ist.
+-   Der Client ruft [**GetNextPacketSize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getnextpacketsize) vor jedem Aufrufpaar von [**GetBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-getbuffer) und [**ReleaseBuffer**](/windows/desktop/api/Audioclient/nf-audioclient-iaudiocaptureclient-releasebuffer) auf, bis **GetNextPacketSize** eine Paketgröße von 0 meldet und angibt, dass der Puffer leer ist.
 
-Die beiden Techniken liefern gleichwertige Ergebnisse.
+Die beiden Techniken führen zu gleichwertigen Ergebnissen.
 
-Das folgende Codebeispiel zeigt, wie Sie einen Audiostream vom Standard Erfassungsgerät aufzeichnen:
+Das folgende Codebeispiel zeigt, wie Sie einen Audiodatenstrom vom Standarderfassungsgerät aufzeichnen:
 
 
 ```C++
@@ -169,26 +169,26 @@ Exit:
 
 
 
-Im vorangehenden Beispiel nimmt die Funktion recordaudiostream den einzelnen Parameter, `pMySink` , ein Zeiger auf ein Objekt, das zu einer Client definierten Klasse, myaudiosink, mit zwei Funktionen (CopyData und SetFormat) gehört. Der Beispielcode enthält nicht die Implementierung von myaudiosink:
+Im vorherigen Beispiel akzeptiert die RecordAudioStream-Funktion einen einzelnen Parameter, , der ein Zeiger auf ein Objekt ist, das zu einer `pMySink` clientdefinierten Klasse, MyAudioSink, mit den beiden Funktionen CopyData und SetFormat gehört. Der Beispielcode enthält die Implementierung von MyAudioSink nicht, da:
 
--   Keines der Klassenmember kommuniziert direkt mit einer der Methoden in den Schnittstellen in WASAPI.
--   Die Klasse kann auf verschiedene Weise implementiert werden, je nach den Anforderungen des Clients. (Beispielsweise können die Erfassungsdaten in eine WAV-Datei geschrieben werden.)
+-   Keiner der Klassenmitglieder kommuniziert direkt mit einer der Methoden in den Schnittstellen in WASAPI.
+-   Die -Klasse kann je nach den Anforderungen des Clients auf unterschiedliche Weise implementiert werden. (Beispielsweise könnten die Erfassungsdaten in eine WAV-Datei geschrieben werden.)
 
-Informationen zum Vorgang der beiden Methoden sind jedoch nützlich, um das Beispiel zu verstehen.
+Informationen zum Betrieb der beiden Methoden sind jedoch nützlich, um das Beispiel zu verstehen.
 
-Die CopyData-Funktion kopiert eine angegebene Anzahl von Audioframes von einem angegebenen Puffer Speicherort. Die Funktion "recordaudiostream" verwendet die CopyData-Funktion, um die Audiodaten aus dem freigegebenen Puffer zu lesen und zu speichern. Die Funktion SetFormat gibt das Format für die CopyData-Funktion an, die für die Daten verwendet werden soll.
+Die CopyData-Funktion kopiert eine angegebene Anzahl von Audioframes von einer angegebenen Pufferposition. Die RecordAudioStream-Funktion verwendet die CopyData-Funktion, um die Audiodaten aus dem freigegebenen Puffer zu lesen und zu speichern. Die SetFormat-Funktion gibt das Format für die CopyData-Funktion an, das für die Daten verwendet werden soll.
 
-Solange das myaudiosink-Objekt zusätzliche Daten erfordert, gibt die CopyData-Funktion den Wert **false** über den dritten Parameter aus, der im vorangehenden Codebeispiel ein Zeiger auf die Variable ist `bDone` . Wenn das myaudiosink-Objekt über alle Daten verfügt, die es erfordert, legt die CopyData-Funktion `bDone` auf **true** fest. Dies bewirkt, dass das Programm die Schleife in der recordaudiostream-Funktion verlässt.
+Solange das MyAudioSink-Objekt zusätzliche Daten erfordert, gibt die CopyData-Funktion den Wert **FALSE** über den dritten Parameter aus, der im vorherigen Codebeispiel ein Zeiger auf die Variable `bDone` ist. Wenn das MyAudioSink-Objekt über alle benötigten Daten verfügt, legt die CopyData-Funktion auf TRUE fest, wodurch das Programm die Schleife in der `bDone` RecordAudioStream-Funktion beendet. 
 
-Die Funktion recordaudiostream weist einen freigegebenen Puffer mit einer Dauer von einer Sekunde zu. (Der zugewiesene Puffer kann etwas länger dauern.) Innerhalb der Hauptschleife bewirkt der Aufrufe der Windows [**Sleep**](/windows/desktop/api/synchapi/nf-synchapi-sleep) -Funktion, dass das Programm eine halbe Sekunde wartet. Zu **Beginn jedes Ruhe** Zustands ist der freigegebene Puffer leer oder fast leer. Wenn der Standby- **Aufruf zurück** kehrt, ist der freigegebene Puffer ungefähr die Hälfte der erfassten Daten.
+Die RecordAudioStream-Funktion weist einen freigegebenen Puffer mit einer Dauer von einer Sekunde zu. (Der zugeordnete Puffer kann eine etwas längere Dauer haben.) Innerhalb der main-Schleife führt der Aufruf der Windows [**Sleep-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-sleep) dazu, dass das Programm eine halbe Sekunde wartet. Zu Beginn jedes **Sleep-Aufrufs** ist der freigegebene Puffer leer oder fast leer. Zum Zeitpunkt der Rückgabe **des Sleep-Aufrufs** wird der freigegebene Puffer ungefähr zur Hälfte mit Erfassungsdaten gefüllt.
 
-Nach dem Aufrufen der [**iaudioclient:: Initialize**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Methode bleibt der Stream geöffnet, bis der Client alle Verweise auf die [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle und alle Verweise auf Dienst Schnittstellen freigibt, die vom Client über die [**iaudioclient:: GetService**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) -Methode abgerufen wurden. Der endgültige [**releaseaufrufad**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) schließt den Datenstrom.
+Nach dem Aufruf der [**IAudioClient::Initialize-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) bleibt der Stream geöffnet, bis der Client alle seine Verweise auf die [**IAudioClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) und alle Verweise auf Dienstschnittstellen frei gibt, die der Client über die [**IAudioClient::GetService-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) erhalten hat. Der letzte [**Releaseaufruf**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) schließt den Stream.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Datenstrom Verwaltung](stream-management.md)
+[Streamverwaltung](stream-management.md)
 </dt> </dl>
 
  

@@ -14,7 +14,7 @@ ms.locfileid: "120097310"
 ---
 # <a name="cwbemgluefactory-methods"></a>CWbemGlueFactory-Methoden
 
-\[Die [**CWbemGlueFactory-Klasse**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemgluefactory) ist Teil des WMI-Anbieterframework, das jetzt als endgültiger Zustand betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CWbemGlueFactory-Klasse**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemgluefactory) ist Teil des WMI-Anbieterframeworks, das nun im endgültigen Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Verbesserungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
 
 Die [**CWbemGlueFactory-Klasse**](/windows/desktop/api/WbemGlue/nl-wbemglue-cwbemgluefactory) macht die folgenden Methoden verfügbar.
 

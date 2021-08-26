@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentrestoreof nonbackupdatabaseexception-Konstruktor'
-title: Esentrestoreof nonbackupdatabaseexception-Konstruktor
+description: 'Weitere Informationen zu: EsentRestoreOfNonBackupDatabaseException-Konstruktor'
+title: EsentRestoreOfNonBackupDatabaseException-Konstruktor
 TOCTitle: 'EsentRestoreOfNonBackupDatabaseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentRestoreOfNonBackupDatabaseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentrestoreofnonbackupdatabaseexception.esentrestoreofnonbackupdatabaseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 07dce4f540ea8bea5b03e9e1fabe4f22b01ed14e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b674ab3a897283c233c2108af3b74f5226ede3b655d90b3f7c1dcc4e4639d9bb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117020"
 ---
-# <a name="esentrestoreofnonbackupdatabaseexception-constructor"></a>Esentrestoreof nonbackupdatabaseexception-Konstruktor
+# <a name="esentrestoreofnonbackupdatabaseexception-constructor"></a>EsentRestoreOfNonBackupDatabaseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentrestoreof nonbackupdatabaseexception-Klasse.
+Initialisiert eine neue Instanz der EsentRestoreOfNonBackupDatabaseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentRestoreOfNonBackupDatabaseException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentrestoreof nonbackupdatabaseexception-Klasse](./esentrestoreofnonbackupdatabaseexception-class.md)
+[EsentRestoreOfNonBackupDatabaseException-Klasse](./esentrestoreofnonbackupdatabaseexception-class.md)
 
-[Esentrestoreofnonbackupdatabaseexception-Member](./esentrestoreofnonbackupdatabaseexception-members.md)
+[EsentRestoreOfNonBackupDatabaseException-Member](./esentrestoreofnonbackupdatabaseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

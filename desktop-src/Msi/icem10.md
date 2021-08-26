@@ -13,7 +13,7 @@ ms.locfileid: "120129410"
 ---
 # <a name="icem10"></a>ICEM10
 
-ICEM10 überprüft, ob ein Mergemodul nur Eigenschaften enthält, die in der [Eigenschaftentabelle zulässig sind.](property-table.md) Die folgenden produktspezifischen Eigenschaften sind in der Eigenschaftentabelle nicht zulässig:
+ICEM10 überprüft, ob ein Mergemodul nur Eigenschaften enthält, die in der [Eigenschaftentabelle](property-table.md)zulässig sind. Die folgenden produktspezifischen Eigenschaften sind in der Eigenschaftentabelle nicht zulässig:
 
 -   [**ProductLanguage-Eigenschaft**](productlanguage.md)
 -   [**ProductCode-Eigenschaft**](productcode.md)
@@ -23,11 +23,11 @@ ICEM10 überprüft, ob ein Mergemodul nur Eigenschaften enthält, die in der [Ei
 
 ## <a name="result"></a>Ergebnis
 
-ICEM10 gibt einen Fehler aus, wenn ein Mergemodul eine Eigenschaft enthält, die in der [Eigenschaftentabelle nicht zulässig ist.](property-table.md)
+ICEM10 gibt einen Fehler aus, wenn ein Mergemodul eine Eigenschaft enthält, die in der [Eigenschaftentabelle](property-table.md)nicht zulässig ist.
 
 ## <a name="example"></a>Beispiel
 
-ICEM10 stellt die folgenden Fehlermeldungen für ein Modul mit den angezeigten Datenbankeinträgen zur Verfügung.
+ICEM10 sendet die folgenden Fehlermeldungen für ein Modul, das die angezeigten Datenbankeinträge enthält.
 
 ``` syntax
 The property 'ProductLanguage' is not allowed in a merge module.
@@ -35,7 +35,7 @@ The property 'ProductLanguage' is not allowed in a merge module.
 The property 'Manufacturer' is not allowed in a merge module.
 ```
 
-Die folgende Tabelle zeigt eine partielle [Eigenschaftentabelle.](property-table.md)
+In der folgenden Tabelle ist eine partielle [Eigenschaftentabelle dargestellt.](property-table.md)
 
 
 
@@ -53,7 +53,7 @@ Im folgenden Verfahren wird gezeigt, wie Sie Fehler beheben.
 
 **So beheben Sie die Fehler**
 
-1.  Entfernen Sie die [**Manufacturer-Eigenschaft**](manufacturer.md)aus der [Eigenschaftentabelle](property-table.md).
+1.  Entfernen Sie[](manufacturer.md)die Manufacturer-Eigenschaft aus der [Eigenschaftentabelle](property-table.md).
 2.  Entfernen Sie die [**ProductLanguage-Eigenschaft**](productlanguage.md)aus der [Eigenschaftentabelle](property-table.md).
 
 ## <a name="table-used-during-execution"></a>Während der Ausführung verwendete Tabelle
@@ -64,7 +64,7 @@ Die [Eigenschaftentabelle](property-table.md) wird während der Ausführung verw
 
 <dl> <dt>
 
-[Merge Module ICE Reference](merge-module-ice-reference.md)
+[ICE-Referenz zum Mergemodul](merge-module-ice-reference.md)
 </dt> </dl>
 
  

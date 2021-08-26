@@ -1,5 +1,5 @@
 ---
-description: Die Win32- \_ codecfile-&\# 32; Die WMI-Klasse stellt den auf dem Computersystem installierten Audio-oder Videocodec dar.
+description: Win32 \_ CodecFile&\# 32; Die WMI-Klasse stellt den Audio- oder Videocodec dar, der auf dem Computersystem installiert ist.
 ms.assetid: 48ea3b92-0ea1-4aba-b067-bce0ec356cd2
 ms.tgt_platform: multiple
 title: Win32_CodecFile-Klasse
@@ -48,18 +48,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: fc7a6073ab2841fde4492cd59ae1696aeca9f6a7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1d9f41178c69f40513b26de5221af6eb7b5e425acf5c4893f2de87fb18211291
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079910"
 ---
-# <a name="win32_codecfile-class"></a>Win32- \_ codecfile-Klasse
+# <a name="win32_codecfile-class"></a>Win32 \_ CodecFile-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) von **Win32 \_ codecfile** stellt den auf dem Computersystem installierten Audiostream oder Videocodec dar. Codecs konvertieren einen Medien Formattyp in einen anderen, üblicherweise ein komprimiertes Format in ein unkomprimiertes Format. Der Name "Codec" wird von einer Kombination aus "komprimieren" und "decokomprimieren" abgeleitet. Ein Codec kann z. b. ein komprimiertes Format, z. b. ms-ADPCM, in ein nicht komprimiertes Format (z. b. PCM) konvertieren, das die meisten Audiohardware direkt wiedergeben kann.
+Die **Win32 CodecFile-WMI-Klasse \_** stellt den Audio- oder Videocodec dar, der auf dem Computersystem installiert ist. [](/windows/desktop/WmiSdk/retrieving-a-class) Codecs konvertieren einen Medienformattyp in einen anderen, in der Regel ein komprimiertes Format in ein nicht komprimiertes Format. Der Name "Codec" wird von einer Kombination aus Komprimierung und Dekomprimierung abgeleitet. Beispielsweise kann ein Codec ein komprimiertes Format wie MS-ADPCM in ein unkomprimiertes Format wie PCM konvertieren, das die meisten Audiohardware direkt wiedergeben kann.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -106,33 +106,33 @@ class Win32_CodecFile : CIM_DataFile
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ codecfile** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ CodecFile-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32 \_ codecfile** -Klasse verfügt über diese Methoden.
+Die **Win32 \_ CodecFile-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                             | BESCHREIBUNG                                                                                                                                                                                                            |
+| Methode                                                                                             | Beschreibung                                                                                                                                                                                                            |
 |:---------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Changesecurrityberechtigungen**](changesecuritypermissions-method-in-class-win32-codecfile.md)     | Ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist.<br/>                                                                                                                         |
-| [**Changesecurritypermissionsex**](changesecuritypermissionsex-method-in-class-win32-codecfile.md) | Ändert die Sicherheits Berechtigungen für die logische Datei, die im Objekt Pfad angegeben ist.<br/>                                                                                                                         |
-| [**Komprimieren**](compress-method-in-class-win32-codecfile.md)                                       | Komprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                    |
-| [**CompressEx**](compressex-method-in-class-win32-codecfile.md)                                   | Komprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                    |
-| [**Kopieren**](copy-method-in-class-win32-codecfile.md)                                               | Kopiert die im Objekt Pfad angegebene logische Datei oder das Verzeichnis in den Speicherort, der durch den Eingabeparameter angegeben wird.<br/>                                                                                         |
-| [**CopyEx**](copyex-method-in-class-win32-codecfile.md)                                           | Class-Methode, die die im Objekt Pfad angegebene logische Datei oder das Verzeichnis an den Speicherort kopiert, der durch den filename-Parameter angegeben wird.<br/>                                                                    |
-| [**Lösch**](delete-method-in-class-win32-codecfile.md)                                           | Löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                       |
-| [**DeleteEx**](deleteex-method-in-class-win32-codecfile.md)                                       | Löscht die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                       |
-| [**Geteffectiveberechtigung**](geteffectivepermission-method-in-class-win32-codecfile.md)           | Bestimmt, ob der Aufrufer über die durch das **Berechtigungs** Argument angegebenen aggregierten Berechtigungen verfügt, nicht nur für das Datei Objekt, sondern auf der Freigabe, in der sich die Datei oder das Verzeichnis befindet (wenn es sich auf einer Freigabe befindet).<br/> |
-| [**Benen**](rename-method-in-class-win32-codecfile.md)                                           | Klassenmethode, die die im Objekt Pfad angegebene logische Datei (oder das Verzeichnis) umbenennt.<br/>                                                                                                                     |
-| [**Take Ownership**](takeownership-method-in-class-win32-codecfile.md)                             | Ruft den Besitz der logischen Datei ab, die im Objekt Pfad angegeben ist.<br/>                                                                                                                                         |
-| [**Takebesitzshipex**](takeownershipex-method-in-class-win32-codecfile.md)                         | Klassenmethode, die den Besitz der logischen Datei erhält, die im Objekt Pfad angegeben ist.<br/>                                                                                                                       |
-| [**Dekomprimieren**](uncompress-method-in-class-win32-codecfile.md)                                   | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                  |
-| [**Nicht CompressEx**](uncompressex-method-in-class-win32-codecfile.md)                               | Dekomprimiert die logische Datei (oder das Verzeichnis), die im Objekt Pfad angegeben ist.<br/>                                                                                                                                  |
+| [**ChangeSecurityPermissions**](changesecuritypermissions-method-in-class-win32-codecfile.md)     | Ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist.<br/>                                                                                                                         |
+| [**ChangeSecurityPermissionsEx**](changesecuritypermissionsex-method-in-class-win32-codecfile.md) | Ändert die Sicherheitsberechtigungen für die logische Datei, die im Objektpfad angegeben ist.<br/>                                                                                                                         |
+| [**Komprimieren**](compress-method-in-class-win32-codecfile.md)                                       | Komprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                    |
+| [**CompressEx**](compressex-method-in-class-win32-codecfile.md)                                   | Komprimiert die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                    |
+| [**Kopieren**](copy-method-in-class-win32-codecfile.md)                                               | Kopiert die logische Datei oder das Verzeichnis, die bzw. das im Objektpfad angegeben ist, an den speicherort, der durch den Eingabeparameter angegeben wird.<br/>                                                                                         |
+| [**CopyEx**](copyex-method-in-class-win32-codecfile.md)                                           | Klassenmethode, die die im Objektpfad angegebene logische Datei oder das im Objektpfad angegebene Verzeichnis an den Speicherort kopiert, der durch den FileName-Parameter angegeben wird.<br/>                                                                    |
+| [**Löschen**](delete-method-in-class-win32-codecfile.md)                                           | Löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                       |
+| [**DeleteEx**](deleteex-method-in-class-win32-codecfile.md)                                       | Löscht die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                       |
+| [**GetEffectivePermission**](geteffectivepermission-method-in-class-win32-codecfile.md)           | Bestimmt, ob der Aufrufer über die vom **Berechtigungsargument** angegebenen aggregierten Berechtigungen verfügt, nicht nur für das Dateiobjekt, sondern auch für die Freigabe, auf der sich die Datei oder das Verzeichnis befindet (sofern es sich auf einer Freigabe befindet).<br/> |
+| [**Umbenennen**](rename-method-in-class-win32-codecfile.md)                                           | Klassenmethode, die die im Objektpfad angegebene logische Datei (oder das Verzeichnis) umbenennt.<br/>                                                                                                                     |
+| [**TakeOwnerShip**](takeownership-method-in-class-win32-codecfile.md)                             | Ruft den Besitz der logischen Datei ab, die im Objektpfad angegeben ist.<br/>                                                                                                                                         |
+| [**TakeOwnerShipEx**](takeownershipex-method-in-class-win32-codecfile.md)                         | Klassenmethode, die den Besitz der im Objektpfad angegebenen logischen Datei erhält.<br/>                                                                                                                       |
+| [**Dekomprimieren**](uncompress-method-in-class-win32-codecfile.md)                                   | Entpackt die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                  |
+| [**UncompressEx**](uncompressex-method-in-class-win32-codecfile.md)                               | Entpackt die logische Datei (oder das Verzeichnis), die im Objektpfad angegeben ist.<br/>                                                                                                                                  |
 
 
 
@@ -140,26 +140,26 @@ Die **Win32 \_ codecfile** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ codecfile** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ CodecFile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**AccessMask**
+**Accessmask**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zugriffsrechte")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Zugriffsrechte")
 </dt> </dl>
 
-Bitmaske, die die Zugriffsrechte darstellt, die für den Zugriff auf oder das Ausführen bestimmter Vorgänge für die Codec-Datei erforderlich sind Informationen zu Bitwerten finden Sie unter [**Datei-und Verzeichniszugriffs Rechte Konstanten**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants).
+Bitmaske, die die Zugriffsrechte darstellt, die erforderlich sind, um auf die Codecdatei zuzugreifen oder bestimmte Vorgänge auszuführen. Bitwerte finden Sie unter [**Datei- und Verzeichniszugriffsrechtekonstanten.**](/windows/desktop/WmiSdk/file-and-directory-access-rights-constants)
 
 > [!Note]  
-> Auf FAT-Volumes wird stattdessen der **vollständige \_ Zugriffs** Wert zurückgegeben, der angibt, dass für das Objekt keine Sicherheit festgelegt wurde.
+> Auf FAT-Volumes wird stattdessen der **FULL \_ ACCESS-Wert** zurückgegeben, der angibt, dass für das Objekt keine Sicherheit festgelegt wurde.
 
  
 
@@ -169,98 +169,98 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 <span id="FILE_READ_DATA__file__or_FILE_LIST_DIRECTORY__directory_"></span><span id="file_read_data__file__or_file_list_directory__directory_"></span><span id="FILE_READ_DATA__FILE__OR_FILE_LIST_DIRECTORY__DIRECTORY_"></span>
 
-**Datei \_ Lesen von \_ Daten (Datei) oder Datei \_ Listen \_ Verzeichnis (Verzeichnis)** (1)
+**FILE \_ READ \_ DATA (Datei) oder FILE \_ LIST DIRECTORY \_ (Verzeichnis)** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_DATA__file__or_FILE_ADD_FILE__directory_"></span><span id="file_write_data__file__or_file_add_file__directory_"></span><span id="FILE_WRITE_DATA__FILE__OR_FILE_ADD_FILE__DIRECTORY_"></span>
 
-**Datei \_ Schreiben von \_ Daten (Datei) oder Datei \_ Hinzufügen \_ (Verzeichnis)** (2)
+**FILE \_ WRITE \_ DATA (Datei) oder FILE \_ ADD FILE \_ (Verzeichnis)** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_APPEND_DATA__file__or_FILE_ADD_SUBDIRECTORY__directory_"></span><span id="file_append_data__file__or_file_add_subdirectory__directory_"></span><span id="FILE_APPEND_DATA__FILE__OR_FILE_ADD_SUBDIRECTORY__DIRECTORY_"></span>
 
-**Datei \_ \_Daten anfügen (Datei) oder \_ \_ Unterverzeichnis für Datei hinzufügen (Verzeichnis)** (4)
+**FILE \_ APPEND \_ DATA (File) oder FILE \_ ADD \_ SUBDIRECTORY (Directory)** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_READ_EA"></span><span id="file_read_ea"></span>
 
-**Datei \_ Lesen von \_ EA** (8)
+**FILE \_ READ \_ EA** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_EA"></span><span id="file_write_ea"></span>
 
-**Datei \_ Schreiben von \_ EA** (16)
+**FILE \_ \_WRITE EA** (16)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_EXECUTE__file__or_FILE_TRAVERSE__directory_"></span><span id="file_execute__file__or_file_traverse__directory_"></span><span id="FILE_EXECUTE__FILE__OR_FILE_TRAVERSE__DIRECTORY_"></span>
 
-**Datei \_ Execute (File) oder file \_ Traversieren (Verzeichnis)** (32)
+**FILE \_ EXECUTE (Datei) oder FILE \_ TRAVERSE (Verzeichnis)** (32)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_DELETE_CHILD__directory_"></span><span id="file_delete_child__directory_"></span><span id="FILE_DELETE_CHILD__DIRECTORY_"></span>
 
-**Datei \_ Untergeordnetes Element \_ (Verzeichnis) löschen** (64)
+**FILE \_ DELETE \_ CHILD (Verzeichnis)** (64)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_READ_ATTRIBUTES"></span><span id="file_read_attributes"></span>
 
-**Datei \_ Lese \_ Attribute** (128)
+**FILE \_ READ \_ ATTRIBUTES** (128)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FILE_WRITE_ATTRIBUTES"></span><span id="file_write_attributes"></span>
 
-**Datei \_ \_Attribute schreiben** (256)
+**FILE \_ WRITE \_ ATTRIBUTES** (256)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DELETE"></span><span id="delete"></span>
 
-**Löschen** (65536)
+**DELETE** (65536)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="READ_CONTROL"></span><span id="read_control"></span>
 
-**Lesen Sie \_ Steuer** Element (131072)
+**LESEN \_ CONTROL** (131072)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WRITE_DAC"></span><span id="write_dac"></span>
 
-**Schreiben \_ DAC** (262144)
+**WRITE \_ DAC** (262144)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WRITE_OWNER"></span><span id="write_owner"></span>
 
-**Schreiben \_ Besitzer** (524288)
+**WRITE \_ OWNER** (524288)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SYNCHRONIZE"></span><span id="synchronize"></span>
 
-**Synchronisieren** (1048576)
+**SYNCHRONIZE** (1048576)
 
 
 </dt> <dd></dd> </dl>
@@ -270,13 +270,13 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **Archivieren**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("sollte archiviert werden")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Sollte archiviert werden")
 </dt> </dl>
 
 **True** gibt an, dass die Datei archiviert werden soll.
@@ -288,13 +288,13 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
 Kurze Beschreibung des Objekts.
@@ -306,13 +306,13 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Compressed**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Compressed")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("komprimiert")
 </dt> </dl>
 
 **True** gibt an, dass die Datei komprimiert wird.
@@ -324,108 +324,108 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **CompressionMethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Komprimierungs Methode")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Komprimierungsmethode")
 </dt> </dl>
 
-Der Algorithmus oder das Tool, das zum Komprimieren der logischen Datei verwendet wird. Wenn es nicht möglich ist (oder nicht erwünscht), das Komprimierungs Schema zu beschreiben (weil es möglicherweise nicht bekannt ist), verwenden Sie die folgenden Wörter: "unknown", um darzustellen, dass nicht bekannt ist, ob die logische Datei komprimiert ist oder nicht. "Komprimiert", um darzustellen, dass die Datei komprimiert ist, das Komprimierungs Schema jedoch nicht bekannt ist oder nicht offengelegt ist. und "nicht komprimiert", um darzustellen, dass die logische Datei nicht komprimiert ist.
+Algorithmus oder Tool zum Komprimieren der logischen Datei. Wenn es nicht möglich (oder nicht gewünscht) ist, das Komprimierungsschema zu beschreiben (möglicherweise weil es nicht bekannt ist), verwenden Sie die folgenden Wörter: "Unbekannt", um darzustellen, dass nicht bekannt ist, ob die logische Datei komprimiert ist oder nicht. "Komprimiert", um darzustellen, dass die Datei komprimiert ist, aber entweder ihr Komprimierungsschema nicht bekannt ist oder nicht offengelegt wird; und "Nicht komprimiert", um darzustellen, dass die logische Datei nicht komprimiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Class Name")
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Klassenname")
 </dt> </dl>
 
-Der Name der ersten konkreten Klasse, die in der Vererbungs Kette angezeigt werden soll, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der-Klasse ermöglicht die-Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der ersten konkreten Klasse, die in der Vererbungskette angezeigt wird, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit den anderen Schlüsseleigenschaften der -Klasse ermöglicht die -Eigenschaft, dass alle Instanzen dieser Klasse und deren Unterklassen eindeutig identifiziert werden.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **CreationDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Erstellungsdatum")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Erstellungsdatum")
 </dt> </dl>
 
 Erstellungsdatum der Datei.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**CSCreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Computer System-Klassenname ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CSCreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Computer System Class Name")
 </dt> </dl>
 
-Klasse des Computer Systems.
+Klasse des Computersystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**Csname**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Computer System Name ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CSName**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Computersystemname")
 </dt> </dl>
 
-Zeichenfolge, die den Namen des Computer Systems darstellt.
+Eine Zeichenfolge, die den Namen des Computersystems darstellt.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](/windows/desktop/WmiSdk/standard-qualifiers) (Description), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Control \\ \\ mediaresources \\ \\ ICM \| Description")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) (Description), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ control \\ \\ MediaResources \\ \\ icm \| Description")
 </dt> </dl>
 
-Der vollständige Name des Codec-Treibers. Diese Zeichenfolge soll in großen (beschreibenden) Leerzeichen angezeigt werden.
+Vollständiger Name des Codectreibers. Diese Zeichenfolge soll in großen (beschreibenden) Leerzeichen angezeigt werden.
 
-Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managedsystemelement.md)
 
 Beispiel: "Microsoft PCM Converter"
 
@@ -434,216 +434,216 @@ Beispiel: "Microsoft PCM Converter"
 **Laufwerk**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Drive")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Laufwerk")
 </dt> </dl>
 
-Laufwerk Buchstabe (einschließlich Doppelpunkt) der Datei.
+Laufwerkbuchstaben (einschließlich Doppelpunkt) der Datei.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 Beispiel: "c:"
 
 </dd> <dt>
 
-**Eightdotdreidateiname**
+**EightDotThreeFileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("8 Punkt 3 Dateiname")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Acht Punkte drei Dateiname")
 </dt> </dl>
 
 DOS-kompatibler Dateiname für diese Datei.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
-Beispiel: "c: \\ PROGRA ~ 1"
+Beispiel: "c: \\ progra~1"
 
 </dd> <dt>
 
 **Verschlüsselt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("verschlüsselt")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Encrypted")
 </dt> </dl>
 
-**True** gibt an, dass die Datei verschlüsselt ist.
+True **gibt an,** dass die Datei verschlüsselt ist.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
-**Verschlüsselungsmethode**
+**Encryptionmethod**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Verschlüsselungsmethode")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Encryption Method")
 </dt> </dl>
 
-Der Algorithmus oder das Tool, das zum Verschlüsseln der logischen Datei verwendet wird. Wenn es nicht möglich ist (oder nicht gewünscht), das Verschlüsselungsschema zu beschreiben (möglicherweise aus Sicherheitsgründen), verwenden Sie die folgenden Wörter: "unknown", um darzustellen, dass nicht bekannt ist, ob die logische Datei verschlüsselt ist oder nicht. "Verschlüsselt", um darzustellen, dass die Datei verschlüsselt ist, das zugehörige Verschlüsselungsschema jedoch nicht bekannt ist oder nicht offengelegt ist. und "nicht verschlüsselt", um darzustellen, dass die logische Datei nicht verschlüsselt ist.
+Algorithmus oder Tool zum Verschlüsseln der logischen Datei. Wenn es nicht möglich (oder nicht gewünscht) ist, das Verschlüsselungsschema zu beschreiben (möglicherweise aus Sicherheitsgründen), verwenden Sie die folgenden Wörter: "Unbekannt", um zu zeigen, dass nicht bekannt ist, ob die logische Datei verschlüsselt ist oder nicht. "Encrypted", um zu zeigen, dass die Datei verschlüsselt ist, aber entweder ihr Verschlüsselungsschema nicht bekannt oder nicht offengelegt ist; und "Not Encrypted", um zu zeigen, dass die logische Datei nicht verschlüsselt ist.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **Erweiterung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateierweiterung")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateierweiterung")
 </dt> </dl>
 
-Dateinamenerweiterung (ohne den Punkt).
+Dateierweiterung (ohne punkt).
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
-Beispiele: "txt", "MOF", "MDB"
+Beispiele: "txt", "mof", "mdb"
 
 </dd> <dt>
 
 **FileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateiname")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateiname")
 </dt> </dl>
 
-Der Name (ohne Erweiterung) der Datei.
+Name (ohne Erweiterung) der Datei.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
-Beispiel: "Autoexec"
+Beispiel: "autoexec"
 
 </dd> <dt>
 
 **FileSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("size"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Size"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("bytes")
 </dt> </dl>
 
 Größe der Datei (in Bytes).
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **FileType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateityp")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateityp")
 </dt> </dl>
 
-Dateityp (angegeben durch die- **Erweiterungs** Eigenschaft).
+Dateityp (angegeben durch die **Extension-Eigenschaft).**
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
-**"F"-Klassenname**
+**FSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**"Kreationclassname**"), [**CIM- \_ Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Datei System-Klassenname")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**CreationClassName**"), [**CIM \_ Key**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("File System Class Name")
 </dt> </dl>
 
 Klasse des Dateisystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
 **FSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ File System**](cim-filesystem.md).**Name**"), [**CIM- \_ Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Datei System Name ")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ FileSystem**](cim-filesystem.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dateisystemname")
 </dt> </dl>
 
-Der Name des Dateisystems.
+Name des Dateisystems.
 
-Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ LogicalFile geerbt.**](cim-logicalfile.md)
 
 </dd> <dt>
 
-**Gruppieren**
+**Gruppe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| Software \\ \\ Microsoft \\ \\ Windows NT \\ \\ CurrentVersion \\ \\ drivers. desc")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32Registry \| SOFTWARE Microsoft Windows NT \\ \\ \\ \\ \\ \\ CurrentVersion \\ \\ drivers.desc")
 </dt> </dl>
 
-Der Codec, der durch diese Klasse dargestellt wird.
+Codec, der durch diese Klasse dargestellt wird.
 
 Die Werte sind:
 
-<dl> <dd>Audio</dd> <dd>Video</dd> </dl>
+<dl> <dd>"Audio"</dd> <dd>"Video"</dd> </dl>
 
 <dt>
 
 <span id="Audio"></span><span id="audio"></span><span id="AUDIO"></span>
 
-**Audiodatei** ("Audiodatei")
+**Audio** ("Audio")
 
 
 </dt> <dd></dd> <dt>
@@ -660,13 +660,13 @@ Die Werte sind:
 **Hidden**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hidden")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hidden")
 </dt> </dl>
 
 **True** gibt an, dass die Datei ausgeblendet ist.
@@ -678,16 +678,16 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Das Objekt wurde installiert. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das-Objekt installiert ist.
+Das Objekt wurde installiert. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -696,51 +696,51 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **InUseCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("aktuelle Datei öffnende Anzahl")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Current File Open Count")
 </dt> </dl>
 
-Anzahl von "Datei öffnen", die zurzeit für die Datei aktiv sind.
+Anzahl der "Datei wird geöffnet", die derzeit für die Datei aktiv sind.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**Letzter Zugriff**
+**LastAccessed**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Letzter Zugriff")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Letzter Zugriff")
 </dt> </dl>
 
-Es wurde zuletzt auf die Datei zugegriffen.
+Zuletzt wurde auf die Datei zugegriffen.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 </dd> <dt>
 
-**LastModified**
+**Lastmodified**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Last modified")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Last Modified")
 </dt> </dl>
 
 Die Datei wurde zuletzt geändert.
@@ -752,16 +752,16 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Hersteller")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Manufacturer")
 </dt> </dl>
 
-Die Hersteller Zeichenfolge aus der Versions Ressource, sofern vorhanden.
+Herstellerzeichenfolge aus Versionsressource, sofern vorhanden.
 
 Diese Eigenschaft wird von [**CIM \_ DataFile**](cim-datafile.md)geerbt.
 
@@ -770,7 +770,7 @@ Diese Eigenschaft wird von [**CIM \_ DataFile**](cim-datafile.md)geerbt.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -779,7 +779,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der geerbte Name, der als Schlüssel einer logischen Datei Instanz innerhalb eines Dateisystems fungiert. Vollständige Pfadnamen müssen angegeben werden.
+Geerbter Name, der als Schlüssel einer logischen Dateiinstanz innerhalb eines Dateisystems dient. Vollständige Pfadnamen sollten angegeben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -787,36 +787,36 @@ Beispiel: "C: \\ Windows \\ System \\win.ini"
 
 </dd> <dt>
 
-**Pfad**
+**Path**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Path")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Pfad")
 </dt> </dl>
 
-Der Pfad der Datei. Dies umfasst führende und nachfolgende umgekehrte Schrägstriche.
+Pfad der Datei. Dies schließt führende und nachfolgende umgekehrte Schrägstriche ein.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
-Beispiel: " \\ Windows \\ System \\ "
+Beispiel: " \\ \\ Windows-System \\ "
 
 </dd> <dt>
 
-**Lesbare**
+**Lesbar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("lesbar")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Lesbar")
 </dt> </dl>
 
 Die Datei kann gelesen werden.
@@ -828,16 +828,16 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein Smart-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber in naher Zukunft einen Fehler vorherzusagen). Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztgenannte "Dienst" kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene Betriebs- und Nichtoperationsstatus definiert werden. Betriebsstatus: "OK", "Heruntergestuft" und "Pred Fail" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, sagt aber einen Fehler in naher Zukunft vorher). Nichtoperationale Status: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während des Spiegelungsresilverings eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Verwaltungsaufgaben angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -861,35 +861,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -903,28 +903,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -934,13 +934,13 @@ Wird **beendet ("wird angehalten** ")
 **System**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("System Datei")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Systemdatei")
 </dt> </dl>
 
 **True** gibt an, dass die Datei eine Systemdatei ist.
@@ -952,16 +952,16 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) (Win32), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Version")
+Qualifizierer: [**Schema**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Version")
 </dt> </dl>
 
-Versions Zeichenfolge aus der Versions Ressource, sofern vorhanden.
+Versionszeichenfolge aus der Versionsressource, sofern vorhanden.
 
 Diese Eigenschaft wird von [**CIM \_ DataFile**](cim-datafile.md)geerbt.
 
@@ -970,13 +970,13 @@ Diese Eigenschaft wird von [**CIM \_ DataFile**](cim-datafile.md)geerbt.
 **Schreibbar**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("beschreibbar")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Schreibbar")
 </dt> </dl>
 
 **True** gibt an, dass die Datei geschrieben werden kann.
@@ -985,9 +985,9 @@ Diese Eigenschaft wird von [**CIM \_ LogicalFile**](cim-logicalfile.md)geerbt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ codecfile** -Klasse wird von [**CIM \_ DataFile**](cim-datafile.md)abgeleitet.
+Die **Win32 \_ CodecFile-Klasse** wird von [**CIM \_ DataFile**](cim-datafile.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -997,8 +997,8 @@ Die **Win32- \_ codecfile** -Klasse wird von [**CIM \_ DataFile**](cim-datafile.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -1007,7 +1007,7 @@ Die **Win32- \_ codecfile** -Klasse wird von [**CIM \_ DataFile**](cim-datafile.
 
 <dl> <dt>
 
-[**CIM- \_ Datendatei**](cim-datafile.md)
+[**CIM \_ DataFile**](cim-datafile.md)
 </dt> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))

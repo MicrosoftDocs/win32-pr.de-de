@@ -1,24 +1,24 @@
 ---
-description: Die playchapter-Methode startet die Wiedergabe aus dem angegebenen Kapitel innerhalb des aktuellen Titels.
+description: Die PlayChapter-Methode startet die Wiedergabe aus dem angegebenen Kapitel innerhalb des aktuellen Titels.
 ms.assetid: d0318a0d-4ff4-42f2-b009-996b7ff0f632
-title: Playchapter-Methode
+title: PlayChapter-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bab4600d8d4fc09c4b63fa423c66823e92e95a2a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 832b1da6940b26a3cc3a4ab5bdba8653806966f8a399b74eb5adf50600e22293
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102340"
 ---
-# <a name="playchapter-method"></a>Playchapter-Methode
+# <a name="playchapter-method"></a>PlayChapter-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `PlayChapter` Methode startet die Wiedergabe aus dem angegebenen Kapitel innerhalb des aktuellen Titels.
+Die `PlayChapter` -Methode beginnt mit der Wiedergabe aus dem angegebenen Kapitel innerhalb des aktuellen Titels.
 
 ``` syntax
 MSWebDVD.PlayChapter(iChapter)
@@ -28,10 +28,10 @@ MSWebDVD.PlayChapter(iChapter)
 
 <dl> <dt>
 
-<span id="iChapter"></span><span id="ichapter"></span><span id="ICHAPTER"></span>*ichapter*
+<span id="iChapter"></span><span id="ichapter"></span><span id="ICHAPTER"></span>*iChapter*
 </dt> <dd>
 
-Gibt den Kapitel Index im aktuellen Titel als Ganzzahl an.
+Gibt den Kapitelindex im aktuellen Titel als ganze Zahl an.
 
 </dd> </dl>
 
@@ -39,15 +39,15 @@ Gibt den Kapitel Index im aktuellen Titel als Ganzzahl an.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Ende des angegebenen Kapitels erreicht ist, setzt diese Methode fort, wenn vorhandene Kapitel vorhanden sind. Wenn Sie nur ein bestimmtes Kapitel wiedergeben möchten, verwenden Sie [**playchaptersauto stoppt**](playchaptersautostop-method.md).
+Wenn das Ende des angegebenen Kapitels erreicht ist, setzt diese Methode die Wiedergabe nachfolgender Kapitel fort, sofern vorhanden. Wenn Sie nur ein bestimmtes Kapitel wiedergeben möchten, verwenden Sie [**PlayChaptersAutoStop**](playchaptersautostop-method.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Playchapterintitle**](playchapterintitle-method.md)
+[**PlayChapterInTitle**](playchapterintitle-method.md)
 </dt> </dl>
 
  

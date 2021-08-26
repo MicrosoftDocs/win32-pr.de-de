@@ -70,7 +70,7 @@ Wenn die WM COPY-Nachricht an ein Kombinationsfeld gesendet wird, wird sie vom B
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
