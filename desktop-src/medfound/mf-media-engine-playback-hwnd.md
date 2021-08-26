@@ -1,33 +1,33 @@
 ---
-description: Legt ein Handle für ein Videowiedergabe Fenster für die Medien-Engine fest.
+description: Legt ein Handle für ein Videowiedergabefenster für die Medien-Engine fest.
 ms.assetid: 63889D81-12C5-47C1-B52A-6358E68830C3
-title: MF_MEDIA_ENGINE_PLAYBACK_HWND-Attribut (MF mediaengine. h)
+title: MF_MEDIA_ENGINE_PLAYBACK_HWND -Attribut (Mfmediaengine.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c6a9d38d40b04b32244f48289d3334199a7e035
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: a273702a8a4797c0cf05bd4fe79909dd50a004f313a4caec41c3843dc2bc09b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "103961126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013030"
 ---
-# <a name="mf_media_engine_playback_hwnd-attribute"></a>Der MF- \_ Medien- \_ Engine-Wiedergabe- \_ \_ HWND
+# <a name="mf_media_engine_playback_hwnd-attribute"></a>MF \_ MEDIA ENGINE PLAYBACK \_ \_ \_ HWND-Attribut
 
-Legt ein Handle für ein Videowiedergabe Fenster für die Medien-Engine fest.
+Legt ein Handle für ein Videowiedergabefenster für die Medien-Engine fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**HWND** als **UINT64** gespeichert
+**HWND als** **UINT64 gespeichert**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint64)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT64**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT64 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint64)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) -Methode verwendet, um die Medien-Engine zu initialisieren.
+Dieses Attribut wird zusammen mit der [**METHODE FÜR DIETMEDIAEngineClassFactory::CreateInstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance) verwendet, um die Medien-Engine zu initialisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>MF mediaengine. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mfmediaengine.h</dt> </dl> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut wird mit der [**imfmediaengineclassfactory:: forateinstance**](/
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

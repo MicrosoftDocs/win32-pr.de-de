@@ -1,7 +1,7 @@
 ---
-description: Stellt allgemeine Informationen über eine Schaltfläche auf einem Tablettstiftgerät dar.
+description: Stellt allgemeine Informationen zu einer Schaltfläche auf einem Stiftgerät dar.
 ms.assetid: 20c9f8bb-8f8d-4469-baff-b9001c8adb3b
-title: Itabletcursor Button-Schnittstelle
+title: ITabletCursorButton-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,43 +14,43 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: c8f13e46699c1bea42bd8f8a7f78313aeba68aaf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 76f5e581a4db81d9e260b388cc129d915121a69f3b360441e4220fd58aa0e623
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938600"
 ---
-# <a name="itabletcursorbutton-interface"></a>Itabletcursor Button-Schnittstelle
+# <a name="itabletcursorbutton-interface"></a>ITabletCursorButton-Schnittstelle
 
-Stellt allgemeine Informationen über eine Schaltfläche auf einem Tablettstiftgerät dar.
+Stellt allgemeine Informationen zu einer Schaltfläche auf einem Stiftgerät dar.
 
 ## <a name="members"></a>Member
 
-Die **itabletcursor Button** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itabletcursor Button** verfügt auch über die folgenden Typen von Membern:
+Die **ITabletCursorButton-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITabletCursorButton** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die Schnittstelle **itabletcursor Button** verfügt über diese Methoden.
+Die **ITabletCursorButton-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                         | BESCHREIBUNG                                                      |
 |:-----------------------------------------------|:-----------------------------------------------------------------|
-| [**GetGuid**](itabletcursorbutton-getguid.md) | Ruft den eindeutigen Bezeichner der Tablettstiftschaltfläche ab.<br/> |
-| [**GetName**](itabletcursorbutton-getname.md) | Ruft den Namen der Tablettstiftschaltfläche ab.<br/>              |
+| [**Getguid**](itabletcursorbutton-getguid.md) | Ruft den eindeutigen Bezeichner der Stiftschaltfläche ab.<br/> |
+| [**GetName**](itabletcursorbutton-getname.md) | Ruft den Namen der Stiftschaltfläche ab.<br/>              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Entwickler sollten diese Schnittstelle nicht verwenden.
 
-Der folgende Code zeigt, wie die **itabletcursor Button** -Schnittstelle definiert wird.
+Der folgende Code zeigt, wie die **ITabletCursorButton-Schnittstelle** definiert ist.
 
 ``` syntax
 [
@@ -74,7 +74,7 @@ interface ITabletCursorButton : IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
@@ -84,7 +84,7 @@ interface ITabletCursorButton : IUnknown
 
 <dl> <dt>
 
-[**Itabletcursor Button-Schnittstelle**](itabletcursorbutton.md)
+[**ITabletCursorButton-Schnittstelle**](itabletcursorbutton.md)
 </dt> </dl>
 
  

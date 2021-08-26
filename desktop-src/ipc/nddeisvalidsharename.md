@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob ein Freigabe Name die richtige Syntax verwendet.
+description: Bestimmt, ob ein Freigabename die richtige Syntax verwendet.
 ms.assetid: 4ffcff5d-0db5-4761-a31a-acefd2b8d9e2
-title: Nddeisvalidsharename-Funktion (nddeapi. h)
+title: NDdeIsValidShareName-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: cbe1b7ead2d6f8e2d315833c44b354c50cc8b62c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e289429047d8d1cee4f525a9f45a9abe1dd8eb51bcf57e83e39876fba9a5a89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964000"
 ---
-# <a name="nddeisvalidsharename-function"></a>Nddeisvalidsharename-Funktion
+# <a name="nddeisvalidsharename-function"></a>NDdeIsValidShareName-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
-Bestimmt, ob ein Freigabe Name die richtige Syntax verwendet.
+Bestimmt, ob ein Freigabename die richtige Syntax verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ BOOL NDdeIsValidShareName(
 
 <dl> <dt>
 
-*ShareName* \[ in\]
+*shareName* \[ In\]
 </dt> <dd>
 
-Der Freigabe Name, der überprüft werden soll. Dieser Parameter darf nicht **null** sein.
+Der zu validierte Freigabename. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Freigabe Name eine gültige Syntax aufweist, ist der Rückgabewert ungleich 0 (null).
+Wenn der Freigabename eine gültige Syntax aufweist, ist der Rückgabewert ungleich 0 (null).
 
-Wenn der Freigabe Name nicht über eine gültige Syntax verfügt, ist der Rückgabewert 0 (null).
+Wenn der Freigabename keine gültige Syntax aufweist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird auch von [**ndabshareadd**](nddeshareadd.md) aufgerufen, wenn Sie die DDE-Freigabe erstellt.
+Diese Funktion wird auch von [**NDdeShareAdd**](nddeshareadd.md) aufgerufen, wenn sie die DDE-Freigabe erstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,24 +68,24 @@ Diese Funktion wird auch von [**ndabshareadd**](nddeshareadd.md) aufgerufen, wen
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Nddeisvalidsharenamew** (Unicode) und **nddeisvalidsharenamea** (ANSI)<br/>    |
+| Unicode- und ANSI-Name<br/>   | **NDdeIsValidShareNameW** (Unicode) und **NDdeIsValidShareNameA** (ANSI)<br/>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Network dynamische Daten Exchange Overview (Übersicht über Netzwerk-dynamische Daten Exchange)](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[Netzwerk-DDE-Funktionen](network-dde-functions.md)
 </dt> <dt>
 
-[**Ndabshareadd**](nddeshareadd.md)
+[**NDdeShareAdd**](nddeshareadd.md)
 </dt> </dl>
 
  

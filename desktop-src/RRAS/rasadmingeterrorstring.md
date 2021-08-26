@@ -1,9 +1,9 @@
 ---
-title: Rasadmingeterrorstring-Funktion (rassapi. h)
-description: Die rasadmingeterrorstring-Funktion Ruft eine Meldungs Zeichenfolge ab, die einem RAS-Fehlercode entspricht, der von einer der RAS-Server Verwaltungsfunktionen (rasadmin) zurückgegeben wurde.
+title: RasAdminGetErrorString-Funktion (Rassapi.h)
+description: Die RasAdminGetErrorString-Funktion ruft eine Meldungszeichenfolge ab, die einem RAS-Fehlercode entspricht, der von einer der RAS-Serververwaltungsfunktionen (RasAdmin) zurückgegeben wird.
 ms.assetid: b51bc1f9-fed7-43b6-9a07-f19ea4c0cd01
 keywords:
-- Rasadmingeterrorstring-Funktion (RAS)
+- RasAdminGetErrorString-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7dc239c5f26061b5234631079ba21ce0d24ad570
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a45c768daef7c889351744c5e046c83f4de7e220f59752c1db271067efb68366
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028601"
 ---
-# <a name="rasadmingeterrorstring-function"></a>Rasadmingeterrorstring-Funktion
+# <a name="rasadmingeterrorstring-function"></a>RasAdminGetErrorString-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradmingeterrorstring**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmingeterrorstring) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Es wird ERROR \_ CALL NOT IMPLEMENTED auf Windows Server \_ \_ 2003 zurückgegeben. Anwendungen sollten die [**MprAdminGetErrorString-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmingeterrorstring) verwenden.\]
 
-Die **rasadmingeterrorstring** -Funktion Ruft eine Meldungs Zeichenfolge ab, die einem RAS-Fehlercode entspricht, der von einer der RAS-Server Verwaltungsfunktionen (rasadmin) zurückgegeben wurde. Diese Nachrichten Zeichenfolgen werden aus dem Rasmsg.dll abgerufen, der als Teil von RAS installiert wird.
+Die **RasAdminGetErrorString-Funktion** ruft eine Meldungszeichenfolge ab, die einem RAS-Fehlercode entspricht, der von einer der RAS-Serververwaltungsfunktionen (RasAdmin) zurückgegeben wird. Diese Meldungszeichenfolgen werden aus dem Rasmsg.dll abgerufen, der als Teil von RAS installiert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,49 +44,49 @@ DWORD RasAdminGetErrorString(
 
 <dl> <dt>
 
-*ResourceId* \[ in\]
+*ResourceId* \[ In\]
 </dt> <dd>
 
-Gibt einen Fehlercode an, der von einer der rasadmin-Funktionen zurückgegeben wurde. Dieser Wert muss im Bereich der Fehlercodes von "rasbase" zu "rasbaseend" liegen. Diese werden in "raserror. h" definiert.
+Gibt einen Fehlercode an, der von einer der RasAdmin-Funktionen zurückgegeben wird. Dieser Wert muss im Bereich der Fehlercodes von RASBASE bis RASBASEEND liegen. Diese werden in Raserror.h definiert.
 
 </dd> <dt>
 
-*lpszstring* \[ vorgenommen\]
+*lpszString* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die Fehlermeldung empfängt, die dem angegebenen Fehlercode entspricht.
+Zeiger auf einen Puffer, der die Fehlermeldung empfängt, die dem angegebenen Fehlercode entspricht.
 
 </dd> <dt>
 
-*Inbubsize* \[ in\]
+*InBufSize* \[ In\]
 </dt> <dd>
 
-Gibt die Größe des *lpszstring* -Puffers in Zeichen an. Fehlermeldungen sind in der Regel 80 Zeichen oder weniger. eine Puffergröße von 512 Zeichen ist immer ausreichend.
+Gibt die Größe des *lpszString-Puffers* in Zeichen an. Fehlermeldungen sind in der Regel 80 Zeichen oder weniger. Eine Puffergröße von 512 Zeichen ist immer ausreichend.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode. Dieser Wert kann ein letzter Fehlerwert sein, der von den Funktionen [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya), [**globalzuordc**](/windows/win32/api/winbase/nf-winbase-globalalloc)oder [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa) festgelegt wird. oder Sie können einen der folgenden Fehlercodes aufweisen:
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode. Dieser Wert kann ein letzter Fehlerwert sein, der von den [**LoadLibrary-,**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) [**GlobalAlloc-**](/windows/win32/api/winbase/nf-winbase-globalalloc)oder [**LoadString-Funktionen festgelegt**](/windows/win32/api/winuser/nf-winuser-loadstringa) wurde. Oder es kann einer der folgenden Fehlercodes sein.
 
 
 
 | Wert                                                                                                      | Bedeutung                                                                  |
 |------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| <dl> <dt>**Fehler bei \_ ungültigem \_ Parameter**</dt> </dl>   | Die Parameter " *ResourceId* " oder " *lpszstring* " sind ungültig.<br/>      |
-| <dl> <dt>**Fehler \_ beim \_ Puffer.**</dt> </dl> | Die vom *inbubsize* -Parameter angegebene Größe ist zu klein.<br/> |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGER \_ PARAMETER**</dt> </dl>   | Die *Parameter ResourceId* oder *lpszString* sind ungültig.<br/>      |
+| <dl> <dt>**FEHLER: \_ NICHT GENÜGEND \_ PUFFER**</dt> </dl> | Die vom *InBufSize-Parameter angegebene Größe* ist zu klein.<br/> |
 
 
 
  
 
-Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)" nicht aufrufen.
+Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie [**getLastError nicht auf.**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die rasadmin-Funktionen können Fehlercodes zurückgeben, die nicht im von der **rasadmingeterrorstring** -Funktion unterstützten Bereich liegen. Die rasadmin-Funktionen können z. b. Fehlercodes zurückgeben, die in "lmerr. h" und "Winerror. h" definiert sind. Vergewissern Sie sich vor dem Aufrufen von **rasadmingeterrorstring**, dass sich der Fehlercode im Bereich "rasbase" zu "rasbaseend" befindet, wie in "raserror. h" definiert.
+Die RasAdmin-Funktionen können Fehlercodes zurückgeben, die nicht im bereich liegen, der von der **RasAdminGetErrorString-Funktion unterstützt** wird. Beispielsweise können die RasAdmin-Funktionen Fehlercodes zurückgeben, die in Lmerr.h und Winerror.h definiert sind. Stellen Sie vor dem Aufrufen **von RasAdminGetErrorString** sicher, dass sich der Fehlercode im Bereich RASBASE bis RASBASEEND befindet, wie in Raserror.h definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,8 +96,8 @@ Die rasadmin-Funktionen können Fehlercodes zurückgeben, die nicht im von der *
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
@@ -106,16 +106,16 @@ Die rasadmin-Funktionen können Fehlercodes zurückgeben, die nicht im von der *
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
 [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya)
 </dt> <dt>
 
-[**GlobalAlloc**](/windows/win32/api/winbase/nf-winbase-globalalloc)
+[**Globalalloc**](/windows/win32/api/winbase/nf-winbase-globalalloc)
 </dt> <dt>
 
 [**LoadString**](/windows/win32/api/winuser/nf-winuser-loadstringa)

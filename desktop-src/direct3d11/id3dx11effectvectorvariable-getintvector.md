@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectVectorVariable getintvector-Methode (D3dx11effect. h)
+title: ID3DX11EffectVectorVariable GetIntVector-Methode (D3dx11effect.h)
 description: Sie erhalten einen Vektor mit vier Komponenten, der ganzzahlige Daten enthält.
 ms.assetid: 27c75cfb-7c6f-43f4-9489-186006a60203
 keywords:
-- Getintvector-Methode Direct3D 11
-- Getintvector-Methode Direct3D 11, ID3DX11EffectVectorVariable-Schnittstelle
-- ID3DX11EffectVectorVariable-Schnittstelle Direct3D 11, getintvector-Methode
+- GetIntVector-Methode Direct3D 11
+- GetIntVector-Methode Direct3D 11, ID3DX11EffectVectorVariable-Schnittstelle
+- ID3DX11EffectVectorVariable-Schnittstelle Direct3D 11 , GetIntVector-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e661ecce642cae4cf94a1bc35f92dc1afad16a2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
-ms.translationtype: HT
+ms.openlocfilehash: 3f41ffed10307cbf836c87506ae5dc97e1db314acce0b1cf03ebe77baafc1404
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104531010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952710"
 ---
-# <a name="id3dx11effectvectorvariablegetintvector-method"></a>ID3DX11EffectVectorVariable:: getintvector-Methode
+# <a name="id3dx11effectvectorvariablegetintvector-method"></a>ID3DX11EffectVectorVariable::GetIntVector-Methode
 
 Sie erhalten einen Vektor mit vier Komponenten, der ganzzahlige Daten enthält.
 
@@ -43,7 +43,7 @@ HRESULT GetIntVector(
 
 <dl> <dt>
 
-*pData* 
+*Pdata* 
 </dt> <dd>
 
 Typ: **[ **int**](/windows/desktop/WinProg/windows-data-types)\***
@@ -56,27 +56,27 @@ Ein Zeiger auf die erste Komponente.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

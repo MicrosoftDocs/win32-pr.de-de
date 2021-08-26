@@ -1,24 +1,24 @@
 ---
-description: Die notifyparser-allevelchange-Methode aktiviert oder deaktiviert die Ereignis Behandlung für Befehle der temporären Jugend Verwaltungsebene.
+description: Die NotifyParentalLevelChange-Methode aktiviert oder deaktiviert die Ereignisbehandlung für temporäre Befehle auf Der Ebene der Elternverwaltung.
 ms.assetid: c8252cc6-a83f-4cce-ba3e-7db669eeb465
-title: Notifyparser-allevelchange-Methode (Segment. h)
+title: NotifyParentalLevelChange-Methode (Segment.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc47b7d78af8cfdd32aa63361411e769c375ddf1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8382b52f64d4196b0ef74e5f3285e9bb047a4e1f77d3b0e5bec4da218ee753b3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119997360"
 ---
-# <a name="notifyparentallevelchange-method"></a>Notifyparser-allevelchange-Methode
+# <a name="notifyparentallevelchange-method"></a>NotifyParentalLevelChange-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `NotifyParentalLevelChange` Methode aktiviert oder deaktiviert die Ereignis Behandlung für Befehle der temporären Jugend Verwaltungsebene.
+Die -Methode aktiviert oder deaktiviert die Ereignisbehandlung für temporäre Befehle auf Der Ebene der `NotifyParentalLevelChange` Elternverwaltung.
 
 ``` syntax
 MSWebDVD.NotifyParentalLevelChange(bNotify)
@@ -28,10 +28,10 @@ MSWebDVD.NotifyParentalLevelChange(bNotify)
 
 <dl> <dt>
 
-<span id="bNotify"></span><span id="bnotify"></span><span id="BNOTIFY"></span>*bbenachrichtigen*
+<span id="bNotify"></span><span id="bnotify"></span><span id="BNOTIFY"></span>*bNotify*
 </dt> <dd>
 
-Gibt einen booleschen Wert an, der angibt, ob die Anwendung benachrichtigt wird, wenn das mswebdvd-Objekt Videosegmente mit einer restriktiveren Bewertung als die Gesamtbewertung für die Festplatte findet.
+Gibt einen booleschen Wert an, der angibt, ob die Anwendung benachrichtigt wird, wenn das MSWebDVD-Objekt Videosegmente mit einer restriktiveren Bewertung als die Gesamtbewertung für den Datenträger trifft.
 
 </dd> </dl>
 
@@ -39,9 +39,9 @@ Gibt einen booleschen Wert an, der angibt, ob die Anwendung benachrichtigt wird,
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Benachrichtigungs Verwaltungs Benachrichtigungen sind standardmäßig deaktiviert. Dies bedeutet, dass temporäre Jugend Befehle von der Festplatte zulässig sind, aber ignoriert werden und die Festplatte ohne Unterbrechung wiedergegeben wird. Diese Methode wird während der Initialisierung der Anwendung aufgerufen, wenn Sie die temporären Befehle der Jugend Verwaltungsebene von der Festplatte verarbeiten müssen. Um die Jugendverwaltung zu deaktivieren, nachdem Sie aktiviert wurde, müssen Sie diese Methode mit dem Argument false aufzurufen. Weitere Informationen zur Eltern Verwaltung finden Sie unter " [**Accept-Parser-allevelchange**](acceptparentallevelchange-method.md)".
+Benachrichtigungen zur Elternverwaltung sind standardmäßig deaktiviert. Dies bedeutet, dass temporäre Jugendbefehle vom Datenträger zulässig sind, aber ignoriert werden und der Datenträger ohne Unterbrechung abspielt. Rufen Sie diese Methode während der Initialisierung Ihrer Anwendung auf, wenn Sie temporäre Befehle der Verwaltungsebene der Eltern vom Datenträger verarbeiten müssen. Um die Elternverwaltung nach der Aktivierung zu deaktivieren, rufen Sie diese Methode mit dem Argument false auf. Weitere Informationen zur Verwaltung von Eltern finden Sie unter [**AcceptParentalLevelChange**](acceptparentallevelchange-method.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Benachrichtigungs Verwaltungs Benachrichtigungen sind standardmäßig deaktivier
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Segment. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Segment.h</dt> </dl> |
 
 
 
@@ -57,19 +57,19 @@ Benachrichtigungs Verwaltungs Benachrichtigungen sind standardmäßig deaktivier
 
 <dl> <dt>
 
-[**Selectparser-allevel**](selectparentallevel-method.md)
+[**Wählen SieParentalLevel aus.**](selectparentallevel-method.md)
 </dt> <dt>
 
-[**Gettitleparamevels**](gettitleparentallevels-method.md)
+[**GetTitleParentalLevels**](gettitleparentallevels-method.md)
 </dt> <dt>
 
-[**Getplayerparameentalcountry**](getplayerparentalcountry-method.md)
+[**GetPlayerParentalCountry**](getplayerparentalcountry-method.md)
 </dt> <dt>
 
-[**Getplayerparser**](getplayerparentallevel-method.md)
+[**GetPlayerParentalLevel**](getplayerparentallevel-method.md)
 </dt> <dt>
 
-[**Selectpartalcountry**](selectparentalcountry-method.md)
+[**Wählen SieParentalCountry aus.**](selectparentalcountry-method.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Ereignisse von ALPC-End-wait. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für ALPC-Endwarteereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 89a357dd-c217-4b55-994a-4252fa3cae1c
 title: ALPC_Unwait-Klasse
 ms.topic: reference
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f0846eae1ebb88e8892f1fe9b8dd07fd1be9d146
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: de6e04fce0f581b3f37e3a049590914b1355d197952c74190457a402e597edcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901710"
 ---
-# <a name="alpc_unwait-class"></a>ALPC- \_ Klasse "Unwait"
+# <a name="alpc_unwait-class"></a>ALPC \_ Unwait-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Ereignisse von ALPC-End-wait.
+Diese Klasse ist die Ereignistypklasse für ALPC-Endwarteereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,37 +38,37 @@ class ALPC_Unwait : ALPC
 
 ## <a name="members"></a>Member
 
-Die **ALPC- \_ Unwait** -Klasse verfügt über diese Typen von Membern:
+Die **ALPC \_ Unwait-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ALPC- \_ Unwait** -Klasse verfügt über diese Eigenschaften.
+Die **ALPC \_ Unwait-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Status des warte Vorgangs.
+Status des Wartevorgang.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

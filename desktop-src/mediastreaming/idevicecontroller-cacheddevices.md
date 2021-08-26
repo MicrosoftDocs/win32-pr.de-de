@@ -1,11 +1,11 @@
 ---
-title: Idevicecontroller-cacheddevices-Methode
-description: Ruft eine Auflistung von ibasicdevice-Schnittstellen Zeigern ab, die die zwischengespeicherte Ansicht aller ermittelbaren DLNA-Geräte darstellt. | Idevicecontroller-cacheddevices-Methode
+title: IDeviceController CachedDevices-Methode
+description: Ruft eine Auflistung von IBasicDevice-Schnittstellenzeige ab, die die zwischengespeicherte Ansicht aller erkennbaren DLNA-Geräte darstellt. | IDeviceController CachedDevices-Methode
 ms.assetid: 94C2A7FF-5AF8-4F13-BBA5-54ED78C3BBF6
 keywords:
-- Cacheddevices-Methode Medien Streaming-API
-- Cacheddevices-Methode Medien Streaming-API, idevicecontroller-Schnittstelle
-- Idevicecontroller-Schnittstelle Medien Streaming-API, cacheddevices-Methode
+- 'CachedDevices-Methode: Medienstreaming-API'
+- CachedDevices-Methode Media Streaming-API, IDeviceController-Schnittstelle
+- IDeviceController-Schnittstelle Media Streaming-API, CachedDevices-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 69be1faea277fa8999ae5ddf3658aaa61a1116b9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9c624597fb88a45cc9ff91770f164e7c6e6e83ff5eb1b6369ded9d0fc1bbc225
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952640"
 ---
-# <a name="idevicecontrollercacheddevices-method"></a>Idevicecontroller:: cacheddevices-Methode
+# <a name="idevicecontrollercacheddevices-method"></a>IDeviceController::CachedDevices-Methode
 
-Ruft eine Auflistung von [**ibasicdevice**](ibasicdevice.md) -Schnittstellen Zeigern ab, die die zwischengespeicherte Ansicht aller ermittelbaren DLNA-Geräte darstellt.
+Ruft eine Auflistung von [**IBasicDevice-Schnittstellenzeige**](ibasicdevice.md) ab, die die zwischengespeicherte Ansicht aller erkennbaren DLNA-Geräte darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT CachedDevices(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Empfängt eine Aufzähl Bare Auflistung von [**ibasicdevice**](ibasicdevice.md) -Schnittstellen Zeigern.
+Empfängt eine aufzählbare Auflistung von [**IBasicDevice-Schnittstellenzeigern.**](ibasicdevice.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Idevicecontroller**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-idevicecontroller)
+[**IDeviceController**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-idevicecontroller)
 </dt> </dl>
 
  

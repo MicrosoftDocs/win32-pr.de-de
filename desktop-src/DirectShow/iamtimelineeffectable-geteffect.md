@@ -1,7 +1,7 @@
 ---
-description: Die GetEffect-Methode ruft den Effekt auf der angegebenen Prioritäts Ebene ab.
+description: Die GetEffect-Methode ruft den Effekt auf der angegebenen Prioritätsebene ab.
 ms.assetid: 8606c457-1c4d-4a20-b674-aaf82abeb451
-title: 'Iamtimelineeffectable:: GetEffect-Methode (qedit. h)'
+title: IAMTimelineEffectable::GetEffect-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: b7a769fca28ea1f8f698b23de7df6b7c15f05234
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d53ecc7c3d5291ddb6b894b24835eeb236f036e94eb166383da907a9f469c960
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119905180"
 ---
-# <a name="iamtimelineeffectablegeteffect-method"></a>Iamtimelineeffectable:: GetEffect-Methode
+# <a name="iamtimelineeffectablegeteffect-method"></a>IAMTimelineEffectable::GetEffect-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die **GetEffect** -Methode ruft den Effekt auf der angegebenen Prioritäts Ebene ab.
+Die **GetEffect-Methode** ruft den Effekt auf der angegebenen Prioritätsebene ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ HRESULT GetEffect(
 
 <dl> <dt>
 
-*ppfx* \[ vorgenommen\]
+*ppFX* \[ out\]
 </dt> <dd>
 
-Empfängt die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des Effekts.
+Empfängt die [**IAMTimelineObj-Schnittstelle des**](iamtimelineobj.md) Effekts.
 
 </dd> <dt>
 
-*,* 
+*welche* 
 </dt> <dd>
 
-Prioritätsstufe des abzurufenden Effekts.
+Prioritätsebene des abzurufenden Effekts.
 
 </dd> </dl>
 
@@ -68,25 +68,25 @@ Gibt einen HRESULT-Wert zurück. Folgende Werte sind möglich:
 
 | Rückgabecode                                                                               | Beschreibung                                     |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>   | Keine Auswirkung mit der angegebenen Priorität,<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>   | Keine Auswirkung mit der angegebenen Priorität,<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                             |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument.<br/>           |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> |  NULL-Zeigerargument.<br/>           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene **iamtimelineobj** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode S \_ OK zurückgibt, verfügt **die IAMTimelineObj-Schnittstelle,** die sie zurückgibt, über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie die -Schnittstelle wieder frei geben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -96,8 +96,8 @@ Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene **iamtimelineob
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -105,10 +105,10 @@ Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene **iamtimelineob
 
 <dl> <dt>
 
-[**Iamtimelineeffectable-Schnittstelle**](iamtimelineeffectable.md)
+[**IAMTimelineEffectable-Schnittstelle**](iamtimelineeffectable.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

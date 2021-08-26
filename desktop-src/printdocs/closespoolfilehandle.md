@@ -1,7 +1,7 @@
 ---
-description: Die closespoolfilehandle-Funktion schließt ein Handle für eine Spooldatei, die dem gerade von der Anwendung übermittelten Druckauftrag zugeordnet ist.
+description: Die CloseSpoolFileHandle-Funktion schließt ein Handle für eine Spooldatei, die dem aktuell von der Anwendung übermittelten Druckauftrag zugeordnet ist.
 ms.assetid: e2c0e68f-b72e-4a97-ba18-8943bc5789c1
-title: Closespoolfilehandle-Funktion (winspool. h)
+title: CloseSpoolFileHandle-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - WinSpool.drv
-ms.openlocfilehash: c808bddde5b9b4e4a87a8608c1efb3999ce1f391
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f62173747472820f1642578778b67f3cdc3403523d6ae28453888dae3d6d1a23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119950530"
 ---
-# <a name="closespoolfilehandle-function"></a>Closespoolfilehandle-Funktion
+# <a name="closespoolfilehandle-function"></a>CloseSpoolFileHandle-Funktion
 
-Die **closespoolfilehandle** -Funktion schließt ein Handle für eine Spooldatei, die dem gerade von der Anwendung übermittelten Druckauftrag zugeordnet ist.
+Die **CloseSpoolFileHandle-Funktion** schließt ein Handle für eine Spooldatei, die dem aktuell von der Anwendung übermittelten Druckauftrag zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,27 +40,27 @@ BOOL CloseSpoolFileHandle(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker, an den der Auftrag übermittelt wurde. Dabei sollte es sich um das gleiche Handle handeln, das zum Abrufen von *hspoolfile* mit [**getspoolfilehandle**](getspoolfilehandle.md)verwendet wurde.
+Ein Handle für den Drucker, an den der Auftrag übermittelt wurde. Dies sollte dasselbe Handle sein, das zum Abrufen von *hSpoolFile* mit [**GetSpoolFileHandle verwendet wurde.**](getspoolfilehandle.md)
 
 </dd> <dt>
 
-*hspoolfile* \[ in\]
+*hSpoolFile* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Spooldatei, die geschlossen wird. Wenn [**commitspooldata**](commitspooldata.md) seit dem Aufruf von [**getspoolfilehandle**](getspoolfilehandle.md) nicht aufgerufen wurde, sollte dies das gleiche Handle sein, das von **getspoolfilehandle** zurückgegeben wurde. Andernfalls sollte es sich um das Handle handeln, das durch den letzten **Commit von commitspooldata** zurückgegeben wurde.
+Ein Handle für die zu schließende Spooldatei. Wenn [**CommitSpoolData**](commitspooldata.md) seit dem Aufgerufenen [**von GetSpoolFileHandle**](getspoolfilehandle.md) nicht aufgerufen wurde, sollte dies dasselbe Handle sein, das von **GetSpoolFileHandle zurückgegeben wurde.** Andernfalls sollte es das Handle sein, das durch den letzten Aufruf von **CommitSpoolData zurückgegeben wurde.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**True**, wenn der Vorgang erfolgreich ist, andernfalls **false** .
+**TRUE,** wenn dies erfolgreich ist, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung darf " [**closeprinter**](closeprinter.md) " nicht auf dem *hprinter* aufrufen, bis Sie zum letzten Mal auf die Spooldatei zugegriffen hat. Dann sollte es **closespoolfilehandle** gefolgt von **closeprinter** aufgerufen werden. Wenn Sie versuchen, auf das spooldateihandle zuzugreifen, nachdem der ursprüngliche *hprinter* geschlossen wurde, tritt ein Fehler auf, auch wenn das Datei Handle selbst nicht geschlossen wurde. **Closespoolfilehandle** schlägt fehl, wenn **closeprinter** zuerst aufgerufen wird.
+Ihre Anwendung darf [**ClosePrinter in**](closeprinter.md) *hPrinter* erst aufrufen, nachdem sie zum letzten Mal auf die Spooldatei zugegriffen hat. Anschließend sollte **CloseSpoolFileHandle** gefolgt von **ClosePrinter genannt werden.** Versuche, auf das Spooldateihand handle zu zugreifen, nachdem der ursprüngliche *hPrinter* geschlossen wurde, führen auch dann zu einem Fehler, wenn das Dateihand handle selbst nicht geschlossen wurde. **CloseSpoolFileHandle kann** nicht verwendet werden, **wenn ClosePrinter** zuerst aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,11 +68,11 @@ Die Anwendung darf " [**closeprinter**](closeprinter.md) " nicht auf dem *hprint
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>WinSpool.drv</dt> </dl>                   |
 
 
 
@@ -86,10 +86,10 @@ Die Anwendung darf " [**closeprinter**](closeprinter.md) " nicht auf dem *hprint
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Getspoolfilehandle**](getspoolfilehandle.md)
+[**GetSpoolFileHandle**](getspoolfilehandle.md)
 </dt> </dl>
 
  

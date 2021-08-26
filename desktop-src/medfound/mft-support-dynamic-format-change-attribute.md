@@ -1,50 +1,50 @@
 ---
-description: Gibt an, ob eine Media Foundation Transformation (MFT) dynamische Formatänderungen unterstützt.
+description: Gibt an, ob eine Media Foundation Transform (MFT) dynamische Formatänderungen unterstützt.
 ms.assetid: 64d32c78-8bee-4d3c-a770-5a097cb71b13
-title: MFT_SUPPORT_DYNAMIC_FORMAT_CHANGE-Attribut (mfapi. h)
+title: MFT_SUPPORT_DYNAMIC_FORMAT_CHANGE -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8224e9b7f0f05f430afac464e61900c7ce879fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3286d9bfd2185006975cf128cc60f2b774eba6ba74229b3e290c743c4cde3930
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012610"
 ---
-# <a name="mft_support_dynamic_format_change-attribute"></a>MFT- \_ Unterstützung des \_ dynamischen \_ Format \_ Änderungs Attributs
+# <a name="mft_support_dynamic_format_change-attribute"></a>MFT \_ SUPPORT DYNAMIC FORMAT \_ \_ \_ CHANGE-Attribut
 
-Gibt an, ob eine Media Foundation Transformation (MFT) dynamische Formatänderungen unterstützt.
+Gibt an, ob eine Media Foundation Transform (MFT) dynamische Formatänderungen unterstützt.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Als booleschen Wert behandeln.
+Als boolescher Wert behandeln.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut kann die folgenden Werte aufweisen.
+Dieses Attribut kann die folgenden Werte haben.
 
 
 
 | Wert     | BESCHREIBUNG                                                            |
 |-----------|------------------------------------------------------------------------|
-| **TRUE**  | Der Client kann beim Streaming das Eingabeformat ändern.               |
-| **FALSE** | Der MFT muss entladen werden, bevor der Client das Eingabeformat ändern kann. |
+| **TRUE**  | Der Client kann das Eingabeformat während des Streamings ändern.               |
+| **FALSE** | Der MFT muss entleert werden, bevor der Client das Eingabeformat ändern kann. |
 
 
 
  
 
-Zum Abrufen dieses Attributs müssen Sie zuerst [**imftransform:: GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) aufrufen, um den globalen Attribut Speicher für die MFT zu erhalten. Anschließend können Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) abrufen, um den Attribut Wert zu erhalten.
+Um dieses Attribut zu erhalten, rufen Sie [**zuerst DIETRANSFORM::GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) auf, um den globalen Attributspeicher für MFT zu erhalten. Rufen Sie [**dann DIE ATTRIBUTEs::GetUINT32 auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32) um den Attributwert zu erhalten.
 
-Wenn [**GetAttributes**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) fehlschlägt oder das-Attribut nicht vorhanden ist, ist der Standardwert **false**.
+Wenn [**GetAttributes fehlschlägt**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getattributes) oder das Attribut nicht vorhanden ist, ist der Standardwert **FALSE.**
 
-[Asynchrone MFTs](asynchronous-mfts.md) müssen den Wert " **true**" zurückgeben.
+[Asynchrone MFTs](asynchronous-mfts.md) müssen den Wert **TRUE zurückgeben.**
 
-Weitere Informationen finden Sie unter [Handling Stream Changes](handling-stream-changes.md).
+Weitere Informationen finden Sie unter [Behandeln von Streamänderungen.](handling-stream-changes.md)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -62,22 +62,22 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Asynchrone MFTs](asynchronous-mfts.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF-Transformation**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
+[**VORRÜBERSETZUNGTransform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
 </dt> </dl>
 
  

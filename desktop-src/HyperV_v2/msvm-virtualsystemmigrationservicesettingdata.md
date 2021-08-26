@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für den Dienst für die virtuelle System Migration auf einem Host dar.
+description: Stellt die Einstellungen für den Migrationsdienst des virtuellen Systems auf einem Host dar.
 ms.assetid: 56711134-9a4a-49bd-8a0e-ce679b959adf
 title: Msvm_VirtualSystemMigrationServiceSettingData-Klasse
 ms.topic: reference
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 8c8685e468d60983408c52a985169c61be91f632
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ab3feab1f34d0f44ce5cd0618915d8575af9e463a9ec772961c185e946ac094
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339751"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963500"
 ---
-# <a name="msvm_virtualsystemmigrationservicesettingdata-class"></a>MSVM \_ virtualsystemmigrationservicesettingdata-Klasse
+# <a name="msvm_virtualsystemmigrationservicesettingdata-class"></a>Msvm \_ VirtualSystemMigrationServiceSettingData-Klasse
 
-Stellt die Einstellungen für den Dienst für die virtuelle System Migration auf einem Host dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die **MSVM \_ virtualsystemmigrationservice. modifyservicesettings** -Methode abrufen, um diese Eigenschaften zu ändern.
+Stellt die Einstellungen für den Migrationsdienst des virtuellen Systems auf einem Host dar. Die Eigenschaften für diese Klasse können nicht direkt geändert werden. Der Client muss die **Msvm \_ VirtualSystemMigrationService.ModifyServiceSettings-Methode** aufrufen, um eine dieser Eigenschaften zu ändern.
 
-Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
+Die folgende Syntax ist Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,32 +57,32 @@ class Msvm_VirtualSystemMigrationServiceSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualsystemmigrationservicesettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualSystemMigrationServiceSettingData-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualsystemmigrationservicesettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualSystemMigrationServiceSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **AuthenticationType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Authentifizierungsmechanismus an, der für die Netzwerkverbindungen der virtuellen System Migration verwendet wird. Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) -Methode der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse geändert werden kann.
+Gibt den Authentifizierungsmechanismus an, der für Netzwerkverbindungen der Migration virtueller Systeme verwendet wird. Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) geändert werden kann.
 
 <dt>
 
 <span id="CredSSP"></span><span id="credssp"></span><span id="CREDSSP"></span>
 
-" **Kredssp** " (0)
+**CredSSP** (0)
 
 
 </dt> <dd></dd> <dt>
@@ -99,93 +99,93 @@ Gibt den Authentifizierungsmechanismus an, der für die Netzwerkverbindungen der
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird von der [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) -Klasse geerbt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von der [**CIM \_ ManagedElement-Klasse**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement) geerbt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ SettingData**](/previous-versions//cc136911(v=vs.85))geerbt.
 
 </dd> <dt>
 
 **EnableCompression**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Komprimierung des Live Migrations Datenverkehrs aktiviert oder deaktiviert ist. True gibt den Wert aktiviert an.
+Gibt an, ob die Komprimierung des Livemigrationsdatenverkehrs aktiviert oder deaktiviert ist. True gibt an, dass aktiviert ist.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) geändert werden kann.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
-**Enablesmbtransport**
+**EnableSmbTransport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt an, ob die Verwendung von SMB als Transporttyp für die Übertragung des VM-Zustands zwischen den Hyper-V-Hosts bei der Migration virtueller Systeme aktiviert oder deaktiviert ist. **True** gibt den Wert aktiviert an. Eine höhere Leistung wird erzielt, wenn RDMA-NICs während der VM-Live Migration für den SMB-Transport konfiguriert sind. Wenn der **enablesmbtransport** -Wert true ist, wird der Wert von **EnableCompression** ignoriert.
+Gibt an, ob die Verwendung von SMB als Transporttyp für die Übertragung des VM-Zustands zwischen den Hyper-V-Hosts während der Migration des virtuellen Systems aktiviert oder deaktiviert ist. **True** gibt an, dass aktiviert ist. Eine höhere Leistung wird erzielt, wenn RDMA-NICs während der Vm-Livemigration für den SMB-Transport konfiguriert sind. Wenn **der EnableSmbTransport-Wert** TRUE ist, wird der Wert von **EnableCompression** ignoriert.
 
-Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyresourcesettings**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) -Methode der [**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md) -Klasse geändert werden kann.
+Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyResourceSettings-Methode**](modifyresourcesettings-msvm-virtualsystemmanagementservice.md) der [**Msvm \_ VirtualSystemManagementService-Klasse**](msvm-virtualsystemmanagementservice.md) geändert werden kann.
 
-**Windows 8.1:** Dieser Wert wird bis Windows 8.1 und Windows Server 2012 R2 nicht unterstützt.
+**Windows 8.1:** Dieser Wert wird erst Windows 8.1 und Windows Server 2012 R2 unterstützt.
 
 </dd> <dt>
 
-**Enablevirtualsystemmigration**
+**EnableVirtualSystemMigration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt an, ob die Migration virtueller Systeme aktiviert oder deaktiviert ist. Die Speicher Migration ist immer aktiviert. Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) -Methode der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse geändert werden kann.
+Gibt an, ob die Migration des virtuellen Systems aktiviert oder deaktiviert ist. Storage Migration ist immer aktiviert. Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) geändert werden kann.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -194,33 +194,33 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
 
 </dd> <dt>
 
-**Maximumactivestoragemigration**
+**MaximumActiveStorageMigration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die maximal zulässige Anzahl aktiver Speicher Migrationen an. Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) -Methode der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse geändert werden kann.
+Gibt die maximale Anzahl der zulässigen aktiven Speichermigrationen an. Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) geändert werden kann.
 
 </dd> <dt>
 
-**Maximumactivevirtualsystemmigration**
+**MaximumActiveVirtualSystemMigration**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt die maximal zulässige Anzahl aktiver virtueller System Migrationen an. Dabei handelt es sich um eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) -Methode der [**MSVM \_ virtualsystemmigrationservice**](msvm-virtualsystemmigrationservice.md) -Klasse geändert werden kann.
+Gibt die maximale Anzahl aktiver virtueller Systemmigrationen an, die zulässig sind. Dies ist eine schreibgeschützte Eigenschaft, die jedoch mithilfe der [**ModifyServiceSettings-Methode**](modifyservicesettings-msvm-virtualsystemmigrationservice.md) der [**Msvm \_ VirtualSystemMigrationService-Klasse**](msvm-virtualsystemmigrationservice.md) geändert werden kann.
 
 </dd> </dl>
 
@@ -230,22 +230,22 @@ Gibt die maximal zulässige Anzahl aktiver virtueller System Migrationen an. Dab
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> <dt>
 
-[**Modifyservicesettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md)
+[**ModifyServiceSettings**](modifyservicesettings-msvm-virtualsystemmigrationservice.md)
 </dt> </dl>
 
  

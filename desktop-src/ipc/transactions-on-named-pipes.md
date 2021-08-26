@@ -1,25 +1,25 @@
 ---
-description: Bei einer Named Pipe Transaktion handelt es sich um eine Client/Server-Kommunikation, in der ein Schreibvorgang und ein Lesevorgang in einem einzelnen Netzwerk Vorgang kombiniert werden. Transaktionen verbessern die Leistung der Netzwerkkommunikation zwischen einem Client und einem Remote Server.
+description: Eine Named Pipe-Transaktion ist eine Client-/Serverkommunikation, die einen Schreibvorgang und einen Lesevorgang in einem einzigen Netzwerkvorgang kombiniert. Transaktionen verbessern die Leistung der Netzwerkkommunikation zwischen einem Client und einem Remoteserver.
 ms.assetid: aedce207-7dea-4670-b6dd-0c61b3f6f690
-title: Transaktionen auf Named Pipes
+title: Transaktionen für Named Pipes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 489039b92b65f57cefc71c5d78a01b1824b1418a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 524f9ae453eb958efd59d8ef6ee5adfda12dd2701e4c719be51299e2873913dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119963900"
 ---
-# <a name="transactions-on-named-pipes"></a>Transaktionen auf Named Pipes
+# <a name="transactions-on-named-pipes"></a>Transaktionen für Named Pipes
 
-Bei einer Named Pipe Transaktion handelt es sich um eine Client/Server-Kommunikation, in der ein Schreibvorgang und ein Lesevorgang in einem einzelnen Netzwerk Vorgang kombiniert werden. Eine Transaktion kann nur für eine Duplex-und Nachrichtentyp Pipe verwendet werden. Transaktionen verbessern die Leistung der Netzwerkkommunikation zwischen einem Client und einem Remote Server. Prozesse können die Funktionen [**transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) und [**callnamedpipe**](/windows/desktop/api/Winbase/nf-winbase-callnamedpipea) verwenden, um Named Pipe Transaktionen auszuführen.
+Eine Named Pipe-Transaktion ist eine Client-/Serverkommunikation, die einen Schreibvorgang und einen Lesevorgang in einem einzigen Netzwerkvorgang kombiniert. Eine Transaktion kann nur für eine Duplexpipe vom Typ "Message" verwendet werden. Transaktionen verbessern die Leistung der Netzwerkkommunikation zwischen einem Client und einem Remoteserver. Prozesse können die [**Funktionen TransactNamedPipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) und [**CallNamedPipe**](/windows/desktop/api/Winbase/nf-winbase-callnamedpipea) verwenden, um Named Pipe-Transaktionen auszuführen.
 
-Die [**transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) -Funktion wird am häufigsten von einem Pipe-Client verwendet, um eine Anforderungs Nachricht an den Named Pipe Server zu schreiben und die Antwortnachricht des Servers zu lesen. Der Pipe-Client muss generischen \_ Lesezugriff auf den generischen \| Schreibzugriff angeben, \_ Wenn er das Pipehandle durch Aufrufen der [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) -Funktion öffnet. Anschließend legt der Pipe-Client das Pipehandle auf den Nachrichten Lese Modus fest, indem er die [**setnamedpipegsstate**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-setnamedpipehandlestate) -Funktion aufruft. Wenn der im Aufrufe von **transactnamedpipe** angegebene Lese Puffer nicht groß genug ist, um die gesamte vom Server geschriebene Nachricht aufzunehmen, gibt die Funktion 0 (null) zurück, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt Fehler \_ Weitere \_ Daten zurück. Der Client kann den Rest der Nachricht lesen, indem er entweder die Funktion " [**Infofile**](/windows/desktop/api/fileapi/nf-fileapi-readfile)", " [**infofileex**](/windows/desktop/api/fileapi/nf-fileapi-readfileex)" oder " [**Peer-NamedPipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-peeknamedpipe) " anruft.
+Die [**TransactNamedPipe-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) wird am häufigsten von einem Pipeclient verwendet, um eine Anforderungsnachricht auf den Named Pipe-Server zu schreiben und die Antwortnachricht des Servers zu lesen. Der Pipeclient muss GENERIC \_ READ \| GENERIC \_ WRITE-Zugriff angeben, wenn er sein Pipehandle öffnet, indem er die [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) aufruft. Anschließend legt der Pipeclient das Pipehandle auf den Nachrichtenlesemodus fest, indem er die [**SetNamedPipeHandleState-Funktion aufruft.**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-setnamedpipehandlestate) Wenn der im Aufruf von **TransactNamedPipe** angegebene Lesepuffer nicht groß genug ist, um die gesamte vom Server geschriebene Nachricht zu speichern, gibt die Funktion 0 (null) zurück, und [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) gibt ERROR \_ MORE DATA \_ zurück. Der Client kann den Rest der Nachricht lesen, indem er entweder die [**ReadFile-,**](/windows/desktop/api/fileapi/nf-fileapi-readfile) [**ReadFileEx-**](/windows/desktop/api/fileapi/nf-fileapi-readfileex)oder [**PeekNamedPipe-Funktion aufruft.**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-peeknamedpipe)
 
-[**Transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) wird in der Regel von Pipe-Clients aufgerufen, kann aber auch von einem Pipeserver verwendet werden.
+[**TransactNamedPipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) wird in der Regel von Pipeclients aufgerufen, kann aber auch von einem Pipeserver verwendet werden.
 
-Das folgende Beispiel zeigt einen Pipe-Client mithilfe von [**transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe). Dieser pipenclient kann mit einem der unter "Siehe auch" aufgeführten Pipeserver verwendet werden.
+Das folgende Beispiel zeigt einen Pipeclient mit [**TransactNamedPipe.**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe) Dieser Pipeclient kann mit jedem der unter Siehe auch aufgeführten Pipeserver verwendet werden.
 
 
 ```C++
@@ -137,7 +137,7 @@ int _tmain(int argc, TCHAR *argv[])
 
 
 
-Ein Pipe-Client [**verwendet callnamedpipe**](/windows/desktop/api/Winbase/nf-winbase-callnamedpipea) [**, um die Funktions**](/windows/desktop/api/fileapi/nf-fileapi-createfilea)Aufrufe "anfügen", " [**WaitNamedPipe**](/windows/desktop/api/Winbase/nf-winbase-waitnamedpipea) " (falls erforderlich), " [**transactnamedpipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe)" und " [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) " in einem einzigen Aufruf zu kombinieren. Da das Pipehandle vor der Rückgabe der Funktion geschlossen wird, gehen alle zusätzlichen Bytes in der Nachricht verloren, wenn die Nachricht größer als die angegebene Größe des Lese Puffers ist. Im folgenden Beispiel wird das vorherige Beispiel so umgeschrieben, dass **callnamedpipe** verwendet wird.
+Ein Pipeclient verwendet [**CallNamedPipe,**](/windows/desktop/api/Winbase/nf-winbase-callnamedpipea) um die Funktionsaufrufe [**CreateFile,**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) [**WaitNamedPipe**](/windows/desktop/api/Winbase/nf-winbase-waitnamedpipea) (falls erforderlich), [**TransactNamedPipe**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe)und [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle) in einem einzigen Aufruf zu kombinieren. Da das Pipehandle geschlossen wird, bevor die Funktion zurückgegeben wird, gehen alle zusätzlichen Bytes in der Nachricht verloren, wenn die Nachricht größer als die angegebene Größe des Lesepuffers ist. Das folgende Beispiel ist das vorherige Beispiel, das zur Verwendung von **CallNamedPipe** umgeschrieben wurde.
 
 
 ```C++
@@ -194,13 +194,13 @@ int _tmain(int argc, TCHAR *argv[])
 
 <dl> <dt>
 
-[Multithreaded Pipe-Server](multithreaded-pipe-server.md)
+[Multithreadpipeserver](multithreaded-pipe-server.md)
 </dt> <dt>
 
-[Named Pipe-Server mit überlappenden e/a-Vorgängen](named-pipe-server-using-overlapped-i-o.md)
+[Named Pipe-Server mit überlappender E/A](named-pipe-server-using-overlapped-i-o.md)
 </dt> <dt>
 
-[Named Pipe-Server mithilfe von Vervollständigungs Routinen](named-pipe-server-using-completion-routines.md)
+[Named Pipe-Server mit Vervollständigungsroutinen](named-pipe-server-using-completion-routines.md)
 </dt> </dl>
 
  

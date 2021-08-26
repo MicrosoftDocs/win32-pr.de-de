@@ -1,24 +1,24 @@
 ---
-description: Dieser Abschnitt enthält die Verweise für die TAPI-Konstanten.
+description: Dieser Abschnitt enthält die Verweise auf die TAPI-Konstanten.
 ms.assetid: 844a69f8-fe8d-43c8-984f-e73e37dfdda5
 title: TAPI-Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab6e8dab324870d27a56a45e654e5b81bbfbf810
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c4a7fa790939ce29a36a511375363f94fae539f1c7aaf0677bad4abbe87636c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120012250"
 ---
 # <a name="tapi-constants"></a>TAPI-Konstanten
 
 Dieser Abschnitt enthält die Referenz für die folgenden TAPI-Konstanten:
 
--   [Callcenterkonstanten](call-center-constants.md)
--   [Geräte Konstanten für Linien](line-device-constants.md)
--   [Geräte Konstanten für Smartphones](phone-device-constants.md)
--   [Tapierr- \_ Konstanten](tapierr--constants.md)
+-   [Callcenterkonst constants (Callcenterkonst constants)](call-center-constants.md)
+-   [Line Device Constants](line-device-constants.md)
+-   [Telefon Gerätekonst constants (Gerätekonst constants](phone-device-constants.md)
+-   [\_TAPIERR-Konstanten](tapierr--constants.md)
 
  
 

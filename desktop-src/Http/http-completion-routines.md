@@ -1,83 +1,83 @@
 ---
-title: HTTP-Vervollständigungs Routinen
-description: Anwendungen verfügen über mehrere Optionen, um Vervollständigungs Hinweise zu erhalten und Entwicklern eine gewisse Flexibilität zu bieten.
+title: HTTP-Vervollständigungsroutinen
+description: Anwendungen haben mehrere Optionen zum Empfangen von Vervollständigungshinweisen und bieten Entwicklern eine gewisse Flexibilität.
 ms.assetid: c48a64d2-b6c8-4694-8600-f84751954bad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8aee05efc8284cb29130efae4bcaefb4834a3fb4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: dd80259d806d81153a649ad606e40c10986090442e3cab5e04bd864367441871
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981670"
 ---
-# <a name="http-completion-routines"></a>HTTP-Vervollständigungs Routinen
+# <a name="http-completion-routines"></a>HTTP-Vervollständigungsroutinen
 
-Anwendungen verfügen über mehrere Optionen, um Vervollständigungs Hinweise zu erhalten und Entwicklern eine gewisse Flexibilität zu bieten. Die Optionen werden blockiert, während darauf gewartet wird, dass ein API-Befehl abgeschlossen wird, oder um Vervollständigungs Routinen für asynchrone Vorgänge zu verwenden. Der Vorteil der Verwendung von asynchronen Vorgängen ist eine Erhöhung der Reaktionsfähigkeit der Anwendung.
+Anwendungen haben mehrere Optionen zum Empfangen von Vervollständigungshinweisen und bieten Entwicklern eine gewisse Flexibilität. Die Optionen sind das Blockieren während des Wartens auf den Abschluss eines API-Aufrufs oder die Verwendung von Vervollständigungsroutinen für asynchrone Vorgänge. Der Vorteil der Verwendung asynchroner Vorgänge ist eine höhere Reaktionsfähigkeit der Anwendung.
 
-## <a name="blocked-io"></a>Blockierte e/a
+## <a name="blocked-io"></a>Blockierte E/A
 
-Anwendungen können blockieren, während auf den Abschluss der API-Aufrufe gewartet wird, indem die [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur auf **null** festgelegt wird. Dies blockiert wirklich alle Vorgänge im Thread. Beispielsweise wird bei Aufrufen von [**httpwaitfordisconnect**](/windows/desktop/api/Http/nf-http-httpwaitfordisconnect)der Aufruf so lange blockiert, bis die Verbindung unterbrochen wird.
+Anwendungen können blockieren, während auf den Abschluss des API-Aufrufs gewartet wird, indem die [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) auf **NULL** festgelegt wird. Dadurch werden alle Vorgänge im Thread blockiert. Bei Aufrufen von [**HttpWaitForDisconnect**](/windows/desktop/api/Http/nf-http-httpwaitfordisconnect)wird der Aufruf beispielsweise blockiert, bis die Verbindung unterbrochen wird.
 
-## <a name="asynchronous-io"></a>Asynchrone e/a
+## <a name="asynchronous-io"></a>Asynchrone E/A
 
-Anwendungen, die nicht blockieren möchten, können die [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur verwenden, um die Vervollständigungs Ergebnisse zu erhalten. Die Anwendung stellt einen Zeiger auf eine **über** Lapp Ende Struktur bereit, die mit einem Ereignis Objekt oder einem Abschlussport verwendet wird. Bei einem e/a-Abschlussport wird ein HTTP-Handle als Datei Handle verwendet, das sich in einem asynchronen Datei-e/a-Vorgang befindet. In der folgenden Tabelle werden die für die-Anwendungen verfügbaren Abschluss Optionen zusammengefasst.
+Anwendungen, die nicht blockieren möchten, können die [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) verwenden, um die Abschlussergebnisse zu erhalten. Die Anwendung stellt einen Zeiger auf eine **OVERLAPPED-Struktur** bereit, die mit einem Ereignisobjekt oder einem Abschlussport verwendet wird. Bei einem E/A-Abschlussport wird ein HTTP-Handle als Dateihandle in einem asynchronen Datei-E/A-Vorgang verwendet. In der folgenden Tabelle sind die vervollständigungsoptionen zusammengefasst, die den Anwendungen zur Verfügung stehen.
 
 
 
-| Überlappende Struktur | Ereignis Objekt   | Abschlussport | Completion                                                                                                   |
+| Überlappende Struktur | Ereignisobjekt   | Abschlussport | Completion                                                                                                   |
 |----------------------|----------------|-----------------|--------------------------------------------------------------------------------------------------------------|
 | **NULL**             | Nicht zutreffend | Wird ignoriert.         | Der Vorgang wird synchron abgeschlossen.                                                                           |
-| Ungleich **null**         | Ungleich **null**   | **NULL**        | Der Vorgang wird asynchron abgeschlossen. Überlappende Benachrichtigungen werden durch Signalisieren eines Ereignis Objekts ausgeführt.       |
-| Ungleich **null**         | Wird ignoriert.        | Ungleich **null**    | Der Vorgang wird asynchron abgeschlossen. Überlappende Benachrichtigungen werden durch Planen einer Abschluss Routine ausgeführt. |
+| Ungleich **NULL**         | Ungleich **NULL**   | **NULL**        | Der Vorgang wird asynchron abgeschlossen. Überlappende Benachrichtigungen werden ausgeführt, indem ein Ereignisobjekt signalisiert wird.       |
+| Ungleich **NULL**         | Wird ignoriert.        | Ungleich **NULL**    | Der Vorgang wird asynchron abgeschlossen. Überlappende Benachrichtigungen werden ausgeführt, indem eine Abschlussroutine geplant wird. |
 
 
 
- 
+ 
 
-## <a name="returning-the-number-of-bytes-read"></a>Zurückgeben der Anzahl der gelesenen Bytes
+## <a name="returning-the-number-of-bytes-read"></a>Zurückgeben der Anzahl gelesener Bytes
 
-Einige der Funktionen, die die [**über**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) Lapp Ende Struktur für den asynchronen Abschluss verwenden, geben einen *pbytesempfang-Parameter* (oder *pbytess* -oder *pbytesread*-Parameter) zurück, der die Anzahl der synchron übertragenen Bytes angibt. Für asynchrone Aufrufe sollte dieser Parameter auf **null** festgelegt werden. Bei synchronen Aufrufen ist der *pbytesempfangene* Parameter optional und kann entweder **null** oder nicht **null** sein.
+Einige der Funktionen, die die [**OVERLAPPED-Struktur**](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) für die asynchrone Vervollständigung verwenden, geben einen *pBytesReceived-Parameter* (oder *pBytesSent* oder *pBytesRead)* zurück, der die Anzahl der synchron übertragenen Bytes angibt. Bei asynchronen Aufrufen sollte dieser Parameter auf **NULL** festgelegt werden. Bei synchronen Aufrufen ist der *pBytesReceived-Parameter* optional und kann entweder **NULL** oder ungleich **NULL** sein.
 
-Wenn das Ereignis Objekt für den asynchronen Abschluss verwendet wird, wird die Funktion [**gejeverlappedresult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) aufgerufen, um die Anzahl der gelesenen Bytes zu bestimmen. Wenn der Abschlussport verwendet wird (der *hFile* -Parameter ist einem e/a-Abschlussport zugeordnet), ruft die Anwendung die [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion auf, um die Anzahl der gelesenen Bytes zu bestimmen. Wenn die asynchronen Vorgänge nicht abgeschlossen wurden, können Anwendungen die [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) -Funktion aufrufen, um erweiterte Fehlerinformationen zu erhalten.
+Wenn das Ereignisobjekt für die asynchrone Vervollständigung verwendet wird, wird die [**GetOverlappedResult-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) aufgerufen, um die Anzahl der gelesenen Bytes zu bestimmen. Wenn der Abschlussport verwendet wird (der *hFile-Parameter* ist einem E/A-Abschlussport zugeordnet), ruft die Anwendung die [**GetQueuedCompletionStatus-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) auf, um die Anzahl der gelesenen Bytes zu bestimmen. Wenn die asynchronen Vorgänge nicht abgeschlossen wurden, können Anwendungen die [**GetLastError-Funktion**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen, um erweiterte Fehlerinformationen abzurufen.
 
-In der folgenden Tabelle wird das Abschluss Verhalten für die synchrone und asynchrone Vervollständigung in Funktionen, wie z. b. [**httpreceivehttprequest**](/windows/desktop/api/Http/nf-http-httpreceivehttprequest) , mit dem *pbytesempfangparameter* zusammengefasst.
+In der folgenden Tabelle wird das Vervollständigungsverhalten für die synchrone und asynchrone Vervollständigung in Funktionen wie [**HttpReceiveHttpRequest**](/windows/desktop/api/Http/nf-http-httpreceivehttprequest) zusammengefasst, die den *pBytesReceived-Parameter* verwenden.
 
 
 
-| pbytesempfangene\* | poverlt  | BESCHREIBUNG                                                                             |
+| pBytesReceived\* | pOverlapped  | Beschreibung                                                                             |
 |------------------|--------------|-----------------------------------------------------------------------------------------|
-| **NULL**         | **NULL**     | Die Anwendung empfängt keine Informationen über die Anzahl der zurückgegebenen Bytes.           |
-| **NULL**         | Ungleich **null** | Asynchroner Vorgang, *pbytesempfangener* ist bedeutungslos.                                |
-| Ungleich **null**     | **NULL**     | Synchroner Vorgang, Anzahl der in *pbytesempfangenen* bytes.                    |
-| Ungleich **null**     | Ungleich **null** | Asynchroner Vorgang, *pbytesempfangsvorgang* wird ignoriert, auch wenn er nicht **null** ist.\*\* |
+| **NULL**         | **NULL**     | Die Anwendung empfängt keine Informationen zur Anzahl der zurückgegebenen Bytes.           |
+| **NULL**         | Ungleich **NULL** | Der asynchrone Vorgang *pBytesReceived* ist bedeutungslos.                                |
+| Ungleich **NULL**     | **NULL**     | Synchroner Vorgang, Anzahl der in *pBytesReceived zurückgegebenen* Bytes.                    |
+| Ungleich **NULL**     | Ungleich **NULL** | Der asynchrone Vorgang *pBytesReceived* wird ignoriert, obwohl er nicht **NULL** ist.\*\* |
 
 
 
- 
-
-> [!Note]  
-> \*Dieser Parameter kann auch " *pbytess ent* " oder " *pbytesread*" lauten.
-
- 
+ 
 
 > [!Note]  
-> \*\*Es wird empfohlen, dass Anwendungen für asynchrone Vorgänge einen **null** -Wert in " *pbytesget* " übergeben und die Anzahl von Bytes abrufen, die von [**gegeverlappedresult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) oder [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus)empfangen werden.
+> \*Dieser Parameter kann auch *pBytesSent* oder *pBytesRead* sein.
 
- 
+ 
+
+> [!Note]  
+> \*\*Es wird empfohlen, dass Anwendungen einen **NULL-Wert** in *pBytesReceived* für asynchrone Vorgänge übergeben und die Anzahl der Bytes abrufen, die von [**GetOverlappedResult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) oder [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus)empfangen werden.
+
+ 
 
 ## <a name="return-codes"></a>Rückgabecodes
 
 Die HTTP-Server-API gibt drei Klassen von Codes für asynchrone Funktionsaufrufe zurück.
 
--   kein \_ Fehler
--   Fehler- \_ IO steht \_ aus
--   Alle anderen [Systemfehler Codes](/windows/desktop/Debug/system-error-codes).
+-   KEIN \_ FEHLER
+-   FEHLER \_ \_ E/A AUSSTEHEND
+-   Jeder andere [Systemfehlercode.](/windows/desktop/Debug/system-error-codes)
 
-Wenn die Fehler-e/a-Vorgänge \_ \_ Ausstehend oder kein \_ Fehler vom asynchronen Funktionsaufrufen zurückgegeben wird, sollten die Benutzer erwarten, dass das Ereignis oder die Abschluss Routine signalisiert wird. Wenn Sie die [**GetOverLappedResult**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) -Funktion für das-Ereignis oder die [**GetQueuedCompletionStatus**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) -Funktion für den Abschlussport aufrufen, wird der Abschluss Status zurückgegeben. Wenn kein \_ Fehler zurückgegeben wird, können Anwendungen außerdem die Nachbearbeitung in demselben Thread ausführen, der den API-Befehl durchgeführt hat.
+Wenn ERROR \_ IO \_ PENDING oder NO \_ ERROR vom asynchronen Funktionsaufruf zurückgegeben wird, sollten Benutzer erwarten, dass die Ereignis- oder Abschlussroutine signalisiert wird. Durch Aufrufen der [**GetOverlappedResult-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) für das Ereignis oder der [**GetQueuedCompletionStatus-Funktion**](/windows/desktop/api/ioapiset/nf-ioapiset-getqueuedcompletionstatus) für den Abschlussport wird der Abschlussstatus zurückgegeben. Wenn NO ERROR zurückgegeben wird, können Anwendungen außerdem \_ die Nachverarbeitung für denselben Thread durchführen, der den API-Aufruf ausgeführt hat.
 
-Wenn die HTTP-Server-API einen anderen Wert als Fehler-e/a \_ \_ oder keinen Fehler zurückgibt \_ , wird die Abschluss Routine vom asynchronen Funktionsaufrufen nicht signalisiert, und der Fehler wird direkt von der API zurückgegeben.
+Wenn die HTTP-Server-API vom asynchronen Funktionsaufruf etwas anderes als ERROR \_ IO \_ PENDING oder NO ERROR zurückgibt, \_ wird die Abschlussroutine nicht signalisiert, und der Fehler wird direkt von der API zurückgegeben.
 
- 
+ 
 
- 
+ 

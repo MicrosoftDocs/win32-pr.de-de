@@ -1,9 +1,9 @@
 ---
-title: WM_INITMENU Meldung (Winuser. h)
+title: WM_INITMENU (Winuser.h)
 description: Wird gesendet, wenn ein Menü aktiv wird.
 ms.assetid: d0fcc6d8-f57c-4d04-b9e7-4cfab6add173
 keywords:
-- WM_INITMENU von Meldungs Menüs und anderen Ressourcen
+- WM_INITMENU von Nachrichtenmenüs und anderen Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 94626b99a5016efaa9427d1ae8b3b3122e599965
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fff775849abf6a7e3be4530ce893e1ae8821cb4be6e9fb2888ef9bb0ee6d67d3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939570"
 ---
-# <a name="wm_initmenu-message"></a>WM- \_ InitMenu-Meldung
+# <a name="wm_initmenu-message"></a>WM \_ INITMENU-Nachricht
 
-Wird gesendet, wenn ein Menü aktiv wird. Sie tritt auf, wenn der Benutzer auf ein Element in der Menüleiste klickt oder eine Menü Taste drückt. Dadurch kann die Anwendung das Menü ändern, bevor es angezeigt wird.
+Wird gesendet, wenn ein Menü aktiv wird. Dies tritt auf, wenn der Benutzer auf ein Element in der Menüleiste klickt oder eine Menütaste drückt. Dadurch kann die Anwendung das Menü ändern, bevor es angezeigt wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,7 +41,7 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Menü, das initialisiert werden soll.
+Ein Handle für das zu initialisierende Menü.
 
 </dd> <dt>
 
@@ -54,11 +54,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine **WM- \_ InitMenu** -Meldung wird nur gesendet, wenn zum ersten Mal auf ein Menü zugegriffen wird. für jeden Zugriff wird nur eine **WM- \_ InitMenu** -Nachricht generiert. Wenn Sie die Maus z. b. über mehrere Menü Elemente bewegen, während Sie die Schaltfläche gedrückt halten, werden keine neuen Nachrichten generiert. **WM \_ InitMenu** bietet keine Informationen zu Menü Elementen.
+Eine **WM \_ INITMENU-Nachricht** wird nur gesendet, wenn zum ersten Mal auf ein Menü zugegriffen wird. Für jeden Zugriff wird nur eine **WM \_ INITMENU-Nachricht** generiert. Wenn Sie beispielsweise die Maus über mehrere Menüelemente bewegen, während Sie die Schaltfläche gedrückt halten, werden keine neuen Nachrichten generiert. **WM \_ INITMENU** stellt keine Informationen zu Menüelementen zur Verfügung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Eine **WM- \_ InitMenu** -Meldung wird nur gesendet, wenn zum ersten Mal auf ein
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,13 +76,13 @@ Eine **WM- \_ InitMenu** -Meldung wird nur gesendet, wenn zum ersten Mal auf ein
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ initmenupopup**](wm-initmenupopup.md)
+[**WM \_ INITMENUPOPUP**](wm-initmenupopup.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Tastaturkürzel](keyboard-accelerators.md)

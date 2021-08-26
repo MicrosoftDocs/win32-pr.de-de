@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das von einem e-Mail-Client generiert wird, wenn ein Nachrichten Empfang in Eltern Steuerelementen versucht wird
+description: Benutzerspezifisches Ereignis, das von einem E-Mail-Client generiert wird, wenn versucht wird, eine Nachricht in der Jugendschutz-Steuerung zu empfangen.
 ms.assetid: 3b8d9bac-16b0-49e9-b360-b2d6e82f1753
-title: WPCEVENT_EMAIL_RECEIVED-Ereignis (wpcevent. h)
+title: WPCEVENT_EMAIL_RECEIVED-Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f14d583cadb6bc976b85953bb09ea34811a5061
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a81a51e79125403504aae2ed6e823c10044ffc35ed36ff139e8333f955338d81
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951560"
 ---
-# <a name="wpcevent_email_received-event"></a>Ereignis "wpcevent \_ -e-Mail \_ empfangen
+# <a name="wpcevent_email_received-event"></a>WPCEVENT \_ EMAIL \_ RECEIVED-Ereignis
 
-Pro-Benutzer-Ereignis, das von einem e-Mail-Client generiert wird, wenn ein Nachrichten Empfang in Eltern Steuerelementen versucht wird
+Benutzerspezifisches Ereignis, das von einem E-Mail-Client generiert wird, wenn versucht wird, eine Nachricht in der Jugendschutz-Steuerung zu empfangen.
 
 
 ```C++
@@ -29,21 +29,21 @@ const EVENT_DESCRIPTOR WPCEVENT_EMAIL_RECEIVED = {0x4, 0x0, 0x10, 0x4, 0x16, 0x4
 *Sender* 
 </dt> <dd>
 
-Der e-Mail-Konto Name der sendenden Entität.
+Der E-Mail-Kontoname der sendenden Entität.
 
 </dd> <dt>
 
 *AppName* 
 </dt> <dd>
 
-Der Name der e-Mail-Anwendung, die das Ereignis erzeugt.
+Der Name der E-Mail-Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Version der e-Mail-Anwendung, die das Ereignis erzeugt.
+Die Version der E-Mail-Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
@@ -57,25 +57,25 @@ Die Betreffzeile der empfangenen Nachricht.
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse für die Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
 
 </dd> <dt>
 
-*Anzahl der Mitarbeiter* 
+*RecipCount* 
 </dt> <dd>
 
-Gibt die Anzahl von e-Mail-Adressen an, die die Nachricht empfangen und deren Identitäten im Feld Empfänger definiert sind.
+Die Anzahl der E-Mail-Empfänger, die die Nachricht empfangen, und die identitäten im Feld "Empfänger" definiert sind.
 
 </dd> <dt>
 
 *Recipient* 
 </dt> <dd>
 
-Eine Zeichenfolge mit Trennzeichen, die die e-Mail-Kontonamen aller Empfänger der Nachricht enthält.
+Eine zeichenfolge mit Trennzeichen, die die E-Mail-Kontonamen aller Empfänger der Nachricht enthält.
 
 </dd> <dt>
 
-*Attachcount* 
+*AttachCount* 
 </dt> <dd>
 
 Die Anzahl der Anlagen für die Nachricht.
@@ -85,21 +85,21 @@ Die Anzahl der Anlagen für die Nachricht.
 *AttachmentName* 
 </dt> <dd>
 
-Eine durch Trennzeichen getrennte Zeichenfolge, die die Namen aller Anhänge der Nachricht enthält.
+Eine zeichenfolge mit Trennzeichen, die die Namen aller Anlagen der Nachricht enthält.
 
 </dd> <dt>
 
 *ReceivedTime* 
 </dt> <dd>
 
-Der Zeitpunkt, zu dem die Nachricht empfangen wurde.
+Der Zeitpunkt, zu dem versucht wurde, die Nachricht zu empfangen.
 
 </dd> <dt>
 
-*Emailaccount* 
+*EmailAccount* 
 </dt> <dd>
 
-Der Name des e-Mail-Kontos für diesen Benutzer.
+Der Name des E-Mail-Kontos für diesen Benutzer.
 
 </dd> </dl>
 
@@ -109,9 +109,9 @@ Der Name des e-Mail-Kontos für diesen Benutzer.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -119,10 +119,10 @@ Der Name des e-Mail-Kontos für diesen Benutzer.
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

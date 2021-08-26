@@ -1,23 +1,23 @@
 ---
-title: Routermanager
-description: Der routermanager ist die Komponente von Windows \ 160; NT/Windows \ 160; 2000-Router, der die verschiedenen Routing Komponenten startet und verwaltet. Die Komponenten umfassen Routing Protokolle, den Routing Tabellen-Manager und den Multicast-Gruppen-Manager.
+title: Router-Manager
+description: Der Router-Manager ist die Komponente eines Windows \ 160; NT/Windows \160;2000-Router, der die verschiedenen Routingkomponenten startet und verwaltet. Die Komponenten umfassen Routingprotokolle, den Routingtabellen-Manager und den Multicastgruppen-Manager.
 ms.assetid: 488d3046-66ff-4c52-ba0c-c1c19687f889
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f60e5d8dd523d0a34e8a6e64475007f9ee446792
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ad90facbcf3bed7fdd16f89bd5258adce55f6c6ed2969fe1f33eeef5726e47c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027590"
 ---
-# <a name="router-manager"></a>Routermanager
+# <a name="router-manager"></a>Router-Manager
 
-Der routermanager ist die Komponente eines Windows NT/Windows 2000-Routers, der die verschiedenen Routing Komponenten startet und verwaltet. Die Komponenten umfassen Routing Protokolle, den Routing Tabellen-Manager und den Multicast-Gruppen-Manager.
+Der Router-Manager ist die Komponente eines Windows NT/Windows 2000-Routers, der die verschiedenen Routingkomponenten startet und verwaltet. Die Komponenten umfassen Routingprotokolle, den Routingtabellen-Manager und den Multicastgruppen-Manager.
 
- 
+ 
 
- 
+ 
 
 
 

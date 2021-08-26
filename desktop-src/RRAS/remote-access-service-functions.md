@@ -4,149 +4,149 @@ description: Verwenden Sie die folgenden Funktionen, um RAS-Funktionen zu implem
 ms.assetid: 5883a77a-6af8-47a8-bb28-6ef60a5aa2f1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d272403c8cd485f5e9d3d1de0c7fe5ac1cac9442
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0698adac4f49165c49b90bba3b0d3e4890f5ae51e76ea260077ecc42c0f078fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102131"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028160"
 ---
 # <a name="remote-access-service-functions"></a>Funktionen des RAS-Diensts
 
 Verwenden Sie die folgenden Funktionen, um RAS-Funktionen zu implementieren.
 
-**Cmfree**
+**CmFree**
 
-**Cmmzuweisung**
+**CmMalloc**
 
-[**Orasadfunc**](/windows/desktop/api/Ras/nc-ras-orasadfunc)
+[**ORASADFunc**](/windows/desktop/api/Ras/nc-ras-orasadfunc)
 
-[**Rasadfunc**](/windows/desktop/api/Ras/nc-ras-rasadfunca)
+[**RASADFunc**](/windows/desktop/api/Ras/nc-ras-rasadfunca)
 
-[**Rasclearconnectionstatistics**](/windows/desktop/api/Ras/nf-ras-rasclearconnectionstatistics)
+[**RasClearConnectionStatistics**](/windows/desktop/api/Ras/nf-ras-rasclearconnectionstatistics)
 
-[**Rasclearlinkstatistics**](/windows/desktop/api/Ras/nf-ras-rasclearlinkstatistics)
+[**RasClearLinkStatistics**](/windows/desktop/api/Ras/nf-ras-rasclearlinkstatistics)
 
-[**Rasconnectionnotification**](/windows/desktop/api/Ras/nf-ras-rasconnectionnotificationa)
+[**RasConnectionNotification**](/windows/desktop/api/Ras/nf-ras-rasconnectionnotificationa)
 
-[**Rascreatephonebookentry**](/windows/desktop/api/Ras/nf-ras-rascreatephonebookentrya)
+[**RasCreatePhonebookEntry**](/windows/desktop/api/Ras/nf-ras-rascreatephonebookentrya)
 
-[**Rascustomdeleteentrynotify**](/windows/desktop/api/Ras/nc-ras-rascustomdeleteentrynotifyfn)
+[**RasCustomDeleteEntryNotify**](/windows/desktop/api/Ras/nc-ras-rascustomdeleteentrynotifyfn)
 
-[**Rascustomdial**](/windows/desktop/api/Ras/nc-ras-rascustomdialfn)
+[**RasCustomDial**](/windows/desktop/api/Ras/nc-ras-rascustomdialfn)
 
-[**Rascustomdialdlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomdialdlgfn)
+[**RasCustomDialDlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomdialdlgfn)
 
-[**Rascustomentrydlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomentrydlgfn)
+[**RasCustomEntryDlg**](/windows/desktop/api/Rasdlg/nc-rasdlg-rascustomentrydlgfn)
 
-[**Rascustomhangup**](/windows/desktop/api/Ras/nc-ras-rascustomhangupfn)
+[**RasCustomHangUp**](/windows/desktop/api/Ras/nc-ras-rascustomhangupfn)
 
-[**Rasdeleteentry**](/windows/desktop/api/Ras/nf-ras-rasdeleteentrya)
+[**RasDeleteEntry**](/windows/desktop/api/Ras/nf-ras-rasdeleteentrya)
 
-[**Rasdelta etesubentry**](/windows/desktop/api/Ras/nf-ras-rasdeletesubentrya)
+[**RasDeleteSubEntry**](/windows/desktop/api/Ras/nf-ras-rasdeletesubentrya)
 
-[**Rasdial**](/windows/desktop/api/Ras/nf-ras-rasdiala)
+[**RasDial**](/windows/desktop/api/Ras/nf-ras-rasdiala)
 
 [**RasDialDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasdialdlga)
 
-[**Rasdialfunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc)
+[**RasDialFunc**](/windows/desktop/api/Ras/nc-ras-rasdialfunc)
 
 [**RasDialFunc1**](/windows/desktop/api/Ras/nc-ras-rasdialfunc1)
 
 [**RasDialFunc2**](/windows/desktop/api/Ras/nc-ras-rasdialfunc2)
 
-[**Raseditphonebookentry**](/windows/desktop/api/Ras/nf-ras-raseditphonebookentrya)
+[**RasEditPhonebookEntry**](/windows/desktop/api/Ras/nf-ras-raseditphonebookentrya)
 
 [**RasEntryDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasentrydlga)
 
-[**Rasen-autodialadressen**](/windows/desktop/api/Ras/nf-ras-rasenumautodialaddressesa)
+[**RasEnumAutodialAddresses**](/windows/desktop/api/Ras/nf-ras-rasenumautodialaddressesa)
 
-[**Rasen-Connections**](/windows/desktop/api/Ras/nf-ras-rasenumconnectionsa)
+[**RasEnumConnections**](/windows/desktop/api/Ras/nf-ras-rasenumconnectionsa)
 
-[**Rasengeräte**](/windows/desktop/api/Ras/nf-ras-rasenumdevicesa)
+[**RasEnumDevices**](/windows/desktop/api/Ras/nf-ras-rasenumdevicesa)
 
-[**Raseneinträge**](/windows/desktop/api/Ras/nf-ras-rasenumentriesa)
+[**RasEnumEntries**](/windows/desktop/api/Ras/nf-ras-rasenumentriesa)
 
-[**Rasfreeapuseridentity**](/windows/desktop/api/Ras/nf-ras-rasfreeeapuseridentitya)
+[**RasFreeEapUserIdentity**](/windows/desktop/api/Ras/nf-ras-rasfreeeapuseridentitya)
 
-[**Rasgetautodialaddress**](/windows/desktop/api/Ras/nf-ras-rasgetautodialaddressa)
+[**RasGetAutodialAddress**](/windows/desktop/api/Ras/nf-ras-rasgetautodialaddressa)
 
-[**Rasgetautodialenable**](/windows/desktop/api/Ras/nf-ras-rasgetautodialenablea)
+[**RasGetAutodialEnable**](/windows/desktop/api/Ras/nf-ras-rasgetautodialenablea)
 
-[**Rasgetautodialparam**](/windows/desktop/api/Ras/nf-ras-rasgetautodialparama)
+[**RasGetAutodialParam**](/windows/desktop/api/Ras/nf-ras-rasgetautodialparama)
 
-[**"Rasgetconnectionstatistics"**](/windows/desktop/api/Ras/nf-ras-rasgetconnectionstatistics)
+[**RasGetConnectionStatistics**](/windows/desktop/api/Ras/nf-ras-rasgetconnectionstatistics)
 
-[**Rasgetconnectstatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa)
+[**RasGetConnectStatus**](/windows/desktop/api/Ras/nf-ras-rasgetconnectstatusa)
 
-[**Rasgetcountryinfo**](/windows/desktop/api/Ras/nf-ras-rasgetcountryinfoa)
+[**RasGetCountryInfo**](/windows/desktop/api/Ras/nf-ras-rasgetcountryinfoa)
 
-[**Rasgetanmeldeinformationen**](/windows/desktop/api/Ras/nf-ras-rasgetcredentialsa)
+[**RasGetCredentials**](/windows/desktop/api/Ras/nf-ras-rasgetcredentialsa)
 
-[**Rasgetcustomauthdata**](/windows/desktop/api/Ras/nf-ras-rasgetcustomauthdataa)
+[**RasGetCustomAuthData**](/windows/desktop/api/Ras/nf-ras-rasgetcustomauthdataa)
 
-[**Rasgeteapuserdata**](/windows/desktop/api/Ras/nf-ras-rasgeteapuserdataa)
+[**RasGetEapUserData**](/windows/desktop/api/Ras/nf-ras-rasgeteapuserdataa)
 
-[**Rasgeteapuseridentity**](/windows/desktop/api/Ras/nf-ras-rasgeteapuseridentitya)
+[**RasGetEapUserIdentity**](/windows/desktop/api/Ras/nf-ras-rasgeteapuseridentitya)
 
-[**Rasgetentrydialparameams**](/windows/desktop/api/Ras/nf-ras-rasgetentrydialparamsa)
+[**RasGetEntryDialParams**](/windows/desktop/api/Ras/nf-ras-rasgetentrydialparamsa)
 
-[**Rasgetentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa)
+[**RasGetEntryProperties**](/windows/desktop/api/Ras/nf-ras-rasgetentrypropertiesa)
 
-[**Rasgeterrorstring**](/windows/desktop/api/Ras/nf-ras-rasgeterrorstringa)
+[**RasGetErrorString**](/windows/desktop/api/Ras/nf-ras-rasgeterrorstringa)
 
-[**"Rasgetlinkstatistics"**](/windows/desktop/api/Ras/nf-ras-rasgetlinkstatistics)
+[**RasGetLinkStatistics**](/windows/desktop/api/Ras/nf-ras-rasgetlinkstatistics)
 
-[**Rasgetnapstatus**](/windows/desktop/api/Ras/nf-ras-rasgetnapstatus)
+[**RasGetNapStatus**](/windows/desktop/api/Ras/nf-ras-rasgetnapstatus)
 
-[**Rasgetprojectioninfo**](/previous-versions/windows/embedded/ms897107(v=msdn.10))
+[**RasGetProjectionInfo**](/previous-versions/windows/embedded/ms897107(v=msdn.10))
 
-[**Rasgetprojectioninfoex**](/windows/desktop/api/Ras/nf-ras-rasgetprojectioninfoex)
+[**RasGetProjectionInfoEx**](/windows/desktop/api/Ras/nf-ras-rasgetprojectioninfoex)
 
-[**Rasgetquarantineconnectionid**](/previous-versions/windows/desktop/legacy/aa377552(v=vs.85))
+[**RasGetQuarantineConnectionId**](/previous-versions/windows/desktop/legacy/aa377552(v=vs.85))
 
-[**Rasgetsubentryhandle**](/windows/desktop/api/Ras/nf-ras-rasgetsubentryhandlea)
+[**RasGetSubEntryHandle**](/windows/desktop/api/Ras/nf-ras-rasgetsubentryhandlea)
 
-[**Rasgetsubentryproperties**](/windows/desktop/api/Ras/nf-ras-rasgetsubentrypropertiesa)
+[**RasGetSubEntryProperties**](/windows/desktop/api/Ras/nf-ras-rasgetsubentrypropertiesa)
 
 [**RasHangUp**](/windows/desktop/api/Ras/nf-ras-rashangupa)
 
-[**Rasinvokeeapui**](/windows/desktop/api/Ras/nf-ras-rasinvokeeapui)
+[**RasInvokeEapUI**](/windows/desktop/api/Ras/nf-ras-rasinvokeeapui)
 
-[**Rasmonitordlg**](/previous-versions/windows/desktop/legacy/aa377584(v=vs.85))
+[**RasMonitorDlg**](/previous-versions/windows/desktop/legacy/aa377584(v=vs.85))
 
-[**Raspbdlgfunc**](/windows/desktop/api/Rasdlg/nc-rasdlg-raspbdlgfunca)
+[**RasPBDlgFunc**](/windows/desktop/api/Rasdlg/nc-rasdlg-raspbdlgfunca)
 
-[**Rasphonebookdlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasphonebookdlga)
+[**RasPhonebookDlg**](/windows/desktop/api/Rasdlg/nf-rasdlg-rasphonebookdlga)
 
-[**Rasrenameentry**](/windows/desktop/api/Ras/nf-ras-rasrenameentrya)
+[**RasRenameEntry**](/windows/desktop/api/Ras/nf-ras-rasrenameentrya)
 
-[**Rassetauwebdialaddress**](/windows/desktop/api/Ras/nf-ras-rassetautodialaddressa)
+[**RasSetAutodialAddress**](/windows/desktop/api/Ras/nf-ras-rassetautodialaddressa)
 
-[**Rassetauto dialenable**](/windows/desktop/api/Ras/nf-ras-rassetautodialenablea)
+[**RasSetAutodialEnable**](/windows/desktop/api/Ras/nf-ras-rassetautodialenablea)
 
-[**Rassetauto dialparam**](/windows/desktop/api/Ras/nf-ras-rassetautodialparama)
+[**RasSetAutodialParam**](/windows/desktop/api/Ras/nf-ras-rassetautodialparama)
 
-[**Rassetcommsettings**](/windows/desktop/api/Ras/nc-ras-pfnrassetcommsettings)
+[**RasSetCommSettings**](/windows/desktop/api/Ras/nc-ras-pfnrassetcommsettings)
 
-[**Rassetanmelde Informationen**](/windows/desktop/api/Ras/nf-ras-rassetcredentialsa)
+[**RasSetCredentials**](/windows/desktop/api/Ras/nf-ras-rassetcredentialsa)
 
-[**Rassetcustomauthdata**](/windows/desktop/api/Ras/nf-ras-rassetcustomauthdataa)
+[**RasSetCustomAuthData**](/windows/desktop/api/Ras/nf-ras-rassetcustomauthdataa)
 
-[**Rasseteapuserdata**](/windows/desktop/api/Ras/nf-ras-rasseteapuserdataa)
+[**RasSetEapUserData**](/windows/desktop/api/Ras/nf-ras-rasseteapuserdataa)
 
-[**Rassetentrydialparametriams**](/windows/desktop/api/Ras/nf-ras-rassetentrydialparamsa)
+[**RasSetEntryDialParams**](/windows/desktop/api/Ras/nf-ras-rassetentrydialparamsa)
 
-[**Rassetentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa)
+[**RasSetEntryProperties**](/windows/desktop/api/Ras/nf-ras-rassetentrypropertiesa)
 
-[**Rassetsubentryproperties**](/windows/desktop/api/Ras/nf-ras-rassetsubentrypropertiesa)
+[**RasSetSubEntryProperties**](/windows/desktop/api/Ras/nf-ras-rassetsubentrypropertiesa)
 
-[**Rasupdateconnetction**](/windows/desktop/api/Ras/nf-ras-rasupdateconnection)
+[**RasUpdateConnection**](/windows/desktop/api/Ras/nf-ras-rasupdateconnection)
 
-[**Rasvalidateentryname**](/windows/desktop/api/Ras/nf-ras-rasvalidateentrynamea)
+[**RasValidateEntryName**](/windows/desktop/api/Ras/nf-ras-rasvalidateentrynamea)
 
-[Benutzerdefinierte RAS-DLL-Funktionen](ras-custom-scripting-dll-functions.md)
+[BEnutzerdefinierte RAS-Skript-DLL-Funktionen](ras-custom-scripting-dll-functions.md)
 
- 
+ 
 
- 
+ 

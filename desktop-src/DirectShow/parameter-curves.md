@@ -1,58 +1,58 @@
 ---
-description: Parameter Kurven
+description: Parameterkurven
 ms.assetid: c073e7d0-c119-4c36-a5b2-b31dd6326ac8
-title: Parameter Kurven
+title: Parameterkurven
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc3c482112c8bd76217f5cbdabdf3cda13b09c3e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5130cf158271ffe3cb3da5e4e16b5fffa8a5a6994b14b9f8766fe20cdf1510ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119997380"
 ---
-# <a name="parameter-curves"></a>Parameter Kurven
+# <a name="parameter-curves"></a>Parameterkurven
 
-Medien Parameter können im Laufe der Zeit eine Kurve verfolgen. Jede Kurve wird durch eine mathematische Formel und zwei Endpunkte beschrieben. Jeder Endpunkt wird durch eine Verweis Zeit und den Wert der Kurve zu diesem Zeitpunkt definiert. Die Formel wird verwendet, um Zwischenwerte zwischen den Punkten zu berechnen, und bestimmt die Form der Kurve. Mögliche Kurven:
+Medienparameter können einer Kurve im Laufe der Zeit folgen. Jede Kurve wird durch eine mathematische Formel und zwei Endpunkte beschrieben. Jeder Endpunkt wird durch eine Bezugszeit und den Wert der Kurve zu diesem Zeitpunkt definiert. Die Formel wird verwendet, um Zwischenwerte zwischen den Punkten zu berechnen und die Form der Kurve zu bestimmen. Die möglichen Kurven sind:
 
--   Gelenks
+-   Springen
 -   Linear
 -   Square
--   Umgekehrtes Quadrat
--   Ston
+-   Inverses Quadrat
+-   Sinus
 
-"Jump" bedeutet, dass Sie direkt zum Endwert springen. Die anderen Kurven werden im folgenden Diagramm dargestellt.
+"Springen" bedeutet, direkt zum Endwert zu springen. Die anderen Kurven sind im folgenden Diagramm dargestellt.
 
-![Parameter Kurven](images/param-curves01.png)
+![Parameterkurven](images/param-curves01.png)
 
-Die Kurven funktionieren mathematisch wie folgt. Angenommen, eine Kurve beginnt bei Time *t*₀ mit dem Wert *v*₀ und endet mit Time *t*₁ mit dem Wert *v*₁. Die beiden Punkte, die die Kurve definieren, sind (*t*₀, *v*₀) und (*t*₁, *v*₁).
+Mathematisch funktionieren die Kurven wie folgt. Angenommen, eine Kurve beginnt zu dem Zeitpunkt *₀* mit dem Wert *v*₀ und endet zu dem Zeitpunkt, zu dem *t*₁ mit dem Wert *v*₁. Die beiden Punkte, die die Kurve definieren, sind (*t*₀, *v*₀) und (*t*₁, *v*₁).
 
--   Legen Sie die Gesamtdauer der Kurve ( *t*₁ –*t*₀) ab.
--   *Lassen Sie* das Intervall zwischen den Anfangs-und Endwerten *v*₁ –*v*₀.
--   Zu einem beliebigen Zeitpunkt *t* , d. ₀. *t*<= *t*  <=  *t*₁, lassen Sie *t*' = t –*t*₀.
+-   Lassen Sie ^*nicht* die Gesamtdauer der Kurve, *t*₁–*t ₀.*
+-   Lassen Sie ^*v* das Intervall zwischen den Anfangs- und Endwerten sein, *v*₁–*v*₀.
+-   Lassen Sie *zu jedem* *Zeitpunkt* t, ₀ <= *t*  <=  *t ₁* ist, LASS *t*' = *t*–*t*₀.
 
-![Parameter Berechnung](images/param-curves02.png)
+![Parameterberechnung](images/param-curves02.png)
 
-Der Wert des-Parameters zum Zeitpunkt *t* ist:
+Der Wert des Parameters zum Zeitpunkt *t* ist:
 
-*v* = f (,*t*"/-*t* ) Version v \*   +  *v*₀
+*v* = f( ^*t*' / Y *t* ) \* ); v *v*  +  *₀*
 
-Dabei ist f (x) eine Funktion, die durch den Kurven-Typ bestimmt wird:
+Dabei ist f(x) eine Funktion, die durch den Kurventyp bestimmt wird:
 
 -   Linear: y = x
--   Quadrat: y = x ^ 2
--   Umgekehrtes Quadrat: y = sqrt (x)
--   Sinus: y = \[ Sin (-x – μ/2) + 1 \] /2
+-   Square: y = x^2
+-   Inverses Quadrat: y = sqrt(x)
+-   Sinus: y = \[ sin(πx – π/2) + 1 \] / 2
 
-Beachten Sie,*dass "<-t"* lautet, sodass der Begriff "-*t"/*"*t* " zwischen 0 und *1 liegt.* Daher liegt f (x) auch zwischen 0 und 1, und *v* liegt immer zwischen *v*₀ und *v*₁. Dies gilt unabhängig davon, ob *v*₀ < *v*₁ oder umgekehrt. Das heißt, die Kurve wird durch das Rechteck (*t*₀, *v*₀, *t*₁, *v*₁) begrenzt.
+Beachten Sie, dass *^t*' < ^*t ist,* sodass der Begriff ^*t*'/ ^*t t* zwischen 0 und 1 liegt. Daher liegt f(x) auch zwischen 0 und 1, und *v* liegt immer zwischen *v*₀ *und v*₁. Dies gilt unabhängig davon, ob *v*₀ < *v*₁ oder umgekehrt. Anders ausgedrückt: Die Kurve wird durch das Rechteck *(t*₀, *v*₀, *t*₁, *v*₁) gebunden.
 
-Bei der Sinuskurve reicht der Wert von ("– x)/2" von "–./2" zu "-/2". Dies bedeutet, dass sich der Wert von "Sin (-x – μ/2)" von "– 1 bis 1" erstreckt. Das Ergebnis wird dann normalisiert, sodass f (x) in den Bereich (0 – 1) fällt.
+Für die Sinuskurve liegt der Wert von (πx – π/2) zwischen –π/2 und π/2, was bedeutet, dass sin(πx – π/2) zwischen –1 und 1 liegt. Das Ergebnis wird dann normalisiert, sodass f(x) in den Bereich (0–1) fällt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medien Parameter](media-parameters.md)
+[Medienparameter](media-parameters.md)
 </dt> </dl>
 
  

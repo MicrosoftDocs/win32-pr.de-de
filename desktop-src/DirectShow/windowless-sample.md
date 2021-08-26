@@ -1,27 +1,27 @@
 ---
-description: Fensterlose Stichprobe
+description: Beispiel ohne Fenster
 ms.assetid: 2141e465-996c-44e8-a081-38c3e1e0b01b
-title: Fensterlose Stichprobe
+title: Beispiel ohne Fenster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bb466b345497c320aba9d381a0a5559fda2e89c7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 248d5b877e98c22ff421cb8be86a630990b2b7f1ab66ba17f6cfd13eb659337b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982280"
 ---
-# <a name="windowless-sample"></a>Fensterlose Stichprobe
+# <a name="windowless-sample"></a>Beispiel ohne Fenster
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Dieses Beispiel veranschaulicht den fensterlosen Modus im Video Mischungs-Renderer 9-Filter (VMR-9).
+In diesem Beispiel wird der fensterlose Modus im Filter Video Mixing Renderer 9 (VMR-9) veranschaulicht.
 
-Sie können das Bild aus dem Videofenster erfassen, indem Sie mit der rechten Maustaste auf das Bild klicken, oder indem Sie im Menü **Bild** die Option **aktuellen Frame erfassen** auswählen.
+Sie können das Bild aus dem Videofenster erfassen, indem Sie mit der rechten Maustaste auf das Bild klicken oder im Menü **Bild** die Option **Aktuellen Frame erfassen** auswählen.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
-Zum Herunterladen der DirectShow SDK-Beispiele installieren Sie die neueste Version der [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
+Um die DirectShow SDK-Beispiele herunterzuladen, installieren Sie die neueste Version des [Windows SDK](https://msdn.microsoft.com/windowsvista/bb980924.aspx).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

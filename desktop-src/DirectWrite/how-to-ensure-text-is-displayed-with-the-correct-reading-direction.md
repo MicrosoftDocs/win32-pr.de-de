@@ -1,21 +1,21 @@
 ---
 title: Stellen Sie sicher, dass Text mit der richtigen Leserichtung angezeigt wird.
-description: Einige Sprachen, z. b. Arabisch und Hebräisch, erfordern eine Leserichtung von rechts nach links.
+description: Einige Sprachen, z. B. Arabisch und Hebräisch, erfordern eine Leserichtung von rechts nach links.
 ms.assetid: fa9a3dd6-575a-4877-a488-22845c6726c8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5d97eee49a830986718c04b4adab7443e488093
-ms.sourcegitcommit: 43b2f5209d67eae96b17c03bac2a2afab1f4d30a
+ms.openlocfilehash: 3774e4d237863a218cadf5206e4dc4921bceaeaa06c00ab81057f80dd8ee6549
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730169"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982170"
 ---
 # <a name="ensure-text-is-displayed-with-the-correct-reading-direction"></a>Stellen Sie sicher, dass Text mit der richtigen Leserichtung angezeigt wird.
 
-Einige Sprachen, z. b. Arabisch und Hebräisch, erfordern eine Leserichtung von rechts nach links. Bei einem Objekt im [DirectWrite](direct-write-portal.md) -Textformat ist die Standard Leserichtung von links nach rechts. DirectWrite leitet die Leserichtung nicht automatisch aus dem Gebiets Schema ab, sodass Sie dies selbst tun müssen.
+Einige Sprachen, z. B. Arabisch und Hebräisch, erfordern eine Leserichtung von rechts nach links. Für [](direct-write-portal.md) ein DirectWrite-Textformatobjekt ist die Standardleserichtung von links nach rechts. DirectWrite die Leserichtung nicht automatisch aus dem -Locale abgeleitet, daher müssen Sie dies selbst tun.
 
-Holen Sie zuerst die erweiterten stilflags für das Fenster, in dem der Text gerendert wird, indem Sie das in WINDOWSX. h definierte getwindowstyleex-Makro verwenden.
+Zunächst können Sie die erweiterten Stilflags für das Fenster, in dem der Text gerendert wird, mithilfe des in windowsx.h definierten Makros GetWindowStyleEx erhalten.
 
 
 ```C++
@@ -25,11 +25,11 @@ DWORD dwStyle = GetWindowExStyle(hwnd_);
 
 
 
-Das-Makro gibt einen DWORD-Wert zurück, der aus mehreren Flags zusammen mit bitweisen or-Vorgängen besteht. Sie müssen bestimmen, ob die spezifischen Flags, die die Leserichtung beeinflussen, vorhanden sind.
+Das Makro gibt einen DWORD-Wert zurück, der aus mehreren Flags in Kombination mit bitweisem OR-Vorgängen besteht. Sie müssen ermitteln, ob die spezifischen Flags, die die Leserichtung beeinflussen, dort sind.
 
-Es gibt zwei verschiedene Flags, die sich auf die Leserichtung beziehen: WS \_ Ex \_ layoutrtl und WS \_ Ex \_ RtlReading.
+Es gibt zwei verschiedene Flags, die mit der Leserichtung verknüpft sind: WS \_ EX \_ LAYOUTRTL und WS \_ EX \_ RTLREADING.
 
-Verwenden Sie den bitweisen AND-Operator (&) mit der dwstyle-Variablen und dem WS \_ Ex \_ layoutrtl-Makro, um einen booleschen Wert zu speichern, der angibt, ob das Layout gespiegelt wird.
+Verwenden Sie den bitweise AND-Operator (&) mit der dwStyle-Variablen und dem WS EX LAYOUTRTL-Makro, um einen BOOL-Wert zu speichern, der angibt, ob das Layout \_ \_ gespiegelt ist.
 
 
 ```C++
@@ -39,7 +39,7 @@ BOOL bWSLayout = dwStyle & WS_EX_LAYOUTRTL;
 
 
 
-Führen Sie die gleichen Schritte für das WS \_ Ex \_ RtlReading-Flag aus.
+Gehen Sie für das WS \_ EX \_ RTLREADING-Flag genauso vor.
 
 
 ```C++
@@ -49,12 +49,12 @@ BOOL bWSReading = dwStyle & WS_EX_RTLREADING;
 
 
 
-Legen Sie die Leserichtung mithilfe der Methode [**idschreitetextformat:: setreadingdirection**](/windows/win32/api/dwrite/nf-dwrite-idwritetextformat-setreadingdirection) fest. Der Standardwert ist von links nach rechts, sodass Sie nur die Leserichtung festlegen müssen, wenn Sie von rechts nach links ist.
+Legen Sie die Leserichtung mithilfe der [**IDWriteTextFormat::SetReadingDirection-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextformat-setreadingdirection) fest. Der Standardwert ist von links nach rechts, sodass Sie die Leserichtung nur festlegen müssen, wenn sie von rechts nach links ist.
 
 > [!Note]  
-> WS \_ Ex \_ layoutrtl spiegelt das gesamte Layout wider und impliziert die Leserichtung von rechts nach links. Legen Sie daher die Leserichtung nur dann fest, wenn eines dieser Flags vorhanden ist. Wenn beide vorhanden sind, brechen Sie einander ab, und die Leserichtung für das Textformat sollte von links nach rechts erfolgen.
+> WS EX LAYOUTRTL spiegelt das gesamte Layout und impliziert die Leserichtung von rechts nach links. Legen Sie daher die Leserichtung nur fest, wenn eines dieser \_ \_ Flags vorhanden ist. Wenn beide vorhanden sind, brechen sie einander ab, und die Leserichtung für das Textformat sollte von links nach rechts sein.
 
- 
+ 
 
 
 ```C++
@@ -69,6 +69,6 @@ if ((bWSLayout && !bWSReading)
 
 
 
- 
+ 
 
- 
+ 

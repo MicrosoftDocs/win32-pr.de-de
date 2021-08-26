@@ -1,5 +1,5 @@
 ---
-title: RAS-Dienst Datentypen (RAS. h)
+title: RAS-Dienstdatentypen (Ras.h)
 description: Die folgenden Datentypen werden von der RAS-Dienst-API verwendet.
 ms.assetid: aaa7f971-9c23-4738-a386-9b7db859f6be
 keywords:
@@ -7,14 +7,14 @@ keywords:
 - RASIPV6ADDR
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c8aa2fdae531c5aae0986d3289802565c6914fe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 26df8b8336b9b96ec338a79ed846519fb8a0ca019e6dd5996b9ac17087faa371
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956434"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028250"
 ---
-# <a name="remote-access-service-data-types"></a>RAS-Dienst Datentypen
+# <a name="remote-access-service-data-types"></a>Datentypen des RAS-Diensts
 
 Die folgenden Datentypen werden von der RAS-Dienst-API verwendet.
 
@@ -31,10 +31,10 @@ typedef in6_addr RASIPV6ADDR;
 **RASIPV4ADDR**
 </dt> <dd>
 
-Ein [**in \_ addr**](/windows/desktop/api/winsock2/ns-winsock2-in_addr) , das eine IPv4-Adresse enthält.
+Ein [**\_ in-Addr,**](/windows/desktop/api/winsock2/ns-winsock2-in_addr) der eine IPv4-Adresse enthält.
 
 > [!Note]  
-> Unterstützt in Windows Vista oder höheren Versionen von Windows.
+> Wird in Windows Vista oder höher von Windows.
 
  
 
@@ -43,10 +43,10 @@ Ein [**in \_ addr**](/windows/desktop/api/winsock2/ns-winsock2-in_addr) , das ei
 **RASIPV6ADDR**
 </dt> <dd>
 
-Eine [**IN6 \_ addr**](/previous-versions/windows/desktop/legacy/ms738560(v=vs.85)) , die eine IPv6-Adresse enthält.
+Ein [**\_ In6-Addr,**](/previous-versions/windows/desktop/legacy/ms738560(v=vs.85)) der eine IPv6-Adresse enthält.
 
 > [!Note]  
-> Unterstützt in Windows Vista oder höheren Versionen von Windows.
+> Wird in Windows Vista oder höher von Windows.
 
  
 
@@ -60,7 +60,7 @@ Eine [**IN6 \_ addr**](/previous-versions/windows/desktop/legacy/ms738560(v=vs.8
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>RAS. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ras.h</dt> </dl> |
 
 
 

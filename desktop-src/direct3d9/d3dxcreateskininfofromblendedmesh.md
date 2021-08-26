@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Skin-Mesh aus einem anderen Mesh.
+description: Erstellt ein Skin mesh aus einem anderen Gitternetz.
 ms.assetid: 4c69377e-61ef-42b8-8864-c116164d4b22
-title: D3DXCreateSkinInfoFromBlendedMesh-Funktion (D3DX9Mesh. h)
+title: D3DXCreateSkinInfoFromBlendedMesh-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d81de43dde2b4f0df5913831ddfcefbab1a41855
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 77dfc11089ccedf5d435e9c15c3ec97559938d5f90506975bf15cbcdbbaa609b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104530926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952410"
 ---
 # <a name="d3dxcreateskininfofromblendedmesh-function"></a>D3DXCreateSkinInfoFromBlendedMesh-Funktion
 
-Erstellt ein Skin-Mesh aus einem anderen Mesh.
+Erstellt ein Skin mesh aus einem anderen Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT D3DXCreateSkinInfoFromBlendedMesh(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBASEMESH**](id3dxbasemesh.md)**
 
-Zeiger auf ein [**ID3DXBaseMesh**](id3dxbasemesh.md) -Objekt, das Mesh, aus dem das Skin Mesh erstellt werden soll.
+Zeiger auf ein [**ID3DXBaseMesh-Objekt,**](id3dxbasemesh.md) das Gittermodell, aus dem das Skin mesh erstellt werden soll.
 
 </dd> <dt>
 
-*Numbones* \[ in\]
+*NumBones* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Die Länge des Arrays, das an die boneid angehängt ist. Siehe [**D3DXBONECOMBINATION**](d3dxbonecombination.md).
+Die Länge des Arrays, das an die "LengthId" angefügt ist. Siehe [**D3DXBONECOMBINATION**](d3dxbonecombination.md).
 
 </dd> <dt>
 
-*pbonecombinationtable* \[ in\]
+*pBoneCombinationTable* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXBONECOMBINATION**](d3dxbonecombination.md) \***
+Typ: **const [**D3DXBONECOMBINATION**](d3dxbonecombination.md) \***
 
-Zeiger auf ein Array von Bone-Kombinationen. Siehe [**D3DXBONECOMBINATION**](d3dxbonecombination.md).
+Zeiger auf ein Array von Kombinationen aus Arrays. Siehe [**D3DXBONECOMBINATION**](d3dxbonecombination.md).
 
 </dd> <dt>
 
-*ppskininfo* \[ vorgenommen\]
+*ppSkinInfo* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXSKININFO**](id3dxskininfo.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXSkinInfo**](id3dxskininfo.md) -Schnittstelle, die das erstellte Skin-Mesh-Objekt darstellt.
+Adresse eines Zeigers auf eine [**ID3DXSkinInfo-Schnittstelle,**](id3dxskininfo.md) die das erstellte Skin mesh-Objekt darstellt.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Adresse eines Zeigers auf eine [**ID3DXSkinInfo**](id3dxskininfo.md) -Schnittste
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt lauten: E \_ outo-Memory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -100,7 +100,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK.
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

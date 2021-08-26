@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Deklaration ab, die die Scheitel Punkte im Mesh beschreibt.
+description: Ruft eine Deklaration ab, die die Scheitelpunkte im Netz beschreibt.
 ms.assetid: e9028282-acf1-4ca4-8af0-7fb655dcb5d1
-title: 'ID3DXBaseMesh:: getDeclaration-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetDeclaration-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 34f8736e822bfe4a959f35f60bb79783e79f2d52
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4d66afd8daf6a8cc60fa63dcf38e6bb853c33ca05986d2a37b94eba1250eb01b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026470"
 ---
-# <a name="id3dxbasemeshgetdeclaration-method"></a>ID3DXBaseMesh:: getDeclaration-Methode
+# <a name="id3dxbasemeshgetdeclaration-method"></a>ID3DXBaseMesh::GetDeclaration-Methode
 
-Ruft eine Deklaration ab, die die Scheitel Punkte im Mesh beschreibt.
+Ruft eine Deklaration ab, die die Scheitelpunkte im Netz beschreibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetDeclaration(
 
 Typ: **[ **D3DVERTEXELEMENT9**](d3dvertexelement9.md)**
 
-Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, die das Scheitelpunkt Format der Mesh-Scheitel Punkte beschreiben. Die Obergrenze dieses deklaratorarrays ist [**Max \_ \_ \_**](./max-fvf-decl-size.md). Das Vertex-Element Array endet mit dem [**D3DDECL \_ End**](d3ddecl-end.md) -Makro.
+Array von [**D3DVERTEXELEMENT9-Elementen,**](d3dvertexelement9.md) die das Scheitelpunktformat der Gitternetzvertices beschreiben. Die Obergrenze dieses Deklaratorarrays ist [**MAX \_ FVF \_ DECL \_ SIZE**](./max-fvf-decl-size.md). Das Vertexelementarray endet mit dem [**D3DDECL-END-Makro. \_**](d3ddecl-end.md)
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Array von [**D3DVERTEXELEMENT9**](d3dvertexelement9.md) -Elementen, die das Sche
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Array von-Elementen enthält das [**D3DDECL \_ End**](d3ddecl-end.md) -Makro, das die Deklaration beendet.
+Das Array von Elementen enthält das [**D3DDECL-END-Makro, \_**](d3ddecl-end.md) das die Deklaration beendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,8 +65,8 @@ Das Array von-Elementen enthält das [**D3DDECL \_ End**](d3ddecl-end.md) -Makro
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

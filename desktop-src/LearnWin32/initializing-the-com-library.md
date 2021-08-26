@@ -1,19 +1,19 @@
 ---
-title: Initialisieren der com-Bibliothek
-description: Initialisieren der com-Bibliothek
+title: Initialisieren der COM-Bibliothek
+description: Initialisieren der COM-Bibliothek
 ms.assetid: b044e146-8409-4f8d-87d3-52f21ebc2255
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 663cfb73455e118579f45710788ab72385ada335
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 0c1bc9536c186c2af3b604f7eb5666a6a31e7a845cf3b20f64a132119d16cb1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979990"
 ---
-# <a name="initializing-the-com-library"></a>Initialisieren der com-Bibliothek
+# <a name="initializing-the-com-library"></a>Initialisieren der COM-Bibliothek
 
-Jedes Windows-Programm, das com verwendet, muss die com-Bibliothek initialisieren, indem die [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) -Funktion aufgerufen wird. Jeder Thread, der eine COM-Schnittstelle verwendet, muss einen separaten Rückruf für diese Funktion durchführen. **CoInitializeEx** hat die folgende Signatur:
+Jedes Windows Programms, das COM verwendet, muss die COM-Bibliothek durch Aufrufen der [**CoInitializeEx-Funktion initialisieren.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) Jeder Thread, der eine COM-Schnittstelle verwendet, muss einen separaten Aufruf dieser Funktion vornehmen. **CoInitializeEx** verfügt über die folgende Signatur:
 
 
 ```C++
@@ -22,34 +22,34 @@ HRESULT CoInitializeEx(LPVOID pvReserved, DWORD dwCoInit);
 
 
 
-Der erste Parameter ist reserviert und muss **null** sein. Der zweite Parameter gibt das Threading Modell an, das von Ihrem Programm verwendet wird. COM unterstützt zwei verschiedene Threading Modelle, *Apartment Thread* und *Multithread*. Wenn Sie Apartment Threading angeben, haben Sie folgende Garantien:
+Der erste Parameter ist reserviert und muss **NULL** sein. Der zweite Parameter gibt das Threadingmodell an, das vom Programm verwendet wird. COM unterstützt zwei verschiedene Threadingmodelle: *Apartmentthreading* und *Multithreading.* Wenn Sie Apartmentthreading angeben, stellen Sie die folgenden Garantien sicher:
 
--   Sie greifen auf jedes COM-Objekt von einem einzelnen Thread aus zu. COM-Schnittstellen Zeiger werden nicht zwischen mehreren Threads gemeinsam verwendet.
--   Der Thread verfügt über eine Nachrichten Schleife. (Siehe [Fenster Meldungen](window-messages.md) in Modul 1.)
+-   Sie greifen über einen einzelnen Thread auf jedes COM-Objekt zu. Com-Schnittstellenzeiger werden nicht zwischen mehreren Threads gemeinsam verwendet.
+-   Der Thread hat eine Meldungsschleife. (Siehe [Fenstermeldungen](window-messages.md) in Modul 1.)
 
-Wenn eine dieser Einschränkungen nicht zutrifft, verwenden Sie das Multithread-Modell. Legen Sie zum Angeben des Threading Modells eines der folgenden Flags im *dwcoinit* -Parameter fest.
+Wenn eine dieser Einschränkungen nicht zutrifft, verwenden Sie das Multithreadmodell. Um das Threadingmodell anzugeben, legen Sie eines der folgenden Flags im *dwCoInit-Parameter* fest.
 
 
 
 | Flag                          | Beschreibung         |
 |-------------------------------|---------------------|
-| **coinit \_ Apartmentthreaded** | Apartment Thread. |
-| **coinit- \_ Multithread**     | Multithread.      |
+| **COINIT \_ APARTMENTTHREADED** | Apartmentthreading. |
+| **COINIT \_ MULTITHREADED**     | Multithreaded.      |
 
 
 
- 
+ 
 
-Sie müssen genau eines dieser Flags festlegen. Im Allgemeinen sollte ein Thread, der ein Fenster erstellt, das **coinit \_ Apartmentthreaded** -Flag verwenden, und andere Threads sollten **coinit \_ Multithreaded** verwenden. Einige COM-Komponenten erfordern jedoch ein bestimmtes Threading Modell. In der MSDN-Dokumentation sollten Sie wissen, wann dies der Fall ist.
+Sie müssen genau eines dieser Flags festlegen. Im Allgemeinen sollte ein Thread, der ein Fenster erstellt, das **FLAG COINIT \_ APARTMENTTHREADED** verwenden, und andere Threads sollten **COINIT \_ MULTITHREADED** verwenden. Einige COM-Komponenten erfordern jedoch ein bestimmtes Threadingmodell. Die MSDN-Dokumentation sollte Ihnen mitteilen, wann dies der Fall ist.
 
 > [!Note]  
-> Selbst wenn Sie das Apartment Threading angeben, ist es weiterhin möglich, Schnittstellen zwischen Threads mithilfe einer *Methode namens* Marshalling gemeinsam zu nutzen. Das Marshalling geht über den Rahmen dieses Moduls hinaus. Wichtig ist, dass Sie beim Apartment Threading nie einfach einen Schnittstellen Zeiger auf einen anderen Thread kopieren müssen. Weitere Informationen zu den COM-Threading Modellen finden Sie unter [Prozesse, Threads und Apartments](/windows/desktop/com/processes--threads--and-apartments).
+> Selbst wenn Sie Apartmentthreading angeben, ist es dennoch möglich, Schnittstellen zwischen Threads mithilfe einer Technik namens *Marshalling* zu teilen. Das Marshalling geht über den Rahmen dieses Moduls hinaus. Wichtig ist, dass Sie beim Apartmentthreading niemals einfach einen Schnittstellenzeiger auf einen anderen Thread kopieren dürfen. Weitere Informationen zu den COM-Threadingmodellen finden Sie unter [Prozesse, Threads und Apartment.](/windows/desktop/com/processes--threads--and-apartments)
 
- 
+ 
 
-Zusätzlich zu den bereits erwähnten Flags empfiehlt es sich, das kennflag " **coinit \_ deaktivierte \_ OLE1DDE** " im Parameter " *dwcoinit* " festzulegen. Wenn dieses Flag festgelegt wird, wird ein zusätzlicher Aufwand vermieden, der mit dem Objekt Verknüpfungs-und Einbettungs-und Einbettungs-1,0 (
+Zusätzlich zu den bereits erwähnten Flags empfiehlt es sich, das **FLAG COINIT \_ DISABLE \_ OLE1DDE** im *dwCoInit-Parameter* festzulegen. Durch Das Festlegen dieses Flags wird ein zusätzlicher Aufwand vermieden, der mit ole 1.0 (Object Linking and Embedding, Objektverknüpfung und Einbettung) verbunden ist, einer veralteten Technologie.
 
-Im folgenden wird erläutert, wie Sie com für Apartment Threading initialisieren:
+So initialisieren Sie COM für Apartmentthreading:
 
 
 ```C++
@@ -58,11 +58,11 @@ HRESULT hr = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1
 
 
 
-Der **HRESULT** -Rückgabetyp enthält einen Fehler-oder Erfolgs Code. Im nächsten Abschnitt sehen wir uns die com-Fehlerbehandlung an.
+Der **HRESULT-Rückgabetyp** enthält einen Fehler- oder Erfolgscode. Wir sehen uns die COM-Fehlerbehandlung im nächsten Abschnitt an.
 
-## <a name="uninitializing-the-com-library"></a>Aufheben der Initialisierung der com-Bibliothek
+## <a name="uninitializing-the-com-library"></a>Aufheben der Initialisierung der COM-Bibliothek
 
-Bei jedem erfolgreichen Aufrufen von [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)müssen Sie " [**zählinitialize**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) " aufrufen, bevor der Thread beendet wird. Diese Funktion nimmt keine Parameter an und weist keinen Rückgabewert auf.
+Für jeden erfolgreichen Aufruf von [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)müssen Sie [**CoUninitialize**](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) aufrufen, bevor der Thread beendet wird. Diese Funktion nimmt keine Parameter entgegen und hat keinen Rückgabewert.
 
 
 ```C++
@@ -73,8 +73,8 @@ CoUninitialize();
 
 ## <a name="next"></a>Nächste
 
-[Fehler Codes in com](error-codes-in-com.md)
+[Fehlercodes in COM](error-codes-in-com.md)
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Ruft alle icontextnode-Objekte des angegebenen Typs ab, die Nachfolger des angegebenen icontextnode-Objekts sind.
+description: Ruft alle IContextNode-Objekte des angegebenen Typs ab, die Nachfolger des angegebenen IContextNode-Objekts sind.
 ms.assetid: 7e57d6ec-fe04-44c6-904f-7a212bbfcd19
-title: 'Iinkanalyzer:: findnodesoft ypeinsubtree-Methode (iacom. h)'
+title: IInkAnalyzer::FindNodesOfTypeInSubTree-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 545e56d297b053b5b6f5dc61f944d6a4f6d4e03c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16e1516a8da5b4d09b80606bad5cf5f9444d82545394543c46b06a05425befa0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939946"
 ---
-# <a name="iinkanalyzerfindnodesoftypeinsubtree-method"></a>Iinkanalyzer:: findnodesoft ypeinsubtree-Methode
+# <a name="iinkanalyzerfindnodesoftypeinsubtree-method"></a>IInkAnalyzer::FindNodesOfTypeInSubTree-Methode
 
-Ruft alle [**icontextnode**](icontextnode.md) -Objekte des angegebenen Typs ab, die Nachfolger des angegebenen **icontextnode** -Objekts sind.
+Ruft alle [**IContextNode-Objekte**](icontextnode.md) des angegebenen Typs ab, die Nachfolger des angegebenen **IContextNode-Objekts** sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ HRESULT FindNodesOfTypeInSubTree(
 
 <dl> <dt>
 
-*pnodetype* \[ in\]
+*pNodeType* \[ In\]
 </dt> <dd>
 
-Der **GUID** , der den Knotentyp angibt.
+Die **GUID,** die den Knotentyp angibt.
 
 </dd> <dt>
 
-*pcontextnodebug* \[ in\]
+*pContextNodeToSearchFrom* \[ In\]
 </dt> <dd>
 
-Das [**icontextnode**](icontextnode.md) -Objekt, dessen Nachfolgern durchsucht werden.
+Das [**IContextNode-Objekt,**](icontextnode.md) dessen Nachfolger durchsucht werden.
 
 </dd> <dt>
 
-*ppcontextnodesfound* \[ vorgenommen\]
+*ppContextNodesFound* \[ out\]
 </dt> <dd>
 
-Die [**icontextnodes**](icontextnodes.md) -Auflistung, die alle Knoten des Typs " *pnodetype* " enthält, die Nachfolger von " *pcontextnodedesearchfrom*" sind.
+Die [**IContextNodes-Auflistung,**](icontextnodes.md) die alle Knoten vom Typ *pNodeType* enthält, die Nachfolger von *pContextNodeToSearchFrom* sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf *ppcontextnodesfound* , wenn Sie das-Objekt nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für *ppContextNodesFound* auf, wenn Sie das Objekt nicht mehr verwenden müssen.
 
  
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) den *pcontextnodedesearchfrom* -Knoten nicht enthält, gibt diese Methode einen Fehlercode zurück.
+Wenn der [**IInkAnalyzer**](iinkanalyzer.md) den Knoten *pContextNodeToSearchFrom* nicht enthält, gibt diese Methode einen Fehlercode zurück.
 
-Die *pnodetype* -Eigenschaft muss eine Globally Unique Identifier (GUID) aus den [Kontext Knoten Typen](context-node-types.md) Konstanten enthalten.
+Die *pNodeType-Eigenschaft* muss einen GUID (Globally Unique Identifier) aus den [Konstanten für Kontextknotentypen](context-node-types.md) enthalten.
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](icontextnode.md)enthält, wird eine leere [**icontextnodes**](icontextnodes.md) -Auflistung zurückgegeben.
+Wenn [**IInkAnalyzer**](iinkanalyzer.md) keinen solchen [**IContextNode**](icontextnode.md)enthält, wird eine leere [**IContextNodes-Auflistung**](icontextnodes.md) zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,9 +85,9 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](ic
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -96,34 +96,34 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen derartigen [**icontextnode**](ic
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
+[**IInkAnalyzer::FindInkLeafNodes-Methode**](iinkanalyzer-findinkleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findinkleafnodesforstrokes-Methode**](iinkanalyzer-findinkleafnodesforstrokes.md)
+[**IInkAnalyzer::FindInkLeafNodesForStrokes-Methode**](iinkanalyzer-findinkleafnodesforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findleafnodes-Methode**](iinkanalyzer-findleafnodes.md)
+[**IInkAnalyzer::FindLeafNodes-Methode**](iinkanalyzer-findleafnodes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: FindNode-Methode**](iinkanalyzer-findnode.md)
+[**IInkAnalyzer::FindNode-Methode**](iinkanalyzer-findnode.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ype-Methode**](iinkanalyzer-findnodesoftype.md)
+[**IInkAnalyzer::FindNodesOfType-Methode**](iinkanalyzer-findnodesoftype.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodesoft ypeer forstrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
+[**IInkAnalyzer::FindNodesOfTypeForStrokes-Methode**](iinkanalyzer-findnodesoftypeforstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallback-Methode**](iinkanalyzer-findnodeswithcallback.md)
+[**IInkAnalyzer::FindNodesWithCallBack-Methode**](iinkanalyzer-findnodeswithcallback.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: findnodeswithcallbackinsubtree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
+[**IInkAnalyzer::FindNodesWithCallBackInSubTree-Methode**](iinkanalyzer-findnodeswithcallbackinsubtree.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

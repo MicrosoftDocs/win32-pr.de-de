@@ -1,9 +1,9 @@
 ---
-title: WM_CLEAR Meldung (Winuser. h)
-description: Eine Anwendung sendet eine WM- \_ Clear-Meldung an ein Bearbeitungs Steuerelement oder Kombinations Feld, um die aktuelle Auswahl, sofern vorhanden, aus dem Bearbeitungs Steuerelement zu löschen (Löschen).
+title: WM_CLEAR (Winuser.h)
+description: Eine Anwendung sendet eine WM CLEAR-Nachricht an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um die aktuelle Auswahl aus dem Bearbeitungssteuerfeld zu löschen \_ (löschen).
 ms.assetid: 6730a725-01ec-4821-9ffc-1ea267d665b3
 keywords:
-- WM_CLEAR Nachrichten Datenaustausch
+- WM_CLEAR nachricht Data Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 61a8e325704d1e8b953fe59bfaf4e8fcee62cf40
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c6820a9134f112b51474cd5b73e8545583cb02969b02a1bd1428138ebf1049dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120029110"
 ---
-# <a name="wm_clear-message"></a>WM- \_ Clear-Meldung
+# <a name="wm_clear-message"></a>WM \_ CLEAR-Meldung
 
-Eine Anwendung sendet eine **WM- \_ Clear** -Meldung an ein Bearbeitungs Steuerelement oder Kombinations Feld, um die aktuelle Auswahl, sofern vorhanden, aus dem Bearbeitungs Steuerelement zu löschen (Löschen).
+Eine Anwendung sendet eine **WM \_ CLEAR-Nachricht** an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um die aktuelle Auswahl aus dem Bearbeitungssteuerfeld zu löschen (löschen).
 
 
 ```C++
@@ -39,14 +39,14 @@ Eine Anwendung sendet eine **WM- \_ Clear** -Meldung an ein Bearbeitungs Steuere
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> </dl>
 
@@ -54,13 +54,13 @@ Dieser Parameter wird nicht verwendet und muss NULL sein.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der von der WM- **\_ Clear** -Nachricht ausgeführte Löschvorgang kann rückgängig gemacht werden, indem das Bearbeitungs Steuerelement eine [**EM- \_ Rückgängig**](../controls/em-undo.md) -Meldung
+Der von der **WM \_ CLEAR-Nachricht durchgeführte** Löschvorgang kann rückgängig gemacht werden, indem dem Bearbeitungssteuerteil eine [**\_ EM-UNDO-Nachricht gesendet**](../controls/em-undo.md) wird.
 
-Um die aktuelle Auswahl zu löschen und den gelöschten Inhalt in der Zwischenablage zu platzieren, verwenden Sie die [**WM- \_ Ausschneide**](wm-cut.md) Nachricht.
+Um die aktuelle Auswahl zu löschen und den gelöschten Inhalt in der Zwischenablage zu platzieren, verwenden Sie die [**WM \_ CUT-Meldung.**](wm-cut.md)
 
-Beim Senden an ein Kombinations Feld wird die **WM \_** -Lösch Nachricht durch das Bearbeitungs Steuerelement behandelt. Diese Meldung hat keine Auswirkung, wenn Sie mit dem " [**CBS \_ DropDownList**](../controls/combo-box-styles.md) "-Stil an ein Kombinations Feld gesendet wird.
+Wenn sie an ein Kombinationsfeld gesendet wird, wird die **WM \_ CLEAR-Nachricht** vom Bearbeitungssteuerfeld verarbeitet. Diese Meldung hat keine Auswirkungen, wenn sie an ein Kombinationsfeld mit dem [**CBS \_ DROPDOWNLIST-Format gesendet**](../controls/combo-box-styles.md) wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,7 +70,7 @@ Beim Senden an ein Kombinations Feld wird die **WM \_** -Lösch Nachricht durch 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -78,22 +78,22 @@ Beim Senden an ein Kombinations Feld wird die **WM \_** -Lösch Nachricht durch 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM- \_ Kopie**](wm-copy.md)
+[**WM \_ COPY**](wm-copy.md)
 </dt> <dt>
 
-[**WM \_ Ausschneiden**](wm-cut.md)
+[**WM \_ CUT**](wm-cut.md)
 </dt> <dt>
 
-[**WM \_ Einfügen**](wm-paste.md)
+[**WM \_ PASTE**](wm-paste.md)
 </dt> <dt>
 
-[**WM \_ rückgängig machen**](/windows/desktop/Controls/wm-undo)
+[**WM \_ UNDO**](/windows/desktop/Controls/wm-undo)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

@@ -1,7 +1,7 @@
 ---
-description: Wird als Antwort auf die webansichtenbarricade aufgerufen, die vom Benutzer verworfen wird.
+description: Wird als Reaktion auf die Webansicht aufgerufen, die vom Benutzer verworfen wird.
 ms.assetid: 170893b6-c947-45b1-b717-a93a0b083bda
-title: Folder2. dismissedwebviewbarricade-Methode (Shldisp. h)
+title: Folder2.DismissedWebViewBarttede-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: cdedc7292b0dd52ca903b944993e32df1ec2c3b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1a5380330e807eabe76cf1223811fd06147468e12d0c13244b0e44d391aa6e83
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119937100"
 ---
-# <a name="folder2dismissedwebviewbarricade-method"></a>Folder2. dismissedwebviewbarricade-Methode
+# <a name="folder2dismissedwebviewbarricade-method"></a>Folder2.DismissedWebViewBarlidde-Methode
 
-Wird als Antwort auf die webansichtenbarricade aufgerufen, die vom Benutzer verworfen wird.
+Wird als Reaktion auf die Webansicht aufgerufen, die vom Benutzer verworfen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,15 +41,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung ruft diese Methode auf, nachdem der Benutzer die webansichtenbarricade geschlossen hat.
+Eine Anwendung ruft diese Methode auf, nachdem der Benutzer die Webansicht "Cade" verworfen hat.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **dismissedwebviewbarricade** verwendet, um anzugeben, dass die webansichtenbarricade für den Ordner "C: \\ Windows" verworfen wurde. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **DismissedWebViewBar über die** Webansicht für den Ordner "C: Windows" \\ verworfen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -70,7 +70,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -116,25 +116,25 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Folder2**](folder2-object.md)
+[**Ordner2**](folder2-object.md)
 </dt> <dt>
 
 [**Ordner**](folder.md)

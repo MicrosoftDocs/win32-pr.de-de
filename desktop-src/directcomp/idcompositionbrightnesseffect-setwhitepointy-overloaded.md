@@ -1,9 +1,9 @@
 ---
-title: idcompositionbrightnesseffect setwhitepointy-Methode (Dcomp. h)
-description: Legt den y-Wert des weißen Punkts fest.
+title: idcompositionbrightnesseffect SetWhitePointY-Methoden (Dcomp.h)
+description: Legt den y-Wert des Weißpunkts fest.
 ms.assetid: b8111c61-cb02-e23f-6257-36708f775d02
 keywords:
-- Setwhitepointy-Methoden directcomposition
+- SetWhitePointY-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: e2c4a11d20800730f43818f2b69387418aa3151c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1657703347268e7179ddfabdc787eecb023839b308e675e3e9105c3bd7c4b4d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980310"
 ---
-# <a name="idcompositionbrightnesseffectsetwhitepointy-methods"></a>idcompositionbrightnesseffect:: setwhitepointy-Methoden
+# <a name="idcompositionbrightnesseffectsetwhitepointy-methods"></a>idcompositionbrightnesseffect::SetWhitePointY-Methoden
 
-Legt den y-Wert des weißen Punkts fest.
+Legt den y-Wert des Weißpunkts fest.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                               | BESCHREIBUNG                                     |
+| Methode                                                                                               | Beschreibung                                     |
 |:-----------------------------------------------------------------------------------------------------|:------------------------------------------------|
-| [**Setwhitepointy**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointy(float))                               | Legt den y-Wert des weißen Punkts fest.<br/> |
-| [**Setwhitepointy (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointy(idcompositionanimation)) | Legt den y-Wert des weißen Punkts fest.<br/> |
+| [**SetWhitePointY**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointy(float))                               | Legt den y-Wert des Weißpunkts fest.<br/> |
+| [**SetWhitePointY (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionbrightnesseffect-setwhitepointy(idcompositionanimation)) | Legt den y-Wert des Weißpunkts fest.<br/> |
 
 
 
@@ -40,15 +40,15 @@ Legt den y-Wert des weißen Punkts fest.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dcomp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dcomp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**idcompositionbrightnesserffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
+[**idcompositionbrightnesseffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionbrightnesseffect)
 </dt> </dl>
 
 �

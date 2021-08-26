@@ -1,9 +1,9 @@
 ---
-title: ID2D1HwndRenderTarget Resize-Methoden (D2d1. h)
+title: ID2D1HwndRenderTarget Resize-Methoden (D2d1.h)
 description: Ändert die Größe des Renderziels in die angegebene Pixelgröße.
 ms.assetid: b8ea2e96-c69b-4018-9572-c9099bf6202d
 keywords:
-- Größenänderung von Methoden Direct2D
+- Ändern der Größe von Direct2D-Methoden
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 3f15af87c59c943bd7d5dc8ece708d3603bddce6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31ffcae6473924e12ca428fd48927fd1507840dce4fdbce3a18e8f82ffe9fcaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917610"
 ---
-# <a name="id2d1hwndrendertargetresize-methods"></a>ID2D1HwndRenderTarget:: Resize-Methoden
+# <a name="id2d1hwndrendertargetresize-methods"></a>ID2D1HwndRenderTarget::Resize-Methoden
 
 Ändert die Größe des Renderziels in die angegebene Pixelgröße.
 
@@ -27,16 +27,16 @@ ms.locfileid: "106370209"
 
 
 
-| Methode                                                                         | BESCHREIBUNG                                                                    |
+| Methode                                                                         | Beschreibung                                                                    |
 |:-------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| [**Resize (D2D1 \_ size \_ U&)**](/windows/win32/api/d2d1/nf-d2d1-id2d1hwndrendertarget-resize(constd2d1_size_u_))  | Ändert die Größe des Renderziels in die angegebene Pixelgröße. <br/> |
-| [**Größe ändern (D2D1 \_ size \_ U \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1hwndrendertarget-resize(constd2d1_size_u)) | Ändert die Größe des Renderziels in die angegebene Pixelgröße.<br/>  |
+| [**Resize(D2D1 \_ SIZE \_ U&)**](/windows/win32/api/d2d1/nf-d2d1-id2d1hwndrendertarget-resize(constd2d1_size_u_))  | Ändert die Größe des Renderziels in die angegebene Pixelgröße. <br/> |
+| [**Resize(D2D1 \_ SIZE \_ U \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1hwndrendertarget-resize(constd2d1_size_u)) | Ändert die Größe des Renderziels in die angegebene Pixelgröße.<br/>  |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem diese Methode aufgerufen wurde, wird der Inhalt des Back Puffers des Renderziels nicht definiert, auch wenn beim Erstellen des Renderziels die [**D2D1 Present options-Option " \_ \_ \_ \_ Inhalt beibehalten**](/windows/win32/api/d2d1/ne-d2d1-d2d1_present_options) " angegeben wurde.
+Nach dem Aufruf dieser Methode wird der Inhalt des Backpuffers des Renderziels nicht definiert, auch wenn die Option [**D2D1 \_ PRESENT OPTIONS RETAIN \_ \_ \_ CONTENTS**](/windows/win32/api/d2d1/ne-d2d1-d2d1_present_options) beim Erstellen des Renderziels angegeben wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,13 +44,13 @@ Nachdem diese Methode aufgerufen wurde, wird der Inhalt des Back Puffers des Ren
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

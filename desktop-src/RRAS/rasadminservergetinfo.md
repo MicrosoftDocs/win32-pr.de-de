@@ -1,9 +1,9 @@
 ---
-title: Rasadminservergetinfo-Funktion (rassapi. h)
-description: Die rasadminservergetinfo-Funktion Ruft die Serverkonfiguration eines RAS-Servers ab.
+title: RasAdminServerGetInfo-Funktion (Rassapi.h)
+description: Die RasAdminServerGetInfo-Funktion ruft die Serverkonfiguration eines RAS-Servers ab.
 ms.assetid: a1c371fd-462c-443c-8016-592efb2f0b1a
 keywords:
-- Rasadminservergetinfo-Funktion (RAS)
+- RasAdminServerGetInfo-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 115a2421db5efbafb72d73952684ff7758c6995b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f6f83f7310700e774692d876bda979343da80aa45ea8012bf187e50f0af67bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120028450"
 ---
-# <a name="rasadminservergetinfo-function"></a>Rasadminservergetinfo-Funktion
+# <a name="rasadminservergetinfo-function"></a>RasAdminServerGetInfo-Funktion
 
-\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4,0 bereitgestellt. Es wird ein Fehler zurückgegeben, \_ \_ \_ der auf Windows Server 2003 nicht implementiert ist. Anwendungen sollten die [**mpradminservergetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfo) -Funktion verwenden.\]
+\[Diese Funktion wird nur aus Gründen der Abwärtskompatibilität mit Windows NT Server 4.0 bereitgestellt. Es wird ERROR \_ CALL NOT IMPLEMENTED auf Windows Server \_ \_ 2003 zurückgegeben. Anwendungen sollten die [**MprAdminServerGetInfo-Funktion**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfo) verwenden.\]
 
-Die **rasadminservergetinfo** -Funktion Ruft die Serverkonfiguration eines RAS-Servers ab.
+Die **RasAdminServerGetInfo-Funktion** ruft die Serverkonfiguration eines RAS-Servers ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,29 +43,29 @@ DWORD RasAdminServerGetInfo(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit **null** endenden Unicode-Zeichenfolge, die den Namen des Windows NT/Windows 2000-RAS-Servers angibt. Wenn dieser Parameter **null** ist, gibt die Funktion Informationen über den lokalen Computer zurück. Geben Sie den Namen mit führenden " \\ \\ " Zeichen im folgenden Format an: \\ \\ *Servername*.
+Zeiger auf eine mit **NULL beendete** Unicode-Zeichenfolge, die den Namen des Windows NT/Windows 2000 RAS-Servers angibt. Wenn dieser Parameter **NULL ist,** gibt die Funktion Informationen zum lokalen Computer zurück. Geben Sie den Namen mit den \\ \\ führenden Zeichen " " im folgenden Formular an: \\ \\ *Servername*.
 
 </dd> <dt>
 
-*pRasServer0* \[ vorgenommen\]
+*pRasServer0* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf die [**RAS- \_ Server- \_ 0**](ras-server-0-str.md) -Struktur, die die Anzahl der auf dem Server konfigurierten Ports, die Anzahl der derzeit verwendeten Ports und die Server Versionsnummer empfängt.
+Zeiger auf die [**RAS \_ SERVER \_ 0-Struktur,**](ras-server-0-str.md) die die Anzahl der auf dem Server konfigurierten Ports, die Anzahl aktuell verwendeter Ports und die Serverversionsnummer empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert Fehler \_ erfolgreich.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert ERROR \_ SUCCESS.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode. Mögliche Fehlercodes sind diejenigen, die von [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) für die [**callnamedpipe**](/windows/desktop/api/winbase/nf-winbase-callnamedpipea) -Funktion zurückgegeben werden. Es sind keine erweiterten Fehlerinformationen für diese Funktion vorhanden. " **GetLastError**" nicht aufrufen.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode. Mögliche Fehlercodes sind diejenigen, die von [**GetLastError für**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) die [**CallNamedPipe-Funktion zurückgegeben**](/windows/desktop/api/winbase/nf-winbase-callnamedpipea) werden. Es gibt keine erweiterten Fehlerinformationen für diese Funktion. Rufen Sie **getLastError nicht auf.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um alle RAS-Server in einer Domäne aufzulisten, geben Sie die [**NetServerEnum**](/windows/desktop/api/lmserver/nf-lmserver-netserverenum) -Funktion an, und geben Sie \_ \_ für den *Server Type* -Parameter den Befehl SV Type Dialin an.
+Um alle RAS-Server in einer Domäne aufzählen zu können, rufen Sie die [**NetServerEnum-Funktion**](/windows/desktop/api/lmserver/nf-lmserver-netserverenum) auf, und geben Sie SV TYPE DIALIN für \_ den \_ *Servertype-Parameter* an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,8 +75,8 @@ Um alle RAS-Server in einer Domäne aufzulisten, geben Sie die [**NetServerEnum*
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/> | Windows 2000 Server<br/>                                                         |
-| Header<br/>                | <dl> <dt>Rassapi. h</dt> </dl>   |
-| Bibliothek<br/>               | <dl> <dt>Rassapi. lib</dt> </dl> |
+| Header<br/>                | <dl> <dt>Rassapi.h</dt> </dl>   |
+| Bibliothek<br/>               | <dl> <dt>Rassapi.lib</dt> </dl> |
 | DLL<br/>                   | <dl> <dt>Rassapi.dll</dt> </dl> |
 
 
@@ -85,16 +85,16 @@ Um alle RAS-Server in einer Domäne aufzulisten, geben Sie die [**NetServerEnum*
 
 <dl> <dt>
 
-[Remote Zugriffs Dienst (RAS) (Übersicht)](about-remote-access-service.md)
+[Ras-Dienst (RAS): Übersicht](about-remote-access-service.md)
 </dt> <dt>
 
-[RAS-Server-Verwaltungsfunktionen](ras-server-administration-functions.md)
+[RAS-Serververwaltungsfunktionen](ras-server-administration-functions.md)
 </dt> <dt>
 
 [**NetServerEnum**](/windows/win32/api/lmserver/nf-lmserver-netserverenum)
 </dt> <dt>
 
-[**RAS- \_ Server \_ 0**](ras-server-0-str.md)
+[**RAS \_ SERVER \_ 0**](ras-server-0-str.md)
 </dt> </dl>
 
  

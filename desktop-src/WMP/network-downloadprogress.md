@@ -1,9 +1,9 @@
 ---
-title: Network. Download Progress
-description: Die DownloadProgress-Eigenschaft ruft den abgeschlossenen Prozentsatz des Downloads ab.
+title: Network.downloadProgress
+description: Die downloadProgress-Eigenschaft ruft den Prozentsatz des abgeschlossenen Downloads ab.
 ms.assetid: bb57ce84-babb-4dc2-bc2b-c40cbb587e91
 keywords:
-- Network. DownloadProgress-Windows-Media Player
+- Network.downloadProgress Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 605d7d08b346c5cc279176098b2a6d593a2fb925
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ffc8d2707cd5fc24129363d53f9ee58fedf7b15c5da4eb5b80f032524ee66c09
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901720"
 ---
-# <a name="networkdownloadprogress"></a>Network. Download Progress
+# <a name="networkdownloadprogress"></a>Network.downloadProgress
 
-Die **DownloadProgress** -Eigenschaft ruft den abgeschlossenen Prozentsatz des Downloads ab.
+Die **downloadProgress-Eigenschaft** ruft den Prozentsatz des abgeschlossenen Downloads ab.
 
 ## <a name="syntax"></a>Syntax
 
-*Player*. *Netzwerk*. **Download Fortschritt**
+*Player*. *network*. **downloadProgress**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Windows Media Player-Steuerelement mit einer Mediendatei verbunden ist, die gleichzeitig abgespielt und heruntergeladen werden kann, gibt die **DownloadProgress** -Eigenschaft den Prozentsatz der gesamten heruntergeladenen Datei zurück. Diese Funktion wird zurzeit nur auf Webservern unterstützt. Die folgenden Dateiformate können gleichzeitig heruntergeladen und abgespielt werden:
+Wenn das Windows Media Player-Steuerelement mit einer Mediendatei verbunden ist, die gleichzeitig abgespielt und heruntergeladen werden kann, gibt die **downloadProgress-Eigenschaft** den Prozentsatz der gesamten heruntergeladenen Datei zurück. Dieses Feature wird derzeit nur auf Webservern unterstützt. Die folgenden Dateiformate können heruntergeladen und gleichzeitig abgespielt werden:
 
 -   Advanced Systems Format (ASF)
 -   Windows Media Audio (WMA)
 -   Windows Media Video (WMV)
 -   MP3
--   MPEG
+-   Mpeg
 -   WAV
 -   Einige AVI-Dateien
 
-Verwenden Sie den *Player*. **Bufferingereignis** , um zu bestimmen, wann der Download beginnt und endet.
+Verwenden Sie *den Player*. **Pufferungsereignis,** um zu bestimmen, wann der Download beginnt und endet.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *Network* verwendet. **Download Fortschritt** , um den Prozentsatz der abgeschlossenen Downloads anzuzeigen. Die Informationen werden in einem HTML div-Code angezeigt, der mit ID = "DP" erstellt wurde. Das Beispiel verwendet einen Timer mit einem 1-Sekunden-Intervall, um die Anzeige zu aktualisieren. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Netzwerk *verwendet.* **downloadProgress, um** den Prozentsatz des abgeschlossenen Downloads anzuzeigen. Die Informationen werden in einem HTML-DIV angezeigt, der mit der ID = "DP" erstellt wurde. Im Beispiel wird ein Timer mit einem Intervall von 1 Sekunde verwendet, um die Anzeige zu aktualisieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -87,7 +87,7 @@ function UpdateDP(){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -96,10 +96,10 @@ function UpdateDP(){
 
 <dl> <dt>
 
-[**Netzwerk Objekt**](network-object.md)
+[**Netzwerkobjekt**](network-object.md)
 </dt> <dt>
 
-[**Player. buffereing-Ereignis**](player-player-buffering.md)
+[**Player.Buffering-Ereignis**](player-player-buffering.md)
 </dt> </dl>
 
  

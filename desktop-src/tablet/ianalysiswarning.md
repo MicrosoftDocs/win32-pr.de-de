@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Warnung oder einen Fehler dar, die während eines frei Hand Analyse Vorgangs auftritt.
+description: Stellt eine Warnung oder einen Fehler dar, die während eines Ink-Analyse-Vorgangs auftritt.
 ms.assetid: a9b0564b-8a49-44bc-9dbc-60a2fd5b60f2
-title: Ianalysiswarning-Schnittstelle (iacom. h)
+title: IAnalysisWarning-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,49 +13,49 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 79e865ac909d6f9ee1862926ffab06f538661d6e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27e00533894560a84e73f8eb5682d1b70789ab5f2b21be5d6fe3682c543be6a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119940380"
 ---
-# <a name="ianalysiswarning-interface"></a>Ianalysiswarning-Schnittstelle
+# <a name="ianalysiswarning-interface"></a>IAnalysisWarning-Schnittstelle
 
-Stellt eine Warnung oder einen Fehler dar, die während eines frei Hand Analyse Vorgangs auftritt.
+Stellt eine Warnung oder einen Fehler dar, die während eines Ink-Analyse-Vorgangs auftritt.
 
 ## <a name="members"></a>Member
 
-Die **ianalysiswarning** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Ianalysiswarning** verfügt auch über die folgenden Typen von Membern:
+Die **IAnalysisWarning-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IAnalysisWarning** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ianalysiswarning** -Schnittstelle verfügt über diese Methoden.
+Die **IAnalysisWarning-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                            | BESCHREIBUNG                                                                                                                            |
 |:------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getbackgrounderror**](ianalysiswarning-getbackgrounderror.md) | Ruft den Fehlercode für den Vorgang der Hintergrund Handschrift Analyse ab, wenn ein Fehler aufgetreten ist.<br/>                                    |
-| [**GetHint**](ianalysiswarning-gethint.md)                       | Ruft den Analyse Hinweis ab, der diese Warnung ausgelöst hat.<br/>                                                                        |
-| [**GetNodeIds**](ianalysiswarning-getnodeids.md)                 | Ruft die Bezeichner aller relevanten Kontext Knoten ab, die dieser Warnung zugeordnet sind.<br/>                              |
-| [**Getwarningcode**](ianalysiswarning-getwarningcode.md)         | Ruft den Typ der Warnung ab, die mithilfe der [**AnalysisWarningCode**](/windows/desktop/tablet/analysiswarningcode) -Enumeration aufgetreten ist.<br/> |
+| [**GetBackgroundError**](ianalysiswarning-getbackgrounderror.md) | Ruft den Fehlercode für den Hintergrund-Ink-Analysevorgang ab, wenn ein Fehler aufgetreten ist.<br/>                                    |
+| [**GetHint**](ianalysiswarning-gethint.md)                       | Ruft den Analysehinweis ab, der diese Warnung verursacht hat.<br/>                                                                        |
+| [**GetNodeIds**](ianalysiswarning-getnodeids.md)                 | Ruft die Bezeichner aller relevanten Kontextknoten ab, die dieser Warnung zugeordnet sind.<br/>                              |
+| [**GetWarningCode**](ianalysiswarning-getwarningcode.md)         | Ruft den Typ der Warnung ab, die mithilfe der [**AnalysisWarningCode-Enumeration aufgetreten**](/windows/desktop/tablet/analysiswarningcode) ist.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Typen von Warnungen, die auftreten können, werden durch die [**AnalysisWarningCode**](/windows/desktop/tablet/analysiswarningcode) -Enumeration beschrieben. Warnungen treten häufig auf, wenn Sie versuchen, eine Funktion zu verwenden, die von [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) nicht unterstützt wird, die von [**iinkanalyzer**](iinkanalyzer.md) verwendet wird.
+Die Typen von Warnungen, die auftreten können, werden von der [**AnalysisWarningCode-Enumeration**](/windows/desktop/tablet/analysiswarningcode) beschrieben. Häufig werden Warnungen angezeigt, wenn Sie versuchen, eine Funktion zu verwenden, die nicht vom [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) unterstützt wird, den [**IInkAnalyzer**](iinkanalyzer.md) verwendet.
 
-Einige Warnungen weisen darauf hin, dass der [**iinkanalyzer**](iinkanalyzer.md) den Analyse Vorgang nicht abgeschlossen hat. Weitere Informationen finden Sie unter [**AnalysisWarningCode**](/windows/desktop/tablet/analysiswarningcode).
+Einige Warnungen deuten darauf hin, dass [**IInkAnalyzer**](iinkanalyzer.md) den Analysevorgang nicht abgeschlossen hat. Weitere Informationen finden Sie unter [**AnalysisWarningCode**](/windows/desktop/tablet/analysiswarningcode).
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Gliederung eines Ereignis Handlers für das [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis. Der Handler überprüft [**ianalysisstatus:: iserfolg**](ianalysisstatus-issuccessful.md). Wenn der Analyse Vorgang Warnungen generiert, durchläuft der Handler die Auflistung von **ianalysiswarning** -Objekten.
+Das folgende Beispiel zeigt eine Gliederung eines Ereignishandlers für das [**\_ IAnalysisEvents::Results-Ereignis.**](-ianalysisevents-results.md) Der Handler überprüft [**IAnalysisStatus::IsSuccessful.**](ianalysisstatus-issuccessful.md) Wenn der Analysevorgang Warnungen generiert, durch iteriert der Handler die Auflistung von **IAnalysisWarning-Objekten.**
 
 
 ```C++
@@ -142,9 +142,9 @@ STDMETHODIMP CMyClass::Results(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -153,13 +153,13 @@ STDMETHODIMP CMyClass::Results(
 
 <dl> <dt>
 
-[**Ianalysiswarning**](ianalysiswarnings.md)
+[**IAnalysisWarnings**](ianalysiswarnings.md)
 </dt> <dt>
 
-[**AnalysisWarningCode**](analysiswarningcode.md)
+[**Analysiswarningcode**](analysiswarningcode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

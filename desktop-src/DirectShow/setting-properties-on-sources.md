@@ -4,30 +4,30 @@ ms.assetid: fa1c7c40-915b-4577-aa33-6bd06707d93a
 title: Festlegen von Eigenschaften für Quellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5de58e25cc9fdec34ed285ebbfc2e9cfd3dcdf95
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 06908f4f15a6d1107ce15e71679c92ec8065725ed883a6561df5cd21af3e13c1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103859944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965020"
 ---
 # <a name="setting-properties-on-sources"></a>Festlegen von Eigenschaften für Quellen
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Wenn Sie ein neues Quell Objekt erstellen, müssen Sie einige Eigenschaften festlegen und andere optional festlegen. Sie müssen die folgenden Eigenschaften festlegen.
+Wenn Sie ein neues Quellobjekt erstellen, gibt es einige Eigenschaften, die Sie festlegen müssen, und andere, die Sie optional festlegen können. Sie müssen die folgenden Eigenschaften festlegen.
 
--   Die Start-und Endzeit Zeiten in Relation zum Rest der Zeitachse. Aufrufen der [**iamtimelineobj:: setstartstation**](iamtimelineobj-setstartstop.md) -Methode. Legen Sie keine Überlappungs Zeiten für Quell Objekte innerhalb desselben Titels fest, oder es wird ein nicht definiertes Verhalten verursacht.
--   Die Mediendatei, die als Quellclip verwendet werden soll. Nennen Sie [**iamtimelinesrc:: setmedianame**](iamtimelinesrc-setmedianame.md).
--   Die Start-und Endzeit der Medien, relativ zur ursprünglichen Quelldatei. Aufrufen der [**iamtimelinesrc:: setmediatimes**](iamtimelinesrc-setmediatimes.md) -Methode. Ausnahme: Wenn es sich bei der Quelle um ein Image handelt, geben Sie die Medien Zeiten nicht an. Weitere Informationen zu Medien Zeiten finden Sie unter [Zeit in DirectShow-Bearbeitungs Diensten](time-in-directshow-editing-services.md).
+-   Die Start- und Beendigungszeiten relativ zum Rest der Zeitachse. Rufen Sie die [**IAMTimelineObj::SetStartStop-Methode**](iamtimelineobj-setstartstop.md) auf. Legen Sie keine Überlappungszeiten für Quellobjekte innerhalb derselben Spur fest, da dies zu nicht definiertem Verhalten führt.
+-   Die Mediendatei, die als Quellclip verwendet werden soll. Rufen Sie [**IAMTimelineSrc::SetMediaName auf.**](iamtimelinesrc-setmedianame.md)
+-   Die Start- und Beendigungszeiten des Mediums relativ zur ursprünglichen Quelldatei. Rufen Sie die [**IAMTimelineSrc::SetMediaTimes-Methode**](iamtimelinesrc-setmediatimes.md) auf. Ausnahme: Wenn es sich bei der Quelle um ein Standbild handelt, geben Sie die Medienzeiten nicht an. Weitere Informationen zu Medienzeiten finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
 
-Ein Quell Objekt erbt seinen Medientyp von der übergeordneten Gruppe. Daher ist es nicht erforderlich, einen Medientyp anzugeben.
+Ein Quellobjekt erbt seinen Medientyp von der übergeordneten Gruppe, sodass es nicht erforderlich ist, einen Medientyp anzugeben.
 
-Zu den optionalen Eigenschaften zählen folgende:
+Optionale Eigenschaften umfassen Folgendes:
 
--   Der streckungs Modus. Der streckungs Modus gibt an, wie Microsoft® DirectShow® Bearbeitungs Dienste (des) eine Quelle rendert, deren Größe nicht den Ausgabe Dimensionen entspricht. Standardmäßig wird von des ein Bild gestreckt, ohne das Seitenverhältnis beizubehalten. Alternativ kann des ein Bild zuschneiden oder ein Buchstaben Feld erstellen. Aufrufen der [**iamtimelinesrc:: setstretchmode**](iamtimelinesrc-setstretchmode.md) -Methode, um den streckungs Modus anzugeben.
--   Die Dauer der Quelldatei. Wenn Sie diese Eigenschaft vor dem Festlegen der Medien Zeiten festlegen, überprüft der die Endzeit des Mediums und verkürzt die Endzeit, wenn diese die Datei Dauer überschreitet. Dadurch können später Renderingfehler vermieden werden. Sie können die Dauer der Datei mithilfe des Medien Detektors abrufen, wie unter [Verwenden des Medien Detektors](using-the-media-detector.md)beschrieben. Aufrufen der [**iamtimelinesrc:: setmedialength**](iamtimelinesrc-setmedialength.md) -Methode, um die Datei Dauer anzugeben.
--   Die streamnummer. Standardmäßig verwendet ein Quell Objekt den ersten Stream in der Datei, der mit dem Medientyp der übergeordneten Gruppe übereinstimmt. Wenn eine Datei zwei oder mehr Streams desselben Medientyps enthält, wählen Sie den zu verwendenden Stream aus, indem Sie [**iamtimelinesrc:: setstreamnumber**](iamtimelinesrc-setstreamnumber.md)aufrufen. Sie können das Medien Erkennungs Modul verwenden, um die Anzahl der Streams zu ermitteln.
+-   Der Stretchmodus. Der Stretchingmodus gibt an, wie Microsoft® DirectShow® Editing Services (DES) eine Quelle rendert, deren Größe nicht mit den Ausgabedimensionen übereinstimmt. Standardmäßig streckt DES ein Bild, ohne das Seitenverhältnis zu erhalten. Alternativ kann DES ein Bild zuschneiden oder ein Letterbox erstellen. Rufen Sie die [**IAMTimelineSrc::SetStretchMode-Methode**](iamtimelinesrc-setstretchmode.md) auf, um den Stretchmodus anzugeben.
+-   Die Dauer der Quelldatei. Wenn Sie diese Eigenschaft festlegen, bevor Sie die Medienzeiten festlegen, überprüft DES die Beendigungszeit des Mediums und schneidet die Beendigungszeit ab, wenn sie die Dateidauer überschreitet. Dadurch können Später Renderingfehler vermieden werden. Sie können die Dauer der Datei mithilfe der Medienerkennung abrufen, wie unter [Verwenden der Medienerkennung](using-the-media-detector.md)beschrieben. Rufen Sie die [**IAMTimelineSrc::SetMediaLength-Methode**](iamtimelinesrc-setmedialength.md) auf, um die Dateidauer anzugeben.
+-   Die Streamnummer. Standardmäßig verwendet ein Quellobjekt den ersten Stream in der Datei, der dem Medientyp der übergeordneten Gruppe entspricht. Wenn eine Datei zwei oder mehr Streams desselben Medientyps enthält, wählen Sie den zu verwendenden Datenstrom aus, indem [**Sie IAMTimelineSrc::SetStreamNumber**](iamtimelinesrc-setstreamnumber.md)aufrufen. Sie können die Medienerkennung verwenden, um die Anzahl der Streams zu ermitteln.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

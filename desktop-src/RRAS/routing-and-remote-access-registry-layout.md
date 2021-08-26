@@ -1,21 +1,21 @@
 ---
-title: Registrierungs Layout für Routing und Remote Zugriff
-description: Die folgende Syntax zeigt ein Beispiel für das Registrierungs Layout für den Routerdienst.
+title: Routing- und RAS-Registrierungslayout
+description: Die folgende Syntax zeigt ein Beispiel für ein Registrierungslayout für den Routerdienst.
 ms.assetid: 5464c2f7-6bb8-4838-939d-d58508715505
 keywords:
-- RRAS für Routing-und RAS-Dienst, Routing-und RAS-Registrierungs Layout
+- Routing- und RAS-Dienst RRAS, Routing und Remotezugriffsregistrierungslayout
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f6ed72b569a8fe2efe1423ce2429c31cd0a0a65
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cd3388c2a11f69a473a334105d2872872b98b17b4956f12f886e50ada89f406f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027400"
 ---
-# <a name="routing-and-remote-access-registry-layout"></a>Registrierungs Layout für Routing und Remote Zugriff
+# <a name="routing-and-remote-access-registry-layout"></a>Routing- und RAS-Registrierungslayout
 
-Die folgende Syntax zeigt ein Beispiel für das Registrierungs Layout für den Routerdienst.
+Die folgende Syntax zeigt ein Beispiel für ein Registrierungslayout für den Routerdienst.
 
 ``` syntax
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan 
@@ -132,13 +132,13 @@ HKEY_LOCAL_MACHINE\Software\Microsoft
                 <guid4>: REG_SZ: ddmadmin.dll
 ```
 
-Jeder im System installierte Router-Manager verfügt über einen Registrierungsschlüssel, der unter dem routerschlüssel erstellt wird. Die DllPath-Variable gibt den Speicherort der dll an, die dem routermanager entspricht, und die ProtocolID-Variable gibt die Protokoll familienkennung für den Router-Manager an.
+Jeder im System installierte Router-Manager verfügt über einen Registrierungsschlüssel, der unter dem Routerschlüssel erstellt wird. Die DLLPath-Variable gibt den Speicherort der DLL an, die dem Router-Manager entspricht, und die ProtocolID-Variable gibt den Protokollfamilienbezeichner für den Router-Manager an.
 
-Der Schnittstellen Schlüssel wird mit den Schnittstellen aufgefüllt, die dem lokalen System aus der Routerkonfiguration hinzugefügt wurden. Jede Schnittstelle verfügt über einen zugeordneten Typ (intern, dediziert oder dynamisch) und Unterschlüssel für jeden routermanager (z. b. IP und IPX).
+Der Schlüssel Schnittstellen wird mit den Schnittstellen aufgefüllt, die dem lokalen System aus der Routerkonfiguration hinzugefügt wurden. Jede Schnittstelle verfügt über einen zugeordneten Typ (intern, dedant oder dynamisch) und Unterschlüssel für jeden Router-Manager (z. B. IP und IPX).
 
- 
+ 
 
- 
+ 
 
 
 

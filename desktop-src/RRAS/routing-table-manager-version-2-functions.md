@@ -1,162 +1,162 @@
 ---
-title: Routing Table Manager Version 2-Funktionen
-description: Die folgenden Funktionen werden für die Interaktion mit dem Routing Tabellen-Manager verwendet.
+title: Routing Table Manager Version 2 Functions
+description: Die folgenden Funktionen werden für die Interaktion mit dem Routingtabellen-Manager verwendet.
 ms.assetid: ac5c6ada-c38e-476a-9896-cdd8c51cc0be
 keywords:
-- RRAS für den Routing-und RAS-Dienst, Routing-Tabellen-Manager Version 2, Funktionen
-- Routing Table Manager Version 2 RRAS, Functions
+- Routing- und RAS-Dienst RRAS, Routing Table Manager Version 2, Funktionen
+- RoutingTabellen-Manager, Version 2 RRAS, Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f59e4a1ad2bf091d8a74672f1f473589c5fa1d3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3cb7138b54ee0fa747c7d367c54d7a0fb893c3d2d451577932c669650a0fc76e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026920"
 ---
-# <a name="routing-table-manager-version-2-functions"></a>Routing Table Manager Version 2-Funktionen
+# <a name="routing-table-manager-version-2-functions"></a>Routing Table Manager Version 2 Functions
 
-Die folgenden Funktionen werden für die Interaktion mit dem Routing Tabellen-Manager verwendet.
+Die folgenden Funktionen werden für die Interaktion mit dem Routingtabellen-Manager verwendet.
 
 ## <a name="registration-functions"></a>Registrierungsfunktionen
 
-[**Rtmregisterentity**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterentity)
+[**RtmRegisterEntity**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterentity)
 
-[**Rtmderegisterentity**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterentity)
+[**RtmDeregisterEntity**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterentity)
 
-[**Rtmgetregisteredentities**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetregisteredentities)
+[**RtmGetRegisteredEntities**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetregisteredentities)
 
-[**Rtmreleaseentities**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentities)
+[**RtmReleaseEntities**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentities)
 
-## <a name="opaque-pointer-functions"></a>Nicht transparente Zeiger Funktionen
+## <a name="opaque-pointer-functions"></a>Nicht transparente Zeigerfunktionen
 
-[**Rtmlockdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockdestination)
+[**RtmLockDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockdestination)
 
-[**Rtmgetopaqueingeformationpointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetopaqueinformationpointer)
+[**RtmGetOpaqueInformationPointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetopaqueinformationpointer)
 
-## <a name="export-method-functions"></a>Methoden Funktionen exportieren
+## <a name="export-method-functions"></a>Funktionen der Exportmethode
 
-[**Rtmgetentitymethods**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentitymethods)
+[**RtmGetEntityMethods**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentitymethods)
 
-[**Rtminvokemethod**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminvokemethod)
+[**RtmInvokeMethod**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminvokemethod)
 
-[**Rtmblockmethods**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmblockmethods)
+[**RtmBlockMethods**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmblockmethods)
 
-## <a name="handle-to-information-structure-functions"></a>Handle für Informationsstruktur Funktionen
+## <a name="handle-to-information-structure-functions"></a>Verarbeiten von Informationsstrukturfunktionen
 
-[**Rtmgetentityinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentityinfo)
+[**RtmGetEntityInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetentityinfo)
 
-[**Rtmgetdestinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetdestinfo)
+[**RtmGetDestInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetdestinfo)
 
-[**Rtmgetrouteingefo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetrouteinfo)
+[**RtmGetRouteInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetrouteinfo)
 
-[**Rtmgetnexthopinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthopinfo)
+[**RtmGetNextHopInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthopinfo)
 
-[**Rtmreleaseentityinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentityinfo)
+[**RtmReleaseEntityInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseentityinfo)
 
-[**Rtmreleasedestinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedestinfo)
+[**RtmReleaseDestInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedestinfo)
 
-[**Rtmreleaserouteingefo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaserouteinfo)
+[**RtmReleaseRouteInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaserouteinfo)
 
-[**Rtmreleasenexthopinfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthopinfo)
+[**RtmReleaseNextHopInfo**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthopinfo)
 
-## <a name="routing-table-insertion-and-deletion-functions"></a>Funktionen zum Einfügen und Löschen von Routing Tabellen
+## <a name="routing-table-insertion-and-deletion-functions"></a>Funktionen zum Einfügen und Löschen von Routingtabellen
 
-[**Rtmaddroutededest**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddroutetodest)
+[**RtmAddRouteToDest**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddroutetodest)
 
-[**Rtmdeleteroutededest**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutetodest)
+[**RtmDeleteRouteToDest**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutetodest)
 
-[**Rtmholddestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmholddestination)
+[**RtmHoldDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmholddestination)
 
-[**Rtmgetroutepointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetroutepointer)
+[**RtmGetRoutePointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetroutepointer)
 
-[**Rtmlockroute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockroute)
+[**RtmLockRoute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlockroute)
 
-[**Rtmupdateandunlockroute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmupdateandunlockroute)
+[**RtmUpdateAndUnlockRoute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmupdateandunlockroute)
 
-## <a name="routing-table-query-functions"></a>Routing Tabellen-Abfragefunktionen
+## <a name="routing-table-query-functions"></a>Routingtabellenabfragefunktionen
 
-[**Rtmgetexactmatchdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchdestination)
+[**RtmGetExactMatchDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchdestination)
 
-[**Rtmgetmuspecificdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetmostspecificdestination)
+[**RtmGetMostSpecificDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetmostspecificdestination)
 
-[**Rtmgetlessspecificdestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlessspecificdestination)
+[**RtmGetLessSpecificDestination**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlessspecificdestination)
 
-[**Rtmgetexactmatchroute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchroute)
+[**RtmGetExactMatchRoute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetexactmatchroute)
 
-[**Rtmisbestroute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmisbestroute)
+[**RtmIsBestRoute**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmisbestroute)
 
-## <a name="next-hop-insertion-and-deletion-functions"></a>Funktionen zum Einfügen und löschen im nächsten Hop
+## <a name="next-hop-insertion-and-deletion-functions"></a>Funktionen zum Einfügen und Löschen des nächsten Hops
 
-[**Rtmaddnexthop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddnexthop)
+[**RtmAddNextHop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddnexthop)
 
-[**Rtmfindnexthop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmfindnexthop)
+[**RtmFindNextHop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmfindnexthop)
 
-[**Rtmdeletenexthop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeletenexthop)
+[**RtmDeleteNextHop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeletenexthop)
 
-[**Rtmgetnexthoppointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthoppointer)
+[**RtmGetNextHopPointer**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetnexthoppointer)
 
-[**Rtmlocknexthop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlocknexthop)
+[**RtmLockNextHop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmlocknexthop)
 
-## <a name="routing-table-enumeration-functions"></a>Routing Tabellen-Enumerationsfunktionen
+## <a name="routing-table-enumeration-functions"></a>Routingtabellen-Enumerationsfunktionen
 
-[**Rtmkreatedesterum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatedestenum)
+[**RtmCreateDestEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatedestenum)
 
-[**Rtmgetenumschlag**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumdests)
+[**RtmGetEnumDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumdests)
 
-[**Rtmreleasedests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedests)
+[**RtmReleaseDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedests)
 
-[**Rtmkreaterouteenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreaterouteenum)
+[**RtmCreateRouteEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreaterouteenum)
 
-[**Rtmgetenumroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumroutes)
+[**RtmGetEnumRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumroutes)
 
-[**Rtmreleaseroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes)
+[**RtmReleaseRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes)
 
-[**Rtmkreatenexthopenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatenexthopenum)
+[**RtmCreateNextHopEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatenexthopenum)
 
-[**Rtmgetenrenexthops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumnexthops)
+[**RtmGetEnumNextHops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumnexthops)
 
-[**Rtmreleasenexthops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthops)
+[**RtmReleaseNextHops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthops)
 
-[**Rtmdeleteenumschlag handle**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteenumhandle)
+[**RtmDeleteEnumHandle**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteenumhandle)
 
-## <a name="change-notification-functions"></a>Änderungs Benachrichtigungsfunktionen
+## <a name="change-notification-functions"></a>Ändern von Benachrichtigungsfunktionen
 
-[**Rtmregisterforchangenotifizierung**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterforchangenotification)
+[**RtmRegisterForChangeNotification**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmregisterforchangenotification)
 
-[**Rtmgetchangeddebug**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests)
+[**RtmGetChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests)
 
-[**Rtmreleasechangeddebug**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)
+[**RtmReleaseChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)
 
-[**Rtmignorechangedentsts**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmignorechangeddests)
+[**RtmIgnoreChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmignorechangeddests)
 
-[**Rtmgetchangestatus**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangestatus)
+[**RtmGetChangeStatus**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangestatus)
 
-[**Rtmmarkdestforchangenotifizierung**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmmarkdestforchangenotification)
+[**RtmMarkDestForChangeNotification**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmmarkdestforchangenotification)
 
-[**Rtmismarkedforchangenotifizierung**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmismarkedforchangenotification)
+[**RtmIsMarkedForChangeNotification**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmismarkedforchangenotification)
 
-[**Rtmderegisterfromchangenotifizierung**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterfromchangenotification)
+[**RtmDeregisterFromChangeNotification**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmderegisterfromchangenotification)
 
-## <a name="route-list-function"></a>Routenlisten Funktion
+## <a name="route-list-function"></a>Routenlistenfunktion
 
-[**Rtmkreateroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelist)
+[**RtmCreateRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelist)
 
-[**Rtminsertinroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminsertinroutelist)
+[**RtmInsertInRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminsertinroutelist)
 
-[**Rtmkreateroutelistenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelistenum)
+[**RtmCreateRouteListEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelistenum)
 
-[**Rtmgetlistenumroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlistenumroutes)
+[**RtmGetListEnumRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlistenumroutes)
 
-[**Rtmdeleteroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutelist)
+[**RtmDeleteRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutelist)
 
-## <a name="handle-management-functions"></a>Verwalten von Verwaltungsfunktionen
+## <a name="handle-management-functions"></a>Behandeln von Verwaltungsfunktionen
 
-[**Rtmreferencehandles**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreferencehandles)
+[**RtmReferenceHandles**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreferencehandles)
 
- 
+ 
 
- 
+ 
 
 
 
