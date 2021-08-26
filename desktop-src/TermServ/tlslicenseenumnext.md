@@ -1,10 +1,10 @@
 ---
 title: TLSLicenseEnumNext-Funktion
-description: Setzt einen vorherigen Aufruf der TLSLicenseEnumBegin-Funktion fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
+description: Setzt einen vorherigen Aufruf der TLSLicenseEnumBegin-Funktion fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
 ms.assetid: 6932289b-b59c-493c-8dbc-03c0662e921e
 ms.tgt_platform: multiple
 keywords:
-- TLSLicenseEnumNext-Remotedesktopdienste
+- TLSLicenseEnumNext-Funktion Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -24,10 +24,10 @@ ms.locfileid: "119986800"
 ---
 # <a name="tlslicenseenumnext-function"></a>TLSLicenseEnumNext-Funktion
 
-Setzt einen vorherigen Aufruf der [**TLSLicenseEnumBegin-Funktion**](tlslicenseenumbegin.md) fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
+Setzt einen vorherigen Aufruf der [**TLSLicenseEnumBegin-Funktion**](tlslicenseenumbegin.md) fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
 
 > [!Note]  
-> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mstlsapi.dll.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mstlsapi.dll herzustellen.
 
  
 
@@ -51,7 +51,7 @@ DWORD WINAPI TLSLicenseEnumNext(
 *hHandle* \[ In\]
 </dt> <dd>
 
-Handle für einen Remotedesktop Lizenzserver. Geben Sie ein Handle an, das von der [**TLSConnectToLsServer-Funktion geöffnet**](tlsconnecttolsserver.md) wird.
+Verarbeiten eines Remotedesktop Lizenzservers. Geben Sie ein Handle an, das von der [**TLSConnectToLsServer-Funktion**](tlsconnecttolsserver.md) geöffnet wird.
 
 </dd> <dt>
 
@@ -82,18 +82,18 @@ Der Aufruf ist erfolgreich.
 
 <span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>
 
-<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**LSERVER \_ ICH \_ HABE KEINE DATEN \_ \_ MEHR** (4001)
+<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**LSERVER \_ I \_ NO \_ MORE \_ DATA** (4001)
 
 
 </dt> <dd>
 
-Keine Lizenzen mehr entsprechen den Suchkriterien.
+Keine weiteren Lizenzen entsprechen den Suchkriterien.
 
 </dd> <dt>
 
 <span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>
 
-<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**LSERVER \_ INTERNER \_ \_ E-FEHLER** (5001)
+<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**LSERVER \_ E \_ INTERNER \_ FEHLER** (5001)
 
 
 </dt> <dd>
@@ -104,12 +104,12 @@ Interner Fehler auf dem Lizenzserver.
 
 <span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>
 
-<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**LSERVER \_ E \_ \_ UNGÜLTIGE SEQUENZ** (5006)
+<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**LSERVER \_ E \_ UNGÜLTIGE \_ SEQUENZ** (5006)
 
 
 </dt> <dd>
 
-Die aufrufende Sequenz war ungültig. Muss die [**TLSLicenseEnumBegin()-Funktion**](tlslicenseenumbegin.md) vor diesem aufrufen.
+Die aufrufende Sequenz war ungültig. Muss zuvor die [**TLSLicenseEnumBegin()-Funktion**](tlslicenseenumbegin.md) aufrufen.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Die aufrufende Sequenz war ungültig. Muss die [**TLSLicenseEnumBegin()-Funktion
 
 </dt> <dd>
 
-Der Lizenzserver ist zu ausgelastet, um die Anforderung zu verarbeiten.
+Der Lizenzserver ist zu stark ausgelastet, um die Anforderung zu verarbeiten.
 
 </dd> <dt>
 
@@ -144,7 +144,7 @@ Diese Funktion gibt die folgenden möglichen Rückgabewerte zurück.
 **RPC \_ S \_ OK**
 </dt> <dd>
 
-Der Aufruf war erfolgreich. Überprüfen Sie den Wert des *pdwErrCode-Parameters,* um den Rückgabecode für den Aufruf zu erhalten.
+Der Aufruf war erfolgreich. Überprüfen Sie den Wert des *pdwErrCode-Parameters,* um den Rückgabecode für den Aufruf abzurufen.
 
 </dd> <dt>
 
@@ -167,7 +167,7 @@ Das Argument war ungültig.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

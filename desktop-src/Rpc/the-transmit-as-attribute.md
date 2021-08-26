@@ -1,55 +1,55 @@
 ---
-title: Das Transmit_as-Attribut
-description: Das Attribut "\ \_ übertragen als \" bietet eine Möglichkeit, das Datenmarshalling zu steuern, ohne sich Gedanken über das Marshalling von Daten auf niedriger Ebene \ 8212 zu machen, d. h. ohne sich Gedanken über Datengrößen oder Byte Austausch Vorgänge in einer heterogenen Umgebung zu machen.
+title: Das transmit_as Attribut
+description: The \ transmit\_as\ attribute offers a way to control data marshaling without worrying about marshaling data at a low level \ 8212;that is, without worrying about data sizes or byte swapping in a heterogeneous environment.
 ms.assetid: 04e670c9-b091-457d-aeca-058cf5b664e8
 keywords:
-- Remote Prozedur Aufruf RPC, Attribute, Transmit_as
+- Remoteprozeduraufruf RPC , Attribute, transmit_as
 - transmit_as
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f08b885826aea302a16d8c23709de0ef0b07a848
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 617422c50bae46de72bac1e548b6f248b19d0cb2436ac0c08b265bbba4f5a6cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016640"
 ---
-# <a name="the-transmit_as-attribute"></a>Das Attribut "übertragen \_ als"
+# <a name="the-transmit_as-attribute"></a>Die Übertragung \_ als Attribut
 
-Das **\[** Attribut "über [**tragen \_ als**](/windows/desktop/Midl/transmit-as) " **\]** bietet eine Möglichkeit, das Marshalling von Daten zu steuern, ohne sich Gedanken über das Marshalling von Daten auf niedriger Ebene zu machen, d. –., ohne sich Gedanken über Datengrößen oder Byte Austausch Vorgänge in einer heterogenen Umgebung Wenn Sie die Menge der über das Netzwerk übertragenen Daten reduzieren können, kann das Attribut "über **\[ tragen \_ als \]** " Ihre Anwendung effizienter gestalten.
+The **\[**[**transmit\_as**](/windows/desktop/Midl/transmit-as)**\]** attribute offers a way to control data marshaling without worrying about marshaling data at a low level—that is, without worrying about data sizes or byte swapping in a heterogeneous environment. Indem Sie die Menge der über das Netzwerk übertragenen Daten reduzieren können, kann die **\[ Übertragung \_ \]** als Attribut Ihre Anwendung effizienter gestalten.
 
-Verwenden Sie das Attribut "über **\[ tragen \_ als \]** ", um einen Datentyp anzugeben, der von den RPC-Stubdaten über das Netzwerk übertragen wird, anstatt den von der Anwendung bereitgestellten Datentyp zu verwenden. Sie stellen Routinen bereit, die den Datentyp in und aus dem Typ konvertieren, der für die Übertragung verwendet wird. Sie müssen auch Routinen bereitstellen, um den für den Datentyp und den übertragenen Typ verwendeten Arbeitsspeicher freizugeben. Im folgenden Beispiel wird der **xmit- \_ Typ** als Datentyp definiert, der für alle Anwendungsdaten übertragen wird, die als Typ der **\_ Typspezifikation** angegeben sind:
+Sie verwenden das **\[ Attribut transmit \_ as \]** , um einen Datentyp anzugeben, den die RPC-Stubs über das Netzwerk übertragen, anstatt den von der Anwendung bereitgestellten Datentyp zu verwenden. Sie geben Routinen an, die den Datentyp in den und aus dem Typ konvertieren, der für die Übertragung verwendet wird. Sie müssen auch Routinen zur Verfügung geben, um den für den Datentyp und den übertragenen Typ verwendeten Arbeitsspeicher frei zu geben. Im folgenden Beispiel wird der **\_ xmit-Typ** als der Datentyp definiert, der für alle Anwendungsdaten übertragen wird, die als typtypspezifikation **angegeben \_ sind:**
 
 ``` syntax
 typedef [transmit_as (xmit_type)] type_spec type;
 ```
 
-In der folgenden Tabelle werden die vier von Programmierern bereitgestellten Routine Namen beschrieben. **Type** ist der Datentyp, der der Anwendung bekannt ist, und der **\_ Typ xmit** ist der Datentyp, der für die Übertragung verwendet wird.
+In der folgenden Tabelle werden die vier vom Programmierer bereitgestellten Routinenamen beschrieben. **Type** ist der Datentyp, der der Anwendung bekannt ist, und **der \_ xmit-Typ** ist der für die Übertragung verwendete Datentyp.
 
 
 
-| -Routine zurückgegebener Wert                                                 | BESCHREIBUNG                                                                                                                                     |
+| -Routine zurückgegebener Wert                                                 | Beschreibung                                                                                                                                     |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_in \_ xmit eingeben**](the-type-to-xmit-function.md)     | Ordnet ein Objekt des übertragenen Typs zu und konvertiert vom Anwendungstyp in den Typ, der über das Netzwerk (Aufrufer und Objekt aufgerufen) übertragen wird. |
-| [**Typ \_ von \_ xmit**](the-type-from-xmit-function.md) | Konvertiert einen übertragenen Typ in einen Anwendungstyp (Aufrufer und Objekt mit dem Namen).                                                                  |
-| [**Geben Sie " \_ Free \_ inst**](the-type-free-inst-function.md) | Gibt Ressourcen frei, die vom Anwendungstyp verwendet werden (nur Objekt aufgerufen).                                                                              |
-| [**Geben Sie "Free" ein. \_ \_**](the-type-free-xmit-function.md) | Gibt den vom Typ zurückgegebenen Speicher *****\_*** für die \_ xmit** -Routine frei (Aufrufer und Objekt aufgerufen).                                                      |
+| [**type \_ to \_ xmit**](the-type-to-xmit-function.md)     | Ordnet ein Objekt des übertragenen Typs zu und konvertiert vom Anwendungstyp in den Typ, der über das Netzwerk übertragen wird (Aufrufer und Objekt aufgerufen). |
+| [**Typ \_ aus \_ xmit**](the-type-from-xmit-function.md) | Konvertiert vom übertragenen Typ in den Anwendungstyp (Aufrufer und Aufgerufenes Objekt).                                                                  |
+| [**Geben Sie \_ free \_ inst ein.**](the-type-free-inst-function.md) | Gibt ressourcen frei, die vom Anwendungstyp verwendet werden (objekt nur aufgerufen).                                                                              |
+| [**Geben Sie \_ free \_ xmit ein.**](the-type-free-xmit-function.md) | Gibt vom Typ zurückgegebenen Speicher **für** _\__ *_die \_ xmit-Routine_* frei (Aufrufer und Objekt aufgerufen).                                                      |
 
 
 
- 
+ 
 
-Mit Ausnahme dieser vier vom Programmierer bereitgestellten Funktionen wird der übertragene Typ nicht von der Anwendung bearbeitet. Der übertragene Typ wird nur zum Verschieben von Daten über das Netzwerk definiert. Nachdem die Daten in den von der Anwendung verwendeten Typ konvertiert wurden, wird der vom übertragenen Typ verwendete Arbeitsspeicher freigegeben.
+Anders als bei diesen vier vom Programmierer bereitgestellten Funktionen wird der übertragene Typ nicht von der Anwendung bearbeitet. Der übertragene Typ wird nur definiert, um Daten über das Netzwerk zu verschieben. Nachdem die Daten in den von der Anwendung verwendeten Typ konvertiert wurden, wird der vom übertragenen Typ verwendete Arbeitsspeicher frei.
 
-Diese vom Programmierer bereitgestellten Routinen werden entweder vom Client oder von der Serveranwendung basierend auf den direktionalen Attributen bereitgestellt. Wenn der-Parameter **\[** nur [**in**](/windows/desktop/Midl/in) ist **\]** , überträgt der Client an den Server. Der Client benötigt den **Typ \_ , um \_ xmit** -und- **\_ typfreie \_ xmit** -Funktionen zu geben. Der Server benötigt den **Typ \_ von \_ xmit** und **die \_ typfreien \_ inst** -Funktionen. Bei einem reinen **\[** [**out**](/windows/desktop/Midl/out-idl) **\]** -Parameter überträgt der Server an den Client. Die Serveranwendung muss den **Typ \_ in \_ xmit** und den **Typ " \_ freie \_ xmit** -Funktionen" implementieren, während das Client Programm den **Typ aus der \_ \_ xmit** -Funktion bereitstellen muss. Bei den temporären **xmit- \_ Typobjekten** ruft der Stub den **Typ " ***\_*** Free \_ xmit** " auf, um Speicher freizugeben, der durch einen aufrufungstyp **\_ zu \_ xmit** belegt wird.
+Diese vom Programmierer bereitgestellten Routinen werden entweder vom Client oder von der Serveranwendung basierend auf den direktionalen Attributen bereitgestellt. Wenn sich der Parameter **\[** [**nur in**](/windows/desktop/Midl/in) **\]** befindet, überträgt der Client an den Server. Der Client benötigt den **Typ , \_ um \_ xmit zu verwenden** und kostenlose **\_ \_ xmit-Funktionen ein** geben zu können. Der Server benötigt den **Typ \_ von \_ xmit** und **typ free \_ \_ inst** Functions. Bei einem **\[** [](/windows/desktop/Midl/out-idl) **\]** out-only-Parameter überträgt der Server an den Client. Die Serveranwendung muss den -Typ implementieren, um **\_ \_ xmit-** und **\_ \_ free-Xmit-Funktionen** zu verwenden, während das Clientprogramm den Typ der **\_ \_ xmit-Funktion zur Verfügung** stellen muss. Für die  **temporären xmit-Typobjekte \_** wird der Stub vom Typ free xmit aufrufen, um jeglichen Arbeitsspeicher frei zu geben, der durch einen Aufruf des Typs _\__ *_\__* **von \_ \_ xmit zugeordnet wird.**
 
-Bestimmte Richtlinien gelten für die Anwendungstyp Instanz. Wenn der Anwendungstyp ein Zeiger ist oder einen Zeiger enthält, muss der **Typ** \_ **aus der \_ xmit** -Routine Speicher für die Daten zuweisen, auf die die Zeiger zeigen (das Anwendungstyp Objekt selbst wird vom Stub auf die übliche Weise manipuliert).
+Bestimmte Richtlinien gelten für die Anwendungstypinstanz. Wenn der Anwendungstyp ein Zeiger ist oder einen Zeiger enthält, muss der Typ der \_ **\_ xmit-Routine** Speicher für die Daten zuordnen, auf die die Zeiger zeigen (das Anwendungstypobjekt selbst wird vom Stub auf die übliche Weise bearbeitet).
 
-Für **\[ out \]** -und **\[ in-, out- \] out \]** -Parameter oder eine der zugehörigen Komponenten eines Typs, der das Attribut "über **\[ tragen \_ als \]** " enthält, wird die **Type** \_ **Free \_ inst** -Routine automatisch für die Datenobjekte aufgerufen, die über das-Attribut verfügen. Bei **in** -Parametern wird die  \_ **typfreie \_ inst** -Routine nur aufgerufen, wenn das über **\[ tragen \_ als \]** -Attribut auf den Parameter angewendet wurde. Wenn das-Attribut auf die Komponenten des-Parameters angewendet wurde,  \_ wird die **typfreie \_ inst** -Routine nicht aufgerufen. Es gibt keine Freigabe Aufrufe für die eingebetteten Daten und höchstens einen Aufruf (im Zusammenhang mit dem Attribut der obersten Ebene) **für einen nur** -Parameter.
+Für **\[ out- \]** **\[ und \] \]** out-Parameter oder eine ihrer Komponenten eines Typs, der die Übertragung als Attribut enthält, wird der typfreie **\[ \_ \]** \_ **\_ inst-Routine** automatisch für die Datenobjekte aufgerufen, die über das -Attribut verfügen. Für **in** -Parameter wird die  \_ **typfreie \_ inst-Routine** nur aufgerufen, wenn **\[ das Attribut transmit \_ as \]** auf den Parameter angewendet wurde. Wenn das -Attribut auf die Komponenten des -Parameters angewendet wurde, wird **der** Typ \_ **free \_ inst** routine nicht aufgerufen. Es gibt keine Freirufe für die eingebetteten Daten und mindestens einen Aufruf (im Zusammenhang mit dem Attribut der obersten Ebene) für einen **in** only-Parameter.
 
-Mit der mittleren l 2,0 müssen sowohl der Client als auch der Server alle vier Funktionen bereitstellen. Beispielsweise kann eine verknüpfte Liste als Array mit Größenanpassung übertragen werden. Der **Typ \_ für die \_ xmit** -Routine durchläuft die verknüpfte Liste und kopiert die geordneten Daten in ein Array. Die Array Elemente sind so angeordnet, dass die vielen Zeiger, die der Listenstruktur zugeordnet sind, nicht übertragen werden müssen. Der **Typ \_ aus der \_ xmit** -Routine liest das Array und fügt seine Elemente in eine verknüpfte Listenstruktur ein.
+Ab MIDL 2.0 müssen Client und Server alle vier Funktionen erfüllen. Beispielsweise kann eine verknüpfte Liste als Array mit Größe übertragen werden. Der **Zu \_ \_ xmit-Typ** durchfing die verknüpfte Liste und kopiert die geordneten Daten in ein Array. Die Arrayelemente sind so geordnet, dass die vielen Zeiger, die der Listenstruktur zugeordnet sind, nicht übertragen werden müssen. Der **Typ aus der \_ \_ xmit-Routine** liest das Array und legt seine Elemente in eine Struktur mit verknüpften Listen ab.
 
-Die Liste mit doppelten Verknüpfungen (Double \_ Link \_ List) enthält Daten und Zeiger auf die vorherigen und nächsten Listenelemente:
+Die doppelverknüpfungsbasierte Liste (DOUBLE LINK LIST) enthält Daten und Zeiger \_ \_ auf die vorherigen und nächsten Listenelemente:
 
 ``` syntax
 typedef struct _DOUBLE_LINK_LIST 
@@ -60,7 +60,7 @@ typedef struct _DOUBLE_LINK_LIST
 } DOUBLE_LINK_LIST;
 ```
 
-Anstatt die komplexe Struktur **\[** zu versenden, kann das [**Übertragungs- \_ As**](/windows/desktop/Midl/transmit-as) - **\]** Attribut verwendet werden, um es über das Netzwerk als Array zu senden. Die Reihenfolge der Elemente in der Liste wird durch die Reihenfolge der Elemente im Array zu geringeren Kosten beibehalten:
+Anstatt die komplexe Struktur zu versenden, kann **\[** [**das Attribut "transmit \_ as"**](/windows/desktop/Midl/transmit-as) verwendet werden, um es als Array über **\]** das Netzwerk zu senden. Die Reihenfolge der Elemente im Array behält die Reihenfolge der Elemente in der Liste zu geringeren Kosten bei:
 
 ``` syntax
 typedef struct _DOUBLE_XMIT_TYPE 
@@ -70,19 +70,19 @@ typedef struct _DOUBLE_XMIT_TYPE
 } DOUBLE_XMIT_TYPE;
 ```
 
-Das Attribut "über **\[ tragen \_ als \]** " wird in der IDL-Datei angezeigt:
+Das **\[ Attribut transmit \_ as \]** wird in der IDL-Datei angezeigt:
 
 ``` syntax
 typedef [transmit_as(DOUBLE_XMIT_TYPE)]  DOUBLE_LINK_LIST DOUBLE_LINK_TYPE;
 ```
 
-Im folgenden Beispiel definiert **modifylistproc** den Parameter vom Typ Double- \_ \_ Linktyp als in- **\[ , \] out** -Parameter:
+Im folgenden Beispiel definiert **ModifyListProc** den Parameter vom Typ DOUBLE \_ LINK TYPE als \_ **\[ in-, \] out-Parameter:**
 
 ``` syntax
 void ModifyListProc([in, out] DOUBLE_LINK_TYPE * pHead)
 ```
 
-Die vier vom Programmierer definierten Funktionen verwenden den Namen des Typs in den Funktionsnamen und verwenden die dargestellten und übertragenen Typen wie erforderlich als Parametertypen:
+Die vier vom Programmierer definierten Funktionen verwenden den Namen des Typs in den Funktionsnamen und die dargestellten und übertragenen Typen nach Bedarf als Parametertypen:
 
 ``` syntax
 void __RPC_USER DOUBLE_LINK_TYPE_to_xmit ( 
@@ -100,6 +100,6 @@ void __RPC_USER DOUBLE_LINK_TYPE_free_xmit (
     DOUBLE_XMIT_TYPE __RPC_FAR * pArray);
 ```
 
- 
+ 
 
- 
+ 

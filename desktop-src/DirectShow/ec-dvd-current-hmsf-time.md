@@ -1,7 +1,7 @@
 ---
-description: Signalisiert die aktuelle Zeit im DVD- \_ hmsf- \_ Zeit Code Format relativ zum Anfang des Titels. Dieses Ereignis wird am Anfang jeder vobu ausgelöst, die alle 0,4 bis 1,0 Sekunden auftritt.
+description: Signalisiert die aktuelle Zeit im DVD \_ HMSF \_ TIMECODE-Format relativ zum Anfang des Titels. Dieses Ereignis wird am Anfang jedes VOBU ausgelöst, das alle 0,4 bis 1,0 Sekunden auftritt.
 ms.assetid: 7c81a09a-21f3-49b2-b90a-7cbc9c815bad
-title: EC_DVD_CURRENT_HMSF_TIME (dvdevcode. h)
+title: EC_DVD_CURRENT_HMSF_TIME (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 36306b95682e62ffebf8fb819dcc4b7c5185493c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 52a6eb077599b4fe6dfd89267974cb71c0c5a58a65d6c52307d77eb3e98201d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119965810"
 ---
-# <a name="ec_dvd_current_hmsf_time"></a>EC- \_ DVD \_ aktuelle \_ hmsf- \_ Zeit
+# <a name="ec_dvd_current_hmsf_time"></a>EC \_ DVD \_ CURRENT \_ HMSF \_ TIME
 
-Signalisiert die aktuelle Zeit im [**DVD- \_ hmsf- \_ Zeit Code**](/windows/win32/api/strmif/ns-strmif-dvd_hmsf_timecode) Format relativ zum Anfang des Titels. Dieses Ereignis wird am Anfang jeder vobu ausgelöst, die alle 0,4 bis 1,0 Sekunden auftritt.
+Signalisiert die aktuelle Zeit im [**DVD \_ HMSF \_ TIMECODE-Format**](/windows/win32/api/strmif/ns-strmif-dvd_hmsf_timecode) relativ zum Anfang des Titels. Dieses Ereignis wird am Anfang jedes VOBU ausgelöst, das alle 0,4 bis 1,0 Sekunden auftritt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,22 +31,22 @@ Signalisiert die aktuelle Zeit im [**DVD- \_ hmsf- \_ Zeit Code**](/windows/win3
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Ein ULONG-Wert, der die \_ hmsf- \_ Zeit Code Struktur der DVD enthält. Weisen Sie lParam1 einer ULONG-Variablen zu, und wandeln Sie diese Variable dann in eine DVD- \_ hmsf- \_ Zeit Leitzahl um, um auf ihre Werte zuzugreifen.
+Ein ULONG-Wert, der die \_ \_ HMSF-TIMECODE-Struktur der DVD enthält. Weisen Sie lParam1 einer ULONG-Variablen zu, und konvertieren Sie diese Variable dann in eine DVD \_ HMSF \_ TIMECODE, um auf ihre Werte zu zugreifen.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-Ein ULONG-Wert, der eine Union von [**DVD- \_ \_ timecodeflags**](/windows/win32/api/strmif/ne-strmif-dvd_timecode_flags)enthält.
+Ein ULONG-Wert, der eine Vereinigung von [**DVD \_ TIMECODE \_ FLAGS enthält.**](/windows/win32/api/strmif/ne-strmif-dvd_timecode_flags)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das \_ hmsf-Zeit \_ Code Format in DVD soll das alte BCD-Format ersetzen, das in den \_ \_ aktuellen Zeit Ereignissen der EC-DVD zurückgegeben wird \_ . Die hmsf-Timecodes sind einfacher zu arbeiten. Damit der Navigator die aktuellen \_ hmsf-Zeit Ereignisse der EC-DVD und nicht die \_ \_ \_ \_ aktuellen Zeit Ereignisse der EC-DVD sendet \_ \_ , muss eine Anwendung aufgerufen werden `IDvdControl2::SetOption(DVD_HMSF_TimeCodeEvents, TRUE)` . Wenn dieses Flag festgelegt wird, erwartet der Navigator auch, dass alle Zeitparameter in den [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) -und [**IDvdInfo2**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2) -Methoden als DVD- \_ hmsf-Timecodes übermittelt werden \_ .
+Das DVD HMSF TIMECODE-Format soll das alte BCD-Format ersetzen, das \_ in EC DVD CURRENT \_ \_ \_ \_ TIME-Ereignissen zurückgegeben wird. Die HMSF-Zeitcodes sind einfacher zu arbeiten. Damit der Navigator EC \_ DVD \_ CURRENT \_ HMSF TIME-Ereignisse anstelle von EC DVD CURRENT TIME-Ereignissen sendet, muss \_ eine Anwendung \_ \_ \_ `IDvdControl2::SetOption(DVD_HMSF_TimeCodeEvents, TRUE)` aufrufen. Wenn dieses Flag festgelegt ist, erwartet der Navigator auch, dass alle Zeitparameter in den [**Methoden IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) und [**IDvdInfo2**](/windows/desktop/api/Strmif/nn-strmif-idvdinfo2) als DVD \_ HMSF \_ TIMECODEs übergeben werden.
 
-Dieses Ereignis wird in den Titel Domänen ausgelöst.
+Dieses Ereignis wird in den Titeldomänen ausgelöst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,21 +54,21 @@ Dieses Ereignis wird in den Titel Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

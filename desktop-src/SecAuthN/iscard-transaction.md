@@ -1,7 +1,7 @@
 ---
-description: Führt einen Schreib-und Lesevorgang für den smartcardbefehl (Application Protocol Data Unit) aus.
+description: Führt einen Schreib- und Lesevorgang für das Smartcardbefehlsobjekt (Anwendungsprotokoll-Dateneinheit) aus.
 ms.assetid: 4dc8ed56-97e0-4c05-a70a-ea2ffd976d47
-title: 'Iscard:: Transaction-Methode (scardmgr. h)'
+title: ISCard::Transaction-Methode (Scardmgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 2abe9d4acd4d59019fe0c8ce122baa12fde06f2e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60f5be785da0cca6aac4fdf1c098d49548696420042ce60a97a46de73edde9bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356861"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015560"
 ---
-# <a name="iscardtransaction-method"></a>Iscard:: Transaction-Methode
+# <a name="iscardtransaction-method"></a>ISCard::Transaction-Methode
 
-\[Die **Transaktions** Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Transaction-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Transaktions** Methode führt einen Schreib-und Lesevorgang für den [*smartcardbefehl*](../secgloss/s-gly.md) ([*Application Protocol Data Unit*](../secgloss/a-gly.md)) aus. Die Antwort Zeichenfolge von der Smartcard für die Befehls Zeichenfolge, die auf der Karte definiert ist, die an die Smartcard gesendet wurde, kann nach der Rückgabe dieser Funktion aufgerufen werden.
+Die **Transaction-Methode** führt einen Schreib- und Lesevorgang für das [*Smartcardbefehlsobjekt*](../secgloss/s-gly.md) [*(Anwendungsprotokoll-Dateneinheit)*](../secgloss/a-gly.md)aus. Auf die Antwortzeichenfolge von der Smartcard für die Befehlszeichenfolge, die in der an die Smartcard gesendeten Karte definiert ist, kann nach der Rückgabe dieser Funktion zugegriffen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,37 +41,37 @@ HRESULT Transaction(
 
 <dl> <dt>
 
-*ppcmd* \[ in, out\]
+*ppCmd* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf das Smartcard-Befehls Objekt.
+Ein Zeiger auf das Smartcard-Befehlsobjekt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                              |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Der Vorgang wurde erfolgreich abgeschlossen.<br/>         |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *ppcmd* -Parameter ist ungültig.<br/>           |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppcmd* übergeben.<br/>          |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Der Arbeitsspeicher zum erfüllen der Anforderung ist nicht verfügbar.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *ppCmd-Parameter* ist ungültig.<br/>           |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *ppCmd übergeben.*<br/>          |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Der Arbeitsspeicher zum Erfüllen der Anforderung ist nicht verfügbar.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie einen Schreib-und Lesevorgang für das Smartcard-Befehls Objekt ausführen.
+Das folgende Beispiel zeigt die Ausführung eines Schreib- und Lesevorgang für das Smartcard-Befehlsobjekt.
 
 
 ```C++
@@ -96,55 +96,55 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardmgr. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardmgr. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardmgr.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardmgr.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscard ist definiert als 1461aac3-6810-11D0-918f -00aa00c18068<br/>               |
+| IID<br/>                      | IID \_ ISCard ist als 1461AAC3-6810-11D0-918F-00AA00C18068 definiert.<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attachbyhandle**](iscard-attachbyhandle.md)
+[**AttachByHandle**](iscard-attachbyhandle.md)
 </dt> <dt>
 
-[**Attachbyreader**](iscard-attachbyreader.md)
+[**AttachByReader**](iscard-attachbyreader.md)
 </dt> <dt>
 
 [**Trennen**](iscard-detach.md)
 </dt> <dt>
 
-[**\_ATR erhalten**](iscard-get-atr.md)
+[**get \_ Atr**](iscard-get-atr.md)
 </dt> <dt>
 
-[**\_cardhandle erhalten**](iscard-get-cardhandle.md)
+[**Get \_ CardHandle**](iscard-get-cardhandle.md)
 </dt> <dt>
 
-[**\_Kontext erhalten**](iscard-get-context.md)
+[**Get \_ Context**](iscard-get-context.md)
 </dt> <dt>
 
-[**get- \_ Protokoll**](iscard-get-protocol.md)
+[**\_get-Protokoll**](iscard-get-protocol.md)
 </dt> <dt>
 
-[**\_Status erhalten**](iscard-get-status.md)
+[**Status \_ "get"**](iscard-get-status.md)
 </dt> <dt>
 
-[**Iscard**](iscard.md)
+[**ISCard**](iscard.md)
 </dt> <dt>
 
-[**Sperrkarte**](iscard-lockscard.md)
+[**LockSCard**](iscard-lockscard.md)
 </dt> <dt>
 
-[**Erneut**](iscard-reattach.md)
+[**Anfügen**](iscard-reattach.md)
 </dt> <dt>
 
-[**Unlockcard**](iscard-unlockscard.md)
+[**UnlockSCard**](iscard-unlockscard.md)
 </dt> </dl>
 
  

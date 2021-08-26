@@ -1,87 +1,87 @@
 ---
-description: Gibt in einem audiomedientyp die Zuweisung von Audiokanälen zu Redner Positionen an.
+description: Gibt in einem Audiomedientyp die Zuweisung von Audiokanälen zu Sprecherpositionen an.
 ms.assetid: fa5f6baa-0a21-4162-8870-38e71763aba0
-title: MF_MT_AUDIO_CHANNEL_MASK-Attribut (mfapi. h)
+title: MF_MT_AUDIO_CHANNEL_MASK Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5293f5387a2c293b97ee32db54fcfb3f3ff304d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 544f287ad9cc8addc60245143e079f0ccdd3c1fead043198be93eed59babc98c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955930"
 ---
-# <a name="mf_mt_audio_channel_mask-attribute"></a>MF \_ MT \_ - \_ Audiokanal- \_ Attribut Maske
+# <a name="mf_mt_audio_channel_mask-attribute"></a>MF \_ MT AUDIO CHANNEL \_ \_ \_ MASK-Attribut
 
-Gibt in einem audiomedientyp die Zuweisung von Audiokanälen zu Redner Positionen an.
+Gibt in einem Audiomedientyp die Zuweisung von Audiokanälen zu Sprecherpositionen an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-Der Wert dieses Attributs ist ein bitweises **or** der folgenden Flags, die in der Header Datei "mmreg. h" definiert sind.
+Der Wert dieses Attributs ist ein bitweises **OR** der folgenden Flags, die in der Headerdatei mmreg.h definiert sind.
 
 <dl> <dt>
 
-<span id="SPEAKER_FRONT_LEFT"></span><span id="speaker_front_left"></span>**Sprecher \_ Front- \_ Links** (0x1)
+<span id="SPEAKER_FRONT_LEFT"></span><span id="speaker_front_left"></span>**SPEAKER \_ FRONT \_ LEFT** (0x1)
 </dt> <dt>
 
-<span id="SPEAKER_FRONT_RIGHT"></span><span id="speaker_front_right"></span>**Sprecher \_ Front- \_ right** (0x2)
+<span id="SPEAKER_FRONT_RIGHT"></span><span id="speaker_front_right"></span>**SPEAKER \_ FRONT \_ RIGHT** (0x2)
 </dt> <dt>
 
-<span id="SPEAKER_FRONT_CENTER"></span><span id="speaker_front_center"></span>**Sprecher \_ Front- \_ Center** (0x4)
+<span id="SPEAKER_FRONT_CENTER"></span><span id="speaker_front_center"></span>**SPEAKER \_ FRONT \_ CENTER** (0x4)
 </dt> <dt>
 
-<span id="SPEAKER_LOW_FREQUENCY"></span><span id="speaker_low_frequency"></span>**Sprecher \_ Niedrige \_ Häufigkeit** (0x8)
+<span id="SPEAKER_LOW_FREQUENCY"></span><span id="speaker_low_frequency"></span>**SPEAKER \_ LOW \_ FREQUENCY** (0x8)
 </dt> <dt>
 
-<span id="SPEAKER_BACK_LEFT"></span><span id="speaker_back_left"></span>**Sprecher \_ Zurück \_ Links** (0x10)
+<span id="SPEAKER_BACK_LEFT"></span><span id="speaker_back_left"></span>**SPEAKER \_ ZURÜCK \_ LINKS** (0x10)
 </dt> <dt>
 
-<span id="SPEAKER_BACK_RIGHT"></span><span id="speaker_back_right"></span>**Sprecher \_ Zurück \_ Rechts** (0x20)
+<span id="SPEAKER_BACK_RIGHT"></span><span id="speaker_back_right"></span>**SPEAKER \_ ZURÜCK \_ RECHTS** (0x20)
 </dt> <dt>
 
-<span id="SPEAKER_FRONT_LEFT_OF_CENTER"></span><span id="speaker_front_left_of_center"></span>**Sprecher \_ Vordere \_ linke \_ \_ Mitte** (0x40)
+<span id="SPEAKER_FRONT_LEFT_OF_CENTER"></span><span id="speaker_front_left_of_center"></span>**SPEAKER \_ \_FRONT LEFT OF \_ \_ CENTER** (0X40)
 </dt> <dt>
 
-<span id="SPEAKER_FRONT_RIGHT_OF_CENTER"></span><span id="speaker_front_right_of_center"></span>**Sprecher \_ Vorder \_ Seite \_ von \_ Mitte** (0x80)
+<span id="SPEAKER_FRONT_RIGHT_OF_CENTER"></span><span id="speaker_front_right_of_center"></span>**SPEAKER \_ \_FRONT RIGHT OF \_ \_ CENTER** (0x80)
 </dt> <dt>
 
-<span id="SPEAKER_BACK_CENTER"></span><span id="speaker_back_center"></span>**Sprecher \_ \_Backcenter** (0x100)
+<span id="SPEAKER_BACK_CENTER"></span><span id="speaker_back_center"></span>**SPEAKER \_ BACK \_ CENTER** (0x100)
 </dt> <dt>
 
-<span id="SPEAKER_SIDE_LEFT"></span><span id="speaker_side_left"></span>**Sprecher \_ Seite \_ Links** (0x200)
+<span id="SPEAKER_SIDE_LEFT"></span><span id="speaker_side_left"></span>**SPEAKER \_ SIDE \_ LEFT** (0x200)
 </dt> <dt>
 
-<span id="SPEAKER_SIDE_RIGHT"></span><span id="speaker_side_right"></span>**Sprecher \_ Side \_ right** (0x400)
+<span id="SPEAKER_SIDE_RIGHT"></span><span id="speaker_side_right"></span>**SPEAKER \_ SIDE \_ RIGHT** (0x400)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_CENTER"></span><span id="speaker_top_center"></span>**Sprecher \_ Top \_ Center** (0x800)
+<span id="SPEAKER_TOP_CENTER"></span><span id="speaker_top_center"></span>**SPEAKER \_ TOP \_ CENTER** (0x800)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_FRONT_LEFT"></span><span id="speaker_top_front_left"></span>**Sprecher \_ Obere \_ Vorder \_** Seite (0x1000)
+<span id="SPEAKER_TOP_FRONT_LEFT"></span><span id="speaker_top_front_left"></span>**SPEAKER \_ TOP \_ FRONT \_ LEFT** (0x1000)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_FRONT_CENTER"></span><span id="speaker_top_front_center"></span>**Sprecher \_ Top- \_ Front- \_ Center** (0x2000)
+<span id="SPEAKER_TOP_FRONT_CENTER"></span><span id="speaker_top_front_center"></span>**SPEAKER \_ TOP \_ FRONT \_ CENTER** (0x2000)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_FRONT_RIGHT"></span><span id="speaker_top_front_right"></span>**Sprecher \_ Obere \_ Vorder \_** Seite (0x4000)
+<span id="SPEAKER_TOP_FRONT_RIGHT"></span><span id="speaker_top_front_right"></span>**SPEAKER \_ OBEN \_ \_ RECHTS** (0x4000)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_BACK_LEFT"></span><span id="speaker_top_back_left"></span>**Sprecher \_ Oben \_ \_ Links** (0X8000)
+<span id="SPEAKER_TOP_BACK_LEFT"></span><span id="speaker_top_back_left"></span>**SPEAKER \_ OBEN \_ ZURÜCK \_ LINKS** (0x8000)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_BACK_CENTER"></span><span id="speaker_top_back_center"></span>**Sprecher \_ Top- \_ Back- \_ Center** (0x10000)
+<span id="SPEAKER_TOP_BACK_CENTER"></span><span id="speaker_top_back_center"></span>**SPEAKER \_ TOP \_ BACK \_ CENTER** (0x10000)
 </dt> <dt>
 
-<span id="SPEAKER_TOP_BACK_RIGHT"></span><span id="speaker_top_back_right"></span>**Sprecher \_ Oben \_ \_ Rechts** (0x20000)
+<span id="SPEAKER_TOP_BACK_RIGHT"></span><span id="speaker_top_back_right"></span>**SPEAKER \_ OBEN \_ ZURÜCK \_ RECHTS** (0x20000)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut entspricht dem **dwchannelmask** -Member der [**WAVEFORMATEXTENSIBLE**](/windows/win32/api/mmreg/ns-mmreg-waveformatextensible) -Struktur.
+Dieses Attribut entspricht dem **dwChannelMask-Member** der [**WAVEFORMATEXTENSIBLE-Struktur.**](/windows/win32/api/mmreg/ns-mmreg-waveformatextensible)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,29 +89,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

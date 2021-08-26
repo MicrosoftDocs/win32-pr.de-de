@@ -1,50 +1,50 @@
 ---
-description: Konfigurieren von Codec-DMOS
+description: Konfigurieren von Codec-DMOs
 ms.assetid: 431b33f1-ceb0-4f1b-a9f2-72e88b63f973
-title: Konfigurieren von Codec-DMOS
+title: Konfigurieren von Codec-DMOs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 564c0e6c566d9f583a495238f3ea6f0716d7adde
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4040c0a16c0311d14b0553336e1d9b70a7a6c1fd28a0f01277c955eea55ec7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484083"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958330"
 ---
-# <a name="configuring-codec-dmos"></a>Konfigurieren von Codec-DMOS
+# <a name="configuring-codec-dmos"></a>Konfigurieren von Codec-DMOs
 
-In diesem Thema wird der Prozess der Konfiguration der Codec-DMOS beschrieben. Jeder Codec verfügt über bestimmte Prozeduren, aber die gemeinsamen Informationen werden hier beschrieben.
+In diesem Thema wird der Prozess der Konfiguration der Codec-DMOs beschrieben. Jeder Codec verfügt über bestimmte Verfahren, aber die informationen, die allen gemeinsam sind, werden hier beschrieben.
 
-## <a name="configuring-dmo-inputs-and-outputs"></a>Konfigurieren von DMO-Eingaben und-Ausgaben
+## <a name="configuring-dmo-inputs-and-outputs"></a>Konfigurieren DMO Eingaben und Ausgaben
 
-Jeder DMO unterstützt bestimmte Eingabe-und Ausgabetypen. Sie können unterstützte Typen für Eingaben und Ausgaben abrufen, indem Sie [**imediaobject:: getinputtype**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-getinputtype) für Eingaben und [**imediaobject:: getoutputtype**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-getoutputtype) für Ausgaben aufrufen. Sie können die unterstützten Formate auflisten, indem Sie wiederholte Aufrufe an beide Methoden vornehmen und den Typindex bei jedem Aufruf erhöhen. Wenn der Index die des endgültigen unterstützten Typs überschreitet, gibt der-Rückruf DMO \_ E \_ nicht \_ mehr \_ Elemente zurück.
+Jede DMO unterstützt bestimmte Eingabe- und Ausgabetypen. Sie können unterstützte Typen für Eingaben und Ausgaben abrufen, indem [**Sie IMediaObject::GetInputType**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-getinputtype) für Eingaben und [**IMediaObject::GetOutputType**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-getoutputtype) für Ausgaben aufrufen. Sie können die unterstützten Formate aufzählen, indem Sie wiederholte Aufrufe an beide Methoden vornehmen und den Typindex mit jedem Aufruf erhöhen. Wenn der Index den des letzten unterstützten Typs überschreitet, gibt der Aufruf DMO \_ E NO MORE ITEMS \_ \_ \_ zurück.
 
-Für die Video Codecs wird nur ein Ausgabetyp oder Eingabetyp für einen angegebenen Medien Untertyp aufgelistet. Bei den Audiocodecs wird jeder einzelne unterstützte Typ aufgezählt. Weitere Informationen zu unterstützten Typen für einzelne Codecs finden Sie unter [Arbeiten mit Audiodaten](workingwithaudio.md) und [Arbeiten mit Videos](workingwithvideo.md).
+Für die Videocodecs wird nur ein Ausgabetyp oder Eingabetyp für einen bestimmten Medienuntertyp aufzählt. Für die Audiocodecs wird jeder einzelne unterstützte Typ aufzählt. Weitere Informationen zu unterstützten Typen für einzelne Codecs finden Sie unter [Working with Audio (Arbeiten mit Audio)](workingwithaudio.md) und [Working with Video (Arbeiten mit Video).](workingwithvideo.md)
 
-Nachdem Sie die Medientypen für die Eingabe-und Ausgabedaten Ströme konfiguriert haben, legen Sie Sie durch Aufrufen von [**imediaobject:: setinputtype**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-setinputtype) bzw. [**imediaobject:: setoutputtype**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-setoutputtype) fest. Beide Methoden geben den **DMO \_ E- \_ Typ \_ nicht \_ akzeptiert** zurück, wenn der angegebene Typ ungültig ist.
+Nachdem Sie die Medientypen für die Eingabe- und Ausgabestreams konfiguriert haben, legen Sie sie fest, indem [**Sie IMediaObject::SetInputType**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-setinputtype) bzw. [**IMediaObject::SetOutputType**](/previous-versions/windows/desktop/api/mediaobj/nf-mediaobj-imediaobject-setoutputtype) aufrufen. Beide Methoden geben **DMO \_ E TYPE NOT \_ ACCEPTED \_ \_ zurück,** wenn der angegebene Typ ungültig ist.
 
-## <a name="configuring-the-codec-dmos-for-encoding"></a>Konfigurieren der Codec-DMOS für die Codierung
+## <a name="configuring-the-codec-dmos-for-encoding"></a>Konfigurieren der Codec-DMOs für die Codierung
 
-Alle Windows Media Audio-und Video Codecs unterstützen eine Vielzahl von Codierungs Features. Diese Features werden in der Regel durch Festlegen der Eigenschaften für den DMO konfiguriert, indem die Methoden der **IPropertyBag** -Schnittstelle verwendet werden. Einige Eigenschaften werden mithilfe spezieller Codec-Schnittstellen konfiguriert. Diese Schnittstellen werden für jeden Codec im Abschnitt [Codec-Objekte](codecobjects.md)aufgelistet.
+Alle Windows Medienaudio- und Videocodecs unterstützen eine Vielzahl von Codierungsfunktionen. Diese Features werden im Allgemeinen konfiguriert, indem Eigenschaften auf dem DMO mithilfe der Methoden der **IPropertyBag-Schnittstelle** festgelegt werden. Einige Eigenschaften werden mit speziellen Codecschnittstellen konfiguriert. Diese Schnittstellen sind für jeden Codec im Abschnitt [CodecObjekte](codecobjects.md)aufgeführt.
 
-Die allgemeine Reihenfolge der Vorgänge zum Konfigurieren eines Codierungs-DMO lautet wie folgt:
+Die allgemeine Reihenfolge der Vorgänge zum Konfigurieren einer Codierungs-DMO lautet wie folgt:
 
-1.  Konfigurieren Sie die Codec-Features wie gewünscht mithilfe der Methoden von **IPropertyBag**.
-2.  Verwenden Sie die Codec-DMO-Schnittstellen, um zusätzliche Features zu konfigurieren, falls erforderlich.
-3.  Konfigurieren Sie die Eingabe-und Ausgabetypen. Die Reihenfolge, in der die Typen konfiguriert werden sollten, variiert für einzelne Codecs. Weitere Informationen finden Sie unter [Arbeiten mit Audiodaten](workingwithaudio.md) und [Arbeiten mit Videos](workingwithvideo.md).
+1.  Konfigurieren Sie Codecfunktionen wie gewünscht mithilfe der Methoden von **IPropertyBag**.
+2.  Verwenden Sie den Codec DMO Schnittstellen, um bei Bedarf zusätzliche Features zu konfigurieren.
+3.  Konfigurieren Sie die Eingabe- und Ausgabetypen. Die Reihenfolge, in der die Typen konfiguriert werden sollen, variiert für einzelne Codecs. Weitere Informationen finden Sie unter [Working with Audio (Arbeiten mit Audio)](workingwithaudio.md) und [Working with Video (Arbeiten mit Video).](workingwithvideo.md)
 
-## <a name="configuring-the-codec-dmos-for-decoding"></a>Konfigurieren der Codec-DMOS für das Decodieren
+## <a name="configuring-the-codec-dmos-for-decoding"></a>Konfigurieren der Codec-DMOs für die Decodierung
 
-Decodierung ist einfacher als die Codierung, da weniger Decoder-Features unterstützt werden.
+Die Decodierung ist einfacher als die Codierung, da weniger Decoderfeatures unterstützt werden.
 
-Die allgemeine Reihenfolge der Vorgänge zum Konfigurieren einer DMO-Decodierung lautet wie folgt:
+Die allgemeine Reihenfolge der Vorgänge zum Konfigurieren eines Decodierungs-DMO lautet wie folgt:
 
-1.  Konfigurieren Sie die decoderfeatures wie gewünscht mithilfe der Methoden von **IPropertyBag**.
-2.  Legen Sie den Eingabetyp auf den für die encoderausgabe verwendeten Typ fest.
-3.  Konfigurieren Sie den Ausgabetyp. Die unterstützten Ausgabetypen unterscheiden sich für unterschiedliche Eingaben.
+1.  Konfigurieren Sie Decoderfeatures wie gewünscht mithilfe der Methoden von **IPropertyBag**.
+2.  Legen Sie den Eingabetyp auf den Typ fest, der für die Encoderausgabe verwendet wird.
+3.  Konfigurieren Sie den Ausgabetyp. Die unterstützten Ausgabetypen unterscheiden sich für verschiedene Eingaben.
 
 > [!Note]  
-> Es ist wichtig, den gleichen Medientyp für die decodereingabe zu verwenden, die für die encoderausgabe verwendet wurde. Dies liegt daran, dass die Windows Media Audio-und Video Codecs Medienformate mit zusätzlichen Daten verwenden. Diese Daten werden an die Struktur angehängt, auf die der **pbformat** -Member der [**DMO \_ - \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) Struktur zeigt (in der Regel [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) oder [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85))). Für einige Typen sind die zusätzlichen Daten Teil des Enumerationstyps des enumerierten Encoders. Für andere Typen müssen Sie diese Daten manuell anfügen. Ohne die erweiterten Formatierungsdaten können Sie den komprimierten Inhalt nicht decodieren.
+> Es ist wichtig, für die Decodereingabe denselben Medientyp wie für die Encoderausgabe zu verwenden. Dies liegt daran, dass die Windows Medienaudio- und Videocodecs Medienformate mit zusätzlichen Daten verwenden. Diese Daten werden an die Struktur angefügt, auf die der **pbFormat-Member** der [**DMO MEDIA \_ \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type) zeigt (normalerweise [**VIDEOINFOHEADER**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) oder [**WAVEFORMATEX**](/previous-versions/dd757713(v=vs.85))). Bei einigen Typen sind die zusätzlichen Daten Teil des Enumerationsausgabetyps des Encoders. Bei anderen Typen müssen Sie diese Daten manuell anfügen. Ohne die erweiterten Formatdaten können Sie den komprimierten Inhalt nicht decodieren.
 
  
 
@@ -52,7 +52,7 @@ Die allgemeine Reihenfolge der Vorgänge zum Konfigurieren einer DMO-Decodierung
 
 <dl> <dt>
 
-[Arbeiten mit Codec-DMOS](workingwithcodecdmos.md)
+[Arbeiten mit Codec-DMOs](workingwithcodecdmos.md)
 </dt> </dl>
 
  

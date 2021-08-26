@@ -1,9 +1,9 @@
 ---
-title: CBN_EDITCHANGE Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, nachdem der Benutzer eine Aktion ausgeführt hat, die möglicherweise den Text im Bearbeitungs Steuerelement-Teil eines Kombinations Felds geändert hat.
+title: CBN_EDITCHANGE Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, nachdem der Benutzer eine Aktion ausgeführt hat, die möglicherweise den Text im Bearbeitungssteuerelement eines Kombinationsfelds geändert hat.
 ms.assetid: 2c5de5cd-24d3-4198-906e-b520369e0f61
 keywords:
-- Windows-Steuerelemente für CBN_EDITCHANGE Benachrichtigungs
+- CBN_EDITCHANGE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29a661d647d0879b93675563777d77bba2dfe8c9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0897c8e2de2417d304a1b8737a7358322a42073ec87442d75c21e954fa6ac805
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054120"
 ---
-# <a name="cbn_editchange-notification-code"></a>CBN- \_ EditChange-Benachrichtigungs Code
+# <a name="cbn_editchange-notification-code"></a>CBN \_ EDITCHANGE-Benachrichtigungscode
 
-Wird gesendet, nachdem der Benutzer eine Aktion ausgeführt hat, die möglicherweise den Text im Bearbeitungs Steuerelement-Teil eines Kombinations Felds geändert hat. Im Gegensatz zum [CBN- \_ editupdate](cbn-editupdate.md) -Benachrichtigungs Code wird dieser Benachrichtigungs Code gesendet, nachdem das System den Bildschirm aktualisiert hat. Das übergeordnete Fenster des Kombinations Felds empfängt diesen Benachrichtigungs Code über die [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung.
+Wird gesendet, nachdem der Benutzer eine Aktion ausgeführt hat, die möglicherweise den Text im Bearbeitungssteuerelement eines Kombinationsfelds geändert hat. Im Gegensatz zum [CBN EDITUPDATE-Benachrichtigungscode \_ ](cbn-editupdate.md) wird dieser Benachrichtigungscode gesendet, nachdem das System den Bildschirm aktualisiert hat. Das übergeordnete Fenster des Kombinationsfelds empfängt diesen Benachrichtigungscode über die [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command)
 
 
 ```C++
@@ -42,20 +42,20 @@ CBN_EDITCHANGE
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelement Bezeichner des Kombinations Felds. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Steuerelementbezeichner des Kombinationsfelds. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Handle für das Kombinations Feld.
+Handle für das Kombinationsfeld.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Kombinations Feld den " [**CBS \_ DropDownList**](combo-box-styles.md) "-Stil hat, wird dieser Benachrichtigungs Code nicht gesendet.
+Wenn das Kombinationsfeld den [**\_ CBS-DROPDOWNLIST-Stil**](combo-box-styles.md) auflistet, wird dieser Benachrichtigungscode nicht gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Wenn das Kombinations Feld den " [**CBS \_ DropDownList**](combo-box-styles.md) 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -73,10 +73,10 @@ Wenn das Kombinations Feld den " [**CBS \_ DropDownList**](combo-box-styles.md) 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[CBN- \_ editupdate](cbn-editupdate.md)
+[CBN \_ EDITUPDATE](cbn-editupdate.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -88,7 +88,7 @@ Wenn das Kombinations Feld den " [**CBS \_ DropDownList**](combo-box-styles.md) 
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

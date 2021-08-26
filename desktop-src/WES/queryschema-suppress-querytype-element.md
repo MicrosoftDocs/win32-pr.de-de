@@ -1,9 +1,9 @@
 ---
-title: Unterdrücken (QueryType)-Element
-description: Eine XPath-Abfrage, die die aus dem Abfrageresultset auszuschließenden Ereignisse identifiziert.
+title: Suppress(QueryType)-Element
+description: Eine XPath-Abfrage, die die Ereignisse identifiziert, die aus dem Abfrageresultset ausgeschlossen werden sollen.
 ms.assetid: 41304a3c-bde1-49c3-8cb3-e95fc428bd96
 keywords:
-- Element EventLog unterdrücken
+- Suppress-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3a1d7fcec98d32167155ebcafc4f13d2a727d59a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2612a98c282627154a9107f2f9f77a3ddb52c191e00dbcb394c8db4d7c796b79
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120032010"
 ---
-# <a name="suppress-querytype-element"></a>Unterdrücken (QueryType)-Element
+# <a name="suppress-querytype-element"></a>Suppress(QueryType)-Element
 
-Eine XPath-Abfrage, die die aus dem Abfrageresultset auszuschließenden Ereignisse identifiziert.
+Eine XPath-Abfrage, die die Ereignisse identifiziert, die aus dem Abfrageresultset ausgeschlossen werden sollen.
 
 ``` syntax
 <xs:element name="Suppress">
@@ -36,7 +36,7 @@ Eine XPath-Abfrage, die die aus dem Abfrageresultset auszuschließenden Ereignis
 </xs:element>
 ```
 
-Das unter **drücken** -Element wird durch den komplexen [**QueryType**](queryschema-querytype-complextype.md) -Typ definiert.
+Das **Suppress-Element** wird vom komplexen [**QueryType-Typ**](queryschema-querytype-complextype.md) definiert.
 
 ## <a name="attributes"></a>Attributes
 
@@ -44,7 +44,7 @@ Das unter **drücken** -Element wird durch den komplexen [**QueryType**](querysc
 
 | Name | type   | BESCHREIBUNG                                                                              |
 |------|--------|------------------------------------------------------------------------------------------|
-| `Path` | anyURI | Der Name des Kanals oder der Pfad zu der Protokolldatei, in der die Ereignisse enthalten sind.<br/> |
+| `Path` | anyURI | Der Name des Kanals oder der Pfad zur Protokolldatei, die die Ereignisse enthält.<br/> |
 
 
 
@@ -54,8 +54,8 @@ Das unter **drücken** -Element wird durch den komplexen [**QueryType**](querysc
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -66,7 +66,7 @@ Das unter **drücken** -Element wird durch den komplexen [**QueryType**](querysc
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Query (querylisttype)**](queryschema-query-querylisttype-element.md)
+[**Query (QueryListType)**](queryschema-query-querylisttype-element.md)
 </dt> </dl>
 
  

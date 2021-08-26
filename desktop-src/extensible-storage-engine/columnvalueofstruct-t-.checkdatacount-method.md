@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der columnvalueof-Struktur <T> . Checkdatacount-Methode
-title: Columnvalueobstruct (T). Checkdatacount-Methode
+description: 'Erfahren Sie mehr über: ColumnValueOfStruct <T> . CheckDataCount-Methode'
+title: ColumnValueOfStruct(T). CheckDataCount-Methode
 TOCTitle: 'CheckDataCount method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.ColumnValueOfStruct`1.CheckDataCount(System.Int32)
 ms:mtpsurl: https://msdn.microsoft.com/library/Dn334178(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fda3fcabe1bb8ff462c37f823d6441720e02c414
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9f70d2e26c8ee56e88f0405af19f17476612bd9a5f51ba624088ed9d58380d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066940"
 ---
-# <a name="columnvalueofstructtcheckdatacount-method"></a>Columnvalueof-Struktur \<T\> . Checkdatacount-Methode
+# <a name="columnvalueofstructtcheckdatacount-method"></a>ColumnValueOfStruct \<T\> . CheckDataCount-Methode
 
-Stellen Sie sicher, dass die abgerufenen Daten genau die für die Struktur benötigte Größe sind. Wenn keine Übereinstimmung vorliegt, wird eine Ausnahme ausgelöst.
+Stellen Sie sicher, dass die abgerufenen Daten genau die Größe haben, die für die Struktur erforderlich ist. Bei einem Konflikt wird eine Ausnahme ausgelöst.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,16 +60,16 @@ protected void CheckDataCount(
 #### <a name="parameters"></a>Parameter
 
   - count  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Größe der abgerufenen Daten.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Columnvalueosstruct- \<T\> Klasse](./columnvalueofstruct-t-class.md)
+[ColumnValueOfStruct-Klasse \<T\>](./columnvalueofstruct-t-class.md)
 
-[Columnvalueofstruct \<T\> -Member](./columnvalueofstruct-t-members.md)
+[ColumnValueOfStruct-Elemente \<T\>](./columnvalueofstruct-t-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

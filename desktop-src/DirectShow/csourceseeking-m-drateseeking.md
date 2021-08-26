@@ -1,7 +1,7 @@
 ---
-description: Wiedergabe Rate. Standardmäßig ist der Wert auf 1,0 festgelegt.
+description: Wiedergaberate. Standardmäßig ist der Wert auf 1,0 festgelegt.
 ms.assetid: 835ddbe8-2017-4a4a-8f10-b3f33a8215a7
-title: 'Csourceseeking:: m_dRateSeeking Member (ctlutil. h)'
+title: CSourceSeeking::m_dRateSeeking Member (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1055a420316868db6374798c0295339dd74ac172
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 65a21cbae87c25e0f37791129f1699349ea4bb4a8591097978e04010a925962b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120054210"
 ---
-# <a name="csourceseekingm_drateseeking-member"></a>Csourceseeking:: m \_ drateseeking-Member
+# <a name="csourceseekingm_drateseeking-member"></a>CSourceSeeking::m \_ dRateSeeking-Member
 
-Wiedergabe Rate. Standardmäßig ist der Wert auf 1,0 festgelegt.
+Wiedergaberate. Standardmäßig ist der Wert auf 1,0 festgelegt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ double m_dRateSeeking;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Variable gedrückt.
+Halten Sie den **Abschnitt "m \_ pLock** critical" vor dem Zugriff auf diese Variable.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

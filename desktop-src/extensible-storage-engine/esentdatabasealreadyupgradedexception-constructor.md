@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabasealleseryupgradedexception-Konstruktor'
-title: Esentdatabasealleseryupgradedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDatabaseAlreadyUpgradedException-Konstruktor'
+title: EsentDatabaseAlreadyUpgradedException-Konstruktor
 TOCTitle: 'EsentDatabaseAlreadyUpgradedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDatabaseAlreadyUpgradedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabasealreadyupgradedexception.esentdatabasealreadyupgradedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 589b1a567d91594483d9b53a23b57ed780616f4a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b6515339afc9a0f2e3f53fa057bacc0ac3ade1db1963666c61c59bd98baff02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066096"
 ---
-# <a name="esentdatabasealreadyupgradedexception-constructor"></a>Esentdatabasealleseryupgradedexception-Konstruktor
+# <a name="esentdatabasealreadyupgradedexception-constructor"></a>EsentDatabaseAlreadyUpgradedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatabasealleseryupgradedexception-Klasse.
+Initialisiert eine neue Instanz der EsentDatabaseAlreadyUpgradedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDatabaseAlreadyUpgradedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabasealleseryupgradedexception-Klasse](./esentdatabasealreadyupgradedexception-class.md)
+[EsentDatabaseAlreadyUpgradedException-Klasse](./esentdatabasealreadyupgradedexception-class.md)
 
-[Esentdatabasealleseryupgradedexception-Elemente](./esentdatabasealreadyupgradedexception-members.md)
+[EsentDatabaseAlreadyUpgradedException-Member](./esentdatabasealreadyupgradedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

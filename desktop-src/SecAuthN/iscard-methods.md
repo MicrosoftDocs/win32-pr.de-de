@@ -1,34 +1,34 @@
 ---
-description: Die iscard-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ISCard-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: D40EDB64-DA56-453B-9F68-B44BC284D2DB
-title: Iscard-Methoden
+title: ISCard-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff6326261ae30dcbf81d0f1b659ebb4574d1fbe7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 63188dc43dddf22b78273d934f04042cc7679e9cc1c4589a21a898608f9fd39b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015530"
 ---
-# <a name="iscard-methods"></a>Iscard-Methoden
+# <a name="iscard-methods"></a>ISCard-Methoden
 
-Die [**iscard**](iscard.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ISCard-Schnittstelle**](iscard.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Attachbyhandle-Methode**](iscard-attachbyhandle.md)
--   [**Attachbyreader-Methode**](iscard-attachbyreader.md)
+-   [**AttachByHandle-Methode**](iscard-attachbyhandle.md)
+-   [**AttachByReader-Methode**](iscard-attachbyreader.md)
 -   [**Detach-Methode**](iscard-detach.md)
--   [**\_ATR-Methode erhalten**](iscard-get-atr.md)
--   [**get \_ cardhandle-Methode**](iscard-get-cardhandle.md)
--   [**Kontext Methode "Get" \_**](iscard-get-context.md)
+-   [**get \_ Atr-Methode**](iscard-get-atr.md)
+-   [**get \_ CardHandle-Methode**](iscard-get-cardhandle.md)
+-   [**get \_ Context-Methode**](iscard-get-context.md)
 -   [**get \_ Protocol-Methode**](iscard-get-protocol.md)
 -   [**get \_ Status-Methode**](iscard-get-status.md)
--   [**Lockscard-Methode**](iscard-lockscard.md)
--   [**Methode zum erneuten Anfügen**](iscard-reattach.md)
--   [**Transaktions Methode**](iscard-transaction.md)
--   [**Unlockscard-Methode**](iscard-unlockscard.md)
+-   [**LockSCard-Methode**](iscard-lockscard.md)
+-   [**ReAttach-Methode**](iscard-reattach.md)
+-   [**Transaction-Methode**](iscard-transaction.md)
+-   [**UnlockSCard-Methode**](iscard-unlockscard.md)
 
  
 

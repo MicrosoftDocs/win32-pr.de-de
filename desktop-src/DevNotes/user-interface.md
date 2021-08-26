@@ -1,21 +1,21 @@
 ---
 description: Benutzeroberfläche
 ms.assetid: 2770E065-A15E-46CA-9D4E-610A2FE62E64
-title: Benutzeroberfläche (Entwickler Hinweise)
+title: Benutzeroberfläche (Entwicklerhinweise)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4095920ab4f63e68795e94c12d58527c191ac319
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ed3c537ec60713b02cc522bd50fdc5566a7f54dda0442a0517af76e73af8b6e7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120001080"
 ---
-# <a name="user-interface-developer-notes"></a>Benutzeroberfläche (Entwickler Hinweise)
+# <a name="user-interface-developer-notes"></a>Benutzeroberfläche (Entwicklerhinweise)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Apphelpcheckshellobject**](/windows/desktop/api/AppCompatApi/nf-appcompatapi-apphelpcheckshellobject)
+-   [**ApphelpCheckShellObject**](/windows/desktop/api/AppCompatApi/nf-appcompatapi-apphelpcheckshellobject)
 -   [**Ctl3dAutoSubclass**](ctl3dautosubclass.md)
 -   [**Ctl3dColorChange**](ctl3dcolorchange.md)
 -   [**Ctl3dCtlColorEx**](ctl3dctlcolorex.md)
@@ -27,12 +27,12 @@ ms.locfileid: "104522944"
 -   [**Ctl3dUnAutoSubclass**](ctl3dunautosubclass.md)
 -   [**Ctl3dUnsubclassCtl**](ctl3dunsubclassctl.md)
 -   [**Ctl3dUnregister**](ctl3dunregister.md)
--   [**Directsoundfullduplexcreate**](directsoundfullduplexcreate.md)
--   [**IExtender**](iextender.md)
+-   [**DirectSoundFullDuplexCreate**](directsoundfullduplexcreate.md)
+-   [**IEx wieder**](iextender.md)
 -   [**KRShowKeyMgr**](krshowkeymgr.md)
--   [**Nmmakecert**](nmmakecert.md)
--   [**Setshellnext**](/windows/desktop/api/Icwcfg/nf-icwcfg-setshellnext)
--   [**WM \_ CtlColor**](wm-ctlcolor-.md)
+-   [**NmMakeCert**](nmmakecert.md)
+-   [**SetShellNext**](/windows/desktop/api/Icwcfg/nf-icwcfg-setshellnext)
+-   [**WM \_ CTLCOLOR**](wm-ctlcolor-.md)
 
  
 

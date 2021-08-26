@@ -1,53 +1,53 @@
 ---
-description: Mit der registermimeinfo-Aktion werden MIME-bezogene Registrierungsinformationen beim System registriert.
+description: Die RegisterMIMEInfo-Aktion registriert MIME-bezogene Registrierungsinformationen beim System.
 ms.assetid: 2ba88b5f-bd8a-4572-af82-9c0b91b9b6d9
-title: Registermimeinfo-Aktion
+title: RegisterMIMEInfo-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41130d9e595cc2d95557470f79c217f3c3235d75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 369f35eab4e6d4228167bfbeda48cf21249ea6a63297f5a9e893b84dcc4ed5bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041740"
 ---
-# <a name="registermimeinfo-action"></a>Registermimeinfo-Aktion
+# <a name="registermimeinfo-action"></a>RegisterMIMEInfo-Aktion
 
-Mit der registermimeinfo-Aktion werden MIME-bezogene Registrierungsinformationen beim System registriert.
+Die RegisterMIMEInfo-Aktion registriert MIME-bezogene Registrierungsinformationen beim System.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die registermimeinfo-Aktion muss nach der [InstallFiles](installfiles-action.md) -Aktion, der [unregistermimeinfo](unregistermimeinfo-action.md) -Aktion, der [RegisterClassInfo](registerclassinfo-action.md) -Aktion und der [RegisterExtensionInfo](registerextensioninfo-action.md) -Aktion erfolgen.
+Die RegisterMIMEInfo-Aktion muss nach der [InstallFiles-Aktion,](installfiles-action.md) der [UnregisterMIMEInfo-Aktion,](unregistermimeinfo-action.md) der [RegisterClassInfo-Aktion](registerclassinfo-action.md) und der [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) durchgeführt werden.
 
-Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen in einer Sequenz Tabelle enthalten ist, müssen Sie dieselbe relative Reihenfolge Reihenfolge aufweisen wie in der folgenden Abbildung:
+Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen zusammen in einer Sequenztabelle auftritt, müssen sie dieselbe relative Sequenzreihenfolge wie gezeigt haben:
 
--   [Unregisterclassinfo](unregisterclassinfo-action.md)
--   [Unregisterextensioninfo](unregisterextensioninfo-action.md)
--   [Unregisterprogidinfo](unregisterprogidinfo-action.md)
--   [Unregistermimeinfo](unregistermimeinfo-action.md)
+-   [UnregisterClassInfo](unregisterclassinfo-action.md)
+-   [UnregisterExtensionInfo](unregisterextensioninfo-action.md)
+-   [UnregisterProgIdInfo](unregisterprogidinfo-action.md)
+-   [UnregisterMIMEInfo](unregistermimeinfo-action.md)
 -   [RegisterClassInfo](registerclassinfo-action.md)
 -   [RegisterExtensionInfo](registerextensioninfo-action.md)
--   [Registerprogidinfo](registerprogidinfo-action.md)
--   Registermimeinfo
+-   [RegisterProgIdInfo](registerprogidinfo-action.md)
+-   RegisterMIMEInfo
 
-So muss z. b. registermimeinfo in der Sequenz Tabelle auf [unregistermimeinfo](unregistermimeinfo-action.md) folgen.
+Beispielsweise muss RegisterMIMEInfo nach [UnregisterMIMEInfo](unregistermimeinfo-action.md) in der Sequenztabelle kommen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                   |
+| Feld | Beschreibung der Aktionsdaten                   |
 |-------|----------------------------------------------|
-| \[1\] | Der Bezeichner des registrierten MIME-Inhaltstyps.  |
+| \[1\] | Bezeichner des registrierten MIME-Inhaltstyps.  |
 | \[2\] | Erweiterung, die dem MIME-Inhaltstyp zugeordnet ist. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit der registermimeinfo-Aktion werden alle MIME-Informationen für Server aus der [MIME-Tabelle](mime-table.md) , für die der zugehörige Klassen Server oder Erweiterungs Server zur Installation ausgewählt wurde, registriert.
+Die Aktion RegisterMIMEInfo registriert alle MIME-Informationen für Server aus der [MIME-Tabelle,](mime-table.md) für die der entsprechende Klassenserver oder Erweiterungsserver für die Installation ausgewählt wurde.
 
  
 

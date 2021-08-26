@@ -1,24 +1,24 @@
 ---
-description: Die currentbutton-Eigenschaft ruft die Nummer der ausgewählten Menü Schaltfläche ab.
+description: Die CurrentButton-Eigenschaft ruft die Nummer der ausgewählten Menüschaltfläche ab.
 ms.assetid: bd9720bc-068a-4f29-aa2d-1c6b550f789c
-title: Currentbutton (Eigenschaft)
+title: CurrentButton-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c12def9f9a73c9538781bde6940b03bfb376fcc
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d85b246b77283a2632f2feac4c2b374075ef9d9a205bcb71813856b9847df21b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341859"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053140"
 ---
-# <a name="currentbutton-property"></a>Currentbutton (Eigenschaft)
+# <a name="currentbutton-property"></a>CurrentButton-Eigenschaft
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `CurrentButton` Eigenschaft ruft die Nummer der ausgewählten Menü Schaltfläche ab.
+Die `CurrentButton` -Eigenschaft ruft die Nummer der ausgewählten Menüschaltfläche ab.
 
 ``` syntax
 [ iButton = ] MSWebDVD.CurrentButton
@@ -26,32 +26,32 @@ Die- `CurrentButton` Eigenschaft ruft die Nummer der ausgewählten Menü Schaltf
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine Ganzzahl zurück, die die Schaltfläche darstellt.
+Gibt einen ganzzahligen Wert zurück, der die Schaltfläche darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist schreibgeschützt und weist keinen Standardwert auf. Verwenden Sie diese Methode, wenn Sie die benutzerdefinierte Maus Behandlung nach dem Festlegen von [**disableautomouseprocessing**](disableautomouseprocessing-property.md) auf **true** festlegen.
+Diese Eigenschaft ist schreibgeschützt und hat keinen Standardwert. Verwenden Sie diese Methode, wenn Sie eine benutzerdefinierte Mausbehandlung implementieren, nachdem [**Sie DisableAutoMouseProcessing auf**](disableautomouseprocessing-property.md) **TRUE festlegen.**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Activatebutton**](activatebutton-method.md)
+[**ActivateButton**](activatebutton-method.md)
 </dt> <dt>
 
-[**Buttonsavailable**](buttonsavailable-property.md)
+[**Schaltflächen Verfügbar**](buttonsavailable-property.md)
 </dt> <dt>
 
-[**Getbuttonatposition**](getbuttonatposition-method.md)
+[**GetButtonAtPosition**](getbuttonatposition-method.md)
 </dt> <dt>
 
-[**Getbuttonrect**](getbuttonrect-method.md)
+[**GetButtonRect**](getbuttonrect-method.md)
 </dt> <dt>
 
-[**Selectandactivatebutton**](selectandactivatebutton-method.md)
+[**SelectAndActivateButton**](selectandactivatebutton-method.md)
 </dt> <dt>
 
-[**Selectatposition**](selectatposition-method.md)
+[**SelectAtPosition**](selectatposition-method.md)
 </dt> </dl>
 
  

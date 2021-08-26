@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel öffnet ein Handle für COM2 und füllt eine DCB-Struktur mit der aktuellen Konfiguration aus. Die DCB-Struktur wird dann geändert und zum Neukonfigurieren des Geräts verwendet.
+description: Im folgenden Beispiel wird ein Handle für COM2 geöffnet und eine DCB-Struktur mit der aktuellen Konfiguration ausgefüllt. Die DCB-Struktur wird dann geändert und verwendet, um das Gerät neu zu konfigurieren.
 ms.assetid: 5b325a1e-51e1-43b4-92e7-7bcf34c6388f
-title: Konfigurieren einer Kommunikations Ressource
+title: Konfigurieren einer Kommunikationsressource
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a82622696833c9de414d3af64856a9df357e23b6
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9aad6cb5bc69a912b4d6cff18eb39a239727e57f7f0e854a63ac3cd4c487b409
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053500"
 ---
-# <a name="configuring-a-communications-resource"></a>Konfigurieren einer Kommunikations Ressource
+# <a name="configuring-a-communications-resource"></a>Konfigurieren einer Kommunikationsressource
 
-Das folgende Beispiel öffnet ein Handle für COM2 und füllt eine [**DCB**](/windows/desktop/api/Winbase/ns-winbase-dcb) -Struktur mit der aktuellen Konfiguration aus. Die **DCB** -Struktur wird dann geändert und zum Neukonfigurieren des Geräts verwendet.
+Im folgenden Beispiel wird ein Handle für COM2 geöffnet und eine [**DCB-Struktur**](/windows/desktop/api/Winbase/ns-winbase-dcb) mit der aktuellen Konfiguration ausgefüllt. Die **DCB-Struktur** wird dann geändert und verwendet, um das Gerät neu zu konfigurieren.
 
 
 ```C++

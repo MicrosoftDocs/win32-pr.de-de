@@ -1,7 +1,7 @@
 ---
-description: Mit der \_ Methode "ICC auth" kann eine Anwendung die Smartcard authentifizieren.
+description: Mit der METHODE FÜR DIE \_ Authentifizierung kann eine Anwendung die Smartcard authentifizieren.
 ms.assetid: 98aea241-6bdc-4f47-b56c-a90f69fcd9a4
-title: 'Iscardauth:: ICC_Auth-Methode'
+title: ISCardAuth::ICC_Auth-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 015b5c395f025abea4ab2dc756c03691bbc27e72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b96d40d6c35250b55b6aa2bb37733492fda874df0346b24c859431d749a3e4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120015380"
 ---
-# <a name="iscardauthicc_auth-method"></a>Iscardauth:: ICC \_ auth-Methode
+# <a name="iscardauthicc_auth-method"></a>\_ISCardAuth::ICC-Authentifizierungsmethode
 
-\[Die Methode " **ICC \_ auth** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **\_ VERFAHRENAuthentifizierungsmethode** ist für die Verwendung in den betriebssystemspezifischen Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Mit der Methode " **ICC \_ auth** " kann eine Anwendung die Smartcard authentifizieren.
+Mit der METHODE FÜR DIE **\_ Authentifizierung** kann eine Anwendung die Smartcard authentifizieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ HRESULT ICC_Auth(
 
 <dl> <dt>
 
-*lalgoid* \[ in\]
+*lAlgoID* \[ In\]
 </dt> <dd>
 
-Der Algorithmus, der beim Authentifizierungsprozess verwendet werden soll.
+Algorithmus, der im Authentifizierungsprozess verwendet werden soll.
 
 </dd> <dt>
 
-*pParam* \[ in\]
+*pParam* \[ In\]
 </dt> <dd>
 
-Ein [**ibytebuffer**](ibytebuffer.md) -Objekt, das herstellerspezifische Parameter des Authentifizierungsprozesses enthält.
+Ein [**IByteBuffer-Objekt,**](ibytebuffer.md) das anbieterspezifische Parameter des Authentifizierungsprozesses enthält.
 
 </dd> <dt>
 
-*pbuffer* \[ in, out\]
+*pBuffer* \[ in, out\]
 </dt> <dd>
 
-Enthält bei der Eingabedaten, die im Authentifizierungsprozess verwendet werden sollen.
+Enthält bei der Eingabe Daten, die im Authentifizierungsprozess verwendet werden sollen.
 
-Bei Ausgabe enthält das Ergebnis des Authentifizierungs Vorgangs.
+Enthält in der Ausgabe das Ergebnis des Authentifizierungsprozesses.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardauth**](iscardauth.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardAuth**](iscardauth.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,10 +94,10 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
@@ -105,7 +105,7 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 <dl> <dt>
 
-[**Iscardauth**](iscardauth.md)
+[**ISCardAuth**](iscardauth.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Flags, die die Methode angeben, die der Raster zum Erstellen eines Bilds auf einer Oberfläche verwendet.
+description: Flags, die die Methode angeben, die der Rasterizer verwendet, um ein Bild auf einer Oberfläche zu erstellen.
 ms.assetid: 55cf790e-ebe9-4791-a2be-a90fc76bae57
-title: D3DSCANLINEORDERING-Enumeration (D3d9types. h)
+title: D3DSCANLINEORDERING-Enumeration (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3d9types.h
-ms.openlocfilehash: 2eaed36577f881266c12b0a927cfcdc2494f0d57
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e5265387973c3c1605ac0022d88df3afa676dda614d7cc238e29a1ddd4a73f5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119987230"
 ---
 # <a name="d3dscanlineordering-enumeration"></a>D3DSCANLINEORDERING-Enumeration
 
-Flags, die die Methode angeben, die der Raster zum Erstellen eines Bilds auf einer Oberfläche verwendet.
+Flags, die die Methode angeben, die der Rasterizer verwendet, um ein Bild auf einer Oberfläche zu erstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ typedef enum D3DSCANLINEORDERING {
 
 <dl> <dt>
 
-<span id="D3DSCANLINEORDERING_PROGRESSIVE"></span><span id="d3dscanlineordering_progressive"></span>**D3DSCANLINEORDERING \_ progressiv**
+<span id="D3DSCANLINEORDERING_PROGRESSIVE"></span><span id="d3dscanlineordering_progressive"></span>**D3DSCANLINEORDERING \_ PROGRESSIVE**
 </dt> <dd>
 
-Das Bild wird von der ersten Scanline bis zum letzten erstellt, ohne dass übersprungen wird.
+Das Image wird von der ersten Scanlinie bis zur letzten erstellt, ohne dass übersprungen wird.
 
 </dd> <dt>
 
-<span id="D3DSCANLINEORDERING_INTERLACED"></span><span id="d3dscanlineordering_interlaced"></span>**D3DSCANLINEORDERING-Zeilen Sprung \_**
+<span id="D3DSCANLINEORDERING_INTERLACED"></span><span id="d3dscanlineordering_interlaced"></span>**D3DSCANLINEORDERING \_ INTERLACED**
 </dt> <dd>
 
-Das Bild wird mit der Zeilen Sprung Methode erstellt, in der ungerade nummerierte Linien bei ungeraden nummerierten Durchläufen gezeichnet werden und sogar Linien bei geraden Durchläufen gezeichnet werden.
+Das Bild wird mithilfe der Interlaced-Methode erstellt, bei der ungerade Zeilen auf ungeraden Durchläufen und gerade Linien auf geraden Läufen gezeichnet werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Enumeration wird als Member in [**D3DDISPLAYMODEFILTER**](d3ddisplaymodefilter.md) und [**D3DDISPLAYMODEEX**](d3ddisplaymodeex.md)verwendet.
 
@@ -64,11 +64,11 @@ Diese Enumeration wird als Member in [**D3DDISPLAYMODEFILTER**](d3ddisplaymodefi
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

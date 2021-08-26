@@ -1,7 +1,7 @@
 ---
-description: Enthält die Seriennummer eines USB-Geräts. Sie wird vom IOCTL- \_ Speicher \_ Ablaufsteuerungs-Code für \_ Medien \_ Seriennummern verwendet \_ .
+description: Enthält die Seriennummer eines USB-Geräts. Sie wird vom IOCTL \_ STORAGE GET MEDIA SERIAL \_ \_ \_ \_ NUMBER-Steuerungscode verwendet.
 ms.assetid: a7df4528-a3b7-4ffa-b595-7ac918371582
-title: MEDIA_SERIAL_NUMBER_DATA Struktur
+title: MEDIA_SERIAL_NUMBER_DATA-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 843c445a29bcce9e6dc26b66b0c6738831e9b79c
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: cbb007769238f0e6a4239366e8fe9956e61f892f7d3c98f2b638dc425dc9359f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106355711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053480"
 ---
-# <a name="media_serial_number_data-structure"></a>\_Datenstruktur der Medien Serien \_ Nummer \_
+# <a name="media_serial_number_data-structure"></a>MEDIA \_ SERIAL \_ NUMBER \_ DATA-Struktur
 
-Enthält die Seriennummer eines USB-Geräts. Sie wird vom ioctl-Speicher Ablaufsteuerungs-Code für [**\_ \_ \_ Medien \_ Serien \_ Nummern**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_get_media_serial_number) verwendet.
+Enthält die Seriennummer eines USB-Geräts. Sie wird vom [**IOCTL \_ STORAGE GET MEDIA SERIAL \_ \_ \_ \_ NUMBER-Steuerungscode**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_get_media_serial_number) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,10 +41,10 @@ typedef struct _MEDIA_SERIAL_NUMBER_DATA {
 
 <dl> <dt>
 
-**Serialzahldauer**
+**SerialNumberLength**
 </dt> <dd>
 
-Die Größe der **serialnummeri-Daten** Zeichenfolge in Bytes.
+Die Größe der **SerialNumberData-Zeichenfolge** in Bytes.
 
 </dd> <dt>
 
@@ -62,16 +62,16 @@ Reserviert.
 
 </dd> <dt>
 
-**Serialzahldaten**
+**SerialNumberData**
 </dt> <dd>
 
 Die Seriennummer des Geräts.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für die Datenstruktur der **Medien \_ Serien \_ Nummer \_** ist keine Header Datei verfügbar. Fügen Sie die Struktur Definition am oberen Rand dieser Seite in den Quellcode ein.
+Für die MEDIA SERIAL NUMBER DATA-Struktur ist **\_ keine \_ \_ Headerdatei** verfügbar. Fügen Sie die Strukturdefinition oben auf dieser Seite in Ihren Quellcode ein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Für die Datenstruktur der **Medien \_ Serien \_ Nummer \_** ist keine Header Da
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/> |
 
 
 
@@ -88,7 +88,7 @@ Für die Datenstruktur der **Medien \_ Serien \_ Nummer \_** ist keine Header Da
 
 <dl> <dt>
 
-[**IOCTL- \_ Speicher \_ Medien- \_ \_ Serien \_ Nummer**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_get_media_serial_number)
+[**IOCTL \_ STORAGE \_ GET \_ MEDIA \_ SERIAL \_ NUMBER**](/windows/desktop/api/WinIoCtl/ni-winioctl-ioctl_storage_get_media_serial_number)
 </dt> </dl>
 
  

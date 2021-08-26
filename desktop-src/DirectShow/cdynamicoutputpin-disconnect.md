@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5a775146973b353413fa2e74584a6c763b721e7b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 000bbdc0400a84f41cf370beca92b96d898b57ddb62ab7dc72319557fbe18a77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983060"
 ---
 # <a name="cdynamicoutputpindisconnect-method"></a>CDynamicOutputPin.Disconnect-Methode
 
-Die `Disconnect` -Methode unterbricht die aktuelle Pinverbindung. Diese Methode implementiert die [**IPin::D isconnect-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect)
+Die `Disconnect` -Methode unterbricht die aktuelle Stecknadelverbindung. Diese Methode implementiert die [**IPin::D isconnect-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ipin-disconnect)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,35 +42,35 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle gezeigten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                             | Beschreibung                           |
 |-----------------------------------------------------------------------------------------|---------------------------------------|
-| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die Stecknadel wurde nicht verbunden.<br/> |
+| <dl> <dt>**S \_ FALSE**</dt> </dl> | Die Stecknadel war nicht verbunden.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>    | Erfolg.<br/>                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**CBasePin::D isconnect-Methode,**](cbasepin-disconnect.md) um das Trennen der Verbindung zu aktivieren, während der Filter aktiv ist.
+Diese Methode überschreibt die [**CBasePin::D isconnect-Methode,**](cbasepin-disconnect.md) um die Trennung zu ermöglichen, während der Filter aktiv ist.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

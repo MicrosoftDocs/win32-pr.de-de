@@ -1,34 +1,34 @@
 ---
-title: Die IDL-und ACF-Dateien
-description: Die Syntax des Microsoft Interface Definition Language (mittlerer l) basiert auf der Syntax der Programmiersprache C. Wenn ein sprach Konzept in dieser Beschreibung von "Mittel l" nicht vollständig definiert ist, wird die C-Sprachdefinition dieses Begriffs impliziert.
+title: Die IDL- und ACF-Dateien
+description: Die Syntax der Microsoft Interface Definition Language (MIDL) basiert auf der Syntax der Programmiersprache C. Wenn ein Sprachkonzept in dieser Beschreibung von MIDL nicht vollständig definiert ist, wird die C-Sprachdefinition dieses Begriffs impliziert.
 ms.assetid: f99f5934-750d-4c30-9970-803a891cacb7
 keywords:
-- Remote Prozedur Aufruf RPC, beschrieben, IDL-und ACF-Dateien
+- RPC-Remoteprozeduraufruf , beschriebene IDL- und ACF-Dateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9f7f739e50fd4e04ae35a11adcbbc936cd3cb36
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 788756c6762575d2366950f1b6412a76c03d14518acb1707dfdaf109ba2b5fc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120017100"
 ---
-# <a name="the-idl-and-acf-files"></a>Die IDL-und ACF-Dateien
+# <a name="the-idl-and-acf-files"></a>Die IDL- und ACF-Dateien
 
-Die Syntax des Microsoft Interface Definition Language (mittlerer l) basiert auf der Syntax der Programmiersprache C. Wenn ein sprach Konzept in dieser Beschreibung von "Mittel l" nicht vollständig definiert ist, wird die C-Sprachdefinition dieses Begriffs impliziert.
+Die Syntax der Microsoft Interface Definition Language (MIDL) basiert auf der Syntax der Programmiersprache C. Wenn ein Sprachkonzept in dieser Beschreibung von MIDL nicht vollständig definiert ist, wird die C-Sprachdefinition dieses Begriffs impliziert.
 
-Das Mittel l-Design gibt zwei unterschiedliche Dateien an: die IDL-Datei (Interface Definition Language) und die Anwendungs Konfigurationsdatei (ACF). Diese Dateien enthalten Attribute, die die Generierung der C-Sprachen-Stub-Dateien leiten, die den Remote Prozedur Aufruf (RPC) verwalten. Die IDL-Datei enthält eine Beschreibung der Schnittstelle zwischen dem Client und den Serverprogrammen. RPC-Anwendungen verwenden die ACF-Datei, um die Eigenschaften der Benutzeroberfläche zu beschreiben, die für die Hardware und das betriebssystemspezifisch sind, die eine bestimmte Betriebsumgebung bilden. Der Zweck der Aufteilung dieser Informationen in zwei Dateien besteht darin, die Softwareschnittstelle von Merkmalen getrennt zu halten, die sich nur auf die Betriebsumgebung auswirken.
+Der MIDL-Entwurf gibt zwei unterschiedliche Dateien an: die IDL-Datei (Interface Definition Language) und die Anwendungskonfigurationsdatei (Application Configuration File, ACF). Diese Dateien enthalten Attribute, die die Generierung der Stubdateien in C-Sprache steuern, die den Remoteprozeduraufruf (RPC) verwalten. Die IDL-Datei enthält eine Beschreibung der Schnittstelle zwischen dem Client und den Serverprogrammen. RPC-Anwendungen verwenden die ACF-Datei, um die Merkmale der Schnittstelle zu beschreiben, die spezifisch für die Hardware und das Betriebssystem sind, die eine bestimmte Betriebssystemumgebung darstellen. Der Zweck der Unterteilung dieser Informationen in zwei Dateien besteht im Trennen der Softwareschnittstelle von Merkmalen, die sich nur auf die Betriebsumgebung auswirken.
 
-Die IDL-Datei gibt einen Netzwerk Vertrag zwischen Client und Server an – d. h. die IDL-Datei gibt an, was zwischen Client und Server übertragen wird. Wenn diese Informationen von den Informationen zur Betriebsumgebung abweichen, wird die IDL-Datei in andere Umgebungen portierbar. Die IDL-Datei besteht aus zwei Teilen: einem [Schnittstellen Header](the-idl-interface-header.md) und einem [Schnittstellen Text](the-idl-interface-body.md).
+Die IDL-Datei gibt einen Netzwerkvertrag zwischen Client und Server an, d.&a; die IDL-Datei gibt an, was zwischen dem Client und dem Server übertragen wird. Wenn diese Informationen von den Informationen über die Betriebsumgebung getrennt bleiben, wird die IDL-Datei auf andere Umgebungen portierbar. Die IDL-Datei besteht aus zwei Teilen: einem [Schnittstellenheader](the-idl-interface-header.md) und einem [Schnittstellenkörper.](the-idl-interface-body.md)
 
-Die ACF gibt Attribute an, die sich nur auf die lokale Leistung und nicht auf den Netzwerk Vertrag auswirken. Microsoft RPC ermöglicht Ihnen das Kombinieren der ACF-und IDL-Attribute in einer einzelnen IDL-Datei. Sie können auch mehrere Schnittstellen in einer einzelnen IDL-Datei (und ihrer ACF) kombinieren.
+Der ACF gibt Attribute an, die sich nicht auf den Netzwerkvertrag, sondern nur auf die lokale Leistung auswirken. Mit Microsoft RPC können Sie die Attribute ACF und IDL in einer einzelnen IDL-Datei kombinieren. Sie können auch mehrere Schnittstellen in einer einzelnen IDL-Datei (und deren ACF) kombinieren.
 
-In diesem Abschnitt werden die Attribute zusammengefasst, die in den IDL-und ACF-Dateien angegeben sind. Es soll nur eine Übersicht bereitgestellt werden. Ausführlichere Informationen finden Sie in der Referenz zur [Mittel l-Sprache](/windows/desktop/Midl/midl-language-reference)und in der [Command-Line-Referenz](/windows/desktop/Midl/midl-command-line-reference). Die Erörterung dieses Abschnitts finden Sie in den folgenden Themen:
+In diesem Abschnitt werden die Attribute zusammengefasst, die in den IDL- und ACF-Dateien angegeben sind. Es soll nur eine Übersicht bereitstellen. Ausführlichere Informationen finden Sie in der [MIDL-Sprachreferenz](/windows/desktop/Midl/midl-language-reference)und in der [MIDLCommand-Line Referenz.](/windows/desktop/Midl/midl-command-line-reference) Die Diskussion in diesem Abschnitt wird in den folgenden Themen behandelt:
 
 -   [Die IDL-Datei (Interface Definition Language)](the-interface-definition-language-idl-file.md)
--   [Die Anwendungs Konfigurationsdatei (ACF)](the-application-configuration-file-acf-.md)
--   [Mittel l-Compilerausgabe](midl-compiler-output.md)
+-   [Die Anwendungskonfigurationsdatei (Application Configuration File, ACF)](the-application-configuration-file-acf-.md)
+-   [MIDL-Compilerausgabe](midl-compiler-output.md)
 
- 
+ 
 
- 
+ 

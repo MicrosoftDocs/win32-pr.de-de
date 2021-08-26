@@ -1,7 +1,7 @@
 ---
-description: Die schreibgeschützte Methode gibt an, ob der Eingabestream schreibgeschützt ist.
+description: Die ReadOnly-Methode gibt an, ob der Eingabestream schreibgeschützt ist.
 ms.assetid: 25b8230d-be2b-4129-a1aa-f6b36e95199e
-title: Ctransinplaceinputpin. Schreib only-Methode (transip. h)
+title: CTransInPlaceInputPin.ReadOnly-Methode (Transip.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 33e71f8fd0aa7bf37f76ed6446fb5132c1808fb7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4f0dd3ae23da6832911b58e50cba67bcf8e6ec6092c3a31a193bd5a027c5566c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999090"
 ---
-# <a name="ctransinplaceinputpinreadonly-method"></a>Ctransinplaceinputpin. Read Only-Methode
+# <a name="ctransinplaceinputpinreadonly-method"></a>CTransInPlaceInputPin.ReadOnly-Methode
 
-Die- `ReadOnly` Methode gibt an, ob der Eingabestream schreibgeschützt ist.
+Die `ReadOnly` -Methode gibt an, ob der Eingabestream schreibgeschützt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert der [**m \_ bReadOnly**](ctransinplaceinputpin-m-breadonly.md) -Element Variablen zurück.
+Gibt den Wert der [**m \_ bReadOnly-Membervariablen**](ctransinplaceinputpin-m-breadonly.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den Wert der [**m \_ bReadOnly**](ctransinplaceinputpin-m-breadonly.md) -El
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt den Wert der [**m \_ bReadOnly**](ctransinplaceinputpin-m-breadonly.md) -El
 
 <dl> <dt>
 
-[**Ctransinplaceinputpin-Klasse**](ctransinplaceinputpin.md)
+[**CTransInPlaceInputPin-Klasse**](ctransinplaceinputpin.md)
 </dt> </dl>
 
  

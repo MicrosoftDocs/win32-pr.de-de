@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: Windows8Api. JetCommitTransaction2-Methode'
-title: Windows8Api. JetCommitTransaction2-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen finden Sie unter: Windows8Api.JetCommitTransaction2-Methode'
+title: Windows8Api.JetCommitTransaction2-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'JetCommitTransaction2 method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.Windows8Api.JetCommitTransaction2(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.CommitTransactionGrbit,System.TimeSpan,Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8api.jetcommittransaction2(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 80ddc0670b60a3f2a280ff2aca3f051242c453ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7daf80ffae87469c5bd6ad49ddd3092efdad4f8c95f5c2f27239a38328cbdd00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967030"
 ---
-# <a name="windows8apijetcommittransaction2-method"></a>Windows8Api. JetCommitTransaction2-Methode
+# <a name="windows8apijetcommittransaction2-method"></a>Windows8Api.JetCommitTransaction2-Methode
 
-Führt einen Commit für die Änderungen aus, die an den Zustand der Datenbank während des aktuellen Speicher Punkts vorgenommen werden, und migriert Sie zum vorherigen Sicherungspunkt. Wenn für den äußersten Speicherpunkt ein Commit ausgeführt wird, werden die während dieses Speicher Punkts vorgenommenen Änderungen in den Zustand der Datenbank übertragen, und die Sitzung wird beendet.
+Commit für die Änderungen, die während des aktuellen Speicherpunkts am Zustand der Datenbank vorgenommen wurden, und migriert sie zum vorherigen Speicherpunkt. Wenn für den äußersten Speicherpunkt ein Committed ausgeführt wird, wird für die während dieses Speicherpunkts vorgenommenen Änderungen ein Committed in den Zustand der Datenbank ausgeführt, und die Sitzung beendet die Transaktion.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetCommitTransaction2(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die Sitzung, für die die Transaktion übernommen werden soll.
+    Die Sitzung, für die ein Commit für die Transaktion ausgeführt werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. committransaktiongrbit](./committransactiongrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.CommitTransactionGrbit](./committransactiongrbit-enumeration.md)  
     
-    Commit-Optionen.
+    Commitoptionen.
 
 <!-- end list -->
 
-  - durablecommit  
-    Typ: [System. TimeSpan](/dotnet/api/system.timespan)  
+  - durableCommit  
+    Typ: [System.TimeSpan](/dotnet/api/system.timespan)  
     
-    Dauer für den Commit einer verzögerten Transaktion.
+    Dauer des Commits für verzögerte Transaktion.
 
 <!-- end list -->
 
   - commitId  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
     
     Commit-ID, die diesem Commitdatensatz zugeordnet ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Api-Klasse](./windows8api-class.md)
 
 [Windows8Api-Member](./windows8api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

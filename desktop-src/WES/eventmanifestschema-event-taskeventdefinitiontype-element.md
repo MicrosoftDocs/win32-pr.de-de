@@ -1,9 +1,9 @@
 ---
-title: Event (TaskEventDefinitionType)-Element
-description: Definiert ein Ereignis für ein Aufgaben spezifisches Ereignis.
+title: event (TaskEventDefinitionType)-Element
+description: Definiert ein Ereignis für ein aufgabenspezifisches Ereignis.
 ms.assetid: 82c6b260-883d-4eae-a272-b8880c5d9c15
 keywords:
-- Ereignisprotokoll für Ereignis Element
+- Event-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d5075ea61b0e23843c2dda2cc7e244f9fe64ec27
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec55caf7d1d5127e96470daad5af5244c48e88e5dd52a6cb2c38355a67a865d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119958290"
 ---
-# <a name="event-taskeventdefinitiontype-element"></a>Event (TaskEventDefinitionType)-Element
+# <a name="event-taskeventdefinitiontype-element"></a>event (TaskEventDefinitionType)-Element
 
-\[Beginnend mit dem Nachrichten Compiler, der mit der Windows 7-Version des Windows SDK ausgeliefert wird, ist dieses Element nicht mehr verfügbar.\]
+\[Ab dem Nachrichtencompiler, der im Windows 7-Version des Windows SDK enthalten ist, ist dieses Element nicht mehr verfügbar.\]
 
-Definiert ein Ereignis für ein Aufgaben spezifisches Ereignis.
+Definiert ein Ereignis für ein aufgabenspezifisches Ereignis.
 
 ``` syntax
 <xs:element name="event"
@@ -32,7 +32,7 @@ Definiert ein Ereignis für ein Aufgaben spezifisches Ereignis.
  />
 ```
 
-Das **Ereignis** Element wird durch den komplexen [**TaskEventDefinitionType**](eventmanifestschema-taskeventdefinitiontype-complextype.md) -Typ definiert.
+Das **Ereigniselement** wird durch den komplexen [**TaskEventDefinitionType-Typ**](eventmanifestschema-taskeventdefinitiontype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -40,8 +40,8 @@ Das **Ereignis** Element wird durch den komplexen [**TaskEventDefinitionType**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,7 +52,7 @@ Das **Ereignis** Element wird durch den komplexen [**TaskEventDefinitionType**](
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Aufgabe (DefinitionType)**](eventmanifestschema-task-definitiontype-element.md)
+[**task (DefinitionType)**](eventmanifestschema-task-definitiontype-element.md)
 </dt> </dl>
 
  

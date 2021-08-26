@@ -1,47 +1,47 @@
 ---
-description: Fügen Sie die Aktion schedulereboot in die Aktions Sequenz ein, um den Benutzer zur Eingabe eines Neustarts des Systems am Ende der Installation aufzufordern. Verwenden Sie die ForceReboot-Aktion, um während der Installation zur Eingabe eines Neustarts aufzufordern.
+description: Fügen Sie die Aktion ScheduleReboot in die Aktionssequenz ein, um den Benutzer am Ende der Installation zur Eingabe eines Neustarts des Systems aufforderungen. Verwenden Sie die ForceReboot-Aktion, um während der Installation zur Eingabe eines Neustarts aufforderungen.
 ms.assetid: 36f24f57-f1f0-4eca-9b6d-1b25fb73fa96
-title: Schedulereboot-Aktion
+title: ScheduleReboot-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 460e3f25283c233fac80b25edd91d4bd102de435
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e796338c04f47ff4b2907dcf8d1531d438622a2f28a653e8ac4672a8b445e1b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120041520"
 ---
-# <a name="schedulereboot-action"></a>Schedulereboot-Aktion
+# <a name="schedulereboot-action"></a>ScheduleReboot-Aktion
 
-Fügen Sie die Aktion schedulereboot in die Aktions Sequenz ein, um den Benutzer zur Eingabe eines Neustarts des Systems am Ende der Installation aufzufordern. Verwenden Sie die [ForceReboot-Aktion](forcereboot-action.md) , um während der Installation zur Eingabe eines Neustarts aufzufordern.
+Fügen Sie die Aktion ScheduleReboot in die Aktionssequenz ein, um den Benutzer am Ende der Installation zur Eingabe eines Neustarts des Systems aufforderungen. Verwenden Sie die [ForceReboot-Aktion,](forcereboot-action.md) um während der Installation zur Eingabe eines Neustarts aufforderungen.
 
-Wenn die Installation über eine Benutzeroberfläche verfügt, zeigt das Installationsprogramm am Ende der Installation ein Meldungs Feld und eine Schaltfläche an, um zu Fragen, ob der Benutzer das System neu starten möchte. Der Benutzer muss auf diese Eingabeaufforderung Antworten, bevor die Installation abgeschlossen wird. Wenn die Installation über keine Benutzeroberfläche verfügt, wird das System am Ende automatisch neu gestartet.
+Wenn die Installation über eine Benutzeroberfläche verfügt, zeigt das Installationsprogramm ein Meldungsfeld und eine Schaltfläche am Ende der Installation an und fragt, ob der Benutzer das System neu starten möchte. Der Benutzer muss auf diese Aufforderung reagieren, bevor er die Installation abgeschlossen hat. Wenn die Installation über keine Benutzeroberfläche verfügt, wird das System am Ende automatisch neu gestartet.
 
-Wenn das Installationsprogramm feststellt, dass ein Neustart erforderlich ist, wird der Benutzer automatisch aufgefordert, am Ende der Installation neu zu starten, unabhängig davon, ob in der Sequenz ForceReboot-oder schedulereboot-Aktionen vorhanden sind. Beispielsweise fordert das Installationsprogramm automatisch einen Neustart an, wenn es alle Dateien ersetzen muss, die während der Installation verwendet werden.
+Wenn das Installationsprogramm feststellt, dass ein Neustart erforderlich ist, fordert es den Benutzer automatisch auf, am Ende der Installation neu zu starten, unabhängig davon, ob in der Sequenz ForceReboot- oder ScheduleReboot-Aktionen ausgeführt werden. Beispielsweise fordert das Installationsprogramm automatisch zur Eingabe eines Neustarts auf, wenn dateien ersetzt werden müssen, die während der Installation verwendet werden.
 
-Sie können bestimmte Eingabe Aufforderungen für Neustarts unterdrücken, indem Sie die Eigenschaft [**Neustart**](reboot.md) festlegen.
+Sie können bestimmte Aufforderungen für Neustarts unterdrücken, indem Sie die [**REBOOT-Eigenschaft**](reboot.md) festlegen.
 
-Wenn die Windows Installer während einer [Installation mit mehreren Paketen](multiple-package-installations.md)auf die Aktion [ForceReboot](forcereboot-action.md) oder schedulereboot stößt, wird das Installationsprogramm beendet und führt ein Rollback der Installation aus. Andere Pakete, die zur Installation mit mehreren Paketen gehören und keine ForceReboot-oder schedulereboot-Aktion enthalten, können installiert werden.
+Wenn der Windows Installer während einer Installation mit mehreren Paketen die Aktion [ForceReboot](forcereboot-action.md) oder ScheduleReboot [findet,](multiple-package-installations.md)wird die Installation vom Installationsprogramm beenden und ein Rollback für die Installation ausgeführt. Andere Pakete, die zur Installation mehrerer Pakete gehören und keine ForceReboot- oder ScheduleReboot-Aktion enthalten, können installiert werden.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen enthalten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Aktion kann z. b. verwendet werden, um das Installationsprogramm zu zwingen, nach der Installation von Treibern, die einen Neustart erfordern, nach einem Neustart zu Fragen. Wenn das Installationsprogramm versucht, Dateien zu ersetzen, die verwendet werden, wird der Benutzer automatisch zum Neustart aufgefordert, auch wenn schedulereboot nicht verwendet wurde.
+Diese Aktion kann beispielsweise verwendet werden, um zu erzwingen, dass das Installationsprogramm nach der Installation von Treibern, die einen Neustart erfordern, zur Eingabe eines Neustarts aufgefordert wird. Wenn das Installationsprogramm versucht, verwendete Dateien zu ersetzen, fordert es den Benutzer automatisch zum Neustart auf, auch wenn ScheduleReboot nicht verwendet wurde.
 
-Die schedulereboot-Aktion wird in der Regel am Ende der Sequenz abgelegt, aber Sie kann an einem beliebigen Punkt in der Sequenz eingefügt werden.
+Die ScheduleReboot-Aktion wird in der Regel am Ende der Sequenz platziert, kann jedoch jederzeit in der Sequenz eingefügt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System Neustarts](system-reboots.md)
+[Systemneustarts](system-reboots.md)
 </dt> </dl>
 
  

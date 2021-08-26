@@ -1,32 +1,32 @@
 ---
 title: Die type_to_xmit-Funktion
-description: Der stubwert Ruft den Typ \_ für die \_ xmit-Funktion auf, um den Typ, der von der Anwendung dargestellt wird, in den übertragenen Typ zu konvertieren.
+description: Die Stubs rufen den Typ der xmit-Funktion auf, um den von der Anwendung dargestellten Typ in den \_ \_ übertragenen Typ zu konvertieren.
 ms.assetid: fb5b3760-d660-4e4e-b5c5-768e8e598e23
 keywords:
 - type_to_xmit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd6a6b250d661fc19b0ee8fb68d21f171960e512
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 970d4a0de9675ac7a5f1b1c1449521177ecb661a1a80fd9ef609a6dc630605a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016500"
 ---
-# <a name="the-type_to_xmit-function"></a>Der Typ \_ der \_ xmit-Funktion.
+# <a name="the-type_to_xmit-function"></a>Der Typ \_ der \_ xmit-Funktion
 
-Der stubwert Ruft den **Typ \_ für die \_ xmit** -Funktion auf, um den Typ, der von der Anwendung dargestellt wird, in den übertragenen Typ zu konvertieren. Die-Funktion ist wie folgt definiert:
+Die Stubs rufen den Typ **der \_ \_ xmit-Funktion** auf, um den von der Anwendung dargestellten Typ in den übertragenen Typ zu konvertieren. Die Funktion ist wie die folgenden definiert:
 
 ``` syntax
 void __RPC_USER <type>_to_xmit ( 
      <type> __RPC_FAR *, <xmit_type> __RPC_FAR *     __RPC_FAR *);
 ```
 
-Der erste Parameter ist ein Zeiger auf die Anwendungsdaten. Der zweite Parameter wird von der-Funktion festgelegt, um auf die übertragenen Daten zu verweisen. Die Funktion muss Arbeitsspeicher für den übertragenen Typ zuweisen.
+Der erste Parameter ist ein Zeiger auf die Anwendungsdaten. Der zweite Parameter wird von der Funktion festgelegt, um auf die übertragenen Daten zu verweisen. Die Funktion muss Arbeitsspeicher für den übertragenen Typ zuordnen.
 
-Im folgenden Beispiel ruft der Client die Remote Prozedur mit einem **\[ in-, out \]** -Parameter vom Typ Double- \_ \_ Linktyp auf. Der Clientstub Ruft den **Typ \_ an die \_ xmit** -Funktion auf, die hier mit dem Namen "Double \_ \_ linktype" \_ in "xmit" benannt \_ ist, um doppelt verknüpfte Listen Daten in ein Array zu konvertieren
+Im folgenden Beispiel ruft der Client die Remoteprozedur auf, die über einen **\[ in, \] out-Parameter** vom Typ DOUBLE \_ LINK TYPE \_ verfügt. Der Clientstub ruft den Typ der **\_ \_ xmit-Funktion** auf, hier mit dem Namen DOUBLE \_ LINK TYPE in \_ \_ xmit, um doppelt verknüpfte Listendaten in ein Array mit \_ einer Größe zu konvertieren.
 
-Die-Funktion bestimmt die Anzahl der Elemente in der Liste, weist ein Array zu, das groß genug ist, um diese Elemente aufzunehmen, und kopiert dann die Listenelemente in das Array. Vor der Rückgabe der Funktion wird der zweite Parameter ( *pziray*) so festgelegt, dass er auf die neu zugeordnete Datenstruktur verweist.
+Die Funktion bestimmt die Anzahl der Elemente in der Liste, ordnet ein Array zu, das groß genug ist, um diese Elemente zu speichern, und kopiert dann die Listenelemente in das Array. Bevor die Funktion zurückgegeben wird, wird der zweite Parameter *ppArray* so festgelegt, dass er auf die neu zugeordnete Datenstruktur zeigen kann.
 
 
 ```C++
@@ -59,9 +59,9 @@ void __RPC_USER DOUBLE_LINK_TYPE_to_xmit (
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,36 +1,36 @@
 ---
-title: Erstellen eines Steuer Elements für die Datums-und Zeitauswahl
-description: In diesem Thema wird veranschaulicht, wie Sie ein Steuerelement für Datums-und Zeitauswahl (DTP) dynamisch erstellen.
+title: Erstellen eines Steuerelements für die Datums- und Uhrzeitauswahl
+description: In diesem Thema wird veranschaulicht, wie Ein DTP-Steuerelement (Date and Time Picker) dynamisch erstellt wird.
 ms.assetid: D4ACA939-3004-48D3-ADD9-FC5E53128BA2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1253a2972b8d858a7440b3e472d5b3aa347b8175
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: afa3f18e6033d3764e385280da383d74c351201694969266dcc383654a4372ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104209357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920890"
 ---
-# <a name="how-to-create-a-date-and-time-picker-control"></a>Erstellen eines Steuer Elements für die Datums-und Zeitauswahl
+# <a name="how-to-create-a-date-and-time-picker-control"></a>Erstellen eines Steuerelements für die Datums- und Uhrzeitauswahl
 
-In diesem Thema wird veranschaulicht, wie Sie ein Steuerelement für Datums-und Zeitauswahl (DTP) dynamisch erstellen. Das dazugehörige C++-Codebeispiel erstellt ein DTP-Steuerelement in einem nicht modalem Dialogfeld. Er verwendet den [**DTS- \_ shownone**](date-and-time-picker-control-styles.md) -Stil, um dem Benutzer zu ermöglichen, die Deaktivierung des Datums im Steuerelement zu simulieren.
+In diesem Thema wird veranschaulicht, wie Ein DTP-Steuerelement (Date and Time Picker) dynamisch erstellt wird. Im zugehörigen C++-Codebeispiel wird ein DTP-Steuerelement in einem moduslosen Dialogfeld erstellt. Er verwendet den [**DTS \_ SHOWNONE-Stil,**](date-and-time-picker-control-styles.md) um dem Benutzer zu ermöglichen, die Deaktivierung des Datums innerhalb des Steuerelements zu simulieren.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1"></a>Schritt 1:
 
-Registrieren Sie die Fenster Klasse, indem Sie die [**InitCommonControlsEx**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) -Funktion aufrufen \_ und \_ in der zugehörigen [**InitCommonControlsEx**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) -Struktur das Bit "ICC Date Classes" angeben.
+Registrieren Sie die Fensterklasse, indem Sie die [**InitCommonControlsEx-Funktion**](/windows/desktop/api/Commctrl/nf-commctrl-initcommoncontrolsex) aufrufen und das BIT "DATE \_ \_ CLASSES" in der zugehörigen [**INITCOMMONCONTROLSEX-Struktur**](/windows/win32/api/commctrl/ns-commctrl-initcommoncontrolsex) angeben.
 
 
 ```C++
@@ -46,9 +46,9 @@ Registrieren Sie die Fenster Klasse, indem Sie die [**InitCommonControlsEx**](/w
 
 ### <a name="step-2"></a>Schritt 2:
 
-Um das DTP-Steuerelement zu erstellen, verwenden Sie die Funktion " [**kreatewindowex**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) ". Geben Sie die [**datetimepick- \_ Klasse**](common-control-window-classes.md) als Fenster Klasse an, und übergeben Sie das Handle an das übergeordnete Dialogfeld.
+Verwenden Sie zum Erstellen des DTP-Steuerelements die [**CreateWindowEx-Funktion.**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Geben Sie [**DATETIMEPICK \_ CLASS**](common-control-window-classes.md) als Fensterklasse an, und übergeben Sie das Handle an das übergeordnete Dialogfeld.
 
-Im folgenden C++-Codebeispiel wird [**die Funktion "-Dialogfeld**](/windows/desktop/api/winuser/nf-winuser-createdialoga) " verwendet, um ein nicht modalem Dialogfeld zu erstellen. Anschließend wird " **kreatewindowex** " aufgerufen, um das DTP-Steuerelement zu erstellen.
+Im folgenden C++-Codebeispiel wird die [**CreateDialog-Funktion**](/windows/desktop/api/winuser/nf-winuser-createdialoga) verwendet, um ein modusloses Dialogfeld zu erstellen. Anschließend wird **CreateWindowEx** zum Erstellen des DTP-Steuerelements aufrufen.
 
 
 ```C++
@@ -121,15 +121,15 @@ HWND WINAPI CreateDatePick(HWND hwndMain)
 
 <dl> <dt>
 
-[Verwenden von Steuerelementen für Datums-und Zeitauswahl](using-date-and-time-picker.md)
+[Verwenden von Steuerelementen für die Datums- und Uhrzeitauswahl](using-date-and-time-picker.md)
 </dt> <dt>
 
-[Steuerelement Verweis für Datums-und Zeitauswahl](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl-Steuerelementreferenz](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
 </dt> <dt>
 
-[Datums-und Zeitauswahl](date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl](date-and-time-picker-control-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

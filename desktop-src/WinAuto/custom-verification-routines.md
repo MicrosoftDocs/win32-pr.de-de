@@ -1,32 +1,32 @@
 ---
-title: Benutzerdefinierte Überprüfungs Routinen
-description: In diesem Abschnitt wird beschrieben, wie eine benutzerdefinierte Überprüfungs Routine für das Tool für die Benutzeroberflächen Zugriffs Prüfung (accchecker) erstellt wird.
+title: Benutzerdefinierte Überprüfungsroutinen
+description: In diesem Abschnitt wird beschrieben, wie Sie eine benutzerdefinierte Überprüfungsroutine für das AccChecker-Tool (UI Accessibility Checker) erstellen.
 ms.assetid: 56F3EA1F-39C3-4DD9-8F2B-0C3608DD8737
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d66ad2fe0e27d16b55dd2d50d367250aadd15c4f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 245865a0ab4aa6848d4a4361a30febbb341742208586ebf4ec5b35c34fa30534
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120030884"
 ---
-# <a name="custom-verification-routines"></a>Benutzerdefinierte Überprüfungs Routinen
+# <a name="custom-verification-routines"></a>Benutzerdefinierte Überprüfungsroutinen
 
-In diesem Abschnitt wird beschrieben, wie eine benutzerdefinierte Überprüfungs Routine für das Tool für die Benutzeroberflächen Zugriffs Prüfung (accchecker) erstellt wird.
+In diesem Abschnitt wird beschrieben, wie Sie eine benutzerdefinierte Überprüfungsroutine für das AccChecker-Tool (UI Accessibility Checker) erstellen.
 
 -   [Erstellen einer benutzerdefinierten Überprüfung](#creating-a-custom-verification)
-    -   [Benutzerdefinierte Beispiel Überprüfung](#sample-custom-verification)
+    -   [Beispiel für benutzerdefinierte Überprüfung](#sample-custom-verification)
 -   [Verwenden einer benutzerdefinierten Überprüfung](#using-a-custom-verification)
-    -   [Die grafische Benutzeroberfläche der Zugriffs Prüfung (GUI)](#the-accchecker-graphical-user-interface-gui)
-    -   [Accchecker-Automatisierung](#accchecker-automation)
+    -   [Die grafische AccChecker-Benutzeroberfläche (GUI)](#the-accchecker-graphical-user-interface-gui)
+    -   [AccChecker Automation](#accchecker-automation)
 -   [Zugehörige Themen](#related-topics)
 
-Die UI-Barrierefreiheits Prüfung (accchecker) ist ein Tool zur Barrierefreiheit, mit dem die Implementierung von Microsoft Active Accessibility (MSAA) in einer Steuerelement-oder Anwendungs Benutzeroberfläche überprüft werden kann. Die Auswirkungen auf Barrierefreiheits Probleme, die möglicherweise durch die MSAA-Implementierung verfügbar gemacht werden, werden mit einer Reihe integrierter automatisierter Überprüfungs Routinen getestet. Diese nativen Überprüfungs Routinen können mithilfe der Extensible accchecker-Plattform durch angepasste Routinen erweitert werden.
+Ui Accessibility Checker (AccChecker) ist ein Tool zum Testen der Barrierefreiheit, mit dem die Implementierung von Microsoft Active Accessibility (MSAA) in einer Steuerelement- oder Anwendungsbenutzeroberfläche überprüft werden kann. Probleme mit hoher Barrierefreiheit, die möglicherweise von der MSAA-Implementierung verfügbar gemacht werden, werden mit einer Reihe integrierter automatisierter Überprüfungsroutinen getestet. Diese nativen Überprüfungsroutinen können mithilfe der erweiterbaren AccChecker-Plattform um benutzerdefinierte Routinen erweitert werden.
 
 ## <a name="creating-a-custom-verification"></a>Erstellen einer benutzerdefinierten Überprüfung
 
-Eine benutzerdefinierte Überprüfung wird als Klassenbibliothek (dll) erstellt, die eine einzelne Schnittstelle ( `IVerificationRoutine` ) mit einem Member ( `Execute` ) implementiert:
+Eine benutzerdefinierte Überprüfung wird als Klassenbibliothek (DLL) erstellt, die eine einzelne Schnittstelle ( ) implementiert, `IVerificationRoutine` die einen Member ( ) `Execute` enthält:
 
 
 ```CSharp
@@ -42,33 +42,33 @@ void Execute(
 
 **Parameter**
 
-*HWND*
+*Hwnd*
 
-Typ: **System. IntPtr**
+Typ: **System.IntPtr**
 
-Das HWND des Elements, das überprüft wird.
+Der HWND des elements, das überprüft wird.
 
-*Protokollierung*
+*Logger*
 
-Typ: **acccheck. Logging. ILogger**
+Typ: **AccCheck.Logging.ILogger**
 
-Die ausgewählte Protokollierungs Methode. Mögliche Typen sind **akkumulatinglogger** (von der Zugriffs Prüfung verwendet, um alle Protokolleinträge zwischenzuspeichern, bis die Überprüfungen vollständig sind), **ConsoleLogger**, **textfilelogger** und **xmlserializinglogger**.
+Die ausgewählte Protokollierungsmethode. Mögliche Typen sind **AccumulatingLogger** (wird von AccChecker verwendet, um alle Protokolleinträge zwischenzuspeichern, bis die Überprüfungen abgeschlossen sind), **ConsoleLogger**, **TextFileLogger** und **XMLSerializingLogger**.
 
-*Zuordnung*
+*AllowUI*
 
 Typ: **bool**
 
-Gibt an, ob die Überprüfungs Routine die zu testenden Benutzeroberfläche anzeigt. In automatisierten Testszenarien wird in der Regel auf false festgelegt.
+Gibt an, ob die Überprüfungsroutine die getestete Benutzeroberfläche anzeigt. Wird in automatisierten Testszenarien im Allgemeinen auf FALSE festgelegt.
 
-*Grafik*
+*Grafiken*
 
-Typ: **acccheck. graphicshelper**
+Typ: **AccCheck.GraphicsHelper**
 
-Wird für Screenshots und andere Visualisierungen innerhalb der accchecker verwendet.
+Wird für Screenshots und andere Visualisierungen in AccChecker verwendet.
 
-### <a name="sample-custom-verification"></a>Benutzerdefinierte Beispiel Überprüfung
+### <a name="sample-custom-verification"></a>Beispiel für benutzerdefinierte Überprüfung
 
-Das folgende Beispiel ist eine benutzerdefinierte c#-Überprüfung, die eine einfache Elementstruktur-tiefen Prüfung ausführt. Ein Fehler wird protokolliert, wenn die Elementstruktur größer als 50 Ebenen tief ist. eine Warnung wird protokolliert, wenn die Elementstruktur 20 bis 50 Ebenen tief ist, und andernfalls eine Informations Meldung protokolliert wird.
+Das folgende Beispiel ist eine benutzerdefinierte C#-Überprüfung, die eine einfache Tiefenüberprüfung der Elementstruktur ausführt. Ein Fehler wird protokolliert, wenn die Elementstruktur größer als 50 Ebenen ist, eine Warnung wird protokolliert, wenn die Elementstruktur 20 bis 50 Ebenen tief ist, und andernfalls wird eine Informationsmeldung protokolliert.
 
 
 ```CSharp
@@ -164,32 +164,32 @@ namespace VerificationRoutines
 
 
 > [!Note]  
-> In der Hilfe Dokumentation finden Sie eine Microsoft Visual Studio Lösung mit Überprüfungs Beispielcode. Die Dateien befinden sich im accchecker-Installationspfad.
+> Eine Microsoft Visual Studio Lösung, die Beispielcode für die Überprüfung enthält, ist in der Hilfedokumentation enthalten. Die Dateien befinden sich im AccChecker-Installationspfad.
 
- 
+ 
 
 ## <a name="using-a-custom-verification"></a>Verwenden einer benutzerdefinierten Überprüfung
 
-In diesem Abschnitt wird beschrieben, wie Sie eine benutzerdefinierte Überprüfung in accchecker-Testszenarien integrieren.
+In diesem Abschnitt wird beschrieben, wie Sie eine benutzerdefinierte Überprüfung in AccChecker-Testszenarien integrieren.
 
-### <a name="the-accchecker-graphical-user-interface-gui"></a>Die grafische Benutzeroberfläche der Zugriffs Prüfung (GUI)
+### <a name="the-accchecker-graphical-user-interface-gui"></a>Die grafische AccChecker-Benutzeroberfläche (GUI)
 
-Wenn Sie eine benutzerdefinierte Überprüfungs Routine in die accchecker-Anwendung einschließen möchten, klicken Sie einfach im Menü Datei auf dll öffnen, und suchen Sie die DLL für die Routine. Die benutzerdefinierte Routine wird am Ende der Liste der Überprüfungen im Bereich Überprüfungs Routinen auswählen hinzugefügt.
+Wenn Sie eine benutzerdefinierte Überprüfungsroutine in die AccChecker-Anwendung integrieren wollen, klicken Sie einfach im Menü Datei auf DLL öffnen, und suchen Sie die DLL für die Routine. Die benutzerdefinierte Routine wird am Ende der Liste der Überprüfungen im Bereich Überprüfungsroutinen auswählen hinzugefügt.
 
-Der folgende Screenshot zeigt die benutzerdefinierte Überprüfung der Überprüfung der Struktur Tiefe, die der Zugriffs Prüfung hinzugefügt wurde.
+Der folgende Screenshot zeigt die benutzerdefinierte Überprüfung der Stichprobenstrukturtiefe, die AccChecker hinzugefügt wurde.
 
-![Beispiel für Überprüfung der benutzerdefinierten Überprüfungs Routine für die Benutzeroberfläche der accchecker-Benutzeroberfläche](images/accchecker-sample-custom-verification.png)
+![Benutzerdefinierte Überprüfungsroutine zur Stichprobenüberprüfungsstrukturtiefe, die der Accchecker-Benutzeroberfläche hinzugefügt wurde](images/accchecker-sample-custom-verification.png)
 
 > [!Note]  
-> Wenn die Überprüfungs Attributwerte nicht in der benutzerdefinierten Überprüfungs Routine angegeben werden, wird die Überprüfung weiterhin in die Zugriffs Prüfung geladen, auch wenn Sie nicht in der Benutzeroberfläche angezeigt wird. Da es nicht in der Benutzeroberfläche angezeigt wird, kann es nicht deaktiviert und von nachfolgenden Überprüfungs Läufen ausgeschlossen werden.
+> Wenn die Überprüfungsattributwerte nicht in der benutzerdefinierten Überprüfungsroutine angegeben sind, wird die Überprüfung weiterhin in AccChecker geladen, obwohl sie nicht auf der Benutzeroberfläche angezeigt wird. Da sie nicht auf der Benutzeroberfläche angezeigt wird, kann sie nicht deaktiviert und von nachfolgenden Überprüfungsläufen ausgeschlossen werden.
 
- 
+ 
 
-### <a name="accchecker-automation"></a>Accchecker-Automatisierung
+### <a name="accchecker-automation"></a>AccChecker Automation
 
-Das Integrieren einer benutzerdefinierten Überprüfungs Routine in ein automatisiertes accchecker-Framework ist so einfach wie das Hinzufügen der Überprüfungs-dll und das Aktivieren der gewünschten Überprüfungs Routinen.
+Das Integrieren einer benutzerdefinierten Überprüfungsroutine in ein automatisiertes AccChecker-Framework ist so einfach wie das Hinzufügen der Überprüfungs-DLL und das Aktivieren der gewünschten Überprüfungsroutinen.
 
-Der folgende Code Ausschnitt veranschaulicht, wie die accesschecker-API verwendet wird, um die Tabstopps-Funktionalität in der System Steuerungsanwendung der Windows-Firewall zu testen.
+Der folgende Codeausschnitt veranschaulicht die Verwendung der AccChecker-API zum Testen der Tabulatorfunktion in der Windows Firewall-Systemsteuerungsanwendung.
 
 
 ```CSharp
@@ -243,9 +243,9 @@ public class TestCases : TestBase
 
 
 > [!Note]  
-> In der Hilfe Dokumentation finden Sie eine Microsoft Visual Studio 2008-Lösung mit Überprüfungs Beispielcode. Die Dateien befinden sich im accchecker-Installationspfad.
+> Eine Microsoft Visual Studio 2008-Lösung, die Prüfbeispielcode enthält, ist in der Hilfedokumentation enthalten. Die Dateien befinden sich im AccChecker-Installationspfad.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -254,9 +254,9 @@ public class TestCases : TestBase
 [UI Accessibility Checker](ui-accessibility-checker.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

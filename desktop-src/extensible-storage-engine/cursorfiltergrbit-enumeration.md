@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: Cursor Filter-grbit-Enumeration'
-title: Currsorfiltergrbit-Enumeration (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: Weitere Informationen finden Sie unter CursorFilterGrbit-Enumeration.
+title: CursorFilterGrbit-Enumeration (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: CursorFilterGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.Windows8.CursorFilterGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.cursorfiltergrbit(v=EXCHG.10)
@@ -26,21 +26,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: eeb64d74e2ec52a89afea41d98df2add0729000d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcb89fc69616bf868536aa9eef516bc5cacc7dd89b9b3bd29eadd3fe1ae06677
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066817"
 ---
-# <a name="cursorfiltergrbit-enumeration"></a>Currsorfiltergrbit-Enumeration
+# <a name="cursorfiltergrbit-enumeration"></a>CursorFilterGrbit-Enumeration
 
-Optionen, die beim Festlegen von Cursor Filtern erfolgreich waren.
+Beim Festlegen von Cursorfiltern übergebene Optionen.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -79,6 +79,6 @@ public enum CursorFilterGrbit
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

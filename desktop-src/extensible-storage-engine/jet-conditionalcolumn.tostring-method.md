@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_CONDITIONALCOLUMN. Methode "destring"'
-title: JET_CONDITIONALCOLUMN. Methode "destring"
+description: 'Erfahren Sie mehr über: JET_CONDITIONALCOLUMN. ToString-Methode'
+title: JET_CONDITIONALCOLUMN. ToString-Methode
 TOCTitle: 'ToString method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_CONDITIONALCOLUMN.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_conditionalcolumn.tostring(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8fae3732407b09df1b3ad6583242222e00d4acf4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: adc9b778995f400f3db8ba18703c5b2d7d6b5ebcfdcade4be009a695a208ad6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968270"
 ---
-# <a name="jet_conditionalcolumntostring-method"></a>JET_CONDITIONALCOLUMN. Methode "destring"
+# <a name="jet_conditionalcolumntostring-method"></a>JET_CONDITIONALCOLUMN. ToString-Methode
 
-Generiert eine Zeichen folgen Darstellung der-Instanz.
+Generieren Sie eine Zeichenfolgendarstellung der -Instanz.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public override string ToString()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Die-Struktur als Zeichenfolge.  
+Typ: [System.String](/dotnet/api/system.string)  
+Die -Struktur als Zeichenfolge.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_CONDITIONALCOLUMN-Klasse](./jet-conditionalcolumn-class.md)
 
-[Mitglieder JET_CONDITIONALCOLUMN](./jet-conditionalcolumn-members.md)
+[JET_CONDITIONALCOLUMN-Member](./jet-conditionalcolumn-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

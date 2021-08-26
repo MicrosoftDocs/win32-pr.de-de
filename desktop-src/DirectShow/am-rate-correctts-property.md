@@ -4,12 +4,12 @@ ms.assetid: f04e8291-734f-483e-b756-5362beb68d9c
 title: AM_RATE_CorrectTS-Eigenschaft (Dvdmedia.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15c65b613f892708dc210af2ca2a05efb74785fb
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 5858195ee6366be385a0d192a73b4375d43cae58cb574da2795efc87f78651ca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107910298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052920"
 ---
 # <a name="am_rate_correctts-property"></a>AM \_ RATE \_ CorrectTS-Eigenschaft
 
@@ -27,7 +27,7 @@ Der DVD-Navigator verwendet diese Eigenschaft, um den Decoder darüber zu inform
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Frühere Versionen des DVD-Navigators haben nicht die richtigen Zeitstempel festgelegt, wenn die Wiedergaberate etwas anderes als 1.0 war. Viele Decoder umgehen dieses Problem, indem sie die Zeitstempel beim Zurückspulen oder schnellen Vorwärtsgehen ignorieren und die richtigen Präsentationszeiten schätzen.
 

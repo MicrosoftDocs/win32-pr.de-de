@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaparam. TableClass11Name-Feld'
-title: Vistaparam. TableClass11Name-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaParam.TableClass11Name-Feld'
+title: VistaParam.TableClass11Name-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: TableClass11Name field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaParam.TableClass11Name
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaparam.tableclass11name(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 801e42a60f9d81b04d257ec0e3a671b549b3d51e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 677f8d86415036dc8afed26c90d654b6cc2958ff8d670f117d0c377b89df28c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967460"
 ---
-# <a name="vistaparamtableclass11name-field"></a>Vistaparam. TableClass11Name-Feld
+# <a name="vistaparamtableclass11name-field"></a>VistaParam.TableClass11Name-Feld
 
-Legen Sie den Namen der Tabellen Klasse 11 fest.
+Legen Sie den Namen fest, der der Tabellenklasse 11 zugeordnet ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,10 +55,10 @@ public const JET_param TableClass11Name
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaparam-Klasse](./vistaparam-class.md)
+[VistaParam-Klasse](./vistaparam-class.md)
 
-[Vistaparam-Member](./vistaparam-members.md)
+[VistaParam-Member](./vistaparam-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

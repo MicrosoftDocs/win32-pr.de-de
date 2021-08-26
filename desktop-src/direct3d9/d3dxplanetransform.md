@@ -1,5 +1,5 @@
 ---
-description: 'D3DXPlaneTransform-Funktion (D3dx9math.h): Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponierung der tatsächlichen Transformation.'
+description: 'D3DXPlaneTransform-Funktion (D3dx9math.h): Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponieren der tatsächlichen Transformation.'
 ms.assetid: 3581b397-cbd8-4aed-80dd-1841f331a367
 title: D3DXPlaneTransform-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 1f1f6ffc45098ba8f8b689e6f6212e5bec4fd679
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: c4376319d8ac2d49c480110d5119af5a3cefc9fe491f4997efdc15e30bf50db9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986460"
 ---
 # <a name="d3dxplanetransform-function-d3dx9mathh"></a>D3DXPlaneTransform-Funktion (D3dx9math.h)
 
-Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponierung der tatsächlichen Transformation.
+Transformiert eine Ebene durch eine Matrix. Die Eingabematrix ist die umgekehrte Transponieren der tatsächlichen Transformation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Zeiger auf die [**D3DXPLANE-Eingabestruktur,**](d3dxplane.md) die die ebene enth
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf die [**D3DXMATRIX-Quellstruktur,**](d3dxmatrix.md) die die Transformationswerte enthält. Diese Matrix muss die umgekehrte Transponierung der Transformationswerte enthalten.
+Zeiger auf die [**D3DXMATRIX-Quellstruktur,**](d3dxmatrix.md) die die Transformationswerte enthält. Diese Matrix muss die umgekehrte Transponieren der Transformationswerte enthalten.
 
 </dd> </dl>
 
@@ -104,7 +104,7 @@ Der Parameter pM enthält die umgekehrte Transponierung der Transformationsmatri
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

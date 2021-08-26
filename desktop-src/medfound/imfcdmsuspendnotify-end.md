@@ -1,7 +1,7 @@
 ---
-description: Der tatsächliche Anhaltevorgang wird durchgeführt, und es werden keine weiteren Aufrufe in das Modul zur Inhalts Entschlüsselung (CDM) durchgeführt.
+description: Der tatsächliche Suspend wird in Arbeit kommen, und es werden keine aufruften mehr an das Content Decryption Module (CDM) vorgenommen.
 ms.assetid: 7a319fbb-9757-45da-8a8b-51dd48f08464
-title: 'IMF cdmsuspendnotify:: End-Methode'
+title: DURCHSCHN.CdmSuspendNotify::End-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 71843b53fa85fded646fe71f2caa463a71c9415f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ad64b4b02c6accae3749478e09dee6078050bf22c0b1e5d13e4d1ea37f1635c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119957910"
 ---
-# <a name="imfcdmsuspendnotifyend-method"></a>IMF cdmsuspendnotify:: End-Methode
+# <a name="imfcdmsuspendnotifyend-method"></a>DURCHSCHN.CdmSuspendNotify::End-Methode
 
-Der tatsächliche Anhaltevorgang wird durchgeführt, und es werden keine weiteren Aufrufe in das Modul zur Inhalts Entschlüsselung (CDM) durchgeführt.
+Der tatsächliche Suspend wird in Arbeit kommen, und es werden keine aufruften mehr an das Content Decryption Module (CDM) vorgenommen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,17 +47,17 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF cdmsuspendnotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfcdmsuspendnotify)
+[**BESCHRIFTUNGCdmSuspendNotify**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfcdmsuspendnotify)
 </dt> </dl>
 
  

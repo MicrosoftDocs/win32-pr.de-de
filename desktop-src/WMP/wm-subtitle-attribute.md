@@ -1,9 +1,9 @@
 ---
-title: WM/Untertitel-Attribut
-description: Das Attribut WM/Untertitel ist der Untertitel des Inhalts.
+title: WM/SubTitle-Attribut
+description: Das WM/SubTitle-Attribut ist der Untertitel des Inhalts.
 ms.assetid: b1bd9a90-7ff5-4cc3-a141-839f4eaaa407
 keywords:
-- WM/Untertitel-Attribut, Windows Media Player
+- WM/SubTitle-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,31 +12,31 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a82630f6f8dbd36df5d71b942ea2949bb6237e65
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 54e825f4ebfff07010c46b7150076bba69325cd96be4793611027a2dc148cb35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000860"
 ---
-# <a name="wmsubtitle-attribute"></a>WM/Untertitel-Attribut
+# <a name="wmsubtitle-attribute"></a>WM/SubTitle-Attribut
 
-Das Attribut **WM/Untertitel** ist der Untertitel des Inhalts.
+Das **WM/SubTitle-Attribut** ist der Untertitel des Inhalts.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateiattribute](commonly-used-windows-media-file-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
 
-Unter **Titel** ist ein Alias für dieses Attribut.
+**SubTitle ist** ein Alias für dieses Attribut.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmuntertitel.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMSubTitle.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,7 +52,7 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

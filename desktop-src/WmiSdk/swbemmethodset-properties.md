@@ -1,20 +1,20 @@
 ---
-description: Das "Swap-Objekt"-Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemMethodSet-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: C364C896-7D27-4381-A4FC-83EF8E4AAB33
 ms.tgt_platform: multiple
-title: Eigenschaften von "taubemmethodset"
+title: SWbemMethodSet-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f447ad3ceb984b90e787262a0a1fa666600ea1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0cfdc8a4617aea9c0b3fb4c650542468d7f8097bdd48555df2c1fd9e44551e15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119954940"
 ---
-# <a name="swbemmethodset-properties"></a>Eigenschaften von "taubemmethodset"
+# <a name="swbemmethodset-properties"></a>SWbemMethodSet-Eigenschaften
 
-Das " [**Swap**](swbemmethodset.md) -Objekt"-Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemMethodSet-Objekt**](swbemmethodset.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

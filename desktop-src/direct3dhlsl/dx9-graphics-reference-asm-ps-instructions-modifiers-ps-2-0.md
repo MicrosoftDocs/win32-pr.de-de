@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: dc8ed91f8e103ebbab7c43ffe53201f0e1d5dfcf
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: 6875789c40a2f0fab2987927662658a821de5742b2473b7947250cfb11da8155
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982890"
 ---
 # <a name="modifiers-for-ps_2_0-and-above"></a>Modifizierer für ps \_ 2 \_ 0 und höher
 
@@ -36,7 +36,7 @@ Dieser Abschnitt enthält Referenzinformationen zu den Anweisungsmodifizierern, 
 
 ## <a name="centroid"></a>Schwerpunkt
 
-Der Schwerpunktmodifizierer ist ein optionaler Modifizierer, der die Attributinterpolation innerhalb des Bereichs des Primitiven einbindet, wenn ein Multisample-Pixelmittelpunkt nicht vom Primitiven abgedeckt wird. Dies ist unter [Schwerpunktstichproben zu](https://msdn.microsoft.com/library/ee415231(VS.85).aspx)sehen.
+Der Schwerpunktmodifizierer ist ein optionaler Modifizierer, der die Attributinterpolation innerhalb des Bereichs des Primitivs einbindet, wenn ein Multisample-Pixelmittelpunkt nicht vom Primitiven abgedeckt wird. Dies ist unter [Schwerpunktsampling zu](https://msdn.microsoft.com/library/ee415231(VS.85).aspx)sehen.
 
 Sie können den Schwerpunktmodifizierer wie hier gezeigt auf eine Assemblyanweisung anwenden:
 
@@ -59,7 +59,7 @@ float4 TexturePointCentroidPS( float4 TexCoord : TEXCOORD0_centroid ) : COLOR0
 
 
 
-Darüber hinaus wird für jedes [Eingabefarbregister](dx9-graphics-reference-asm-ps-registers-input-color.md) (v ), das \# mit einer Farbsemantik deklariert wird, automatisch ein Schwerpunkt angewendet. Farbverläufe, die aus Attributen berechnet werden, für die Schwerpunktstichproben erstellt werden, sind nicht garantiert genau.
+Darüber hinaus wird für jedes [Eingabefarbregister](dx9-graphics-reference-asm-ps-registers-input-color.md) (v), das \# mit einer Farbsemantik deklariert wird, automatisch ein Schwerpunkt angewendet. Farbverläufe, die aus Attributen berechnet werden, für die Schwerpunktstichproben erstellt werden, sind nicht garantiert genau.
 
 ## <a name="partial-precision"></a>Partielle Genauigkeit
 
@@ -67,7 +67,7 @@ Der Anweisungsmodifizierer für partielle Genauigkeit ( \_ pp) gibt Bereiche an,
 
 Der \_ pp-Modifizierer kann in zwei Kontexten auftreten:
 
--   In einer Texturkoordinatendeklaration, um die Übergabe von Texturkoordinaten an den Pixelshader in Form von teilweiser Genauigkeit zu ermöglichen. Dies ermöglicht beispielsweise die Verwendung von Texturkoordinaten, um Farbdaten an den Pixelshader weiterzuleiten, was in einigen Implementierungen mit teilweiser Genauigkeit schneller als mit vollständiger Genauigkeit sein kann. Wenn dieser Modifizierer nicht vorhanden ist, müssen Texturkoordinaten mit voller Genauigkeit übergeben werden.
+-   In einer Texturkoordinatendeklaration, um die Übergabe von Texturkoordinaten an den Pixel-Shader in Form von teilweiser Genauigkeit zu ermöglichen. Dies ermöglicht z. B. die Verwendung von Texturkoordinaten, um Farbdaten an den Pixel-Shader weiterzuleiten, der in einigen Implementierungen mit teilweiser Genauigkeit schneller als mit vollständiger Genauigkeit sein kann. Wenn dieser Modifizierer nicht vorhanden ist, müssen Texturkoordinaten mit voller Genauigkeit übergeben werden.
 -   Für jede Anweisung, einschließlich Anweisungen zum Laden von Texturen. Dies gibt an, dass die Implementierung die Anweisung mit teilweiser Genauigkeit ausführen und ein Ergebnis mit teilweiser Genauigkeit speichern darf. Wenn kein expliziter Modifizierer vorhanden ist, muss die Anweisung mit voller Genauigkeit ausgeführt werden (unabhängig von der Eingabegenauigkeit).
 
 Beispiele:
@@ -82,7 +82,7 @@ cmp_pp r0, r1, r2, r3
 
 ## <a name="saturate"></a>Sättigung
 
-Der Saturate-Anweisungsmodifizierer ( \_ sat) sättigt (oder klammscht) das Anweisungsergebnis auf den Bereich \[ 0, 1, \] bevor er in das Zielregister schreibt.
+Der Saturate-Anweisungsmodifizierer ( \_ sat) sättigt (oder klammert) das Anweisungsergebnis auf den Bereich \[ 0, 1, \] bevor er in das Zielregister schreibt.
 
 Der \_ Sat-Anweisungsmodifizierer kann mit jeder Anweisung außer [frc - ps](frc---ps.md), [sincos - ps](sincos---ps.md)und beliebigen Texanweisungen verwendet \* werden.
 

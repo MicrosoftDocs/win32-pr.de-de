@@ -1,30 +1,30 @@
 ---
-description: Microsoft Image Color Management (ICM) stellt sicher, dass ein Farbbild, eine Grafik oder ein Textobjekt so nah wie möglich an seine ursprüngliche Absicht auf jedem Gerät gerendert wird, trotz der Unterschiede bei den Abbild Erstellungs Technologien und Farbfunktionen zwischen Geräten.
+description: Microsoft Image Color Management (ICM) stellt sicher, dass ein Farbbild, eine Grafik oder ein Textobjekt so nah wie möglich an der ursprünglichen Absicht auf jedem Gerät gerendert wird, trotz der Unterschiede bei Bildverarbeitungstechnologien und Farbfunktionen zwischen Geräten.
 ms.assetid: eced18cf-be5a-4c61-b0e5-36d607daa6ff
-title: Gerätekontext Funktionen ICM-Enabled
+title: ICM-Enabled Gerätekontextfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95a0b49e62d0b4d05e0690d2aee0d3c5f0f530cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f33337aeea32f1ca84b74e3fc45e9bd67dbfe1ce1a5300a502a5303f55cab357
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119944200"
 ---
-# <a name="icm-enabled-device-context-functions"></a>Gerätekontext Funktionen ICM-Enabled
+# <a name="icm-enabled-device-context-functions"></a>ICM-Enabled Gerätekontextfunktionen
 
-Microsoft Image Color Management (ICM) stellt sicher, dass ein Farbbild, eine Grafik oder ein Textobjekt so nah wie möglich an seine ursprüngliche Absicht auf jedem Gerät gerendert wird, trotz der Unterschiede bei den Abbild Erstellungs Technologien und Farbfunktionen zwischen Geräten. (Weitere Informationen finden Sie unter [Windows Color System](/previous-versions//dd372446(v=vs.85)).)
+Microsoft Image Color Management (ICM) stellt sicher, dass ein Farbbild, eine Grafik oder ein Textobjekt so nah wie möglich an der ursprünglichen Absicht auf jedem Gerät gerendert wird, trotz der Unterschiede bei Bildverarbeitungstechnologien und Farbfunktionen zwischen Geräten. (Weitere Informationen finden Sie unter [Windows Color System](/previous-versions//dd372446(v=vs.85)).)
 
-Es gibt verschiedene Funktionen in der Graphics Device Interface (GDI), die Farbdaten verwenden oder verwenden. Die folgenden Gerätekontext Funktionen sind für die Verwendung mit ICM aktiviert:
+Es gibt verschiedene Funktionen in der Grafikgeräteschnittstelle (GDI), die Farbdaten verwenden oder verarbeiten. Die folgenden Gerätekontextfunktionen sind für die Verwendung mit ICM:
 
--   [**"Kreatecompatibledc"**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatibledc)
--   [**-**](/windows/desktop/api/Wingdi/nf-wingdi-createdca)
--   [**Getdcbrushcolor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcbrushcolor)
--   [**Getdcpcolor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcpencolor)
+-   [**CreateCompatibleDC**](/windows/desktop/api/Wingdi/nf-wingdi-createcompatibledc)
+-   [**CreateDC**](/windows/desktop/api/Wingdi/nf-wingdi-createdca)
+-   [**GetDCBrushColor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcbrushcolor)
+-   [**GetDCPenColor**](/windows/desktop/api/WinGdi/nf-wingdi-getdcpencolor)
 -   [**ResetDC**](/windows/desktop/api/Wingdi/nf-wingdi-resetdca)
--   [**SelectObject**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject)
--   [**Setdcbrushcolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor)
--   [**Setdcpcolor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor)
+-   [**Auswählenobjekt**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject)
+-   [**SetDCBrushColor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcbrushcolor)
+-   [**SetDCPenColor**](/windows/desktop/api/Wingdi/nf-wingdi-setdcpencolor)
 
  
 

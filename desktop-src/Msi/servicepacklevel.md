@@ -1,25 +1,25 @@
 ---
-description: Der Installer legt die servicepacklevel-Eigenschaft auf den numerischen Wert des Betriebssystems Service Pack Ebene fest, sofern eine installiert ist.
+description: Das Installationsprogramm legt die ServicePackLevel-Eigenschaft auf den numerischen Wert der Service Pack-Ebene des Betriebssystems fest, sofern installiert.
 ms.assetid: 8b46a020-ab02-46d6-bcc4-016d9c93b5db
-title: Servicepacklevel-Eigenschaft
+title: ServicePackLevel-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45deaa1a506a491b2c9d434c85a8ae9d311f9669
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f3ff70c5e8d1476c5337a094f85dc648e654a31e90670eb3dff608830697ed45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039920"
 ---
-# <a name="servicepacklevel-property"></a>Servicepacklevel-Eigenschaft
+# <a name="servicepacklevel-property"></a>ServicePackLevel-Eigenschaft
 
-Der Installer legt die **servicepacklevel** -Eigenschaft auf den numerischen Wert des Betriebssystems Service Pack Ebene fest, sofern eine installiert ist.
+Das Installationsprogramm legt die **ServicePackLevel-Eigenschaft** auf den numerischen Wert der Service Pack-Ebene des Betriebssystems fest, sofern installiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die neben Versionsnummer (sofern vorhanden) wird von der [**servicepacklevelminor**](servicepacklevelminor.md) -Eigenschaft aufrechterhalten.
+Die Nebenrevisionsnummer wird von der [**ServicePackLevelMinor-Eigenschaft**](servicepacklevelminor.md) gehalten, sofern eine revisionsnummer vorgebe.
 
-Weitere Informationen finden Sie unter [Betriebs System-Eigenschaftswerte](operating-system-property-values.md).
+Weitere Informationen finden Sie unter [Betriebssystem-Eigenschaftswerte.](operating-system-property-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -27,7 +27,7 @@ Weitere Informationen finden Sie unter [Betriebs System-Eigenschaftswerte](opera
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

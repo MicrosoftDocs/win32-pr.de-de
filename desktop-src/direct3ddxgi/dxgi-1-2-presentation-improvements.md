@@ -1,39 +1,39 @@
 ---
-title: Kippen von Modellen, Dirty Rechtecke, scrollt-Bereiche
-description: DXGI 1,2 unterstützt eine neue Swapkette für das Flip-Modell, geänderte Rechtecke und aufgeschlüsselten Bereichen. Wir erläutern die Vorteile der Verwendung der neuen pullmodellaustauschkette und der Optimierung der Präsentation durch die Angabe von Änderungs Rechtecke und den Bereichen mit Rollup.
+title: Flip model, dirty rectangles, scrolled areas (Flip-Modell, dirty rectangles, scrolled areas)
+description: DXGI 1.2 unterstützt eine neue Flip-Model-Swapkette, geänderte Rechtecke und scrollende Bereiche. Wir erläutern die Vorteile der Verwendung der neuen Flip-Model-Swapkette und der Optimierung der Darstellung durch Angabe von geänderten Rechtecke und scrollenden Bereichen.
 ms.assetid: 22236FBD-E881-49B5-8AE9-96FB526DFEF8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a3abbb784de82f5bf647a4b66503497edcd4f89
-ms.sourcegitcommit: 5724b38883e518ac565e1b266defa85ad0941bb2
+ms.openlocfilehash: 12f191af4a94b1379e2539b8d544163467fe4dc49141f244e8dcc1f13a3e36af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "104570187"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119984227"
 ---
-# <a name="flip-model-dirty-rectangles-scrolled-areas"></a>Kippen von Modellen, Dirty Rechtecke, scrollt-Bereiche
+# <a name="flip-model-dirty-rectangles-scrolled-areas"></a>Flip model, dirty rectangles, scrolled areas (Flip-Modell, dirty rectangles, scrolled areas)
 
-DXGI 1,2 unterstützt eine neue Swapkette für das Flip-Modell, geänderte Rechtecke und aufgeschlüsselten Bereichen. Wir erläutern die Vorteile der Verwendung der neuen pullmodellaustauschkette und der Optimierung der Präsentation durch die Angabe von Änderungs Rechtecke und den Bereichen mit Rollup.
+DXGI 1.2 unterstützt eine neue Flip-Model-Swapkette, geänderte Rechtecke und scrollende Bereiche. Wir erläutern die Vorteile der Verwendung der neuen Flip-Model-Swapkette und der Optimierung der Darstellung durch Angabe von geänderten Rechtecke und scrollenden Bereichen.
 
-## <a name="dxgi-flip-model-presentation"></a>DXGI-Flip-Model-Präsentation
+## <a name="dxgi-flip-model-presentation"></a>DXGI– Flip-Model-Präsentation
 
-DXGI 1,2 fügt Unterstützung für das Flip Presentation Model für Direct3D 10-APIs und spätere APIs hinzu. In Windows 7 hat Direct3D 9Ex zuerst die [Flip-Model-Präsentation](../direct3darticles/direct3d-9ex-improvements.md) angenommen, um zu verhindern, dass der Austausch Ketten Puffer unnötig kopiert wird. Durch die Verwendung von Flip Model werden backpuffervorgänge zwischen der Laufzeit und der Desktopfenster-Manager (DWM) gekippt, sodass DWM immer direkt aus dem Hintergrund Puffer besteht, anstatt den Inhalt des hinterpuffers zu kopieren.
+DXGI 1.2 fügt Unterstützung für das Flip-Präsentationsmodell für Direct3D 10 und höhere APIs hinzu. In Windows 7 hat Direct3D 9EX erstmals die Präsentation des [Flip-Modells](../direct3darticles/direct3d-9ex-improvements.md) übernommen, um zu vermeiden, dass der Swapkettenpuffer unnötig kopiert wird. Bei Verwendung des Flip-Modells werden Hintergrundpuffer zwischen der Laufzeit und Desktopfenster-Manager (DWM) gekippt, sodass DWM immer direkt aus dem Hintergrundpuffer erstellt wird, anstatt den Inhalt des Hintergrundpuffers zu kopieren.
 
-DXGI 1,2-APIs enthalten eine überarbeitete DXGI-SwapChain-Schnittstelle, [**IDXGISwapChain1**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgiswapchain1). Sie können mehrere [**IDXGIFactory2**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgifactory2) -Schnittstellen Methoden verwenden, um das entsprechende **IDXGISwapChain1** -Objekt für die Verwendung mit einem [**HWND**](../winprog/windows-data-types.md) -handle, einem [corewindow](/uwp/api/Windows.UI.Core.CoreWindow?view=winrt-19041) -Objekt, einer [directcomposition](../directcomp/directcomposition-portal.md)oder dem [**Windows. UI. XAML**](/uwp/api/Windows.UI.Xaml?view=winrt-19041) -Framework zu erstellen.
+DXGI 1.2-APIs enthalten eine überarbeitete DXGI-Swap-Chain-Schnittstelle, [**IDXGISwapChain1.**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgiswapchain1) Sie können mehrere [**IDXGIFactory2-Schnittstellenmethoden**](/windows/desktop/api/DXGI1_2/nn-dxgi1_2-idxgifactory2) verwenden, um das entsprechende **IDXGISwapChain1-Objekt** zu erstellen, das mit einem [**HWND-Handle,**](../winprog/windows-data-types.md) einem [CoreWindow-Objekt,](/uwp/api/Windows.UI.Core.CoreWindow?view=winrt-19041) [DirectComposition](../directcomp/directcomposition-portal.md)oder dem Windows verwendet werden [**soll. Benutzeroberfläche. Xaml-Framework.**](/uwp/api/Windows.UI.Xaml?view=winrt-19041)
 
-Wählen Sie das Modell zum Kippen der Darstellung aus, indem Sie den [**DXGI-swapffekt-Wert für die \_ \_ \_ \_ sequenzielle**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) Enumeration im **SwapEffect** -Member der [**DXGI- \_ \_ SwapChain \_ DESC1**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) -Struktur und den **BUFFERCOUNT** -Member der **DXGI- \_ Swap- \_ Kette \_ DESC1** auf mindestens 2 festlegen. Weitere Informationen zur Verwendung des DXGI-Flip-Modells finden Sie unter [DXGI Flip Model](dxgi-flip-model.md). Aufgrund der glatteren Präsentation des Flip Presentation Model und anderer neuer Funktionen empfiehlt es sich, das Modell "Flip Presentation Model" für alle neuen apps zu verwenden, die Sie mit Direct3D 10-und höher-APIs schreiben.
+Sie wählen das Flip-Präsentationsmodell aus, indem Sie den [**DXGI \_ SWAP EFFECT \_ FLIP \_ \_ SEQUENTIAL-Enumerationswert**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect) im **SwapEffect-Member** der [**DXGI SWAP CHAIN \_ \_ \_ DESC1-Struktur**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) angeben und indem Sie den **BufferCount-Member** von **DXGI SWAP CHAIN \_ \_ \_ DESC1** auf mindestens 2 festlegen. Weitere Informationen zur Verwendung des DXGI-Flip-Modells finden Sie unter [DXGI-Flipmodell.](dxgi-flip-model.md) Aufgrund der reibungsloseren Darstellung des Flip-Präsentationsmodells und anderer neuer Funktionen empfiehlt es sich, das Flip-Präsentationsmodell für alle neuen Apps zu verwenden, die Sie mit Direct3D 10 und höher-APIs schreiben.
 
-## <a name="using-dirty-rectangles-and-the-scroll-rectangle-in-swap-chain-presentation"></a>Verwenden von Dirty Rechtecke und des Schiebe Rechtecks bei der Präsentation der Austausch Kette
+## <a name="using-dirty-rectangles-and-the-scroll-rectangle-in-swap-chain-presentation"></a>Verwenden von geänderten Rechtecke und des Scrollrechtecks in der Swap chain-Darstellung
 
-Durch die Verwendung von Dirty Rechtecke und des Bild Lauf Rechtecks in der Präsentation der Austausch Kette sparen Sie die Nutzung der Speicherbandbreite und die damit verbundene Nutzung der Systemleistung, da die Menge der Pixeldaten, die das Betriebssystem zum Zeichnen des nächsten dargestellten Frames benötigt, reduziert wird, wenn das Betriebssystem nicht den gesamten Frame zeichnen muss. Für apps, die häufig über Remotedesktopverbindung und andere Technologien für den Remote Zugriff angezeigt werden, sind die Einsparungen besonders in der Anzeigequalität erkennbar, da diese Technologien geänderte Rechtecke und Bild Lauf Metadaten verwenden.
+Durch die Verwendung von geänderten Rechtecke und dem Scrollrechteck in der Swap chain-Darstellung sparen Sie die Nutzung der Speicherbandbreite und die damit verbundene Nutzung der Systemleistung, da die Menge der Pixeldaten, die das Betriebssystem zum Zeichnen des nächsten dargestellten Frames benötigt, reduziert wird, wenn das Betriebssystem nicht den gesamten Frame zeichnen muss. Bei Apps, die häufig über Remotedesktopverbindung und andere Remotezugriffstechnologien angezeigt werden, sind die Einsparungen bei der Anzeigequalität besonders deutlich, da diese Technologien geänderte Rechtecke und Scrollmetadaten verwenden.
 
-Sie können Scroll nur mit DXGI-Swapketten verwenden, die im Flip Presentation Model ausgeführt werden. Sie können Dirty Rechtecke mit DXGI-Swapketten verwenden, die sowohl im Flip Model-als auch im BitBLT-Modell ausgeführt werden (festgelegt mit [**DXGI- \_ \_ swapffekt \_**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect)
+Sie können scrollen nur mit DXGI-Swapketten verwenden, die im Flip-Präsentationsmodell ausgeführt werden. Sie können geänderte Rechtecke mit DXGI-Swapketten verwenden, die sowohl im Flip-Modell als auch im Bitblt-Modell ausgeführt werden (mit [**DXGI \_ SWAP EFFECT \_ \_ SEQUENTIAL**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect)festgelegt).
 
-In diesem Szenario und dieser Abbildung zeigen wir die Funktionalität der Verwendung von Änderungs Rechtecke und des Bildlaufs. Hier enthält eine Bild lauffähigen App Text und animationsvideos. Die APP verwendet Dirty Rechtecke, um nur das Animationsvideo und die neue Zeile für das Fenster zu aktualisieren, anstatt das gesamte Fenster zu aktualisieren. Mit dem scrollrechteck kann das Betriebssystem den zuvor gerenderten Inhalt in den neuen Frame kopieren und übersetzen und nur die neue Zeile im neuen Frame rendern.
+In diesem Szenario und in dieser Abbildung zeigen wir die Funktionalität der Verwendung von geänderten Rechtecke und Scrollen. Hier enthält eine bildlauffähige App Text und animierendes Video. Die App verwendet geänderte Rechtecke, um nur das animierende Video und die neue Zeile für das Fenster zu aktualisieren, anstatt das gesamte Fenster zu aktualisieren. Das Scrollrechteck ermöglicht dem Betriebssystem, den zuvor gerenderten Inhalt auf dem neuen Frame zu kopieren und zu übersetzen und nur die neue Zeile auf dem neuen Frame zu rendern.
 
-Die APP führt eine Präsentation durch Aufrufen der [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) -Methode aus. In diesem-Befehl übergibt die APP einen Zeiger auf eine [**DXGI-Struktur der \_ vorhandenen \_ Parameter**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_present_parameters) , die geänderte Rechtecke und die Anzahl der modifizierten Rechtecke, das Schiebe Rechteck und den zugeordneten Bild Lauf Offset oder sowohl geänderte Rechtecke als auch das Schiebe Rechteck enthält. Unsere App übergibt 2 geänderte Rechtecke und das Schiebe Rechteck. Das Schiebe Rechteck ist der Bereich des vorherigen Frames, der vom Betriebssystem in den aktuellen Frame kopiert werden muss, bevor der aktuelle Frame gerendert wird. Die APP gibt das Animationsvideo und die neue Zeile als modifizierte Rechtecke an, und das Betriebssystem rendert Sie im aktuellen Frame.
+Die App führt eine Präsentation durch, indem sie die [**IDXGISwapChain1::P resent1-Methode aufruft.**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) In diesem Aufruf übergibt die App einen Zeiger auf eine [**DXGI \_ PRESENT \_ PARAMETERS-Struktur,**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_present_parameters) die geänderte Rechtecke und die Anzahl der geänderten Rechtecke, das Scrollrechteck und den zugeordneten Scrolloffset oder beide geänderten Rechtecke und das Scrollrechteck enthält. Unsere App übergibt zwei geänderte Rechtecke und das Scrollrechteck. Das Scrollrechteck ist der Bereich des vorherigen Frames, den das Betriebssystem in den aktuellen Frame kopieren muss, bevor der aktuelle Frame gerendert wird. Die App gibt das animierende Video und die neue Zeile als geänderte Rechtecke an, und das Betriebssystem rendert sie im aktuellen Frame.
 
-![Abbildung der überlappenden Scroll-und Dirty Rechtecke](images/dxgipresentparam.png)
+![Abbildung der Überlappung von Scrollen und geänderten Rechtecke](images/dxgipresentparam.png)
 
 ``` syntax
 DirtyRectsCount = 2
@@ -43,46 +43,46 @@ pDirtyRects[ 1 ] = { 0, 70, 50, 80 } // New line
 *pScrollOffset = { 0, -10 }
 ```
 
-Das gestrichelte Rechteck zeigt das Bild Lauf Rechteck im aktuellen Frame an. Das Bild Lauf Rechteck wird vom **pscrollrect** -Member von [**DXGI \_ Present- \_ Parametern**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_present_parameters)angegeben. Der Pfeil zeigt den scrolloffset an. Der Bild Lauf Offset wird vom **pscrolloffset** -Member von **DXGI \_ Present- \_ Parametern** angegeben. Gefüllte Rechtecke zeigen geänderte Rechtecke an, dass die APP mit neuem Inhalt aktualisiert wurde. Die gefüllten Rechtecke werden von den **dirtyreczcount** -und **pdirtyrects** -Membern von **DXGI \_ Present- \_ Parametern** angegeben.
+Das gestrichelte Rechteck zeigt das Scrollrechteck im aktuellen Frame an. Das Scrollrechteck wird durch den **pScrollRect-Member** von [**DXGI \_ PRESENT \_ PARAMETERS**](/windows/desktop/api/DXGI1_2/ns-dxgi1_2-dxgi_present_parameters)angegeben. Der Pfeil zeigt den Bildlaufoffset an. Der Bildlaufoffset wird vom **pScrollOffset-Member** von **DXGI \_ PRESENT \_ PARAMETERS** angegeben. Gefüllte Rechtecke zeigen geänderte Rechtecke an, die die App mit neuem Inhalt aktualisiert hat. Die ausgefüllten Rechtecke werden von den **DirtyRectsCount-** und **pDirtyRects-Membern** von **DXGI \_ PRESENT \_ PARAMETERS** angegeben.
 
-### <a name="sample-2-buffer-flip-model-swap-chain-with-dirty-rectangles-and-scroll-rectangle"></a>Beispiel 2: Puffer-Swap-Kette mit Änderungs Rechtecke und Schiebe Rechteck
+### <a name="sample-2-buffer-flip-model-swap-chain-with-dirty-rectangles-and-scroll-rectangle"></a>Beispiel für eine 2-Puffer-Swap-Model-Swapkette mit geänderten Rechtecke und Scrollrechteck
 
-Die nächste Abbildung und Sequenz zeigt ein Beispiel für einen DXGI Flip-Model Presentation-Vorgang, der geänderte Rechtecke und ein scrollrechteck verwendet. In diesem Beispiel verwenden wir die minimale Anzahl von Puffern für die Darstellung von Flip-Modellen, bei der es sich um eine Puffer Anzahl von zwei handelt, einen vorderen Puffer, der den Inhalt der APP anzeigt, und einen Hintergrund Puffer, der den aktuellen Frame enthält, den die APP Renderen möchte.
+Die nächste Abbildung und Sequenz zeigt ein Beispiel für einen DXGI-Flip-Model-Präsentationsvorgang, der geänderte Rechtecke und ein Scrollrechteck verwendet. In diesem Beispiel verwenden wir die Mindestanzahl von Puffern für die Flip-Model-Darstellung. Dabei handelt es sich um eine Pufferanzahl von zwei Puffern, einen Frontpuffer, der den App-Anzeigeinhalt enthält, und einen Hintergrundpuffer, der den aktuellen Frame enthält, den die App rendern möchte.
 
-1.  Wie im Vorder-Puffer am Anfang des Frames gezeigt, zeigt die scrollbare App anfänglich einen Frame mit Text und animationsvideos an.
-2.  Um den nächsten Frame zu rendern, rendert die APP auf dem Hintergrund Puffer die geänderten Rechtecke, die das Animationsvideo aktualisieren, und die neue Zeile für das Fenster.
-3.  Wenn die APP [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)aufruft, werden die Änderungs Rechtecke und das Schiebe Rechteck und der Offset angegeben. Die Laufzeit kopiert das Schiebe Rechteck aus dem vorherigen Frame minus den aktualisierten, modifizierten Rechtecke auf den aktuellen Hintergrund Puffer.
-4.  Die Laufzeit vertauscht schließlich die Vorder-und Hintergrund Puffer.
+1.  Wie im Frontpuffer am Anfang des Frames gezeigt, zeigt die scrollbare App zunächst einen Frame mit Text und animierendem Video an.
+2.  Um den nächsten Frame zu rendern, rendert die App auf dem Hintergrundpuffer die geänderten Rechtecke, die das animierende Video und die neue Zeile für das Fenster aktualisieren.
+3.  Wenn die App [**IDXGISwapChain1::P resent1 aufruft,**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1)gibt sie die geänderten Rechtecke sowie das Scrollrechteck und den Offset an. Die Runtime kopiert als Nächstes das Scrollrechteck aus dem vorherigen Frame abzüglich der aktualisierten geänderten Rechtecke in den aktuellen Hintergrundpuffer.
+4.  Die Laufzeit tauscht schließlich die Front- und Back-Puffer aus.
 
-![Beispiel für eine Swap-Modell-SwapChain mit Scroll-und Dirty Rechtecke](images/2-buffer-flip-model-swap-chain.png)
+![Beispiel für den Austausch von Flip-Model-Verkettungen mit Scrollen und geänderten Rechtecke](images/2-buffer-flip-model-swap-chain.png)
 
-### <a name="tracking-dirty-rectangles-and-scroll-rectangles-across-multiple-frames"></a>Nachverfolgen von Dirty Rechtecke und scrollrechtecke über mehrere Frames hinweg
+### <a name="tracking-dirty-rectangles-and-scroll-rectangles-across-multiple-frames"></a>Nachverfolgen von geänderten Rechtecke und Scrollrechtecke über mehrere Frames hinweg
 
-Wenn Sie in Ihrer APP modifizierte Rechtecke verwenden, müssen Sie die geänderten Rechtecke nachverfolgen, um inkrementelles Rendering zu unterstützen Wenn Ihre APP [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) mit Dirty Rechtecke aufruft, müssen Sie sicherstellen, dass jedes Pixel innerhalb der modifizierten Rechtecke auf dem neuesten Stand ist. Wenn Sie den gesamten Bereich des Dirty-Rechtecks nicht vollständig neu rendern oder wenn Sie für bestimmte Bereiche, die sich in der Hand befinden, nicht wissen, müssen Sie einige Daten aus dem vorherigen vollständig zusammenhängenden Hintergrund Puffer in den aktuellen, veralteten Hintergrund Puffer kopieren, bevor Sie das Rendering starten.
+Wenn Sie dirty rectangles in Ihrer App verwenden, müssen Sie die geänderten Rechtecke nachverfolgen, um inkrementelles Rendering zu unterstützen. Wenn Ihre App [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) mit geänderten Rechtecke aufruft, müssen Sie sicherstellen, dass jedes Pixel innerhalb der geänderten Rechtecke auf dem neuesten Stand ist. Wenn Sie den gesamten Bereich des geänderten Rechtecks nicht vollständig neu rendern oder für bestimmte Bereiche, die ausgelagert sind, nicht wissen können, müssen Sie einige Daten aus dem vorherigen vollständig zusammenhängenden Hintergrundpuffer in den aktuellen, veralteten Hintergrundpuffer kopieren, bevor Sie mit dem Rendern beginnen.
 
-Die Laufzeit kopiert nur die Unterschiede zwischen den aktualisierten Bereichen des vorherigen Frames und den aktualisierten Bereichen des aktuellen Frames auf den aktuellen Hintergrund Puffer. Wenn sich diese Bereiche überschneiden, kopiert die Runtime nur den Unterschied zwischen Ihnen. Wie Sie im folgenden Diagramm und in der folgenden Reihenfolge sehen können, müssen Sie die Schnittmenge zwischen dem Dirty-Rechteck von Frame 1 und dem Dirty Rechteck von Frame 2 in das Dirty-Rechteck von Frame 2 kopieren.
+Die Runtime kopiert nur die Unterschiede zwischen aktualisierten Bereichen des vorherigen Frames und aktualisierten Bereichen des aktuellen Frames in den aktuellen Hintergrundpuffer. Wenn sich diese Bereiche überschneiden, kopiert die Laufzeit nur den Unterschied zwischen ihnen. Wie Sie im folgenden Diagramm und in der folgenden Sequenz sehen können, müssen Sie die Schnittmenge zwischen dem geänderten Rechteck aus Frame 1 und dem geänderten Rechteck aus Frame 2 in das geänderte Rechteck von Frame 2 kopieren.
 
-1.  In Frame 1 ist ein Dirty Rechteck vorhanden.
-2.  Kopieren Sie die Schnittmenge zwischen dem Dirty-Rechteck von Frame 1 und dem Dirty Rechteck von Frame 2 in das geänderte Rechteck von Frame 2.
-3.  Geändertes Rechteck in Frame 2 vorhanden.
+1.  Darstellung des geänderten Rechtecks in Frame 1.
+2.  Kopieren Sie die Schnittmenge zwischen dem geänderten Rechteck aus Frame 1 und dem geänderten Rechteck aus Frame 2 in das geänderte Rechteck von Frame 2.
+3.  Stellen Sie ein geändertes Rechteck in Frame 2 dar.
 
-![Nachverfolgen von Scroll-und Dirty Rechtecke über mehrere Frames hinweg](images/track-dirty-rects-scroll-rects.png)
+![Nachverfolgen von Scrollen und geänderten Rechtecke über mehrere Frames hinweg](images/track-dirty-rects-scroll-rects.png)
 
-Zum verallgemeinern für eine Swapkette mit N Puffern wird der Bereich, der von der Laufzeit vom letzten Frame zum aktuellen Frame auf dem aktuellen Frame kopiert wird, wie folgt dargestellt:
+Um für eine Swapkette mit N Puffern den Bereich zu generalisieren, der von der Laufzeit vom letzten Frame in den aktuellen Frame auf dem aktuellen Frame kopiert wird, lautet der folgende:
 
-![Gleichung zum Berechnen des Bereichs, der von der Laufzeit kopiert wird](images/runtime-copy-equation.png)
+![Gleichung zum Berechnen des Von der Laufzeit kopierten Bereichs](images/runtime-copy-equation.png)
 
-Where Buffer gibt den Puffer Index in einer Swapkette an, beginnend mit dem aktuellen Puffer Index bei Null.
+wobei buffer den Pufferindex in einer Swapkette angibt, beginnend mit dem aktuellen Pufferindex bei 0 (null).
 
-Sie können alle Schnittpunkte zwischen dem vorherigen Frame und den geänderten Rechtecke des aktuellen Frames nachverfolgen, indem Sie eine Kopie der modifizierten Rechtecke des vorherigen Frames aufbewahren oder die Änderungs Rechtecke des neuen Frames mit dem entsprechenden Inhalt aus dem vorherigen Frame neu rendern.
+Sie können alle Schnittmengen zwischen dem vorherigen Frame und den geänderten Rechtecke des aktuellen Frames nachverfolgen, indem Sie eine Kopie der geänderten Rechtecke des vorherigen Frames beibehalten oder die geänderten Rechtecke des neuen Frames mit dem entsprechenden Inhalt aus dem vorherigen Frame neu rendern.
 
-Entsprechend müssen Sie in den Fällen, in denen die Swapkette mehr als zwei Back-Puffer aufweist, sicherstellen, dass sich überlappende Bereiche zwischen den geänderten Rechtecke des aktuellen Puffers und den geänderten Rechtecke aller vorherigen Frames kopiert oder erneut gerendert werden.
+Ebenso müssen Sie in Fällen, in denen die Swapkette über mehr als zwei Hintergrundpuffer verfügt, sicherstellen, dass überlappende Bereiche zwischen den geänderten Rechtecke des aktuellen Puffers und den geänderten Rechtecke aller vorherigen Frames kopiert oder erneut gerendert werden.
 
-### <a name="tracking-a-single-intersection-between-2-dirty-rectangles"></a>Nachverfolgen einer einzelnen Schnittmenge zwischen 2 modifizierten Rechtecke
+### <a name="tracking-a-single-intersection-between-2-dirty-rectangles"></a>Nachverfolgen einer einzelnen Schnittmenge zwischen zwei geänderten Rechtecke
 
-Im einfachsten Fall, wenn Sie ein einzelnes Dirty Rechteck pro Frame aktualisieren, können sich die geänderten Rechtecke über zwei Frames hinweg überschneiden. Um herauszufinden, ob sich das geänderte Rechteck des vorherigen Frames und das geänderte Rechteck des aktuellen Frames überlappen, müssen Sie überprüfen, ob sich das geänderte Rechteck des vorherigen Frames mit dem modifizierten Rechteck des aktuellen Frames überschneidet. Sie können die GDI [**intersectRect**](/windows/win32/api/winuser/nf-winuser-intersectrect) -Funktion aufzurufen, um zu bestimmen, ob zwei [**Rect**](/previous-versions//dd162897(v=vs.85)) -Strukturen, die die beiden geänderten Rechtecke darstellen, sich überschneiden.
+Im einfachsten Fall können sich die geänderten Rechtecke über zwei Frames überschneiden, wenn Sie ein einzelnes geändertes Rechteck pro Frame aktualisieren. Um herauszufinden, ob sich das geänderte Rechteck des vorherigen Frames und das geänderte Rechteck des aktuellen Rahmens überschneiden, müssen Sie überprüfen, ob sich das geänderte Rechteck des vorherigen Frames mit dem geänderten Rechteck des aktuellen Rahmens überschneidet. Sie können die GDI [**IntersectRect-Funktion**](/windows/win32/api/winuser/nf-winuser-intersectrect) aufrufen, um zu bestimmen, ob sich zwei [**RECT-Strukturen**](/previous-versions//dd162897(v=vs.85)) überschneiden, die die beiden geänderten Rechtecke darstellen.
 
-In diesem Code Ausschnitt gibt ein Aufruf von [**intersectRect**](/windows/win32/api/winuser/nf-winuser-intersectrect) die Schnittmenge zweier Dirty Rechtecke in einem anderen [**Rect**](/previous-versions//dd162897(v=vs.85)) namens dirtyrectcopy zurück. Nachdem der Code Ausschnitt feststellt, dass sich die beiden modifizierten Rechtecke überschneiden, wird die [**ID3D11DeviceContext1:: CopySubresourceRegion1**](/windows/win32/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-copysubresourceregion1) -Methode aufgerufen, um den Bereich der Schnittmenge in den aktuellen Frame zu kopieren.
+In diesem Codeausschnitt gibt ein Aufruf von [**IntersectRect**](/windows/win32/api/winuser/nf-winuser-intersectrect) die Schnittmenge von zwei geänderten Rechtecke in einem anderen [**RECT**](/previous-versions//dd162897(v=vs.85)) mit dem Namen dirtyRectCopy zurück. Nachdem der Codeausschnitt ermittelt hat, dass sich die beiden geänderten Rechtecke überschneiden, ruft er die [**ID3D11DeviceContext1::CopySubresourceRegion1-Methode**](/windows/win32/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-copysubresourceregion1) auf, um den Schnittpunktbereich in den aktuellen Frame zu kopieren.
 
 ```
 RECT dirtyRectPrev, dirtyRectCurrent, dirtyRectCopy;
@@ -112,13 +112,13 @@ if (IntersectRect( &dirtyRectCopy, &dirtyRectPrev, &dirtyRectCurrent ))
 // Render additional content to the current pBackbuffer and call Present1.
 ```
 
-Wenn Sie diesen Code Ausschnitt in Ihrer Anwendung verwenden, ist die APP bereit zum Abrufen von [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) , um den aktuellen Frame mit dem aktuellen, geänderten Rechteck zu aktualisieren.
+Wenn Sie diesen Codeausschnitt in Ihrer Anwendung verwenden, kann die App [**IDXGISwapChain1::P resent1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgiswapchain1-present1) aufrufen, um den aktuellen Frame mit dem aktuellen geänderten Rechteck zu aktualisieren.
 
-### <a name="tracking-intersections-between-n-dirty-rectangles"></a>Nachverfolgen von Schnittpunkten zwischen N Änderungs Rechtecke
+### <a name="tracking-intersections-between-n-dirty-rectangles"></a>Nachverfolgen von Schnittmengen zwischen N geänderten Rechtecke
 
-Wenn Sie mehrere modifizierte Rechtecke angeben, die ein geändertes Rechteck für die neu aufgezeigte scrolllinie pro Frame einschließen können, müssen Sie alle Überschneidungen überprüfen und nachverfolgen, die zwischen allen modifizierten Rechtecke des vorherigen Frames und allen geänderten Rechtecke des aktuellen Frames auftreten können. Um die Schnittpunkte zwischen den modifizierten Rechtecke des vorherigen Frames und den geänderten Rechtecke des aktuellen Frames zu berechnen, können Sie die geänderten Rechtecke in den Regionen gruppieren.
+Wenn Sie mehrere geänderte Rechtecke angeben, die ein geändertes Rechteck für die neu angezeigte Scrolllinie pro Frame enthalten können, müssen Sie alle Überlappungen überprüfen und nachverfolgen, die zwischen allen geänderten Rechtecke des vorherigen Frames und allen geänderten Rechtecke des aktuellen Frames auftreten können. Um die Schnittmengen zwischen den geänderten Rechtecke des vorherigen Rahmens und den geänderten Rechtecke des aktuellen Frames zu berechnen, können Sie die geänderten Rechtecke in Bereiche gruppieren.
 
-In diesem Code Ausschnitt wird die GDI-Funktion " [**setrectrgn**](/windows/win32/api/wingdi/nf-wingdi-setrectrgn) " aufgerufen, um jedes geänderte Rechteck in einen rechteckigen Bereich zu konvertieren. Anschließend wird die GDI [**combinergn**](/windows/win32/api/wingdi/nf-wingdi-combinergn) -Funktion aufgerufen, um alle geänderten rechteckigen Bereiche in einer Gruppe zu kombinieren.
+In diesem Codeausschnitt rufen wir die GDI [**SetRectRgn-Funktion**](/windows/win32/api/wingdi/nf-wingdi-setrectrgn) auf, um jedes geänderte Rechteck in einen rechteckigen Bereich zu konvertieren, und dann rufen wir die GDI [**CombineRgn-Funktion**](/windows/win32/api/wingdi/nf-wingdi-combinergn) auf, um alle geänderten rechteckigen Bereiche in einer Gruppe zu kombinieren.
 
 ```
 HRGN hDirtyRgnPrev, hDirtyRgnCurrent, hRectRgn; // Handles to regions 
@@ -152,7 +152,7 @@ for (int i = 1; i<N; i++)
 }
 ```
 
-Sie können jetzt die GDI [**combinergn**](/windows/win32/api/wingdi/nf-wingdi-combinergn) -Funktion verwenden, um die Schnittmenge zwischen dem geänderten Bereich des vorherigen Frames und dem geänderten Bereich des aktuellen Frames zu bestimmen. Nachdem Sie den sich überschneidenden Bereich abgerufen haben, rufen Sie die GDI [**GetRegionData**](/windows/win32/api/wingdi/nf-wingdi-getregiondata) -Funktion auf, um jedes einzelne Rechteck aus dem überschneidenden Bereich abzurufen, und rufen Sie dann die [**ID3D11DeviceContext1:: CopySubresourceRegion1**](/windows/win32/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-copysubresourceregion1) -Methode auf, um jedes überschneidende Rechteck in den aktuellen Hintergrund Puffer zu kopieren. Der nächste Code Ausschnitt zeigt, wie diese GDI-und Direct3D-Funktionen verwendet werden.
+Sie können jetzt die GDI [**CombineRgn-Funktion**](/windows/win32/api/wingdi/nf-wingdi-combinergn) verwenden, um die Schnittmenge zwischen dem geänderten Bereich des vorherigen Frames und dem geänderten Bereich des aktuellen Frames zu bestimmen. Nachdem Sie den schnittenden Bereich erhalten haben, rufen Sie die GDI [**GetRegionData-Funktion**](/windows/win32/api/wingdi/nf-wingdi-getregiondata) auf, um jedes einzelne Rechteck aus dem sich überschneidenden Bereich abzurufen, und rufen Sie dann die [**ID3D11DeviceContext1::CopySubresourceRegion1-Methode**](/windows/win32/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-copysubresourceregion1) auf, um jedes sich überschneidende Rechteck in den aktuellen Hintergrundpuffer zu kopieren. Der nächste Codeausschnitt zeigt, wie diese GDI- und Direct3D-Funktionen verwendet werden.
 
 ```
 HRGN hIntersectRgn;
@@ -210,10 +210,10 @@ if (bRegionsIntersect)
 }
 ```
 
-### <a name="bitblt-model-swap-chain-with-dirty-rectangles"></a>BitBLT-Modell Austausch Kette mit Dirty Rechtecke
+### <a name="bitblt-model-swap-chain-with-dirty-rectangles"></a>Bitblt-Modellaustauschkette mit geänderten Rechtecke
 
-Sie können Dirty Rechtecke mit DXGI-Austausch Ketten verwenden, die im BitBLT-Modell ausgeführt werden (festgelegt mit [**DXGI- \_ Swap- \_ Effekt \_ sequenziell**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect)). BitBLT-Modell Austausch Ketten, die mehr als einen Puffer verwenden, müssen überlappende geänderte Rechtecke auf die gleiche Weise nachverfolgen, wie in nach [Verfolgen von Dirty Rechtecke und Bild Lauf Rechtecke über mehrere Frames](#tracking-dirty-rectangles-and-scroll-rectangles-across-multiple-frames) für das Kippen von Modell Austausch Ketten beschrieben. BitBLT-Modell Austausch Ketten mit nur einem Puffer müssen überlappende geänderte Rechtecke nicht nachverfolgt werden, da der gesamte Puffer jedes Frame neu gezeichnet wird.
+Sie können geänderte Rechtecke mit DXGI-Swapketten verwenden, die im Bitblt-Modell ausgeführt werden (mit [**DXGI \_ SWAP EFFECT \_ \_ SEQUENTIAL**](/windows/desktop/api/DXGI/ne-dxgi-dxgi_swap_effect)festgelegt). Bitblt-Modellaustauschketten, die mehr als einen Puffer verwenden, müssen auch überlappende geänderte Rechtecke über Frames hinweg auf die gleiche Weise nachverfolgen, wie unter [Nachverfolgen von geänderten Rechtecke und Scrollrechtecke über mehrere Frames](#tracking-dirty-rectangles-and-scroll-rectangles-across-multiple-frames) für Austauschketten des Flipmodells beschrieben. Bitblt-Modellaustauschketten mit nur einem Puffer müssen keine überlappenden geänderten Rechtecke nachverfolgen, da der gesamte Puffer in jedem Frame neu gezeichnet wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[DXGI 1,2-Verbesserungen](dxgi-1-2-improvements.md)
+[DXGI 1.2-Verbesserungen](dxgi-1-2-improvements.md)

@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: db7c2a2411d1c846c7369fc1d925a8e5569df3b1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d4d26538832a698909ace59da42b13ae51aef93d2d4d622b687f324a62d8361e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986490"
 ---
 # <a name="d3dxmeshopt-enumeration"></a>D3DXMESHOPT-Enumeration
 
@@ -95,17 +95,17 @@ Wirkt sich auf die Größe des Scheitelpunktcaches aus. Die Verwendung dieses Fl
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Optimierungsflags D3DXMESHOPT \_ STRIPREORDER und D3DXMESHOPT \_ VERTEXCACHE schließen sich gegenseitig aus.
 
-Das SHAREVB-Flag D3DXMESHOPT \_ wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in [**D3DXMESH**](./d3dxmesh.md).
+Das D3DXMESHOPT \_ SHAREVB-Flag wurde aus dieser Enumeration entfernt. Verwenden Sie stattdessen D3DXMESH \_ VB \_ SHARE in [**D3DXMESH.**](./d3dxmesh.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 

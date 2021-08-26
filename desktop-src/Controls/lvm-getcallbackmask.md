@@ -1,9 +1,9 @@
 ---
-title: LVM_GETCALLBACKMASK Meldung (kommstrg. h)
-description: Ruft die Rückruf Maske für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetCallbackMask-Makros senden.
+title: LVM_GETCALLBACKMASK Meldung (Commctrl.h)
+description: Ruft die Rückrufmaske für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetCallbackMask-Makros senden.
 ms.assetid: fb05593d-14b9-4e53-acb3-d5ac61e517ec
 keywords:
-- Windows-Steuerelemente für LVM_GETCALLBACKMASK Meldung
+- LVM_GETCALLBACKMASK Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68438b748f5260bb7cc6e43702442aa4cbe3a84e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 58cbfec76df9418c2bc94e0083928f28e462188383a203237dd03f3f175c74b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119920230"
 ---
-# <a name="lvm_getcallbackmask-message"></a>LVM \_ GetCallbackMask-Meldung
+# <a name="lvm_getcallbackmask-message"></a>LVM \_ GETCALLBACKMASK-Nachricht
 
-Ruft die Rückruf Maske für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetCallbackMask**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcallbackmask) -Makros senden.
+Ruft die Rückrufmaske für ein Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetCallbackMask-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcallbackmask) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die Rückruf Maske für ein Listenansicht-Steuerelement ab. Sie können die
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Rückruf Maske zurück.
+Gibt die Rückrufmaske zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt die Rückruf Maske zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

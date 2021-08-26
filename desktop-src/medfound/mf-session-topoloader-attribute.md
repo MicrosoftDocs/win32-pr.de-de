@@ -1,37 +1,37 @@
 ---
-description: Enthält die CLSID eines topologieladers für die Medien Sitzung.
+description: Enthält die CLSID eines Topologieladeers für die Mediensitzung.
 ms.assetid: 672274fb-71fc-49ca-bab6-1fc4de21d17c
-title: MF_SESSION_TOPOLOADER-Attribut (mspdl. h)
+title: MF_SESSION_TOPOLOADER -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6eb5299e058862ad2d26b1fb9debe0028aba4703
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9568193bbdbd46485015b6e5975db26fca2b552b23b7c227576e4e6544d69af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119955130"
 ---
-# <a name="mf_session_topoloader-attribute"></a>MF- \_ Sitzungs \_ topoloader-Attribut
+# <a name="mf_session_topoloader-attribute"></a>MF \_ SESSION \_ TOPOLOADER-Attribut
 
-Enthält die CLSID eines topologieladers für die Medien Sitzung.
+Enthält die CLSID eines Topologieladeers für die Mediensitzung.
 
 ## <a name="data-type"></a>Datentyp
 
 **GUID**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können dieses Attribut verwenden, um ein benutzerdefiniertes topologielader für die Medien Sitzung bereitzustellen.
+Sie können dieses Attribut verwenden, um ein benutzerdefiniertes Topologielader für die Mediensitzung zur Verfügung zu stellen.
 
-Legen Sie dieses Attribut mithilfe des Parameters *pconfiguration* der Funktion [**mfkreatemediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) oder der Funktion [**mfkreatepmpmediasession**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) fest.
+Legen Sie dieses Attribut mithilfe *des pConfiguration-Parameters* der [**MFCreateMediaSession-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatemediasession) oder der [**MFCreatePMPMediaSession-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatepmpmediasession) fest.
 
-Wenn dieses Attribut festgelegt ist, ruft die Medien Sitzung **cokreateinstance** mit der angegebenen CLSID auf, wenn das topologielader erstellt wird. Das von dieser CLSID erstellte-Objekt muss die [**imftopoloader**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader) -Schnittstelle verfügbar machen.
+Wenn dieses Attribut festgelegt ist, ruft die Mediensitzung **CoCreateInstance** mit der angegebenen CLSID auf, wenn sie das Topologielader erstellt. Das von dieser CLSID erstellte -Objekt muss die [**-SCHNITTSTELLE DESTTOPOLoaders**](/windows/desktop/api/mfidl/nn-mfidl-imftopoloader) verfügbar machen.
 
-Wenn dieses Attribut nicht festgelegt ist, erstellt die Medien Sitzung das standardmäßige topologielader, das in Media Foundation bereitgestellt wird.
+Wenn dieses Attribut nicht festgelegt ist, erstellt die Mediensitzung das Standardtopologielader, das in der Media Foundation.
 
-Ein topologielader muss Multithread-Apartments unterstützen. Registrieren Sie den topologielader als ThreadingModel = "both". Wenn Sie das topologielader innerhalb des geschützten Medien Pfads (PMP) verwenden, muss das topologieloader auch eine vertrauenswürdige Komponente sein. Weitere Informationen finden Sie unter [geschützter Medien Pfad](protected-media-path.md).
+Ein Topologielader muss Multithread-Apartment unterstützen. Sie sollten das Topologielader als ThreadingModel="Both" registrieren. Wenn Sie das Topologielader innerhalb des geschützten Medienpfads (PMP) verwenden, muss das Topologielader außerdem eine vertrauenswürdige Komponente sein. Weitere Informationen finden Sie unter [Protected Media Path](protected-media-path.md).
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -49,19 +49,19 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
+[**ATTRIBUTEs::GetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getguid)
 </dt> <dt>
 
-[**Imfattributes:: SetGuid**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
+[**ATTRIBUTEs::SetGUID**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid)
 </dt> <dt>
 
-[Medien Sitzungs Attribute](media-session-attributes.md)
+[Media Session Attributes](media-session-attributes.md)
 </dt> <dt>
 
-[Benutzerdefinierte topologielader](custom-topology-loaders.md)
+[Benutzerdefinierte Topologielader](custom-topology-loaders.md)
 </dt> </dl>
 
  

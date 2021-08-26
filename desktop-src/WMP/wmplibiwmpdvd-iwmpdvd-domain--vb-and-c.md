@@ -1,11 +1,11 @@
 ---
-title: Iwmpdvd-Domänen Eigenschaft
-description: Die Domänen Eigenschaft ruft die aktuelle Domäne der DVD ab.
+title: IWMPDVD-Domäneneigenschaft
+description: Die Domäneneigenschaft ruft die aktuelle Domäne der DVD ab.
 ms.assetid: 0b7b39fe-2b04-44e2-aa5e-cab7be9a06b1
 keywords:
-- Domänen Eigenschaften Fenster Media Player
-- Domänen Eigenschaft Windows Media Player, iwmpdvd-Schnittstelle
-- Iwmpdvd-Schnittstelle, Windows Media Player, Domäne (Eigenschaft)
+- Domain Property Windows Media Player
+- Domäneneigenschaft Windows Media Player , IWMPDVD-Schnittstelle
+- IWMPDVD-Schnittstelle Windows Media Player , Domäneneigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6546a8288160fe80f7df4a7c41ea79a0edc905f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b5b5f382d7c1db820905b45b924105225c0c5b55a569f85707e4e9f729e59596
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000470"
 ---
-# <a name="iwmpdvddomain-property"></a>Iwmpdvd::d omain-Eigenschaft
+# <a name="iwmpdvddomain-property"></a>IWMPDVD::d omain-Eigenschaft
 
-Die **Domänen** Eigenschaft ruft die aktuelle Domäne der DVD ab.
+Die **Domäneneigenschaft** ruft die aktuelle Domäne der DVD ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,26 +46,26 @@ Public ReadOnly Property domain As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. String** -Wert, der einem der folgenden Werte entspricht.
+Eine **System.String,die** einer der folgenden Werte ist.
 
 
 
 | Wert                                                                                        | Bedeutung                                                                                                                                          |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>FirstPlay</dt> </dl>         | Die Standard Initialisierung einer DVD-CD wird durchgeführt.<br/>                                                                                      |
-| <dl> <dt>videomanagermenu</dt> </dl>  | Anzeigen von Menüs für die gesamte Festplatte. Wird auch als "topmenu" für Windows-Media Player bezeichnet. Wird üblicherweise als Titelmenü oder im oberen Menü bezeichnet.<br/> |
-| <dl> <dt>videotitlesetmenu</dt> </dl> | Anzeigen von Menüs für den aktuellen Titel Satz. Wird auch als titlemenu für Windows-Media Player bezeichnet. Wird üblicherweise als Stamm Menü bezeichnet.<br/>          |
-| <dl> <dt>title</dt> </dl>             | Normalerweise zeigt den aktuellen Titel an.<br/>                                                                                                |
-| <dl> <dt>stop</dt> </dl>              | Der DVD-Navigator befindet sich in der DVD-stoppdomäne.<br/>                                                                                          |
-| <dl> <dt>definiert</dt> </dl>         | Windows Media Player befindet sich nicht in einer DVD-Domäne.<br/>                                                                                        |
+| <dl> <dt>firstPlay</dt> </dl>         | Ausführen der Standardinitialisierung eines DVD-Datenträgers.<br/>                                                                                      |
+| <dl> <dt>videoManagerMenu</dt> </dl>  | Anzeigen von Menüs für den gesamten Datenträger. Wird auch als topMenu für Windows Media Player bezeichnet. Wird häufig als Titelmenü oder oberes Menü bezeichnet.<br/> |
+| <dl> <dt>videoTitleSetMenu</dt> </dl> | Anzeigen von Menüs für den aktuellen Titelsatz. Wird auch als titleMenu für Windows Media Player bezeichnet. Wird häufig als Stammmenü bezeichnet.<br/>          |
+| <dl> <dt>title</dt> </dl>             | In der Regel wird der aktuelle Titel angezeigt.<br/>                                                                                                |
+| <dl> <dt>stop</dt> </dl>              | Der DVD-Navigator befindet sich in der Domäne DVD-Beenden.<br/>                                                                                          |
+| <dl> <dt>Undefined</dt> </dl>         | Windows Media Player befindet sich nicht in einer DVD-Domäne.<br/>                                                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jede DVD wird unterschiedlich verfasst. Einige DVDs enthalten nicht die Domänen FirstPlay, videomanagermenu oder videotitlesetmenu.
+Jede DVD wird anders erstellt. Einige DVDs enthalten nicht die Domänen firstPlay, videoManagerMenu oder videoTitleSetMenu.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,7 +73,7 @@ Jede DVD wird unterschiedlich verfasst. Einige DVDs enthalten nicht die Domänen
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -83,7 +83,7 @@ Jede DVD wird unterschiedlich verfasst. Einige DVDs enthalten nicht die Domänen
 
 <dl> <dt>
 
-[**Iwmpdvd-Schnittstelle (VB und c#)**](iwmpdvd--vb-and-c.md)
+[**IWMPDVD-Schnittstelle (VB und C#)**](iwmpdvd--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetAttachDatabase2-Funktion'
+description: Weitere Informationen finden Sie unter JetAttachDatabase2-Funktion.
 title: JetAttachDatabase2-Funktion
 TOCTitle: JetAttachDatabase2 Function
 ms:assetid: 8667f3fc-d178-49f1-9474-f09352614f92
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a5839559751fe45ec18a55de14c565116a0f9a4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 99735582ea794288099428b0d737059dc5792d23749aa70f209d3cf7edf845ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016310"
 ---
 # <a name="jetattachdatabase2-function"></a>JetAttachDatabase2-Funktion
 
@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetattachdatabase2-function"></a>JetAttachDatabase2-Funktion
 
-Die **JetAttachDatabase2** -Funktion fügt eine Datenbankdatei für die Verwendung mit einer Daten Bank Instanz an und gibt eine maximale Größe für diese Datenbank an. Damit die Datenbank verwendet werden kann, muss Sie anschließend mit [jetopend Database](./jetopendatabase-function.md)geöffnet werden.
+Die **JetAttachDatabase2-Funktion** angefügt eine Datenbankdatei zur Verwendung mit einer Datenbankinstanz und gibt eine maximale Größe für diese Datenbank an. Um die Datenbank verwenden zu können, muss sie anschließend mit [JetOpenDatabase geöffnet werden.](./jetopendatabase-function.md)
 
 ```cpp
     JET_ERR JET_API JetAttachDatabase2(
@@ -47,23 +47,23 @@ Die **JetAttachDatabase2** -Funktion fügt eine Datenbankdatei für die Verwendu
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der Daten Bank Sitzungs Kontext, der für den API-Befehl verwendet wird.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet wird.
 
 *szFilename*
 
-Der Name der anzufügenden Datenbank.
+Der Name der zu anfügenden Datenbank.
 
-*cpgdatabasesizemax*
+*cpgDatabaseSizeMax*
 
-Die maximale Größe (in Datenbankseiten) für die Datenbank. Die standardmäßige Datenbankseiten Größe beträgt 4 Kilobytes, die mithilfe der [jetsetsystemparameter](./jetsetsystemparameter-function.md) -Funktion geändert werden können, bevor eine Datenbank erstellt wird.
+Die maximale Größe auf Datenbankseiten für die Datenbank. Die Standardgröße der Datenbankseite beträgt 4 KB, die vor dem Erstellen einer Datenbank mithilfe der [JetSetSystemParameter-Funktion](./jetsetsystemparameter-function.md) geändert werden kann.
 
-Das übergeben von NULL bedeutet, dass kein Maximum von der Datenbank-Engine erzwungen wird.
+Wenn 0 (null) übergeben wird, bedeutet dies, dass von der Datenbank-Engine kein Maximum erzwungen wird.
 
 *grbit*
 
-Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthalten, die NULL oder mehr der folgenden Elemente enthalten:
+Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthalten, die null oder mehr der folgenden Elemente enthalten:
 
 <table>
 <colgroup>
@@ -83,7 +83,7 @@ Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthal
 </tr>
 <tr class="even">
 <td><p>JET_bitDbDeleteUnicodeIndexes</p></td>
-<td><p>Alle Indizes für Unicode-Daten werden unabhängig von der Einstellung <a href="gg269337(v=exchg.10).md">JET_paramEnableIndexChecking</a>gelöscht. Weitere Details finden Sie im Abschnitt „Anmerkungen“.</p></td>
+<td><p>Alle Indizes für Unicode-Daten werden gelöscht, unabhängig von der Einstellung <a href="gg269337(v=exchg.10).md">JET_paramEnableIndexChecking.</a> Weitere Details finden Sie im Abschnitt „Anmerkungen“.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_bitDbReadOnly</p></td>
@@ -99,7 +99,7 @@ Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthal
 
 ### <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt einen der [JET_ERR](./jet-err.md) Fehlercodes zurück. Im folgenden finden Sie die am häufigsten zurückgegebenen. (Eine komplette Liste der Fehler für diese API finden Sie unter [Extensible Storage Engine Error Codes](./extensible-storage-engine-error-codes.md).)
+Die Funktion gibt einen der [JET_ERR](./jet-err.md) zurück. Die folgenden werden am häufigsten zurückgegeben. (Eine vollständige Liste der Fehler für diese API finden Sie unter [Extensible Storage Engine Error Codes](./extensible-storage-engine-error-codes.md).)
 
 <table>
 <colgroup>
@@ -123,7 +123,7 @@ Die-Funktion gibt einen der [JET_ERR](./jet-err.md) Fehlercodes zurück. Im folg
 </tr>
 <tr class="odd">
 <td><p>JET_errDatabaseFileReadOnly</p></td>
-<td><p>Die von <em>szFilename</em> angegebene Datenbankdatei muss beschreibbar sein. Das Read-Only-Attribut darf nicht festgelegt werden, und der laufende Prozess muss über ausreichende Berechtigungen zum Schreiben in die Datei verfügen.</p></td>
+<td><p>Die durch <em>szFilename</em> angegebene Datenbankdatei muss beschreibbar sein. Das Read-Only-Attribut darf nicht festgelegt werden, und der ausgeführte Prozess muss über ausreichende Berechtigungen zum Schreiben in die Datei verfügen.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDatabaseInUse</p></td>
@@ -131,41 +131,41 @@ Die-Funktion gibt einen der [JET_ERR](./jet-err.md) Fehlercodes zurück. Im folg
 </tr>
 <tr class="odd">
 <td><p>JET_errDatabaseInvalidPath</p></td>
-<td><p>In " <em>szFilename</em>" wurde ein ungültiger Pfad angegeben. " <em>szFilename</em> " darf nicht NULL sein und verweist auf einen gültigen Pfad.</p></td>
+<td><p>In szFilename wurde ein <em>ungültiger Pfad angegeben.</em> <em>szFilename muss</em> nicht NULL sein und auf einen gültigen Pfad verweisen.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDatabaseSharingViolation</p></td>
-<td><p>Die Datenbankdatei wurde bereits durch eine andere Sitzung angefügt.</p></td>
+<td><p>Die Datenbankdatei wurde bereits von einer anderen Sitzung angefügt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errFileNotFound</p></td>
-<td><p>Die in <em>szFilename</em> angegebene Datei ist nicht vorhanden.</p></td>
+<td><p>Die in <em>szFilename gegebene Datei</em> ist nicht vorhanden.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errPrimaryIndexCorrupted</p></td>
-<td><p>Fehler beim primären Index. Dies kann von physischer Beschädigung (z. b. Datenträger-oder Speicher Beschädigung) verursacht werden. Sie kann auch zurückgegeben werden, wenn eine Datenbank zuletzt an einem älteren Betriebssystem geändert wird und der primäre Index eine Spalte mit Unicode-Daten ist. Weitere Informationen zu Indizes für Unicode-Daten finden Sie in den hinweisen.</p></td>
+<td><p>Fehler beim primären Index. Dies kann auf eine physische Beschädigung (z. B. Datenträger- oder Speicherbeschädigung) führen. Sie kann auch zurückgegeben werden, wenn eine Datenbank angefügt wird, die zuletzt unter einem älteren Betriebssystem geändert wurde, und der primäre Index sich über einer Spalte mit Unicode-Daten befindet. Weitere Informationen zu Indizes für Unicode-Daten finden Sie in den Anmerkungen.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errSecondaryIndexCorrupted</p></td>
-<td><p>Es ist ein Fehler mit einem sekundären Index aufgetreten. Dies kann von physischer Beschädigung (z. b. Datenträger-oder Speicher Beschädigung) verursacht werden. Sie kann auch zurückgegeben werden, wenn eine Datenbank zuletzt an einem älteren Betriebssystem geändert und ein sekundärer Index über eine Spalte mit Unicode-Daten verfügt. Weitere Informationen zu Indizes für Unicode-Daten finden Sie in den hinweisen. Sekundäre Indizes werden vollständig neu erstellt, wenn eine Datenbank mit einem Offline-Hilfsprogramm mit folgendem Befehl ( <strong>Esentutl-d</strong>) zerlegt wird.</p></td>
+<td><p>Bei einem sekundären Index tritt ein Fehler auf. Dies kann auf eine physische Beschädigung (z. B. Datenträger- oder Speicherbeschädigung) führen. Sie kann auch zurückgegeben werden, wenn eine Datenbank angefügt wird, die zuletzt unter einem älteren Betriebssystem geändert wurde, und ein sekundärer Index sich über einer Spalte mit Unicode-Daten befindet. Weitere Informationen zu Indizes für Unicode-Daten finden Sie in den Anmerkungen. Sekundäre Indizes werden vollständig neu erstellt, wenn eine Datenbank mit einem Offline-Hilfsprogramm mithilfe des folgenden Befehls defragmentiert wird: <strong>esentutl -d</strong>.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errTooManyAttachedDatabases</p></td>
-<td><p>Pro Instanz kann nur eine endliche Anzahl von Datenbanken angefügt werden. Das Limit beträgt derzeit sieben Datenbanken pro Instanz.</p></td>
+<td><p>Pro Instanz kann nur eine begrenzte Anzahl von Datenbanken angefügt werden. Der Grenzwert liegt derzeit bei sieben Datenbanken pro Instanz.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_wrnDatabaseAttached</p></td>
-<td><p>Eine nicht schwerwiegende Warnung, die angibt, dass die Datenbankdatei bereits von dieser Sitzung angefügt wurde.</p></td>
+<td><p>Eine nichtfatale Warnung, die angibt, dass die Datenbankdatei bereits von dieser Sitzung angefügt wurde.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Die Datenbankdatei wird mithilfe von [jetdetachdatabase](./jetdetachdatabase-function.md) oder [JetDetachDatabase2](./jetdetachdatabase2-function.md)getrennt.
+Die Datenbankdatei wird mit [JetDetachDatabase oder](./jetdetachdatabase-function.md) [JetDetachDatabase2 getrennt.](./jetdetachdatabase2-function.md)
 
-Weitere Hinweise finden Sie unter [jetattachdatabase](./jetattachdatabase-function.md) .
+Hinweise finden Sie unter [JetAttachDatabase.](./jetattachdatabase-function.md)
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -185,14 +185,14 @@ Weitere Hinweise finden Sie unter [jetattachdatabase](./jetattachdatabase-functi
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
@@ -205,12 +205,12 @@ Weitere Hinweise finden Sie unter [jetattachdatabase](./jetattachdatabase-functi
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Extensible Storage Engine-Dateien](./extensible-storage-engine-files.md)  
+[Erweiterbare Storage-Engine-Dateien](./extensible-storage-engine-files.md)  
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetattachdatabase](./jetattachdatabase-function.md)  
-[Jetkreatedatabase](./jetcreatedatabase-function.md)  
-[Jetopumdatabase](./jetopendatabase-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+[JetAttachDatabase](./jetattachdatabase-function.md)  
+[JetCreateDatabase](./jetcreatedatabase-function.md)  
+[JetOpenDatabase](./jetopendatabase-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)

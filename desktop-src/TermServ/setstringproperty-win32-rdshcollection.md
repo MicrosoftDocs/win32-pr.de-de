@@ -1,12 +1,12 @@
 ---
-title: SetStringProperty-Methode der Win32_RDSHCollection-Klasse (CertEnroll. h)
-description: Aktualisiert den Wert der Zeichen folgen Eigenschaft eines Win32- \_ rdshcollection-Objekts.
+title: SetStringProperty-Methode der Win32_RDSHCollection -Klasse (Certenroll.h)
+description: Aktualisiert einen Zeichenfolgeneigenschaftswert eines Win32 \_ RDSHCollection-Objekts.
 ms.assetid: 6981b47a-5480-44f5-90e3-f64d439fa2aa
 ms.tgt_platform: multiple
 keywords:
-- SetStringProperty-Methode Remotedesktopdienste
-- SetStringProperty-Methode Remotedesktopdienste, Win32_RDSHCollection-Klasse
-- Win32_RDSHCollection-Klasse Remotedesktopdienste, setStringProperty-Methode
+- SetStringProperty-Remotedesktopdienste
+- SetStringProperty-Methode Remotedesktopdienste , Win32_RDSHCollection-Klasse
+- Win32_RDSHCollection klasse Remotedesktopdienste , SetStringProperty-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2606c195822432138ee67576db54f945c6834cfd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 87556f82f4004b6c7dbf194dfe38f47804d1fa07747ccb7e18d2b24a4a70f355
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119987490"
 ---
-# <a name="setstringproperty-method-of-the-win32_rdshcollection-class"></a>SetStringProperty-Methode der Win32 \_ rdshcollection-Klasse
+# <a name="setstringproperty-method-of-the-win32_rdshcollection-class"></a>SetStringProperty-Methode der Win32 \_ RDSHCollection-Klasse
 
-Aktualisiert den Wert der Zeichen folgen Eigenschaft eines [**Win32- \_ rdshcollection**](win32-rdshcollection.md) -Objekts.
+Aktualisiert einen Zeichenfolgeneigenschaftswert eines [**Win32 \_ RDSHCollection-Objekts.**](win32-rdshcollection.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ uint32 SetStringProperty(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der die zu Aktualisier enswerte Eigenschaft identifiziert.
+Der Schlüssel, der die zu aktualisierende Eigenschaft identifiziert.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
 Der neue Eigenschaftswert.
@@ -70,18 +70,18 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| Header<br/>                   | <dl> <dt>CertEnroll. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2-Rdms \\<br/>                                                                |
+| Header<br/>                   | <dl> <dt>Certenroll.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ rdshcollection**](win32-rdshcollection.md)
+[**Win32 \_ RDSHCollection**](win32-rdshcollection.md)
 </dt> </dl>
 
  

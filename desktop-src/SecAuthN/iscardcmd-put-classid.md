@@ -1,7 +1,7 @@
 ---
-description: Legt einen neuen Klassen Bezeichner in der Application Protocol Data Unit (APDU) fest.
+description: Legt einen neuen Klassenbezeichner in der Application Protocol Data Unit (APDU) fest.
 ms.assetid: 7e7d42f2-2858-4b37-a7d5-a919e3e005da
-title: Iscardcmd::p ut_ClassId-Methode (scarddat. h)
+title: ISCardCmd::p ut_ClassId-Methode (Mouseddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: ed4b1f273ebe9ea0a5e105ec3d88fc8446f7a831
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c632b25e3fcef3f08b79dffa6f72dcc7ae3409d744de02527b3be495638b2ba9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014600"
 ---
-# <a name="iscardcmdput_classid-method"></a>Iscardcmd::p UT \_ ClassID-Methode
+# <a name="iscardcmdput_classid-method"></a>ISCardCmd::p ut \_ ClassId-Methode
 
-\[Die **Put \_ ClassID-** Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **put \_ ClassId-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Put \_ ClassID-** Methode legt einen neuen Klassen Bezeichner in der [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) fest.
+Die **put \_ ClassId-Methode** legt einen neuen Klassenbezeichner in der [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ HRESULT put_ClassId(
 
 <dl> <dt>
 
-*byclass* \[ in\]
+*byClass* \[ In\]
 </dt> <dd>
 
-Das Byte, das den Klassen Bezeichner darstellt.
+Das Byte, das den Klassenbezeichner darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Die *byclass* ist ungültig.<br/>       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Die *byClass* ist ungültig.<br/>       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie zum Abrufen des aktuellen Klassen Bezeichners [**get \_ ClassID**](iscardcmd-get-classid.md)auf.
+Rufen Sie get [**\_ ClassId**](iscardcmd-get-classid.md)auf, um den aktuellen Klassenbezeichner abzurufen.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie einen neuen Klassen Bezeichner in der [*Anwendungsprotokoll Daten-Einheit (Application Protocol Data Unit*](../secgloss/a-gly.md) , APDU) festlegen. Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie sie einen neuen Klassenbezeichner in der [*Anwendungsprotokolldateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) festlegen. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -97,25 +97,25 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_ClassID Get**](iscardcmd-get-classid.md)
+[**get \_ ClassId**](iscardcmd-get-classid.md)
 </dt> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> </dl>
 
  

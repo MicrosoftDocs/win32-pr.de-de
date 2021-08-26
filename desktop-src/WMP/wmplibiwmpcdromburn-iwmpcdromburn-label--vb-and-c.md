@@ -1,11 +1,11 @@
 ---
-title: Iwmpcdromburn-Bezeichnung (Eigenschaft)
-description: Die Label-Eigenschaft ruft die Zeichenfolge der CD-Volumebezeichnung ab
+title: LABEL-Eigenschaft "IWMPC wie die Bezeichnung"
+description: Die Label-Eigenschaft ruft die CD-Volumebezeichnungszeichenfolge ab.
 ms.assetid: 46e7741c-59c5-46d8-b9ca-09892d907cd7
 keywords:
-- Label-Eigenschaften Fenster Media Player
-- Label-Eigenschaft, Windows Media Player, iwmpcdromburn-Schnittstelle
-- Iwmpcdromburn Interface, Windows Media Player, Bezeichnung (Eigenschaft)
+- Bezeichnungseigenschafts-Windows Media Player
+- label-eigenschaft Windows Media Player , IWMPC wie Die Schnittstelle
+- IWMPCwiederSchnittstellenschnittstelle Windows Media Player , Bezeichnungseigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05da344f1148de7e79cb605135964c6ab8225ac0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d8b8917706e20b5d1361054ac5f6fd209c0026837c428ecba715727e3d828a4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120000549"
 ---
-# <a name="iwmpcdromburnlabel-property"></a>Iwmpcdromburn:: Label-Eigenschaft
+# <a name="iwmpcdromburnlabel-property"></a>IWMPC wie die Eigenschaft "::label"
 
-Die *Label* -Eigenschaft ruft die Zeichenfolge der CD-Volumebezeichnung ab
+Die *Label-Eigenschaft* ruft die CD-Volumebezeichnungszeichenfolge ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property label As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System. String** , die die Zeichenfolge der Volumebezeichnung ist.
+Eine **System.String,** die die Volumebezeichnungszeichenfolge ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Aufgrund der Art und Weise, wie CD-Bezeichnungen gespeichert werden, ist die Bezeichnung der CD möglicherweise kürzer als die Länge der angegebenen volumezeichenfolge. Wenn die Zeichenfolge länger als die maximale Länge einer CD-Bezeichnung ist, wird der Text abgeschnitten.
+Aufgrund der Art und Weise, wie CD-Bezeichnungen gespeichert werden, ist die Bezeichnung der CD möglicherweise kürzer als die Länge der angegebenen Volumebezeichnungszeichenfolge. Wenn die Zeichenfolge länger als die maximale Länge einer CD-Bezeichnung ist, wird der Text abgeschnitten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Aufgrund der Art und Weise, wie CD-Bezeichnungen gespeichert werden, ist die Bez
 
 <dl> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,43 +1,43 @@
 ---
-description: Mergemodule stellen eine Standardmethode für Entwickler bereit, um freigegebene Windows Installer Komponenten und Setup Logik für Ihre Anwendungen bereitzustellen.
+description: Mergemodule bieten Entwicklern eine Standardmethode zum Bereitstellen freigegebener Windows Installer-Komponenten und der Setuplogik für ihre Anwendungen.
 ms.assetid: 3eb087b1-0f44-40d8-a950-67d489f09408
-title: Verwenden der API zum Zusammenführen eines Mergemoduls zu einer Datenbank
+title: Verwenden der API zum Zusammenführen eines Mergemoduls in einer Datenbank
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e68298671045825dda41ad120896fa22c89f068
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7cdbeb68b193cceff10fbd1cd3f56f4c8804a4e1fb4f7c169fd2d893dc0b4bfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120039030"
 ---
-# <a name="using-the-api-to-merge-a-merge-module-into-a-database"></a>Verwenden der API zum Zusammenführen eines Mergemoduls zu einer Datenbank
+# <a name="using-the-api-to-merge-a-merge-module-into-a-database"></a>Verwenden der API zum Zusammenführen eines Mergemoduls in einer Datenbank
 
-[Mergemodule](merge-modules.md) stellen eine Standardmethode für Entwickler bereit, um freigegebene Windows Installer [*Komponenten*](c-gly.md) und Setup Logik für Ihre Anwendungen bereitzustellen. Mergemodule müssen mithilfe eines mergetools in ein Installationspaket zusammengeführt werden. Die beste Alternative besteht darin, ein frei verteiltes Zusammenführungs Tool zu erwerben oder eines der Zusammenführungs Tools zu erwerben, die von unabhängigen Softwareanbietern zur Verfügung stehen. Beispielsweise können Sie die von [Mergemod.dll](merge-module-automation.md)bereitgestellte Funktionalität nutzen.
+[Mergemodule](merge-modules.md) bieten Entwicklern eine Standardmethode, um freigegebene Windows [*Installer-Komponenten*](c-gly.md) und Setuplogik an ihre Anwendungen zu liefern. Mergemodule müssen mithilfe eines Mergetools in einem Installationspaket zusammengeführt werden. Die beste Alternative besteht in der Beschaffung eines frei verteilten Mergetools oder dem Erwerb eines der Zusammenführungstools, die von unabhängigen Softwareherstellern zur Verfügung stehen. Sie können z. B. die funktionalität verwenden, die von [Mergemod.dll. ](merge-module-automation.md)
 
-Führen Sie die folgenden Schritte nacheinander aus, um ein Mergemodul mithilfe der-API von [Mergemod.dll](merge-module-automation.md)in einer Windows Installer-Installations Datenbank zusammenzuführen.
+Führen Sie die folgenden Schritte nacheinander aus, um ein Mergemodul mithilfe der API von Windows Installer-Installationsdatenbank mit [Mergemod.dll. ](merge-module-automation.md)
 
-**So führen Sie ein Mergemodul in einer Windows Installer-Installations Datenbank zusammen**
+**So führen Sie ein Mergemodul in einer Windows Installer-Installationsdatenbank zusammen**
 
-1.  Öffnen Sie mithilfe von [**OpenLog**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-openlog)eine Protokolldatei. Dieser Schritt ist nur erforderlich, wenn Sie eine Protokolldatei erstellen oder eine vorhandene Protokolldatei für den Mergeprozess Anfügen müssen.
-2.  Öffnen Sie die Installations Datenbank, eine [MSI-Datei](windows-installer-file-extensions.md), die das Mergemodul mithilfe von [**OpenDatabase**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-opendatabase)empfängt. Dieser Schritt ist erforderlich.
-3.  Öffnen Sie das Mergemodul, eine [MSM-Datei](windows-installer-file-extensions.md), die mit [**OpenModule**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-openmodule)in der Datenbank zusammengeführt wird. Ein Modul muss geöffnet werden, bevor es mit einer Installations Datenbank zusammengeführt werden kann. Dieser Schritt ist erforderlich.
-4.  Führen Sie das Modul mithilfe von [**Merge**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) oder [**mergeex**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex)in der Installations Datenbank zusammen. Beachten Sie, dass **Merge** oder **mergeex** nur einmal aufgerufen werden kann, um eine bestimmte Kombination aus MSI-und MSM-Dateien zusammenzuführen. **Mergeex** ist nur verfügbar, wenn [Mergemod.dll-Version 2,0](merge-module-automation.md) oder höher und nur bei Verwendung der [IMsmMerge2](/windows/desktop/api/Mergemod/nn-mergemod-imsmmerge2) -Schnittstelle verwendet wird. Dieser Schritt ist erforderlich.
-5.  Ruft [**get \_ Errors**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-get_errors) auf und untersucht die abgerufene Auflistung von Fehlern bei Mergekonflikten oder anderen Fehlern. Der Abruf ist nicht destruktiv. Mehrere Instanzen der Fehlersammlung können durch wiederholtes Lesen von get- **\_ Fehlern** abgerufen werden. Sie müssen alle Fehler beheben, die für Ihren Fall geeignet sind.
-6.  Ordnen Sie die Komponenten des Mergemoduls allen zusätzlichen Features zu, die mithilfe von [**Connect**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-connect)in der Installations Datenbank zusammengeführt wurden oder werden. Die Funktion muss bereits vorhanden sein, bevor diese Methode aufgerufen wird. Dieser Schritt ist nur erforderlich, wenn Sie über zusätzliche Funktionen verfügen. Weitere Informationen finden Sie [unter Verbinden eines Mergemoduls mit mehreren Features](connecting-a-merge-module-to-multiple-features.md) .
-7.  Extrahieren Sie ggf. Quelldateien aus dem Modul, indem Sie eine oder mehrere der folgenden Schritte durchgeführt haben.
+1.  Öffnen Sie mit OpenLog eine [**Protokolldatei.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-openlog) Dieser Schritt ist nur erforderlich, wenn Sie eine Protokolldatei für den Mergeprozess erstellen oder eine vorhandene Protokolldatei anfügen müssen.
+2.  Öffnen Sie die Installationsdatenbank , eine [.msi datei,](windows-installer-file-extensions.md)die das Mergemodul [**mithilfe von OpenDatabase erhält.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-opendatabase) Dieser Schritt ist erforderlich.
+3.  Öffnen Sie das Mergemodul , eine [MSM-Datei,](windows-installer-file-extensions.md)die mithilfe von OpenModule in die Datenbank [**zusammengeführt wird.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-openmodule) Ein Modul muss geöffnet werden, bevor es mit einer Installationsdatenbank zusammengeführt werden kann. Dieser Schritt ist erforderlich.
+4.  Führen Sie das Modul mit Merge oder MergeEx in [**der**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-merge) [**Installationsdatenbank zusammen.**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-mergeex) Beachten Sie, **dass Merge** oder **MergeEx** nur einmal aufgerufen werden können, um eine bestimmte Kombination aus .msi msm-Dateien zusammenführungen. **MergeEx** ist nur verfügbar, wennMergemod.dll [Version 2.0](merge-module-automation.md) oder höher verwendet wird, und nur bei Verwendung der [IMsmMerge2-Schnittstelle.](/windows/desktop/api/Mergemod/nn-mergemod-imsmmerge2) Dieser Schritt ist erforderlich.
+5.  Rufen [**Sie get Errors \_ auf,**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-get_errors) und untersuchen Sie die abgerufene Auflistung von Fehlern auf Mergekonflikte oder andere Fehler. Der Abruf ist nicht destruktiv. Mehrere Instanzen der Fehlersammlung können durch wiederholtes Lesen des Aufrufs get **\_ Errors abgerufen werden.** Sie müssen alle Fehler entsprechend Ihrem Fall beheben.
+6.  Ordnen Sie die Komponenten des Mergemoduls allen zusätzlichen Features zu, die mithilfe von mit der Installationsdatenbank zusammengeführt [**wurden Verbinden.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-connect) Das Feature muss bereits vorhanden sein, bevor diese Methode aufruft. Dieser Schritt ist nur erforderlich, wenn Sie über zusätzliche Funktionen verfügen. Weitere Informationen finden Sie unter Verbinden eines [Mergemoduls mit mehreren Funktionen.](connecting-a-merge-module-to-multiple-features.md)
+7.  Extrahieren Sie bei Bedarf Quelldateien aus dem Modul, indem Sie eine oder mehrere der folgenden Schritte verwenden.
 
-    Um Dateien aus einer eingebetteten CAB-Datei zu extrahieren und dann in ein bestimmtes Verzeichnis zu kopieren, verwenden Sie [**ExtractFiles**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-extractfiles) oder [**extractfilesex**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-extractfilesex). Beachten Sie, dass **extractfilesex** [Mergemod.dll Version 2,0](merge-module-automation.md) oder höher erfordert.
+    Um Dateien aus einer eingebetteten .cab zu extrahieren und dann in ein angegebenes Verzeichnis zu kopieren, verwenden Sie [**ExtractFiles**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-extractfiles) oder [**ExtractFilesEx**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-extractfilesex). Beachten **Sie, dass ExtractFilesEx** Mergemod.dll [ Version 2.0 oder](merge-module-automation.md) höher erfordert.
 
-    Verwenden Sie [**ExtractCab**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-extractcab), um Dateien aus einer eingebetteten CAB-Datei zu extrahieren und Sie dann in einer angegebenen Datei zu speichern.
+    Um Dateien aus einer eingebetteten .cab zu extrahieren und dann in einer angegebenen Datei zu speichern, verwenden Sie [**ExtractCAB**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-extractcab).
 
-    Verwenden Sie zum Extrahieren von Dateien aus einem Modul und anschließendes Kopieren in ein Quell Abbild auf dem Datenträger nach der Zusammenführung den Befehl " [**kreatesourceimage**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-createsourceimage). Beachten Sie, dass " **kreatesourceimage** " nur mit [Mergemod.dll Version 2,0](merge-module-automation.md) oder höher verfügbar ist.
+    Verwenden Sie [**CreateSourceImage,**](/windows/desktop/api/Mergemod/nf-mergemod-imsmmerge2-createsourceimage)um Dateien aus einem Modul zu extrahieren und dann nach dem Zusammenführen in ein Quellimage auf dem Datenträger zu kopieren. Beachten **Sie, dass CreateSourceImage** nur mitMergemod.dll [ 2.0 oder höher](merge-module-automation.md) verfügbar ist.
 
-8.  Schließen Sie das aktuelle geöffnete Mergemodul mithilfe von [**closemodule**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closemodule). Dieser Schritt ist erforderlich.
-9.  Schließen Sie die aktuelle geöffnete Installations Datenbank mithilfe von [**CloseDatabase**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase). Dieser Schritt ist erforderlich. Durch das Schließen einer Datenbank werden alle Abhängigkeitsinformationen gelöscht, aber keine Fehler, die noch nicht abgerufen wurden.
-10. Schließen Sie die aktuelle Protokolldatei mit [**closelog**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closelog). Dieser Schritt ist erforderlich, wenn Sie eine Protokolldatei geöffnet haben.
+8.  Schließen Sie das aktuelle offene Mergemodul mit [**CloseModule**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closemodule). Dieser Schritt ist erforderlich.
+9.  Schließen Sie die aktuelle geöffnete Installationsdatenbank [**mit CloseDatabase.**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closedatabase) Dieser Schritt ist erforderlich. Beim Schließen einer Datenbank werden alle Abhängigkeitsinformationen gelöscht, aber es sind keine Fehler betroffen, die nicht abgerufen wurden.
+10. Schließen Sie die aktuelle Protokolldatei mit [**CloseLog**](/windows/win32/api/mergemod/nf-mergemod-imsmmerge-closelog). Dieser Schritt ist erforderlich, wenn Sie eine Protokolldatei geöffnet haben.
 
-Nachdem das Modul mithilfe von [Mergemod.dll](merge-module-automation.md)in der Datenbank zusammengeführt wurde, muss die [Medien Tabelle](media-table.md) aktualisiert werden, damit das gewünschte Layout des Quell Bilds beschrieben wird. Der von Mergemod.dll bereitgestellte Mergeprozess aktualisiert die Medien Tabelle nicht, da der Consumer des Mergemoduls verschiedene Möglichkeiten zum Layout des Quell Bilds auswählen kann.
+Nachdem das Modul mithilfe vonMergemod.dllmit [](media-table.md) der Datenbank zusammengeführt [wurde, ](merge-module-automation.md)muss die Medientabelle aktualisiert werden, um das gewünschte Quellbildlayout zu beschreiben. Der merge-Prozess von Mergemod.dll aktualisiert die Medientabelle nicht, da der Consumer des Mergemoduls verschiedene Möglichkeiten zum Layout des Quellbilds auswählen kann.
 
  
 

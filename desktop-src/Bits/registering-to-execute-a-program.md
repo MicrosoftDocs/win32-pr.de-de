@@ -1,37 +1,37 @@
 ---
-title: Registrieren zum Ausführen eines Programms
-description: Sie können registrieren, damit Bits ein Programm auf der Grundlage von übermittelten Aufträgen und Fehlerereignissen, aber keine Auftrags Änderungs Ereignisse ausführt. Bits führt das Programm im Kontext des Benutzers aus.
+title: Registrieren für die Ausführung eines Programms
+description: Sie können sich registrieren, damit BITS ein Programm basierend auf übertragenen Aufträgen und Fehlerereignissen ausführen kann, jedoch nicht auf Auftrags geänderten Ereignissen. BITS führt das Programm im Kontext des Benutzers aus.
 ms.assetid: f1996d08-0e35-403b-9cdb-dae9e1c42e05
 keywords:
-- Ereignis Benachrichtigungs Bits, Befehlszeile
-- Registrieren für befehlszeilenbenachrichtigungsbits
+- Ereignisbenachrichtigung BITS , Befehlszeile
+- Registrieren für Bits für Befehlszeilenbenachrichtigungen
 ms.topic: article
 ms.date: 10/04/2018
-ms.openlocfilehash: 7831a959a73112b21bdf3e0fbc2b7d3dd4f6a447
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: db86f67ad899d190b24d74bfb04c501ca7881351cfb2f37ef53300666622c317
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922030"
 ---
-# <a name="registering-to-execute-a-program"></a>Registrieren zum Ausführen eines Programms
+# <a name="registering-to-execute-a-program"></a>Registrieren für die Ausführung eines Programms
 
-Sie können registrieren, damit Bits ein Programm auf der Grundlage von übermittelten Aufträgen und Fehlerereignissen, aber keine Auftrags Änderungs Ereignisse ausführt. Bits führt das Programm im Kontext des Benutzers aus.
+Sie können sich registrieren, damit BITS ein Programm basierend auf übertragenen Aufträgen und Fehlerereignissen ausführen kann, jedoch nicht auf Auftrags geänderten Ereignissen. BITS führt das Programm im Kontext des Benutzers aus.
 
-**So registrieren Sie sich für die Ausführung eines Programms**
+**So registrieren Sie sich zum Ausführen eines Programms**
 
-1.  Rufen Sie die **ibackgroundcopyjob:: QueryInterface** -Methode auf, um einen [**IBackgroundCopyJob2**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2) -Schnittstellen Zeiger abzurufen. Geben Sie \_ \_ uuidof (IBackgroundCopyJob2) als Schnittstellen Bezeichner an.
-2.  Aufrufen der [**IBackgroundCopyJob2:: setnotifycmdline**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setnotifycmdline) -Methode, um das auszuführende Programm und alle für das Programm erforderlichen Argumente anzugeben, z. b. den Auftrags Bezeichner.
+1.  Rufen Sie die **IBackgroundCopyJob::QueryInterface-Methode auf,** um einen [**IBackgroundCopyJob2-Schnittstellenzeiger**](/windows/desktop/api/Bits1_5/nn-bits1_5-ibackgroundcopyjob2) abzurufen. Geben \_ \_ Sie uuidof(IBackgroundCopyJob2) als Schnittstellenbezeichner an.
+2.  Rufen Sie [**die IBackgroundCopyJob2::SetNotifyCmdLine-Methode**](/windows/desktop/api/Bits1_5/nf-bits1_5-ibackgroundcopyjob2-setnotifycmdline) auf, um das auszuführende Programm und alle vom Programm benötigten Argumente anzugeben, z. B. den Auftragsbezeichner.
 
-3.  Aufrufen der [**ibackgroundcopyjob:: setnotifyflags**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) -Methode, um anzugeben, wann die Befehlszeile ausgeführt wird.
+3.  Rufen Sie die [**IBackgroundCopyJob::SetNotifyFlags-Methode**](/windows/desktop/api/Bits/nf-bits-ibackgroundcopyjob-setnotifyflags) auf, um anzugeben, wann die Befehlszeile ausgeführt wird.
 
-    Sie können nur die Flags "BG \_ Notify \_ Job überträgt" und " \_ BG \_ Notify \_ Job \_ Error Event" angeben. Das Flag "BG \_ Notify \_ Job-Änderung" \_ wird ignoriert.
+    Sie können nur die Ereignisflags BG \_ NOTIFY \_ JOB \_ TRANSFERD und BG NOTIFY JOB \_ \_ ERROR \_ angeben. Das BG \_ NOTIFY \_ JOB \_ MODIFICATION-Flag wird ignoriert.
 
-Beachten Sie, dass Bits das Programm nicht ausführt, wenn Sie auch [für den Empfang von com](registering-a-com-callback.md) -Rückrufen registriert sind und der Rückruf Schnittstellen Zeiger gültig ist oder die Benachrichtigungs Methode, die Bits aufruft, einen Erfolgs Code zurückgibt. Wenn die Benachrichtigungs Methode jedoch einen Fehlercode zurückgibt, wie z. b. "Fehler" \_ , führt Bits die Befehlszeile aus.
+Beachten Sie, dass BITS das [](registering-a-com-callback.md) Programm nicht ausführen wird, wenn Sie sich auch für den Empfang von COM-Rückrufen registriert haben und der Rückrufschnittstellenzeiger gültig ist oder die von BITS aufrufte Benachrichtigungsmethode einen Erfolgscode zurückgibt. Wenn die Benachrichtigungsmethode jedoch einen Fehlercode zurückgibt, z. B. E FAIL, führt \_ BITS die Befehlszeile aus.
 
-Bits Ruft die [**Funktion "**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) -Funktion" auf, um das Programm zu starten. Wenn Sie eine Parameter Zeichenfolge angeben, muss der erste Parameter der Programmname sein.
+BITS ruft die [**CreateProcessAsUser-Funktion auf,**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) um das Programm zu starten. Wenn Sie eine Parameterzeichenfolge angeben, muss der erste Parameter der Programmname sein.
 
-Im folgenden Beispiel wird gezeigt, wie Sie sich registrieren, um ein Programm auszuführen, wenn das Auftrags übertragene Ereignis auftritt. Im Beispiel wird davon ausgegangen, dass der [**ibackgroundcopyjob**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) -Schnittstellen Zeiger gültig ist.
+Das folgende Beispiel zeigt, wie Sie sich registrieren, um ein Programm auszuführen, wenn das ereignis übertragene Auftrag eintritt. Im Beispiel wird davon ausgegangen, dass [**der IBackgroundCopyJob-Schnittstellenzeiger**](/windows/desktop/api/Bits/nn-bits-ibackgroundcopyjob) gültig ist.
 
 
 ```C++
@@ -70,7 +70,7 @@ if (SUCCEEDED(hr))
 
 
 
-Wenn der Status des Auftrags in den Status der BG- \_ Aufträge \_ \_ übertragen wird, führt Bits das in Pprogram angegebene Programm aus. Das folgende Beispiel ist eine einfache Implementierung eines Programms, das einen Auftrags Bezeichner als Argument annimmt. Das Programm geht davon aus, dass die richtige Anzahl von Argumenten an Sie übermittelt wird.
+Wenn der Status des Auftrags BG \_ JOB \_ STATE TRANSFERD wird, führt BITS das in \_ pProgram angegebene Programm aus. Das folgende Beispiel ist eine einfache Implementierung eines Programms, das einen Auftragsbezeichner als Argument verwendet. Das Programm geht davon aus, dass die richtige Anzahl von Argumenten übergeben wird.
 
 
 ```C++
@@ -133,6 +133,6 @@ int wmain(int argc, wchar_t *argv[])
 
 
 
- 
+ 
 
- 
+ 

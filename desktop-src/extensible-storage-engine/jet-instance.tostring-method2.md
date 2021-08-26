@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INSTANCE. Methoden Überladungs Liste der Zeichen folgen Methode'
-title: JET_INSTANCE. Methoden Überladungs Liste der Zeichen folgen Methode
+description: 'Erfahren Sie mehr über: JET_INSTANCE. ToString-Methodenüberladungsliste'
+title: JET_INSTANCE. ToString-Methodenüberladungsliste
 TOCTitle: 'ToString method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.JET_INSTANCE.ToString
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_instance.tostring(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 3eae18ed5788add4962930f124394bbf0bd52be8
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 624e1e829ca2f5ed1e525d2d2cc49872c91e51b205775bd0af18fffffc6076cf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120016790"
 ---
-# <a name="jet_instancetostring-method-overload-list"></a>JET_INSTANCE. Methoden Überladungs Liste der Zeichen folgen Methode
+# <a name="jet_instancetostring-method-overload-list"></a>JET_INSTANCE. ToString-Methodenüberladungsliste
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -40,11 +40,11 @@ Geerbte Member einschließen
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh577403(v=exchg.10).md">ToString()</a></td>
-<td>Generiert eine Zeichen folgen Darstellung der-Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.-Zeichenfolge ()</a>.)</td>
+<td>Generieren Sie eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh578011(v=exchg.10).md">"Zeichenfolge" (String, IFormatProvider)</a></td>
+<td><a href="hh578011(v=exchg.10).md">ToString(String, IFormatProvider)</a></td>
 <td>Formatiert den Wert der aktuellen Instanz mit dem angegebenen Format.</td>
 </tr>
 </tbody>
@@ -55,10 +55,10 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INSTANCE Struktur](./jet-instance-structure.md)
 
-[Mitglieder JET_INSTANCE](./jet-instance-members.md)
+[JET_INSTANCE-Member](./jet-instance-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

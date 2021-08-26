@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 comclassautoemulator Association" verknüpft eine Component Object Model (com)-Klasse und eine andere com-Klasse, die Sie automatisch emuliert.
+description: Die WMI-Klasse für die Win32 ComClassAutoEmulator-Zuordnung bezieht sich auf eine Component Object Model-Klasse (COM) und eine andere \_ COM-Klasse, die automatisch emuliert wird.
 ms.assetid: e060ba26-98e7-47cb-bf21-1ca80d0e8a07
 ms.tgt_platform: multiple
 title: Win32_ComClassAutoEmulator-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 9442036d43859caa5fa277109c7e85553e7d42f0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ba849eed744ff342cfde10d0f31072d4e898cf52cf4e6966760f780236c56df4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986380"
 ---
-# <a name="win32_comclassautoemulator-class"></a>Win32 \_ comclassautoemulator-Klasse
+# <a name="win32_comclassautoemulator-class"></a>Win32 \_ ComClassAutoEmulator-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " **Win32 \_ comclassautoemulator** Association" verknüpft eine Component Object Model (com)-Klasse und eine andere com-Klasse, die Sie automatisch emuliert.
+Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für die **Win32 \_ ComClassAutoEmulator-Zuordnung** bezieht sich auf eine Component Object Model-Klasse (COM) und eine andere COM-Klasse, die automatisch emuliert wird.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,45 +42,45 @@ class Win32_ComClassAutoEmulator
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ comclassautoemulator** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ ComClassAutoEmulator-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ comclassautoemulator** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ ComClassAutoEmulator-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**NewVersion**
+**Newversion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ classiccomclass**
+Datentyp: **Win32 \_ ClassicCOMClass**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ classiccomclass")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ClassicCOMClass")
 </dt> </dl>
 
-Verweis auf die Instanz, die die COM-Komponente darstellt, die die zugeordnete COM-Komponente automatisch emulieren kann. Diese Informationen werden über den Registrierungs Eintrag AutoTreatAs abgerufen.
+Verweis auf die -Instanz, die die COM-Komponente darstellt, die die zugeordnete COM-Komponente automatisch emulieren kann. Diese Informationen werden über den Registrierungseintrag AutoTreatAs erhalten.
 
 </dd> <dt>
 
 **OldVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ classiccomclass**
+Datentyp: **Win32 \_ ClassicCOMClass**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ classiccomclass")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ ClassicCOMClass")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die COM-Komponente darstellt, die von einer anderen Komponente automatisch emuliert wird.
+Verweis auf die -Instanz, die die COM-Komponente darstellt, die automatisch von einer anderen Komponente emuliert wird.
 
 </dd> </dl>
 
@@ -92,8 +92,8 @@ Verweis auf die-Instanz, die die COM-Komponente darstellt, die von einer anderen
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

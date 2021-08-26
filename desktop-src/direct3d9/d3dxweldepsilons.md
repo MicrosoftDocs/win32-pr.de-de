@@ -1,5 +1,5 @@
 ---
-description: 'D3DXWELDEPSILONS-Struktur: Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Vertexkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammen zusammengestellt zu werden.'
+description: 'D3DXWELDEPSILONS-Struktur: Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Scheitelpunktkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammen zusammengestellt zu werden.'
 ms.assetid: 534903da-ff65-4629-9be9-66c9daed6ef5
 title: D3DXWELDEPSILONS-Struktur (D3dx9mesh.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: bb11e6f5481b1adf7cc1bac58edf40d4ac770e92
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 63cef1f2023ac29d321775551cdaccd1803c20f76792e0ba9f8136d47782436d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986470"
 ---
 # <a name="d3dxweldepsilons-structure"></a>D3DXWELDEPSILONS-Struktur
 
-Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Scheitelpunktkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammengeknauft zu werden.
+Gibt Beim Vergleich von Scheitelpunkten Toleranzwerte für jede Scheitelpunktkomponente an, um zu bestimmen, ob sie ähnlich genug sind, um zusammengeknausgt zu werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -125,7 +125,7 @@ Acht Texturkoordinaten
 
 </dd> <dt>
 
-**Tangente**
+**Tangens**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -158,9 +158,9 @@ Mosaikfaktor
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der LPD3DXWELDEPSILONS-Typ ist als Zeiger auf die **D3DXWELDEPSILONS-Struktur** definiert.
+Der LPD3DXWELDEPSILONS-Typ wird als Zeiger auf die **D3DXWELDEPSILONS-Struktur** definiert.
 
 
 ```
@@ -173,7 +173,7 @@ typedef D3DXWELDEPSILONS *LPD3DXWELDEPSILONS;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 

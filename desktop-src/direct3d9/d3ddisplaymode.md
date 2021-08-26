@@ -71,7 +71,7 @@ Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Bildwiederholrate. Der Wert 0 gibt einen Adapterstandard an.
+Bildwiederholrate. Der Wert 0 gibt einen Standardadapter an.
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Oberflächenformat des Anzeigemodus beschreibt.
+Member des [aufzählten D3DFORMAT-Typs,](d3dformat.md) der das Oberflächenformat des Anzeigemodus beschreibt.
 
 </dd> </dl>
 
@@ -96,7 +96,7 @@ Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Oberflächenforma
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

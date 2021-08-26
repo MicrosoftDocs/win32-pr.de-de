@@ -1,61 +1,61 @@
 ---
-description: Die \_ Konstanten Gerätestatus \_ xxx geben den aktuellen Status eines audioendpunktgeräts an.
+description: Die DEVICE \_ STATE \_ XXX-Konstanten geben den aktuellen Zustand eines Audioendpunktgeräts an.
 ms.assetid: d03f2fbc-313a-42cf-902a-fd9f6dce2a35
-title: DEVICE_STATE_XXX Konstanten (mmdeviceapi. h)
+title: DEVICE_STATE_XXX Konstanten (Mmdeviceapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b65fc09a547ad702d27e96e968915f9d70e3313e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b3d5632f14ff52fec2aa907dc2786f2a3ab893f921cd44433548510163f66a1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120053870"
 ---
-# <a name="device_state_xxx-constants"></a>Geräte \_ Status \_ xxx-Konstanten
+# <a name="device_state_xxx-constants"></a>DEVICE \_ STATE \_ XXX-Konstanten
 
-Die \_ Konstanten Gerätestatus \_ xxx geben den aktuellen Status eines audioendpunktgeräts an.
+Die DEVICE \_ STATE \_ XXX-Konstanten geben den aktuellen Zustand eines Audioendpunktgeräts an.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                               | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                      |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DEVICE_STATE_ACTIVE"></span><span id="device_state_active"></span><dl> <dt>**Gerät \_ Status \_ aktiv**</dt> <dt>0x00000001</dt> </dl>             | Das audioendpunktgerät ist aktiv. Das heißt, dass der Audioadapter, der eine Verbindung mit dem Endpunkt Gerät herstellt, vorhanden und aktiviert ist. Außerdem wird das Endpunkt Gerät angeschlossen, wenn das Endpunkt Gerät an einen Jack auf dem Adapter angeschlossen ist.<br/>                                                                                                                            |
-| <span id="DEVICE_STATE_DISABLED"></span><span id="device_state_disabled"></span><dl> <dt>**Gerät \_ Status \_ deaktiviert**</dt> <dt>0x00000002</dt> </dl>       | Das audioendpunktgerät ist deaktiviert. Der Benutzer hat das Gerät in der Windows-Multimedia-Systemsteuerung (Mmsys.cpl) deaktiviert. Weitere Informationen finden Sie in den Hinweisen.<br/>                                                                                                                                                                                                        |
-| <span id="DEVICE_STATE_NOTPRESENT"></span><span id="device_state_notpresent"></span><dl> <dt>**Gerät \_ State \_ notpresent**</dt> <dt>0x00000004</dt> </dl> | Das audioendpunktgerät ist nicht vorhanden, weil der Audioadapter, der eine Verbindung mit dem Endpunkt Gerät herstellt, aus dem System entfernt wurde oder der Benutzer das Adapter Gerät in Device Manager deaktiviert hat.<br/>                                                                                                                                                              |
-| <span id="DEVICE_STATE_UNPLUGGED"></span><span id="device_state_unplugged"></span><dl> <dt>**Gerät \_ Status \_**</dt> nicht getrennt <dt>0x00000008</dt> </dl>    | Das audioendpunktgerät ist nicht getrennt. Der Audioadapter, der den Jack für das Endpunkt Gerät enthält, ist vorhanden und aktiviert, aber das Endpunkt Gerät ist nicht an den Jack angeschlossen. In diesem Zustand kann nur ein Gerät mit der Erkennung von Jack-Presence vorhanden sein. Weitere Informationen zur Erkennung von Jack-Presence finden Sie unter [audioendpunktgeräte](audio-endpoint-devices.md).<br/> |
-| <span id="DEVICE_STATEMASK_ALL"></span><span id="device_statemask_all"></span><dl> <dt>**Gerät \_ Statusfrage \_ alle**</dt> <dt>0x0000000f</dt> </dl>          | Schließt audioendpunktgeräte in allen Zuständen ein, die aktiv, deaktiviert, nicht vorhanden und getrennt sind.<br/>                                                                                                                                                                                                                                                                           |
+| <span id="DEVICE_STATE_ACTIVE"></span><span id="device_state_active"></span><dl> <dt>**GERÄT \_ STATE \_ ACTIVE**</dt> <dt>0x00000001</dt> </dl>             | Das Audioendpunktgerät ist aktiv. Das heißt, der Audioadapter, der eine Verbindung mit dem Endpunktgerät herstellt, ist vorhanden und aktiviert. Wenn das Endpunktgerät an eine Buchse des Adapters angeschlossen ist, wird das Endpunktgerät angeschlossen.<br/>                                                                                                                            |
+| <span id="DEVICE_STATE_DISABLED"></span><span id="device_state_disabled"></span><dl> <dt>**GERÄT \_ STATE \_ DISABLED**</dt> <dt>0x00000002</dt> </dl>       | Das Audioendpunktgerät ist deaktiviert. Der Benutzer hat das Gerät in der Windows Multimedia-Systemsteuerung deaktiviert, Mmsys.cpl. Weitere Informationen finden Sie in den Hinweisen.<br/>                                                                                                                                                                                                        |
+| <span id="DEVICE_STATE_NOTPRESENT"></span><span id="device_state_notpresent"></span><dl> <dt>**GERÄT \_ STATE \_ NOTPRESENT**</dt> <dt>0x00000004</dt> </dl> | Das Audioendpunktgerät ist nicht vorhanden, da der Audioadapter, der eine Verbindung mit dem Endpunktgerät herstellt, aus dem System entfernt wurde oder der Benutzer das Adaptergerät in Geräte-Manager deaktiviert hat.<br/>                                                                                                                                                              |
+| <span id="DEVICE_STATE_UNPLUGGED"></span><span id="device_state_unplugged"></span><dl> <dt>**GERÄT \_ STATE \_ UNPLUGGED**</dt> <dt>0x00000008</dt> </dl>    | Das Audioendpunktgerät wird aus dem Netz. Der Audioadapter, der die Buchse für das Endpunktgerät enthält, ist vorhanden und aktiviert, aber das Endpunktgerät ist nicht an die Buchse angeschlossen. Nur ein Gerät mit Jack-Presence-Erkennung kann sich in diesem Zustand befinden. Weitere Informationen zur Erkennung von Jack-Presence finden Sie unter [Audioendpunktgeräte.](audio-endpoint-devices.md)<br/> |
+| <span id="DEVICE_STATEMASK_ALL"></span><span id="device_statemask_all"></span><dl> <dt>**GERÄT \_ STATEMASK \_ ALL**</dt> <dt>0x0000000F</dt> </dl>          | Schließt Audioendpunktgeräte in allen Zuständen aktiv, deaktiviert, nicht vorhanden und unplugged ein.<br/>                                                                                                                                                                                                                                                                           |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Methoden " [**immdeviceenumerator:: enumaudioendpoints**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-enumaudioendpoints)", " [**immdevice:: GetState**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getstate)" und " [**immnotificationclient:: ondevicestatechanged**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immnotificationclient-ondevicestatechanged) " verwenden die Geräte \_ Status-xxx- \_ Konstanten. Mit diesen Methoden können Clients Informationen zu Endpunkt Geräten abrufen, die sich in einem der Zustände befinden, die durch die Geräte \_ Status xxx-Konstanten dargestellt werden \_ .
+Die Methoden [**IMMDeviceEnumerator::EnumAudioEndpoints**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-enumaudioendpoints), [**IMMDevice::GetState**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getstate)und [**IMMNotificationClient::OnDeviceStateChanged**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immnotificationclient-ondevicestatechanged) verwenden die DEVICE \_ STATE \_ XXX-Konstanten. Mit diesen Methoden können Clients Informationen zu Endpunktgeräten abrufen, die sich in einem der Zustände befinden, die durch die DEVICE \_ STATE \_ XXX-Konstanten dargestellt werden.
 
-Ein Client kann jedoch einen Stream (z. b. durch Abrufen einer [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle für das Gerät) nur auf einem Gerät öffnen, das sich im Zustand "aktiver Gerätestatus" befindet \_ \_ .
+Ein Client kann jedoch nur auf einem Gerät mit dem Status DEVICE STATE ACTIVE einen Stream öffnen (z. B. durch Abrufen einer [**IAudioClient-Schnittstelle**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) für das \_ \_ Gerät).
 
-In der Windows-Multimedia-Systemsteuerung (Mmsys.cpl) werden die audioendpunktgeräte im System angezeigt. Wenn Sie ein Gerät in Mmsys.cpl deaktivieren, wird das Gerät vor den Geräte Ermittlungs Mechanismen in übergeordneten audioapis ausgeblendet, aber es werden keine Streamobjekte ungültig, die möglicherweise von einem Client vor der Deaktivierung des Geräts instanziiert wurden. Wenn z. b. ein Stream auf dem Gerät abgespielt wird, wenn der Benutzer ihn in Mmsys.cpl deaktiviert, wird der Stream weiterhin ununterbrochen abgespielt.
+Die Windows Multimedia-Systemsteuerung Mmsys.cpl zeigt die Audioendpunktgeräte im System an. Das Deaktivieren eines Geräts in Mmsys.cpl blendet das Gerät vor den Geräteermittlungsmechanismen in Audio-APIs auf höherer Ebene aus, macht jedoch keine Datenstromobjekte ungültig, die ein Client vor der Deaktivierung des Geräts instanziiert hat. Wenn beispielsweise ein Stream auf dem Gerät wiedergegeben wird, wenn der Benutzer ihn in Mmsys.cpl deaktiviert, wird der Stream weiterhin unterbrechungsfrei wiedergegeben.
 
-Im Gegensatz dazu wird durch das Deaktivieren eines Geräts in Device Manager das Gerät effektiv aus dem System entfernt.
+Im Gegensatz dazu entfernt das Deaktivieren eines Geräts in Geräte-Manager das Gerät effektiv aus dem System.
 
-Um Mmsys.cpl zum Anzeigen der renderinggeräte zu verwenden, öffnen Sie ein Eingabe Aufforderungs Fenster, und geben Sie den folgenden Befehl ein:
+Um Mmsys.cpl zum Anzeigen der Renderinggeräte zu verwenden, öffnen Sie ein Eingabeaufforderungsfenster, und geben Sie den folgenden Befehl ein:
 
-**Steuerelement mmsys.cpl,, 0**
+**control mmsys.cpl,,0**
 
 Geben Sie den folgenden Befehl ein, um die Erfassungsgeräte anzuzeigen:
 
-**Steuerelement mmsys.cpl,, 1**
+**control mmsys.cpl,,1**
 
-Alternativ dazu können Sie die renderinggeräte oder die Erfassungsgeräte in Mmsys.cpl anzeigen, indem Sie mit der rechten Maustaste auf das Redner Symbol im Infobereich klicken, der sich auf der rechten Seite der Taskleiste befindet, und **Geräte wieder** geben oder **Geräte aufzeichnen** auswählen.
+Alternativ können Sie die Renderinggeräte oder Erfassungsgeräte in Mmsys.cpl anzeigen, indem Sie mit der rechten Maustaste auf das Lautsprechersymbol im Infobereich klicken, der sich rechts auf der Taskleiste befindet, und **wiedergabegeräte** oder **Aufzeichnungsgeräte** auswählen.
 
-Mmsys.cpl zeigt immer Endpunkt Geräte an, die den Zustand "aktiver Gerätestatus" aufweisen \_ \_ . Außerdem kann Sie so konfiguriert werden, dass Sie deaktivierte und getrennte Geräte anzeigt.
+Mmsys.cpl zeigt immer Endpunktgeräte an, die sich im Status DEVICE \_ STATE \_ ACTIVE befinden. Darüber hinaus kann es so konfiguriert werden, dass deaktivierte und getrennte Geräte angezeigt werden.
 
-\_ \_ Klicken Sie mit der \_ \_ rechten Maustaste in das Mmsys.cpl Fenster, und wählen Sie die Option **deaktivierte Geräte anzeigen** aus, um Endpunkt Geräte anzuzeigen, die den Status "deaktiviert" aufweisen
+Um Endpunktgeräte anzuzeigen, die sich in den Zuständen DEVICE \_ STATE DISABLED und DEVICE STATE \_ \_ NOTPRESENT befinden, klicken Sie mit der rechten Maustaste in das Fenster \_ Mmsys.cpl, und wählen Sie die Option **Deaktivierte Geräte anzeigen** aus.
 
-\_ \_ Klicken Sie mit der rechten Maustaste in das Mmsys.cpl Fenster, und wählen Sie die Option **getrennte Geräte anzeigen** aus, um Endpunkt Geräte anzuzeigen, die sich im Zustand Gerätezustand befinden befinden.
+Klicken Sie mit der rechten Maustaste in das Fenster Mmsys.cpl, und wählen Sie die Option Getrennte Geräte anzeigen aus, um Endpunktgeräte anzuzeigen, die sich im Status DEVICE \_ STATE \_ UNPLUGGED **befinden.**
 
-Wenn Sie nur Endpunkt Geräte anzeigen möchten, die den \_ \_ Status "aktiv" aufweisen, deaktivieren Sie die Optionen " **deaktivierte Geräte anzeigen** " und " **getrennte Geräte anzeigen** ".
+Um nur Endpunktgeräte anzuzeigen, die sich im Status DEVICE \_ STATE \_ ACTIVE befinden, deaktivieren Sie sowohl die Optionen **Deaktivierte Geräte anzeigen** als auch Getrennte Geräte **anzeigen.**
 
-Zum Aktivieren oder Deaktivieren eines Endpunkt Geräts in Mmsys.cpl klicken Sie auf **Wiedergabe** oder **Aufzeichnung**, je nachdem, ob es sich beim Gerät um ein Wiedergabe-oder Aufzeichnungsgerät handelt. Wählen Sie dann das Gerät aus, und klicken Sie auf **Eigenschaften**. Wählen Sie im **Eigenschaften** Fenster neben **Geräte Verwendung** entweder **dieses Gerät verwenden (aktivieren)** oder **dieses Gerät nicht verwenden (deaktivieren)** aus.
+Um ein Endpunktgerät in Mmsys.cpl zu aktivieren oder zu deaktivieren, klicken Sie auf **Wiedergabe** oder **Aufzeichnung**, je nachdem, ob es sich bei dem Gerät um ein Wiedergabe- oder Aufzeichnungsgerät handelt. Wählen Sie als Nächstes das Gerät aus, und klicken Sie auf **Eigenschaften.** Wählen Sie im Fenster **Eigenschaften** neben **Geräteverwendung** entweder **Dieses Gerät verwenden (aktivieren)** oder **Dieses Gerät nicht verwenden (deaktivieren) aus.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Zum Aktivieren oder Deaktivieren eines Endpunkt Geräts in Mmsys.cpl klicken Sie
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Mmdeviceapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Mmdeviceapi.h</dt> </dl> |
 
 
 
@@ -76,16 +76,16 @@ Zum Aktivieren oder Deaktivieren eines Endpunkt Geräts in Mmsys.cpl klicken Sie
 [Kernaudiokonstanten](core-audio-constants.md)
 </dt> <dt>
 
-[**Immdevice:: GetState**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getstate)
+[**IMMDevice::GetState**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-getstate)
 </dt> <dt>
 
-[**Immdeviceenumerator-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator)
+[**IMMDeviceEnumerator-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator)
 </dt> <dt>
 
-[**Immdeviceenumerator:: enumaudioendpoints**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-enumaudioendpoints)
+[**IMMDeviceEnumerator::EnumAudioEndpoints**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-enumaudioendpoints)
 </dt> <dt>
 
-[**Immnotificationclient:: ondevicestatechanged**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immnotificationclient-ondevicestatechanged)
+[**IMMNotificationClient::OnDeviceStateChanged**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immnotificationclient-ondevicestatechanged)
 </dt> </dl>
 
  

@@ -1,37 +1,37 @@
 ---
-description: Aktiviert oder deaktiviert die Verwendung der Lautstärke Ausgleich in einem Audiodecoder oder Digital Signal Processor (DSP).
+description: Aktiviert oder deaktiviert die Lautheitsgleichheit in einem Audiodecoder oder digitalen Signalprozessor (Digital Signal Processor, DSP).
 ms.assetid: f02b187f-1bcb-47b3-8ac2-018ed30491c6
-title: Avdsploudnessqualization-Eigenschaft (codecapi. h)
+title: AVDSPLoudnessEqualization-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 38a2fc09077c114ab18f2626b333cfe4c87c97d9
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 61696b51996d6fe57cf15372d511704e2dad482f0a5e99eb165795f56256656a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052830"
 ---
-# <a name="avdsploudnessequalization-property"></a>Avdsploudnessqualization (Eigenschaft)
+# <a name="avdsploudnessequalization-property"></a>AVDSPLoudnessEqualization-Eigenschaft
 
-Aktiviert oder deaktiviert die Verwendung der Lautstärke Ausgleich in einem Audiodecoder oder Digital Signal Processor (DSP).
+Aktiviert oder deaktiviert die Lautheitsgleichheit in einem Audiodecoder oder digitalen Signalprozessor (Digital Signal Processor, DSP).
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avdsploudnessqualization**
+**CODECAPI \_ AVDSPLoudnessEqualization**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft ist ein Member der [**eavdsploudnessqualization**](/windows/desktop/api/codecapi/ne-codecapi-eavdsploudnessequalization) -Enumeration.
+Der Wert dieser Eigenschaft ist ein Member der [**eAVDSPLoudnessEqualization-Enumeration.**](/windows/desktop/api/codecapi/ne-codecapi-eavdsploudnessequalization)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Lautstärke Ausgleich ist ein DSP-Prozess, der eine konsistente Volumeebene beibehält, wenn der Audiodatenstrom geändert wird.
+Bei der Lautheitsgleichheit handelt es sich um einen DSP-Prozess, der eine konsistente Lautstärke beibehält, wenn sich der Audiostream ändert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Der Lautstärke Ausgleich ist ein DSP-Prozess, der eine konsistente Volumeebene 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -49,10 +49,10 @@ Der Lautstärke Ausgleich ist ein DSP-Prozess, der eine konsistente Volumeebene 
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  
