@@ -1,9 +1,9 @@
 ---
-title: ID2D1Geometry vereinfachen von Methoden
-description: Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein ID2D1SimplifiedGeometrySink.
+title: ID2D1Geometry Simplify-Methoden
+description: Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält, und schreibt das Ergebnis in einen ID2D1SimplifiedGeometrySink.
 ms.assetid: e6d1d701-c148-4d5b-bf47-00b355bb03ad
 keywords:
-- Vereinfachen von Methoden Direct2D
+- Vereinfachen von Direct2D-Methoden
 topic_type:
 - apiref
 api_location:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
-ms.openlocfilehash: 520a474039354153f759e932fad84338b5fee293
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 32e41ceb41c920a7265aa6d13e85ba121eafa0bbf9af045797779254e1991c3b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917900"
 ---
-# <a name="id2d1geometrysimplify-methods"></a>ID2D1Geometry:: vereinfachungsmethoden
+# <a name="id2d1geometrysimplify-methods"></a>ID2D1Geometry::Simplify-Methoden
 
-Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).
+Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält und das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)schreibt.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -30,10 +30,10 @@ Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) 
 
 | Methode                                                                                                                                                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                           |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Vereinfachen (D2D1 \_ Geometry \_ -Vereinfachungs \_ Option, D2D1 \_ Matrix \_ 3x2 \_ F \* , ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))             | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/> |
-| [**Vereinfachen (D2D1 \_ Geometry \_ -Vereinfachungs \_ Option, D2D1 \_ Matrix \_ 3x2 \_ F&, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))              | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/> |
-| [**Vereinfachen (D2D1 \_ Geometry \_ -Vereinfachungs \_ Option, D2D1 \_ Matrix \_ 3x2 \_ F \* , float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/> |
-| [**Vereinfachen (D2D1 \_ Geometry \_ -Vereinfachungs \_ Option, D2D1 \_ Matrix \_ 3x2 \_ F&, float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink))  | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bezier-Kurven enthält, und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).<br/> |
+| [**Simplify(D2D1 \_ GEOMETRY \_ SIMPLIFY \_ OPTION,D2D1 \_ MATRIX \_ 3X2 \_ F \* ,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))             | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält und das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)schreibt.<br/> |
+| [**Simplify(D2D1 \_ GEOMETRY \_ SIMPLIFY \_ OPTION,D2D1 \_ MATRIX \_ 3X2 \_ F&,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))              | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält und das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)schreibt.<br/> |
+| [**Simplify(D2D1 \_ GEOMETRY \_ SIMPLIFY \_ OPTION,D2D1 \_ MATRIX \_ 3X2 \_ F \* ,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält und das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)schreibt.<br/> |
+| [**Simplify(D2D1 \_ GEOMETRY \_ SIMPLIFY \_ OPTION,D2D1 \_ MATRIX \_ 3X2 \_ F&,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-simplify(d2d1_geometry_simplification_option_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink))  | Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) kubische Bézierkurven enthält und das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)schreibt.<br/> |
 
 
 
@@ -43,7 +43,7 @@ Erstellt eine vereinfachte Version der Geometrie, die nur Linien und (optional) 
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 

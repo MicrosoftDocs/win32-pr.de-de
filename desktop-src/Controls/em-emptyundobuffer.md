@@ -1,9 +1,9 @@
 ---
-title: EM_EMPTYUNDOBUFFER Meldung (Winuser. h)
-description: Setzt das rückgängig-Flag eines Bearbeitungs Steuer Elements zurück. Das rückgängigflag wird festgelegt, wenn ein Vorgang innerhalb des Bearbeitungs Steuer Elements rückgängig gemacht werden kann. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_EMPTYUNDOBUFFER-Nachricht (Winuser.h)
+description: Setzt das Rückgängig-Flag eines Bearbeitungssteuerelements zurück. Das Rückgängig-Flag wird immer dann festgelegt, wenn ein Vorgang innerhalb des Bearbeitungssteuerelements rückgängig macht werden kann. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 ms.assetid: a4ff7bd9-f8ae-4f18-8429-4ceaaeeb0f94
 keywords:
-- Windows-Steuerelemente für EM_EMPTYUNDOBUFFER Meldung
+- EM_EMPTYUNDOBUFFER Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0abbdc067b603a032b8d311ddd7930a8ca6de01c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 63d59dab38bca921e2125377889f8d18ddf6eb45c023badeead47f7e07b860fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915900"
 ---
-# <a name="em_emptyundobuffer-message"></a>Nachricht "em \_ emptyundobuffer"
+# <a name="em_emptyundobuffer-message"></a>EM \_ EMPTYUNDOBUFFER-Nachricht
 
-Setzt das rückgängig-Flag eines Bearbeitungs Steuer Elements zurück. Das rückgängigflag wird festgelegt, wenn ein Vorgang innerhalb des Bearbeitungs Steuer Elements rückgängig gemacht werden kann. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Setzt das Rückgängig-Flag eines Bearbeitungssteuerelements zurück. Das Rückgängig-Flag wird immer dann festgelegt, wenn ein Vorgang innerhalb des Bearbeitungssteuerelements rückgängig macht werden kann. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,15 +47,15 @@ Nicht verwendet; muss 0 (null) sein.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das rückgängig-Flag wird automatisch zurückgesetzt, wenn das Bearbeitungs Steuerelement eine [**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext) -oder [**EM \_ SetHandle**](em-sethandle.md) -Meldung empfängt.
+Das Rückgängig-Flag wird automatisch zurückgesetzt, wenn das Bearbeitungssteuerelement eine [**WM \_ SETTEXT-**](/windows/desktop/winmsg/wm-settext) oder [**EM \_ SETHANDLE-Nachricht**](em-sethandle.md) empfängt.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 1,0:** Das Steuerelement kann nur den letzten Vorgang rückgängig machen oder wiederholen.
+**Steuerelemente bearbeiten und Rich Edit 1.0:** Das Steuerelement kann den letzten Vorgang nur rückgängig machen oder wiederholen.
 
-**Rich Edit 2,0 und höher:** Die Nachricht " **EM \_ emptyundobuffer** " Leert alle rückgängig-und Wiederholungs Puffer. Rich Edit-Steuerelemente ermöglichen dem Benutzer das Rückgängigmachen oder wiederholen mehrerer Vorgänge.
+**Rich Edit 2.0 und höher:** Die **EM \_ EMPTYUNDOBUFFER-Nachricht** leert alle Rückgängig- und Wiederholungspuffer. Umfangreiche Bearbeitungssteuerelemente ermöglichen es dem Benutzer, mehrere Vorgänge rückgängig zu machen oder zu wiederholen.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -73,22 +73,22 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ CanUndo**](em-canundo.md)
+[**EM \_ CANUNDO**](em-canundo.md)
 </dt> <dt>
 
-[**EM- \_ andle**](em-sethandle.md)
+[**EM \_ SETHANDLE**](em-sethandle.md)
 </dt> <dt>
 
-[**EM \_ rückgängig machen**](em-undo.md)
+[**EM \_ UNDO**](em-undo.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ SetText**](/windows/desktop/winmsg/wm-settext)
+[**WM \_ SETTEXT**](/windows/desktop/winmsg/wm-settext)
 </dt> </dl>
 
  

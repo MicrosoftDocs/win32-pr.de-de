@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentprimaryindexverdertedexception-Konstruktor'
-title: Esentprimaryindexverdertedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentPrimaryIndexCorruptedException-Konstruktor'
+title: EsentPrimaryIndexCorruptedException-Konstruktor
 TOCTitle: 'EsentPrimaryIndexCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentPrimaryIndexCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentprimaryindexcorruptedexception.esentprimaryindexcorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c78e9314005c427cd882c3f74c73aa6ca4797acd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b64b1114aef130b41b4daed47c50da3b30e54bd295dceda7fbe5423c7e0cbb7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359499"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851620"
 ---
-# <a name="esentprimaryindexcorruptedexception-constructor"></a>Esentprimaryindexverdertedexception-Konstruktor
+# <a name="esentprimaryindexcorruptedexception-constructor"></a>EsentPrimaryIndexCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentprimaryindexverdertedexception-Klasse.
+Initialisiert eine neue Instanz der EsentPrimaryIndexCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentPrimaryIndexCorruptedException()
 public EsentPrimaryIndexCorruptedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentprimaryindexverdertedexception-Klasse](./esentprimaryindexcorruptedexception-class.md)
+[EsentPrimaryIndexCorruptedException-Klasse](./esentprimaryindexcorruptedexception-class.md)
 
-[Esentprimaryindexverdertedexception-Elemente](./esentprimaryindexcorruptedexception-members.md)
+[EsentPrimaryIndexCorruptedException-Member](./esentprimaryindexcorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

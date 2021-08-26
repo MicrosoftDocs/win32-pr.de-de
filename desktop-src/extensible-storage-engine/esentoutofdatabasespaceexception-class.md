@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouesfdatabasespaceexception-Klasse'
-title: Esentouto fdatabasespaceexception-Klasse
+description: 'Weitere Informationen zu: EsentOutOfDatabaseSpaceException-Klasse'
+title: EsentOutOfDatabaseSpaceException-Klasse
 TOCTitle: EsentOutOfDatabaseSpaceException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentOutOfDatabaseSpaceException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutofdatabasespaceexception(v=EXCHG.10)
@@ -24,30 +24,30 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ece3a81fa0687299edba0857b15f4c0abc50e403
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a346e9da4a847c0a9a1c3bef5c23e4151b9ed6478613d05d4cd547e777a2bf4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947290"
 ---
-# <a name="esentoutofdatabasespaceexception-class"></a>Esentouto fdatabasespaceexception-Klasse
+# <a name="esentoutofdatabasespaceexception-class"></a>EsentOutOfDatabaseSpaceException-Klasse
 
-Basisklasse für JET_err. Ouesfdatabasespace-Ausnahmen.
+Basisklasse für JET_err. OutOfDatabaseSpace-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentoperationexception](./esentoperationexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentresourceexception](./esentresourceexception-class.md)  
-            [Microsoft. ISAM. ESENT. Interop. esentquotaexception](./esentquotaexception-class.md)  
-              Microsoft. ISAM. ESENT. Interop. esentouesfdatabasespaceexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentOperationException](./esentoperationexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentResourceException](./esentresourceexception-class.md)  
+            [Microsoft.Isam.Esent.Interop.EsentQuotaException](./esentquotaexception-class.md)  
+              Microsoft.Isam.Esent.Interop.EsentOutOfDatabaseSpaceException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,8 +71,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentouto fdatabasespaceexception-Member](./esentoutofdatabasespaceexception-members.md)
+[EsentOutOfDatabaseSpaceException-Member](./esentoutofdatabasespaceexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

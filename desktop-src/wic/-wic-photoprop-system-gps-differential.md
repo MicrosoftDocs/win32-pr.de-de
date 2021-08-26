@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. Differential-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.Differential-Eigenschaft.
 ms.assetid: 330d1f88-5f54-4e29-b57f-eb7112203e04
-title: System. GPS. differenzielle fotometadatenrichtlinie
+title: System.GPS.Differential Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4dc3f114683d324a067fe4ce4034e2de5cfc88da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 728df47fd8e6e9748b7208b79444ba8fa257fa49c92587df199441de941f4fdd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348578"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931800"
 ---
-# <a name="systemgpsdifferential-photo-metadata-policy"></a>System. GPS. differenzielle fotometadatenrichtlinie
+# <a name="systemgpsdifferential-photo-metadata-policy"></a>System.GPS.Differential Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. GPS. Differential](../properties/props-system-gps-differential.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.Differential-Eigenschaft.](../properties/props-system-gps-differential.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ -GPS- \_ differenziell
+PKEY \_ GPS \_ Differential
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI2
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
-VT \_ UI1, VT \_ UI2 und VT \_ UI4 werden alle akzeptiert.
+VT \_ UI1, VT \_ UI2 und VT \_ UI4 werden akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 30} | ushort      |
-| 2     | /XMP/EXIF: gpsdifferential | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=30} | ushort      |
+| 2     | /xmp/exif:GPSDifferential | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 30} | ushort      |
-| 2     | /XMP/EXIF: gpsdifferential | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=30} | ushort      |
+| 2     | /xmp/exif:GPSDifferential | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 30} |
-| 2     | /XMP/EXIF: gpsdifferential |
+| 1     | /app1/ifd/gps/{ushort=30} |
+| 2     | /xmp/exif:gpsdifferential |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 30}          | ushort      |
-| 2     | /IFD/XMP/EXIF: gpsdifferential | Unicode     |
+| 1     | /ifd/gps/{ushort=30}          | ushort      |
+| 2     | /ifd/xmp/exif:GPSDifferential | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 30}          | ushort      |
-| 2     | /IFD/XMP/EXIF: gpsdifferential | Unicode     |
+| 1     | /ifd/gps/{ushort=30}          | ushort      |
+| 2     | /ifd/xmp/exif:GPSDifferential | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /IFD/GPS/{ushort = 30}          |
-| 2     | /IFD/XMP/EXIF: gpsdifferential |
+| 1     | /ifd/gps/{ushort=30}          |
+| 2     | /ifd/xmp/exif:gpsdifferential |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. Differential](../properties/props-system-gps-differential.md)
+[System.GPS.Differential](../properties/props-system-gps-differential.md)
 </dt> </dl>
 
  

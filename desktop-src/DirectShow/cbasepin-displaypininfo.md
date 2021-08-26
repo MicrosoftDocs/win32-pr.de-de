@@ -1,7 +1,7 @@
 ---
-description: Die displaypininfo-Methode verfolgt während des Debuggens eine PIN-Verbindung.
+description: Die DisplayPinInfo-Methode verfolgt eine Pinverbindung während des Debuggens.
 ms.assetid: 3c1aa5ab-7f6b-4518-abf3-b5138f6267ee
-title: Cbasepin. displaypininfo-Methode (amfilter. h)
+title: CBasePin.DisplayPinInfo-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ea563ca07eaea6b6974a831726918866414a33b9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 98930ec48d3daa13d6ae463b38ce1ae62d745de9fae65915dcabcedf3cd673aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916470"
 ---
-# <a name="cbasepindisplaypininfo-method"></a>Cbasepin. displaypininfo-Methode
+# <a name="cbasepindisplaypininfo-method"></a>CBasePin.DisplayPinInfo-Methode
 
-Die- `DisplayPinInfo` Methode verfolgt während des Debuggens eine PIN-Verbindung.
+Die `DisplayPinInfo` -Methode verfolgt eine Stecknadelverbindung während des Debuggens.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void DisplayPinInfo(
 
 <dl> <dt>
 
-*preceivepin* 
+*pReceivePin* 
 </dt> <dd>
 
-Ein Zeiger auf die empfangende PIN.
+Zeiger auf die empfangende Stecknadel.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Ein Zeiger auf die empfangende PIN.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um einen Verbindungsversuch zu verfolgen. Bei Einzelhandels Builds führt diese Methode keine Aktion aus.
+In Debugbuilds ruft diese Methode die [**DbgLog-Funktion**](dbglog.md) auf, um einen Verbindungsversuch nachzuverfolgen. In Einzelhandelsbuilds führt diese Methode nichts aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ In Debugbuilds ruft diese Methode die [**dbglog**](dbglog.md) -Funktion auf, um 
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

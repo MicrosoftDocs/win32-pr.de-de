@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork bufferingcount (Eigenschaft)
-description: Die bufferingcount-Eigenschaft ruft die Häufigkeit ab, mit der die Pufferung während der Wiedergabe aufgetreten ist.
+title: IWMPNetwork bufferingCount-Eigenschaft
+description: Die bufferingCount-Eigenschaft ruft ab, wie oft die Pufferung während der Wiedergabe erfolgt ist.
 ms.assetid: 2e3a2914-fc38-4477-8c4c-15b4a2e424dc
 keywords:
-- bufferingcount-Eigenschaft, Windows-Media Player
-- bufferingcount-Eigenschaft, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, bufferingcount (Eigenschaft)
+- bufferingCount-Eigenschaft Windows Media Player
+- bufferingCount-Eigenschaft Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , bufferingCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4958892dd9784ee72b51adfedbbcdee81817b52
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 92b69169e950cf3794d613bfd1d79d4953ce8f8a8bb01efe9ff17d6fa5961071
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899970"
 ---
-# <a name="iwmpnetworkbufferingcount-property"></a>Iwmpnetwork:: bufferingcount (Eigenschaft)
+# <a name="iwmpnetworkbufferingcount-property"></a>IWMPNetwork::bufferingCount-Eigenschaft
 
-Die **bufferingcount** -Eigenschaft ruft die Häufigkeit ab, mit der die Pufferung während der Wiedergabe aufgetreten ist.
+Die **bufferingCount-Eigenschaft** ruft ab, wie oft die Pufferung während der Wiedergabe erfolgt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ Public ReadOnly Property bufferingCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Puffer Anzahl ist.
+Ein **System.Int32,** bei dem es sich um die Pufferanzahl handelt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf Null zurückgesetzt. Wenn die Wiedergabe angehalten wird, wird Sie nicht zurückgesetzt.
+Jedes Mal, wenn die Wiedergabe beendet und neu gestartet wird, wird diese Eigenschaft auf 0 (null) zurückgesetzt. Sie wird nicht zurückgesetzt, wenn die Wiedergabe angehalten wird.
 
-Die Pufferung gilt nur für Streaminginhalte. Diese Eigenschaft ruft nur während der Laufzeit gültige Informationen ab, wenn die URL für die Wiedergabe mithilfe der **AxWindowsMediaPlayer. URL** -Eigenschaft festgelegt wird.
+Die Pufferung gilt nur für Streaminginhalte. Diese Eigenschaft ruft gültige Informationen nur während der Laufzeit ab, wenn die URL für die Wiedergabe mithilfe der **AxWindowsMediaPlayer.URL-Eigenschaft** festgelegt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird *bufferingcount* verwendet, um anzuzeigen, wie oft Pufferung während der Wiedergabe auftritt. Die Informationen werden in einer Bezeichnung als Reaktion auf das Puffer Ereignis angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird *bufferingCount* verwendet, um die Anzahl der Pufferungen während der Wiedergabe anzuzeigen. Die Informationen werden als Reaktion auf das Pufferereignis in einer Bezeichnung angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -94,13 +94,13 @@ End Sub
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -110,10 +110,10 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. URL (VB und c#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
+[**AxWindowsMediaPlayer.URL (VB und C#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

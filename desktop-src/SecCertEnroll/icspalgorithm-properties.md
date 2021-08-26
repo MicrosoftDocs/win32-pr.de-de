@@ -1,29 +1,29 @@
 ---
-description: Die icspalgorithmus-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+description: Die ICspAlgorithm-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 74092DF2-DE32-4E3F-B984-A3BC4543E605
-title: Eigenschaften von icspalgorithmus
+title: ICspAlgorithm-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7f532c1f2b28ce010a7bbc9fdcad339be1516ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5174eb8a37bc8e5007955bdd5159e5bad7f6097a7007b9081bc2c5aeb13d6106
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363321"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960730"
 ---
-# <a name="icspalgorithm-properties"></a>Eigenschaften von icspalgorithmus
+# <a name="icspalgorithm-properties"></a>ICspAlgorithm-Eigenschaften
 
-Die [**icspalgorithmus**](/windows/desktop/api/CertEnroll/nn-certenroll-icspalgorithm) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**ICspAlgorithm-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icspalgorithm) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Defaultlength (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_defaultlength)
--   [**Incrementlength (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_incrementlength)
--   [**Longname (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_longname)
--   [**MaxLength (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_maxlength)
--   [**MinLength (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_minlength)
+-   [**DefaultLength-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_defaultlength)
+-   [**IncrementLength-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_incrementlength)
+-   [**LongName-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_longname)
+-   [**MaxLength-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_maxlength)
+-   [**MinLength-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_minlength)
 -   [**Name-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_name)
--   [**Operations (Eigenschaft)**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_operations)
+-   [**Operations-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_operations)
 -   [**Type-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_type)
 -   [**Gültige Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-icspalgorithm-get_valid)
 

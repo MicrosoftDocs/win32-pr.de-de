@@ -1,7 +1,7 @@
 ---
-description: Implementiert eine Zuweisung, die die imemzuordcator-Schnittstelle unterstützt.
+description: Implementiert eine Zuweisung, die die IMemAllocator-Schnittstelle unterstützt.
 ms.assetid: c40eccef-d915-4bf3-81b2-b20e000718fb
-title: Cmemzuordcator-Klasse (amfilter. h)
+title: CMemAllocator-Klasse (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,36 +16,36 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5adf390b7abf8fcbdb017ecde04bde76bf4bc001
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb94d5fae92d7494a4ac347591e9d571a7765d2be88072559fd74687eea87e97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915930"
 ---
-# <a name="cmemallocator-class"></a>Cmemzuordcator-Klasse
+# <a name="cmemallocator-class"></a>CMemAllocator-Klasse
 
-![cmemzuordcator-Klassenhierarchie](images/filter10.png)
+![cmemallocator-Klassenhierarchie](images/filter10.png)
 
-Implementiert eine Zuweisung, die die [**imemzuordcator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle unterstützt.
+Implementiert eine Zuweisung, die die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) unterstützt.
 
-Diese Klasse wird von [**cbasezucator**](cbaseallocator.md)abgeleitet. Weitere Informationen zu Zuordnungen finden Sie in der Dokumentation zu [**cbasezuweisung**](cbaseallocator.md).
+Diese Klasse wird von [**CBaseAllocator ableiten.**](cbaseallocator.md) Weitere Informationen zu Zuweisungen finden Sie in der Dokumentation zu [**CBaseAllocator.**](cbaseallocator.md)
 
 
 
-| Geschützte Member-Variablen                              | BESCHREIBUNG                                                              |
+| Geschützte Membervariablen                              | BESCHREIBUNG                                                              |
 |---------------------------------------------------------|--------------------------------------------------------------------------|
-| [**m \_ pbuffer**](cmemallocator-m-pbuffer.md)           | Zeiger auf den Speicherblock, der die Puffer enthält.                   |
+| [**m \_ pBuffer**](cmemallocator-m-pbuffer.md)           | Zeiger auf den Speicherblock, der die Puffer enthält.                   |
 | Geschützte Methoden                                       | BESCHREIBUNG                                                              |
-| [**Kostenlos**](cmemallocator-free.md)                      | Platzhalter Methode; wird während eines Decommit-Vorgangs aufgerufen.                  |
-| [**Kostenlos**](cmemallocator-reallyfree.md)          | Gibt den Arbeitsspeicher für die Puffer frei.                                     |
-| [**Zuordnungseinheits**](cmemallocator-alloc.md)                    | Belegt Speicher für die Puffer.                                        |
+| [**Kostenlos**](cmemallocator-free.md)                      | Platzhaltermethode; wird während eines Decommit-Vorgangs aufgerufen.                  |
+| [**ReallyFree**](cmemallocator-reallyfree.md)          | Gibt den Arbeitsspeicher für die Puffer frei.                                     |
+| [**Alloc**](cmemallocator-alloc.md)                    | Weist Arbeitsspeicher für die Puffer zu.                                        |
 | Öffentliche Methoden                                          | BESCHREIBUNG                                                              |
-| [**Cmemzuordcator**](cmemallocator-cmemallocator.md)    | Konstruktormethode.                                                      |
-| [**~ Cmemzuordcator**](cmemallocator--cmemallocator.md) | Dekonstruktormethode.                                                       |
-| [**CreateInstance**](cmemallocator-createinstance.md)  | Erstellt eine neue Instanz der **cmemzuordcator** -Klasse.                   |
-| Imemzuordcator-Methoden                                   | BESCHREIBUNG                                                              |
-| [**SetProperties**](cmemallocator-setproperties.md)    | Gibt die Anzahl der zuzuordnenden Puffer und die Größe der einzelnen Puffer an. |
+| [**CMemAllocator**](cmemallocator-cmemallocator.md)    | Konstruktormethode.                                                      |
+| [**~ CMemAllocator**](cmemallocator--cmemallocator.md) | Destruktormethode.                                                       |
+| [**CreateInstance**](cmemallocator-createinstance.md)  | Erstellt eine neue Instanz der **CMemAllocator-Klasse.**                   |
+| IMemAllocator-Methoden                                   | BESCHREIBUNG                                                              |
+| [**SetProperties**](cmemallocator-setproperties.md)    | Gibt die Anzahl der zu reservierenden Puffer und die Größe der einzelnen Puffer an. |
 
 
 
@@ -57,8 +57,8 @@ Diese Klasse wird von [**cbasezucator**](cbaseallocator.md)abgeleitet. Weitere I
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

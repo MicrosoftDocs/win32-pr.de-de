@@ -12,12 +12,12 @@ api_type:
 - DllExport
 api_location:
 - EndpointDlp.dll
-ms.openlocfilehash: 06c2b2527833b498ab2b7f5f3fa0f5a662fe67d7
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: f8818e55482420c6b1fd307392138b99d391f4df9b703477ce4c3e950b36f4b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962780"
 ---
 # <a name="dlpnotifyclosedocument-function"></a>DlpNotifyCloseDocument-Funktion
 
@@ -39,7 +39,7 @@ void WINAPI DlpNotifyCloseDocument(_In_ const PDLP_DOCUMENT_INFO DocumentInfo);
 *DocumentInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger [](endpointdlp-dlp_document_info.md) auf eine PDLP_DOCUMENT_INFO-Struktur, die Informationen über das zu öffnende Dokument enthält.
+Ein Zeiger auf eine [PDLP_DOCUMENT_INFO](endpointdlp-dlp_document_info.md) Struktur, die Informationen über das zu öffnende Dokument enthält.
 
 </dd> </dl>
 

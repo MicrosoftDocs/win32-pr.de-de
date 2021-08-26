@@ -1,27 +1,27 @@
 ---
-description: Festlegen des Medientyps "Gruppe"
+description: Festlegen des Gruppenmedientyps
 ms.assetid: 05f0fdcb-74a4-441e-ac3c-d3d2c1dfee80
-title: Festlegen des Medientyps "Gruppe"
+title: Festlegen des Gruppenmedientyps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 365bd2171100a9d4bcfc48d70dbeb94d8a6639dd
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: c758e089a4f1240debb14c8159d039380b3473991860fef54470c12c1c00b1e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106373420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928180"
 ---
-# <a name="setting-the-group-media-type"></a>Festlegen des Medientyps "Gruppe"
+# <a name="setting-the-group-media-type"></a>Festlegen des Gruppenmedientyps
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Alle Gruppen müssen einen unkomprimierten Medientyp definieren, entweder Audiodaten oder Videos. Der unkomprimierte Medientyp ist das Format, das Viewer während der Wiedergabe sehen oder hören. In der Regel wird die endgültige Ausgabe in einem komprimierten Format vorliegen. Weitere Informationen finden Sie unter [Rendern eines Projekts](rendering-a-project.md).
+Alle Gruppen müssen einen nicht komprimierten Medientyp definieren, entweder Audio oder Video. Der nicht komprimierte Medientyp ist das Format, das der Betrachter während der Wiedergabe sehen oder hören kann. In der Regel wird die endgültige Ausgabe in einem komprimierten Format ausgegeben. Weitere Informationen finden Sie unter [Rendern eines Project](rendering-a-project.md).
 
-Um das unkomprimierte Format festzulegen, erstellen Sie eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, und füllen Sie Sie mit dem entsprechenden Haupttyp, Untertyp und Format Header. Weisen Sie für Video eine [**videinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur für den Format Block zu, und legen Sie die Breite, Höhe und Bittiefe fest. Weisen Sie für Audiodaten eine [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Struktur für den Format Block zu, und legen Sie die Samplingrate, die Bittiefe und die Anzahl der Kanäle fest. Wenn Sie nur den Haupttyp festlegen, stellt der von dem geeignete Standardwerte für die anderen Werte bereit. In der Praxis sollten Sie die Werte explizit festlegen, um die Ausgabe zu steuern.
+Um das nicht komprimierte Format festzulegen, erstellen Sie eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) und füllen Sie sie mit dem entsprechenden Haupttyp, Untertyp und Formatheader aus. Ordnen Sie für Video eine [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) für den Formatblock zu, und legen Sie Breite, Höhe und Bittiefe fest. Ordnen Sie für Audio eine [**WAVEFORMATEX-Struktur**](/previous-versions/dd757713(v=vs.85)) für den Formatblock zu, und legen Sie die Abtastrate, Bittiefe und Anzahl von Kanälen fest. Wenn Sie nur den Haupttyp festlegen, stellt DES sinnvolle Standardwerte für die anderen Werte bereit. In der Praxis sollten Sie die Werte explizit festlegen, um die Ausgabe zu steuern.
 
-Nachdem Sie die Medientyp Struktur initialisiert haben, können Sie die [**iamtimelinegroup:: setmediatype**](iamtimelinegroup-setmediatype.md) -Methode aufrufen, um den Medientyp für die Gruppe festzulegen.
+Nachdem Sie die Medientypstruktur initialisiert haben, rufen Sie die [**IAMTimelineGroup::SetMediaType-Methode**](iamtimelinegroup-setmediatype.md) auf, um den Medientyp für die Gruppe festzulegen.
 
-Im folgenden Beispiel wird ein 16-Bit-RGB-Video mit 320 Pixel breit und 240 Pixel hoch angegeben:
+Im folgenden Beispiel wird ein 16-Bit-RGB-Video mit einer Breite von 320 x 240 Pixeln angegeben:
 
 
 ```C++
@@ -62,7 +62,7 @@ CoTaskMemFree(mtGroup.pbFormat);
 
 
 
-Im nächsten Beispiel wird eine Audiogruppe angegeben, indem der Gruppen Medientyp auf einen 16-Bit-Stereo, 44100 Samples pro Sekunde festgelegt wird:
+Im nächsten Beispiel wird eine Audiogruppe angegeben, indem der Medientyp der Gruppe auf 16-Bit-Stereo und 44.100 Stichproben pro Sekunde festgelegt wird:
 
 
 ```C++
@@ -97,7 +97,7 @@ CoTaskMemFree(mt.pbFormat);
 
 
 
-Sie können auch die [**cmediatype**](cmediatype.md) -Klasse in den [DirectShow-Basisklassen](directshow-base-classes.md) zum Verwalten von Medientypen verwenden. Sie enthält einige nützliche Hilfsmethoden und gibt den Format Block automatisch frei.
+Sie können auch die [**CMediaType-Klasse**](cmediatype.md) in den [DirectShow-Basisklassen](directshow-base-classes.md) verwenden, um Medientypen zu verwalten. Sie enthält einige nützliche Hilfsmethoden und gibt den Formatblock automatisch frei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,19 +1,19 @@
 ---
-description: Wird an eine Anwendung gesendet, um Befehle und Anforderungs Informationen bereitzustellen. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird an eine Anwendung gesendet, um Befehle bereitzustellen und Informationen anzufordern. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
 ms.assetid: c5e9f256-eed2-46cb-bb33-0e640a975f1f
-title: WM_IME_REQUEST Meldung (Winuser. h)
+title: WM_IME_REQUEST Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d0cea120d088fe1423b1d7dcb822307886675b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1d73f1f920efb2908104304fcbc08fd19d648e52fdb737f12027b47436531eb4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927630"
 ---
 # <a name="wm_ime_request-message"></a>WM_IME_REQUEST Meldung
 
-Wird an eine Anwendung gesendet, um Befehle und Anforderungs Informationen bereitzustellen. Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird an eine Anwendung gesendet, um Befehle bereitzustellen und Informationen anzufordern. Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,10 +31,10 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für fenster.
 
 </dd> <dt>
 
@@ -58,13 +58,13 @@ Befehl. Dieser Parameter kann einen der folgenden Werte aufweisen:
 *lParam* 
 </dt> <dd>
 
-Befehls spezifische Daten. Weitere Informationen finden Sie in der Beschreibung der einzelnen Befehle.
+Befehlsspezifische Daten. Weitere Informationen finden Sie in der Beschreibung der einzelnen Befehle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Befehls spezifischen Wert zurück.
+Gibt einen befehlsspezifischen Wert zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Gibt einen Befehls spezifischen Wert zurück.
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen); </dt> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h);</dt> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -85,7 +85,7 @@ Gibt einen Befehls spezifischen Wert zurück.
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Eingabemethoden-Manager-Nachrichten](input-method-manager-messages.md)
 </dt> <dt>
 
 [IMR_CANDIDATEWINDOW](imr-candidatewindow.md)

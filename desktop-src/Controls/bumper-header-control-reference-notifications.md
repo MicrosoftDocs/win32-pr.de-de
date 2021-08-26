@@ -1,41 +1,41 @@
 ---
-title: Header Steuerelement-Benachrichtigungen
-description: Header Steuerelement-Benachrichtigungen
+title: Header-Steuerelementbenachrichtigungen
+description: Header-Steuerelementbenachrichtigungen
 ms.assetid: 29b91766-fed5-43c3-8341-be3ae14f6777
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b331d5287a4d6905777c220a028f5fda1db111ad
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 3facdaf976761be1b80824a7ec3743d05db4d6885d5fe4ddc2709ca9fa469538
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916730"
 ---
-# <a name="header-control-notifications"></a>Header Steuerelement-Benachrichtigungen
+# <a name="header-control-notifications"></a>Header-Steuerelementbenachrichtigungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Hdn- \_ BeginDrag](hdn-begindrag.md)
--   [Hdn \_ beginfilteredit](hdn-beginfilteredit.md)
--   [Hdn \_ BeginTrack](hdn-begintrack.md)
--   [Hdn \_ dividerdblclick](hdn-dividerdblclick.md)
--   [Hdn- \_ Dropdown](hdn-dropdown.md)
--   [Hdn- \_ EndDrag](hdn-enddrag.md)
--   [Hdn- \_ endfilteredit](hdn-endfilteredit.md)
--   [Hdn \_ filterbtnclick](hdn-filterbtnclick.md)
--   [Hdn- \_ Filter Änderung](hdn-filterchange.md)
--   [Hdn \_ getdispinfo](hdn-getdispinfo.md)
--   [Hdn- \_ ItemChanged](hdn-itemchanged.md)
--   [Hdn- \_ ItemChanging](hdn-itemchanging.md)
--   [Hdn- \_ itemClick](hdn-itemclick.md)
--   [Hdn \_ itemdblclick](hdn-itemdblclick.md)
--   [Hdn \_ itemkeydown](hdn-itemkeydown.md)
--   [Hdn \_ itemstatuei\click](hdn-itemstateiconclick.md)
--   [\_über Fluss Klick für Hdn](hdn-overflowclick.md)
--   [Hdn- \_ Track](hdn-track.md)
--   [NM \_ customdraw (Header)](nm-customdraw-header.md)
--   [NM \_ rclick (Header)](nm-rclick-header.md)
--   [NM \_ releasedcapture (Header)](nm-releasedcapture-header-.md)
+-   [HDN \_ BEGINDRAG](hdn-begindrag.md)
+-   [HDN \_ BEGINFILTEREDIT](hdn-beginfilteredit.md)
+-   [HDN \_ BEGINTRACK](hdn-begintrack.md)
+-   [HDN \_ DIVIDERDBLCLICK](hdn-dividerdblclick.md)
+-   [\_HDN-DROPDOWNliste](hdn-dropdown.md)
+-   [HDN \_ ENDDRAG](hdn-enddrag.md)
+-   [HDN \_ ENDFILTEREDIT](hdn-endfilteredit.md)
+-   [\_HDN-FILTERBTNCLICK](hdn-filterbtnclick.md)
+-   [HDN \_ FILTERCHANGE](hdn-filterchange.md)
+-   [HDN \_ GETDISPINFO](hdn-getdispinfo.md)
+-   [HDN \_ ITEMCHANGED](hdn-itemchanged.md)
+-   [HDN \_ ITEMCHANGING](hdn-itemchanging.md)
+-   [HDN \_ ITEMCLICK](hdn-itemclick.md)
+-   [HDN \_ ITEMDBLCLICK](hdn-itemdblclick.md)
+-   [HDN \_ ITEMKEYDOWN](hdn-itemkeydown.md)
+-   [HDN \_ ITEMSTATEICONCLICK](hdn-itemstateiconclick.md)
+-   [HDN \_ OVERFLOWCLICK](hdn-overflowclick.md)
+-   [HDN \_ TRACK](hdn-track.md)
+-   [NM \_ CUSTOMDRAW (Header)](nm-customdraw-header.md)
+-   [NM \_ RCLICK (Header)](nm-rclick-header.md)
+-   [NM \_ RELEASEDCAPTURE (Header)](nm-releasedcapture-header-.md)
 
  
 

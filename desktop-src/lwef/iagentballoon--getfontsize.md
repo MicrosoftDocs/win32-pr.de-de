@@ -1,19 +1,19 @@
 ---
-title: Iagentballoon GetFontSize
-description: Iagentballoon GetFontSize
+title: IAgentBalloon GetFontSize
+description: IAgentBalloon GetFontSize
 ms.assetid: 4d342ee9-abb4-431b-bd28-f62ab76705ec
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d14b1a921f1f5c9927f58ab9e561569ba3bc98fa
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ccc392bd12fccfb01b8aee41a5a06ed50b388ac8223e622d75218c840f706c91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962490"
 ---
-# <a name="iagentballoongetfontsize"></a>Iagentballoon:: GetFontSize
+# <a name="iagentballoongetfontsize"></a>IAgentBalloon::GetFontSize
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetFontSize(
@@ -21,24 +21,24 @@ HRESULT GetFontSize(
 );                    // for font displayed in word balloon 
 ```
 
-Ruft den Wert für die Größe der Schriftart ab, die in einer Word-Sprechblase angezeigt wird.
+Ruft den Wert für die Größe der Schriftart ab, die in einem Wortsprechblasenformat angezeigt wird.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="plFontSize"></span><span id="plfontsize"></span><span id="PLFONTSIZE"></span>*plfontsize*
+<span id="plFontSize"></span><span id="plfontsize"></span><span id="PLFONTSIZE"></span>*plFontSize*
 </dt> <dd>
 
-Die Adresse eines Werts, der die Größe der Schriftart erhält.
+Die Adresse eines Werts, der den Schriftgrad empfängt.
 
 </dd> </dl>
 
-Der in einer Wort Sprechblase verwendete Standardschrift Grad wird im Microsoft-Agent-Zeichen-Editor definiert. Sie können es mit [**iagentballoon:: SetFontSize**](https://www.bing.com/search?q=**IAgentBalloon::SetFontSize**)ändern. Der Benutzer kann jedoch die Schriftart Größen Einstellungen für alle Zeichen überschreiben, indem er das Eigenschaften Blatt "Microsoft-Agent" verwendet.
+Der in einem Sprechblasenzeichen verwendete Standardschriftgrad wird im Microsoft Agent-Zeichen-Editor definiert. Sie können es mit [**IAgentBalloon::SetFontSize ändern.**](https://www.bing.com/search?q=**IAgentBalloon::SetFontSize**) Der Benutzer kann jedoch die Schriftgradeinstellungen für alle Zeichen überschreiben, indem er das Microsoft Agent-Eigenschaftenblatt verwendet.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Command. largeimages (Eigenschaft)
-description: Stellt einen Container von Bildern dar. in diesem Fall große Bilder.
+title: Command.LargeImages-Eigenschaft
+description: Stellt einen Container von Images dar. in diesem Fall große Bilder.
 ms.assetid: 9fcd3694-7847-43e2-9877-47daf47aae9a
 keywords:
-- Command. largeimages-Eigenschaften Fenster (Menüband)
+- Command.LargeImages-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf71557506d4b9cced21069473d1a6db9b208b8c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 66214eb05910296b2c03a749d88134bef68f86badc2ffd7f7b69d0ba6adfdd5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931615"
 ---
-# <a name="commandlargeimages-property"></a>Command. largeimages (Eigenschaft)
+# <a name="commandlargeimages-property"></a>Command.LargeImages-Eigenschaft
 
-Stellt einen Container von Bildern dar. in diesem Fall große Bilder.
+Stellt einen Container von Images dar. in diesem Fall große Bilder.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,9 +39,9 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                 | BESCHREIBUNG                                        |
+| Element                                                 | Beschreibung                                        |
 |---------------------------------------------------------|----------------------------------------------------|
-| [**Image**](windowsribbon-element-image.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**Image**](windowsribbon-element-image.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,23 +51,23 @@ Es gibt keine Attribute.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
 
-Bild Ressourcen müssen dem standardmäßigen BMP-Grafikformat (Bitmap) entsprechen, das in Windows verwendet wird.
+Bildressourcen müssen dem in Windows verwendeten BMP-Standardgrafikformat (Bitmap) entsprechen.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für das [**SplitButton**](windowsribbon-element-splitbutton.md) -Element mit einem [**MenuGroup**](windowsribbon-element-menugroup.md) -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für [**SplitButton**](windowsribbon-element-splitbutton.md) mit einem [**MenuGroup-Element**](windowsribbon-element-menugroup.md) veranschaulicht.
 
-In diesem Code Abschnitt werden die Befehls Deklarationen [**SplitButton**](windowsribbon-element-splitbutton.md) und [**MenuGroup**](windowsribbon-element-menugroup.md) mit einer großen und kleinen Bildressource angezeigt. Eine zugeordnete [**Gruppe**](windowsribbon-element-group.md) , die als übergeordneter Container für das **SplitButton** -Element fungiert, wird ebenfalls deklariert.
+Dieser Codeabschnitt zeigt die [**Deklarationen SplitButton**](windowsribbon-element-splitbutton.md) und [**MenuGroup**](windowsribbon-element-menugroup.md) Command mit einer großen und einer kleinen Imageressource. Eine zugeordnete [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **SplitButton-Element** fungiert, wird ebenfalls deklariert.
 
 
 ```XML
@@ -117,19 +117,19 @@ In diesem Code Abschnitt werden die Befehls Deklarationen [**SplitButton**](wind
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> <dt>
 
-[UI \_ pkey \_ largeimage](windowsribbon-reference-properties-uipkey-largeimage.md)
+[UI \_ PKEY \_ LargeImage](windowsribbon-reference-properties-uipkey-largeimage.md)
 </dt> </dl>
 
  

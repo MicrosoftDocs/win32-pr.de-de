@@ -4,12 +4,12 @@ ms.assetid: dd24166c-d5e2-420e-8a8c-e1a25728ab2f
 title: JobDuplexAllDocumentsContiguously
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20a8911a4c62644bfc073a2a9c1dcfd67dad536a
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: ffd5dbb115cf6a8e1775f2d8e74195ff3c1a228a773b94a60d234d0f1c4ff4ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948660"
 ---
 # <a name="jobduplexalldocumentscontiguously"></a>JobDuplexAllDocumentsContiguously
 
@@ -27,7 +27,7 @@ Beschreibt die Duplexmerkmale der Ausgabe. Das Duplexfeature ermöglicht das Dru
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 
@@ -63,7 +63,7 @@ In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in d
 
 | Name                               | Datentyp         | Einheit                  | Unterstützte Werte                                                                                                                                                             | Zusammenfassung                                                                                                                                |
 |------------------------------------|-------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
-| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name gemäß der Definition von https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname . Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                     |
+| \_Optionname\_<br/>          | Zeichenfolge<br/> | Buchstaben<br/> | Gültiger vollqualifizierter Name, wie durch https://www.w3.org/TR/1999/REC-xml-names-19990114/\#dt-qname definiert. Wenn kein Namespace angegeben wird, wird der Standardnamespace angenommen.<br/> | Der Name der Option.<br/>                                                                                                     |
 | \_IdentityOptionValue\_<br/> | Zeichenfolge<br/> | –<br/>        | TRUE, FALSE<br/>                                                                                                                                                      | Definiert eine Option, durch die diese Funktion deaktiviert wird, wenn sie ausgewählt wird.<br/>                                                           |
 | \_DuplexModeValue\_<br/>     | Zeichenfolge<br/> | –<br/>        | Automatisch, Manuell.<br/>                                                                                                                                                | Definiert den Duplexmodus. Automatischer Duplexvorgang wird von Hardware ausgeführt. Das manuelle Duplexing wird von Software und dem Benutzer durchgeführt.<br/> |
 

@@ -1,9 +1,9 @@
 ---
-title: ID2D1Properties getsubproperties-Methoden
-description: Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab.
+title: ID2D1Properties GetSubProperties-Methoden
+description: Ruft die Untereigenschaften der bereitgestellten Eigenschaft nach Index ab.
 ms.assetid: AC1DA115-F6D4-47AB-8440-C4BD21E64A86
 keywords:
-- Methoden der getsubproperties-Überladungs Methoden Direct2D
+- Methoden der GetSubProperties-Überladungsmethoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: a6fbdce8aebf33e11952eb5553236b32c62a701a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5b33a6ae7df0e1455c5dcb453c47c55c850390396699215368a1f9ed03ffe35b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917420"
 ---
-# <a name="id2d1propertiesgetsubproperties-methods"></a>ID2D1Properties:: getsubproperties-Methoden
+# <a name="id2d1propertiesgetsubproperties-methods"></a>ID2D1Properties::GetSubProperties-Methoden
 
-Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab.
+Ruft die Untereigenschaften der bereitgestellten Eigenschaft nach Index ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab
 
 | Methode                                                                                    | BESCHREIBUNG                                                                                        |
 |:------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| [**Getsubproperties (U, ID2D1Properties \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getsubproperties(u_id2d1properties))     | Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab. Dies ist eine Vorlagen Überladung.<br/> |
-| [**Getsubproperties (UInt32, ID2D1Properties \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getsubproperties(uint32_id2d1properties)) | Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab.<br/>                              |
+| [**GetSubProperties(U, ID2D1Properties \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getsubproperties(u_id2d1properties))     | Ruft die Untereigenschaften der bereitgestellten Eigenschaft nach Index ab. Dies ist eine Vorlagenüberladung.<br/> |
+| [**GetSubProperties(UINT32, ID2D1Properties \* \* )**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getsubproperties(uint32_id2d1properties)) | Ruft die Untereigenschaften der bereitgestellten Eigenschaft nach Index ab.<br/>                              |
 
 
 
@@ -38,7 +38,7 @@ Ruft die untergeordneten Eigenschaften der angegebenen Eigenschaft nach Index ab
 
 <dl> <dt>
 
-[**ID2D1Properties**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1properties)
+[**ID2D1Eigenschaften**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1properties)
 </dt> </dl>
 
  

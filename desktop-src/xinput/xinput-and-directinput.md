@@ -1,56 +1,56 @@
 ---
 title: XInput und DirectInput
-description: XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für die Windows.
+description: XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für Windows empfangen können.
 ms.assetid: 0f29a47b-24ed-c0fa-e9e9-8a061619845c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 58339616f1e9e3a43529b6853bfc193d359ef11e
-ms.sourcegitcommit: b3839bea8d55c981d53cb8802d666bf49093b428
+ms.openlocfilehash: b01484e7c1419dea097ddf440d82a92edb527327f8696afa5f5864fb1b12453b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114373191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119926220"
 ---
 # <a name="xinput-and-directinput"></a>XInput und DirectInput
 
-XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für die Windows. In diesem Dokument werden die Unterschiede zwischen XInput- und [DirectInput-Implementierungen](/previous-versions/windows/desktop/ee416842(v=vs.85)) des Xbox-Controllers beschrieben und wie Sie XInput-Geräte und ältere DirectInput-Geräte gleichzeitig unterstützen können.
+XInput ist eine API, mit der Anwendungen Eingaben vom Xbox Controller für Windows empfangen können. In diesem Dokument werden die Unterschiede zwischen XInput- und [DirectInput-Implementierungen](/previous-versions/windows/desktop/ee416842(v=vs.85)) des Xbox-Controllers und die Gleichzeitige Unterstützung von XInput-Geräten und älteren DirectInput-Geräten beschrieben.
 
 > [!Note]  
-> Die Verwendung von [Legacy-DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) wird nicht empfohlen, und DirectInput ist für Windows Store verfügbar.
+> Die Verwendung von [Legacy-DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) wird nicht empfohlen, und DirectInput ist nicht für Windows Store-Apps verfügbar.
 
 ## <a name="the-new-standard-xinput"></a>Der neue Standard: XInput
 
-XInput ist jetzt für die Spieleentwicklung verfügbar. Dies ist der neue Eingabestandard für xbox und Windows. Die APIs sind über das DirectX SDK verfügbar, und der Treiber ist über das Windows verfügbar.
+XInput ist jetzt für die Spieleentwicklung verfügbar. Dies ist der neue Eingabestandard für xbox und Windows. Die APIs sind über das DirectX SDK und der Treiber über Windows Update verfügbar.
 
-Die Verwendung von XInput gegenüber [DirectInput hat mehrere Vorteile:](/previous-versions/windows/desktop/ee416842(v=vs.85))
+Die Verwendung von XInput gegenüber [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85))bietet mehrere Vorteile:
 
 -   XInput ist einfacher zu verwenden und erfordert weniger Setup als [DirectInput.](/previous-versions/windows/desktop/ee416842(v=vs.85))
--   Bei der Xbox- Windows-Programmierung werden die gleichen Sätze von Kern-APIs verwendet, sodass die Programmierung die plattformübergreifende Übersetzung erheblich vereinfacht.
--   Es wird eine große installierte Basis von Xbox-Controllern geben.
--   XInput-Geräte (d. h. Xbox-Controller) verfügen nur über Vibrationsfunktionen, wenn XInput-APIs verwendet werden.
--   Zukünftige Controller, die für die Xbox-Konsole veröffentlicht werden (d. h. Rädchen), funktionieren auch auf Windows
+-   Sowohl die Xbox- als auch die Windows-Programmierung verwenden die gleichen Kern-APIs, sodass die Plattformübergreifende Programmierung viel einfacher übersetzt werden kann.
+-   Es wird eine große installierte Basis von Xbox-Controllern vorhanden sein.
+-   XInput-Geräte (also xbox-Controller) verfügen nur bei Verwendung von XInput-APIs über Vibrationsfunktionen.
+-   Zukünftige Controller, die für die Xbox-Konsole veröffentlicht werden (d.b. Reifräder), funktionieren auch auf Windows
 
 ### <a name="using-the-xbox-controller-with-directinput"></a>Verwenden des Xbox-Controllers mit DirectInput
 
-Der Xbox Controller wird ordnungsgemäß auf [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85))aufzählt und kann mit den DirectInputAPIs verwendet werden. Einige von XInput bereitgestellte Funktionen fehlen jedoch in der DirectInput-Implementierung:
+Der Xbox Controller wird ordnungsgemäß in [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85))aufgeführt und kann mit den DirectInputAPIs verwendet werden. Einige von XInput bereitgestellte Funktionen fehlen jedoch in der DirectInput-Implementierung:
 
--   Die linken und rechten Triggerschaltflächen fungieren als einzelne Schaltfläche, nicht unabhängig voneinander.
--   Die Vibrationseffekte sind nicht verfügbar.
--   Abfragen für Headsetgeräte sind nicht verfügbar.
+-   Die linken und rechten Triggerschaltflächen fungieren als einzelne Schaltfläche und nicht unabhängig voneinander.
+-   Die Schwingungseffekte sind nicht verfügbar.
+-   Abfragen von Headsetgeräten sind nicht verfügbar.
 
-Die Kombination der linken und rechten Trigger in [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) ist standardmäßig. Spiele gehen immer davon aus, dass DirectInput-Geräteachsen zentriert sind, wenn keine Benutzerinteraktion mit dem Gerät besteht. Der Xbox-Controller wurde jedoch so entworfen, dass er den Mindestwert registriert, nicht den Mittelpunkt, wenn die Trigger nicht gehalten werden. Bei älteren Spielen wird daher eine Benutzerinteraktion angenommen.
+Die Kombination der linken und rechten Trigger in [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) ist entwurfshalber. Spiele haben immer davon ausgegangen, dass DirectInput-Geräteachsen zentriert sind, wenn keine Benutzerinteraktion mit dem Gerät erfolgt. Der Xbox-Controller wurde jedoch so konzipiert, dass er den Mindestwert registriert, nicht den Mittleren Wert, wenn die Trigger nicht gehalten werden. Bei älteren Spielen wird daher eine Benutzerinteraktion vorausgesetzt.
 
-Die Lösung war das Kombinieren der Trigger, das Festlegen eines Triggers auf eine positive und der andere auf eine negative Richtung, sodass keine Benutzerinteraktion darauf hindeuten [kann, dass DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) das "Steuerelement" in der Mitte befindet.
+Die Lösung bestand darin, die Trigger zu kombinieren und einen Trigger auf eine positive Richtung und den anderen auf eine negative Richtung festzulegen, sodass keine Benutzerinteraktion auf [DirectInput](/previous-versions/windows/desktop/ee416842(v=vs.85)) des "Steuerelements" hindeutet, das sich im Mittelpunkt befindet.
 
 Um die Triggerwerte separat zu testen, müssen Sie XInput verwenden.
 
 ## <a name="xinput-and-directinput-side-by-side"></a>XInput und DirectInput nebeneinander
 
-Durch die ausschließliche Unterstützung von XInput funktioniert Ihr Spiel nicht mit [älteren DirectInput-Geräten.](/previous-versions/windows/desktop/ee416842(v=vs.85)) XInput erkennt diese Geräte nicht.
+Wenn Sie nur XInput unterstützen, funktioniert Ihr Spiel nicht mit älteren [DirectInput-Geräten.](/previous-versions/windows/desktop/ee416842(v=vs.85)) XInput erkennt diese Geräte nicht.
 
-Wenn Ihr Spiel ältere [DirectInput-Geräte](/previous-versions/windows/desktop/ee416842(v=vs.85)) unterstützen soll, können Sie DirectInput und XInput nebeneinander verwenden. Beim Aufzählen Ihrer DirectInput-Geräte werden alle DirectInput-Geräte ordnungsgemäß aufzählt. Alle XInput-Geräte werden sowohl als XInput- als auch als DirectInput-Geräte gezeigt, sollten aber nicht über DirectInput verarbeitet werden. Sie müssen ermitteln, welche Ihrer DirectInput-Geräte Legacygeräte und welche XInput-Geräte sind, und sie aus der Enumeration der DirectInput-Geräte entfernen.
+Wenn Sie möchten, dass Ihr Spiel ältere [DirectInput-Geräte](/previous-versions/windows/desktop/ee416842(v=vs.85)) unterstützt, können Sie DirectInput und XInput nebeneinander verwenden. Wenn Sie Ihre DirectInput-Geräte aufzählen, werden alle DirectInput-Geräte ordnungsgemäß aufzählen. Alle XInput-Geräte werden sowohl als XInput- als auch als DirectInput-Geräte angezeigt, sollten jedoch nicht über DirectInput verarbeitet werden. Sie müssen bestimmen, welche Ihrer DirectInput-Geräte Legacygeräte und welche XInput-Geräte sind, und sie aus der Enumeration von DirectInput-Geräten entfernen.
 
-Fügen Sie hierzu diesen Code in den DirectInput-Enumerationsrückruf ein:
+Fügen Sie hierzu diesen Code in Ihren DirectInput-Enumerationsrückruf ein:
 
 ```cpp
 #include <wbemidl.h>
@@ -199,7 +199,7 @@ BOOL CALLBACK EnumJoysticksCallback( const DIDEVICEINSTANCE* pdidInstance,
 }
 ```
 
-> Eine etwas verbesserte Version dieses Codes finden Sie im älteren [DirectInput-Beispiel FürSt.](https://github.com/walbourn/directx-sdk-samples/tree/master/DirectInput/Joystick)
+> Eine etwas verbesserte Version dieses Codes befindet sich im älteren [DirectInput-Beispiel Für Die Ausgabe.](https://github.com/walbourn/directx-sdk-samples/tree/master/DirectInput/Joystick)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

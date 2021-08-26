@@ -1,7 +1,7 @@
 ---
-description: Die Methode "schuldupdate" bestimmt, ob eine neue Palette erstellt werden muss.
+description: Die ShouldUpdate-Methode bestimmt, ob eine neue Palette erstellt werden muss.
 ms.assetid: 50886277-189b-4102-ade9-0366f64fdbcb
-title: Cimagepalette. Schulter Dupdate-Methode (winutil. h)
+title: CImagePalette.ShouldUpdate-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f8cf27548487ad0338f0c4773c66df8f7d03c2f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c7897e14aec690ec67451fe868b5352e99c9bd513c8c182a47556fe075cffb2a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916030"
 ---
-# <a name="cimagepaletteshouldupdate-method"></a>Cimagepalette. schuldupdate-Methode
+# <a name="cimagepaletteshouldupdate-method"></a>CImagePalette.ShouldUpdate-Methode
 
-Die- `ShouldUpdate` Methode bestimmt, ob eine neue Palette erstellt werden muss.
+Die `ShouldUpdate` -Methode bestimmt, ob eine neue Palette erstellt werden muss.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ BOOL ShouldUpdate(
 
 <dl> <dt>
 
-*pnetwinfo* 
+*pNewInfo* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur, die die neue Farbtabelle enthält.
+Zeiger auf eine [**VIDEOINFOHEADER-Struktur,**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) die die neue Farbtabelle enthält.
 
 </dd> <dt>
 
-*poldinfo* 
+*pOldInfo* 
 </dt> <dd>
 
-Zeiger auf eine **videoinfoheader** -Struktur, die die alte Farbtabelle enthält. Dieser Parameter kann **NULL** sein.
+Zeiger auf eine **VIDEOINFOHEADER-Struktur,** die die alte Farbtabelle enthält. Dieser Parameter kann **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Palette aktualisiert werden muss, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die Palette aktualisiert werden muss, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
--   Wenn keine **videoinfoheader** -Struktur eine Farbtabelle enthält, gibt die Methode **false** zurück.
--   Wenn nur eine Struktur eine Farbtabelle enthält oder *poldinfo* **null** ist, gibt die Methode **true** zurück.
--   Wenn beide Strukturen Farbtabellen enthalten und die Farbeinträge Stimmen, gibt die Methode **false** zurück.
--   Wenn beide Strukturen Farbtabellen enthalten, die Farbeinträge jedoch nicht stimmen, gibt die Methode **true** zurück.
+-   Wenn keine **der VIDEOINFOHEADER-Strukturen** eine Farbtabelle enthält, gibt die Methode **FALSE zurück.**
+-   Wenn nur eine Struktur eine Farbtabelle enthält oder *wenn pOldInfo* **NULL** ist, gibt die Methode **TRUE zurück.**
+-   Wenn beide Strukturen Farbtabellen enthalten und die Farbeinträge übereinstimmen, gibt die Methode **FALSE zurück.**
+-   Wenn beide Strukturen Farbtabellen enthalten, die Farbeinträge jedoch nicht übereinstimmen, gibt die Methode **TRUE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Gibt **true** zurück, wenn die Palette aktualisiert werden muss, andernfalls **
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Gibt **true** zurück, wenn die Palette aktualisiert werden muss, andernfalls **
 
 <dl> <dt>
 
-[**Cimagepalette-Klasse**](cimagepalette.md)
+[**CImagePalette-Klasse**](cimagepalette.md)
 </dt> </dl>
 
  

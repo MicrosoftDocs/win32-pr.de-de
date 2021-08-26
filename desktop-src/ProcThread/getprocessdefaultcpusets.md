@@ -1,7 +1,7 @@
 ---
-description: Ruft die Liste der CPU-Sätze im standardmäßigen Prozess Satz ab, der von setprocessdefaultcpusets festgelegt wurde. Wenn für einen bestimmten Prozess keine Standard-CPU-Sätze festgelegt sind, wird der Wert für "Requirements" auf 0 festgelegt, und die Funktion ist erfolgreich.
+description: Ruft die Liste der CPU-Sätze im Prozessstandardsatz ab, der von SetProcessDefaultCpuSets festgelegt wurde. Wenn für einen bestimmten Prozess keine CPU-Standardsätze festgelegt sind, wird RequiredIdCount auf 0 festgelegt, und die Funktion wird erfolgreich ausgeführt.
 ms.assetid: 85DC5331-9EC0-4603-94FD-B49E725301B1
-title: Getprocessdefaultcpusets-Funktion (processthreadapi. h)
+title: GetProcessDefaultCpuSets-Funktion (Processthreadapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_location:
 - Kernel32.dll
 - API-MS-Win-Core-ProcessThreads-L1-1-3.dll
 - KernelBase.dll
-ms.openlocfilehash: a5bd7c27b76efbbac923317837ac82b3a6700197
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c5d71e4811411756719177647fda8dd76224f756629ad01794720d291565b21
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119886700"
 ---
-# <a name="getprocessdefaultcpusets-function"></a>Getprocessdefaultcpusets-Funktion
+# <a name="getprocessdefaultcpusets-function"></a>GetProcessDefaultCpuSets-Funktion
 
-Ruft die Liste der CPU-Sätze im standardmäßigen Prozess Satz ab, der von [**setprocessdefaultcpusets**](setprocessdefaultcpusets.md)festgelegt wurde. Wenn für einen bestimmten Prozess keine Standard-CPU-Sätze festgelegt sind, wird der Wert für "Requirements" auf 0 festgelegt, **und die Funktion ist erfolgreich** .
+Ruft die Liste der CPU-Sätze im Prozessstandardsatz ab, der von [**SetProcessDefaultCpuSets**](setprocessdefaultcpusets.md)festgelegt wurde. Wenn für einen bestimmten Prozess keine CPU-Standardsätze festgelegt sind, wird **RequiredIdCount** auf 0 festgelegt, und die Funktion wird erfolgreich ausgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ BOOL WINAPI GetProcessDefaultCpuSets(
 
 <dl> <dt>
 
-*Prozess* \[ in\]
+*Prozess* \[ In\]
 </dt> <dd>
 
-Gibt ein Prozess Handle für den abzufragende Prozess an. Dieses Handle muss über das Recht "Prozess \_ Abfrage \_ beschränkte Informationen" verfügen \_ . Der von [**GetCurrentProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess) zurückgegebene Wert kann auch hier angegeben werden.
+Gibt ein Prozesshandle für den abzufragenden Prozess an. Dieses Handle muss über das Zugriffsrecht PROCESS \_ QUERY LIMITED \_ INFORMATION \_ verfügen. Der von [**GetCurrentProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess) zurückgegebene Wert kann hier ebenfalls angegeben werden.
 
 </dd> <dt>
 
-*Cpuabtids* \[ Out, optional\]
+*CpuSetIds* \[ out, optional\]
 </dt> <dd>
 
-Gibt einen optionalen Puffer zum Abrufen der Liste der CPU-Satz Bezeichner an.
+Gibt einen optionalen Puffer an, um die Liste der CPU-Satzbezeichner abzurufen.
 
 </dd> <dt>
 
-*Cpuantidcount* \[ in\]
+*CpuSetIdCount* \[ In\]
 </dt> <dd>
 
-Gibt die Kapazität des Puffers an, der in **cpuabtids** angegeben ist. Wenn der Puffer NULL ist, muss dieser 0 sein.
+Gibt die Kapazität des puffers an, der in **CpuSetIds** angegeben ist. Wenn der Puffer NULL ist, muss er 0 sein.
 
 </dd> <dt>
 
-Requirements- *count* \[ vorgenommen\]
+*RequiredIdCount* \[ out\]
 </dt> <dd>
 
-Gibt die erforderliche Kapazität des Puffers an, der die gesamte Liste der standardmäßigen Prozess-CPU-Sätze enthalten soll. Bei erfolgreicher Rückgabe wird dadurch die Anzahl der in den Puffer gefüllten IDs angegeben.
+Gibt die erforderliche Kapazität des Puffers an, um die gesamte Liste der Prozessstandard-CPU-Sätze aufzunehmen. Bei erfolgreicher Rückgabe gibt dies die Anzahl der IDs an, die in den Puffer gefüllt sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese API gibt bei Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, gibt die API false zurück, und der **GetLastError** -Wert ist Fehler \_ unzureichender \_ Puffer. Diese API kann nicht ausgeführt werden, wenn gültige Parameter bestanden werden und der Rückgabe Puffer groß genug ist.
+Diese API gibt BEI Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, gibt die API FALSE zurück, und der **GetLastError-Wert** ist ERROR \_ INSUFFICIENT \_ BUFFER. Diese API kann nicht fehlschlagen, wenn gültige Parameter übergeben werden und der Rückgabepuffer groß genug ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,10 +82,10 @@ Diese API gibt bei Erfolg TRUE zurück. Wenn der Puffer nicht groß genug ist, g
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop Apps \| UWP-apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2016 \[ -Desktop-Apps \| UWP-apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Processthreadsapi. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Windows. h</dt> </dl>          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 \|Desktop-Apps UWP-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 \|Desktop-Apps UWP-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Processthreadsapi.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Windows.h</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>Kernel32.dll</dt> </dl>       |
 
 

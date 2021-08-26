@@ -1,19 +1,19 @@
 ---
-description: XMUSHORTN4 beschreibt einen 4D-Vektor zum Speichern nicht signierter, normalisierter Werte als ganze 16-Bit-Ganzzahlen (Type UInt16 \_ t).
+description: XMUSHORTN4 beschreibt einen 4D-Vektor zum Speichern von normalisierten Werten ohne Vorzeichen als 16-Bit-Ganzzahlen mit Vorzeichen (Typ uint16 \_ t).
 ms.assetid: 207f2855-5158-4e33-80fb-bad2e2b173c6
 title: XMUSHORTN4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0eb9b364db18c6635011ce3b9b445e9dae3671d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dce3fb0dbee2db0e2c01414efe4598f875fbbc43a53baa191bc710c3b9f2b6ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948630"
 ---
 # <a name="xmushortn4-extensions"></a>XMUSHORTN4-Erweiterungen
 
-[**XMUSHORTN4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4) beschreibt einen 4D-Vektor zum Speichern nicht signierter, normalisierter Werte als ganze 16-Bit-Ganzzahlen, (Type `uint16_t` ).
+[**XMUSHORTN4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushortn4) beschreibt einen 4D-Vektor zum Speichern von normalisierten Werten ohne Vorzeichen als 16-Bit-Ganzzahlen mit Vorzeichen (Typ `uint16_t` ).
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -26,8 +26,8 @@ ms.locfileid: "104041934"
 
 | Thema                                                           | BESCHREIBUNG                                      |
 |-----------------------------------------------------------------|--------------------------------------------------|
-| [**XMUSHORTN4-Konstruktoren**](xmushortn4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMUSHORTN4` .<br/> |
-| [XMUSHORTN4-Operatoren](ovw-xmushortn4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMUSHORTN4` .<br/>    |
+| [**XMUSHORTN4-Konstruktoren**](xmushortn4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMUSHORTN4` werden.<br/> |
+| [XMUSHORTN4-Operatoren](ovw-xmushortn4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMUSHORTN4` werden.<br/>    |
 
 
 

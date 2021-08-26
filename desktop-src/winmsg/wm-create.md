@@ -1,21 +1,21 @@
 ---
-description: Wird gesendet, wenn eine Anwendung anfordert, dass ein Fenster durch Aufrufen der CreateWindowEx-oder CreateWindow-Funktion erstellt wird.
+description: Wird gesendet, wenn eine Anwendung die Erstellung eines Fensters durch Aufrufen der Funktion CreateWindowEx oder CreateWindow an fordert.
 ms.assetid: d484d0fc-bad0-4fcb-bf4b-37cbc50846ee
-title: WM_CREATE Meldung (Winuser. h)
+title: WM_CREATE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37437adbb4df714d7604af59a2abdd11ac9d00a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12ff80c3fe0c12aeaa8b968d2d609fb7d10765c0474ffc001b9b18385e38d149
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119931280"
 ---
-# <a name="wm_create-message"></a>WM- \_ Nachricht erstellen
+# <a name="wm_create-message"></a>WM \_ CREATE-Nachricht
 
-Wird gesendet, wenn eine Anwendung anfordert, dass ein Fenster durch Aufrufen der [**CreateWindowEx**](/windows/win32/api/winuser/nf-winuser-createwindowexa) -oder [**CreateWindow**](/windows/win32/api/winuser/nf-winuser-createwindowa) -Funktion erstellt wird. (Die Nachricht wird gesendet, bevor die Funktion zurückgegeben wird.) Die Fenster Prozedur des neuen Fensters empfängt diese Meldung, nachdem das Fenster erstellt wurde, aber bevor das Fenster sichtbar wird.
+Wird gesendet, wenn eine Anwendung die Erstellung eines Fensters durch Aufrufen der [**Funktion CreateWindowEx**](/windows/win32/api/winuser/nf-winuser-createwindowexa) oder [**CreateWindow an fordert.**](/windows/win32/api/winuser/nf-winuser-createwindowa) (Die Nachricht wird gesendet, bevor die Funktion zurückgegeben wird.) Die Fensterprozedur des neuen Fensters empfängt diese Meldung, nachdem das Fenster erstellt wurde, aber bevor das Fenster sichtbar wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -38,7 +38,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**kreatestruct**](/windows/win32/api/winuser/ns-winuser-createstructa) -Struktur, die Informationen über das Fenster enthält, das erstellt wird.
+Ein Zeiger auf eine [**CREATESTRUCT-Struktur,**](/windows/win32/api/winuser/ns-winuser-createstructa) die Informationen zum zu erstellenden Fenster enthält.
 
 </dd> </dl>
 
@@ -46,7 +46,7 @@ Ein Zeiger auf eine [**kreatestruct**](/windows/win32/api/winuser/ns-winuser-cre
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben, um die Erstellung des Fensters fortzusetzen. Wenn die Anwendung "– 1" zurückgibt, wird das Fenster zerstört, und die Funktion " [**kreatewindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " oder " [**kreatewindow**](/windows/win32/api/winuser/nf-winuser-createwindowa) " gibt ein **null** -Handle zurück.
+Wenn eine Anwendung diese Meldung verarbeitet, sollte sie 0 zurückgeben, um die Erstellung des Fensters fortsetzen zu können. Wenn die Anwendung –1 zurückgibt, wird das Fenster zerstört, und die [**CreateWindowEx-**](/windows/win32/api/winuser/nf-winuser-createwindowexa) oder [**CreateWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowa) gibt ein **NULL-Handle** zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,30 +56,30 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgebe
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CreateWindow**](/windows/win32/api/winuser/nf-winuser-createwindowa)
+[**Createwindow**](/windows/win32/api/winuser/nf-winuser-createwindowa)
 </dt> <dt>
 
-[**CreateWindowEx**](/windows/win32/api/winuser/nf-winuser-createwindowexa)
+[**Createwindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa)
 </dt> <dt>
 
 [**CREATESTRUCT**](/windows/win32/api/winuser/ns-winuser-createstructa)
 </dt> <dt>
 
-[**WM- \_ nccreate**](wm-nccreate.md)
+[**WM \_ NCCREATE**](wm-nccreate.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

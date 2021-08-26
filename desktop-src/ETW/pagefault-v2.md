@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die übergeordnete Klasse für Seiten Fehlerereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die übergeordnete Klasse für Seitenfehlerereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: cc349e75-fe81-427e-8cf9-15c76e8e4dad
 title: PageFault_V2-Klasse
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: a545e8ae7c5afb000c26d89d9359f620fa7a653d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd8adfa698975f7661abdbd849136d04049b5539ff3fed3b52b61660791add0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900750"
 ---
-# <a name="pagefault_v2-class"></a>Pagefault \_ v2-Klasse
+# <a name="pagefault_v2-class"></a>PageFault \_ V2-Klasse
 
-Diese Klasse ist die übergeordnete Klasse für Seiten Fehlerereignisse.
+Diese Klasse ist die übergeordnete Klasse für Seitenfehlerereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,46 +36,46 @@ class PageFault_V2 : MSNT_SystemTrace
 
 ## <a name="members"></a>Member
 
-Die **Pagefault \_ v2** -Klasse definiert keine Member.
+Die **PageFault \_ V2-Klasse** definiert keine Member.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie alle Seiten Fehlerereignisse in einer NT-Kernel Protokollierungs Sitzung aktivieren möchten, geben Sie das Flag für das **Ereignis Ablaufverfolgungsflag \_ \_ \_ Speicher \_ Seiten \_ Fehler** im **enableflags** -Member einer [**Ereignis Ablauf \_ Verfolgungs \_ Eigenschaften**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) -Struktur beim Aufrufen der [**starttrace**](/windows/win32/api/evntrace/nf-evntrace-starttracea) -Funktion an. Sie können auch die folgenden Flags angeben:
+Um alle Seitenfehlerereignisse in einer NT-Kernelprotokollierungssitzung zu aktivieren, geben Sie beim Aufrufen der [**StartTrace-Funktion**](/windows/win32/api/evntrace/nf-evntrace-starttracea) das **FLAG EVENT TRACE FLAG MEMORY PAGE \_ \_ \_ \_ \_ FAULTS** im **EnableFlags-Member** einer [**EVENT TRACE \_ \_ PROPERTIES-Struktur**](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties) an. Sie können auch die folgenden Flags angeben:
 
--   **Ereignis Ablauf \_ Verfolgung Flag für Arbeits \_ \_ Speicher \_ \_ Fehler**
--   **Ereignis \_ Ablaufverfolgungs- \_ Flag \_ virtuelle \_ Zuweisung**
+-   **\_ \_ EREIGNIS-ABLAUFVERFOLGUNGSFLAG– \_ ARBEITSSPEICHER – \_ HARTE \_ FEHLER**
+-   **EVENT \_ TRACE \_ FLAG \_ VIRTUAL \_ ALLOC**
 
-Ereignisablaufverfolgungs-Consumer können eine spezielle Verarbeitung für alle Seiten Fehlerereignisse implementieren, indem Sie die Funktion [**settracecallback**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**pagefehlerguid**](nt-kernel-logger-constants.md) als *pguid* -Parameter angeben. Verwenden Sie die folgenden Ereignis Typen, um das tatsächliche Speicher Ereignis zu identifizieren, wenn Ereignisse verwendet werden.
+Ereignisverfolgungsverbraucher können eine spezielle Verarbeitung für alle Seitenfehlerereignisse implementieren, indem sie die [**SetTraceCallback-Funktion**](/windows/win32/api/evntrace/nf-evntrace-settracecallback) aufrufen und [**PageFaultGuid**](nt-kernel-logger-constants.md) als *pGuid-Parameter* angeben. Verwenden Sie die folgenden Ereignistypen, um das tatsächliche Speicherereignis beim Verarbeiten von Ereignissen zu identifizieren.
 
 
 
 | Ereignistyp                                                     | BESCHREIBUNG                                                                                                                                                                                                                                                  |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ereignis \_ Ablaufverfolgungstyp \_ \_ mm \_ Kuh (Ereignistyp Wert ist 12)<br/> | Copy-on-Write-Ereignis. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. Vor Windows Vista definiert die [**Pagefault \_ transitionfault**](pagefault-transitionfault.md) -MOF-Klasse das Ereignis.     |
-| Ereignis \_ Ablaufverfolgungstyp \_ \_ mm \_ DZF (Ereignistyp Wert ist 11)<br/> | Fehler Ereignis nach Bedarf NULL. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. Vor Windows Vista definiert die [**Pagefault \_ transitionfault**](pagefault-transitionfault.md) -MOF-Klasse das Ereignis. |
-| Ereignis \_ Ablaufverfolgungstyp \_ \_ mm \_ GPF (Ereignistyp Wert ist 13)<br/> | Fehler Ereignis der Guard-Seite. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. Vor Windows Vista definiert die [**Pagefault \_ transitionfault**](pagefault-transitionfault.md) -MOF-Klasse das Ereignis.  |
-| Ereignis \_ Ablaufverfolgungstyp \_ \_ mm \_ HPF (Ereignistyp Wert ist 14)<br/> | Hartes Seiten Fehler Ereignis. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. Vor Windows Vista definiert die [**Pagefault \_ transitionfault**](pagefault-transitionfault.md) -MOF-Klasse das Ereignis.   |
-| Ereignis Ablauf \_ Verfolgungs \_ Typ \_ mm \_ tf (Ereignistyp Wert ist 10)<br/>  | Übergangs Fehler Ereignis. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis. Vor Windows Vista definiert die [**Pagefault \_ transitionfault**](pagefault-transitionfault.md) -MOF-Klasse das Ereignis.  |
-| Ereignis Ablauf \_ Verfolgungs \_ Typ \_ mm \_ AV (Ereignistyp Wert ist 15)<br/>  | Zugriffs Verletzungs Ereignis. Die [**Pagefault \_ TypeGroup1**](pagefault-typegroup1.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                                           |
-| Ereignistyp Wert, 32                                           | Hartes Seiten Fehler Ereignis. Die " [**Pagefault \_ Hardfault**](pagefault-hardfault.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                                               |
-| Ereignistyp Wert, 105                                          | Bild Ladevorgang in Auslagerungs Datei Ereignis. Die [**Pagefault \_ imageloadbacked**](pagefault-imageloadbacked.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                          |
-| Ereignistyp Wert, 98                                           | Virtuelles Zuordnungs Ereignis. Die " [**virtualzuweisung**](pagefault-virtualalloc.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                                                |
-| Ereignistyp Wert, 99                                           | Virtuelles kostenloses Ereignis. Die " [**virtualzuweisung**](pagefault-virtualalloc.md) MOF"-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                                                      |
+| EVENT \_ TRACE TYPE MM MM \_ \_ \_ MM(Ereignistypwert ist 12)<br/> | Copy-on-Write-Ereignis. Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. Vor der Windows Vista definiert die [**PageFault \_ TransitionFault**](pagefault-transitionfault.md) MOF-Klasse das Ereignis.     |
+| EVENT \_ TRACE TYPE MM \_ \_ \_ TIPPF(Ereignistypwert ist 11)<br/> | Anforderungsfehlerereignis 0 (null). Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. Vor der Windows Vista definiert die [**PageFault \_ TransitionFault**](pagefault-transitionfault.md) MOF-Klasse das Ereignis. |
+| EVENT \_ TRACE TYPE MM \_ \_ \_ GPF(Ereignistypwert ist 13)<br/> | Fehlerereignis der Schutzseite. Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. Vor der Windows Vista definiert die [**PageFault \_ TransitionFault**](pagefault-transitionfault.md) MOF-Klasse das Ereignis.  |
+| EVENT \_ TRACE TYPE MM \_ \_ \_ HPF(Ereignistypwert ist 14)<br/> | Fehlerereignis für harte Seiten. Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. Vor der Windows Vista definiert die [**PageFault \_ TransitionFault**](pagefault-transitionfault.md) MOF-Klasse das Ereignis.   |
+| EVENT \_ TRACE TYPE MM TF \_ \_ \_ (Ereignistypwert ist 10)<br/>  | Übergangsfehlerereignis. Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis. Vor der Windows Vista definiert die [**PageFault \_ TransitionFault**](pagefault-transitionfault.md) MOF-Klasse das Ereignis.  |
+| EVENT \_ TRACE TYPE MM \_ \_ \_ AV(Ereignistypwert ist 15)<br/>  | Zugriffsverletzungsereignis. Die [**MOF-Klasse \_ PageFault TypeGroup1**](pagefault-typegroup1.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                                           |
+| Ereignistypwert, 32                                           | Fehlerereignis für harte Seiten. Die [**PageFault \_ HardFault**](pagefault-hardfault.md) MOF-Klasse definiert die Ereignisdaten für dieses Ereignis.                                                                                                                               |
+| Ereignistypwert, 105                                          | Bildladeereignis in Seitendatei. Die [**MOF-Klasse \_ PageFault ImageLoadBacked**](pagefault-imageloadbacked.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                          |
+| Ereignistypwert, 98                                           | Virtuelles Zuordnungsereignis. Die [**MOF-Klasse VirtualAlloc**](pagefault-virtualalloc.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                                                |
+| Ereignistypwert, 99                                           | Virtuelles kostenloses Ereignis. Die [**MOF-Klasse VirtualAlloc**](pagefault-virtualalloc.md) definiert die Ereignisdaten für dieses Ereignis.                                                                                                                                      |
 
 
 
  
 
-Sie können den **ProcessID** -und den **ThreadId** -Member des [**Ereignis Ablauf \_ Verfolgungs \_ Headers**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) verwenden, um den fehlerhaften Prozess oder Thread zu identifizieren.
+Sie können die **ProcessId- und** **ThreadId-Member** von [**EVENT TRACE \_ \_ HEADER**](/windows/win32/api/evntrace/ns-evntrace-event_trace_header) verwenden, um den fehlerhaften Prozess oder Thread zu identifizieren.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

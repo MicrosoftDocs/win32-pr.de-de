@@ -1,17 +1,17 @@
 ---
-description: System.Contact.OtherAddress3Person
+description: System.Contact.OtherAddress3 Aus
 ms.assetid: bcc632ab-277a-492c-86d2-1450dc97b4c5
-title: System.Contact.OtherAddress3Person
+title: System.Contact.OtherAddress3 Aus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 41ccb69642e4c7c16e0605d519b34dbce6ae3f69
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 955d436b4c8b8efe061796e6030ead38ac26ed785f47c6fba720db11adb93cde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108101338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119946568"
 ---
-# <a name="systemcontactotheraddress3street"></a>System.Contact.OtherAddress3Person
+# <a name="systemcontactotheraddress3street"></a>System.Contact.OtherAddress3 Aus
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

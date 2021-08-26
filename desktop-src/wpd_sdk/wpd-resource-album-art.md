@@ -1,36 +1,36 @@
 ---
-description: Gibt ein Bild an, das die Albumgrafik für das-Objekt darstellt.
+description: Gibt ein Bild an, das die Albumgrafik für das -Objekt darstellt.
 ms.assetid: 7a31ebb6-c4ab-4899-9c2e-c960aac4f0f9
 title: WPD_RESOURCE_ALBUM_ART
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f4b800aa2ae22f2400f3195b85da6bd3bd35b4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 336c56fbdb5970b483d3550c9a5eeba26e5d8da4a6111299208b467a1ef8b988
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119927690"
 ---
-# <a name="wpd_resource_album_art"></a>WPD- \_ Ressourcen \_ Album- \_ Grafik
+# <a name="wpd_resource_album_art"></a>WPD \_ RESOURCE \_ ALBUM \_ ART
 
-Gibt ein Bild an, das die Albumgrafik für das-Objekt darstellt.
+Gibt ein Bild an, das die Albumgrafik für das -Objekt darstellt.
 
-Dieser Ressourcentyp muss die folgenden Attribute unterstützen.
+Diese Art von Ressource muss die folgenden Attribute unterstützen.
 
 
 
 | Attributname                                                                                                            | Erforderlich oder optional                                   |
 |---------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| [WPD- \_ Medien \_ Breite](media-properties.md)                                                                 | Erforderlich.                                              |
-| [WPD- \_ Medien \_ Höhe](media-properties.md)                                                               | Erforderlich.                                              |
-| [Gesamtgröße des WPD- \_ Ressourcen \_ Attributs \_ \_](resource-attribute-properties.md)              | Erforderlich.                                              |
-| [WPD- \_ Ressourcen \_ Attribut \_ kann \_ Lesen](attributes.md)                                     | Erforderlich, wenn diese Ressource von Clients gelesen werden kann.            |
-| [WPD- \_ Ressourcen \_ Attribut \_ kann \_ schreiben](attributes.md)                                   | Erforderlich, wenn Clients in diese Ressource schreiben können.        |
-| [Das WPD- \_ Ressourcen \_ Attribut \_ kann \_ gelöscht werden.](attributes.md)                                 | Erforderlich, wenn von Clients diese Ressource gelöscht werden kann.          |
-| [WPD- \_ Ressourcen \_ Attribut \_ optimale \_ Lese \_ Puffer \_ Größe](attributes.md)   | Erforderlich, wenn Clients über Lesezugriff auf die Ressource verfügen.  |
-| [Größe des WPD- \_ Ressourcen \_ Attributs für \_ optimalen \_ Schreib \_ Puffer \_](attributes.md) | Erforderlich, wenn Clients Schreibzugriff auf die Ressource haben. |
-| [WPD- \_ Ressourcen \_ Attribut \_ Format](resource-attribute-properties.md)                       | Erforderlich.                                              |
-| [Ressourcen Schlüssel für WPD- \_ Ressourcen \_ Attribut \_ \_](resource-attribute-properties.md)                                              | Empfohlen                                            |
+| [\_WPD-MEDIENBREITE \_](media-properties.md)                                                                 | Erforderlich.                                              |
+| [\_WPD-MEDIENHÖHE \_](media-properties.md)                                                               | Erforderlich.                                              |
+| [\_GESAMTGRÖßE DES WPD-RESSOURCENATTRIBUTS \_ \_ \_](resource-attribute-properties.md)              | Erforderlich.                                              |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN GELESEN \_ WERDEN](attributes.md)                                     | Erforderlich, wenn Clients diese Ressource lesen können.            |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN \_ SCHREIBEN](attributes.md)                                   | Erforderlich, wenn Clients in diese Ressource schreiben können.        |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ KANN GELÖSCHT \_ WERDEN](attributes.md)                                 | Erforderlich, wenn Clients diese Ressource löschen können.          |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ OPTIMALE \_ \_ \_ LESEPUFFERGRÖßE](attributes.md)   | Erforderlich, wenn Clients Lesezugriff auf die Ressource haben.  |
+| [\_ \_ WPD-RESSOURCENATTRIBUT \_ OPTIMALE \_ \_ \_ SCHREIBPUFFERGRÖßE](attributes.md) | Erforderlich, wenn Clients Schreibzugriff auf die Ressource haben. |
+| [\_ \_ WPD-RESSOURCENATTRIBUTFORMAT \_](resource-attribute-properties.md)                       | Erforderlich.                                              |
+| [RESSOURCENSCHLÜSSEL DES \_ WPD-RESSOURCENATTRIBUTS \_ \_ \_](resource-attribute-properties.md)                                              | Empfohlen                                            |
 
 
 

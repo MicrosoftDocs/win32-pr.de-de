@@ -4,36 +4,36 @@ description: Spracherkennung
 ms.assetid: cb5ac509-12a4-4ca4-8776-424568cf780d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d5c037ced96c386a5e0baf18eeba258422e0193
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9dd36ea5754d53ceda2761635ecb838fdfb0328617827ca90fc969af915b4ea6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119960850"
 ---
 # <a name="speech-recognition"></a>Spracherkennung
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Die Spracherkennung stellt eine sehr natürliche und vertraute Schnittstelle für die Interaktion mit Zeichen bereit. Die Spracheingabe stellt jedoch auch viele Herausforderungen dar. Sprach Triebwerke arbeiten zurzeit ohne wesentliche Teile des sprach Kommunikations Repertoires, wie z. b. Gesten, Intonation und Gesichtsausdrücke. Außerdem ist die natürliche Sprache in der Regel unbegrenzt. Es ist ganz einfach, wenn der Redner das aktuelle Vokabular (oder die *Grammatik*) der Engine überschreitet. Entsprechend kann die Formulierung oder Wort Reihenfolge für jede Anforderung oder Antwort variieren. Außerdem müssen Spracherkennungs-Engines häufig große Variationen in der-Umgebung des Sprechers behandeln. Beispielsweise können Hintergrundgeräusche, Mikrofon Qualität und Standort die Eingabe Qualität beeinflussen. Ebenso ist es eine Herausforderung, die akustischen Daten in darstellbare Grundlagen zu konvertieren, um die unterschiedlichen sprechersprechungen oder sogar dieselben Redner Variationen, z. b. wenn der Redner eine Erkältung hat, zu konvertieren. Und schließlich müssen Sprachmodule auch ähnliche, klingende Wörter oder Ausdrücke in einer Sprache behandeln, wie z. b. "New", "Knew" und "GNU", oder "Wrack a Nice Beach" und "Speech Speech".
+Die Spracherkennung bietet eine sehr natürliche und vertraute Schnittstelle für die Interaktion mit Zeichen. Die Spracheingabe stellt jedoch auch viele Herausforderungen dar. Sprach-Engines funktionieren derzeit ohne wesentliche Teile der menschlichen Sprachkommunikation, z. B. Gesten, Intonation und Gesichtsausdrücke. Darüber hinaus ist natürliche Sprache in der Regel ungebunden. Es ist für den Sprecher einfach, das aktuelle Vokabular oder die *Grammatik* der Engine zu überschreiten. Ebenso kann der Wortlaut oder die Wortreihenfolge für jede Anforderung oder Antwort variieren. Darüber hinaus müssen Spracherkennungs-Engines häufig große Variationen in der Umgebung des Sprechers behandeln. Hintergrundgeräusche, Mikrofonqualität und Standort können sich beispielsweise auf die Eingabequalität auswirken. Auf ähnliche Weise machen unterschiedliche Sprecheraussprechungen oder sogar Variationen des gleichen Sprechers, z. B. wenn der Sprecher eine Kalte hat, eine Herausforderung, die Akustikdaten in darstellungsbezogenes Verständnis zu konvertieren. Schließlich müssen Sprach-Engines auch mit ähnlich klingenden Wörtern oder Ausdrücken in einer Sprache umgehen, z. B. "neu", "kannte" und "gnu" oder "einen guten Beach" und "Sprache erkennen".
 
-Speech ist nicht immer die beste Form der Eingabe für eine Aufgabe. Aufgrund der Tatsache, dass es sich um die Natur der Sprache handelt, kann es häufig langsamer als andere Formen der Eingabe sein. Wie die Tastatur ist die Spracheingabe eine schlechte Oberfläche für die Darstellung, es sei denn, es ist eine Art von mnetmonischen Darstellung vorhanden. Daher sollten Sie immer überprüfen, ob Sprache die geeignetste Eingabe für eine Aufgabe ist. Es empfiehlt sich, die Verwendung von Sprache als exklusive Oberfläche für eine beliebige Aufgabe zu vermeiden. Stellen Sie mithilfe von Methoden wie der Maus oder der Tastatur andere Möglichkeiten für den Zugriff auf grundlegende Funktionen bereit. Profitieren Sie außerdem von der multimodalen Natur der Verwendung von Sprache in der visuellen Oberfläche, indem Sie Spracheingaben mit visuellen Informationen kombinieren, die den Kontext und die Optionen angeben.
+Sprache ist nicht immer die beste Form der Eingabe für eine Aufgabe. Aufgrund der turn-taking-Natur der Sprache kann sie oft langsamer als andere Eingabeformen sein. Wie die Tastatur ist die Spracheingabe eine schlechte Schnittstelle zum Zeigen, es sei denn, es wird eine mnemonic-Darstellung bereitgestellt. Berücksichtigen Sie daher immer, ob Sprache die am besten geeignete Eingabe für eine Aufgabe ist. Es ist am besten, die Verwendung von Sprache als exklusive Schnittstelle für jede Aufgabe zu vermeiden. Stellen Sie andere Möglichkeiten bereit, mithilfe von Methoden wie Maus oder Tastatur auf alle grundlegenden Funktionen zuzugreifen. Nutzen Sie außerdem die mehr modale Art der Verwendung von Sprache in der grafischen Benutzeroberfläche, indem Sie Spracheingaben mit visuellen Informationen kombinieren, die ihnen helfen, den Kontext und die Optionen anzugeben.
 
-Schließlich ist die erfolgreiche Verwendung von Spracheingaben nur teilweise auf die Qualität der Technologie zurückzuführen. Auch die Menschen Erkennung, die alle aktuellen Erkennungstechnologien überschreitet, schlägt manchmal fehl. Bei der menschlichen Kommunikation werden jedoch Strategien verwendet, die die Erfolgswahrscheinlichkeit verbessern und eine Fehlerwiederherstellung bereitstellen, wenn etwas schief geht. Daher hängt die Effektivität der Spracheingabe auch von der Qualität der Benutzeroberfläche ab, die diese darstellt.
+Schließlich ist die erfolgreiche Verwendung der Spracheingabe nur teilweise auf die Qualität der Technologie zurückzuführen. Selbst die menschliche Erkennung, die jede aktuelle Erkennungstechnologie überschreitet, schlägt manchmal fehl. In der menschlichen Kommunikation verwenden wir jedoch Strategien, die die Wahrscheinlichkeit eines Erfolgs verbessern und eine Fehlerwiederherstellung ermöglichen, wenn ein Fehler auftritt. Daher hängt die Effektivität der Spracheingabe auch von der Qualität der Benutzeroberfläche ab, die sie darstellt.
 
-Das Untersuchen von menschlichen Modellen der Sprachinteraktion kann beim Entwerfen von natürlicheren Sprachschnittstellen hilfreich sein. Das Aufzeichnen tatsächlicher sprachsprachdialoge für bestimmte Szenarien kann Ihnen helfen, die verwendeten Konstrukte und Muster sowie effektive Formen von Feedback und Fehlerwiederherstellung besser zu verstehen. Sie kann hilfreich sein, um das passende Vokabular zu bestimmen (für die Eingabe und Ausgabe). Es ist besser, eine Sprachschnittstelle zu entwerfen, die darauf basiert, wie Menschen sprechen, als Sie einfach von der grafischen Schnittstelle abzuleiten, in der Sie betrieben wird.
+Die Untersuchung menschlicher Modelle der Sprachinteraktion kann nützlich sein, wenn sie natürlichere Sprachschnittstellen entwerfen. Das Aufzeichnen von menschlichen Sprachdialogen für bestimmte Szenarien kann Ihnen dabei helfen, die verwendeten Konstrukte und Muster sowie effektive Formen von Feedback und Fehlerwiederherstellung besser zu verstehen. Sie kann dabei helfen, das zu verwendende Vokabular (für Eingabe und Ausgabe) zu bestimmen. Es ist besser, eine Sprachschnittstelle basierend darauf zu entwerfen, wie Menschen tatsächlich sprechen, als sie einfach von der grafischen Schnittstelle abzuleiten, in der sie arbeitet.
 
-Beachten Sie, dass der Microsoft-Agent die Spracherkennung mithilfe der Microsoft Speech API (SAPI) unterstützt. Dadurch kann der Microsoft-Agent mit einer Vielzahl von kompatiblen Modulen verwendet werden. Obwohl der Microsoft-Agent bestimmte grundlegende Schnittstellen angibt, variieren die Leistungsanforderungen und die Qualität einer Engine möglicherweise.
+Beachten Sie, dass der Microsoft-Agent die Microsoft Speech-API (SAPI) zur Unterstützung der Spracherkennung verwendet. Dies ermöglicht die Verwendung des Microsoft-Agents mit einer Vielzahl kompatibler Engines. Obwohl Microsoft Agent bestimmte grundlegende Schnittstellen angibt, können die Leistungsanforderungen und die Qualität einer Engine variieren.
 
-Die Sprache ist nicht die einzige Möglichkeit, die konvertisierungsschnittstellen zu unterstützen. Sie können auch die natürlicher Sprachverarbeitung von Tastatureingaben anstelle von oder zusätzlich zur Sprache verwenden. In diesen Fällen können Sie weiterhin Richtlinien für die Spracheingabe anwenden.
+Sprache ist nicht die einzige Möglichkeit, Konversationsschnittstellen zu unterstützen. Sie können auch die Verarbeitung von Tastatureingaben in natürlicher Sprache anstelle von oder zusätzlich zur Sprache verwenden. In diesen Situationen können Sie weiterhin im Allgemeinen Richtlinien für die Spracheingabe anwenden.
 
--   [Lauschen, nicht einfach erkennen](listen--dont-just-recognize.md)
--   [Optionen verdeutlichen und einschränken](clarify-and-limit-choices.md)
+-   [Lauschen, Nicht nur erkennen](listen--dont-just-recognize.md)
+-   [Verdeutlichen und Einschränken von Auswahlmöglichkeiten](clarify-and-limit-choices.md)
 -   [Bereitstellen einer guten Fehlerwiederherstellung](provide-good-error-recovery.md)
 
- 
+ 
 
- 
+ 
 
 
 

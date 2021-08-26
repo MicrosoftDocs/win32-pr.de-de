@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: jetfrebuffer-Funktion'
-title: Jetfrebuffer-Funktion
+description: Weitere Informationen finden Sie unter JetFreeBuffer-Funktion.
+title: JetFreeBuffer-Funktion
 TOCTitle: JetFreeBuffer Function
 ms:assetid: f37d35f6-4bea-46ba-a334-7b8ad7a1568c
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294134(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fe638e2aab1d37324a6fd6bf477a578f02b9ac58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 011974154f80c2da809292530deb50657d1280172554d79629a5a4650833c347
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119944870"
 ---
-# <a name="jetfreebuffer-function"></a>Jetfrebuffer-Funktion
+# <a name="jetfreebuffer-function"></a>JetFreeBuffer-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetfreebuffer-function"></a>Jetfrebuffer-Funktion
+## <a name="jetfreebuffer-function"></a>JetFreeBuffer-Funktion
 
-Die **jetfrebuffer** -Funktion gibt Arbeitsspeicher frei, der durch einen Datenbank-Engine-Befehl zugewiesen wurde.
+Die **JetFreeBuffer-Funktion** gibt Arbeitsspeicher frei, der durch einen Datenbank-Engine-Aufruf belegt wurde.
 
-**Windows XP: jetfrebuffer** wird in Windows XP eingeführt.
+**Windows XP: JetFreeBuffer** wird in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetFreeBuffer(
@@ -44,13 +44,13 @@ Die **jetfrebuffer** -Funktion gibt Arbeitsspeicher frei, der durch einen Datenb
 
 ### <a name="parameters"></a>Parameter
 
-*pbbuf*
+*pbBuf*
 
-Ein Zeiger auf einen Speicherbereich, der zuvor durch einen Datenbankmodul-aufrufswert zugeordnet wurde. **Null** ist akzeptabel und wird ignoriert.
+Zeiger auf einen Speicherbereich, der zuvor durch einen Aufruf der Datenbank-Engine zugeordnet wurde. **NULL** ist akzeptabel und wird ignoriert.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -72,9 +72,9 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Es ist nicht definiertes Verhalten, Arbeitsspeicher, der nicht von der Datenbank-Engine in zugewiesen wurde, an *pbbuf* zu übergeben.
+Es ist nicht definiert, Arbeitsspeicher zu übergeben, der nicht von der Datenbank-Engine an *pbBuf* zugeordnet wurde.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -94,14 +94,14 @@ Es ist nicht definiertes Verhalten, Arbeitsspeicher, der nicht von der Datenbank
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 </tbody>
@@ -111,4 +111,4 @@ Es ist nicht definiertes Verhalten, Arbeitsspeicher, der nicht von der Datenbank
 #### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
-[Jetgetinstanceingefo](./jetgetinstanceinfo-function.md)
+[JetGetInstanceInfo](./jetgetinstanceinfo-function.md)

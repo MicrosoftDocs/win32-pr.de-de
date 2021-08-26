@@ -1,5 +1,5 @@
 ---
-description: Enthält Informationen zu Benutzerkonten und Gruppenkonten, die dem Computersystem bekannt sind, auf dem Windows ausgeführt wird.
+description: Enthält Informationen zu Benutzerkonten und Gruppenkonten, die dem Computersystem bekannt sind, auf dem Windows.
 ms.assetid: c0916f20-05be-4282-9642-28cec606bfd7
 ms.tgt_platform: multiple
 title: Win32_Account-Klasse
@@ -23,18 +23,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 2af601799095192d7af4ffedce0c8e0cd28bff21
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: dc98f826ddae09bd507517e564ec2d9387d6bf17147d5eac36596bdb9d1e81ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127493"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918120"
 ---
-# <a name="win32_account-class"></a>Win32- \_ Konto Klasse
+# <a name="win32_account-class"></a>Win32 \_ Account-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) für das **Win32- \_ Konto** enthält Informationen zu Benutzerkonten und Gruppenkonten, die dem Computersystem bekannt sind, auf dem Windows ausgeführt wird. Benutzer-oder Gruppennamen, die von einer Windows-Domäne erkannt werden, sind Nachfolger (oder Member) dieser Klasse.
+Die **abstrakte WMI-Klasse \_ Win32-Konto** enthält Informationen zu Benutzerkonten und Gruppenkonten, die dem Computersystem bekannt sind, auf dem Windows. [](/windows/desktop/WmiSdk/retrieving-a-class) Benutzer- oder Gruppennamen, die von einer Windows erkannt werden, sind Nachfolger (oder Member) dieser Klasse.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,149 +56,149 @@ class Win32_Account : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **Win32- \_ Konto** Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ Account-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32- \_ Konto** Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ Account-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
 Kurze Beschreibung des Objekts.
 
-Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse geerbt.
+Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement-Klasse geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
 </dt> </dl>
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse geerbt.
+Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement-Klasse geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-**Domäne**
+**Domain**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Functions \| Domain")
+Qualifizierer: [**schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Functions \| Domain")
 </dt> </dl>
 
-Der Name der Windows-Domäne, zu der eine Gruppe oder ein Benutzer gehört.
+Name der Windows Domäne, zu der eine Gruppe oder ein Benutzer gehört.
 
-Beispiel: "na-Sales"
+Beispiel: "NA-SALES"
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installation date")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das-Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
-Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse geerbt.
+Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement-Klasse geerbt.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **LocalAccount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **korrigiert**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [ **Behoben**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-**True** gibt an, dass das Konto auf dem lokalen Computer definiert ist. Um nur Konten abzurufen, die auf dem lokalen Computer definiert sind, entwerfen Sie eine Abfrage, die die Bedingung "LocalAccount =**true**" enthält.
+True **gibt an,** dass das Konto auf dem lokalen Computer definiert ist. Um nur auf dem lokalen Computer definierte Konten abzurufen, entwerfen Sie eine Abfrage, die die Bedingung "LocalAccount=**TRUE"** enthält.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Network Management Structures \| Name")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name der Win32API-Netzwerkverwaltungsstrukturen") \| \|
 </dt> </dl>
 
-Der Name des Windows-System Kontos in der Domäne, die durch die **Domänen** Eigenschaft dieser Klasse angegeben wird. Diese Eigenschaft überschreibt die **Name** -Eigenschaft, die von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt wurde.
+Der Name des Windows-Systemkontos in der Domäne, die durch die **Domain-Eigenschaft** dieser Klasse angegeben wird. Diese Eigenschaft überschreibt die **Von** [**CIM ManagedSystemElement geerbte \_ Name-Eigenschaft.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
 **SID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Security IDs (SIDs)")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API-Sicherheitsbezeichner \| (SIDs)")
 </dt> </dl>
 
-Sicherheits-ID (SID) für dieses Konto. Eine SID ist ein Zeichen folgen Wert mit variabler Länge, der zum Identifizieren eines Vertrauens nehmers verwendet wird. Jedes Konto verfügt über eine eindeutige SID, die von einer Zertifizierungsstelle (z. b. einer Windows-Domäne) ausgestellt wurde und in einer Sicherheitsdatenbank gespeichert ist. Wenn ein Benutzer sich anmeldet, ruft das System die SID des Benutzers aus der Datenbank ab und legt Sie im Zugriffs Token des Benutzers ab. Das System verwendet die SID im Zugriffs Token des Benutzers, um den Benutzer bei allen nachfolgenden Interaktionen mit der Windows-Sicherheit zu identifizieren. Wenn eine SID als eindeutiger Bezeichner für einen Benutzer oder eine Gruppe verwendet wurde, kann Sie nicht erneut verwendet werden, um einen anderen Benutzer oder eine andere Gruppe zu identifizieren.
+Sicherheits-ID (SID) für dieses Konto. Eine SID ist ein Zeichenfolgenwert variabler Länge, der zum Identifizieren eines Vertrauenshänders verwendet wird. Jedes Konto verfügt über eine eindeutige SID, die von einer Zertifizierungsstelle (z. B. einer Windows-Domäne) ausgestellt und in einer Sicherheitsdatenbank gespeichert ist. Wenn sich ein Benutzer anmeldet, ruft das System die SID des Benutzers aus der Datenbank ab und platziert sie im Zugriffstoken des Benutzers. Das System verwendet die SID im Zugriffstoken des Benutzers, um den Benutzer bei allen nachfolgenden Interaktionen mit Windows identifizieren. Wenn eine SID als eindeutiger Bezeichner für einen Benutzer oder eine Gruppe verwendet wurde, kann sie nicht erneut verwendet werden, um einen anderen Benutzer oder eine Gruppe zu identifizieren.
 
 </dd> <dt>
 
 **SIDType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Fixed**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Access Control Enumerationstypen- \| sid- \_ Name \_ verwenden")
+Qualifizierer: [**Behoben:**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Win32API \| Access Control Enumerationstypen \| SID NAME \_ \_ USE")
 </dt> </dl>
 
-Enumerationswerte, die den Typ der Sicherheits-ID (SID) angeben.
+Aufzählte Werte, die den Typ der Sicherheits-ID (SID) angeben.
 
 <dt>
 
@@ -225,14 +225,14 @@ Enumerationswerte, die den Typ der Sicherheits-ID (SID) angeben.
 
 <span id="SidTypeAlias"></span><span id="sidtypealias"></span><span id="SIDTYPEALIAS"></span>
 
-**Sidtypealias** (4)
+**SidTypeAlias** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SidTypeWellKnownGroup"></span><span id="sidtypewellknowngroup"></span><span id="SIDTYPEWELLKNOWNGROUP"></span>
 
-**Sidtypewellknowngroup** (5)
+**SidTypeWellKnownGroup** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -246,7 +246,7 @@ Enumerationswerte, die den Typ der Sicherheits-ID (SID) angeben.
 
 <span id="SidTypeInvalid"></span><span id="sidtypeinvalid"></span><span id="SIDTYPEINVALID"></span>
 
-**Sidtypeingabe valid** (7)
+**SidTypeInvalid** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -260,7 +260,7 @@ Enumerationswerte, die den Typ der Sicherheits-ID (SID) angeben.
 
 <span id="SidTypeComputer"></span><span id="sidtypecomputer"></span><span id="SIDTYPECOMPUTER"></span>
 
-**Sidtypecomputer** (9)
+**SidTypeComputer** (9)
 
 
 </dt> <dd></dd> </dl>
@@ -270,18 +270,18 @@ Enumerationswerte, die den Typ der Sicherheits-ID (SID) angeben.
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Aktueller Status des Objekts. Es können verschiedene Betriebs-und nicht betriebliche Statuswerte definiert werden. Betriebsstatus umfassen: "OK", "heruntergestuft" und "pred Fail" (ein Element, z. b. ein intelligent-aktiviertes Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, aber prognostiziert in naher Zukunft einen Fehler.) Nicht betriebsbereite Status umfassen: "Error", "Starting", "Stop" und "Service". Der letztere Dienst kann während der Spiegelung eines Datenträgers, dem erneuten Laden einer Benutzer Berechtigungs Liste oder anderer administrativer Aufgaben angewendet werden. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Aktueller Status des Objekts. Es können verschiedene betriebsbereite und nicht betriebsbereite Status definiert werden. Folgende Betriebsstatus sind möglich: "OK", "Heruntergestuft" und "Fehler vor dem Ausfall" (ein Element, z. B. ein SMART-fähiges Festplattenlaufwerk, funktioniert möglicherweise ordnungsgemäß, prognostiziert aber einen Ausfall in naher Zukunft). Nicht operative Status sind: "Error", "Starting", "Stopping" und "Service". Letzteres, "Dienst", kann während der Spiegelung eines Datenträgers, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen administrativen Aufgaben angewendet werden. Nicht alle derartigen Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
-Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse geerbt.
+Diese Eigenschaft wird von der [**CIM \_ ManagedSystemElement-Klasse geerbt.**](cim-managedsystemelement.md)
 
 Die Werte sind:
 
@@ -303,35 +303,35 @@ Die Werte sind:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird** gestartet ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Wird beendet** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -345,41 +345,41 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Striche** ("Strich")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Lost Comm** ("Lost Comm")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32- \_ Konto** Klasse wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+Die **Win32 \_ Account-Klasse** wird von [**CIM \_ LogicalElement abgeleitet.**](cim-logicalelement.md)
 
 ## <a name="examples"></a>Beispiele
 
-Mit dem folgenden PowerShell-Code werden die lokalen Konten abgerufen.
+Der folgende PowerShell-Code ruft die lokalen Konten ab.
 
 
 ```PowerShell
@@ -388,7 +388,7 @@ Get-WmiObject Win32_Account -Filter "Domain='$Env:ComputerName'"
 
 
 
-Mit dem folgenden PowerShell-Code werden die Domänen Konten abgerufen.
+Der folgende PowerShell-Code ruft die Domänenkonten ab.
 
 
 ```PowerShell
@@ -405,8 +405,8 @@ Mit dem folgenden PowerShell-Code werden die Domänen Konten abgerufen.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
