@@ -1,11 +1,11 @@
 ---
-title: Tasksettings. stopifgoingonakkus (Eigenschaft)
-description: Ruft bei der Skripterstellung einen booleschen Wert ab oder legt diesen fest, der angibt, dass der Task angehalten wird, wenn der Computer auf dem Gerät ausgeführt wird.
+title: TaskSettings.StopIfGoingOnObjektes-Eigenschaft
+description: Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, dass die Aufgabe beendet wird, wenn der Computer zu Akkus fährt, oder legt diesen fest.
 ms.assetid: a133cba0-c93e-4963-83a3-7587e323fc6e
 keywords:
-- Stopifgoingonakkus-Eigenschaft Taskplaner
-- Stopifgoingonakkus-Eigenschaft Taskplaner, tasksettings-Objekt
-- Tasksettings-Objekt Taskplaner, stopifgoingonakkus (Eigenschaft)
+- StopIfGoingOnQualifiziers-Eigenschaft Taskplaner
+- StopIfGoingOnObjektes-Eigenschaft Taskplaner , TaskSettings-Objekt
+- TaskSettings-Objekt Taskplaner , StopIfGoingOnTasks-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aced436d653b6bbc02b4b36edea9046e3ac62392
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 229d5d3beef974e9ce8758f9bd81fc3217bd9c3fcf9bf37be137abe6515cc62a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974886"
 ---
-# <a name="tasksettingsstopifgoingonbatteries-property"></a>Tasksettings. stopifgoingonakkus (Eigenschaft)
+# <a name="tasksettingsstopifgoingonbatteries-property"></a>TaskSettings.StopIfGoingOnObjektes-Eigenschaft
 
-Ruft bei der Skripterstellung einen booleschen Wert ab oder legt diesen fest, der angibt, dass der Task angehalten wird, wenn der Computer auf dem Gerät ausgeführt wird.
+Ruft für die Skripterstellung einen booleschen Wert ab, der angibt, dass die Aufgabe beendet wird, wenn der Computer zu Akkus fährt, oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,11 +40,11 @@ TaskSettings.StopIfGoingOnBatteries As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der angibt, dass der Task angehalten wird, wenn der Computer in den Akku Betrieb geht. Wenn der Wert true ist, gibt die Eigenschaft an, dass der Task beendet wird, wenn der Computer auf die Batterie geht. Wenn der Wert false ist, gibt die Eigenschaft an, dass die Aufgabe nicht angehalten wird, wenn der Computer auf die Batterie geht. Der Standardwert ist True. Weitere Informationen finden Sie unter "Hinweise".
+Ein boolescher Wert, der angibt, dass die Aufgabe beendet wird, wenn der Computer zu Akkus fährt. True gibt die -Eigenschaft an, dass die Aufgabe beendet wird, wenn der Computer zu Akkus gelangt. False gibt die -Eigenschaft an, dass die Aufgabe nicht beendet wird, wenn der Computer zu Akkus fährt. Der Standardwert ist True. Weitere Informationen finden Sie unter Hinweise.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**stopifgoingonakkus**](taskschedulerschema-stopifgoingonbatteries-settingstype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [**StopIfGoingOnTasks-Element**](taskschedulerschema-stopifgoingonbatteries-settingstype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,9 +52,9 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird diese Einstellung im [*
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

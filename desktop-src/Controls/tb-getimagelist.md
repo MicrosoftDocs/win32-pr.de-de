@@ -1,9 +1,9 @@
 ---
-title: TB_GETIMAGELIST Meldung (kommstrg. h)
-description: Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Schaltflächen im Standardzustand anzuzeigen. Ein Symbolleisten-Steuerelement verwendet diese Bildliste zum Anzeigen von Schaltflächen, wenn diese nicht heiß oder deaktiviert sind.
+title: TB_GETIMAGELIST-Nachricht (Commctrl.h)
+description: Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen im Standardzustand anzuzeigen. Ein Symbolleistensteuerelement verwendet diese Bildliste, um Schaltflächen anzuzeigen, wenn sie nicht heiß oder deaktiviert sind.
 ms.assetid: 21edde99-019b-495c-a38b-4d686e124f8e
 keywords:
-- Windows-Steuerelemente für TB_GETIMAGELIST Meldung
+- TB_GETIMAGELIST Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07a56b8b847bd212e703d3b512b255cf1693abf7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dee13a7099a1781722b1d2cb6028fe2bc8e22bc712992283148e72a628269a98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918840"
 ---
-# <a name="tb_getimagelist-message"></a>TB \_ GetImageList-Nachricht
+# <a name="tb_getimagelist-message"></a>TB \_ GETIMAGELIST-Nachricht
 
-Ruft die Bildliste ab, die ein ToolBar-Steuerelement verwendet, um Schaltflächen im Standardzustand anzuzeigen. Ein Symbolleisten-Steuerelement verwendet diese Bildliste zum Anzeigen von Schaltflächen, wenn diese nicht heiß oder deaktiviert sind.
+Ruft die Bildliste ab, die ein Symbolleistensteuerelement verwendet, um Schaltflächen im Standardzustand anzuzeigen. Ein Symbolleistensteuerelement verwendet diese Bildliste, um Schaltflächen anzuzeigen, wenn sie nicht heiß oder deaktiviert sind.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Muss Null sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für die Bildliste zurück, oder **null** , wenn keine Bildliste festgelegt ist.
+Gibt das Handle für die Bildliste zurück, oder **NULL,** wenn keine Bildliste festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt das Handle für die Bildliste zurück, oder **null** , wenn keine Bildliste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

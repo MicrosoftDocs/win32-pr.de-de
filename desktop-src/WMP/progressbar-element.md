@@ -1,39 +1,39 @@
 ---
-title: ProgressBar-Element
-description: ProgressBar-Element
+title: PROGRESSBAR-Element
+description: PROGRESSBAR-Element
 ms.assetid: 1fd0a523-dadd-4cd8-829e-ac22847c97d4
 keywords:
-- Windows Media Player Skins, ProgressBar-Element
-- Skins, ProgressBar-Element
-- ProgressBar-Element
-- Verweis für Skins, ProgressBar-Element
-- Elemente, ProgressBar
+- Windows Media Player Skins, PROGRESSBAR-Element
+- skins,PROGRESSBAR-Element
+- PROGRESSBAR-Element
+- Referenz für Skins, PROGRESSBAR-Element
+- elements,PROGRESSBAR
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b386d55acbfe2d767c8bca5e608648b92d98fb50
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bc3f983a1938a605220cd110b267b97e805a06ba2c16a9778bae77ba918f02da
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901120"
 ---
-# <a name="progressbar-element"></a>ProgressBar-Element
+# <a name="progressbar-element"></a>PROGRESSBAR-Element
 
-Das **ProgressBar** -Element bietet eine Möglichkeit, Statusinformationen in einem horizontalen oder vertikalen Steuerelement anzuzeigen. Dieses Element ist mit dem **Slider** -Element identisch. Eine Statusanzeige ist normalerweise ein Schieberegler, der nicht interaktiv ist, aber es gibt nichts, was dazu führt, dass Sie nicht interaktiv verwendet werden kann. Dieses Element wird ausschließlich als benutzerfreundliche Kennung bereitgestellt, um die nicht Interaktivität im Code zu löschen, wenn Sie diese auf diese Weise verwenden möchten. Es hat keinen anderen Wert.
+Das **PROGRESSBAR-Element** bietet eine Möglichkeit, Statusinformationen in einem horizontalen oder vertikalen Steuerelement anzuzeigen. Dieses Element ist mit dem **SLIDER-Element** identisch. Eine Statusanzeige ist normalerweise ein Schieberegler, der nicht interaktiv ist, aber nichts verhindert, dass er interaktiv verwendet wird. Dieses Element wird ausschließlich als Komforttag bereitgestellt, um die Nichtinteraktivität im Code klar zu machen, wenn Sie es auf diese Weise verwenden möchten. Sie hat keinen anderen Wert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

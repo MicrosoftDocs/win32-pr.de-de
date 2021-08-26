@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatabaseinvalidpgesexception-Klasse'
-title: Esentdatabaseinvalidpgesexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentDatabaseInvalidPagesException-Klasse'
+title: EsentDatabaseInvalidPagesException-Klasse
 TOCTitle: EsentDatabaseInvalidPagesException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentDatabaseInvalidPagesException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatabaseinvalidpagesexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5725a20026aed8c7252218360d98ce6ce1f47a52
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e7372526f27386b2b83623dbbe721159ce08cffd537ad17888e671727a9e0b8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974720"
 ---
-# <a name="esentdatabaseinvalidpagesexception-class"></a>Esentdatabaseinvalidpgesexception-Klasse
+# <a name="esentdatabaseinvalidpagesexception-class"></a>EsentDatabaseInvalidPagesException-Klasse
 
-Basisklasse für JET_err. Databaseinvalidpages-Ausnahmen.
+Basisklasse für JET_err. DatabaseInvalidPages-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentusageexception](./esentusageexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentdatabaseinvalidpgesexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentUsageException](./esentusageexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentDatabaseInvalidPagesException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,8 +70,8 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatabaseinvalidpgesexception-Elemente](./esentdatabaseinvalidpagesexception-members.md)
+[EsentDatabaseInvalidPagesException-Member](./esentdatabaseinvalidpagesexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

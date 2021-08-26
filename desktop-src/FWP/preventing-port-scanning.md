@@ -1,19 +1,19 @@
 ---
-title: Verhindern der Port Überprüfung
-description: Der folgende Beispielcode zeigt, wie Sie die Port Überprüfung mithilfe von verdeckten verwerfen und automatischen Lösch Vorgängen verhindern können.
+title: Verhindern der Portprüfung
+description: Im folgenden Beispielcode wird veranschaulicht, wie Die Portscans mithilfe von verdeckten Verwerfen und automatischen Abbrüchen verhindert werden.
 ms.assetid: 9e8f0948-dc83-4e7c-9505-4dfeac8bbcb2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a16edc13375ffc7c996b4d76abe6a20d336855ed
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0e42efe9997587966b0e67eefb9021c46b640fa96fb1faa3828073e967248270
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037146"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900790"
 ---
-# <a name="preventing-port-scanning"></a>Verhindern der Port Überprüfung
+# <a name="preventing-port-scanning"></a>Verhindern der Portprüfung
 
-Im folgenden Beispielcode wird veranschaulicht, wie Sie die Port Überprüfung mithilfe von Geheimnis verwerfen und automatischen Lösch Vorgängen verhindern können.
+Im folgenden Beispielcode wird veranschaulicht, wie Portscans mithilfe von verdeckten Verwerfen und automatischen Abbrüchen verhindert werden.
 
 
 ```C++
@@ -135,12 +135,12 @@ CLEANUP:
 
 <dl> <dt>
 
-[**Filterbedingungen, die auf jeder Filter Ebene verfügbar sind**](filtering-conditions-available-at-each-filtering-layer.md)
+[**Filterbedingungen, die auf jeder Filterebene verfügbar sind**](filtering-conditions-available-at-each-filtering-layer.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

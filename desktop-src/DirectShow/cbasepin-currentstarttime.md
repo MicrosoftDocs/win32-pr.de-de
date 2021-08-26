@@ -1,7 +1,7 @@
 ---
-description: 'Die currentstarttime-Methode ruft die Segment Start Zeit ab, die von der cbasepin:: newsegment-Methode festgelegt wird.'
+description: Die CurrentStartTime-Methode ruft die Segmentstartzeit ab, die von der CBasePin::NewSegment-Methode festgelegt wird.
 ms.assetid: 6bf7407e-0b23-47cf-925e-3fed183c76fa
-title: Cbasepin. currentstarttime-Methode (amfilter. h)
+title: CBasePin.CurrentStartTime-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 5f413419992d66f8de3a28bb7e39368564ce0803
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c92355b397736b713fcf5fd09a61a130761a0cb954331b606ec1367fd65e6e20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119916740"
 ---
-# <a name="cbasepincurrentstarttime-method"></a>Cbasepin. currentstarttime-Methode
+# <a name="cbasepincurrentstarttime-method"></a>CBasePin.CurrentStartTime-Methode
 
-Die- `CurrentStartTime` Methode ruft die Segment Start Zeit ab, die von der [**cbasepin:: newsegment**](cbasepin-newsegment.md) -Methode festgelegt wird.
+Die `CurrentStartTime` -Methode ruft die Segmentstartzeit ab, die von der [**CBasePin::NewSegment-Methode festgelegt**](cbasepin-newsegment.md) wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert von [**cbasepin:: m \_ tSTART**](cbasepin-m-tstart.md)zurück.
+Gibt den Wert von [**CBasePin::m \_ tStart zurück.**](cbasepin-m-tstart.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt den Wert von [**cbasepin:: m \_ tSTART**](cbasepin-m-tstart.md)zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt den Wert von [**cbasepin:: m \_ tSTART**](cbasepin-m-tstart.md)zurück.
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

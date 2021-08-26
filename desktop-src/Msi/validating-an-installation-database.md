@@ -1,37 +1,37 @@
 ---
-description: Autoren von Installationspaketen sollten immer die Validierung Ihrer Pakete ausführen, bevor Sie versuchen, das Paket zum ersten Mal zu installieren, und die Überprüfung erneut ausführen, wenn Sie Änderungen am Paket vornehmen.
+description: Autoren von Installationspaketen sollten immer eine Überprüfung für ihre Pakete ausführen, bevor sie versuchen, das Paket zum ersten Mal zu installieren, und die Überprüfung bei jeder Änderung des Pakets erneut ausführen.
 ms.assetid: 1f16a349-4919-46d2-9b78-2533b8679a73
-title: Überprüfen einer Installations Datenbank
+title: Überprüfen einer Installationsdatenbank
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6db262a280afa1d9222696d40a6f5949d69ece0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d28d4d1937b5946d6c1df85a4c6c21ec8113ef6463b5aaad0e181f4bdc711e70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995820"
 ---
-# <a name="validating-an-installation-database"></a>Überprüfen einer Installations Datenbank
+# <a name="validating-an-installation-database"></a>Überprüfen einer Installationsdatenbank
 
-Autoren von Installationspaketen sollten immer die Validierung Ihrer Pakete ausführen, bevor Sie versuchen, das Paket zum ersten Mal zu installieren, und die Überprüfung erneut ausführen, wenn Sie Änderungen am Paket vornehmen. Die Validierung scannt die Datenbank auf Fehler, die möglicherweise einzeln angezeigt werden, aber ein falsches Verhalten im Kontext der gesamten Datenbank verursachen. Wenn Sie versuchen, ein Paket zu installieren, bei dem die Überprüfung nicht erfolgreich ist, können Sie das System Weitere Informationen finden Sie in den Abschnitten [Package Validation](package-validation.md) und [internal Konsistenz Evaluators-ICES](internal-consistency-evaluators-ices.md).
+Autoren von Installationspaketen sollten immer eine Überprüfung für ihre Pakete ausführen, bevor sie versuchen, das Paket zum ersten Mal zu installieren, und die Überprüfung bei jeder Änderung des Pakets erneut ausführen. Bei der Überprüfung wird die Datenbank auf Fehler überprüft, die möglicherweise einzeln gültig erscheinen, aber im Kontext der gesamten Datenbank ein falsches Verhalten verursachen. Der Versuch, ein Paket zu installieren, bei dem die Überprüfung fehlschlägt, kann das System des Benutzers beschädigen. Weitere Informationen finden Sie in [den Abschnitten Paketvalidierung](package-validation.md) und interne [Konsistenzauswertung – ICEs.](internal-consistency-evaluators-ices.md)
 
-Sie können das Beispiel Paket mit [Orca.exe](orca-exe.md) oder [Msival2.exe](msival2-exe.md)überprüfen. Zum Anzeigen der Hilfe für Msival2.exe wechseln Sie in die Befehlszeile, und geben Sie ein.
+Sie können das Beispielpaket [ mithilfe ](orca-exe.md) vonOrca.exe[ oder ](msival2-exe.md)Msival2.exe. Um die Hilfe zum Ändern Msival2.exe, und geben Sie in der Befehlszeile ein.
 
-Msival2 -?
+Ms luci2 -?
 
-Die CUB-Datei "Darice. Cub" enthält die benutzerdefinierten Ice-Aktionen, die Msival2.exe zum Durchführen der Validierung benötigt. So überprüfen Sie die MNP2000.msi EINGABETASTE
+Die CUB-Datei darice.cub enthält die benutzerdefinierten ICE-Aktionen, die von Msival2.exe Validierung benötigt werden. So überprüfen Sie die MNP2000.msi Eingabe
 
-msival2 MNP2000.msi Darice. Cub
+msiva2 MNP2000.msi Darice.cub
 
-Eine Beschreibung der von der Validierung zurückgegebenen Fehler-und Warnmeldungen finden Sie in der [Ice-Referenz](ice-reference.md). Korrigieren Sie alle Fehler im Paket, und führen Sie die Überprüfung nach Bedarf erneut aus, bis das Paket die Überprüfung ohne Fehler bestanden hat.
+Eine Beschreibung der von der Validierung zurückgegebenen Fehler- und Warnmeldungen finden Sie in der [ICE-Referenz.](ice-reference.md) Korrigieren Sie alle Fehler im Paket, und führen Sie die Überprüfung nach Bedarf erneut aus, bis das Paket die Überprüfung ohne Fehler besteht.
 
-Sobald das Paket die Überprüfung bestanden hat, können Sie das Beispiel Paket installieren, indem Sie auf das MNP2000.msi Symbol oder über die Befehlszeile mit den [Befehlszeilenoptionen](command-line-options.md)klicken.
+Sobald das Paket die Überprüfung besteht, können Sie das Beispielpaket installieren, indem Sie auf das Symbol MNP2000.msi klicken oder über die Befehlszeile mithilfe der [Befehlszeilenoptionen .](command-line-options.md)
 
-Dies schließt die Beispiel Installation ab.
+Dadurch wird die Beispielinstallation abgeschlossen.
 
 ## <a name="next-example"></a>Nächstes Beispiel
 
-[Ein upgradebeispiel](an-upgrade-example.md)
+[Ein Upgradebeispiel](an-upgrade-example.md)
 
  
 

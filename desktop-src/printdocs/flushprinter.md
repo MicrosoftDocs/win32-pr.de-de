@@ -1,7 +1,7 @@
 ---
-description: Die flushprinter-Funktion sendet einen Puffer an den Drucker, um ihn aus einem vorübergehenden Zustand zu löschen.
+description: Die FlushPrinter-Funktion sendet einen Puffer an den Drucker, um ihn aus einem vorübergehenden Zustand zu löschen.
 ms.assetid: 08e54175-da68-4ebd-91ec-8f4525f49d30
-title: Flushprinter-Funktion (winspool. h)
+title: FlushPrinter-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Winspool.drv
-ms.openlocfilehash: d46a4a8d7143e10fc13722d278ca21a0602b7f06
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 78bd5b6ccc86651a717c29db8b938508c857f83dbd3bdf5364fb1596b8a2c956
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119949300"
 ---
-# <a name="flushprinter-function"></a>Flushprinter-Funktion
+# <a name="flushprinter-function"></a>FlushPrinter-Funktion
 
-Die **flushprinter** -Funktion sendet einen Puffer an den Drucker, um ihn aus einem vorübergehenden Zustand zu löschen.
+Die **FlushPrinter-Funktion** sendet einen Puffer an den Drucker, um ihn aus einem vorübergehenden Zustand zu löschen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ BOOL FlushPrinter(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Drucker Objekt. Dabei sollte es sich um das gleiche Handle handeln, das in einem vorherigen [**Write-Printer**](writeprinter.md) -Befehl vom Druckertreiber verwendet wurde.
+Ein Handle für das Druckerobjekt. Dies sollte dasselbe Handle sein, das in einem vorherigen [**WritePrinter-Aufruf**](writeprinter.md) vom Druckertreiber verwendet wurde.
 
 </dd> <dt>
 
-*PBUF* \[ in\]
+*pBuf* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Bytearray, das die Daten enthält, die in den Drucker geschrieben werden sollen.
+Ein Zeiger auf ein Bytearray, das die auf den Drucker zu schreibenden Daten enthält.
 
 </dd> <dt>
 
-*cbbuf* \[ in\]
+*cbBuf* \[ In\]
 </dt> <dd>
 
-Die Größe (in Bytes) des Arrays, auf das von *PBUF* verwiesen wird.
+Die Größe des Arrays in Bytes, auf das *pBuf zeigt.*
 
 </dd> <dt>
 
-*pcwritten* \[ vorgenommen\]
+*pcWritten* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Wert, der die Anzahl der Daten Bytes empfängt, die an den Drucker geschrieben wurden.
+Ein Zeiger auf einen Wert, der die Anzahl der Bytes von Daten empfängt, die auf den Drucker geschrieben wurden.
 
 </dd> <dt>
 
-*csleep* \[ in\]
+*cSleep* \[ In\]
 </dt> <dd>
 
-Die Zeit (in Millisekunden), für die die e/a-Linie zum Druckerport im Leerlauf bleiben soll.
+Die Zeit in Millisekunden, für die die E/A-Leitung zum Druckerport im Leerlauf bleiben soll.
 
 </dd> </dl>
 
@@ -84,16 +84,16 @@ Wenn die Funktion erfolgreich ist, ist der Rückgabewert ungleich Null.
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-**Flushprinter** sollte nur aufgerufen werden, wenn bei " [**Write-Printer**](writeprinter.md) " ein Fehler aufgetreten ist, sodass der Drucker in einem vorübergehenden Zustand ist. Beispielsweise könnte der Drucker in einen vorübergehenden Zustand geraten, wenn der Auftrag abgebrochen wird, und der Druckertreiber hat einige Rohdaten teilweise an den Drucker gesendet.
+**FlushPrinter sollte nur** aufgerufen werden, [**wenn WritePrinter**](writeprinter.md) fehlgeschlagen ist und der Drucker in einem vorübergehenden Zustand ist. Beispielsweise kann der Drucker in einen vorübergehenden Zustand kommen, wenn der Auftrag abgebrochen wird und der Druckertreiber einige Rohdaten teilweise an den Drucker gesendet hat.
 
-**Flushprinter** kann auch einen Leerlauf Zeitraum angeben, in dem der Druck Spooler keine Aufträge für den entsprechenden Druckerport plant.
+**FlushPrinter kann** auch einen Leerlaufzeitraum angeben, in dem der Druckspooler keine Aufträge am entsprechenden Druckerport geplant.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,9 +103,9 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
 
 
 
@@ -119,7 +119,7 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die drawrechteck-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawRectangle-Methoden der Graphics-Klasse aufgeführt. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: 9ebd7158-26bd-447e-8351-4245e1098361
-title: Graphics. drawrechteck-Methoden
+title: Graphics.DrawRectangle-Methoden
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 79deca513e93970c138245060a676376e2008272
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27290109bf2ed6ef3ffda224e47be4746af0226583609574684e78a8bd30b2f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964760"
 ---
-# <a name="graphicsdrawrectangle-methods"></a>Graphics. drawrechteck-Methoden
+# <a name="graphicsdrawrectangle-methods"></a>Graphics.DrawRectangle-Methoden
 
-In diesem Thema werden die drawrechteck-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawRectangle-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgeführt. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Graphics**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,10 +21,10 @@ In diesem Thema werden die drawrechteck-Methoden der [**Grafik**](/windows/win32
 
 | Methode                                                                                                                                  | BESCHREIBUNG                                                                                                                                                     |
 |:----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Drawrechteck (Stift \* , Rect&)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inconstrect_))                                          | Die [**Grafik::D rawrechteck**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inconstrect_)) -Methode zeichnet ein Rechteck.<br/>                            |
-| [**Drawrechteck (Stift \* , RectF&)**](/previous-versions//ms536006(v=vs.85))                                        | Die [**Grafik::D rawrechteck**](/previous-versions//ms536006(v=vs.85)) -Methode zeichnet ein Rechteck.<br/>                           |
-| [**Drawrechteck (Stift \* , int, int, int, int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint))         | Die [**Grafik::D rawrechteck**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)) -Methode zeichnet ein Rechteck.<br/>     |
-| [**Drawrechteck (Stift \* , Real, Real, Real, Real)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inreal_inreal_inreal_inreal)) | Die [**Grafik::D rawrechteck**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inreal_inreal_inreal_inreal)) -Methode zeichnet ein Rechteck.<br/> |
+| [**DrawRectangle(Stift, \* Rect&)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inconstrect_))                                          | Die [**Graphics::D rawRectangle-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inconstrect_)) zeichnet ein Rechteck.<br/>                            |
+| [**DrawRectangle(Pen \* , RectF&)**](/previous-versions//ms536006(v=vs.85))                                        | Die [**Graphics::D rawRectangle-Methode**](/previous-versions//ms536006(v=vs.85)) zeichnet ein Rechteck.<br/>                           |
+| [**DrawRectangle(Pen \* ,INT,INT,INT,INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint))         | Die [**Graphics::D rawRectangle-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inint_inint_inint_inint)) zeichnet ein Rechteck.<br/>     |
+| [**DrawRectangle(Pen \* ,REAL,REAL,REAL,REAL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inreal_inreal_inreal_inreal)) | Die [**Graphics::D rawRectangle-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawrectangle(inconstpen_inreal_inreal_inreal_inreal)) zeichnet ein Rechteck.<br/> |
 
 
 

@@ -1,41 +1,41 @@
 ---
-description: Gibt den Bezeichner für das audioendpunkt-Gerät an.
+description: Gibt den Bezeichner für das Audioendpunktgerät an.
 ms.assetid: f145fb80-c136-421c-9a65-e69c52109348
-title: MF_AUDIO_RENDERER_ATTRIBUTE_ENDPOINT_ID-Attribut (mspdl. h)
+title: MF_AUDIO_RENDERER_ATTRIBUTE_ENDPOINT_ID-Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e042f59baf4812c177358acca6badb2422914afc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1dd99a42442342e25c748e12f8af84a03f2322b8c3dd24bb915b50b57952d65
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941130"
 ---
-# <a name="mf_audio_renderer_attribute_endpoint_id-attribute"></a>\_ \_ \_ \_ Attribut Endpunkt- \_ ID für MF-audiorenderer
+# <a name="mf_audio_renderer_attribute_endpoint_id-attribute"></a>MF \_ AUDIO \_ RENDERER ATTRIBUTE ENDPOINT \_ \_ \_ ID-Attribut
 
-Gibt den Bezeichner für das audioendpunkt-Gerät an.
+Gibt den Bezeichner für das Audioendpunktgerät an.
 
 ## <a name="data-type"></a>Datentyp
 
 Breitzeichenfolge
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können dieses Attribut verwenden, um den audiorenderer zu konfigurieren. Die Verwendung hängt von der Funktion ab, die Sie zum Erstellen des audiorenderers aufzurufen:
+Sie können dieses Attribut verwenden, um den Audiorenderer zu konfigurieren. Die Verwendung hängt davon ab, welche Funktion Sie aufrufen, um den Audiorenderer zu erstellen:
 
--   [**MF | ateaudiorenderer**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer): Legen Sie dieses Attribut mit dem im *paudioattribute* -Parameter angegebenen [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstellen Zeiger fest.
--   [**Mfkreateaudiorendereraktivierungs**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate): Legen Sie dieses Attribut mit dem [**imfaktivate**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) -Schnittstellen Zeiger fest, der im *ppaktivierungs* -Parameter abgerufen wurde. Legen Sie das-Attribut vor dem Aufrufen von [**imfaktivate:: activateobject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject)fest.
+-   [**MFCreateAudioRenderer:**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorenderer)Legen Sie dieses Attribut mithilfe des IM *pAudioAttributes-Parameter* [**angegebenen SCHNITTSTELLENzeigers "POINTERAttributes"**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) fest.
+-   [**MFCreateAudioRendererActivate:**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateaudiorendereractivate)Legen Sie dieses Attribut mithilfe des IM *ppActivate-Parameter* abgerufenen SCHNITTSTELLENzeigers [**VONACTIVATE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfactivate) fest. Legen Sie das -Attribut fest, bevor Sie [**DIE AKTIONACTIVATE::ActivateObject**](/windows/desktop/api/mfobjects/nf-mfobjects-imfactivate-activateobject)aufrufen.
 
-Bei einem audioendpunktgerät handelt es sich um ein Hardware Gerät, das sich an einem Ende eines audiodatenpfads befindet, z. b. ein Telefon oder ein Redner. Verwenden Sie zum Abrufen des audioendpunktbezeichners die folgenden kernaudioapis:
+Ein Audioendpunktgerät ist ein Hardwaregerät, das sich an einem Ende eines Audiodatenpfads befindet, z. B. einem Lautsprecher oder einem Lautsprecher. Verwenden Sie die folgenden Kernaudio-APIs, um die Audioendpunkt-ID abzurufen:
 
--   Verwenden Sie die [**immdeviceenumerator**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) -Schnittstelle, um die Geräte auf dem System aufzuzählen.
--   Bitten Sie [**immdevice:: GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) , um den Bezeichner für das Gerät abzurufen.
+-   Verwenden Sie die [**IMMDeviceEnumerator-Schnittstelle,**](/windows/win32/api/mmdeviceapi/nn-mmdeviceapi-immdeviceenumerator) um die Geräte auf dem System aufzulisten.
+-   Rufen Sie [**IMMDevice::GetId**](/windows/win32/api/mmdeviceapi/nf-mmdeviceapi-immdevice-getid) auf, um den Bezeichner für das Gerät abzurufen.
 
-Weitere Informationen finden Sie in der Dokumentation zur [kernton-](../coreaudio/core-audio-apis-in-windows-vista.md) API. Wenn dieses Attribut nicht festgelegt ist, verwendet der audiorenderer das standardend Punkt Gerät.
+Weitere Informationen finden Sie in der Dokumentation zur [Core Audio-API.](../coreaudio/core-audio-apis-in-windows-vista.md) Wenn dieses Attribut nicht festgelegt ist, verwendet der Audiorenderer das Standardendpunktgerät.
 
-Wenn dieses Attribut festgelegt ist, legen Sie das Attribut für die [**\_ \_ \_ \_ Endpunkt \_ Rolle für das MF-audiorenderer-Attribut**](mf-audio-renderer-attribute-endpoint-role-attribute.md) nicht fest. Wenn beide Attribute festgelegt sind, tritt ein Fehler auf, wenn der audiorenderer erstellt wird.
+Wenn dieses Attribut festgelegt ist, legen Sie das [**MF \_ AUDIO \_ RENDERER ATTRIBUTE ENDPOINT \_ \_ \_ ROLE-Attribut**](mf-audio-renderer-attribute-endpoint-role-attribute.md) nicht fest. Wenn beide Attribute festgelegt sind, tritt beim Erstellen des Audiorenderers ein Fehler auf.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
@@ -59,13 +59,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 [Audiorendererattribute](audio-renderer-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
+[**ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)
 </dt> <dt>
 
-[**Imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
+[**ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)
 </dt> <dt>
 
-[Streamingaudiorenderer](streaming-audio-renderer.md)
+[StreamingAudiorenderer](streaming-audio-renderer.md)
 </dt> </dl>
 
  

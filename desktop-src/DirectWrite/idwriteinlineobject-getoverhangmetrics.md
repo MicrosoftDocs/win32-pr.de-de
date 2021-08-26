@@ -1,11 +1,11 @@
 ---
-title: Idwrite teinlineobject gedeverhangmetrics-Methode
-description: Idwrite tetextlayout ruft diese Rückruffunktion auf, um die sichtbaren Blöcke (in Dips) des Inline Objekts abzurufen. Im Fall einer einfachen Bitmap ohne Auffüll-und nicht Überlastung werden alle Überhängen einfach als Nullen angezeigt.
+title: IDWriteInlineObject GetOverhangMetrics-Methode
+description: IDWriteTextLayout ruft diese Rückruffunktion auf, um die sichtbaren Erweiterungen (in DIPs) des Inlineobjekts abzurufen. Bei einer einfachen Bitmap ohne Auffüllung und ohne Überhänge sind alle Überhänge einfach Nullen.
 ms.assetid: b3b3e9f0-ee35-4117-9a62-a975c03b5ca9
 keywords:
-- Getverhangmetrics-Methode direkt schreiben
-- Getverhangmetrics-Methode Direct Write, idwrite teinlineobject-Schnittstelle
-- Idwrite teinlineobject Interface Direct Write, gedeverhangmetrics-Methode
+- GetOverhangMetrics-Methode Direct Write
+- GetOverhangMetrics-Methode Direct Write , IDWriteInlineObject-Schnittstelle
+- IDWriteInlineObject-Schnittstelle Direct Write , GetOverhangMetrics-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a0960f28394c5b55c3377136451a5c13748edc1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 011794fc3804435dd565a00035247436814c41474c60b66f90c5cb5d9594f6c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928150"
 ---
-# <a name="idwriteinlineobjectgetoverhangmetrics-method"></a>Idwrite teinlineobject:: gedeverhangmetrics-Methode
+# <a name="idwriteinlineobjectgetoverhangmetrics-method"></a>IDWriteInlineObject::GetOverhangMetrics-Methode
 
-[**Idwrite tetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) ruft diese Rückruffunktion auf, um die sichtbaren Blöcke (in Dips) des Inline Objekts abzurufen. Im Fall einer einfachen Bitmap ohne Auffüll-und nicht Überlastung werden alle Überhängen einfach als Nullen angezeigt.
+[**IDWriteTextLayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout) ruft diese Rückruffunktion auf, um die sichtbaren Erweiterungen (in DIPs) des Inlineobjekts abzurufen. Bei einer einfachen Bitmap ohne Auffüllung und ohne Überhänge sind alle Überhänge einfach Nullen.
 
-Die über schreibungen sollten relativ zur gemeldeten Größe des Objekts zurückgegeben werden (siehe [**dwrite- \_ Inline \_ \_ objektmetriken**](/windows/win32/api/dwrite/ns-dwrite-dwrite_inline_object_metrics)) und sollten nicht an die Baseline angepasst werden.
+Die Überhänge sollten relativ zur gemeldeten Größe des Objekts zurückgegeben werden (siehe [**DWRITE \_ INLINE \_ OBJECT \_ METRICS)**](/windows/win32/api/dwrite/ns-dwrite-dwrite_inline_object_metrics)und nicht baseline angepasst werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,12 +44,12 @@ virtual HRESULT GetOverhangMetrics(
 
 <dl> <dt>
 
-*überlastet* \[ vorgenommen\]
+*Überhänge* \[ out\]
 </dt> <dd>
 
-Typ: **[ **dwrite- \_ \_ overhängenmetriken**](/windows/win32/api/dwrite/ns-dwrite-dwrite_overhang_metrics)\***
+Typ: **[ **DWRITE \_ OVERHANG \_ METRICS**](/windows/win32/api/dwrite/ns-dwrite-dwrite_overhang_metrics)\***
 
-Überschreibung der sichtbaren Blöcke (in Dips) außerhalb des Objekts.
+Überschreitung von sichtbaren Erweiterungen (in DIPs) außerhalb des -Objekts.
 
 </dd> </dl>
 
@@ -57,7 +57,7 @@ Typ: **[ **dwrite- \_ \_ overhängenmetriken**](/windows/win32/api/dwrite/ns-dwr
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,7 +65,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
@@ -74,10 +74,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idwrite teinlineobject**](/windows/win32/api/dwrite/nn-dwrite-idwriteinlineobject)
+[**IDWriteInlineObject**](/windows/win32/api/dwrite/nn-dwrite-idwriteinlineobject)
 </dt> <dt>
 
-[**Idwrite teinlineobject**](/windows/win32/api/dwrite/nn-dwrite-idwriteinlineobject)
+[**IDWriteInlineObject**](/windows/win32/api/dwrite/nn-dwrite-idwriteinlineobject)
 </dt> </dl>
 
  

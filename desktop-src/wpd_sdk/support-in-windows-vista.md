@@ -4,46 +4,46 @@ ms.assetid: 4c6cf5b5-db6a-4da0-b9c3-8ddbc867f29b
 title: Unterstützung in Windows 7 und Windows Vista
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bdc433de74350b29881631241250ffd3832d521
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33da0a3be816b00c69349194a0e0b365afcf16ed35af7420c35104f4cd8cf034
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355319"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928041"
 ---
 # <a name="support-in-windows-7-and-windows-vista"></a>Unterstützung in Windows 7 und Windows Vista
 
-Für alle außer den N-SKUs von Windows 7 und Windows Vista wird die WPD-Laufzeit als Teil des Betriebssystems gebündelt.
+Für alle SKUs bis auf die N-SKUs von Windows 7 und Windows Vista wird die WPD-Runtime als Teil des Betriebssystems gebündelt.
 
-### <a name="suported-api-elements"></a>Unterstützte API-Elemente
+### <a name="suported-api-elements"></a>Suported-API-Elemente
 
-In der folgenden Tabelle sind die Features aufgeführt, die für Windows 7, Windows Vista und Windows Vista mit dem Platt Form Update unterstützt werden.
+In der folgenden Tabelle sind die Features aufgeführt, die für Windows 7, Windows Vista und Windows Vista mit dem Plattformupdate unterstützt werden.
 
 
 
-| Funktion                        | Windows 7 | Windows Vista | Windows Vista mit dem Platt Form Update |
+| Feature                        | Windows 7 | Windows Vista | Windows Vista mit dem Plattformupdate |
 |--------------------------------|-----------|---------------|----------------------------------------|
 | MTP über USB                   | Ja       | Ja           | Ja                                    |
 | MTP über IP                    | Ja       | Ja           | Ja                                    |
 | MTP über Bluetooth             | Ja       | Nein            | Ja                                    |
-| WPD-und MTP-Geräte Dienste    | Ja       | Nein            | Ja                                    |
-| WPD-Automatisierung                 | Ja       | Nein            | Nein                                     |
-| Multifunction/Multi-Transport | Ja       | Nein            | Nein                                     |
+| WPD- und MTP-Gerätedienste    | Ja       | Nein            | Ja                                    |
+| WPD Automation                 | Ja       | Nein            | Nein                                     |
+| Multifunktion/Multitransport | Ja       | Nein            | Nein                                     |
 | Device Stage                   | Ja       | Nein            | Nein                                     |
-| Plattform für Geräte Synchronisierung           | Ja       | Nein            | Nein                                     |
+| Gerätesynchronisierungsplattform           | Ja       | Nein            | Nein                                     |
 
 
 
  
 
-### <a name="the-platform-update-for-windows-vista"></a>Das Platt Form Update für Windows Vista
+### <a name="the-platform-update-for-windows-vista"></a>Das Plattformupdate für Windows Vista
 
-Das Platt Form Update für Windows Vista unterstützt die Windows 7-Erweiterungen für die Windows Portable Devices (WPD)-Plattform.
+Das Plattformupdate für Windows Vista unterstützt die Windows 7-Erweiterungen der WPD-Plattform (Windows Portable Devices).
 
-### <a name="windows-vista-n-and-kn-versions-require-installation-of-windows-media-format-11-sdk"></a>Für Windows Vista N-und KN-Versionen ist die Installation des Windows Media Format 11 SDK erforderlich.
+### <a name="windows-vista-n-and-kn-versions-require-installation-of-windows-media-format-11-sdk"></a>Windows Vista N- und KN-Versionen erfordern die Installation des Windows Media Format 11 SDK
 
--   Für Windows 7 N-und KN-Versionen müssen Sie das Windows Media Format 11 SDK installieren, um die WPD-Funktionalität zu aktivieren.
--   Für Windows Vista N-und KN-Versionen müssen Sie das Windows Media Format 11 SDK installieren, um die WPD-Funktionalität zu aktivieren.
+-   Für Windows 7 N- und KN-Versionen müssen Sie Windows Media Format 11 SDK installieren, um WPD-Funktionen zu aktivieren.
+-   Für Windows Vista N- und KN-Versionen müssen Sie Windows Media Format 11 SDK installieren, um WPD-Funktionen zu aktivieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

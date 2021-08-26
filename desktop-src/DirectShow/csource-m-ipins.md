@@ -1,7 +1,7 @@
 ---
-description: Anzahl der Pins für den Filter.
+description: Anzahl der Stecknadeln im Filter.
 ms.assetid: dcd3a240-beff-4481-8768-a0c0f69f0bfd
-title: 'CSource:: m_iPins Member (Quelle. h)'
+title: CSource::m_iPins-Member (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ce95af44b639b02095b6bae120bb23fd8a7d6bf9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c6a876637b3c4351d6f4ffa70c84b7d7f22f2c0b1c9f7587eee591bc9a458d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871380"
 ---
-# <a name="csourcem_ipins-member"></a>CSource:: m- \_ ipins-Member
+# <a name="csourcem_ipins-member"></a>CSource::m \_ iPins-Member
 
-Anzahl der Pins für den Filter.
+Anzahl der Stecknadeln im Filter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,12 +42,12 @@ int m_iPins;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,35 +1,35 @@
 ---
-description: Die "TAPI 3S Rendezvous API" ist eine Gruppe von Component Object Model Schnittstellen, die zum ankündigen und entdecken von Multimedia-Konferenzen mehrerer Parteien verwendet werden kann. Das folgende Material enthält Details zu den bereitgestellten Objekt Schnittstellen und Methoden.
+description: Die TAPI 3s Rendezvous-API ist eine Gruppe Component Object Model Schnittstellen, die verwendet werden können, um Multiparty-Multimediakonferenzen an- und zu entdecken. Das folgende Material enthält Details zu den bereitgestellten Objektschnittstellen und -methoden.
 ms.assetid: c39c548e-e6d8-4971-98e7-4aaec4f1b6a7
-title: Rendezvous Referenz zur IP-telefoniekonferenz
+title: Rendezvous IP-Telefoniekonferenzreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e17fb730bc31f9712188bb883f4933afdefaf9b4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8f68718b482ef0e2b5eb65bb5f553d4a8521733c3940cae825ac456da652a556
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034440"
 ---
-# <a name="rendezvous-ip-telephony-conferencing-reference"></a>Rendezvous Referenz zur IP-telefoniekonferenz
+# <a name="rendezvous-ip-telephony-conferencing-reference"></a>Rendezvous IP-Telefoniekonferenzreferenz
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die Rendezvous-API von TAPI 3 ist eine Gruppe von Component Object Model (com)-Schnittstellen, die zum ankündigen und entdecken von Multimedia-Konferenzen mehrerer Parteien verwendet werden kann. Das folgende Material enthält Details zu den bereitgestellten Objekten, Schnittstellen und Methoden.
+Die Rendezvous-API von TAPI 3 ist eine Gruppe von Component Object Model-Schnittstellen (COM), mit denen Multiparty-Multimediakonferenzen angekündigt und entdeckt werden können. Das folgende Material enthält Details zu den bereitgestellten Objekten, Schnittstellen und Methoden.
 
-TAPI 3 verwendet DirectShow-Filter und Filter-Manager, um den Mediendaten Strom nach dem Einrichten der Verbindung zu steuern. COM ist das grundlegende Codierungs Modell für TAPI 3, und es wird davon ausgegangen, dass es in diesem Dokument vertraut ist.
+TAPI 3 verwendet DirectShow-Filter und Filter-Manager, um den Medienstream nach dem Einrichten der Verbindung zu steuern. COM ist das grundlegende Codierungsmodell für TAPI 3, und in diesem Dokument wird davon ausgegangen, dass Sie damit vertraut sind.
 
-[Rendezvous com-Schnittstellen](rendezvous-com-interfaces.md)
+[Rendezvous-COM-Schnittstellen](rendezvous-com-interfaces.md)
 
 [Rendezvous-Enumerationen](rendezvous-enumerations.md)
 
-[Rendezvous-Konstanten](rendezvous-constants.md)
+[Rendezvouskonst constants (Rendezvouskonst constants)](rendezvous-constants.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[IP-Konferenz-msp](ipconf-msp.md)
+[IP Conference MSP](ipconf-msp.md)
 </dt> </dl>
 
  

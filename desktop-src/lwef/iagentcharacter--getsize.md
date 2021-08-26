@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter GetSize
-description: Iagentcharacter GetSize
+title: IAgentCharacter GetSize
+description: IAgentCharacter GetSize
 ms.assetid: bc2d6fe4-5945-4a35-b603-409c66f8aa2a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e40c219cd0a1dc1d11738149ca7cfd9869fe682e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5af078eb9980399793e00f8bd3deaefef7f048a900423c1ee50ac8d4f4a310b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962230"
 ---
-# <a name="iagentcharactergetsize"></a>Iagentcharacter:: GetSize
+# <a name="iagentcharactergetsize"></a>IAgentCharacter::GetSize
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetSize(
@@ -22,36 +22,36 @@ HRESULT GetSize(
 );
 ```
 
-Ruft die Größe des Animations Rahmens des Zeichens ab.
+Ruft die Größe des Animationsrahmens des Zeichens ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="plWidth"></span><span id="plwidth"></span><span id="PLWIDTH"></span>*plwidth*
+<span id="plWidth"></span><span id="plwidth"></span><span id="PLWIDTH"></span>*plWidth*
 </dt> <dd>
 
-Die Adresse einer Variablen, die die Breite des Zeichen Animations Rahmens in Pixel relativ zum Bildschirm Ursprung (oben links) empfängt.
+Adresse einer Variablen, die die Breite des Zeichenanimationsframes in Pixel relativ zum Bildschirmursprung (oben links) empfängt.
 
 </dd> <dt>
 
-<span id="plHeight"></span><span id="plheight"></span><span id="PLHEIGHT"></span>*plheight*
+<span id="plHeight"></span><span id="plheight"></span><span id="PLHEIGHT"></span>*plHeight*
 </dt> <dd>
 
-Die Adresse einer Variablen, die die Höhe des Zeichen Animations Rahmens in Pixel relativ zum Bildschirm Ursprung (oben links) empfängt.
+Adresse einer Variablen, die die Höhe des Zeichenanimationsframes in Pixel relativ zum Bildschirmursprung (oben links) empfängt.
 
 </dd> </dl>
 
-Obwohl das Zeichen in einem unregelmäßig formatierte Regions Fenster angezeigt wird, basiert der Speicherort des Zeichens auf seinem rechteckigen Animations Rahmen.
+Obwohl das Zeichen in einem unregelmäßig formten Bereichsfenster angezeigt wird, basiert die Position des Zeichens auf seinem rechteckigen Animationsrahmen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: SetSize**](iagentcharacter--setsize.md)
+[**IAgentCharacter::SetSize**](iagentcharacter--setsize.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

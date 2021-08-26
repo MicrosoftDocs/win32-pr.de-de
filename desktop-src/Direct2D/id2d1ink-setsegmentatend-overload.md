@@ -1,9 +1,9 @@
 ---
-title: ID2D1Ink setsegmentatend-Methode (D2d1 \_ 3. h)
-description: Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs Punkten.
+title: ID2D1Ink SetSegmentAtEnd-Methoden (D2d1 \_ 3.h)
+description: Aktualisiert das letzte Segment in diesem Ink-Objekt mit neuen Kontrollpunkten.
 ms.assetid: d2901735-724d-502b-bc2e-dc030f8be4fe
 keywords:
-- Setsegmentatend-Methoden Direct2D
+- SetSegmentAtEnd-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 6aa33e75feebe1e8ab71605fcd71c3ce7fe71471
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7ee9dc23607a2ee64220889fe98c571b62ec7aca18ad3e65726503069c72b20c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119917529"
 ---
-# <a name="id2d1inksetsegmentatend-methods"></a>ID2D1Ink:: setsegmentatend-Methoden
+# <a name="id2d1inksetsegmentatend-methods"></a>ID2D1Ink::SetSegmentAtEnd-Methoden
 
-Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs Punkten.
+Aktualisiert das letzte Segment in diesem Ink-Objekt mit neuen Kontrollpunkten.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs 
 
 | Methode                                                                              | BESCHREIBUNG                                                                     |
 |:------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
-| [**Setsegmentatend (D2D1 \_ Ink \_ Bezier- \_ Segment \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setsegmentatend(constd2d1_ink_bezier_segment))  | Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs Punkten.<br/> |
-| [**Setsegmentatend (D2D1 \_ Ink \_ Bezier- \_ Segment&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setsegmentatend(constd2d1_ink_bezier_segment_)) | Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs Punkten.<br/> |
+| [**SetSegmentAtEnd (D2D1 \_ INK \_ BEZIER \_ SEGMENT \* )**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setsegmentatend(constd2d1_ink_bezier_segment))  | Aktualisiert das letzte Segment in diesem Ink-Objekt mit neuen Kontrollpunkten.<br/> |
+| [**SetSegmentAtEnd (D2D1 \_ INK \_ BEZIER \_ SEGMENT&)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1ink-setsegmentatend(constd2d1_ink_bezier_segment_)) | Aktualisiert das letzte Segment in diesem Ink-Objekt mit neuen Kontrollpunkten.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Aktualisiert das letzte Segment in diesem frei Hand Objekt mit neuen Steuerungs 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1 \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1 \_ 3.h</dt> </dl> |
 
 
 

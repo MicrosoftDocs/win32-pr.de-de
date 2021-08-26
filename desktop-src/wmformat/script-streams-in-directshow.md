@@ -1,33 +1,33 @@
 ---
-title: Skripterstellung für Datenströme in DirectShow
-description: Skripterstellung für Datenströme in DirectShow
+title: Skript Streams in DirectShow
+description: Skript Streams in DirectShow
 ms.assetid: ad467897-1d25-4bb0-a0ec-84560fe7063b
 keywords:
-- Windows Media-Format-SDK, DirectShow
-- Windows Media-Format-SDK, Skript Datenströme
-- Advanced Systems Format (ASF), DirectShow
+- Windows Medienformat-SDK, DirectShow
+- Windows Medienformat-SDK, Skriptstreams
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- Advanced Systems Format (ASF), Skript Datenströme
-- ASF (Advanced Systems Format), Skript Datenströme
-- DirectShow, Skript Datenströme
-- Skript Datenströme, DirectShow
-- Streams, Skript Datenströme in DirectShow
+- Advanced Systems Format (ASF), Skriptstreams
+- ASF (Advanced Systems Format), Skriptstreams
+- DirectShow,Skriptstreams
+- Skriptstreams,DirectShow
+- Streams,Skriptstreams in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09f08fab54dbdfe61dcc2ce78790cd471985cdeb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e30e832928b84ab0e1e755dcfdb8c79893c5d942e15e4beb9925f852251614bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311159"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929619"
 ---
-# <a name="script-streams-in-directshow"></a>Skripterstellung für Datenströme in DirectShow
+# <a name="script-streams-in-directshow"></a>Skript Streams in DirectShow
 
-Wenn der WM-ASF-Reader-Filter eine Datei erhält, die einen Datenstrom des Typs wmmediatype- \_ Skript enthält, erstellt er eine Ausgabepin für diese, die mit dem Editor für den Renderer des internen Skript Befehls von DirectShow verbunden werden kann. Beim Aufruf von **igraphbuilder:: RenderFile** wird dieser Filter automatisch dem Diagramm hinzugefügt und verbunden. Wenn der Renderer des internen Skript Befehls ein Beispiel mit einem Skript Befehl empfängt, löst es ein **EC- \_ OLE- \_ Ereignis** aus, dessen **LPARAM** das Skript enthält. Die Anwendung ist vollständig für die Behandlung dieses Ereignisses verantwortlich. Weitere Informationen zu **EC- \_ OLE- \_ Ereignissen** finden Sie in der DirectShow-SDK-Dokumentation.
+Wenn der WM ASF-Readerfilter eine Datei erhält, die einen Stream vom Typ WMMEDIATYPE Script enthält, erstellt er einen Ausgabepin dafür, der mit dem \_ DirectShow Internal Script Command Renderer-Filter verbunden werden kann. Wenn Sie **IGraphBuilder::RenderFile** aufrufen, wird dieser Filter automatisch dem Diagramm hinzugefügt und verbunden. Wenn der Renderer für interne Skriptbefehle ein Beispiel empfängt, das einen Skriptbefehl enthält, wird ein **EC \_ OLE \_ EVENT-Ereignis** mit **dem LParam-Skript** ausgeführt. Die Anwendung ist vollständig für die Behandlung dieses Ereignisses verantwortlich. Weitere Informationen zu **EC OLE EVENT finden \_ \_ Sie** in der DirectShow SDK-Dokumentation.
 
- 
+ 
 
- 
+ 
 
 
 

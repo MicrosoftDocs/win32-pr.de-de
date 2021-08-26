@@ -1,7 +1,7 @@
 ---
-description: Ruft das ianalysiswarning-Objekt am angegebenen Index ab.
+description: Ruft das IAnalysisWarning-Objekt am angegebenen Index ab.
 ms.assetid: 8f5d5642-73ec-496e-bad7-9f636fc00217
-title: 'Ianalysiswarning:: getanalysiswarning-Methode (iacom. h)'
+title: IAnalysisWarnings::GetAnalysisWarning-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 88ed3686ecf3861a2b097ebfc005214ab0cdd1c0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16a2f59482f7fb2250bf60c052ccd3963fd86f1daba8d25acc9b342a5d2c984c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935450"
 ---
-# <a name="ianalysiswarningsgetanalysiswarning-method"></a>Ianalysiswarning:: getanalysiswarning-Methode
+# <a name="ianalysiswarningsgetanalysiswarning-method"></a>IAnalysisWarnings::GetAnalysisWarning-Methode
 
-Ruft das [**ianalysiswarning**](ianalysiswarning.md) -Objekt am angegebenen Index ab.
+Ruft das [**IAnalysisWarning-Objekt**](ianalysiswarning.md) am angegebenen Index ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,34 +40,34 @@ HRESULT GetAnalysisWarning(
 
 <dl> <dt>
 
-*ulindex* \[ in\]
+*ulIndex* \[ In\]
 </dt> <dd>
 
-Der null basierte Index des abzurufenden [**ianalysiswarning**](ianalysiswarning.md) -Objekts.
+Der nullbasierte Index des [**abzurufenden IAnalysisWarning-Objekts.**](ianalysiswarning.md)
 
 </dd> <dt>
 
-*ppwarning* \[ vorgenommen\]
+*ppWarning* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das [**ianalysiswarning**](ianalysiswarning.md) -Objekt am angegebenen Index.
+Ein Zeiger auf das [**IAnalysisWarning-Objekt**](ianalysiswarning.md) am angegebenen Index.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) bei \* *ppwarning* , wenn Sie die Warnung nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppWarning* auf, wenn Sie die Warnung nicht mehr verwenden müssen.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt eine Gliederung eines Ereignis Handlers für das [**\_ ianalysil Vents:: results**](-ianalysisevents-results.md) -Ereignis. Der Handler überprüft [**ianalysisstatus:: iserfolg**](ianalysisstatus-issuccessful.md). Wenn der Analyse Vorgang Warnungen generiert, durchläuft der Handler die Auflistung von [**ianalysiswarning**](ianalysiswarning.md) -Objekten.
+Das folgende Beispiel zeigt eine Gliederung eines Ereignishandlers für das [**\_ IAnalysisEvents::Results-Ereignis.**](-ianalysisevents-results.md) Der Handler überprüft [**IAnalysisStatus::IsSuccessful**](ianalysisstatus-issuccessful.md). Wenn der Analysevorgang Warnungen generiert, durchläuft der Handler die Auflistung der [**IAnalysisWarning-Objekte.**](ianalysiswarning.md)
 
 
 ```C++
@@ -154,9 +154,9 @@ STDMETHODIMP CMyClass::Results(
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -165,10 +165,10 @@ STDMETHODIMP CMyClass::Results(
 
 <dl> <dt>
 
-[**Ianalysiswarning**](ianalysiswarnings.md)
+[**IAnalysisWarnings**](ianalysiswarnings.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

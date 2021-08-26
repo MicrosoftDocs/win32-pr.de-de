@@ -1,9 +1,9 @@
 ---
-title: IDWriteFactory4 computeglyphorigins-Methoden (dwrite \_ 3. h)
-description: Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge.
+title: IDWriteFactory4 ComputeGlyphOrigins-Methoden (Dwrite \_ 3.h)
+description: Konvertiert Platzierungen von Glyphenlaufs in Glyphen-Ursprünge.
 ms.assetid: 4cfe6667-f2ca-0cb7-8429-6050bf4fddb3
 keywords:
-- Computeglyphorigins-Methoden direktes Schreiben
+- ComputeGlyphOrigins-Methoden – Direkter Schreibzugriff
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: e10e0ca0b0d8ec3b2cc3aba7fdf07c19a3057c08
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 85772aa5cc05cc315f8f0238a2eb0bac8318dca61afcfcde900a7d7cfc78607b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902790"
 ---
-# <a name="idwritefactory4computeglyphorigins-methods"></a>IDWriteFactory4:: computeglyphorigins-Methoden
+# <a name="idwritefactory4computeglyphorigins-methods"></a>IDWriteFactory4::ComputeGlyphOrigins-Methoden
 
-Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge.
+Konvertiert Platzierungen von Glyphenlaufs in Glyphen-Ursprünge.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge.
 
 | Methode                                                                                                                                                              | BESCHREIBUNG                                                                                                                                                        |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Computeglyphorigins (dwrite- \_ Glyphe \_ ausführen, dwrite- \_ \_ Messmodus, D2D1 \_ Point \_ 2F, dwrite \_ Matrix, D2D1 \_ Point \_ 2f \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-computeglyphorigins(dwrite_glyph_runconst_d2d1_point_2f_d2d1_point_2f)) | Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge.<br/>                                                                                                         |
-| [**Computeglyphorigins (dwrite- \_ Glyphe \_ Run, D2D1 \_ Point \_ 2F, D2D1 \_ Point \_ 2f \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-computeglyphorigins(dwrite_glyph_runconst_d2d1_point_2f_d2d1_point_2f))                                        | Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge. Diese Überladung bezieht sich auf natürliche Metriken, die SVG, den natürlichen Modus TrueType und die Bitmap-Platzierung enthalten.<br/> |
+| [**ComputeGlyphOrigins(DWRITE \_ GLYPH \_ RUN, DWRITE \_ MEASURING \_ MODE, D2D1 \_ POINT \_ 2F, DWRITE \_ MATRIX, D2D1 \_ POINT \_ 2F \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-computeglyphorigins(dwrite_glyph_runconst_d2d1_point_2f_d2d1_point_2f)) | Konvertiert Platzierungen von Glyphenlaufs in Glyphen-Ursprünge.<br/>                                                                                                         |
+| [**ComputeGlyphOrigins(DWRITE \_ GLYPH \_ RUN, D2D1 \_ POINT \_ 2F, D2D1 \_ POINT \_ 2F \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory4-computeglyphorigins(dwrite_glyph_runconst_d2d1_point_2f_d2d1_point_2f))                                        | Konvertiert Platzierungen von Glyphenlaufs in Glyphen-Ursprünge. Diese Überladung ist für natürliche Metriken, einschließlich der natürlichen Modi SVG, TrueType und Bitmapplatzierung.<br/> |
 
 
 
@@ -40,7 +40,7 @@ Konvertiert das Symbol für die Platzierung von Symbolen in Symbol Ursprünge.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dwrite \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dwrite \_ 3.h</dt> </dl> |
 
 
 

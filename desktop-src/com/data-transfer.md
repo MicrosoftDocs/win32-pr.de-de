@@ -4,22 +4,22 @@ description: Datenübertragung
 ms.assetid: 26b16438-f940-4086-869e-74021ed00b1e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37dee268b99f205e0093288f6980c8425220a45b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c98e7f546cab245e1f2d2d06036379ea5b28526edcf42aa8a364ea04688db034
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119993488"
 ---
 # <a name="data-transfer"></a>Datenübertragung
 
-Der Component Object Model (com) stellt einen Standardmechanismus zum Übertragen von Daten zwischen Anwendungen bereit. Dieser Mechanismus ist das *Datenobjekt*, bei dem es sich einfach um beliebige com-Objekte handelt, die die [**IDataObject**](/windows/desktop/api/ObjIdl/nn-objidl-idataobject) -Schnittstelle implementieren. Einige Datenobjekte, z. b. ein Text, der in die Zwischenablage kopiert wurde, haben **IDataObject** als einzige Schnittstelle. Andere, wie z. b. Verbund Dokument Objekte, machen mehrere Schnittstellen verfügbar, von denen **IDataObject** einfach eins ist. Datenobjekte sind für die Arbeit von Verbund Dokumenten von grundlegender Bedeutung, auch wenn Sie über eine weit verbreitete Anwendung außerhalb der OLE-Technologie verfügen.
+Das Component Object Model (COM) bietet einen Standardmechanismus zum Übertragen von Daten zwischen Anwendungen. Dieser Mechanismus ist das *Datenobjekt,* bei dem es sich einfach um ein beliebiges COM-Objekt handelt, das die [**IDataObject-Schnittstelle**](/windows/desktop/api/ObjIdl/nn-objidl-idataobject) implementiert. Einige Datenobjekte, z. B. ein text-Element, das in die Zwischenablage kopiert wird, haben **IDataObject** als einzige Schnittstelle. Andere, z. B. zusammengesetzte Dokumentobjekte, machen mehrere Schnittstellen verfügbar, von denen **IDataObject einfach** eine ist. Datenobjekte sind für die Arbeit von Verbunddokumenten von grundlegender Bedeutung, obwohl sie auch außerhalb dieser OLE-Technologie weit verbreitet sind.
 
-Durch Austauschen von Zeigern auf ein Datenobjekt können Anbieter und Consumer von Daten Datenübertragungen auf einheitliche Weise verwalten, unabhängig vom Format der Daten, dem Medientyp, der zum Übertragen der Daten verwendet wird, oder dem Zielgerät, auf dem Sie gerendert werden soll. Sie können Unterstützung für grundlegende Übertragungen der Zwischenablage, Drag & Drop-Übertragungen und OLE-Verbund Dokument Übertragungen mit einer einzelnen Implementierung von [**IDataObject**](/windows/desktop/api/ObjIdl/nn-objidl-idataobject)einschließen. Wenn dies der Fall ist, ist die Menge an Code, die für die besondere Semantik der einzelnen Protokolle erforderlich ist, minimal.
+Durch den Austausch von Zeigern auf ein Datenobjekt können Anbieter und Verbraucher von Daten Datenübertragungen auf einheitliche Weise verwalten, unabhängig vom Format der Daten, dem Typ des Mediums, das zum Übertragen der Daten verwendet wird, oder dem Zielgerät, auf dem sie gerendert werden sollen. You can include support in your application for basic clipboard transfers, drag and drop transfers, and OLE compound document transfers with a single implementation of [**IDataObject**](/windows/desktop/api/ObjIdl/nn-objidl-idataobject). Wenn dies erfolgt ist, ist die Menge an Code, die erforderlich ist, um die spezielle Semantik der einzelnen Protokolle zu unterstützen, minimal.
 
-Weitere Informationen finden Sie unter den folgenden Themen:
+Weitere Informationen finden Sie in den folgenden Themen:
 
--   [Datenübertragung Schnittstellen](data-transfer-interfaces.md)
+-   [Datenübertragungsschnittstellen](data-transfer-interfaces.md)
 -   [Datenformate und Übertragungsmedien](data-formats-and-transfer-media.md)
 -   [Drag &amp; Drop](drag-and-drop.md)
 
@@ -27,12 +27,12 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 <dl> <dt>
 
-[Verbund Dokumente](compound-documents.md)
+[Verbunddokumente](compound-documents.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

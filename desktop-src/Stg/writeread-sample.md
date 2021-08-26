@@ -1,21 +1,21 @@
 ---
-title: Beschreibead-Beispiel
-description: Durch die Datei "schreibead. cpp" wird ein Eigenschaften Satz erstellt, eine Eigenschaft geschrieben, der Eigenschaften Satz geschlossen und wieder geöffnet, und die Eigenschaft wird gelesen.
+title: WriteRead-Beispiel
+description: WriteRead.cpp erstellt einen Eigenschaftensatz, schreibt eine Eigenschaft, schließt und öffnet den Eigenschaftensatz erneut und liest die Eigenschaft zurück.
 ms.assetid: c5807dd9-2928-497b-9446-729dcaeebc8a
 keywords:
-- Strukturierter Speicherplatz Halter-STG, Beispiele, beschreibead
+- Structured Storage Strctd Stg , samples, WriteRead
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 362af8665f56e1dc8d7909fb1363e3e0ee7a8136
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f8d869076635904ab61dcf3f210cf5e3cb96308a3e6ce20090dbd227e1f4e34d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034740"
 ---
-# <a name="writeread-sample"></a>Beschreibead-Beispiel
+# <a name="writeread-sample"></a>WriteRead-Beispiel
 
-Durch die Datei "schreibead. cpp" wird ein Eigenschaften Satz erstellt, eine Eigenschaft geschrieben, der Eigenschaften Satz geschlossen und wieder geöffnet, und die Eigenschaft wird gelesen. Diese Beispielanwendung erstellt die Datei "schreiteread. STG" im aktuellen Verzeichnis. Es werden Eigenschafts Sätze in einer Struktur Speicherdatei erstellt, aber eine einzeilige Änderung bewirkt, dass die Eigenschaften Sätze des NTFS-Dateisystems erstellt werden.
+WriteRead.cpp erstellt einen Eigenschaftensatz, schreibt eine Eigenschaft, schließt und öffnet den Eigenschaftensatz erneut und liest die Eigenschaft zurück. Diese Beispielanwendung erstellt die Datei "WriteRead.stg" im aktuellen Verzeichnis. Sie erstellt Eigenschaftensätze in einer Strukturspeicherdatei, aber eine einzeilenbasierte Änderung führt dazu, dass NTFS-Dateisystem-Eigenschaftensätze erstellt werden.
 
 
 ```C++
@@ -168,9 +168,9 @@ EXTERN_C void wmain()
 
 
 
- 
+ 
 
- 
+ 
 
 
 

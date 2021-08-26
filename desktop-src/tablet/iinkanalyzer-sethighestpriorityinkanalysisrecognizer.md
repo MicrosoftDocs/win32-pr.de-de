@@ -1,7 +1,7 @@
 ---
-description: Verschiebt den angegebenen iinkanalysiserkenzer an die erste Position in der Liste der frei Hand erkenungen des iinkanalyzer-Objekts.
+description: Verschiebt den angegebenen IInkAnalysisRecognizer an die erste Position in der Liste der Freihanderkennungen des IInkAnalyzer-Objekts.
 ms.assetid: 9126187f-02dd-4988-91b8-c4f3d3b6f773
-title: 'Iinkanalyzer:: sethighestpriorityinkanalysiserkenzer-Methode (iacom. h)'
+title: IInkAnalyzer::SetHighestPriorityInkAnalysisRecognizer-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 534b94e4f2964aa81f04e0adac6f45f346c530c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8404a2e1e89980ce5e8cadac1a468b3383d37d4952349f3702539975a304ac92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119935210"
 ---
-# <a name="iinkanalyzersethighestpriorityinkanalysisrecognizer-method"></a>Iinkanalyzer:: sethighestpriorityinkanalysiserkenzer-Methode
+# <a name="iinkanalyzersethighestpriorityinkanalysisrecognizer-method"></a>IInkAnalyzer::SetHighestPriorityInkAnalysisRecognizer-Methode
 
-Verschiebt den angegebenen [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) an die erste Position in der Liste der frei Hand erkenungen des [**iinkanalyzer**](iinkanalyzer.md) -Objekts.
+Verschiebt den angegebenen [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) an die erste Position in der Liste der Freihanderkennungen des [**IInkAnalyzer-Objekts.**](iinkanalyzer.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,30 +39,30 @@ HRESULT SetHighestPriorityInkAnalysisRecognizer(
 
 <dl> <dt>
 
-*pinkanalysiserkenzer* \[ in\]
+*pInkAnalysisRecognizer* \[ In\]
 </dt> <dd>
 
-Der [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) , der an der ersten Position platziert werden soll.
+Der [**IInkAnalysisRecognizer,**](iinkanalysisrecognizer.md) der an der ersten Position positioniert werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Liste der frei Hand erkenungen in der Reihenfolge der Priorität abzurufen, wenden Sie sich an die [**iinkanalyzer:: getinkanalysiserkenzersbypriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md).
+Rufen Sie die [**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)auf, um die Liste der Freihanderkennungen in der Prioritätsreihenfolge abzurufen.
 
-Diese Methode wirkt sich nicht auf die Reihenfolge der restlichen [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) -Objekte in der Liste der frei Hand erkenungen des [**iinkanalyzer**](iinkanalyzer.md) -Objekts aus.
+Diese Methode wirkt sich nicht auf die Reihenfolge der restlichen [**IInkAnalysisRecognizer-Objekte**](iinkanalysisrecognizer.md) in der Liste der Freihanderkennungen des [**IInkAnalyzer-Objekts**](iinkanalyzer.md) aus.
 
-Die Reihenfolge der von der [**iinkanalyzer:: getinkanalysiserkenzersbypriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md) zurückgegebenen Handschrift erkenungen gibt die Reihenfolge an, in der [**iinkanalyzer**](iinkanalyzer.md) die verfügbaren [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) -Objekte auswertet.
+Die Reihenfolge der Freihanderkennungen, die von der [**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md) zurückgegeben werden, gibt die Reihenfolge an, in der [**IInkAnalyzer**](iinkanalyzer.md) die verfügbaren [**IInkAnalysisRecognizer-Objekte**](iinkanalysisrecognizer.md) auswertet.
 
-Die Verwendung der frei Hand erkenungen wird basierend auf ihrer Reihenfolge in der Liste ausgewertet.
+Die Verwendung der Ink-Erkennungen wird basierend auf ihrer Reihenfolge in der Liste ausgewertet.
 
-Während der Handschrift Analyse durchläuft [**iinkanalyzer**](iinkanalyzer.md) die frei Hand erkenungen in der Liste, bis eine Erkennung gefunden wird, die die Sprache und andere Eigenschaften der Striche unterstützt. Diese Erkennung wird zur frei Handerkennung für diese Striche verwendet.
+Während der Freihandanalyse durchläuft [**der IInkAnalyzer**](iinkanalyzer.md) die Freihanderkennungen in seiner Liste, bis er eine Erkennung findet, die die Sprache und andere Eigenschaften der Striche unterstützt. Diese Erkennung wird für die Erkennung von Ink für diese Striche verwendet.
 
-Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen [**iinkanalysiserkenzer**](iinkanalysisrecognizer.md) findet, der einen Satz von Strichen während der Analyse unterstützt, generiert **iinkanalyzer** eine [**ianalysiswarning**](ianalysiswarning.md) mit dem Warnungs Code **AnalysisWarningCode \_ inkanalysiserkenzernotinstallierte** (siehe [**ianalysiswarning:: getwarningcode**](ianalysiswarning-getwarningcode.md)).
+Wenn [**IInkAnalyzer**](iinkanalyzer.md) während der Analyse keinen [**IInkAnalysisRecognizer**](iinkanalysisrecognizer.md) findet, der eine Reihe von Strichen während der Analyse unterstützt, generiert **IInkAnalyzer** eine [**IAnalysisWarning**](ianalysiswarning.md) mit dem Warnungscode **AnalysisWarningCode \_ InkAnalysisRecognizerNotInstalled** (siehe [**IAnalysisWarning::GetWarningCode**](ianalysiswarning-getwarningcode.md)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,9 +70,9 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen [**iinkanalysiserkenzer**](iinka
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -81,19 +81,19 @@ Wenn [**iinkanalyzer**](iinkanalyzer.md) keinen [**iinkanalysiserkenzer**](iinka
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getinkanalysiserkenzersbypriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)
+[**IInkAnalyzer::GetInkAnalysisRecognizersByPriority-Methode**](iinkanalyzer-getinkanalysisrecognizersbypriority.md)
 </dt> <dt>
 
-[**Iinkanalysiserkenzers**](iinkanalysisrecognizers.md)
+[**IInkAnalysisRecognizers**](iinkanalysisrecognizers.md)
 </dt> <dt>
 
-[**Ianalysiswarning**](ianalysiswarning.md)
+[**IAnalysisWarning**](ianalysiswarning.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

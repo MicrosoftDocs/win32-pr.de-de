@@ -1,42 +1,42 @@
 ---
-description: 'In der folgenden Tabelle wird beschrieben, in welchen Threads die InkCollector-Objekt Ereignisse ausgelöst werden können. Eventthreadscursorbuttondowntriggers im frei Hand Thread. Cursor Cursor im frei Hand Thread. Cursor downtriggers im frei Hand Thread. "Cursor" für den frei Hand Thread. Cursor auslösen im frei Hand Thread. DoubleClick-Ereignis (nur Automatisierung). Wird im Benutzeroberflächen Thread der Anwendung ausgelöst. DoubleClick (nur verwaltete Bibliothek) wird im UI-Thread der Anwendung ausgelöst. Gesturelöst im frei Hand Thread aus. Mousedowntriggers im UI-Thread der Anwendung. Mousemuveauslöst im UI-Thread der Anwendung. Mouseupauslöst im UI-Thread der Anwendung. Mousewheeltriggers im UI-Thread der Anwendung. "Netwinairpackettriggers" im frei Hand Thread. Newpacketauslöst im frei Hand Thread. Strokefires auf der frei Hand thread.Systemgesturetriggers im frei Hand Thread. Tabletaddedfires im frei Hand Thread. Tabletremuvedfires im frei Hand Thread. '
+description: 'In der folgenden Tabelle wird beschrieben, für welche Threads die InkCollector-Objektereignisse ausgelöst werden können. EventThreadsCursorButtonDownFires für den Ink-Thread. CursorButtonUpFires für den Ink-Thread. CursorDownFires für den Ink-Thread. CursorInRangeFires für den Ink-Thread. CursorOutOfRangeFires für den Ink-Thread. DoubleClick-Ereignis (nur Automation). Wird im Benutzeroberflächenthread der Anwendung ausgelöst. DoubleClick (nur verwaltete Bibliothek)Wird im Ui-Thread der Anwendung ausgelöst. Gestenfires für den Ink-Thread. MouseDownFires im UI-Thread der Anwendung. MouseMoveFires im UI-Thread der Anwendung. MouseUpFires im UI-Thread der Anwendung. MouseWheelFires im UI-Thread der Anwendung. NewInAirPacketsFires für den Ink-Thread. NewPacketsFires für den Ink-Thread. StrokeFires für die Ink-thread.SystemGestureFires im Ink-Thread. TabletAddedFires für den Ink-Thread. TabletRemovedFires für den Ink-Thread. '
 ms.assetid: 39a1c868-eb7e-4139-806d-27d86175cbcf
-title: InkCollector-Objekt Ereignisse
+title: InkCollector-Objektereignisse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73b5d0031c6a471f3958efa5a8a1f95a5150e8eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a543bd1a461bfbc88382255accf1b5bfdf628886699093d8bd930f1b349c2461
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939430"
 ---
-# <a name="inkcollector-object-events"></a>InkCollector-Objekt Ereignisse
+# <a name="inkcollector-object-events"></a>InkCollector-Objektereignisse
 
-In der folgenden Tabelle wird beschrieben, in welchen Threads die [**InkCollector**](inkcollector-class.md) -Objekt Ereignisse ausgelöst werden können.
+In der folgenden Tabelle wird beschrieben, für welche Threads die [**InkCollector-Objektereignisse**](inkcollector-class.md) ausgelöst werden können.
 
 
 
 | Ereignis                                                                              | Threads                                                           |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------|
-| [**Currsorbuttondown**](inkcollector-cursorbuttondown.md)                          | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Currsorbuttonup**](inkcollector-cursorbuttonup.md)                              | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Cursor**](inkcollector-cursordown.md)                                      | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Cursor Bereich**](inkcollector-cursorinrange.md)                                | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Cursor-Ausgabe**](inkcollector-cursoroutofrange.md)                          | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**DoubleClick-Ereignis**](inkcollector-doubleclick.md) (nur Automatisierung).           | Wird im Benutzeroberflächen Thread der Anwendung ausgelöst.<br/> |
+| [**CursorButtonDown**](inkcollector-cursorbuttondown.md)                          | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**CursorButtonUp**](inkcollector-cursorbuttonup.md)                              | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Cursordown**](inkcollector-cursordown.md)                                      | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Cursorinrange**](inkcollector-cursorinrange.md)                                | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Cursoroutofrange**](inkcollector-cursoroutofrange.md)                          | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**DoubleClick-Ereignis**](inkcollector-doubleclick.md) (nur Automation).           | Wird im Benutzeroberflächenthread der Anwendung ausgelöst.<br/> |
 | [**DoubleClick**](/previous-versions/ms567614(v=vs.100)) (nur verwaltete Bibliothek) | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
-| [**Geste**](inkcollector-gesture.md)                                            | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**MouseDown**](inkcollector-mousedown.md)                                        | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
-| [**MouseMove**](inkcollector-mousemove.md)                                        | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
-| [**MouseUp**](inkcollector-mouseup.md)                                            | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
-| [**Mausrad**](inkcollector-mousewheel.md)                                      | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
-| [**"Netwinairpakete"**](inkcollector-newinairpackets.md)                            | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Neupakete**](inkcollector-newpackets.md)                                      | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Stellung**](inkcollector-stroke.md)                                              | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**System Bewegung**](inkcollector-systemgesture.md)                                | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**TabletAdded**](inkcollector-tabletadded.md)                                    | Wird im frei Hand Thread ausgelöst.<br/>                               |
-| [**Tabletreverschohe**](inkcollector-tabletremoved.md)                                | Wird im frei Hand Thread ausgelöst.<br/>                               |
+| [**Geste**](inkcollector-gesture.md)                                            | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Mousedown**](inkcollector-mousedown.md)                                        | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
+| [**Mousemove**](inkcollector-mousemove.md)                                        | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
+| [**Mouseup**](inkcollector-mouseup.md)                                            | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
+| [**Mousewheel**](inkcollector-mousewheel.md)                                      | Wird im UI-Thread der Anwendung ausgelöst.<br/>                  |
+| [**Newinairpackets**](inkcollector-newinairpackets.md)                            | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Newpackets**](inkcollector-newpackets.md)                                      | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Takt**](inkcollector-stroke.md)                                              | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Systemgesture**](inkcollector-systemgesture.md)                                | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Tabletadded**](inkcollector-tabletadded.md)                                    | Wird für den Ink-Thread ausgelöst.<br/>                               |
+| [**Tabletremoved**](inkcollector-tabletremoved.md)                                | Wird für den Ink-Thread ausgelöst.<br/>                               |
 
 
 

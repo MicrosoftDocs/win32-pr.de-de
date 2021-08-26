@@ -1,31 +1,31 @@
 ---
 title: Implementieren eines verteilten Systems
-description: Eine Möglichkeit zum Implementieren von Software in einem verteilten System ist die Verwendung von unformatierten Netzwerkunterstützung.
+description: Eine Möglichkeit, Software in einem verteilten System zu implementieren, ist die Verwendung von Rohnetzwerkunterstützung.
 ms.assetid: 46abbbec-caa1-4fee-a713-4a4a2b462051
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ab45f8175e82bdd1f5d6e49f3d94578473ed5c7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 098263f916129115f41840e15ac689fab7e4544621989d1a4d3179e50ef17d27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120020529"
 ---
 # <a name="implementing-a-distributed-system"></a>Implementieren eines verteilten Systems
 
-Eine Möglichkeit zum Implementieren von Software in einem verteilten System ist die Verwendung von unformatierten Netzwerkunterstützung. Diese Vorgehensweise umfasst Sockets, Named Pipes oder http-Beiträge, Ruft ab usw. Alle diese Modelle erzwingen, dass der Entwickler auf eine oder andere Weise Programmier primitive auf niedriger Ebene verwendet, die es dem Entwickler zwingen, sich mit der Netzwerkdaten Darstellung (NDR), dem Verpacken von Daten, der Verwaltung von Netzwerk Datenverkehr und Fehlerzuständen, dem Schutz der Datenintegrität und der Verschlüsselung zu beschäftigen.
+Eine Möglichkeit, Software in einem verteilten System zu implementieren, ist die Verwendung von Rohnetzwerkunterstützung. Dieser Ansatz umfasst Sockets, Named Pipes oder HTTP POSTs, GETs und so weiter. All diese Modelle zwingen den Entwickler, primitive Programmiergrundtypen auf niedriger Ebene auf die eine oder andere Weise zu verwenden, die den Entwickler zwingen, sich mit der Darstellung von Netzwerkdaten (Network Data Representation, NDR), dem Packen von Daten, der Verwaltung von Netzwerkdatenverkehr und Fehlerbedingungen, dem Schutz und der Verschlüsselung von Daten und so weiter zu befassen.
 
-RPC bietet ein Programmiermodell, in dem der Entwickler eine differenzierte Steuerung der Netzwerk Interaktion zwischen dem Client und dem Server über eine umfassende API beibehält, während Entwickler aus den Details und Belastungen, die ein verteiltes System in der Regel einführt, bewahrt werden.
+RPC bietet ein Programmiermodell, bei dem der Entwickler die präzise Kontrolle über die Netzwerkinteraktion zwischen Client und Server über eine umfangreiche API behält und Entwicklern gleichzeitig die Details und Lasten erspart, die ein verteiltes System tendenziell einleitet.
 
-Stellen Sie sich z. b. die Belastung der verschiedenen Ansätze vor, um die Integrität und den Schutz von Nachrichtenaustausch Vorgängen in einem verteilten System zu schützen. Bei der Berücksichtigung der Netzwerksicherheit für den Paket Austausch sind einige Schutzmaßnahmen schwächer, und das ist noch stärker. Es gibt keine echte Netzwerksicherheit, sondern nur verschiedene paketbasierte Sicherheitsmechanismen. Sicherheit, die den Aufrufer identifiziert (der in der Regel auch schwach ist, da Paket Inhalte bei der Übertragung häufig geändert werden können), Sicherheit, die die Integrität des Pakets schützt, ohne seinen Datenschutz (verschiedene Signaturen und Hashs) zu schützen, und Sicherheit, die den Datenschutz des Nachrichten Austauschs schützt (verschiedene Verschlüsselungsmechanismen).
+Betrachten Sie beispielsweise die Belastung, die mit verschiedenen Ansätzen zum Schutz der Integrität und des Datenschutzes des Nachrichtenaustauschs in einem verteilten System verbunden ist. Bei der Berücksichtigung der Netzwerksicherheit für den Paketaustausch sind einige Schutzmaßnahmen schwächer, einige stärker. Es gibt keine echte Netzwerksicherheit, sondern nur verschiedene paketbasierte Sicherheitsmechanismen. Sicherheit, die den Aufrufer identifiziert (was tendenziell auch schwach ist, da Paketinhalte häufig während der Übertragung geändert werden können), Sicherheit zum Schutz der Integrität des Pakets ohne Schutz seiner Privatsphäre (verschiedene Signaturen und Hashes) und Sicherheit zum Schutz der Privatsphäre des Nachrichtenaustauschs (verschiedene Verschlüsselungsmechanismen).
 
-Ein weiterer Aufwand bei der Implementierung eines sicheren verteilten Systems sind die Algorithmen, die für die Implementierung von Sicherheits primitiven, z. b. Verschlüsselung, Signierung, Authentifizierung usw., erforderlich sind. Ein Entwickler kann diese Algorithmen implementieren, aber dies ist schwierig, fehleranfällig und sogar riskant, da die resultierenden Algorithmen häufig zu geringfügigen Sicherheitslücken führen. Alternativ kann ein Entwickler einen verfügbaren Sicherheitsanbieter verwenden, um den Schutz für die Netzwerk Interaktionen innerhalb eines verteilten Systems zu implementieren.
+Eine weitere Belastung für die Implementierung eines sicheren verteilten Systems sind die Algorithmen, die zum Implementieren von Sicherheitsprimitiven wie Verschlüsselung, Signierung, Authentifizierung und so weiter erforderlich sind. Ein Entwickler kann diese Algorithmen implementieren, aber dies ist schwierig, fehleranfällig und sogar riskant, da die resultierenden Algorithmen oft kleine Sicherheitslücken aufweisen. Alternativ kann ein Entwickler einen verfügbaren Sicherheitsanbieter verwenden, um schutz für die Netzwerkinteraktionen innerhalb eines verteilten Systems zu implementieren.
 
-Bei Verwendung von RPC werden diese beiden Belastungen sehr leicht gelöst. Ein Entwickler muss lediglich angeben, welches Sicherheitspaket verwendet werden soll und welcher Sicherheitsschutz auf den Nachrichtenaustausch angewendet werden soll (im Hinblick auf Authentifizierung, Verschlüsselung, gegenseitige Authentifizierung, Überwachung der Identität des Aufrufers usw.). RPC kümmert sich um alle Details im Hintergrund auf effiziente Weise, bietet dem Entwickler jedoch vollständige Kontrolle darüber, wie die Daten geschützt werden.
+MitHILFE von RPC lassen sich diese beiden Lasten sehr einfach lösen. Ein Entwickler muss RPC lediglich mitteilen, welches Sicherheitspaket verwendet werden soll und welcher Sicherheitsschutz auf den Nachrichtenaustausch angewendet werden soll (in Bezug auf Authentifizierung, Verschlüsselung, gegenseitige Authentifizierung, Nachverfolgung von Aufrufer-Identitäten und so weiter). RPC kümmert sich auf effiziente Weise um alle Details im Hintergrund, bietet dem Entwickler jedoch die vollständige Kontrolle darüber, wie die Daten genau geschützt werden.
 
- 
+ 
 
- 
+ 
 
 
 

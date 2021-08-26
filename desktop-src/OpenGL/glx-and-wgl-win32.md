@@ -1,58 +1,58 @@
 ---
-title: Glx und WGL/Windows
-description: Einige der WGL-Funktionen und Windows-Funktionen sind mehr oder weniger analog zu den Funktionen von glx X-Fenstern. Die folgende Liste zeigt die glx-Funktionen und die zugehörigen WGL-/Windows-Funktionen, falls verfügbar.
+title: GLX und WGL/Windows
+description: Einige der WGL-Funktionen und Windows Funktionen sind mehr oder weniger analog zu GLX X-Fensterfunktionen. In der folgenden Liste werden GLX-Funktionen und die entsprechenden WGL/Windows-Funktionen (sofern verfügbar) angezeigt.
 ms.assetid: 428c0fdc-a541-4720-908f-99f0539d9f4b
 keywords:
-- OpenGL unter Windows, glx-Funktionen
-- Glx-Funktionen OpenGL
-- WGL-Funktionen im Vergleich zu glx-Funktionen
+- OpenGL für Windows,GLX-Funktionen
+- GLX-Funktionen OpenGL
+- WGL-Funktionen im Vergleich zu GLX-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0eaa2c0ce28bd22e8b6efee4edc395223be2bf11
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c24b88caeed9aea7bae8e38f73818ac180aad9117806508f40550b02eb8a4e76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035383"
 ---
-# <a name="glx-and-wglwindows"></a>Glx und WGL/Windows
+# <a name="glx-and-wglwindows"></a>GLX und WGL/Windows
 
-Einige der WGL-Funktionen und Windows-Funktionen sind mehr oder weniger analog zu den Funktionen von glx X-Fenstern. Die folgende Liste zeigt die glx-Funktionen und die zugehörigen WGL-/Windows-Funktionen, falls verfügbar.
+Einige der WGL-Funktionen und Windows Funktionen sind mehr oder weniger analog zu GLX X-Fensterfunktionen. In der folgenden Liste werden GLX-Funktionen und die entsprechenden WGL/Windows-Funktionen (sofern verfügbar) angezeigt.
 
 
 
-| Glx-Funktionen             | WGL/Windows-Funktionen                                                                                                                                       |
+| GLX-Funktionen             | WGL/Windows-Funktionen                                                                                                                                       |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **glxchoosevisual**       | [**Auswahl Pixel Format**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)                                                                                                              |
-| **glxcopycontext**        |                                                                                                                                                             |
-| **glxkreatecontext**      | [**wglkreatecontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)                                                                                                                |
-| **glxkreateglxpixmap**    | " [**Kreatedibitmap**](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)  /  " " [ **Kreatedibsection** "](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)                                                                     |
-| **glxdestroycontext**     | [**wgldeletecontext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)                                                                                                                |
-| **glxdestroyglxpixmap**   | [**DeleteObject**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject)                                                                                                                        |
-| **glxgetconfig**          | [**Describepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)                                                                                                          |
-| **glxgetcurrentcontext**  | [**wglgetcurrentcontext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)                                                                                                        |
-| **glxgetcurrentdrawable** | [**wglgetcurrentdc**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)                                                                                                                  |
-| **glxisdirect**           |                                                                                                                                                             |
-| **glxmakecurrent**        | [**wglmakecurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)                                                                                                                    |
-| **glxqueryextension**     | [**GetVersion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion)                                                                                                                           |
-| **glxqueryversion**       | [**GetVersion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion)                                                                                                                           |
-| **glxtauapbuffers**        | [**Austausch Puffer**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)                                                                                                                          |
-| **glxusexfont**           | [**wgluseefontbitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)  /  [ **wgluseelfontgliederungen**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)                                                           |
-| **glxwaitgl**             |                                                                                                                                                             |
-| **glxwaitx**              |                                                                                                                                                             |
-| **Xgetvisualinfo**        | [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)                                                                                                                    |
-| **Xkreatewindow**         | " [**Kreatewindow**](/windows/win32/api/winuser/nf-winuser-createwindowa)  /  " " [**Kreatewindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " und " [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc)  /  [**BeginPaint**](/windows/desktop/api/winuser/nf-winuser-beginpaint) " |
-| **XSync**                 | [**Gdiflush**](/windows/desktop/api/wingdi/nf-wingdi-gdiflush)                                                                                                                                |
+| **glXChooseVisual**       | [**ChoosePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)                                                                                                              |
+| **glXCopyContext**        |                                                                                                                                                             |
+| **glXCreateContext**      | [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)                                                                                                                |
+| **glXCreateGLXPixmap**    | [**CreateDIBitmap**](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)  /  [ **CreateDIBSection**](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)                                                                     |
+| **glXDestroyContext**     | [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)                                                                                                                |
+| **glXDestroyGLXPixmap**   | [**DeleteObject**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject)                                                                                                                        |
+| **glXGetConfig**          | [**DescribePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)                                                                                                          |
+| **glXGetCurrentContext**  | [**wglGetCurrentContext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)                                                                                                        |
+| **glXGetCurrentDrawable** | [**wglGetCurrentDC**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)                                                                                                                  |
+| **glXIsDirect**           |                                                                                                                                                             |
+| **glXMakeCurrent**        | [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)                                                                                                                    |
+| **glXQueryExtension**     | [**Getversion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion)                                                                                                                           |
+| **glXQueryVersion**       | [**Getversion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion)                                                                                                                           |
+| **glXSwapBuffers**        | [**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)                                                                                                                          |
+| **glXUseXFont**           | [**wglUseFontBitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)  /  [ **wglUseFontOutlines**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)                                                           |
+| **glXWaitGL**             |                                                                                                                                                             |
+| **glXWaitX**              |                                                                                                                                                             |
+| **XGetVisualInfo**        | [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)                                                                                                                    |
+| **XCreateWindow**         | [**CreateWindow**](/windows/win32/api/winuser/nf-winuser-createwindowa)  /  [**CreateWindowEx**](/windows/win32/api/winuser/nf-winuser-createwindowexa) und [**GetDC**](/windows/desktop/api/winuser/nf-winuser-getdc)  /  [**BeginPaint**](/windows/desktop/api/winuser/nf-winuser-beginpaint) |
+| **XSync**                 | [**GdiFlush**](/windows/desktop/api/wingdi/nf-wingdi-gdiflush)                                                                                                                                |
 |                           | [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat)                                                                                                                    |
-|                           | [**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)                                                                                                              |
-|                           | [**wglsharelists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)                                                                                                                      |
+|                           | [**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)                                                                                                              |
+|                           | [**wglShareLists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)                                                                                                                      |
 
 
 
- 
+ 
 
-Weitere Informationen finden Sie im Leitfaden zum *portieren*.
+Weitere Informationen finden Sie im *Portierungshandbuch.*
 
- 
+ 
 
- 
+ 

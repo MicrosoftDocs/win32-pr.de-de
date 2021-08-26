@@ -1,8 +1,8 @@
 ---
-description: Die GetOwnerSID&\# 8194; Die WMI-Klassenmethode Ruft die Sicherheits-ID (SID) für den Besitzer dieses Prozesses ab.
+description: GetOwnerSid&\# 8194; Die WMI-Klassenmethode ruft die Sicherheits-ID (SID) für den Besitzer dieses Prozesses ab.
 ms.assetid: f856b06c-8080-4145-a775-51361f741873
 ms.tgt_platform: multiple
-title: GetOwnerSID-Methode der Win32_Process-Klasse
+title: GetOwnerSid-Methode der Win32_Process Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: c3ed34d132d363c0ce9f83511459ec40f340a06c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2884c0f1cd3cc6e32a2db1ab14824ba3112624002cb10f4d76782d622e069000
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119918380"
 ---
-# <a name="getownersid-method-of-the-win32_process-class"></a>GetOwnerSID-Methode der Win32- \_ Prozess Klasse
+# <a name="getownersid-method-of-the-win32_process-class"></a>GetOwnerSid-Methode der Win32 \_ Process-Klasse
 
-Die Methode " **GetOwnerSID** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) " Ruft die Sicherheits-ID (SID) für den Besitzer dieses Prozesses ab.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **GetOwnerSid** ruft die Sicherheits-ID (SID) für den Besitzer dieses Prozesses ab.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ uint32 GetOwnerSid(
 
 <dl> <dt>
 
-*Sid* \[ vorgenommen\]
+*Sid* \[ out\]
 </dt> <dd>
 
-Gibt den sicherheitsbezeichnerdeskriptor für diesen Prozess zurück.
+Gibt den Sicherheitsbezeichnerdeskriptor für diesen Prozess zurück.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt null (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehler an. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -67,18 +67,18 @@ Gibt NULL (0) zurück, um den Erfolg anzugeben. Jede andere Zahl gibt einen Fehl
 **Unbekannter Fehler** (8)
 </dt> <dt>
 
-Der **Pfad wurde nicht gefunden** (9).
+**Pfad nicht gefunden** (9)
 </dt> <dt>
 
 **Ungültiger Parameter** (21)
 </dt> <dt>
 
-**Sonstige** (22 4294967295)
+**Andere** (22 4294967295)
 </dt> </dl>
 
 ## <a name="examples"></a>Beispiele
 
-Im PowerShell-Codebeispiel " [angemeldeter Benutzer auf einem Remote System/s Version 2-](https://Gallery.TechNet.Microsoft.Com/Find-the-logged-on-users-1161bd92) PowerShell-Code" werden Remote Computer abgefragt, um festzustellen, wer angemeldet ist.
+Im PowerShell-Codebeispiel Find the [logged on users on a remote system/s version 2](https://Gallery.TechNet.Microsoft.Com/Find-the-logged-on-users-1161bd92) (Suchen der angemeldeten Benutzer auf einem/einer Remotesystemversion 2) werden Remotecomputer abgefragt, um zu sehen, wer angemeldet ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,20 +88,20 @@ Im PowerShell-Codebeispiel " [angemeldeter Benutzer auf einem Remote System/s Ve
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Prozess**](win32-process.md)
+[**Win32-Prozess \_**](win32-process.md)
 </dt> </dl>
 
  

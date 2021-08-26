@@ -1,9 +1,9 @@
 ---
-title: Processingerrordata (EventType)-Element
-description: Enthält Details zu dem Fehler, der beim Versuch aufgetreten ist, das Ereignis zu erzeugen.
+title: ProcessingErrorData -Element (EventType)
+description: Enthält Details zum Fehler, der beim Rendern des Ereignisses aufgetreten ist.
 ms.assetid: 03551695-5daa-4c01-951b-82ee331db15a
 keywords:
-- Processingerrordata-Element EventLog
+- ProcessingErrorData-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 377c86045b2abca9c009a00e47eaf34ae87af216
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df97113629ddfabdef9d8f50038d62413ba0cf4a3683c8ab839600e00bee660a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119904550"
 ---
-# <a name="processingerrordata-eventtype-element"></a>Processingerrordata (EventType)-Element
+# <a name="processingerrordata-eventtype-element"></a>ProcessingErrorData -Element (EventType)
 
-Enthält Details zu dem Fehler, der beim Versuch aufgetreten ist, das Ereignis zu erzeugen.
+Enthält Details zum Fehler, der beim Rendern des Ereignisses aufgetreten ist.
 
 ``` syntax
 <xs:element name="ProcessingErrorData"
@@ -30,7 +30,7 @@ Enthält Details zu dem Fehler, der beim Versuch aufgetreten ist, das Ereignis z
  />
 ```
 
-Das **processingerrordata** -Element wird durch den komplexen [**eventType**](eventschema-eventtype-complextype.md) -Typ definiert.
+Das **ProcessingErrorData-Element** wird vom komplexen [**EventType-Typ**](eventschema-eventtype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **processingerrordata** -Element wird durch den komplexen [**eventType**](ev
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

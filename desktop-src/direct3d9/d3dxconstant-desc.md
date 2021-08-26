@@ -1,7 +1,7 @@
 ---
-description: Eine Beschreibung einer Konstante in einer Konstanten Tabelle.
+description: Eine Beschreibung einer Konstante in einer konstanten Tabelle.
 ms.assetid: d1970536-7195-4270-a1b9-b082ebe4f17f
-title: D3DXCONSTANT_DESC-Struktur (D3dx9shader. h)
+title: D3DXCONSTANT_DESC-Struktur (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9shader.h
-ms.openlocfilehash: d737fa1d95a119668602aeb056e15bc4248200aa
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bdb3b8276711f3165c0c138155eb6e628c19a124d6f9301de7638e5be24d1c1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106370464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952450"
 ---
-# <a name="d3dxconstant_desc-structure"></a>D3DXCONSTANT- \_ Struktur
+# <a name="d3dxconstant_desc-structure"></a>D3DXCONSTANT \_ DESC-Struktur
 
-Eine Beschreibung einer Konstante in einer Konstanten Tabelle.
+Eine Beschreibung einer Konstante in einer konstanten Tabelle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,36 +57,36 @@ Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Name der Konstanten.
+Name der Konstante.
 
 </dd> <dt>
 
-**Register Set**
+**RegisterSet**
 </dt> <dd>
 
-Typ: **[ **D3DXREGISTER \_ set**](./d3dxregister-set.md)**
+Typ: **[ **D3DXREGISTER \_ SET**](./d3dxregister-set.md)**
 
 </dd> <dd>
 
-Konstanter Datentyp. Siehe [**D3DXREGISTER \_ set**](./d3dxregister-set.md).
+Konstanter Datentyp. Siehe [**D3DXREGISTER \_ SET**](./d3dxregister-set.md).
 
 </dd> <dt>
 
-**Register Index**
+**RegisterIndex**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-NULL basierter Index der Konstante in der Tabelle.
+Nullbasierter Index der Konstante in der Tabelle.
 
 </dd> <dt>
 
-**Register count**
+**RegisterCount**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -97,29 +97,29 @@ Anzahl der Register, die Daten enthalten.
 **Klasse**
 </dt> <dd>
 
-Type: **[ **D3DXPARAMETER- \_ Klasse**](./d3dxparameter-class.md)**
+Typ: **[ **D3DXPARAMETER-KLASSE \_**](./d3dxparameter-class.md)**
 
 </dd> <dd>
 
-Parameter Klasse. Siehe [**D3DXPARAMETER- \_ Klasse**](./d3dxparameter-class.md).
+Parameterklasse. Siehe [**\_ D3DXPARAMETER-KLASSE.**](./d3dxparameter-class.md)
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Type: **[ **D3DXPARAMETER- \_ Typ**](./d3dxparameter-type.md)**
+Typ: **[ **D3DXPARAMETER \_ TYPE**](./d3dxparameter-type.md)**
 
 </dd> <dd>
 
-Der Parametertyp. Siehe [**D3DXPARAMETER \_ Type**](./d3dxparameter-type.md).
+Der Parametertyp. Weitere Informationen finden Sie unter [**D3DXPARAMETER \_ TYPE**](./d3dxparameter-type.md).
 
 </dd> <dt>
 
 **Zeilen**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -130,7 +130,7 @@ Anzahl von Zeilen.
 **Spalten**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -138,10 +138,10 @@ Anzahl der Spalten.
 
 </dd> <dt>
 
-**Elemente**
+**CreateUiDefinition-Elemente**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -149,32 +149,32 @@ Anzahl der Elemente im Array.
 
 </dd> <dt>
 
-**Structmembers**
+**StructMembers**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der unter Parameter für Strukturmember.
+Anzahl der Unterparameter des Strukturmembers.
 
 </dd> <dt>
 
 **Byte**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Datengröße in Byte Anzahl.
+Datengröße in Byteanzahl.
 
 </dd> <dt>
 
-**DefaultValue**
+**Defaultvalue**
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -188,7 +188,7 @@ Zeiger auf den Standardwert.
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9shader. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9shader.h</dt> </dl> |
 
 
 
@@ -199,7 +199,7 @@ Zeiger auf den Standardwert.
 [D3DX-Strukturen](dx9-graphics-reference-d3dx-structures.md)
 </dt> <dt>
 
-[**D3DXCONSTANTTABLE- \_ Abteilung**](d3dxconstanttable-desc.md)
+[**D3DXCONSTANTTABLE \_ DESC**](d3dxconstanttable-desc.md)
 </dt> </dl>
 
  

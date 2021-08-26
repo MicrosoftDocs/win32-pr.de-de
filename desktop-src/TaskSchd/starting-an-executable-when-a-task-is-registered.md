@@ -1,49 +1,49 @@
 ---
-title: Starten einer ausführbaren Datei, wenn eine Aufgabe registriert ist
-description: Wenn Sie eine Aufgabe schreiben, die eine ausführbare Datei startet, wenn eine Aufgabe registriert wird, definieren Sie einen Registrierungs-und eine ausführbare Aktion.
+title: Starten einer ausführbaren Datei beim Registrieren eines Tasks
+description: Das Schreiben einer Aufgabe, die eine ausführbare Datei startet, wenn eine Aufgabe registriert wird, erfolgt durch Definieren eines Registrierungstriggers und einer ausführbaren Aktion.
 ms.assetid: 426fa79d-7f0d-42fb-a8c4-15981d13be71
 keywords:
-- Taskplaner Beispiele Taskplaner, Registrierungs-Auslösung
+- Taskplaner Beispiele Taskplaner , Registrierungstrigger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8036b8bdff807ded582279e0ba7675bc2160811
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d6a051c820a1099828ae0ee123e4241ec42d6edbb23ce9e98275057b5903dfbc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120033950"
 ---
-# <a name="starting-an-executable-when-a-task-is-registered"></a>Starten einer ausführbaren Datei, wenn eine Aufgabe registriert ist
+# <a name="starting-an-executable-when-a-task-is-registered"></a>Starten einer ausführbaren Datei beim Registrieren eines Tasks
 
-Wenn Sie eine Aufgabe schreiben, die eine ausführbare Datei startet, wenn eine Aufgabe registriert wird, definieren Sie einen Registrierungs-und eine ausführbare Aktion.
+Das Schreiben einer Aufgabe, die eine ausführbare Datei startet, wenn eine Aufgabe registriert wird, erfolgt durch Definieren eines Registrierungstriggers und einer ausführbaren Aktion.
 
-## <a name="registration-trigger"></a>Registrierungs-auslöst
+## <a name="registration-trigger"></a>Registrierungstrigger
 
-Registrierungs Trigger starten einen Task, sobald er registriert ist. Sie können auch eine Verzögerung für den Registrierungs-Auslösung angeben, die eine Aufgabe nach einem bestimmten Zeitraum (Verzögerung) nach der Registrierung des Tasks startet. Die Verzögerung wird in der [**Delay**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationtrigger-get_delay) -Eigenschaft der [**iregistration-auslöserschnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iregistrationtrigger) angegeben ([**Registration-Auslösers**](registrationtrigger.md) für die Skripterstellung).
+Registrierungstrigger starten eine Aufgabe, sobald sie registriert ist. Sie können auch eine Verzögerung für den Registrierungstrigger angeben, der eine Aufgabe nach einer bestimmten Zeitspanne (der Verzögerung) startet, nachdem der Task registriert wurde. Die Verzögerung wird in der [**Delay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iregistrationtrigger-get_delay) der [**IRegistrationTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iregistrationtrigger) [**(RegistrationTrigger**](registrationtrigger.md) für Skripterstellung) angegeben.
 
 > [!Note]  
-> Wenn eine Aufgabe mit einem Registrierungs-ausgelöst wird, wird die Aufgabe ausgeführt, nachdem das Update ausgeführt wurde.
+> Wenn eine Aufgabe mit einem Registrierungstrigger aktualisiert wird, wird der Task nach dem Update ausgeführt.
 
- 
+ 
 
-## <a name="registration-trigger-examples"></a>Beispiele für Registrierungs Beispiele
+## <a name="registration-trigger-examples"></a>Beispiele für Registrierungstrigger
 
-In den folgenden Beispielen wird Notepad gestartet, wenn ein Task registriert wird:
+Die folgenden Beispiele beginnen Editor, wenn eine Aufgabe registriert wird:
 
--   [Beispiel für Registrierungs Beispiel (Skripterstellung)](registration-trigger-example--scripting-.md)
--   [Registrierungs auslöserbeispiel (C++)](registration-trigger-example--c---.md)
--   [Registrierungs auslöserbeispiel (XML)](registration-trigger-example--xml-.md)
+-   [Beispiel für Registrierungstrigger (Skripterstellung)](registration-trigger-example--scripting-.md)
+-   [Beispiel für registrierungstrigger (C++)](registration-trigger-example--c---.md)
+-   [Registration Trigger Example (XML) (Beispiel für Registrierungstrigger (XML))](registration-trigger-example--xml-.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

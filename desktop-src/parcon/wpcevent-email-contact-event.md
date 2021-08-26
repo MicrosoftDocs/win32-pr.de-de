@@ -1,19 +1,19 @@
 ---
-description: Pro-Benutzer-Ereignis, das von einem e-Mail-Client generiert wird und auf dem das Hinzufügen, ändern oder Löschen eines Kontakts in Jugendschutz Daten aufgezeichnet wird
+description: Benutzerspezifisches Ereignis, das von einem E-Mail-Client generiert wird, der aufzeichnet, wenn ein Kontakt in der Jugendschutzgruppe hinzugefügt, geändert oder gelöscht wird.
 ms.assetid: 9d1f52ef-ff49-4c0d-a48a-93aeccbe7f2b
-title: WPCEVENT_EMAIL_CONTACT-Ereignis (wpcevent. h)
+title: WPCEVENT_EMAIL_CONTACT -Ereignis (Wpcevent.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0974030e53756b44f2be2e8550707161f2d6d461
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d84a450c53705dae2db777081f7177f43505e0481ae38a67c1b90e507fa4a5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218230"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119951570"
 ---
-# <a name="wpcevent_email_contact-event"></a>Wpcevent \_ -e-Mail- \_ Kontakt Ereignis
+# <a name="wpcevent_email_contact-event"></a>WPCEVENT \_ EMAIL \_ CONTACT-Ereignis
 
-Pro-Benutzer-Ereignis, das von einem e-Mail-Client generiert wird und auf dem das Hinzufügen, ändern oder Löschen eines Kontakts in Jugendschutz Daten aufgezeichnet wird
+Benutzerspezifisches Ereignis, das von einem E-Mail-Client generiert wird, der aufzeichnet, wenn ein Kontakt in der Jugendschutzgruppe hinzugefügt, geändert oder gelöscht wird.
 
 
 ```C++
@@ -29,56 +29,56 @@ const EVENT_DESCRIPTOR WPCEVENT_EMAIL_CONTACT = {0xe, 0x0, 0x10, 0x4, 0x16, 0xe,
 *AppName* 
 </dt> <dd>
 
-Der Name der e-Mail-Anwendung, die das Ereignis erzeugt.
+Der Name der E-Mail-Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *AppVersion* 
 </dt> <dd>
 
-Die Version der e-Mail-Anwendung, die das Ereignis erzeugt.
+Die Version der E-Mail-Anwendung, die das Ereignis generiert.
 
 </dd> <dt>
 
 *OldName* 
 </dt> <dd>
 
-Der vorherige e-Mail-Konto Name, wenn er gelöscht oder geändert wurde.
+Der name des vorherigen E-Mail-Kontos, falls gelöscht oder geändert.
 
 </dd> <dt>
 
-*Oldid* 
+*OldID* 
 </dt> <dd>
 
-Die ID, die dem vorherigen e-Mail-Kontonamen zugeordnet ist.
+Die ID, die dem vorherigen E-Mail-Kontonamen zugeordnet ist.
 
 </dd> <dt>
 
-*NewName* 
+*Newname* 
 </dt> <dd>
 
-Der neue e-Mail-Kontoname, wenn hinzugefügt oder geändert.
+Der name des neuen E-Mail-Kontos, falls hinzugefügt oder geändert.
 
 </dd> <dt>
 
-*NEWID* 
+*Newid* 
 </dt> <dd>
 
-Die ID, die dem neuen e-Mail-Kontonamen zugeordnet ist.
+Die ID, die dem neuen E-Mail-Kontonamen zugeordnet ist.
 
 </dd> <dt>
 
 *`Reason`* 
 </dt> <dd>
 
-Ein Wert der [**wpcflag \_ isblockierte**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) -Enumeration, die Informationen darüber angibt, welche Ereignisse von der Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
+Ein Wert der [**WPCFLAG \_ ISBLOCKED-Enumeration,**](/windows/win32/api/wpcevent/ne-wpcevent-wpcflag_isblocked) der Informationen darüber angibt, welche Ereignisse für die Verwendung blockiert werden und welche Steuerelemente vorhanden sind.
 
 </dd> <dt>
 
-*Emailaccount* 
+*EmailAccount* 
 </dt> <dd>
 
-Der Name des e-Mail-Kontos für diesen Benutzer.
+Der E-Mail-Kontoname für diesen Benutzer.
 
 </dd> </dl>
 
@@ -88,9 +88,9 @@ Der Name des e-Mail-Kontos für diesen Benutzer.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
-| Header<br/>                   | <dl> <dt>Wpcevent. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wpcevent.h</dt> </dl> |
 
 
 
@@ -98,10 +98,10 @@ Der Name des e-Mail-Kontos für diesen Benutzer.
 
 <dl> <dt>
 
-[Verwenden von Protokollierungs-APIs für Eltern Steuerelemente](using-logging-apis-for-parental-controls.md)
+[Verwenden von Protokollierungs-APIs für Jugendschutz](using-logging-apis-for-parental-controls.md)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

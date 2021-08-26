@@ -1,25 +1,25 @@
 ---
-description: Weitere Informationen zu den Eigenschaften von "esentcontainernotemptyexception"
-title: Esentcontainernotemptyexception-Eigenschaften
+description: 'Weitere Informationen zu: EsentContainerNotEmptyException-Eigenschaften'
+title: EsentContainerNotEmptyException-Eigenschaften
 TOCTitle: EsentContainerNotEmptyException properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.EsentContainerNotEmptyException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcontainernotemptyexception_properties(v=EXCHG.10)
 ms:contentKeyID: 55101378
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 799f03dfe66d75a154dc2d0de27d283d8dc56acd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de5b50ed59134a50f11ee75e49dd07e82becefd6ad96e3a973a39ecbf98a62cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104559956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975150"
 ---
-# <a name="esentcontainernotemptyexception-properties"></a>Esentcontainernotemptyexception-Eigenschaften
+# <a name="esentcontainernotemptyexception-properties"></a>EsentContainerNotEmptyException-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Der [esentcontainernotemptyexception](./esentcontainernotemptyexception-class.md) -Typ macht die folgenden Member verfügbar.
+Der [EsentContainerNotEmptyException-Typ](./esentcontainernotemptyexception-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,47 +35,47 @@ Der [esentcontainernotemptyexception](./esentcontainernotemptyexception-class.md
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.data#System_Exception_Data">Daten</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn274313(v=exchg.10).md">Fehler</a></td>
-<td>Ruft den zugrunde liegenden ESENT-Fehler für diese Ausnahme ab. (Geerbt von " <a href="dn274314(v=exchg.10).md">esenterrorexception</a>".)</td>
+<td>Ruft den zugrunde liegenden Esent-Fehler für diese Ausnahme ab. (Geerbt von <a href="dn274314(v=exchg.10).md">EsentErrorException</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.helplink#System_Exception_HelpLink">HelpLink</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
-<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">HRESULT</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td><a href="/dotnet/api/system.exception.hresult#System_Exception_HResult">Hresult</a></td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.innerexception#System_Exception_InnerException">InnerException</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.message#System_Exception_Message">Meldung</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.source#System_Exception_Source">Quelle</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">StackTrace</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">TargetSite</a></td>
-<td>(Geerbt von der <a href="/dotnet/api/system.exception">Ausnahme</a>.)</td>
+<td>(Geerbt von <a href="/dotnet/api/system.exception">der Ausnahme</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -85,8 +85,8 @@ Oben
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcontainernotemptyexception-Klasse](./esentcontainernotemptyexception-class.md)
+[EsentContainerNotEmptyException-Klasse](./esentcontainernotemptyexception-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

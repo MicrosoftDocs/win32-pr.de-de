@@ -1,7 +1,7 @@
 ---
-description: Die Init-Methode initialisiert den streamingindthread.
+description: Die Init-Methode initialisiert den Streamingthread.
 ms.assetid: c746e595-de97-478c-8b22-5c4dd5594a8f
-title: CSourceStream.Init-Methode (Quelle. h)
+title: CSourceStream.Init-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6a3abf2b4637385616862c0613f72afd676f5b79
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e656ba46b25045406fb794653078b72e2c47155635cf24ae4a99b35238aa51df
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871314"
 ---
 # <a name="csourcestreaminit-method"></a>CSourceStream.Init-Methode
 
-Die- `Init` Methode initialisiert den streamingindthread.
+Die `Init` -Methode initialisiert den Streamingthread.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK oder einen anderen **HRESULT** -Wert zurück.
+Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss die erste Thread Anforderung sein, die an die [**csourcestream:: ThreadProc**](csourcestream-threadproc.md) -Methode gesendet wird. Die [**csourcestream:: Active**](csourcestream-active.md) -Methode ruft diese Methode auf.
+Diese Methode muss die erste Threadanforderung sein, die an die [**CSourceStream::ThreadProc-Methode**](csourcestream-threadproc.md) gesendet wird. Die [**CSourceStream::Active-Methode**](csourcestream-active.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Diese Methode muss die erste Thread Anforderung sein, die an die [**csourcestrea
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

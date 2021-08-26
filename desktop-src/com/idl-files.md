@@ -4,21 +4,21 @@ description: IDL-Dateien
 ms.assetid: 94a6752d-fcf3-47ce-ac3f-be1d1c9768e6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0bc9a736bf9b9a77ec1cb655fb5c76e9e1c0d27e
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 32e2329d14ea844658bf9ad08927ddcef5067debed7a1c8a424c06d3c7adb8d0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103858498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119992900"
 ---
 # <a name="idl-files"></a>IDL-Dateien
 
-Com verwendet die Microsoft Interface Definition Language (mittlere), um COM-Objekte zu beschreiben. "Mittel l" ist eine Erweiterung der IDL für verteilte Computerumgebungen, die von der Open Software Foundation definiert wurden, die zum Definieren von Schnittstellen für Remote Prozedur Aufrufe in herkömmlichen Client-/Server-Anwendungen entwickelt wurde. Die Mittel l enthält die meisten Attribute und Anweisungen der Object Definition Language (ODL), der ursprünglich zum Generieren von Typbibliotheken für OLE-Automatisierung verwendeten Sprache.
+COM verwendet die Microsoft Interface Definition Language (MIDL), um COM-Objekte zu beschreiben. MIDL ist eine Erweiterung der IDL für verteilte Computingumgebungen, die von der Open Software Foundation definiert wurden und entwickelt wurde, um Schnittstellen für Remoteprozeduraufrufe in herkömmlichen Client-/Serveranwendungen zu definieren. MIDL enthält die meisten Attribute und Anweisungen der Object Definition Language (ODL), der Sprache, die ursprünglich zum Generieren von Typbibliotheken für OLE-Automatisierung verwendet wurde.
 
-In C++ und Java erstellt ein Entwickler, der ein COM-Objekt erstellt, eine IDL-Datei, die vom-compilercompiler verarbeitet wird, um eine Typbibliothek oder Header-und Proxy Dateien zu erstellen, oder beides. Eine *Typbibliothek* ist eine Binärdatei, die das COM-Objekt oder die COM-Schnittstellen beschreibt. Eine Typbibliothek ist die kompilierte Version der IDL-Datei. Typbibliotheken unterstützen jedoch nur ODL-Semantik. Vor allem können Sie nicht alle Informationen aus einer IDL-Datei darstellen, die sich auf IDL-Attribute wie " \[ [**\_ size**](/windows/desktop/Midl/size-is)" bezieht \] . Sie müssen Proxy Dateien für IDL-Dateien erstellen und verwenden, die von Informations Verlusten in der Typbibliothek betroffen sind.
+In C++ und Java erstellt ein Entwickler, der ein COM-Objekt erstellt, eine IDL-Datei, die der MIDL-Compiler dann verarbeitet, um eine Typbibliothek oder Header- und Proxydateien oder beides zu erstellen. Eine *Typbibliothek* ist eine Binärdatei, die das COM-Objekt, com-Schnittstellen oder beides beschreibt. Eine Typbibliothek ist die kompilierte Version der IDL-Datei. Typbibliotheken unterstützen jedoch nur ODL-Semantik. Insbesondere können sie nicht alle Informationen aus einer IDL-Datei darstellen, die sich auf IDL-Attribute beziehen, z.B. \[ [**size \_ ist**](/windows/desktop/Midl/size-is) \] . Sie müssen Proxydateien für IDL-Dateien erstellen und verwenden, die von Informationsverlusten in der Typbibliothek betroffen sind.
 
-In Visual Basic erstellt ein Entwickler, der ein COM-Objekt erstellt, keine IDL-Datei. Stattdessen sammelt Visual Basic Informationen mithilfe von Klassen-und Projekteigenschaften und erstellt die Typbibliothek direkt.
+In Visual Basic erstellt ein Entwickler, der ein COM-Objekt erstellt, keine IDL-Datei. Stattdessen sammelt Visual Basic Informationen mithilfe von Klassen- und Projekteigenschaften und erstellt die Typbibliothek direkt.
 
- 
+ 
 
- 
+ 

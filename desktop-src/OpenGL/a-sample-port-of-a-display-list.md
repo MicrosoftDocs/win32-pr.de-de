@@ -1,27 +1,27 @@
 ---
-title: Einen Beispielport einer Anzeigeliste
-description: Dieses Thema enthält ein Iris GL-Beispiel für Code, in dem drei Anzeigelisten definiert werden. eine der Anzeigelisten verweist auf die anderen in der Definition. Das Beispiel IRIS gl ist ein Beispiel für den Code, der bei der Portierung zu OpenGL aussieht.
+title: Beispielport einer Anzeigeliste
+description: Dieses Thema enthält ein IRIS GL-Codebeispiel, das drei Anzeigelisten definiert. Eine der Anzeigelisten bezieht sich auf die anderen in ihrer Definition. Im Anschluss an das IRIS GL-Beispiel sehen Sie ein Beispiel dafür, wie der Code aussieht, wenn er zu OpenGL portiert wird.
 ms.assetid: 03283b00-fb5b-4e89-9384-171b38f141ee
 keywords:
-- IRIS GL portieren, Anzeigen von Listen
-- Portieren von IRIS GL, Anzeigen von Listen
-- Portieren auf OpenGL von IRIS GL, Anzeigen von Listen
-- OpenGL-Portierung von IRIS GL, Anzeigen von Listen
-- Anzeigen von Listen, Portieren von IRIS GL
+- IRIS GL-Portierung, Anzeigelisten
+- Portieren von IRIS GL, Anzeigelisten
+- Portieren von IRIS GL zu OpenGL, Anzeigen von Listen
+- OpenGL-Portierung von IRIS GL, Anzeigelisten
+- Anzeigelisten,Portieren von IRIS GL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77a856350a0a248bf7dcac51c36b9d35cf114956
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5fbb696673da7f4dc83abd625bb616b67449de64a40df1cfc99bd429a2a980e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103710433"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962430"
 ---
-# <a name="a-sample-port-of-a-display-list"></a>Einen Beispielport einer Anzeigeliste
+# <a name="a-sample-port-of-a-display-list"></a>Beispielport einer Anzeigeliste
 
-Dieses Thema enthält ein Iris GL-Beispiel für Code, in dem drei Anzeigelisten definiert werden. eine der Anzeigelisten verweist auf die anderen in der Definition. Das Beispiel IRIS gl ist ein Beispiel für den Code, der bei der Portierung zu OpenGL aussieht.
+Dieses Thema enthält ein IRIS GL-Codebeispiel, das drei Anzeigelisten definiert. Eine der Anzeigelisten bezieht sich auf die anderen in ihrer Definition. Im Anschluss an das IRIS GL-Beispiel sehen Sie ein Beispiel dafür, wie der Code aussieht, wenn er zu OpenGL portiert wird.
 
-## <a name="iris-gl-sample-display-list-code"></a>IRIS GL-Beispiel Anzeigelisten Code
+## <a name="iris-gl-sample-display-list-code"></a>IRIS GL Sample Display List Code
 
 
 ```C++
@@ -49,9 +49,9 @@ call(30);
 
 
 
-## <a name="opengl-sample-display-list-code"></a>OpenGL-Beispiel Anzeigelisten Code
+## <a name="opengl-sample-display-list-code"></a>OpenGL-Beispielcode für die Anzeigeliste
 
-Hier sehen Sie den obigen IRIS GL-Code, der in OpenGL übersetzt wurde:
+Hier ist der vorangehende IRIS GL-Code, der in OpenGL übersetzt wurde:
 
 
 ```C++
@@ -92,9 +92,9 @@ glCallList(30);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

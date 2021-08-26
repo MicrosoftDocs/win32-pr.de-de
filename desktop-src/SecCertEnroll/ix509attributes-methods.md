@@ -1,19 +1,19 @@
 ---
-description: Die IX509Attributes-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IX509Attributes-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: E8D84A55-5EF3-4FF4-9AC3-79E5FFA6211F
 title: IX509Attributes-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a7d24eb78f883be85c94a5f73f7446ae7f71db3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 180e3b59df6805fc52d9efb394731a0acc7829a47cf04b6db1c80e958739f73f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882120"
 ---
 # <a name="ix509attributes-methods"></a>IX509Attributes-Methoden
 
-Die [**IX509Attributes**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IX509Attributes-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509attributes) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

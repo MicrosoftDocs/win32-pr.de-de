@@ -1,15 +1,15 @@
 ---
-description: Enthält die Von der Journal-Ink-Analyse für inkWord zurückgegebene Konfidenzbewertung.
+description: Enthält die von der Journal-Ink-Analyse für inkWord zurückgegebene Konfidenzbewertung.
 ms.assetid: cb0ed0d0-5e2f-44a3-b72b-61cbfd22bae8
 title: Confidence-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5fdaaed8d9c57822ad94ec49183a399ed317917
-ms.sourcegitcommit: 5a78723ad484955ac91a23cf282cf9c176c1eab6
+ms.openlocfilehash: e86e4169767f3bf40d49e71e84214d50d3c0c0b4ecf5d3f7a9034ee6c8ea279d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "114436498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119936980"
 ---
 # <a name="confidence-element"></a>Confidence-Element
 

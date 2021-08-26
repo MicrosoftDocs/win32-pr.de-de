@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tablets darstellt.
+description: Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tabletts darstellt.
 ms.assetid: 98facd24-b019-40d1-afe1-28c9a78cae80
-title: 'ITablet:: getmaxinputrect-Methode'
+title: ITablet::GetMaxInputRect-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: de2649fe7410e6d335f653c09bfe86a8ddaac813
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 422c64a8f5f77b354f02ab9601f7a0c888669d61783afb636816efbdc2e13b27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883540"
 ---
-# <a name="itabletgetmaxinputrect-method"></a>ITablet:: getmaxinputrect-Methode
+# <a name="itabletgetmaxinputrect-method"></a>ITablet::GetMaxInputRect-Methode
 
-Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tablets darstellt.
+Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tabletts darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT GetMaxInputRect(
 
 <dl> <dt>
 
-*prcinput* \[ vorgenommen\]
+*prcInput* \[ out\]
 </dt> <dd>
 
 Zeiger auf das Rechteck, das den maximalen Eingabebereich des Tablets darstellt.
@@ -56,7 +56,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
@@ -68,13 +68,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

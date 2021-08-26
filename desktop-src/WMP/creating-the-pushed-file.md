@@ -1,41 +1,41 @@
 ---
-title: Erstellen der pushdatei
-description: Erstellen der pushdatei
+title: Erstellen der pushed-Datei
+description: Erstellen der pushed-Datei
 ms.assetid: 3b72171a-f235-4eb3-ae1a-3c9ece569edd
 keywords:
-- Windows Media Player Mobile Skins, übersetzte Dateien
-- Skins, übersetzte Dateien
-- Erstellen von Skins, übersetzte Dateien
-- Dateien in Skins per pushübertragung
+- Windows Media Player Mobile Skins, Pushdateien
+- Skins, Pushdateien
+- Erstellen von Skins, Übertragen von Dateien per Push
+- Per Push übertragene Dateien in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8532ce4442374d91efe04f84d92ade5c1834353
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1f2dbb70928fd3b8bd6594cb9e2f33ac5d2d439c487fed481fe9cea05cdde2b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119902165"
 ---
-# <a name="creating-the-pushed-file"></a>Erstellen der pushdatei
+# <a name="creating-the-pushed-file"></a>Erstellen der pushed-Datei
 
-Sie können die von Ihnen erstellten Elemente verwenden und diese wieder verwenden, um die anderen Images zu erstellen, die Sie benötigen. Durch Kombinieren von Ebenen und Färben der Ergebnisse können Sie eine Push-Bitmap erstellen, die die Bilder enthält, die angezeigt werden sollen, wenn der Benutzer eine Schaltfläche drückt. Diese Datei enthält auch das sekundäre Image für den angehaltenen Status der Schaltfläche PLAYPAUSE.
+Sie können die erstellten Elemente verwenden und wiederverwenden, um die anderen benötigten Images zu erstellen. Durch Kombinieren von Ebenen und Farbgebung der Ergebnisse können Sie eine Gepushte Bitmap erstellen, die die Bilder enthält, die angezeigt werden sollen, wenn der Benutzer eine Schaltfläche drückt. Diese Datei enthält auch das sekundäre Image für den angehaltenen Zustand der PlayPause-Schaltfläche.
 
-Die folgende Abbildung ist die gepushte Datei.
+Die folgende Abbildung ist die Datei Pushed.
 
-![Datei mit pushübertragung](images/ceswmpus.png)
+![Pushdatei](images/ceswmpus.png)
 
-Die beiden Schaltflächen auf der rechten Seite gelten für den normalen angehaltenen Zustand und den gedrückten Zustand der Schaltfläche PLAYPAUSE. Die Farbe der Schaltflächen ist gelb, außer dem normalen angehaltenen Zustand der Schaltfläche PLAYPAUSE, als einen guten Kontrast zur grünen Farbe, die für den normalen Zustand aller Schaltflächen verwendet wird.
+Die beiden Schaltflächen auf der rechten Seite sind für den normalen angehaltenen Zustand und den angehaltenen Zustand der PlayPause-Schaltfläche vorgesehen. Die Farbe der Schaltflächen ist gelb, mit Ausnahme des normalen angehaltenen Zustands der PlayPause-Schaltfläche, als guten Kontrast zur grünen Farbe, die für den normalen Zustand aller Schaltflächen verwendet wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen der Kunst**](creating-the-art.md)
+[**Erstellen der Grafik**](creating-the-art.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

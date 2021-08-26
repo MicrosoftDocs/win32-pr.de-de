@@ -1,7 +1,7 @@
 ---
-description: Entfernt die Medien Segmente, die durch den angegebenen Zeitbereich definiert sind, aus IMF sourceBuffer.
+description: Entfernt die durch den angegebenen Zeitbereich definierten Mediensegmente aus DEM SOURCESourceBuffer.
 ms.assetid: 86536d73-18c0-4acc-81ec-72f1dfe400c5
-title: 'IMF sourceBuffer:: Remove-Methode'
+title: DIE METHODE "WFSourceBuffer::Remove"
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: d82660d08efe651b321672b6ccd0cb475875beee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af9aed011a1a4b53733d70646fc14b21e7c97f9d193a60e679f5f5f532679e2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119941910"
 ---
-# <a name="imfsourcebufferremove-method"></a>IMF sourceBuffer:: Remove-Methode
+# <a name="imfsourcebufferremove-method"></a>DIE METHODE "WFSourceBuffer::Remove"
 
-Entfernt die Medien Segmente, die durch den angegebenen Zeitbereich definiert sind, aus [**IMF sourceBuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer).
+Entfernt die durch den angegebenen Zeitbereich definierten Mediensegmente aus DEM [**AUSSCHNITTSOURCEBuffer.**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT Remove(
 
 <dl> <dt>
 
-*starten* \[ Sie in\]
+*starten* \[ In\]
 </dt> <dd>
 
-Der Anfang des Zeit Bereichs.
+Der Anfang des Zeitbereichs.
 
 </dd> <dt>
 
-*Ende* \[ in\]
+*ende* \[ In\]
 </dt> <dd>
 
-Das Ende des Zeit Bereichs.
+Das Ende des Zeitbereichs.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,9 +64,9 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**IMF sourceBuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
+[**DIE QUELLESOURCEBuffer**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfsourcebuffer)
 </dt> </dl>
 
  

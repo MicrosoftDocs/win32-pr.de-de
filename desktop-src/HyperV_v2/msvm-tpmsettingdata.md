@@ -1,5 +1,5 @@
 ---
-description: Stellt den konfigurierten Status des TPM-Geräts dar.
+description: Stellt den konfigurierten Zustand des TPM-Geräts dar.
 ms.assetid: 948ccb47-3626-48f1-b18f-ef1d05978b21
 title: Msvm_TPMSettingData-Klasse
 ms.topic: reference
@@ -18,16 +18,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 8a14f50f01212129ed34cc7e45ee28facbdb991f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f25cd57e1f3cd6ebf015009af176b3bcc68c1d271836c5bb548b9358e9007086
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899120"
 ---
-# <a name="msvm_tpmsettingdata-class"></a>MSVM \_ tpmsettingdata-Klasse
+# <a name="msvm_tpmsettingdata-class"></a>Msvm \_ TPMSettingData-Klasse
 
-Stellt den konfigurierten Status des TPM-Geräts dar.
+Stellt den konfigurierten Zustand des TPM-Geräts dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -47,45 +47,45 @@ class Msvm_TPMSettingData : CIM_ResourceAllocationSettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ tpmsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ TPMSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ tpmsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ TPMSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Dataprotected**
+**DataProtected**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-" **true** ", um eine Richtlinie zum Schutz der Daten eines virtuellen Computers festzulegen. andernfalls **false**. Ein neu erstelltes TPM ist deaktiviert, sodass der anfängliche Datenschutz Status " **false**" lautet.
+**TRUE** zum Festlegen einer Richtlinie zum Schutz der Daten eines virtuellen Computers; andernfalls **FALSE.** Ein neu erstelltes TPM ist deaktiviert, sodass der anfängliche Datenschutzstatus false **ist.**
 
 </dd> <dt>
 
 **EnabledState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Der aktivierte und deaktivierte Status eines Elements. Der Standardwert ist **deaktiviert**.
+Der aktivierte und deaktivierte Zustände eines Elements. Der Standardwert ist **Deaktiviert.**
 
 <dt>
 
@@ -105,53 +105,53 @@ Der aktivierte und deaktivierte Status eines Elements. Der Standardwert ist **de
 
 </dd> <dt>
 
-**Keyprotector**
+**KeyProtector**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers), **octetstring**
+Qualifizierer: [**Erforderlich,**](/windows/desktop/WmiSdk/standard-qualifiers) **OctetString**
 </dt> </dl>
 
-Die Schlüssel Schutzvorrichtung von Host-Überwachungsdienst Client.
+Die Schlüsselschutzvorrichtung des Host-Wächterdienstclients.
 
 </dd> <dt>
 
-**Lastknowngoodkeyprotector**
+**LastKnownGoodKeyProtector**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers), **octetstring**
+Qualifizierer: [**Erforderlich,**](/windows/desktop/WmiSdk/standard-qualifiers) **OctetString**
 </dt> </dl>
 
-Die letzte bekannte gute Schlüssel Schutzvorrichtung hat beim letzten VM-Start erfolgreich den TPM-Gerätestatus verschlüsselt.
+Die letzte bekannte gute Schlüsselschutzvorrichtung hat den TPM-Gerätestatus beim letzten VM-Start erfolgreich verschlüsselt.
 
-Diese Eigenschaft ist für den WMI-Client schreibgeschützt und kann nur vom TPM-Gerät der VM geändert werden.
+Diese Eigenschaft ist schreibgeschützt für den WMI-Client und kann nur vom TPM-Gerät des virtuellen Computers geändert werden.
 
 </dd> <dt>
 
 **Geschützt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-**true** , um eine Richtlinie zu definieren, die eine virtuelle Maschine schützt. andernfalls **false**. Ein neu erstelltes TPM ist deaktiviert, sodass der anfängliche Schutzstatus " **false**" lautet.
+**TRUE,** um eine Richtlinie zu definieren, die einen virtuellen Computer schützt; andernfalls **FALSE.** Ein neu erstelltes TPM ist deaktiviert, sodass der anfängliche Schutzstatus false **ist.**
 
 </dd> </dl>
 
@@ -161,21 +161,21 @@ Qualifizierer: [ **erforderlich**](/windows/desktop/WmiSdk/standard-qualifiers)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Ende des Supports (Client)<br/>    | Windows 10<br/>                                                                                   |
+| Ende des Supports (Client)<br/>    | Windows 10<br/>                                                                                   |
 | Ende des Supports (Server)<br/>    | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ resourcezubesettingdata**](cim-resourceallocationsettingdata.md)
+[**CIM \_ ResourceAllocationSettingData**](cim-resourceallocationsettingdata.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält Informationen zu den Konstanten, die bei der Handschrift Analyse verwendet werden.
+description: Dieser Abschnitt enthält Informationen zu den Konstanten, die in der Ink-Analyse verwendet werden.
 ms.assetid: f701faca-7695-4be2-bd25-fab7ebcdbf30
-title: Ink-Analyse Konstanten
+title: Konstanten für die Ink-Analyse
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 783206a0b9a0f76fdf33d166f533f53e7aa06746
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4091be533e9988df078d7a3947a74222422b83bb80bae807caa6c8ab676ce3e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939540"
 ---
-# <a name="ink-analysis-constants"></a>Ink-Analyse Konstanten
+# <a name="ink-analysis-constants"></a>Konstanten für die Ink-Analyse
 
-Dieser Abschnitt enthält Informationen zu den Konstanten, die bei der Handschrift Analyse verwendet werden.
+Dieser Abschnitt enthält Informationen zu den Konstanten, die in der Ink-Analyse verwendet werden.
 
 ## <a name="constants"></a>Konstanten
 
@@ -21,9 +21,9 @@ Dieser Abschnitt enthält Informationen zu den Konstanten, die bei der Handschri
 
 | Konstanten                                                | BESCHREIBUNG                                                                                                                                                 |
 |----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Eigenschaften des Analyse Hinweises](analysis-hint-properties.md) | Definiert Global Unique Identifier (GUIDs) für Eigenschaften eines Analyse Hinweis Knotens (siehe [**icontextnode:: GetType**](icontextnode-gettype.md)).<br/> |
-| [Kontext Knoten Eigenschaften](context-node-properties.md)   | Definiert Global Unique Identifier (GUIDs) für die Eigenschaften eines [**icontextnode**](icontextnode.md).<br/>                                           |
-| [Kontext Knoten Typen](context-node-types.md)             | Definiert Werte, die den Typ von [**icontextnode**](icontextnode.md) -Objekten angeben.<br/>                                                            |
+| [Eigenschaften von Analysehinweisen](analysis-hint-properties.md) | Definiert GUIDs (Globally Unique Identifiers) für Eigenschaften eines Analysehinweisknotens (siehe [**IContextNode::GetType**](icontextnode-gettype.md)).<br/> |
+| [Kontextknoteneigenschaften](context-node-properties.md)   | Definiert GUIDs (Globally Unique Identifiers) für Eigenschaften eines [**IContextNode.**](icontextnode.md)<br/>                                           |
+| [Kontextknotentypen](context-node-types.md)             | Definiert Werte, die den Typ von [**IContextNode-Objekten**](icontextnode.md) angeben.<br/>                                                            |
 
 
 
@@ -33,7 +33,7 @@ Dieser Abschnitt enthält Informationen zu den Konstanten, die bei der Handschri
 
 <dl> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

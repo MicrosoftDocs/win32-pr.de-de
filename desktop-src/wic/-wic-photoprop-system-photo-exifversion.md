@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. EXIF Version-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.EXIFVersion-Eigenschaft.
 ms.assetid: 0f9c5ea8-918f-4101-8492-3f408145a73e
-title: System. Photo. exibversion-Foto-metadatenrichtlinie
+title: System.Photo.EXIFVersion-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1eb823db41cb54a06fba235df5be4bb4acd55ea4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0eee0fdac7ba8e86321d4a055cb6c37c4e9c7bad3f5bcfced548cc2485b3347c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119882030"
 ---
-# <a name="systemphotoexifversion-photo-metadata-policy"></a>System. Photo. exibversion-Foto-metadatenrichtlinie
+# <a name="systemphotoexifversion-photo-metadata-policy"></a>System.Photo.EXIFVersion-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. EXIF Version](../properties/props-system-photo-exifversion.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Photo.EXIFVersion-Eigenschaft.](../properties/props-system-photo-exifversion.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto- \_ EXIF-Version
+PKEY \_ Photo \_ EXIFVersion
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,46 +35,46 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format   |
+| Auftrag | Pfad                          | Datenträgerformat   |
 |-------|-------------------------------|---------------|
-| 1     | /App1/IFD/EXIF/{ushort = 36864} | EXIF- \_ Version |
-| 2     | /XMP/EXIF: EXIF-Version         | Unicode       |
+| 1     | /app1/ifd/exif/{ushort=36864} | \_Exif-Version |
+| 2     | /xmp/exif:ExifVersion         | Unicode       |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format   |
+| Auftrag | Pfad                          | Datenträgerformat   |
 |-------|-------------------------------|---------------|
-| 1     | /App1/IFD/EXIF/{ushort = 36864} | EXIF- \_ Version |
-| 2     | /XMP/EXIF: EXIF-Version         | Unicode       |
+| 1     | /app1/ifd/exif/{ushort=36864} | \_Exif-Version |
+| 2     | /xmp/exif:ExifVersion         | Unicode       |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 36864} |
-| 2     | /XMP/EXIF: EXIF-Version         |
+| 1     | /app1/ifd/exif/{ushort=36864} |
+| 2     | /xmp/exif:ExifVersion         |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policy"></a>TIFF-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format   |
+| Auftrag | Pfad                      | Datenträgerformat   |
 |-------|---------------------------|---------------|
-| 1     | /IFD/EXIF/{ushort = 36864}  | EXIF- \_ Version |
-| 2     | /IFD/XMP/EXIF: EXIF-Version | Unicode       |
+| 1     | /ifd/exif/{ushort=36864}  | \_Exif-Version |
+| 2     | /ifd/xmp/exif:ExifVersion | Unicode       |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format   |
+| Auftrag | Pfad                      | Datenträgerformat   |
 |-------|---------------------------|---------------|
-| 1     | /IFD/EXIF/{ushort = 36864}  | EXIF- \_ Version |
-| 2     | /IFD/XMP/EXIF: EXIF-Version | Unicode       |
+| 1     | /ifd/exif/{ushort=36864}  | \_Exif-Version |
+| 2     | /ifd/xmp/exif:ExifVersion | Unicode       |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/EXIF/{ushort = 36864}  |
-| 2     | /IFD/XMP/EXIF: EXIF-Version |
+| 1     | /ifd/exif/{ushort=36864}  |
+| 2     | /ifd/xmp/exif:ExifVersion |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. EXIF Version](../properties/props-system-photo-exifversion.md)
+[System.Photo.EXIFVersion](../properties/props-system-photo-exifversion.md)
 </dt> </dl>
 
  

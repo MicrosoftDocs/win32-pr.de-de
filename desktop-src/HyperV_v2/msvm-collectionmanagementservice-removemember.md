@@ -1,7 +1,7 @@
 ---
 description: Entfernt das angegebene verwaltete Element als Member des angegebenen CIM \_ CollectionOfMSEs-Objekts.
 ms.assetid: ea945d24-bcff-476b-9adb-c6573cdbc0b5
-title: RemoveMember-Methode der Msvm_CollectionManagementService-Klasse
+title: RemoveMember-Methode der Msvm_CollectionManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 894230dcf5e9a537ca444815f8e941a8e6fcf09a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a3aeeccb8bc29dba22fb28f35df3bbc9ea178ece0ea2a2438a89c086de764aa9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870310"
 ---
-# <a name="removemember-method-of-the-msvm_collectionmanagementservice-class"></a>RemoveMember-Methode der MSVM \_ collectionmanagementservice-Klasse
+# <a name="removemember-method-of-the-msvm_collectionmanagementservice-class"></a>RemoveMember-Methode der Msvm \_ CollectionManagementService-Klasse
 
-Entfernt das angegebene verwaltete Element als Member des angegebenen [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) -Objekts.
+Entfernt das angegebene verwaltete Element als Member des angegebenen [**CIM \_ CollectionOfMSEs-Objekts.**](cim-collectionofmses.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ uint32 RemoveMember(
 
 <dl> <dt>
 
-*Mitglied* \[ in\]
+*Member* \[ In\]
 </dt> <dd>
 
 Der zu entfernende Member.
 
 </dd> <dt>
 
-*Sammlung* \[ in\]
+*Sammlung* \[ In\]
 </dt> <dd>
 
-Die Auflistung, aus der das Element entfernt werden soll.
+Die Auflistung, aus der der Member entfernt werden soll.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein Verweis auf den Auftrag (kann NULL sein, wenn die Aufgabe abgeschlossen ist).
+Ein Verweis auf den Auftrag (kann NULL sein, wenn der Task abgeschlossen ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 zurück, wenn erfolgreich, oder 4096, wenn der Auftrag gestartet wurde. Andernfalls wird ein Fehler zurückgegeben.
+Gibt 0 zurück, wenn erfolgreich, oder 4096, wenn der Auftrag gestartet wurde. andernfalls gibt einen Fehler zurück.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,31 +83,31 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -116,10 +116,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,7 +128,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ collectionmanagementservice**](msvm-collectionmanagementservice.md)
+[**Msvm \_ CollectionManagementService**](msvm-collectionmanagementservice.md)
 </dt> </dl>
 
  

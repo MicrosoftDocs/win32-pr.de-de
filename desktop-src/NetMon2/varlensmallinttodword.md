@@ -1,7 +1,7 @@
 ---
-description: Die varlensmallinttodword-Funktion konvertiert eine kleine Ganzzahl variabler Länge in ein DWORD-Zeichen.
+description: Die VarLenSmallIntToDword-Funktion konvertiert eine kleine ganze Zahl variabler Länge in ein DWORD.
 ms.assetid: e26dc206-ac85-4346-9fcf-93ebc8948ced
-title: Varlensmallinttodword-Funktion (Netmon. h)
+title: VarLenSmallIntToDword-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 4b0e2fa0813c4b384b17ea45af45f9938bcd85c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ffec440adc903ddb9a5157e8e5f36037e092f0c4bf0cd52da79b0839220366ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106362411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119962730"
 ---
-# <a name="varlensmallinttodword-function"></a>Varlensmallinttodword-Funktion
+# <a name="varlensmallinttodword-function"></a>VarLenSmallIntToDword-Funktion
 
-Die **varlensmallinttodword** -Funktion konvertiert eine kleine Ganzzahl variabler Länge in ein **DWORD**-Zeichen.
+Die **VarLenSmallIntToDword-Funktion** konvertiert eine kleine ganze Zahl variabler Länge in einen **DWORD-Wert.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ LPDWORD WINAPI VarLenSmallIntToDword(
 
 <dl> <dt>
 
-*pValue* 
+*Pvalue* 
 </dt> <dd>
 
-Ein Zeiger auf die ganze Zahl mit variabler Länge.
+Zeiger auf die kleine ganze Zahl variabler Länge.
 
 </dd> <dt>
 
-*Valuelen* 
+*ValueLen* 
 </dt> <dd>
 
-Länge (in Byte) der Variablen Länge, Small Integer.
+Länge (in Bytes) der variablen Länge, kleine ganze Zahl.
 
 </dd> <dt>
 
-*fisbyteswgetauscht* 
+*fIsByteswapped* 
 </dt> <dd>
 
-Flag, das angibt, ob die Länge der Variablen Länge kleiner als Byte ausgetauscht wird.
+Flag, das angibt, ob die kleine ganze Zahl variabler Länge bytegetauscht ist.
 
 </dd> <dt>
 
-*LPDWORD* 
+*lpDword* 
 </dt> <dd>
 
-Das **DWORD** , in das die ganze Zahl konvertiert wird.
+Das **DWORD,** in das die ganze Zahl konvertiert wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein Zeiger auf das **DWORD**.
+Der Rückgabewert ist ein Zeiger auf **DWORD.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,8 +82,8 @@ Der Rückgabewert ist ein Zeiger auf das **DWORD**.
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Parser. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Parser.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl>  |
 
 

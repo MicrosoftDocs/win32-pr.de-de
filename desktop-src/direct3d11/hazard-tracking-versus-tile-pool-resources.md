@@ -1,25 +1,25 @@
 ---
 title: Gefahrennachverfolgung im Vergleich mit den Kachelpoolressourcen
-description: Bei nicht gekachelten Ressourcen kann Direct3D bestimmte Gefahren Bedingungen während des Renderings verhindern, aber da die gefährverfolgung auf Kachel Ebene für gekachelte Ressourcen erfolgen würde, kann das Nachverfolgen von Gefährdungs Zuständen beim Rendern von gekachelten Ressourcen zu teuer sein.
+description: Bei nicht gekachelten Ressourcen kann Direct3D bestimmte Gefährdungsbedingungen während des Renderings verhindern, aber da die Risikonachverfolgung für gekachelte Ressourcen auf Kachelebene erfolgen würde, ist die Nachverfolgung von Gefährdungsbedingungen während des Renderns von gekachelten Ressourcen möglicherweise zu teuer.
 ms.assetid: 4106BAB9-3E0C-48F1-B7E2-565A65DBC78F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c75dcd11cb5e49f165105bd932854e36b37308cf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1b30feeba564371055ee4297c6795396173a46272f43ffe43af353b17abc0193
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119952900"
 ---
 # <a name="hazard-tracking-versus-tile-pool-resources"></a>Gefahrennachverfolgung im Vergleich mit den Kachelpoolressourcen
 
-Bei nicht gekachelten Ressourcen kann Direct3D bestimmte Gefahren Bedingungen während des Renderings verhindern, aber da die gefährverfolgung auf Kachel Ebene für gekachelte Ressourcen erfolgen würde, kann das Nachverfolgen von Gefährdungs Zuständen beim Rendern von gekachelten Ressourcen zu teuer sein.
+Bei nicht gekachelten Ressourcen kann Direct3D bestimmte Gefährdungsbedingungen während des Renderings verhindern, aber da die Risikonachverfolgung für gekachelte Ressourcen auf Kachelebene erfolgen würde, ist die Nachverfolgung von Gefährdungsbedingungen während des Renderns von gekachelten Ressourcen möglicherweise zu teuer.
 
-Beispielsweise lässt die Runtime für nicht gekachelte Ressourcen nicht zu, dass eine angegebene untergeordnete Quelle als Eingabe (z. b. eine shaderresourceview) und als Ausgabe (z. b. eine rendertargetview) gleichzeitig gebunden wird. Wenn ein solcher Fall auftritt, wird die Bindung der Eingabe von der Laufzeit entbindet. Dieser Überwachungs Aufwand in der Laufzeit ist kostengünstig und wird auf der Ebene der untergeordneten Quelle erreicht. Einer der Vorteile dieses nach Verfolgungs Aufwands besteht darin, die Wahrscheinlichkeit von Anwendungen zu minimieren, abhängig von der Reihenfolge der Hardware-Shader-Ausführung. Die Ausführungsreihenfolge der Hardware-Shader kann variieren, wenn Sie nicht auf einer bestimmten GPU (Graphics Processing Unit) und dann auf unterschiedlichen GPUs verteilt ist.
+Bei nicht gekachelten Ressourcen lässt die Runtime beispielsweise nicht zu, dass eine bestimmte SubResource gleichzeitig als Eingabe (z. B. ShaderResourceView) und als Ausgabe (z. B. RenderTargetView) gebunden wird. Wenn ein solcher Fall auftritt, entbindet die Laufzeit die Eingabe. Dieser Nachverfolgungsaufwand in der Laufzeit ist kostengünstig und erfolgt auf SubResource-Ebene. Einer der Vorteile dieses Nachverfolgungsaufwands besteht darin, die Wahrscheinlichkeit zu minimieren, dass Anwendungen versehentlich von der Ausführungsreihenfolge des Hardware-Shaders abhängig sind. Die Ausführungsreihenfolge des Hardware-Shaders kann variieren, wenn nicht auf einer bestimmten Grafikverarbeitungseinheit (GRAPHICS Processing Unit, GPU) und sicher über verschiedene GPUs hinweg.
 
-Die Nachverfolgung, wie Ressourcen gebunden werden, kann für gekachelte Ressourcen zu teuer sein, da die Nachverfolgung auf Kachel Ebene erfolgt. Es ergeben sich neue Probleme, z. b. das Überprüfen von versuchen, eine rendertargetview zu rendertargetview zu rendieren, und eine Kachel, die mehreren Bereichen in der Wenn sich herausstellt, dass die Nachverfolgung pro Kachel für die Laufzeit zu teuer ist, ist dies im Idealfall zumindest eine Option in der debugschicht.
+Die Nachverfolgung, wie Ressourcen gebunden sind, kann für gekachelte Ressourcen zu teuer sein, da die Nachverfolgung auf Kachelebene erfolgt. Es treten neue Probleme auf, z. B. das mögliche Entfernen von Versuchen, in eine RenderTargetView zu rendern, wobei eine Kachel mehreren Bereichen auf der Oberfläche gleichzeitig zugeordnet ist. Wenn sich herausstellt, dass diese Risikonachverfolgung pro Kachel für die Laufzeit zu teuer ist, wäre dies im Idealfall zumindest eine Option in der Debugebene.
 
-Eine Anwendung muss den Anzeigetreiber Benachrichtigen, wenn Sie einen Schreib-oder Lesevorgang für eine gekachelte Ressource ausgegeben hat, die auf den Kachel Pool Speicher verweist, auf den auch von separaten gekachelten Ressourcen in anstehenden Lese-oder Schreibvorgängen verwiesen wird, bevor die folgenden Vorgänge beginnen können. Weitere Informationen zu dieser Bedingung finden Sie unter [**ID3D11DeviceContext2:: tiledresourcebarrier**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-tiledresourcebarrier) -Hinweise.
+Eine Anwendung muss den Anzeigetreiber informieren, wenn sie einen Schreib- oder Lesevorgang für eine gekachelte Ressource ausgeführt hat, die auf den Kachelpoolspeicher verweist, auf den auch von separaten gekachelten Ressourcen in anstehenden Lese- oder Schreibvorgängen verwiesen wird, dass der erste Vorgang abgeschlossen werden soll, bevor die folgenden Vorgänge beginnen können. Weitere Informationen zu dieser Bedingung finden Sie unter [**ID3D11DeviceContext2::TiledResourceBarrier-Hinweise.**](/windows/desktop/api/D3D11_2/nf-d3d11_2-id3d11devicecontext2-tiledresourcebarrier)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -28,9 +28,9 @@ Eine Anwendung muss den Anzeigetreiber Benachrichtigen, wenn Sie einen Schreib-o
 [Zuordnungen in einen Kachelpool](mappings-are-into-a-tile-pool.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

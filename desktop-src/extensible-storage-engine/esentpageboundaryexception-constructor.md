@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentpageboundaryexception-Konstruktor'
-title: Esentpageboundaryexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentPageBoundaryException-Konstruktor'
+title: EsentPageBoundaryException-Konstruktor
 TOCTitle: 'EsentPageBoundaryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentPageBoundaryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpageboundaryexception.esentpageboundaryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cf09966c0bf311de2ae06c2e8b935f6fe7ff03a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b57eb073b4635c91d3b1e553d596c091b1759ee5d3b1e226e19baa209ff4c271
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119947080"
 ---
-# <a name="esentpageboundaryexception-constructor"></a>Esentpageboundaryexception-Konstruktor
+# <a name="esentpageboundaryexception-constructor"></a>EsentPageBoundaryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentpageboundaryexception-Klasse.
+Initialisiert eine neue Instanz der EsentPageBoundaryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentPageBoundaryException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentpageboundaryexception-Klasse](./esentpageboundaryexception-class.md)
+[EsentPageBoundaryException-Klasse](./esentpageboundaryexception-class.md)
 
-[Esentpageboundaryexception-Member](./esentpageboundaryexception-members.md)
+[EsentPageBoundaryException-Member](./esentpageboundaryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

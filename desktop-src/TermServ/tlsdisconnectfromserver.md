@@ -1,10 +1,10 @@
 ---
-title: Tlsdisconnectfromserver-Funktion
-description: Schließt ein geöffnetes Handle für einen Remotedesktop-Lizenzserver.
+title: TLSDisconnectFromServer-Funktion
+description: Schließt ein geöffnetes Handle für einen Remotedesktop Lizenzserver.
 ms.assetid: b4b001ec-823b-4514-bbec-839a83a9a189
 ms.tgt_platform: multiple
 keywords:
-- Tlsdisconnectfromserver-Funktion Remotedesktopdienste
+- TLSDisconnectFromServer-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 265a6b04186bd640943cf2b348dda7afcf8f712a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 95911536eda4bd87e45fd034626cf83d88f4d9fc768e4837316ee93abfe3c3d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869410"
 ---
-# <a name="tlsdisconnectfromserver-function"></a>Tlsdisconnectfromserver-Funktion
+# <a name="tlsdisconnectfromserver-function"></a>TLSDisconnectFromServer-Funktion
 
-Schließt ein geöffnetes Handle für einen Remotedesktop-Lizenzserver.
+Schließt ein geöffnetes Handle für einen Remotedesktop Lizenzserver.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mstlsapi.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mstlsapi.dll.
 
  
 
@@ -46,10 +46,10 @@ void WINAPI TLSDisconnectFromServer(
 
 <dl> <dt>
 
-*hHandle* \[ in\]
+*hHandle* \[ In\]
 </dt> <dd>
 
-Handle für einen Remotedesktop Lizenzserver, der durch einen Rückruf der [**tlsconnecttolsserver**](tlsconnecttolsserver.md) -Funktion geöffnet wird.
+Handle für einen Remotedesktop Lizenzserver, der durch einen Aufruf der [**TLSConnectToLsServer-Funktion geöffnet**](tlsconnecttolsserver.md) wird.
 
 </dd> </dl>
 
@@ -57,9 +57,9 @@ Handle für einen Remotedesktop Lizenzserver, der durch einen Rückruf der [**tl
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie die **tlsdisconnectfromserver** -Funktion als Teil der cleanuproutine Ihres Programms auf, um alle Server Handles zu schließen, die durch Aufrufe der [**tlsconnecttolsserver**](tlsconnecttolsserver.md) -Funktion geöffnet werden.
+Rufen Sie **die TLSDisconnectFromServer-Funktion** als Teil der Bereinigungsroutine Ihres Programms auf, um alle Serverhandles zu schließen, die durch Aufrufe der [**TLSConnectToLsServer-Funktion geöffnet**](tlsconnecttolsserver.md) werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,10 +77,10 @@ Rufen Sie die **tlsdisconnectfromserver** -Funktion als Teil der cleanuproutine 
 
 <dl> <dt>
 
-[**TLS- \_ handle**](tls-handle.md)
+[**\_TLS-HANDLE**](tls-handle.md)
 </dt> <dt>
 
-[**Tlsconnecttolsserver**](tlsconnecttolsserver.md)
+[**TLSConnectToLsServer**](tlsconnecttolsserver.md)
 </dt> </dl>
 
  
