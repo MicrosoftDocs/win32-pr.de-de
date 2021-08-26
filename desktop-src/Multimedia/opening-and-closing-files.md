@@ -4,30 +4,30 @@ description: Öffnen und Schließen von Dateien
 ms.assetid: 72655d33-f685-4205-a982-f7cd20c59f22
 keywords:
 - AVIFileOpen-Funktion
-- Avifilerelease-Funktion
+- AVIFileRelease-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 68e1c51c4747e03bf4f18a8e6c560e45798e1c8c
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: cca5cfdce177e119d178ca09dd447b7d4e3b6a52c1881f059b72e4424f9c54c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106351862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038320"
 ---
 # <a name="opening-and-closing-files"></a>Öffnen und Schließen von Dateien
 
-Eine Anwendung muss vor dem Lesen oder schreiben eine AVI-Datei öffnen. Um eine AVI-Datei zu öffnen, verwenden Sie die [**AVIFileOpen**](/windows/desktop/api/Vfw/nf-vfw-avifileopen) -Funktion. **AVIFileOpen** gibt die Adresse einer AVI-Datei Schnittstelle zurück, die das Handle der geöffneten Datei enthält, und erhöht den Verweis Zähler der Datei.
+Eine Anwendung muss vor dem Lesen oder Schreiben eine AVI-Datei öffnen. Um eine AVI-Datei zu öffnen, verwenden Sie die [**FUNKTION AVIFileOpen.**](/windows/desktop/api/Vfw/nf-vfw-avifileopen) **AVIFileOpen** gibt die Adresse einer AVI-Dateischnittstelle zurück, die das Handle der geöffneten Datei enthält, und erhöht den Verweiszähler der Datei.
 
-Die **AVIFileOpen** -Funktion unterstützt die von Flags, die mit der [OpenFile](/documentation/) -Funktion verwendet werden. Wenn eine Anwendung in eine vorhandene Datei schreibt, muss Sie die des \_ Schreib Flags in **AVIFileOpen** einschließen. Ebenso müssen Sie, wenn Ihre Anwendung eine neue Datei erstellt und in diese schreibt, den von \_ Create-und \_ Write-Flags in **AVIFileOpen** einschließen.
+Die **AVIFileOpen-Funktion** unterstützt die OF-Flags, die mit der [OpenFile-Funktion](/documentation/) verwendet werden. Wenn eine Anwendung in eine vorhandene Datei schreibt, muss sie das FLAG OF \_ WRITE in **AVIFileOpen** enthalten. Wenn Ihre Anwendung erstellt und in eine neue Datei schreibt, müssen Sie entsprechend die Flags OF \_ CREATE und OF WRITE in \_ **AVIFileOpen** einschließen.
 
-Wenn Sie eine Datei mithilfe von **AVIFileOpen** öffnen, können Sie einen Standarddatei Handler verwenden, oder Sie können einen benutzerdefinierten Datei Handler zum Lesen und Schreiben in die Datei und deren Datenströme angeben. In beiden Fällen durchsucht avifile die Registrierung nach dem richtigen Datei Handler, der verwendet werden soll. Sie müssen sicherstellen, dass benutzerdefinierte Datei Handler in der Registrierung vorliegen, bevor eine Anwendung darauf zugreifen kann.
+Wenn Sie eine Datei mitHILFE von **AVIFileOpen** öffnen, können Sie einen Standarddateihandler verwenden oder einen benutzerdefinierten Dateihandler zum Lesen und Schreiben in die Datei und deren Datenströme angeben. In beiden Fällen durchsucht AVIFile die Registrierung nach dem richtigen Dateihandler, der verwendet werden soll. Sie müssen sicherstellen, dass sich benutzerdefinierte Dateihandler in der Registrierung befinden, bevor eine Anwendung darauf zugreifen kann.
 
-Sie können den Verweis Zähler einer Datei mithilfe der [**avifileadressf**](/windows/desktop/api/Vfw/nf-vfw-avifileaddref) -Funktion erhöhen. Dies kann z. b. der Fall sein, wenn Sie ein Handle der Datei Schnittstelle an eine andere Anwendung übergeben oder wenn Sie eine Datei geöffnet lassen möchten, während Sie eine Funktion verwenden, die die Datei normalerweise schließt.
+Sie können den Verweiszähler einer Datei erhöhen, indem Sie die [**FUNKTION AVIFileAddRef**](/windows/desktop/api/Vfw/nf-vfw-avifileaddref) verwenden. Dies können Sie z. B. tun, wenn Sie ein Handle der Dateischnittstelle an eine andere Anwendung übergeben oder wenn Sie eine Datei geöffnet lassen möchten, während Sie eine Funktion verwenden, die normalerweise die Datei schließen würde.
 
-Sie können eine Datei mit der [**avifilerelease**](/windows/desktop/api/Vfw/nf-vfw-avifilerelease) -Funktion schließen. Die **avifilerelease** -Funktion Dekremente den Verweis Zähler einer AVI-Datei, speichert Änderungen an der Datei und schließt die Datei, wenn der Verweis Zähler Null erreicht. Ihre Anwendungen sollten den Verweis Zähler ausgleichen, indem Sie für jede Verwendung von [**AVIFileOpen**](/windows/desktop/api/Vfw/nf-vfw-avifileopen) und **avifileadressf** einen **avifilerelease** -Rückruf einschließen.
+Sie können eine Datei mithilfe der [**AVIFileRelease-Funktion**](/windows/desktop/api/Vfw/nf-vfw-avifilerelease) schließen. Die **AVIFileRelease-Funktion** dekrementiert den Verweiszähler einer AVI-Datei, speichert an der Datei vorgenommene Änderungen und schließt die Datei, wenn der Verweiszähler 0 (null) erreicht. Ihre Anwendungen sollten den Verweiszähler ausgleichen, indem sie einen Aufruf von **AVIFileRelease** für jede Verwendung von [**AVIFileOpen**](/windows/desktop/api/Vfw/nf-vfw-avifileopen) und **AVIFileAddRef** einschließen.
 
 > [!Note]  
-> Eine Anwendung kann eine Datei mit einem oder mehreren Programmthreads öffnen. Um jedoch eine bestmögliche Leistung zu erzielen, sollte jeweils nur ein Thread auf die Datei zugreifen.
+> Eine Anwendung kann eine Datei mit einem oder mehreren Programmthreads öffnen. Um die bestmögliche Leistung zu erzielen, sollte jedoch jeweils nur ein Thread auf die Datei zugreifen.
 
  
 

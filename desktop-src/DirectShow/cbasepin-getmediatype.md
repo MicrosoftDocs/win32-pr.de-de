@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 186f2eddbedf4eb0565a4ca66ff4ed7e5b080090
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cc202c3b6dbc570d063ef74619b266c2faa20cb74322b29e61626418412e2cb9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120044080"
 ---
 # <a name="cbasepingetmediatype-method"></a>CBasePin.GetMediaType-Methode
 
@@ -74,7 +74,7 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die werte in der folge
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Aus der Liste der bevorzugten Medientypen des Pins gibt diese Methode den Typ mit dem Indexwert *iPosition zurück.* Die [**CEnumMediaTypes-Klasse**](cenummediatypes.md) ruft diese Methode auf, um bevorzugte Medientypen aufzählen.
 
@@ -84,14 +84,14 @@ Die Basisklasse gibt E \_ UNEXPECTED zurück. Überschreiben Sie diese Methode i
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h einschließen)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

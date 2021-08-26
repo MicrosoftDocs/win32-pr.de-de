@@ -1,28 +1,28 @@
 ---
 description: 'Schritt 3C:'
 ms.assetid: e780df46-bf47-4334-b788-05ad8179f051
-title: 'Schritt 3C: Implementieren der checktransform-Methode'
+title: 'Schritt 3C: Implementieren der CheckTransform-Methode'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78148701fc54e73a6970d45fde95d70f4cf0df3a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 430ad933acfa7fc41a8b075183080e0b710a5d4780b55fa89cd4bf80984c1edc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075590"
 ---
-# <a name="step-3c-implement-the-checktransform-method"></a>Schritt 3C: Implementieren der checktransform-Methode
+# <a name="step-3c-implement-the-checktransform-method"></a>Schritt 3C: Implementieren der CheckTransform-Methode
 
-Dies ist Schritt 3C des Tutorials zum [Schreiben von Transformations Filtern](writing-transform-filters.md).
+Dies ist Schritt 3C des Tutorials [Schreiben von Transformationsfiltern.](writing-transform-filters.md)
 
 > [!Note]  
-> Dieser Schritt ist für Filter, die von **ctransinplacefilter** abgeleitet werden, nicht erforderlich.
+> Dieser Schritt ist für Filter, die von **CTransInPlaceFilter** abgeleitet sind, nicht erforderlich.
 
  
 
-Die [**ctransformfilter:: checktransform**](ctransformfilter-checktransform.md) -Methode überprüft, ob ein vorgeschlagene Ausgabetyp mit dem aktuellen Eingabetyp kompatibel ist. Die-Methode wird auch aufgerufen, wenn die Eingabe-PIN erneut eine Verbindung herstellt, nachdem die PIN-Ausgabe Verbindung hergestellt
+Die [**CTransformFilter::CheckTransform-Methode**](ctransformfilter-checktransform.md) überprüft, ob ein vorgeschlagener Ausgabetyp mit dem aktuellen Eingabetyp kompatibel ist. Die -Methode wird auch aufgerufen, wenn der Eingabepin nach dem Herstellen der Verbindung mit dem Ausgabepin erneut eine Verbindung herstellt.
 
-Im folgenden Beispiel wird überprüft, ob das Format RLE8 Video ist. die Bild Dimensionen entsprechen dem Eingabeformat. und die Paletteneinträge sind identisch. Sie lehnt auch Quell-und Ziel Rechtecke ab, die nicht mit der Bildgröße identisch sind.
+Im folgenden Beispiel wird überprüft, ob das Format RLE8-Video ist. Die Bilddimensionen entsprechen dem Eingabeformat. und die Paletteneinträge sind identisch. Außerdem werden Quell- und Zielrechtecke abgelehnt, die nicht mit der Bildgröße übereinstimmen.
 
 
 ```C++
@@ -96,20 +96,20 @@ HRESULT CRleFilter::CheckTransform(
 
 
 
-**PIN-erneute Verbindungen**
+**Stecknadelwiederherstellungen**
 
-Anwendungen können die PIN trennen und die Verbindung wiederherstellen. Angenommen, eine Anwendung verbindet beide Pins, trennt die eingabepin und verbindet die Eingabe-PIN dann erneut mit einer neuen Bildgröße. In diesem Fall schlägt **checktransform** fehl, da die Abmessungen des Bilds nicht mehr identisch sind. Dieses Verhalten ist sinnvoll, obwohl der Filter auch versuchen könnte, die Ausgabepin erneut mit einem neuen Medientyp zu verbinden.
+Anwendungen können Pins trennen und erneut verbinden. Angenommen, eine Anwendung verbindet beide Pins, trennt den Eingabepin und verbindet den Eingabepin dann mithilfe einer neuen Bildgröße erneut. In diesem Fall schlägt **CheckTransform** fehl, da die Abmessungen des Bilds nicht mehr übereinstimmen. Dieses Verhalten ist sinnvoll, obwohl der Filter auch versuchen könnte, den Ausgabepin mit einem neuen Medientyp erneut zu verbinden.
 
-Weiter: [Schritt 4. Legen Sie zuordnereigenschaften fest](step-4--set-allocator-properties.md).
+Weiter: [Schritt 4. Legen Sie Zuweisungseigenschaften](step-4--set-allocator-properties.md)fest.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[PIN wird wieder hergestellt](reconnecting-pins.md)
+[Erneutes Verbinden von Pins](reconnecting-pins.md)
 </dt> <dt>
 
-[Quell-und Ziel Rechtecke in Videorenderer](source-and-target-rectangles-in-video-renderers.md)
+[Quell- und Zielrechtecke in Videorenderern](source-and-target-rectangles-in-video-renderers.md)
 </dt> <dt>
 
 [Schreiben von DirectShow-Filtern](writing-directshow-filters.md)

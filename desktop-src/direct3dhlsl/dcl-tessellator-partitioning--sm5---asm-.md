@@ -1,23 +1,23 @@
 ---
-title: dcl_tessellator_partitioning (SM5-ASM)
-description: Deklarieren Sie die Mosaik-Partitionierung in einem Hull-Shader-Deklarations Abschnitt.
+title: dcl_tessellator_partitioning (sm5 - asm)
+description: Deklarieren Sie die Mosaikpartitionierung in einem Deklarationsabschnitt für den Hüllen-Shader.
 ms.assetid: 6EA00C6B-A0DE-4CE4-8B52-1337CA92CA5E
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c6f6091301f95dd2364debec2bf54c0966c0e64
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: ae40873db4042e568ae637634e75db6f4746985a316bf9c1e092e6b0925b51b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068500"
 ---
-# <a name="dcl_tessellator_partitioning-sm5---asm"></a>DCL \_ \_ -Mosaik-Partitionierung (SM5-ASM)
+# <a name="dcl_tessellator_partitioning-sm5---asm"></a>dcl \_ tessellator \_ partitioning (sm5 - asm)
 
-Deklarieren Sie die Mosaik-Partitionierung in einem Hull-Shader-Deklarations Abschnitt.
+Deklarieren Sie die Mosaikpartitionierung in einem Deklarationsabschnitt für den Hüllen-Shader.
 
 
 
-| DCL-Mosaik \_ Prozess- \_ Partitionierung {Partitionierungs \_ Ganzzahl \| Partitionierung \_ pow2 \|Partitionierung von \_ Bruchteil/ \_ ungeraden \| Partitionierung von \_ Bruchteilen \_ sogar} |
+| dcl \_ tessellator \_ partitioning {partitioning \_ integer\| Partitionierung \_ pow2\|Partitionierung \_ Bruch \_ ungerade\| Partitionierung \_ von Fractional \_ Even} |
 |---------------------------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -28,42 +28,42 @@ Deklarieren Sie die Mosaik-Partitionierung in einem Hull-Shader-Deklarations Abs
 
 | Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | BESCHREIBUNG                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| <span id="partitioning_integer__________________________________partitioning_pow2_partitioning_fractional_odd__________________________________partitioning_fractional_even"></span><span id="PARTITIONING_INTEGER__________________________________PARTITIONING_POW2_PARTITIONING_FRACTIONAL_ODD__________________________________PARTITIONING_FRACTIONAL_EVEN"></span>*Partitionierung von \_ ganzzahligen Partitionen \| \_ pow2 \| Partitionierung von \_ Bruchteil der \_ ungeraden \| \_ \_ Dezimalstellen sogar*<br/> | \[in \] der Mosaik-Partitionierung.<br/> |
+| <span id="partitioning_integer__________________________________partitioning_pow2_partitioning_fractional_odd__________________________________partitioning_fractional_even"></span><span id="PARTITIONING_INTEGER__________________________________PARTITIONING_POW2_PARTITIONING_FRACTIONAL_ODD__________________________________PARTITIONING_FRACTIONAL_EVEN"></span>*Partitionierung der \_ \| ganzzahligen \_ Partitionierung pow2 \| Partitionierung \_ fractional \_ odd \| partitioning \_ fractional \_ even*<br/> | \[in \] Die Mosaikpartitionierung.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Aus Sicht der Hardware \_ verhält sich pow2 genauso wie eine \_ ganze Zahl. Der HLSL-Shader-Autor und/oder-Kompilier Code ist für die Rundung von Tess Factors auf die Potenzen von 2 fest.
+Aus Hardwaresicht verhält \_ sich pow2 wie eine ganze \_ Zahl. Es liegt in der Zuständigkeit des HLSL-Shaderautors und/oder Compilercodes, TessFactors auf 2-Werte zu runden.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle                 | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf                 | Domain | Geometrie | Pixel | Compute |
 |--------|----------------------|--------|----------|-------|---------|
-|        | Deklarations Abschnitt |        |          |       |         |
+|        | Abschnitt "Deklarationen" |        |          |       |         |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

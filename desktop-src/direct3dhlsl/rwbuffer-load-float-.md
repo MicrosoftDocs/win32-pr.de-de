@@ -1,9 +1,9 @@
 ---
-title: 'Rwbuffer:: Load (int)-Funktion'
-description: 'Liest Puffer Daten. | Rwbuffer:: Load (int)-Funktion'
+title: RWBuffer::Load(int)-Funktion
+description: Liest Pufferdaten. | RWBuffer::Load(int)-Funktion
 ms.assetid: 3066E244-DE56-4F0D-8443-018B9EFEC1FF
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 561f055990bbca683bf9c55b5805b8d3c55b3272
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d3e3f9c9714cb4cc7f0f29bfa801e767b468d526836a7bd09f0f9823d9ff8868
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118300"
 ---
-# <a name="rwbufferloadint-function"></a>Rwbuffer:: Load (int)-Funktion
+# <a name="rwbufferloadint-function"></a>RWBuffer::Load(int)-Funktion
 
-Liest Puffer Daten.
+Liest Pufferdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ Liest Puffer Daten.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort des Puffers.
+Die Position des Puffers.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Der Speicherort des Puffers.
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**rwbuffer**](sm5-object-rwbuffer.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWBuffer-Objekt.**](sm5-object-rwbuffer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -68,11 +68,11 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](rwbuffer-load.md)
+[Laden von Methoden](rwbuffer-load.md)
 </dt> </dl>
 
  

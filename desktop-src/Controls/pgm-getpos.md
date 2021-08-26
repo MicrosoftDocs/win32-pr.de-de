@@ -1,9 +1,9 @@
 ---
-title: PGM_GETPOS Meldung (kommstrg. h)
-description: Ruft die aktuelle Bild Lauf Position des Pager-Steuer Elements ab. Sie können diese Nachricht explizit senden oder das Pager- \_ GetPos-Makro verwenden.
+title: PGM_GETPOS (Commctrl.h)
+description: Ruft die aktuelle Bildlaufposition des Pager-Steuerelements ab. Sie können diese Nachricht explizit senden oder das Pager \_ GetPos-Makro verwenden.
 ms.assetid: 1e0f967a-3290-43b7-b812-8cf56abf2d32
 keywords:
-- Windows-Steuerelemente für PGM_GETPOS Meldung
+- PGM_GETPOS message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 611a27e9cb952c5be190fa041af3d238f0184b03
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 16f1d5608b720d5a5d3d661a368d094da9469d71108874a6cec5495bf120cc54
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046870"
 ---
-# <a name="pgm_getpos-message"></a>PGM- \_ GetPos-Nachricht
+# <a name="pgm_getpos-message"></a>PGM \_ GETPOS-Nachricht
 
-Ruft die aktuelle Bild Lauf Position des Pager-Steuer Elements ab. Sie können diese Nachricht explizit senden oder das [**Pager- \_ GetPos**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getpos) -Makro verwenden.
+Ruft die aktuelle Bildlaufposition des Pager-Steuerelements ab. Sie können diese Nachricht explizit senden oder das [**Pager \_ GetPos-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getpos) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die aktuelle Bild Lauf Position des Pager-Steuer Elements ab. Sie können d
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen int-Wert zurück, der die aktuelle Bild Lauf Position in Pixel enthält.
+Gibt einen INT-Wert zurück, der die aktuelle Bildlaufposition in Pixel enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen int-Wert zurück, der die aktuelle Bild Lauf Position in Pixel enthä
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

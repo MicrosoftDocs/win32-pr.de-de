@@ -1,9 +1,9 @@
 ---
-title: " ifdef-und ifndef-Direktiven"
-description: Präprozessordirektiven, die bestimmen, ob eine bestimmte präprozessorkonstante oder ein bestimmtes Makro definiert ist.
+title: " ifdef- und ifndef-Direktiven"
+description: Präprozessordirektiven, die bestimmen, ob eine bestimmte Präprozessorkonst constant oder ein Makro definiert ist.
 ms.assetid: c1cc2e1d-2599-45ec-9629-56c4b42e0d0e
 keywords:
-- ifdef-und ifndef-Direktiven HLSL
+- ifdef- und ifndef-Direktiven HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 338308b58f1cdc68ec78984e65ffbf056a36b10b
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 584cde8856c48aeafed5665016a71146f8c2ffb341b837faa6bf35d627152c39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068320"
 ---
-# <a name="ifdef-and-ifndef-directives"></a>\#ifdef-und \# ifndef-Direktiven
+# <a name="ifdef-and-ifndef-directives"></a>\#ifdef- und \# ifndef-Direktiven
 
-Präprozessordirektiven, die bestimmen, ob eine bestimmte präprozessorkonstante oder ein bestimmtes Makro definiert ist.
+Präprozessordirektiven, die bestimmen, ob eine bestimmte Präprozessorkonst constant oder ein Makro definiert ist.
 
 
 
-| \#ifdef- *Bezeichner* ...  |
+| \#ifdef *identifier* ...  |
 |---------------------------|
 | \#endif                   |
-| \#ifndef- *Bezeichner* ... |
+| \#ifndef *identifier* ... |
 | \#endif                   |
 
 
@@ -42,19 +42,19 @@ Präprozessordirektiven, die bestimmen, ob eine bestimmte präprozessorkonstante
 
 | Element                                                                              | BESCHREIBUNG                                               |
 |-----------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <span id="identifier"></span><span id="IDENTIFIER"></span>*Figur*<br/> | Der Bezeichner der zu überprüfen Konstanten oder Makros. <br/> |
+| <span id="identifier"></span><span id="IDENTIFIER"></span>*Bezeichner*<br/> | Bezeichner der zu überprüfenden Konstante oder des zu überprüfenden Makros. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die \# ifdef-und \# ifndef-Direktiven überall [ \# ](dx-graphics-hlsl-appendix-pre-if.md) dort verwenden, wo verwendet werden kann. Die \# ifdef-Anweisung entspricht der-Direktive. Diese Direktiven überprüfen nur das vorhanden sein oder Fehlen von [ \# bezeichlen](dx-graphics-hlsl-appendix-pre-define.md) , die mithilfe der define-Direktive definiert wurden, nicht für Bezeichner, die im C-oder C++-Quellcode deklariert sind.
+Sie können die \# ifdef- und \# ifndef-Direktiven [ \# ](dx-graphics-hlsl-appendix-pre-if.md) überall dort verwenden, wo der if verwendet werden kann. Die \# ifdef-Anweisung entspricht der -Direktive . Diese Anweisungen überprüfen nur das Vorhandensein oder Fehlen von Bezeichnern, die mit der [ \# define-Direktive](dx-graphics-hlsl-appendix-pre-define.md) definiert wurden, nicht auf Bezeichner, die im C- oder C++-Quellcode deklariert sind.
 
-Diese Anweisungen werden nur bereitgestellt, um die Kompatibilität mit früheren Versionen der Sprache zu gewährleisten. Die Verwendung des [definierten](dx-graphics-hlsl-appendix-pre-if.md) Operators mit der \# if-Direktive wird bevorzugt.
+Diese Anweisungen werden nur bereitgestellt, um die Kompatibilität mit früheren Versionen der Sprache zu gewährleisten. Die Verwendung des definierten [Operators](dx-graphics-hlsl-appendix-pre-if.md) mit der \# if-Direktive wird bevorzugt.
 
-Die \# ifndef-Direktive prüft das Gegenteil der von \# ifdef geprüften Bedingung. Wenn der Bezeichner nicht definiert ist, ist die Bedingung "true" (ungleich 0); Andernfalls ist die Bedingung "false" (null).
+Die \# ifndef-Direktive überprüft das Gegenteil der bedingung, die von \# ifdef überprüft wird. Wenn der Bezeichner nicht definiert ist, ist die Bedingung true (ungleich 0). Andernfalls ist die Bedingung false (null).
 
 ## <a name="examples"></a>Beispiele
 
@@ -73,7 +73,7 @@ int main()
 
 
 
-Bei der Kompilierung mit dem folgenden Befehl wird "PROG. cpp" im Testmodus kompiliert. Andernfalls wird es im abschließenden Modus kompiliert.
+Bei der Kompilierung mit dem folgenden Befehl wird prog.cpp im Testmodus kompiliert. Andernfalls wird er im endgültigen Modus kompiliert.
 
 
 ```
@@ -82,14 +82,14 @@ CL.EXE /Dtest prog.cpp
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
 [Präprozessordirektiven (DirectX HLSL)](dx-graphics-hlsl-appendix-preprocessor.md)
 </dt> <dt>
 
-[\#Wenn,)](dx-graphics-hlsl-appendix-pre-if.md)
+[\#if, )](dx-graphics-hlsl-appendix-pre-if.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Dieser Abschnitt enthält Informationen einschließlich Beispielcode zur Verwendung der Sensor-API-Funktionen. Hintergrundinformationen zu den verschiedenen Programmierschnittstellen finden Sie unter Informationen zur Sensor-API.
+description: Dieser Abschnitt enthält Informationen, einschließlich Beispielcode, zur Verwendung der Funktionen der Sensor-API. Hintergrundinformationen zu den verschiedenen Programmierschnittstellen finden Sie unter Informationen zur Sensor-API.
 ms.assetid: 4c2ffd22-49ee-4318-bfa0-e0ce4d8c67bb
-title: Programmier Handbuch zur Sensor-API
+title: Programmierhandbuch zur Sensor-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 078cc99e88a1a4fd6a232220e08c53a99dfbdfb0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5886564e66a0a8db64713b280b44f85a197430dc23523266bc45e66e44c956b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073240"
 ---
-# <a name="sensor-api-programming-guide"></a>Programmier Handbuch zur Sensor-API
+# <a name="sensor-api-programming-guide"></a>Programmierhandbuch zur Sensor-API
 
-Dieser Abschnitt enthält Informationen einschließlich Beispielcode zur Verwendung der Sensor-API-Funktionen. Hintergrundinformationen zu den verschiedenen Programmierschnittstellen finden Sie unter Informationen zur [Sensor-API](about-the-sensor-api.md).
+Dieser Abschnitt enthält Informationen, einschließlich Beispielcode, zur Verwendung der Funktionen der Sensor-API. Hintergrundinformationen zu den verschiedenen Programmierschnittstellen finden Sie unter [Informationen zur Sensor-API.](about-the-sensor-api.md)
 
-Der Beispielcode in diesem Abschnitt verwendet die folgenden zusätzlichen enthaltenen Header.
+Der Beispielcode in diesem Abschnitt verwendet die folgenden zusätzlichen eingeschlossenen Header.
 
 
 ```C++
@@ -34,9 +34,9 @@ Der Beispielcode in diesem Abschnitt verwendet die folgenden zusätzlichen entha
 
 
 
-Sie müssen auch eine Verknüpfung zu diesen zusätzlichen zugeordneten Bibliotheksdateien herstellen: "propsys. lib" und "portabledeviceguids. lib".
+Sie müssen auch einen Link zu diesen zusätzlichen zugeordneten Bibliotheksdateien erstellen: Propsys.lib und PortableDeviceGuids.lib.
 
-Der Beispielcode in diesem Abschnitt verwendet die folgenden Konstanten für Sensor Kategorien, Typen und Datenfelder. Diese Konstanten sind benutzerdefinierte Werte, die durch das Beispiel für einen timesensor-Treiber im Windows-Treiberkit definiert werden. Beachten Sie Folgendes: Obwohl die Sensor Plattform das definieren und Verwenden von benutzerdefinierten Typen wie diesen ermöglicht, sollten Sie nach Möglichkeit Platt Form definierte Typen verwenden.
+Der Beispielcode in diesem Abschnitt verwendet die folgenden Konstanten für Sensorkategorien, Typen und Datenfelder. Diese Konstanten sind benutzerdefinierte Werte, die durch das TimeSensor-Treiberbeispiel im Windows Driver Kit definiert werden. Beachten Sie, dass Sie nach Möglichkeit plattformdefinierte Typen verwenden sollten, obwohl die Sensorplattform das Definieren und Verwenden von benutzerdefinierten Typen wie diesen ermöglicht.
 
 
 ```C++
@@ -89,7 +89,7 @@ ULONG ulHour, ulMinute, ulSecond = 0;
 
 
 
-Der Beispielcode in diesem Abschnitt verwendet die folgende Funktion, um COM-Schnittstellen Zeiger freizugeben.
+Der Beispielcode in diesem Abschnitt verwendet die folgende Funktion, um COM-Schnittstellenzeker frei zu geben.
 
 
 ```C++
@@ -107,15 +107,15 @@ template <class T> void SafeRelease(T **ppT)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Abrufen eines Sensor Objekts](retrieving-a-sensor.md)
+-   [Abrufen eines Sensorobjekts](retrieving-a-sensor.md)
 -   [Anfordern von Benutzerberechtigungen](requesting-user-permissions.md)
--   [Abrufen und Festlegen von Sensor Eigenschaften](setting-and-retrieving-sensor-properties.md)
--   [Überprüfen auf unterstützte Sensor Datenfelder](checking-for-supported-sensor-data-fields.md)
+-   [Abrufen und Festlegen von Sensoreigenschaften](setting-and-retrieving-sensor-properties.md)
+-   [Überprüfen auf unterstützte Sensordatenfelder](checking-for-supported-sensor-data-fields.md)
 -   [Verwenden von Sensor-API-Ereignissen](using-sensor-api-events.md)
--   [Abrufen von Sensor Datenwerten](retrieving-sensor-data-fields.md)
--   [Abrufen von Vektor Typen](retrieving-vector-types.md)
+-   [Abrufen von Sensordatenwerten](retrieving-sensor-data-fields.md)
+-   [Abrufen von Vektortypen](retrieving-vector-types.md)
 -   [Verwenden logischer Sensoren](using-logical-sensors.md)
--   [Erstellen Light-Aware Benutzeroberflächen](creating-light-aware-user-interfaces.md)
+-   [Erstellen Light-Aware-Benutzeroberflächen](creating-light-aware-user-interfaces.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

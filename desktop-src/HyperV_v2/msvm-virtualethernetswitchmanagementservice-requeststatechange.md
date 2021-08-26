@@ -1,5 +1,5 @@
 ---
-description: 'RequestStateChange-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse: Fordert eine Zustandsänderung an.'
+description: RequestStateChange-Methode der Msvm_VirtualEthernetSwitchManagementService - Fordert eine Zustandsänderung an.
 ms.assetid: 0a236a99-6ddb-482f-af28-1af731b6b980
 title: RequestStateChange-Methode der Msvm_VirtualEthernetSwitchManagementService-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 2eceddea59f1f31ba2702c62dba798402bf60b86
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: d3ab99f870b4444006f85d6ac30cd8f9a49f1836e41c04e5fc80dd0f4f128f1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075290"
 ---
 # <a name="requeststatechange-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>RequestStateChange-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 (Auftrag ohne Fehler abgeschlossen) oder 4096 (Auftrag gestartet) ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das -Element. Dies muss einer der folgenden Werte sein.
+Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 (Auftrag ohne Fehler abgeschlossen) oder 4096 (Auftrag gestartet) ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -85,14 +85,14 @@ Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft**
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückstellen** (8)
+**Zurückern** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Stille** (9)
+**Ruhe** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -120,7 +120,7 @@ Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft**
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (32768..65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> <dt>
@@ -128,7 +128,7 @@ Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft**
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den durch den Methodenaufruf initiierten Zustandsübergang nachverfolgung zu verfolgen.
+Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den zustandsübergang zu verfolgen, der durch den Methodenaufruf initiiert wurde.
 
 </dd> <dt>
 
@@ -151,11 +151,11 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

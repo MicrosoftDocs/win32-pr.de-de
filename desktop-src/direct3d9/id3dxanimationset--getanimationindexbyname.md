@@ -1,7 +1,7 @@
 ---
-description: Ruft den Index einer Animation ab, wenn der Name angegeben wird.
+description: Ruft den Index einer Animation unter Nennung ihres Namens ab.
 ms.assetid: 6e91a4fe-3202-447b-b486-d29e8da64af2
-title: 'ID3DXAnimationSet:: getanimationindexbyname-Methode (D3dx9anim. h)'
+title: ID3DXAnimationSet::GetAnimationIndexByName-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f4d3e5fb39ebcfa5ce906d1f90c2c5c10bdd4b3d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: cee98a1450d1ef10dffa9f8f2da232bc334ca77995e2fa0bcf985f014f7139c5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069070"
 ---
-# <a name="id3dxanimationsetgetanimationindexbyname-method"></a>ID3DXAnimationSet:: getanimationindexbyname-Methode
+# <a name="id3dxanimationsetgetanimationindexbyname-method"></a>ID3DXAnimationSet::GetAnimationIndexByName-Methode
 
-Ruft den Index einer Animation ab, wenn der Name angegeben wird.
+Ruft den Index einer Animation unter Nennung ihres Namens ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetAnimationIndexByName(
 
 <dl> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Animation.
+Name der Animation.
 
 </dd> <dt>
 
-*pIndex* \[ vorgenommen\]
+*pIndex* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf den Animations Index.
+Zeiger auf den Animationsindex.
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Zeiger auf den Animations Index.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die-Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

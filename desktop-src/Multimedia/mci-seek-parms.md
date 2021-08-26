@@ -1,6 +1,6 @@
 ---
-title: MCI_SEEK_PARMS-Struktur (mciapi. h)
-description: Die MCI \_ - \_ suchparametenstruktur enthält Positionsinformationen für den MCI \_ Seek-Befehl.
+title: MCI_SEEK_PARMS-Struktur (Mciapi.h)
+description: Die MCI \_ SEEK \_ PARMS-Struktur enthält Positionierungsinformationen für den MCI \_ SEEK-Befehl.
 ms.assetid: 2c199855-2134-4709-9313-5b8d66ce4f03
 keywords:
 - MCI_SEEK_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c31f419b2458dedc19c6533e8f0f7fade97026e5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 283e0a0f60b4eaf438943628b92bb33974823f6525526c5e5a6cb2e55acb6c94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038250"
 ---
-# <a name="mci_seek_parms-structure"></a>Struktur der MCI- \_ Such \_ Teilwerte
+# <a name="mci_seek_parms-structure"></a>MCI \_ SEEK \_ PARMS-Struktur
 
-Die **MCI \_ - \_ suchparametenstruktur** enthält Positionsinformationen für den [**MCI \_ Seek**](mci-seek.md) -Befehl.
+Die **MCI \_ SEEK \_ PARMS-Struktur** enthält Positionierungsinformationen für den [**MCI \_ SEEK-Befehl.**](mci-seek.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position, an der gesucht werden soll.
+Position, nach der gesucht werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,7 +67,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Mciapi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mciapi.h</dt> </dl> |
 
 
 
@@ -75,13 +75,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Suche**](mci-seek.md)
+[**MCI \_ SEEK**](mci-seek.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

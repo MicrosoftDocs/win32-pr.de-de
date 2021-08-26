@@ -1,32 +1,32 @@
 ---
-description: Comrepl funktioniert in drei Phasen.
+description: COMREPL führt seine Arbeit in drei Phasen aus.
 ms.assetid: e9ba8db6-ff6f-4e49-b91b-465e3fa77f27
-title: Replikations Phasen
+title: Replikationsphasen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1dc180e7864f05eb1be60262ee54dd4b71df53bd
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 390d1924b85e2681854fe8de604fea1fe59a022fa97843051457677905048dd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119990420"
 ---
-# <a name="replication-phases"></a>Replikations Phasen
+# <a name="replication-phases"></a>Replikationsphasen
 
-Comrepl funktioniert in drei Phasen. Der Replikationsprozess wird aus den folgenden zwei Gründen in verschiedene Phasen unterteilt:
+COMREPL führt seine Arbeit in drei Phasen aus. Der Replikationsprozess ist aus den folgenden beiden Gründen in unterschiedliche Phasen unterteilt:
 
--   So trennen Sie die Arbeit, die für die Vorbereitung der Quelle auf den einzelnen Zielen erledigt ist
--   So verzögern Sie die Änderung des Ziels, bis alle Daten aus der Quelle abgerufen wurden
+-   So trennen Sie die Arbeit zur Vorbereitung der Quelle von der Arbeit, die auf jedem Ziel durchgeführt wird
+-   So verzögern Sie die Änderung des Ziels, bis alle Daten aus der Quelle erfasst wurden
 
-Die Replikations Phasen lauten wie folgt.
+Die Replikationsphasen lauten wie folgt.
 
 
 
 | Phase         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vorbereitungsphase | Exportiert alle installierten Anwendungen lokal auf den Quellcomputer. In dieser Phase wird die Konfiguration von Zielen nicht berücksichtigt.                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Kopier Phase    | Kopiert Daten auf einen Bereitstellungs Zielcomputer. Alle Anwendungen, die auf der Quelle exportiert werden, werden in das Ziel kopiert. Dabei handelt es sich um einen Datei Kopiervorgang. (Weitere Informationen finden Sie unter [Dateiverwaltung](file-management.md).) Bei diesem Schritt werden auch einige Daten vom Quellcomputer angefordert, die nicht in exportierten Anwendungs Dateien (z. b. Anwendungs Identitäten) gekapselt sind. Diese Daten werden im Arbeitsspeicher in Comrepl gespeichert. In dieser Phase wird die Konfiguration von Ziel Computern nicht berührt.                                                                               |
-| Installationsphase | Installiert den Quell Katalog auf einem Bereitstellungs Zielcomputer. Wenn dieser Schritt initiiert wird, befinden sich alle zum Neukonfigurieren des Ziels erforderlichen Daten innerhalb der Anwendungs Dateien im Dateisystem des Ziels oder befinden sich in Comrepl als Instanzdaten. In dieser Phase werden alle installierten Anwendungen auf dem Ziel gelöscht (außer den in [was replizierten](what-gets-replicated.md)Anwendungen), bevor die aus der Quelle kopierten Anwendungen installiert werden. Comrepl wird gleichzeitig auf mehreren Zielen installiert, indem ein Installations Thread pro Ziel verwendet wird. |
+| Vorbereitungsphase | Exportiert alle installierten Anwendungen lokal auf dem Quellcomputer. Diese Phase wirkt sich nicht auf die Konfiguration von Zielen aus.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Kopierphase    | Kopiert Daten auf einen Zielcomputer. Alle anwendungen, die in die Quelle exportiert werden, werden in das Ziel kopiert. Dies ist ein Dateikopiervorgang. (Siehe [Dateiverwaltung](file-management.md).) In diesem Schritt werden auch einige Daten vom Quellcomputer erhalten, die nicht in exportierten Anwendungsdateien (z. B. Anwendungsidentitäten) gekapselt sind. Diese Daten werden in COMREPL im Arbeitsspeicher gespeichert. Diese Phase wirkt sich nicht auf die Konfiguration von Zielcomputern aus.                                                                               |
+| Installationsphase | Installiert den Quellkatalog auf einem Zielcomputer. Wenn dieser Schritt initiiert wird, werden alle Daten, die zum Neukonfigurieren des Ziels erforderlich sind, in Anwendungsdateien im Dateisystem des Ziels oder als Instanzdaten in COMREPL gespeichert. In dieser Phase werden alle installierten Anwendungen auf dem Ziel gelöscht (mit Ausnahme der unter [Was](what-gets-replicated.md)wird repliziert? beschriebenen Anwendungen), bevor die aus der Quelle kopierten Anwendungen installiert werden. COMREPL wird auf mehreren Zielen gleichzeitig mithilfe eines Installationsthreads pro Ziel installiert. |
 
 
 
@@ -42,7 +42,7 @@ Die Replikations Phasen lauten wie folgt.
 [Protokollierung und Fehlerberichterstattung](logging-and-error-reporting.md)
 </dt> <dt>
 
-[Verwenden von Comrepl](using-comrepl.md)
+[Verwenden von COMREPL](using-comrepl.md)
 </dt> <dt>
 
 [Was wird repliziert?](what-gets-replicated.md)

@@ -1,19 +1,19 @@
 ---
-description: Media Foundation Plattform-APIs
+description: Media Foundation Platform-APIs
 ms.assetid: 1eb20c44-58cb-4e34-a108-1b3c27d54ff1
-title: Media Foundation Plattform-APIs
+title: Media Foundation Platform-APIs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed1e8d8aa0dcd5d7b1184a406e09910a98892f4f
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: af9f235fad78765bbdc7b0c667fad89cec92a4e5c499c3f093f41d084af06685
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106371822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114150"
 ---
-# <a name="media-foundation-platform-apis"></a>Media Foundation Plattform-APIs
+# <a name="media-foundation-platform-apis"></a>Media Foundation Platform-APIs
 
-Die Platt Form Ebene Media Foundation enthält primitive und Hilfsobjekte, die von den anderen Ebenen verwendet werden.
+Die Plattformebene von Media Foundation enthält Primitive und Hilfsobjekte, die von den anderen Ebenen verwendet werden.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
@@ -21,14 +21,14 @@ Dieser Abschnitt enthält die folgenden Themen:
 
 | Thema                                                                           | BESCHREIBUNG                                                                                                                                                       |
 |---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Initialisieren der Media Foundation Plattform](initializing-media-foundation.md) | Initialisieren der Media Foundation Plattform.                                                                                                                  |
-| [Media Foundation und com](media-foundation-and-com.md)                        | Beschreibt die Interaktion zwischen com und Microsoft Media Foundation und definiert einige bewährte Methoden für die Entwicklung von Media Foundation-Plug-in-Komponenten. |
-| [Asynchrone Rückruf Methoden](asynchronous-callback-methods.md)              | Wie asynchrone Methoden aufgerufen werden und wie asynchrone Vorgänge in Media Foundation implementiert werden.                                                                |
-| [Arbeits Warteschlangen](work-queues.md)                                                  | Eine Arbeits Warteschlange ist eine effiziente Möglichkeit, um asynchrone Vorgänge in einem anderen Thread auszuführen.                                                                            |
-| [Medienereignis Generatoren](media-event-generators.md)                            | So empfangen Sie asynchrone Ereignisse und wie Ereignisse in Media Foundation ausgegeben werden.                                                                                   |
-| [Dienst Schnittstellen](service-interfaces.md)                                    | Eine Dienst Schnittstelle ist eine COM-Schnittstelle, die von einem Objekt bereitgestellt wird, aber für die Anwendung über ein anderes Objekt verfügbar gemacht wird                                             |
-| [Aktivierungs Objekte](activation-objects.md)                                    | Ein Aktivierungs Objekt ist ein Objekt, das ein anderes Objekt erstellt.                                                                                                    |
-| [Präsentations Uhr](presentation-clock.md)                                    | Die Präsentations Uhr generiert die Uhrzeit, die zum Steuern der Wiedergabe verwendet wird, sowie synchrone Audiodaten und Videostreams.                                |
+| [Initialisieren der Media Foundation-Plattform](initializing-media-foundation.md) | Initialisieren der Media Foundation-Plattform                                                                                                                  |
+| [Media Foundation und COM](media-foundation-and-com.md)                        | Beschreibt die Interaktion zwischen COM und Microsoft Media Foundation und definiert einige bewährte Methoden für die Entwicklung Media Foundation Plug-In-Komponenten. |
+| [Asynchrone Rückrufmethoden](asynchronous-callback-methods.md)              | Hier erfahren Sie, wie Sie asynchrone Methoden aufrufen und asynchrone Vorgänge in Media Foundation implementieren.                                                                |
+| [Arbeitswarteschlangen](work-queues.md)                                                  | Eine Arbeitswarteschlange ist eine effiziente Möglichkeit, asynchrone Vorgänge für einen anderen Thread auszuführen.                                                                            |
+| [Medienereignisgeneratoren](media-event-generators.md)                            | Erfahren Sie, wie Sie asynchrone Ereignisse empfangen und Ereignisse in Media Foundation auslösen.                                                                                   |
+| [Dienstschnittstellen](service-interfaces.md)                                    | Eine Dienstschnittstelle ist eine COM-Schnittstelle, die von einem -Objekt bereitgestellt, aber über ein anderes -Objekt für die Anwendung verfügbar gemacht wird.                                             |
+| [Aktivierungsobjekte](activation-objects.md)                                    | Ein Aktivierungsobjekt ist ein Objekt, das ein anderes Objekt erstellt.                                                                                                    |
+| [Präsentationsuhr](presentation-clock.md)                                    | Die Präsentationsuhr generiert die Uhrzeit, die zum Steuern der Wiedergabe sowie für synchrone Audio- und Videostreams verwendet wird.                                |
 
 
 
@@ -41,7 +41,7 @@ Dieser Abschnitt enthält die folgenden Themen:
 [Media Foundation-Architektur](media-foundation-architecture.md)
 </dt> <dt>
 
-[Media Foundation-Programmier Handbuch](media-foundation-programming-guide.md)
+[Media Foundation Programmierhandbuch](media-foundation-programming-guide.md)
 </dt> </dl>
 
  

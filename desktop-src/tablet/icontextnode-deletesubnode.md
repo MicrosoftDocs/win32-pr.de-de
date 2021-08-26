@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen untergeordneten icontextnode.
+description: Entfernt einen untergeordneten IContextNode.
 ms.assetid: ed1d7b35-f6ba-4eff-888d-5cc492f02832
-title: Icontextnode::D eletesubnode-Methode (iacom. h)
+title: IContextNode::D eleteSubNode-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: ffcec19e13a3ad885b3b497f80322caf9365c91a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ebad42f02ccfad0db2d119832f3495819ac18ce321d72ede3aa8d7545b999be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057880"
 ---
-# <a name="icontextnodedeletesubnode-method"></a>Icontextnode::D eletesubnode-Methode
+# <a name="icontextnodedeletesubnode-method"></a>IContextNode::D eleteSubNode-Methode
 
-Entfernt einen untergeordneten [**icontextnode**](icontextnode.md).
+Entfernt einen untergeordneten [**IContextNode.**](icontextnode.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ HRESULT DeleteSubNode(
 
 <dl> <dt>
 
-*pcontextnodebug* \[ in\]
+*pContextNodeToDelete* \[ In\]
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) , der entfernt werden soll.
+Der [**zu entfernende IContextNode.**](icontextnode.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-E \_ invalidArg wird zurückgegeben, wenn der *pcontextnodebug* -Parameter kein untergeordnetes Element dieses [**icontextnode**](icontextnode.md) -Objekts ist.
+E \_ INVALIDARG wird zurückgegeben, wenn der *pContextNodeToDelete-Parameter* kein untergeordnetes Element dieses [**IContextNode-Objekts**](icontextnode.md) ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ E \_ invalidArg wird zurückgegeben, wenn der *pcontextnodebug* -Parameter kein 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -71,13 +71,13 @@ E \_ invalidArg wird zurückgegeben, wenn der *pcontextnodebug* -Parameter kein 
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: "kreatesubnode"**](icontextnode-createsubnode.md)
+[**IContextNode::CreateSubNode**](icontextnode-createsubnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

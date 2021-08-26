@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Auflistung von icontextlink-Objekten ab, die Beziehungen mit anderen icontextnode-Objekten darstellt.
+description: Ruft eine Auflistung von IContextLink-Objekten ab, die Beziehungen mit anderen IContextNode-Objekten darstellt.
 ms.assetid: 0fe56e6d-c779-4916-9c80-6f18cf6f1b09
-title: 'Icontextnode:: getcontextlinks-Methode (iacom. h)'
+title: IContextNode::GetContextLinks-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: de62550a09d0a538ddc680f6d57c35a1016fe255
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c3b63e50cf43f06f6065a61dacfbbbd8a00fe7959bb5133407a6c2a980a1a20
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057839"
 ---
-# <a name="icontextnodegetcontextlinks-method"></a>Icontextnode:: getcontextlinks-Methode
+# <a name="icontextnodegetcontextlinks-method"></a>IContextNode::GetContextLinks-Methode
 
-Ruft eine Auflistung von [**icontextlink**](icontextlink.md) -Objekten ab, die Beziehungen mit anderen [**icontextnode**](icontextnode.md) -Objekten darstellt.
+Ruft eine Auflistung von [**IContextLink-Objekten**](icontextlink.md) ab, die Beziehungen mit anderen [**IContextNode-Objekten**](icontextnode.md) darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,27 +39,27 @@ HRESULT GetContextLinks(
 
 <dl> <dt>
 
-*ppcontextlinks* \[ vorgenommen\]
+*ppContextLinks* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Auflistung von [**icontextlink**](icontextlink.md) -Objekten, die Beziehungen zu anderen [**icontextnode**](icontextnode.md) -Objekten darstellt.
+Ein Zeiger auf eine Auflistung von [**IContextLink-Objekten,**](icontextlink.md) die Beziehungen mit anderen [**IContextNode-Objekten**](icontextnode.md) darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für \* *ppcontextlinks* , wenn Sie die Auflistung der Kontext Verknüpfungen nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) für \* *ppContextLinks* auf, wenn Sie die Kontextlinkauflistung nicht mehr verwenden müssen.
 
  
 
-Um Informationen über Beziehungen zwischen übergeordneten und untergeordneten Knoten zu erhalten, verwenden Sie [**icontextnode:: getParser Node**](icontextnode-getparentnode.md) oder [**icontextnode:: getsubnodes**](icontextnode-getsubnodes.md).
+Verwenden Sie [**IContextNode::GetParentNode**](icontextnode-getparentnode.md) oder [**IContextNode::GetSubNodes,**](icontextnode-getsubnodes.md)um Informationen zu beziehungen zwischen übergeordneten und untergeordneten Knoten abzurufen.
 
-Weitere Informationen zu den Arten von Beziehungen, die durch Links beschrieben werden, finden Sie unter [**icontextlink**](icontextlink.md) und [**ContextLinkDirection**](contextlinkdirection.md).
+Weitere Informationen zu den Arten von Beziehungen, die durch Links beschrieben werden, finden Sie unter [**IContextLink**](icontextlink.md) und [**ContextLinkDirection.**](contextlinkdirection.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Weitere Informationen zu den Arten von Beziehungen, die durch Links beschrieben 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -78,19 +78,19 @@ Weitere Informationen zu den Arten von Beziehungen, die durch Links beschrieben 
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**ContextLinkDirection**](contextlinkdirection.md)
+[**Contextlinkdirection**](contextlinkdirection.md)
 </dt> <dt>
 
-[**Icontextnode:: addcontextlink**](icontextnode-addcontextlink.md)
+[**IContextNode::AddContextLink**](icontextnode-addcontextlink.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

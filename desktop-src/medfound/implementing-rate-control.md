@@ -1,100 +1,100 @@
 ---
-description: In diesem Thema wird beschrieben, wie benutzerdefinierte Pipeline Objekte Variablen Wiedergabe Raten unterstützen können, einschließlich umgekehrter Wiedergabe. Informationen zur Verwendung der Raten Steuerung in einer Anwendung finden Sie unter Raten Steuerung.
+description: In diesem Thema wird beschrieben, wie benutzerdefinierte Pipelineobjekte variable Wiedergaberaten unterstützen können, einschließlich umgekehrter Wiedergabe. Informationen zur Verwendung der Ratensteuerung aus einer Anwendung finden Sie unter Ratensteuerung.
 ms.assetid: 077678db-ca5a-423b-9430-93497113d639
-title: Implementieren der Raten Steuerung
+title: Implementieren der Ratensteuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f5fd78cbbb95316a0d4ed12a50c9d3aa8954fe8a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a3ff90e7b1748efd4cfcff41244164d1d6a997b6208d3e46afa0cdae9aa6bba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042646"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114270"
 ---
-# <a name="implementing-rate-control"></a>Implementieren der Raten Steuerung
+# <a name="implementing-rate-control"></a>Implementieren der Ratensteuerung
 
-In diesem Thema wird beschrieben, wie benutzerdefinierte Pipeline Objekte Variablen Wiedergabe Raten unterstützen können, einschließlich umgekehrter Wiedergabe. Informationen zur Verwendung der Raten Steuerung in einer Anwendung finden Sie unter [Raten Steuerung](rate-control.md).
+In diesem Thema wird beschrieben, wie benutzerdefinierte Pipelineobjekte variable Wiedergaberaten unterstützen können, einschließlich umgekehrter Wiedergabe. Informationen zur Verwendung der Ratensteuerung aus einer Anwendung finden Sie unter [Ratensteuerung.](rate-control.md)
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Medienquellen](#media-sources)
 -   [Media Foundation Transformationen](#media-foundation-transforms)
     -   [Umgekehrte Wiedergabe](#reverse-playback)
--   [Medien senken](#media-sinks)
+-   [Mediensenken](#media-sinks)
 -   [Zugehörige Themen](#related-topics)
 
-Wenn Sie ein Microsoft Media Foundation Pipeline Objekt (eine Medienquelle, eine Transformation oder eine Medien Senke) schreiben, müssen Sie möglicherweise Variablen Wiedergabe Raten unterstützen. Implementieren Sie zu diesem Zweck die folgenden Schnittstellen:
+Wenn Sie ein Microsoft Media Foundation Pipelineobjekt (Eine Medienquelle, Transformation oder Mediensenke) schreiben, müssen Sie möglicherweise variable Wiedergaberaten unterstützen. Implementieren Sie dazu die folgenden Schnittstellen:
 
-1.  Implementieren Sie die [**IMF GetService**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice) -Schnittstelle.
-2.  Unterstützung des MF-Dienst Dienstanbieter Dienst. **\_ \_ \_** (Siehe [Dienst Schnittstellen](service-interfaces.md).)
-3.  Implementieren Sie die [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) -Schnittstelle, die die vom-Objekt unterstützten Wiedergabe Raten abruft.
-4.  Implementieren Sie die [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle, mit der die Wiedergabe Rate abgerufen oder festgelegt wird.
+1.  Implementieren Sie die [**INTERFACESGetService-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfgetservice)
+2.  Unterstützen Sie den **DIENST MF RATE CONTROL \_ \_ \_ SERVICE.** (Siehe [Dienstschnittstellen](service-interfaces.md).)
+3.  Implementieren Sie die [**INTERFACESRateSupport-Schnittstelle,**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) die die vom -Objekt unterstützten Wiedergaberaten erhält.
+4.  Implementieren Sie die [**INTERFACESRateControl-Schnittstelle,**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) die die Wiedergaberate abgibt oder festlegt.
 
 ## <a name="media-sources"></a>Medienquellen
 
-Wenn eine Medienquelle die Raten Steuerung unterstützt, sollte sowohl [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) als auch [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)implementiert werden. Andernfalls meldet die Medien Sitzung, dass die minimale und die maximale Wiedergabe Rate 1,0 ist, unabhängig davon, welche anderen Komponenten in der Pipeline sind.
+Wenn eine Medienquelle die Ratensteuerung unterstützt, sollte sie sowohl [**DIE AuslastungssteuerungSunterstützung als**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) auch [**DIE VONSTRATEControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)implementieren. Andernfalls meldet die Mediensitzung, dass die minimale und maximale Wiedergaberate 1,0 beträgt, unabhängig davon, welche anderen Komponenten sich in der Pipeline befinden.
 
-Die Wiedergabe Rate wirkt sich nicht auf die Präsentations Zeiten der Beispiele aus, sodass die Medienquelle ihre Zeitstempel nicht anpassen sollte. Stattdessen wird die Präsentations Uhr schneller oder langsamer ausgeführt. Bei umgekehrter Wiedergabe stellt die Quelle Beispiele in umgekehrter Reihenfolge bereit, wobei Zeitstempel verringert werden.
+Die Wiedergaberate wirkt sich nicht auf die Präsentationszeiten der Beispiele aus, sodass die Medienquelle ihre Zeitstempel nicht anpassen sollte. Stattdessen wird die Präsentationsuhr schneller oder langsamer ausgeführt. Für die umgekehrte Wiedergabe liefert die Quelle Stichproben in umgekehrter Reihenfolge mit abnehmenden Zeitstempeln.
 
-Der *Parameter "* Parameter" der [**imfratecontrol:: ltrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) -Methode gibt an, ob der Inhalt von der Medienquelle *schlank* sein soll. Die Verdünnung bezieht sich hauptsächlich auf Videostreams. Im dünnen Modus löscht die Quelle Delta Frames und stellt nur Keyframes bereit. Bei sehr hohen Wiedergabe Raten kann die Quelle einige Keyframes überspringen (z. b. jeden anderen Keyframe übermitteln).
+Der *fThin-Parameter* der [**PARAMETERSRATEControl::SetRate-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) gibt an, ob die Medienquelle den Inhalt *ausdehnen* soll. Thinning gilt in erster Linie für Videostreams. Im schlanken Modus löscht die Quelle Deltaframes und liefert nur Keyframes. Bei sehr hohen Wiedergaberaten überspringt die Quelle möglicherweise einige Keyframes (z. B. alle anderen Keyframes).
 
-Die Quelle muss keine Audiobeispiele im dünnen Modus ablegen. Bei sehr hohen Wiedergabe Raten ist die Quelle jedoch möglicherweise nicht in der Lage, Daten schnell zu lesen, um die Beispiel Anforderungen der Pipeline auszufüllen. In diesem Fall muss die Quelle eventuell einige Audiodaten löschen. Wenn dies der Fall ist, sollten Sie versuchen, Audiobeispiele zu übermitteln, die sich in der Zeit der Videobeispiele nähern (vorausgesetzt, dass die Quelle beide Arten von Datenstrom aufweist).
+Die Quelle muss keine Audiobeispiele im schlanken Modus löschen. Bei sehr hohen Wiedergaberaten ist die Quelle jedoch möglicherweise nicht in der Lage, Daten schnell zu lesen, um die Beispielanforderungen der Pipeline zu erfüllen. In diesem Fall muss die Quelle möglicherweise einige Audiodaten löschen. In diesem Falle sollte versucht werden, Audiobeispiele zu übermitteln, die sich in der Nähe der Videobeispiele befinden (vorausgesetzt, die Quelle verfügt über beide Arten von Streams).
 
-Wenn ein Stream zwischen dem dünnen und dem nicht dünnen Modus übergeht, sendet er ein [mestreamthinmode](mestreamthinmode.md) -Ereignis.
+Wenn ein Stream zwischen dem modus "thinned" und "non-thinned" übergibt, sendet er ein [MEStreamThinMode-Ereignis.](mestreamthinmode.md)
 
-Wenn die Medienquelle einen aufzurufenden aufrufsvorgang abschließt [**, sendet**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate)Sie das [mesourceratechanged](mesourceratechanged.md) -Ereignis.
+Wenn die Medienquelle einen Aufruf von [**SetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate)abschließt, sendet sie das [MESourceRateChanged-Ereignis.](mesourceratechanged.md)
 
-Bei umgekehrter Wiedergabe:
+Während der umgekehrten Wiedergabe:
 
--   Die Medienquelle stellt Beispiele in umgekehrter Reihenfolge bereit, ohne dass die Zeitstempel angepasst werden.
--   Zeitstempel in einem Stream sollten sich monoton verringern.
--   Der Anfang des Inhalts wird als Ende des Streams betrachtet. Nachdem jeder Mediendaten Strom das erste Beispiel im Stream übermittelt hat (d. h. Präsentationszeit = 0), sendet er das [meendof Stream](meendofstream.md) -Ereignis.
+-   Die Medienquelle übermittelt Stichproben in umgekehrter Reihenfolge, ohne die Zeitstempel anzupassen.
+-   Zeitstempel innerhalb eines Streams sollten monoton verringert werden.
+-   Der Anfang des Inhalts wird als Ende des Streams betrachtet. Nachdem jeder Medienstream das erste Beispiel im Stream übermittelt hat (d. h. präsentationszeit = 0), sendet er das [MEEndOfStream-Ereignis.](meendofstream.md)
 
 ## <a name="media-foundation-transforms"></a>Media Foundation Transformationen
 
-Im allgemeinen benötigt eine Media Foundation Transformation (MFT) keine explizite Unterstützung für die Raten Steuerung, es sei denn, der MFT implementiert eine nicht schlanke umgekehrte Wiedergabe.
+Im Allgemeinen benötigt eine Media Foundation-Transformation (MFT) keine explizite Unterstützung für die Ratensteuerung, es sei denn, der MFT implementiert eine nicht schlanke umgekehrte Wiedergabe.
 
-Wenn eine MFT die [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) -Schnittstelle nicht implementiert, wird von der Medien Sitzung Folgendes vorausgesetzt:
+Wenn ein MFT die [**INTERFACESRateSupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) nicht implementiert, geht die Mediensitzung von Folgendem aus:
 
--   Der MFT unterstützt die beliebiges-Wiedergabe Raten für die vorwärts Wiedergabe, sowohl für schlank als auch für nicht-dünn.
--   Der MFT unterstützt die schlanke rückgängigwiedergabe, unterstützt jedoch nicht die nicht schlanke umgekehrte Wiedergabe.
+-   Der MFT unterstützt Arbitary-Wiedergaberaten für die Vorwärtswiedergabe, sowohl schlanke als auch nicht schlanke Wiedergabe.
+-   Der MFT unterstützt die verfeinerte umgekehrte Wiedergabe, aber keine nicht schlanke umgekehrte Wiedergabe.
 
-Wenn eine dieser Bedingungen nicht zutrifft, sollte der MFT [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) und [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)implementieren.
+Wenn eine dieser Bedingungen nicht zutrifft, sollte der MFT DIE BEDINGUNGEN FÜR DIE Implementierung von [**"THICKNESSRateSupport"**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) und [**"THICKNESSRateControl"**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)implementieren.
 
 ### <a name="reverse-playback"></a>Umgekehrte Wiedergabe
 
-Die Medien Sitzung kann in umgekehrter Reihenfolge wiedergegeben werden, auch wenn eine oder mehrere Transformationen in der Pipeline die umgekehrte Wiedergabe nicht explizit unterstützen.
+Die Mediensitzung kann auch dann umgekehrt wiedergegeben werden, wenn eine oder mehrere Transformationen in der Pipeline die umgekehrte Wiedergabe nicht explizit unterstützen.
 
-Wenn eine MFT die [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) -Schnittstelle nicht verfügbar macht, verwendet die Medien Sitzung die *Verdünnung* für die umgekehrte Wiedergabe wie folgt:
+Wenn ein MFT die [**INTERFACESRateSupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) nicht verfügbar macht, verwendet die Mediensitzung für die umgekehrte Wiedergabe *die Ausdrückung* wie folgt:
 
--   Die Medien Sitzung sendet Keyframes auf die übliche Weise an die MFT, indem [**imftransform::P rocessinput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)aufgerufen wird.
+-   Die Mediensitzung sendet Keyframes auf die übliche Weise an den MFT, indem [**SIE ÜBERTRANSFORM::P rocessInput**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processinput)aufrufen.
 
--   Die Medien Sitzung löscht Delta Frames und ersetzt Sie durch [mestreamtick](mestreamtick.md) -Ereignisse.
+-   Die Mediensitzung löscht Deltaframes und ersetzt sie durch [MEStreamTick-Ereignisse.](mestreamtick.md)
 
--   Zwischen den einzelnen Beispielen leert die Medien Sitzung die MFT, um Fehler zu vermeiden, die durch die Tatsache verursacht werden, dass die Zeitstempel abnimmt.
+-   Zwischen jedem Beispiel leert die Mediensitzung den MFT, um Fehler zu vermeiden, die durch die Tatsache verursacht werden, dass die Zeitstempel abnehmen.
 
-Ein Beispiel wird als Keyframe betrachtet, wenn das " [mfsampleextension"- \_ Cleanpoint](mfsampleextension-cleanpoint-attribute.md) -Attribut auf " **true**" festgelegt ist, und wird als Delta Frame betrachtet, wenn dieses Attribut " **false** " oder nicht festgelegt ist.
+Ein Beispiel gilt als Keyframe, wenn das [MFSampleExtension \_ CleanPoint-Attribut](mfsampleextension-cleanpoint-attribute.md) auf **TRUE** festgelegt ist, und als Deltaframe, wenn dieses Attribut **FALSE** ist oder nicht festgelegt ist.
 
-Wenn der MFT [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)implementiert, verwendet die Medien Sitzung diese Schnittstelle, um zu ermitteln, ob die MFT eine nicht schlanke umgekehrte Wiedergabe unterstützt. Wenn die MFT eine nicht schlanke umgekehrte Wiedergabe unterstützt, werden alle Beispiele in umgekehrter Reihenfolge von der Medien Sitzung übermittelt, ohne dass Beispiele gelöscht oder die MFT geleert werden muss.
+Wenn die [**MFT-Schnittstelle DIE Übergreifende**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)Unterstützung implementiert, verwendet die Mediensitzung diese Schnittstelle, um zu ermitteln, ob der MFT die nicht schlanke umgekehrte Wiedergabe unterstützt. Wenn der MFT die nicht schlanke umgekehrte Wiedergabe unterstützt, übermittelt die Mediensitzung alle Samplings in umgekehrter Reihenfolge, ohne Samplings zu löschen oder den MFT zu leeren.
 
-Wenn eine MFT eine nicht schlanke umgekehrte Wiedergabe unterstützt, sollte Sie die [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle implementieren. Die Medien Sitzung verwendet diese Schnittstelle, um die MFT zu benachrichtigen, wenn die umgekehrte Wiedergabe erfolgt. An diesem Punkt muss die MFT vorbereitet werden, damit die Zeitstempel abnimmt und Delta Frames in umgekehrter Reihenfolge eintreffen. Ein Decoder muss in der Regel Stichproben Puffern, bis er eine ganze Gruppe von Bildern (GOP) empfangen hat. Anschließend wird der gesamte GOP decodiert und die decodierten Frames in der korrekten (umgekehrten) Reihenfolge ausgegeben.
+Wenn ein MFT die nicht ausgediente umgekehrte Wiedergabe unterstützt, sollte er die [**INTERFACESRateControl-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) implementieren. Die Mediensitzung verwendet diese Schnittstelle, um den MFT zu benachrichtigen, wenn eine umgekehrte Wiedergabe erfolgt. An diesem Punkt muss der MFT darauf vorbereitet sein, dass die Zeitstempel verringert werden und Deltaframes in umgekehrter Reihenfolge eintreffen. Ein Decoder muss in der Regel Stichproben puffern, bis er eine ganze Gruppe von Bildern (GOP) empfangen hat. Anschließend wird der gesamte GOP decodiert und die decodierten Frames in der richtigen (umgekehrten) Reihenfolge ausgegeben.
 
-## <a name="media-sinks"></a>Medien senken
+## <a name="media-sinks"></a>Mediensenken
 
-Wenn eine Medien Senke nicht mehr vorhanden ist, geht die Medien Sitzung davon *aus, dass* die Medien Senke jede Wiedergabe Rate verarbeiten kann. Die Medien Senke muss [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)nicht implementieren. (Eine ratlose Medien Senke gibt den mediasink \_ zurück. Gebühren Loses Flag von der [**imfmediasink:: getcharacteristics**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics) -Methode.)
+Wenn eine Mediensenke *ratenlos* ist, geht die Mediensitzung davon aus, dass die Mediensenke jede Wiedergaberate verarbeiten kann. Die Mediensenke muss [**NICHT DIE IMPLEMENTRATESupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport)implementieren. (Eine ratenlose Mediensenke gibt MEDIASINK \_ zurück. RATELESS-Flag aus der [**NSSink::GetCharacteristics-Methode.)**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasink-getcharacteristics)
 
-Andernfalls sollte eine Medien Senke [**imfratesupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) implementieren, wenn Sie andere Wiedergabe Raten als 1,0 verarbeiten kann.
+Andernfalls sollte eine Mediensenke [**DIE UNTERSTÜTZUNG VONRATESupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) implementieren, wenn sie andere Wiedergaberaten als 1.0 verarbeiten kann.
 
-Für Medien senken sollte [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)nicht implementiert werden. Wenn sich die Wiedergabe Rate ändert, ruft die Präsentationszeit die Methode [**IMF clockstaatink:: onclocksetrate**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclocksetrate) der Medien Senke auf.
+Mediensenken sollten [**NICHT DIE IMPLEMENTRATEControl**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)-Datei implementieren. Wenn sich die Wiedergaberate ändert, ruft die Präsentationsuhr die [**ENClockStateSink::OnClockSetRate-Methode**](/windows/desktop/api/mfidl/nf-mfidl-imfclockstatesink-onclocksetrate) der Mediensenke auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Raten Steuerung](rate-control.md)
+[Ratensteuerung](rate-control.md)
 </dt> <dt>
 
-[Suchen, schnelles vorwärts und umgekehrtes spielen](seeking--fast-forward--and-reverse-play.md)
+[Suchen, Vorlauf und Umgekehrtes Wiedergeben](seeking--fast-forward--and-reverse-play.md)
 </dt> </dl>
 
  

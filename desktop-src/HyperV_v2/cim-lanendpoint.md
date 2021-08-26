@@ -1,5 +1,5 @@
 ---
-description: Ein Kommunikations Endpunkt, der eine Verbindung mit einem LAN herstellen kann, um Datenrahmen zu senden und zu empfangen. Zu den LAN-Endpunkten gehören Ethernet-, TokenRing-und sddi-Schnittstellen.
+description: Ein Kommunikationsendpunkt, der eine Verbindung mit einem LAN herstellen kann, um Datenrahmen zu senden und zu empfangen. LAN-Endpunkte umfassen Ethernet-, Tokenring- und FDDI-Schnittstellen.
 ms.assetid: c69464cf-00a9-476d-a494-2d7d65776334
 title: CIM_LANEndpoint-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c924d175cb48e53346daff59a6317a4a0f241f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e42f5edcc7010b9a84fdaaf3686208c9f82def03493c4c423aa3815b1d0758e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046810"
 ---
-# <a name="cim_lanendpoint-class"></a>CIM \_ lanendpoint-Klasse
+# <a name="cim_lanendpoint-class"></a>CIM \_ LANEndpoint-Klasse
 
-Ein Kommunikations Endpunkt, der eine Verbindung mit einem LAN herstellen kann, um Datenrahmen zu senden und zu empfangen. Zu den LAN-Endpunkten gehören Ethernet-, TokenRing-und sddi-Schnittstellen.
+Ein Kommunikationsendpunkt, der eine Verbindung mit einem LAN herstellen kann, um Datenrahmen zu senden und zu empfangen. LAN-Endpunkte umfassen Ethernet-, Tokenring- und FDDI-Schnittstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,20 +49,20 @@ class CIM_LANEndpoint : CIM_ProtocolEndpoint
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ lanendpoint** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ LANEndpoint-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ lanendpoint** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ LANEndpoint-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Aliasadressen**
+**AliasAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -72,53 +72,53 @@ Ein Array, das andere Unicastadressen enthält, die für die Kommunikation mit d
 
 </dd> <dt>
 
-**Groupadressen**
+**GroupAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Array, das die Multicast Adressen enthält, auf die der LAN-Endpunkt lauscht.
+Ein Array, das die Multicastadressen enthält, an denen der LAN-Endpunkt lausiert.
 
 </dd> <dt>
 
-**Lanid**
+**LANID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ lanconnectivitysegment. lanid, CIM \_ lansegment. lanid")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ LANConnectivitySegment.LANID, CIM \_ LANSegment.LANID")
 </dt> </dl>
 
-Eine Bezeichnung oder ein Bezeichner für das LAN-Segment, mit dem der Endpunkt verbunden ist. Wenn der Endpunkt derzeit nicht verbunden ist oder diese Informationen unbekannt sind, ist **lanid** NULL.
+Eine Bezeichnung oder ein Bezeichner für das LAN-Segment, mit dem der Endpunkt verbunden ist. Wenn der Endpunkt derzeit nicht verbunden ist oder diese Informationen unbekannt sind, ist **LANID** NULL.
 
 </dd> <dt>
 
-**Lantype**
+**LANType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("[**CIM \_ protocolendpoint**](cim-protocolendpoint.md).**ProtocolType**"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ lanconnectivitysegment. connectivitytype, CIM \_ lansegment. lantype ")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("[**CIM \_ ProtocolEndpoint**](cim-protocolendpoint.md).**ProtocolType**"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ LANConnectivitySegment.ConnectivityType, CIM \_ LANSegment.LANType")
 </dt> </dl>
 
 > [!Note]  
-> Veraltete Beschreibung: die Art der im LAN verwendeten Technologie.
+> Veraltete Beschreibung: Die Art der technologie, die im LAN verwendet wird.
 
  
 
-Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **ProtocolType** -Eigenschaft zu verwenden.
+Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **ProtocolType-Eigenschaft zu** verwenden.
 
 <dt>
 
@@ -152,7 +152,7 @@ Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **ProtocolType**
 
 <span id="FDDI"></span><span id="fddi"></span>
 
-" **F** " (4)
+**FDDI** (4)
 
 
 </dt> <dd></dd> </dl>
@@ -162,29 +162,29 @@ Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **ProtocolType**
 **MACAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (12)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (12)
 </dt> </dl>
 
-Die vom LAN-Endpunkt verwendete Prinzipal-Unicastadresse.
+Die vom LAN-Endpunkt verwendete Unicastadresse des Prinzipals.
 
-Die Mac-Adresse muss mit den folgenden Merkmalen formatiert sein:
+Die MAC-Adresse muss mit den folgenden Merkmalen formatiert sein:
 
--   Die Adresse besteht aus zwölf hexadezimalen Ziffern.
--   Jedes Ziffern paar stellt einen der sechs Oktette der Mac-Adresse dar.
--   Jedes Ziffern Paar muss gemäß RFC 2469 in kanonischer bitreihenfolge vorliegen.
+-   Die Adresse besteht aus zwölf Hexadezimalziffern.
+-   Jedes Ziffernpaar stellt eines der sechs Oktette der MAC-Adresse dar.
+-   Jedes Ziffernpaar muss gemäß RFC 2469 in kanonischer Bit reihenfolge sein.
 
 </dd> <dt>
 
-**Maxdatasize**
+**MaxDataSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -193,28 +193,28 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits")
 </dt> </dl>
 
-Die maximale Größe (in Bytes) der vom LAN-Endpunkt gesendeten oder empfangenen Datenfelder.
+Die maximale Größe der vom LAN-Endpunkt gesendeten oder empfangenen Datenfelder in Bytes.
 
 </dd> <dt>
 
-**Otherlantype**
+**OtherLANType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("[**CIM \_ protocolendpoint**](cim-protocolendpoint.md).**OtherTypeDescription**"), [**modelkorrespondenz**](/windows/desktop/WmiSdk/standard-qualifiers) (" CIM \_ lanconnectivitysegment. OtherTypeDescription ","**CIM \_ lanendpoint**".**Lantype**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("[**CIM \_ ProtocolEndpoint**](cim-protocolendpoint.md).**OtherTypeDescription**"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ LANConnectivitySegment.OtherTypeDescription", "**CIM \_ LANEndpoint**.**LANType**")
 </dt> </dl>
 
 > [!Note]  
-> Deprecated Description: der Typ der im LAN verwendeten Technologie, wenn die Eigenschaft **lantype** auf "1" (sonstige) festgelegt ist.
+> Veraltete Beschreibung: Der Typ der Technologie, die im LAN verwendet wird, wenn die **LANType-Eigenschaft** auf "1" (Sonstige) festgelegt ist.
 
  
 
-Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **OtherTypeDescription** -Eigenschaft zu verwenden.
+Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **OtherTypeDescription-Eigenschaft zu** verwenden.
 
 </dd> </dl>
 
@@ -227,7 +227,7 @@ Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **OtherTypeDescr
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -236,7 +236,7 @@ Diese Eigenschaft ist veraltet. Stattdessen wird empfohlen, die **OtherTypeDescr
 
 <dl> <dt>
 
-[**CIM- \_ protocolendpoint**](cim-protocolendpoint.md)
+[**CIM \_ ProtocolEndpoint**](cim-protocolendpoint.md)
 </dt> </dl>
 
  

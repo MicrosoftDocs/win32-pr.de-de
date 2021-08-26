@@ -1,5 +1,5 @@
 ---
-description: 'CTransformOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Pinverbindung geeignet ist.'
+description: 'CTransformOutputPin.CheckConnect-Methode: Die CheckConnect-Methode bestimmt, ob eine Stecknadelverbindung geeignet ist.'
 ms.assetid: 3dae5c6d-720e-4445-b601-3bdfe32f4c21
 title: CTransformOutputPin.CheckConnect-Methode (Transfrm.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 190acd2fbab5206b114b57719d350e3ad5eac0c2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2b85c2197cf65465441387ecc661af71e0ddfa7ca912c3296ddee543d11c4784
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086990"
 ---
 # <a name="ctransformoutputpincheckconnect-method"></a>CTransformOutputPin.CheckConnect-Methode
 
@@ -45,7 +45,7 @@ HRESULT CheckConnect(
 *pPin* 
 </dt> <dd>
 
-Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Ausgabepins.
+Zeiger auf die IPin-Schnittstelle des [**Ausgabepins.**](/windows/desktop/api/Strmif/nn-strmif-ipin)
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**CBaseOutputPin::CheckConnect-Methode.**](cbaseoutputpin-checkconnect.md) Sie ruft die [**CTransformFilter::CheckConnect-Methode**](ctransformfilter-checkconnect.md) des Filters auf, die \_ S OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::CheckConnect-Methode** überschreiben, um zusätzliche Überprüfungen durchzuführen.
+Diese Methode überschreibt die [**CBaseOutputPin::CheckConnect-Methode.**](cbaseoutputpin-checkconnect.md) Sie ruft die [**CTransformFilter::CheckConnect-Methode**](ctransformfilter-checkconnect.md) des Filters auf, die S \_ OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::CheckConnect-Methode** überschreiben, um zusätzliche Überprüfungen durchzuführen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

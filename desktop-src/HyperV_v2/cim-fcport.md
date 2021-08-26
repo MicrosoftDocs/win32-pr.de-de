@@ -1,5 +1,5 @@
 ---
-description: Stellt die Funktionen und die Verwaltung eines Fibre Channel-Port Geräts (FC) dar.
+description: Stellt die Funktionen und die Verwaltung eines Fibre Channel-Anschlussgeräts (FC) dar.
 ms.assetid: 32a11971-9e18-410d-a3cd-4921a7e986f0
 title: CIM_FCPort-Klasse
 ms.topic: reference
@@ -18,19 +18,19 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: f6a858cbb4603743e1ddd11cac71500a9e39325a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 071a3b606d4fcb9845073877eb52dcf61b9a732a3046cf255229c6ea05451a14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046920"
 ---
-# <a name="cim_fcport-class"></a>CIM \_ fcport-Klasse
+# <a name="cim_fcport-class"></a>CIM \_ FCPort-Klasse
 
 > [!NOTE]
 > Dieser Artikel enthält Verweise auf den Begriff Slave, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
-Stellt die Funktionen und die Verwaltung eines Fibre Channel-Port Geräts (FC) dar.
+Stellt die Funktionen und die Verwaltung eines Fibre Channel-Anschlussgeräts (FC) dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,29 +51,29 @@ class CIM_FCPort : CIM_NetworkPort
 > [!NOTE]
 > Dieser Artikel enthält Verweise auf den Begriff Slave, einen Begriff, den Microsoft nicht mehr verwendet. Sobald der Begriff aus der Software entfernt wird, wird er auch aus diesem Artikel entfernt.
 
-Die **CIM \_ fcport** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ FCPort-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ fcport** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ FCPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Activecos**
+**ActiveCOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ fcport**".**Supportedcos**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ FCPort**.**SupportedCOS**")
 </dt> </dl>
 
-Die Active Class of Service (COS)-Einstellungen für den Fibre Channel.
+Die aktiven Einstellungen der Dienstklasse (CLASS of Service, COS) für den Fibre Channel.
 
 <dt>
 
@@ -138,16 +138,16 @@ Die Active Class of Service (COS)-Einstellungen für den Fibre Channel.
 **ActiveFC4Types**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ fcport**".**SupportedFC4Types**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ FCPort**.**SupportedFC4Types**")
 </dt> </dl>
 
-Die auf dem Fibre Channel laufenden FC-4-Protokolle.
+Die FC-4-Protokolle, die auf dem Fibre Channel ausgeführt werden.
 
 <dt>
 
@@ -167,7 +167,7 @@ Die auf dem Fibre Channel laufenden FC-4-Protokolle.
 
 <span id="ISO_IEC_8802_-_2_LLC"></span><span id="iso_iec_8802_-_2_llc"></span>
 
-**ISO/IEC 8802-2 LLC** (4)
+**ISO/IEC 8802 - 2 LLC** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -181,84 +181,84 @@ Die auf dem Fibre Channel laufenden FC-4-Protokolle.
 
 <span id="SCSI_-_FCP"></span><span id="scsi_-_fcp"></span>
 
-**SCSI-f** (8)
+**SCSI – FCP** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_-_GPP"></span><span id="scsi_-_gpp"></span>
 
-**SCSI-GPP** (9)
+**SCSI – GPP** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Master"></span><span id="ipi_-_3_master"></span><span id="IPI_-_3_MASTER"></span>
 
-**IPI-3 Master** (17)
+**IPI – 3 Master** (17)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Slave"></span><span id="ipi_-_3_slave"></span><span id="IPI_-_3_SLAVE"></span>
 
-**IPI-3-Slave** (18)
+**IPI – 3 Slave** (18)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Peer"></span><span id="ipi_-_3_peer"></span><span id="IPI_-_3_PEER"></span>
 
-**IPI-3-Peer** (19)
+**IPI – 3 Peer** (19)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Master"></span><span id="cp_ipi_-_3_master"></span><span id="CP_IPI_-_3_MASTER"></span>
 
-**CP IPI-3 Master** (21)
+**CP IPI - 3 Master** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Slave"></span><span id="cp_ipi_-_3_slave"></span><span id="CP_IPI_-_3_SLAVE"></span>
 
-**CP IPI-3 Slave** (22)
+**CP IPI - 3 Slave** (22)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Peer"></span><span id="cp_ipi_-_3_peer"></span><span id="CP_IPI_-_3_PEER"></span>
 
-**CP IPI-3-Peer** (23)
+**CP IPI – 3 Peer** (23)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SBCCS_Channel"></span><span id="sbccs_channel"></span><span id="SBCCS_CHANNEL"></span>
 
-**Sbccs-Kanal** (25)
+**SBCCS-Kanal** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SBCCS_Control_Unit"></span><span id="sbccs_control_unit"></span><span id="SBCCS_CONTROL_UNIT"></span>
 
-**Sbccs-Steuerungseinheit** (26)
+**SBCCS-Kontrolleinheit** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC-SB-2_Channel"></span><span id="fc-sb-2_channel"></span><span id="FC-SB-2_CHANNEL"></span>
 
-**FC-SB-2-Channel** (27)
+**FC-SB-2-Kanal** (27)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC-SB-2_Control_Unit"></span><span id="fc-sb-2_control_unit"></span><span id="FC-SB-2_CONTROL_UNIT"></span>
 
-**FC-SB-2-Steuerungseinheit** (28)
+**FC-SB-2-Kontrolleinheit** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -279,75 +279,75 @@ Die auf dem Fibre Channel laufenden FC-4-Protokolle.
 
 <span id="FC_-_SNMP"></span><span id="fc_-_snmp"></span>
 
-**FC-SNMP** (36)
+**FC – SNMP** (36)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="HIPPI_-_FP"></span><span id="hippi_-_fp"></span>
 
-**HIPPI-FP** (64)
+**PROGRAMMI – FP** (64)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_Control"></span><span id="bbl_control"></span><span id="BBL_CONTROL"></span>
 
-**BBL-Steuer** Element (80)
+**BBL-Steuerelement** (80)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_FDDI_Encapsulated_LAN_PDU"></span><span id="bbl_fddi_encapsulated_lan_pdu"></span><span id="BBL_FDDI_ENCAPSULATED_LAN_PDU"></span>
 
-**BBL-gekapseltes LAN-PDU** (81)
+**BBL FDDI Encapsulated LAN PDU** (81)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_802.3_Encapsulated_LAN_PDU"></span><span id="bbl_802.3_encapsulated_lan_pdu"></span><span id="BBL_802.3_ENCAPSULATED_LAN_PDU"></span>
 
-**BBL 802,3 gekapseltes LAN PDU** (82)
+**BBL 802.3 Encapsulated LAN PDU** (82)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC_-_VI"></span><span id="fc_-_vi"></span>
 
-**FC-VI** (88)
+**FC – VI** (88)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC_-_AV"></span><span id="fc_-_av"></span>
 
-**FC-AV** (96)
+**FC – AV** (96)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Unique"></span><span id="vendor_unique"></span><span id="VENDOR_UNIQUE"></span>
 
-**Hersteller eindeutig** (255)
+**Vendor Unique** (255)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**PortType**
+**Porttype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PortType")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PortType")
 </dt> </dl>
 
-Der aktivierte Modus für den Port. Die portmodi werden durch ANSI-X3-Standards definiert. Wenn der Port angemeldet ist, handelt es sich hierbei um den ausgehandelten Porttyp. andernfalls wird der konfigurierte Porttyp gemeldet.
+Der aktivierte Modus für den Port. Die Portmodi werden durch ANSI X3-Standards definiert. Wenn der Port angemeldet ist, ist dies der ausgehandelte Porttyp. Andernfalls wird der konfigurierte Porttyp gemeldet.
 
 <dt>
 
@@ -365,7 +365,7 @@ Der aktivierte Modus für den Port. Die portmodi werden durch ANSI-X3-Standards 
 
 </dt> <dd>
 
-Die zugehörige Eigenschaft **otherporttype** enthält eine Zeichen folgen Beschreibung für den Porttyp.
+Die zugehörige Eigenschaft **OtherPortType** enthält eine Zeichenfolgenbeschreibung des Porttyps.
 
 </dd> <dt>
 
@@ -382,12 +382,12 @@ Knotenport
 
 <span id="NL"></span><span id="nl"></span>
 
-<span id="NL"></span><span id="nl"></span>**Nl** (11)
+<span id="NL"></span><span id="nl"></span>**NL** (11)
 
 
 </dt> <dd>
 
-Knotenport Unterstützung für die von FC über eine über-
+Knotenport, der FC-Schleife unterstützt
 
 </dd> <dt>
 
@@ -400,12 +400,12 @@ Knotenport Unterstützung für die von FC über eine über-
 
 <span id="Nx"></span><span id="nx"></span><span id="NX"></span>
 
-<span id="Nx"></span><span id="nx"></span><span id="NX"></span>**NX** (13)
+<span id="Nx"></span><span id="nx"></span><span id="NX"></span>**Nx** (13)
 
 
 </dt> <dd>
 
-Der Port kann entweder zu einem knotenport (N) oder zu einem knotenport werden, der die von FC unterstützte Schleife (NL) unterstützt.
+Port kann aushandeln, um entweder ein Knotenport (N) oder ein Knotenport zu werden, der FC-Schleife (NL) unterstützt.
 
 </dd> <dt>
 
@@ -416,7 +416,7 @@ Der Port kann entweder zu einem knotenport (N) oder zu einem knotenport werden, 
 
 </dt> <dd>
 
-Erweiterungsport, der Fabric-Elemente verbindet (z. b. FC-Switches)
+Erweiterungsport, der Fabricelemente verbindet (z. B. FC-Switches)
 
 </dd> <dt>
 
@@ -427,7 +427,7 @@ Erweiterungsport, der Fabric-Elemente verbindet (z. b. FC-Switches)
 
 </dt> <dd>
 
-Fabric-Port (Element)
+Fabricport (Element)
 
 </dd> <dt>
 
@@ -438,7 +438,7 @@ Fabric-Port (Element)
 
 </dt> <dd>
 
-Fabric-Port (Element), der die von der FC-über eine
+Fabricport (Element), der FC-Schleife unterstützt
 
 </dd> <dt>
 
@@ -449,7 +449,7 @@ Fabric-Port (Element), der die von der FC-über eine
 
 </dt> <dd>
 
-Brückenanschluss
+Bridgeport
 
 </dd> <dt>
 
@@ -460,29 +460,29 @@ Brückenanschluss
 
 </dt> <dd>
 
-Der Port kann entweder als Erweiterungsanschluss (E) oder als Fabric-Port (F) aushandeln.
+Der Port kann entweder als Erweiterungsport (E) oder als Fabricport (F) aushandeln.
 
 </dd> <dt>
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (16000.65535)
+<span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>**Anbieter reserviert** (16000..65535)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Supportedcos**
+**SupportedCOS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die vom Fibre Channel unterstützten Klassen der Dienst Einstellungen (COS).
+Die COS-Einstellungen (Class of Service), die vom Fibre Channel unterstützt werden.
 
 <dt>
 
@@ -547,13 +547,13 @@ Die vom Fibre Channel unterstützten Klassen der Dienst Einstellungen (COS).
 **SupportedFC4Types**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die vom Fibre Channel unterstützten FC-4-Protokolle.
+Die FC-4-Protokolle, die vom Fibre Channel unterstützt werden.
 
 <dt>
 
@@ -573,7 +573,7 @@ Die vom Fibre Channel unterstützten FC-4-Protokolle.
 
 <span id="ISO_IEC_8802_-_2_LLC"></span><span id="iso_iec_8802_-_2_llc"></span>
 
-**ISO/IEC 8802-2 LLC** (4)
+**ISO/IEC 8802 - 2 LLC** (4)
 
 
 </dt> <dd></dd> <dt>
@@ -587,84 +587,84 @@ Die vom Fibre Channel unterstützten FC-4-Protokolle.
 
 <span id="SCSI_-_FCP"></span><span id="scsi_-_fcp"></span>
 
-**SCSI-f** (8)
+**SCSI – FCP** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SCSI_-_GPP"></span><span id="scsi_-_gpp"></span>
 
-**SCSI-GPP** (9)
+**SCSI – GPP** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Master"></span><span id="ipi_-_3_master"></span><span id="IPI_-_3_MASTER"></span>
 
-**IPI-3 Master** (17)
+**IPI – 3 Master** (17)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Slave"></span><span id="ipi_-_3_slave"></span><span id="IPI_-_3_SLAVE"></span>
 
-**IPI-3-Slave** (18)
+**IPI – 3 Slave** (18)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IPI_-_3_Peer"></span><span id="ipi_-_3_peer"></span><span id="IPI_-_3_PEER"></span>
 
-**IPI-3-Peer** (19)
+**IPI – 3 Peer** (19)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Master"></span><span id="cp_ipi_-_3_master"></span><span id="CP_IPI_-_3_MASTER"></span>
 
-**CP IPI-3 Master** (21)
+**CP IPI - 3 Master** (21)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Slave"></span><span id="cp_ipi_-_3_slave"></span><span id="CP_IPI_-_3_SLAVE"></span>
 
-**CP IPI-3 Slave** (22)
+**CP IPI - 3 Slave** (22)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="CP_IPI_-_3_Peer"></span><span id="cp_ipi_-_3_peer"></span><span id="CP_IPI_-_3_PEER"></span>
 
-**CP IPI-3-Peer** (23)
+**CP IPI – 3 Peer** (23)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SBCCS_Channel"></span><span id="sbccs_channel"></span><span id="SBCCS_CHANNEL"></span>
 
-**Sbccs-Kanal** (25)
+**SBCCS-Kanal** (25)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="SBCCS_Control_Unit"></span><span id="sbccs_control_unit"></span><span id="SBCCS_CONTROL_UNIT"></span>
 
-**Sbccs-Steuerungseinheit** (26)
+**SBCCS-Kontrolleinheit** (26)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC-SB-2_Channel"></span><span id="fc-sb-2_channel"></span><span id="FC-SB-2_CHANNEL"></span>
 
-**FC-SB-2-Channel** (27)
+**FC-SB-2-Kanal** (27)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC-SB-2_Control_Unit"></span><span id="fc-sb-2_control_unit"></span><span id="FC-SB-2_CONTROL_UNIT"></span>
 
-**FC-SB-2-Steuerungseinheit** (28)
+**FC-SB-2-Kontrolleinheit** (28)
 
 
 </dt> <dd></dd> <dt>
@@ -685,56 +685,56 @@ Die vom Fibre Channel unterstützten FC-4-Protokolle.
 
 <span id="FC_-_SNMP"></span><span id="fc_-_snmp"></span>
 
-**FC-SNMP** (36)
+**FC – SNMP** (36)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="HIPPI_-_FP"></span><span id="hippi_-_fp"></span>
 
-**HIPPI-FP** (64)
+**PROGRAMMI – FP** (64)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_Control"></span><span id="bbl_control"></span><span id="BBL_CONTROL"></span>
 
-**BBL-Steuer** Element (80)
+**BBL-Steuerelement** (80)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_FDDI_Encapsulated_LAN_PDU"></span><span id="bbl_fddi_encapsulated_lan_pdu"></span><span id="BBL_FDDI_ENCAPSULATED_LAN_PDU"></span>
 
-**BBL-gekapseltes LAN-PDU** (81)
+**BBL FDDI Encapsulated LAN PDU** (81)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BBL_802.3_Encapsulated_LAN_PDU"></span><span id="bbl_802.3_encapsulated_lan_pdu"></span><span id="BBL_802.3_ENCAPSULATED_LAN_PDU"></span>
 
-**BBL 802,3 gekapseltes LAN PDU** (82)
+**BBL 802.3 Encapsulated LAN PDU** (82)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC_-_VI"></span><span id="fc_-_vi"></span>
 
-**FC-VI** (88)
+**FC – VI** (88)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FC_-_AV"></span><span id="fc_-_av"></span>
 
-**FC-AV** (96)
+**FC – AV** (96)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Vendor_Unique"></span><span id="vendor_unique"></span><span id="VENDOR_UNIQUE"></span>
 
-**Hersteller eindeutig** (255)
+**Vendor Unique** (255)
 
 
 </dt> <dd></dd> </dl>
@@ -750,7 +750,7 @@ Die vom Fibre Channel unterstützten FC-4-Protokolle.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -759,7 +759,7 @@ Die vom Fibre Channel unterstützten FC-4-Protokolle.
 
 <dl> <dt>
 
-[**CIM- \_ Netzwerkport**](cim-networkport.md)
+[**CIM \_ NetworkPort**](cim-networkport.md)
 </dt> </dl>
 
  

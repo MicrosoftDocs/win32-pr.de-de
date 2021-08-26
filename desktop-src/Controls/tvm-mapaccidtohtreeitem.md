@@ -1,9 +1,9 @@
 ---
-title: TVM_MAPACCIDTOHTREEITEM Meldung (kommstrg. h)
-description: Ordnet einem HTREEITEM eine Barrierefreiheits-ID zu.
+title: TVM_MAPACCIDTOHTREEITEM Meldung (Commctrl.h)
+description: Karten eine Barrierefreiheits-ID an ein HTREEITEM.
 ms.assetid: f4feb7cb-2138-4930-b8ee-b9e2d4b19001
 keywords:
-- Windows-Steuerelemente für TVM_MAPACCIDTOHTREEITEM Meldung
+- TVM_MAPACCIDTOHTREEITEM Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,37 +14,37 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b827b18387723fe4792321f7932e1abb3673466e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6481d8db806156d10536ac0ec7c66fdeb4693a1133365767b4c3dc37ad8420f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045800"
 ---
-# <a name="tvm_mapaccidtohtreeitem-message"></a>TVM \_ mapacciddehtreeitem-Meldung
+# <a name="tvm_mapaccidtohtreeitem-message"></a>TVM \_ MAPACCIDTOHTREEITEM-Nachricht
 
-Ordnet einem **HTREEITEM** eine Barrierefreiheits-ID zu.
+Karten einer **HTREEITEM-Datei** eine Barrierefreiheits-ID.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
 *wParam* 
-</dt> <dd>**Uint** , das die Barrierefreiheits-ID enthält, die einem **HTREEITEM** zugeordnet werden soll. </dd> <dt>
+</dt> <dd>**UINT,** der die Barrierefreiheits-ID enthält, die einem **HTREEITEM** zugeordnet werden soll. </dd> <dt>
 
 *lParam* 
 </dt> <dd>Muss Null sein.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das **HTREEITEM** -Element zurück, dem die angegebene Barrierefreiheits-ID zugeordnet ist.
+Gibt das **HTREEITEM** zurück, dem die angegebene Barrierefreiheits-ID zugeordnet ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie ein Element zu einem Strukturansicht-Steuerelement hinzufügen, gibt ein **HTREEITEM** -Objekt zurück, das das Element eindeutig identifiziert.
+Wenn Sie einem Strukturansichtssteuerelement ein Element hinzufügen, gibt **ein HTREEITEM** zurück, das das Element eindeutig identifiziert.
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -54,9 +54,9 @@ Wenn Sie ein Element zu einem Strukturansicht-Steuerelement hinzufügen, gibt ei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -64,7 +64,7 @@ Wenn Sie ein Element zu einem Strukturansicht-Steuerelement hinzufügen, gibt ei
 
 <dl> <dt>
 
-[**TreeView \_ mapaccidto HTREEITEM**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_mapaccidtohtreeitem)
+[**TreeView \_ MapAccIDToHTREEITEM**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_mapaccidtohtreeitem)
 </dt> </dl>
 
  

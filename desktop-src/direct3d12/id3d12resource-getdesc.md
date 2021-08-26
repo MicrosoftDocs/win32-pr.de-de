@@ -1,11 +1,11 @@
 ---
-title: ID3D12Resource getdesc-Methode
-description: Ruft die Ressourcen Beschreibung ab.
+title: ID3D12Resource GetDesc-Methode
+description: Ruft die Ressourcenbeschreibung ab.
 ms.assetid: B8D84D69-6B13-4E86-8EF6-A841354B1E5C
 keywords:
-- Getdesc-Methode
-- Getdesc-Methode, ID3D12Resource-Schnittstelle
-- ID3D12Resource-Schnittstelle, getdesc-Methode
+- GetDesc-Methode
+- GetDesc-Methode, ID3D12Resource-Schnittstelle
+- ID3D12Resource-Schnittstelle, GetDesc-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location:
 - d3d12.h
-ms.openlocfilehash: 5be3f6f825370c467388805c84096240441d09a5
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 179acfa051212a2f98eb94441cbfad9fd7d9bbab47e4616f82a4f4cff3d41035
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106339855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069630"
 ---
-# <a name="id3d12resourcegetdesc-method"></a>ID3D12Resource:: getdesc-Methode
+# <a name="id3d12resourcegetdesc-method"></a>ID3D12Resource::GetDesc-Methode
 
-Ruft die Ressourcen Beschreibung ab.
+Ruft die Ressourcenbeschreibung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **D3D12 \_ Resource \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)**
+Typ: **[ **D3D12 \_ RESOURCE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_resource_desc)**
 
-Eine Direct3D 12-Ressourcen Beschreibungs Struktur.
+Eine Direct3D 12-Ressourcenbeschreibungsstruktur.
 
 ## <a name="examples"></a>Beispiele
 
-Gibt die erforderliche Größe eines Puffers zurück, der zum Hochladen von Daten verwendet werden soll.
+Gibt die erforderliche Größe eines Puffers zurück, der für den Datenupload verwendet werden soll.
 
 
 ```C++
@@ -73,7 +73,7 @@ inline UINT64 GetRequiredIntermediateSize(
 
 
 
-Weitere Informationen finden Sie [im Beispiel Code in der D3D12-Referenz](notes-on-example-code.md).
+Weitere Informationen finden Sie [im Beispielcode in der D3D12-Referenz.](notes-on-example-code.md)
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -82,9 +82,9 @@ Weitere Informationen finden Sie [im Beispiel Code in der D3D12-Referenz](notes-
 [**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
