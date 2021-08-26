@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der für ein verwaltetes Element Metrikwerte gesammelt werden.
+description: Stellt eine Zuordnung dar, in der metrikwerte für ein verwaltetes Element gesammelt werden.
 ms.assetid: 00752751-bc27-463b-a4ac-4db8e5040077
 title: CIM_MetricForME-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 89c119ad622b778d0402100a64ff15befe623685
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bbab6db5bd02ea4dbab553e758318c5b0b71f525068874cfe49fbbed8d21dfd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046839"
 ---
-# <a name="cim_metricforme-class"></a>CIM- \_ metricforme-Klasse
+# <a name="cim_metricforme-class"></a>CIM \_ MetricForME-Klasse
 
-Stellt eine Zuordnung dar, in der für ein verwaltetes Element Metrikwerte gesammelt werden.
+Stellt eine Zuordnung dar, in der metrikwerte für ein verwaltetes Element gesammelt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,42 +39,42 @@ class CIM_MetricForME : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ metricforme** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MetricForME-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ metricforme** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MetricForME-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ managedelta**
+Datentyp: **CIM \_ ManagedElement**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
 Das verwaltete Element in der Zuordnung.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ basemetricvalue**
+Datentyp: **CIM \_ BaseMetricValue**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
 Der Metrikwert in der Zuordnung.
@@ -89,8 +89,8 @@ Der Metrikwert in der Zuordnung.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -99,7 +99,7 @@ Der Metrikwert in der Zuordnung.
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

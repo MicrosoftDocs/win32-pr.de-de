@@ -1,31 +1,31 @@
 ---
-description: Wird von den streamsenken des erweiterten Videorenderers (EVR) ausgelöst, wenn sich das Videogerät ändert.
+description: Wird von den Streamsenken des erweiterten Videorenderers (Enhanced Video Renderer, EVR) ausgelöst, wenn sich das Videogerät ändert.
 ms.assetid: 5b663d6b-5df8-4321-a6a5-a21b9810065a
-title: Mestreamsinkdevicechanged-Ereignis (mfobjects. h)
+title: MEStreamSinkDeviceChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 651fc34a56ca52cfb9e0b3f20e6e4d6b5366f541
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb760a45125ae7434ff2a58d43f087d2ec3c030cb29351ea4d2113ca8fe10c0a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061010"
 ---
-# <a name="mestreamsinkdevicechanged-event"></a>Mestreamsinkdevicechanged-Ereignis
+# <a name="mestreamsinkdevicechanged-event"></a>MEStreamSinkDeviceChanged-Ereignis
 
-Wird von den streamsenken des erweiterten Videorenderers (EVR) ausgelöst, wenn sich das Videogerät ändert. Beispielsweise löst der EVR dieses Ereignis aus, wenn es ein [**\_ \_ geändertes**](../directshow/ec-display-changed.md) Ereignis der EC-Anzeige empfängt.
+Wird von den Streamsenken des erweiterten Videorenderers (Enhanced Video Renderer, EVR) ausgelöst, wenn sich das Videogerät ändert. Beispielsweise löst die EVR dieses Ereignis aus, wenn sie ein [**EC \_ DISPLAY \_ CHANGED-Ereignis**](../directshow/ec-display-changed.md) empfängt.
 
-Die Media Foundation Pipeline antwortet auf dieses Ereignis, indem alle Beispiel Anforderungen, bei denen das Gerät geändert wurde, erneut übermittelt werden.
+Die Media Foundation Pipeline reagiert auf dieses Ereignis, indem alle Beispielanforderungen erneut übermittelt werden, die beim Ändern des Geräts fehlgeschlagen sind.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -35,9 +35,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -45,10 +45,10 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Medien senken](media-sinks.md)
+[Mediensenken](media-sinks.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Die Cancel-Methode bricht eine zuvor in die Warteschlange eingereihte cdeferredcommand:: Aufrufen-Anforderung ab.'
+description: Die Cancel-Methode bricht eine zuvor in die Warteschlange eingereihte CDeferredCommand::Invoke-Anforderung ab.
 ms.assetid: 77671f6b-db50-4d8a-b727-aeed365f0303
-title: Cdeferredcommand. Cancel-Methode (ctlutil. h)
+title: CDeferredCommand.Cancel-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 524300da374b10eaac884161bb0195d88f45476d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fa7e957fe97e06c6fb14fe3a9048048e351ac1baf4ff8f4dae25b3cf5863776e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043710"
 ---
-# <a name="cdeferredcommandcancel-method"></a>Cdeferredcommand. Cancel-Methode
+# <a name="cdeferredcommandcancel-method"></a>CDeferredCommand.Cancel-Methode
 
-Die- `Cancel` Methode bricht eine zuvor in die Warteschlange eingereihte [**cdeferredcommand:: Aufrufen**](cdeferredcommand-invoke.md) -Anforderung ab.
+Die `Cancel` -Methode bricht eine zuvor in die Warteschlange [**eingereihte CDeferredCommand::Invoke-Anforderung**](cdeferredcommand-invoke.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt VFW E zurück, die \_ \_ bereits \_ abgebrochen wurde, wenn **m \_ pqueue** **null** ist. Gibt ein **HRESULT** aus [**ccmdqueue:: Remove**](ccmdqueue-remove.md) zurück, wenn der-Befehl einen Fehler generiert. Gibt \_ bei Erfolg S OK zurück.
+Gibt VFW \_ E \_ ALREADY \_ CANCELLED zurück, wenn **m \_ pQueue** **NULL** ist. Gibt ein **HRESULT** aus [**CCmdQueue::Remove zurück,**](ccmdqueue-remove.md) wenn der Aufruf einen Fehler generiert. Gibt bei Erfolg S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ideferredcommand:: Cancel**](/windows/desktop/api/Control/nf-control-ideferredcommand-cancel) -Methode.
+Diese Memberfunktion implementiert die [**IDeferredCommand::Cancel-Methode.**](/windows/desktop/api/Control/nf-control-ideferredcommand-cancel)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Member-Funktion implementiert die [**ideferredcommand:: Cancel**](/windows
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Member-Funktion implementiert die [**ideferredcommand:: Cancel**](/windows
 
 <dl> <dt>
 
-[**Cdeferredcommand-Klasse**](cdeferredcommand.md)
+[**CDeferredCommand-Klasse**](cdeferredcommand.md)
 </dt> </dl>
 
  

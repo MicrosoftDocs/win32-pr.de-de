@@ -4,12 +4,12 @@ ms.assetid: 96f19dfb-a328-41db-8fa8-77f052b1a192
 title: Erstellen eines Encoders mit coCreateInstance
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15c4cdf7b72bbfee97031088502113d085738981
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: cbd48931b7bc8e0b449ee8ffaa0141a6413f2699ebaae6e1ba01fdd1f4b38a0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092320"
 ---
 # <a name="creating-an-encoder-by-using-cocreateinstance"></a>Erstellen eines Encoders mit coCreateInstance
 
@@ -19,11 +19,11 @@ Informationen zur Encoderregistrierung finden Sie unter [Instanziieren eines Enc
 
 -   [Verwenden der INTERFACESTransform-Schnittstelle eines Encoders](#creating-an-encoder-by-using-cocreateinstance)
     -   [Beispiel für die Encodererstellung](#encoder-creation-example)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="using-an-encoders-imftransform-interface"></a>Verwenden der INTERFACESTransform-Schnittstelle eines Encoders
 
-Nach erfolgreicher Registrierung von Windows Media Encodern beim System kann eine Anwendung die Encoder aufzählen, indem [**sie MFTEnum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum)aufruft. Um nach dem richtigen Encoder zu suchen, müssen Sie Folgendes angeben:
+Nach erfolgreicher Registrierung Windows Media Encoders beim System kann eine Anwendung die Encoder aufzählen, indem [**sie MFTEnum**](/windows/desktop/api/mfapi/nf-mfapi-mftenum)aufruft. Um nach dem richtigen Encoder zu suchen, müssen Sie Folgendes angeben:
 
 -   Die GUID, die die Kategorie darstellt, bei der es sich entweder um **MFT \_ CATEGORY AUDIO \_ \_ ENCODER** oder **MFT CATEGORY VIDEO ENCODER \_ \_ \_ handelt.**
 
@@ -95,7 +95,7 @@ HRESULT FindEncoder(
 [Instanziieren eines Encoder-MFT](instantiating-the-encoder-mft.md)
 </dt> <dt>
 
-[Windows Media Encoder](windows-media-encoders.md)
+[Windows Medienencoder](windows-media-encoders.md)
 </dt> </dl>
 
  

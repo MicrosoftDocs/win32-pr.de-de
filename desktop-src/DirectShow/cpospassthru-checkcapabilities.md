@@ -1,7 +1,7 @@
 ---
-description: 'Die Checkfunktionen-Methode fragt ab, ob ein Stream Suchfunktionen angegeben hat. Diese Methode implementiert die imediaseeking:: Checkfunktionen-Methode.'
+description: Die CheckCapabilities-Methode fragt ab, ob ein Stream über angegebene Suchfunktionen verfügt. Diese Methode implementiert die IMediaSeeking::CheckCapabilities-Methode.
 ms.assetid: 48096af6-bbce-4a1f-be9a-fd150ed4536e
-title: Cpospassthru. Checkfunktionen-Methode (ctlutil. h)
+title: CPosPassThru.CheckCapabilities-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 33f7a685684667d2f5d465b14070a595c70b178c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1146e11097dbb2d717bd025d414b4510a219cc5f131e2fa7d56687128ddfd98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355946"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108420"
 ---
-# <a name="cpospassthrucheckcapabilities-method"></a>Cpospassthru. Checkfunktionen-Methode
+# <a name="cpospassthrucheckcapabilities-method"></a>CPosPassThru.CheckCapabilities-Methode
 
-Die- `CheckCapabilities` Methode fragt ab, ob ein Stream Suchfunktionen angegeben hat. Diese Methode implementiert die [**imediaseeking:: Checkfunktionen**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-checkcapabilities) -Methode.
+Die `CheckCapabilities` -Methode fragt ab, ob ein Stream über angegebene Suchfunktionen verfügt. Diese Methode implementiert die [**IMediaSeeking::CheckCapabilities-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-checkcapabilities)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT CheckCapabilities(
 
 <dl> <dt>
 
-*pfunktionen* 
+*pCapabilities* 
 </dt> <dd>
 
-Zeiger auf eine bitweise Kombination von einem oder mehreren Suchfunktionen, die [**\_ \_ Such \_ Funktionen**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities) suchen. Wenn die-Methode zurückgibt, gibt der Wert an, welches dieser Attribute verfügbar ist.
+Zeiger auf eine bitweise Kombination aus einem oder mehreren [**AM \_ SEEKING SEEKING \_ \_ CAPABILITIES-Attributen.**](/windows/win32/api/strmif/ne-strmif-am_seeking_seeking_capabilities) Wenn die Methode zurückgegeben wird, gibt der Wert an, welche dieser Attribute verfügbar sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

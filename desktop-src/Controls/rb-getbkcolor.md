@@ -1,9 +1,9 @@
 ---
-title: RB_GETBKCOLOR Meldung (kommstrg. h)
-description: Ruft die Standard Hintergrundfarbe eines Grund leisten-Steuer Elements ab.
+title: RB_GETBKCOLOR Meldung (Commctrl.h)
+description: Ruft die Standardhintergrundfarbe eines Rebar-Steuerelements ab.
 ms.assetid: be90d1ce-a1f8-446d-ae64-001f7174ab05
 keywords:
-- Windows-Steuerelemente für RB_GETBKCOLOR Meldung
+- RB_GETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bb0c6f2348dfa54dc02ddc40658fd1289885ff7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a56e2b6c60076d878ddea275f5383f98c5a92ee868e00074c716c113382b7678
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477874"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085000"
 ---
-# <a name="rb_getbkcolor-message"></a>RB \_ GetBkColor-Meldung
+# <a name="rb_getbkcolor-message"></a>RB \_ GETBKCOLOR-Nachricht
 
-Ruft die Standard Hintergrundfarbe eines Grund leisten-Steuer Elements ab.
+Ruft die Standardhintergrundfarbe eines Rebar-Steuerelements ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,17 +37,17 @@ Ruft die Standard Hintergrundfarbe eines Grund leisten-Steuer Elements ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die aktuelle Standard Hintergrundfarbe darstellt.
+Gibt einen [**COLORREF-Wert**](/windows/desktop/gdi/colorref) zurück, der die aktuelle Standardhintergrundfarbe darstellt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die 
 
 <dl> <dt>
 
-[**RB \_ SetBkColor**](rb-setbkcolor.md)
+[**RB \_ SETBKCOLOR**](rb-setbkcolor.md)
 </dt> </dl>
 
  

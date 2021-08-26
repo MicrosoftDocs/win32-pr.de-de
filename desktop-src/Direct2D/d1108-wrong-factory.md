@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: c9eeadfb38acd39e5861c5661e2f4117ef2a8ce415e3e21374f197763d4b315e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 20021472467d7861aa2b9cabd5602b5a167f20ab
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118160991"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622156"
 ---
 # <a name="d1108-wrong-factory"></a>D1108: Falsche Factory
 
@@ -38,7 +38,7 @@ Die Adresse der Schnittstelle.
 <span id="factory_1"></span><span id="FACTORY_1"></span>*Factory 1*
 </dt> <dd>
 
-Die Adresse der Factory, der die *Ressource* zugeordnet wurde.
+Die Adresse der Factory, die die *Ressource* zugeordnet hat.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -123,7 +123,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -147,7 +147,7 @@ Im folgenden Beispiel werden zunächst zwei debugfähige [**ID2D1Factory-Objekte
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

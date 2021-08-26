@@ -4,12 +4,12 @@ description: Die Schaltfläche Teilen ist ein zusammengesetztes Steuerelement, m
 ms.assetid: 0939b3be-fa88-4864-8096-a664ab2e97b5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9bc5d9554af8c580b5288a2f18eaef89a1d7e864bae628ebac59599f6b7f820f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 066a2275c49ad8d6dd32dd8ce4fd3d89956f204c
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118202491"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473756"
 ---
 # <a name="split-button"></a>Unterteilte Schaltfläche
 
@@ -44,41 +44,14 @@ In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem S
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Eigenschaftsschlüssel</th>
-<th>Hinweise</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a></td>
-<td>Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br/> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> false (0) fest. Wenn ein oder mehrere untergeordnete Elemente aktiviert sind, wird UI_PKEY_Enabled auf true (-1) festgelegt.
-<blockquote>
-[!Important]<br />
-Die <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled-Eigenschaft</a> für das Split Button-Steuerelement sollte ungültig gemacht werden, nachdem mindestens ein untergeordnetes Objekt aktiviert oder deaktiviert wurde. Dadurch wird sichergestellt, dass das Framework den aktualisierten Eigenschaftswert abfragt und den Zustand des Split Button-Steuerelements in der Menübandbenutzeroberfläche aktualisiert.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="even">
-<td><a href="windowsribbon-reference-properties-uipkey-keytip.md">UI_PKEY_Keytip</a></td>
-<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
-</tr>
-<tr class="odd">
-<td><a href="windowsribbon-reference-properties-uipkey-tooltipdescription.md">UI_PKEY_TooltipDescription</a></td>
-<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
-</tr>
-<tr class="even">
-<td><a href="windowsribbon-reference-properties-uipkey-tooltiptitle.md">UI_PKEY_TooltipTitle</a></td>
-<td>Kann nur durch Ungültigkeit aktualisiert werden.</td>
-</tr>
-</tbody>
-</table>
+
+| Eigenschaftsschlüssel | Hinweise | 
+|--------------|-------|
+| <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> | Unterstützt <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty"><strong>IUIFramework::GetUICommandProperty</strong></a> und <a href="/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty"><strong>IUIFramework::SetUICommandProperty.</strong></a><br /> Wenn alle untergeordneten Elemente deaktiviert sind, legt das Framework <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled</a> false (0) fest. Wenn ein oder mehrere untergeordnete Elemente aktiviert sind, wird andernfalls UI_PKEY_Enabled auf true (-1) festgelegt.<blockquote>[!Important]<br />Die <a href="windowsribbon-reference-properties-uipkey-enabled.md">UI_PKEY_Enabled-Eigenschaft</a> für das Split Button-Steuerelement sollte ungültig gemacht werden, nachdem mindestens ein untergeordnetes Objekt aktiviert oder deaktiviert wurde. Dadurch wird sichergestellt, dass das Framework den aktualisierten Eigenschaftswert abfragt und den Zustand des Split Button-Steuerelements in der Menübandbenutzeroberfläche aktualisiert.</blockquote><br /><br /> | 
+| <a href="windowsribbon-reference-properties-uipkey-keytip.md">UI_PKEY_Keytip</a> | Kann nur durch Ungültigkeit aktualisiert werden. | 
+| <a href="windowsribbon-reference-properties-uipkey-tooltipdescription.md">UI_PKEY_TooltipDescription</a> | Kann nur durch Ungültigkeit aktualisiert werden. | 
+| <a href="windowsribbon-reference-properties-uipkey-tooltiptitle.md">UI_PKEY_TooltipTitle</a> | Kann nur durch Ungültigkeit aktualisiert werden. | 
+
 
 
 

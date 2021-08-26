@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RSTMAP Struktur'
-title: JET_RSTMAP Struktur
+description: 'Weitere Informationen zu: JET_RSTMAP-Struktur'
+title: JET_RSTMAP-Struktur
 TOCTitle: JET_RSTMAP Structure
 ms:assetid: bddf95e4-1bd4-4e3a-ad3e-d01f6564e33b
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294077(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 646a055230b6476abf70abcde582fc2015cb241c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e9952c040540e78c76d81babbb4c7b326fe92f8
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750553"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122465857"
 ---
-# <a name="jet_rstmap-structure"></a>JET_RSTMAP Struktur
+# <a name="jet_rstmap-structure"></a>JET_RSTMAP-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_rstmap-structure"></a>JET_RSTMAP Struktur
+## <a name="jet_rstmap-structure"></a>JET_RSTMAP-Struktur
 
-Die **JET_RSTMAP** -Struktur ermöglicht die Neuzuordnung von Datenbankdatei Pfaden, die während der Wiederherstellung in den Transaktions Protokollen gespeichert werden, wenn Sie von der [jetinit](./jetinit-function.md) -Funktion und der [jetexternalrestore](./jetexternalrestore-function.md) -Funktion verwendet wird. Dadurch können die Datenbanken offline geschaltet oder von einer Sicherung wieder hergestellt werden.
+Die **JET_RSTMAP-Struktur** ermöglicht die Neuzuordnung von Datenbankdateipfaden, die während der Wiederherstellung in den Transaktionsprotokollen gespeichert werden, wenn sie von den [JetInit-](./jetinit-function.md) und [JetExternalRestore-Funktionen](./jetexternalrestore-function.md) verwendet werden. Dadurch können die Datenbanken verschoben werden, wenn sie offline oder aus einer Sicherung wiederhergestellt werden.
 
 ```cpp
     typedef struct {
@@ -40,43 +40,22 @@ Die **JET_RSTMAP** -Struktur ermöglicht die Neuzuordnung von Datenbankdatei Pfa
 
 ### <a name="members"></a>Member
 
-**szdatabasename**
+**szDatabaseName**
 
-Der aktuelle absolute Pfad einer Datenbank, die den Transaktions Protokollen zugeordnet ist, die während der Wiederherstellung wiedergegeben werden.
+Der aktuelle absolute Pfad einer Datenbank, die den Transaktionsprotokollen zugeordnet ist, die während der Wiederherstellung wiedergegeben werden.
 
-**sznewdatabasename**
+**szNewDatabaseName**
 
 Der neue absolute Pfad für die Datenbank.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JET_RSTMAP_W</strong> (Unicode) und <strong>JET_RSTMAP_A</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JET_RSTMAP_W</strong> (Unicode) und <strong>JET_RSTMAP_A</strong> (ANSI).</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetexternalrestore](./jetexternalrestore-function.md)  
+[JetExternalRestore](./jetexternalrestore-function.md)  
 [JetInit](./jetinit-function.md)

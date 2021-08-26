@@ -1,33 +1,33 @@
 ---
-description: Pixel Seitenverhältnis für einen Video Medientyp.
+description: Pixel-Seitenverhältnis für einen Videomedientyp.
 ms.assetid: e82cdd22-7d3f-4858-befd-43fa6f9f915e
-title: MF_MT_PIXEL_ASPECT_RATIO-Attribut (mfapi. h)
+title: MF_MT_PIXEL_ASPECT_RATIO -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 50c0d28ea11ba664208fcfe5fc356f1f57f2878e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 230e14e07a8011f89d16b095728bc80cbe19faa16ef9427156868f93c2ccb412
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060490"
 ---
-# <a name="mf_mt_pixel_aspect_ratio-attribute"></a>Attribut für das MF- \_ \_ Pixel- \_ Seiten \_ Verhältnis
+# <a name="mf_mt_pixel_aspect_ratio-attribute"></a>MF \_ MT PIXEL ASPECT \_ \_ \_ RATIO-Attribut
 
-Pixel Seitenverhältnis für einen Video Medientyp.
+Pixel-Seitenverhältnis für einen Videomedientyp.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT64**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die oberen 32 Bits enthalten den Zähler des Pixel Seitenverhältnisses und die unteren 32 Bits enthalten den Nenner. Der Zähler ist die horizontale Komponente des Seitenverhältnisses. der Nenner ist die vertikale Komponente.
+Die oberen 32 Bits enthalten den Zähler des Pixel-Seitenverhältnisses, und die unteren 32 Bits enthalten den Nenner. Der Zähler ist die horizontale Komponente des Seitenverhältnisses. der Nenner ist die vertikale Komponente.
 
-Um dieses Attribut festzulegen, verwenden Sie die [**mfsetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio) -Funktion. Um dieses Attribut zu erhalten, verwenden Sie die [**mfgetattributeratio**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio) -Funktion.
+Verwenden Sie zum Festlegen dieses Attributs die [**MFSetAttributeRatio-Funktion.**](/windows/desktop/api/mfapi/nf-mfapi-mfsetattributeratio) Um dieses Attribut zu erhalten, verwenden Sie die [**MFGetAttributeRatio-Funktion.**](/windows/desktop/api/mfapi/nf-mfapi-mfgetattributeratio)
 
-Das Pixel Seitenverhältnis beschreibt die Form der Pixel im angezeigten Videobild. Legen Sie dieses Attribut fest, wenn das Bild nicht eckige Pixel enthält. Damit das Bild auf einem Anzeigegerät mit quadratischen Pixeln ordnungsgemäß angezeigt werden kann, muss es mit der Umkehrung des Pixel Seitenverhältnisses des Bilds skaliert werden.
+Das Pixel-Seitenverhältnis beschreibt die Form der Pixel im angezeigten Videobild. Legen Sie dieses Attribut fest, wenn das Bild über nicht quadratische Pixel verfügt. Um auf einem Anzeigegerät mit quadratischen Pixeln ordnungsgemäß angezeigt zu werden, muss das Bild um die Umkehrung des Pixel-Seitenverhältnisses des Bilds skaliert werden.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,9 +35,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -45,16 +45,16 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)
 </dt> <dt>
 
-[Bildseiten Verhältnis](picture-aspect-ratio.md)
+[Bild-Seitenverhältnis](picture-aspect-ratio.md)
 </dt> </dl>
 
  

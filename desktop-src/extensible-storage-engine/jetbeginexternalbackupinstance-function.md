@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der jetbeginexternalbackupinstance-Funktion.
-title: Jetbeginexternalbackupinstance-Funktion
+description: 'Weitere Informationen zu: JetBeginExternalBackupInstance-Funktion'
+title: JetBeginExternalBackupInstance-Funktion
 TOCTitle: JetBeginExternalBackupInstance Function
 ms:assetid: f1c5a73d-b1cc-4ee4-942b-b5e4ef51bc2f
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294132(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bab2fa3d9faa7f81abea278e3d9fcf4a4022c24c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53583a1d51de390b0c84143dcb59f3327b7c91bb
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484243"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479296"
 ---
-# <a name="jetbeginexternalbackupinstance-function"></a>Jetbeginexternalbackupinstance-Funktion
+# <a name="jetbeginexternalbackupinstance-function"></a>JetBeginExternalBackupInstance-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetbeginexternalbackupinstance-function"></a>Jetbeginexternalbackupinstance-Funktion
+## <a name="jetbeginexternalbackupinstance-function"></a>JetBeginExternalBackupInstance-Funktion
 
-Die **jetbeginexternalbackupinstance** -Funktion initiiert eine externe Sicherung, während die Engine und die Datenbank online und aktiv sind.
+Die **JetBeginExternalBackupInstance-Funktion** initiiert eine externe Sicherung, während engine und database online und aktiv sind.
 
-**Windows XP: jetbeginexternalbackupinstance** wurde in Windows XP eingeführt.
+**Windows XP: JetBeginExternalBackupInstance** wird in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetBeginExternalBackupInstance(
@@ -45,90 +45,46 @@ Die **jetbeginexternalbackupinstance** -Funktion initiiert eine externe Sicherun
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die Daten Bank Instanz, die für diesen-Befehl verwendet werden soll.
+Die Datenbankinstanz, die für diesen Aufruf verwendet werden soll.
 
-Für Windows 2000 ist die API-Variante, die diesen Parameter akzeptiert, nicht verfügbar, da nur eine Instanz unterstützt wird. In diesem Fall wird die Verwendung dieser globalen Instanz impliziert.
+Für Windows 2000 ist die API-Variante, die diesen Parameter akzeptiert, nicht verfügbar, da nur eine Instanz unterstützt wird. Die Verwendung dieser globalen Instanz wird in diesem Fall impliziert.
 
-Für Windows XP und spätere Versionen kann die API-Variante, die diesen Parameter nicht akzeptiert, nur aufgerufen werden, wenn sich die Engine im Legacy Modus (Windows 2000-Kompatibilitätsmodus) befindet, in dem nur eine Instanz unterstützt wird. Andernfalls schlägt der Vorgang mit JET_errRunningInMultiInstanceMode fehl.
+Für Windows XP und höhere Versionen kann die API-Variante, die diesen Parameter nicht akzeptiert, nur aufgerufen werden, wenn sich die Engine im Legacymodus befindet (Windows Kompatibilitätsmodus 2000), in dem nur eine Instanz unterstützt wird. Andernfalls schlägt der Vorgang mit JET_errRunningInMultiInstanceMode fehl.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitBackupAtomic</p></td>
-<td><p>Dieses Flag ist veraltet. Die Verwendung dieses Bits führt dazu, dass JET_errInvalidgrbit zurückgegeben wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitBackupIncremental</p></td>
-<td><p>Erstellt im Gegensatz zu einer vollständigen Sicherung eine inkrementelle Sicherung. Dies bedeutet, dass nur die Protokolldateien seit der letzten vollständigen oder inkrementellen Sicherung gesichert werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitBackupSnapshot</p></td>
-<td><p>Für die zukünftige Verwendung reserviert. Definiert für Windows XP.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitBackupAtomic</p> | <p>Dieses Flag ist veraltet. Die Verwendung dieses Bits führt dazu, dass JET_errInvalidgrbit zurückgegeben wird.</p> | 
+| <p>JET_bitBackupIncremental</p> | <p>Erstellt eine inkrementelle Sicherung im Gegensatz zu einer vollständigen Sicherung. Dies bedeutet, dass nur die Protokolldateien seit der letzten vollständigen oder inkrementellen Sicherung gesichert werden.</p> | 
+| <p>JET_bitBackupSnapshot</p> | <p>Für die zukünftige Verwendung reserviert. Definiert für Windows XP.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Das System generiert möglicherweise Erfolgs-oder Fehlercodes, wenn diese Funktion aufgerufen wird. Eine umfassende Liste der Fehler für diese API finden Sie unter [Fehler Codes für die erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md).
+Das System kann als Ergebnis eines Aufrufs dieser Funktion Erfolgs- oder Fehlercodes generieren. Eine vollständige Liste der Fehler für diese API finden Sie unter [Extensible Storage Engine Error Codes](./extensible-storage-engine-error-codes.md).
 
-Siehe [jetbeginexternalbackup](./jetbeginexternalbackup-function.md).
+Weitere Informationen finden Sie unter [JetBeginExternalBackup.](./jetbeginexternalbackup-function.md)
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-**Jetbeginexternalbackupinstance** ist die erste Funktion in einer Reihe von Funktionen, die aufgerufen werden müssen, um eine erfolgreiche (nicht auf VSS basierende) Online Sicherung auszuführen. Siehe auch [jetbeginexternalbackup](./jetbeginexternalbackup-function.md) und [jetstopbackupinstance](./jetstopbackupinstance-function.md).
+**JetBeginExternalBackupInstance** ist die erste Funktion in einer Reihe von Funktionen, die aufgerufen werden müssen, um eine erfolgreiche Onlinesicherung (nicht VSS-basiert) auszuführen. Siehe auch [JetBeginExternalBackup](./jetbeginexternalbackup-function.md) und [JetStopBackupInstance](./jetstopbackupinstance-function.md).
 
-Eine externe Sicherung kann zum Implementieren von vollständigen, inkrementellen oder differenziellen Sicherungen verwendet werden.
+Eine externe Sicherung kann verwendet werden, um vollständige, inkrementelle oder differenzielle Sicherungen zu implementieren.
 
-Bei der Sicherung handelt es sich um einen fuzzywert, da die Sicherung zu einem bestimmten Zeitpunkt im Transaktionsverlauf konsistent ist, aber das Steuern des genauen Zeitpunkts ist zurzeit nicht möglich.
+Die Sicherung ist unscharf, da die Sicherung zu einem einzelnen Zeitpunkt im Transaktionsverlauf konsistent ist, aber das Steuern des genauen Zeitpunkts zu diesem Zeitpunkt nicht möglich ist.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -136,14 +92,14 @@ Bei der Sicherung handelt es sich um einen fuzzywert, da die Sicherung zu einem 
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetattachdatabase](./jetattachdatabase-function.md)  
-[Jetbeginexternalbackup](./jetbeginexternalbackup-function.md)  
-[Jetclosefile](./jetclosefile-function.md)  
-[Jetendexternalbackup](./jetendexternalbackup-function.md)  
+[JetAttachDatabase](./jetattachdatabase-function.md)  
+[JetBeginExternalBackup](./jetbeginexternalbackup-function.md)  
+[JetCloseFile](./jetclosefile-function.md)  
+[JetEndExternalBackup](./jetendexternalbackup-function.md)  
 [JetEndExternalBackupInstance2](./jetendexternalbackupinstance2-function.md)  
-[Jetgetattachinfo](./jetgetattachinfo-function.md)  
-[Jetgetloginfo](./jetgetloginfo-function.md)  
-[Jetopumfile](./jetopenfile-function.md)  
-[Jetreadfile](./jetreadfile-function.md)  
-[Jetstopbackup](./jetstopbackup-function.md)  
-[Jettruneurelog](./jettruncatelog-function.md)
+[JetGetAttachInfo](./jetgetattachinfo-function.md)  
+[JetGetLogInfo](./jetgetloginfo-function.md)  
+[JetOpenFile](./jetopenfile-function.md)  
+[JetReadFile](./jetreadfile-function.md)  
+[JetStopBackup](./jetstopbackup-function.md)  
+[JetTruncateLog](./jettruncatelog-function.md)

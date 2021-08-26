@@ -1,142 +1,127 @@
 ---
-title: Thumb-Steuerelement
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Steuerelement-Steuerelement.
+title: Steuerelementtyp "Thumb"
+description: Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den Steuerelementtyp Thumb.
 ms.assetid: 3b1d6802-cfd4-4b07-80a0-2950ca7f4e96
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für den Steuerelement
-- Benutzeroberflächenautomatisierungs-, Thumb-Steuerelement
-- Benutzeroberflächenautomatisierungs, Struktur für den Steuerelement-Steuerelement
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den Thumb-Steuerelement
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für den Thumb-Steuerelement
-- Benutzeroberflächenautomatisierungs, Ereignisse für Steuerelement-Steuerelement
-- Struktur Strukturen, Typ des Thumb-Steuer Elements
-- Eigenschaften, Typ des Thumb-Steuer Elements
-- Steuerelement Muster, Typ des Thumb-Steuer Elements
-- Ereignisse, Typ des Thumb-Steuer Elements
-- Unterstützung für den Thumb-Steuerelement
+- Benutzeroberflächenautomatisierung,Unterstützung des Steuerelementtyps Thumb
+- Benutzeroberflächenautomatisierung, Steuerelementtyp "Thumb"
+- Benutzeroberflächenautomatisierung,Struktur für den Steuerelementtyp Thumb
+- Benutzeroberflächenautomatisierung,Eigenschaften für den Steuerelementtyp Thumb
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den Steuerelementtyp Thumb
+- Benutzeroberflächenautomatisierung,Ereignisse für den Steuerelementtyp Thumb
+- Strukturstrukturen, Steuerelementtyp "Thumb"
+- Properties, Thumb-Steuerelementtyp
+- Steuerelementmuster, Steuerelementtyp "Thumb"
+- Ereignisse, Steuerelementtyp "Thumb"
+- Unterstützung für den Steuerelementtyp Thumb
 - Thumb-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für Thumb-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für den Thumb-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für Thumb
-- Steuerelement Typen, Thumb
+- Steuerelementtypen, Struktur für Thumb-Steuerelementtyp
+- Steuerelementtypen, Steuerelementmuster für den Steuerelementtyp Thumb
+- Steuerelementtypen,Unterstützung für Thumb
+- Steuerelementtypen,Thumb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8faf60fab30f54d3ed3e4b5a9f49628a3a35be5b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fea75b39ae0b17be23886823d446667299e5f0df
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388689"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478786"
 ---
-# <a name="thumb-control-type"></a>Thumb-Steuerelement
+# <a name="thumb-control-type"></a>Steuerelementtyp "Thumb"
 
-Dieses Thema enthält **Informationen zur Unterstützung der Microsoft** -Benutzeroberflächen Automatisierung für den Steuerelement-Steuerelement.
+Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den **Steuerelementtyp Thumb.**
 
-Thumb-Steuerelemente bieten die Funktionen, mit denen ein Steuerelement bewegt (oder gezogen) werden kann, wie ein Schieberegler für Bildlaufleisten, oder in der Größe angepasst werden kann, wie ein Widget für die Größenanpassung von Fenstern. Beachten Sie, dass ein Thumb-Steuerelement keine Drag & Drop-Funktionalität bereitstellt. Thumb-Steuerelemente können den Maus Fokus, aber keinen Tastaturfokus erhalten. Der Entwickler von Steuerelementen muss das Steuerelement implementieren, damit es entsprechend funktioniert (d. h. es kann gezogen bzw. in der Größe angepasst werden).
+Thumb-Steuerelemente bieten die Funktionen, mit denen ein Steuerelement bewegt (oder gezogen) werden kann, wie ein Schieberegler für Bildlaufleisten, oder in der Größe angepasst werden kann, wie ein Widget für die Größenanpassung von Fenstern. Beachten Sie, dass ein Ziehpunkt-Steuerelement keine Drag & Drop-Funktionalität bereitstellt. Thumb-Steuerelemente können den Mausfokus empfangen, aber keinen Tastaturfokus. Der Entwickler von Steuerelementen muss das Steuerelement implementieren, damit es entsprechend funktioniert (d. h. es kann gezogen bzw. in der Größe angepasst werden).
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse **für den Steuer** Element-Steuerelement Typ definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Ziehpunkt-Steuerelemente, bei denen das UI-Framework/die Benutzeroberflächen Automatisierung für Steuerelement Typen und Steuerelemente
+In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **Steuerelementtyp Thumb** definiert. Die Benutzeroberflächenautomatisierung-Anforderungen wenden alle Thumb-Steuerelemente an, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Struktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Struktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Thumb-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>Ziehpunkt</li>
-</ul></td>
-<td>(Nicht vorhanden)</td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Thumb-Steuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
- 
 
-Thumb-Steuerelemente werden nie in der Inhaltsansicht angezeigt, da Sie nur mit einer Maus bearbeitet werden können. Sie werden über ein anderes Steuerelement Muster verfügbar gemacht, z. b. das [Scroll](uiauto-implementingscroll.md) -Steuerelement Muster, das [Transform](uiauto-implementingtransform.md) -Steuerelement Muster oder das [RangeValue](uiauto-implementingrangevalue.md) -Steuerelement Muster, das im Container des Thumb-Steuer Elements
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>Ziehpunkt</li></ul> | (Nicht vorhanden) | 
+
+
+
+
+ 
+
+Thumb-Steuerelemente werden nie in der Inhaltsansicht angezeigt, da sie nur für die Bearbeitung mit der Maus vorhanden sind. Sie werden über ein anderes Steuerelementmuster verfügbar gemacht, z. [B.](uiauto-implementingscroll.md) das Scroll-Steuerelementmuster, [das Steuerelementmuster Transformieren](uiauto-implementingtransform.md) oder das [RangeValue-Steuerelementmuster,](uiauto-implementingrangevalue.md) das im Container des Steuerelements unterstützt wird.
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für Thumb-Steuerelemente besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für Thumb-Steuerelemente besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Notizen                                                                                                                                                                                                                                                        |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert      | Hinweise                                                                                                                                                                                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                                                                                 |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                                                                     |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Ein Punkt innerhalb des sichtbaren Client Bereichs des Thumb-Steuer Elements.                                                                                                                                                                                                 |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **Thumb**  |                                                                                                                                                                                                                                                              |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | false      | Das Thumb-Steuerelement ist in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur nie enthalten.                                                                                                                                                                           |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE       | Das Thumb-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                                                                          |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Ein Thumb-Steuerelement kann den Fokus erhalten, wenn es als "Zieh Element"-Objekt für die Größenanpassung eines Fensters oder Bereichs verwendet wird. Ein Thumb-Steuerelement in einem Schieberegler oder einer Scrollleiste sollte niemals den Fokus erhalten. |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL       | Thumb-Steuerelemente haben niemals eine Bezeichnung.                                                                                                                                                                                                                           |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, **die dem** Steuerelement-Steuerelement entspricht. Der Standardwert ist "Thumb" für en-US oder Englisch (USA).                                                                                                                             |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | NULL       | Da das Thumb-Steuerelement in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur nicht verfügbar ist, ist kein Name erforderlich.                                                                                                                                        |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise. | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                                                                                 |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise. | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                                                                     |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise. | Ein Punkt innerhalb des sichtbaren Clientbereichs des Steuerelements thumb.                                                                                                                                                                                                 |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Daumen**  |                                                                                                                                                                                                                                                              |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | FALSE      | Das Steuerelement "Thumb" ist nie in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                                                                           |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE       | Das Steuerelement thumb ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                                                                                          |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise. | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Ein Thumb-Steuerelement kann den Fokus erhalten, wenn es als "Zentrierungsobjekt" zum Dimensionieren eines Fensters oder Bereichs verwendet wird. Ein Schieberegler- oder Bildlaufleisten-Steuerelement sollte nie den Fokus erhalten. |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL       | Thumb-Steuerelemente haben niemals eine Bezeichnung.                                                                                                                                                                                                                           |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **Steuerelementtyp Thumb entspricht.** Der Standardwert ist "thumb" für en-US oder Englisch (USA).                                                                                                                             |
+| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | NULL       | Da das Thumb-Steuerelement in der Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur nicht verfügbar ist, ist kein Name erforderlich.                                                                                                                                        |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von Thumb-Steuerelementen unterstützt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die von Thumb-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                                         | Support  | Notizen                                                                                                                                                                                                                                                                    |
 |---------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Erforderlich | Ermöglicht, dass das Ziehpunkt-Steuerelement auf dem Bildschirm bewegt werden kann. Da das Thumb-Steuerelement in der Regel nicht geändert oder gedreht werden kann, unterstützt das [Transform](uiauto-implementingtransform.md) -Steuerelement Muster hauptsächlich die [**Move**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itransformprovider-move) -Funktion |
+| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Erforderlich | Ermöglicht, dass das Ziehpunkt-Steuerelement auf dem Bildschirm bewegt werden kann. Da die Größe des Steuerelements "Thumb" in der Regel nicht geändert oder gedreht werden kann, unterstützt das [Steuerelementmuster Transform](uiauto-implementingtransform.md) in erster Linie die [**Move-Funktion.**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itransformprovider-move) |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die von Thumb-Steuerelementen unterstützt werden Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die von Thumb-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ Das BoundingRectanglePropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ Das IsEnabledPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -145,9 +130,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

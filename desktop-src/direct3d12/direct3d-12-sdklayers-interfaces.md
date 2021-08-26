@@ -1,36 +1,38 @@
 ---
 title: Shnittstellen der Debugschicht
-description: Die folgenden Schnittstellen werden in d3d12sdklayers. h deklariert.
+description: Die folgenden Schnittstellen werden in d3d12sdungyers.h deklariert.
 ms.assetid: 9BD5910A-8FF2-4540-BB8E-8EA5C10528CE
 ms.localizationpriority: low
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e37dbe2e3348a500a8898d1e1076d2fafde66768
-ms.sourcegitcommit: 0aa1dd7577961438a1b3172f3a92fb11cbf359f1
+ms.openlocfilehash: c5d7e16d6c593f2dcfcc46266102ac15a61386ef
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "106340482"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812877"
 ---
-# <a name="debug-layer-interfaces"></a>Debug-ebenenschnittstellen
+# <a name="debug-layer-interfaces"></a>Debugebenenschnittstellen
 
-Die folgenden Schnittstellen sind in definiert `d3d12sdklayers.h` .
+Die folgenden Schnittstellen sind in `d3d12sdklayers.h` definiert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [**ID3D12Debug**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debug) | Eine Debug-Schnittstelle steuert Debugeinstellungen und überprüft den Pipeline Zustand. Sie kann nur verwendet werden, wenn die debugschicht aktiviert ist. |
-| [**ID3D12Debug1**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debug1) | Fügt der debugschicht die GPU-basierte Validierung und die Synchronisierung der abhängigen Befehls Warteschlange hinzu. |
-| [**ID3D12Debug2**](/windows/desktop/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug2) | Fügt konfigurierbare Ebenen GPU-Based Validierung hinzu. |
-| [**ID3D12Debug3**](/windows/desktop/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug3) | Fügt der GPU-basierten Überprüfung der debugschicht, der abhängigen Befehls Warteschlangen-Synchronisierung und konfigurierbaren Ebenen der GPU-basierten Validierung hinzu. |
-| [**ID3D12DebugCommandList**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandlist) | Stellt Methoden zum Überwachen und Debuggen einer Befehlsliste bereit. |
-| [**ID3D12DebugCommandList1**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandlist1) | Diese Schnittstelle ermöglicht die Änderung zusätzlicher debugebeneneinstellungen der Befehlsliste. |
-| [**ID3D12DebugCommandQueue**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandqueue) | Bietet Methoden zum Überwachen und Debuggen einer Befehls Warteschlange. |
-| [**ID3D12DebugDevice**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugdevice) | Diese Schnittstelle stellt ein Grafikgerät zum Debuggen dar. |
-| [**ID3D12DebugDevice1**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugdevice1) | Gibt Geräte weite debugebeneneinstellungen an. |
-| [**ID3D12InfoQueue**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12infoqueue) | Eine Informations Warteschlangen Schnittstelle speichert, ruft Debugmeldungen ab und filtert sie. Die Warteschlange besteht aus einer Nachrichten Warteschlange, einem optionalen Speicher Filter Stapel und einem optionalen Abruf Filter Stapel. |
-| [**ID3D12SharingContract**](/windows/desktop/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12sharingcontract) | Teil eines Vertrags zwischen D3D11On12-Diagnose Ebenen und Grafik Diagnosetools. |
+| [**ID3D12Debug**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debug) | Eine Debugschnittstelle steuert Debugeinstellungen und überprüft den Pipelinezustand. Sie kann nur verwendet werden, wenn die Debugebene aktiviert ist. |
+| [**ID3D12Debug1**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debug1) | Fügt der Debugebene GPU-basierte Validierung und Synchronisierung der Warteschlange für abhängige Befehle hinzu. |
+| [**ID3D12Debug2**](/windows/win32/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug2) | Fügt konfigurierbare Ebenen der GPU-Based hinzu. |
+| [**ID3D12Debug3**](/windows/win32/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug3) | Fügt der GPU-basierten Validierung auf Debugebene, der Synchronisierung der Warteschlange für abhängige Befehle und konfigurierbaren Ebenen der GPU-basierten Validierung hinzu. |
+| [**ID3D12Debug4**](/windows/win32/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug4) | Fügt die Möglichkeit zum Deaktivieren der Debugebene hinzu. |
+| [**ID3D12Debug5**](/windows/win32/api/D3D12sdklayers/nn-d3d12sdklayers-id3d12debug5) | Fügt der Debugebene die Möglichkeit hinzu, die automatische Benennung von Objekten zu konfigurieren. |
+| [**ID3D12DebugCommandList**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandlist) | Stellt Methoden zum Überwachen und Debuggen einer Befehlsliste zur Anwendung. |
+| [**ID3D12DebugCommandList1**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandlist1) | Diese Schnittstelle ermöglicht die Änderung zusätzlicher Einstellungen für die Debugebene der Befehlsliste. |
+| [**ID3D12DebugCommandQueue**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugcommandqueue) | Stellt Methoden zum Überwachen und Debuggen einer Befehlswarteschlange zur Anwendung. |
+| [**ID3D12DebugDevice**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugdevice) | Diese Schnittstelle stellt ein Grafikgerät für das Debuggen dar. |
+| [**ID3D12DebugDevice1**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debugdevice1) | Gibt geräteweite Debugebeneneinstellungen an. |
+| [**ID3D12InfoQueue**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12infoqueue) | Eine Information-Queue-Schnittstelle speichert Debugmeldungen, ruft sie ab und filtert sie. Die Warteschlange besteht aus einer Nachrichtenwarteschlange, einem optionalen Speicherfilterstapel und einem optionalen Abruffilterstapel. |
+| [**ID3D12SharingContract**](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12sharingcontract) | Teil eines Vertrags zwischen D3D11On12-Diagnoseebenen und Grafikdiagnosetools. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: D3DX11_EFFECT_SHADER_DESC-Struktur (D3dx11effect. h)
+title: D3DX11_EFFECT_SHADER_DESC-Struktur (D3dx11effect.h)
 description: Beschreibt einen Effekt-Shader.
 ms.assetid: 4377eec6-f331-4cad-bf16-189d6296f886
 keywords:
-- D3DX11_EFFECT_SHADER_DESC Struktur Direct3D 11
+- D3DX11_EFFECT_SHADER_DESC-Struktur Direct3D 11
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c518d4f7930d0651e519d23218121b8ed4bed288
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b48695b2e6ff0cca2046606eaad7dbdf137641ce126bd4f5f211e399aaf29d39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870183"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096350"
 ---
-# <a name="d3dx11_effect_shader_desc-structure"></a>Bibliothek d3dx11 \_ Effect- \_ Shader- \_ Struktur
+# <a name="d3dx11_effect_shader_desc-structure"></a>D3DX11 \_ EFFECT \_ SHADER \_ DESC-Struktur
 
 Beschreibt einen Effekt-Shader.
 
@@ -48,32 +48,32 @@ typedef struct _D3DX11_EFFECT_SHADER_DESC {
 
 <dl> <dt>
 
-**pinputsignature**
+**pInputSignature**
 </dt> <dd>
 
-Typ: Konstante **[**Byte**](/windows/desktop/WinProg/windows-data-types) \***
+Typ: **const [**BYTE**](/windows/desktop/WinProg/windows-data-types) \***
 
 </dd> <dd>
 
-An "kreateinputlayout" übergeben. Nur gültig in einem Scheitelpunkt-Shader oder Geometry-Shader. Weitere Informationen finden Sie unter [**ID3D11Device:: kreatinput Layout**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createinputlayout).
+Wird an CreateInputLayout übergeben. Nur gültig für einen Scheitelpunkt-Shader oder geometry-Shader. Siehe [**ID3D11Device::CreateInputLayout**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createinputlayout).
 
 </dd> <dt>
 
 **IsInline**
 </dt> <dd>
 
-Typ: **[ **bool**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-**True** gibt an, dass der Shader Inline definiert ist. andernfalls **false**.
+**TRUE** ist, dass der Shader inline definiert ist. andernfalls **FALSE**.
 
 </dd> <dt>
 
-**pbytecode**
+**pBytecode**
 </dt> <dd>
 
-Typ: Konstante **[**Byte**](/windows/desktop/WinProg/windows-data-types) \***
+Typ: **const [**BYTE**](/windows/desktop/WinProg/windows-data-types) \***
 
 </dd> <dd>
 
@@ -81,91 +81,91 @@ Shader-Bytecode.
 
 </dd> <dt>
 
-**Bytecodelta ength**
+**BytecodeLength**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Die Länge von pbytecode.
+Die Länge von pBytecode.
 
 </dd> <dt>
 
-**Sodecls**
+**SODecls**
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Stream out-Deklarations Zeichenfolge (für Geometry-Shader mit so).
+Streamen Sie eine Deklarationszeichenfolge (für geometry shader mit SO).
 
 </dd> <dt>
 
-**Rasterizedstream**
+**RasterizedStream**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Gibt an, welcher Stream rasteriert ist. D3D11 Geometry-Shader können bis zu vier Datenströme ausgeben, von denen eine rasteriert werden kann.
+Gibt an, welcher Stream gerastert wird. D3D11-Geometrie-Shader können bis zu vier Datenströme ausgeben, von denen einer gerastert werden kann.
 
 </dd> <dt>
 
-**Numinputsignatureentries**
+**NumInputSignature-Einträge**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Einträge in der Eingabe Signatur.
+Anzahl der Einträge in der Eingabesignatur.
 
 </dd> <dt>
 
-**Numoutputsignatureentries**
+**NumOutputSignatureEntries**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Einträge in der Ausgabe Signatur.
+Anzahl der Einträge in der Ausgabesignatur.
 
 </dd> <dt>
 
-**Numpatchconstantsignatureentries**
+**NumPatchConstantSignatureEntries**
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 </dd> <dd>
 
-Anzahl der Einträge in der patchkonstantensignatur.
+Anzahl der Einträge in der Patchkonstantensignatur.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Bibliothek d3dx11 \_ Effect- \_ Shader- \_ Debugger wird mit [**ID3DX11EffectShaderVariable:: getshaderdebug**](id3dx11effectshadervariable-getshaderdesc.md)verwendet.
+D3DX11 \_ EFFECT \_ SHADER \_ DESC wird mit [**ID3DX11EffectShaderVariable::GetShaderDesc**](id3dx11effectshadervariable-getshaderdesc.md)verwendet.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx11effect. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx11effect.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Effekte 11-Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effekte 11 Strukturen](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

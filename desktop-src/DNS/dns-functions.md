@@ -1,54 +1,54 @@
 ---
 title: DNS-Funktionen
-description: Navigationsseite für Domain Name System (DNS)-Funktionen.
+description: Domain Name System -Funktionen (DNS).
 ms.assetid: 9b3c1c20-5516-41de-b00f-b95736ff53f1
 keywords:
 - Domain Name System, Referenz, Funktionen
 ms.topic: article
 ms.date: 04/19/2019
 ms.custom: 19H1
-ms.openlocfilehash: 665afcd62d359bb89409e15744c7fb50c52cc6ce
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9e1f38e937c68ac97eab20e1f3bd07689d51190001a7641ed7a194511efc847e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339000"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109210"
 ---
 # <a name="dns-functions"></a>DNS-Funktionen
 
 Die folgenden Funktionen sind für DNS definiert.
 
-- [**Dnsacquirecontexthandle**](/windows/desktop/api/Windns/nf-windns-dnsacquirecontexthandle_a)
-- [**Dnscancelquery**](/windows/desktop/api/Windns/nf-windns-dnscancelquery)
-- [**Dnsextractrecordsfrommess**](/windows/desktop/api/Windns/nf-windns-dnsextractrecordsfrommessage_utf8)
-- [**Dnsfree**](/windows/desktop/api/Windns/nf-windns-dnsfree)
-- [**Dnsfreproxyname**](/windows/desktop/api/Windns/nf-windns-dnsfreeproxyname)
-- [**Dnsgetproxyinformation**](/windows/desktop/api/Windns/nf-windns-dnsgetproxyinformation)
-- [**Dnsmodifyrecordsinset**](/windows/desktop/api/Windns/nf-windns-dnsmodifyrecordsinset_a)
-- [**Dnsnamecompare**](/windows/desktop/api/Windns/nf-windns-dnsnamecompare)
-- [**DNSQuery**](/windows/desktop/api/Windns/nf-windns-dnsquery_a)
-- [**Dnsqueryconfig**](/windows/desktop/api/Windns/nf-windns-dnsqueryconfig)
-- [**Dnsqueryex**](/windows/desktop/api/Windns/nf-windns-dnsqueryex)
-- [**Dnsrecordcompare**](/windows/desktop/api/Windns/nf-windns-dnsrecordcompare)
-- [**Dnsrecordcopyex**](/windows/desktop/api/Windns/nf-windns-dnsrecordcopyex)
-- [**Dnsrecordlistfree**](/windows/desktop/api/Windns/nf-windns-dnsrecordlistfree)
-- [**Dnsrecordsetcompare**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetcompare)
-- [**Dnsrecordsetcopyex**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetcopyex)
-- [**Dnsrecordsetdetach**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetdetach)
-- [**Dnsreleasecontexthandle**](/windows/desktop/api/Windns/nf-windns-dnsreleasecontexthandle)
-- [**Dnsreplacerecordset**](/windows/desktop/api/Windns/nf-windns-dnsreplacerecordseta)
-- [**Dnsservicebrowse**](/windows/desktop/api/Windns/nf-windns-dnsservicebrowse)
-- [**Dnsservicebrowse Abbrechen**](/windows/desktop/api/Windns/nf-windns-dnsservicebrowsecancel)
-- [**Dnsserviceconstructinstance**](/windows/desktop/api/Windns/nf-windns-dnsserviceconstructinstance)
-- [**Dnsservicecopyinstance**](/windows/desktop/api/Windns/nf-windns-dnsservicecopyinstance)
-- [**Dnsservicederegister**](/windows/desktop/api/Windns/nf-windns-dnsservicederegister)
-- [**Dnsservicefreeingestance**](/windows/desktop/api/Windns/nf-windns-dnsservicefreeinstance)
-- [**Dnsserviceregiester**](/windows/desktop/api/Windns/nf-windns-dnsserviceregister)
-- [**Dnsserviceregistercancel**](/windows/desktop/api/Windns/nf-windns-dnsserviceregistercancel)
-- [**Dnsserviceresolve**](/windows/desktop/api/Windns/nf-windns-dnsserviceresolve)
-- [**Dnsserviceresolvecancel**](/windows/desktop/api/Windns/nf-windns-dnsserviceresolvecancel)
-- [**Dnsstartmulticastquery**](/windows/desktop/api/Windns/nf-windns-dnsstartmulticastquery)
-- [**Dnsstopmulticastquery**](/windows/desktop/api/Windns/nf-windns-dnsstopmulticastquery)
+- [**DnsAcquireContextHandle**](/windows/desktop/api/Windns/nf-windns-dnsacquirecontexthandle_a)
+- [**DnsCancelQuery**](/windows/desktop/api/Windns/nf-windns-dnscancelquery)
+- [**DnsExtractRecordsFromMessage**](/windows/desktop/api/Windns/nf-windns-dnsextractrecordsfrommessage_utf8)
+- [**DnsFree**](/windows/desktop/api/Windns/nf-windns-dnsfree)
+- [**DnsFreeProxyName**](/windows/desktop/api/Windns/nf-windns-dnsfreeproxyname)
+- [**DnsGetProxyInformation**](/windows/desktop/api/Windns/nf-windns-dnsgetproxyinformation)
+- [**DnsModifyRecordsInSet**](/windows/desktop/api/Windns/nf-windns-dnsmodifyrecordsinset_a)
+- [**DnsNameCompare**](/windows/desktop/api/Windns/nf-windns-dnsnamecompare)
+- [**DnsQuery**](/windows/desktop/api/Windns/nf-windns-dnsquery_a)
+- [**DnsQueryConfig**](/windows/desktop/api/Windns/nf-windns-dnsqueryconfig)
+- [**DnsQueryEx**](/windows/desktop/api/Windns/nf-windns-dnsqueryex)
+- [**DnsRecordCompare**](/windows/desktop/api/Windns/nf-windns-dnsrecordcompare)
+- [**DnsRecordCopyEx**](/windows/desktop/api/Windns/nf-windns-dnsrecordcopyex)
+- [**DnsRecordListFree**](/windows/desktop/api/Windns/nf-windns-dnsrecordlistfree)
+- [**DnsRecordSetCompare**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetcompare)
+- [**DnsRecordSetCopyEx**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetcopyex)
+- [**DnsRecordSetDetach**](/windows/desktop/api/Windns/nf-windns-dnsrecordsetdetach)
+- [**DnsReleaseContextHandle**](/windows/desktop/api/Windns/nf-windns-dnsreleasecontexthandle)
+- [**DnsReplaceRecordSet**](/windows/desktop/api/Windns/nf-windns-dnsreplacerecordseta)
+- [**DnsServiceBrowse**](/windows/desktop/api/Windns/nf-windns-dnsservicebrowse)
+- [**DnsServiceBrowseCancel**](/windows/desktop/api/Windns/nf-windns-dnsservicebrowsecancel)
+- [**DnsServiceConstructInstance**](/windows/desktop/api/Windns/nf-windns-dnsserviceconstructinstance)
+- [**DnsServiceCopyInstance**](/windows/desktop/api/Windns/nf-windns-dnsservicecopyinstance)
+- [**DnsServiceDeRegister**](/windows/desktop/api/Windns/nf-windns-dnsservicederegister)
+- [**DnsServiceFreeInstance**](/windows/desktop/api/Windns/nf-windns-dnsservicefreeinstance)
+- [**DnsServiceRegister**](/windows/desktop/api/Windns/nf-windns-dnsserviceregister)
+- [**DnsServiceRegisterCancel**](/windows/desktop/api/Windns/nf-windns-dnsserviceregistercancel)
+- [**DnsServiceResolve**](/windows/desktop/api/Windns/nf-windns-dnsserviceresolve)
+- [**DnsServiceResolveCancel**](/windows/desktop/api/Windns/nf-windns-dnsserviceresolvecancel)
+- [**DnsStartMulticastQuery**](/windows/desktop/api/Windns/nf-windns-dnsstartmulticastquery)
+- [**DnsStopMulticastQuery**](/windows/desktop/api/Windns/nf-windns-dnsstopmulticastquery)
 - [**DnsValidateName**](/windows/desktop/api/Windns/nf-windns-dnsvalidatename)
-- [**Dnsvalidateserverstatus**](/windows/desktop/api/Windns/nf-windns-dnsvalidateserverstatus)
-- [**Dnsschreitefrag-Element Puffer**](/windows/desktop/api/Windns/nf-windns-dnswritequestiontobuffer_utf8)
+- [**DnsValidateServerStatus**](/windows/desktop/api/Windns/nf-windns-dnsvalidateserverstatus)
+- [**DnsWriteQuestionToBuffer**](/windows/desktop/api/Windns/nf-windns-dnswritequestiontobuffer_utf8)

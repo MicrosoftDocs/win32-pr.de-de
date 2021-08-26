@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetgetversion-Funktion'
-title: Jetgetversion-Funktion
+description: Weitere Informationen finden Sie unter JetGetVersion-Funktion.
+title: JetGetVersion-Funktion
 TOCTitle: JetGetVersion Function
 ms:assetid: f25c3639-ae2b-4357-9947-563ef3df72c6
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294133(v=EXCHG.10)
@@ -18,21 +18,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 38128358d814ea85cf087c270a65a3fada976e7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f4157b52d05716b00645bd7815c54e802bb55417
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218133"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474496"
 ---
-# <a name="jetgetversion-function"></a>Jetgetversion-Funktion
+# <a name="jetgetversion-function"></a>JetGetVersion-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgetversion-function"></a>Jetgetversion-Funktion
+## <a name="jetgetversion-function"></a>JetGetVersion-Funktion
 
-Die **jetgetversion** -Funktion Ruft die Version der Datenbank-Engine ab.
+Die **JetGetVersion-Funktion** ruft die Version der Datenbank-Engine ab.
 
 ```cpp
     JET_ERR JET_API JetGetVersion(
@@ -43,77 +43,39 @@ Die **jetgetversion** -Funktion Ruft die Version der Datenbank-Engine ab.
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*pwversion*
+*pwVersion*
 
 Ein Zeiger auf die Versionsnummer der Datenbank-Engine.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird die Version der Datenbank-Engine abgerufen.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
 
-Es sind keine bekannten Fehlermodi vorhanden.
+
+
+Wenn diese Funktion erfolgreich ist, wird die Version der Datenbank-Engine abgerufen.
+
+Es gibt keine bekannten Fehlermodi.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Fehler Behandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)  
+[Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)

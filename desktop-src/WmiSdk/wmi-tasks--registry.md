@@ -10,12 +10,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b1d11cfcfd1ab8bf362416e45c7d9afe17fd5178ac9e5015210527ba888c26c5
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ceeeb00c449453908c3958c2e4b2fc5fd1dfe91e
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117738869"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624136"
 ---
 # <a name="wmi-tasks-registry"></a>WMI-Aufgaben: Registrierung
 
@@ -34,7 +34,7 @@ Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein,  um die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
@@ -44,8 +44,8 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -56,10 +56,10 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 <tbody>
 <tr class="odd">
 <td>... Registrierungsschlüsselwerte mit WMI lesen?</td>
-<td>Verwenden Sie <a href="/previous-versions/windows/desktop/regprov/stdregprov"><strong>die StdRegProv-Klasse</strong></a> im Stamm-/Standardnamespace. Sie können keine Instanzen dieser Klasse erhalten, da der <a href="/previous-versions/windows/desktop/regprov/system-registry-provider">Systemregistrierungsanbieter</a> nur eine Methode und ein Ereignisanbieter ist. Sie können Registrierungsdaten jedoch über Methoden wie <a href="/previous-versions/windows/desktop/regprov/enumkey-method-in-class-stdregprov"><strong>EnumKey oder</strong></a> <a href="/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov"><strong>EnumValue erhalten.</strong></a> Die <a href="/windows/desktop/CIMWin32Prov/win32-registry"><strong>Win32_Registry</strong></a>, die sich im Namespace root\cimv2 befindet, ruft Daten über die Registrierung als Ganzes ab, z. B. deren Anzahl.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>Verwenden Sie <a href="/previous-versions/windows/desktop/regprov/stdregprov"><strong>die StdRegProv-Klasse</strong></a> im Stamm-/Standardnamespace. Sie können keine Instanzen dieser Klasse erhalten, da der <a href="/previous-versions/windows/desktop/regprov/system-registry-provider">Systemregistrierungsanbieter</a> nur eine Methode und ein Ereignisanbieter ist. Sie können Registrierungsdaten jedoch über Methoden wie <a href="/previous-versions/windows/desktop/regprov/enumkey-method-in-class-stdregprov"><strong>EnumKey oder</strong></a> <a href="/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov"><strong>EnumValue erhalten.</strong></a> Der <a href="/windows/desktop/CIMWin32Prov/win32-registry"><strong>Win32_Registry</strong></a>, der sich im Namespace root\cimv2 befindet, ruft Daten über die Registrierung als Ganzes ab, z. B. deren Anzahl.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -81,7 +81,7 @@ WScript.Echo &quot;Current History Buffer Size: &quot; & dwValue</code></pre></t
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -109,7 +109,7 @@ $results = $reg.GetDWORDValue($HKEY_CURRENT_USER, $Key, $value)
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -131,7 +131,7 @@ WScript.Echo &quot;Created registry key HKEY_LOCAL_MACHINE\SOFTWARE\NewKey&quot;
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -159,7 +159,7 @@ If ($results.Returnvalue -eq 0) {&quot;Key created&quot;} </code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -182,7 +182,7 @@ WScript.Echo &quot;Example expanded_String_Value at &quot; & &quot;HKEY_LOCAL_MA
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -212,7 +212,7 @@ If ($results.Returnvalue -eq 0) {&quot;Value created&quot;}</code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -240,12 +240,12 @@ Wscript.Echo &quot;Current History Buffer Size: &quot; & dwValue</code></pre></t
 </tr>
 <tr class="even">
 <td>... Binäre Registrierungswerte lesen und schreiben?</td>
-<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/regprov/stdregprov"><strong>die StdRegProv-Klasse</strong></a> im &quot; Root\Default-Namespace und die Methoden &quot; <a href="/previous-versions/windows/desktop/regprov/getbinaryvalue-method-in-class-stdregprov"><strong>GetBinaryValue</strong></a> und <a href="/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov"><strong>SetBinaryValue.</strong></a> Registrierungswerte, die im RegEdt32-Hilfsprogramm als Eine Reihe von Hexadezimalwerten für Byte angezeigt werden, haben das REG_BINARY <strong>Datenformat.</strong> Weitere Informationen finden Sie unter <a href="mapping-a-registry-data-type-to-a-wmi-data-type.md">Zuordnen eines Registrierungsdatentyps zu einem WMI-Datentyp.</a> Im folgenden VBScript-Codebeispiel wird ein neuer Schlüssel mit einem Binärwert erstellt. Der Binärwert wird im <em>iValues-Bytearray</em> angegeben, das in Hex angegeben ist.</p>
+<td><p>Verwenden Sie <a href="/previous-versions/windows/desktop/regprov/stdregprov"><strong>die StdRegProv-Klasse</strong></a> im &quot; Root\Default-Namespace und die Methoden &quot; <a href="/previous-versions/windows/desktop/regprov/getbinaryvalue-method-in-class-stdregprov"><strong>GetBinaryValue</strong></a> und <a href="/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov"><strong>SetBinaryValue.</strong></a> Registrierungswerte, die im RegEdt32-Hilfsprogramm als Eine Reihe von Hexadezimalwerten für Byte angezeigt werden, liegen im REG_BINARY <strong>Format</strong> vor. Weitere Informationen finden Sie unter <a href="mapping-a-registry-data-type-to-a-wmi-data-type.md">Zuordnen eines Registrierungsdatentyps zu einem WMI-Datentyp.</a> Im folgenden VBScript-Codebeispiel wird ein neuer Schlüssel mit einem Binärwert erstellt. Der Binärwert wird im <em>iValues-Bytearray</em> angegeben, das in Hex angegeben ist.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -274,7 +274,7 @@ oReg.SetBinaryValue HKEY_LOCAL_MACHINE,strKeyPath,BinaryValueName,iValues</code>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -299,7 +299,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -329,7 +329,7 @@ Foreach ($byte in $results.uvalue) {&quot;{0}&quot; -f $byte.tostring(&quot;x&qu
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -352,7 +352,7 @@ oReg.SetMultiStringValue HKEY_LOCAL_MACHINE,strKeyPath,MultValueName,iValues</co
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -380,7 +380,7 @@ If ($results.Returnvalue -eq 0) {&quot;Value Set&quot;} </code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -405,7 +405,7 @@ Next</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -435,7 +435,7 @@ $results.svalue</code></pre></td>
 <span data-codelanguage="PowerShell"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

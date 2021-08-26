@@ -1,7 +1,7 @@
 ---
-description: Die setmediatype-Methode wird aufgerufen, wenn der Medientyp der PIN festgelegt ist.
+description: Die SetMediaType-Methode wird aufgerufen, wenn der Medientyp des Pins festgelegt wird.
 ms.assetid: 91d88523-006e-49fe-92f3-92825fbb323b
-title: Cbaserderderer. setmediatype-Methode (renbase. h)
+title: CBaseRenderer.SetMediaType-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6ccb364545df514e098811ff6135e0c8cf72a329
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d1ba935fc5476becaf5edd4001efe8e604a97fc5e3a3ee8e965b606568d01863
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043740"
 ---
-# <a name="cbaserenderersetmediatype-method"></a>Cbaserderderer. setmediatype-Methode
+# <a name="cbaserenderersetmediatype-method"></a>CBaseRenderer.SetMediaType-Methode
 
-Die `SetMediaType` -Methode wird aufgerufen, wenn der Medientyp der PIN festgelegt ist.
+Die `SetMediaType` -Methode wird aufgerufen, wenn der Medientyp des Pins festgelegt ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ virtual HRESULT SetMediaType(
 
 <dl> <dt>
 
-*PMT* 
+*Pmt* 
 </dt> <dd>
 
-Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt.
+Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf ein [**cmediatype**](cmediatype.md) -Objekt, das den Medientyp angibt
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: setmediatype**](crendererinputpin-setmediatype.md) -Methode auf. Diese Methode führt in der Basisklasse keine Aktion aus.
+Der Eingabepin ruft diese Methode aus ihrer eigenen [**CRendererInputPin::SetMediaType-Methode**](crendererinputpin-setmediatype.md) auf. Diese Methode führt in der Basisklasse nichts aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Die Eingabe-PIN ruft diese Methode von ihrer eigenen [**crendererinputpin:: setm
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_SLIDE (wmsdkidl. h)
-description: Der Folien Übergang zeigt das neue Bild, indem das alte Bild aus dem Frame versetzt wird.
+title: WMT_VIDEOIMAGE_TRANSITION_SLIDE (Wmsdkidl.h)
+description: Der Schiebeübergang zeigt das neue Bild an, indem das alte Bild aus dem Rahmen geschiebet wird.
 ms.assetid: 925bcf92-5608-48ca-9bdc-dd08bcd8b8d5
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_SLIDE Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_SLIDE Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,64 +14,30 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26caaadc268e823734c2bcf4a7899e6bb5399192
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9866706528cab038042adc8d098743ce6588c805
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356463"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476336"
 ---
-# <a name="wmt_videoimage_transition_slide"></a>Folie für WMT \_ Videoimage- \_ Übergang \_
+# <a name="wmt_videoimage_transition_slide"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ SLIDE
 
-Der Folien Übergang zeigt das neue Bild, indem das alte Bild aus dem Frame versetzt wird.
+Der Schiebeübergang zeigt das neue Bild an, indem das alte Bild aus dem Rahmen geschiebet wird.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Strukturmember</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Entfernung</td>
-<td><strong>fEffectPara0</strong></td>
-<td>Abstand in Pixel, dass das alte Bild aus dem Frame heraus bewegt wird.</td>
-</tr>
-<tr class="even">
-<td>Richtung</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Die Richtung, in die das alte Bild verschoben wird. Legen Sie einen der folgenden Werte fest:<br/>
-<ul>
-<li>0-Folie nach rechts verschieben.</li>
-<li>1: Folie nach links.</li>
-<li>2: Folie nach oben</li>
-<li>3: nach unten verschieben</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Aufbau</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
-<ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt die umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild der Vordergrund.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Strukturmember | BESCHREIBUNG | 
+|-----------|------------------|-------------|
+| Distance | <strong>fEffectPara0</strong> | Abstand in Pixel, in dem das alte Bild aus dem Rahmen schiebet. | 
+| Direction | <strong>fEffectPara1</strong> | Richtung, in die das alte Bild schiebet. Legen Sie auf einen der folgenden Werte fest:<br /><ul><li>0 – Nach rechts schieben.</li><li>1 – Nach links schieben.</li><li>2 – Nach oben schieben.</li><li>3 – Nach unten gleiten.</li></ul> | 
+| Aufbau | <strong>fEffectPara2</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 
@@ -83,15 +49,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

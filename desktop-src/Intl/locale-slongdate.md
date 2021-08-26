@@ -1,21 +1,21 @@
 ---
-description: '\_Gebiets Schema slongdate'
+description: LOCALE \_ SLONGDATE
 ms.assetid: 1b72cd57-819e-4b1f-bbb0-b600a9e8631c
 title: LOCALE_SLONGDATE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 503b24d81318f471b33a4ab644a059607e5ac490
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33e47409d99d4db9afa2e684d3be8ae2f874200d56d748868eaa0fa1953452d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106060"
 ---
-# <a name="locale_slongdate"></a>\_Gebiets Schema slongdate
+# <a name="locale_slongdate"></a>LOCALE \_ SLONGDATE
 
-Lange Datums Formatierungs Zeichenfolge für das Gebiets Schema. Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig ist, ist 80, einschließlich eines abschließenden NULL-Zeichens. Die Zeichenfolge kann aus einer Kombination von [Format Bildern für Tag, Monat, Jahr und ERA](day--month--year--and-era-format-pictures.md) bestehen und jede Zeichenfolge, die in einfache Anführungszeichen eingeschlossen ist. Zeichen in einfachen Anführungszeichen bleiben wie angegeben. Das lange Datum für Spanisch (Spanien) lautet beispielsweise "dddd, dd ' de ' MMMM ' de ' yyyy". Gebiets Schemas können mehrere lange Datumsformate definieren.
+Lange Datumsformatierungszeichenfolge für das Gebietsschema. Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig sind, ist 80, einschließlich eines abschließenden NULL-Zeichens. Die Zeichenfolge kann aus einer Kombination aus Bildern im [Tag-, Monats-, Jahres- und Zeitraumformat](day--month--year--and-era-format-pictures.md) und einer beliebigen Zeichenfolge bestehen, die in einfache Anführungszeichen eingeschlossen ist. Zeichen in einfachen Anführungszeichen bleiben wie angegeben. Das lange Datum für Spanisch (Spanien) lautet beispielsweise "dddd, dd" de 'MMMM' de 'yyyy'. Gebietsschemas können mehrere lange Datumsformate definieren.
 
-Um alle langen Datumsformate für ein Gebiets Schema zu erhalten, verwenden Sie [enumdateformats](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsa), [enumdateformatsex](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexa)oder [enumdateformatsexex](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexex).
+Um alle langen Datumsformate für ein Gebietsschema abzurufen, verwenden Sie [EnumDateFormats](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsa), [EnumDateFormatsEx](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexa)oder [EnumDateFormatsExEx.](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexex)
 
  
 

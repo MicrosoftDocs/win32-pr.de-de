@@ -1,7 +1,7 @@
 ---
-description: Anwendungen verwenden die Methoden der idirectxfiledatareferenzierungsschnittstelle, um Daten Verweis Objekte zu unterstützen.
+description: Anwendungen verwenden die Methoden der IDirectXFileDataReference-Schnittstelle, um Datenverweisobjekte zu unterstützen.
 ms.assetid: e0f6046f-36d9-4a13-9a0c-0738ebb2e569
-title: Idirectxfiledatareferenzierungsschnittstelle (dxfile. h)
+title: IDirectXFileDataReference-Schnittstelle (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,44 +14,44 @@ api_type:
 api_location:
 - d3dxof.lib
 - d3dxof.dll
-ms.openlocfilehash: d04d2367f914c2e8d64a3c9c64fb55df1e51e47c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4507bed7a5f3f461c80b8eed1e5c07c15cfd34b7aab7a02c3e803a43a88ae132
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095630"
 ---
-# <a name="idirectxfiledatareference-interface"></a>Idirectxfiledatareferenzierungsschnittstelle
+# <a name="idirectxfiledatareference-interface"></a>IDirectXFileDataReference-Schnittstelle
 
-Anwendungen verwenden die Methoden der idirectxfiledatareferenzierungsschnittstelle, um Daten Verweis Objekte zu unterstützen. Ein Daten Verweis Objekt verweist auf ein Datenobjekt, das zuvor in der Datei definiert wurde. Dies ermöglicht es Ihnen, das gleiche Objekt mehrmals zu verwenden, ohne es in der Datei wiederholen zu müssen. Veraltet.
+Anwendungen verwenden die Methoden der IDirectXFileDataReference-Schnittstelle, um Datenverweisobjekte zu unterstützen. Ein Datenverweisobjekt verweist auf ein Datenobjekt, das zuvor in der Datei definiert wurde. Dadurch können Sie dasselbe Objekt mehrmals verwenden, ohne es in der Datei zu wiederholen. Veraltet.
 
 ## <a name="members"></a>Member
 
-Die **idirectxfiledatareferenzierungsschnittstelle** erbt von [**idirectxfileobject**](idirectxfileobject.md). **Idirectxfiledatareferenziert** auch diese Typen von Membern:
+Die **IDirectXFileDataReference-Schnittstelle** erbt von [**IDirectXFileObject.**](idirectxfileobject.md) **IDirectXFileDataReference** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idirectxfiledatareferenzierungsschnittstelle** verfügt über diese Methoden.
+Die **IDirectXFileDataReference-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                | BESCHREIBUNG                                      |
 |:------------------------------------------------------|:-------------------------------------------------|
-| [**Beheben**](idirectxfiledatareference--resolve.md) | Löst Daten Verweise auf. Veraltet.<br/> |
+| [**Beheben**](idirectxfiledatareference--resolve.md) | Löst Datenverweise auf. Veraltet.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie festgestellt haben, dass ein Objekt ein Daten Verweis Objekt ist, verwenden Sie die [**idirectxfiledatareferen:: Resolve**](idirectxfiledatareference--resolve.md) -Methode, um das Objekt abzurufen, auf das verwiesen wird, das zuvor in der Datei definiert wurde. Weitere Informationen zum Identifizieren eines Daten Verweis Objekts finden Sie unter [**idirectxfiledata**](idirectxfiledata.md) -Schnittstelle.
+Nachdem Sie ermittelt haben, dass ein Objekt ein Datenverweisobjekt ist, verwenden Sie die [**IDirectXFileDataReference::Resolve-Methode,**](idirectxfiledatareference--resolve.md) um das zuvor in der Datei definierte Objekt abzurufen, auf das verwiesen wird. Informationen zum Identifizieren eines Datenverweisobjekts finden Sie in der [**IDirectXFileData-Schnittstelle.**](idirectxfiledata.md)
 
-Die GUID für die idirectxfiledatareferenzierungsschnittstelle ist IID \_ idirectxfiledatareferenziert.
+Die GUID für die IDirectXFileDataReference-Schnittstelle ist IID \_ IDirectXFileDataReference.
 
-Der lpdirectxfiledatareferenzierungstyp ist als Zeiger auf diese Schnittstelle definiert.
+Der LPDIRECTXFILEDataReference-Typ wird als Zeiger auf diese Schnittstelle definiert.
 
 
 ```
@@ -66,8 +66,8 @@ typedef interface IDirectXFileDataReference *LPDIRECTXFILEDATAREFERENCE;
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
@@ -75,10 +75,10 @@ typedef interface IDirectXFileDataReference *LPDIRECTXFILEDATAREFERENCE;
 
 <dl> <dt>
 
-[**Idirectxfileobject**](idirectxfileobject.md)
+[**IDirectXFileObject**](idirectxfileobject.md)
 </dt> <dt>
 
-[X-Datei Schnittstellen](dx9-graphics-reference-x-file-interfaces.md)
+[X-Dateischnittstellen](dx9-graphics-reference-x-file-interfaces.md)
 </dt> </dl>
 
  

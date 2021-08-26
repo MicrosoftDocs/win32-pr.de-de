@@ -1,7 +1,7 @@
 ---
-description: Die checkready-Methode fragt ab, ob ein Zustandsübergang abgeschlossen ist.
+description: Die CheckReady-Methode fragt ab, ob ein Zustandsübergang abgeschlossen ist.
 ms.assetid: dfa669ed-a5ab-498e-9fc2-ff15d6ddbc13
-title: Cbaserderderer. checkready-Methode (renbase. h)
+title: CBaseRenderer.CheckReady-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 28c0c8bcb6efb0e3cbd648c1e45d36e8b18d4b74
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a1fac55eba92141ac8174b30ed2dcbc4685ba250b7bb21236432bb998b3b5e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120043950"
 ---
-# <a name="cbaserenderercheckready-method"></a>Cbaserderderer. checkready-Methode
+# <a name="cbaserenderercheckready-method"></a>CBaseRenderer.CheckReady-Methode
 
-Die- `CheckReady` Methode fragt ab, ob ein Zustandsübergang beendet ist.
+Die `CheckReady` -Methode fragt ab, ob ein Zustandsübergang abgeschlossen ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " **true** " zurück, wenn der Zustandsübergang beendet ist, oder " **false** ", wenn der Filter weiterhin in einen neuen Zustand übergeht.
+Gibt **TRUE zurück,** wenn der Zustandsübergang abgeschlossen ist, oder **FALSE,** wenn der Filter noch in einen neuen Zustand über geht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Gibt " **true** " zurück, wenn der Zustandsübergang beendet ist, oder " **fals
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,13 +59,13 @@ Gibt " **true** " zurück, wenn der Zustandsübergang beendet ist, oder " **fals
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> <dt>
 
-[**Cbaserderderer:: notready**](cbaserenderer-notready.md)
+[**CBaseRenderer::NotReady**](cbaserenderer-notready.md)
 </dt> <dt>
 
-[**Cbasererderer:: Ready**](cbaserenderer-ready.md)
+[**CBaseRenderer::Ready**](cbaserenderer-ready.md)
 </dt> </dl>
 
  

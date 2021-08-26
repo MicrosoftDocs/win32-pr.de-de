@@ -1,7 +1,7 @@
 ---
-description: Die getmedialength-Methode ruft die Medien Länge dieses Quell Objekts ab.
+description: Die GetMediaLength-Methode ruft die Medienlänge dieses Quellobjekts ab.
 ms.assetid: 70298d8f-67e7-4774-a7ae-f0b48e4afda7
-title: 'Iamtimelinesrc:: getmedialength-Methode (qedit. h)'
+title: IAMTimelineSrc::GetMediaLength-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 5cd896ed0890a199f85838a01c4c6ebec6d0895d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 72aeb68b3b3f9b31dc9ba00b2ffe8d82e2df8f8c5271abffcbd7737fa65203ca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372110"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131180"
 ---
-# <a name="iamtimelinesrcgetmedialength-method"></a>Iamtimelinesrc:: getmedialength-Methode
+# <a name="iamtimelinesrcgetmedialength-method"></a>IAMTimelineSrc::GetMediaLength-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetMediaLength` Methode ruft die Medien Länge dieses Quell Objekts ab.
+Die `GetMediaLength` -Methode ruft die Medienlänge dieses Quellobjekts ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,35 +48,35 @@ HRESULT GetMediaLength(
 *pLength* 
 </dt> <dd>
 
-Empfängt die Medien Länge in 100-Nanosecond-Einheiten.
+Empfängt die Medienlänge in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück:
+Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                        |
 |-------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>            | Erfolg.<br/>                                |
-| <dl> <dt>**E \_ notbestimmt**</dt> </dl> | Für dieses Objekt sind keine Medien Zeiten festgelegt.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>       | **Null** -Zeigerargument.<br/>              |
+| <dl> <dt>**E \_ NOTDETERMINED**</dt> </dl> | Medienzeiten sind für dieses Objekt nicht festgelegt.<br/> |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>       | **NULL-Zeigerargument.**<br/>              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -86,8 +86,8 @@ Gibt einen der folgenden **HRESULT** -Werte zurück:
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -95,13 +95,13 @@ Gibt einen der folgenden **HRESULT** -Werte zurück:
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[**Iamtimelinesrc:: setmedialength**](iamtimelinesrc-setmedialength.md)
+[**IAMTimelineSrc::SetMediaLength**](iamtimelinesrc-setmedialength.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

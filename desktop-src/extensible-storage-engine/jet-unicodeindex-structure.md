@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_UNICODEINDEX Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_UNICODEINDEX Struktur'
 title: JET_UNICODEINDEX Struktur
 TOCTitle: JET_UNICODEINDEX Structure
 ms:assetid: d0b8ef74-850e-4e21-9f71-b56ec472aa0f
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c4a2332551fb1f624b75e32596b2941d97ffa47d
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 544438541affba1121850d5ad5a7a60d54d398bd
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104394278"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471386"
 ---
 # <a name="jet_unicodeindex-structure"></a>JET_UNICODEINDEX Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_unicodeindex-structure"></a>JET_UNICODEINDEX Struktur
 
-Mit der **JET_UNICODEINDEX** -Struktur wird angepasst, wie Unicode-Daten normalisiert werden, wenn ein Index für eine Unicode-Spalte erstellt wird.
+Die **JET_UNICODEINDEX-Struktur** passt an, wie Unicode-Daten normalisiert werden, wenn ein Index über eine Unicode-Spalte erstellt wird.
 
 ```cpp
 typedef struct tagJET_UNICODEINDEX {
@@ -42,92 +42,41 @@ typedef struct tagJET_UNICODEINDEX {
 
 **lcid**
 
-Die Gebiets Schema-ID, die beim Normalisieren der Daten verwendet werden soll. Jedes Gebiets Schema kann verwendet werden, solange das entsprechende Sprachpaket auf dem Computer installiert wurde. Die einzige Ausnahme ist, dass das sprachneutrale Gebiets Schema (LCID of Zero) unzulässig ist.
+Die Beim Normalisieren der Daten zu verwendende Locale-ID. Ein beliebiges Locale kann verwendet werden, solange das entsprechende Sprachpaket auf dem Computer installiert wurde. Die einzige Ausnahme ist, dass das sprachneutrale Locale (LCID von 0) ungültig ist.
 
 **dwMapFlags**
 
-Diese Flags werden an [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringa) übergeben, wenn Unicode-Daten zu einem Schlüssel normalisiert werden, sodass benutzerdefinierte Flags den Standardwert überschreiben können.
+Diese Flags werden an [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringa) übergeben, wenn Unicode-Daten in einen Schlüssel normalisiert werden, wodurch benutzerdefinierte Flags die Standardeinstellung überschreiben können.
 
-**Windows 2000**: die einzigen beiden gültigen Werte für **dwFlags** lauten:
+**Windows 2000:** Die einzigen beiden rechtlichen Werte für **dwFlags** sind:
 
-  - (LCMAP_SORTKEY | NORM_IGNORECASE | NORM_IGNOREKANATYPE | NORM_IGNOREWIDTH | NORM_IGNORENONSPACE)
+  - ( LCMAP_SORTKEY | NORM_IGNORECASE | NORM_IGNOREKANATYPE | NORM_IGNOREWIDTH | NORM_IGNORENONSPACE )
 
 <!-- end list -->
 
-  - (LCMAP_SORTKEY | NORM_IGNORECASE | NORM_IGNOREKANATYPE | NORM_IGNOREWIDTH)
+  - ( LCMAP_SORTKEY | NORM_IGNORECASE | NORM_IGNOREKANATYPE | NORM_IGNOREWIDTH )
 
-für **dwmapflags** gelten die folgenden Einschränkungen.
+**für dwMapFlags** gelten die folgenden Einschränkungen.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>LCMAP_SORTKEY</p></td>
-<td><p>Erforderlich.</p></td>
-</tr>
-<tr class="even">
-<td><p>LCMAP_BYTEREV</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="odd">
-<td><p>NORM_IGNORECASE</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="even">
-<td><p>NORM_IGNORENONSPACE</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="odd">
-<td><p>NORM_IGNORESYMBOLS</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="even">
-<td><p>NORM_IGNOREKANATYPE</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="odd">
-<td><p>NORM_IGNOREWIDTH</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-<tr class="even">
-<td><p>SORT_STRINGSORT</p></td>
-<td><p>Dies ist optional.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>LCMAP_SORTKEY</p> | <p>Erforderlich.</p> | 
+| <p>LCMAP_BYTEREV</p> | <p>Optional.</p> | 
+| <p>NORM_IGNORECASE</p> | <p>Optional.</p> | 
+| <p>NORM_IGNORENONSPACE</p> | <p>Optional.</p> | 
+| <p>NORM_IGNORESYMBOLS</p> | <p>Optional.</p> | 
+| <p>NORM_IGNOREKANATYPE</p> | <p>Optional.</p> | 
+| <p>NORM_IGNOREWIDTH</p> | <p>Optional.</p> | 
+| <p>SORT_STRINGSORT</p> | <p>Optional.</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

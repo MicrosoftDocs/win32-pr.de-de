@@ -1,21 +1,21 @@
 ---
-description: Token werden als Little-Endian-Wörter geschrieben. Die folgende Liste von tokenwerten ist in Daten Satz-und eigenständige Token unterteilt.
+description: Token werden als Little-Endian-WORDs geschrieben. Die folgende Liste der Tokenwerte ist in Datensatz- und eigenständige Token unterteilt.
 ms.assetid: vs|directx_sdk|~\tokens.htm
 title: Token
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1df253327b1256ea5e04f8b80b7e1da89f13e32c
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cf3e3654d90566fa6c4a6208c965518ce54acd3dd31669038de1b9a8ab38684d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095580"
 ---
 # <a name="tokens"></a>Token
 
-Token werden als Little-Endian-Wörter geschrieben. Die folgende Liste von tokenwerten ist in Daten Satz-und eigenständige Token unterteilt.
+Token werden als Little-Endian-WORDs geschrieben. Die folgende Liste der Tokenwerte ist in Datensatz- und eigenständige Token unterteilt.
 
-Die Token für die Aufzeichnung werden wie folgt definiert.
+Die Datensatztoken werden wie folgt definiert.
 
 
 ```

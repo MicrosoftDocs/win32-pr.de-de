@@ -4,12 +4,12 @@ description: In diesem Thema wird beschrieben, wie Bitmaps und Pinsel verwendet 
 ms.assetid: 869821b0-6ebe-46c2-aab6-93177d8a92c5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51626fb2c76b82adeb3b12324db4652a62167db344f41e861c7b0f1d116059ac
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 2050cccd37012028e2a86fbf77cd071671ce7201
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119636309"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626556"
 ---
 # <a name="opacity-masks-overview"></a>Übersicht über Durchlässigkeitsmasken
 
@@ -179,7 +179,7 @@ In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen
     <span codelanguage="ManagedCPlusPlus"></span>
     <table>
     <colgroup>
-    <col style="width: 100%" />
+    <col  />
     </colgroup>
     <thead>
     <tr class="header">
@@ -203,7 +203,7 @@ In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen
     <span codelanguage="ManagedCPlusPlus"></span>
     <table>
     <colgroup>
-    <col style="width: 100%" />
+    <col  />
     </colgroup>
     <thead>
     <tr class="header">
@@ -308,7 +308,7 @@ Im ersten Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-i
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -333,7 +333,7 @@ Im ersten Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-i
 
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

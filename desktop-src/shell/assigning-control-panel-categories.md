@@ -1,6 +1,6 @@
 ---
-description: Ab Windows XP unterstützt die Systemsteuerung die Kategorisierung von System Steuerungselementen. Elemente werden registriert, damit Sie in einer oder mehreren Kategorien angezeigt werden. Es können keine neuen Kategorien erstellt werden.
-title: Zuweisen von System Steuerungs Kategorien
+description: Ab Windows XP unterstützt Systemsteuerung die Kategorisierung von Systemsteuerung Elementen. Elemente werden so registriert, dass sie in einer oder mehreren Kategorien angezeigt werden. Neue Kategorien können nicht erstellt werden.
+title: Zuweisen Systemsteuerung Kategorien
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: e189b57d-c066-4f28-b1d5-3e05d6c6eeb2
@@ -9,179 +9,75 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: bade62cda23c2d2f66ffdfd70f3f555a243f3efc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b6785a786bfe80f5a5b13bc5e9dfbe39507a2c9a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977408"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478486"
 ---
-# <a name="assigning-control-panel-categories"></a>Zuweisen von System Steuerungs Kategorien
+# <a name="assigning-control-panel-categories"></a>Zuweisen Systemsteuerung Kategorien
 
-Ab Windows XP unterstützt die Systemsteuerung die Kategorisierung von System Steuerungselementen. Elemente werden registriert, damit Sie in einer oder mehreren Kategorien angezeigt werden. Es können keine neuen Kategorien erstellt werden.
+Ab Windows XP unterstützt Systemsteuerung die Kategorisierung von Systemsteuerung Elementen. Elemente werden so registriert, dass sie in einer oder mehreren Kategorien angezeigt werden. Neue Kategorien können nicht erstellt werden.
 
-Wenn Sie ein System Steuerungselement in einer oder mehreren Kategorien registrieren möchten, fügen Sie Werte wie im Abschnitt "System [Steuerungs](registering-control-panel-items.md) Element-Registrierung" oder " [dll-System Steuerungselement Registrierung](registering-control-panel-items.md) " unter "Registrieren von [System Steuerungselementen](registering-control-panel-items.md)" beschrieben hinzu.
+Um ein Systemsteuerung Element in einer oder mehreren Kategorien zu registrieren, fügen Sie werte hinzu, wie im Abschnitt [Executable Systemsteuerung Item Registration](registering-control-panel-items.md) oder DLL Systemsteuerung Item [Registration](registering-control-panel-items.md) von [Registering Systemsteuerung Items](registering-control-panel-items.md)beschrieben.
 
 
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Kategorie-ID</th>
-<th>Kategoriename (Windows 7)</th>
-<th>Kategoriename (Windows Vista)</th>
-<th>Kategoriename (Windows XP)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0</td>
-<td>&quot;Alle System Steuerungselemente&quot;</td>
-<td>&quot;Zusätzliche Optionen&quot;
-<blockquote>
-[!Note]<br />
-In dieser Kategorie wird jedes System Steuerungselement, das keine Kategorie-ID angibt, angezeigt.
-</blockquote>
-<br/></td>
-<td>&quot;Weitere Optionen der Systemsteuerung&quot;
-<blockquote>
-[!Note]<br />
-In dieser Kategorie wird jedes System Steuerungselement, das keine Kategorie-ID angibt, angezeigt.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>&quot;Darstellung und Personalisierung&quot;</td>
-<td>&quot;Darstellung und Personalisierung&quot;</td>
-<td>&quot;Darstellung und Designs&quot;</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>&quot;Hardware und Sound&quot;</td>
-<td>&quot;Hardware und Sound&quot;</td>
-<td>&quot;Drucker und andere Hardware&quot;</td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>&quot;Netzwerk und Internet&quot;</td>
-<td>&quot;Netzwerk und Internet&quot;</td>
-<td>&quot;Netzwerk-und Internet Verbindungen&quot;</td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>Nicht mehr verwendet. Jedes Element, das sich nur in Kategorie 4 einfügt, wird in Kategorie 2 (Hardware und Sound) angezeigt.</td>
-<td>Nicht mehr verwendet. Jedes Element, das sich nur in Kategorie 4 einfügt, wird in Kategorie 2 (Hardware und Sound) angezeigt.</td>
-<td>&quot;Sounds, Sprache und Audiogeräte&quot;</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>&quot;System und Sicherheit&quot;</td>
-<td>&quot;System und Wartung&quot;</td>
-<td>&quot;Leistung und Wartung&quot;</td>
-</tr>
-<tr class="odd">
-<td>6</td>
-<td>&quot;Uhr, Sprache und Region&quot;</td>
-<td>&quot;Uhr, Sprache und Region&quot;</td>
-<td>&quot;Datum, Uhrzeit, Sprache und regionale Optionen&quot;</td>
-</tr>
-<tr class="even">
-<td>7</td>
-<td>&quot;Erleichterte Bedienung&quot;</td>
-<td>&quot;Erleichterte Bedienung&quot;</td>
-<td>&quot;Barrierefreiheits Optionen&quot;</td>
-</tr>
-<tr class="odd">
-<td>8</td>
-<td>&quot;Programs&quot;</td>
-<td>&quot;Programs&quot;</td>
-<td>&quot;Software&quot;</td>
-</tr>
-<tr class="even">
-<td>9</td>
-<td>&quot;User Accounts (Benutzerkonten)&quot;
-<blockquote>
-[!Note]<br />
-Wenn keine Verbindung mit einer Domäne besteht, wird dies als " &quot; Benutzerkonten" und "Familien Sicherheit" bezeichnet &quot; .
-</blockquote>
-<br/></td>
-<td>&quot;User Accounts (Benutzerkonten)&quot;
-<blockquote>
-[!Note]<br />
-Wenn keine Verbindung mit einer Domäne besteht, wird dies als " &quot; Benutzerkonten" und "Familien Sicherheit" bezeichnet &quot; .
-</blockquote>
-<br/></td>
-<td>&quot;User Accounts (Benutzerkonten)&quot;</td>
-</tr>
-<tr class="odd">
-<td>10</td>
-<td>Nicht mehr verwendet. Die in dieser Kategorie registrierten Elemente werden in Kategorie 5 (System und Sicherheit) angezeigt.</td>
-<td>&quot;Security&quot;</td>
-<td>&quot;Security Center&quot;
-<blockquote>
-[!Note]<br />
-Nur in Windows XP Service Pack 2 (SP2) oder höher verfügbar.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>11</td>
-<td>Nicht mehr verwendet. Die in dieser Kategorie registrierten Elemente werden in Kategorie 0 (alle System Steuerungselemente) angezeigt.</td>
-<td>&quot;Mobile PCs&quot;
-<blockquote>
-[!Note]<br />
-Diese Kategorie ist nur auf mobilen PCs sichtbar.
-</blockquote>
-<br/></td>
-<td>Nicht verwendet.</td>
-</tr>
-</tbody>
-</table>
+
+| Kategorie-ID | Kategoriename (Windows 7) | Kategoriename (Windows Vista) | Kategoriename (Windows XP) | 
+|-------------|---------------------------|-------------------------------|----------------------------|
+| 0 | "Alle Systemsteuerung Elemente" | "Zusätzliche Optionen"<blockquote>[!Note]<br />Jedes Systemsteuerung Element, das keine Kategorie-ID angibt, wird in dieser Kategorie angezeigt.</blockquote><br /> | "Andere Systemsteuerung Optionen"<blockquote>[!Note]<br />Jedes Systemsteuerung Element, das keine Kategorie-ID angibt, wird in dieser Kategorie angezeigt.</blockquote><br /> | 
+| 1 | "Darstellung und Personalisierung" | "Darstellung und Personalisierung" | "Darstellung und Designs" | 
+| 2 | "Hardware und Sound" | "Hardware und Sound" | "Drucker und andere Hardware" | 
+| 3 | "Netzwerk und Internet" | "Netzwerk und Internet" | "Netzwerk- und Internetverbindungen" | 
+| 4 | Nicht mehr verwendet. Jedes Element, das sich nur zu Kategorie 4 hinzufügt, wird in Kategorie 2 (Hardware und Sound) angezeigt. | Nicht mehr verwendet. Jedes Element, das sich nur zu Kategorie 4 hinzufügt, wird in Kategorie 2 (Hardware und Sound) angezeigt. | "Sounds, Speech und Audiogeräte" | 
+| 5 | "System und Sicherheit" | "System und Wartung" | "Leistung und Wartung" | 
+| 6 | "Uhr, Sprache und Region" | "Uhr, Sprache und Region" | "Datum, Uhrzeit, Sprache und regionale Optionen" | 
+| 7 | "Erleichterte Bedienung" | "Erleichterte Bedienung" | "Barrierefreiheitsoptionen" | 
+| 8 | "Programme" | "Programme" | "Programme hinzufügen oder entfernen" | 
+| 9 | "Benutzerkonten"<blockquote>[!Note]<br />Wenn keine Verbindung mit einer Domäne besteht, wird dies als "Benutzerkonten und Family Safety" bezeichnet.</blockquote><br /> | "Benutzerkonten"<blockquote>[!Note]<br />Wenn keine Verbindung mit einer Domäne besteht, wird dies als "Benutzerkonten und Family Safety" bezeichnet.</blockquote><br /> | "Benutzerkonten" | 
+| 10 | Nicht mehr verwendet. In dieser Kategorie registrierte Elemente werden in Kategorie 5 (System und Sicherheit) angezeigt. | "Security" | "Security Center"<blockquote>[!Note]<br />Nur in Windows XP Service Pack 2 (SP2) oder höher verfügbar.</blockquote><br /> | 
+| 11 | Nicht mehr verwendet. In dieser Kategorie registrierte Elemente werden in Kategorie 0 (Alle Systemsteuerung Elemente) angezeigt. | "Mobiler PC"<blockquote>[!Note]<br />Diese Kategorie ist nur auf mobilen PCs sichtbar.</blockquote><br /> | Nicht verwendet. | 
+
 
 
 
  
 
-In Windows XP funktionieren die Kategorien " **Programme** " und " **Benutzerkonten** " unter anderen Kategorien in der Systemsteuerung etwas anders. Wenn einer dieser beiden Kategorien ein oder mehrere Elemente hinzugefügt werden, öffnet der zugehörige Link in der Systemsteuerung eine Kategorieseite. Die registrierten Elemente werden im unteren Teil der Seite unter der Überschrift "oder ein System Steuerungs Symbol auswählen" angezeigt. Wenn keine Elemente für eine dieser Kategorien registriert sind, ruft der zugehörige Link in der Systemsteuerung direkt das standardmäßige Windows-Element für diese Kategorie auf. In Windows Vista und höher verfügen die Kategorie " **Programme** " und die Kategorie " **Benutzerkonten** " nicht über diese Eigenschaft.
+In Windows XP unterscheiden sich die Kategorien Software und **Benutzerkonten** hinzufügen **oder entfernen** von anderen Kategorien in Systemsteuerung. Wenn mindestens ein Element einer dieser beiden Kategorien hinzugefügt wird, öffnet der zugeordnete Link in Systemsteuerung eine Kategorieseite. Die registrierten Elemente werden im unteren Teil der Seite unter der Überschrift "oder Pick a Systemsteuerung icon" angezeigt. Wenn keine Elemente für eine dieser Kategorien registriert sind, ruft der zugeordnete Link in Systemsteuerung den Standard-Windows Element für diese Kategorie direkt auf. In Windows Vista und höher verfügen die Kategorie **Programme** und die Kategorie **Benutzerkonten** nicht über diese Eigenschaft.
 
-Die **Security Center** Kategorie, die nur in Windows XP SP2 verfügbar ist, ist auch etwas nicht standardmäßig. Wenn Sie auf diese Kategorie klicken, wird die Seite **Security Center** in einem neuen Fenster geöffnet. Die für **Security Center** registrierten Elemente werden im unteren Teil der Seite unter der Überschrift **Manage Security Settings for:** angezeigt. Wenn Sie auf ein Symbol klicken, wird das System Steuerungselement geöffnet.
+Die **kategorie Security Center,** die nur in Windows XP SP2 verfügbar ist, ist ebenfalls nicht standardmäßig. Wenn Sie auf diese Kategorie klicken, wird die **seite Security Center** in einem neuen Fenster geöffnet. Elemente, die für **Security Center** registriert sind, werden im unteren Teil dieser Seite unter der Überschrift **Sicherheitseinstellungen verwalten für angezeigt:**. Durch Klicken auf ein Symbol wird das Systemsteuerung Element geöffnet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System Steuerungselemente](control-panel-applications.md)
+[Systemsteuerung Items](control-panel-applications.md)
 </dt> <dt>
 
 [Richtlinien zur Benutzerfreundlichkeit](user-experience-guidelines.md)
 </dt> <dt>
 
-[System Steuerungselemente werden registriert](registering-control-panel-items.md)
+[Registrieren von Systemsteuerung Elementen](registering-control-panel-items.md)
 </dt> <dt>
 
-[Verwenden von CPlApplet](using-cplapplet.md)
+[Verwenden von CPLApplet](using-cplapplet.md)
 </dt> <dt>
 
-[Nachrichtenverarbeitung in der Systemsteuerung](message-processing.md)
+[Systemsteuerung Nachrichtenverarbeitung](message-processing.md)
 </dt> <dt>
 
-[Ausführen von System Steuerungselementen](executing-control-panel-items.md)
+[Ausführen von Systemsteuerung Elementen](executing-control-panel-items.md)
 </dt> <dt>
 
-[Erweitern von System Steuerungselementen](extending-system-control-panel-items.md)
+[Erweitern von System Systemsteuerung Elementen](extending-system-control-panel-items.md)
 </dt> <dt>
 
-[Erstellen von durchsuchbaren Aufgaben Verknüpfungen für ein System Steuerungselement](creating-searchable-task-links.md)
+[Erstellen durchsuchbarer Aufgabenlinks für ein Systemsteuerung Element](creating-searchable-task-links.md)
 </dt> <dt>
 
-[Zugreifen auf die Systemsteuerung im abgesicherten Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)
+[Zugreifen auf die Systemsteuerung im Tresor-Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetunregistercallback-Funktion'
-title: Jetunregistercallback-Funktion
+description: 'Weitere Informationen zu: JetUnregisterCallback-Funktion'
+title: JetUnregisterCallback-Funktion
 TOCTitle: JetUnregisterCallback Function
 ms:assetid: de5c7afa-07e1-4687-989b-b56125a9712e
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294116(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b342bab655e3cf1e3c1a5967410edb1c971af87b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5cb60d8b0d06ff6af9d950c53d8bdf8f4eedb774
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393470"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466245"
 ---
-# <a name="jetunregistercallback-function"></a>Jetunregistercallback-Funktion
+# <a name="jetunregistercallback-function"></a>JetUnregisterCallback-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetunregistercallback-function"></a>Jetunregistercallback-Funktion
+## <a name="jetunregistercallback-function"></a>JetUnregisterCallback-Funktion
 
-Die **jetunregistercallback** -Funktion ermöglicht es der Anwendung, die Datenbank-Engine so zu konfigurieren, dass die Ausgabe von Benachrichtigungen an die Anwendung nicht mehr wie zuvor durch [jetregistercallback](./jetregistercallback-function.md)angefordert wurde.
+Mit der **JetUnregisterCallback-Funktion** kann die Anwendung die Datenbank-Engine so konfigurieren, dass keine Benachrichtigungen mehr an die Anwendung ausgegeben werden, wie zuvor über [JetRegisterCallback](./jetregistercallback-function.md)angefordert.
 
-**Windows XP:**  **jetunregistercallback** wird in Windows XP eingeführt.
+**Windows XP:****JetUnregisterCallback** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetUnregisterCallback(
@@ -47,112 +47,54 @@ Die **jetunregistercallback** -Funktion ermöglicht es der Anwendung, die Datenb
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
-*cbyp*
+*cbtyp*
 
-Eine Bitmaske, die aus den Rückruf Gründen besteht, dass die Anwendung keine Benachrichtigungen mehr empfangen möchte.
+Eine Bitmaske, die aus den Rückrufgründen besteht, aus denen die Anwendung keine Benachrichtigungen mehr empfangen möchte.
 
-Um diese Bitmaske zu erstellen, führen Sie einfach oder zusammengültige Rückruf Gründe aus der [JET_CBTYP](./jet-cbtyp.md) Enumeration aus.
+Um diese Bitmaske zu erstellen, einfach oder [](./jet-cbtyp.md) zusammen gültige Rückrufgründe aus der JET_CBTYP-Enumeration.
 
-*hcallbackid*
+*hCallbackId*
 
-Das Handle des registrierten Rückrufs, der von [jetregistercallback](./jetregistercallback-function.md)zurückgegeben wurde.
+Das Handle des registrierten Rückrufs, der von [JetRegisterCallback](./jetregistercallback-function.md)zurückgegeben wurde.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die-Instanz, die der Sitzung zugeordnet ist, einen schwerwiegenden Fehler festgestellt hat, der erfordert, dass der Zugriff auf alle Daten gesperrt wird, um die Integrität dieser Daten zu schützen</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die-Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden.</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die-Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird die Registrierung des angegebenen Rückrufs für die angegebenen Rückruf Gründe mit der Tabelle aufgehoben, die dem angegebenen Cursor zugeordnet ist. Es erfolgt keine Änderung des Daten Bank Status.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>ausgeführt wurden.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p> | 
 
-Wenn diese Funktion fehlschlägt, wird die Registrierung des angegebenen Rückrufs nicht aufgehoben. Es erfolgt keine Änderung des Daten Bank Status.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Die angegebene Bitmaske sollte genau mit der Bitmaske übereinstimmen, die beim Registrieren des Rückrufs angegeben wird. Das Entfernen einer Teilmenge dieser Benachrichtigungen wird von der Datenbank-Engine derzeit nicht unterstützt, und es wird kein Fehler zurückgegeben, wenn ein Versuch unternommen wird.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird die Registrierung des angegebenen Rückrufs aus den angegebenen Rückrufgründen für die Tabelle aufgehoben, die dem angegebenen Cursor zugeordnet ist. Es wird keine Änderung am Datenbankzustand vorgenommen.
+
+Wenn diese Funktion fehlschlägt, wird die Registrierung des angegebenen Rückrufs nicht aufgehoben. Es wird keine Änderung am Datenbankzustand vorgenommen.
+
+#### <a name="remarks"></a>Hinweise
+
+Die angegebene Bitmaske sollte genau mit der Bitmaske übereinstimmen, die beim Registrieren des Rückrufs angegeben wird. Die Datenbank-Engine unterstützt derzeit nicht das Entfernen einer Teilmenge dieser Benachrichtigungen, und es wird kein Fehler zurückgegeben, wenn dies versucht wird.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -162,5 +104,5 @@ Die angegebene Bitmaske sollte genau mit der Bitmaske übereinstimmen, die beim 
 [JET_HANDLE](./jet-handle.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetregistercallback](./jetregistercallback-function.md)  
-[Jetstopservice](./jetstopservice-function.md)
+[JetRegisterCallback](./jetregistercallback-function.md)  
+[JetStopService](./jetstopservice-function.md)

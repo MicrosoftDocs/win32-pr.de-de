@@ -1,7 +1,7 @@
 ---
-description: Fordert an, dass der Replikations Status des virtuellen Computers auf den angegebenen Wert geändert wird und die primäre Replikations Beziehung der virtuellen Maschine auftritt.
+description: Fordert an, dass der Replikationsstatus des virtuellen Computers in den angegebenen Wert geändert wird, und verhält sich für die primäre Replikationsbeziehung des virtuellen Computers.
 ms.assetid: 65FCDADD-1C50-4816-B10B-A951D1FC9C3B
-title: Requestreplicationstatechange-Methode der Msvm_ComputerSystem-Klasse
+title: RequestReplicationStateChange-Methode der Msvm_ComputerSystem Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 32f0136662f043627a5fad152ee0e0aaa1845e1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 568c5016e77baceaadb8176b683d2fd9e1314ab06b907b6d1d3c4e3398a82c1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528532"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130620"
 ---
-# <a name="requestreplicationstatechange-method-of-the-msvm_computersystem-class"></a>Requestreplicationstatechange-Methode der MSVM \_ Computersystem-Klasse
+# <a name="requestreplicationstatechange-method-of-the-msvm_computersystem-class"></a>RequestReplicationStateChange-Methode der Msvm \_ ComputerSystem-Klasse
 
-Fordert an, dass der Replikations Status des virtuellen Computers auf den angegebenen Wert geändert wird und die primäre Replikations Beziehung der virtuellen Maschine auftritt. Während die Statusänderung ausgeführt wird, wird die Eigenschaft **replicationstate** in den Wert des *requestedstate* -Parameters geändert. Diese Methode wird nur für Instanzen der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse unterstützt, die eine virtuelle Maschine darstellen.
+Fordert an, dass der Replikationsstatus des virtuellen Computers in den angegebenen Wert geändert wird, und verhält sich für die primäre Replikationsbeziehung des virtuellen Computers. Während der Zustandsänderung wird die **ReplicationState-Eigenschaft** in den Wert des *RequestedState-Parameters* geändert. Diese Methode wird nur für Instanzen der [**Msvm \_ ComputerSystem-Klasse**](msvm-computersystem.md) unterstützt, die einen virtuellen Computer darstellen.
 
 > [!Note]  
-> Ab Windows 8.1 wird empfohlen, " **requestreplicationstatechange** " nicht mehr zu verwenden, um die Änderung des Replikations Zustands anzufordern. Verwenden Sie stattdessen [**requestreplicationstatechangeex**](msvm-requestreplicationstatechangeex-computersystem.md).
+> Ab Windows 8.1 wird empfohlen, **RequestReplicationStateChange** nicht mehr zu verwenden, um eine Änderung des Replikationszustands an fordern. Verwenden Sie stattdessen [**RequestReplicationStateChangeEx.**](msvm-requestreplicationstatechangeex-computersystem.md)
 
  
 
@@ -46,16 +46,16 @@ uint32 RequestReplicationStateChange(
 
 <dl> <dt>
 
-*Requestedstate* \[ in\]
+*RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Replikations Status. Muss einer der folgenden Werte sein.
+Der neue Replikationsstatus. Muss einer der folgenden Werte sein.
 
 <dt>
 
 <span id="Ready_to_start_initial_replication"></span><span id="ready_to_start_initial_replication"></span><span id="READY_TO_START_INITIAL_REPLICATION"></span>
 
-<span id="Ready_to_start_initial_replication"></span><span id="ready_to_start_initial_replication"></span><span id="READY_TO_START_INITIAL_REPLICATION"></span>**Die erste Replikation kann gestartet** werden (1).
+<span id="Ready_to_start_initial_replication"></span><span id="ready_to_start_initial_replication"></span><span id="READY_TO_START_INITIAL_REPLICATION"></span>**Bereit zum Starten der ersten Replikation** (1)
 
 
 </dt> <dd>
@@ -66,7 +66,7 @@ Bereit zum Starten der ersten Replikation.
 
 <span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>
 
-<span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>**Warten auf Abschluss der ersten Replikation** (2)
+<span id="Waiting_to_complete_initial_replication"></span><span id="waiting_to_complete_initial_replication"></span><span id="WAITING_TO_COMPLETE_INITIAL_REPLICATION"></span>**Warten auf den Abschluss der ersten Replikation** (2)
 
 
 </dt> <dd>
@@ -88,12 +88,12 @@ Replikation.
 
 <span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>
 
-<span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>**Synchronisierungs Replikation beendet** (4)
+<span id="Synced_replication_complete"></span><span id="synced_replication_complete"></span><span id="SYNCED_REPLICATION_COMPLETE"></span>**Abgeschlossene synchronisierte Replikation** (4)
 
 
 </dt> <dd>
 
-Synchronisierungs Replikation ist beendet.
+Die synchronisierte Replikation ist abgeschlossen.
 
 </dd> <dt>
 
@@ -104,29 +104,29 @@ Synchronisierungs Replikation ist beendet.
 
 </dt> <dd>
 
-Unterbrechen der Replikation
+Die Replikation wird angehalten.
 
 </dd> <dt>
 
 <span id="Cancel_Resynchronize"></span><span id="cancel_resynchronize"></span><span id="CANCEL_RESYNCHRONIZE"></span>
 
-<span id="Cancel_Resynchronize"></span><span id="cancel_resynchronize"></span><span id="CANCEL_RESYNCHRONIZE"></span>**Neusynchronisierung Abbrechen** (9)
+<span id="Cancel_Resynchronize"></span><span id="cancel_resynchronize"></span><span id="CANCEL_RESYNCHRONIZE"></span>**Erneute Synchronisierung abbrechen** (9)
 
 
 </dt> <dd>
 
-Abbrechen der erneuten Synchronisierung.
+Abbrechen der Neusynchronisierung.
 
 </dd> </dl> </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Ein optionaler Verweis auf ein [**MSVM-" \_ concretejob**](msvm-concretejob.md) "-Objekt, das zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis zum Überwachen des Fortschritts und zum Abrufen des Ergebnisses der Methode verwendet werden.
+Ein optionaler Verweis auf ein [**Msvm \_ ConcreteJob-Objekt,**](msvm-concretejob.md) das zurückgegeben wird, wenn der Vorgang asynchron ausgeführt wird. Falls vorhanden, kann der zurückgegebene Verweis verwendet werden, um den Fortschritt zu überwachen und das Ergebnis der -Methode zu erhalten.
 
 </dd> <dt>
 
-*Timeoutperiod* \[ in\]
+*TimeoutPeriod* \[ In\]
 </dt> <dd>
 
 Dieser Parameter wird nicht verwendet.
@@ -139,18 +139,18 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Rückgabecode/-wert                                                                                                                                                                | BESCHREIBUNG                                                                                                                 |
+| Rückgabecode/-wert                                                                                                                                                                | Beschreibung                                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**Abgeschlossen ohne Fehler**</dt> <dt>0</dt> </dl>                    | Erfolg<br/>                                                                                                          |
-| <dl> <dt>**Methoden Parameter aktiviert-Auftrag gestartet**</dt> <dt>4096</dt> </dl> | Der Übergang erfolgt asynchron.<br/>                                                                                  |
-| <dl> <dt></dt> Fehler <dt>32768</dt> </dl>                                 |                                                                                                                             |
+| <dl> <dt>**Überprüfte Methodenparameter – Auftrag gestartet**</dt> <dt>4096</dt> </dl> | Der Übergang ist asynchron.<br/>                                                                                  |
+| <dl> <dt>**Fehler**</dt> <dt>32768</dt> </dl>                                 |                                                                                                                             |
 | <dl> <dt>**Zugriff verweigert**</dt> <dt>32769</dt> </dl>                          |                                                                                                                             |
 | <dl> <dt>**Nicht unterstützt**</dt> <dt>32770</dt> </dl>                          |                                                                                                                             |
-| <dl> <dt>**Status ist unbekannt**</dt> <dt>32771</dt> </dl>                      |                                                                                                                             |
+| <dl> <dt>**Der Status ist unbekannt**</dt> <dt>32771.</dt> </dl>                      |                                                                                                                             |
 | <dl> <dt>**Timeout**</dt> <dt>32772</dt> </dl>                                |                                                                                                                             |
 | <dl> <dt>**Ungültiger Parameter**</dt> <dt>32773</dt> </dl>                      | Der in einem der Parameter angegebene Wert wird nicht unterstützt.<br/>                                                   |
 | <dl> <dt>**System wird verwendet**</dt> <dt>32774</dt> </dl>                       |                                                                                                                             |
-| <dl> <dt>**Ungültiger Status für diesen Vorgang**</dt> <dt>32775</dt> </dl>       | Der im *requestedstate* -Parameter angegebene Wert wird im aktuellen Replikations Modus oder-Status nicht unterstützt.<br/> |
+| <dl> <dt>**Ungültiger Zustand für diesen Vorgang**</dt> <dt>32775</dt> </dl>       | Der im *RequestedState-Parameter angegebene* Wert wird im aktuellen Replikationsmodus oder -zustand nicht unterstützt.<br/> |
 | <dl> <dt>**Falscher Datentyp**</dt> <dt>32776</dt> </dl>                    |                                                                                                                             |
 | <dl> <dt>**System ist nicht verfügbar**</dt> <dt>32777</dt> </dl>                |                                                                                                                             |
 | <dl> <dt>**Nicht genügend Arbeitsspeicher**</dt> <dt>32778</dt> </dl>                          |                                                                                                                             |
@@ -166,10 +166,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -178,7 +178,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 
 <dl> <dt>
 
-[**MSVM \_ Computersystem**](msvm-computersystem.md)
+[**Msvm \_ ComputerSystem**](msvm-computersystem.md)
 </dt> </dl>
 
  

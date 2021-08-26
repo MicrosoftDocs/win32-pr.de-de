@@ -1,57 +1,57 @@
 ---
-title: Aria-Bezeichnungs Fehler
-description: Aria-Bezeichnungs Fehler
+title: ARIA-Bezeichnungsfehler
+description: ARIA-Bezeichnungsfehler
 ms.assetid: DF45E38D-9AD3-48C8-911E-8C6233F17F43
 keywords:
-- Arialabelerrorid
+- AriaLabelErrorId
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1091c46dbb660c4c3568d24bfca34d94ef869f1e
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 42abee9028db8c3a4070d9b60d0650187339fc4c9ec34d0b70f720c27e973897
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104039776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122320"
 ---
-# <a name="aria-label-error"></a>Aria-Bezeichnungs Fehler
+# <a name="aria-label-error"></a>ARIA-Bezeichnungsfehler
 
 ## <a name="text"></a>Text
 
-Das Element ist vom Typ " **Input**", " **Button**", " **Image** " oder " **Landmark** ", hat aber keinen zugänglichen Namen.
+Das Element hat den Typ **Eingabe,** **Schaltfläche,** **Bildschaltfläche** oder Orientierungspunkt,  hat aber keinen barrierefreien Namen.
 
 ## <a name="type"></a>type
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dieser Fehler gilt für:
 
--   Formulareingabe Felder:
-    -   HTML-Tags **– \[ Eingabetyp = " \| textkennwort-Kontrollkästchen Optionsfeld- \| \| \| \| e-Mail-Adresse e-Mail-Adresse für \| \| \| \| DateTime \| -Ortszeit-local \| time \| Week \| Month \| Number \| Range \| Search \| \] URL"**, **Select**, **DataList** und **Textarea**.
-    -   WAI-ARIA-Rollen –**CheckBox**, **ComboBox**, **ListBox**, **Radio Group**, **Radio**, **Textfeld**, **Tree**, **Slider** und **SpinButton**.
--   Bilder/Bild-Schaltflächen/-Schaltflächen
-    -   HTML-Tags –**IMG**, **input \[ Type = "Bild Schaltfläche \| " \]** und **Schaltfläche**.
-    -   Rollen "WAI-ARIA" –**IMG** und **Button**.
+-   Formulareingabefelder:
+    -   HTML-Tags– Eingabetyp= "Textkennwort-Kontrollkästchen Optionsdatei **\[ \| \| \| \| \| \| \| E-Mail tel color \| \| datetime \| datetime-local \| time \| \| \| \| \| \| \]** week month range search url" **,** wählen Sie , **datalist** und **textarea** aus.
+    -   TS-ARIA-Rollen:Kontrollkästchen, Kombinationsfeld, Listenfeld, Optionsfeld, Optionsfeld, **Textfeld,** **Struktur,** **Schieberegler** und **Spinbutton**. 
+-   Bilder/Bildschaltflächen/Schaltflächen
+    -   HTML-Tags–**img**, **input \[ type="image \| button" \]** und **button**.
+    -   TS-ARIA-Rollen–**img** und **schaltfläche**.
 -   Besondere Merkmale
-    -   WAI-ARIA-Rollen –**Region**, **Banner**, **Ergänzung**, **ContentInfo**, **Formular**, **Main**, **Navigation** und **Suche**.
+    -   TS-ARIA-Rollen–**Region**, **Banner**, **ergänzende**, **Inhaltsinfo**, **Form**, **Haupt-**, **Navigations-** und **Suche**.
 
 > [!Note]  
-> Die Zugriffs Prüfung zeigt diesen Fehler auch für Elemente an, für die der barrierefreie Name standardmäßig auf der Grundlage des inneren HTML-Inhalts festgelegt wird (siehe das **Banner** Element im obigen Beispiel). In diesen Fällen können Sie diese Fehler unterdrücken.
+> AccChecker zeigt diesen Fehler auch für Elemente an, für die der barrierefreie Name standardmäßig basierend auf innerem HTML-Inhalt festgelegt ist (siehe banner-Element im obigen Beispiel).  In diesen Fällen können Sie diese Fehler unterdrücken.
 
- 
+ 
 
-Alle semantisch wichtigen Benutzeroberflächen Elemente, wie z. b. Formularfelder (z. b. **Eingabe**, **Select**, **Textarea**), Bilder, Schaltflächen und Markierungen (Tags, die logische Bereiche darstellen) müssen über den zugreif baren Namen verfügen, damit Bildschirm Sprachausgaben diese korrekt ankündigen können.
+Alle semantisch wichtigen Benutzeroberflächenelemente wie Formularfelder (z. B. **Eingabe,** Auswahl **,** **Textbereich),** Bilder, Schaltflächen und Sehenswürdigkeiten (Tags, die logische Bereiche darstellen) müssen über den barrierefreien Namen verfügen, damit Spracheingaben sie ordnungsgemäß ankündigen können.
 
-Um diesen Fehler zu beheben, legen Sie den barrierefreien Namen auf eine der folgenden Weisen fest (in der Reihenfolge der bevorzugte Reihenfolge).
+Um diesen Fehler zu beheben, legen Sie den barrierefreien Namen auf eine der folgenden Arten fest (in der Reihenfolge der Bevorzugten aufgeführt).
 
--   Formularfelder: Verwenden Sie das Tag **Bezeichnung** , und legen Sie für das Attribut **für** den **ID** -Wert des Zielfelds fest.
--   Bild/Bild-Schaltfläche: Legen Sie das **alt** -Attribut fest.
--   Buttons: Legen Sie den Text der Schaltflächen Beschriftung fest.
--   Für ein beliebiges Element:
-    -   [**Aria-labelledby**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) -Attribut: wird auf den **ID** -Wert des Elements festgelegt, das die barrierefreie namens Zeichenfolge enthält.
-    -   [**Aria-Label-**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) Attribut: auf die barrierefreie namens Zeichenfolge festgelegt.
-    -   [**Title**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/title) -Attribut: auf die barrierefreie namens Zeichenfolge festgelegt (außerdem **wird eine** QuickInfo erstellt).
+-   Formularfelder: Verwenden Sie das **Bezeichnungstag,** und legen Sie **das for-Attribut** auf den **ID-Wert** des Zielfelds fest.
+-   Bild-/Bildschaltfläche: Legen Sie das **attribut alt** fest.
+-   Schaltflächen: Legen Sie den Text der Schaltflächenbeschriftung fest.
+-   Für jedes Element:
+    -   [**Attribut "aria-und-labelby":**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) Wird auf den **ID-Wert** des Elements festgelegt, das die Zeichenfolge für den barrierefreien Namen enthält.
+    -   [**aria-label-Attribut:**](https://developer.mozilla.org/docs/Web/Accessibility/ARIA) Legen Sie auf die barrierefreie Namenszeichenfolge fest.
+    -   [**title-Attribut:**](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/title) Legen Sie auf die barrierefreie Namenszeichenfolge fest (erstellen Sie auch eine **QuickInfo).**
 
 ## <a name="example"></a>Beispiel
 
@@ -87,9 +87,9 @@ attribute to reference the visible headers. -->
 
 
 
- 
+ 
 
- 
+ 
 
 
 

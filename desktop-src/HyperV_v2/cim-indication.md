@@ -1,5 +1,5 @@
 ---
-description: Die CIM- \_ Angabe ist die abstrakte Basisklasse für alle Benachrichtigungen über Änderungen in Schema Objekten und Schema Objektdaten, Ereignisse, die von Anbietern und Instrumentation erkannt werden. Unterklassen der CIM- \_ Angabe stellen bestimmte Benachrichtigungs Typen dar.
+description: CIM Indication ist die abstrakte Basisklasse für alle Benachrichtigungen über Änderungen an Schemaobjekten und Schemaobjektdaten, von Anbietern und \_ Instrumentierung erkannte Ereignisse. Unterklassen der \_ CIM-Angabe stellen bestimmte Typen von Benachrichtigungen dar.
 ms.assetid: 85a70425-7b32-449c-9fc0-1cfbf34d9187
 title: CIM_Indication-Klasse
 ms.topic: reference
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 46b8d50f2e90d9a51c8ffa0b93de9ac16c889340
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84f6999add608a1b43da2d9272703dd63f52ed2d799f47a0121bd4a50b88e9ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106373006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046820"
 ---
-# <a name="cim_indication-class"></a>CIM- \_ Anzeige Klasse
+# <a name="cim_indication-class"></a>CIM \_ Indication-Klasse
 
-**CIM \_ Die Angabe** ist die abstrakte Basisklasse für alle Benachrichtigungen über Änderungen in Schema Objekten und Schema Objektdaten, Ereignisse, die von Anbietern und Instrumentation erkannt werden. Unterklassen der **CIM- \_ Angabe** stellen bestimmte Benachrichtigungs Typen dar.
+**CIM \_ Indication** ist die abstrakte Basisklasse für alle Benachrichtigungen über Änderungen an Schemaobjekten und Schemaobjektdaten, von Anbietern und Instrumentierung erkannte Ereignisse. Unterklassen der **\_ CIM-Angabe stellen** bestimmte Typen von Benachrichtigungen dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,124 +51,124 @@ class CIM_Indication : __ExtrinsicEvent
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Anzeige** Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ Indication-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Anzeige** Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ Indication-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Correlatedindications**
+**CorrelatedIndications**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Empfehlung. ITU \| X733. Korrelierte Benachrichtigungen "), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Angabe**.**Bezeichnerkennung**")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Recommendation.ITU \| X733. Korrelierte Benachrichtigungen"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Indication**.**IndicationIdentifier**")
 </dt> </dl>
 
-Ein-Array, das **bezeichnerbezeichnerwerte** von Benachrichtigungen enthält, die mit diesem verknüpft sind.
+Ein Array, das **IndicationIdentifier-Werte** von Benachrichtigungen enthält, die mit diesem verknüpft sind.
 
 </dd> <dt>
 
-**Bezeichnfiltername**
+**IndicationFilterName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ IndicationFilter.Name")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ IndicationFilter.Name")
 </dt> </dl>
 
-Der Bezeichner des Anzeige Filters, der die Anzeige verarbeitet. Der sendende Dienst legt diese Eigenschaft fest. Diese Eigenschaft korreliert mit der **Name** -Eigenschaft des CIM-Objekts " **\_ indicationfilter** ". Der Wert von " **indicationfiltername** " sollte das folgende Format aufweisen:
+Der Bezeichner des Anzeigefilters, der die Anzeige verarbeitet. Der sendende Dienst legt diese Eigenschaft fest. Diese Eigenschaft korreliert mit der **Name-Eigenschaft** des **CIM \_ IndicationFilter-Objekts.** Der Wert von **IndicationFilterName** sollte das folgende Format verwenden:
 
 -   *<OrgID>*:*<LocalID>*
--   *<OrgID>* muss einen urheberrechtlich geschützten, mit einem Wert gekennzeichneten oder eindeutigen Namen enthalten, der der Geschäfts Entität gehört, die das Objekt besitzt.
+-   *<OrgID>* muss einen urheberrechtlich geschützten, geschützten oder eindeutigen Namen enthalten, der der Geschäftseinheit gehört, die das Objekt besitzt.
 -   *<OrgID>* darf keinen Doppelpunkt enthalten (:)
--   *<LocalID>* ein eindeutiger Bezeichner, der von der Geschäfts Entität ausgewählt wird, die das Objekt besitzt
+-   *<LocalID>* Ein eindeutiger Bezeichner, der von der Geschäftsentität ausgewählt wird, die das Objekt besitzt.
 
 </dd> <dt>
 
-**Bezeichnerkennung**
+**IndicationIdentifier**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Empfehlung. ITU \| X733. Benachrichtigungs Bezeichner ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Recommendation.ITU \| X733. Benachrichtigungsbezeichner")
 </dt> </dl>
 
-Ein Bezeichner des Hinweises. Diese Eigenschaft kann als Schlüsselwert im **correlatedindications** -Eigenschafts Array verwendet werden. Daher sollte der Wert von " **bezeichationidentifier** " innerhalb des Namespace dieser Klasseninstanz eindeutig sein.
+Ein Bezeichner der Anzeige. Diese Eigenschaft kann als Schlüsselwert im **CorrelatedIndications-Eigenschaftenarray** verwendet werden. Aus diesem **Grund sollte IndicationIdentifier** ein eindeutiger Wert innerhalb des Namespace dieser Klasseninstanz sein.
 
-Um sicherzustellen, dass " **bezeichationidentifier** " eindeutig ist, sollte das folgende Format verwendet werden:
+Um sicherzustellen, **dass IndicationIdentifier** eindeutig ist, sollte das folgende Format verwendet werden:
 
 -   *<OrgID>*:*<LocalID>*
--   *<OrgID>* muss einen urheberrechtlich geschützten, mit einem Wert gekennzeichneten oder eindeutigen Namen enthalten, der der Geschäfts Entität gehört, die das Objekt besitzt.
+-   *<OrgID>* muss einen urheberrechtlich geschützten, geschützten oder eindeutigen Namen enthalten, der der Geschäftseinheit gehört, die das Objekt besitzt.
 -   *<OrgID>* darf keinen Doppelpunkt enthalten (:)
--   *<LocalID>* ein eindeutiger Bezeichner, der von der Geschäfts Entität ausgewählt wird, die das Objekt besitzt
--   Für von DMTF definierte Instanzen *<OrgID>* sollte auf "CIM" festgelegt werden.
+-   *<LocalID>* Ein eindeutiger Bezeichner, der von der Geschäftsentität ausgewählt wird, die das Objekt besitzt.
+-   Für DMTF-definierte Instanzen *<OrgID>* sollte auf "CIM" festgelegt werden.
 
 </dd> <dt>
 
-**Bezeichationzeit**
+**IndicationTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Datum und die Uhrzeit, zu der die Angabe erstellt wurde. Die-Eigenschaft kann auf **null** festgelegt werden, wenn die Entität, die die Angabe erstellt hat, diese Informationen nicht ermitteln kann.
+Die Uhrzeit und das Datum, zu denen die Angabe erstellt wurde. Die -Eigenschaft kann auf **NULL festgelegt** werden, wenn die Entität, die die Angabe erstellt hat, diese Informationen nicht bestimmen kann.
 
 > [!Note]  
-> Der Wert für " **indicationtime** " kann für in schneller Folge generierte Anzeichen identisch sein.
+> Der **IndicationTime-Wert** kann für Hinweise identisch sein, die in schneller Folge generiert werden.
 
  
 
 </dd> <dt>
 
-**Otherschwere Grad**
+**OtherSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ alertindikation**](cim-alertindication.md)".**Wahrnehmvedschwere Grad**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ AlertIndication**](cim-alertindication.md).**PerceivedSeverity**")
 </dt> </dl>
 
-Der Schweregrad der Angabe aus der Sicht des Notifizierers, wenn " **wahrnehmvedschwere Grad** " auf "1" (sonstige) festgelegt ist.
+Der Schweregrad der Anzeige aus Sicht des Bezeichners, wenn **PerceivedSeverity** auf "1" (Sonstige) festgelegt ist.
 
 </dd> <dt>
 
-**Wahrnehmgrad**
+**PerceivedSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Empfehlung. ITU \| X733. Wahrgenommene Schweregrade ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("Recommendation.ITU \| X733. Wahrgenommener Schweregrad")
 </dt> </dl>
 
-Der Schweregrad der Angabe aus der Sicht des Notifizierers.
+Der Schweregrad der Angabe aus Sicht des Bezeichners.
 
 <dt>
 
@@ -179,7 +179,7 @@ Der Schweregrad der Angabe aus der Sicht des Notifizierers.
 
 </dt> <dd>
 
-der erkannte Schweregrad der Angabe ist unbekannt oder unbestimmt.
+Der wahrgenommene Schweregrad der Angabe ist unbekannt oder unbestimmt.
 
 </dd> <dt>
 
@@ -190,7 +190,7 @@ der erkannte Schweregrad der Angabe ist unbekannt oder unbestimmt.
 
 </dt> <dd>
 
-Gibt an, dass der Wert des schwere Grads in der Eigenschaft **otherschwere Grad** gefunden werden kann.
+Gibt an, dass der Wert des Schweregrads in der **OtherSeverity-Eigenschaft gefunden werden** kann.
 
 </dd> <dt>
 
@@ -201,40 +201,40 @@ Gibt an, dass der Wert des schwere Grads in der Eigenschaft **otherschwere Grad*
 
 </dt> <dd>
 
-Informationen sollten beim Bereitstellen einer informativen Antwort verwendet werden.
+Informationen sollten verwendet werden, wenn sie eine informative Antwort bereitstellen.
 
 </dd> <dt>
 
 <span id="Degraded_Warning"></span><span id="degraded_warning"></span><span id="DEGRADED_WARNING"></span>
 
-<span id="Degraded_Warning"></span><span id="degraded_warning"></span><span id="DEGRADED_WARNING"></span>Heruntergestuft **/Warnung** (3)
+<span id="Degraded_Warning"></span><span id="degraded_warning"></span><span id="DEGRADED_WARNING"></span>**Heruntergestuft/Warnung** (3)
 
 
 </dt> <dd>
 
-Sollte verwendet werden, wenn der Benutzer die Entscheidung treffen soll, ob eine Aktion erforderlich ist.
+Sollte bei Bedarf verwendet werden, damit der Benutzer entscheiden kann, ob eine Aktion erforderlich ist.
 
 </dd> <dt>
 
 <span id="Minor"></span><span id="minor"></span><span id="MINOR"></span>
 
-<span id="Minor"></span><span id="minor"></span><span id="MINOR"></span>**Neben** Version (4)
+<span id="Minor"></span><span id="minor"></span><span id="MINOR"></span>**Minor** (4)
 
 
 </dt> <dd>
 
-Es ist eine Aktion erforderlich, aber die Situation ist zu diesem Zeitpunkt nicht schwerwiegend.
+Es ist eine Aktion erforderlich, aber die Situation ist derzeit nicht schwerwiegend.
 
 </dd> <dt>
 
 <span id="Major"></span><span id="major"></span><span id="MAJOR"></span>
 
-<span id="Major"></span><span id="major"></span><span id="MAJOR"></span>**Haupt** Version (5)
+<span id="Major"></span><span id="major"></span><span id="MAJOR"></span> Haupt-(5)
 
 
 </dt> <dd>
 
-Die Aktion ist jetzt erforderlich.
+Jetzt ist eine Aktion erforderlich.
 
 </dd> <dt>
 
@@ -245,55 +245,55 @@ Die Aktion ist jetzt erforderlich.
 
 </dt> <dd>
 
-Jetzt ist eine Aktion erforderlich, und der Bereich ist umfangreich (möglicherweise kommt es zu einem bevorstehenden Ausfall einer wichtigen Ressource).
+Jetzt ist eine Aktion erforderlich, und der Umfang ist breit gefächert (möglicherweise kommt es zu einem bevorstehenden Ausfall einer kritischen Ressource).
 
 </dd> <dt>
 
 <span id="Fatal_NonRecoverable"></span><span id="fatal_nonrecoverable"></span><span id="FATAL_NONRECOVERABLE"></span>
 
-<span id="Fatal_NonRecoverable"></span><span id="fatal_nonrecoverable"></span><span id="FATAL_NONRECOVERABLE"></span>Schwerwiegend **/nicht wiederherstellbar** (7)
+<span id="Fatal_NonRecoverable"></span><span id="fatal_nonrecoverable"></span><span id="FATAL_NONRECOVERABLE"></span>**Fatal/NonRecoverable** (7)
 
 
 </dt> <dd>
 
-Es ist ein Fehler aufgetreten, aber es ist zu spät, um Abhilfemaßnahmen zu ergreifen.
+Ein Fehler ist aufgetreten, aber es ist zu spät, um Korrekturmaßnahmen zu ergreifen.
 
 </dd> <dt>
 
 <span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>
 
-<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF reserviert** (..)
+<span id="DMTF_Reserved"></span><span id="dmtf_reserved"></span><span id="DMTF_RESERVED"></span>**DMTF Reserved** (..)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Sequencecontext**
+**SequenceContext**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Angabe**.**Sequencenumkehr**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Indication**.**SequenceNumber**")
 </dt> </dl>
 
-Der Sequenz Kontext des Sequenz Bezeichners für die Anzeige. Wenn ein Dienst keine Sequenz Bezeichner für Hinweise unterstützt, sollte diese Eigenschaft auf **null** festgelegt werden. Wenn die Angabe erneut übermittelt wird, bleibt diese Eigenschaft unverändert.
+Der Sequenzkontext des Sequenzbezeichners für die Angabe. Wenn ein Dienst keine Sequenzbezeichner für Hinweise unterstützt, sollte diese Eigenschaft auf **NULL festgelegt werden.** Wenn die Angabe erneut zugestellt wird, bleibt diese Eigenschaft unverändert.
 
 > [!Note]  
-> Der Sequenz Bezeichner für die Anzeige ermöglicht es einem Listener, doppelte Anzeichen zu identifizieren, wenn der Dienst versucht, Hinweise erneut zu übermitteln, nicht ordnungsgemäß anordnen und damit verlorene Anzeichen erkennen.
+> Der Sequenzbezeichner für die Anzeige ermöglicht einem Listener, doppelte Anzeichen zu identifizieren, wenn der Dienst versucht, Hinweise erneut zu stellen, die in der Reihenfolge eintreffenden Anzeichen neu zu anordnen und verloren gegangene Anzeichen zu erkennen.
 
  
 
-Um sicherzustellen, dass **sequencecontext** eindeutig ist, sollte folgendes Format verwendet werden:
+Um sicherzustellen, **dass SequenceContext** eindeutig ist, sollte das folgende Format verwendet werden:
 
--   *Anzeige Dienst Name* \# *CIM-Service-Start-ID* \# *Listener-Destination-Erstellungszeit*
--   "Display *-Service-Name* " ist der Wert der " **Name** "-Eigenschaft der CIM-Instanz " **\_ indicationservice** ", die die Anzeige übermittelt.
--   *CIM-Service-Start-ID ist ein Bezeichner* , der den Startvorgang eines dienstaners eindeutig identifiziert. Dies kann z. b. ein Zeitstempel der Startzeit oder ein Leistungswert sein, der sich für jeden Start-oder Neustart des Dienstanbieter erhöht.
--   *Listener-Destination-Erstellungszeit* ist ein Zeitstempel der Erstellungszeit der **CIM- \_ listenerdestination** -Instanz, die das Listener-Ziel darstellt. NDA dieses Format nur eine Empfehlung ist, müssen CIM-Clients den Wert als einen nicht transparenten Bezeichner für den Sequenz Kontext behandeln und dürfen sich nicht auf dieses Format verlassen.
+-   *indication-service-name* \# *cim-service-start-id* \# *listener-destination-creation-time*
+-   *indication-service-name* ist der Wert der **Name-Eigenschaft** der **CIM \_ IndicationService-Instanz,** die die Angabe liefert.
+-   *cim-service-start-id* ist ein Bezeichner, der den Startvorgang eines Diensts eindeutig identifiziert. Dies kann beispielsweise ein Zeitstempel der Startzeit oder ein Leistungsindikator sein, der bei jedem Start oder Neustart des Diensts zunimmt.
+-   *listener-destination-creation-time* ist ein Zeitstempel der Erstellungszeit der **CIM \_ ListenerDestination-Instanz,** die das Listenerziel darstellt. Dieses Format ist nur eine Empfehlung. CIM-Clients müssen den Wert als nicht transparenten Bezeichner für den Sequenzkontext behandeln und dürfen sich nicht auf dieses Format verlassen.
 
 </dd> <dt>
 
@@ -306,22 +306,22 @@ Datentyp: **sint64**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Angabe**.**Sequencecontext**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ Indication**.**SequenceContext**")
 </dt> </dl>
 
-Die Sequenznummer des Sequenz Bezeichners für die Anzeige.
+Die Sequenznummer des Sequenzbezeichners für die Angabe.
 
 > [!Note]  
-> Der Sequenz Bezeichner für die Anzeige ermöglicht es einem Listener, doppelte Anzeichen zu identifizieren, wenn der Dienst versucht, Hinweise erneut zu übermitteln, nicht ordnungsgemäß anordnen und damit verlorene Anzeichen erkennen.
+> Der Sequenzbezeichner für die Anzeige ermöglicht einem Listener, doppelte Anzeichen zu identifizieren, wenn der Dienst versucht, Hinweise erneut zu stellen, die in der Reihenfolge eintreffenden Anzeichen neu zu anordnen und verloren gegangene Anzeichen zu erkennen.
 
  
 
-Die Sequenznummer weist die folgenden Eigenschaften auf:
+Die Sequenznummer hat die folgenden Merkmale:
 
--   Die Sequenznummer wird immer dann auf 0 zurückgesetzt, wenn sich der **sequencecontext** -Wert ändert.
--   Wenn das listenerziel einen neuen Indikator erhält, wird die Sequenznummer um "1" angehoben.
--   Die Sequenznummer wird in 0 (null) umschlossen, wenn der Wertebereich überschritten wird.
--   Wenn die Angabe erneut übermittelt wird, bleibt **SequenceNumber** unverändert.
+-   Die Sequenznummer wird auf "0" zurückgesetzt, wenn sich der **SequenceContext-Wert** ändert.
+-   Wenn das Listenerziel eine neue Angabe empfängt, wird die Sequenznummer um "1" erhöht.
+-   Die Sequenznummer wird auf "0" umbrechen, wenn der Wertbereich überschritten wird.
+-   Wenn die Angabe erneut zugestellt wird, bleibt **die SequenceNumber** unverändert.
 
 </dd> </dl>
 
@@ -333,8 +333,8 @@ Die Sequenznummer weist die folgenden Eigenschaften auf:
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

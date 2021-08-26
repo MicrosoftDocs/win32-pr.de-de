@@ -1,5 +1,5 @@
 ---
-description: Eine asynchrone Anforderung zum Abrufen der im Grafikprotokoll erfassten Listenframes.
+description: Eine asynchrone Anforderung, um die im Grafikprotokoll erfassten Listenrahmen zu erhalten.
 MS-HAID: vspixengine.IFrameListRequest\_RequestAsync\_IFrameListCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 677b310731052c701e8001158c0e4c0c0062f29fdf4814a8998ea7007be598a1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: b1161f36a2bb0d1cdc9e1f65fa2ce3fea4984f00
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118283729"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621976"
 ---
 # <a name="span-idvspixengineiframelistrequest_requestasync_iframelistcallback_ptr_dword_dwordspaniframelistrequestrequestasync-method"></a><span id="vspixengine.iframelistrequest_requestasync_iframelistcallback_ptr_dword_dword"></span>IFrameListRequest::RequestAsync-Methode
 
-Eine asynchrone Anforderung zum Abrufen der im Grafikprotokoll erfassten Listenframes.
+Eine asynchrone Anforderung, um die im Grafikprotokoll erfassten Listenrahmen zu erhalten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,15 +48,15 @@ Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu b
 Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

@@ -1,9 +1,9 @@
 ---
-title: glaretexturesresidente-Funktion (GL. h)
-description: Die glaretexturesresidente-Funktion bestimmt, ob angegebene Textur Objekte im Texturspeicher ansässig sind.
+title: glAreTexturesResident-Funktion (Gl.h)
+description: Die glAreTexturesResident-Funktion bestimmt, ob angegebene Texturobjekte im Texturspeicher enthalten sind.
 ms.assetid: 55d068a8-d366-4fee-85d5-49373b8c5e02
 keywords:
-- glaretexturesresidente-Funktion OpenGL
+- glAreTexturesResident-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e2e7e5965da9604c690384301de6f1879a98994
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c503cac59bbec912c535120161d27991118dab818a185c1f39d8f48cb2a5939
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082240"
 ---
-# <a name="glaretexturesresident-function"></a>glaretexturesresidente-Funktion
+# <a name="glaretexturesresident-function"></a>glAreTexturesResident-Funktion
 
-Die **glaretexturesresidente** -Funktion bestimmt, ob angegebene Textur Objekte im Texturspeicher ansässig sind.
+Die **glAreTexturesResident-Funktion** bestimmt, ob angegebene Texturobjekte im Texturspeicher enthalten sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,59 +45,59 @@ GLboolean WINAPI glAreTexturesResident(
 *n* 
 </dt> <dd>
 
-Die Anzahl der Texturen, die abgefragt werden sollen.
+Die Anzahl der zu abfragenden Texturen.
 
 </dd> <dt>
 
-*Textur* 
+*Texturen* 
 </dt> <dd>
 
-Die Adresse eines Arrays mit den Namen der zu abgefragten Texturen.
+Die Adresse eines Arrays, das die Namen der abgefragten Texturen enthält.
 
 </dd> <dt>
 
-*Heimen* 
+*Residenzen* 
 </dt> <dd>
 
-Die Adresse eines Arrays, in dem der Status der Textur Residenz zurückgegeben wird. Der Wohnsitz Status einer Textur, die durch ein Element von *Texturen* benannt wird, wird im entsprechenden-Element von- *Residenzen* zurückgegeben.
+Die Adresse eines Arrays, in dem der Texturstatus zurückgegeben wird. Der Status einer Textur, die  von einem Texturelement benannt wird, wird im entsprechenden Element von *Leiste zurückgegeben.*
 
 </dd> </dl>
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | *n* war ein negativer Wert, ein Element in *Texturen* war NULL, oder ein Element in *Texturen* enthielt keinen Textur Bezeichner.<br/> |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/>     |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *n* war ein negativer Wert, ein Element in *Texturen* war 0 (null), oder ein Element in *Texturen* enthält keinen Texturbezeichner.<br/> |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/>     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Auf Computern mit einer begrenzten Menge an Textur Arbeitsspeicher erstellt OpenGL einen Funktions Satz von Texturen, die im Texturspeicher ansässig sind. Diese Texturen können wesentlich effizienter an ein Textur Ziel gebunden werden als nicht residente Texturen.
+Auf Computern mit einer begrenzten Menge an Texturspeicher richtet OpenGL einen Arbeitssatz von Texturen ein, die sich im Texturspeicher befinden. Diese Texturen können viel effizienter an ein Texturziel gebunden werden als Texturen, die nicht resident sind.
 
-Die **glaretexturesresidente** -Funktion fragt den Textur Residenz Status der *n* Texturen ab, die von den Elementen der *Texturen* benannt werden. Wenn alle benannten Texturen Residenten sind, gibt **glaretexturesresidenten** den Wert "GL true" zurück \_ , und die Inhalte der residenten werden nicht beeinträchtigt.  Wenn eine der benannten Texturen nicht Resident ist, gibt **glaretexturesresidenten** den Wert "GL false" zurück \_ , und der ausführliche Status wird in den *n* -Elementen von Residenten zurückgegeben.
+Die **funktion glAreTexturesResident** fragt den Texturstatus der *n Texturen* ab, die von den Elementen der *Texturen benannt werden.* Wenn alle benannten Texturen resident sind, **gibt glAreTexturesResident** GL TRUE zurück, und der Inhalt der 30-0-Texturen \_ ist unerkannt.  Wenn eine der benannten Texturen nicht resident ist, gibt **glAreTexturesResident** GL FALSE zurück, und der detaillierte Status wird in den n Elementen von \_ *n* von *2 zurückgegeben.*
 
-Wenn ein Element von *Residenzen* den Wert GL \_ true hat, ist die Textur, die durch das entsprechende Element von *Texturen* benannt ist, im Texturspeicher ansässig.
+Wenn ein Element von *Heiterungen* GL TRUE ist, wird die Textur, die durch das entsprechende Element von Texturen benannt wird, \_ im Texturspeicher gespeichert. 
 
-Um den Status einer einzelnen gebundenen Textur abzufragen, nennen Sie [**glgettexparameter**](glgettexparameter.md) , wobei der *Ziel* Parameter auf die Ziel Textur festgelegt ist, an die das Ziel gebunden ist, und legen Sie den Parameter " *PName* " auf "GL \_ Texture \_ residente" fest. Sie müssen diese Methode verwenden, um den residenten Status einer Standard Textur abzufragen.
+Rufen Sie zum Abfragen des Status einer einzelnen gebundenen  Textur [**glGetTexParameter**](glgettexparameter.md) mit dem Zielparameter auf, der auf die Zieltextur festgelegt ist, an die das Ziel gebunden ist, und legen Sie den *pname-Parameter* auf GL \_ TEXTURE RESIDENT \_ fest. Sie müssen diese Methode verwenden, um den residenten Status einer Standardtextur abfragt.
 
-Sie können **glaretexturesresidenten** nicht in Anzeigelisten einschließen.
+**GlAreTexturesResident** kann nicht in Anzeigelisten enthalten sein.
 
-Die **glaretexturesresidente** -Funktion gibt den Residenz Status der Texturen zum Aufruf Zeitpunkt zurück. Es wird nicht garantiert, dass die Texturen zu einem beliebigen Zeitpunkt verbleiben.
+Die **glAreTexturesResident-Funktion** gibt den Residencystatus der Texturen zum Zeitpunkt des Aufrufs zurück. Sie garantiert nicht, dass die Texturen zu einem anderen Zeitpunkt erhalten bleiben.
 
-Wenn sich Texturen im virtuellen Speicher befinden (es gibt keinen Texturspeicher), werden Sie als "immer ansässig" betrachtet.
+Wenn sich Texturen im virtuellen Speicher befinden (es ist kein Texturspeicher verfügbar), werden sie als immer resident betrachtet.
 
 > [!Note]  
-> Die **glaretexturesresidente** -Funktion ist nur in OpenGL-Version 1,1 oder höher verfügbar.
+> Die **glAreTexturesResident-Funktion** ist nur in OpenGL Version 1.1 oder höher verfügbar.
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -105,8 +105,8 @@ Wenn sich Texturen im virtuellen Speicher befinden (es gibt keinen Texturspeiche
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -124,10 +124,10 @@ Wenn sich Texturen im virtuellen Speicher befinden (es gibt keinen Texturspeiche
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgettexparameter**](glgettexparameter.md)
+[**glGetTexParameter**](glgettexparameter.md)
 </dt> <dt>
 
-[**glpriorizetexturen**](glprioritizetextures.md)
+[**glPrioritizeTextures**](glprioritizetextures.md)
 </dt> <dt>
 
 [**glTexImage1D**](glteximage1d.md)

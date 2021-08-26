@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bdbc845eda69d22f6e7097131f71b074a9b53985
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f7df8e49850917413f2d6e80a13d62f9d3289caa2d0eb089593fb946070d0456
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119030"
 ---
 # <a name="d3dxplanetransformarray-function-d3dx9mathh"></a>D3DXPlaneTransformArray-Funktion (D3dx9math.h)
 
@@ -105,9 +105,9 @@ Typ: **[ **D3DXPLANE**](d3dxplane.md)\***
 
 Zeiger auf eine [**D3DXPLANE-Struktur,**](d3dxplane.md) die die transformierte Ebene darstellt. Dies ist der gleiche Wert, der im *pOut-Parameter* zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In diesem Beispiel wird eine Ebene durch Anwenden einer nicht einheitlichen Skala transformiert.
+In diesem Beispiel wird eine Ebene transformiert, indem eine nicht einheitliche Skala angewendet wird.
 
 
 ```
@@ -131,22 +131,22 @@ D3DXPlaneTransformArray( &planeNew, sizeof (D3DXPLANE), &plane,
 
 
 
-Eine Ebene wird durch ax + by + dw + dw = 0 beschrieben. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt. Dies ist eine Ebene, die von y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene zeigt, die von 0,353y + 0,235z = 0 beschrieben werden soll.
+Eine Ebene wird durch ax + by + tg + dw = 0 beschrieben. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt, wobei es sich um eine Ebene handelt, die durch y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene anzeigt, die durch 0,353y + 0,235z = 0 beschrieben werden soll.
 
-Der Parameter *pM* enthält die umgekehrte Transponierung der Transformationsmatrix. Die umgekehrte Transponierung ist für diese Methode erforderlich, damit auch der normale Vektor der transformierten Ebene ordnungsgemäß transformiert werden kann.
+Der *Parameter pM* enthält die umgekehrte Transponierung der Transformationsmatrix. Die umgekehrte Transponieren ist für diese Methode erforderlich, damit auch der normale Vektor der transformierten Ebene ordnungsgemäß transformiert werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

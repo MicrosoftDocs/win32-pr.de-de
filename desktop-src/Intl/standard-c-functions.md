@@ -1,21 +1,21 @@
 ---
-description: Die standardmäßigen C-Laufzeitbibliotheken enthalten beide Unicode-UTF-16-Versionen (breit Zeichen) von Zeichen folgen Funktionen, die mit Unicode-und Byte orientierten Versionen von Zeichen folgen Funktionen verwendet werden können, die mit Zeichen aus Einzel Byte-Zeichensätzen (SBCSs) verwendet werden können. Der Unicode-Datentyp WCHAR ist mit dem-Datentyp WCHAR \_ t in ANSI C kompatibel und ermöglicht den Zugriff auf die Unicode-Zeichen folgen Funktionen. Die Unicode-Versionen der Funktionen beginnen mit den Buchstaben &\# 0034; WCS&\# 0034; (oder manchmal &\# 0034; \_ WCS-&\# 0034;). Der für Codepages verwendete Datentyp char ist mit dem Zeichen Datentyp char in ANSI C kompatibel, um den Zugriff auf die Zeichen folgen Funktionen zu ermöglichen. Die Zeichen Versionen der Funktionen beginnen mit den Buchstaben &\# 0034; Str&\# 0034;. Es gibt auch spezielle Versionen für Doppelbyte-Zeichensätze (dbcss), die mit den Buchstaben &\# 0034; beginnen. \_ MSB&\# 0034;.
+description: Die C-Standardlaufzeitbibliotheken enthalten sowohl Unicode-UTF-16-Versionen (Breitzeichen) von Zeichenfolgenfunktionen, die mit Unicode und byteorientierten Versionen von Zeichenfolgenfunktionen verwendet werden können, die mit Zeichen aus Single-Byte-Zeichensätzen (Single-Byte Character Sets, SBCSs) verwendet werden können. Der Unicode-Datentyp WCHAR ist mit dem Datentyp wchar t in ANSI C kompatibel und ermöglicht den Zugriff \_ auf die Unicode-Zeichenfolgenfunktionen. Die Unicode-Versionen der Funktionen beginnen mit den Buchstaben \# &0034;wcs&\# 0034; (oder manchmal &\# 0034; \_ wcs&\# 0034;). Der für Codepages verwendete Datentyp CHAR ist mit dem Zeichendatentyp char in ANSI C kompatibel, um den Zugriff auf die Zeichenfolgenfunktionen zu ermöglichen. Die Zeichenversionen der Funktionen beginnen mit den Buchstaben \# &0034;str&\# 0034;. Es gibt auch Sonderversionen für Doppel-Byte-Zeichensätze (Double-Byte Character Sets, DBCSs), die mit den Buchstaben &\# 0034 beginnen. \_ mbs&\# 0034;.
 ms.assetid: a86626c1-7f90-4924-bfdd-384729bd0cc5
-title: Standard-C-Funktionen
+title: C-Standardfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f6247b3707f96908ef16d887462ba06573fd8dd7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f0e576dd8ad506d3d0f3379c161526dd7b9330542ca1cc575c95e3eda8e7dd4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130160"
 ---
-# <a name="standard-c-functions"></a>Standard-C-Funktionen
+# <a name="standard-c-functions"></a>C-Standardfunktionen
 
-Die standardmäßigen C-Laufzeitbibliotheken enthalten beide Unicode-UTF-16-Versionen (breit Zeichen) von Zeichen folgen Funktionen, die mit [Unicode](unicode.md) -und Byte orientierten Versionen von Zeichen folgen Funktionen verwendet werden können, die mit Zeichen aus [Einzel Byte-Zeichensätzen](single-byte-character-sets.md) (SBCSs) verwendet werden können. Der Unicode-Datentyp WCHAR ist mit dem-Datentyp WCHAR \_ t in ANSI C kompatibel und ermöglicht den Zugriff auf die Unicode-Zeichen folgen Funktionen. Die Unicode-Versionen der Funktionen beginnen mit den Buchstaben "WCS" (oder manchmal " \_ WCS"). Der für Codepages verwendete Datentyp char ist mit dem Zeichen Datentyp char in ANSI C kompatibel, um den Zugriff auf die Zeichen folgen Funktionen zu ermöglichen. Die Zeichen Versionen der Funktionen beginnen mit den Buchstaben "str". Es gibt auch spezielle Versionen für [Doppelbyte-Zeichensätze](double-byte-character-sets.md) (dbcss), die mit den Buchstaben " \_ MSB" beginnen.
+Die C-Standardlaufzeitbibliotheken enthalten sowohl Unicode-UTF-16-Versionen (Breitzeichen) von Zeichenfolgenfunktionen, die mit [Unicode](unicode.md) und byteorientierten Versionen von Zeichenfolgenfunktionen verwendet werden können, die mit Zeichen aus [Single-Byte-Zeichensätzen (Single-Byte](single-byte-character-sets.md) Character Sets, SBCSs) verwendet werden können. Der Unicode-Datentyp WCHAR ist mit dem Datentyp wchar t in ANSI C kompatibel und ermöglicht den Zugriff \_ auf die Unicode-Zeichenfolgenfunktionen. Die Unicode-Versionen der Funktionen beginnen mit den Buchstaben "wcs" (oder manchmal \_ "wcs"). Der für Codepages verwendete Datentyp CHAR ist mit dem Zeichendatentyp char in ANSI C kompatibel, um den Zugriff auf die Zeichenfolgenfunktionen zu ermöglichen. Die Zeichenversionen der Funktionen beginnen mit den Buchstaben "str". Es gibt auch spezielle Versionen für [Doppelbyte-Zeichensätze (Double-Byte Character Sets,](double-byte-character-sets.md) DBCSs), die mit den Buchstaben \_ "mbs" beginnen.
 
-Die standardmäßigen c-Laufzeitbibliotheken enthalten generische Funktionen für alle Standard-c-Zeichen folgen Funktionen. Sie beginnen mit " \_ TCS" und sind in der Header Datei "Tchar. h" aufgeführt. Diese Funktionen verwenden den generischen TCHAR-Datentyp.
+Die C-Standardlaufzeitbibliotheken enthalten generische Funktionen für alle standardmäßigen C-Zeichenfolgenfunktionen. Sie beginnen mit \_ "tcs" und werden in der Headerdatei Tchar.h aufgeführt. Diese Funktionen verwenden den generischen TCHAR-Datentyp.
 
 Eine Anwendung muss die folgenden Zeilen hinzufügen, um die generischen Funktionen zu verwenden und für Unicode zu kompilieren.
 
@@ -29,14 +29,14 @@ Eine Anwendung muss die folgenden Zeilen hinzufügen, um die generischen Funktio
 
 
 
-Beachten Sie, dass die Dateien "Tchar. h" und "WCHAR. h" erforderlich sind und dass der führende Unterstrich für die \_ Unicode-Variable ebenfalls erforderlich ist. Diese Nomenklatur ist spezifisch für die Standard-C-Bibliothek. "Unicode", die ohne Unterstrich gerendert wird, ist für die Microsoft Windows-Laufzeiten.
+Beachten Sie, dass sowohl die Dateien Tchar.h als auch Wchar.h erforderlich sind und dass auch der führende Unterstrich für die \_ UNICODE-Variable erforderlich ist. Diese Nomenklatur ist spezifisch für die C-Standardbibliothek. "UNICODE", das ohne Unterstrich gerendert wird, ist für die Microsoft Windows Runtimes.
 
-Die Funktionen [wcstomsb](/cpp/c-runtime-library/reference/wcstombs-wcstombs-l) und [mbstowcs](/cpp/c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l) können mit einigen Einschränkungen aus dem von der Standard-C-Bibliothek unterstützten Zeichensatz in Unicode und Back konvertiert werden. Weitere Informationen zum Übersetzen von Zeichen folgen in und aus Unicode finden Sie unter [Übersetzung zwischen Zeichen folgen Typen](translation-between-string-types.md).
+Die [funktionen wcstombs](/cpp/c-runtime-library/reference/wcstombs-wcstombs-l) und [mbstowcs](/cpp/c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l) können aus dem zeichensatz, der von der C-Standardbibliothek unterstützt wird, mit einigen Einschränkungen in Unicode und zurück konvertieren. Weitere Informationen zum Übersetzen von Zeichenfolgen in und aus Unicode finden Sie unter [Übersetzung zwischen Zeichenfolgentypen.](translation-between-string-types.md)
 
-Die in Tchar. h definierte [printf](/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l) -Funktion unterstützt die gleichen Formatspezifikationen wie die "strausafe. h"-Druckfunktionen, z. b. " [**stringcbprintf**](/windows/win32/api/strsafe/nf-strsafe-stringcbprintfa)". Ebenso definiert Tchar. h eine [wprintf](/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l) -Funktion, in der die Format Zeichenfolge selbst eine Unicode-Zeichenfolge ist.
+Die in Tchar.h definierte [printf-Funktion](/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l) unterstützt die gleichen Formatspezifikationen wie die Strsafe.h-Druckfunktionen, z.B. [**StringCbPrintf**](/windows/win32/api/strsafe/nf-strsafe-stringcbprintfa). Auf ähnliche Weise definiert Tchar.h eine [wprintf-Funktion,](/cpp/c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l) bei der die Formatzeichenfolge selbst eine Unicode-Zeichenfolge ist.
 
 > [!Caution]  
-> Eine schlechte Puffer Behandlung ist in vielen Sicherheitsproblemen enthalten, die Pufferüberläufe einschließen. Weitere Informationen finden Sie unter [Referenz](../menurc/strsafe-ovw.md)zu "" Die in "strausafe. h" definierten Funktionen bieten zusätzliche Verarbeitungsschritte für die ordnungsgemäße Puffer Behandlung in Ihrem Code. Sie sind dazu gedacht, Ihre integrierten C/C++-Gegenstücke und bestimmte Microsoft Windows-Implementierungen zu ersetzen. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen: Internationale Features](security-considerations--international-features.md).
+> Eine schlechte Pufferbehandlung ist in vielen Sicherheitsproblemen mit Pufferüberläufen zu sehen. Weitere Informationen [finden Sie unter Strsafe.h Reference (Strsafe.h-Referenz).](../menurc/strsafe-ovw.md) Die in Strsafe.h definierten Funktionen bieten zusätzliche Verarbeitung für die richtige Pufferbehandlung in Ihrem Code. Sie sollen ihre integrierten C/C++-Entsprechungen sowie bestimmte Microsoft Windows ersetzen. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen: Internationale Features](security-considerations--international-features.md).
 
  
 

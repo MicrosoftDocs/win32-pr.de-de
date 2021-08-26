@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ OffsetX-Methode gibt den horizontalen Offset des Ziel Rechtecks an.
+description: Die put \_ OffsetX-Methode gibt den horizontalen Offset des Zielrechtecks an.
 ms.assetid: 057919e1-d65f-487d-b5d7-1c43967ce66d
-title: Idxtcompositor::p ut_OffsetX-Methode (qedit. h)
+title: IDxtCompositor::p ut_OffsetX-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 05fe43db86e266ba9ddec32ebd0fd4d59c3df398
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 114ae74a319d4aff6a6cf36b73f8790e84b1e7603ebba28453a9e6c256ab5f38
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131070"
 ---
-# <a name="idxtcompositorput_offsetx-method"></a>Idxtcompositor::p UT \_ OffsetX-Methode
+# <a name="idxtcompositorput_offsetx-method"></a>IDxtCompositor::p ut \_ OffsetX-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `put_OffsetX` Methode gibt den horizontalen Offset des Ziel Rechtecks an.
+Die `put_OffsetX` -Methode gibt den horizontalen Offset des Zielrechtecks an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ HRESULT put_OffsetX(
 
 <dl> <dt>
 
-*NewVal* \[ in\]
+*newVal* \[ In\]
 </dt> <dd>
 
-Der horizontale Offset des Ziel Rechtecks in Pixel.
+Der horizontale Offset des Zielrechtecks in Pixel.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,8 +74,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -83,7 +83,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idxtcompositor-Schnittstelle**](idxtcompositor.md)
+[**IDxtCompositor-Schnittstelle**](idxtcompositor.md)
 </dt> </dl>
 
  

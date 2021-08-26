@@ -1,5 +1,5 @@
 ---
-description: Ein Rückruf, der den Host darüber benachrichtigt, welche Pipelinestufen vom Draw-Aufruf der assocaited-Anforderung verwendet werden.
+description: Ein Rückruf, der den Host benachrichtigt, welche Pipelinestufen vom Zeichnen-Aufruf der assocaited-Anforderung verwendet werden.
 MS-HAID: vspixengine.IPipeLineStagesCallback\_GetSupportedStages\_DWORD\_PipeLineStage\_arr\_UINT\_UINT
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: e789158dda43ef3fcb8ead982c38b15f4bd26cb7c8fb291a841d529d8c6dad85
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 91e2d80813d8d87c92819aab29dbc368b397d074
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119405940"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623306"
 ---
 # <a name="span-idvspixengineipipelinestagescallback_getsupportedstages_dword_pipelinestage_arr_uint_uintspanipipelinestagescallbackgetsupportedstages-method"></a><span id="vspixengine.ipipelinestagescallback_getsupportedstages_dword_pipelinestage_arr_uint_uint"></span>IPipeLineStagesCallback::GetSupportedStages-Methode
 
-Ein Rückruf, der den Host darüber benachrichtigt, welche Pipelinestufen vom Draw-Aufruf der assocaited-Anforderung verwendet werden.
+Ein Rückruf, der den Host benachrichtigt, welche Pipelinestufen vom Zeichnen-Aufruf der assocaited-Anforderung verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ HRESULT GetSupportedStages(
 Die Anzahl der zurückgegebenen Phasen.
 
 *count0 \_ pStages*   
-Die Pipelinephasen.
+Die Pipelinestufen.
 
 *swapChainWidth*   
-Die Breite der Vertauschkette, die mit dem Zeichnen-Aufruf assocaited wurde. Dies wird verwendet, wenn Pipelinevorschauimages angefordert werden.
+Die Breite der Swapkette, die mit dem Zeichnen-Aufruf assocaitiert ist. Dies wird beim Anfordern von Pipelinevorschaubildern verwendet.
 
 *swapChainHeight*   
-Die Höhe der Swapkette, die mit dem Draw-Aufruf assocaited wurde. Dies wird verwendet, wenn Pipelinevorschauimages angefordert werden.
+Die Höhe der Swapkette, die mit dem Zeichnen-Aufruf assocaitiert wurde. Dies wird beim Anfordern von Pipelinevorschaubildern verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

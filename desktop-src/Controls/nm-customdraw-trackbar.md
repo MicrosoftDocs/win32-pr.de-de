@@ -1,9 +1,9 @@
 ---
-title: NM_CUSTOMDRAW (TrackBar)-Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem TrackBar-Steuerelement gesendet, um die übergeordneten Fenster über Zeichnungsvorgänge zu benachrichtigen. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_CUSTOMDRAW(Trackbar)-Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Trackbar-Steuerelement gesendet, um die übergeordneten Fenster über Zeichnungsvorgänge zu benachrichtigen. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: b31d774d-e418-4162-aa2a-40fa49452d58
 keywords:
-- NM_CUSTOMDRAW (TrackBar)-Benachrichtigungs Code Windows-Steuerelemente
+- NM_CUSTOMDRAW(Trackbar)-Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 68ebbffd531fb44e2491d72954ce111db208f2e4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6d863b180948676342a49615a526c8f6860905744aaf5269468807ad6dc04fa7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109550"
 ---
-# <a name="nm_customdraw-trackbar-notification-code"></a>NM \_ (TrackBar)-Benachrichtigungs Code
+# <a name="nm_customdraw-trackbar-notification-code"></a>NM \_ CUSTOMDRAW-Benachrichtigungscode (Trackleiste)
 
-Wird von einem TrackBar-Steuerelement gesendet, um die übergeordneten Fenster über Zeichnungsvorgänge zu benachrichtigen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Trackbar-Steuerelement gesendet, um die übergeordneten Fenster über Zeichnungsvorgänge zu benachrichtigen. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,15 +41,15 @@ NM_CUSTOMDRAW
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur, die Informationen über den Zeichnungs Vorgang enthält. Der **dwitemspec** -Member dieser Struktur enthält einen der [benutzerdefinierten zeichnen-Werte](custom-draw-values.md) , der angibt, welcher Teil des Steuer Elements gezeichnet wird. TrackBar-Steuerelemente fügen die folgenden Werte in den **dwitemspec** -Member dieser-Struktur ein, um den Teil des zu zeichnenden Steuer Elements zu identifizieren:
+Zeiger auf eine [**NMCUSTOMDRAW-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) die Informationen zum Zeichnungsvorgang enthält. Der **dwItemSpec-Member** dieser Struktur enthält einen der [benutzerdefinierten Zeichenwerte,](custom-draw-values.md) der angibt, welcher Teil des Steuerelements gezeichnet wird. Trackbar-Steuerelemente fügen die folgenden Werte in den **dwItemSpec-Member** dieser Struktur ein, um den Teil des steuerelements zu identifizieren, das gezeichnet wird:
 
 
 
 | Wert                                                                                                                                                      | Bedeutung                                                                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| <span id="TBCD_CHANNEL"></span><span id="tbcd_channel"></span><dl> <dt>**TBCD- \_ Kanal**</dt> </dl> | Gibt den Kanal an, entlang dem der Ziehpunkt des TrackBar-Steuer Elements bewegt wird. <br/>                           |
-| <span id="TBCD_THUMB"></span><span id="tbcd_thumb"></span><dl> <dt>**TBCD- \_ Thumb**</dt> </dl>       | Identifiziert den Zieh Punkt Marker des TrackBar-Steuer Elements. Dies ist der Teil des-Steuer Elements, den der Benutzer verschiebt. <br/> |
-| <span id="TBCD_TICS"></span><span id="tbcd_tics"></span><dl> <dt>**TBCD- \_ tik**</dt> </dl>          | Identifiziert die Inkrement-Teil Striche, die entlang der Kante des TrackBar-Steuer Elements angezeigt werden. <br/>                 |
+| <span id="TBCD_CHANNEL"></span><span id="tbcd_channel"></span><dl> <dt>**\_TBCD-KANAL**</dt> </dl> | Identifiziert den Kanal, auf dem der Schieberegler des Trackbar-Steuerelements schiebet. <br/>                           |
+| <span id="TBCD_THUMB"></span><span id="tbcd_thumb"></span><dl> <dt>**TBCD \_ THUMB**</dt> </dl>       | Identifiziert den Fingerabdruckmarker des Trackbar-Steuerelements. Dies ist der Teil des Steuerelements, den der Benutzer verschiebt. <br/> |
+| <span id="TBCD_TICS"></span><span id="tbcd_tics"></span><dl> <dt>**\_TBCD-TICS**</dt> </dl>          | Identifiziert die inkrementellen Teilstriche, die am Rand des Trackbar-Steuerelements angezeigt werden. <br/>                 |
 
 
 
@@ -59,19 +59,19 @@ Ein Zeiger auf eine [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-n
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert, den die Anwendung zurückgeben kann, hängt von der aktuellen Zeichnungsphase ab. Der **dwdrawstage** -Member der zugeordneten [**nmcustomdraw**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) -Struktur enthält einen Wert, der die Zeichnungsphase angibt. Sie müssen einen der folgenden Werte zurückgeben.
+Der Wert, den Ihre Anwendung zurückgeben kann, hängt von der aktuellen Zeichnungsphase ab. Der **dwDrawStage-Member** der zugeordneten [**NMCUSTOMDRAW-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmcustomdraw) enthält einen Wert, der die Zeichnungsphase angibt. Sie müssen einen der folgenden Werte zurückgeben.
 
 
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                                                                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**cdrf \_ DODEFAULT**</dt> </dl>         | Das Steuerelement zeichnet sich selbst auf. Es werden keine zusätzlichen [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Codes für diesen Zeichnungs Kreis gesendet. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.<br/>                                                                             |
-| <dl> <dt>**cdrf \_ notiteyitemdraw**</dt> </dl>    | Das-Steuerelement benachrichtigt das übergeordnete Element über alle Element bezogenen Zeichnungsvorgänge. Er sendet vor und nach dem Zeichnen von Elementen [nm \_ customdraw](nm-customdraw.md) -Benachrichtigungs Codes. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.<br/>                                         |
-| <dl> <dt>**cdrf \_ notifyposterase**</dt> </dl>   | Das-Steuerelement benachrichtigt das übergeordnete Element nach dem Löschen eines Elements. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.<br/>                                                                                                                                                              |
-| <dl> <dt>**cdrf \_ notifypostpaint**</dt> </dl>   | Das-Steuerelement benachrichtigt das übergeordnete Element, nachdem ein Element gezeichnet wurde. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.<br/>                                                                                                                                                             |
-| <dl> <dt>**cdrf \_ notifysubitemdraw**</dt> </dl> | [Version 4,71](common-control-versions.md). Das-Steuerelement benachrichtigt das übergeordnete Element, wenn ein Listen Ansichts-Unterelement gezeichnet wird. Dies tritt auf, wenn **dwdrawstage** dem CDDs- \_ präpaint gleicht.<br/>                                                                                               |
-| <dl> <dt>**cdrf \_ newFont**</dt> </dl>           | Ihre Anwendung hat eine neue Schriftart für das Element angegeben. das-Steuerelement verwendet die neue Schriftart. Weitere Informationen zum Ändern von Schriftarten finden Sie unter [Ändern von Schriftarten und Farben](custom-draw.md). Dies tritt auf, wenn **dwdrawstage** auf CDDs \_ itemprepaint zugreift.<br/> |
-| <dl> <dt>**cdrf \_ skipdefault**</dt> </dl>       | Die Anwendung hat das Element manuell gezeichnet. Das-Steuerelement zeichnet das Element nicht. Dies tritt auf, wenn **dwdrawstage** auf CDDs \_ itemprepaint zugreift.<br/>                                                                                                                                       |
+| <dl> <dt>**CDRF \_ DODEFAULT**</dt> </dl>         | Das Steuerelement zeichnet sich selbst. Es werden keine [zusätzlichen NM \_ CUSTOMDRAW-Benachrichtigungscodes](nm-customdraw.md) für diesen Farbzyklus gesendet. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ PREPAINT ist.<br/>                                                                             |
+| <dl> <dt>**CDRF \_ NOTIFYITEMDRAW**</dt> </dl>    | Das Steuerelement benachrichtigt das übergeordnete Element über alle elementbezogenen Zeichnungsvorgänge. Sie sendet [NM \_ CUSTOMDRAW-Benachrichtigungscodes](nm-customdraw.md) vor und nach dem Zeichnen von Elementen. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ PREPAINT ist.<br/>                                         |
+| <dl> <dt>**CDRF \_ NOTIFYPOSTERASE**</dt> </dl>   | Das Steuerelement benachrichtigt das übergeordnete Element nach dem Löschen eines Elements. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ PREPAINT ist.<br/>                                                                                                                                                              |
+| <dl> <dt>**CDRF \_ NOTIFYPOSTPAINT**</dt> </dl>   | Das Steuerelement benachrichtigt das übergeordnete Element nach dem Zeichnen eines Elements. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ PREPAINT ist.<br/>                                                                                                                                                             |
+| <dl> <dt>**CDRF \_ NOTIFYSUBITEMDRAW**</dt> </dl> | [Version 4.71.](common-control-versions.md) Das Steuerelement benachrichtigt das übergeordnete Element, wenn ein Listenansichtsunterelement gezeichnet wird. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ PREPAINT ist.<br/>                                                                                               |
+| <dl> <dt>**CDRF \_ NEWFONT**</dt> </dl>           | Ihre Anwendung hat eine neue Schriftart für das Element angegeben. Das Steuerelement verwendet die neue Schriftart. Weitere Informationen zum Ändern von Schriftarten finden Sie unter [Ändern von Schriftarten und Farben.](custom-draw.md) Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ ITEMPREPAINT ist.<br/> |
+| <dl> <dt>**CDRF \_ SKIPDEFAULT**</dt> </dl>       | Ihre Anwendung erstellt das Element manuell. Das Steuerelement zeichnet das Element nicht. Dies tritt auf, wenn **dwDrawStage** gleich CDDS \_ ITEMPREPAINT ist.<br/>                                                                                                                                       |
 
 
 
@@ -83,9 +83,9 @@ Der Wert, den die Anwendung zurückgeben kann, hängt von der aktuellen Zeichnun
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Der Wert, den die Anwendung zurückgeben kann, hängt von der aktuellen Zeichnun
 
 <dl> <dt>
 
-[Verwenden benutzerdefinierter zeichnen](custom-draw.md)
+[Verwenden von benutzerdefiniertem Zeichnen](custom-draw.md)
 </dt> </dl>
 
  

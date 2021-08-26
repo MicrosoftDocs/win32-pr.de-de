@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Location02-Klasse
-description: Die Result01 Location02-Klasse der MDM- \_ Richtlinie ruft \_ \_ die Einstellungen des Speicherort Dienstanbieter des Geräts ab.
+description: Die MDM \_ Policy \_ Result01 \_ Location02-Klasse ruft die Einstellungen des Standortdiensts des Geräts ab.
 ms.assetid: f6d639db-c9d4-4d7e-b857-54aad602ea29
 keywords:
 - MDM_Policy_Result01_Location02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 210fb38e45e600e45590acecb9c647d00ab13995
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4bc5226745c4867ad61c3b3a2f5237076e5008702fb41efa4bece7d10be6890
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109360"
 ---
-# <a name="mdm_policy_result01_location02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Location02-Klasse
+# <a name="mdm_policy_result01_location02-class"></a>MDM \_ Policy \_ Result01 \_ Location02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Result01 Location02-Klasse der MDM- \_ Richtlinie ruft \_ \_ die Einstellungen des Speicherort Dienstanbieter des Geräts ab.
+Die MDM \_ Policy \_ Result01 \_ Location02-Klasse ruft die Einstellungen des Standortdiensts des Geräts ab.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,17 +46,17 @@ class MDM_Policy_Result01_Location02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Location02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ Location02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Location02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ Location02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Enableloation**
+**EnableLocation**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -81,7 +81,7 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -101,10 +101,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

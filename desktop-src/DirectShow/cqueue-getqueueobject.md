@@ -1,7 +1,7 @@
 ---
 description: Ruft das nächste Element aus der Warteschlange ab.
 ms.assetid: 406ae640-5903-427d-91f9-8b01beb1aaa7
-title: Cqueue. getqueueobject-Methode (wxutil. h)
+title: CQueue.GetQueueObject-Methode (Wxutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c3ae68c0564c7f76f38e91b7d27c8c3deb5ef2b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c32039a82e3a0b5c086cbe18e895bdec1aaac09d4947b90d9ba18e8c6636d71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108280"
 ---
-# <a name="cqueuegetqueueobject-method"></a>Cqueue. getqueueobject-Methode
+# <a name="cqueuegetqueueobject-method"></a>CQueue.GetQueueObject-Methode
 
 Ruft das nächste Element aus der Warteschlange ab.
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt ein Objekt vom Typ **T** zurück (den Vorlagentyp).
+Gibt ein Objekt vom Typ **T** (vorlagentyp) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird blockiert, bis ein Element in der Warteschlange verfügbar ist.
+Diese Methode blockiert, bis ein Element in der Warteschlange verfügbar ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode wird blockiert, bis ein Element in der Warteschlange verfügbar is
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxutil. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxutil.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode wird blockiert, bis ein Element in der Warteschlange verfügbar is
 
 <dl> <dt>
 
-[**Cqueue-Klasse**](cqueue.md)
+[**CQueue-Klasse**](cqueue.md)
 </dt> </dl>
 
  

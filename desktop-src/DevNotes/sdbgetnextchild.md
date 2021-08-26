@@ -1,7 +1,7 @@
 ---
-description: Sucht das nächste untergeordnete Tag innerhalb des angegebenen übergeordneten Elements und gibt die TagID des nächsten untergeordneten Elements zurück.
+description: Sucht innerhalb des angegebenen übergeordneten Elements nach dem nächsten untergeordneten TAG und gibt die TAGID des nächsten untergeordneten Elements zurück.
 ms.assetid: c7311f20-15ca-4b2d-a08d-8bb992a3a0cd
-title: Sdbgetnextchild-Funktion
+title: SdbGetNextChild-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 4f2943eaf0baec84a9473b679743b9eafad3b7fb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 210e0aab8cb5e43bfc649e8abb72cf565c4d4f892f651708286f7a3f87d11ce2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045311"
 ---
-# <a name="sdbgetnextchild-function"></a>Sdbgetnextchild-Funktion
+# <a name="sdbgetnextchild-function"></a>SdbGetNextChild-Funktion
 
-Sucht das nächste untergeordnete Tag innerhalb des angegebenen übergeordneten Elements und gibt die **TagID** des nächsten untergeordneten Elements zurück.
+Sucht innerhalb des angegebenen übergeordneten Elements nach dem nächsten untergeordneten TAG und gibt die **TAGID** des nächsten untergeordneten Elements zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,34 +41,34 @@ TAGID WINAPI SdbGetNextChild(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiparent* \[ in\]
+*tiParent* \[ In\]
 </dt> <dd>
 
-Die **TagID** des Such Starts. Dieser Parameter kann eine **TagID \_** -Stamm-oder **\_ Tagtyp \_ Liste** sein.
+Die **TAGID** des Suchstarts. Dieser Parameter kann **TAGID \_ ROOT oder** **TAG TYPE LIST \_ \_ sein.**
 
 </dd> <dt>
 
-*tiprev* \[ in\]
+*tiPrev* \[ In\]
 </dt> <dd>
 
-Die **TagID** des vorherigen untergeordneten Elements.
+Die **TAGID** des vorherigen untergeordneten -
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **TagID** des untergeordneten Elements oder der **TagID \_ null** , wenn kein untergeordnetes Element gefunden wurde.
+Die **TAGID des** untergeordneten Oder **TAGID \_ NULL,** wenn kein untergeordnetes Objekt gefunden wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Funktion aufrufen, rufen Sie die [**sdbgetfirstchild**](sdbgetfirstchild.md) -Funktion auf.
+Rufen Sie vor dem Aufrufen dieser Funktion die [**SdbGetFirstChild-Funktion**](sdbgetfirstchild.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,8 +76,8 @@ Bevor Sie diese Funktion aufrufen, rufen Sie die [**sdbgetfirstchild**](sdbgetfi
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -86,13 +86,13 @@ Bevor Sie diese Funktion aufrufen, rufen Sie die [**sdbgetfirstchild**](sdbgetfi
 
 <dl> <dt>
 
-[**Sdbfindfirsttag**](sdbfindfirsttag.md)
+[**SdbFindFirstTag**](sdbfindfirsttag.md)
 </dt> <dt>
 
-[**Sdbfindnexttag**](sdbfindnexttag.md)
+[**SdbFindNextTag**](sdbfindnexttag.md)
 </dt> <dt>
 
-[**Sdbgetfirstchild**](sdbgetfirstchild.md)
+[**SdbGetFirstChild**](sdbgetfirstchild.md)
 </dt> </dl>
 
  

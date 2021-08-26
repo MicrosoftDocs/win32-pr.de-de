@@ -1,79 +1,79 @@
 ---
-title: Designdatei Format
-description: In diesem Dokument wird das Format der Designdateien (. Theme) erläutert. Bei einer. Theme-Datei handelt es sich um eine ini-Textdatei, die in Abschnitte unterteilt ist, die visuelle Elemente angeben, die auf einem Windows-Desktop angezeigt werden Abschnittsnamen werden in eckige Klammern (\ \) in der INI-Datei eingeschlossen.
+title: Designdateiformat
+description: In diesem Dokument wird das Format von Designdateien (.theme) erläutert. Eine DESIGN-Datei ist eine .ini Textdatei, die in Abschnitte unterteilt ist, die visuelle Elemente angeben, die auf einem Windows Desktop angezeigt werden. Abschnittsnamen werden in Klammern (\ \ ) in der .ini-Datei umschlossen.
 ms.assetid: 0b7b0ff7-f55a-4215-a2fd-6c3ea117d6e8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b61ba97172fc5aaddb912183130941337a149536
-ms.sourcegitcommit: 25e1fa2b3641ae13b79e0afdf9cb7a168d99e009
+ms.openlocfilehash: c67fc2d73e54e4f9c319108c2b29ed62fb58266f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "103858534"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472305"
 ---
-# <a name="theme-file-format"></a>Designdatei Format
+# <a name="theme-file-format"></a>Designdateiformat
 
-In diesem Dokument wird das Format der Designdateien (. Theme) erläutert. Bei einer. Theme-Datei handelt es sich um eine ini-Textdatei, die in Abschnitte unterteilt ist, die visuelle Elemente angeben, die auf einem Windows-Desktop angezeigt werden Abschnittsnamen werden in eckige Klammern ( \[ \] ) in der INI-Datei eingeschlossen.
+In diesem Dokument wird das Format von Designdateien (.theme) erläutert. Eine DESIGN-Datei ist eine .ini Textdatei, die in Abschnitte unterteilt ist, die visuelle Elemente angeben, die auf einem Windows Desktop angezeigt werden. Abschnittsnamen werden in Klammern ( \[ \] ) in der .ini-Datei umschlossen.
 
-Ein neues Dateiformat (...) wurde mit Windows 7 eingeführt, um Benutzern die gemeinsame Nutzung von Designs zu erleichtern. Designs können in der Personalisierungs-Systemsteuerung nur in Windows 7 Home Premium oder höher oder nur unter Windows Server 2008 R2 ausgewählt werden, wenn die Desktop Komponente installiert ist.
+Das neue Dateiformat .themepack wurde mit Windows 7 eingeführt, um Benutzern das Freigeben von Designs zu erleichtern. Designs können in der Personalisierungs-Systemsteuerung nur in Windows 7 Home Premium oder höher oder nur auf Windows Server 2008 R2 ausgewählt werden, wenn die Desktopkomponente installiert ist.
 
 Die folgenden Themen werden in diesem Artikel erläutert.
 
 -   [Erstellen einer Designdatei](#creating-a-theme-file)
 -   [Beschreibung einer Designdatei](#description-of-a-theme-file)
-    -   [\[Design \] Abschnitt](#theme-section)
-    -   [\[Bereich mit den Farben der Systemsteuerung \\ \]](#control-panelcolors-section)
-    -   [\[Abschnitt "System Steuerungs \\ Cursor" \]](#control-panelcursors-section)
-    -   [\[Bereich "Desktop" der Systemsteuerung \\ \]](#control-paneldesktop-section)
-    -   [\[Abschnitt "Diashow" \]](#slideshow-section)
-    -   [\[\]Metrikabschnitt](#metrics-section)
-    -   [\[Visueller Stile ( \] Abschnitt)](#visual-styles-section)
-    -   [\[Abschnitte "Sounds" \] und " \[ appevents" \] (Sounds)](#sounds-and-appevents-sections-sounds)
-    -   [\[Start \] Abschnitt](#boot-section)
-    -   [\[Masterthemeselector ( \] Abschnitt)](#masterthemeselector-section)
+    -   [\[\]Abschnitt "Design"](#theme-section)
+    -   [\[abschnitt "Systemsteuerung \\ \] Colors"](#control-panelcolors-section)
+    -   [\[\\Systemsteuerung-Abschnitt "Cursor" \]](#control-panelcursors-section)
+    -   [\[abschnitt "Systemsteuerung \\ \] Desktop"](#control-paneldesktop-section)
+    -   [\[Abschnitt \] "Diashow"](#slideshow-section)
+    -   [\[Abschnitt \] "Metriken"](#metrics-section)
+    -   [\[Abschnitt "Visuelle \] Stile"](#visual-styles-section)
+    -   [\[\]Abschnitte "Sounds" und \[ "AppEvents" \] (Sounds)](#sounds-and-appevents-sections-sounds)
+    -   [\[Abschnitt \] "Start"](#boot-section)
+    -   [\[\]MasterThemeSelector-Abschnitt](#masterthemeselector-section)
 -   [Beispiel für eine Designdatei](#example-of-a-theme-file)
--   [Designdateien werden installiert.](#installing-theme-files)
+-   [Installieren von Designdateien](#installing-theme-files)
 -   [Designpakete](#theme-packs)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="creating-a-theme-file"></a>Erstellen einer Designdatei
 
-Eine. Design-Datei ermöglicht es Ihnen, die Darstellung bestimmter Desktop Elemente zu ändern. Sie können eine. Theme-Datei auf zwei Arten erstellen oder ändern:
+Mit einer THEME-Datei können Sie die Darstellung bestimmter Desktopelemente ändern. Sie können eine THEME-Datei auf zwei Arten erstellen oder ändern:
 
--   Ändern Sie die Personalisierungs-oder Anzeigeeinstellungen in der Systemsteuerung, und speichern Sie die Einstellungen als Designdatei. Anweisungen hierzu finden Sie in der Windows-Hilfe.
--   Erstellen Sie manuell eine. Design-Datei, um ein höheres Maß an Kontrolle über die Details Ihres Designs zu erhalten.
+-   Ändern Sie die Personalisierungs- oder Anzeigeeinstellungen in Systemsteuerung, und speichern Sie die Einstellungen als THEME-Datei. Anweisungen finden Sie in der Windows-Hilfe.
+-   Erstellen Sie manuell eine DESIGN-Datei, um eine bessere Kontrolle über die Details Ihres Designs zu erhalten.
 
-Um das Design für andere Benutzer verfügbar zu machen, müssen Sie die. Theme-Datei sowie die Hintergrundbild-, Bildschirmschoner-und Symbol Dateien angeben. Hierfür können Sie ein Design [Pack](#theme-packs)verwenden.
+Um Ihr Design anderen Benutzern zur Verfügung zu stellen, müssen Sie Ihre THEME-Datei sowie die Hintergrundbild-, Bildschirmschoner- und Symboldateien bereitstellen. Dazu können Sie ein [Designpaket erstellen.](#theme-packs)
 
 ## <a name="description-of-a-theme-file"></a>Beschreibung einer Designdatei
 
-Designdateien sind einige erforderliche und optionale Abschnitte. Im folgenden werden die Abschnitte der Designdateien beschrieben und Beispiele zum Angeben von Änderungen für die verschiedenen Elemente bereitgestellt.
+Designdateien verfügen über eine Reihe von erforderlichen und optionalen Abschnitten. Im Folgenden werden die Abschnitte von THEME-Dateien beschrieben und Beispiele zum Angeben von Änderungen für die verschiedenen Elemente angegeben.
 
-### <a name="theme-section"></a>\[Design \] Abschnitt
+### <a name="theme-section"></a>\[\]Abschnitt "Design"
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, verwendet das System Standardeinstellungen.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, verwendet das System Standardeinstellungen.
 
  
 
-Der Abschnitt "Design" \[ \] gibt den Namen des benutzerdefinierten Designs an und gibt das Markenlogo und die Desktop Symbole Ihres Designs an.
+Der \[ Abschnitt Design identifiziert den Namen Ihres \] benutzerdefinierten Designs und gibt das Markenlogo und die Desktopsymbole Ihres Designs an.
 
-Der erste Teil des Design \[ \] Abschnitts enthält die folgenden beiden Elemente:
+Der erste Teil des \[ Abschnitts Design \] enthält die folgenden beiden Elemente:
 
 
 
 | Element                                                                                                                    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Display Name = Name<br/> oder<br/> Display Name = @module ,-stringID<br/> Beispiel: Display Name = @themeui.dll ,-2013 | Display Name ist der Design Name, der in der Personalisierungs-Systemsteuerung angezeigt wird. Dabei kann es sich um eine Zeichenfolge oder einen Verweis auf einen lokalisierten Namen handeln.<br/> Dieses Feld ist optional. Wenn Sie nicht vorhanden ist, wird der Design Dateiname als Design Name verwendet.<br/>                                                                                                                                                                                                                                         |
-| Brandimage = Pfad zum Bild<br/> Beispiel: Brandimage = c: \\ Fabrikam \\brand.png<br/>                                 | **Windows 7 und** höher Brandimage gibt den Pfad zu einer Branding-Grafikdatei an, die in der Design Vorschau in der Personalisierungs-Systemsteuerung enthalten ist.<br/> Die Symbol Grafik muss eine PNG-Datei sein. Die Grafik wird auf 80 x 240 Pixel skaliert. es wird daher empfohlen, ein Bild dieser Größe bereitzustellen. Der Design Katalog respektiert die transparenten Bereiche Ihres Marken Symbols.<br/> Dieses Feld ist optional. Wenn Sie nicht vorhanden ist, wird kein Logo als symbolsymbol angezeigt.<br/> |
+| DisplayName=name<br/> oder<br/> DisplayName= @module ,-stringId<br/> Beispiel: DisplayName= @themeui.dll ,-2013 | DisplayName ist der Designname, der in der Personalisierungs-Systemsteuerung angezeigt wird. Dies kann eine Zeichenfolge oder ein Verweis auf einen lokalisierten Namen sein.<br/> Dieses Feld ist optional. Wenn er fehlt, wird der Designdateiname als Designname verwendet.<br/>                                                                                                                                                                                                                                         |
+| BrandImage=Pfad zum Bild<br/> Beispiel: BrandImage=c: \\ Fabrikam \\brand.png<br/>                                 | **Windows 7 und höher** BrandImage gibt den Pfad zu einer Markengrafikdatei an, die in der Designvorschau im Personalisierungs-Systemsteuerung enthalten ist.<br/> Die Symbolgrafik muss eine PNG-Datei sein. Die Grafik wird auf 80 x 240 Pixel skaliert, daher wird empfohlen, ein Bild dieser Größe bereitzustellen. Der Designkatalog beachtet die transparenten Bereiche Ihres Markensymbols.<br/> Dieses Feld ist optional. Wenn es fehlt, wird kein Logo als Designsymbol angezeigt.<br/> |
 
 
 
  
 
-Im restlichen Abschnitt des \[ Themas Theme werden \] benutzerdefinierte Symbole für Desktop Features wie Computer, eigene Dokumente, Netzwerk und Papierkorb angegeben. Wenn Sie keine benutzerdefinierten Desktop Symbole angeben, zeigt der Desktop die standardmäßigen Desktop Symbole des Systems an.
+Im restlichen \[ Abschnitt Design \] werden benutzerdefinierte Symbole für Desktopfeatures wie Computer, Eigene Dokumente, Network und Papierkorb angegeben. Wenn Sie keine benutzerdefinierten Desktopsymbole angeben, zeigt der Desktop die Standarddesktopsymbole des Systems an.
 
-Im folgenden finden Sie zwei Beispiele dafür, wie eine. Theme-Datei das **Computer** Symbol festlegt.
+Im Folgenden sind zwei Beispiele dafür aufgeführt, wie eine THEME-Datei das **Computersymbol** festlegt.
 
 
 ```
@@ -92,7 +92,7 @@ DefaultValue=%ProgramFiles%\Fabrikam\MyApp.exe,0
 
 
 
-Im folgenden sind die Werte für die Standard Desktop Symbole in Windows 7 dargestellt.
+Im Folgenden sind Werte für die Standarddesktopsymbole in Windows 7 angegeben.
 
 
 ```
@@ -116,16 +116,16 @@ Empty=%SystemRoot%\System32\imageres.dll,-55
 
 
 
-### <a name="control-panelcolors-section"></a>\[Bereich mit den Farben der Systemsteuerung \\ \]
+### <a name="control-panelcolors-section"></a>\[abschnitt "Systemsteuerung \\ \] Colors"
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, verwendet das System Standardeinstellungen. Wenn Ihr Design den visuellen Aero-Stil verwendet, sollten Sie das Überschreiben der Standardwerte in diesem Abschnitt vermeiden.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, verwendet das System Standardeinstellungen. Wenn Ihr Design den visuellen Stil Von Styles verwendet, sollten Sie vermeiden, die Standardwerte in diesem Abschnitt zu überschreiben.
 
  
 
-Die Farbe von Elementen, z. b. Scrollleisten, Text und Schaltflächen, ist anpassbar. Die. Theme-Datei gibt die RGB-Werte an, die für diese Elemente geändert werden müssen. Die Werte überschreiben die Standardwerte des visuellen Stils und werden verwendet, wenn Ihr Design auf Windows Classic, Windows 7 Basic oder hoher Kontrast Designs basiert.
+Die Farbe von Elementen wie Bildlaufleisten, Text und Schaltflächen kann angepasst werden. Die THEME-Datei gibt die RGB-Werte an, die für diese Elemente geändert werden sollen. Die Werte überschreiben die Standardwerte des visuellen Stils und werden verwendet, wenn Ihr Design auf Windows klassischen, Windows 7 Basic- oder hoher Kontrast Designs basiert.
 
-Im folgenden finden Sie ein Beispiel für die Festlegung von Farben.
+Im Folgenden wird veranschaulicht, wie Farben festgelegt werden.
 
 
 ```
@@ -161,14 +161,14 @@ GradientInactiveTitle=192 192 192
 
 
 
-### <a name="control-panelcursors-section"></a>\[Abschnitt "System Steuerungs \\ Cursor" \]
+### <a name="control-panelcursors-section"></a>\[\\Systemsteuerung-Abschnitt "Cursor" \]
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die. Theme-Datei einschließen, verwendet das System standardcursorn.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in ihre DESIGN-Datei einschließen, verwendet das System Standardcursor.
 
  
 
-Ein Design kann auch die Darstellung von Cursorn ändern. Zu diesem Zweck erstellen Sie cur-Dateien, um die standardmäßigen Windows-Cursor zu ersetzen. Das folgende Beispiel zeigt eine. Design-Datei, die die Cursor für ein Design mit dem Namen " *Sports*" definiert.
+Ein Design kann auch die Darstellung von Cursorn ändern. Hierzu erstellen Sie CUR-Dateien, um die Standard-Windows Cursor zu ersetzen. Das folgende Beispiel stammt aus einer THEME-Datei, die die Cursor für ein Design namens *Sport* definiert.
 
 
 ```
@@ -192,14 +192,14 @@ DefaultValue=Windows default
 
 
 
-### <a name="control-paneldesktop-section"></a>\[Bereich "Desktop" der Systemsteuerung \\ \]
+### <a name="control-paneldesktop-section"></a>\[abschnitt "Systemsteuerung \\ \] Desktop"
 
 > [!Note]  
-> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, ignoriert das System das Design und zeigt das Design in der Systemsteuerung nicht an.
+> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, ignoriert das System Ihr Design und zeigt das Design nicht in Systemsteuerung an.
 
  
 
-Sie können einen benutzerdefinierten Desktop Hintergrund erstellen und einen Pfad zur Bilddatei angeben. Im folgenden Beispiel wird gezeigt, wie die Desktop Darstellung geändert wird.
+Sie können einen benutzerdefinierten Desktophintergrund erstellen und einen Pfad zur Bilddatei angeben. Das folgende Beispiel zeigt, wie Sie die Desktopdarstellung ändern.
 
 
 ```
@@ -223,69 +223,34 @@ WallpaperStyle=2
 
 
 
-### <a name="slideshow-section"></a>\[Abschnitt "Diashow" \]
+### <a name="slideshow-section"></a>\[Abschnitt \] "Diashow"
 
 **Windows 7 und höher.**
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, verwendet das System das Desktop Hintergrundbild, das im \[ Abschnitt Desktop der Systemsteuerung angegeben ist \\ \] . Wenn Sie diesen Abschnitt einschließen, müssen Sie hier die Einstellungen für "Folie anzeigen" angeben.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Die DESIGN-Datei einschließen, verwendet das System das Desktophintergrundbild, das im Abschnitt Systemsteuerung Desktop angegeben \[ \\ \] ist. Wenn Sie diesen Abschnitt einschließen, müssen Sie hier Einstellungen für die Bildschirmpräsentation angeben.
 
  
 
-Der Hintergrund des Designs kann eine Folie darstellen, die entweder lokal oder von Bildern gespeichert ist, die von einem RSS-Feed bedient werden. Der \[ Abschnitt "Diashow" \] der Datei enthält die folgenden Attribute:
+Der Hintergrund Ihres Designs kann eine Diashow von lokal gespeicherten Bildern oder von Bildern sein, die von einem RSS-Feed bedient werden. Der \[ Abschnitt Slideshow \] der Datei enthält die folgenden Attribute:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Intervall = Anzahl der Millisekunden</td>
-<td>Erforderlich. Interval ist eine Zahl, die bestimmt, wie oft der Hintergrund geändert wird. Der Wert wird in Millisekunden gemessen.</td>
-</tr>
-<tr class="even">
-<td>Shuffle = 0 oder 1</td>
-<td>Erforderlich. Shuffle gibt an, ob der Hintergrund heruntergefahren wird.<br/> 0 = Deaktiviert<br/> 1 = Aktiviert<br/></td>
-</tr>
-<tr class="odd">
-<td>RSSFeed = URL zum RSS-Feed</td>
-<td>Erforderlich, wenn imagesrootpath nicht angegeben ist. RSSFeed gibt einen RSS-Feed an, der als Hintergrund Bildschirm Anzeige verwendet werden soll. Damit der Feed funktioniert, müssen Sie auf hochauflösende Images verweisen, die dem &quot; Gehäuse &quot; Standard entsprechen, der von der <a href="/previous-versions/windows/desktop/ms684701(v=vs.85)">Windows RSS-Plattform</a>verwendet wird. Aufgrund dieser Einschränkung müssen Designdateien, die einen RSS-Feed enthalten, manuell erstellt werden. <br/>
-<blockquote>
-[!Note]<br />
-RSSFeed und imagesrootpath können nicht gleichzeitig angegeben werden.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="even">
-<td>Imagesrootpath = Pfad zum Bildordner</td>
-<td>Erforderlich, wenn RSSFeed nicht angegeben ist. Imagesrootpath gibt einen Pfad zu einem Satz von Bildern an, den Sie als Hintergrund Bildschirm Anzeige verwenden möchten. Bilder in Unterordnern sind nicht in der Folien Anzeige enthalten.<br/> Imagesrootpath unterstützt die Ersetzung von Umgebungsvariablen im Pfad.<br/>
-<blockquote>
-[!Note]<br />
-RSSFeed und imagesrootpath können nicht gleichzeitig angegeben werden.
-</blockquote>
-<br/> <br/></td>
-</tr>
-<tr class="odd">
-<td>Element<em>N</em>Pfad = Pfad (e) zu bestimmten Bildern</td>
-<td>Zur Verwendung mit imagesrootpath. <br/> Element<em>N</em>Pfad gibt Pfade zu bestimmten Bildern an, sodass Sie die Folien Anzeige auf bestimmte Bilder anstatt auf alle Bilder in einem Ordner beschränken können. Wenn keine Pfade angegeben werden, werden alle Bilder im imagesrootpath-Pfad in der Folien Anzeige verwendet, einschließlich der Bilder, die nach dem Erstellen und Installieren des Designs hinzugefügt wurden.<br/> Element<em>N</em>Path unterstützt die Ersetzung von Umgebungsvariablen im Pfad. <em>N</em> ist 0, 1, 2 usw. <br/></td>
-</tr>
-</tbody>
-</table>
+
+| attribute | BESCHREIBUNG | 
+|-----------|-------------|
+| Interval=Anzahl von Millisekunden | Erforderlich. Interval ist eine Zahl, die bestimmt, wie oft sich der Hintergrund ändert. Sie wird in Millisekunden gemessen. | 
+| Shuffle=0 oder 1 | Erforderlich. Shuffle gibt an, ob der Hintergrund gemischt wird.<br /> 0 = Deaktiviert<br /> 1 = Aktiviert<br /> | 
+| RSSFeed=URL zum RSS-Feed | Erforderlich, wenn ImagesRootPath nicht angegeben ist. RSSFeed gibt einen RSS-Feed an, der als Hintergrundpräsentation verwendet werden soll. Damit der Feed funktioniert, müssen Sie auf bilder mit hoher Auflösung verweisen, die dem "Gehäuse"-Standard entsprechen, der vom <a href="/previous-versions/windows/desktop/ms684701(v=vs.85)">Windows RSS-Plattform</a>verwendet wird. Aufgrund dieser Einschränkung müssen THEME-Dateien, die einen RSS-Feed enthalten, manuell erstellt werden. <br /><blockquote>[!Note]<br />Sie können weder RSSFeed noch ImagesRootPath angeben.</blockquote><br /><br /> | 
+| ImagesRootPath=Pfad zum Imageordner | Erforderlich, wenn RSSFeed nicht angegeben ist. ImagesRootPath gibt einen Pfad zu einer Gruppe von Bildern an, die Sie als Hintergrundpräsentation verwenden möchten. Bilder in Unterordnern sind in der Bildschirmpräsentation nicht enthalten.<br /> ImagesRootPath unterstützt Umgebungsvariablenersetzungen im Pfad.<br /><blockquote>[!Note]<br />Sie können weder RSSFeed noch ImagesRootPath angeben.</blockquote><br /><br /> | 
+| Element<em>N</em>Pfad=Pfad(e) zu bestimmten Bildern | Zur Verwendung mit ImagesRootPath. <br /> Element<em>N</em>Pfad gibt Pfade zu bestimmten Bildern an, sodass Sie die Bildschirmpräsentation auf bestimmte Bilder anstatt auf alle Bilder in einem Ordner beschränken können. Wenn keine Pfade angegeben werden, werden alle Bilder im Pfad ImagesRootPath in der Bildschirmpräsentation verwendet, einschließlich der Bilder, die nach dem Erstellen und Installieren des Designs hinzugefügt wurden.<br /> Element<em>N</em>Pfad unterstützt Umgebungsvariablenersetzungen im Pfad. <em>N</em> ist 0, 1, 2 usw. <br /> | 
+
 
 
 
  
 
-In den folgenden Beispielen wird veranschaulicht, wie eine. Theme-Datei die Bildschirm Anzeige angibt, um einen lokal gespeicherten Satz von Bildern einzuschließen.
+Die folgenden Beispiele zeigen, wie eine THEME-Datei die Bildschirmpräsentation angibt, um eine Gruppe von lokal gespeicherten Bildern einzublenden.
 
 
 ```
@@ -310,12 +275,12 @@ Item2Path=%ProgramFiles%\fabrikam\wallpaper\river.jpg
 
 
 
-Das folgende Beispiel ist eine Vorlage für eine. Design-Datei, mit der eine Desktop-Hintergrund Folie mit Bildern aus einem RSS-Feed erstellt wird. Führen Sie die folgenden Schritte aus, um die Vorlage anzupassen:
+Das folgende Beispiel ist eine Vorlage für eine THEME-Datei, die eine Desktophintergrund-Bildschirmpräsentation mitHilfe von Bildern aus einem RSS-Feed erstellt. Führen Sie die folgenden Schritte aus, um die Vorlage anzupassen:
 
 1.  Kopieren Sie das folgende Beispiel, und fügen Sie es in einen Text-Editor ein.
-2.  Ersetzen Sie {ThemeName} durch den Namen, der in der Personalisierungs-Systemsteuerung in der Design-Galerie angezeigt werden soll.
+2.  Ersetzen Sie {themename} durch den Namen, den Sie im Katalog Personalisierung Systemsteuerung Designs anzeigen möchten.
 3.  Ersetzen Sie {rssfeedurl} durch den vollständigen Pfad zu einem kompatiblen RSS-Feed.
-4.  Speichern Sie die Änderungen als Datei mit der Erweiterung ". Theme".
+4.  Speichern Sie die Änderungen als Datei mit der Erweiterung ".theme".
 
 
 ```
@@ -364,14 +329,14 @@ MTSM=DABJDKT
 
 
 
-### <a name="metrics-section"></a>\[\]Metrikabschnitt
+### <a name="metrics-section"></a>\[Abschnitt \] "Metriken"
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, verwendet das System Standardeinstellungen des visuellen Stils.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, verwendet das System standardmäßige visuelle Stileinstellungen.
 
  
 
-Sie können Systemmetriken in einer. Theme-Datei angeben. Systemmetriken sind die Dimensionen verschiedener Anzeigeelemente, wie z. b. die Rahmenbreite des Fensters, die Symbol Höhe oder die Breite der Bild Lauf Leiste. Die nonclientmetrics-und iconmetrics-Werte sind binäre Strukturen, die von nonclientmetrics und iconmetrics in winuser. h definiert werden. Im folgenden finden Sie ein Beispiel für das Ändern von Systemmetriken.
+Sie können Systemmetriken in einer DESIGN-Datei angeben. Systemmetriken sind die Dimensionen verschiedener Anzeigeelemente, z. B. Fensterrahmenbreite, Symbolhöhe oder Bildlaufleistenbreite. Die Werte NonclientMetrics und IconMetrics sind binäre Strukturen, die von NONCLIENTMETRICS und ICONMETRICS in winuser.h definiert werden. Es folgt ein Beispiel für das Ändern von Systemmetriken.
 
 
 ```
@@ -402,14 +367,14 @@ NonclientMetrics=84 1 0 0 1 0 0 0 16 0 0 0 16 0 0 0 18
 
 
 
-### <a name="visual-styles-section"></a>\[Visueller Stile ( \] Abschnitt)
+### <a name="visual-styles-section"></a>\[Abschnitt "Visuelle \] Stile"
 
 > [!Note]  
-> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, ignoriert das System das Design und zeigt das Design in der Systemsteuerung nicht an.
+> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, ignoriert das System Ihr Design und zeigt das Design nicht in Systemsteuerung an.
 
  
 
-Sie können spezifische Informationen zur Größe und Farbe der Desktop Elemente in msstyles-Dateien angeben. Die Farb-und Größen Abschnitte von. Design-Dateien können durch msstyles-Dateien ersetzt werden, die es Ihnen ermöglichen, Desktop Elemente ausführlicher zu ändern. Diese Dateien werden im Abschnitt visuelle Stile einer. Theme-Datei angegeben. Im folgenden finden Sie ein Beispiel für einen Abschnitt mit visuellen Stilen.
+Sie können spezifische Informationen zur Größe und Farbe von Desktopelementen in MSSTYLES-Dateien bereitstellen. Die Farb- und Größenabschnitte von THEME-Dateien können durch MSSTYLES-Dateien ersetzt werden, mit denen Sie Desktopelemente ausführlicher ändern können. Diese Dateien werden im Abschnitt visuelle Stile einer THEME-Datei angegeben. Im Folgenden finden Sie ein Beispiel für einen Abschnitt mit visuellen Stilen.
 
 
 ```
@@ -421,11 +386,11 @@ Size=NormalSize
 
 
 
-Das Hinzufügen eines Path-Elements zu einer. msstyles-Datei ist optional. Wenn Sie einen Pfad angeben, sollten Sie die Metriken und farbabschnitte aus der. Theme-Datei entfernen. Wenn diese Abschnitte entfernt werden, stammen die Farben, Schriftarten und Größen für ein Design aus der msstyles-Datei und stimmen mit der Absicht des Autors von msstyles. Wenn Sie die Metrik-und farbabschnitte nicht entfernen, können Windows-Anwendungen oder Anwendungen Zeichnungs Probleme verursachen.
+Das Hinzufügen eines Path-Elements zu einer MSSTYLES-Datei ist optional. Wenn Sie einen Pfad bereitstellen, sollten Sie die Metriken und Farbabschnitte aus der THEME-Datei entfernen. Wenn diese Abschnitte entfernt werden, stammen die Farben, Schriftarten und Größen für ein Design aus der MSSTYLES-Datei und entsprechen der Absicht des MSSTYLES-Autors. Wenn die Metrik- und Farbabschnitte nicht entfernt werden, kann dies dazu führen, dass Windows oder Anwendungen Zeichnungsprobleme haben.
 
-**Windows Vista/Windows 7:** Wenn der Pfad auf Aero. msstyles zeigt, können Sie die gewünschte Glasfarbe angeben, wie im folgenden Beispiel gezeigt.
+**Windows Vista/Windows 7:** Wenn der Pfad auf Soll.msstyles zeigt, können Sie die gewünschte Glass Color angeben, wie im folgenden Beispiel gezeigt.
 
-**Windows 7:** Wenn der Pfad auf Aero. msstyles zeigt, können Sie auch den gewünschten Transparenz Wert angeben, wie im folgenden Beispiel gezeigt.
+**Windows 7:** Wenn der Pfad auf Alias.msstyles zeigt, können Sie auch den gewünschten Transparenzwert angeben, wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -439,9 +404,9 @@ Transparency=1
 
 
 
-Wenn die Werte colorizationcolor und Transparenz exakt mit einer System Farbe übereinstimmen, wird in der Personalisierungs-Systemsteuerung der Systemname der Farbe angezeigt. Andernfalls ist die Farbe "Custom".
+Wenn die ColorizationColor- und Transparency-Werte genau mit einer Systemfarbe übereinstimmen, zeigt die Personalisierung Systemsteuerung den Systemnamen für die Farbe an. Andernfalls wird die Farbe mit "Benutzerdefiniert" bezeichnet.
 
-Das folgende Beispiel zeigt einen VisualStyles-Abschnitt für das grundlegende Design von Windows 7.
+Im Folgenden finden Sie einen VisualStyles-Abschnitt für das Design Windows 7 Basic.
 
 
 ```
@@ -456,7 +421,7 @@ Transparency=1
 
 
 
-Das folgende Beispiel zeigt einen VisualStyles-Abschnitt für das klassische Windows-Design.
+Im Folgenden wird ein VisualStyles-Abschnitt für das design Windows Classic gezeigt.
 
 
 ```
@@ -469,7 +434,7 @@ Transparency=0
 
 
 
-Das folgende Beispiel zeigt einen VisualStyles-Abschnitt für ein hoher Kontrast schwarzes Design.
+Im Folgenden wird ein VisualStyles-Abschnitt für ein hoher Kontrast Black-Design gezeigt.
 
 
 ```
@@ -482,14 +447,14 @@ Transparency=0
 
 
 
-### <a name="sounds-and-appevents-sections-sounds"></a>\[Abschnitte "Sounds" \] und " \[ appevents" \] (Sounds)
+### <a name="sounds-and-appevents-sections-sounds"></a>\[\]Abschnitte "Sounds" und \[ "AppEvents" \] (Sounds)
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, verwendet das System standardmäßige Soundeinstellungen.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, verwendet das System Standard-Soundeinstellungen.
 
  
 
-Der Benutzer kann das **Sound** Symbol in der Systemsteuerung auswählen, um Sounds Ereignisse zuzuordnen, die in-Anwendungen auftreten. Eine WAV-Datei kann z. b. abgespielt werden, wenn eine Anwendung geöffnet wird. In einer. Design-Datei können WAV-Dateien angegeben werden, um die Standardwerte zu ersetzen. Das folgende Beispiel zeigt die erforderliche Vorgehensweise.
+Der Benutzer kann das **Soundsymbol** in Systemsteuerung auswählen, um Sounds Ereignissen zuzuordnen, die in Anwendungen auftreten. Beispielsweise kann eine WAV-Datei wiedergegeben werden, wenn eine Anwendung geöffnet wird. Eine THEME-Datei kann WAV-Dateien angeben, um die Standarddateien zu ersetzen. Das folgende Beispiel zeigt die erforderliche Vorgehensweise.
 
 
 ```
@@ -514,7 +479,7 @@ DefaultValue=%WinDir%\media\ding.wav
 
 
 
-**Windows 7 und höher:** Sie können einen Sound Schema Namen angeben, anstatt jeden Sound separat aufzulisten.
+**Windows 7 und höher:** Ein Soundschemaname kann angegeben werden, anstatt jeden Sound separat aufzulisten.
 
 
 ```
@@ -525,21 +490,21 @@ SchemeName=@%SystemRoot%\System32\mmres.dll,-819
 
 
 
-Der schemeName-Wert gibt den Namen des Audioschemas oder des lokalisierten Sound Schemas an, wie im obigen Beispiel gezeigt.
+Der SchemeName-Wert gibt den Namen des Soundschemas oder den namen des lokalisierten Soundschemas an, wie im obigen Beispiel gezeigt.
 
-### <a name="boot-section"></a>\[Start \] Abschnitt
+### <a name="boot-section"></a>\[\]Abschnitt "Start"
 
 > [!Note]  
-> **Bildschirmschoner sind in Windows 10 Anniversary Update und höher veraltet.**
+> **Bildschirmschoner sind im Windows 10 Anniversary Update und darüber hinaus veraltet.**
 
  
 
 > [!Note]  
-> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in die. Theme-Datei einschließen, wird kein Bildschirmschoner verwendet.
+> Dieser Abschnitt ist optional. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, wird kein Bildschirmschoner verwendet.
 
  
 
-In der. Theme-Datei können Sie den Bildschirmschoner angeben, der von Windows verwendet werden soll. Im folgenden Beispiel wird dies veranschaulicht.
+In der THEME-Datei können Sie den Bildschirmschoner für Windows angeben. Im folgenden Beispiel wird dies veranschaulicht.
 
 
 ```
@@ -549,14 +514,14 @@ SCRNSAVE.EXE=%WinDir%\System32\bubbles.scr
 
 
 
-### <a name="masterthemeselector-section"></a>\[Masterthemeselector ( \] Abschnitt)
+### <a name="masterthemeselector-section"></a>\[\]MasterThemeSelector-Abschnitt
 
 > [!Note]  
-> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in die Datei ". Theme" einschließen, ignoriert das System das Design und zeigt das Design in der Systemsteuerung nicht an.
+> Dieser Abschnitt ist ein Pflichtabschnitt. Wenn Sie diesen Abschnitt nicht in Ihre DESIGN-Datei einschließen, ignoriert das System Ihr Design und zeigt das Design nicht in Systemsteuerung an.
 
  
 
-Der Abschnitt "Master Design Selector" der. Theme-Datei sollte immer als ein Tag eingeschlossen werden, das angibt, dass die Datei gültig ist. Sie haben keine Auswahl von Werten für diesen Parameter. Dies wird in der folgenden Abbildung veranschaulicht.
+Der Abschnitt master theme selector der THEME-Datei sollte immer als Tag enthalten sein, das angibt, dass die Datei gültig ist. Sie haben keine Auswahl von Werten für diesen Parameter. Dies wird im Folgenden veranschaulicht.
 
 
 ```
@@ -568,7 +533,7 @@ MTSM=DABJDKT
 
 ## <a name="example-of-a-theme-file"></a>Beispiel für eine Designdatei
 
-Das folgende Beispiel zeigt eine komplette Designdatei.
+Das folgende Beispiel zeigt eine vollständige THEME-Datei.
 
 
 ```
@@ -702,15 +667,15 @@ Transparency=1
 
 
 
-## <a name="installing-theme-files"></a>Designdateien werden installiert.
+## <a name="installing-theme-files"></a>Installieren von Designdateien
 
-Beim Initialisieren von Windows listet das Betriebssystem die Unterverzeichnisse der ersten Ebene von% windir%- \\ Ressourcen auf, \\ um verfügbare Designs zu identifizieren. Die standardmäßigen Systemdateien befinden sich unter% windir% \\ Resources Designs \\ . Die Benutzer Designdateien werden unter "% windir% \\ Users \\ <username> \\ AppData \\ local \\ Microsoft \\ Windows \\ Themes" gespeichert.
+Wenn Windows initialisiert wird, listet das Betriebssystem die Unterverzeichnisse der ersten Ebene von %WinDir% \\ Resources \\ auf, um verfügbare Designs zu identifizieren. Die Standarddesigndateien des Systems befinden sich unter %WinDir% \\ \\ Ressourcendesigns. Die Benutzerdesigndateien werden in %WinDir% \\ Users \\ <username> \\ AppData \\ Local Microsoft Windows Themes \\ \\ \\ gespeichert.
 
-Eine. Design-Datei weist Dateizuordnungen auf. Daher können Theme Installer-Anwendungen [**ShellExecute**](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) für eine. Theme-Datei aufzurufen, um das **Personalisierungs** Fenster in der Systemsteuerung für das angegebene Design zu öffnen.
+Eine THEME-Datei weist Dateizuordnungen auf. Daher können Designinstallationsprogrammanwendungen [**ShellExecute**](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea) für eine THEME-Datei aufrufen, um das **Personalisierungsfenster** in Systemsteuerung zum angegebenen Design zu öffnen.
 
 ## <a name="theme-packs"></a>Designpakete
 
-**Windows 7 und höher.** Ein Design Pack ist eine CAB-Datei, die nicht nur die. Theme-Datei, sondern auch die Dateien enthält, die zum Implementieren des Designs auf einem anderen Computer erforderlich sind, wie z. b. Audiodateien und Bilder. Benutzer können Designpakete über die Personalisierungs-Systemsteuerung erstellen.
+**Windows 7 und höher.** Ein Designpaket ist eine .cab-Datei, die nicht nur die THEME-Datei enthält, sondern auch die Dateien, die zum Implementieren des Designs auf einem anderen Computer erforderlich sind, z. B. Sounddateien und Bilder. Benutzer können Designpakete über die Personalisierungs-Systemsteuerung erstellen.
 
 Folgende Dateitypen werden unterstützt:
 
@@ -719,10 +684,10 @@ Folgende Dateitypen werden unterstützt:
 | Dateityp    | Durchwahl                           |
 |--------------|-------------------------------------|
 | Design        | .theme                              |
-| Image        | . jpg,. JPEG,. BMP,. DIB,. TIF,. png |
+| Image        | .jpg, JPEG, .bmp, DIB, TIF, .png |
 | Sound        | WAV                                |
-| Mauszeiger | . cur,. ani                          |
-| Desktop Symbol | .ico                                |
+| Mauscursor | .cur, .ani                          |
+| Desktopsymbol | .ico                                |
 | Markenlogo   | .png                                |
 
 

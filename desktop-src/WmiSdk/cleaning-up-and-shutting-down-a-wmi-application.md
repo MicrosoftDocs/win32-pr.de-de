@@ -1,36 +1,36 @@
 ---
-description: Nachdem Sie die Sicherheitsstufen für Ihren IWbemServices-Zeiger festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie die Anwendung Herunterfahren.
+description: Nachdem Sie die Sicherheitsebenen für Ihren IWbemServices-Zeiger festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie Die Anwendung herunterfahren.
 ms.assetid: 32bc7dd8-cb05-4354-bf46-f4359ac1f0d8
 ms.tgt_platform: multiple
 title: Bereinigen und Herunterfahren einer WMI-Anwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7758cbdba81e018ff3362cec86aa5096838dc9e0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 296d2093b16491bcb600438d781fa833a09754fdc5d0cc8cc83feb710a6d2727
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960223"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120910"
 ---
 # <a name="cleaning-up-and-shutting-down-a-wmi-application"></a>Bereinigen und Herunterfahren einer WMI-Anwendung
 
-Nachdem Sie die Sicherheitsstufen für Ihren [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie die Anwendung Herunterfahren.
+Nachdem Sie die Sicherheitsebenen für Ihren [**IWbemServices-Zeiger**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie Die Anwendung herunterfahren.
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine WMI-Anwendung bereinigen und Herunterfahren.
+Im folgenden Verfahren wird beschrieben, wie Sie eine WMI-Anwendung bereinigt und herunterfahren.
 
-**So können Sie eine WMI-Anwendung bereinigen und Herunterfahren**
+**So bereinigt und herunterfahren Sie eine WMI-Anwendung**
 
-1.  Freigeben beliebiger offener com-Schnittstellen.
+1.  Lassen Sie alle geöffneten COM-Schnittstellen frei.
 
-    Die beiden primären Schnittstellen, die Sie sich merken müssen, sind [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) und [**IWBEMLocator**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator).
+    Die beiden primären Schnittstellen, die Sie veröffentlichen müssen, sind [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) und [**IWbemLocator.**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator)
 
-2.  [**CallInitialize**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)aufruft.
+2.  Rufen Sie [**CoUninitialize auf.**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)
 
-    Wie bei allen com-Anwendungen müssen Sie " [**zählinitialize**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) " am Ende der Anwendung anfügen.
+    Wie bei allen COM-Anwendungen müssen Sie [**CoUninitialize am**](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) Ende Ihrer Anwendung aufrufen.
 
-3.  Beenden Sie die Anwendung.
+3.  Beenden Sie Ihre Anwendung.
 
-    Im folgenden Codebeispiel wird gezeigt, wie eine WMI-Client Anwendung beendet wird.
+    Das folgende Codebeispiel zeigt, wie eine WMI-Clientanwendung beendet wird.
 
     ```C++
         // The following #include and #define statements need
@@ -51,17 +51,17 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine WMI-Anwendung bereinigen u
     
 
     > [!Note]  
-    > Die `pSvc` Variable ist vom Typ [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) \* , und die ploc-Variable ist vom Typ [**IWBEMLocator**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator) \* .
+    > Die `pSvc` Variable ist vom Typ [**IWbemServices,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) \* und die pLoc-Variable ist vom Typ [**IWbemLocator.**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemlocator) \*
 
      
 
-Sie haben nun erfolgreich com initialisiert, auf WMI zugegriffen und die Anwendung beendet. Weitere Informationen finden Sie unter [Beispiel: Erstellen einer WMI-Anwendung](example-creating-a-wmi-application.md).
+Sie haben com nun erfolgreich initialisiert, auf WMI zugegriffen und Ihre Anwendung beendet. Weitere Informationen finden Sie unter [Beispiel: Erstellen einer WMI-Anwendung](example-creating-a-wmi-application.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer WMI-Anwendung mithilfe von C++](creating-a-wmi-application-using-c-.md)
+[Erstellen einer WMI-Anwendung mit C++](creating-a-wmi-application-using-c-.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: LOCALE \_ slist
+description: LOCALE \_ SLIST
 ms.assetid: 02a20bf8-3996-4344-ba5d-4c2b7eaf6f2e
 title: LOCALE_SLIST
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e6a748b153c651d56399015e73ded3f1891bb6f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97db6d13249cdd837252fbcfb440059b05e39fe8a101d24fbe2176b88a08a900
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106120"
 ---
-# <a name="locale_slist"></a>LOCALE \_ slist
+# <a name="locale_slist"></a>LOCALE \_ SLIST
 
-Zeichen, die zum Trennen von Listenelementen verwendet werden, z. b. ein Komma, das in vielen Gebiets Schemas verwendet wird. Die maximal zulässige Anzahl von Zeichen für diese Zeichenfolge ist vier, einschließlich eines abschließenden NULL-Zeichens.
+Zeichen, die zum Trennen von Listenelementen verwendet werden, z. B. ein Komma wird in vielen Gebietsschemas verwendet. Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig sind, beträgt vier, einschließlich eines abschließenden NULL-Zeichens.
 
  
 

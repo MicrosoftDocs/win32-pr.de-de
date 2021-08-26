@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 1dbbef898115630b02164642018d0e26d8bd9f829b9b6b92206ad800c73ea0ec
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9ab8de48b5f3d8b31df7001f53ee370a4e0f4eaa
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119980770"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622526"
 ---
 # <a name="span-idvspixengineipixengine3spanipixengine3-interface"></a><span id="vspixengine.ipixengine3"></span>IPixEngine3-Schnittstelle
 
@@ -38,13 +38,13 @@ Die **IPixEngine3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/wi
 
 Die **IPixEngine3-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixengine3-setupresources-resourcepair-arr-uint"><strong>SetupResources</strong></a></td><td style="text-align: left;"><p>Übergibt Ressourcen an die Engine, z. B. Zeichenfolgen für Fehlermeldungen.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixengine3-setupresources-resourcepair-arr-uint"><strong>SetupResources</strong></a></td><td style="text-align: left;"><p>Übergibt Ressourcen an die Engine, z. B. Zeichenfolgen für Fehlermeldungen.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

@@ -1,6 +1,6 @@
 ---
-title: glEvalCoord2d-Funktion (GL. h)
-description: Die glEvalCoord2d-Funktion wertet aktivierte zweidimensionale Zuordnungen aus.
+title: glEvalCoord2d-Funktion (Gl.h)
+description: Die glEvalCoord2d-Funktion wertet aktivierte zweidimensionale Karten aus.
 ms.assetid: 95963abc-841a-4154-92d5-5ae3e6de0f97
 keywords:
 - glEvalCoord2d-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 036e2ee10d1ceac6df6a68a35c1da881d1d478b5
-ms.sourcegitcommit: 7ef31bf778e76ce4196205d4c4c632fbdc649805
+ms.openlocfilehash: 845379985a95fe7514d197bc62a97cb67aa1a7f560f136ab8b9cda7caf31560e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "104569078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081530"
 ---
 # <a name="glevalcoord2d-function"></a>glEvalCoord2d-Funktion
 
-Die **glEvalCoord2d** -Funktion wertet aktivierte zweidimensionale Zuordnungen aus.
+Die **glEvalCoord2d-Funktion** wertet aktivierte zweidimensionale Karten aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ void WINAPI glEvalCoord2d(
 *n* 
 </dt> <dd>
 
-Ein-Wert *, bei dem* es sich um die Domänen Koordinate der in einer vorherigen [**glMap2**](glmap2.md) -Funktion definierten Basis Funktion handelt.
+Ein -Wert, der die Domänenkoordinate *u* für die Basisfunktion ist, die in einer vorherigen [**glMap2-Funktion definiert**](glmap2.md) wurde.
 
 </dd> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
-Ein-Wert *, bei dem* es sich um die Domänen Koordinate für die in einer vorherigen [**glMap2**](glmap2.md) -Funktion definierte Basis Funktion handelt.
+Ein -Wert, der die Domänenkoordinate *v* zur Basisfunktion ist, die in einer vorherigen [**glMap2-Funktion definiert**](glmap2.md) wurde.
 
 </dd> </dl>
 
@@ -59,63 +59,63 @@ Ein-Wert *, bei dem* es sich um die Domänen Koordinate für die in einer vorher
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glEvalCoord2d** -Funktion wertet aktivierte zweidimensionale Karten mit zwei Domänen Werten aus: *u* und *v*. Definieren von Zuordnungen mit [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md). Aktivieren oder deaktivieren Sie Sie mit [**glEnable**](glenable.md) und [**gldeaktiviert**](gldisable.md).
+Die **glEvalCoord2d-Funktion** wertet aktivierte zweidimensionale Zuordnungen mithilfe der beiden Domänenwerte *u* und *v aus.* Definieren Sie Zuordnungen [**mit glMap1**](glmap1.md) und [**glMap2.**](glmap2.md) Aktivieren oder deaktivieren Sie sie [**mit glEnable**](glenable.md) und [**glDisable**](gldisable.md).
 
-Wenn eine der Funktionen von **glevalcoord** ausgegeben wird, werden alle derzeit aktivierten Zuordnungen der aufgeführten Dimension ausgewertet. Dann ist es für jede aktivierte Zuordnung so, als ob die entsprechende OpenGL-Funktion mit dem berechneten Wert ausgegeben wurde. Das heißt, wenn der GL \_ zuordnung1 \_ Index oder der GL \_ map2- \_ Index aktiviert ist, wird eine [**glindex**](glindex-functions.md) -Funktion simuliert. Wenn gl \_ zuordnung1 \_ Color \_ 4 oder GL \_ map2 \_ Color \_ 4 aktiviert ist, wird eine **glcolor** -Funktion simuliert. Wenn gl \_ zuordnung1 \_ Normal oder GL \_ map2 \_ Normal aktiviert ist, wird ein normaler Vektor erzeugt. und wenn eine von GL zuordnung1 Textur coord \_ \_ \_ \_ 1, GL \_ zuordnung1 \_ Texture \_ coord \_ 2, GL \_ zuordnung1 \_ Texture \_ coord \_ 3, GL \_ zuordnung1 \_ Texture \_ coord \_ 4, GL \_ map2 \_ Texture \_ coord \_ 1, GL \_ map2 \_ Texture \_ coord \_ 2, GL \_ map2 \_ Texture \_ coord \_ 3 und GL \_ map2 \_ Texture \_ coord \_ 4 aktiviert ist, wird eine entsprechende [**gltexcoord**](gltexcoord-functions.md) -Funktion simuliert.
+Wenn eine der **glEvalCoord-Funktionen** ausgegeben wird, werden alle derzeit aktivierten Zuordnungen der angegebenen Dimension ausgewertet. Dann ist es für jede aktivierte Zuordnung so, als ob die entsprechende OpenGL-Funktion mit dem berechneten Wert ausgegeben würde. Das heißt, wenn GL \_ MAP1 \_ INDEX oder GL \_ MAP2 INDEX aktiviert \_ ist, wird eine [**glIndex-Funktion**](glindex-functions.md) simuliert. Wenn GL \_ MAP1 \_ COLOR \_ 4 oder GL MAP2 COLOR 4 aktiviert ist, wird eine \_ \_ \_ **glcolor-Funktion** simuliert. Wenn GL MAP1 NORMAL oder GL MAP2 NORMAL aktiviert ist, Ein normaler Vektor wird erzeugt, und wenn eine der FOLGENDEN Funktionen aktiviert ist: \_ \_ GL \_ \_ \_ MAP1 TEXTURE \_ \_ COORD \_ 1, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 2, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 3, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 4, GL \_ MAP2 TEXTURE \_ \_ \_ \_ COORD 1, GL MAP2 TEXTURE \_ \_ COORD \_ 2, GL \_ MAP2 TEXTURE \_ \_ COORD 3 und GL \_ \_ MAP2 \_ TEXTURE \_ COORD \_ 4. [](gltexcoord-functions.md)
 
-OpenGL verwendet ausgewertete Werte anstelle der aktuellen Werte für die aktivierten Auswertungen und die aktuellen Werte für Farbe, Farbindex, normale und Texturkoordinaten. Die ausgewerteten Werte aktualisieren jedoch nicht die aktuellen Werte. Wenn daher die [**glVertex**](glvertex-functions.md) -Funktionen mit **glevalcoord** -Funktionen vermischt werden, werden die den **glVertex** -Funktionen zugeordneten Farb-, normal-und Texturkoordinaten nicht von den Werten beeinflusst, die von den Funktionen von **glevalcoord** generiert werden, sondern nur durch die neuesten Funktionen von [**glcolor**](glcolor-functions.md), [**glindex**](glindex-functions.md), [**glnormal**](glnormal-functions.md)und [**gltexcoord**](gltexcoord-functions.md) .
+OpenGL verwendet ausgewertete Werte anstelle aktueller Werte für die aktivierten Auswertungen und aktuelle Werte andernfalls für Farb-, Farbindex-, Normal- und Texturkoordinaten. Die ausgewerteten Werte aktualisieren jedoch nicht die aktuellen Werte. Wenn also [**glVertex-Funktionen**](glvertex-functions.md) mit **glEvalCoord-Funktionen** interspersiert werden, werden die Farb-, Normal- und Texturkoordinaten, die den **glVertex-Funktionen** zugeordnet sind, nicht von den Werten beeinflusst, die von den **glEvalCoord-Funktionen** generiert werden, sondern nur von den neuesten [**glColor-,**](glcolor-functions.md) [**glIndex-,**](glindex-functions.md) [**glNormal-**](glnormal-functions.md)und [**glTexCoord-Funktionen.**](gltexcoord-functions.md)
 
-Wenn die automatische normale Generierung aktiviert ist, ruft **glEvalCoord2d** [**glEnable**](glenable.md) mit dem Argument GL \_ Auto \_ Normal auf, um Oberflächen normale zu generieren, unabhängig vom Inhalt oder der Aktivierung der GL \_ map2 \_ Normal Karte. Let
+Wenn die automatische normale Generierung aktiviert ist, ruft **glEvalCoord2d** [**glEnable**](glenable.md) mit dem Argument GL AUTO NORMAL auf, um Oberflächennormals unabhängig vom Inhalt oder der Aktivierung der \_ GL \_ MAP2 NORMAL-Zuordnung analytisch zu \_ \_ generieren. Let
 
-![Gleichung, die einen produktübergreifenden Wert für eine Karte m anzeigt.](images/evlcrd01.png)
+![Gleichung, die einen produktübergreifenden Wert für eine Karte m zeigt.](images/evlcrd01.png)
 
-Die generierte normale **n** ist
+Der generierte normale **n** ist .
 
-![Gleichung mit dem generierten normalen n für die Karte.](images/evlcrd02.png)
+![Gleichung, die die generierte normale n für die Karte zeigt.](images/evlcrd02.png)
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoord2d** -Funktion ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoord2d-Funktion** ab:
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Vertex \_ 3
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 \_ VERTEX \_ 3
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Vertex \_ 4
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 \_ VERTEX \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Index
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ MAP1 \_ INDEX
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Farbe \_ 4
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 COLOR \_ \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Normal
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 \_ NORMAL
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 1
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 TEXTURE \_ \_ COORD \_ 1
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 2
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 TEXTURE \_ \_ COORD \_ 2
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 3
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 TEXTURE \_ \_ COORD \_ 3
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ zuordnung1 \_ Textur \_ Koord \_ 4
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP1 TEXTURE \_ \_ COORD \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Vertex \_ 3
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ MAP2 \_ VERTEX \_ 3
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Vertex \_ 4
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ MAP2 \_ VERTEX \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Index
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ MAP2 \_ INDEX
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Farbe \_ 4
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 COLOR \_ \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Normal
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 \_ NORMAL
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Textur \_ Koord \_ 1
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 TEXTURE \_ \_ COORD \_ 1
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Textur \_ Koord \_ 2
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 TEXTURE \_ \_ COORD \_ 2
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Textur \_ Koord \_ 3
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 TEXTURE \_ \_ COORD \_ 3
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ map2 \_ Textur \_ Koord \_ 4
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ MAP2 TEXTURE \_ \_ COORD \_ 4
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Auto \_ Normal
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ AUTO \_ NORMAL
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -123,8 +123,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -136,10 +136,10 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoo
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -148,19 +148,19 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoo
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalmesh**](glevalmesh-functions.md)
+[**glEvalMesh**](glevalmesh-functions.md)
 </dt> <dt>
 
-[**glevalpoint**](glevalpoint.md)
+[**glEvalPoint**](glevalpoint.md)
 </dt> <dt>
 
-[**glgetmap**](glgetmap.md)
+[**glGetMap**](glgetmap.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
 [**glMap1**](glmap1.md)
@@ -169,13 +169,13 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glEvalCoo
 [**glMap2**](glmap2.md)
 </dt> <dt>
 
-[**glmapgrid**](glmapgrid-functions.md)
+[**glMapGrid**](glmapgrid-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> <dt>
 
 [**glVertex**](glvertex-functions.md)

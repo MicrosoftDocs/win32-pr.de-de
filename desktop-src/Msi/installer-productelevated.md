@@ -1,7 +1,7 @@
 ---
-description: Die productelevated-Eigenschaft des Installer-Objekts gibt true zurück, wenn das Produkt verwaltet wird, oder false, wenn das Produkt nicht verwaltet wird.
+description: Die ProductElevated-Eigenschaft des Installer-Objekts gibt True zurück, wenn das Produkt verwaltet wird, oder False, wenn das Produkt nicht verwaltet wird.
 ms.assetid: 8126f5a0-751f-46c3-9014-208e9c2db34c
-title: Installer::P roductelevated-Eigenschaft
+title: Installer::P ro enthaltenElevated-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 22591c20cbabfda2eb052e4746e87739b9681804
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 515964481c62e4588f3d9b75d168bffd2876cb22ce526e8ec0eaa41e226c110e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129390"
 ---
-# <a name="installerproductelevated-property"></a>Installer::P roductelevated-Eigenschaft
+# <a name="installerproductelevated-property"></a>Installer::P ro enthaltenElevated-Eigenschaft
 
-Die **productelevated** -Eigenschaft des [**Installer**](installer-object.md) -Objekts gibt true zurück, wenn das Produkt verwaltet wird, oder false, wenn das Produkt nicht verwaltet wird.
+Die **ProductElevated-Eigenschaft** des [**Installer-Objekts**](installer-object.md) gibt True zurück, wenn das Produkt verwaltet wird, oder False, wenn das Produkt nicht verwaltet wird.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -41,13 +41,13 @@ propVal = Installer.ProductElevated
 
 Die vollständige Produktcode-GUID des Produkts. Dieser Parameter ist erforderlich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **productelevated** -Eigenschaft verwendet die [**msiisproductelevated**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda) -Funktion. Bei der Rückgabe der Eigenschaft wird die [alwaysinstallerhöhten](alwaysinstallelevated.md) -Richtlinie nicht berücksichtigt.
+Die **ProductElevated-Eigenschaft** verwendet die [**MsiIsProductElevated-Funktion.**](/windows/desktop/api/Msi/nf-msi-msiisproductelevateda) Bei der Rückgabe der -Eigenschaft wird die [AlwaysInstallElevated-Richtlinie nicht](alwaysinstallelevated.md) berücksichtigt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispielskript wird die Verwendung der **productelevated** -Eigenschaft veranschaulicht.
+Das folgende Beispielskript veranschaulicht die Verwendung der **ProductElevated-Eigenschaft.**
 
 
 ```VB
@@ -81,9 +81,9 @@ End If
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 4,5 unter Windows Server 2003 und Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 4.5 auf Windows Server 2003 und Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                           |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 
@@ -91,10 +91,10 @@ End If
 
 <dl> <dt>
 
-[**Installationsprogramm**](installer-object.md)
+[**Installer**](installer-object.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

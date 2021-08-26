@@ -1,23 +1,23 @@
 ---
-description: Die Date-Eigenschaft entspricht dem aktuellen Monat, Tag und Jahr als Zeichenfolge mit Literaltext im Format mm/dd/yyyy.
+description: Die Date-Eigenschaft ist der aktuelle Monat, Der aktuelle Tag und das aktuelle Jahr als Zeichenfolge mit Literaltext im Format MM/TT/YYYY.
 ms.assetid: 22c1f9b4-f6c9-4d57-8457-53bb045e2a4d
 title: Date-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf1e4e5cfc7d9236228b9e8b419bbbca48052769
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bf76df99c5567351ddd4d36d1aaad56c8a4d1f385f21ca977a4d54916ce99a4b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129630"
 ---
 # <a name="date-property"></a>Date-Eigenschaft
 
-Die **Date** -Eigenschaft entspricht dem aktuellen Monat, Tag und Jahr als Zeichenfolge mit Literaltext im Format mm/dd/yyyy. Beispielsweise kann das Datum 22. Juni 2005 als "06/22/2005" dargestellt werden. Das Format des Werts hängt vom Gebiets Schema des Benutzers ab. dabei handelt es sich um das Format, das mithilfe von [**getDateFormat**](/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata) mit der \_ Option Datum SHORTDATE abgerufen wird. Der Wert dieser Eigenschaft wird vom Windows Installer und nicht vom Paket Ersteller festgelegt.
+Die **Date-Eigenschaft** ist der aktuelle Monat, Der aktuelle Tag und das aktuelle Jahr als Zeichenfolge mit Literaltext im Format MM/TT/YYYY. Beispielsweise kann das Datum 22. Juni 2005 als "22.06.2005" dargestellt werden. Das Format des Werts hängt vom Benutzer-Locale ab und ist das Format, das mit [**GetDateFormat**](/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata) mit der DATE \_ SHORTDATE-Option ermittelt wird. Der Wert dieser Eigenschaft wird vom Windows Installer und nicht vom Paketautor festgelegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da es sich hierbei um eine Text Zeichenfolge handelt, kann Sie nicht in bedingten Ausdrücken verwendet werden.
+Da es sich um eine Textzeichenfolge handelt, kann sie nicht in bedingten Ausdrücken verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Da es sich hierbei um eine Text Zeichenfolge handelt, kann Sie nicht in bedingte
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

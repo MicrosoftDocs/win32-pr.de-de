@@ -1,5 +1,5 @@
 ---
-description: Eine asynchrone Anforderung zum Abruf von Meshdaten aus dem angegebenen Ereignis.
+description: Eine asynchrone Anforderung zum Abrufen von Gitternetzdaten aus dem angegebenen Ereignis.
 MS-HAID: vspixengine.IPipeLineStagesRequest3\_RequestMeshAsync\_EventID\_BSTR\_IPipeLineStagesCallback3\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 39177109630feb09231616173cd8ccc498c9e7f54b99aff7d4ac6b75aa946123
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ea2b5602d8668cec019efb02f4202dd7110da8cf
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117721632"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623566"
 ---
 # <a name="span-idvspixengineipipelinestagesrequest3_requestmeshasync_eventid_bstr_ipipelinestagescallback3_ptr_dword_dwordspanipipelinestagesrequest3requestmeshasync-method"></a><span id="vspixengine.ipipelinestagesrequest3_requestmeshasync_eventid_bstr_ipipelinestagescallback3_ptr_dword_dword"></span>IPipeLineStagesRequest3::RequestMeshAsync-Methode
 
-Eine asynchrone Anforderung zum Abruf von Meshdaten aus dem angegebenen Ereignis.
+Eine asynchrone Anforderung zum Abrufen von Gitternetzdaten aus dem angegebenen Ereignis.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu b
 Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

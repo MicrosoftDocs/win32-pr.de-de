@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetStopServiceInstance2-Funktion'
+description: Weitere Informationen finden Sie unter JetStopServiceInstance2-Funktion.
 title: JetStopServiceInstance2-Funktion
 TOCTitle: JetStopServiceInstance2 Function
 ms:assetid: ac021e13-ec83-42eb-9aef-a906d7a7ed39
@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5029e2cf45ec91d0282f32491895a24b32e6259e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a28439932d9c0eb76675ed4e88d5595c64b5ace
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752280"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470766"
 ---
 # <a name="jetstopserviceinstance2-function"></a>JetStopServiceInstance2-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **JetStopServiceInstance2** -Funktion bereitet eine Instanz vor dem aussetzen vor und bereitet eine Instanz nach der Wiederaufnahme vor. Suspend und Resume sind Ausführungs Zustände des Lebenszyklus Modells der Windows Store-App.
+Die **JetStopServiceInstance2-Funktion** bereitet eine Instanz vor Suspend vor und bereitet eine Instanz nach resume vor. "Suspend" und "Resume" sind Ausführungszustände des Windows Store App-Lebenszyklusmodells.
 
-Die **JetStopServiceInstance2** -Funktion wurde in Windows 8 eingeführt.
+Die **JetStopServiceInstance2-Funktion** wurde in Windows 8.
 
 ``` c++
 JET_ERR JET_API JetStopServiceInstance2(
@@ -44,123 +44,63 @@ JET_ERR JET_API JetStopServiceInstance2(
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Die Ziel Instanz. Der **JET_INSTANCE** -Datentyp ist ein Handle für die Instanz der-Datenbank, die für einen aufzurufenden Jet-API-Befehl verwendet werden soll. Dieses Handle wird abgerufen, wenn Sie eine Instanz der Datenbank erstellen, indem Sie die [jetcreateinstance](./jetcreateinstance-function.md)-, [JetCreateInstance2](./jetcreateinstance2-function.md)-, [jetinit](./jetinit-function.md)-oder [JetInit2](./jetinit2-function.md) -Funktion aufrufen.
+Die Zielinstanz. Der **JET_INSTANCE** ist ein Handle für die Instanz der Datenbank, die für einen Aufruf der JET-API verwendet werden soll. Dieses Handle wird beim Erstellen einer Instanz der Datenbank durch Aufrufen der [JetCreateInstance-,](./jetcreateinstance-function.md) [JetCreateInstance2-,](./jetcreateinstance2-function.md) [JetInit-](./jetinit-function.md)oder [JetInit2-Funktionen](./jetinit2-function.md) erhalten.
 
 *grbit*
 
-Eine Gruppe von Bits, die einen oder mehrere der Werte angibt, die in der folgenden Tabelle aufgelistet und definiert sind.
+Eine Gruppe von Bits, die mindestens einen der in der folgenden Tabelle aufgeführten und definierten Werte angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>BESCHREIBUNG</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitStopServiceAll</p></td>
-<td><p>Beendet alle ESE-Dienste (Extensible Storage Engine) für die angegebene-Instanz.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitStopServiceBackgroundUserTasks</p></td>
-<td><p>Beendet neu startbare, vom Client angegebene Hintergrund Wartungs Tasks (z. B. B +-Struktur Defragmentierung).</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitStopServiceQuiesceCaches</p></td>
-<td><p>Versetzt alle Dirty Caches auf den Datenträger. Dieser Wert ist asynchron und kann abgebrochen werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitStopServiceResume</p></td>
-<td><p>Setzt zuvor ausgestellte Stopp Dienst Vorgänge fort. Das heißt, dass der Dienst neu gestartet wird. Dieser Wert kann mit dem <em>grbits</em> -Parameter kombiniert werden, um bestimmte Dienste fortzusetzen, oder mit JET_bitStopServiceAll, um alle zuvor beendeten Dienste wieder aufzunehmen. Dieses Bit kann nur zum Fortsetzen von stopservicebackgroundusertasks und JET_bitStopServiceQuiesceCaches verwendet werden. Wenn Sie zuvor mit JET_bitStopServiceAll aufgerufen haben, tritt beim Versuch, JET_bitStopServiceResume zu verwenden, ein Fehler auf. Wenn der zweite Fortschritt nicht aufgerufen wird, wird die Leistung der Anwendung beeinträchtigt. In dieser Situation wird der Prüfpunkt auf 0 (null) beibehalten.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>BESCHREIBUNG</p> | 
+|--------------|--------------------|
+| <p>JET_bitStopServiceAll</p> | <p>Beendet alle ESE-Dienste (Extensible Storage Engine) für die angegebene Instanz.</p> | 
+| <p>JET_bitStopServiceBackgroundUserTasks</p> | <p>Beendet neu startbare clientspezifische Hintergrundwartungsaufgaben (z. B. B+-Strukturdefragmentierung).</p> | 
+| <p>JET_bitStopServiceQuiesceCaches</p> | <p>Macht alle dirty Caches auf den Datenträger in Ruhe. Dieser Wert ist asynchron und kann abgebrochen werden.</p> | 
+| <p>JET_bitStopServiceResume</p> | <p>Setzt zuvor ausgegebene StopService-Vorgänge fort. Das heißt, der Dienst wird neu gestartet. Dieser Wert kann mit dem <em>grbits-Parameter kombiniert</em> werden, um bestimmte Dienste wieder aufzunehmen, oder mit JET_bitStopServiceAll alle zuvor beendeten Dienste fortsetzen. Dieses Bit kann nur verwendet werden, um StopServiceBackgroundUserTasks und -JET_bitStopServiceQuiesceCaches. Wenn Sie zuvor mit JET_bitStopServiceAll aufgerufen haben, ist ein Versuch, JET_bitStopServiceResume zu verwenden, fehlgeschlagen. Wenn der zweite Fortsetzungsschritt nicht aufgerufen wird, hat die Anwendung eine beeinträchtigte Leistung. In diesem Fall wird der Prüfpunkt bei 0 (null) beibehalten.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-#### <a name="remarks"></a>Bemerkungen
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
 
-Diese Funktion ermöglicht es einer Jet-Anwendung, den Daten Bank Cache in den Zustand "bereinigt" oder "fast Clean" (mit dem Betriebssystem-e/a-Leerlauf) zu verschieben, sodass die Wiederherstellung schnell ausgeführt werden kann, wenn die Anwendung beendet werden soll. Diese Vorgehensweise wird für das Beenden von Jet bevorzugt, indem die [jetterm](./jetterm-function.md) -Funktion oder die [jetdetachdatabase](./jetdetachdatabase-function.md) -Funktion aufgerufen wird, sodass die Anwendung im gängigeren Szenario nicht angehalten wird und die Anwendung später den gesamten Cache hat und so schnell wie möglich ausgeführt werden kann.
 
-Wenn diese Funktion erfolgreich ausgeführt wird, bereitet Sie den Daten Bank Cache auf eine bevorstehende Unterbrechung vor. Diese Funktion fügt arbeiten an einen Hintergrund Arbeitsthread an und kehrt sofort an den Aufrufer zurück. Die-Funktion sollte basierend auf dem PLM visibilitynotice aufgerufen werden, anstatt vom Handler für die Unterbrechung der Anwendung aufgerufen zu werden, um sicherzustellen, dass Jet Zeit zum leeren von Änderungs Puffern hat, bevor der Prozess von PLM angehalten oder beendet wird. Intern löst Jet eine sofortige Verteilung der Prüf Punkt Wartung bei der Konfigurationsänderung aus (entweder Checkpoint Update oder this New versetzen Caches Bit). Weitere Informationen zu visibilitynotice-Ereignissen finden Sie unter [visibilitychangedeventargs-Klasse](/uwp/api/windows.ui.core.visibilitychangedeventargs).
 
-Diese Funktion muss zweimal aufgerufen werden. Sie wird aufgerufen, nachdem die Anwendung den Suspensions Hinweis vom Betriebssystem empfangen hat, aber bevor die Anwendung angehalten wurde. Anschließend wird Sie erneut aufgerufen, nachdem das Betriebssystem die Anwendung wieder aufnimmt. Beispiel:
+#### <a name="remarks"></a>Hinweise
 
-Beim Aufrufen zum aussetzen: JET_ERR JET_API JetStopServiceInstance2 (Instanz, JET_bitStopServiceQuiesceCaches);
+Diese Funktion ermöglicht es einer JET-Anwendung, den Datenbankcache in einen sauberen oder nahezu bereinigten Zustand zu verschieben (mit leerer E/A des Betriebssystems), damit die Wiederherstellung schnell ausgeführt werden kann, wenn die Anwendung beendet wird. Dieser Ansatz wird vor dem Beenden von JET bevorzugt, indem die [JetTerm-](./jetterm-function.md) oder [JetDetachDatabase-Funktionen](./jetdetachdatabase-function.md) aufruft werden, sodass die Anwendung im häufigeren Szenario einfach nicht mehr verwendet wird und die Anwendung später über den gesamten Cache verfügt und so schnell wie möglich einsatzbereit ist.
 
-Beim fortsetzen: JET_ERR JET_API JetStopServiceInstance2 (Instanz, JET_bitStopServiceQuiesceCaches | JET_bitStopServiceResume);
+Wenn diese Funktion erfolgreich ist, bereitet sie den Datenbankcache auf eine bevorstehende Unterbrechung vor. Diese Funktion arbeitet in einem Hintergrundarbeitsthread und kehrt sofort zum Aufrufer zurück. Die Funktion sollte auf Grundlage von DER VISIBILITyNotice aufgerufen werden, im Gegensatz zum Aufrufen vom Unterbrechungsereignishandler der Anwendung, um sicherzustellen, dass JET Zeit hat, dirty Puffer zu leeren, bevor DER PROZESS angehalten/beendet wird. Intern löst JET eine sofortige Versendung der Prüfpunktwartung nach einer Konfigurationsänderung aus (entweder prüfpunktaktualisierung oder dieses neue Inkullcachebit). Weitere Informationen zu VisibilityNotice-Ereignissen finden Sie unter [VisibilityChangedEventArgs-Klasse.](/uwp/api/windows.ui.core.visibilitychangedeventargs)
+
+Diese Funktion muss zweimal aufgerufen werden. Sie wird aufgerufen, nachdem die Anwendung den Unterbrechungshinweis vom Betriebssystem erhalten hat, aber bevor die Anwendung angehalten wurde. Anschließend wird sie erneut aufgerufen, nachdem das Betriebssystem die Anwendung fortgesetzt hat. Beispiel:
+
+Bei Einem -Aussetzen: JET_ERR JET_API JetStopServiceInstance2(-Instanz, JET_bitStopServiceQuiesceCaches);
+
+Bei Fortgesetzt: JET_ERR JET_API JetStopServiceInstance2(-Instanz, JET_bitStopServiceQuiesceCaches| JET_bitStopServiceResume );
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows 8.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2012.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2012.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
-#### <a name="see-also"></a>Siehe auch
+
+#### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetclosedatabase](./jetclosedatabase-function.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetdetachdatabase](./jetdetachdatabase-function.md)  
-[Jetendsession](./jetendsession-function.md)  
-[Jetresessioncontext](./jetresetsessioncontext-function.md)  
-[Jetrollback](./jetrollback-function.md)  
-[Jetterm](./jetterm-function.md)  
+[JetCloseDatabase](./jetclosedatabase-function.md)  
+[JetCloseTable](./jetclosetable-function.md)  
+[JetDetachDatabase](./jetdetachdatabase-function.md)  
+[JetEndSession](./jetendsession-function.md)  
+[JetResetSessionContext](./jetresetsessioncontext-function.md)  
+[JetRollback](./jetrollback-function.md)  
+[JetTerm](./jetterm-function.md)  
 [JetTerm2](./jetterm2-function.md)

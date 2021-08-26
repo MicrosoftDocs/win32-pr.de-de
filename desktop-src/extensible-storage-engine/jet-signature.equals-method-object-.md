@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SIGNATURE. Gleichheits Methode (Objekt)'
-title: JET_SIGNATURE. Gleichheits Methode (Objekt)
+description: 'Weitere Informationen finden Sie unter: JET_SIGNATURE. Equals-Methode (Objekt)'
+title: JET_SIGNATURE. Equals-Methode (Objekt)
 TOCTitle: Equals method (Object)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_SIGNATURE.Equals(System.Object)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_signature.equals(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8647a6e0c2a910d47d7bad31bc3f2922ffcaa42a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5b05543654592dc610d560e8db7b0b7d61dd8a25420e6797b8d55890673c4377
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116000"
 ---
-# <a name="jet_signatureequals-method-object"></a>JET_SIGNATURE. Gleichheits Methode (Objekt)
+# <a name="jet_signatureequals-method-object"></a>JET_SIGNATURE. Equals-Methode (Objekt)
 
 Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,23 +58,23 @@ public override bool Equals(
 #### <a name="parameters"></a>Parameter
 
   - obj  
-    Type: [System. Object](/dotnet/api/system.object)  
+    Typ: [System.Object](/dotnet/api/system.object)  
     
     Ein Objekt, das mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_SIGNATURE Struktur](./jet-signature-structure2.md)
+[JET_SIGNATURE-Struktur](./jet-signature-structure2.md)
 
-[Mitglieder JET_SIGNATURE](./jet-signature-members.md)
+[JET_SIGNATURE Member](./jet-signature-members.md)
 
-[Gleichheits Überladung](./jet-signature.equals-method.md)
+[Equals-Überladung](./jet-signature.equals-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

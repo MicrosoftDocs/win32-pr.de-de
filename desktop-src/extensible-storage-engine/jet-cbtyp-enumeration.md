@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_cbtyp-Enumeration'
+description: 'Weitere Informationen zu: JET_cbtyp-Enumeration'
 title: JET_cbtyp-Enumeration
 TOCTitle: JET_cbtyp enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_cbtyp
@@ -48,21 +48,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3d2e545fea9c1942dc09df82eb93eafa1d3e4e89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 209d3ffe9721f51b8c2d510eecb5408ac66cdbeb58309d1f033e2d23730328ae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356822"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120116230"
 ---
 # <a name="jet_cbtyp-enumeration"></a>JET_cbtyp-Enumeration
 
-Der Typ des Status, der gemeldet wird.
+Typ des gemeldeten Fortschritts.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -93,62 +93,62 @@ public enum JET_cbtyp
 <tr class="odd">
 <td></td>
 <td>Null</td>
-<td>Dieser Rückruf ist reserviert und wird immer als ungültig angesehen.</td>
+<td>Dieser Rückruf ist reserviert und gilt immer als ungültig.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Abschließen</td>
-<td>Eine finalisierbare Spalte ist auf 0 (null) übergegangen.</td>
+<td>Eine abschließende Spalte wurde auf 0 (null) festgelegt.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Beforeingesert</td>
-<td>Dieser Rückruf tritt direkt vor dem Einfügen eines neuen Datensatzes in eine Tabelle durch einen jetupdate-Rückruf auf.</td>
+<td>BeforeInsert</td>
+<td>Dieser Rückruf erfolgt unmittelbar vor dem Einfügen eines neuen Datensatzes in eine Tabelle durch einen Aufruf von JetUpdate.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>AfterInsert</td>
-<td>Dieser Rückruf tritt unmittelbar nach dem Einfügen eines neuen Datensatzes in eine Tabelle durch einen jetupdate-Rückruf auf, aber bevor jetupdate zurückgegeben wird.</td>
+<td>Dieser Rückruf erfolgt unmittelbar nach dem Einfügen eines neuen Datensatzes in eine Tabelle durch einen Aufruf von JetUpdate, aber bevor JetUpdate zurückgegeben wird.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Beforereplace</td>
-<td>Dieser Rückruf tritt direkt vor einem vorhandenen Datensatz in einer Tabelle auf, die durch einen jetupdate-Rückruf geändert wird.</td>
+<td>BeforeReplace</td>
+<td>Dieser Rückruf erfolgt unmittelbar bevor ein vorhandener Datensatz in einer Tabelle durch einen Aufruf von JetUpdate geändert wird.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>After replace</td>
-<td>Dieser Rückruf tritt auf, wenn ein vorhandener Datensatz in einer Tabelle durch einen jetupdate-Rückruf geändert wurde, jedoch bevor jetupdate zurückgegeben wird.</td>
+<td>AfterReplace</td>
+<td>Dieser Rückruf erfolgt unmittelbar nachdem ein vorhandener Datensatz in einer Tabelle durch einen Aufruf von JetUpdate geändert wurde, aber bevor JetUpdate zurückgegeben wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>BeforeDelete</td>
-<td>Dieser Rückruf tritt auf, kurz bevor ein vorhandener Datensatz in einer Tabelle durch einen jetdelete-Rückruf gelöscht wird.</td>
+<td>Dieser Rückruf erfolgt unmittelbar vor dem Löschen eines vorhandenen Datensatzes in einer Tabelle durch einen Aufruf von JetDelete.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>AfterDelete</td>
-<td>Dieser Rückruf tritt auf, wenn ein vorhandener Datensatz in einer Tabelle durch einen-Befehl von jetdelete gelöscht wird.</td>
+<td>Dieser Rückruf erfolgt unmittelbar nach dem Löschen eines vorhandenen Datensatzes in einer Tabelle durch einen Aufruf von JetDelete.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Userdefineddefaultvalue</td>
-<td>Dieser Rückruf tritt auf, wenn die Engine den benutzerdefinierten Standardwert einer Spalte aus der Anwendung abrufen muss. Bei diesem Rückruf handelt es sich im Wesentlichen um eine eingeschränkte Implementierung von jetretrievecolumgen, die von der Anwendung ausgewertet wird. Für einen benutzerdefinierten Standardwert können maximal ein Spaltenwert zurückgegeben werden.</td>
+<td>UserDefinedDefaultValue</td>
+<td>Dieser Rückruf tritt auf, wenn die Engine den benutzerdefinierten Standardwert einer Spalte aus der Anwendung abrufen muss. Dieser Rückruf ist im Wesentlichen eine eingeschränkte Implementierung von JetRetrieveColumn, die von der Anwendung ausgewertet wird. Maximal ein Spaltenwert kann für einen benutzerdefinierten Standardwert zurückgegeben werden.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Onlinedefragabgeschlossen</td>
-<td>Dieser Rückruf tritt auf, wenn die Online Defragmentierung einer Datenbank, die von jetdefragment initiiert wurde, beendet wurde, weil entweder der Prozess abgeschlossen oder das Zeitlimit erreicht wurde.</td>
+<td>OnlineDefragCompleted</td>
+<td>Dieser Rückruf tritt auf, wenn die Onlinedefragmentierung einer Datenbank, die von JetDefragment initiiert wurde, beendet wurde, weil entweder der Prozess abgeschlossen oder das Zeitlimit erreicht wurde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Freecursorls</td>
-<td>Dieser Rückruf tritt auf, wenn die Anwendung das Kontext Handle für den lokalen Speicher bereinigen muss, der einem Cursor zugeordnet ist, der von der Datenbank-Engine freigegeben wird. Weitere Informationen finden Sie unter jetsetls. Der Delegat für diesen Rückruf Grund wird mithilfe von jetsetsystemparameter mit JET_paramRuntimeCallback konfiguriert.</td>
+<td>FreeCursorLS</td>
+<td>Dieser Rückruf tritt auf, wenn die Anwendung das Kontexthandle für die lokale Storage bereinigen muss, die einem Cursor zugeordnet ist, der von der Datenbank-Engine freigegeben wird. Weitere Informationen finden Sie unter JetSetLS. Der Delegat für diesen Rückrufgrund wird mit JetSetSystemParameter mit JET_paramRuntimeCallback konfiguriert.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Freetablels</td>
-<td>Dieser Rückruf tritt auf, wenn die Anwendung das Kontext Handle für den lokalen Speicher bereinigen muss, der einer Tabelle zugeordnet ist, die von der Datenbank-Engine freigegeben wird. Weitere Informationen finden Sie unter jetsetls. Der Delegat für diesen Rückruf Grund wird mithilfe von jetsetsystemparameter mit JET_paramRuntimeCallback konfiguriert.</td>
+<td>FreeTableLS</td>
+<td>Dieser Rückruf tritt auf, weil die Anwendung das Kontexthandle für die lokale Storage bereinigen muss, die einer Tabelle zugeordnet ist, die von der Datenbank-Engine freigegeben wird. Weitere Informationen finden Sie unter JetSetLS. Der Delegat für diesen Rückrufgrund wird mit JetSetSystemParameter mit JET_paramRuntimeCallback konfiguriert.</td>
 </tr>
 </tbody>
 </table>
@@ -156,6 +156,6 @@ public enum JET_cbtyp
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

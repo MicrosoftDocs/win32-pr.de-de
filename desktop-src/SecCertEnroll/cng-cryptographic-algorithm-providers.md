@@ -1,38 +1,38 @@
 ---
-description: 'Im Unterschied zur Cryptography API (CryptoAPI) trennt Cryptography API: Next Generation (CNG) Kryptografieanbieter von Schlüsselspeicher Anbietern.'
+description: 'Im Gegensatz zur Kryptografie-API (CryptoAPI) trennt cryptography API: Next Generation (CNG) Kryptografieanbieter von Schlüsselspeicheranbietern.'
 ms.assetid: ce29bc97-049e-4c82-979f-4c805a318ba0
-title: CNG-kryptografiealgorithmusanbieter
+title: CNG-Kryptografiealgorithmusanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bc64926236157e581ce6406d95681bd8d4add14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0fd98a7eb6fd159c54977cdf8b72ebffd747da48
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347718"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467077"
 ---
-# <a name="cng-cryptographic-algorithm-providers"></a>CNG-kryptografiealgorithmusanbieter
+# <a name="cng-cryptographic-algorithm-providers"></a>CNG-Kryptografiealgorithmusanbieter
 
-Im Unterschied zur Cryptography API (CryptoAPI) trennt Cryptography API: Next Generation (CNG) Kryptografieanbieter von Schlüsselspeicher Anbietern. Grundlegende Vorgänge für kryptografische Algorithmen, z. b. Hashs und Signierung, werden als primitive Vorgänge oder einfach als primitive bezeichnet. CNG enthält einen Anbieter, der die folgenden Algorithmen implementiert.
+Im Gegensatz zur Kryptografie-API (CryptoAPI) trennt cryptography API: Next Generation (CNG) Kryptografieanbieter von Schlüsselspeicheranbietern. Grundlegende Kryptografiealgorithmusvorgänge wie Hashing und Signierung werden als primitive Vorgänge oder einfach primitive Vorgänge bezeichnet. CNG enthält einen Anbieter, der die folgenden Algorithmen implementiert.
 
 -   [Symmetrische Algorithmen](#symmetric-algorithms)
 -   [Asymmetrische Algorithmen](#asymmetric-algorithms)
 -   [Hashalgorithmen](#hashing-algorithms)
--   [Schlüsselaustausch Algorithmen](#key-exchange-algorithms)
+-   [Wichtige Exchange Algorithmen](#key-exchange-algorithms)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="symmetric-algorithms"></a>Symmetrische Algorithmen
 
 
 
-| Name                                   | Unterstützte Modi                                                                                                                                                                                                 | Schlüsselgröße in Bits (Standard/min/max) |
+| Name                                   | Unterstützte Modi                                                                                                                                                                                                 | Schlüsselgröße in Bits (Standard/Min./Max.) |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| Advanced Encryption Standard (AES)     | ECB, CBC, CFB8, CFB128, GCM, ccm, GMAC, CMAC, AES Key Wrap, XTS<br/> **Windows 8:** Die Unterstützung für die CFB128-und CMAC-Modi beginnt.<br/> **Windows 10:** Die Unterstützung für den XTS-AES-Modus beginnt.<br/> | 128/192/256                        |
-| Data Encryption Standard (des)         | ECB, CBC, CFB8, CFB64<br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                   | 56/56/56                           |
-| Data Encryption Standard XoReD (DESX)   | ECB, CBC, CFB8, CFB64 <br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                  | 192/192/192                        |
-| Triple Data Encryption Standard (3DES) | ECB, CBC, CFB8, CFB64 <br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                  | 112/168                            |
-| RSA Data Security 2 (RC2)              | Die Modi ECB, CBC, CFB8 und CFB64 werden unterstützt.<br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                              | 16 bis 128 in 8-Bit-Inkrementen      |
-| RSA Data Security 4 (RC4)              |                                                                                                                                                                                                                 | 8 bis 512, in 8-Bit-Inkrementen      |
+| Advanced Encryption Standard (AES)     | TASTEN, CBC, CFB8, CFB128, GCM, CCM, GMAC, CMAC, AES Key Wrap, XTS<br/> **Windows 8:** Die Unterstützung für die Modi CFB128 und CMAC beginnt.<br/> **Windows 10:** Die Unterstützung für den XTS-AES-Modus beginnt.<br/> | 128/192/256                        |
+| Data Encryption Standard (DES)         | VEREERBUNG, CBC, CFB8, CFB64<br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                   | 56/56/56                           |
+| Data Encryption Standard XORed(DESX)   | VEREERBUNG, CBC, CFB8, CFB64 <br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                  | 192/192/192                        |
+| Triple Data Encryption Standard (3DES) | VEREERBUNG, CBC, CFB8, CFB64 <br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                                                  | 112/168                            |
+| RSA Data Security 2 (RC2)              | DIE MODI 1, CBC, CFB8 und CFB64 werden unterstützt.<br/> **Windows 8:** Die Unterstützung für den CFB64-Modus beginnt.<br/>                                                                                              | 16 bis 128 in 8-Bit-Schritten      |
+| RSA Data Security 4 (RC4)              |                                                                                                                                                                                                                 | 8 bis 512 in 8-Bit-Schritten      |
 
 
 
@@ -42,10 +42,10 @@ Im Unterschied zur Cryptography API (CryptoAPI) trennt Cryptography API: Next Ge
 
 
 
-| Name                              | Notizen                                                                                                                                                                             | Schlüsselgröße in Bits (Standard/min/max)                                                                            |
+| Name                              | Notizen                                                                                                                                                                             | Schlüsselgröße in Bits (Standard/Min./Max.)                                                                            |
 |-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Digital Signature-Algorithmus (DSA) | Die Implementierung entspricht dem Wert von "fps 186-3" für Schlüsselgrößen zwischen 1024 und 3072 Bits. <br/> Die Implementierung entspricht dem Wert von "fps 186-2" für Schlüsselgrößen von 512 bis 1024 Bits.<br/> | 512 bis 3072, in 64-Bit-Inkrementen<br/> **Windows 8:** Die Unterstützung für die 3072-Bit-Taste beginnt.<br/> |
-| RSA                               | Schließt RSA-Algorithmen ein, die PKCS1, optimale OAEP (asymmetrisch Encryption Auffüllung)-Codierung oder-Auffüll-oder Auffüll-und Auffüll-und Auffüll Text Auffüll Zeichen verwenden.               | 512 bis 16384, in 64-Bit-Inkrementen                                                                            |
+| Digital Signature Algorithm (DSA) | Die Implementierung entspricht FIPS 186-3 für Schlüsselgrößen zwischen 1024 und 3072 Bit. <br/> Die Implementierung entspricht FIPS 186-2 für Schlüsselgrößen von 512 bis 1024 Bit.<br/> | 512 bis 3072 in 64-Bit-Schritten<br/> **Windows 8:** Die Unterstützung für einen 3072-Bit-Schlüssel beginnt.<br/> |
+| RSA                               | Enthält RSA-Algorithmen, die PKCS1, OAEP-Codierung (Optimal Asymmetric Encryption Padding) oder Probabilistic Signature Scheme (PSS)-Klartextauf padding verwenden.               | 512 bis 16384 in 64-Bit-Schritten                                                                            |
 
 
 
@@ -55,60 +55,31 @@ Im Unterschied zur Cryptography API (CryptoAPI) trennt Cryptography API: Next Ge
 
 
 
-| Name                               | Notizen               | Schlüsselgröße in Bits (Standard/min/max) |
+| Name                               | Notizen               | Schlüsselgröße in Bits (Standard/Min./Max.) |
 |------------------------------------|---------------------|------------------------------------|
-| Secure-Hash-Algorithmus 1 (SHA1)     | Umfasst HmacSha1   | 160/160/160                        |
-| Secure Hash-Algorithmus 256 (SHA256) | Umfasst HmacSha256 | 256/256/256                        |
-| Secure Hash-Algorithmus 384 (SHA384) | Umfasst HmacSha384 | 384/384/384                        |
-| Secure Hash-Algorithmus 512 (SHA512) | Umfasst HmacSha512 | 512/512/512                        |
-| Message Digest 2 (MD2)             | Umfasst HmacMd2    | 128/128/128                        |
-| Message Digest 4 (MD4)             | Umfasst HmacMd4    | 128/128/128                        |
-| Message Digest 5 (MD5)             | Umfasst HmacMd5    | 128/128/128                        |
+| Secure-Hash-Algorithmus 1 (SHA1)     | Enthält HmacSha1   | 160/160/160                        |
+| Sicherer Hashalgorithmus 256 (SHA256) | Enthält HmacSha256 | 256/256/256                        |
+| Sicherer Hashalgorithmus 384 (SHA384) | Enthält HmacSha384 | 384/384/384                        |
+| Sicherer Hashalgorithmus 512 (SHA512) | Enthält HmacSha512 | 512/512/512                        |
+| Message Digest 2 (MD2)             | Enthält HmacMd2    | 128/128/128                        |
+| Message Digest 4 (MD4)             | Enthält HmacMd4    | 128/128/128                        |
+| Message Digest 5 (MD5)             | Enthält HmacMd5    | 128/128/128                        |
 
 
 
  
 
-## <a name="key-exchange-algorithms"></a>Schlüsselaustausch Algorithmen
+## <a name="key-exchange-algorithms"></a>Wichtige Exchange Algorithmen
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Algorithmusname</th>
-<th>Notizen</th>
-<th>Schlüsselgröße in Bits (Standard/min/max)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Diffie-Hellman Schlüsselaustausch Algorithmus</td>
 
-<td>512 bis 4096, in 64-Bit-Inkrementen</td>
-</tr>
-<tr class="even">
-<td>ECDH (Elliptic Curve Diffie-Hellman)</td>
-<td>Schließt Kurven ein, die die öffentlichen Schlüssel 256, 384 und 521 Bit verwenden, wie in SP800-56a angegeben.</td>
-<td>256/384/521</td>
-</tr>
-<tr class="odd">
-<td>ECDSA (Elliptic Curve Digital Signature-Algorithmus)</td>
-<td>Schließt Kurven ein, die die öffentlichen Schlüssel 256, 384 und 521 Bit verwenden, wie in "fps 186-3" angegeben.
-<blockquote>
-[!Note]<br />
-Verwenden Sie <strong>certutil displayecccurve</strong>, um alle benannten elliptischen Kurven anzuzeigen.
-</blockquote>
-<br/></td>
-<td>256/384/521</td>
-</tr>
-</tbody>
-</table>
+| Algorithmusname | Hinweise | Schlüsselgröße in Bits (Standard/Min./Max.) | 
+|----------------|-------|------------------------------------|
+| Diffie-Hellman Key Exchange Algorithm | 512 bis 4096 in 64-Bit-Schritten | 
+| Elliptic Curve Diffie-Hellman (ECDH) | Schließt Kurven ein, die öffentliche Schlüssel mit 256, 384 und 521 Bit verwenden, wie in SP800-56A angegeben. | 256/384/521 | 
+| Elliptic Curve Digital Signature Algorithm (ECDSA) | Schließt Kurven ein, die öffentliche Schlüssel mit 256, 384 und 521 Bit verwenden, wie in FIPS 186-3 angegeben.<blockquote>[!Note]<br />Um alle benannten elliptischen Kurven anzuzeigen, verwenden Sie <strong>certutil displayEccCurve</strong>.</blockquote><br /> | 256/384/521 | 
+
 
 
 
@@ -121,7 +92,7 @@ Verwenden Sie <strong>certutil displayecccurve</strong>, um alle benannten ellip
 [**CNG-Algorithmusbezeichner**](/windows/desktop/SecCNG/cng-algorithm-identifiers)
 </dt> <dt>
 
-[Kryptografische CNG-Funktionen](/windows/desktop/SecCNG/cng-cryptographic-primitive-functions)
+[Kryptografische primitive CNG-Funktionen](/windows/desktop/SecCNG/cng-cryptographic-primitive-functions)
 </dt> <dt>
 
 [Grundlegendes zu Kryptografieanbietern](understanding-cryptographic-providers.md)
