@@ -1,46 +1,46 @@
 ---
 title: HLS-Farbräume
-description: HLS-Farbbereiche werden auch von Künstlern häufig verwendet. Die Farbkomponenten sind Hue, Helligkeit und Sättigung (Chroma).
+description: HLS-Farbräume werden auch häufig von Lehrern verwendet. Die Farbkomponenten sind Farbton, Helligkeit und Sättigung (Hue).
 ms.assetid: 8c80d200-c4d0-4233-8f53-a9637dff9ab2
 keywords:
-- Windows Color System (WCS), HLS-Farbbereiche
-- WCS (Windows Color System), HLS-Farbbereiche
-- Bild Farbverwaltung, HLS-Farbbereiche
-- Farbverwaltung, HLS-Farbbereiche
-- Farben, HLS-Farbbereiche
-- Farbbereiche, HLS
-- HLS-Farbbereiche
+- Windows Farbsystem (WCS), HLS-Farbräume
+- WCS (Windows Color System), HLS-Farbräume
+- Bildfarbverwaltung, HLS-Farbräume
+- Farbverwaltung, HLS-Farbräume
+- Farben,HLS-Farbräume
+- Farbräume,HLS
+- HLS-Farbräume
 - hue
-- Sattel
-- Helligkeit
-- keine Sättigung
-- Hue-Helligkeit (HLS)
-- HLS (Hue Helligkeit Sättigung)
+- Sättigung
+- Leichtigkeit
+- Nullsättigung
+- Farbtonlichtsättigung (HLS)
+- HLS (Farbtonlichtsättigung)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 613a62d4a998b51f9bfb22bd7431dd8645a72f3e
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 4d0dc0c47555f5358360a1ac81faf113c0fd6e98572c4d0c96852070a1749073
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106355696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934965"
 ---
 # <a name="hls-color-spaces"></a>HLS-Farbräume
 
-HLS- [Farbbereiche](c.md) werden auch von Künstlern häufig verwendet. Die Farbkomponenten sind Hue, Helligkeit und Sättigung (Chroma).
+[HLS-Farbräume](c.md) werden auch häufig von Lehrern verwendet. Die Farbkomponenten sind Farbton, Helligkeit und Sättigung (Hue).
 
-Hue hat dieselbe Bedeutung wie das HSV-Modell, mit dem Unterschied, dass der Hue-Winkel 0 in diesem Modell blau entspricht. Magenta liegt bei 60, rot liegt bei 120. Wie beim HSV-Modell sind ergänzende Farben 180 voneinander entfernt.
+Hue hat die gleiche Bedeutung wie das HSV-Modell, mit der Ausnahme, dass der Farbtonwinkel 0 in diesem Modell Blau entspricht. Magenta ist bei 60, rot bei 120. Wie beim HSV-Modell unterscheiden sich ergänzende Farben um 180.
 
-Helligkeit ist die Menge schwarz oder weiß in einer Farbe. Durch Erhöhen der Helligkeit wird der Farbton weiß. Die abnehmende Helligkeit erhöht den Farbton in schwarz.
+Die Lichtheit ist die Schwarz- oder Weißmenge in einer Farbe. Durch erhöhen der Lichtheit wird dem Farbton Weiß hinzufügt. Durch verringernde Lichtheit wird dem Farbton Schwarz hinzufügt.
 
-Die [Sättigung](s.md) im HLS-Modell ist ein Measure der "Reinheit" eines Hue. Wenn die Sättigung verringert wird, wird der Farbton grau. Ein Sättigungswert von 0 (null) führt zu einem grauen Skalierungs Wert.
+[Die](s.md) Sättigung im HLS-Modell ist ein Maß für die "Vererbung" eines Farbtons. Wenn die Sättigung verringert wird, wird der Farbton grauer. Ein Sättigungswert von 0 (null) führt zu einem Graustufenwert.
 
-Die folgende Abbildung ist eine Linienzeichnung des HLS-Raums, bei der es sich um einen doppelten hexkegel handelt. Ein horizontaler Kreuz Abschnitt des HLS-Farbraum ist ein hexseck. HLS ist ein normalisierter Farbraum. Das heißt, die Werte für Helligkeit und Sättigung liegen zwischen 0,0 und 1,0. Hue variiert zwischen 0 und 360.
+Die folgende Abbildung zeigt eine Linienzeichnung des HLS-Raumes, bei der es sich um ein doppeltes Hexadezimalkon handelt. Jeder horizontale Abschnitt des HLS-Farbraums ist ein Sechseck. HLS ist ein normalisierter Farbraum. Das heißt, die Werte für Helligkeit und Sättigung reichen von 0,0 bis einschließlich 1,0. Hue variiert von 0 bis einschließlich 360.
 
-![HLS-Farbraum](images/hlsline.png)
+![hls-Farbraum](images/hlsline.png)
 
-HLS-Farbbereiche können Geräte abhängig oder Geräte unabhängig sein.
+HLS-Farbräume können geräteabhängig oder geräteunabhängig sein.
 
  
 

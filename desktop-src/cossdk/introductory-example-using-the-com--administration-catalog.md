@@ -1,41 +1,41 @@
 ---
-description: Einführ Endes Beispiel mit dem com+-Verwaltungs Katalog
+description: Einführendes Beispiel mit dem COM+-Verwaltungskatalog
 ms.assetid: e9ce25aa-4fb1-4357-9f4e-5bf649e29447
-title: Einführ Endes Beispiel mit dem com+-Verwaltungs Katalog
+title: Einführendes Beispiel mit dem COM+-Verwaltungskatalog
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db24f3985538b7189534c9fef3ef279ed240e3a1
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5bfd085cbe9a829a1248ddf36057c9d9f79de9d576236a2621b237063340cf95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070590"
 ---
-# <a name="introductory-example-using-the-com-administration-catalog"></a>Einführ Endes Beispiel mit dem com+-Verwaltungs Katalog
+# <a name="introductory-example-using-the-com-administration-catalog"></a>Einführendes Beispiel mit dem COM+-Verwaltungskatalog
 
-Wenn Sie den com+-Verwaltungs Katalog Programm gesteuert verwenden, führen Sie in der Regel die folgenden allgemeinen Schritte aus (Dies ist hier nicht in einer strengen Reihenfolge angegeben):
+Bei der programmgesteuerten Verwendung des COM+-Verwaltungskatalogs führen Sie in der Regel die folgenden allgemeinen Schritte aus (hier nicht in einer strengen Reihenfolge angegeben):
 
--   Öffnen Sie eine Sitzung mit dem com+-Katalog auf dem lokalen Computer. Stellen Sie optional eine Verbindung mit dem com+-Katalog auf einem Remote Computer her.
--   Aktionen ausführen, z. b. das Starten oder Beenden von Diensten – Aktionen, die sich nicht auf eine bestimmte COM+-Anwendung beziehen.
--   Führen Sie Aktionen aus, z. b. das Installieren oder Exportieren von com+-Anwendungen oder das Installieren von Komponenten in Anwendungen – Aktionen, die das Lesen oder schreiben in Dateien betreffen.
--   Hinzufügen neuer Elemente zu Sammlungen, z. b. Erstellen einer neuen COM+-Anwendung durch Hinzufügen eines neuen Elements zur Sammlung "Anwendungen".
--   Legen Sie Eigenschaften für ein Element in einer Auflistung fest oder legen Sie diese fest.
--   Speichern oder verwerfen Sie ausstehende Änderungen im Katalog.
--   Behandeln Sie eventuell auftretenden Fehler.
+-   Öffnen Sie eine Sitzung mit dem COM+-Katalog auf dem lokalen Computer. Stellen Sie optional eine Verbindung mit dem COM+-Katalog auf einem Remotecomputer herstellen.
+-   Ausführen von Aktionen wie dem Starten oder Beenden von Diensten– Aktionen, die sich nicht auf eine bestimmte COM+-Anwendung beziehen.
+-   Ausführen von Aktionen wie dem Installieren oder Exportieren von COM+-Anwendungen oder dem Installieren von Komponenten in Anwendungen – Aktionen zum Lesen aus oder Schreiben in Dateien.
+-   Fügen Sie Sammlungen neue Elemente hinzu, z. B. erstellen Sie eine neue COM+-Anwendung, indem Sie der Sammlung "Anwendungen" ein neues Element hinzufügen.
+-   Legen Sie Eigenschaften für ein Element in einer Auflistung fest, oder erhalten Sie sie.
+-   Speichern oder verwerfen Sie ausstehende Änderungen am Katalog.
+-   Behandeln Sie alle Fehler, die auftreten können.
 
-Um anzuzeigen, wie diese Schritte aussehen, wenn Sie die COMAdmin-Objekte verwenden, wird unten ein Microsoft Visual Basic-Beispiel bereitgestellt. Es werden einige der oben beschriebenen typischen Schritte kurz erläutert, wie z. b. das Suchen von Sammlungen, das Auflisten einer Auflistung zum Abrufen eines Elements und das Festlegen von Eigenschaften für dieses Element.
+Um zu zeigen, wie diese Schritte aussehen, wenn Sie die COMAdmin-Objekte verwenden, finden Sie Visual Basic Microsoft-Beispiel. Es veranschaulicht kurz einige der oben beschriebenen typischen Schritte, z. B. das Suchen von Sammlungen, das Aufzählen einer Auflistung zum Abrufen eines Elements und das Festlegen von Eigenschaften für dieses Element.
 
 Im folgenden Beispiel führen Sie die folgenden Aktionen aus:
 
-1.  Erstellen Sie eine neue COM+-Anwendung mit dem Namen "myhomezoo".
-2.  Installieren Sie einige Komponenten (Cat und Dog) in der Anwendung. Beide Komponenten sind in einer einzigen dll enthalten, die bereits vorhanden sein muss: MyZoo.dll.
-3.  Konfigurieren Sie die rollenbasierte Sicherheit für die Anwendung, indem Sie zwei Rollen definieren: Zookeeper und allergictocats.
-4.  Weisen Sie der Zookeeper-Rolle den Zugriff auf die gesamte Anwendung zu.
-5.  Weisen Sie der Rolle "allergicdecats" nur Zugriff auf die Dog-Komponente zu.
-6.  Aktivieren Sie die Sicherheitseigenschaften, damit die Rollen Überprüfung für die Anwendung erzwungen wird.
-7.  Exportieren Sie die Anwendung myhomezoo in eine Datei, damit Sie auf anderen Computern installiert werden kann.
+1.  Erstellen Sie die neue COM+-Anwendung "MyHomeZoo".
+2.  Installieren Sie einige Komponenten , Cat und Dog, in der Anwendung. Beide Komponenten sind in einer einzelnen DLL enthalten, die bereits vorhanden sein muss: MyZoo.dll.
+3.  Konfigurieren Sie die rollenbasierte Sicherheit für die Anwendung, indem Sie zwei Rollen definieren: ZooKeeper und AberToCats.
+4.  Weisen Sie der gesamten Anwendung zugriff auf die ZooKeeper-Rolle zu.
+5.  Weisen Sie nur der Dog-Komponente den Zugriff auf die Rolle "SolltoCats" zu.
+6.  Aktivieren Sie Sicherheitseigenschaften, damit die Rollenüberprüfung für die Anwendung erzwungen wird.
+7.  Exportieren Sie die Anwendung MyHomeZoo in eine Datei, damit sie auf anderen Computern installiert werden kann.
 
-Um dieses Beispiel in Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-admin-Typbibliothek hinzu.
+Um dieses Beispiel aus Visual Basic verwenden zu können, fügen Sie einen Verweis auf die COM+-Administratortypbibliothek hinzu.
 
 
 ```VB
@@ -180,19 +180,19 @@ Exit Function
 
 <dl> <dt>
 
-[Com+-Verwaltungsvorgänge in Transaktionen](com--administration-operations-within-transactions.md)
+[COM+-Verwaltungsvorgänge innerhalb von Transaktionen](com--administration-operations-within-transactions.md)
 </dt> <dt>
 
-[Behandeln von com+-Verwaltungsfehlern](handling-com--administration-errors.md)
+[Behandeln von COM+-Verwaltungsfehlern](handling-com--administration-errors.md)
 </dt> <dt>
 
 [Übersicht über die COMAdmin-Objekte](overview-of-the-comadmin-objects.md)
 </dt> <dt>
 
-[Abrufen von Auflistungen im com+-Katalog](retrieving-collections-on-the-com--catalog.md)
+[Abrufen von Sammlungen im COM+-Katalog](retrieving-collections-on-the-com--catalog.md)
 </dt> <dt>
 
-[Festlegen von Eigenschaften und Speichern von Änderungen am com+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
+[Festlegen von Eigenschaften und Speichern von Änderungen am COM+-Katalog](setting-properties-and-saving-changes-to-the-com--catalog.md)
 </dt> </dl>
 
  

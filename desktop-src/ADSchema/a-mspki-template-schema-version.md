@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-Template-Schema-Version-Attribut
-description: Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
+title: ms-PKI-Template-Schema-Version-Attribut
+description: Verfolgt Schemaaktualisierungen der PKI-Certificate-Template-Klasse nach.
 ms.assetid: 7ad55f1a-cdb9-4eea-bd09-db4f5e6373ba
 ms.tgt_platform: multiple
 keywords:
-- MS-PKI-Template-Schema-Version-Attribut AD-Schema
-- mspki-Template-Schema-Version-Attribut AD-Schema
+- ms-PKI-Template-Schema-Version-Attribut AD Schema
+- msPKI-Template-Schema-Version-Attribut AD Schema
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0cc3b7952b55b346da29119775bb9c0f8b825c50
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 19ba5dcd71abac9339c8be6b4c1b04828e65bbdcff47ab1086296603c1569dbe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066420"
 ---
-# <a name="ms-pki-template-schema-version-attribute"></a>MS-PKI-Template-Schema-Version-Attribut
+# <a name="ms-pki-template-schema-version-attribute"></a>ms-PKI-Template-Schema-Version-Attribut
 
-Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
+Verfolgt Schemaaktualisierungen der PKI-Certificate-Template-Klasse nach.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------------------------------------------|
-| CN                | MS-PKI-Template-Schema-Version                                                                    |
-| LDAP-Display-Name | mspki-Template-Schema-Version                                                                     |
+| CN                | ms-PKI-Template-Schema-Version                                                                    |
+| Ldap-Anzeigename | msPKI-Template-Schema-Version                                                                     |
 | Size              | 4 Bytes                                                                                           |
-| Berechtigung aktualisieren  | Domänen Administrator                                                                              |
-| Aktualisierungshäufigkeit  | Wenn das Objekt Vorlage (MS-PKI-Certificate-template) bearbeitet, erstellt oder geklont wird. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                                                                              |
+| Updatehäufigkeit  | Wenn das Zertifikatvorlagenobjekt (ms-PKI-Certificate-Template) bearbeitet, erstellt oder geklont wird. |
 | Attribute-Id      | 1.2.840.113556.1.4.1434                                                                           |
-| System-ID-GUID    | 0c15e9f 5-491d-4594-918 a091da9                                                              |
+| System-Id-Guid    | 0c15e9f5-491d-4594-918f-32813a091da9                                                              |
 | Syntax            | [**Enumeration**](s-enumeration.md)                                                              |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -56,16 +56,16 @@ Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -77,16 +77,16 @@ Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Verfolgt Schema Aktualisierungen der PKI-Certificate-Template-Klasse.
 |------------------------|-------------------------------------------------------------------------|
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
-| System-Only            | False                                                                   |
-| Ist-einwertig       | Richtig                                                                    |
-| Ist indiziert             | False                                                                   |
-| Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| System-Only            | Falsch                                                                   |
+| Is-Single-Valued       | Richtig                                                                    |
+| Ist indiziert             | Falsch                                                                   |
+| Im globalen Katalog      | Falsch                                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

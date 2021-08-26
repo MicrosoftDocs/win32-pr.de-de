@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. SetDeleted-Methode
-description: Die SetDeleted-Methode verschiebt eine Wiedergabeliste in den Ordner "Gelöschte Elemente".
+title: PlaylistCollection.setDeleted-Methode
+description: Die setDeleted-Methode verschiebt eine Wiedergabeliste in den Ordner für gelöschte Elemente.
 ms.assetid: c41f7e89-11c8-4d55-91eb-a89e6f39e56b
 keywords:
-- SetDeleted-Methoden Fenster Media Player
-- SetDeleted-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, SetDeleted-Methode
+- setDeleted-Windows Media Player
+- setDeleted-Methode Windows Media Player , PlaylistCollection-Klasse
+- PlaylistCollection-Klasse Windows Media Player , setDeleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2953066f115ebec05e7ee90e57a171884986d156
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c14c36ff8a60c95ee1f5e1f85a46991660a6e5bae17367c01cec3d00da3d1f06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371344"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119901130"
 ---
-# <a name="playlistcollectionsetdeleted-method"></a>Playlistcollection. SetDeleted-Methode
+# <a name="playlistcollectionsetdeleted-method"></a>PlaylistCollection.setDeleted-Methode
 
-Die **SetDeleted** -Methode verschiebt eine Wiedergabeliste in den Ordner "Gelöschte Elemente".
+Die **setDeleted-Methode** verschiebt eine Wiedergabeliste in den Ordner für gelöschte Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ PlaylistCollection.setDeleted(
 
 <dl> <dt>
 
-*Wiedergabeliste* \[ in\]
+*Wiedergabeliste* \[ In\]
 </dt> <dd>
 
-Das **Wiedergabe** Listen Objekt, das verschoben werden soll.
+Das **wiedergabelisten-Objekt,** das verschoben werden soll.
 
 </dd> <dt>
 
-*true* \[ in\]
+*TRUE* \[ In\]
 </dt> <dd>
 
 Geben Sie diesen Wert immer an.
@@ -61,9 +61,9 @@ Geben Sie diesen Wert immer an.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Windows Media Player 10 Mobile**: Diese Methode wird nicht unterstützt.
+**Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0, Windows Media Player Version 7,1 oder Windows Media Player für Windows XP. Diese Methode wird für Windows Media Player 9-Serie oder höher nicht unterstützt.<br/> |
+| Version<br/> | Windows Media Player Version 7.0, Windows Media Player Version 7.1 oder Windows Media Player für Windows XP. Diese Methode wird für die Windows Media Player 9-Serie oder höher nicht unterstützt.<br/> |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl>                                                                                                              |
 
 
@@ -80,7 +80,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> </dl>
 
  

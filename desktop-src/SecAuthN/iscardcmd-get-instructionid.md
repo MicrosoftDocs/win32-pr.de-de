@@ -1,7 +1,7 @@
 ---
-description: Ruft das Anweisungs bezeichnerbyte aus der Anwendungsprotokoll Daten-Einheit (APDU) ab.
+description: Ruft das Anweisungsbezeichner-Byte aus der Anwendungsprotokoll-Dateneinheit (Application Protocol Data Unit, APDU) ab.
 ms.assetid: 294f51cd-0a13-4dfb-bf02-9edd11a7085e
-title: 'Iscardcmd:: get_InstructionId-Methode (scarddat. h)'
+title: ISCardCmd::get_InstructionId-Methode (Scarddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 4b0125237ef94a5d6173f517483b9ae8781d5607
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 586d980362d55020b655bd592a2f98b665941d90b22a8d5bc5719b3b98f63ce6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014980"
 ---
-# <a name="iscardcmdget_instructionid-method"></a>Iscardcmd:: get- \_ instructionid-Methode
+# <a name="iscardcmdget_instructionid-method"></a>ISCardCmd::get \_ InstructionId-Methode
 
-\[Die **get \_ instructionid** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **get \_ InstructionId-Methode** ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **get \_ instructionid** -Methode ruft das Anweisungs bezeichnerbyte aus der [*Application Protocol Data Unit*](../secgloss/a-gly.md) (APDU) ab.
+Die **get \_ InstructionId-Methode** ruft das Anweisungsbezeichner-Byte aus der [*Anwendungsprotokoll-Dateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,41 +41,41 @@ HRESULT get_InstructionId(
 
 <dl> <dt>
 
-*pbyins* \[ vorgenommen\]
+*pbyIns* \[ out\]
 </dt> <dd>
 
-Zeiger auf das Byte, das die Anweisungs-ID aus dem APDU bei der Rückgabe ist.
+Zeiger auf das Byte, das die Anweisungs-ID aus der APDU bei der Rückgabe ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>     |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *pbyins* -Parameter ist ungültig.<br/>  |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *pbyins* übergeben.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *pbyIns-Parameter* ist ungültig.<br/>  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in *pbyIns übergeben.*<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den Anweisungs Bezeichner auf einen neuen Wert festzulegen, wenden Sie [**Put \_ instructionid**](iscardcmd-put-instructionid.md)an.
+Um den Anweisungsbezeichner auf einen neuen Wert zu setzen, rufen Sie [**put \_ InstructionId auf.**](iscardcmd-put-instructionid.md)
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardcmd**](iscardcmd.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardCmd**](iscardcmd.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcard-Fehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie das Anweisungs bezeichnerbyte aus der [*Anwendungsprotokoll Dateneinheit (Application Protocol Data Unit*](../secgloss/a-gly.md) , APDU) abgerufen wird Im Beispiel wird davon ausgegangen, dass "piscardcmd" ein gültiger Zeiger auf eine Instanz der [**iscardcmd**](iscardcmd.md) -Schnittstelle ist.
+Das folgende Beispiel zeigt, wie das Anweisungsbezeichner-Byte aus der [*Anwendungsprotokoll-Dateneinheit*](../secgloss/a-gly.md) (Application Protocol Data Unit, APDU) abgerufen wird. Im Beispiel wird davon ausgegangen, dass pISCardCmd ein gültiger Zeiger auf eine Instanz der [**ISCardCmd-Schnittstelle**](iscardcmd.md) ist.
 
 
 ```C++
@@ -99,25 +99,25 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scarddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scarddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardcmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
+| IID<br/>                      | IID \_ ISCardCmd ist als D5778AE3-43DE-11D0-9171-00AA00C18068 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardcmd**](iscardcmd.md)
+[**ISCardCmd**](iscardcmd.md)
 </dt> <dt>
 
-[**\_instructionid platzieren**](iscardcmd-put-instructionid.md)
+[**put \_ InstructionId**](iscardcmd-put-instructionid.md)
 </dt> </dl>
 
  

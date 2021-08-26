@@ -1,25 +1,25 @@
 ---
-description: Wird von einem Medienstream ausgelöst, wenn der Stream gestartet oder beendet wird. Weitere Informationen zur Daten Verdünnung finden Sie unter Informationen zur Raten Kontrolle.
+description: Wird von einem Medienstream ausgelöst, wenn er den Stream startet oder beendet. Informationen zum Ausschmalen finden Sie unter Informationen zur Ratensteuerung.
 ms.assetid: 7de8cb64-122a-475f-990c-c19590a9d9d8
-title: Mestreamthinmode-Ereignis (mfobjects. h)
+title: MEStreamThinMode-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7e19d25e5ab0430d96a9d431c941288e260092b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 371c628498356f64918d42ffe6af94aef95af34005250ba3a4a891b6b76f6dc6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013560"
 ---
-# <a name="mestreamthinmode-event"></a>Mestreamthinmode-Ereignis
+# <a name="mestreamthinmode-event"></a>MEStreamThinMode-Ereignis
 
-Wird von einem Medienstream ausgelöst, wenn der Stream gestartet oder beendet wird. Weitere Informationen zur Daten *Verdünnung* finden Sie unter Informationen [zur Raten Kontrolle](about-rate-control.md).
+Wird von einem Medienstream ausgelöst, wenn er den Stream startet oder beendet. Informationen zur *Ausschmalung* finden Sie unter [Informationen zur Ratensteuerung.](about-rate-control.md)
 
-Dieses Ereignis kann als Reaktion auf die [**imfratecontrol:: setRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) -Methode oder die [**imfqualityempfehlung:: setdropmode**](/windows/desktop/api/mfidl/nf-mfidl-imfqualityadvise-setdropmode) -Methode gesendet werden.
+Dieses Ereignis kann als Antwort auf die [**METHODE VONRATECONTROL::SetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-setrate) oder DIE [**METHODE DERQUALITYAdvise::SetDropMode**](/windows/desktop/api/mfidl/nf-mfidl-imfqualityadvise-setdropmode) gesendet werden.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
@@ -31,16 +31,16 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 <thead>
 <tr class="header">
 <th>VARTYPE</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>VT_BOOL<br/></td>
-<td>Gibt an, ob die Verdünnung gestartet oder beendet wurde.<br/>
+<td>Gibt an, ob die Schlankerlegung gestartet oder beendet wurde.<br/>
 <ul>
-<li>VARIANT_TRUE: die nach diesem Ereignis übermittelten Beispiele sind dünn.</li>
-<li>VARIANT_FALSE: die nach diesem Ereignis übermittelten Beispiele sind nicht dünn.</li>
+<li>VARIANT_TRUE: Nach diesem Ereignis übermittelte Beispiele werden ausgesät.</li>
+<li>VARIANT_FALSE: Stichproben, die nach diesem Ereignis übermittelt werden, werden nicht ausgesät.</li>
 </ul>
 <br/></td>
 </tr>
@@ -55,9 +55,9 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
@@ -65,7 +65,7 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Texcube (HLSL-Referenz)
-description: Abtastungen einer Cube-Textur.
+title: texCUBE (HLSL-Referenz)
+description: Stichproben einer Cubetextur.
 ms.assetid: 77943eb9-86e8-4ae4-8975-8f925e084ce4
 keywords:
-- Texcube HLSL
+- texCUBE HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 524ed44028372eeabf176c30da8b3a31a8ee7988
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e8648ab49db8b835bce5127b7e02c2d39783f15e3edf9b261d33712b00f10c6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068120"
 ---
-# <a name="texcube-hlsl-reference"></a>Texcube (HLSL-Referenz)
+# <a name="texcube-hlsl-reference"></a>texCUBE (HLSL-Referenz)
 
-Abtastungen einer Cube-Textur.
+Stichproben einer Cubetextur.
 
 
 
-| Ret Texcube (s, t) |
+| ret texCUBE(s, t) |
 |-------------------|
 
 
@@ -39,8 +39,8 @@ Abtastungen einer Cube-Textur.
 
 | Element                                                   | BESCHREIBUNG                               |
 |--------------------------------------------------------|-------------------------------------------|
-| <span id="s"></span><span id="S"></span>*Hymnen*<br/> | \[im \] samplerzustand.<br/>      |
-| <span id="t"></span><span id="T"></span>*Bund*<br/> | \[in \] der Textur Koordinate.<br/> |
+| <span id="s"></span><span id="S"></span>*s*<br/> | \[im \] Zustand "Sampler".<br/>      |
+| <span id="t"></span><span id="T"></span>*T*<br/> | \[in \] Die Texturkoordinate.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Abtastungen einer Cube-Textur.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Wert der Textur Daten.
+Der Wert der Texturdaten.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -56,36 +56,36 @@ Der Wert der Textur Daten.
 
 | Name | Ein/Aus | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                       | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size |
 |------|--------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|------|
-| s    | in     | [**Objekt**](dx-graphics-hlsl-intrinsic-functions.md) | [samplercube](dx-graphics-hlsl-sampler.md)                    | 1    |
-| t    | in     | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
-| TZI  | out    | [**ve**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
+| s    | in     | [**Objekt (object)**](dx-graphics-hlsl-intrinsic-functions.md) | [samplerCUBE](dx-graphics-hlsl-sampler.md)                    | 1    |
+| t    | in     | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | 3    |
+| Ret  | out    | [**Vektor**](dx-graphics-hlsl-intrinsic-functions.md) | [**float**](/windows/desktop/WinProg/windows-data-types)                        | 4    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt               |
 |-----------------------------------------------------------|-------------------------|
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja (nur Pixel-Shader) |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Ja (nur Pixel-Shader) |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Ja (nur Pixel-Shader) |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

@@ -7,16 +7,16 @@ keywords:
 - Anforderung für Kommentare, Routingprotokolle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a3d3acb6e269c10a128a2b9519b892cd373ad4f
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: dca1cb772b3e2e3f37a643ac73b2bd855820e238a54c4090d79377868dd9c546
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404783"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120027260"
 ---
 # <a name="routing-protocols-request-for-comments"></a>Routingprotokollanforderung für Kommentare
 
-Requests for Comments (RFCs) ist eine fortlaufende Reihe von Dokumenten, in denen die Internet- und Internettechnologien diskutiert werden. Bestimmte RFCs werden anhand der Zahl identifiziert. Auf die folgenden RFCs wird im Abschnitt RAS (Remote Access Service) des Platform Software Development Kit (SDK) verwiesen. Weitere Informationen zu RFCs und zum Suchen von Kopien eines bestimmten RFC finden Sie unter [https://www.rfc-editor.org/rfc.html](https://www.rfc-editor.org/rfc.html) .
+Requests for Comments (RFCs) ist eine fortlaufende Reihe von Dokumenten, in denen die Internet- und Internettechnologien diskutiert werden. Bestimmte RFCs werden anhand der Zahl identifiziert. Auf die folgenden RFCs wird im Abschnitt Ras Service (RAS) des Platform Software Development Kit (SDK) verwiesen. Weitere Informationen zu RFCs und zum Suchen von Kopien eines bestimmten RFC finden Sie unter [https://www.rfc-editor.org/rfc.html](https://www.rfc-editor.org/rfc.html) .
 
 -   [RFC 791](https://www.ietf.org/rfc/rfc791.txt) – Internetprotokoll, DARPA Internet Program Protocol Specification, September 1981
 -   [RFC 1267](https://www.ietf.org/rfc/rfc1267.txt) – A Border Gateway Protocol 3 (BGP-3), Oktober 1991

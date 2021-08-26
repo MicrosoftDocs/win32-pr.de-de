@@ -1,12 +1,12 @@
 ---
-title: Removeuserzuweisungs-Methode der Win32_RDMSVirtualDesktop-Klasse
-description: Entfernt die Benutzer Zuweisung vom virtuellen Desktop.
+title: RemoveUserAssignment-Methode der Win32_RDMSVirtualDesktop-Klasse
+description: Entfernt die Benutzerzuweisung vom virtuellen Desktop.
 ms.assetid: 7ebb34b4-94f6-4a00-87a9-44ad28d103cb
 ms.tgt_platform: multiple
 keywords:
-- Removeuserzuweisungs-Methode Remotedesktopdienste
-- Removeuserzuweisungs-Methode Remotedesktopdienste, Win32_RDMSVirtualDesktop-Klasse
-- Win32_RDMSVirtualDesktop-Klasse Remotedesktopdienste, removeuserzuweisungs-Methode
+- RemoveUserAssignment-Methode Remotedesktopdienste
+- RemoveUserAssignment-Methode Remotedesktopdienste , Win32_RDMSVirtualDesktop-Klasse
+- Win32_RDMSVirtualDesktop Klasse Remotedesktopdienste , RemoveUserAssignment-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01675c777603f0eab2d22c0136b1ef6cc3522b7c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f58fa11b22ec089d555fd1e769c71b3fc9d53dbf038ff8b22fb3df559cce59c4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345903"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988450"
 ---
-# <a name="removeuserassignment-method-of-the-win32_rdmsvirtualdesktop-class"></a>Removeuserzuweisungs-Methode der Win32 \_ rdmsvirtualdesktop-Klasse
+# <a name="removeuserassignment-method-of-the-win32_rdmsvirtualdesktop-class"></a>RemoveUserAssignment-Methode der \_ Win32-RDMSVirtualDesktop-Klasse
 
-Entfernt die Benutzer Zuweisung vom virtuellen Desktop.
+Entfernt die Benutzerzuweisung vom virtuellen Desktop.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ uint32 RemoveUserAssignment(
 
 <dl> <dt>
 
-*VMName* \[ in\]
+*VMName* \[ In\]
 </dt> <dd>
 
 Der Name des virtuellen Computers des virtuellen Desktops.
@@ -52,7 +52,7 @@ Der Name des virtuellen Computers des virtuellen Desktops.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,17 +62,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32 \_ rdmsvirtualdesktop**](win32-rdmsvirtualdesktop.md)
+[**Win32 \_ RDMSVirtualDesktop**](win32-rdmsvirtualdesktop.md)
 </dt> </dl>
 
  

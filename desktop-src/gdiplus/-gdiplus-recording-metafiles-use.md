@@ -1,21 +1,21 @@
 ---
-description: Mit der Metafile-Klasse, die von der Image-Klasse erbt, können Sie eine Sequenz von Zeichnungs Befehlen aufzeichnen.
+description: Mit der Metafile-Klasse, die von der Image-Klasse erbt, können Sie eine Sequenz von Zeichnungsbefehlen aufzeichnen.
 ms.assetid: 062de6c2-9f82-415d-860e-2d1afd2ac027
-title: Aufzeichnen von Metafiles
+title: Aufzeichnen von Metadateien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 129b8fe810b1394921c60540488c93676341c562
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 047cdce842a9b44096ebd0f866e1b1551a5f951e138557062dff5e8f8d54f3ac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014780"
 ---
-# <a name="recording-metafiles"></a>Aufzeichnen von Metafiles
+# <a name="recording-metafiles"></a>Aufzeichnen von Metadateien
 
-Mit der [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Klasse, die von der [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Klasse erbt, können Sie eine Sequenz von Zeichnungs Befehlen aufzeichnen. Die aufgezeichneten Befehle können im Arbeitsspeicher gespeichert, in einer Datei gespeichert oder in einem Stream gespeichert werden. Metadatendateien können Vektorgrafiken, Rasterbilder und Text enthalten.
+Mit [**der Metafile-Klasse,**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) die von der [**Image-Klasse erbt,**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) können Sie eine Sequenz von Zeichnungsbefehlen aufzeichnen. Die aufgezeichneten Befehle können im Arbeitsspeicher, in einer Datei oder in einem Stream gespeichert werden. Metadateien können Vektorgrafiken, Rasterbilder und Text enthalten.
 
-Im folgenden Beispiel wird ein [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Objekt erstellt. Im Code wird das **Metafile** -Objekt verwendet, um eine Sequenz von Grafik Befehlen aufzuzeichnen und dann die aufgezeichneten Befehle in einer Datei namens SampleMetafile. EMF zu speichern. Beachten Sie, dass der **Metafile** -Konstruktor ein Gerätekontext handle empfängt, und der [**grafikkonstruktor**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) empfängt die Adresse des **metadateiobjekts** . Die Aufzeichnung wird beendet (und die aufgezeichneten Befehle werden in der Datei gespeichert), wenn das **Grafik** Objekt den Gültigkeitsbereich verlässt. In den letzten beiden Codezeilen wird die Metadatendatei angezeigt, indem ein neues **Grafik** Objekt erstellt und die Adresse des **metadateiobjekts** an die **DrawImage** -Methode dieses **Grafik** Objekts übergeben wird. Beachten Sie, dass der Code das gleiche **metadateiobjekt** verwendet, um die Metadatei aufzuzeichnen und anzuzeigen (wiederzugeben).
+Im folgenden Beispiel wird ein [**Metafile-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) erstellt. Der Code verwendet das **Metafile-Objekt** zum Aufzeichnen einer Sequenz von Grafikbefehlen und speichert dann die aufgezeichneten Befehle in einer Datei mit dem Namen SampleMetafile.emf. Beachten Sie, dass **der Metafile-Konstruktor** ein Gerätekontexthand handle empfängt und der [**Grafikkonstruktor**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) die Adresse des **Metafile-Objekts** empfängt. Die Aufzeichnung wird beendet (und die aufgezeichneten Befehle werden in der Datei gespeichert), wenn das **Graphics-Objekt** den Gültigkeitsbereich übergeht. Die letzten beiden Codezeilen zeigen die Metadatei an, indem sie ein neues **Graphics-Objekt** erstellen und die Adresse des **Metafile-Objekts** an die **DrawImage-Methode** dieses **Graphics-Objekts** übergeben. Beachten Sie, dass der Code dasselbe **Metafile-Objekt** verwendet, um die Metadatei zu erfassen und anzuzeigen (wieder anzuzeigen).
 
 
 ```
@@ -51,13 +51,13 @@ playbackGraphics.DrawImage(&metafile, 200, 100);
 
 
 > [!Note]  
-> Um eine Metadatei aufzuzeichnen, müssen Sie ein [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt auf Grundlage eines [**Metafile**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) -Objekts erstellen. Die Aufzeichnung der Metadatei wird beendet, wenn das **Grafik** Objekt gelöscht wird oder den Gültigkeitsbereich verlässt.
+> Um eine Metadatei aufzeichnen zu können, müssen Sie ein [**Grafikobjekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) basierend auf einem [**Metafile-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-metafile) erstellen. Die Aufzeichnung der Metadatei endet, wenn das **Grafikobjekt** gelöscht wird oder den Gültigkeitsbereich übergeht.
 
  
 
-Eine Metadatei enthält Ihren eigenen Grafik Zustand, der durch das [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt definiert wird, das zum Aufzeichnen der Metadatei verwendet wird. Alle Eigenschaften des **Grafik** Objekts (Clip Bereich, World Transformation, Glättung und ähnliches), die Sie beim Aufzeichnen der Metadatei festlegen, werden in der Metadatei gespeichert. Wenn Sie die Metadatei anzeigen, wird die Zeichnung entsprechend den gespeicherten Eigenschaften durchgeführt.
+Eine Metadatei enthält ihren eigenen Grafikzustand, der durch das [**Graphics-Objekt**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) definiert wird, das zum Aufzeichnen der Metadatei verwendet wird. Alle Eigenschaften des **Grafikobjekts** (Clipbereich, Welttransformation, Glättungsmodus und deren Art), die Sie beim Aufzeichnen der Metadatei festlegen, werden in der Metadatei gespeichert. Wenn Sie die Metadatei anzeigen, erfolgt die Zeichnung gemäß diesen gespeicherten Eigenschaften.
 
-Nehmen Sie im folgenden Beispiel an, dass der Glättungs Modus während der Aufzeichnung der Metadatei auf smoothingmudenormal festgelegt wurde. Obwohl der Glättungs Modus des [**Grafik**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekts, das für die Wiedergabe verwendet wird, auf "smoothingmodehighquality" festgelegt ist, wird die Metadatei entsprechend der Einstellung "smoothingmudenormal" wiedergegeben. Dabei handelt es sich um den Glättungs Modus, der während der wichtigen Aufzeichnung festgelegt wird
+Im folgenden Beispiel wird davon ausgegangen, dass der Glättungsmodus während der Aufzeichnung der Metadatei auf SmoothingModeNormal festgelegt wurde. Obwohl der Glättungsmodus des für die Wiedergabe verwendeten [**Grafikobjekts**](/windows/desktop/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) auf SmoothingModeHighQuality festgelegt ist, wird die Metadatei gemäß der SmoothingModeNormal-Einstellung abgespielt. Es ist wichtig, dass der während der Aufzeichnung festgelegte Glättungsmodus wichtig ist, nicht der Glättungsmodus, der vor der Wiedergabe festgelegt wurde.
 
 
 ```

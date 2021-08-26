@@ -1,23 +1,23 @@
 ---
-title: DFMA (SM5-ASM)
-description: Führt ein Add-in mit einer Fused-Multiplikation aus
+title: dfma (sm5 – asm)
+description: Führt ein Fused-Multiply-Add aus.
 ms.assetid: 5BE96CDB-1756-4EBE-B4CC-69EFF098A4F1
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2e6cafc71dbc7d57655524b1b87c9c5b9ba20f3
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 84952ed594ba8541223df072fa59550aded581e5517dee3d6f4168b7661a87aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104313656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068390"
 ---
-# <a name="dfma-sm5---asm"></a>DFMA (SM5-ASM)
+# <a name="dfma-sm5---asm"></a>dfma (sm5 – asm)
 
-Führt ein Add-in mit einer Fused-Multiplikation aus
+Führt ein Fused-Multiply-Add aus.
 
 
 
-| DFMA \[ \_ Sat \] dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle2 \[ \_ ABS \] \[ . Swizzle\] |
+| dfma \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle , \] \[ - \] src2 abs \[ \_ \] \[ .swizzle\] |
 |----------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -28,28 +28,28 @@ Führt ein Add-in mit einer Fused-Multiplikation aus
 
 | Element                                                            | BESCHREIBUNG                                                                                                                                               |
 |-----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses. Der Ergebniswert muss auf 0,5 ULP genau sein.<br/> *dest*  =  *src0* \* *Quelle1*  +  *Quelle2*<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten, die mit *Quelle1* multipliziert werden sollen.<br/>                                                                                                 |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den Komponenten, die mit *src0* multipliziert werden sollen.<br/>                                                                                                 |
-| <span id="src2"></span><span id="SRC2"></span>*Quelle2*<br/> | \[in \] den Komponenten, die zu *src0* Quelle1 hinzugefügt werden sollen \* .<br/>                                                                                               |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs. Der Ergebniswert muss auf 0,5 ULP genau sein.<br/> *dest*  =  *src0* \* *src1*  +  *src2*<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, die mit *src1* multipliziert werden sollen.<br/>                                                                                                 |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die Komponenten, die mit *src0* multipliziert werden sollen.<br/>                                                                                                 |
+| <span id="src2"></span><span id="SRC2"></span>*src2*<br/> | \[in \] Die Komponenten, die *src0* \* *src1* hinzugefügt werden sollen.<br/>                                                                                               |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Shader, die diese Anweisung verwenden, werden mit einem shaderflag gekennzeichnet, das dazu führt, dass Sie nicht gebunden werden, es sei denn, die folgenden Bedingungen sind erfüllt.
+Shader, die diese Anweisung verwenden, werden mit einem Shaderflag gekennzeichnet, das dazu führt, dass sie nicht gebunden werden, es sei denn, alle folgenden Bedingungen sind erfüllt.
 
--   Das System unterstützt DirectX 11,1.
--   Das System enthält einen WDDM 1,2-Treiber.
--   Der Treiber meldet die Unterstützung für diese Anweisung über **D3D11 \_ Feature \_ Data \_ D3D11 \_ options. "Extendeddoublesshaderinstructions** " ist auf " **true**" festgelegt.
+-   Das System unterstützt DirectX 11.1.
+-   Das System enthält einen WDDM 1.2-Treiber.
+-   Der Treiber meldet Unterstützung für diese Anweisung über **D3D11 \_ FEATURE \_ DATA \_ D3D11 \_ OPTIONS. ExtendedDoublesShaderInstructions** ist auf **TRUE** festgelegt.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -57,20 +57,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -80,7 +80,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

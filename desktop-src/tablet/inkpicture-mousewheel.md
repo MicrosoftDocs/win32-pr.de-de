@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn das Mausrad bewegt wird, während das inkbilsteuerelement den Fokus besitzt.
+description: Tritt ein, wenn das Mausrad bewegt wird, während das InkPicture-Steuerelement den Fokus besitzt.
 ms.assetid: f56a8af9-7618-4fa3-8dd5-aa81a7f817e4
-title: InkPicture. mouswheel-Ereignis (msink AUT. h)
+title: InkPicture.MouseWheel-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6cab870f3a00b2aa0cea3c003993e2b35cd2abbf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e139604b4fbfd3293203d82b44be15fa36c090e72f40cfedc8ce0641b75b27b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938990"
 ---
-# <a name="inkpicturemousewheel-event"></a>InkPicture. mouswheel-Ereignis
+# <a name="inkpicturemousewheel-event"></a>InkPicture.MouseWheel-Ereignis
 
-Tritt auf, wenn das Mausrad bewegt wird, während das [inkbilsteuerelement](inkpicture-control-reference.md) den Fokus besitzt.
+Tritt ein, wenn das Mausrad bewegt wird, während das [InkPicture-Steuerelement](inkpicture-control-reference.md) den Fokus besitzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,45 +35,45 @@ void MouseWheel(
 
 <dl> <dt>
 
-*Schaltfläche* \[ in\]
+*Schaltfläche* \[ In\]
 </dt> <dd>
 
 Die Schaltfläche, die gedrückt wurde.
 
 </dd> <dt>
 
-*UMSCHALT* \[ in\]
+*Umschalten* \[ In\]
 </dt> <dd>
 
 Der Zustand der UMSCHALTTASTE.
 
 </dd> <dt>
 
-*Delta* \[ in\]
+*Delta* \[ In\]
 </dt> <dd>
 
-Die Entfernung des Mausrades.
+Der Abstand, den das Mausrad gedreht hat.
 
 </dd> <dt>
 
 *x* \[ in\]
 </dt> <dd>
 
-Die x-Koordinate des [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekts in Pixel.
+Die x-Koordinate des [**IInkCursor-Objekts**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) in Pixel.
 
 </dd> <dt>
 
-*j* \[ in\]
+*y* \[ in\]
 </dt> <dd>
 
-Die y-Koordinate des [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekts in Pixel.
+Die y-Koordinate des [**IInkCursor-Objekts**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) in Pixel.
 
 </dd> <dt>
 
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-Variant \_ true, um das **mouswheel** -Ereignis für das übergeordnete Steuerelement abzubrechen, andernfalls Variant \_ false.
+VARIANT \_ TRUE, um das **MouseWheel-Ereignis** für das übergeordnete Steuerelement abzubrechen, andernfalls VARIANT \_ FALSE.
 
 </dd> </dl>
 
@@ -81,14 +81,14 @@ Variant \_ true, um das **mouswheel** -Ereignis für das übergeordnete Steuerel
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Parameter *x* und *y* befinden sich in Pixel, nicht jedoch die HIMETRIC-Einheiten, die dem Koordinatensystem des frei Hand Raum-Koordinatensystems zugeordnet sind. Dies liegt daran, dass dieses Ereignis das verknüpfte Maus Ereignis einer Anwendung ersetzt, die nicht mit Pen kompatibel ist, und dieser Anwendungstyp nur auf Pixel verweist.
+> Die Parameter *x* und *y* sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraumkoordinatensystem zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ersetzt, die keinen Stift erkennt, und dieser Anwendungstyp sich nur auf Pixel bezieht.
 
  
 
-Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle definiert. Die **\_ iinkpictureevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID \_ ipemouserwheel".
+Diese Ereignismethode wird in der **\_ IInkPictureEvents-Schnittstelle** definiert. Die **\_ IInkPictureEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IPEMouseWheel.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,9 +96,9 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
@@ -107,7 +107,7 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

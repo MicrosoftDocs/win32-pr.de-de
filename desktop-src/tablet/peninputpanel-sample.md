@@ -1,38 +1,38 @@
 ---
-description: Dieses Beispiel baut auf dem Formular Beispiel für automatische Ansprüche auf, indem das Objekt "pinputpanel" integriert wird. Das Beispiel befindet sich im Verzeichnis "C \# pipanel" im Ordner "autoclaims".
+description: Dieses Beispiel baut auf dem Beispiel "Auto Claims Form" auf, indem das PenInputPanel-Objekt integriert wird. Das Beispiel befindet sich im Verzeichnis C \# PIPanel im Ordner AutoClaims.
 ms.assetid: 9a2c1565-fb24-4767-bfa5-0257129f4bd4
-title: Beispiel für "pinputpanel"
+title: PenInputPanel-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d60f33ff3f61e1a2930841e5fd3d3ce3f9fc5b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8c464be52fd08c6c461ba094428a1868fbb51fb328e1a3c88a2d0949a6ae581e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119934740"
 ---
-# <a name="peninputpanel-sample"></a>Beispiel für "pinputpanel"
+# <a name="peninputpanel-sample"></a>PenInputPanel-Beispiel
 
-Dieses Beispiel baut auf dem Formular Beispiel für automatische Ansprüche auf, indem das Objekt " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) " integriert wird. Das Beispiel befindet sich im Verzeichnis "C \# pipanel" im Ordner "autoclaims".
+Dieses Beispiel baut auf dem Beispiel "Auto Claims Form" auf, indem das [PenInputPanel-Objekt integriert](/previous-versions/aa514041(v=msdn.10)) wird. Das Beispiel befindet sich im Verzeichnis C \# PIPanel im Ordner AutoClaims.
 
 > [!Note]  
-> Für dieses Beispiel ist es erforderlich, dass das System mit einem Stift Gerät ausgestattet ist. Wenn Sie nur eine Maus verwenden (oder ein anderes Gerät, das kein Personal Interface (HID) ist), wird das " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) " nicht angezeigt.
+> Dieses Beispiel erfordert, dass Ihr System mit einem Stiftgerät ausgestattet ist. Wenn Sie nur eine Maus (oder ein anderes nicht menschliches Schnittstellengerät (HID) verwenden, das auf das Gerät zeigen soll, wird [PenInputPanel](/previous-versions/aa514041(v=msdn.10)) nicht angezeigt.
 
  
 
-Weitere Informationen zum Beispiel für ein automatisches Anspruchsformular finden Sie unter [Beispiel für automatisches Anspruchsformular](auto-claims-form-sample.md). Weitere Informationen zum Objekt " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) " finden [Sie unter Programmieren des Eingabe Panels mithilfe der Klasse "pinputpanel](programming-the-input-panel-using-the-peninputpanel-class.md)".
+Weitere Informationen zum Beispiel für das Formular für automatische Ansprüche finden Sie unter [Auto Claims Form Sample](auto-claims-form-sample.md). Weitere Informationen zum [PenInputPanel-Objekt finden](/previous-versions/aa514041(v=msdn.10)) Sie unter [Programming the Input Panel Using the PenInputPanel Class](programming-the-input-panel-using-the-peninputpanel-class.md).
 
-Im Beispiel enthält das Formular für automatische Ansprüche fünf Felder, in die der Benutzer aufgefordert wird, relevante Informationen für den Anspruch zu platzieren: Richtlinien Nummer, Name des Versicherten, Jahr, Marke und Modell des Autos. Ein [PenInputPanel](/previous-versions/aa514041(v=msdn.10)) -Objekt wird an jedes Eingabefeld angehängt, um eine einfache Möglichkeit zum Eingeben von Werten mit einem Stift zu bieten.
+Im Beispiel enthält das Formular für automatische Ansprüche fünf Felder, in denen der Benutzer aufgefordert wird, informationen zu geben, die für den Anspruch relevant sind: Richtliniennummer, Name des Vornamens, Jahr, Make und Modell des Autos. Ein [PenInputPanel-Objekt](/previous-versions/aa514041(v=msdn.10)) wird an jedes Eingabefeld angefügt, um eine einfache Möglichkeit zum Eingeben von Werten mit einem Stift zu bieten.
 
-Es gibt zwei Verfahren zum Anfügen eines " [larinputpanel](/previous-versions/aa514041(v=msdn.10)) "-Objekts an die Eingabefelder in Ihrem Formular. Die erste Methode besteht darin, jedem Eingabefeld zur Entwurfszeit eine separate Instanz des-Objekts zuzuweisen. Die zweite besteht darin, eine einzelne Instanz des Objekts zu erstellen und diese Objektinstanz zur Laufzeit an ein Feld anzufügen, wenn Sie den Fokus erhält. In diesem Beispiel werden beide Methoden veranschaulicht.
+Es gibt zwei Verfahren zum Anfügen eines [PenInputPanel-Objekts](/previous-versions/aa514041(v=msdn.10)) an die Eingabefelder im Formular. Die erste Technik besteht in der Zuweisung einer separaten Instanz des -Objekts zu jedem Eingabefeld zur Entwurfszeit. Die zweite besteht in der Erstellung einer einzelnen Instanz des -Objekts und dem anschließenden Anfügen dieser Objektinstanz zur Laufzeit an ein Feld, wenn es den Fokus erhält. In diesem Beispiel werden beide Techniken veranschaulicht.
 
-Es gibt Kompromisse bei der Entscheidung, welches Verfahren Sie verwenden sollten. Das Erstellen einer eindeutigen Instanz des-Objekts für jedes Formularfeld erfordert etwas mehr Arbeitsspeicher, wenn das Formular geladen wird. Es speichert jedoch das Verarbeiten von Fokus Ereignissen für die Felder, um dem aktuellen Feld zur Laufzeit eine einzelne Instanz zuzuweisen.
+Bei der Entscheidung, welche Technik verwendet werden soll, gibt es Vor- und Abkniff. Das Erstellen einer eindeutigen Instanz des -Objekts für jedes Formularfeld erfordert etwas mehr Arbeitsspeicher, wenn das Formular geladen wird. Es erspart sich jedoch die Handhabung von Fokusereignissen für die Felder, um dem aktuellen Feld zur Laufzeit eine einzelne Instanz zu zuweisen.
 
-Da das " [cuinputpanel](/previous-versions/aa514041(v=msdn.10)) "-Objekt nur auf einem Tablet PC unterstützt wird, erstellt das Beispiel die "cuinputpanel"-Objekte innerhalb eines Ausnahme Behandlungs Blocks.
+Da das [PenInputPanel-Objekt](/previous-versions/aa514041(v=msdn.10)) nur auf einem Tablet-PC unterstützt wird, erstellt das Beispiel die PenInputPanel-Objekte innerhalb eines Ausnahmebehandlungsblocks.
 
 ## <a name="one-object-per-field"></a>Ein Objekt pro Feld
 
-Das Beispiel veranschaulicht das erste Verfahren (ein " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) "-Objekt pro Feld), indem die Eingabefelder für die Richtlinien Nummer ( `inkEdPolicyNumber` ) und der Versicherte Name ( `inkEdName` ) eine eindeutige Instanz des "pinputpanel"-Objekts zugewiesen werden. Ein überladener Konstruktor für das Objekt "pinputpanel" kann den Namen des Eingabe Steuer Elements als Argument annehmen und somit die Steuerelemente zuordnen. Die folgenden Zeilen aus dem [Lade](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) Ereignishandler des Formulars zeigen Folgendes:
+Das Beispiel veranschaulicht die erste Technik (ein [PenInputPanel-Objekt](/previous-versions/aa514041(v=msdn.10)) pro Feld), indem die Eingabefelder für die Richtliniennummer ( ) und den Namen des Vornamens ( ) einer eindeutigen Instanz des `inkEdPolicyNumber` `inkEdName` PenInputPanel-Objekts zugewiesen werden. Ein überladener Konstruktor für das PenInputPanel-Objekt kann den Namen des Eingabesteuerelementes als Argument verwenden und so die Steuerelemente zuordnen. Die folgenden Zeilen aus [](/dotnet/api/system.windows.forms.form.load?view=netcore-3.1) dem Load-Ereignishandler des Formulars zeigen Folgendes:
 
 
 ```C++
@@ -44,7 +44,7 @@ pipName = new PenInputPanel(inkEdName);
 
 ## <a name="one-object-per-form"></a>Ein Objekt pro Formular
 
-Das zweite Verfahren ist auch im Beispiel dargestellt: eine einzelne Instanz eines " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) "-Objekts, `pipShared` , wird zwischen den Eingabefeldern "Year", "Make" und "Model" gemeinsam genutzt. Das freigegebene Objekt wird mit dem Standardkonstruktor erstellt.
+Das zweite Verfahren wird auch im Beispiel gezeigt: Eine einzelne Instanz eines [PenInputPanel-Objekts,](/previous-versions/aa514041(v=msdn.10)) , wird von den Eingabefeldern Year, Make und `pipShared` Model gemeinsam genutzt. Das freigegebene Objekt wird mithilfe des Standardkonstruktors erstellt.
 
 
 ```C++
@@ -53,7 +53,7 @@ pipShared = new PenInputPanel();
 
 
 
-Wenn Sie dieses Verfahren verwenden, muss das Formular nur über eine einzelne Instanz [des Objekts "](/previous-versions/aa514041(v=msdn.10)) " "" "" " Dadurch wird Arbeitsspeicher gespart, aber Sie müssen Code hinzufügen, um das Ereignis zu behandeln, wenn ein Eingabefeld den Fokus erhält. Wenn ein Steuerelement, das eine freigegebene Instanz eines "pinputpanel"-Objekts verwendet, den Fokus erhält, legen Sie die Eigenschaft " [AttachedEditControl](/previous-versions/aa514050(v=msdn.10)) " des Objekts "pinputpanel" auf diese Steuer Der folgende Code zeigt einen Ereignishandler für die Ereignisse "Year", "Make" und "Model" `Enter` .
+Die Verwendung dieser Technik erfordert, dass ihr Formular nur über eine einzelne Instanz des [PenInputPanel-Objekts](/previous-versions/aa514041(v=msdn.10)) verfügen muss. Dies spart Arbeitsspeicher, aber Sie müssen Code hinzufügen, um das Ereignis zu behandeln, wenn ein Eingabefeld den Fokus erhält. Wenn ein Steuerelement, das eine freigegebene Instanz eines PenInputPanel-Objekts verwendet, den Fokus erhält, legen Sie die [AttachedEditControl-Eigenschaft](/previous-versions/aa514050(v=msdn.10)) des PenInputPanel-Objekts auf dieses Steuerelement fest. Der folgende Code zeigt einen Ereignishandler für die Ereignisse der Felder Year, Make und `Enter` Model.
 
 
 ```C++
@@ -95,15 +95,15 @@ private void inkEdModel_Enter(object sender, System.EventArgs e)
 
 
 
-Stellen Sie sicher, dass Sie alle Eigenschaften festlegen, die festgelegt werden müssen, wenn Änderungen auf ein neues Steuerelement fokussiert werden. In den vorherigen Ereignis Handlern wird z. b. die Eigenschaft " [Faktoid](/previous-versions/ms571978(v=vs.100)) " entsprechend festgelegt.
+Achten Sie darauf, dass Sie alle Eigenschaften festlegen, die festgelegt werden müssen, wenn sich der Fokus auf ein neues Steuerelement ändert. In den vorherigen Ereignishandlern wird beispielsweise die [Factoid-Eigenschaft](/previous-versions/ms571978(v=vs.100)) entsprechend festgelegt.
 
-## <a name="usability-considerations"></a>Nutzbarkeits Überlegungen
+## <a name="usability-considerations"></a>Überlegungen zur Benutzerfreundlichkeit
 
-Berücksichtigen Sie die folgenden Überlegungen zur Benutzerfreundlichkeit, wenn Sie das Objekt " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) " in Ihrer Anwendung verwenden.
+Beachten Sie bei der Verwendung des [PenInputPanel-Objekts](/previous-versions/aa514041(v=msdn.10)) in Ihrer Anwendung die folgenden Überlegungen zur Benutzerfreundlichkeit.
 
-### <a name="positioning-the-peninputpanel"></a>Positionieren von "pinputpanel"
+### <a name="positioning-the-peninputpanel"></a>Positionieren des PenInputPanel
 
-Da die Felder auf dem Formular in diesem Beispiel vertikal angeordnet werden, wird die Benutzeroberfläche des Benutzer Steuer Elements für jedes Eingabe Steuerelement leicht auf der rechten Seite des Eingabe Steuer Elements positioniert, [um die Verwendung](/previous-versions/aa514041(v=msdn.10)) zu vereinfachen. Dadurch wird verhindert, dass das angriffpanel-Element das nächste Bearbeitungsfeld abdeckt, sodass das nächste Bearbeitungsfeld einfacher als Ziel ist.
+Da die Felder in diesem Beispiel vertikal auf dem Formular angeordnet sind, wird die [PenInputPanel-Benutzeroberfläche](/previous-versions/aa514041(v=msdn.10)) für jedes Eingabesteuerfeld leicht rechts neben dem Eingabesteuerfeld positioniert, um die Verwendung zu vereinfachen. Dadurch wird verhindert, dass penInputPanel das nächste Bearbeitungsfeld überdeckt, wodurch es einfacher wird, das nächste Bearbeitungsfeld als Ziel zu verwenden.
 
 
 ```C++
@@ -114,9 +114,9 @@ pipName.HorizontalOffset = 32;
 
 
 
-### <a name="selecting-input-panel-to-display"></a>Auswählen des anzuzeigenden Eingabe Panels
+### <a name="selecting-input-panel-to-display"></a>Auswählen des anzuzeigenden Eingabebereichs
 
-Da Richtlinien Nummern häufig Kombinationen aus Zahlen, Buchstaben und anderen Zeichen darstellen, können Sie zu Erkennungs Fehlern neigen. Aus diesem Grund legt das Beispiel den Standardbereich fest, [der vom Objekt "](/previous-versions/aa514041(v=msdn.10)) -ID" als Tastatur angezeigt wird, wenn es an das Feld "Richtlinien Nummer" angefügt wird.
+Da Richtliniennummern häufig Kombinationen aus Zahlen, Buchstaben und anderen Zeichen sind, können sie anfällig für Erkennungsfehler sein. Daher legt das Beispiel den Standardbereich, der vom [PenInputPanel-Objekt](/previous-versions/aa514041(v=msdn.10)) angezeigt wird, auf die Tastatur fest, wenn er an das Feld mit der Richtliniennummer angefügt wird.
 
 
 ```C++
@@ -125,15 +125,15 @@ pipPolicyNumber.DefaultPanel = PanelType.Keyboard;
 
 
 
-Das Standardverhalten des " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) "-Objekts besteht darin, den Bereich zu verwenden, der vom Benutzer zuletzt ausgewählt wurde.
+Das Standardverhalten des [PenInputPanel-Objekts](/previous-versions/aa514041(v=msdn.10)) ist die Verwendung des Panels, den der Benutzer zuletzt ausgewählt hat.
 
-### <a name="text-services-framework-correction-user-interface"></a>Benutzeroberfläche für die Korrektur von Text Services Framework
+### <a name="text-services-framework-correction-user-interface"></a>Textdienstframework Korrektur Benutzeroberfläche
 
-In diesem Beispiel sind alle Eingabefelder [InkEdit](/previous-versions/ms552265(v=vs.100)) -Steuerelemente. Dies ist wichtig, da das InkEdit-Steuerelement über eine integrierte Unterstützung für das [Text Services-Framework](../tsf/text-services-framework.md) (TSF) verfügt und daher in der Lage ist, die Benutzeroberfläche für die direkte Korrektur für Eingaben zu unterstützen, die vom Objekt " [pinputpanel](/previous-versions/aa514041(v=msdn.10)) " empfangen werden.
+In diesem Beispiel sind alle Eingabefelder [InkEdit-Steuerelemente.](/previous-versions/ms552265(v=vs.100)) Dies ist wichtig, da das InkEdit-Steuerelement über integrierte Unterstützung für die [Textdienstframework](../tsf/text-services-framework.md) (TSF) verfügt und daher die benutzeroberfläche für die Korrektur für Eingaben unterstützen kann, die vom [PenInputPanel-Objekt empfangen](/previous-versions/aa514041(v=msdn.10)) werden.
 
-Der Standardwert für [enabletsf](/previous-versions/ms569656(v=vs.100)) ist " **true**". Dies bewirkt, dass das Objekt " [tzinputpanel](/previous-versions/aa514041(v=msdn.10)) " versucht, das Text Dienst Framework (TSF) im angefügten Steuerelement zu starten. Bei erfolgreicher Ausführung zeigt die Benutzeroberfläche für Korrekturen im-Steuerelement an und ermöglicht den Zugriff auf Erkennungs Alternativen. Wenn Sie diese Methode mit einem **false** -Parameter aufrufen, wird TSF für das angefügte Steuerelement heruntergefahren.
+Der Standardwert für [EnableTsf](/previous-versions/ms569656(v=vs.100)) ist **TRUE.** Dies bewirkt, dass das [PenInputPanel-Objekt](/previous-versions/aa514041(v=msdn.10)) versucht, die Textdienstframework (TSF) auf dem angefügten Steuerelement zu starten. Bei Erfolg wird die Korrektur-Benutzeroberfläche im -Steuerelement angezeigt und ermöglicht den Zugriff auf Erkennungswechsel. Wenn Sie diese Methode mit einem **FALSE-Parameter** aufrufen, wird versucht, tsf für das angefügte Steuerelement herunterzufahren.
 
-Das [InkEdit](/previous-versions/ms552265(v=vs.100)) -Steuerelement stellt bereits eine Korrektur Benutzeroberfläche bereit, aber im Beispiel wird [enabletsf](/previous-versions/ms569656(v=vs.100)) verwendet, [um die Verwendung](/previous-versions/aa514041(v=msdn.10)) des TSF-einfügeerkennungskontexts anstelle der [**SendInput**](/windows/win32/api/winuser/nf-winuser-sendinput) -Funktion zu ermöglichen, um die Handschrift Erkennungsergebnisse an das Steuerelement zu senden. Das Ergebnis ist, dass Text eingefügt werden kann, auch wenn das Feld nicht mehr den Fokus besitzt.
+Das [InkEdit-Steuerelement](/previous-versions/ms552265(v=vs.100)) bietet bereits eine Korrektur-Benutzeroberfläche, aber im Beispiel wird [EnableTsf](/previous-versions/ms569656(v=vs.100)) verwendet, um [dem PenInputPanel](/previous-versions/aa514041(v=msdn.10)) die Verwendung des TSF-Einfügeerkennungskontexts anstelle der [**SendInput-Funktion**](/windows/win32/api/winuser/nf-winuser-sendinput) zu ermöglichen, um die Handschrifterkennungsergebnisse an das Steuerelement zu senden. Das Ergebnis ist, dass Text auch dann eingefügt werden kann, wenn das Feld nicht mehr den Fokus besitzt.
 
 
 ```C++
@@ -145,7 +145,7 @@ Das [InkEdit](/previous-versions/ms552265(v=vs.100)) -Steuerelement stellt berei
 
 ## <a name="closing-the-form"></a>Schließen des Formulars
 
-Im vom Windows Form-Designer generierten Code werden die Steuerelemente [InkEdit](/previous-versions/ms552265(v=vs.100)) und [InkPicture](/previous-versions/aa514604(v=msdn.10)) der Komponentenliste des Formulars hinzugefügt, wenn das Formular initialisiert wird. Wenn das Formular geschlossen wird, werden die InkEdit-und InkPicture-Steuerelemente sowie die anderen Komponenten des Formulars von der [verwerfen-Methode](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) des Formulars entfernt. Die verwerfen-Methode des Formulars gibt auch die frei [Hand Objekte frei, die für](/previous-versions/aa515768(v=msdn.10)) das Formular erstellt werden.
+Im Windows des Formular-Designers werden die Steuerelemente [InkEdit](/previous-versions/ms552265(v=vs.100)) und [InkPicture](/previous-versions/aa514604(v=msdn.10)) der Komponentenliste des Formulars hinzugefügt, wenn das Formular initialisiert wird. Wenn das Formular geschlossen wird, werden die Steuerelemente InkEdit und InkPicture sowie die anderen Komponenten des Formulars durch die [Dispose-Methode](/dotnet/api/system.windows.forms.form.dispose?view=netcore-3.1) des Formulars verworfen. Die Dispose-Methode des Formulars [](/previous-versions/aa515768(v=msdn.10)) gibt auch die Fürk-Objekte zurück, die für das Formular erstellt werden.
 
  
 

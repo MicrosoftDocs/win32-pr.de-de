@@ -1,36 +1,36 @@
 ---
-description: Nachdem die frei Hand Eingaben erfasst wurden, können Anwendungen diese Daten auf andere Medien verwalten, bearbeiten und/oder übertragen.
+description: Nachdem die Ink gesammelt wurde, können Anwendungen diese Daten verwalten, bearbeiten und/oder auf andere Medien übertragen.
 ms.assetid: 5a8c370e-79cb-47f0-a7b3-a631874ad757
-title: Frei Hand Daten
+title: Ink-Daten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de73291269398ae42a47ee26897c8da9bac8abe7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55f62f566e48859ba2aea7013783b3ccc8c825b8559fdec34e24438d68b6ee65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119939410"
 ---
-# <a name="ink-data"></a>Frei Hand Daten
+# <a name="ink-data"></a>Ink-Daten
 
-Nachdem die frei Hand Eingaben erfasst wurden, können Anwendungen diese Daten auf andere Medien verwalten, bearbeiten und/oder übertragen. Die Aktionen der Auswahl, dem Kopieren, verschieben, speichern, anzeigen und Ändern der frei Hand Eingaben erfolgen für das frei [**Hand Objekt und die darin**](inkdisp-class.md) enthaltenen Elemente, wie z. b. die [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung und die [**Stroke**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte.
+Nachdem die Ink gesammelt wurde, können Anwendungen diese Daten verwalten, bearbeiten und/oder auf andere Medien übertragen. Die Aktionen zum Auswählen, Kopieren, Verschieben, Speichern, Anzeigen und Ändern der [**Ink**](inkdisp-class.md) erfolgen für das Ink-Objekt und seine enthaltenen Member, z. B. die [**Strokes-Auflistung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) und [**die Stroke-Objekte.**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp)
 
 > [!Note]  
-> Mithilfe Real-Time Tablettstifts können Anwendungen Daten in einem eigenen Format (z. b. beim Speichern von Strichen) verwalten.
+> Mit Real-Time Stift können Anwendungen Daten in einem eigenen Format verwalten (z. B. Striche speichern).
 
  
 
-## <a name="ink-strokes-and-packets"></a>Frei Hand Eingaben, Striche und Pakete
+## <a name="ink-strokes-and-packets"></a>Ink, Strokes und Packets
 
-Ein [**Ink**](inkdisp-class.md) -Objekt ist der grundlegende Datentyp, von dem die vom [**InkCollector**](inkcollector-class.md) -Objekt gesammelten Eingaben verwaltet, manipuliert und gespeichert werden. Ein **Ink** -Objekt enthält ein oder mehrere [**Stroke**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte und allgemeine Methoden und Eigenschaften, mit denen diese Striche verwaltet und bearbeitet werden können. Ein Strich wird als Satz von Daten definiert, die in einer einzelnen Stift-nach-unten-, Stift-und Stift Bewegung aufgezeichnet werden. Die Strich Daten enthalten eine Sammlung von Paketen. Ein Paket ist der Satz von Daten, den das Tablet-Gerät an jedem Beispiel Punkt sendet. Diese Daten enthalten Informationen wie z. b. Koordinaten, Stift Druck, Stift Winkel und alles andere, was die Hardware übertragen kann. Die [**PacketDescription**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_packetdescription) -Eigenschaft des **Stroke** -Objekts beschreibt die Pakete, die von einem [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) generiert werden.
+Ein [**Ink-Objekt**](inkdisp-class.md) ist der grundlegende Datentyp, der die vom [**InkCollector-Objekt gesammelten**](inkcollector-class.md) Eingaben verwaltet, bearbeitet und speichert. Ein **Ink-Objekt** enthält mindestens ein [**Stroke-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) sowie allgemeine Methoden und Eigenschaften zum Verwalten und Bearbeiten dieser Striche. Ein Strich wird als Satz von Daten definiert, die in einer einzelnen Stift-Nach-Unten-, Stift- und Stift-Nach-Oben-Sequenz erfasst werden. Die Strichdaten enthalten eine Auflistung von Paketen. Ein Paket ist der Satz von Daten, die das Tabletgerät an jedem Beispielpunkt sendet. Diese Daten enthalten Informationen wie Koordinaten, Stiftdruck, Stiftwinkel und alles andere, was die Hardware übertragen kann. Die [**PacketDescription-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_packetdescription) des **Stroke-Objekts** beschreibt die Pakete, die ein [**Tablet**](/windows/desktop/api/msinkaut/nn-msinkaut-iinktablet) generiert.
 
 ## <a name="strokes"></a>Striche
 
-Sie können eine Momentaufnahme der Striche in einem frei Hand Objekt mithilfe der [**Striche**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_strokes) -Eigenschaft des **Ink** [**-Objekts abrufen**](inkdisp-class.md) . Die **Strokes** -Eigenschaft ist eine Auflistung von Verweisen auf die Striche im **Ink** -Objekt zum Zeitpunkt, zu dem die **Strokes** -Eigenschaft gelesen wird. Wenn später Striche dem **Ink** -Objekt hinzugefügt oder daraus gelöscht werden, wird eine zuvor abgerufene [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung nicht aktualisiert. Außerdem ist die **Strokes** -Eigenschaft ein Wert, der wie ein beliebiger Wert den Gültigkeitsbereich verlässt, es sei denn, er wird einer Variablen zugewiesen.
+Sie können eine Momentaufnahme der Striche in einem [**Ink-Objekt**](inkdisp-class.md) abrufen, indem Sie die [**Strokes-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_strokes) des **Ink-Objekts** verwenden. Die **Strokes-Eigenschaft** ist eine Auflistung von Verweisen auf die Striche im **Ink-Objekt** zum Zeitpunkt des Lesens der **Strokes-Eigenschaft.** Wenn Striche anschließend dem **Ink-Objekt** hinzugefügt oder daraus gelöscht werden, wird eine zuvor [**abgerufene Strokes-Auflistung**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) nicht aktualisiert. Darüber hinaus ist die **Strokes-Eigenschaft** ein -Wert und geht wie jeder wert aus dem Gültigkeitsbereich, es sei denn, sie wird einer Variablen zugewiesen.
 
-Damit eine [**Striche**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_strokes) -Eigenschaft mit einem frei [**Hand Objekt synchronisiert**](inkdisp-class.md) wird, müssen Sie Sie in einem Ereignishandler für die Ereignisse " [**StrokesAdded**](inkstrokes-strokesadded.md) " und " [**StrokesRemoved**](inkstrokes-strokesremoved.md) " der [**Striche**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) -Auflistung einschließen. Der Handler sollte eine neue Kopie der **Striche** -Eigenschaft abrufen, wenn beide Ereignisse ausgelöst werden. Achten Sie darauf, den Ereignishandler nicht zu einer **Striche** -Auflistung hinzuzufügen, die sich außerhalb des gültigen Bereichs befindet, bevor das Ereignis ausgelöst wird.
+Um eine [**Strokes-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkdisp-get_strokes) mit einem [**Ink-Objekt**](inkdisp-class.md) synchronisiert zu halten, umschließen Sie sie in einem Ereignishandler für die [**StrokesAdded-**](inkstrokes-strokesadded.md) und [**StrokesRemoved-Ereignisse**](inkstrokes-strokesremoved.md) in der [**Strokes-Auflistung.**](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) Der Handler sollte eine neue Kopie der **Strokes-Eigenschaft** abrufen, wenn eines der Ereignisse ausgelöst wird. Achten Sie darauf, den Ereignishandler nicht einer **Strokes-Auflistung** hinzuzufügen, die sich außerhalb des Gültigkeitsbereichs befindet, bevor das Ereignis ausgelöst wird.
 
-Beachten Sie, dass in diesem Beispiel `theAddedStrokesIDs` mit einer neuen Kopie der Striche-Eigenschaft im- `StrokesAdded_Event` Handler aktualisiert wird.
+Beachten Sie, dass in diesem Beispiel `theAddedStrokesIDs` mit einer neuen Kopie der Strokes-Eigenschaft im Handler aktualisiert `StrokesAdded_Event` wird.
 
 
 ```C++
@@ -47,25 +47,25 @@ public void StrokesAdded_Event(object sender, StrokesEventArgs e)
 
 
 
-## <a name="packetdescription-property"></a>PacketDescription (Eigenschaft)
+## <a name="packetdescription-property"></a>PacketDescription-Eigenschaft
 
-Die [**PacketDescription**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_packetdescription) -Eigenschaft des [**Ink**](inkdisp-class.md) -Objekts definiert den Satz der Informationen in jedem Paket, das die Anwendung von einem Tablet PC-Gerät erhält. Die Informationen enthalten in der Regel Koordinaten, aber Sie können viel ausführlichere Informationen enthalten (abhängig von den Funktionen des Tablet PC-Digitalisierungsprogramms), z. b. Stift Druck oder Stift Winkel. Durch Festlegen von Paketbeschreibungen für das [**InkCollector**](inkcollector-class.md) -oder [**InkOverlay**](inkoverlay-class.md) -Objekt, bevor frei Hand Eingaben gesammelt werden (mithilfe der DesiredPacketDescription-Eigenschaft), haben Sie die vollständige Kontrolle über die Eigenschaften der Tablet PC-Geräte, die Sie erhalten möchten.
+Die [**PacketDescription-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_packetdescription) des [**Ink-Objekts**](inkdisp-class.md) definiert den Satz von Informationen in jedem Paket, das die Anwendung von einem Tablet PC-Gerät erhält. Die Informationen enthalten in der Regel Koordinaten, können aber viel ausführlichere Informationen enthalten (je nachdem, welche Funktionen der Tablet PC-Digitizer bietet), z. B. Stiftdruck oder Stiftwinkel. Durch Festlegen von Paketbeschreibungen für das [**InkCollector-**](inkcollector-class.md) oder [**InkOverlay-Objekt**](inkoverlay-class.md) vor dem Sammeln von Inks (mithilfe der DesiredPacketDescription-Eigenschaft) haben Sie die vollständige Kontrolle darüber, welche Der Tablet PC-Geräteeigenschaften Sie empfangen möchten.
 
 ## <a name="extended-properties"></a>Erweiterte Eigenschaften
 
-Erweiterte Eigenschaften bieten einen Mechanismus zum Anfügen von Anwendungs definierten Daten [**an frei**](inkdisp-class.md) Hand Eingaben und andere Objekte. Weitere Informationen zu erweiterten Eigenschaften finden Sie in der [**ExtendedProperties**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkextendedproperties) -Auflistung.
+Erweiterte Eigenschaften stellen einen Mechanismus zum Anfügen von anwendungsdefinierte Daten an [**Ink**](inkdisp-class.md) und andere Objekte bereit. Weitere Informationen zu erweiterten Eigenschaften finden Sie in der [**ExtendedProperties-Auflistung.**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkextendedproperties)
 
-## <a name="ink-rendering"></a>Frei Hand Rendering
+## <a name="ink-rendering"></a>Ink Rendering
 
-Das [**Rendererobjekt**](inkrenderer-class.md) ist für das [**Rendern**](inkdisp-class.md)von Freihand zuständig. Bei einem passenden Tablet-Kontext kann  das Rendererobjekt den Leerraum-Koordinaten Pixel zuordnen, Ansichts Transformationen anwenden und Freihand auf Bildschirmen und Druckern anzeigen. Die [**Draw**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-draw) -und [**drawstroke**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-drawstroke) -Methoden sind die primären Methoden zum Rendern von frei Hand Eingaben. Weitere Informationen zum Anzeigen von frei Hand Eingaben in einem Fenster finden Sie unter dem **Renderer** -Objekt.
+Das [**Rendererobjekt**](inkrenderer-class.md) ist für das Rendern von [**Ink**](inkdisp-class.md)zuständig. Bei einem geeigneten Tablet-Kontext kann das **Rendererobjekt** Freihandraumkoordinaten Pixeln zuordnen, Ansichtstransformationen anwenden und Freihand auf Bildschirmen und Druckern anzeigen. Die [**Draw-**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-draw) und [**DrawStroke-Methoden**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkrenderer-drawstroke) sind die primären Methoden zum Rendern von Ink. Weitere Informationen zum Anzeigen von Ink in einem Fenster finden Sie im **Rendererobjekt.**
 
-## <a name="cusps"></a>Cusps
+## <a name="cusps"></a>Spitzen
 
-Ein Strich beginnt normalerweise, wenn der Stift auf die Zeichen Oberfläche herabgesetzt wird, und endet, wenn der Stift ausgelöst wird. Innerhalb eines Strichs werden die Spitzen, Winkel und radikalen Änderungen der Richtung als "cusps" bezeichnet. Die Endpunkte eines Strichs werden auch als "cusps" betrachtet. Der Großbuchstabe "L" hat beispielsweise drei cusps, eine in der Mitte und eine an jedem Ende.
+Ein Strich beginnt normalerweise, wenn der Stift auf die Zeichenoberfläche herabgesetzt wird, und endet, wenn der Stift ausgelöst wird. Innerhalb eines Strichs werden die Spitzen, Winkel und inneren Richtungsänderungen als Cusps bezeichnet. Die Endpunkte eines Strichs werden auch als Cusps betrachtet. Beispielsweise hat der Großbuchstabe "L" drei Cusps, einen in der Mitte und einen an jedem Ende.
 
-Wenn ein Strich eingegeben wird, wird er normalerweise durch eine Bezier-Kurve (oder Polylinienkurve) gerglädert und gerendert. Bezier-Kurven können die cusps in kleine Schleifen umwandeln. Beispielsweise könnte die Spitze des kursiven Buchstabens "i" so geglättet werden, dass Sie dem geschweifsiven "e" ähnelt. Um dies zu verhindern, haben Microsoft-Renderer eine "Pre-Bezier"-Phase, in der die cusps anders behandelt werden.
+Wenn ein Strich eingegeben wird, wird er normalerweise geglättet und mithilfe einer Bézierkurve (oder Polylinienkurve) gerendert. Bézierkurven können Cusps in kleine Schleifen umwandeln. Beispielsweise kann die Spitze des geschweiften Buchstabens "i" geglättet werden, um dem geschweiften "e" zu ähneln. Um dies zu verhindern, verfügen Microsoft-Renderer über eine "Pre-Bezier"-Phase, die die Cusps unterschiedlich behandelt.
 
-Cusps können auch verwendet werden, um [**Strich**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) Objekte in Lösch Bare Einheiten zu unterteilen. Wenn Sie z. b. die vertikale Seite eines Großbuchstaben "L" auswählen, können Sie nur auf diese Seite löschen. Der Teil des Strichs, der gelöscht werden soll, ist der Teil zwischen zwei cusps.
+Cusps können auch verwendet werden, um [**Strichobjekte**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) in löschbare Einheiten zu unterteilen. Wenn Sie z. B. die vertikale Seite eines Großbuchstabens "L" auswählen, kann dies darauf hindeuten, dass nur diese Seite entfernt wird. Der Teil des Strichs, der gelöscht werden soll, ist der Teil zwischen zwei Cusps.
 
  
 

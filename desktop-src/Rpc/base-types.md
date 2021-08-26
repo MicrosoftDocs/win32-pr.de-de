@@ -1,46 +1,46 @@
 ---
 title: Basistypen
-description: Um die Probleme zu vermeiden, die von der Implementierung abhängigen Datentypen auf unterschiedlichen Computerarchitekturen verursacht werden können, definiert das Mittel l seine eigenen Basis Datentypen.
+description: Um probleme zu vermeiden, die implementierungsabhängige Datentypen in verschiedenen Computerarchitekturen verursachen können, definiert MIDL eigene Basisdatentypen.
 ms.assetid: 0b2778c7-8cee-415f-bb5e-01f6c9eedc70
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50ee57261aac1de6ea4bb15c9a4550721dd10282
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1aadc1ae5fedd73a01ce0fd7ed735689e043cff0d74910175cf2ab691c22eeed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316244"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023280"
 ---
 # <a name="base-types"></a>Basistypen
 
-Um die Probleme zu vermeiden, die von der Implementierung abhängigen Datentypen auf unterschiedlichen Computerarchitekturen verursacht werden können, definiert das Mittel l seine eigenen Basis Datentypen.
+Um probleme zu vermeiden, die implementierungsabhängige Datentypen in verschiedenen Computerarchitekturen verursachen können, definiert MIDL eigene Basisdatentypen.
 
 
 
 | Basistyp                         | BESCHREIBUNG                                                                                                                                                         |
 |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**boolean**](/windows/desktop/Midl/boolean)       | Ein Datenelement, das den Wert **true** oder **false** aufweisen kann.                                                                                                          |
-| [**Hobby**](/windows/desktop/Midl/byte)             | Ein 8-Bit-Datenelement, das ohne Änderung garantiert übertragen wird.                                                                                                 |
+| [**boolean**](/windows/desktop/Midl/boolean)       | Ein Datenelement, das den Wert **TRUE** oder **FALSE haben kann.**                                                                                                          |
+| [**Byte**](/windows/desktop/Midl/byte)             | Ein 8-Bit-Datenelement, das garantiert ohne Änderungen übertragen wird.                                                                                                 |
 | [**Char**](/windows/desktop/Midl/char-idl)         | Ein 8-Bit-Datenelement ohne Vorzeichen.                                                                                                                              |
-| [**Maß**](/windows/desktop/Midl/double)         | Eine 64-Bit-Gleit Komma Zahl.                                                                                                                                     |
-| [**Hafen**](/windows/desktop/Midl/float)           | Eine 32-Bit-Gleit Komma Zahl.                                                                                                                                     |
-| [**Handle \_ t**](/windows/desktop/Midl/handle-t)    | Ein Primitives handle, das für die RPC-Bindung oder das Serialisieren von Daten verwendet werden kann.                                                                                            |
-| [**Hyper**](/windows/desktop/Midl/hyper)           | Eine 64-Bit-Ganzzahl, die als " [**Signed**](/windows/desktop/Midl/signed) " oder " [**Ganzzahl ohne Vorzeichen**](/windows/desktop/Midl/unsigned) " deklariert werden kann, kann auch als " **\_ Int64**" bezeichnet werden.                  |
-| [**INT**](/windows/desktop/Midl/int)               | Eine 32-Bit-Ganzzahl, die als " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" deklariert werden kann.                                                                                         |
-| [**\_\_int3264**](/windows/desktop/Midl/--int3264) | Ein Schlüsselwort, das einen ganzzahligen Typ mit 32-Bit-oder 64-Bit-Eigenschaften angibt.                                                                              |
-| [**lange**](/windows/desktop/Midl/long)             | Ein Modifizierer für **int** , der eine 32-Bit-Ganzzahl angibt. Kann als " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" deklariert werden.                                                       |
-| [**short**](/windows/desktop/Midl/short)           | Eine 16-Bit-Ganzzahl, die als " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" deklariert werden kann.                                                                                         |
-| [**zuletzt**](/windows/desktop/Midl/small)           | Ein Modifizierer für **int** , der eine 8-Bit-Ganzzahl angibt. Kann als " **Signed** " oder " **Ganzzahl ohne Vorzeichen**" deklariert werden.                                                       |
-| [**WCHAR \_ t**](/windows/desktop/Midl/wchar-t)      | Breit Zeichentyp, der als Microsoft-Erweiterung für IDL unterstützt wird. Daher ist dieser Typ nicht verfügbar, wenn Sie die Kompilierung mit dem [ / **eines Zertifikats**](/windows/desktop/Midl/-osf) -Schalter durchsetzen. |
+| [**Doppel**](/windows/desktop/Midl/double)         | Eine 64-Bit-Gleitkommazahl.                                                                                                                                     |
+| [**schweben**](/windows/desktop/Midl/float)           | Eine 32-Bit-Gleitkommazahl.                                                                                                                                     |
+| [**handle \_ t**](/windows/desktop/Midl/handle-t)    | Ein primitives Handle, das für die RPC-Bindung oder datenserialisierung verwendet werden kann.                                                                                            |
+| [**Hyper**](/windows/desktop/Midl/hyper)           | Eine 64-Bit-Ganzzahl, die [](/windows/desktop/Midl/signed) entweder [](/windows/desktop/Midl/unsigned) mit Vorzeichen oder ohne Vorzeichen deklariert werden kann, kann auch als **\_ int64 bezeichnet werden.**                  |
+| [**INT**](/windows/desktop/Midl/int)               | Eine 32-Bit-Ganzzahl, die  als mit oder ohne **Vorzeichen deklariert werden kann.**                                                                                         |
+| [**\_\_int3264**](/windows/desktop/Midl/--int3264) | Ein Schlüsselwort, das einen integralen Typ angibt, der entweder über 32-Bit- oder 64-Bit-Eigenschaften verfügt.                                                                              |
+| [**long**](/windows/desktop/Midl/long)             | Ein Modifizierer **für int,** der eine 32-Bit-Ganzzahl angibt. Kann als mit **oder** ohne **Vorzeichen deklariert werden.**                                                       |
+| [**short**](/windows/desktop/Midl/short)           | Eine 16-Bit-Ganzzahl, die  als mit oder ohne **Vorzeichen deklariert werden kann.**                                                                                         |
+| [**klein**](/windows/desktop/Midl/small)           | Ein Modifizierer **für int,** der eine 8-Bit-Ganzzahl angibt. Kann als mit **oder** ohne **Vorzeichen deklariert werden.**                                                       |
+| [**wchar \_ t**](/windows/desktop/Midl/wchar-t)      | Breitzeichentyp, der als Microsoft-Erweiterung für IDL unterstützt wird. Daher ist dieser Typ nicht verfügbar, wenn Sie mit dem [ / **Osf-Switch kompilieren.**](/windows/desktop/Midl/-osf) |
 
 
 
- 
+ 
 
-Die Header Datei Rpcndr. h stellt Definitionen für die meisten dieser Basis Datentypen bereit. Das Schlüsselwort " **int** " wird erkannt und ist auf 32-Bit-Plattformen transaktionabel. Auf 16-Bit-Plattformen ist für den **int** -Datentyp ein Modifizierer, z. b. **Short** oder **Long**, erforderlich, um seine Länge anzugeben.
+Die Headerdatei Rpcndr.h enthält Definitionen für die meisten dieser Basisdatentypen. Das Schlüsselwort **int** wird erkannt und kann auf 32-Bit-Plattformen übertragen werden. Auf 16-Bit-Plattformen erfordert der **int-Datentyp** einen Modifizierer, z. B. **short** oder **long,** um seine Länge anzugeben.
 
-Obwohl **void \* \*** als generischer Zeigertyp durch den ANSI C-Standard erkannt wird, schränkt die Verwendung durch die Mittel l ein. Jeder Zeiger, der in einem Remote-oder Serialisierungsvorgang verwendet wird, muss auf Basis Typen oder auf Typen verweisen, die aus Basis Typen erstellt werden. (Es gibt eine Ausnahme: Kontext Handles werden als **void** -Typen definiert. Weitere Informationen finden Sie unter [Kontext Handles](context-handles.md).)
+Obwohl **\* \* void** vom ANSI C-Standard als generischer Zeigertyp erkannt wird, schränkt MIDL seine Verwendung ein. Jeder Zeiger, der in einem Remote- oder Serialisierungsvorgang verwendet wird, muss entweder auf Basistypen oder auf Typen verweisen, die aus Basistypen erstellt wurden. (Es gibt eine Ausnahme: Kontexthandles werden als **void-Typen** definiert. Weitere Informationen finden Sie unter [Kontexthandles](context-handles.md).)
 
- 
+ 
 
- 
+ 

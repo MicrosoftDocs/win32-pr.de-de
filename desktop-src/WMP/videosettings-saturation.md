@@ -1,9 +1,9 @@
 ---
-title: Videosettings. Sättigung
-description: Das Sättigungs Attribut gibt die Sättigungs Einstellung des Videos an oder ruft Sie ab.
+title: VIDEOSETTINGS.saturation
+description: Das Sättigungsattribut gibt die Sättigungseinstellung des Videos an oder ruft sie ab.
 ms.assetid: e981e194-810b-4e6d-a1e8-790ede442752
 keywords:
-- Videosettings. Sättigung Windows Media Player
+- VIDEOSETTINGS.saturation Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22a1cd4a288e30373d460fafbc92b3aaa29283cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 02aa5445cb3a7fa59fb59fc04a3bc2b5ff54640b4662c8cb469064d633d1a4f1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119900690"
 ---
-# <a name="videosettingssaturation"></a>Videosettings. Sättigung
+# <a name="videosettingssaturation"></a>VIDEOSETTINGS.saturation
 
-Das **Sättigungs** Attribut gibt die Sättigungs Einstellung des Videos an oder ruft Sie ab.
+Das **Sättigungsattribut** gibt die Sättigungseinstellung des Videos an oder ruft sie ab.
 
 ``` syntax
         elementID.saturation
@@ -29,9 +29,9 @@ Das **Sättigungs** Attribut gibt die Sättigungs Einstellung des Videos an oder
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich von-127 bis + 127 und einem Standardwert von 0. 
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**) mit einem Wert zwischen -127 und +127 und dem Standardwert 0. 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**) mit einem Wert im Bereich 
 
 <dl> <dt>
 
-[**Videosettings-Element**](videosettings-element.md)
+[**VIDEOSETTINGS-Element**](videosettings-element.md)
 </dt> </dl>
 
  

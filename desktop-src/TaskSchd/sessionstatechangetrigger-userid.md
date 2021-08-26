@@ -1,11 +1,11 @@
 ---
-title: Sessionstatechangelöst. UserId-Eigenschaft
-description: Ruft bei der Skripterstellung den Benutzer für die Terminal Server Sitzung ab oder legt ihn fest. Wenn eine Sitzungs Zustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
+title: SessionStateChangeTrigger.UserId-Eigenschaft
+description: Ruft für die Skripterstellung den Benutzer für die Terminalserversitzung ab oder legt diese fest. Wenn eine Sitzungszustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
 ms.assetid: cdeabdb1-6dc7-462b-8919-7825ce72dc02
 keywords:
-- UserID-Eigenschaft Taskplaner
-- UserID-Eigenschaft Taskplaner, sessionstatechange-Objekt
-- Sessionstatechangeauslöserobjekt Taskplaner, UserID-Eigenschaft
+- UserId-Eigenschaft Taskplaner
+- UserId-Eigenschaft Taskplaner , SessionStateChangeTrigger-Objekt
+- SessionStateChangeTrigger-Objekt Taskplaner , UserId-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e5903025c406aaa6ce8ef5f6be4d2c440dfc1764
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0241b0f3f8c8a56cd7e2ee77a8212610df42d52b56b4258d1e58876d7160259c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011240"
 ---
-# <a name="sessionstatechangetriggeruserid-property"></a>Sessionstatechangelöst. UserId-Eigenschaft
+# <a name="sessionstatechangetriggeruserid-property"></a>SessionStateChangeTrigger.UserId-Eigenschaft
 
-Ruft bei der Skripterstellung den Benutzer für die Terminal Server Sitzung ab oder legt ihn fest. Wenn eine Sitzungs Zustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
+Ruft für die Skripterstellung den Benutzer für die Terminalserversitzung ab oder legt diese fest. Wenn eine Sitzungszustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ SessionStateChangeTrigger.UserId As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Benutzer für die Terminal Server Sitzung.
+Der Benutzer für die Terminalserversitzung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,9 +46,9 @@ Der Benutzer für die Terminal Server Sitzung.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

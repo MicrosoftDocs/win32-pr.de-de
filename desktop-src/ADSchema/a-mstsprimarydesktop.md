@@ -1,10 +1,10 @@
 ---
-title: MS-TS-Primary-Desktop-Attribut
-description: Dieses Attribut stellt den vorwärts Link zum primären Desktop eines Benutzers dar.
+title: ms-TS-Primary-Desktop-Attribut
+description: Dieses Attribut stellt den Vorwärtslink zum primären Desktop eines Benutzers dar.
 ms.assetid: f1dc80b5-371a-4e59-9bcf-4d04f01ea80c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-Primary-Desktop-Attribut
+- MS-TS-Primary-Desktop-Attribut AD-Schema
 - AD-Schema des msTSPrimaryDesktop-Attributs
 topic_type:
 - apiref
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd73430e120b2d44d7fe037a2736469fe0771f94
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 51b050e44f4dfa32973ddb8773eda0672919df2ddbfef0ca77a5303e140a123d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066071"
 ---
-# <a name="ms-ts-primary-desktop-attribute"></a>MS-TS-Primary-Desktop-Attribut
+# <a name="ms-ts-primary-desktop-attribute"></a>ms-TS-Primary-Desktop-Attribut
 
-Dieses Attribut stellt den vorwärts Link zum primären Desktop eines Benutzers dar.
+Dieses Attribut stellt den Vorwärtslink zum primären Desktop eines Benutzers dar.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-TS-primär-Desktop                   |
-| LDAP-Display-Name | msTSPrimaryDesktop                      |
+| CN                | ms-TS-Primary-Desktop                   |
+| Ldap-Anzeigename | msTSPrimaryDesktop                      |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.2073                 |
-| System-ID-GUID    | 29259694-09e4-4237-9F 72-9306ebe63ab2    |
+| System-Id-Guid    | 29259694-09e4-4237-9f72-9306ebe63ab2    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -53,11 +53,11 @@ Dieses Attribut stellt den vorwärts Link zum primären Desktop eines Benutzers 
 |------------------------|-----------------------------------|
 | Link-ID                | 2170                              |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |
@@ -74,11 +74,11 @@ Dieses Attribut stellt den vorwärts Link zum primären Desktop eines Benutzers 
 |------------------------|-----------------------------------|
 | Link-ID                | 2170                              |
 | MAPI-Id                | \-                                |
-| System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | False                             |
-| Im globalen Katalog      | False                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| System-Only            | Falsch                             |
+| Is-Single-Valued       | Richtig                              |
+| Ist indiziert             | Falsch                             |
+| Im globalen Katalog      | Falsch                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000000                        |

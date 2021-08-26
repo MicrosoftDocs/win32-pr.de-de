@@ -1,11 +1,11 @@
 ---
-title: ID3DX12PipelineParserCallbacks samplemaskcb-Methode (D3DX12. h)
-description: Ruft den Sample Mask-Unterordner Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+title: ID3DX12PipelineParserCallbacks SampleMaskCb-Methode (D3DX12.h)
+description: Ruft den Beispielmasken-Unterobjektrückruf eines Objekts auf, das diese Schnittstelle implementiert.
 ms.assetid: 4D729414-1E04-407B-B32F-ECE1EA9FF414
 keywords:
-- Samplemaskcb-Methode
-- Samplemaskcb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
-- ID3DX12PipelineParserCallbacks-Schnittstelle, samplemaskcb-Methode
+- SampleMaskCb-Methode
+- SampleMaskCb-Methode, ID3DX12PipelineParserCallbacks-Schnittstelle
+- ID3DX12PipelineParserCallbacks-Schnittstelle, SampleMaskCb-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0124b228056089e21c078ffce25ce59eef0e3dee
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 64acc7e969f52e78250cde9bc4c693ce3eae06ae3edd08e7f18c65dc0ff6fa8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069590"
 ---
-# <a name="id3dx12pipelineparsercallbackssamplemaskcb-method"></a>ID3DX12PipelineParserCallbacks:: samplemaskcb-Methode
+# <a name="id3dx12pipelineparsercallbackssamplemaskcb-method"></a>ID3DX12PipelineParserCallbacks::SampleMaskCb-Methode
 
-Ruft den Sample Mask-Unterordner Rückruf eines Objekts auf, das diese Schnittstelle implementiert.
+Ruft den Beispielmasken-Unterobjektrückruf eines Objekts auf, das diese Schnittstelle implementiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,12 +45,12 @@ void SampleMaskCb(
 
 <dl> <dt>
 
-*Samplemask* 
+*SampleMask* 
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Details zum in einem Pipeline Status-Stream analysierten Sample Mask-unter Objekt.
+Details des Beispielmasken-Unterobjekts, das aus einem Pipelinezustandsdatenstrom analysiert wird.
 
 </dd> </dl>
 
@@ -64,8 +64,8 @@ Gibt nichts zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX12. h</dt> </dl>  |
-| Bibliothek<br/> | <dl> <dt>D3D12. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX12.h</dt> </dl>  |
+| Bibliothek<br/> | <dl> <dt>D3D12.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D3D12.dll</dt> </dl> |
 
 

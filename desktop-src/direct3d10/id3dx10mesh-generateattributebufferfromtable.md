@@ -1,7 +1,7 @@
 ---
-description: Generieren Sie einen Attribut Puffer aus den Daten in der-Attribut Tabelle des Mesh. Ein Attribut Puffer ist ein anderes Format zum Speichern der Daten in der Attribut Tabelle. Der Attribut Puffer und die Attribut Tabelle sind interne Datenstrukturen im Mesh.
+description: Generieren Sie einen Attributpuffer aus den Daten in der Attributtabelle des Gitters. Ein Attributpuffer ist ein weiteres Format zum Speichern der Daten in der Attributtabelle. Sowohl der Attributpuffer als auch die Attributtabelle sind interne Datenstrukturen im Gitternetz.
 ms.assetid: e5e240af-4bf9-4123-9820-9c9680de62b1
-title: 'ID3DX10Mesh:: generateattributebufferfromtable-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GenerateAttributeBufferFromTable-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: c2140278cdabf123f713c234021e09844329b307
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b2402f5af8324b7819865a4c705218fc50122c0a8fbdb37e67c83b8eba0b135a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365116"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069990"
 ---
-# <a name="id3dx10meshgenerateattributebufferfromtable-method"></a>ID3DX10Mesh:: generateattributebufferfromtable-Methode
+# <a name="id3dx10meshgenerateattributebufferfromtable-method"></a>ID3DX10Mesh::GenerateAttributeBufferFromTable-Methode
 
-Generieren Sie einen Attribut Puffer aus den Daten in der-Attribut Tabelle des Mesh. Ein Attribut Puffer ist ein anderes Format zum Speichern der Daten in der Attribut Tabelle. Der Attribut Puffer und die Attribut Tabelle sind interne Datenstrukturen im Mesh.
+Generieren Sie einen Attributpuffer aus den Daten in der Attributtabelle des Gitters. Ein Attributpuffer ist ein weiteres Format zum Speichern der Daten in der Attributtabelle. Sowohl der Attributpuffer als auch die Attributtabelle sind interne Datenstrukturen im Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,8 +50,8 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

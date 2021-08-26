@@ -1,7 +1,7 @@
 ---
-description: Die Methode "konfigurrecardnamesearch" gibt die Kartennamen an, die bei der Suche nach der Smartcard verwendet werden sollen.
+description: Die ConfigureCardNameSearch-Methode gibt die Kartennamen an, die bei der Suche nach der Smartcard verwendet werden sollen.
 ms.assetid: fb406696-0cf0-4d67-8125-8888ee1b8213
-title: 'Iscardlocate:: konfiguriert recardnamesearch-Methode (scardmgr. h)'
+title: ISCardLocate::ConfigureCardNameSearch-Methode (Scardmgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 4af451bea1f08df2af0a673b26e84c9df2a0954b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e49b7653a434f54bfa706aea0bde63048d6b511e5143ade34f0b4e8225a6042b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120014266"
 ---
-# <a name="iscardlocateconfigurecardnamesearch-method"></a>Iscardlocate:: konfiguriert recardnamesearch-Methode
+# <a name="iscardlocateconfigurecardnamesearch-method"></a>ISCardLocate::ConfigureCardNameSearch-Methode
 
-\[Die Methode " **konfigurrecardnamesearch** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **ConfigureCardNameSearch-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die Methode " **konfigurrecardnamesearch** " gibt die Kartennamen an, die bei der Suche nach der [*Smartcard*](../secgloss/s-gly.md)verwendet werden sollen.
+Die **ConfigureCardNameSearch-Methode** gibt die Kartennamen an, die bei der Suche nach der [*Smartcard*](../secgloss/s-gly.md)verwendet werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ HRESULT ConfigureCardNameSearch(
 
 <dl> <dt>
 
-*pcardnames* \[ in\]
+*pCardNames* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Automatisierungs sicheres Array von Kartennamen in BSTR-Form.
+Ein Zeiger auf ein sicheres Automation-Array von Kartennamen im BSTR-Format.
 
 </dd> <dt>
 
-*pgroupnames* \[ in\]
+*pGroupNames* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Automation-sicheres Array mit Namen von Karten-/Lesegruppen in BSTR-Form, die der Suche hinzugefügt werden sollen.
+Ein Zeiger auf ein sicheres Automation-Array von Namen von Karten-/Lesergruppen im BSTR-Formular, das der Suche hinzugefügt werden soll.
 
 </dd> <dt>
 
-*bstrintitle* \[ in\]
+*bstrTitle* \[ In\]
 </dt> <dd>
 
-Dialog Feld Titel für das allgemeine Steuerelement für die Suche.
+Der Titel des Dialogfelds für das allgemeine Suchsteuerelement.
 
 </dd> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Gibt an, wann die [*Benutzeroberfläche*](../secgloss/u-gly.md) angezeigt wird.
+Gibt an, wann [*die Benutzeroberfläche*](../secgloss/u-gly.md) angezeigt wird.
 
 
 
 | Wert                                                                                                                                                                       | Bedeutung                                                                                                                                                                                                                                                                                                                             |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SC_DLG_MINIMAL_UI"></span><span id="sc_dlg_minimal_ui"></span><dl> <dt>**SC \_ DLG \_ minimale \_ Benutzeroberfläche**</dt> </dl> | Zeigt das Dialogfeld nur an, wenn die Karte, die von der aufrufenden Anwendung gesucht wird, nicht gefunden wurde und für die Verwendung in einem Reader verfügbar ist. Dadurch kann die Karte gefunden und verbunden werden (entweder über einen internen Dialogfeld Mechanismus oder mithilfe der Benutzer Rückruf Funktionen) und an die aufrufende Anwendung zurückgegeben werden.<br/> |
-| <span id="SC_DLG_NO_UI"></span><span id="sc_dlg_no_ui"></span><dl> <dt>**SC \_ DLG \_ keine \_ Benutzeroberfläche**</dt> </dl>                | Bewirkt, dass unabhängig vom Suchergebnis keine Anzeige auf der Benutzeroberfläche angezeigt wird.<br/>                                                                                                                                                                                                                                                                  |
-| <span id="SC_DLG_FORCE_UI"></span><span id="sc_dlg_force_ui"></span><dl> <dt>**SC \_ DLG \_ Force \_ UI**</dt> </dl>       | Bewirkt, dass die Benutzeroberfläche unabhängig vom Suchergebnis angezeigt wird.<br/>                                                                                                                                                                                                                                                                      |
+| <span id="SC_DLG_MINIMAL_UI"></span><span id="sc_dlg_minimal_ui"></span><dl> <dt>**SC \_ DLG \_ MINIMAL \_ UI**</dt> </dl> | Zeigt das Dialogfeld nur an, wenn sich die karte, die von der aufrufenden Anwendung gesucht wird, nicht befindet und für die Verwendung in einem Reader verfügbar ist. Dadurch kann die Karte gefunden, verbunden (entweder über einen internen Dialogfeldmechanismus oder mithilfe der Benutzerrückruffunktionen) und an die aufrufende Anwendung zurückgegeben werden.<br/> |
+| <span id="SC_DLG_NO_UI"></span><span id="sc_dlg_no_ui"></span><dl> <dt>**SC \_ DLG \_ NO \_ UI**</dt> </dl>                | Bewirkt unabhängig vom Suchergebnis keine Anzeige der Benutzeroberfläche.<br/>                                                                                                                                                                                                                                                                  |
+| <span id="SC_DLG_FORCE_UI"></span><span id="sc_dlg_force_ui"></span><dl> <dt>**SC \_ DLG \_ FORCE \_ UI**</dt> </dl>       | Bewirkt, dass die Benutzeroberfläche unabhängig vom Suchergebnis angezeigt wird.<br/>                                                                                                                                                                                                                                                                      |
 
 
 
@@ -86,28 +86,28 @@ Gibt an, wann die [*Benutzeroberfläche*](../secgloss/u-gly.md) angezeigt wird.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                           |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/>                          |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                                         |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Ein fehlerhafter Zeiger wurde in " *pcardnames* " oder " *pgroupnames*" übergeben.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                             |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                                         |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde in *pCardNames* oder *pGroupNames* übergeben.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die [*Smartcard*](../secgloss/s-gly.md)zu suchen, wenden Sie [**findcard**](iscardlocate-findcard.md)an.
+Um die [*Smartcard*](../secgloss/s-gly.md)zu suchen, rufen [**Sie FindCard**](iscardlocate-findcard.md)auf.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**iscardlocate**](iscardlocate.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardLocate.**](iscardlocate.md)
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -115,25 +115,25 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardmgr. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardmgr. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardmgr.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardmgr.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardlocate ist als 1461aacd-6810-11D0-918f -00aa00c18068 definiert.<br/>         |
+| IID<br/>                      | IID \_ ISCardLocate ist als 1461AACD-6810-11D0-918F-00AA00C18068 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Findcard**](iscardlocate-findcard.md)
+[**FindCard**](iscardlocate-findcard.md)
 </dt> <dt>
 
-[**Iscardsuche**](iscardlocate.md)
+[**ISCardLocate**](iscardlocate.md)
 </dt> </dl>
 
  

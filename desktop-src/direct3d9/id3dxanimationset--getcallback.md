@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 563c1007cc471ab10a9609e776da69b7c5ed493b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4ded66bbe90320250667511d1c9468073693ce789cdb7add8574f42a4756136d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120026590"
 ---
 # <a name="id3dxanimationsetgetcallback-method"></a>ID3DXAnimationSet::GetCallback-Methode
 
@@ -48,16 +48,16 @@ HRESULT GetCallback(
 
 Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Position, an der Rückrufe zu finden sind.
+Position, von der rückrufe gesucht werden sollen.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Rückrufsuchflags. Dieser Parameter kann auf eine Kombination aus mindestens einem Flag aus [**D3DXCALLBACK-SUCHFLAgs \_ \_ festgelegt werden.**](./d3dxcallback-search-flags.md)
+Rückrufsuchflags. Dieser Parameter kann auf eine Kombination aus einem oder mehreren Flags aus [**D3DXCALLBACK \_ SEARCH \_ FLAGS**](./d3dxcallback-search-flags.md)festgelegt werden.
 
 </dd> <dt>
 
@@ -83,20 +83,20 @@ Adresse des Rückrufdatenzeigers.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR zurückgegeben wird.**](./d3dxerr.md)
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode, um D3D \_ OK zurückzugeben. Programmieren Sie andernfalls die -Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

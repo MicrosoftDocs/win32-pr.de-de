@@ -1,7 +1,7 @@
 ---
-description: Legt den Track auf die angegebene lokale Animations Zeit fest.
+description: Legt die Spur auf die angegebene lokale Animationszeit fest.
 ms.assetid: 2ce87b06-1196-415f-958c-7bd407d6c69c
-title: 'ID3DXAnimationController:: settrackposition-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::SetTrackPosition-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 95c408a43df3047a52d93da0cca3d9b17053d320
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5fbcc55f1403df0577937695d3e831aa73514304f10a6e659911d146f5b7d251
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069100"
 ---
-# <a name="id3dxanimationcontrollersettrackposition-method"></a>ID3DXAnimationController:: settrackposition-Methode
+# <a name="id3dxanimationcontrollersettrackposition-method"></a>ID3DXAnimationController::SetTrackPosition-Methode
 
-Legt den Track auf die angegebene lokale Animations Zeit fest.
+Legt die Spur auf die angegebene lokale Animationszeit fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT SetTrackPosition(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Bezeichner nachverfolgen.
+Nachverfolgungsbezeichner.
 
 </dd> <dt>
 
-*Position* \[ in\]
+*Position* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Double**](../winprog/windows-data-types.md)**
+Typ: **[ **DOUBLE**](../winprog/windows-data-types.md)**
 
-Der Wert der lokalen Animations Zeit, der der Spur zugewiesen werden soll.
+Lokaler Animationszeitwert, der der Spur zugewiesen werden soll.
 
 </dd> </dl>
 
@@ -63,16 +63,16 @@ Der Wert der lokalen Animations Zeit, der der Spur zugewiesen werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 

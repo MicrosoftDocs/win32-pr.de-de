@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7e720286c3e7308078d5d5ec91aa27edc95b725830824473e7b5858f2de5bc90
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ca8b05c0eeac88521d03b95a94f7d2363d5746e9
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118072478"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468947"
 ---
 # <a name="jetgotosecondaryindexbookmark-function"></a>JetGotoSecondaryIndexBookmark-Funktion
 
@@ -78,90 +78,31 @@ Die Größe des Primärschlüssellesezeichens im Puffer.
 
 Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitBookmarkPermitVirtualCurrency</p></td>
-<td><p>Wenn der Indexeintrag nicht mehr gefunden werden kann, wird der Cursor an der Stelle positioniert, an der dieser Indexeintrag zuvor gefunden wurde. Der Vorgang schlägt weiterhin mit JET_errRecordDeleted fehl. Es ist jedoch möglich, relativ zum Indexeintrag, der jetzt fehlt, zum nächsten oder vorherigen Indexeintrag zu wechseln.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitBookmarkPermitVirtualCurrency</p> | <p>Wenn der Indexeintrag nicht mehr gefunden werden kann, wird der Cursor an der Stelle positioniert, an der dieser Indexeintrag zuvor gefunden wurde. Der Vorgang schlägt weiterhin mit JET_errRecordDeleted fehl. Es ist jedoch möglich, relativ zum Indexeintrag, der jetzt fehlt, zum nächsten oder vorherigen Indexeintrag zu wechseln.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, einen schwerwiegenden Fehler festgestellt hat, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidBookmark</p></td>
-<td><p>Das sekundäre Indexlesezeichen, das bereitgestellt wurde, war ungültig. Dieser Fehler ist möglicherweise aufgetreten, weil der sekundäre Schlüssel 0 (null) oder der sekundäre Schlüsselpufferzeiger <strong>NULL</strong>ist. Dieser Fehler tritt auf, weil</p>
-<ul>
-<li><p>Der aktuelle sekundäre Index verfügt nicht über eine Eindeutigkeitseinschränkung, und die Größe des bereitgestellten Lesezeichens ist 0 (null).</p></li>
-<li><p>Der Lesezeichenpufferzeiger ist <strong>NULL.</strong></p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNoCurrentIndex</p></td>
-<td><p>Der Cursor befindet sich derzeit nicht in einem sekundären Index. Es ist nicht sinnvoll, zu einem sekundären Indexlesezeichen zu wechseln, wenn der Cursor derzeit keinen sekundären Index verwendet. <a href="gg294053(v=exchg.10).md">JetGotoBookmark</a> sollte verwendet werden, wenn sich der Cursor nicht in einem sekundären Index befindet.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRecordDeleted</p></td>
-<td><p>Der Indexeintrag, der dem sekundären Indexlesezeichen zugeordnet ist, wurde nicht gefunden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden.</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>ausgeführt wurden.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, einen schwerwiegenden Fehler festgestellt hat, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
+| <p>JET_errInvalidBookmark</p> | <p>Das sekundäre Indexlesezeichen, das bereitgestellt wurde, war ungültig. Dieser Fehler ist möglicherweise aufgetreten, weil der sekundäre Schlüssel 0 (null) oder der sekundäre Schlüsselpufferzeiger <strong>NULL</strong>ist. Dieser Fehler tritt auf, weil</p><ul><li><p>Der aktuelle sekundäre Index verfügt nicht über eine Eindeutigkeitseinschränkung, und die Größe des bereitgestellten Lesezeichens ist 0 (null).</p></li><li><p>Der Lesezeichenpufferzeiger ist <strong>NULL.</strong></p></li></ul> | 
+| <p>JET_errNoCurrentIndex</p> | <p>Der Cursor befindet sich derzeit nicht in einem sekundären Index. Es ist nicht sinnvoll, zu einem sekundären Indexlesezeichen zu wechseln, wenn der Cursor derzeit keinen sekundären Index verwendet. <a href="gg294053(v=exchg.10).md">JetGotoBookmark</a> sollte verwendet werden, wenn sich der Cursor nicht in einem sekundären Index befindet.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRecordDeleted</p> | <p>Der Indexeintrag, der dem sekundären Indexlesezeichen zugeordnet ist, wurde nicht gefunden.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p> | 
+
 
 
 Wenn diese Funktion erfolgreich ausgeführt wird, wird der Cursor an einem Indexeintrag positioniert, der dem angegebenen sekundären Indexlesezeichen zugeordnet ist. Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebrochen. Wenn ein Indexbereich in Kraft ist, wird dieser Indexbereich abgebrochen. Wenn ein Suchschlüssel für den Cursor erstellt wurde, der verwendet werden soll, wird dieser Suchschlüssel gelöscht. Es wird keine Änderung am Datenbankzustand vorgenommen.
@@ -172,34 +113,9 @@ Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebro
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

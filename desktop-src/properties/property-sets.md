@@ -1,25 +1,25 @@
 ---
-description: In diesem Abschnitt werden die Eigenschaften Sätze des Windows-Eigenschaften Systems beschrieben.
+description: In diesem Abschnitt werden Windows Eigenschaftensätze des Eigenschaftensystems beschrieben.
 ms.assetid: 2F7D9001-8ECE-43B2-8CAA-007254038554
-title: Eigenschaften Sätze (Windows-Eigenschaften System)
+title: Eigenschaftensätze (Windows-Eigenschaftensystem)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d38330954077e7dd941f12aa3cc13c81d5571bf3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 454c5e3f7412d58feb9bf9e747c7f274f1b8e22a041413f63dbdc223ac16110f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119938690"
 ---
-# <a name="property-sets-windows-property-system"></a>Eigenschaften Sätze (Windows-Eigenschaften System)
+# <a name="property-sets-windows-property-system"></a>Eigenschaftensätze (Windows-Eigenschaftensystem)
 
-In diesem Abschnitt werden die Eigenschaften Sätze des Windows-Eigenschaften Systems beschrieben.
+In diesem Abschnitt werden Windows Eigenschaftensätze des Eigenschaftensystems beschrieben.
 
 
 
 | Thema                                                               | Inhalte                                                                                                |
 |---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| [DBPROPSET \_ cifrmwrkcore- \_ ext](/previous-versions/windows/desktop/indexsrv/dbpropset-cifrmwrkcore-ext) | Enthält Systemeigenschaften, die den Computernamen und den Client Klassen Bezeichner (CLSID) definieren.<br/> |
+| [DBPROPSET \_ CIFRMWRKCORE \_ EXT](/previous-versions/windows/desktop/indexsrv/dbpropset-cifrmwrkcore-ext) | Enthält Systemeigenschaften, die den Computernamen und den Clientklassenbezeichner (CLSID) definieren.<br/> |
 
 
 
@@ -32,7 +32,7 @@ In diesem Abschnitt werden die Eigenschaften Sätze des Windows-Eigenschaften Sy
 [Windows-Eigenschaften](props.md)
 </dt> <dt>
 
-[Eigenschafts Beschreibungs Schema](property-description-schema.md)
+[Schema der Eigenschaftenbeschreibung](property-description-schema.md)
 </dt> <dt>
 
 [Schnittstellen](interfaces.md)
