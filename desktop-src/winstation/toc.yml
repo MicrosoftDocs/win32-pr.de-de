@@ -1,71 +1,71 @@
-- name: Fenster Stationen und Desktops
+- name: Fensterstationen und Desktops
   href: window-stations-and-desktops.md
   items:
-    - name: Informationen zu Fenster Stationen und Desktops
+    - name: Informationen zu Fensterstationen und Desktops
       href: about-window-stations-and-desktops.md
       items:
-        - name: Fenster Stationen
+        - name: Fensterstationen
           href: window-stations.md
         - name: Desktops
           href: desktops.md
-        - name: Fenster Station und Desktop Erstellung
+        - name: Fensterstation und Desktoperstellung
           href: window-station-and-desktop-creation.md
-        - name: Verarbeiten der Verbindung mit einer Fenster Station
+        - name: Verarbeiten der Verbindung mit einer Fensterstation
           href: process-connection-to-a-window-station.md
-        - name: Thread Verbindung mit einem Desktop
+        - name: Threadverbindung mit einem Desktop
           href: thread-connection-to-a-desktop.md
-        - name: Sicherheit und Zugriffsrechte für die Fenster Station
+        - name: Sicherheit und Zugriffsrechte für Window Station
           href: window-station-security-and-access-rights.md
-        - name: Desktop Sicherheit und Zugriffsrechte
+        - name: Desktopsicherheits- und Zugriffsrechte
           href: desktop-security-and-access-rights.md
-    - name: Fenster Station und Desktop Referenz
+    - name: Window Station and Desktop Reference
       href: window-station-and-desktop-reference.md
       items:
-        - name: Fenster Station-und Desktop Funktionen
+        - name: Window Station and Desktop Functions
           href: window-station-and-desktop-functions.md
           items:
-            - name: Closedesktop
+            - name: CloseDesktop
               href: /windows/desktop/api/winuser/nf-winuser-closedesktop
-            - name: Closewindowstation
+            - name: CloseWindowStation
               href: /windows/desktop/api/winuser/nf-winuser-closewindowstation
-            - name: Mit dem Desktop
+            - name: CreateDesktop
               href: /windows/desktop/api/winuser/nf-winuser-createdesktopa
-            - name: '"Kreatedesktopex"'
+            - name: CreateDesktopEx
               href: /windows/desktop/api/winuser/nf-winuser-createdesktopexa
-            - name: '"Up Windows Station"'
+            - name: CreateWindowStation
               href: /windows/desktop/api/winuser/nf-winuser-createwindowstationa
             - name: EnumDesktopProc
               href: /previous-versions/windows/desktop/legacy/ms682612(v=vs.85)
             - name: EnumDesktops
               href: /windows/desktop/api/winuser/nf-winuser-enumdesktopsa
-            - name: Enumdesktopwindows
+            - name: EnumDesktopWindows
               href: /windows/desktop/api/winuser/nf-winuser-enumdesktopwindows
-            - name: Aufgelisteten Stationen
+            - name: EnumWindowStations
               href: /windows/desktop/api/winuser/nf-winuser-enumwindowstationsa
-            - name: Enumwindowstationproc
+            - name: EnumWindowStationProc
               href: /previous-versions/windows/desktop/legacy/ms682643(v=vs.85)
-            - name: Getprocesswindowstation
+            - name: GetProcessWindowStation
               href: /windows/desktop/api/winuser/nf-winuser-getprocesswindowstation
-            - name: Getthreaddesktop
+            - name: GetThreadDesktop
               href: /windows/desktop/api/winuser/nf-winuser-getthreaddesktop
-            - name: Getuserobjectinformation
+            - name: GetUserObjectInformation
               href: /windows/desktop/api/winuser/nf-winuser-getuserobjectinformationa
             - name: OpenDesktop
               href: /windows/desktop/api/winuser/nf-winuser-opendesktopa
-            - name: Openinputdesktop
+            - name: OpenInputDesktop
               href: /windows/desktop/api/winuser/nf-winuser-openinputdesktop
-            - name: Openwindowstation
+            - name: OpenWindowStation
               href: /windows/desktop/api/winuser/nf-winuser-openwindowstationa
             - name: SetProcessWindowStation
               href: /windows/desktop/api/winuser/nf-winuser-setprocesswindowstation
             - name: SetThreadDesktop
               href: /windows/desktop/api/winuser/nf-winuser-setthreaddesktop
-            - name: Setuserobjectinformation
+            - name: SetUserObjectInformation
               href: /windows/desktop/api/winuser/nf-winuser-setuserobjectinformationa
-            - name: Switchdesktop
+            - name: SwitchDesktop
               href: /windows/desktop/api/winuser/nf-winuser-switchdesktop
-        - name: Fenster Station-und Desktop Strukturen
+        - name: Fensterstation und Desktopstrukturen
           href: window-station-and-desktop-structures.md
           items:
-            - name: Userobjectflags
+            - name: USEROBJECTFLAGS
               href: /windows/win32/api/winuser/ns-winuser-userobjectflags

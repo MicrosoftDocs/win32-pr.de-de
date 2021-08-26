@@ -1,11 +1,11 @@
 ---
 title: Win32_RDMSDesktopAssignment-Klasse
-description: Beschreibt die Benutzer Desktop Zuweisung für die RD-Sammlung.
+description: Beschreibt die Zuweisung des Rd-Sammlungsbenutzerdesktops.
 ms.assetid: d3370cf2-65db-4e01-9ea3-9a71340bf71b
 ms.tgt_platform: multiple
 keywords:
-- Win32_RDMSDesktopAssignment-Klasse Remotedesktopdienste
-- Win32_RDMSDesktopAssignment Klasse Remotedesktopdienste, beschrieben
+- Win32_RDMSDesktopAssignment-Remotedesktopdienste
+- Win32_RDMSDesktopAssignment klasse Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72bb252bd2efb71e3192ebd16160cecf18196cb0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 88576607777fe55d2fb2d4d9232ddc9d4b23849503e56f53fe4cd99f3931ddea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119868210"
 ---
-# <a name="win32_rdmsdesktopassignment-class"></a>Win32 \_ rdmsdesktopzuweisung-Klasse
+# <a name="win32_rdmsdesktopassignment-class"></a>Win32 \_ RDMSDesktopAssignment-Klasse
 
-Beschreibt die Benutzer Desktop Zuweisung für die RD-Sammlung.
+Beschreibt die Zuweisung des Rd-Sammlungsbenutzerdesktops.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -48,21 +48,21 @@ class Win32_RDMSDesktopAssignment
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ rdmsdesktopzuweisung** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ RDMSDesktopAssignment-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Win32-Klasse \_ rdmsdesktopzuweisung** verfügt über diese Methoden.
+Die **Win32 \_ RDMSDesktopAssignment-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                                                 | BESCHREIBUNG                              |
 |:---------------------------------------------------------------------------------------|:-----------------------------------------|
-| [**Adddesktopzuweisung**](win32-rdmsdesktopassignment-adddesktopassignment.md)       | Fügt eine Desktop Zuweisung hinzu.<br/>    |
-| [**Removedesktopzuweisung**](win32-rdmsdesktopassignment-removedesktopassignment.md) | Entfernt eine Desktop Zuweisung.<br/> |
+| [**AddDesktopAssignment**](win32-rdmsdesktopassignment-adddesktopassignment.md)       | Fügt eine Desktopzuweisung hinzu.<br/>    |
+| [**RemoveDesktopAssignment**](win32-rdmsdesktopassignment-removedesktopassignment.md) | Entfernt eine Desktopzuweisung.<br/> |
 
 
 
@@ -70,11 +70,11 @@ Die **Win32-Klasse \_ rdmsdesktopzuweisung** verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ rdmsdesktopzuweisung** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ RDMSDesktopAssignment-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Collectionalias**
+**CollectionAlias**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -90,7 +90,7 @@ Alias der Auflistung.
 
 </dd> <dt>
 
-**Desktopname**
+**DesktopName**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -118,7 +118,7 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Domänen Name des Benutzerkontos.
+Der Domänenname des Benutzerkontos.
 
 </dd> <dt>
 
@@ -134,7 +134,7 @@ Zugriffstyp: Lesen/Schreiben
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Name des Benutzerkontos.
+Der Benutzername.
 
 </dd> </dl>
 
@@ -146,8 +146,8 @@ Der Name des Benutzerkontos.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMV2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 

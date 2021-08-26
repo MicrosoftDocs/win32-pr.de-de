@@ -1,39 +1,39 @@
 ---
-description: Im folgenden finden Sie die parallelen Assemblys, die von Microsoft unterstützt werden. Windows Service Packs können kompatible Versionen dieser Assemblys mit Sicherheits-oder Fehlerbehebungen enthalten.
+description: Im Folgenden finden Sie die von Microsoft unterstützten assemblyseitigen Assemblys. Windows Service Packs können kompatible Versionen dieser Assemblys mit Sicherheits- oder Fehlerbehebungen enthalten.
 ms.assetid: 828a8619-40a2-4a1b-8043-5d08715db65f
-title: Unterstützte parallele Assemblys von Microsoft
+title: Unterstützte microsoft-side-by-side-Assemblys
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2dcef7b9d0323e864e846ac37a5e7c459736f356
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be936d6f9f09227e7c2695901ce34e53c06b6b445b945a56a0865b1c83ec5421
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119884640"
 ---
-# <a name="supported-microsoft-side-by-side-assemblies"></a>Unterstützte parallele Assemblys von Microsoft
+# <a name="supported-microsoft-side-by-side-assemblies"></a>Unterstützte microsoft-side-by-side-Assemblys
 
-Im folgenden finden Sie die parallelen Assemblys, die von Microsoft unterstützt werden. Windows Service Packs können kompatible Versionen dieser Assemblys mit Sicherheits-oder Fehlerbehebungen enthalten.
+Im Folgenden finden Sie die von Microsoft unterstützten assemblyseitigen Assemblys. Windows Service Packs können kompatible Versionen dieser Assemblys mit Sicherheits- oder Fehlerbehebungen enthalten.
 
-Sie können im [Microsoft Download Center](https://www.microsoft.com/Downloads/)nach verfügbaren verteilbaren Tabellen suchen.
+Sie können im Microsoft Download Center nach verfügbaren verteilbaren [Ressourcen suchen.](https://www.microsoft.com/Downloads/)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
-Diese parallelen Assemblys werden von Microsoft ab Windows Server 2003 unterstützt.
+Diese nebenseitigen Assemblys werden von Microsoft ab Windows Server 2003 unterstützt.
 
--   WinHTTP 5,1
--   Microsoft Isolation Automation-Assemblys, die die Verwendung von parallelen Assemblys mit Skripterstellung ermöglichen.
--   Allgemeine Shell-Steuerelemente Version 6,0 (Comctl32.dll)
--   GDI Plus Version 1,0 (GDIplus.dll)
--   Visual C++ Laufzeitbibliotheken, Version 6,0
+-   WinHTTP 5.1
+-   Microsoft Isolation Automation-Assemblys, die die Verwendung von nebenseitigen Assemblys mit Skripterstellung ermöglichen.
+-   Shell Common Controls Version 6.0 (Comctl32.dll)
+-   GDI Plus Version 1.0 (GDIplus.dll)
+-   Visual C++ Laufzeitbibliotheken Version 6.0
 
 ## <a name="windows-xp"></a>Windows XP
 
-Diese parallelen Assemblys wurden ab Windows XP von Microsoft unterstützt.
+Diese nebenseitigen Assemblys wurden von Microsoft ab dem Windows XP unterstützt.
 
--   Allgemeine Shell-Steuerelemente Version 6,0 (Comctl32.dll)
--   GDI Plus Version 1,0 (GDIplus.dll)
--   Visual C++ Laufzeitbibliotheken, Version 6,0
+-   Shell Common Controls Version 6.0 (Comctl32.dll)
+-   GDI Plus Version 1.0 (GDIplus.dll)
+-   Visual C++ Laufzeitbibliotheken Version 6.0
 
  
 

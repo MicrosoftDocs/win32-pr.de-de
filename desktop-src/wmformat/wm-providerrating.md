@@ -1,9 +1,9 @@
 ---
-title: WM/providerrating
-description: Das WM/providerrating-Attribut enthält die Bewertung der Datei, die vom metadateninhaltsanbieter zugewiesen wird.
+title: WM/ProviderRating
+description: Das WM/ProviderRating-Attribut enthält die Bewertung der Datei, die vom Metadateninhaltsanbieter zugewiesen wird.
 ms.assetid: 3fd6ec6e-568c-4568-9502-d02c1c9a894b
 keywords:
-- WM/providerrating Windows Media-Format
+- WM/ProviderRating windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de839a8b23b79f93c81169851ab4338248111f32
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3916b41d2480e2e39134ebeff649f94086ce1d88681229daed7a56ab805060a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930363"
 ---
-# <a name="wmproviderrating"></a>WM/providerrating
+# <a name="wmproviderrating"></a>WM/ProviderRating
 
-Das **WM/providerrating-** Attribut enthält die Bewertung der Datei, die vom metadateninhaltsanbieter zugewiesen wird.
+Das **WM/ProviderRating-Attribut** enthält die Bewertung der Datei, die vom Metadateninhaltsanbieter zugewiesen wird.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmproviderrating
+g \_ wszWMProviderRating
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,47 +1,47 @@
 ---
-title: Start der Windows-Abbild Datei (wimboot)
-description: Start der Windows-Abbild Datei (wimboot)
+title: Windows Start der Imagedatei (WimBoot)
+description: Windows Start der Imagedatei (WimBoot)
 ms.assetid: 1C4EFC42-6698-4981-8C55-D1DFC6309F31
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d9f14ea506226e2c16d771ecec52fa31a8c871b4
-ms.sourcegitcommit: 46376be61d3fa308f9b1a06d7e2fa122a39755af
+ms.openlocfilehash: 687a230188c3b13317d8176d8209cf5e38026c3b6f161be7ffe0c2ed760976ee
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "103734641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932120"
 ---
-# <a name="windows-image-file-boot-wimboot"></a>Start der Windows-Abbild Datei (wimboot)
+# <a name="windows-image-file-boot-wimboot"></a>Windows Start der Imagedatei (WimBoot)
 
 ## <a name="platform"></a>Plattform
 
 **Clients:** Windows 8.1  
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Wimboot ist eine alternative Möglichkeit für OEMs, Windows bereitzustellen. Eine wimboot-Bereitstellung startet Windows direkt aus einer komprimierten Windows-Abbild Datei (WIM) und führt Sie aus. Diese WIM-Datei ist unveränderlich, und der Zugriff darauf wird von einem neuen Dateisystem-Filtertreiber (WoF.sys) verwaltet.
+WimBoot ist eine alternative Möglichkeit für OEMs zum Bereitstellen Windows. Eine WimBoot-Bereitstellung wird gestartet und Windows direkt aus einer komprimierten Windows Imagedatei (WIM) ausgeführt. Diese WIM-Datei ist unveränderlich, und der Zugriff darauf wird von einem neuen Dateisystemfiltertreiber (File System Filter Driver, WoF.sys) verwaltet.
 
-Das Ergebnis ist eine erhebliche Verringerung des Speicherplatzes, der für die Installation von Windows erforderlich ist.
+Dies führt zu einer erheblichen Verringerung des Speicherplatzes, der für die Installation des Windows.
 
-## <a name="manifestations"></a>Kundgebungen
+## <a name="manifestations"></a>Manifestationen
 
-Die meisten Anwendungen sollten von wimboot vollständig betroffen sein. Nur Anwendungen, die auf Systemdateien oder vorab geladene Dateien für Schreibzugriffe zugreifen und diese entsperren, sind möglicherweise betroffen. Da die WIM unveränderlich ist, werden Aktualisierungen an der Datei (d. h. System-oder vorab geladene Dateien) einfach auf der C:- \\ Partition gespeichert.
+Die meisten Anwendungen sollten von WimBoot vollständig unbeeinflusst sein. Nur Anwendungen, die auf Systemdateien oder vorab geladene Dateien für den Schreibzugriff zugreifen und diese entsperren, sind möglicherweise betroffen. Da wim unveränderlich ist, werden Updates dafür (d. h. Systemdateien oder vorab geladene Dateien) einfach auf der C:-Partition \\ gespeichert.
 
-Wenn eine Anwendung den Schreibzugriff für alle WIM-gestützten Systemdateien und vorab geladenen Dateien entsperrt hat, würden die Einsparungen, die von wimboot bereitgestellt werden, vollständig verloren gehen, da alle diese Dateien dekomprimiert und auf dem Volume "C:" abgelegt werden \\ .
+Wenn eine Anwendung den Schreibzugriff für alle WIM-fähigen Systeme und vorab geladenen Dateien entsperrt, gehen die von WimBoot übermittelten Einsparungen vollständig verloren, da alle diese Dateien dekomprimiert und auf dem Volume C: platziert \\ würden.
 
-Außerdem müssen Sicherungs-und Wiederherstellungs Anwendungen die wimboot-bereit Stellungen beachten, da die WIM in einer separaten Partition vorhanden ist. Das heißt, bei der Sicherungskopie müssen sowohl die C: \\ -als auch die WIM-Partitionen gespeichert werden, und beide müssen gleichzeitig wieder hergestellt werden.
+Darüber hinaus müssen Sicherungs- und Wiederherstellungsanwendungen WimBoot-Bereitstellungen beachten, da wim in einer separaten Partition vorhanden ist. Das heißt, bei der Sicherung müssen sowohl die Partitionen C: als auch WIM gespeichert und beide \\ zusammen wiederhergestellt werden.
 
 ## <a name="solution"></a>Lösung
 
-Es wurden neue APIs eingeführt, mit denen Anwendungen direkt abfragen können, ob ein bestimmtes Volume oder eine Datei durch eine WIM-Datei unterstützt wird. Diese Informationen ermöglichen es Anwendungen, geeignete Entscheidungen zu treffen, z. b. das Öffnen dieser Dateien nur für den Lesezugriff oder das Identifizieren von Volumes/Partitionen, die gleichzeitig gesichert und wieder hergestellt werden müssen.
+Es wurden neue APIs eingeführt, mit denen Anwendungen direkt abfragen können, ob ein bestimmtes Volume oder eine Bestimmte Datei von einem WIM-Volume oder einer Datei als Back-Byte verwendet wird. Diese Informationen ermöglichen es Anwendungen, geeignete Entscheidungen zu treffen, z. B. das Öffnen dieser Dateien nur für den Lesezugriff oder das Identifizieren von Volumes/Partitionen, die zusammen sichern und wiederhergestellt werden müssen.
 
-## <a name="compatibility-performance-reliability-or-usability-tests"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits-oder Nutzbarkeits Tests
+## <a name="compatibility-performance-reliability-or-usability-tests"></a>Kompatibilitäts-, Leistungs-, Zuverlässigkeits- oder Nutzbarkeitstests
 
-Anwendungsentwickler sollten Ihre Software und die entsprechenden Szenarios auf einem wimboot-System testen, insbesondere dann, wenn diese Anwendungen auf Systemdateien oder vorab geladene Dateien zugreifen. Wenn ein Szenario abgeschlossen ist, sollte eine beträchtliche Reduzierung des verfügbaren Speicherplatzes gezahlt werden.
+Anwendungsentwickler sollten ihre Software und die entsprechenden Szenarien auf einem WimBoot-System testen, insbesondere, wenn diese Anwendungen auf system- oder vorab geladene Dateien zugreifen. Besondere Aufmerksamkeit sollte auf eine erhebliche Verringerung des verfügbaren Speicherplatzes auf dem Datenträger nach Abschluss eines Szenarios 2016 2016 2016 auf dem Datenträger zu finden sein.
 
- 
+ 
 
- 
+ 
 
 
 

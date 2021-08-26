@@ -1,21 +1,21 @@
 ---
-title: Laden von Zeichen-und Animationsdaten
-description: Laden von Zeichen-und Animationsdaten
+title: Laden von Zeichen- und Animationsdaten
+description: Laden von Zeichen- und Animationsdaten
 ms.assetid: cd674513-fd68-49bb-a43f-12b07adddf3d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed77524c4e3cbbcae725b87c3671914f2261fa1c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e0e387a6122ab08513763878678d99941ef65d8ed11822eed8639fccd6e3815d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961430"
 ---
-# <a name="loading-character-and-animation-data"></a>Laden von Zeichen-und Animationsdaten
+# <a name="loading-character-and-animation-data"></a>Laden von Zeichen- und Animationsdaten
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Nachdem Sie einen Zeiger auf die [**iagentex**](iagentex.md) -Schnittstelle verwendet haben, können Sie mit der [**Load**](load-method.md) -Methode ein Zeichen laden und seine [**iagentcharakteriex**](iagentcharacterex.md) -Schnittstelle abrufen. Es gibt drei verschiedene Möglichkeiten für den Ladepfad eines Zeichens. Der erste ist mit dem Microsoft-Agent 1,5 kompatibel, wobei der angegebene Pfad der vollständige Pfad und Dateiname einer Zeichen Datei ist. Die zweite Möglichkeit besteht darin, nur den Dateinamen anzugeben. in diesem Fall sucht der-Agent im Verzeichnis "chars". Die letzte Möglichkeit besteht darin, einen leeren Variant-Parameter bereitzustellen, der bewirkt, dass das Standard Zeichen geladen wird.
+Nachdem Sie über einen Zeiger auf die [**IAgentEx-Schnittstelle**](iagentex.md) verfügen, können Sie die [**Load-Methode**](load-method.md) verwenden, um ein Zeichen zu laden und dessen [**IAgentCharacterEx-Schnittstelle abzurufen.**](iagentcharacterex.md) Es gibt drei verschiedene Möglichkeiten für den Ladepfad eines Zeichens. Die erste ist mit Microsoft Agent 1.5 kompatibel, wobei der angegebene Pfad der vollständige Pfad und Dateiname einer Zeichendatei ist. Die zweite Möglichkeit besteht in der ausschließlichen Angabe des Dateinamens. In diesem Fall sucht der -Agent im Chars-Verzeichnis. Die letzte Möglichkeit besteht in der Bereitstellung eines leeren Variant-Parameters, der bewirkt, dass das Standardzeichen geladen wird.
 
 
 ```
@@ -39,7 +39,7 @@ Nachdem Sie einen Zeiger auf die [**iagentex**](iagentex.md) -Schnittstelle verw
 
 
 
-Sie können diese Schnittstelle verwenden, um auf die Methoden des Zeichens zuzugreifen:
+Sie können diese Schnittstelle verwenden, um auf die Methoden des Zeichens zu zugreifen:
 
 
 ```
@@ -59,7 +59,7 @@ Sie können diese Schnittstelle verwenden, um auf die Methoden des Zeichens zuzu
 
 
 
-Wenn Sie die Microsoft-Agent-Dienste nicht mehr benötigen, z. b. wenn die Client Anwendung heruntergefahren wird, können Sie die zugehörigen Schnittstellen freigeben. Beachten Sie, dass durch das Freigeben der Zeichen Schnittstelle das Zeichen nicht entladen wird. Verwenden Sie die [**Entlade**](unload-method.md) Methode, um dies vor dem Freigeben der [**iagentex**](iagentex.md) -Schnittstelle zu erreichen:
+Wenn Sie Microsoft Agent-Dienste nicht mehr benötigen, z. B. wenn Ihre Clientanwendung heruntergefahren wird, geben Sie die Schnittstellen frei. Beachten Sie, dass das Zeichen beim Freigeben der Zeichenschnittstelle nicht entladen wird. Rufen Sie die [**Unload-Methode**](unload-method.md) auf, um dies zu tun, bevor Sie die [**IAgentEx-Schnittstelle**](iagentex.md) freigeben:
 
 
 ```
@@ -87,9 +87,9 @@ VariantClear(&vPath);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Ivmharddiskconnectioncollection-Element Eigenschaft (vpccominterfaces. h)
-description: Ruft das Festplatten Verbindungs Objekt ab, das dem angegebenen Index entspricht.
+title: IVMHardDiskConnectionCollection Item-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft das Festplattenverbindungsobjekt ab, das dem angegebenen Index entspricht.
 ms.assetid: 24e158fb-b026-4619-9d0d-a59cd782894f
 keywords:
-- Element Eigenschaft virtueller PC
-- Item-Eigenschaft Virtual PC, ivmharddiskconnectioncollection-Schnittstelle
-- Ivmharddiskconnectioncollection-Schnittstelle Virtual PC, Item-Eigenschaft
+- Elementeigenschaft Virtueller PC
+- Item-Eigenschaft Virtual PC , IVMHardDiskConnectionCollection-Schnittstelle
+- IVMHardDiskConnectionCollection-Schnittstelle Virtueller PC, Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5558e70cfcf18f67c14e52160737b851fa9ea2c2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 82c829d7294925b7f95f8229779ca91e04ce305125d787acad14c8dd7cd9cff0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119974310"
 ---
-# <a name="ivmharddiskconnectioncollectionitem-property"></a>Ivmharddiskconnectioncollection:: Item (Eigenschaft)
+# <a name="ivmharddiskconnectioncollectionitem-property"></a>IVMHardDiskConnectionCollection::Item-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft das Festplatten Verbindungs Objekt ab, das dem angegebenen Index entspricht.
+Ruft das Festplattenverbindungsobjekt ab, das dem angegebenen Index entspricht.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_Item(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**ivmharddiskconnection**](ivmharddiskconnection.md) -Objekt.
+Das [**IVMHardDiskConnection-Objekt.**](ivmharddiskconnection.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -55,10 +55,10 @@ Das [**ivmharddiskconnection**](ivmharddiskconnection.md) -Objekt.
 | Name/Wert                                                                                                                                                    | Bedeutung                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt. <br/>                                                      |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der *harddiskconnection* -Parameter ist **null**. <br/>                                    |
-| <dl> <dt>DISP \_ E \_ badindex</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
-| <dl> <dt>VM \_ E \_ VM \_ unbekannt</dt> <dt>0xa0040207</dt> </dl> | Die Konfiguration ist unbekannt.<br/>                                                       |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der *hardDiskConnection-Parameter* ist **NULL.** <br/>                                    |
+| <dl> <dt>DISP \_ E \_ BADINDEX</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
+| <dl> <dt>VM \_ E \_ VM \_ UNKNOWN</dt> <dt>0xA0040207</dt> </dl> | Die Konfiguration ist unbekannt.<br/>                                                       |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
 
 
 
@@ -68,12 +68,12 @@ Das [**ivmharddiskconnection**](ivmharddiskconnection.md) -Objekt.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                         |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                          |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                               |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                      |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl>      |
-| IID<br/>                      | IID \_ ivmharddiskconnectioncollection ist definiert als b9f2caf4-0aeb-4085-B105-ceddb90dbf62<br/> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                      |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl>      |
+| IID<br/>                      | IID \_ IVMHardDiskconnectionCollection ist als b9f2caf4-0aeb-4085-b105-ceddb90dbf62 definiert.<br/> |
 
 
 
@@ -81,10 +81,10 @@ Das [**ivmharddiskconnection**](ivmharddiskconnection.md) -Objekt.
 
 <dl> <dt>
 
-[**Ivmharddiskconnection**](ivmharddiskconnection.md)
+[**IVMHardDiskConnection**](ivmharddiskconnection.md)
 </dt> <dt>
 
-[**Ivmharddiskconnectioncollection**](ivmharddiskconnectioncollection.md)
+[**IVMHardDiskConnectionCollection**](ivmharddiskconnectioncollection.md)
 </dt> </dl>
 
  

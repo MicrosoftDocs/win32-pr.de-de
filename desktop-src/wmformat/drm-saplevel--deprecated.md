@@ -1,9 +1,9 @@
 ---
 title: DRM_SAPLEVEL (veraltet)
-description: Gibt die von der Anwendung unterstützte SAP-Ebene (Secure audiopath) an.
+description: Gibt die sap-Ebene (Secure Audio Path) an, die von Ihrer Anwendung unterstützt wird.
 ms.assetid: a2648083-f9ec-43c7-96c8-4d8b5f8285d1
 keywords:
-- DRM_SAPLEVEL (veraltet) Windows Media-Format
+- DRM_SAPLEVEL (veraltet) Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43711c6c394761f599271809419a46311265d8b4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f80b43cfcf0c89283237f8ff2d3e4f8612050296d7462f54890c3efa908fa9be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930890"
 ---
-# <a name="drm_saplevel-deprecated"></a>DRM- \_ saplevel (veraltet)
+# <a name="drm_saplevel-deprecated"></a>DRM \_ SAPLEVEL (veraltet)
 
-\[**DRM \_ Saplevel** ist nicht mehr für die Verwendung ab Windows Vista verfügbar. Verwenden Sie stattdessen "Protected User Mode" (Puma) in der Media Foundation-Bibliothek. \]
+\[**DRM \_ SAPLEVEL** ist ab Windows Vista nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen Protected User Mode Audio (CSV) in der bibliothek Media Foundation. \]
 
-Die DRM-Eigenschaft " **\_ saplevel** " gibt die von der Anwendung unterstützte SAP-Ebene (Secure audiopath) an.
+Die **\_ DRM-Eigenschaft SAPLEVEL** gibt den sicheren Audiopfad (SECURE Audio Path, SAP) an, der von Ihrer Anwendung unterstützt wird.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmdrm ( \_ saplevel)
+g \_ wszWMDRM \_ SAPLEVEL
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine schreibgeschützte Eigenschaft, die durch den Aufruf von [**iwmdrmreader:: setdrmproperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-setdrmproperty)festgelegt wird. Der Wert ist eine breit Zeichen-Zeichen folgen Darstellung der SAP-Ebene, z. b. L "200". Die derzeit unterstützten Werte sind 200 und 300.
+Dies ist eine Schreibeigenschaft, die durch Aufrufen von [**IWMDRMReader::SetDRMProperty**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-setdrmproperty)festgelegt wird. Der Wert ist eine Breitzeichen-Zeichenfolgendarstellung der SAP-Ebene, z.B. L"200". Die aktuellen unterstützten Werte sind 200 und 300.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,11 +44,11 @@ Dies ist eine schreibgeschützte Eigenschaft, die durch den Aufruf von [**iwmdrm
 | Anforderung | Wert |
 |----------------------------------|--------------------------------|
 | Ende des Supports (Client)<br/> | Windows XP<br/>          |
-| Ende des Supports (Server)<br/> | Windows Server 2003<br/> |
+| Ende des Supports (Server)<br/> | Windows Server 2003<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

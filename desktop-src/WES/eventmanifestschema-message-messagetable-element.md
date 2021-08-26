@@ -1,9 +1,9 @@
 ---
-title: Message (messagetable)-Element
-description: Enthält einen Verweis auf eine Zeichenfolge im Lokalisierungs Abschnitt des Manifests. | Message (messagetable)-Element
+title: message (messageTable)-Element
+description: Enthält einen Verweis auf eine Zeichenfolge im Lokalisierungsabschnitt des Manifests. | message (messageTable)-Element
 ms.assetid: 0988cf99-c7e1-446b-869e-9ac4a0976ac5
 keywords:
-- Message-Element-Ereignisprotokoll
+- Message-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8e1165e3a613434fb76befb87cd1a83ed3af95d3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 79020fa18717a3a2338a8ac243bb95e0fa14de47f0e434fb52c475c956afa101
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106363072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119865670"
 ---
-# <a name="message-messagetable-element"></a>Message (messagetable)-Element
+# <a name="message-messagetable-element"></a>message (messageTable)-Element
 
-Enthält einen Verweis auf eine Zeichenfolge im Lokalisierungs Abschnitt des Manifests.
+Enthält einen Verweis auf eine Zeichenfolge im Lokalisierungsabschnitt des Manifests.
 
 ``` syntax
 <xs:element name="message">
@@ -47,7 +47,7 @@ Enthält einen Verweis auf eine Zeichenfolge im Lokalisierungs Abschnitt des Man
 </xs:element>
 ```
 
-Das **Message** -Element wird durch das [**messagetable**](eventmanifestschema-messagetable-instrumentationtype-element.md) -Element definiert.
+Das **message-Element** wird durch das [**messageTable-Element**](eventmanifestschema-messagetable-instrumentationtype-element.md) definiert.
 
 ## <a name="attributes"></a>Attributes
 
@@ -55,10 +55,10 @@ Das **Message** -Element wird durch das [**messagetable**](eventmanifestschema-m
 
 | Name    | type   | BESCHREIBUNG                                                                                        |
 |---------|--------|----------------------------------------------------------------------------------------------------|
-| message | Zeichenfolge | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichen folgen Tabelle.<br/>                                |
-| mId     | Zeichenfolge | Nicht verwendet.<br/>                                                                               |
-| Symbol  | Zeichenfolge | Der symbolische Name, den der Nachrichten Compiler für diese Meldungs Zeichenfolge erstellen soll.<br/> |
-| value   | Zeichenfolge | Die Zahl, die als Nachrichten-ID für diese Nachricht verwendet werden soll.<br/>                           |
+| message | Zeichenfolge | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichenfolgentabelle.<br/>                                |
+| mId     | Zeichenfolge | Wird nicht verwendet.<br/>                                                                               |
+| Symbol  | Zeichenfolge | Der symbolische Name, den der Nachrichtencompiler für diese Meldungszeichenfolge erstellen soll.<br/> |
+| value   | Zeichenfolge | Die Zahl, die als Nachrichtenbezeichner für diese Nachricht verwendet werden soll.<br/>                           |
 
 
 
@@ -68,8 +68,8 @@ Das **Message** -Element wird durch das [**messagetable**](eventmanifestschema-m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -80,10 +80,10 @@ Das **Message** -Element wird durch das [**messagetable**](eventmanifestschema-m
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**messagetable (eventstype)**](eventmanifestschema-messagetable-instrumentationtype-element.md)
+[**messageTable (EventsType)**](eventmanifestschema-messagetable-instrumentationtype-element.md)
 </dt> <dt>
 
-[**messagetable (metadataType)**](eventmanifestschema-messagetable-metadatatype-element.md)
+[**messageTable (MetadataType)**](eventmanifestschema-messagetable-metadatatype-element.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Einige der in der Systemsteuerung gefundenen Systemelemente sind erweiterbar. Um eine System Steuerungs Erweiterung zu installieren, registrieren Sie Ihre Shellerweiterung wie folgt, wobei Name der vordefinierte Name des System Elements ist (siehe Tabelle unten).
-title: Erweitern von System Steuerungselementen
+description: Einige der Im Systemsteuerung gefundenen Systemelemente sind erweiterbar. Um eine Systemsteuerung Erweiterung zu installieren, registrieren Sie Ihre Shellerweiterung wie folgt, wobei name der vordefinierte Name des Systemelements ist (siehe Tabelle unten).
+title: Erweitern von System Systemsteuerung Elementen
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: b8b18b71-c95f-4c71-8df4-fe9342ce0165
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 9b0f6628d7bc75378915c1d9f3e20327478742df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b4cb426c245c73b6644a95e45d7e2577b4f85f6ed7a28980894183854c1b26e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119942990"
 ---
-# <a name="extending-system-control-panel-items"></a>Erweitern von System Steuerungselementen
+# <a name="extending-system-control-panel-items"></a>Erweitern von System Systemsteuerung Elementen
 
-Einige der in der Systemsteuerung gefundenen Systemelemente sind erweiterbar. Um eine System Steuerungs Erweiterung zu installieren, registrieren Sie Ihre Shellerweiterung wie folgt, wobei *Name* der vordefinierte Name des System Elements ist (siehe Tabelle unten).
+Einige der Im Systemsteuerung gefundenen Systemelemente sind erweiterbar. Um eine Systemsteuerung Erweiterung zu installieren, registrieren Sie Ihre Shellerweiterung wie folgt, wobei *name* der vordefinierte Name des Systemelements ist (siehe Tabelle unten).
 
 ```
 HKEY_LOCAL_MACHINE
@@ -32,7 +32,7 @@ HKEY_LOCAL_MACHINE
                         PropertySheetHandlers
 ```
 
-Dies ähnelt der Art und Weise, wie Sie eine Erweiterung für ein vordefiniertes Shellobjekt registrieren würden. Da es sich bei den einzigen Shellerweiterungen, die von System Steuerungselementen unterstützt werden, um Eigenschaften Blätter handelt, muss die Registrierung unter dem Unterschlüssel **shellex** \\ **propertysheethandlers** abgelegt werden.
+Dies ähnelt der Art und Weise, wie Sie eine Erweiterung für ein vordefiniertes Shellobjekt registrieren würden. Da die einzigen Shellerweiterungen, die von Systemsteuerung Elementen unterstützt werden, Eigenschaftenblätter sind, muss sich die Registrierung unter dem \\ **Shellex-Unterschlüssel PropertySheetHandlers** befinden.
 
 
 
@@ -44,16 +44,16 @@ Dies ähnelt der Art und Weise, wie Sie eine Erweiterung für ein vordefiniertes
 </colgroup>
 <thead>
 <tr class="header">
-<th>System Steuerungselement</th>
+<th>Systemsteuerung Element</th>
 <th><em>name</em></th>
-<th>Bemerkungen</th>
+<th>Hinweise</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Anzeige</td>
 <td>Schreibtisch</td>
-<td>Unterstützt auch die Ersetzung der <strong>Desktop</strong> Seite.
+<td>Unterstützt auch das Ersetzen der <strong>Desktopseite.</strong>
 <blockquote>
 [!Note]<br />
 Dies wird unter Windows Vista nicht mehr unterstützt.
@@ -61,9 +61,9 @@ Dies wird unter Windows Vista nicht mehr unterstützt.
 <br/></td>
 </tr>
 <tr class="even">
-<td>Anzeigeeinstellungen erweitert</td>
-<td>Sicherungsmedium</td>
-<td>Nicht Hardware spezifische erweiterte Eigenschaften.
+<td>Anzeigen Einstellungen Erweitert</td>
+<td>Gerät</td>
+<td>Nichthardwarespezifische erweiterte Eigenschaften.
 <blockquote>
 [!Note]<br />
 Dies wird unter Windows Vista nicht mehr unterstützt.
@@ -71,9 +71,9 @@ Dies wird unter Windows Vista nicht mehr unterstützt.
 <br/></td>
 </tr>
 <tr class="odd">
-<td>Anzeigeeinstellungen erweitert</td>
+<td>Anzeigen Einstellungen Erweitert</td>
 <td>Anzeige</td>
-<td>Hardware spezifische erweiterte Eigenschaften.
+<td>Hardwarespezifische erweiterte Eigenschaften.
 <blockquote>
 [!Note]<br />
 Dies wird unter Windows Vista nicht mehr unterstützt.
@@ -83,27 +83,27 @@ Dies wird unter Windows Vista nicht mehr unterstützt.
 <tr class="even">
 <td>Internetoptionen</td>
 <td>Internet</td>
-<td>Die maximal zulässige Anzahl von Erweiterungs Seiten ist 18.</td>
+<td>Die maximale Anzahl von Erweiterungsseiten beträgt 18.</td>
 </tr>
 <tr class="odd">
 <td>Tastatur</td>
 <td>Tastatur</td>
-<td>Die maximal zulässige Anzahl von Erweiterungs Seiten ist 30.</td>
+<td>Die maximale Anzahl von Erweiterungsseiten beträgt 30.</td>
 </tr>
 <tr class="even">
 <td>Maus</td>
 <td>Maus</td>
-<td>Unterstützt auch das Ersetzen von Standardseiten. Die maximal zulässige Anzahl von Erweiterungs Seiten ist 8.</td>
+<td>Unterstützt auch das Ersetzen von Standardseiten. Die maximale Anzahl von Erweiterungsseiten beträgt 8.</td>
 </tr>
 <tr class="odd">
 <td>Energieoptionen</td>
 <td>Power</td>
-<td>Die maximale Anzahl von Seiten, einschließlich Standardseiten, ist 18.</td>
+<td>Die maximale Anzahl von Seiten, einschließlich Standardseiten, beträgt 18.</td>
 </tr>
 <tr class="even">
 <td>System</td>
 <td>System</td>
-<td>Die maximal zulässige Anzahl von Erweiterungs Seiten ist 8.
+<td>Die maximale Anzahl von Erweiterungsseiten beträgt 8.
 <blockquote>
 [!Note]<br />
 Dies wird unter Windows Vista nicht mehr unterstützt.
@@ -117,37 +117,37 @@ Dies wird unter Windows Vista nicht mehr unterstützt.
 
  
 
-Das **Element "** Software" in der Windows XP-Systemsteuerung ist kein Eigenschaften Blatt und kann daher nicht durch die hier beschriebenen Methoden erweitert werden. Stattdessen wird der Inhalt von Anwendungs Verlegern abgerufen. Weitere Informationen zum Hinzufügen von Inhalten zum **Hinzufügen oder Entfernen von Programmen finden Sie** unter [**iapppublisher**](/windows/desktop/api/Shappmgr/nn-shappmgr-iapppublisher), [**ienumpublishedapps**](/windows/desktop/api/Shappmgr/nn-shappmgr-ienumpublishedapps)und [**ipublishedapp**](/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp).
+Das Element **Software im** Windows XP-Systemsteuerung ist kein Eigenschaftenblatt und kann daher nicht durch die hier beschriebenen Methoden erweitert werden. Stattdessen wird der Inhalt von Anwendungsverlegern abgerufen. Weitere Informationen zum Hinzufügen von Inhalten zum **Hinzufügen oder Entfernen von Programmen** finden Sie unter [**IAppPublisher,**](/windows/desktop/api/Shappmgr/nn-shappmgr-iapppublisher) [**IEnumPublishedApps**](/windows/desktop/api/Shappmgr/nn-shappmgr-ienumpublishedapps)und [**IPublishedApp.**](/windows/desktop/api/Shappmgr/nn-shappmgr-ipublishedapp)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System Steuerungselemente](control-panel-applications.md)
+[Systemsteuerung Items](control-panel-applications.md)
 </dt> <dt>
 
 [Richtlinien zur Benutzerfreundlichkeit](user-experience-guidelines.md)
 </dt> <dt>
 
-[System Steuerungselemente werden registriert](registering-control-panel-items.md)
+[Registrieren von Systemsteuerung Elementen](registering-control-panel-items.md)
 </dt> <dt>
 
-[Verwenden von CPlApplet](using-cplapplet.md)
+[Verwenden von CPLApplet](using-cplapplet.md)
 </dt> <dt>
 
-[Nachrichtenverarbeitung in der Systemsteuerung](message-processing.md)
+[Systemsteuerung der Nachrichtenverarbeitung](message-processing.md)
 </dt> <dt>
 
-[Ausführen von System Steuerungselementen](executing-control-panel-items.md)
+[Ausführen von Systemsteuerung Elementen](executing-control-panel-items.md)
 </dt> <dt>
 
-[Zuweisen von System Steuerungs Kategorien](assigning-control-panel-categories.md)
+[Zuweisen Systemsteuerung Kategorien](assigning-control-panel-categories.md)
 </dt> <dt>
 
-[Erstellen von durchsuchbaren Aufgaben Verknüpfungen für ein System Steuerungselement](creating-searchable-task-links.md)
+[Erstellen durchsuchbarer Aufgabenlinks für ein Systemsteuerung Element](creating-searchable-task-links.md)
 </dt> <dt>
 
-[Zugreifen auf die Systemsteuerung im abgesicherten Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)
+[Zugreifen auf die Systemsteuerung im Tresor-Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)
 </dt> </dl>
 
  

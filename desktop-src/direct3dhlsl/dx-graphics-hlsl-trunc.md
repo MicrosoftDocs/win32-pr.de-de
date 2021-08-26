@@ -1,6 +1,6 @@
 ---
-title: trunc (corecrt \_ Math. h)
-description: Kürzen eines Gleit Komma Werts in die ganzzahlige Komponente.
+title: trunc (Corecrt \_ math.h)
+description: Schneidt einen Gleitkommawert auf die ganzzahlige Komponente ab.
 ms.assetid: a0978fa2-71f8-4257-8c90-96224c2ec953
 keywords:
 - trunc HLSL
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34493f60e60bc0dce35f5f9db50360265191c742
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0845e619e8674d729735da1b639802df256d9c210615d71578a4e1effd777e39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104995944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119845770"
 ---
 # <a name="trunc"></a>trunc
 
-Kürzen eines Gleit Komma Werts in die ganzzahlige Komponente.
+Schneidt einen Gleitkommawert auf die ganzzahlige Komponente ab.
 
 
 
-| Ret trunc (*x*) |
+| ret trunc(*x*) |
 |----------------|
 
 
@@ -40,7 +40,7 @@ Kürzen eines Gleit Komma Werts in die ganzzahlige Komponente.
 
 | Element                                                   | BESCHREIBUNG                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[in \] der angegebenen Eingabe.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Die angegebene Eingabe.<br/> |
 
 
 
@@ -48,11 +48,11 @@ Kürzen eines Gleit Komma Werts in die ganzzahlige Komponente.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Eingabe Wert, der auf eine ganzzahlige Komponente gekürzt wird.
+Der Eingabewert, der auf eine ganzzahlige Komponente gekürzt wurde.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verkürzt einen Gleit Komma Wert auf die ganzzahlige Komponente. Wenn ein Gleit Komma Wert von 1,6 ist, würde die trunc-Funktion 1,0 zurückgeben, wobei der Wert der Round-Funktion [**(DirectX HLSL)**](dx-graphics-hlsl-round.md) 2,0 zurückgeben würde.
+Diese Funktion schneide einen Gleitkommawert auf die ganzzahlige Komponente ab. Bei einem Gleitkommawert von 1,6 würde die trunc-Funktion 1,0 zurückgeben, wobei die [**round-Funktion (DirectX HLSL)**](dx-graphics-hlsl-round.md) 2,0 zurückgeben würde.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -60,42 +60,42 @@ Diese Funktion verkürzt einen Gleit Komma Wert auf die ganzzahlige Komponente. 
 
 | Name | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                         |
 |------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|------------------------------|
-| *x*  | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                          |
-| TZI  | Gleicher Typ wie Eingabe x                                                                                           | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension (n) wie Eingabe x |
+| *x*  | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                          |
+| Ret  | Identischer Typ wie Eingabe x                                                                                           | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(n) wie Eingabe x |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt |
 |------------------------------------------------------------------------------------|-----------|
-| [Shader Model 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shader-Modelle | ja       |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) und höhere Shadermodelle | Ja       |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Corecrt \_ Math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Corecrt \_ math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

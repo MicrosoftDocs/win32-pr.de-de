@@ -1,5 +1,5 @@
 ---
-description: Die ThunkConnect32-Funktion wird von 16-Bit-Gerätetreibern (für MS-DOS) verwendet, die den 32-Bit-Kernel aufzurufen.
+description: Die ThunkConnect32-Funktion wird von 16-Bit-Gerätetreibern (für MS-DOS) verwendet, die den 32-Bit-Kernel aufrufen.
 ms.assetid: 3376ca67-04ea-4765-a2f4-15a84d5c84d4
 title: ThunkConnect32-Funktion
 ms.topic: reference
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - Kernel32.dll
-ms.openlocfilehash: 7f22d7ceb59732e986c23c873133b11f358364cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f754d4c0e88ee860d112a6fb99d15c2690af0014951e77425d425b65ad16e39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929110"
 ---
 # <a name="thunkconnect32-function"></a>ThunkConnect32-Funktion
 
-\[Diese Funktion wurde aus Gründen der Abwärtskompatibilität unterstützt, ist jedoch in den aktuellen Versionen von Windows nicht vorhanden. Neue Gerätetreiber sollten 32-oder 64-Bit sein und benötigen diese Funktion nicht.\]
+\[Diese Funktion wurde aus Gründen der Abwärtskompatibilität unterstützt, ist aber in aktuellen Versionen von nicht Windows. Neue Gerätetreiber sollten 32- oder 64-Bit sein und benötigen diese Funktion nicht.\]
 
-Die **ThunkConnect32** -Funktion wird von 16-Bit-Gerätetreibern (für MS-DOS) verwendet, die den 32-Bit-Kernel aufzurufen.
+Die **ThunkConnect32-Funktion** wird von 16-Bit-Gerätetreibern (für MS-DOS) verwendet, die den 32-Bit-Kernel aufrufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -90,7 +90,7 @@ Ignoriert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **false** zurück.
+Gibt immer **FALSE zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 

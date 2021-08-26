@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-hotkeyfullscreen-Eigenschaft
-description: Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um den Hotkey-Ersatz für den Wechsel in den Vollbildmodus zu bestimmen.
+title: IMsRdpClientAdvancedSettings HotKeyFullScreen (Eigenschaft)
+description: Gibt den Virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für den Wechsel in den Vollbildmodus zu bestimmen.
 ms.assetid: 75fda212-ec68-4b68-b7db-2bfcdee7a7de
 ms.tgt_platform: multiple
 keywords:
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
-- Hotkeyfullscreen-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, hotkeyfullscreen-Eigenschaft
+- HotKeyFullScreen-Remotedesktopdienste
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
+- HotKeyFullScreen-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyFullScreen-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed9c53dd0c6dff9e47b87ea8c8697c20b3613a14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3276551c826c09b60c94a637194358093dafe7ce67094af085093f65d91e1668
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871000"
 ---
-# <a name="imsrdpclientadvancedsettingshotkeyfullscreen-property"></a>Imsrdpclientadvancedsettings:: hotkeyfullscreen-Eigenschaft
+# <a name="imsrdpclientadvancedsettingshotkeyfullscreen-property"></a>IMsRdpClientAdvancedSettings::HotKeyFullScreen (Eigenschaft)
 
-Gibt den Code des virtuellen Schlüssels an, der STRG + ALT hinzugefügt werden soll, um den Hotkey-Ersatz für den Wechsel in den Vollbildmodus zu bestimmen.
+Gibt den Virtuellen Tastencode an, der STRG+ALT hinzugefügt werden soll, um den Hotkey-Ersatz für den Wechsel in den Vollbildmodus zu bestimmen.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -84,15 +84,15 @@ HRESULT get_HotKeyFullScreen(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code des virtuellen Schlüssels. **VK \_** Der Standardwert ist "Abbrechen".
+Der neue Virtuelle Schlüsselcode. **VK \_ CANCEL** ist der Standardwert.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,11 +104,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

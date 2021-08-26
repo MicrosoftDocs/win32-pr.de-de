@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicenabmanagement processlicenserevocationresponse-Methode (wmdrmsdk. h)
-description: Mit der processlicenserevocationresponse-Methode werden Lizenzen aus dem lokalen Lizenz Speicher widerrufen. Bei dieser Methode wird ein von einem Lizenz Sperr Server empfangener Lizenzierungs-BLOB (License Lock BLOB, LRB) verwendet, um die zu widerrufenden
+title: IWMDRMLicenseManagement ProcessLicenseRevocationResponse-Methode (Wmdrmsdk.h)
+description: Die ProcessLicenseRevocationResponse-Methode widerruft Lizenzen aus dem lokalen Lizenzspeicher. Diese Methode verwendet ein Lizenzsperrblob (LRB), das von einem Lizenzsperrserver empfangen wurde, um die zu widerrufenden Lizenzen zu identifizieren.
 ms.assetid: 4428ac44-c3f4-404e-9997-cbc7360faedf
 keywords:
-- Processlicenserevocationresponse-Methode Windows Media-Format
-- Processlicenserevocationresponse-Methode, Windows Media-Format, iwmdrmlicenermanagement-Schnittstelle
-- Iwmdrmlicenabmanagement Interface Windows Media-Format, processlicenserevocationresponse-Methode
+- ProcessLicenseRevocationResponse-Methode windows Media Format
+- ProcessLicenseRevocationResponse-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , ProcessLicenseRevocationResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 534ead406107957971bbf1501dff2850478fae08
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d58c33f79db575dec37d7d2ac51e3c65b10416b9ca35a50084f36a56693854be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372558"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930310"
 ---
-# <a name="iwmdrmlicensemanagementprocesslicenserevocationresponse-method"></a>Iwmdrmlicensmanagement::P rocess licenserevocationresponse-Methode
+# <a name="iwmdrmlicensemanagementprocesslicenserevocationresponse-method"></a>IWMDRMLicenseManagement::P rocessLicenseRevocationResponse-Methode
 
-Mit der **processlicenserevocationresponse** -Methode werden Lizenzen aus dem lokalen Lizenz Speicher widerrufen. Bei dieser Methode wird ein von einem Lizenz Sperr Server empfangener Lizenzierungs-BLOB (License Lock BLOB, LRB) verwendet, um die zu widerrufenden
+Die **ProcessLicenseRevocationResponse-Methode** widerruft Lizenzen aus dem lokalen Lizenzspeicher. Diese Methode verwendet ein Lizenzsperrblob (LRB), das von einem Lizenzsperrserver empfangen wurde, um die zu widerrufenden Lizenzen zu identifizieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT ProcessLicenseRevocationResponse(
 
 <dl> <dt>
 
-*pbsignetdlrb* \[ in\]
+*pbSignedLRB* \[ In\]
 </dt> <dd>
 
-Vom Lizenz Sperr Server empfangener Lizenz Sperr-BLOB (LRB) als Antwort auf eine Aufforderung, die durch Aufrufen der [**createlicenserevocationchallenge**](iwmdrmlicensemanagement-createlicenserevocationchallenge.md) -Methode generiert wurde.
+Lizenzsperrblob (License Revocation Blob, LRB), das vom Lizenzsperrserver als Reaktion auf eine Herausforderung empfangen wurde, die durch Aufrufen der [**CreateLicenseRevocationCantenge-Methode generiert**](iwmdrmlicensemanagement-createlicenserevocationchallenge.md) wurde.
 
 </dd> <dt>
 
-*cbsignetdlrb* \[ in\]
+*cbSignedLRB* \[ In\]
 </dt> <dd>
 
-Die LRB-Größe in Bytes.
+Größe des LRB in Bytes.
 
 </dd> <dt>
 
-*ppbsignedack* \[ vorgenommen\]
+*ppbSignedACK* \[ out\]
 </dt> <dd>
 
-Adresse eines Zeigers, der die Adresse der Lizenz Sperr Bestätigung empfängt. Die Bestätigung sollte an den Lizenz Sperr Dienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie " **CoTaskMemFree**" aufrufen.
+Adresse eines Zeigers, der die Adresse der Lizenzsperrbestätigung empfängt. Die Bestätigung sollte an den Lizenzsperrdienst gesendet werden. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher durch Aufrufen von **CoTaskMemFree frei geben.**
 
 </dd> <dt>
 
-*pcbsignedack* \[ vorgenommen\]
+*–signedACK* \[ out\]
 </dt> <dd>
 
 Adresse einer Variablen, die die Größe der Bestätigung in Bytes empfängt.
@@ -75,7 +75,7 @@ Adresse einer Variablen, die die Größe der Bestätigung in Bytes empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -97,7 +97,7 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
@@ -105,7 +105,7 @@ Keine.
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

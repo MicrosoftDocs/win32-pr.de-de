@@ -4,12 +4,12 @@ description: Erstellen eines Fensters
 ms.assetid: e036519f-26b5-436c-b909-bb280d758e81
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eea5ec39187b389405d3c6d8eca475944278a3d5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 253eb68747ce7511c11aeeba27343d7dd56c7d0a6f78f316d72aab83d11ddd92
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870030"
 ---
 # <a name="creating-a-window"></a>Erstellen eines Fensters
 
@@ -32,13 +32,13 @@ wc.lpszClassName = CLASS_NAME;
 
 Sie müssen die folgenden Strukturmember festlegen:
 
-- **lpfnWndProc** ist ein Zeiger auf eine anwendungsdefinierte Funktion, die als *Fensterprozedur* oder "Fensterprozedur" bezeichnet wird. Die Fensterprozedur definiert den Großteil des Verhaltens des Fensters. Wir untersuchen die Fensterprozedur später im Detail. Behandeln Sie dies vorerst nur als Vorwärtsverweis.
+- **lpfnWndProc** ist ein Zeiger auf eine anwendungsdefinierte Funktion, die als *fensterprozedur* oder "window proc" bezeichnet wird. Die Fensterprozedur definiert den Großteil des Verhaltens des Fensters. Wir untersuchen die Fensterprozedur später im Detail. Behandeln Sie dies vorerst nur als Vorwärtsverweis.
 - **hInstance** ist das Handle für die Anwendungsinstanz. Abrufen dieses Werts aus dem *hInstance-Parameter* von **wWinMain**.
 - **lpszClassName** ist eine Zeichenfolge, die die Fensterklasse identifiziert.
 
-Klassennamen sind lokal für den aktuellen Prozess, sodass der Name nur innerhalb des Prozesses eindeutig sein muss. Die Windows-Standardsteuerelemente verfügen jedoch auch über Klassen. Wenn Sie eines dieser Steuerelemente verwenden, müssen Sie Klassennamen auswählen, die keinen Konflikt mit den Steuerelementklassennamen verursachen. Die Fensterklasse für das Schaltflächensteuerelement heißt z. B. "Button".
+Klassennamen sind lokal für den aktuellen Prozess, sodass der Name nur innerhalb des Prozesses eindeutig sein muss. Die standardmäßigen Windows-Steuerelemente verfügen jedoch auch über Klassen. Wenn Sie eines dieser Steuerelemente verwenden, müssen Sie Klassennamen auswählen, die keinen Konflikt mit den Steuerelementklassennamen verursachen. Die Fensterklasse für das Schaltflächensteuerelement heißt z. B. "Button".
 
-Die [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) verfügt über andere Member, die hier nicht angezeigt werden. Sie können wie in diesem Beispiel gezeigt auf 0 (null) festlegen oder sie ausfüllen. In der MSDN-Dokumentation wird die Struktur ausführlich beschrieben.
+Die [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) verfügt über andere Member, die hier nicht angezeigt werden. Sie können sie auf 0 (wie in diesem Beispiel gezeigt) festlegen oder ausfüllen. In der MSDN-Dokumentation wird die Struktur ausführlich beschrieben.
 
 Übergeben Sie als Nächstes die Adresse der [**WNDCLASS-Struktur**](/windows/win32/api/winuser/ns-winuser-wndclassa) an die [**RegisterClass-Funktion.**](/windows/desktop/api/winuser/nf-winuser-registerclassa) Diese Funktion registriert die Fensterklasse beim Betriebssystem.
 
@@ -81,7 +81,7 @@ Ausführliche Parameterbeschreibungen finden Sie auf MSDN, aber hier finden Sie 
 - Für Position und Größe bedeutet die konstante **CW \_ USEDEFAULT** die Verwendung von Standardwerten.
 - Der nächste Parameter legt ein übergeordnetes Fenster oder Besitzerfenster für das neue Fenster fest. Legen Sie das übergeordnete Element fest, wenn Sie ein untergeordnetes Fenster erstellen. Legen Sie für ein Fenster der obersten Ebene diese auf **NULL** fest.
 - Für ein Anwendungsfenster definiert der nächste Parameter das Menü für das Fenster. In diesem Beispiel wird kein Menü verwendet, sodass der Wert **NULL** ist.
-- *hInstance* ist das zuvor beschriebene Instanzhandle. (Siehe [WinMain: Der Anwendungseinstiegspunkt.)](winmain--the-application-entry-point.md)
+- *hInstance* ist das zuvor beschriebene Instanzhandle. (Siehe [WinMain: Der Anwendungseinstiegspunkt](winmain--the-application-entry-point.md).)
 - Der letzte Parameter ist ein Zeiger auf beliebige Daten vom Typ **void \***. Sie können diesen Wert verwenden, um eine Datenstruktur an Ihre Fensterprozedur zu übergeben. Im Abschnitt Verwalten des [Anwendungszustands](managing-application-state-.md)wird eine mögliche Möglichkeit zur Verwendung dieses Parameters gezeigt.
 
 [**CreateWindowEx**](/windows/desktop/api/winuser/nf-winuser-createwindowexa) gibt ein Handle für das neue Fenster oder 0 (null) zurück, wenn die Funktion fehlschlägt. Übergeben Sie das Fensterhandle an die [**ShowWindow-Funktion,**](/windows/desktop/api/winuser/nf-winuser-showwindow) um das Fenster anzuzeigen, d. b. das Fenster sichtbar zu machen:
@@ -131,7 +131,7 @@ if (hwnd == NULL)
 ShowWindow(hwnd, nCmdShow);
 ```
 
-Herzlichen Glückwunsch, Sie haben ein Fenster erstellt! Derzeit enthält das Fenster keine Inhalte und interagiert nicht mit dem Benutzer. In einer echten GUI-Anwendung würde das Fenster auf Ereignisse des Benutzers und des Betriebssystems reagieren. Im nächsten Abschnitt wird beschrieben, wie Fenstermeldungen diese Art von Interaktivität bereitstellen.
+Herzlichen Glückwunsch, Sie haben ein Fenster erstellt! Derzeit enthält das Fenster keine Inhalte und interagiert nicht mit dem Benutzer. In einer echten GUI-Anwendung reagiert das Fenster auf Ereignisse des Benutzers und des Betriebssystems. Im nächsten Abschnitt wird beschrieben, wie Fenstermeldungen diese Art von Interaktivität bereitstellen.
 
 ### <a name="next"></a>Nächste
 

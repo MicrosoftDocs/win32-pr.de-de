@@ -1,8 +1,8 @@
 ---
-description: Die Value-Eigenschaft des "taubemqualifier"-Objekts enthält den Variant-Wert dieses Qualifizierers. Dies ist die Standard Eigenschaft dieses Objekts.
+description: Die Value-Eigenschaft des SWbemQualifier-Objekts enthält den Variant-Wert dieses Qualifizierers. Dies ist die Standardeigenschaft dieses -Objekts.
 ms.assetid: a2f481fc-8231-4bc0-a9fc-9e622f11c925
 ms.tgt_platform: multiple
-title: Taubemqualifizierer. Value-Eigenschaft (wbemdisp. h)
+title: SWbemQualifier.Value-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 623252563ae4bd64d04309331fde65227c22aca9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71d8b9c434c1da1302f874e70a1cda56840a2776056801c3054d590974469a2f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119897900"
 ---
-# <a name="swbemqualifiervalue-property"></a>' Taubemqualifier. Value '-Eigenschaft
+# <a name="swbemqualifiervalue-property"></a>SWbemQualifier.Value-Eigenschaft
 
-Die **value** -Eigenschaft des " [**taubemqualifier**](swbemqualifier.md) "-Objekts enthält den Variant-Wert dieses Qualifizierers. Dies ist die Standard Eigenschaft dieses Objekts.
+Die **Value-Eigenschaft** des [**SWbemQualifier-Objekts**](swbemqualifier.md) enthält den Variant-Wert dieses Qualifizierers. Dies ist die Standardeigenschaft dieses -Objekts.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -51,11 +51,11 @@ SWbemQualifier.Value As Variant
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Qualifizierer<br/>                                                        |
-| IID<br/>                      | IID \_ iswbemqualifizierer<br/>                                                         |
+| CLSID<br/>                    | CLSID \_ SWbemQualifier<br/>                                                        |
+| IID<br/>                      | IID \_ ISWbemQualifier<br/>                                                         |
 
 
 

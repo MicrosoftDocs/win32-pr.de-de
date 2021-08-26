@@ -1,7 +1,7 @@
 ---
-description: Batch Größe.
+description: Batchgröße.
 ms.assetid: 77a92da4-1b07-45e8-924e-29bedd068139
-title: 'Coutputqueue:: m_lBatchSize-Member (outputq. h)'
+title: COutputQueue::m_lBatchSize-Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 987adce4353ef393c1522e91b4104385da3890c8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f5f341415ea379b76d46de86fd952c66ff0c42ea34fe752b42c780520b3da1d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915600"
 ---
-# <a name="coutputqueuem_lbatchsize-member"></a>Coutputqueue:: m \_ lbatchsize-Member
+# <a name="coutputqueuem_lbatchsize-member"></a>COutputQueue::m \_ lBatchSize-Member
 
-Batch Größe.
+Batchgröße.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ const LONG  m_lBatchSize;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ const LONG  m_lBatchSize;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

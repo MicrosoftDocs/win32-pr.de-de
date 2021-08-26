@@ -1,9 +1,9 @@
 ---
-title: g_wszWMVCFrameInterpolationEnabled (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMVCFrameInterpolationEnabled (wmcodecdsp. h)
+title: g_wszWMVCFrameInterpolationEnabled (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | g_wszWMVCFrameInterpolationEnabled (Wmcodecdsp.h)
 ms.assetid: 0bd26606-a73a-4c94-84a1-a05c258ba1e4
 keywords:
-- g_wszWMVCFrameInterpolationEnabled Windows Media-Format
+- g_wszWMVCFrameInterpolationEnabled Windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a6a711b3c7fa7467ce48fc301dab08c56d15ea7f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6a4f38a97686ca439e8f1ad739ae007a83dca7a9335dd8635e92d7518a3ee88c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119930980"
 ---
-# <a name="g_wszwmvcframeinterpolationenabled"></a>g \_ wszwmvcframeinterpolationaktivierte
+# <a name="g_wszwmvcframeinterpolationenabled"></a>g \_ wszWMVCFrameInterpolationEnabled
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

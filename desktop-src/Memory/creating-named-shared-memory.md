@@ -1,29 +1,29 @@
 ---
-description: Zum Freigeben von Daten können mehrere Prozesse im Speicher abgebildete Dateien verwenden, die vom System Auslagerungs Dateien gespeichert werden.
+description: Um Daten freizugeben, können mehrere Prozesse speicherzuordnungsbasierte Dateien verwenden, die in der Auslagerungsdatei des Systems gespeichert werden.
 ms.assetid: 17458be2-3ef7-42f2-a717-abf73ac4846f
-title: Erstellen von benanntem Shared Memory
+title: Erstellen von benanntem freigegebenen Arbeitsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 18ac708497ceb12ed099c7a9c0b3788d7a05a925
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b2fc5ec3d9865d310807d01ac9f76967d4378fc92e4c9588d00b2933a08c953f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119869920"
 ---
-# <a name="creating-named-shared-memory"></a>Erstellen von benanntem Shared Memory
+# <a name="creating-named-shared-memory"></a>Erstellen von benanntem freigegebenen Arbeitsspeicher
 
-Zum Freigeben von Daten können mehrere Prozesse im Speicher abgebildete Dateien verwenden, die vom System Auslagerungs Dateien gespeichert werden.
+Um Daten freizugeben, können mehrere Prozesse speicherzuordnungsbasierte Dateien verwenden, die in der Auslagerungsdatei des Systems gespeichert werden.
 
 ## <a name="first-process"></a>Erster Prozess
 
-Der erste Prozess erstellt das Datei Zuordnung-Objekt durch Aufrufen der [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) -Funktion mit einem **ungültigen \_ handle- \_ Wert** und einem Namen für das Objekt. Mit dem Flag für die **Seiten \_ Lese** Berechtigung verfügt der Prozess über die Lese-/Schreibberechtigung für den Arbeitsspeicher über alle erstellten Datei Sichten.
+Der erste Prozess erstellt das Dateizuordnungsobjekt, indem die [**CreateFileMapping-Funktion**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) mit **INVALID HANDLE \_ \_ VALUE** und einem Namen für das Objekt aufgerufen wird. Mithilfe des **PAGE \_ READWRITE-Flags** verfügt der Prozess über Lese-/Schreibberechtigungen für den Arbeitsspeicher über alle erstellten Dateiansichten.
 
-Anschließend verwendet der Prozess das Datei zuordnungsobjekthandle, das von " [**kreatefilemapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) " in einem Befehl von " [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) " zurückgegeben wird, um eine Ansicht der Datei im Prozess Adressraum zu erstellen. Die **MapViewOfFile** -Funktion gibt einen Zeiger auf die Dateiansicht zurück `pBuf` . Der Prozess verwendet dann die [**CopyMemory**](/previous-versions/windows/desktop/legacy/aa366535(v=vs.85)) -Funktion, um eine Zeichenfolge in die Sicht zu schreiben, auf die von anderen Prozessen zugegriffen werden kann.
+Anschließend verwendet der Prozess das Dateizuordnungsobjekthandle, das [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) in einem Aufruf von [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) zurückgibt, um eine Ansicht der Datei im Prozessadressraum zu erstellen. Die **MapViewOfFile-Funktion** gibt einen Zeiger auf die Dateiansicht `pBuf` zurück. Der Prozess verwendet dann die [**CopyMemory-Funktion,**](/previous-versions/windows/desktop/legacy/aa366535(v=vs.85)) um eine Zeichenfolge in die Ansicht zu schreiben, auf die andere Prozesse zugreifen können.
 
-Durch die vorab Korrektur der Datei zuordnungsobjektnamen mit "Global \\ " können Prozesse miteinander kommunizieren, auch wenn Sie sich in unterschiedlichen Terminal Server Sitzungen befinden. Hierfür muss der erste Prozess über die Berechtigung " [**SeCreateGlobalPrivilege**](../secauthz/privilege-constants.md) " verfügen.
+Durch das Präfix der Dateizuordnungsobjektnamen mit \\ "Global" können Prozesse miteinander kommunizieren, auch wenn sie sich in verschiedenen Terminalserversitzungen befinden. Dies erfordert, dass der erste Prozess über die [**SeCreateGlobalPrivilege-Berechtigung verfügt.**](../secauthz/privilege-constants.md)
 
-Wenn der Prozess keinen Zugriff mehr auf das Datei Zuordnungs Objekt benötigt, sollte er die [**CloseHandle**](/windows/win32/api/handleapi/nf-handleapi-closehandle) -Funktion aufrufen. Wenn alle Handles geschlossen sind, kann das System den Abschnitt der vom Objekt verwendeten Auslagerungs Datei freigeben.
+Wenn der Prozess keinen Zugriff mehr auf das Dateizuordnungsobjekt benötigt, sollte er die [**CloseHandle-Funktion**](/windows/win32/api/handleapi/nf-handleapi-closehandle) aufrufen. Wenn alle Handles geschlossen sind, kann das System den Abschnitt der paging-Datei freigeben, die das -Objekt verwendet.
 
 
 ```C++
@@ -87,7 +87,7 @@ int _tmain()
 
 ## <a name="second-process"></a>Zweiter Prozess
 
-Ein zweiter Prozess kann durch Aufrufen der [**OpenFileMapping**](/windows/desktop/api/WinBase/nf-winbase-openfilemappinga) -Funktion auf die Zeichenfolge zugreifen, die vom ersten Prozess in den gemeinsam genutzten Speicher geschrieben wird. dabei wird der gleiche Name für das Zuordnungs Objekt als der erste Prozess angegeben. Anschließend kann Sie die [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) -Funktion verwenden, um einen Zeiger auf die Dateiansicht zu erhalten `pBuf` . Der Prozess kann diese Zeichenfolge wie jede andere Zeichenfolge anzeigen. In diesem Beispiel enthält das angezeigte Meldungs Feld die Meldung "Meldung vom ersten Prozess", die vom ersten Prozess geschrieben wurde.
+Ein zweiter Prozess kann auf die Zeichenfolge zugreifen, die vom ersten Prozess in den freigegebenen Arbeitsspeicher geschrieben wurde, indem die [**OpenFileMapping-Funktion**](/windows/desktop/api/WinBase/nf-winbase-openfilemappinga) aufgerufen wird, die den gleichen Namen für das Zuordnungsobjekt wie der erste Prozess angibt. Anschließend kann die [**MapViewOfFile-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) verwendet werden, um einen Zeiger auf die Dateiansicht `pBuf` abzurufen. Der Prozess kann diese Zeichenfolge wie jede andere Zeichenfolge anzeigen. In diesem Beispiel enthält das angezeigte Meldungsfeld die Meldung "Nachricht vom ersten Prozess", die vom ersten Prozess geschrieben wurde.
 
 
 ```C++

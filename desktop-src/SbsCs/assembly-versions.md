@@ -1,21 +1,21 @@
 ---
-description: Jede parallele Assembly muss eine Version aufweisen.
+description: Jede nebenseitige Assembly muss eine Version haben.
 ms.assetid: 0b78ecf6-fbff-4172-9b0d-09f993666db1
 title: Assemblyversionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 48c9e32ecc0990572f17264edd2ff51c205a01c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e555035bf7b43f53d3a68f249005928867f453b78522f70dd45f3b5379c75e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103757315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885570"
 ---
 # <a name="assembly-versions"></a>Assemblyversionen
 
-Jede parallele Assembly muss eine Version aufweisen. Jede Assemblyversion ist einer Versionsnummer zugeordnet, die vier Teile durch Punkte trennt: *Major. Minor. Build. Revision*. Wenn eine Assembly geändert wird, sodass Sie mit den vorhandenen Versionen nicht kompatibel ist, müssen die *Haupt* -oder *nebenteile* der Versionsnummer geändert werden. Eine Versionsnummer, die nur in den *Build* -oder *Revisions* Teilen geändert wird, gibt an, dass die Assembly abwärts kompatibel mit früheren Versionen ist.
+Jede nebenseitige Assembly muss eine Version haben. Jede Assemblyversion ist einer Versionsnummer zugeordnet, die aus vier Teilen besteht, die durch Punkte getrennt sind: *major.minor.build.revision*. Wenn eine Änderung an einer Assembly vorgenommen wird,  die  sie inkompatibel mit vorhandenen Versionen macht, müssen die Haupt- oder Nebenteile der Versionsnummer geändert werden. Eine Versionsnummer, die  sich nur in den Build- oder *Revisionsteilen* ändert, gibt an, dass die Assembly abwärtskompatibel mit früheren Versionen ist.
 
-Die Version muss in **assemblyIdentity** -Elementen der [Manifeste](manifests.md)angegeben werden. Verwenden Sie das vierteilige Versions Format: mmmmm. nnnnn. Ooooo. ppppp. Alle durch Zeiträume getrennten Teile können 0-65535 einschließlich sein.
+Die Version muss in **assemblyIdentity-Elementen** von [Manifesten angegeben werden.](manifests.md) Verwenden Sie das vierteilige Versionsformat mmmmm.nnnnn.ooooo.ooooo.oopp. Jeder durch Punkte getrennte Teil kann 0 bis 65535 einschließlich sein.
 
  
 

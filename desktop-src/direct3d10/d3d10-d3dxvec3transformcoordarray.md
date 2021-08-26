@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: c4a1edfd89b127d0782d3bab23c2390775422c69
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 27f0187f3533b6cb7c9782ddaa0f59692a15335ebb27b86184b2b5544d44fe5b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119895330"
 ---
 # <a name="d3dxvec3transformcoordarray-function-d3dx10mathh"></a>D3DXVec3TransformCoordArray-Funktion (D3DX10Math.h)
 
@@ -104,9 +104,9 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur, die das transformierte Array ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion transformiert das Array pV (x, y, z, 1) durch die Matrix pM und projektiert das Ergebnis zurück in w = 1.
+Diese Funktion transformiert das Array pV (x, y, z, 1) durch die Matrix-pM und projiziert das Ergebnis zurück in w = 1.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die [**D3DXVec3TransformCoord-Funktion**](d3d10-d3dxvec3transformcoord.md) als Parameter für eine andere Funktion verwendet werden.
 
@@ -114,13 +114,13 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

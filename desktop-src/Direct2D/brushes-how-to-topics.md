@@ -1,19 +1,19 @@
 ---
 title: Gewusst-wie-Themen zu Pinseln
-description: Die Themen in diesem Abschnitt enthalten Beispiele für das Ausführen von Pinsel bezogenen Aufgaben, z. b. das Zeichnen von Farbverläufen oder das Auffüllen eines Bereichs mit einer Bitmap.
+description: Die Themen in diesem Abschnitt enthalten Beispiele, die zeigen, wie Pinselaufgaben wie das Malen von Farbverläufen oder das Füllen eines Bereichs mit einer Bitmap erfüllt werden.
 ms.assetid: b0756896-40b7-47a3-be8e-8ab100b022a5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b071228eb28fdd7746c9f9f80bffefd800e84f6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2bf8d7b6bf1d51edda3610e25c83ea778cd6df2e104d27c3525885a1c23a1886
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119929100"
 ---
 # <a name="brushes-how-to-topics"></a>Gewusst-wie-Themen zu Pinseln
 
-Die Themen in diesem Abschnitt enthalten Beispiele für das Ausführen von Pinsel bezogenen Aufgaben, z. b. das Zeichnen von Farbverläufen oder das Auffüllen eines Bereichs mit einer Bitmap.
+Die Themen in diesem Abschnitt enthalten Beispiele, die zeigen, wie Pinselaufgaben wie das Malen von Farbverläufen oder das Füllen eines Bereichs mit einer Bitmap erfüllt werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,10 +21,10 @@ Die Themen in diesem Abschnitt enthalten Beispiele für das Ausführen von Pinse
 
 | Thema                                                                                         | BESCHREIBUNG                                                            |
 |-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [Erstellen eines Pinsel mit voll Tonfarbe](how-to-create-a-solid-color-brush.md)<br/>         | Zeigt, wie ein vollfarbiger Farbpinsel mit Direct2D erstellt wird.<br/>     |
-| [Erstellen eines linearen Farbverlaufs Pinsels](how-to-create-a-linear-gradient-brush.md)<br/> | Zeigt, wie ein linearer Farbverlaufs Pinsel mit Direct2D erstellt wird.<br/> |
-| [Erstellen eines radialen Farbverlaufs Pinsels](how-to-create-a-radial-gradient-brush.md)<br/> | Zeigt, wie ein radialer Farbverlaufs Pinsel mit Direct2D erstellt wird.<br/> |
-| [Erstellen eines Bitmap-Pinsels](how-to-create-a-bitmap-brush.md)<br/>                   | Zeigt, wie ein Bitmap-Pinsel mit Direct2D erstellt wird.<br/>          |
+| [Erstellen eines Volltonfarbpinsels](how-to-create-a-solid-color-brush.md)<br/>         | Zeigt, wie Sie mit Direct2D einen Volltonfarbpinsel erstellen.<br/>     |
+| [Erstellen eines Pinsels mit linearem Farbverlauf](how-to-create-a-linear-gradient-brush.md)<br/> | Zeigt, wie Sie mit Direct2D einen Pinsel mit linearem Farbverlauf erstellen.<br/> |
+| [Erstellen eines Pinsels mit radialem Farbverlauf](how-to-create-a-radial-gradient-brush.md)<br/> | Zeigt, wie Sie einen Radialverlaufspinsel mit Direct2D erstellen.<br/> |
+| [Erstellen eines Bitmappinsels](how-to-create-a-bitmap-brush.md)<br/>                   | Zeigt, wie ein Bitmappinsel mit Direct2D erstellt wird.<br/>          |
 
 
 

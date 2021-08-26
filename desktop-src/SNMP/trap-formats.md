@@ -1,45 +1,45 @@
 ---
-title: Trap-Formate
-description: Das Format von Trap-PDUs unterscheidet sich von dem anderer PDUs. Das Format von SNMPv1 Traps und SNMPv2C Traps ist ebenfalls unterschiedlich.
+title: Trapformate
+description: Das Format von Trap-PDUs unterscheidet sich von dem anderer PDUs. Das Format von SNMPv1-Traps und SNMPv2C-Traps unterscheidet sich ebenfalls.
 ms.assetid: 2d2b4520-28b7-4a2e-8dee-456e17d9d6f6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e87adc3222808fcc7e81904ade07c09afa13bc6d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b73e9cd2a5396bbe258fcb67c88cc207ea0243a9e8aff9f31e4866b9ee8adcc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119885680"
 ---
-# <a name="trap-formats"></a>Trap-Formate
+# <a name="trap-formats"></a>Trapformate
 
-Das Format von Trap-PDUs unterscheidet sich von dem anderer PDUs. Das Format von SNMPv1 Traps und SNMPv2C Traps ist ebenfalls unterschiedlich.
+Das Format von Trap-PDUs unterscheidet sich von dem anderer PDUs. Das Format von SNMPv1-Traps und SNMPv2C-Traps unterscheidet sich ebenfalls.
 
-Im SNMPv2C Framework ist das PDU-Trap-Format eine Variablen Bindungs Liste von *n* Variablen Bindungs Einträgen, die folgendermaßen organisiert sind:
+Unter dem SNMPv2C-Framework ist das PDU-Trapformat eine Variablenbindungsliste mit *n* Variablenbindungseinträgen, die wie folgt organisiert sind:
 
--   Der erste Variablen Bindungs Eintrag enthält einen Zeitstempel.
--   Der zweite Variablen Bindungs Eintrag ist ein Objekt Bezeichner, der den Trap identifiziert.
--   Die dritten bis *n* Variablen Bindungs Einträge enthalten ggf. zusätzliche Informationen, die mit dem Trap verknüpft sind.
+-   Der erste Variablenbindungseintrag enthält einen Zeitstempel.
+-   Der zweite Variablenbindungseintrag ist ein Objektbezeichner, der den Trap identifiziert.
+-   Die Dritten bis *n* Variablenbindungseinträge enthalten, sofern vorhanden, zusätzliche Informationen, die dem Trap zugeordnet sind.
 
-Im SNMPv1 Framework lautet das PDU-Trap Format wie folgt.
+Unter dem SNMPv1-Framework lautet das PDU-Trapformat wie folgt.
 
 | Feld                      | BESCHREIBUNG                                                      |
 |----------------------------|------------------------------------------------------------------|
-| Enterprise                 | Identifiziert den Typ des Geräts, das den Trap generiert hat.           |
-| Agent-addr                 | Gibt die IP-Adresse des Geräts an, von dem der Trap generiert wurde. |
-| generischer Trap/spezifischer Trap | Identifiziert einen vordefinierten Trap-Typ.                               |
+| Enterprise                 | Gibt den Typ des Geräts an, das den Trap generiert hat.           |
+| agent-addr                 | Identifiziert die IP-Adresse des Geräts, das den Trap generiert hat. |
+| generic-trap/specific-trap | Identifiziert einen vordefinierten Traptyp.                               |
 | Zeitstempel                 | Gibt an, wann der Trap generiert wurde.                          |
-| Variablen Bindungen          | Enthält zusätzliche Informationen, die mit dem Trap verknüpft sind.        |
+| Variablenbindungen          | Enthält zusätzliche Informationen, die dem Trap zugeordnet sind.        |
 
 
 
- 
+ 
 
-Die [**snmprecvmsg**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) -Funktion gibt immer eine Nachricht im SNMPv2C-Format zurück. Wenn die Nachricht den Vorgangstyp **SNMP \_ PDU \_ Trap** enthält, kann die Anwendung die Variablen Bindungs Einträge der Nachricht lesen und die dem Trap zugeordneten Informationen abrufen.
+Die [**SnmpRecvMsg-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmprecvmsg) gibt immer eine Nachricht im SNMPv2C-Format zurück. Wenn die Nachricht den Vorgangstyp **SNMP \_ PDU \_ TRAP** enthält, kann die Anwendung die Variablenbindungseinträge der Nachricht lesen und die dem Trap zugeordneten Informationen abrufen.
 
- 
+ 
 
- 
+ 
 
 
 

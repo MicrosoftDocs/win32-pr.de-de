@@ -1,7 +1,7 @@
 ---
 description: Stellt den Tablet-Kontext dar.
 ms.assetid: d518c42d-c2f6-4776-bea5-fecdfe48e260
-title: Itabletcontextp-Schnittstelle
+title: ITabletContextP-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,48 +14,48 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 5b3b6a69deeaa30c3fa0e16b1b36094dceaff304
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da5c26a0a9d7d080a9787fef0b7ba2fdb919e473fd66c989fca478c4ac7d0ac3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883520"
 ---
-# <a name="itabletcontextp-interface"></a>Itabletcontextp-Schnittstelle
+# <a name="itabletcontextp-interface"></a>ITabletContextP-Schnittstelle
 
 Stellt den Tablet-Kontext dar.
 
 ## <a name="members"></a>Member
 
-Die **itabletcontextp** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itabletcontextp** verfügt auch über die folgenden Typen von Membern:
+Die **ITabletContextP-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITabletContextP** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itabletcontextp** -Schnittstelle verfügt über diese Methoden.
+Die **ITabletContextP-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                           | BESCHREIBUNG                                                                     |
+| Methode                                                                                           | Beschreibung                                                                     |
 |:-------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
-| [**Istopmosthook**](itabletcontextp-istopmosthook.md)                                           | Gibt an, ob sich der Tablet-Kontext im Top-Hook befindet.<br/>             |
-| [**Überlappen**](itabletcontextp-overlap.md)                                                       | Verschiebt einen Tablet-Kontext an die Vorder-oder Rückseite der Eingabe Warteschlange.<br/>      |
-| [**Trackinputrect**](itabletcontextp-trackinputrect.md)                                         | Aktualisiert den Tablet-Digitalisierer auf Fenster Speicherort-Mapping-Koordinaten.<br/> |
-| [**Usenamedsharedmemorycommunications**](itabletcontextp-usenamedsharedmemorycommunications.md) | Ermöglicht den Zugriff auf Arbeitsspeicher, der für tablettthreads freigegeben<br/>             |
-| [**"US-haredmemorycommunications"**](itabletcontextp-usesharedmemorycommunications.md)           | Ermöglicht den Zugriff auf Arbeitsspeicher, der für tablettthreads freigegeben<br/>             |
+| [**IsTopMostHook**](itabletcontextp-istopmosthook.md)                                           | Gibt an, ob sich der Tablet-Kontext im obersten Hook befindet.<br/>             |
+| [**Überlappen**](itabletcontextp-overlap.md)                                                       | Verschiebt einen Tablet-Kontext an den Vorder- oder Rückseite der Eingabewarteschlange.<br/>      |
+| [**TrackInputRect**](itabletcontextp-trackinputrect.md)                                         | Aktualisiert den Tablettdigitalisierer in Fensterpositionszuordnungskoordinaten.<br/> |
+| [**UseNamedSharedMemoryCommunications**](itabletcontextp-usenamedsharedmemorycommunications.md) | Ermöglicht den Zugriff auf den von Tabletthreads gemeinsam genutzten Arbeitsspeicher.<br/>             |
+| [**UseSharedMemoryCommunications**](itabletcontextp-usesharedmemorycommunications.md)           | Ermöglicht den Zugriff auf den von Tabletthreads gemeinsam genutzten Arbeitsspeicher.<br/>             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Entwickler sollten diese Schnittstelle nicht verwenden.
 
-" [**Usenamedsharedmemorycommunications**](itabletcontextp-usenamedsharedmemorycommunications.md) " ist nur unter Windows Vista und höher verfügbar.
+[**UseNamedSharedMemoryCommunications**](itabletcontextp-usenamedsharedmemorycommunications.md) ist nur auf Windows Vista und höher verfügbar.
 
-Im folgenden Code wird beschrieben, wie die **itabletcontextp** -Schnittstelle definiert wird.
+Der folgende Code beschreibt, wie die **ITabletContextP-Schnittstelle** definiert wird.
 
 ``` syntax
 [
@@ -101,7 +101,7 @@ interface ITabletContextP : ITabletContext
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

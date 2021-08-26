@@ -1,9 +1,9 @@
 ---
-title: DTN_CLOSEUP Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) gesendet, wenn der Benutzer den Dropdown-Monatskalender schließt.
+title: DTN_CLOSEUP Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Datums- und Uhrzeitauswahl-Steuerelement (DTP) gesendet, wenn der Benutzer den Kalender des Dropdownmonats schließt.
 ms.assetid: 94ace714-55cc-4c59-8b87-8d0348b15f34
 keywords:
-- Windows-Steuerelemente für DTN_CLOSEUP Benachrichtigungs
+- DTN_CLOSEUP Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cfcfb23215aeffe15bec576075fd4d930790e47
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a97cd2d799d05afc638b60adc9203eaad80feb159f985df8b3813403bf5ca0d2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742832"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119877720"
 ---
-# <a name="dtn_closeup-notification-code"></a>DTN- \_ closeup-Benachrichtigungs Code
+# <a name="dtn_closeup-notification-code"></a>DTN \_ CLOSEUP-Benachrichtigungscode
 
-Wird von einem DTP-Steuerelement (Datums-und Zeitauswahl) gesendet, wenn der Benutzer den Dropdown-Monatskalender schließt. Der Monatskalender wird geschlossen, wenn der Benutzer ein Datum aus dem Monatskalender auswählt oder auf den Dropdown Pfeil klickt, während der Kalender geöffnet ist. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Datums- und Uhrzeitauswahl-Steuerelement (DTP) gesendet, wenn der Benutzer den Kalender des Dropdownmonats schließt. Der Monatskalender wird geschlossen, wenn der Benutzer ein Datum aus dem Monatskalender ausgibt oder auf den Dropdownpfeil klickt, während der Kalender geöffnet ist. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ DTN_CLOSEUP
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die Informationen zur Benachrichtigung enthält.
+Ein Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die Informationen über die Benachrichtigung enthält.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Ein Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr)
 
 Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-DTP-Steuerelemente behalten kein statisches Steuerelement für untergeordnete Monatskalender bei. Das DTP-Steuerelement zerstört das Kalender Steuerelement des untergeordneten Monats vor dem Senden dieses Benachrichtigungs Codes. Daher darf Ihre Anwendung nicht auf ein statisches Fenster Handle für den untergeordneten Monatskalender des Steuer Elements zurückgreifen.
+DTP-Steuerelemente verwalten kein statisches Untergeordnetes Monatskalender-Steuerelement. Das DTP-Steuerelement zerstört das Untergeordnete Monatskalender-Steuerelement vor dem Senden dieses Benachrichtigungscodes. Daher darf sich Ihre Anwendung nicht auf ein statisches Fensterhandle für den untergeordneten Monatskalender des Steuerelements verlassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ DTP-Steuerelemente behalten kein statisches Steuerelement für untergeordnete Mo
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ DTP-Steuerelemente behalten kein statisches Steuerelement für untergeordnete Mo
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[DTN- \_ Dropdown](dtn-dropdown.md)
+[\_DTN-DROPDOWNLISTE](dtn-dropdown.md)
 </dt> <dt>
 
-[**DTM \_ getmonthcal**](dtm-getmonthcal.md)
+[**DTM \_ GETMONTHCAL**](dtm-getmonthcal.md)
 </dt> </dl>
 
  

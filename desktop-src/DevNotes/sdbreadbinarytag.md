@@ -1,7 +1,7 @@
 ---
-Description: Ruft die Binärdaten für die angegebene TagID ab.
+Description: Ruft die Binärdaten für die angegebene TAGID ab.
 ms.assetid: b349f2af-2505-4efc-bd59-203f7666ce61
-title: Sdbreadbinarytag-Funktion
+title: SdbReadBinaryTag-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 024b432c3210b98721a0cf3058bad0f765287fde
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92d63182273c96707bb155071164a6b6838378615f603d8ef6d332d6c65be460
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119911570"
 ---
-# <a name="sdbreadbinarytag-function"></a>Sdbreadbinarytag-Funktion
+# <a name="sdbreadbinarytag-function"></a>SdbReadBinaryTag-Funktion
 
-Ruft die Binärdaten für die angegebene **TagID** ab.
+Ruft die Binärdaten für die angegebene **TAGID** ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,37 +42,37 @@ BOOL WINAPI SdbReadBinaryTag(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiwhat* \[ in\]
+*tiWhich* \[ In\]
 </dt> <dd>
 
-Die **TagID** , die den abzurufenden Daten entspricht.
+Die **TAGID,** die den abzurufenden Daten entspricht.
 
 </dd> <dt>
 
-*pbuffer* \[ vorgenommen\]
+*pBuffer* \[ out\]
 </dt> <dd>
 
-Der Puffer, der die Binärdaten empfängt. Dieser Parameter darf nicht **null** sein.
+Der Puffer, der die Binärdaten empfängt. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*dwbuffersize* \[ in\]
+*dwBufferSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *pbuffer* -Puffers in Bytes.
+Die Größe des *pBuffer-Puffers* in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE** bei Erfolg oder **FALSE** bei Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,26 +80,26 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sdbgetbinarytagdata**](sdbgetbinarytagdata.md)
+[**SdbGetBinaryTagData**](sdbgetbinarytagdata.md)
 </dt> <dt>
 
-[**Sdbgetstringtagptr**](sdbgetstringtagptr.md)
+[**SdbGetStringTagPtr**](sdbgetstringtagptr.md)
 </dt> <dt>
 
-[**Sdbreaddwordtag**](sdbreaddwordtag.md)
+[**SdbReadDWORDTag**](sdbreaddwordtag.md)
 </dt> <dt>
 
-[**Sdbreadstringtag**](sdbreadstringtag.md)
+[**SdbReadStringTag**](sdbreadstringtag.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: SBM_SETSCROLLINFO Meldung (Winuser. h)
-description: Die SBM- \_ setScrollInfo-Nachricht wird gesendet, um die Parameter einer Schiebe Leiste festzulegen.
+title: SBM_SETSCROLLINFO (Winuser.h)
+description: Die SBM \_ SETSCROLLINFO-Nachricht wird gesendet, um die Parameter einer Bildlaufleiste festlegen.
 ms.assetid: e0e42a81-67be-4d40-88c8-77398b068617
 keywords:
-- Windows-Steuerelemente für SBM_SETSCROLLINFO Meldung
+- SBM_SETSCROLLINFO message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e98abbca2d53d4b104caea22954472a17dfd5c1c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5622371abb86301e1450c9fa0d6864e8db76c9837fca48fe8bcf11cb884f6b5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345494"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119914290"
 ---
-# <a name="sbm_setscrollinfo-message"></a>SBM- \_ setScrollInfo-Meldung
+# <a name="sbm_setscrollinfo-message"></a>SBM \_ SETSCROLLINFO-Meldung
 
-Die **SBM- \_ setScrollInfo** -Nachricht wird gesendet, um die Parameter einer Schiebe Leiste festzulegen.
+Die **SBM \_ SETSCROLLINFO-Nachricht** wird gesendet, um die Parameter einer Bildlaufleiste festlegen.
 
-Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten Sie die [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) -Funktion verwenden. Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion. Anwendungen, die ein benutzerdefiniertes Bild Lauf leisten-Steuerelement implementieren, müssen auf diese Nachrichten reagieren, damit die Funktion **setScrollInfo** ordnungsgemäß funktioniert.
+Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten sie die [**SetScrollInfo-Funktion**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) verwenden. Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) Anwendungen, die ein benutzerdefiniertes Scrollleisten-Steuerelement implementieren, müssen auf diese Meldungen reagieren, damit die **SetScrollInfo-Funktion** ordnungsgemäß funktioniert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,25 +34,25 @@ Anwendungen sollten diese Nachricht nicht direkt senden. Stattdessen sollten Sie
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob die Schiebe Leiste neu gezeichnet wird, um die neue Position des Bild Lauf Felds widerzuspiegeln. Wenn dieser Parameter **true** ist, wird die Scrollleiste neu gezeichnet. Wenn der Wert **false** ist, wird die Scrollleiste nicht neu gezeichnet.
+Gibt an, ob die Scrollleiste neu gezeichnet wird, um die position des neuen Bildlauffelds wiederzuerkennen. Wenn dieser Parameter **TRUE ist,** wird die Scrollleiste neu gezeichnet. Wenn der Wert **FALSE ist,** wird die Scrollleiste nicht neu gezeichnet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo) -Struktur. Legen Sie vor dem Aufrufen von [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo)den **CBSIZE** -Member der-Struktur auf **sizeof**(**ScrollInfo**) fest, legen Sie den **fmask** -Member fest, um die festzulegenden Parameter anzugeben, und geben Sie die neuen Parameterwerte in den entsprechenden Membern an.
+Zeiger auf eine [**SCROLLINFO-Struktur.**](/windows/win32/api/winuser/ns-winuser-scrollinfo) Legen Sie vor dem Aufrufen von [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo)das **cbSize-Element** der -Struktur auf **sizeof**(**SCROLLINFO)** fest, legen Sie das **fMask-Element** fest, um die festzulegenden Parameter anzugeben, und geben Sie die neuen Parameterwerte in den entsprechenden Membern an.
 
-Der **fmask** -Member kann einen oder mehrere der folgenden Werte aufweisen.
+Der **fMask-Member** kann einer oder mehrere der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                           | Bedeutung                                                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SIF_DISABLENOSCROLL"></span><span id="sif_disablenoscroll"></span><dl> <dt>**SIF \_ DisableNoScroll**</dt> </dl> | Deaktiviert die Schiebe Leiste, anstatt Sie zu entfernen, wenn die neuen Parameter der Scrollleiste die Bild Lauf Leiste unnötig machen.<br/> |
-| <span id="SIF_PAGE"></span><span id="sif_page"></span><dl> <dt>**SIF- \_ Seite**</dt> </dl>                                  | Legt die scrollseite auf den im **nPage** -Member angegebenen Wert fest.<br/>                                                |
-| <span id="SIF_POS"></span><span id="sif_pos"></span><dl> <dt>**SIF \_ Torys**</dt> </dl>                                     | Legt die Scrollposition auf den im **NPOs** -Member angegebenen Wert fest. <br/>                                            |
-| <span id="SIF_RANGE"></span><span id="sif_range"></span><dl> <dt>**SIF- \_ Bereich**</dt> </dl>                               | Legt den scrollbereich auf den Wert fest, der in den **nmin** -und **nmax** -Membern angegeben ist. <br/>                                 |
+| <span id="SIF_DISABLENOSCROLL"></span><span id="sif_disablenoscroll"></span><dl> <dt>**SIF \_ DISABLENOSCROLL**</dt> </dl> | Deaktiviert die Scrollleiste, anstatt sie zu entfernen, wenn die neuen Parameter der Scrollleiste die Scrollleiste unnötig machen.<br/> |
+| <span id="SIF_PAGE"></span><span id="sif_page"></span><dl> <dt>**\_SIF-SEITE**</dt> </dl>                                  | Legt die Scrollseite auf den im **nPage-Member angegebenen Wert** fest.<br/>                                                |
+| <span id="SIF_POS"></span><span id="sif_pos"></span><dl> <dt>**SIF \_ POS**</dt> </dl>                                     | Legt die Bildlaufposition auf den wert fest, der im **nPos-Member angegeben** ist. <br/>                                            |
+| <span id="SIF_RANGE"></span><span id="sif_range"></span><dl> <dt>**\_SIF-BEREICH**</dt> </dl>                               | Legt den Bildlaufbereich auf den Wert fest, der in den **nMin- und** **nMax-Membern angegeben** ist. <br/>                                 |
 
 
 
@@ -62,11 +62,11 @@ Der **fmask** -Member kann einen oder mehrere der folgenden Werte aufweisen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die aktuelle Position des Bild Lauf Felds.
+Der Rückgabewert ist die aktuelle Position des Bildlauffelds.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Nachrichten, die die Position der Scrollleiste, [**WM \_ HScroll**](wm-hscroll.md) und [**WM \_ VScroll**](wm-vscroll.md)angeben, stellen nur 16 Bits an Positionsdaten bereit. Die [**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo) -Struktur, die von [**SBM \_ getscrollinfo**](sbm-getscrollinfo.md), **SBM \_ setScrollInfo**, [**getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)und [**setScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) verwendet wird, stellt jedoch 32 Bits der Positions leisten Positionsdaten bereit. Sie können diese Nachrichten und Funktionen bei der Verarbeitung der " **WM \_ HScroll** "-oder " **WM \_ VScroll** "-Meldungen zum Abrufen von 32-Bit-Scrollleisten-Positionsdaten verwenden.
+Die Meldungen, die die Position der Scrollleiste [**(WM \_ HSCROLL**](wm-hscroll.md) und [**WM \_ VSCROLL)**](wm-vscroll.md)angeben, stellen nur 16 Bits an Positionsdaten zur Verfügung. Die von [**SBM \_ GETSCROLLINFO,**](sbm-getscrollinfo.md) **SBM \_ SETSCROLLINFO,** [**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)und [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo) verwendete [**SCROLLINFO-Struktur**](/windows/win32/api/winuser/ns-winuser-scrollinfo) stellt jedoch 32 Bits bildlaufleistenpositionsdaten zur Seite. Sie können diese Nachrichten und Funktionen beim Verarbeiten der **WM \_ HSCROLL-** oder **WM \_ VSCROLL-Nachrichten** verwenden, um 32-Bit-Bildlaufleisten-Positionsdaten zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,9 +74,9 @@ Die Nachrichten, die die Position der Scrollleiste, [**WM \_ HScroll**](wm-hscro
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -84,16 +84,16 @@ Die Nachrichten, die die Position der Scrollleiste, [**WM \_ HScroll**](wm-hscro
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
+[**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
 </dt> <dt>
 
-[**SBM \_ getscrollinfo**](sbm-getscrollinfo.md)
+[**SBM \_ GETSCROLLINFO**](sbm-getscrollinfo.md)
 </dt> <dt>
 
-[**ScrollInfo**](/windows/win32/api/winuser/ns-winuser-scrollinfo)
+[**SCROLLINFO**](/windows/win32/api/winuser/ns-winuser-scrollinfo)
 </dt> <dt>
 
 [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo)

@@ -1,64 +1,64 @@
 ---
-title: Implementieren der Lizenz Sperrung
-description: Implementieren der Lizenz Sperrung
+title: Implementieren der Lizenzsperrung
+description: Implementieren der Lizenzsperrung
 ms.assetid: 50ecfeaa-89cd-4788-a25a-ee0ae8973bf0
 keywords:
-- Windows Media-Format-SDK, Implementieren der Lizenz Sperrung
-- Windows Media-Format-SDK, Lizenz Sperrung
-- Windows Media-Format-SDK, Sperren von Lizenzen
-- Advanced Systems Format (ASF), Implementieren der Lizenz Sperrung
-- ASF (Advanced Systems Format), Implementieren der Lizenz Sperrung
-- Advanced Systems Format (ASF), Lizenz Sperrung
-- ASF (Advanced Systems Format), Lizenz Sperrung
+- Windows Medienformat-SDK, Implementieren der Lizenzsperrung
+- Windows Medienformat-SDK,Lizenzsperrung
+- Windows Media Format SDK,Sperrung von Lizenzen
+- Advanced Systems Format (ASF), Implementieren der Lizenzsperrung
+- ASF (Advanced Systems Format),Implementieren der Lizenzsperrung
+- Advanced Systems Format (ASF), Lizenzsperrung
+- ASF (Advanced Systems Format), Lizenzsperrung
 - Advanced Systems Format (ASF), Widerruf von Lizenzen
-- ASF (Advanced Systems Format), Sperrung von Lizenzen
-- Digital Rights Management (DRM), Implementieren der Lizenz Sperrung
-- DRM (Digital Rights Management), Implementieren der Lizenz Sperrung
-- Digital Rights Management (DRM), Lizenz Sperrung
-- DRM (Digital Rights Management), Lizenz Sperrung
-- Digital Rights Management (DRM), Sperren von Lizenzen
-- DRM (Digital Rights Management), Sperren von Lizenzen
-- Lizenz Sperrung, implementieren
+- ASF (Advanced Systems Format), Widerruf von Lizenzen
+- Digital Rights Management (DRM), Implementieren der Lizenzsperrung
+- DRM (Digital Rights Management),Implementieren der Lizenzsperrung
+- Digital Rights Management (DRM), Lizenzsperrung
+- DRM (Digital Rights Management), Lizenzsperrung
+- Digital Rights Management (DRM), Widerruf von Lizenzen
+- DRM (Digital Rights Management), Widerruf von Lizenzen
+- Lizenzsperrung,Implementieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e83bfb1a512b031f5b7c297ecede4ed33fba8f2b
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: c73d0204e83c941600eefb53579b19ef72217055080c6ef4603d8eac28e08caa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809130"
 ---
-# <a name="implementing-license-revocation"></a>Implementieren der Lizenz Sperrung
+# <a name="implementing-license-revocation"></a>Implementieren der Lizenzsperrung
 
-Das Windows Media Rights Manager 10 SDK enthält eine Funktion mit dem Namen "Lizenz Sperrung". Mit dieser Funktion können Lizenzserver anfordern, dass Lizenzen vom Client Computer entfernt werden. Das Windows Media-Format-SDK stellt Methoden bereit, mit denen Sperr Nachrichten verarbeitet und die Lizenzen aus dem lokalen Lizenz Speicher entfernt werden.
+Das Windows Media Rights Manager 10 SDK enthält ein Feature namens Lizenzsperrung. Mit diesem Feature können Lizenzserver anfordern, dass Lizenzen vom Clientcomputer entfernt werden. Das Windows Media Format SDK stellt Methoden bereit, die Sperrmeldungen verarbeiten und die Lizenzen aus dem lokalen Lizenzspeicher entfernen.
 
-Der Lizenz Sperrprozess wird von einem Dienst initiiert, der vom Lizenz Aussteller bereitgestellt wird. Die Anwendung kann diesen Dienst hosten, oder Sie kann eine Webanwendung sein. In beiden Fällen muss Ihre Anwendung in der Lage sein, eine vom Dienst erstellte Lizenz Herausforderung zu erhalten.
+Der Lizenzsperrprozess wird von einem Vom Lizenzaussteller bereitgestellten Dienst initiiert. Ihre Anwendung kann diesen Dienst hosten, oder es kann sich um eine Webanwendung handelt. In beiden Fällen muss Ihre Anwendung in der Lage sein, eine vom Dienst erstellte Lizenzaufforderung zu erhalten.
 
-Um Lizenzen aus dem Lizenz Speicher zu entfernen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um Lizenzen aus dem Lizenzspeicher zu entfernen:
 
-1.  Wenn Sie eine Lizenzanfrage vom Lizenz Aussteller erhalten haben, rufen Sie die [**wmfeatelicenserevocationagent**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatelicenserevocationagent) -Funktion auf, um ein Lizenz Sperr-Agent-Objekt zu erstellen und einen Zeiger auf die [**iwmlicenserevocationagent**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserevocationagent) -Schnittstelle zu erhalten.
-2.  Rufen Sie die [**iwmlicenserevocationagent:: getlrbchallenge**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmlicenserevocationagent-getlrbchallenge) -Methode auf, um die Abfrage Antwort zu generieren.
-3.  Senden Sie die Abfrage Antwort zurück an die Lizenz Dienst Komponente, von der Sie die Herausforderung erhalten haben.
-4.  Die Lizenz Dienst Komponente sendet ein signiertes Lizenz Sperr-BLOB (LRB) an die Anwendung. Wenn Sie Sie empfangen, nennen Sie die [**iwmlicenserevocationagent::P rocess LRB**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmlicenserevocationagent-processlrb) -Methode. **Processlrb** erstellt eine Bestätigungsnachricht, die Sie zurück an den Lizenz Dienst senden müssen, um zu überprüfen, ob die Lizenzen entfernt wurden.
+1.  Rufen Sie beim Empfang einer Lizenzaufforderung vom Lizenzaussteller die [**WMCreateLicenseRevocationAgent-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatelicenserevocationagent) auf, um ein Lizenzsperr-Agent-Objekt zu erstellen und einen Zeiger auf die [**IWMLicenseRevocationAgent-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserevocationagent) abzurufen.
+2.  Rufen Sie die [**IWMLicenseRevocationAgent::GetLRBChallenge-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmlicenserevocationagent-getlrbchallenge) auf, um die Abfrageantwort zu generieren.
+3.  Senden Sie die Antwort zurück an die Lizenzdienstkomponente, von der Sie die Abfrage erhalten haben.
+4.  Die Lizenzdienstkomponente sendet ein signiertes Lizenzsperrblob (LRB) an Ihre Anwendung. Wenn Sie sie erhalten, rufen Sie die [**IWMLicenseRevocationAgent::P rocessLRB-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmlicenserevocationagent-processlrb) auf. **ProcessLRB** erstellt eine Bestätigungsmeldung, die Sie an den Lizenzdienst zurücksenden müssen, um zu überprüfen, ob die Lizenzen entfernt wurden.
 
 > [!Note]  
 > DRM wird von der x64-basierten Version dieses SDK nicht unterstützt.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Aktivieren DRM-Unterstützung**](enabling-drm-support.md)
+[**Aktivieren der DRM-Unterstützung**](enabling-drm-support.md)
 </dt> <dt>
 
-[**Iwmlicenserevocationagent-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserevocationagent)
+[**IWMLicenseRevocationAgent-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmlicenserevocationagent)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

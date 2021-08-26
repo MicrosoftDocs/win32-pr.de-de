@@ -1,9 +1,9 @@
 ---
-title: TDM_CLICK_VERIFICATION Meldung (kommstrg. h)
-description: Simuliert einen Klick auf das Kontrollkästchen Überprüfung eines Aufgaben Dialogfelds, sofern vorhanden.
+title: TDM_CLICK_VERIFICATION (Commctrl.h)
+description: Simuliert einen Klick auf das Überprüfungskontrollkästchen eines Aufgabendialogfelds, sofern vorhanden.
 ms.assetid: 1c6c135e-4e39-4f1a-88f4-5e9f7181a2dd
 keywords:
-- Windows-Steuerelemente für TDM_CLICK_VERIFICATION Meldung
+- TDM_CLICK_VERIFICATION meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df61676104169e3084e7cde09439c218f2237e60
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b3cda5e85b138225d69e159792cbe641122e91bf9602b3e0f5edafa419edc3c3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876090"
 ---
-# <a name="tdm_click_verification-message"></a>TDM- \_ Click- \_ Überprüfungs Meldung
+# <a name="tdm_click_verification-message"></a>TDM CLICK \_ \_ VERIFICATION message
 
-Simuliert einen Klick auf das Kontrollkästchen Überprüfung eines Aufgaben Dialogfelds, sofern vorhanden.
+Simuliert einen Klick auf das Überprüfungskontrollkästchen eines Aufgabendialogfelds, sofern vorhanden.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-**True** , wenn der Status des Kontrollkästchens als aktiviert festgelegt werden soll. **False** gibt an, dass das Kontrollkästchen deaktiviert werden soll.
+**TRUE,** um den Status des zu aktivierenden Kontrollkästchens zu festlegen; **FALSE,** um die Option so zu deaktivieren, dass sie deaktiviert wird.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-**True** , um den Tastaturfokus auf das Kontrollkästchen festzulegen. Andernfalls **false** .
+**TRUE,** um den Tastaturfokus auf das Kontrollkästchen zu setzen; **Andernfalls FALSE.**
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

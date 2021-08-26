@@ -1,27 +1,27 @@
 ---
-title: Konzepte der C++-und OLE-Programmierung
-description: Konzepte der C++-und OLE-Programmierung
+title: C++- und OLE-Programmierkonzepte
+description: C++- und OLE-Programmierkonzepte
 ms.assetid: 2c6c3f29-aa5d-4e55-8c4d-16c5fb223fb9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46c47ef5ff2d89930b5d4138f12e3ebc15385a7e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b33c70577c07a7e5b6e9429c4262b32b43095e6902b161febcad35a7c9eddb61
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119808240"
 ---
-# <a name="c-and-ole-programming-concepts"></a>Konzepte der C++-und OLE-Programmierung
+# <a name="c-and-ole-programming-concepts"></a>C++- und OLE-Programmierkonzepte
 
-Die in Windows enthaltenen Datei-und Datenstrom Handler verwenden einen objektorientierten Entwurf zum herauf Stufen einer Standardschnittstelle und zum Freigeben von Funktionen. Diese Handler sind in C++ geschrieben und verwenden die OLE-Component Object Model.
+Die in Windows enthaltenen Datei- und Streamhandler verwenden einen objektorientierten Entwurf, um eine Standardschnittstelle hoch- und die Funktionalität gemeinsam zu nutzen. Diese Handler werden in C++ geschrieben und verwenden die OLE-Component Object Model.
 
-Sie können benutzerdefinierte Handler mithilfe der C-oder C++-Entwicklungssysteme entwickeln; Allerdings wird die Verwendung von C++ dringend empfohlen, da Sie einen einfacheren und einfacheren Ansatz zum Implementieren eines Handlers bereitstellt. Mit C++ können Sie Daten explizit als Objekte definieren, und Sie können die Funktionen, die die Daten bearbeiten, mit den Element Funktionen eines Objekts verknüpfen.
+Sie können benutzerdefinierte Handler mithilfe der C- oder C++-Entwicklungssysteme entwickeln. Die Verwendung von C++ wird jedoch dringend empfohlen, da sie einen einfacheren und einfacheren Ansatz zum Implementieren eines Handlers bietet. Mit C++ können Sie Daten explizit als Objekte definieren und die Funktionen, die die Daten bearbeiten, den Memberfunktionen eines Objekts zuordnen.
 
-Dieser Abschnitt enthält eine kurze Zusammenfassung der wichtigen Konzepte von C++ und der OLE-Component Object Model, die für das Entwerfen und Implementieren von Datei-und streamhandlern gelten. Es gibt zahlreiche Bücher über C++ Programming, auf die Sie verweisen können, um weitere Informationen zu erhalten. Weitere Informationen zu OLE finden Sie in der *OLE-Programmier Referenz*.
+In diesem Abschnitt werden die wichtigen Konzepte von C++ und der OLE-Component Object Model, die für das Entwerfen und Implementieren von Datei- und Streamhandlern gelten, und kurz zusammengefasst. Es gibt viele Bücher, die über C++-Programmierung geschrieben wurden und auf die Sie für weitere Informationen verweisen können. Weitere Informationen zu OLE finden Sie in der *OLE-Programmiererreferenz.*
 
- 
+ 
 
- 
+ 
 
 
 

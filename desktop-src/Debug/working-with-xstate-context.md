@@ -1,21 +1,21 @@
 ---
-description: Dieses Dokument enthält ein Beispiel, das veranschaulicht, wie die xstate-Kontextfunktionen verwendet werden, um erweiterte Funktionen für einen Thread abzurufen und festzulegen.
+description: Dieses Dokument enthält ein Beispiel, das veranschaulicht, wie die XState-Kontextfunktionen zum Abrufen und Festlegen erweiterter Features für einen Thread verwendet werden.
 ms.assetid: F7937402-1173-4647-B9FF-856C0925C1C3
-title: Arbeiten mit xstate-Kontext
+title: Arbeiten mit dem XState-Kontext
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ca58a8fadb4404e2f6fc431b7b7d2a9d7f583f4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6300049f96ff6e7c1fb51759978f84e6c93c305de559a527c9791f2d33f87150
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912220"
 ---
-# <a name="working-with-xstate-context"></a>Arbeiten mit xstate-Kontext
+# <a name="working-with-xstate-context"></a>Arbeiten mit dem XState-Kontext
 
-Dieses Dokument enthält ein Beispiel, das veranschaulicht, wie die xstate-Kontextfunktionen verwendet werden, um erweiterte Funktionen für einen Thread abzurufen und festzulegen. In den folgenden Beispielen wird der Status von Intel Advanced Vector Extensions (AVX) bearbeitet, der von FeatureId 2 (Funktions Maske 4) definiert wird. Intel AVX ist in "Intel Advanced Vector Extensions Programming Reference" definiert, das in verfügbar ist <https://go.microsoft.com/fwlink/p/?linkid=212716> .
+Dieses Dokument enthält ein Beispiel, das veranschaulicht, wie die XState-Kontextfunktionen zum Abrufen und Festlegen erweiterter Features für einen Thread verwendet werden. In den folgenden Beispielen wird der AVX-Zustand (Intel Advanced Vector Extensions) bearbeitet, der durch FeatureId 2 (FeatureMaske 4) definiert wird. Intel AVX ist in der "Intel Advanced Vector Extensions Programming Reference" definiert, die unter verfügbar <https://go.microsoft.com/fwlink/p/?linkid=212716> ist.
 
-**Windows 7 mit SP1:** Die [AVX-API](avx-support-portal.md) wird zuerst unter Windows 7 mit SP1 implementiert. Da kein SDK für Windows 7 mit SP1 vorhanden ist, bedeutet dies, dass keine Header und Bibliotheksdateien verfügbar sind, mit denen Sie arbeiten können. In dieser Situation muss ein Aufrufer die erforderlichen Funktionen aus dieser Dokumentation deklarieren und mithilfe von [**GetModuleHandle**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlea) für "Kernel32.dll", gefolgt von Aufrufen von " [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)", Verweise darauf erhalten.
+**Windows 7 mit SP1:** Die [AVX-API](avx-support-portal.md) wird zuerst auf Windows 7 mit SP1 implementiert. Da es kein SDK für Windows 7 mit SP1 gibt, bedeutet dies, dass es keine verfügbaren Header und Bibliotheksdateien gibt, mit denen Sie arbeiten können. In diesem Fall muss ein Aufrufer die erforderlichen Funktionen aus dieser Dokumentation deklarieren und Zeiger auf sie mit [**GetModuleHandle**](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlea) für "Kernel32.dll" gefolgt von Aufrufen von [**GetProcAddress erhalten.**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)
 
 
 ```C++
@@ -219,22 +219,22 @@ Cleanup:
 
 <dl> <dt>
 
-[**Copycontext**](/windows/desktop/api/WinBase/nf-winbase-copycontext)
+[**CopyContext**](/windows/desktop/api/WinBase/nf-winbase-copycontext)
 </dt> <dt>
 
-[**Initializecontext**](/windows/desktop/api/WinBase/nf-winbase-initializecontext)
+[**InitializeContext**](/windows/desktop/api/WinBase/nf-winbase-initializecontext)
 </dt> <dt>
 
-[**Getenabledxstatefeatures**](/windows/desktop/api/WinBase/nf-winbase-getenabledxstatefeatures)
+[**GetEnabledXStateFeatures**](/windows/desktop/api/WinBase/nf-winbase-getenabledxstatefeatures)
 </dt> <dt>
 
-[**Loerexstatefeature**](/windows/desktop/api/WinBase/nf-winbase-locatexstatefeature)
+[**LocateXStateFeature**](/windows/desktop/api/WinBase/nf-winbase-locatexstatefeature)
 </dt> <dt>
 
-[**Getxstatefeaturesmask**](/windows/desktop/api/WinBase/nf-winbase-getxstatefeaturesmask)
+[**GetXStateFeaturesMask**](/windows/desktop/api/WinBase/nf-winbase-getxstatefeaturesmask)
 </dt> <dt>
 
-[**Setxstatefeaturesmask**](/windows/desktop/api/WinBase/nf-winbase-setxstatefeaturesmask)
+[**SetXStateFeaturesMask**](/windows/desktop/api/WinBase/nf-winbase-setxstatefeaturesmask)
 </dt> </dl>
 
  

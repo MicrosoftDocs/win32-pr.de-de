@@ -1,11 +1,11 @@
 ---
-title: Ivmharddisk sizeonhost-Eigenschaft (vpccominterfaces. h)
-description: Größe der virtuellen Festplatten Datei auf dem Host Computer.
+title: IVMHardDisk SizeOnHost-Eigenschaft (VPCCOMInterfaces.h)
+description: Größe der virtuellen Festplattendatei auf dem Hostcomputer.
 ms.assetid: f787ec4b-7b4f-4d35-b07c-4844424d91cf
 keywords:
-- Sizeonhost-Eigenschaft virtueller PC
-- Sizeonhost-Eigenschaft Virtual PC, ivmharddisk-Schnittstelle
-- Ivmharddisk Interface Virtual PC, sizeonhost (Eigenschaft)
+- SizeOnHost-Eigenschaft Virtueller PC
+- SizeOnHost-Eigenschaft Virtueller PC, IVMHardDisk-Schnittstelle
+- IVMHardDisk-Schnittstelle Virtueller PC, SizeOnHost-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d3a000a70e1713b28f8fb8eea3590a53fb46ff0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8952428665ef651d5d420bc457f1eed52f6c6ded78a7b448c8325ab09f352a9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119867120"
 ---
-# <a name="ivmharddisksizeonhost-property"></a>Ivmharddisk:: sizeonhost (Eigenschaft)
+# <a name="ivmharddisksizeonhost-property"></a>IVMHardDisk::SizeOnHost-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Größe der virtuellen Festplatten Datei auf dem Host Computer ab.
+Ruft die Größe der virtuellen Festplattendatei auf dem Hostcomputer ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -45,7 +45,7 @@ HRESULT get_SizeOnHost(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Größe der Festplatten Abbild Datei in Byte. Dieser Wert ist eine **Variante** vom Typ **VT \_ Decimal**.
+Die Größe der Festplattenimagedatei in Bytes. Dieser Wert ist eine **VARIANT** vom Typ **VT \_ DECIMAL**.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,9 +54,9 @@ Die Größe der Festplatten Abbild Datei in Byte. Dieser Wert ist eine **Variant
 | Name/Wert                                                                                                                                                                               | Bedeutung                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                                                  | Der Vorgang wurde durchgeführt.<br/>           |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>                                    | Der-Parameter ist **null**.<br/>              |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>       |
-| <dl> <dt>HRESULT \_ Von \_ Win32 (Fehler \_ Datei \_ nicht \_ gefunden)</dt> <dt>0x80070002</dt> </dl> | Die Festplatten Abbild Datei wurde nicht gefunden.<br/> |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>                                    | Der Parameter ist **NULL.**<br/>              |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl>                            | Ein unerwarteter Fehler ist aufgetreten.<br/>       |
+| <dl> <dt>HRESULT \_ FROM \_ WIN32(ERROR \_ FILE NOT \_ \_ FOUND)</dt> <dt>0x80070002</dt> </dl> | Die Festplattenimagedatei wurde nicht gefunden.<br/> |
 
 
 
@@ -66,12 +66,12 @@ Die Größe der Festplatten Abbild Datei in Byte. Dieser Wert ist eine **Variant
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
 
 
 
@@ -79,7 +79,7 @@ Die Größe der Festplatten Abbild Datei in Byte. Dieser Wert ist eine **Variant
 
 <dl> <dt>
 
-[**Ivmharddisk**](ivmharddisk.md)
+[**IVMHardDisk**](ivmharddisk.md)
 </dt> </dl>
 
  

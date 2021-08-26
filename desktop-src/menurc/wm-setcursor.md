@@ -1,9 +1,9 @@
 ---
-title: WM_SETCURSOR Meldung (Winuser. h)
-description: Wird an ein Fenster gesendet, wenn die Maus bewirkt, dass der Cursor innerhalb eines Fensters bewegt wird und die Maus Eingaben nicht aufgezeichnet werden.
+title: WM_SETCURSOR Meldung (Winuser.h)
+description: Wird an ein Fenster gesendet, wenn die Maus bewirkt, dass der Cursor innerhalb eines Fensters bewegt wird und die Mauseingabe nicht erfasst wird.
 ms.assetid: b722689e-925f-40ac-ba4a-55be9dc6a8f8
 keywords:
-- WM_SETCURSOR von Meldungs Menüs und anderen Ressourcen
+- WM_SETCURSOR Meldung Menüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e941919b447659e67fdcdd9e4e5f4ff2630f8bf1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 19dccc4fab0d24dd233133e97b3ddcc71f615d9abb27a4684821099b6ad15802
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119846870"
 ---
-# <a name="wm_setcursor-message"></a>WM- \_ SetCursor-Nachricht
+# <a name="wm_setcursor-message"></a>WM \_ SETCURSOR-Nachricht
 
-Wird an ein Fenster gesendet, wenn die Maus bewirkt, dass der Cursor innerhalb eines Fensters bewegt wird und die Maus Eingaben nicht aufgezeichnet werden.
+Wird an ein Fenster gesendet, wenn die Maus bewirkt, dass der Cursor innerhalb eines Fensters bewegt wird und die Mauseingabe nicht erfasst wird.
 
 
 ```C++
@@ -46,19 +46,19 @@ Ein Handle für das Fenster, das den Cursor enthält.
 *lParam* 
 </dt> <dd>
 
-Das nieder wertige Wort von *LPARAM* gibt das Treffer Testergebnis für die Cursorposition an. Mögliche Werte finden Sie in den Rückgabe Werten für [WM_NCHITTEST](../inputdev/wm-nchittest.md) .
+Das Wort *lParam* mit niedriger Reihenfolge gibt das Treffertestergebnis für die Cursorposition an. Mögliche Werte finden Sie in den Rückgabewerten für [WM_NCHITTEST.](../inputdev/wm-nchittest.md)
 
-Das hochwertige Wort *LPARAM* gibt die Maus Fenster Meldung an, die dieses Ereignis ausgelöst hat, z. b. [WM_MOUSEMOVE](../inputdev/wm-mousemove.md). Wenn das Fenster in den Menü Modus wechselt, ist dieser Wert 0 (null).
+Das Wort *lParam* in hoher Reihenfolge gibt die Mausfenstermeldung an, die dieses Ereignis ausgelöst hat, z. [B. WM_MOUSEMOVE](../inputdev/wm-mousemove.md). Wenn das Fenster in den Menümodus wechselt, ist dieser Wert 0 (null).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie " **true** " zurückgeben, um die weitere Verarbeitung anzuhalten, oder " **false** ".
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie **TRUE** zurückgeben, um die weitere Verarbeitung anzuhalten, oder **FALSE,** um fortzufahren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw) -Funktion übergibt die **WM- \_ SetCursor** -Nachricht vor der Verarbeitung an ein übergeordnetes Fenster. Wenn das übergeordnete Fenster **true** zurückgibt, wird die weitere Verarbeitung angehalten. Durch das übergeben der Nachricht an das übergeordnete Fenster eines Fensters erhält das übergeordnete Fenster Steuerelement über die Cursor Einstellung in einem untergeordneten Fenster. Die **defwindowproc** -Funktion verwendet diese Meldung auch, um den Cursor auf einen Pfeil festzulegen, wenn er sich nicht im Client Bereich befindet, oder an den registrierten Klassen Cursor, wenn er sich im Client Bereich befindet. Wenn das nieder wertige Wort des *LPARAM* -Parameters **HTError** und das hochwertige Wort *LPARAM* angibt, dass eine der Maustasten gedrückt ist, ruft **defwindowproc** die [**MessageBeep**](/windows/desktop/api/winuser/nf-winuser-messagebeep) -Funktion auf.
+Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw) übergibt die **WM \_ SETCURSOR-Nachricht** vor der Verarbeitung an ein übergeordnetes Fenster. Wenn das übergeordnete Fenster **TRUE** zurückgibt, wird die weitere Verarbeitung angehalten. Wenn die Nachricht an das übergeordnete Fenster eines Fensters übergeben wird, kann das übergeordnete Fenster die Einstellung des Cursors in einem untergeordneten Fenster steuern. Die **DefWindowProc-Funktion** verwendet diese Meldung auch, um den Cursor auf einen Pfeil festzulegen, wenn er sich nicht im Clientbereich befindet, oder auf den registrierten Klassencursor, wenn er sich im Clientbereich befindet. Wenn das Wort in niedriger Reihenfolge des *lParam-Parameters* **HTERROR** ist und das Wort *lParam* in hoher Reihenfolge angibt, dass eine der Maustasten gedrückt wird, ruft **DefWindowProc** die [**MessageBeep-Funktion**](/windows/desktop/api/winuser/nf-winuser-messagebeep) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw) 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -76,7 +76,7 @@ Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw) 
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw)
@@ -88,7 +88,7 @@ Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowprocw) 
 [**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85))
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Cursor](cursors.md)

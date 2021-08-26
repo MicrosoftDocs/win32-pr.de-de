@@ -1,11 +1,11 @@
 ---
-title: Idwrite telocalfontfileloader getfilepathfromkey-Methode
-description: Ruft den absoluten Schriftart Datei Pfad aus dem Verweis Schlüssel der Schriftart Datei ab.
+title: IDWriteLocalFontFileLoader GetFilePathFromKey-Methode
+description: Erhält den absoluten Schriftartdateipfad aus dem Schriftartdateiverweisschlüssel.
 ms.assetid: a61cfe80-100d-4813-b04f-a39f626893dd
 keywords:
-- Getfilepathfromkey-Methode direkt schreiben
-- Getfilepathfromkey-Methode Direct Write, idwrite telocalfontfileloader-Schnittstelle
-- Idwrite telocalfontfileloader-Schnittstelle Direct Write, getfilepathfromkey-Methode
+- 'GetFilePathFromKey-Methode : Direct Write'
+- GetFilePathFromKey-Methode Direct Write, IDWriteLocalFontFileLoader-Schnittstelle
+- IDWriteLocalFontFileLoader-Schnittstelle Direct Write , GetFilePathFromKey-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14fb3070ddc2f0d82554c86f005343faa3c087fe
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7739cfa4a03abb3506bd63a84e0c747021110198f7d0ffefa69116656cbfa616
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119928030"
 ---
-# <a name="idwritelocalfontfileloadergetfilepathfromkey-method"></a>Idwrite telocalfontfileloader:: getfilepathfromkey-Methode
+# <a name="idwritelocalfontfileloadergetfilepathfromkey-method"></a>IDWriteLocalFontFileLoader::GetFilePathFromKey-Methode
 
-Ruft den absoluten Schriftart Datei Pfad aus dem Verweis Schlüssel der Schriftart Datei ab.
+Erhält den absoluten Schriftartdateipfad aus dem Schriftartdateiverweisschlüssel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,39 +45,39 @@ virtual HRESULT GetFilePathFromKey(
 
 <dl> <dt>
 
-*fontfilereferencekey* \[ in\]
+*fontFileReferenceKey* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
-Der Verweis Schlüssel der Schriftart Datei, der die lokale Schriftart Datei innerhalb des Gültigkeits Bereichs des verwendeten Schriftart Lade Moduls eindeutig identifiziert.
+Der Verweisschlüssel der Schriftartdatei, der die lokale Schriftartdatei innerhalb des Bereichs des verwendeten Schriftartladeers eindeutig identifiziert.
 
 </dd> <dt>
 
-*fontfilereferencekeysize* 
+*fontFileReferenceKeySize* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Größe des Verweis Schlüssels der Schriftart Datei in Bytes.
+Die Größe des Schriftartdateiverweisschlüssels in Bytes.
 
 </dd> <dt>
 
-*FilePath* \[ vorgenommen\]
+*filePath* \[ out\]
 </dt> <dd>
 
 Typ: **WCHAR \***
 
-Das Zeichen Array, das den lokalen Dateipfad empfängt.
+Das Zeichenarray, das den lokalen Dateipfad empfängt.
 
 </dd> <dt>
 
-*filepathsize* 
+*filePathSize* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Die Länge des Dateipfad-Zeichen Arrays.
+Die Länge des Dateipfadzeichenarrays.
 
 </dd> </dl>
 
@@ -85,7 +85,7 @@ Die Länge des Dateipfad-Zeichen Arrays.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,7 +93,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
@@ -102,7 +102,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idschreitelocalfontfileloader**](idwritelocalfontfileloader.md)
+[**IDWriteLocalFontFileLoader**](idwritelocalfontfileloader.md)
 </dt> </dl>
 
  

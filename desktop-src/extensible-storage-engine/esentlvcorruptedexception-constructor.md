@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentlvverdertedexception-Konstruktor'
-title: Esentlvverdertedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentLVCorruptedException-Konstruktor'
+title: EsentLVCorruptedException-Konstruktor
 TOCTitle: 'EsentLVCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentLVCorruptedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentlvcorruptedexception.esentlvcorruptedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7c5169743c0c78ea806a67f3aac238d1e6d1553f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f7dc4e077a59b7cc3883f398fc68c55c22ca0bf89a247499c01ae9e1478203d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119851960"
 ---
-# <a name="esentlvcorruptedexception-constructor"></a>Esentlvverdertedexception-Konstruktor
+# <a name="esentlvcorruptedexception-constructor"></a>EsentLVCorruptedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentlvverdertedexception-Klasse.
+Initialisiert eine neue Instanz der EsentLVCorruptedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentLVCorruptedException()
 public EsentLVCorruptedException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentlvverdertedexception-Klasse](./esentlvcorruptedexception-class.md)
+[EsentLVCorruptedException-Klasse](./esentlvcorruptedexception-class.md)
 
-[Esentlvverdertedexception-Elemente](./esentlvcorruptedexception-members.md)
+[EsentLVCorruptedException-Member](./esentlvcorruptedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

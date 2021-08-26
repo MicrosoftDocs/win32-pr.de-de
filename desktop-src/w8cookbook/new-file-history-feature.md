@@ -1,46 +1,46 @@
 ---
-title: Neue Funktion "Datei Versionsverlauf"
-description: Neue Funktion "Datei Versionsverlauf"
+title: Neues Dateiversionsverlauf feature
+description: Neues Dateiversionsverlauf feature
 ms.assetid: B1EE4638-5591-483B-AA09-600E242ED50B
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a70aad84f4d052d6a872c7b0cfc979d0fa05cb84
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 1502450c1376a57f9de99badc5188c8ce07761e0c28ae3ac2245a84437b5e66d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "104102470"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932190"
 ---
-# <a name="new-file-history-feature"></a>Neue Funktion "Datei Versionsverlauf"
+# <a name="new-file-history-feature"></a>Neues Dateiversionsverlauf feature
 
 ## <a name="platform"></a>Plattform
 
 **Clients** – Windows 8 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Die neue Funktion "Datei Versionsverlauf" ersetzt die vorhandene Sicherungs-und Wiederherstellungs Funktion und bietet Schutz für Benutzer Dateien, die in Benutzer Bibliotheken gespeichert sind. Es wird ein Satz von APIs bereitgestellt, mit denen Entwicklerprogramm gesteuert den Datei Versionsverlauf aktivieren und ein bestimmtes Speicher Ziel auswählen können. Die Dokumentation für diese APIs ist auf MSDN verfügbar.
+Das neue Dateiversionsverlauf ersetzt die vorhandene Sicherungs- und Wiederherstellungsfunktion und bietet Schutz für Benutzerdateien, die in Benutzerbibliotheken gespeichert sind. Es wird eine Reihe von APIs bereitgestellt, mit denen Entwickler programmgesteuert Dateiversionsverlauf und ein bestimmtes Speicherziel auswählen können. Die Dokumentation für diese APIs ist auf MSDN verfügbar.
 
-Dies kann sich auf Workflows im Zusammenhang mit Datenschutz und Dokumentation auswirken, die von der Windows-Sicherung und-Wiederherstellung abhängen.
+Dies kann sich auf Workflows im Zusammenhang mit dem Datenschutz und der Dokumentation auswirken, die von der Windows-Sicherung- und Wiederherstellungsfunktion abhängen.
 
-Es wird nicht empfohlen, beide Features gleichzeitig zu verwenden. Der Datei Versionsverlauf überprüft, ob ein Sicherungs Zeitplan vorhanden ist, und ist aktiv. Wenn ein Sicherungs Zeitplan gefunden wird, kann er von Benutzern nicht eingeschaltet werden. In diesem Fall müssen Benutzer, die den Datei Versionsverlauf verwenden möchten, den Windows-Sicherungs Zeitplan löschen.
+Es wird nicht empfohlen, beide Features gleichzeitig zu verwenden. Dateiversionsverlauf überprüft, ob ein Sicherungszeitplan vorhanden und aktiv ist, und wenn er einen findet, können Benutzer ihn nicht aktivieren. In diesem Fall müssen Benutzer, die Dateiversionsverlauf möchten, den Zeitplan Windows-Sicherung löschen.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Workflows können unterbrochen werden, und die Dokumentation für die vorherige Methode zum Zugreifen auf das Windows-Sicherungs-und Wiederherstellungs Feature muss aktualisiert werden, um diese Änderungen widerzuspiegeln.
+Workflows können unterbrochen werden, und die Dokumentation für die vorherige Methode für den Zugriff auf die Windows-Sicherung und das Wiederherstellungsfeature müssen aktualisiert werden, um diese Änderungen widerzuentigen.
 
 ## <a name="solution"></a>Lösung
 
-Überarbeiten Sie apps, die Workflows enthalten, die durch das neue Feature "Datei Versionsverlauf" beeinträchtigt werden, um Konflikte zu entfernen und den neuen Satz von APIs zu integrieren.
+Überarbeiten Sie Apps, die Workflows enthalten, die durch das neue Dateiversionsverlauf-Feature beeinträchtigt werden, um Konflikte zu entfernen und den neuen Satz von APIs zu integrieren.
 
 ## <a name="tests"></a>Tests
 
-Die-API ermöglicht Entwicklern, zu bestimmen, ob der Datei Versionsverlauf aktiviert ist.
+Mit der API können Entwickler ermitteln, ob Dateiversionsverlauf aktiviert ist.
 
- 
+ 
 
- 
+ 
 
 
 

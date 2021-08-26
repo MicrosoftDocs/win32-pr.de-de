@@ -1,61 +1,61 @@
 ---
-description: Mit der registerprogidinfo-Aktion wird die Registrierung von OLE-ProgID-Informationen beim System verwaltet.
+description: Die Aktion RegisterProgIdInfo verwaltet die Registrierung von OLE ProgId-Informationen beim System.
 ms.assetid: f6fd4d0d-d2dc-4953-9402-314c7932746b
-title: Registerprogidinfo-Aktion
+title: RegisterProgIdInfo-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4c7d53ca4c4125c6ebfc4d089c1c5a0934f9a58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 84cebf5ddb3bf8b9c98ebea0364b685016d343afa283b937400360f31bbcebd9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119912830"
 ---
-# <a name="registerprogidinfo-action"></a>Registerprogidinfo-Aktion
+# <a name="registerprogidinfo-action"></a>RegisterProgIdInfo-Aktion
 
-Mit der registerprogidinfo-Aktion wird die Registrierung von OLE-ProgID-Informationen beim System verwaltet.
+Die Aktion RegisterProgIdInfo verwaltet die Registrierung von OLE ProgId-Informationen beim System.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die registerprogidinfo-Aktion muss nach der Aktion [InstallFiles](installfiles-action.md) , [unregisterprogidinfo](unregisterprogidinfo-action.md) Action, [RegisterClassInfo](registerclassinfo-action.md) und der [RegisterExtensionInfo](registerextensioninfo-action.md) -Aktion erfolgen.
+Die RegisterProgIdInfo-Aktion muss nach der [InstallFiles-Aktion,](installfiles-action.md) der [UnregisterProgIdInfo-Aktion,](unregisterprogidinfo-action.md) der [RegisterClassInfo-Aktion](registerclassinfo-action.md) und der [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) angezeigt werden.
 
-Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen in einer Sequenz Tabelle enthalten ist, müssen Sie dieselbe relative Reihenfolge Reihenfolge aufweisen wie in der folgenden Abbildung:
+Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen zusammen in einer Sequenztabelle auftritt, müssen sie dieselbe relative Sequenzreihenfolge wie gezeigt haben:
 
--   [Unregisterclassinfo](unregisterclassinfo-action.md)
--   [Unregisterextensioninfo](unregisterextensioninfo-action.md)
--   [Unregisterprogidinfo](unregisterprogidinfo-action.md)
--   [Unregistermimeinfo](unregistermimeinfo-action.md)
+-   [UnregisterClassInfo](unregisterclassinfo-action.md)
+-   [UnregisterExtensionInfo](unregisterextensioninfo-action.md)
+-   [UnregisterProgIdInfo](unregisterprogidinfo-action.md)
+-   [UnregisterMIMEInfo](unregistermimeinfo-action.md)
 -   [RegisterClassInfo](registerclassinfo-action.md)
 -   [RegisterExtensionInfo](registerextensioninfo-action.md)
--   Registerprogidinfo
--   [Registermimeinfo](registermimeinfo-action.md)
+-   RegisterProgIdInfo
+-   [RegisterMIMEInfo](registermimeinfo-action.md)
 
-Registerprogidinfo muss z. b. nach [RegisterExtensionInfo](registerextensioninfo-action.md) in der Sequenz Tabelle stehen.
+RegisterProgIdInfo muss z. B. hinter [RegisterExtensionInfo](registerextensioninfo-action.md) in der Sequenztabelle liegen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                |
+| Feld | Beschreibung der Aktionsdaten                |
 |-------|-------------------------------------------|
-| \[1\] | Programm Bezeichner des registrierten Programms. |
+| \[1\] | Programmbezeichner des registrierten Programms. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die registerprogidinfo-Aktion registriert alle ProgID-Informationen für Server, die in der [ProgID-Tabelle](progid-table.md) angegeben sind und für die der zugehörige Klassen Server oder Erweiterungs Server für die Installation ausgewählt wurde.
+Die Aktion RegisterProgIdInfo registriert alle ProgId-Informationen für Server, die in der [ProgId-Tabelle](progid-table.md) angegeben sind und für die der entsprechende Klassenserver oder Erweiterungsserver für die Installation ausgewählt wurde.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Klassen Tabelle](class-table.md)
+[Klassentabelle](class-table.md)
 </dt> <dt>
 
-[Erweiterungs Tabelle](extension-table.md)
+[Erweiterungstabelle](extension-table.md)
 </dt> </dl>
 
  

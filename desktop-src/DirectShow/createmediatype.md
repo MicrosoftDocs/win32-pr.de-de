@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "anatemediatype" weist eine neue am- \_ \_ Medientyp Struktur, einschließlich des Format Blocks, zu.
+description: Die CreateMediaType-Funktion ordnet eine neue AM \_ MEDIA \_ TYPE-Struktur zu, einschließlich des Formatblocks.
 ms.assetid: 841a8c51-6027-49d6-b3d8-b5e21e3d5f13
-title: Funktion "deatemediatype" (mtype. h)
+title: CreateMediaType-Funktion (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 03ea3eaee03ebf98ac22d702bde9a165fda21e51
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f0384b0a72e10b84cd94581816c0441de6a19fa5148a97fa9e55d72bdd63d678
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871410"
 ---
-# <a name="createmediatype-function"></a>Funktion "kreatemediatype"
+# <a name="createmediatype-function"></a>CreateMediaType-Funktion
 
-Die Funktion " **anatemediatype** " weist eine neue [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur, einschließlich des Format Blocks, zu.
+Die **CreateMediaType-Funktion** ordnet eine neue [**AM MEDIA \_ \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) zu, einschließlich des Formatblocks.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ AM_MEDIA_TYPE* WINAPI CreateMediaType(
 *pSrc* 
 </dt> <dd>
 
-Zeiger auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur. Die-Methode kopiert diese-Struktur in die neue-Struktur.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type) Die -Methode kopiert diese Struktur in die neue -Struktur.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine neue [**am \_ - \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur zurück, oder **null** , wenn ein Fehler vorliegt.
+Gibt eine neue [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) oder **NULL** zurück, wenn ein Fehler vorliegt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den von dieser Funktion belegten Arbeitsspeicher freizugeben, nennen Sie [**deletemediatype**](deletemediatype.md).
+Um den von dieser Funktion belegten Arbeitsspeicher freizugeben, rufen [**Sie DeleteMediaType auf.**](deletemediatype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Um den von dieser Funktion belegten Arbeitsspeicher freizugeben, nennen Sie [**d
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Medientyp Funktionen**](media-type-functions.md)
+[**Medientypfunktionen**](media-type-functions.md)
 </dt> </dl>
 
  

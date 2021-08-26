@@ -1,9 +1,9 @@
 ---
-title: TVM_SORTCHILDREN Meldung (kommstrg. h)
+title: TVM_SORTCHILDREN (Commctrl.h)
 description: Sortiert die untergeordneten Elemente des angegebenen übergeordneten Elements in einem Strukturansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SortChildren-Makros senden.
 ms.assetid: c18bcd5f-c083-46ee-873b-d3100b0d7b04
 keywords:
-- Windows-Steuerelemente für TVM_SORTCHILDREN Meldung
+- TVM_SORTCHILDREN von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 341591c31accb4aab0b49f611359a93ec99c0cab
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f975814fadc5271c562e4e8e420c35dbb3450142bed797af83af73fdf81a55d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040941"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913800"
 ---
-# <a name="tvm_sortchildren-message"></a>TVM \_ SortChildren-Meldung
+# <a name="tvm_sortchildren-message"></a>TVM \_ SORTCHILDREN-Meldung
 
-Sortiert die untergeordneten Elemente des angegebenen übergeordneten Elements in einem Strukturansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SortChildren**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sortchildren) -Makros senden.
+Sortiert die untergeordneten Elemente des angegebenen übergeordneten Elements in einem Strukturansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SortChildren-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_sortchildren) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Sortiert die untergeordneten Elemente des angegebenen übergeordneten Elements i
 *wParam* 
 </dt> <dd>
 
-Ein Wert, der angibt, ob die Sortierung rekursiv ist. Legen Sie " *wParam* " auf " **true** " fest, um alle Ebenen von untergeordneten Elementen unterhalb des übergeordneten Elements Andernfalls werden nur die unmittelbar untergeordneten Elemente des übergeordneten Elements sortiert.
+Ein Wert, der angibt, ob die Sortierung rekursiv ist. Legen *Sie wParam auf* TRUE **fest,** um alle Ebenen untergeordneter Elemente unterhalb des übergeordneten Elements zu sortieren. Andernfalls werden nur die unmittelbaren übergeordneten unteren Klammern sortiert.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Handle für das übergeordnete Element, dessen untergeordnete Elemente sortiert 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In dieser Meldung werden die Strukturelemente mithilfe von [**lstrincmpi**](/windows/desktop/api/winbase/nf-winbase-lstrcmpia) auf dem Elementnamen alphabetisch sortiert. Mit der [**TVM \_ SortChildren**](tvm-sortchildrencb.md) -Nachricht können Sie das Bestellverhalten anpassen.
+Diese Meldung alphabetisiert die Strukturelemente [**mithilfe von lstrcmpi**](/windows/desktop/api/winbase/nf-winbase-lstrcmpia) für den Elementnamen. Sie können die [**TVM \_ SORTCHILDRENCB-Nachricht**](tvm-sortchildrencb.md) verwenden, um das Sortierverhalten anzupassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ In dieser Meldung werden die Strukturelemente mithilfe von [**lstrincmpi**](/win
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,12 +1,12 @@
 ---
-title: Imsrdpclienttransportsettings (gatewayhostname-Eigenschaft)
-description: Gibt den Hostnamen des Remotedesktop Gateway-Servers (RD-Gateway) an.
+title: IMsRdpClientTransportSettings-Eigenschaft "GatewayHostname"
+description: Gibt den Hostnamen des Remotedesktop Gatewayservers (RD-Gateway) an.
 ms.assetid: 34c4b3b7-3768-4d98-b1e8-7fcb8f9c758d
 ms.tgt_platform: multiple
 keywords:
-- Gatewayhostname-Eigenschaft Remotedesktopdienste
-- Gatewayhostname-Eigenschaft Remotedesktopdienste, imsrdpclienttransportsettings-Schnittstelle
-- Imsrdpclienttransportsettings-Schnittstelle Remotedesktopdienste, gatewayhostname-Eigenschaft
+- GatewayHostname-Eigenschaft Remotedesktopdienste
+- GatewayHostname-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings-Schnittstelle
+- IMsRdpClientTransportSettings-Schnittstelle Remotedesktopdienste , GatewayHostname-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03835faf48fa8aba557f82da158fdba827a84831
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: de618d31f4d0989ebce319260f0afe4548d658e3c28891a9d26dad0580d62452
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340447"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119870840"
 ---
-# <a name="imsrdpclienttransportsettingsgatewayhostname-property"></a>Imsrdpclienttransportsettings:: gatewayhostname-Eigenschaft
+# <a name="imsrdpclienttransportsettingsgatewayhostname-property"></a>IMsRdpClientTransportSettings::GatewayHostname-Eigenschaft
 
-Gibt den Hostnamen des Remotedesktop Gateway-Servers (RD-Gateway) an.
+Gibt den Hostnamen des Remotedesktop Gatewayservers (RD-Gateway) an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_GatewayHostname(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die den RD-Gateway Server-Hostnamen enthält.
+Eine Zeichenfolge, die den Hostnamen des RD-Gatewayservers enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -65,15 +65,15 @@ Gibt bei Erfolg **S \_ OK** zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                   |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>           |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>           |
-| IID<br/>                      | IID \_ imsrdpclienttransportsettings ist definiert als 720298c0-A099-46f 5-9F 82-96921bae4701<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientTransportSettings ist als 720298C0-A099-46f5-9F82-96921BAE4701 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclienttransportsettings**](imsrdpclienttransportsettings.md)
+[**IMsRdpClientTransportSettings**](imsrdpclienttransportsettings.md)
 </dt> </dl>
 
  

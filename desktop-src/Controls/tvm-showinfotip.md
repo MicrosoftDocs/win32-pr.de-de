@@ -1,9 +1,9 @@
 ---
-title: TVM_SHOWINFOTIP Meldung (kommstrg. h)
-description: Zeigt den Infotipp für ein angegebenes Element in einem Strukturansicht-Steuerelement an. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ ShowInfoTip-Makros senden.
+title: TVM_SHOWINFOTIP (Commctrl.h)
+description: Zeigt die Infotip für ein angegebenes Element in einem Strukturansicht-Steuerelement an. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ ShowInfoTip-Makros senden.
 ms.assetid: ed5a1bda-5754-4bb3-aa22-8faaf1af1268
 keywords:
-- Windows-Steuerelemente für TVM_SHOWINFOTIP Meldung
+- TVM_SHOWINFOTIP von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76f147253800469a800677a242ff0ab0ccdbdfa4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b0e1cf61511e8c9e69c42d89f99fc4ddae90de78701e5e75170ff1b793671120
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913920"
 ---
-# <a name="tvm_showinfotip-message"></a>TVM \_ ShowInfoTip-Meldung
+# <a name="tvm_showinfotip-message"></a>TVM \_ SHOWINFOTIP-Nachricht
 
-Zeigt den Infotipp für ein angegebenes Element in einem Strukturansicht-Steuerelement an. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ ShowInfoTip**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_showinfotip) -Makros senden.
+Zeigt die Infotip für ein angegebenes Element in einem Strukturansicht-Steuerelement an. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ ShowInfoTip-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_showinfotip) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Zeigt den Infotipp für ein angegebenes Element in einem Strukturansicht-Steuere
 *wParam* 
 </dt> <dd>Muss Null sein.</dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
 Handle für das Element.
@@ -43,9 +43,9 @@ Handle für das Element.
 
 Gibt 0 (null) zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Von den meisten Anwendungen wird diese Nachricht nicht verwendet. Infotips werden automatisch angezeigt. Weitere Informationen finden Sie unter Verwenden von Strukturansicht-Infotipps in der Übersicht [über Tree-View](tree-view-controls.md) -Steuerelemente.
+Die meisten Anwendungen verwenden diese Meldung nicht. Infotips werden automatisch angezeigt. Weitere Informationen finden Sie unter Using Tree-view Infotips (Verwenden von Infotips für Strukturansichten) in der Übersicht über [Tree-View Steuerelemente.](tree-view-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Von den meisten Anwendungen wird diese Nachricht nicht verwendet. Infotips werde
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

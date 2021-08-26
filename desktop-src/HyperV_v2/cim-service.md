@@ -1,5 +1,5 @@
 ---
-description: Stellt ein logisches Element dar, das Informationen zur Darstellung und Verwaltung der von einem Gerät oder einer Software Funktion bereitgestellten Funktionen enthält.
+description: Stellt ein logisches Element dar, das Informationen zum Darstellen und Verwalten der funktionalität enthält, die von einem Geräte- oder Softwarefeature bereitgestellt wird.
 ms.assetid: 0b2312da-433b-43d8-8d21-babab12a5b2c
 title: CIM_Service-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -21,16 +21,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: b6ee3c51b6af50d77e94bb0a29bd1c8148cda8f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc6182ce024b616c49552cf13878d9ec06da97bd0d0b4c7ff3696e7747a943a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119899860"
 ---
 # <a name="cim_service-class-hyper-v-management"></a>CIM_Service-Klasse (Hyper-V-Verwaltung)
 
-Stellt ein logisches Element dar, das Informationen zur Darstellung und Verwaltung der von einem Gerät oder einer Software Funktion bereitgestellten Funktionen enthält. Bei einem Dienst handelt es sich um ein allgemeines Objekt, um die Implementierung von Funktionen zu konfigurieren und zu verwalten. Es handelt sich nicht um die eigentliche Funktionalität.
+Stellt ein logisches Element dar, das Informationen zum Darstellen und Verwalten der funktionalität enthält, die von einem Geräte- oder Softwarefeature bereitgestellt wird. Ein Dienst ist ein allgemeines Objekt zum Konfigurieren und Verwalten der Implementierung von Funktionen. es ist nicht die Funktionalität selbst.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,21 +51,21 @@ class CIM_Service : CIM_EnabledLogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Dienst** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Dienstklasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM- \_ Dienst** Klasse verfügt über diese Methoden.
+Die **\_ CIM-Dienstklasse** verfügt über diese Methoden.
 
 
 
 | Methode                                           | BESCHREIBUNG                    |
 |:-------------------------------------------------|:-------------------------------|
-| [**Start Service**](cim-service-startservice.md) | Startet den Dienst.<br/> |
-| [**Stop Service**](cim-service-stopservice.md)   | Beendet den Dienst.<br/>  |
+| [**Startservice**](cim-service-startservice.md) | Startet den Dienst.<br/> |
+| [**StopService**](cim-service-stopservice.md)   | Beendet den Dienst.<br/>  |
 
 
 
@@ -73,103 +73,103 @@ Die **CIM- \_ Dienst** Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Dienst** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Dienstklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Klassenname, der verwendet wird, um eine Instanz dieser Klasse zu erstellen. " **Kreationclassname** " wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
+Der Klassenname, der zum Erstellen einer Instanz dieser Klasse verwendet wird. **CreationClassName** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und deren Unterklassen eindeutig zu identifizieren.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Ein eindeutiger Bezeichner des Dienstanbieter, der die Funktionalität des Dienstanbieter angibt.
+Ein eindeutiger Bezeichner des Diensts, der die Funktionalität des Diensts angibt.
 
 </dd> <dt>
 
 **PrimaryOwnerContact**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,4 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.4")
 </dt> </dl>
 
-Kontaktinformationen für den primären Besitzer des Dienstanbieter.
+Kontaktinformationen für den primären Besitzer des Diensts.
 
 </dd> <dt>
 
-**Primaryownername**
+**PrimaryOwnerName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". Allgemeine Informationen zu DMTF \| \| 001,3 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| General Information \| 001.3")
 </dt> </dl>
 
-Der Name des primären Besitzers des Dienstanbieter.
+Der Name des primären Besitzers des Diensts.
 
 </dd> <dt>
 
-**Gestartet**
+**Begann**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**true** , wenn der Dienst gestartet wurde. andernfalls **false**.
+**TRUE,** wenn der Dienst gestartet wurde; andernfalls **FALSE.**
 
 </dd> <dt>
 
 **StartMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**CIM- \_ Dienst**.**Enableddefault**"), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**\_ CIM-Dienst**.**EnabledDefault**"), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10)
 </dt> </dl>
 
-Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **enableddefault** -Eigenschaft, die von [**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)geerbt wird.
+Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **EnabledDefault-Eigenschaft,** die von [**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)geerbt wird.
 
 > [!Note]  
-> Deprecated Description: gibt an, ob der Dienst automatisch gestartet wird (z. b. durch ein Betriebssystem) oder nur nach Anforderung gestartet wird.
+> Veraltete Beschreibung: Gibt an, ob der Dienst automatisch gestartet wird (z. B. durch ein Betriebssystem) oder nur auf Anforderung gestartet wird.
 
  
 
@@ -191,39 +191,39 @@ Diese Eigenschaft ist veraltet. Verwenden Sie stattdessen die **enableddefault**
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**"Kreationclassname**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**CreationClassName**")
 </dt> </dl>
 
-Der Klassenname, der zum Erstellen einer Instanz des Systems verwendet wird, das den Dienst enthält. **Systemkreationclassname** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und ihrer Unterklassen eindeutig zu identifizieren.
+Der Klassenname, der zum Erstellen einer Instanz des Systems verwendet wird, das den Dienst enthält. **SystemCreationClassName** wird mit anderen Schlüsseleigenschaften dieser Klasse kombiniert, um Instanzen dieser Klasse und deren Unterklassen eindeutig zu identifizieren.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**propagierter**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM- \_ System**](cim-system.md).**Name**")
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256), [**weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**\_ CIM-System**](cim-system.md).**Name**")
 </dt> </dl>
 
-Der Name des Bereichs Systems.
+Der Name des Bereichssystems.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -231,8 +231,8 @@ Der Name des Bereichs Systems.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -241,7 +241,7 @@ Der Name des Bereichs Systems.
 
 <dl> <dt>
 
-[**CIM \_ enabledlogicalelement**](cim-enabledlogicalelement.md)
+[**CIM \_ EnabledLogicalElement**](cim-enabledlogicalelement.md)
 </dt> </dl>
 
  

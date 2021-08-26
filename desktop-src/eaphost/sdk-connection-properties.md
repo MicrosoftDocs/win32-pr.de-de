@@ -1,19 +1,19 @@
 ---
-title: SDK-Verbindungs Eigenschaften
-description: Erfahren Sie mehr über die SDK-Verbindungs Eigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des nativen eaphostconfig-Schemas ist.
+title: SDK-Verbindungseigenschaften
+description: Erfahren Sie mehr über SDK-Verbindungseigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des nativen eaphostconfig-Schemas ist.
 ms.assetid: 34c9b423-4f4c-484e-86d7-4594566cd396
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edbd404246055a3c94daff4c029a94f16adfe51b
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: b7c514fc276601ee02cc9d24fc4961f07e7be722ab4ff69dae0316687d8d74d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "103734600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119948050"
 ---
-# <a name="sdk-connection-properties"></a>SDK-Verbindungs Eigenschaften
+# <a name="sdk-connection-properties"></a>SDK-Verbindungseigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des nativen [eaphostconfig](eaphostconfigschema-schema.md) -Schemas.
+Dieses Beispiel ist eine Instanz des nativen Schemas [eaphostconfig.](eaphostconfigschema-schema.md)
 
 ``` syntax
   <?xml version="1.0" ?> 
@@ -35,15 +35,15 @@ Bei diesem Beispiel handelt es sich um eine Instanz des nativen [eaphostconfig](
 
 <dl> <dt>
 
-[Verbindungs Eigenschaften](connection-profiles.md)
+[Verbindungseigenschaften](connection-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

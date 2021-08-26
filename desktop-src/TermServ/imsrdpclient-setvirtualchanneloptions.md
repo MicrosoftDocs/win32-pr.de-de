@@ -1,30 +1,30 @@
 ---
-title: Imsrdpclient setvirtualchanneloptions-Methode
-description: Legt die Optionen des virtuellen Kanals für das Remotedesktop ActiveX-Steuerelement fest.
+title: IMsRdpClient SetVirtualChannelOptions-Methode
+description: Legt die Optionen für den virtuellen Kanal für das Remotedesktop ActiveX-Steuerelement fest.
 ms.assetid: c74c3917-5766-4d5b-8458-b051eb91cb28
 ms.tgt_platform: multiple
 keywords:
-- Setvirtualchanneloptions-Methode Remotedesktopdienste
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, imsrdpclient-Schnittstelle
-- Imsrdpclient Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient2-Schnittstelle
-- IMsRdpClient2 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient3-Schnittstelle
-- IMsRdpClient3 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient4-Schnittstelle
-- IMsRdpClient4 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient5-Schnittstelle
-- IMsRdpClient5 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient6-Schnittstelle
-- IMsRdpClient6 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
-- Setvirtualchanneloptions-Methode Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10 Interface Remotedesktopdienste, setvirtualchanneloptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient-Schnittstelle
+- IMsRdpClient-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient2-Schnittstelle
+- IMsRdpClient2-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient3-Schnittstelle
+- IMsRdpClient3-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient4-Schnittstelle
+- IMsRdpClient4-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient5-Schnittstelle
+- IMsRdpClient5-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient6-Schnittstelle
+- IMsRdpClient6-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
+- SetVirtualChannelOptions-Methode Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , SetVirtualChannelOptions-Methode
 topic_type:
 - apiref
 api_name:
@@ -44,18 +44,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10e727fd3486b9d1b31fb3a421ea6ff268949790
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 804d4bde2fec9cb6273cc78f79d733f61a08772746439aa1cbb6e7b2d3c29716
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871581"
 ---
-# <a name="imsrdpclientsetvirtualchanneloptions-method"></a>Imsrdpclient:: setvirtualchanneloptions-Methode
+# <a name="imsrdpclientsetvirtualchanneloptions-method"></a>IMsRdpClient::SetVirtualChannelOptions-Methode
 
-Legt die Optionen des virtuellen Kanals für das Remotedesktop ActiveX-Steuerelement fest.
+Legt die Optionen für den virtuellen Kanal für das Remotedesktop ActiveX-Steuerelement fest.
 
-Rufen Sie diese Methode nach dem Aufrufen der [**createvirtualchannels**](imstscax-createvirtualchannels.md) -Methode auf, aber vor dem Herstellen einer Verbindung mit der [**Connect**](imstscax-connect.md) -Methode. Mit dieser Methode werden zusätzliche Optionen für virtuelle Kanäle festgelegt, die mit " **kreatevirtualchannels**" erstellt wurden.
+Rufen Sie diese Methode auf, nachdem Sie die [**CreateVirtualChannels-Methode**](imstscax-createvirtualchannels.md) aufgerufen haben, aber bevor Sie eine Verbindung mit der [**Verbinden-Methode**](imstscax-connect.md) herstellen. Diese Methode legt zusätzliche Optionen für virtuelle Kanäle fest, die mit **CreateVirtualChannels** erstellt wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,27 +73,27 @@ HRESULT SetVirtualChannelOptions(
 
 <dl> <dt>
 
-*Channame* \[ in\]
+*ChanName* \[ In\]
 </dt> <dd>
 
-Der Name des virtuellen Kanals, der im Aufrufen der Methode " [**kreatevirtualchannels**](imstscax-createvirtualchannels.md) " angegeben wurde.
+Der Name des virtuellen Kanals, der im Aufruf der [**CreateVirtualChannels-Methode**](imstscax-createvirtualchannels.md) angegeben wurde.
 
 </dd> <dt>
 
-*chanoptions* \[ in\]
+*options* \[ In\]
 </dt> <dd>
 
-Die Optionen, die für den durch den *channame* -Parameter angegebenen virtuellen Kanal festgelegt werden sollen. Eine Beschreibung möglicher Optionen finden Sie unter [**Channel \_ DEF**](/windows/desktop/api/Pchannel/ns-pchannel-tagchannel_def). Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
+Die Optionen, die für den virtuellen Kanal festgelegt werden sollen, der durch den *Parameter "ChanName"* angegeben wird. Eine Beschreibung der möglichen Optionen finden Sie unter [**CHANNEL \_ DEF**](/windows/desktop/api/Pchannel/ns-pchannel-tagchannel_def). Weitere Informationen finden Sie im folgenden Abschnitt "Hinweise".
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **\_ OK** zurück, wenn erfolgreich.
+Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Beispiel für die Verwendung dieser Methode wäre, den Kanal als persistente Remote Steuerung zu deklarieren, indem Sie die **Kanal \_ Option \_ \_ \_ persistentes** Flag für die Remote Steuerung festlegen. Dies bedeutet, dass der Kanal nicht geschlossen wird, wenn eine Remote Steuerung eine Verbindung mit der Sitzung herstellt, die mit dem Client verbunden ist, oder die Verbindung trennt. Weitere Informationen finden Sie unter [permanente virtuelle Kanäle für die Remote Steuerung](remote-control-persistent-virtual-channels.md).
+Ein Beispiel für die Verwendung dieser Methode wäre das Deklarieren des Kanals als remote control persistent durch Festlegen des **CHANNEL OPTION REMOTE CONTROL \_ \_ \_ PERSISTENT-Flags. \_** Dies bedeutet, dass der Kanal nicht geschlossen wird, wenn eine Remotesteuerung eine Verbindung mit der Mit dem Client verbundenen Sitzung herstellt oder diese trennt. Weitere Informationen finden Sie unter [Remote Control Persistent Virtual Channels](remote-control-persistent-virtual-channels.md).
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -107,7 +107,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imsrdpclient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
+| IID<br/>                      | IID \_ IMsRdpClient ist als 92b4a539-7115-4b7c-a5a9-e5d9efc2780a definiert.<br/>        |
 
 
 
@@ -115,7 +115,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclient**](imsrdpclient-interface.md)
+[**IMsRdpClient**](imsrdpclient-interface.md)
 </dt> <dt>
 
 [**IMsRdpClient2**](imsrdpclient2.md)
@@ -145,13 +145,13 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClient10**](imsrdpclient10.md)
 </dt> <dt>
 
-[**Channel \_ DEF**](/windows/desktop/api/Pchannel/ns-pchannel-tagchannel_def)
+[**\_KANAL-DEF**](/windows/desktop/api/Pchannel/ns-pchannel-tagchannel_def)
 </dt> <dt>
 
-[**"Kreatevirtualchannels"**](imstscax-createvirtualchannels.md)
+[**CreateVirtualChannels**](imstscax-createvirtualchannels.md)
 </dt> <dt>
 
-[**Getvirtualchanneloptions**](imsrdpclient-getvirtualchanneloptions.md)
+[**GetVirtualChannelOptions**](imsrdpclient-getvirtualchanneloptions.md)
 </dt> </dl>
 
  

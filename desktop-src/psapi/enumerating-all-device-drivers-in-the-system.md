@@ -1,19 +1,19 @@
 ---
-title: Auflisten aller Gerätetreiber im System
-description: Der folgende Beispielcode verwendet die enumdevicedrivers-Funktion, um die aktuellen Gerätetreiber im System aufzulisten.
+title: Aufzählen aller Gerätetreiber im System
+description: Im folgenden Beispielcode wird die Funktion EnumDeviceDrivers verwendet, um die aktuellen Gerätetreiber im System zu aufzählen.
 ms.assetid: 047d8541-e17e-4738-8453-674db69365df
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7b02345f5d59979fe3576fd952c056ca808e6ad
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 83c2d6629738e0668d2c0e95ec19f10ae0f3cabcb7b842747ae6dc97937c590f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119884970"
 ---
-# <a name="enumerating-all-device-drivers-in-the-system"></a>Auflisten aller Gerätetreiber im System
+# <a name="enumerating-all-device-drivers-in-the-system"></a>Aufzählen aller Gerätetreiber im System
 
-Der folgende Beispielcode verwendet die [**enumdevicedrivers**](/windows/desktop/api/Psapi/nf-psapi-enumdevicedrivers) -Funktion, um die aktuellen Gerätetreiber im System aufzulisten. Sie übergibt die Lade Adressen, die von diesem Funktions aufgerufenen abgerufen wurden, an die [**getdevicedriverbasename**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverbasenamea) -Funktion, um einen Namen abzurufen, der angezeigt werden kann.
+Im folgenden Beispielcode wird die [**Funktion EnumDeviceDrivers**](/windows/desktop/api/Psapi/nf-psapi-enumdevicedrivers) verwendet, um die aktuellen Gerätetreiber im System zu aufzählen. Die von diesem Funktionsaufruf abgerufenen Ladeadressen werden an die [**GetDeviceDriverBaseName-Funktion**](/windows/desktop/api/Psapi/nf-psapi-getdevicedriverbasenamea) übergeben, um einen Namen abzurufen, der angezeigt werden kann.
 
 
 ```C++
@@ -60,9 +60,9 @@ return 0;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,49 +1,49 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Anwendung das Bild und die Kameraeinstellungen auf einem Video Erfassungsgerät Programm gesteuert ändern kann.
+description: In diesem Thema wird beschrieben, wie eine Anwendung die Bild- und Kameraeinstellungen auf einem Videoaufnahmegerät programmgesteuert ändern kann.
 ms.assetid: f789db78-292e-4092-a5dc-1906845fb1dd
-title: Konfigurieren der Video Qualität
+title: Konfigurieren der Videoqualität
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cb8d2d28e39f0083aac521f1953ebbb1ca8d5b6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c5987352eb329410efd3fc74d6bf12539e968da8e24d2f0a65af9c9ac7b5cb85
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103746056"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871770"
 ---
-# <a name="configure-the-video-quality"></a>Konfigurieren der Video Qualität
+# <a name="configure-the-video-quality"></a>Konfigurieren der Videoqualität
 
-In diesem Thema wird beschrieben, wie eine Anwendung das Bild und die Kameraeinstellungen auf einem Video Erfassungsgerät Programm gesteuert ändern kann.
+In diesem Thema wird beschrieben, wie eine Anwendung die Bild- und Kameraeinstellungen auf einem Videoaufnahmegerät programmgesteuert ändern kann.
 
--   [ProcAmp-Einstellungen](#procamp-settings)
+-   [ProcAmp Einstellungen](#procamp-settings)
 -   [Kameraeinstellungen](#camera-settings)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="procamp-settings"></a>ProcAmp-Einstellungen
+## <a name="procamp-settings"></a>ProcAmp Einstellungen
 
-WDM-Videokameras (Windows-Treibermodell) können Eigenschaften unterstützen, die die Qualität des Bilds Steuern:
+Windows Videokameras des Treibermodells (Driver Model, WDM) können Eigenschaften unterstützen, die die Qualität des Bilds steuern:
 
--   Backlight-Kompensierung
+-   Hintergrundbeleuchtungskompensierung
 -   Brightness
 -   Vergleichen Sie
--   Erzielen
+-   Gewinnen
 -   Gamma
 -   Farbton
 -   Sättigung
 -   Schärfe
 -   Weißabgleich
 
-Diese Eigenschaften werden über die [**IAMVideoProcAmp**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp) -Schnittstelle gesteuert. Verwenden Sie diese Schnittstelle wie folgt:
+Diese Eigenschaften werden über die [**IAMVideoProcAmp-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp) gesteuert. Verwenden Sie diese Schnittstelle wie folgt:
 
-1.  Aufrufen von [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den Erfassungs Filter für die [**IAMVideoProcAmp**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp) -Schnittstelle.
-2.  Aufrufen Sie für jede Eigenschaft, die Sie festlegen möchten, die [**IAMVideoProcAmp:: GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) -Methode. Eigenschaften werden von der [**videoprocampproperty**](/windows/win32/api/strmif/ne-strmif-videoprocampproperty) -Enumeration angegeben. Wenn die **GetRange** -Methode fehlschlägt, bedeutet dies, dass die Kamera diese bestimmte Eigenschaft nicht unterstützt.
-3.  Wenn [**GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) erfolgreich ist, wird der Bereich der unterstützten Werte für die Eigenschaft, den Standardwert und das minimale Inkrement zurückgegeben.
-4.  Um den aktuellen Wert einer Eigenschaft abzurufen, nennen Sie [**IAMVideoProcAmp:: Get**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-get).
-5.  Um eine Eigenschaft festzulegen, müssen Sie die [**IAMVideoProcAmp:: Set**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-set) -Methode aufrufen. Um eine Eigenschaft auf ihren Standardwert wiederherzustellen, müssen Sie [**GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) aufrufen, um den Standardwert zu ermitteln und diesen Wert an die **set** -Methode zu übergeben.
+1.  Rufen Sie [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den Erfassungsfilter für die [**IAMVideoProcAmp-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp) auf.
+2.  Rufen Sie für jede Eigenschaft, die Sie festlegen möchten, die [**IAMVideoProcAmp::GetRange-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) auf. Eigenschaften werden von der [**VideoProcAmpProperty-Enumeration**](/windows/win32/api/strmif/ne-strmif-videoprocampproperty) angegeben. Wenn die **GetRange-Methode** fehlschlägt, bedeutet dies, dass die Kamera diese bestimmte Eigenschaft nicht unterstützt.
+3.  Wenn [**GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) erfolgreich ist, wird der Bereich der unterstützten Werte für die -Eigenschaft, der Standardwert und das minimale Inkrement zurückgegeben.
+4.  Rufen Sie [**IAMVideoProcAmp::Get**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-get)auf, um den aktuellen Wert einer Eigenschaft abzurufen.
+5.  Um eine Eigenschaft festzulegen, rufen Sie die [**IAMVideoProcAmp::Set-Methode**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-set) auf. Um eine Eigenschaft auf ihren Standardwert wiederherzustellen, rufen [**Sie GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamvideoprocamp-getrange) auf, um den Standardwert zu suchen und diesen Wert an die **Set-Methode** zu übergeben.
 
-Sie müssen das Filter Diagramm nicht beenden, wenn Sie die Eigenschaften festlegen.
+Sie müssen das Filterdiagramm nicht beenden, wenn Sie die Eigenschaften festlegen.
 
-Mit dem folgenden Code wird ein TrackBar-Steuerelement so konfiguriert, dass es zum Festlegen der Helligkeit verwendet werden kann. Der Bereich der TrackBar entspricht dem Gültigkeitsbereich, der vom Gerät unterstützt wird, und die Position der TrackBar entspricht der Einstellung für die anfängliche Helligkeit des Geräts.
+Der folgende Code konfiguriert ein Trackbar-Steuerelement, sodass es zum Festlegen der Helligkeit verwendet werden kann. Der Bereich der Trackleiste entspricht dem Helligkeitsbereich, den das Gerät unterstützt, und die Position der Trackleiste entspricht der anfänglichen Helligkeitseinstellung des Geräts.
 
 
 ```C++
@@ -89,28 +89,28 @@ else
 
 ## <a name="camera-settings"></a>Kameraeinstellungen
 
-Die [**IAMCameraControl**](/windows/desktop/api/Strmif/nn-strmif-iamcameracontrol) -Schnittstelle ähnelt [**IAMVideoProcAmp**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp), steuert jedoch verschiedene Einstellungen auf der Kamera selbst:
+Die [**IAMCameraControl-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamcameracontrol) ähnelt [**IAMVideoProcAmp,**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp)steuert jedoch verschiedene Einstellungen für die Kamera selbst:
 
 -   Belichtung
 -   Fokus
 -   Iris
 -   Schwenken
--   N
--   Til
+-   rollen
+-   Tilt
 -   Zoom
 
-Um diese Schnittstelle zu verwenden, führen Sie dieselben Schritte aus, die für [**IAMVideoProcAmp**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp)verwendet werden:
+Führen Sie die gleichen Schritte für [**IAMVideoProcAmp**](/windows/desktop/api/Strmif/nn-strmif-iamvideoprocamp)aus, um diese Schnittstelle zu verwenden:
 
-1.  Fragen Sie den Erfassungs Filter nach [**IAMCameraControl**](/windows/desktop/api/Strmif/nn-strmif-iamcameracontrol)ab.
-2.  Aufrufen von [**IAMCameraControl:: GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-getrange) , um zu ermitteln, welche Einstellungen unterstützt werden, und den möglichen Bereich für jede Einstellung.
-3.  Ruft [**IAMCameraControl:: Get**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-get) auf, um den aktuellen Wert einer Einstellung zu erhalten.
-4.  Nennen Sie [**IAMCameraControl:: Set**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-set) , um den Wert festzulegen.
+1.  Fragen Sie den Erfassungsfilter für [**IAMCameraControl ab.**](/windows/desktop/api/Strmif/nn-strmif-iamcameracontrol)
+2.  Rufen Sie [**IAMCameraControl::GetRange**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-getrange) auf, um die unterstützten Einstellungen und den möglichen Bereich für die einzelnen Einstellungen zu ermitteln.
+3.  Rufen Sie [**IAMCameraControl::Get**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-get) auf, um den aktuellen Wert einer Einstellung abzurufen.
+4.  Rufen Sie [**IAMCameraControl::Set**](/windows/desktop/api/Strmif/nf-strmif-iamcameracontrol-set) auf, um den Wert festzulegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konfigurieren eines Video Erfassungs Geräts](configuring-a-video-capture-device.md)
+[Konfigurieren eines Videoaufnahmegeräts](configuring-a-video-capture-device.md)
 </dt> </dl>
 
  

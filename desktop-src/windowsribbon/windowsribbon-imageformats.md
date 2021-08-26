@@ -1,85 +1,85 @@
 ---
-title: Angeben von Menüband-Bild Ressourcen
-description: Als umfassendes Befehls Präsentationssystem ist das Windows-Menüband-Framework so konzipiert, dass Bild Ressourcen in der gesamten Multifunktionsleisten-Benutzeroberfläche (UI) unterstützt werden. Alle Bild Ressourcen werden im Menüband-Markup deklariert oder von einer Menüband-Host Anwendung abgefragt.
+title: Angeben von Menübandbildressourcen
+description: Als umfassendes Befehlspräsentationssystem ist das Windows Menüband-Framework so konzipiert, dass Bildressourcen in der gesamten Menüband-Benutzeroberfläche umfassend unterstützt werden. Alle Bildressourcen werden im Menübandmarkup deklariert oder von einer Menübandhostanwendung abgefragt.
 ms.assetid: 37b57992-8da8-4e6b-869d-72a136f6ad77
 keywords:
-- Windows-Menüband, Bild Ressourcen
-- Menüband, Bild Ressourcen
-- Windows-Menüband, Transparenz
-- Multifunktionsleiste, Transparenz
-- Windows-Menüband, Farbtiefe
+- Windows Menüband, Imageressourcen
+- Menüband, Imageressourcen
+- Windows Menüband, Transparenz
+- Menüband, Transparenz
+- Windows Menüband, Farbtiefe
 - Menüband, Farbtiefe
-- Windows-Menüband, Kontrast
+- Windows Menüband, Kontrast
 - Menüband, Kontrast
-- Bild Ressourcen in der Windows-Multifunktionsleiste
+- Imageressourcen im menüband Windows
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 13e7666126e5b8f7fbe8b610678a8a1d71589373
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c485de9c0d9d1b51b09d4a2b9dba95dd30a778922750a7f388c7a5c8963cda6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119932592"
 ---
-# <a name="specifying-ribbon-image-resources"></a>Angeben von Menüband-Bild Ressourcen
+# <a name="specifying-ribbon-image-resources"></a>Angeben von Menübandbildressourcen
 
-Als umfassendes Befehls Präsentationssystem ist das Windows-Menüband-Framework so konzipiert, dass Bild Ressourcen in der gesamten Multifunktionsleisten-Benutzeroberfläche (UI) unterstützt werden. Alle Bild Ressourcen werden im [Menüband-Markup](windowsribbon-schema.md) deklariert oder von einer Menüband-Host Anwendung abgefragt.
+Als umfassendes Befehlspräsentationssystem ist das Windows Menüband-Framework so konzipiert, dass Bildressourcen in der gesamten Menüband-Benutzeroberfläche umfassend unterstützt werden. Alle Bildressourcen werden im [Menübandmarkup](windowsribbon-schema.md) deklariert oder von einer Menübandhostanwendung abgefragt.
 
-Für Windows 8 und höher unterstützt das Menüband-Framework die folgenden Grafikformate: 32-Bit-ARGB-Bitmap-Dateien (BMP) und Portable Network Graphics-Dateien (PNG) mit Transparenz.
+Für Windows 8 und höher unterstützt das Menübandframework die folgenden Grafikformate: 32-Bit-ARGB-Bitmapdateien (BMP) und PNG-Dateien (Portable Network Graphics) mit Transparenz.
 
-Für Windows 7 und früher müssen Bild Ressourcen dem standardmäßigen BMP-Grafikformat entsprechen, das in Windows verwendet wird.
+Für Windows 7 und früher müssen Bildressourcen dem in Windows verwendeten BMP-Standardgrafikformat entsprechen.
 
 > [!Note]  
 > Ein Kompilierungsfehler kann auftreten, wenn ein nicht unterstütztes Bildformat für das Framework bereitgestellt wird.
 
- 
+ 
 
 ## <a name="image-sizes"></a>Bildgrößen
 
-Um bei der Größenänderung eines Anwendungsfensters eine größere Flexibilität für die Layouts von Menüband-Steuerelementen zu bieten, akzeptiert und rendert das Menüband-Framework Bilder in einer von zwei Größen: groß oder klein.
+Um beim Ändern der Größe eines Anwendungsfensters mehr Flexibilität für Menüband-Steuerelementlayouts zu bieten, akzeptiert und rendert das Menübandframework Bilder in einer von zwei Größen: groß oder klein.
 
-Die folgenden Bilder veranschaulichen eine Multifunktionsleistenanwendung, die mehrere Menü Bandgrößen durch flexible Steuerelement Layouts und die Ersetzung großer Bilder mit kleinen, soweit verfügbaren Bildern unterstützt.
+Die folgenden Abbildungen veranschaulichen eine Menübandanwendung, die mehrere Menübandgrößen durch flexible Steuerelementlayouts und den Austausch großer Bilder durch kleine Bilder unterstützt, sofern verfügbar.
 
-Der folgende Screenshot zeigt das Menüband mit großen Bildern für die Zoom Steuerelemente.
+Der folgende Screenshot zeigt das Menüband mit großen Bildern für die Zoom-Steuerelemente.
 
-![Screenshot, der ein Menüband anzeigt, das große Bilder für die Zoom Steuerelemente verwendet.](images/overviews/imageresources-largeimage.png)
+![Screenshot eines Menübands, das große Bilder für die Zoomsteuerelemente verwendet.](images/overviews/imageresources-largeimage.png)
 
-Der folgende Screenshot zeigt, wie die Größe des Menübands mit kleinen Bildern für die Zoom Steuerelemente geändert wird.
+Der folgende Screenshot zeigt die gleiche Größe des Menübands mit kleinen Bildern für die Zoom-Steuerelemente.
 
-![Screenshot, der ein Menüband anzeigt, das kleine Bilder für die Zoom Steuerelemente verwendet.](images/overviews/imageresources-smallimage.png)
+![Screenshot eines Menübands, das kleine Bilder für die Zoomsteuerelemente verwendet.](images/overviews/imageresources-smallimage.png)
 
-Der folgende Screenshot zeigt das Menüband im ausgeblendeten Zustand. Das Menüband ist ausgeblendet, wenn alle möglichen Layouts der Steuerelemente erschöpft sind und das Menüband nicht mit einem verwendbaren Anwendungs Arbeitsbereich gerendert werden kann.
+Der folgende Screenshot zeigt das Menüband im ausgeblendeten Zustand. Das Menüband wird ausgeblendet, wenn alle potenziellen Steuerelementlayouts erschöpft sind und das Menüband nicht mit einem verwendbaren Anwendungsarbeitsbereich gerendert werden kann.
 
-![Screenshot mit einem reduzierten Menüband](images/overviews/imageresources-noimage.png)
+![Screenshot eines reduzierten Menübands.](images/overviews/imageresources-noimage.png)
 
-Für ein beliebiges Bild ist die genaue Pixelgröße von der Bildschirmauflösung oder von dpi (dots per inch) des verwendeten Monitors abhängig. Bei 96 dpi liegen große Bilder bei einer Größe von 32 x 32 Pixel und bei kleinen Bildern um 16 x 16 Pixel. Die Bildgrößen steigen auf lineare Weise relativ zu dpi, wie in der folgenden Tabelle dargestellt.
+Für jedes Bild hängt die genaue Pixelgröße von der Anzeigeauflösung bzw. den DPI-Punkten (Dots per Inch) des verwendeten Monitors ab. Bei 96 dpi sind große Bilder 32 x 32 Pixel groß, und kleine Bilder haben eine Größe von 16 x 16 Pixeln. Die Bildgrößen nehmen linear relativ zu dpi zu, wie in der folgenden Tabelle dargestellt.
 
 
 
 | DPI     | Kleines Bild  | Großes Bild  |
 |---------|--------------|--------------|
-| 96 dpi  | 16x16 Pixel | 32 x 32 Pixel |
+| 96 dpi  | 16 x 16 Pixel | 32 x 32 Pixel |
 | 120 dpi | 20 x 20 Pixel | 40 x 40 Pixel |
 | 144 dpi | 24 x 24 Pixel | 48 x 48 Pixel |
-| 192 dpi | 32 x 32 Pixel | 64x64 Pixel |
+| 192 dpi | 32 x 32 Pixel | 64 x 64 Pixel |
 
 
 
- 
+ 
 
-Das Menüband-Framework skaliert Bild Ressourcen nach Bedarf. Da die Größe der Größe jedoch unerwünschte Artefakte und Bildverschlechterung verursachen kann, wird dringend empfohlen, dass die Anwendung einen kleinen Satz von Bild Ressourcen bereitstellt, die verschiedene häufig verwendete dpi-Einstellungen umfassen. Wenn keine genaue Entsprechung gefunden wird, wird das nächste Bild zentral hoch-oder herunterskaliert.
+Das Menübandframework skaliert Imageressourcen nach Bedarf. Da die Größenänderung jedoch zu unerwünschten Artefakten und image degradation führen kann, wird dringend empfohlen, dass die Anwendung einen kleinen Satz von Imageressourcen bereitstellt, die verschiedene häufig verwendete DPI-Einstellungen umfassen. Wenn keine genaue Übereinstimmung gefunden wird, wird das nächste Bild hoch- oder herunterskaliert.
 
-Um dies zu vereinfachen, können Bild Ressourcen in Menüband-Markup mithilfe eines Satzes von [**Bild**](windowsribbon-element-image.md) Elementen für jedes [**Command**](windowsribbon-element-command.md) -Element deklariert werden. Zur Laufzeit wählt das Framework das Bild aus, das auf der Grundlage des *mindpi* -Attributs der einzelnen **Bild** Elemente angezeigt werden soll.
+Um dies zu vereinfachen, können Bildressourcen im Menübandmarkup deklariert werden, indem für jedes [**Command-Element**](windowsribbon-element-command.md) eine Reihe von [**Image-Elementen**](windowsribbon-element-image.md) verwendet wird. Zur Laufzeit wählt das Framework das anzuzeigende Bild basierend auf dem *MinDPI-Attribut* jedes **Image-Elements** aus.
 
 > [!IMPORTANT]
 >
-> Wenn eine Auflistung von Bild Ressourcen, die für die Unterstützung bestimmter Bildschirm DPI-Einstellungen entworfen wurden, über einen Satz von [**Bild**](windowsribbon-element-image.md) Elementen an das Menüband-Framework übergeben wird, verwendet das Framework das **Bild** mit einem *mindpi* -Attribut Wert, der mit der aktuellen Bildschirm-dpi-Einstellung übereinstimmt.
+> Wenn dem Menübandframework über eine Reihe von [**Bildelementen**](windowsribbon-element-image.md) eine Sammlung von Bildressourcen bereitgestellt wird, die bestimmte Bildschirm-DPI-Einstellungen unterstützen sollen, verwendet das Framework das **Bild** mit einem *MinDPI-Attributwert,* der der aktuellen Bildschirm-DPI-Einstellung entspricht.
 >
-> Wenn kein [**Bild**](windowsribbon-element-image.md) Element mit einem *mindpi* -Wert deklariert wird, der mit der aktuellen Bildschirm dpi-Einstellung übereinstimmt, wählt das Framework das **Bild** aus, das den nächstgelegenen *mindpi* -Wert aufweist, der kleiner ist als die aktuelle Bildschirm dpi-Einstellung, und skaliert die Bildressource Wenn kein **Bild** Element mit einem *mindpi* -Attribut Wert, der kleiner als die aktuelle Bildschirm dpi-Einstellung ist, deklariert ist, wählt das Framework den nächsten *mindpi* -Wert aus, der größer als die aktuelle Bildschirm dpi-Einstellung ist, und skaliert die Bildressource nach unten.
+> Wenn kein [**Image-Element**](windowsribbon-element-image.md) mit einem *MinDPI-Wert* deklariert wird, der der DPI-Einstellung des aktuellen Bildschirms entspricht, wählt das Framework das **Bild** aus, das den nächsten *MinDPI-Wert* kleiner als die aktuelle Bildschirm-DPI-Einstellung hat, und skaliert die Bildressource nach oben. Wenn kein **Image-Element** mit einem *MinDPI-Attributwert* deklariert wird, der kleiner als die aktuelle Bildschirm-DPI-Einstellung ist, wählt das Framework den nächsten *MinDPI-Wert* aus, der größer als die aktuelle Bildschirm-DPI-Einstellung ist, und skaliert die Bildressource herunter.
 
- 
+ 
 
-Im folgenden Beispiel wird veranschaulicht, wie Sie einen Satz von Bildern deklarieren, um verschiedene Menü Bandgrößen und Systemeinstellungen zu unterstützen.
+Im folgenden Beispiel wird veranschaulicht, wie Sie einen Satz von Bildern deklarieren, um verschiedene Menübandgrößen und Systemeinstellungen zu berücksichtigen.
 
 
 ```C++
@@ -111,25 +111,25 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie einen Satz von Bildern dekla
 
 
 
-Wenn Images, die im Markup deklariert sind, zur Laufzeit aus irgendeinem Grund ungültig gemacht werden, wird die Host Anwendung nach neuen Bildern abgefragt. Wenn diese Images Programm gesteuert generiert und geladen werden, sollte die Anwendung versuchen, Bilder zurückzugeben, deren Größe den von der [SM \_ cxicon-System Metrik](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)festgelegten Standard-System Symbolgrößen entspricht.
+Wenn im Markup deklarierte Images zur Laufzeit ungültig werden, wird die Hostanwendung nach neuen Images abgefragt. Wenn diese Images programmgesteuert generiert und geladen werden, sollte die Anwendung versuchen, Images zurückzugeben, deren Größe den standardmäßigen Systemsymbolgrößen entspricht, die von der [SM \_ CXICON-Systemmetrik](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)bestimmt werden.
 
 > [!Note]  
-> Große Bilder haben eine Größe von SM \_ cxicon von SM \_ cxicon, und kleine Images haben eine Größe von SM \_ cxicon/2 von SM \_ cxicon/2.
+> Große Images haben eine Größe von SM \_ CXICON von SM \_ CXICON, und kleine Images haben eine Größe von SM \_ CXICON/2 von SM \_ CXICON/2.
 
- 
+ 
 
 ## <a name="color-depth-transparency-and-contrast"></a>Farbtiefe, Transparenz und Kontrast
 
-Es wird erwartet, dass reguläre Images im BPP-ARGB-Pixel Format (32 Bits pro Pixel) vorliegen und auf die standardmäßige System Symbolgröße skaliert werden. Dieses Format unterstützt Transparenz und Antialiasing (bei Verwendung von 8 Bits pro Kanal).
+Es wird erwartet, dass reguläre Bilder im ARGB-Pixelformat (BPP) mit 32 Bits pro Pixel vorliegen und auf die Standardsymbolgröße des Systems skaliert werden. Dieses Format unterstützt sowohl Transparenz als auch Antialiasing (mit 8 Bits pro Kanal).
 
 > [!WARNING]
-> Viele Tools zur Bildbearbeitung behalten beim Laden oder Speichern von 32 bpp-Images nicht den 8-Bit-Alphakanal mit der höchsten Ordnung bei.
+> Viele Bildbearbeitungstools behalten beim Laden oder Speichern von 32 BPP-Bildern nicht den 8-Bit-Alphakanal mit der höchsten Reihenfolge bei.
 
- 
+ 
 
-Damit ein Bild im Modus mit hohem Kontrast ordnungsgemäß angezeigt wird, muss es in einem 4-bpp-Format mit Palettengröße angezeigt werden. Wenn das Bild gerendert wird, ordnet das Menüband-Framework bestimmte Farben auf Grundlage des Kontrast Bilds des Bilds neu zu.
+Damit ein Bild im Modus mit hohem Kontrast ordnungsgemäß angezeigt wird, muss es in einem 4 BPP-palettenbasierten Pixelformat vorliegen. Wenn das Bild gerendert wird, weist das Menübandframework bestimmte Farben basierend auf dem Kontext mit hohem Kontrast des Bilds neu zu.
 
-In der folgenden Tabelle wird das Farb Rendering Verhalten mit hohem Kontrast des Frameworks aufgelistet.
+In der folgenden Tabelle ist das Verhalten beim Rendern von Farben mit hohem Kontrast des Frameworks aufgeführt.
 
 
 
@@ -151,71 +151,71 @@ Transparent
 
 Transparent
 
-Box
+Schwarz
 
 000000
 
-\_WindowText-Farbe
+COLOR \_ WINDOWTEXT
 
-Weisse
+Weiß
 
-Weisse
+Weiß
 
 FFFFFF
 
-Farb \_ Fenster
+\_FARBFENSTER
 
-Box
+Schwarz
 
-dunkelgrau
+DUNKELGRAU
 
 808080
 
-Farbe \_ 3dshadow
+COLOR \_ 3DSHADOW
 
-Farbe \_ 3dshadow
+COLOR \_ 3DSHADOW
 
 Grau
 
 C0C0C0
 
-Farbe \_ 3dface
+COLOR \_ 3DFACE
 
-Farbe \_ 3dface
+COLOR \_ 3DFACE
 
-hellgrau
+HELLGRAU
 
-Dfdfdf
+DFDFDF
 
-Farbe \_ 3dlight
+COLOR \_ 3DLIGHT
 
-Farbe \_ 3dlight
+COLOR \_ 3DLIGHT
 
-dunkelblau
+Dunkelblau
 
 000080
 
 –
 
-Weisse
+Weiß
 
 
 
- 
+ 
 
-Weitere Informationen zu den vom Menüband-Framework unterstützten Bildformaten finden Sie in den folgenden Bereichen:
+Weitere Informationen zu den vom Menübandframework unterstützten Bildformaten finden Sie in den folgenden Themen:
 
--   [BITMAPINFOHEADER-Struktur](/previous-versions//dd183376(v=vs.85)) : Beschreibt das 32 bpp-ARGB-Pixel Format.
--   [Funktion "deedibsection](/windows/win32/api/wingdi/nf-wingdi-createdibsection) ": Beschreibt das Erstellen eines 32 bpp-ARGB-Pixel Formatierungs Bilds.
--   [LoadImage-Funktion](/windows/win32/api/winuser/nf-winuser-loadimagea) : Beschreibt das Laden eines 32 bpp-ARGB-Pixel Formatierungs Bilds.
+-   [BITMAPINFOHEADER-Struktur:](/previous-versions//dd183376(v=vs.85)) Beschreibt das 32-BPP-ARGB-Pixelformat.
+-   [CreateDIBSection-Funktion:](/windows/win32/api/wingdi/nf-wingdi-createdibsection) Beschreibt das Erstellen eines Bilds im ARGB-Pixelformat mit 32 BPP.
+-   [LoadImage-Funktion:](/windows/win32/api/winuser/nf-winuser-loadimagea) Beschreibt das Laden eines Bilds im ARGB-Pixelformat mit 32 BPP.
 
-## <a name="accessibility"></a>Eingabehilfen
+## <a name="accessibility"></a>Zugriff
 
-Die Verwendung von Bild Ressourcen, um Informationen bereitzustellen, Steuerungsfunktionen zu vermitteln und den Anwendungs Zustand verfügbar zu machen, erhöht den Bedarf an Barrierefreiheits Anforderungen beim Entwerfen und entwickeln von Anwendungen.
+Die Verwendung von Bildressourcen, um Informationen bereitzustellen, Steuerungsfunktionen bereitzustellen und den Anwendungszustand verfügbar zu machen, erhöht den Bedarf an Barrierefreiheitsanforderungen während des Anwendungsentwurfs und der Entwicklung.
 
-Für grundlegende Unterstützung für hohe Kontraste ermöglicht das Menüband, dass ein separater Satz von Bilddateien angezeigt wird, wenn ein Design mit hohem Kontrast aktiv ist. Diese Bilder können 32 bpp oder 4 bpp sein, wobei Farben einer speziellen Palette zugeordnet werden, wobei dunkle und helle Farben in Abhängigkeit von der Vordergrund-und Hintergrundfarbe des aktiven Designs mit hohem Kontrast invertiert werden.
+Für grundlegende Unterstützung für hohen Kontrast ermöglicht das Menüband die Anzeige eines separaten Satzes von Bilddateien, wenn ein Design mit hohem Kontrast aktiv ist. Diese Bilder können 32 BPP oder 4 BPP sein, wobei Farben einer speziellen Palette zugeordnet sind, in der dunkle und helle Farben je nach Vordergrund- und Hintergrundfarben des aktiven Designs mit hohem Kontrast invertiert werden.
 
-Im folgenden Beispiel wird veranschaulicht, wie Bild Ressourcen mit hohem Kontrast im Menüband-Markup deklariert werden:
+Im folgenden Beispiel wird veranschaulicht, wie Bildressourcen mit hohem Kontrast im Menübandmarkup deklariert werden:
 
 
 ```C++
@@ -255,30 +255,30 @@ Im folgenden Beispiel wird veranschaulicht, wie Bild Ressourcen mit hohem Kontra
 
 <dl> <dt>
 
-[**Command. smallimages**](windowsribbon-element-command-smallimages.md)
+[**Command.SmallImages**](windowsribbon-element-command-smallimages.md)
 </dt> <dt>
 
-[UI \_ pkey \_ smallImage](windowsribbon-reference-properties-uipkey-smallimage.md)
+[UI \_ PKEY \_ SmallImage](windowsribbon-reference-properties-uipkey-smallimage.md)
 </dt> <dt>
 
-[**Command. largeimages**](windowsribbon-element-command-largeimages.md)
+[**Command.LargeImages**](windowsribbon-element-command-largeimages.md)
 </dt> <dt>
 
-[UI \_ pkey \_ largeimage](windowsribbon-reference-properties-uipkey-largeimage.md)
+[UI \_ PKEY \_ LargeImage](windowsribbon-reference-properties-uipkey-largeimage.md)
 </dt> <dt>
 
-[**Command. smallhighkontra stimages**](windowsribbon-element-command-smallhighcontrastimages.md)
+[**Command.SmallHighContrastImages**](windowsribbon-element-command-smallhighcontrastimages.md)
 </dt> <dt>
 
-[UI \_ pkey \_ smallhighkontra stimage](windowsribbon-reference-properties-uipkey-smallhighcontrastimage.md)
+[UI \_ PKEY \_ SmallHighContrastImage](windowsribbon-reference-properties-uipkey-smallhighcontrastimage.md)
 </dt> <dt>
 
-[**Command. largehighkontra stimages**](windowsribbon-element-command-largehighcontrastimages.md)
+[**Command.LargeHighContrastImages**](windowsribbon-element-command-largehighcontrastimages.md)
 </dt> <dt>
 
-[UI \_ pkey \_ largehighkontra stimage](windowsribbon-reference-properties-uipkey-largehighcontrastimage.md)
+[UI \_ PKEY \_ LargeHighContrastImage](windowsribbon-reference-properties-uipkey-largehighcontrastimage.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

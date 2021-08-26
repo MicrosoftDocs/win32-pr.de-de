@@ -1,9 +1,9 @@
 ---
-title: LVN_SETDISPINFO Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass die Informationen, die für ein Element verwaltet werden, aktualisiert werden müssen. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: LVN_SETDISPINFO Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass es die für ein Element verwalteten Informationen aktualisieren muss. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 1ea51d50-4a57-4662-972e-89e916fa9b16
 keywords:
-- Windows-Steuerelemente für LVN_SETDISPINFO Benachrichtigungs
+- LVN_SETDISPINFO Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 659623d892f0f5a556f4890703d4e0dd725536b5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6f4827d37a115f2bd1bb523f78bdb5975de4314056a174be4bfa886e1a076497
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915060"
 ---
-# <a name="lvn_setdispinfo-notification-code"></a>LVN \_ setdispinfo-Benachrichtigungs Code
+# <a name="lvn_setdispinfo-notification-code"></a>LVN \_ SETDISPINFO-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements, dass die Informationen, die für ein Element verwaltet werden, aktualisiert werden müssen. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements, dass es die für ein Element verwalteten Informationen aktualisieren muss. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ LVN_SETDISPINFO
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmlvdispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) -Struktur, die Informationen für das geänderte Element angibt. Das **Element Element** dieser Struktur ist eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur, die Informationen über das geänderte Element enthält. Der **pszText** -Member des **Elements** enthält einen gültigen Wert, unabhängig davon, ob das lvif- \_ textflag im **Mask** -Member dieser Struktur festgelegt ist.
+Zeiger auf eine [**NMLVDISPINFO-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) die Informationen für das geänderte Element angibt. Der **Elementmember** dieser Struktur ist eine [**LVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvitema) die Informationen über das geänderte Element enthält. Der **pszText-Member** des **Elements** enthält einen gültigen Wert, unabhängig davon, ob das LVIF \_ TEXT-Flag im **Maskenmember** dieser Struktur festgelegt ist.
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Ein Zeiger auf eine [**nmlvdispinfo**](/windows/win32/api/commctrl/ns-commctrl-n
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Benachrichtigungs Empfänger wandelt *LPARAM* ein, um die [**nmlvdispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) -Struktur abzurufen. Der *wParam* -Parameter enthält den Nachrichten Code.
+Der Benachrichtigungsempfänger castt *lParam,* um die [**NMLVDISPINFO-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) abzurufen. Der *wParam-Parameter* enthält den Nachrichtencode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Der Benachrichtigungs Empfänger wandelt *LPARAM* ein, um die [**nmlvdispinfo**]
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVN \_ Setdispinfow** (Unicode) und **LVN \_ setdispinfoa** (ANSI)<br/>           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVN \_ SETDISPINFOW** (Unicode) und **LVN \_ SETDISPINFOA** (ANSI)<br/>           |
 
 
 
@@ -72,7 +72,7 @@ Der Benachrichtigungs Empfänger wandelt *LPARAM* ein, um die [**nmlvdispinfo**]
 
 <dl> <dt>
 
-[LVN \_ getdispinfo](lvn-getdispinfo.md)
+[LVN \_ GETDISPINFO](lvn-getdispinfo.md)
 </dt> </dl>
 
  

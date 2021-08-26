@@ -1,9 +1,9 @@
 ---
-title: EM_FILELINELENGTH Meldung (kommstrg. h)
-description: Ruft die Länge einer Zeile in einem Bearbeitungs Steuerelement (in Zeichen) unabhängig von der Anzeige von Linien auf dem Bildschirm ab.
+title: EM_FILELINELENGTH (CommCtrl.h)
+description: Ruft die Länge einer Zeile in einem Bearbeitungssteuerzeichen in Zeichen ab, unabhängig davon, wie Zeilen auf dem Bildschirm angezeigt werden.
 ms.assetid: cfb0632c-9ba9-4864-939a-dbbaed6c177e
 keywords:
-- Windows-Steuerelemente für EM_FILELINELENGTH Meldung
+- EM_FILELINELENGTH von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4aa50f4d9b49253a558095be78e0e781d7d4c7f8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 10cb05b0e2acbfb5049eddefab1dad42ecd7b6db234fa4a3c34d4877ed52b007
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119915540"
 ---
-# <a name="em_filelinelength-message"></a>EM \_ filelinelength-Meldung
+# <a name="em_filelinelength-message"></a>EM \_ FILELINELENGTH-Nachricht
 
-Ruft die Länge einer Zeile in einem Bearbeitungs Steuerelement (in Zeichen) unabhängig von der Anzeige von Linien auf dem Bildschirm ab.
+Ruft die Länge einer Zeile in einem Bearbeitungssteuerzeichen in Zeichen ab, unabhängig davon, wie Zeilen auf dem Bildschirm angezeigt werden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,9 +32,9 @@ Ruft die Länge einer Zeile in einem Bearbeitungs Steuerelement (in Zeichen) una
 *wParam* 
 </dt> <dd>
 
-Der Zeichen Index eines Zeichens in der Zeile, deren Länge abgerufen werden soll. Wenn dieser Parameter größer als die Anzahl der Zeichen im-Steuerelement ist, ist der Rückgabewert 0 (null).
+Der Zeichenindex eines Zeichens in der Zeile, dessen Länge abgerufen werden soll. Wenn dieser Parameter größer als die Anzahl der Zeichen im Steuerelement ist, ist der Rückgabewert 0 (null).
 
-Dieser Parameter kann-1 sein. In diesem Fall gibt die Nachricht die Anzahl der nicht ausgewählten Zeichen in Zeilen zurück, die ausgewählte Zeichen enthalten. Wenn die Auswahl z. b. vom vierten Zeichen einer Zeile bis zum achten Zeichen vom Ende der nächsten Zeile aus verlängert wird, wäre der Rückgabewert 10 (drei Zeichen in der ersten Zeile und sieben bei der nächsten Zeile).
+Dieser Parameter kann -1 sein. In diesem Fall gibt die Meldung die Anzahl der nicht ausgewählten Zeichen in Zeilen zurück, die ausgewählte Zeichen enthalten. Beispiel: Wenn die Auswahl vom vierten Zeichen einer Zeile bis zum achten Zeichen vom Ende der nächsten Zeile erweitert wird, beträgt der Rückgabewert 10 (drei Zeichen in der ersten Zeile und sieben Zeichen in der nächsten Zeile).
 
 </dd> <dt>
 
@@ -47,15 +47,15 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Für mehrzeilige Bearbeitungs Steuerelemente ist der Rückgabewert die Länge in **TCHAR** s der durch den *wParam* -Parameter angegebenen Zeile, unabhängig davon, wie Zeilen auf dem Bildschirm angezeigt werden. Das Wagen Rücklauf Zeichen oder das Zeilenvorschub Zeichen am Ende der Zeile ist nicht enthalten.
+Bei Mehrzeilen-Bearbeitungssteuerelementen ist der Rückgabewert die Länge der durch den *wParam-Parameter* angegebenen Zeile in **TCHAR** s, unabhängig davon, wie Linien auf dem Bildschirm angezeigt werden. Das Wagenrücklauf- oder Zeilenumlaufzeichen am Ende der Zeile ist nicht enthalten.
 
-Für einzeilige Bearbeitungs Steuerelemente ist der Rückgabewert die Länge des Texts im Bearbeitungs Steuerelement in **TCHAR** s.
+Bei Einzeilen-Bearbeitungssteuerelementen ist der Rückgabewert die Länge des Texts im Bearbeitungssteuerfeld in **TCHAR** s.
 
-Wenn *wParam* größer als die Anzahl der Zeichen im-Steuerelement ist, ist der Rückgabewert 0 (null).
+Wenn *wParam* größer als die Anzahl der Zeichen im Steuerelement ist, ist der Rückgabewert 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [**EM \_ filelineindex**](em-lineindex.md) -Nachricht, um einen Zeichen Index für eine bestimmte Zeilennummer innerhalb eines mehrzeiligen Bearbeitungs Steuer Elements abzurufen, unabhängig davon, wie Linien auf dem Bildschirm angezeigt werden.
+Verwenden Sie [**die MELDUNG EM \_ FILELINEINDEX,**](em-lineindex.md) um einen Zeichenindex für eine bestimmte Zeilennummer innerhalb eines mehrzeilenigen Bearbeitungssteuerzeichens abzurufen, unabhängig davon, wie Zeilen auf dem Bildschirm angezeigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,9 +63,9 @@ Verwenden Sie die [**EM \_ filelineindex**](em-lineindex.md) -Nachricht, um eine
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10, 1809 \[ Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2019 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur 1809 \[ Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2019-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>CommCtrl.h</dt> </dl> |
 
 
 
@@ -73,7 +73,7 @@ Verwenden Sie die [**EM \_ filelineindex**](em-lineindex.md) -Nachricht, um eine
 
 <dl> <dt>
 
-[**EM \_ filelineingedex**](em-filelineindex.md)
+[**EM \_ FILELINEINDEX**](em-filelineindex.md)
 </dt> </dl>
 
  

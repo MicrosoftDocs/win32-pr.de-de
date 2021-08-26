@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der eine einzelne Seite in einer Journal Notiz enthält.
+description: Definiert den Typ, der eine einzelne Seite in einer Journalnotiz enthält.
 ms.assetid: 4de57b5f-51a5-4250-85b3-16f7ca435c62
-title: Komplexer journalpagetype-Typ
+title: 'JournalPageType : Komplexer Typ'
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: c26eb6ef60874b8787cc30e21ef333b6b124e90e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eba46e18e36a7909541bb18106d6582e866b3d319e2843adce7758c9ad766546
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119883420"
 ---
-# <a name="journalpagetype-complex-type"></a>Komplexer journalpagetype-Typ
+# <a name="journalpagetype-complex-type"></a>JournalPageType : Komplexer Typ
 
-Definiert den Typ, der eine einzelne Seite in einer Journal Notiz enthält.
+Definiert den Typ, der eine einzelne Seite in einer Journalnotiz enthält.
 
 ``` syntax
 <xs:complexType name="JournalPageType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der eine einzelne Seite in einer Journal Notiz enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

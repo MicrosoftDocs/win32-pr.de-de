@@ -1,25 +1,25 @@
 ---
-description: Parameterflags geben Informationen zu verschiedenen Statusflags in Bezug auf eine Kommunikationssitzung an, z. b. ob die Aufruferkennung blockiert werden soll. \_Eine Liste der von TAPI definierten Flags finden Sie unter linecallparamflags-Konstanten.
+description: Parameterflags stellen Informationen zu einer Vielzahl von Statusflags für eine Kommunikationssitzung zur Verfügung, z. B. ob die Anruferidentifikation blockiert werden soll. Eine Liste der durch TAPI definierten Flags finden Sie unter \_ LINECALLPARAMFLAGS-Konstanten.
 ms.assetid: 30511328-a310-42b7-a81e-3ef2abf586ed
 title: Parameterflags
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3adcb8b430045dc41afea4e7f55e5fa4458530b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bf663ea4ff6121f3e130f9c2a2e4c3c1f86f8611be8cc3fef3762adc535e84bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959860"
 ---
 # <a name="parameter-flags"></a>Parameterflags
 
-Parameterflags geben Informationen zu verschiedenen Statusflags in Bezug auf eine Kommunikationssitzung an, z. b. ob die Aufruferkennung blockiert werden soll. Eine Liste der von TAPI definierten Flags finden Sie unter [linecallparamflags- \_ Konstanten](./linecallparamflags--constants.md) .
+Parameterflags stellen Informationen zu einer Vielzahl von Statusflags für eine Kommunikationssitzung zur Verfügung, z. B. ob die Anruferidentifikation blockiert werden soll. Eine Liste der durch TAPI definierten Flags finden Sie unter [ \_ LINECALLPARAMFLAGS-Konstanten.](./linecallparamflags--constants.md)
 
 Nicht alle Dienstanbieter unterstützen die Verwendung dieser Informationen.
 
-**TAPI 2. x:** Weitere Informationen finden Sie unter [**linegetcallinfo**](/windows/win32/api/tapi/nf-tapi-linegetcallinfo) (**dwcallparamflags** -Member von *lpcallinfo*).
+**TAPI 2.x:** Siehe [**lineGetCallInfo**](/windows/win32/api/tapi/nf-tapi-linegetcallinfo) (**dwCallParamFlags-Member** von *lpCallInfo*).
 
-**TAPI 3. x:** Siehe [**itcallinfo:: get \_ callinfolong**](/windows/desktop/api/tapi3if/nf-tapi3if-itcallinfo-get_callinfolong) (**cil \_ callparamsflags** -Member von [**CallInfo \_ Long**](/windows/desktop/api/Tapi3if/ne-tapi3if-callinfo_long)).
+**TAPI 3.x:** Siehe [**ITCallInfo::get \_ CallInfoLong**](/windows/desktop/api/tapi3if/nf-tapi3if-itcallinfo-get_callinfolong) (**CIL \_ CALLPARAMSFLAGS-Member** von [**CALLINFO \_ LONG**](/windows/desktop/api/Tapi3if/ne-tapi3if-callinfo_long)).
 
  
 

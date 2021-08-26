@@ -1,44 +1,44 @@
 ---
-description: Mit der unregisterextensioninfo-Aktion wird das Entfernen von Erweiterungs bezogenen Informationen aus der Systemregistrierung verwaltet.
+description: Die UnregisterExtensionInfo-Aktion verwaltet das Entfernen von Erweiterungsinformationen aus der Systemregistrierung.
 ms.assetid: 62bb9d17-c221-4bd2-bd7f-9930e28bb946
-title: Unregisterextensioninfo-Aktion
+title: UnregisterExtensionInfo-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85d069a686c5f0e517a0cc9556634895216dd8cb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e8dae707bc4dd517402d8a85fb64402637a815f8249d4677f18818c855ba4e1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119810230"
 ---
-# <a name="unregisterextensioninfo-action"></a>Unregisterextensioninfo-Aktion
+# <a name="unregisterextensioninfo-action"></a>UnregisterExtensionInfo-Aktion
 
-Mit der unregisterextensioninfo-Aktion wird das Entfernen von Erweiterungs bezogenen Informationen aus der Systemregistrierung verwaltet.
+Die UnregisterExtensionInfo-Aktion verwaltet das Entfernen von Erweiterungsinformationen aus der Systemregistrierung.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die unregisterextensioninfo-Aktion muss nach der [InstallInitialize](installinitialize-action.md) -Aktion und vor der [RegisterExtensionInfo](registerextensioninfo-action.md) -Aktion erfolgen.
+Die UnregisterExtensionInfo-Aktion muss nach der [InstallInitialize-Aktion](installinitialize-action.md) und vor der [Aktion RegisterExtensionInfo](registerextensioninfo-action.md) angezeigt werden.
 
-[Removeregistryvalues](removeregistryvalues-action.md) muss in der Sequenz vor ' unregisterextensioninfo ' stehen.
+[RemoveRegistryValues](removeregistryvalues-action.md) muss vor UnregisterExtensionInfo in der Sequenz kommen.
 
-Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen in einer Sequenz Tabelle enthalten ist, müssen Sie dieselbe relative Reihenfolge Reihenfolge aufweisen wie in der folgenden Abbildung:
+Die Sequenzierung der Aktionen in der folgenden Gruppe ist eingeschränkt. Wenn eine Teilmenge dieser Aktionen zusammen in einer Sequenztabelle auftritt, müssen sie dieselbe relative Sequenzreihenfolge wie gezeigt haben:
 
--   [Unregisterclassinfo](unregisterclassinfo-action.md)
--   Unregisterextensioninfo
--   [Unregisterprogidinfo](unregisterprogidinfo-action.md)
--   [Unregistermimeinfo](unregistermimeinfo-action.md)
+-   [UnregisterClassInfo](unregisterclassinfo-action.md)
+-   UnregisterExtensionInfo
+-   [UnregisterProgIdInfo](unregisterprogidinfo-action.md)
+-   [UnregisterMIMEInfo](unregistermimeinfo-action.md)
 -   [RegisterClassInfo](registerclassinfo-action.md)
 -   [RegisterExtensionInfo](registerextensioninfo-action.md)
--   [Registerprogidinfo](registerprogidinfo-action.md)
--   [Registermimeinfo](registermimeinfo-action.md)
+-   [RegisterProgIdInfo](registerprogidinfo-action.md)
+-   [RegisterMIMEInfo](registermimeinfo-action.md)
 
-Unregisterextensioninfo muss z. b. vor [unregisterprogidinfo](unregisterprogidinfo-action.md) in der Sequenz Tabelle stehen.
+UnregisterExtensionInfo muss beispielsweise vor [UnregisterProgIdInfo](unregisterprogidinfo-action.md) in der Sequenztabelle liegen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
 | \[1\] | Erweiterung entfernt.         |
 
@@ -46,15 +46,15 @@ Unregisterextensioninfo muss z. b. vor [unregisterprogidinfo](unregisterprogidin
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das System die Bedarfs gesteuerte Installation von Erweiterungs Servern nicht unterstützt, entfernt unregisterextensioninfo alle Erweiterungs Server in der [Erweiterungs Tabelle](extension-table.md) , die entweder einer nicht installierten Funktion oder einem von der Registrierung installierten Feature zugeordnet sind. Andernfalls entfernt diese Aktion die Erweiterungs Server, die einer Funktion zugeordnet sind, die aus der Registrierung entfernt werden soll.
+Wenn das System die bedarfsbasierte Installation von Erweiterungsservern nicht unterstützt, entfernt UnregisterExtensionInfo alle Erweiterungsserver in der Erweiterungstabelle, die entweder einem deinstallierten Feature oder einem Feature zugeordnet sind, das wie aus der Registrierung angekündigt installiert wurde. [](extension-table.md) Andernfalls entfernt diese Aktion die Erweiterungsserver, die einem Feature zugeordnet sind, das aus der Registrierung entfernt werden soll.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Shelladvtsupport (Eigenschaft)**](shelladvtsupport.md)
+[**ShellAdvtSupport-Eigenschaft**](shelladvtsupport.md)
 </dt> </dl>
 
  

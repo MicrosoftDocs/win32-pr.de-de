@@ -1,33 +1,33 @@
 ---
-description: Raten Steuerung
+description: Ratensteuerung
 ms.assetid: 6529859f-cfb6-4983-a489-bcc2f04e721f
-title: Raten Steuerung
+title: Ratensteuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f484a0469d96578ca1bb7e1d661d7e2319bd8bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e5016fa55447ad8b2a77f8a9e48f19b3beeb2dfe411276f148bfb5d3e65882b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348485"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119847810"
 ---
-# <a name="rate-control"></a>Raten Steuerung
+# <a name="rate-control"></a>Ratensteuerung
 
-Die [Medien Sitzung](media-session.md) unterstützt das Ändern der Wiedergabe Rate, mit der eine Anwendung Wiedergabe Funktionen wie "schnell Forward" und "rewind" implementieren kann. In diesem Abschnitt wird beschrieben, wie Anwendungen die Wiedergabe Rate bei der Verwendung der Medien Sitzung ändern können.
+Die [Mediensitzung](media-session.md) unterstützt das Ändern der Wiedergaberate, die eine Anwendung verwenden kann, um Wiedergabefeatures wie "Schnellvorlauf" und "Zurückspulen" zu implementieren. In diesem Abschnitt wird beschrieben, wie Anwendungen die Wiedergaberate bei Verwendung der Mediensitzung ändern können.
 
-Informationen zur Unterstützung der Raten Steuerung in ihren eigenen Pipeline Komponenten finden Sie unter [Implementieren der Raten Kontrolle](implementing-rate-control.md).
+Informationen zur Unterstützung der Ratensteuerung in Ihren eigenen Pipelinekomponenten finden Sie unter [Implementieren der Ratensteuerung.](implementing-rate-control.md)
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
 
 
-| Thema                                                                                                      | BESCHREIBUNG                                                            |
+| Thema                                                                                                      | Beschreibung                                                            |
 |------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [Informationen zur Raten Kontrolle](about-rate-control.md)                                                               | Bietet eine allgemeine Übersicht über die Raten Steuerung.                              |
-| [Bestimmen der unterstützten Tarife](how-to-determine-supported-rates.md)                                   | Hier finden Sie die schnellsten und langsamsten unterstützten Wiedergabe Raten.          |
-| [Festlegen der Wiedergabe Rate für die Medien Sitzung](how-to-set-the-playback-rate-on-the-media-session.md) | Ändern der Wiedergabe Rate.                                       |
-| [Vorgehensweise beim Ausführen von Scrubbing](how-to-perform-scrubbing.md)                                                   | Schrittweises Ausführen eines Video Frames.                                 |
-| [Implementieren der Raten Steuerung](implementing-rate-control.md)                                                 | Unterstützung von Variablen Wiedergabe Raten in einer benutzerdefinierten Pipeline Komponente. |
+| [Informationen zur Ratensteuerung](about-rate-control.md)                                                               | Bietet eine allgemeine Übersicht über die Ratensteuerung.                              |
+| [Ermitteln der unterstützten Raten](how-to-determine-supported-rates.md)                                   | Hier erfahren Sie, wie Sie die schnellsten und langsamsten unterstützten Wiedergaberaten finden.          |
+| [Festlegen der Wiedergaberate für die Mediensitzung](how-to-set-the-playback-rate-on-the-media-session.md) | Ändern der Wiedergaberate.                                       |
+| [Ausführen von Bereinigungen](how-to-perform-scrubbing.md)                                                   | Schritt für Schritt eines Videoframes.                                 |
+| [Implementieren der Ratensteuerung](implementing-rate-control.md)                                                 | Hier erfahren Sie, wie Sie variable Wiedergaberaten in einer benutzerdefinierten Pipelinekomponente unterstützen. |
 
 
 
@@ -37,10 +37,10 @@ In diesem Abschnitt werden die folgenden Themen behandelt:
 
 <dl> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> <dt>
 
-[Suchen, schnelles vorwärts und umgekehrtes spielen](seeking--fast-forward--and-reverse-play.md)
+[Suchen, Vorlauf und ReversePlay](seeking--fast-forward--and-reverse-play.md)
 </dt> </dl>
 
  

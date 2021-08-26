@@ -1,9 +1,9 @@
 ---
 title: /W-Schalter
-description: Der/W-Schalter gibt die Warnstufe des Mittell-Compilers an. Die Warnstufe zeigt den Schweregrad der Warnung an.
+description: Der Schalter /W gibt die Warnstufe des MIDL-Compilers an. Die Warnstufe gibt den Schweregrad der Warnung an.
 ms.assetid: ee894d73-cbd1-455f-9836-a6d80cfc95f9
 keywords:
-- /W-Schalter-Mittel l
+- /W switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 00b1f15ae0c28722adaca8c4b0651606681ce3af
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7e03b2d4a762a7fbb1bba00f8804e8e43a77ad8183a744add63fcf0d37c86d54
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106338420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913670"
 ---
 # <a name="w-switch"></a>/W-Schalter
 
-Der **/W** -Schalter gibt die Warnstufe des Mittell-Compilers an. Die Warnstufe zeigt den Schweregrad der Warnung an.
+Der Schalter **/W** gibt die Warnstufe des MIDL-Compilers an. Die Warnstufe gibt den Schweregrad der Warnung an.
 
 ``` syntax
 midl /W level
@@ -34,53 +34,53 @@ midl /W level
 *level* 
 </dt> <dd>
 
-Gibt die Warnstufe an, eine ganze Zahl im Bereich von 0 bis 4. Zwischen dem Schalter **/W** und der Ziffer, die den Wert für die Warnstufe angibt, besteht kein Leerzeichen.
+Gibt die Warnstufe an, eine ganze Zahl im Bereich von 0 bis 4. Zwischen dem Schalter **/W** und der Ziffer, die den Wert der Warnstufe angibt, ist kein Leerzeichen vorhanden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Warnungs Stufen liegen zwischen 1 und 4. der Wert 0 bedeutet, dass keine Warn Informationen angezeigt werden. Die Warnung mit dem höchsten Schweregrad ist Ebene 1. In der folgenden Tabelle werden die Warnungen für die einzelnen Warn Stufen beschrieben.
+Die Warnstufen liegen zwischen 1 und 4, wobei der Wert 0 (null) bedeutet, dass keine Warnungsinformationen angezeigt werden. Die Warnung mit dem höchsten Schweregrad ist Stufe 1. In der folgenden Tabelle werden die Warnungen für jede Warnstufe beschrieben.
 
 
 
 | Warnstufe | BESCHREIBUNG                                             | Beispiel                                                                   |
 |---------------|---------------------------------------------------------|---------------------------------------------------------------------------|
 | W0            | Keine Warnungen.                                            |                                                                           |
-| W1            | Schwerwiegende Warnungen, die zu Anwendungsfehlern führen können.      | Es wurde kein Bindungs handle angegeben, nicht attributierte Zeiger, widersprüchliche Switches. |
-| W2            | Kann zu Problemen in der Betriebsumgebung des Benutzers führen. | Die Bezeichnerlänge überschreitet 31 Zeichen. Es wurde kein Standard-Union-Arm angegeben.  |
+| W1            | Schwerwiegende Warnungen, die Anwendungsfehler verursachen können.      | Kein Bindungshandle angegeben, nicht attributierte Zeiger, in Konfliktstehende Switches. |
+| W2            | Kann zu Problemen in der Betriebssystemumgebung des Benutzers führen. | Die Bezeichnerlänge überschreitet 31 Zeichen. Es wurde kein Standard-Union-Arm angegeben.  |
 | W3            | Reserviert.                                               |                                                                           |
 | W4            | Niedrigste Warnstufe.                                   | Nicht-ANSI-C-Konstrukte.                                                    |
 
 
 
- 
+ 
 
-Warnungen unterscheiden sich von Fehlern. Fehler bewirken, dass der Mittell-Compiler die Verarbeitung der IDL-Datei stoppt. Warnungen bewirken, dass der Mittell-Compiler eine Informations Meldung ausgibt und die Verarbeitung der IDL-Datei fortsetzt.
+Warnungen unterscheiden sich von Fehlern. Fehler führen dazu, dass der MIDL-Compiler die Verarbeitung der IDL-Datei anzuhalten. Warnungen bewirken, dass der MIDL-Compiler eine Informationsmeldung ausgibt und die Verarbeitung der IDL-Datei fortsetzt.
 
-Die vom **/W** -Schalter festgelegte Warnstufe kann mit dem [**/WX**](-wx.md) -Schalter verwendet werden, damit der Mittell-Compiler die Verarbeitung der IDL-Datei stoppt.
+Die vom Schalter **/W** festgelegte Warnstufe kann mit dem Schalter [**/WX**](-wx.md) verwendet werden, damit der MIDL-Compiler die Verarbeitung der IDL-Datei anzuhalten.
 
-Der **/W** -Schalter verhält sich wie der [**/Warn**](-warn.md) -Schalter.
+Der **Schalter /W** verhält sich genauso wie der Schalter [**/warn.**](-warn.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/W2 Dateiname. idl**
+**midl /W2 filename.idl**
 
-**Mittel l/W4 Leiste. idl**
+**midl /W4 bar.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/Warn**](-warn.md)
+[**/warn**](-warn.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

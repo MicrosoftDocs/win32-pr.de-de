@@ -1,9 +1,9 @@
 ---
-title: TCN_SELCHANGE Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Registerkarten-Steuer Elements, dass sich die derzeit ausgewählte Registerkarte geändert hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TCN_SELCHANGE Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Registerkartensteuerelements, dass sich die aktuell ausgewählte Registerkarte geändert hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: f40e30f6-169b-4381-a300-12c3befb5fc5
 keywords:
-- Windows-Steuerelemente für TCN_SELCHANGE Benachrichtigungs
+- TCN_SELCHANGE Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8578ac9fee7754b1ae27c05c6ec1b15636090040
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e54ad012e98005e8fbf5148af58aab10d90e3127afeab6311cc8b8f3f84e2988
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119876180"
 ---
-# <a name="tcn_selchange-notification-code"></a>TCN \_ selChange-Benachrichtigungs Code
+# <a name="tcn_selchange-notification-code"></a>TCN \_ SELCHANGE-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Registerkarten-Steuer Elements, dass sich die derzeit ausgewählte Registerkarte geändert hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Registerkartensteuerelements, dass sich die aktuell ausgewählte Registerkarte geändert hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ TCN_SELCHANGE
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -St
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die aktuell ausgewählte Registerkarte zu ermitteln, verwenden Sie das [**tabstrg \_ getcurrsel**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcursel) -Makro.
+Verwenden Sie das [**\_ GetCurSel-Makro TabCtrl,**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcursel) um die aktuell ausgewählte Registerkarte zu bestimmen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Um die aktuell ausgewählte Registerkarte zu ermitteln, verwenden Sie das [**tab
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Um die aktuell ausgewählte Registerkarte zu ermitteln, verwenden Sie das [**tab
 
 <dl> <dt>
 
-[TCN \_ selchanging](tcn-selchanging.md)
+[TCN \_ SELCHANGING](tcn-selchanging.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: CB_REQUEST_STATUS-Enumeration (cbclient. h)
+title: CB_REQUEST_STATUS-Enumeration (Cbclient.h)
 description: Gibt den Status einer asynchronen Anforderung an.
 ms.assetid: 35FAC8EA-BA17-405F-AE10-33A816029F62
 ms.tgt_platform: multiple
 keywords:
-- CB_REQUEST_STATUS Enumeration Remotedesktopdienste
+- CB_REQUEST_STATUS Enumerations-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd57efd12d3fb5c708d5c4861ee144543bb49f6a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6647f10ab91fd5cb1919d49c4c00d22b8b1722de9b20d9b83fdee8fcceaef95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340537"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119871970"
 ---
-# <a name="cb_request_status-enumeration"></a>CB- \_ Anforderungs \_ Status-Enumeration
+# <a name="cb_request_status-enumeration"></a>CB \_ REQUEST \_ STATUS-Enumeration
 
-Gibt den Status einer asynchronen Anforderung an. Diese Enumeration wird mit der [**iconnectionbrokerrequest:: CheckStatus**](iconnectionbrokerrequest-checkstatus.md) -Methode verwendet.
+Gibt den Status einer asynchronen Anforderung an. Diese Enumeration wird mit der [**IConnectionBrokerRequest::CheckStatus-Methode**](iconnectionbrokerrequest-checkstatus.md) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,66 +49,66 @@ typedef enum _CB_REQUEST_STATUS {
 
 <dl> <dt>
 
-<span id="CB_STATUS_INVALID"></span><span id="cb_status_invalid"></span>**CB- \_ Status \_ ungültig**
+<span id="CB_STATUS_INVALID"></span><span id="cb_status_invalid"></span>**\_CB-STATUS \_ UNGÜLTIG**
 </dt> <dd>
 
-Das Anforderungs Objekt ist nicht initialisiert.
+Das Anforderungsobjekt wird nicht initialisiert.
 
 </dd> <dt>
 
-<span id="CB_STATUS_INITIATING_REQUEST"></span><span id="cb_status_initiating_request"></span>**CB- \_ Status \_ Initiierungs \_ Anforderung**
+<span id="CB_STATUS_INITIATING_REQUEST"></span><span id="cb_status_initiating_request"></span>**\_CB-STATUS: \_ INITIIERENDE \_ ANFORDERUNG**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-<span id="CB_STATUS_REQUEST_COMPLETED"></span><span id="cb_status_request_completed"></span>**CB- \_ Status \_ Anforderung \_ abgeschlossen**
+<span id="CB_STATUS_REQUEST_COMPLETED"></span><span id="cb_status_request_completed"></span>**\_CB-STATUSANFORDERUNG \_ \_ ABGESCHLOSSEN**
 </dt> <dd>
 
-Die Anforderung ist fertiggestellt.
+Die Anforderung ist abgeschlossen.
 
 </dd> <dt>
 
-<span id="CB_STATUS_REQUEST_FAILED"></span><span id="cb_status_request_failed"></span>**Fehler bei der CB- \_ Status \_ Anforderung \_**
+<span id="CB_STATUS_REQUEST_FAILED"></span><span id="cb_status_request_failed"></span>**\_FEHLER BEI CB-STATUSANFORDERUNG \_ \_**
 </dt> <dd>
 
 Fehler bei der Anforderung.
 
 </dd> <dt>
 
-<span id="CB_STATUS_REQUEST_ABORTED"></span><span id="cb_status_request_aborted"></span>**CB- \_ Status \_ Anforderung \_ abgebrochen**
+<span id="CB_STATUS_REQUEST_ABORTED"></span><span id="cb_status_request_aborted"></span>**\_CB-STATUSANFORDERUNG \_ \_ ABGEBROCHEN**
 </dt> <dd>
 
 Die Anforderung wurde abgebrochen.
 
 </dd> <dt>
 
-<span id="CB_STATUS_FINDING_DESTINATION"></span><span id="cb_status_finding_destination"></span>**CB \_ - \_ Status \_ Suchziel**
+<span id="CB_STATUS_FINDING_DESTINATION"></span><span id="cb_status_finding_destination"></span>**CB \_ STATUS \_ FINDING \_ DESTINATION**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-<span id="CB_STATUS_LOADING_DESTINATION"></span><span id="cb_status_loading_destination"></span>**CB- \_ Status \_ Lade \_ Ziel**
+<span id="CB_STATUS_LOADING_DESTINATION"></span><span id="cb_status_loading_destination"></span>**ZIEL FÜR \_ DAS LADEN DES CB-STATUS \_ \_**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-<span id="CB_STATUS_BRINGING_SESSION_ONLINE"></span><span id="cb_status_bringing_session_online"></span>**CB \_ -Status der \_ \_ Sitzung \_ Online**
+<span id="CB_STATUS_BRINGING_SESSION_ONLINE"></span><span id="cb_status_bringing_session_online"></span>**\_CB-STATUS: \_ SITZUNG ONLINE \_ \_ GESCHALTET**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-<span id="CB_STATUS_REDIRECTING_TO_DESTINATION"></span><span id="cb_status_redirecting_to_destination"></span>**CB- \_ Status Umleitung \_ \_ zum \_ Ziel**
+<span id="CB_STATUS_REDIRECTING_TO_DESTINATION"></span><span id="cb_status_redirecting_to_destination"></span>**\_ \_ CB-STATUSUMLEITUNG \_ ZUM \_ ZIEL**
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
@@ -120,7 +120,7 @@ Nicht verwendet.
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Cbclient. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Cbclient.h</dt> </dl> |
 
 
 
@@ -128,7 +128,7 @@ Nicht verwendet.
 
 <dl> <dt>
 
-[**Iconnectionbrokerrequest:: CheckStatus**](iconnectionbrokerrequest-checkstatus.md)
+[**IConnectionBrokerRequest::CheckStatus**](iconnectionbrokerrequest-checkstatus.md)
 </dt> </dl>
 
  

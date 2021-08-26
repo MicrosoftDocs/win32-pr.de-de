@@ -1,10 +1,10 @@
 ---
-title: MPSTATUS_DATAEX_UNUSED Struktur (mpclient. h)
-description: Pseudo Struktur für nicht-SRP.
+title: MPSTATUS_DATAEX_UNUSED-Struktur (MpClient.h)
+description: Dummystruktur für Nicht-SRP.
 ms.assetid: 396744CE-2435-4591-B0CF-A4392C88640F
 keywords:
-- MPSTATUS_DATAEX_UNUSED Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSTATUS_DATAEX_UNUSED Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSTATUS_DATAEX_UNUSED struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPSTATUS_DATAEX_UNUSED Strukturzeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bfcbc987a97a8cc47501a24e633c5da2d776a42d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 245315d12b5fbe76ec2f552e510336aa3974753678e04f87c33546737f180c56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119961090"
 ---
-# <a name="mpstatus_dataex_unused-structure"></a>Nicht verwendete mpstatus \_ dataex- \_ Struktur
+# <a name="mpstatus_dataex_unused-structure"></a>MPSTATUS \_ DATAEX \_ UNUSED-Struktur
 
-Pseudo Struktur für nicht-SRP.
+Dummystruktur für Nicht-SRP.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ typedef struct tagMPSTATUS_DATAEX_UNUSED {
 
 <dl> <dt>
 
-**dwnone**
+**dwNone**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -54,9 +54,9 @@ Typ: **DWORD**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

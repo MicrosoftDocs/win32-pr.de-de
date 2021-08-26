@@ -1,10 +1,10 @@
 ---
 title: MDM_Reporting_SecurityAuditing01_RetrieveByTimeRange02-Klasse
-description: Die MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02-Klasse wird zum Abrufen der Protokolle verwendet, die innerhalb von StartTime und stopTime vorhanden sind.
+description: Die Mdm \_ Reporting \_ SecurityAuditing01 RetrieveByTimeRange02-Klasse wird verwendet, um die Protokolle abzurufen, die \_ in StartTime und StopTime vorhanden sind.
 ms.assetid: e360bc76-f006-45e1-b78a-29125fbcd5ae
 keywords:
 - MDM_Reporting_SecurityAuditing01_RetrieveByTimeRange02-Klasse
-- MDM_Reporting_SecurityAuditing01_RetrieveByTimeRange02-Klasse, beschrieben
+- MDM_Reporting_SecurityAuditing01_RetrieveByTimeRange02, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,24 +17,24 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abbbe47dfb3ff23c1d1bd891053375e19d6e503e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c307f2b5ddcad1631cd5981a0ea25d8b9fb43566a482de20a2d050a0f3e8db57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119913572"
 ---
-# <a name="mdm_reporting_securityauditing01_retrievebytimerange02-class"></a>MDM- \_ Berichterstellung \_ SecurityAuditing01 RetrieveByTimeRange02- \_ Klasse
+# <a name="mdm_reporting_securityauditing01_retrievebytimerange02-class"></a>MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02** -Klasse wird zum Abrufen der Protokolle verwendet, die innerhalb von StartTime und stopTime vorhanden sind. "StartTime" und "stopTime" werden im ISO 8601-Format ausgedrückt. Wenn "StartTime" und "stopTime" nicht angegeben sind, werden die Werte entweder als erste vorhandene oder letzte vorhandene Zeit interpretiert.
+Die **Mdm \_ Reporting \_ SecurityAuditing01-Klasse \_ RetrieveByTimeRange02** wird verwendet, um die Protokolle abzurufen, die in StartTime und StopTime vorhanden sind. StartTime und StopTime werden im ISO 8601-Format ausgedrückt. Wenn StartTime und StopTime nicht angegeben sind, werden die Werte entweder als erste vorhandene oder letzte vorhandene Zeit interpretiert.
 
-Dies sind die anderen möglichen Szenarien:
+Hier sind die anderen möglichen Szenarien:
 
--   Wenn "StartTime" und "stopTime" nicht angegeben sind, werden alle vorhandenen Protokolle zurückgegeben.
--   Wenn die stopTime angegeben ist, aber StartTime nicht angegeben ist, werden alle Protokolle, die vor der stopTime vorhanden sind, zurückgegeben.
--   Wenn "StartTime" angegeben ist, aber "stopTime" nicht angegeben ist, werden alle Protokolle zurückgegeben, die aus "StartTime" bestehen.
+-   Wenn StartTime und StopTime nicht angegeben sind, werden alle vorhandenen Protokolle zurückgegeben.
+-   Wenn StopTime angegeben wird, startTime jedoch nicht angegeben ist, werden alle Protokolle zurückgegeben, die vor StopTime vorhanden sind.
+-   Wenn StartTime angegeben wird, stoptime jedoch nicht angegeben ist, werden alle Protokolle zurückgegeben, die aus StartTime vorhanden sind.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -54,13 +54,13 @@ class MDM_Reporting_SecurityAuditing01_RetrieveByTimeRange02
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Reporting \_ SecurityAuditing01 \_ RetrieveByTimeRange02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -76,7 +76,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "retrievebytimerange".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "RetrieveByTimeRange".
 
 </dd> <dt>
 
@@ -91,7 +91,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -135,11 +135,11 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
