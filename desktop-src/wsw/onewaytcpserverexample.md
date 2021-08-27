@@ -1,29 +1,29 @@
 ---
-title: Onewaytcpserverexample
-description: Dieses Beispiel zeigt einen TCP-Server, der einen Channel annimmt und unidirektionale Nachrichten empfängt.
+title: OneWayTcpServerExample
+description: Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und in eine Richtung orientierte Nachrichten empfängt.
 ms.assetid: a43fc6a8-f1ee-4f6b-9737-bfe340bb67f0
 keywords:
-- Onewaytcpserverexample Native Webdienste
-- Wwsapi
+- OneWayTcpServerExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94ddd916312bd97662a9dcd4c7f4bc3ea22f531c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 22359131b41b4a506147243e0c07f8abe48a159096a532b19922c26d3936b34c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109850"
 ---
-# <a name="onewaytcpserverexample"></a>Onewaytcpserverexample
+# <a name="onewaytcpserverexample"></a>OneWayTcpServerExample
 
-Dieses Beispiel zeigt einen TCP-Server, der einen Channel annimmt und unidirektionale Nachrichten empfängt.
+Dieses Beispiel zeigt einen TCP-Server, der einen Kanal akzeptiert und in eine Richtung orientierte Nachrichten empfängt.
 
--   [Onewaytcpserver. cpp](#onewaytcpservercpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [OneWayTcpServer.cpp](#onewaytcpservercpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="onewaytcpservercpp"></a>Onewaytcpserver. cpp
+## <a name="onewaytcpservercpp"></a>OneWayTcpServer.cpp
 
 
 ```C++
@@ -305,7 +305,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -445,9 +445,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

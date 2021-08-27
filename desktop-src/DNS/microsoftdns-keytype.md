@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_KEYType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Schlüsselressourcen Daten Satz darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen KEY-Ressourcendatensatz darstellt.
 ms.assetid: d3fa1f35-fa0a-47ee-b2be-4464b9b21d80
 keywords:
-- DNS-MicrosoftDNS_KEYType Klasse
-- DNS-MicrosoftDNS_KEYType Klasse, beschrieben
+- MicrosoftDNS_KEYType DNS-Klasse
+- MicrosoftDNS_KEYType DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -21,18 +21,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e1e814af1d22820f1722e5812dd314dd1c7f6e0d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 279044856e695c7e287809a3cbe89a6fffbbc1c0352c0cb68ae45350aa17fc16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109130"
 ---
-# <a name="microsoftdns_keytype-class"></a>MicrosoftDNS- \_ KeyType-Klasse
+# <a name="microsoftdns_keytype-class"></a>MicrosoftDNS \_ KEYType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Schlüsselressourcen Daten Satz darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen KEY-Ressourcendatensatz darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ class MicrosoftDNS_KEYType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ KeyType** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ KEYType-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ KeyType** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ KEYType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                        |
 |:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen Schlüsselressourcen Daten Satz basierend auf den Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer Namen, der Klasse (Standard = in), dem Gültigkeitsdauer Wert und dem WINS-ZuordnungsFlag, dem Reverse-Nachschlage Timeout, dem WINS-Cache Timeout und dem anzufügenden Domänen Namen. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/> |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer, das ZuordnungsFlag, das Nachschlage Timeout, den Cache Timeout und die Ergebnis Domäne auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/>                          |
+| **CreateInstanceFromPropertyData** | Instanziiert einen KEY-Ressourceneintrag basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername, Klasse (Standard = IN), Time-to-Live-Wert und WINS-Zuordnungsflag, Time out für reverse look-up, WINS-Cache-Time out und Domänenname, der angefügt werden soll. Sie gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/> |
+| **Änderung**                         | Aktualisiert die TTL, das Zuordnungsflag, das Time out für die Suche, das Cache-Time out und die Ergebnisdomäne auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/>                          |
 
 
 
@@ -70,20 +70,20 @@ Die **MicrosoftDNS- \_ KeyType** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ KeyType** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ KEYType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Algorithmus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
+Algorithmus, der mit dem im Ressourcendatensatz angegebenen Schlüssel verwendet wird. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
 
 
 
@@ -92,7 +92,7 @@ Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel ver
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | RSA/MD5 (RFC 2537)<br/>          |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | Diffie-Hellman (RFC 2539)<br/>   |
 | <span id="3"></span><dl> <dt>**3**</dt> </dl> | DSA (RFC 2536)<br/>              |
-| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie mit elliptischer Kurve<br/> |
+| <span id="4"></span><dl> <dt>**4**</dt> </dl> | Kryptografie mit elliptischen Kurven<br/> |
 
 
 
@@ -103,7 +103,7 @@ Der Algorithmus, der mit dem im Ressourcen Daten Satz angegebenen Schlüssel ver
 **Flags**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -116,13 +116,13 @@ Flags, die zum Angeben der Zuordnung verwendet werden, wie in IETF RFC 2535 besc
 **Protokoll**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Protokoll, für das der im Ressourcen Daten Satz angegebene Schlüssel verwendet werden kann. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
+Protokoll, für das der im Ressourcendatensatz angegebene Schlüssel verwendet werden kann. Die zugewiesenen Werte sind in der folgenden Tabelle aufgeführt.
 
 
 
@@ -149,7 +149,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Öffentlicher Schlüssel, dargestellt in Basis 64, wie in Anhang A von RFC 2535 beschrieben.
+Öffentlicher Schlüssel, dargestellt in Base64, wie in Anhang A von RFC 2535 beschrieben.
 
 </dd> </dl>
 
@@ -162,7 +162,7 @@ Zugriffstyp: Schreibgeschützt
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -170,13 +170,13 @@ Zugriffstyp: Schreibgeschützt
 
 <dl> <dt>
 
-[**Die Methode "kreateinstancefrompropertydata" der MicrosoftDNS- \_ KeyType-Klasse**](microsoftdns-keytype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ KEYType-Klasse**](microsoftdns-keytype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ KeyType-Klasse**](microsoftdns-keytype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ KEYType-Klasse**](microsoftdns-keytype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

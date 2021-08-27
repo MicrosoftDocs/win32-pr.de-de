@@ -1,7 +1,7 @@
 ---
-description: 'Entfernt die Zugriffsbeschränkung für einen Bereich von Bytes, der zuvor mithilfe von ibytebuffer:: LockRegion eingeschränkt wurde.'
+description: Entfernt die Zugriffseinschränkung für einen Bereich von Bytes, der zuvor mit IByteBuffer::LockRegion eingeschränkt wurde.
 ms.assetid: f2a1162e-7fc7-4a55-befb-0b017edb9fe2
-title: 'Ibytebuffer:: UnlockRegion-Methode (scardssp. h)'
+title: IByteBuffer::UnlockRegion-Methode (Scardssp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 92e49ba000177326ad14d3b83002613a15e96e18
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 798569621c1a46e73ea6fd8e2f4f3333c3a0cbcef32618797fcba39d35b55bf6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127390"
 ---
-# <a name="ibytebufferunlockregion-method"></a>Ibytebuffer:: UnlockRegion-Methode
+# <a name="ibytebufferunlockregion-method"></a>IByteBuffer::UnlockRegion-Methode
 
-\[Die **UnlockRegion** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [**IStream**](/windows/desktop/api/objidl/nn-objidl-istream) -Schnittstelle bietet eine ähnliche Funktionalität.\]
+\[Die **UnlockRegion-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [**IStream-Schnittstelle**](/windows/desktop/api/objidl/nn-objidl-istream) bietet ähnliche Funktionen.\]
 
-Die **UnlockRegion** -Methode entfernt die Zugriffsbeschränkung für einen Bereich von Bytes, der zuvor mithilfe von [**ibytebuffer:: LockRegion**](ibytebuffer-lockregion.md)eingeschränkt wurde.
+Die **UnlockRegion-Methode** entfernt die Zugriffseinschränkung für einen Bereich von Bytes, der zuvor mit [**IByteBuffer::LockRegion**](ibytebuffer-lockregion.md)eingeschränkt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,38 +43,38 @@ HRESULT UnlockRegion(
 
 <dl> <dt>
 
-*liboffset* \[ in\]
+*libOffset* \[ In\]
 </dt> <dd>
 
-Der Byte Offset für den Anfang des Bereichs.
+Byteoffset für den Anfang des Bereichs.
 
 </dd> <dt>
 
-*CB* \[ in\]
+*cb* \[ In\]
 </dt> <dd>
 
-Länge (in Byte) des Bereichs, der eingeschränkt werden soll.
+Länge des zu beschränkenden Bereichs in Bytes.
 
 </dd> <dt>
 
-*dwLockType* \[ in\]
+*dwLockType* \[ In\]
 </dt> <dd>
 
-Zugriffs Einschränkungen, die zuvor auf den Bereich gesetzt wurden.
+Zugriffseinschränkungen, die zuvor für den Bereich gelten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT**. Der Wert S OK gibt an, dass \_ der Vorgang erfolgreich war.
+Der Rückgabewert ist ein **HRESULT.** Der Wert S \_ OK gibt an, dass der Aufruf erfolgreich war.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **ibytebuffer:: UnlockRegion** -Methode entsperrt einen zuvor gesperrten Bereich mithilfe der [**ibytebuffer:: LockRegion**](ibytebuffer-lockregion.md) -Methode. Gesperrte Bereiche müssen später explizit entsperrt werden, indem **ibytebuffer:: UnlockRegion** mit exakt denselben Werten für die Parameter *liboffset*, *CB* und *dwLockType* aufgerufen wird. Die Region muss entsperrt werden, bevor der Stream freigegeben wird. Zwei angrenzende Regionen können nicht separat gesperrt und dann mit einem einzigen Unlock-Befehl entsperrt werden.
+Die **IByteBuffer::UnlockRegion-Methode** entsperrt eine Region, die zuvor mithilfe der [**IByteBuffer::LockRegion-Methode**](ibytebuffer-lockregion.md) gesperrt wurde. Gesperrte Bereiche müssen später explizit entsperrt werden, indem **IByteBuffer::UnlockRegion** mit genau den gleichen Werten für die Parameter *libOffset,* *cb* und *dwLockType* aufgerufen wird. Die Region muss entsperrt werden, bevor der Stream freigegeben wird. Zwei angrenzende Regionen können nicht separat gesperrt und dann mit einem einzigen Entsperraufruf entsperrt werden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird gezeigt, wie ein Bereich von Bytes entsperrt wird.
+Das folgende Beispiel zeigt das Entsperren eines Bytebereichs.
 
 
 ```C++
@@ -94,14 +94,14 @@ if (FAILED(hr))
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardssp. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardssp. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardssp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardssp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ ibytebuffer ist als E126F8FE-A7AF-11D0-B88A-00C04FD424B9 definiert.<br/>          |
+| IID<br/>                      | IID \_ IByteBuffer ist als E126F8FE-A7AF-11D0-B88A-00C04FD424B9 definiert.<br/>          |
 
 
 

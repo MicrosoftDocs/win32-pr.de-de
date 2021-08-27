@@ -1,7 +1,7 @@
 ---
-description: Die sessionstats-Struktur enthält Statistiken zu einer Sitzung.
+description: Die SESSIONSTATS-Struktur stellt Statistiken zu einer Sitzung bereit.
 ms.assetid: 51a6a601-634e-4d97-8c85-d3961400a2d1
-title: Sessionstats-Struktur (Netmon. h)
+title: SESSIONSTATS-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 4eddfa6b0a45627c59e61fd083eb11b8d5f26caf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 231c94d2abda40974249f6c3cc82c8efc7518cb21d5881f44e63f647bcb21de2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128830"
 ---
-# <a name="sessionstats-structure"></a>Sessionstats-Struktur
+# <a name="sessionstats-structure"></a>SESSIONSTATS-Struktur
 
-Die **sessionstats** -Struktur enthält Statistiken zu einer [*Sitzung*](s.md).
+Die **SESSIONSTATS-Struktur** stellt Statistiken zu einer [*Sitzung*](s.md)bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef struct _SESSIONSTATS {
 
 <dl> <dt>
 
-**Nexzession**
+**NextSession**
 </dt> <dd>
 
-Index der nächsten Sitzung des Stations Besitzers.
+Index der nächsten Sitzung des Stationsbesitzers.
 
 </dd> <dt>
 
-**Stationowner**
+**StationOwner**
 </dt> <dd>
 
-Index einer Besitzer Station innerhalb des zugeordneten [Stations Statistik](stationstats.md) -Struktur Arrays. Die Besitzer Station ist die Station, die die Sitzung initiiert hat, der Station, die die Pakete der Sitzung gesendet hat.
+Index einer Besitzerstation innerhalb [](stationstats.md) des zugeordneten STATIONSTATS-Strukturarrays. Die Besitzerstation ist die Station, die die Sitzung initiiert hat, die Station, die die Pakete der Sitzung gesendet hat.
 
 </dd> <dt>
 
-**Stationpartner**
+**StationPartner**
 </dt> <dd>
 
-Index der anderen Station innerhalb des zugeordneten [Stations Statistik](stationstats.md) -Struktur Arrays. Die Partnerstation ist die Station, die die Pakete der Sitzung empfangen hat.
+Index der anderen Station innerhalb des zugeordneten [STATIONSTATS-Strukturarrays.](stationstats.md) Die Partnerstation ist die Station, die die Pakete der Sitzung empfangen hat.
 
 </dd> <dt>
 
@@ -71,19 +71,19 @@ Dieser Member ist veraltet.
 
 </dd> <dt>
 
-**Totalpacketssent**
+**TotalPacketsSent**
 </dt> <dd>
 
 Anzahl der in der Sitzung gesendeten Pakete.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Netzwerkmonitor speichert Sitzungs-und Stations Informationen in zwei zugeordneten Arrays, deren Elemente **sessionstats** bzw. [stationstats](stationstats.md) -Strukturen sind. Die Member dieser Strukturen können verwendet werden, um zwischen Ihnen zu navigieren. Wenn Sie z. b. zur nächsten Sitzung für einen bestimmten Stations Besitzer wechseln möchten, verwenden Sie **nexzession**. Um zum Besitzer und zur Partnerstation der Sitzung im stationstats-Array zu springen, verwenden Sie den in **stationowner** und **stationpartner** bereitgestellten Index.
+Netzwerkmonitor speichert Sitzungs- und Stationsinformationen in zwei zugeordneten Arrays, deren Elemente **SESSIONSTATS-** bzw. [STATIONSTATS-Strukturen](stationstats.md) sind. Die Member dieser Strukturen können verwendet werden, um zwischen ihnen zu navigieren. Um beispielsweise zur nächsten Sitzung für einen bestimmten Stationsbesitzer zu wechseln, verwenden Sie **NextSession**. Um zur Besitzer- und Partnerstation der Sitzung im STATIONSTATS-Array zu wechseln, verwenden Sie den Index, der in **StationOwner** und **StationPartner** bereitgestellt wird.
 
 > [!Note]  
-> Das sessionstats-Array enthält ein-Element für jede Sitzung in der aktuellen Erfassung. Der Netzwerkmonitor Algorithmus, der zum Hinzufügen von Elementen zum sessionstats-Array verwendet wird, basiert auf der effizienten Aufzeichnung von Informationen, während die Erfassung ausgeführt wird. Folglich ist die nächste Sitzung für eine bestimmte Besitzer Station nicht immer das nächste Element im Array.
+> Das SESSIONSTATS-Array enthält ein Element für jede Sitzung in der aktuellen Erfassung. Der Algorithmus Netzwerkmonitor zum Hinzufügen von Elementen zum SESSIONSTATS-Array verwendet, basiert auf der effizienten Aufzeichnung von Informationen, während die Erfassung ausgeführt wird. Folglich ist die nächste Sitzung für eine bestimmte Besitzerstation nicht immer das nächste Element im Array.
 
  
 
@@ -95,7 +95,7 @@ Netzwerkmonitor speichert Sitzungs-und Stations Informationen in zwei zugeordnet
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -103,13 +103,13 @@ Netzwerkmonitor speichert Sitzungs-und Stations Informationen in zwei zugeordnet
 
 <dl> <dt>
 
-[Idelta aydc:: getconversation ationstatistics](idelaydc-getconversationstatistics.md)
+[IDelaydC::GetConversationStatistics](idelaydc-getconversationstatistics.md)
 </dt> <dt>
 
-["Irren:: getconversation ationstatistics"](irtc-getconversationstatistics.md)
+[IRTC::GetConversationStatistics](irtc-getconversationstatistics.md)
 </dt> <dt>
 
-[IStats:: getconversation ationstatistics](istats-getconversationstatistics.md)
+[IStats::GetConversationStatistics](istats-getconversationstatistics.md)
 </dt> </dl>
 
  

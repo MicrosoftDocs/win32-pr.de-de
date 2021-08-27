@@ -1,31 +1,31 @@
 ---
-description: ICE76 überprüft die Verwendung des SFP (WFP)-Katalogs in Windows Installer Paketen für Windows Me. Dieses Eis überprüft auch, ob keine Dateien in der BindImage-Tabelle SFP-Kataloge referenzieren.
+description: ICE76 überprüft die Verwendung des SFP-Katalogs (WFP) in Windows Installer-Paketen für Windows Me. Dieser ICE überprüft auch, ob keine Dateien in der BindImage-Tabelle auf SFP-Kataloge verweisen.
 ms.assetid: e8b60b11-19ac-4ec4-aa36-a1f7a3ccd6f6
 title: ICE76
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5beb0157053e9bd3e4bf0d896f52af04a511ac24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5a0b6caf5e29d26ba68721daa156dd0fc78a1868b5aa1ba1b7ea165834dd5ac8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129430"
 ---
 # <a name="ice76"></a>ICE76
 
-ICE76 überprüft die Verwendung des SFP (WFP)-Katalogs in Windows Installer Paketen für Windows Me. Dieses Eis überprüft auch, ob keine Dateien in der BindImage- [Tabelle](bindimage-table.md) SFP-Kataloge referenzieren.
+ICE76 überprüft die Verwendung des SFP-Katalogs (WFP) in Windows Installer-Paketen für Windows Me. Dieser ICE überprüft auch, ob keine [](bindimage-table.md) Dateien in der BindImage-Tabelle auf SFP-Kataloge verweisen.
 
-Der Windows-Datei Schutz erfordert eine genaue Entsprechung zwischen der Datei und der Signatur, die in die Katalog Datei eingebettet ist. Dateien, die auf einen SFP-Katalog verweisen, dürfen nicht in der Tabelle ' BindImage ' aufgeführt werden, da die Auswirkung der [BindImage-Aktion](bindimage-action.md) auf diese Dateien zwischen Computern abweicht. Dateien, auf die von SFP-Katalogen verwiesen wird, müssen in Komponenten vorliegen, die permanent sind oder lokal installiert sind
+Windows Der Dateischutz erfordert eine genaue Übereinstimmung zwischen der Datei und der signatur, die in die Katalogdatei eingebettet ist. Dateien, die auf einen SFP-Katalog verweisen, dürfen nicht in der BindImage-Tabelle aufgeführt werden, da sich die Auswirkungen der [BindImage-Aktion](bindimage-action.md) auf diese Dateien von Computer zu Computer unterscheiden. Dateien, auf die von SFP-Katalogen verwiesen wird, müssen sich in permanenten oder lokal installierten Komponenten befinden.
 
 ## <a name="result"></a>Ergebnis
 
-ICE76 gibt einen Fehler für jede Datei in der [Tabelle BindImage](bindimage-table.md) aus, die auch in der [Tabelle filesfpcatalog](filesfpcatalog-table.md)vorliegt.
+ICE76 sendet einen Fehler für jede Datei in der [BindImage-Tabelle,](bindimage-table.md) die sich ebenfalls in der [FileSFPCatalog-Tabelle befindet.](filesfpcatalog-table.md)
 
-ICE76 gibt einen Fehler aus, wenn eine Datei in der filesfpcatalog-Tabelle zu einer Komponente mit einer der folgenden true gehört:
+ICE76 gibt einen Fehler aus, wenn eine Datei in der FileSFPCatalog-Tabelle zu einer Komponente mit einer der folgenden TRUE-Angaben gehört:
 
--   **msidbcomponentattributespermanent** ist nicht in der Attribute-Spalte der [Component-Tabelle](component-table.md)festgelegt.
--   **msidbcomponentattributessourceonly** wird in der Spalte Attribute der Komponenten Tabelle festgelegt.
--   **msidbattributesoptional** wird in der Spalte Attribute der Komponenten Tabelle festgelegt.
+-   **msidbComponentAttributesPermanent** ist nicht in der Attributes -Spalte der [Component-Tabelle](component-table.md)festgelegt.
+-   **msidbComponentAttributesSourceOnly** wird in der Attributes -Spalte der Component-Tabelle festgelegt.
+-   **msidbAttributesOptional** wird in der Attributes -Spalte der Component-Tabelle festgelegt.
 
 ## <a name="example"></a>Beispiel
 
@@ -35,11 +35,11 @@ ICE76 meldet den folgenden Fehler für das Beispiel:
 File 'File1' references a SFP catalog. Therefore it cannot be in the BindImage table.
 ```
 
-[Filesfpcatalog-Tabelle](filesfpcatalog-table.md) (partiell)
+[FileSFPCatalog-Tabelle](filesfpcatalog-table.md) (partiell)
 
 
 
-| Datei\_ | Sfpcatalog\_ |
+| Datei\_ | SFPCatalog\_ |
 |--------|--------------|
 | Datei1  | Catalog1.Cat |
 
@@ -59,7 +59,7 @@ File 'File1' references a SFP catalog. Therefore it cannot be in the BindImage t
 
  
 
-Um dieses Problem zu beheben, geben Sie keine Dateien ein, die auf SFP-Kataloge in der BindImage-Tabelle verweisen.
+Geben Sie zum Beheben dieses Problems keine Dateien ein, die auf SFP-Kataloge verweisen, in die BindImage-Tabelle.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -68,13 +68,13 @@ Um dieses Problem zu beheben, geben Sie keine Dateien ein, die auf SFP-Kataloge 
 [BindImage-Tabelle](bindimage-table.md)
 </dt> <dt>
 
-[Komponenten Tabelle](component-table.md)
+[Komponententabelle](component-table.md)
 </dt> <dt>
 
-[Filesfpcatalog-Tabelle](filesfpcatalog-table.md)
+[FileSFPCatalog-Tabelle](filesfpcatalog-table.md)
 </dt> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

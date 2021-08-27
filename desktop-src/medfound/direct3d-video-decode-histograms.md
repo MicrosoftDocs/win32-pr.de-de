@@ -1,69 +1,69 @@
 ---
-description: Dieser Artikel enthält Anleitungen zum Erstellen von Histogrammen beim Decodieren von Videos mit Direct3D 11-oder 12-Video-APIs.
+description: Dieser Artikel enthält Anleitungen zum Generieren von Histogrammen beim Decodieren von Videos mithilfe von Direct3D 11- oder 12-Video-APIs.
 ms.assetid: ''
-title: Direct3D-Video-Decodieren von Histogrammen
+title: Direct3D-Videodecodierungshistogramme
 ms.topic: article
 ms.date: 08/19/2019
-ms.openlocfilehash: 6e25abd39ba95b669c2d76ced5f825ea80c4e3c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94371fd68c981a98c4ba629822f928e148c230565b5103dfaa2350543bbe9a57
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061630"
 ---
-# <a name="direct3d-video-decode-histograms"></a>Direct3D-Video-Decodieren von Histogrammen
+# <a name="direct3d-video-decode-histograms"></a>Direct3D-Videodecodierungshistogramme
 
-Dieser Artikel enthält Anleitungen zum Erstellen von Histogrammen beim Decodieren von Videos mit Direct3D 11-oder 12-Video-APIs.
+Dieser Artikel enthält Anleitungen zum Generieren von Histogrammen beim Decodieren von Videos mithilfe von Direct3D 11- oder 12-Video-APIs.
 
-## <a name="checking-the-video-device-for-histogram-capabilities"></a>Überprüfen des Videogeräts auf histogrammfunktionen
+## <a name="checking-the-video-device-for-histogram-capabilities"></a>Überprüfen des Videogeräts auf Histogrammfunktionen
 
-Bevor Sie versuchen, Histogramme zu generieren, müssen Sie überprüfen, ob das aktuelle Videogerät das Feature zum Decodieren von Video decodieren unterstützt.
-
-### <a name="direct3d-12"></a>Direct3D 12
-
-Wenden Sie sich an [ID3D12VideoDevice:: checkfeaturesupport](/windows/desktop/api/d3d12video/nf-d3d12video-id3d12videodevice-checkfeaturesupport) , um die Support Details für Direct3D 12-Video Decodierungs Vorgänge zu überprüfen. Übergeben Sie den **D3D12_FEATURE_VIDEO_DECODE_HISTOGRAM** Wert aus der [D3D12_FEATURE_VIDEO](/windows/desktop/api/d3d12video/ne-d3d12video-d3d12_feature_video) -Enumeration, um anzugeben, dass Sie Unterstützung für Histogramme zum Decodieren von Videos anfordern.
-
-### <a name="direct3d-11"></a>Direct3D 11
-
-Wenden Sie [ID3D11VideoDevice2:: checkfeaturesupport](/windows/win32/api/d3d11_4/nf-d3d11_4-id3d11videodevice2-checkfeaturesupport) an, und übergeben Sie den **D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM** Wert des [D3D11_FEATURE_VIDEO](/windows/win32/api/d3d11_4/ne-d3d11_4-d3d11_feature_video) , um zu ermitteln, ob Histogramme für das aktuelle Gerät unterstützt werden.
-
-## <a name="enabling-histogram-during-decode"></a>Aktivieren von Histogramm während der Decodierung
-
-Die Sammlung der Histogrammdaten wird vom Aufrufer aktiviert, der die Puffer bereitstellt, in denen die Histogrammdaten gespeichert werden.  Ein NULL-histogrammausgabepuffer für eine bestimmte Komponente gibt an, dass die histogrammauflistung deaktiviert ist.
+Bevor Sie versuchen, Histogramme zu erstellen, müssen Sie überprüfen, ob das aktuelle Videogerät die Videodecodierungshistogrammfunktion unterstützt.
 
 ### <a name="direct3d-12"></a>Direct3D 12
 
-Um Ausgabepuffer zum Empfangen von Histogrammdaten mithilfe von Direct3D 12 bereitzustellen, sollten Sie die decodierbefehlsliste mithilfe der [ID3D12VideoDecodeCommandList1::D ecodeframe1](/windows/win32/api/d3d12video/nf-d3d12video-id3d12videodecodecommandlist1-decodeframe1) -Methode erstellen. Diese Methode nimmt eine [D3D12_VIDEO_DECODE_OUTPUT_STREAM_ARGUMENTS1](/windows/win32/api/d3d12video/ns-d3d12video-d3d12_video_decode_output_stream_arguments1) Struktur als Argument an. **D3D12_VIDEO_DECODE_OUTPUT_STREAM_ARGUMENTS1** verfügt über ein Feld vom Typ [D3D12_VIDEO_DECODE_OUTPUT_HISTOGRAM](/windows/win32/api/d3d12video/ns-d3d12video-d3d12_video_decode_output_histogram), mit dem Sie ein [ID3D12Resource](/windows/win32/api/d3d12/nn-d3d12-id3d12resource) angeben können, in das Histogrammdaten ausgegeben werden.
+Rufen [Sie ID3D12VideoDevice::CheckFeatureSupport](/windows/desktop/api/d3d12video/nf-d3d12video-id3d12videodevice-checkfeaturesupport) auf, um die Supportdetails für Direct3D 12-Videodecodierungsvorgänge zu überprüfen. Übergeben Sie **D3D12_FEATURE_VIDEO_DECODE_HISTOGRAM** wert der [](/windows/desktop/api/d3d12video/ne-d3d12video-d3d12_feature_video) D3D12_FEATURE_VIDEO -Enumeration, um anzugeben, dass Sie Unterstützung für Videodecodierungshistogramme anfordern.
 
 ### <a name="direct3d-11"></a>Direct3D 11
 
-Die [ID3D11VideoContext3](/windows/win32/api/d3d11_4/nn-d3d11_4-id3d11videocontext3) -Schnittstelle stellt die [DecoderBeginFrame1](/windows/win32/api/d3d11_4/nf-d3d11_4-id3d11videocontext3-decoderbeginframe1) -Methode bereit, mit der Sie eine oder mehrere [ID3D11Buffer](/windows/win32/api/d3d11/nn-d3d11-id3d11buffer) -Schnittstellen bereitstellen können, in die die Histogrammdaten ausgegeben werden. Der [D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT](/windows/win32/api/d3d11_4/ne-d3d11_4-d3d11_video_decoder_histogram_component) , um die Komponenten anzugeben, für die Histogrammdaten generiert werden sollen.
+Rufen [Sie ID3D11VideoDevice2::CheckFeatureSupport](/windows/win32/api/d3d11_4/nf-d3d11_4-id3d11videodevice2-checkfeaturesupport) auf, und übergeben Sie den **D3D11_FEATURE_VIDEO_DECODER_HISTOGRAM-Wert** der [D3D11_FEATURE_VIDEO,](/windows/win32/api/d3d11_4/ne-d3d11_4-d3d11_feature_video) um zu bestimmen, ob Histogramme für das aktuelle Gerät unterstützt werden.
+
+## <a name="enabling-histogram-during-decode"></a>Aktivieren des Histogramms während der Decodierung
+
+Die Sammlung von Histogrammdaten wird vom Aufrufer aktiviert, der die Puffer an stellt, in denen die Histogrammdaten gespeichert werden.  Ein NULL-Histogramm-Ausgabepuffer für eine bestimmte Komponente gibt an, dass die Histogrammsammlung deaktiviert ist.
+
+### <a name="direct3d-12"></a>Direct3D 12
+
+Um Ausgabepuffer zum Empfangen von Histogrammdaten mit Direct3D 12 bereitstellen zu können, sollten Sie ihre Decodierungsbefehlsliste mithilfe der [ID3D12VideoDecodeCommandList1::D ecodeFrame1-Methode](/windows/win32/api/d3d12video/nf-d3d12video-id3d12videodecodecommandlist1-decodeframe1) erstellen. Diese Methode verwendet eine [D3D12_VIDEO_DECODE_OUTPUT_STREAM_ARGUMENTS1-Struktur](/windows/win32/api/d3d12video/ns-d3d12video-d3d12_video_decode_output_stream_arguments1) als Argument. **D3D12_VIDEO_DECODE_OUTPUT_STREAM_ARGUMENTS1** verfügt über ein Feld vom Typ [D3D12_VIDEO_DECODE_OUTPUT_HISTOGRAM](/windows/win32/api/d3d12video/ns-d3d12video-d3d12_video_decode_output_histogram), mit dem Sie eine [ID3D12Resource](/windows/win32/api/d3d12/nn-d3d12-id3d12resource) angeben können, in die Histogrammdaten ausgegeben werden.
+
+### <a name="direct3d-11"></a>Direct3D 11
+
+Die [ID3D11VideoContext3-Schnittstelle](/windows/win32/api/d3d11_4/nn-d3d11_4-id3d11videocontext3) stellt die [DecoderBeginFrame1-Methode](/windows/win32/api/d3d11_4/nf-d3d11_4-id3d11videocontext3-decoderbeginframe1) bereit, mit der Sie eine oder mehrere [ID3D11Buffer-Schnittstellen](/windows/win32/api/d3d11/nn-d3d11-id3d11buffer) bereitstellen können, in die die Histogrammdaten ausgegeben werden. Die [D3D11_VIDEO_DECODER_HISTOGRAM_COMPONENT,](/windows/win32/api/d3d11_4/ne-d3d11_4-d3d11_video_decoder_histogram_component) um die Komponenten anzugeben, für die Histogrammdaten generiert werden sollen.
 
 
-## <a name="buffer-format"></a>Puffer Format
+## <a name="buffer-format"></a>Pufferformat
 
-Die Decodierung der histogrammausgabe wird als ganzzahliger Leistungs-Counter pro Komponente in einen Puffer geschrieben.  Das Puffer Format ist ein 32-Bit-Wert pro bin.  Ein Gerät verwendet möglicherweise eine ganzzahlige Bittiefe, die kleiner als 32 Bits ist, aber 16, 24 oder 32 Bits betragen muss.  Wenn dies der Fall ist, wird der Leistungswert in den unteren Bits gespeichert, und die oberen nicht verwendeten Bits sind 0 (null).  Wenn die Anzahl für einen "bin" den maximalen Wert überschreitet, legt das Gerät stattdessen den maximalen Wert fest. Von den Geräten wird die Anzahl der unterstützten Behälter gemeldet, bei der es sich um einen Wert von 2 handeln muss.  Die Mindestanzahl von Containern, die für Geräte erforderlich sind, die dieses Feature unterstützen, ist 64. 
+Die Ausgabe des Decodierungshistogramms wird als ganzzahliger Indikator pro Komponente in einen Puffer geschrieben.  Das Pufferformat ist ein 32-Bit-Wert pro Bin.  Ein Gerät kann eine ganzzahlige Indikatorbittiefe verwenden, die kleiner als 32 Bits ist, aber 16, 24 oder 32 Bits sein muss.  Wenn dies der Wert ist, wird der Indikatorwert in den unteren Bits gespeichert, und die oberen nicht verwendeten Bits sind 0 (null).  Wenn die Anzahl für eine Behälter den maximalen Wert überschreiten würde, legt das Gerät stattdessen den maximalen Wert fest. Geräte melden die Anzahl der unterstützten Behälter. Dies muss ein Wert von 2 sein.  Für Geräte, die dieses Feature unterstützen, sind mindestens 64 Geräte erforderlich. 
 
-Sie müssen einen Puffer mit einem abgeglichen 256-Byte-Offset und einer Größe angeben, die die unterstützte Anzahl von Containern multipliziert mit der bin-Größe (4 Bytes) für jede angeforderte Komponente ist.  Die bin-Platzierung wird durch Folgendes bestimmt:
+Sie müssen einen Puffer mit einem 256-Byte-ausgerichteten Offset und einer Größe zur Verfügung stellen, die der unterstützten Anzahl von Behältern multipliziert mit der Bin-Größe (4 Byte) für jede angeforderte Komponente entspricht.  Die Bin-Platzierung wird durch:
 
 `binIndex = floor(value / [max value of channel + 1] * (countBins))`
 
 
-Wenn ein Format die nützlichen Bits einer Komponente als kleiner als die Anzahl der Speicher Bits definiert (z. b. P010 verwendet die ersten 10 Bits von 16 Bits des Komponenten Speichers), werden nur die nützlichen Bits berücksichtigt (P010 wird als 10-Bit-Wert behandelt). 
+Wenn ein Format die nützlichen Bits einer Komponente als kleiner als die Anzahl der Speicherbits definiert (p010 verwendet z. B. die ersten 10 Bits von 16 Bits des Komponentenspeichers), werden nur die nützlichen Bits berücksichtigt (P010 wird als 10-Bit-Wert behandelt). 
 
-Das Videogerät meldet, welche Komponenten unterstützt werden.  Wenn der Aufrufer kein Histogramm für eine bestimmte Komponente wünschen, geben Sie nullptr an.  Wenn der Treiber ein Histogramm für eine bestimmte Komponente nicht unterstützt, muss der histogrammpuffer der Komponente "nullptr" lauten.
+Das Videogerät meldet, welche Komponenten unterstützt werden.  Wenn der Aufrufer kein Histogramm für eine bestimmte Komponente möchte, gibt er nullptr an.  Wenn der Treiber kein Histogramm für eine bestimmte Komponente unterstützt, muss der Histogrammpuffer dieser Komponente NULLptr sein.
 
-Wenn mehrere Komponenten unterstützt werden, kann die Anwendung jede beliebige Kombination von Komponenten pro Frame-Decodierung anfordern.  Wenn die Hardware z. b. die Unterstützung für y-, U-und v-Komponenten meldet, kann die Anwendung das Y-Histogramm nur für Frame 1, das U-Histogramm nur für Frame 2 und das V-Histogramm nur für Frame 3 anfordern.  Sie können auch eine beliebige Kombination von zwei Komponenten oder alle drei Komponenten anfordern.
+Wenn mehrere Komponenten unterstützt werden, kann die Anwendung eine beliebige Kombination von Komponenten pro Framedecodierung anfordern.  Wenn die Hardware beispielsweise Unterstützung für Y-, U- und V-Komponenten meldet, kann die Anwendung das Y-Histogramm nur für Frame 1, das U-Histogramm nur für Frame 2 und das V-Histogramm nur für Frame 3 anfordern.  Sie können auch eine beliebige Kombination aus zwei oder allen drei Komponenten anfordern.
 
-Anwendungen stellen für jede angeforderte Komponente einen separaten Offset-und Puffer Zeiger bzw.-handle bereit.  Dieser Zeiger weist möglicherweise auf dieselbe Ressource wie eine andere Komponente oder eine separate Ressource hin.  Der Offset ermöglicht das Platzieren mehrerer Komponenten im gleichen Puffer, aber der vom Offset und der histogrammgröße angegebene Ausgabebereich darf sich nicht überlappen.  Das Histogramm kann auch in denselben Puffer wie andere nicht zusammenhängende Inhalte geschrieben werden, z. b. bei der Verwendung in einer Ressourcen-unter Zuordnungs Strategie.
+Anwendungen stellen für jede angeforderte Komponente einen separaten Offset- und Pufferzeiger/-handle zur Verfügung.  Dieser Zeiger kann auf dieselbe Ressource wie eine andere Komponente oder eine separate Ressource zeigen.  Der Offset ermöglicht das Platzieren mehrerer Komponenten in demselben Puffer, aber der durch den Offset und die Histogrammgröße angegebene Ausgabebereich darf keine andere Histogrammkomponentenausgabe überlappen.  Das Histogramm kann auch in den gleichen Puffer geschrieben werden wie andere nicht verknüpfte Inhalte, z. B. bei Verwendung in einer Strategie für die Ressourcenunterzuordnung.
 
 
-Die D3D-Laufzeit überprüft, ob Aufrufer nur das Histogramm für unterstützte Komponenten aktivieren, ob der Puffer Offset ausgerichtet ist, und dass die Puffergröße für die gemeldete Anzahl von Containern ausreichend ist.
+Die D3D-Laufzeit überprüft, ob Aufrufer das Histogramm nur für unterstützte Komponenten aktivieren, ob der Pufferoffset ausgerichtet ist und dass diese Puffergröße für die gemeldete Anzahl von Behältern ausreicht.
 
 
 ## <a name="protected-content"></a>Geschützter Inhalt
 
-Die histogrammpuffer benötigen denselben Oberflächenschutz wie die decodierausgabeoberfläche. Wenn die Decodierung der Ausgabe Oberfläche keine geschützte Ressource ist, darf der histogrammpuffer keine geschützte Ressource sein. Wenn die Decodierung der Ausgabe Oberfläche eine geschützte Ressource ist, muss es sich bei dem Histogramm um eine geschützte Ressource handeln.
+Die Histogrammpuffer müssen denselben Oberflächenschutz wie die Decodierungsausgabeoberfläche haben. Wenn die Decodierungsausgabeoberfläche keine geschützte Ressource ist, darf der Histogrammpuffer keine geschützte Ressource sein. Wenn die Decodierungsausgabeoberfläche eine geschützte Ressource ist, muss das Histogramm eine geschützte Ressource sein.
 
 
 
@@ -76,7 +76,7 @@ Die histogrammpuffer benötigen denselben Oberflächenschutz wie die decodieraus
 
 <dl> <dt>
 [Direct3D 12-Video-APIs](direct3d-12-video-apis.md) 
- [Media Foundation-Programmier Handbuch](media-foundation-programming-guide.md)
+ [Media Foundation-Programmierhandbuch](media-foundation-programming-guide.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: WM/audiofileurl
-description: Das Attribut WM/audiofileurl enthält die Adresse einer offiziellen Webseite mit Informationen zu der Datei, in der dieses Attribut angezeigt wird. Ein Song könnte z. b. über einen Link zur Albumseite auf der Website des Künstlers verfügen.
+title: WM/AudioFileURL
+description: Das WM/AudioFileURL-Attribut enthält die Adresse einer offiziellen Webseite mit Informationen über die Datei, in der dieses Attribut angezeigt wird. Beispielsweise kann ein Titel einen Link zurück zur Albumseite auf der Website des Interpreten enthalten.
 ms.assetid: 5da7b24c-d321-4b6a-8761-64c505fe9df6
 keywords:
-- WM/audiofileurl Windows Media-Format
+- WM/AudioFileURL windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bee48670a512ad6a52431a33db40258b112dc267
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 86da3cdbdd3995838ffb5171c00f89dcd17b64814d048b7d52f69a8fd32ddaa3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104101003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110030"
 ---
-# <a name="wmaudiofileurl"></a>WM/audiofileurl
+# <a name="wmaudiofileurl"></a>WM/AudioFileURL
 
-Das Attribut **WM/audiofileurl** enthält die Adresse einer offiziellen Webseite mit Informationen zu der Datei, in der dieses Attribut angezeigt wird. Ein Song könnte z. b. über einen Link zur Albumseite auf der Website des Künstlers verfügen.
+Das **WM/AudioFileURL-Attribut** enthält die Adresse einer offiziellen Webseite mit Informationen über die Datei, in der dieses Attribut angezeigt wird. Beispielsweise kann ein Titel einen Link zurück zur Albumseite auf der Website des Interpreten enthalten.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmaudiofileurl
+g \_ wszWMAudioFileURL
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -38,9 +38,9 @@ g \_ wszwmaudiofileurl
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -3,7 +3,7 @@ title: ControlSizeDefinition-Element
 description: Stellt den Layoutstil einer Gruppe von Steuerelementen in einer benutzerdefinierten Vorlage dar.
 ms.assetid: f9b875f4-e0cf-4823-81b5-ed19c201dcbb
 keywords:
-- ControlSizeDefinition-Element Windows-Menüband
+- ControlSizeDefinition-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0ff5217c08b4ea6da1931b0c65501f912f2cc5dc
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 81c174a92ff502a3ebde5ae06e5703401de2c290
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443411"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622676"
 ---
 # <a name="controlsizedefinition-element"></a>ControlSizeDefinition-Element
 
@@ -41,17 +41,17 @@ Stellt den Layoutstil einer Gruppe von Steuerelementen in einer benutzerdefinier
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
+<th>Attribut</th>
 <th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -59,13 +59,13 @@ Stellt den Layoutstil einer Gruppe von Steuerelementen in einer benutzerdefinier
 <td><strong>ControlName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td><dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td><dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>Imagesize</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Beschränkt auf einen der folgenden Werte:<br/> <br/>
+<td>Auf einen der folgenden Werte beschränkt:<br/> <br/>
 <dt><span></span><span></span><strong></strong> (Groß)<br/> </dt> <dd></dd> <dt><span></span><span></span><strong></strong> (Klein)<br/> </dt> <dd> Standard. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
@@ -112,7 +112,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**Row-**](windowsribbon-element-row.md)oder [**SizeDefinition-Element**](windowsribbon-element-sizedefinition.md) auftreten.
 
@@ -215,7 +215,7 @@ Im folgenden Codebeispiel wird das grundlegende Markup für eine benutzerdefinie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

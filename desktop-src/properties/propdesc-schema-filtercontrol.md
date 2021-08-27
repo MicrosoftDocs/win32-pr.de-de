@@ -4,18 +4,18 @@ ms.assetid: a3117e16-20d0-4637-b726-9fa49516ad5c
 title: Filtercontrol
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74f002543b220347ba9aaba3659aa9a66f8aea7760b9d8a9177ef2980a823434
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 7ac7424cf281c08f1d8de87686e95a38be3f4f3a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119885960"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627546"
 ---
 # <a name="filtercontrol"></a>Filtercontrol
 
-Gibt an, welches Steuerelement im Headerfiltermenü verwendet werden soll. Es sollte nur ein [filterControl-Element]() für jedes [displayInfo-Element geben.](./propdesc-schema-displayinfo.md)
+Gibt an, welches Steuerelement im Headerfiltermenü verwendet werden soll. Es sollte nur ein [filterControl-Element]() für jedes [displayInfo-Element](./propdesc-schema-displayinfo.md) vorhanden sein.
 
-Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [filterControl-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [filterControl-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,19 +57,19 @@ Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [filt
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>BESCHREIBUNG</th>
+<th>Attribut</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Steuerung</td>
-<td>Öffentlich. Optional. Der Standardwert ist &quot; Default &quot; . Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; Standard. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -80,15 +80,15 @@ Wenn mehrere Elemente enthalten sind, wird das letzte verwendet. Wenn kein [filt
 <tbody>
 <tr class="odd">
 <td>Standard</td>
-<td>Standard. Verwendet das standard-Steuerelement, das auf dem -Attribut <typeInfo type=&quot;&quot;> basiert. Der Standardtyp ist &quot; &quot; DateTime, und das Standardsteuer steuerelement ist &quot; &quot; Calendar. Jeder andere Typ führt zu keinem speziellen Filtersteuerzeichen.</td>
+<td>Standard. Verwendet das Standardsteuerelement basierend auf dem <typeInfo type=&quot;&quot;> -Attribut. Der Standardtyp ist &quot; &quot; DateTime, und das Standardsteuerelement ist &quot; &quot; Calendar. Jeder andere Typ führt zu keinem speziellen Filtersteuerelement.</td>
 </tr>
 <tr class="even">
 <td>Kalender</td>
-<td>Verwendet das Calendar-Steuerelement.</td>
+<td>Verwendet das Kalendersteuerelement.</td>
 </tr>
 <tr class="odd">
 <td>Rating</td>
-<td>Verwendet das 5-Stern-Bewertungssteuer steuerelement.</td>
+<td>Verwendet das 5-Stern-Bewertungssteuerelement.</td>
 </tr>
 </tbody>
 </table>

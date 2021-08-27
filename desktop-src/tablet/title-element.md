@@ -4,12 +4,12 @@ ms.assetid: efeed3a6-de5e-4698-9dc3-d0acb3d13dee
 title: Title-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ef687f809aae5c3722cdad84ee63d79c7bfcfb21
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: 05661be8566cf4136194af4e08d8f9774d3413dc
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432222"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473136"
 ---
 # <a name="title-element"></a>Title-Element
 
@@ -33,57 +33,13 @@ Enthält Titelinformationen zur Journalnotiz.
 
 
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>attribute</th>
-<th>Typ</th>
-<th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
-<th>Mögliche Werte</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Stil</strong></td>
-<td><strong>xs:string</strong></td>
-<td>Erforderlich</td>
-<td>Gibt den Typ des Rahmens um den Titel der Notiz an.</td>
-<td><ul>
-<li>Keine</li>
-<li>SolidSquare</li>
-<li>OutlineSquare</li>
-<li>SolidRoundRect</li>
-<li>OutlineRoundRect</li>
-<li>SolidRoundRectDottedBaseline</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><strong>DateStyle</strong></td>
-<td><strong>xs:string</strong></td>
-<td>Erforderlich</td>
-<td>Definiert, ob der Titel ein Datum enthält oder nicht.</td>
-<td><ul>
-<li>Keine</li>
-<li>Short</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><strong>Farbe</strong></td>
-<td><a href="colortype-simple-type.md"><strong>ColorType simpleType</strong></a></td>
-<td>Optional</td>
-<td>Gibt die Hintergrundfarbe an.</td>
-<td>Siehe <a href="colortype-simple-type.md"><strong>ColorType simpleType</strong></a>.</td>
-</tr>
-</tbody>
-</table>
+
+| attribute | type | Erforderlich | BESCHREIBUNG | Mögliche Werte | 
+|-----------|------|----------|-------------|-----------------|
+| <strong>Stil</strong> | <strong>xs:string</strong> | Erforderlich | Gibt den Typ des Rahmens um den Titel der Notiz an. | <ul><li>Keine</li><li>SolidSquare</li><li>OutlineSquare</li><li>SolidRoundRect</li><li>OutlineRoundRect</li><li>SolidRoundRectDottedBaseline</li></ul> | 
+| <strong>DateStyle</strong> | <strong>xs:string</strong> | Erforderlich | Definiert, ob der Titel ein Datum enthält oder nicht. | <ul><li>Keine</li><li>Short</li></ul> | 
+| <strong>Farbe</strong> | <a href="colortype-simple-type.md"><strong>ColorType simpleType</strong></a> | Optional | Gibt die Hintergrundfarbe an. | Weitere Informationen finden Sie unter <a href="colortype-simple-type.md"><strong>ColorType simpleType</strong></a>. | 
+
 
 
 

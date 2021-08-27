@@ -3,7 +3,7 @@ title: ApplicationMenu-Element
 description: Stellt das Anwendungsmenü dar. | ApplicationMenu-Element
 ms.assetid: 815e0462-ea45-44b1-81bf-f5797b22e920
 keywords:
-- ApplicationMenu-Element Windows-Menüband
+- ApplicationMenu-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e535fbcc09a404ad7dd5a4019438f4513f5c77c6
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 7fcf64d3fa3b618a4e66777b8fd4c0d831a33126
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443051"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626126"
 ---
 # <a name="applicationmenu-element"></a>ApplicationMenu-Element
 
@@ -40,17 +40,17 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
+<th>Attribut</th>
 <th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -70,7 +70,7 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
 
 
-| Element                                                                                             | BESCHREIBUNG                                        |
+| Element                                                                                             | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**ApplicationMenu.RecentItems**](windowsribbon-element-applicationmenu-recentitems.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>      |
 | [**Menugroup**](windowsribbon-element-menugroup.md)<br/>                                     | Kann ein oder mehrere Male auftreten<br/> <br/> |
@@ -91,7 +91,7 @@ Stellt das [Anwendungsmenü](windowsribbon-controls-applicationmenu.md)dar.
 
 Erforderlich.
 
-Muss genau einmal für jede [**Ribbon.ApplicationMenu-Datei**](windowsribbon-element-ribbon-applicationmenu.md)auftreten.
+Muss für jedes [**Menüband.ApplicationMenu**](windowsribbon-element-ribbon-applicationmenu.md)genau einmal auftreten.
 
 Die untergeordneten Elemente des **ApplicationMenu-Elements** müssen in der angegebenen Reihenfolge auftreten:
 
@@ -189,7 +189,7 @@ Dieser Codeabschnitt zeigt die **ApplicationMenu-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

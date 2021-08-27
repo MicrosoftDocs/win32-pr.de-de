@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b34740d582e341cce3b2fd0b28203b7346a4de1d94a8586289be8ab252247943
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2d6f8e3f77d905eb601441ad8ab3ca88bb08f59d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118487722"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478526"
 ---
 # <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME-Struktur
 
@@ -104,28 +104,12 @@ Dieses Feld sollte ignoriert werden.
 
 Wenn es sich bei diesem Ereignis um eine Sicherung handelt, enthält dieses Flag einen der folgenden möglichen Werte:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Name</p></th>
-<th><p>Wert</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Streamingsicherung</p></td>
-<td><p>0 (Null)</p></td>
-</tr>
-<tr class="even">
-<td><p>Momentaufnahmesicherung</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Name</p> | <p>Wert</p> | 
+|-------------|--------------|
+| <p>Streamingsicherung</p> | <p>0 (Null)</p> | 
+| <p>Momentaufnahmesicherung</p> | <p>1</p> | 
+
 
 
 **fReserved**
@@ -138,26 +122,9 @@ Diese Struktur wird beim Debuggen verwendet.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

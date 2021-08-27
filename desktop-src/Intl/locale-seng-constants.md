@@ -1,27 +1,27 @@
 ---
-description: LOCALE- \_ Seng- \* Konstanten
+description: '\_LOCALE-SENG-Konstanten \*'
 ms.assetid: a1990e5a-c2c2-4ecc-a206-f818b179fc80
-title: LOCALE_SENG *-Konstanten
+title: LOCALE_SENG* Konstanten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85f77180b7cf89039ddfd87fcfba9e89a8098b29
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 982cd8c174e83a5f62da39cacf6790ff19606ad39ebc1d54451b35c825371790
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103869256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106240"
 ---
-# <a name="locale_seng-constants"></a>LOCALE- \_ Seng- \* Konstanten
+# <a name="locale_seng-constants"></a>\_LOCALE-SENG-Konstanten \*
 
-In diesem Thema werden die \_ \* von NLS verwendeten Gebiets Schema-Seng-Konstanten definiert.
+In diesem Thema werden die \_ locale-SENG-Konstanten \* definiert, die von NLS verwendet werden.
 
 
 
 | Wert                | Bedeutung                                                                                                                                                                   |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LOCALE \_ sengcountry  | Veraltet für Windows 7 und höher. Der vollständige englische Name des Landes bzw. der Region. Siehe [locale \_ senglishcountryname](locale-senglish-constants.md).                            |
-| LOCALE \_ sengcurrname | **Windows Me/98, Windows 2000:** Der vollständige englische Name der dem Gebiets Schema zugeordneten Währung. Es gibt keine Beschränkung für die Anzahl von Zeichen, die für diese Zeichenfolge zulässig sind. |
-| LOCALE- \_ senglanguage | Veraltet für Windows 7 und höher. Vollständiger englischer Name der Sprache aus dem ISO-Standard 639. Siehe [locale \_ senglishlanguagename](locale-senglish-constants.md).           |
+| LOCALE \_ SENGCOUNTRY  | Veraltet für Windows 7 und höher. Vollständiger englischer Name des Landes/der Region. Siehe [LOCALE \_ SENGLISHCOUNTRYNAME](locale-senglish-constants.md).                            |
+| LOCALE \_ SENGCURRNAME | **Windows Me/98, Windows 2000:** Der vollständige englische Name der Währung, die dem Locale zugeordnet ist. Die Anzahl der für diese Zeichenfolge zulässigen Zeichen ist nicht begrenzt. |
+| LOCALE \_ SENGLANGUAGE | Veraltet für Windows 7 und höher. Vollständiger englischer Name der Sprache aus ISO Standard 639. Siehe [LOCALE \_ SENGLISHLANGUAGENAME](locale-senglish-constants.md).           |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die Funktion findcloseprinterchangenotifischließt ein Änderungs Benachrichtigungs Objekt, das durch Aufrufen der findfirstprinterchangenotifizierungsfunktion erstellt wurde.
+description: Die Funktion FindClosePrinterChangeNotification schließt ein Änderungsbenachrichtigungsobjekt, das durch Aufrufen der FindFirstPrinterChangeNotification-Funktion erstellt wurde.
 ms.assetid: 2b4758f8-af0a-494b-8f1b-8ea6ee73c79b
-title: Findcloseprinterchangenotifi-Funktion (winspool. h)
+title: FindClosePrinterChangeNotification-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Spoolss.dll
-ms.openlocfilehash: 8040944d5890aa521681827bef786201a35da039
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17ec31b1f2992b4311e42e149d39b68b3d724a3d943d67df7c4c5fce88122606
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042214"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112490"
 ---
-# <a name="findcloseprinterchangenotification-function"></a>Findcloseprinterchangenotifi-Funktion
+# <a name="findcloseprinterchangenotification-function"></a>FindClosePrinterChangeNotification-Funktion
 
-Die Funktion **findcloseprinterchangenotifischließt** ein Änderungs Benachrichtigungs Objekt, das durch Aufrufen der [**findfirstprinterchangenotifizierungsfunktion**](findfirstprinterchangenotification.md) erstellt wurde. Der Drucker oder Druckserver, der dem Änderungs Benachrichtigungs Objekt zugeordnet ist, wird nicht mehr von diesem Objekt überwacht.
+Die **Funktion FindClosePrinterChangeNotification** schließt ein Änderungsbenachrichtigungsobjekt, das durch Aufrufen der [**FindFirstPrinterChangeNotification-Funktion**](findfirstprinterchangenotification.md) erstellt wurde. Der drucker- oder druckserver, der dem Änderungsbenachrichtigungsobjekt zugeordnet ist, wird von diesem Objekt nicht mehr überwacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,10 +39,10 @@ BOOL FindClosePrinterChangeNotification(
 
 <dl> <dt>
 
-*hchange* \[ in\]
+*hChange* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Änderungs Benachrichtigungs Objekt, das geschlossen werden soll. Dies ist ein Handle, das durch Aufrufen der [**findfirstprinterchangenotifi-**](findfirstprinterchangenotification.md) Funktion erstellt wird.
+Ein Handle für das zu schließende Änderungsbenachrichtigungsobjekt. Dies ist ein Handle, das durch Aufrufen der [**FindFirstPrinterChangeNotification-Funktion**](findfirstprinterchangenotification.md) erstellt wird.
 
 </dd> </dl>
 
@@ -52,14 +52,14 @@ Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert ein Wert u
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion und wird möglicherweise nicht sofort zurückgegeben. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren für Druckertreiber ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion über einen Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, kann dazu bringen, dass die Anwendung scheinbar nicht reagiert.
 
  
 
-Nachdem Sie die **findcloseprinterchangenotifi-** Funktion aufgerufen haben, können Sie das *hchange* -Handle nicht in nachfolgenden Aufrufen von [**findfirstprinterchangenotifizierung**](findfirstprinterchangenotification.md) oder [**findnextprinterchangenotifizierung**](findnextprinterchangenotification.md)verwenden.
+Nachdem Sie die **Funktion FindClosePrinterChangeNotification** aufgerufen haben, können Sie das *hChange-Handle* in nachfolgenden Aufrufen von [**FindFirstPrinterChangeNotification**](findfirstprinterchangenotification.md) oder [**FindNextPrinterChangeNotification**](findnextprinterchangenotification.md)nicht mehr verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,13 +69,13 @@ Nachdem Sie die **findcloseprinterchangenotifi-** Funktion aufgerufen haben, kö
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Spoolss.dll</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -85,10 +85,10 @@ Nachdem Sie die **findcloseprinterchangenotifi-** Funktion aufgerufen haben, kö
 [Druckspooler-API-Funktionen](printing-and-print-spooler-functions.md)
 </dt> <dt>
 
-[**Findfirstprinterchangenotifizierung**](findfirstprinterchangenotification.md)
+[**FindFirstPrinterChangeNotification**](findfirstprinterchangenotification.md)
 </dt> <dt>
 
-[**Findnextprinterchangenotifizierung**](findnextprinterchangenotification.md)
+[**FindNextPrinterChangeNotification**](findnextprinterchangenotification.md)
 </dt> </dl>
 
  

@@ -3,7 +3,7 @@ title: ClosedCaption.SAMIStyle
 description: Die SAMIStyle-Eigenschaft gibt den Untertitelstil an oder ruft diese ab.
 ms.assetid: 5535fb31-f1c0-49c4-b758-df74964b1e67
 keywords:
-- ClosedCaption.SAMIStyle-Windows Media Player
+- ClosedCaption.SAMIStyle Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed4a12671877cf0d4d8abdb77d169b0f13000bc564e6c1dc37e65bf6eccdf005
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6bd45977e3d433239e74aee21def913b640fad12
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118580765"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122882178"
 ---
 # <a name="closedcaptionsamistyle"></a>ClosedCaption.SAMIStyle
 
@@ -35,7 +35,7 @@ Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
 ## <a name="remarks"></a>Hinweise
 
-Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
+Eine SAMI-Datei kann mehrere Formatformatdefinitionen enthalten. SAMI-Stile werden zwischen &lt; style und tags in der &gt; </STYLE> SAMI-Datei definiert. Ein Stil wird mit einer Textzeichenfolge definiert, der ein Zeichen \# voran steht. Beispiel:
 
 
 ```
@@ -76,7 +76,7 @@ Im folgenden JScript wird ein HTML SELECT-Element erstellt, das *closedCaption v
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -87,7 +87,7 @@ Im folgenden JScript wird ein HTML SELECT-Element erstellt, das *closedCaption v
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

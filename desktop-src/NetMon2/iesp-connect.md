@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: f2095f25128e524b32b8ad8561ee85119537c32be5e61f77d5c72637396a2183
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9383b6d7638df89bebd369a3657283c1fd6b56ac
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118365608"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480146"
 ---
 # <a name="iespconnect-method"></a>IESP::Verbinden-Methode
 
@@ -79,65 +79,21 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Rückgabecode</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_ALREADY_CONNECTED</strong></dt> </dl></td>
-<td>Diese Instanz des NPP-COM-Objekts ist bereits mit dem Netzwerk verbunden.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_BLOB_CONVERSION_ERROR</strong></dt> </dl></td>
-<td>Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_BLOB_ENTRY_DOES_NOT_EXIST</strong></dt> </dl></td>
-<td>Dem durch den <em>Parameter hInputBlob</em> angegebenen Eingabe-BLOB fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den Aufruf von <strong>IESP::Verbinden</strong> oder <strong>IESP::Configure</strong> generiert werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_BLOB_NOT_INITIALIZED</strong></dt> </dl></td>
-<td>Die <strong>CreateBlob-Funktion</strong> wurde nicht aufgerufen. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_BLOB_STRING_INVALID</strong></dt> </dl></td>
-<td>Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_ILLEGAL_TRIGGER</strong></dt> </dl></td>
-<td>Der Triggerteil des Eingabeblobs ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_INVALID_BLOB</strong></dt> </dl></td>
-<td>Das in <em>hInputBlob</em> angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_NO_DEFAULT_CAPTURE_DIRECTORY</strong></dt> </dl></td>
-<td>Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie den folgenden Pfad, um das Erfassungsverzeichnis festzulegen. <br/>
-<pre class="syntax" data-space="preserve"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\nm\Parameters\CapturePath</code></pre></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_OUT_OF_MEMORY</strong></dt> </dl></td>
-<td>Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt><strong>NMERR_TIMEOUT</strong></dt> </dl></td>
-<td>Für die Anforderung ist ein Time out aufgetreten. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt><strong>NMERR_UPLEVEL_BLOB</strong></dt> </dl></td>
-<td>Die in <em>hInputBlob</em> angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Rückgabecode | Beschreibung | 
+|-------------|-------------|
+| <dl><dt><strong>NMERR_ALREADY_CONNECTED</strong></dt></dl> | Diese Instanz des NPP-COM-Objekts ist bereits mit dem Netzwerk verbunden.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_CONVERSION_ERROR</strong></dt></dl> | Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_ENTRY_DOES_NOT_EXIST</strong></dt></dl> | Dem durch den <em>hInputBlob-Parameter</em> angegebenen Eingabeblob fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den <strong>IESP::Verbinden-</strong> oder <strong>IESP::Configure-Aufruf</strong> generiert werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_NOT_INITIALIZED</strong></dt></dl> | Die <strong>CreateBlob-Funktion</strong> wurde nicht aufgerufen. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_BLOB_STRING_INVALID</strong></dt></dl> | Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_ILLEGAL_TRIGGER</strong></dt></dl> | Der Triggerteil des Eingabeblobs ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_INVALID_BLOB</strong></dt></dl> | Das in <em>hInputBlob</em> angegebene Objekt ist kein BLOB. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_NO_DEFAULT_CAPTURE_DIRECTORY</strong></dt></dl> | Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie den folgenden Pfad, um das Erfassungsverzeichnis festzulegen. <br /><pre class="syntax" data-space="preserve"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\nm\Parameters\CapturePath</code></pre> | 
+| <dl><dt><strong>NMERR_OUT_OF_MEMORY</strong></dt></dl> | Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_TIMEOUT</strong></dt></dl> | Für die Anforderung ist ein Time out aufgetreten. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+| <dl><dt><strong>NMERR_UPLEVEL_BLOB</strong></dt></dl> | Die in <em>hInputBlob</em> angegebene Versionsnummer des BLOB ist falsch. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br /> | 
+
 
 
 
@@ -145,7 +101,7 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die **Verbinden-Methode** aufgerufen wird, ruft Netzwerkmonitor **automatisch IESP::Configure** auf, indem sie das blob verwendet, das vom *hInputBlob-Parameter* bereitgestellt wird. Beachten Sie, dass alle Fehlercodes, die vom Aufruf von **IESP::Configure** zurückgegeben werden, vom **IESP::Verbinden-Aufruf** zurückgegeben werden.
+Wenn die **Verbinden-Methode** aufgerufen wird, ruft Netzwerkmonitor automatisch **IESP::Configure** auf, indem das vom *hInputBlob-Parameter* bereitgestellte BLOB verwendet wird. Beachten Sie, dass alle Fehlercodes, die vom Aufruf von **IESP::Configure** zurückgegeben werden, vom **IESP::Verbinden-Aufruf** zurückgegeben werden.
 
 Diese Methode muss aufgerufen werden, bevor Sie mit der Erfassung von Frames beginnen können. Beachten Sie Folgendes: Wenn Sie mit dieser Methode eine Verbindung mit dem Netzwerk herstellen, müssen Sie weiterhin die **IESP-Schnittstelle** verwenden, um Frames zu erfassen.
 

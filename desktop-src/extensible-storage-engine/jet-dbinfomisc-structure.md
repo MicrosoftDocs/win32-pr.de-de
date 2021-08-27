@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_DBINFOMISC-Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC Struktur'
 title: JET_DBINFOMISC-Struktur
 TOCTitle: JET_DBINFOMISC Structure
 ms:assetid: ff287087-35b8-495e-9922-418ec2439e19
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6c7684fe69cff252d75ea2cceb0872044e8a011b39e88375d6eb576cb1b5360e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7d7861e558bbf6a1938d252a52e7bb781068a331
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118486333"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476866"
 ---
 # <a name="jet_dbinfomisc-structure"></a>JET_DBINFOMISC-Struktur
 
@@ -65,150 +65,71 @@ Die native Version der Datenbank-Engine, die die Datenbank erstellt hat. Informa
 
 **ulUpdate**
 
-Verfolgt inkrementelle Datenbankformatupdates nach, die abwärtskompatibel sind.
+Verfolgt inkrementelle Aktualisierungen des Datenbankformats nach, die abwärtskompatibel sind.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>ulVersion, ulUpdate =</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0x620,0</p></td>
-<td><p>Betaformat des ursprünglichen Betriebssystems (22.4.97).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,1</p></td>
-<td><p>Fügen Sie Im Katalog Spalten für die bedingte Indizierung und OLD (29.5.97) hinzu.</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620,2</p></td>
-<td><p>Fügen Sie das Flag fLocalizedText in IDB hinzu (5.6.97).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,3</p></td>
-<td><p>Fügen Sie SPLIT_BUFFER zu den Stammseiten der Raumstruktur hinzu (30.10.97).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620,2</p></td>
-<td><p>Kehren Sie die Revision zurück, damit ESE97 vorwärtskompatibel bleibt (28.1.98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,3</p></td>
-<td><p>Hinzufügen neuer markierter Spalten zum Katalog ( &quot; CallbackData &quot; und &quot; CallbackDependencies &quot; ).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620,4</p></td>
-<td><p>SLV-Unterstützung: signSLV, fSLVExists im Db-Header (5.5.98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,5</p></td>
-<td><p>Neue SLV-Raumstruktur (29.5.98).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620,6</p></td>
-<td><p>SLV-Raumkarte (12.10.98).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,7</p></td>
-<td><p>4-Byte-IDXSEG (10.12.98).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x620,8</p></td>
-<td><p>Neues Vorlagenspaltenformat (25.1.99).</p></td>
-</tr>
-<tr class="even">
-<td><p>0x620,9</p></td>
-<td><p>Sortierte Vorlagenspalten (24.6.99).</p></td>
-</tr>
-<tr class="odd">
-<td><p>0x623,0</p></td>
-<td><p>Neuer Space Manager (15.5.99)</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>ulVersion, ulUpdate =</p> | <p>Bedeutung</p> | 
+|------------------------------|----------------|
+| <p>0x620,0</p> | <p>Betaformat des ursprünglichen Betriebssystems (22.4.97).</p> | 
+| <p>0x620,1</p> | <p>Fügen Sie Spalten im Katalog für die bedingte Indizierung und OLD (29.05.97) hinzu.</p> | 
+| <p>0x620,2</p> | <p>Fügen Sie das Flag fLocalizedText in IDB (5.6.97) hinzu.</p> | 
+| <p>0x620,3</p> | <p>Fügen SPLIT_BUFFER Stammseiten der Raumstruktur hinzu (30.10.97).</p> | 
+| <p>0x620,2</p> | <p>Wenden Sie die Revision zurück, damit ESE97 vorwärtskompatibel bleibt (28.1.98).</p> | 
+| <p>0x620,3</p> | <p>Fügen Sie dem Katalog neue markierte Spalten hinzu ("CallbackData" und "CallbackDependencies").</p> | 
+| <p>0x620,4</p> | <p>SLV-Unterstützung: signSLV, fSLVExists in db header (5/5/98).</p> | 
+| <p>0x620,5</p> | <p>Neue SLV-Platzstruktur (29.05.98)</p> | 
+| <p>0x620,6</p> | <p>SLV-Raumkarte (12.10.98)</p> | 
+| <p>0x620,7</p> | <p>4-Byte-IDXSEG (10.12.98).</p> | 
+| <p>0x620,8</p> | <p>Neues Vorlagenspaltenformat (25.1.99).</p> | 
+| <p>0x620,9</p> | <p>Sortierte Vorlagenspalten (24.06.99).</p> | 
+| <p>0x623,0</p> | <p>Neuer Space Manager (15.5.99)</p> | 
+
 
 
 **signDb**
 
-Signatur der Datenbank (einschließlich Erstellungszeit). Diese Struktur beträgt 28 Bytes.
+Signatur der Datenbank (einschließlich Erstellungszeit). Diese Struktur ist 28 Bytes.
 
 **dbstate**
 
 Dies ist der Datenbankstatus.
 
-Die folgenden Optionen sind für diesen Member verfügbar.
+Für diesen Member sind die folgenden Optionen verfügbar.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_dbstateJustCreated<br />
-1</p></td>
-<td><p>Die Datenbank wurde soeben erstellt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_dbstateDirtyShutdown<br />
-2</p></td>
-<td><p>Die Datenbank erfordert eine harte oder weiche Wiederherstellung, um verwendbar oder verschiebebar zu werden. Es sollte nicht versucht werden, Datenbanken in diesem Zustand zu verschieben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_dbstateCleanShutdown<br />
-3</p></td>
-<td><p>Die Datenbank befindet sich in einem fehlerfreien Zustand. Die Datenbank kann ohne Protokolldateien angefügt werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_dbstateBeingConverted<br />
-4</p></td>
-<td><p>Die Datenbank wird aktualisiert.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_dbstateForceDetach<br />
-5</p></td>
-<td><p>Intern.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_dbstateJustCreated<br />1</p> | <p>Die Datenbank wurde gerade erstellt.</p> | 
+| <p>JET_dbstateDirtyShutdown<br />2</p> | <p>Für die Datenbank muss eine harte oder weiche Wiederherstellung ausgeführt werden, um nutzbar oder umsetzbar zu werden. Es sollte nicht versucht werden, Datenbanken in diesem Zustand zu verschieben.</p> | 
+| <p>JET_dbstateCleanShutdown<br />3</p> | <p>Die Datenbank befindet sich in einem bereinigten Zustand. Die Datenbank kann ohne Protokolldateien angefügt werden.</p> | 
+| <p>JET_dbstateBeingConverted<br />4</p> | <p>Die Datenbank wird aktualisiert.</p> | 
+| <p>JET_dbstateForceDetach<br />5</p> | <p>Intern.</p> | 
+
 
 
 **lgposConsistent**
 
-NULL, wenn sich die Datenbank in einem geänderten Zustand befindet. Dies ist die Protokollposition, die verwendet wurde, als die Datenbank zuletzt in einen fehlerfreien Herunterfahrzustand gebracht wurde.
+NULL, wenn sich die Datenbank in einem dirty-Zustand befindet. Dies ist die Protokollposition, die beim letzten Herunterfahren der Datenbank verwendet wurde.
 
 **logtimeConsistent**
 
-NULL, wenn sich die Datenbank in einem geänderten Zustand befindet. Dies ist der Zeitpunkt, zu dem die Datenbank zuletzt in einen fehlerfreien Herunterfahrzustand gebracht wurde.
+NULL, wenn sich die Datenbank in einem dirty-Zustand befindet. Dies ist der Zeitpunkt, zu dem die Datenbank zuletzt in einen zustandsbereinigungsbereinigungsbereinigten Herunterfahrenzustand gebracht wurde.
 
 **logtimeAttach**
 
-Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetAttachDatabase](./jetattachdatabase-function.md)angefügt wurde.
+Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetAttachDatabase angefügt wurde.](./jetattachdatabase-function.md)
 
 **lgposAttach**
 
-Die Protokollposition, die beim letzten Anfügen der Datenbank mit [JetAttachDatabase](./jetattachdatabase-function.md)verwendet wurde.
+Die Protokollposition, die beim letzten Anfügen der Datenbank mit [JetAttachDatabase verwendet wurde.](./jetattachdatabase-function.md)
 
 **logtimeDetach**
 
-Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetDetachDatabase](./jetdetachdatabase-function.md)getrennt wurde.
+Der Zeitpunkt, zu dem die Datenbank zuletzt mit [JetDetachDatabase getrennt wurde.](./jetdetachdatabase-function.md)
 
 **lgposDetach**
 
-Die Protokollposition, die beim letzten Trennen der Datenbank mit [JetDetachDatabase](./jetdetachdatabase-function.md)verwendet wurde.
+Die Protokollposition, die beim letzten Trennen der Datenbank mit [JetDetachDatabase verwendet wurde.](./jetdetachdatabase-function.md)
 
 **signLog**
 
@@ -236,48 +157,31 @@ Unterstützt die ESE-Infrastruktur und kann nicht in Ihrem Code verwendet werden
 
 **dwMajorVersion**
 
-Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, wenn die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **dwMinorVersion**
 
-Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, wenn die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **dwBuildNumber**
 
-Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, wenn die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **lSPNumber**
 
-Stellt die Windows NT-Versionsnummern dar, als die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
+Stellt die Windows NT-Versionsnummern dar, wenn die Datenbankindizes aktualisiert wurden. Wird zum Aktualisieren von Indizes verwendet.
 
 **cbPageSize**
 
 Größe der Datenbankseite. 0 bedeutet, dass die Seitengröße 4 KB beträgt.
 
-Dieser Wert wird nur abgerufen, wenn JET_DbInfoMisc an [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md) oder [JetGetDatabaseFileInfo](./jetgetdatabasefileinfo-function.md)übergeben wurde.
+Dieser Wert wird nur abgerufen, wenn JET_DbInfoMisc [JetGetDatabaseInfo](./jetgetdatabaseinfo-function.md) oder [JetGetDatabaseFileInfo übergeben wurde.](./jetgetdatabasefileinfo-function.md)
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

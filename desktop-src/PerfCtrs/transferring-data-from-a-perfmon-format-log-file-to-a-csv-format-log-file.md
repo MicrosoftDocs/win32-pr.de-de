@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel werden Daten aus einer vom Leistungs Tool erstellten Leistungs Protokolldatei in ein durch Kommas getrenntes Format (. CSV) übertragen.
+description: Im folgenden Beispiel werden Daten aus einer vom Leistungstool erstellten Leistungsindikatorprotokolldatei in ein durch Komma getrenntes Format (.csv.
 ms.assetid: 5adeda14-0312-45ce-af91-6888f3aa1c95
-title: Wandeln von Daten aus einer Protokolldatei im Binärformat in eine Protokolldatei im CSV-Format
+title: Konvertieren von Daten aus einer Protokolldatei im Binärformat in eine Protokolldatei im CSV-Format
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fea03ab810ff0ed357f72e3283323ee776bdc70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2748ef834b82de09ce0fa9f5ca8a36c85781eaa6
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360536"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880903"
 ---
-# <a name="converting-data-from-a-binary-format-log-file-to-a-csv-format-log-file"></a>Wandeln von Daten aus einer Protokolldatei im Binärformat in eine Protokolldatei im CSV-Format
+# <a name="converting-data-from-a-binary-format-log-file-to-a-csv-format-log-file"></a>Konvertieren von Daten aus einer Protokolldatei im Binärformat in eine Protokolldatei im CSV-Format
 
-Im folgenden Beispiel werden Daten aus einer vom Leistungs Tool erstellten Leistungs Protokolldatei in ein durch Kommas getrenntes Format (. CSV) übertragen. Im Beispiel werden Prozessorzeit-gegen Daten übertragen, die vom lokalen Computer gesammelt wurden. Um einen anderen Typ von Indikator Daten anzugeben, ändern Sie die szcounterpath-Variable. Wenn die gesammelten Daten von einem bestimmten Computer abgerufen werden, fügen Sie den Computernamen dem Pfad hinzu (z. b \\ \\ \\ \\ <computername> \\ \\ . "Prozessor (0) \\ \\ % Prozessorzeit").
+Im folgenden Beispiel werden Daten aus einer vom Leistungstool erstellten Leistungsindikatorprotokolldatei in ein durch Komma getrenntes Format (.csv. Im Beispiel werden die vom lokalen Computer gesammelten Prozessorzeitzählerdaten übertragen. Ändern Sie die Variable szCounterPath, um einen anderen Indikatordatentyp anzugeben. Wenn die gesammelten Indikatordaten von einem bestimmten Computer kommen, fügen Sie den Computernamen dem Pfad hinzu (z. B. \\ \\ \\ \\ &lt; "Computername &gt; \\ \\ Prozessor(0) \\ \\ % Prozessorzeit").
 
 
 ```C++

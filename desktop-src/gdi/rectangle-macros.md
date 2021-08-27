@@ -1,23 +1,23 @@
 ---
-description: Rechteck Makros
+description: Rechteckmakros
 ms.assetid: ef123b97-6dec-4f9b-b831-cc8451a94a74
-title: Rechteck Makros
+title: Rechteckmakros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd3091f1c4c27f3f8363f31a566f86789651aad7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f370289a491f944433f23aa825c533af1975602137f53e68bd35ce934a41589d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092746"
 ---
-# <a name="rectangle-macros"></a>Rechteck Makros
+# <a name="rectangle-macros"></a>Rechteckmakros
 
 Die folgenden Makros werden mit Rechtecke verwendet.
 
--   [**Makepoints**](/windows/desktop/api/Wingdi/nf-wingdi-makepoints)
--   [**Pointstopoint**](/windows/desktop/api/Winuser/nf-winuser-pointstopoint)
--   [**Pointtopoints**](/windows/desktop/api/Winuser/nf-winuser-pointtopoints)
+-   [**MAKEPOINTS**](/windows/desktop/api/Wingdi/nf-wingdi-makepoints)
+-   [**POINTSTOPOINT**](/windows/desktop/api/Winuser/nf-winuser-pointstopoint)
+-   [**POINTTOPOINTS**](/windows/desktop/api/Winuser/nf-winuser-pointtopoints)
 
  
 

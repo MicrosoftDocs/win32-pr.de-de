@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen finden Sie in der jetcommittransaction-Funktion.
+description: Weitere Informationen finden Sie unter JetCommitTransaction-Funktion.
 title: JetCommitTransaction-Funktion
 TOCTitle: JetCommitTransaction Function
 ms:assetid: 140ca76a-b3a7-4ae8-bc7e-73941fbfc759
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e2fe42891aa916a428d63fb68c99f42f38e78993
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d9592c9b596a7794cc130b7ed599b7c8562ff8b2
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960681"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477626"
 ---
 # <a name="jetcommittransaction-function"></a>JetCommitTransaction-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetcommittransaction-function"></a>JetCommitTransaction-Funktion
 
-Die **jetcommittransaction** -Funktion führt einen Commit für die Änderungen aus, die an den Zustand der Datenbank während des aktuellen Speicher Punkts vorgenommen werden, und migriert Sie zum vorherigen Sicherungspunkt. Wenn für den äußersten Speicherpunkt ein Commit ausgeführt wird, werden die während dieses Speicher Punkts vorgenommenen Änderungen in den Zustand der Datenbank übertragen, und die Sitzung wird beendet.
+Die **JetCommitTransaction-Funktion** führt einen Commit für die Änderungen aus, die während des aktuellen Speicherpunkts am Zustand der Datenbank vorgenommen wurden, und migriert sie zum vorherigen Speicherpunkt. Wenn für den äußersten Speicherpunkt ein Committed ausgeführt wird, wird für die während dieses Speicherpunkts vorgenommenen Änderungen ein Committed in den Zustand der Datenbank ausgeführt, und die Sitzung beendet die Transaktion.
 
 ```cpp
     JET_ERR JET_API JetCommitTransaction(
@@ -43,150 +43,55 @@ Die **jetcommittransaction** -Funktion führt einen Commit für die Änderungen 
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der folgenden Optionen an geben.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitCommitLazyFlush</p></td>
-<td><p>Die Transaktion wird normal ausgeführt, aber diese API wartet nicht, bis die Transaktion in die Transaktionsprotokoll Datei geleert wurde, bevor Sie an den Aufrufer zurückgegeben wird. Dadurch wird die Dauer eines Commitvorgangs drastisch reduziert und die Dauerhaftigkeit beeinträchtigt. Alle Transaktionen, die vor einem Absturz nicht in das Protokoll geschrieben werden, werden während des nächsten Aufrufens von <a href="gg294068(v=exchg.10).md">jetinit</a>automatisch abgebrochen.</p>
-<p>Wenn JET_bitWaitLastLevel0Commit oder JET_bitWaitAllLevel0Commit angegeben werden, wird diese Option ignoriert.</p>
-<p>Wenn dieser Befehl von <strong>jetcommittransaction</strong> nicht mit dem ersten Befehl von <a href="gg294083(v=exchg.10).md">jetbegintransaction</a> für diese Sitzung identisch ist, wird diese Option ignoriert. Dies liegt daran, dass die letzte Aktion, die auf dem äußersten Speicherpunkt auftritt, der bestimmende Faktor ist, der angibt, ob die gesamte Transaktion tatsächlich auf den Datenträger übertragen wird</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitWaitAllLevel0Commit</p></td>
-<td><p>Alle Transaktionen, für die zuvor von einer Sitzung ein Commit ausgeführt wurde und die noch nicht in die Transaktionsprotokoll Datei geleert wurden, werden sofort geleert. Diese API wartet, bis die Transaktionen geleert wurden, bevor Sie an den Aufrufer zurückgegeben werden.</p>
-<p>Diese Option kann auch verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet.</p>
-<p>Diese Option kann nicht in Kombination mit anderen Optionen verwendet werden.</p>
-<p>Diese Option ist nur ab Windows Server 2003 verfügbar.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitWaitLastLevel0Commit</p></td>
-<td><p>Wenn für die Sitzung bereits ein Commit für Transaktionen ausgeführt wurde und diese noch nicht in die Transaktionsprotokoll Datei geleert wurden, sollten Sie sofort geleert werden. Diese API wartet, bis die Transaktionen geleert wurden, bevor Sie an den Aufrufer zurückgegeben werden. Dies ist nützlich, wenn die Anwendung zuvor mehrere Transaktionen mit JET_bitCommitLazyFlush committet hat und diese nun auf den Datenträger leeren möchte.</p>
-<p>Diese Option kann auch verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet.</p>
-<p>Diese Option kann nicht in Kombination mit anderen Optionen verwendet werden.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitCommitLazyFlush</p> | <p>Für die Transaktion wird normalerweise ein Committed ausgeführt, aber diese API wartet nicht, bis die Transaktion in die Transaktionsprotokolldatei geleert wird, bevor sie an den Aufrufer zurückkehrt. Dadurch wird die Dauer eines Commit-Vorgangs auf Kosten der Dauerhaftigkeit drastisch reduziert. Jede Transaktion, die vor einem Absturz nicht in das Protokoll geleert wird, wird während der Absturzwiederherstellung beim nächsten Aufruf von <a href="gg294068(v=exchg.10).md">JetInit automatisch abgebrochen.</a></p><p>Wenn JET_bitWaitLastLevel0Commit oder JET_bitWaitAllLevel0Commit angegeben werden, wird diese Option ignoriert.</p><p>Wenn dieser Aufruf von <strong>JetCommitTransaction</strong> nicht mit dem ersten Aufruf von <a href="gg294083(v=exchg.10).md">JetBeginTransaction</a> für diese Sitzung überein passt, wird diese Option ignoriert. Dies liegt daran, dass die letzte Aktion, die auf dem äußersten Speicherpunkt ausgeführt wird, der bestimmende Faktor ist, ob die gesamte Transaktion tatsächlich auf den Datenträger ausgeführt wird.</p> | 
+| <p>JET_bitWaitAllLevel0Commit</p> | <p>Alle Transaktionen, für die zuvor ein Committed von einer Sitzung ausgeführt wurde, die noch nicht in die Transaktionsprotokolldatei geleert wurden, werden sofort geleert. Diese API wartet, bis die Transaktionen geleert wurden, bevor sie zum Aufrufer zurückkehrt.</p><p>Diese Option kann auch verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet.</p><p>Diese Option kann nicht in Kombination mit einer anderen Option verwendet werden.</p><p>Diese Option ist nur ab Windows Server 2003 verfügbar.</p> | 
+| <p>JET_bitWaitLastLevel0Commit</p> | <p>Wenn die Sitzung zuvor transaktionen ausgeführt hat und sie noch nicht in die Transaktionsprotokolldatei geleert wurden, sollten sie sofort geleert werden. Diese API wartet, bis die Transaktionen geleert wurden, bevor sie zum Aufrufer zurückkehrt. Dies ist nützlich, wenn die Anwendung zuvor mehrere Transaktionen mithilfe von JET_bitCommitLazyFlush und nun alle transaktionen auf den Datenträger leeren möchte.</p><p>Diese Option kann auch verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet.</p><p>Diese Option kann nicht in Kombination mit einer anderen Option verwendet werden.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p>
-<p>Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidgrbit</p></td>
-<td><p>Eine der angeforderten Optionen war ungültig oder nicht implementiert. Dieser Fehler wird von <strong>jetcommittransaction</strong> zurückgegeben, wenn Folgendes gilt:</p>
-<ul>
-<li><p>Es wurde ein ungültiges <em>grbit</em> angegeben.</p></li>
-<li><p>JET_bitWaitLastLevel0Commit wurde in Kombination mit einem anderen <em>grbit</em>angegeben.</p></li>
-<li><p>JET_bitWaitAllLevel0Commit wurde in Kombination mit einem anderen <em>grbit</em>angegeben.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInTransaction</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da die angegebene Sitzung nicht in einer Transaktion ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden.</p>
-<p>Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg werden alle Änderungen, die während des aktuellen Speicher Punkts für die jeweilige Sitzung an der Datenbank vorgenommen wurden, committet, und der Sicherungspunkt wird beendet. Wenn der letzte Sicherungspunkt für die Sitzung beendet wurde, wird die Transaktion optional in die Transaktionsprotokoll Datei geleert, und die Sitzung wird beendet.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p>Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidgrbit</p> | <p>Eine der angeforderten Optionen war ungültig oder nicht implementiert. Dieser Fehler wird von <strong>JetCommitTransaction zurückgegeben, wenn:</strong></p><ul><li><p>Ein <em>ungültiges Grbit</em> wird angegeben.</p></li><li><p>JET_bitWaitLastLevel0Commit wurde in Kombination mit einem anderen <em>Grbit angegeben.</em></p></li><li><p>JET_bitWaitAllLevel0Commit wurde in Kombination mit einem anderen <em>Grbit angegeben.</em></p></li></ul> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errNotInTransaction</p> | <p>Der Vorgang ist fehlgeschlagen, da sich die gegebene Sitzung nicht in einer Transaktion befindet.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden.</p><p>Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
 
-Bei einem Fehler bleibt der Transaktionsstatus der Sitzung unverändert. Es erfolgt keine Änderung des Daten Bank Status. Die Anwendung sollte [jetrollback](./jetrollback-function.md) anrufen, um die Transaktion abzubrechen.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Es muss ein Aufrufen von **jetcommittransaction** oder [jetrollback](./jetrollback-function.md) vorhanden sein, um jeden beliebigen [jetbegintransaction](./jetbegintransaction-function.md) -Befehl für eine bestimmte Sitzung abzugleichen.
+Bei Erfolg werden alle Änderungen, die während des aktuellen Speicherpunkts für die bestimmte Sitzung an der Datenbank vorgenommen wurden, mit einem Committed abgeschlossen, und dieser Speicherpunkt wird beendet. Wenn der letzte Speicherpunkt für die Sitzung beendet wurde, wird die Transaktion optional in die Transaktionsprotokolldatei geleert, und die Sitzung beendet die Transaktion.
+
+Bei einem Fehler bleibt der Transaktionszustand der Sitzung unverändert. Es erfolgt keine Änderung des Datenbankstatus. Die Anwendung sollte [JetRollback aufrufen,](./jetrollback-function.md) um die Transaktion zu abbrechen.
+
+#### <a name="remarks"></a>Hinweise
+
+Es muss einen Aufruf von **JetCommitTransaction oder** [JetRollback](./jetrollback-function.md) geben, damit jeder Aufruf von [JetBeginTransaction](./jetbegintransaction-function.md) für eine bestimmte Sitzung übereinstimmen kann.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -194,7 +99,7 @@ Es muss ein Aufrufen von **jetcommittransaction** oder [jetrollback](./jetrollba
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetbegintransaction](./jetbegintransaction-function.md)  
-[Jetcommittransaction]()  
-[Jetrollback](./jetrollback-function.md)  
-[Jetstopservice](./jetstopservice-function.md)
+[JetBeginTransaction](./jetbegintransaction-function.md)  
+[JetCommitTransaction]()  
+[JetRollback](./jetrollback-function.md)  
+[JetStopService](./jetstopservice-function.md)

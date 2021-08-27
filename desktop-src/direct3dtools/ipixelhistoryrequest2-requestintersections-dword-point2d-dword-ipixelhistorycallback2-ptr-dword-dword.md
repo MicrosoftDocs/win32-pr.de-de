@@ -1,10 +1,10 @@
 ---
-description: Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame auslösen.
+description: Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame verursachen.
 MS-HAID: vspixengine.IPixelHistoryRequest2\_RequestIntersections\_DWORD\_Point2D\_DWORD\_IPixelHistoryCallback2\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixelHistoryRequest2:: requestinterabschnitts-Methode'
+title: IPixelHistoryRequest2::RequestIntersections-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: C8E47935-DFA1-4A76-9D0A-3DF5833A1249
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 56f8da17ca492ca15ca51676ae4f1e1654c6f41f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: df5a2301f3eef654b22bc81faab855535b69633a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521555"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623166"
 ---
-# <a name="span-idvspixengineipixelhistoryrequest2_requestintersections_dword_point2d_dword_ipixelhistorycallback2_ptr_dword_dwordspanipixelhistoryrequest2requestintersections-method"></a><span id="vspixengine.ipixelhistoryrequest2_requestintersections_dword_point2d_dword_ipixelhistorycallback2_ptr_dword_dword"></span>IPixelHistoryRequest2:: requestinterabschnitts-Methode
+# <a name="span-idvspixengineipixelhistoryrequest2_requestintersections_dword_point2d_dword_ipixelhistorycallback2_ptr_dword_dwordspanipixelhistoryrequest2requestintersections-method"></a><span id="vspixengine.ipixelhistoryrequest2_requestintersections_dword_point2d_dword_ipixelhistorycallback2_ptr_dword_dword"></span>IPixelHistoryRequest2::RequestIntersections-Methode
 
-Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame auslösen.
+Fordert eine Liste von Ereignissen an, die eine Änderung im angegebenen Pixel, Renderziel/UAV und Frame verursachen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ HRESULT RequestIntersections(
 
 ## <a name="parameters"></a>Parameter
 
-*Framezahl*   
+*frameNumber*   
 Der angegebene Frame.
 
-*Megapixel*   
+*Pixel*   
 Das angegebene Pixel.
 
-*rendertargetptr*   
+*renderTargetPtr*   
 Die Adresse des angegebenen Renderziels.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
+*progressIntervalMsecs*   
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

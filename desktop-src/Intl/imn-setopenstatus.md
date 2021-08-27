@@ -1,19 +1,19 @@
 ---
-description: Benachrichtigt eine Anwendung, wenn der Open-Status des Eingabe Kontexts aktualisiert wird. Die Anwendung empfängt diesen Befehl über die WM- \_ IME- \_ Benachrichtigungs Meldung mit den Parametereinstellungen, wie unten gezeigt.
+description: Benachrichtigt eine Anwendung, wenn der Öffnungsstatus des Eingabekontexts aktualisiert wird. Die Anwendung empfängt diesen Befehl über die WM \_ IME \_ NOTIFY-Nachricht mit Parametereinstellungen, wie unten dargestellt.
 ms.assetid: cc6fa7f4-b85a-486a-985d-53c071321bd1
-title: IMN_SETOPENSTATUS Benachrichtigungs Code (IMM. h)
+title: IMN_SETOPENSTATUS Benachrichtigungscode (Imm.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3598d7415cf415de3279e016d81a6d14b767d5da
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 57797210f9c0595a952315ca75858890b1998fe16e49049b3a22fb8ed72a5aea
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107040"
 ---
-# <a name="imn_setopenstatus-notification-code"></a>IMN \_ setopsstatus-Benachrichtigungs Code
+# <a name="imn_setopenstatus-notification-code"></a>IMN \_ SETOPENSTATUS-Benachrichtigungscode
 
-Benachrichtigt eine Anwendung, wenn der Open-Status des Eingabe Kontexts aktualisiert wird. Die Anwendung empfängt diesen Befehl über die [**WM- \_ IME- \_ Benachrichtigungs**](wm-ime-notify.md) Meldung mit den Parametereinstellungen, wie unten gezeigt.
+Benachrichtigt eine Anwendung, wenn der Öffnungsstatus des Eingabekontexts aktualisiert wird. Die Anwendung empfängt diesen Befehl über die [**WM \_ IME \_ NOTIFY-Nachricht**](wm-ime-notify.md) mit Parametereinstellungen, wie unten dargestellt.
 
 
 ```C++
@@ -26,27 +26,27 @@ IMN_SETOPENSTATUS
 
 <dl> <dt>
 
-<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*wParam*
+<span id="wParam"></span><span id="wparam"></span><span id="WPARAM"></span>*Wparam*
 </dt> <dd>
 
-Legen Sie auf IMN \_ SetOpenStatus fest.
+Legen Sie auf IMN \_ SETOPENSTATUS fest.
 
 </dd> <dt>
 
-<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*LParam*
+<span id="lParam"></span><span id="lparam"></span><span id="LPARAM"></span>*Lparam*
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Dieser Befehl weist keinen Rückgabewert auf.
+Dieser Befehl hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Anwendung kann Informationen über den offenen Status mithilfe der [**immgetopenstatus**](/windows/desktop/api/Imm/nf-imm-immgetopenstatus) -Funktion erhalten.
+Die Anwendung kann mithilfe der [**ImmGetOpenStatus-Funktion**](/windows/desktop/api/Imm/nf-imm-immgetopenstatus) Informationen über den Öffnungsstatus abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Die Anwendung kann Informationen über den offenen Status mithilfe der [**immget
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                 |
-| Header<br/>                   | <dl> <dt>Imm. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Imm.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,13 +67,13 @@ Die Anwendung kann Informationen über den offenen Status mithilfe der [**immget
 [Eingabemethoden-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Befehle](input-method-manager-commands.md)
+[Befehle des Eingabemethoden-Managers](input-method-manager-commands.md)
 </dt> <dt>
 
-[**Immgetopenstatus**](/windows/desktop/api/Imm/nf-imm-immgetopenstatus)
+[**ImmGetOpenStatus**](/windows/desktop/api/Imm/nf-imm-immgetopenstatus)
 </dt> <dt>
 
-[**WM- \_ IME \_ Benachrichtigen**](wm-ime-notify.md)
+[**WM \_ IME \_ NOTIFY**](wm-ime-notify.md)
 </dt> </dl>
 
  

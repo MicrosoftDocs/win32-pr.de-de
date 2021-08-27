@@ -1,51 +1,51 @@
 ---
-description: Dieses Thema beschreibt die Format Typen für Zeichen folgen, die zum Verfassen des Format Bilds für eine Zeit Zeichenfolge verwendet werden. Jedes Format Bild besteht aus einer Kombination aus einer Zeichenfolge der einzelnen Format Typen.
+description: In diesem Thema werden die Formattypen für Zeichenfolgen beschrieben, mit denen das Formatbild für eine Zeitzeichenfolge erstellt wird. Jedes Formatbild besteht aus einer Kombination aus einer Zeichenfolge der einzelnen Formattypen.
 ms.assetid: a5e87d88-4037-4302-99b7-179bfb03fac3
-title: Bilder im Format "Stunde, Minute und Sekunde"
+title: Bilder im Format "Stunde", "Minute" und "Sekunde"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 589c04fea0d6ce2f522436c30c39c873e3a7165e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40e201e72e4da621334a46f20c47e1dd5f731d7ea443bb9970ce07bb7f4e5455
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130390"
 ---
-# <a name="hour-minute-and-second-format-pictures"></a>Bilder im Format "Stunde, Minute und Sekunde"
+# <a name="hour-minute-and-second-format-pictures"></a>Bilder im Format "Stunde", "Minute" und "Sekunde"
 
-Dieses Thema beschreibt die Format Typen für Zeichen folgen, die zum Verfassen des Format Bilds für eine Zeit Zeichenfolge verwendet werden. Jedes Format Bild besteht aus einer Kombination aus einer Zeichenfolge der einzelnen Format Typen.
+In diesem Thema werden die Formattypen für Zeichenfolgen beschrieben, mit denen das Formatbild für eine Zeitzeichenfolge erstellt wird. Jedes Formatbild besteht aus einer Kombination aus einer Zeichenfolge der einzelnen Formattypen.
 
 > [!Note]  
-> In den Format Typen müssen die Buchstaben "m", "s" und "t" in Kleinbuchstaben eingegeben werden, und der Buchstabe "h" muss klein geschrieben sein, um die 12-Stunden-Uhr oder den Großbuchstaben ("h") anzugeben, um den 24-Stunden-Takt anzugeben.
+> In den Formattypen müssen die Buchstaben "m", "s" und "t" Kleinbuchstaben sein, und der Buchstabe "h" muss Kleinbuchstaben sein, um die 12-Stunden-Uhr oder den Großbuchstaben ("H") zum Bezeichnen der 24-Stunden-Uhr zu bezeichnen.
 
-Einfache Anführungszeichen können verwendet werden, um Zeichen zu markieren, die genau wie angegeben angezeigt werden sollen. Wenn die Anwendung ein einzelnes Anführungszeichen anzeigen muss, sollte Sie zwei einfache Anführungszeichen in einer Zeile platzieren. Beispielsweise wird ' abc ' ' Bar ' als ' ABl-Leiste ' angezeigt.
+Einfache Anführungszeichen können verwendet werden, um Zeichen zu markieren, die genau wie angegeben angezeigt werden sollen. Wenn die Anwendung ein einfaches Anführungszeichen anzeigen muss, sollte sie zwei einfache Anführungszeichen in einer Zeile platzieren. Beispielsweise wird "abc''bar' als "abc'bar" angezeigt.
 
-In der folgenden Tabelle sind die Format Typen definiert, die zur Darstellung von Stunden verwendet werden.
+In der folgenden Tabelle werden die Formattypen definiert, die zur Darstellung von Stunden verwendet werden.
 
 | String | Bedeutung                                                             |
 |--------|---------------------------------------------------------------------|
-| h.      | Stunden ohne führende Nullen für Einstellige Stunden (12-Stunden-Takt). |
-| hh     | Stunden mit führenden Nullen für Einstellige Stunden (12-Stunden-Takt).    |
-| H      | Stunden ohne führende Nullen für Einstellige Stunden (24-Stunden-Takt). |
-| HH     | Stunden mit führenden Nullen für Einstellige Stunden (24-Stunden-Takt).    |
+| h.      | Stunden ohne führende Nullen für einstellige Stunden (12-Stunden-Uhr). |
+| hh     | Stunden mit führenden Nullen für einstellige Stunden (12-Stunden-Uhr).    |
+| H      | Stunden ohne führende Nullen für einstellige Stunden (24-Stunden-Uhr). |
+| HH     | Stunden mit führenden Nullen für einstellige Stunden (24-Stunden-Uhr).    |
 
-In der folgenden Tabelle sind die Format Typen definiert, die zur Darstellung von Minuten verwendet werden.
-
-| String | Bedeutung                                                 |
-|--------|---------------------------------------------------------|
-| m      | Minuten ohne führende Nullen für Einstellige Minuten. |
-| MM     | Minuten mit führenden Nullen für Einstellige Minuten.    |
-
-In der folgenden Tabelle sind die Format Typen definiert, die zur Darstellung von Sekunden verwendet werden.
+In der folgenden Tabelle werden die Formattypen definiert, die für die Darstellung von Minuten verwendet werden.
 
 | String | Bedeutung                                                 |
 |--------|---------------------------------------------------------|
-| s      | Sekunden ohne führende Nullen für Einstellige Sekunden. |
-| ss     | Sekunden mit führenden Nullen für Einstellige Sekunden.    |
+| m      | Minuten ohne führende Nullen für einstellige Minuten. |
+| MM     | Minuten mit führenden Nullen für einstellige Minuten.    |
 
-In der folgenden Tabelle sind die Format Typen definiert, die zur Darstellung eines Zeit Markers verwendet werden.
+In der folgenden Tabelle werden die Formattypen definiert, die zur Darstellung von Sekunden verwendet werden.
+
+| String | Bedeutung                                                 |
+|--------|---------------------------------------------------------|
+| s      | Sekunden ohne führende Nullen für einstellige Sekunden. |
+| ss     | Sekunden mit führenden Nullen für einstellige Sekunden.    |
+
+In der folgenden Tabelle werden die Formattypen definiert, die zum Darstellen eines Zeitmarkers verwendet werden.
 
 | String | Bedeutung|
 | ---    | ---    |
-| t      | Zeichenfolge mit einem Zeichen.<br />**Hinweis:** Dieses Format wird nicht für die Verwendung mit bestimmten Sprachen, wie z. b. Japanisch (Japan), empfohlen. Bei diesem Format übernimmt eine Anwendung immer das erste Zeichen aus der Zeit Marker-Zeichenfolge, die durch [LOCALE_S1159](locale-s1159.md) (am) und [LOCALE_S2359](locale-s2359.md) (PM) definiert wird. Aus diesem Grund kann die Anwendung eine falsche Formatierung mit derselben Zeichenfolge erstellen, die sowohl für am als auch für PM verwendet wird.|
-| tt     | Zeichenfolge für Zeichen folgen mit mehreren Zeichen. |
+| t      | Ein-Zeichen-Zeitmarkierungszeichenfolge.<br />**Hinweis:** Dieses Format wird nicht für die Verwendung mit bestimmten Sprachen empfohlen, z. B. Japanisch (Japan). Bei diesem Format verwendet eine Anwendung immer das erste Zeichen [](locale-s1159.md) aus der Zeitmarkierungszeichenfolge, die durch LOCALE_S1159 (AM) und LOCALE_S2359 [(PM)](locale-s2359.md) definiert wird. Aus diesem Grund kann die Anwendung eine falsche Formatierung mit der gleichen Zeichenfolge erstellen, die für AM und PM verwendet wird.|
+| tt     | Mehrzeichenige Zeitmarkerzeichenfolge. |

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_LOGINFO-Struktur'
-title: JET_LOGINFO-Struktur
+description: 'Weitere Informationen finden Sie unter: JET_LOGINFO Struktur'
+title: JET_LOGINFO Struktur
 TOCTitle: JET_LOGINFO Structure
 ms:assetid: b34b3f24-5d19-4e11-a657-a0e59204d628
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294063(v=EXCHG.10)
@@ -15,21 +15,21 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 167b097426e27785ad47b8295fb728d1537dbd47
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 8f5619211a5fc76bb080b81b22c08c9e369abf93
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122479606"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983163"
 ---
-# <a name="jet_loginfo-structure"></a>JET_LOGINFO-Struktur
+# <a name="jet_loginfo-structure"></a>JET_LOGINFO Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_loginfo-structure"></a>JET_LOGINFO-Struktur
+## <a name="jet_loginfo-structure"></a>JET_LOGINFO Struktur
 
-Die **JET_LOGINFO-Struktur** gibt strukturierte Informationen über den Satz von Transaktionsprotokolldateien zurück, die Teil eines Sicherungsdateisatzes sein sollten. Die **JET_LOGINFO** Struktur ist der minimale Satz von Informationen, die zur Darstellung eines Protokollbereichs erforderlich sind, der mit [JetGetLogInfoInstance2](./jetgetloginfoinstance2-function.md) abgerufen oder für eine harte Wiederherstellung mit [JetExternalRestore2](./jetexternalrestore2-function.md)angegeben wird.
+Die **JET_LOGINFO** struktur gibt strukturierte Informationen über den Satz von Transaktionsprotokolldateien zurück, die Teil eines Sicherungsdateisets sein sollten. Die **JET_LOGINFO-Struktur** ist der minimale Satz von Informationen, die erforderlich sind, um einen Bereich von Protokollen anzugeben, der mit [JetGetLogInfoInstance2](./jetgetloginfoinstance2-function.md) abgerufen oder für eine harte Wiederherstellung mit [JetExternalRestore2](./jetexternalrestore2-function.md)angegeben wird.
 
 ```cpp
 typedef struct {
@@ -46,32 +46,37 @@ typedef struct {
 
 Die Größe der -Struktur in Bytes.
 
-Dieser Member ermöglicht eine zukünftige Erweiterung dieser Struktur und ermöglicht gleichzeitig Abwärtskompatibilität. Sie sollte immer auf sizeof( JET_LOGINFO ) festgelegt werden.
+Dieser Member ermöglicht eine zukünftige Erweiterung dieser Struktur bei gleichzeitiger Aktivierung der Abwärtskompatibilität. Sie sollte immer auf sizeof( JET_LOGINFO ) festgelegt werden.
 
 **ulGenLow**
 
-Die niedrigste (oder älteste) Protokolldateinummer, die wiederhergestellt wird. Die vollständige Genauigkeit einer Länge ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die niedrigste (oder älteste) Protokolldateinummer, die wiederhergestellt wird. Die vollständige Genauigkeit eines unsignierten long-Werts sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
 **ulGenHigh**
 
-Die höchste (oder letzte) Protokolldateinummer, die wiederhergestellt wird. Die vollständige Genauigkeit eines long-Werts ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die höchste (oder letzte) Protokolldateinummer, die wiederhergestellt wird. Die vollständige Genauigkeit eines unsignierten long-Werts sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
 **szBaseName**
 
 Das Präfix, das zum Benennen der Transaktionsprotokolldateien verwendet wird.
 
-Der wert, der in diesem Member zurückgegeben wird, entspricht immer der Einstellung für [JET_paramBaseName](./transaction-log-parameters.md) für die Instanz, die diese Informationen generiert hat.
+Der Wert, der in diesem Member zurückgegeben [](./transaction-log-parameters.md) wird, entspricht immer der Einstellung für JET_paramBaseName instanz, die diese Informationen generiert hat.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
-Transaktionsprotokolldateien werden entsprechend dem Basisnamen der Instanz und der Generierungsnummer der Protokolldatei benannt. Der Name hat das Format BBBXXXXX. PROTOKOLL. BBB entspricht dem Basisnamen für die Protokolldatei und hat immer drei Zeichen. XXXXX entspricht der Generierungsnummer der Protokolldatei in 0 (null) aufgefüllten Hexadezimalzeichen und ist immer fünf Zeichen lang. LOG ist die Dateierweiterung, die transaktionsprotokolldateien von der Engine immer zur Verfügung gestellt wird.
+Transaktionsprotokolldateien werden entsprechend dem Basisnamen der Instanz und der Generierungsnummer der Protokolldatei benannt. Der Name hat das Format BBBXXXXX. PROTOKOLL. BBB entspricht dem Basisnamen für die Protokolldatei und hat immer eine Länge von drei Zeichen. XXXXX entspricht der Generierungsnummer der Protokolldatei in hexadezimaler Form ohne Auffüllen und hat immer eine Länge von fünf Zeichen. LOG ist die Dateierweiterung, die von der Engine immer an Transaktionsprotokolldateien gegeben wird.
 
-Von der Verwendung dieser strukturierten Informationen wird abgeraten, da sie dazu führt, dass die Anwendung über fundierte Kenntnisse dieses Benennungsschemas für Transaktionsprotokolldateien verfügt. Wenn sich das Benennungsschema in Zukunft ändert, funktioniert eine solche Anwendung nicht mehr ordnungsgemäß. Es ist wahrscheinlich, dass das Protokollformat geändert wird, um in Zukunft acht hexadezimale Ziffern zu integrieren. Anwendungen sollten stattdessen die explizite Liste der Dateinamen verwenden, die von [JetGetLogInfo](./jetgetloginfo-function.md) zurückgegeben werden.
+Von der Verwendung dieser strukturierten Informationen wird abgeraten, da die Anwendung dieses Benennungsschema für Transaktionsprotokolldateien nicht kennen muss. Wenn sich das Benennungsschema in Zukunft ändert, funktioniert eine solche Anwendung nicht mehr ordnungsgemäß. Es ist vorstellbar, dass sich das Protokollformat ändert, um in Zukunft acht Hexadezimalziffern zu integrieren. Anwendungen sollten stattdessen die explizite Liste der dateinamen verwenden, die von [JetGetLogInfo zurückgegeben](./jetgetloginfo-function.md) werden.
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JET_LOGINFO_W</strong> (Unicode) und <strong>JET_LOGINFO_A</strong> (ANSI).</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_LOGINFO_W</strong> (Unicode) und JET_LOGINFO_A (ANSI) implementiert. <strong></strong></p> | 
 
 
 

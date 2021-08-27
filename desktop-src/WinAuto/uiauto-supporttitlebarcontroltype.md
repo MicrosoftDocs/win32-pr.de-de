@@ -1,133 +1,114 @@
 ---
-title: TitleBar-Steuerelement Typen
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den TitleBar-Steuerelement-Typ. Ein Titelleisten-Steuerelement stellt einen Titel oder eine Beschriftungs Leiste in einem Fenster dar.
+title: TitleBar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den TitleBar-Steuerelementtyp. Ein Titelleisten-Steuerelement stellt einen Titel oder eine Beschriftungsleiste in einem Fenster dar.
 ms.assetid: dc707198-ceb6-4fbf-ace4-8fec88c92b98
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für den TitleBar-Steuerelement
-- Benutzeroberflächenautomatisierungs-Steuerelement (Titlebar)
-- UI-Automatisierung, Struktur für TitleBar-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den TitleBar-Steuerelement
-- Benutzeroberflächenautomatisierungs-Steuerelement Muster für TitleBar-Steuerelement
-- Benutzeroberflächenautomatisierungs, Ereignisse für TitleBar-Steuerelement Typen
-- Baumstrukturen, TitleBar-Steuerelement Typen
-- Eigenschaften, TitleBar-Steuerelement Typen
-- Steuerelement Muster, TitleBar-Steuerelement Typen
-- Ereignisse, TitleBar-Steuerelement Typen
-- Unterstützung für TitleBar-Steuerelement Typen
-- TitleBar-Steuerelement Typen
-- Steuerelement Typen, Baumstruktur für TitleBar-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für TitleBar-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für Titlebar
-- Steuerelement Typen, Titlebar
+- Benutzeroberflächenautomatisierung,Unterstützung für den TitleBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,TitleBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den TitleBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den TitleBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den TitleBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Events für den TitleBar-Steuerelementtyp
+- Strukturstrukturen,TitleBar-Steuerelementtyp
+- properties,TitleBar-Steuerelementtyp
+- Steuerelementmuster, TitleBar-Steuerelementtyp
+- events,TitleBar-Steuerelementtyp
+- Unterstützung für den TitleBar-Steuerelementtyp
+- TitleBar-Steuerelementtyp
+- Steuerelementtypen,Struktur für TitleBar-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für den TitleBar-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für TitleBar
+- Steuerelementtypen, TitleBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f9471d08479345bf8c1df118f720bf273d4d89d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b7e3d3ed0c4a3abc995afab7aec4aa89d02542e2
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948044"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473356"
 ---
-# <a name="titlebar-control-type"></a>TitleBar-Steuerelement Typen
+# <a name="titlebar-control-type"></a>TitleBar-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **TitleBar** -Steuerelement-Typ. Ein Titelleisten-Steuerelement stellt einen Titel oder eine Beschriftungs Leiste in einem Fenster dar.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **TitleBar-Steuerelementtyp.** Ein Titelleisten-Steuerelement stellt einen Titel oder eine Beschriftungsleiste in einem Fenster dar.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **TitleBar** -Steuerelement-Typ definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Titelleisten-Steuerelemente, in denen Benutzeroberflächen-Framework/Plattform die Benutzeroberflächenautomatisierungs-Unterstützung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **TitleBar-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Titelleisten-Steuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Titelleisten-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>TitleBar
-<ul>
-<li>Menü (0 oder 1)</li>
-<li>Schaltfläche (beliebige Anzahl)</li>
-</ul></li>
-</ul></td>
-<td>(Nicht zutreffend; das Titelleisten-Steuerelement hat keinen Inhalt)</td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf Titelleistensteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
- 
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>TitleBar<ul><li>Menü (0 oder 1)</li><li>Schaltfläche (beliebige Anzahl)</li></ul></li></ul> | (Nicht zutreffend; das Titelleisten-Steuerelement hat keinen Inhalt)) | 
+
+
+
+
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für den **TitleBar** -Steuerelement Typ besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die eigenschaften Benutzeroberflächenautomatisierung, deren Wert oder Definition für den **TitleBar-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert        | Notizen                                                                                                                                                                                                |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert        | Hinweise                                                                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                         |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.   | Der von dieser Eigenschaft verfügbar gemachte Wert muss sämtliche darin enthaltenen Steuerelemente umfassen.                                                                                                             |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.   | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **TitleBar** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | false        | Das Titelleisten-Steuerelement ist in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur nie enthalten.                                                                                                               |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE         | Das Titelleisten-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                              |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | false        | Ein Titelleisten-Steuerelement hat nie den Tastaturfokus.                                                                                                                                                        |
-| [**UIA \_ isoffscreenpropertyid**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)      | Ein Titelleisten-Steuerelement gibt einen Wert zurück, abhängig davon, ob es auf dem Bildschirm sichtbar ist.                                                                                                                |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.   | Ein Titelleisten-Steuerelement verfügt in der Regel nicht über eine Bezeichnung.                                                                                                                                                 |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge für den Steuerelementtyp „TitleBar“. Der Standardwert ist "Titelleiste" für en-US oder Englisch (USA).                                                                  |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | ""           | Eine Titelleiste ist kein Inhalt. die Textinformationen werden durch den Namen des übergeordneten Fensters verfügbar gemacht.                                                                                                     |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.   | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                         |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.   | Der von dieser Eigenschaft verfügbar gemachte Wert muss sämtliche darin enthaltenen Steuerelemente umfassen.                                                                                                             |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.   | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebundenen Rechtecks angeklickt werden kann und das Element spezielle Treffertests ausführt, überschreiben Und stellen Sie einen klickbaren Punkt zur Verfügung. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Titlebar** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | FALSE        | Das Titelleisten-Steuerelement ist nie in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                               |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE         | Das Titelleisten-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                              |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | FALSE        | Ein Titelleisten-Steuerelement hat nie den Tastaturfokus.                                                                                                                                                        |
+| [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Depends (Abhängig)      | Ein Titelleisten-Steuerelement gibt einen Wert zurück, je nachdem, ob er auf dem Bildschirm sichtbar ist.                                                                                                                |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Siehe Hinweise.   | Ein Titelleisten-Steuerelement verfügt in der Regel nicht über eine Bezeichnung.                                                                                                                                                 |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.   | Lokalisierte Zeichenfolge für den Steuerelementtyp „TitleBar“. Der Standardwert ist "Titelleiste" für en-US oder Englisch (USA).                                                                  |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | ""           | Eine Titelleiste ist kein Inhalt. Die Textinformationen werden durch den Namen des übergeordneten Fensters verfügbar gemacht.                                                                                                     |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-Der **TitleBar** -Steuerelement-Typ ist nicht erforderlich, um Steuerelement Muster zu unterstützen. Seine Funktionalität wird über das [Window](uiauto-implementingwindow.md) -Steuerelement Muster des [Window](uiauto-supportwindowcontroltype.md) -Steuerelement Typs verfügbar gemacht.
+Der **TitleBar-Steuerelementtyp** ist nicht erforderlich, um Steuerelementmuster zu unterstützen. Seine Funktionalität wird über [](uiauto-implementingwindow.md) das Fenster-Steuerelementmuster des [Steuerelementtyps Fenster](uiauto-supportwindowcontroltype.md) verfügbar gemacht.
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die für die Unterstützung von Steuerelementen für die Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von Titelleisten-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -136,9 +117,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

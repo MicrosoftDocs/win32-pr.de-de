@@ -1,135 +1,135 @@
 ---
 title: Dialogfelder (Entwurfsgrundeinstellungen)
-description: Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Benutzern Informationen oder Fortschrittsfeedback zur Verfügung stellen können.
+description: Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Informationen oder Statusfeedback erhalten.
 ms.assetid: 2ded9f30-d45f-4027-a85d-4e7d0e412793
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 2fe9b7545961f7e06b1edf1656531779d5122b339d0cf16294e5ef5c4be9a69f
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: dbcf7887a90c7407224bbfbb0c9b316ccb426f76
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119031163"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122880019"
 ---
 # <a name="dialog-boxes-design-basics"></a>Dialogfelder (Entwurfsgrundeinstellungen)
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Benutzern Informationen oder Fortschrittsfeedback zur Verfügung stellen können.
+Ein Dialogfeld ist ein sekundäres Fenster, in dem Benutzer einen Befehl ausführen, Benutzern eine Frage stellen oder Informationen oder Statusfeedback erhalten.
 
 ![Screenshot: Identifizieren von Dialogfeldelementen ](images/win-dialog-box-image1.png)
 
 Ein typisches Dialogfeld.
 
-Dialogfelder bestehen aus einer Titelleiste (um den Befehl, das Feature oder das Programm zu identifizieren, von dem ein Dialogfeld stammt), einer optionalen Hauptanweisung (um das Ziel des Benutzers mit dem Dialogfeld zu erklären), verschiedenen Steuerelementen im Inhaltsbereich (um Optionen anzuzeigen) und Commitschaltflächen (um anzugeben, wie der Benutzer einen Commit für die Aufgabe ausführen möchte).
+Dialogfelder bestehen aus einer Titelleiste (um den Befehl, das Feature oder das Programm zu identifizieren, aus dem bzw. dem ein Dialogfeld stammt), einer optionalen Hauptanweisung (um das Ziel des Benutzers mit dem Dialogfeld zu erklären), verschiedenen Steuerelementen im Inhaltsbereich (zum Präsentieren von Optionen) und Commitschaltflächen (um anzugeben, wie der Benutzer für die Aufgabe ein Commit ausführen möchte).
 
-Dialogfelder verfügen über zwei grundlegende Typen:
+Dialogfelder haben zwei grundlegende Typen:
 
--   **Modale Dialogfelder** erfordern, dass Benutzer abgeschlossen und geschlossen werden, bevor sie mit dem Besitzerfenster fortfahren. Diese Dialogfelder eignen sich am besten für kritische oder seltene, einmalige Aufgaben, die abgeschlossen werden müssen, bevor Sie fortfahren.
--   **Mithilfe von Dialogfeldern ohne** Modus können Benutzer nach Bedarf zwischen dem Dialogfeld und dem Besitzerfenster wechseln. Diese Dialogfelder eignen sich am besten für häufige, sich wiederholende, laufende Aufgaben.
+-   **Modale Dialogfelder** erfordern, dass Benutzer abgeschlossen und geschlossen werden, bevor sie mit dem Besitzerfenster fortfahren. Diese Dialogfelder werden am besten für kritische oder seltene einmalige Aufgaben verwendet, die abgeschlossen werden müssen, bevor Sie fortfahren.
+-   **Mit moduslosen Dialogfeldern** können Benutzer nach Wunsch zwischen dem Dialogfeld und dem Besitzerfenster wechseln. Diese Dialogfelder werden am besten für häufige, sich wiederholende, sich wiederholende Aufgaben verwendet.
 
-**Ein Aufgabendialog ist ein Dialogfeld, das mithilfe der Api (Application Programming Interface) des Aufgabendialogfelds implementiert wird.** Sie bestehen aus den folgenden Teilen, die in einer Vielzahl von Kombinationen zusammengesetzt werden können:
+**Ein Aufgabendialogfeld ist ein Dialogfeld, das mithilfe der Taskdialogfeld-API (Application Programming Interface, Anwendungsprogrammierschnittstelle) implementiert wird.** Sie bestehen aus den folgenden Teilen, die in einer Vielzahl von Kombinationen zusammengestellt werden können:
 
--   Eine **Titelleiste** zum Identifizieren der Anwendungs- oder Systemfunktion, von der das Dialogfeld stammt.
--   Eine **Hauptanweisung** mit einem optionalen Symbol, um das Ziel des Benutzers mit dem Dialogfeld zu identifizieren.
--   Ein **Inhaltsbereich** für beschreibende Informationen und Steuerelemente.
--   Einen **Befehlsbereich** für Commitschaltflächen, einschließlich der Schaltfläche Abbrechen, und optionale Optionen "Weitere" und "Nicht anzeigen" <item> -Steuerelemente erneut.
--   Ein **Fußnotenbereich** für optionale zusätzliche Erklärungen und Hilfe, der in der Regel für weniger erfahrene Benutzer vorgesehen ist.
+-   Eine **Titelleiste,** um die Anwendung oder das Systemfeature zu identifizieren, von der das Dialogfeld stammt.
+-   Eine **Hauptanweisung** mit einem optionalen Symbol, um das Ziel des Benutzers mit dem Dialog zu identifizieren.
+-   Ein **Inhaltsbereich für** beschreibende Informationen und Steuerelemente.
+-   Ein **Befehlsbereich für** Commitschaltflächen, einschließlich der Schaltfläche Abbrechen und optional weitere Optionen und Steuerelemente Dieses &lt; Element nicht mehr &gt; anzeigen.
+-   Ein **Fußnotenbereich** für optionale zusätzliche Erklärungen und Hilfe, die in der Regel für weniger erfahrene Benutzer ausgerichtet sind.
 
 ![Screenshot eines typischen Aufgabendialogfelds ](images/win-dialog-box-image2.png)
 
 Ein typisches Aufgabendialogfeld.
 
-**Aufgabendialoge werden nach Bedarf empfohlen, da sie einfach zu erstellen sind und ein konsistentes Aussehen erzielen.** Aufgabendialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Microsoft Windows geeignet sind.
+**Taskdialoge werden immer dann empfohlen, wenn sie geeignet sind, da sie einfach zu erstellen sind und ein konsistentes Aussehen erzielen.** Taskdialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Microsoft Windows.
 
-Ein Aufgabenbereich ähnelt einem Dialogfeld, mit der Ausnahme, dass er in einem Fensterbereich anstelle eines separaten Fensters angezeigt wird. Daher haben Aufgabenbereiche ein direkteres kontextbezogenes Gefühl als Dialogfelder. Obwohl sie technisch gesehen nicht identisch sind, **ähneln Aufgabenbereiche Dialogfeldern so, dass ihre Richtlinien in diesem Artikel vorgestellt werden.**
+Ein Aufgabenbereich ist wie ein Dialogfeld, mit der Ausnahme, dass er in einem Fensterbereich und nicht in einem separaten Fenster angezeigt wird. Daher haben Aufgabenbereiche ein direkteres, kontextbezogenes Gefühl als Dialogfelder. Obwohl sie technisch gesehen nicht identisch sind, ähneln Aufgabenbereiche Dialogfeldern so, dass ihre Richtlinien **in diesem Artikel dargestellt werden.**
 
 ![Screenshot eines typischen Aufgabenbereichs ](images/win-dialog-box-image3.png)
 
 Ein typischer Aufgabenbereich.
 
-[Eigenschaftenfenster](win-property-win.md) sind ein spezieller Dialogfeldtyp, der zum Anzeigen und Ändern von Eigenschaften für ein Objekt, eine Auflistung von Objekten oder ein Programm verwendet wird. Darüber hinaus unterstützen Eigenschaftenfenster in der Regel mehrere Aufgaben, während Dialogfelder in der Regel einen einzelnen Task oder Schritt in einer Aufgabe unterstützen. Da ihre Verwendung spezialisiert ist, **werden Eigenschaftenfenster in einer anderen Reihe von Richtlinien behandelt.**
+[Eigenschaftenfenster](win-property-win.md) sind ein spezieller Dialogfeldtyp, der zum Anzeigen und Ändern von Eigenschaften für ein Objekt, eine Auflistung von Objekten oder ein Programm verwendet wird. Darüber hinaus unterstützen Eigenschaftenfenster in der Regel mehrere Aufgaben, während Dialogfelder in der Regel einen einzelnen Task oder Schritt in einer Aufgabe unterstützen. Da ihre Verwendung spezialisiert ist, **werden Eigenschaftenfenster in einem anderen Satz von Richtlinien behandelt.**
 
-Dialogfelder können [Registerkarten](ctrl-tabs.md)aufweisen, und wenn ja, werden sie als Dialogfelder im Registerkartenbett bezeichnet. Eigenschaftenfenster werden durch ihre Darstellung von Eigenschaften bestimmt, nicht durch die Verwendung von Registerkarten.
+Dialogfelder können [Registerkarten haben,](ctrl-tabs.md)und wenn ja, werden sie als Dialogfelder im Registerkartenfenster bezeichnet. Eigenschaftenfenster werden durch ihre Darstellung von Eigenschaften bestimmt, nicht durch die Verwendung von Registerkarten.
 
-**Hinweis:** Richtlinien im Zusammenhang mit [Layout,](vis-layout.md) [Fensterverwaltung,](win-window-mgt.md)allgemeinen Dialogfeldern, [Eigenschaftenfenstern,](win-property-win.md) [Assistenten,](win-wizards.md) [Bestätigungen,](mess-confirm.md) [Fehlermeldungen](mess-error.md)und [Warnmeldungen](mess-warn.md) werden in separaten Artikeln dargestellt.
+**Hinweis:** Richtlinien im Zusammenhang [](mess-warn.md) mit [Layout,](vis-layout.md)Fensterverwaltung, allgemeinen Dialogfeldern, Eigenschaftenfenstern, Assistenten, Bestätigungen, Fehlermeldungen und Warnmeldungen werden in separaten Artikeln dargestellt. [](win-window-mgt.md) [](win-property-win.md) [](win-wizards.md) [](mess-confirm.md) [](mess-error.md)
 
 ## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Sollen Benutzer Informationen bereitstellen, Benutzern eine Frage stellen oder Benutzern erlauben, Optionen zum Ausführen eines Befehls oder einer Aufgabe auszuwählen?** Falls nicht, verwenden Sie eine andere Benutzeroberfläche .
--   **Sollen Eigenschaften für ein Objekt, eine Auflistung von Objekten oder ein Programm angezeigt und geändert werden?** Verwenden Sie in diesem Falle stattdessen ein [Eigenschaftenfenster](win-property-win.md) oder eine [Symbolleiste.](cmd-toolbars.md)
--   **Soll eine Sammlung von Befehlen oder Tools präsentiert werden?** Verwenden Sie in diesem Falle eine Symbolleiste oder ein [Palettenfenster.](glossary.md)
--   **Soll überprüft werden, ob der Benutzer mit einer Aktion fortfahren möchte?** Gibt es einen eindeutigen Grund, nicht fortzufahren, und eine angemessene Wahrscheinlichkeit, dass benutzer dies manchmal nicht tun? Wenn ja, verwenden Sie eine [Bestätigung.](mess-confirm.md)
--   **Soll ein Fehler oder eine Warnmeldung ausgegeben werden?** Verwenden Sie in diesem Falle eine [Fehlermeldung](mess-error.md) oder [eine Warnmeldung.](mess-warn.md)
--   Ist der Zweck für Folgendes:
+-   **Ist der Zweck, Benutzern Informationen zur Verfügung zu stellen, Benutzern eine Frage zu stellen oder Benutzern die Auswahl von Optionen zum Ausführen eines Befehls oder einer Aufgabe zu ermöglichen?** Wenn dies nicht der Dert ist, verwenden Sie eine andere Benutzeroberfläche (UI).
+-   **Dient das Anzeigen und Ändern von Eigenschaften für ein Objekt, eine Sammlung von Objekten oder ein Programm?** Wenn dies der Grund ist, verwenden Sie [stattdessen ein Eigenschaftenfenster](win-property-win.md) [oder eine](cmd-toolbars.md) Symbolleiste.
+-   **Soll eine Sammlung von Befehlen oder Tools präsentiert werden?** Wenn dies der Ansicht ist, verwenden Sie eine Symbolleiste oder [ein Palettenfenster.](glossary.md)
+-   **Soll überprüft werden, ob der Benutzer mit einer Aktion fortfahren möchte?** Gibt es einen eindeutigen Grund, nicht fortzufahren, und eine angemessene Wahrscheinlichkeit, dass Benutzer dies manchmal nicht tun? Wenn dies der Reihe ist, verwenden Sie eine [Bestätigung.](mess-confirm.md)
+-   **Soll ein Fehler oder eine Warnmeldung ausgegeben werden?** Verwenden Sie in diesem Beispiel [eine Fehlermeldung oder](mess-error.md) [Warnmeldung.](mess-warn.md)
+-   Der Zweck besteht in folgenden Zwecken:
     -   Öffnen von Dateien
     -   Speichern von Dateien
-    -   Öffnen von Ordnern
+    -   Ordner öffnen
     -   Suchen oder Ersetzen von Text
     -   Drucken eines Dokuments
     -   Auswählen von Attributen einer gedruckten Seite
-    -   Auswählen einer Schriftart
+    -   Schriftart auswählen
     -   Auswählen einer Farbe
     -   Suchen nach einer Datei, einem Ordner, einem Computer oder einem Drucker
     -   Suchen nach Benutzern, Computern oder Gruppen in Microsoft Active Directory
     -   Geben Sie einen Benutzernamen und ein Kennwort ein?
 
-Verwenden Sie in diesem Falle stattdessen das entsprechende [allgemeine Dialogfeld.](win-common-dlg.md) Viele dieser allgemeinen Dialoge sind erweiterbar.
+Falls ja, verwenden Sie stattdessen den [entsprechenden allgemeinen](win-common-dlg.md) Dialog. Viele dieser häufigen Dialoge sind erweiterbar.
 
--   **Ist der Zweck, eine mehrstufige Aufgabe auszuführen, die mehr als ein einzelnes Fenster erfordert?** Verwenden Sie in diesem Falle stattdessen einen [Taskflow](glossary.md) oder [Assistenten.](win-wizards.md)
--   **Soll der Zweck darin besteht, Benutzer über ein System- oder Programmereignis zu informieren, das nicht mit der aktuellen Benutzeraktivität in Zusammenhang steht, das keine sofortige Benutzeraktion erfordert und die Benutzer frei ignorieren können?** Verwenden Sie in diesem Falle stattdessen eine [Benachrichtigung.](mess-notif.md)
--   **Soll der Programmstatus angezeigt werden?** Verwenden Sie in diesem Falle stattdessen eine [Statusleiste.](ctrl-status-bars.md)
--   **Wäre es besser, die benutzeroberfläche vor Ort zu verwenden?** Dialogfelder können den Benutzerflow unterbrechen, indem sie die Aufmerksamkeit erfordern. Manchmal ist diese Unterbrechung des Flows gerechtfertigt, z. B. wenn der Benutzer eine Aktion ausführen muss, die sich außerhalb des aktuellen Kontexts befindet. In anderen Fällen besteht ein besserer Ansatz darin, die Benutzeroberfläche im Kontext darzustellen, entweder direkt mit der direkten Benutzeroberfläche (z. B. einem Aufgabenbereich) oder bei Bedarf mithilfe der [progressiven Offenlegung.](ctrl-progressive-disclosure-controls.md)
--   **Soll ein nicht kritisches Benutzereingabeproblem oder eine besondere Bedingung angezeigt werden?** Verwenden Sie in diesem Falle stattdessen einen [Balloon.](ctrl-balloons.md)
--   **Wäre es für Aufgabenflows besser, eine andere Seite zu verwenden?** Im Allgemeinen möchten Sie, dass eine Aufgabe innerhalb eines einzelnen Fensters von Seite zu Seite fließt. Verwenden Sie Dialogfelder, um direkt ausgeführte Befehle zu bestätigen, Eingaben für direkt ausgeführte Befehle abzurufen und sekundäre, eigenständige Aufgaben auszuführen, die am besten unabhängig und außerhalb des Haupttaskflows ausgeführt werden.
--   **Ändern Benutzer die Optionen wahrscheinlich für die Auswahl von Optionen?** Falls nicht, sollten Sie Alternativen in Betracht ziehen, z. B.:
-    -   Verwenden sie die Standardoptionen, ohne die Benutzer zu fragen, aber später Änderungen vornehmen zu können.
-    -   Bereitstellen einer Version mit Optionen **(z. B. Drucken...** in einem Menü) sowie einer Version ohne Optionen (z. B. **Drucken** auf der Symbolleiste). Im Allgemeinen sollten Symbolleistenbefehle sofort sein und das Anzeigen von Dialogfeldern vermeiden.
--   **Gibt es für die Auswahl von Optionen eine einfachere, direktere Möglichkeit, die Optionen darzustellen?** Ziehen Sie in diesem Falle Alternativen in Betracht, z. B.:
-    -   Verwenden einer [unterteilten Schaltfläche](ctrl-command-buttons.md) zum Auswählen von Variationen eines Befehls.
+-   **Ist es der Zweck, eine mehrstufige Aufgabe auszuführen, die mehr als ein Fenster erfordert?** Falls ja, verwenden Sie stattdessen [einen Taskfluss](glossary.md) [oder Assistenten.](win-wizards.md)
+-   **Ist der Zweck, Benutzer über ein System- oder Programmereignis zu informieren, das nicht mit der aktuellen Benutzeraktivität zusammenhing, die keine sofortige Benutzeraktion erfordert und Benutzer frei ignorieren können?** Falls ja, verwenden Sie stattdessen [eine Benachrichtigung.](mess-notif.md)
+-   **Soll der Programmstatus angezeigt werden?** Wenn ja, verwenden Sie stattdessen [eine Statusleiste.](ctrl-status-bars.md)
+-   **Wäre es vorzuziehen, eine in-place-Benutzeroberfläche zu verwenden?** Dialogfelder können den Fluss des Benutzers durch Erlegen von Aufmerksamkeit einbrechen. Manchmal ist diese Unterbrechung des Flusses gerechtfertigt, z. B. wenn der Benutzer eine Aktion ausführen muss, die sich außerhalb des aktuellen Kontexts befindet. In anderen Fällen ist es besser, die Benutzeroberfläche im Kontext zu präsentieren, entweder direkt mit einer direkten Benutzeroberfläche (z. B. einem Aufgabenbereich) oder bei Bedarf mit progressiver [Offenlegung.](ctrl-progressive-disclosure-controls.md)
+-   **Soll ein nicht kritisches Benutzereingabeproblem oder eine besondere Bedingung angezeigt werden?** Wenn ja, verwenden Sie stattdessen [eine Sprechblase.](ctrl-balloons.md)
+-   **Wäre es für Aufgabenflüsse vorzuziehen, eine andere Seite zu verwenden?** Im Allgemeinen möchten Sie, dass eine Aufgabe innerhalb eines einzelnen Fensters von Seite zu Seite fließt. Verwenden Sie Dialogfelder, um direkt ausgeführte Befehle zu bestätigen, Eingaben für direkt ausgeführte Befehle zu erhalten und sekundäre, eigenständige Aufgaben auszuführen, die am besten unabhängig und außerhalb des Hauptaufgabenflusses ausgeführt werden.
+-   **Sind Benutzer bei der Auswahl von Optionen wahrscheinlich, die Optionen zu ändern?** Falls nicht, sollten Sie Alternativen in Betracht ziehen, z. B.:
+    -   Verwenden Sie die Standardoptionen, ohne sie zu fragen, aber benutzern zu ermöglichen, später Änderungen vorzunehmen.
+    -   Bereitstellen einer Version mit Optionen (z. B. **Drucken...** in einem Menü) sowie einer Version ohne Optionen (z. B. **Drucken** auf der Symbolleiste). Im Allgemeinen sollten Symbolleistenbefehle sofort sein und das Anzeigen von Dialogfeldern vermeiden.
+-   **Gibt es für die Auswahl von Optionen eine einfachere, direktere Möglichkeit, die Optionen zu präsentieren?** Falls ja, sollten Sie Alternativen in Betracht ziehen, z. B.:
+    -   Verwenden einer [geteilten Schaltfläche](ctrl-command-buttons.md) zum Auswählen von Varianten eines Befehls.
     -   Verwenden eines Untermenüs für Befehle, Kontrollkästchen, Optionsfelder und einfache Listen.
 
 ![Screenshot: Menü und Untermenü](images/win-dialog-box-image4.png)
 
 ![Screenshot eines Menüs und Untermenüs ](images/win-dialog-box-image5.png)
 
-In diesen Beispielen werden Untermenüs anstelle von Dialogfeldern für einfache Auswahl verwendet.
+In diesen Beispielen werden Untermenüs anstelle von Dialogfeldern für einfache Auswahlen verwendet.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Bei ordnungsgemäßer Verwendung sind Dialogfelder eine hervorragende Möglichkeit, Ihrem Programm Energie und Flexibilität zu geben. Wenn sie missbraucht werden, sind Dialogfelder eine einfache Möglichkeit, Benutzer zu verärgern, ihren Flow zu unterbrechen und das Programm indirekt und mühsam zu verwenden. **Modale Dialogfelder erfordern die Aufmerksamkeit der Benutzer.** Dialogfelder lassen sich häufig einfacher implementieren als alternative Benutzeroberflächen, sodass sie tendenziell überladen sind.
+Bei ordnungsgemäßer Verwendung sind Dialogfelder eine hervorragende Möglichkeit, Ihrem Programm Energie und Flexibilität zu geben. Bei Missbrauch sind Dialogfelder eine einfache Möglichkeit, Benutzer zu stören, ihren Flow zu unterbrechen und das Programm indirekt und mühsam zu verwenden. **Modale Dialogfelder erfordern die Aufmerksamkeit der Benutzer.** Dialogfelder sind häufig einfacher zu implementieren als alternative Beis, sodass sie in der Regel zu häufig verwendet werden.
 
-**Ein Dialogfeld ist am effektivsten, wenn seine Entwurfsmerkmale der Verwendung entsprechen.** Der Entwurf eines Dialogfelds wird größtenteils durch seinen Zweck bestimmt (zum Anbieten von Optionen, Stellen von Fragen, Bereitstellen von Informationen oder Feedback), Typ (modal oder moduslos) und Benutzerinteraktion (erforderlich, optionale Antwort oder Bestätigung), während seine Verwendung größtenteils durch den Kontext (benutzer- oder programminitiiert), die Wahrscheinlichkeit von Benutzeraktionen und die Häufigkeit der Anzeige bestimmt wird.
+**Ein Dialogfeld ist am effektivsten, wenn seine Entwurfsmerkmale mit seiner Verwendung übereinstimmen.** Der Entwurf eines Dialogfelds wird größtenteils durch seinen Zweck bestimmt (zum Anbieten von Optionen, Stellen von Fragen, Bereitstellen von Informationen oder Feedback), Typ (modal oder moduslos) und Benutzerinteraktion (erforderlich, optionale Antwort oder Bestätigung), während seine Verwendung größtenteils durch den Kontext (vom Benutzer oder Programm initiiert), die Wahrscheinlichkeit der Benutzeraktion und die Häufigkeit der Anzeige bestimmt wird.
 
 Um effektive Dialogfelder zu entwerfen, verwenden Sie die folgenden Elemente effektiv:
 
--   Text im Dialogfeld
+-   Dialogfeldtext
 -   Hauptanweisungen
--   Nicht anzeigen <item> again-Option
+-   Option "Dieses Element nicht erneut anzeigen" &lt; &gt;
 
-**Wenn Sie nur eins tun...**
+**Wenn Sie nur eine Sache durchführen...**
 
-Stellen Sie sicher, dass der Entwurf Ihres Dialogfelds (bestimmt durch seinen Zweck, Typ und die Benutzerinteraktion) mit seiner Verwendung (bestimmt durch den Kontext, die Wahrscheinlichkeit der Benutzeraktion und die Häufigkeit der Anzeige) entspricht.
+Stellen Sie sicher, dass der Entwurf des Dialogfelds (bestimmt durch Zweck, Typ und Benutzerinteraktion) mit seiner Verwendung übereinstimmt (bestimmt durch den Kontext, die Wahrscheinlichkeit von Benutzeraktionen und die Häufigkeit der Anzeige).
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Dialogfelder verfügen über mehrere Verwendungsmuster:
+Dialogfelder weisen mehrere Verwendungsmuster auf:
 
--   Fragedialogfelder (mithilfe von Schaltflächen) stellen Benutzern eine einzelne Frage oder , um einen Befehl zu bestätigen, und verwenden einfache Antworten in horizontal angeordneten Befehlsschaltflächen.
--   Fragedialoge (über Befehlslinks) stellen Benutzern eine einzelne Frage oder , um eine auszuführende Aufgabe auszuwählen und detaillierte Antworten in vertikal angeordneten Befehlslinks zu verwenden.
--   Auswahldialoge bieten Benutzern eine Reihe von Optionen, in der Regel, um einen Befehl vollständig anzugeben. Im Gegensatz zu Fragedialogen können Auswahldialoge mehrere Fragen stellen.
--   Statusdialogfelder stellen Benutzern während eines längeren Vorgangs (länger als fünf Sekunden) Statusfeedback sowie einen Befehl zum Abbrechen oder Beenden des Vorgangs zur Verfügung.
--   In Informationsdialogfeldern werden vom Benutzer angeforderte Informationen angezeigt.
+-   Fragedialoge (mitHilfe von Schaltflächen) stellen Benutzern eine einzelne Frage oder zum Bestätigen eines Befehls und verwenden einfache Antworten in horizontal angeordneten Befehlsschaltflächen.
+-   Fragedialoge (mithilfe von Befehlslinks) stellen Benutzern eine einzelne Frage, oder wählen Sie eine auszuführende Aufgabe aus, und verwenden Sie ausführliche Antworten in vertikal angeordneten Befehlslinks.
+-   Auswahldialogfelder stellen Benutzern eine Reihe von Optionen zur Verfügung, in der Regel, um einen Befehl vollständiger anzugeben. Im Gegensatz zu Fragedialogen können Auswahldialoge mehrere Fragen stellen.
+-   Statusdialogfelder zeigen Benutzern während eines längeren Vorgangs (länger als fünf Sekunden) ein Statusfeedback sowie einen Befehl zum Abbrechen oder Beenden des Vorgangs an.
+-   Informationsdialogfelder zeigen vom Benutzer angeforderte Informationen an.
 
 ## <a name="guidelines"></a>Richtlinien
 
 ### <a name="general"></a>Allgemein
 
--   **Verwenden Sie keine scrollbaren Dialogfelder.** Verwenden Sie keine Dialogfelder, in denen die Verwendung einer Scrollleiste während der normalen Nutzung vollständig angezeigt werden muss. Gestalten Sie stattdessen das Dialogfeld neu. Erwägen Sie die [Verwendung der progressiven Offenlegung](ctrl-progressive-disclosure-controls.md) oder der [Registerkarten](ctrl-tabs.md).
--   **Sie verfügen nicht über eine Menüleiste oder Statusleiste.** Stellen Sie stattdessen den Zugriff auf Befehle und Status direkt im Dialogfeld selbst oder mithilfe von Kontextmenüs für die relevanten Steuerelemente zur Verfügung.
+-   **Verwenden Sie keine bildlauffähigen Dialogfelder.** Verwenden Sie keine Dialogfelder, in denen die Verwendung einer Bildlaufleiste während der normalen Nutzung vollständig angezeigt werden muss. Gestalten Sie stattdessen das Dialogfeld neu. Erwägen Sie die Verwendung von [progressiver Offenlegung](ctrl-progressive-disclosure-controls.md) oder [Registerkarten](ctrl-tabs.md).
+-   **Sie verfügen nicht über eine Menüleiste oder Statusleiste.** Gewähren Sie stattdessen zugriff auf Befehle und den Status direkt im Dialogfeld selbst oder mithilfe von Kontextmenüs für die relevanten Steuerelemente.
 
     -   **Ausnahme:** Menüleisten sind akzeptabel, wenn ein Dialogfeld verwendet wird, um ein primäres Fenster (z. B. ein Hilfsprogramm) zu implementieren.
 
@@ -137,89 +137,89 @@ Dialogfelder verfügen über mehrere Verwendungsmuster:
 
     ![Screenshot eines Dialogfelds mit einer Menüleiste ](images/win-dialog-box-image6.png)
 
-    In diesem Beispiel ist Zertifikat suchen ein modusloses Dialogfeld mit einer Menüleiste.
+    In diesem Beispiel ist Zertifikate suchen ein modusloses Dialogfeld mit einer Menüleiste.
 
--   Wenn ein Dialogfeld sofortige Aufmerksamkeit erfordert und das Programm nicht aktiv ist, drücken Sie die **Taskleistenschaltfläche dreimal,** um die Aufmerksamkeit zu erhalten, und lassen Sie es hervorgehoben. Führen Sie nichts anderes aus: Stellen Sie das Fenster nicht wieder wieder, oder aktivieren Sie es nicht, und geben Sie keine Soundeffekte wieder. Achten Sie stattdessen auf die Fensterzustandsauswahl des Benutzers, und lassen Sie den Benutzer das Fenster aktivieren, wenn er bereit ist.
+-   Wenn ein Dialogfeld sofortige Aufmerksamkeit erfordert und das Programm nicht aktiv ist, blinken Sie **die Taskleistenschaltfläche dreimal, um die Aufmerksamkeit zu lenken, und lassen Sie es hervorgehoben.** Machen Sie nichts anderes: Stellen Sie das Fenster nicht wieder her, oder aktivieren Sie es nicht, und geben Sie keine Soundeffekte wieder. Beachten Sie stattdessen die Fensterzustandsauswahl des Benutzers, und lassen Sie den Benutzer das Fenster aktivieren, wenn er bereit ist.
 -   Weitere Richtlinien und Beispiele finden Sie unter [Taskleiste](winenv-taskbar.md).
 
 ### <a name="modal-dialog-boxes"></a>Modale Dialogfelder
 
--   **Verwenden Sie für kritische oder selten auftretende einmalige Aufgaben, die abgeschlossen werden müssen, bevor Sie fortfahren.**
--   Verwenden Sie [ein Modell mit verzögerten](glossary.md) Commits, damit Änderungen erst wirksam werden, wenn explizit ein Commit erfolgt ist.
--   **Implementieren Sie nach Bedarf mithilfe eines Aufgabendialogfelds, um ein konsistentes Aussehen zu erzielen.** Taskdialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Windows.
+-   **Verwenden Sie für kritische oder seltene, einmalige Aufgaben, die abgeschlossen werden müssen, bevor Sie fortfahren.**
+-   Verwenden Sie ein [verzögertes Commitmodell,](glossary.md) damit Änderungen erst wirksam werden, wenn ein expliziter Commit ausgeführt wurde.
+-   **Implementieren Sie nach Bedarf mithilfe eines Aufgabendialogfelds, um ein konsistentes Aussehen zu erzielen.** Aufgabendialogfelder erfordern Windows Vista oder höher, sodass sie nicht für frühere Versionen von Windows geeignet sind.
 
 ### <a name="modeless-dialog-boxes"></a>Dialogfelder ohne Modus
 
--   **Verwenden Sie für häufige, sich wiederholende, sich wiederholende Aufgaben.**
--   Verwenden Sie [ein Direkt-Commit-Modell,](glossary.md) damit Änderungen sofort wirksam werden.
--   Verwenden Sie für nicht moduslose Dialogfelder eine explizite Befehlsschaltfläche Schließen im Dialogfeld, um das Fenster zu schließen. Verwenden Sie für beides die Schaltfläche Schließen auf der Titelleiste, um das Fenster zu schließen.
--   **Erwägen Sie, moduslose Dialogfelder andockbar zu machen.** Andockbare, moduslose Dialoge ermöglichen eine flexiblere Platzierung.
+-   **Wird für häufige, sich wiederholende, laufende Aufgaben verwendet.**
+-   Verwenden Sie ein Modell mit [sofortigem Commit,](glossary.md) damit Änderungen sofort wirksam werden.
+-   Verwenden Sie für dialoglose Dialoge eine explizite Befehlsschaltfläche Schließen im Dialogfeld, um das Fenster zu schließen. Verwenden Sie für beide eine Schaltfläche Schließen auf der Titelleiste, um das Fenster zu schließen.
+-   **Erwägen Sie, moduslose Dialogfelder andockbar zu machen.** Andockbare dialoglose Dialoge ermöglichen eine flexiblere Platzierung.
 
 ![Screenshot eines andockbaren, moduslosen Dialogfelds ](images/win-dialog-box-image7.png)
 
-Einige in der -Datei verwendete moduslose Dialogfelder Microsoft Office andockbar.
+Einige in Microsoft Office verwendete dialogfelder ohne Modus können angedockt werden.
 
 ### <a name="multiple-dialog-boxes"></a>Mehrere Dialogfelder
 
--   **Zeigen Sie in einem Dialogfeld für die Besitzerauswahl nicht mehr als einen Auswahldialog gleichzeitig an.** Das Anzeigen von mehr als einem macht die Bedeutung der Commitschaltflächen für Benutzer schwer zu verstehen. Sie können bei Bedarf andere Arten von Dialogfeldern (z. B. Fragedialoge) anzeigen.
+-   **Zeigen Sie in einem Dialogfeld für die Auswahl des Besitzers nicht mehr als ein Dialogfeld für die Auswahl im Besitz gleichzeitig an.** Das Anzeigen mehrerer Schaltflächen erschwert es Benutzern, die Bedeutung der Commitschaltflächen zu verstehen. Sie können bei Bedarf andere Arten von Dialogfeldern (z. B. Fragedialogfelder) anzeigen.
 -   **Für eine Sequenz verwandter Dialoge sollten Sie nach Möglichkeit einen mehrseitigen Dialog verwenden.** Verwenden Sie einzelne Dialoge, wenn sie nicht eindeutig verknüpft sind.
 
 ### <a name="multi-page-dialog-boxes"></a>Dialogfelder mit mehreren Seiten
 
--   Verwenden Sie ein Mehrseitendialogfeld anstelle einzelner Dialogfelder, wenn sie über die folgende Sequenz verwandter Seiten verfügen:
+-   Verwenden Sie ein Mehrseitendialogfeld anstelle einzelner Dialogfelder, wenn Sie über die folgende Sequenz verwandter Seiten verfügen:
     -   Eine einzelne Eingabeseite (optional)
     -   Eine Statusseite
     -   Eine einzelne Ergebnisseite
 
-Die Eingabeseite ist optional, da die Aufgabe möglicherweise an einer anderen Stelle initiiert wurde. **Dadurch erhält die resultierende Erfahrung ein stabiles, einfaches und einfaches Gefühl.**
+Die Eingabeseite ist optional, da die Aufgabe möglicherweise an einer anderen Stelle initiiert wurde. **Dadurch erhält die resultierende Erfahrung ein stabiles, einfaches, einfaches Gefühl.**
 
-![Screenshot einer Statusleiste ](images/win-dialog-box-image8.png)
+![Screenshot einer Statusanzeige ](images/win-dialog-box-image8.png)
 
 ![Screenshot der Meldung "Keine Probleme gefunden" ](images/win-dialog-box-image9.png)
 
-In diesem Beispiel besteht Windows Netzwerkdiagnose aus Fortschritts- und Ergebnisseiten.
+In diesem Beispiel besteht Windows Netzwerkdiagnose aus Status- und Ergebnisseiten.
 
--   **Verwenden Sie keinen mehrseitigen Dialog, wenn es sich bei der Eingabeseite um einen Standarddialog handelt.** In diesem Fall ist die Konsistenz der Verwendung eines Standarddialogfelds wichtiger.
--   **Verwenden Sie die Schaltflächen Weiter oder Zurück nicht, und sie haben nicht mehr als drei Seiten.** Mehrseitige Dialogfelder sind für Einzelschrittaufgaben mit Feedback. Es handelt sich nicht um [Assistenten,](win-wizards.md)die für mehrstufige Aufgaben verwendet werden. Assistenten haben im Vergleich zu Dialogfeldern mit mehreren Seiten ein starkes, indirektes Gefühl.
+-   **Verwenden Sie kein mehrseitiges Dialogfeld, wenn es sich bei der Eingabeseite um ein Standarddialogfeld handelt.** In diesem Fall ist die Konsistenz der Verwendung eines Standarddialogs wichtiger.
+-   **Verwenden Sie nicht die Schaltflächen Weiter oder Zurück, und haben Sie nicht mehr als drei Seiten.** Mehrseitige Dialogfelder sind für Einzelschrittaufgaben mit Feedback vorgesehen. Sie sind keine [Assistenten,](win-wizards.md)die für mehrstufige Aufgaben verwendet werden. Assistenten haben im Vergleich zu dialogfeldern mit mehreren Seiten eine starke, indirekte Haptik.
 -   **Verwenden Sie auf der Eingabeseite bestimmte Befehlsschaltflächen oder Befehlslinks, um die Aufgabe zu initiieren.**
--   **Verwenden Sie auf den Eingabe- und Fortschrittsseiten die Schaltfläche Abbrechen und auf der Ergebnisseite die Schaltfläche Schließen.**
+-   **Verwenden Sie auf den Eingabe- und Statusseiten die Schaltfläche Abbrechen und auf der Ergebnisseite die Schaltfläche Schließen.**
 
-**Entwickler:** Sie können Mehrseitentaskdialogfelder mithilfe der [TDM \_ NAVIGATE \_ PAGE-Meldung](../controls/tdm-navigate-page.md) erstellen.
+**Entwickler:** Sie können Dialogfelder für mehrseitige Aufgaben mithilfe der [TDM \_ NAVIGATE \_ PAGE-Meldung](../controls/tdm-navigate-page.md) erstellen.
 
 ### <a name="presentation"></a>Präsentation
 
 Damit Dialogfelder leicht zu finden und darauf zugreifen können, ordnen Sie den Dialog eindeutig der Quelle zu und funktionieren gut mit mehreren Monitoren:
 
--   **Zunächst werden Dialoge "zentriert" über dem Besitzerfenster angezeigt.** Erwägen Sie für die nachfolgende Anzeige die Anzeige an der letzten Position (relativ zum Besitzerfenster), wenn dies wahrscheinlich bequemer ist.
+-   **Anfänglich werden Dialoge "zentriert" über dem Besitzerfenster angezeigt.** Für die nachfolgende Anzeige sollten Sie die Anzeige am letzten Speicherort (relativ zum Besitzerfenster) in Betracht ziehen, wenn dies wahrscheinlich bequemer ist.
 
-![Diagramm des Dialogfelds, das auf einem Fenster darauf zentriert ist ](images/win-dialog-box-image10.png)
+![Diagramm des Dialogfelds, das auf dem Fenster im Hintergrund zentriert ist ](images/win-dialog-box-image10.png)
 
-Zentriert Dialoge zunächst über dem Besitzerfenster.
+Anfangs werden Dialoge über dem Besitzerfenster in den Mittelpunkt gemittelt.
 
--   **Wenn ein Dialogfeld kontextbezogen ist, zeigen Sie es in der Nähe des Objekts an, von dem es gestartet wurde.** Platzieren Sie sie jedoch in den anderen Richtungen (vorzugsweise nach unten und rechts versetzt), damit das Objekt nicht durch den Dialog abgedeckt wird.
+-   **Wenn ein Dialogfeld kontextabhängig ist, zeigen Sie es in der Nähe des Objekts an, von dem aus es gestartet wurde.** Platzieren Sie es jedoch außerhalb des Wegs (vorzugsweise nach unten und nach rechts versetzt), sodass das Objekt nicht durch den Dialog abgedeckt wird.
 
-![Diagramm des Dialogfeldoffsets nach unten und rechts ](images/win-dialog-box-image11.png)
+![Diagramm des Offsets des Dialogfelds nach unten und rechts ](images/win-dialog-box-image11.png)
 
-Die Eigenschaften eines Objekts werden in der Nähe des Objekts angezeigt.
+Die Eigenschaften eines Objekts werden in der Nähe des -Objekts angezeigt.
 
--   **Für nicht moduslose Dialogfelder wird zunächst oben im Besitzerfenster angezeigt, um die Suche zu ermöglichen.** Wenn der Benutzer das Besitzerfenster aktiviert, kann dies den moduslosen Dialog verdecken.
--   **Passen Sie bei Bedarf den anfänglichen Speicherort so an, dass der gesamte Dialog im Zielmonitor sichtbar ist.** Wenn ein Fenster, das die Größe ändern kann, größer als der Zielmonitor ist, reduzieren Sie es an seine Größe.
--   **Wenn ein Dialogfeld erneut angezeigt wird, sollten Sie erwägen, es im gleichen Zustand wie beim letzten Zugriff anzuzeigen.** Speichern Sie beim Schließen den verwendeten Monitor, die Fenstergröße, den Speicherort und den Zustand (maximiert im Vergleich zur Wiederherstellung). Stellen Sie bei der erneuten Anzeige die gespeicherte Dialoggröße, den Speicherort und den Zustand mithilfe des entsprechenden Monitors wieder wieder auf. Erwägen Sie außerdem, diese Attribute pro Benutzer über Programminstanzen hinweg persistent zu halten.
--   **Legen Sie für fenster, die die Größe ändern können, eine Mindestfenstergröße fest, wenn es eine Größe gibt, unter der der Inhalt nicht mehr verwendet werden kann.** Ändern Sie die Präsentation, um den Inhalt in kleineren Größen nutzbar zu machen.
+-   **Für dialoglose Dialoge wird zunächst über dem Besitzerfenster angezeigt, um die Suche zu vereinfachen.** Wenn der Benutzer das Besitzerfenster aktiviert, wird der moduslose Dialog möglicherweise verdeckt.
+-   **Passen Sie bei Bedarf den ursprünglichen Speicherort so an, dass der gesamte Dialog im Zielmonitor sichtbar ist.** Wenn ein Fenster mit größenveränderlicher Größe größer als der Zielmonitor ist, reduzieren Sie es, damit es passt.
+-   **Wenn ein Dialogfeld erneut angezeigt wird, sollten Sie erwägen, es im selben Zustand wie der zuletzt aufgerufene anzuzeigen.** Speichern Sie beim Schließen den verwendeten Monitor, die Fenstergröße, den Speicherort und den Zustand (maximiert im Vergleich zur Wiederherstellung). Stellen Sie bei der erneuten Anzeige die gespeicherte Dialoggröße, den Speicherort und den Status mithilfe des entsprechenden Monitors wieder her. Erwägen Sie außerdem, diese Attribute auf Programminstanzen pro Benutzer dauerhaft zu speichern.
+-   **Legen Sie für fenstergrößenveränderbare Fenster eine minimale Fenstergröße fest, wenn eine Größe vorhanden ist, unter der der Inhalt nicht mehr verwendet werden kann.** Ändern Sie die Präsentation, um den Inhalt in kleineren Größen nutzbar zu machen.
 
 ![Screenshot der zentrierten Media Player-Schaltflächen ](images/win-dialog-box-image12.png)
 
-In diesem Beispiel wird Windows Media Player Format geändert, wenn das Fenster für das Standardformat zu klein wird.
+In diesem Beispiel ändert Windows Media Player das Format, wenn das Fenster für das Standardformat zu klein wird.
 
 -   **Verwenden Sie nicht das Always On Top-Attribut.**
-    -   **Ausnahme:** Verwenden Sie nur, wenn ein Dialogfeld einen im Wesentlichen modalen Vorgang implementiert, aber kurz angehalten werden muss, um auf das Besitzerfenster zugreifen zu können. Bei der Rechtschreibprüfung eines Dokuments können Benutzer z. B. gelegentlich das Rechtschreibprüfungsdialogfeld verlassen und auf das Dokument zugreifen, um Fehler zu beheben.
+    -   **Ausnahme:** Verwenden Sie nur, wenn ein Dialogfeld einen im Wesentlichen modalen Vorgang implementiert, aber kurz angehalten werden muss, um auf das Besitzerfenster zuzugreifen. Beispielsweise können Benutzer bei der Rechtschreibprüfung eines Dokuments gelegentlich das Rechtschreibprüfungsdialogfeld verlassen und auf das Dokument zugreifen, um Fehler zu beheben.
 
-Weitere Informationen und Beispiele finden Sie unter [Fensterverwaltung](win-window-mgt.md).
+Weitere Informationen und Beispiele finden Sie unter [Fensterverwaltung.](win-window-mgt.md)
 
 ### <a name="title-bars"></a>Titelleisten
 
--   **Dialogfelder verfügen nicht über Titelleistensymbole.** Titelleistensymbole werden als visuelle Unterscheidung zwischen [primären und](glossary.md) [sekundären Fenstern verwendet.](glossary.md)
-    -   **Ausnahme:** Wenn ein Dialogfeld zum Implementieren eines primären Fensters (z. B. eines Hilfsprogramms) verwendet wird und daher auf der Taskleiste angezeigt wird, verfügt es über ein Titelleistensymbol. Optimieren Sie in diesem Fall den Titel für die Anzeige auf der Taskleiste, indem Sie die unterscheidenden Informationen präzise an erster Stelle platzieren.
+-   **Dialogfelder verfügen nicht über Titelleistensymbole.** Titelleistensymbole werden als visueller Unterschied zwischen [primären und](glossary.md) [sekundären Fenstern](glossary.md)verwendet.
+    -   **Ausnahme:** Wenn ein Dialogfeld zum Implementieren eines primären Fensters (z. B. eines Hilfsprogramms) verwendet wird und daher auf der Taskleiste angezeigt wird, verfügt es über ein Titelleistensymbol. Optimieren Sie in diesem Fall den Titel für die Anzeige auf der Taskleiste, indem Sie zuerst die Unterscheidungsinformationen präzise platzieren.
 -   **Dialogfelder verfügen immer über die Schaltfläche Schließen.** Moduslose Dialoge können auch über die Schaltfläche Minimieren verfügen. Dialogfelder, deren Größe geändert werden kann, können über die Schaltfläche Maximieren verfügen.
 -   **Deaktivieren Sie nicht die Schaltfläche Schließen.** Die Schaltfläche Schließen hilft Benutzern, die Kontrolle zu behalten, indem sie Fenster schließen können, die sie nicht wünschen.
     -   **Ausnahme:** Für Statusdialogfelder können Sie die Schaltfläche Schließen deaktivieren, wenn der Task bis zum Abschluss ausgeführt werden muss, um einen gültigen Zustand zu erreichen oder Datenverluste zu verhindern.
@@ -413,7 +413,7 @@ In diesem Beispiel wird fälschlicherweise ein Warnsymbol für eine Frage verwen
 
 ![Screenshot des Dialogfelds "Favoriten" mit Sternsymbol ](images/win-dialog-box-image20.png)
 
-In diesem Beispiel stellt das gelbe Sternsymbol Favoriten dar. Das Symbol ist leicht zu erkennen und wird durchgängig in Windows verwendet, um Favoriten darzustellen.
+In diesem Beispiel stellt das gelbe Sternsymbol Favoriten dar. Das Symbol ist leicht erkennbar und wird konsistent in Windows verwendet, um Favoriten darzustellen.
 
 -   **Verwenden Sie Symbole, damit Benutzer das betreffende Objekt erkennen können.**
 
@@ -457,42 +457,9 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
 -   **Wählen Sie die Commitschaltflächen basierend auf dem Entwurfsmuster aus:**
 
-    <table>
-    <colgroup>
-    <col style="width: 50%" />
-    <col style="width: 50%" />
-    </colgroup>
-    <tbody>
-    <tr class="odd">
-    <td><strong>Muster</strong><br/></td>
-    <td><strong>Commitschaltflächen</strong><br/></td>
-    </tr>
-    <tr class="even">
-    <td><strong>Fragedialoge (mitHilfe von Schaltflächen)</strong><br/></td>
-    <td>Einer der folgenden präzisen Befehle: Ja/Nein, Ja/Nein/Abbrechen, [Do it]/Cancel, [Do it]/[Don't do it], [Do it]/[Don't do it]/Cancel.<br/></td>
-    </tr>
-    <tr class="odd">
-    <td><strong>Fragedialoge (über Links)</strong><br/></td>
-    <td>Abbrechen<br/></td>
-    </tr>
-    <tr class="even">
-    <td><strong>Auswahldialoge</strong><br/></td>
-    <td><ul>
-    <li>Modale Dialoge: OK/Abbrechen oder [Durchführen]/Abbrechen</li>
-    <li>Dialogfelder ohne Modus: Schaltfläche "Schließen" in Dialogfeld und Titelleiste</li>
-    <li>Aufgabenbereich: Schaltfläche "Schließen" auf der Titelleiste</li>
-    </ul></td>
-    </tr>
-    <tr class="odd">
-    <td><strong>Statusdialoge</strong><br/></td>
-    <td>Verwenden Sie Abbrechen, wenn die Umgebung in den vorherigen Zustand zurückgibt (ohne Nebeneffekt). Verwenden Sie andernfalls Beenden.<br/></td>
-    </tr>
-    <tr class="even">
-    <td><strong>Informationsdialoge</strong><br/></td>
-    <td>Fast richtig.<br/></td>
-    </tr>
-    </tbody>
-    </table>
+    
+| | | <strong>Muster</strong><br /> | <strong>Commitschaltflächen</strong><br /> | | <strong>Fragedialoge (mitHilfe von Schaltflächen)</strong><br /> | Einer der folgenden präzisen Befehle: Ja/Nein, Ja/Nein/Abbrechen, [Do it]/Cancel, [Do it]/[Don't do it], [Do it]/[Don't do it]/Cancel.<br /> | | <strong>Fragedialoge (über Links)</strong><br /> | Abbrechen.<br /> | | <strong>Auswahldialoge</strong><br /> | <ul><li>Modale Dialoge: OK/Abbrechen oder [Durchführen]/Abbrechen</li><li>Dialogfelder ohne Modus: Schaltfläche "Schließen" in Dialogfeld und Titelleiste</li><li>Aufgabenbereich: Schaltfläche "Schließen" auf der Titelleiste</li></ul> | | <strong>Statusdialoge</strong><br /> | Verwenden Sie Abbrechen, wenn die Umgebung in den vorherigen Zustand zurückgibt (ohne Nebeneffekt). Verwenden Sie andernfalls Beenden.<br /> | | <strong>Informationsdialoge</strong><br /> | Schließen.<br /> | 
+
 
     
 
@@ -503,14 +470,14 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
     -   Die Aktion ist möglicherweise schwerwiegender.
     -   Die Aktion ist eindeutig inkonsistent mit anderen Aktionen.
-    -   Wenn die Aktion falsch ist, kann dies zu einem erheblichen Verlust von Daten, Zeit oder Aufwand im Namen des Benutzers führen.
+    -   Wenn die Aktion falsch ist, kann dies zu einem erheblichen Daten-, Zeit- oder Aufwandsverlust im Auftrag des Benutzers führen.
 
     Weitere Richtlinien und Beispiele finden Sie unter [Bestätigungen.](mess-confirm.md)
 
 -   **Deaktivieren Sie keine Commitschaltflächen. Ausnahmen:**
-    -   **Wenn Benutzer eine Erhöhte Rechte erhöhen müssen, um eine Änderung zu ändern, deaktivieren Sie die Schaltflächen für positive Commits, bis der Benutzer eine Änderung vorn hat.** Dadurch wird verhindert, dass Benutzer die Erhöhung nur zum Schließen eines Fensters erhöhen, indem sie gezwungen werden, auf Abbrechen zu klicken.
+    -   **Wenn Benutzer die Rechte erhöhen müssen, um eine Änderung zu ändern, deaktivieren Sie die Schaltflächen für positive Commits, bis der Benutzer eine Änderung vorn hat.** Dadurch wird verhindert, dass Benutzer eine Erhöhung nur zum Schließen eines Fensters erzwingen, indem sie auf Abbrechenklicken.
     -   Weitere Ausnahmen finden Sie unter [Deaktivieren oder Entfernen von Steuerelementen im Vergleich zur Angabe von Fehlermeldungen.](#disabling-or-removing-controls-vs-giving-error-messages)
--   **Richten Sie commit-Schaltflächen in einer einzelnen Zeile** am unteren Rand des Dialogfelds, jedoch über dem Fußnotenbereich, mit der rechten Ausrichtung aus. Dies ist auch dann der Fall, wenn eine einzelne Commitschaltfläche (z. B. OK) angezeigt wird.
+-   **Richten Sie commit-Schaltflächen in einer einzelnen Zeile** am unteren Rand des Dialogfelds, jedoch über dem Fußnotebereich, nach rechts aus. Dies ist auch dann der Fall, wenn eine einzelne Commitschaltfläche (z. B. OK) angezeigt wird.
 
     **Falsch:**
 
@@ -533,26 +500,26 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
     -   Verwenden Sie Schließen für Dialoge, die keine Einstellungen haben, z. B. Informationsdialoge. Verwenden Sie nie Schließen für Dialogfelder, die Einstellungen haben.
     -   Verwenden Sie OK, wenn die "spezifischen" Antworten immer noch generisch sind, z. B. Speichern, Auswählen oder Auswählen. Verwenden Sie OK, wenn Sie eine bestimmte Einstellung oder eine Sammlung von Einstellungen ändern.
     -   **Für ältere Dialogfelder ohne Main-Anweisung können Sie generische Bezeichnungen wie OK verwenden.** Solche Dialogfelder sind häufig nicht für die Ausführung einer bestimmten Aufgabe konzipiert und verhindern spezifischere Antworten.
-    -   Bestimmte Aufgaben erfordern mehr Überdacht und sorgfältiges Lesen, damit Benutzer fundierte Entscheidungen treffen können. Dies ist in der Regel bei [Bestätigungen der Fall.](mess-confirm.md) **In solchen Fällen können Sie generische Schaltflächenbezeichnungen für Commits verwenden, um Benutzer zu zwingen, die Hauptanweisungen zu lesen und hastige Entscheidungen zu verhindern.**
+    -   Bestimmte Aufgaben erfordern mehr Überdacht und sorgfältiges Lesen, damit Benutzer fundierte Entscheidungen treffen können. Dies ist in der Regel bei [Bestätigungen der Fall.](mess-confirm.md) **In solchen Fällen können Sie generische Schaltflächenbezeichnungen für Commits verwenden, um Benutzer zu zwingen, die Hauptanweisungen zu lesen und voreigen Entscheidungen zu verhindern.**
 
         **Richtig:**
 
         ![Screenshot der Nachricht mit Schaltflächen "Ja" und "Nein"](images/win-dialog-box-image26.png)
 
-        In diesem Beispiel erzwingt die Verwendung von Ja/Nein-Commitschaltflächen, dass Benutzer zumindest die Hauptanweisung lesen müssen.
+        In diesem Beispiel erzwingt die Verwendung der Schaltflächen Ja/Nein für Commits, dass Benutzer zumindest die Hauptanweisung lesen müssen.
 
 -   Alternativ können Sie der Schaltflächenbezeichnung für positive Commits das Wort **"anyway" hinzufügen,** um anzugeben, dass das Dialogfeld einen Grund für die nicht fortgesetzte Vorgehensweise enthält und dass Benutzer den Dialog sorgfältig lesen sollten, bevor Sie fortfahren.
 
     **Richtig:**
 
-    ![Screenshot der Meldung und Schaltfläche "Trotzdem deinstallieren" ](images/win-dialog-box-image27.png)
+    ![Screenshot der Meldungs- und Deinstallationsschaltfläche ](images/win-dialog-box-image27.png)
 
     In diesem Beispiel wird der Schaltflächenbezeichnung "Commit" "anyway" hinzugefügt, um anzugeben, dass Benutzer sorgfältig fortfahren sollten.
 
--   **Verwenden Sie Abbrechen oder Schließen für negative Commitschaltflächen anstelle bestimmter Antworten auf die Main-Anweisung.** Häufig stellen Benutzer fest, dass sie keine Aufgabe ausführen möchten, sobald ein Dialogfeld angezeigt wird. Wenn Abbrechen oder Schließen für bestimmte Antworten umbenennen würde, müssten Benutzer sorgfältig alle Commitschaltflächen lesen, um zu bestimmen, wie der Vorgang abgebrochen werden soll. **Durch die durchgängige Bezeichnung Abbrechen und Schließen sind sie leicht zu finden. Ausnahmen:**
+-   **Verwenden Sie Abbrechen oder Schließen für negative Commitschaltflächen anstelle bestimmter Antworten auf die Main-Anweisung.** Häufig stellen Benutzer fest, dass sie keine Aufgabe ausführen möchten, sobald ein Dialogfeld angezeigt wird. Wenn Abbrechen oder Schließen bestimmten Antworten neu beschriftet werden, müssen Benutzer sorgfältig alle Commitschaltflächen lesen, um zu bestimmen, wie der Vorgang abgebrochen werden soll. **Durch die durchgängige Bezeichnung Abbrechen und Schließen sind sie leicht zu finden. Ausnahmen:**
     -   **Verwenden Sie nicht Ja/Abbrechen.** Verwenden Sie immer Ja/Nein als Paar.
     -   **Verwenden Sie eine bestimmte Antwort, wenn Abbrechen mehrdeutig ist.**
--   **Ordnen Sie generische Bezeichnungen nicht ihrer spezifischen Bedeutung mit Text im Inhaltsbereich zu.** Verwenden Sie stattdessen bestimmte Beschriftungen für Commitschaltfläche oder ein Fragedialogfeld mit Links, wenn die Bezeichnungen lang sind.
+-   **Ordnen Sie generische Bezeichnungen nicht ihrer spezifischen Bedeutung mit Text im Inhaltsbereich zu.** Verwenden Sie stattdessen bestimmte Bezeichnungen für Commitschaltfläche oder ein Fragedialogfeld mit Links, wenn die Bezeichnungen lang sind.
 
     **Falsch:**
 
@@ -563,7 +530,7 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 **Schaltflächen "Ja" und "Nein"**
 
 -   **Bevorzugen Sie bestimmte Antworten auf die Schaltflächen Ja und Nein.** Auch wenn die Verwendung von Ja und Nein kein Fehler ist, können bestimmte Antworten schneller verstanden werden, was zu einer effizienten Entscheidungsfindung führt. Bestätigungen verfügen [jedoch in der](mess-confirm.md) Regel über die Schaltflächen Ja und Nein, damit Benutzer der Bestätigung vor der Antwort einige Gedanken machen können. [](mess-confirm.md)
--   **Verwenden Sie die Schaltflächen Ja und Nein, um nur auf Ja- oder Nein-Fragen zu antworten.** Die Hauptanweisung sollte natürlich als Ja oder Nein-Frage ausgedrückt werden. Verwenden Sie für Ja- oder Nein-Fragen niemals OK und Abbrechen.
+-   **Verwenden Sie die Schaltflächen Ja und Nein, um nur auf Ja- oder Nein-Fragen zu antworten.** Die Hauptanweisung sollte auf natürliche Weise als Ja- oder Nein-Frage ausgedrückt werden. Verwenden Sie für Ja- oder Nein-Fragen niemals OK und Abbrechen.
 
     **Falsch:**
 
@@ -579,7 +546,7 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
     In diesen Beispielen sind Ja und Nein gute Antworten auf Ja und keine Fragen, aber bestimmte Antworten sind noch besser.
 
--   **Ziehen Sie in Betracht, die Hauptanweisung als "Ja" oder "Keine Frage" zu formulieren, wenn commit-Schaltflächen mit bestimmten Formulierungen lang oder umkweislich sind.** Alternativ können Sie Befehlslinks für längere Antworten (fünf Wörter oder mehr) auf die Main-Anweisung verwenden.
+-   **Ziehen Sie in Betracht, die Hauptanweisung als "Ja" oder "Keine Frage" zu formulieren, wenn commit-Schaltflächen mit bestimmten Formulierungen lang oder umkweislich sind.** Alternativ können Sie Befehlslinks für längere Antworten (fünf Wörter oder mehr) auf die main-Anweisung verwenden.
 
     **Falsch:**
 
@@ -587,7 +554,7 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
     **Richtig:**
 
-    ![Screenshot der Nachricht mit Ja/Nein-Schaltflächenbezeichnungen ](images/win-dialog-box-image33.png)
+    ![Screenshot der Nachricht mit Schaltflächenbezeichnungen "Ja/Nein" ](images/win-dialog-box-image33.png)
 
     Der spezifische Ausdruck im falschen Beispiel ist zu lang, sodass im richtigen Beispiel Ja und Nein verwendet werden.
 
@@ -607,7 +574,7 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
     In diesem Beispiel sollte Close anstelle von OK verwendet werden.
 
--   **Verwenden Sie in nicht moduslosen Dialogfeldern keine OK-Schaltflächen.** Stattdessen sollten moduslose Dialoge taskspezifische Commitschaltflächen verwenden (z. B. Suchen). Für einige nicht moduslose Dialogfelder ist jedoch nur die Schaltfläche Schließen erforderlich.
+-   **Verwenden Sie in nicht moduslosen Dialogfeldern keine OK-Schaltflächen.** Stattdessen sollten moduslose Dialoge aufgabenspezifische Commitschaltflächen verwenden (z. B. Suchen). Für einige nicht moduslose Dialogfelder ist jedoch nur die Schaltfläche Schließen erforderlich.
 
 **Schaltflächen "Abbrechen"**
 
@@ -622,77 +589,77 @@ Weitere Informationen und Beispiele finden Sie unter [Symbole.](vis-icons.md)
 
     In diesem Beispiel wird die Schaltfläche Schließen auf der Titelleiste so angezeigt, als hätten Benutzer keine Auswahl.
 
--   **Verwenden Sie die Schaltflächen Abbrechen nicht, um auf Fragen zu antworten.**
+-   **Verwenden Sie keine Schaltflächen Abbrechen, um auf Fragen zu antworten.**
 
     **Falsch:**
 
-    ![Screenshot der Nachricht mit "OK" für Ja-Nein-Frage ](images/win-dialog-box-image36.png)
+    ![Screenshot der Meldung mit "ok" für Ja-Nein-Frage ](images/win-dialog-box-image36.png)
 
-    In diesem Beispiel werden OK und Abbrechen fälschlicherweise verwendet, um auf die Frage Ja oder Nein zu antworten.
+    In diesem Beispiel werden OK und Abbrechen fälschlicherweise verwendet, um auf eine Ja- oder Nein-Frage zu antworten.
 
--   **Weisen Sie Cancel keine Zugriffsschlüssel zu, da esc der Zugriffsschlüssel ist.** Dadurch wird die Zuweisung der anderen Zugriffsschlüssel vereinfacht.
--   **Verwenden Sie in nicht moduslosen Dialogfeldern keine Schaltflächen abbrechen.** Verwenden Sie stattdessen Schließen.
--   **Deaktivieren Sie nicht die Schaltfläche Abbrechen.** Benutzer sollten immer in der Lage sein, Dialogfelder abzubricht.
-    -   **Ausnahme:** Sie können die Schaltfläche Abbrechen in einem Statusdialogfeld deaktivieren, wenn es einen Zeitraum gibt, in dem der Vorgang nicht abgebrochen werden kann. Eine bessere Lösung ist jedoch, solche Vorgänge so zu entwerfen, dass sie immer abgebrochen werden können.
+-   **Weisen Sie Cancel keine Zugriffsschlüssel zu, da ESC der Zugriffsschlüssel ist.** Auf diese Weise können die anderen Zugriffsschlüssel einfacher zugewiesen werden.
+-   **Verwenden Sie keine Schaltflächen Abbrechen in dialogfeldern ohne Modus.** Verwenden Sie stattdessen Close.
+-   **Deaktivieren Sie nicht die Schaltfläche Abbrechen.** Benutzer sollten immer in der Lage sein, Dialogfelder abzubrechen.
+    -   **Ausnahme:** Sie können die Schaltfläche Abbrechen in einem Statusdialogfeld deaktivieren, wenn es einen Zeitraum gibt, in dem der Vorgang nicht abgebrochen werden kann. Eine bessere Lösung besteht jedoch darin, solche Vorgänge so zu entwerfen, dass sie immer abgebrochen werden können.
 
 **Schaltflächen schließen**
 
--   **Verwenden Sie Schaltflächen schließen für nicht modale Dialogfelder sowie modale Dialoge, die nicht abgebrochen werden können.**
--   **Wenn Sie auf Schließen klicken, wird das Dialogfeldfenster geschlossen, und es werden alle vorhandenen Nebeneffekte hinterlassen.** Verwenden Sie done nicht, da es sich nicht um eine imperative Konstruktion handelt. Bei geschachtelten Auswahldialogfeldern bedeutet das Klicken auf Schließen im Dialogfeld für die Besitzerauswahl, dass alle Änderungen beibehalten werden, die von Dialogfeldern für die Auswahl im Besitz des Besitzers vorgenommen wurden.
--   **Legen Sie eine explizite Schaltfläche Schließen in den Text des Dialogfelds ein.** Dialogfelder benötigen einen eindeutigen Ausgangspunkt. Verlassen Sie sich nicht darauf, dass Benutzer die Schaltfläche Schließen auf der Titelleiste finden.
+-   **Verwenden Sie Schaltflächen schließen für nicht moduslose Dialogfelder sowie modale Dialoge, die nicht abgebrochen werden können.**
+-   **Wenn Sie auf Schließen klicken, wird das Dialogfeldfenster geschlossen, und vorhandene Nebeneffekte bleiben bestehen.** Verwenden Sie Done nicht, da es sich nicht um eine imperative Konstruktion handelt. Wenn Sie für geschachtelte Auswahldialogfelder im Dialogfeld "Besitzerauswahl" auf Schließen klicken, werden alle Änderungen beibehalten, die im Besitz von Auswahldialogfeldern vorgenommen werden.
+-   **Legen Sie eine explizite Schaltfläche Schließen in den Text des Dialogfelds ein.** Dialogfelder benötigen einen eindeutigen Endpunkt. Verlassen Sie sich nicht darauf, dass Benutzer die Schaltfläche Schließen auf der Titelleiste finden.
 -   **Stellen Sie sicher, dass die Schaltfläche Schließen auf der Titelleiste die gleiche Auswirkung wie Abbrechen oder Schließen hat.**
--   **Weisen Sie close keine Zugriffsschlüssel zu, da es sich bei esc um den Zugriffsschlüssel handelt.** Dadurch wird die Zuweisung der anderen Zugriffsschlüssel vereinfacht.
+-   **Weisen Sie Close keine Zugriffsschlüssel zu, da es sich bei ESC um den Zugriffsschlüssel handelt.** Auf diese Weise können die anderen Zugriffsschlüssel einfacher zugewiesen werden.
 
 **Schaltflächen anwenden**
 
--   **Verwenden Sie keine Schaltflächen anwenden in Dialogfeldern, bei denen es sich nicht um Eigenschaftenblätter oder Systemsteuerungen handelt.** Die Schaltfläche Übernehmen bedeutet, dass die ausstehenden Änderungen angewendet werden, aber das Fenster geöffnet lassen. Auf diese Weise können Benutzer die Änderungen auswerten, bevor sie das Fenster schließen. Diese Notwendigkeit ist jedoch nur für Eigenschaftenblätter und Steuerungspanels notwendig.
+-   **Verwenden Sie keine Schaltflächen anwenden in Dialogfeldern, die keine Eigenschaftenblätter oder Steuerelementpanels sind.** Die Schaltfläche Anwenden bedeutet, dass die ausstehenden Änderungen angewendet werden, aber lassen Sie das Fenster geöffnet. Auf diese Weise können Benutzer die Änderungen vor dem Schließen des Fensters auswerten. Dies ist jedoch nur für Eigenschaftenblatt und Steuerelementpanels erforderlich.
 
     **Falsch:**
 
-    ![Screenshot des Dialogfelds mit Schaltfläche "Anwenden" ](images/win-dialog-box-image37.png)
+    ![Screenshot des Dialogfelds mit der Schaltfläche "Anwenden" ](images/win-dialog-box-image37.png)
 
-    In diesem Beispiel verfügt ein Auswahldialogfeld unnötigerweise über die Schaltfläche Anwenden.
+    In diesem Beispiel verfügt ein Auswahldialogfeld unnötigerweise über die Schaltfläche Übernehmen.
 
 **Commitschaltflächen für indirekte Dialogfelder**
 
-**Hinweis:** Indirekte Dialogfelder werden nicht im Kontext angezeigt, entweder als indirektes Ergebnis einer Aufgabe oder als Ergebnis eines Problems mit einem System- oder Hintergrundprozess. Bei indirekten Dialogen ist die Schaltfläche Abbrechen mehrdeutig, da dies bedeuten kann, dass der Dialog abgebrochen oder die gesamte Aufgabe abgebrochen wird.
+**Hinweis:** Indirekte Dialogfelder werden außerhalb des Kontexts angezeigt, entweder als indirektes Ergebnis einer Aufgabe oder als Ergebnis eines Problems mit einem System- oder Hintergrundprozess. Bei indirekten Dialogen ist die Schaltfläche Abbrechen mehrdeutig, da sie bedeuten kann, dass der Dialog abgebrochen oder die gesamte Aufgabe abgebrochen wird.
 
--   **Wenn Benutzer sowohl das Dialogfeld als auch die Aufgabe abbrechen müssen, geben Sie Commitschaltflächen an, um beides zu tun.** Beschriften Sie die Schaltfläche, die das Dialogfeld mit einer negativen Antwort auf die main-Anweisung abbricht. Beschriften Sie die Schaltfläche, die die gesamte Aufgabe abbricht, mit Abbrechen. Die Verwendung von Abbrechen ermöglicht die Verwendung des Dialogfelds in vielen Kontexten.
+-   **Wenn Benutzer das Dialogfeld und die Aufgabe abbrechen müssen, geben Sie Commitschaltflächen an, um beides zu erledigen.** Bezeichnen Sie die Schaltfläche, die das Dialogfeld abbricht, mit einer negativen Antwort auf die Hauptanweisung. Bezeichnen Sie die Schaltfläche, die die gesamte Aufgabe abbricht, mit Abbrechen. Die Verwendung von Abbrechen ermöglicht die Verwendung des Dialogfelds in vielen Kontexten.
 
     **Richtig:**
 
-    ![Screenshot des Dialogfelds mit "Speichern"/"Nicht speichern" ](images/win-dialog-box-image38.png)
+    ![Screenshot des Dialogfelds mit "Speichern/nicht speichern" ](images/win-dialog-box-image38.png)
 
-    In diesem Beispiel wird dieses Dialogfeld von Windows Paint als Ergebnis eines New- oder Exit-Befehls angezeigt, wenn die Grafik nicht gespeichert wurde. Nicht speichern schließt das Dialogfeld, ohne es zu speichern, während Abbrechen den Befehl Neu oder Beenden abbricht.
+    In diesem Beispiel wird dieses Dialogfeld von Windows Paint als Ergebnis eines New- oder Exit-Befehls angezeigt, wenn die Grafik nicht gespeichert wurde. Speichern schließt das Dialogfeld ohne Speichern, während Abbrechen den Befehl Neu oder Beenden abbricht.
 
     **Falsch:**
 
     ![Screenshot des Dialogfelds mit Ja/Nein-Schaltflächen ](images/win-dialog-box-image39.png)
 
-    In diesem Beispiel gibt es keine Möglichkeit, die Aufgabe abzubricht (schließen Office Verknüpfungsleiste), die zur Anzeige dieses Dialogfelds geführt hat. Dieses Dialogfeld benötigt die Schaltfläche Abbrechen.
+    In diesem Beispiel gibt es keine Möglichkeit, die Aufgabe (schließende Office Verknüpfungsleiste) abzubrechen, die zur Anzeige dieses Dialogfelds geführt hat. Für dieses Dialogfeld ist die Schaltfläche Abbrechen erforderlich.
 
--   **Wenn Benutzer nur den** Dialog abbrechen müssen, aber nicht die Aufgabe, verwenden Sie eine Schaltfläche mit einer bestimmten, negativen Antwort auf die main-Anweisung, und verfügen nicht über die Schaltfläche Abbrechen.
+-   **Wenn Benutzer nur den Dialog abbrechen müssen, aber nicht die Aufgabe, verwenden Sie eine Schaltfläche mit einer bestimmten, negativen Antwort auf die Hauptanweisung und** haben keine Schaltfläche Abbrechen.
 
     ![Screenshot des Dialogfelds mit "Ausführen/Nicht ausführen" ](images/win-dialog-box-image24.png)
 
-    In diesem Beispiel wird dieses Dialogfeld indirekt als Ergebnis der Navigation zu einer Webseite angezeigt, die ein ActiveX installiert. Die Verwendung von Abbrechen wäre hier mehrdeutig, daher wird stattdessen Nicht ausführen verwendet.
+    In diesem Beispiel wird dieses Dialogfeld indirekt als Ergebnis der Navigation zu einer Webseite angezeigt, die ein ActiveX-Steuerelement installiert. Die Verwendung von Abbrechen wäre hier mehrdeutig, daher wird stattdessen Nicht ausführen verwendet.
 
 Weitere Informationen und Beispiele finden Sie unter [Befehlsschaltflächen.](ctrl-command-buttons.md)
 
 ### <a name="command-links"></a>Befehlslinks
 
--   **Stellen Sie eine Reihe von langen Befehlen mit Befehlslinks anstelle von Befehlsschaltflächen oder einer Kombination aus Optionsfeldern und einer SCHALTFLÄCHE OK vor.** Auf diese Weise können Benutzer mit einem einzigen Klick antworten. Dieser Ansatz funktioniert jedoch nur für eine einzelne Frage.
--   **Stellen Sie zuerst die am häufigsten verwendeten Befehlslinks vor.** Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung folgen, aber auch einen logischen Fluss haben.
-    -   **Ausnahme:** Befehlslinks, die dazu führen, dass alles ausgeführt wird, sollten zuerst platziert werden.
--   Wenn ein Befehlslink eine weitere Erläuterung erfordert, **geben Sie eine zusätzliche Erklärung an.** Ergänzende Erläuterungen beschreiben, warum Benutzer den Befehl auswählen möchten oder was geschieht, wenn der Befehl ausgewählt wird.
--   **Verwenden Sie keine ergänzenden Erklärungen, bei denen es sich um wortige Neuordnungen des Befehlslinks handelt.** Verwenden Sie eine ergänzende Erklärung nur, wenn Sie einen Befehlslink nicht selbsterklärend machen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehlslink bedeutet nicht, dass Sie sie für alle Befehle bereitstellen müssen.
+-   **Stellen Sie eine Reihe von langen Befehlen mit Befehlslinks anstelle von Befehlsschaltflächen oder einer Kombination von Optionsfeldern und einer OK-Schaltfläche dar.** Auf diese Weise können Benutzer mit einem einzigen Klick antworten. Dieser Ansatz funktioniert jedoch nur für eine einzelne Frage.
+-   **Zeigen Sie zuerst die am häufigsten verwendeten Befehlslinks an.** Die resultierende Reihenfolge sollte ungefähr der Wahrscheinlichkeit der Verwendung entsprechen, aber auch einen logischen Ablauf aufweisen.
+    -   **Ausnahme:** Befehlslinks, die dazu führen, dass alles erledigt wird, sollten zuerst platziert werden.
+-   Wenn ein Befehlslink eine weitere Erläuterung erfordert, **geben Sie eine ergänzende Erklärung an.** Ergänzende Erklärungen beschreiben, warum Benutzer den Befehl auswählen möchten oder was geschieht, wenn der Befehl ausgewählt wird.
+-   **Verwenden Sie keine ergänzenden Erklärungen, bei denen es sich um wortige Neuangaben des Befehlslinks handelt.** Verwenden Sie eine ergänzende Erklärung nur, wenn Sie einen Befehlslink nicht selbsterklärend machen können. Das Bereitstellen einer ergänzenden Erklärung für einen Befehlslink bedeutet nicht, dass Sie sie für alle Befehle bereitstellen müssen.
 
-![Screenshot des Dialogfelds mit Text notierungsoptionen ](images/win-dialog-box-image40.png)
+![Screenshot des Dialogfelds mit Textbeschriftungsoptionen ](images/win-dialog-box-image40.png)
 
 In diesem Beispiel beschreibt die ergänzende Erklärung die Auswirkungen einer der Optionen.
 
--   **Verwenden Sie Ausdrücke, die mit einem Verb beginnen, ohne die Interpunktion zu beenden.**
--   **Wenn ein Befehl dringend empfohlen wird, sollten Sie der Bezeichnung "(recommended)" hinzufügen.** Achten Sie darauf, der Linkbezeichnung und nicht der ergänzenden Erklärung hinzuzufügen.
+-   **Verwenden Sie Ausdrücke, die mit einem Verb beginnen, ohne Satzzeichen zu beenden.**
+-   **Wenn ein Befehl dringend empfohlen wird, sollten Sie der Bezeichnung "(empfohlen)" hinzufügen.** Achten Sie darauf, der Linkbezeichnung und nicht der ergänzenden Erklärung hinzuzufügen.
 -   **Wenn ein Befehl nur für fortgeschrittene Benutzer vorgesehen ist, sollten Sie der Bezeichnung "(advanced)" hinzufügen.** Achten Sie darauf, der Linkbezeichnung und nicht der ergänzenden Erklärung hinzuzufügen.
 -   **Geben Sie immer eine explizite Schaltfläche Abbrechen an.** Verwenden Sie zu diesem Zweck keinen Befehlslink.
 
@@ -700,26 +667,26 @@ In diesem Beispiel beschreibt die ergänzende Erklärung die Auswirkungen einer 
 
 ![Screenshot des Dialogfelds ohne Link zum Beenden ](images/win-dialog-box-image41.png)
 
-In diesem Beispiel verwendet das Dialogfeld einen Befehlslink anstelle einer Schaltfläche Abbrechen.
+In diesem Beispiel verwendet das Dialogfeld anstelle der Schaltfläche Abbrechen einen Befehlslink.
 
 Weitere Informationen und Beispiele finden Sie unter [Befehlslinks.](ctrl-command-links.md)
 
-### <a name="dont-show-this-item-again"></a>Nicht anzeigen <item> Wieder
+### <a name="dont-show-this-ltitemgt-again"></a>Dieses Element nicht erneut anzeigen &lt; &gt;
 
--   **Erwägen Sie die Verwendung der Option Nicht mehr anzeigen, damit Benutzer ein wiederkehrendes Dialogfeld unterdrücken können, nur wenn es keine bessere <item> Alternative gibt.** Es ist besser, den Dialog immer anzuzeigen, wenn Benutzer ihn wirklich benötigen, oder ihn einfach zu beseitigen, wenn dies nicht der Fehler ist.
--   **Verwenden Sie diesen spezifischen Ausdruck, und <item> ersetzen Sie durch das spezifische Element.** Zeigen Sie diese Erinnerung beispielsweise nicht erneut an. Wenn Sie im Allgemeinen auf ein Dialogfeld verweisen, verwenden Sie Diese Meldung nicht erneut anzeigen.
--   **Geben Sie eindeutig an,** wann Benutzereingaben für zukünftige Standardwerte verwendet werden, indem Sie den folgenden Satz unter der Option hinzufügen: Ihre Auswahl wird in Zukunft standardmäßig verwendet.
--   **Wählen Sie die Option nicht standardmäßig aus. Wenn das Dialogfeld wirklich nur einmal angezeigt werden soll, tun Sie dies, ohne eine Frage zu stellen.** Verwenden Sie diese Option nicht als lästig für lästige Benutzer, um sicherzustellen, dass das Standardverhalten nicht lästig ist.
+-   **Erwägen Sie die Verwendung der Option Dieses Element nicht &lt; &gt; erneut anzeigen, damit Benutzer ein wiederkehrendes Dialogfeld nur unterdrücken können, wenn es keine bessere Alternative gibt.** Es ist besser, den Dialog immer anzuzeigen, wenn er wirklich von Benutzern benötigt wird, oder ihn einfach zu entfernen, wenn dies nicht dere ist.
+-   **Verwenden Sie diesen spezifischen Ausdruck, um das Element durch das spezifische Element zu &lt; &gt; ersetzen.** Zeigen Sie diese Erinnerung z. B. nicht erneut an. Wenn Sie im Allgemeinen auf ein Dialogfeld verweisen, verwenden Sie Diese Meldung nicht mehr anzeigen.
+-   **Geben Sie eindeutig an, wann benutzereingaben für zukünftige Standardwerte verwendet werden sollen,** indem Sie den folgenden Satz unter der Option hinzufügen: Ihre Auswahl wird in Zukunft standardmäßig verwendet.
+-   **Wählen Sie die Option nicht standardmäßig aus. Wenn das Dialogfeld wirklich nur einmal angezeigt werden soll, tun Sie dies ohne Nachfrage.** Verwenden Sie diese Option nicht als Verärgerung, um Benutzer zu verärgern, und stellen Sie sicher, dass das Standardverhalten nicht mäßig ist.
 
 **Falsch:**
 
-![Screenshot der Meldung mit unnötiger Frage ](images/win-dialog-box-image42.png)
+![Screenshot der Meldung, die eine unnötige Frage stellt ](images/win-dialog-box-image42.png)
 
-In diesem Beispiel sollte die Meldung nur einmal angezeigt werden. Es ist nicht notwendig, zu fragen.
+In diesem Beispiel sollte die Meldung nur einmal angezeigt werden. Sie müssen keine Fragen stellen.
 
--   **Sorgen Sie dafür, dass die Einstellung auf Benutzerbasis beibehalten wird.**
--   **Wenn Benutzer die Option auswählen und auf Abbrechen klicken, wird diese Option wirksam.** Diese Einstellung ist eine Metaoption, sodass sie nicht dem standardmäßigen Cancel-Verhalten folgt, bei dem keine Nebeneffekte hinterlassen werden. Beachten Sie: Wenn Benutzer den Dialog in Zukunft nicht mehr sehen möchten, möchten sie ihn wahrscheinlich auch abbrechen.
--   Wenn Benutzer diese Dialogfelder möglicherweise wiederherstellen müssen, geben Sie im Dialogfeld Optionen des Programms den Befehl Nachrichten wiederherstellen an. 
+-   **Legen Sie fest, dass die Einstellung pro Benutzer beibehalten wird.**
+-   **Wenn Benutzer die Option auswählen und auf Abbrechen klicken, wird diese Option wirksam.** Diese Einstellung ist eine Metaoption, sodass sie nicht dem standardmäßigen Cancel-Verhalten entspricht, bei dem keine Nebeneffekte übrig bleiben. Beachten Sie Folgendes: Wenn Benutzer den Dialog in Zukunft nicht sehen möchten, möchten sie es wahrscheinlich auch abbrechen.
+-   Wenn Benutzer diese Dialogfelder möglicherweise wiederherstellen müssen, geben Sie im Dialogfeld Optionen des Programms den Befehl **Meldungen wiederherstellen** an.
 
 ### <a name="ask-me-later"></a>Später nachfragen
 
@@ -730,100 +697,100 @@ In diesem Beispiel sollte die Meldung nur einmal angezeigt werden. Es ist nicht 
     -   **Das Dialogfeld oder die Option wird später automatisch angezeigt** (sodass Benutzer später wirklich gefragt werden).
 -   **Falsch:**
 -   ![Screenshot der Nachricht mit der Option "Später fragen" ](images/win-dialog-box-image43.png)
--   In diesem Beispiel ist die Frage so einfach, dass das Hinzufügen einer Später stellen-Option dies nur erschwert.
--   Andernfalls erwarten Sie, dass Benutzer jetzt antworten, aber zulassen, dass sie das Dialogfeld normalerweise mit Abbrechen oder Schließen schließen können. Bei ordnungsgemäßer Verwendung sollte diese Option selten sein.
+-   In diesem Beispiel ist die Frage so einfach, dass das Hinzufügen der Option Später fragen nur dies erschwert.
+-   Gehen Sie andernfalls davon aus, dass Benutzer jetzt antworten, aber erlauben Sie ihnen, das Dialogfeld normal mit Abbrechen oder Schließen zu schließen. Bei ordnungsgemäßer Verwendung sollte diese Option selten sein.
 
 ### <a name="morefewer"></a>Mehr/weniger
 
--   **Verwenden Sie mehr/weniger Schaltflächen für die progressive Offenlegung, um erweiterte oder selten verwendete Optionen, Befehle oder Details anzuzeigen oder auszublenden, die Benutzer normalerweise nicht benötigen.** Dadurch wird das Dialogfeld für die typische Verwendung vereinfacht. Blenden Sie häufig verwendete Optionen, Befehle oder Informationen nicht aus, da Benutzer sie möglicherweise nicht finden.
+-   **Verwenden Sie mehr/weniger Progressive Offenlegungsschaltflächen, um erweiterte oder selten verwendete Optionen, Befehle oder Details anzuzeigen oder auszublenden, die benutzerin der Regel nicht benötigt werden.** Dadurch wird das Dialogfeld für die typische Verwendung vereinfacht. Blenden Sie häufig verwendete Optionen, Befehle oder Informationen nicht aus, da Benutzer sie möglicherweise nicht finden.
 
-![Screenshot des Dialogfelds mit schaltfläche "Weitere Optionen" ](images/win-dialog-box-image24.png)
+![Screenshot des Dialogfelds mit der Schaltfläche "Weitere Optionen" ](images/win-dialog-box-image24.png)
 
 In diesem Beispiel werden selten verwendete Optionen standardmäßig ausgeblendet.
 
--   **Verwenden Sie keine Mehr-/Weniger-Steuerelemente, es sei denn, es sind wirklich mehr Details zu sehen.** Stellen Sie nicht einfach die gleichen Informationen in einem anderen Format wieder her.
--   **Verwenden Sie keine Mehr/Weniger-Steuerelemente, um Hilfe anzuzeigen.** Verwenden Sie stattdessen Hilfelinks oder Fußnoten.
--   **Vermeiden Sie bei Aufgabendialogen die Kombination von Mehr/Weniger-Steuerelementen mit Nicht <item> mehr anzeigen.** Diese Kombination hat eine umständliche Darstellung.
--   Informationen zu Bezeichnungsrichtlinien finden Sie unter [Progressive Offenlegung.](ctrl-progressive-disclosure-controls.md)
+-   **Verwenden Sie keine Mehr/Weniger-Steuerelemente, es sei denn, es sind mehr Details zu sehen.** Verwenden Sie nicht nur die gleichen Informationen in einem anderen Format.
+-   **Verwenden Sie keine Mehr/Weniger-Steuerelemente, um Hilfe zu zeigen.** Verwenden Sie stattdessen Hilfelinks oder Fußnotes.
+-   **Vermeiden Sie bei Aufgabendialogfeldern die Kombination von Mehr/Weniger-Steuerelementen mit Don't show this item again (Dieses Element nicht &lt; mehr &gt; anzeigen).** Diese Kombination hat eine ums andere Darstellung.
+-   Bezeichnungsrichtlinien finden Sie unter [Progressive Disclosure](ctrl-progressive-disclosure-controls.md).
 
 ### <a name="footnotes"></a>Fußnoten
 
--   **Verwenden Sie Fußnoten für Informationen, die für den Zweck eines Dialogfelds nicht wichtig sind, die benutzer jedoch möglicherweise hilfreich sind, um Entscheidungen zu treffen.** Die meisten Benutzer sollten Fußnoten überspringen und dennoch fundierte Entscheidungen in ihrer Reaktion auf das Dialogfeld treffen können.
+-   **Verwenden Sie Fußnotes für Informationen, die für den Zweck eines Dialogfelds nicht wichtig sind, die Benutzer jedoch möglicherweise hilfreich finden, um Entscheidungen zu treffen.** Die meisten Benutzer sollten in der Lage sein, Fußnoten zu überspringen und dennoch fundierte Entscheidungen in ihrer Antwort auf das Dialogfeld zu treffen.
 
-![Screenshot des Dialogfelds mit verdeutlichender Fußnote ](images/win-dialog-box-image44.png)
+![Screenshot des Dialogfelds mit Verdeutlichung der Fußnote ](images/win-dialog-box-image44.png)
 
-In diesem Beispiel sind die Fußnoteninformationen ergänzend, nicht wesentlich.
+In diesem Beispiel sind die Fußnoteinformationen ergänzend und nicht wichtig.
 
-### <a name="disabling-or-removing-controls-vs-giving-error-messages"></a>Deaktivieren oder Entfernen von Steuerelementen im Vergleich zur Angabe von Fehlermeldungen
+### <a name="disabling-or-removing-controls-vs-giving-error-messages"></a>Deaktivieren oder Entfernen von Steuerelementen im Vergleich zum Senden von Fehlermeldungen
 
 -   Wenn ein Steuerelement im aktuellen Kontext nicht angewendet wird, sollten Sie die folgenden Optionen in Betracht ziehen:
-    -   **Entfernen Sie das Steuerelement, wenn es für Benutzer nicht möglich ist, es zu aktivieren, oder Benutzer nicht erwarten, dass es angewendet wird und sich sein Zustand nicht häufig ändert.** Dadurch wird das Dialogfeld vereinfacht, und Benutzer werden es nicht übersehen. Es ist ungärrlich, wenn ein Steuerelement häufig angezeigt und ausgeblendet wird.
-    -   **Deaktivieren Sie das Steuerelement, wenn Benutzer erwarten, dass es angewendet wird oder sich sein Zustand häufig ändert, und Benutzer leicht ableiten können, warum das Steuerelement deaktiviert ist.** Ein Beispiel für eine einfache Ableitung ist das Deaktivieren einer Commitschaltfläche, wenn ein einzelnes leeres Textfeld vorhanden ist, das eine Eingabe erfordert. Sie können [Sprechblasen](ctrl-balloons.md) verwenden, um nicht kritische Benutzereingabeprobleme mit Textfeldern und bearbeitbaren Dropdownlisten anzuzeigen. Wenn das Problem jedoch nicht mit einem Balloon erklärt werden kann oder mehrere Steuerelemente umfasst, wäre die Ableitung nicht mehr einfach.
-    -   **Andernfalls lassen Sie das Steuerelement aktiviert, geben aber eine Fehlermeldung aus, wenn es falsch verwendet wird.** Wenn Sie in diesem Fall deaktivieren, ist es für Benutzer schwierig zu verstehen, warum das Steuerelement deaktiviert ist. Benutzer werden gezwungen, das Problem durch Experimentieren und deductive Logik zu bestimmen. Es ist besser, nur eine hilfreiche Fehlermeldung bereitzustellen, um das Problem explizit zu erklären.
--   **Tipp:** Wenn Sie nicht sicher sind, ob Sie ein Steuerelement deaktivieren oder eine Fehlermeldung geben sollten, erstellen Sie zunächst die Fehlermeldung, die Sie möglicherweise geben. Wenn die Fehlermeldung hilfreiche Informationen enthält, die Zielbenutzer wahrscheinlich nicht schnell ableiten, lassen Sie das Steuerelement aktiviert, und geben Sie den Fehler an. Andernfalls deaktivieren Sie das Steuerelement.
--   **Wenn Sie ein Steuerelement deaktivieren, deaktivieren Sie auch alle zugeordneten Steuerelemente,** z. B. die zugehörige Bezeichnung, ergänzende Erklärungen oder Befehlsschaltflächen. Deaktivieren Sie jedoch nicht die [Gruppenfelder](ctrl-group-boxes.md), die Gruppenbezeichnung oder die Gruppenerklärung, falls vorhanden.
+    -   **Entfernen Sie das Steuerelement, wenn es benutzern nicht möglich ist, es zu aktivieren, oder Benutzer nicht erwarten, dass es angewendet wird und sich sein Zustand nicht häufig ändert.** Dadurch wird das Dialogfeld vereinfacht, und Benutzer werden es nicht übersehen. Es ist lästig, wenn ein Steuerelement häufig angezeigt und verschwindet.
+    -   **Deaktivieren Sie das Steuerelement, wenn Benutzer erwarten, dass es angewendet wird oder sich sein Zustand häufig ändert, und Benutzer können leicht erkennen, warum das Steuerelement deaktiviert ist.** Ein Beispiel für eine einfache Ableitung ist das Deaktivieren einer Commitschaltfläche, wenn ein einzelnes, leeres Textfeld eine Eingabe erfordert. Sie können [Sprechblasen](ctrl-balloons.md) verwenden, um nicht kritische Benutzereingabeprobleme mit Textfeldern und bearbeitbaren Dropdownlisten anzuzeigen. Wenn das Problem jedoch nicht mit einem Balloon oder mehreren Steuerelementen erklärt werden kann, wäre die Ableitung nicht mehr einfach.
+    -   **Lassen Sie andernfalls das Steuerelement aktiviert, aber geben Sie eine Fehlermeldung aus, wenn es falsch verwendet wird.** Wenn Sie in diesem Fall deaktivieren, ist es für Benutzer schwierig zu verstehen, warum das Steuerelement deaktiviert ist. Benutzer werden gezwungen, das Problem durch Experimentieren und dektive Logik zu bestimmen. Es ist besser, nur eine hilfreiche Fehlermeldung zu geben, um das Problem explizit zu erklären.
+-   **Tipp:** Wenn Sie nicht sicher sind, ob Sie ein Steuerelement deaktivieren oder eine Fehlermeldung senden sollten, beginnen Sie mit dem Verfassen der Fehlermeldung, die Sie möglicherweise geben. Wenn die Fehlermeldung hilfreiche Informationen enthält, von denen Zielbenutzer wahrscheinlich nicht schnell abzuleiten sind, lassen Sie das Steuerelement aktiviert, und geben Sie den Fehler an. Deaktivieren Sie andernfalls das -Steuerelement.
+-   **Wenn Sie ein Steuerelement deaktivieren, deaktivieren Sie auch alle** zugeordneten Steuerelemente, z. B. dessen Bezeichnung, ergänzende Erklärungen oder Befehlsschaltflächen. Deaktivieren Sie jedoch nicht die [Gruppenfelder,](ctrl-group-boxes.md)die Gruppenbezeichnung oder die Gruppenerklärung, falls diese noch nicht angegeben sind.
 
 ![Screenshot des Dialogfelds mit abgeblendeten Steuerelementen ](images/win-dialog-box-image45.png)
 
-In diesem Beispiel sind die deaktivierten Textfeldbezeichnungen ebenfalls deaktiviert, die Gruppenbezeichnung und die Gruppenerklärung hingegen nicht.
+In diesem Beispiel sind die deaktivierten Textfeldbezeichnungen ebenfalls deaktiviert, ihre Gruppenbezeichnung und Gruppenerklärung jedoch nicht.
 
 ### <a name="required-input"></a>Erforderliche Eingabe
 
 -   Um anzugeben, dass Benutzer Informationen in einem Steuerelement bereitstellen müssen, sollten Sie die folgenden Optionen in Betracht ziehen:
-    -   **Geben Sie nichts an, aber behandeln Sie fehlende erforderliche Eingaben mit Fehlermeldungen.** Dieser Ansatz reduziert die Unübersichtlichkeit und funktioniert gut, wenn die meisten Eingaben optional sind oder Benutzer die Steuerelemente wahrscheinlich nicht überspringen, wodurch die Anzahl der Fehlermeldungen gering bleibt.
-    -   **Geben Sie die erforderliche Eingabe mit einem Sternchen am Anfang der Bezeichnung an.** Erläutern Sie das Sternchen mit einem der beiden:
+    -   **Geben Sie nichts an, sondern behandeln Sie fehlende erforderliche Eingaben mit Fehlermeldungen.** Dieser Ansatz reduziert unübersichtlich und funktioniert gut, wenn die meisten Eingaben optional sind oder Benutzer wahrscheinlich keine Steuerelemente überspringen, wodurch die Anzahl der Fehlermeldungen niedrig bleibt.
+    -   **Geben Sie die erforderliche Eingabe mit einem Sternchen am Anfang der Bezeichnung an.** Erläutern Sie das Sternchen mit einer der folgenden:
 
-        -   Eine Fußnote am unteren Rand des Inhaltsbereichs mit \* erforderlicher Eingabe.
-        -   Eine QuickInfo auf dem Sternchen mit der Angabe Erforderliche Eingabe.
+        -   Eine Fußnote am unteren Rand des Inhaltsbereichs mit dem Text \* Erforderliche Eingabe.
+        -   Eine QuickInfo auf dem Sternchen required input (Erforderliche Eingabe).
 
-        Dieser Ansatz funktioniert gut, wenn nicht viele erforderliche Steuerelemente erforderlich sind, aber schlecht, wenn die meisten Steuerelemente erforderlich sind.
+        Dieser Ansatz funktioniert gut, wenn es nicht viele erforderliche Steuerelemente gibt, aber schlecht, wenn die meisten Steuerelemente erforderlich sind.
 
-        ![Screenshot von Textfeldbeschriftungen mit Sternchen ](images/win-dialog-box-image46.png)
+        ![Screenshot von Textfeldbezeichnungen mit Sternchen ](images/win-dialog-box-image46.png)
 
         In diesem Beispiel werden Sternchen verwendet, um die erforderliche Eingabe anzugeben.
 
-    -   **Wenn alle Steuerelemente Eingaben erfordern, geben Sie "Alle Eingaben erforderlich" an einer geeigneten Stelle am oberen Rand des Inhaltsbereichs an.** Dieser Ansatz reduziert die Unübersichtlich für diesen speziellen Fall.
+    -   **Wenn alle Steuerelemente eine Eingabe erfordern, geben Sie "Alle Eingaben erforderlich" an einer geeigneten Stelle oben im Inhaltsbereich an.** Dieser Ansatz reduziert die Übersichtlichkeit für diesen speziellen Fall.
     -   **Geben Sie optionale Eingaben mit "(optional)" nach der Bezeichnung an.** Dieser Ansatz funktioniert gut, wenn die meisten Eingaben erforderlich sind, andernfalls jedoch schlecht.
 
--   **Versuchen Sie aus Konsistenzgründen, dieselbe Methode zu verwenden, um die erforderliche Eingabe im gesamten Programm anzugeben.** Geben Sie bei Bedarf entweder erforderliche oder optionale Eingaben an, vermeiden Sie jedoch die Verwendung beider Eingaben innerhalb desselben Programms.
+-   **Versuchen Sie aus Konsistenz-, die gleiche Methode zu verwenden, um die erforderliche Eingabe im gesamten Programm anzugeben.** Geben Sie bei Bedarf entweder erforderliche oder optionale Eingaben an, vermeiden Sie jedoch die Verwendung beider Eingaben innerhalb desselben Programms.
 
 ### <a name="error-handling"></a>Fehlerbehandlung
 
--   Verhindern Sie Fehler, indem Sie Steuerelemente verwenden, die auf gültige Benutzereingaben beschränkt sind. Sie können auch die Anzahl der Fehler reduzieren, indem Sie sinnvolle Standardwerte bereitstellen.
--   Überprüfen Sie die Benutzereingabe so schnell wie möglich, und zeigen Sie Fehler so genau wie möglich an den Eingabepunkt an.
--   **Verwenden Sie die moduslose Fehlerbehandlung (direkt auftretende Fehler oder Sprechblasen) für Benutzereingabeprobleme.**
-    -   **Verwenden Sie Sprechblasen für nicht kritische Benutzereingabeprobleme mit nur einem Punkt, die erkannt wurden, während sie in einem Textfeld oder unmittelbar nach dem Verlust des Fokus in einem Textfeld erkannt wurden.** Für Sprechblasen ist kein verfügbarer Bildschirmbereich oder das dynamische Layout erforderlich, das zum Anzeigen von Nachrichten an Ort und Stelle erforderlich ist. Zeigt nur einen einzelnen Sprechblasen gleichzeitig an. Da das Problem nicht kritisch ist, ist kein Fehlersymbol erforderlich. Sprechblasen werden beim Klicken, beim Beheben des Problems oder nach einem Timeout entfernt.
+-   Vermeiden Sie Fehler, indem Sie Steuerelemente verwenden, die auf gültige Benutzereingaben beschränkt sind. Sie können auch dazu beitragen, die Anzahl von Fehlern zu reduzieren, indem Sie sinnvolle Standardwerte bereitstellen.
+-   Überprüfen Sie die Benutzereingabe so bald wie möglich, und zeigen Sie Fehler so nah wie möglich am Eingabepunkt an.
+-   **Verwenden Sie die moduslose Fehlerbehandlung (Fehler oder Sprechblasen) für Benutzereingabeprobleme.**
+    -   **Verwenden Sie Sprechblasen für nicht kritische Einzelpunkt-Benutzereingabeprobleme, die während eines Textfelds oder unmittelbar nach dem Verlust des Fokus durch ein Textfeld erkannt wurden.** Für Sprechblasen ist kein verfügbarer Bildschirmbereich oder das dynamische Layout erforderlich, das zum Anzeigen von meldungen an Ort und Stelle erforderlich ist. Zeigt immer nur einen einzelnen Balloon an. Da das Problem nicht kritisch ist, ist kein Fehlersymbol erforderlich. Sprechblasen gehen beim Klicken, beim Beheben des Problems oder nach einem Timeout weg.
 
         ![Screenshot der Meldung "Falsches Zeichen" ](images/win-dialog-box-image47.png)
 
-        In diesem Beispiel zeigt eine Sprechblase ein Eingabeproblem an, während es sich noch im -Steuerelement begibt.
+        In diesem Beispiel weist eine Sprechblase auf ein Eingabeproblem hin, das sich noch im Steuerelement befing.
 
--   **Verwenden Sie für die verzögerte Fehlererkennung fehlerbasierte Fehler.** In der Regel werden Fehler gefunden, indem Sie auf eine Commitschaltfläche klicken. (Verwenden Sie keine direkten Fehler für Einstellungen, für die sofort ein Commit ausgeführt wird.) Es können mehrere fehlerverdingende Fehler gleichzeitig auftreten. Verwenden Sie normalen Text und ein 16 x 16 Pixel großes Fehlersymbol, und platzieren Sie sie nach Möglichkeit direkt neben dem Problem. Direkt auftretende Fehler werden nur dann entfernt, wenn der Benutzer einen Commit vorgibt und keine anderen Fehler gefunden werden.
+-   **Verwenden Sie für die verzögerte Fehlererkennung** in der Regel Fehler, die durch Klicken auf eine Commitschaltfläche gefunden werden. (Verwenden Sie keine direkt verfügbaren Fehler für Einstellungen, für die sofort ein Committed erfolgt.) Es können mehrere Fehler gleichzeitig auftreten. Verwenden Sie normalen Text und ein 16 x 16 Pixel großes Fehlersymbol, und platzieren Sie sie nach Möglichkeit direkt neben dem Problem. Direkt aufgetretene Fehler werden nur dann entfernt, wenn der Benutzer committ und keine anderen Fehler gefunden werden.
 
     ![Screenshot des Dialogfelds mit zwei Fehlermeldungen ](images/win-dialog-box-image48.png)
 
-    In diesem Beispiel wird ein direkt auftretender Fehler für einen Fehler verwendet, der durch Klicken auf die Commitschaltfläche gefunden wurde.
+    In diesem Beispiel wird für einen Fehler, der durch Klicken auf die Schaltfläche "Commit" gefunden wurde, ein fehlerfehler verwendet.
 
--   **Verwenden Sie modale Fehlerbehandlung (Aufgabendialoge oder Meldungsfelder) für alle anderen Probleme,** einschließlich Fehlern, die mehrere Steuerelemente betreffen, oder bei denen es sich um nicht kontextbezogene oder nicht eingabebezogene Fehler handelt, die durch Klicken auf eine Commitschaltfläche gefunden werden.
+-   **Verwenden Sie die modale** Fehlerbehandlung (Aufgabendialogfelder oder Meldungsfelder) für alle anderen Probleme, einschließlich Fehler, die mehrere Steuerelemente betreffen oder nicht kontextbezogene oder nicht eingabebezogene Fehler sind, die durch Klicken auf eine Commitschaltfläche gefunden werden.
 -   **Wenn ein Eingabeproblem gefunden und gemeldet wird, legen Sie den Eingabefokus auf das erste Steuerelement mit den falschen Daten fest.** Scrollen Sie das Steuerelement bei Bedarf in die Ansicht.
 
-Weitere Informationen und Beispiele finden Sie unter [Fehlermeldungen](mess-error.md) und [Sprechblasen.](ctrl-balloons.md)
+Weitere Informationen und Beispiele finden Sie unter [Fehlermeldungen](mess-error.md) und [Balloons](ctrl-balloons.md).
 
 ### <a name="help"></a>Hilfe
 
--   Berücksichtigen Sie bei der Bereitstellung von Benutzerunterstützung die folgenden Optionen (in ihrer Bevorzugtkeitsreihenfolge aufgeführt):
-    -   Geben Sie interaktiven Steuerelementen selbsterklärende Bezeichnungen. Benutzer lesen die Bezeichnungen in interaktiven Steuerelementen wahrscheinlicher als jeder andere Text.
-    -   Geben Sie Kontexterklärungen mit [statischen Textbeschriftungen](text-ui.md)an.
+-   Berücksichtigen Sie beim Bereitstellen von Benutzerunterstützung die folgenden Optionen (in ihrer Bevorzugten Reihenfolge aufgeführt):
+    -   Geben Sie interaktiven Steuerelementen selbsterklärende Bezeichnungen. Benutzer lesen die Bezeichnungen wahrscheinlicher auf interaktiven Steuerelementen als jeder andere Text.
+    -   Stellen Sie Kontexterklärungen mit [statischen Textbezeichnungen zur Verfügung.](text-ui.md)
     -   Geben Sie einen bestimmten Hilfelink zu einem relevanten Hilfethema an.
--   **Suchen Sie unten im Inhaltsbereich des Dialogfelds nach Hilfelinks.** Wenn das Dialogfeld eine Fußnote enthält und der Link Hilfe damit verknüpft ist, platzieren Sie den Hilfelink in der Fußnote.
+-   **Suchen Sie unten im Inhaltsbereich des Dialogfelds nach Hilfelinks.** Wenn das Dialogfeld eine Fußnote hat und der Hilfelink damit verknüpft ist, platzieren Sie den Hilfelink in der Fußnote.
 
     ![Screenshot des Dialogfelds mit Hilfelink ](images/win-dialog-box-image40.png)
 
     In diesem Beispiel gilt der Hilfelink für den gesamten Dialog.
 
-    -   **Ausnahme:** Wenn ein Dialogfeld mehrere verschiedene Gruppen von Einstellungen mit separaten Hilfethemen (möglicherweise innerhalb von Gruppenfeldern) enthält, suchen Sie die Hilfelinks am unteren Rand der Gruppen.
+    -   **Ausnahme:** Wenn ein Dialogfeld über mehrere unterschiedliche Gruppen von Einstellungen verfügt, die separate Hilfethemen (z. B. in Gruppenfeldern) enthalten, suchen Sie die Hilfelinks unten in den Gruppen.
 
--   **Verwenden Sie keine allgemeinen oder ungenauen Links zu Hilfethemen oder generische Hilfeschaltflächen.** Benutzer ignorieren häufig die generische Hilfe.
+-   **Verwenden Sie keine allgemeinen oder ungenauen Links zu Hilfethema oder generische Hilfeschaltflächen.** Benutzer ignorieren häufig die generische Hilfe.
 
 Weitere Informationen und Beispiele finden Sie unter [Hilfe.](winenv-help.md)
 
@@ -831,7 +798,7 @@ Weitere Informationen und Beispiele finden Sie unter [Hilfe.](winenv-help.md)
 
 -   Fügen Sie in jedem Dialogfeld eine Standardschaltfläche für Commits ein.
 -   Für Fragedialoge:
-    -   **Wählen Sie die sicherste Antwort (um Datenverluste oder Systemzugriffe zu verhindern), als Standardantwort aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Antwort aus.
+    -   **Wählen Sie die sicherste Antwort aus (um Datenverluste oder Systemzugriffe zu verhindern). Die sicherste Antwort ist die Standardantwort.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Antwort aus.
         -   **Ausnahme:** Machen Sie keine destruktive Antwort als Standard, es sei denn, es gibt eine einfache, offensichtliche Möglichkeit, den Befehl rückgängig zu machen.
 -   Für Auswahldialoge:
     -   Wählen Sie für die anfänglichen Standardwerte die sichersten Werte (um Datenverluste oder Systemzugriffe zu verhindern) und die sichersten Werte **für jedes Steuerelement aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichsten oder bequemsten Optionen aus.
@@ -843,7 +810,7 @@ In diesem Beispiel wählen Benutzer wahrscheinlich die gleichen Druckeinstellung
 
 ## <a name="recommended-sizing-and-spacing&quot;></a>Empfohlene Größe und Abstand
 
--   **Unterstützen Sie die Windows Vista-Bildschirmauflösung von 800 x 600 Pixel.** Layouts können für vergrößerbare Fenster mit einer Bildschirmauflösung von 1024 x 768 Pixeln optimiert werden.
+-   **Unterstützt die minimale Windows Vista-Bildschirmauflösung von 800 x 600 Pixeln.** Layouts können für vergrößerbare Fenster mit einer Bildschirmauflösung von 1024 x 768 Pixeln optimiert werden.
 -   **Verwenden Sie nach Möglichkeit verstellbare Fenster, um Bildlaufleisten und abgeschnittene Daten zu vermeiden.** Windows dynamischen Inhalten und Listen profitieren am meisten von verstellbaren Fenstern.
 -   **Fenster mit fester Größe müssen vollständig sichtbar sein und so dimensioniert sein, dass sie in den Arbeitsbereich passen.**
 -   **Vergrößerbare Fenster können für höhere Auflösungen optimiert werden, aber bei Bedarf zur Anzeigezeit auf die tatsächliche Bildschirmauflösung heruntersetzbar sein.**
@@ -853,7 +820,7 @@ In diesem Beispiel wählen Benutzer wahrscheinlich die gleichen Druckeinstellung
 
 ### <a name=&quot;general&quot;></a>Allgemein
 
--   **Entfernen Sie redundanten Text.** Suchen Sie in Titeln, Hauptanweisungen, ergänzenden Anweisungen, Inhaltbereichen, Befehlslinks und Commitschaltflächen nach redundantem Text. Lassen Sie im Allgemeinen vollständigen Text in Anweisungen und interaktiven Steuerelementen, und entfernen Sie alle Redundanzen von den anderen Stellen.
+-   **Entfernen Sie redundanten Text.** Suchen Sie nach redundantem Text in Titeln, Hauptanweisungen, ergänzenden Anweisungen, Inhaltbereichen, Befehlslinks und Commitschaltflächen. Lassen Sie im Allgemeinen vollständigen Text in Anweisungen und interaktiven Steuerelementen, und entfernen Sie alle Redundanzen von den anderen Stellen.
 -   **Verwenden Sie positive Formulierungen.** Positive Formulierungen sind für Benutzer einfacher zu verstehen.
 
 **Richtig:**
@@ -890,11 +857,11 @@ Wählen Sie ein Konto aus.
 -   Verwenden Sie den genauen Befehlsnamen für befehlsbasierte Namen, aber schließen Sie die Auslassungsellipse nicht ein, wenn ein Befehlsnamen vor ort ist. Sie können den Menütitel des Befehls bei Bedarf hinzufügen, um einen guten Titel zu erstellen. Beispiel: für ein Objekt... Befehl in einem Insert-Menü verwenden Sie den Titel Objekt einfügen.
 -   **Wenn ein modusloses Dialogfeld** auf der Taskleiste angezeigt wird, optimieren Sie den Titel für die Anzeige auf der Taskleiste, indem Sie die unterscheidenden Informationen präzise an erster Stelle platzieren. Beispiele: "66 % abgeschlossen" und "3 Erinnerungen".
 -   **Schließen Sie die Wörter "dialog" oder "progress" nicht in den Titel ein.** Dies ist impliziert, und das Deaktivieren erleichtert benutzern das Scannen.
--   Verwenden [Sie die Groß-/End-Groß-/Formatvorlage,](glossary.md)ohne die Interpunktion zu beenden.
+-   Verwenden [Sie die Groß-/Groß-/Formatvorlage,](glossary.md)ohne die Interpunktion zu beenden.
 
 ### <a name="main-instructions"></a>Hauptanweisungen
 
--   **Verwenden Sie die Main-Anweisung, um präzise zu erläutern, was im Dialog zu tun ist.** Die Anweisung sollte eine bestimmte Anweisung, imperative Richtung oder Frage sein. Gute Anweisungen kommunizieren das Ziel des Benutzers mit dem Dialog, anstatt sich ausschließlich auf die Mechanismen der Bearbeitung zu konzentrieren.
+-   **Verwenden Sie die Main-Anweisung, um kurz zu erläutern, was im Dialog zu tun ist.** Die Anweisung sollte eine bestimmte Anweisung, imperative Richtung oder Frage sein. Gute Anweisungen kommunizieren das Ziel des Benutzers mit dem Dialog, anstatt sich ausschließlich auf die Mechanismen der Bearbeitung zu konzentrieren.
 -   **Lassen Sie die main-Anweisung weg, wenn das einzige, was Sie sagen können, offensichtlich ist.** In solchen Fällen ist der Inhalt des Dialogfelds selbsterklärend. Beispielsweise benötigen die allgemeinen Dialogfelder Datei öffnen und Datei speichern keine Hauptanweisung, da ihr Kontext und Ihr Entwurf ihren Zweck offensichtlich machen.
 -   **Lassen Sie Steuerelementbezeichnungen weg, die die Hauptanweisung neu erstellen.** In diesem Fall übernimmt die main-Anweisung den Zugriffsschlüssel.
 
@@ -910,11 +877,11 @@ In diesem Beispiel ist die Textfeldbezeichnung nur eine Neuformung der Main-Anwe
 
 In diesem Beispiel wird die redundante Bezeichnung entfernt, sodass die main-Anweisung den Zugriffsschlüssel übernimmt.
 
--   **Seien Sie präzise, verwenden Sie nur einen einzelnen vollständigen Satz.** Sehen Sie sich die Hauptanweisung auf die wesentlichen Informationen an. Wenn Sie mehr erklären müssen, verwenden Sie zusätzliche Anweisungen.
+-   **Seien Sie präzise, verwenden Sie nur einen einzelnen vollständigen Satz.** Sehen Sie sich die Hauptanweisung auf die wesentlichen Informationen an. Wenn Sie mehr erklären müssen, verwenden Sie ergänzende Anweisungen.
 -   **Verwenden Sie nach Möglichkeit bestimmte Verben.** Bestimmte Verben (Beispiele: Verbinden, Speichern, Installieren) sind für Benutzer sinnvoller als generische Verben (Beispiele: Konfigurieren, Verwalten, Festlegen).
 -   Verwenden Sie [die Groß-/Groß-/Groß-](glossary.md)
 -   **Schließen Sie keine abschließenden Zeiträume ein, wenn die Anweisung eine -Anweisung ist.** Wenn es sich bei der Anweisung um eine Frage handelt, fügen Sie ein abschließendes Fragezeichen ein.
--   **Verwenden Sie für Statusdialoge einen Gerund-Ausdruck,** der den vorgang in Bearbeitung kurz erläutert und mit auslassungsenden Auslassungsfeldern endet. Beispiel: Drucken ihrer Bilder...
+-   **Verwenden Sie für Statusdialoge einen Gerund-Ausdruck,** der den vorgangs in Bearbeitung kurz erläutert und mit auslassungsenden Auslassungsfeldern endet. Beispiel: Drucken ihrer Bilder...
 -   **Tipp:** Sie können eine Hauptanweisung auswerten, indem Sie sich vorstellbar machen, was Sie einem Freund sagen würden. Wenn die Antwort mit der main-Anweisung unnatürlich, nicht hilfreich oder umstirnlich wäre, überarbeiten Sie die Anweisung.
 
 ### <a name="supplemental-instructions"></a>Zusätzliche Anweisungen
@@ -930,27 +897,27 @@ In diesem Beispiel wird die redundante Bezeichnung entfernt, sodass die main-Anw
 -   **Der Befehl "Start" wird immer mit einem Verb verknüpft.**
 -   Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.
 -   Verwenden Sie keine Interpunktion am Ende.
--   **Geben Sie ggf. eine weitere Erklärung mit vollständigen Sätzen und endender Interpunktion an.** Fügen Sie solche Erklärungen jedoch nur bei Bedarf hinzu, und fügen Sie nicht allen Befehlslinks Erklärungen hinzu, nur weil ein Befehlslink einen benötigt.
+-   **Geben Sie bei Bedarf mit vollständigen Sätzen und beendenden Satzzeichen weitere Erläuterungen an.** Fügen Sie solche Erklärungen jedoch nur bei Bedarf hinzu, fügen Sie nicht allen Befehlslinks Erklärungen hinzu, nur weil ein Befehlslink eine solche benötigt.
 
-Weitere Informationen und Beispiele finden Sie unter Richtlinien für [Befehlslinks.](ctrl-command-links.md)
+Weitere Informationen und Beispiele finden Sie unter [Richtlinien für Befehlslinks.](ctrl-command-links.md)
 
 ### <a name="commit-buttons"></a>Commitschaltflächen
 
--   **Verwenden Sie bestimmte Commitschaltflächenbezeichnungen, die eigenständig sinnvoll sind und eine Antwort auf die Hauptanweisung sind.** Im Idealfall sollten Benutzer nichts anderes lesen müssen, um die Bezeichnung zu verstehen. Die Wahrscheinlichkeit, dass Benutzer Befehlsschaltflächenbezeichnungen lesen, ist weitaus wahrscheinlicher als statischer Text.
--   **Starten Sie Commit-Schaltflächenbezeichnungen mit einem Verb. Ausnahmen sind OK, Ja und Nein.**
+-   **Verwenden Sie bestimmte Commitschaltflächenbezeichnungen, die allein sinnvoll sind und eine Antwort auf die Hauptanweisung sind.** Im Idealfall sollten Benutzer nichts anderes lesen müssen, um die Bezeichnung zu verstehen. Benutzer lesen die Bezeichnungen der Befehlsschaltfläche viel wahrscheinlicher als statischen Text.
+-   **Starten Sie die Bezeichnungen der Commitschaltfläche mit einem Verb. Ausnahmen sind OK, Ja und Nein.**
 -   Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.
 -   Verwenden Sie keine Interpunktion am Ende.
--   Weisen Sie einen eindeutigen [Zugriffsschlüssel zu.](glossary.md)
-    -   **Ausnahme:** Weisen Sie den Schaltflächen OK und Abbrechen keine Zugriffsschlüssel zu, da eingabe und esc ihre Zugriffsschlüssel sind. Auf diese Weise können die anderen Zugriffsschlüssel einfacher zugewiesen werden.
+-   Weisen Sie einen [eindeutigen Zugriffsschlüssel zu.](glossary.md)
+    -   **Ausnahme:** Weisen Sie den Schaltflächen OK und Abbrechen keine Zugriffsschlüssel zu, da DIE EINGABETASTE und ESC ihre Zugriffsschlüssel sind. Dadurch wird die Zuweisung der anderen Zugriffsschlüssel vereinfacht.
 
 ## <a name="documentation"></a>Dokumentation
 
 Beim Verweisen auf Dialogfelder:
 
--   In der Programmierung und anderen technischen Dokumentationen finden Sie dialogfelder als Dialogfelder. Verweisen Sie an allen anderen Stellen anhand ihres Titels auf Dialogfelder. Wenn die Titelleiste ausgeblendet ist, lesen Sie den Dialog mithilfe der Main-Anweisung.
+-   Beziehen Sie sich in der Programmierung und anderen technischen Dokumentationen auf Dialogfelder als Dialogfelder. Verweisen Sie überall auf Dialogfelder über ihren Titel. Wenn die Titelleiste ausgeblendet ist, verweisen Sie mithilfe der main-Anweisung auf den Dialog.
 -   Wenn Sie im Allgemeinen auf ein Dialogfeld verweisen müssen, verwenden Sie das Fenster in der Benutzerdokumentation. Sie können auf ein einfaches Fragedialogfeld oder eine Bestätigung als Nachricht verweisen.
--   Verwenden Sie den genauen Titel oder Hauptanweisungstext, einschließlich der Groß-/Großschreibung.
--   Formatieren Sie den Titel nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie den Titel nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Verwenden Sie den genauen Titel- oder Hauptanweisungstext, einschließlich der Groß-/Groß-/Groß-/A-
+-   Formatieren Sie den Titel nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie den Titel nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
-Beispiel: Klicken Sie **in Windows-Sicherheit** auf **Weitere Optionen.**
+Beispiel: Klicken **Windows-Sicherheit** auf **Weitere Optionen.**
 

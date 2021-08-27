@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: jejessnapshotprepare-Funktion'
+description: 'Weitere Informationen zu: JetOSSnapshotPrepare-Funktion'
 title: JetOSSnapshotPrepare-Funktion
 TOCTitle: JetOSSnapshotPrepare Function
 ms:assetid: 364cbcba-7ddb-4748-8417-e885a5984b0d
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 67ccf9a5b21ccb9a4f94ba5aa4f995e4bb9017bf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 010cafd19ffde09b3083dd3cb6e6a69fa2268f11
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364101"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470327"
 ---
 # <a name="jetossnapshotprepare-function"></a>JetOSSnapshotPrepare-Funktion
 
@@ -32,9 +32,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetossnapshotprepare-function"></a>JetOSSnapshotPrepare-Funktion
 
-Die **jedessnapshotprepare** -Funktion beginnt die Vorbereitung für eine Momentaufnahme Sitzung. Eine Momentaufnahme Sitzung ist ein kurzes Zeitintervall, in dem die Engine keine Schreibvorgänge auf dem Datenträger ausgibt, sodass die Engine an einer volumemomentaufnahmensitzung teilnehmen kann (wenn Sie von einem Momentaufnahme-Writer gesteuert wird).
+Die **JetOSSnapshotPrepare-Funktion** beginnt mit den Vorbereitungen für eine Momentaufnahmesitzung. Eine Momentaufnahmesitzung ist ein kurzes Zeitintervall, in dem die Engine keine Schreib-IOs auf den Datenträger ausgibt, sodass die Engine an einer Volumemomentaufnahmesitzung teilnehmen kann (wenn sie von einem Momentaufnahmewriter gesteuert wird).
 
-**Windows XP:**  **jedessnapshotprepare** wurde in Windows XP eingeführt.
+**Windows XP:****JetOSSnapshotPrepare** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotPrepare(
@@ -45,138 +45,68 @@ Die **jedessnapshotprepare** -Funktion beginnt die Vorbereitung für eine Moment
 
 ### <a name="parameters"></a>Parameter
 
-*psnapid*
+*psnapId*
 
-Der Bezeichner der Momentaufnahme Sitzung, die gestartet werden soll.
+Der Bezeichner der Momentaufnahmesitzung, die gestartet werden soll.
 
 *grbit*
 
-Die Optionen für diesen-Befehl. Dieser Parameter kann eine Kombination der folgenden Werte aufweisen.
+Die Optionen für diesen Aufruf. Dieser Parameter kann eine Kombination der folgenden Werte aufweisen.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Normale Momentaufnahme.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitIncrementalSnapshot</p></td>
-<td><p>Es werden nur Protokolldateien erstellt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitCopySnapshot</p></td>
-<td><p>Eine Kopier Momentaufnahme (normal oder inkrementell) ohne Protokoll abkürzen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitContinueAfterThaw</p></td>
-<td><p>Die Momentaufnahme Sitzung tritt nach <a href="gg269229(v=exchg.10).md">jeto ssnapshotthaw</a> auf und erfordert einen <a href="gg294136(v=exchg.10).md">jedessnapshotend</a> -Funktions Aufruf.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitExplicitPrepare</p></td>
-<td><p>Standardmäßig werden keine Instanzen vorbereitet.</p>
-<p><strong>Windows 7:</strong>  JET_bitExplicitPrepare wurde in Windows 7 eingeführt.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>0</p> | <p>Normale Momentaufnahme.</p> | 
+| <p>JET_bitIncrementalSnapshot</p> | <p>Es werden nur Protokolldateien verwendet.</p> | 
+| <p>JET_bitCopySnapshot</p> | <p>Eine Kopiermomentaufnahme (normal oder inkrementell) ohne Protokollkürzung.</p> | 
+| <p>JET_bitContinueAfterThaw</p> | <p>Die Momentaufnahmesitzung tritt nach <a href="gg269229(v=exchg.10).md">JetOSSnapshotThaw</a> auf und erfordert einen <a href="gg294136(v=exchg.10).md">JetOSSnapshotEnd-Funktionsaufruf.</a></p> | 
+| <p>JET_bitExplicitPrepare</p> | <p>Standardmäßig werden keine Instanzen vorbereitet.</p><p><strong>Windows 7:</strong>  JET_bitExplicitPrepare wird in Windows 7 eingeführt.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Der Momentaufnahme-ID-Zeiger ist NULL, oder der <em>grbit</em> -Parameter ist ungültig.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotInvalidSequence</p></td>
-<td><p>Eine Momentaufnahme Sitzung wird bereits ausgeführt, und der Vorgang darf nicht mehr als eine Momentaufnahme Sitzung zu einem bestimmten Zeitpunkt aufweisen.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, kann eine Momentaufnahme Sitzung jederzeit mit der e/a-Sperr Phase gestartet werden. Der Bezeichner für die Sitzung wird zurückgegeben und muss in den nachfolgenden Aufrufen für die Momentaufnahme Sitzung verwendet werden.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Der Momentaufnahme-ID-Zeiger ist NULL, oder der <em>grbit-Parameter</em> ist ungültig.</p> | 
+| <p>JET_errOSSnapshotInvalidSequence</p> | <p>Eine Momentaufnahmesitzung wird bereits ausgeführt, und es ist nicht zulässig, dass der Vorgang zu einem bestimmten Zeitpunkt mehr als eine Momentaufnahmesitzung hat.</p> | 
 
-Die laufenden Instanzen der Engine werden nun als Teil der Momentaufnahme Sitzung betrachtet.
 
-**Windows Vista:**  Um eine andere Teilmenge von Instanzen anzugeben, kann die [jechanssnapshotprepareinstance](./jetossnapshotprepareinstance-function.md) aufgerufen werden.
 
-Der reguläre API-Sequenz Aufruf lautet: **jedessnapshotprepare**, optional gefolgt von einem oder mehreren Aufrufen von [jedessnapshotprepareinstance](./jetossnapshotprepareinstance-function.md)und anschließendem [jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md). Nachdem das Einfrieren gestartet wurde, kann es mit [jeto ssnapshotthaw](./jetossnapshotthaw-function.md)beendet werden. Nach der Vorbereitung kann die Momentaufnahme Sitzung jederzeit mit [jedessnapshotabort](./jetossnapshotabort-function.md)beendet werden.
+Wenn diese Funktion erfolgreich ist, kann eine Momentaufnahmesitzung jederzeit mit der E/A-Fixierungsphase gestartet werden. Der Bezeichner für die Sitzung wird zurückgegeben und muss in den nachfolgenden Aufrufen für die Momentaufnahmesitzung verwendet werden.
 
-Wenn JET_bitContinueAfterThaw nach [jedessnapshotthaw](./jetossnapshotthaw-function.md)angegeben wird, bleibt die Momentaufnahme Sitzung erhalten (obwohl die e/a-Vorgänge fortgesetzt werden). Dadurch wird die Momentaufnahme überprüft, und bei Bedarf wird die Protokoll Verkürzung mithilfe von [jetossnapshottruneurelog](./jetossnapshottruncatelog-function.md) aktiviert, und es wird ein Anruf von [jetossnapshotend](./jetossnapshotend-function.md)benötigt.
+Die ausgeführten Instanzen der Engine werden jetzt als Teil der Momentaufnahmesitzung betrachtet.
+
+**Windows Vista:**  Um eine andere Teilmenge von Instanzen anzugeben, kann [JetOSSnapshotPrepareInstance](./jetossnapshotprepareinstance-function.md) aufgerufen werden.
+
+Der normale API-Sequenzaufruf lautet: **JetOSSnapshotPrepare**, optional gefolgt von einem oder mehreren Aufrufen von [JetOSSnapshotPrepareInstance](./jetossnapshotprepareinstance-function.md)und dann von [JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md). Sobald das Einfrieren gestartet wurde, kann es mit [JetOSSnapshotThaw](./jetossnapshotthaw-function.md)beendet werden. Die Momentaufnahmesitzung kann jederzeit nach der Vorbereitung mit [JetOSSnapshotAbort](./jetossnapshotabort-function.md)plötzlich beendet werden.
+
+Wenn JET_bitContinueAfterThaw nach [JetOSSnapshotThaw](./jetossnapshotthaw-function.md)angegeben wird, bleibt die Momentaufnahmesitzung erhalten (obwohl die E/A fortgesetzt wird). Dadurch wird eine Überprüfung der Momentaufnahme aktiviert, und bei Bedarf wird die Protokollkürzung mitHilfe von [JetOSSnapshotTruncateLog](./jetossnapshottruncatelog-function.md) aktiviert, und es ist ein Aufruf von [JetOSSnapshotEnd](./jetossnapshotend-function.md)erforderlich.
 
 Wenn diese Funktion fehlschlägt, erfolgt keine Änderung des Engine-Zustands.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Ereignisprotokoll Einträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
+Ereignisprotokolleinträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_OSSNAPID](./jet-ossnapid.md)  
-[Jejessnapshotabort](./jetossnapshotabort-function.md)  
-[Jeto ssnapshotend](./jetossnapshotend-function.md)  
-[Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)  
-[Jejessnapshotprepareingestance](./jetossnapshotprepareinstance-function.md)  
-[Jejessnapshotthaw](./jetossnapshotthaw-function.md)  
-[Jeto ssnapshottruneurelog](./jetossnapshottruncatelog-function.md)
+[JetOSSnapshotAbort](./jetossnapshotabort-function.md)  
+[JetOSSnapshotEnd](./jetossnapshotend-function.md)  
+[JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  
+[JetOSSnapshotPrepareInstance](./jetossnapshotprepareinstance-function.md)  
+[JetOSSnapshotThaw](./jetossnapshotthaw-function.md)  
+[JetOSSnapshotTruncateLog](./jetossnapshottruncatelog-function.md)

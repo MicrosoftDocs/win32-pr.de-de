@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_DBID'
+description: 'Weitere Informationen finden Sie unter: JET_DBID'
 title: JET_DBID
 TOCTitle: JET_DBID
 ms:assetid: 516acb79-aa75-4609-81b6-3b2e4e0c95af
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fe3a8ccd813ececcb42388c7d577f78e9055d5b5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 988dd14ca96a5818254602b5ab6dcaeab4952669
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751376"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470906"
 ---
 # <a name="jet_dbid"></a>JET_DBID
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_dbid"></a>JET_DBID
 
-Der **JET_DBID** -Datentyp enthält das Handle für die Datenbank. Ein Daten Bank Handle wird zum Verwalten des Schemas einer Datenbank verwendet. Sie kann auch verwendet werden, um die Tabellen in der Datenbank zu verwalten.
+Der **JET_DBID-Datentyp** enthält das Handle für die Datenbank. Ein Datenbankhand handle wird verwendet, um das Schema einer Datenbank zu verwalten. Sie kann auch verwendet werden, um die Tabellen innerhalb dieser Datenbank zu verwalten.
 
 ```cpp
     typedef unsigned long JET_DBID;
@@ -43,41 +43,24 @@ Handle für die Datenbank.
 
 Der Wert JET_dbidNil gibt an, dass das Handle ungültig ist.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Ein Daten Bank Handle wird durch einen Aufrufen von [jetkreatedatabase](./jetcreatedatabase-function.md) oder [jetopd](./jetopendatabase-function.md)erstellt.
+Ein Datenbankhandl wird durch einen Aufruf von [JetCreateDatabase](./jetcreatedatabase-function.md) oder [JetOpenDatabase erstellt.](./jetopendatabase-function.md)
 
-Ein Daten Bank Handle kann von [jetclosedatabase](./jetclosedatabase-function.md) explizit geschlossen oder durch [jetendsession](./jetendsession-function.md) oder [jetterm](./jetterm-function.md)implizit geschlossen werden.
+Ein Datenbankhand handle kann explizit durch [JetCloseDatabase](./jetclosedatabase-function.md) oder implizit durch [JetEndSession](./jetendsession-function.md) oder [JetTerm geschlossen werden.](./jetterm-function.md)
 
-Ein Daten Bank Handle kann nur innerhalb der Sitzung verwendet werden, in der es erstellt wurde. Das vorhanden sein eines Daten Bank Handles entspricht dem logischen Öffnen einer Datenbank. Ein logisches Open unterscheidet sich vom physischen Öffnen einer Datenbank. Dies geschieht, wenn eine Datenbank mit dem System verbunden ist.
+Ein Datenbankhand handle kann nur innerhalb der Sitzung verwendet werden, in der es erstellt wurde. Das Vorhandensein eines Datenbankhandpunkts entspricht dem logischen Öffnen einer Datenbank. Ein logisches Öffnen ist anders als das physische Öffnen einer Datenbank, was geschieht, wenn eine Datenbank an das System angefügt wird.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreatedatabase](./jetcreatedatabase-function.md)  
-[Jetopumdatabase](./jetopendatabase-function.md)  
-[Jetclosedatabase](./jetclosedatabase-function.md)  
-[Jetendsession](./jetendsession-function.md)
+[JetCreateDatabase](./jetcreatedatabase-function.md)  
+[JetOpenDatabase](./jetopendatabase-function.md)  
+[JetCloseDatabase](./jetclosedatabase-function.md)  
+[JetEndSession](./jetendsession-function.md)

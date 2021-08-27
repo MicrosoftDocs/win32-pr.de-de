@@ -1,19 +1,19 @@
 ---
 title: 10Level9 ID3D11DeviceContext-Methoden
-description: In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9 und D3D FEATURE LEVEL 11 0 und höher für die \_ \_ \_ \_ ID3D11DeviceContext-Methoden aufgeführt.
+description: In diesem Abschnitt werden die Unterschiede zwischen jeder 10Level9-Featureebene und der Featureebene D3D \_ FEATURE \_ LEVEL \_ 11 \_ 0 und höher für die ID3D11DeviceContext-Methoden aufgelistet.
 ms.assetid: 84478b56-0306-491a-9545-0849b06d8342
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d5cb055e6a290a9500f65ad2d64cdd69b0eaa224e6a81359595688ba1aca657
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 5e268f45465139e49afe0f81a64eeeb93939734e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118990070"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122473126"
 ---
 # <a name="10level9-id3d11devicecontext-methods"></a>10Level9 ID3D11DeviceContext-Methoden
 
-In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9 und D3D FEATURE LEVEL 11 0 und höher für die \_ \_ \_ \_ [**ID3D11DeviceContext-Methoden**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) aufgeführt.
+In diesem Abschnitt werden die Unterschiede zwischen jeder 10Level9-Featureebene und der Featureebene D3D \_ FEATURE \_ LEVEL \_ 11 \_ 0 und höher für die [**ID3D11DeviceContext-Methoden**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) aufgelistet.
 
 -   [ID3D11DeviceContext::CopySubresourceRegion](#id3d11devicecontextcopysubresourceregion)
 -   [ID3D11DeviceContext::CopyResource](#id3d11devicecontextcopyresource)
@@ -70,29 +70,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3"> Nur Texture2D und Puffer können in gpu-zugänglichen Arbeitsspeicher kopiert werden.<br/> Texture3D kann nicht aus GPU-zugänglichen Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Jede Ressource, die nur über D3D10_BIND_SHADER_RESOURCE verfügt, kann nicht aus GPU-zugänglichen Arbeitsspeicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Sie können keine Mipmappen-Volumetexturen kopieren. <br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 |  Nur Texture2D und Puffer dürfen innerhalb des gpu-zugänglichen Speichers kopiert werden.<br /> Texture3D kann nicht aus gpu-zugänglichem Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br /> Ressourcen, die nur über D3D10_BIND_SHADER_RESOURCE verfügen, können nicht aus dem GPU-zugänglichen Speicher in den CPU-zugänglichen Arbeitsspeicher kopiert werden.<br /> Sie können keine Mipmappenvolumetexturen kopieren. <br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -102,29 +86,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3"> Nur Texture2D und Puffer können in gpu-zugänglichen Arbeitsspeicher kopiert werden.<br/> Texture3D kann nicht aus GPU-zugänglichen Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Jede Ressource, die nur über D3D10_BIND_SHADER_RESOURCE verfügt, kann nicht aus GPU-zugänglichen Arbeitsspeicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 |  Nur Texture2D und Puffer dürfen innerhalb des gpu-zugänglichen Speichers kopiert werden.<br /> Texture3D kann nicht aus gpu-zugänglichem Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br /> Ressourcen, die nur über D3D10_BIND_SHADER_RESOURCE verfügen, können nicht aus dem GPU-zugänglichen Speicher in den CPU-zugänglichen Arbeitsspeicher kopiert werden.<br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -134,29 +102,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -166,29 +118,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -198,29 +134,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -230,29 +150,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nur der erste Arrayslice wird gelöscht. Anwendungen sollten eine Renderzielansicht für jeden Gesichts- oder Arrayslice erstellen und dann jede Ansicht einzeln löschen.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur der erste Arrayslice wird wieder löschen. Anwendungen sollten eine Renderzielansicht für jedes Gesichts- oder Arrayslice erstellen und dann jede Ansicht einzeln löschen.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -262,29 +166,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -294,29 +182,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -326,29 +198,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -358,29 +214,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -390,29 +230,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -422,29 +246,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -454,29 +262,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -488,9 +280,9 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 | Featureebene             | Verhaltensunterschiede                                                                                                               |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen Primitiven wiederholen.<br/>    |
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl der Primitive darf 1048575 nicht überschreiten.<br/> Texturen können sich nicht mehr als 2048 Mal über einen Primitiven wiederholen.<br/> |
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl der Primitive darf 1048575 nicht überschreiten.<br/> Texturen können sich nicht mehr als 8192 Mal über einen Primitiven wiederholen.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen primitiven Typ wiederholen.<br/>    |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können nicht mehr als 2048 Mal pro Primitive wiederholt werden.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br/> |
 
 
 
@@ -500,29 +292,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -534,9 +310,9 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 | Featureebene             | Verhaltensunterschiede                                                                                                                                                                                                            |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen Primitiven wiederholen.<br/> Indexwerte dürfen 65534 nicht überschreiten.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/>      |
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl der Primitive darf 1048575 nicht überschreiten.<br/> Texturen können sich nicht mehr als 2048 Mal über einen Primitiven wiederholen.<br/> Indexwerte dürfen 1048575 nicht überschreiten.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
-| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl der Primitive darf 1048575 nicht überschreiten.<br/> Texturen können sich nicht mehr als 8192 Mal über einen Primitiven wiederholen.<br/> Indexwerte dürfen 1048575 nicht überschreiten.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen primitiven Typ wiederholen.<br/> Indexwerte dürfen 65534 nicht überschreiten.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/>      |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können nicht mehr als 2048 Mal pro Primitive wiederholt werden.<br/> Indexwerte dürfen den Wert 1048575.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br/> Indexwerte dürfen den Wert 1048575.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
 
 
 
@@ -546,38 +322,13 @@ In diesem Abschnitt werden die Unterschiede zwischen jeder Featureebene 10Level9
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nicht unterstützt${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Die Anzahl der Primitive darf 1048575 nicht überschreiten.<br/> Texturen können sich nicht mehr als 8192 Mal über einen Primitiven wiederholen.<br/> Indexwerte dürfen 1048575 nicht überschreiten.<br/>
-<blockquote>
-[!Note]<br />
-Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstanced"><strong>DrawIndexedInstanced-Methode</strong></a> mit einem Vertex-Shader aufrufen, der an die Pipeline gebunden ist und keine Daten pro Instanz importiert, zeichnen einige Direct3D 9-Grafikhardware möglicherweise nichts. Insbesondere wenn der Vertex-Shader keine Instanzdaten verwendet, entspricht der Aufruf von <strong>DrawIndexedInstanced</strong> mit einer Instanz nicht dem Aufruf von <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-draw"><strong>Draw.</strong></a>
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nicht unterstützt${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | Die Anzahl von Primitiven darf den Wert 1048575.<br /> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br /> Indexwerte dürfen den Wert 1048575.<br /><blockquote>[!Note]<br />Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstanced"><strong>DrawIndexedInstanced-Methode</strong></a> mit einem Vertex-Shader aufrufen, der an die Pipeline gebunden ist und keine Daten pro Instanz importiert, zeichnen einige Direct3D 9-Grafikhardware möglicherweise nichts. Insbesondere wenn der Vertex-Shader keine Daten pro Instanz verwendet, entspricht das Aufrufen von <strong>DrawIndexedInstanced</strong> mit einer Instanz nicht dem Aufrufen von <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-draw"><strong>Draw</strong></a>.</blockquote><br /> | 
+
 
 
 
@@ -587,37 +338,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -627,29 +356,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -659,37 +372,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -699,37 +390,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -739,37 +408,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -779,37 +426,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -819,37 +444,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -859,29 +462,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -891,29 +478,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -923,29 +494,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -955,29 +510,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -987,37 +526,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1027,37 +544,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1067,37 +562,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1107,37 +580,15 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*- oder 10.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
+| D3D_FEATURE_LEVEL_10_0 | 
+| D3D_FEATURE_LEVEL_10_1 | 
 
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1147,29 +598,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td>Das Format darf sich von dem bei der Puffererstellung angegebenen Format unterscheiden, aber es entsteht eine teure Übersetzung.<br/> Lässt nur Indexpuffer mit dem DXGI_FORMAT_R16_UINT-Format zu. <br/></td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-<td rowspan="2"> Das Format darf sich von dem bei der Puffererstellung angegebenen Format unterscheiden, aber es entsteht eine teure Übersetzung.<br/> Ermöglicht Indexpuffer mit DXGI_FORMAT_R16_UINT und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br/> ${REMOVE}$<br />
-</td>
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
 
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Das Format darf sich von dem bei der Puffererstellung angegebenen unterscheiden, es wird jedoch eine teure Übersetzung erstellt.<br /> Lässt nur Indexpuffer mit dem DXGI_FORMAT_R16_UINT zu. <br /> | 
+| D3D_FEATURE_LEVEL_9_2 |  Das Format darf sich von dem bei der Puffererstellung angegebenen unterscheiden, es wird jedoch eine teure Übersetzung erstellt.<br /> Ermöglicht Indexpuffer mit den DXGI_FORMAT_R16_UINT und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br /> ${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_3 | 
+
 
 
 
@@ -1179,29 +614,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Primitive Topologien mit Adjazenz werden nicht unterstützt${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Primitive Topologien mit Adjacency werden nicht unterstützt${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1211,29 +630,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">SampleMask darf nicht 0 (null) ${REMOVE}$ sein.<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | SampleMask darf nicht null${REMOVE}$ sein.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1243,29 +646,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur ein Renderziel wird unterstützt${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Es werden nur vier Renderziele unterstützt, und alle gebundenen Ressourcen müssen dieselbe Bittiefe aufweisen.</td>
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur ein Renderziel wird unterstützt${REMOVE}$.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | Nur vier Renderziele werden unterstützt, und alle gebundenen Ressourcen müssen dieselbe Bittiefe haben. | 
+
 
 
 
@@ -1275,29 +662,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1307,29 +678,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 32${REMOVE}$ nicht überschreiten.<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 32${REMOVE}$ nicht überschreiten.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1339,29 +694,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Es können nicht mehr als 16 Sampler gebunden werden${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Es können nicht mehr als 16 Sampler gebunden werden${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1371,29 +710,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur ps_4_0_level_9_1${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Nur ps_4_0_level_9_3 oder ps_4_0_level_9_1</td>
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur ps_4_0_level_9_1${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | Nur ps_4_0_level_9_3 oder ps_4_0_level_9_1 | 
+
 
 
 
@@ -1403,29 +726,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nicht mehr als 8 gleichzeitig gebundene Shaderressourcen${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nicht mehr als acht gleichzeitig gebundene Shaderressourcen${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1435,29 +742,13 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nur das nullte Scissor-Rect ist verfügbar${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur der nullte Scissor rect ist verfügbar${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1467,65 +758,33 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nur der nullte Viewport ist verfügbar${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur der nullte Viewport ist verfügbar${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
  
 
-Obwohl Sie gleitkommawerte für die Elemente der [**\_ VIEWPORT-Struktur D3D11**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) für das *pViewports-Array* in einem Aufruf von [](overviews-direct3d-11-devices-downlevel-intro.md) [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für die Featureebenen 9 x angeben, verwendet \_ **RSSetViewports** intern DWORDs. Wenn Sie aufgrund dieses Verhaltens eine negative linke obere Ecke für den Viewport verwenden, tritt beim Aufruf von **RSSetViewports** für die Featureebenen 9 x ein \_ Fehler auf. Dieser Fehler tritt auf, weil **RSSetViewports** für 9 x die Gleitkommawerte ohne Überprüfung in ganze Zahlen ohne Vorzeichen umwandt, was zu einem \_ Ganzzahlüberlauf führt.
+Obwohl Sie float-Werte für die Member der [**D3D11 \_ VIEWPORT-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) für das *pViewports-Array* in einem Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für [Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x angeben, verwendet **RSSetViewports** intern DWORDs. Wenn Sie aufgrund dieses Verhaltens eine negative linke obere Ecke für den Viewport verwenden, schlägt der Aufruf von **RSSetViewports** für Featureebenen 9 \_ x fehl. Dieser Fehler tritt auf, weil **RSSetViewports** für 9 \_ x die Gleitkommawerte ohne Validierung in ganze Zahlen ohne Vorzeichen umsetzt, was zu einem Ganzzahlüberlauf führt.
 
-Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für die [Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 10 x und 11 x funktioniert wie erwartet, auch wenn Sie eine negative linke obere Ecke für den \_ \_ Viewport verwenden.
+Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für [die Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 10 \_ x und 11 \_ x funktioniert wie erwartet, auch wenn Sie eine negative linke obere Ecke für den Viewport verwenden.
 
 ## <a name="id3d11devicecontextsetpredication"></a>ID3D11DeviceContext::SetPredication
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1535,29 +794,13 @@ Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1567,29 +810,13 @@ Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 255${REMOVE}$ nicht überschreiten$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 255${REMOVE}$ nicht überschreiten.<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1599,29 +826,13 @@ Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 
@@ -1631,29 +842,13 @@ Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur vs_4_0_level_9_1${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Nur vs_4_0_level_9_3 oder vs_4_0_level_9_1</td>
-</tr>
-</tbody>
-</table>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Nur vs_4_0_level_9_1${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | Nur vs_4_0_level_9_3 oder vs_4_0_level_9_1 | 
+
 
 
 
@@ -1663,29 +858,13 @@ Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3
 
 
 
-<table>
-<thead>
-<tr class="header">
-<th>Featureebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
 
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
+| Featureebene | Verhaltensunterschiede | 
+|---------------|----------------------|
+| D3D_FEATURE_LEVEL_9_1 | Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br /> | 
+| D3D_FEATURE_LEVEL_9_2 | 
+| D3D_FEATURE_LEVEL_9_3 | 
 
-</tr>
-</tbody>
-</table>
 
 
 

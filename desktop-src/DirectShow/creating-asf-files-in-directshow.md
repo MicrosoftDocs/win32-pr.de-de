@@ -4,16 +4,16 @@ ms.assetid: dffda43a-5831-4889-864f-81351b9e2bb3
 title: Erstellen von ASF-Dateien in DirectShow (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4614ed813c2e9f51c77cd8773739188aa5d4d07
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: a0569f5460e0cf31d4986e23bb2a576c48d68da03d3bbb7f33d05fe15877c180
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112403964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108100"
 ---
 # <a name="creating-asf-files-in-directshow-directshow"></a>Erstellen von ASF-Dateien in DirectShow (DirectShow)
 
-In diesem Abschnitt wird beschrieben, wie Sie den DirectShow [WM ASF Writer-Filter](wm-asf-writer-filter.md) verwenden, um Dateien im Advanced Systems Format (ASF) zu erstellen. ASF ist ein Containerformat, das jede Art von komprimierten oder unkomprimierten Daten enthalten kann. Windows Media Format-Dateien sind ASF-Dateien, die bestimmte Codecs verwenden, wie im Windows Media Format Software Development Kit (SDK) angegeben. Diese Dateien verwenden die Erweiterungen ".wma" Windows Media Audio Dateien und ".wmv" für Windows Media Video Dateien.
+In diesem Abschnitt wird beschrieben, wie Sie den DirectShow [WM ASF Writer-Filter](wm-asf-writer-filter.md) verwenden, um Dateien im Advanced Systems Format (ASF) zu erstellen. ASF ist ein Containerformat, das jede Art von komprimierten oder nicht komprimierten Daten enthalten kann. Windows Medienformatdateien sind ASF-Dateien, die bestimmte Codecs verwenden, wie im Windows Media Format Software Development Kit (SDK) angegeben. Diese Dateien verwenden die Erweiterungen ".wma" für Windows Media Audio-Dateien und ".wmv" für Windows Media Video-Dateien.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -27,7 +27,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 <dl> <dt>
 
-[Verwenden von Windows Media in DirectShow](using-windows-media-in-directshow.md)
+[Verwenden Windows Medien in DirectShow](using-windows-media-in-directshow.md)
 </dt> </dl>
 
  

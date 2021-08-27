@@ -4,12 +4,12 @@ description: Mit einem Kontrollkästchen treffen Benutzer eine Entscheidung zwis
 ms.assetid: 7c39987d-807b-41c1-9788-65c3d468b976
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: 29666991d0a0659f7ff3a95f12953504b70c6dc782049ac8d93d70df73afa5d1
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 90d8c342f24c1c34f20a7a8d7ec5f0e9e150fb80
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118040611"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884331"
 ---
 # <a name="check-boxes"></a>Kontrollkästchen
 
@@ -18,7 +18,7 @@ ms.locfileid: "118040611"
 
 Mit einem Kontrollkästchen treffen Benutzer eine Entscheidung zwischen zwei eindeutig entgegengesetzten Optionen. Die Kontrollkästchenbezeichnung gibt den ausgewählten Zustand an, während die Bedeutung des zustandsbecheckten Zustands das eindeutige Gegenteil des ausgewählten Zustands sein muss. Daher sollten Kontrollkästchen nur zum Aktivieren oder Deaktivieren einer Option oder zum Auswählen oder Deaktivieren **eines Elements verwendet werden.**
 
-![Screenshot eines von vier ausgewählten Kontrollkästchen ](images/ctrl-check-boxes-image1.png)
+![Screenshot eines von vier aktivierten Kontrollkästchen ](images/ctrl-check-boxes-image1.png)
 
 Eine typische Gruppe von Kontrollkästchen.
 
@@ -79,7 +79,7 @@ Kontrollkästchen verfügen über mehrere Verwendungsmuster:
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Eine individuelle Auswahl** Ein einzelnes Kontrollkästchen wird verwendet, um eine einzelne Auswahl auszuwählen. <br/>                                                                                                             | ![Screenshot eines Kontrollkästchens mit Erinnere mich Bezeichnung ](images/ctrl-check-boxes-image6.png)<br/> Ein einzelnes Kontrollkästchen wird für eine einzelne Auswahl verwendet.<br/>                                                                                                                                                                                                                                                                                                                        |
 | **Unabhängige Auswahlmöglichkeiten (null oder mehr)** Eine Gruppe von Kontrollkästchen wird verwendet, um aus einer Gruppe von 0 (null) oder mehr Optionen auszuwählen.<br/>                                                                              | Im Gegensatz zu Steuerelementen mit einzelner Auswahl, z. B. [Optionsfeldern,](ctrl-radio-buttons.md)können Benutzer eine beliebige Kombination von Optionen in einer Gruppe von Kontrollkästchen auswählen.<br/> ![Screenshot von zwei von drei aktivierten Kontrollkästchen ](images/ctrl-check-boxes-image7.png)<br/> Eine Gruppe von Kontrollkästchen wird für unabhängige Auswahlmöglichkeiten verwendet.<br/>                                                                                                                                                  |
-| **Abhängige Auswahl (mindestens eine)** Eine Gruppe von Kontrollkästchen kann auch verwendet werden, um eine oder mehrere Auswahlmöglichkeiten auszuwählen.<br/>                                                                         | **Möglicherweise müssen Sie eine Auswahl einer oder mehrere abhängige Optionen darstellen.** Da microsoft?windows kein Steuerelement hat, das diese Art von Eingabe direkt unterstützt, empfiehlt es sich, eine Gruppe von Kontrollkästchen zu verwenden und den Fehler zu behandeln, wenn keine der Optionen ausgewählt ist.<br/> ![Screenshot eines von zwei aktivierten Kontrollkästchen ](images/ctrl-check-boxes-image8.png)<br/> Eine Gruppe von Kontrollkästchen wird verwendet, in der mindestens ein Protokoll ausgewählt werden muss.<br/> |
+| **Abhängige Auswahl (mindestens eine)** Eine Gruppe von Kontrollkästchen kann auch verwendet werden, um eine oder mehrere Auswahlmöglichkeiten auszuwählen.<br/>                                                                         | **Sie müssen möglicherweise eine Auswahl von einer oder mehrere abhängige Optionen darstellen.** Da microsoft?windows kein Steuerelement hat, das diese Art von Eingabe direkt unterstützt, empfiehlt es sich, eine Gruppe von Kontrollkästchen zu verwenden und den Fehler zu behandeln, wenn keine der Optionen ausgewählt ist.<br/> ![Screenshot eines von zwei aktivierten Kontrollkästchen ](images/ctrl-check-boxes-image8.png)<br/> Eine Gruppe von Kontrollkästchen wird verwendet, in der mindestens ein Protokoll ausgewählt werden muss.<br/> |
 | **Gemischte Auswahl** Zusätzlich zu den ausgewählten und aktivierten Zuzuständen weisen Kontrollkästchen auch einen gemischten Zustand für die Mehrfachauswahl auf, um anzugeben, dass die Option für einige, aber nicht für alle Objekte festgelegt ist.<br/> | ![Screenshot eines vollblauen schreibgeschützten Kontrollkästchens ](images/ctrl-check-boxes-image9.png)<br/> Ein Kontrollkästchen mit gemischtem Zustand.<br/>                                                                                                                                                                                                                                                                                                                                                      |
 
 
@@ -97,7 +97,7 @@ Kontrollkästchen verfügen über mehrere Verwendungsmuster:
     Ein Beispiel für Gruppen verwandter, unabhängiger Optionen.
 
 -   **Die Neuordnung der Verwendung von Gruppenfeldern zum Organisieren von Gruppen von Kontrollkästchen** führt häufig zu unnötiger Bildschirmübersicht.
--   **Listen Sie Kontrollkästchen in einer logischen** Reihenfolge auf, z. B. gruppieren Sie hochgradig verwandte Optionen, platzieren Sie die gängigsten Optionen an erster Stelle, oder folgen Sie einem anderen natürlichen Fortschritt. Die alphabetische Sortierung wird nicht empfohlen, da sie sprachabhängig und daher nicht lokalisierbar ist.
+-   **Listen Sie Kontrollkästchen in einer logischen** Reihenfolge auf, z. B. gruppieren Sie hochgradig verwandte Optionen, platzieren Sie die häufigsten Optionen an erster Stelle, oder folgen Sie einem anderen natürlichen Fortschritt. Die alphabetische Sortierung wird nicht empfohlen, da sie sprachabhängig und daher nicht lokalisierbar ist.
 -   **Kontrollkästchen vertikal ausrichten, nicht horizontal.** Die horizontale Ausrichtung ist schwieriger zu lesen.
 
     **Richtig:**
@@ -112,7 +112,7 @@ Kontrollkästchen verfügen über mehrere Verwendungsmuster:
 
     In diesem Beispiel ist die horizontale Ausrichtung schwieriger zu lesen.
 
--   **Verwenden Sie nicht den gemischten Zustand, um einen dritten Zustand zu repräsentieren.** Der gemischte Zustand wird verwendet, um anzugeben, dass eine Option für einige, aber nicht für alle untergeordneten Objekte festgelegt ist. Benutzer sollten nicht direkt einen gemischten Zustand festlegen können, sondern der gemischte Zustand ist eine Reflektion der untergeordneten Objekte. Der gemischte Zustand wird nicht als dritter Zustand für ein einzelnes Element verwendet. Verwenden Sie stattdessen Optionsfelder oder eine Dropdownliste, um einen dritten Zustand zu repräsentieren.
+-   **Verwenden Sie nicht den gemischten Zustand, um einen dritten Zustand zu repräsentieren.** Der gemischte Zustand wird verwendet, um anzugeben, dass eine Option für einige, aber nicht für alle untergeordneten Objekte festgelegt ist. Benutzer sollten nicht direkt einen gemischten Zustand festlegen können, sondern der gemischte Zustand ist eine Reflektion der untergeordneten Objekte. Der gemischte Zustand wird nicht als dritter Zustand für ein einzelnes Element verwendet. Um einen dritten Zustand zu darstellen, verwenden Sie stattdessen Optionsfelder oder eine Dropdownliste.
 
     **Falsch:**
 
@@ -126,7 +126,7 @@ Kontrollkästchen verfügen über mehrere Verwendungsmuster:
 
     In diesem Beispiel können Benutzer aus einer Liste mit drei eindeutigen Optionen auswählen.
 
--   **Wenn Sie auf ein Kontrollkästchen für gemischten Zustand klicken, sollten alle ausgewählten, alle markierten und die ursprünglichen gemischten Zustände durcheinander geraden.** Aus Gründen der Nähe ist es wichtig, den ursprünglichen gemischten Zustand wiederherstellen zu können, da die Einstellungen für den Benutzer komplex oder unbekannt sein können. Andernfalls besteht die einzige Möglichkeit, den gemischten Zustand mit Sicherheit wiederherzustellen, darin, die Aufgabe abzubricht und von vorn zu beginnen.
+-   **Wenn Sie auf ein Kontrollkästchen für gemischten Zustand klicken, sollten alle ausgewählten, alle kontrollkästchen und die ursprünglichen gemischten Zustände durchweg durcheinander sein.** Aus Gründen der Nähe ist es wichtig, den ursprünglichen gemischten Zustand wiederherstellen zu können, da die Einstellungen für den Benutzer komplex oder unbekannt sein können. Andernfalls besteht die einzige Möglichkeit, den gemischten Zustand mit Sicherheit wiederherzustellen, darin, die Aufgabe abzubricht und von vorn zu beginnen.
 -   **Verwenden Sie keine Kontrollkästchen als Statusanzeige.** Verwenden Sie [stattdessen ein Statusanzeige-Steuerelement.](progress-bars.md)
 
     **Falsch:**
@@ -154,9 +154,9 @@ Kontrollkästchen verfügen über mehrere Verwendungsmuster:
     -   Zeigen Sie andere Fenster an, z. B. ein Dialogfeld, um weitere Eingaben zu erfassen.
     -   Dynamisches Anzeigen anderer Steuerelemente im Zusammenhang mit dem ausgewählten Steuerelement (Sprachanzeigen können solche Ereignisse nicht erkennen).
 
-### <a name="dont-show-this-item-again"></a>Nicht anzeigen <item> Wieder
+### <a name="dont-show-this-ltitemgt-again"></a>Dieses Element nicht mehr &lt; &gt; anzeigen
 
--   **Erwägen Sie die Verwendung der Option Nicht mehr anzeigen, damit Benutzer ein wiederkehrendes Dialogfeld nur unterdrücken können, wenn es keine bessere <item> Alternative gibt.** Versuchen Sie, im Voraus zu ermitteln, ob Benutzer den Dialog wirklich benötigen. wenn sie dies tun, zeigen Sie immer den Dialog an, und wenn nicht, beseitigen Sie den Dialog.
+-   **Erwägen Sie die Verwendung der Option Dieses Element nicht mehr anzeigen, damit Benutzer ein wiederkehrendes Dialogfeld nur unterdrücken können, wenn es keine &lt; &gt; bessere Alternative gibt.** Versuchen Sie, im Voraus zu ermitteln, ob Benutzer den Dialog wirklich benötigen. wenn sie dies tun, zeigen Sie immer den Dialog an, und wenn nicht, beseitigen Sie den Dialog.
 
 Weitere Richtlinien und Beispiele finden Sie unter [Dialogfelder](win-dialog-box.md).
 
@@ -176,7 +176,7 @@ Weitere Richtlinien und Beispiele finden Sie unter [Dialogfelder](win-dialog-box
 
 -   Wenn Sie Kontrollkästchen mit Optionsfeldern oder anderen Kontrollkästchen schachteln, deaktivieren Sie diese untergeordneten Steuerelemente, bis die **Option auf hoher Ebene ausgewählt ist.** Dies vermeidet Verwirrung über die Bedeutung der untergeordneten Steuerelemente.
 -   Ordnen Sie untergeordnete Steuerelemente einem Kontrollkästchen zu, das mit dem Kontrollkästchen in der Registerkarten reihenfolge zusammenhängend ist.
--   **Wenn die Auswahl einer Option das Aktivieren untergeordneter Kontrollkästchen impliziert, aktivieren Sie diese Kontrollkästchen explizit, um die Beziehung zu löschen.**
+-   **Wenn die Auswahl einer Option die Auswahl untergeordneter Kontrollkästchen impliziert, aktivieren Sie diese Kontrollkästchen explizit, um die Beziehung zu löschen.**
 
     **Falsch:**
 
@@ -208,7 +208,7 @@ Weitere Richtlinien und Beispiele finden Sie unter [Dialogfelder](win-dialog-box
 
 ### <a name="default-values"></a>Standardwerte
 
--   Wenn ein Kontrollkästchen für eine Benutzeroption vorgesehen ist, legen Sie den sichersten (um Datenverlust oder Systemzugriff zu verhindern) standardmäßig den sichersten und privaten **Zustand fest.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie den wahrscheinlichsten oder bequemsten Wert aus.
+-   Wenn ein Kontrollkästchen für eine Benutzeroption aktiviert ist, legen Sie standardmäßig den sichersten (um Datenverlust oder Systemzugriff zu verhindern) den sichersten und privaten **Zustand fest.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie den wahrscheinlichsten oder bequemsten Wert aus.
 
 ## <a name="recommended-sizing-and-spacing"></a>Empfohlene Größe und Abstand
 
@@ -230,7 +230,7 @@ Empfohlene Größe und Abstand für Kontrollkästchen.
 -   Bei einer Gruppe von Kontrollkästchen sollten Sie den Bezeichnungstext auf die Unterschiede zwischen den Optionen konzentrieren. Wenn alle Optionen denselben Einführungstext haben, verschieben Sie diesen Text in die Gruppenbezeichnung.
 -   Verwenden Sie positive Formulierungen. Geben Sie eine Bezeichnung nicht so aus, dass das Aktivieren eines Kontrollkästchens bedeutet, keine Aktion durchzuführen.
 
-    -   **Ausnahme: Zeigen Sie diese Kontrollkästchen <item> nicht** erneut an.
+    -   **Ausnahme: Zeigen Sie dieses Element nicht &lt; erneut &gt; an.**
 
     **Falsch:**
 
@@ -242,7 +242,7 @@ Empfohlene Größe und Abstand für Kontrollkästchen.
 
     > [!Note]
     >
-    > Das Hinzufügen einer Erklärung zu einem Kontrollkästchen in einer Gruppe bedeutet nicht, dass Sie Erklärungen für alle Kontrollkästchen in der Gruppe bereitstellen müssen. Geben Sie nach Bedarf die relevanten Informationen in der Bezeichnung an, und verwenden Sie Erklärungen nur bei Bedarf. Geben Sie die Bezeichnung nicht nur aus Konsistenz- und Konsistenz- heiterkeits-heiterkeit neu.
+    > Das Hinzufügen einer Erklärung zu einem Kontrollkästchen in einer Gruppe bedeutet nicht, dass Sie Erklärungen für alle Kontrollkästchen in der Gruppe bereitstellen müssen. Geben Sie nach Bedarf die relevanten Informationen in der Bezeichnung an, und verwenden Sie Erklärungen nur bei Bedarf. Verwenden Sie nicht nur die Bezeichnung aus Konsistenz- und Konsistenz-Heiterkeits-Heiterkeit.
 
      
 
@@ -275,7 +275,7 @@ Empfohlene Größe und Abstand für Kontrollkästchen.
 
     **Besser:**
 
-    ![Screenshot der Bezeichnung: Protokolle wählen mindestens eine Auswählung aus. ](images/ctrl-check-boxes-image29.png)
+    ![Screenshot der Bezeichnung: Protokolle wählen mindestens eins aus. ](images/ctrl-check-boxes-image29.png)
 
     In diesem Beispiel ist klar, dass Benutzer mehr als eine Auswahl treffen können.
 
@@ -283,10 +283,10 @@ Empfohlene Größe und Abstand für Kontrollkästchen.
 
 Beim Verweisen auf Kontrollkästchen:
 
--   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels. Schließen Sie das Wort ein Kontrollkästchen ein.
--   Verweisen Sie auf ein Kontrollkästchen als Kontrollkästchen, nicht als Option, als Kontrollkästchen oder einfach als Kontrollkästchen, da das Kontrollkästchen allein für Lokalisierer mehrdeutig ist.
--   Um die Benutzerinteraktion zu beschreiben, verwenden Sie select und clear.
--   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels ein. Schließen Sie das Wort Kontrollkästchen ein.
+-   Beziehen Sie sich auf ein Kontrollkästchen als Kontrollkästchen, nicht als Option, Kontrollkästchen oder einfach als Kontrollkästchen, da das Kontrollkästchen allein für Lokalisierer mehrdeutig ist.
+-   Verwenden Sie select und clear, um die Benutzerinteraktion zu beschreiben.
+-   Formatieren Sie die Bezeichnung nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
-    Beispiel: Aktivieren Sie das Kontrollkästchen **Unterstreichung.**
+    Beispiel: Aktivieren Sie das **Kontrollkästchen** Unterstrichen.
 

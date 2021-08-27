@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 4768697d40d0d7d0b793fb7e8dd81a1c3f53d95e13ae924fbc0926e41b77d505
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: f018a2ddce7599adf02e87d435d54b45725665cc
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118087551"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622116"
 ---
 # <a name="xmdec4-operator--operators"></a>XMDEC4-Operator = Operatoren
 
 Weist der aktuellen Instanz von Vektorkomponentendaten `XMDEC4` zu.
 
-Weist der aktuellen Instanz von [**XMDEC4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4)Vektorkomponentendaten zu.
+Weist der aktuellen Instanz von [**XMDEC4 Vektorkomponentendaten zu.**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmdec4)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -30,19 +30,19 @@ Weist der aktuellen Instanz von [**XMDEC4**](/windows/win32/api/directxpackedvec
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Operator</th>
-<th style="text-align: left;">Beschreibung</th>
+<th >Operator</th>
+<th >Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxmath/nf-directxmath-xmfloat4x3-operator-assign"><strong>XMDEC4::operator = (const XMDEC4&)</strong></a></td>
-<td style="text-align: left;">Weist die Vektorkomponentendaten aus einer Instanz von <code>XMDEC4</code> der aktuellen Instanz von <code>XMDEC4</code> zu. <br/> Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> der aktuellen Instanz von <code>XMDEC4</code> zu. <br/>
+<td ><a href="/windows/desktop/api/directxmath/nf-directxmath-xmfloat4x3-operator-assign"><strong>XMDEC4::operator = (const XMDEC4&)</strong></a></td>
+<td >Weist der aktuellen Instanz von die Vektorkomponentendaten von <code>XMDEC4</code> einer Instanz von <code>XMDEC4</code> zu. <br/> Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a> der aktuellen Instanz von <code>XMDEC4</code> zu. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -50,8 +50,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api//rrascfg/nf-rrascfg-ieapproviderconfig-initialize"><strong>XMDEC4::operator = (const uint32_t)</strong></a></td>
-<td style="text-align: left;">Weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <code>XMDEC4</code> zu. <br/> Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4</strong></a>zu. <br/>
+<td ><a href="/windows/desktop/api//rrascfg/nf-rrascfg-ieapproviderconfig-initialize"><strong>XMDEC4::operator = (const uint32_t)</strong></a></td>
+<td >Weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <code>XMDEC4</code> zu. <br/> Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmdec4"><strong>XMDEC4 zu.</strong></a> <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -63,7 +63,7 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

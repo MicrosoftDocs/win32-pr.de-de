@@ -1,25 +1,25 @@
 ---
-description: Gebiets Schema- \_ ijahrhundert
+description: LOCALE \_ ICENTURY
 ms.assetid: 7eee6c25-468e-4cb8-8735-d61d7a1091e1
 title: LOCALE_ICENTURY
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8349e9266bab66f6014f2250267f81586c542c64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e3d67426484406e0d2e5e206880bd367cd476d23a39105b221f37a575f1981e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120106850"
 ---
-# <a name="locale_icentury"></a>Gebiets Schema- \_ ijahrhundert
+# <a name="locale_icentury"></a>LOCALE \_ ICENTURY
 
-Ein zweistelliges oder vierstelliges Jahrhundert für das kurze Datum. Das Jahrhundert kann einen der folgenden Werte aufweisen. Es wird empfohlen, dass Ihre Anwendung das [ \_ Gebiets Schema sshortdate](locale-sshortdate.md) anstelle von Gebiets Schema- \_ ijahrhundert verwendet.
+Ein zweistelliges oder vierstelliges Jahrhundert nur für das kurze Datum. Das Jahrhundert kann einen der folgenden Werte aufweisen. Es wird für Ihre Anwendung [bevorzugt, LOCALE \_ SSHORTDATE](locale-sshortdate.md) anstelle von LOCALE \_ ICENTURY zu verwenden.
 
 
 
 | Wert | Bedeutung                     |
 |-------|-----------------------------|
-| 0     | Abgekürzte 2-stellige Jahrhundert |
+| 0     | Abgekürzt 2-stelliges Jahrhundert |
 | 1     | Vollständiges 4-stelliges Jahrhundert        |
 
 

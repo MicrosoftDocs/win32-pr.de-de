@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COLUMNID. GreaterThanOrEqual-Operator'
+description: 'Erfahren Sie mehr über: JET_COLUMNID. GreaterThanOrEqual-Operator'
 title: JET_COLUMNID. GreaterThanOrEqual-Operator
 TOCTitle: 'GreaterThanOrEqual operator '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_COLUMNID.op_GreaterThanOrEqual(Microsoft.Isam.Esent.Interop.JET_COLUMNID,Microsoft.Isam.Esent.Interop.JET_COLUMNID)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 344d1ed95ebc6a4a79d17f8b664f3f8a76740367
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b18e0f69c30090d75169fbb7c1d5da343b448c7880c389ee4208e7649be85f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063570"
 ---
 # <a name="jet_columnidgreaterthanorequal-operator"></a>JET_COLUMNID. GreaterThanOrEqual-Operator
 
-Stellen Sie fest, ob ein ColumnID nach einem anderen ColumnID liegt oder diesem entspricht.
+Bestimmen Sie, ob eine columnid nach oder gleich einer anderen columnid ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,29 +64,29 @@ public static bool operator >=(
 
 #### <a name="parameters"></a>Parameter
 
-  - LHS  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+  - Lhs  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das erste zu vergleichende ColumnID.
+    Die erste zu vergleichende columnid.
 
 <!-- end list -->
 
   - rhs  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das zweite zu vergleichende ColumnID.
+    Die zweite zu vergleichende columnid.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
-True, wenn LHS nach oder gleich RHS ist.  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
+True, wenn "ls" nach oder gleich "rhs" ist.  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_COLUMNID Struktur](./jet-columnid-structure.md)
+[JET_COLUMNID-Struktur](./jet-columnid-structure.md)
 
-[Mitglieder JET_COLUMNID](./jet-columnid-members.md)
+[JET_COLUMNID-Member](./jet-columnid-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

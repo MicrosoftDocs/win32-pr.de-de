@@ -1,10 +1,10 @@
 ---
-description: Speichert das Grafik Protokoll an der angegebenen Position.
+description: Speichert das Grafikprotokoll am angegebenen Speicherort.
 MS-HAID: vspixengine.IPixEngine\_SaveFile\_BSTR\_IFileIOCallback\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ipixengine:: SaveFile-Methode'
+title: IPixEngine::SaveFile-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: A80498F4-C8F5-4AC0-92C5-A90EB2A090B7
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: f7e1bed8765ca64123ccf13cbc3ee5f0d989b115
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 737a0de1636fbae4f8beee0be89780b54415e138
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522723"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622536"
 ---
-# <a name="span-idvspixengineipixengine_savefile_bstr_ifileiocallback_ptrspanipixenginesavefile-method"></a><span id="vspixengine.ipixengine_savefile_bstr_ifileiocallback_ptr"></span>Ipixengine:: SaveFile-Methode
+# <a name="span-idvspixengineipixengine_savefile_bstr_ifileiocallback_ptrspanipixenginesavefile-method"></a><span id="vspixengine.ipixengine_savefile_bstr_ifileiocallback_ptr"></span>IPixEngine::SaveFile-Methode
 
-Speichert das Grafik Protokoll an der angegebenen Position.
+Speichert das Grafikprotokoll am angegebenen Speicherort.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT SaveFile(
 
 ## <a name="parameters"></a>Parameter
 
-*Einfügen*   
-Eine com-Zeichenfolge, die den Pfadnamen des gespeicherten Grafik Protokolls enthält.
+*Dateiname*   
+Eine COM-Zeichenfolge, die den Pfadnamen des gespeicherten Grafikprotokolls enthält.
 
-*pfileiocallback*   
-Die Adresse eines funktons, mit dem der Host von Datei-e/a-Fehlern beim Speichern benachrichtigt wird
+*pFileIOCallback*   
+Die Adresse eines Functons, der verwendet wird, um den Host während des Speicherns über Datei-E/A-Fehler zu benachrichtigen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Ipixengine**](/windows/desktop/direct3dtools/ipixengine)
+[**IPixEngine**](/windows/desktop/direct3dtools/ipixengine)
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten (MRU) aus der Registrierung.
+description: Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten Zeichenfolgen (MRU) aus der Registrierung.
 title: IACLCustomMRU::Initialize-Methode
 ms.topic: reference
 ms.date: 05/31/2018
@@ -12,16 +12,16 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 358921b0-46c4-4428-b0b5-57a44fc3247b
-ms.openlocfilehash: 715c6991021070dd132942de0bb18c8b77684860
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 0e0cad5f144a4ce97c648463cfdf31bf1c2ee7da0fb89b5508ce9386dba0f14f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111760"
 ---
 # <a name="iaclcustommruinitialize-method"></a>IACLCustomMRU::Initialize-Methode
 
-Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten (MRU) aus der Registrierung.
+Lädt eine Liste von Zeichenfolgen in die Liste der zuletzt verwendeten Zeichenfolgen (MRU) aus der Registrierung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ HRESULT Initialize(
 
 Typ: **LPCWSTR**
 
-Ein Zeiger auf einen Puffer, der den Registrierungsschlüssel mit den Zeichenfolgen für die MRU-Liste enthält.
+Ein Zeiger auf einen Puffer, der den Registrierungsschlüssel enthält, der die Zeichenfolgen für die MRU-Liste enthält.
 
 </dd> <dt>
 
@@ -53,7 +53,7 @@ Ein Zeiger auf einen Puffer, der den Registrierungsschlüssel mit den Zeichenfol
 
 Typ: **DWORD**
 
-Die maximale Anzahl von Einträgen, die aus *pwszMRURegKey* entnommen werden können.
+Die maximale Anzahl von Einträgen, die von *pwszMRURegKey übernommen werden können.*
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Die maximale Anzahl von Einträgen, die aus *pwszMRURegKey* entnommen werden kö
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,8 +69,8 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ XP-Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

@@ -1,21 +1,21 @@
 ---
-title: Hinzufügen eines Start Abbilds
-description: Dieses Beispiel basiert auf dem Beispiel zum Brennen eines Festplatten Bilds, indem Code hinzugefügt wird, um ein startbares Image in den Startbereich der Festplatte einzufügen.
+title: Hinzufügen eines Startimages
+description: Dieses Beispiel baut auf dem Beispiel Zum Erstellen eines Datenträgerimages auf, indem Code hinzugefügt wird, um ein startbares Image in den Startabschnitt des Datenträgers einzuschließen.
 ms.assetid: b23cdbb9-ae0d-4261-965b-56abe865f323
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4ce48537f32f1dc574eef174b26daaa5e2ebe255
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b884c69dc53c14c01cb6e9486af30a148233192e41d433f4af6791b658185cca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037589"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092480"
 ---
-# <a name="adding-a-boot-image"></a>Hinzufügen eines Start Abbilds
+# <a name="adding-a-boot-image"></a>Hinzufügen eines Startimages
 
-Dieses Beispiel basiert auf dem Beispiel zum [Brennen eines Festplatten Bilds](burning-a-disc.md) , indem Code hinzugefügt wird, um ein startbares Image in den Startbereich der Festplatte einzufügen. Das Start fähige Image stellt eine Verbindung mit dem Dateisystem Objekt her, das auf den Datenträger geschrieben wird. Nach dem Anfügen ist der restliche Vorgang mit dem grundlegenden Brennverfahren identisch. Das Start Abbild ermöglicht den Systemstart mithilfe des CD-oder DVD-Festplatten Laufwerks.
+Dieses Beispiel baut auf dem Beispiel [Zum Erstellen eines Datenträgerimages](burning-a-disc.md) auf, indem Code hinzugefügt wird, um ein startbares Image in den Startabschnitt des Datenträgers einzuschließen. Das startbare Image stellt eine Verbindung mit dem Dateisystemobjekt her, das auf den Datenträger geschrieben wird. Nach dem Anfügen ist der restliche Prozess identisch mit dem grundlegenden Prozedurschritt. Das Startabbild ermöglicht den Systemstart mithilfe des CD- oder DVD-Datenträgerlaufwerks.
 
-Im Beispiel wird der Pfad zum Start baren Image hart codiert. Stellen Sie sicher, dass Sie den Pfad zusammen mit anderen hart codierten Werten entsprechend ändern.
+Im Beispiel wird der Pfad zum startbaren Image hartcodiert. Achten Sie darauf, den Pfad zusammen mit anderen hartcodierten Werten nach Bedarf zu ändern.
 
 
 ```VB
@@ -116,12 +116,12 @@ End Function
 [**IDiscFormat2Data**](/windows/desktop/api/imapi2/nn-imapi2-idiscformat2data)
 </dt> <dt>
 
-[**Ifilesystemimage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
+[**IFileSystemImage**](/windows/desktop/api/imapi2fs/nn-imapi2fs-ifilesystemimage)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

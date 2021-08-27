@@ -1,10 +1,10 @@
 ---
-description: Eine asynchrone Anforderung, eine Aktion (z. b. einen Frame erfassen) in der Engine zu initiieren.
+description: Eine asynchrone Anforderung zum Initiieren einer Aktion (z. B. Erfassen eines Frames) in der Engine.
 MS-HAID: vspixengine.IRunActionRequest\_RequestAsync\_REFGUID\_IUnknown\_ptr\_IRunActionCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ununaktionrequest:: requestasync-Methode'
+title: IRunActionRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 4A4DF4BE-383D-4B36-9195-61720C3B4D97
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 179abf44231d122ca82527fc5739b876395c327b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: d63816133dfcf8270de41481e1c99e3d691d51c3
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125360"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627316"
 ---
-# <a name="span-idvspixengineirunactionrequest_requestasync_refguid_iunknown_ptr_irunactioncallback_ptr_dword_dwordspanirunactionrequestrequestasync-method"></a><span id="vspixengine.irunactionrequest_requestasync_refguid_iunknown_ptr_irunactioncallback_ptr_dword_dword"></span>Ununaktionrequest:: requestasync-Methode
+# <a name="span-idvspixengineirunactionrequest_requestasync_refguid_iunknown_ptr_irunactioncallback_ptr_dword_dwordspanirunactionrequestrequestasync-method"></a><span id="vspixengine.irunactionrequest_requestasync_refguid_iunknown_ptr_irunactioncallback_ptr_dword_dword"></span>IRunActionRequest::RequestAsync-Methode
 
-Eine asynchrone Anforderung, eine Aktion (z. b. einen Frame erfassen) in der Engine zu initiieren.
+Eine asynchrone Anforderung zum Initiieren einer Aktion (z. B. Erfassen eines Frames) in der Engine.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,32 +43,32 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*Hinspiel*   
+*Aktion*   
 Die angegebene Aktion.
 
-*Aktions Nutzlast*   
+*actionPayload*   
 Die Nutzlast der angegebenen Aktion.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
+*progressIntervalMsecs*   
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Nicht aktionrequest**](/windows/desktop/direct3dtools/irunactionrequest)
+[**IRunActionRequest**](/windows/desktop/direct3dtools/irunactionrequest)
 
  
 

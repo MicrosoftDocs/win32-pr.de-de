@@ -1,19 +1,19 @@
 ---
-title: Alle Ziele auflisten
-description: Der folgende Beispielcode zeigt, wie alle Ziele in der Routing Tabelle aufgelistet werden.
+title: Aufzählen aller Ziele
+description: Der folgende Beispielcode zeigt, wie alle Ziele in der Routingtabelle aufzählt werden.
 ms.assetid: 0dced1f8-5dc3-4233-aeb9-35c81c34b345
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08c2e202c1dec9c55aeeef6cead7cf0984d2beae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bd51a8d68b0c816986a23527e6cc7a02827d1fce341cd58c20ca58c204715123
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127860"
 ---
-# <a name="enumerate-all-destinations"></a>Alle Ziele auflisten
+# <a name="enumerate-all-destinations"></a>Aufzählen aller Ziele
 
-Der folgende Beispielcode zeigt, wie alle Ziele in der Routing Tabelle aufgelistet werden.
+Der folgende Beispielcode zeigt, wie alle Ziele in der Routingtabelle aufzählt werden.
 
 
 ```C++
@@ -69,9 +69,9 @@ void main()
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,48 +1,48 @@
 ---
-description: Einige Anwendungen stellen Funktionen bereit, die die im Client Bereich gezeichneten Objekte Scheren.
+description: Einige Anwendungen stellen Features zur Verfügung, mit denen Objekte im Clientbereich gezeichnet werden.
 ms.assetid: e5b82013-f6b9-460d-9f53-1b50dee2064f
-title: Scherz
+title: Scheren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c641ee0275828a7552251b0f8901c1ea41280b2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 32edb9484fd8bb2a9da15220b0acf39fd5c44c50091551205022c6458b50d4e2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120092630"
 ---
-# <a name="shear"></a>Scherz
+# <a name="shear"></a>Scheren
 
-Einige Anwendungen stellen Funktionen bereit, die die im Client Bereich gezeichneten Objekte Scheren. Anwendungen, die die Scheren-Funktionen verwenden, verwenden die [**setworldtransform**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) -Funktion, um geeignete Werte in der Transformation für den Welt Raum auf den Seiten Raum festzulegen. Diese Funktion empfängt einen Zeiger auf eine [**XForm**](/windows/win32/api/wingdi/ns-wingdi-xform) -Struktur, die die entsprechenden Werte enthält. Die eM12-und eM21-Member von XForm geben die horizontalen bzw. vertikalen Proportionalitäts Konstanten an.
+Einige Anwendungen stellen Features zur Verfügung, mit denen Objekte im Clientbereich gezeichnet werden. Anwendungen, die Shearfunktionen verwenden, verwenden die [**SetWorldTransform-Funktion,**](/windows/desktop/api/Wingdi/nf-wingdi-setworldtransform) um die entsprechenden Werte im Weltraum auf seitenbasierte Transformationen zu setzen. Diese Funktion empfängt einen Zeiger auf eine [**XFORM-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-xform) die die entsprechenden Werte enthält. Die Elemente eM12 und eM21 von XFORM geben die horizontalen bzw. vertikalen Ziehkonstten an.
 
-Es gibt zwei Komponenten der schof- *Transformation*. Der erste ändert die vertikalen Linien in einem-Objekt. die zweite ändert die horizontalen Linien. In der folgenden Abbildung wird ein Rechteck mit 20 x 20 Einheiten angezeigt, das beim Kopieren aus dem Welt Raum in den Seitenbereich horizontal geschliffen wurde.
+Es gibt zwei Komponenten der *Sheartransformation.* Die erste ändert die vertikalen Linien in einem -Objekt. Die zweite ändert die horizontalen Linien. Die folgende Abbildung zeigt ein Rechteck mit 20 by 20 Einheiten, das horizontal umgestrichen wird, wenn es aus dem Raum in den Seitenbereich kopiert wird.
 
-![Darstellung eines Rechtecks im Raum der Welt und eines trapeziod im Seitenbereich](images/cstrn-13.png)
+![Abbildung, die ein Rechteck im Weltraum und ein Trape im Seitenbereich zeigt](images/cstrn-13.png)
 
-Eine horizontale Schraffurart kann durch den folgenden Algorithmus dargestellt werden:
+Ein horizontales Shear kann durch den folgenden Algorithmus dargestellt werden:
 
 ``` syntax
 x' = x + (Sx * y) 
 ```
 
-Dabei ist x die ursprüngliche x-Koordinate, SX ist die proportionationskonstante, und x ' ist das Ergebnis der scherungs Transformation.
+Wobei x die ursprüngliche x-Koordinate, Sx die schwebige Konstante und x' das Ergebnis der Sheartransformation ist.
 
-Eine vertikale Schere kann durch den folgenden Algorithmus dargestellt werden:
+Ein vertikales Shear kann durch den folgenden Algorithmus dargestellt werden:
 
 ``` syntax
 y' = y + (Sy * x) 
 ```
 
-bei y handelt es sich um die ursprüngliche y-Koordinate, sy ist die proportionationskonstante, und y ' ist das Ergebnis der schof-Transformation.
+Wobei y die ursprüngliche y-Koordinate, Sy die y-Konstante und y' das Ergebnis der Bruchtransformation ist.
 
-Die Transformationen mit horizontaler und vertikaler Schraffurart können mithilfe einer 2-x-2-Matrix zu einem einzelnen Vorgang kombiniert werden.
+Die Horizontal-Shear- und Vertical-Shear-Transformationen können mithilfe einer 2-by-2-Matrix zu einem einzelnen Vorgang kombiniert werden.
 
 ``` syntax
 |x' y'| == |x y| * |  1   Sx| 
                    | Sy    1| 
 ```
 
-Die 2 x 2-Matrix, die die Schere erzeugt hat, enthält die folgenden Werte:
+Die 2 by 2-Matrix, die den Strich erzeugt hat, enthält die folgenden Werte:
 
 ``` syntax
 |1    1| 

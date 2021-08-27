@@ -1,11 +1,11 @@
 ---
-title: Rebootnowmethod-Methode der MDM_Reboot-Klasse
+title: RebootNowMethod-Methode der MDM_Reboot Klasse
 description: Diese Methode führt einen Neustart des Geräts aus.
 ms.assetid: b1bacad8-06db-4e56-9f3d-46c9a0036729
 keywords:
-- Rebootnowmethod-Methode
-- Rebootnowmethod-Methode, MDM_Reboot-Klasse
-- MDM_Reboot-Klasse, rebootnowmethod-Methode
+- RebootNowMethod-Methode
+- RebootNowMethod-Methode, MDM_Reboot Klasse
+- MDM_Reboot, RebootNowMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 29d35d297858588ade6655ea84876c6e75abd719
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f27d95a83de2ceb9cdeabd9036a03a517c3148371ea4f6933a20155ceb4ed652
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084900"
 ---
-# <a name="rebootnowmethod-method-of-the-mdm_reboot-class"></a>Rebootnowmethod-Methode der MDM- \_ Neustart Klasse
+# <a name="rebootnowmethod-method-of-the-mdm_reboot-class"></a>RebootNowMethod-Methode der MDM \_ Reboot-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Diese Methode führt einen Neustart des Geräts aus. Siehe auch " [rebootnow](/windows/client-management/mdm/reboot-csp)".
+Diese Methode führt einen Neustart des Geräts aus. Siehe auch [RebootNow.](/windows/client-management/mdm/reboot-csp)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,11 +48,11 @@ Diese Methode hat keine Parameter.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                            |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl>      |
-| DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dllfür die \\</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl>      |
+| DLL<br/>                      | <dl> <dt>\\Mofs-DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
@@ -60,7 +60,7 @@ Diese Methode hat keine Parameter.
 
 <dl> <dt>
 
-[**MDM- \_ Neustart**](mdm-reboot.md)
+[**\_MDM-Neustart**](mdm-reboot.md)
 </dt> </dl>
 
  

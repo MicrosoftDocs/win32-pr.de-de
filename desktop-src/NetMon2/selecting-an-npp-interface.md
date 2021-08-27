@@ -1,22 +1,22 @@
 ---
-description: Netzwerk Paketanbieter (NPPs) machen die Schnittstellen idelta aydc, iESP, iritc und iStats verfügbar.
+description: Netzwerkpaketanbieter (Network Packet Providers, NPPs) machen die Schnittstellen IDelaydC, IESP, IRTC und IStats verfügbar.
 ms.assetid: 269b26f5-b794-4920-98da-505eda83c990
 title: Auswählen einer NPP-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8dba919302190e1fd89c859f61fca14aaf7d6e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4336c4ff2408aa89d723dd451174ef6dca81eba39c17c52aefdc829018e71483
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128850"
 ---
 # <a name="selecting-an-npp-interface"></a>Auswählen einer NPP-Schnittstelle
 
-Netzwerk Paketanbieter (NPPs) machen die Schnittstellen [**idelta aydc**](idelaydc.md), [**iESP**](iesp.md), [**iritc**](irtc.md)und [**iStats**](istats.md) verfügbar. Jede dieser Schnittstellen bietet ähnliche Methoden zum Verbinden des NPP mit dem Netzwerk, zum Erfassen von Netzwerk Datenverkehr und zum Sammeln statistischer Informationen zu den erfassten Daten. Informationen zu den zu verwendenden Schnittstellen finden Sie in der folgenden Tabelle.
+Netzwerkpaketanbieter (Network Packet Providers, NPPs) machen die Schnittstellen [**IDelaydC,**](idelaydc.md) [**IESP,**](iesp.md) [**IRTC**](irtc.md)und [**IStats**](istats.md) verfügbar. Jede dieser Schnittstellen bietet ähnliche Methoden zum Verbinden des NPP mit dem Netzwerk, zum Erfassen des Netzwerkdatenverkehrs und zum Sammeln statistischer Informationen zu den erfassten Daten. Informationen zur Auswahl der zu verwendenden Schnittstelle finden Sie in der folgenden Tabelle.
 
 > [!Note]  
-> Wenn Sie eine NPP mit dem Netzwerk verbinden, können Sie nur die Methoden verwenden, die von dieser Schnittstelle bereitgestellt werden. Wenn Sie z. b. eine Verbindung mit dem Netzwerk über die [**untc**](irtc.md) -Schnittstelle herstellen und dann versuchen, eine Erfassung mit [**idelta aydc**](idelaydc.md)zu starten, schlägt der Start der Erfassung fehl, und es wird ein Fehlercode zurückgegeben.
+> Wenn Sie mit einer dieser Schnittstellen eine NPP mit dem Netzwerk verbinden, können Sie nur die von dieser Schnittstelle bereitgestellten Methoden verwenden. Wenn Sie beispielsweise über die [**IRTC-Schnittstelle**](irtc.md) eine Verbindung mit dem Netzwerk herstellen und dann versuchen, eine Erfassung mit [**IDelaydC**](idelaydc.md)zu starten, schlägt der Aufruf zum Starten der Erfassung fehl, und ein Fehlercode wird zurückgegeben.
 
  
 
@@ -24,10 +24,10 @@ Netzwerk Paketanbieter (NPPs) machen die Schnittstellen [**idelta aydc**](idelay
 
 | Schnittstelle                    | Verwendung                                                                                                                                                                                                                                                                                                                                     |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Idelta-DC**](idelaydc.md) | Verwenden Sie, um Netzwerk Datenverkehr zu erfassen und in einer Erfassungs Datei zu speichern. Diese Schnittstelle wird von der Netzwerkmonitor-Benutzeroberfläche und anderen NPP-Anwendungen verwendet, bei denen erfasste Netzwerkinformationen gespeichert werden müssen.<br/>                                                                                                                                      |
-| [**IESP**](iesp.md)         | Wird verwendet, um Erweiterte Statistiken in einem speziellen ESP-Dateiformat bereitzustellen. Diese Schnittstelle wird von NPP-Anwendungen verwendet, die die im ESP-Format bereitgestellte erweiterte Statistik erfordern.<br/>                                                                                                                                                        |
-| [**"Iran"**](irtc.md)         | Verwenden Sie, um den Netzwerk Datenverkehr in Echtzeit aufzuzeichnen und Ereignisse bei Auftreten zu Triggern aufzurufenden. Diese Schnittstelle wird von NPP-Anwendungen verwendet, die Lauf Zeitaufzeichnungen erfordern. Beachten Sie, dass diese Schnittstelle nicht die Statistiken bereitstellt, die von den anderen NPP-Schnittstellen bereitgestellt werden, und Sie können keine Frames in den erfassten Netzwerk Datenverkehr einfügen.<br/> |
-| [**IStats**](istats.md)     | Verwenden Sie, um Aufzeichnungs Statistiken, aber nicht die erfassten Frames abzurufen.                                                                                                                                                                                                                                                                                 |
+| [**IDelaydC**](idelaydc.md) | Verwenden Sie , um Netzwerkdatenverkehr zu erfassen und in einer Erfassungsdatei zu speichern. Diese Schnittstelle wird von der Netzwerkmonitor-Benutzeroberfläche und anderen NPP-Anwendungen verwendet, die erfasste Netzwerkinformationen speichern müssen.<br/>                                                                                                                                      |
+| [**IESP**](iesp.md)         | Wird verwendet, um erweiterte Statistiken in einem speziellen ESP-Dateiformat bereitzustellen. Diese Schnittstelle wird von NPP-Anwendungen verwendet, die die vom ESP-Format bereitgestellten erweiterten Statistiken erfordern.<br/>                                                                                                                                                        |
+| [**IRTC**](irtc.md)         | Verwenden Sie , um Netzwerkdatenverkehr in Echtzeit zu erfassen und Ereignisse auszulösen, wenn diese auftreten. Diese Schnittstelle wird von NPP-Anwendungen verwendet, die Laufzeiterfassungen erfordern. Beachten Sie, dass diese Schnittstelle weder die Statistiken bereitstellt, die die anderen NPP-Schnittstellen bereitstellen, noch dass Sie Frames in den erfassten Netzwerkdatenverkehr einfügen können.<br/> |
+| [**IStats**](istats.md)     | Verwenden Sie , um Erfassungsstatistiken abzurufen, aber nicht die erfassten Frames.                                                                                                                                                                                                                                                                                 |
 
 
 

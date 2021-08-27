@@ -1,73 +1,73 @@
 ---
 title: Symbolleiste für den Schnellzugriff
-description: Die Symbolleiste für den schnell Zugriff (QAT) ist eine kleine, anpassbare Symbolleiste, die eine Reihe von Befehlen verfügbar macht, die von der Anwendung angegeben oder vom Benutzer ausgewählt werden.
+description: Die Quick Access Toolbar (QAT) ist eine kleine, anpassbare Symbolleiste, die eine Reihe von Befehlen verfügbar macht, die von der Anwendung angegeben oder vom Benutzer ausgewählt werden.
 ms.assetid: b2adf4e9-0de1-4c4d-9293-693d0f7cf6fe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20a50d562477e5c626d2d2bffa8ee5e0ecc84919
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6d63eb3f7b1a2c1213430f86a9a12fe4517c738290ed736eb1d356420aa145cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110725"
 ---
 # <a name="quick-access-toolbar"></a>Symbolleiste für den Schnellzugriff
 
-Die Symbolleiste für den schnell Zugriff (QAT) ist eine kleine, anpassbare Symbolleiste, die eine Reihe von Befehlen verfügbar macht, die von der Anwendung angegeben oder vom Benutzer ausgewählt werden.
+Die Quick Access Toolbar (QAT) ist eine kleine, anpassbare Symbolleiste, die eine Reihe von Befehlen verfügbar macht, die von der Anwendung angegeben oder vom Benutzer ausgewählt werden.
 
 - [Introduction (Einführung)](#introduction)
-- [Implementieren der Symbolleiste für den schnell Zugriff](#implement-the-quick-access-toolbar)
+- [Implementieren der Symbolleiste für den Schnellzugriff](#implement-the-quick-access-toolbar)
   - [Markup](#markup)
   - [Code](#code)
 - [QAT-Persistenz](#qat-persistence)
-- [Symbolleisten Eigenschaften für den schnell Zugriff](#quick-access-toolbar-properties)
+- [Eigenschaften der Schnellzugriffssymbolleiste](#quick-access-toolbar-properties)
 - [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Standardmäßig befindet sich die Symbolleiste für den schnell Zugriff (QAT) in der Titelleiste des Anwendungsfensters, kann jedoch so konfiguriert werden, dass Sie unter dem Menüband angezeigt wird. Neben der Bereitstellung von Befehlen enthält auch die Symbolleiste für den schnell Zugriff (QAT) ein anpassbares Dropdown Menü, das den vollständigen Satz der Standard Befehle für die schnell Zugriffs Symbolleiste (in der Symbolleiste für den schnell Zugriff) und die Menü Band Optionen enthält.
+Standardmäßig befindet sich die Symbolleiste für den Schnellzugriff (Quick Access Toolbar, QAT) in der Titelleiste des Anwendungsfensters, kann aber so konfiguriert werden, dass sie unterhalb des Menübands angezeigt wird. Zusätzlich zum Verfügbar machen von Befehlen enthält die Symbolleiste für den Schnellzugriff (QAT) auch ein anpassbares Dropdownmenü, das den vollständigen Satz von QAT-Standardbefehlen (Quick Access Toolbar) enthält (ob ausgeblendet oder in der Symbolleiste für den Schnellzugriff (QAT)) angezeigt) sowie eine Reihe von Symbolleisten für den Schnellzugriff (Quick Access Toolbar, QAT) und Menübandoptionen.
 
-Der folgende Screenshot zeigt ein Beispiel für die Symbolleiste für den schnell Zugriff auf das Menüband (QAT).
+Der folgende Screenshot zeigt ein Beispiel für die Symbolleiste für den Menüband-Schnellzugriff (QAT).
 
-![Screenshot von QAT im Microsoft Paint-Menüband.](images/markup/qat-and-menu.png)
+![Screenshot der Qat im Microsoft Paint-Menüband.](images/markup/qat-and-menu.png)
 
-Die Symbolleiste für den schnell Zugriff (QAT) besteht aus einer Kombination aus bis zu 20 Befehlen, die entweder von der Anwendung (als "Anwendungsstandard Liste" bezeichnet) oder vom Benutzer ausgewählt wurden. Die Symbolleiste für den schnell Zugriff (QAT) kann eindeutige Befehle enthalten, die an anderer Stelle der Multifunktionsleisten-Benutzeroberfläche nicht verfügbar sind.
+Die Symbolleiste für den Schnellzugriff (QAT) besteht aus einer Kombination von bis zu 20 Befehlen, die entweder von der Anwendung angegeben (als Standardliste der Anwendung bezeichnet) oder vom Benutzer ausgewählt werden. Die Symbolleiste für den Schnellzugriff (Quick Access Toolbar, QAT) kann eindeutige Befehle enthalten, die an anderer Stelle auf der Menübandbenutzeroberfläche nicht verfügbar sind.
 
 > [!Note]
-> Während fast alle multifunktionsleistensteuerelemente zulassen, dass der zugehörige Befehl der Symbolleiste für den schnell Zugriff (QAT) über das im folgenden Screenshot gezeigte Kontextmenü hinzugefügt wird, stellen Befehle, die in einem [Kontext-Popup](windowsribbon-controls-contextpopup.md) verfügbar gemacht werden, dieses Kontextmenü nicht bereit.
+> Während fast alle Menübandsteuerelemente zulassen, dass ihr zugeordneter Befehl der Symbolleiste für den Schnellzugriff (QAT) über das kontextmenü hinzugefügt wird, das im folgenden Screenshot gezeigt wird, stellen Befehle, die in einem [Kontext-Popup](windowsribbon-controls-contextpopup.md) verfügbar gemacht werden, dieses Kontextmenü nicht zur Verfügung.
 >
-> ![Screenshot des Befehls Kontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png) 
+> ![Screenshot des Befehlskontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png) 
 
-## <a name="implement-the-quick-access-toolbar"></a>Implementieren der Symbolleiste für den schnell Zugriff
+## <a name="implement-the-quick-access-toolbar"></a>Implementieren der Symbolleiste für den Schnellzugriff
 
-Wie bei allen Windows-Menü Band Framework-Steuerelementen erfordert die vollständige Nutzung der Symbolleiste für den schnell Zugriff (QAT) sowohl eine Markup Komponente, die ihre Darstellung innerhalb des Menübands steuert, als auch eine Code Komponente, die ihre Funktionalität regelt.
+Wie bei allen Windows-Frameworksteuerelementen des Menübands erfordert die vollständige Nutzung der Quick Access Toolbar (QAT) sowohl eine Markupkomponente, die die Darstellung im Menüband steuert, als auch eine Codekomponente, die deren Funktionalität steuert.
 
 ### <a name="markup"></a>Markup
 
-Das Steuerelement für die schnell Zugriff-Symbolleiste (QAT) wurde deklariert und mit einer Befehls-ID im Markup über das [quickaccesstoolbar](windowsribbon-element-quickaccesstoolbar.md) -Element verknüpft. Die Befehls-ID wird verwendet, um die Symbolleiste für den schnell Zugriff (QAT) an einen von der Anwendung definierten Befehls Handler zu identifizieren und zu binden.
+Das QAT-Steuerelement (Quick Access Toolbar) wird im Markup über das [QuickAccessToolbar-Element](windowsribbon-element-quickaccesstoolbar.md) deklariert und einer Befehls-ID zugeordnet. Die Befehls-ID wird verwendet, um die Quick Access Toolbar (QAT) zu identifizieren und an einen befehlshandler zu binden, der von der Anwendung definiert wird.
 
-Zusätzlich zum grundlegenden Befehls Handler für die primäre Funktion für die schnell Zugriff-Symbolleiste (QAT) wird durch das Deklarieren des optionalen *customizecommandname* [quickaccesstoolbar](windowsribbon-element-quickaccesstoolbar.md) -Element Attributs der Befehlsliste im Dropdown Menü für den schnell Zugriff, für den ein sekundärer Befehls Handler definiert werden muss, ein **mehr** Befehls Element hinzugefügt.
+Zusätzlich zum grundlegenden Befehlshandler für die primäre QAT-Funktionalität (Quick Access Toolbar) bewirkt das Deklarieren des  optionalen *CustomizeCommandName* [QuickAccessToolbar-Elementattributs,](windowsribbon-element-quickaccesstoolbar.md) dass das Framework der Befehlsliste des Dropdownmenüs der Symbolleiste für den Schnellzugriff (QAT) ein Element weitere Befehle hinzufüge, für das ein sekundärer Befehlshandler definiert werden muss.
 
-Um Konsistenz zwischen Multifunktionsleisten-Anwendungen zu gewährleisten, wird empfohlen, dass der *customizecommandname* -Befehls Handler das Anpassungs Dialogfeld für den schnell Zugriff (QAT) startet. Da das Multifunktionsleisten Framework nur den Ausgangspunkt in der Benutzeroberfläche bereitstellt, ist die Anwendung allein dafür verantwortlich, die Anpassungs dialogdialogfeld-Implementierung bereitzustellen, wenn die Rückruf Benachrichtigung für diesen Befehl empfangen wird.
+Für konsistenzübergreifende Menübandanwendungen wird empfohlen, dass der *Befehlshandler CustomizeCommandName* ein Dialogfeld zur Anpassung der Symbolleiste für den Schnellzugriff (Quick Access Toolbar, QAT) startet. Da das Menübandframework nur den Startpunkt in der Benutzeroberfläche bietet, ist die Anwendung allein für die Bereitstellung der Implementierung des Anpassungsdialogfelds verantwortlich, wenn die Rückrufbenachrichtigung für diesen Befehl empfangen wird.
 
-Der folgende Screenshot zeigt das Dropdown Menü für den schnell Zugriff-Symbolleiste (QAT) mit dem Befehls Element **Weitere Befehle** .
+Der folgende Screenshot zeigt das Dropdownmenü Quick Access Toolbar (QAT) mit dem **Befehlselement Weitere** Befehle.
 
-![Screenshot eines QAT-Menüs mit den weiteren Befehlen... Befehls Element.](images/markup/qat-customizecommandname.png)
+![Screenshot eines Qat-Menüs mit den mehr Befehlen... Befehlselement.](images/markup/qat-customizecommandname.png)
 
-Die Liste mit den Anwendungs Standardwerten für die Symbolleiste für den schnell Zugriff (QAT) wird über die [quickaccesstoolbar. ApplicationDefaults](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) -Eigenschaft angegeben, die eine Standardliste empfohlener Befehle identifiziert, die alle im Dropdown Menü schnell Zugriff-Symbolleiste (QAT) aufgelistet sind.
+Die Standardliste der Anwendung für die Quick Access Toolbar (QAT) wird über die [QuickAccessToolbar.ApplicationDefaults-Eigenschaft](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) angegeben, die eine Standardliste empfohlener Befehle identifiziert, die alle im Dropdownmenü Quick Access Toolbar (QAT) aufgeführt sind.
 
-Zum Anzeigen von Befehlen aus der Liste Anwendungs Standardwerte auf der Symbolleiste für die schnell Zugriffs Symbolleiste (QAT) muss das *ApplicationDefaults. IsChecked* -Attribut jedes Steuer Elements den Wert aufweisen `true` . In den vorangehenden Bildern werden die Ergebnisse der Einstellung dieses Attributs auf `true` für die Befehle zum **Speichern**, Rückgängigmachen und wieder **holen** angezeigt. 
+Zum Anzeigen von Befehlen aus der Liste der Standardeinstellungen der Anwendung auf der Symbolleiste der Symbolleiste für den Schnellzugriff (QAT) muss das *ApplicationDefaults.IsChecked-Attribut* jedes Steuerelementelements den Wert `true` haben. Die obigen Abbildungen zeigen die Ergebnisse der Festlegung dieses Attributs auf für die `true` **Befehle "Speichern",** **"Rückgängig"** und **"Wiederholen".**
 
-[Quickaccesstoolbar. ApplicationDefaults](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) unterstützt drei Typen von Menü Band Steuerelementen: [Schalt](windowsribbon-controls-button.md)Fläche, [UMSCHALT Fläche](windowsribbon-controls-togglebutton.md)und [Kontrollkästchen](windowsribbon-controls-checkbox.md).
+[QuickAccessToolbar.ApplicationDefaults](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) unterstützt drei Arten [](windowsribbon-controls-button.md)von Menüband-Steuerelementen: Schaltfläche , [Umschaltfläche](windowsribbon-controls-togglebutton.md)und [Kontrollkästchen](windowsribbon-controls-checkbox.md).
 
 > [!Note]
-> Windows 8 und höher: alle Katalog basierten Steuerelemente werden unterstützt ([ComboBox](windowsribbon-element-combobox.md), [inribbongallery](windowsribbon-element-inribbongallery.md), [splitbuttongallery](windowsribbon-element-splitbuttongallery.md)und [dropdowngallery](windowsribbon-element-dropdowngallery.md)).
+> Windows 8 und neuer: Alle katalogbasierten Steuerelemente werden unterstützt ([ComboBox](windowsribbon-element-combobox.md), [InRibbonGallery](windowsribbon-element-inribbongallery.md), [SplitButtonGallery](windowsribbon-element-splitbuttongallery.md)und [DropDownGallery](windowsribbon-element-dropdowngallery.md)).
 >
-> Elemente in einem Katalog-Steuerelement können Hervorhebung bei Hover unterstützen. Zur Unterstützung der Hover-Hervorhebung muss der Katalog ein Element Katalog sein und ein [flowmenulayout](windowsribbon-element-flowmenulayout.md) des Typs [verticalmenulayout](windowsribbon-element-verticalmenulayout.md)verwenden.
+> Elemente in einem Katalogsteuerelementen können die Hervorhebung beim Hovern unterstützen. Um Hoverhervorhebungen zu unterstützen, muss der Katalog ein Objektkatalog sein und [ein FlowMenuLayout](windowsribbon-element-flowmenulayout.md) vom Typ [VerticalMenuLayout verwenden.](windowsribbon-element-verticalmenulayout.md)
 
-Im folgenden Beispiel wird das grundlegende Markup für ein [quickaccesstoolbar](windowsribbon-element-quickaccesstoolbar.md) -Element veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für ein [QuickAccessToolbar-Element](windowsribbon-element-quickaccesstoolbar.md) veranschaulicht.
 
-In diesem Code Abschnitt werden die Befehls Deklarationen für ein Element für die [schnell Zugriffs Symbolleiste (QAT)](windowsribbon-element-quickaccesstoolbar.md) gezeigt.
+Dieser Codeabschnitt zeigt die Befehlsdeklarationen für ein [QAT-Element (Quick Access Toolbar).](windowsribbon-element-quickaccesstoolbar.md)
 
 ```XML
 <Command Name="cmdQAT"
@@ -78,7 +78,7 @@ In diesem Code Abschnitt werden die Befehls Deklarationen für ein Element für 
          Id="40001"/>
 ```
 
-Dieser Code Abschnitt zeigt die Steuerelement Deklarationen für ein Element für die [schnell Zugriffs Symbolleiste (QAT)](windowsribbon-element-quickaccesstoolbar.md) .
+Dieser Codeabschnitt zeigt die Steuerelementdeklarationen für ein [QAT-Element (Quick Access Toolbar).](windowsribbon-element-quickaccesstoolbar.md)
 
 ```XML
       <Ribbon.QuickAccessToolbar>
@@ -95,16 +95,16 @@ Dieser Code Abschnitt zeigt die Steuerelement Deklarationen für ein Element fü
 
 ### <a name="code"></a>Code
 
-Die Menüband-Framework-Anwendung muss eine Befehls Handler-Rückruf Methode bereitstellen, um die Symbolleiste für den schnell Zugriff zu bearbeiten. Dieser Handler funktioniert ähnlich wie Befehls Katalog Handler, mit der Ausnahme, dass die Symbolleiste für den schnell Zugriff (QAT) keine Kategorien unterstützt. Weitere Informationen finden Sie unter [Arbeiten mit Galerien](ribbon-controls-galleries.md).
+Die Menüband-Frameworkanwendung muss eine Befehlshandler-Rückrufmethode bereitstellen, um die Quick Access Toolbar (QAT) zu bearbeiten. Dieser Handler funktioniert ähnlich wie Befehlskataloghandler, mit der Ausnahme, dass die Symbolleiste für den Schnellzugriff (QAT) keine Kategorien unterstützt. Weitere Informationen finden Sie unter [Arbeiten mit Katalogen.](ribbon-controls-galleries.md)
 
-Die Befehls Auflistung für die schnell Zugriff-Symbolleiste (QAT) wird als [iuicollection](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt über den [UI \_ pkey \_ ItemsSource](windowsribbon-reference-properties-uipkey-itemssource.md) -Eigenschafts Schlüssel abgerufen. Sie können der Symbolleiste für den schnell Zugriff (QAT) zur Laufzeit Befehle hinzufügen, indem Sie der **iuicollection** ein [iuisimplepropertyset](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) -Objekt hinzufügen.
+Die Sammlung von QAT-Befehlen (Quick Access Toolbar) wird als [IUICollection-Objekt](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) über den [ \_ PKEY \_ ItemsSource-Eigenschaftsschlüssel](windowsribbon-reference-properties-uipkey-itemssource.md) der Benutzeroberfläche abgerufen. Das Hinzufügen von Befehlen zur Quick Access Toolbar (QAT) zur Laufzeit erfolgt durch Hinzufügen eines [IUISimplePropertySet-Objekts](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) zur **IUICollection**.
 
-Im Unterschied zu Befehls Galerien ist eine Eigenschaft des Befehls Typs ([UI \_ pkey \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md)) für das [iuisimplepropertyset](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) -Objekt der schnell Zugriffs Symbolleiste (QAT) nicht erforderlich. Allerdings muss der Befehl im Menüband oder in der Symbolleiste für die schnell Zugriffs Symbolleiste (QAT) mit der Standardliste der Anwendungen ein neuer Befehl kann nicht zur Laufzeit erstellt und der Symbolleiste für den schnell Zugriff hinzugefügt werden.
+Im Gegensatz zu Befehlsgalerien ist für das [IUISimplePropertySet-Objekt](/windows/desktop/api/uiribbon/nn-uiribbon-iuisimplepropertyset) der Quick Access Toolbar (QAT) keine Befehlstypeigenschaft ([ \_ UI PKEY \_ CommandType](windowsribbon-reference-properties-uipkey-commandtype.md)) erforderlich. Der Befehl muss jedoch im Menüband oder in der Standardliste der QAT-Anwendung (Quick Access Toolbar) vorhanden sein. Ein neuer Befehl kann zur Laufzeit nicht erstellt und der Symbolleiste für den Schnellzugriff (QAT) hinzugefügt werden.
 
 > [!Note]  
-> Die Menüband-Anwendung kann die [iuicollection](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) für den schnell Zugriff (QAT) nicht durch ein benutzerdefiniertes Sammlungsobjekt ersetzen, das von IEnumUnknown abgeleitet ist.
+> Die Menübandanwendung kann die [IUICollection](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) der Symbolleiste für den Schnellzugriff (Quick Access Toolbar, QAT) nicht durch ein benutzerdefiniertes Sammlungsobjekt ersetzen, das von IEnumUnknown abgeleitet wurde.
 
-Das folgende Beispiel veranschaulicht eine einfache Implementierung des Befehls Handlers für die schnell Zugriffs Symbolleiste (QAT).
+Im folgenden Beispiel wird eine grundlegende Implementierung des QAT-Befehlshandlers (Quick Access Toolbar) veranschaulicht.
 
 ```C++
 /* QAT COMMAND HANDLER IMPLEMENTATION */
@@ -195,28 +195,28 @@ class CQATCommandHandler
 
 ## <a name="qat-persistence"></a>QAT-Persistenz
 
-Die Befehls Elemente und-Einstellungen für die schnell Zugriffs Symbolleiste (QAT) können über Anwendungs Sitzungen hinweg beibehalten werden, indem die Funktionen " [iuiribbon:: savesettingstostream](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) " und " [iuiribbon:: loadsettingsfromstream](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) " verwendet werden. Weitere Informationen finden Sie unter [persistenzstatus der Multifunktionsleiste](ribbon-statepersistence.md).
+Befehle und Einstellungen der Symbolleiste für den Schnellzugriff (Quick Access Toolbar, QAT) können mithilfe der [Funktionen IUIRibbon::SaveSettingsToStream](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) und [IUIRibbon::LoadSettingsFromStream sitzungsübergreifend](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) beibehalten werden. Weitere Informationen finden Sie unter [Beibehalten des Menübandzustands.](ribbon-statepersistence.md)
 
-## <a name="quick-access-toolbar-properties"></a>Symbolleisten Eigenschaften für den schnell Zugriff
+## <a name="quick-access-toolbar-properties"></a>Eigenschaften der Schnellzugriffssymbolleiste
 
-Das Menüband-Framework definiert eine Auflistung von [Eigenschafts Schlüsseln](windowsribbon-reference-properties.md) für das Steuerelement für die schnell Zugriffs Symbolleiste (QAT).
+Das Menübandframework definiert eine Sammlung von [Eigenschaftsschlüsseln für](windowsribbon-reference-properties.md) das QAT-Steuerelement (Quick Access Toolbar).
 
-In der Regel wird eine Eigenschaft für die schnell Zugriffs Symbolleiste (QAT) in der Menüband-Benutzeroberfläche aktualisiert, indem der Befehl, der dem Steuerelement zugeordnet ist, durch einen Aufrufen der [iuiframework:: invalidateuicommand](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) -Methode ungültig gemacht wird. Das Invalidierung-Ereignis wird durch die [iuicommandhandler:: updateproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode behandelt und die Eigenschaften Updates definiert.
+In der Regel wird eine QAT-Eigenschaft (Quick Access Toolbar) in der Menübandbenutzeroberfläche aktualisiert, indem der befehl, der dem Steuerelement zugeordnet ist, durch einen Aufruf der [IUIFramework::InvalidateUICommand-Methode](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-invalidateuicommand) ungültig wird. Das Invalidierungsereignis wird von der [IUICommandHandler::UpdateProperty-Rückrufmethode](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) behandelt und die Eigenschaft aktualisiert.
 
-Die [iuicommandhandler:: updateproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode wird nicht ausgeführt, und die Anwendung wird nach einem aktualisierten Eigenschafts Wert abgefragt, bis die Eigenschaft vom Framework benötigt wird. Wenn z. b. eine Registerkarte aktiviert ist und ein Steuerelement in der Menüband-Benutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
+Die [IUICommandHandler::UpdateProperty-Rückrufmethode](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) wird nicht ausgeführt, und die Anwendung fragt einen aktualisierten Eigenschaftswert ab, bis die Eigenschaft vom Framework benötigt wird. Beispielsweise, wenn eine Registerkarte aktiviert und ein Steuerelement auf der Menübandbenutzeroberfläche angezeigt wird oder wenn eine QuickInfo angezeigt wird.
 
 > [!Note]  
-> In einigen Fällen kann eine Eigenschaft durch die [iuiframework:: getuicommandproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) -Methode abgerufen und mit der [iuiframework:: setuicommandproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) -Methode festgelegt werden.
+> In einigen Fällen kann eine Eigenschaft über die [IUIFramework::GetUICommandProperty-Methode](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) abgerufen und mit der [IUIFramework::SetUICommandProperty-Methode](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) festgelegt werden.
 
-In der folgenden Tabelle sind die Eigenschafts Schlüssel aufgelistet, die mit dem Steuerelement für die schnell Zugriffs Symbolleiste (QAT) verknüpft sind.
+In der folgenden Tabelle sind die Eigenschaftenschlüssel aufgeführt, die dem QAT-Steuerelement (Quick Access Toolbar) zugeordnet sind.
 
-| Eigenschafts Schlüssel | Notizen |
+| Eigenschaftsschlüssel | Hinweise |
 |---|---|
-| [UI- \_ pkey \_ ItemsSource](windowsribbon-reference-properties-uipkey-itemssource.md) | Unterstützt [iuiframework:: getuicommandproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) (bietet keine Unterstützung für [iuiframework:: mintuicommandproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty)). [Iuiframework:: getuicommandproperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) gibt einen Zeiger auf ein iuicollection-Objekt zurück, das die Befehle in der QAT darstellt. Jeder Befehl wird durch die Befehls-ID identifiziert, die durch Aufrufen der [iuisimplepropertyset:: GetValue](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) -Methode abgerufen wird, und übergibt den Eigenschafts Schlüssel [UI \_ pkey \_ CommandID](windowsribbon-reference-properties-uipkey-commandid.md). |
+| [\_PKEY-Elemente der \_ BenutzeroberflächeQuelle](windowsribbon-reference-properties-uipkey-itemssource.md) | Unterstützt [IUIFramework::GetUICommandProperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) (unterstützt [IUIFramework::SetUICommandProperty nicht).](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-setuicommandproperty) [IUIFramework::GetUICommandProperty](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-getuicommandproperty) gibt einen Zeiger auf ein IUICollection-Objekt zurück, das die Befehle in der QAT darstellt. Jeder Befehl wird durch seine Befehls-ID identifiziert, die durch Aufrufen der [IUISimplePropertySet::GetValue-Methode](/windows/desktop/api/uiribbon/nf-uiribbon-iuisimplepropertyset-getvalue) und Übergeben der Eigenschaftenschlüssel-UI [ \_ PKEY \_ CommandId ermittelt wird.](windowsribbon-reference-properties-uipkey-commandid.md) |
 
-Dem Befehls Element " **Weitere Befehle** " im Dropdown Menü "schnell Zugriff" (QAT) sind keine Eigenschafts Schlüssel zugeordnet.
+Dem Befehlselement Weitere  Befehle im Dropdownmenü der Symbolleiste für den Schnellzugriff (QAT) sind keine Eigenschaftsschlüssel zugeordnet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-- [Windows-Menüband-Steuerelement Bibliothek](windowsribbon-controls-entry.md)
-- [Quickaccesstoolbar-Markup Element](windowsribbon-element-quickaccesstoolbar.md)
+- [Windows Menüband-Framework-Steuerelementbibliothek](windowsribbon-controls-entry.md)
+- [QuickAccessToolbar-Markupelement](windowsribbon-element-quickaccesstoolbar.md)

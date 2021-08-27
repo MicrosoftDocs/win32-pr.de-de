@@ -1,7 +1,7 @@
 ---
-description: 'Mit der setsink-Methode wird ein externer Quality Manager festgelegt. Diese Methode implementiert die iqualitycontrol:: setsink-Methode.'
+description: Die SetSink-Methode legt einen externen Qualitäts-Manager fest. Diese Methode implementiert die IQualityControl::SetSink-Methode.
 ms.assetid: 714e6839-954e-4231-824d-72a45f270f59
-title: Cbasepin. setsink-Methode (amfilter. h)
+title: CBasePin.SetSink-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4237e342f8f49059cab017b17a1f116ca6e2da67
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6e94dc561e378ab526eee04f82e0f54a90889ee4396996d96d01f6c8da8c34d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108630"
 ---
-# <a name="cbasepinsetsink-method"></a>Cbasepin. setsink-Methode
+# <a name="cbasepinsetsink-method"></a>CBasePin.SetSink-Methode
 
-Mit der- `SetSink` Methode wird ein externer Quality Manager festgelegt. Diese Methode implementiert die [**iqualitycontrol:: setsink**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-setsink) -Methode.
+Die `SetSink` -Methode legt einen externen Qualitäts-Manager fest. Diese Methode implementiert die [**IQualityControl::SetSink-Methode.**](/windows/desktop/api/Strmif/nf-strmif-iqualitycontrol-setsink)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT SetSink(
 *piqc* 
 </dt> <dd>
 
-Ein Zeiger auf die [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) -Schnittstelle von Quality Manager.
+Zeiger auf die [**IQualityControl-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol) des Qualitäts-Managers.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Ein Zeiger auf die [**iqualitycontrol**](/windows/desktop/api/Strmif/nn-strmif-i
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dieser Methode können Sie Qualitäts Steuerungs Meldungen an einen externen Quality Manager umleiten. Weitere Informationen finden Sie unter [Qualitäts Steuerungs Verwaltung](quality-control-management.md).
+Rufen Sie diese Methode auf, um Qualitätskontrollnachrichten an einen externen Qualitätsmanager umzuleiten. Weitere Informationen finden Sie unter [Qualitätskontrollverwaltung.](quality-control-management.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Mit dieser Methode können Sie Qualitäts Steuerungs Meldungen an einen externen
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Mit dieser Methode können Sie Qualitäts Steuerungs Meldungen an einen externen
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

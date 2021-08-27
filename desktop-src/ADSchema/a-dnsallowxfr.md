@@ -1,11 +1,11 @@
 ---
-title: DNS-Allow-XFR-Attribut
-description: Das DNS-Allow-XFR-Attribut wird derzeit nicht verwendet.
+title: Dns-Allow-XFR-Attribut
+description: Das Dns-Allow-XFR-Attribut wird derzeit nicht verwendet.
 ms.assetid: 3fa129ea-dea6-4f05-8f82-72f2f7192af7
 ms.tgt_platform: multiple
 keywords:
-- DNS-Allow-XFR-Attribut AD-Schema
-- dnsallowxfr-Attribut, AD-Schema
+- DNS-Allow-XFR-Attribut-AD-Schema
+- DNSAllowXFR-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,36 +14,36 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 841687056dc6e14868107f5034cc2d278089b019
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 4132bd6cdb5f63e1de4fe9bdef2e66080c60276e3e16b617c29d666f6c7ed539
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085980"
 ---
-# <a name="dns-allow-xfr-attribute"></a>DNS-Allow-XFR-Attribut
+# <a name="dns-allow-xfr-attribute"></a>Dns-Allow-XFR-Attribut
 
-Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
+Das **Dns-Allow-XFR-Attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DNS-Allow-XFR                        |
-| LDAP-Display-Name | dnsallowxfr                          |
+| CN                | Dns-Allow-XFR                        |
+| Ldap-Anzeigename | dnsAllowXFR                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.379               |
 | System-ID-GUID    | e0fa1e66-9b45-11d0-afdd-00c04fd930c9 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Das **DNS-Allow-XFR-** Attribut wird derzeit nicht verwendet.
 |------------------------|------------------------------------------|
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
-| System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
-| Ist indiziert             | False                                    |
-| Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| System-Only            | Falsch                                    |
+| Ist einwertig       | Richtig                                     |
+| Ist indiziert             | Falsch                                    |
+| Im globalen Katalog      | Falsch                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

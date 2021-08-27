@@ -4,12 +4,12 @@ description: In diesem Thema wird beschrieben, wie Bitmaps und Pinsel verwendet 
 ms.assetid: 869821b0-6ebe-46c2-aab6-93177d8a92c5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2050cccd37012028e2a86fbf77cd071671ce7201
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 513365474ed6b1f6f42d34f9b876226e00ba6e85
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122626556"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786376"
 ---
 # <a name="opacity-masks-overview"></a>Übersicht über Durchlässigkeitsmasken
 
@@ -22,7 +22,7 @@ In diesem Thema wird beschrieben, wie Bitmaps und Pinsel verwendet werden, um De
     -   [Verwenden eines Pinsels mit linearem Farbverlauf als Deckkraftmaske](#use-an-linear-gradient-brush-as-an-opacity-mask)
     -   [Verwenden eines Radialverlaufspinsels als Deckkraftmaske](#use-a-radial-gradient-brush-as-an-opacity-mask)
 -   [Anwenden einer Deckkraftmaske auf eine Ebene](#apply-an-opacity-mask-to-a-layer)
--   [Zugehörige Themen](#related-topics)
+-   [Verwandte Themen](#related-topics)
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -36,7 +36,7 @@ Es gibt mehrere Möglichkeiten, eine Deckkraftmaske anzuwenden:
 
 -   Verwenden Sie [**die ID2D1RenderTarget::FillOpacityMask-Methode.**](id2d1rendertarget-fillopacitymask.md) Die **FillOpacityMask-Methode** zeichnet einen rechteckigen Bereich eines Renderziels und wendet dann eine Deckkraftmaske an, die durch eine Bitmap definiert wird. Verwenden Sie diese Methode, wenn ihre Deckkraftmaske eine Bitmap ist und Sie einen rechteckigen Bereich ausfüllen möchten.
 -   Verwenden Sie [**die ID2D1RenderTarget::FillGeometry-Methode.**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) Die **FillGeometry-Methode** zeichnet das Innere der Geometrie mit dem angegebenen [**ID2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush)und wendet dann eine Deckkraftmaske an, die durch einen Pinsel definiert wird. Verwenden Sie diese Methode, wenn Sie eine Deckkraftmaske auf eine Geometrie anwenden oder einen Pinsel als Deckkraftmaske verwenden möchten.
--   Verwenden Sie [**einen ID2D1Layer,**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) um eine Deckkraftmaske anzuwenden. Verwenden Sie diesen Ansatz, wenn Sie eine Deckkraftmaske auf eine Gruppe von Zeichnungsinhalten anwenden möchten, nicht nur auf eine einzelne Form oder ein einzelnes Bild. Weitere Informationen finden Sie in der [Übersicht über Ebenen.](direct2d-layers-overview.md)
+-   Verwenden Sie [**einen ID2D1Layer,**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer) um eine Deckkraftmaske anzuwenden. Verwenden Sie diesen Ansatz, wenn Sie eine Deckkraftmaske auf eine Gruppe von Zeichnungsinhalten anwenden möchten, nicht nur auf eine einzelne Form oder ein Bild. Weitere Informationen finden Sie in der [Übersicht über Ebenen.](direct2d-layers-overview.md)
 
 ## <a name="use-a-bitmap-as-an-opacity-mask-with-the-fillopacitymask-method"></a>Verwenden einer Bitmap als Deckkraftmaske mit der FillOpacityMask-Methode
 
@@ -101,7 +101,7 @@ Im nächsten Beispiel wird der Pinsel *m \_ pFernBitmapBrush* definiert, auf den
 Nachdem die Deckkraftmaske und der Pinsel definiert wurden, können Sie die [**FillOpacityMask-Methode**](id2d1rendertarget-fillopacitymask.md) in der Renderingmethode Ihrer Anwendung verwenden. Wenn Sie die **FillOpacityMask-Methode** aufrufen, müssen Sie den Typ der verwendeten Deckkraftmaske angeben: **D2D1 \_ OPACITY \_ MASK CONTENT \_ \_ GRAPHICS**, **D2D1 \_ OPACITY \_ MASK CONTENT TEXT \_ \_ \_ NATURAL** und **D2D1 \_ OPACITY \_ MASK CONTENT TEXT \_ \_ \_ GDI \_ COMPATIBLE**. Die Bedeutungen dieser drei Typen finden Sie unter [**D2D1 \_ OPACITY \_ MASK \_ CONTENT**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content).
 
 > [!Note]  
-> Ab Windows 8 ist [**der D2D1-OPACITY \_ \_ \_ MASK-INHALT**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content) nicht mehr erforderlich. Weitere Informationen finden Sie unter der [**ID2D1DeviceContext::FillOpacityMask-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) die keinen **D2D1 \_ OPACITY \_ MASK \_ CONTENT-Parameter** hat.
+> Ab Windows 8 ist der [**D2D1-OPACITY \_ \_ \_ MASK-INHALT**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_opacity_mask_content) nicht mehr erforderlich. Weitere Informationen finden Sie unter der [**ID2D1DeviceContext::FillOpacityMask-Methode,**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-fillopacitymask(id2d1bitmap_id2d1brush_constd2d1_rect_f_constd2d1_rect_f)) die keinen **D2D1 \_ OPACITY \_ MASK \_ CONTENT-Parameter** hat.
 
  
 
@@ -151,7 +151,7 @@ Das folgende Diagramm zeigt die Auswirkung der Anwendung eines Pinsels mit linea
 
 In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen.
 
-1.  Definieren Sie den inhalt, der maskiert werden soll. Im folgenden Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ pLinearFadeFlowersBitmap erstellt.* Der Erweiterungsmodus x- und y- für *\_ m pLinearFadeFlowersBitmap* wird auf D2D1 EXTEND MODE CLAMP festgelegt, sodass er mit einer Deckkraftmaske von der [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet werden [**\_ \_ \_ kann.**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode)
+1.  Definieren Sie den zu maskierten Inhalt. Im folgenden Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmapbrush), *m \_ pLinearFadeFlowersBitmap erstellt.* Die Erweiterungsmodus x- und y- für *\_ m pLinearFadeFlowersBitmap* sind auf [**D2D1 \_ EXTEND MODE \_ \_ CLAMP**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_extend_mode) festgelegt, sodass sie mit einer Deckkraftmaske von der [**FillGeometry-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillgeometry) verwendet werden kann.
 
     ```cpp
     if (SUCCEEDED(hr))
@@ -176,7 +176,7 @@ In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen
                 );
     ```
 
-    <span codelanguage="ManagedCPlusPlus"></span>
+    
     <table>
     <colgroup>
     <col  />
@@ -200,7 +200,7 @@ In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen
     </tbody>
     </table>
 
-    <span codelanguage="ManagedCPlusPlus"></span>
+    
     <table>
     <colgroup>
     <col  />
@@ -219,7 +219,7 @@ In den folgenden Schritten wird beschrieben, wie Sie diesen Effekt neu erstellen
 
     
 
-2.  Definieren Sie die Deckkraftmaske. Im nächsten Codebeispiel wird ein diagonaler linearer Farbverlaufspinsel (*m \_ pLinearGradientBrush*) erstellt, der von vollständig deckend schwarz an Position 0 zu vollständig transparentem Weiß an Position 1 ausblendet.
+2.  Definieren Sie die Deckkraftmaske. Im nächsten Codebeispiel wird ein diagonaler linearer Farbverlaufspinsel (*m \_ pLinearGradientBrush*) erstellt, der von vollständig undurchsichtigem Schwarz an Position 0 zu vollständig transparentem Weiß an Position 1 ausblendet.
 ```C++
                 if (SUCCEEDED(hr))
                 {
@@ -271,7 +271,7 @@ Code wurde in diesem Beispiel weggelassen.
 
 ### <a name="use-a-radial-gradient-brush-as-an-opacity-mask"></a>Verwenden eines Radialverlaufspinsels als Deckkraftmaske
 
-Das folgende Diagramm zeigt den visuellen Effekt der Anwendung eines radialen Farbverlaufspinsels auf ein Rechteck, das mit einer Bitmap von Foliage gefüllt ist.
+Das folgende Diagramm zeigt den visuellen Effekt der Anwendung eines radialen Farbverlaufspinsels auf ein Rechteck, das mit einer Bitmap mit Foliage gefüllt ist.
 
 ![Diagramm einer Foliagebitmap mit angewendetem Radialverlaufspinsel](images/brushes-ovw-radialgradient-opacitymask.png)
 
@@ -304,7 +304,7 @@ Im ersten Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-i
 
 
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>
@@ -329,7 +329,7 @@ Im ersten Beispiel wird [**id2D1BitmapBrush**](/windows/win32/api/d2d1/nn-d2d1-i
 </tbody>
 </table>
 
-<span codelanguage="ManagedCPlusPlus"></span>
+
 
 <table>
 <colgroup>

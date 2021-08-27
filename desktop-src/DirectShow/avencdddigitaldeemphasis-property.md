@@ -1,29 +1,29 @@
 ---
-description: Gibt an, ob der digitale Schwerpunktbereich in einem Dolby Digital-Audiostream aktiviert ist. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+description: Gibt an, ob die digitale De-Hervorhebung in einem Dolby Digital-Audiostream aktiviert ist. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 ms.assetid: 5d2d9f1d-fdc3-448f-8d9f-f75a73a63cd3
-title: Avencdddigitaldeakzente-Eigenschaft (codecapi. h)
+title: AVEncDDDigitalDeemphasis-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42662de5aebda80db8f2011a923e4a86e2c831fe
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5a9eb0c7404c1efad35c811cc0acf438fb00fe785de5155fbfd5cb06f43db3d4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084600"
 ---
-# <a name="avencdddigitaldeemphasis-property"></a>Avencdddigitaldeakzente (Eigenschaft)
+# <a name="avencdddigitaldeemphasis-property"></a>AVEncDDDigitalDeemphasis (Eigenschaft)
 
-Gibt an, ob der digitale Schwerpunktbereich in einem Dolby Digital-Audiostream aktiviert ist. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
+Gibt an, ob die digitale De-Hervorhebung in einem Dolby Digital-Audiostream aktiviert ist. Diese Eigenschaft gilt für Dolby Digital-Audioencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**Variant \_ bool** (**VT \_ bool**)
+**VARIANT \_ BOOL** (**VT \_ BOOL**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencdddigitaldeakzente**
+**CODECAPI \_ AVEncDDDigitalDeemphasis**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,9 +31,9 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -41,10 +41,10 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  
