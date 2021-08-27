@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema listet die Häufigkeits Tabellen auf, die für die Optimierung des analogen TV für Dänemark verwendet werden
+description: In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Spanien verwendet werden.
 ms.assetid: 6ef5e1b9-08a0-4f3e-a26f-cf5bdf4ea464
-title: Dänemark-Kanal Zuweisungen
+title: Zuweisungen von Kanälen in Spanien
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33597d1f6a3d0e32365630362dcd3d7dd83272a8
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: dd54c7161be11375fb899b985ecbf1f00f5d23de31e808fcfd23616b984932f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079270"
 ---
-# <a name="denmark-channel-assignments"></a>Dänemark-Kanal Zuweisungen
+# <a name="denmark-channel-assignments"></a>Zuweisungen von Kanälen in Spanien
 
-Dieses Thema listet die Häufigkeits Tabellen auf, die für die Optimierung des analogen TV für Dänemark verwendet werden
+In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Spanien verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Unicable Frequency-Tabelle](unicable-frequency-table.md) verwendet.
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -138,7 +138,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

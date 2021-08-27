@@ -1,7 +1,7 @@
 ---
-title: Vorteile der Windows-Zertifizierung
+title: Vorteile der Windows Zertifizierung
 ms.assetid: F6476A58-F74D-4914-A234-635484D7DAAB
-description: 'Weitere Informationen: Vorteile der Windows-Zertifizierung'
+description: Weitere Informationen finden Sie unter Vorteile Windows Zertifizierung.
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -9,35 +9,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4f386ae6f44ada93d710c49fc9a30c58c38c23f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a567121e94c9203c65c9aa4233cf10cc38caae5640bffd8ad789547da410ca7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090020"
 ---
-# <a name="benefits-of-windows-certification"></a>Vorteile der Windows-Zertifizierung
+# <a name="benefits-of-windows-certification"></a>Vorteile der Windows Zertifizierung
 
-Wenn Sie Ihre Windows 8.1 oder Windows 8-Desktop-Apps zertifizieren, haben Sie folgende Berechtigung:
+Wenn Sie Ihre Windows 8.1 oder Windows 8 Desktop-Apps zertifizieren, sind Sie berechtigt:
 
--   Nehmen Sie an dem mehrmilliarden-Dollar-Windows-Softwaremarkt und der größten Windows-Version Teil.
--   Im Windows Setup-Kompatibilitäts Bericht als kompatibel gekennzeichnet werden
--   Sie werden im Windows Store mit Millionen potenzieller Kunden auf der ganzen Welt (nur Windows 8.1) aufgelistet.
--   Zugang zu Marketingressourcen und Schulungen aus den Microsoft Partner Network
--   Erwerben von Zertifizierungslogos, um Ihre APP auf einfache Weise als hohe Qualität und Windows-kompatibel zu identifizieren
--   Sorgen Sie dafür, dass Ihre Kunden die Qualität Ihres Produkts Vertrauen
+-   Nehmen Sie am Multi-Billionen-Dollar-Windows-Softwaremarkt und am größten Release von Windows
+-   Als kompatibel im Kompatibilitätsbericht Windows Setups
+-   Werden Sie in der Windows Store aufgeführt, mit Millionen potenzieller Kunden auf der ganzen Welt (nur Windows 8.1)
+-   Zugriff auf Marketingressourcen und Schulungen über Microsoft Partner Network
+-   Erhalten Sie Zertifizierungslogos, um Ihre App auf einfache Weise als qualitativ hochwertige und Windows identifizieren zu können.
+-   Geben Sie Ihren Kunden Vertrauen in die Qualität Ihres Produkts.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Stellen Sie sicher, dass Ihre apps mit Windows kompatibel sind.](/windows/desktop/w8cookbook/windows-8-and-windows-server-8-compatibility-cookbook-portal)
+[Vergewissern Sie sich, dass Ihre Apps mit dem Windows.](/windows/desktop/w8cookbook/windows-8-and-windows-server-8-compatibility-cookbook-portal)
 </dt> <dt>
 
-[Holen Sie sich den Windows SDK (einschließlich des Windows-zertifizierungskit für apps) und weitere Downloads.](https://www.microsoft.com/?ref=go)
+[Erhalten Sie Windows SDK (enthält das Windows App Certification Kit) und andere Downloads.](https://www.microsoft.com/?ref=go)
 </dt> <dt>
 
-[Erfahren Sie, wie Sie das Windows-Logo mit ihrer Desktop-App verwenden.](/previous-versions/windows/hardware/hck/dn641154(v=vs.85))
+[Hier finden Sie Details zur Verwendung des Windows-Logos mit Ihrer Desktop-App.](/previous-versions/windows/hardware/hck/dn641154(v=vs.85))
 </dt> <dt>
 
 [Hier erhalten Sie Hilfe beim Entwickeln von Desktop-Apps.](https://www.microsoft.com/?ref=go)

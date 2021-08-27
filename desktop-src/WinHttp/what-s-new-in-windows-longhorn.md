@@ -1,43 +1,43 @@
 ---
-description: Ab Windows Server 2008 und Windows Vista wurde die WinHTTP-API erweitert und umfasst die folgenden Features.
+description: Ab Windows Server 2008 und Windows Vista wurde die WinHTTP-API um die folgenden Features erweitert.
 ms.assetid: b47a2e38-67bd-4d43-936c-8781641cb7f6
-title: Neuerungen in Windows Server 2008 und Windows Vista
+title: Neues in Windows Server 2008 und Windows Vista
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fac0f274b45e1db79fb79340b7f490de96f57e8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e474bbfa32d8f82737df4be6f537ca0a6f1bc870e2028d7dcdb1f418adb7120
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071700"
 ---
 # <a name="whats-new-in-windows-server-2008-and-windows-vista"></a>Neues in Windows Server 2008 und Windows Vista
 
-Ab Windows Server 2008 und Windows Vista wurde die WinHTTP-API erweitert und umfasst die folgenden Features.
+Ab Windows Server 2008 und Windows Vista wurde die WinHTTP-API um die folgenden Features erweitert.
 
-## <a name="greater-than-4-gb-upload"></a>Mehr als 4 GB hochgeladen.
+## <a name="greater-than-4-gb-upload"></a>Mehr als 4 GB Hochladen.
 
-[**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) kann aufgrund von Einschränkungen bei der Größe des Parameters "Total Length" von DWORD nur 4 GB Daten senden. Um es Anwendungen zu ermöglichen, mehr als 4 GB an Daten zu senden, wird der Inhalts Längen Header der Anforderung hinzugefügt, wobei Daten als große \_ Ganzzahl (2 ^ 64 Bytes) angegeben werden. Weitere Informationen finden Sie unter **WinHttpSendRequest**. Diese Funktion wird für das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt nicht unterstützt.
+[**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) kann aufgrund von Einschränkungen bei der Größe des DWORD-Parameters für die Gesamtlänge nur 4 GB Daten senden. Damit Anwendungen mehr als 4 GB an Daten senden können, wird der Content-Length-Header der Anforderung hinzugefügt, der Daten so groß wie eine GROßE GANZE ZAHL \_ (2^64 Bytes) angibt. Weitere Informationen finden Sie unter **WinHttpSendRequest**. Dieses Feature wird für das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) nicht unterstützt.
 
-## <a name="transfer-encoding-header"></a>Transfer-Encoding-Header
+## <a name="transfer-encoding-header"></a>Transfer-Encoding Header
 
-Der Transfer-Encoding-Header ermöglicht es Anwendungen, segmentierte Daten an den Server zu senden. Wenn der Transfer-Encoding-Header in der Anforderung vorhanden ist, sendet die Anwendung die Anforderung mit einem Entitäts Text der Länge 0 (null) im [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest)-Befehl. Der Entitäts Text wird in nachfolgenden Aufrufen von " [**winhttpwrite tedata**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata)" gesendet. Diese Funktion wird für das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt nicht unterstützt.
+Der Transfer-Encoding-Header ermöglicht Es Anwendungen, blockierte Daten an den Server zu senden. Wenn der Transfer-Encoding-Header in der Anforderung vorhanden ist, sendet die Anwendung die Anforderung mit einem Entitätskörper der Länge 0 (null) im Aufruf von [**WinHttpSendRequest.**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) Der Entitätskörper wird in nachfolgenden Aufrufen von [**WinHttpWriteData gesendet.**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata) Dieses Feature wird für das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) nicht unterstützt.
 
-## <a name="ssl-client-certificate-issuer-list-retrieval"></a>Abruf der Liste der SSL-Client Zertifikat Aussteller
+## <a name="ssl-client-certificate-issuer-list-retrieval"></a>Abrufen der Liste der SSL-Clientzertifikataussteller
 
-Die Anwendung kann die Liste der Aussteller des SSL-Client Zertifikats abrufen, wenn [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) mit einem Fehler, der **\_ WinHTTP-Client Authentifizierungszertifikat \_ \_ \_ \_ benötigt**, fehlschlägt. Mit der neuen Option **WinHTTP- \_ Option \_ Client Zertifikat- \_ \_ Aussteller \_ Liste** können Anwendungen die Liste der Zertifikat Aussteller abrufen und die Liste nach dem optimalen Zertifikat filtern. Weitere Informationen finden Sie in den Themen zum Abrufen von [**Optionsflags**](option-flags.md) und [zum Abrufen der Ausstellerliste für SSL-Client Authentifizierung](ssl-in-winhttp.md) . Diese Funktion wird für das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt nicht unterstützt.
+Die Anwendung kann die Ausstellerliste des SSL-Clientzertifikats abrufen, wenn [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) mit dem FEHLER **\_ WINHTTP \_ CLIENT \_ AUTH \_ CERT \_ NEEDED fehlschlägt.** Mit der neuen Option **WINHTTP \_ OPTION CLIENT \_ \_ CERT ISSUER \_ \_ LIST** können Anwendungen die Zertifikatausstellerliste abrufen und die Liste nach dem optimalen Zertifikat filtern. Weitere Informationen finden Sie in den Themen [**Optionsflags**](option-flags.md) und [Ausstellerlistenabruf für die SSL-Clientauthentifizierung.](ssl-in-winhttp.md) Dieses Feature wird für das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) nicht unterstützt.
 
-## <a name="optional-client-certificates"></a>Optionale Client Zertifikate
+## <a name="optional-client-certificates"></a>Optionale Clientzertifikate
 
-Wenn [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) einen Fehler erzeugt, bei dem WinHTTP-Client Authentifizierungszertifikat nicht **\_ \_ \_ \_ \_ benötigt** wird, benötigt der Server möglicherweise nicht das SSL-Client Zertifikat. Der Server kann möglicherweise in eine andere Form der Authentifizierung zurückkehren oder den Client den anonymen Zugriff fortsetzen. Die Anwendung legt die **\_ \_ Client \_ CERT- \_ Kontext Option WinHTTP-Option** fest und gibt ein Makro an, das von WinHTTP verwendet wird, um zu bestimmen, ob das Client Zertifikat erforderlich ist. Weitere Informationen finden Sie unter [**Optionsflags**](option-flags.md). Diese Funktion wird für das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt nicht unterstützt.
+Wenn [**WinHttpSendRequest mit**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest) dem FEHLER **\_ WINHTTP CLIENT \_ \_ \_ AUTH CERT \_ NEEDED** fehlschlägt, benötigt der Server möglicherweise nicht das SSL-Clientzertifikat. Der Server kann möglicherweise auf eine andere Form der Authentifizierung zurückverwenden oder dem Client erlauben, mit anonymen Zugriffen fortzufahren. Die Anwendung legt die **OPTION WINHTTP \_ OPTION CLIENT \_ \_ CERT CONTEXT \_ fest** und gibt ein Makro an, mit dem WinHttp bestimmt, ob das Clientzertifikat erforderlich ist. Weitere Informationen finden Sie unter [**Optionsflags**](option-flags.md). Dieses Feature wird für das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) nicht unterstützt.
 
-## <a name="source-and-destination-ip-addresses"></a>Quell-und Ziel-IP-Adressen
+## <a name="source-and-destination-ip-addresses"></a>Quell- und Ziel-IP-Adressen
 
-Wenn [**WinHttpReceiveResponse**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreceiveresponse) abgeschlossen ist, kann die Anwendung die Quell-und Ziel-IP-Adresse und den Port der Anforderung abrufen, die die Antwort generiert hat. Zum Empfangen der Quell-und Zieladressen wird eine neue-Struktur bereitgestellt, wenn die Option " **\_ \_ Verbindungs \_ Informationen" der WinHTTP-Option** festgelegt ist. Weitere Informationen finden Sie unter [**Optionsflags**](option-flags.md). Diese Funktion wird für das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt nicht unterstützt.
+Nach [**Abschluss von WinHttpReceiveResponse**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreceiveresponse) kann die Anwendung die Quell- und Ziel-IP-Adresse und den Port der Anforderung abrufen, die die Antwort generiert hat. Eine neue -Struktur wird bereitgestellt, um die Quell- und Zieladressen zu empfangen, wenn die **OPTION WINHTTP \_ OPTION CONNECTION \_ \_ INFO** festgelegt ist. Weitere Informationen finden Sie unter [**Optionsflags**](option-flags.md). Dieses Feature wird für das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) nicht unterstützt.
 
-## <a name="additional-ssl-client-authentication-errors"></a>Zusätzliche SSL-Client Authentifizierungsfehler
+## <a name="additional-ssl-client-authentication-errors"></a>Zusätzliche SSL-Clientauthentifizierungsfehler
 
-Weitere SSL-Client Authentifizierungsfehler bieten weitere Informationen zum SSL-Client Zertifikat. **Fehler \_ WinHTTP \_ Client \_ CERT \_ No \_ private \_ Key** und **Error \_ WinHTTP \_ CERT \_ No \_ Access \_ private \_ Key** Client Certificate Errors are New in Windows Server 2008 and Windows Vista. Das [**iwinhttprequest**](iwinhttprequest-interface.md) com-Objekt gibt diese Fehler in einem HRESULT zurück.
+Zusätzliche SSL-Clientauthentifizierungsfehler enthalten weitere Informationen zum SSL-Clientzertifikat. **FEHLER \_ WinHTTP \_ CLIENT \_ CERT NO PRIVATE \_ \_ \_ KEY** and **ERROR \_ WINHTTP \_ CERT NO ACCESS PRIVATE \_ \_ \_ \_ KEY** client certificate errors are new for Windows Server 2008 and Windows Vista. Das [**COM-Objekt IWinHttpRequest**](iwinhttprequest-interface.md) gibt diese Fehler in einem HRESULT zurück.
 
  
 

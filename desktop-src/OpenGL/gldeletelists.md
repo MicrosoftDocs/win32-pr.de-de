@@ -1,9 +1,9 @@
 ---
-title: gldelta etelists-Funktion (GL. h)
-description: Die Funktion "gldelta etelists" löscht eine zusammenhängende Gruppe von Anzeigelisten.
+title: glDeleteLists-Funktion (Gl.h)
+description: Die glDeleteLists-Funktion löscht eine zusammenhängende Gruppe von Anzeigelisten.
 ms.assetid: 979ab352-99db-4822-922c-a1813b9fcfce
 keywords:
-- gldelta etelists-Funktion OpenGL
+- glDeleteLists-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c11ae41273cba5bd050a62ea330cef9da0647769
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6ec0ffac68119f6f2080ef6ca96ec63fbd35176d3541464a89b6c31f4941b4c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081660"
 ---
-# <a name="gldeletelists-function"></a>gldelta etelists-Funktion
+# <a name="gldeletelists-function"></a>glDeleteLists-Funktion
 
-Die Funktion " **gldelta etelists** " löscht eine zusammenhängende Gruppe von Anzeigelisten.
+Die **glDeleteLists-Funktion** löscht eine zusammenhängende Gruppe von Anzeigelisten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ void WINAPI glDeleteLists(
 *list* 
 </dt> <dd>
 
-Der ganzzahlige Name der ersten zu löschenden Anzeigeliste.
+Der ganzzahlige Name der ersten zu löschende Anzeigeliste.
 
 </dd> <dt>
 
 *range* 
 </dt> <dd>
 
-Die Anzahl der zu löschenden Anzeigelisten.
+Die Anzahl der zu löschende Anzeigelisten.
 
 </dd> </dl>
 
@@ -61,24 +61,24 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | der *Bereich* war negativ.<br/>                                                                                                      |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | *der Bereich* war negativ.<br/>                                                                                                      |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **gldelta etelists** " bewirkt, dass eine zusammenhängende Gruppe von Anzeigelisten gelöscht wird. Der *List* -Parameter ist der Name der ersten zu löschenden Anzeigeliste, und *Range* steht für die Anzahl der zu löschenden Anzeigelisten. Alle Anzeigelisten *d* mit *Listen*  =    =    +  *Bereich* -1 werden gelöscht.
+Die **glDeleteLists-Funktion** bewirkt, dass eine zusammenhängende Gruppe von Anzeigelisten gelöscht wird. Der *list-Parameter* ist der Name der ersten zu löschenden Anzeigeliste, und *range* ist die Anzahl der zu löschenden Anzeigelisten. Alle Anzeigelisten *d* mit *list*  =  *d*  =  *list*  +  *range* - 1 werden gelöscht.
 
-Alle Speicherorte, die den angegebenen anzeigen Listen zugeordnet sind, werden freigegeben, und die Namen können zu einem späteren Zeitpunkt wieder verwendet werden. Namen innerhalb des Bereichs, die keine zugeordnete Anzeigeliste aufweisen, werden ignoriert. Wenn *Range* gleich NULL ist, geschieht nichts.
+Alle Speicherorte, die den angegebenen Anzeigelisten zugeordnet sind, werden freigegeben, und die Namen können zu einem späteren Zeitpunkt wiederverwendet werden. Namen innerhalb des Bereichs, denen keine Anzeigeliste zugeordnet ist, werden ignoriert. Wenn *der Bereich* 0 (null) ist, geschieht nichts.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -86,8 +86,8 @@ Alle Speicherorte, die den angegebenen anzeigen Listen zugeordnet sind, werden f
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -102,19 +102,19 @@ Alle Speicherorte, die den angegebenen anzeigen Listen zugeordnet sind, werden f
 [**glCallList**](glcalllist.md)
 </dt> <dt>
 
-[**glcalllists**](glcalllists.md)
+[**glCallLists**](glcalllists.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glgenlists**](glgenlists.md)
+[**glGenLists**](glgenlists.md)
 </dt> <dt>
 
-[**glislist**](glislist.md)
+[**glIsList**](glislist.md)
 </dt> <dt>
 
-[**glnewlist**](glnewlist.md)
+[**glNewList**](glnewlist.md)
 </dt> </dl>
 
  

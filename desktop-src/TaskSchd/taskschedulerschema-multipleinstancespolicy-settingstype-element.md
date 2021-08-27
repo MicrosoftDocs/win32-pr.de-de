@@ -1,9 +1,9 @@
 ---
-title: Multipleinstancespolicy-Element (settingstype)
-description: Gibt die Richtlinie an, mit der definiert wird, wie die Taskplaner mehrere Instanzen der Aufgabe behandelt.
+title: MultipleInstancesPolicy -Element (settingsType)
+description: Gibt die Richtlinie an, die definiert, wie die Taskplaner mit mehreren Instanzen der Aufgabe umgeht.
 ms.assetid: ec82d396-f83c-4684-98ab-f70e15ada075
 keywords:
-- Multipleinstancespolicy-Element Taskplaner
+- MultipleInstancesPolicy-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f5bcbbd26880f1ccced3e71b44dc93993d20f4a9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8d7728d2b39fbcbed060fce409f4d721b59ef5ca324cd141d7777a5ffed110a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072450"
 ---
-# <a name="multipleinstancespolicy-settingstype-element"></a>Multipleinstancespolicy-Element (settingstype)
+# <a name="multipleinstancespolicy-settingstype-element"></a>MultipleInstancesPolicy -Element (settingsType)
 
-Gibt die Richtlinie an, mit der definiert wird, wie die Taskplaner mehrere Instanzen der Aufgabe behandelt.
+Gibt die Richtlinie an, die definiert, wie die Taskplaner mit mehreren Instanzen der Aufgabe umgeht.
 
 ``` syntax
 <xs:element name="MultipleInstancesPolicy"
@@ -30,7 +30,7 @@ Gibt die Richtlinie an, mit der definiert wird, wie die Taskplaner mehrere Insta
  />
 ```
 
-Das **multipleinstancespolicy** -Element wird vom einfachen Typ " [**multipleinstancespolicytype**](taskschedulerschema-multipleinstancespolicytype-simpletype.md) " definiert.
+Das **MultipleInstancesPolicy-Element** wird durch den [**einfachen MultipleInstancesPolicyType-Typ**](taskschedulerschema-multipleinstancespolicytype-simpletype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,28 +38,28 @@ Das **multipleinstancespolicy** -Element wird vom einfachen Typ " [**multipleins
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**multipleinhaltungen-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_multipleinstances).
+Informationen zur C++-Entwicklung finden Sie unter [**MultipleInstances-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_multipleinstances)
 
-Informationen zur Skript Entwicklung finden Sie unter [**Task Settings. multipleinhaltungen**](tasksettings-multipleinstances.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskSettings.MultipleInstances.**](tasksettings-multipleinstances.md)
 
 ### <a name="restricted-values"></a>Eingeschränkte Werte
 
 Dieses Element ist auf die folgenden Werte beschränkt.
 
--   Parallel: startet eine neue-Instanz, während eine vorhandene-Instanz ausgeführt wird.
--   Queue: startet eine neue Instanz der Aufgabe, nachdem alle anderen Instanzen der Aufgabe vollständig sind.
--   Ignorumew: Standardwert. Startet keine neue Instanz, wenn eine vorhandene Instanz der Aufgabe ausgeführt wird.
--   StopAll: beendet eine vorhandene Instanz der Aufgabe, bevor eine neue Instanz gestartet wird.
+-   Parallel: Startet eine neue Instanz, während eine vorhandene Instanz ausgeführt wird.
+-   Warteschlange: Startet eine neue Instanz des Tasks, nachdem alle anderen Instanzen des Tasks abgeschlossen sind.
+-   IgnoreNew: Standard. Startet keine neue Instanz, wenn eine vorhandene Instanz des Tasks ausgeführt wird.
+-   StopExisting: Beendet eine vorhandene Instanz des Tasks, bevor eine neue Instanz gestartet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das es ermöglicht, mehrere Instanzen der Aufgabe parallel auszuführen.
+Der folgende XML-Code definiert ein Einstellungselement, mit dem mehrere Instanzen des Tasks parallel ausgeführt werden können.
 
 
 ```XML
@@ -70,14 +70,14 @@ Der folgende XML-Code definiert ein settings-Element, das es ermöglicht, mehrer
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -85,7 +85,7 @@ Der folgende XML-Code definiert ein settings-Element, das es ermöglicht, mehrer
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

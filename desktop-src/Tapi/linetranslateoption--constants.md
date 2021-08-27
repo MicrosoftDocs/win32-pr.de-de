@@ -1,74 +1,74 @@
 ---
-description: Die \_ Bit-Flag-Konstante linetranslateoption beschreibt eine Option, die von der Adressübersetzung verwendet wird.
+description: Die \_ LINETRANSLATEOPTION-Bitflagkonst constant beschreibt eine Option, die von der Adressübersetzung verwendet wird.
 ms.assetid: 3f5e9952-945e-42b8-8536-b52a0c833282
-title: LINETRANSLATEOPTION_ Konstanten (TAPI. h)
+title: LINETRANSLATEOPTION_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac1e103f2a93d30be5260b27c7bf5c0e97f3ce7a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 095d1cc9f3d7798dda9dd5bb69817ccfac64ae88fbc45fccccd59563cc24614d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073020"
 ---
-# <a name="linetranslateoption_-constants"></a>Linetranslateoption- \_ Konstanten
+# <a name="linetranslateoption_-constants"></a>LINETRANSLATEOPTION-Konstanten \_
 
-Die Bit-Flag-Konstante **linetranslateoption \_** beschreibt eine Option, die von der Adressübersetzung verwendet wird.
+Die **\_ LINETRANSLATEOPTION-Bitflagkonst** constant beschreibt eine Option, die von der Adressübersetzung verwendet wird.
 
 <dl> <dt>
 
-<span id="LINETRANSLATEOPTION_CANCELCALLWAITING"></span><span id="linetranslateoption_cancelcallwaiting"></span>**linetranslateoption \_ cancelcallwaiting**
+<span id="LINETRANSLATEOPTION_CANCELCALLWAITING"></span><span id="linetranslateoption_cancelcallwaiting"></span>**LINETRANSLATEOPTION \_ CANCELCALLWAITING**
 </dt> <dd> <dl> <dt>
 
 
 
-Wenn eine aufrufende Zeichenfolge für den Abbruch Aufruf für den Speicherort definiert ist, bewirkt das Festlegen dieses Bits, dass diese Zeichenfolge am Anfang der ausführbaren Zeichenfolge eingefügt wird. Dies wird häufig von Datenmodem-und Faxanwendungen verwendet, um die Unterbrechung von Aufrufen durch Aufrufe, die darauf warten, zu verhindern. Wenn keine aufrufende Zeichenfolge für den Abbruch Vorgang für den Speicherort definiert ist, hat dieses Bit keine Auswirkung. Beachten Sie, dass für Anwendungen, die dieses Bit verwenden, empfohlen wird, auch das Secure-Bit linecallparamflags \_ im **dwcallparamflags** -Member der [**linecallpara**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) -Struktur festzulegen, die über den *lpcallparser* -Parameter an [**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) übergeben wird, sodass der Mechanismus aufgerufen wird, wenn das liniengerät einen anderen Mechanismus als dable-Ziffern verwendet.
+Wenn für den Speicherort eine Zeichenfolge zum Abbrechen des Anrufs definiert ist, wird diese Zeichenfolge am Anfang der Wählbaren Zeichenfolge eingefügt, wenn dieses Bit festgelegt wird. Dies wird häufig von Datenmodem- und Faxanwendungen verwendet, um unterbrechungsfreie Anrufe durch Anrufwarterufe zu verhindern. Wenn für den Speicherort keine Zeichenfolge vom Typ Cancel Call Waiting definiert ist, hat dieses Bit keine Auswirkungen. Beachten Sie, dass Anwendungen, die dieses Bit verwenden, auch das LINECALLPARAMFLAGS \_ SECURE-Bit im **dwCallParamFlags-Member** der [**LINECALLPARAMS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-linecallparams) festlegen sollten, das über den *lpCallParams-Parameter* an [**lineMakeCall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) übergeben wird. Wenn das Liniengerät einen anderen Mechanismus als dialable digits verwendet, um Aufrufunterbrechungen zu unterdrücken, wird dieser Mechanismus aufgerufen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETRANSLATEOPTION_CARDOVERRIDE"></span><span id="linetranslateoption_cardoverride"></span>**linetranslateoption \_ cardoverride**
+<span id="LINETRANSLATEOPTION_CARDOVERRIDE"></span><span id="linetranslateoption_cardoverride"></span>**LINETRANSLATEOPTION \_ CARDOVERRIDE**
 </dt> <dd> <dl> <dt>
 
 
 
-Die Standard Aufruf Karte muss mit einem angegebenen überschrieben werden.
+Die Standard-Anrufkarte muss mit einer angegebenen überschrieben werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETRANSLATEOPTION_FORCELD"></span><span id="linetranslateoption_forceld"></span>**linetranslateoption ( \_ forceld)**
+<span id="LINETRANSLATEOPTION_FORCELD"></span><span id="linetranslateoption_forceld"></span>**LINETRANSLATEOPTION \_ FORCELD**
 </dt> <dd> <dl> <dt>
 
 
 
-Diese Option erzwingt, dass die Adresse (Zahl) als lange Distanz übersetzt wird.
+Diese Option erzwingt, dass die Adresse (Zahl) als Entfernungsabstand übersetzt wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINETRANSLATEOPTION_FORCELOCAL"></span><span id="linetranslateoption_forcelocal"></span>**linetranslateoption ( \_ forcelocal)**
+<span id="LINETRANSLATEOPTION_FORCELOCAL"></span><span id="linetranslateoption_forcelocal"></span>**LINETRANSLATEOPTION \_ FORCELOCAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Diese Option erzwingt, dass die Zahl (Address) als Local übersetzt wird.
+Diese Option erzwingt, dass die Zahl (Adresse) als lokal übersetzt wird.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -76,13 +76,13 @@ Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
 <dl> <dt>
 
-[**Linecallparametriams**](/windows/desktop/api/Tapi/ns-tapi-linecallparams)
+[**LINECALLPARAMS**](/windows/desktop/api/Tapi/ns-tapi-linecallparams)
 </dt> <dt>
 
-[**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
+[**lineMakeCall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
 </dt> <dt>
 
-[**Linetranslateoutput**](/windows/desktop/api/Tapi/ns-tapi-linetranslateoutput)
+[**LINETRANSLATEOUTPUT**](/windows/desktop/api/Tapi/ns-tapi-linetranslateoutput)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Setzt Replikations Statistiken zurück, die der angegebenen Replikations Beziehung der angegebenen virtuellen Maschine zugeordnet sind.
+description: Setzt Replikationsstatistiken zurück, die der angegebenen Replikationsbeziehung des angegebenen virtuellen Computers zugeordnet sind.
 ms.assetid: 6E49A7C0-2F60-444E-964E-420470EE1538
-title: 'Msvm_ReplicationService:: recationstatisticsex-Methode'
+title: Msvm_ReplicationService::ResetReplicationStatisticsEx-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: c1acb234660e71636b4a69a697b11385d65cf1ea
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 613d35a03d224032a07468c2ed2d830c73c3a899df455cc3e0cd68b335797b3e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866384"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083070"
 ---
-# <a name="msvm_replicationserviceresetreplicationstatisticsex-method"></a>MSVM \_ replicationservice:: remintreplicationstatisticsex-Methode
+# <a name="msvm_replicationserviceresetreplicationstatisticsex-method"></a>Msvm \_ ReplicationService::ResetReplicationStatisticsEx-Methode
 
-Setzt Replikations Statistiken zurück, die der angegebenen Replikations Beziehung der angegebenen virtuellen Maschine zugeordnet sind.
+Setzt Replikationsstatistiken zurück, die der angegebenen Replikationsbeziehung des angegebenen virtuellen Computers zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ uint32 ResetReplicationStatisticsEx(
 
 <dl> <dt>
 
-*Computersystem* \[ in\]
+*ComputerSystem* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf eine [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Instanz, die die Replikat aktivierte virtuelle Maschine darstellt.
+Ein Verweis auf eine [**\_ CIM-ComputerSysteminstanz,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die den replikatfähigen virtuellen Computer darstellt.
 
 </dd> <dt>
 
-*Replicationrelationship* \[ in\]
+*ReplicationRelationship* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung einer eingebetteten Instanz der [**MSVM \_ replicationrelationship**](msvm-replicationrelationship.md) -Klasse, die die Replikations Beziehung definiert, für die die Replikations Statistiken zurückgesetzt werden sollen.
+Eine Zeichenfolgendarstellung einer eingebetteten Instanz der [**Msvm \_ ReplicationRelationship-Klasse,**](msvm-replicationrelationship.md) die die Replikationsbeziehung definiert, für die die Replikationsstatistiken zurückgesetzt werden sollen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird. Dieser Verweis kann **null** sein, wenn der Task beendet ist.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85)) Dieser Verweis kann NULL **sein,** wenn die Aufgabe abgeschlossen ist.
 
 </dd> </dl>
 
@@ -71,10 +71,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -83,43 +83,43 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\\\\\Stammvirtualisierung \\ v2<br/>                                                                 |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\\\Root \\ Virtualization \\ V2<br/>                                                                 |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -128,10 +128,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**Getreplicationstatisticsex**](getreplicationstatisticsex-msvm-replicationservice.md)
+[**GetReplicationStatisticsEx**](getreplicationstatisticsex-msvm-replicationservice.md)
 </dt> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

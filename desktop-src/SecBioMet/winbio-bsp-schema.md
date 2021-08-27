@@ -1,10 +1,10 @@
 ---
-title: WINBIO_BSP_SCHEMA Struktur (winbio \_ types. h)
+title: WINBIO_BSP_SCHEMA-Struktur (Winbio \_ types.h)
 description: Beschreibt die Funktionen eines biometrischen Dienstanbieters.
 ms.assetid: d690c735-55a1-4e2c-8b39-d52a1972bf93
 keywords:
-- WINBIO_BSP_SCHEMA Struktur Windows-Biometrieframework-API
-- PWINBIO_BSP_SCHEMA Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_BSP_SCHEMA Struktur Windows Biometrieframework-API
+- PWINBIO_BSP_SCHEMA Strukturzeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f8ae63aefb64eb22f454559b76e9922242ca9530
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff46f5484addb0221d9e441df73ecca3e8283da88ee7849e4362314aa1c375e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080780"
 ---
-# <a name="winbio_bsp_schema-structure"></a>Winbio- \_ BSP- \_ Schema Struktur
+# <a name="winbio_bsp_schema-structure"></a>WINBIO \_ BSP \_ SCHEMA-Struktur
 
-Die Struktur " **winbio \_ BSP \_ Schema** " beschreibt die Funktionen eines biometrischen Dienstanbieters. Diese Struktur wird von der [**winbioenumserviceproviders**](/windows/desktop/api/Winbio/nf-winbio-winbioenumserviceproviders) -Funktion verwendet.
+Die **WINBIO \_ BSP \_ SCHEMA-Struktur** beschreibt die Funktionen eines biometrischen Dienstanbieters. Diese Struktur wird von der [**WinBioEnumServiceProviders-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbioenumserviceproviders) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,50 +45,50 @@ typedef struct _WINBIO_BSP_SCHEMA {
 
 <dl> <dt>
 
-**Biometricfactor**
+**BiometricFactor**
 </dt> <dd>
 
-Der Typ der von diesem Gerät verwendeten biometrischen Messung. Zurzeit muss dies ein **winbio- \_ \_ typfingerabdruck** sein.
+Der Typ der biometrischen Messung, die von diesem Gerät verwendet wird. Derzeit muss dies **WINBIO \_ TYPE \_ FINGERPRINT** sein.
 
 </dd> <dt>
 
-**Bspid**
+**BspId**
 </dt> <dd>
 
-Ein Wert, der die Komponente des biometrischen Dienstanbieters eindeutig identifiziert.
+Ein -Wert, der diese Biometrische Dienstanbieterkomponente eindeutig identifiziert.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd>
 
-Eine **null**-terminierte Unicode-Zeichenfolge, die eine Beschreibung des biometrischen Dienstanbieters enthält.
+Eine **Mit NULL** endende Unicode-Zeichenfolge, die eine Beschreibung des biometrischen Dienstanbieters enthält.
 
 </dd> <dt>
 
 **Hersteller**
 </dt> <dd>
 
-Eine **null**-terminierte Unicode-Zeichenfolge, die den Namen des Anbieters enthält, der den biometrischen Dienstanbieter bereitstellt.
+Eine **Mit NULL** beendete Unicode-Zeichenfolge, die den Namen des Anbieters enthält, der den biometrischen Dienstanbieter an die Hand gibt.
 
 </dd> <dt>
 
 **Version**
 </dt> <dd>
 
-Eine [**winbio- \_ Versions**](winbio-version.md) Struktur, die die Softwareversion der Komponente des biometrischen Dienstanbieters enthält.
+Eine [**\_ WINBIO-VERSIONSstruktur,**](winbio-version.md) die die Softwareversion der Komponente des biometrischen Dienstanbieters enthält.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 
@@ -96,10 +96,10 @@ Eine [**winbio- \_ Versions**](winbio-version.md) Struktur, die die Softwarevers
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> <dt>
 
-[**Winbioenumserviceproviders**](/windows/desktop/api/Winbio/nf-winbio-winbioenumserviceproviders)
+[**WinBioEnumServiceProviders**](/windows/desktop/api/Winbio/nf-winbio-winbioenumserviceproviders)
 </dt> </dl>
 
  

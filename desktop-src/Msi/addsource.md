@@ -1,53 +1,53 @@
 ---
-description: Der Wert der addsource-Eigenschaft ist eine Liste von Funktionen, die durch Kommas getrennt sind und zum Ausführen von der Quelle installiert werden müssen.
+description: Der Wert der ADDSOURCE-Eigenschaft ist eine Liste von Features, die durch Kommas getrennt sind und installiert werden müssen, um von der Quelle aus ausgeführt zu werden.
 ms.assetid: 7bc38b49-72d8-4b0c-bd71-284a638e7860
-title: Addsource (Eigenschaft)
+title: ADDSOURCE-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd51d6f86060def1a7536134a0041f1e15178a91
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 420ca53a96ddeb379a7e021db2c45157861acfb62d066cadfc7a163db7fbc307
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078160"
 ---
-# <a name="addsource-property"></a>Addsource (Eigenschaft)
+# <a name="addsource-property"></a>ADDSOURCE-Eigenschaft
 
-Der Wert der **addsource** -Eigenschaft ist eine Liste von Funktionen, die durch Kommas getrennt sind und zum Ausführen von der Quelle installiert werden müssen. Die Funktionen müssen in der featurespalte der [Funktions Tabelle](feature-table.md)vorhanden sein. Verwenden Sie addsource = all in der Befehlszeile, um alle Features zu installieren, die von der Quelle ausgeführt werden. Geben Sie addsource = all nicht in die [Eigenschaften Tabelle](property-table.md)ein, da hierdurch ein Paket aus der Quelle generiert wird, das nicht ordnungsgemäß entfernt werden kann.
+Der Wert der **ADDSOURCE-Eigenschaft** ist eine Liste von Features, die durch Kommas getrennt sind und installiert werden müssen, um von der Quelle aus ausgeführt zu werden. Die Features müssen in der Spalte Feature der [Featuretabelle](feature-table.md)vorhanden sein. Verwenden Sie ADDSOURCE=ALL in der Befehlszeile, um alle Funktionen während der Ausführung aus der Quelle zu installieren. Geben Sie ADDSOURCE=ALL nicht in die [Eigenschaftentabelle](property-table.md)ein, da dadurch ein Aus-Quell-Paket generiert wird, das nicht ordnungsgemäß entfernt werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei den Funktionsnamen wird Groß-/Kleinschreibung beachtet. Wenn das LocalOnly-Bitflag in der Spalte Attribute der [Komponenten Tabelle](component-table.md) für eine Komponente eines Features in der Liste festgelegt ist, wird diese Komponente zur lokalen Installation installiert.
+Bei den Featurenamen wird die Groß-/Kleinschreibung beachtet. Wenn das LocalOnly-Bitflag in der Spalte Attribute der [Komponententabelle](component-table.md) für eine Komponente eines Features in der Liste festgelegt ist, wird diese Komponente installiert, um lokal ausgeführt zu werden.
 
-Das Installationsprogramm wertet die folgenden Eigenschaften immer in der folgenden Reihenfolge aus:
+Das Installationsprogramm wertet immer die folgenden Eigenschaften in der folgenden Reihenfolge aus:
 
 1.  [**ADDLOCAL**](addlocal.md)
-2.  [**Aufgeh**](remove.md)
-3.  **Addsource**
-4.  [**Adddefault**](adddefault.md)
-5.  [**Installieren Sie**](reinstall.md)
-6.  [**Benen**](advertise.md)
-7.  [**Compaddlocal**](compaddlocal.md)
-8.  [**Compaddsource**](compaddsource.md)
-9.  [**Compadddefault**](compadddefault.md)
-10. [**Fileaddlocal**](fileaddlocal.md)
-11. [**Fileaddsource**](fileaddsource.md)
-12. [**Fileadddefault**](fileadddefault.md)
+2.  [**Entfernen**](remove.md)
+3.  **ADDSOURCE**
+4.  [**ADDDEFAULT**](adddefault.md)
+5.  [**Installieren**](reinstall.md)
+6.  [**Werben**](advertise.md)
+7.  [**COMPADDLOCAL**](compaddlocal.md)
+8.  [**COMPADDSOURCE**](compaddsource.md)
+9.  [**COMPADDDEFAULT**](compadddefault.md)
+10. [**FILEADDLOCAL**](fileaddlocal.md)
+11. [**FILEADDSOURCE**](fileaddsource.md)
+12. [**FILEADDDEFAULT**](fileadddefault.md)
 
 Beispiel:
 
--   Wenn in der Befehlszeile Folgendes angegeben wird: ADDLOCAL = ALL, addsource = **myfeature**, werden alle Features zuerst auf Run-Local festgelegt, und **myfeature** wird auf Run-From-Source festgelegt.
--   Wenn die Befehlszeile "ADDSOURCE = ALL", "ADDLOCAL =**myfeature**" lautet, ist "First **myfeature** " auf "Run-local" festgelegt, und wenn "ADDSOURCE = ALL" ausgewertet wird, werden alle Funktionen (einschließlich " **myfeature**") auf "Run-From-Source" zurückgesetzt.
+-   Wenn in der Befehlszeile Folgendes angegeben ist: ADDLOCAL=ALL, ADDSOURCE = **MyFeature**, werden alle Features zuerst auf "run-local" und dann auf **"MyFeature"** auf "run-from-source" festgelegt.
+-   Wenn die Befehlszeile lautet: ADDSOURCE=ALL, ADDLOCAL=**MyFeature**, wird **zuerst MyFeature** auf run-local festgelegt, und wenn ADDSOURCE=ALL ausgewertet wird, werden alle Features (einschließlich **MyFeature**) auf run-from-source zurückgesetzt.
 
-Der Installer legt die [**vorab ausgewählte**](preselected.md) Eigenschaft während der Wiederaufnahme einer angehaltenen Installation auf den Wert "1" fest, oder wenn eine der oben aufgeführten Eigenschaften in der Befehlszeile angegeben wird.
+Das Installationsprogramm legt die [**Vorab ausgewählte**](preselected.md) Eigenschaft während der Wiederaufnahme einer angehaltenen Installation oder wenn eine der oben genannten Eigenschaften in der Befehlszeile angegeben wird, auf den Wert "1" fest.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zu den Windows Service [Pack-Mindestanforderungen,](windows-installer-portal.md) die für eine Windows Installer-Version erforderlich sind, finden Sie unter Run-Time Anforderungen für Windows Installer.<br/> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: glpopattrb-Funktion (GL. h)
-description: Springt den Attribut Stapel.
+title: glPopAttrib-Funktion (Gl.h)
+description: Popt den Attributstapel.
 ms.assetid: 6a11392c-d5af-47bb-a66a-691730a58260
 keywords:
-- glpopattrb-Funktion OpenGL
+- glPopAttrib-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2258b0f16e6f61e660384931abc394300a29516
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92034154138ab3747ce190c05716e2df0d82ed3f6b26aba38da780873ce03721
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081450"
 ---
-# <a name="glpopattrib-function"></a>glpopattrb-Funktion
+# <a name="glpopattrib-function"></a>glPopAttrib-Funktion
 
-Springt den Attribut Stapel.
+Popt den Attributstapel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,36 +44,36 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL. \_ Stapel \_ Unterlauf**</dt> </dl>   | Die Funktion wurde aufgerufen, während der Attribut Stapel leer war.<br/>                                                               |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ STACK \_ UNDERFLOW**</dt> </dl>   | Die Funktion wurde aufgerufen, während der Attributstapel leer war.<br/>                                                               |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " [**glpushatpub**](glpushattrib.md) " erfordert ein Argument, eine Maske, die angibt, welche Gruppen von Zustandsvariablen im Attribut Stapel gespeichert werden sollen. Symbolische Konstanten werden verwendet, um Bits in der Maske festzulegen. Der mask-Parameter wird in der Regel von erstellt, **oder** es werden mehrere dieser Konstanten erstellt. Die besondere Maske GL \_ alle \_ atzb- \_ Bits können zum Speichern aller Stackable-Zustände verwendet werden.
+Die [**glPushAttrib-Funktion**](glpushattrib.md) verwendet ein Argument, eine Maske, die angibt, welche Gruppen von Zustandsvariablen im Attributstapel gespeichert werden sollen. Symbolische Konstanten werden verwendet, um Bits in der Maske zu setzen. Der mask-Parameter wird in der Regel durch **OR** erstellt, indem mehrere dieser Konstanten zusammen verwendet werden. Die spezielle Maske GL ALL ATTRIB BITS kann verwendet werden, \_ um alle \_ \_ stapelbaren Zustände zu speichern.
 
-Die Funktion " **glpopatpub** " stellt die Werte der Zustandsvariablen wieder her, die mit dem letzten Befehl " [**glpushatpub**](glpushattrib.md) " gespeichert wurden. Die nicht gespeicherten Änderungen bleiben unverändert.
+Die **glPopAttrib-Funktion** stellt die Werte der Zustandsvariablen wieder wieder auf, die mit dem letzten [**glPushAttrib-Befehl gespeichert**](glpushattrib.md) wurden. Die nicht gespeicherten bleiben unverändert.
 
-Es ist ein Fehler, Attribute auf einen vollständigen Stapel zu übersetzen oder Attribute aus einem leeren Stapel zu Pop. In beiden Fällen wird das Fehlerflag festgelegt, und es wird keine andere Änderung am OpenGL-Zustand vorgenommen.
+Es ist ein Fehler, Attribute auf einen vollständigen Stapel zu pushen oder Attribute aus einem leeren Stapel zu popen. In beiden Fällen wird das Fehlerflag festgelegt, und es wird keine andere Änderung am OpenGL-Zustand vorgenommen.
 
-Der Attribut Stapel ist zunächst leer.
+Anfangs ist der Attributstapel leer.
 
-Nicht alle Werte für den OpenGL-Zustand können im Attribut Stapel gespeichert werden. Beispielsweise können das Pixel Paket und der Debugzustand, der rendermoduszustand und der Status "Select" und "Feedback" nicht gespeichert werden.
+Nicht alle Werte für den OpenGL-Status können im Attributstapel gespeichert werden. Beispielsweise können der Pixelpaket- und Entpackungszustand, der Rendermoduszustand und der Auswahl- und Feedbackzustand nicht gespeichert werden.
 
-Die Tiefe des Attribut Stapels hängt von der Implementierung ab, muss jedoch mindestens 16 sein.
+Die Tiefe des Attributstapels hängt von der Implementierung ab, muss jedoch mindestens 16 sein.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushatpub**](glpushattrib.md) und **glpopatpub** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glPushAttrib**](glpushattrib.md) und **glPopAttrib ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit der \_ \_ Stapel \_ Tiefe des Argument-GL
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ ATTRIB \_ STACK \_ DEPTH
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit der \_ maximalen \_ attrb- \_ Stapel \_ Tiefe des Arguments
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MAX \_ ATTRIB \_ STACK \_ DEPTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,8 +83,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushatpub*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -99,49 +99,49 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glpushatpub*
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgetclipplane**](glgetclipplane.md)
+[**glGetClipPlane**](glgetclipplane.md)
 </dt> <dt>
 
-[**glgeterror**](glgeterror.md)
+[**glGetError**](glgeterror.md)
 </dt> <dt>
 
-[**glgetlight**](glgetlight.md)
+[**glGetLight**](glgetlight.md)
 </dt> <dt>
 
-[**glgetmap**](glgetmap.md)
+[**glGetMap**](glgetmap.md)
 </dt> <dt>
 
-[**glgetmaterial**](glgetmaterial.md)
+[**glGetMaterial**](glgetmaterial.md)
 </dt> <dt>
 
-[**glgetpixelmap**](glgetpixelmap.md)
+[**glGetPixelMap**](glgetpixelmap.md)
 </dt> <dt>
 
-[**glgetpolygonstippel**](glgetpolygonstipple.md)
+[**glGetPolygonStipple**](glgetpolygonstipple.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glgettex-v**](glgettexenv.md)
+[**glGetTexEnv**](glgettexenv.md)
 </dt> <dt>
 
-[**glgettexgen**](glgettexgen.md)
+[**glGetTexGen**](glgettexgen.md)
 </dt> <dt>
 
-[**glgetteximage**](glgetteximage.md)
+[**glGetTexImage**](glgetteximage.md)
 </dt> <dt>
 
-[**glgettexlevelparameter**](glgettexlevelparameter.md)
+[**glGetTexLevelParameter**](glgettexlevelparameter.md)
 </dt> <dt>
 
-[**glgettexparameter**](glgettexparameter.md)
+[**glGetTexParameter**](glgettexparameter.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> </dl>
 
  

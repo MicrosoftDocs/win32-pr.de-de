@@ -1,9 +1,9 @@
 - name: Windows-Filterplattform
   href: windows-filtering-platform-start-page.md
   items:
-    - name: Neues in der Windows-Filter Plattform
+    - name: Neuerungen bei Windows Filterplattform
       href: what-s-new-in-windows-filtering-platform.md
-    - name: Informationen zur Windows-Filter Plattform
+    - name: Informationen Windows Filterplattform
       href: about-windows-filtering-platform.md
       items:
         - name: WFP-Architektur
@@ -13,18 +13,18 @@
           items:
             - name: Objektmodell
               href: object-model.md
-            - name: Objekt Verwaltung
+            - name: Objektverwaltung
               href: object-management.md
-            - name: WFP-Version-Independent Namen und für bestimmte Versionen von Windows
+            - name: WFP Version-Independent- und Zielversionen von Windows
               href: wfp-version-independent-names-and-targeting-specific-versions-of-windows.md
         - name: WFP-Vorgang
           href: basic-operation.md
           items:
-            - name: TCP-paketflows
+            - name: TCP-Paketflüsse
               href: tcp-packet-flows.md
-            - name: UDP-paketflows
+            - name: UDP-Paketflüsse
               href: udp-packet-flows.md
-            - name: Filterung Filtern
+            - name: Filtern der Vermittlung
               href: filter-arbitration.md
         - name: WFP-Konfiguration
           href: wfp-configuration.md
@@ -33,37 +33,37 @@
               href: access-control.md
             - name: Filtergewichtungszuweisung
               href: filter-weight-assignment.md
-        - name: Durchsetzung der Anwendungsschicht (ALE)
+        - name: 'Anwendungsschichterzwingung (Application Layer Enforcement, ALE)'
           href: application-layer-enforcement--ale-.md
           items:
-            - name: ALE Ebenen
+            - name: ALE-Ebenen
               href: ale-layers.md
-            - name: Status behaftete ALE Filterung
+            - name: Zustandsbehaftete ALE-Filterung
               href: ale-stateful-filtering.md
-            - name: ALE Multicast-/Broadcast Datenverkehr
+            - name: ALE Multicast-/Broadcastdatenverkehr
               href: ale-multicast-broadcast-traffic.md
             - name: Erneute ALE-Autorisierung
               href: ale-re-authorization.md
-            - name: Anpassung des ALE-Flows
+            - name: Anpassung von ALE Flow
               href: ale-flow-customization.md
-        - name: IPSec-Konfiguration
+        - name: IPsec-Konfiguration
           href: ipsec-configuration.md
           items:
             - name: Transportmodus
               href: regular-transport-mode.md
-            - name: Transport Modus für Aushandlungs Ermittlung
+            - name: Transportmodus der Aushandlungsermittlung
               href: negotiation-discovery-transport-mode.md
-            - name: Transport Modus für die Aushandlung von Aushandlungen im Begrenzungs Modus
+            - name: Transportmodus der Aushandlungsermittlung im Begrenzungsmodus
               href: negotiation-discovery-transport-mode-in-boundary-mode.md
             - name: Tunnel Modus
               href: tunnel-mode.md
             - name: Garantierte Verschlüsselung
               href: guaranteed-encryption.md
-            - name: Remote Identitäts Autorisierung
+            - name: Remoteidentitätsautorisierung
               href: remote-identity-authorization.md
-            - name: Manuelles SA
+            - name: Manuelle Sa
               href: manual-ipsec-sas.md
-            - name: IKE-/AuthIP-Ausnahmen
+            - name: IKE/AuthIP-Ausnahmen
               href: ike-exemptions.md
         - name: WFP-Überwachung
           href: wfp-monitoring.md
@@ -72,9 +72,9 @@
               href: auditing-and-logging.md
             - name: Protokollierung
               href: logging.md
-            - name: Änderungs Benachrichtigungen
+            - name: Änderungsbenachrichtigungen
               href: change-notifications.md
-    - name: Verwenden der Windows-Filter Plattform
+    - name: Verwenden Windows Filterplattform
       href: using-windows-filtering-platform.md
       items:
         - name: Erste Schritte
@@ -91,73 +91,73 @@
               href: permitting-and-blocking-applications-and-users.md
             - name: Reservieren von Ports
               href: reserving-ports.md
-            - name: Verwenden von klassifizier Optionen
+            - name: Verwenden von Klassifizierungsoptionen
               href: using-classify-options.md
-            - name: Verhindern der Port Überprüfung
+            - name: Verhindern der Portüberprüfung
               href: preventing-port-scanning.md
         - name: Beobachten des Systems
           href: observing-the-system.md
           items:
-            - name: Auffüllen von Filter Bedingungen
+            - name: Auffüllen von Filterbedingungen
               href: populating-filter-conditions.md
-            - name: Anzeigen des aktuellen Status
+            - name: Anzeigen des aktuellen Zustands
               href: viewing-current-state.md
-            - name: Überwachen von Filter Änderungen
+            - name: Überwachen von Filteränderungen
               href: monitoring-filter-changes.md
-            - name: Anzeigen von NET-Ereignissen
+            - name: Anzeigen von Net-Ereignissen
               href: displaying-net-events.md
         - name: Verwalten der Sicherheit
           href: managing-security.md
           items:
-            - name: Verhindern der Löschung von Filtern
+            - name: Verhindern des Löschens von Filtern
               href: hindering-filter-deletion.md
-            - name: Erzwingen der Löschung von Filtern
+            - name: Erzwingen des Löschens von Filtern
               href: forcing-filter-deletion.md
         - name: Konfigurieren von IPSec
           href: configuring-ipsec.md
           items:
-            - name: Verwenden des Transport Modus
+            - name: Verwenden des Transportmodus
               href: using-transport-mode.md
             - name: Verwenden des Tunnel Modus
               href: using-tunnel-mode.md
-            - name: Manuelle SA-Schlüssel Erstellung
+            - name: Manuelle SA-Schlüsselung
               href: manual-sa-keying.md
-        - name: Bewährte Methoden
+        - name: Empfehlungen
           href: best-practices.md
-    - name: API-Referenz zur Windows-Filter Plattform
+    - name: Windows Referenz zur Filterplattform-API
       href: fwp-reference.md
       items:
         - name: WFP-Konstanten
           href: windows-filtering-platform-api-constants.md
           items:
-            - name: Zugriffsrechte Bezeichner
+            - name: Zugriffsberechtigungsbezeichner
               href: access-right-identifiers.md
-            - name: Integrierte Legenden Bezeichner
+            - name: Integrierte Aufrufbezeichner
               href: built-in-callout-identifiers.md
-            - name: Integrierte Schlüssel für das Erstellen von Schlüssel Bezeichner
+            - name: Integrierte Schlüsselmodulbezeichner
               href: built-in-keying-module-identifiers.md
-            - name: Integrierte Anbieter Kontext Bezeichner
+            - name: Integrierte Anbieterkontextbezeichner
               href: built-in-provider-context-identifiers.md
-            - name: Integrierte Anbieter Bezeichner
+            - name: Integrierte Anbieterbezeichner
               href: built-in-provider-identifiers.md
-            - name: Filtern von Kontext bezeichlern
+            - name: Filtern von Kontextbezeichnern
               href: filter-context-identifiers.md
-            - name: Filtern von Gewichtungs bezeichlern
+            - name: Filtergewichtungsbezeichner
               href: filter-weight-identifiers.md
             - name: Filterbedingungen
               href: filtering-conditions.md
               items:
-                - name: Filtern von Bedingungs bezeichlern
+                - name: Filtern von Bedingungsbezeichnern
                   href: filtering-condition-identifiers-.md
-                - name: Filtern von Bedingungs Flags
+                - name: Filtern von Bedingungsflags
                   href: filtering-condition-flags-.md
-                - name: 'Filterbedingungen, die auf jeder Filter Ebene verfügbar sind'
+                - name: Auf jeder Filterebene verfügbare Filterbedingungen
                   href: filtering-conditions-available-at-each-filtering-layer.md
-            - name: Filtern von ebenenbezeichgern
+            - name: Filtern von Ebenenbezeichnern
               href: management-filtering-layer-identifiers-.md
-            - name: Filtern von subebenenbezeichgern
+            - name: Filtern von Unterebenenbezeichnern
               href: management-filtering-sublayer-identifiers.md
-            - name: WFP-Fehler Codes
+            - name: WFP-Fehlercodes
               href: wfp-error-codes.md
         - name: WFP-Enumerationstypen
           href: fwp-enums.md
@@ -189,7 +189,7 @@
                   href: /windows/win32/api/Iketypes/ne-iketypes-ikeext_qm_sa_state
                 - name: IKEEXT_SA_ROLE
                   href: /windows/win32/api/Iketypes/ne-iketypes-ikeext_sa_role
-            - name: IPSec-Typen
+            - name: IPsec-Typen
               href: ipsec-types.md
               items:
                 - name: IPSEC_AUTH_TYPE
@@ -212,7 +212,7 @@
                   href: /windows/win32/api/Ipsectypes/ne-ipsectypes-ipsec_traffic_type
                 - name: IPSEC_TRANSFORM_TYPE
                   href: /windows/win32/api/Ipsectypes/ne-ipsectypes-ipsec_transform_type
-            - name: Verwaltungs Typen
+            - name: Verwaltungstypen
               href: management-types.md
               items:
                 - name: DL_ADDRESS_TYPE
@@ -290,7 +290,7 @@
                   href: /windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsagetbyid1
                 - name: IkeextSaGetById2
                   href: /windows/desktop/api/Fwpmu/nf-fwpmu-ikeextsagetbyid2
-            - name: IPSec-Funktionen
+            - name: IPsec-Funktionen
               href: fwp-ipsec-functions.md
               items:
                 - name: FwpmIPsecTunnelAdd0
@@ -392,7 +392,7 @@
             - name: Verwaltungsfunktionen
               href: fwp-mgmt-functions.md
               items:
-                - name: Callout-Verwaltung
+                - name: Verwaltung von Ausrufeaufrufen
                   href: callout-management.md
                   items:
                     - name: FWPM_CALLOUT_CHANGE_CALLBACK0
@@ -423,7 +423,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutsubscriptionsget0
                     - name: FwpmCalloutUnsubscribeChanges0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutunsubscribechanges0
-                - name: Verwaltung von Verbindungs Objekten
+                - name: Verbindungsobjektverwaltung
                   href: connection-object-management.md
                   items:
                     - name: FWPM_CONNECTION_CALLBACK0
@@ -446,7 +446,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmconnectionsubscriptionsget0
                     - name: FwpmConnectionUnsubscribe0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmconnectionunsubscribe0
-                - name: Ereignis Verwaltung
+                - name: Ereignisverwaltung
                   href: event-management.md
                   items:
                     - name: FWPM_NET_EVENT_CALLBACK0
@@ -481,7 +481,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventsubscriptionsget0
                     - name: FwpmNetEventUnsubscribe0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmneteventunsubscribe0
-                - name: Filter Verwaltung
+                - name: Filterverwaltung
                   href: filter-management.md
                   items:
                     - name: FWPM_FILTER_CHANGE_CALLBACK0
@@ -531,7 +531,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmlayergetsecurityinfobykey0
                     - name: FwpmLayerSetSecurityInfoByKey0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmlayersetsecurityinfobykey0
-                - name: Anbieter Kontext Verwaltung
+                - name: Anbieterkontextverwaltung
                   href: provider-context-management.md
                   items:
                     - name: FWPM_PROVIDER_CONTEXT_CHANGE_CALLBACK0
@@ -578,7 +578,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidercontextsubscriptionsget0
                     - name: FwpmProviderContextUnsubscribeChanges0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidercontextunsubscribechanges0
-                - name: Anbieter Verwaltung
+                - name: Anbieterverwaltung
                   href: provider-management.md
                   items:
                     - name: FWPM_PROVIDER_CHANGE_CALLBACK0
@@ -626,7 +626,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsessiondestroyenumhandle0
                     - name: FwpmSessionEnum0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsessionenum0
-                - name: Sub-Layer Verwaltung
+                - name: Sub-Layer-Verwaltung
                   href: sub-layer-management.md
                   items:
                     - name: FWPM_SUBLAYER_CHANGE_CALLBACK0
@@ -653,7 +653,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsublayersubscriptionsget0
                     - name: FwpmSubLayerUnsubscribeChanges0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmsublayerunsubscribechanges0
-                - name: Systemports-Verwaltung
+                - name: Verwaltung von Systemports
                   href: system-ports-management.md
                   items:
                     - name: FWPM_SYSTEM_PORTS_CALLBACK0
@@ -673,7 +673,7 @@
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactionbegin0
                     - name: FwpmTransactionCommit0
                       href: /windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactioncommit0
-                - name: Vswitch-Verwaltung
+                - name: vSwitch-Verwaltung
                   href: vswitch-management.md
                   items:
                     - name: FWPM_VSWITCH_EVENT_CALLBACK0
@@ -807,7 +807,7 @@
                   href: /windows/win32/api/Iketypes/ns-iketypes-ikeext_statistics1
                 - name: IKEEXT_TRAFFIC0
                   href: /windows/win32/api/Iketypes/ns-iketypes-ikeext_traffic0
-            - name: IPSec-Strukturen
+            - name: IPsec-Strukturen
               href: ipsec-structures.md
               items:
                 - name: IPSEC_ADDRESS_INFO0

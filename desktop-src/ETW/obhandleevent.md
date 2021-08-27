@@ -1,7 +1,7 @@
 ---
-description: Stellt die Ereignistyp Klasse für Erstellungs-oder schließereignisse von Handles dar.
+description: Stellt die Ereignistypklasse für Handleerstellungs- oder Abschlussereignisse dar.
 ms.assetid: 39d27cdf-fa51-4fb1-8998-7150ca627eff
-title: Oblenker Event-Klasse
+title: ObHandleEvent-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ae293684bd09322c7193035d374e5e2bad21447f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eec4e0eb00f7c821e3977f448d9c1af7e286d72a21a0a1b9473a6d3cd8fa3451
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083220"
 ---
-# <a name="obhandleevent-class"></a>Oblenker Event-Klasse
+# <a name="obhandleevent-class"></a>ObHandleEvent-Klasse
 
-Stellt die Ereignistyp Klasse für Erstellungs-oder schließereignisse von Handles dar.
+Stellt die Ereignistypklasse für Handleerstellungs- oder Abschlussereignisse dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -44,42 +44,42 @@ class ObHandleEvent : ObTrace
 
 ## <a name="members"></a>Member
 
-Die **obshandevent** -Klasse verfügt über diese Typen von Membern:
+Die **ObHandleEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **oblenker Event** -Klasse verfügt über diese Eigenschaften.
+Die **ObHandleEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Handle**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("x"), [**wmidataid**](event-tracing-mof-qualifiers.md) (2)
+Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("x"), [**WmiDataId**](event-tracing-mof-qualifiers.md) (2)
 </dt> </dl>
 
-Das Objekt handle.
+Das Objekthand handle.
 
 </dd> <dt>
 
 **Object**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("x"), [**Zeiger**](event-tracing-mof-qualifiers.md), [**wmidataid**](event-tracing-mof-qualifiers.md) (1)
+Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("x"), [**Zeiger,**](event-tracing-mof-qualifiers.md) [**WmiDataId**](event-tracing-mof-qualifiers.md) (1)
 </dt> </dl>
 
 Das Objekt.
@@ -95,7 +95,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("w"), [**stringbeendigung**](event-tracing-mof-qualifiers.md) ("nullterminiert"), [**wmidataid**](event-tracing-mof-qualifiers.md) (4)
+Qualifizierer: [**Format**](event-tracing-mof-qualifiers.md) ("w"), [**StringTermination**](event-tracing-mof-qualifiers.md) ("NullTerminated"), [**WmiDataId**](event-tracing-mof-qualifiers.md) (4)
 </dt> </dl>
 
 Der Name des Objekts.
@@ -105,13 +105,13 @@ Der Name des Objekts.
 **ObjectType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**wmidataid**](event-tracing-mof-qualifiers.md) (3)
+Qualifizierer: [**WmiDataId**](event-tracing-mof-qualifiers.md) (3)
 </dt> </dl>
 
 Der Objekttyp.
@@ -124,9 +124,9 @@ Der Objekttyp.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 
 
 

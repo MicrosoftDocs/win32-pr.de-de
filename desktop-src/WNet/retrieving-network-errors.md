@@ -1,23 +1,23 @@
 ---
 title: Abrufen von Netzwerkfehlern
-description: Die WNET-Funktionen geben Fehlercodes für die Kompatibilität mit Windows für Arbeitsgruppen zurück. Jede WNET-Funktion legt auch den von GetLastError zurückgegebenen Fehler Codewert fest.
+description: Die WNET-Funktionen geben Fehlercodes für die Kompatibilität mit Windows für Arbeitsgruppen zurück. Jede WNet-Funktion legt auch den von GetLastError zurückgegebenen Fehlercodewert fest.
 ms.assetid: 8188304a-8ab3-4c43-a6d6-2806043cc195
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 436d63b51d0f57698403d206774710450eee1c8e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e92f02a05ab93d50b9c448ae280e5de7ddbed1260cf1df8b8b3e56aa33aaeff4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072020"
 ---
 # <a name="retrieving-network-errors"></a>Abrufen von Netzwerkfehlern
 
-Die WNET-Funktionen geben Fehlercodes für die Kompatibilität mit Windows für Arbeitsgruppen zurück. Jede WNET-Funktion legt auch den von [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)zurückgegebenen Fehler Codewert fest.
+Die WNET-Funktionen geben Fehlercodes für die Kompatibilität mit Windows für Arbeitsgruppen zurück. Jede WNET-Funktion legt auch den von [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)zurückgegebenen Fehlercodewert fest.
 
-Wenn eine der WNET-Funktionen einen erweiterten Fehler Fehler zurückgibt \_ \_ , kann eine Anwendung die [**wnetgetlasterror**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetlasterrora) -Funktion aufrufen, um zusätzliche Informationen zum Fehler abzurufen. Diese Informationen sind in der Regel spezifisch für den Netzwerkanbieter.
+Wenn eine der WNet-Funktionen ERROR \_ EXTENDED ERROR zurückgibt, kann eine Anwendung die \_ [**WNetGetLastError-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetlasterrora) aufrufen, um zusätzliche Informationen zum Fehler abzurufen. Diese Informationen sind in der Regel spezifisch für den Netzwerkanbieter.
 
-Im folgenden Beispiel wird eine Anwendungs definierte Fehler Behandlungs Funktion ("netterrorhandler") veranschaulicht. Die Funktion nimmt drei Argumente an: ein Fenster Handle, den von einer der WNET-Funktionen zurückgegebenen Fehlercode und den Namen der Funktion, die den Fehler erzeugt hat. Wenn der Fehlercode "Fehler bei erweiterter Fehler" lautet \_ \_ , ruft "netterrorhandler" **wnetgetlasterror** auf, um erweiterte Fehlerinformationen zu erhalten und die Informationen zu drucken. Das Beispiel ruft die [**MessageBox**](/windows/win32/api/winuser/nf-winuser-messagebox) -Funktion auf, um Nachrichten zu verarbeiten.
+Das folgende Beispiel veranschaulicht eine anwendungsdefinierte Fehlerbehandlungsfunktion (NetErrorHandler). Die Funktion verwendet drei Argumente: ein Fensterhandle, den von einer der WNet-Funktionen zurückgegebenen Fehlercode und den Namen der Funktion, die den Fehler erzeugt hat. Wenn der Fehlercode ERROR \_ EXTENDED \_ ERROR lautet, ruft NetErrorHandler **WNetGetLastError** auf, um erweiterte Fehlerinformationen abzurufen, und gibt die Informationen aus. Das Beispiel ruft die [**MessageBox-Funktion**](/windows/win32/api/winuser/nf-winuser-messagebox) auf, um Nachrichten zu verarbeiten.
 
 
 ```C++
@@ -85,6 +85,6 @@ BOOL WINAPI NetErrorHandler(HWND hwnd,
 
 
 
- 
+ 
 
- 
+ 

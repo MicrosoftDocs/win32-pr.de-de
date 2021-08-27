@@ -1,32 +1,32 @@
 ---
-description: Ereignis Ablauf Verfolgungs Sitzungen zeichnen Ereignisse von einem oder mehreren Anbietern auf, die ein Controller ermöglicht.
+description: Ereignisablaufverfolgungssitzungen zeichnen Ereignisse von einem oder mehr Anbietern auf, die ein Controller aktiviert.
 ms.assetid: 6e446ee3-47a3-4fe1-9eb7-3dd74cad4e56
-title: Ereignis Ablauf Verfolgungs Sitzungen
+title: Ereignisablaufverfolgungssitzungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce49453881d9106119dab15b64ac0698e9a493f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2edfe4bdfaf621575d8f2f8ab7d81a09aae8bfbddcb3f63890c4083378bb905b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083240"
 ---
-# <a name="event-tracing-sessions"></a>Ereignis Ablauf Verfolgungs Sitzungen
+# <a name="event-tracing-sessions"></a>Ereignisablaufverfolgungssitzungen
 
-Ereignis Ablauf Verfolgungs Sitzungen zeichnen Ereignisse von einem oder mehreren [Anbietern](providing-events.md) auf, die ein [Controller](controlling-event-tracing-sessions.md) ermöglicht. Die Sitzung ist auch für das Verwalten und leeren der Puffer verantwortlich. Der Controller definiert die Sitzung, in der Regel die Sitzungs-und Protokoll Dateiname, der Typ der zu verwendenden Protokolldatei und die Auflösung des Zeitstempels, der zum Aufzeichnen der Ereignisse verwendet wird, angegeben werden.
+Ereignisablaufverfolgungssitzungen zeichnen Ereignisse von einem oder mehr Anbietern [auf,](providing-events.md) die ein [Controller](controlling-event-tracing-sessions.md) aktiviert. Die Sitzung ist auch für das Verwalten und Leeren der Puffer verantwortlich. Der Controller definiert die Sitzung, die in der Regel die Angabe des Sitzungs- und Protokolldateinamens, des Zu verwendenden Protokolldateityps und der Auflösung des Zeitstempels zum Aufzeichnen der Ereignisse umfasst.
 
-Die Ereignis Ablauf Verfolgung unterstützt maximal 64 Ereignis Ablauf Verfolgungs Sitzungen, die gleichzeitig ausgeführt werden. In diesen Sitzungen gibt es zwei besondere Zweck Sitzungen. Die verbleibenden Sitzungen sind für die allgemeine Verwendung verfügbar. Die zwei speziellen Zweck Sitzungen sind:
+Die Ereignisablaufverfolgung unterstützt maximal 64 Ereignisablaufverfolgungssitzungen, die gleichzeitig ausgeführt werden. Von diesen Sitzungen gibt es zwei Sitzungen für besondere Zwecke. Die verbleibenden Sitzungen sind für die allgemeine Verwendung verfügbar. Die beiden Sitzungen für besondere Zwecke sind:
 
--   Globale Protokollierungs Sitzung
--   NT-Kernel Protokollierungs Sitzung
+-   Globale Protokollierungssitzung
+-   NT-Kernelprotokollierungssitzung
 
-Die Ereignis Ablauf Verfolgungs Sitzung für globale Protokollierung zeichnet Ereignisse auf, die früh im Startprozess des Betriebssystems auftreten, z. b. die von Gerätetreibern generierten Ereignisse. Weitere Informationen zum Konfigurieren der Ereignis Ablauf Verfolgungs Sitzung für globale Protokollierung finden Sie unter [Konfigurieren und Starten der globalen](configuring-and-starting-the-global-logger-session.md)Protokollierungs Sitzung.
+Die Global Logger-Ereignisablaufverfolgungssitzung zeichnet Ereignisse auf, die früh im Startprozess des Betriebssystems auftreten, z. B. von Gerätetreibern generierte Ereignisse. Informationen zum Konfigurieren der Ereignisablaufverfolgungssitzung der globalen Protokollierung finden Sie unter Konfigurieren und [Starten der globalen Protokollierungssitzung.](configuring-and-starting-the-global-logger-session.md)
 
-Die NT Kernel Logger-Ereignis Ablauf Verfolgungs Sitzung zeichnet vordefinierte Systemereignisse auf, die vom Betriebssystem generiert werden, z. b. Datenträger-e/a oder Seiten Fehler Weitere Informationen zum Konfigurieren der NT Kernel Logger-Ereignis Ablauf Verfolgungs Sitzung, zum [Konfigurieren und Starten der NT Kernel Logger-Sitzung](configuring-and-starting-the-nt-kernel-logger-session.md).
+Die NT Kernel Logger-Ereignisablaufverfolgungssitzung zeichnet vordefinierte Systemereignisse auf, die vom Betriebssystem generiert werden, z. B. Datenträger-E/A- oder Seitenfehlerereignisse. Informationen zum Konfigurieren der Nt Kernel Logger-Ereignisablaufverfolgungssitzung finden Sie unter Konfigurieren und [Starten der NT-Kernelprotokollierungssitzung.](configuring-and-starting-the-nt-kernel-logger-session.md)
 
-Weitere Informationen zum Definieren einer regulären Ereignis Ablauf Verfolgungs Sitzung finden Sie unter [Konfigurieren und Starten einer Ereignis Ablauf Verfolgungs Sitzung](configuring-and-starting-an-event-tracing-session.md).
+Informationen zum Definieren einer regulären Ereignisablaufverfolgungssitzung finden Sie unter Konfigurieren und [Starten einer Ereignisablaufverfolgungssitzung.](configuring-and-starting-an-event-tracing-session.md)
 
-**Windows 2000:** Unterstützt nur 32-Ereignis Ablauf Verfolgungs Sitzungen.
+**Windows 2000:** Unterstützt nur 32 Ereignisablaufverfolgungssitzungen.
 
  
 

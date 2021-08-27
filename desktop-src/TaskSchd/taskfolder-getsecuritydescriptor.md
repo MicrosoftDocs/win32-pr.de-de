@@ -1,11 +1,11 @@
 ---
-title: Taskfolder. getsecuritydescriptor (Eigenschaft)
-description: Bei der Skripterstellung wird die Sicherheits Beschreibung für den Ordner abgerufen.
+title: TaskFolder.GetSecurityDescriptor-Eigenschaft
+description: Ruft für die Skripterstellung den Sicherheitsdeskriptor für den Ordner ab.
 ms.assetid: ebf8dc7f-32b7-45bf-9ee5-36df674a1530
 keywords:
-- Getsecuritydescriptor-Eigenschaft Taskplaner
-- Getsecuritydescriptor-Eigenschaft Taskplaner, Task Folder-Objekt
-- Task Folder-Objekt Taskplaner, getsecuritydescriptor-Eigenschaft
+- GetSecurityDescriptor-Eigenschaft Taskplaner
+- GetSecurityDescriptor-Eigenschaft Taskplaner , TaskFolder-Objekt
+- TaskFolder-Objekt Taskplaner , GetSecurityDescriptor-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 81fdb3a301ba3238a699a5ed814057be53c3062d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 851565299b7e6d1c29e2e53d87fb27aa30297921cc194f3cce753fc8d22a6bc6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080320"
 ---
-# <a name="taskfoldergetsecuritydescriptor-property"></a>Taskfolder. getsecuritydescriptor (Eigenschaft)
+# <a name="taskfoldergetsecuritydescriptor-property"></a>TaskFolder.GetSecurityDescriptor-Eigenschaft
 
-Bei der Skripterstellung wird die Sicherheits Beschreibung für den Ordner abgerufen.
+Ruft für die Skripterstellung den Sicherheitsdeskriptor für den Ordner ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ TaskFolder.GetSecurityDescriptor( _
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -58,10 +58,10 @@ TaskFolder.GetSecurityDescriptor( _
 
 <dl> <dt>
 
-[**Taskfolder. SETSECURITYDESCRIPTOR**](taskfolder-setsecuritydescriptor.md)
+[**TaskFolder.SetSecurityDescriptor**](taskfolder-setsecuritydescriptor.md)
 </dt> <dt>
 
-[**Registeredtask. SETSECURITYDESCRIPTOR**](registeredtask-setsecuritydescriptor.md)
+[**RegisteredTask.SetSecurityDescriptor**](registeredtask-setsecuritydescriptor.md)
 </dt> </dl>
 
  

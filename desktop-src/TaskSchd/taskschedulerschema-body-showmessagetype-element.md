@@ -1,6 +1,6 @@
 ---
-title: Body-Element (showmessagetype)
-description: Enthält den Text, der im Textkörper des Meldungs Felds angezeigt werden soll.
+title: Body (showMessageType)-Element
+description: Enthält den Text, der im Text des Meldungsfelds angezeigt werden soll.
 ms.assetid: 69ea872a-7ca1-4464-9380-b35f74c9cb8e
 keywords:
 - Body-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3486601153f8e9dd7dac14f83800dae00a79a9f8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c6b1fbacd450c05b8ff71521dacfa6e95c7efc70fc7d8909ca66f3390bf22295
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010870"
 ---
-# <a name="body-showmessagetype-element"></a>Body-Element (showmessagetype)
+# <a name="body-showmessagetype-element"></a>Body (showMessageType)-Element
 
-Enthält den Text, der im Textkörper des Meldungs Felds angezeigt werden soll.
+Enthält den Text, der im Text des Meldungsfelds angezeigt werden soll.
 
 ``` syntax
 <xs:element name="Body"
@@ -30,23 +30,23 @@ Enthält den Text, der im Textkörper des Meldungs Felds angezeigt werden soll.
  />
 ```
 
-Das **Body** -Element wird durch den komplexen Typ " [**showmessagetype**](taskschedulerschema-showmessagetype-complextype.md) " definiert.
+Das **Body-Element** wird durch den komplexen [**showMessageType-Typ**](taskschedulerschema-showmessagetype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                                  | Abgeleitet von                                                               | BESCHREIBUNG                                               |
+| Element                                                                                  | Abgeleitet von                                                               | Beschreibung                                               |
 |------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|-----------------------------------------------------------|
-| [**ShowMessage (Aktionsgruppe)**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showmessagetype**](taskschedulerschema-showmessagetype-complextype.md) | Stellt eine Aktion dar, die ein Meldungs Feld anzeigt.<br/> |
+| [**ShowMessage (actionGroup)**](taskschedulerschema-showmessage-actiongroup-element.md) | [**showMessageType**](taskschedulerschema-showmessagetype-complextype.md) | Stellt eine Aktion dar, die ein Meldungsfeld anzeigt.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**MessageBody-Eigenschaft von ishowmessageaction**](/windows/desktop/api/taskschd/nf-taskschd-ishowmessageaction-get_messagebody).
+Informationen zur C++-Entwicklung finden Sie unter [**MessageBody-Eigenschaft von IShowMessageAction.**](/windows/desktop/api/taskschd/nf-taskschd-ishowmessageaction-get_messagebody)
 
-Informationen zur Skript Entwicklung finden Sie unter [**showmessageaction. MessageBody**](showmessageaction-messagebody.md).
+Informationen zur Skriptentwicklung finden Sie unter [**ShowMessageAction.MessageBody**](showmessageaction-messagebody.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**showmessageaction. Mess
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

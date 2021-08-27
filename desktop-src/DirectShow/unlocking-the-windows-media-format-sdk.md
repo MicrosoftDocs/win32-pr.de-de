@@ -1,26 +1,26 @@
 ---
-description: Entsperren des Windows Media-Format-SDKs
+description: Entsperren des Windows Media Format SDK
 ms.assetid: 7ede8bda-3b26-452d-8ce9-cd2410ffd9f4
-title: Entsperren des Windows Media-Format-SDKs
+title: Entsperren des Windows Media Format SDK
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7e9807794dc7e42c563f2f7d45dcb0b1b684aad1
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 6e1f332711e9fd12c9b0ff1f789438d051487b81711f157ae1024a8e47973386
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106353629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120078660"
 ---
-# <a name="unlocking-the-windows-media-format-sdk"></a>Entsperren des Windows Media-Format-SDKs
+# <a name="unlocking-the-windows-media-format-sdk"></a>Entsperren des Windows Media Format SDK
 
-Für den Zugriff auf Version 7 oder 7,1 des Windows Media Format SDK muss eine Anwendung zur Laufzeit ein Software Zertifikat bereitstellen, das auch als Schlüssel bezeichnet wird. Dieser Schlüssel ist in einer statischen Bibliothek namens wmstub. lib enthalten, auf die die Anwendung zur Buildzeit verknüpft ist. Ein individualisierter Schlüssel ist nur zum Erstellen oder Lesen von DRM-geschützten Dateien erforderlich. Nicht-DRM-Dateien können mithilfe der statischen Bibliothek erstellt werden, die mit dem Windows Media-Format SDK bereitgestellt wird. Ausführliche Informationen zum Abrufen des DRM-Schlüssels finden Sie im Windows Media-Format-SDK. Eine DirectShow-Anwendung stellt das Zertifikat für den WM-ASF-Writer bereit, wenn es dem Filter Diagramm hinzugefügt wird. Die Anwendung muss als Schlüssel Anbieter mithilfe der Schnittstellen com **IServiceProvider** und **IObjectWithSite** registriert werden. Mit dieser Technik implementiert die Anwendung eine von **IServiceProvider** abgeleitete Schlüssel Anbieter Klasse. Diese Klasse implementiert die drei com-Standardmethoden –**adressf**, **QueryInterface** und **Release**– zusammen mit einer zusätzlichen Methode ( **QueryService**), die vom Filter Graph-Manager aufgerufen wird. **QueryService** Ruft die Windows Media-Format-SDK-Methode [**wmkreatecertificate**](/previous-versions/windows/desktop/legacy/dd757745(v=vs.85)) auf und kehrt zum Filter Graph-Manager zurück, um einen Zeiger auf das Zertifikat zu erstellen, das erstellt wurde. Wenn das Zertifikat gültig ist, ermöglicht der Filter Diagramm-Manager das Fortsetzen des Diagramms.
+Für den Zugriff auf Version 7 oder 7.1 des Windows Media Format SDK muss eine Anwendung zur Laufzeit ein Softwarezertifikat bereitstellen, das auch als Schlüssel bezeichnet wird. Dieser Schlüssel ist in einer statischen Bibliothek namens wmstub.lib enthalten, mit der die Anwendung zur Buildzeit verknüpft ist. Ein individualisierter Schlüssel ist nur zum Erstellen oder Lesen von DRM-geschützten Dateien erforderlich. Nicht-DRM-Dateien können mithilfe der statischen Bibliothek erstellt werden, die mit dem Windows Media Format SDK bereitgestellt wird. Weitere Informationen zum Abrufen des DRM-Schlüssels finden Sie im Windows Media Format SDK. Eine DirectShow-Anwendung stellt ihr Zertifikat für den WM ASF Writer zur Anwendung, wenn sie dem Filterdiagramm hinzugefügt wird. Die Anwendung muss sich mithilfe der COM-Schnittstellen **IServiceProvider** und **IObjectWithSite als Schlüsselanbieter** registrieren. Mit dieser Technik implementiert die Anwendung eine von IServiceProvider abgeleitete **Schlüsselanbieterklasse.** Diese Klasse implementiert die drei COM-Standardmethoden **AddRef,** **QueryInterface** und **Release** sowie eine zusätzliche Methode, **QueryService,** die vom Filterdiagramm-Manager aufgerufen wird. **QueryService** ruft die Windows Media Format SDK-Methode [**WMCreateCertificate**](/previous-versions/windows/desktop/legacy/dd757745(v=vs.85)) auf und kehrt zum Filterdiagramm-Manager einen Zeiger auf das erstellte Zertifikat zurück. Wenn das Zertifikat gültig ist, ermöglicht der Filterdiagramm-Manager, dass der Graphenprozess fortgesetzt wird.
 
 > [!Note]  
-> Um eine Anwendung zu erstellen, schließen Sie wmsdkidl. h für den Prototyp für [**wmkreatecertificate**](/previous-versions/windows/desktop/legacy/dd757745(v=vs.85))ein, und verknüpfen Sie Sie mit der wmstub. lib-Bibliothek.
+> Um eine Anwendung zu erstellen, schließen Sie Wmsdkidl.h für den Prototyp für [**WMCreateCertificate**](/previous-versions/windows/desktop/legacy/dd757745(v=vs.85))ein, und verknüpfen Sie die Bibliothek Wmstub.lib.
 
  
 
-Im folgenden Codebeispiel werden die grundlegenden Schritte in diesem Prozess veranschaulicht:
+Das folgende Codebeispiel veranschaulicht die grundlegenden Schritte in diesem Prozess:
 
 
 ```C++

@@ -1,7 +1,7 @@
 ---
-description: Hält das-Objekt an. Implementiert die imediafilter::P ause-Methode.
+description: Hält das -Objekt an. Implementiert die IMediaFilter::P ause-Methode.
 ms.assetid: 4f4cbe7e-3004-4731-864f-737c2f51afff
-title: Cbasemediafilter. Pause-Methode (amfilter. h)
+title: CBaseMediaFilter.Pause-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a75cbcf1d629b997584cff35ebd4095094fe8607
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d7c2f68ca8753826776c804ff63e11454110d9d5287f29a61343ce4c2dcec85
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079366"
 ---
-# <a name="cbasemediafilterpause-method"></a>Cbasemediafilter. Pause-Methode
+# <a name="cbasemediafilterpause-method"></a>CBaseMediaFilter.Pause-Methode
 
-Hält das-Objekt an. Implementiert die [**imediafilter::P ause**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause) -Methode.
+Hält das -Objekt an. Implementiert die [**IMediaFilter::P ause-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-pause)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,18 +44,18 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Basisklasse legt diese Methode die " [**cbasemediafilter:: m \_ State**](cbasemediafilter-m-state.md) Member"-Variable auf "angehalten" fest, bewirkt \_ aber nichts anderes.
+In der Basisklasse legt diese Methode die [**CBaseMediaFilter::m \_ State-Membervariable**](cbasemediafilter-m-state.md) auf State \_ Paused fest, führt aber nichts anderes aus.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ In der Basisklasse legt diese Methode die " [**cbasemediafilter:: m \_ State**](
 
 <dl> <dt>
 
-[**Cbasemediafilter-Klasse**](cbasemediafilter.md)
+[**CBaseMediaFilter-Klasse**](cbasemediafilter.md)
 </dt> </dl>
 
  

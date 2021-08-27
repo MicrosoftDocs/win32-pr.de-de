@@ -1,9 +1,9 @@
 ---
-title: komplexer aktionstype-Typ
+title: actionsType Complex Type
 description: Definiert die untergeordneten Elemente und das Attribut für das Actions-Element.
 ms.assetid: 01577b65-4bfa-4b9f-b9b9-6b2b0dbd582a
 keywords:
-- komplexer aktionstype-Typ Taskplaner
+- actionsType complex type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ebc2cf95803f6e4a02d4ec00d7aa767aa4e8a8a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d84cab2f0977a3b5bf980f594f1b26b543d8e5e7de000959488e874e640dc9d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010930"
 ---
-# <a name="actionstype-complex-type"></a>komplexer aktionstype-Typ
+# <a name="actionstype-complex-type"></a>actionsType Complex Type
 
-Definiert die untergeordneten Elemente und das Attribut für das [**Actions**](taskschedulerschema-actions-tasktype-element.md) -Element.
+Definiert die untergeordneten Elemente und das Attribut für das [**Actions-Element.**](taskschedulerschema-actions-tasktype-element.md)
 
 ``` syntax
 <xs:complexType name="actionsType">
@@ -45,7 +45,7 @@ Definiert die untergeordneten Elemente und das Attribut für das [**Actions**](t
 
 | Name    | type  | BESCHREIBUNG                                                                                          |
 |---------|-------|------------------------------------------------------------------------------------------------------|
-| Kontext | IDREF | Prinzipal Bezeichner des verwendeten, der der Sicherheitskontext für die Aktionen der Aufgabe ist.<br/> |
+| Kontext | IDREF | Prinzipalbezeichner des verwendeten , der der Sicherheitskontext für die Aktionen der Aufgabe ist.<br/> |
 
 
 
@@ -55,8 +55,8 @@ Definiert die untergeordneten Elemente und das Attribut für das [**Actions**](t
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -64,7 +64,7 @@ Definiert die untergeordneten Elemente und das Attribut für das [**Actions**](t
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner Komplexe Schematypen](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

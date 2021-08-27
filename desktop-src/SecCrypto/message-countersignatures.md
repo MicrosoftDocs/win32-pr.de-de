@@ -1,31 +1,31 @@
 ---
-description: Manchmal erfordert eine signierte Nachricht eine gegen Signatur.
+description: Manchmal erfordert eine signierte Nachricht eine Gegensignatur.
 ms.assetid: de83a9ad-4e88-4477-8c9e-6dd7d5ec9e8f
-title: Nachrichten gegen Signaturen
+title: Nachrichten-Gegensignaturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8dff2920217dd9a79f917f7b625da3919747d7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4d95f9d082a2814501bdb948d1bfebdc5c2699012446c5189c5c3fc18612c1ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080640"
 ---
-# <a name="message-countersignatures"></a>Nachrichten gegen Signaturen
+# <a name="message-countersignatures"></a>Nachrichten-Gegensignaturen
 
-Manchmal erfordert eine signierte Nachricht eine [*gegen Signatur*](../secgloss/c-gly.md). Beispielsweise kann Benutzer a eine signierte Daten Nachricht an Benutzer B senden, wobei B erwartet, dass die Vereinbarung mit den im Dokument enthaltenen Begriffen bestätigt wird. Benutzer B decodiert die Nachricht, liest die Begriffe und signiert die Nachricht, wenn Sie in der Vereinbarung steht. Die gegen signierte Nachricht wird dann an Benutzer a zurückgesendet. Benutzer a weiß nun, dass der Benutzer B den Bedingungen zugestimmt hat.
+Manchmal erfordert eine signierte Nachricht [*eine Gegensignatur.*](../secgloss/c-gly.md) Beispielsweise kann Benutzer A eine signierte Datennachricht an Benutzer B senden und erwartet, dass B die Zustimmung zu den im Dokument enthaltenen Bedingungen bestätigt. Benutzer B decodiert die Nachricht, liest die Bedingungen und signiert die Nachricht, sofern dies zu einer Vereinbarung kommt, gegen. Die gegensignierte Nachricht wird dann an Benutzer A zurücksandt. Benutzer A weiß jetzt und kann nachweisen, dass Benutzer B den Bedingungen zugestimmt hat.
 
-In der folgenden Tabelle sind Abschnitte aufgelistet, die Prozedur Beschreibungen oder C-Programmbeispiele für die Nachrichten gegen Signierung enthalten.
+In der folgenden Tabelle sind Abschnitte aufgeführt, die Prozedurbeschreibungen oder C-Programmbeispiele für die Gegensignierung von Nachrichten enthalten.
 
 
 
 | `Section`                                                                                                                                 | Contents                                                           |
 |-----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| [Nachrichtenfunktionen](cryptography-functions.md)                                                                       | Listet die gegen Signatur Funktionen auf.                             |
-| [Gegen Signieren einer Nachricht](countersigning-a-message.md)                                                                                | Erläutert den Prozess der gegen Signierung einer Nachricht.                  |
-| [Überprüfen einer gegen Signatur](verifying-a-countersignature.md)                                                                        | Erläutert das Verfahren zum Überprüfen einer gegen Signatur.           |
-| [Überprüfen einer signierten Nachricht](verifying-a-signed-message.md)                                                                            | Erläutert einen Prozess zum Überprüfen der Signatur in einer signierten Nachricht. |
-| [Beispiel-C-Programm: Codieren und Decodieren einer gegen signierten Nachricht](example-c-program-encoding-and-decoding-a-countersigned-message.md) | Beispiel-C-Programm, das eine gegen signierte Nachricht codiert und decodiert. |
+| [Nachrichtenfunktionen](cryptography-functions.md)                                                                       | Listet die Zählersignaturfunktionen auf.                             |
+| [Gegensignieren einer Nachricht](countersigning-a-message.md)                                                                                | Details zum Prozess der Gegensignierung einer Nachricht.                  |
+| [Überprüfen einer Gegensignatur](verifying-a-countersignature.md)                                                                        | Hier erfahren Sie, wie Sie eine Zählersignatur überprüfen.           |
+| [Überprüfen einer signierten Nachricht](verifying-a-signed-message.md)                                                                            | Gibt einen Prozess zum Überprüfen der Signatur für eine signierte Nachricht an. |
+| [Beispiel C-Programm: Codieren und Decodieren einer CounterSigned-Nachricht](example-c-program-encoding-and-decoding-a-countersigned-message.md) | C-Beispielprogramm, das eine gegensignierte Nachricht codiert und decodiert. |
 
 
 

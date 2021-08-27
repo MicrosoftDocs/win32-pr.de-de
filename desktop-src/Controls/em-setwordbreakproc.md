@@ -1,9 +1,9 @@
 ---
-title: EM_SETWORDBREAKPROC Meldung (Winuser. h)
-description: Ersetzt die Standard-WordWrap-Funktion eines Bearbeitungs Steuer Elements durch eine Anwendungs definierte WordWrap-Funktion. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_SETWORDBREAKPROC-Nachricht (Winuser.h)
+description: Ersetzt die Standardmäßige Wordwrap-Funktion eines Bearbeitungssteuerelements durch eine anwendungsdefinierte Wordwrap-Funktion. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 ms.assetid: e5029b75-5f35-43a5-876d-24e81605bb49
 keywords:
-- Windows-Steuerelemente für EM_SETWORDBREAKPROC Meldung
+- EM_SETWORDBREAKPROC Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e85335562c9e9881093d89293e7e2ace9cf43b0a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 90617545fab7c8c5cf75babd98e9d6ef85c5713778c52a6a00966a131d0a0581
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517975"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048020"
 ---
-# <a name="em_setwordbreakproc-message"></a>EM \_ setwordbreakproc-Meldung
+# <a name="em_setwordbreakproc-message"></a>EM \_ SETWORDBREAKPROC-Meldung
 
-Ersetzt die Standard-WordWrap-Funktion eines Bearbeitungs Steuer Elements durch eine Anwendungs definierte WordWrap-Funktion. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Ersetzt die Standardmäßige Wordwrap-Funktion eines Bearbeitungssteuerelements durch eine anwendungsdefinierte Wordwrap-Funktion. Sie können diese Nachricht entweder an ein Bearbeitungssteuerelement oder ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,7 +39,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Die Adresse der Anwendungs definierten WordWrap-Funktion. Weitere Informationen zu Zeilenumbruch finden Sie in der Beschreibung der [*editwordbreakproc*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca) -Rückruffunktion.
+Die Adresse der anwendungsdefiniert Wordwrap-Funktion. Weitere Informationen zu Breaking Lines finden Sie in der Beschreibung der [*Rückruffunktion EditWordBreakProc.*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca)
 
 </dd> </dl>
 
@@ -47,13 +47,13 @@ Die Adresse der Anwendungs definierten WordWrap-Funktion. Weitere Informationen 
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine WordWrap-Funktion scannt einen Text Puffer, der Text enthält, der an den Bildschirm gesendet werden soll, und sucht nach dem ersten Wort, das nicht in die aktuelle Bildschirm Zeile passt. Die WordWrap-Funktion legt dieses Wort am Anfang der nächsten Zeile auf dem Bildschirm ab.
+Eine Wordwrap-Funktion scannt einen Textpuffer, der Text enthält, der an den Bildschirm gesendet werden soll, und sucht nach dem ersten Wort, das nicht in die aktuelle Bildschirmzeile passt. Die Wordwrap-Funktion platziert dieses Wort am Anfang der nächsten Zeile auf dem Bildschirm.
 
-Eine WordWrap-Funktion definiert den Punkt, an dem das System eine Textzeile für mehrzeilige Bearbeitungs Steuerelemente unterbrechen soll, in der Regel bei einem Leerzeichen, das zwei Wörter trennt. Diese Funktion kann entweder von einem mehrzeiligen oder einem einzeiligen Bearbeitungs Steuerelement aufgerufen werden, wenn der Benutzer die Pfeiltasten in Kombination mit der STRG-Taste drückt, um die Einfügemarke zum nächsten Wort oder zum vorherigen Wort zu bewegen. Die standardmäßige WordWrap-Funktion unterbricht eine Textzeile bei einem Leerzeichen. Die Anwendungs definierte Funktion definiert möglicherweise, dass der WordWrap-Vorgang bei einem Bindestrich oder einem anderen als dem Leerzeichen auftritt.
+Eine Wordwrap-Funktion definiert den Punkt, an dem das System eine Textzeile für mehrzeilige Bearbeitungssteuerelemente unterbrechen soll, in der Regel an einem Leerzeichen, das zwei Wörter trennt. Ein mehrzeiliges oder ein einzeiliges Bearbeitungssteuerelement kann diese Funktion aufrufen, wenn der Benutzer die Pfeiltasten in Kombination mit der STRG-TASTE drückt, um das Caretzeichen zum nächsten oder vorherigen Wort zu verschieben. Die Wordwrap-Standardfunktion unterbricht eine Textzeile an einem Leerzeichen. Die anwendungsdefinierte Funktion kann den Wordwrap definieren, der an einem Bindestrich oder einem anderen Zeichen als dem Leerzeichen auftreten soll.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
 
 
 
@@ -71,16 +71,16 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[*Editwordbreakproc*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca)
+[*EditWordBreakProc*](/windows/win32/api/winuser/nc-winuser-editwordbreakproca)
 </dt> <dt>
 
-[**EM- \_ Zeilen Trennlinien**](em-fmtlines.md)
+[**EM \_ FMTLINES**](em-fmtlines.md)
 </dt> <dt>
 
-[**EM \_ getwordbreakproc**](em-getwordbreakproc.md)
+[**EM \_ GETWORDBREAKPROC**](em-getwordbreakproc.md)
 </dt> </dl>
 
  

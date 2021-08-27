@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Telefon \_ Erstellungs Nachricht wird gesendet, um Anwendungen über das Erstellen eines neuen Telefon Geräts zu informieren.
+description: Die TAPI PHONE \_ CREATE-Nachricht wird gesendet, um Anwendungen über die Erstellung eines neuen Telefongeräts zu informieren.
 ms.assetid: 62895b10-76ce-456e-ad02-e2b7764616a8
-title: PHONE_CREATE Meldung (TAPI. h)
+title: PHONE_CREATE Meldung (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c92dfaad5d4007279f18890021f5cb39c22c4da9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 18633ca9f3d45e08c3e2e054d51261dabe6494f42055567a5a68707408f94d5c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072910"
 ---
-# <a name="phone_create-message"></a>Meldung zum Erstellen des Telefons \_
+# <a name="phone_create-message"></a>PHONE \_ CREATE-Nachricht
 
-Die TAPI **- \_ Telefon** Erstellungs Nachricht wird gesendet, um Anwendungen über das Erstellen eines neuen Telefon Geräts zu informieren.
+Die TAPI **PHONE \_ CREATE-Nachricht** wird gesendet, um Anwendungen über die Erstellung eines neuen Telefongeräts zu informieren.
 
 
 ```C++
@@ -26,14 +26,14 @@ Die TAPI **- \_ Telefon** Erstellungs Nachricht wird gesendet, um Anwendungen ü
 
 <dl> <dt>
 
-*hphone* 
+*hPhone* 
 </dt> <dd>
 
 Nicht verwendet.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
 Nicht verwendet.
@@ -43,7 +43,7 @@ Nicht verwendet.
 *dwParam1* 
 </dt> <dd>
 
-Die *HDE viceid* des neu erstellten Geräts.
+Die *hDeviceID* des neu erstellten Geräts.
 
 </dd> <dt>
 
@@ -65,20 +65,20 @@ Nicht verwendet.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen, die die API-Version 1,3 ausgehandelt haben, erhalten eine [**Telefon \_ Zustands**](phone-state.md) Meldung, die phonestate \_ REIT angibt. Dies erfordert, dass Sie Ihre Verwendung der API Herunterfahren und [**phoneinitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize) erneut aufrufen, um die neue Anzahl von Geräten zu erhalten. Die TAPI-Version 1,4 und höher erfordert jedoch nicht, dass alle Anwendungen heruntergefahren werden, bevor die erneute Initialisierung von Anwendungen zugelassen wird. die erneute Initialisierung kann sofort erfolgen, wenn ein neues Gerät erstellt wird.
+Anwendungen, die API-Version 1.3 ausgehandelt haben, erhalten eine [**PHONE \_ STATE-Nachricht,**](phone-state.md) die PHONESTATE REINIT angibt. Daher \_ müssen sie ihre Verwendung der API herunterfahren und [**phoneInitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize) erneut aufrufen, um die neue Anzahl von Geräten zu erhalten. Tapi Version 1.4 und höher erfordert jedoch nicht, dass alle Anwendungen heruntergefahren werden, bevor anwendungen erneut initialisiert werden können. Die erneute Initialisierung kann sofort erfolgen, wenn ein neues Gerät erstellt wird.
 
-Anwendungen, die TAPI-Version 1,4 oder höher unterstützen, erhalten eine Meldung zum **\_ Erstellen eines Telefons** . Dadurch werden Sie darüber informiert, dass das neue Gerät und die neue Gerätekennung vorhanden sind. Die Anwendung kann dann auswählen, ob versucht werden soll, mit dem neuen Gerät zu arbeiten.
+Anwendungen, die TAPI Version 1.4 oder höher unterstützen, erhalten eine **PHONE \_ CREATE-Nachricht.** Dies informiert sie über das Vorhandensein des neuen Geräts und seines neuen Gerätebezeichners. Die Anwendung kann dann auswählen, ob sie versucht, mit dem neuen Gerät am Arbeitsplatz zu arbeiten.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -86,13 +86,13 @@ Anwendungen, die TAPI-Version 1,4 oder höher unterstützen, erhalten eine Meldu
 
 <dl> <dt>
 
-[**Telefon \_ Status**](phone-state.md)
+[**\_TELEFONSTATUS**](phone-state.md)
 </dt> <dt>
 
-[**phoneinitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize)
+[**phoneInitialize**](/windows/desktop/api/Tapi/nf-tapi-phoneinitialize)
 </dt> <dt>
 
-[**phoneinitializeex**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)
+[**phoneInitializeEx**](/windows/desktop/api/Tapi/nf-tapi-phoneinitializeexa)
 </dt> </dl>
 
  

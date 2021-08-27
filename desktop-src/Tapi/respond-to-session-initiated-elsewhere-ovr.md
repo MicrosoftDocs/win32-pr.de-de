@@ -1,23 +1,23 @@
 ---
-description: Wenn eine neue Kommunikationssitzung eintrifft, werden TAPI-Anwendungen, die ein Interesse an der Adresse und dem Medientyp registriert haben, eine Ereignis Benachrichtigung gesendet.
+description: Wenn eine neue Kommunikationssitzung eintrifft, erhalten TAPI-Anwendungen, die ein Interesse an der Adresse und dem Medientyp registriert haben, eine Ereignisbenachrichtigung.
 ms.assetid: 6074619c-6aa0-4b03-9208-10268682e704
-title: Reagieren auf die an anderer Stelle initiierte Sitzung
+title: Reagieren auf an anderer Stelle initiierte Sitzungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85e25651b58f8841ac4de9bf14f4d139161c1359
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c74554b48919f7532561bfdf0bab7a163a58fbeb3734dc15e4a8d7e0869dad2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366267"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120072850"
 ---
-# <a name="respond-to-session-initiated-elsewhere"></a>Reagieren auf die an anderer Stelle initiierte Sitzung
+# <a name="respond-to-session-initiated-elsewhere"></a>Reagieren auf an anderer Stelle initiierte Sitzungen
 
-Wenn eine neue Kommunikationssitzung eintrifft, werden TAPI-Anwendungen, die ein Interesse an der [Adresse](address-ovr.md) und dem [Medientyp](media-type-ovr.md) registriert haben, eine [Ereignis Benachrichtigung](event-notification.md)gesendet. Nur eine Anwendung erhält Besitz [Rechte](privilege-ovr.md) für die Sitzung. Diese Anwendung kann die Sitzung nicht ablehnen.
+Wenn eine neue Kommunikationssitzung eintrifft, erhalten TAPI-Anwendungen, die ein Interesse an der Adresse und dem Medientyp registriert haben, eine [Ereignisbenachrichtigung.](event-notification.md) [](address-ovr.md) [](media-type-ovr.md) Nur einer Anwendung werden Besitzrechte [für](privilege-ovr.md) die Sitzung angeboten. Diese Anwendung kann die Sitzung nicht ablehnen.
 
-Der erste Ansichts Zustand einer eingehenden Sitzung ist "Angebot". Während sich der-Befehl im Angebots Zustand befindet, kann eine Anwendung Informationen wie den bearermodus und den Abruf Grund abrufen, wenn die Dienstanbieter diese Informationen bereitgestellt haben und verfügbar sind. Einige Aufruf Informationen sind möglicherweise nicht sofort verfügbar, z. b. die Aufruferkennung.
+Der anfängliche Aufrufstatus einer eingehenden Sitzung wird angeboten. Während sich der Aufruf im Angebotszustand befindet, kann eine Anwendung Informationen wie den Bearermodus und den Aufrufgrund abrufen, wenn die Dienstanbieter diese Informationen angegeben haben und verfügbar sind. Einige Aufrufinformationen sind möglicherweise nicht sofort verfügbar, z. B. die Aufrufer-ID.
 
-Es gibt sechs einfache Antworten auf eine angebotene Sitzung: " [Answer](answer-ovr.md)", " [Accept](accept-ovr.md)", " [Übergabe](handoffs-ovr.md)", " [Drop](drop-ovr.md)", " [Forward](forward-ovr.md)" und " [Redirect](redirect-ovr.md) Abhängig vom Dienstanbieter ist der vollständige Satz dieser Vorgänge möglicherweise nicht verfügbar.
+Es gibt sechs grundlegende Antworten auf eine angebotene [Sitzung:](answer-ovr.md) [Antwort,](accept-ovr.md)Annehmen, [Übergabe,](handoffs-ovr.md) [Ablegen,](drop-ovr.md)Weiterleiten [und](forward-ovr.md) [Umleiten](redirect-ovr.md)von . Je nach Dienstanbieter ist der vollständige Satz dieser Vorgänge möglicherweise nicht verfügbar.
 
  
 

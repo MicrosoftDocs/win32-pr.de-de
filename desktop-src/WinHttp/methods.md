@@ -1,31 +1,31 @@
 ---
-title: WinHTTP-Methoden
+title: WinHttp-Methoden
 description: Methoden
 ms.assetid: 26DA9C58-B295-4E34-B21A-BF31B55FBB37
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42e10a258f021c0a4b596cba90425ffc04534c36
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea327862118348d2396d01586b6e6a2c3b643a008269b69073a1ed01c23a2966
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071720"
 ---
-# <a name="winhttp-methods"></a>WinHTTP-Methoden
+# <a name="winhttp-methods"></a>WinHttp-Methoden
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**Abort-Methode**](iwinhttprequest-abort.md)
--   [**Getallresponsheaders-Methode**](iwinhttprequest-getallresponseheaders.md)
--   [**Getresponsheader-Methode**](iwinhttprequest-getresponseheader.md)
+-   [**GetAllResponseHeaders-Methode**](iwinhttprequest-getallresponseheaders.md)
+-   [**GetResponseHeader-Methode**](iwinhttprequest-getresponseheader.md)
 -   [**Open-Methode**](iwinhttprequest-open.md)
 -   [**Send-Methode**](iwinhttprequest-send.md)
--   [**"Ttautologonpolicy"-Methode**](iwinhttprequest-setautologonpolicy.md)
--   [**Setclientcertificate-Methode**](iwinhttprequest-setclientcertificate.md)
--   [**Setanmelde-Methode**](iwinhttprequest-setcredentials.md)
+-   [**SetAutoLogonPolicy-Methode**](iwinhttprequest-setautologonpolicy.md)
+-   [**SetClientCertificate-Methode**](iwinhttprequest-setclientcertificate.md)
+-   [**SetCredentials-Methode**](iwinhttprequest-setcredentials.md)
 -   [**SetProxy-Methode**](iwinhttprequest-setproxy.md)
--   [**"Ltrequestheader"-Methode**](iwinhttprequest-setrequestheader.md)
--   [**Settimeouts-Methode**](iwinhttprequest-settimeouts.md)
+-   [**SetRequestHeader-Methode**](iwinhttprequest-setrequestheader.md)
+-   [**SetTimeouts-Methode**](iwinhttprequest-settimeouts.md)
 -   [**WaitForResponse-Methode**](iwinhttprequest-waitforresponse.md)
 
  
