@@ -1,24 +1,24 @@
 ---
-title: Anzeigen von NET-Ereignissen
-description: Der folgende Beispielcode veranschaulicht, wie eine Serveranwendung aktuelle NET-Ereignisse ermitteln kann, die möglicherweise betroffen sind.
+title: Anzeigen von Net-Ereignissen
+description: Der folgende Beispielcode veranschaulicht, wie eine Serveranwendung aktuelle Net-Ereignisse finden könnte, die sich möglicherweise auf sie ausdehnen.
 ms.assetid: 24c1cf68-a67f-415a-a45d-0e0eb4aae636
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 582a2ad40d47fa3e999391d49b2f5a3a7dc23d3f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ff774a8a66899979150cb83936e45e200c2f2cb76a9266c01e233041356db93e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951289"
 ---
-# <a name="displaying-net-events"></a>Anzeigen von NET-Ereignissen
+# <a name="displaying-net-events"></a>Anzeigen von Net-Ereignissen
 
-Der folgende Beispielcode veranschaulicht, wie eine Serveranwendung aktuelle NET-Ereignisse ermitteln kann, die möglicherweise betroffen sind.
+Der folgende Beispielcode veranschaulicht, wie eine Serveranwendung aktuelle Net-Ereignisse finden kann, die sich möglicherweise auf sie ausdehnen.
 
 > [!Note]  
-> Die Filterbedingungen sind identisch mit denen, die von der kompatible **isportallowed** -API unterstützt werden.
+> Die Filterbedingungen sind mit denen identisch, die von der downleveln **IsPortAllowed-API unterstützt** werden.
 
- 
+ 
 
 
 ```C++
@@ -197,9 +197,9 @@ DWORD wmain(int argc,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,31 +1,31 @@
 ---
-title: Die Transmit_as-und represent_as Attribute
-description: In diesem Abschnitt wird die Implementierung der Konvertierung von programmierdatentypen mithilfe der Attribute "", "übertragen" \_ als \ und \ \_ als \ Attribute erläutert.
+title: Die transmit_as und represent_as Attribute
+description: In diesem Abschnitt wird die Implementierung der Datentypkonvertierung des Programmierers mithilfe der Attribute MIDL \ transmit \_ as\ und \ represent \_ as\ erläutert.
 ms.assetid: 2e1af786-f507-453f-bb10-74805ef6b1a9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16760091479a306b9dc9c815c7f3a41b25012ca2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 4d54c03ce7e467c7c34ad1ef473078006f24012231d1175b3b6b4b9d43bd3874
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923719"
 ---
-# <a name="the-transmit_as-and-represent_as-attributes"></a>Die Übertragung \_ als und stellt \_ als Attribute dar.
+# <a name="the-transmit_as-and-represent_as-attributes"></a>Die Übertragung \_ als und die Darstellung als \_ Attribute
 
-In diesem Abschnitt wird die Implementierung der Konvertierung von programmierdatentypen mithilfe der Mittelwert **\[** [**Übertragung \_ als**](/windows/desktop/Midl/transmit-as) **\]** und **\[** [**Darstellung \_ als**](/windows/desktop/Midl/represent-as) **\]** Attribute erläutert. Die Erörterung finden Sie in den folgenden Abschnitten:
+In diesem Abschnitt wird die Implementierung der Datentypkonvertierung des Programmierers mithilfe der MIDL-Übertragung **\[** [**\_ als**](/windows/desktop/Midl/transmit-as) und **\]** als **\[** [**\_ Attribute**](/windows/desktop/Midl/represent-as) **\]** beschrieben. Die Diskussion wird in den folgenden Abschnitten erläutert:
 
--   [Das Attribut "über **tragen \_ als** "](the-transmit-as-attribute.md)
--   [Der **Typ \_ der \_ xmit** -Funktion.](the-type-to-xmit-function.md)
--   [Der **Typ \_ aus der \_ xmit** -Funktion](the-type-from-xmit-function.md)
--   [Die **Type \_ Free \_ xmit** -Funktion](the-type-free-xmit-function.md)
--   [Die **\_ typfreie \_ inst** -Funktion](the-type-free-inst-function.md)
--   [Das **\_ As** -Attribut.](the-represent-as-attribute.md)
--   [Der **benannte \_ Typ \_ aus der \_ lokalen** Funktion.](the-named-type-from-local-function.md)
--   [Der **benannte \_ Typ \_ der \_ lokalen** Funktion.](the-named-type-to-local-function.md)
--   [Die **benannte \_ \_ typfreie \_ lokale** Funktion](the-named-type-free-local-function.md)
--   [Die **benannte \_ \_ typfreie \_ inst** -Funktion](the-named-type-free-inst-function.md)
+-   [Die **Übertragung \_ als** Attribut](the-transmit-as-attribute.md)
+-   [Der **Typ \_ der \_ xmit-Funktion**](the-type-to-xmit-function.md)
+-   [Der **Typ \_ der \_ xmit-Funktion**](the-type-from-xmit-function.md)
+-   [Die **\_ typfreie \_ xmit-Funktion**](the-type-free-xmit-function.md)
+-   [Der **Typ \_ free \_ inst** Function](the-type-free-inst-function.md)
+-   [Die **als \_ Attribut darstellende**](the-represent-as-attribute.md)
+-   [Der **benannte Typ aus der \_ \_ \_ lokalen** Funktion](the-named-type-from-local-function.md)
+-   [Der **benannte Typ für die \_ \_ \_ lokale** Funktion](the-named-type-to-local-function.md)
+-   [Die **benannte lokale Funktion vom Typ \_ \_ free \_**](the-named-type-free-local-function.md)
+-   [Die **funktion \_ \_ "free \_ inst" des benannten Typs**](the-named-type-free-inst-function.md)
 
- 
+ 
 
- 
+ 

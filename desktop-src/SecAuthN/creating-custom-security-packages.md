@@ -1,43 +1,43 @@
 ---
-description: Erläutert, wie ein benutzerdefiniertes Sicherheitspaket erstellt wird.
+description: Erläutert das Erstellen eines benutzerdefinierten Sicherheitspakets.
 ms.assetid: af8b9796-77e7-43c1-8f8e-acee01a62bf9
-title: Erstellen von benutzerdefinierten Sicherheitspaketen
+title: Erstellen benutzerdefinierter Sicherheitspakete
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2136775d18e9d33f59d1b1f44fd817b3f3271ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88093ba7faed1ac2287c2a54391015984e83d4ad3878a60453978a9924706f2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008848"
 ---
-# <a name="creating-custom-security-packages"></a>Erstellen von benutzerdefinierten Sicherheitspaketen
+# <a name="creating-custom-security-packages"></a>Erstellen benutzerdefinierter Sicherheitspakete
 
 ## <a name="ssp-security-packages"></a>SSP-Sicherheitspakete
 
-Wenn ein Sicherheitspaket für benutzerdefinierte Security Support Provider (SSP) ausschließlich für die Unterstützung von Client-/Serversicherheit verwendet wird, kann es die Microsoft [Security Support Provider-Schnittstelle](sspi.md)implementieren.
+Wenn ein benutzerdefiniertes Sicherheitsunterstützungspaket (Security Support Provider, SSP) ausschließlich für die Client-/Serversicherheitsunterstützung verwendet wird, kann es die Schnittstelle des [Microsoft-Sicherheitssupportanbieters](sspi.md)implementieren.
 
-Das sampssp-Beispiel, das im Platform Software Development Kit (SDK) enthalten ist, enthält ein Beispiel für eine SSP-Sicherheitspaket Implementierung.
+Das im Lieferumfang des Platform Software Development Kit (SDK) enthaltene SampSSP-Beispiel enthält eine SSP-Beispiel-Sicherheitspaketimplementierungen.
 
-## <a name="sspap-security-packages"></a>SSP/AP-Sicherheitspakete
+## <a name="sspap-security-packages"></a>SSP-/AP-Sicherheitspakete
 
-Benutzerdefinierte [*Security Support Provider*](/windows/desktop/SecGloss/s-gly) / [*Authentifizierungs Pakete*](/windows/desktop/SecGloss/a-gly) (SSP/APS) enthalten Sicherheitspakete, die als Authentifizierungs Pakete (APS) und Security Support Provider (SSPs) fungieren. Diese Pakete implementieren separate APIs, um die einzelnen Rollen zu unterstützen.
+Benutzerdefinierte [*Sicherheitsunterstützungsanbieter-Authentifizierungspakete*](/windows/desktop/SecGloss/s-gly) / [](/windows/desktop/SecGloss/a-gly) (SSP/APs) enthalten Sicherheitspakete, die als Authentifizierungspakete (APs) und Sicherheitsunterstützungsanbieter (Security Support Providers, SSPs) fungieren. Diese Pakete implementieren separate APIs, um jede Rolle zu unterstützen.
 
-Da es als AP fungiert, muss ein benutzerdefiniertes SSP/AP- [*Sicherheitspaket*](/windows/desktop/SecGloss/s-gly) Implementierungen für alle Funktionen bereitstellen, die [von Authentifizierungs Paketen implementiert](authentication-functions.md)werden.
+Da es als AP funktioniert, muss ein [](/windows/desktop/SecGloss/s-gly) benutzerdefiniertes SSP/AP-Sicherheitspaket Implementierungen für alle Funktionen bereitstellen, die [von Authentifizierungspaketen implementiert werden.](authentication-functions.md)
 
-Zum Bereitstellen integrierter Sicherheitsunterstützung muss ein benutzerdefiniertes SSP/AP-Sicherheitspaket Implementierungen für die [von SSP/APS implementierten Funktionen](authentication-functions.md)bereitstellen. [LSA-Funktionen, die von SSP/APS aufgerufen werden](authentication-functions.md) , beschreiben die Unterstützungsfunktionen, die für die SSP/AP-Entwickler zur Verfügung stehen, die mit der LSA interagieren möchten.
+Um integrierte Sicherheitsunterstützung bereitzustellen, muss ein benutzerdefiniertes SSP/AP-Sicherheitspaket Implementierungen für die [von SSP/APs implementierten Funktionen](authentication-functions.md)bereitstellen. [LSA-Funktionen, die von SSP/APs aufgerufen werden,](authentication-functions.md) beschreibt die Supportfunktionen, die den SSP/AP-Entwicklern zur Verfügung stehen, die mit dem LSA interagieren möchten.
 
-SSP/AP-Sicherheitspakete, die sowohl als AP als auch als SSP ausgeführt werden, können als Teil des Betriebssystems und als Teil einer Benutzeranwendung ausgeführt werden. Diese zwei Ausführungsmodi werden als LSA-Modus bzw. Benutzermodus bezeichnet. Ausführliche Informationen zu benutzerdefinierten Sicherheitspaketen im LSA-Modus finden Sie unter [LSA Mode Initialization](lsa-mode-initialization.md). Ausführliche Informationen zum Benutzermodus finden Sie unter [benutzermodusinitialisierung](user-mode-initialization.md).
+SSP-/AP-Sicherheitspakete können sowohl als AP als auch als SSP als Teil des Betriebssystems und als Teil einer Benutzeranwendung ausgeführt werden. Diese beiden Ausführungsmodi werden als LSA-Modus bzw. Benutzermodus bezeichnet. Ausführliche Informationen zu benutzerdefinierten Sicherheitspaketen im LSA-Modus finden Sie unter Initialisierung des [LSA-Modus.](lsa-mode-initialization.md) Weitere Informationen zum Benutzermodus finden Sie unter [Benutzermodusinitialisierung.](user-mode-initialization.md)
 
-Wenn ein benutzerdefiniertes SSP/AP-Sicherheitspaket Dienste für Client/Server-Anwendungen bereitstellt, sollte es Implementierungen für die Funktionen bereitstellen, die unter [von Benutzermodus-SSP/APS implementierte](authentication-functions.md)Funktionen beschrieben werden. [LSA-Funktionen, die vom benutzermodussp/APS aufgerufen werden](authentication-functions.md) , beschreiben die Unterstützungsfunktionen, die für eine SSP/AP-Ausführung in einem Client-oder Server Prozess verfügbar sind.
+Wenn ein benutzerdefiniertes SSP/AP-Sicherheitspaket Dienste für Client-/Serveranwendungen anbietet, sollte es Implementierungen für die Funktionen bereitstellen, die unter [Von SSP/APs im Benutzermodus implementierte](authentication-functions.md)Funktionen beschrieben sind. [LSA-Funktionen, die von SSP/APs im Benutzermodus aufgerufen werden,](authentication-functions.md) beschreiben die Supportfunktionen, die für einen SSP/AP verfügbar sind, der in einem Client- oder Serverprozess ausgeführt wird.
 
-Informationen zum Registrieren einer SSP/AP-dll finden Sie unter [Registrieren von SSP/AP-DLLs](registering-ssp-ap-dlls.md).
+Informationen zum Registrieren einer SSP/AP-DLL finden Sie unter [Registrieren von SSP-/AP-DLLs.](registering-ssp-ap-dlls.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einschränkungen bei der Registrierung und Installation eines Sicherheitspakets](restrictions-around-registering-and-installing-a-security-package.md)
+[Einschränkungen beim Registrieren und Installieren eines Sicherheitspakets](restrictions-around-registering-and-installing-a-security-package.md)
 </dt> </dl>
 
  

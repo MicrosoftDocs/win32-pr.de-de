@@ -1,5 +1,5 @@
 ---
-description: 'CPosPassThru.ConvertTimeFormat-Methode: Die ConvertTimeFormat-Methode konvertiert von einem Zeitformat in ein anderes. Diese Methode implementiert die IMediaSeeking::ConvertTimeFormat-Methode.'
+description: 'CPosPassThru.ConvertTimeFormat-Methode: Die ConvertTimeFormat-Methode konvertiert ein Zeitformat in ein anderes. Diese Methode implementiert die IMediaSeeking::ConvertTimeFormat-Methode.'
 ms.assetid: e766d112-ee41-4c64-a735-b6317093518a
 title: CPosPassThru.ConvertTimeFormat-Methode (Ctlutil.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fc463cb6dc891e677266289971a1dac8b335a8c7
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2382d36899bf7e3ac85e217502a878497274604ced4b77cf7acbc1465586c487
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954119"
 ---
 # <a name="cpospassthruconverttimeformat-method"></a>CPosPassThru.ConvertTimeFormat-Methode
 
@@ -55,36 +55,36 @@ Zeiger auf eine Variable, die die konvertierte Zeit empfängt.
 *pTargetFormat* 
 </dt> <dd>
 
-Zeiger auf die GUID des Zeitformats des Zielformats. Bei **NULL** wird das aktuelle Format verwendet.
+Zeiger auf die Zeitformat-GUID des Zielformats. Bei **NULL** wird das aktuelle Format verwendet.
 
 </dd> <dt>
 
 *Quelle* 
 </dt> <dd>
 
-Der zu konvertierende Zeitwert.
+Der zu konvertierte Zeitwert.
 
 </dd> <dt>
 
 *pSourceFormat* 
 </dt> <dd>
 
-Zeiger auf die Guid des Zeitformats des zu konvertierende Formats. Bei **NULL** wird das aktuelle Format verwendet.
+Zeiger auf die Zeitformat-GUID des zu konvertierenden Formats. Bei **NULL** wird das aktuelle Format verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

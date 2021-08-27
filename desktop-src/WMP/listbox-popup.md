@@ -1,9 +1,9 @@
 ---
-title: ListBox. popUp
-description: Das Popup Attribut gibt einen Wert an, der angibt, ob das Element ein popUp-oder Listenfeld-Steuerelement darstellt.
+title: LISTBOX.popUp
+description: Das popUp-Attribut gibt einen Wert an, der angibt, ob das Element ein Popup- oder Listenfeld-Steuerelement darstellt.
 ms.assetid: b0ade23a-6164-4dd4-b599-43ea1fcd44e4
 keywords:
-- ListBox. popUp-Fenster Media Player
+- LISTBOX.popUp-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43d197adbdf2ec27ea6ef7bf04c5c71d15ae923d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8a755a4fc8f5e1451ee118f718a9b6618e75875789faef7318164f7f2add2069
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996440"
 ---
-# <a name="listboxpopup"></a>ListBox. popUp
+# <a name="listboxpopup"></a>LISTBOX.popUp
 
-Das **Popup** Attribut gibt einen Wert an, der angibt, ob das Element ein popUp-oder Listenfeld-Steuerelement darstellt.
+Das **popUp-Attribut** gibt einen Wert an, der angibt, ob das Element ein Popup- oder Listenfeld-Steuerelement darstellt.
 
 ``` syntax
 <ELEMENT popUp="value">
@@ -29,22 +29,22 @@ Das **Popup** Attribut gibt einen Wert an, der angibt, ob das Element ein popUp-
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert, der nur zur Entwurfszeit angegeben wird.
+Dieses Attribut ist ein **boolescher Wert,** der nur zur Entwurfszeit angegeben wird.
 
 
 
 | Wert | BESCHREIBUNG                                |
 |-------|--------------------------------------------|
-| true  | Das-Element stellt ein Popup-Steuerelement dar.    |
-| false | Das-Element stellt ein Listenfeld-Steuerelement dar. |
+| true  | Das -Element stellt ein Popupsteuerelement dar.    |
+| false | Das -Element stellt ein Listenfeld-Steuerelement dar. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Popup** -Element stellt ein Listenfeld-Steuerelement dar, das nur bei Bedarf angezeigt wird. Sie ist mit dem **ListBox** -Element identisch, außer dem Standardwert dieses Attributs, das das Anzeigeverhalten ändert. Der Standardwert für **ListBox** -Elemente ist false. Für **Popup** Elemente ist der Standardwert true. Anstatt dieses Attribut anzugeben, sollte das **ListBox** -oder **Popup** Element entsprechend dem gewünschten Verhalten verwendet werden.
+Das **POPUP-Element** stellt ein Listenfeld-Steuerelement dar, das nur bei Bedarf angezeigt wird. Sie ist mit dem **LISTBOX-Element** identisch, mit Ausnahme des Standardwerts dieses Attributs, das das Anzeigeverhalten ändert. Für **LISTBOX-Elemente** ist der Standardwert FALSE. Für **POPUP-Elemente** ist der Standardwert TRUE. Anstatt dieses Attribut anzugeben, sollte das **LISTBOX-** oder **POPUP-Element** gemäß dem gewünschten Verhalten für verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,14 +56,14 @@ Das **Popup** -Element stellt ein Listenfeld-Steuerelement dar, das nur bei Beda
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**Popup-Element**](popup-element.md)
+[**POPUP-Element**](popup-element.md)
 </dt> </dl>
 
  

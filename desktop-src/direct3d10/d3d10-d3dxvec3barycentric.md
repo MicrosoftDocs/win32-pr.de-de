@@ -1,5 +1,5 @@
 ---
-description: 'D3DXVec3BaryCentric-Funktion (D3DX10Math.h): Gibt unter Verwendung der angegebenen 3D-Vektoren einen Punkt in barycentric-Koordinaten zurück.'
+description: 'D3DXVec3BaryCentric-Funktion (D3DX10Math.h): Gibt unter Verwendung der angegebenen 3D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.'
 ms.assetid: 572e151d-8044-480e-92b2-3f973d92d03e
 title: D3DXVec3BaryCentric-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: e350bde6d1b898088ccb9b68d10a9a346935bfd5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a0911a3e9e5bf0d1aa1df4d09f0b1fbcda0db2bc0bfe0c4c4b31da0f47c62999
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990640"
 ---
 # <a name="d3dxvec3barycentric-function-d3dx10mathh"></a>D3DXVec3BaryCentric-Funktion (D3DX10Math.h)
 
-Gibt unter Verwendung der angegebenen 3D-Vektoren einen Punkt in Barycentric-Koordinaten zurück.
+Gibt unter Verwendung der angegebenen 3D-Vektoren einen Punkt in baryzentrierten Koordinaten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -104,7 +104,7 @@ Typ: **[ **D3DXVECTOR3**](../direct3d9/d3dxvector3.md)\***
 
 Zeiger auf eine D3DXVECTOR3-Struktur in baryzentrierten Koordinaten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die D3DXVec3BaryCentric-Funktion bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + f(V2-V1) + g(V3-V1).
 
@@ -127,13 +127,13 @@ Baryzentrierte Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Be
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

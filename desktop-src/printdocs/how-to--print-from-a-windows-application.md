@@ -1,69 +1,69 @@
 ---
-description: In diesem Abschnitt wird beschrieben, wie Sie aus einem systemeigenen Windows-Programm drucken.
+description: In diesem Abschnitt wird beschrieben, wie Sie aus einem nativen Windows-Programm drucken.
 ms.assetid: D0AE8FF8-D02D-43D3-80CA-E13EAA894F87
-title: 'Gewusst wie: Drucken von einem Windows-Programm'
+title: 'Vorgehensweise: Drucken aus einem Windows-Programm'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84229823944d7f7104da359b953e579f1b21cdca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2999f112285dfff389583b15f7c7c2913a3e125bc58713e2ba5f18973aa6e1ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971339"
 ---
-# <a name="how-to-print-from-a-windows-program"></a>Gewusst wie: Drucken von einem Windows-Programm
+# <a name="how-to-print-from-a-windows-program"></a>Vorgehensweise: Drucken aus einem Windows-Programm
 
-In diesem Abschnitt wird beschrieben, wie Sie aus einem systemeigenen Windows-Programm drucken.
+In diesem Abschnitt wird beschrieben, wie Sie aus einem nativen Windows-Programm drucken.
 
 ## <a name="overview"></a>Übersicht
 
-Der Druckvorgang ist in der Regel ein wesentlicher Bestandteil eines nativen Windows-Programms. Daher ist es kein Feature, das Sie nach dem Schreiben des Programms problemlos hinzufügen können. Das heißt, wenn das Programm für die Verwendung von XPS-Dokumenten konzipiert ist, benötigen Sie ggf. zusätzlichen Code, um den Dokumentinhalt für den Druck zu rendieren. Die XPS-Dokumente der Anwendung können direkt an einen Drucker gesendet werden, der über einen XPSDrv-Druckertreiber verfügt.
+Das Drucken ist in der Regel ein integraler Bestandteil eines nativen Windows-Programms. Daher ist es kein Feature, das Sie einfach hinzufügen können, nachdem Sie das Programm geschrieben haben. Wenn das Programm für die Verwendung von XPS-Dokumenten konzipiert ist, ist jedoch ggf. nicht viel zusätzlicher Code erforderlich, um den Dokumentinhalt zum Drucken zu rendern. Die XPS-Dokumente der Anwendung können direkt an einen Drucker mit einem XPSDrv-Druckertreiber gesendet werden.
 
-Verwenden Sie die [XPS-Dokument-API](/previous-versions/windows/desktop/dd316976(v=vs.85)) , um den Dokumentinhalt und die [XPS-Druck-API](xps-printing.md) zu erstellen, um den Dokumentinhalt an den Drucker zu senden. Die XPS-Druck-API verarbeitet den Dokumentinhalt für den Ziel Drucker. Wenn der ausgewählte Drucker über einen XPSDrv-Druckertreiber verfügt, wird das Dokument ohne zusätzliche Konvertierung an den Drucker gesendet. Wenn der ausgewählte Drucker über einen GDI-basierten Druckertreiber verfügt, kann das Programm den Inhalt auch an den Drucker senden, und die XPS-Druck-API konvertiert den Dokumentinhalt so, dass er mit dem GDI-basierten Druckertreiber kompatibel ist. In beiden Fällen ist die Verarbeitung, die die Anwendung ausführt, identisch.
+Verwenden Sie die [XPS-Dokument-API,](/previous-versions/windows/desktop/dd316976(v=vs.85)) um den Dokumentinhalt zu erstellen, und die [XPS-Druck-API,](xps-printing.md) um den Dokumentinhalt an den Drucker zu senden. Die XPS-Druck-API verarbeitet den Dokumentinhalt für den Zieldrucker. Wenn der ausgewählte Drucker über einen XPSDrv-Druckertreiber verfügt, wird das Dokument ohne zusätzliche Konvertierung an den Drucker gesendet. Wenn der ausgewählte Drucker über einen GDI-basierten Druckertreiber verfügt, kann das Programm den Inhalt auch an den Drucker senden, und die XPS-Druck-API konvertiert den Dokumentinhalt so, dass er mit dem GDI-basierten Druckertreiber kompatibel ist. In beiden Fällen ist die Verarbeitung, die von der Anwendung ausgeführt wird, identisch.
 
-## <a name="printing-tasks"></a>Drucken von Aufgaben
+## <a name="printing-tasks"></a>Druckaufgaben
 
 In den folgenden Themen werden die grundlegenden Schritte zum Drucken von Programminhalten beschrieben.
 
-1.  **Sammeln von Druckauftrags Informationen vom Benutzer.**
+1.  **Sammeln von Druckauftragsinformationen vom Benutzer.**
 
-    In der Regel initiiert ein Benutzer einen Druckauftrag, wenn die Option Drucken in einem Menü ausgewählt wird, und das Programm zeigt ein Druck Dialogfeld an, in dem die Details des Druckauftrags erfasst werden. Der Benutzer wählt in der Regel den Drucker, die Anzahl der Kopien und die Drucker Konfigurationsdetails aus, z. b. zweiseitiges Drucken und Heften.
+    In der Regel initiiert ein Benutzer einen Druckauftrag, wenn er die Druckoption in einem Menü auswählt und das Programm ein Druckdialogfeld anzeigt, um die Details des Druckauftrags zu erfassen. Der Benutzer wählt in der Regel den Drucker, die Anzahl der Kopien und Details zur Druckerkonfiguration aus, z. B. zweiseitiges Drucken und Stapling.
 
-    Weitere Informationen hierzu finden Sie unter Gewusst [wie: Sammeln von Druckauftrags Informationen vom Benutzer](preparing-to-print.md).
+    Informationen dazu finden Sie unter [Vorgehensweise: Sammeln von Druckauftragsinformationen vom Benutzer](preparing-to-print.md).
 
 2.  **Statusanzeige erstellen.**
 
-    Eine Statusanzeige bietet dem Benutzer Feedback darüber, wie der Druckauftrag fortgesetzt wird. Die Statusanzeige kann eine Statusanzeige sein, die Teil eines Dialog Felds ist, das die Schaltfläche **Abbrechen** für den Auftrag enthält, oder es kann sich um eine Statusleiste in der Statusleiste am unteren Rand des Hauptfensters handeln.
+    Ein Statusindikator gibt dem Benutzer Feedback zum Fortschritt des Druckauftrags. Die Statusanzeige kann eine Statusanzeige sein, die Teil eines Dialogfelds ist, das die Schaltfläche **Abbrechen** für den Auftrag enthält, oder eine Statusanzeige in der Statusleiste am unteren Rand des Hauptfensters.
 
-    Weitere Informationen zur Funktions Anzeige finden Sie unter Gewusst [wie: Anzeigen des Status des Druckauftrags](cancel-dialog-box.md).
+    Informationen zur Funktionsweise der Statusanzeige finden Sie unter [Vorgehensweise: Anzeigen des Status des Druckauftrags.](cancel-dialog-box.md)
 
-    Weitere Ideen zum Anzeigen des Status des Druckauftrags finden Sie in den Informationen in den Entwicklungs Richtlinien für die [Windows-Anwendungs Benutzeroberfläche](/windows/desktop/windows-application-ui-development) .
+    Weitere Ideen zum Anzeigen des Status des Druckauftrags finden Sie in den Informationen in den Richtlinien für die Entwicklung der [Windows-Anwendungs-UI.](/windows/desktop/windows-application-ui-development)
 
-3.  **Starten Sie den Druck Thread.**
+3.  **Starten Sie den Druckthread.**
 
-    Nachdem das Programm die Druckauftrags Informationen vom Benutzer gesammelt hat, kann es den Druck Thread starten, um die tatsächliche Verarbeitung des Dokuments zum Drucken auszuführen.
+    Nachdem das Programm die Druckauftragsinformationen vom Benutzer gesammelt hat, kann es den Druckthread starten, um die eigentliche Verarbeitung des Dokuments zum Drucken durchzuführen.
 
-    Weitere Informationen zum Druck Thread finden Sie unter Gewusst [wie: starten und Abbrechen eines Druck Threads](how-to--start-and-stop-a-printing-thread.md).
+    Informationen zum Druckthread finden Sie unter [Vorgehensweise: Starten und Beenden eines Druckthreads.](how-to--start-and-stop-a-printing-thread.md)
 
-4.  **Renderdruck Auftragsdaten.**
+4.  **Rendern von Druckauftragsdaten.**
 
-    Der Druck Thread rendert die Dokument Daten zum Drucken. Sie sollten diese Verarbeitung in diskrete Verarbeitungsschritte unterbrechen, damit der Benutzer die Verarbeitung unterbrechen und den Auftrag abbrechen und den Verarbeitungs Thread nicht zulassen kann, um andere Threads und Prozesse zu blockieren.
+    Der Druckthread rendert die Dokumentdaten zum Drucken. Sie sollten diese Verarbeitung in diskrete Verarbeitungsschritte aufgliedern, damit der Benutzer die Verarbeitung unterbrechen und den Auftrag abbrechen kann und der Verarbeitungsthread nicht andere Threads und Prozesse blockieren darf.
 
-    Informationen dazu, wie die Druckauftrags Daten rendert, finden [Sie unter Gewusst wie: Rendern von Druckauftrags Daten](how-to--render-the-print-job-data.md).
+    Informationen dazu, wie die Druckauftragsdaten rendert, finden Sie unter [Vorgehensweise: Rendern von Druckauftragsdaten.](how-to--render-the-print-job-data.md)
 
-5.  **Überwachen des Status des Druckauftrags.**
+5.  **Überwachen sie den Status des Druckauftrags.**
 
-    Aktualisieren Sie die Statusanzeige, wenn jeder Verarbeitungsschritt ausgeführt wird, um die Verwendung zu informieren. Berechnen Sie die Verarbeitungsschritte, um den angeforderten Auftrag abzuschließen, und aktualisieren Sie dann die Statusanzeige, wenn diese Schritte ausgeführt werden.
+    Wenn jeder Verarbeitungsschritt ausgeführt wird, aktualisieren Sie die Statusanzeige, um die Verwendung zu informieren. Berechnen Sie die Verarbeitungsschritte, um den angeforderten Auftrag abzuschließen, und aktualisieren Sie dann die Statusanzeige, während diese Schritte ausgeführt werden.
 
-6.  **Druckauftrag schließen und Druck Thread beenden.**
+6.  **Schließen Sie den Druckauftrag, und beenden Sie den Druckthread.**
 
-    Nachdem das Programm den Druckauftrag an den Drucker gesendet hat, oder wenn der Benutzer den Druckauftrag abgebrochen hat, müssen Sie den Druckauftrag schließen und die vom Druckauftrag verwendeten Ressourcen freigeben.
+    Nachdem das Programm den Druckauftrag an den Drucker gesendet hat oder der Benutzer den Druckauftrag abgebrochen hat, müssen Sie den Druckauftrag schließen und die vom Druckauftrag verwendeten Ressourcen freigeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Gewusst wie: Sammeln von Druckauftrags Informationen vom Benutzer](preparing-to-print.md)
+[Vorgehensweise: Sammeln von Druckauftragsinformationen vom Benutzer](preparing-to-print.md)
 </dt> </dl>
 
  

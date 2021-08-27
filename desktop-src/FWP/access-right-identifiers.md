@@ -1,6 +1,6 @@
 ---
-title: Zugriffsrechte Bezeichner ("f")
-description: Die Windows-Filter Plattform (WFP) verwendet die standardmäßigen Win32-Zugriffsrechte sowie einen Satz WFP-spezifischer Zugriffsrechte, der in die Filter Plattform integriert ist.
+title: Zugriffsberechtigungsbezeichner (Fwpmu.h)
+description: Windows Die Filterplattform (WFP) verwendet die Win32-Standardzugriffsrechte sowie eine Reihe von WFP-spezifischen Zugriffsrechten, die in die Filterplattform integriert sind.
 ms.assetid: 77f0a1ac-3e99-4cba-a7c6-b8747f35cd0c
 topic_type:
 - apiref
@@ -26,167 +26,167 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8af182a087ade590e278bd3dd1d2bb1a64b5c598
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6deee82b792f525814ac4c841da8a848e4f7b978720755c82f93a9569ba21ca7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951378"
 ---
-# <a name="access-right-identifiers"></a>Zugriffsrechte Bezeichner
+# <a name="access-right-identifiers"></a>Zugriffsberechtigungsbezeichner
 
-Die Windows-Filter Plattform (WFP) verwendet die [standardmäßigen Win32-Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) sowie einen Satz WFP-spezifischer Zugriffsrechte, der in die Filter Plattform integriert ist. Diese Zugriffsrechte werden ausschließlich zum Sichern von Objekten im Benutzermodus verwendet. Kernelmodusaufrufer umgehen alle Zugriffs Überprüfungen.
+Windows Die Filterplattform (WFP) verwendet die [Win32-Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights) sowie eine Reihe von WFP-spezifischen Zugriffsrechten, die in die Filterplattform integriert sind. Diese Zugriffsrechte werden nur zum Schützen von Objekten im Benutzermodus verwendet. Aufrufer im Kernelmodus umgehen alle Zugriffsüberprüfungen.
 
-Die WFP-spezifischen zugriffsrechterer Bezeichner lauten wie folgt.
+WFP-spezifische Zugriffsberechtigungsbezeichner lauten wie folgt.
 
 <dl> <dt>
 
-<span id="FWPM_ACTRL_ADD"></span><span id="fwpm_actrl_add"></span>**Hinzufügen von "f"- \_ actrl \_**
+<span id="FWPM_ACTRL_ADD"></span><span id="fwpm_actrl_add"></span>**FWPM \_ ACTRL \_ ADD**
 </dt> <dd> <dl> <dt>
 
 
 
-Fügen Sie der Basis Filter-Engine (BFE) ein Objekt hinzu. Dieses Zugriffsrecht ist erforderlich, um [**fwpm \* Add0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmipsectunneladd0) -Funktionen aufzurufen.
+Fügen Sie der Basisfilter-Engine (BFE) ein -Objekt hinzu. Dieses Zugriffsrecht ist erforderlich, um [**Fwpm \* Add0-Funktionen aufrufen zu**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmipsectunneladd0) können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_ADD_LINK"></span><span id="fwpm_actrl_add_link"></span>**\_ \_ Link zum Hinzufügen von "f"-actrl \_**
+<span id="FWPM_ACTRL_ADD_LINK"></span><span id="fwpm_actrl_add_link"></span>**FWPM \_ ACTRL \_ LINK \_ HINZUFÜGEN**
 </dt> <dd> <dl> <dt>
 
 
 
-Hinzufügen eines Objekts, auf das über einen Link verwiesen wird Beispielsweise wird dieses Zugriffsrecht für Aufrufe benötigt, auf die über GUIDs verwiesen wird.
+Fügen Sie ein Objekt hinzu, auf das über einen Link verwiesen wird. Dieses Zugriffsrecht ist beispielsweise für Aufrufe erforderlich, auf die über GUIDs verwiesen wird.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_BEGIN_READ_TXN"></span><span id="fwpm_actrl_begin_read_txn"></span>**f- \_ v-actrl \_ Begin \_ Read \_**
+<span id="FWPM_ACTRL_BEGIN_READ_TXN"></span><span id="fwpm_actrl_begin_read_txn"></span>**FWPM \_ ACTRL \_ BEGIN \_ READ \_ TXN**
 </dt> <dd> <dl> <dt>
 
 
 
-Beginnen Sie eine schreibgeschützte Transaktion. Dieses Zugriffsrecht ist erforderlich, um [**FwpmTransactionBegin0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactionbegin0)aufzurufen.
+Startet eine schreibgeschützte Transaktion. Dieses Zugriffsrecht ist zum Aufrufen von [**FwpmTransactionBegin0 erforderlich.**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactionbegin0)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_BEGIN_WRITE_TXN"></span><span id="fwpm_actrl_begin_write_txn"></span>**f/a- \_ \_ \_ Schreibvorgänge starten \_**
+<span id="FWPM_ACTRL_BEGIN_WRITE_TXN"></span><span id="fwpm_actrl_begin_write_txn"></span>**FWPM \_ ACTRL \_ BEGIN \_ WRITE \_ TXN**
 </dt> <dd> <dl> <dt>
 
 
 
-Beginnen Sie eine Transaktion mit Lese-/Schreibzugriff. Dieses Zugriffsrecht ist erforderlich, um [**FwpmTransactionBegin0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactionbegin0) für eine Lese-/Schreibtransaktion aufzurufen.
+Starten sie eine Lese-/Schreibtransaktion. Dieses Zugriffsrecht ist erforderlich, um [**FwpmTransactionBegin0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmtransactionbegin0) für eine Lese-/Schreibtransaktion aufrufen zu können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_CLASSIFY"></span><span id="fwpm_actrl_classify"></span>**\_kwpm-actrl- \_ Klassifizierung**
+<span id="FWPM_ACTRL_CLASSIFY"></span><span id="fwpm_actrl_classify"></span>**FWPM \_ ACTRL \_ CLASSIFY**
 </dt> <dd> <dl> <dt>
 
 
 
-Klassifizieren eines Remote Prozedur Aufrufs (RPC). Dieses Zugriffsrecht wird von der RPC-Laufzeit benötigt, um RPC-Filter zu erzwingen.
+Klassifizieren eines Remoteprozeduraufrufs (RPC). Dieses Zugriffsrecht wird von der RPC-Laufzeit benötigt, um RPC-Filter zu erzwingen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_ENUM"></span><span id="fwpm_actrl_enum"></span>**WPM- \_ actrl-Aufzählung \_**
+<span id="FWPM_ACTRL_ENUM"></span><span id="fwpm_actrl_enum"></span>**\_ \_ FWPM-ACTRL-ENUM**
 </dt> <dd> <dl> <dt>
 
 
 
-Auflisten. Dieses Zugriffsrecht ist erforderlich, um [**fwpm \* CreateEnumHandle0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutcreateenumhandle0) -Funktionen aufzurufen. Zum Auflisten eines Objekts benötigt der Aufrufer ebenfalls fwpm- \_ actrl- \_ Lesezugriff auf das Objekt.
+Auflisten. Dieses Zugriffsrecht ist erforderlich, um [**Fwpm \* CreateEnumHandle0-Funktionen aufrufen zu**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutcreateenumhandle0) können. Um ein Objekt aufzählen zu können, benötigt der Aufrufer auch FWPM \_ ACTRL \_ READ-Zugriff auf das Objekt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_OPEN"></span><span id="fwpm_actrl_open"></span>**geöffnetes WPM- \_ actrl \_**
+<span id="FWPM_ACTRL_OPEN"></span><span id="fwpm_actrl_open"></span>**FWPM \_ ACTRL \_ GEÖFFNET**
 </dt> <dd> <dl> <dt>
 
 
 
-Öffnen Sie eine Sitzung für die Filter-Engine. Dieses Zugriffsrecht ist erforderlich, um [**FwpmEngineOpen0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmengineopen0)aufzurufen.
+Öffnen Sie eine Sitzung mit der Filter-Engine. Dieses Zugriffsrecht ist erforderlich, um [**FwpmEngineOpen0 aufrufen zu können.**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmengineopen0)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_READ"></span><span id="fwpm_actrl_read"></span>**\_Lesezugriff auf die Datei \_**
+<span id="FWPM_ACTRL_READ"></span><span id="fwpm_actrl_read"></span>**FWPM \_ ACTRL \_ READ**
 </dt> <dd> <dl> <dt>
 
 
 
-Lesen. Dieses Zugriffsrecht ist erforderlich, um [**fwpm \* GetById0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutgetbyid0) und [**fwpm \* GetByKey0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutgetbykey0) -Funktionen aufzurufen.
+Lesen. Dieses Zugriffsrecht ist erforderlich, um [**die Funktionen Fwpm \* GetById0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutgetbyid0) und [**Fwpm \* GetByKey0 aufrufen zu**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmcalloutgetbykey0) können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_READ_STATS"></span><span id="fwpm_actrl_read_stats"></span>**Lese Statistik für das awpm- \_ actrl \_ \_**
+<span id="FWPM_ACTRL_READ_STATS"></span><span id="fwpm_actrl_read_stats"></span>**FWPM \_ ACTRL \_ READ \_ STATS**
 </dt> <dd> <dl> <dt>
 
 
 
-Lesen von Statistiken. Dieses Zugriffsrecht ist erforderlich, um [**IPsecGetStatistics0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecgetstatistics0) und [**IkeextGetStatistics0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextgetstatistics0)aufzurufen.
+Lesen von Statistiken. Dieses Zugriffsrecht ist erforderlich, um [**IPsecGetStatistics0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecgetstatistics0) und [**IkeextGetStatistics0 aufrufen zu können.**](/windows/desktop/api/Fwpmu/nf-fwpmu-ikeextgetstatistics0)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_SUBSCRIBE"></span><span id="fwpm_actrl_subscribe"></span>**Konto für die \_ Anmeldung mit dem \_ Anmelde Namen**
+<span id="FWPM_ACTRL_SUBSCRIBE"></span><span id="fwpm_actrl_subscribe"></span>**FWPM \_ ACTRL \_ SUBSCRIBE**
 </dt> <dd> <dl> <dt>
 
 
 
-Führen Sie den Schritt zum Abonnieren aus. Dieses Zugriffsrecht ist erforderlich, um [**fwpm \* SubscribeChanges0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidersubscribechanges0) -Funktionen aufzurufen. Um eine Benachrichtigung für ein Objekt zu erhalten, benötigt ein Abonnent ebenfalls fwpm- \_ actrl- \_ Lesezugriff auf das Objekt.
+Führen Sie den Schritt zum Abonnieren aus. Dieses Zugriffsrecht ist zum Aufrufen von [**Fwpm \* SubscribeChanges0-Funktionen**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmprovidersubscribechanges0) erforderlich. Um eine Benachrichtigung für ein Objekt zu erhalten, benötigt ein Abonnent auch FWPM \_ ACTRL \_ READ-Zugriff auf das Objekt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_ACTRL_WRITE"></span><span id="fwpm_actrl_write"></span>**f- \_ \_ /Schreibzugriff**
+<span id="FWPM_ACTRL_WRITE"></span><span id="fwpm_actrl_write"></span>**FWPM \_ ACTRL \_ WRITE**
 </dt> <dd> <dl> <dt>
 
 
 
-Schreiben von Engine-Optionen. Dieses Zugriffsrecht ist erforderlich, um [**FwpmEngineSetOption0**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmenginesetoption0)aufzurufen.
+Schreib-Engine-Optionen. Dieses Zugriffsrecht ist erforderlich, um [**FwpmEngineSetOption0 aufrufen zu können.**](/windows/desktop/api/Fwpmu/nf-fwpmu-fwpmenginesetoption0)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_GENERIC_READ"></span><span id="fwpm_generic_read"></span>**allgemeiner f- \_ \_ Lesevorgang**
+<span id="FWPM_GENERIC_READ"></span><span id="fwpm_generic_read"></span>**GENERISCHER \_ \_ FWPM-LESE-CODE**
 </dt> <dd> <dl> <dt>
 
 
 
-Standard \_ Rechte \_ gelesene \| f \_ & \_ \_ \_ \| \_ \_ \| \_ \_ \| \_ \_ \| \_ \_ \_ # amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; amp; quot; Lesen
+STANDARD \_ RIGHTS \_ READ \| FWPM \_ ACTRL \_ BEGIN \_ READ \_ TXN \| FWPM \_ ACTRL \_ CLASSIFY \| FWPM \_ ACTRL \_ OPEN \| FWPM \_ ACTRL \_ READ \| FWPM \_ ACTRL \_ READ \_ STATS
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_GENERIC_EXECUTE"></span><span id="fwpm_generic_execute"></span>**\_Allgemeine Ausführung von "f" \_**
+<span id="FWPM_GENERIC_EXECUTE"></span><span id="fwpm_generic_execute"></span>**FWPM \_ GENERIC \_ EXECUTE**
 </dt> <dd> <dl> <dt>
 
 
 
-Standard \_ Rechte \_ Ausführen von \| swpm \_ actrl \_ enum SS-actrl \| \_ \_ abonnieren
+STANDARD \_ RIGHTS \_ EXECUTE \| FWPM \_ ACTRL \_ ENUM \| FWPM \_ ACTRL \_ SUBSCRIBE
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_GENERIC_WRITE"></span><span id="fwpm_generic_write"></span>**allgemeiner f- \_ \_ Schreibvorgang**
+<span id="FWPM_GENERIC_WRITE"></span><span id="fwpm_generic_write"></span>**GENERISCHER \_ \_ FWPM-SCHREIBZUGRIFF**
 </dt> <dd> <dl> <dt>
 
 
 
-Standard \_ Rechte Schreib Berechtigung für das Löschen von Lese-/Ausgabe-/Ausgabe-/Quell-hinzufügen \_ \| \| \_ \_ \| \_ \_ \_ \| \_ \_ \_ \_ \| \_ \_
+STANDARD \_ RIGHTS \_ WRITE \| DELETE \| FWPM \_ ACTRL \_ ADD \| FWPM \_ ACTRL \_ ADD \_ LINK \| FWPM \_ ACTRL \_ BEGIN \_ WRITE \_ TXN \| FWPM \_ ACTRL \_ WRITE
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="FWPM_GENERIC_ALL"></span><span id="fwpm_generic_all"></span>**\_alle allgemeinen voll \_ ständig**
+<span id="FWPM_GENERIC_ALL"></span><span id="fwpm_generic_all"></span>**FWPM \_ GENERIC \_ ALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Standard \_ Rechte \_ erforderlich, \| f WPM- \_ actrl \_ Add \| f WPM \_ actrl \_ Add Link f/amp; \_ \| \_ actrl \_ Begin \_ Read \_ TXn \| f. \_ \_ \_ \_ \| \_ \_ klassifizieren von \| BPM- \_ actrl \_ Enum \| f- \_ actrl \_ Open \| f \_ \_ \| \_ \_ \_ \| \_ \_ \| \_ \_ -actrl lesen Sie den Befehl zum Lesen von Daten, Lese Statistik, f
+STANDARD \_ RIGHTS \_ REQUIRED \| FWPM \_ ACTRL \_ ADD \| FWPM \_ ACTRL \_ ADD \_ LINK \| FWPM \_ ACTRL \_ BEGIN \_ READ \_ TXN \| FWPM \_ ACTRL \_ BEGIN \_ WRITE \_ TXN \| FWPM \_ ACTRL \_ CLASSIFY \| FWPM \_ ACTRL \_ ENUM \| FWPM \_ ACTRL \_ OPEN \| FWPM \_ ACTRL \_ READ \| FWPM \_ ACTRL \_ READ \_ STATS \| FWPM \_ ACTRL \_ SUBSCRIBE \| FWPM \_ ACTRL \_ WRITE
 
 
 </dt> </dl> </dd> </dl>
@@ -197,9 +197,9 @@ Standard \_ Rechte \_ erforderlich, \| f WPM- \_ actrl \_ Add \| f WPM \_ actrl 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>"F"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Fwpmu.h</dt> </dl> |
 
 
 
@@ -207,10 +207,10 @@ Standard \_ Rechte \_ erforderlich, \| f WPM- \_ actrl \_ Add \| f WPM \_ actrl 
 
 <dl> <dt>
 
-[Windows-Filter Plattform Access Control Modell](access-control.md)
+[Windows Filtern des plattformübergreifenden Access Control Modells](access-control.md)
 </dt> <dt>
 
-[Standard Zugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)
+[Standardzugriffsrechte](/windows/desktop/SecAuthZ/standard-access-rights)
 </dt> </dl>
 
  

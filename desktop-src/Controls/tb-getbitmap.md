@@ -1,9 +1,9 @@
 ---
-title: TB_GETBITMAP Meldung (kommstrg. h)
+title: TB_GETBITMAP (Commctrl.h)
 description: Ruft den Index der Bitmap ab, die einer Schaltfläche in einer Symbolleiste zugeordnet ist.
 ms.assetid: 64878cca-7d71-48ad-b2ed-d2bdc3067592
 keywords:
-- Windows-Steuerelemente für TB_GETBITMAP Meldung
+- TB_GETBITMAP von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 771073b67b1421a5d9bda9d162bc234400c85885
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ebb976d206de0cdbd0234763f92ac0417cc974355a3371d04476d7969e1f763c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957909"
 ---
-# <a name="tb_getbitmap-message"></a>TB \_ getbitmap-Meldung
+# <a name="tb_getbitmap-message"></a>TB \_ GETBITMAP-Nachricht
 
 Ruft den Index der Bitmap ab, die einer Schaltfläche in einer Symbolleiste zugeordnet ist.
 
@@ -32,7 +32,7 @@ Ruft den Index der Bitmap ab, die einer Schaltfläche in einer Symbolleiste zuge
 *wParam* 
 </dt> <dd>
 
-Befehls Bezeichner der Schaltfläche, deren Bitmapindex abgerufen werden soll.
+Befehlsbezeichner der Schaltfläche, deren Bitmapindex abgerufen werden soll.
 
 </dd> <dt>
 
@@ -49,9 +49,9 @@ Gibt den Index der Bitmap zurück, wenn erfolgreich, andernfalls 0 (null).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

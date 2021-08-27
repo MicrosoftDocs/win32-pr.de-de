@@ -1,25 +1,25 @@
 ---
-description: CAB-Dateien bieten eine kompakte und organisierte Methode zum Speichern komprimierter Quelldateien.
+description: Schränkdateien bieten eine kompakte und organisiert Möglichkeit, komprimierte Quelldateien zu speichern.
 ms.assetid: EA909473-1F3E-47E7-9C98-6D73E309D673
-title: CAB-Dateien (Setup-API)
+title: Cabinet Files (Setup-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 559f67c257e65446a3f48f8689eca40cf33d19a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c31e4166917770f4107d814b8073f2c82129bc0631d701dcc520b5899f0dbf8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118887629"
 ---
-# <a name="cabinet-files-setup-api"></a>CAB-Dateien (Setup-API)
+# <a name="cabinet-files-setup-api"></a>Cabinet Files (Setup-API)
 
-CAB-Dateien bieten eine kompakte und organisierte Methode zum Speichern komprimierter Quelldateien. In den folgenden Themen wird beschrieben, was CAB-Dateien sind und wie Sie von den Setup Funktionen verarbeitet werden:
+Schränkdateien bieten eine kompakte und organisiert Möglichkeit, komprimierte Quelldateien zu speichern. In den folgenden Themen wird beschrieben, was Schränkungsdateien sind und wie sie von den Setupfunktionen verarbeitet werden:
 
-In den folgenden Themen wird beschrieben, was CAB-Dateien sind und wie Sie von den Setup Funktionen verarbeitet werden:
+In den folgenden Themen wird beschrieben, was Schränkungsdateien sind und wie sie von den Setupfunktionen verarbeitet werden:
 
--   [Informationen zu CAB-Dateien](about-cabinet-files.md)
--   [Verwenden von CAB-Dateien](using-cabinet-files.md)
--   [CAB-Datei Verweis](cabinet-file-reference.md)
+-   [Informationen zu Cabinet-Dateien](about-cabinet-files.md)
+-   [Verwenden von Cabinet-Dateien](using-cabinet-files.md)
+-   [Referenz zur Cabinet-Datei](cabinet-file-reference.md)
 
  
 

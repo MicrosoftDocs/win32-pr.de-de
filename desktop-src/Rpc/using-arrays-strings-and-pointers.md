@@ -1,19 +1,19 @@
 ---
-title: Verwenden von Arrays, Zeichen folgen und Zeigern
-description: Das Doctor-Programm (siehe \\ Beispiele \\ für den RPC- \\ Arzt im Platform Software Development Kit (SDK)) ist ein gutes Beispiel für eine Anwendung, die die Entwurfs Kompromisse im Hinblick auf Array-und Zeichen folgen Attribute veranschaulicht.
+title: Verwenden von Arrays, Zeichenfolgen und Zeigern
+description: Das Programm "Doctor" (siehe Beispiele für \\ rpc doctor im Platform Software Development Kit \\ \\ (SDK)) ist ein gutes Beispiel für eine Anwendung, die die entwurfsbezogenen Vor- und Vorzeichen im Zusammenhang mit Array- und Zeichenfolgenattributen veranschaulicht.
 ms.assetid: 9aea94a1-ae1f-4bd6-9dd3-146edf0b5fec
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 542a174b9ffd742ecf88de7231449a780be8dca9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8371c9c60f19e6ce59c62da637cbe2e844e919984b9c2c905053b61e6deb251b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010839"
 ---
-# <a name="using-arrays-strings-and-pointers"></a>Verwenden von Arrays, Zeichen folgen und Zeigern
+# <a name="using-arrays-strings-and-pointers"></a>Verwenden von Arrays, Zeichenfolgen und Zeigern
 
-Das Doctor-Programm (siehe \\ Beispiele \\ für den RPC- \\ Arzt im Platform Software Development Kit (SDK)) ist ein gutes Beispiel für eine Anwendung, die die Entwurfs Kompromisse im Hinblick auf Array-und Zeichen folgen Attribute veranschaulicht. Das Doktor Programm ist eine kleine Beispiel Version eines besser bekannten Programms, Eliza, das von künstlicher Intelligenz-Forscher Joseph Weizenbaums unter mit in den 1960er Jahren entwickelt wurde. Das Programm imitiert einen Therapeuten mithilfe eines einfachen Musterabgleich, um auf Eingaben in natürlicher Sprache zu reagieren.
+Das Programm "Doctor" (siehe Beispiele für \\ rpc doctor im Platform Software Development Kit \\ \\ (SDK)) ist ein gutes Beispiel für eine Anwendung, die die entwurfsbezogenen Vor- und Vorzeichen im Zusammenhang mit Array- und Zeichenfolgenattributen veranschaulicht. Das Doctor-Programm ist eine kleine Beispielversion eines bekannteren Programms, Eliza, das in den 1960er Jahren von dem Künstlichen Intelligenz-ForscherIfiziellenIfizär Heißtbaum am MIT entwickelt wurde. Das Programm imitiert eine Ante mithilfe eines einfachen Musterabgleichs, um auf Eingaben in natürlicher Sprache zu reagieren.
 
 Das Eliza-Programm hat die folgende Sitzung aufgezeichnet.
 
@@ -21,46 +21,46 @@ Das Eliza-Programm hat die folgende Sitzung aufgezeichnet.
 
 | Benutzer                                                | Eliza                                                     |
 |-----------------------------------------------------|-----------------------------------------------------------|
-| Alle Männer sind gleich.                                  | In welcher Weise?                                              |
-| Sie sind immer etwas oder ein anderes. | Können Sie sich ein bestimmtes Beispiel vorstellen?                      |
-| Nun, ich bin hier.               | Ihr Freund wurde Ihnen angezeigt.                        |
-| Er sagt, dass ich viel Zeit gedrückt habe.             | Tut mir leid, dass Sie depressiv sind.                |
-| Das ist richtig, ich bin unzufrieden.                            | Sollten Sie sich hier vorstellen, dass Sie nicht unzufrieden sein sollten? |
-| Ich benötige Hilfe, Dies scheint sehr sicher zu sein.          | Was bedeutet es für Sie, wenn Sie Hilfe erhalten?           |
-| Vielleicht habe ich gelernt, mit meiner Mutter zu gelangen.  | Weitere Informationen zu Ihrer Familie.                           |
-| Meine Mutter kümmert mich um mich.                         | Welche anderen Personen in ihrer Familie kümmern sich um Sie?                |
-| Mein Vater.                                          | Ihr Vater.                                              |
-| Auf irgendeine Weise gefällt Ihnen mein Vater.                | Welche Ähnlichkeit sehen Sie?                              |
+| Die Menschen sind alle gleich.                                  | In welcher Weise?                                              |
+| Sie stoßen uns immer auf etwas oder andere Fehler an. | Können Sie sich ein bestimmtes Beispiel vorstellen?                      |
+| Nun, mein Freund hat mich hierher gebracht.               | Ihr Freund hat Sie hierher gebracht.                        |
+| Er sagt, dass ich einen Großteil der Zeit ausgelastet habe.             | Ich habe leider gehört, dass Sie ausgelastet sind.                |
+| Das ist richtig, ich bin unentmutbar.                            | Denken Sie, dass die Ankunft hier Ihnen hilft, nicht unzumutbar zu sein? |
+| Ich benötige Hilfe. so viel scheint sicher zu sein.          | Was würde es für Sie bedeuten, wenn Sie Hilfe erhalten würden?           |
+| Vielleicht könnte ich lernen, mich mit meinen Eltern zu machen.  | Teilen Sie mir mehr über Ihre Familie mit.                           |
+| Meine Mutter kümmert sich um mich.                         | Wer sich andere Personen in Ihrer Familie um Sie kümmern?                |
+| Mein Vater.                                          | Ihr Familienpate.                                              |
+| Sie sind in gewisser Weise wie mein Freund.                | Welche Ähnlichkeit sehen Sie?                              |
 
 
 
- 
+ 
 
-Das Doktor Programm kann in Client seitige und serverseitige Anwendungen aufgeteilt werden. Die Clientseite fordert den Patienten zur Eingabe auf und zeigt die Antwort des Arztes an. Die Serverseite verarbeitet die Patienten Eingaben und generiert die Antwort des Arztes. Dies ist ein klassisches Beispiel für eine Client/Server-Anwendung: der Client ist für die Benutzerinteraktion zuständig, während der Server die umfangreiche Rechen Last verarbeitet. Es werden nicht viele Daten an die Funktion übermittelt und von der Funktion zurückgegeben, aber da die Daten eine beträchtliche Menge an Verarbeitung erfordern, wird Sie vom Server verarbeitet.
+Das Programm "Doctor" kann in clientseitige und serverseitige Anwendungen aufgeteilt werden. Die Clientseite fordert den Patienten zur Eingabe auf und zeigt die Antwort des Arztes an. Die Serverseite verarbeitet die Patienteneingabe und generiert die Antwort des Arztes. Dies ist ein klassisches Beispiel für eine Client-Server-Anwendung: Der Client ist für die Benutzerinteraktion verantwortlich, während der Server die umfangreiche Rechenlast verarbeitet. Es werden nicht viele Daten an die Funktion übergeben und zurückgegeben, aber da die Daten eine erhebliche Verarbeitung erfordern können, verarbeitet der Server sie.
 
-Das Doktor Programm verwendet ein Zeichen Array für die Eingabe und gibt ein anderes Zeichen Array als Ausgabe zurück. In der folgenden Tabelle sind vier Möglichkeiten zum Übergeben von Zeichen Arrays zwischen Client und Server sowie die Attribute und Funktionen aufgeführt, die für die Implementierung der einzelnen Ansätze erforderlich sind.
+Das Programm "Doctor" verwendet ein Zeichenarray für die Eingabe und gibt ein weiteres Zeichenarray als Ausgabe zurück. In der folgenden Tabelle sind vier Möglichkeiten zum Übergeben von Zeichenarrays zwischen Client und Server sowie die Attribute und Funktionen aufgeführt, die zum Implementieren der einzelnen Ansätze erforderlich sind.
 
 
 
 | Vorgehensweise                       | Attribute oder Funktionen                                                                                                        |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Arrays von gezählten Zeichen       | \[[Größe \_ ist](/windows/desktop/Midl/size-is) \] , \[ [Länge \_ ist](/windows/desktop/Midl/length-is) \] , \[ [ref](/windows/desktop/Midl/ref)\]                                         |
-| Stub-verwaltete Zeichen folgen           | \[[Zeichenfolge](/windows/desktop/Midl/string) \] , \[ [ref](/windows/desktop/Midl/ref) \] , [Mittel l- \_ Benutzer \_ ](/windows/desktop/Midl/midl-user-allocate-1) Zuordnungen auf dem Server                  |
-| Stub-verwaltete Zeichen folgen           | \[[Zeichenfolge](/windows/desktop/Midl/string) \] , \[ [eindeutig](/windows/desktop/Midl/unique) \] , [mittlere \_ Benutzer \_ ](/windows/desktop/Midl/midl-user-allocate-1) Zuordnungen auf Client und Server |
-| Funktion, die eine Zeichenfolge zurückgibt | \[[eindeutig](/windows/desktop/Midl/unique)\]                                                                                                     |
+| Gezählte Zeichenarrays       | \[[size \_ ist](/windows/desktop/Midl/size-is) \] , length \[ [ \_ ist](/windows/desktop/Midl/length-is) \] , \[ [ref](/windows/desktop/Midl/ref)\]                                         |
+| Stubverwaltete Zeichenfolgen           | \[[string](/windows/desktop/Midl/string) \] , \[ [ref](/windows/desktop/Midl/ref) \] , [midl user \_ \_ allocate](/windows/desktop/Midl/midl-user-allocate-1) on server                  |
+| Stubverwaltete Zeichenfolgen           | \[[String](/windows/desktop/Midl/string) \] , \[ [eindeutig](/windows/desktop/Midl/unique) \] , [midl user \_ \_ allocate](/windows/desktop/Midl/midl-user-allocate-1) on client and server |
+| Funktion, die eine Zeichenfolge zurückgibt | \[[unique](/windows/desktop/Midl/unique)\]                                                                                                     |
 
 
 
- 
+ 
 
-Innerhalb der Einschränkungen, die diesen Kombinationen von Attributen zugeordnet sind, gibt es alternative Möglichkeiten, ein Zeichen Array vom Client an den Server zu senden und ein anderes Zeichen Array vom Server an den Client zurückzugeben.
+Innerhalb der Einschränkungen, die diesen Kombinationen von Attributen zugeordnet sind, gibt es alternative Möglichkeiten, ein Zeichenarray vom Client an den Server zu senden und ein anderes Zeichenarray von Server zu Client zurückzugeben.
 
-In den folgenden Themen werden die Entwurfs Kompromisse zwischen den verschiedenen Schnittstellen veranschaulicht, mit denen diese Parameter verwaltet werden können.
+Die folgenden Themen veranschaulichen die Entwurfsabstände zwischen den verschiedenen Schnittstellen, die diese Parameter verwalten können.
 
--   [Arrays von gezählten Zeichen](counted-character-arrays.md)
+-   [Gezählte Zeichenarrays](counted-character-arrays.md)
 -   [Zeichenfolgen](strings.md)
--   [Mehrere Ebenen von Zeigern](multiple-levels-of-pointers.md)
+-   [Mehrere Zeigerebenen](multiple-levels-of-pointers.md)
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicenabacquisition-Methode (wmdrmsdk. h)
-description: Die monitorlicensererwerbs-Methode initiiert die Überwachung für einen Lizenz Erwerbs Vorgang.
+title: IWMDRMLicenseManagement MonitorLicenseAcquisition-Methode (Wmdrmsdk.h)
+description: Die MonitorLicenseAcquisition-Methode initiiert die Überwachung für einen Lizenzerwerbsprozess.
 ms.assetid: 725cd51a-a50b-4ff5-a880-7f551f6dba8f
 keywords:
-- Monitorlicenabacquisition-Methode Windows Media-Format
-- Monitorlicenaberwerbs-Methode Windows Media-Format, iwmdrmlicenabsmanagement-Schnittstelle
-- Iwmdrmlicenabmanagement Interface Windows Media-Format, monitorliceneracquisition-Methode
+- MonitorLicenseAcquisition-Methode windows Media Format
+- MonitorLicenseAcquisition-Methode windows Media Format , IWMDRMLicenseManagement-Schnittstelle
+- IWMDRMLicenseManagement-Schnittstelle windows Media Format , MonitorLicenseAcquisition-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 25171d36a9d360f7c8eb77211c580c4f7676618f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b7ab3188425decca614ae104989fdc2f07930ac0de463e492be630a3fb54556e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357305"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027578"
 ---
-# <a name="iwmdrmlicensemanagementmonitorlicenseacquisition-method"></a>Iwmdrmlicensmanagement:: monitorliceneracquisition-Methode
+# <a name="iwmdrmlicensemanagementmonitorlicenseacquisition-method"></a>IWMDRMLicenseManagement::MonitorLicenseAcquisition-Methode
 
-Die **monitorlicensererwerbs** -Methode initiiert die Überwachung für einen Lizenz Erwerbs Vorgang.
+Die **MonitorLicenseAcquisition-Methode** initiiert die Überwachung für einen Lizenzerwerbsprozess.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,37 +46,37 @@ HRESULT MonitorLicenseAcquisition(
 
 <dl> <dt>
 
-*bstrinkid* \[ in\]
+*bstrKID* \[ In\]
 </dt> <dd>
 
-Die Schlüssel-ID (Kid) der erworbenen Lizenz.
+Schlüssel-ID (KEY ID, KID) der erworbenen Lizenz.
 
 </dd> <dt>
 
-*bstrauch Header* \[ in\]
+*bstrHeader* \[ In\]
 </dt> <dd>
 
-Inhalts Header, der im Aufrufen der [**AcquireLicense**](iwmdrmlicensemanagement-acquirelicense.md) -Methode verwendet wurde.
+Inhaltsheader, der beim Aufruf der [**AcquireLicense-Methode**](iwmdrmlicensemanagement-acquirelicense.md) verwendet wurde.
 
 </dd> <dt>
 
-*bstractions* \[ in\]
+*bstrActions* \[ In\]
 </dt> <dd>
 
-Zeichenfolge, die die im Aufrufen der **AcquireLicense** -Methode angeforderten Aktionen enthält.
+Zeichenfolge, die die aktionen enthält, die im Aufruf der **AcquireLicense-Methode** angefordert werden.
 
 </dd> <dt>
 
-*ppunkcancelationcookie* \[ vorgenommen\]
+*ppunkCancelationCookie* \[ out\]
 </dt> <dd>
 
-Ein Zeiger, der einen Zeiger auf die **IUnknown** -Schnittstelle eines Objekts empfängt, das diesen asynchronen-Befehl identifiziert. Dieser Schnittstellen Zeiger kann zum Abbrechen des asynchronen Aufrufs verwendet werden, indem die [**iwmdrmeventgenerator:: cancelasyncoperation**](iwmdrmeventgenerator-cancelasyncoperation.md) -Methode aufgerufen wird.
+Zeiger, der einen Zeiger auf die **IUnknown-Schnittstelle** eines Objekts empfängt, das diesen asynchronen Aufruf identifiziert. Dieser Schnittstellenzeiger kann verwendet werden, um den asynchronen Aufruf abzubrechen, indem die [**IWMDRMEventGenerator::CancelAsyncOperation-Methode**](iwmdrmeventgenerator-cancelasyncoperation.md) aufgerufen wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -98,8 +98,8 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
@@ -107,7 +107,7 @@ Keine.
 
 <dl> <dt>
 
-[**Iwmdrmlicenabmanagement-Schnittstelle**](iwmdrmlicensemanagement.md)
+[**IWMDRMLicenseManagement-Schnittstelle**](iwmdrmlicensemanagement.md)
 </dt> </dl>
 
  

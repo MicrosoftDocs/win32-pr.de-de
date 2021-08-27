@@ -1,44 +1,44 @@
 ---
-description: In diesem Thema wird beschrieben, wie verschiedene Arten von Pinseln in einem XPS-OM verwendet werden.
+description: In diesem Thema wird beschrieben, wie verschiedene Pinseltypen in einem XPS OM verwendet werden.
 ms.assetid: 392ca1d5-283e-4eed-ae21-6477c469014d
-title: XPS-OM-Pinsel
+title: XPS OM-Pinsel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0557757bfaf81156b2015525d35897cfb042e44b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbca4174c406e0d2fda63d932ee85f2f3c3123b7255b43f77a2365bf0f05e2f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971129"
 ---
-# <a name="xps-om-brushes"></a>XPS-OM-Pinsel
+# <a name="xps-om-brushes"></a>XPS OM-Pinsel
 
-In diesem Thema wird beschrieben, wie verschiedene Arten von Pinseln in einem XPS-OM verwendet werden.
+In diesem Thema wird beschrieben, wie verschiedene Pinseltypen in einem XPS OM verwendet werden.
 
-Die Pinsel im XPS-OM basieren auf der [**ixpsombrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsombrush) und umfassen Folgendes:
+Die Pinsel im XPS OM basieren auf der [**IXpsOMBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsombrush) und enthalten Folgendes:
 
-<dl> Kachel Pinsel
+<dl> Kachelpinsel
 
--   [**Ixpsomtilebrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomtilebrush)
--   [**Ixpsomsolidcolorbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
--   [**Ixpsomvisualbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush)
--   [**Ixpsomimagebrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
+-   [**IXpsOMTileBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomtilebrush)
+-   [**IXpsOMSolidColorBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
+-   [**IXpsOMVisualBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush)
+-   [**IXpsOMImageBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
 
   
-Farbverlaufs Pinsel
+Farbverlaufspinsel
 
--   [**Ixpsomgradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush)
--   [**Ixpsomlineargradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomlineargradientbrush)
--   [**Ixpsomradialgradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomradialgradientbrush)
+-   [**IXpsOMGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush)
+-   [**IXpsOMLinearGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomlineargradientbrush)
+-   [**IXpsOMRadialGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomradialgradientbrush)
 
   
 </dl>
 
 ## <a name="code-examples"></a>Codebeispiele
 
-### <a name="create-a-solid-color-brush"></a>Erstellen eines Pinsel mit voll Tonfarbe
+### <a name="create-a-solid-color-brush"></a>Erstellen eines Volltonfarbpinsels
 
-Im folgenden Codebeispiel wird ein vollfarbiger Pinsel aus einem Farbwert erstellt, der im Code definiert ist.
+Im folgenden Codebeispiel wird ein Volltonfarbpinsel aus einem im Code definierten Farbwert erstellt.
 
 
 ```C++
@@ -106,13 +106,13 @@ Im folgenden Codebeispiel wird ein Pinsel aus einem visuellen Objekt erstellt.
 
 
 
-### <a name="create-an-image-brush"></a>Erstellen eines Bild Pinsels
+### <a name="create-an-image-brush"></a>Erstellen eines Bildpinsels
 
-Weitere Informationen finden Sie im Codebeispiel unter [Platzieren von Bildern in einem XPS-OM](place-images-in-an-xps-om.md).
+Weitere Informationen finden Sie im Codebeispiel [unter Platzieren von Bildern in einem XPS OM.](place-images-in-an-xps-om.md)
 
 ### <a name="create-a-linear-gradient-brush"></a>Erstellen eines Pinsels mit linearem Farbverlauf
 
-Im folgenden Codebeispiel wird ein Pinsel mit linearem Farbverlauf erstellt. Der Farbverlauf weist zwei Farbverlaufs Stopps auf.
+Im folgenden Codebeispiel wird ein Pinsel mit linearem Farbverlauf erstellt. Der Farbverlauf verfügt über zwei Farbverlaufsstopps.
 
 
 ```C++
@@ -177,28 +177,28 @@ Im folgenden Codebeispiel wird ein Pinsel mit linearem Farbverlauf erstellt. Der
 
 <dl> <dt>
 
-[**Ixpsomgradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush)
+[**IXpsOMGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgradientbrush)
 </dt> <dt>
 
-[**Ixpsomimagebrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
+[**IXpsOMImageBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomimagebrush)
 </dt> <dt>
 
-[**Ixpsomlineargradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomlineargradientbrush)
+[**IXpsOMLinearGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomlineargradientbrush)
 </dt> <dt>
 
-[**Ixpsomradialgradientbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomradialgradientbrush)
+[**IXpsOMRadialGradientBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomradialgradientbrush)
 </dt> <dt>
 
-[**Ixpsomsolidcolorbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
+[**IXpsOMSolidColorBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomsolidcolorbrush)
 </dt> <dt>
 
-[**Ixpsomtilebrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomtilebrush)
+[**IXpsOMTileBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomtilebrush)
 </dt> <dt>
 
-[**Ixpsomvisualbrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush)
+[**IXpsOMVisualBrush-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomvisualbrush)
 </dt> <dt>
 
-[**XPS- \_ Farbe**](xps-color.md)
+[**\_XPS-FARBE**](xps-color.md)
 </dt> <dt>
 
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)

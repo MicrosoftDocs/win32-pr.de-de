@@ -1,9 +1,9 @@
 ---
-title: CDM_GETFILEPATH Meldung (Commdlg.h)
-description: Ruft den Pfad und den Dateinamen der ausgewählten Datei im Explorer-Stil im Dialogfeld Öffnen oder Speichern unter ab.
+title: CDM_GETFILEPATH (Commdlg.h)
+description: Ruft den Pfad und den Dateinamen der ausgewählten Datei im Dialogfeld Öffnen oder Speichern unter im Explorer-Stil ab.
 ms.assetid: fad8c5e2-9838-45a8-8c51-4326c989d939
 keywords:
-- Dialogfelder für CDM_GETFILEPATH Meldung
+- CDM_GETFILEPATH-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d531999757d46e127b73584adf1b563e64ea25b
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 67ac18880ef62df1d228c006f0bc33fcf4932cbb976419ee29464e49828d8173
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118786333"
 ---
 # <a name="cdm_getfilepath-message"></a>CDM \_ GETFILEPATH-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die DIALOGFELD-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden **die** allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Ruft den Pfad und den Dateinamen der ausgewählten Datei im Explorer-Stil im Dialogfeld **Öffnen** oder **Speichern unter** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Ruft den Pfad und den Dateinamen der ausgewählten  Datei im Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -43,7 +43,7 @@ Ruft den Pfad und den Dateinamen der ausgewählten Datei im Explorer-Stil im Dia
 *wParam* 
 </dt> <dd>
 
-Die Größe des *lParam-Puffers* in Zeichen. Für die ANSI-Version ist dies die Anzahl der Bytes. für die Unicode-Version ist dies die Anzahl der Zeichen.
+Die Größe des *lParam-Puffers* in Zeichen. Für die ANSI-Version ist dies die Anzahl von Bytes. für die Unicode-Version ist dies die Anzahl der Zeichen.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Ein Zeiger auf den Puffer, der den Dateinamen und Pfad empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe des Dateinamens und der Pfadzeichenfolge in Zeichen, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert die Größe des Dateinamens und der Pfadzeichenfolge in Zeichen, einschließlich des beendenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
 
 Wenn ein Fehler auftritt, ist der Rückgabewert kleiner als 0 (null).
 
@@ -76,11 +76,11 @@ int CommDlg_OpenSave_GetFilePath(hwnd, lparam, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

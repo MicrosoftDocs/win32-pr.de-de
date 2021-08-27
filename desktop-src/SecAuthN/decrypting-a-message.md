@@ -1,21 +1,21 @@
 ---
-description: Im folgenden Beispiel wird gezeigt, wie eine verschlüsselte Nachricht empfangen und entschlüsselt wird.
+description: Das folgende Beispiel zeigt eine verschlüsselte Nachricht, die empfangen und entschlüsselt wird.
 ms.assetid: 4858a43b-3084-4a03-8b6f-4a788cdb3dd5
 title: Entschlüsseln einer Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3598025564e607bf25241def4171eba84aa1dbbe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca3b01b37b82c3b8c2ca551e2b8113ff171668b2bb95b41fa9b8363e5b3ae4af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527020"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119008638"
 ---
 # <a name="decrypting-a-message"></a>Entschlüsseln einer Nachricht
 
-Im folgenden Beispiel wird gezeigt, wie eine verschlüsselte Nachricht empfangen und entschlüsselt wird.
+Das folgende Beispiel zeigt eine verschlüsselte Nachricht, die empfangen und entschlüsselt wird.
 
-Im Beispiel wird davon ausgegangen, dass eine **sechandle** -Variable mit `phContext` dem Namen und eine **Socketstruktur** namens `s` initialisiert werden. Informationen zu den Deklarationen und Initiierungen dieser Variablen finden [Sie unter Verwenden von SSPI mit einem Windows Sockets-Client](using-sspi-with-a-windows-sockets-client.md) und [Verwenden von SSPI mit einem Windows Sockets-Server](using-sspi-with-a-windows-sockets-server.md). Dieses Beispiel umfasst Aufrufe von Funktionen in Secur32. lib, die in den Linkbibliotheken enthalten sein müssen.
+Im Beispiel wird davon ausgegangen, dass eine **SecHandle-Variable** namens `phContext` und eine **SOCKET-Struktur** namens `s` initialisiert werden. Die Deklarationen und Initiierungen dieser Variablen finden Sie unter [Verwenden von SSPI mit einem Windows Sockets-Client](using-sspi-with-a-windows-sockets-client.md) und [Verwenden von SSPI mit einem Windows Sockets Server.](using-sspi-with-a-windows-sockets-server.md) Dieses Beispiel enthält Aufrufe von Funktionen in Secur32.lib, die in den Linkbibliotheken enthalten sein müssen.
 
 
 ```C++

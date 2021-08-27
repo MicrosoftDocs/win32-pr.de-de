@@ -1,21 +1,21 @@
 ---
-description: Im folgenden finden Sie ein Beispiel für ein Dienst Konfigurationsprogramm.
+description: Im Folgenden finden Sie ein Beispiel für ein Dienstkonfigurationsprogramm.
 ms.assetid: effb469a-020e-4c70-aad6-12a91bd36f68
 title: SvcConfig.cpp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69baf6e2c0757f394f09338c65af488db9efd664
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f400849dcd28073e17faacd2bc33cea06ed1a5837a72fb2beecd52714911cc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118888412"
 ---
 # <a name="svcconfigcpp"></a>SvcConfig.cpp
 
-Im folgenden finden Sie ein Beispiel für ein [Dienst Konfigurationsprogramm](service-configuration-programs.md).
+Im Folgenden finden Sie ein Beispiel [für ein Dienstkonfigurationsprogramm.](service-configuration-programs.md)
 
-Wenn Sie das Beispiel entwickeln, stellen Sie sicher, dass Sie mit Kernel32. lib und advapi32. lib verknüpfen.
+Stellen Sie beim Erstellen des Beispiels sicher, dass Sie eine Verknüpfung mit Kernel32.lib und Advapi32.lib erstellen.
 
 
 ```C++
@@ -477,7 +477,7 @@ VOID __stdcall DoDeleteSvc()
 
 <dl> <dt>
 
-[Das Complete Service-Beispiel](the-complete-service-sample.md)
+[Das vollständige Dienstbeispiel](the-complete-service-sample.md)
 </dt> </dl>
 
  

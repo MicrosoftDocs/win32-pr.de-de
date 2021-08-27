@@ -1,8 +1,8 @@
 ---
-description: Die Leistung von semisynchronen aufrufen ist in den meisten Situationen in der Regel ausreichend.
+description: Die Leistung halbsynchroner Aufrufe ist in der Regel für die meisten Situationen ausreichend.
 ms.assetid: f665fc60-68bd-495d-a441-e3a9473f9d89
 ms.tgt_platform: multiple
-title: Festlegen der Sicherheit für einen asynchronen VBScript-Anrufe
+title: Festlegen der Sicherheit für einen asynchronen Aufruf in VBScript
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,29 +10,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 972947e0cb4f5d385e4d2d27b7c14298771ac4e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f6ce457bde6e716864804d5ca62c33e31c8924ab0858bbb47f0dc345c9a3142
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992360"
 ---
-# <a name="setting-security-on-an-asynchronous-call-in-vbscript"></a>Festlegen der Sicherheit für einen asynchronen VBScript-Anrufe
+# <a name="setting-security-on-an-asynchronous-call-in-vbscript"></a>Festlegen der Sicherheit für einen asynchronen Aufruf in VBScript
 
-Die Leistung von [*semisynchronen*](gloss-s.md) aufrufen ist in den meisten Situationen in der Regel ausreichend. Asynchrone Aufrufe sind in der Regel keine empfohlene Vorgehensweise für Skripts. Wenn jedoch asynchrone Aufrufe durchgeführt werden müssen, kann ein Registrierungs Wert festgelegt werden, um zu erzwingen, dass WMI Zugriffs Überprüfungen für asynchrone Aufrufe ausführt.
+Die Leistung [*halbsynchroner Aufrufe*](gloss-s.md) ist in der Regel für die meisten Situationen ausreichend. Asynchrone Aufrufe sind in der Regel keine empfohlene Vorgehensweise für Skripts. Wenn jedoch asynchrone Aufrufe ausgeführt werden müssen, kann ein Registrierungswert festgelegt werden, um WMI zu zwingen, Zugriffsüberprüfungen für asynchrone Aufrufe durchzuführen.
 
 
-Der Registrierungs Wert " **HKEY \_ local \_ Machine** \\ **Software** \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **unsecappaccesscontroldefault** " steuert, ob WMI bei der Rückgabe von Daten für einen asynchronen-Befehl eine akzeptable Authentifizierungs Ebene prüft. Der Rückruf kann auf einer niedrigeren Authentifizierungs Stufe zurückgegeben werden als der des ursprünglichen asynchronen Aufrufs. Standardmäßig ist dieser Wert auf 0 festgelegt, sodass Rückrufe nicht geprüft werden. Um asynchrone Aufrufe in der Skripterstellung zu sichern, müssen Sie den Registrierungsschlüssel auf 1 (eins) festlegen.
+Der **Registrierungswert HKEY \_ LOCAL \_ MACHINE** \\ **Software** \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **UnsecAppAccessControlDefault** steuert, ob WMI beim Zurückgeben von Daten für einen asynchronen Aufruf eine akzeptable Authentifizierungsebene überprüft. Der Rückruf kann auf einer niedrigeren Authentifizierungsebene als die des ursprünglichen asynchronen Aufrufs zurückgegeben werden. Standardmäßig ist dieser Wert auf 0 (null) festgelegt, sodass Rückrufe nicht überprüft werden. Um asynchrone Aufrufe bei der Skripterstellung zu schützen, müssen Sie den Registrierungsschlüssel auf 1 (eins) festlegen.
 
-Skripts können die Methoden [**GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov) und [**SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov) des Registrierungs Objekts [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verwenden, um die Einstellung des Registrierungs Werts **unsecappaccesscontroldefault** zu ändern. Weitere Informationen zu den für den Remote Zugriff erforderlichen Authentifizierungs-und Identitätswechsel Ebenen finden [Sie unter Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Skripts können die [**Methoden GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov) und [**SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov) des Registrierungsobjekts [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verwenden, um die Einstellung des **Registrierungswerts UnsecAppAccessControlDefault** zu ändern. Weitere Informationen zu Authentifizierungs- und Identitätswechselebenen, die für den Remotezugriff erforderlich sind, finden Sie unter Herstellen einer Verbindung mit [WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
-## <a name="to-set-asynchronous-call-security-in-vbscript"></a>So legen Sie die Sicherheit für asynchrone Aufrufe in VBScript fest
+## <a name="to-set-asynchronous-call-security-in-vbscript"></a>So legen Sie die asynchrone Aufrufsicherheit in VBScript fest
 
-Im folgenden VBScript-Codebeispiel wird gezeigt, wie Sie den Registrierungs Wert ändern, um die WMI-Authentifizierung von Rückrufen zu steuern.
+Im folgenden VBScript-Codebeispiel wird gezeigt, wie Sie den Registrierungswert ändern, um die WMI-Authentifizierung von Rückrufen zu steuern.
 
-Das Skript ändert den Wert von **unsecappaccesscontroldefault** von NULL in 1, oder wenn der Wert bereits festgelegt ist, von 1 auf 0. NULL ist die Standardeinstellung für ein neu installiertes System. Sobald das Flag festgelegt ist, wird die Einstellung über einen Neustart oder einen WMI-Neustart beibehalten.
+Das Skript ändert den Wert von **UnsecAppAccessControlDefault** von 0 (null) in eins oder , wenn der Wert bereits festgelegt ist, von 1 in 0 (null). Null ist die Standardeinstellung auf einem neu installierten System. Nachdem das Flag festgelegt wurde, bleibt die Einstellung bei einem Neustart oder WMI-Neustart erhalten.
 
-Das Skript verwendet ein "WS [**bemmethod. InParameters**](swbemmethod-inparameters.md) "-Objekt und [**SWbemObject.Execmethod**](swbemobject-execmethod-.md) , um " [**StdRegProv. GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov) " und " [**StdRegProv. SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov)" aufzurufen. Weitere Informationen zum Festlegen der Werte in einem **InParameters** -Objekt finden Sie unter [Erstellen von inparameter-Objekten und Auswerten von outparameter-Objekten](constructing-inparameters-objects-and-parsing-outparameters-objects.md). Ein Beispiel eines Registrierungs Aufrufes mithilfe von [**GetObject**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx)finden Sie unter [**StdRegProv. SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov).
+Das Skript verwendet ein [**SWbemMethod.InParameters-Objekt**](swbemmethod-inparameters.md) und [**SWbemObject.ExecMethod**](swbemobject-execmethod-.md) zum Aufrufen von [**StdRegProv.GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov) und [**StdRegProv.SetStringValue.**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov) Weitere Informationen zum Festlegen der Werte in einem **InParameters-Objekt** finden Sie unter [Constructing InParameters Objects and Parsing OutParameters Objects](constructing-inparameters-objects-and-parsing-outparameters-objects.md). Ein Beispiel für einen Registrierungsaufruf mit [**GetObject**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx)finden Sie unter [**StdRegProv.SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov).
 
 
 ```VB

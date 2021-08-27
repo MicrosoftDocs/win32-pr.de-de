@@ -1,5 +1,5 @@
 ---
-description: Stellt die Attribute und Verhaltensweisen eines Netzwerkadapters dar. Diese Klasse enthält zusätzliche Eigenschaften und Methoden, die die Verwaltung des TCP/IP-Protokolls unterstützen, das vom Netzwerkadapter unabhängig ist.
+description: Stellt die Attribute und Verhaltensweisen eines Netzwerkadapters dar. Diese Klasse enthält zusätzliche Eigenschaften und Methoden, die die Verwaltung des TCP/IP-Protokolls unterstützen, die unabhängig vom Netzwerkadapter sind.
 ms.assetid: 690b46ed-a065-4973-b044-0df4e81e41a1
 ms.tgt_platform: multiple
 title: Win32_NetworkAdapterConfiguration-Klasse
@@ -75,18 +75,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: e93ae76ae3c4880c7ad041e6e90d39f1b22820d3
-ms.sourcegitcommit: 88049609e29f91a42442235885abf56f598b06b3
+ms.openlocfilehash: aab5f52a3e8dbb910227eb91eb34c7d562a26ad7915f0d61b25d46c825c101a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110153573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958929"
 ---
 # <a name="win32_networkadapterconfiguration-class"></a>Win32 \_ NetworkAdapterConfiguration-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) **Win32 \_ NetworkAdapterConfiguration** stellt die Attribute und das Verhalten eines Netzwerkadapters dar. Diese Klasse enthält zusätzliche Eigenschaften und Methoden, die die Verwaltung des TCP/IP-Protokolls unterstützen, das vom Netzwerkadapter unabhängig ist.
+Die **\_ WMI-Klasse Win32 NetworkAdapterConfiguration** stellt die Attribute und Verhaltensweisen eines Netzwerkadapters dar. [](../wmisdk/retrieving-a-class.md) Diese Klasse enthält zusätzliche Eigenschaften und Methoden, die die Verwaltung des TCP/IP-Protokolls unterstützen, die unabhängig vom Netzwerkadapter sind.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -160,7 +160,7 @@ class Win32_NetworkAdapterConfiguration : CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ NetworkAdapterConfiguration-Klasse** verfügt über folgende Typen von Membern:
+Die **Win32 \_ NetworkAdapterConfiguration-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -171,13 +171,13 @@ Die **Win32 \_ NetworkAdapterConfiguration-Klasse** verfügt über diese Methode
 
 
 
-| Methode                                                                                                                       | Beschreibung                                                                                                                                           |
+| Methode                                                                                                                       | BESCHREIBUNG                                                                                                                                           |
 |:-----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**DisableIPSec**](disableipsec-method-in-class-win32-networkadapterconfiguration.md)                                       | Deaktiviert IPsec auf diesem TCP/IP-fähigen Netzwerkadapter.<br/>                                                                                     |
 | [**EnableDHCP**](enabledhcp-method-in-class-win32-networkadapterconfiguration.md)                                           | Aktiviert das Dynamic Host Configuration Protocol (DHCP) für den Dienst mit diesem Netzwerkadapter.<br/>                                              |
 | [**EnableDNS**](enabledns-method-in-class-win32-networkadapterconfiguration.md)                                             | Aktiviert die Domain Name System (DNS) für den Dienst auf diesem TCP/IP-gebundenen Netzwerkadapter.<br/>                                                     |
 | [**EnableIPFilterSec**](enableipfiltersec-method-in-class-win32-networkadapterconfiguration.md)                             | Aktiviert IPsec global für alle IP-gebundenen Netzwerkadapter.<br/>                                                                               |
-| [**EnableIPSec**](enableipsec-method-in-class-win32-networkadapterconfiguration.md)                                         | Aktiviert IPsec auf diesem spezifischen TCP/IP-fähigen Netzwerkadapter.<br/>                                                                             |
+| [**EnableIPSec**](enableipsec-method-in-class-win32-networkadapterconfiguration.md)                                         | Aktiviert IPsec für diesen spezifischen TCP/IP-fähigen Netzwerkadapter.<br/>                                                                             |
 | [**EnableStatic**](enablestatic-method-in-class-win32-networkadapterconfiguration.md)                                       | Aktiviert die statische TCP/IP-Adressierung für den Zielnetzwerkadapter.<br/>                                                                           |
 | [**EnableWINS**](enablewins-method-in-class-win32-networkadapterconfiguration.md)                                           | Aktiviert TCP/IP-spezifische WINS-Einstellungen, jedoch unabhängig vom Netzwerkadapter.<br/>                                                          |
 | [**ReleaseDHCPLease**](releasedhcplease-method-in-class-win32-networkadapterconfiguration.md)                               | Gibt die IP-Adresse frei, die an einen bestimmten DHCP-fähigen Netzwerkadapter gebunden ist.<br/>                                                                  |
@@ -186,34 +186,34 @@ Die **Win32 \_ NetworkAdapterConfiguration-Klasse** verfügt über diese Methode
 | [**RenewDHCPLeaseAll**](renewdhcpleaseall-method-in-class-win32-networkadapterconfiguration.md)                             | Erneuert die IP-Adressen auf allen DHCP-fähigen Netzwerkadaptern.<br/>                                                                              |
 | [**SetArpAlwaysSourceRoute**](setarpalwayssourceroute-method-in-class-win32-networkadapterconfiguration.md)                 | Legt die Übertragung von ARP-Abfragen über TCP/IP fest.<br/>                                                                                        |
 | [**SetArpUseEtherSNAP**](setarpuseethersnap-method-in-class-win32-networkadapterconfiguration.md)                           | Ermöglicht Ethernet-Paketen die Verwendung der SNAP-Codierung 802.3.<br/>                                                                                       |
-| [**SetDatabasePath**](setdatabasepath-method-in-class-win32-networkadapterconfiguration.md)                                 | Legt den Pfad zu den standardmäßigen Internetdatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS) fest.<br/>                                           |
+| [**SetDatabasePath**](setdatabasepath-method-in-class-win32-networkadapterconfiguration.md)                                 | Legt den Pfad zu den Standardmäßigen Internetdatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS) fest.<br/>                                           |
 | [**SetDeadGWDetect**](setdeadgwdetect-method-in-class-win32-networkadapterconfiguration.md)                                 | Aktiviert die Erkennung von toten Gateways.<br/>                                                                                                            |
 | [**SetDefaultTOS**](setdefaulttos-method-in-class-win32-networkadapterconfiguration.md)                                     | Veraltet. Diese Methode legt den Standardwert für den Typ des Diensts (TOS) im Header der ausgehenden IP-Pakete fest.<br/>                                   |
-| [**SetDefaultTTL**](setdefaultttl-method-in-class-win32-networkadapterconfiguration.md)                                     | Legt den Standardwert für die Gültigkeitsdauer (Time to Live, TTL) im Header ausgehender IP-Pakete fest.<br/>                                                            |
+| [**SetDefaultTTL**](setdefaultttl-method-in-class-win32-networkadapterconfiguration.md)                                     | Legt den Standardwert für die Warteschlangenzeit (Time to Live, TTL) im Header der ausgehenden IP-Pakete fest.<br/>                                                            |
 | [**SetDNSDomain**](setdnsdomain-method-in-class-win32-networkadapterconfiguration.md)                                       | Legt die DNS-Domäne fest.<br/>                                                                                                                       |
-| [**SetDNSServerSearchOrder**](setdnsserversearchorder-method-in-class-win32-networkadapterconfiguration.md)                 | Legt die Serversuchreihenfolge als Array von Elementen fest.<br/>                                                                                      |
-| [**SetDNSSuffixSearchOrder**](setdnssuffixsearchorder-method-in-class-win32-networkadapterconfiguration.md)                 | Legt die Suffixsuchreihenfolge als Array von Elementen fest.<br/>                                                                                      |
+| [**SetDNSServerSearchOrder**](setdnsserversearchorder-method-in-class-win32-networkadapterconfiguration.md)                 | Legt die Serversuch reihenfolge als Array von Elementen fest.<br/>                                                                                      |
+| [**SetDNSSuffixSearchOrder**](setdnssuffixsearchorder-method-in-class-win32-networkadapterconfiguration.md)                 | Legt die Suffixsuch reihenfolge als Array von Elementen fest.<br/>                                                                                      |
 | [**SetDynamicDNSRegistration**](setdynamicdnsregistration-method-in-class-win32-networkadapterconfiguration.md)             | Gibt die dynamische DNS-Registrierung von IP-Adressen für diesen IP-gebundenen Adapter an.<br/>                                                              |
-| [**SetForwardBufferMemory**](setforwardbuffermemory-method-in-class-win32-networkadapterconfiguration.md)                   | Gibt an, wie viel Speicher-IP zum Speichern von Paketdaten in der Routerpaketwarteschlange zuweist.<br/>                                                    |
-| [**SetGateways**](setgateways-method-in-class-win32-networkadapterconfiguration.md)                                         | Gibt eine Liste von Gateways für das Routing von Paketen an, die für ein anderes Subnetz als das subnetz bestimmt sind, mit dem dieser Adapter verbunden ist.<br/>                |
-| [**SetIGMPLevel**](setigmplevel-method-in-class-win32-networkadapterconfiguration.md)                                       | Legt den Umfang fest, in dem das System IP-Multicasting unterstützt und am Internetgruppenverwaltungsprotokoll teilnimmt.<br/>                   |
+| [**SetForwardBufferMemory**](setforwardbuffermemory-method-in-class-win32-networkadapterconfiguration.md)                   | Gibt an, wie viel Speicher-IP zum Speichern von Paketdaten in der Routerpaketwarteschlange reserviert wird.<br/>                                                    |
+| [**SetGateways**](setgateways-method-in-class-win32-networkadapterconfiguration.md)                                         | Gibt eine Liste von Gateways zum Weiterleiten von Paketen an, die für ein anderes Subnetz als das subnetz bestimmt sind, mit dem dieser Adapter verbunden ist.<br/>                |
+| [**SetIGMPLevel**](setigmplevel-method-in-class-win32-networkadapterconfiguration.md)                                       | Legt fest, in welchem Umfang das System IP-Multicasting unterstützt und am Internet Group Management Protocol teil nimmt.<br/>                   |
 | [**SetIPConnectionMetric**](setipconnectionmetric-method-in-class-win32-networkadapterconfiguration.md)                     | Legt die Routingmetrik fest, die diesem IP-gebundenen Adapter zugeordnet ist.<br/>                                                                             |
-| [**SetIPUseZeroBroadcast**](setipusezerobroadcast-method-in-class-win32-networkadapterconfiguration.md)                     | Legt die IP-0-Broadcastverwendung fest.<br/>                                                                                                              |
-| [**SetIPXFrameTypeNetworkPairs**](win32-networkadapterconfiguration-setipxframetypenetworkpairs.md)                         | Legt IPX-Netzwerknummer-/Framepaare (Internetworking Packet Exchange) für diesen Netzwerkadapter fest.<br/>                                            |
-| [**SetIPXVirtualNetworkNumber**](win32-networkadapterconfiguration-setipxvirtualnetworknumber.md)                           | Legt die IPX-Netzwerknummer (Internetworking Packet Exchange) auf dem Zielcomputersystem fest.<br/>                                       |
+| [**SetIPUseZeroBroadcast**](setipusezerobroadcast-method-in-class-win32-networkadapterconfiguration.md)                     | Legt die IP-0-Broadcastnutzung fest.<br/>                                                                                                              |
+| [**SetIPXFrameTypeNetworkPairs**](win32-networkadapterconfiguration-setipxframetypenetworkpairs.md)                         | Legt IPX-Netzwerknummer Exchange Framepaare (Internetworking Packet Exchange) für diesen Netzwerkadapter fest.<br/>                                            |
+| [**SetIPXVirtualNetworkNumber**](win32-networkadapterconfiguration-setipxvirtualnetworknumber.md)                           | Legt die IPX-Nummer (Internetworking Packet Exchange) auf dem Zielcomputersystem fest.<br/>                                       |
 | [**SetKeepAliveInterval**](setkeepaliveinterval-method-in-class-win32-networkadapterconfiguration.md)                       | Legt das Intervall fest, das Keep Alive-Neuübertragungen trennt, bis eine Antwort empfangen wird.<br/>                                                      |
-| [**SetKeepAliveTime**](setkeepalivetime-method-in-class-win32-networkadapterconfiguration.md)                               | Legt fest, wie oft TCP versucht, durch Senden eines Keep Alive-Pakets zu überprüfen, ob eine Verbindung im Leerlauf weiterhin verfügbar ist.<br/>                           |
+| [**SetKeepAliveTime**](setkeepalivetime-method-in-class-win32-networkadapterconfiguration.md)                               | Legt fest, wie oft TCP versucht, zu überprüfen, ob eine Verbindung im Leerlauf weiterhin verfügbar ist, indem ein Keep Alive-Paket gesendet wird.<br/>                           |
 | [**SetMTU**](setmtu-method-in-class-win32-networkadapterconfiguration.md)                                                   | Legt die standardmäßige maximale Übertragungseinheit (Maximum Transmission Unit, MTU) für eine Netzwerkschnittstelle fest.<br/> Diese Methode wird nicht unterstützt.<br/>                         |
 | [**SetNumForwardPackets**](setnumforwardpackets-method-in-class-win32-networkadapterconfiguration.md)                       | Legt die Anzahl der IP-Paketheader fest, die der Routerpaketwarteschlange zugeordnet sind.<br/>                                                                |
 | [**SetPMTUBHDetect**](setpmtubhdetect-method-in-class-win32-networkadapterconfiguration.md)                                 | Ermöglicht die Erkennung von Black Hole-Routern.<br/>                                                                                                   |
 | [**SetPMTUDiscovery**](setpmtudiscovery-method-in-class-win32-networkadapterconfiguration.md)                               | Aktiviert die Ermittlung der maximalen Übertragungseinheit (Maximum Transmission Unit, MTU).<br/>                                                                                         |
 | [**SetTcpipNetbios**](settcpipnetbios-method-in-class-win32-networkadapterconfiguration.md)                                 | Legt den Standardvorgang von NetBIOS über TCP/IP fest.<br/>                                                                                         |
-| [**SetTcpMaxConnectRetransmissions**](settcpmaxconnectretransmissions-method-in-class-win32-networkadapterconfiguration.md) | Legt die Anzahl der Versuche fest, mit der TCP eine Verbindungsanforderung vor dem Abbruch erneut überträgt.<br/>                                                         |
+| [**SetTcpMaxConnectRetransmissions**](settcpmaxconnectretransmissions-method-in-class-win32-networkadapterconfiguration.md) | Legt die Anzahl der Versuche fest, bei der TCP eine Verbindungsanforderung vor dem Abbruch erneut überträgt.<br/>                                                         |
 | [**SetTcpMaxDataRetransmissions**](settcpmaxdataretransmissions-method-in-class-win32-networkadapterconfiguration.md)       | Legt fest, wie oft TCP ein einzelnes Datensegment erneut überträgt, bevor die Verbindung abgebrochen wird.<br/>                                    |
 | [**SetTcpNumConnections**](settcpnumconnections-method-in-class-win32-networkadapterconfiguration.md)                       | Legt die maximale Anzahl von Verbindungen fest, die TCP möglicherweise gleichzeitig geöffnet hat.<br/>                                                              |
-| [**SetTcpUseRFC1122RolentPointer**](settcpuserfc1122urgentpointer-method-in-class-win32-networkadapterconfiguration.md)     | Gibt an, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den Modus verwendet, der von BSD-abgeleiteten Systemen (California Software Design) verwendet wird.<br/> |
-| [**SetTcpWindowSize**](settcpwindowsize-method-in-class-win32-networkadapterconfiguration.md)                               | Legt die maximale TCP-Empfangsfenstergröße fest, die vom System angeboten wird.<br/>                                                                            |
-| [**SetWINSServer**](setwinsserver-method-in-class-win32-networkadapterconfiguration.md)                                     | Legt die primären und sekundären WINDOWS-WINS-Server (Internet Naming Service) auf diesem TCP/IP-gebundenen Netzwerkadapter fest.<br/>                        |
+| [**SetTcpUseRFC1122 WietPointer**](settcpuserfc1122urgentpointer-method-in-class-win32-networkadapterconfiguration.md)     | Gibt an, ob TCP die RFC 1122-Spezifikation für dringende Daten oder den Modus verwendet, der von von Rfc Software Design (BSD) abgeleiteten Systemen verwendet wird.<br/> |
+| [**SetTcpWindowSize**](settcpwindowsize-method-in-class-win32-networkadapterconfiguration.md)                               | Legt die maximale Größe des TCP-Empfangsfensters fest, die vom System angeboten wird.<br/>                                                                            |
+| [**SetWINSServer**](setwinsserver-method-in-class-win32-networkadapterconfiguration.md)                                     | Legt die primären und sekundären WINDOWS WINS-Server (Internet Naming Service) auf diesem TCP/IP-gebundenen Netzwerkadapter fest.<br/>                        |
 
 
 
@@ -253,14 +253,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| ArpUseEtherSNAP")
 </dt> </dl>
 
-True **gibt an,** dass Ethernet-Pakete der IEEE 802.3-Codierung Sub-Network Access Protocol (SNAP) folgen. Durch Festlegen dieses Parameters auf 1 wird die Übertragung von Ethernet-Paketen durch TCP/IP mithilfe der SNAP-Codierung 802.3 erzwingt. Standardmäßig (FALSE) überträgt der Stapel Pakete im DIX-Ethernet-Format.
+True gibt an, dass Ethernet-Pakete der SNAP-Codierung (IEEE 802.3 Sub-Network Access Protocol) entsprechen. Wenn Sie diesen Parameter auf 1 festlegen, muss TCP/IP Ethernet-Pakete mithilfe der SNAP-Codierung 802.3 übertragen. Standardmäßig (FALSE) überträgt der Stapel Pakete im DIX-Ethernet-Format.
 
 </dd> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -271,14 +271,14 @@ Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (64)
 
 Kurze Textbeschreibung des aktuellen Objekts.
 
-Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
 **Databasepath**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -287,7 +287,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| DatabasePath")
 </dt> </dl>
 
-Gültiger Windows-Dateipfad zu Standardmäßigen Internetdatenbankdateien (HOSTS, LMHOSTS, NETWORKS und PROTOCOLS). Der Dateipfad wird von der Windows Sockets-Schnittstelle verwendet.
+Gültiger Windows Dateipfad zu Standard-Internetdatenbankdateien (HOSTS, LMHOSTS, NETZWERKE und PROTOKOLLE). Der Dateipfad wird von der Windows Sockets-Schnittstelle verwendet.
 
 </dd> <dt>
 
@@ -303,7 +303,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| EnableDeadGWDetect")
 </dt> </dl>
 
-True **gibt an,** dass die Erkennung von toten Gateways auftritt. Wenn dieses Feature aktiviert ist, fordert TCP (Transmission Control Protocol) das Internetprotokoll (IP) auf, zu einem Sicherungsgateway zu wechseln, wenn es ein Segment mehrmals erneut überträgt, ohne eine Antwort zu erhalten.
+True gibt an, dass die Erkennung von un toten Gateways erfolgt. Wenn dieses Feature aktiviert ist, fordert tcp (Transmission Control Protocol) das Internetprotokoll (IP) auf, zu einem Sicherungsgateway zu wechseln, wenn es ein Segment mehrmals erneut überträgt, ohne eine Antwort zu erhalten.
 
 </dd> <dt>
 
@@ -316,7 +316,7 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Parameters \| \| DefaultGateway")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ \| Services-Parameter \| DefaultGateway")
 </dt> </dl>
 
 Array von IP-Adressen von Standardgateways, die vom Computersystem verwendet werden.
@@ -337,7 +337,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| DefaultTOS")
 </dt> </dl>
 
-Der Im Header ausgehender IP-Pakete festgelegte Standardwert für den Diensttyp (Type Of Service, TOS). Request for Comments (RFC) 791 definiert die Werte. Standardwert: 0 (null), Gültiger Bereich: 0 bis 255.
+Im Header ausgehender IP-Pakete festgelegter Standardwert des Diensttyps (Type Of Service, TOS). Request for Comments (RFC) 791 definiert die Werte. Standardwert: 0 (null), Gültiger Bereich: 0 bis 255.
 
 </dd> <dt>
 
@@ -360,7 +360,7 @@ Der Standardwert für die Gültigkeitsdauer (Time To Live, TTL), der im Header a
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -368,7 +368,7 @@ Zugriffstyp: Schreibgeschützt
 
 Textbeschreibung des aktuellen -Objekts.
 
-Diese Eigenschaft wird von [**der \_ CIM-Einstellung**](cim-setting.md)geerbt.
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
@@ -427,7 +427,7 @@ Beispiel: 19521201000230.000000000
 **DHCPServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -445,7 +445,7 @@ Beispiel: "10.55.34.2"
 **DNSDomain**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -454,7 +454,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| Domain")
 </dt> </dl>
 
-Organisationsname, gefolgt von einem Zeitraum und einer Erweiterung, die den Typ der Organisation angibt, z. B. "microsoft.com". Der Name kann eine beliebige Kombination aus den Buchstaben A bis Z, den Ziffern 0 bis 9 und dem Bindestrich (-) sowie dem als Trennzeichen verwendeten Zeitraum (.) sein.
+Organisationsname gefolgt von einem Punkt und einer Erweiterung, die den Typ der Organisation angibt, z. B. "microsoft.com". Der Name kann eine beliebige Kombination aus den Buchstaben A bis Z, den Ziffern 0 bis 9 und dem Bindestrich (-) sowie dem Punktzeichen (.) sein, das als Trennzeichen verwendet wird.
 
 Beispiel: "microsoft.com"
 
@@ -490,14 +490,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| EnableDNS")
 </dt> </dl>
 
-**True** gibt an, dass die Domain Name System (DNS) für die Namensauflösung über die WINS-Auflösung (Internet Naming Service) von Windows aktiviert ist. Wenn der Name nicht mit DNS aufgelöst werden kann, wird die Namensanforderung zur Auflösung an WINS weitergeleitet.
+True gibt an, dass der Domain Name System (DNS) für die Namensauflösung über Windows WINS-Auflösung (Internet Naming Service) aktiviert ist. Wenn der Name nicht mit DNS aufgelöst werden kann, wird die Namensanforderung zur Auflösung an WINS weitergeleitet.
 
 </dd> <dt>
 
 **Dnshostname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -537,7 +537,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt** an, dass die IP-Adressen für diese Verbindung nicht nur unter dem vollständigen DNS-Namen des Computers, sondern auch im DNS unter dem Domänennamen dieser Verbindung registriert werden. Der Domänenname dieser Verbindung wird entweder mithilfe der [**SetDNSDomain**](setdnsdomain-method-in-class-win32-networkadapterconfiguration.md)()-Methode festgelegt oder von DSCP zugewiesen. Der registrierte Name ist der Hostname des Computers, an den der Domänenname angefügt ist.
+**True** gibt an, dass die IP-Adressen für diese Verbindung im DNS unter dem Domänennamen dieser Verbindung registriert werden und nicht unter dem vollständigen DNS-Namen des Computers registriert werden. Der Domänenname dieser Verbindung wird entweder mithilfe der [**SetDNSDomain**](setdnsdomain-method-in-class-win32-networkadapterconfiguration.md)()-Methode festgelegt oder von DSCP zugewiesen. Der registrierte Name ist der Hostname des Computers, an den der Domänenname angefügt ist.
 
 </dd> <dt>
 
@@ -550,10 +550,10 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| ForwardBufferMemory"), [**Units**](../wmisdk/standard-qualifiers.md) ("bytes")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ \\ Tcpip-Parameter \\ \| ForwardBufferMemory"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bytes")
 </dt> </dl>
 
-Durch IP zugewiesener Arbeitsspeicher zum Speichern von Paketdaten in der Routerpaketwarteschlange. Wenn dieser Pufferspeicher gefüllt ist, beginnt der Router damit, Pakete nach dem Zufallsprinzip aus seiner Warteschlange zu verwerfen. Paketwarteschlangen-Datenpuffer haben eine Länge von 256 Bytes, daher sollte der Wert dieses Parameters ein Vielfaches von 256 sein. Mehrere Puffer werden für größere Pakete miteinander verkettet. Der IP-Header für ein Paket wird separat gespeichert. Dieser Parameter wird ignoriert, und es werden keine Puffer zugeordnet, wenn der IP-Router nicht aktiviert ist. Die Puffergröße kann von der Netzwerk-MTU bis zu einem Wert reichen, der kleiner als 0xFFFFFFFF. Standardwert: 74240 (1480-Byte-Pakete, gerundet auf ein Vielfaches von 256).
+Arbeitsspeicher, der von IP zum Speichern von Paketdaten in der Routerpaketwarteschlange belegt wird. Wenn dieser Pufferspeicherplatz gefüllt ist, beginnt der Router, Pakete nach dem Zufallsprinzip aus der Warteschlange zu verwerfen. Paketwarteschlangen-Datenpuffer haben eine Länge von 256 Byte, sodass der Wert dieses Parameters ein Vielfaches von 256 sein sollte. Mehrere Puffer werden für größere Pakete miteinander verkettet. Der IP-Header für ein Paket wird separat gespeichert. Dieser Parameter wird ignoriert, und es werden keine Puffer zugeordnet, wenn der IP-Router nicht aktiviert ist. Die Puffergröße kann von der Netzwerk-MTU bis zu einem Wert kleiner als 0xFFFFFFFF reichen. Standard: 74240 (1480-Byte-Pakete, gerundet auf ein Vielfaches von 256).
 
 </dd> <dt>
 
@@ -638,7 +638,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**key**](../wmisdk/key-qualifier.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Control Class \\ \\ \\ \\ {4D36E972-E325-11CE-BFC1-08002BE10318}")
 </dt> </dl>
 
-Indexnummer der Konfiguration des Windows-Netzwerkadapters. Die Indexnummer wird verwendet, wenn mehrere Konfigurationen verfügbar sind.
+Indexnummer der Windows Netzwerkadapterkonfiguration. Die Indexnummer wird verwendet, wenn mehrere Konfigurationen verfügbar sind.
 
 </dd> <dt>
 
@@ -651,7 +651,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Indexwert, der eine lokale Netzwerkschnittstelle eindeutig identifiziert. Der Wert in dieser Eigenschaft entspricht dem Wert in der **InterfaceIndex-Eigenschaft** in der Instanz von [**Win32 \_ IP4RouteTable,**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetable) der die Netzwerkschnittstelle in der Routentabelle darstellt.
+Indexwert, der eine lokale Netzwerkschnittstelle eindeutig identifiziert. Der Wert in dieser Eigenschaft entspricht dem Wert in der **InterfaceIndex-Eigenschaft** in der [**Win32-IP4RouteTable-Instanz, \_**](/previous-versions/windows/desktop/wmiiprouteprov/win32-ip4routetable) die die Netzwerkschnittstelle in der Routingtabelle darstellt.
 
 </dd> <dt>
 
@@ -664,12 +664,12 @@ Datentyp: **Zeichenfolgenarray**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Parameters \| \\ \\ Tcpip \| IPAddress")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ \| Services-Parameter \\ \\ Tcpip \| IPAddress")
 </dt> </dl>
 
 Array aller IP-Adressen, die dem aktuellen Netzwerkadapter zugeordnet sind. Diese Eigenschaft kann entweder IPv6-Adressen oder IPv4-Adressen enthalten. Weitere Informationen finden Sie unter [IPv6- und IPv4-Unterstützung in WMI.](../wmisdk/ipv6-and-ipv4-support-in-wmi.md)
 
-Beispiel-IPv6-Adresse: "2010:836B:4179::836B:4179"
+IPv6-Beispieladresse: "2010:836B:4179::836B:4179"
 
 </dd> <dt>
 
@@ -682,7 +682,7 @@ Datentyp: **uint32**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Kosten für die Verwendung der konfigurierten Routen für den IP-gebundenen Adapter und der gewichtete Wert für diese Routen in der IP-Routingtabelle. Wenn die IP-Routingtabelle mehrere Routen zu einem Ziel enthält, wird die Route mit der niedrigsten Metrik verwendet. Der Standardwert ist 1.
+Kosten für die Verwendung der konfigurierten Routen für den IP-gebundenen Adapter und ist der gewichtete Wert für diese Routen in der IP-Routingtabelle. Wenn die IP-Routingtabelle mehrere Routen zu einem Ziel enthält, wird die Route mit der niedrigsten Metrik verwendet. Der Standardwert ist 1.
 
 </dd> <dt>
 
@@ -695,10 +695,10 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ Services Parameters \| \\ \\ Tcpip")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| System \\ \\ CurrentControlSet \\ \\ \| Services-Parameter \\ \\ Tcpip")
 </dt> </dl>
 
-True **gibt an,** dass TCP/IP gebunden und auf diesem Netzwerkadapter aktiviert ist.
+True gibt an, dass TCP/IP auf diesem Netzwerkadapter gebunden und aktiviert ist.
 
 </dd> <dt>
 
@@ -714,7 +714,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| IPFilterSecurityEnabled")
 </dt> </dl>
 
-**True** gibt an, dass die IP-Portsicherheit global für alle IP-gebundenen Netzwerkadapter aktiviert ist, und die Sicherheitswerte, die einzelnen Netzwerkadaptern zugeordnet sind, sind wirksam. Diese Eigenschaft wird in Verbindung mit **IPSecPermitTCPPorts,** **IPSecPermitUDPPorts** und **IPSecPermitIPProtocols** verwendet. **False** gibt an, dass die IP-Filtersicherheit für alle Netzwerkadapter deaktiviert ist und den ungefilterten Fluss des gesamten Port- und Protokolldatenverkehrs zulässt.
+True gibt an, dass die IP-Portsicherheit global für alle IP-gebundenen Netzwerkadapter aktiviert ist, und die Sicherheitswerte, die einzelnen Netzwerkadaptern zugeordnet sind, sind wirksam. Diese Eigenschaft wird in Verbindung mit **IPSecPermitTCPPorts,** **IPSecPermitUDPPorts** und **IPSecPermitIPProtocols** verwendet. **False** gibt an, dass die IP-Filtersicherheit für alle Netzwerkadapter deaktiviert ist und den ungefilterten Fluss des gesamten Port- und Protokolldatenverkehrs zulässt.
 
 </dd> <dt>
 
@@ -730,7 +730,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ NetworkAdapterConfiguration \| IPFilterSecurityEnabled")
 </dt> </dl>
 
-**True** gibt an, dass die IP-Portsicherheit global für alle IP-gebundenen Netzwerkadapter aktiviert ist. Diese Eigenschaft ist veraltet. Anstelle dieser Eigenschaft sollten Sie **IPFilterSecurityEnabled** verwenden.
+True **gibt an,** dass die IP-Portsicherheit global für alle IP-gebundenen Netzwerkadapter aktiviert ist. Diese Eigenschaft ist veraltet. Statt dieser Eigenschaft sollten Sie **IPFilterSecurityEnabled verwenden.**
 
 </dd> <dt>
 
@@ -746,7 +746,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| RawIPAllowedProtocols")
 </dt> </dl>
 
-Array der Protokolle, die über die IP-Adresse ausgeführt werden dürfen. Die Liste der Protokolle wird mithilfe der [**EnableIPSec-Methode**](enableipsec-method-in-class-win32-networkadapterconfiguration.md) definiert. Die Liste ist entweder leer oder enthält numerische Werte. Der numerische Wert 0 (null) gibt an, dass die Zugriffsberechtigung für alle Protokolle erteilt wurde. Eine leere Zeichenfolge gibt an, dass keine Protokolle ausgeführt werden dürfen, wenn **IPFilterSecurityEnabled** **TRUE** ist.
+Array der Protokolle, die über die IP-Adresse ausgeführt werden dürfen. Die Liste der Protokolle wird mithilfe der [**EnableIPSec-Methode**](enableipsec-method-in-class-win32-networkadapterconfiguration.md) definiert. Die Liste ist entweder leer oder enthält numerische Werte. Der numerische Wert 0 (null) gibt an, dass die Zugriffsberechtigung für alle Protokolle erteilt wird. Eine leere Zeichenfolge gibt an, dass keine Protokolle ausgeführt werden dürfen, **wenn IPFilterSecurityEnabled** **true ist.**
 
 </dd> <dt>
 
@@ -812,14 +812,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| UseZeroBroadcast")
 </dt> </dl>
 
-True gibt an, dass IP-Nullen-Broadcasts verwendet werden (0.0.0.0), und das System verwendet Eins-Broadcasts (255.255.255.255). Computersysteme verwenden in der Regel Eins-Broadcasts, aber die von BSD-Implementierungen abgeleiteten Verwenden Nullen-Broadcasts. Systeme, die nicht dieselben Broadcasts verwenden, können nicht im selben Netzwerk zusammenarbeiten. Der Standardwert ist **FALSE.**
+True gibt an, dass IP-Nullen-Broadcasts verwendet werden (0.0.0.0), und das System verwendet Ones-Broadcasts (255.255.255.255). Computersysteme verwenden in der Regel Einsen-Broadcasts, aber solche, die von BSD-Implementierungen abgeleitet sind, verwenden Zeros-Broadcasts. Systeme, die nicht dieselben Broadcasts verwenden, können nicht im selben Netzwerk zusammenarbeiten. Der Standardwert ist **FALSE.**
 
 </dd> <dt>
 
 **IPXAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -851,13 +851,13 @@ Die IPX-Technologie (Internetwork Packet Exchange) wird nicht mehr unterstützt,
 **IPXFrameType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **uint32-Array**
+Datentyp: **uint32 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ nwlnkipx \\ \\ Parameters \| PktType")
+Qualifizierer: [**VERALTET**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ nwlnkipx Parameters \\ \\ \| PktType")
 </dt> </dl>
 
 Die IPX-Technologie (Internetwork Packet Exchange) wird nicht mehr unterstützt, und diese Eigenschaft enthält keine nützlichen Daten.
@@ -966,13 +966,13 @@ Die IPX-Technologie (Internetwork Packet Exchange) wird nicht mehr unterstützt,
 **IPXVirtualNetNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**VERALTET**](../wmisdk/standard-wmi-qualifiers.md), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ nwlnkipx Parameters \\ \\ \| VirtualNetworkNumber")
+Qualifizierer: [**VERALTET,**](../wmisdk/standard-wmi-qualifiers.md) [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ nwlnkipx \\ \\ Parameters \| VirtualNetworkNumber")
 </dt> </dl>
 
 Die IPX-Technologie (Internetwork Packet Exchange) wird nicht mehr unterstützt, und diese Eigenschaft enthält keine nützlichen Daten.
@@ -991,7 +991,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| KeepAliveInterval"), [**Units**](../wmisdk/standard-qualifiers.md) ("milliseconds")
 </dt> </dl>
 
-Intervall, das Keep Alive-Neuübertragungen trennt, bis eine Antwort empfangen wird. Nachdem eine Antwort empfangen wurde, wird die Verzögerung bis zur nächsten Keep Alive-Übertragung wieder durch den Wert von **KeepAliveTime** gesteuert. Die Verbindung wird abgebrochen, nachdem die Anzahl der von **TcpMaxDataRetransmissions angegebenen Neuübertragungen** nicht mehr beantwortet wurde. Standardwert: 1000, Gültiger Bereich: 1 – 0xFFFFFFFF.
+Das Intervall, das Keep Alive-Neuübertragungen trennt, bis eine Antwort empfangen wird. Nachdem eine Antwort empfangen wurde, wird die Verzögerung bis zur nächsten Keep Alive-Übertragung erneut durch den Wert **von KeepAliveTime gesteuert.** Die Verbindung wird abgebrochen, nachdem die Von **TcpMaxDataRetransmissions** angegebene Anzahl von Neuübertragungen nicht mehr antwortet. Standardwert: 1000, Gültiger Bereich: 1 – 0xFFFFFFFF.
 
 </dd> <dt>
 
@@ -1007,14 +1007,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| KeepAliveInterval"), [**Units**](../wmisdk/standard-qualifiers.md) ("milliseconds")
 </dt> </dl>
 
-Die **KeepAliveTime-Eigenschaft** gibt an, wie oft tcp versucht, zu überprüfen, ob eine Leerlaufverbindung noch intakt ist, indem ein Keep Alive-Paket gesendet wird. Ein erreichbares Remotesystem bestätigt die Keep-Alive-Übertragung. Keep Alive-Pakete werden standardmäßig nicht gesendet. Dieses Feature kann in einer Verbindung von einer Anwendung aktiviert werden. Standardwert: 7.200.000 (zwei Stunden).
+Die **KeepAliveTime-Eigenschaft** gibt an, wie oft tcp versucht, durch Senden eines Keep Alive-Pakets zu überprüfen, ob eine Verbindung im Leerlauf noch intakt ist. Ein erreichbares Remotesystem bestätigt die Keep-Alive-Übertragung. Keep Alive-Pakete werden standardmäßig nicht gesendet. Dieses Feature kann in einer Verbindung durch eine Anwendung aktiviert werden. Standardwert: 7.200.000 (zwei Stunden).
 
 </dd> <dt>
 
 **MACAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1057,7 +1057,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| NumForwardPackets")
 </dt> </dl>
 
-Anzahl der IP-Paketheader, die der Routerpaketwarteschlange zugeordnet sind. Wenn alle Header verwendet werden, beginnt der Router, Pakete nach dem Zufallsprinzip aus der Warteschlange zu verwerfen. Dieser Wert sollte mindestens so groß sein wie der **ForwardBufferMemory-Wert** dividiert durch die maximale IP-Datengröße der mit dem Router verbundenen Netzwerke. Er sollte nicht größer als der **ForwardBufferMemory-Wert** dividiert durch 256 sein, da mindestens 256 Bytes Vorwärtspufferspeicher für jedes Paket verwendet werden. Die optimale Anzahl von Forward-Paketen für eine bestimmte **ForwardBufferMemory-Größe** hängt vom Typ des Datenverkehrs im Netzwerk ab. Sie liegt zwischen diesen beiden Werten. Wenn der Router nicht aktiviert ist, wird dieser Parameter ignoriert, und es werden keine Header zugeordnet. Standardwert: 50, Gültiger Bereich: 1 – 0xFFFFFFFE.
+Anzahl der IP-Paketheader, die der Routerpaketwarteschlange zugeordnet sind. Wenn alle Header verwendet werden, beginnt der Router nach dem Zufallsprinzip mit dem Verwerfen von Paketen aus der Warteschlange. Dieser Wert sollte mindestens so groß sein wie der **ForwardBufferMemory-Wert** dividiert durch die maximale IP-Datengröße der Netzwerke, die mit dem Router verbunden sind. Er sollte nicht größer als der **ForwardBufferMemory-Wert** geteilt durch 256 sein, da für jedes Paket mindestens 256 Bytes Anlaufpufferspeicher verwendet werden. Die optimale Anzahl von Weiterleitungspaketen für eine bestimmte **ForwardBufferMemory-Größe** hängt vom Typ des Datenverkehrs im Netzwerk ab. Sie liegt an einer Stelle zwischen diesen beiden Werten. Wenn der Router nicht aktiviert ist, wird dieser Parameter ignoriert, und es werden keine Header zugeordnet. Standardwert: 50, Gültiger Bereich: 1 – 0xFFFFFFFE.
 
 </dd> <dt>
 
@@ -1073,7 +1073,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| EnablePMTUBHDetect")
 </dt> </dl>
 
-True **gibt an,** dass die Erkennung von Routern mit schwarzer Lücke erfolgt, während TCP den Pfad der maximalen Übertragungseinheit entdeckt. Ein Router mit schwarzer Lücke gibt keine ICMP-Zielnachrichten zurück, die nicht erreichbar sind, wenn ein IP-Datagramm fragmentiert werden muss, wenn das Bit Nicht fragmentieren festgelegt ist. TCP hängt vom Empfang dieser Nachrichten ab, um die Pfad-MTU-Ermittlung durchzuführen. Wenn dieses Feature aktiviert ist, versucht TCP, Segmente zu senden, ohne dass das Bit "Nicht fragmentieren" festgelegt ist, wenn mehrere Neuübertragungen eines Segments nicht bestätigt werden. Wenn das Segment als Ergebnis bestätigt wird, wird der MSS verringert, und das Bit Nicht fragmentieren wird in zukünftigen Paketen für die Verbindung festgelegt. Durch die Aktivierung der Erkennung schwarzer Löcher erhöht sich die maximale Anzahl von Neuübertragungen, die für ein bestimmtes Segment ausgeführt werden. Der Standardwert dieser Eigenschaft ist **FALSE.**
+**True** gibt an, dass Die Erkennung von Routern mit schwarzen Löchern erfolgt, während TCP den Pfad der maximalen Übertragungseinheit ermittelt. Ein Black-Hole-Router gibt keine ICMP-Zielnachrichten zurück, die nicht erreichbar sind, wenn ein IP-Datagramm fragmentiert werden muss, für das das Don't Fragment-Bit festgelegt ist. TCP hängt vom Empfang dieser Nachrichten ab, um die Pfad-MTU-Ermittlung durchzuführen. Wenn dieses Feature aktiviert ist, versucht TCP, Segmente zu senden, ohne dass das Bit "Nicht fragmentieren" festgelegt ist, wenn mehrere Neuübertragungen eines Segments unbestätigt bleiben. Wenn das Segment als Ergebnis bestätigt wird, wird der MSS verringert, und das Bit Nicht fragmentieren wird in zukünftigen Paketen für die Verbindung festgelegt. Durch aktivieren der Erkennung schwarzer Löcher erhöht sich die maximale Anzahl von Neuübertragungen, die für ein bestimmtes Segment ausgeführt werden. Der Standardwert dieser Eigenschaft ist **FALSE.**
 
 </dd> <dt>
 
@@ -1089,14 +1089,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| EnablePMTUDiscovery")
 </dt> </dl>
 
-True gibt an, dass der Pfad der maximalen Übertragungseinheit (Maximum Transmission Unit, MTU) über den Pfad zu einem Remotehost ermittelt wird. Indem der MTU-Pfad entdeckt und TCP-Segmente auf diese Größe beschränkt werden, kann TCP die Fragmentierung an Routern entlang des Pfads beseitigen, die Netzwerke mit unterschiedlichen MTUs verbinden. Fragmentierung wirkt sich negativ auf TCP-Durchsatz und Netzwerküberlastung aus. Wenn Sie diesen Parameter auf **FALSE** festlegen, wird eine MTU von 576 Bytes für alle Verbindungen verwendet, die nicht mit Computern im lokalen Subnetz verbunden sind. Der Standardwert ist **TRUE.**
+True gibt an, dass der PFAD der maximalen Übertragungseinheit (Maximum Transmission Unit, MTU) über den Pfad zu einem Remotehost ermittelt wird. Indem der MTU-Pfad entdeckt und TCP-Segmente auf diese Größe beschränkt werden, kann TCP die Fragmentierung an Routern entlang des Pfads beseitigen, die Netzwerke mit unterschiedlichen MTUs verbinden. Fragmentierung wirkt sich negativ auf TCP-Durchsatz und Netzwerküberlastung aus. Wenn Sie diesen Parameter auf **FALSE** festlegen, wird eine MTU von 576 Bytes für alle Verbindungen verwendet, die nicht mit Computern im lokalen Subnetz verbunden sind. Der Standardwert ist **TRUE.**
 
 </dd> <dt>
 
 **Servicename**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1114,7 +1114,7 @@ Beispiel: "Elnkii"
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1123,9 +1123,9 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](../wmisdk/standard-qualifiers.md) (256)
 </dt> </dl>
 
-Bezeichner, unter dem das aktuelle Objekt bekannt ist.
+Bezeichner, durch den das aktuelle Objekt bekannt ist.
 
-Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
+Diese Eigenschaft wird von [**cim \_ setting**](cim-setting.md)geerbt.
 
 </dd> <dt>
 
@@ -1177,7 +1177,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| TcpMaxConnectRetransmissions")
 </dt> </dl>
 
-Gibt an, wie oft TCP versucht, eine Connect-Anforderung erneut zu übertragen, bevor die Verbindung beendet wird. Das anfängliche Timeout für die Neuübertragung beträgt 3 Sekunden. Das Neuübertragungs-Timeout verdoppelt sich für jeden Versuch. Standardwert: 3, Gültiger Bereich: 0 – 0xFFFFFFFF.
+Gibt an, wie oft TCP versucht, eine Verbinden Anforderung erneut zu übertragen, bevor die Verbindung beendet wird. Das Timeout für die anfängliche Neuübertragung beträgt 3 Sekunden. Das Timeout für die neu übertragene Übertragung wird für jeden Versuch verdoppelt. Standardwert: 3, Gültiger Bereich: 0 – 0xFFFFFFFF.
 
 </dd> <dt>
 
@@ -1193,7 +1193,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| TcpMaxDataRetransmissions")
 </dt> </dl>
 
-Gibt an, wie oft TCP ein einzelnes Datensegment (Nichtverbindungssegment) erneut überträgt, bevor die Verbindung beendet wird. Das Timeout für die Neuübertragung verdoppelt sich mit jeder nachfolgenden Neuübertragung für eine Verbindung. Standardwert: 5, Gültiger Bereich: 0 – 0xFFFFFFFF.
+Gibt an, wie oft TCP ein einzelnes Datensegment (Segment ohne Verbindung) erneut überträgt, bevor die Verbindung beendet wird. Das Timeout für die Neuübertragung verdoppelt sich mit jeder aufeinander folgenden Neuübertragung für eine Verbindung. Standardwert: 5, Gültiger Bereich: 0 – 0xFFFFFFFF.
 
 </dd> <dt>
 
@@ -1238,13 +1238,13 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| TcpWindowSize"), [**Units**](../wmisdk/standard-qualifiers.md) ("bytes")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ \\ Tcpip-Parameter \\ \| TcpWindowSize"), [**Einheiten**](../wmisdk/standard-qualifiers.md) ("Bytes")
 </dt> </dl>
 
-Maximale TCP-Empfangsfenstergröße, die vom System angeboten wird. Das Empfangsfenster gibt die Anzahl der Bytes an, die ein Absender übertragen kann, ohne eine Bestätigung zu empfangen. Im Allgemeinen verbessern größere Empfangsfenster die Leistung gegenüber Netzwerken mit hoher Verzögerung und hoher Bandbreite. Aus Effizienzgründen sollte das Empfangsfenster ein gerades Vielfaches der maximalen TCP-Segmentgröße (MSS) sein. Standardeinstellung: Viermal so groß wie die maximale TCP-Datengröße oder sogar ein Vielfaches der TCP-Datengröße, aufgerundet auf das nächste Vielfache von 8192. Ethernet-Netzwerke sind standardmäßig auf 8760 festgelegt. Gültiger Bereich: 0 bis 65535.
+Maximale TCP-Empfangsfenstergröße, die vom System angeboten wird. Das Empfangsfenster gibt die Anzahl der Bytes an, die ein Absender übertragen kann, ohne eine Bestätigung zu empfangen. Im Allgemeinen verbessern größere Empfangsfenster die Leistung gegenüber Netzwerken mit hoher Verzögerung und hoher Bandbreite. Aus Effizienzgründen sollte das Empfangsfenster ein gerades Vielfaches der maximalen TCP-Segmentgröße (MSS) sein. Standard: Viermal so groß wie die maximale TCP-Datengröße oder sogar ein Vielfaches der TCP-Datengröße, aufgerundet auf das nächste Vielfache von 8192. Ethernetnetzwerke sind standardmäßig auf 8760 eingestellt. Gültiger Bereich: 0 bis 65535.
 
 > [!Note]  
-> Windows Vista: Diese Eigenschaft greifen auf den Registrierungseintrag zu, der in der aktuellen Implementierung des `"CurrentControlSet\\Services\\Tcpip\\Parameters|TcpWindowSize"` Betriebssystems nicht verwendet wird.
+> Windows Vista: Diese Eigenschaft greift auf den `"CurrentControlSet\\Services\\Tcpip\\Parameters|TcpWindowSize"` Registrierungseintrag zu, der in der aktuellen Implementierung des Betriebssystems nicht verwendet wird.
 
  
 
@@ -1262,36 +1262,36 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32Registry \| SYSTEM \\ \\ CurrentControlSet \\ \\ Services \\ \\ Tcpip \\ \\ Parameters \| EnableLMHOSTS")
 </dt> </dl>
 
-True **gibt an,** dass lokale Nachschlagedateien verwendet werden. Suchdateien enthalten eine Zuordnung von IP-Adressen zu Hostnamen. Wenn sie auf dem lokalen System vorhanden sind, finden Sie sie unter \\ %SystemRoot%-System32-Treiber \\ \\ usw.
+True gibt an, dass lokale Suchdateien verwendet werden. Suchdateien enthalten eine Zuordnung von IP-Adressen zu Hostnamen. Wenn sie auf dem lokalen System vorhanden sind, werden sie in %SystemRoot% \\ \\ system32-Treibern \\ usw. gefunden.
 
 </dd> <dt>
 
 **WINSHostLookupFile**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Systeminformationen Functions \| [**GetSystemDirectory**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya) \| \\ \\ drivers \\ \\ etc \\ \\ lmhosts")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Systeminformationen Functions \| [**GetSystemDirectory-Treiber**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectorya) \| \\ \\ \\ \\ \\ \\ usw. lmhosts")
 </dt> </dl>
 
-Pfad zu einer WINS-Nachschlagedatei auf dem lokalen System. Diese Datei enthält eine Zuordnung von IP-Adressen zu Hostnamen. Wenn die in dieser Eigenschaft angegebene Datei gefunden wird, wird sie in den Ordner %SystemRoot% \\ system32 drivers etc des \\ lokalen Systems \\ kopiert. Nur gültig, wenn die **WINSEnableLMHostsLookup-Eigenschaft** **TRUE ist.**
+Pfad zu einer WINS-Suchdatei auf dem lokalen System. Diese Datei enthält eine Zuordnung von IP-Adressen zu Hostnamen. Wenn die in dieser Eigenschaft angegebene Datei gefunden wird, wird sie in den Ordner %SystemRoot% \\ system32 \\ drivers etc des lokalen Systems \\ kopiert. Nur gültig, wenn die **WINSEnableLMHostsLookup-Eigenschaft** **TRUE** ist.
 
 </dd> <dt>
 
 **WINSPrimaryServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API \| Device Input and Output Functions \| DeviceIoControl")
+Qualifizierer: [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("Win32API-Geräteeingabe- \| und -ausgabefunktionen \| DeviceIoControl")
 </dt> </dl>
 
 IP-Adresse für den primären WINS-Server.
@@ -1301,7 +1301,7 @@ IP-Adresse für den primären WINS-Server.
 **WINSScopeID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1317,7 +1317,7 @@ Der Wert wird am Ende des NetBIOS-Namens angefügt, der eine Gruppe von Computer
 **WINSSecondaryServer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **String**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1330,9 +1330,9 @@ IP-Adresse für den sekundären WINS-Server.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ NetworkAdapterConfiguration-Klasse** wird von [**der \_ CIM-Einstellung**](cim-setting.md)abgeleitet.
+Die **Win32 \_ NetworkAdapterConfiguration-Klasse** wird von [**cim \_ setting**](cim-setting.md)abgeleitet.
 
 ## <a name="examples"></a>Beispiele
 
@@ -1350,7 +1350,7 @@ $IstapAdapterConfig
 
 
 
-Im folgenden \# C-Beispiel werden die Beschreibung und die Indexnummer aller Netzwerkadapter-Konfigurationsinstanzen abgerufen. Beachten Sie, dass in diesem C-Beispiel der \# [Namespace Microsoft.Management.Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) verwendet wird, der im Allgemeinen effizienter skaliert wird als die WMI-Klassen des [System.Management-Namespace.](/dotnet/api/system.management)
+Im folgenden \# C-Beispiel werden die Beschreibung und die Indexnummer aller Netzwerkadapter-Konfigurationsinstanzen abgerufen. Beachten Sie, dass in diesem \# C-Beispiel der [Microsoft.Management.Infrastructure-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85)) verwendet wird, der im Allgemeinen effizienter skaliert wird als die WMI-Namespaceklassen des [System.Management-Namespace.](/dotnet/api/system.management)
 
 
 ```CSharp
@@ -1374,7 +1374,7 @@ Console.ReadLine();
 
 
 
-Im folgenden \# C-Beispiel werden die Beschreibung und Indexnummer aller Netzwerkadapter-Konfigurationsinstanzen abgerufen. Beachten Sie, dass in \# diesem C-Beispiel der ursprüngliche [System.Management-Namespace](/dotnet/api/system.management) verwendet wird, der von [Microsoft.Management.Infrastructure ersetzt wurde.](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85))
+Im folgenden \# C-Beispiel werden die Beschreibung und die Indexnummer aller Netzwerkadapter-Konfigurationsinstanzen abgerufen. Beachten Sie, dass in diesem \# C-Beispiel der ursprüngliche [System.Management-Namespace](/dotnet/api/system.management) verwendet wird, der durch [Microsoft.Management.Infrastructure](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832958(v=vs.85))ersetzt wurde.
 
 
 ```CSharp
@@ -1691,7 +1691,7 @@ End Function
 [**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dt>
 
-[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
+[Computersystemhardwareklassen](computer-system-hardware-classes.md)
 </dt> <dt>
 
 [WMI-Aufgaben: Netzwerk](../wmisdk/wmi-tasks--networking.md)

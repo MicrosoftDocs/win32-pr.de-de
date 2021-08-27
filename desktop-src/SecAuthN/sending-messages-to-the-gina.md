@@ -1,54 +1,54 @@
 ---
-description: Winlogon sendet Nachrichten an die Gina, während Dialogfelder angezeigt werden. Diese Nachrichten werden wie folgt in der SAS-Nachricht der wlx-WM gekapselt \_ \_ .
+description: Winlogon sendet Nachrichten an die GINA, während Dialogfelder angezeigt werden. Diese Nachrichten werden alle wie folgt in der WLX \_ WM \_ SAS-Nachricht gekapselt.
 ms.assetid: 3da1c3d2-5116-47c3-98e4-f29b33693c69
-title: Senden von Nachrichten an die Gina
+title: Senden von Nachrichten an die GINA
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d2f7b5b0d8fbecafad0bcc36c84cf395813f767
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb52da6a2a66d901207485ed97592a97286902ba51c54ec4924240ab9403a885
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118918319"
 ---
-# <a name="sending-messages-to-the-gina"></a>Senden von Nachrichten an die Gina
+# <a name="sending-messages-to-the-gina"></a>Senden von Nachrichten an die GINA
 
-[*Winlogon*](../secgloss/w-gly.md) sendet Nachrichten an die [*Gina*](../secgloss/g-gly.md) , während Dialogfelder angezeigt werden. Diese Nachrichten werden wie folgt in der SAS-Nachricht der wlx-WM gekapselt \_ \_ .
+[*Winlogon*](../secgloss/w-gly.md) sendet Nachrichten an die [*GINA,*](../secgloss/g-gly.md) während Dialogfelder angezeigt werden. Diese Nachrichten werden alle wie folgt in der WLX \_ WM \_ SAS-Nachricht gekapselt.
 
 
 
-| Typ der sicheren Aufmerksamkeit in den wParam-Parameter | BESCHREIBUNG                                                                                                                                   |
+| Sicherer Aufmerksamkeitssequenztyp im wParam-Parameter | BESCHREIBUNG                                                                                                                                   |
 |----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| wlx \_ SAS \_ Type \_ STRG \_ alt \_ del                     | Gibt an, dass eine Tastenkombination STRG + ALT + ENTF empfangen wurde.                                                                                      |
-| wlx \_ SAS \_ Type \_ SC \_ Insert                         | Gibt an, dass eine [*Smartcard*](../secgloss/s-gly.md) in ein kompatibles Gerät eingefügt wurde. |
-| wlx \_ SAS \_ Type \_ SC \_ Remove                         | Gibt an, dass eine Smartcard von einem kompatiblen Gerät entfernt wurde.                                                                        |
-| Benutzer Abmeldung zum wlx- \_ SAS- \_ Typ \_ \_                       | Gibt an, dass ein Benutzer eine Abmeldung angefordert hat.                                                                                                       |
-| \_ \_ \_ scrnsvr-Timeout für wlx-SAS-Typ \_                   | Gibt an, dass der Bildschirmschoner aufgrund fehlender Benutzereingaben ausgeführt werden soll.                                                                      |
-| Timeout für wlx- \_ SAS- \_ Typ \_                            | Gibt an, dass innerhalb des angegebenen Timeout Zeitraums keine Benutzereingaben empfangen wurden.                                                               |
+| WLX \_ SAS \_ TYPE \_ STRG ALT \_ \_ DEL                     | Gibt an, dass eine TASTENfolge mit STRG+ALT+ENTF empfangen wurde.                                                                                      |
+| WLX \_ SAS \_ TYPE \_ SC \_ INSERT                         | Gibt an, dass eine [*Smartcard*](../secgloss/s-gly.md) in ein kompatibles Gerät eingefügt wurde. |
+| WLX \_ SAS \_ TYPE \_ SC \_ REMOVE                         | Gibt an, dass eine Smartcard von einem kompatiblen Gerät entfernt wurde.                                                                        |
+| WLX \_ SAS \_ TYPE \_ USER \_ LOGOFF                       | Gibt an, dass ein Benutzer die Abmeldung angefordert hat.                                                                                                       |
+| WLX \_ SAS \_ TYPE \_ SCRNSVR \_ TIMEOUT                   | Gibt an, dass der Bildschirmschoner aufgrund fehlender Benutzereingaben ausgeführt werden soll.                                                                      |
+| TIMEOUT FÜR \_ WLX-SAS-TYP \_ \_                            | Gibt an, dass innerhalb des angegebenen Time out-Zeitraums keine Benutzereingabe empfangen wurde.                                                               |
 
 
 
  
 
-Bei Timeouts und Abmelde Vorgängen schließt Winlogon das Dialogfeld, nachdem die Nachricht gesendet wurde. Diese Meldung wird gesendet, sodass der Dialogfeld Vorgang auf nützliche Weise reagieren kann (z. b. durch Schließen des Abmelde Vorgangs, wenn eine Abmeldung aufgetreten ist).
+Bei Time outs und Logoffs schließt Winlogon das Dialogfeld, nachdem die Nachricht gesendet wurde. Diese Meldung wird gesendet, damit der Dialogfeldvorgang auf nützliche Weise reagieren kann (z. B. indem er sich selbst schließt, wenn eine Abmeldung aufgetreten ist).
 
-Bei Eingabe Timeouts wird das Dialogfeld mit dem Code wlx \_ DLG \_ input \_ Timeout geschlossen.
+Bei Eingabetimeouts wird das Dialogfeld mit dem Code WLX \_ DLG \_ INPUT \_ TIMEOUT geschlossen.
 
-Für Bildschirmschoner-Timeouts wird das Dialogfeld mit dem Code wlx \_ DLG \_ Screen \_ Saver Timeout geschlossen \_ .
+Für Bildschirmschonertimeouts wird das Dialogfeld mit dem Code WLX \_ DLG \_ SCREEN \_ SAVER \_ TIMEOUT geschlossen.
 
-Bei Abmelde Vorgängen wird der Dialogfeld Vorgang mit dem Code wlx DLG-Benutzer Abmeldung geschlossen \_ \_ \_ .
+Bei Abmeldungen wird der Dialogfeldvorgang mit dem Code WLX \_ DLG \_ USER \_ LOGOFF geschlossen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Winlogon wird initialisiert.](initializing-winlogon.md)
+[Initialisieren von Winlogon](initializing-winlogon.md)
 </dt> <dt>
 
 [Winlogon-Zustände](winlogon-states.md)
 </dt> <dt>
 
-[Unterstützte Dialog Feld Dienstnutzungsdauer-out-Vorgänge](supported-dialog-box-service-time-out-operations.md)
+[Unterstützte Time out-Vorgänge des Dialogfelddiensts](supported-dialog-box-service-time-out-operations.md)
 </dt> <dt>
 
 [Winlogon-Unterstützungsfunktionen](authentication-functions.md)

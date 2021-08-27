@@ -1,36 +1,36 @@
 ---
-description: 'Das folgende Beispiel funktioniert in Verbindung mit dem Programm in Beispiel C-Programm: senden und Empfangen einer signierten und verschlüsselten Nachricht. Er liest die signierte und verschlüsselte Nachricht, entschlüsselt und überprüft dann die Nachricht.'
+description: 'Das folgende Beispiel funktioniert in Verbindung mit dem Programm in Beispiel C-Programm: Senden und Empfangen einer signierten und verschlüsselten Nachricht. Er liest die signierte und verschlüsselte Nachricht, entschlüsselt und überprüft die Nachricht.'
 ms.assetid: 65ca30ba-a184-46ef-808c-e2fedcc86079
-title: 'Beispiel-C-Programm: Empfangen einer signierten und verschlüsselten Nachricht'
+title: 'C-Beispielprogramm: Empfangen einer signierten und verschlüsselten Nachricht'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a1d97b50eb401568ebf1732f347f800eed0c26f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7b9e468eeb2204534bff13e756c72a0a6c7ca583b5493338864b52fef6f44590
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119007588"
 ---
-# <a name="example-c-program-receiving-a-signed-and-encrypted-message"></a>Beispiel-C-Programm: Empfangen einer signierten und verschlüsselten Nachricht
+# <a name="example-c-program-receiving-a-signed-and-encrypted-message"></a>C-Beispielprogramm: Empfangen einer signierten und verschlüsselten Nachricht
 
-Das folgende Beispiel funktioniert in Verbindung mit dem Programm in [Beispiel C-Programm: senden und Empfangen einer signierten und verschlüsselten Nachricht](example-c-program-sending-and-receiving-a-signed-and-encrypted-message.md). Er liest die signierte und verschlüsselte Nachricht, entschlüsselt und überprüft dann die Nachricht.
+Das folgende Beispiel funktioniert in Verbindung mit dem Programm in [Beispiel C-Programm: Senden und Empfangen einer signierten und verschlüsselten Nachricht.](example-c-program-sending-and-receiving-a-signed-and-encrypted-message.md) Er liest die signierte und verschlüsselte Nachricht, entschlüsselt und überprüft die Nachricht.
 
-Zum Entschlüsseln und Überprüfen der Nachricht muss der [*private Schlüssel*](../secgloss/p-gly.md) des beabsichtigten Empfängers der Nachricht verfügbar sein. Das Zertifikat des Signatur Gebers ist in dem von der Datei gelesenen [*nachrichtenblob*](../secgloss/b-gly.md) enthalten.
+Zum Entschlüsseln und Überprüfen der Nachricht muss der [*private Schlüssel*](../secgloss/p-gly.md) des beabsichtigten Empfängers der Nachricht verfügbar sein. Das Zertifikat des Signierers ist in der [*Aus*](../secgloss/b-gly.md) der Datei eingelesenen Nachricht BLOB enthalten.
 
 In diesem Beispiel werden die folgenden Aufgaben veranschaulicht:
 
--   Systemzertifikat Speicher werden geöffnet und geschlossen.
--   Lesen eines [**Zertifikat \_ Namen- \_ BLOBs**](/previous-versions/windows/desktop/legacy/aa381414(v=vs.85)) aus einer Datei.
--   Initialisieren der Datenstrukturen, die zum Entschlüsseln und Überprüfen einer Nachricht erforderlich sind.
--   Aufrufen einer CryptoAPI-Funktion, um die erforderliche Größe eines Puffers zu ermitteln, den Puffer der erforderlichen Größe zuzuweisen und die CryptoAPI-Funktion erneut aufzurufende, um den Puffer zu füllen. Weitere Informationen finden Sie unter [Abrufen von Daten mit unbekannter Länge](retrieving-data-of-unknown-length.md).
+-   Öffnen und Schließen von Systemzertifikatspeichern.
+-   Lesen eines [**CERT \_ \_ NAME-BLOB**](/previous-versions/windows/desktop/legacy/aa381414(v=vs.85)) aus einer Datei.
+-   Initialisieren von Datenstrukturen, die zum Entschlüsseln und Überprüfen einer Nachricht erforderlich sind.
+-   Aufrufen einer CryptoAPI-Funktion, um die erforderliche Größe eines Puffers zu ermitteln, den Puffer der erforderlichen Größe zuzuordnen und die CryptoAPI-Funktion erneut aufzurufen, um den Puffer zu füllen. Weitere Informationen finden Sie unter [Abrufen von Daten unbekannter Länge.](retrieving-data-of-unknown-length.md)
 
 In diesem Beispiel werden die folgenden CryptoAPI-Funktionen verwendet:
 
--   [**CertOpenStore übergebene**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
--   [**Cryptdecryptandveriatymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptandverifymessagesignature)
--   [**Certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   [**CertOpenStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopenstore)
+-   [**CryptDecryptAndVerifyMessageSignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptdecryptandverifymessagesignature)
+-   [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
 
-In diesem Beispiel wird [**mylenker Error**](myhandleerror.md) verwendet, um das Programm im Falle eines Fehlers ordnungsgemäß zu beenden. Der Code **myhanderror** ist im Beispiel enthalten und kann auch zusammen mit anderen Hilfsfunktionen unter [universell Funktionen](general-purpose-functions.md)gefunden werden.
+In diesem Beispiel wird [**MyHandleError**](myhandleerror.md) verwendet, um das Programm bei einem Fehler ordnungsgemäß zu beenden. Der Code **MyHandleError** ist im Beispiel enthalten und befindet sich auch zusammen mit anderen Hilfsfunktionen unter [Universell Functions](general-purpose-functions.md).
 
 
 ```C++

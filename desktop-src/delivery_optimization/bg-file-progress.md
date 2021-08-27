@@ -1,9 +1,9 @@
 ---
-title: BG_FILE_PROGRESS-Struktur (deliveryoptimization. h)
-description: Die BG_FILE_PROGRESS-Struktur liefert Datei bezogene Statusinformationen, wie z. b. die Anzahl der übertragenen Bytes.
+title: BG_FILE_PROGRESS -Struktur (Deliveryoptimization.h)
+description: Die BG_FILE_PROGRESS-Struktur stellt dateibezogene Statusinformationen wie die Anzahl der übertragenen Bytes zur Verfügung.
 ms.assetid: 49BDFEEE-D7BF-489A-8BC1-951549B06252
 keywords:
-- BG_FILE_PROGRESS Struktur
+- BG_FILE_PROGRESS-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 93507b8aeefa9c0ea16f70f67e221ecc4218427f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dd0bec0f21fb652ccc5c8d543f04816468fff9bc28db74a68a1d05c072a895a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047248"
 ---
-# <a name="bg_file_progress-structure"></a>BG_FILE_PROGRESS Struktur
+# <a name="bg_file_progress-structure"></a>BG_FILE_PROGRESS-Struktur
 
-Die **BG_FILE_PROGRESS** -Struktur liefert Datei bezogene Statusinformationen, wie z. b. die Anzahl der übertragenen Bytes.
+Die **BG_FILE_PROGRESS-Struktur** enthält dateibezogene Statusinformationen, z. B. die Anzahl der übertragenen Bytes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,9 +46,9 @@ typedef struct _BG_FILE_PROGRESS {
 **BytesTotal**
 </dt> <dd>
 
-Die Länge der Datei in Bytes. Wenn die Größe der Datei nicht ermitteln kann (z. b. wenn die Datei oder der Server nicht vorhanden ist), wird der Wert DO_UNKNOWN_FILE_SIZE.
+Die Länge der Datei in Bytes. Wenn DO die Größe der Datei nicht bestimmen kann (z. B. wenn die Datei oder der Server nicht vorhanden ist), wird der Wert DO_UNKNOWN_FILE_SIZE.
 
-Wenn Sie Bereiche aus einer Datei herunterladen, spiegelt **bytesTotal** die Gesamtzahl der Bytes wider, die Sie aus der Datei herunterladen möchten.
+Wenn Sie Bereiche aus einer Datei herunterladen, spiegelt **BytesTotal** die Gesamtzahl der Bytes wider, die Sie aus der Datei herunterladen möchten.
 
 </dd> <dt>
 
@@ -62,15 +62,15 @@ Anzahl der übertragenen Bytes.
 **Abgeschlossen**
 </dt> <dd>
 
-Für Downloads ist der Wert **true** , wenn die Datei für den Benutzer verfügbar ist. Andernfalls ist der Wert **false**. Dateien sind nach dem Aufrufen der [**ibackgroundcopyjob:: Complete**](ibackgroundcopyjob-complete.md) -Methode für den Benutzer verfügbar. Wenn die **Complete** -Methode einen vorübergehenden Fehler generiert, sind die Dateien, die vor dem Auftreten des Fehlers verarbeitet wurden, für den Benutzer verfügbar. bei anderen handelt es sich nicht um. Verwenden Sie den **abgeschlossenen** Member, um zu ermitteln, ob die Datei für den Benutzer verfügbar ist, wenn der Vorgang **abgeschlossen** ist.
+Bei Downloads ist der Wert **TRUE,** wenn die Datei für den Benutzer verfügbar ist. andernfalls ist der Wert **FALSE.** Dateien stehen dem Benutzer nach dem Aufruf der [**IBackgroundCopyJob::Complete-Methode zur**](ibackgroundcopyjob-complete.md) Verfügung. Wenn die **Complete-Methode** einen vorübergehenden Fehler generiert, sind die Dateien, die vor dem Fehler verarbeitet wurden, für den Benutzer verfügbar. die anderen nicht. Verwenden Sie **das Completed-Mitglied,** um zu bestimmen, ob die Datei für den Benutzer verfügbar ist, wenn Complete **fehlschlägt.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um festzustellen, ob die Datei übertragen wird, haben Sie folgende Möglichkeiten:
+Um zu ermitteln, ob DO die Datei übertragen hat, haben Sie die folgenden Folgenden:
 
--   Vergleichen Sie **bytesTransferred** mit **bytesTotal**.
+-   Vergleichen **Sie BytesTransferred** mit **BytesTotal.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,9 +78,9 @@ Um festzustellen, ob die Datei übertragen wird, haben Sie folgende Möglichkeit
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ Um festzustellen, ob die Datei übertragen wird, haben Sie folgende Möglichkeit
 [**BG_JOB_PROGRESS**](bg-job-progress.md)
 </dt> <dt>
 
-[**Ibackgroundcopyfile:: GetProgress**](ibackgroundcopyfile-getprogress-method.md)
+[**IBackgroundCopyFile::GetProgress**](ibackgroundcopyfile-getprogress-method.md)
 </dt> </dl>
 
  

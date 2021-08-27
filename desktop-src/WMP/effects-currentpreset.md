@@ -1,9 +1,9 @@
 ---
-title: Effects. currentvoreinstellung
-description: Das currentvoreinstellung-Attribut gibt die aktuelle Voreinstellung der aktuellen Visualisierung an oder ruft diese ab.
+title: EFFECTS.currentPreset
+description: Das currentPreset-Attribut gibt die aktuelle Voreinstellung der aktuellen Visualisierung an oder ruft sie ab.
 ms.assetid: 92c405fb-6a0b-4f4d-a8c6-61df89b035df
 keywords:
-- Effekte. currentvoreinstellung-Windows-Media Player
+- EFFECTS.currentPreset Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24cab33d732bd8e148a0cdf9cd281db7a39182f4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f2a9ce067c2c53245184dcb8ed3cfa7b90b05546a27e5e0b91727599f446b958
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996700"
 ---
-# <a name="effectscurrentpreset"></a>Effects. currentvoreinstellung
+# <a name="effectscurrentpreset"></a>EFFECTS.currentPreset
 
-Das **currentvoreinstellung** -Attribut gibt die aktuelle Voreinstellung der aktuellen Visualisierung an oder ruft diese ab.
+Das **currentPreset-Attribut** gibt die aktuelle Voreinstellung der aktuellen Visualisierung an oder ruft sie ab.
 
 ``` syntax
         elementID.currentPreset
@@ -29,7 +29,7 @@ Das **currentvoreinstellung** -Attribut gibt die aktuelle Voreinstellung der akt
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Index der Voreinstellung angibt.  Die Indizes beginnen mit 0 (null), was auch der Standardwert ist.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Index der Voreinstellung angibt.  Die Indizes beginnen mit 0 (null), was auch der Standardwert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Index der Voreins
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Index der Voreins
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

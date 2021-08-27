@@ -1,23 +1,23 @@
 ---
-description: Wenn ein Client und Server das Einrichten des Sicherheits Kontexts abgeschlossen haben, können Nachrichten Unterstützungsfunktionen verwendet werden.
+description: Wenn ein Client und Server die Einrichtung des Sicherheitskontexts abgeschlossen haben, können Nachrichtenunterstützungsfunktionen verwendet werden.
 ms.assetid: a65054bd-31cb-4842-af59-82cfe799fb70
 title: Signieren einer Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36f8151a66120575bfcaeda62955a7f6aa47e8e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b605ccaaa4adfe37dc2bbe5f5c0ed809f0656896e5e85478b0b63740bf6f63e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118918049"
 ---
 # <a name="signing-a-message"></a>Signieren einer Nachricht
 
-Wenn ein Client und Server das Einrichten des [*Sicherheits Kontexts*](../secgloss/s-gly.md)abgeschlossen haben, können Nachrichten Unterstützungsfunktionen verwendet werden. Client und Server verwenden das Sicherheitskontext Token, das beim Erstellen der Sitzung erstellt wurde, um [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) -und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) -Funktionen aufzurufen. Das Kontext Token kann mit [**verschlüsselungsmessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-encryptmessage) und [**DecryptMessage (allgemein)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) für den Kommunikations [*Datenschutz*](../secgloss/p-gly.md)verwendet werden.
+Wenn ein Client und Server die Einrichtung des Sicherheitskontexts [*abgeschlossen haben,*](../secgloss/s-gly.md)können Nachrichtenunterstützungsfunktionen verwendet werden. Client und Server verwenden das Sicherheitskontexttoken, das beim Herstellen der Sitzung zum Aufrufen der [**Funktionen MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature erstellt**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) wurde. Das Kontexttoken kann für den Datenschutz bei der Kommunikation mit [**EncryptMessage (Allgemein)**](/windows/win32/api/sspi/nf-sspi-encryptmessage) und [**DecryptMessage (Allgemein)**](/windows/win32/api/sspi/nf-sspi-decryptmessage) [*verwendet werden.*](../secgloss/p-gly.md)
 
-Im folgenden Beispiel wird die Client seitige Erstellung einer signierten Nachricht veranschaulicht, die an den Server gesendet wird. Vor dem Aufrufen von [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature)ruft der Client [**QueryContextAttributes (General)**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) mit einer [**secpkgcontext \_ sizes**](/windows/desktop/api/Sspi/ns-sspi-secpkgcontext_sizes) -Struktur auf, um die Länge des Puffers zu bestimmen, der zum Speichern der Nachrichten Signatur benötigt wird. Wenn der **cbmaxsignature** -Member 0 (null) ist, unterstützt das [*Sicherheitspaket*](../secgloss/s-gly.md) keine Signierung von Nachrichten. Andernfalls gibt dieser Member die Größe des Puffers an, der für den Empfang der Signatur zugewiesen werden soll.
+Das folgende Beispiel zeigt, wie die Clientseite eine signierte Nachricht generiert, die an den Server gesendet werden soll. Vor dem [**Aufruf von MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature)ruft der Client [**QueryContextAttributes (Allgemein)**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) mit einer [**SecPkgContext \_ Sizes-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secpkgcontext_sizes) auf, um die Länge des Puffers zu bestimmen, der zum Enthalten der Nachrichtensignatur erforderlich ist. Wenn das **cbMaxSignature-Mitglied** [](../secgloss/s-gly.md) 0 (null) ist, unterstützt das Sicherheitspaket keine Signierungsmeldungen. Andernfalls gibt dieser Member die Größe des Puffers an, der zum Empfangen der Signatur reserviert werden soll.
 
-Im Beispiel wird davon ausgegangen, dass eine **sechandle** -Variable namens *phcontext* und eine **Socketstruktur** mit dem Namen *s* initialisiert werden. Informationen zu den Deklarationen und Initiierungen dieser Variablen finden [Sie unter Verwenden von SSPI mit einem Windows Sockets-Client](using-sspi-with-a-windows-sockets-client.md) und [Verwenden von SSPI mit einem Windows Sockets-Server](using-sspi-with-a-windows-sockets-server.md). Dieses Beispiel umfasst Aufrufe von Funktionen in Secur32. lib, die in den Linkbibliotheken enthalten sein müssen.
+Im Beispiel wird davon ausgegangen, dass eine **SecHandle-Variable** namens *phContext* und eine **SOCKET-Struktur** namens *s* initialisiert werden. Informationen zu den Deklarationen und Initiierungen dieser Variablen finden Sie unter Using SSPI with a Windows Sockets Client (Verwenden von SSPI mit einem [Windows Sockets-Client)](using-sspi-with-a-windows-sockets-client.md) und [Using SSPI with a Windows Sockets Server](using-sspi-with-a-windows-sockets-server.md)(Verwenden von SSPI mit einem Windows Sockets Server). Dieses Beispiel enthält Aufrufe von Funktionen in Secur32.lib, die in die Linkbibliotheken aufgenommen werden müssen.
 
 
 ```C++
@@ -115,10 +115,10 @@ if(!SendMsg(
 
 
 
-[**Makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) gibt **true** zurück, wenn der Kontext für das Signieren von Nachrichten eingerichtet ist und der Eingabepuffer Deskriptor ordnungsgemäß formatiert ist. Nachdem die Nachricht signiert wurde, werden die Nachricht und die Signatur mit ihren Längen an den Remote Computer gesendet.
+[**MakeSignature gibt**](/windows/desktop/api/Sspi/nf-sspi-makesignature) **TRUE zurück,** wenn der Kontext so eingerichtet ist, dass signierte Nachrichten zulässig sind und der Eingabepufferdeskriptor ordnungsgemäß formatiert ist. Nachdem die Nachricht signiert wurde, werden die Nachricht und die Signatur mit ihrer Länge an den Remotecomputer gesendet.
 
 > [!Note]  
-> Der Dateninhalt der [**secbuffer**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) -Strukturen wird gesendet, nicht die **secbuffer** -Strukturen selbst und die [**secbufferabsc**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) -Struktur. Neue **secbuffer** -Strukturen und eine neue **secbufferdesc** -Struktur werden von der empfangenden Anwendung erstellt, um die Signatur zu überprüfen.
+> Der Dateninhalt der [**SecBuffer-Strukturen**](/windows/desktop/api/Sspi/ns-sspi-secbuffer) wird gesendet, nicht die **SecBuffer-Strukturen** selbst oder die [**SecBufferDesc-Struktur.**](/windows/desktop/api/Sspi/ns-sspi-secbufferdesc) Neue **SecBuffer-Strukturen** und eine neue **SecBufferDesc-Struktur** werden von der empfangenden Anwendung erstellt, um die Signatur zu überprüfen.
 
  
 

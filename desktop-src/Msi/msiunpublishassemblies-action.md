@@ -1,42 +1,42 @@
 ---
-description: Die msiunpublishassemblyaktion verwaltet die Ankündigung von Common Language Runtime Assemblys und Win32-Assemblys, die entfernt werden.
+description: Die MsiUnpublishAssemblies-Aktion verwaltet die Ankündigung von Common Language Runtime-Assemblys und Win32-Assemblys, die entfernt werden.
 ms.assetid: 199d72be-bbe1-4777-a913-2e4b92576bfa
-title: Msiunpublishassemblyaktion
+title: MsiUnpublishAssemblies-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 91d398c66781e6e356b110828c56de6f5e616775
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f640338e13f53b115ca3b93aa2a63987efb5aa7cf053d4c8a59d8d20d0f7e3fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118943897"
 ---
-# <a name="msiunpublishassemblies-action"></a>Msiunpublishassemblyaktion
+# <a name="msiunpublishassemblies-action"></a>MsiUnpublishAssemblies-Aktion
 
-Die msiunpublishassemblyaktion verwaltet die Ankündigung von Common Language Runtime Assemblys und Win32-Assemblys, die entfernt werden. Mit der-Aktion wird die [MsiAssembly-Tabelle](msiassembly-table.md) abgefragt, um zu bestimmen, welche Assemblys angekündigte oder installierte Features aus dem globalen Assemblycache entfernt haben und welche Assemblys eine angekündigte oder installierte übergeordnete Komponente von einem Speicherort entfernt wird, der für eine bestimmte Weitere Informationen finden Sie unter Installieren von Assemblys [im globalen Assemblycache](installation-of-assemblies-to-the-global-assembly-cache.md) und [Installieren von Win32](installation-of-win32-assemblies.md)-Assemblys.
+Die MsiUnpublishAssemblies-Aktion verwaltet die Ankündigung von Common Language Runtime-Assemblys und Win32-Assemblys, die entfernt werden. Die Aktion fragt die [MsiAssembly-Tabelle](msiassembly-table.md) ab, um zu bestimmen, welche Assemblys Angekündigte oder installierte Features aus dem globalen Assemblycache entfernt haben und welche Assemblys eine angekündigte oder installierte übergeordnete Komponente von einem Speicherort entfernt haben, der für eine bestimmte Anwendung isoliert ist. Weitere Informationen finden Sie unter [Installation von Assemblys im globalen Assemblycache](installation-of-assemblies-to-the-global-assembly-cache.md) und [Installation von Win32-Assemblys.](installation-of-win32-assemblies.md)
 
-Auf Systemen, auf denen Windows XP und höher ausgeführt wird, können Windows Installer Win32-Assemblys [als parallele](side-by-side-assemblies.md)Assemblys installieren. Weitere Informationen finden Sie unter Informationen [zu isolierten Anwendungen und](../sbscs/about-isolated-applications-and-side-by-side-assemblies.md)parallelen Assemblys.
+Auf Systemen, auf denen Windows XP und höher ausgeführt wird, kann Windows Installer Win32-Assemblys als [nebenseitige Assemblys](side-by-side-assemblies.md)installieren. Weitere Informationen finden Sie unter [Informationen zu isolierten Anwendungen und nebeneinander angezeigten Assemblys.](../sbscs/about-isolated-applications-and-side-by-side-assemblies.md)
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die msiunpublishassemblyaktion muss nach der [InstallInitialize-Aktion](installinitialize-action.md) in der [InstallExecuteSequence-Tabelle](installexecutesequence-table.md)erfolgen.
+Die MsiUnpublishAssemblies-Aktion muss nach der [InstallInitialize-Aktion](installinitialize-action.md) in der [Tabelle InstallExecuteSequence erfolgen.](installexecutesequence-table.md)
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten |
+| Feld | Beschreibung der Aktionsdaten |
 |-------|----------------------------|
 | \[1\] | Anwendungskontext.       |
-| \[2\] | AssemblyName.             |
+| \[2\] | Name der Assembly.             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [msipublishassemblyaktion](msipublishassemblies-action.md) verwaltet die Ankündigung von Assemblys, die angekündigt oder installiert werden.
+Die [MsiPublishAssemblies-Aktion](msipublishassemblies-action.md) verwaltet die Ankündigung von Assemblys, die angekündigt oder installiert werden.
 
  
 

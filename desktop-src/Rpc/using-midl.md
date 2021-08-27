@@ -1,30 +1,30 @@
 ---
-title: Verwenden von Mittel l
-description: Erstellen und Kompilieren einer Microsoft Interface Definition Language-Schnittstelle (Mittel l) und eines Remote Prozedur Aufrufs (RPC).
+title: Verwenden von MIDL
+description: Erstellen und Kompilieren einer MICROSOFT INTERFACE DEFINITION LANGUAGE-Schnittstelle (MIDL) und eines Remoteprozeduraufrufs (RPC).
 ms.assetid: 2594e3d6-d44a-4e12-8286-b9700e67702e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22da60f20cba6c558c7f1a67478adef7b407d591
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a5ae89a740831fef28ade4c07dc6bbe2b9b68a8a154eb119f47e16b2cb68b325
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103730016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119010748"
 ---
-# <a name="using-midl"></a>Verwenden von Mittel l
+# <a name="using-midl"></a>Verwenden von MIDL
 
-Alle Schnittstellen für Programme, die RPC verwenden, müssen in Microsoft Interface Definition Language (mittlerer l) definiert und mit dem Mittel-Compiler kompiliert werden. Die folgenden Themen bieten eine kurze Übersicht über das Erstellen und Kompilieren einer Mittel l-Schnittstelle:
+Alle Schnittstellen für Programme, die RPC verwenden, müssen in Microsoft Interface Definition Language (MIDL) definiert und mit dem MIDL-Compiler kompiliert werden. Die folgenden Themen stellen eine kurze Übersicht über das Erstellen und Kompilieren einer MIDL-Schnittstelle bereit:
 
--   [Definieren einer Schnittstelle mit mittlerer l](#defining-an-interface-with-midl)
--   [Kompilieren einer Mittel l-Datei](#compiling-a-midl-file)
+-   [Definieren einer Schnittstelle mit MIDL](#defining-an-interface-with-midl)
+-   [Kompilieren einer MIDL-Datei](#compiling-a-midl-file)
 
-Eine ausführliche Erläuterung dieser Themen finden Sie in [den IDL-und ACF-Dateien](the-idl-and-acf-files.md).
+Eine ausführliche Erläuterung dieser Themen finden Sie unter [The IDL and ACF Files](the-idl-and-acf-files.md).
 
-## <a name="defining-an-interface-with-midl"></a>Definieren einer Schnittstelle mit mittlerer l
+## <a name="defining-an-interface-with-midl"></a>Definieren einer Schnittstelle mit MIDL
 
-Bei mittlerer l-Dateien handelt es sich um Textdateien, die Sie mit einem Text-Editor erstellen und bearbeiten können. Wenn Sie eine UUID für Ihre Schnittstelle generieren, speichern Sie die Ausgabe in der Regel in einer Vorlagen-mittlerer l-Datei. Weitere Informationen zu UUIDs finden Sie unter [Erstellen von Schnittstellen-UUIDs](generating-interface-uuids.md).
+MIDL-Dateien sind Textdateien, die Sie mit einem Text-Editor erstellen und bearbeiten können. Wenn Sie eine UUID für Ihre Schnittstelle generieren, speichern Sie die Ausgabe in der Regel in einer MIDL-Vorlagendatei. Weitere Informationen zu UUIDs finden Sie unter [Generieren von Schnittstellen-UUIDs.](generating-interface-uuids.md)
 
-Alle Schnittstellen in der mittleren l-Datei haben das gleiche Format. Sie beginnen mit einem Header, der eine Liste von Schnittstellen Attributen und den Schnittstellennamen enthält. Die Attribute werden in eckige Klammern eingeschlossen. Auf den Schnittstellen Header folgt der Text, der in geschweiften Klammern eingeschlossen ist. Im folgenden Beispiel wird eine einfache Schnittstelle angezeigt:
+Alle Schnittstellen in MIDL haben das gleiche Format. Sie beginnen mit einem Header, der eine Liste von Schnittstellenattributen und den Schnittstellennamen enthält. Die Attribute sind in eckige Klammern eingeschlossen. Auf den Schnittstellenheader folgt der Text, der in eckige Klammern eingeschlossen ist. Eine einfache Schnittstelle wird im folgenden Beispiel gezeigt:
 
 ``` syntax
 [
@@ -42,31 +42,31 @@ interface MyInterface
 }
 ```
 
-Einige der Attribute, die in der Regel in einer Mitte der Schnittstellen Definition vorkommen, sind die UUID und die Versionsnummer der-Schnittstelle. Der Text der Schnittstellen Definition muss die Prozedur Deklarationen aller Remote Prozeduren in der Schnittstelle enthalten. Sie kann auch die Deklarationen von Datentypen und Konstanten enthalten, die für die Schnittstelle erforderlich sind.
+Einige der Attribute, die in der Regel in einer MIDL-Schnittstellendefinition enthalten sind, sind die UUID und die Versionsnummer der Schnittstelle. Der Text der Schnittstellendefinition muss die Prozedurdeklarationen aller Remoteprozeduren in der Schnittstelle enthalten. Sie kann auch die Deklarationen von Datentypen und Konstanten enthalten, die für die Schnittstelle erforderlich sind.
 
-Alle Parameter in den Remote Prozedur Deklarationen müssen als " \[ [**in**](/windows/desktop/Midl/in)" \] , " \[ [**out**](/windows/desktop/Midl/out-idl)" \] oder "in" oder " \[  **out** \] " deklariert werden. Diese Deklarationen geben an, dass das Client Programm Daten an eine Remote Prozedur übergibt, dass Daten aus einer Remote Prozedur abgerufen werden oder beides. Ausführlichere Informationen zu Schnittstellenparameter Deklarationen finden Sie [im Text der IDL-Schnittstelle](the-idl-interface-body.md).
+Alle Parameter in den Remoteprozedurdeklarationen müssen \[ [**als in**](/windows/desktop/Midl/in) \] , \[ [**out**](/windows/desktop/Midl/out-idl)oder \] in \[ **,** out deklariert **werden.** \] Diese Deklarationen geben an, dass das Clientprogramm Daten an eine Remoteprozedur übergibt, Daten aus einer Remoteprozedur oder beides abfährt. Ausführlichere Informationen zu Schnittstellenparameterdeklarationen finden Sie unter [Der IDL-Schnittstellenkörper.](the-idl-interface-body.md)
 
-## <a name="compiling-a-midl-file"></a>Kompilieren einer Mittel l-Datei
+## <a name="compiling-a-midl-file"></a>Kompilieren einer MIDL-Datei
 
-Der Mittelwert des compl-Compilers ist ein Befehlszeilen Tool, das automatisch mit dem Platform Software Development Kit (SDK) installiert wird. Rufen Sie es in einem Befehlsfenster auf, indem Sie in der Befehlszeile den Befehl " **Mittel l**", gefolgt vom Namen einer Mittel l-Datei, eingeben. Stellen Sie sicher, dass sich das Verzeichnis mit dem Mittelwert Compiler in Ihrem Pfad befindet. Im folgenden Beispiel wird die Verwendung von veranschaulicht:
+Der MIDL-Compiler ist ein Befehlszeilentool, das automatisch mit dem Platform Software Development Kit (SDK) installiert wird. Rufen Sie ihn in einem Befehlsfenster auf, indem Sie den Befehl **midl** gefolgt vom Namen einer MIDL-Datei in der Befehlszeile eingeben. Stellen Sie sicher, dass sich das Verzeichnis mit dem MIDL-Compiler in Ihrem Pfad befindet. Im folgenden Beispiel wird die Verwendung veranschaulicht:
 
-**mittlere MyApp. idl**
+**midl MyApp.idl**
 
-Beachten Sie, dass Sie die Erweiterung nicht einschließen müssen, wenn der Dateiname die Erweiterung IDL hat. Sie können auch die [Befehls Zeilenschalter](/windows/desktop/Midl/midl-command-line-reference) für den Mittelpunkt Compiler verwenden, indem Sie Sie zwischen dem Befehl " **Mittel l** " und dem Dateinamen einfügen. Dies wird im folgenden Beispiel veranschaulicht:
+Beachten Sie, dass Sie die Erweiterung nicht angeben müssen, wenn der Dateiname die Erweiterung .idl hat. Sie können auch die [MIDL-Compilerbefehlszeilenschalter](/windows/desktop/Midl/midl-command-line-reference) verwenden, indem Sie sie zwischen dem **midl-Befehl** und dem Dateinamen einfügen. Dies wird im folgenden Beispiel gezeigt:
 
-**Mittel l/ACF MyApp. ACF MyApp. idl**
+**midl /acf MyApp.acf MyApp.idl**
 
-In diesem Beispiel wird der Mittelwert Compiler mithilfe der Datei "MyApp. idl" als Eingabedatei ausgeführt. Der Befehls Zeilenschalter **/ACF** weist den Compiler an, eine Anwendungs Konfigurationsdatei (ACF) für die Eingabe zu verwenden. Anwendungs Konfigurationsdateien werden in [den IDL-und ACF-Dateien](the-idl-and-acf-files.md)ausführlicher erläutert.
+In diesem Beispiel wird der MIDL-Compiler mit der Datei MyApp.idl als Eingabedatei ausgeführt. Der Befehlszeilenschalter **/acf** weist den Compiler an, auch eine Anwendungskonfigurationsdatei (Application Configuration File, ACF) für die Eingabe zu verwenden. Anwendungskonfigurationsdateien werden unter [The IDL and ACF Files (Die IDL- und ACF-Dateien) genauer erläutert.](the-idl-and-acf-files.md)
 
-Ausführlichere Informationen zur Verwendung des-Mittell-Compilers finden Sie in der [Microsoft Interface Definition Language (Mittel l)](/windows/desktop/Midl/midl-start-page), die Informationen zu den folgenden Themen enthält:
+Ausführlichere Informationen zur Verwendung des MIDL-Compilers finden Sie im [Microsoft Interface Definition Language (MIDL),](/windows/desktop/Midl/midl-start-page)das Informationen zu den folgenden Themen enthält:
 
--   [C-präprozessoranforderungen für die Mittel l](/windows/desktop/Midl/c-preprocessor-requirements-for-midl)
--   [C/C++-compilerüberlegungen](/windows/desktop/Midl/c-c-compiler-considerations)
+-   [C-Präprozessoranforderungen für MIDL](/windows/desktop/Midl/c-preprocessor-requirements-for-midl)
+-   [Überlegungen zum C/C++-Compiler](/windows/desktop/Midl/c-c-compiler-considerations)
 -   [Für eine RPC-Schnittstelle generierte Dateien](/windows/desktop/Midl/files-generated-for-an-rpc-interface)
--   [Referenz zur mittleren l-Befehlszeile](/windows/desktop/Midl/midl-command-line-reference)
--   [Mittel l-Sprachreferenz](/windows/desktop/Midl/midl-language-reference)
--   [Compilerfehler und-Warnungen](/windows/desktop/Midl/midl-compiler-errors-and-warnings)
+-   [MIDL-Befehlszeilenreferenz](/windows/desktop/Midl/midl-command-line-reference)
+-   [MIDL-Sprachreferenz](/windows/desktop/Midl/midl-language-reference)
+-   [MIDL-Compilerfehler und -Warnungen](/windows/desktop/Midl/midl-compiler-errors-and-warnings)
 
- 
+ 
 
- 
+ 

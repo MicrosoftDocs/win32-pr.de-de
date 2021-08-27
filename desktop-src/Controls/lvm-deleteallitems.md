@@ -1,9 +1,9 @@
 ---
-title: LVM_DELETEALLITEMS Meldung (kommstrg. h)
-description: Entfernt alle Elemente aus einem Listenansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des ListView \_ DeleteAllItems-Makros senden.
+title: LVM_DELETEALLITEMS Meldung (Commctrl.h)
+description: Entfernt alle Elemente aus einem Listenansichtssteuerelement. Sie können diese Nachricht explizit oder mithilfe des ListView \_ DeleteAllItems-Makros senden.
 ms.assetid: 816bf565-79e9-4f5d-b5b4-5cdecce8a61c
 keywords:
-- Windows-Steuerelemente für LVM_DELETEALLITEMS Meldung
+- LVM_DELETEALLITEMS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e92344e3cccf7578b8953206a9550022f6c6095
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c81d2911caee047b63c4a637b6996bc90096e56d337f068beb73fe0fb42b4579
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958409"
 ---
-# <a name="lvm_deleteallitems-message"></a>LVM \_ DeleteAllItems-Meldung
+# <a name="lvm_deleteallitems-message"></a>LVM \_ DELETEALLITEMS-Nachricht
 
-Entfernt alle Elemente aus einem Listenansicht-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ DeleteAllItems**](/windows/desktop/api/Commctrl/nf-commctrl-listview_deleteallitems) -Makros senden.
+Entfernt alle Elemente aus einem Listenansichtssteuerelement. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ DeleteAllItems-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_deleteallitems) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Entfernt alle Elemente aus einem Listenansicht-Steuerelement. Sie können diese 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Listenansicht-Steuerelement die **LVM- \_ DeleteAllItems** -Nachricht empfängt, sendet es den [**LVN \_ DeleteAllItems**](lvn-deleteallitems.md) -Benachrichtigungs Code an das übergeordnete Fenster.
+Wenn ein Listenansichtssteuerelement die **LVM \_ DELETEALLITEMS-Nachricht** empfängt, sendet es den [**LVN \_ DELETEALLITEMS-Benachrichtigungscode**](lvn-deleteallitems.md) an das übergeordnete Fenster.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Wenn ein Listenansicht-Steuerelement die **LVM- \_ DeleteAllItems** -Nachricht e
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

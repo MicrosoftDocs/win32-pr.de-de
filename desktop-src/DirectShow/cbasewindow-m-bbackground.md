@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob die Palette eine Hintergrund Palette sein soll. TRUE gibt an, dass die Palette als Hintergrund Palette ausgewählt wird.
+description: Flag, das angibt, ob die Palette eine Hintergrundpalette sein soll. True gibt an, dass die Palette als Hintergrundpalette ausgewählt wird.
 ms.assetid: 908deebc-c978-4423-8e8b-c9cf0b3a0775
-title: 'Cbasewindow:: m_bBackground Member (winutil. h)'
+title: CBaseWindow::m_bBackground-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: fb25972f35c7d264ae56e27e863229c8269b0b22
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66013b0444ffff585587ba47ba52cb9b5c0946f80d64db1c2442a6e2ac52677a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954619"
 ---
-# <a name="cbasewindowm_bbackground-member"></a>Cbasewindow:: m \_ bbackground-Member
+# <a name="cbasewindowm_bbackground-member"></a>CBaseWindow::m \_ bBackground-Member
 
-Flag, das angibt, ob die Palette eine Hintergrund Palette sein soll. **True** gibt an, dass die Palette als Hintergrund Palette ausgewählt wird.
+Flag, das angibt, ob die Palette eine Hintergrundpalette sein soll. True gibt an, dass die Palette als Hintergrundpalette ausgewählt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ BYTE m_bBackground;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

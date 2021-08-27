@@ -1,27 +1,27 @@
 ---
-description: Im folgenden Beispiel wird ein Zugriffs Steuerungs Eintrag (ACE) zur freigegebenen Zugriffs Steuerungs Liste (DACL) eines-Objekts hinzugefügt.
+description: Im folgenden Beispiel wird der DACL (Discretionary Access Control List) eines Objekts ein Zugriffssteuerungseintrag (ACE) hinzugefügt.
 ms.assetid: 0c168bb7-996f-42a8-96cd-2ba7870a3333
 title: Ändern der ACLs eines Objekts in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21195b1164ce949d1305f0c1748d24b0dbb7525b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42681a22e6b5f4b478d55d21f9b0b71dbe3f9c081ef5d18ba3da7a33f8709d32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118912460"
 ---
 # <a name="modifying-the-acls-of-an-object-in-c"></a>Ändern der ACLs eines Objekts in C++
 
-Im folgenden Beispiel wird ein [*Zugriffs Steuerungs Eintrag*](/windows/desktop/SecGloss/a-gly) (ACE) zur freigegebenen [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) eines-Objekts hinzugefügt.
+Im folgenden Beispiel wird der [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) eines Objekts ein [*Zugriffssteuerungseintrag*](/windows/desktop/SecGloss/a-gly) (ACE) hinzugefügt.
 
-Der *AccessMode* -Parameter bestimmt den Typ des neuen ACE und die Kombination des neuen ACE mit allen vorhandenen ACEs für den angegebenen Vertrauens nehmer. Verwenden Sie \_ \_ im AccessMode-Parameter die Flags Zugriff gewähren, Zugriff festlegen, Zugriff verweigern \_ oder Zugriff widerrufen \_ .  Weitere Informationen zu diesen Flags finden Sie unter [**Zugriffs \_ Modus**](/windows/win32/api/accctrl/ne-accctrl-access_mode).
+Der *AccessMode-Parameter* bestimmt den Typ des neuen ACE und wie der neue ACE mit vorhandenen ACEs für den angegebenen Vertrauensnehmer kombiniert wird. Verwenden Sie die Flags GRANT \_ ACCESS, SET \_ ACCESS, DENY \_ ACCESS oder REVOKE ACCESS im \_ *AccessMode-Parameter.* Informationen zu diesen Flags finden Sie unter [**ACCESS \_ MODE**](/windows/win32/api/accctrl/ne-accctrl-access_mode).
 
-Ein ähnlicher Code kann verwendet werden, um mit einer [*System Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL) zu arbeiten. Geben Sie SACL \_ \_ -Sicherheitsinformationen in den Funktionen " [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) " und " [**SetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) " an, um die SACL für das Objekt zu erhalten und festzulegen. Verwenden Sie \_ \_ \_ \_ im AccessMode-Parameter die Flags Audit Success, Set Audit Failure und \_ revoaccess.  Weitere Informationen zu diesen Flags finden Sie unter [**Zugriffs \_ Modus**](/windows/win32/api/accctrl/ne-accctrl-access_mode).
+Ähnlicher Code kann verwendet werden, um mit einer [*Systemzugriffssteuerungsliste*](/windows/desktop/SecGloss/s-gly) (SACL) zu arbeiten. Geben Sie SACL \_ SECURITY INFORMATION in den Funktionen \_ [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) und [**SetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) an, um die SACL für das Objekt abzurufen und festzulegen. Verwenden Sie die Flags SET \_ AUDIT \_ SUCCESS, SET AUDIT \_ FAILURE und REVOKE ACCESS im \_ \_ *AccessMode-Parameter.* Informationen zu diesen Flags finden Sie unter [**ACCESS \_ MODE**](/windows/win32/api/accctrl/ne-accctrl-access_mode).
 
-Verwenden Sie diesen Code, um der DACL eines Verzeichnisdienst Objekts einen [Objekt spezifischen ACE](object-specific-aces.md) hinzuzufügen. Um die GUIDs in einem Objekt spezifischen ACE anzugeben, legen Sie den " *Treuhänder* "-Parameter auf "Treuhänder is Objects" und "Name" oder "Treuhänder is Objects" und "sid" fest, \_ \_ \_ \_ \_ \_ \_ \_ und legen Sie für den *psztreuhänder* -Parameter einen Zeiger auf [**Objekte \_ und \_ Namen**](/windows/desktop/api/AccCtrl/ns-accctrl-objects_and_name_a) oder [**Objekte und eine \_ \_ sid**](/windows/desktop/api/AccCtrl/ns-accctrl-objects_and_sid) -Struktur fest.
+Verwenden Sie diesen Code, um der DACL eines Verzeichnisdienstobjekts einen [objektspezifischen ACE](object-specific-aces.md) hinzuzufügen. Um die GUIDs in einem objektspezifischen ACE anzugeben, legen Sie den *Parameter TrusteeForm* auf TRUST \_ IS OBJECTS AND NAME oder TRUST IS OBJECTS AND SID \_ \_ \_ \_ \_ \_ \_ fest, und legen Sie den *PszTrustee-Parameter* als Zeiger auf eine [**OBJECTS AND \_ \_ NAME-**](/windows/desktop/api/AccCtrl/ns-accctrl-objects_and_name_a) oder [**OBJECTS AND \_ \_ SID-Struktur**](/windows/desktop/api/AccCtrl/ns-accctrl-objects_and_sid) fest.
 
-In diesem Beispiel wird die [**GetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) -Funktion verwendet, um die vorhandene DACL zu erhalten. Anschließend füllt er eine [**explizite \_ Zugriffs**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) Struktur mit Informationen zu einem ACE und verwendet die [**SetEntriesInAcl**](/windows/desktop/api/Aclapi/nf-aclapi-setentriesinacla) -Funktion, um den neuen ACE mit allen vorhandenen ACEs in der DACL zusammenzuführen. Zum Schluss ruft das Beispiel die [**SetNamedSecurityInfo**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) -Funktion auf, um die neue DACL an die [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly) des-Objekts anzufügen.
+In diesem Beispiel wird die [**GetNamedSecurityInfo-Funktion**](/windows/desktop/api/Aclapi/nf-aclapi-getnamedsecurityinfoa) verwendet, um die vorhandene DACL abzurufen. Anschließend füllt sie eine [**EXPLICIT \_ ACCESS-Struktur**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) mit Informationen zu einem ACE und verwendet die [**SetEntriesInAcl-Funktion,**](/windows/desktop/api/Aclapi/nf-aclapi-setentriesinacla) um den neuen ACE mit allen vorhandenen ACEs in der DACL zusammenzuführen. Schließlich ruft das Beispiel die [**SetNamedSecurityInfo-Funktion**](/windows/desktop/api/Aclapi/nf-aclapi-setnamedsecurityinfoa) auf, um die neue DACL an den [*Sicherheitsdeskriptor*](/windows/desktop/SecGloss/s-gly) des Objekts anzufügen.
 
 
 ```C++

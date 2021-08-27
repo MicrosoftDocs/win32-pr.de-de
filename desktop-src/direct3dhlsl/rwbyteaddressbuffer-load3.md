@@ -1,6 +1,6 @@
 ---
-title: 'Rwbyteaddressbuffer:: rwbyteaddressbuffer Load3-Methoden'
-description: Ruft drei Werte aus einem rwbyteaddressbuffer ab.
+title: RWByteAddressBuffer::RWByteAddressBuffer Load3-Methoden
+description: Ruft drei Werte aus einem RWByteAddressBuffer ab.
 ms.assetid: BB36AF51-1C2A-4DA2-A257-4BE837E8587A
 keywords:
 - Load3-Methoden HLSL
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 8c93b55bc2093232b3128c78f05b8bc9cb5611f1
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: f1723b428994a62040939b390fcbd0f205cc38b40c3e0341d3a7bc6966ba6d99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104516413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118791212"
 ---
-# <a name="rwbyteaddressbufferload3-methods"></a>Rwbyteaddressbuffer:: Load3-Methoden
+# <a name="rwbyteaddressbufferload3-methods"></a>RWByteAddressBuffer::Load3-Methoden
 
-Ruft drei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuffer.md)ab.
+Ruft drei Werte aus einem [**RWByteAddressBuffer**](sm5-object-rwbyteaddressbuffer.md)ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Ruft drei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuff
 
 | Methode                                                            | BESCHREIBUNG                                                       |
 |:------------------------------------------------------------------|:------------------------------------------------------------------|
-| [**Load3 (uint)**](sm5-object-rwbyteaddressbuffer-load3.md)       | Ruft drei Werte ab.<br/>                                     |
-| [**Load3 (uint, uint)**](rwbyteaddressbuffer-load3-float-uint-.md) | Ruft drei Werte ab und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load3(uint)**](sm5-object-rwbyteaddressbuffer-load3.md)       | Ruft drei Werte ab.<br/>                                     |
+| [**Load3(uint,uint)**](rwbyteaddressbuffer-load3-float-uint-.md) | Ruft drei Werte ab und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -38,7 +38,7 @@ Ruft drei Werte aus einem [**rwbyteaddressbuffer**](sm5-object-rwbyteaddressbuff
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> </dl>
 
  

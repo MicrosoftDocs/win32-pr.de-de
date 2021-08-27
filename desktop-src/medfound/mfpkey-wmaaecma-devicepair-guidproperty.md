@@ -1,23 +1,23 @@
 ---
-description: Gibt die Kombination der Audiogeräte an, die von der Anwendung zurzeit mit dem sprach Erfassungs-DSP verwendet werden.
+description: Identifiziert die Kombination von Audiogeräten, die die Anwendung derzeit mit dem Voice Capture-DSP verwendet.
 ms.assetid: f87bef33-9a48-4568-b554-7eec34f0bd55
-title: MFPKEY_WMAAECMA_DEVICEPAIR_GUID-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMAAECMA_DEVICEPAIR_GUID-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a586d7d31f29b20eb7ca39320d5fa57b9943715a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 174bbae3c83ef28ece7d05e36b0a05813078a9a9fba73ac7fae7dba25b67fb00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130545"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973329"
 ---
-# <a name="mfpkey_wmaaecma_devicepair_guid-property"></a>Mfpkey \_ wmaaecma \_ devicepair \_ GUID-Eigenschaft
+# <a name="mfpkey_wmaaecma_devicepair_guid-property"></a>MFPKEY \_ WMAAECMA \_ DEVICEPAIR \_ GUID-Eigenschaft
 
-Gibt die Kombination der Audiogeräte an, die von der Anwendung zurzeit mit dem sprach Erfassungs-DSP verwendet werden.
+Identifiziert die Kombination von Audiogeräten, die die Anwendung derzeit mit dem Voice Capture-DSP verwendet.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mit [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -25,15 +25,15 @@ VT \_ CLSID
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Sprach Erfassungs-DSP](voicecapturedmo.md)
+-   [Voice Capture-DSP](voicecapturedmo.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie diese Eigenschaft fest, wenn Sie den DSP im Filter Modus verwenden und der Wert der Eigenschaft [mfpkey \_ wmaaecma \_ Abruf \_ TS \_ Stats](mfpkey-wmaaecma-retrieve-ts-statsproperty.md) auf Variant true festgelegt ist \_ .
+Legen Sie diese Eigenschaft fest, wenn Sie den DSP im Filtermodus verwenden und der Wert der [MFPKEY \_ WMAAECMA \_ RETRIEVE TS \_ \_ STATS-Eigenschaft](mfpkey-wmaaecma-retrieve-ts-statsproperty.md) VARIANT \_ TRUE ist.
 
-Wenn die Eigenschaft " [**mfpkey \_ wmaaecma \_ Abruf von \_ TS \_ Stats**](mfpkey-wmaaecma-retrieve-ts-statsproperty.md) " Variant \_ true ist, sammelt der DSP Statistiken zu den Zeitstempeln von den Audiogeräten und speichert diese Informationen in der Registrierung. Diese Statistiken können für jede Kombination aus audioerfassungs-und audiorendering-Gerät geändert werden. Daher muss die Anwendung eine GUID zuweisen, um die jeweilige Kombination von verwendeten Geräten zu identifizieren. Die Anwendung sollte diese GUID nachverfolgen, sodass Sie dieselbe GUID zuweisen kann, wenn Sie dasselbe paar von Audiogeräten verwendet.
+Wenn die [**MFPKEY \_ WMAAECMA \_ RETRIEVE TS \_ \_ STATS-Eigenschaft**](mfpkey-wmaaecma-retrieve-ts-statsproperty.md) VARIANT TRUE ist, sammelt der DSP Statistiken zu den Zeitstempeln von den Audiogeräten und speichert diese Informationen in der \_ Registrierung. Diese Statistiken können sich für jede Kombination aus Audioaufnahmegerät und Audiorenderinggerät ändern. Daher muss die Anwendung eine GUID zuweisen, um die bestimmte Kombination von Geräten zu identifizieren, die verwendet werden. Die Anwendung sollte diese GUID nachverfolgen, damit sie dieselbe GUID zuweisen kann, wenn sie das gleiche Audiogerätepaar verwendet.
 
-Wenn Sie den DSP im Quell Modus verwenden, müssen Sie diese Eigenschaft nicht festlegen. Der DSP generiert automatisch eine GUID basierend auf dem Wert der Eigenschaft [mfpkey \_ wmaaecma- \_ Geräte \_ Indizes](mfpkey-wmaaecma-device-indexesproperty.md) .
+Wenn Sie den DSP im Quellmodus verwenden, müssen Sie diese Eigenschaft nicht festlegen. Der DSP generiert automatisch eine GUID basierend auf dem Wert der [MFPKEY \_ WMAAECMA \_ DEVICE \_ INDEXES-Eigenschaft.](mfpkey-wmaaecma-device-indexesproperty.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,20 +41,20 @@ Wenn Sie den DSP im Quell Modus verwenden, müssen Sie diese Eigenschaft nicht f
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
-[Sprach Erfassungs-DSP](voicecapturedmo.md)
+[Voice Capture-DSP](voicecapturedmo.md)
 </dt> </dl>
 
  

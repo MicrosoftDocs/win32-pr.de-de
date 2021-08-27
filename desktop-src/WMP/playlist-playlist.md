@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste
-description: Das Attribut Wiedergabe gibt das Wiedergabelisten Objekt an oder ruft es ab, zu dem das Wiedergabelisten Element eine Schnittstelle bereitstellt.
+title: PLAYLIST.playlist
+description: Das Playlist-Attribut gibt das Playlist-Objekt an oder ruft es ab, für das das PLAYLIST-Element eine Schnittstelle bietet.
 ms.assetid: 4cfbf9d1-8381-4f59-8e6f-9b07f5642c39
 keywords:
-- Wiedergabeliste der Media Player Fenster Wiedergabeliste
+- PLAYLIST.playlist-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bb9fde4af32356da79e7c8941b76f51e0714b4f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d7a62fd76fd3a458640c417c2de50af510ffbb96780ed4f91cb2355564df8d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995650"
 ---
-# <a name="playlistplaylist"></a>Wiedergabeliste
+# <a name="playlistplaylist"></a>PLAYLIST.playlist
 
-Das Attribut **Wiedergabe** gibt das **Wiedergabe** Listen Objekt an oder ruft es ab, zu dem das **Wiedergabe** Listenelement eine Schnittstelle bereitstellt.
+Das **Playlist-Attribut** gibt das **Playlist-Objekt** an oder ruft es ab, für das **das PLAYLIST-Element** eine Schnittstelle bietet.
 
 ``` syntax
         elementID.playlist
@@ -29,11 +29,11 @@ Das Attribut **Wiedergabe** gibt das **Wiedergabe** Listen Objekt an oder ruft e
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein Lese-/Schreib-Wiedergabe Listen Objekt ohne Standardwert. 
+Dieses Attribut ist ein  Wiedergabelistenobjekt mit Lese-/Schreibzugriff ohne Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die angegebene Wiedergabeliste ungültig ist oder kein Wert angegeben wird, zeigt das **Wiedergabe** Listenelement das aktuell wiedergegebene Medien Element an.
+Wenn die angegebene Wiedergabeliste ungültig ist oder kein Wert angegeben ist, zeigt das **PLAYLIST-Element** das aktuell abspielte Medienelement an.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn die angegebene Wiedergabeliste ungültig ist oder kein Wert angegeben wird,
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,10 +49,10 @@ Wenn die angegebene Wiedergabeliste ungültig ist oder kein Wert angegeben wird,
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> </dl>
 
  

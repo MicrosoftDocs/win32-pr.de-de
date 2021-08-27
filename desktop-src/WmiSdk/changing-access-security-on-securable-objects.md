@@ -1,8 +1,8 @@
 ---
-description: Ab Windows Vista verfügen viele Sicherungs fähige Objekte über Methoden zum erhalten oder Festlegen der Sicherheits Beschreibung. Mit den entsprechenden Berechtigungen können Sie Sicherheits Deskriptoren für Sicherungs fähige Objekte lesen oder ändern.
+description: Ab Windows Vista verfügen viele sicherungsfähige Objekte über Methoden zum Abrufen oder Festlegen des Sicherheitsdeskriptors. Mit den entsprechenden Berechtigungen können Sie Sicherheitsbeschreibungen für sicherungsfähige Objekte lesen oder ändern.
 ms.assetid: da660e7e-f32d-4b7d-b979-f7b482a73fa2
 ms.tgt_platform: multiple
-title: Ändern der Zugriffssicherheit für Sicherungs fähige Objekte
+title: Ändern der Zugriffssicherheit für sicherungsfähige Objekte
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,87 +10,87 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 9682c259fc2f7e45409f7ddcaaa95dac2cba1b54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e4cdaa948e6f0e695b3e77576b0a0726f0b38f3b649f005b42aa8e205c894db8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050988"
 ---
-# <a name="changing-access-security-on-securable-objects"></a>Ändern der Zugriffssicherheit für Sicherungs fähige Objekte
+# <a name="changing-access-security-on-securable-objects"></a>Ändern der Zugriffssicherheit für sicherungsfähige Objekte
 
-Drucker, Dienste, Registrierungsschlüssel, DCOM-Anwendungen und WMI-Namespaces sind Sicherungs fähige Objekte. Der Zugriff auf Sicherungs fähige Objekte wird durch [*Sicherheits Deskriptoren*](/windows/desktop/SecGloss/s-gly)geschützt, die die Benutzer angeben, die Zugriff haben. Ab Windows Vista verfügen viele Sicherungs fähige Objekte über Methoden zum erhalten oder Festlegen der Sicherheits Beschreibung. Mit den entsprechenden Berechtigungen können Sie Sicherheits Deskriptoren für Sicherungs fähige Objekte lesen oder ändern. Mit diesen Methoden können Sie steuern, welche Benutzerkonten oder-Gruppen Zugriff auf einen Drucker, einen Dienst, einen WMI-Namespace oder ein anderes Objekt haben. Weitere Informationen zu Sicherheits Beschreibungen und deren Verwendung in WMI finden [Sie unter Zugriff auf Sicherungs fähige WMI-Objekte](access-to-wmi-securable-objects.md).
+Drucker, Dienste, Registrierungsschlüssel, DCOM-Anwendungen und WMI-Namespaces sind sicherungsfähige Objekte. Der Zugriff auf sicherungsfähige Objekte wird durch [*Sicherheitsdeskriptoren*](/windows/desktop/SecGloss/s-gly)geschützt, die die Benutzer angeben, die Zugriff haben. Ab Windows Vista verfügen viele sicherungsfähige Objekte über Methoden zum Abrufen oder Festlegen des Sicherheitsdeskriptors. Mit den entsprechenden Berechtigungen können Sie Sicherheitsbeschreibungen für sicherungsfähige Objekte lesen oder ändern. Mit diesen Methoden können Sie steuern, welche Benutzerkonten oder Gruppen Zugriff auf einen Drucker, Dienst, WMI-Namespace oder ein anderes Objekt haben. Weitere Informationen zu Sicherheitsdeskriptoren und deren Verwendung in WMI finden Sie unter [Zugriff auf sicherungsfähige WMI-Objekte.](access-to-wmi-securable-objects.md)
 
 In diesem Thema werden die folgenden Abschnitte erläutert:
 
--   [Objekte und Sicherheits deskriptormethoden](#objects-and-security-descriptor-methods)
--   [Wechseln zwischen Sicherheits deskriptorformaten](#converting-between-security-descriptor-formats)
+-   [Objekte und Sicherheitsbeschreibungsmethoden](#objects-and-security-descriptor-methods)
+-   [Konvertieren zwischen Sicherheitsbeschreibungsformaten](#converting-between-security-descriptor-formats)
 -   [Sicherheitsprobleme](#security-issues)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="objects-and-security-descriptor-methods"></a>Objekte und Sicherheits deskriptormethoden
+## <a name="objects-and-security-descriptor-methods"></a>Objekte und Sicherheitsbeschreibungsmethoden
 
-In der folgenden Liste sind die Methoden enthalten, mit denen Sicherungs fähige Objekte die Sicherheits Beschreibung lesen oder ändern können:
+Die folgende Liste enthält die Methoden, mit denen sicherungsfähige Objekte den Sicherheitsdeskriptor lesen oder ändern können:
 
 -   WMI-Namespaces
 
-    Ein Anbieter kann die Sicherheit festlegen, die nur bestimmten Gruppen den Zugriff auf die Daten in einem WMI-Namespace gestattet. Die Namespace Sicherheit wird durch Methoden der [**\_ \_ System Security**](--systemsecurity.md) -Klasse gesteuert. Ab Windows Vista geben die [**getsecuritydescriptor**](getsecuritydescriptor-method-in-class---systemsecurity-.md) -Methode und die [**SETSECURITYDESCRIPTOR**](setsecuritydescriptor-method-in-class---systemsecurity.md) -Methode [**\_ \_ securityDescriptor**](--securitydescriptor.md) -Objekte zurück und schreiben Sie. Weitere Informationen finden Sie unter [Festlegen von Namespace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md).
+    Ein Anbieter kann Sicherheit einrichten, die nur bestimmten Gruppen zugriff auf die Daten in einem WMI-Namespace zulässt. Die Namespacesicherheit wird durch Methoden der [**\_ \_ SystemSecurity-Klasse**](--systemsecurity.md) gesteuert. Ab Windows Vista geben die [**Methoden GetSecurityDescriptor**](getsecuritydescriptor-method-in-class---systemsecurity-.md) und [**SetSecurityDescriptor**](setsecuritydescriptor-method-in-class---systemsecurity.md) [**\_ \_ SecurityDescriptor-Objekte**](--securitydescriptor.md) zurück und schreiben sie. Weitere Informationen finden Sie unter [Festlegen von Namespacesicherheitsdeskriptoren.](setting-namespace-security-descriptors.md)
 
 -   Registrierungsschlüssel
 
-    Ab Windows Vista können Sie Registrierungsschlüssel sichern, damit Sie nicht von unbefugten Benutzern geändert werden können. Die Klasse " [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) " hat die Methoden " [**getsecuritydescriptor**](/previous-versions/windows/desktop/regprov/getsecuritydescriptor-method-in-class-stdregprov) " und " [**SETSECURITYDESCRIPTOR**](/previous-versions/windows/desktop/regprov/setsecuritydescriptor-method-in-class-stdregprov) ". Mit diesen Methoden werden [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Objekte zurückgegeben und geschrieben.
+    Ab Windows Vista können Sie Registrierungsschlüssel schützen, sodass sie nicht von nicht autorisierten Benutzern geändert werden können. Die [**StdRegProv-Klasse**](/previous-versions/windows/desktop/regprov/stdregprov) verfügt über [**die Methoden GetSecurityDescriptor**](/previous-versions/windows/desktop/regprov/getsecuritydescriptor-method-in-class-stdregprov) und [**SetSecurityDescriptor.**](/previous-versions/windows/desktop/regprov/setsecuritydescriptor-method-in-class-stdregprov) Diese Methoden geben [**Win32 \_ SecurityDescriptor-Objekte zurück und schreiben**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) sie.
 
 -   Drucker
 
-    Ab Windows Vista können Sie den Zugriff auf Instanzen der [**Win32- \_ Drucker**](/windows/desktop/CIMWin32Prov/win32-printer) Klasse mithilfe der Methoden [**getsecuritydescriptor**](/windows/desktop/CIMWin32Prov/getsecuritydescriptor-method-in-class-win32-printer) und [**SETSECURITYDESCRIPTOR**](/windows/desktop/CIMWin32Prov/setsecuritydescriptor-method-in-class-win32-printer) sichern. Mit diesen Methoden werden [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Objekte zurückgegeben und geschrieben.
+    Ab Windows Vista können Sie den Zugriff auf Instanzen der [**Win32 \_ Printer-Klasse**](/windows/desktop/CIMWin32Prov/win32-printer) mithilfe der [**Methoden GetSecurityDescriptor**](/windows/desktop/CIMWin32Prov/getsecuritydescriptor-method-in-class-win32-printer) und [**SetSecurityDescriptor**](/windows/desktop/CIMWin32Prov/setsecuritydescriptor-method-in-class-win32-printer) sichern. Diese Methoden geben [**Win32 \_ SecurityDescriptor-Objekte zurück und schreiben**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) sie.
 
 -   Dienste
 
-    Ab Windows Vista können Sie den Zugriff auf Instanzen der [**Win32- \_ Dienst**](/windows/desktop/CIMWin32Prov/win32-service) Klasse mithilfe der Methoden [**getsecuritydescriptor**](/windows/desktop/CIMWin32Prov/getsecuritydescriptor-method-in-class-win32-service) und [**SETSECURITYDESCRIPTOR**](/windows/desktop/CIMWin32Prov/setsecuritydescriptor-method-in-class-win32-service) sichern. Mit diesen Methoden werden [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Objekte zurückgegeben und geschrieben.
+    Ab Windows Vista können Sie den Zugriff auf Instanzen der [**Win32-Dienstklasse \_**](/windows/desktop/CIMWin32Prov/win32-service) mithilfe der [**Methoden GetSecurityDescriptor**](/windows/desktop/CIMWin32Prov/getsecuritydescriptor-method-in-class-win32-service) und [**SetSecurityDescriptor**](/windows/desktop/CIMWin32Prov/setsecuritydescriptor-method-in-class-win32-service) sichern. Diese Methoden geben [**Win32 \_ SecurityDescriptor-Objekte zurück und schreiben**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) sie.
 
 -   DCOM-Anwendungen
 
-    DCOM-Anwendungs Instanzen verfügen über mehrere Sicherheits Deskriptoren. Ab Windows Vista können Sie die Methoden der [**Win32 \_ dcomapplicationsetting**](/windows/desktop/CIMWin32Prov/win32-dcomapplicationsetting) -Klasse verwenden, um die verschiedenen Sicherheits Deskriptoren zu erhalten oder zu ändern. Sicherheits Deskriptoren werden als Instanzen der Win32- [**\_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Klasse zurückgegeben.
+    DCOM-Anwendungsinstanzen verfügen über mehrere Sicherheitsbeschreibungen. Verwenden Sie ab Windows Vista Methoden der [**Win32 \_ DCOMApplicationSetting-Klasse,**](/windows/desktop/CIMWin32Prov/win32-dcomapplicationsetting) um die verschiedenen Sicherheitsbeschreibungen zu erhalten oder zu ändern. Sicherheitsdeskriptoren werden als Instanzen der [**Win32 \_ SecurityDescriptor-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) zurückgegeben.
 
-    Um die Konfigurations Berechtigungen abzurufen oder zu ändern, müssen Sie die Methoden [**getconfigurationsecuritydescriptor**](/windows/desktop/CIMWin32Prov/getconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) oder [**setconfigurationsecuritydescriptor**](/windows/desktop/CIMWin32Prov/setconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) aufrufen.
+    Um die Konfigurationsberechtigungen zu erhalten oder zu ändern, rufen Sie die [**Methoden GetConfigurationSecurityDescriptor**](/windows/desktop/CIMWin32Prov/getconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) oder [**SetConfigurationSecurityDescriptor**](/windows/desktop/CIMWin32Prov/setconfigurationsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) auf.
 
-    Um die Zugriffsberechtigungen abzurufen oder zu ändern, müssen Sie die [**getaccesssecuritydescriptor**](/windows/desktop/CIMWin32Prov/getaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting) -Methode oder die [**setaccesssecuritydescriptor**](/windows/desktop/CIMWin32Prov/setaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting) -Methode aufrufen.
+    Um die Zugriffsberechtigungen zu erhalten oder zu ändern, rufen Sie die [**Methoden GetAccessSecurityDescriptor**](/windows/desktop/CIMWin32Prov/getaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting) oder [**SetAccessSecurityDescriptor**](/windows/desktop/CIMWin32Prov/setaccesssecuritydescriptor-method-in-class-win32-dcomapplicationsetting) auf.
 
-    Um die Start-und Aktivierungs Berechtigungen abzurufen oder zu ändern, müssen Sie die Methoden [**getlaunchsecuritydescriptor**](/windows/desktop/CIMWin32Prov/getlaunchsecuritydescriptor-in-class-win32-dcomapplicationsetting) oder [**setlaunchsecuritydescriptor**](/windows/desktop/CIMWin32Prov/setlaunchsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) aufrufen.
+    Um die Start- und Aktivierungsberechtigungen zu erhalten oder zu ändern, rufen Sie die [**Methoden GetLaunchSecurityDescriptor**](/windows/desktop/CIMWin32Prov/getlaunchsecuritydescriptor-in-class-win32-dcomapplicationsetting) oder [**SetLaunchSecurityDescriptor**](/windows/desktop/CIMWin32Prov/setlaunchsecuritydescriptor-method-in-class-win32-dcomapplicationsetting) auf.
 
--   Dateien
+-   Files
 
-    Die [**getsecuritydescriptor**](/previous-versions/windows/desktop/secrcw32prov/getsecuritydescriptor-method-in-class-win32-logicalfilesecuritysetting) -Methode und die [**SETSECURITYDESCRIPTOR**](/previous-versions/windows/desktop/secrcw32prov/setsecuritydescriptor-method-in-class-win32-logicalfilesecuritysetting) -Methode sind in der [**Win32 \_ logicalfilesecuritysetting**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalfilesecuritysetting) -Klasse und nicht in der [**CIM \_ DataFile**](/windows/desktop/CIMWin32Prov/cim-datafile) -Klasse.
+    Die [**Methoden GetSecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/getsecuritydescriptor-method-in-class-win32-logicalfilesecuritysetting) [**und SetSecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/setsecuritydescriptor-method-in-class-win32-logicalfilesecuritysetting) befinden sich in der [**Win32 \_ LogicalFileSecuritySetting-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalfilesecuritysetting) und nicht in der [**CIM \_ DataFile-Klasse.**](/windows/desktop/CIMWin32Prov/cim-datafile)
 
 -   Freigaben
 
-    Die [**getsecuritydescriptor**](/previous-versions/windows/desktop/secrcw32prov/getsecuritydescriptor-method-in-class-win32-logicalsharesecuritysetting) -Methode und die [**SETSECURITYDESCRIPTOR**](/previous-versions/windows/desktop/secrcw32prov/setsecuritydescriptor-method-in-class-win32-logicalsharesecuritysetting) -Methode sind in der [**Win32 \_ logicalsharesecuritysetting**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalsharesecuritysetting) -Klasse und nicht in der [**Win32- \_ Freigabe**](/windows/desktop/CIMWin32Prov/win32-share) Klasse.
+    Die [**Methoden GetSecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/getsecuritydescriptor-method-in-class-win32-logicalsharesecuritysetting) und [**SetSecurityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/setsecuritydescriptor-method-in-class-win32-logicalsharesecuritysetting) befinden sich in der [**Win32 \_ LogicalShareSecuritySetting-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-logicalsharesecuritysetting) und nicht in der [**Win32 \_ Share-Klasse.**](/windows/desktop/CIMWin32Prov/win32-share)
 
 > [!Note]  
-> Wenn eine neue [*Sicherheits Access Control Liste (SACL)*](/windows/desktop/SecGloss/s-gly) in einem Aufruf einer **SETSECURITYDESCRIPTOR** -Methode nicht angegeben wird, wird die Sicherheits Beschreibung für das Sicherungs fähige Objekt auf **null** festgelegt, sodass die vorherige SACL-Einstellung nicht beibehalten wird.
+> Wenn keine neue [*Security Access Control List (SACL)*](/windows/desktop/SecGloss/s-gly) in einem Aufruf einer **SetSecurityDescriptor-Methode** angegeben wird, wird die Sicherheitsbeschreibung SACL für das sicherungsfähige Zielobjekt auf **NULL** festgelegt, sodass die vorherige SACL-Einstellung nicht beibehalten wird.
 
  
 
-## <a name="converting-between-security-descriptor-formats"></a>Wechseln zwischen Sicherheits deskriptorformaten
+## <a name="converting-between-security-descriptor-formats"></a>Konvertieren zwischen Sicherheitsbeschreibungsformaten
 
-Sicherheits Deskriptoren sind komplexe binäre Byte Arrays, die normalerweise in C++ erstellt und geändert werden müssen. Nachdem Sie eine der Get-Methoden zum Abrufen der Sicherheits Beschreibung verwendet haben, stellt die [**Win32 \_ securitydescriptorhelper**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptorhelper) -Klasse Methoden bereit, die Sicherheits Deskriptoren in die [Sicherheits Deskriptor-Definitions Sprache (Security Descriptor Definition Language, SDDL)](/windows/desktop/SecAuthZ/security-descriptor-definition-language) oder [**Win32 \_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanzen konvertieren.
+Sicherheitsdeskriptoren sind komplexe binäre Bytearrays, die normalerweise in C++ erstellt und geändert werden müssen. Nachdem Sie eine der Get-Methoden verwendet haben, um den Sicherheitsdeskriptor zu erhalten, stellt die [**Win32 \_ SecurityDescriptorHelper-Klasse**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptorhelper) Methoden zur Konvertierung von Sicherheitsdeskriptoren entweder in [Security Descriptor Definition Language (SDDL)](/windows/desktop/SecAuthZ/security-descriptor-definition-language) oder in [**Win32 \_ SecurityDescriptor-Instanzen**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) zur Verwendung.
 
-Sie können die Access Control Listen (ACL) leichter in Win32- [**\_ securityDescriptor**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) -Instanzen oder in SDDL manipulieren. Weitere Informationen zur Struktur und Verwendung von Sicherheits Deskriptoren in WMI finden Sie unter [WMI Security Descriptor Objects](wmi-security-descriptor-objects.md).
+Sie können die Access Control Listen (ACL) einfacher in [**Win32 \_ SecurityDescriptor-Instanzen**](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptor) oder in SDDL bearbeiten. Weitere Informationen zur Struktur und Verwendung von Sicherheitsdeskriptoren in WMI finden Sie unter [WMI-Sicherheitsdeskriptorobjekte.](wmi-security-descriptor-objects.md)
 
-In C++ oder c# verwenden Sie Konvertierungs Funktionen, um binäre Sicherheits Deskriptoren in die [Sicherheits Deskriptor-Definitions Sprache (SDDL)](/windows/desktop/SecAuthZ/security-descriptor-definition-language)zu konvertieren. Verwenden Sie zum Ändern der sicherheitsdeskriptorwerte in C++-Anwendungen [**convertsecuritydescriptortostringsecuritydescriptor**](/windows/desktop/api/sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**convertstringsecuritydescriptortosecuritydescriptor**](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Verwenden Sie in C++ oder C# Konvertierungsfunktionen, um binäre Sicherheitsdeskriptoren in [SDDL (Security Descriptor Definition Language) zu konvertieren.](/windows/desktop/SecAuthZ/security-descriptor-definition-language) Verwenden Sie [**ConvertSecurityDescriptorToStringSecurityDescriptor**](/windows/desktop/api/sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) und [**ConvertStringSecurityDescriptorToSecurityDescriptor,**](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)um Sicherheitsdeskriptorwerte in C++-Anwendungen zu ändern.
 
 ## <a name="security-issues"></a>Sicherheitsprobleme
 
-Es wird empfohlen, dass Änderungen an Sicherheits Beschreibungen mit großer Vorsicht durchgeführt werden, damit die Sicherheit des Objekts nicht beeinträchtigt wird. Beachten Sie, dass sich die Reihenfolge der Zugriffs Steuerungs Einträge (ACEs) in einer freigegebenen Zugriffs Steuerungs Liste (DACL) auf die Zugriffssicherheit auswirken kann. Weitere Informationen finden Sie unter [Reihenfolge von ACEs in einer DACL](/windows/desktop/SecAuthZ/order-of-aces-in-a-dacl).
+Es wird empfohlen, Änderungen an Sicherheitsdeskriptoren mit großer Vorsicht vorzunehmen, damit die Sicherheit des Objekts nicht beeinträchtigt wird. Beachten Sie, dass sich die Reihenfolge der Zugriffssteuerungseinträge (ACCESS Control Entries, ACEs) in einer DACL (Discretionary Access Control List) auf die Zugriffssicherheit auswirken kann. Weitere Informationen finden Sie unter [Reihenfolge der ACEs in einer DACL.](/windows/desktop/SecAuthZ/order-of-aces-in-a-dacl)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WMI-sicherheitsdeskriptorobjekte](wmi-security-descriptor-objects.md)
+[WMI-Sicherheitsdeskriptorobjekte](wmi-security-descriptor-objects.md)
 </dt> <dt>
 
-[Hilfsklasse für Sicherheits Deskriptoren](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptorhelper)
+[Security Descriptor Helper-Klasse](/previous-versions/windows/desktop/secrcw32prov/win32-securitydescriptorhelper)
 </dt> <dt>
 
 [Bewährte Sicherheitsmethoden](/windows/desktop/SecBP/best-practices-for-the-security-apis)

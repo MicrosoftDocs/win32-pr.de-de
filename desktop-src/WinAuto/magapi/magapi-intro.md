@@ -1,117 +1,117 @@
 ---
-title: Übersicht über die Vergrößerung
-description: In diesem Thema wird die Vergrößerungs-API beschrieben und erläutert, wie Sie in einer Anwendung verwendet wird.
+title: Übersicht über die Vergrößerungs-API
+description: In diesem Thema wird die Vergrößerungs-API beschrieben und erläutert, wie sie in einer Anwendung verwendet wird.
 ms.assetid: 8dcecb73-db73-4043-b922-0b92f299eb1d
 keywords:
-- Vergrößern
-- Anwendungen zur Bildschirm Vergrößerung
-- Vergrößern
-- benutzerdefinierte Abbild Verarbeitung
+- Vergrößerung
+- Bildschirmvergrößerungsanwendungen
+- Vergrößerung
+- Benutzerdefinierte Bildverarbeitung
 - Magnification.dll
-- Erstellen von Lupe Steuerelementen
-- selektive Vergrößerung
+- Erstellen von Lupensteuerelementen
+- Selektive Vergrößerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16d66595cc2f5fdd8402ecd9d525e6deb1d07078
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9bb908623d6d6419925801119369f4f660110e680dd2499a1d61caa4c0c05de4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052592"
 ---
-# <a name="magnification-api-overview"></a>Übersicht über die Vergrößerung
+# <a name="magnification-api-overview"></a>Übersicht über die Vergrößerungs-API
 
-Die Vergrößerungs-API ermöglicht hilfstechnologieanbietern, Bildschirm Vergrößerungs Anwendungen zu entwickeln, die unter Microsoft Windows ausgeführt werden. In diesem Thema wird die Vergrößerungs-API beschrieben und erläutert, wie Sie in einer Anwendung verwendet wird. Sie enthält die folgenden Abschnitte:
+Mit der Vergrößerungs-API können Hilfstechnologieanbieter Anwendungen zur Bildschirmvergrößerung entwickeln, die auf Microsoft-Windows. In diesem Thema wird die Vergrößerungs-API beschrieben und erläutert, wie sie in einer Anwendung verwendet wird. Sie enthält die folgenden Abschnitte:
 
 - [Erste Schritte](#getting-started)
 - [Grundlegende Konzepte](#basic-concepts)
-  - [Typen von Bildschirmlupe](#types-of-magnifiers)
+  - [Typen von Lupen](#types-of-magnifiers)
   - [Vergrößerungsfaktor](#magnification-factor)
   - [Farbeffekte](#color-effects)
-  - [Quell Rechteck](#source-rectangle)
-  - [Filter Liste](#filter-list)
-  - [Eingabe Transformation](#input-transform)
-  - [System Cursor](#system-cursor)
-- [Initialisieren der Lauf Zeit Bibliothek für die Bildschirmlupe](#initializing-the-magnifier-run-time-library)
-- [Verwenden der Full-Screen Bildschirmlupe](#using-the-full-screen-magnifier)
-- [Verwenden des Vergrößerungs Steuer Elements](#using-the-magnifier-control)
-  - [Erstellen des Vergrößerungs Steuer Elements](#creating-the-magnifier-control)
+  - [Quellrechteck](#source-rectangle)
+  - [Filterliste](#filter-list)
+  - [Eingabetransformation](#input-transform)
+  - [Systemcursor](#system-cursor)
+- [Initialisieren der Laufzeitbibliothek für die Vergrößerung](#initializing-the-magnifier-run-time-library)
+- [Verwenden der Full-Screen Magnifier](#using-the-full-screen-magnifier)
+- [Verwenden des Steuerelements "Lupe"](#using-the-magnifier-control)
+  - [Erstellen des Steuerelements "Lupe"](#creating-the-magnifier-control)
   - [Initialisieren des Steuerelements](#initializing-the-control)
-  - [Festlegen des Quell Rechtecks](#setting-the-source-rectangle)
+  - [Festlegen des Quellrechtecks](#setting-the-source-rectangle)
   - [Anwenden von Farbeffekten](#applying-color-effects)
   - [Selektive Vergrößerung](#selective-magnification)
 - [Zugehörige Themen](#related-topics)
 
 ## <a name="getting-started"></a>Erste Schritte
 
-Die ursprüngliche Version der Vergrößerungs-API wird unter Windows Vista und höheren Betriebssystemen unterstützt. Unter Windows 8 und höher unterstützt die API zusätzliche Funktionen, darunter die voll Bildvergrößerung und das Festlegen der Sichtbarkeit des vergrößerten System Cursors.
+Die ursprüngliche Version der Vergrößerungs-API wird unter Windows Vista-Betriebssystemen und höher unterstützt. Ab Windows 8 unterstützt die API zusätzliche Features, z. B. die Vollbildvergrößerung und das Festlegen der Sichtbarkeit des vergrößerten Systemcursors.
 
-Die Unterstützung für die Vergrößerungs-API wird von Magnification.dll bereitgestellt. Wenn Sie die Anwendung kompilieren möchten, schließen Sie "Vergrößerung. h" ein, und verknüpfen Sie Sie mit "
+Unterstützung für die Vergrößerungs-API wird von Magnification.dll. Um Ihre Anwendung zu kompilieren, schließen Sie Magnification.h ein, und verknüpfen Sie magnification.lib.
 
 > [!Note]  
-> Die Vergrößerungs-API wird unter WOW64 nicht unterstützt. Das heißt, eine 32-Bit-Bildschirmlupe wird auf 64-Bit-Fenstern nicht ordnungsgemäß ausgeführt.
+> Die Vergrößerungs-API wird unter WOW64 nicht unterstützt. Das heißt, eine 32-Bit-Vergrößerungsanwendung wird auf 64-Bit-Anwendungen Windows.
 
 ## <a name="basic-concepts"></a>Grundlegende Konzepte
 
 In diesem Abschnitt werden die grundlegenden Konzepte beschrieben, auf denen die Vergrößerungs-API basiert. Sie enthält die folgenden Teile:
 
-- [Typen von Bildschirmlupe](#types-of-magnifiers)
+- [Typen von Lupen](#types-of-magnifiers)
 - [Vergrößerungsfaktor](#magnification-factor)
 - [Farbeffekte](#color-effects)
-- [Quell Rechteck](#source-rectangle)
-- [Filter Liste](#filter-list)
-- [Eingabe Transformation](#input-transform)
-- [System Cursor](#system-cursor)
+- [Quellrechteck](#source-rectangle)
+- [Filterliste](#filter-list)
+- [Eingabetransformation](#input-transform)
+- [Systemcursor](#system-cursor)
 
-### <a name="types-of-magnifiers"></a>Typen von Bildschirmlupe
+### <a name="types-of-magnifiers"></a>Typen von Lupen
 
-Die API unterstützt zwei Arten von Bildschirmlupe, die *Vollbild-Bildschirmlupe* und das Bildschirm *Lupe-Steuer* Element. Die Vollbild-Bildschirmlupe vergrößert den Inhalt des gesamten Bildschirms, während das Vergrößerungs Steuerelement den Inhalt eines bestimmten Bereichs des Bildschirms vergrößert und den Inhalt in einem Fenster anzeigt. Bei beiden Vergrößerungen werden Bilder und Text vergrößert, und beide ermöglichen es Ihnen, den Umfang der Vergrößerung zu steuern. Sie können auch Farbeffekte auf den vergrößerten Bildschirminhalt anwenden, um die Anzeige für Personen mit Farbfehlern zu erleichtern oder Farben mit mehr oder weniger Kontrast zu benötigen.
+Die API unterstützt zwei Arten von  Bildschirmlupes: die Vollbildlupe und das *Bildschirmlupe-Steuerelement*. Die Vollbildlupe vergrößert den Inhalt des gesamten Bildschirms, während das Bildschirmlupe-Steuerelement den Inhalt eines bestimmten Bildschirmbereichs vergrößert und den Inhalt in einem Fenster anzeigt. Sowohl für Lupen als auch für Bilder und Text wird die Vergrößerung ermöglicht, und beide ermöglichen es Ihnen, die Menge der Vergrößerung zu steuern. Sie können auch Farbeffekte auf den vergrößerten Bildschirminhalt anwenden, um die Anzeige für Personen zu vereinfachen, die Farbverfälschtheiten haben oder Farben mit mehr oder weniger Kontrast benötigen.
 
 > [!Important]  
-> Die Lupe-Steuerelement-API ist unter Windows Vista und höheren Betriebssystemen verfügbar, während die Vollbild-Bildschirmlupe nur unter Windows 8 und höheren Betriebssystemen verfügbar ist.
+> Die Bildschirmlupe-Steuerelement-API ist unter Windows Vista und höher verfügbar, während die Vollbildlupe-API nur unter Windows 8 und höher verfügbar ist.
 
 ### <a name="magnification-factor"></a>Vergrößerungsfaktor
 
-Sowohl der Vollbild-Bildschirmlupe als auch das Lupe-Steuerelement wenden eine Skalierungs Transformation an, um Bildschirminhalte zu vergrößern. Die von der Skalierungs Transformation angewendete Vergrößerung wird als *Vergrößerungsfaktor* bezeichnet. Sie wird als Gleit Komma Wert ausgedrückt, wobei 1,0 keiner Vergrößerung entspricht und größere Werte zu einer entsprechenden Vergrößerung führen. Mit dem Wert 1,5 wird der Bildschirminhalt beispielsweise um 50 Prozent vergrößert. Ein Vergrößerungsfaktor, der kleiner als 1,0 ist, ist ungültig.
+Sowohl die Vollbildlupe als auch das Bildschirmlupe-Steuerelement wenden eine Skalierungstransformation an, um den Bildschirminhalt zu vergrößern. Der von der Skalierungstransformation angewendete Vergrößerungsfaktor wird als *Vergrößerungsfaktor bezeichnet.* Sie wird als Gleitkommawert ausgedrückt, wobei 1,0 keiner Vergrößerung entspricht und größere Werte zu einer entsprechenden Vergrößerung führen. Bei einem Wert von 1,5 wird der Bildschirminhalt beispielsweise um 50 Prozent größer. Ein Vergrößerungsfaktor kleiner als 1,0 ist ungültig.
 
 ### <a name="color-effects"></a>Farbeffekte
 
-Farbeffekte werden erzielt, indem eine 5-x 5-Farb Transformationsmatrix auf die Farben der vergrößerten Bildschirminhalte angewendet wird. Die Matrix bestimmt die Intensitäten der roten, blauen, grünen und Alpha Komponenten des Inhalts. Weitere Informationen finden Sie unter [Verwenden einer Farb Matrix zum Transformieren einer einzelnen Farbe](../../gdiplus/-gdiplus-using-a-color-matrix-to-transform-a-single-color-use.md) in der Windows-GDI+-Dokumentation.
+Farbeffekte werden erzielt, indem eine 5-mal-5-Farbtransformationsmatrix auf die Farben des vergrößerten Bildschirminhalts anwenden. Die Matrix bestimmt die Intensitäten der roten, blauen, grünen und Alphakomponenten des Inhalts. Weitere Informationen finden Sie unter [Verwenden einer Farbmatrix zum Transformieren](../../gdiplus/-gdiplus-using-a-color-matrix-to-transform-a-single-color-use.md) einer einzelnen Farbe in der Windows GDI+ Dokumentation.
 
-### <a name="source-rectangle"></a>Quell Rechteck
+### <a name="source-rectangle"></a>Quellrechteck
 
-Die Vollbild-Bildschirmlupe wendet die Transformation für Skalierung und die Farb Transformation auf den gesamten Bildschirm an. Das Bildschirm Steuerelement kopiert dagegen einen Bildschirm, der als *Quell Rechteck* bezeichnet wird, in eine Offscreen-Bitmap. Anschließend wendet das-Steuerelement die Skalierungs Transformation und die Farb Transformation (sofern vorhanden) auf die Off-Screen-Bitmap an. Zum Schluss zeigt das Steuerelement die skalierte und Farb transformierte Bitmap im Fenster "Bildschirmlupe" an.
+Die Vollbildlupe wendet die Skalierungstransformation und Farbtransformation auf den gesamten Bildschirm an. Das Bildschirmlupe-Steuerelement kopiert dagegen einen Bereich des Bildschirms, der als Quellrechteck bezeichnet *wird,* in eine Bitmap im Off-Screen-Bereich. Als Nächstes wendet das Steuerelement die Skalierungstransformation und gegebenenfalls die Farbtransformation auf die Off-Screen-Bitmap an. Schließlich zeigt das Steuerelement die skalierte und farbverwandelte Bitmap im Bildschirmlupe-Steuerelementfenster an.
 
-### <a name="filter-list"></a>Filter Liste
+### <a name="filter-list"></a>Filterliste
 
-Standardmäßig vergrößert das Bildschirmlupe-Steuerelement alle Fenster im angegebenen Quell Rechteck. Durch Bereitstellen einer *Filterliste* von Fenster Handles können Sie jedoch steuern, welche Fenster in den vergrößerten Inhalt eingeschlossen werden und welche nicht. Weitere Informationen finden Sie unter [selektive Vergrößerung](#selective-magnification).
+Standardmäßig werden alle Fenster im angegebenen Quellrechteck vom Vergrößerungssteuersystem vergrößert. Indem Sie jedoch eine *Filterliste mit Fensterhandles* bereitstellen, können Sie steuern, welche Fenster im vergrößerten Inhalt enthalten sind und welche nicht. Weitere Informationen finden Sie unter [Selektive Vergrößerung.](#selective-magnification)
 
-Die Vollbild-Bildschirmlupe unterstützt keine Filterliste. alle Fenster werden immer auf dem Bildschirm vergrößert.
+Die Vollbildlupe unterstützt keine Filterliste. Es werden immer alle Fenster auf dem Bildschirm vergrößert.
 
-### <a name="input-transform"></a>Eingabe Transformation
+### <a name="input-transform"></a>Eingabetransformation
 
-Normalerweise ist die Vergrößerung des Bildschirm Inhalts "unsichtbar" für Benutzer Stift-oder toucheingaben. Wenn der Benutzer z. b. auf das vergrößerte Bild eines-Steuer Elements tippt, übergibt das System nicht notwendigerweise die Eingabe an das-Steuerelement. Stattdessen übergibt das System die Eingabe an das beliebige Element (sofern vorhanden) an den angeprüften Bildschirm Koordinaten auf dem nicht vergrößerten Desktop. Mit der Funktion " [**magsettinputtransform**](/windows/win32/api/Magnification/nf-magnification-magsetinputtransform) " können Sie eine *Eingabe Transformation* angeben, die den Koordinaten Bereich des vergrößerten Bildschirm Inhalts dem tatsächlichen (nicht vergrößerten) Bildschirm Koordinaten Bereich zuordnet. Dadurch kann das System Stift-oder toucheingaben, die in vergrößertem Bildschirminhalt eingegeben werden, an das richtige Benutzeroberflächen Element auf dem Bildschirm übergeben.
+Normalerweise ist vergrößerter Bildschirminhalt für Benutzerstift- oder Toucheingaben "unsichtbar". Wenn der Benutzer beispielsweise auf das vergrößerte Bild eines Steuerelements tippt, über gibt das System die Eingabe nicht unbedingt an das Steuerelement weiter. Stattdessen übergibt das System die Eingabe an jedes Element (sofern verfügbar), das sich an den angeknippten Bildschirmkoordinaten auf dem unvorstellbaren Desktop befindet. Mit [**der MagSetInputTransform-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetinputtransform) können  Sie eine Eingabetransformation angeben, die den Koordinatenraum des vergrößerten Bildschirminhalts dem tatsächlichen (nicht großen) Bildschirmkoordinatenraum zuteilt. Dadurch kann das System Stift- oder Toucheingaben, die in vergrößerten Bildschirminhalten eingegeben werden, an das richtige Benutzeroberflächenelement auf dem Bildschirm übergeben.
 
 > [!Note]  
-> Der Aufrufprozess muss über UIAccess-Berechtigungen verfügen, um die Eingabe Transformation festzulegen. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen zur Benutzeroberflächen Automatisierung](../uiauto-securityoverview.md) und [/MANIFESTUAC (bettet UAC-Informationen in Manifest ein)](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest).
+> Der aufrufende Prozess muss über UIAccess-Berechtigungen verfügen, um die Eingabetransformation festlegen zu können. Weitere Informationen finden Sie unter [Benutzeroberflächenautomatisierung Überlegungen zur](../uiauto-securityoverview.md) Sicherheit und [/MANIFESTUAC (Bettet UAC-Informationen in manifest ein).](/cpp/build/reference/manifestuac-embeds-uac-information-in-manifest)
 
-### <a name="system-cursor"></a>System Cursor
+### <a name="system-cursor"></a>Systemcursor
 
-Mit der Funktion " [**magshowsystemcursor**](/windows/win32/api/Magnification/nf-magnification-magshowsystemcursor) " können Sie den System Cursor anzeigen oder ausblenden. Wenn Sie den System Cursor beim Aktivieren der Vollbildschirm Bildschirmlupe anzeigen, wird der System Cursor immer zusammen mit dem restlichen Bildschirminhalt vergrößert. Wenn Sie den System Cursor ausblenden, wenn die Vollbild-Bildschirmlupe aktiv ist, ist der System Cursor überhaupt nicht sichtbar.
+Mit [**der MagShowSystemCursor-Funktion**](/windows/win32/api/Magnification/nf-magnification-magshowsystemcursor) können Sie den Systemcursor ein- oder ausblenden. Wenn Sie den Systemcursor anzeigen, wenn die Vollbildlupe aktiv ist, wird der Systemcursor immer zusammen mit dem restlichen Bildschirminhalt vergrößert. Wenn Sie den Systemcursor ausblenden, wenn die Vollbildlupe aktiv ist, ist der Systemcursor überhaupt nicht sichtbar.
 
-Mit dem Bildschirmlupe-Steuerelement zeigt die Funktion " [**magshowsystemcursor**](/windows/win32/api/Magnification/nf-magnification-magshowsystemcursor) " den nicht vergrößerten System Cursor an oder blendet sie aus, hat jedoch keine Auswirkung auf den vergrößerten System Cursor. Die Sichtbarkeit des vergrößerten System Cursors hängt davon ab, ob das Lupe Steuerelement den [**MS_SHOWMAGNIFIEDCURSOR**](magapi-magnifier-styles.md) Stil aufweist. Wenn dieses Format festgehalten wird, zeigt das Steuerelement für die Bildschirmlupe den vergrößerten System Cursor zusammen mit dem vergrößerten Bildschirminhalt an, wenn der System Cursor in das Quell Rechteck eintritt.
+Mit dem Lupen-Steuerelement zeigt die [**MagShowSystemCursor-Funktion**](/windows/win32/api/Magnification/nf-magnification-magshowsystemcursor) den unvorstellbaren Systemcursor an oder blendet den Cursor aus, hat jedoch keine Auswirkungen auf den vergrößerten Systemcursor. Die Sichtbarkeit des vergrößerten Systemcursors hängt davon ab, ob das Lupen-Steuerelement den [**MS_SHOWMAGNIFIEDCURSOR**](magapi-magnifier-styles.md) hat. Wenn dieses Format verwendet wird, zeigt das Bildschirmlupe-Steuerelement den vergrößerten Systemcursor zusammen mit dem vergrößerten Bildschirminhalt an, wenn der Systemcursor in das Quellrechteck eintritt.
 
-## <a name="initializing-the-magnifier-run-time-library"></a>Initialisieren der Lauf Zeit Bibliothek für die Bildschirmlupe
+## <a name="initializing-the-magnifier-run-time-library"></a>Initialisieren der Laufzeitbibliothek für die Vergrößerung
 
-Bevor Sie beliebige andere Funktionen der Bildschirmlupe-API aufrufen können, müssen Sie die Bildschirm Lauf Zeit Objekte durch Aufrufen der Funktion " [**maginitialize**](/windows/win32/api/Magnification/nf-magnification-maginitialize) " erstellen und initialisieren. Wenn Sie die Bildschirmlupe abgeschlossen haben, müssen Sie die Funktion " [**maguninitialize**](/windows/win32/api/Magnification/nf-magnification-maguninitialize) " verwenden, um die Bildschirm Lauf Zeit Objekte zu zerstören und die zugeordneten Systemressourcen freizugeben.
+Bevor Sie andere Lupen-API-Funktionen aufrufen können, müssen Sie die Lupen-Laufzeitobjekte erstellen und initialisieren, indem Sie die [**MagInitialize-Funktion**](/windows/win32/api/Magnification/nf-magnification-maginitialize) aufrufen. Wenn Sie die Verwendung der Lupen-API abgeschlossen haben, rufen Sie entsprechend die [**MagUninitialize-Funktion**](/windows/win32/api/Magnification/nf-magnification-maguninitialize) auf, um die Lupen-Laufzeitobjekte zu zerstören und die zugeordneten Systemressourcen frei zu geben.
 
-## <a name="using-the-full-screen-magnifier"></a>Verwenden der Full-Screen Bildschirmlupe
+## <a name="using-the-full-screen-magnifier"></a>Verwenden der Full-Screen Magnifier
 
-Um die Vollbild-Bildschirmlupe zu verwenden, müssen Sie die Funktion [**magsetfullscreentransform**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreentransform) aufrufen. Der *maglevel* -Parameter gibt den Vergrößerungsfaktor an. Mit den Parametern *xoffset* und *yoffset* wird angegeben, wie der Bildschirm mit vergrößertem Bildschirm relativ zum Bildschirm positioniert wird.
+Um die Vollbildlupe zu verwenden, rufen Sie die [**MagSetFullscreenTransform-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreentransform) auf. Der *magLevel-Parameter* gibt den Vergrößerungsfaktor an. Die *Parameter xOffset* und *yOffset* geben an, wie der vergrößerte Bildschirminhalt relativ zum Bildschirm positioniert wird.
 
-Wenn der Bildschirminhalt vergrößert wird, wird er größer als der Bildschirm. Ein Teil des Inhalts erstreckt sich über die Ränder des Bildschirms hinaus und ist für den Benutzer unsichtbar. Mit den Parametern *xoffset* und *yoffset* der Funktion [**magsetfullscreentransform**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreentransform) wird festgelegt, welcher Teil des vergrößerten Bildschirm Inhalts auf dem Bildschirm angezeigt wird. Die Parameter geben die Koordinaten eines Punkts in den Bildschirm Inhalten ohne Vergrößerung an. Wenn der Inhalt vergrößert wird, wird er mit dem angegebenen Punkt in der oberen linken Ecke des Bildschirms positioniert.
+Wenn der Bildschirminhalt vergrößert wird, wird er größer als der Bildschirm selbst. Ein Teil des Inhalts erstreckt sich über die Bildschirmränder hinaus und wird für den Benutzer unsichtbar. Die *Parameter xOffset* und *yOffset* der [**MagSetFullscreenTransform-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreentransform) bestimmen, welcher Teil des vergrößerten Bildschirminhalts auf dem Bildschirm angezeigt wird. Zusammen geben die Parameter die Koordinaten eines Punkts im inhalt des ungemagerten Bildschirms an. Wenn der Inhalt vergrößert wird, wird er am angegebenen Punkt in der oberen linken Ecke des Bildschirms positioniert.
 
-Im folgenden Beispiel wird der Vergrößerungsfaktor für die Vollbild-Bildschirmlupe festgelegt, und der Mittelpunkt der vergrößerten Bildschirminhalte wird in der Mitte des Bildschirms platziert.
+Im folgenden Beispiel wird der Vergrößerungsfaktor für die Vollbildlupe festgelegt und die Mitte des vergrößerten Bildschirminhalts in der Mitte des Bildschirms platziert.
 
 ```C++
 BOOL SetZoom(float magnificationFactor)
@@ -134,7 +134,7 @@ BOOL SetZoom(float magnificationFactor)
 }
 ```
 
-Verwenden Sie die Funktion " [**magsetfullscreencoloreffect**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreencoloreffect) ", um Farbeffekte auf den voll Bildinhalt anzuwenden, indem Sie eine Anwendungs definierte Farb Transformationsmatrix festlegen. Im folgenden Beispiel wird z. b. eine Farb Transformationsmatrix festgelegt, die Farben in Graustufen konvertiert.
+Verwenden Sie die [**MagSetFullscreenColorEffect-Funktion,**](/windows/win32/api/Magnification/nf-magnification-magsetfullscreencoloreffect) um Farbeffekte auf den Vollbildinhalt anzuwenden, indem Sie eine anwendungsdefinierte Farbtransformationsmatrix festlegen. Im folgenden Beispiel wird beispielsweise eine Farbtransformationsmatrix festgelegt, die Farben in Graustufen konvertiert.
 
 ```C++
 // Initialize color transformation matrices used to apply grayscale and to 
@@ -162,33 +162,33 @@ BOOL SetColorGrayscale(__in BOOL fGrayscaleOn)
 }
 ```
 
-Sie können den aktuellen Vergrößerungsfaktor und die Offset Werte abrufen, indem Sie die [**maggetfullscreentransform**](/windows/win32/api/Magnification/nf-magnification-maggetfullscreentransform) -Funktion aufrufen. Sie können die aktuelle Farb Transformationsmatrix abrufen, indem Sie die [**maggetfullscreencoloreffect**](/windows/win32/api/Magnification/nf-magnification-maggetfullscreencoloreffect) -Funktion aufrufen.
+Sie können die aktuellen Vergrößerungsfaktor- und Offsetwerte abrufen, indem Sie die [**MagGetFullscreenTransform-Funktion**](/windows/win32/api/Magnification/nf-magnification-maggetfullscreentransform) aufrufen. Sie können die aktuelle Farbtransformationsmatrix abrufen, indem Sie die [**MagGetFullscreenColorEffect-Funktion**](/windows/win32/api/Magnification/nf-magnification-maggetfullscreencoloreffect) aufrufen.
 
-## <a name="using-the-magnifier-control"></a>Verwenden des Vergrößerungs Steuer Elements
+## <a name="using-the-magnifier-control"></a>Verwenden des Bildschirmlupe-Steuerelements
 
-Das Lupe Steuerelement vergrößert den Inhalt eines bestimmten Bereichs des Bildschirms und zeigt den Inhalt in einem Fenster an. In diesem Abschnitt wird beschrieben, wie Sie das Bildschirmlupe-Steuerelement verwenden. Sie enthält die folgenden Teile:
+Das Bildschirmlupe-Steuerelement vergrößert den Inhalt eines bestimmten Bildschirmbereichs und zeigt den Inhalt in einem Fenster an. In diesem Abschnitt wird die Verwendung des Bildschirmlupesteuerelements beschrieben. Es enthält die folgenden Teile:
 
-- [Erstellen des Vergrößerungs Steuer Elements](#creating-the-magnifier-control)
+- [Erstellen des Bildschirmlupe-Steuerelements](#creating-the-magnifier-control)
 - [Initialisieren des Steuerelements](#initializing-the-control)
-- [Festlegen des Quell Rechtecks](#setting-the-source-rectangle)
+- [Festlegen des Quellrechtecks](#setting-the-source-rectangle)
 - [Anwenden von Farbeffekten](#applying-color-effects)
 - [Selektive Vergrößerung](#selective-magnification)
 
-### <a name="creating-the-magnifier-control"></a>Erstellen des Vergrößerungs Steuer Elements
+### <a name="creating-the-magnifier-control"></a>Erstellen des Bildschirmlupe-Steuerelements
 
-Das Vergrößerungs Steuerelement muss in einem Fenster gehostet werden, das mit dem [**WS_EX_LAYERED**](../../winmsg/extended-window-styles.md) erweiterten Stil erstellt wurde. Nachdem Sie das Host Fenster erstellt haben, können Sie [**SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) aufrufen, um die Deckkraft des Host Fensters festzulegen. Das Host Fenster wird in der Regel auf vollständige Deckkraft festgelegt, um zu verhindern, dass der zugrunde liegende Bildschirminhalt angezeigt wird. Im folgenden Beispiel wird gezeigt, wie das Host Fenster auf vollständige Deckkraft festgelegt wird:
+Das Bildschirmlupe-Steuerelement muss in einem Fenster gehostet werden, das mit der [**erweiterten WS_EX_LAYERED**](../../winmsg/extended-window-styles.md) erstellt wurde. Rufen Sie nach dem Erstellen des [**Hostfensters SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) auf, um die Deckkraft des Hostfensters festzulegen. Das Hostfenster ist in der Regel auf vollständige Deckkraft festgelegt, um zu verhindern, dass der zugrunde liegende Bildschirminhalt angezeigt wird. Das folgende Beispiel zeigt, wie das Hostfenster auf vollständige Deckkraft festgelegt wird:
 
 ```C++
 SetLayeredWindowAttributes(hwndHost, NULL, 255, LWA_ALPHA);
 ```
 
-Wenn Sie den [**WS_EX_TRANSPARENT**](../../winmsg/extended-window-styles.md) Stil auf das Host Fenster anwenden, werden Mausklicks an die Position des Mauszeigers zurückgegeben, die sich hinter dem Host Fenster befindet. Beachten Sie, dass der Benutzer nicht in der Lage ist, das Vergrößerungs Fenster mit der Maus zu verschieben oder die Größe der Größe zu ändern, da das Host Fenster keine Mausklicks verarbeitet.
+Wenn Sie den [**WS_EX_TRANSPARENT**](../../winmsg/extended-window-styles.md) Stil auf das Hostfenster anwenden, werden Mausklicks an das Objekt hinter dem Hostfenster an der Position des Mauszeigers übergeben. Beachten Sie, dass der Benutzer das Vergrößerungsfenster nicht mit der Maus verschieben oder dessen Größe ändern kann, da das Hostfenster keine Mausklicks verarbeitet.
 
-Die Fenster Klasse des Fenster Fensters der Bildschirmlupe muss **WC_MAGNIFIER** werden. Wenn Sie die [**MS_SHOWMAGNIFIEDCURSOR**](magapi-magnifier-styles.md) Formatvorlage anwenden, enthält das Vergrößerungs Steuerelement den System Cursor in den vergrößerten Bildschirminhalt, und der Cursor wird zusammen mit den Bildschirm Inhalten vergrößert.
+Die Fensterklasse des Bildschirmlupe-Steuerelementfensters muss **WC_MAGNIFIER** sein. Wenn Sie die [**MS_SHOWMAGNIFIEDCURSOR**](magapi-magnifier-styles.md) Anwenden, schließt das Bildschirmlupe-Steuerelement den Systemcursor in den vergrößerten Bildschirminhalt ein, und der Cursor wird zusammen mit dem Bildschirminhalt vergrößert.
 
-Nachdem Sie das Vergrößerungs Steuerelement erstellt haben, behalten Sie das Fenster Handle bei, damit Sie es an andere Funktionen übergeben können.
+Nachdem Sie das Bildschirmlupe-Steuerelement erstellt haben, behalten Sie das Fensterhandle bei, damit Sie es an andere Funktionen übergeben können.
 
-Im folgenden Beispiel wird gezeigt, wie das Bildschirm Steuerelement erstellt wird.
+Das folgende Beispiel zeigt, wie das Bildschirmlupe-Steuerelement erstellt wird.
 
 ```C++
 // Description: 
@@ -253,17 +253,17 @@ BOOL CreateMagnifier(HINSTANCE hInstance)
 
 ### <a name="initializing-the-control"></a>Initialisieren des Steuerelements
 
-Nachdem Sie das Steuerelement für die Bildschirmlupe erstellt haben, müssen Sie die Funktion " [**magsetwindowtransform**](/windows/win32/api/Magnification/nf-magnification-magsetwindowtransform) " aufrufen, um den Vergrößerungsfaktor anzugeben. Das ist einfach eine Frage der Angabe einer Matrix von
+Nach dem Erstellen des Bildschirmlupesteuerelements müssen Sie die [**MagSetWindowTransform-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetwindowtransform) aufrufen, um den Vergrößerungsfaktor anzugeben. Dies ist lediglich eine Frage der Angabe einer Matrix von
 
-(*n*, 0,0, 0,0)
+(*n*, 0.0, 0.0)
 
-(0,0, *n*, 0,0)
+(0.0, *n*, 0.0)
 
-(0,0, 0,0, 1,0)
+(0.0, 0.0, 1.0)
 
 wobei *n* der Vergrößerungsfaktor ist.
 
-Im folgenden Beispiel wird gezeigt, wie der Vergrößerungsfaktor für das Lupe Steuerelement festgelegt wird.
+Das folgende Beispiel zeigt, wie der Vergrößerungsfaktor für das Bildschirmlupesteuerelement festgelegt wird.
 
 ```C++
 // Description:
@@ -284,11 +284,11 @@ BOOL SetMagnificationFactor(HWND hwndMag, float magFactor)
 }
 ```
 
-### <a name="setting-the-source-rectangle"></a>Festlegen des Quell Rechtecks
+### <a name="setting-the-source-rectangle"></a>Festlegen des Quellrechtecks
 
-Wenn der Benutzer den Mauszeiger auf dem Bildschirm bewegt, ruft die Anwendung die Funktion " [**magsetwindowsource**](/windows/win32/api/Magnification/nf-magnification-magsetwindowsource) " auf, um den Teil des zugrunde liegenden Bildschirms anzugeben, der vergrößert werden soll.
+Wenn der Benutzer den Mauszeiger um den Bildschirm bewegt, ruft Ihre Anwendung die [**MagSetWindowSource-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetwindowsource) auf, um den Teil des zugrunde liegenden Bildschirms anzugeben, der vergrößert werden soll.
 
-Die folgende Beispiel Funktion berechnet die Position und die Dimensionen des Quell Rechtecks (basierend auf der Mausposition und den Abmessungen des Vergrößerungs Fensters dividiert durch den Vergrößerungsfaktor) und legt das Quell Rechteck entsprechend fest. Die-Funktion zentriert auch den Client Bereich des Host Fensters an der Mausposition. Diese Funktion wird in Intervallen aufgerufen, um das Vergrößerungs Fenster zu aktualisieren.
+Die folgende Beispielfunktion berechnet die Position und die Abmessungen des Quellrechtecks (basierend auf der Mausposition und den Abmessungen des Bildschirmlupefensters geteilt durch den Vergrößerungsfaktor) und legt das Quellrechteck entsprechend fest. Die Funktion zentrt auch den Clientbereich des Hostfensters an der Mausposition. Diese Funktion wird in Intervallen aufgerufen, um das Vergrößerungsfenster zu aktualisieren.
 
 ```C++
 // Description: 
@@ -341,11 +341,11 @@ void CALLBACK UpdateMagWindow(HWND /*hwnd*/, UINT /*uMsg*/,
 
 ### <a name="applying-color-effects"></a>Anwenden von Farbeffekten
 
-Ein Vergrößerungs Steuerelement mit dem [**MS_INVERTCOLORS**](magapi-magnifier-styles.md) -Stil wendet eine integrierte Farb Transformationsmatrix an, die die Farben der vergrößerten Bildschirminhalte umkehrt. Die folgende Abbildung zeigt Bildschirminhalt in einem Bildschirm Steuerelement, das den **MS_INVERTCOLORS** Stil hat.
+Ein Bildschirmlupesteuerelement mit dem [**MS_INVERTCOLORS**](magapi-magnifier-styles.md) Stil wendet eine integrierte Farbtransformationsmatrix an, die die Farben des vergrößerten Bildschirminhalts umkehrt. Die folgende Abbildung zeigt den Bildschirminhalt in einem Bildschirmlupe-Steuerelement mit dem **MS_INVERTCOLORS** Stil.
 
-![Screenshot des vergrößerten Inhalts mit umgekehrten Farben](images/color-inversion.png)
+![Screenshot des vergrößerten Inhalts mit invertierten Farben](images/color-inversion.png)
 
-Mithilfe der Funktion " [**magsetcoloreffect**](/windows/win32/api/Magnification/nf-magnification-magsetcoloreffect) " können Sie andere Farbeffekte durch Festlegen einer Anwendungs definierten Farb Transformationsmatrix anwenden. Beispielsweise wird mit der folgenden Funktion eine Farb Transformationsmatrix festgelegt, die Farben in Graustufen konvertiert.
+Mit der [**MagSetColorEffect-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetcoloreffect) können Sie andere Farbeffekte anwenden, indem Sie eine anwendungsdefinierte Farbtransformationsmatrix festlegen. Die folgende Funktion legt beispielsweise eine Farbtransformationsmatrix fest, die Farben in Graustufen konvertiert.
 
 
 ```C++
@@ -381,11 +381,11 @@ BOOL ConvertToGrayscale(HWND hwndMag, BOOL fConvert)
 }
 ```
 
-Weitere Informationen zur Funktionsweise von Farb Transformationen finden [Sie unter Verwenden einer Farb Matrix zum Transformieren einer einzelnen Farbe](../../gdiplus/-gdiplus-using-a-color-matrix-to-transform-a-single-color-use.md) in der GDI+-Dokumentation.
+Weitere Informationen zur Funktionsweise von Farbtransformationen finden Sie unter [Using a Color Matrix to Transform a Single Color (Verwenden einer Farbmatrix zum Transformieren einer einzelnen Farbe)](../../gdiplus/-gdiplus-using-a-color-matrix-to-transform-a-single-color-use.md) in der GDI+-Dokumentation.
 
 ### <a name="selective-magnification"></a>Selektive Vergrößerung
 
-Standardmäßig wird die Vergrößerung auf alle Fenster außer dem Vergrößerungs Fenster selbst angewendet. Um anzugeben, welche Fenster vergrößert werden sollen, nennen Sie die Funktion " [**magsetwindowfilterlist**](/windows/win32/api/Magnification/nf-magnification-magsetwindowfilterlist) ". Diese Methode übernimmt entweder eine Liste von Fenstern, die vergrößert werden soll, oder eine Liste von Fenstern, die von der Vergrößerung ausgeschlossen werden sollen.
+Standardmäßig wird die Vergrößerung auf alle Fenster außer dem Vergrößerungsfenster selbst angewendet. Um anzugeben, welche Fenster vergrößert werden sollen, rufen Sie die [**MagSetWindowFilterList-Funktion**](/windows/win32/api/Magnification/nf-magnification-magsetwindowfilterlist) auf. Diese Methode verwendet entweder eine Liste der zu vergrößernde Fenster oder eine Liste von Fenstern, die von der Vergrößerung ausgeschlossen werden sollen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

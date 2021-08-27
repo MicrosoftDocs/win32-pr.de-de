@@ -1,23 +1,23 @@
 ---
-title: Kontext (Windows-Webdienste)
-description: Ein Kontext wird in Dienstmodell Dienst-Vorgängen und-Rückrufen verwendet, um relevante Zustandsdaten an den Dienst Vorgang oder den Rückruf zu übergeben, wenn dieser aufgerufen wird.
+title: Kontext (Windows Webdienste)
+description: Ein Kontext wird in Dienstvorgängen und Rückrufen des Dienstmodells verwendet, um relevante Zustandsdaten an den Dienstvorgang oder Rückruf zu übergeben, wenn er aufgerufen wird.
 ms.assetid: 44283854-96df-4e6b-8464-3df685896f07
 keywords:
-- Kontext-Webdienste für Windows
-- Wwsapi
+- Context Web Services for Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f7edd1f8c93bbf4fd4b4d5feea5b2219bc522ea
-ms.sourcegitcommit: cba7f424a292fd7f3a8518947b9466439b455419
+ms.openlocfilehash: fd7863f22193dd1496134afff991ff54efbee5026f2a11e52359b2b016c878c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "103948335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119026628"
 ---
-# <a name="context-windows-web-services"></a>Kontext (Windows-Webdienste)
+# <a name="context-windows-web-services"></a>Kontext (Windows Webdienste)
 
-Ein Kontext wird in Dienstmodell [Dienst-Vorgängen](service-operation.md) und-Rückrufen verwendet, um relevante Zustandsdaten an den Dienst Vorgang oder den Rückruf zu übergeben, wenn dieser aufgerufen wird. Auf einen Kontext wird durch eine [WS- \_ Vorgangs \_ Kontext](ws-operation-context.md) Struktur verwiesen. Die Eigenschaften eines Kontexts können mit der [**wsgetoperationcontextproperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty) -Funktion abgerufen werden, wie im folgenden Code veranschaulicht.
+Ein Kontext wird in [](service-operation.md) Dienstvorgängen und Rückrufen des Dienstmodells verwendet, um relevante Zustandsdaten an den Dienstvorgang oder Rückruf zu übergeben, wenn er aufgerufen wird. Auf einen Kontext wird von einer [WS \_ OPERATION \_ CONTEXT-Struktur](ws-operation-context.md) verwiesen. Die Eigenschaften eines Kontexts können wie im folgenden Code veranschaulicht mit der [**WsGetOperationContextProperty-Funktion**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty) abgerufen werden.
 
 ``` syntax
 WS_MESSAGE* requestMessage = NULL;
@@ -29,25 +29,25 @@ HRESULT hr = WsGetOperationContextProperty (
                 error);
 ```
 
-Nicht alle Kontexteigenschaften sind zu einem bestimmten Zeitpunkt verfügbar. Weitere Informationen zur Verfügbarkeit einer bestimmten Eigenschaft in einem Rückruf-oder [Dienst Vorgang](service-operation.md)finden Sie in der Dokumentation zur Kontext Eigenschaft.
+Nicht alle Kontexteigenschaften sind zu einem bestimmten Zeitpunkt verfügbar. Informationen zur Verfügbarkeit einer bestimmten Eigenschaft in einem Rückruf oder dienstvorgang finden Sie in der Dokumentation zur [Kontexteigenschaft.](service-operation.md)
 
-Weitere Informationen zum Verwalten der Lebensdauer des Vorgangs Kontexts und des Threading finden Sie im Thema [Vorgangs Kontext Lebensdauer und Threading](operation-context-lifetime-and-threading.md) .
+Weitere Informationen zum Verwalten der Lebensdauer des Vorgangskontexts und des Threadings finden Sie im Thema Lebensdauer und [Threading](operation-context-lifetime-and-threading.md) des Vorgangskontexts.
 
 Die folgende Enumeration ist Teil des Kontexts:
 
--   [**WS- \_ Vorgangs \_ Kontext-Eigenschaften- \_ \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_operation_context_property_id)
+-   [**\_ \_ \_ WS-VORGANGSKONTEXT-EIGENSCHAFTEN-ID \_**](/windows/desktop/api/WebServices/ne-webservices-ws_operation_context_property_id)
 
 Die folgende Funktion ist Teil des Kontexts:
 
--   [**Wsgetoperationcontextproperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty)
+-   [**WsGetOperationContextProperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty)
 
 Das folgende Handle ist Teil des Kontexts:
 
--   [WS- \_ Vorgangs \_ Kontext](ws-operation-context.md)
+-   [\_WS-VORGANGSKONTEXT \_](ws-operation-context.md)
 
- 
+ 
 
- 
+ 
 
 
 

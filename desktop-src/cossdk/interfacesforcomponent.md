@@ -1,7 +1,7 @@
 ---
-description: Enthält ein-Objekt für jede Schnittstelle, die von der Komponente verfügbar gemacht wird, mit der die Auflistung verknüpft ist.
+description: Enthält ein -Objekt für jede Schnittstelle, die von der Komponente verfügbar gemacht wird, mit der die Auflistung verknüpft ist.
 ms.assetid: ee755693-e3ff-4bb1-9fde-a2bfee9c3d29
-title: Interfakesforcomponent-Auflistung
+title: InterfacesForComponent-Auflistung
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,47 +12,47 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 9450c898e694e5459dbb126d7f7bf11b853e33d8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 13c0ed22b6d4ee8ffb4a0d6c4d3f6475341192f656c48553ab901206be833b6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047448"
 ---
-# <a name="interfacesforcomponent-collection"></a>Interfakesforcomponent-Auflistung
+# <a name="interfacesforcomponent-collection"></a>InterfacesForComponent-Auflistung
 
-Enthält ein-Objekt für jede Schnittstelle, die von der Komponente verfügbar gemacht wird, mit der die Auflistung verknüpft ist.
+Enthält ein -Objekt für jede Schnittstelle, die von der Komponente verfügbar gemacht wird, mit der die Auflistung verknüpft ist.
 
-Diese Auflistung unterstützt die [**Add**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) -und [**Remove**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) -Methoden des [**comadmincatalogcollection**](comadmincatalogcollection.md) -Objekts nicht.
+Diese Sammlung unterstützt nicht die [**Add- und**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-add) [**Remove-Methoden**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogcollection-remove) des [**COMAdminCatalogCollection-Objekts.**](comadmincatalogcollection.md)
 
 ## <a name="members"></a>Member
 
-Die **interfakesforcomponent** -Auflistung erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle, verfügt jedoch nicht über zusätzliche Member.
+Die **InterfacesForComponent-Auflistung** erbt von der [**IUnknown-Schnittstelle,**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) verfügt jedoch nicht über zusätzliche Member.
 
-## <a name="related-collections"></a>Verwandte Auflistungen
+## <a name="related-collections"></a>Verwandte Sammlungen
 
 Sie können von dieser Sammlung zu einer der folgenden Sammlungen navigieren:
 
 -   [**ErrorInfo**](errorinfo.md)
--   [**Methodsforinterface**](methodsforinterface.md)
--   [**PropertyInfo**](propertyinfo.md)
--   [**Relatedcollectioninfo**](relatedcollectioninfo.md)
--   [**Rolesforinterface**](rolesforinterface.md)
+-   [**MethodsForInterface**](methodsforinterface.md)
+-   [**Propertyinfo**](propertyinfo.md)
+-   [**RelatedCollectionInfo**](relatedcollectioninfo.md)
+-   [**RolesForInterface**](rolesforinterface.md)
 
-Sie können von den folgenden Sammlungen aus zu dieser Sammlung navigieren:
+Sie können von den folgenden Sammlungen zu dieser Sammlung navigieren:
 
 -   [**Komponenten**](components.md)
 
 ## <a name="properties"></a>Eigenschaften
 
-Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatalogobject.md) -Objekt in der-Auflistung unterstützt:
+Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject-Objekt**](comadmincatalogobject.md) in der Auflistung unterstützt:
 
--   [CLSID](#clsid)
+-   [Clsid](#clsid)
 -   [Beschreibung](#description)
 -   [IID](#iid)
 -   [Name](#name)
--   [Queuingenabled](#queuingenabled)
--   [Queueingsupported](#queueingsupported)
+-   [QueuingEnabled](#queuingenabled)
+-   [QueueingSupported](#queueingsupported)
 
 ### <a name="clsid"></a>CLSID
 
@@ -60,27 +60,27 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|---------------------------|
-| BESCHREIBUNG    | Eine GUID für die Komponente. |
-| Access         | ReadOnly                  |
+| Beschreibung    | Eine GUID für die Komponente. |
+| Zugriff         | ReadOnly                  |
 | type           | String                    |
-| Standard        | –                       |
-| Minimalsystem | Windows 2000              |
+| Standard        | Nicht zutreffend                       |
+| Mindestsystem | Windows 2000              |
 
 
 
  
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
 
 
 | Eingabe | Wert |
 |----------------|----------------------------------|
-| BESCHREIBUNG    | Eine Beschreibung für die-Schnittstelle. |
-| Access         | ReadWrite                        |
+| Beschreibung    | Eine Beschreibung für die Schnittstelle. |
+| Zugriff         | ReadWrite                        |
 | type           | String                           |
 | Standard        | ""                               |
-| Minimalsystem | Windows 2000                     |
+| Mindestsystem | Windows 2000                     |
 
 
 
@@ -92,11 +92,11 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Eine GUID für die-Schnittstelle. Diese Eigenschaft wird zurückgegeben, wenn die [**Schlüssel**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | ReadOnly                                                                                                                                                  |
+| Beschreibung    | Eine GUID für die Schnittstelle. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_key) zurückgegeben, wenn die Key-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | ReadOnly                                                                                                                                                  |
 | type           | String                                                                                                                                                    |
-| Standard        | –                                                                                                                                                       |
-| Minimalsystem | Windows 2000                                                                                                                                              |
+| Standard        | Nicht zutreffend                                                                                                                                                       |
+| Mindestsystem | Windows 2000                                                                                                                                              |
 
 
 
@@ -108,43 +108,43 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 | Eingabe | Wert |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Ein Name für die-Schnittstelle. Diese Eigenschaft wird zurückgegeben, wenn die [**Name**](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) -Eigenschaften Methode für ein Objekt dieser Auflistung aufgerufen wird. |
-| Access         | ReadOnly                                                                                                                                                    |
+| Beschreibung    | Ein Name für die Schnittstelle. Diese Eigenschaft wird [](/windows/desktop/api/ComAdmin/nf-comadmin-icatalogobject-get_name) zurückgegeben, wenn die Name-Eigenschaftsmethode für ein Objekt dieser Auflistung aufgerufen wird. |
+| Zugriff         | ReadOnly                                                                                                                                                    |
 | type           | String                                                                                                                                                      |
-| Standard        | –                                                                                                                                                         |
-| Minimalsystem | Windows 2000                                                                                                                                                |
+| Standard        | Nicht zutreffend                                                                                                                                                         |
+| Mindestsystem | Windows 2000                                                                                                                                                |
 
 
 
  
 
-### <a name="queuingenabled"></a>Queuingenabled
+### <a name="queuingenabled"></a>QueuingEnabled
 
 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Markiert die Schnittstelle als Warteschlange und kann mithilfe des Verwaltungs Tools admin SDK oder Komponenten Dienste festgelegt werden. Allerdings kann für nur eine Schnittstelle, für die das in der **Warteschlange** stehende Flag festgelegt ist, das **queuingaktivierte** Flag festgelegt |
-| Access         | ReadWrite                                                                                                                                                                                                                          |
-| type           | Bool                                                                                                                                                                                                                               |
+| Beschreibung    | Markiert die Schnittstelle als warteschlangenfähig und kann mit dem Admin SDK oder dem Verwaltungstool für Komponentendienste festgelegt werden. Allerdings kann nur für eine Schnittstelle, für die das **Flag Queuing Supported** festgelegt ist, das **Flag Queuing Enabled** festgelegt werden. |
+| Zugriff         | ReadWrite                                                                                                                                                                                                                          |
+| Typ           | Bool                                                                                                                                                                                                                               |
 | Standard        | Falsch                                                                                                                                                                                                                              |
-| Minimalsystem | Windows 2000                                                                                                                                                                                                                       |
+| Mindestsystem | Windows 2000                                                                                                                                                                                                                       |
 
 
 
  
 
-### <a name="queueingsupported"></a>Queueingsupported
+### <a name="queueingsupported"></a>QueueingSupported
 
 
 
 | Eingabe | Wert |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| BESCHREIBUNG    | Schnittstelle unterstützt Warteschlangen. Damit eine Schnittstelle Warteschlangen unterstützt, sollten alle Methoden nur in den Parametern enthalten. **Unterstützte Warteschlangen werden** als schreibgeschützte Eigenschaft verfügbar gemacht. |
-| Access         | ReadOnly                                                                                                                                                               |
-| type           | Bool                                                                                                                                                                   |
+| Beschreibung    | Die Schnittstelle unterstützt Warteschlangen. Damit eine Schnittstelle Warteschlangen unterstützt, sollten alle Methoden nur in Parametern enthalten sein. **Unterstützte Warteschlangen** werden als schreibgeschützte Eigenschaft verfügbar gemacht. |
+| Zugriff         | ReadOnly                                                                                                                                                               |
+| Typ           | Bool                                                                                                                                                                   |
 | Standard        | Falsch                                                                                                                                                                  |
-| Minimalsystem | Windows 2000                                                                                                                                                           |
+| Mindestsystem | Windows 2000                                                                                                                                                           |
 
 
 
@@ -154,7 +154,7 @@ Die folgenden Eigenschaften werden vom [**COMAdminCatalogObject**](comadmincatal
 
 <dl> <dt>
 
-[Com+-Verwaltungs Sammlungen](com--administration-collections.md)
+[COM+-Verwaltungssammlungen](com--administration-collections.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: WINBIO_STORAGE_SCHEMA Struktur (winbio \_ types. h)
-description: Beschreibt die Funktionen eines biometrischen Speicher Adapters.
+title: WINBIO_STORAGE_SCHEMA -Struktur (Winbio \_ types.h)
+description: Beschreibt die Funktionen eines biometrischen Speicheradapters.
 ms.assetid: e4924803-5a1b-4e0a-b2cb-01d018d27ba1
 keywords:
-- WINBIO_STORAGE_SCHEMA Struktur Windows-Biometrieframework-API
-- PWINBIO_STORAGE_SCHEMA Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_STORAGE_SCHEMA Struktur Windows Biometrieframework-API
+- PWINBIO_STORAGE_SCHEMA Strukturzeiger für Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 28db23d55a7b3e43caaae5a88ca4bbf32fdf1178
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2bc0bd0d61814b4133c3789b0c8119edcaf79945452cc26aa313504c055ac2f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346762"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909257"
 ---
-# <a name="winbio_storage_schema-structure"></a>Struktur des winbio- \_ Speicher \_ Schemas
+# <a name="winbio_storage_schema-structure"></a>WINBIO \_ STORAGE \_ SCHEMA-Struktur
 
-In der Struktur des **winbio- \_ Speicher \_ Schemas** werden die Funktionen eines biometrischen Speicher Adapters beschrieben. Diese Struktur wird von der Funktion [**winbioenumdatenbanken**](/windows/desktop/api/Winbio/nf-winbio-winbioenumdatabases) verwendet.
+Die **WINBIO \_ STORAGE \_ SCHEMA-Struktur** beschreibt die Funktionen eines biometrischen Speicheradapters. Diese Struktur wird von der [**WinBioEnumDatabases-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbioenumdatabases) verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ typedef struct _WINBIO_STORAGE_SCHEMA {
 
 <dl> <dt>
 
-**Biometricfactor**
+**BiometricFactor**
 </dt> <dd>
 
-Der Typ der in der Datenbank gespeicherten biometrischen Messung.
+Der Typ der biometrischen Messung, die in der Datenbank gespeichert ist.
 
 </dd> <dt>
 
-**DatabaseID**
+**Databaseid**
 </dt> <dd>
 
 Eine GUID, die die Datenbank identifiziert.
 
 </dd> <dt>
 
-**DataFormat**
+**Dataformat**
 </dt> <dd>
 
 Eine GUID, die das Format der Vorlagen in der Datenbank identifiziert.
@@ -70,20 +70,20 @@ Eine GUID, die das Format der Vorlagen in der Datenbank identifiziert.
 **Attribute**
 </dt> <dd>
 
-Informationen zu den Merkmalen der Datenbank. Hierbei kann es sich um ein bitweises **or** der folgenden Konstanten handeln.
+Informationen zu den Merkmalen der Datenbank. Dies kann ein **bitweises OR** der folgenden Konstanten sein.
 
 
 
 | Wert                                                                                                                                                                                                                                                                              | Bedeutung                                                             |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| <span id="WINBIO_DATABASE_FLAG_MASK"></span><span id="winbio_database_flag_mask"></span><dl> <dt>**Winbio \_ \_Datenbankflag- \_ Maske**</dt> <dt>0xFFFF0000</dt> </dl>                | Stellt eine Maske für die Flagbits dar.<br/>                     |
-| <span id="WINBIO_DATABASE_FLAG_REMOTE"></span><span id="winbio_database_flag_remote"></span><dl> <dt>**Winbio \_ \_Datenbankflag \_ Remote**</dt> <dt>0x00020000</dt> </dl>          | Die Datenbank befindet sich auf einem Remote Computer.<br/>               |
-| <span id="WINBIO_DATABASE_FLAG_REMOVABLE"></span><span id="winbio_database_flag_removable"></span><dl> <dt>**Winbio \_ \_Datenbankflag \_**</dt> -Wechsel <dt>0x00010000 bis</dt> </dl> | Die Datenbank befindet sich auf einem Wechsel Datenträger.<br/>               |
-| <span id="WINBIO_DATABASE_TYPE_DBMS"></span><span id="winbio_database_type_dbms"></span><dl> <dt>**Winbio \_ Database \_ Type \_ DBMS**</dt> <dt>0x00000002</dt> </dl>                | Die Datenbank wird von einem Datenbankverwaltungssystem verwaltet.<br/> |
-| <span id="WINBIO_DATABASE_TYPE_FILE"></span><span id="winbio_database_type_file"></span><dl> <dt>**Winbio \_ \_ \_ Dateityp Datei**</dt> <dt>0x00000001</dt> </dl>                | Die Datenbank ist in einer Datei enthalten.<br/>                     |
-| <span id="WINBIO_DATABASE_TYPE_MASK"></span><span id="winbio_database_type_mask"></span><dl> <dt>**Winbio \_ Daten \_ Bank \_ typmaske**</dt> <dt>0X0000FFFF</dt> </dl>                | Stellt eine Maske für die typbits dar.<br/>                     |
-| <span id="WINBIO_DATABASE_TYPE_ONCHIP"></span><span id="winbio_database_type_onchip"></span><dl> <dt>**Winbio \_ Database \_ Type \_ Onchip**</dt> <dt>0x00000003</dt> </dl>          | Die Datenbank befindet sich auf dem biometrischen Sensor.<br/>            |
-| <span id="WINBIO_DATABASE_TYPE_SMARTCARD"></span><span id="winbio_database_type_smartcard"></span><dl> <dt>**Winbio \_ Database \_ Type \_ Smartcard**</dt> <dt>0x00000004</dt> </dl> | Die Datenbank befindet sich auf einer Smartcard.<br/>                    |
+| <span id="WINBIO_DATABASE_FLAG_MASK"></span><span id="winbio_database_flag_mask"></span><dl> <dt>**WINBIO \_ DATABASE \_ FLAG \_ MASK**</dt> <dt>0xFFFF0000</dt> </dl>                | Stellt eine Maske für die Flagbits dar.<br/>                     |
+| <span id="WINBIO_DATABASE_FLAG_REMOTE"></span><span id="winbio_database_flag_remote"></span><dl> <dt>**WINBIO \_ DATABASE \_ FLAG \_ REMOTE**</dt> <dt>0x00020000</dt> </dl>          | Die Datenbank befindet sich auf einem Remotecomputer.<br/>               |
+| <span id="WINBIO_DATABASE_FLAG_REMOVABLE"></span><span id="winbio_database_flag_removable"></span><dl> <dt>**WINBIO \_ \_WECHSELDATENTRÄGER \_ MIT DATENBANKFLAG**</dt> <dt>0X00010000</dt> </dl> | Die Datenbank befindet sich auf einem Wechseldatenträger.<br/>               |
+| <span id="WINBIO_DATABASE_TYPE_DBMS"></span><span id="winbio_database_type_dbms"></span><dl> <dt>**WINBIO \_ DATABASE \_ TYPE \_ DBMS**</dt> <dt>0x00000002</dt> </dl>                | Die Datenbank wird von einem Datenbank-Managementsystem verwaltet.<br/> |
+| <span id="WINBIO_DATABASE_TYPE_FILE"></span><span id="winbio_database_type_file"></span><dl> <dt>**WINBIO \_ DATABASE \_ TYPE \_ FILE**</dt> <dt>0x00000001</dt> </dl>                | Die Datenbank ist in einer Datei enthalten.<br/>                     |
+| <span id="WINBIO_DATABASE_TYPE_MASK"></span><span id="winbio_database_type_mask"></span><dl> <dt>**WINBIO \_ DATABASE \_ TYPE \_ MASK**</dt> <dt>0x0000FFFF</dt> </dl>                | Stellt eine Maske für die Typbits dar.<br/>                     |
+| <span id="WINBIO_DATABASE_TYPE_ONCHIP"></span><span id="winbio_database_type_onchip"></span><dl> <dt>**WINBIO \_ DATENBANKTYP \_ \_ ONCHIP-0X00000003**</dt> <dt></dt> </dl>          | Die Datenbank befindet sich auf dem biometrischen Sensor.<br/>            |
+| <span id="WINBIO_DATABASE_TYPE_SMARTCARD"></span><span id="winbio_database_type_smartcard"></span><dl> <dt>**WINBIO \_ \_ \_ SMARTCARD-0X00000004**</dt> <dt></dt> </dl> | Die Datenbank befindet sich auf einer Smartcard.<br/>                    |
 
 
 
@@ -91,17 +91,17 @@ Informationen zu den Merkmalen der Datenbank. Hierbei kann es sich um ein bitwei
 
 </dd> <dt>
 
-**FilePath**
+**Filepath**
 </dt> <dd>
 
-Der Pfad und der Dateiname der Datenbank, wenn Sie sich auf dem Computer Datenträger befindet.
+Der Pfad und dateiname der Datenbank, wenn sie sich auf dem Computerdatenträger befindet.
 
 </dd> <dt>
 
-**ConnectionString**
+**Connectionstring**
 </dt> <dd>
 
-Ein Zeichen folgen Wert, der an einen Datenbankserver gesendet werden kann, um die Datenbank zu identifizieren.
+Ein Zeichenfolgenwert, der zur Identifizierung der Datenbank an einen Datenbankserver gesendet werden kann.
 
 </dd> </dl>
 
@@ -111,20 +111,20 @@ Ein Zeichen folgen Wert, der an einen Datenbankserver gesendet werden kann, um d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> <dt>
 
-[**Winbioenumdatenbanken**](/windows/desktop/api/Winbio/nf-winbio-winbioenumdatabases)
+[**WinBioEnumDatabases**](/windows/desktop/api/Winbio/nf-winbio-winbioenumdatabases)
 </dt> </dl>
 
  

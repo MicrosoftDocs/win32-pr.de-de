@@ -1,21 +1,21 @@
 ---
-description: Paket Autoren können interne Windows Installer Meldungen durch die Erstellung einer ausführbaren Anwendung überwachen, die sowohl einen Daten Satz basierten Rückruf Handler enthält, um die Nachrichten und Funktionen zum Initiieren einer Installation zu empfangen.
+description: Paketautoren können interne Windows Installer-Nachrichten überwachen, indem sie eine ausführbare Anwendung erstellen, die sowohl einen datensatzbasierten Rückrufhandler zum Empfangen der Meldungen als auch Funktionen zum Initiieren einer Installation enthält.
 ms.assetid: 5d9e51dd-7918-491f-aea9-01a6e0317c57
-title: Überwachen einer Installation mithilfe von "msiabtexternaluirecord"
+title: Überwachen einer Installation mit msiSetExternalUIRecord
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ce3fd0caf3d24eed49ff8a373b6f4d38037f840f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fc74001a52d7eb1ef2cfbc3a052eaad1a2d72e127571f6f51d5afac992343a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118945085"
 ---
-# <a name="monitoring-an-installation-using-msisetexternaluirecord"></a>Überwachen einer Installation mithilfe von "msiabtexternaluirecord"
+# <a name="monitoring-an-installation-using-msisetexternaluirecord"></a>Überwachen einer Installation mit msiSetExternalUIRecord
 
-Paket Autoren können interne Windows Installer Meldungen durch die Erstellung einer ausführbaren Anwendung überwachen, die sowohl einen Daten Satz basierten Rückruf Handler enthält, um die Nachrichten und Funktionen zum Initiieren einer Installation zu empfangen.
+Paketautoren können interne Windows Installer-Nachrichten überwachen, indem sie eine ausführbare Anwendung erstellen, die sowohl einen datensatzbasierten Rückrufhandler zum Empfangen der Meldungen als auch Funktionen zum Initiieren einer Installation enthält.
 
-Der Daten Satz basierte Handler im folgenden Beispiel entspricht dem Typ [**installui \_ Handler \_ Datensatz**](/windows/win32/api/msi/nc-msi-installui_handler_record) , und ein Zeiger auf diesen Rückruf Handler wird an die [**msiabtexternaluirecord**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) -Funktion übermittelt.
+Der datensatzbasierte Handler im folgenden Beispiel entspricht dem [**INSTALLUI \_ HANDLER \_ RECORD-Prototyp,**](/windows/win32/api/msi/nc-msi-installui_handler_record) und ein Zeiger auf diesen Rückrufhandler wird an die [**MsiSetExternalUIRecord-Funktion**](/windows/desktop/api/Msi/nf-msi-msisetexternaluirecord) übergeben.
 
 
 ```C++

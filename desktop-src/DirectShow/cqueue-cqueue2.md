@@ -1,7 +1,7 @@
 ---
-description: Diese cqueue. cqueue-Konstruktormethode (wxutil. h) weist keine Parameter auf.
+description: Diese CQueue.CQueue-Konstruktormethode (Wxutil.h) verfügt über keine Parameter.
 ms.assetid: 5ad31d31-7c1c-4877-bc39-218859e4137c
-title: Cqueue. cqueue-Konstruktor (wxutil. h)-keine Parameter
+title: CQueue.CQueue-Konstruktor (Wxutil.h) – Keine Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: afdb22dc265989e923ab285a190753fd63c6842d
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: e0364b952897f26eec6d2164ba1300e4abf9e67bc8530ba78c03da8d066aac49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106365453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953999"
 ---
-# <a name="cqueuecqueue-constructor-wxutilh---no-parameters"></a>Cqueue. cqueue-Konstruktor (wxutil. h)-keine Parameter
+# <a name="cqueuecqueue-constructor-wxutilh---no-parameters"></a>CQueue.CQueue-Konstruktor (Wxutil.h) – Keine Parameter
 
 Konstruktormethode.
 
@@ -38,11 +38,11 @@ CQueue();
 
 ## <a name="parameters"></a>Parameter
 
-Dieser Konstruktor weist keine Parameter auf.
+Dieser Konstruktor verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Größe der Warteschlange ist auf Standard \_ QUEUESIZE festgelegt.
+Die Größe der Warteschlange ist auf DEFAULT \_ QUEUESIZE festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,14 +50,14 @@ Die Größe der Warteschlange ist auf Standard \_ QUEUESIZE festgelegt.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Wxutil. h (Include Streams. h)                                                                                   |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Wxutil.h (include Streams.h)                                                                                   |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cqueue-Klasse**](cqueue.md)
+[**CQueue-Klasse**](cqueue.md)
 </dt> </dl>
 
  

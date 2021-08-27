@@ -1,7 +1,7 @@
 ---
-description: Die getpincount-Methode ruft die Anzahl der Pins für den Filter ab.
+description: Die GetPinCount-Methode ruft die Anzahl der Pins im Filter ab.
 ms.assetid: 29039ada-fccd-4890-b36b-3dd5c0bbdc3e
-title: Ctransformfilter. getpincount-Methode (Transfrm. h)
+title: CTransformFilter.GetPinCount-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ba1d2046bf7be31a9c0d3f3d43b13aeeffd1f76b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ac9269149d7f2bbc95e811515f70aa279a4aafd8cf34b2d5077ed69019b86c2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953599"
 ---
-# <a name="ctransformfiltergetpincount-method"></a>Ctransformfilter. getpincount-Methode
+# <a name="ctransformfiltergetpincount-method"></a>CTransformFilter.GetPinCount-Methode
 
-Die- `GetPinCount` Methode ruft die Anzahl der Pins für den Filter ab.
+Die `GetPinCount` -Methode ruft die Anzahl der Pins im Filter ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Gibt 2 zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**cbasefilter:: getpincount**](cbasefilter-getpincount.md) -Methode. Die **ctransformfilter** -Klasse unterstützt genau eine Eingabe-PIN und eine Ausgabe-PIN.
+Diese Methode überschreibt die [**CBaseFilter::GetPinCount-Methode.**](cbasefilter-getpincount.md) Die **CTransformFilter-Klasse** unterstützt genau einen Eingabe- und einen Ausgabepin.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Diese Methode überschreibt die [**cbasefilter:: getpincount**](cbasefilter-getp
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode überschreibt die [**cbasefilter:: getpincount**](cbasefilter-getp
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen universellen Puffer von Bytes, der einem IStream-Objekt (ibytebuffer) zugeordnet ist.
+description: Erstellt einen universellen Puffer von Bytes, die einem IStream-Objekt (IByteBuffer) zugeordnet sind.
 ms.assetid: 8015c7e8-2cbb-4ba8-9bd0-2f84751840f1
-title: 'Iscardtypekonv:: up-ByteBuffer-Methode (scarddat. h)'
+title: ISCardTypeConv::CreateByteBuffer-Methode (Ddat.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: ab69c8061d2e2740e652e29b2fe6407574fe7076
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e95ab8989027cb79dfd48720b08d27042c7bd8f9252d1438152dafbae017d762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922409"
 ---
-# <a name="iscardtypeconvcreatebytebuffer-method"></a>Iscardtypekonv:: deatebytebuffer-Methode
+# <a name="iscardtypeconvcreatebytebuffer-method"></a>ISCardTypeConv::CreateByteBuffer-Methode
 
-\[Die Methode " **kreatebytebuffer** " ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **CreateByteBuffer-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Methode** "-Methode" erstellt einen universellen Puffer von Bytes, die einem **IStream** -Objekt ([**ibytebuffer**](ibytebuffer.md)) zugeordnet sind.
+Die **CreateByteBuffer-Methode** erstellt einen universellen Puffer von Bytes, die einem **IStream** -Objekt ([**IByteBuffer**](ibytebuffer.md)) zugeordnet sind.
 
-Der erstellte Byte Puffer ist ein Datenstrom, der über einem Speicherblock zugeordnet ist. Verwenden Sie die von der **IStream** -Schnittstelle bereitgestellten Methoden, um auf den Puffer zuzugreifen oder ihn zu verwalten. Ein eindeutiges Feature zu dieser Array Implementierung besteht darin, dass beim aufruft der **IStream:: Release** -Methode der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
+Der erstellte Bytepuffer ist ein Stream, der einem Speicherblock zugeordnet ist. Verwenden Sie die von der **IStream-Schnittstelle** bereitgestellten Methoden, um auf den Puffer zuzugreifen oder diesen zu verwalten. Ein einzigartiges Feature dieser Arrayimplementierungen ist, dass beim Aufrufen der **IStream::Release-Methode** der zugrunde liegende Arbeitsspeicher für Sie freigegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ HRESULT CreateByteBuffer(
 
 <dl> <dt>
 
-*dwallocsize* \[ in\]
+*dwAllocSize* \[ In\]
 </dt> <dd>
 
-Größe des Arbeitsspeichers in Bytes, der für das Array zugeordnet werden soll.
+Größe des Arbeitsspeichers in Bytes, der dem Array zugeordnet werden soll.
 
 </dd> <dt>
 
-*ppbybuff* \[ vorgenommen\]
+*ppbyBuff* \[ out\]
 </dt> <dd>
 
 Zeiger auf das IStream-Objekt, das zurückgegeben werden soll.
@@ -66,21 +66,21 @@ Folgende Rückgabewerte sind möglich:
 
 | Rückgabecode                                                                                   | Beschreibung                                                                                      |
 |-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ OK**</dt> </dl>          | Der Arbeitsspeicher wurde erfolgreich zugewiesen.<br/>                                                        |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Bei einem oder mehreren Parametern, die an die Funktion weitergegeben wurden, ist ein Fehler aufgetreten.<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend freier Arbeitsspeicher, um die Anforderung zu erfüllen.<br/>                                            |
+| <dl> <dt>**S \_ OK**</dt> </dl>          | Arbeitsspeicher wurde erfolgreich zugeordnet.<br/>                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Es liegt ein Problem mit einem oder mehreren parametern vor, die an die Funktion übergeben werden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend freier Arbeitsspeicher zum Erfüllen der Anforderung.<br/>                                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der zugewiesene Arbeitsspeicher ist beweglicher. Verwenden Sie die **IStream:: Release** -Methode, um den Arbeitsspeicher freizugeben.
+Der zugeordnete Arbeitsspeicher ist verschiebbar. Verwenden Sie die **IStream::Release-Methode,** um den Arbeitsspeicher freizugeben.
 
-Um ein typisches C/C++-Bytearray zu erstellen, rufen Sie " [**kreatebytearray**](iscardtypeconv-createbytearray.md)" auf.
+Um ein typisches C/C++-Bytearray zu erstellen, rufen [**Sie CreateByteArray**](iscardtypeconv-createbytearray.md)auf.
 
-Zum Erstellen eines Automation SafeArray mit nicht signierten Zeichen (Bytes) rufen Sie " [**kreatesafearray**](iscardtypeconv-createsafearray.md)" auf.
+Rufen [**Sie CreateSafeArray**](iscardtypeconv-createsafearray.md)auf, um ein Automation SAFEARRAY-Zeichen ohne Vorzeichen (Bytes) zu erstellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,31 +88,31 @@ Zum Erstellen eines Automation SafeArray mit nicht signierten Zeichen (Bytes) ru
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scarddat. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scarddat. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Ddat.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Ddat.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iscardtypec ist als 53b6aa63-3F 56-11D0-916b-00aa00c18068 definiert.<br/>       |
+| IID<br/>                      | IID \_ ISCardTypeConv ist als 53B6AA63-3F56-11D0-916B-00AA00C18068 definiert.<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardtypeconfiguration**](iscardtypeconv.md)
+[**ISCardTypeConv**](iscardtypeconv.md)
 </dt> <dt>
 
 [Smartcard-Rückgabewerte](authentication-return-values.md)
 </dt> <dt>
 
-[**"Kreatebytearray"**](iscardtypeconv-createbytearray.md)
+[**CreateByteArray**](iscardtypeconv-createbytearray.md)
 </dt> <dt>
 
-[**"Anatesafearray"**](iscardtypeconv-createsafearray.md)
+[**CreateSafeArray**](iscardtypeconv-createsafearray.md)
 </dt> </dl>
 
  

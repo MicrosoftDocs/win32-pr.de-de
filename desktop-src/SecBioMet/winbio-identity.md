@@ -1,9 +1,9 @@
 ---
-title: WINBIO_IDENTITY Struktur (winbio \_ types. h)
+title: WINBIO_IDENTITY -Struktur (Winbio \_ types.h)
 description: Enthält einen identifizierenden Wert, der einer biometrischen Vorlage zugeordnet ist.
 ms.assetid: 58a5f4ba-2f58-466c-90fd-9480c3c095db
 keywords:
-- WINBIO_IDENTITY Struktur Windows-Biometrieframework-API
+- WINBIO_IDENTITY Struktur Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8092754b9107029e0be5800bbd5bc98bc3efb91c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c677a341386bcc937061798f406397028c23c10b65989480da975a9fdf81a3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910118"
 ---
-# <a name="winbio_identity-structure"></a>Winbio- \_ Identitäts Struktur
+# <a name="winbio_identity-structure"></a>WINBIO \_ IDENTITY-Struktur
 
-Die **winbio- \_ Identitäts** Struktur enthält einen identifizierenden Wert, der einer biometrischen Vorlage zugeordnet ist.
+Die **WINBIO \_ IDENTITY-Struktur** enthält einen identifizierenden Wert, der einer biometrischen Vorlage zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,19 +49,19 @@ typedef struct _WINBIO_IDENTITY {
 
 <dl> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Gibt das Format der Identitätsinformationen an, die in dieser Struktur enthalten sind. Mögliche Werte:
+Gibt das Format der Identitätsinformationen an, die in dieser -Struktur enthalten sind. Mögliche Werte:
 
 
 
 | Wert                                                                                                                                                                                         | Bedeutung                                                                         |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| <span id="WINBIO_ID_TYPE_NULL"></span><span id="winbio_id_type_null"></span><dl> <dt>**winbio- \_ ID- \_ Typ \_ null**</dt> </dl>             | Der Vorlage ist keine ID zugeordnet.<br/>                                   |
-| <span id="WINBIO_ID_TYPE_WILDCARD"></span><span id="winbio_id_type_wildcard"></span><dl> <dt>**winbio- \_ ID- \_ Typ Platzhalter \_**</dt> </dl> | Die Struktur entspricht allen Vorlagen Identitäten.<br/>                       |
-| <span id="WINBIO_ID_TYPE_GUID"></span><span id="winbio_id_type_guid"></span><dl> <dt>**winbio- \_ ID- \_ \_ GUID-Typ**</dt> </dl>             | Die Struktur enthält eine GUID, die der Vorlage zugeordnet ist.<br/>          |
-| <span id="WINBIO_ID_TYPE_SID"></span><span id="winbio_id_type_sid"></span><dl> <dt>**winbio- \_ ID- \_ Typ- \_ sid**</dt> </dl>                | Die Struktur enthält die der Vorlage zugeordnete Konto-SID.<br/> |
+| <span id="WINBIO_ID_TYPE_NULL"></span><span id="winbio_id_type_null"></span><dl> <dt>**\_WINBIO-ID-TYP \_ \_ NULL**</dt> </dl>             | Der Vorlage ist keine ID zugeordnet.<br/>                                   |
+| <span id="WINBIO_ID_TYPE_WILDCARD"></span><span id="winbio_id_type_wildcard"></span><dl> <dt>**\_ \_ WINBIO-ID-TYP: \_ PLATZHALTER**</dt> </dl> | Die -Struktur stimmt mit allen Vorlagenidentitäten ab.<br/>                       |
+| <span id="WINBIO_ID_TYPE_GUID"></span><span id="winbio_id_type_guid"></span><dl> <dt>**GUID \_ DES WINBIO-ID-TYPS \_ \_**</dt> </dl>             | Die -Struktur enthält eine GUID, die der Vorlage zugeordnet ist.<br/>          |
+| <span id="WINBIO_ID_TYPE_SID"></span><span id="winbio_id_type_sid"></span><dl> <dt>**\_ \_ WINBIO-ID-TYP-SID \_**</dt> </dl>                | Die -Struktur enthält die Konto-SID, die der Vorlage zugeordnet ist.<br/> |
 
 
 
@@ -79,28 +79,28 @@ Eine Union, die einen der folgenden Werte enthalten kann:
 **NULL**
 </dt> <dd>
 
-Enthält 1, wenn der **Typmember** ein **winbio- \_ ID- \_ Typ \_ null** ist.
+Enthält 1, wenn **der Type-Member** **WINBIO \_ ID TYPE \_ NULL \_ ist.**
 
 </dd> <dt>
 
 **Platzhalter**
 </dt> <dd>
 
-Enthält 1, wenn der **Typmember** ein **winbio- \_ ID- \_ Typplatzhalter \_** ist.
+Enthält 1, wenn **der Type-Member** **WINBIO \_ ID TYPE \_ \_ WILDCARD ist.**
 
 </dd> <dt>
 
-**Templateguid**
+**TemplateGuid**
 </dt> <dd>
 
-Enthält einen 128-Bit-GUID-Wert, der die Vorlage identifiziert, wenn der **Typmember** eine **\_ \_ \_ GUID für den winbio-ID-Typ** ist.
+Enthält einen 128-Bit-GUID-Wert, der die Vorlage identifiziert, wenn der **Typ-Member** **WINBIO \_ ID TYPE \_ \_ GUID ist.**
 
 </dd> <dt>
 
 **AccountSid**
 </dt> <dd>
 
-Eine-Struktur, die eine Konto-sid enthält, wenn der **Typmember** den **winbio- \_ ID- \_ Typ \_ sid** hat.
+Eine -Struktur, die eine Konto-SID enthält, wenn **das Type-Member** **WINBIO \_ ID TYPE \_ SID \_ ist.**
 
 <dl> <dt>
 
@@ -118,18 +118,18 @@ Ein Array von Zeichen ohne Vorzeichen, die die SID enthalten. Die aktuelle maxim
 
 </dd> </dl> </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Struktur wird in den folgenden Funktionen verwendet:
 
--   [**Winbiodeletetemplate**](/windows/desktop/api/Winbio/nf-winbio-winbiodeletetemplate)
--   [**Winbioregistricommit**](/windows/desktop/api/Winbio/nf-winbio-winbioenrollcommit)
--   [**Winbioenumregistrierungen**](/windows/desktop/api/Winbio/nf-winbio-winbioenumenrollments)
--   [**Winbiogetkredentialstate**](/windows/desktop/api/Winbio/nf-winbio-winbiogetcredentialstate)
--   [**Winbioidentifizierung**](/windows/desktop/api/Winbio/nf-winbio-winbioidentify)
--   [**Winbioremovecredential**](/windows/desktop/api/Winbio/nf-winbio-winbioremovecredential)
--   [**Winbioverify**](/windows/desktop/api/Winbio/nf-winbio-winbioverify)
--   [**Winbioverifywithcallback**](/windows/desktop/api/Winbio/nf-winbio-winbioverifywithcallback)
+-   [**WinBioDeleteTemplate**](/windows/desktop/api/Winbio/nf-winbio-winbiodeletetemplate)
+-   [**WinBioEnrollCommit**](/windows/desktop/api/Winbio/nf-winbio-winbioenrollcommit)
+-   [**WinBioEnumEnrollments**](/windows/desktop/api/Winbio/nf-winbio-winbioenumenrollments)
+-   [**WinBioGetCredentialState**](/windows/desktop/api/Winbio/nf-winbio-winbiogetcredentialstate)
+-   [**WinBioIdentify**](/windows/desktop/api/Winbio/nf-winbio-winbioidentify)
+-   [**WinBioRemoveCredential**](/windows/desktop/api/Winbio/nf-winbio-winbioremovecredential)
+-   [**WinBioVerify**](/windows/desktop/api/Winbio/nf-winbio-winbioverify)
+-   [**WinBioVerifyWithCallback**](/windows/desktop/api/Winbio/nf-winbio-winbioverifywithcallback)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,17 +137,17 @@ Diese Struktur wird in den folgenden Funktionen verwendet:
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Strukturen](client-application-structures.md)
+[Clientanwendungsstrukturen](client-application-structures.md)
 </dt> </dl>
 
  

@@ -1,23 +1,23 @@
 ---
-description: Mithilfe der Security Support Provider-Schnittstelle (Security Support Provider Interface, SSPI) kann eine Anwendung verschiedene Sicherheitsmodelle verwenden, die auf einem Computer oder Netzwerk verfügbar sind, ohne die Schnittstelle zum Sicherheitssystem
+description: Security Support Provider Interface (SSPI) ermöglicht einer Anwendung die Verwendung verschiedener Sicherheitsmodelle, die auf einem Computer oder Netzwerk verfügbar sind, ohne die Schnittstelle zum Sicherheitssystem zu ändern.
 ms.assetid: 86ffc8c0-727d-437f-ac36-10df6563b0be
 title: SSPI-Modell
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55cf79185693f40694d1bc6de319376b037fb853
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a5d915a8937f57105e2478b41955cc5789fba25791e7f118a84dc4fa38e12fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118916817"
 ---
 # <a name="sspi-model"></a>SSPI-Modell
 
-Mithilfe der [*Security Support Provider-Schnittstelle (Security Support Provider Interface*](../secgloss/s-gly.md) , SSPI) kann eine Anwendung verschiedene Sicherheitsmodelle verwenden, die auf einem Computer oder Netzwerk verfügbar sind, ohne die Schnittstelle zum Sicherheitssystem SSPI richtet [*keine Anmelde Informationen ein, da dies*](../secgloss/c-gly.md) im Allgemeinen ein privilegierter Vorgang ist, der vom Betriebssystem behandelt wird.
+[*Security Support Provider Interface*](../secgloss/s-gly.md) (SSPI) ermöglicht einer Anwendung die Verwendung verschiedener Sicherheitsmodelle, die auf einem Computer oder Netzwerk verfügbar sind, ohne die Schnittstelle zum Sicherheitssystem zu ändern. SSPI legt keine Anmeldeinformationen [*fest,*](../secgloss/c-gly.md) da dies im Allgemeinen ein privilegierter Vorgang ist, der vom Betriebssystem verarbeitet wird.
 
-Ein [*Security Support Provider*](../secgloss/s-gly.md) (SSP) ist in einer [*Dynamic Link Library*](../secgloss/d-gly.md) (dll) enthalten, die SSPI implementiert, indem ein oder mehrere [*Sicherheitspakete*](../secgloss/s-gly.md) für Anwendungen verfügbar gemacht werden. Jedes Sicherheitspaket stellt Zuordnungen zwischen den SSPI-Funktionsaufrufen einer Anwendung und den Funktionen eines tatsächlichen Sicherheitsmodells bereit. Sicherheitspakete unterstützen [*Sicherheitsprotokolle*](../secgloss/s-gly.md) wie die [*Kerberos*](../secgloss/k-gly.md) -Authentifizierung und den LAN-Manager.
+Ein [*Sicherheitssupportanbieter*](../secgloss/s-gly.md) (Security Support Provider, SSP) ist in einer Dll [](../secgloss/s-gly.md) [*(Dynamic Link Library)*](../secgloss/d-gly.md) enthalten, die SSPI implementiert, indem mindestens ein Sicherheitspaket für Anwendungen verfügbar ist. Jedes Sicherheitspaket stellt Zuordnungen zwischen den SSPI-Funktionsaufrufen einer Anwendung und den Funktionen eines tatsächlichen Sicherheitsmodells zur Verfügung. Sicherheitspakete unterstützen [*Sicherheitsprotokolle wie*](../secgloss/s-gly.md) [*Kerberos-Authentifizierung*](../secgloss/k-gly.md) und LAN-Manager.
 
-Die SSPI-Schnittstelle ist im Kernel Modus und im Benutzermodus verfügbar. Um die SSPI-Funktionalität im Kernel Modus zu verwenden, müssen Sie das Windows installierbare Datei System-DDK installieren. Das Aufruf Modell bleibt unverändert, aber Überlegungen zum Kernel Modus werden auf Funktions Verweis Seiten vermerkt. Weitere Informationen finden Sie unter [SSPI-Funktionen](authentication-functions.md).
+Die SSPI-Schnittstelle ist im Kernelmodus sowie im Benutzermodus verfügbar. Um die SSPI-Funktionalität im Kernelmodus zu verwenden, müssen Sie das Windows Installable File System DDK installieren. Das aufrufende Modell bleibt unverändert, aber Überlegungen zum Kernelmodus sind auf Funktionsverweisseiten angegeben. Weitere Informationen finden Sie unter [SSPI Functions ( SSPI-Funktionen](authentication-functions.md)).
 
  
 

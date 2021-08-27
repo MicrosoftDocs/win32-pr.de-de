@@ -1,7 +1,7 @@
 ---
-description: Fügt einen HTTP-Anforderungs Header hinzu, ändert oder löscht ihn.
+description: Fügt einen HTTP-Anforderungsheader hinzu, ändert oder löscht ihn.
 ms.assetid: 8cb4891d-0bdb-4dea-8ebe-d6ed26a50e41
-title: 'Iwinhttprequest:: ltrequestheader-Methode'
+title: IWinHttpRequest::SetRequestHeader-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Winhttp.dll
-ms.openlocfilehash: 9bc2ae6df420f38d11fb2f0f19d5fcbd0bcc0909
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f6db5ef09a0eca56fec8101d710c62eb5165742d47e3961593f38d4a59851ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052028"
 ---
-# <a name="iwinhttprequestsetrequestheader-method"></a>Iwinhttprequest:: ltrequestheader-Methode
+# <a name="iwinhttprequestsetrequestheader-method"></a>IWinHttpRequest::SetRequestHeader-Methode
 
-Mit der Methode " **ltrequestheader** " wird ein HTTP-Anforderungs Header hinzugefügt, geändert oder gelöscht.
+Die **SetRequestHeader-Methode** fügt einen HTTP-Anforderungsheader hinzu, ändert oder löscht ihn.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,40 +41,40 @@ HRESULT SetRequestHeader(
 
 <dl> <dt>
 
-*Header* \[ in\]
+*Header* \[ In\]
 </dt> <dd>
 
-Gibt den Namen des festzulegenden Headers an, z. b. "Tiefe". Dieser Parameter darf keinen Doppelpunkt enthalten und muss den eigentlichen Text des HTTP-Headers enthalten.
+Gibt den Namen des headers an, der festgelegt werden soll, z. B. "depth". Dieser Parameter sollte keinen Doppelpunkt enthalten und muss der tatsächliche Text des HTTP-Headers sein.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Gibt den Wert des Headers an, z. b. "unendlich".
+Gibt den Wert des Headers an, z. B. "infinity".
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist bei Erfolg **S \_ OK** oder andernfalls ein Fehlerwert.
+Der Rückgabewert ist **S \_ OK bei** Erfolg oder andernfalls ein Fehlerwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Header werden über Umleitungen übertragen. Dies kann zu einem Sicherheitsrisiko führen. Um zu vermeiden, dass Header bei einer Umleitung übertragen werden, korrigieren Sie mithilfe des [*WinHTTP- \_ Status \_ Rückruf*](/windows/win32/api/winhttp/nc-winhttp-winhttp_status_callback) Rückrufs die spezifischen Header, wenn eine Umleitung erfolgt.
+Header werden über Umleitungen übertragen. Dies kann zu einem Sicherheitsrisiko werden. Um zu vermeiden, dass Header übertragen werden, wenn eine Umleitung auftritt, verwenden Sie den [*WINHTTP \_ STATUS \_ CALLBACK-Rückruf,*](/windows/win32/api/winhttp/nc-winhttp-winhttp_status_callback) um die spezifischen Header zu korrigieren, wenn eine Umleitung auftritt.
 
-Mit der **setrequestheader** -Methode kann die aufrufende Anwendung einen HTTP-Anforderungs Header vor dem Senden der Anforderung hinzufügen oder löschen. Der Header Name wird in der *Kopfzeile* angegeben, und das Header Token oder der Wert wird als *Wert* angegeben. Um einen Header hinzuzufügen, geben Sie einen Header Namen und einen Wert an. Wenn eine andere Kopfzeile mit diesem Namen bereits vorhanden ist, wird Sie ersetzt. Zum Löschen eines Headers legen Sie den *Header* auf den Namen des zu löschenden Headers fest, und legen Sie den *Wert* auf **null** fest.
+Mit **der SetRequestHeader-Methode** kann die aufrufende Anwendung vor dem Senden der Anforderung einen HTTP-Anforderungsheader hinzufügen oder löschen. Der Headername wird in *Header angegeben,* und das Headertoken oder der Wert wird in *Wert angegeben.* Um einen Header hinzuzufügen, geben Sie einen Headernamen und -wert an. Wenn bereits ein anderer Header mit diesem Namen vorhanden ist, wird er ersetzt. Um einen Header zu löschen, legen *Sie Header* auf den Namen des zu löschenden Headers und *Value auf* **NULL fest.**
 
-Der Name und der Wert der Anforderungs Header, die mit dieser Methode hinzugefügt werden, werden überprüft. Header müssen wohl geformt sein. Weitere Informationen zu gültigen HTTP-Headern finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt). Wenn ein ungültiger Header verwendet wird, tritt ein Fehler auf, und der Header wird nicht hinzugefügt.
+Der Name und Wert von Anforderungsheadern, die mit dieser Methode hinzugefügt wurden, werden überprüft. Header müssen wohlgeformt sein. Weitere Informationen zu gültigen HTTP-Headern finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt). Wenn ein ungültiger Header verwendet wird, tritt ein Fehler auf, und der Header wird nicht hinzugefügt.
 
 > [!Note]  
-> Informationen zu Windows XP und Windows 2000 finden Sie im Abschnitt [Lauf Zeitanforderungen](winhttp-start-page.md) auf der WinHTTP-Start Seite.
+> Informationen Windows XP und Windows 2000 finden [](winhttp-start-page.md) Sie im Abschnitt Laufzeitanforderungen der WinHTTP-Startseite.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, einen Anforderungs Header festlegen, eine HTTP-Anforderung senden und den Antworttext lesen. Dieses Beispiel muss von einer Eingabeaufforderung aus ausgeführt werden.
+Das folgende Beispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, einen Anforderungsheader festlegen, eine HTTP-Anforderung senden und den Antworttext lesen. Dieses Beispiel muss über eine Eingabeaufforderung ausgeführt werden.
 
 
 ```C++
@@ -171,7 +171,7 @@ int main()
 
 
 
-Im folgenden Skript Beispiel wird gezeigt, wie eine HTTP-Verbindung geöffnet, ein Anforderungs Header festgelegt und eine HTTP-Anforderung gesendet wird.
+Das folgende Skriptbeispiel zeigt, wie Sie eine HTTP-Verbindung öffnen, einen Anforderungsheader festlegen und eine HTTP-Anforderung senden.
 
 
 ```JScript
@@ -196,11 +196,11 @@ WinHttpReq.Send();
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional mit SP3 \[ Desktop-Apps\]<br/>            |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000-Server mit \[ nur SP3-Desktop-Apps\]<br/>         |
-| Verteilbare Komponente<br/>          | WinHTTP 5,0 und Internet Explorer 5,01 oder höher unter Windows XP und Windows 2000.<br/> |
-| IDL<br/>                      | <dl> <dt>HttpRequest. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WinHTTP. lib</dt> </dl>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP, Windows 2000 Professional nur mit \[ SP3-Desktop-Apps\]<br/>            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003, Windows 2000 Server nur mit \[ SP3-Desktop-Apps\]<br/>         |
+| Verteilbare Komponente<br/>          | WinHTTP 5.0 und Internet Explorer 5.01 oder höher unter Windows XP und Windows 2000.<br/> |
+| Idl<br/>                      | <dl> <dt>HttpRequest.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winhttp.lib</dt> </dl>     |
 | DLL<br/>                      | <dl> <dt>Winhttp.dll</dt> </dl>     |
 
 
@@ -209,7 +209,7 @@ WinHttpReq.Send();
 
 <dl> <dt>
 
-[**Iwinhttprequest**](iwinhttprequest-interface.md)
+[**IWinHttpRequest**](iwinhttprequest-interface.md)
 </dt> <dt>
 
 [**WinHttpRequest**](winhttprequest.md)

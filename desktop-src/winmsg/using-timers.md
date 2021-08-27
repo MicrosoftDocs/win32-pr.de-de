@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema wird gezeigt, wie Timer erstellt und zerstört werden und wie ein Timer verwendet wird, um Maus Eingaben in angegebenen Intervallen abzufangen.
+description: In diesem Thema wird gezeigt, wie Timer erstellt und zerstört werden und wie ein Timer verwendet wird, um Mauseingaben in bestimmten Intervallen abzufangen.
 ms.assetid: eee54078-759f-4fd4-9cf4-10a8bde888b7
 title: Verwenden von Timern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 440c6479aca9d5394c2ad9ade87dd77b1474f31f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7922be60012ae81ce1971afe6f2300f54689f7a6cc8d7f088df2fb126e834ab5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119028308"
 ---
 # <a name="using-timers"></a>Verwenden von Timern
 
-In diesem Thema wird gezeigt, wie Timer erstellt und zerstört werden und wie ein Timer verwendet wird, um Maus Eingaben in angegebenen Intervallen abzufangen.
+In diesem Thema wird gezeigt, wie Timer erstellt und zerstört werden und wie ein Timer verwendet wird, um Mauseingaben in bestimmten Intervallen abzufangen.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Erstellen eines Timers](#creating-a-timer)
 -   [Zerstören eines Timers](#destroying-a-timer)
--   [Verwenden von Timer-Funktionen zum Abfangen von Maus Eingaben](#using-timer-functions-to-trap-mouse-input)
+-   [Verwenden von Timerfunktionen zum Abfangen von Mauseingaben](#using-timer-functions-to-trap-mouse-input)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="creating-a-timer"></a>Erstellen eines Timers
 
-Im folgenden Beispiel wird die [**Funktion "**](/windows/win32/api/winuser/nf-winuser-settimer) -Funktion" verwendet, um zwei Timer zu erstellen. Der erste Timer wird für alle 10 Sekunden festgelegt, die zweite für alle fünf Minuten.
+Im folgenden Beispiel wird die [**SetTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-settimer) verwendet, um zwei Timer zu erstellen. Der erste Timer wird alle 10 Sekunden festgelegt, der zweite für alle fünf Minuten.
 
 
 ```
@@ -43,7 +43,7 @@ SetTimer(hwnd,             // handle to main window
 
 
 
-Um die von diesen Zeit Gebern generierten WM-Zeit Geber Meldungen zu verarbeiten, fügen Sie der Fenster Prozedur für den *HWND* -Parameter eine " **WM- \_ Timer** Case"-Anweisung hinzu. [**\_**](wm-timer.md)
+Um die von diesen Timern generierten [**WM \_ TIMER-Nachrichten**](wm-timer.md) zu verarbeiten, fügen Sie der Fensterprozedur für den *hwnd-Parameter* eine **WM \_ TIMER-Case-Anweisung** hinzu.
 
 
 ```
@@ -65,7 +65,7 @@ case WM_TIMER:
 
 
 
-Eine Anwendung kann auch einen Timer erstellen, dessen WM-Zeit Geber Nachrichten nicht von der Hauptfenster Prozedur, sondern von einer Anwendungs definierten Rückruffunktion verarbeitet werden, wie im folgenden Codebeispiel, das einen Timer erstellt und die Rückruffunktion **mytimerproc** verwendet, um die **WM \_** -Zeit Geber Meldungen des Timers zu verarbeiten. [**\_**](wm-timer.md)
+Eine Anwendung kann auch einen Timer erstellen, dessen [**WM \_ TIMER-Nachrichten**](wm-timer.md) nicht durch die Hauptfensterprozedur, sondern durch eine anwendungsdefinierte Rückruffunktion verarbeitet werden, wie im folgenden Codebeispiel, das einen Timer erstellt und die Rückruffunktion **MyTimerProc** verwendet, um die **WM \_ TIMER-Nachrichten** des Timers zu verarbeiten.
 
 
 ```
@@ -79,9 +79,9 @@ SetTimer(hwnd,                // handle to main window
 
 
 
-Die Aufruf Konvention für **mytimerproc** muss auf der [*timerproc*](/windows/win32/api/winuser/nc-winuser-timerproc) -Rückruffunktion basieren.
+Die Aufrufkonvention für **MyTimerProc** muss auf der [*TimerProc-Rückruffunktion*](/windows/win32/api/winuser/nc-winuser-timerproc) basieren.
 
-Wenn Ihre Anwendung einen Timer ohne Angabe eines Fenster Handles erstellt, muss Ihre Anwendung die Nachrichten Warteschlange auf die Zeit Geber Nachrichten der [**WM \_**](wm-timer.md) überwachen und Sie an das entsprechende Fenster verteilen.
+Wenn Ihre Anwendung einen Timer erstellt, ohne ein Fensterhandle anzugeben, muss Ihre Anwendung die Nachrichtenwarteschlange auf [**WM \_ TIMER-Nachrichten**](wm-timer.md) überwachen und an das entsprechende Fenster senden.
 
 
 ```
@@ -110,7 +110,7 @@ MSG msg;          // message structure
 
 ## <a name="destroying-a-timer"></a>Zerstören eines Timers
 
-Anwendungen sollten die [**killtimer**](/windows/win32/api/winuser/nf-winuser-killtimer) -Funktion verwenden, um Timer zu zerstören, die nicht mehr benötigt werden. Im folgenden Beispiel werden die von den konstanten IDT \_ Timer1, IDT \_ TIMER2 und IDT TIMER3 identifizierten Timer zerstört \_ .
+Anwendungen sollten die [**KillTimer-Funktion**](/windows/win32/api/winuser/nf-winuser-killtimer) verwenden, um Timer zu zerstören, die nicht mehr benötigt werden. Im folgenden Beispiel werden die durch die Konstanten IDT \_ TIMER1, IDT \_ TIMER2 und IDT TIMER3 identifizierten \_ Timer gelöscht.
 
 
 ```
@@ -123,11 +123,11 @@ KillTimer(hwnd, IDT_TIMER3);
 
 
 
-## <a name="using-timer-functions-to-trap-mouse-input"></a>Verwenden von Timer-Funktionen zum Abfangen von Maus Eingaben
+## <a name="using-timer-functions-to-trap-mouse-input"></a>Verwenden von Timerfunktionen zum Abfangen von Mauseingaben
 
-Manchmal ist es erforderlich, mehr Eingaben zu verhindern, während ein Mauszeiger auf dem Bildschirm angezeigt wird. Eine Möglichkeit, dies zu erreichen, besteht darin, eine spezielle Routine zu erstellen, die Maus Eingaben abfängt, bis ein bestimmtes Ereignis eintritt. Viele Entwickler verweisen auf diese Routine als "aufbauen eines moustraps".
+Manchmal ist es notwendig, mehr Eingaben zu verhindern, während Sie einen Mauszeiger auf dem Bildschirm haben. Eine Möglichkeit, dies zu erreichen, besteht darin, eine spezielle Routine zu erstellen, die Mauseingaben abfängt, bis ein bestimmtes Ereignis eintritt. Viele Entwickler bezeichnen diese Routine als "Erstellen einer Maustrap".
 
-Im folgenden Beispiel werden die Funktionen " [**SETTIMER**](/windows/win32/api/winuser/nf-winuser-settimer) " und " [**killtimer**](/windows/win32/api/winuser/nf-winuser-killtimer) " zum Abfangen der Maus Eingaben verwendet.  "" Ist ein Timer, der alle 10 Sekunden eine Zeit Geber Meldung vom [**WM \_**](wm-timer.md) sendet. Jedes Mal, wenn die Anwendung **eine \_ WM** -Zeit Geber Nachricht empfängt, wird die Position des Mauszeigers aufgezeichnet. Wenn der aktuelle Speicherort mit dem vorherigen Speicherort identisch ist und das Hauptfenster der Anwendung minimiert ist, verschiebt die Anwendung den Mauszeiger auf das Symbol. Wenn die Anwendung geschlossen wird, beendet **killtimer** den Timer.
+Im folgenden Beispiel werden die [**Funktionen SetTimer**](/windows/win32/api/winuser/nf-winuser-settimer) und [**KillTimer**](/windows/win32/api/winuser/nf-winuser-killtimer) verwendet, um Mauseingaben abzufangen. **SetTimer** erstellt einen Timer, der alle 10 Sekunden eine [**WM \_ TIMER-Nachricht**](wm-timer.md) sendet. Jedes Mal, wenn die Anwendung eine **WM \_ TIMER-Nachricht** empfängt, zeichnet sie die Position des Mauszeigers auf. Wenn die aktuelle Position mit der vorherigen Position identisch ist und das Hauptfenster der Anwendung minimiert ist, verschiebt die Anwendung den Mauszeiger auf das Symbol. Wenn die Anwendung geschlossen wird, beendet **KillTimer** den Timer.
 
 
 ```
@@ -217,7 +217,7 @@ LONG APIENTRY MainWndProc(
 
 
 
-Obwohl das folgende Beispiel zeigt, wie Maus Eingaben abgefangen werden, wird die WM- [**Zeit \_**](wm-timer.md) Geber Nachricht durch die Anwendungs definierte Rückruffunktion **mytimerproc** und nicht durch die Meldungs Warteschlange der Anwendung verarbeitet.
+Obwohl im folgenden Beispiel auch gezeigt wird, wie Mauseingaben abfangen werden, wird die [**WM \_ TIMER-Nachricht**](wm-timer.md) über die anwendungsdefinierte Rückruffunktion **MyTimerProc** und nicht über die Nachrichtenwarteschlange der Anwendung verarbeitet.
 
 
 ```

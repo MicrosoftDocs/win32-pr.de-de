@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice ManufacturerUrl-Methode
+title: IBasicDevice ManufacturerUrl-Methode
 description: Ruft die Hersteller-URL des Geräts ab.
 ms.assetid: E8372D15-D8B5-49E4-950A-96B4A88B0450
 keywords:
-- ManufacturerUrl-Methode Medien Streaming-API
-- ManufacturerUrl-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, ManufacturerUrl-Methode
+- ManufacturerUrl-Methode Medienstreaming-API
+- ManufacturerUrl-Methode Media Streaming-API, IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Media Streaming-API, ManufacturerUrl-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7e41ca83c98507c65ead8d1faf2922ee84b45649
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 306b4c194d7354b071d4daaf223a17f977b38b44243adaef856f9acffbf49c83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104037928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972339"
 ---
-# <a name="ibasicdevicemanufacturerurl-method"></a>Ibasicdevice:: ManufacturerUrl-Methode
+# <a name="ibasicdevicemanufacturerurl-method"></a>IBasicDevice::ManufacturerUrl-Methode
 
 Ruft die Hersteller-URL des Geräts ab.
 
@@ -41,7 +41,7 @@ HRESULT ManufacturerUrl(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Hersteller-URL des Geräts.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf die Hersteller-URL des Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -66,7 +66,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Logfiles. Add-Methode
+title: LogFiles.Add-Methode
 description: Fügt der Auflistung eine Protokolldatei hinzu.
 ms.assetid: f6b671ea-9620-49a7-8b0c-0c8e1d9819b0
 keywords:
-- Methode hinzufügen (Sysmon)
-- Add-Methode (Sysmon), Logfiles-Klasse
-- Logfiles-Klasse sysmon, Methode hinzufügen
+- Hinzufügen der SysMon-Methode
+- Hinzufügen der SysMon- und LogFiles-Methode
+- LogFiles-Klasse SysMon , Add-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f690670606cd7ee307ba945fc2daabe92953e81
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: af01c5c7a1bbe16826457d7e1f8700df01876827c522a36db41f6c3843101d6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882335"
 ---
-# <a name="logfilesadd-method"></a>Logfiles. Add-Methode
+# <a name="logfilesadd-method"></a>LogFiles.Add-Methode
 
 Fügt der Auflistung eine Protokolldatei hinzu.
 
@@ -42,18 +42,18 @@ LogFiles.Add( _
 
 <dl> <dt>
 
-*Pfadname* \[ in\]
+*pathname* \[ In\]
 </dt> <dd>
 
-Der Pfad zur Protokolldatei. Sie können den Pfad als absoluten, relativen oder UNC-Pfad angeben. Der Name der Protokolldatei Erweiterung muss ". csv", ". TSV" oder ". BLG" lauten.
+Pfad zur Protokolldatei. Sie können den Pfad als absoluten, relativen oder UNC-Pfad angeben. Die Protokolldateinamenerweiterung muss entweder .csv, TSV oder BLG sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen das-Logman.exe Tool oder das MMC-Snap-in "Perfmon. msc" verwenden, um die Protokolldateien zu generieren, die Sie dieser Sammlung hinzufügen. Bei Perfmon. msc befinden sich die Leistungs Protokoll Protokolle unter **Leistungsprotokolle und-Warnungen**. Ausführliche Informationen zur Verwendung von Logman.exe oder Perfmon. msc finden Sie, indem Sie im **Hilfe-und Support Center** nach logman suchen oder die Leistung verwenden.
+Sie müssen das Logman.exe-Tool oder das MMC-Snap-In Perfmon.msc verwenden, um die Protokolldateien zu generieren, die Sie dieser Sammlung hinzufügen. Für Perfmon.msc befinden sich die Leistungsindikatorprotokolle unter **Leistungsprotokolle und -warnungen**. Ausführliche Informationen zur Verwendung von Logman.exe oder Perfmon.msc finden Sie im **Hilfe- und Supportcenter** nach Logman bzw. Using Performance.
 
-**Vor Windows Vista:** Sie können der [**Protokolldatei Sammlung**](systemmonitor-logfiles.md) keine Protokolldateien hinzufügen, wenn der Wert von [**Systemmonitor. DataSourceType**](systemmonitor-datasourcetype.md) auf [**DataSourceTypeConstants.sysmonlogfiles**](/windows/desktop/api/ISysmon/ne-isysmon-datasourcetypeconstants)festgelegt ist. Legen Sie zunächst **Systemmonitor. DataSourceType** auf **DataSourceTypeConstants.sysmonnulldatasource** fest, fügen Sie die Protokolldateien und Leistungsindikatoren hinzu, und legen Sie **Systemmonitor. DataSourceType** auf **DataSourceTypeConstants.sysmonlogfiles** fest.
+**Vor Windows Vista:** Sie können der [**Protokolldateisammlung**](systemmonitor-logfiles.md) keine Protokolldateien hinzufügen, wenn der Wert von [**SystemMonitor.DataSourceType**](systemmonitor-datasourcetype.md) auf [**DataSourceTypeConstants.sysmonLogFiles**](/windows/desktop/api/ISysmon/ne-isysmon-datasourcetypeconstants)festgelegt ist. Legen Sie zunächst **SystemMonitor.DataSourceType** auf **DataSourceTypeConstants.sysmonNullDataSource** fest, fügen Sie Ihre Protokolldateien und Leistungsindikatoren hinzu, und legen Sie dann **SystemMonitor.DataSourceType** auf **DataSourceTypeConstants.sysmonLogFiles** fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Sie müssen das-Logman.exe Tool oder das MMC-Snap-in "Perfmon. msc" verwenden, u
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
@@ -74,7 +74,7 @@ Sie müssen das-Logman.exe Tool oder das MMC-Snap-in "Perfmon. msc" verwenden, u
 [LogFiles](logfiles.md)
 </dt> <dt>
 
-[**Logfileitem**](logfileitem.md)
+[**LogFileItem**](logfileitem.md)
 </dt> <dt>
 
 [**LogFiles**](systemmonitor-logfiles.md)

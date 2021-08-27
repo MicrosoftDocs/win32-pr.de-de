@@ -1,94 +1,94 @@
 ---
-description: Erfahren Sie, wie Sie Speicher Verluste in Windows-Anwendungen für Windows 7-und Windows Server 2008 R2-Plattformen vermeiden.
+description: Erfahren Sie, wie Sie Speicherverlusten in Windows-Anwendungen für Windows 7- und Windows Server 2008 R2-Plattformen verhindern.
 ms.assetid: c5dedcab-3e6f-433f-95de-d741321c683e
-title: Verhindern von Speicher Verlusten in Windows-Anwendungen
+title: Verhindern von Speicherverlusten in Windows Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e973da19d075ac94824df340d1741fd9cefb3486
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: ef336c52ff4869ae9947b898e8a42c480be58054315de0180ec6a18f8c917f51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104567224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118994795"
 ---
-# <a name="preventing-memory-leaks-in-windows-applications"></a>Verhindern von Speicher Verlusten in Windows-Anwendungen
+# <a name="preventing-memory-leaks-in-windows-applications"></a>Verhindern von Speicherverlusten in Windows Anwendungen
 
 ## <a name="affected-platforms"></a>Betroffene Plattformen
 
-**Clients** -Windows 7  
-**Server** -Windows Server 2008 R2  
+**Clients** – Windows 7  
+**Server** – Windows Server 2008 R2  
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Speicher Verluste sind eine Klasse von Fehlern, bei denen die Anwendung keinen Arbeitsspeicher mehr freigeben kann, wenn Sie nicht mehr benötigt wird. Im Laufe der Zeit wirken sich Speicher Verluste sowohl auf die Leistung der jeweiligen Anwendung als auch auf das Betriebssystem aus. Ein großer Ausfall kann zu unzulässigen Antwortzeiten aufgrund von übermäßigem Paging führen. Letztendlich treten bei der Anwendung und anderen Teilen des Betriebssystems Fehler auf.
+Speicherverlusten sind eine Klasse von Fehlern, bei denen die Anwendung keinen Arbeitsspeicher mehr frei gibt, wenn sie nicht mehr benötigt wird. Im Laufe der Zeit wirken sich Speicherverlusten sowohl auf die Leistung der jeweiligen Anwendung als auch des Betriebssystems aus. Ein großer Leck kann aufgrund übermäßiger Paging zu inakzeptablen Antwortzeiten führen. Schließlich kommt es bei der Anwendung und anderen Teilen des Betriebssystems zu Ausfällen.
 
-Windows gibt den gesamten Arbeitsspeicher frei, der von der Anwendung bei Beendigung des Prozesses belegt wird, sodass sich Anwendungen mit kurzer Laufzeit nicht erheblich auf die Gesamtleistung des Systems auswirken. Verluste in Prozessen mit langer Ausführungszeit, wie Dienste oder sogar Explorer-Plug-ins, können sich jedoch erheblich auf die Zuverlässigkeit des Systems auswirken und erzwingen möglicherweise, dass der Benutzer Windows neu startet, damit das System wiederverwendbar ist.
+Windows bei der Prozessbeendigung den gesamten von der Anwendung zugewiesenen Arbeitsspeicher frei, sodass anwendungen mit kurzer Ausführung keine erheblichen Auswirkungen auf die Gesamtleistung des Systems haben. Allerdings können Lecks in Prozessen mit langer Laufzeit wie Diensten oder sogar Explorer-Plug-Ins die Systemzuverlässigkeit stark beeinflussen und den Benutzer zwingen, Windows neu zu starten, um das System wieder nutzbar zu machen.
 
-Anwendungen können Arbeitsspeicher in Ihrem Auftrag auf mehrfache Weise zuweisen. Jeder Zuordnungstyp kann zu einem Leck führen, wenn er nach der Verwendung nicht freigegeben wird. Im folgenden finden Sie einige Beispiele für allgemeine Zuordnungs Muster:
+Anwendungen können Speicher in ihrem Namen auf mehrere Weisen zuordnen. Jede Art von Zuordnung kann zu einem Leck führen, wenn sie nach der Verwendung nicht wieder frei wird. Im Folgenden finden Sie einige Beispiele für allgemeine Zuordnungsmuster:
 
--   Heap Speicher über die [**heapbelegc**](/windows/win32/api/heapapi/nf-heapapi-heapalloc) -Funktion oder deren C/C++-Lauf Zeit Entsprechungen **malloc** oder **New**
--   Direkte Zuweisungen vom Betriebssystem über die [**VirtualAlloc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) -Funktion.
--   Kernel Handles, die über kernel32-APIs erstellt werden, wie z. b. " [**kreatefile**](/windows/win32/api/fileapi/nf-fileapi-createfilea)", " [**forateevent**](/windows/win32/api/synchapi/nf-synchapi-createeventa)" oder " [**foratethread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)"
--   GDI-und Benutzer Handles, die über User32-und gdi32-APIs erstellt wurden (Standardmäßig verfügt jeder Prozess über ein Kontingent von 10.000 Handles)
+-   Heapspeicher über die [**HeapAlloc-Funktion**](/windows/win32/api/heapapi/nf-heapapi-heapalloc) oder die entsprechenden C/C++-Laufzeitentsprechungen **malloc** oder **new**
+-   Direkte Zuordnungen vom Betriebssystem über die [**VirtualAlloc-Funktion.**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)
+-   Kernelhandles, die über Kernel32-APIs wie [**CreateFile,**](/windows/win32/api/fileapi/nf-fileapi-createfilea) [**CreateEvent**](/windows/win32/api/synchapi/nf-synchapi-createeventa)oder [**CreateThread**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)erstellt wurden, halten Kernelspeicher im Namen der Anwendung.
+-   Über User32- und Gdi32-APIs erstellte GDI- und USER-Handles (standardmäßig verfügt jeder Prozess über ein Kontingent von 10.000 Handles).
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="best-practices"></a>Empfehlungen
 
-Das Überwachen des Ressourcenverbrauchs Ihrer Anwendung im Zeitverlauf ist der erste Schritt bei der Erkennung und Diagnose von Speicher Verlusten. Verwenden Sie den Windows Task-Manager, und fügen Sie die folgenden Spalten hinzu: "commitsize", "Handles", "User Objects" und "GDI Objects". Auf diese Weise können Sie eine Baseline für Ihre Anwendung einrichten und die Ressourcennutzung über einen bestimmten Zeitraum überwachen.
+Die Überwachung des Ressourcenverbrauchs Ihrer Anwendung im Laufe der Zeit ist der erste Schritt bei der Erkennung und Diagnose von Speicherverlusten. Verwenden Windows Task-Manager, und fügen Sie die folgenden Spalten hinzu: "Commit Size", "Handles", "User Objects" und "GDI Objects". Auf diese Weise können Sie eine Baseline für Ihre Anwendung erstellen und die Ressourcennutzung im Laufe der Zeit überwachen.
 
-![Screenshot, der die Seite "Prozesse" im Windows Task-Manager anzeigt.](images/preventingmemoryleaks-windowstaskmanager.gif)
+![Screenshot: Seite "Prozesse" in Windows Task-Manager.](images/preventingmemoryleaks-windowstaskmanager.gif)
 
-Die folgenden Microsoft-Tools bieten ausführlichere Informationen und können Ihnen helfen, Verluste für die verschiedenen Zuordnungs Typen in Ihrer Anwendung zu erkennen und zu diagnostizieren:
+Die folgenden Microsoft-Tools bieten ausführlichere Informationen und können helfen, Lecks für die verschiedenen Zuordnungstypen in Ihrer Anwendung zu erkennen und zu diagnostizieren:
 
--   System Monitor und Ressourcenmonitor sind Teil von Windows 7 und können die Ressourcenverwendung über einen bestimmten Zeitraum überwachen und überwachen.
--   Die neueste Version von Application Verifier kann Heap Lecks unter Windows 7 diagnostizieren.
--   Mit dem in den Debuggingtools für Windows vorhandenen Umschlag werden die Heap Speicher Belegungen für einen bestimmten Prozess analysiert, und es können Verluste und andere ungewöhnliche Verwendungs Muster gefunden werden.
--   XPerf ist ein anspruchsvolles Leistungsanalyse Tool mit Unterstützung für Heap Zuordnungs Ablauf Verfolgungen.
--   CRT-Debugheap verfolgt Heap Zuordnungen und kann helfen, eigene Heap-Debugging-Features zu erstellen
+-   Leistungsmonitor und Ressourcenmonitor sind Teil von Windows 7 und können die Ressourcennutzung im Laufe der Zeit überwachen und graphen.
+-   Die neueste Version von Application Verifier heap leaks on Windows 7
+-   UMDH, das Teil der Debugtools für Windows ist, analysiert die Heapspeicherzuordnungen für einen bestimmten Prozess und kann dabei helfen, Lecks und andere ungewöhnliche Verwendungsmuster zu finden.
+-   Xperf ist ein anspruchsvolles Leistungsanalysetool mit Unterstützung für Heapzuordnungs-Ablaufverfolgungen.
+-   CRT Debug Heap verfolgt Heapzuordnungen nach und kann ihnen helfen, eigene Heapdebugfeatures zu erstellen.
 
-Bestimmte Codierungs-und Entwurfsverfahren können die Anzahl der Lecks in Ihrem Code einschränken.
+Bestimmte Codierungs- und Entwurfsmethoden können die Anzahl von Lecks in Ihrem Code begrenzen.
 
--   Verwenden Sie intelligente Zeiger in C++-Code sowohl für Heap Zuweisungen als auch für Win32-Ressourcen wie Kernel **handle** s. Die C++-Standard Bibliothek stellt die **automatische \_ ptr** -Klasse für Heap Zuweisungen bereit. Bei anderen Zuordnungs Typen müssen Sie eigene Klassen schreiben. Die ATL-Bibliothek stellt einen umfangreichen Satz von Klassen für die automatische Ressourcenverwaltung für Heap Objekte und Kernel Handles bereit.
--   Verwenden Sie systeminterne Compilerfunktionen wie **\_ com \_ ptr \_ t** , um Ihre COM-Schnittstellen Zeiger in "intelligente Zeiger" zu kapseln und die Verweis Zählung zu unterstützen. Es gibt ähnliche Klassen für andere com-Datentypen: **\_ BSTR \_ t** und **\_ Variant \_ t** .
--   Überwachen Sie die ungewöhnliche Speicherauslastung von .NET-Code. Verwalteter Code ist nicht gegen Speicher Verluste anfällig. Informationen zum Auffinden von GC-Verlusten finden [Sie unter "Nachverfolgen von verwalteten Speicher Verlusten"](/archive/blogs/ricom/) .
--   Beachten Sie die Muster für den Client seitigen Webcode. Zirkuläre Verweise zwischen COM-Objekten und Skript-Engines wie JScript können große Verluste in Webanwendungen verursachen. ["Verstehen und lösen von Internet Explorer-Verlust Mustern"](/previous-versions/ms976398(v=msdn.10)) enthält weitere Informationen zu diesen Arten von Verlusten. Sie können das JavaScript-Speicher Verlust-Erkennungs Modul verwenden, um Speicher Verluste in Ihrem Code zu debuggen. Obwohl Windows Internet Explorer 8, das mit Windows 7 ausgeliefert wird, die meisten dieser Probleme verringert, sind ältere Browser weiterhin anfällig für diese Fehler.
--   Vermeiden Sie die Verwendung mehrerer Beendigungs Pfade aus einer Funktion. Zuordnungen, die Variablen im Funktionsbereich zugewiesen werden, sollten am Ende der Funktion in einem bestimmten Block freigegeben werden.
--   Verwenden Sie keine Ausnahmen in Ihrem Code, ohne alle lokalen Variablen in Funktionen freizugeben. Wenn Sie systemeigene Ausnahmen verwenden, geben Sie alle Zuordnungen im Block "endlich" frei \_ \_ . Wenn Sie C++-Ausnahmen verwenden, müssen alle Heap-und Handle-Zuordnungen in intelligente Zeiger umschließt werden.
--   Ein [**PROPVARIANT**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Objekt nicht verwerfen oder erneut initialisieren, ohne die [**propvariantclear**](/windows/win32/api/combaseapi/nf-combaseapi-propvariantclear) -Funktion Aufrufs
+-   Verwenden Sie intelligente Zeiger in C++-Code sowohl für Heapzuordnungen als auch für Win32-Ressourcen wie kernel **HANDLE** s. Die C++-Standardbibliothek stellt die **auto \_ ptr-Klasse** für Heapzuordnungen zur Verfügung. Für andere Zuordnungstypen müssen Sie Eigene Klassen schreiben. Die ATL-Bibliothek bietet einen großen Satz von Klassen für die automatische Ressourcenverwaltung für Heapobjekte und Kernelhandles.
+-   Verwenden Sie systeminterne Compilerfeatures wie **\_ com \_ ptr \_ t,** um Ihre COM-Schnittstellenzeker in "intelligente Zeiger" zu kapseln und die Verweiszählung zu unterstützen. Es gibt ähnliche Klassen für andere COM-Datentypen: **\_ bstr \_ t** und **\_ variant \_ t**
+-   Überwachen Sie die ungewöhnliche Speicherauslastung Ihres .NET-Codes. Verwalteter Code ist nicht ungnicht gegen Speicherverlusten. Informationen [zum Aufspüren von GC-Lecks](/archive/blogs/ricom/) finden Sie unter "Nachverfolgen verwalteter Speicherverlusten".
+-   Beachten Sie Leak-Muster im clientseitigen Webcode. Zirkelverweise zwischen COM-Objekten und Skript-Engines wie JScript können große Lecks in Webanwendungen verursachen. ["Understanding and Solving Internet Explorer Leak Patterns"](/previous-versions/ms976398(v=msdn.10)) enthält weitere Informationen zu diesen Arten von Lecks. Sie können die JavaScript-Speicherverlusterkennung verwenden, um Speicherverlusten in Ihrem Code zu debuggen. Während Windows Internet Explorer 8, der mit Windows 7 veröffentlicht wird, die meisten dieser Probleme entschärft, sind ältere Browser weiterhin anfällig für diese Fehler.
+-   Vermeiden Sie die Verwendung mehrerer Exitpfade aus einer Funktion. Zuordnungen, die Variablen im Funktionsumfang zugewiesen sind, sollten in einem bestimmten Block am Ende der Funktion frei werden.
+-   Verwenden Sie keine Ausnahmen in Ihrem Code, ohne alle lokalen Variablen in Funktionen frei zu machen. Wenn Sie native Ausnahmen verwenden, geben Sie alle Ihre Zuordnungen innerhalb des \_ \_ finally-Blocks frei. Wenn Sie C++-Ausnahmen verwenden, müssen alle Ihre Heap- und Handlezuordnungen in intelligente Zeiger umschlossen werden.
+-   Verwerfen oder erneut initialisieren Sie ein [**PROPVARIANT-Objekt**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) nicht, ohne die [**PropVariantClear-Funktion aufrufen zu**](/windows/win32/api/combaseapi/nf-combaseapi-propvariantclear) müssen.
 
 ## <a name="links-to-resources"></a>Links zu Ressourcen
 
-*Allgemeine Zuordnungs Muster:*
+*Allgemeine Zuordnungsmuster:*
 
--   [**Heap Zuordnungs Funktion**](/windows/win32/api/heapapi/nf-heapapi-heapalloc)
--   [**Speicher Belegungs Funktion**](https://msdn.microsoft.com/library/6ewkz86d(v=VS.71).aspx)
+-   [**Heapzuordnungsfunktion**](/windows/win32/api/heapapi/nf-heapapi-heapalloc)
+-   [**Speicherzuordnungsfunktion**](https://msdn.microsoft.com/library/6ewkz86d(v=VS.71).aspx)
 -   [**New-Operator (C++)**](https://msdn.microsoft.com/library/kewsb8ba(v=VS.71).aspx)
--   [**Virtuelle Zuordnungs Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)
--   [Kernel Objekte](../sysinfo/kernel-objects.md)
--   [GDI-Objekt Handles](../sysinfo/gdi-objects.md)
--   [Objekt Handles für die Benutzeroberfläche](../sysinfo/user-objects.md)
+-   [**Virtuelle Zuordnungsfunktion**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc)
+-   [Kernelobjekte](../sysinfo/kernel-objects.md)
+-   [GDI-Objekthandles](../sysinfo/gdi-objects.md)
+-   [Benutzeroberfläche Objekthandles](../sysinfo/user-objects.md)
 
 *Microsoft-Tools:*
 
 -   [Application Verifier](application-verifier.md)
 -   [Debuggingtools für Windows](/windows-hardware/drivers/debugger/)
--   [Dumpheap im Benutzermodus](/windows-hardware/drivers/debugger/umdh)
--   [Ablaufverfolgungs-, Verarbeitungs-und Analyse Tool](https://msdn.microsoft.com/performance/cc825801.aspx)
--   [CRT-Debugheap](/visualstudio/debugger/crt-debug-heap-details?view=vs-2015)
+-   [Speicherabbild-Heap im Benutzermodus](/windows-hardware/drivers/debugger/umdh)
+-   [Trace Capture, Processing, and Analysis Tool](https://msdn.microsoft.com/performance/cc825801.aspx)
+-   [CRT-Debug heap](/visualstudio/debugger/crt-debug-heap-details?view=vs-2015)
 
 *Weitere Links:*
 
--   [**Auto \_ ptr-Klasse**](https://msdn.microsoft.com/library/ew3fk483(v=VS.71).aspx)
--   [Active Template Library (ATL)-Speicher Klassen](https://msdn.microsoft.com/library/44yh1z4f(v=VS.71).aspx)
--   [**\_com \_ ptr \_ t-Objekt**](https://msdn.microsoft.com/library/417w8b3b(v=VS.71).aspx)
--   [**\_BSTR \_ t-Klasse**](https://msdn.microsoft.com/library/zthfhkd6(v=VS.71).aspx)
--   [**\_Variant \_ YT-Klasse**](https://msdn.microsoft.com/library/x295h94e(v=VS.71).aspx)
--   ["Nachverfolgung von verwalteten Speicher Verlusten"](/archive/blogs/ricom/)
--   ["Verstehen und lösen von Internet Explorer-entwurfmustern"](/previous-versions/ms976398(v=msdn.10))
--   ["JavaScript-Speicherlecks-Erkennung"](/archive/blogs/gpde/new-javascript-memory-leak-detector-from-our-team)
--   [Minderung von zirkulären Speicherlecks (in Browsern):](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dd361842(v=vs.85))
+-   [**auto \_ ptr-Klasse**](https://msdn.microsoft.com/library/ew3fk483(v=VS.71).aspx)
+-   [Active Template Library (ATL)-Speicherklassen](https://msdn.microsoft.com/library/44yh1z4f(v=VS.71).aspx)
+-   [**\_com \_ ptr \_ t Object**](https://msdn.microsoft.com/library/417w8b3b(v=VS.71).aspx)
+-   [**\_bstr \_ t-Klasse**](https://msdn.microsoft.com/library/zthfhkd6(v=VS.71).aspx)
+-   [**\_variant \_ yt-Klasse**](https://msdn.microsoft.com/library/x295h94e(v=VS.71).aspx)
+-   ["Nachverfolgen verwalteter Speicherverlusten"](/archive/blogs/ricom/)
+-   ["Understanding and Solving Internet Explorer Leak Patterns" (Verstehen und Lösen von Internet Explorer Verlustmustern)](/previous-versions/ms976398(v=msdn.10))
+-   ["JavaScript Memory Leak Detector"](/archive/blogs/gpde/new-javascript-memory-leak-detector-from-our-team)
+-   [Entschärfung von Zirkelspeicherverlust (in Browsern):](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/dd361842(v=vs.85))
 -   [**try-finally-Anweisung**](https://msdn.microsoft.com/library/yb3kz605(v=VS.71).aspx)
 -   [**PROPVARIANT-Struktur**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant)
--   [**Propvariantclear-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-propvariantclear)
+-   [**PropVariantClear-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-propvariantclear)
 
  
 
