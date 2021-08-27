@@ -1,9 +1,9 @@
 ---
-title: CB_GETITEMHEIGHT Meldung (Winuser. h)
-description: Bestimmt die Höhe von Listenelementen oder das Auswahlfeld in einem Kombinations Feld.
+title: CB_GETITEMHEIGHT Meldung (Winuser.h)
+description: Bestimmt die Höhe von Listenelementen oder des Auswahlfelds in einem Kombinationsfeld.
 ms.assetid: 72fba6ca-0a51-4801-bd45-5f5a7d5ebee2
 keywords:
-- Windows-Steuerelemente für CB_GETITEMHEIGHT Meldung
+- CB_GETITEMHEIGHT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4aac9d8f9a430c056f8b91a9306d77c182f4c96
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a6e3ad9636c32e40bfa95f1f3b2c209eab42023205e0a967cc91804ec314a103
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089190"
 ---
-# <a name="cb_getitemheight-message"></a>CB \_ GetItemHeight-Nachricht
+# <a name="cb_getitemheight-message"></a>CB \_ GETITEMHEIGHT-Nachricht
 
-Bestimmt die Höhe von Listenelementen oder das Auswahlfeld in einem Kombinations Feld.
+Bestimmt die Höhe von Listenelementen oder des Auswahlfelds in einem Kombinationsfeld.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Bestimmt die Höhe von Listenelementen oder das Auswahlfeld in einem Kombination
 *wParam* 
 </dt> <dd>
 
-Die Kombinations Feld Komponente, deren Höhe abgerufen werden soll. Dieser Parameter muss den Wert-1 aufweisen, um die Höhe des Auswahl Felds abzurufen. Es muss NULL sein, um die Höhe von Listenelementen abzurufen, es sei denn, das Kombinations Feld hat das Format [**CBS \_**](combo-box-styles.md) -Besitzer. In diesem Fall ist der *wParam* -Parameter der null basierte Index eines bestimmten Listen Elements.
+Die Kombinationsfeldkomponente, deren Höhe abgerufen werden soll. Dieser Parameter muss -1 sein, um die Höhe des Auswahlfelds abzurufen. Es muss 0 (null) sein, um die Höhe von Listenelementen abzurufen, es sei denn, das Kombinationsfeld weist den [**CBS \_ OWNERDRAWVARIABLE-Stil**](combo-box-styles.md) auf. In diesem Fall ist der *wParam-Parameter* der nullbasierte Index eines bestimmten Listenelements.
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist die Höhe der Listenelemente in einem Kombinations Feld in Pixel. Wenn das Kombinations Feld den [**CBS- \_**](combo-box-styles.md) Besitzer für das-Objekt aufweist, ist es die Höhe des Elements, das durch den *wParam* -Parameter angegeben wird. Wenn *wParam* den Wert-1 hat, ist der Rückgabewert die Höhe des Bearbeitungs Steuer Elements (oder statischer Text) des Kombinations Felds. Wenn ein Fehler auftritt, ist der Rückgabewert CB \_ Err.
+Der Rückgabewert ist die Höhe der Listenelemente in einem Kombinationsfeld in Pixel. Wenn das Kombinationsfeld den [**CBS \_ OWNERDRAWVARIABLE-Stil**](combo-box-styles.md) auf hat, ist dies die Höhe des Elements, das durch den *wParam-Parameter* angegeben wird. Wenn *wParam* -1 ist, entspricht der Rückgabewert der Höhe des Bearbeitungssteuerelements (oder des statischen Texts) des Kombinationsfelds. Wenn ein Fehler auftritt, lautet der Rückgabewert CB \_ ERR.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Der Rückgabewert ist die Höhe der Listenelemente in einem Kombinations Feld in
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,13 +63,13 @@ Der Rückgabewert ist die Höhe der Listenelemente in einem Kombinations Feld in
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB- \_ sitztemheight**](cb-setitemheight.md)
+[**CB \_ SETITEMHEIGHT**](cb-setitemheight.md)
 </dt> <dt>
 
-[**WM- \_ MeasureItem**](wm-measureitem.md)
+[**WM \_ MEASUREITEM**](wm-measureitem.md)
 </dt> </dl>
 
  

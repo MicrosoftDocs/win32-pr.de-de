@@ -4,58 +4,37 @@ ms.assetid: 1378bbe6-be94-4be1-b428-5ec58dabd1fa
 title: Konfigurieren einer Medienquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69e6737d643db2ee473214586cd7ded4f9596133dac5f4fb177df4d7b6b19757
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 809d215cf282dba1e65c21316fafda47684a2151
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117880591"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122481706"
 ---
 # <a name="configuring-a-media-source"></a>Konfigurieren einer Medienquelle
 
-Wenn Sie den [Quellre konfliktlöser verwenden,](source-resolver.md) um eine Medienquelle zu erstellen, können Sie einen Eigenschaftenspeicher angeben, der Konfigurationseigenschaften enthält. Diese Eigenschaften werden verwendet, um die Medienquelle zu initialisieren. Der Satz unterstützter Eigenschaften hängt von der Implementierung der Medienquelle ab. Nicht jede Medienquelle definiert Konfigurationseigenschaften.
+Wenn Sie den [Quell resolver](source-resolver.md) verwenden, um eine Medienquelle zu erstellen, können Sie einen Eigenschaftenspeicher angeben, der Konfigurationseigenschaften enthält. Diese Eigenschaften werden verwendet, um die Medienquelle zu initialisieren. Der Satz der unterstützten Eigenschaften hängt von der Implementierung der Medienquelle ab. Nicht jede Medienquelle definiert Konfigurationseigenschaften.
 
-In der folgenden Tabelle sind die Konfigurationseigenschaften für die Medienquellen aufgeführt, die in der Media Foundation. Medienquellen von Drittanbietern können eigene benutzerdefinierte Eigenschaften definieren.
+In der folgenden Tabelle sind die Konfigurationseigenschaften für die Medienquellen aufgeführt, die in Media Foundation bereitgestellt werden. Medienquellen von Drittanbietern können eigene benutzerdefinierte Eigenschaften definieren.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Medienquelle</th>
-<th>Eigenschaften</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Netzwerkquelle</td>
-<td>Weitere Informationen <a href="network-source-features.md">finden Sie unter Netzwerkquellenfeatures.</a></td>
-</tr>
-<tr class="even">
-<td>ASF-Medienquelle</td>
-<td><ul>
-<li><a href="mfpkey-asfmediasource-approxseek-property.md"><strong>MFPKEY_ASFMediaSource_ApproxSeek</strong></a></li>
-<li><a href="mfpkey-asfmediasource-iterativeseekifnoindex.md">MFPKEY_ASFMediaSource_IterativeSeekIfNoIndex</a></li>
-<li><a href="mfpkey-asfmediasource-iterativeseek-max-count.md">MFPKEY_ASFMediaSource_IterativeSeek_Max_Count</a></li>
-<li><a href="mfpkey-asfmediasource-iterativeseek-tolerance-in-millisecond.md">MFPKEY_ASFMediaSource_IterativeSeek_Tolerance_In_MilliSecond</a></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Medienquelle | Eigenschaften | 
+|--------------|------------|
+| Netzwerkquelle | Weitere Informationen finden Sie unter <a href="network-source-features.md">Netzwerkquellfeatures.</a> | 
+| ASF-Medienquelle | <ul><li><a href="mfpkey-asfmediasource-approxseek-property.md"><strong>MFPKEY_ASFMediaSource_ApproxSeek</strong></a></li><li><a href="mfpkey-asfmediasource-iterativeseekifnoindex.md">MFPKEY_ASFMediaSource_IterativeSeekIfNoIndex</a></li><li><a href="mfpkey-asfmediasource-iterativeseek-max-count.md">MFPKEY_ASFMediaSource_IterativeSeek_Max_Count</a></li><li><a href="mfpkey-asfmediasource-iterativeseek-tolerance-in-millisecond.md">MFPKEY_ASFMediaSource_IterativeSeek_Tolerance_In_MilliSecond</a></li></ul> | 
+
 
 
 
  
 
-Führen Sie zum Konfigurieren einer Quelle die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um eine Quelle zu konfigurieren.
 
-1.  Rufen **Sie PSCreateMemoryPropertyStore auf,** um einen neuen Eigenschaftenspeicher zu erstellen. Diese Funktion gibt einen **IPropertyStore-Zeiger** zurück.
-2.  Rufen **Sie IPropertyStore::SetValue auf,** um eine oder mehrere Konfigurationseigenschaften festlegen.
-3.  Rufen Sie eine der Erstellungsfunktionen des Quellresolvers auf, wie z.B. [**DIE QUELLQUELLEResolver::CreateObjectFromURL,**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl)und übergeben Sie den **IPropertyStore-Zeiger** im *pProps-Parameter.*
+1.  Rufen Sie **PSCreateMemoryPropertyStore** auf, um einen neuen Eigenschaftenspeicher zu erstellen. Diese Funktion gibt einen **IPropertyStore-Zeiger** zurück.
+2.  Rufen Sie **IPropertyStore::SetValue** auf, um eine oder mehrere Konfigurationseigenschaften festzulegen.
+3.  Rufen Sie eine der Erstellungsfunktionen des Quellresolvers auf, wie z. [**B. EINENSOURCEResolver::CreateObjectFromURL,**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl)und übergeben Sie den **IPropertyStore-Zeiger** im *pProps-Parameter.*
 
 
 ```C++
@@ -105,7 +84,7 @@ HRESULT CreateMediaSource(
 
 
 
-Der Quellre resolver übergibt den **IPropertyStore-Zeiger** direkt an den Schemahandler oder bytestream-Handler, der die Quelle erstellt. Der Quellre resolver versucht nicht, die Eigenschaften zu überprüfen.
+Der Quell resolver übergibt den **IPropertyStore-Zeiger** direkt an den Schemahandler oder byte-stream-Handler, der die Quelle erstellt. Der Quell resolver versucht nicht, die Eigenschaften zu überprüfen.
 
 Im Allgemeinen werden diese Eigenschaften für erweiterte Einstellungen verwendet. Wenn Sie keinen Eigenschaftenspeicher bereitstellen, sollte die Medienquelle weiterhin ordnungsgemäß mit Standardeinstellungen funktionieren.
 
@@ -113,7 +92,7 @@ Im Allgemeinen werden diese Eigenschaften für erweiterte Einstellungen verwende
 
 <dl> <dt>
 
-[Quellre resolver](source-resolver.md)
+[Quelllöser](source-resolver.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Rückruf für Daten der Pipeline Stufen.
+description: Rückruf für Pipelinestufendaten.
 MS-HAID: vspixengine.IPipeLineStagesCallback3
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 62c626c30f641fb4f73761454d9e56fcde0d4737
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 211b6c35ef0333dfd6c4ad1f8ef04f1997db4ef1
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104481267"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122787096"
 ---
 # <a name="span-idvspixengineipipelinestagescallback3spanipipelinestagescallback3-interface"></a><span id="vspixengine.ipipelinestagescallback3"></span>IPipeLineStagesCallback3-Schnittstelle
 
-Rückruf für Daten der Pipeline Stufen.
+Rückruf für Pipelinestufendaten.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
-Die **IPipeLineStagesCallback3** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **IPipeLineStagesCallback3** verfügt auch über die folgenden Typen von Membern:
+Die **IPipeLineStagesCallback3-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPipeLineStagesCallback3** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **IPipeLineStagesCallback3** -Schnittstelle verfügt über diese Methoden.
+Die **IPipeLineStagesCallback3-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipipelinestagescallback3-meshfilereadycallback-bstr"><strong>Meshfilereadycallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host der von der zugeordneten Anforderung geschriebenen Gitter Informationen benachrichtigt.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipipelinestagescallback3-meshfilereadycallback-bstr"><strong>MeshFileReadyCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Mesh-Informationen benachrichtigt, die von der zugeordneten Anforderung geschrieben wurden.</p></td></tr></tbody></table>
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

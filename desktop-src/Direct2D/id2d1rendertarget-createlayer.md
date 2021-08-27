@@ -1,9 +1,9 @@
 ---
-title: ID2D1RenderTarget-Methoden für "kreatelayer" (D2d1. h)
-description: Erstellt eine ebenenressource, die mit diesem Renderziel und den kompatiblen renderzielen verwendet werden kann.
+title: ID2D1RenderTarget CreateLayer-Methoden (D2d1.h)
+description: Erstellt eine Ebenenressource, die mit diesem Renderziel und den kompatiblen Renderzielen verwendet werden kann.
 ms.assetid: 074e9ffb-c5f2-4e7b-94c7-d457bf07c0b7
 keywords:
-- Methoden von "Direct2D"
+- CreateLayer-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,36 +12,36 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 6e7fe86f041a818db77c28ed9461d8c8fb48ad64
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a351c9e1b4fc36c816e87aeaae79a591bb43768a4e098bf315990fc1e1794fe4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131490"
 ---
-# <a name="id2d1rendertargetcreatelayer-methods"></a>ID2D1RenderTarget:: kreatelayer-Methoden
+# <a name="id2d1rendertargetcreatelayer-methods"></a>ID2D1RenderTarget::CreateLayer-Methoden
 
-Erstellt eine ebenenressource, die mit diesem Renderziel und den kompatiblen renderzielen verwendet werden kann.
+Erstellt eine Ebenenressource, die mit diesem Renderziel und den kompatiblen Renderzielen verwendet werden kann.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                                 | BESCHREIBUNG                                                                                                                                                    |
+| Methode                                                                                                                 | Beschreibung                                                                                                                                                    |
 |:-----------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**"ID2D1Layer" ( \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer))                                | Erstellt eine ebenenressource, die mit diesem Renderziel und den kompatiblen renderzielen verwendet werden kann. <br/>                                               |
-| [**Kreatelayer (D2D1 \_ size \_ F, ID2D1Layer \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(d2d1_size_f_id2d1layer))       | Erstellt eine ebenenressource, die mit diesem Renderziel und den kompatiblen renderzielen verwendet werden kann. Die neue Ebene hat die angegebene anfangs Größe. <br/> |
-| [**Kreatelayer (D2D1 \_ size \_ F \* , ID2D1Layer \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(d2d1_size_f_id2d1layer)) | Erstellt eine ebenenressource, die mit diesem Renderziel und den kompatiblen renderzielen verwendet werden kann. Die neue Ebene hat die angegebene anfangs Größe. <br/> |
+| [**CreateLayer(ID2D1Layer \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(id2d1layer))                                | Erstellt eine Ebenenressource, die mit diesem Renderziel und den kompatiblen Renderzielen verwendet werden kann. <br/>                                               |
+| [**CreateLayer(D2D1 \_ SIZE \_ F,ID2D1Layer \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(d2d1_size_f_id2d1layer))       | Erstellt eine Ebenenressource, die mit diesem Renderziel und den kompatiblen Renderzielen verwendet werden kann. Die neue Ebene hat die angegebene Anfangsgröße. <br/> |
+| [**CreateLayer(D2D1 \_ SIZE F , \_ \* ID2D1Layer \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-createlayer(d2d1_size_f_id2d1layer)) | Erstellt eine Ebenenressource, die mit diesem Renderziel und den kompatiblen Renderzielen verwendet werden kann. Die neue Ebene hat die angegebene Anfangsgröße. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Größe der Ebene wird nach Bedarf automatisch angepasst.
+Die Größe der Ebene wird bei Bedarf automatisch selbst geändert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird eine-Ebene verwendet, um eine Bitmap an eine geometrische Maske auszuschneiden. Das komplette Beispiel finden Sie unter Gewusst [wie: Abschneiden einer geometrischen Maske](how-to-clip-with-layers.md).
+Im folgenden Beispiel wird eine Ebene verwendet, um eine Bitmap auf eine geometrische Maske zu beschneiden. Das vollständige Beispiel finden Sie unter [How to Clip to a Geometric Mask](how-to-clip-with-layers.md).
 
 
 ```C++
@@ -90,8 +90,8 @@ HRESULT DemoApp::RenderWithLayer(ID2D1RenderTarget *pRT)
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
@@ -100,7 +100,7 @@ HRESULT DemoApp::RenderWithLayer(ID2D1RenderTarget *pRT)
 
 <dl> <dt>
 
-[Übersicht über Schichten](direct2d-layers-overview.md)
+[Übersicht über Ebenen](direct2d-layers-overview.md)
 </dt> <dt>
 
 [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget)

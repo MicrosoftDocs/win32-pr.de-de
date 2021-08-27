@@ -1,11 +1,11 @@
 ---
-title: IWMPErrorItem2 Condition (Eigenschaft)
+title: IWMPErrorItem2-Bedingungseigenschaft
 description: Die Condition-Eigenschaft ruft einen Wert ab, der die Bedingung für den Fehler angibt.
 ms.assetid: 68800d75-8341-40d1-b699-ffe27bb1f38a
 keywords:
-- Bedingungs Eigenschaften Fenster Media Player
-- Condition-Eigenschaft, Windows Media Player, IWMPErrorItem2-Schnittstelle
-- IWMPErrorItem2 Interface, Windows Media Player, Condition-Eigenschaft
+- Condition-Windows Media Player
+- condition-Windows Media Player , IWMPErrorItem2-Schnittstelle
+- IWMPErrorItem2-Schnittstelle Windows Media Player , Bedingungseigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be53e7467f741371867b2c0d1dd66c3f68d22ec8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f964a94ed4e1b3b3c86fc1498ce6b8e950b8b7b571be91d297b32247fb3c391
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361021"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122610"
 ---
-# <a name="iwmperroritem2condition-property"></a>IWMPErrorItem2:: Condition-Eigenschaft
+# <a name="iwmperroritem2condition-property"></a>IWMPErrorItem2::condition-Eigenschaft
 
-Die **Condition** -Eigenschaft ruft einen Wert ab, der die Bedingung für den Fehler angibt.
+Die **Condition-Eigenschaft** ruft einen Wert ab, der die Bedingung für den Fehler angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,11 +46,11 @@ Public ReadOnly Property condition As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** , das der Bedingungs Code ist.
+Ein **System.Int32,** das der Bedingungscode ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Bedingungs Code ist ein Wert, der von Microsoft verwendet wird, um zusätzliche Informationen für die Mitarbeiter des technischen Supports bereitzustellen.
+Der Bedingungscode ist ein Wert, der von Microsoft verwendet wird, um zusätzliche Informationen für technische Supportmitarbeiter zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Der Bedingungs Code ist ein Wert, der von Microsoft verwendet wird, um zusätzli
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -68,7 +68,7 @@ Der Bedingungs Code ist ein Wert, der von Microsoft verwendet wird, um zusätzli
 
 <dl> <dt>
 
-[**IWMPErrorItem2-Schnittstelle (VB und c#)**](iwmperroritem2--vb-and-c.md)
+[**IWMPErrorItem2-Schnittstelle (VB und C#)**](iwmperroritem2--vb-and-c.md)
 </dt> </dl>
 
  

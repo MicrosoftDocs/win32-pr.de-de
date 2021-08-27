@@ -1,6 +1,6 @@
 ---
-description: Eine Rückruffunktion, die zum Benachrichtigen des Hosts über den Fortschritt des Engines verwendet wird. Dadurch kann der Host auch feststellen, dass die Engine weiterhin ausgeführt wird.
-title: 'Istatuscallback:: Status-Methode'
+description: Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engines zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu ermitteln, ob die Engine noch ausgeführt wird.
+title: IStatusCallback::Status-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 4DC2A05F-506C-4AB4-98E1-58827056700D
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 09fba28486bd6f1c43e4b0c4fb0dfcf495e0722b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: edf48e62389224a01af7e52aa7e87f3db63b3740
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106340094"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622306"
 ---
-# <a name="span-idvspixengineistatuscallback_status_dword_dword_dwordspanistatuscallbackstatus-method"></a><span id="vspixengine.istatuscallback_status_dword_dword_dword"></span>Istatuscallback:: Status-Methode
+# <a name="span-idvspixengineistatuscallback_status_dword_dword_dwordspanistatuscallbackstatus-method"></a><span id="vspixengine.istatuscallback_status_dword_dword_dword"></span>IStatusCallback::Status-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dadurch kann der Host auch feststellen, dass die Engine weiterhin ausgeführt wird.
+Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu ermitteln, ob die Engine noch ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,26 +37,26 @@ HRESULT Status(
 
 ## <a name="parameters"></a>Parameter
 
-*dwmillisecondselapsed*   
-Die seit dem letzten Aufruf des Status verstrichene Zeit in Millisekunden.
+*dwMillisecondsElapsed*   
+Die seit dem letzten Aufruf von Status verstrichene Zeit in Millisekunden.
 
-*dwframesaufgezeichnet*   
-Die Anzahl der Frames, die seit dem letzten Status aufgerufen wurden.
+*dwFramesCaptured*   
+Die Anzahl der Frames, die seit dem letzten Aufruf von Status erfasst wurden.
 
-*dwframesverstrichene*   
-Die Anzahl der Frames, die seit dem letzten Status aufgerufen wurden.
+*dwFramesElapsed*   
+Die Anzahl der Frames, die seit dem letzten Aufruf von Status verstrichen sind.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Istatus Callback**](/windows/desktop/direct3dtools/istatuscallback)
+[**IStatusCallback**](/windows/desktop/direct3dtools/istatuscallback)
 
  
 

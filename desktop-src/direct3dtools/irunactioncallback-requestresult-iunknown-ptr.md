@@ -1,10 +1,10 @@
 ---
-description: Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer Aktion zu benachrichtigen (z. b. einen Frame erfassen), die er angefordert hat.
+description: Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer angeforderten Aktion zu benachrichtigen (z. B. einen Frame zu erfassen).
 MS-HAID: vspixengine.IRunActionCallback\_RequestResult\_IUnknown\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ununaktioncallback:: RequestResult-Methode'
+title: IRunActionCallback::RequestResult-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 5D6B1599-2CF4-46E7-92DB-5D93DD5AD0EE
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 8f2d5eea98b167af30bfe0412acb10f83f83d3db
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6e806a95515a59176c1070b573763a8581f40397
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104125365"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122627556"
 ---
-# <a name="span-idvspixengineirunactioncallback_requestresult_iunknown_ptrspanirunactioncallbackrequestresult-method"></a><span id="vspixengine.irunactioncallback_requestresult_iunknown_ptr"></span>Ununaktioncallback:: RequestResult-Methode
+# <a name="span-idvspixengineirunactioncallback_requestresult_iunknown_ptrspanirunactioncallbackrequestresult-method"></a><span id="vspixengine.irunactioncallback_requestresult_iunknown_ptr"></span>IRunActionCallback::RequestResult-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer Aktion zu benachrichtigen (z. b. einen Frame erfassen), die er angefordert hat.
+Eine Rückruffunktion, die verwendet wird, um den Host über Ergebnisse einer angeforderten Aktion zu benachrichtigen (z. B. einen Frame zu erfassen).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,15 +44,15 @@ Das Ergebnis der Aktion.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Nicht aktionrückruf**](/windows/desktop/direct3dtools/irunactioncallback)
+[**IRunActionCallback**](/windows/desktop/direct3dtools/irunactioncallback)
 
  
 

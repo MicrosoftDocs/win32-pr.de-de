@@ -1,7 +1,7 @@
 ---
-description: Die setdefaultsourceposition-Methode legt den Renderer wieder auf die standardmäßige Quell Position (in der Regel das gesamte native Video) fest.
+description: Die SetDefaultSourcePosition-Methode legt den Renderer wieder auf fest, indem die Standardquellenposition (in der Regel das gesamte native Video) verwendet wird.
 ms.assetid: 1ac03298-4c25-45f7-9719-ea03fe4699b2
-title: Cbasecontrolvideo. setdefaultsourceposition-Methode (ctlutil. h)
+title: CBaseControlVideo.SetDefaultSourcePosition-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: e6296683235a3cf051d0b9f4ee56ce51a3516f66
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ab067e9041a937c37e0df2bf9998dd1ecb7a6d1d434a4f10e1b2e1e1b50e6f75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087490"
 ---
-# <a name="cbasecontrolvideosetdefaultsourceposition-method"></a>Cbasecontrolvideo. setdefaultsourceposition-Methode
+# <a name="cbasecontrolvideosetdefaultsourceposition-method"></a>CBaseControlVideo.SetDefaultSourcePosition-Methode
 
-Die- `SetDefaultSourcePosition` Methode legt den Renderer mithilfe der standardmäßigen Quell Position (in der Regel mit dem systemeigenen Video) wieder auf fest.
+Die `SetDefaultSourcePosition` -Methode legt den Renderer wieder auf fest, indem die Standardquellenposition (in der Regel das systemeigene Video) verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück, der von der Implementierung abhängig ist. kann einen der folgenden Werte oder andere nicht aufgelistete Werte aufweisen.
+Gibt einen **HRESULT-Wert** zurück, der von der Implementierung abhängt. kann einer der folgenden Werte oder ein anderer nicht aufgeführter Wert sein.
 
 
 
 | Rückgabecode                                                                                           | Beschreibung                                                                      |
 |-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>                | Fehler.<br/>                                                              |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>                | Fehler.<br/>                                                              |
 | <dl> <dt>**NOERROR**</dt> </dl>                | Erfolg.<br/>                                                              |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Pins nicht verbunden sind.<br/> |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Vorgang kann nicht ausgeführt werden, da die Stecknadeln nicht verbunden sind.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**ibasicvideo**](/windows/desktop/api/Control/nn-control-ibasicvideo) -Schnittstelle ändern. Das Quell Rechteck wirkt sich darauf aus, welcher Abschnitt der systemeigenen Videoquelle auf der Anzeige angezeigt wird. Das Ziel Rechteck wirkt sich darauf aus, wo das Video bei der Wiedergabe angezeigt wird. Das Ziel Rechteck ist relativ zum Client Bereich des Fensters, in dem es abgespielt wird. Die linke obere Ecke des Fensters ist Koordinaten (0,0).
+Eine Anwendung kann die Quell- und Zielrechtecke für das Video über die [**IBasicVideo-Schnittstelle**](/windows/desktop/api/Control/nn-control-ibasicvideo) ändern. Das Quellrechteck wirkt sich darauf aus, welcher Abschnitt der nativen Videoquelle auf der Anzeige angezeigt wird. Das Zielrechteck wirkt sich darauf aus, wo das Video angezeigt wird, wenn es abgespielt wird. Das Zielrechteck ist relativ zum Clientbereich des Fensters, in dem es abspielt. Die obere linke Ecke des Fensters ist koordinate (0,0).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -75,7 +75,7 @@ Eine Anwendung kann die Quell-und Ziel Rechtecke für das Video über die [**iba
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

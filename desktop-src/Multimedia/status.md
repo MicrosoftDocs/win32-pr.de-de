@@ -1,9 +1,9 @@
 ---
-title: Status Befehl
-description: Mit dem Status Befehl werden Statusinformationen von einem Gerät angefordert. Alle Geräte erkennen diesen Befehl.
+title: status-Befehl
+description: Der Befehl status fordert Statusinformationen von einem Gerät an. Dieser Befehl wird von allen Geräten erkannt.
 ms.assetid: 39961bd7-866d-450d-9fbf-347a8f508481
 keywords:
-- Status Befehl Windows-Multimedia
+- Statusbefehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14ab184ddaca16d0ea96b86a6b062f1e66e2eee2
-ms.sourcegitcommit: 8276af9231bdbf5a7334299f0d13fc8ff069a065
+ms.openlocfilehash: bd209ed04e51671ce7d9c8a7ae88a79073836c2e
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "106361735"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626115"
 ---
-# <a name="status-command"></a>Status Befehl
+# <a name="status-command"></a>status-Befehl
 
 > [!NOTE]
-> Bias-freie Kommunikation Microsoft unterstützt eine unterschiedlichste und inklusive Umgebung.  In diesem Dokument sind Verweise auf das Wort "Slave" vorhanden. Im [Stil Handbuch von Microsoft für die Bias-Free-Kommunikation](https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/bias-free-communication.md) wird dies als ausschließendes Wort erkannt.  Dieser Wortlaut wird verwendet, da es sich zurzeit um den in den Befehlen verwendeten Wortlaut handelt. Aus Konsistenz Gründen enthält dieses Dokument dieses Wort. Wenn dieses Wort in den Befehlen geändert wird, korrigieren wir dieses Dokument als Ausrichtung.
+> Voreingenommene Kommunikation Microsoft unterstützt eine vielfältige und inklusionsorientierte Umgebung.  In diesem Dokument gibt es Verweise auf das Wort "slave". Der [Microsoft Style Guide for Bias-Free Communications](https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/bias-free-communication.md) erkennt dies als Ausschlusswort.  Diese Formulierung wird verwendet, da es sich derzeit um die Formulierung handelt, die in den Befehlen verwendet wird. Aus Konsistenzgründen enthält dieses Dokument dieses Wort. Wenn dieses Wort in den Befehlen geändert wird, korrigieren wir dieses Dokument in Übereinstimmung.
 
-Mit dem Status Befehl werden Statusinformationen von einem Gerät angefordert. Alle Geräte erkennen diesen Befehl.
+Der Befehl status fordert Statusinformationen von einem Gerät an. Dieser Befehl wird von allen Geräten erkannt.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -43,70 +43,70 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszRequest"></span><span id="lpszrequest"></span><span id="LPSZREQUEST"></span>*lpszrequest*
+<span id="lpszRequest"></span><span id="lpszrequest"></span><span id="LPSZREQUEST"></span>*lpszRequest*
 </dt> <dd>
 
-Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den **Status** Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle sind Gerätetypen aufgeführt, die den **Statusbefehl** und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Gerätetyp</th>
-<th>Anforderungs Flags</th>
+<th>Anforderungsflags</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>CDAudio</td>
+<td>cdaudio</td>
 <td><ul>
-<li>CDAudio-typspur <em>Nummer</em></li>
-<li>aktuelle Spur</li>
+<li>cdaudio type track <em>number</em></li>
+<li>Aktuelle Spur</li>
 <li>length</li>
-<li>Länge der <em>Nachverfolgung</em></li>
+<li><em>Längenverfolgungsnummer</em></li>
 <li>Medien vorhanden</li>
 <li>Modus</li>
-<li>Anzahl der Spuren</li>
+<li>Anzahl von Spuren</li>
 <li>position</li>
-<li>Positions <em>Nummer</em></li>
+<li>Position track <em>number</em></li>
 <li>ready</li>
 <li>Startposition</li>
 <li>Zeitformat</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Digitalvideo</td>
+<td>digitalvideo</td>
 <td><ul>
 <li>Audio</li>
 <li>Audioausrichtung</li>
-<li>AudioBitsPerSample</li>
-<li>audioumbrüche</li>
-<li>audiobytespersec</li>
+<li>audio bitspersample</li>
+<li>Audiounterbrechungen</li>
+<li>Audiobytespersec</li>
 <li>Audioeingabe</li>
-<li>audiodatensatz</li>
+<li>Audiodatensatz</li>
 <li>Audioquelle</li>
-<li>Audiodatei (samplespersec)</li>
-<li>Audiodatenstrom</li>
-<li>Barsch</li>
-<li>BitsPerPel</li>
+<li>Audiobeispielepersec</li>
+<li>Audiostream</li>
+<li>Bass</li>
+<li>bitsperpel</li>
 <li>Helligkeit</li>
 <li>color</li>
 <li>Kontrast</li>
-<li>aktuelle Spur</li>
-<li><em>Festplatten Speicherplatz</em></li>
-<li>Datei Abschluss</li>
+<li>Aktuelle Spur</li>
+<li>Laufwerk <em>mit</em> Speicherplatz</li>
+<li>Dateiabschluss</li>
 <li>Dateiformat</li>
 <li>Dateimodus</li>
 <li>forward</li>
@@ -115,47 +115,47 @@ Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle werden die 
 <li>input</li>
 <li>Linkes Volume</li>
 <li>length</li>
-<li>Länge der <em>Nachverfolgung</em></li>
+<li><em>Längenverfolgungsnummer</em></li>
 <li>Medien vorhanden</li>
 <li>Modus</li>
 <li>Überwachen</li>
-<li>Monitor-Methode</li>
-<li>ell</li>
-<li>Nominale Bildrate</li>
-<li>Nominale Daten Satz Rahmenrate</li>
-<li>Anzahl der Spuren</li>
+<li>monitor-Methode</li>
+<li>Nominale</li>
+<li>Nominale Bildfrequenz</li>
+<li>Nominale Datensatzbildrate</li>
+<li>Anzahl von Spuren</li>
 <li>output</li>
 <li>Palettenhandle</li>
 <li>Pausenmodus</li>
 <li>Wiedergabegeschwindigkeit</li>
 <li>position</li>
-<li>Positions <em>Nummer</em></li>
+<li>Position track <em>number</em></li>
 <li>ready</li>
-<li>Frame Frequenz aufzeichnen</li>
-<li>Verweis <em>Rahmen</em></li>
-<li>reservierte Größe</li>
-<li>richtiges Volume</li>
-<li>genau suchen</li>
+<li>Aufzeichnen der Bildfrequenz</li>
+<li><em>Referenzrahmen</em></li>
+<li>Reservierte Größe</li>
+<li>Richtiges Volume</li>
+<li>Suchen sie genau</li>
 <li>Schärfe</li>
-<li>SMPTE</li>
+<li>Smpte</li>
 <li>Geschwindigkeit</li>
 <li>Startposition</li>
-<li>immer noch Dateiformat</li>
+<li>Dateiformat "still"</li>
 <li>Zeitformat</li>
-<li>Tönungs</li>
+<li>Farbton</li>
 <li>Höhen</li>
-<li>nicht gespeicherte</li>
+<li>Ungespeicherten</li>
 <li>video</li>
-<li>Video Schlüssel Index</li>
-<li>Farbe des Video Schlüssels</li>
-<li>Videodaten Satz</li>
+<li>Videoschlüsselindex</li>
+<li>Videoschlüsselfarbe</li>
+<li>Videodatensatz</li>
 <li>Videoquelle</li>
-<li>Video Quellnummer</li>
+<li>Videoquellnummer</li>
 <li>Videostream</li>
 <li>Volume</li>
-<li>Fenster handle</li>
+<li>Fensterhand handle</li>
 <li>Fenster sichtbar</li>
-<li>Fenster minimiert</li>
+<li>Minimiertes Fenster</li>
 <li>Fenster maximiert</li>
 </ul></td>
 </tr>
@@ -167,100 +167,100 @@ Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle werden die 
 <li>Anzahl der Spuren</li>
 <li>ready</li>
 <li>strecken</li>
-<li>Fenster handle</li>
+<li>Fensterhand handle</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>sequencer</td>
 <td><ul>
-<li>aktuelle Spur</li>
-<li>Divisions Typ</li>
+<li>Aktuelle Spur</li>
+<li>Divisionstyp</li>
 <li>length</li>
-<li>Längen Spur- <em>Zahlen</em> Master</li>
+<li>length track <em>number</em> master</li>
 <li>Medien vorhanden</li>
 <li>Modus</li>
 <li>Anzahl der Spuren</li>
 <li>offset</li>
 <li>port</li>
 <li>position</li>
-<li>Positions <em>Nummer</em></li>
+<li><em>Positionsverfolgungsnummer</em></li>
 <li>ready</li>
-<li>Sklaverei</li>
+<li>Sklave</li>
 <li>Startposition</li>
-<li>Lern</li>
+<li>tempo</li>
 <li>Zeitformat</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>VCR</td>
+<td>Vcr</td>
 <td><ul>
-<li>Datensatz Assemblieren</li>
-<li>audiomonitor</li>
-<li>audiomonitornummer</li>
-<li>audiodatensatz</li>
-<li><em>Anzahl</em> der Audiodaten Satz-Spuren</li>
+<li>Assemblerdatensatz</li>
+<li>Audiomonitor</li>
+<li>Audiomonitornummer</li>
+<li>Audiodatensatz</li>
+<li>Audiodatensatz-Tracknummer <em></em></li>
 <li>Audioquelle</li>
-<li>audioquellnummer</li>
+<li>Audioquellennummer</li>
 <li>Kanal</li>
-<li>Kanal-Tuner- <em>Nummer</em></li>
+<li>Channel-Tunernummer <em></em></li>
 <li>clock</li>
-<li>Takt-ID</li>
+<li>Clock-ID</li>
 <li>Zähler</li>
-<li>Counter-Format</li>
-<li>Auflösung von Zählern</li>
-<li>aktuelle Spur</li>
-<li>Framerate</li>
+<li>Indikatorformat</li>
+<li>Zählerauflösung</li>
+<li>Aktuelle Spur</li>
+<li>Bildrate</li>
 <li>Index</li>
-<li>Index für</li>
+<li>Index auf</li>
 <li>length</li>
-<li>Länge der <em>Nachverfolgung</em></li>
+<li><em>Längenverfolgungsnummer</em></li>
 <li>Medien vorhanden</li>
 <li>Medientyp</li>
 <li>Modus</li>
 <li>Anzahl von Audiospuren</li>
 <li>Anzahl der Spuren</li>
-<li>Anzahl der Videospuren</li>
-<li><em>Timeout</em> für Pause</li>
-<li>Wiedergabe Format</li>
+<li>Anzahl von Videospuren</li>
+<li><em>Pausen-Timeout</em></li>
+<li>Wiedergabeformat</li>
 <li>position</li>
-<li>Positions Anfang</li>
-<li>Positions <em>Nummer</em></li>
-<li>Postroll <em>Dauer</em></li>
+<li>position start</li>
+<li><em>Positionsverfolgungsnummer</em></li>
+<li><em>Postrolldauer</em></li>
 <li>Einschalten</li>
-<li>Vorabversion <em></em></li>
+<li>Dauer der <em>Vorabroll</em></li>
 <li>ready</li>
-<li>Daten Satz Format</li>
+<li>Datensatzformat</li>
 <li>Geschwindigkeit</li>
 <li>Zeitformat</li>
-<li>Zeit Modus</li>
-<li>Uhrzeittyp</li>
-<li>Zeit Code vorhanden</li>
-<li>Zeitcode-Datensatz</li>
-<li>timecodetyp</li>
-<li>Nummer des Tuners</li>
+<li>Zeitmodus</li>
+<li>Zeittyp</li>
+<li>Vorhandener Zeitcode</li>
+<li>Timecodedatensatz</li>
+<li>Timecodetyp</li>
+<li>Tunernummer</li>
 <li>Videomonitor</li>
-<li>Videomonitor Nummer</li>
-<li>Videodaten Satz</li>
-<li><em>Nummer</em> der Videodaten Satz Verfolgung</li>
+<li>Videomonitornummer</li>
+<li>Videoaufzeichnung</li>
+<li>Videoaufzeichnungs-Tracknummer <em></em></li>
 <li>Videoquelle</li>
-<li>Video Quellnummer</li>
-<li>schreibgeschützt</li>
+<li>Videoquellennummer</li>
+<li>Schreibschutz</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Videodisk</td>
+<td>videodisc</td>
 <td><ul>
-<li>aktuelle Spur</li>
-<li>Größe der Festplatte</li>
+<li>Aktuelle Spur</li>
+<li>Datenträgergröße</li>
 <li>forward</li>
 <li>length</li>
-<li>Länge der <em>Nachverfolgung</em></li>
+<li><em>Längenverfolgungsnummer</em></li>
 <li>Medien vorhanden</li>
 <li>Medientyp</li>
 <li>Modus</li>
 <li>Anzahl der Spuren</li>
 <li>position</li>
-<li>Positions <em>Nummer</em></li>
+<li><em>Positionsverfolgungsnummer</em></li>
 <li>ready</li>
 <li>Seite</li>
 <li>Geschwindigkeit</li>
@@ -269,24 +269,24 @@ Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle werden die 
 </ul></td>
 </tr>
 <tr class="odd">
-<td>waveaudiodatei</td>
+<td>Waveaudio</td>
 <td><ul>
 <li>Ausrichtung</li>
-<li>BitsPerSample</li>
+<li>bitspersample</li>
 <li>bytespersec</li>
 <li>channels</li>
-<li>aktuelle Spur</li>
-<li>Tag formatieren</li>
+<li>Aktuelle Spur</li>
+<li>Formattag</li>
 <li>input</li>
 <li>length</li>
-<li>Länge der <em>Nachverfolgung</em></li>
+<li><em>Längenverfolgungsnummer</em></li>
 <li>Level</li>
 <li>Medien vorhanden</li>
 <li>Modus</li>
 <li>Anzahl der Spuren</li>
 <li>output</li>
 <li>position</li>
-<li>Positions <em>Nummer</em></li>
+<li><em>Positionsverfolgungsnummer</em></li>
 <li>ready</li>
 <li>samplespersec</li>
 <li>Startposition</li>
@@ -300,14 +300,14 @@ Flag zum Anfordern von Statusinformationen. In der folgenden Tabelle werden die 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszrequest** -Parameter und deren Bedeutung angegeben werden können.
+In der folgenden Tabelle sind die Flags, die im **lpszRequest-Parameter** angegeben werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -318,99 +318,99 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszrequest** -P
 <tbody>
 <tr class="odd">
 <td>Ausrichtung</td>
-<td>Gibt die Block Ausrichtung der Daten in Bytes zurück.</td>
+<td>Gibt die Blockausrichtung der Daten in Bytes zurück.</td>
 </tr>
 <tr class="even">
-<td>Datensatz Assemblieren</td>
-<td>Gibt <strong>true</strong> zurück, wenn das Gerät auf assemblierungsmodusaufzeichnung festgelegt ist.</td>
+<td>Assemblerdatensatz</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Gerät auf die Aufzeichnung im Assemblermodus festgelegt ist.</td>
 </tr>
 <tr class="odd">
 <td>Audio</td>
-<td>Gibt ein- &quot; &quot; oder &quot; ausschalten &quot; abhängig vom letzten Befehl " <a href="setaudio.md">setaudioon</a> &quot; " &quot; &quot; oder "Off" &quot; . Es wird ein zurückgegeben &quot; &quot; , wenn entweder oder beide Redner aktiviert sind, &quot; &quot; andernfalls.</td>
+<td>Gibt &quot; abhängig vom letzten &quot; &quot; &quot; <a href="setaudio.md">setaudio</a> &quot; &quot; &quot; &quot; on- oder off-Befehl ein oder aus zurück. Sie gibt &quot; &quot; zurück, wenn einer oder beide Sprecher aktiviert sind, &quot; &quot; andernfalls .</td>
 </tr>
 <tr class="even">
 <td>Audioausrichtung</td>
-<td>Gibt die Ausrichtung von Datenblöcken relativ zum Anfang der Eingabe-Waveform-Audiodaten zurück.</td>
+<td>Gibt die Ausrichtung von Datenblöcken relativ zum Anfang der Eingabe waveform-audio-Daten zurück.</td>
 </tr>
 <tr class="odd">
-<td>AudioBitsPerSample</td>
-<td>Gibt die Anzahl der Bits pro Stichprobe zurück, die vom Gerät für die Aufzeichnung verwendet werden. Dieses Flag gilt nur für Geräte, die den PCM-Algorithmus unterstützen &quot; &quot; .</td>
+<td>AudiobitsPersample</td>
+<td>Gibt die Anzahl der Bits pro Stichprobe zurück, die das Gerät für die Aufzeichnung verwendet. Dieses Flag gilt nur für Geräte, die den &quot; pcm-Algorithmus &quot; unterstützen.</td>
 </tr>
 <tr class="even">
-<td>audioumbrüche</td>
-<td>Gibt die Häufigkeit zurück, mit der der Audioteil der letzten AVI-Sequenz abgebrochen wurde. Das System zählt immer dann eine audiopause, wenn versucht wird, Audiodaten in den Gerätetreiber zu schreiben und feststellt, dass der Treiber bereits alle verfügbaren Daten wiedergegeben hat. Dieses Flag wird nur vom MCIAVI Digital-Video-Treiber erkannt. Es ist nur für die Leistungs Auswertung gedacht. der Rückgabewert ist schwierig zu interpretieren.</td>
+<td>Audiounterbrechungen</td>
+<td>Gibt zurück, wie oft der Audioteil der letzten AVI-Sequenz aufgebrochen ist. Das System zählt eine Audiopause, wenn es versucht, Audiodaten in den Gerätetreiber zu schreiben, und entdeckt, dass der Treiber bereits alle verfügbaren Daten abgespielt hat. Dieses Flag wird nur vom MCIAVI-Treiber für digitale Videos erkannt. Sie ist nur für die Leistungsauswertung bestimmt. Der Rückgabewert ist schwer zu interpretieren.</td>
 </tr>
 <tr class="odd">
-<td>audiobytespersec</td>
-<td>Gibt die durchschnittliche Anzahl der Bytes zurück, die pro Sekunde für die Aufzeichnung verwendet werden.</td>
+<td>Audiobytespersec</td>
+<td>Gibt die durchschnittliche Anzahl von Bytes pro Sekunde zurück, die für die Aufzeichnung verwendet werden.</td>
 </tr>
 <tr class="even">
 <td>Audioeingabe</td>
-<td>Gibt die ungefähre sofortige Audioebene des analogen eingabeaudiosignals zurück. Ein Wert größer als 1000 impliziert clippingverzerrung. Einige Geräte können diesen Wert nur beim Aufzeichnen von Audiodaten zurückgeben. Dem Wert ist kein <a href="set.md">Set</a> -oder <a href="setaudio.md">setaudiobefehl</a> zugeordnet.</td>
+<td>Gibt die ungefähre sofortige Audioebene des analogen Eingabeaudiosignals zurück. Ein Wert größer als 1000 impliziert Clippingverzerrung. Einige Geräte können diesen Wert nur bei der Audioaufzeichnung zurückgeben. Dem Wert ist kein <a href="set.md">set- oder</a> <a href="setaudio.md">setaudio-Befehl</a> zugeordnet.</td>
 </tr>
 <tr class="odd">
-<td>audiomonitor</td>
-<td>Gibt &quot; &quot; die Ausgabe oder einen der gültigen Quell Eingabetypen zurück. Weitere Informationen finden Sie unter dem Befehl " <strong>setaudiomonitor</strong> " &quot; &quot; .</td>
+<td>Audiomonitor</td>
+<td>Gibt &quot; die Ausgabe oder einen der &quot; gültigen Quelleingabetypen zurück. Weitere Informationen finden Sie unter dem <strong>Befehl setaudio</strong> &quot; &quot; monitor.</td>
 </tr>
 <tr class="even">
-<td>audiomonitornummer</td>
-<td>Gibt die überwachte Video Nummer des Typs zurück, der vom <strong>Status</strong> &quot; -audiomonitor angegeben wird &quot; . Weitere Informationen finden Sie unter dem Befehl <a href="setaudio.md">SetAudio.</a></td>
+<td>Audiomonitornummer</td>
+<td>Gibt die überwachte Videonummer des Typs zurück, der vom <strong>Statusaudiomonitor</strong> &quot; angegeben &quot; wird. Weitere Informationen finden Sie unter dem <a href="setaudio.md">Befehl setaudio.</a></td>
 </tr>
 <tr class="odd">
-<td>audiodatensatz</td>
-<td>Gibt &quot; ein &quot; oder &quot; aus zurück &quot; , das den durch <strong>setaudiodatensatz</strong> festgelegten Status widerspiegelt &quot; &quot; .</td>
+<td>Audiodatensatz</td>
+<td>Gibt &quot; ein oder aus &quot; &quot; &quot; zurück, was den durch <strong>setaudio record festgelegten Zustand</strong> &quot; &quot; wiedergibt.</td>
 </tr>
 <tr class="even">
-<td><em>Anzahl</em> der Audiodaten Satz-Spuren</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn der VCR zum Aufzeichnen von Audiodaten festgelegt ist Wenn keine Nachverfolgung angegeben ist, wird der Standardwert 1 angenommen.</td>
+<td>Audiodatensatz-Tracknummer <em></em></td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn der VCR für die Aufzeichnung von Audio festgelegt ist. Wenn keine Spurnummer angegeben wird, wird der Standardwert 1 angenommen.</td>
 </tr>
 <tr class="odd">
-<td>Audiodatei (samplespersec)</td>
-<td>Gibt die Anzahl der Stichproben pro Sekunde zurück, die aufgezeichnet wurden.</td>
+<td>Audiobeispielepersec</td>
+<td>Gibt die Anzahl der aufgezeichneten Stichproben pro Sekunde zurück.</td>
 </tr>
 <tr class="even">
 <td>Audioquelle</td>
-<td>Gibt die aktuelle audiodigitalisierungs Quelle zurück: &quot; left &quot; , &quot; right &quot; , &quot; Average &quot; oder &quot; Stereo &quot; .</td>
+<td>Gibt die aktuelle Audiodisiererquelle zurück: &quot; &quot; links, &quot; &quot; rechts, &quot; Durchschnitt oder &quot; &quot; &quot; Stereo.</td>
 </tr>
 <tr class="odd">
-<td>audioquellnummer</td>
-<td>Gibt die audioquellnummer des Typs zurück, der von der <strong>statusaudioquelle</strong> zurückgegeben wird &quot; &quot; . Weitere Informationen finden Sie unter dem Befehl <a href="setaudio.md">SetAudio.</a></td>
+<td>Audioquellennummer</td>
+<td>Gibt die Audioquellennummer des Typs zurück, der von der <strong>Statusaudioquelle</strong> &quot; zurückgegeben &quot; wird. Weitere Informationen finden Sie unter dem <a href="setaudio.md">Befehl setaudio.</a></td>
 </tr>
 <tr class="even">
-<td>Audiodatenstrom</td>
-<td>Gibt die aktuelle audiostreamnummer zurück.</td>
+<td>Audiostream</td>
+<td>Gibt die aktuelle Audiostreamnummer zurück.</td>
 </tr>
 <tr class="odd">
-<td>Barsch</td>
-<td>Gibt die aktuelle audiobass-Ebene zurück.</td>
+<td>Bass</td>
+<td>Gibt die aktuelle Audioebene zurück.</td>
 </tr>
 <tr class="even">
-<td>BitsPerPel</td>
-<td>Gibt die Anzahl von Bits pro Pixel zum Speichern erfasster oder aufgezeichneter Daten zurück.</td>
+<td>bitsperpel</td>
+<td>Gibt die Anzahl der Bits pro Pixel zum Speichern erfasster oder aufgezeichneter Daten zurück.</td>
 </tr>
 <tr class="odd">
-<td>BitsPerSample</td>
+<td>bitspersample</td>
 <td>Gibt die Bits pro Stichprobe zurück.</td>
 </tr>
 <tr class="even">
 <td>Helligkeit</td>
-<td>Gibt die aktuelle videohelligkeits Ebene zurück.</td>
+<td>Gibt die aktuelle Video-Helligkeitsstufe zurück.</td>
 </tr>
 <tr class="odd">
 <td>bytespersec</td>
-<td>Gibt die durchschnittliche Anzahl von Bytes pro Sekunde wiedergegeben oder aufgezeichnet zurück.</td>
+<td>Gibt die durchschnittliche Anzahl der pro Sekunde abgespielten oder aufgezeichneten Bytes zurück.</td>
 </tr>
 <tr class="even">
-<td>CDAudio-typspur <em>Nummer</em></td>
-<td>Gibt den Typ der angegebenen Nachverfolgung zurück. Hierbei kann es sich um &quot; Audiodaten &quot; oder &quot; andere handeln.&quot;</td>
+<td>cdaudio type track <em>number</em></td>
+<td>Gibt den Typ der angegebenen Tracknummer zurück. Dies kann Audio &quot; &quot; oder andere &quot; sein.&quot;</td>
 </tr>
 <tr class="odd">
 <td>Kanal</td>
-<td>Gibt den ganzzahligen Wert des Kanals zurück, der für den Tuner festgelegt wurde.</td>
+<td>Gibt den ganzzahligen Wert des Kanals zurück, der für den Tuner festgelegt ist.</td>
 </tr>
 <tr class="even">
-<td>Kanal-Tuner- <em>Nummer</em></td>
-<td>Wenn eine &quot; Tuner- &quot; <em>Nummer</em> angegeben wird, wird der aktuell ausgewählte Kanal für die logische Tuner- <em>Nummer</em> zurückgegeben. Beachten Sie, dass es mehrere logische Tuner geben kann.</td>
+<td>Channel-Tunernummer <em></em></td>
+<td>Wenn &quot; die Tunernummer angegeben wird, wird der aktuell ausgewählte Kanal auf der &quot; <em></em> logischen Tunernummer zurückgegeben. <em></em> Beachten Sie, dass es mehrere logische Tuner geben kann.</td>
 </tr>
 <tr class="odd">
 <td>channels</td>
@@ -418,387 +418,387 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszrequest** -P
 </tr>
 <tr class="even">
 <td>clock</td>
-<td>Gibt die externe Zeit zurück. Die Zeit muss eine lange ganze Zahl ohne Vorzeichen sein, die die Gesamt Inkremente ausdrückt. Weitere Informationen finden Sie im Befehl <a href="capability.md">Capability</a> &quot; Clock Inkrement Rate &quot; .</td>
+<td>Gibt die externe Zeit zurück. Die Zeit muss eine lange ganze Zahl ohne Vorzeichen sein, die die Gesamtinkrementwerte ausgibt. Weitere Informationen finden Sie unter dem <a href="capability.md">Befehl für die Inkrementrate</a> &quot; der &quot; Funktionsuhr.</td>
 </tr>
 <tr class="odd">
-<td>Takt-ID</td>
-<td>Gibt eine eindeutige Ganzzahl zurück, die die Uhr identifiziert.</td>
+<td>Clock-ID</td>
+<td>Gibt eine eindeutige ganze Zahl zurück, die die Uhr identifiziert.</td>
 </tr>
 <tr class="even">
 <td>color</td>
-<td>Gibt die aktuelle Farb Ebene zurück.</td>
+<td>Gibt die aktuelle Farbebene zurück.</td>
 </tr>
 <tr class="odd">
 <td>Kontrast</td>
-<td>Gibt die aktuelle Kontrast Ebene zurück.</td>
+<td>Gibt die aktuelle Kontrastebene zurück.</td>
 </tr>
 <tr class="even">
 <td>Zähler</td>
-<td>Gibt die Gegenposition im aktuellen Leistungs Zählers zurück.</td>
+<td>Gibt die Zählerposition im aktuellen Indikatorformat zurück.</td>
 </tr>
 <tr class="odd">
-<td>Counter-Format</td>
-<td>Gibt das aktuelle Leistungs Zähl Format zurück. Weitere Informationen finden Sie unter dem Befehl <a href="set.md">Set</a> &quot; Counter Format &quot; .</td>
+<td>Indikatorformat</td>
+<td>Gibt das aktuelle Zählerformat zurück. Weitere Informationen finden Sie im Befehl <a href="set.md">set</a> &quot; counter &quot; format.</td>
 </tr>
 <tr class="even">
-<td>Auflösung von Zählern</td>
-<td>Gibt &quot; Frames &quot; oder &quot; Sekunden zurück &quot; , die die Auflösung des Zählers angeben. Dies ist nicht mit der Genauigkeit identisch.</td>
+<td>Zählerauflösung</td>
+<td>Gibt &quot; Frames oder Sekunden &quot; &quot; &quot; zurück, die die Auflösung des Indikators angeben. Dies ist nicht identisch mit der Genauigkeit.</td>
 </tr>
 <tr class="odd">
-<td>aktuelle Spur</td>
-<td>Gibt den aktuellen Titel zurück. Der mcist-Sequencer gibt 1 zurück.</td>
+<td>Aktuelle Spur</td>
+<td>Gibt die aktuelle Spur zurück. Der MCISEQ-Sequencer gibt 1 zurück.</td>
 </tr>
 <tr class="even">
-<td>Größe der Festplatte</td>
-<td>Gibt entweder 8 oder 12 zurück, was die Größe der geladenen CD in Zoll angibt.</td>
+<td>Datenträgergröße</td>
+<td>Gibt entweder 8 oder 12 zurück, was die Größe des geladenen Datenträgers in Zoll angibt.</td>
 </tr>
 <tr class="odd">
-<td><em>Festplatten Speicherplatz</em></td>
-<td>Gibt den ungefähren Speicherplatz im aktuellen Zeitformat zurück, der durch einen <a href="reserve.md">Reserve</a> Befehl für das angegebene Laufwerk abgerufen werden kann <em>.</em> Das <em>Laufwerk</em> wird in der Regel als einzelner Buchstabe oder als einzelner Buchstabe angegeben, gefolgt von einem Doppelpunkt (:). Einige Geräte verwenden jedoch möglicherweise einen Pfad.</td>
+<td>Laufwerk <em>für</em> Speicherplatz</td>
+<td>Gibt den ungefähren Speicherplatz im aktuellen Zeitformat zurück, <a href="reserve.md"></a> der durch einen Reservebefehl für das angegebene Laufwerk ermittelt werden <em>kann.</em> Das <em>Laufwerk</em> wird in der Regel als ein einzelner Buchstabe oder ein einzelner Buchstabe gefolgt von einem Doppelpunkt (:). Einige Geräte verwenden jedoch möglicherweise einen Pfad.</td>
 </tr>
 <tr class="even">
-<td>Divisions Typ</td>
-<td>Gibt einen der folgenden Typen von Datei Teilungen zurück:
+<td>Divisionstyp</td>
+<td>Gibt einen der folgenden Dateidivisionstypen zurück:
 <ul>
-<li>Ppqn</li>
+<li>PPQN</li>
 <li>SMPTE 24-Frame</li>
 <li>SMPTE 25-Frame</li>
-<li>SMPTE 30-Ablage Rahmen</li>
+<li>SMPTE 30-Dropframe</li>
 <li>SMPTE 30-Frame</li>
 </ul>
-<br/> Verwenden Sie diese Informationen, um das Format der Datei "MIDI" und die Bedeutung von "Tempo" und Positionsinformationen zu bestimmen.<br/></td>
+<br/> Verwenden Sie diese Informationen, um das Format der FORMATDATEI und die Bedeutung von Geschwindigkeits- und Positionsinformationen zu bestimmen.<br/></td>
 </tr>
 <tr class="odd">
-<td>Datei Abschluss</td>
-<td>Gibt den geschätzten Prozentsatz für das <a href="load.md">Laden</a>, <a href="save.md">Speichern</a>, <a href="capture.md">erfassen</a>, <a href="cut.md">Ausschneiden</a>, <a href="copy.md">Kopieren</a>, <a href="delete.md">Löschen</a>, <a href="paste.md">Einfügen</a>oder Rückgängigmachen fort. <a href="undo.md"></a> (Anwendungen können dies verwenden, um einen visuellen Indikator für den Fortschritt bereitzustellen.)</td>
+<td>Dateiabschluss</td>
+<td>Gibt den geschätzten Prozentsatz <a href="capture.md"></a> <a href="load.md">zurück,</a>in <a href="copy.md"></a>dem ein Lade-, <a href="save.md">Speicher-,</a>Erfassungs-, Ausschneide-, Kopier-, <a href="delete.md"></a>Lösch-, <a href="paste.md"></a>Einfüge- oder <a href="undo.md">Rückgängig-Vorgang</a> durchgeführt wurde. <a href="cut.md"></a> (Anwendungen können damit einen visuellen Fortschrittsindikator bereitstellen.)</td>
 </tr>
 <tr class="even">
 <td>Dateiformat</td>
-<td>Gibt das aktuelle Dateiformat für <a href="record.md">Daten Satz</a> -oder <strong>Speicher</strong> Befehle zurück.</td>
+<td>Gibt das aktuelle Dateiformat für <a href="record.md">Datensatz- oder</a> <strong>Speicherbefehle</strong> zurück.</td>
 </tr>
 <tr class="odd">
 <td>Dateimodus</td>
-<td>Gibt das &quot; Laden &quot; , &quot; speichern &quot; , &quot; Bearbeiten oder im Leerlauf zurück &quot; &quot; &quot; . Während eines <a href="load.md"><strong>Lade</strong></a> Vorgangs wird das Laden zurückgegeben &quot; &quot; . Während der <a href="https://www.bing.com/search?q=<strong>save</strong>"><strong>Speicher</strong></a> -und <a href="capture.md"><strong>Aufzeichnungs</strong></a> Vorgänge wird das Speichern zurückgegeben &quot; &quot; . Beim <a href="cut.md"><strong>Ausschneiden</strong></a>, <a href="copy.md"><strong>Kopieren</strong></a>, <a href="delete.md"><strong>Löschen</strong></a>, <a href="paste.md"><strong>Einfügen</strong></a>oder Rückgängigmachen wird die Bearbeitung zurückgegeben <a href="undo.md"><strong></strong></a> &quot; &quot; .</td>
+<td>Gibt &quot; das &quot; Laden, &quot; &quot; Speichern, Bearbeiten oder im &quot; &quot; &quot; Leerlauf &quot; zurück. Während eines <a href="load.md"><strong>Ladevorgang</strong></a> wird das Laden &quot; von &quot; zurückgegeben. Während <a href="https://www.bing.com/search?q=<strong>save</strong>"><strong>der Speicher-</strong></a> <a href="capture.md"><strong>und Erfassungsvorgänge</strong></a> wird das Speichern &quot; von &quot; zurückgegeben. Während <a href="cut.md"><strong>der Ausschneide-,</strong></a> <a href="delete.md"><strong>Kopier-, Lösch-,</strong></a>Einfüge- oder <a href="undo.md"><strong>Rückgängig-Vorgänge</strong></a> wird die Bearbeitung von <a href="copy.md"><strong></strong></a> <a href="paste.md"><strong></strong></a> &quot; &quot; zurückgegeben.</td>
 </tr>
 <tr class="even">
-<td>Tag formatieren</td>
+<td>Formattag</td>
 <td>Gibt das Formattag zurück.</td>
 </tr>
 <tr class="odd">
 <td>forward</td>
-<td>Gibt <strong>true</strong> zurück, wenn die Wiedergabe Richtung vorwärts ist oder wenn das Gerät nicht wiedergegeben wird.</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn die Wiedergaberichtung vorwärts ist oder wenn das Gerät nicht abspielt.</td>
 </tr>
 <tr class="even">
-<td>Framerate</td>
-<td>Gibt die Anzahl von Frames pro Sekunde zurück, die vom Gerät standardmäßig verwendet werden. Von NTSC-Geräten werden 30, PAL 25 usw. zurückgegeben.</td>
+<td>Bildrate</td>
+<td>Gibt die Anzahl der Frames pro Sekunde zurück, die das Gerät standardmäßig verwendet. NTSC-Geräte geben 30, PAL 25 und so weiter zurück.</td>
 </tr>
 <tr class="odd">
-<td>Übersprungene Frames</td>
-<td>Gibt die Anzahl der Frames zurück, die beim Abspielen der letzten AVI-Sequenz nicht gezeichnet wurden. Dieses Flag wird nur vom MCIAVI Digital-Video-Treiber erkannt. Es ist nur für die Leistungs Auswertung gedacht. der Rückgabewert ist schwierig zu interpretieren.</td>
+<td>Frames übersprungen</td>
+<td>Gibt die Anzahl der Frames zurück, die nicht gezeichnet wurden, als die letzte AVI-Sequenz abgespielt wurde. Dieses Flag wird nur vom MCIAVI-Treiber für digitale Videos erkannt. Sie ist nur für die Leistungsauswertung bestimmt. Der Rückgabewert ist schwer zu interpretieren.</td>
 </tr>
 <tr class="even">
 <td>Gamma</td>
-<td>Gibt den Wert zurück, der mit <a href="setvideo.md"><strong>setvideo</strong></a> &quot; Gamma auf Value festgelegt wurde &quot; <em></em>.</td>
+<td>Gibt den Wert zurück, der mit <a href="setvideo.md"><strong>setvideo</strong></a> &quot; gamma auf den Wert festgelegt &quot; <em>wurde.</em></td>
 </tr>
 <tr class="odd">
 <td>Index</td>
-<td>Gibt die aktuelle Index Anzeige zurück. Weitere Informationen finden Sie unter dem Befehl <a href="set.md"><strong>Set</strong></a> &quot; Index &quot; .</td>
+<td>Gibt die aktuelle Indexanzeige zurück. Weitere Informationen finden Sie im Befehl <a href="set.md"><strong>set</strong></a> &quot; &quot; index.</td>
 </tr>
 <tr class="even">
-<td>Index für</td>
-<td>Gibt <strong>true</strong> zurück, wenn der Index on ist.</td>
+<td>Index auf</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn der Index ein on ist.</td>
 </tr>
 <tr class="odd">
 <td>input</td>
-<td>Gibt den Eingabe Satz zurück. Wenn kein Wert festgelegt ist, gibt der zurückgegebene Fehler an, dass ein beliebiges Gerät verwendet werden kann. Bei Digital Video-Geräten werden die Flags "Bass", "Höhen", "Volume", "Helligkeit", "Farbe", " &quot; &quot; Kontrast", "Gamma", " &quot; Schärfe" &quot; &quot; &quot; &quot; oder " &quot; &quot; &quot; &quot; &quot; &quot; &quot; Tönungs" so geändert, &quot; &quot; &quot; &quot; dass Sie nur Dies ist die Standardeinstellung, wenn die Eingabe überwacht wird.</td>
+<td>Gibt den Eingabesatz zurück. Wenn keines festgelegt ist, gibt der zurückgegebene Fehler an, dass ein beliebiges Gerät verwendet werden kann. Bei Geräten mit digitalem Video ändert das Flag für &quot; &quot; Dasbenen, &quot; &quot; Treble, &quot; &quot; Lautstärke, &quot; &quot; Helligkeit, &quot; &quot; Farbe, &quot; &quot; Kontrast, &quot; &quot; Gamma, &quot; &quot; &quot; &quot; Schärfe oder Tönung so, dass es nur für die Eingabe gilt. Dies ist die Standardeinstellung beim Überwachen der Eingabe.</td>
 </tr>
 <tr class="even">
 <td>Linkes Volume</td>
-<td>Gibt das für den linken Audiokanal festgelegte Volume zurück.</td>
+<td>Gibt das Volume zurück, das für den linken Audiokanal festgelegt wurde.</td>
 </tr>
 <tr class="odd">
 <td>length</td>
-<td>Gibt die Gesamtlänge des Mediums im aktuellen Zeitformat zurück. Bei ppqn-Dateien wird die Länge in Song Zeiger Einheiten zurückgegeben. Für SMPTE-Dateien wird dieser Wert als <em>hh: mm: SS: FF</em>zurückgegeben, wobei <em>HH</em> Stunden, <em>mm</em> den Wert Minutes, <em>SS</em> den Wert seconds und <em>FF</em> ein Rahmen ist. Bei VCR-Geräten beträgt die Länge 2 Stunden (es sei denn, die Länge wurde explizit mit dem <a href="https://www.bing.com/search?q=<strong>set</strong>"><strong>Set</strong></a> -Befehl geändert).</td>
+<td>Gibt die Gesamtlänge des Mediums im aktuellen Zeitformat zurück. Bei PPQN-Dateien wird die Länge in Musikzeigereinheiten zurückgegeben. Bei SMPTE-Dateien wird sie als <em>hh:mm:ss:ff</em>zurückgegeben, wobei <em>hh</em> stunden, <em>mm minuten,</em> <em>ss</em> Sekunden und <em>ff</em> Frames ist. Bei VCR-Geräten beträgt die Länge 2 Stunden (es sei denn, die Länge wurde mit dem <a href="https://www.bing.com/search?q=<strong>set</strong>"><strong>Set-Befehl explizit</strong></a> geändert).</td>
 </tr>
 <tr class="even">
-<td>Länge der <em>Nachverfolgung</em></td>
-<td>Gibt die Länge der Spur (in Zeit oder Rahmen) zurück, die durch <em>Number</em>angegeben wird. Bei ppqn-Dateien wird die Länge in Song Zeiger Einheiten zurückgegeben. Für SMPTE-Dateien wird dieser Wert als <em>hh: mm: SS: FF</em>zurückgegeben, wobei <em>HH</em> Stunden, <em>mm</em> den Wert Minutes, <em>SS</em> den Wert seconds und <em>FF</em> ein Rahmen ist.<br/></td>
+<td><em>Längenverfolgungsnummer</em></td>
+<td>Gibt die Länge der Spur in Zeit oder Frames zurück, die durch die Zahl <em>angegeben wird.</em> Bei PPQN-Dateien wird die Länge in Musikzeigereinheiten zurückgegeben. Bei SMPTE-Dateien wird sie als <em>hh:mm:ss:ff</em>zurückgegeben, wobei <em>hh</em> stunden, <em>mm minuten,</em> <em>ss</em> Sekunden und <em>ff</em> Frames ist.<br/></td>
 </tr>
 <tr class="odd">
 <td>Level</td>
-<td>Gibt den aktuellen PCM-audiobeispielwert zurück.</td>
+<td>Gibt den aktuellen PCM-Audiobeispielwert zurück.</td>
 </tr>
 <tr class="even">
 <td>master</td>
-<td>Gibt " &quot; MIDI", "None" oder " &quot; &quot; &quot; &quot; SMPTE" &quot; abhängig vom Typ des Synchronisierungs Satzes zurück.</td>
+<td>Gibt abhängig vom Typ des Synchronisierungssets , none oder &quot; &quot; &quot; &quot; &quot; smpte &quot; zurück.</td>
 </tr>
 <tr class="odd">
 <td>Medien vorhanden</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn das Medium in das Gerät eingefügt wird, andernfalls " <strong>false</strong> ". Sequencer-, Video-Overlay-, Digital Video-und Waveform-Audiogeräte geben " <strong>true</strong>" zurück.</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Medium in das Gerät eingefügt wird, andernfalls <strong>FALSE.</strong> Sequencer-, Video overlay-, digital-video- und waveform-audio-Geräte geben <strong>TRUE zurück.</strong></td>
 </tr>
 <tr class="even">
 <td>Medientyp</td>
-<td>Gibt den Typ des Mediums zurück. Bei VCRs sind dies &quot; 8mm &quot; , &quot; VHS &quot; , &quot; SVHS &quot; , &quot; Beta &quot; , &quot; Hi8 &quot; , &quot; edbeta &quot; oder &quot; andere &quot; . Bei Video Disks handelt es sich hierbei um &quot; CAV &quot; , &quot; CLV &quot; oder &quot; andere &quot; , abhängig vom Typ der Videodisk.</td>
+<td>Gibt den Medientyp zurück. Für VCRS ist &quot; &quot; dies 8mm, &quot; vhs, &quot; &quot; svhs, &quot; &quot; &quot; beta, &quot; &quot; Hi8, &quot; edbeta &quot; oder andere &quot; &quot; . Bei videodiscs ist dies abhängig vom Typ von &quot; &quot; &quot; &quot; &quot; videodisc CAV, CLV oder &quot; andere .</td>
 </tr>
 <tr class="odd">
 <td>Modus</td>
-<td>Gibt den aktuellen Modus des Geräts zurück. Alle Geräte können die Werte "nicht bereit", "angehalten", "wieder &quot; Gabe" &quot; und " &quot; &quot; &quot; &quot; &quot; angehalten &quot; " Einige Geräte können die zusätzlichen &quot; Werte für geöffnete, geöffnetes &quot; &quot; &quot; , &quot; aufzeichnen &quot; und &quot; Suchen &quot; zurückgeben.</td>
+<td>Gibt den aktuellen Modus des Geräts zurück. Alle Geräte können die nicht &quot; bereiten &quot; , &quot; angehaltenen &quot; , &quot; &quot; wiedergabe- und &quot; beendeten Werte &quot; zurückgeben. Einige Geräte können die zusätzlichen offenen &quot; &quot; , &quot; geparkten &quot; , &quot; Aufzeichnungs- &quot; und &quot; Suchwerte &quot; zurückgeben.</td>
 </tr>
 <tr class="even">
 <td>Überwachen</td>
-<td>Gibt die &quot; Datei &quot; oder die Eingabe zurück &quot; &quot; . Der zurückgegebene Wert gibt die aktuelle Präsentations Quelle an.</td>
+<td>Gibt die &quot; Datei oder die Eingabe &quot; &quot; &quot; zurück. Der zurückgegebene Wert gibt die aktuelle Präsentationsquelle an.</td>
 </tr>
 <tr class="odd">
-<td>Monitor-Methode</td>
-<td>Gibt &quot; Pre &quot; , &quot; Post &quot; oder &quot; Direct zurück &quot; . Der zurückgegebene Wert gibt die für die Eingabe Überwachung verwendete Methode an.</td>
+<td>monitor-Methode</td>
+<td>Gibt &quot; &quot; pre, &quot; post oder direct &quot; &quot; &quot; zurück. Der zurückgegebene Wert gibt die Methode an, die für die Eingabeüberwachung verwendet wird.</td>
 </tr>
 <tr class="even">
-<td>ell</td>
-<td>Das Element ändert die Flags "Bass", "Helligkeit", "Color", "Contrast", "Gamma", "Schärding", "Tönungs", "Treble" und "Volume", sodass &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; anstelle der aktuellen Einstellung der</td>
+<td>Nominale</td>
+<td>Das Element ändert die Flags für Denk-, &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; Helligkeits-, Farb-, Kontrast-, Gamma-, Schärfe-, Tönungs-, Treble- und &quot; Lautstärkeflags, &quot; &quot; um den nominalen Wert anstelle der aktuellen Einstellung zurück zu geben.</td>
 </tr>
 <tr class="odd">
-<td>Nominale Bildrate</td>
-<td>Gibt die nominale Frame Rate zurück, die der Datei zugeordnet ist. Die Einheiten werden in Frames pro Sekunde multipliziert mit 1000.</td>
+<td>nominale Bildfrequenz</td>
+<td>Gibt die nominale Framerate zurück, die der Datei zugeordnet ist. Die Einheiten werden in Frames pro Sekunde multipliziert mit 1000.</td>
 </tr>
 <tr class="even">
-<td>Nominale Daten Satz Rahmenrate</td>
-<td>Gibt die nominale Frame Rate zurück, die mit dem Eingabe Videosignal verknüpft ist. Die Einheiten werden in Frames pro Sekunde multipliziert mit 1000.</td>
+<td>Nominale Bildfrequenz des Datensatzes</td>
+<td>Gibt die nominale Bildfrequenz zurück, die dem Eingabevideosignal zugeordnet ist. Die Einheiten werden in Frames pro Sekunde multipliziert mit 1000.</td>
 </tr>
 <tr class="odd">
 <td>Anzahl von Audiospuren</td>
-<td>Gibt die Anzahl der Audiospuren auf den Medien zurück.</td>
+<td>Gibt die Anzahl der Audiospuren auf dem Medium zurück.</td>
 </tr>
 <tr class="even">
 <td>Anzahl der Spuren</td>
-<td>Gibt die Anzahl der Spuren auf den Medien zurück. Die Geräte mcite q und MCIWave geben 1 zurück, wie die meisten VCR-Geräte. Dieses Flag wird vom mcipionr-Gerät nicht unterstützt.</td>
+<td>Gibt die Anzahl der Spuren auf dem Medium zurück. Die MCISEQ- und MCIWAVE-Geräte geben wie die meisten VCR-Geräte 1 zurück. Dieses Flag wird vom MCIPIONR-Gerät nicht unterstützt.</td>
 </tr>
 <tr class="odd">
-<td>Anzahl der Videospuren</td>
+<td>Anzahl von Videospuren</td>
 <td>Gibt die Anzahl der Videospuren auf den Medien zurück.</td>
 </tr>
 <tr class="even">
 <td>offset</td>
-<td>Gibt den Offset einer SMPTE-basierten Datei zurück. Der Offset ist die Startzeit einer SMPTE-basierten Sequenz. Die Zeit wird als <em>hh: mm: SS: FF</em>zurückgegeben, <em>wobei HH</em> Stunden, <em>mm</em> den Wert Minutes, <em>SS</em> den Wert Sekunden und <em>FF</em> ein Rahmen ist.</td>
+<td>Gibt den Offset einer SMPTE-basierten Datei zurück. Der Offset ist die Startzeit einer SMPTE-basierten Sequenz. Die Zeit wird als <em>hh:mm:ss:ff</em>zurückgegeben, wobei <em>hh</em> stunden, <em>mm</em> minuten, <em>ss</em> sekunden und <em>ff</em> Frames ist.</td>
 </tr>
 <tr class="odd">
 <td>output</td>
-<td>Gibt die aktuell festgelegte Ausgabe zurück. Wenn keine Ausgabe festgelegt ist, gibt der zurückgegebene Fehler an, dass ein beliebiges Gerät verwendet werden kann. Bei Digital Video-Geräten werden die Flags "Bass", "Höhen", "Volume", "Helligkeit", "Farbe", " &quot; &quot; Kontrast", "Gamma", " &quot; Schärfe" &quot; &quot; &quot; &quot; oder " &quot; &quot; &quot; &quot; &quot; &quot; &quot; Tönungs" so geändert, &quot; &quot; &quot; &quot; dass Sie nur Dies ist die Standardeinstellung beim Überwachen einer Datei.</td>
+<td>Gibt die aktuell festgelegte Ausgabe zurück. Wenn keine Ausgabe festgelegt ist, gibt der zurückgegebene Fehler an, dass jedes Gerät verwendet werden kann. Ändert für Digitalvideogeräte das &quot; &quot; &quot; Farbflag , Treble &quot; , &quot; &quot; &quot; &quot; Volume, &quot; &quot; Helligkeit, Farbe, &quot; &quot; Kontrast, &quot; &quot; Gamma, &quot; Schärfe oder &quot; &quot; Tönung, &quot; sodass es nur für die Ausgabe gilt. Dies ist die Standardeinstellung beim Überwachen einer Datei.</td>
 </tr>
 <tr class="even">
 <td>Pausenmodus</td>
-<td>Gibt eine Aufzeichnung zurück, &quot; &quot; Wenn das Gerät während der Aufzeichnung angehalten wird. Die Wiedergabe wird zurückgegeben, &quot; &quot; Wenn das Gerät während der Wiedergabe angehalten wird. Sie gibt die Fehler Aktion zurück, die &quot; im aktuellen Modus nicht anwendbar &quot; ist, wenn das Gerät nicht angehalten wurde.</td>
+<td>Gibt &quot; die Aufzeichnung &quot; zurück, wenn das Gerät während der Aufzeichnung angehalten wird. Die &quot; Wiedergabe &quot; wird zurückgegeben, wenn das Gerät während der Wiedergabe angehalten wird. Der Fehler &quot; Aktion kann im aktuellen Modus nicht angewendet &quot; werden, wenn das Gerät nicht angehalten ist, wird zurückgegeben.</td>
 </tr>
 <tr class="odd">
-<td>Timeout für Pause</td>
-<td>Gibt die maximale Dauer eines <a href="pause.md"><strong>Pause</strong></a> -Befehls in Millisekunden zurück.</td>
+<td>Timeout anhalten</td>
+<td>Gibt die maximale Dauer eines <a href="pause.md"><strong>Pausenbefehls</strong></a> in Millisekunden zurück.</td>
 </tr>
 <tr class="even">
-<td>Wiedergabe Format</td>
-<td>Gibt einen Code zurück, der das Format angibt, in dem das Videoband wiedergegeben wird, wenn es erkennbar ist: &quot; LP &quot; , &quot; EP &quot; , &quot; SP &quot; oder &quot; andere &quot; . Weitere Informationen finden Sie unter Flag für das &quot; Daten Satz Format &quot; .</td>
+<td>Wiedergabeformat</td>
+<td>Gibt einen Code zurück, der das Format angibt, in dem die Videoaufzeichnung wiedergegeben wird, sofern erkennbar: &quot; lp , ep , sp oder andere &quot; &quot; &quot; &quot; &quot; &quot; &quot; . Weitere Informationen finden Sie unter &quot; Dem &quot; Datensatzformatflag.</td>
 </tr>
 <tr class="odd">
 <td>Wiedergabegeschwindigkeit</td>
-<td>Gibt einen Wert zurück, der angibt, wie genau die tatsächliche Wiedergabezeit der letzten AVI-Sequenz mit der Ziel Wiedergabezeit übereinstimmt. Der Wert 1000 gibt an, dass die Zielzeit und die tatsächliche zeitgleich sind. Der Wert 2000 gibt z. b. an, dass die AVI-Sequenz zweimal so lange gedauert hat, wie Sie vorhanden sein sollte. Dieses Flag wird nur vom MCIAVI Digital-Video-Treiber erkannt. Es ist nur für die Leistungs Auswertung gedacht. der Rückgabewert ist schwierig zu interpretieren.</td>
+<td>Gibt einen Wert zurück, der angibt, wie genau die tatsächliche Wiedergabezeit der letzten AVI-Sequenz mit der Zielwiedergabezeit übereinstimmt. Der Wert 1000 gibt an, dass die Zielzeit und die tatsächliche Zeit identisch waren. Der Wert 2000 würde z. B. angeben, dass die WIEDERGABE der AVI-Sequenz doppelt so lange gedauert hat, wie sie sollte. Dieses Flag wird nur vom MCIAVI-Treiber für digitale Videos erkannt. Sie ist nur für die Leistungsauswertung vorgesehen. Der Rückgabewert ist schwer zu interpretieren.</td>
 </tr>
 <tr class="even">
 <td>port</td>
-<td>Gibt die der Sequenz zugewiesene Nummer des MIDI-Ports zurück.</td>
+<td>Gibt die der Sequenz zugewiesene PORTS-Nummer zurück.</td>
 </tr>
 <tr class="odd">
 <td>position</td>
-<td>Gibt die aktuelle Position zurück. Bei ppqn-Dateien wird die Position in den Zeiger Einheiten des Titels zurückgegeben. Für SMPTE-Dateien wird dieser Wert als <em>hh: mm: SS: FF</em>zurückgegeben, wobei <em>HH</em> Stunden, <em>mm</em> den Wert Minutes, SS den Wert seconds und <em>FF</em> ein Rahmen ist.<br/></td>
+<td>Gibt die aktuelle Position zurück. Bei PPQN-Dateien wird die Position in Songzeigereinheiten zurückgegeben. Für SMPTE-Dateien wird sie als <em>hh:mm:ss:ff</em>zurückgegeben, wobei <em>hh</em> stunden, <em>mm</em> minuten, ss sekunden und <em>ff</em> Frames ist.<br/></td>
 </tr>
 <tr class="even">
-<td>Positions Anfang</td>
-<td>Gibt die Position des Starts der verwendbaren Medien zurück.</td>
+<td>position start</td>
+<td>Gibt die Position des Anfangs der verwendbaren Medien zurück.</td>
 </tr>
 <tr class="odd">
-<td>Positions <em>Nummer</em></td>
-<td>Gibt die Position des Starts der Spur zurück, die durch <em>Number</em>angegeben wird. Bei ppqn-Dateien wird das Zeitformat in den zeigerpointer-Einheiten zurückgegeben. Für SMPTE-Dateien wird dieser Wert als <em>hh: mm: SS: FF</em>zurückgegeben, wobei <em>HH</em> Stunden, <em>mm</em> den Wert Minutes, <em>SS</em> den Wert seconds und <em>FF</em> ein Rahmen ist. Der mcist-Sequencer gibt 0 (null) zurück. Dieses Flag wird vom mcipionr-Gerät nicht unterstützt. Das MCIWave-Gerät gibt NULL zurück.</td>
+<td>Position track <em>number</em></td>
+<td>Gibt die Position des Beginns der <em>Durchnummer</em>angegebenen Spur zurück. Bei PPQN-Dateien wird das Zeitformat in Einheiten für Songzeiger zurückgegeben. Für SMPTE-Dateien wird sie als <em>hh:mm:ss:ff</em>zurückgegeben, wobei <em>hh</em> stunden, <em>mm</em> minuten, <em>ss</em> sekunden und <em>ff</em> Frames ist. Der MCISEQ-Sequencer gibt 0 (null) zurück. Dieses Flag wird vom MCIPIONR-Gerät nicht unterstützt. Das MCIWAVE-Gerät gibt 0 (null) zurück.</td>
 </tr>
 <tr class="even">
-<td>Postroll Dauer</td>
-<td>Gibt die Länge von Videotape im aktuellen Zeitformat zurück, das zum Abbremsen des VCR-Transports erforderlich ist, <a href="pause.md"><strong></strong></a> wenn ein Befehl zum <a href="stop.md"><strong>Beenden oder anhalten</strong></a> ausgegeben wird.</td>
+<td>Dauer der Postrolls</td>
+<td>Gibt die Länge des Videobands im aktuellen Zeitformat zurück, die erforderlich ist, um den VCR-Transport zu unterbrechen, wenn ein Befehl zum <a href="stop.md"><strong>Beenden</strong></a> oder <a href="pause.md"><strong>Anhalten</strong></a> ausgegeben wird.</td>
 </tr>
 <tr class="odd">
 <td>Einschalten</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn die VCR-Stromversorgung eingeschaltet ist.</td>
+<td>Gibt <strong>TRUE</strong> zurück, wenn die Stromversorgung des VCR eingeschaltet ist.</td>
 </tr>
 <tr class="even">
-<td>Vorabversion</td>
-<td>Gibt die Länge von Videotape im aktuellen Zeitformat zurück, das zum stabilisieren der VCR-Ausgabe benötigt wird.</td>
+<td>Dauer des Vorabrolls</td>
+<td>Gibt die Länge der Videoaufzeichnung im aktuellen Zeitformat zurück, die erforderlich ist, um die VCR-Ausgabe zu stabilieren.</td>
 </tr>
 <tr class="odd">
 <td>ready</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn das Gerät bereit ist, einen anderen Befehl zu akzeptieren.</td>
+<td>Gibt <strong>TRUE</strong> zurück, wenn das Gerät bereit ist, einen anderen Befehl zu akzeptieren.</td>
 </tr>
 <tr class="even">
-<td>Daten Satz Format</td>
-<td>Gibt einen Code zurück, der das Format angibt, in dem das Videoband aufgezeichnet wird. Die aktuellen Rückgabe Typen sind &quot; LP &quot; , &quot; EP &quot; , &quot; SP &quot; oder &quot; andere &quot; . Diese Formate sind nicht für die VHS spezifisch und können auf alle VCR angewendet werden, die über mehrere auswählbare Aufzeichnungs Formate verfügen. Der &quot; SP &quot; -Typ ist das schnellste, qualitativ hochwertige Aufzeichnungsformat und wird als Standardeinstellung für VCRs mit einem einzelnen Format verwendet.</td>
+<td>Datensatzformat</td>
+<td>Gibt einen Code zurück, der das Format angibt, in dem die Videoaufzeichnung aufgezeichnet wird. Die aktuellen Rückgabetypen sind &quot; &quot; lp, &quot; &quot; ep, &quot; sp oder andere &quot; &quot; &quot; . Diese Formate sind nicht VHS-spezifisch und können auf jeden VCR angewendet werden, der über mehrere auswählbare Aufzeichnungsformate verfügt. Der &quot; Typ sp ist das schnellste &quot; Aufzeichnungsformat mit der höchsten Qualität und wird standardmäßig für VCRs im Einzelformat verwendet.</td>
 </tr>
 <tr class="odd">
-<td>Frame Frequenz aufzeichnen</td>
-<td>Gibt die für die Komprimierung verwendete Frame Rate in Frames pro Sekunde multipliziert mit 1000 zurück.</td>
+<td>Aufzeichnen der Bildfrequenz</td>
+<td>Gibt die Bildfrequenz in Frames pro Sekunde multipliziert mit 1000 zurück, die für die Komprimierung verwendet wird.</td>
 </tr>
 <tr class="even">
-<td>Verweis <em>Rahmen</em></td>
-<td>Gibt die Frame Nummer für das nächste Keyframe-Bild zurück, das dem angegebenen <em>Frame</em>vorangestellt ist.</td>
+<td><em>Referenzframe</em></td>
+<td>Gibt die Framenummer für das nächste Keyframebild zurück, das dem angegebenen <em>Frame</em>vorangestellt ist.</td>
 </tr>
 <tr class="odd">
-<td>reservierte Größe</td>
-<td>Gibt die Größe des reservierten Arbeitsbereichs im aktuellen Zeitformat zurück. Die Größe entspricht der ungefähren Zeit, die für die Wiedergabe der komprimierten Daten aus einem vollständigen Arbeitsbereich benötigt wird. Wenn kein reservierter Speicherplatz vorhanden ist, wird NULL zurückgegeben. Dieses Flag gibt die ungefähre Größe zurück, da der genaue Speicherplatz für komprimierte Daten im allgemeinen erst vorhergesagt werden kann, nachdem die Daten komprimiert wurden.</td>
+<td>Reservierte Größe</td>
+<td>Gibt die Größe des reservierten Arbeitsbereichs im aktuellen Zeitformat zurück. Die Größe entspricht der ungefähren Zeit, die zum Wiedergeben der komprimierten Daten aus einem vollständigen Arbeitsbereich dauern würde. Wenn kein reservierter Speicherplatz vorhanden ist, wird 0 zurückgegeben. Dieses Flag gibt die ungefähre Größe zurück, da der genaue Speicherplatz für komprimierte Daten im Allgemeinen erst vorhergesagt werden kann, nachdem die Daten komprimiert wurden.</td>
 </tr>
 <tr class="even">
-<td>richtiges Volume</td>
-<td>Gibt das für den rechten Audiokanal festgelegte Volume zurück.</td>
+<td>Richtiges Volume</td>
+<td>Gibt den Volumesatz für den richtigen Audiokanal zurück.</td>
 </tr>
 <tr class="odd">
 <td>samplespersec</td>
-<td>Gibt die Anzahl der Stichproben pro Sekunde zurück, die abgespielt oder aufgezeichnet wurden.</td>
+<td>Gibt die Anzahl der wiedergegebenen oder aufgezeichneten Stichproben pro Sekunde zurück.</td>
 </tr>
 <tr class="even">
-<td>genau suchen</td>
-<td>Gibt &quot; ein &quot; oder &quot; aus zurück und gibt an &quot; , ob das &quot; suchgenau- &quot; Flag festgelegt ist.</td>
+<td>Suchen sie genau</td>
+<td>Gibt &quot; ein oder aus &quot; &quot; &quot; zurück, das angibt, ob das &quot; &quot; Suchflag genau festgelegt ist.</td>
 </tr>
 <tr class="odd">
 <td>Schärfe</td>
-<td>Gibt die aktuelle Schärfe Ebene des Geräts zurück.</td>
+<td>Gibt den aktuellen Schärfegrad des Geräts zurück.</td>
 </tr>
 <tr class="even">
 <td>Seite</td>
-<td>Gibt 1 oder 2 zurück, um anzugeben, welche Seite der Video Platte geladen wird.</td>
+<td>Gibt 1 oder 2 zurück, um anzugeben, welche Seite der videodisc geladen wird.</td>
 </tr>
 <tr class="odd">
-<td>Sklaverei</td>
-<td>Gibt " &quot; file", "MIDI", "None" oder " &quot; &quot; &quot; &quot; &quot; &quot; SMPTE" &quot; abhängig vom Typ des Synchronisierungs Satzes zurück.</td>
+<td>Sklave</td>
+<td>Gibt &quot; abhängig vom Typ des Synchronisierungssatzes die Datei , die Datei , die Datei &quot; , keine oder &quot; &quot; &quot; &quot; &quot; Smpte &quot; zurück.</td>
 </tr>
 <tr class="even">
-<td>SMPTE</td>
-<td>Gibt den SMPTE-Zeit Code zurück, der der aktuellen Position im Arbeitsbereich zugeordnet ist. Dies ist eine Zeichenfolge mit dem Format <em>DD: DD: DD: DD</em>, wobei jede <em>d</em> eine Ziffer zwischen 0 und 9 bezeichnet. Wenn die Arbeitsbereichs Daten keine Zeitcode-Daten enthalten, gibt dieses Flag 00:00:00:00 zurück.</td>
+<td>Smpte</td>
+<td>Gibt den SMPTE-Zeitcode zurück, der der aktuellen Position im Arbeitsbereich zugeordnet ist. Dies ist eine Zeichenfolge mit dem Format <em>dd:dd:dd:dd,</em>wobei jeder <em>d</em> eine Ziffer von 0 bis 9 kennzeichnet. Wenn die Arbeitsbereichsdaten keine Timecodedaten enthalten, gibt dieses Flag 00:00:00:00 zurück.</td>
 </tr>
 <tr class="odd">
 <td>Geschwindigkeit</td>
-<td>Gibt die aktuelle Geschwindigkeit des Geräts in Frames pro Sekunde zurück (oder im gleichen Format, das vom Befehl <a href="https://www.bing.com/search?q=<strong>set</strong>"><strong>Set</strong></a> &quot; Speed verwendet wird &quot; ). Der mcipionr-Videodisk-Player unterstützt dieses Flag nicht.</td>
+<td>Gibt die aktuelle Geschwindigkeit des Geräts in Frames pro Sekunde zurück (oder in demselben Format, das vom Befehl <a href="https://www.bing.com/search?q=<strong>set</strong>"><strong>"set</strong></a> speed" verwendet &quot; &quot; wird). Der MCIPIONR-Videodisc-Player unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="even">
 <td>Startposition</td>
-<td>Gibt die Anfangsposition der Medien zurück.</td>
+<td>Gibt die Anfangsposition des Mediums zurück.</td>
 </tr>
 <tr class="odd">
-<td>immer noch Dateiformat</td>
-<td>Gibt das aktuelle Dateiformat für den <a href="capture.md"><strong>Aufzeichnungs</strong></a> Befehl zurück.</td>
+<td>Dateiformat "still"</td>
+<td>Gibt das aktuelle Dateiformat für den <a href="capture.md"><strong>Aufzeichnungsbefehl</strong></a> zurück.</td>
 </tr>
 <tr class="even">
 <td>strecken</td>
-<td>Gibt <strong>true</strong> zurück, wenn die Streckung aktiviert ist.</td>
+<td>Gibt <strong>TRUE</strong> zurück, wenn Stretching aktiviert ist.</td>
 </tr>
 <tr class="odd">
-<td>Lern</td>
-<td>Gibt das aktuelle Tempo einer MIDI-Sequenz im aktuellen Zeitformat zurück. Für Dateien mit dem ppqn-Format liegt das Tempo in den Beats pro Minute. Für Dateien mit dem SMPTE-Format wird das Tempo in Frames pro Sekunde angezeigt.</td>
+<td>tempo</td>
+<td>Gibt das aktuelle Tempo einer CAB-Sequenz im aktuellen Zeitformat zurück. Bei Dateien im PPQN-Format liegt das Tempo in Takten pro Minute. Bei Dateien mit dem SMPTE-Format liegt das Tempo in Frames pro Sekunde.</td>
 </tr>
 <tr class="even">
 <td>Zeitformat</td>
-<td>Gibt das aktuelle Zeitformat zurück. Weitere Informationen finden Sie unter den Zeitformaten im <a href="set.md"><strong>Set</strong></a> -Befehl.</td>
+<td>Gibt das aktuelle Zeitformat zurück. Weitere Informationen finden Sie unter den Zeitformaten im <a href="set.md"><strong>Set-Befehl.</strong></a></td>
 </tr>
 <tr class="odd">
-<td>Zeit Modus</td>
-<td>Gibt den aktuellen Positions Zeit Modus zurück. Es kann &quot; erkannt &quot; , &quot; Zeitcode &quot; oder Counter sein &quot; &quot; .</td>
+<td>Zeitmodus</td>
+<td>Gibt den aktuellen Positionszeitmodus zurück. Es kann &quot; , timecode oder counter erkannt &quot; &quot; &quot; &quot; &quot; werden.</td>
 </tr>
 <tr class="even">
-<td>Uhrzeittyp</td>
-<td>Gibt die aktuelle Positions Zeit zurück, die verwendet wird: &quot; Zeitcode &quot; oder &quot; counter &quot; .</td>
+<td>zeittyp</td>
+<td>Gibt die aktuelle Positionszeit zurück, die verwendet wird: &quot; timecode &quot; oder counter &quot; &quot; .</td>
 </tr>
 <tr class="odd">
-<td>Zeit Code vorhanden</td>
-<td>Gibt <strong>true</strong> zurück, wenn der Zeitcode an der aktuellen Position auf dem Band aufgezeichnet wurde. Der Zeitcode muss von der aktuellen Position aus fortfahren. Möglicherweise muss ein VCR wiedergegeben werden, um diese Bedingung zu überprüfen.</td>
+<td>timecode present</td>
+<td>Gibt <strong>TRUE</strong> zurück, wenn der Zeitcode an der aktuellen Position auf dem Band aufgezeichnet wurde. Der Zeitcode muss von der aktuellen Position entfernt werden. Möglicherweise muss ein VCR abgespielt werden, um diese Bedingung zu überprüfen.</td>
 </tr>
 <tr class="even">
-<td>Zeitcode-Datensatz</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn die VCR auf "Timecode aufzeichnen" festgelegt ist</td>
+<td>Timecodedatensatz</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn der VCR auf den Zeitcode aufzeichnen festgelegt ist.</td>
 </tr>
 <tr class="odd">
-<td>timecodetyp</td>
-<td>Gibt &quot; SMPTE &quot; , &quot; SMPTE Drop &quot; , &quot; other &quot; oder &quot; None zurück &quot; . Beachten Sie, dass die Frames pro Sekunde über den Befehl "Status-Frame Rate" abgerufen werden können &quot; &quot; . die Genauigkeit des Geräts kann vom Befehl " <a href="capability.md"><strong>Capability</strong></a> Seek Accuracy" zurückgegeben werden &quot; &quot; .</td>
+<td>Timecodetyp</td>
+<td>Gibt &quot; smpte, &quot; &quot; smpte &quot; drop, other &quot; oder none &quot; &quot; &quot; zurück. Beachten Sie, dass die Frames pro Sekunde über den Befehl status frame rate ermittelt werden können, und die Genauigkeit des Geräts kann durch den Befehl &quot; &quot; <a href="capability.md"><strong>capability</strong></a> &quot; seek accuracy zurückgegeben &quot; werden.</td>
 </tr>
 <tr class="even">
-<td>Tönungs</td>
-<td>Gibt die aktuelle Video-tint-Ebene zurück.</td>
+<td>Farbton</td>
+<td>Gibt die aktuelle Videotonebene zurück.</td>
 </tr>
 <tr class="odd">
 <td>Höhen</td>
-<td>Gibt die aktuelle audiotreble-Ebene zurück.</td>
+<td>Gibt den aktuellen Audio-Treble-Level zurück.</td>
 </tr>
 <tr class="even">
-<td>Nummer des Tuners</td>
-<td>Gibt die aktuelle logische-Tuner-Nummer zurück.</td>
+<td>Tunernummer</td>
+<td>Gibt die aktuelle logische Tunernummer zurück.</td>
 </tr>
 <tr class="odd">
-<td>nicht gespeicherte</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn im Arbeitsbereich aufgezeichnete Daten verloren gehen, die als Ergebnis eines Befehls zum <a href="close.md"><strong>Schließen</strong></a>, <a href="load.md"><strong>Laden</strong></a>, <a href="record.md"><strong>aufzeichnen</strong></a>, <a href="reserve.md"><strong>reservieren</strong></a>, <a href="cut.md"><strong>Ausschneiden</strong></a>, <a href="delete.md"><strong>Löschen</strong></a>oder <a href="paste.md"><strong>Einfügen</strong></a> verloren gehen. Gibt andernfalls <strong>false</strong> zurück.</td>
+<td>Ungespeicherten</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn im Arbeitsbereich aufgezeichnete Daten gespeichert sind, die möglicherweise durch <a href="delete.md"><strong></strong></a>einen Befehl zum <a href="close.md"><strong>Schließen,</strong></a> <a href="load.md"><strong>Laden,</strong></a> <a href="record.md"><strong>Aufzeichnen,</strong></a> <a href="reserve.md"><strong>Reservieren,</strong></a>Ausschneiden, <a href="cut.md"><strong></strong></a>Löschen oder Einfügen <a href="paste.md"><strong>verloren</strong></a> gehen. Gibt <strong>andernfalls FALSE</strong> zurück.</td>
 </tr>
 <tr class="even">
 <td>video</td>
-<td>Gibt &quot; ein &quot; oder &quot; aus zurück &quot; , das den vom <a href="setvideo.md"><strong>setvideo</strong></a> -Befehl festgelegten Status widerspiegelt.</td>
+<td>Gibt &quot; ein oder aus zurück und gibt den durch den &quot; &quot; &quot; <a href="setvideo.md"><strong>Setvideo-Befehl festgelegten Zustand</strong></a> wieder.</td>
 </tr>
 <tr class="odd">
-<td>Farbe des Video Schlüssels</td>
+<td>Videoschlüsselfarbe</td>
 <td>Gibt den Wert für die Schlüsselfarbe zurück.</td>
 </tr>
 <tr class="even">
-<td>Video Schlüssel Index</td>
-<td>Gibt den Wert für den Schlüssel Index zurück.</td>
+<td>Videoschlüsselindex</td>
+<td>Gibt den Wert für den Schlüsselindex zurück.</td>
 </tr>
 <tr class="odd">
 <td>Videomonitor</td>
-<td>Gibt &quot; &quot; die Ausgabe oder einen der gültigen Quell Eingabetypen zurück. Weitere Informationen finden Sie unter dem Befehl " <a href="setvideo.md"><strong>setvideo</strong></a> &quot; Monitor" &quot; .</td>
+<td>Gibt &quot; die Ausgabe oder einen der &quot; gültigen Quelleingabetypen zurück. Weitere Informationen finden Sie im Befehl <a href="setvideo.md"><strong>setvideo</strong></a> &quot; &quot; monitor.</td>
 </tr>
 <tr class="even">
-<td>Videomonitor Nummer</td>
-<td>Gibt die überwachte Video Nummer des vom Status Videomonitor zurückgegebenen Typs zurück &quot; &quot; . Weitere Informationen finden Sie unter dem Befehl <a href="setvideo.md">setvideo</a> .</td>
+<td>Videomonitornummer</td>
+<td>Gibt die überwachte Videonummer des Typs zurück, der vom &quot; Statusvideomonitor zurückgegeben &quot; wird. Weitere Informationen finden Sie unter dem <a href="setvideo.md">Befehl setvideo.</a></td>
 </tr>
 <tr class="odd">
-<td>Videodaten Satz</td>
-<td>Gibt &quot; ein &quot; oder &quot; aus &quot; dem aktuellen Zustand zurück, der durch den <a href="setvideo.md"><strong>setvideo</strong></a> -Datensatz festgelegt wird &quot; &quot; .</td>
+<td>Videoaufzeichnung</td>
+<td>Gibt &quot; ein oder aus zurück und gibt den aktuellen Zustand &quot; &quot; &quot; wieder, der durch <a href="setvideo.md"><strong>setvideo</strong></a> &quot; record festgelegt &quot; wurde.</td>
 </tr>
 <tr class="even">
-<td><em>Nummer</em> der Videodaten Satz Verfolgung</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn VCR auf "Video aufzeichnen" festgelegt ist. Wenn keine Nachverfolgung angegeben ist, wird der Standardwert 1 angenommen.</td>
+<td>Videoaufzeichnungs-Tracknummer <em></em></td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn der VCR für die Aufzeichnung von Videos festgelegt ist. Wenn keine Spurnummer angegeben wird, wird der Standardwert 1 angenommen.</td>
 </tr>
 <tr class="odd">
 <td>Videoquelle</td>
-<td>Gibt den Typ der Videoquelle zurück. Weitere Informationen finden Sie unter dem Befehl <a href="setvideo.md"><strong>setvideo</strong></a> .</td>
+<td>Gibt den Videoquellentyp zurück. Weitere Informationen finden Sie unter dem <a href="setvideo.md"><strong>Befehl setvideo.</strong></a></td>
 </tr>
 <tr class="even">
-<td>Video Quellnummer</td>
-<td>Gibt eine Zahl zurück, die der Videoquelle des verwendeten Typs entspricht. Er gibt beispielsweise 2 zurück, wenn die zweite NTSC-Video Quell Eingabe verwendet wird.</td>
+<td>Videoquellennummer</td>
+<td>Gibt eine Zahl zurück, die der Videoquelle des zu verwendenden Typs entspricht. Beispielsweise wird 2 zurückgegeben, wenn die zweite NTSC-Videoquelleneingabe verwendet wird.</td>
 </tr>
 <tr class="odd">
 <td>Videostream</td>
-<td>Gibt die aktuelle videostreamnummer zurück.</td>
+<td>Gibt die aktuelle Videostreamnummer zurück.</td>
 </tr>
 <tr class="even">
 <td>Volume</td>
-<td>Gibt das durchschnittliche Volume für den linken und den rechten Redner zurück. Dadurch wird ein Fehler zurückgegeben, wenn das Gerät nicht wiedergegeben wurde oder kein Volume festgelegt wurde.</td>
+<td>Gibt das durchschnittliche Volumen an den linken und rechten Lautsprecher zurück. Dadurch wird ein Fehler zurückgegeben, wenn das Gerät nicht abgespielt oder das Volume nicht festgelegt wurde.</td>
 </tr>
 <tr class="odd">
-<td>Fenster handle</td>
-<td>Gibt den ASCII-Dezimalwert für das Fenster Handle in dem nieder wertigen Wort des Rückgabewerts zurück.</td>
+<td>Fensterhand handle</td>
+<td>Gibt den ASCII-Dezimalwert für das Fensterhand handle im niedrigen Wort des Rückgabewerts zurück.</td>
 </tr>
 <tr class="even">
 <td>Fenster maximiert</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn das Fenster maximiert ist.</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Fenster maximiert ist.</td>
 </tr>
 <tr class="odd">
-<td>Fenster minimiert</td>
-<td>Gibt <strong>true</strong> zurück, wenn das Fenster minimiert wird.</td>
+<td>Minimiertes Fenster</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Fenster minimiert ist.</td>
 </tr>
 <tr class="even">
 <td>Fenster sichtbar</td>
-<td>Gibt " <strong>true</strong> " zurück, wenn das Fenster nicht ausgeblendet ist.</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Fenster nicht ausgeblendet ist.</td>
 </tr>
 <tr class="odd">
-<td>schreibgeschützt</td>
-<td>Gibt <strong>true</strong> zurück, wenn das Gerät erkennt, dass es nicht aufzeichnen kann (d. h., wenn der Schreibschutz auf ON fest liegt). Wenn er aufzeichnen kann, oder wenn er nicht ermitteln kann, ob er aufzeichnen kann (ohne tatsächlich zu schreiben), gibt der Treiber <strong>false</strong>zurück.</td>
+<td>Schreibschutz</td>
+<td>Gibt <strong>TRUE zurück,</strong> wenn das Gerät erkennt, dass es nicht aufzeichnen kann (d. h., wenn der Schreibschutz ein on ist). Wenn er aufzeichnen kann oder nicht bestimmen kann, ob er aufzeichnen kann (ohne tatsächlich zu schreiben), gibt der Treiber <strong>FALSE zurück.</strong></td>
 </tr>
 </tbody>
 </table>
@@ -809,30 +809,30 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszrequest** -P
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt Informationen im *lpszreturnstring* -Parameter von [**mciSendString**](/previous-versions//dd757161(v=vs.85))zurück. Die Informationen hängen vom Anforderungstyp ab.
+Gibt Informationen im *lpszReturnString-Parameter* von [**mciSendString zurück.**](/previous-versions//dd757161(v=vs.85)) Die Informationen hängen vom Anforderungstyp ab.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Ausgeben von Befehlen, die Positionswerte verwenden, sollten Sie das gewünschte Zeitformat mithilfe des [Set](set.md) -Befehls festlegen.
+Vor dem Ausführen von Befehlen, die Positionswerte verwenden, sollten Sie das gewünschte Zeitformat mit dem [Set-Befehl](set.md) festlegen.
 
 ## <a name="examples"></a>Beispiele
 
-Mit dem folgenden Befehl wird der aktuelle Modus des Geräts "mysound" zurückgegeben.
+Der folgende Befehl gibt den aktuellen Modus des "mysound"-Geräts zurück.
 
 ``` syntax
 status mysound mode
 ```
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -843,26 +843,26 @@ status mysound mode
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
 [MCI](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [capability](capability.md)
 </dt> <dt>
 
-[einver](capture.md)
+[Erfassen](capture.md)
 </dt> <dt>
 
 [close](close.md)
 </dt> <dt>
 
-[Schnitts](cut.md)
+[Schneiden](cut.md)
 </dt> <dt>
 
 [delete](delete.md)
@@ -874,7 +874,7 @@ status mysound mode
 [pause](pause.md)
 </dt> <dt>
 
-[kle](paste.md)
+[Einfügen](paste.md)
 </dt> <dt>
 
 [record](record.md)
@@ -889,7 +889,7 @@ status mysound mode
 [set](set.md)
 </dt> <dt>
 
-[setaudiodatei](setaudio.md)
+[Setaudio](setaudio.md)
 </dt> <dt>
 
 [setvideo](setvideo.md)

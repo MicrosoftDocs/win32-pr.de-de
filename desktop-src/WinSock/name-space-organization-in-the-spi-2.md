@@ -1,19 +1,19 @@
 ---
-description: Namespace Organisation im SPI von Windows Sockets (Winsock).
+description: Namespaceorganisation in der Windows Sockets (Winsock)-SPI.
 ms.assetid: c369a476-23e4-48a1-912b-2d876deb0b88
-title: Namespace Organisation in der SPI
+title: Namespaceorganisation in der SPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a572ad86299f0bf5ba3e7f95662e1616da520608
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81d3cd2569f90009ceb4db9ceaca3d5020c6949e7e69842b96030cab4634c534
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121380"
 ---
-# <a name="namespace-organization-in-the-spi"></a>Namespace Organisation in der SPI
+# <a name="namespace-organization-in-the-spi"></a>Namespaceorganisation in der SPI
 
-Viele Namespaces sind hierarchisch angeordnet. Einige (z. b. X. 500 und NDS) ermöglichen eine unbegrenzte Schachtelung. Andere ermöglichen das Kombinieren von Diensten zu einer einzelnen Hierarchie-oder Gruppenebene. Dies wird in der Regel als Arbeitsgruppe bezeichnet. Beim Erstellen einer Abfrage ist es häufig erforderlich, einen Kontext Punkt innerhalb einer Namespace Hierarchie einzurichten, von der die Suche beginnt.
+Viele Namespaces sind hierarchisch angeordnet. Einige, z. B. X.500 und NDS, ermöglichen eine unbegrenzte Schachtelung. Andere ermöglichen die Kombination von Diensten in einer einzelnen Hierarchie- oder Gruppenebene. Dies wird in der Regel als Arbeitsgruppe bezeichnet. Beim Erstellen einer Abfrage ist es häufig erforderlich, einen Kontextpunkt innerhalb einer Namespacehierarchie zu erstellen, ab der die Suche beginnt.
 
  
 

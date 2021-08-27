@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents onautoreconnected-Methode
-description: Wird aufgerufen, wenn das Client Steuerelement automatisch eine Verbindung mit einer Remote Sitzung hergestellt hat. | Iremotedesktopclientevents onautoreconnected-Methode
+title: IRemoteDesktopClientEvents OnAutoReconnected-Methode
+description: Wird aufgerufen, wenn das Clientsteuerelement automatisch wieder eine Verbindung mit einer Remotesitzung hergestellt hat. | IRemoteDesktopClientEvents OnAutoReconnected-Methode
 ms.assetid: F77DBF91-30EB-4147-A49A-F8C840F266F2
 ms.tgt_platform: multiple
 keywords:
-- Onautoreconnected-Methode Remotedesktopdienste
-- Onautoreconnected-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onautoreconnected-Methode
+- OnAutoReconnected-Methode Remotedesktopdienste
+- OnAutoReconnected-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnAutoReconnected-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cfbd09e7021b4aa1be5f80e44463bde016689e4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d25696c84d855931cc888daa504f94f95090766a23a8549a8593e787a4541e68
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124990"
 ---
-# <a name="iremotedesktopclienteventsonautoreconnected-method"></a>Iremotedesktopclientevents:: onautoreconnected-Methode
+# <a name="iremotedesktopclienteventsonautoreconnected-method"></a>IRemoteDesktopClientEvents::OnAutoReconnected-Methode
 
-Wird aufgerufen, wenn das Client Steuerelement automatisch eine Verbindung mit einer Remote Sitzung hergestellt hat.
+Wird aufgerufen, wenn das Clientsteuerelement automatisch wieder eine Verbindung mit einer Remotesitzung hergestellt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

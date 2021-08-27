@@ -4,12 +4,12 @@ ms.assetid: 360325dc-51b5-44d5-981b-b69f7d6c82fd
 title: Print Schema-Related Technologies
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c39d002b956fdd012a2b74a94ae0a4c58f568d8
-ms.sourcegitcommit: 998d50f6def8a25850fc113fc8a2df903c829c5e
+ms.openlocfilehash: eb2948108b8bd6f581608471c9646fe135f83cb91561dc3c4cca97ac4df10560
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113548787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112270"
 ---
 # <a name="print-schema-related-technologies"></a>Print Schema-Related Technologies
 
@@ -19,9 +19,9 @@ Für .NET Framework 3.0, Windows Vista und spätere Versionen erweitern die Prin
 
 ## <a name="printcapabilities"></a>PrintCapabilities
 
-Die PrintCapabilities-Technologie ist eine Methode zum Veröffentlichen von benutzersteuerbaren Einstellungsbeschreibungen für Auftragsattribute und -einstellungen. PrintCapabilities wird in einem eXtensible Markup Language (XML)-Dokument veröffentlicht, das als PrintCapabilities-Dokument bezeichnet wird und aus Begriffen besteht, die in den Schlüsselwörtern für Druckschemas und privaten Erweiterungen definiert sind. Das PrintCapabilities-Dokument kann als "Momentaufnahme" der benutzerkonfigurierbaren Zustandskonfiguration des aktuellen Geräts und als Beschreibung möglicher Konfigurationen bezeichnet werden. Geräte (oder Gerätetreiber) generieren ein PrintCapabilities-Dokument (die Momentaufnahme) ihrer aktuellen konfigurierbaren Optionen, wenn sie von Clients abgefragt werden. Dabei kann es sich entweder um Anwendungen oder um das Drucksubsystem geben. In diesem Dokument werden alle konfigurierbaren PrintCapabilities-Optionen beschrieben, die derzeit auf dem Gerät verfügbar sind, z. B. Abschlussoptionen und Seitenlayoutoptionen. Das PrintCapabilities-Dokument beschreibt explizit alle Attribute des Geräts und die zulässigen Einstellungen für jedes Attribut. Durch die Verwendung des Druckschemaframework können Geräteattribute genau beschrieben und effizient verglichen werden. Mithilfe der Schlüsselwörter im Dokument Print Schema Keywords und der im Print Schema Framework definierten Struktur können Geräte Clients ermöglichen, PrintCapabilities effektiver zu verwenden. Weitere Informationen finden Sie unter [PrintCapabilities-Schema und Dokumentkonstruktion.](printcapabilities-schema-and-document-construction.md)
+Die PrintCapabilities-Technologie ist eine Methode zum Veröffentlichen von benutzersteuerbaren Einstellungsbeschreibungen für Auftragsattribute und -einstellungen. PrintCapabilities wird in einem eXtensible Markup Language (XML)-Dokument veröffentlicht, das als PrintCapabilities-Dokument bezeichnet wird und aus Begriffen besteht, die in den Schlüsselwörtern für Druckschemas und privaten Erweiterungen definiert sind. Das PrintCapabilities-Dokument kann als "Momentaufnahme" der benutzerkonfigurierbaren Zustandskonfiguration des aktuellen Geräts und als Beschreibung möglicher Konfigurationen bezeichnet werden. Geräte (oder Gerätetreiber) generieren ein PrintCapabilities-Dokument (die Momentaufnahme) ihrer aktuellen konfigurierbaren Optionen, wenn sie von Clients abgefragt werden. Dabei kann es sich entweder um Anwendungen oder um das Drucksubsystem geben. In diesem Dokument werden alle konfigurierbaren PrintCapabilities-Optionen beschrieben, die derzeit auf dem Gerät verfügbar sind, z. B. Abschlussoptionen und Seitenlayoutoptionen. Das PrintCapabilities-Dokument beschreibt explizit alle Attribute des Geräts und die zulässigen Einstellungen für jedes Attribut. Durch die Verwendung des Druckschemaframework können Geräteattribute genau beschrieben und effizient verglichen werden. Mithilfe der Schlüsselwörter im Dokument Print Schema Keywords und der im Print Schema Framework definierten Struktur können Geräte Clients die effektivere Verwendung von PrintCapabilities ermöglichen. Weitere Informationen finden Sie unter [PrintCapabilities-Schema und Dokumentkonstruktion.](printcapabilities-schema-and-document-construction.md)
 
-Im Vergleich zum Drucksubsystem in Microsoft Windows Server 2003 und früher ermöglicht die PrintCapabilities-Technologie Client- und Drucksubsystemkomponenten, die in der aktuellen Win32-Systembinbindatei PrintCapabilities enthaltenen Informationen transparent anzeigen zu können. Dadurch kann der Client PrintCapabilities abfragen, eine konsistente und gut verständliche XML-Momentaufnahme erhalten und damit ein PrintTicket für ein Gerät erstellen, ohne die Benutzeroberfläche des Treibers aufrufen zu müssen.
+Im Vergleich zum Drucksubsystem in Microsoft Windows Server 2003 und früher ermöglicht die PrintCapabilities-Technologie Client- und Drucksubsystemkomponenten das transparente Anzeigen der Informationen, die in der aktuellen Win32-Systembin binary PrintCapabilities enthalten sind. Dadurch kann der Client PrintCapabilities abfragen, eine konsistente und gut verständliche XML-Momentaufnahme erhalten und damit ein PrintTicket für ein Gerät erstellen, ohne die Benutzeroberfläche des Treibers aufrufen zu müssen.
 
 ## <a name="printticket"></a>PrintTicket
 

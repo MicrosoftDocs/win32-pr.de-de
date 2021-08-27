@@ -1,7 +1,7 @@
 ---
-description: 'Überprüfen Sie den Anbieter Text auf eine gründlichere Weise als ispellcheckprovider:: Check.'
+description: Überprüfen Sie den Anbietertext gründlicher als ISpellCheckProvider::Check.
 ms.assetid: BD334EB8-4E14-478D-AB2A-E7F863C4BE0F
-title: 'Icomprehensivespellcheckprovider:: comprehensivecheck-Methode'
+title: IComprehensiveSpellCheckProvider::ComprehensiveCheck-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - spellcheckprovider.h
-ms.openlocfilehash: d999a90166e0d54d537abc84c30f6c4e0ee3768c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee1b07eb2f459aca3955b0a1c5ad2e2e2139cc196f618430b3039b1eba1e3971
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086600"
 ---
-# <a name="icomprehensivespellcheckprovidercomprehensivecheck-method"></a>Icomprehensivespellcheckprovider:: comprehensivecheck-Methode
+# <a name="icomprehensivespellcheckprovidercomprehensivecheck-method"></a>IComprehensiveSpellCheckProvider::ComprehensiveCheck-Methode
 
-Überprüfen Sie den Anbieter Text auf eine gründlichere Weise als [**ispellcheckprovider:: Check**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check).
+Überprüfen Sie den Anbietertext gründlicher als [**ISpellCheckProvider::Check.**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ HRESULT ComprehensiveCheck(
 
 <dl> <dt>
 
-*Text* \[ in\]
+*Text* \[ In\]
 </dt> <dd>
 
-Der zu Überprüfung Ende Text.
+Der zu überprüfende Text.
 
 </dd> <dt>
 
-*Ergebnis* \[ vorgenommen\]
+*Ergebnis* \[ out\]
 </dt> <dd>
 
-Das Ergebnis der Überprüfung dieses Texts als eine Enumeration von Rechtschreibfehlern ([**ienumspellingerror**](/windows/desktop/api/Spellcheck/nn-spellcheck-ienumspellingerror)), falls vorhanden.
+Das Ergebnis der Überprüfung dieses Texts als Enumeration von Rechtschreibfehlern ([**IEnumSpellingError**](/windows/desktop/api/Spellcheck/nn-spellcheck-ienumspellingerror)), falls vorhanden.
 
 </dd> </dl>
 
@@ -62,35 +62,35 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Rückgabewert                                                                             | BESCHREIBUNG                           |
 |------------------------------------------------------------------------------------------|---------------------------------------|
-| <dl> <dt>S \_ OK</dt> </dl>         | Erfolgreich.<br/>                |
-| <dl> <dt>E \_ invalidArg</dt> </dl> | *Text* ist eine leere Zeichenfolge.<br/> |
-| <dl> <dt>E- \_ Zeiger</dt> </dl>    | *Text* ist ein NULL-Zeiger.<br/>  |
+| <dl> <dt>S \_ OK</dt> </dl>         | Erfolgreiche.<br/>                |
+| <dl> <dt>E \_ INVALIDARG</dt> </dl> | *text* ist eine leere Zeichenfolge.<br/> |
+| <dl> <dt>E \_ POINTER</dt> </dl>    | *text* ist ein NULL-Zeiger.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle muss nicht von einem Rechtschreib Prüfungs Anbieter implementiert werden. Wenn der Anbieter jedoch zwei "Modi" für die Rechtschreibprüfung unterstützt (eine schnellere und eine langsamere, aber gründlichere), sollte er diese Schnittstelle in demselben Objekt implementieren, das [**ispellcheckprovider**](/windows/desktop/api/Spellcheckprovider/nn-spellcheckprovider-ispellcheckprovider) implementiert, um den gründlicheren Überprüfungs Modus zu unterstützen. Wenn ein Client [**ispellchecker:: comprehensivecheck**](/windows/desktop/api/Spellcheck/nf-spellcheck-ispellchecker-comprehensivecheck)aufruft, führt die Rechtschreibprüfungs Funktion den Anbieter für [**icomprehensivespellcheckprovider**](/windows/desktop/api/spellcheckprovider/nn-spellcheckprovider-icomprehensivespellcheckprovider) [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aus und ruft **icomprehensivespellcheckprovider. verständsivecheck** auf, wenn die Schnittstelle unterstützt wird. Wenn die Schnittstelle nicht unterstützt wird, wird Sie automatisch auf [**ispellcheckprovider:: Check**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check)zurückgegriffen.
+Diese Schnittstelle muss nicht von einem Rechtschreibprüfungsanbieter implementiert werden. Wenn der Anbieter jedoch zwei "Modi" der Rechtschreibprüfung unterstützt (einen schnelleren und einen langsameren, aber gründlicheren), sollte er diese Schnittstelle in demselben Objekt implementieren, das [**ISpellCheckProvider**](/windows/desktop/api/Spellcheckprovider/nn-spellcheckprovider-ispellcheckprovider) implementiert, um den gründlicheren Überprüfungsmodus zu unterstützen. Wenn ein Client [**ISpellChecker::ComprehensiveCheck**](/windows/desktop/api/Spellcheck/nf-spellcheck-ispellchecker-comprehensivecheck)aufruft, ruft die Rechtschreibprüfungsfunktion [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) an den Anbieter für [**IComprehensiveSpellCheckProvider**](/windows/desktop/api/spellcheckprovider/nn-spellcheckprovider-icomprehensivespellcheckprovider)und **IComprehensiveSpellCheckProvider.ComprehensiveCheck** auf, wenn die Schnittstelle unterstützt wird. Wenn die Schnittstelle nicht unterstützt wird, wird im Hintergrund auf [**ISpellCheckProvider::Check**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check)zurückverlegt.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Icomprehensivespellcheckprovider**](/windows/desktop/api/spellcheckprovider/nn-spellcheckprovider-icomprehensivespellcheckprovider)
+[**IComprehensiveSpellCheckProvider**](/windows/desktop/api/spellcheckprovider/nn-spellcheckprovider-icomprehensivespellcheckprovider)
 </dt> <dt>
 
-[**Ienumspellingerror**](/windows/desktop/api/Spellcheck/nn-spellcheck-ienumspellingerror)
+[**IEnumSpellingError**](/windows/desktop/api/Spellcheck/nn-spellcheck-ienumspellingerror)
 </dt> <dt>
 
-[**Ispellchecker:: comprehensivecheck**](/windows/desktop/api/Spellcheck/nf-spellcheck-ispellchecker-comprehensivecheck)
+[**ISpellChecker::ComprehensiveCheck**](/windows/desktop/api/Spellcheck/nf-spellcheck-ispellchecker-comprehensivecheck)
 </dt> <dt>
 
-[**Ispellcheckprovider**](/windows/desktop/api/Spellcheckprovider/nn-spellcheckprovider-ispellcheckprovider)
+[**ISpellCheckProvider**](/windows/desktop/api/Spellcheckprovider/nn-spellcheckprovider-ispellcheckprovider)
 </dt> <dt>
 
-[**Ispellcheckprovider:: Check**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check)
+[**ISpellCheckProvider::Check**](/windows/desktop/api/Spellcheckprovider/nf-spellcheckprovider-ispellcheckprovider-check)
 </dt> </dl>
 
  

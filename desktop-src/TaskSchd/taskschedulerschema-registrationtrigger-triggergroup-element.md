@@ -1,10 +1,10 @@
 ---
-title: Registrationtrigger (triggergroup)-Element
-description: Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.
+title: RegistrationTrigger (triggerGroup)-Element
+description: Gibt einen Trigger an, der eine Aufgabe startet, wenn die Aufgabe registriert wird.
 ms.assetid: 8f028ed0-93e6-4423-be2f-9a02be99122b
 keywords:
-- Registrierungs-auslöserTaskplaner, XML-Element
-- Registration-Auslöserelement Taskplaner
+- Registrierungstrigger Taskplaner , XML-Element
+- RegistrationTrigger-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 90960f81d252b0b0a8d1de3ab5cc1465003467a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 548ffec6bf5982aac407905d944d029b222b741c0c03fe66645f68e771c87342
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099970"
 ---
-# <a name="registrationtrigger-triggergroup-element"></a>Registrationtrigger (triggergroup)-Element
+# <a name="registrationtrigger-triggergroup-element"></a>RegistrationTrigger (triggerGroup)-Element
 
-Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.
+Gibt einen Trigger an, der eine Aufgabe startet, wenn die Aufgabe registriert wird.
 
 ``` syntax
 <xs:element name="RegistrationTrigger"
@@ -31,7 +31,7 @@ Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.
  />
 ```
 
-Das **registrationtrigger** -Element wird durch den komplexen Typ [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) definiert.
+Das **RegistrationTrigger-Element** wird durch den komplexen [**RegistrationTriggerType-Typ**](taskschedulerschema-registrationtriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -39,7 +39,7 @@ Das **registrationtrigger** -Element wird durch den komplexen Typ [**registratio
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------|
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
+| [**Auslöser**](taskschedulerschema-triggers-tasktype-element.md) | [**triggersType**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die die Aufgabe starten.<br/> |
 
 
 
@@ -49,12 +49,12 @@ Das **registrationtrigger** -Element wird durch den komplexen Typ [**registratio
 
 | Element                                                                                                        | type                                                                     | BESCHREIBUNG                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [**Delay (registrationtriggertype)**](taskschedulerschema-delay-boottriggertype-element.md)                   | duration                                                                 | Gibt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufgabe an.<br/>                          |
-| [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der-Wert aktiviert ist.<br/>                                                                                  |
-| [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Auslösers an. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Executiontimelimit (triggerbasetype)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden kann.<br/>                                   |
-| [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.<br/>          |
-| [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an.<br/>                                                              |
+| [**Delay (registrationTriggerType)**](taskschedulerschema-delay-boottriggertype-element.md)                   | duration                                                                 | Gibt die Zeit zwischen dem Zeitpunkt der Registrierung und dem Start der Aufgabe an.<br/>                          |
+| [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der Trigger aktiviert ist.<br/>                                                                                  |
+| [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Triggers an. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**ExecutionTimeLimit (triggerBaseType)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt die maximale Zeitdauer an, in der der Task vom Trigger gestartet werden kann.<br/>                                   |
+| [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an.<br/>                                                              |
 
 
 
@@ -64,28 +64,28 @@ Das **registrationtrigger** -Element wird durch den komplexen Typ [**registratio
 
 | Name | type | BESCHREIBUNG                           |
 |------|------|---------------------------------------|
-| Id   | id   | Der Bezeichner des Auslösers.<br/> |
+| Id   | ID   | Bezeichner des Triggers.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Entwicklung von Skripts wird ein Registrierungs-Assistent mithilfe des [**Registration-auslöserobjekts**](registrationtrigger.md) angegeben.
+Für die Skriptentwicklung wird ein Registrierungstrigger mithilfe des [**RegistrationTrigger-Objekts**](registrationtrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein Registrierungs-Assistent mithilfe der [**iregistration-auslöserschnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iregistrationtrigger) angegeben.
+Für die C++-Entwicklung wird ein Registrierungstrigger mithilfe der [**IRegistrationTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iregistrationtrigger) angegeben.
 
-Die oben aufgeführten untergeordneten Elemente werden von den komplexen Elementtypen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) und [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) definiert. Diese Elemente müssen in der unten gezeigten Sequenz hinzugefügt werden.
+Die oben aufgeführten untergeordneten Elemente werden durch die [**komplexen Elementtypen triggerBaseType**](taskschedulerschema-triggerbasetype-complextype.md) und [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) definiert. Diese Elemente müssen in der unten gezeigten Reihenfolge hinzugefügt werden.
 
--   [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md)
--   [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)
--   [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)
--   [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)
--   [**Executiontimelimit (triggerbasetype)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
--   [**Delay (registrationtriggertype)**](taskschedulerschema-delay-boottriggertype-element.md)
+-   [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md)
+-   [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)
+-   [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)
+-   [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)
+-   [**ExecutionTimeLimit (triggerBaseType)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
+-   [**Delay (registrationTriggerType)**](taskschedulerschema-delay-boottriggertype-element.md)
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Start--Auslösers angibt, finden Sie unter [Beispiel für Registrierungs Beispiel (XML)](registration-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Starttrigger angibt, finden Sie unter Registration Trigger Example (XML) ( Beispiel für [Registrierungstrigger (XML)).](registration-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,8 +93,8 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Start--A
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -102,7 +102,7 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Start--A
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

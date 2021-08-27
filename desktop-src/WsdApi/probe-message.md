@@ -4,12 +4,12 @@ ms.assetid: a0ede1d9-2e13-4d5e-8ccd-9e0c0217cac7
 title: Testmeldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: abaf4b397abec699dd0a116fe5cddd97578543f917a7994287f5000e17079def
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 58f186de4f68faceca096ddaa231b57d1112bc1e
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119130632"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122879844"
 ---
 # <a name="probe-message"></a>Testmeldung
 
@@ -62,9 +62,9 @@ Eine Testmeldung weist die folgenden Fokuspunkte auf.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -76,21 +76,21 @@ Eine Testmeldung weist die folgenden Fokuspunkte auf.
 <tbody>
 <tr class="odd">
 <td>Test</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:Action>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:Action&gt;
     https://schemas.xmlsoap.org/ws/2005/04/discovery/Probe
-</wsa:Action></code></pre></td>
+&lt;/wsa:Action&gt;</code></pre></td>
 <td>Die SOAP-Aktion Probe identifiziert die Nachricht als Testnachricht.</td>
 </tr>
 <tr class="even">
 <td>Meldungs-ID</td>
-<td><pre class="syntax" data-space="preserve"><code><wsa:MessageID>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsa:MessageID&gt;
     urn:uuid:29cf10da-5c41-4d55-b184-5ee15e38ce23
-</wsa:MessageID></code></pre></td>
+&lt;/wsa:MessageID&gt;</code></pre></td>
 <td>Enthält den Nachrichtenbezeichner, auf den das RelatesTo-Element in einer <a href="probematches-message.md">ProbeMatches-Nachricht</a> verweist.</td>
 </tr>
 <tr class="odd">
 <td>Typen</td>
-<td><pre class="syntax" data-space="preserve"><code><wsd:Types>wsdp:Device</wsd:Types></code></pre></td>
+<td><pre class="syntax" data-space="preserve"><code>&lt;wsd:Types&gt;wsdp:Device</wsd:Types></code></pre></td>
 <td>Enthält die WS-Discovery Typen, nach denen der Client sucht. Dieses Element darf nicht leer sein.</td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECSIZE2 Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE2 Struktur'
 title: JET_RECSIZE2 Struktur
 TOCTitle: JET_RECSIZE2 Structure
 ms:assetid: 02a13b5b-d904-49b2-baaa-c60328d70290
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2fd16480f0ec059c977d07f8e445a35094c5f2fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b99f5aa60f90a753a9c5d095e7a63417485b1fd
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362355"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469837"
 ---
 # <a name="jet_recsize2-structure"></a>JET_RECSIZE2 Struktur
 
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_recsize2-structure"></a>JET_RECSIZE2 Struktur
 
-Die **JET_RECSIZE2** Struktur wird von [JetGetRecordSize2](./jetgetrecordsize2-function.md) verwendet, um Informationen über die Verwendungs Anforderungen eines Datensatzes im Benutzerdaten Bereich, die Anzahl der Satz Spalten, die Anzahl der Werte und den mehr Aufwand für die ESE-Daten Satzstruktur zurückzugeben.
+Die **JET_RECSIZE2-Struktur** wird von [JetGetRecordSize2](./jetgetrecordsize2-function.md) verwendet, um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl von Werten und den Mehraufwand für die ESE-Datensatzstruktur zurück zu geben.
 
-**Windows 7:** Die **JET_RECSIZE2** Struktur wird im Windows 7-Betriebssystem eingeführt.
+**Windows 7:** Die **JET_RECSIZE2-Struktur** wird im Windows 7-Betriebssystem eingeführt.
 
 ```cpp
     typedef struct {
@@ -53,87 +53,70 @@ Die **JET_RECSIZE2** Struktur wird von [JetGetRecordSize2](./jetgetrecordsize2-f
 
 **cbData**
 
-Benutzer DataSet im Datensatz.
+Benutzerdatensatz im Datensatz.
 
-**Hinweis**  Die Schlüsselgröße ist in diesem nicht enthalten.
+**Hinweis:**  Die Schlüsselgröße ist in dieser nicht enthalten.
 
-**cblongvaluedata**
+**cbLongValueData**
 
-Benutzerdaten, die dem Datensatz zugeordnet sind, aber in der Struktur mit langem Wert gespeichert sind.
+Benutzerdaten, die dem Datensatz zugeordnet sind, aber in der Long-Value-Struktur gespeichert sind.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cboverhead**
+**cbOverhead**
 
-Der Aufwand der ESE-Daten Satzstruktur für diesen Datensatz. Dazu gehört auch die Schlüsselgröße des Datensatzes.
+Der Mehraufwand der ESE-Datensatzstruktur für diesen Datensatz. Dies schließt die Schlüsselgröße des Datensatzes ein.
 
-**cblongvalueoverhead**
+**cbLongValueOverhead**
 
-Der Aufwand für die Daten mit langen Werten.
+Der Mehraufwand der Long-Value-Daten.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cnontaggedcolumns**
+**cNonTaggedColumns**
 
-Die Gesamtanzahl der in diesem Datensatz festgelegten Fixed-und variable-Spalten.
+Die Gesamtanzahl der festen und variablen Spalten, die in diesem Datensatz festgelegt sind.
 
-**ctaggedcolumns**
+**cTaggedColumns**
 
-Die Gesamtanzahl der in diesem Datensatz festgelegten markierten Spalten.
+Gesamtanzahl der in diesem Datensatz festgelegten markierten Spalten.
 
-**clongvalues**
+**cLongValues**
 
-Gesamtzahl der langen Werte, die in der Struktur mit langem Wert für diesen Datensatz gespeichert sind.
+Gesamtanzahl der long-Werte, die in der Long-Value-Struktur für diesen Datensatz gespeichert sind.
 
-**Hinweis**  Dabei werden keine systeminternen langen Werte gezählt.
+**Hinweis:**  Dies zählt keine systeminternen Long-Werte.
 
-**cmultivalues**
+**cMultiValues**
 
-Die Ansammlung der Gesamtzahl der Werte, die über den ersten für alle Spalten im Datensatz hinausgehen.
+Die Akkumulation der Gesamtzahl von Werten, die über die erste für alle Spalten im Datensatz hinausgehen.
 
-**ccompressedcolumns**
+**cCompressedColumns**
 
-Die Gesamtanzahl der komprimierten Spalten.
+Die Gesamtzahl der komprimierten Spalten.
 
-**cbdatacompressed**
+**cbDataCompressed**
 
-Die komprimierte Größe der Benutzerdaten in diesem Datensatz. Dies ist das gleiche wie bei cbData, wenn keine systeminternen langen Werte komprimiert werden.
+Die komprimierte Größe der Benutzerdaten in diesem Datensatz. Dies ist identisch mit cbData, wenn keine systeminternen Long-Werte komprimiert sind.
 
-**cblongvaluedatacompressed**
+**cbLongValueDataCompressed**
 
-Die komprimierte Größe von Benutzerdaten in der Struktur mit langem Wert. Dies entspricht den cblongvalue-Daten, wenn keine getrennten Long-Werte komprimiert werden.
+Die komprimierte Größe der Benutzerdaten in der Long-Value-Struktur. Dies ist identisch mit cbLongValue-Daten, wenn keine getrennten long-Werte komprimiert werden.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Die Gesamtanzahl der Werte im Datensatz wäre **cmultivalues**  +  **cnontaggedcolumns**  +  **ctaggedcolumns**.
+Die Gesamtzahl der Werte im Datensatz wäre **cMultiValues**  +  **cNonTaggedColumns**  +  **cTaggedColumns**.
 
-Die logischen Daten im Datensatz sind (cbData + cblongvaluedata), und die physische Größe der Daten ist (cbdatacompressed + cblongvaluedatacompressed). Dies kann zum Berechnen des Komprimierungs Verhältnisses gespeicherter Daten verwendet werden.
+Die logischen Daten im Datensatz sind (cbData+cbLongValueData), und die physische Größe der Daten ist (cbDataCompressed+cbLongValueDataCompressed). Dies kann verwendet werden, um das Komprimierungsverhältnis gespeicherter Daten zu berechnen.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert das Windows Vista-Betriebssystem.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert das Betriebssystem Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista-Betriebssystem.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008-Betriebssystem.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetgetrecordsize](./jetgetrecordsize-function.md)  
+[JetGetRecordSize](./jetgetrecordsize-function.md)  
 [JetGetRecordSize2](./jetgetrecordsize2-function.md)

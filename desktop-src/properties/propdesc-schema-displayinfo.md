@@ -1,21 +1,21 @@
 ---
 description: Gibt die Anzeigeinformationen einer Eigenschaft an.
 ms.assetid: 27c03ced-a5fa-4ab4-b88e-5b78701da878
-title: Display Info
+title: displayInfo
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fff0bb441b4535c0b6c6f3183671fbe8ade09183
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b0bbc3cf0f17d24672e30a110d95341c1cb902d
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360558"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622086"
 ---
-# <a name="displayinfo"></a>Display Info
+# <a name="displayinfo"></a>displayInfo
 
-Gibt die Anzeigeinformationen einer Eigenschaft an. Es darf nur ein [DisplayInfo]() -Element für jede [propertydescription](./propdesc-schema-propertydescription.md)vorhanden sein.
+Gibt die Anzeigeinformationen einer Eigenschaft an. Es sollte nur ein [displayInfo-Element]() für jede [eigenschaftDescription vorhanden](./propdesc-schema-propertydescription.md)sein.
 
-Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [DisplayInfo]() -Element bereitgestellt wird, werden die Standard Attribut Einstellungen auf die Eigenschafts Beschreibung angewendet.
+Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn kein [displayInfo-Element]() bereitgestellt wird, werden die Standardattributeinstellungen auf die Eigenschaftenbeschreibung angewendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -266,15 +266,15 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 
 | Übergeordnetes Element                                                   | Untergeordnete Elemente                                                                                                 |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [propertydescription](./propdesc-schema-propertydescription.md) | [StringFormat](./propdesc-schema-stringformat.md)                                                             |
-|                                                                  | [BooleanFormat](./propdesc-schema-booleanformat.md)                                                           |
-|                                                                  | [NumberFormat](./propdesc-schema-numberformat.md)                                                             |
+| [propertyDescription](./propdesc-schema-propertydescription.md) | [Stringformat](./propdesc-schema-stringformat.md)                                                             |
+|                                                                  | [booleanFormat](./propdesc-schema-booleanformat.md)                                                           |
+|                                                                  | [Numberformat](./propdesc-schema-numberformat.md)                                                             |
 |                                                                  | [dateTimeFormat](./propdesc-schema-datetimeformat.md)                                                         |
-|                                                                  | [enumeratedlist](./propdesc-schema-enumeratedlist.md)                                                         |
-|                                                                  | [DrawControl](./propdesc-schema-drawcontrol.md)                                                               |
-|                                                                  | [editcontrol](./propdesc-schema-editcontrol.md)                                                               |
-|                                                                  | [FilterControl](./propdesc-schema-filtercontrol.md)                                                           |
-|                                                                  | [querycontrol](./propdesc-schema-querycontrol.md) (nur Windows Vista). Wird in Windows 7 und höher nicht unterstützt.) |
+|                                                                  | [enumeratedList](./propdesc-schema-enumeratedlist.md)                                                         |
+|                                                                  | [drawControl](./propdesc-schema-drawcontrol.md)                                                               |
+|                                                                  | [editControl](./propdesc-schema-editcontrol.md)                                                               |
+|                                                                  | [Filtercontrol](./propdesc-schema-filtercontrol.md)                                                           |
+|                                                                  | [queryControl](./propdesc-schema-querycontrol.md) (nur Windows Vista. Wird in Windows 7 und höher nicht unterstützt.) |
 
 
 
@@ -286,23 +286,23 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Attribut</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>defaultcolumnwidth</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; 20 &quot; .</td>
+<td>defaultColumnWidth</td>
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; 20.</td>
 </tr>
 <tr class="even">
-<td>Display Type</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; String &quot; . Gibt den Typ der Anzeige Zeichenfolge an. Nachdem Sie hier festgelegt haben, werden die zugeordneten <strong>PROPDESC_DISPLAYTYPE</strong> Werte von <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getdisplaytype"><strong>ipropertydescription:: getdisplaytype</strong></a>abgerufen. Die folgenden Typen sind gültig. 
+<td>displayType</td>
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; String. Gibt den Typ der Anzeigezeichenfolge an. Sobald sie hier festgelegt sind, werden die zugeordneten <strong>PROPDESC_DISPLAYTYPE</strong> Werte von <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getdisplaytype"><strong>IPropertyDescription::GetDisplayType</strong></a>abgerufen. Die folgenden Typen sind gültig. 
 <table>
 <thead>
 <tr class="header">
@@ -312,24 +312,24 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 </thead>
 <tbody>
 <tr class="odd">
-<td>String</td>
-<td>Standard. Der Wert wird als Zeichenfolge angezeigt. Verwenden &quot; Sie StringFormat &quot; , um zu formatieren. Die Methode gibt PDDT_STRING zurück.</td>
+<td>Zeichenfolge</td>
+<td>Standard. Der Wert wird als Zeichenfolge angezeigt. Verwenden Sie &quot; stringFormat &quot; zum Formatieren. Die Methode gibt PDDT_STRING zurück.</td>
 </tr>
 <tr class="even">
 <td>Number</td>
-<td>Standardwert für numerische Eigenschaften. Der Wert wird als Zahl angezeigt. Verwenden &quot; Sie "NumFormat" &quot; zum Formatieren. Die Methode gibt PDDT_NUMBER zurück.</td>
+<td>Standardwert für numerische Eigenschaften. Der Wert wird als Zahl angezeigt. Verwenden Sie &quot; numberFormat &quot; zum Formatieren. Die Methode gibt PDDT_NUMBER zurück.</td>
 </tr>
 <tr class="odd">
 <td>Boolean</td>
-<td>Standardwert, wenn <typeInfo type=&quot;Boolean&quot;> . Der Wert wird als boolescher Wert angezeigt. Verwenden &quot; Sie BooleanFormat &quot; , um zu formatieren. Die Methode gibt PDDT_BOOLEAN zurück.</td>
+<td>Der Standardwert ist , wenn <typeInfo type=&quot;Boolean&quot;> . Der Wert wird als boolescher Wert angezeigt. Formatieren Sie &quot; &quot; booleanFormat. Die Methode gibt PDDT_BOOLEAN zurück.</td>
 </tr>
 <tr class="even">
 <td>Datetime</td>
-<td>Standardwert, wenn <typeInfo type=&quot;DateTime&quot;> . Der Wert wird als Datum oder Uhrzeit angezeigt. Verwenden &quot; Sie DateTimeFormat &quot; , um zu formatieren. Die Methode gibt PDDT_DATETIME zurück.</td>
+<td>Der Standardwert ist , wenn <typeInfo type=&quot;DateTime&quot;> . Der Wert wird als Datum oder Uhrzeit angezeigt. Verwenden Sie &quot; dateTimeFormat &quot; zum Formatieren. Die Methode gibt PDDT_DATETIME zurück.</td>
 </tr>
 <tr class="odd">
 <td>Enumeration</td>
-<td>Der Wert wird als Darstellung der Anzeige Zeichenfolge angezeigt, die vom &quot; enumeratedlist-Element bereitgestellt wird &quot; . Die Methode gibt PDDT_ENUMERATED zurück.</td>
+<td>Der Wert wird als Anzeigezeichenfolgenzuordnung angezeigt, die vom &quot; enumeratedList-Element bereitgestellt &quot; wird. Die Methode gibt PDDT_ENUMERATED zurück.</td>
 </tr>
 </tbody>
 </table>
@@ -338,7 +338,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 </tr>
 <tr class="odd">
 <td>Ausrichtung</td>
-<td>Dies ist optional. Der Standardwert ist &quot; left &quot; . 
+<td>Optional. Der Standardwert ist &quot; Left &quot; . 
 <table>
 <thead>
 <tr class="header">
@@ -348,15 +348,15 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 </thead>
 <tbody>
 <tr class="odd">
-<td>Links</td>
+<td>Left</td>
 <td>Standard. Links ausrichten.</td>
 </tr>
 <tr class="even">
 <td>Zentrum</td>
-<td>Zentriert ausrichten.</td>
+<td>Richten Sie den Mittelpunkt aus.</td>
 </tr>
 <tr class="odd">
-<td>Rechts</td>
+<td>Right</td>
 <td>Rechts ausrichten.</td>
 </tr>
 </tbody>
@@ -365,8 +365,8 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 <p> </p></td>
 </tr>
 <tr class="even">
-<td>relativedescriptiontype</td>
-<td>Dies ist optional. Der Standardwert ist &quot; Allgemein &quot; . Gibt an, wie zwei Werte dieser Eigenschaft beschrieben werden sollen, wenn Sie miteinander verglichen werden. Im Fall von Äquivalenz &quot; &quot; wird immer derselbe verwendet. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getrelativedescription"><strong>Ipropertydescription:: getrelativedescription</strong></a> und <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getrelativedescriptiontype"><strong>ipropertydescription:: getrelativedescriptiontype</strong></a> verwenden Sie diesen Wert, um zu bestimmen, welche Namen für die relative Beschreibungs Anzeige verwendet werden sollen. 
+<td>relativeDescriptionType</td>
+<td>Optional. Der Standardwert ist &quot; &quot; Allgemein. Gibt an, wie zwei Werte dieser Eigenschaft beschrieben werden sollen, wenn sie miteinander verglichen werden. Im Fall von Gleichheit &quot; wird immer Same &quot; verwendet. <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getrelativedescription"><strong>IPropertyDescription::GetRelativeDescription</strong></a> und <a href="/windows/win32/api/propsys/nf-propsys-ipropertydescription-getrelativedescriptiontype"><strong>IPropertyDescription::GetRelativeDescriptionType</strong></a> verwenden diesen Wert, um zu bestimmen, welche relativen Beschreibungsanzeigenamen verwendet werden sollen. 
 <table>
 <thead>
 <tr class="header">
@@ -377,47 +377,47 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 <tbody>
 <tr class="odd">
 <td>Allgemein</td>
-<td>Standard. Verwendet &quot; unterschiedliche &quot;  /  &quot; &quot;  /  &quot; andere &quot; .</td>
+<td>Standard. Verwendet &quot; unterschiedliche &quot;  /  &quot; &quot;  /  &quot; unterschiedliche &quot; .</td>
 </tr>
 <tr class="even">
 <td>Date</td>
-<td>Standardwert, wenn <typeInfo type=&quot;DateTime&quot;> . &quot;Wird früher &quot;  /  &quot; gleich &quot;  /  &quot; später verwendet, oder es wird &quot; älter oder &quot; &quot;  /  &quot; &quot;  /  &quot; &quot; früher oder &quot; früher verwendet &quot;  /  &quot; &quot;  /  &quot; &quot; .</td>
+<td>Der Standardwert ist , wenn <typeInfo type=&quot;DateTime&quot;> . Verwendet &quot; früher Same Later oder &quot;  /  &quot; older &quot;  /  &quot; &quot; Same &quot; &quot;  /  &quot; &quot;  /  &quot; Newer &quot; oder &quot; sooner Same &quot;  /  &quot; &quot;  /  &quot; Later &quot; .</td>
 </tr>
 <tr class="odd">
 <td>Size</td>
-<td>Von wird eine geringere Größe verwendet. &quot; &quot;  /  &quot; &quot;  /  &quot;&quot;</td>
+<td>Verwendet &quot; &quot;  /  &quot; kleinere, gleich &quot;  /  &quot; größere&quot;</td>
 </tr>
 <tr class="even">
 <td>Anzahl</td>
-<td>Von wird eine geringere Größe verwendet. &quot; &quot;  /  &quot; &quot;  /  &quot;&quot;</td>
+<td>Verwendet &quot; &quot;  /  &quot; kleinere, gleich &quot;  /  &quot; größere&quot;</td>
 </tr>
 <tr class="odd">
 <td>Revision</td>
-<td>Wird &quot; früher &quot;  /  &quot; gleich &quot;  /  &quot; später verwendet&quot;</td>
+<td>Verwendet &quot; früher &quot;  /  &quot; und &quot;  /  &quot; später&quot;</td>
 </tr>
 <tr class="even">
 <td>Länge</td>
-<td>Verwendet &quot; kürzer und &quot;  /  &quot; &quot;  /  &quot; länger&quot;</td>
+<td>Verwendet &quot; &quot;  /  &quot; kürzere, &quot;  /  &quot; längere Zeit&quot;</td>
 </tr>
 <tr class="odd">
 <td>Duration</td>
-<td>Verwendet &quot; kürzer und &quot;  /  &quot; &quot;  /  &quot; länger&quot;</td>
+<td>Verwendet &quot; &quot;  /  &quot; kürzere, &quot;  /  &quot; längere Zeit&quot;</td>
 </tr>
 <tr class="even">
 <td>Geschwindigkeit</td>
-<td>Verwendet &quot; langsamer und &quot;  /  &quot; &quot;  /  &quot; schneller&quot;</td>
+<td>Verwendet &quot; &quot;  /  &quot; langsameres &quot;  /  &quot; gleiches schnelleres&quot;</td>
 </tr>
 <tr class="odd">
 <td>Rate</td>
-<td>Verwendet &quot; langsamer und &quot;  /  &quot; &quot;  /  &quot; schneller&quot;</td>
+<td>Verwendet &quot; langsamer &quot;  /  &quot; und &quot;  /  &quot; schneller.&quot;</td>
 </tr>
 <tr class="even">
 <td>Rating</td>
-<td>Verwendet &quot; niedriger &quot;  /  &quot; gleich &quot;  /  &quot; höher&quot;</td>
+<td>Verwendet &quot; einen &quot;  /  &quot; niedrigeren gleichen &quot;  /  &quot; höheren&quot;</td>
 </tr>
 <tr class="odd">
 <td>Priorität</td>
-<td>Verwendet &quot; niedriger &quot;  /  &quot; gleich &quot;  /  &quot; höher&quot;</td>
+<td>Verwendet &quot; einen &quot;  /  &quot; niedrigeren gleichen &quot;  /  &quot; höheren&quot;</td>
 </tr>
 </tbody>
 </table>
@@ -425,8 +425,8 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 <p> </p></td>
 </tr>
 <tr class="odd">
-<td>defaultsortdirection</td>
-<td>Gibt die Sortierrichtung an. Der Standardwert ist &quot; Aufsteigend &quot; . 
+<td>defaultSortDirection</td>
+<td>Gibt die Sortierrichtung an. Der Standardwert ist &quot; &quot; Aufsteigend. 
 <table>
 <thead>
 <tr class="header">
@@ -437,7 +437,7 @@ Wenn mehrere Elemente vorhanden sind, wird der letzte verwendet. Wenn kein [Disp
 <tbody>
 <tr class="odd">
 <td>Aufsteigend</td>
-<td>Sortiert Aufsteigend.</td>
+<td>Sortiert aufsteigend.</td>
 </tr>
 <tr class="even">
 <td>Absteigend</td>

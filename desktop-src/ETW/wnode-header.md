@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - Wmistr.h
-ms.openlocfilehash: e8ad8bd5e1fd4917fa031e7553ed0e7e460244b8ab7c7da347a62d7430036cc0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 93cecb900b0c62084a3b5ea4e4a7789575c20c27
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119015238"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480686"
 ---
 # <a name="wnode_header-structure"></a>WNODE \_ HEADER-Struktur
 
@@ -137,37 +137,13 @@ Sie können einen der folgenden Werte angeben.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><dl> <dt>1</dt> </dl></td>
-<td>Abfrageleistungsindikator (Query Performance Counter, QPC). Der QPC-Indikator stellt einen zeitstempel mit hoher Auflösung zur Verfügung, der nicht von Anpassungen der Systemuhr betroffen ist. Der im Ereignis gespeicherte Zeitstempel entspricht dem Wert, der von der QueryPerformanceCounter-API zurückgegeben wird. Weitere Informationen zu den Merkmalen dieses Zeitstempels finden Sie unter Abrufen von zeitstempeln <a href="/windows/win32/sysinfo/acquiring-high-resolution-time-stamps">mit hoher Auflösung.</a><br/> Sie sollten diese Auflösung verwenden, wenn Sie über hohe Ereignisraten verfügen oder wenn der Consumer Ereignisse aus unterschiedlichen Puffern zusammenführungen. In diesen Fällen ermöglicht die Genauigkeit und Stabilität des QPC-Zeitstempels eine bessere Genauigkeit bei der Sortierung der Ereignisse aus verschiedenen Puffern. Der QPC-Zeitstempel spiegelt jedoch keine Aktualisierungen der Systemuhr wider, z. B. wenn die Systemuhr aufgrund der Synchronisierung mit einem NTP-Server während der Ablaufverfolgung nach vorn angepasst wird, spiegeln die QPC-Zeitstempel in der Ablaufverfolgung weiterhin die Zeit wider, als ob kein Update erfolgt wäre.<br/> Um die Auflösung zu bestimmen, verwenden Sie das <strong>PerfFreq-TRACE_LOGFILE_HEADER</strong> <a href="/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header"><strong>bei</strong></a> der Nutzung des Ereignisses.<br/> Verwenden Sie die folgende Konvertierungsformel, um den Zeitstempel eines Ereignisses in 100-ns-Einheiten zu konvertieren: <br/> scaledTimestamp = eventRecord.EventHeader.TimeStamp.QuadPart * 10000000.0 / logfileHeader.PerfFreq.QuadPart<br/> Beachten Sie, dass der Zeitstempel auf älteren Computern möglicherweise nicht genau ist, da der Zähler manchmal aufgrund von Hardwarefehlern übersprungen wird.<br/></td>
-</tr>
-<tr class="even">
-<td><dl> <dt>2</dt> </dl></td>
-<td>Systemzeit. Die Systemzeit stellt einen Zeitstempel zur Verfügung, mit dem Änderungen an der Systemuhr nachverfolgt werden, z. B. wenn die Systemuhr aufgrund der Synchronisierung mit einem NTP-Server während der Ablaufverfolgung nach vorn angepasst wird, springen die Zeitstempel der Systemzeit in der Ablaufverfolgung ebenfalls vorwärts, um der neuen Einstellung der Systemuhr zu folgen. <br/>
-<ul>
-<li>Auf Systemen vor Windows 10 entspricht der im Ereignis gespeicherte Zeitstempel dem Wert, der von der GetSystemTimeAsFileTime-API zurückgegeben wird.</li>
-<li>Bei Windows 10 oder höher entspricht der im Ereignis gespeicherte Zeitstempel dem Wert, der von der GetSystemTimePreciseAsFileTime-API zurückgegeben wird.</li>
-</ul>
-Vor Windows 10 war die Auflösung dieses Zeitstempels die Auflösung eines Systemtakttakts, wie durch den TimerResolution-Member des TRACE_LOGFILE_HEADER. Ab Windows 10 ist die Auflösung dieses Zeitstempels die Auflösung des Leistungsindikators, wie vom PerfFreq-Member des TRACE_LOGFILE_HEADER.<br/> Verwenden Sie die folgende Konvertierungsformel, um den Zeitstempel eines Ereignisses in 100-ns-Einheiten zu konvertieren: <br/> scaledTimestamp = eventRecord.EventHeader.TimeStamp.QuadPart<br/> Beachten Sie Folgendes: Wenn Ereignisse auf einem System erfasst werden, auf dem ein Betriebssystem vor Windows 10 ausgeführt wird und die Menge der Ereignisse hoch ist, ist die Auflösung für die Systemzeit möglicherweise nicht ausreichend, um die Abfolge der Ereignisse zu bestimmen. In diesem Fall hat ein Satz von Ereignissen den gleichen Zeitstempel, aber die Reihenfolge, in der ETW die Ereignisse liefert, ist möglicherweise nicht richtig. Ab Windows 10 wird der Zeitstempel mit zusätzlicher Genauigkeit erfasst, aber in Fällen, in denen die Systemuhr während der Erfassung der Ablaufverfolgung angepasst wurde, kann es trotzdem zu Instabilität kommen.<br/></td>
-</tr>
-<tr class="odd">
-<td><dl> <dt>3</dt> </dl></td>
-<td>CPU-Zykluszähler. Der CPU-Leistungsindikator stellt den zeitstempel der höchsten Auflösung und ist der am wenigsten ressourcenintensiv abzurufende. Der CPU-Indikator ist jedoch unzuverlässig und sollte nicht in der Produktion verwendet werden. Auf einigen Computern ändern sich die Timer beispielsweise aufgrund von Wärme- und Stromänderungen und werden nicht nur in einigen Zuzuständen beendet.<br/> Um die Auflösung zu bestimmen, verwenden Sie den <strong>CpuSpeedInMHz-Member</strong> von <a href="/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header"><strong>TRACE_LOGFILE_HEADER</strong></a> bei der Nutzung des Ereignisses.<br/> Wenn Ihre Hardware diesen Uhrtyp nicht unterstützt, verwendet ETW die Systemzeit.<br/> <strong>Windows Server 2003, Windows XP mit SP1 und Windows XP:</strong> Dieser Wert wird nicht unterstützt. Er wurde in Windows Server 2003 mit SP1 und Windows XP mit SP2 eingeführt.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <dl><dt>1</dt></dl> | Abfrageleistungsindikator (Query Performance Counter, QPC). Der QPC-Indikator stellt einen zeitstempel mit hoher Auflösung zur Verfügung, der nicht von Anpassungen der Systemuhr betroffen ist. Der im Ereignis gespeicherte Zeitstempel entspricht dem Wert, der von der QueryPerformanceCounter-API zurückgegeben wird. Weitere Informationen zu den Merkmalen dieses Zeitstempels finden Sie unter Abrufen von zeitstempeln <a href="/windows/win32/sysinfo/acquiring-high-resolution-time-stamps">mit hoher Auflösung.</a><br /> Sie sollten diese Auflösung verwenden, wenn Sie über hohe Ereignisraten verfügen oder wenn der Consumer Ereignisse aus unterschiedlichen Puffern zusammenführungen. In diesen Fällen ermöglicht die Genauigkeit und Stabilität des QPC-Zeitstempels eine bessere Genauigkeit bei der Sortierung der Ereignisse aus verschiedenen Puffern. Der QPC-Zeitstempel spiegelt jedoch keine Aktualisierungen der Systemuhr wider, z. B. wenn die Systemuhr aufgrund der Synchronisierung mit einem NTP-Server während der Ablaufverfolgung nach vorn angepasst wird, spiegeln die QPC-Zeitstempel in der Ablaufverfolgung weiterhin die Zeit wider, als ob kein Update erfolgt wäre.<br /> Um die Auflösung zu bestimmen, verwenden Sie das <strong>PerfFreq-TRACE_LOGFILE_HEADER</strong> <a href="/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header"><strong>bei</strong></a> der Nutzung des Ereignisses.<br /> Verwenden Sie die folgende Konvertierungsformel, um den Zeitstempel eines Ereignisses in 100-ns-Einheiten zu konvertieren: <br /> scaledTimestamp = eventRecord.EventHeader.TimeStamp.QuadPart * 10000000.0 / logfileHeader.PerfFreq.QuadPart<br /> Beachten Sie, dass der Zeitstempel auf älteren Computern möglicherweise nicht genau ist, da der Zähler manchmal aufgrund von Hardwarefehlern übersprungen wird.<br /> | 
+| <dl><dt>2</dt></dl> | Systemzeit. Die Systemzeit stellt einen Zeitstempel zur Verfügung, mit dem Änderungen an der Systemuhr nachverfolgt werden, z. B. wenn die Systemuhr aufgrund der Synchronisierung mit einem NTP-Server während der Ablaufverfolgung nach vorn angepasst wird, springen die Zeitstempel der Systemzeit in der Ablaufverfolgung ebenfalls vorwärts, um der neuen Einstellung der Systemuhr zu folgen. <br /><ul><li>Auf Systemen vor Windows 10 entspricht der im Ereignis gespeicherte Zeitstempel dem Wert, der von der GetSystemTimeAsFileTime-API zurückgegeben wird.</li><li>Bei Windows 10 oder höher entspricht der im Ereignis gespeicherte Zeitstempel dem Wert, der von der GetSystemTimePreciseAsFileTime-API zurückgegeben wird.</li></ul>Vor Windows 10 war die Auflösung dieses Zeitstempels die Auflösung eines Takts der Systemuhr, wie vom TimerResolution-Member des TRACE_LOGFILE_HEADER. Ab Windows 10 ist die Auflösung dieses Zeitstempels die Auflösung des Leistungsindikators, wie vom PerfFreq-Member des TRACE_LOGFILE_HEADER.<br /> Verwenden Sie die folgende Konvertierungsformel, um den Zeitstempel eines Ereignisses in 100-ns-Einheiten zu konvertieren: <br /> scaledTimestamp = eventRecord.EventHeader.TimeStamp.QuadPart<br /> Beachten Sie, dass beim Erfassen von Ereignissen auf einem System, auf dem ein Betriebssystem vor Windows 10 ausgeführt wird, die Auflösung für die Systemzeit möglicherweise nicht ausreichend ist, um die Abfolge der Ereignisse zu bestimmen. In diesem Fall hat ein Satz von Ereignissen den gleichen Zeitstempel, aber die Reihenfolge, in der ETW die Ereignisse liefert, ist möglicherweise nicht richtig. Ab Windows 10 wird der Zeitstempel mit zusätzlicher Genauigkeit erfasst, aber in Fällen, in denen die Systemuhr während der Erfassung der Ablaufverfolgung angepasst wurde, kann es trotzdem zu Instabilität kommen.<br /> | 
+| <dl><dt>3</dt></dl> | CPU-Zykluszähler. Der CPU-Leistungsindikator stellt den zeitstempel der höchsten Auflösung und ist der am wenigsten ressourcenintensiv abzurufende. Der CPU-Indikator ist jedoch unzuverlässig und sollte nicht in der Produktion verwendet werden. Auf einigen Computern ändern sich die Timer beispielsweise aufgrund von Wärme- und Stromänderungen und werden nicht nur in einigen Zuzuständen beendet.<br /> Um die Auflösung zu bestimmen, verwenden Sie den <strong>CpuSpeedInMHz-Member</strong> von <a href="/windows/win32/api/evntrace/ns-evntrace-trace_logfile_header"><strong>TRACE_LOGFILE_HEADER</strong></a> bei der Nutzung des Ereignisses.<br /> Wenn Ihre Hardware diesen Uhrtyp nicht unterstützt, verwendet ETW die Systemzeit.<br /><strong>Windows Server 2003, Windows XP mit SP1 und Windows XP:</strong> Dieser Wert wird nicht unterstützt. Er wurde in Windows Server 2003 mit SP1 und Windows XP mit SP2 eingeführt.<br /> | 
+
 
 
 
@@ -211,7 +187,7 @@ c. Wenn ReservedFlags == 3 (CPU-Zykluszähler): DOUBLE timeStampScale = 10.0 / l
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

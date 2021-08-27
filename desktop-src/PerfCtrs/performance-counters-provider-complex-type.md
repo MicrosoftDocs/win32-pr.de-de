@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4470754e710faf9f7abe5a94cfb2e08e6e79c1b0415110b96dbac35807556911
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 94654c538cc0637e6c90e0b14d3433b979762b00
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119061067"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622716"
 ---
 # <a name="provider-complex-type"></a>provider Complex Type
 
@@ -157,7 +157,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 
 
 
-| Element        | type                                                                   | Beschreibung                                                                                 |
+| Element        | Typ                                                                   | Beschreibung                                                                                 |
 |----------------|------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | **Counterset** | [**man:counterSet**](performance-counters-counterset-complex-type.md) | Identifiziert den Indikatorsatz, der einen oder mehrere logisch verknüpfte Leistungsindikatoren enthält.<br/> |
 
@@ -169,14 +169,14 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Name</th>
-<th>type</th>
+<th>Typ</th>
 <th>Beschreibung</th>
 </tr>
 </thead>
@@ -184,7 +184,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 <tr class="odd">
 <td>Applicationidentity</td>
 <td><strong>xs:string</strong></td>
-<td>Der Name der Binärdatei, die die lokalisierten Ressourcenzeichenfolgen enthält, entweder eine .exe- oder .dll-Datei (ohne den Pfad zur Binärdatei).<br/> Das Lodctr.exe verwendet den Pfad aus dem optionalen Parameter [<em>path</em>] , um nach der Binärdatei zu suchen. Beispiel: <strong>lodctr</strong> [<strong>/m:</strong><em>manifest</em> [<em>pfad</em>]]. Wenn Sie den Parameter [<em>path</em>] nicht angeben, Lodctr.exe den Ordner, der das Manifest enthält, durchsucht.<br/></td>
+<td>Der Name der Binärdatei, die die lokalisierten Ressourcenzeichenfolgen enthält, entweder eine .exe- oder .dll-Datei (ohne den Pfad zur Binärdatei).<br/> Das Lodctr.exe verwendet den Pfad aus dem optionalen Parameter [<em>path</em>] , um nach der Binärdatei zu suchen. Beispiel: <strong>lodctr</strong> [<strong>/m:</strong><em>manifest</em> [<em>pfad</em>]]. Wenn Sie den [path<em>]-Parameter</em>nicht angeben, Lodctr.exe den Ordner, der das Manifest enthält, durchsucht.<br/></td>
 </tr>
 <tr class="even">
 <td>Rückruf</td>
@@ -199,7 +199,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 <tr class="even">
 <td>providerName</td>
 <td><strong>xs:string</strong></td>
-<td>Der Name, der zum Erstellen des WMI-Win32_PerfRawData Klassennamens verwendet wird. Wenn Sie keinen Namen angeben, wird &quot; Counters &quot; als Name der Klasse verwendet.<br/></td>
+<td>Der Name, der zum Erstellen des WMI-Win32_PerfRawData klassenname verwendet wird. Wenn Sie keinen Namen angeben, wird &quot; Counters &quot; als Name der Klasse verwendet.<br/></td>
 </tr>
 <tr class="odd">
 <td>Providertype</td>
@@ -209,7 +209,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 <thead>
 <tr class="header">
 <th>Begriff</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -219,7 +219,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 </tr>
 <tr class="even">
 <td><span id="kernel"></span><span id="KERNEL"></span>Kernel<br/></td>
-<td>Geben Sie diesen Modus für eine Kernelmoduskomponente an, z. B. einen WDM- oder WDF-Treiber. Die typische Erweiterung für Kernelmoduskomponenten ist .sys.<br/> <strong>Windows Vista und Windows Server 2008:</strong> Dieser Wert wird erst ab 7 Windows server 2008 R2 Windows Server 2008 R2 unterstützt.<br/></td>
+<td>Geben Sie diesen Modus für eine Kernelmoduskomponente an, z. B. einen WDM- oder WDF-Treiber. Die typische Erweiterung für Kernelmoduskomponenten ist .sys.<br/> <strong>Windows Vista und Windows Server 2008:</strong> Dieser Wert wird erst ab 7 Windows server 2008 R2 Windows server 2008 R2 unterstützt.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +242,7 @@ Definiert einen Anbieter und die leistungsindikatoren, die er bietet.
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

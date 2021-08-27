@@ -1,19 +1,19 @@
 ---
-description: Die Eigenschaft Erstellung der Anwendungs Zusammenfassung gibt an, welche Anwendung die Installerdatenbank erstellt hat. Im Allgemeinen ist der Wert für diese Zusammenfassungs Eigenschaft der Name der Software, die verwendet wird, um diese Datenbank zu erstellen.
+description: Die Eigenschaft Anwendungszusammenfassung erstellen gibt an, welche Anwendung die Installer-Datenbank erstellt hat. Im Allgemeinen ist der Wert für diese Zusammenfassungseigenschaft der Name der Software, die zum Erstellen dieser Datenbank verwendet wird.
 ms.assetid: 62030f5c-a7cc-4ba7-86ca-c0bdfc2cfb4b
-title: Anwendungs Zusammenfassungs Eigenschaft wird erstellt
+title: Erstellen der Eigenschaft "Anwendungszusammenfassung"
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4ca218a02dee9a68b67b8ac82c44c4b47e7a164
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fbdf54ca4703a40be8976c8ed1e635fda32fc236c8b421e3ffccaf611b0cd455
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129660"
 ---
-# <a name="creating-application-summary-property"></a>Anwendungs Zusammenfassungs Eigenschaft wird erstellt
+# <a name="creating-application-summary-property"></a>Erstellen der Eigenschaft "Anwendungszusammenfassung"
 
-Die Eigenschaft **Erstellung der Anwendungs Zusammenfassung** gibt an, welche Anwendung die Installerdatenbank erstellt hat. Im Allgemeinen ist der Wert für diese Zusammenfassungs Eigenschaft der Name der Software, die verwendet wird, um diese Datenbank zu erstellen.
+Die **Eigenschaft Anwendungszusammenfassung erstellen** gibt an, welche Anwendung die Installer-Datenbank erstellt hat. Im Allgemeinen ist der Wert für diese Zusammenfassungseigenschaft der Name der Software, die zum Erstellen dieser Datenbank verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Die Eigenschaft **Erstellung der Anwendungs Zusammenfassung** gibt an, welche An
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 
 
 
@@ -29,7 +29,7 @@ Die Eigenschaft **Erstellung der Anwendungs Zusammenfassung** gibt an, welche An
 
 <dl> <dt>
 
-[Beschreibungen der Zusammenfassungs Eigenschaften](summary-property-descriptions.md)
+[Zusammenfassungseigenschaftsbeschreibungen](summary-property-descriptions.md)
 </dt> </dl>
 
  

@@ -1,12 +1,12 @@
 ---
-title: Iremotedesktopclientevents-Methode (onloginabgeschlossene)
-description: Wird aufgerufen, wenn sich das Client Steuerelement erfolgreich bei einer Remote Sitzung angemeldet hat.
+title: IRemoteDesktopClientEvents OnLoginCompleted-Methode
+description: Wird aufgerufen, wenn sich das Clientsteuer steuerelement erfolgreich bei einer Remotesitzung angemeldet hat.
 ms.assetid: D4DBD78A-189B-43F3-B9C1-49BF63C735CD
 ms.tgt_platform: multiple
 keywords:
-- Onloginabgeschlossene-Methode Remotedesktopdienste
-- Onloginabgeschlossene-Methode Remotedesktopdienste, iremotedesktopclientevents-Schnittstelle
-- Iremotedesktopclientevents-Schnittstelle Remotedesktopdienste, onloginabgeschlossene-Methode
+- OnLoginCompleted-Remotedesktopdienste
+- OnLoginCompleted-Methode Remotedesktopdienste , IRemoteDesktopClientEvents-Schnittstelle
+- IRemoteDesktopClientEvents-Schnittstelle Remotedesktopdienste , OnLoginCompleted-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a1b2dbbe50b9579964c41225fb84e0688acc151
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2d4fbe1cb336df2792f74e8fc85cb1ec6f331b5c48f75e6876b6f697d40a3dd5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392204"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124880"
 ---
-# <a name="iremotedesktopclienteventsonlogincompleted-method"></a>Iremotedesktopclientevents:: onloginabgeschlossene-Methode
+# <a name="iremotedesktopclienteventsonlogincompleted-method"></a>IRemoteDesktopClientEvents::OnLoginCompleted-Methode
 
-Wird aufgerufen, wenn sich das Client Steuerelement erfolgreich bei einer Remote Sitzung angemeldet hat.
+Wird aufgerufen, wenn sich das Clientsteuer steuerelement erfolgreich bei einer Remotesitzung angemeldet hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                 |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>         |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>         |
-| IID<br/>                      | Diid \_ iremotedesktopclientevents ist als 079863b7-6d47-4105-8bfe-0cdcb360e67d definiert.<br/> |
+| IID<br/>                      | DIID \_ IRemoteDesktopClientEvents ist als 079863B7-6D47-4105-8BFE-0CDCB360E67D definiert.<br/> |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Iremotedesktopclientevents**](iremotedesktopclientevents.md)
+[**IRemoteDesktopClientEvents**](iremotedesktopclientevents.md)
 </dt> </dl>
 
  

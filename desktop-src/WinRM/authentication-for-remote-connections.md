@@ -10,12 +10,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0622f3d80e923f7d910740c71ee99f0e9a0bc446cea259b292e2d645e3b5a973
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: b9c9c0e98d884e09b9bbd52ef4f0e1cb53e782ea
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119858875"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122886999"
 ---
 # <a name="authentication-for-remote-connections"></a>Authentifizierung für Remoteverbindungen
 
@@ -23,7 +23,7 @@ Windows Die Remoteverwaltung behält die Sicherheit für die Kommunikation zwisc
 
 ## <a name="default-group-access"></a>Standardgruppenzugriff
 
-Während des Setups erstellt WinRM die lokale Gruppe **\_ \_ WinRMRemoteWMIUsers**. WinRM schränkt dann den Remotezugriff auf alle Benutzer ein, die weder Mitglied der lokalen Verwaltungsgruppe noch der **WinRMRemoteWMIUsers-Gruppe \_ \_** sind. Sie können **\_ \_ WinRMRemoteWMIUsers** einen lokalen Benutzer, Domänenbenutzer oder eine Domänengruppe hinzufügen, indem Sie **net localgroup WinRMRemoteWMIUsers \_ \_ <domain> \\ <username> /add** an der Eingabeaufforderung eingeben. Optional können Sie die -Gruppenrichtlinie verwenden, um der Gruppe einen Benutzer hinzuzufügen.
+Während des Setups erstellt WinRM die lokale Gruppe **\_ \_ WinRMRemoteWMIUsers**. WinRM schränkt dann den Remotezugriff auf alle Benutzer ein, die weder Mitglied der lokalen Verwaltungsgruppe noch der **WinRMRemoteWMIUsers-Gruppe \_ \_** sind. Sie können **\_ \_ WinRMRemoteWMIUsers** einen lokalen Benutzer, Domänenbenutzer oder eine Domänengruppe hinzufügen, indem Sie **net localgroup WinRMRemoteWMIUsers \_ \_ /add &lt; domain &gt; \\ &lt; username &gt;** an der Eingabeaufforderung eingeben. Optional können Sie die -Gruppenrichtlinie verwenden, um der Gruppe einen Benutzer hinzuzufügen.
 
 ## <a name="default-authentication-settings"></a>Standardauthentifizierungs-Einstellungen
 
@@ -55,7 +55,7 @@ Um die Digestauthentifizierung [*explizit*](windows-remote-management-glossary.m
 
 ## <a name="negotiate-authentication"></a>Aushandeln der Authentifizierung
 
-Legen Sie [](windows-remote-management-glossary.md) das **Flag WSManFlagUseNegotiate** im *flags-Parameter* fest, um im Aufruf von [**WSMan.CreateSession**](wsman-createsession.md)explizit die Negotiate-Authentifizierung (auch als integrierte Windows-Authentifizierung bezeichnet) zu erstellen.
+Legen Sie [](windows-remote-management-glossary.md) das **Flag WSManFlagUseNegotiate** im *flags-Parameter* fest, um explizit die Negotiate-Authentifizierung (auch als integrierte Windows-Authentifizierung bezeichnet) im Aufruf von [**WSMan.CreateSession**](wsman-createsession.md)zu erstellen.
 
 [Die Benutzerkontensteuerung (User Account Control, UAC)](https://support.microsoft.com/help/922708/how-to-use-user-account-control-uac-in-windows-vista) wirkt sich auf den Zugriff auf den WinRM-Dienst aus. Wenn die Negotiate-Authentifizierung in einer Arbeitsgruppe verwendet wird, kann nur das integrierte Administratorkonto auf den Dienst zugreifen. Um allen Konten in der Gruppe Administratoren den Zugriff auf den Dienst zu ermöglichen, legen Sie den folgenden Registrierungswert fest:
 

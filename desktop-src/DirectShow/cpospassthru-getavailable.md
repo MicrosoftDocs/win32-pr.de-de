@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0d56827a68f4c287e5808f0d8f64b8142c31b1f4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e1db45b20264f192b2ade7d8863f9da86d5fc02159567611eff86e9cdfff1b10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095288"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084250"
 ---
 # <a name="cpospassthrugetavailable-method"></a>CPosPassThru.GetAvailable-Methode
 
@@ -46,7 +46,7 @@ HRESULT GetAvailable(
 *pEarliest* 
 </dt> <dd>
 
-Zeiger auf eine Variable, die die früheste Zeit für effiziente Suche empfängt.
+Zeiger auf eine Variable, die die früheste Zeit für effiziente Suche erhält.
 
 </dd> <dt>
 
@@ -65,14 +65,14 @@ Gibt den **HRESULT-Wert** aus dem verbundenen Pin zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

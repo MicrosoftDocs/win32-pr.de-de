@@ -1,7 +1,7 @@
 ---
-description: Die getnexttrans-Methode ruft den ersten Übergang ab, der zum angegebenen Zeitpunkt oder später angezeigt wird.
+description: Die GetNextTrans-Methode ruft den ersten Übergang ab, der zum angegebenen Zeitpunkt oder später angezeigt wird.
 ms.assetid: 40598d8d-ce74-4a6f-83d0-ea409b0a858c
-title: 'Iamtimelinetransable:: getnexttrans-Methode (qedit. h)'
+title: IAMTimelineTransable::GetNextTrans-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: cc8f7c88dab2b8c0dfece6f2799b6648c0b9da2a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 892f8e0f4af39250d62da9ed662c22867f98ebfc32baeaa0f341ead2eef665a4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106353419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131080"
 ---
-# <a name="iamtimelinetransablegetnexttrans-method"></a>Iamtimelinetransable:: getnexttrans-Methode
+# <a name="iamtimelinetransablegetnexttrans-method"></a>IAMTimelineTransable::GetNextTrans-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `GetNextTrans` Methode ruft den ersten Übergang ab, der zum angegebenen Zeitpunkt oder später angezeigt wird.
+Die `GetNextTrans` -Methode ruft den ersten Übergang ab, der zum angegebenen Zeitpunkt oder später angezeigt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,37 +46,37 @@ HRESULT GetNextTrans(
 
 <dl> <dt>
 
-*pptrans* \[ vorgenommen\]
+*ppTrans* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle des Übergangs Objekts.
+Empfängt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) des Übergangsobjekts.
 
 </dd> <dt>
 
 *Pinout* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Zeit in 100-Nanosecond-Einheiten angibt. Bei der Eingabe gibt dieser Wert die Zeit an, nach der der Übergang gesucht werden soll. Bei der Ausgabe wird dieser Wert auf die Endzeit des Übergangs festgelegt, wenn ein Übergang abgerufen wird.
+Zeiger auf eine Variable, die die Zeit in Einheiten von 100 Nanosekunden angibt. Bei der Eingabe gibt dieser Wert die Zeit an, ab der der Übergang zu finden ist. Wenn bei der Ausgabe ein Übergang abgerufen wird, wird dieser Wert auf die Stoppzeit des Übergangs festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt s \_ OK zurück, wenn die Methode einen Übergang abruft, oder s \_ false, wenn kein Übergang gefunden wird. Andernfalls wird ein **HRESULT** -Wert zurückgegeben, der die Ursache des Fehlers angibt.
+Gibt S \_ OK zurück, wenn die Methode einen Übergang abruft, oder S FALSE, wenn \_ sie keinen Übergang findet. Andernfalls gibt einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Startzeit des Übergangs kann kleiner sein als die Zeit, die Sie in *Pinout* angegeben haben, wenn der Übergang die angegebene Zeitspanne überschreitet.
+Die Startzeit des Übergangs kann kleiner als die Zeit sein, die Sie in *pInOut* angeben, wenn der Übergang die angegebene Zeit überdauert.
 
-Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene [**iamtimelineobj**](iamtimelineobj.md) -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode S \_ OK zurückgibt, verfügt [**die IAMTimelineObj-Schnittstelle,**](iamtimelineobj.md) die sie zurückgibt, über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie die -Schnittstelle wieder frei geben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -86,8 +86,8 @@ Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene [**iamtimelineo
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -95,10 +95,10 @@ Wenn die Methode S OK zurückgibt \_ , weist die zurückgegebene [**iamtimelineo
 
 <dl> <dt>
 
-[**Iamtimelinetransable-Schnittstelle**](iamtimelinetransable.md)
+[**IAMTimelineTransable-Schnittstelle**](iamtimelinetransable.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_TXTType-Klasse
-description: Die Unterklasse von MicrosoftDNS \_ resourcerecord, die einen Text Eintrag (txt) darstellt.
+description: Die Unterklasse von MicrosoftDNS \_ ResourceRecord, die einen Textdatensatz (TXT) darstellt.
 ms.assetid: e4bd445f-71c4-48dc-b210-e3ad4452d2e5
 keywords:
-- DNS-MicrosoftDNS_TXTType Klasse
-- DNS-MicrosoftDNS_TXTType Klasse, beschrieben
+- dns-Klasse MicrosoftDNS_TXTType
+- MicrosoftDNS_TXTType DNS-Klasse beschrieben
 topic_type:
 - apiref
 api_name:
@@ -18,18 +18,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d89563240b8e6d6bedb51cbe802180cd7577b57e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6f288978d5dff0d184dc0e026350e3ada1c16d3fd21c9aec26deea0272e338a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342469"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109080"
 ---
-# <a name="microsoftdns_txttype-class"></a>MicrosoftDNS- \_ txttype-Klasse
+# <a name="microsoftdns_txttype-class"></a>MicrosoftDNS \_ TXTType-Klasse
 
-Die Unterklasse von [**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md) , die einen Text Eintrag (txt) darstellt.
+Die Unterklasse von [**MicrosoftDNS \_ ResourceRecord,**](microsoftdns-resourcerecord.md) die einen Textdatensatz (TXT) darstellt.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,21 +42,21 @@ class MicrosoftDNS_TXTType : MicrosoftDNS_ResourceRecord
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ txttype** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ TXTType-Klasse** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ txttype** -Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ TXTType-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                 |
+| Methode                             | Beschreibung                                                                                                                                                                                                                                                                                                                                 |
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **"Kreateinzustancefrompropertydata"** | Instanziiert einen txt-Typ von RR auf der Grundlage der Daten in den Eingabe Parametern der Methode: dem DNS-Server Namen des Datensatzes, dem Container Namen, dem Besitzer Namen, der Klasse (Standard = in), dem Gültigkeitsdauer Wert und dem Text des Datensatzes. Es wird ein Verweis auf das neue-Objekt als Output-Parameter zurückgegeben. <br/> Qualifizierer: implementiert, statisch<br/>        |
-| **Modify**                         | Aktualisiert die Gültigkeitsdauer und den beschreibenden Text auf die Werte, die als Eingabeparameter dieser Methode angegeben werden. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die-Methode gibt einen Verweis auf das geänderte-Objekt als Output-Parameter zurück. <br/> Qualifizierer: Implementiert<br/> |
+| **CreateInstanceFromPropertyData** | Instanziiert einen TXT-Typ von RR basierend auf den Daten in den Eingabeparametern der Methode: DNS-Servername des Eintrags, Containername, Besitzername, Klasse (Standard = IN), Wert für die Lebenszeit und Text des Eintrags. Es gibt einen Verweis auf das neue Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert, statisch<br/>        |
+| **Änderung**                         | Aktualisiert die Gültigkeitsdauer und den beschreibenden Text auf die Werte, die als Eingabeparameter dieser Methode angegeben sind. Wenn kein neuer Wert für einen Parameter angegeben wird, wird der aktuelle Wert für den Parameter nicht geändert. Die -Methode gibt einen Verweis auf das geänderte Objekt als Ausgabeparameter zurück. <br/> Qualifizierer: Implementiert<br/> |
 
 
 
@@ -64,20 +64,20 @@ Die **MicrosoftDNS- \_ txttype** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ txttype** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ TXTType-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Deskriptivetext**
+**DescriptiveText**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Beschreibender Text, die Semantik, von der abhängig von der Besitzer Domäne ist.
+Beschreibender Text, dessen Semantik von der Besitzerdomäne abhängt.
 
 </dd> </dl>
 
@@ -89,8 +89,8 @@ Beschreibender Text, die Semantik, von der abhängig von der Besitzer Domäne is
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -98,13 +98,13 @@ Beschreibender Text, die Semantik, von der abhängig von der Besitzer Domäne is
 
 <dl> <dt>
 
-[**Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS- \_ Klasse "txttype"**](microsoftdns-txttype-createinstancefrompropertydata.md)
+[**CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ TXTType-Klasse**](microsoftdns-txttype-createinstancefrompropertydata.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS \_ txttype-Klasse**](microsoftdns-txttype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ TXTType-Klasse**](microsoftdns-txttype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

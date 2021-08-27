@@ -1,5 +1,5 @@
 ---
-description: Mbnprofileext \/ ... \/ Kennwort (v4)
+description: MBNProfileExt \/ ... \/ Kennwort (v4)
 MS-HAID: WWAN\_profile\_v4.element\_Password
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -16,18 +16,18 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: c90b2481aa503b7b616d21fca24917b960a92dc9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81a929fe54c2b397b1bad242531ec08a815b7239
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214703"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122981993"
 ---
-# <a name="span-idwwan_profile_v4element_passwordspanmbnprofileextpassword-v4"></a><span id="WWAN_profile_v4.element_Password"></span>Mbnprofileext \/ ... \/ Kennwort (v4)
+# <a name="span-idwwan_profile_v4element_passwordspanmbnprofileextpassword-v4"></a><span id="WWAN_profile_v4.element_Password"></span>MBNProfileExt \/ ... \/ Kennwort (v4)
 
 Gibt das Kennwort an, das zum Authentifizieren eines Benutzers verwendet wird.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1-Kenn [**Wort**](./schema-password-userlogoncred-element.md) Element.
+Weitere Informationen finden Sie in der Dokumentation für das v1 [**Password-Element.**](./schema-password-userlogoncred-element.md)
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -63,41 +63,21 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-userlogoncred.md">UserLogonCred</a></td>
-<td><p>Anmelde Informationen für eine Verbindung.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-userlogoncred.md">UserLogonCred</a> | <p>Anmeldeinformationen für eine Verbindung.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

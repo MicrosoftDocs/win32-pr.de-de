@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 75f70c782ff887076a8ddc6a16a6d9cbdadba16e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 236b197f87360d6ca4dbc4c68970a17d858fb2c200fa5c7b3f8431cb65067f9e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130400"
 ---
 # <a name="stopservice-method-of-the-msvm_replicationservice-class"></a>StopService-Methode der Msvm \_ ReplicationService-Klasse
 
@@ -53,7 +53,7 @@ Die -Methode gibt einen der folgenden Werte zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -63,7 +63,7 @@ Die -Methode gibt einen der folgenden Werte zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

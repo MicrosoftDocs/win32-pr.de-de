@@ -1,21 +1,21 @@
 ---
-description: Dieses Thema ist Schritt 1 des Tutorials zum Wiedergeben von Mediendateien mit Media Foundation.
+description: Dieses Thema ist Schritt 1 des Tutorials How to Play Media Files with Media Foundation.
 ms.assetid: 10767bbf-3b47-4df1-be73-18678397c0ab
-title: 'Schritt 1: Deklarieren der cplayer-Klasse'
+title: 'Schritt 1: Deklarieren der CPlayer-Klasse'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1593842ecece68fcd3c4cca35a7e2e28eac503c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c61f03a9054e96769414320811d32a549027defb80ff929aba2c27ad4aa5b5f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112910"
 ---
-# <a name="step-1-declare-the-cplayer-class"></a>Schritt 1: Deklarieren der cplayer-Klasse
+# <a name="step-1-declare-the-cplayer-class"></a>Schritt 1: Deklarieren der CPlayer-Klasse
 
-Dieses Thema ist Schritt 1 des Tutorials zum Wiedergeben von [Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md). Der gesamte Code wird im Thema Beispiel für die [Wiedergabe von Medien Sitzungen](media-session-playback-example.md)angezeigt.
+Dieses Thema ist Schritt 1 des Tutorials [How to Play Media Files with Media Foundation](how-to-play-unprotected-media-files.md). Der vollständige Code wird im Thema [Media Session Playback Example (Media Session Playback Example) gezeigt.](media-session-playback-example.md)
 
-In diesem Tutorial wird die Wiedergabefunktion in der-Klasse gekapselt `CPlayer` . Die `CPlayer`-Klasse wird folgendermaßen deklariert:
+In diesem Tutorial ist die Wiedergabefunktion in der -Klasse `CPlayer` gekapselt. Die `CPlayer`-Klasse wird folgendermaßen deklariert:
 
 
 ```C++
@@ -107,20 +107,20 @@ protected:
 
 
 
-Hier sind einige Punkte zu beachten `CPlayer` :
+Hier sind einige Dinge zu `CPlayer` beachten:
 
--   Das Ereignis "Constant **WM \_ App \_ Player \_** " definiert eine private Fenster Meldung. Diese Meldung wird verwendet, um die Anwendung über Medien Sitzungs Ereignisse zu benachrichtigen. Weitere Informationen finden Sie unter [Step 5: handle Media Session Events](step-5--handle-media-session-events.md).
--   Die- `PlayerState` Enumeration definiert die möglichen Zustände des- `CPlayer` Objekts.
--   Die- `CPlayer` Klasse implementiert die [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) -Schnittstelle, die verwendet wird, um Ereignis Benachrichtigungen von der Medien Sitzung zu erhalten.
--   Der `CPlayer` Konstruktor ist privat. Die Anwendung ruft die statische- `CreateInstance` Methode auf, um eine Instanz der-Klasse zu erstellen `CPlayer` .
--   Der `CPlayer` Dekonstruktor ist auch privat. Die `CPlayer` Klasse implementiert **IUnknown**, sodass die Lebensdauer des Objekts durch den Verweis Zähler (*m \_ nref count*) gesteuert wird. Um das Objekt zu zerstören, ruft die Anwendung **IUnknown:: Release** und nicht **Delete** auf.
--   Das `CPlayer` -Objekt verwaltet sowohl die Medien Sitzung als auch die Medienquelle.
+-   Die Konstante **WM \_ APP PLAYER \_ \_ EVENT** definiert eine Private Window-Nachricht. Diese Meldung wird verwendet, um die Anwendung über Media Session-Ereignisse zu benachrichtigen. Weitere Informationen [finden Sie unter Schritt 5: Behandeln von Mediensitzungsereignissen.](step-5--handle-media-session-events.md)
+-   Die `PlayerState` -Enumeration definiert die möglichen Zustände des `CPlayer` -Objekts.
+-   Die `CPlayer` -Klasse implementiert [**dieASYNCCallback-Schnittstelle,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback) die zum Empfangen von Ereignisbenachrichtigungen aus der Mediensitzung verwendet wird.
+-   Der `CPlayer` Konstruktor ist privat. Die Anwendung ruft die statische `CreateInstance` -Methode auf, um eine Instanz der -Klasse zu `CPlayer` erstellen.
+-   Der `CPlayer` Destruktor ist ebenfalls privat. Die `CPlayer` -Klasse implementiert **IUnknown,** sodass die Lebensdauer des Objekts über die Verweisanzahl (*m \_ nRefCount*) gesteuert wird. Um das Objekt zu zerstören, ruft die Anwendung **IUnknown::Release auf** und löscht **nicht**.
+-   Das `CPlayer` -Objekt verwaltet sowohl die Mediensitzung als auch die Medienquelle.
 
 ## <a name="implement-iunknown"></a>Implementieren von IUnknown
 
-Die `CPlayer` Klasse implementiert [**imfasynccallback**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback), das **IUnknown** erbt.
+Die `CPlayer` -Klasse implementiert [**DIEASYNCCallback-Klasse,**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasynccallback)die **IUnknown erbt.**
 
-Der hier gezeigte Code ist eine relativ standardmäßige Implementierung von **IUnknown**. Wenn Sie möchten, können Sie die Active Template Library (ATL) verwenden, um diese Methoden zu implementieren. `CPlayer`Unterstützt jedoch keine [**cokreateingestance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -oder Advanced COM-Funktionen, sodass es keinen überwältigenden Grund gibt, ATL hier zu verwenden.
+Der hier gezeigte Code ist eine ziemlich standardmäßige Implementierung von **IUnknown**. Wenn Sie möchten, können Sie die Active Template Library (ATL) verwenden, um diese Methoden zu implementieren. Unterstützt jedoch `CPlayer` weder [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) noch erweiterte COM-Features, sodass es hier keinen überforderischen Grund gibt, ATL zu verwenden.
 
 
 ```C++
@@ -152,7 +152,7 @@ ULONG CPlayer::Release()
 
 
 
-Weiter: [Schritt 2: Erstellen des cplayer-Objekts](step-2--create-the-cplayer-object.md)
+Weiter: [Schritt 2: Erstellen des CPlayer-Objekts](step-2--create-the-cplayer-object.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -161,7 +161,7 @@ Weiter: [Schritt 2: Erstellen des cplayer-Objekts](step-2--create-the-cplayer-ob
 [Audio-/Videowiedergabe](audio-video-playback.md)
 </dt> <dt>
 
-[Wiedergeben von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)
+[Wiederspielen von Mediendateien mit Media Foundation](how-to-play-unprotected-media-files.md)
 </dt> </dl>
 
  

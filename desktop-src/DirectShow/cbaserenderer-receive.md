@@ -1,7 +1,7 @@
 ---
-description: Die Receive-Methode empfängt das nächste Medien Beispiel im Stream.
+description: Die Receive-Methode empfängt das nächste Medienbeispiel im Stream.
 ms.assetid: b340f76c-2305-444f-bc00-1ef5acdea329
-title: Cbaserderderer. Receive-Methode (renbase. h)
+title: CBaseRenderer.Receive-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 96abb2ee3d44604c23e9943e086a52312a011e92
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fe440b7ac0c7b05c2d3cf9d7ca2019a788e272b7aca6acd6a747738a255ca39b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131440"
 ---
-# <a name="cbaserendererreceive-method"></a>Cbaserderderer. Receive-Methode
+# <a name="cbaserendererreceive-method"></a>CBaseRenderer.Receive-Methode
 
-Die- `Receive` Methode empfängt das nächste Medien Beispiel im Stream.
+Die `Receive` -Methode empfängt das nächste Medienbeispiel im Stream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,38 +42,38 @@ virtual Receive(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Eingabe-PIN ruft diese Methode auf, wenn Sie ein Beispiel aus dem upstreamfilter empfängt.
+Der Eingabepin ruft diese Methode auf, wenn sie ein Beispiel vom Upstreamfilter empfängt.
 
 Wenn der Filter ausgeführt wird, führt diese Methode die folgenden Schritte aus:
 
-1.  Plant das Beispiel für das Rendering ([**cbaserenderer::P**](cbaserenderer-preparereceive.md)Analyse).
-2.  Wartet auf die geplante Zeit ([**cbaserenderer:: waitforrendertime**](cbaserenderer-waitforrendertime.md)).
-3.  Rendert das Beispiel ([**cbaserenderer:: Rendering**](cbaserenderer-render.md)).
-4.  Gibt das Beispiel ([**cbaserderderer:: clearpdingsample**](cbaserenderer-clearpendingsample.md)) frei.
+1.  Plant das Beispiel für das Rendering ([**CBaseRenderer::P repareReceive**](cbaserenderer-preparereceive.md)).
+2.  Wartet auf die geplante Zeit ([**CBaseRenderer::WaitForRenderTime**](cbaserenderer-waitforrendertime.md)).
+3.  Rendert das Beispiel ([**CBaseRenderer::Render**](cbaserenderer-render.md)).
+4.  Gibt das Beispiel frei ([**CBaseRenderer::ClearPendingSample**](cbaserenderer-clearpendingsample.md)).
 
-Wenn der Filter angehalten ist, führt die-Methode die folgenden Schritte aus:
+Wenn der Filter angehalten wird, führt die -Methode die folgenden Schritte aus:
 
-1.  Benachrichtigt die abgeleitete-Klasse, dass eine Stichprobe verfügbar ist ([**cbasererderderer:: onreceivefirstsample**](cbaserenderer-onreceivefirstsample.md)).
+1.  Benachrichtigt die abgeleitete Klasse, dass ein Beispiel verfügbar ist ([**CBaseRenderer::OnReceiveFirstSample**](cbaserenderer-onreceivefirstsample.md)).
 2.  Wartet auf die geplante Zeit.
 3.  Rendert das Beispiel.
 4.  Gibt das Beispiel frei.
 
-Obwohl die-Methode angehalten wurde, wartet Sie in Schritt 2, bis der Filter in den Status wird ausgeführt wechselt. An diesem Punkt plant der Filter das Beispiel.
+Während die Methode angehalten wurde, wartet sie in Schritt 2, bis der Filter in den Ausführungszustand wechselt. An diesem Punkt plant der Filter das Beispiel.
 
-In der Basisklasse führt die **onreceivefirstsample** -Methode keine Aktion aus. Diese kann von der abgeleiteten Klasse überschrieben werden. Wenn ein Videorenderer z. b. angehalten wird, wird das erste Beispiel als Bild angezeigt.
+In der Basisklasse führt die **OnReceiveFirstSample-Methode** nichts aus. Die abgeleitete Klasse kann sie überschreiben. Wenn beispielsweise ein Videorenderer angehalten wird, wird das erste Beispiel als Standbild angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ In der Basisklasse führt die **onreceivefirstsample** -Methode keine Aktion aus
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ In der Basisklasse führt die **onreceivefirstsample** -Methode keine Aktion aus
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

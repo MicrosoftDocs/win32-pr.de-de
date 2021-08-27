@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_PIPELINE_STATE_STREAM_NODE_MASK-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die verwendet wird, um eine Knoten Maske als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+title: CD3DX12_PIPELINE_STATE_STREAM_NODE_MASK-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, die verwendet wird, um eine Knotenmaske als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 ms.assetid: 5C770D9A-D692-46CF-8D60-EE5EB04998C8
 keywords:
-- CD3DX12_PIPELINE_STATE_STREAM_NODE_MASK Struktur
+- CD3DX12_PIPELINE_STATE_STREAM_NODE_MASK-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9c364ecd20459d8c20bdd3d30b969cc3b9ae46d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0f4850ff986f2006c506d79a8ece1ced873529c2a4939869cd704a4b7c3c4b03
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119680"
 ---
-# <a name="cd3dx12_pipeline_state_stream_node_mask-structure"></a>CD3DX12 \_ Pipeline \_ State \_ Stream- \_ Knoten \_ Masken Struktur
+# <a name="cd3dx12_pipeline_state_stream_node_mask-structure"></a>CD3DX12 \_ PIPELINE STATE STREAM NODE \_ \_ \_ \_ MASK-Struktur
 
-Eine hilfsstruktur, die verwendet wird, um eine Knoten Maske als einzelnes Objekt zu beschreiben, das für eine Datenstrom Beschreibung geeignet ist.
+Eine Hilfsstruktur, die verwendet wird, um eine Knotenmaske als einzelnes Objekt zu beschreiben, das für eine Streambeschreibung geeignet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,37 +44,37 @@ struct CD3DX12_PIPELINE_STATE_STREAM_NODE_MASK {
 
 <dl> <dt>
 
-**CD3DX12- \_ Pipeline-Statusdaten Strom- \_ \_ \_ Knoten \_ Maske**
+**KNOTENMASKE DES \_ CD3DX12-PIPELINESTATUSSTREAMS \_ \_ \_ \_**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ Pipeline \_ State Stream- \_ \_ Knoten \_ Maske.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ PIPELINE STATE STREAM NODE \_ \_ \_ \_ MASK.
 
 </dd> <dt>
 
-**CD3DX12 \_ Pipeline \_ State \_ Stream- \_ Knoten \_ Maske (uint-Konstante &i)**
+**CD3DX12 \_ PIPELINE STATE STREAM NODE \_ \_ \_ \_ MASK(UINT const &i)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12 \_ Pipeline- \_ Status \_ \_ Datenstrom \_ -Knoten Maske, die mit einem untergeordneten Typ der **Knoten Maske des D3D12-Pipeline Status-untergeordneten \_ \_ \_ \_ Typs \_ \_** und untergeordneten Daten, die aus *i* kopiert werden,, einer **uint** -Knoten Maske, initialisiert wird.
+Erstellt eine neue Instanz einer CD3DX12 \_ PIPELINE STATE STREAM NODE \_ \_ \_ \_ MASK, initialisiert mit einem Unterobjekttyp von **D3D12 \_ PIPELINE STATE \_ \_ SUBOBJECT TYPE NODE \_ \_ \_ MASK** und unterobjektdaten, die aus *i*, einer **UINT-Knotenmaske,** kopiert wurden.
 
 </dd> <dt>
 
-**Operator = (uint Konstanten& i)**
+**operator=(UINT const& i)**
 </dt> <dd>
 
-Kopier Zuweisungs Operator.
+Kopierzuweisungsoperator.
 
 </dd> <dt>
 
-**Operator uint () Konstanten**
+**Operator UINT() const**
 </dt> <dd>
 
-Implizite Konvertierung in eine **uint** -Knoten Maske.
+Implizite Konvertierung in eine **UINT-Knotenmaske.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-CD3DX12 \_ Pipeline \_ State \_ Stream \_ Node \_ Mask ist eine typedef-Spezialisierung der untergeordneten Pipeline für den [**CD3DX12 \_ Pipeline \_ State \_ Stream \_**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
+CD3DX12 \_ PIPELINE STATE STREAM NODE MASK ist eine \_ \_ \_ \_ Typedef-Spezialisierung der [**CD3DX12 \_ PIPELINE STATE STREAM \_ \_ \_ SUBOBJECT-Vorlage**](cd3dx12-pipeline-state-stream-subobject.md) und wird wie folgt definiert:
 
 
 ```C++
@@ -91,7 +91,7 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<UINT, D3D12_PIPELINE_STATE_SUBOB
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -102,10 +102,10 @@ typedef CD3DX12_PIPELINE_STATE_STREAM_SUBOBJECT<UINT, D3D12_PIPELINE_STATE_SUBOB
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)
 </dt> <dt>
 
-[**CD3DX12 \_ Pipeline State-Datenstrom-unter \_ \_ \_ Objekt**](cd3dx12-pipeline-state-stream-subobject.md)
+[**CD3DX12 \_ PIPELINE \_ STATE \_ STREAM \_ SUBOBJECT**](cd3dx12-pipeline-state-stream-subobject.md)
 </dt> <dt>
 
-[**D3D12 \_ Pipeline \_ Status-unter Objekt- \_ \_ Typ**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
+[**D3D12 \_ PIPELINE \_ STATE \_ SUBOBJECT \_ TYPE**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_pipeline_state_subobject_type)
 </dt> </dl>
 
  

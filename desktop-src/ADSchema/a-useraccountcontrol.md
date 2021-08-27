@@ -1,11 +1,11 @@
 ---
-title: Attribut "Benutzerkontensteuerung"
+title: User-Account-Control-Attribut
 description: Flags, die das Verhalten des Benutzerkontos steuern.
 ms.assetid: fc81a16a-f537-44cc-957c-5d7ca66b9755
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Benutzerkonten Steuerungs Attribut
-- userAccountControl-Attribut, AD-Schema
+- AD-Schema des Attributs "User-Account-Control"
+- AD-Schema des userAccountControl-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f60297d22aad76b229c691a667ac22a87271402c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 76ab64d0d93ce7523c3d91d6f4a3ebb5f4d200f0
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122635"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468797"
 ---
-# <a name="user-account-control-attribute"></a>Attribut "Benutzerkontensteuerung"
+# <a name="user-account-control-attribute"></a>User-Account-Control-Attribut
 
 Flags, die das Verhalten des Benutzerkontos steuern.
 
@@ -30,12 +30,12 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Eingabe | Wert |
 |-------------------|---------------------------------------|
 | CN                | Benutzerkontensteuerung                  |
-| LDAP-Display-Name | userAccountControl                    |
+| Ldap-Anzeigename | userAccountControl                    |
 | Size              | 4 Bytes.                              |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.      |
-| Aktualisierungshäufigkeit  | Jedes Mal, wenn die Konto Richtlinie geändert wird. |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.      |
+| Updatehäufigkeit  | Jedes Mal, wenn sich die Kontorichtlinie ändert. |
 | Attribute-Id      | 1.2.840.113556.1.4.8                  |
-| System-ID-GUID    | bf967a68-0de6-11d0-a285-00aa003049e2  |
+| System-Id-Guid    | bf967a68-0de6-11d0-a285-00aa003049e2  |
 | Syntax            | [**Enumeration**](s-enumeration.md)  |
 
 
@@ -43,7 +43,7 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Is-Single-Valued       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -70,7 +70,7 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Is-Single-Valued       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -100,10 +100,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Is-Single-Valued       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -121,10 +121,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -142,10 +142,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -163,10 +163,10 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | Richtig                              |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | True                              |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000019                        |
@@ -175,148 +175,39 @@ Flags, die das Verhalten des Benutzerkontos steuern.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Attribut Wert kann NULL oder eine Kombination aus einem oder mehreren der folgenden Werte sein.
+Dieser Attributwert kann 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Hexadezimalwert</th>
-<th>Bezeichner (definiert in "IADs. h")</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>0x00000001</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SCRIPT</strong></a></td>
-<td>Das Anmelde Skript wird ausgeführt.</td>
-</tr>
-<tr class="even">
-<td>0x00000002</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_ACCOUNTDISABLE</strong></a></td>
-<td>Das Benutzerkonto ist deaktiviert.</td>
-</tr>
-<tr class="odd">
-<td>0x00000008</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_HOMEDIR_REQUIRED</strong></a></td>
-<td>Das Basisverzeichnis ist erforderlich.</td>
-</tr>
-<tr class="even">
-<td>0x00000010</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_LOCKOUT</strong></a></td>
-<td>Das Konto ist zurzeit gesperrt.</td>
-</tr>
-<tr class="odd">
-<td>0x00000020</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWD_NOTREQD</strong></a></td>
-<td>Es ist kein Kennwort erforderlich.</td>
-</tr>
-<tr class="even">
-<td>0x00000040</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWD_CANT_CHANGE</strong></a></td>
-<td>Der Benutzer kann das Kennwort nicht ändern.
-<blockquote>
-[!Note]<br />
-Sie können die Berechtigungseinstellungen von PASSWD_CANT_CHANGE nicht zuweisen, indem Sie das userAccountControl-Attribut direkt ändern. Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie verhindern können, dass Benutzer das Kennwort ändern, finden Sie unter Benutzer kann das Kennwort <a href="/windows/desktop/ADSI/user-cannot-change-password">nicht ändern</a>.
-</blockquote>
-<br/> :</td>
-</tr>
-<tr class="odd">
-<td>0x00000080</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED</strong></a></td>
-<td>Der Benutzer kann ein verschlüsseltes Kennwort senden.</td>
-</tr>
-<tr class="even">
-<td>0x00000100</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TEMP_DUPLICATE_ACCOUNT</strong></a></td>
-<td>Dies ist ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto ermöglicht dem Benutzer den Zugriff auf diese Domäne, jedoch nicht auf eine Domäne, die dieser Domäne vertraut. Wird auch als lokales Benutzerkonto bezeichnet.</td>
-</tr>
-<tr class="odd">
-<td>0x00000200</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_NORMAL_ACCOUNT</strong></a></td>
-<td>Dies ist ein Standard Kontotyp, der einen typischen Benutzer darstellt.</td>
-</tr>
-<tr class="even">
-<td>0x00000800</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_INTERDOMAIN_TRUST_ACCOUNT</strong></a></td>
-<td>Dies ist eine Zulassungsberechtigung für ein Vertrauensstellungs Konto für eine System Domäne, die anderen Domänen vertraut.</td>
-</tr>
-<tr class="odd">
-<td>0x00001000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_WORKSTATION_TRUST_ACCOUNT</strong></a></td>
-<td>Hierbei handelt es sich um ein Computer Konto für einen Computer, der Mitglied dieser Domäne ist.</td>
-</tr>
-<tr class="even">
-<td>0x00002000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SERVER_TRUST_ACCOUNT</strong></a></td>
-<td>Hierbei handelt es sich um ein Computer Konto für einen Domänen Controller der Systemsicherung, der Mitglied dieser Domäne ist.</td>
-</tr>
-<tr class="odd">
-<td>0x00004000</td>
-<td>–</td>
-<td>Nicht verwendet.</td>
-</tr>
-<tr class="even">
-<td>0x00008000</td>
-<td>–</td>
-<td>Nicht verwendet.</td>
-</tr>
-<tr class="odd">
-<td>0x00010000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_DONT_EXPIRE_PASSWD</strong></a></td>
-<td>Das Kennwort für dieses Konto läuft nie ab.</td>
-</tr>
-<tr class="even">
-<td>0x00020000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_MNS_LOGON_ACCOUNT</strong></a></td>
-<td>Hierbei handelt es sich um ein MNS-Anmelde Konto.</td>
-</tr>
-<tr class="odd">
-<td>0x00040000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SMARTCARD_REQUIRED</strong></a></td>
-<td>Der Benutzer muss sich mit einer Smartcard anmelden.</td>
-</tr>
-<tr class="even">
-<td>0x00080000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TRUSTED_FOR_DELEGATION</strong></a></td>
-<td>Das Dienst Konto (Benutzer oder Computer Konto), unter dem ein-Dienst ausgeführt wird, wird für die Kerberos-Delegierung als vertrauenswürdig eingestuft. Ein solcher Dienst kann die Identität eines Clients annehmen, der den Dienst anfordert.</td>
-</tr>
-<tr class="odd">
-<td>0x00100000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_NOT_DELEGATED</strong></a></td>
-<td>Der Sicherheitskontext des Benutzers wird nicht an einen Dienst delegiert, auch wenn das Dienst Konto für die Kerberos-Delegierung als vertrauenswürdig festgelegt ist.</td>
-</tr>
-<tr class="even">
-<td>0x00200000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_USE_DES_KEY_ONLY</strong></a></td>
-<td>Schränken Sie diesen Prinzipal so ein, dass nur Daten Verschlüsselungs Standard-Verschlüsselungstypen für Schlüssel verwendet werden.</td>
-</tr>
-<tr class="odd">
-<td>0x00400000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_DONT_REQUIRE_PREAUTH</strong></a></td>
-<td>Für dieses Konto ist keine Kerberos-Vorauthentifizierung für die Anmeldung erforderlich.</td>
-</tr>
-<tr class="even">
-<td>0x00800000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWORD_EXPIRED</strong></a></td>
-<td>Das Benutzer Kennwort ist abgelaufen. Dieses Flag wird vom System mithilfe von Daten aus dem <a href="a-pwdlastset.md"><strong>Pwd-Last Satz</strong></a> -Attribut und der Domänen Richtlinie erstellt.</td>
-</tr>
-<tr class="odd">
-<td>0x01000000</td>
-<td><a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION</strong></a></td>
-<td>Das Konto ist für die Delegierung aktiviert. Dies ist eine sicherheitsrelevante Einstellung. Konten, bei denen diese Option aktiviert ist, sollten streng gesteuert werden. Mit dieser Einstellung kann ein Dienst, der unter dem Konto ausgeführt wird, eine Client Identität annehmen und sich als dieser Benutzer bei anderen Remote Servern im Netzwerk authentifizieren.</td>
-</tr>
-</tbody>
-</table>
+
+| Hexadezimalwert | Bezeichner (definiert in iads.h) | Beschreibung | 
+|-------------------|--------------------------------|-------------|
+| 0x00000001 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SCRIPT</strong></a> | Das Anmeldeskript wird ausgeführt. | 
+| 0x00000002 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_ACCOUNTDISABLE</strong></a> | Das Benutzerkonto ist deaktiviert. | 
+| 0x00000008 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_HOMEDIR_REQUIRED</strong></a> | Das Stammverzeichnis ist erforderlich. | 
+| 0x00000010 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_LOCKOUT</strong></a> | Das Konto ist derzeit gesperrt. | 
+| 0x00000020 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWD_NOTREQD</strong></a> | Es ist kein Kennwort erforderlich. | 
+| 0x00000040 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWD_CANT_CHANGE</strong></a> | Der Benutzer kann das Kennwort nicht ändern.<blockquote>[!Note]<br />Sie können die Berechtigungseinstellungen von PASSWD_CANT_CHANGE nicht zuweisen, indem Sie das UserAccountControl-Attribut direkt ändern. Weitere Informationen und ein Codebeispiel, das zeigt, wie verhindert wird, dass ein Benutzer das Kennwort ändert, finden Sie unter <a href="/windows/desktop/ADSI/user-cannot-change-password">User Cannot Change Password</a>.</blockquote><br /> : | 
+| 0x00000080 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED</strong></a> | Der Benutzer kann ein verschlüsseltes Kennwort senden. | 
+| 0x00000100 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TEMP_DUPLICATE_ACCOUNT</strong></a> | Dies ist ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto ermöglicht den Benutzerzugriff auf diese Domäne, jedoch nicht auf eine Domäne, die dieser Domäne vertraut. Wird auch als lokales Benutzerkonto bezeichnet. | 
+| 0x00000200 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_NORMAL_ACCOUNT</strong></a> | Dies ist ein Standardkontotyp, der einen typischen Benutzer darstellt. | 
+| 0x00000800 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_INTERDOMAIN_TRUST_ACCOUNT</strong></a> | Dies ist eine Zulassung zum Vertrauenswürdigkeitskonto für eine Systemdomäne, die anderen Domänen vertraut. | 
+| 0x00001000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_WORKSTATION_TRUST_ACCOUNT</strong></a> | Dies ist ein Computerkonto für einen Computer, der Mitglied dieser Domäne ist. | 
+| 0x00002000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SERVER_TRUST_ACCOUNT</strong></a> | Dies ist ein Computerkonto für einen Systemsicherungsdomänencontroller, der Mitglied dieser Domäne ist. | 
+| 0x00004000 | – | Nicht verwendet. | 
+| 0x00008000 | – | Nicht verwendet. | 
+| 0x00010000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_DONT_EXPIRE_PASSWD</strong></a> | Das Kennwort für dieses Konto läuft nie ab. | 
+| 0x00020000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_MNS_LOGON_ACCOUNT</strong></a> | Dies ist ein MNS-Anmeldekonto. | 
+| 0x00040000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_SMARTCARD_REQUIRED</strong></a> | Der Benutzer muss sich mit einer Smartcard anmelden. | 
+| 0x00080000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TRUSTED_FOR_DELEGATION</strong></a> | Das Dienstkonto (Benutzer- oder Computerkonto), unter dem ein Dienst ausgeführt wird, wird für die Kerberos-Delegierung als vertrauenswürdig eingestuft. Jeder dieser Dienste kann die Identität eines Clients annehmen, der den Dienst anfordert. | 
+| 0x00100000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_NOT_DELEGATED</strong></a> | Der Sicherheitskontext des Benutzers wird nicht an einen Dienst delegiert, auch wenn das Dienstkonto für die Kerberos-Delegierung als vertrauenswürdig festgelegt ist. | 
+| 0x00200000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_USE_DES_KEY_ONLY</strong></a> | Schränken Sie diesen Prinzipal so ein, dass nur Verschlüsselungstypen vom Typ Data Encryption Standard (DES) für Schlüssel verwendet werden. | 
+| 0x00400000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_DONT_REQUIRE_PREAUTH</strong></a> | Für dieses Konto ist keine Kerberos-Vorauthentifizierung für die Anmeldung erforderlich. | 
+| 0x00800000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_PASSWORD_EXPIRED</strong></a> | Das Benutzerkennwort ist abgelaufen. Dieses Flag wird vom System mithilfe von Daten aus dem <a href="a-pwdlastset.md"><strong>Pwd-Last-Set-Attribut</strong></a> und der Domänenrichtlinie erstellt. | 
+| 0x01000000 | <a href="/windows/desktop/api/iads/ne-iads-ads_user_flag_enum"><strong>ADS_UF_TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION</strong></a> | Das Konto ist für die Delegierung aktiviert. Dies ist eine sicherheitsbezogene Einstellung. Konten, für die diese Option aktiviert ist, sollten streng kontrolliert werden. Mit dieser Einstellung kann ein Dienst, der unter dem Konto ausgeführt wird, eine Clientidentität annehmen und sich als dieser Benutzer bei anderen Remoteservern im Netzwerk authentifizieren. | 
+
 
 
 

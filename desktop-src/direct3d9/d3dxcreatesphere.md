@@ -1,7 +1,7 @@
 ---
-description: Verwendet ein Links händiges Koordinatensystem zum Erstellen eines Netzes, das eine Kugel enthält.
+description: Verwendet ein linkshändiges Koordinatensystem, um ein Gitternetz zu erstellen, das eine Kugel enthält.
 ms.assetid: d3198805-9435-4849-892d-ec98dc2221d2
-title: D3DXCreateSphere-Funktion (D3dx9shape. h)
+title: D3DXCreateSphere-Funktion (D3dx9shape.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: e56ac6b8e8cc2195e2176e505cf430ea33b6b6ce
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4c1cea000071f0d097f29138b4e5f2db554f2214d8ca6343c16a39740d82c29e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119350"
 ---
 # <a name="d3dxcreatesphere-function"></a>D3DXCreateSphere-Funktion
 
-Verwendet ein Links händiges Koordinatensystem zum Erstellen eines Netzes, das eine Kugel enthält.
+Verwendet ein linkshändiges Koordinatensystem, um ein Gitternetz zu erstellen, das eine Kugel enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,57 +45,57 @@ HRESULT D3DXCreateSphere(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Ein Zeiger auf eine [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) -Schnittstelle, die das Gerät darstellt, das dem erstellten Kugel Netz zugeordnet ist.
+Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9) die das Gerät darstellt, das dem erstellten Kugelgitternetz zugeordnet ist.
 
 </dd> <dt>
 
-*RADIUS* \[ in\]
+*Radius* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Radius der Kugel. Dieser Wert muss größer oder gleich 0,0 f sein.
+Radius der Kugel. Dieser Wert sollte größer oder gleich 0,0f sein.
 
 </dd> <dt>
 
-*Slices* \[ in\]
+*Slices* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Slices zur Hauptachse.
+Anzahl der Slices über die Hauptachse.
 
 </dd> <dt>
 
-*Stapel* \[ in\]
+*Stapel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Anzahl der Stapel entlang der Hauptachse.
 
 </dd> <dt>
 
-*ppmesh* \[ vorgenommen\]
+*ppMesh* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)\***
 
-Adresse eines Zeigers auf die Ausgabe Form, eine [**ID3DXMesh**](id3dxmesh.md) -Schnittstelle.
+Adresse eines Zeigers auf die Ausgabeform, eine [**ID3DXMesh-Schnittstelle.**](id3dxmesh.md)
 
 </dd> <dt>
 
-*ppency* \[ vorgenommen\]
+*ppAdencyency* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle. Wenn die-Methode zurückgibt, wird dieser Parameter mit einem Array von drei DWORDs pro Gesicht gefüllt, die die drei Nachbarn für jedes Gesicht im Mesh angeben. **Null** kann angegeben werden.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle.**](id3dxbuffer.md) Wenn die Methode zurückgegeben wird, wird dieser Parameter mit einem Array von drei DWORDs pro Gesicht gefüllt, die die drei Nachbarn für jedes Gesicht im Netz angeben. **NULL** kann angegeben werden.
 
 </dd> </dl>
 
@@ -103,13 +103,13 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die erstellte Kugel wird am Ursprung zentriert, und die zugehörige Achse wird an der z-Achse ausgerichtet.
+Die erstellte Kugel wird am Ursprung zentriert, und ihre Achse wird an der Z-Achse ausgerichtet.
 
-Diese Funktion erstellt ein Mesh mit der D3DXMESH \_ Managed Creation-Option und [D3DFVF \_ XYZ \| D3DFVF \_ Normal](d3dfvf.md) flexibles Scheitelpunkt Format (FVF).
+Diese Funktion erstellt ein Netz mit der Erstellungsoption D3DXMESH \_ MANAGED und [D3DFVF \_ XYZ \| D3DFVF \_ NORMAL](d3dfvf.md) Flexible Vertex format (FVF).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -117,8 +117,8 @@ Diese Funktion erstellt ein Mesh mit der D3DXMESH \_ Managed Creation-Option und
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9shape. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>    |
+| Header<br/>  | <dl> <dt>D3dx9shape.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>    |
 
 
 
@@ -126,7 +126,7 @@ Diese Funktion erstellt ein Mesh mit der D3DXMESH \_ Managed Creation-Option und
 
 <dl> <dt>
 
-[Formen Zeichnungsfunktionen](dx9-graphics-reference-d3dx-functions-shape.md)
+[Zeichnen von Formenfunktionen](dx9-graphics-reference-d3dx-functions-shape.md)
 </dt> </dl>
 
  

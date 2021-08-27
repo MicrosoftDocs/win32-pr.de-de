@@ -1,27 +1,27 @@
 ---
-title: Bildschirm Lese Parameter
-description: Der Bildschirm Lese Parameter gibt an, ob eine Anwendung Textinformationen in Situationen bereitstellen soll, in denen Sie die Informationen andernfalls grafisch darstellen würde.
+title: Sprachausgabeparameter
+description: Der Sprachausgabeparameter gibt an, ob eine Anwendung Textinformationen in Situationen bereitstellen soll, in denen sie die Informationen andernfalls grafisch darstellen würde.
 ms.assetid: ac79c389-511c-4403-a8d5-75b2eba2b39f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0c237f3d945b9782884ffc655cf87a203159a16
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 818ad36cfe833c1c9a3f39047cd88e6b4e8be55972d521ce524bb1e0618a48ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098420"
 ---
-# <a name="screen-reader-parameter"></a>Bildschirm Lese Parameter
+# <a name="screen-reader-parameter"></a>Sprachausgabeparameter
 
-Der Bildschirm Lese Parameter gibt an, ob eine Anwendung Textinformationen in Situationen bereitstellen soll, in denen Sie die Informationen andernfalls grafisch darstellen würde.
+Der Sprachausgabeparameter gibt an, ob eine Anwendung Textinformationen in Situationen bereitstellen soll, in denen sie die Informationen andernfalls grafisch darstellen würde.
 
-Dieser Parameter wird in der Regel durch Barrierefreiheits Hilfen wie Bildschirm Sprachausgaben festgelegt. Anwendungen verwenden die **SPI \_ getscreenreader** -und **SPI \_ setscreenreader** -Flags mit der [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) -Funktion, um den Screenreader-Parameter zu erhalten und festzulegen.
+Dieser Parameter wird in der Regel durch Barrierefreiheitshilfen wie Sprachausgaben festgelegt. Anwendungen verwenden die **FLAGS SPI \_ GETSCREENREADER** und **SPI \_ SETSCREENREADER** mit der [**SystemParametersInfo-Funktion,**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) um den Sprachausgabeparameter abzurufen und festzulegen.
 
 > [!Note]  
-> Die Sprachausgabe, die in Windows enthalten ist, legt die **SPI- \_ setscreenreader** -oder **SPI \_ getscreenreader** -Flags nicht fest.
+> Die Sprachausgabe, die in Windows enthaltene Sprachausgabe, legt die **FLAGS SPI \_ SETSCREENREADER** oder **SPI \_ GETSCREENREADER** nicht fest.
 
- 
+ 
 
- 
+ 
 
- 
+ 

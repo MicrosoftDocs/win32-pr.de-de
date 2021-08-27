@@ -1,95 +1,41 @@
 ---
 title: Verwenden von Makros für die Fehlerbehandlung
-description: COM definiert eine Reihe von Makros, die das Arbeiten mit HRESULT-Werten vereinfachen.
+description: COM definiert eine Reihe von Makros, die die Arbeit mit HRESULT-Werten vereinfachen.
 ms.assetid: ad28eb80-cab9-4bec-9601-34660f6dcad4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6605ecc05f2d24d3671d28becd770b15d56e1413
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: c2f31280ec2076f8ece1fcf15dd6e27629a3016e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730424"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122480536"
 ---
 # <a name="using-macros-for-error-handling"></a>Verwenden von Makros für die Fehlerbehandlung
 
-COM definiert eine Reihe von Makros, die das Arbeiten mit **HRESULT** -Werten vereinfachen.
+COM definiert eine Reihe von Makros, die die Arbeit mit **HRESULT-Werten** vereinfachen.
 
-Die Fehler Behandlungs Makros werden in der folgenden Tabelle beschrieben.
+Die Fehlerbehandlungsmakros werden in der folgenden Tabelle beschrieben.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Makro</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="/windows/desktop/api/dmerror/nf-dmerror-make_hresult"><strong>MAKE_HRESULT</strong></a><br/></td>
-<td>Gibt ein <strong>HRESULT</strong> mit dem angegebenen Schweregrad, dem Betriebs Code und dem Fehlercode zurück, der das <strong>HRESULT</strong>umfasst.<br/>
-<blockquote>
-[!Note]<br />
-Das Aufrufen von <a href="/windows/desktop/api/dmerror/nf-dmerror-make_hresult"><strong>MAKE_HRESULT</strong></a> für die S_OK Überprüfung führt zu einer Leistungs Einbuße. Sie sollten für erfolgreiche Ergebnisse nicht routinemäßig <strong>MAKE_HRESULT</strong> verwenden.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-make_scode"><strong>MAKE_SCODE</strong></a><br/></td>
-<td>Gibt einen <strong>SCODE</strong> mit dem Schweregrad, dem Einrichtungs Code und dem Fehlercode zurück, der den <strong>SCODE</strong>umfasst.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-hresult_code"><strong>HRESULT_CODE</strong></a><br/></td>
-<td>Extrahiert den Fehlercode Teil des <strong>HRESULT</strong>.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-hresult_facility"><strong>HRESULT_FACILITY</strong></a><br/></td>
-<td>Extrahiert den Einrichtungs Code des <strong>HRESULT</strong>.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-hresult_severity"><strong>HRESULT_SEVERITY</strong></a><br/></td>
-<td>Extrahiert den Schweregrad des <strong>HRESULT</strong>.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-scode_code"><strong>SCODE_CODE</strong></a><br/></td>
-<td>Extrahiert den Fehlercode Teil des <strong>scodes</strong>.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-scode_facility"><strong>SCODE_FACILITY</strong></a><br/></td>
-<td>Extrahiert den Einrichtungs Code des <strong>scodes</strong>.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-scode_severity"><strong>SCODE_SEVERITY</strong></a><br/></td>
-<td>Extrahiert das Feld "Schweregrad" des <strong>scodes</strong>.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-succeeded"><strong>Erfolgreich</strong></a><br/></td>
-<td>Testet den Schweregrad von <strong>SCODE</strong> oder <strong>HRESULT</strong>. gibt " <strong>true</strong> " zurück, wenn der Schweregrad 0 (null) und " <strong>false</strong> " ist.<br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-failed"><strong>Erreicht</strong></a><br/></td>
-<td>Testet den Schweregrad von <strong>SCODE</strong> oder <strong>HRESULT</strong>. gibt <strong>true</strong> zurück, wenn der Schweregrad 1 und <strong>false</strong> ist, wenn er NULL ist.<br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-is_error"><strong>IS_ERROR</strong></a><br/></td>
-<td>Stellt einen generischen Test Fehler für einen beliebigen Statuswert bereit. <br/></td>
-</tr>
-<tr class="even">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-hresult_from_win32"><strong>HRESULT_FROM_WIN32</strong></a><br/></td>
-<td>Ordnet einen <a href="/windows/desktop/Debug/system-error-codes">Systemfehler Code</a> einem <strong>HRESULT</strong> -Wert zu. <br/></td>
-</tr>
-<tr class="odd">
-<td><a href="/windows/desktop/api/Winerror/nf-winerror-hresult_from_nt"><strong>HRESULT_FROM_NT</strong></a><br/></td>
-<td>Ordnet einen NT-Statuswert einem <strong>HRESULT</strong> -Wert zu.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Makro | Beschreibung | 
+|-------|-------------|
+| <a href="/windows/desktop/api/dmerror/nf-dmerror-make_hresult"><strong>MAKE_HRESULT</strong></a><br /> | Gibt ein <strong>HRESULT zurück,</strong> wenn das Schweregradbit, der Einrichtungscode und der Fehlercode angegeben werden, aus dem <strong>das HRESULT besteht.</strong><br /><blockquote>[!Note]<br />Das <a href="/windows/desktop/api/dmerror/nf-dmerror-make_hresult"><strong>MAKE_HRESULT</strong></a> für S_OK überprüfung führt zu Leistungssentspricht. Sie sollten nicht routinemäßig <strong>die</strong> MAKE_HRESULT für erfolgreiche Ergebnisse verwenden.</blockquote><br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-make_scode"><strong>MAKE_SCODE</strong></a><br /> | Gibt einen <strong>SCODE zurück,</strong> wenn das Schweregradbit, der Einrichtungscode und der Fehlercode angegeben werden, aus dem <strong>der SCODE besteht.</strong><br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-hresult_code"><strong>HRESULT_CODE</strong></a><br /> | Extrahiert den Fehlercodeteil von <strong>HRESULT</strong>.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-hresult_facility"><strong>HRESULT_FACILITY</strong></a><br /> | Extrahiert den Einrichtungscode von <strong>HRESULT</strong>.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-hresult_severity"><strong>HRESULT_SEVERITY</strong></a><br /> | Extrahiert das Schweregradbit von <strong>HRESULT.</strong><br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-scode_code"><strong>SCODE_CODE</strong></a><br /> | Extrahiert den Fehlercodeteil von <strong>SCODE</strong>.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-scode_facility"><strong>SCODE_FACILITY</strong></a><br /> | Extrahiert den Einrichtungscode von <strong>SCODE.</strong><br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-scode_severity"><strong>SCODE_SEVERITY</strong></a><br /> | Extrahiert das Schweregradfeld von <strong>SCODE</strong>.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-succeeded"><strong>GELUNGEN</strong></a><br /> | Testet das Schweregradbit von <strong>SCODE</strong> oder <strong>HRESULT.</strong> gibt <strong>TRUE zurück,</strong> wenn der Schweregrad 0 (null) ist, und <strong>FALSE,</strong> wenn er eins ist.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-failed"><strong>FEHLGESCHLAGEN</strong></a><br /> | Testet das Schweregradbit von <strong>SCODE</strong> oder <strong>HRESULT.</strong> gibt <strong>TRUE zurück,</strong> wenn der Schweregrad 1 ist, und <strong>FALSE,</strong> wenn er 0 (null) ist.<br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-is_error"><strong>IS_ERROR</strong></a><br /> | Stellt einen generischen Test auf Fehler für einen beliebigen Statuswert zur Seite. <br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-hresult_from_win32"><strong>HRESULT_FROM_WIN32</strong></a><br /> | Karten einen <a href="/windows/desktop/Debug/system-error-codes">Systemfehlercode in</a> einen <strong>HRESULT-Wert.</strong> <br /> | 
+| <a href="/windows/desktop/api/Winerror/nf-winerror-hresult_from_nt"><strong>HRESULT_FROM_NT</strong></a><br /> | Karten einen NT-Statuswert in einen <strong>HRESULT-Wert.</strong><br /> | 
+
 
 
 
@@ -99,7 +45,7 @@ Das Aufrufen von <a href="/windows/desktop/api/dmerror/nf-dmerror-make_hresult">
 
 <dl> <dt>
 
-[Fehlerbehandlung in com](error-handling-in-com.md)
+[Fehlerbehandlung in COM](error-handling-in-com.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia imagesourcewidth (Eigenschaft)
-description: Die imagesourcewidth-Eigenschaft ruft die Breite des aktuellen Medien Elements in Pixel ab.
+title: IWMPMedia imageSourceWidth-Eigenschaft
+description: Die imageSourceWidth-Eigenschaft ruft die Breite des aktuellen Medienelements in Pixel ab.
 ms.assetid: d3644217-6faf-415e-b0c0-23db85c31a3a
 keywords:
-- imagesourcewidth-Eigenschaft, Windows-Media Player
-- imagesourcewidth-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, imagesourcewidth (Eigenschaft)
+- imageSourceWidth-Eigenschaft Windows Media Player
+- imageSourceWidth-Eigenschaft Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , imageSourceWidth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 441c4fb4a05f610aee5a2c923353fb9688bffcc2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2c24d9cb6d6c8cdec29984fa66b6cb12e254413ca518ed12a3089627aeeb08e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098790"
 ---
-# <a name="iwmpmediaimagesourcewidth-property"></a>Iwmpmedia:: imagesourcewidth (Eigenschaft)
+# <a name="iwmpmediaimagesourcewidth-property"></a>IWMPMedia::imageSourceWidth-Eigenschaft
 
-Die **imagesourcewidth** -Eigenschaft ruft die Breite des aktuellen Medien Elements in Pixel ab.
+Die **imageSourceWidth-Eigenschaft** ruft die Breite des aktuellen Medienelements in Pixel ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,17 +49,17 @@ Public ReadOnly Property imageSourceWidth As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Breite des Medien Elements ist.
+Eine **System.Int32-Datei,** die der Breite des Medienelements entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Medien Element nicht das aktuelle ist, gibt diese Eigenschaft 0 (null) zurück.
+Wenn das Medienelement nicht das aktuelle Element ist, gibt diese Eigenschaft 0 (null) zurück.
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **imagesourcewidth** verwendet, um die Bildgröße des aktuellen Medien Elements in einem Textfeld in Pixel anzuzeigen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **imageSourceWidth** verwendet, um die Bildgröße des aktuellen Medienelements in einem Textfeld in Pixel anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -125,7 +125,7 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -135,7 +135,7 @@ End Sub
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

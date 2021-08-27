@@ -1,10 +1,10 @@
 ---
-description: "\"Fidemdmconfigprofile\" \\/ ... \\/ Benutzername (v4)"
+description: ModemDMConfigProfile \/ ... \/ UserName (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_UserName
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Benutzername (v4)
+title: UserName (v4)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 1b43a275-cdbd-44e6-adc6-121aa935447e
@@ -16,18 +16,18 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 98e5c425ee7982bdfddfeb31ec1e950a0dc27d61
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: c6721b95d3375cb9f48744b2f7d28afd92a5024e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388819"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472136"
 ---
-# <a name="span-idwwan_profile_v4element_1_usernamespanmodemdmconfigprofileusername-v4"></a><span id="WWAN_profile_v4.element_1_UserName"></span>"Fidemdmconfigprofile" \/ ... \/ Benutzername (v4)
+# <a name="span-idwwan_profile_v4element_1_usernamespanmodemdmconfigprofileusername-v4"></a><span id="WWAN_profile_v4.element_1_UserName"></span>ModemDMConfigProfile \/ ... \/ UserName (v4)
 
-Der Benutzername, der für die Anmeldung verwendet werden soll.
+Der Für die Anmeldung zu verwendende Benutzername.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1 [**username**](./schema-username-userlogoncred-element.md) -Element.
+Weitere Informationen finden Sie in der Dokumentation für das [**UserName-Element**](./schema-username-userlogoncred-element.md) v1.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -63,41 +63,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-1-userlogoncred.md">UserLogonCred</a></td>
-<td><p>Anmelde Informationen für eine Verbindung.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-1-userlogoncred.md">UserLogonCred</a> | <p>Anmeldeinformationen für eine Verbindung.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: PSM_REBOOTSYSTEM Meldung (prsht. h)
-description: Gibt an, dass das System neu gestartet werden muss, damit die Änderungen wirksam werden. Sie können die PSM- \_ rebootsystem-Nachricht explizit oder mithilfe des propsheet \_ rebootsystem-Makros senden.
+title: PSM_REBOOTSYSTEM (Prsht.h)
+description: Gibt an, dass das System neu gestartet werden muss, damit die Änderungen wirksam werden. Sie können die PSM \_ REBOOTSYSTEM-Nachricht explizit oder mithilfe des PropSheet \_ RebootSystem-Makros senden.
 ms.assetid: 461fce3c-183a-4b9b-8eab-ed2838d9f866
 keywords:
-- Windows-Steuerelemente für PSM_REBOOTSYSTEM Meldung
+- PSM_REBOOTSYSTEM-Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14f5018dc3845d699561740ccd9cbb0a9c793f15
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dfcfebc931d1dbf01ab053fa2723bdcf361c4be5ef1443b9131115e2300770cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088630"
 ---
-# <a name="psm_rebootsystem-message"></a>PSM- \_ rebootsystemmeldung
+# <a name="psm_rebootsystem-message"></a>PSM \_ REBOOTSYSTEM-Meldung
 
-Gibt an, dass das System neu gestartet werden muss, damit die Änderungen wirksam werden. Sie können die **PSM- \_ rebootsystem** -Nachricht explizit oder mithilfe des [**propsheet \_ rebootsystem**](/windows/desktop/api/Prsht/nf-prsht-propsheet_rebootsystem) -Makros senden.
+Gibt an, dass das System neu gestartet werden muss, damit die Änderungen wirksam werden. Sie können die **PSM \_ REBOOTSYSTEM-Nachricht** explizit oder mithilfe des [**PropSheet \_ RebootSystem-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_rebootsystem) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,16 +47,16 @@ Muss Null sein.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte diese Nachricht nur als Antwort auf die Benachrichtigungs Meldung " [PSN \_ Apply](psn-apply.md) " oder " [PSN \_ killactive](psn-killactive.md) " senden.
+Eine Anwendung sollte diese Nachricht nur als Antwort auf die [PSN \_ APPLY-](psn-apply.md) oder [PSN \_ KILLACTIVE-Benachrichtigung](psn-killactive.md) senden.
 
-Diese Meldung bewirkt, dass die [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) -Funktion den \_ psrebootsystem-ID-Wert zurückgibt, jedoch nur, wenn der Benutzer auf die Schaltfläche **OK** klickt, um das Eigenschaften Blatt zu schließen. Es liegt in der Verantwortung der Anwendung, das System neu zu starten. Dies kann mithilfe der [**ExitWindowsEx**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex) -Funktion erfolgen.
+Diese Meldung bewirkt, dass die [**PropertySheet-Funktion**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) den \_ ID-Wert PSREBOOTSYSTEM zurück gibt, jedoch nur, wenn der Benutzer auf die Schaltfläche **OK** klickt, um das Eigenschaftenblatt zu schließen. Es liegt in der Verantwortung der Anwendung, das System neu zu starten. Dies kann mithilfe der [**ExitWindowsEx-Funktion erfolgen.**](/windows/desktop/api/winuser/nf-winuser-exitwindowsex)
 
-Diese Nachricht ersetzt alle [**PSM- \_ restartwindows**](psm-restartwindows.md) -Meldungen, die vor oder nach der Nachricht liegen.
+Diese Meldung ersetzt alle [**PSM \_ RESTARTWINDOWS-Nachrichten,**](psm-restartwindows.md) die dieser voran- oder folgen.
 
 > [!Note]  
-> Diese Meldung wird nicht unterstützt, wenn der Aero Wizard Style ([**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)) verwendet wird.
+> This message is not supported when using the Aero wizard style ([**PSH\_AEROWIZARD**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)).
 
  
 
@@ -66,9 +66,9 @@ Diese Nachricht ersetzt alle [**PSM- \_ restartwindows**](psm-restartwindows.md)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 
