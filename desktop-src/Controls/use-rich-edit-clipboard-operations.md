@@ -1,48 +1,48 @@
 ---
-title: So verwenden Sie Rich-Edit-Zwischenablage Vorgänge
-description: Eine Anwendung kann den Inhalt der Zwischenablage in ein Rich-Edit-Steuerelement einfügen, indem Sie entweder das beste verfügbare Zwischenablage Format oder ein bestimmtes Zwischenablage Format verwendet.
+title: Verwenden von Rich Edit-Zwischenablagevorgängen
+description: Eine Anwendung kann den Inhalt der Zwischenablage mithilfe des besten verfügbaren Zwischenablageformats oder eines bestimmten Zwischenablageformats in ein rich-Edit-Steuerelement einfügen.
 ms.assetid: 1FEFFD95-839B-4A26-A26E-B8429D5FF4C0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a46432054956914b484c9faeeeda78f2a18e132
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: bdeac2e892716880e4e2971d597c13047dc79cebf2c57888e2fa248c6b0c4beb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103949163"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120132090"
 ---
-# <a name="how-to-use-rich-edit-clipboard-operations"></a>So verwenden Sie Rich-Edit-Zwischenablage Vorgänge
+# <a name="how-to-use-rich-edit-clipboard-operations"></a>Verwenden von Rich Edit-Zwischenablagevorgängen
 
-Eine Anwendung kann den Inhalt der Zwischenablage in ein Rich-Edit-Steuerelement einfügen, indem Sie entweder das beste verfügbare Zwischenablage Format oder ein bestimmtes Zwischenablage Format verwendet. Sie können auch bestimmen, ob ein Rich-Edit-Steuerelement in der Lage ist, ein Zwischenablage Format einzufügen.
+Eine Anwendung kann den Inhalt der Zwischenablage mithilfe des besten verfügbaren Zwischenablageformats oder eines bestimmten Zwischenablageformats in ein rich-Edit-Steuerelement einfügen. Sie können auch bestimmen, ob ein Rich-Edit-Steuerelement ein Zwischenablageformat eingefügt werden kann.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="use-a-rich-edit-clipboard-operation"></a>Verwenden eines Rich-Edit-Zwischenablage Vorgangs
+### <a name="use-a-rich-edit-clipboard-operation"></a>Verwenden eines Rich-Edit-Zwischenablage-Vorgangs
 
-Wie bei einem Bearbeitungs Steuerelement können Sie den Inhalt der aktuellen Auswahl mithilfe der [**WM- \_ Kopier**](/windows/desktop/dataxchg/wm-copy) -oder der WM- [**\_ Ausschneide**](/windows/desktop/dataxchg/wm-cut) Nachricht kopieren oder Ausschneiden. Auf ähnliche Weise können Sie den Inhalt der Zwischenablage mithilfe der [**WM- \_ Einfüge**](/windows/desktop/dataxchg/wm-paste) Nachricht in ein Rich-Edit-Steuerelement einfügen. Das Steuerelement fügt das erste verfügbare Format, das es erkennt, ein, das vermutlich das beschreibende Format darstellt.
+Wie bei einem Bearbeitungssteuer steuerelement können Sie den Inhalt der aktuellen Auswahl mithilfe der [**WM \_ COPY-**](/windows/desktop/dataxchg/wm-copy) oder [**WM \_ CUT-Meldung kopieren oder ausschneiden.**](/windows/desktop/dataxchg/wm-cut) Auf ähnliche Weise können Sie den Inhalt der Zwischenablage mithilfe der WM-Paste-Meldung in ein [**\_ rich-Edit-Steuerelement**](/windows/desktop/dataxchg/wm-paste) einfügen. Das Steuerelement gibt das erste verfügbare Format ein, das es erkennt, was vermutlich das aussagekräftigste Format ist.
 
-Wenn Sie ein bestimmtes Zwischenablage Format einfügen möchten, können Sie die " [**EM \_ PasteSpecial**](em-pastespecial.md) "-Meldung verwenden. Diese Meldung ist nützlich für Anwendungen mit einem **speziellen** Befehl zum Einfügen, mit dem Benutzer das Zwischenablage Format auswählen können. Sie können die [**EM \_ CanPaste**](em-canpaste.md) -Nachricht verwenden, um zu bestimmen, ob ein bestimmtes Format vom Steuerelement erkannt wird.
+Zum Einfügen eines bestimmten Zwischenablageformats können Sie die [**Meldung EM \_ PASTESPECIAL**](em-pastespecial.md) verwenden. Diese Meldung ist nützlich für Anwendungen mit dem **Befehl "Paste Special",** mit dem der Benutzer das Zwischenablageformat auswählen kann. Sie können die [**EM \_ CANPASTE-Nachricht verwenden,**](em-canpaste.md) um zu bestimmen, ob ein bestimmtes Format vom Steuerelement erkannt wird.
 
-Sie können auch die [**EM \_ CanPaste**](em-canpaste.md) -Nachricht verwenden, um zu bestimmen, ob ein verfügbares Zwischenablage Format von einem Rich Edit-Steuerelement erkannt wird. Diese Meldung ist nützlich, wenn die " [**WM \_ initmenupopup**](/windows/desktop/menurc/wm-initmenupopup) "-Meldung verarbeitet wird. Eine Anwendung kann den **Einfüge** Befehl in Abhängigkeit davon aktivieren oder grauen, ob das Steuerelement ein beliebiges verfügbares Format einfügen kann.
+Sie können auch die [**EM \_ CANPASTE-Meldung verwenden,**](em-canpaste.md) um zu bestimmen, ob ein verfügbares Zwischenablageformat von einem Rich-Edit-Steuerelement erkannt wird. Diese Meldung ist nützlich, wenn die [**WM \_ INITMENUPOPUP-Nachricht verarbeitet**](/windows/desktop/menurc/wm-initmenupopup) wird. Eine Anwendung kann den  Befehl Einfügen aktivieren oder grau halten, je nachdem, ob das Steuerelement ein beliebiges verfügbares Format einfügen kann.
 
-Rich Edit-Steuerelemente registrieren zwei Zwischenablage Formate:
+Umfangreiche Bearbeitungssteuerelemente registrieren zwei Zwischenablageformate:
 
 -   Rich Text Format
 -   Rich-Text-Format ohne Objekte
--   RichEdit-Text und-Objekte
+-   RichEdit-Text und -Objekte
 
-Eine Anwendung kann diese Formate mithilfe der [**RegisterClipboardFormat**](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) -Funktion registrieren und die Werte für die Werte "CF \_ RTF", "CF \_ RTF noobjs" und "CF \_ retextobj" angeben.
+Eine Anwendung kann diese Formate mithilfe der [**RegisterClipboardFormat-Funktion**](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) registrieren und dabei die Werte CF \_ RTF, CF \_ RTFNOOBJS und CF \_ RETEXTOBJ angeben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -51,9 +51,9 @@ Eine Anwendung kann diese Formate mithilfe der [**RegisterClipboardFormat**](/wi
 [Verwenden von Rich Edit-Steuerelementen](using-rich-edit-controls.md)
 </dt> <dt>
 
-[Demo zu allgemeinen Windows-Steuerelementen (cppwindowscommoncontrols)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
+[Windows demo (CppWindowsCommonControls)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/OneCodeTeam/Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/%5BC++%5D-Windows%20common%20controls%20demo%20(CppWindowsCommonControls)/C++/CppWindowsCommonControls)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

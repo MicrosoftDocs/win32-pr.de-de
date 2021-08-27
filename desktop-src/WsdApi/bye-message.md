@@ -1,28 +1,28 @@
 ---
-description: Eine WS-Discovery Nachricht, die verwendet wird, um den Abgang eines Geräts oder Diensts aus dem Netzwerk anzukündigen.
+description: Eine WS-Discovery, die verwendet wird, um den Abbruch eines Geräts oder Diensts aus dem Netzwerk ankündigen.
 ms.assetid: 7b9abfcc-28ab-4f29-af69-6dc68e3f51b6
 title: Bye-Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8276c05314b31782442bfdf6de998dd41241391de9dc94947409041c8f4aa420
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 77d571e8633690f1a2fee5f6f9c09e1379a7a465
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117738652"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622476"
 ---
 # <a name="bye-message"></a>Bye-Nachricht
 
-Eine Bye-Nachricht ist eine WS-Discovery Nachricht, mit der das Verlassen eines Geräts oder Diensts aus dem Netzwerk angekündigt wird. Weitere Informationen zu Bye-Nachrichten finden Sie in Abschnitt 4.2 der [WS-Ermittlungsspezifikation.](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)
+Eine Bye-Nachricht ist eine WS-Discovery, die verwendet wird, um den Abflug eines Geräts oder Diensts aus dem Netzwerk ankündigen. Weitere Informationen zu Bye-Nachrichten finden Sie in Abschnitt 4.2 der [WS-Discovery Specification](https://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf).
 
 Bye-Nachrichten werden nicht angefordert. Die Nachrichten sind optional.
 
 > [!Note]  
-> In diesem Thema wird eine DPWS-Beispielnachricht gezeigt, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-kompatible Nachrichten, die diesem Beispiel nicht entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie stattdessen das [WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
+> Dieses Thema zeigt eine DPWS-Beispielmeldung, die von WSDAPI-Clients und -Hosts generiert wird. WSDAPI analysiert und akzeptiert andere DPWS-konforme Nachrichten, die nicht diesem Beispiel entsprechen. Verwenden Sie dieses Beispiel nicht, um die DPWS-Interoperabilität zu überprüfen. Verwenden Sie [stattdessen das WSDAPI Basic Interoperability Tool (WSDBIT).](https://msdn.microsoft.com/library/cc264250.aspx)
 
  
 
-Die folgende SOAP-Nachricht zeigt eine Bye-Beispielnachricht.
+Die folgende SOAP-Nachricht zeigt eine Beispiel-Bye-Nachricht.
 
 ``` syntax
 <?xml version="1.0" encoding="utf-8" ?>
@@ -56,15 +56,15 @@ Die folgende SOAP-Nachricht zeigt eine Bye-Beispielnachricht.
 </soap:Body>
 ```
 
-Eine Bye-Nachricht hat die folgenden Fokuspunkte.
+Eine Bye-Nachricht weist die folgenden Fokuspunkte auf.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -87,7 +87,7 @@ Eine Bye-Nachricht hat die folgenden Fokuspunkte.
     SequenceId=&quot;urn:uuid:369a7d7b-5f87-48a4-aa9a-189edf2a8772&quot;
     MessageNumber=&quot;21&quot;>
 </wsd:AppSequence></code></pre></td>
-<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann beibehalten werden kann, wenn sie nicht in der angegebenen Reihenfolge empfangen werden. Die AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln)</a>beschrieben überprüft.</td>
+<td>Enthält Informationen zur Anwendungssequenzierung, mit denen die Sequenz von Nachrichten auch dann verwaltet werden kann, wenn sie nicht in der reihenfolgenfolgenden Reihenfolge empfangen werden. AppSequence wird wie unter <a href="appsequence-validation-rules.md">AppSequence Validation Rules (AppSequence-Validierungsregeln) beschrieben überprüft.</a></td>
 </tr>
 <tr class="odd">
 <td>Adresse</td>
@@ -107,7 +107,7 @@ Eine Bye-Nachricht hat die folgenden Fokuspunkte.
 
 <dl> <dt>
 
-[Ermittlungs- und Metadaten-Exchange-Meldungen](discovery-and-metadata-exchange-message-patterns.md)
+[Discovery and Metadata Exchange Messages](discovery-and-metadata-exchange-message-patterns.md)
 </dt> <dt>
 
 [Hello Message](hello-message.md)

@@ -1,5 +1,5 @@
 ---
-description: '<span id="vspixengine.register_format"></span>REGISTER_FORMAT-Enumeration: Intern.'
+description: '<span id="vspixengine.register_format"></span>REGISTER_FORMAT Enumeration: Intern.'
 MS-HAID: vspixengine.REGISTER\_FORMAT
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: b008f3cdb225c7616306dbd425c24e6737bc1ef1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5d9627d0f8df46e4f82987123a7e60ee3035a3d0
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110518"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622696"
 ---
 # <a name="span-idvspixengineregister_formatspanregister_format-enumeration"></a><span id="vspixengine.register_format"></span>REGISTER \_ FORMAT-Enumeration
 
@@ -52,9 +52,9 @@ Intern
 <span id="REGISTER_FORMAT_COLOR"></span><span id="register_format_color"></span>**\_ \_ REGISTERFORMATFARBE**  
 Intern
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

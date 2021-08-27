@@ -1,6 +1,6 @@
 ---
 title: Windows-Datentypen (BaseTsd.h)
-description: Die datentyps, die von Windows werden verwendet, um Rückgabewerte, Funktions- und Meldungsparameter sowie Strukturmitglieder zu definieren.
+description: Die von Windows unterstützten Datentypen werden verwendet, um Funktionsrückgabewerte, Funktions- und Meldungsparameter sowie Strukturmember zu definieren.
 ms.assetid: 4553cafc-450e-4493-a4d4-cb6e2f274d46
 keywords:
 - Datentypen
@@ -12,18 +12,18 @@ keywords:
 - BOOL
 - BOOLEAN
 - BYTE
-- Rückruf
+- RÜCKRUF
 - CCHAR
 - CHAR
 - COLORREF
-- Const
+- CONST
 - DWORD
 - DWORDLONG
 - DWORD_PTR
 - DWORD32
 - DWORD64
 - GLEITKOMMAZAHL
-- HACCEL
+- FOODEL
 - HALF_PTR
 - HANDLE
 - HBITMAP
@@ -32,7 +32,7 @@ keywords:
 - HCONV
 - HCONVLIST
 - HCURSOR
-- Hdc
+- HDC
 - HDDEDATA
 - HDESK
 - HDROP
@@ -40,18 +40,18 @@ keywords:
 - HENHMETAFILE
 - HFILE
 - HFONT
-- LKDIOBJ
+- HGDIOBJ
 - HGLOBAL
 - HHOOK
 - HICON
-- Hinstance
-- Hkey
+- HINSTANCE
+- HKEY
 - HKL
 - HLOCAL
-- Hmenu
+- HMENU
 - HMETAFILE
 - HMODULE
-- Hmonitor
+- HMONITOR
 - HPALETTE
 - HPEN
 - HRESULT
@@ -66,7 +66,7 @@ keywords:
 - INT16
 - INT32
 - INT64
-- Langid
+- LANGID
 - LCID
 - LCTYPE
 - LGRPID
@@ -75,7 +75,7 @@ keywords:
 - LONG_PTR
 - LONG32
 - LONG64
-- Lparam
+- LPARAM
 - LPBOOL
 - LPBYTE
 - LPCOLORREF
@@ -109,7 +109,7 @@ keywords:
 - PHALF_PTR
 - PHANDLE
 - PHKEY
-- Pint
+- PINT
 - PINT_PTR
 - PINT8
 - PINT16
@@ -128,7 +128,7 @@ keywords:
 - PSHORT
 - PSIZE_T
 - PSSIZE_T
-- Pstr
+- PSTR
 - PTBYTE
 - PTCHAR
 - PTSTR
@@ -155,7 +155,7 @@ keywords:
 - SC_LOCK
 - SERVICE_STATUS_HANDLE
 - SHORT
-- Size_t
+- SIZE_T
 - SSIZE_T
 - TBYTE
 - TCHAR
@@ -170,39 +170,39 @@ keywords:
 - ULONG
 - ULONGLONG
 - ULONG_PTR
-- Ulong32
+- ULONG32
 - ULONG64
 - UNICODE_STRING
-- Ushort
+- USHORT
 - USN
-- Leere
+- LEERE
 - WCHAR
 - WINAPI
 - WORD
-- Wparam
+- WPARAM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6769b5d3fd7c65eab1eef5c408ebd2e905b9677a3580774a857c68431aabd3dc
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 3002912cafbdf2dd4fe62c19fe3faef302da8c9b
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119412950"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626336"
 ---
 # <a name="windows-data-types"></a>Windows-Datentypen
 
-Die von Windows unterstützten Datentypen werden verwendet, um Funktionsrückgabewerte, Funktions- und Nachrichtenparameter sowie Strukturmember zu definieren. Sie definieren die Größe und Bedeutung dieser Elemente. Weitere Informationen zu den zugrunde liegenden C/C++-Datentypen finden Sie unter [Datentypbereiche.](/cpp/cpp/data-type-ranges?view=vs-2019)
+Die datentyps, die von Windows werden verwendet, um Funktions-Rückgabewerte, Funktions- und Meldungsparameter sowie Strukturmitglieder zu definieren. Sie definieren die Größe und Bedeutung dieser Elemente. Weitere Informationen zu den zugrunde liegenden C/C++-Datentypen finden Sie unter [Datentypbereiche](/cpp/cpp/data-type-ranges?view=vs-2019).
 
-Die folgende Tabelle enthält die folgenden Typen: character, integer, Boolean, pointer und handle. Die Zeichen-, Integer- und booleschen Typen sind für die meisten C-Compiler üblich. Die meisten Zeigertypnamen beginnen mit dem Präfix P oder LP. Handles verweisen auf eine Ressource, die in den Arbeitsspeicher geladen wurde.
+Die folgende Tabelle enthält die folgenden Typen: Character, integer, Boolean, pointer und handle. Die Zeichen-, Integer- und booleschen Typen sind bei den meisten C-Compilern üblich. Die meisten Zeigertypnamen beginnen mit dem Präfix P oder LP. Handles verweisen auf eine Ressource, die in den Arbeitsspeicher geladen wurde.
 
-Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Große ganze Zahlen.](large-integers.md)
+Weitere Informationen zum Behandeln von 64-Bit-Ganzzahlen finden Sie unter [Große ganze Zahlen.](large-integers.md)
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -216,23 +216,23 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <td>Die Aufrufkonvention für Systemfunktionen.<br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>#define APIENTRY WINAPI</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="ATOM"></span><span id="atom"></span><strong>Atom</strong></td>
+<td><span id="ATOM"></span><span id="atom"></span><strong>ATOM</strong></td>
 <td>Ein Atom. Weitere Informationen finden Sie unter <a href="/windows/desktop/dataxchg/about-atom-tables">Informationen zu Atom-Tabellen.</a><br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef WORD ATOM;</code><br/></td>
 </tr>
 <tr class="odd">
-<td><span id="BOOL"></span><span id="bool"></span><strong>Bool</strong></td>
-<td>Eine boolesche Variable (sollte <strong>TRUE</strong> oder <strong>FALSE sein).</strong><br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef int BOOL;</code><br/></td>
+<td><span id="BOOL"></span><span id="bool"></span><strong>BOOL</strong></td>
+<td>Eine boolesche Variable (muss <strong>TRUE</strong> oder <strong>FALSE sein).</strong><br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef int BOOL;</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="BOOLEAN"></span><span id="boolean"></span><strong>Boolean</strong></td>
+<td><span id="BOOLEAN"></span><span id="boolean"></span><strong>BOOLEAN</strong></td>
 <td>Eine boolesche Variable (muss <strong>TRUE</strong> oder <strong>FALSE sein).</strong><br/> Dieser Typ wird in WinNT.h wie folgt deklariert:<br/> <code>typedef BYTE BOOLEAN;</code><br/></td>
 </tr>
 <tr class="odd">
-<td><span id="BYTE"></span><span id="byte"></span><strong>Byte</strong></td>
+<td><span id="BYTE"></span><span id="byte"></span><strong>BYTE</strong></td>
 <td>Ein Byte (8 Bits).<br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef unsigned char BYTE;</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="CALLBACK"></span><span id="callback"></span><strong>Rückruf</strong></td>
+<td><span id="CALLBACK"></span><span id="callback"></span><strong>RÜCKRUF</strong></td>
 <td>Die Aufrufkonvention für Rückruffunktionen.<br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>#define CALLBACK __stdcall</code><br/> <strong>CALLBACK,</strong> <strong>WINAPI</strong>und <strong>APIENTRY</strong> werden alle zum Definieren von Funktionen mit der __stdcall verwendet. Die meisten Funktionen in der Windows-API werden mit <strong>winapi deklariert.</strong> Sie können <strong>CALLBACK</strong> für die Rückruffunktionen verwenden, die Sie implementieren, um die Funktion als Rückruffunktion zu identifizieren.<br/></td>
 </tr>
 <tr class="odd">
@@ -240,7 +240,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <td>Ein 8-Bit-Windows (ANSI)<br/> Dieser Typ wird in WinNT.h wie folgt deklariert:<br/> <code>typedef char CCHAR;</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="CHAR"></span><span id="char"></span><strong>Char</strong></td>
+<td><span id="CHAR"></span><span id="char"></span><strong>CHAR</strong></td>
 <td>Ein 8-Bit-Windows (ANSI) Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a><br/> Dieser Typ wird in WinNT.h wie folgt deklariert:<br/> <code>typedef char CHAR;</code><br/></td>
 </tr>
 <tr class="odd">
@@ -248,11 +248,11 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <td>Der Farbwert rot, grün, blau (RGB) (32 Bits). Informationen zu diesem Typ finden Sie unter <a href="/windows/desktop/gdi/colorref"><strong>COLORREF.</strong></a><br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef DWORD COLORREF;</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="CONST"></span><span id="const"></span><strong>Const</strong></td>
+<td><span id="CONST"></span><span id="const"></span><strong>CONST</strong></td>
 <td>Eine Variable, deren Wert während der Ausführung konstant bleiben soll. <br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>#define CONST const</code><br/></td>
 </tr>
 <tr class="odd">
-<td><span id="DWORD"></span><span id="dword"></span><strong>Dword</strong></td>
+<td><span id="DWORD"></span><span id="dword"></span><strong>DWORD</strong></td>
 <td>Eine 32-Bit-Ganzzahl ohne Vorzeichen. Der Bereich ist 0 bis 4294967295 Dezimalzahl.<br/> Dieser Typ wird in IntSafe.h wie folgt deklariert:<br/> <code>typedef unsigned long DWORD;</code><br/></td>
 </tr>
 <tr class="even">
@@ -261,7 +261,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="DWORD_PTR"></span><span id="dword_ptr"></span><strong>DWORD_PTR</strong></td>
-<td>Ein long-Typ ohne Vorzeichen für Zeigergenauigkeit. Verwenden Sie beim Umwandlung eines Zeigers in einen langen Typ, um Zeigerarithmetik durchzuführen. (Wird auch häufig für allgemeine 32-Bit-Parameter verwendet, die auf 64 Bit in 64-Bit-Windows.)<br/> Dieser Typ wird in BaseTsd.h wie folgt deklariert:<br/> <code>typedef ULONG_PTR DWORD_PTR;</code><br/></td>
+<td>Ein long-Typ ohne Vorzeichen für Zeigergenauigkeit. Verwenden Sie beim Umwandlung eines Zeigers in einen langen Typ, um Zeigerarithmetik durchzuführen. (Wird auch häufig für allgemeine 32-Bit-Parameter verwendet, die in 64-Bit-64-Bit-Windows.)<br/> Dieser Typ wird in BaseTsd.h wie folgt deklariert:<br/> <code>typedef ULONG_PTR DWORD_PTR;</code><br/></td>
 </tr>
 <tr class="even">
 <td><span id="DWORD32"></span><span id="dword32"></span><strong>DWORD32</strong></td>
@@ -272,7 +272,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <td>Eine 64-Bit-Ganzzahl ohne Vorzeichen.<br/> Dieser Typ wird in BaseTsd.h wie folgt deklariert:<br/> <code>typedef unsigned __int64 DWORD64;</code><br/></td>
 </tr>
 <tr class="even">
-<td><span id="FLOAT"></span><span id="float"></span><strong>schweben</strong></td>
+<td><span id="FLOAT"></span><span id="float"></span><strong>SCHWEBEN</strong></td>
 <td>Eine Gleitkommavariable.<br/> Dieser Typ wird in WinDef.h wie folgt deklariert:<br/> <code>typedef float FLOAT;</code><br/></td>
 </tr>
 <tr class="odd">
@@ -284,7 +284,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <td>Die Hälfte der Größe eines Zeigers. Verwenden Sie in einer -Struktur, die einen Zeiger und zwei kleine Felder enthält.<br/> Dieser Typ wird in BaseTsd.h wie folgt deklariert:<br/> <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -304,7 +304,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </td>
 </tr>
 <tr class="odd">
-<td><span id="HANDLE"></span><span id="handle"></span><strong>Behandeln</strong></td>
+<td><span id="HANDLE"></span><span id="handle"></span><strong>BEHANDELN</strong></td>
 <td><p>Ein Handle für ein Objekt.</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef PVOID HANDLE;</code></p></td>
@@ -346,7 +346,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HICON HCURSOR;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="HDC"></span><span id="hdc"></span><strong>Hdc</strong></td>
+<td><span id="HDC"></span><span id="hdc"></span><strong>HDC</strong></td>
 <td><p>Ein Handle für einen <a href="/windows/desktop/gdi/device-context-types">Gerätekontext</a> (DC).</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE HDC;</code></p></td>
@@ -418,14 +418,14 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HANDLE HICON;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="HINSTANCE"></span><span id="hinstance"></span><strong>Hinstance</strong></td>
+<td><span id="HINSTANCE"></span><span id="hinstance"></span><strong>HINSTANCE</strong></td>
 <td><p>Ein Handle für eine Instanz. Dies ist die Basisadresse des Moduls im Arbeitsspeicher.</p>
-<p><strong>HMODULE</strong> und <strong>HINSTANCE</strong> sind heute identisch, repräsentierten aber in 16-Bit-Windows.</p>
+<p><strong>HMODULE</strong> und <strong>HINSTANCE</strong> sind heute identisch, haben aber in 16-Bit-16-Bit-Windows.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE HINSTANCE;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="HKEY"></span><span id="hkey"></span><strong>Hkey</strong></td>
+<td><span id="HKEY"></span><span id="hkey"></span><strong>HKEY</strong></td>
 <td><p>Ein Handle für einen Registrierungsschlüssel.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE HKEY;</code></p></td>
@@ -443,7 +443,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HANDLE HLOCAL;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="HMENU"></span><span id="hmenu"></span><strong>Hmenu</strong></td>
+<td><span id="HMENU"></span><span id="hmenu"></span><strong>HMENU</strong></td>
 <td><p>Ein Handle für ein <a href="/windows/desktop/menurc/menus">Menü.</a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE HMENU;</code></p></td>
@@ -462,7 +462,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HINSTANCE HMODULE;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="HMONITOR"></span><span id="hmonitor"></span><strong>Hmonitor</strong></td>
+<td><span id="HMONITOR"></span><span id="hmonitor"></span><strong>HMONITOR</strong></td>
 <td><p>Ein Handle für einen Anzeigemonitor.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>if(WINVER >= 0x0500) typedef HANDLE HMONITOR;</code></p></td>
@@ -480,7 +480,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HANDLE HPEN;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="HRESULT"></span><span id="hresult"></span><strong>Hresult</strong></td>
+<td><span id="HRESULT"></span><span id="hresult"></span><strong>HRESULT</strong></td>
 <td><p>Die von COM-Schnittstellen verwendeten Rückgabecodes. Weitere Informationen finden Sie unter <a href="/windows/desktop/com/structure-of-com-error-codes">Struktur der COM-Fehlercodes</a>. Verwenden Sie zum <strong>Testen eines HRESULT-Werts</strong> die <a href="/windows/desktop/api/winerror/nf-winerror-failed"><strong>Makros FAILED</strong></a> und <a href="/windows/desktop/api/winerror/nf-winerror-succeeded"><strong>SUCCEEDED.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef LONG HRESULT;</code></p></td>
@@ -510,13 +510,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HANDLE WINSTA;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="HWND"></span><span id="hwnd"></span><strong>Hwnd</strong></td>
+<td><span id="HWND"></span><span id="hwnd"></span><strong>HWND</strong></td>
 <td><p>Ein Handle für ein <a href="/windows/desktop/winmsg/windows">Fenster.</a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE HWND;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="INT"></span><span id="int"></span><strong>Int</strong></td>
+<td><span id="INT"></span><span id="int"></span><strong>INT</strong></td>
 <td><p>Eine 32-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist -2147483648 bis 2147483647 Dezimalzahl.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef int INT;</code></p></td>
@@ -529,7 +529,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -574,20 +574,20 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef signed __int64 INT64;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="LANGID"></span><span id="langid"></span><strong>Langid</strong></td>
+<td><span id="LANGID"></span><span id="langid"></span><strong>LANGID</strong></td>
 <td><p>Ein Sprachbezeichner. Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/language-identifiers">Sprachbezeichner.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef WORD LANGID;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="LCID"></span><span id="lcid"></span><strong>Lcid</strong></td>
+<td><span id="LCID"></span><span id="lcid"></span><strong>LCID</strong></td>
 <td><p>Ein -Locale-Bezeichner. Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/locale-identifiers">Locale Identifiers</a>.</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef DWORD LCID;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="LCTYPE"></span><span id="lctype"></span><strong>LCTYPE</strong></td>
-<td><p>Ein Locale Information-Typ. Eine Liste finden Sie unter <a href="/windows/desktop/Intl/locale-information-constants">Gebietsschemainformationskonstanten.</a></p>
+<td><p>Ein Locale Information-Typ. Eine Liste finden Sie unter <a href="/windows/desktop/Intl/locale-information-constants">Locale Information Constants</a>.</p>
 <p>Dieser Typ wird in WinNls.h wie folgt deklariert:</p>
 <p><code>typedef DWORD LCTYPE;</code></p></td>
 </tr>
@@ -598,20 +598,20 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef DWORD LGRPID;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="LONG"></span><span id="long"></span><strong>Lange</strong></td>
-<td><p>Eine 32-Bit-Ganzzahl mit Vorzeichen. Der Bereich wird bis 2147483647 Dezimalzahl 2147483648.</p>
+<td><span id="LONG"></span><span id="long"></span><strong>LANGE</strong></td>
+<td><p>Eine 32-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist -2147483648 bis 2147483647 Dezimalzahl.</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef long LONG;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="LONGLONG"></span><span id="longlong"></span><strong>LONGLONG</strong></td>
-<td><p>Eine 64-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist bis 9223372036854775807 Dezimalzahl 9223372036854775808.</p>
+<td><p>Eine 64-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist -9223372036854775808 bis 9223372036854775807 Dezimalzahl.</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -633,13 +633,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="LONG_PTR"></span><span id="long_ptr"></span><strong>LONG_PTR</strong></td>
-<td><p>Ein long-Typ mit Vorzeichen für Zeigergenauigkeit. Verwenden Sie , wenn Sie einen Zeiger in einen long umwandeln, um Zeigerarithmetik auszuführen.</p>
+<td><p>Ein long-Typ mit Vor signed für Zeigergenauigkeit. Verwenden Sie beim Umwandlung eines Zeigers in eine lange , um Zeigerarithmetik durchzuführen.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -661,31 +661,31 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="LONG32"></span><span id="long32"></span><strong>LONG32</strong></td>
-<td><p>Eine 32-Bit-Ganzzahl mit Vorzeichen. Der Bereich wird bis 2147483647 Dezimalzahl 2147483648.</p>
+<td><p>Eine 32-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist -2147483648 bis 2147483647 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef signed int LONG32;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="LONG64"></span><span id="long64"></span><strong>LONG64</strong></td>
-<td><p>Eine 64-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist bis 9223372036854775807 Dezimalzahl 9223372036854775808.</p>
+<td><p>Eine 64-Bit-Ganzzahl mit Vorzeichen. Der Bereich ist -9223372036854775808 bis 9223372036854775807 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef __int64 LONG64;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="LPARAM"></span><span id="lparam"></span><strong>Lparam</strong></td>
-<td><p>Ein Nachrichtenparameter.</p>
+<td><span id="LPARAM"></span><span id="lparam"></span><strong>LPARAM</strong></td>
+<td><p>Ein Meldungsparameter.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef LONG_PTR LPARAM;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="LPBOOL"></span><span id="lpbool"></span><strong>LPBOOL</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#bool"><strong>BOOL-</strong></a>.</p>
+<td><p>Ein Zeiger auf eine <a href="#bool"><strong>BOOL.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef BOOL far *LPBOOL;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="LPBYTE"></span><span id="lpbyte"></span><strong>LPBYTE</strong></td>
-<td><p>Ein Zeiger auf ein <a href="#byte"><strong>BYTE.</strong></a></p>
+<td><p>Ein Zeiger auf eine <a href="#byte"><strong>BYTE-.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef BYTE far *LPBYTE;</code></p></td>
 </tr>
@@ -697,19 +697,19 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="LPCSTR"></span><span id="lpcstr"></span><strong>LPCSTR</strong></td>
-<td><p>Ein Zeiger auf eine konstante NULL-endende Zeichenfolge mit 8-Bit-Windows (ANSI)-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><p>Ein Zeiger auf eine konstante nullbeendte Zeichenfolge mit 8-Bit-Windows Zeichen (ANSI). Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef __nullterminated CONST CHAR *LPCSTR;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="LPCTSTR"></span><span id="lpctstr"></span><strong>LPCTSTR</strong></td>
-<td><p>Ein <a href="#lpcwstr"><strong>LPCWSTR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls <a href="#lpcstr"><strong>ein LPCSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows Datentypen für Zeichenfolgen.</a></p>
+<td><p>Ein <a href="#lpcwstr"><strong>LPCWSTR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls <a href="#lpcstr"><strong>ein LPCSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows-Datentypen für Zeichenfolgen.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -737,13 +737,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="LPCWSTR"></span><span id="lpcwstr"></span><strong>LPCWSTR</strong></td>
-<td><p>Ein Zeiger auf eine konstante NULL-endende Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><p>Ein Zeiger auf eine konstante, mit NULL beendete Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef CONST WCHAR *LPCWSTR;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="LPDWORD"></span><span id="lpdword"></span><strong>LPDWORD</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#dword"><strong>DWORD-.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#dword"><strong>DWORD-</strong></a>.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef DWORD *LPDWORD;</code></p></td>
 </tr>
@@ -755,7 +755,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="LPINT"></span><span id="lpint"></span><strong>LPINT</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#int"><strong>INT.</strong></a></p>
+<td><p>Ein Zeiger auf eine <a href="#int"><strong>INT-.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef int *LPINT;</code></p></td>
 </tr>
@@ -766,20 +766,20 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef long *LPLONG;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="LPSTR"></span><span id="lpstr"></span><strong>Lpstr</strong></td>
-<td><p>Ein Zeiger auf eine auf NULL endende Zeichenfolge mit 8-Bit-Windows(ANSI)-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><span id="LPSTR"></span><span id="lpstr"></span><strong>LPSTR</strong></td>
+<td><p>Ein Zeiger auf eine nullbeendte Zeichenfolge mit 8-Bit-Windows Zeichen (ANSI). Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef CHAR *LPSTR;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="LPTSTR"></span><span id="lptstr"></span><strong>Lptstr</strong></td>
-<td><p>Ein <a href="#lpwstr"><strong>LPWSTR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls ein <a href="#lpstr"><strong>LPSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows Datentypen für Zeichenfolgen.</a></p>
+<td><span id="LPTSTR"></span><span id="lptstr"></span><strong>LPTSTR</strong></td>
+<td><p>Ein <a href="#lpwstr"><strong>LPWSTR,</strong></a> <strong>wenn UNICODE</strong> definiert ist, andernfalls ein <a href="#lpstr"><strong>LPSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows-Datentypen für Zeichenfolgen.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -807,49 +807,49 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="LPWORD"></span><span id="lpword"></span><strong>LPWORD</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#word"><strong>WORD-.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#word"><strong>WORD-</strong></a>.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef WORD *LPWORD;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="LPWSTR"></span><span id="lpwstr"></span><strong>Lpwstr</strong></td>
-<td><p>Ein Zeiger auf eine auf NULL endende Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><span id="LPWSTR"></span><span id="lpwstr"></span><strong>LPWSTR</strong></td>
+<td><p>Ein Zeiger auf eine auf NULL beendete Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef WCHAR *LPWSTR;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="LRESULT"></span><span id="lresult"></span><strong>Lresult</strong></td>
+<td><span id="LRESULT"></span><span id="lresult"></span><strong>LRESULT</strong></td>
 <td><p>Signiertes Ergebnis der Nachrichtenverarbeitung.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef LONG_PTR LRESULT;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PBOOL"></span><span id="pbool"></span><strong>PBOOL</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#bool"><strong>BOOL-</strong></a>.</p>
+<td><p>Ein Zeiger auf eine <a href="#bool"><strong>BOOL.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef BOOL *PBOOL;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="PBOOLEAN"></span><span id="pboolean"></span><strong>PBOOLEAN</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#boolean"><strong>BOOLESCHEN</strong></a>Wert.</p>
+<td><p>Ein Zeiger auf eine <a href="#boolean"><strong>BOOLESCHE .</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef BOOLEAN *PBOOLEAN;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PBYTE"></span><span id="pbyte"></span><strong>PBYTE</strong></td>
-<td><p>Ein Zeiger auf ein <a href="#byte"><strong>BYTE.</strong></a></p>
+<td><p>Ein Zeiger auf eine <a href="#byte"><strong>BYTE-.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef BYTE *PBYTE;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="PCHAR"></span><span id="pchar"></span><strong>PCHAR</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#char"><strong>CHAR-.</strong></a></p>
+<td><p>Ein Zeiger auf einen <a href="#char"><strong>CHAR-.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef CHAR *PCHAR;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PCSTR"></span><span id="pcstr"></span><strong>PCSTR</strong></td>
-<td><p>Ein Zeiger auf eine konstante NULL-terminierte Zeichenfolge mit 8-Bit-Windows Zeichen (ANSI). Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><p>Ein Zeiger auf eine konstante NULL-endende Zeichenfolge mit 8-Bit-Windows (ANSI)-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef CONST CHAR *PCSTR;</code></p></td>
 </tr>
@@ -861,7 +861,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -925,13 +925,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="PHALF_PTR"></span><span id="phalf_ptr"></span><strong>PHALF_PTR</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#half_ptr"><strong>HALF_PTR</strong></a>.</p>
+<td><p>Ein Zeiger auf eine <a href="#half_ptr"><strong>HALF_PTR</strong></a>.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -964,7 +964,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef HKEY *PHKEY;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="PINT"></span><span id="pint"></span><strong>Pint</strong></td>
+<td><span id="PINT"></span><span id="pint"></span><strong>PINT</strong></td>
 <td><p>Ein Zeiger auf einen <a href="#int"><strong>INT.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef int *PINT;</code></p></td>
@@ -1043,7 +1043,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1065,14 +1065,14 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="POINTER_64"></span><span id="pointer_64"></span><strong>POINTER_64</strong></td>
-<td><p>Ein 64-Bit-Zeiger. Auf einem 64-Bit-System ist dies ein nativer Zeiger. Auf einem 32-Bit-System ist dies ein 32-Bit-Zeiger mit Vorzeichenerweiterung.</p>
+<td><p>Ein 64-Bit-Zeiger. Auf einem 64-Bit-System ist dies ein nativer Zeiger. In einem 32-Bit-System ist dies ein 32-Bit-Zeiger mit Vorzeichenerweiterung.</p>
 <p>Beachten Sie, dass es nicht sicher ist, den Zustand des hohen Zeigerbits anzunehmen.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1123,32 +1123,32 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <p><code>typedef SSIZE_T *PSSIZE_T;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="PSTR"></span><span id="pstr"></span><strong>Pstr</strong></td>
-<td><p>Ein Zeiger auf eine nullbeendte Zeichenfolge mit 8-Bit-Windows Zeichen (ANSI). Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><span id="PSTR"></span><span id="pstr"></span><strong>PSTR</strong></td>
+<td><p>Ein Zeiger auf eine auf NULL endende Zeichenfolge mit 8-Bit-Windows (ANSI)-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef CHAR *PSTR;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PTBYTE"></span><span id="ptbyte"></span><strong>PTBYTE</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#tbyte"><strong>TBYTE-.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#tbyte"><strong>TBYTE.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef TBYTE *PTBYTE;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="PTCHAR"></span><span id="ptchar"></span><strong>PTCHAR</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#tchar"><strong>TCHAR-</strong></a>.</p>
+<td><p>Ein Zeiger auf einen <a href="#tchar"><strong>TCHAR-.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef TCHAR *PTCHAR;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PTSTR"></span><span id="ptstr"></span><strong>PTSTR</strong></td>
-<td><p>Ein <a href="#pwstr"><strong>PWSTR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, <a href="#pstr"><strong>andernfalls ein PSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows Datentypen für Zeichenfolgen.</a></p>
+<td><p>Ein <a href="#pwstr"><strong>PWSTR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls ein <a href="#pstr"><strong>PSTR.</strong></a> Weitere Informationen finden Sie unter <a href="/windows/desktop/Intl/windows-data-types-for-strings">Windows Datentypen für Zeichenfolgen.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1169,7 +1169,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="PUCHAR"></span><span id="puchar"></span><strong>PUCHAR</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#uchar"><strong>UCHAR-</strong></a>.</p>
+<td><p>Ein Zeiger auf ein <a href="#uchar"><strong>UCHAR-.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef UCHAR *PUCHAR;</code></p></td>
 </tr>
@@ -1181,7 +1181,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1215,13 +1215,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="even">
 <td><span id="PUINT8"></span><span id="puint8"></span><strong>PUINT8</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#uint8"><strong>UINT8-</strong></a>.</p>
+<td><p>Ein Zeiger auf einen <a href="#uint8"><strong>UINT8.</strong></a></p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef UINT8 *PUINT8;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PUINT16"></span><span id="puint16"></span><strong>PUINT16</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#uint16"><strong>UINT16.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#uint16"><strong>UINT16</strong></a>-.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef UINT16 *PUINT16;</code></p></td>
 </tr>
@@ -1233,19 +1233,19 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="PUINT64"></span><span id="puint64"></span><strong>PUINT64</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#uint64"><strong>UINT64.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#uint64"><strong>UINT64-</strong></a>.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef UINT64 *PUINT64;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="PULONG"></span><span id="pulong"></span><strong>PULONG</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#ulong"><strong>ULONG-</strong></a>.</p>
+<td><p>Ein Zeiger auf einen <a href="#ulong"><strong>ULONG-.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef ULONG *PULONG;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PULONGLONG"></span><span id="pulonglong"></span><strong>PULONGLONG</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#ulonglong"><strong>ULONGLONG-.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#ulonglong"><strong>ULONGLONG</strong></a>-.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef ULONGLONG *PULONGLONG;</code></p></td>
 </tr>
@@ -1257,19 +1257,19 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="PULONG32"></span><span id="pulong32"></span><strong>PULONG32</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#ulong32"><strong>ULONG32.</strong></a></p>
+<td><p>Ein Zeiger auf ein <a href="#ulong32"><strong>ULONG32</strong></a>-.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef ULONG32 *PULONG32;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="PULONG64"></span><span id="pulong64"></span><strong>PULONG64</strong></td>
-<td><p>Ein Zeiger auf einen <a href="#ulong64"><strong>ULONG64-</strong></a>.</p>
+<td><p>Ein Zeiger auf ein <a href="#ulong64"><strong>ULONG64</strong></a>-.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef ULONG64 *PULONG64;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="PUSHORT"></span><span id="pushort"></span><strong>PUSHORT</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#ushort"><strong>USHORT-</strong></a>.</p>
+<td><p>Ein Zeiger auf einen <a href="#ushort"><strong>USHORT.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef USHORT *PUSHORT;</code></p></td>
 </tr>
@@ -1281,7 +1281,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="PWCHAR"></span><span id="pwchar"></span><strong>PWCHAR</strong></td>
-<td><p>Ein Zeiger auf eine <a href="#wchar"><strong>WCHAR-</strong></a>.</p>
+<td><p>Ein Zeiger auf einen <a href="#wchar"><strong>WCHAR-.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef WCHAR *PWCHAR;</code></p></td>
 </tr>
@@ -1293,61 +1293,61 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="PWSTR"></span><span id="pwstr"></span><strong>PWSTR</strong></td>
-<td><p>Ein Zeiger auf eine auf NULL beendete Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
+<td><p>Ein Zeiger auf eine auf NULL endende Zeichenfolge mit 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef WCHAR *PWSTR;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="QWORD"></span><span id="qword"></span><strong>Qword</strong></td>
+<td><span id="QWORD"></span><span id="qword"></span><strong>QWORD</strong></td>
 <td><p>Eine 64-Bit-Ganzzahl ohne Vorzeichen.</p>
 <p>Dieser Typ wird wie folgt deklariert:</p>
 <p><code>typedef unsigned __int64 QWORD;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="SC_HANDLE"></span><span id="sc_handle"></span><strong>SC_HANDLE</strong></td>
-<td><p>Ein Handle für eine Dienststeuerungs-Manager-Datenbank. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM-Handles.</a></p>
+<td><p>Ein Handle für eine Dienststeuerungs-Manager-Datenbank. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM Handles</a>.</p>
 <p>Dieser Typ wird in WinSvc.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE SC_HANDLE;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="SC_LOCK"></span><span id="sc_lock"></span><strong>SC_LOCK</strong></td>
-<td><p>Eine Sperre für eine Dienststeuerungs-Manager-Datenbank. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM-Handles.</a></p>
+<td><p>Eine Sperre für eine Dienststeuerungs-Manager-Datenbank. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM Handles</a>.</p>
 <p>Dieser Typ wird in WinSvc.h wie folgt deklariert:</p>
 <p><code>typedef LPVOID SC_LOCK;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="SERVICE_STATUS_HANDLE"></span><span id="service_status_handle"></span><strong>SERVICE_STATUS_HANDLE</strong></td>
-<td><p>Ein Handle für einen Dienststatuswert. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM-Handles.</a></p>
+<td><p>Ein Handle für einen Dienststatuswert. Weitere Informationen finden Sie unter <a href="/windows/desktop/Services/scm-handles">SCM Handles</a>.</p>
 <p>Dieser Typ wird in WinSvc.h wie folgt deklariert:</p>
 <p><code>typedef HANDLE SERVICE_STATUS_HANDLE;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="SHORT"></span><span id="short"></span><strong>kurz</strong></td>
+<td><span id="SHORT"></span><span id="short"></span><strong>KURZ</strong></td>
 <td><p>Eine 16-Bit-Ganzzahl. Der Bereich ist -32768 bis 32767 dezimal.</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef short SHORT;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="SIZE_T"></span><span id="size_t"></span><strong>Size_t</strong></td>
+<td><span id="SIZE_T"></span><span id="size_t"></span><strong>SIZE_T</strong></td>
 <td><p>Die maximale Anzahl von Bytes, auf die ein Zeiger zeigen kann. Verwenden Sie für eine Anzahl, die den gesamten Bereich eines Zeigers umfassen muss.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef ULONG_PTR SIZE_T;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="SSIZE_T"></span><span id="ssize_t"></span><strong>SSIZE_T</strong></td>
-<td><p>Eine signierte Version von <a href="#size_t"><strong>SIZE_T</strong></a>.</p>
+<td><p>Eine signierte Version <a href="#size_t"><strong>von SIZE_T.</strong></a></p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef LONG_PTR SSIZE_T;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="TBYTE"></span><span id="tbyte"></span><strong>Tbyte</strong></td>
+<td><span id="TBYTE"></span><span id="tbyte"></span><strong>TBYTE</strong></td>
 <td><p>Ein <a href="#wchar"><strong>WCHAR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls ein <a href="#char"><strong>CHAR.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1368,14 +1368,14 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </div></td>
 </tr>
 <tr class="even">
-<td><span id="TCHAR"></span><span id="tchar"></span><strong>Tchar</strong></td>
+<td><span id="TCHAR"></span><span id="tchar"></span><strong>TCHAR</strong></td>
 <td><p>Ein <a href="#wchar"><strong>WCHAR,</strong></a> wenn <strong>UNICODE</strong> definiert ist, andernfalls ein <a href="#char"><strong>CHAR.</strong></a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1397,19 +1397,19 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="UCHAR"></span><span id="uchar"></span><strong>UCHAR</strong></td>
-<td><p>Ein <a href="#char"><strong>char-Zeichen</strong></a>ohne Vorzeichen.</p>
+<td><p>Ein char-Zeichen ohne <a href="#char"><strong>Vorzeichen.</strong></a></p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef unsigned char UCHAR;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="UHALF_PTR"></span><span id="uhalf_ptr"></span><strong>UHALF_PTR</strong></td>
-<td><p>Ein HALF_PTR <a href="#half_ptr"><strong>ohne</strong></a>Vorzeichen. Verwenden Sie in einer -Struktur, die einen Zeiger und zwei kleine Felder enthält.</p>
+<td><p>Ein nicht signierter <a href="#half_ptr"><strong>HALF_PTR</strong></a>. Verwenden Sie in einer -Struktur, die einen Zeiger und zwei kleine Felder enthält.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1430,8 +1430,8 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </div></td>
 </tr>
 <tr class="odd">
-<td><span id="UINT"></span><span id="uint"></span><strong>Uint</strong></td>
-<td><p>Ein <a href="#int"><strong>int-Zeichen</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
+<td><span id="UINT"></span><span id="uint"></span><strong>UINT</strong></td>
+<td><p>Ein <a href="#int"><strong>int-Int ohne Vorzeichen.</strong></a> Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef unsigned int UINT;</code></p></td>
 </tr>
@@ -1443,7 +1443,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1465,31 +1465,31 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="UINT8"></span><span id="uint8"></span><strong>UINT8</strong></td>
-<td><p>Ein <a href="#int8"><strong>int8-Zeichen</strong></a>ohne Vorzeichen.</p>
+<td><p>Ein <a href="#int8"><strong>int8-Int8 ohne Vorzeichen.</strong></a></p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef unsigned  char UINT8;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="UINT16"></span><span id="uint16"></span><strong>UINT16</strong></td>
-<td><p>Ein nicht signierter <a href="#int16"><strong>INT16</strong></a>.</p>
+<td><p>Ein unsigned <a href="#int16"><strong>INT16</strong></a>.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef unsigned  short UINT16;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="UINT32"></span><span id="uint32"></span><strong>UINT32</strong></td>
-<td><p>Ein <a href="#int32"><strong>int32</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
+<td><p>Ein unsigned <a href="#int32"><strong>INT32</strong></a>. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef unsigned int UINT32;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="UINT64"></span><span id="uint64"></span><strong>UINT64</strong></td>
-<td><p>Ein <a href="#int64"><strong>int64-Zeichen</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 18446744073709551615 Dezimalzahl.</p>
+<td><p>Ein nicht signiertes <a href="#int64"><strong>INT64.</strong></a> Der Bereich ist 0 bis 18446744073709551615 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef usigned __int 64 UINT64;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="ULONG"></span><span id="ulong"></span><strong>Ulong</strong></td>
-<td><p>Ein unsigned <a href="#long"><strong>LONG</strong></a>. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
+<td><span id="ULONG"></span><span id="ulong"></span><strong>ULONG</strong></td>
+<td><p>Ein unsigniertes <a href="#long"><strong>LONG.</strong></a> Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef unsigned long ULONG;</code></p></td>
 </tr>
@@ -1501,7 +1501,7 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1523,13 +1523,13 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </tr>
 <tr class="odd">
 <td><span id="ULONG_PTR"></span><span id="ulong_ptr"></span><strong>ULONG_PTR</strong></td>
-<td><p>Ein LONG_PTR <a href="#long_ptr"><strong>ohne</strong></a>Vorzeichen.</p>
+<td><p>Ein nicht signierter <a href="#long_ptr"><strong>LONG_PTR</strong></a>.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1550,26 +1550,26 @@ Weitere Informationen zur Behandlung von 64-Bit-Ganzzahlen finden Sie unter [Gro
 </div></td>
 </tr>
 <tr class="even">
-<td><span id="ULONG32"></span><span id="ulong32"></span><strong>Ulong32</strong></td>
-<td><p>Ein <a href="#long32"><strong>long32-Zeichen</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
+<td><span id="ULONG32"></span><span id="ulong32"></span><strong>ULONG32</strong></td>
+<td><p>Ein unsigned <a href="#long32"><strong>LONG32</strong></a>. Der Bereich ist 0 bis 4294967295 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef unsigned int ULONG32;</code></p></td>
 </tr>
 <tr class="odd">
 <td><span id="ULONG64"></span><span id="ulong64"></span><strong>ULONG64</strong></td>
-<td><p>Ein <a href="#long64"><strong>long64-Zeichen</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 18446744073709551615 Dezimalzahl.</p>
+<td><p>Ein unsigned <a href="#long64"><strong>LONG64</strong></a>. Der Bereich ist 0 bis 18446744073709551615 Dezimalzahl.</p>
 <p>Dieser Typ wird in BaseTsd.h wie folgt deklariert:</p>
 <p><code>typedef unsigned __int64 ULONG64;</code></p></td>
 </tr>
 <tr class="even">
 <td><span id="UNICODE_STRING"></span><span id="unicode_string"></span><strong>UNICODE_STRING</strong></td>
 <td><p>Eine Unicode-Zeichenfolge.</p>
-<p>Dieser Typ wird in Derl.h wie folgt deklariert:</p>
+<p>Dieser Typ wird in Derznl.h wie folgt deklariert:</p>
 <div class="code">
 <span data-codelanguage="ManagedCPlusPlus"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1592,45 +1592,45 @@ typedef const UNICODE_STRING *PCUNICODE_STRING;</code></pre></td>
 </div></td>
 </tr>
 <tr class="odd">
-<td><span id="USHORT"></span><span id="ushort"></span><strong>Ushort</strong></td>
-<td><p>Ein <a href="#short"><strong>short-Zeichen</strong></a>ohne Vorzeichen. Der Bereich ist 0 bis 65535 dezimal.</p>
+<td><span id="USHORT"></span><span id="ushort"></span><strong>USHORT</strong></td>
+<td><p>Ein unsigned <a href="#short"><strong>SHORT</strong></a>. Der Bereich liegt zwischen 0 und 65535 Dezimalstellen.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef unsigned short USHORT;</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="USN"></span><span id="usn"></span><strong>Usn</strong></td>
+<td><span id="USN"></span><span id="usn"></span><strong>USN</strong></td>
 <td><p>Eine Updatesequenznummer (USN).</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef LONGLONG USN;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="VOID"></span><span id="void"></span><strong>Leere</strong></td>
+<td><span id="VOID"></span><span id="void"></span><strong>LEERE</strong></td>
 <td><p>Beliebiger Typ</p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>#define VOID void</code></p></td>
 </tr>
 <tr class="even">
-<td><span id="WCHAR"></span><span id="wchar"></span><strong>Wchar</strong></td>
+<td><span id="WCHAR"></span><span id="wchar"></span><strong>WCHAR</strong></td>
 <td><p>Ein 16-Bit-Unicode-Zeichen. Weitere Informationen finden Sie unter <a href="/windows/desktop/gdi/character-sets-used-by-fonts">Von Schriftarten verwendete Zeichensätze.</a></p>
 <p>Dieser Typ wird in WinNT.h wie folgt deklariert:</p>
 <p><code>typedef wchar_t WCHAR;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="WINAPI"></span><span id="winapi"></span><strong>Winapi</strong></td>
+<td><span id="WINAPI"></span><span id="winapi"></span><strong>WINAPI</strong></td>
 <td><p>Die Aufrufkonvention für Systemfunktionen.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>#define WINAPI __stdcall</code></p>
-<p><strong>CALLBACK,</strong> <strong>WINAPI</strong>und <strong>APIENTRY</strong> werden alle verwendet, um Funktionen mit der __stdcall Aufrufkonvention zu definieren. Die meisten Funktionen in der Windows-API werden mit <strong>winapi</strong>deklariert. Möglicherweise möchten Sie <strong>CALLBACK</strong> für die Rückruffunktionen verwenden, die Sie implementieren, um die Funktion als Rückruffunktion zu identifizieren.</p></td>
+<p><strong>CALLBACK,</strong> <strong>WINAPI</strong>und <strong>APIENTRY</strong> werden alle zum Definieren von Funktionen mit der __stdcall verwendet. Die meisten Funktionen in der Windows-API werden mit <strong>winapi deklariert.</strong> Sie können <strong>CALLBACK</strong> für die Rückruffunktionen verwenden, die Sie implementieren, um die Funktion als Rückruffunktion zu identifizieren.</p></td>
 </tr>
 <tr class="even">
-<td><span id="WORD"></span><span id="word"></span><strong>Wort</strong></td>
-<td><p>Eine 16-Bit-Ganzzahl ohne Vorzeichen. Der Bereich ist 0 bis 65535 dezimal.</p>
+<td><span id="WORD"></span><span id="word"></span><strong>WORT</strong></td>
+<td><p>Eine 16-Bit-Ganzzahl ohne Vorzeichen. Der Bereich liegt zwischen 0 und 65535 Dezimalstellen.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef unsigned short WORD;</code></p></td>
 </tr>
 <tr class="odd">
-<td><span id="WPARAM"></span><span id="wparam"></span><strong>Wparam</strong></td>
-<td><p>Ein Nachrichtenparameter.</p>
+<td><span id="WPARAM"></span><span id="wparam"></span><strong>WPARAM</strong></td>
+<td><p>Ein Meldungsparameter.</p>
 <p>Dieser Typ wird in WinDef.h wie folgt deklariert:</p>
 <p><code>typedef UINT_PTR WPARAM;</code></p></td>
 </tr>
@@ -1639,12 +1639,12 @@ typedef const UNICODE_STRING *PCUNICODE_STRING;</code></pre></td>
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                                                                                                                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                                                                                                                                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                                                                                                                                |
 | Header<br/>                   | <dl> <dt>BaseTsd.h; </dt> <dt>WinDef.h; </dt> <dt>WinNT.h</dt> </dl> |

@@ -10,12 +10,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ee4fcf193296d5c474987a3a99877b3bfb43868f79527200893303df351920cb
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 37a1d44a07feea7beb07984c383620fd2f166cdb
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117738839"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626156"
 ---
 # <a name="wmi-tasks-scheduled-tasks"></a>WMI-Aufgaben: Geplante Aufgaben
 
@@ -44,8 +44,8 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -56,10 +56,10 @@ In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen versc
 <tbody>
 <tr class="odd">
 <td>... Geplante Aufgaben mithilfe von Skripts erstellen?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>Win32_ScheduledJob-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode.</strong></a> Wenn Sie Schwierigkeiten haben, diese Aufgabe mit Windows 7 oder höher zu bearbeiten, lesen Sie den Abschnitt <strong>Win32_ScheduledJob</strong> Hinweise. Wahrscheinlich verhindern Ihre Einstellungen die Verwendung der -Klasse.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>Win32_ScheduledJob-Klasse</strong></a> und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode.</strong></a> Wenn Sie Schwierigkeiten haben, diese Aufgabe an Windows 7 oder höher zu bearbeiten, lesen Sie den Abschnitt <strong>Win32_ScheduledJob</strong> Hinweise. Wahrscheinlich verhindern Ihre Einstellungen die Verwendung der -Klasse.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -85,7 +85,7 @@ End If</code></pre></td>
 </tbody>
 </table>
 
-<p>In der Zeichenfolge &quot; "**143000.000000-420" &quot; (wird im <em>StartTime-Parameterwert</em> der <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode</strong></a> verwendet) &quot; gibt "**143000.000000" &quot; an, dass der Task bei 14,30 (14:30 Uhr) beginnt und &quot; -420 &quot; die Zeitzone angibt. Die Zeitzonennummer ist die aktuelle Verschiebung der Ortszeitübersetzung. Die Verschiebung ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie zum Berechnen der Verschiebung für Ihre Zeitzone die Anzahl der Stunden, denen Ihre Zeitzone voraus oder hinter Greenwich Mean Time (GMT) liegt, mit 60 (verwenden Sie eine positive Zahl für die Anzahl der Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn Ihre Zeitzone hinter GMT liegt). Fügen Sie ihrer Berechnung eine zusätzliche 60 hinzu, wenn Ihre Zeitzone Sommerzeit verwendet. Beispielsweise liegt die Pacific Standard Time-Zone acht Stunden hinter GMT, daher entspricht die Abweichung -420 (-8 * 60 + 60), wenn die Sommerzeit verwendet wird, und -480 (-8 * 60), wenn die Sommerzeit nicht verwendet wird. Sie können auch den Wert des Bias bestimmen, indem Sie die Bias-Eigenschaft der <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong>Win32_TimeZone-Klasse</strong></a> abfragen.</p></td>
+<p>In der Zeichenfolge &quot; "**143000.000000-420" &quot; (im <em>StartTime-Parameterwert</em> der <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode</strong></a> verwendet) &quot; gibt "143000.000000" &quot; an, dass der Task bei 14,30 (14:30 Uhr) beginnt und &quot; -420 &quot; die Zeitzone angibt. Die Zeitzonennummer ist die aktuelle Verschiebung der Ortszeitübersetzung. Der Voreingenommenheitsunterschied ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie zum Berechnen der Verschiebung für Ihre Zeitzone die Anzahl der Stunden, denen Ihre Zeitzone voraus oder hinter Greenwich Mean Time (GMT) liegt, mit 60 (verwenden Sie eine positive Zahl für die Anzahl der Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn Ihre Zeitzone hinter GMT liegt). Fügen Sie ihrer Berechnung eine zusätzliche 60 hinzu, wenn Ihre Zeitzone Sommerzeit verwendet. Beispielsweise liegt die Pacific Standard Time-Zone acht Stunden hinter GMT, daher entspricht die Abweichung -420 (-8 * 60 + 60), wenn die Sommerzeit verwendet wird, und -480 (-8 * 60), wenn die Sommerzeit nicht verwendet wird. Sie können auch den Wert des Bias bestimmen, indem Sie die Bias-Eigenschaft der <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong>Win32_TimeZone-Klasse</strong></a> abfragen.</p></td>
 </tr>
 <tr class="even">
 <td>... gibt eine Liste aller geplanten Aufgaben auf einem Computer zurück?</td>
@@ -94,7 +94,7 @@ End If</code></pre></td>
 <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">

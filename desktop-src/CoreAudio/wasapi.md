@@ -4,26 +4,26 @@ ms.assetid: 452b9725-b0b9-4888-bbb5-a23e0067e840
 title: Informationen zu WASAPI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f869319f3100b797e58c7b43597869c9767ac037
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3effb34ec0cde0a53d0eb6f6e9718aa13fc308417b33427f168364afc32086ef
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958422"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088180"
 ---
 # <a name="about-wasapi"></a>Informationen zu WASAPI
 
-Mithilfe der Windows-audiositzungs-API (WASAPI) können Client Anwendungen den Fluss von Audiodaten zwischen der Anwendung und einem [audioendpunkt-Gerät](audio-endpoint-devices.md)verwalten.
+Mit Windows AUDIO Session API (WASAPI) können Clientanwendungen den Fluss von Audiodaten zwischen der Anwendung und einem [Audioendpunktgerät verwalten.](audio-endpoint-devices.md)
 
-Header Dateien AudioClient. h und audiopolicy. h definieren die WASAPI-Schnittstellen.
+Die HEADERdateien Audioclient.h und Audiopolicy.h definieren die WASAPI-Schnittstellen.
 
-Jeder Audiostream ist ein Member einer [Audiositzung](audio-sessions.md). Mithilfe der Sitzungs Abstraktion kann ein WASAPI-Client einen Audiostream als Member einer Gruppe verwandter Audiostreams identifizieren. Das System kann alle Streams in der Sitzung als eine Einheit verwalten.
+Jeder Audiostream ist Ein Mitglied einer [Audiositzung.](audio-sessions.md) Durch die Sitzungsabstraktion kann ein WASAPI-Client einen Audiostream als Mitglied einer Gruppe verwandter Audiostreams identifizieren. Das System kann alle Streams in der Sitzung als einzelne Einheit verwalten.
 
-Die Audioengine ist die [Audiokomponente im Benutzermodus](user-mode-audio-components.md) , über die Anwendungen den Zugriff auf ein audioendpunktgerät freigeben. Die Audioengine transportiert Audiodaten zwischen einem Endpunkt Puffer und einem Endpunkt Gerät. Um einen Audiostream über ein renderingendpunktgerät wiederzugeben, schreibt eine Anwendung regelmäßig Audiodaten in einen renderingendpunktpuffer. Die Audioengine mischt die Streams aus den verschiedenen Anwendungen. Um einen Audiostream von einem Aufzeichnungs Endpunkt-Gerät aufzuzeichnen, liest eine Anwendung regelmäßig Audiodaten aus einem Erfassungs Endpunkt Puffer.
+Die Audio-Engine ist die [Audiokomponente im Benutzermodus,](user-mode-audio-components.md) über die Anwendungen den Zugriff auf ein Audioendpunktgerät gemeinsam nutzen. Die Audio-Engine transportiert Audiodaten zwischen einem Endpunktpuffer und einem Endpunktgerät. Um einen Audiodatenstrom über ein Renderingendpunktgerät wieder geben zu können, schreibt eine Anwendung in regelmäßigen Abständen Audiodaten in einen Renderingendpunktpuffer. Die Audio-Engine mischen die Datenströme aus den verschiedenen Anwendungen. Um einen Audiodatenstrom von einem Aufzeichnungsendpunktgerät aufzeichnen zu können, liest eine Anwendung regelmäßig Audiodaten aus einem Aufzeichnungsendpunktpuffer.
 
-WASAPI besteht aus mehreren Schnittstellen. Der erste ist die [**iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) -Schnittstelle. Für den Zugriff auf die WASAPI-Schnittstellen Ruft ein Client zuerst einen Verweis auf die **iaudioclient** -Schnittstelle eines audioendpunktgeräts ab, indem er die Methode " [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) " mit dem Parameter " *IID* " auf **REFIID** IID \_ iaudioclient ansetzt. Der Client ruft die [**iaudioclient:: Initialisieren**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) -Methode auf, um einen Stream auf einem Endpunkt Gerät zu initialisieren. Nachdem ein Stream initialisiert wurde, kann der Client Verweise auf die anderen WASAPI-Schnittstellen abrufen, indem er die [**iaudioclient:: GetService**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) -Methode aufrufen.
+WASAPI besteht aus mehreren Schnittstellen. Die erste davon ist die [**IAudioClient-Schnittstelle.**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient) Für den Zugriff auf die WASAPI-Schnittstellen ruft ein Client zunächst einen Verweis auf die **IAudioClient-Schnittstelle** eines Audioendpunktgeräts ab, indem er die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) aufruft, deren *Parameter iid* auf **REFIID** IID \_ IAudioClient festgelegt ist. Der Client ruft die [**IAudioClient::Initialize-Methode auf,**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-initialize) um einen Stream auf einem Endpunktgerät zu initialisieren. Nach der Initialisierung eines Streams kann der Client Verweise auf die anderen WASAPI-Schnittstellen abrufen, indem er die [**IAudioClient::GetService-Methode**](/windows/desktop/api/Audioclient/nf-audioclient-iaudioclient-getservice) aufruft.
 
-Viele der Methoden in der WASAPI geben Fehlercode "audclnt \_ E \_ Device" ungültig aus \_ , wenn das audioendpunktgerät, das von einer Client Anwendung verwendet wird, ungültig wird. Häufig kann die Anwendung nach diesem Fehler wieder hergestellt werden. Weitere Informationen finden Sie unter wieder [herstellen nach einem Invalid-Device Fehler](recovering-from-an-invalid-device-error.md).
+Viele der Methoden in WASAPI geben den Fehlercode AUDCLNT E DEVICE INVALIDATED zurück, wenn das Audioendpunktgerät, das von einer Clientanwendung \_ \_ verwendet \_ wird, ungültig wird. Häufig kann die Anwendung nach diesem Fehler wiederhergestellt werden. Weitere Informationen finden Sie unter [Recovering from an Invalid-Device Error](recovering-from-an-invalid-device-error.md).
 
 WASAPI implementiert die folgenden Schnittstellen.
 
@@ -31,27 +31,27 @@ WASAPI implementiert die folgenden Schnittstellen.
 
 | Schnittstelle                                            | BESCHREIBUNG                                                                                                                                                     |
 |------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iaudiocaptureclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient)   | Ermöglicht einem Client das Lesen von Eingabedaten aus einem Erfassungs Endpunkt Puffer.                                                                                             |
-| [**Iaudioclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient)                 | Ermöglicht es einem Client, einen Audiostream zwischen einer Audioanwendung und der Audioengine oder dem Hardware Puffer eines audioendpunktgeräts zu erstellen und zu initialisieren. |
-| [**Iaudioclock**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclock)                   | Ermöglicht einem Client, die Datenrate eines Streams und die aktuelle Position im Stream zu überwachen.                                                                        |
-| [**Iaudiorenderclient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiorenderclient)     | Ermöglicht einem Client das Schreiben von Ausgabedaten in einen Rendering-Endpunkt Puffer.                                                                                           |
-| [**Iaudiosessioncontrol**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) | Ermöglicht einem Client, die Steuerelement Parameter für eine Audiositzung zu konfigurieren und Ereignisse in der Sitzung zu überwachen.                                                 |
-| [**Iaudiosessionmanager**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) | Ermöglicht einem Client den Zugriff auf die Sitzungs Steuerelemente und volumesteuerelemente für prozessübergreifende und prozessspezifische audiositzungen.                                 |
-| [**Iaudiostreamvolume**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiostreamvolume)     | Ermöglicht einem Client, die volumeebenen für alle Kanäle in einem Audiostream zu steuern und zu überwachen.                                                           |
-| [**Ichannelaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume)   | Ermöglicht einem Client das Steuern der volumeebenen für alle Kanäle in der Audiositzung, zu der der Stream gehört.                                          |
-| [**Isimpleaudiovolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume)     | Ermöglicht einem Client, die Master Volume-Ebene einer Audiositzung zu steuern.                                                                                        |
+| [**IAudioCaptureClient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiocaptureclient)   | Ermöglicht einem Client das Lesen von Eingabedaten aus einem Erfassungsendpunktpuffer.                                                                                             |
+| [**IAudioClient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclient)                 | Ermöglicht einem Client das Erstellen und Initialisieren eines Audiostreams zwischen einer Audioanwendung und der Audio-Engine oder dem Hardwarepuffer eines Audioendpunktgeräts. |
+| [**IAudioClock**](/windows/desktop/api/Audioclient/nn-audioclient-iaudioclock)                   | Ermöglicht es einem Client, die Datenrate eines Streams und die aktuelle Position im Stream zu überwachen.                                                                        |
+| [**IAudioRenderClient**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiorenderclient)     | Ermöglicht einem Client das Schreiben von Ausgabedaten in einen Renderingendpunktpuffer.                                                                                           |
+| [**IAudioSessionControl**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessioncontrol) | Ermöglicht einem Client, die Steuerungsparameter für eine Audiositzung zu konfigurieren und Ereignisse in der Sitzung zu überwachen.                                                 |
+| [**IAudioSessionManager**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionmanager) | Ermöglicht einem Client den Zugriff auf die Sitzungssteuerelemente und Volumesteuerelemente für prozessübergreifende und prozessspezifische Audiositzungen.                                 |
+| [**IAudioStreamVolume**](/windows/desktop/api/Audioclient/nn-audioclient-iaudiostreamvolume)     | Ermöglicht es einem Client, die Lautstärkeebenen für alle Kanäle in einem Audiostream zu steuern und zu überwachen.                                                           |
+| [**IChannelAudioVolume**](/windows/desktop/api/Audioclient/nn-audioclient-ichannelaudiovolume)   | Ermöglicht es einem Client, die Lautstärkeebenen für alle Kanäle in der Audiositzung zu steuern, zu der der Stream gehört.                                          |
+| [**ISimpleAudioVolume**](/windows/desktop/api/Audioclient/nn-audioclient-isimpleaudiovolume)     | Ermöglicht es einem Client, die Master-Volumeebene einer Audiositzung zu steuern.                                                                                        |
 
 
 
  
 
-Bei WASAPI-Clients, die Benachrichtigungen zu Sitzungs bezogenen Ereignissen erfordern, sollte die folgende Schnittstelle implementiert werden.
+WASAPI-Clients, die eine Benachrichtigung über sitzungsbezogene Ereignisse erfordern, sollten die folgende Schnittstelle implementieren.
 
 
 
 | Schnittstelle                                          | BESCHREIBUNG                                                                                                            |
 |----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**Iaudiosessionevents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) | Bietet Benachrichtigungen zu Sitzungs bezogenen Ereignissen, wie z. b. Änderungen der Volumeebene, des anzeigen Amens und des Sitzungs Zustands. |
+| [**IAudioSessionEvents**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) | Stellt Benachrichtigungen zu sitzungsbezogenen Ereignissen wie Änderungen auf Volumeebene, Anzeigename und Sitzungszustand zur Verfügung. |
 
 
 
@@ -61,7 +61,7 @@ Bei WASAPI-Clients, die Benachrichtigungen zu Sitzungs bezogenen Ereignissen erf
 
 <dl> <dt>
 
-[Datenstrom Verwaltung](stream-management.md)
+[Streamverwaltung](stream-management.md)
 </dt> <dt>
 
 [**Programmierverzeichnis**](programming-reference.md)

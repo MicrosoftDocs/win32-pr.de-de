@@ -1,11 +1,11 @@
 ---
-title: Emailaction. Server-Eigenschaft
-description: Bei der Skripterstellung wird der Name des SMTP-Servers abgerufen oder festgelegt, den Sie zum Senden von e-Mail verwenden.
+title: EmailAction.Server(Eigenschaft)
+description: Für die Skripterstellung ruft den Namen des SMTP-Servers ab, über den Sie E-Mails senden, oder legt diesen fest.
 ms.assetid: a6e03144-ae3e-4c4c-aad8-884be5ab324f
 keywords:
-- Taskplaner der Server Eigenschaft
-- Server Eigenschaft Taskplaner, emailaction-Objekt
-- Emailaction-Objekt Taskplaner, Server Eigenschaft
+- Servereigenschafts-Taskplaner
+- Servereigenschaft Taskplaner , EmailAction-Objekt
+- EmailAction-Taskplaner , Servereigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fefcc5e33727d6b4ad0bcd60e48432c68422105
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3348b067698cfdcf3c7dbb95a97b6dd23f0f0cb7ca9225d70a9bb3d4ce2a93b4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100260"
 ---
-# <a name="emailactionserver-property"></a>Emailaction. Server-Eigenschaft
+# <a name="emailactionserver-property"></a>EmailAction.Server(Eigenschaft)
 
-\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie "IExecAction" mit dem PowerShell-Cmdlet " [**Send-Mail Message**](/powershell/module/microsoft.powershell.utility/send-mailmessage) " als Problem Umgehung.\]
+\[Dieses Objekt wird nicht mehr unterstützt. Verwenden Sie IExecAction mit dem [**PowerShell-Cmdlet Send-MailMessage**](/powershell/module/microsoft.powershell.utility/send-mailmessage) als Problemumgehung.\]
 
-Bei der Skripterstellung wird der Name des SMTP-Servers abgerufen oder festgelegt, den Sie zum Senden von e-Mail verwenden.
+Für die Skripterstellung ruft den Namen des SMTP-Servers ab, über den Sie E-Mails senden, oder legt diesen fest.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -42,11 +42,11 @@ EmailAction.Server As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name des Servers, der zum Senden von e-Mails verwendet wird.
+Der Name des Servers, von dem Sie E-Mails senden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Stellen Sie sicher, dass der SMTP-Server, der die e-Mail sendet, korrekt eingerichtet ist. E-Mail wird mithilfe der NTLM-Authentifizierung für Windows-SMTP-Server gesendet. Dies bedeutet, dass die zum Ausführen der Aufgabe verwendeten Sicherheits Anmelde Informationen auch über Berechtigungen auf dem SMTP-Server verfügen müssen, um eine e-Mail zu senden. Wenn es sich beim SMTP-Server um einen nicht auf Windows basierenden Server handelt, wird die e-Mail gesendet, wenn der Server den anonymen Zugriff zulässt. Weitere Informationen zum Einrichten des SMTP-Servers finden Sie unter [SMTP-Server Setup](https://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/e4cf06f5-9a36-474b-ba78-3f287a2b88f2.mspx?mfr=true). Weitere Informationen zum Verwalten von SMTP-Servereinstellungen finden Sie unter [SMTP-Verwaltung](/previous-versions/windows/it-pro/windows-server-2003/cc758258(v=ws.10)).
+Stellen Sie sicher, dass der SMTP-Server, der die E-Mail sendet, ordnungsgemäß eingerichtet ist. E-Mail wird mithilfe der NTLM-Authentifizierung für Windows SMTP-Server gesendet. Dies bedeutet, dass die Sicherheitsanmeldeinformationen, die zum Ausführen der Aufgabe verwendet werden, auch über Berechtigungen auf dem SMTP-Server verfügen müssen, um E-Mails zu senden. Wenn der SMTP-Server ein nicht Windows serverbasierter Server ist, wird die E-Mail gesendet, wenn der Server anonymen Zugriff zulässt. Informationen zum Einrichten des SMTP-Servers finden Sie unter [SMTP-Servereinrichtung.](https://www.microsoft.com/technet/prodtechnol/WindowsServer2003/Library/IIS/e4cf06f5-9a36-474b-ba78-3f287a2b88f2.mspx?mfr=true)Informationen zum Verwalten von SMTP-Servereinstellungen finden Sie unter [SMTP-Verwaltung](/previous-versions/windows/it-pro/windows-server-2003/cc758258(v=ws.10)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,11 +54,11 @@ Stellen Sie sicher, dass der SMTP-Server, der die e-Mail sendet, korrekt eingeri
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                    |
 | Ende des Supports (Server)<br/>    | Windows Server 2008 R2<br/>                                                       |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -67,7 +67,7 @@ Stellen Sie sicher, dass der SMTP-Server, der die e-Mail sendet, korrekt eingeri
 
 <dl> <dt>
 
-[**Emailaction**](emailaction.md)
+[**EmailAction**](emailaction.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

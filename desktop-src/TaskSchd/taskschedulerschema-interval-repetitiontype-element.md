@@ -1,9 +1,9 @@
 ---
-title: Interval (repetitionType)-Element
-description: Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an.
+title: Interval -Element (wiederholungstyp)
+description: Gibt die Zeit zwischen jedem Neustart der Aufgabe an.
 ms.assetid: 28c6475a-88e3-44ac-92c7-6f463e8460c9
 keywords:
-- Interval-Element Taskplaner
+- Interval-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bfb87884438f1a39a5bd6f08eb9bb855311eb5d3
-ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
+ms.openlocfilehash: ec6f2724f4374ed94fff47e6577a2887ca953cae0af66de9c64971cd80aa2050
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "107734195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100000"
 ---
-# <a name="interval-repetitiontype-element"></a>Interval (repetitionType)-Element
+# <a name="interval-repetitiontype-element"></a>Interval -Element (wiederholungstyp)
 
-Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an. Das Format für diese Zeichenfolge lautet `P<days>DT<hours>H<minutes>M<seconds>S` (z. B. "PT5M" ist 5 Minuten, "PT1H" ist 1 Stunde und "PT20M" ist 20 Minuten). Die maximal zulässige Zeit beträgt 31 Tage, und die zulässige Mindestzeit beträgt 1 Minute.
+Gibt die Zeit zwischen jedem Neustart der Aufgabe an. Das Format für diese Zeichenfolge ist (z. B. `P<days>DT<hours>H<minutes>M<seconds>S` ist "PT5M" 5 Minuten, "PT1H" ist 1 Stunde und "PT20M" beträgt 20 Minuten). Die maximal zulässige Zeit beträgt 31 Tage, und die zulässige Mindestzeit beträgt 1 Minute.
 
 ``` syntax
 <xs:element name="Interval">
@@ -41,7 +41,7 @@ Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an. Das Format für dies
 </xs:element>
 ```
 
-Das Element wird durch den komplexen [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) definiert.
+Das Element wird durch den komplexen [**Wiederholungstyp "repetitionType"**](taskschedulerschema-repetitiontype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -53,7 +53,7 @@ Das Element wird durch den komplexen [**Wiederholungstyp**](taskschedulerschema-
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Für die Skriptentwicklung wird das Intervall des Wiederholungsmusters mithilfe der [**RepetitionPattern.Interval-Eigenschaft**](repetitionpattern-interval.md) angegeben.
 
@@ -61,7 +61,7 @@ Für die C++-Entwicklung wird das Intervall des Wiederholungsmusters mithilfe de
 
 ## <a name="examples"></a>Beispiele
 
-Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die ein Wiederholungsintervall verwendet, finden Sie unter Beispiel für [täglichen Trigger (XML).](daily-trigger-example--xml-.md)
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die ein Wiederholungsintervall verwendet, finden Sie unter Beispiel für tägliche [Trigger (XML).](daily-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,12 +69,12 @@ Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die ein Wiederh
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

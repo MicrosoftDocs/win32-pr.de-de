@@ -17,18 +17,18 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 0149557a49de5579ab54f7c6f3c6853f4b89ac09
-ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
+ms.openlocfilehash: 89900bf3ea6816bbb0a6fa307f4d17c08a4c3e5a
+ms.sourcegitcommit: 4e94fc75fad7b2a0f3c92a26f97e89924e59b7a9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "122629573"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "122786124"
 ---
 # <a name="span-idvspixengineipixerrorcallbackspanipixerrorcallback-interface"></a><span id="vspixengine.ipixerrorcallback"></span>IPixErrorCallback-Schnittstelle
 
 Rückruf von der Engine zur Behandlung von Fehlern.
 
-## <a name="members"></a>Member
+## <a name="members"></a>Members
 
 Die **IPixErrorCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IPixErrorCallback** verfügt auch über diese Typen von Membern:
 
@@ -38,11 +38,11 @@ Die **IPixErrorCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.*
 
 Die **IPixErrorCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixerrorcallback-errorlistcallback-dword-issue-arr-dword-issue-arr"><strong>ErrorListCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von Fehlern benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr><tr class="even"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixerrorcallback-messagescallback-dword-issue-arr"><strong>MessagesCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von Nachrichten benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/ipixerrorcallback-warninglistcallback"><strong>WarningListCallback</strong></a></td><td style="text-align: left;"><p>Ein Rückruf, der den Host von Warnungen benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th >Methode</th><th >BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipixerrorcallback-errorlistcallback-dword-issue-arr-dword-issue-arr"><strong>ErrorListCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Fehlern benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr><tr class="even"><td ><a href="/windows/desktop/direct3dtools/ipixerrorcallback-messagescallback-dword-issue-arr"><strong>MessagesCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Nachrichten benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr><tr class="odd"><td ><a href="/windows/desktop/direct3dtools/ipixerrorcallback-warninglistcallback"><strong>WarningListCallback</strong></a></td><td ><p>Ein Rückruf, der den Host von Warnungen benachrichtigt, die von der zugeordneten Anforderung zurückgegeben werden.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 <table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 

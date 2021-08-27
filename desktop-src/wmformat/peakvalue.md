@@ -1,9 +1,9 @@
 ---
-title: Peer Value
-description: Das peakvalue-Attribut enthält einen 16-Bit-Amplitude-Wert, der die maximale Volumeebene von Audioinhalten festlegt.
+title: PeakValue
+description: Das PeakValue-Attribut enthält einen 16-Bit-Amplitudenwert, der die Spitzenlautstärke von Audioinhalten ansteuert.
 ms.assetid: 885f6d4c-661a-4681-96b6-c1a282c8bf18
 keywords:
-- Windows Media-Format von "Peer Value"
+- PeakValue windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,30 +12,30 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 37ef933ec1b10555aa4c88a24261313abb261163
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 3e3089ac6d4b789d740f256a5c44c1911eb3501bc654c3b94d0006d405616572
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106341895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110260"
 ---
-# <a name="peakvalue"></a>Peer Value
+# <a name="peakvalue"></a>PeakValue
 
-Das **peakvalue** -Attribut enthält einen 16-Bit-Amplitude-Wert, der die maximale Volumeebene von Audioinhalten festlegt. Bei [**averagelevel**](averagelevel.md)wird dieses Attribut für die Normalisierung verwendet. Normalisierung ist der Prozess, bei dem die Wiedergabe Volume-Ebene von Audiodateien angepasst wird, sodass die laugsten Teile von Dateien, die auf derselben Ebene wiedergegeben werden, und das durchschnittliche Volume für die beiden identisch sind.
+Das **PeakValue-Attribut** enthält einen 16-Bit-Amplitudenwert, der die Spitzenlautstärke von Audioinhalten ansteuert. Mit [**AverageLevel**](averagelevel.md)wird dieses Attribut für die Normalisierung verwendet. Normalisierung ist der Prozess der Anpassung der Wiedergabelautstärke von Audiodateien, sodass die lautesten Teile der Dateien, die auf der gleichen Ebene wiedergegeben werden, und die durchschnittliche Lautstärke für jede identisch sind.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszpeer Value
+g \_ wszPeakValue
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ DWORD**
+**\_WMT-TYP \_ DWORD**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird durch das Writer-Objekt auf der Grundlage von Informationen aus dem Codec festgelegt. Nur mit einem der Windows Media Audio Codecs komprimierte Streams haben einen automatisch festgelegten Wert.
+Dieses Attribut wird vom Writer-Objekt basierend auf Denkinformationen des Codecs festgelegt. Nur Streams, die mit einem der Windows Media Audio-Codecs komprimiert sind, verfügen über einen automatisch festgelegten Wert.
 
-" **Peer Value** " ist nicht schreibgeschützt. Wenn die Datei jedoch vom Windows-Media Player abgespielt wird, sollten Sie diesen Wert nicht ändern. Der Windows-Media Player verwendet diese, um die Ebenen von Dateien in einer Wiedergabeliste zu normalisieren.
+**PeakValue** ist nicht schreibgeschützt. Wenn die Datei jedoch vom Windows Media Player wiedergegeben wird, sollten Sie diesen Wert nicht ändern. Die Windows Media Player verwendet diese zum Normalisieren der Ebenen von Dateien in einer Wiedergabeliste.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,9 +44,9 @@ Dieses Attribut wird durch das Writer-Objekt auf der Grundlage von Informationen
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4af131ca3a126cd6f1fd54160418bfbe70cc9cce
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 8527853bf88b073f3505f4b4170ff6165f7f9aa7
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119085"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477486"
 ---
 # <a name="switch-statement"></a>switch-Anweisung
 
@@ -43,51 +43,14 @@ Ein optionaler Parameter, der steuert, wie die Anweisung kompiliert wird. Wenn k
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>attribute</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Vereinfachen</td>
-<td>Kompilieren Sie die <strong></strong> -Anweisung als eine Reihe von if-Anweisungen, die jeweils das <strong>flatten-Attribut</strong> enthalten.</td>
-</tr>
-<tr class="even">
-<td>Verzweigung</td>
-<td>Kompilieren Sie die <strong></strong> -Anweisung als eine Reihe von if-Anweisungen, die jeweils das <strong>Branchattribut</strong> enthalten.
-<blockquote>
-[!Note]<br />
-Wenn Sie <a href="dx-graphics-hlsl-sm2.md">shader Model 2.x</a> oder <a href="dx-graphics-hlsl-sm3.md">Shader Model 3.0</a>verwenden, nutzen Sie bei jeder Verwendung dynamischer Verzweigung Ressourcen. Wenn Sie dynamische Verzweigung also übermäßig verwenden, wenn Sie diese Profile als Ziel verwenden, können Kompilierungsfehler auftreten.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="odd">
-<td>forcecase</td>
-<td>Erzwingen Sie eine Switch-Anweisung in der Hardware.
-<blockquote>
-[!Note]<br />
-Erfordert <a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">Hardware auf Featureebene</a> 10_0 oder höher.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>Aufruf</td>
-<td>Die Körper der einzelnen Fälle im Switch werden in Hardwareunterroutinen verschoben, und der Switch ist eine Reihe von Unterroutinenaufrufen.
-<blockquote>
-[!Note]<br />
-Erfordert <a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">Hardware auf Featureebene</a> 10_0 oder höher.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Attribut | BESCHREIBUNG | 
+|-----------|-------------|
+| Vereinfachen | Kompilieren Sie die -Anweisung als eine Reihe von if-Anweisungen, jeweils mit <strong>dem flatten-Attribut.</strong> <strong></strong> | 
+| Verzweigung | Kompilieren Sie die <strong></strong> -Anweisung als eine Reihe von if-Anweisungen, die jeweils das <strong>Branchattribut</strong> enthalten.<blockquote>[!Note]<br />Wenn Sie <a href="dx-graphics-hlsl-sm2.md">shader Model 2.x</a> oder <a href="dx-graphics-hlsl-sm3.md">Shader Model 3.0</a>verwenden, nutzen Sie bei jeder Verwendung dynamischer Verzweigung Ressourcen. Wenn Sie dynamische Verzweigung also übermäßig verwenden, wenn Sie diese Profile als Ziel verwenden, können Kompilierungsfehler auftreten.</blockquote><br /> | 
+| forcecase | Erzwingen Sie eine Switch-Anweisung in der Hardware.<blockquote>[!Note]<br />Erfordert <a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">Hardware auf Featureebene</a> 10_0 oder höher.</blockquote><br /> | 
+| Aufruf | Die Körper der einzelnen Fälle im Switch werden in Hardwareunterroutinen verschoben, und der Switch ist eine Reihe von Unterroutinenaufrufen.<blockquote>[!Note]<br />Erfordert <a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">Hardware auf Featureebene</a> 10_0 oder höher.</blockquote><br /> | 
+
 
 
 
@@ -109,7 +72,7 @@ Mindestens eine [-Anweisung.](dx-graphics-hlsl-statement-blocks.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 ```
@@ -175,7 +138,7 @@ Im Folgenden finden Sie Beispielverwendungen von ForceCase- und Aufrufflusssteue
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -185,11 +148,11 @@ Im Folgenden finden Sie Beispielverwendungen von ForceCase- und Aufrufflusssteue
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Flusssteuerung](dx-graphics-hlsl-flow-control.md)
+[Flow Steuerung](dx-graphics-hlsl-flow-control.md)
 </dt> </dl>
 
  

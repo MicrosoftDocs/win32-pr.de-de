@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f815e0bb1fc7e8e1cba277f68b7950af2b20395092b69b2c07ebb7ac51367da
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: a47d53de99d3c6f6144755934989ca3958d28a23
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117843789"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476780"
 ---
 # <a name="wmt_videoimage_transition_inset"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ INSET
 
@@ -31,52 +31,14 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Parameter</th>
-<th>Struktur-Member</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Breite</td>
-<td><strong>fEffectPara0</strong></td>
-<td>Breite des Einbruchs in Pixel.</td>
-</tr>
-<tr class="even">
-<td>Height</td>
-<td><strong>fEffectPara1</strong></td>
-<td>Höhe des Einbruchs in Pixel.</td>
-</tr>
-<tr class="odd">
-<td>Richtung</td>
-<td><strong>fEffectPara2</strong></td>
-<td>Ecke, aus der die Einmenge stammt. Legen Sie auf einen der folgenden Werte fest:<br/>
-<ul>
-<li>0 – Unten links</li>
-<li>1 – Unten rechts</li>
-<li>2 – Links oben</li>
-<li>3 – Oben rechts</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Aufbau</td>
-<td><strong>fEffectPara3</strong></td>
-<td>Legen Sie auf einen der folgenden Werte fest:
-<ul>
-<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li>
-<li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Parameter | Struktur-Member | Beschreibung | 
+|-----------|------------------|-------------|
+| Breite | <strong>fEffectPara0</strong> | Breite des Einbruchs in Pixel. | 
+| Höhe | <strong>fEffectPara1</strong> | Höhe des Einbruchs in Pixel. | 
+| Direction | <strong>fEffectPara2</strong> | Ecke, aus der die Einmenge stammt. Legen Sie auf einen der folgenden Werte fest:<br /><ul><li>0 – Unten links</li><li>1 – Unten rechts</li><li>2 – Links oben</li><li>3 – Oben rechts</li></ul> | 
+| Aufbau | <strong>fEffectPara3</strong> | Legen Sie auf einen der folgenden Werte fest:<ul><li>0 : Gibt die normale Komposition an, bei der das vorherige Bild der Hintergrund und das aktuelle Bild der Vordergrund ist.</li><li>1 : Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li></ul> | 
+
 
 
 
@@ -92,7 +54,7 @@ In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter b
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

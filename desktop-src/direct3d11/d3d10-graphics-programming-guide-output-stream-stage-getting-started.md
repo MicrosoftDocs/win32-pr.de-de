@@ -4,12 +4,12 @@ description: In diesem Abschnitt wird beschrieben, wie Sie einen Geometrie-Shade
 ms.assetid: 37146486-5922-4833-850c-cc4a51de0957
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae2e72d25177926c948f43996b6c57d42a7c557b
-ms.sourcegitcommit: 749dea42142dec076d41a8f26cb57ae8db46e848
+ms.openlocfilehash: 5f00b469b28601322358f348de98354f15263483
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "112587877"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621876"
 ---
 # <a name="getting-started-with-the-stream-output-stage"></a>Erste Schritte mit der Stream-Output Stage
 
@@ -99,8 +99,8 @@ Beachten Sie unter Berücksichtigung dieses Codes, dass ein Geometrie-Shader äh
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -111,10 +111,10 @@ Beachten Sie unter Berücksichtigung dieses Codes, dass ein Geometrie-Shader äh
 <tbody>
 <tr class="odd">
 <td><span id="Function_return_type"></span><span id="function_return_type"></span><span id="FUNCTION_RETURN_TYPE"></span>Funktions-Rückgabetyp<br/></td>
-<td>Der Rückgabetyp der Funktion führt eine Aufgabe aus und deklariert die maximale Anzahl von Scheitelzeichen, die vom Shader ausgegeben werden können. In diesem Fall <span data-codelanguage=""></span>
+<td>Der Funktions-Rückgabetyp führt eine Aufgabe aus und deklariert die maximale Anzahl von Scheitelzeichen, die vom Shader ausgegeben werden können. In diesem Fall <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -132,7 +132,7 @@ definiert die Ausgabe als maximal 12 Scheiteltices.</td>
 <span data-codelanguage=""></span>
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -142,8 +142,8 @@ definiert die Ausgabe als maximal 12 Scheiteltices.</td>
 </table>
 
 </div>
-<p>Der erste Parameter ist ein Array von Scheitelpunkt (in diesem Fall 3), das durch eine GSPS_INPUT-Struktur definiert wird (die Pro-Scheitelpunkt-Daten als Position, normal und Texturkoordinate definiert). Der erste Parameter verwendet auch das Schlüsselwort triangle. Das bedeutet, dass die Stufe des Eingabe-Assemblers Daten an den Geometrie-Shader als einen der primitiven Dreieckstypen (Dreiecksliste oder Dreiecksstreifen) ausgibt.</p>
-<p>Der zweite Parameter ist ein Dreiecksstream, der durch den Typ TriangleStream &lt; &gt; GSPS_INPUTT. Dies bedeutet, dass der -Parameter ein Array von Dreiecken ist, von denen jedes aus drei Scheitelstellen besteht (die die Daten aus den Membern der GSPS_INPUT).</p>
+<p>Der erste Parameter ist ein Array von Scheitelpunkt (in diesem Fall 3), das durch eine GSPS_INPUT-Struktur definiert wird (die Pro-Scheitelpunkt-Daten als Position, normal und Texturkoordinate definiert). Der erste Parameter verwendet auch das Schlüsselwort triangle. Dies bedeutet, dass die Stufe des Eingabe-Assemblers Daten an den Geometrie-Shader als einen der primitiven Dreieckstypen (Dreiecksliste oder Dreiecksstreifen) ausgibt.</p>
+<p>Der zweite Parameter ist ein Dreiecksstream, der durch den Typ TriangleStream &lt; &gt; GSPS_INPUTT. Dies bedeutet, dass der -Parameter ein Array von Dreiecken ist, von denen jedes aus drei Scheiteltices besteht (die die Daten aus den Membern der GSPS_INPUT).</p>
 <p>Verwenden Sie die Schlüsselwörter triangle und trianglestream, um einzelne Dreiecke oder einen Stream von Dreiecken in einem GS zu identifizieren.</p></td>
 </tr>
 <tr class="odd">
@@ -175,7 +175,7 @@ D3DCompile( pSrcData, sizeof( pSrcData ),
 
 Genau wie Vertex- und Pixel-Shader benötigen Sie ein Shaderflag, um dem Compiler mitteilen zu können, wie der Shader kompiliert werden soll (für das Debuggen, für geschwindigkeitsoptimiert und so weiter), für die Einstiegspunktfunktion und für das Shadermodell, anhand derer überprüft werden soll. In diesem Beispiel wird mithilfe der GS-Funktion ein Geometrie-Shader erstellt, der aus der Datei Tutorial13.fx erstellt wurde. Der Shader wird für Shadermodell 4.0 kompiliert.
 
-## <a name="create-a-geometry-shader-object-with-stream-output"></a>Erstellen eines Geometry-Shader Objekts mit Streamausgabe
+## <a name="create-a-geometry-shader-object-with-stream-output"></a>Erstellen eines Geometry-Shader objekts mit Streamausgabe
 
 Wenn Sie wissen, dass Sie die Daten aus der Geometrie streamen und den Shader erfolgreich kompiliert haben, besteht der nächste Schritt im Aufrufen von [**ID3D11Device::CreateGeometryShaderWithStreamOutput,**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-creategeometryshaderwithstreamoutput) um das Geometrieshaderobjekt zu erstellen.
 
@@ -199,8 +199,8 @@ D3D11Device->CreateGeometryShaderWithStreamOut( pShaderBytecode, ShaderBytecodes
 
 Diese Funktion verwendet mehrere Parameter, darunter:
 
--   Ein Zeiger auf den kompilierten Geometrie-Shader (oder vertex shader, wenn kein Geometrie-Shader vorhanden ist und Daten direkt aus dem Vertex-Shader gestreamt werden). Informationen zum Abrufen dieses Zeigers finden Sie unter [Getting a Pointer to a Compiled Shader](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-using-shaders-10).
--   Ein Zeiger auf ein Array von Deklarationen, die die Eingabedaten für die Streamausgabephase beschreiben. (Siehe [**D3D11 \_ SO DECLARATION \_ \_ ENTRY**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_so_declaration_entry).) Sie können bis zu 64 Deklarationen, eine für jeden unterschiedlichen Elementtyp, der aus der SO-Phase ausgegeben werden soll, liefern. Das Array von Deklarationseinträgen beschreibt das Datenlayout, unabhängig davon, ob nur ein einzelner oder mehrere Puffer für die Streamausgabe gebunden werden sollen.
+-   Ein Zeiger auf den kompilierten Geometrie-Shader (oder Vertex-Shader, wenn kein Geometrie-Shader vorhanden ist und Daten direkt aus dem Vertex-Shader gestreamt werden). Informationen zum Abrufen dieses Zeigers finden Sie unter [Getting a Pointer to a Compiled Shader](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-using-shaders-10).
+-   Ein Zeiger auf ein Array von Deklarationen, die die Eingabedaten für die Streamausgabephase beschreiben. (Siehe [**D3D11 \_ SO DECLARATION \_ \_ ENTRY**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_so_declaration_entry).) Sie können bis zu 64 Deklarationen( eine für jeden unterschiedlichen Elementtyp) zur Ausgabe aus der SO-Phase liefern. Das Array von Deklarationseinträgen beschreibt das Datenlayout, unabhängig davon, ob nur ein einzelner oder mehrere Puffer für die Streamausgabe gebunden werden sollen.
 -   Die Anzahl der Elemente, die von der SO-Phase geschrieben werden.
 -   Ein Zeiger auf das erstellte Geometrieshaderobjekt (siehe [**ID3D11GeometryShader**](/windows/win32/api/d3d11/nn-d3d11-id3d11geometryshader)).
 
@@ -233,7 +233,7 @@ D3D11Device->CreateBuffer( &bufferDesc, NULL, &m_pBuffer );
 
 
 
-Erstellen Sie einen Puffer, indem Sie [**ID3D11Device::CreateBuffer aufrufen.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) In diesem Beispiel wird die Standardverwendung veranschaulicht. Dies ist typisch für eine Pufferressource, die voraussichtlich relativ häufig von der CPU aktualisiert wird. Das Bindungsflag identifiziert die Pipelinephase, an die die Ressource gebunden werden kann. Jede ressource, die von der SO-Phase verwendet wird, muss auch mit dem Bindungsflag D3D10 \_ BIND STREAM OUTPUT erstellt \_ \_ werden.
+Erstellen Sie einen Puffer, indem Sie [**ID3D11Device::CreateBuffer aufrufen.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) Dieses Beispiel veranschaulicht die Standardverwendung, die typisch für eine Pufferressource ist, die von der CPU relativ häufig aktualisiert wird. Das Bindungsflag identifiziert die Pipelinephase, an die die Ressource gebunden werden kann. Jede ressource, die von der SO-Phase verwendet wird, muss auch mit dem Bindungsflag D3D10 \_ BIND STREAM OUTPUT erstellt \_ \_ werden.
 
 Nachdem der Puffer erfolgreich erstellt wurde, legen Sie ihn auf das aktuelle Gerät fest, indem Sie [**ID3D11DeviceContext::SOSetTargets aufrufen:**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-sosettargets)
 

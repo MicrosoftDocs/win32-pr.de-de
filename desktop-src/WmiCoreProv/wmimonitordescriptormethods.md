@@ -1,7 +1,7 @@
 ---
-description: Enthält Methoden, die den unformatierten Inhalt der Videoeingabe Definition von (VESA) erweiterten erweiterten Display Identification Data (E-EDID) v. 1. x-Standard-128-Byte-Datenblöcken abrufen.
+description: Enthält Methoden, die den Rohinhalt der Videoeingabedefinition von 128-Byte-Standarddatenblöcken der Video Electronics Standard Association (VESA) Enhanced Extended Display Identification Data (E-EDID) v.1.x abrufen.
 ms.assetid: c13d4ddd-d171-44d5-9e70-3a6f89ad55da
-title: Wmimonitordescriptormethods-Klasse
+title: WmiMonitorDescriptorMethods-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - WmiProv.dll
-ms.openlocfilehash: 578c08c48ada4859b69e00655c5eea8c075515fa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7e8fe02540cd68047e3e74c052a8ea833a67d829228979da31bb12e13e84d9f8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120960"
 ---
-# <a name="wmimonitordescriptormethods-class"></a>Wmimonitordescriptormethods-Klasse
+# <a name="wmimonitordescriptormethods-class"></a>WmiMonitorDescriptorMethods-Klasse
 
-Die **wmimonitordescriptormethods** -WMI-Klasse enthält Methoden, die den unformatierten Inhalt der Videoeingabe Definition von (VESA) erweiterten erweiterten Display Identification Data (E-EDID) v. 1. x-Standard-128-Byte-Datenblöcken abrufen.
+Die WMI-Klasse **WmiMonitorDescriptorMethods** enthält Methoden, die den Rohdateninhalt der 128-Byte-Standarddatenblöcke der Video Electronics Standard Association (VESA) Enhanced Extended Display Identification Data (E-EDID) v.1.x abrufen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +38,20 @@ class WmiMonitorDescriptorMethods : MSMonitorClass
 
 ## <a name="members"></a>Member
 
-Die **wmimonitordescriptormethods** -Klasse verfügt über diese Typen von Membern:
+Die **WmiMonitorDescriptorMethods-Klasse** verfügt über folgende Membertypen:
 
 -   [Methoden](#wmimonitordescriptormethods-class)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **wmimonitordescriptormethods** -Klasse verfügt über diese Methoden.
+Die **WmiMonitorDescriptorMethods-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                           | BESCHREIBUNG                                                                   |
+| Methode                                                                                           | Beschreibung                                                                   |
 |:-------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**WmiGetMonitorRawEEdidV1Block**](wmigetmonitorraweedidv1block-wmimonitordescriptormethods.md) | Greift auf die Rohdaten für einen angegebenen EDID v. 1. x-deskriptorblock zu.<br/> |
+| [**WmiGetMonitorRawEEdidV1Block**](wmigetmonitorraweedidv1block-wmimonitordescriptormethods.md) | Greift auf die Rohdaten für einen angegebenen EDID v.1.x-Deskriptorblock zu.<br/> |
 
 
 
@@ -59,14 +59,14 @@ Die **wmimonitordescriptormethods** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **wmimonitordescriptormethods** -Klasse verfügt über diese Eigenschaften.
+Die **WmiMonitorDescriptorMethods-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -79,7 +79,7 @@ Gibt den aktiven Monitor an.
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -88,7 +88,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Der Name der spezifischen Monitor Instanz.
+Name der spezifischen Überwachungsinstanz.
 
 </dd> </dl>
 
@@ -100,8 +100,8 @@ Der Name der spezifischen Monitor Instanz.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>WmiCore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WmiProv.dll</dt> </dl> |
 
 

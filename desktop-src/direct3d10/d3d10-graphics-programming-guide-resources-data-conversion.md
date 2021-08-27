@@ -1,188 +1,188 @@
 ---
 description: In den folgenden Abschnitten wird beschrieben, wie Direct3D Konvertierungen zwischen Datentypen behandelt.
 ms.assetid: 454d3fd0-fc0f-46a9-925e-13f8e3c39f02
-title: Regeln für die Datenkonvertierung
+title: Datenkonvertierungsregeln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61abdc58811af9155c67d7b32bcd47e9d4b71ea5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 52b5ba37305fb7cadc229a614b883519cf6c5f45
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748265"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626296"
 ---
-# <a name="data-conversion-rules"></a>Regeln für die Datenkonvertierung
+# <a name="data-conversion-rules"></a>Datenkonvertierungsregeln
 
 In den folgenden Abschnitten wird beschrieben, wie Direct3D Konvertierungen zwischen Datentypen behandelt.
 
--   [Datentyp Terminologie](#data-type-terminology)
--   [Gleit Komma Konvertierung](#floating-point-conversion)
-    -   [Konverting von einer höheren Bereichs Darstellung zu einer unteren Bereichs Darstellung](#conververting-from-a-higher-range-representation-to-a-lower-range-representation)
-    -   [Wandeln von einer unteren Bereichs Darstellung in eine Darstellung mit höherem Bereich](#converting-from-a-lower-range-representation-to-a-higher-range-representation)
--   [Ganzzahlige Konvertierung](#integer-conversion)
--   [Konvertierung fester ganzzahliger Zeichen](#fixed-point-integer-conversion)
+-   [Datentypterminologie](#data-type-terminology)
+-   [Gleitkommakonvertierung](#floating-point-conversion)
+    -   [Konververtierung von einer Darstellung eines höheren Bereichs zu einer Darstellung im unteren Bereich](#conververting-from-a-higher-range-representation-to-a-lower-range-representation)
+    -   [Konvertieren von einer Darstellung im unteren Bereich in eine höhere Bereichsdarstellung](#converting-from-a-lower-range-representation-to-a-higher-range-representation)
+-   [Ganzzahlkonvertierung](#integer-conversion)
+-   [Ganzzahlige Konvertierung mit festem Punkt](#fixed-point-integer-conversion)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="data-type-terminology"></a>Datentyp Terminologie
+## <a name="data-type-terminology"></a>Datentypterminologie
 
-Die folgenden Begriffe werden anschließend verwendet, um verschiedene Formatkonvertierungen zu bezeichnen.
+Anschließend werden die folgenden Begriffe verwendet, um verschiedene Formatkonvertierungen zu charakterisieren.
 
 
 
 | Begriff  | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |-------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Snorm | Signierte normalisierte Ganzzahl. Dies bedeutet, dass der Höchstwert für die Komplement Nummer eines n-Bit 2 1.0 f bedeutet (z. b. der 5-Bit-Wert 01111 ist 1.0 f), und der Minimalwert bedeutet-1.0 f (z. b. der 5-Bit-Wert 10000 wird-1.0 f zugeordnet). Außerdem wird die zweite Mindestanzahl zu-1.0 f zugeordnet (z. b. wird der 5-Bit-Wert 10001 zu-1.0 f zugeordnet). Folglich gibt es zwei ganzzahlige Darstellungen für-1.0 f. Es gibt eine einzelne Darstellung für 0,0 f und eine einzelne Darstellung für 1.0 f. Dies führt zu einer Reihe von ganzzahligen Darstellungen für Gleit Komma Werte mit gleichmäßiger Abstand im Bereich (-1.0 f... 0,0 f) und auch ein komplementärer Satz von Darstellungen für Zahlen im Bereich (0,0 f... 1.0 f) |
-| UNORM | Nicht signierte normalisierte Ganzzahl, d. h. für eine n-Bit-Zahl bedeutet, dass alle 0-Werte 0,0 f sind, und all 1 bedeutet 1.0 f. Eine Sequenz der gleichmäßig im Abstand befindlichen Gleit Komma Werte zwischen 0,0 f und 1.0 f wird dargestellt. ein 2-Bit-unorm stellt beispielsweise 0,0 f, 1/3, 2/3 und 1.0 f dar.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| St  | Ganzzahl mit Vorzeichen. 2 Komplement Integer. Beispielsweise stellt ein 3-Bit-Sint die ganzzahligen Werte-4,-3,-2,-1, 0, 1, 2, 3 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| UINT  | Ganzzahl ohne Vorzeichen. Beispielsweise stellt ein 3-Bit-uint die ganzzahligen Werte 0, 1, 2, 3, 4, 5, 6, 7 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| GLEITKOMMAZAHL | Ein Gleit Komma Wert in einer der durch Direct3D definierten Darstellungen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| SRGB  | Ähnlich wie bei unorm bedeutet das, dass für eine n-Bit-Zahl 0,0 f bedeutet, und all 1 bedeutet 1.0 f. Im Unterschied zu unorm, mit sRGB, stellen die Sequenz nicht signierter ganzzahliger Codierungen zwischen allen Werten von 0 bis 1 einen nichtlinearen Fortschritt in der Gleit Komma Interpretation der Zahlen dar, zwischen 0,0 f und 1.0 f. Grob gesagt, wenn dieser nichtlineare Fortschritt (sRGB) als Sequenz von Farben angezeigt wird, würde er als eine lineare Bewegung der Helligkeitsstufen zu einem "durchschnittlichen" Beobachter in der Anzeige "Average" (durchschnittliche Anzeige) angezeigt werden. Ausführliche Informationen finden Sie in der sRGB-Farbstandard, IEC 61996-2-1, unter IEC (Internationale Elektrotechnische Kommission).                |
+| SNORM | Normalisierte ganze Zahl mit Vorzeichen, d.h. für die Komplementnummer eines n-Bit-2 bedeutet der Höchstwert 1,0f (z.B. wird der 5-Bit-Wert 01111 1,0f zugeordnet), und der Mindestwert bedeutet -1,0f (z.B. der 5-Bit-Wert 10000 entspricht -1,0f). Darüber hinaus wird die zweite Mindestzahl -1,0f zugeordnet (z.B. wird der 5-Bit-Wert 10001 -1,0f zugeordnet). Es gibt also zwei ganzzahlige Darstellungen für -1,0f. Es gibt eine einzelne Darstellung für 0,0f und eine einzelne Darstellung für 1.0f. Dies führt zu einer Reihe von ganzzahligen Darstellungen für gleitkommawerte mit gleichmäßiger Leerstelle im Bereich (-1,0f... 0,0f) und eine ergänzende Gruppe von Darstellungen für Zahlen im Bereich (0,0f... 1.0f) |
+| UNORM | Normalisierte ganze Zahl ohne Vorzeichen, was bedeutet, dass für eine n-Bit-Zahl alle 0-Werte 0,0f und alle 1-Werte 1,0f bedeuten. Eine Sequenz von gleitkommawerten mit geradem Abstand von 0,0f bis 1,0f wird dargestellt. Beispielsweise stellt eine 2-Bit-UNORM 0,0f, 1/3, 2/3 und 1,0f dar.                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| SINT  | Ganze Zahl mit Vorzeichen. Die Komplement-Ganzzahl von 2. Beispielsweise stellt ein 3-Bit-SINT die Ganzzahlwerte -4, -3, -2, -1, 0, 1, 2, 3 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| UINT  | Ganze Zahl ohne Vorzeichen. Beispielsweise stellt ein 3-Bit-UINT die Ganzzahlwerte 0, 1, 2, 3, 4, 5, 6, 7 dar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| GLEITKOMMAZAHL | Ein Gleitkommawert in einer der durch Direct3D definierten Darstellungen.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| SRGB  | Ähnlich wie bei UNORM bedeutet dies, dass für eine n-Bit-Zahl alle 0(e) 0,0f und alle 1 für 1,0f bedeuten. Im Gegensatz zu UNORM stellt die Sequenz von ganzzahligen Codierungen ohne Vorzeichen zwischen allen 1ern von 0 bis 1 jedoch einen nicht linearen Fortschritt in der Gleitkommainterpretation der Zahlen zwischen 0,0f und 1,0f dar. Wenn dieser nicht lineare Fortschritt (SRGB) in etwa als Sequenz von Farben angezeigt wird, wird er als lineare Rampe von Helligkeitsstufen für einen "durchschnittlichen" Beobachter unter "durchschnittlichen" Anzeigebedingungen auf einer "durchschnittlichen" Anzeige angezeigt. Ausführliche Informationen finden Sie im SRGB-Farbstandard IEC 61996-2-1 unter IEC (Internationale Elektrotechnische Kommission).                |
 
 
 
  
 
-## <a name="floating-point-conversion"></a>Gleit Komma Konvertierung
+## <a name="floating-point-conversion"></a>Gleitkommakonvertierung
 
-Jedes Mal, wenn eine Gleit Komma Konvertierung zwischen verschiedenen Darstellungen erfolgt, einschließlich zu oder aus nicht Gleit Komma Darstellungen, gelten die folgenden Regeln.
+Immer wenn eine Gleitkommakonvertierung zwischen verschiedenen Darstellungen auftritt, einschließlich in oder aus Nicht-Gleitkommadarstellungen, gelten die folgenden Regeln.
 
-### <a name="conververting-from-a-higher-range-representation-to-a-lower-range-representation"></a>Konverting von einer höheren Bereichs Darstellung zu einer unteren Bereichs Darstellung
+### <a name="conververting-from-a-higher-range-representation-to-a-lower-range-representation"></a>Konververtierung von einer Darstellung eines höheren Bereichs zu einer Darstellung im unteren Bereich
 
--   Round-to-Zero wird während der Konvertierung in ein anderes Float-Format verwendet. Wenn es sich bei dem Ziel um ein ganzzahliges oder festes Punkt Format handelt, wird "roundTo-Next-even" verwendet, es sei denn, die Konvertierung wird explizit als ein anderes Rundungs Verhalten dokumentiert, z. b. "roundTo-Next" für "float" in "snorm", "float" in "unorm Bei anderen Ausnahmen handelt es sich um die ftoi-und ftou-shaderanweisungen, in denen "roundTo NULL" verwendet wird. Zum Schluss haben die von Textur Sampler und Raster verwendeten Konvertierungen vom Datentyp "float-to-Fixed" eine angegebene Toleranz, die in Einheiten-Last-Place von einem unendlich präzisen ideal gemessen wird.
--   Für Quell Werte, die größer sind als der dynamische Bereich des Ziel Formats des unteren Bereichs (z. b. ein großer 32-Bit-Float-Wert wird in ein 16-Bit-Float-renderTarget geschrieben), die maximale darstellbare (entsprechend signierte) Wert Ergebnisse, nicht einschließlich der Bits mit Vorzeichen (aufgrund der oben beschriebenen Runden auf null).
--   NaN wird in einem höheren Bereichs Format in eine Nan-Darstellung im unteren Bereichs Format konvertiert, wenn die Nan-Darstellung im unteren Bereichs Format vorhanden ist. Wenn das untere Format keine Nan-Darstellung hat, ist das Ergebnis 0 (null).
--   Inf in einem höheren Bereichs Format wird im unteren Bereichs Format in INF konvertiert, falls verfügbar. Wenn das untere Format keine INF-Darstellung hat, wird es in den maximalen Wert konvertiert, der darstellbar ist. Das Vorzeichen bleibt erhalten, wenn es im Zielformat verfügbar ist.
--   Denorm in einem höheren Bereichs Format wird in die denorm-Darstellung im unteren Bereichs Format konvertiert, wenn es im unteren Bereichs Format verfügbar und die Konvertierung möglich ist, andernfalls ist das Ergebnis 0. Das Signier Bit wird beibehalten, wenn es im Zielformat verfügbar ist.
+-   Round-to-Zero wird während der Konvertierung in ein anderes float-Format verwendet. Wenn das Ziel ein Ganzzahl- oder Festkommaformat ist, wird "Round-to-Nearest-even" verwendet, es sei denn, die Konvertierung wird explizit mit einem anderen Rundungsverhalten dokumentiert, z. B. "Round-to-Nearest" für FLOAT in SNORM, FLOAT in UNORM oder FLOAT in SRGB. Andere Ausnahmen sind die Ftoi- und ftou-Shaderanweisungen, die Round-to-Zero verwenden. Schließlich verfügen die vom Textur sampler und rasterizer verwendeten Gleitkommakonvertierungen in feste Werte über eine angegebene Toleranz, die in Unit-Last-Place von einem unendlich präzisen Ideal aus gemessen wird.
+-   Für Quellwerte, die größer als der dynamische Bereich eines Zielformats mit niedrigerem Bereich sind (z. B. Ein großer 32-Bit-Gleitkommawert wird in ein 16-Bit-Float-RenderTarget geschrieben. Dabei handelt es sich um die maximal darstellbaren (entsprechend signierten) Wertergebnisse, DIE NICHT mit Vorzeichen unendlich sind (aufgrund der oben beschriebenen Rundung auf null).
+-   NaN in einem höheren Bereichsformat wird in eine NaN-Darstellung im unteren Bereichsformat konvertiert, wenn die NaN-Darstellung im unteren Bereichsformat vorhanden ist. Wenn das untere Format keine NaN-Darstellung hat, ist das Ergebnis 0.
+-   INF in einem höheren Bereichsformat wird im unteren Bereichsformat in INF konvertiert, falls verfügbar. Wenn das untere Format keine INF-Darstellung hat, wird es in den maximal darstellbaren Wert konvertiert. Das Vorzeichen wird beibehalten, wenn es im Zielformat verfügbar ist.
+-   Denorm in einem höheren Bereichsformat wird in die Denorm-Darstellung im unteren Bereichsformat konvertiert, sofern im unteren Bereichsformat verfügbar, und die Konvertierung ist möglich, andernfalls ist das Ergebnis 0. Das Vorzeichenbit wird beibehalten, wenn es im Zielformat verfügbar ist.
 
-### <a name="converting-from-a-lower-range-representation-to-a-higher-range-representation"></a>Wandeln von einer unteren Bereichs Darstellung in eine Darstellung mit höherem Bereich
+### <a name="converting-from-a-lower-range-representation-to-a-higher-range-representation"></a>Konvertieren von einer Darstellung im unteren Bereich in eine höhere Bereichsdarstellung
 
--   NaN wird in einem niedrigeren Bereichs Format in die Nan-Darstellung im höheren Bereichs Format konvertiert, wenn es im höheren Bereichs Format verfügbar ist. Wenn das höhere Bereichs Format keine Nan-Darstellung hat, wird es in 0 konvertiert.
--   Inf in einem niedrigeren Bereichs Format wird in die INF-Darstellung im Format mit höherem Format konvertiert, wenn es im höheren Bereichs Format verfügbar ist. Wenn das höhere Format keine INF-Darstellung hat, wird es in den maximalen Wert konvertiert ( \_ in diesem Format Max float). Das Vorzeichen bleibt erhalten, wenn es im Zielformat verfügbar ist.
--   Denorm in einem niedrigeren Bereichs Format wird, wenn möglich, in eine normalisierte Darstellung im Format mit höherem Bereich oder andernfalls in eine denorm-Darstellung im höheren Bereichs Format konvertiert, wenn die denorm-Darstellung vorhanden ist. Wenn das höhere Bereichs Format nicht über eine denorm-Darstellung verfügt, wird es in 0 konvertiert. Das Vorzeichen bleibt erhalten, wenn es im Zielformat verfügbar ist. Beachten Sie, dass 32-Bit-Gleit Komma Zahlen als Format ohne denorm-Darstellung gezählt werden (da denorms in Vorgängen auf 32-Bit-Gleit Komma Zahlen zum Signieren beibehalten werden).
+-   NaN in einem niedrigeren Bereichsformat wird in die NaN-Darstellung im höheren Bereichsformat konvertiert, sofern im höheren Bereichsformat verfügbar. Wenn das höhere Bereichsformat keine NaN-Darstellung hat, wird es in 0 konvertiert.
+-   INF in einem niedrigeren Bereichsformat wird in die INF-Darstellung im höheren Bereichsformat konvertiert, sofern im höheren Bereichsformat verfügbar. Wenn das höhere Format keine INF-Darstellung hat, wird es in den maximal darstellbaren Wert konvertiert (MAX \_ FLOAT in diesem Format). Das Vorzeichen wird beibehalten, wenn es im Zielformat verfügbar ist.
+-   Denorm in einem niedrigeren Bereichsformat wird nach Möglichkeit in eine normalisierte Darstellung im höheren Bereichsformat konvertiert, oder in eine Denorm-Darstellung im höheren Bereichsformat, wenn die Denorm-Darstellung vorhanden ist. Wenn das höhere Bereichsformat nicht über eine Denorm-Darstellung verfügt, wird es in 0 konvertiert. Das Vorzeichen wird beibehalten, wenn es im Zielformat verfügbar ist. Beachten Sie, dass 32-Bit-Gleitkommazahlen als Format ohne Denorm-Darstellung zählen (da Denorms in Vorgängen für 32-Bit-Gleitkommawerte leert, um das Vorzeichen beizubehalten 0).
 
-## <a name="integer-conversion"></a>Ganzzahlige Konvertierung
+## <a name="integer-conversion"></a>Ganzzahlkonvertierung
 
-In der folgenden Tabelle werden die Konvertierungen von verschiedenen Darstellungen beschrieben, die in anderen Darstellungen beschrieben werden. Nur Konvertierungen, die tatsächlich in Direct3D auftreten, werden angezeigt.
+In der folgenden Tabelle werden Konvertierungen von verschiedenen oben beschriebenen Darstellungen in andere Darstellungen beschrieben. Es werden nur Konvertierungen angezeigt, die tatsächlich in Direct3D auftreten.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Quell Datentyp</th>
-<th>Ziel Datentyp</th>
+<th>Quelldatentyp</th>
+<th>Zieldatentyp</th>
 <th>Konvertierungsregel</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Snorm</td>
+<td>SNORM</td>
 <td>GLEITKOMMAZAHL</td>
-<td>Bei einem n-Bit-ganzzahligen Wert, der den signierten Bereich [-1.0 f bis 1.0 f] darstellt, ist die Konvertierung in den Gleit Komma Wert wie folgt.<br/>
+<td>Bei einem n-Bit-Ganzzahlwert, der den Bereich mit Vorzeichen [-1,0f bis 1,0f] darstellt, erfolgt die Konvertierung in Gleitkomma wie folgt.<br/>
 <ul>
-<li>Der negativste Wert wird-1.0 f zugeordnet. Beispielsweise wird der 5-Bit-Wert 10000 zu-1.0 f zugeordnet.</li>
-<li>Jeder andere Wert wird in einen float-Wert konvertiert (c) und dann result = c * (1.0 f/(2 ⁽ ⁿ ⁻ ¹ ⁾-1)). Beispielsweise wird der 5-Bit-Wert 10001 in-15,0 f konvertiert und dann durch 15,0 f dividiert, was "-1.0 f" ergibt.</li>
+<li>Der negativste Wert wird -1,0f zugeordnet. Beispielsweise wird der 5-Bit-Wert 10000 -1,0f zugeordnet.</li>
+<li>Jeder andere Wert wird in einen float-Wert konvertiert (nennen Sie ihn c), und dann result = c * (1,0f / (2⁽ⁿ⁻¹⁾-1)). Beispielsweise wird der 5-Bit-Wert 10001 in -15.0f konvertiert und dann durch 15,0f geteilt und ergibt -1,0f.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>GLEITKOMMAZAHL</td>
-<td>Snorm</td>
-<td>Bei einer Gleit Komma Zahl ist die Konvertierung in einen n-Bit-ganzzahligen Wert, der den signierten Bereich [-1.0 f bis 1.0 f] darstellt, wie folgt.<br/>
+<td>SNORM</td>
+<td>Bei einer Gleitkommazahl erfolgt die Konvertierung in einen ganzzahligen n-Bit-Wert, der den Bereich mit Vorzeichen [-1,0f bis 1,0f] darstellt, wie folgt.<br/>
 <ul>
-<li>C stellt den Startwert dar.</li>
-<li>Wenn c ein NaN-Wert ist, ist das Ergebnis 0.</li>
-<li>Wenn c > 1.0 f, einschließlich inf, wird es an 1.0 f gebunden.</li>
-<li>Wenn c <-1.0 f, einschließlich-inf, wird es an-1.0 f gebunden.</li>
-<li>Konvertieren von float-Skala in eine ganzzahlige Skala: c = c * (2 ⁿ ⁻ ¹-1).</li>
+<li>Lassen Sie c den Startwert darstellen.</li>
+<li>Wenn c naN ist, ist das Ergebnis 0.</li>
+<li>Wenn c > 1.0f, einschließlich INF, wird es an 1.0f klammern.</li>
+<li>Wenn c -1.0f <, einschließlich -INF, wird es an -1.0f klammern.</li>
+<li>Konvertieren von float scale in integer scale: c = c * (2ⁿ⁻¹-1).</li>
 <li>Konvertieren Sie wie folgt in eine ganze Zahl.
 <ul>
-<li>Wenn c >= 0, dann c = c + 0,5 f, andernfalls c = c-0,5 f.</li>
-<li>Löschen Sie den Dezimal Bruch, und der verbleibende Gleit Komma Wert (ganzzahliger Wert) wird direkt in eine ganze Zahl konvertiert.</li>
+<li>Wenn c >= 0 ist, dann c = c + 0,5f, andernfalls c = c - 0,5f.</li>
+<li>Löschen Sie den Dezimalbruch, und der verbleibende Gleitkommawert (ganzzahlig) wird direkt in eine ganze Zahl konvertiert.</li>
 </ul></li>
 </ul>
-Für diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_Unit-Last-Place-Einheit-Last-Place (auf der ganzzahligen Seite) zulässig. Dies bedeutet, dass nach der Umstellung von float in eine ganzzahlige Skala jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Ziel Formatwerts diesem Wert zugeordnet werden darf. Durch die zusätzliche Anforderung zur Daten Umkehrung wird sichergestellt, dass die Konvertierung im Bereich nicht abnimmt und alle Ausgabewerte erreichbar sind. (In den hier gezeigten Konstanten sollte <em>xx</em> durch die Direct3D-Version ersetzt werden, z. b. 10, 11 oder 12.)<br/></td>
+Diese Konvertierung lässt eine Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_Unit-Last-Place Unit-Last-Place (ganzzahlig) zu. Dies bedeutet, dass nach der Konvertierung von float in integer scale jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Zielformatwerts diesem Wert zugeordnet werden kann. Die zusätzliche Anforderung an die Datenumkehrbarkeit stellt sicher, dass die Konvertierung im gesamten Bereich nicht dekreasiert wird und alle Ausgabewerte erreichbar sind. (In den hier gezeigten Konstanten sollte <em>xx</em> durch die Direct3D-Version ersetzt werden, z.B. 10, 11 oder 12.)<br/></td>
 </tr>
 <tr class="odd">
 <td>UNORM</td>
 <td>GLEITKOMMAZAHL</td>
-<td>Der n-Bit-Start Wert wird in float (0,0 f, 1.0 f, 2.0 f usw.) konvertiert und dann dividiert durch (2 ⁿ-1).<br/></td>
+<td>Der n-Bit-Startwert wird in float (0,0f, 1,0f, 2,0f usw.) konvertiert und dann durch (2ⁿ-1) geteilt.<br/></td>
 </tr>
 <tr class="even">
 <td>GLEITKOMMAZAHL</td>
 <td>UNORM</td>
-<td>C stellt den Startwert dar.<br/>
+<td>Lassen Sie c den Startwert darstellen.<br/>
 <ul>
-<li>Wenn c ein NaN-Wert ist, ist das Ergebnis 0.</li>
-<li>Wenn c > 1.0 f, einschließlich inf, wird es an 1.0 f gebunden.</li>
-<li>Wenn c < 0,0 f, einschließlich-inf, wird es an 0,0 f gebunden.</li>
-<li>Konvertieren von float-Skala in ganzzahlige Skala: c = c * (2 ⁿ-1).</li>
-<li>In Integer konvertieren.
+<li>Wenn c naN ist, ist das Ergebnis 0.</li>
+<li>Wenn c > 1.0f, einschließlich INF, wird es an 1.0f klammern.</li>
+<li>Wenn c < 0.0f, einschließlich -INF, wird es an 0.0f klammern.</li>
+<li>Konvertieren von float scale in integer scale: c = c * (2ⁿ-1).</li>
+<li>Konvertieren sie in eine ganze Zahl.
 <ul>
-<li>c = c + 0,5 f.</li>
-<li>Der Dezimal Bruch wird gelöscht, und der verbleibende Gleit Komma Wert (ganzzahliger Wert) wird direkt in eine ganze Zahl konvertiert.</li>
+<li>c = c + 0,5f.</li>
+<li>Der Dezimalbruch wird gelöscht, und der verbleibende Gleitkommawert (ganzzahlig) wird direkt in eine ganze Zahl konvertiert.</li>
 </ul></li>
 </ul>
-Diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (auf der ganzzahligen Seite) zulässig. Dies bedeutet, dass nach der Umstellung von float in eine ganzzahlige Skala jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Ziel Formatwerts diesem Wert zugeordnet werden darf. Durch die zusätzliche Anforderung zur Daten Umkehrung wird sichergestellt, dass die Konvertierung im Bereich nicht abnimmt und alle Ausgabewerte erreichbar sind.<br/></td>
+Diese Konvertierung ist mit einer Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (ganzzahlig) zulässig. Dies bedeutet, dass nach der Konvertierung von float in integer scale jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Zielformatwerts diesem Wert zugeordnet werden kann. Die zusätzliche Anforderung an die Datenumkehrbarkeit stellt sicher, dass die Konvertierung im gesamten Bereich nicht dekreasiert wird und alle Ausgabewerte erreichbar sind.<br/></td>
 </tr>
 <tr class="odd">
 <td>SRGB</td>
 <td>GLEITKOMMAZAHL</td>
-<td>Im folgenden finden Sie die ideale sRGB to float-Konvertierung.<br/>
+<td>Im Folgenden finden Sie die ideale SRGB- in FLOAT-Konvertierung.<br/>
 <ul>
-<li>Nehmen Sie den ersten n-Bit-Wert, konvertieren Sie ihn in einen float-Wert (0,0 f, 1.0 f, 2.0 f usw.); nennen Sie diese c.</li>
-<li>c = c * (1.0 f/(2 ⁿ-1))</li>
-<li>If (c < = D3D<em>xx</em>_SRGB_TO_FLOAT_THRESHOLD), dann: result = c/D3D<em>xx</em>_SRGB_TO_FLOAT_DENOMINATOR_1, else: result = ((c + D3D<em>xx</em>_SRGB_TO_FLOAT_OFFSET)/D3D<em>xx</em>_SRGB_TO_FLOAT_DENOMINATOR_2) D3D<em>xx</em>_SRGB_TO_FLOAT_EXPONENT</li>
+<li>Nehmen Sie den n-Bit-Startwert, und konvertieren Sie ihn in float (0,0f, 1,0f, 2,0f usw.). rufen Sie diese c auf.</li>
+<li>c = c * (1,0f / (2ⁿ-1))</li>
+<li>Wenn (c < = D3D<em>xx</em>_SRGB_TO_FLOAT_THRESHOLD), dann: result = c / D3D<em>xx</em>_SRGB_TO_FLOAT_DENOMINATOR_1, andernfalls: result = ((c + D3D<em>xx</em>_SRGB_TO_FLOAT_OFFSET)/D3D<em>xx</em>_SRGB_TO_FLOAT_DENOMINATOR_2)D3D<em>xx</em>_SRGB_TO_FLOAT_EXPONENT</li>
 </ul>
-Diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_SRGB_TO_FLOAT_TOLERANCE_IN_ULP Unit-Last-Place (auf der sRGB-Seite) zulässig. <br/></td>
+Für diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_SRGB_TO_FLOAT_TOLERANCE_IN_ULP Unit-Last-Place (auf srgb-Seite) zulässig. <br/></td>
 </tr>
 <tr class="even">
 <td>GLEITKOMMAZAHL</td>
 <td>SRGB</td>
-<td>Im folgenden finden Sie die ideale Konvertierung von float-> sRGB.<br/> Angenommen, die Ziel-sRGB-Farbkomponente hat n Bits:<br/>
+<td>Im Folgenden finden Sie die ideale FLOAT -> SRGB-Konvertierung.<br/> Angenommen, die SRGB-Zielfarbkomponente verfügt über n Bits:<br/>
 <ul>
-<li>Angenommen, der Startwert ist c.</li>
-<li>Wenn c ein NaN-Wert ist, ist das Ergebnis 0.</li>
-<li>Wenn c > 1.0 f, einschließlich inf, an 1.0 f gebunden wird.</li>
-<li>Wenn c < 0,0 f, einschließlich-inf, wird es an 0,0 f gebunden.</li>
-<li>If (c <= D3D<em>xx</em>_FLOAT_TO_SRGB_THRESHOLD), dann: c = D3D<em>xx</em>_FLOAT_TO_SRGB_SCALE_1 * c, else: c = D3D<em>xx</em>_FLOAT_TO_SRGB_SCALE_2 * c (D3D<em>xx</em>_FLOAT_TO_SRGB_EXPONENT_NUMERATOR/D3D<em>xx</em>_FLOAT_TO_SRGB_EXPONENT_DENOMINATOR)-D3D<em>xx</em>_FLOAT_TO_SRGB_OFFSET</li>
-<li>Konvertieren von float-Skala in ganzzahlige Skala: c = c * (2 ⁿ-1).</li>
-<li>In Integer konvertieren:
+<li>Angenommen, der Anfangswert ist c.</li>
+<li>Wenn c naN ist, ist das Ergebnis 0.</li>
+<li>Wenn c > 1.0f, einschließlich INF, wird an 1.0f klammern.</li>
+<li>Wenn c < 0.0f, einschließlich -INF, wird es an 0.0f klammern.</li>
+<li>Wenn (c <= D3D<em>xx</em>_FLOAT_TO_SRGB_THRESHOLD), dann: c = D3D<em>xx</em>_FLOAT_TO_SRGB_SCALE_1 * c, andernfalls: c = D3D<em>xx</em>_FLOAT_TO_SRGB_SCALE_2 * c(D3D<em>xx</em>_FLOAT_TO_SRGB_EXPONENT_NUMERATOR/D3D<em>xx</em>_FLOAT_TO_SRGB_EXPONENT_DENOMINATOR) - D3D<em>xx</em>_FLOAT_TO_SRGB_OFFSET</li>
+<li>Konvertieren von float scale in integer scale: c = c * (2ⁿ-1).</li>
+<li>In ganze Zahl konvertieren:
 <ul>
-<li>c = c + 0,5 f.</li>
-<li>Der Dezimal Bruch wird gelöscht, und der verbleibende Gleit Komma Wert (ganzzahliger Wert) wird direkt in eine ganze Zahl konvertiert.</li>
+<li>c = c + 0,5f.</li>
+<li>Der Dezimalbruch wird gelöscht, und der verbleibende Gleitkommawert (ganzzahlig) wird direkt in eine ganze Zahl konvertiert.</li>
 </ul></li>
 </ul>
-Diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (auf der ganzzahligen Seite) zulässig. Dies bedeutet, dass nach der Umstellung von float in eine ganzzahlige Skala jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Ziel Formatwerts diesem Wert zugeordnet werden darf. Durch die zusätzliche Anforderung zur Daten Umkehrung wird sichergestellt, dass die Konvertierung im Bereich nicht abnimmt und alle Ausgabewerte erreichbar sind.<br/></td>
+Diese Konvertierung ist mit einer Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place (ganzzahlig) zulässig. Dies bedeutet, dass nach der Konvertierung von float in integer scale jeder Wert innerhalb von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place eines darstellbaren Zielformatwerts diesem Wert zugeordnet werden kann. Die zusätzliche Anforderung an die Datenumkehrbarkeit stellt sicher, dass die Konvertierung im gesamten Bereich nicht dekreasiert wird und alle Ausgabewerte erreichbar sind.<br/></td>
 </tr>
 <tr class="odd">
-<td>St</td>
-<td>Sint mit mehr Bits</td>
-<td>Zum Konvertieren von "Sint" in ein "Sint" mit mehr Bits wird das höchst wertige Bit (MSB) der Anfangszahl &quot; &quot; auf die zusätzlichen Bits, die im Zielformat verfügbar sind, erweitert.<br/></td>
+<td>SINT</td>
+<td>SINT mit mehr Bits</td>
+<td>Um von SINT in ein SINT mit mehr Bits zu konvertieren, wird das wichtigste Bit (MSB) der Startnummer &quot; auf die zusätzlichen Bits erweitert, &quot; die im Zielformat verfügbar sind.<br/></td>
 </tr>
 <tr class="even">
 <td>UINT</td>
-<td>Sint mit mehr Bits</td>
-<td>Zum Konvertieren von uint in ein Sint mit mehr Bits wird die Zahl in die niedrigsten Bits (LSB) des Ziel Formats kopiert, und zusätzliche MSB-Elemente werden mit 0 aufgefüllt.<br/></td>
+<td>SINT mit mehr Bits</td>
+<td>Um von UINT in ein SINT mit mehr Bits zu konvertieren, wird die Zahl in die LSBs (Least Significant Bits) des Zielformats kopiert, und zusätzliche MSBs werden mit 0 aufgefüllt.<br/></td>
 </tr>
 <tr class="odd">
-<td>St</td>
-<td>Uint mit mehr Bits</td>
-<td>Zum Konvertieren von "Sint" in "uint" mit mehr Bits: bei einem negativen Wert wird der Wert auf 0 (null) geklammert. Andernfalls wird die Zahl in die lsbs des Ziel Formats kopiert, und zusätzliche MSB-Werte werden mit 0 aufgefüllt.<br/></td>
+<td>SINT</td>
+<td>UINT mit mehr Bits</td>
+<td>So konvertieren Sie von SINT in UINT mit mehr Bits: Wenn negativ, wird der Wert an 0 (null) klammern. Andernfalls wird die Zahl in die LSBs des Zielformats kopiert, und zusätzliche MSB-Dateien werden mit 0 aufgefüllt.<br/></td>
 </tr>
 <tr class="even">
 <td>UINT</td>
-<td>Uint mit mehr Bits</td>
-<td>Zum Konvertieren von uint in uint mit mehr Bits wird die Zahl in die lsbs des Ziel Formats kopiert, und zusätzliche MSB-Elemente werden mit 0 aufgefüllt.<br/></td>
+<td>UINT mit mehr Bits</td>
+<td>Zum Konvertieren von UINT in UINT mit mehr Bits wird die Zahl in die LSBs des Zielformats kopiert, und zusätzliche MSBs werden mit 0 aufgefüllt.<br/></td>
 </tr>
 <tr class="odd">
-<td>Sint oder uint</td>
-<td>Sint oder uint mit weniger oder gleich Bits</td>
-<td>Zum Konvertieren von einem Sint oder uint in Sint oder uint mit weniger oder gleicher Bits (und/oder Änderung der Signatur) wird der Startwert einfach an den Bereich des Ziel Formats gebunden.<br/></td>
+<td>SINT oder UINT</td>
+<td>SINT oder UINT mit weniger oder gleichen Bits</td>
+<td>Zum Konvertieren von einem SINT- oder UINT-Wert in SINT oder UINT mit weniger oder gleichen Bits (und/oder Änderung der Vorzeichen) wird der Startwert einfach an den Bereich des Zielformats angepasst.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -191,54 +191,54 @@ Diese Konvertierung ist eine Toleranz von D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLE
 
  
 
-## <a name="fixed-point-integer-conversion"></a>Konvertierung fester ganzzahliger Zeichen
+## <a name="fixed-point-integer-conversion"></a>Ganzzahlige Konvertierung mit festem Punkt
 
-Bei Ganzzahlen mit fester Größe handelt es sich einfach um Ganzzahlen mit einer bitgröße, die einen impliziten Dezimaltrennzeichen an einer festgelegten Position aufweisen.
+Ganzzahlen mit festem Punkt sind einfach ganze Zahlen mit einer Bitgröße, die ein implizites Dezimaltrennzeichen an einer festen Position aufweisen.
 
-Der universelle ganzzahlige Datentyp ist ein Sonderfall einer ganzzahligen Ganzzahl mit dem Dezimaltrennzeichen am Ende der Zahl.
+Der ubiquitäre Datentyp "integer" ist ein Sonderfall einer ganzzahligen Festkommazahl mit dem Dezimalwert am Ende der Zahl.
 
-Die Darstellungen von fest Komma Zahlen sind wie folgt gekennzeichnet: i. f, wobei es sich um die Anzahl der ganzzahligen Bits und f um die Anzahl der Dezimalstellen handelt. z. b. 16,8 bedeutet 16 Bit Ganzzahl, gefolgt von 8 Bits Bruchteil. Der ganzzahlige Teil wird in einem 2-Komplement gespeichert, zumindest wie hier definiert (er kann jedoch auch für ganze Zahlen ohne Vorzeichen gleich definiert werden). Der Bruchteile wird in einem unsignierten Formular gespeichert. Der Bruchteil der Teile stellt immer den positiven Bruchteil zwischen den beiden nächstliegenden ganzzahligen Werten dar, beginnend bei den meisten negativen.
+Darstellungen von Festkommazahlen sind folgendermaßen gekennzeichnet: i.f, wobei i die Anzahl ganzzahliger Bits und f die Anzahl der Bruchbits ist. Beispielsweise bedeutet 16,8 eine ganze Zahl von 16 Bits gefolgt von 8 Bits fraction. Der ganzzahlige Teil wird im Komplement von 2 gespeichert, zumindest wie hier definiert (obwohl es auch für ganze Zahlen ohne Vorzeichen gleich definiert werden kann). Der Bruchteil wird in nicht signierter Form gespeichert. Der Bruchteil stellt immer den positiven Bruch zwischen den beiden nächsten ganzzahligen Werten dar, beginnend mit dem negativsten.
 
-Additions-und Subtraktions Vorgänge für festgelegte Punktzahlen werden einfach mithilfe der standardmäßigen ganzzahligen Arithmetik ausgeführt, ohne dass dabei berücksichtigt wird, wo das implizite Dezimaltrennzeichen Das Hinzufügen von 1 zu einer 16,8-fixpunktzahl bedeutet nur, dass 256 hinzugefügt wird, da das Dezimaltrennzeichen 8 Stellen in vom am wenigsten signifikanten Ende der Zahl ist. Andere Vorgänge, wie z. b. Multiplikation, können auch einfach ganzzahlige Arithmetik verwendet werden, vorausgesetzt, die Auswirkung auf das fixierte Dezimaltrennzeichen wird berücksichtigt Beispielsweise ergibt die Multiplikation von zwei 16,8-Ganzzahlen mit einer ganzzahligen Multiplikation ein 32,16-Ergebnis.
+Additions- und Subtraktionsvorgänge für Festkommazahlen werden einfach mithilfe von ganzzahligen Standardarithmetik durchgeführt, ohne dass berücksichtigt wird, wo die implizite Dezimalzahl liegt. Das Hinzufügen von 1 zu einer festen Punktzahl von 16,8 bedeutet lediglich das Hinzufügen von 256, da die Dezimalzahl 8 Stellen vom am wenigsten signifikanten Ende der Zahl entfernt ist. Andere Vorgänge wie die Multiplikation können auch einfach mit ganzzahliger Arithmetik ausgeführt werden, vorausgesetzt, die Auswirkung auf die feste Dezimalzahl wird berücksichtigt. Die Multiplikation von zwei 16,8 ganzzahligen Zahlen mit einer ganzzahligen Multiplikation führt beispielsweise zu einem Ergebnis von 32,16.
 
-Ganzzahlige Darstellungen mit fester Zahl werden in Direct3D auf zwei Arten verwendet.
+Ganzzahldarstellungen mit Festkommawerten werden in Direct3D auf zwei Arten verwendet.
 
--   Post-clipped-Vertexpositionen im Raster werden an einen Fixed-Punkt angedockt, um die Genauigkeit gleichmäßig über den renderTarget-Bereich zu verteilen. Viele Raster-Vorgänge, einschließlich der Gesichtserkennung als Beispiel, treten an festgelegten Positionen an festgelegtem Punkt auf, während andere Vorgänge, wie z. b. das Attribut interpolatorsetup, Positionen verwenden, die von den fixierten Positionen zurück in Gleit Komma konvertiert wurden.
--   Texturkoordinaten für Samplings werden an einen fixierten Punkt (nach der Skalierung nach Textur Größe) angedockt, um die Genauigkeit gleichmäßig über den Textur Bereich zu verteilen Gewichtungswerte werden zurück in den Gleit Komma Wert konvertiert, bevor die eigentliche Filter Arithmetik ausgeführt wird.
+-   Nachgeschnittene Scheitelpunktpositionen im Rasterizer werden an einem festen Punkt ausgerichtet, um die Genauigkeit gleichmäßig auf den RenderTarget-Bereich zu verteilen. Viele Rasterizervorgänge, z. B. die Gesichtskeulung, treten an fixierten Positionen auf, während andere Vorgänge, z. B. die Einrichtung des Attributinterpolators, Positionen verwenden, die von den fixierten Positionen zurück in Gleitkomma konvertiert wurden.
+-   Texturkoordinaten für Samplingvorgänge werden an einem festen Punkt ausgerichtet (nachdem sie durch die Texturgröße skaliert wurden), um die Genauigkeit gleichmäßig auf den Texturraum zu verteilen, indem Die Positionen/Gewichtungen des Filtertippens ausgewählt werden. Gewichtungswerte werden wieder in Gleitkommawerte konvertiert, bevor die eigentliche Filterarithmetik durchgeführt wird.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Quell Datentyp</th>
-<th>Ziel Datentyp</th>
+<th>Quelldatentyp</th>
+<th>Zieldatentyp</th>
 <th>Konvertierungsregel</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>GLEITKOMMAZAHL</td>
-<td>Ganzzahlige Ganzzahl</td>
-<td>Im folgenden wird das allgemeine Verfahren zum umrechnen einer Gleit Komma Zahl n in eine feste Ganzzahl i. f beschrieben. Hierbei handelt es sich um die Anzahl der (signierten) ganzzahligen Bits und f für die Anzahl der Dezimalstellen.<br/>
+<td>Ganze Zahl mit festem Punkt</td>
+<td>Im Folgenden finden Sie das allgemeine Verfahren zum Konvertieren einer Gleitkommazahl n in eine ganzzahlige Festkommazahl i.f, wobei i die Anzahl der ganzzahligen Bits (mit Vorzeichen) und f die Anzahl der Bruchbits ist.<br/>
 <ul>
-<li>Compute fixedmin =-2 ⁽ ⁱ ⁻ ¹ ⁾</li>
-<li>Compute fixedmax = 2 ⁽ ⁱ ⁻ ¹ ⁾-2<sup>(-f)</sup></li>
-<li>Wenn n ein NaN ist, Ergebnis = 0; Wenn n + inf ist, Ergebnis = fixedmax * 2<sup>f</sup>; Wenn n "-inf" ist, Ergebnis = fixedmin * 2<sup>f</sup></li>
-<li>Wenn n >= fixedmax, result = fixedmax * 2<sup>f</sup>; Wenn n <= fixedmin, result = fixedmin * 2 <sup> f</sup></li>
-<li>Andernfalls wird n * 2<sup>f</sup> berechnet und in eine ganze Zahl konvertiert.</li>
+<li>Compute FixedMin = -2⁽ⁱ⁻¹⁾</li>
+<li>Compute FixedMax = 2⁽ⁱ⁻¹⁾ - 2<sup>(-f)</sup></li>
+<li>Wenn n ein NaN ist, ist das Ergebnis = 0; , wenn n +Inf ist, result = FixedMax*2<sup>f</sup>; wenn n -Inf ist, result = FixedMin*2<sup>f</sup></li>
+<li>Wenn n >= FixedMax, result = Fixedmax*2<sup>f</sup>; , wenn n <= FixedMin, result = FixedMin*2 <sup> f</sup></li>
+<li>Berechnen Sie andernfalls n*2<sup>f,</sup> und konvertieren Sie in ganze Zahlen.</li>
 </ul>
-Implementierungen sind im ganzzahligen Ergebnis anstelle des unendlich präzisen Werts n * 2<sup>f</sup> nach dem letzten Schritt im ganzzahligen Ergebnis zulässig D3D _FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP<em>xx</em>.<br/></td>
+Implementierungen sind D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP Unit-Last-Place-Toleranz im ganzzahligen Ergebnis zulässig, anstatt den unendlich genauen Wert n*2<sup>f</sup> nach dem letzten Schritt oben.<br/></td>
 </tr>
 <tr class="even">
-<td>Ganzzahlige Ganzzahl</td>
+<td>Ganze Zahl mit festem Punkt</td>
 <td>GLEITKOMMAZAHL</td>
-<td>Angenommen, die spezifische, in float konvertierte feste Punkt Darstellung enthält nicht mehr als insgesamt 24 Bits von Informationen, von denen sich nicht mehr als 23 Bits in der Bruchteil-Komponente befinden. Angenommen, eine angegebene fest Komma Zahl, "f XP", befindet sich in "i. f" (i Bit Integer, f Bits Bruchzahl). Die Konvertierung in float ähnelt dem folgenden Pseudocode.<br/> float result = (float) (f XP >> f) +//ganze Zahl extrahieren<br/> <dl> ((float) (SXP & (2<sup>f</sup> - 1))/(2<sup>f</sup>));//Bruchteil extrahieren<br />
+<td>Angenommen, die spezifische Festkommadarstellung, die in float konvertiert wird, enthält nicht mehr als insgesamt 24 Bits an Informationen, von denen sich nicht mehr als 23 Bits in der Bruchteilkomponente befinden. Angenommen, eine angegebene feste Punktzahl, fxp, hat die Form i.f (i bits integer, f bits fraction). Die Konvertierung in float ähnelt dem folgenden Pseudocode.<br/> float result = (float)(fxp >> f) + / extract integer<br/> <dl> ((float)(fxp & (2<sup>f</sup> - 1)) / (2<sup>f</sup>)); / extract fraction<br />
 </dl></td>
 </tr>
 </tbody>

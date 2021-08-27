@@ -1,9 +1,9 @@
 ---
-title: Title-Element (WPL)
-description: Das Title-Element gibt einen Titel für die Wiedergabeliste an.
+title: title-Element (WPL)
+description: Das title-Element gibt einen Titel für die Wiedergabeliste an.
 ms.assetid: 8a214b96-d507-4dbf-b5f2-8fdfc4409fb0
 keywords:
-- Windows-Media Player des title-Elements (WPL)
+- title-Element (WPL) Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5649553ab51a43bd1fb0aeb78d505d7e922bf80b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1de2679d5f78b48ceef569491ef21998fc13faf7126e61f76ad31959bdc2ac6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122780"
 ---
-# <a name="title-element-wpl"></a>Title-Element (WPL)
+# <a name="title-element-wpl"></a>title-Element (WPL)
 
-Das **Title** -Element gibt einen Titel für die Wiedergabeliste an.
+Das **title-Element** gibt einen Titel für die Wiedergabeliste an.
 
 ``` syntax
 <head>
@@ -34,7 +34,7 @@ Das **Title** -Element gibt einen Titel für die Wiedergabeliste an.
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -49,7 +49,7 @@ Dieses Element weist keine Attribute auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn Sie einen Titel für eine Windows Media-Wiedergabeliste (WPL) auswählen, sollten Sie Bedenken, dass der Inhalt der Wiedergabeliste dynamisch sein kann. Ein guter Ansatz besteht darin, den Titel auf der Logik in den **Argument** Elementen zu basieren, da der Inhalt der Wiedergabeliste von diesem definiert wird. Beispiele hierfür sind "meine bevorzugten Rock-Lieder aus 1966" oder "Tanzlieder, die ich vor kurzem nicht gespielt habe".
+Wenn Sie einen Titel für eine Windows Medienwiedergabeliste (WPL) auswählen, sollten Sie berücksichtigen, dass der Inhalt der Wiedergabeliste dynamisch sein kann. Ein guter Ansatz besteht darin, den Titel auf der Logik in den **Argumentelementen** zu basieren, da dies den Inhalt der Wiedergabeliste definiert. Beispiele hierfür sind "My Favorite Rock Song from 1966" oder "Music Music That I Haven't Played Recently".
 
 ## <a name="examples"></a>Beispiele
 
@@ -68,7 +68,7 @@ Wenn Sie einen Titel für eine Windows Media-Wiedergabeliste (WPL) auswählen, s
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/> |
 
 
 
@@ -76,13 +76,13 @@ Wenn Sie einen Titel für eine Windows Media-Wiedergabeliste (WPL) auswählen, s
 
 <dl> <dt>
 
-[**Argument-Element**](argument-element.md)
+[**argument-Element**](argument-element.md)
 </dt> <dt>
 
-[**Head-Element**](head-element.md)
+[**head-Element**](head-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

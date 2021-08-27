@@ -1,9 +1,9 @@
 ---
-title: PSM_SETBUTTONTEXT Meldung (prsht. h)
-description: Legt den Text auf einer Schaltfläche in einem Aero-Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ Makros SetButtonText senden.
+title: PSM_SETBUTTONTEXT (Prsht.h)
+description: Legt den Text auf einer Schaltfläche in einem Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des \_ PropSheet-Makros SetButtonText senden.
 ms.assetid: 30b7afd1-5094-430f-9c48-d87832d96050
 keywords:
-- Windows-Steuerelemente für PSM_SETBUTTONTEXT Meldung
+- PSM_SETBUTTONTEXT der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 41a0b55f73fc7084e89f54c1e741d12000b0f949
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: feac193beef3149140447a38c0be00b7f4fa0c1c1b28e10a5d7de2203ba21cec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088590"
 ---
-# <a name="psm_setbuttontext-message"></a>PSM- \_ SetButtonText-Nachricht
+# <a name="psm_setbuttontext-message"></a>PSM \_ SETBUTTONTEXT-Meldung
 
-Legt den Text auf einer Schaltfläche in einem Aero-Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des [**propsheet-Makros \_ SetButtonText**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setbuttontext) senden.
+Legt den Text auf einer Schaltfläche in einem Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ PropSheet-Makros SetButtonText**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setbuttontext) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -33,17 +33,17 @@ Legt den Text auf einer Schaltfläche in einem Aero-Assistenten fest. Sie könne
 *wParam* 
 </dt> <dd>
 
-Einer der folgenden Werte, der die Schaltfläche angibt, deren Text festgelegt ist.
+Einer der folgenden Werte, der die Schaltfläche an gibt, deren Text festgelegt ist.
 
 
 
 | Wert                                                                                                                                                                                 | Bedeutung                           |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
-| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**pswizb \_ zurück**</dt> </dl>                               | Die Schaltfläche " **zurück** ".<br/>   |
-| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**pswizb- \_ Abbruch**</dt> </dl>                         | Die Schaltfläche " **Abbrechen** ".<br/> |
-| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**pswizb \_ disabledfinish**</dt> </dl> | Die Schaltfläche **Fertig** stellen.<br/> |
-| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**pswizb- \_ Fertigstellen**</dt> </dl>                         | Die Schaltfläche **Fertig** stellen.<br/> |
-| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**pswizb \_ als nächstes**</dt> </dl>                               | Die Schaltfläche **weiter** .<br/>   |
+| <span id="PSWIZB_BACK"></span><span id="pswizb_back"></span><dl> <dt>**PSWIWIWIWI \_ BACK**</dt> </dl>                               | Die **Schaltfläche Zurück.**<br/>   |
+| <span id="PSWIZB_CANCEL"></span><span id="pswizb_cancel"></span><dl> <dt>**PSWIWIWI CANCEL \_**</dt> </dl>                         | Die **Schaltfläche Abbrechen.**<br/> |
+| <span id="PSWIZB_DISABLEDFINISH"></span><span id="pswizb_disabledfinish"></span><dl> <dt>**PSWIAFFIN \_ DISABLEDFINISH**</dt> </dl> | Die **Schaltfläche Fertig** stellen.<br/> |
+| <span id="PSWIZB_FINISH"></span><span id="pswizb_finish"></span><dl> <dt>**PSWIWIWI FINISH \_**</dt> </dl>                         | Die **Schaltfläche Fertig** stellen.<br/> |
+| <span id="PSWIZB_NEXT"></span><span id="pswizb_next"></span><dl> <dt>**PSWI WIE \_ WEITER**</dt> </dl>                               | Die **Schaltfläche Weiter.**<br/>   |
 
 
 
@@ -54,7 +54,7 @@ Einer der folgenden Werte, der die Schaltfläche angibt, deren Text festgelegt i
 *lParam* 
 </dt> <dd>
 
-Der festzulegende Text.
+Der text, der festgelegt werden soll.
 
 </dd> </dl>
 
@@ -68,10 +68,10 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **PSM \_ Setbuttontextw** (Unicode)<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **PSM \_ SETBUTTONTEXTW** (Unicode)<br/>                                       |
 
 
 

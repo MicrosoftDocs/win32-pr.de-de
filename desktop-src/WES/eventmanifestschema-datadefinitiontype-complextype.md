@@ -1,6 +1,6 @@
 ---
 title: Komplexer DataDefinitionType-Typ
-description: Definiert ein Datenelement, das Sie in das Ereignis ein-/ausdingen möchten. | Komplexer DataDefinitionType-Typ
+description: Definiert ein Datenelement, das Sie in das Ereignis einschließen möchten. | Komplexer DataDefinitionType-Typ
 ms.assetid: f4234e54-a5a8-48e4-941f-05107dcd3f88
 keywords:
 - Komplexer DataDefinitionType-Typ EventLog
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fa492acf00740b0df9b761c40797ec05feb5b2e38b84ec0682296dd845cbe613
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: a637166d261c4148a81baee3597d4090542b8612
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118589605"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470926"
 ---
 # <a name="datadefinitiontype-complex-type"></a>Komplexer DataDefinitionType-Typ
 
-Definiert ein Datenelement, das Sie in das Ereignis ein-/ausdingen möchten.
+Definiert ein Datenelement, das Sie in das Ereignis einschließen möchten.
 
 ``` syntax
 <xs:complexType name="DataDefinitionType"
@@ -69,67 +69,26 @@ Definiert ein Datenelement, das Sie in das Ereignis ein-/ausdingen möchten.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Typ</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>count</td>
-<td><a href="eventmanifestschema-counttype-simpletype.md"><strong>CountType</strong></a></td>
-<td>Die Anzahl der Elemente im Array, wenn das Datenelement ein Array ist. Sie können die tatsächliche Anzahl oder den Namen eines anderen Datenelements angeben, das die Anzahl enthält. <br/></td>
-</tr>
-<tr class="even">
-<td>inType</td>
-<td><strong>QName</strong></td>
-<td>Der Datentyp für dieses Datenelement. Eine Liste der vordefinierten Eingabedatentypen finden Sie unter Dem komplexen <a href="eventmanifestschema-inputtype-complextype.md"><strong>InputType-Typ.</strong></a><br/></td>
-</tr>
-<tr class="odd">
-<td>length</td>
-<td><a href="eventmanifestschema-lengthtype-simpletype.md"><strong>LengthType</strong></a></td>
-<td>Die Länge eines Datenelements variabler Länge, z. B. eines binären Blobs. Geben Sie für Binärdaten die Länge in Bytes und für Zeichenfolgendaten die Länge in Zeichen an. Sie können die tatsächliche Länge oder den Namen eines anderen Datenelements angeben, das die Länge enthält.<br/> Wenn Sie das Length-Attribut verwenden, um eine Zeichenfolge mit fester Länge anzugeben, müssen Sie die Zeichenfolge bis zu ihrer festen Länge aufhängen, sodass das Nullabschlusszeichen am Ende möglich ist (wenn die Länge beispielsweise 5 beträgt, muss die Zeichenfolge abc als abc aufpaddiert &quot; &quot; &quot; &quot; werden. Die Zeichenfolgenlänge muss das Nullabschlusszeichen enthalten.<br/></td>
-</tr>
-<tr class="even">
-<td>Karte</td>
-<td>Zeichenfolge</td>
-<td>Der Name der Name-Wert-Zuordnung, die zum Zuordnen von ganzzahligen Werten zu Zeichenfolgen verwendet werden soll. Der Datentyp des Datenelements muss einen der folgenden Typen haben:<br/>
-<ul>
-<li>win:UInt8</li>
-<li>win:UInt16</li>
-<li>win:UInt32</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>name</td>
-<td>Zeichenfolge</td>
-<td>Der Name des Datenelements. Sie können den Namen verwenden, um auf dieses Datenelement in Ihrem XML-Fragment zu verweisen, wenn Sie einen <a href="eventmanifestschema-userdata-templateitemtype-element.md"><strong>UserData-Abschnitt</strong></a> in Ihrer Vorlage angeben. Sie können auch in einem length- oder count-Attribut eines anderen Datenelements auf diesen Namen verweisen, wenn dieses Datenelement seinen Längen- oder Anzahlwert enthält.<br/> <strong>Windows Vista:</strong> Dieses Attribut ist optional.<br/></td>
-</tr>
-<tr class="even">
-<td>outType</td>
-<td><strong>QName</strong></td>
-<td>Der Datentyp, der beim Rendern dieses Datenelements verwendet werden soll. Eine Liste der vordefinierten Ausgabedatentypen finden Sie unter Komplexer <a href="eventmanifestschema-outputtype-complextype.md"><strong>OutputType-Typ.</strong></a><br/> <strong>Windows Vista:</strong> Der Ausgabetyp wird ignoriert, und der Dienst bestimmt den Typ basierend auf dem Eingabetyp.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Name | type | BESCHREIBUNG | 
+|------|------|-------------|
+| count | <a href="eventmanifestschema-counttype-simpletype.md"><strong>CountType</strong></a> | Die Anzahl der Elemente im Array, wenn das Datenelement ein Array ist. Sie können die tatsächliche Anzahl oder den Namen eines anderen Datenelements angeben, das die Anzahl enthält. <br /> | 
+| inType | <strong>QName</strong> | Der Datentyp für dieses Datenelement. Eine Liste der vordefinierten Eingabedatentypen finden Sie unter <a href="eventmanifestschema-inputtype-complextype.md"><strong>Komplexer InputType-Typ.</strong></a><br /> | 
+| length | <a href="eventmanifestschema-lengthtype-simpletype.md"><strong>LengthType</strong></a> | Die Länge eines Datenelements variabler Länge, z. B. eines binären Blobs. Geben Sie für Binärdaten die Länge in Bytes und für Zeichenfolgendaten die Länge in Zeichen an. Sie können die tatsächliche Länge oder den Namen eines anderen Datenelements angeben, das die Länge enthält.<br /> Wenn Sie das length-Attribut verwenden, um eine Zeichenfolge fester Länge anzugeben, müssen Sie die Zeichenfolge auf die feste Länge auffüllen, sodass das Nullabschlusszeichen am Ende zulässig ist (wenn die Länge z. B. 5 ist, muss die Zeichenfolge "abc" als "abc" aufgefüllt werden. Die Zeichenfolgenlänge muss das Nullabschlusszeichen enthalten.<br /> | 
+| Karte | Zeichenfolge | Der Name der Name-Wert-Zuordnung, die zum Zuordnen ganzzahliger Werte zu Zeichenfolgen verwendet werden soll. Der Datentyp des Datenelements muss einen der folgenden Typen aufweisen:<br /><ul><li>win:UInt8</li><li>win:UInt16</li><li>win:UInt32</li></ul> | 
+| name | Zeichenfolge | Der Name des Datenelements. Sie können den Namen verwenden, um auf dieses Datenelement in Ihrem XML-Fragment zu verweisen, wenn Sie einen <a href="eventmanifestschema-userdata-templateitemtype-element.md"><strong>UserData-Abschnitt</strong></a> in der Vorlage angeben. Sie können auch in einem length- oder count-Attribut eines anderen Datenelements auf diesen Namen verweisen, wenn dieses Datenelement seinen Längen- oder Anzahlwert enthält.<br /><strong>Windows Vista:</strong> Dieses Attribut ist optional.<br /> | 
+| outType | <strong>QName</strong> | Der Datentyp, der beim Rendern dieses Datenelements verwendet werden soll. Eine Liste der vordefinierten Ausgabedatentypen finden Sie unter Komplexer <a href="eventmanifestschema-outputtype-complextype.md"><strong>OutputType-Typ.</strong></a><br /><strong>Windows Vista:</strong> Der Ausgabetyp wird ignoriert, und der Dienst bestimmt den Typ basierend auf dem Eingabetyp.<br /> | 
 
 
 
-## <a name="remarks"></a>Bemerkungen
 
-Für Eingabetypen variabler Länge, z. B. binäre Blobs, müssen Sie das Length-Attribut verwenden, um die Größe der Daten explizit anzugeben. Geben Sie für Zeichenfolgen das Length-Attribut nur an, wenn die Zeichenfolgen eine feste Länge haben.
+## <a name="remarks"></a>Hinweise
+
+Für Eingabetypen variabler Länge, z. B. binäre Blobs, müssen Sie das length-Attribut verwenden, um die Größe der Daten explizit anzugeben. Geben Sie für Zeichenfolgen das Length-Attribut nur an, wenn die Zeichenfolgen eine feste Länge aufweisen.
 
 ## <a name="examples"></a>Beispiele
 
-Im Folgenden finden Sie einige Beispiele für die Datenelementdefinitionen.
+Im Folgenden sind einige Beispiele für die Datenelementdefinitionen aufgeführt.
 
 
 ```XML
@@ -209,7 +168,7 @@ Im Folgenden finden Sie einige Beispiele für die Datenelementdefinitionen.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

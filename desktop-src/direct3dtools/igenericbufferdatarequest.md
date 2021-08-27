@@ -1,10 +1,10 @@
 ---
-description: Anforderung für den Inhalt eines Objekts in XML-Form.
+description: Fordern Sie den Inhalt eines Objekts in XML-Form an.
 MS-HAID: vspixengine.IGenericBufferDataRequest
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Igenericbufferdatarequest-Schnittstelle
+title: IGenericBufferDataRequest-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 27FE3E7E-DFE1-4077-92D4-CA91F81C17EB
@@ -17,34 +17,34 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: fa98a1cbf20e8c94bdf52297cb77e6b5e8483e8d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 790b34f212b57a2f0a1c6e846af2c2d1e5b755f6
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104214006"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626146"
 ---
-# <a name="span-idvspixengineigenericbufferdatarequestspanigenericbufferdatarequest-interface"></a><span id="vspixengine.igenericbufferdatarequest"></span>Igenericbufferdatarequest-Schnittstelle
+# <a name="span-idvspixengineigenericbufferdatarequestspanigenericbufferdatarequest-interface"></a><span id="vspixengine.igenericbufferdatarequest"></span>IGenericBufferDataRequest-Schnittstelle
 
-Anforderung für den Inhalt eines Objekts in XML-Form.
+Fordern Sie den Inhalt eines Objekts in XML-Form an.
 
 ## <a name="members"></a>Member
 
-Die **igenericbufferdatarequest** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Igenericbufferdatarequest** verfügt auch über die folgenden Typen von Membern:
+Die **IGenericBufferDataRequest-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IGenericBufferDataRequest** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="span-idmethodsspanmethods"></a><span id="methods"></span>Methoden
 
-Die **igenericbufferdatarequest** -Schnittstelle verfügt über diese Methoden.
+Die **IGenericBufferDataRequest-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/igenericbufferdatarequest-requestasync-dumpertype-eventid-dword-igenericbufferdatacallback-ptr-dword-dword"><strong>Requestasync</strong></a></td><td style="text-align: left;"><p>Fordert die Rückgabe von generischen Objektdaten an, die ein Objekt in der vsglog-Datei für das angegebene Ereignis und das angegebene Format beschreiben.</p></td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">Beschreibung</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/igenericbufferdatarequest-requestasync-dumpertype-eventid-dword-igenericbufferdatacallback-ptr-dword-dword"><strong>RequestAsync</strong></a></td><td style="text-align: left;"><p>Fordert an, generische Objektdaten zurückzugeben, die ein Objekt in der VSGLOG-Datei für das angegebene Ereignis und im angegebenen Format beschreiben.</p></td></tr></tbody></table>
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

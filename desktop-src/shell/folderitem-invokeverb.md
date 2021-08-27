@@ -1,7 +1,7 @@
 ---
 description: Führt ein Verb für das Element aus.
 ms.assetid: 569bdc88-15ef-4d08-923c-4f41e5ae5a38
-title: FolderItem. invokeverb-Methode (Shldisp. h)
+title: FolderItem.InvokeVerb-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 259ff9613756940d5da8a37585dbf39fb2dc0a26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f6c45c67bd8863b6cf1169670a4d087f29e4441c48592f850a683af5ef0bc1d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111790"
 ---
-# <a name="folderiteminvokeverb-method"></a>FolderItem. invokeverb-Methode
+# <a name="folderiteminvokeverb-method"></a>FolderItem.InvokeVerb-Methode
 
 Führt ein Verb für das Element aus.
 
@@ -39,12 +39,12 @@ FolderItem.InvokeVerb(
 
 <dl> <dt>
 
-*vverb* \[ in, optional\]
+*vVerb* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Eine Zeichenfolge, die das auszuführende Verb angibt. Dabei muss es sich um einen der Werte handeln, die von der [**FolderItemVerb.Name**](folderitemverb-name.md) -Eigenschaft des Elements zurückgegeben werden. Wenn kein Verb angegeben ist, wird das Standardverb aufgerufen.
+Eine Zeichenfolge, die das auszuführende Verb angibt. Dies muss einer der Werte sein, die von der -Eigenschaft des Elements [**FolderItemVerb.Name**](folderitemverb-name.md) werden. Wenn kein Verb angegeben wird, wird das Standardverb aufgerufen.
 
 </dd> </dl>
 
@@ -52,17 +52,17 @@ Eine Zeichenfolge, die das auszuführende Verb angibt. Dabei muss es sich um ein
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die ein Element unterstützt. Das Aufrufen eines Verbs entspricht dem Auswählen eines Befehls aus dem Kontextmenü eines Elements. Wenn Sie ein Verb aufrufen, wird in der Regel eine verwandte Anwendung gestartet. Wenn Sie z. b. das "Öffnen"-Verb in einer txt-Datei aufrufen, wird die Datei mit einem Text-Editor geöffnet, normalerweise Microsoft Notepad. Weitere Erläuterungen zu Verben finden Sie unter [Starten von Anwendungen](launch.md) .
+Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die ein Element unterstützt. Das Aufrufen eines Verbs entspricht dem Auswählen eines Befehls im Kontextmenü eines Elements. In der Regel wird durch das Aufrufen eines Verbs eine zugehörige Anwendung gestartet. Wenn Sie beispielsweise das Verb "öffnen" für eine .txt-Datei aufrufen, wird die Datei mit einem Text-Editor geöffnet, in der Regel microsoft Editor. Weitere [Informationen zu Verben](launch.md) finden Sie unter Starten von Anwendungen.
 
-Das [**folderitemverbs**](folderitemverbs.md) -Objekt stellt die Auflistung der Verben dar, die dem Element zugeordnet sind. Das Standardverb kann für unterschiedliche Elemente variieren, aber es ist in der Regel "geöffnet".
+Das [**FolderItemVerbs-Objekt**](folderitemverbs.md) stellt die Auflistung von Verben dar, die dem Element zugeordnet sind. Das Standardverb kann für verschiedene Elemente variieren, ist jedoch in der Regel "offen".
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **invokeverb** verwendet, um das Standard Verb (in diesem Fall "Öffnen") im Windows-Ordner aufzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **InvokeVerb verwendet,** um das Standardverb ("open" in diesem Fall) im Ordner Windows aufrufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -92,7 +92,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -161,25 +161,25 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Von folderItem**](folderitem.md)
+[**FolderItem**](folderitem.md)
 </dt> <dt>
 
 [**Verben**](folderitem-verbs.md)
