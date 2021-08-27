@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. getinhaltungen-Methode
-description: Gibt für die Skripterstellung alle zurzeit auf dem registrierten Task aktuell laufenden Instanzen zurück.
+title: RegisteredTask.GetInstances-Methode
+description: Für die Skripterstellung gibt alle derzeit ausgeführten Instanzen der registrierten Aufgabe zurück.
 ms.assetid: 01fea94e-fdec-4edf-886a-f6d9b566f201
 keywords:
-- Die getinhaltungen-Methode Taskplaner
-- Getinhaltungen-Methode Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, getinhaltungen-Methode
+- GetInstances-Methode Taskplaner
+- GetInstances-Methode Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , GetInstances-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,19 +16,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78b1579df1124fcd6d26ea658730190b5eb0f5de
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4f9224922e70242304423950a67bf4acd866d1a551a90f4c9a6dadb94470ba1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126060"
 ---
-# <a name="registeredtaskgetinstances-method"></a>Registeredtask. getinhaltungen-Methode
+# <a name="registeredtaskgetinstances-method"></a>RegisteredTask.GetInstances-Methode
 
-Gibt für die Skripterstellung alle zurzeit auf dem registrierten Task aktuell laufenden Instanzen zurück.
+Für die Skripterstellung gibt alle derzeit ausgeführten Instanzen der registrierten Aufgabe zurück.
 
 > [!Note]  
-> **Registeredtask. getinhaltungen** gibt nur Instanzen der aktuell registrierten Aufgabe zurück, die unter oder unterhalb des Sicherheits Kontexts eines Benutzers ausgeführt werden. Bei Mitgliedern der Gruppe "Administratoren" gibt " **getinhaltungen** " z. b. alle Instanzen der aktuell registrierten Aufgabe zurück. für Mitglieder der Gruppe "Benutzer" gibt " **getinhaltungen** " jedoch nur Instanzen der aktuell registrierten Aufgabe zurück, die im Sicherheitskontext der Benutzergruppe ausgeführt werden.
+> **RegisteredTask.GetInstances** gibt nur Instanzen der aktuell ausgeführten registrierten Aufgabe zurück, die im oder unterhalb des Sicherheitskontexts eines Benutzers ausgeführt werden. Für Mitglieder der Gruppe "Administratoren" gibt **GetInstances** beispielsweise alle Instanzen der aktuell ausgeführten registrierten Aufgabe zurück. Für Mitglieder der Gruppe Benutzer gibt **GetInstances** jedoch nur Instanzen der aktuell ausgeführten registrierten Aufgabe zurück, die im Sicherheitskontext der Gruppe Benutzer ausgeführt werden.
 
  
 
@@ -51,14 +51,14 @@ RegisteredTask.GetInstances( _
 *flags* 
 </dt> <dd>
 
-Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 (null) festgelegt werden.
+Dieser Parameter ist für die zukünftige Verwendung reserviert und muss auf 0 festgelegt werden.
 
 </dd> <dt>
 
-*runningtasks* \[ vorgenommen\]
+*runningTasks* \[ out\]
 </dt> <dd>
 
-Ein [**runningtaskcollection**](runningtaskcollection.md) -Objekt, das alle derzeit aktuell aktuell laufenden Instanzen der Aufgabe enthält.
+Ein [**RunningTaskCollection-Objekt,**](runningtaskcollection.md) das alle derzeit ausgeführten Instanzen der Aufgabe enthält.
 
 </dd> </dl>
 
@@ -72,9 +72,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -86,7 +86,7 @@ Diese Methode gibt keinen Wert zurück.
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

@@ -8,12 +8,12 @@ keywords:
 - Internetauthentifizierungsdienst IAS mit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06f422c005d6810a4035450e24de1324b28361f1
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: 4db3590ed10ec77e57c86bfad3e0e0b1160e70a2d6fcc08abc911a14614543f9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074300"
 ---
 # <a name="using-nps-extensions"></a>Verwenden von NPS-Erweiterungen
 
@@ -34,7 +34,7 @@ Die Beispiele DialIn und MapName erweitern die NPS-Funktionalität.
 
  
 
-Den Quellcode für die MapName- und DialIn-Beispielanwendungen finden Sie in der folgenden Liste. *Speicherort*, %Installationspfad%, bestimmt das Basisinstallationsverzeichnis für x64-Computer. Siehe auch [Windows Software Development Kit (SDK) für Windows 8](https://developer.microsoft.com/windows/downloads/windows-8-sdk), Microsoft Windows Software Development Kit (SDK) und Downloads für die Entwicklung von Windows [Store-Apps.](https://msdn.microsoft.com/windows/apps/br229516)
+Den Quellcode für die MapName- und DialIn-Beispielanwendungen finden Sie in der folgenden Liste. *Speicherort*, %Installationspfad%, bestimmt das Basisinstallationsverzeichnis für x64-Computer. Siehe [auch Windows Software Development Kit (SDK) für Windows 8](https://developer.microsoft.com/windows/downloads/windows-8-sdk), Microsoft Windows Software Development Kit (SDK) und [Downloads für Windows Store App-Entwicklung.](https://msdn.microsoft.com/windows/apps/br229516)
 
 <dl> <dt>
 
@@ -71,7 +71,7 @@ Speicherort: %Install Path% \\ Microsoft SDKs \\ Windows \\ v7.1 \\ Samples \\ n
 Windows SDK
 </dt> <dd>
 
-WindowsServer 2008
+Windows Server 2008
 
 Downloadlink: <https://www.microsoft.com/download/details.aspx?id=5023>
 

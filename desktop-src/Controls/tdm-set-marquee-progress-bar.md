@@ -1,9 +1,9 @@
 ---
-title: TDM_SET_MARQUEE_PROGRESS_BAR Meldung (kommstrg. h)
-description: Gibt an, ob die gehostete Statusanzeige eines Aufgaben Dialogfelds im Marquee-Modus angezeigt werden soll.
+title: TDM_SET_MARQUEE_PROGRESS_BAR (Commctrl.h)
+description: Gibt an, ob die gehostete Statusanzeige eines Aufgabendialogfelds im Festzeltmodus angezeigt werden soll.
 ms.assetid: 28b9b519-6b96-4130-936c-b8fe8df86d25
 keywords:
-- Windows-Steuerelemente für TDM_SET_MARQUEE_PROGRESS_BAR Meldung
+- TDM_SET_MARQUEE_PROGRESS_BAR von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45a9384826b89d07c6564dc511d4909058871ca3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 13262339f7d87ea68755a38a49cc8c327706939d6b18025f350334dfdbe3dd4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104610"
 ---
-# <a name="tdm_set_marquee_progress_bar-message"></a>TDM \_ Set \_ Marquee \_ - \_ Statusanzeige Meldung
+# <a name="tdm_set_marquee_progress_bar-message"></a>TDM \_ SET \_ MARQUEE \_ PROGRESS \_ BAR-Meldung
 
-Gibt an, ob die gehostete Statusanzeige eines Aufgaben Dialogfelds im Marquee-Modus angezeigt werden soll.
+Gibt an, ob die gehostete Statusanzeige eines Aufgabendialogfelds im Festzeltmodus angezeigt werden soll.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Ein **boolescher** Wert, der angibt, ob die Statusanzeige im Marquee-Modus angezeigt werden soll. Der Wert **true** wechselt im Marquee-Modus, und der Wert **false** schaltet den Marquee-Modus um.
+Eine **BOOL,** die angibt, ob die Statusleiste im Festzeltmodus angezeigt werden soll. Der Wert **TRUE** aktiviert den Festzeltmodus, und der Wert **FALSE** deaktiviert den Festzeltmodus.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
 Muss Null sein.
@@ -47,9 +47,9 @@ Muss Null sein.
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zum Marquee-Modus finden Sie unter Statusanzeige- [Steuer](progress-bar-control.md)Element.
+Informationen zum Festzeltmodus finden Sie unter [Statusleisten-Steuerelement](progress-bar-control.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Informationen zum Marquee-Modus finden Sie unter Statusanzeige- [Steuer](progres
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

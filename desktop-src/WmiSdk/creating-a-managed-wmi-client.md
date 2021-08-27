@@ -1,5 +1,5 @@
 ---
-description: WMI unterstützt derzeit keinen verwalteten Code in WMI, wird jedoch in Mi unterstützt.
+description: WMI unterstützt derzeit keinen verwalteten Code in WMI, wird aber in mi unterstützt.
 ms.assetid: ED6EF216-7FF7-45F2-9FDD-3A73D5F65F9B
 ms.tgt_platform: multiple
 title: Erstellen eines verwalteten WMI-Clients
@@ -10,18 +10,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: bb1339347c4e15cd29ebf4d4e98e5a8b61a24e97
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6f28b01cb3b4506e0b47332cc3336af95dd641e78c7716f33b8e62b162081bdd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071520"
 ---
 # <a name="creating-a-managed-wmi-client"></a>Erstellen eines verwalteten WMI-Clients
 
-Die aktuelle Version von WMI enthält den System. Management-Namespace, der eine Reihe von APIs zur Verfügung stellt, die mit WMI interagieren. Es wird jedoch nicht empfohlen, diesen Namespace zu verwenden.
+Die aktuelle Version von WMI enthält den System.Management-Namespace, der eine Reihe von APIs verfügbar macht, die mit WMI interagieren. Es wird jedoch nicht empfohlen, diesen Namespace zu verwenden.
 
-Wenn Sie einen verwalteten WMI-Client erstellen möchten, empfiehlt es sich, die Windows-Verwaltungsinfrastruktur (Mi) zu verwenden. Mi ist die Version von WMI der nächsten Generation und enthält vollständige Unterstützung für verwalteten Code. Weitere Informationen finden Sie unter [Implementieren eines verwalteten Mi-Clients](/previous-versions/windows/desktop/wmi_v2/how-to-implement-a-managed-mi-client).
+Wenn Sie einen verwalteten WMI-Client erstellen möchten, sollten Sie die Windows Management Infrastructure (MI) verwenden. MI ist die Version der nächsten Generation von WMI und enthält vollständige Unterstützung für verwalteten Code. Weitere Informationen finden Sie unter [Implementieren eines verwalteten MI-Clients.](/previous-versions/windows/desktop/wmi_v2/how-to-implement-a-managed-mi-client)
 
  
 

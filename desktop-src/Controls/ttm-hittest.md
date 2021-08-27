@@ -1,9 +1,9 @@
 ---
-title: TTM_HITTEST Meldung (kommstrg. h)
-description: Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebenden Rechtecks des angegebenen Tools befindet, und ruft, wenn dies der Fall ist, Informationen über das Tool ab.
+title: TTM_HITTEST (Commctrl.h)
+description: Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebundenen Rechtecks des angegebenen Tools befindet, und ruft, falls dies der Wert ist, Informationen über das Tool ab.
 ms.assetid: d4dcc29b-c64c-41b8-a153-300df68ecdf5
 keywords:
-- Windows-Steuerelemente für TTM_HITTEST Meldung
+- TTM_HITTEST meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7b515ccb5c283b66760f24c02749368e424e6fe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 105edd555a1da1ba037f7dda114e1d9f9ef53048c02a7cb11e1df1ff0c01ad2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060520"
 ---
-# <a name="ttm_hittest-message"></a>TTM- \_ HitTest-Meldung
+# <a name="ttm_hittest-message"></a>TTM \_ HITTEST-Nachricht
 
-Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebenden Rechtecks des angegebenen Tools befindet, und ruft, wenn dies der Fall ist, Informationen über das Tool ab.
+Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebundenen Rechtecks des angegebenen Tools befindet, und ruft, falls dies der Wert ist, Informationen über das Tool ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,17 +37,17 @@ Testet einen Punkt, um zu bestimmen, ob er sich innerhalb des umgebenden Rechtec
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**tthittestinfo**](/windows/win32/api/commctrl/ns-commctrl-tthittestinfoa) -Struktur. Beim Senden der Nachricht muss der **HWND** -Member das Handle für ein Tool angeben, und der **PT** -Member muss die Koordinaten eines Punkts angeben. Wenn der Rückgabewert **true** ist, erhält der **TI** -Member (eine [**toolinfo**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) -Struktur) Informationen über das Tool, das den Punkt einnimmt. Der **CBSIZE** -Member der **TI** -Struktur muss ausgefüllt werden, bevor diese Nachricht gesendet wird.
+Zeiger auf eine [**TTHITTESTINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-tthittestinfoa) Beim Senden der Nachricht muss das **hwnd-Member** das Handle für ein Tool und das **pt-Member** die Koordinaten eines Punkts angeben. Wenn der Rückgabewert **TRUE ist,** empfängt der **Ti-Member** (eine [**TOOLINFO-Struktur)**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) Informationen über das Tool, das den Punkt einnimmt. Das **cbSize-Member** der **ti-Struktur** muss vor dem Senden dieser Nachricht ausgefüllt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn das Tool den angegebenen Punkt einnimmt, andernfalls **false** .
+Gibt **TRUE zurück,** wenn das Tool den angegebenen Punkt belegt, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht muss gesendet werden, wenn für das Tool das "ttf Track"- \_ Flag festgelegt ist. Weitere Informationen zu diesem Flag finden Sie unter [**toolinfo**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa). Bei TTM \_ HitTest tritt ein Fehler \_ auf, wenn "ttf Track" nicht festgelegt ist, unabhängig davon, ob sich der Treffer Punkt im Tool Rechteck befindet oder nicht.
+Diese Meldung muss gesendet werden, wenn für das Tool das TTF \_ TRACK-Flag festgelegt ist. Weitere Informationen zu diesem Flag finden Sie unter [**TOOLINFO**](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa). TTM HITTEST wird fehlschlagen, wenn TTF TRACK nicht festgelegt ist, unabhängig davon, ob sich der Trefferpunkt im Rechteck der Tools \_ \_ befindet oder nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Diese Nachricht muss gesendet werden, wenn für das Tool das "ttf Track"- \_ Fla
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TTM \_ Hittestw** (Unicode) und **TTM \_ hittesta** (ANSI)<br/>                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TTM \_ HITTESTW** (Unicode) und **TTM \_ HITTESTA** (ANSI)<br/>                   |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Translatedispatch-Rückruffunktion
-description: Wird vom Client der doreadermode-Funktion zum Abfangen und expliziten verarbeiten von Windows-Meldungen verwendet, die für den scrollbereich des Fensters "Lesemodus" bestimmt sind. Dies ist eine Anwendungs definierte Rückruffunktion.
+title: TranslateDispatch-Rückruffunktion
+description: Wird vom Client der DoReaderMode-Funktion zum Abfangen und expliziten Verarbeiten von Windows-Nachrichten verwendet, die für den Bildlaufbereich des Readermodusfensters vorgesehen sind. Dies ist eine anwendungsdefinierte Rückruffunktion.
 ms.assetid: a50cff4f-ae10-4c3c-a386-9ec7c7d6256f
 keywords:
-- Windows-Steuerelemente für translatedispatch-Rückruf Funktionen
+- TranslateDispatch-Rückruffunktion Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1230ed1e65f8d739f9a0a05e4788eb919c45c4cd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 08f726c3f56579260e96a882f1123d035df37cb3f7f71fd0ecbc47d41672359c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060530"
 ---
-# <a name="translatedispatch-callback-function"></a>Translatedispatch-Rückruffunktion
+# <a name="translatedispatch-callback-function"></a>TranslateDispatch-Rückruffunktion
 
-\[*Translatedispatch* ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
+\[*TranslateDispatch* ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden.\]
 
-Wird vom Client der [**doreadermode**](doreadermode.md) -Funktion zum Abfangen und expliziten verarbeiten von Windows-Meldungen verwendet, die für den scrollbereich des Fensters "Lesemodus" bestimmt sind. Dies ist eine Anwendungs definierte Rückruffunktion.
+Wird vom Client der [**DoReaderMode-Funktion**](doreadermode.md) verwendet, um alle Windows-Meldungen abzufangen und explizit zu verarbeiten, die für den Scrollbereich des Readermodusfensters vorgesehen sind. Dies ist eine anwendungsdefinierte Rückruffunktion.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL CALLBACK TranslateDispatch(
 
 <dl> <dt>
 
-*lpmsg* \[ in\]
+*lpmsg* \[ In\]
 </dt> <dd>
 
-Typ: * Konstante *[**msg**](/windows/win32/api/winuser/ns-winuser-msg) \** _
+Typ: **const [**MSG**](/windows/win32/api/winuser/ns-winuser-msg) \***
 
-Ein Zeiger auf eine [_ *msg* *](/windows/win32/api/winuser/ns-winuser-msg) -Struktur, die die abgefangene Meldung enthält.
+Ein Zeiger auf eine [**MSG-Struktur,**](/windows/win32/api/winuser/ns-winuser-msg) die die abgefangene Nachricht enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **bool**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **BOOL**](/windows/desktop/WinProg/windows-data-types)**
 
-**True** , wenn die Meldung von dieser Funktion behandelt wurde. andernfalls **false**. Wenn der Wert **false** ist, wird die Nachricht von der Standard Implementierung des Lesemodus verarbeitet. Diese Implementierung behandelt die Mausbewegung und Schaltflächen sowie Tastendruck.
+**TRUE,** wenn die Nachricht von dieser Funktion verarbeitet wurde; Andernfalls **FALSE**. **False** gibt an, dass die Nachricht von der Implementierung des Standardlesemodus behandelt wird. Diese Implementierung behandelt Mausbewegungen und Schaltflächen sowie Tastendrucke.
 
 ## <a name="examples"></a>Beispiele
 
@@ -87,8 +87,8 @@ TranslateDispatchCallback(LPMSG lpmsg)
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista, Windows Vista \[ -Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista, nur Windows \[ Vista-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>          |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: TB_GETUNICODEFORMAT Nachricht (Commctrl.h)
+title: TB_GETUNICODEFORMAT Meldung (Commctrl.h)
 description: 'TB_GETUNICODEFORMAT Meldung: Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.'
 ms.assetid: aadce646-daf1-4f1e-9171-2aeac12d3484
 keywords:
-- TB_GETUNICODEFORMAT Meldung Windows-Steuerelemente
+- TB_GETUNICODEFORMAT Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4beb5a5ff0b71dd76c85db2788d9dc91aa9f4957
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: aa59269813dde63f15980abc919e50cfaf4dcf5a3c86da311f2aa5206618e88e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061370"
 ---
 # <a name="tb_getunicodeformat-message"></a>TB \_ GETUNICODEFORMAT-Nachricht
 
@@ -39,7 +39,7 @@ Ruft das Unicode-Zeichenformatflag für das Steuerelement ab.
 
 Gibt das Unicode-Formatflag für das Steuerelement zurück. Wenn dieser Wert ungleich 0 (null) ist, verwendet das Steuerelement Unicode-Zeichen. Wenn dieser Wert 0 (null) ist, verwendet das Steuerelement ANSI-Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNICODEFORMAT.**](ccm-getunicodeformat.md)
 
@@ -47,15 +47,15 @@ Eine Erläuterung dieser Meldung finden Sie in den Hinweisen zu [**CCM \_ GETUNI
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

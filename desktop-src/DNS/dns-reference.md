@@ -1,21 +1,21 @@
 ---
-title: DNS-Verweis
-description: DNS-Verweis
+title: DNS-Referenz
+description: DNS-Referenz
 ms.assetid: 4dfb4310-f326-4318-918c-fe596ae0d561
 keywords:
 - Domain Name System, Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5da8c40e9da097dcdeb313388a133079363c866e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: dcaef447e9ff0a31fe42041a828ac702d7f02f59c7d04ebd24d701ddef19ea98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104070"
 ---
-# <a name="dns-reference"></a>DNS-Verweis
+# <a name="dns-reference"></a>DNS-Referenz
 
-In diesem Abschnitt werden die programmgesteuerten Elemente in der Domain Name System-API definiert. Die DNS-Referenz besteht aus folgendem:
+In diesem Abschnitt werden die programmgesteuerten Elemente in der Domain Name System-API definiert. Der DNS-Verweis besteht aus:
 
 -   [DNS-Rückrufe](dns-callbacks.md)
 -   [DNS-Konstanten](dns-constants.md)
@@ -24,9 +24,9 @@ In diesem Abschnitt werden die programmgesteuerten Elemente in der Domain Name S
 -   [DNS-Funktionen](dns-functions.md)
 -   [DNS-Strukturen](dns-structures.md)
 
- 
+ 
 
- 
+ 
 
 
 

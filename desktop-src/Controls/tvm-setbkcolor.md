@@ -1,9 +1,9 @@
 ---
-title: TVM_SETBKCOLOR Meldung (kommstrg. h)
-description: Legt die Hintergrundfarbe des-Steuer Elements fest. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SetBkColor-Makros senden.
+title: TVM_SETBKCOLOR Nachricht (Commctrl.h)
+description: Legt die Hintergrundfarbe des Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ SetBkColor-Makros senden.
 ms.assetid: 087f5e0b-ac73-4db4-b82e-15c7641b681c
 keywords:
-- Windows-Steuerelemente für TVM_SETBKCOLOR Meldung
+- TVM_SETBKCOLOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 151aef7aa61e7c66d436d0c90f2481fada017059
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0609a15be2b8e05b1f8ca8f4f999cd4888ee946969c25f5bc1d86420b7529f2e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060120"
 ---
-# <a name="tvm_setbkcolor-message"></a>TVM- \_ SetBkColor-Meldung
+# <a name="tvm_setbkcolor-message"></a>TVM \_ SETBKCOLOR-Nachricht
 
-Legt die Hintergrundfarbe des-Steuer Elements fest. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setbkcolor) -Makros senden.
+Legt die Hintergrundfarbe des Steuerelements fest. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ SetBkColor-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setbkcolor) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Legt die Hintergrundfarbe des-Steuer Elements fest. Sie können diese Nachricht 
 *lParam* 
 </dt> <dd>
 
-[**COLORREF**](/windows/desktop/gdi/colorref) -Wert, der die neue Hintergrundfarbe enthält. Wenn dieser Wert-1 ist, wird das Steuerelement wieder auf die System Farbe für die Hintergrundfarbe zurückgesetzt.
+[**COLORREF-Wert,**](/windows/desktop/gdi/colorref) der die neue Hintergrundfarbe enthält. Wenn dieser Wert -1 ist, wird das Steuerelement auf die Systemfarbe für die Hintergrundfarbe zurückgesetzt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die vorherige Hintergrundfarbe darstellt. Wenn dieser Wert-1 ist, verwendet das Steuerelement die System Farbe für die Hintergrundfarbe.
+Gibt einen [**COLORREF-Wert**](/windows/desktop/gdi/colorref) zurück, der die vorherige Hintergrundfarbe darstellt. Wenn dieser Wert -1 ist, verwendet das Steuerelement die Systemfarbe für die Hintergrundfarbe.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt einen [**COLORREF**](/windows/desktop/gdi/colorref) -Wert zurück, der die 
 
 <dl> <dt>
 
-[**TVM \_ GetBkColor**](tvm-getbkcolor.md)
+[**TVM \_ GETBKCOLOR**](tvm-getbkcolor.md)
 </dt> </dl>
 
  

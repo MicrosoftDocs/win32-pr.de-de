@@ -1,9 +1,9 @@
 ---
-title: TDN_HELP Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer F1 auf der Tastatur drückt, während das Dialogfeld den Fokus besitzt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
+title: TDN_HELP Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer F1 auf der Tastatur drückt, während der Dialog den Fokus besitzt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der TaskDialogIndirect-Methode registriert werden kann.
 ms.assetid: 207ba231-639d-4906-b5dc-1592f2717f1c
 keywords:
-- Windows-Steuerelemente für TDN_HELP Benachrichtigungs
+- TDN_HELP Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64d5e08342094aec5adc3da42621307d1577cd68
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec5944fb136a76b880deb51b461a0e48b8d81ce2aca541cb6fa3717c3d79e9ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104460"
 ---
-# <a name="tdn_help-notification-code"></a>TDN- \_ Hilfe-Benachrichtigungs Code
+# <a name="tdn_help-notification-code"></a>TDN \_ HELP-Benachrichtigungscode
 
-Wird von einem Aufgaben Dialogfeld gesendet, wenn der Benutzer F1 auf der Tastatur drückt, während das Dialogfeld den Fokus besitzt. Dieser Benachrichtigungs Code wird nur über die Task Dialog-Rückruffunktion empfangen, die mit der [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Methode registriert werden kann.
+Wird von einem Aufgabendialogfeld gesendet, wenn der Benutzer F1 auf der Tastatur drückt, während der Dialog den Fokus besitzt. Dieser Benachrichtigungscode wird nur über die Rückruffunktion des Aufgabendialogfelds empfangen, die mit der [**TaskDialogIndirect-Methode**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) registriert werden kann.
 
 
 ```C++
@@ -63,9 +63,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

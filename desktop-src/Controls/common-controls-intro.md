@@ -4,12 +4,12 @@ description: In diesem Thema werden die allgemeinen Steuerelemente erläutert, e
 ms.assetid: c0d3eff4-c5b5-4b59-b980-96e0e4d6a595
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec57117aa125da853f710ddcc48705eb7400a669ae8555568c8b023ad8a4c8ee
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9aba62053eb7e2812e8f8e07bb2f694590fdcff2
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119698810"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812707"
 ---
 # <a name="about-common-controls"></a>Informationen zu allgemeinen Steuerelementen
 
@@ -20,8 +20,8 @@ In diesem Thema werden die allgemeinen Steuerelemente erläutert, eine Reihe von
 -   [Allgemeine Steuerungsversionen](common-control-versions.md)
 -   [Erstellen allgemeiner Steuerelemente](creating-common-controls.md)
 -   [Unicode-Unterstützung für allgemeine Steuerelemente](unicode-support.md)
--   [Lokalisierungsunterstützung für allgemeine Steuerelemente](cc-faq-localization.md)
--   [Häufig gestellte Fragen zu häufig gestellten Steuerelementen](cc-faq.md)
+-   [Lokalisierungsunterstützung für allgemeine Steuerelemente](cc-faq-localization.yml)
+-   [Häufig gestellte Fragen zu häufig gestellten Steuerelementen](cc-faq.yml)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

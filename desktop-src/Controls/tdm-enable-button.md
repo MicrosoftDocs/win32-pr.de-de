@@ -1,9 +1,9 @@
 ---
-title: TDM_ENABLE_BUTTON Meldung (kommstrg. h)
-description: Aktiviert oder deaktiviert eine Schaltfläche "Push" in einem Aufgaben Dialogfeld.
+title: TDM_ENABLE_BUTTON Nachricht (Commctrl.h)
+description: Aktiviert oder deaktiviert eine Pushschaltfläche in einem Aufgabendialogfeld.
 ms.assetid: 133fe4ac-4e2d-4826-8510-c0d9f88b5b37
 keywords:
-- Windows-Steuerelemente für TDM_ENABLE_BUTTON Meldung
+- TDM_ENABLE_BUTTON Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db10d616b4d07adcdc8c97495f7d12c89e603a7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a76603f61f3e27dce8cf7c8f5504457ce5a29a787b3b1f6357c1c519c735854
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104650"
 ---
-# <a name="tdm_enable_button-message"></a>TDM \_ - \_ Schaltflächen Nachricht aktivieren
+# <a name="tdm_enable_button-message"></a>TDM ENABLE BUTTON message (TDM \_ \_ ENABLE BUTTON-Meldung)
 
-Aktiviert oder deaktiviert eine Schaltfläche "Push" in einem Aufgaben Dialogfeld.
+Aktiviert oder deaktiviert eine Pushschaltfläche in einem Aufgabendialogfeld.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Ein **int** -Wert, der die ID der Push-Schaltfläche angibt, die aktiviert oder deaktiviert werden soll.
+Ein **int-Wert,** der die ID der zu aktivierenden oder zu deaktivierenden Pushschaltfläche angibt.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Gibt den Schaltflächen Zustand an. Auf 0 festlegen, um die Schaltfläche zu deaktivieren. Legen Sie auf ungleich NULL fest, um die Schaltfläche zu aktivieren.
+Gibt den Schaltflächenzustand an. Legen Sie auf 0 fest, um die Schaltfläche zu deaktivieren. legen Sie auf ungleich 0 (null) fest, um die Schaltfläche zu aktivieren.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Der Rückgabewert wird ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: Microsoft. ISAM. ESENT. Interop. Vista-Namespace'
-title: Microsoft. ISAM. ESENT. Interop. Vista-Namespace ()
+description: 'Weitere Informationen zu: Microsoft.Isam.Esent.Interop.Vista-Namespace'
+title: Microsoft.Isam.Esent.Interop.Vista-Namespace ()
 TOCTitle: '@NoTitle'
 ms:assetid: N:Microsoft.Isam.Esent.Interop.Vista
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista(v=EXCHG.10)
@@ -14,14 +14,14 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 8a6a8e7705b157ce61fc674cb08f19e4eca75f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85258e4e1dab0060ae8586d200c30b9f31d1b779083eb182038f1ed04bdb48a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104557078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115615"
 ---
-# <a name="microsoftisamesentinteropvista-namespace"></a>Microsoft. ISAM. ESENT. Interop. Vista-Namespace
+# <a name="microsoftisamesentinteropvista-namespace"></a>Microsoft.Isam.Esent.Interop.Vista-Namespace
 
 ## <a name="classes"></a>Klassen
 
@@ -30,39 +30,39 @@ ms.locfileid: "104557078"
 <tr class="header">
 <th> </th>
 <th>Klasse</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
 <td><a href="dn351217(v=exchg.10).md">JET_OPENTEMPORARYTABLE</a></td>
-<td>Eine Auflistung von Parametern für die jetopertemporarytable-Methode.</td>
+<td>Eine Auflistung von Parametern für die JetOpenTemporaryTable-Methode.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
-<td><a href="dn335321(v=exchg.10).md">Vistaapi</a></td>
-<td>ESENT-APIs, die zuerst in Windows Vista unterstützt wurden.</td>
+<td><a href="dn335321(v=exchg.10).md">VistaApi</a></td>
+<td>ESENT-APIs, die erstmals in Windows Vista unterstützt wurden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
-<td><a href="dn335342(v=exchg.10).md">Vistacolinfo</a></td>
-<td>Spalten Informationsebenen, die der Vista-Version von ESENT hinzugefügt wurden.</td>
+<td><a href="dn335342(v=exchg.10).md">VistaColInfo</a></td>
+<td>Spalteninformationsebenen, die der Vista-Version von ESENT hinzugefügt wurden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
-<td><a href="dn351274(v=exchg.10).md">Vistacolyp</a></td>
+<td><a href="dn351274(v=exchg.10).md">VistaColtyp</a></td>
 <td>Spaltentypen, die der Vista-Version von ESENT hinzugefügt wurden.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
-<td><a href="dn335350(v=exchg.10).md">Vistagrbits</a></td>
+<td><a href="dn335350(v=exchg.10).md">VistaGrbits</a></td>
 <td>Grbits, die der Vista-Version von ESENT hinzugefügt wurden.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292085.pubclass(EXCHG.10).gif" title="Öffentliche Klasse" alt="Public class" /></td>
-<td><a href="dn335284(v=exchg.10).md">Vistaparam</a></td>
-<td>System Parameter, die der Vista-Version von ESENT hinzugefügt wurden.</td>
+<td><a href="dn335284(v=exchg.10).md">VistaParam</a></td>
+<td>Systemparameter, die der Vista-Version von ESENT hinzugefügt wurden.</td>
 </tr>
 </tbody>
 </table>
@@ -75,19 +75,19 @@ ms.locfileid: "104557078"
 <tr class="header">
 <th> </th>
 <th>Struktur</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/hh596136.pubstructure(exchg.10).gif" title="Öffentliche Struktur" alt="Public structure" /></td>
 <td><a href="hh557010(v=exchg.10).md">JET_RECSIZE</a></td>
-<td>Wird von <a href="dn335320(v=exchg.10).md">jetgetrecordsize (JET_SESID, JET_TABLEID, JET_RECSIZE, getrecordsizegrbit)</a> verwendet, um Informationen über die Verwendungs Anforderungen eines Datensatzes im Benutzerdaten Bereich, die Anzahl der Mengen Spalten, die Anzahl der Werte und den mehr Aufwand für die ESENT-Daten Satzstruktur zurückzugeben.</td>
+<td>Wird von <a href="dn335320(v=exchg.10).md">JetGetRecordSize(JET_SESID, JET_TABLEID, JET_RECSIZE, GetRecordSizeGrbit) verwendet,</a> um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl der Werte und den Mehraufwand für die ESENT-Datensatzstruktur zurückzugeben.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596136.pubstructure(exchg.10).gif" title="Öffentliche Struktur" alt="Public structure" /></td>
 <td><a href="hh578565(v=exchg.10).md">JET_THREADSTATS</a></td>
-<td>Enthält kumulative Statistiken für die Arbeit, die von der Datenbank-Engine auf dem aktuellen Thread ausgeführt wird. Diese Informationen werden über jetgetthreadstats zurückgegeben.</td>
+<td>Enthält kumulative Statistiken zu der Arbeit, die von der Datenbank-Engine im aktuellen Thread ausgeführt wird. Diese Informationen werden über JetGetThreadStats zurückgegeben.</td>
 </tr>
 </tbody>
 </table>
@@ -107,32 +107,32 @@ ms.locfileid: "104557078"
 <tr class="odd">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
 <td><a href="hh566355(v=exchg.10).md">JET_InstanceMiscInfo</a></td>
-<td>Informationsebenen für <a href="dn351258(v=exchg.10).md">jetgetinstancefehlinfo (JET_INSTANCE, JET_SIGNATURE, JET_InstanceMiscInfo)</a>.</td>
+<td>Informationsebenen für <a href="dn351258(v=exchg.10).md">JetGetInstanceMiscInfo(JET_INSTANCE, JET_SIGNATURE, JET_InstanceMiscInfo)</a>.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="dn335312(v=exchg.10).md">Legacyfile-Namen</a></td>
-<td>Optionen für "legacyfile"-Namen</td>
+<td><a href="dn335312(v=exchg.10).md">LegacyFileNames</a></td>
+<td>Optionen für LegacyFileNames</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh564489(v=exchg.10).md">Snapshotendgrbit</a></td>
-<td>Optionen für <a href="dn351267(v=exchg.10).md">jeto ssnapshotend (JET_OSSNAPID, snapshotendgrbit)</a>.</td>
+<td><a href="hh564489(v=exchg.10).md">SnapshotEndGrbit</a></td>
+<td>Optionen für <a href="dn351267(v=exchg.10).md">JetOSSnapshotEnd(JET_OSSNAPID, SnapshotEndGrbit)</a>.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh565195(v=exchg.10).md">Snapshotgetfrezeinfogrbit</a></td>
-<td>Optionen für <a href="dn351269(v=exchg.10).md">jedessnapshotgetfrezeinfo (JET_OSSNAPID, Int32, [], snapshotgetfrezeinfogrbit)</a>.</td>
+<td><a href="hh565195(v=exchg.10).md">SnapshotGetFreezeInfoGrbit</a></td>
+<td>Optionen für <a href="dn351269(v=exchg.10).md">JetOSSnapshotGetFreezeInfo(JET_OSSNAPID, Int32, [], SnapshotGetFreezeInfoGrbit)</a>.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh557462(v=exchg.10).md">Snapshotprepareingestancegrbit</a></td>
-<td>Optionen für <a href="dn335341(v=exchg.10).md">jedessnapshotprepareingestance (JET_OSSNAPID, JET_INSTANCE, snapshotprepareingestancegrbit)</a>.</td>
+<td><a href="hh557462(v=exchg.10).md">SnapshotPrepareInstanceGrbit</a></td>
+<td>Optionen für <a href="dn335341(v=exchg.10).md">JetOSSnapshotPrepareInstance(JET_OSSNAPID, JET_INSTANCE, SnapshotPrepareInstanceGrbit)</a>.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596136.pubenumeration(exchg.10).gif" title="Öffentliche Enumeration" alt="Public enumeration" /></td>
-<td><a href="hh566281(v=exchg.10).md">Snapshottrungateloggrbit</a></td>
-<td>Optionen für <a href="dn335343(v=exchg.10).md">jedessnapshottruneurelog (JET_OSSNAPID, snapshottrungateloggrbit)</a> und <a href="dn351271(v=exchg.10).md">jedessnapshottrungateloginstance (JET_OSSNAPID, JET_INSTANCE, snapshottruneureloggrbit)</a>.</td>
+<td><a href="hh566281(v=exchg.10).md">SnapshotTruncateLogGrbit</a></td>
+<td>Optionen für <a href="dn335343(v=exchg.10).md">JetOSSnapshotTruncateLog(JET_OSSNAPID, SnapshotTruncateLogGrbit)</a> und <a href="dn351271(v=exchg.10).md">JetOSSnapshotTruncateLogInstance(JET_OSSNAPID, JET_INSTANCE, SnapshotTruncateLogGrbit).</a></td>
 </tr>
 </tbody>
 </table>

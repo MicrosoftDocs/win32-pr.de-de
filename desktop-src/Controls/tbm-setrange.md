@@ -1,9 +1,9 @@
 ---
-title: TBM_SETRANGE Meldung (kommstrg. h)
-description: Legt den Bereich der minimalen und maximalen logischen Positionen für den Schieberegler in einer TrackBar fest.
+title: TBM_SETRANGE (Commctrl.h)
+description: Legt den Bereich der minimalen und maximalen logischen Positionen für den Schieberegler in einer Trackleiste fest.
 ms.assetid: 9c225742-8e5e-4f47-af8c-8243b6c90c1d
 keywords:
-- Windows-Steuerelemente für TBM_SETRANGE Meldung
+- TBM_SETRANGE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c9d870df628b06031374260c679f792f0b7218a5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dfcd4bf71cfcbc36e098bc83568bdf519209ec82cc9889b6b5ec3934d349f737
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040359"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061140"
 ---
-# <a name="tbm_setrange-message"></a>TBM- \_ Nachricht
+# <a name="tbm_setrange-message"></a>TBM \_ SETRANGE-Meldung
 
-Legt den Bereich der minimalen und maximalen logischen Positionen für den Schieberegler in einer TrackBar fest.
+Legt den Bereich der minimalen und maximalen logischen Positionen für den Schieberegler in einer Trackleiste fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt den Bereich der minimalen und maximalen logischen Positionen für den Schie
 *wParam* 
 </dt> <dd>
 
-Flag neu zeichnen. Wenn dieser Parameter **true** ist, wird die TrackBar nach dem Festlegen des Bereichs neu gezeichnet. Wenn dieser Parameter auf **false** festgelegt ist, legt die Meldung den Bereich fest, aber die TrackBar wird nicht neu gezeichnet.
+Flag neu gezeichnet. Wenn dieser Parameter **TRUE ist,** wird die Trackleiste neu gezeichnet, nachdem der Bereich festgelegt wurde. Wenn dieser Parameter **FALSE ist,** legt die Meldung den Bereich fest, zeichnet die Trackleiste jedoch nicht neu.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt die minimale Position für den Schieberegler an, und das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die maximale Position an.
+Das [**LOWORD gibt**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) die Mindestposition für den Schieberegler an, und [**das HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die maximale Position an.
 
 </dd> </dl>
 
@@ -47,11 +47,11 @@ Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gi
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich die aktuelle Position des Schiebereglers außerhalb des neuen Bereichs befindet, legt die **TBM- \_ SetRange** -Nachricht die Schiebereglerposition auf den neuen maximalen oder minimalen Wert fest.
+Wenn sich die aktuelle Position des Schiebereglers außerhalb des neuen Bereichs befindet, legt die **TBM \_ SETRANGE-Meldung** die Position des Schiebereglers auf den neuen höchst- oder minimalen Wert fest.
 
-Da diese Nachricht 2 16-Bit-ganz Zahl Werte ohne Vorzeichen annimmt, liegt der maximale Bereich, den diese Meldung angeben kann, zwischen 0 und 65.535. Um größere Bereichs Werte anzugeben, verwenden Sie die TBM-Nachrichten " [**TBM \_**](tbm-setrangemin.md) " und " [**TBM \_**](tbm-setrangemax.md) ".
+Da diese Nachricht zwei 16-Bit-Ganzzahlwerte ohne Vorzeichen angibt, liegt der maximale Bereich, den diese Nachricht angeben kann, zwischen 0 und 65.535. Verwenden Sie zum Angeben größerer Bereichswerte die [**\_ TBM-Meldungen SETRANGEMIN**](tbm-setrangemin.md) und [**TBM \_ SETRANGEMAX.**](tbm-setrangemax.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Da diese Nachricht 2 16-Bit-ganz Zahl Werte ohne Vorzeichen annimmt, liegt der m
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Da diese Nachricht 2 16-Bit-ganz Zahl Werte ohne Vorzeichen annimmt, liegt der m
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM-Objekt- \_ Max**](tbm-setrangemax.md)
+[**TBM \_ SETRANGEMAX**](tbm-setrangemax.md)
 </dt> <dt>
 
-[**TBM \_ -Anpassung**](tbm-setrangemin.md)
+[**TBM \_ SETRANGEMIN**](tbm-setrangemin.md)
 </dt> </dl>
 
  

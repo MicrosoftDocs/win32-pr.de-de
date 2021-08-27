@@ -1,7 +1,7 @@
 ---
-description: Beschreibt einen vollständigen Satz von Werten, die einem Auftrag zugeordnet sind, und unterstützt große Spooldateien mit Größen, ausgedrückt mit 64 Bits.
+description: Beschreibt einen vollständigen Satz von Werten, die einem Auftrag zugeordnet sind, und unterstützt große Spooldateien mit Größen, die mit 64 Bits ausgedrückt werden.
 ms.assetid: 90932ae2-ea9e-43bc-9a1d-c68223f6d0ee
-title: JOB_INFO_4 Struktur (winspool. h)
+title: JOB_INFO_4-Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 5a6ccd7bf589ed341c9aceab86205cd9852c0896
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dd338b4e6e486c59bfdac705b68c72c56eafb96c9f4e1899e9b4cb3b294791de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091920"
 ---
-# <a name="job_info_4-structure"></a>Auftrags \_ Info \_ 4-Struktur
+# <a name="job_info_4-structure"></a>JOB \_ INFO \_ 4-Struktur
 
-Beschreibt einen vollständigen Satz von Werten, die einem Auftrag zugeordnet sind, und unterstützt große Spooldateien mit Größen, ausgedrückt mit 64 Bits.
+Beschreibt einen vollständigen Satz von Werten, die einem Auftrag zugeordnet sind, und unterstützt große Spooldateien mit Größen, die mit 64 Bits ausgedrückt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,127 +64,127 @@ typedef struct _JOB_INFO_4 {
 
 <dl> <dt>
 
-**JobId**
+**Jobid**
 </dt> <dd>
 
-Ein Auftrags Bezeichnerwert.
+Ein Auftragsbezeichnerwert.
 
 </dd> <dt>
 
-**pprintername**
+**pPrinterName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Druckers angibt, für den der Auftrag gespoolkt ist.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckers angibt, für den der Auftrag gespoolt wird.
 
 </dd> <dt>
 
-**pmachinename**
+**pMachineName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Computers angibt, der den Druckauftrag erstellt hat.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Computers angibt, der den Druckauftrag erstellt hat.
 
 </dd> <dt>
 
-**pusername**
+**pUserName**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Benutzers angibt, der den Druckauftrag besitzt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Benutzers angibt, der der Eigentümer des Druckauftrags ist.
 
 </dd> <dt>
 
-**pdocument**
+**pDocument**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Namen des Druckauftrags angibt (z. b. "MS-Word: Review.doc").
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckauftrags angibt (z. B. "MS-WORD: Review.doc").
 
 </dd> <dt>
 
-**pnotifyname**
+**pNotifyName**
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Benutzers angibt, der benachrichtigt werden soll, wenn der Auftrag gedruckt wurde, oder wenn beim Drucken des Auftrags ein Fehler auftritt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Benutzers angibt, der benachrichtigt werden soll, wenn der Auftrag gedruckt wurde oder wenn beim Drucken des Auftrags ein Fehler auftritt.
 
 </dd> <dt>
 
-**pdatatype**
+**pDatatype**
 </dt> <dd>
 
 Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Datentyp angibt, der zum Aufzeichnen des Druckauftrags verwendet wird.
 
 </dd> <dt>
 
-**pprintprocessor**
+**pPrintProcessor**
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druck Prozessors angibt, der zum Drucken des Auftrags verwendet werden soll.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckprozessors angibt, der zum Drucken des Auftrags verwendet werden soll.
 
 </dd> <dt>
 
 **pParameters**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die Druck Prozessor Parameter angibt.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die Druckprozessorparameter angibt.
 
 </dd> <dt>
 
-**pdrivername**
+**pDriverName**
 </dt> <dd>
 
 Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des Druckertreibers angibt, der zum Verarbeiten des Druckauftrags verwendet werden soll.
 
 </dd> <dt>
 
-**pdevmode**
+**pDevMode**
 </dt> <dd>
 
-Ein Zeiger auf eine [**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea) -Struktur, die die Geräte Initialisierungs-und Umgebungs Daten für den Druckertreiber enthält.
+Ein Zeiger auf eine [**DEVMODE-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-devmodea) die Geräteinitialisierungs- und Umgebungsdaten für den Druckertreiber enthält.
 
 </dd> <dt>
 
-**pstatus**
+**pStatus**
 </dt> <dd>
 
-Ein Zeiger auf eine NULL-terminierte Zeichenfolge, die den Status des Druckauftrags angibt. Dieser Member sollte vor dem **Status** geprüft werden, und wenn **pstatus** den Wert **null** hat, wird der Status durch den Inhalt des statusmembers definiert.
+Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Status des Druckauftrags angibt. Dieser Member sollte vor **Status** überprüft werden. Wenn **pStatus** **NULL** ist, wird der Status durch den Inhalt des Statusmembers definiert.
 
 </dd> <dt>
 
-**psecuritydescriptor**
+**pSecurityDescriptor**
 </dt> <dd>
 
-Der Wert dieses Members ist **null**. Das Abrufen und Festlegen von Dokument Sicherheits Deskriptoren wird in dieser Version nicht unterstützt.
+Der Wert dieses Members ist **NULL.** Das Abrufen und Festlegen von Dokumentsicherheitsbeschreibungen wird in dieser Version nicht unterstützt.
 
 </dd> <dt>
 
 **Status**
 </dt> <dd>
 
-Der Status des Auftrags. Dieser Member kann einen oder mehrere der folgenden Werte aufweisen:
+Der Auftragsstatus. Bei diesem Member kann es sich um einen oder mehrere der folgenden Werte handelt:
 
 | Wert                           | Bedeutung                                                      |
 |---------------------------------|--------------------------------------------------------------|
-| der Auftrags \_ Status ist \_ blockiert \_ devq.      | Der Treiber kann den Auftrag nicht drucken.                             |
-| Auftrags \_ Status \_ gelöscht            | Der Auftrag wurde gelöscht.                                        |
-| Auftrags \_ Status wird \_ gelöscht           | Der Auftrag wird gelöscht.                                        |
-| Auftrags \_ Status \_ Fehler              | Dem Auftrag ist ein Fehler zugeordnet.                         |
-| Auftrags \_ Status \_ Offline            | Der Drucker ist offline.                                          |
-| Ausgabe des Auftrags \_ Status \_           | Der Drucker ist nicht mehr im Papier.                                     |
-| Auftrags \_ Status \_ angehalten             | Der Auftrag wurde angehalten.                                               |
-| Auftrags \_ Status \_ gedruckt            | Der Auftrag hat gedruckt.                                             |
-| Drucken von Auftrags \_ Status \_           | Der Auftrag wird gedruckt.                                             |
-| Auftrags \_ Status \_ neu starten            | Der Auftrag wurde neu gestartet.                                      |
-| Auftrags \_ Status \_ Spoolvorgang           | Auftrag ist Spoolvorgang.                                             |
-| Auftrags \_ Status \_ Benutzer \_ Eingriff | Der Drucker weist einen Fehler auf, der erfordert, dass der Benutzer etwas tut. |
+| \_ \_ AUFTRAGSSTATUS BLOCKIERT \_ DEVQ      | Der Treiber kann den Auftrag nicht drucken.                             |
+| AUFTRAGSSTATUS \_ \_ GELÖSCHT            | Der Auftrag wurde gelöscht.                                        |
+| \_LÖSCHEN DES AUFTRAGSSTATUS \_           | Der Auftrag wird gelöscht.                                        |
+| \_ \_ AUFTRAGSSTATUSFEHLER              | Dem Auftrag wird ein Fehler zugeordnet.                         |
+| AUFTRAGSSTATUS \_ \_ OFFLINE            | Der Drucker ist offline.                                          |
+| JOB \_ STATUS \_ PAPEROUT           | Der Drucker ist nicht mehr auf Papier.                                     |
+| AUFTRAGSSTATUS \_ \_ ANGEHALTEN             | Der Auftrag wird angehalten.                                               |
+| AUFTRAGSSTATUS \_ \_ GEDRUCKT            | Der Auftrag wurde gedruckt.                                             |
+| \_DRUCKEN DES AUFTRAGSSTATUS \_           | Der Auftrag wird gedruckt.                                             |
+| \_ \_ AUFTRAGSSTATUSNEUSTART            | Der Auftrag wurde neu gestartet.                                      |
+| \_ \_ AUFTRAGSSTATUSSPOOLING           | Der Auftrag wird gespoolt.                                             |
+| \_BENUTZEREINGRIFF BEIM AUFTRAGSSTATUS \_ \_ | Drucker weist einen Fehler auf, der erfordert, dass der Benutzer etwas tut. |
 
 
 
  
 
-In Windows XP und höheren Versionen von Windows können auch die folgenden Werte verwendet werden:
+In Windows XP und neueren Versionen von Windows können auch die folgenden Werte verwendet werden:
 
 | Wert                 | Bedeutung                                                                                       |
 |-----------------------|-----------------------------------------------------------------------------------------------|
-| Auftrags \_ Status ist \_ fertiggestellt | Der Auftrag wird an den Drucker gesendet, aber möglicherweise noch nicht gedruckt. Weitere Informationen finden Sie unter Hinweise. |
-| Auftrags \_ Status \_ beibehalten | Der Auftrag wurde nach dem Drucken in der Druck Warteschlange beibehalten.                              |
+| AUFTRAGSSTATUS \_ \_ ABGESCHLOSSEN | Der Auftrag wird an den Drucker gesendet, ist aber möglicherweise noch nicht gedruckt. Weitere Informationen finden Sie unter Hinweise. |
+| AUFTRAGSSTATUS \_ \_ BEIBEHALTEN | Der Auftrag wurde nach dem Drucken in der Druckwarteschlange beibehalten.                              |
 
 
 
@@ -195,15 +195,15 @@ In Windows XP und höheren Versionen von Windows können auch die folgenden Wert
 **Priority**
 </dt> <dd>
 
-Die Auftrags Priorität. Bei diesem Element kann es sich um einen der folgenden Werte oder um einen Bereich zwischen 1 und 99 (minimale \_ Priorität bis Max \_ . Priorität) handeln.
+Die Auftragspriorität. Dieser Member kann einer der folgenden Werte oder im Bereich zwischen 1 und 99 (MIN \_ PRIORITY bis MAX \_ PRIORITY) sein.
 
 
 
 | Wert         | Bedeutung           |
 |---------------|-------------------|
-| minimale \_ Priorität | Minimale Priorität. |
-| maximale \_ Priorität | Maximale Priorität. |
-| DEF- \_ Priorität | Standardpriorität. |
+| MIN \_ PRIORITY | Mindestpriorität. |
+| MAX \_ PRIORITY | Maximale Priorität. |
+| DEF \_ PRIORITY | Standardpriorität. |
 
 
 
@@ -214,71 +214,71 @@ Die Auftrags Priorität. Bei diesem Element kann es sich um einen der folgenden 
 **Position**
 </dt> <dd>
 
-Die Position des Auftrags in der Druck Warteschlange.
+Die Position des Auftrags in der Druckwarteschlange.
 
 </dd> <dt>
 
 **StartTime**
 </dt> <dd>
 
-Der früheste Zeitpunkt, an dem der Auftrag gedruckt werden kann.
+Der früheste Zeitpunkt, zu dem der Auftrag gedruckt werden kann.
 
 </dd> <dt>
 
 **UntilTime**
 </dt> <dd>
 
-Der letzte Zeitpunkt, zu dem der Auftrag gedruckt werden kann.
+Die letzte Zeit, zu der der Auftrag gedruckt werden kann.
 
 </dd> <dt>
 
 **TotalPages**
 </dt> <dd>
 
-Die Anzahl der Seiten, die für den Auftrag benötigt werden. Dieser Wert kann NULL sein, wenn der Druckauftrag keine Seiten Begrenzungs Informationen enthält.
+Die Anzahl der seiten, die für den Auftrag erforderlich sind. Dieser Wert kann 0 (null) sein, wenn der Druckauftrag keine Seitentrenninformationen enthält.
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd>
 
-Die unteren vier Bytes der Größe (in Bytes) des Auftrags. Siehe auch das **sizehigh** -Member weiter unten.
+Die unteren vier Bytes der Größe des Auftrags in Bytes. Siehe auch das **SizeHigh-Element** weiter unten.
 
 </dd> <dt>
 
 **Gesendet**
 </dt> <dd>
 
-Eine [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Struktur, die die Uhrzeit angibt, zu der der Auftrag übermittelt wurde.
+Eine [**SYSTEMTIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die den Zeitpunkt angibt, zu dem der Auftrag übermittelt wurde.
 
-Dieser Zeitwert liegt im UTC-Format (Universal Time Koordinate) vor. Sie sollten Sie in einen lokalen Uhrzeitwert konvertieren, bevor Sie Sie anzeigen. Sie können die [**filetimetolocalfiletime**](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) -Funktion verwenden, um die Konvertierung auszuführen.
+Dieser Zeitwert liegt im UTC-Format (Universal Time Coordinate) vor. Sie sollten ihn in einen Lokalen Zeitwert konvertieren, bevor Sie ihn anzeigen. Sie können die [**FileTimeToLocalFileTime-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) verwenden, um die Konvertierung durchzuführen.
 
 </dd> <dt>
 
 **Time**
 </dt> <dd>
 
-Die Gesamtzeit in Millisekunden, die seit dem Drucken des Auftrags verstrichen ist.
+Die Gesamtzeit in Millisekunden, die seit beginn des Drucks des Auftrags verstrichen ist.
 
 </dd> <dt>
 
 **PagesPrinted**
 </dt> <dd>
 
-Die Anzahl der Seiten, die gedruckt wurden. Dieser Wert kann NULL sein, wenn der Druckauftrag keine Seiten Begrenzungs Informationen enthält.
+Die Anzahl der seiten, die gedruckt wurden. Dieser Wert kann 0 (null) sein, wenn der Druckauftrag keine Informationen zum Seitentrennzeichen enthält.
 
 </dd> <dt>
 
-**Sizehigh**
+**SizeHigh**
 </dt> <dd>
 
-Die höheren vier Bytes der Größe (in Bytes) des Auftrags. Siehe auch das **Größen** Element oben.
+Die höheren vier Bytes der Größe des Auftrags in Bytes. Siehe auch das **oben genannte Size-Member.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftrags Status fest, wenn \_ \_ der Auftrag an den Drucker gesendet wird.
+Portmonitore, die TrueEndOfJob nicht unterstützen, legen den Auftrag sofort nach dem Senden des Auftrags an den Drucker auf JOB \_ STATUS \_ PRINTED fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -288,22 +288,22 @@ Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftr
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Winspool. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Auftrags \_ Info \_ 4W** (Unicode) und **\_ Auftrags \_ Info \_ 4a** (ANSI)<br/>               |
+| Header<br/>                   | <dl> <dt>Winspool.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ JOB \_ INFO \_ 4W** (Unicode) und **\_ JOB INFO \_ \_ 4A** (ANSI)<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**DEVMODE**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
+[**Devmode**](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 </dt> <dt>
 
 [**EnumJobs**](enumjobs.md)
@@ -312,7 +312,7 @@ Port Monitore, die trueendofjob nicht unterstützen, legen den Auftrag als Auftr
 [**GetJob**](getjob.md)
 </dt> <dt>
 
-[**Setjob**](setjob.md)
+[**SetJob**](setjob.md)
 </dt> </dl>
 
  

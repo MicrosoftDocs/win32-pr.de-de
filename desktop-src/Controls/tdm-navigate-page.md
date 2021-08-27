@@ -1,9 +1,9 @@
 ---
-title: TDM_NAVIGATE_PAGE Meldung (kommstrg. h)
-description: Erstellt ein Aufgaben Dialogfeld mit neuen Inhalten neu und simuliert die Funktionalität eines Assistenten für mehrere Seiten.
+title: TDM_NAVIGATE_PAGE Nachricht (Commctrl.h)
+description: Erstellt ein Aufgabendialogfeld mit neuen Inhalten neu und simuliert die Funktionalität eines mehrseitigen Assistenten.
 ms.assetid: e0eefd08-e279-47db-97e9-7ca86b41e22f
 keywords:
-- Windows-Steuerelemente für TDM_NAVIGATE_PAGE Meldung
+- TDM_NAVIGATE_PAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,32 +14,32 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56fc86e0e4fe457a43e035ed5d568e91303c7fcd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c7894bdc5831af2c1fe2e779679aaab38eab94f976cf9c586dfe64d26a051b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104630"
 ---
-# <a name="tdm_navigate_page-message"></a>TDM- \_ Navigations \_ Seite (Meldung)
+# <a name="tdm_navigate_page-message"></a>TDM \_ NAVIGATE \_ PAGE-Meldung
 
-Erstellt ein Aufgaben Dialogfeld mit neuen Inhalten neu und simuliert die Funktionalität eines Assistenten für mehrere Seiten.
+Erstellt ein Aufgabendialogfeld mit neuen Inhalten neu und simuliert die Funktionalität eines mehrseitigen Assistenten.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Nicht verwendet. Muss Null sein.
+Wird nicht verwendet. Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**TASKDIALOGCONFIG**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig) -Struktur, die das zu Erstell gende Aufgaben Dialogfeld beschreibt. Die aufrufenden Anwendung muss diese Struktur zuordnen und deren Member festlegen. Die Werte der Elemente variieren abhängig von der Art der Seite, zu der der Benutzer navigiert.
+Ein Zeiger auf eine [**TASKDIALOGCONFIG-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig) die das zu erstellende Aufgabendialogfeld beschreibt. Die aufrufende Anwendung muss diese Struktur zuordnen und ihre Member festlegen. Die Werte der Elemente variieren je nach Art der Seite, zu der der Benutzer navigiert.
 
 </dd> </dl>
 
@@ -47,11 +47,11 @@ Ein Zeiger auf eine [**TASKDIALOGCONFIG**](/windows/desktop/api/Commctrl/ns-comm
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie die [**TaskDialogIndirect**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) -Funktion, um ein Aufgaben Dialogfeld für den Assistenten zu starten. Wenn der Benutzer mithilfe des Assistenten navigiert, senden Sie diese Meldung an das Aufgaben Dialogfeld, um die nächste Seite anzuzeigen. Ein neues Aufgaben Dialogfeld (wie eine neue Seite) wird mit den in der Struktur angegebenen Elementen erstellt, auf die von *LPARAM* verwiesen wird. Bei der Erstellung wird der gesamte Inhalt des dialograhmens zerstört und rekonstruiert. Dadurch gehen alle Zustandsinformationen, die von Steuerelementen (z. b. Statusanzeige, expando-Schaltfläche oder Überprüfungs Kästchen) im Dialogfeld gespeichert werden, verloren.
+Verwenden Sie die [**TaskDialogIndirect-Funktion,**](/windows/desktop/api/Commctrl/nf-commctrl-taskdialogindirect) um ein Assistenten-Aufgabendialogfeld zu starten. Wenn der Benutzer mithilfe des Assistenten navigiert, senden Sie diese Meldung an das Aufgabendialogfeld, um die nächste Seite anzuzeigen. Ein neues Aufgabendialogfeld (sieht wie eine neue Seite aus) wird mit den Elementen erstellt, die in der -Struktur angegeben sind, auf die *von lParam* gezeigt wird. Bei der Erstellung wird der gesamte Inhalt des Dialograhmens zerstört und rekonstruiert. Daher sind alle Zustandsinformationen, die von Steuerelementen (z. B. eine Statusanzeige, eine Expandoschaltfläche oder ein Überprüfungskontrollkästchen) im Dialogfeld enthalten sind, verloren gegangen.
 
-Das Layout des Aufgaben Dialogfelds schlägt möglicherweise fehl, und dies wird möglicherweise nicht im Rückgabewert berücksichtigt. Der Rückgabewert S \_ OK gibt nur an, dass das Aufgaben Dialogfeld die Nachricht empfangen und versucht hat, Sie zu verarbeiten. Wenn das Layout des Aufgaben Dialogfelds fehlschlägt (das Aufgaben Dialogfeld kann nicht angezeigt werden), wird das Dialogfeld geschlossen, und ein **HRESULT** -Code wird bei der registrierten Rückruffunktion zurückgegeben. Weitere Informationen zur Syntax der Rückruffunktion finden Sie unter [*taskdialogcallbackproc*](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback).
+Das Layout des Aufgabendialogfelds schlägt möglicherweise fehl, und dies wird möglicherweise nicht im Rückgabewert widergespiegelt. Der Rückgabewert S \_ OK gibt nur an, dass das Taskdialogfeld die Nachricht empfangen und versucht hat, sie zu verarbeiten. Wenn das Layout des Aufgabendialogfelds fehlschlägt (das Aufgabendialogfeld kann nicht angezeigt werden), wird das Dialogfeld geschlossen, und bei der registrierten Rückruffunktion wird ein **HRESULT-Code** zurückgegeben. Weitere Informationen zur Syntax der Rückruffunktion finden Sie unter [*TaskDialogCallbackProc.*](/windows/win32/api/commctrl/nc-commctrl-pftaskdialogcallback)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Das Layout des Aufgaben Dialogfelds schlägt möglicherweise fehl, und dies wird
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

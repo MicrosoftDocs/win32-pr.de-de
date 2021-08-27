@@ -1,15 +1,15 @@
 ---
-description: Mit der Step-Methode wird der DVD-Video Stream um die angegebene Anzahl von Frames erweitert.
+description: Die Step-Methode gibt DVD-Video um die angegebene Anzahl von Frames an.
 ms.assetid: 6f67335e-51c7-4b81-8ab3-86a3d70ac871
 title: Step-Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 29b9c3f20e41c52bfa32c2cf0138c9e286c98e13
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: be5738e8704b24d64a429d8d38f1b9eac2f9b8ff7e22a7e9d1d2a29fb9df4f03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050310"
 ---
 # <a name="step-method"></a>Step-Methode
 
@@ -18,7 +18,7 @@ ms.locfileid: "106362612"
 
  
 
-Die- `Step` Methode verschiebt den DVD-Video Stream um die angegebene Anzahl von Frames.
+Die `Step` -Methode gibt DVD-Video um die angegebene Anzahl von Frames an.
 
 ``` syntax
 MSWebDVD.Step(iFrames)
@@ -28,10 +28,10 @@ MSWebDVD.Step(iFrames)
 
 <dl> <dt>
 
-<span id="iFrames"></span><span id="iframes"></span><span id="IFRAMES"></span>*iFrames*
+<span id="iFrames"></span><span id="iframes"></span><span id="IFRAMES"></span>*Iframes*
 </dt> <dd>
 
-Gibt die Anzahl der Rahmen an, die als ganze Zahl durchlaufen werden sollen.
+Gibt die Anzahl der Frames an, für die ein Einzelschritt als ganze Zahl festgelegt werden soll.
 
 </dd> </dl>
 
@@ -39,11 +39,11 @@ Gibt die Anzahl der Rahmen an, die als ganze Zahl durchlaufen werden sollen.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Rufen Sie vor dem Aufrufen dieser Methode [**canstep**](canstep-method.md) auf, um zu bestimmen, ob der Decoder Frame-Step unterstützt.
+Rufen Sie vor dem Aufrufen dieser Methode [**CanStep**](canstep-method.md) auf, um zu bestimmen, ob der Decoder Frameschritte unterstützt.
 
-Wenn die DVD-Video im umgekehrten Modus wiedergegeben wird, wenn diese Methode aufgerufen wird, und der Decoder die umgekehrte Frame Ausführung unterstützt, erfolgt die schrittweise Ausführung der Frame Ausführung in umgekehrter Reihenfolge.
+Wenn die DVD-Video beim Aufrufen dieser Methode im umgekehrten Modus abspielt und der Decoder umgekehrte Rahmenschritte unterstützt, erfolgt die Frameschritte umgekehrt.
 
  
 

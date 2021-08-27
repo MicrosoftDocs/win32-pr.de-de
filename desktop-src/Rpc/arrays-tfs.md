@@ -1,54 +1,54 @@
 ---
 title: Arrays (RPC) (TFS)
-description: Remote Prozedur Aufruf (RPC)-Array Kategorien umfassen eine Übereinstimmung mit fester Größe, Konformität, konform, unterschiedlich und komplex.
+description: Rpc-Arraykategorien (Remote Procedure Call) umfassen eine feste Größe, eine konforme, konforme variierende, variierende und komplexe.
 ms.assetid: 7144ec87-90f2-463a-80e4-28cb4771325f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6d564a2dfd838006be1667343b14a57bdaf4b07
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: 6271f6a459ebfb96cc5c4d55153bb4c77b013a50925d9c3a4ba9dd81b0f6fbdf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073490"
 ---
 # <a name="arrays-rpc"></a>Arrays (RPC)
 
-Mehrere Array Kategorien wurden basierend auf ihren Leistungsmerkmalen definiert, primär, ob das Array Block kopiert werden kann.
+Mehrere Arraykategorien wurden basierend auf ihren Leistungsmerkmalen definiert, in erster Linie, ob das Array blockkopiert werden kann.
 
-Für einige Kategorien, z. b. ein Array mit fester Größe, sind zwei Typen von Array Deskriptoren vorhanden. Sie werden durch eine Korrektur im Namen des vorangehende FC-Tokens angegeben.
+Für einige Kategorien, z. B. ein Array mit fester Größe, gibt es zwei Typen von Arraydeskriptoren: Sie werden durch eine Korrektur im Namen des führenden FC-Tokens angegeben.
 
 
 
-| Zeichen formatieren | BESCHREIBUNG                                                           |
+| Formatzeichen | BESCHREIBUNG                                                           |
 |------------------|-----------------------------------------------------------------------|
-| SM               | Die Gesamtgröße des Typs kann in einem 16-Bit-Ganzzahl ohne Vorzeichen dargestellt werden.    |
-| LG               | Die Gesamtgröße des Typs muss eine 32-Bit-Länge ohne Vorzeichen aufweisen, um dargestellt zu werden. |
+| SM               | Die Gesamtgröße des Typs kann in einem 16-Bit-Datentyp ohne Vorzeichen dargestellt werden.    |
+| LG               | Die Gesamtgröße des Typs benötigt eine 32-Bit-Länge ohne Vorzeichen, um dargestellt zu werden. |
 
 
 
  
 
-Felder, die Arrays gemeinsam haben:
+Felder, die Arrays gemeinsam sind:
 
--   Gesamt \_ Größe
+-   \_Gesamtgröße
 
-    Gesamtgröße des Arrays im Speicher in Bytes. Dies entspricht der Netzwerkgröße nach der Ausrichtung. Die Gesamtgröße wird für Kategorien berechnet, für die das Auffüll Problem nicht vorhanden ist, und die Größe ist die tatsächliche Array Größe.
+    Gesamtgröße des Arrays im Arbeitsspeicher in Bytes. Dies ist identisch mit der Kabelgröße nach der Ausrichtung. Die Gesamtgröße wird für Kategorien berechnet, für die das Paddingproblem nicht vorhanden ist, und die Größe ist die tatsächliche Arraygröße.
 
--   Element \_ Größe
+-   \_Elementgröße
 
-    Gesamtgröße des Arbeitsspeichers eines einzelnen Elements des Arrays, einschließlich Auffüll Zeichen (Dies kann nur bei komplexen Arrays Vorkommen).
+    Gesamtgröße im Arbeitsspeicher eines einzelnen Elements des Arrays, einschließlich Auf padding (dies kann nur bei komplexen Arrays der Fall sein).
 
--   Element \_ Beschreibung
+-   \_Elementbeschreibung
 
-    Die Beschreibung des Array Elementtyps.
+    Beschreibung des Arrayelementtyps.
 
--   Zeiger \_ Layout
+-   Zeigerlayout \_
 
-    Weitere Informationen finden Sie im Thema [Zeiger Layout](pointer-layout-tfs.md) .
+    Weitere Informationen [finden Sie im](pointer-layout-tfs.md) Thema Zeigerlayout.
 
-## <a name="fixed-sized-arrays"></a>Arrays mit fester Größe
+## <a name="fixed-sized-arrays"></a>Arrays fester Größe
 
-Eine Array Format Zeichenfolge mit fester Größe wird für Arrays mit einer bekannten Größe generiert und kann daher in den marshallingpuffer kopiert werden. Die beiden folgenden Formate für ein festes Array Deskriptor sind wie folgt.
+Eine Arrayformatzeichenfolge mit fester Größe wird für Arrays mit bekannter Größe generiert und kann daher in den Marshallingpuffer kopiert werden. Die beiden Formate für feste Arraydeskriptoren lauten wie folgt.
 
 ``` syntax
 FC_SMFARRAY alignment<1> 
@@ -70,7 +70,7 @@ FC_END
 
 ## <a name="conformant-array"></a>Konformes Array
 
-Ein konformes Array kann blockiert werden, sobald die Array Größe bekannt ist.
+Ein konformes Array kann blockkopiert werden, sobald die Größe des Arrays bekannt ist.
 
 ``` syntax
 FC_CARRAY alignment<1>
@@ -81,11 +81,11 @@ element_description<>
 FC_END
 ```
 
-Die Übereinstimmungs \_ Beschreibung<> ist ein Korrelations Deskriptor, der abhängig davon, ob [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes hat.
+Die Konformitätsbeschreibung ist<> Korrelationsdeskriptor und hat je nachdem, ob \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes.
 
-## <a name="conformant-varying-array"></a>Konform mit variierendem Array
+## <a name="conformant-varying-array"></a>Conformant Varying Array
 
-Ein konformes variierendes Array kann auch mit Block Kopien kopiert werden.
+Ein konformes variierende Array kann auch blockkopiert werden.
 
 ``` syntax
 FC_CVARRAY alignment<1> 
@@ -97,11 +97,11 @@ element_description<>
 FC_END
 ```
 
-Die Übereinstimmungs \_ Beschreibung<> und die Varianz \_ Beschreibung<> ist ein Korrelations Deskriptor, der abhängig davon, ob [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes hat.
+Die Konformitätsbeschreibung<> varianzbeschreibung<> ist ein Korrelationsdeskriptor und hat je nachdem, ob \_ \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes.
 
-## <a name="varying-array"></a>Variierendes Array
+## <a name="varying-array"></a>Varying Array
 
-Die unterschiedlichen Arrays haben zwei Möglichkeiten, je nach Größe des Arrays.
+Die variierenden Arrays haben je nach Größe des Arrays zwei Möglichkeiten.
 
 ``` syntax
 FC_SMVARRAY alignment<1>
@@ -123,22 +123,22 @@ element_description<>
 FC_END
 ```
 
-Die Varianz \_ Beschreibung<> ist ein Korrelations Deskriptor und hat je nach verwendetem [**/robust**](/windows/desktop/Midl/-robust) 4 oder 6 Bytes.
+Die \_ Varianzbeschreibung<> korrelationsdeskriptor und hat je nach verwendeter [**/robust**](/windows/desktop/Midl/-robust) 4 oder 6 Bytes.
 
-Bei unterschiedlichen Arrays, die in einer Struktur eingebettet sind, ist der Offset<2> Feld der Varianz \_ Beschreibung<> ein relativer Offset von der Position des unterschiedlichen Arrays in der-Struktur bis hin zum Beschreibungsfeld für die Varianz. Der Offset ist in der Regel relativ zum Anfang der-Struktur.
+Bei variierenden Arrays, die in eine -Struktur eingebettet sind, ist der Offset<2>-Feld der Varianzbeschreibung<> ein relativer Offset von der Position des variierenden Arrays in der Struktur zum varianzbeschreibenden \_ Feld. Der Offset ist in der Regel relativ zum Anfang der -Struktur.
 
 ## <a name="complex-arrays"></a>Komplexe Arrays
 
-Bei einem komplexen Array handelt es sich um ein beliebiges Array mit einem Element, das verhindert, dass es blockiert wird. Daher müssen zusätzliche Aktionen durchgeführt werden. Diese Elemente machen ein Array Komplex:
+Ein komplexes Array ist ein beliebiges Array mit einem Element, das verhindert, dass es blockkopiert wird. Daher müssen zusätzliche Aktionen ergriffen werden. Diese Elemente machen ein Array komplex:
 
--   einfache Typen: ENUM16, \_ \_ INT3264 (nur auf 64-Bit-Plattformen), eine Ganzzahl mit dem \[ [ **Bereich**](/windows/desktop/Midl/range)\]
--   Verweis-und Schnittstellen Zeiger (alle Zeiger auf 64-Bit-Plattformen)
+-   Einfache Typen: ENUM16, \_ \_ INT3264 (nur auf 64-Bit-Plattformen), ein ganzzahlig mit \[ [ **Bereich**](/windows/desktop/Midl/range)\]
+-   Verweis- und Schnittstellenzeker (alle Zeiger auf 64-Bit-Plattformen)
 -   Unions
--   komplexe Strukturen (Weitere Informationen finden Sie im Thema Beschreibung der komplexen Struktur. eine vollständige Liste der Gründe für eine komplexe Struktur finden Sie unter.)
--   mit "über \[ [**tragen \_ als**](/windows/desktop/Midl/transmit-as)" definierte Elemente \] , \[ [**Benutzer \_ Mars**](/windows/desktop/Midl/user-marshal) Hallen\]
--   Alle mehrdimensionalen Arrays mit mindestens einer konformen und/oder unterschiedlichen Dimension sind unabhängig vom zugrunde liegenden Elementtyp Komplex.
+-   komplexe Strukturen (eine vollständige Liste der Gründe für eine komplexe Struktur finden Sie im Thema Beschreibung der komplexen Struktur)
+-   -Elemente, die mit der Übertragung als definiert \[ [**\_ sind,**](/windows/desktop/Midl/transmit-as) \] \[ [**\_ marshallen benutzerdefiniert**](/windows/desktop/Midl/user-marshal)\]
+-   Alle mehrdimensionalen Arrays mit mindestens einer konformen und/oder unterschiedlichen Dimension sind unabhängig vom zugrunde liegenden Elementtyp komplex.
 
-Die Beschreibung des komplexen Arrays lautet wie folgt:
+Die komplexe Arraybeschreibung lautet wie folgt:
 
 ``` syntax
 FC_BOGUS_ARRAY alignment<1> 
@@ -149,9 +149,9 @@ element_description<>
 FC_END
 ```
 
-Die Anzahl \_ der \_ Elemente<2> Feld ist 0 (null), wenn das Array konform ist.
+Die Anzahl \_ der \_ Elemente<2> Felds ist 0 (null), wenn das Array konform ist.
 
-Die Übereinstimmungs \_ Beschreibung<> und die Varianz \_ Beschreibung<> ist ein Korrelations Deskriptor, der abhängig davon, ob [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes hat. Wenn das Array über Konformität und/oder Varianz verfügt, werden die Übereinstimmungs \_ Beschreibung<> und/oder Varianz \_ Beschreibung<> Felder gültige Beschreibungen aufweisen; andernfalls werden die ersten 4 Bytes des Korrelations Deskriptors auf "0xffffffff" festgelegt. Die Flags werden, falls vorhanden, auf 0 (null) festgelegt.
+Die Konformitätsbeschreibung<> varianzbeschreibung<> ist ein Korrelationsdeskriptor und hat je nachdem, ob \_ \_ [**/robust**](/windows/desktop/Midl/-robust) verwendet wird, 4 oder 6 Bytes. Wenn das Array Übereinstimmung und/oder Varianz aufweist, verfügen die Übereinstimmungsbeschreibung<> und/oder varianzbeschreibung \_<> -Feld(e) über gültige Beschreibungen. Andernfalls werden die ersten 4 Bytes des Korrelationsdeskriptors \_ auf 0xFFFFFFFF. Die Flags werden, falls vorhanden, auf 0 (null) festgelegt.
 
  
 

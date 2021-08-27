@@ -1,9 +1,9 @@
 ---
-title: TB_INSERTMARKHITTEST Meldung (kommstrg. h)
-description: Ruft die einfügemarkierungsinformationen für einen Punkt in einer Symbolleiste ab.
+title: TB_INSERTMARKHITTEST Meldung (Commctrl.h)
+description: Ruft die Einfügemarkierungsinformationen für einen Punkt in einer Symbolleiste ab.
 ms.assetid: 65c64fd0-f089-4b1a-84e5-1a3e10aa7f5e
 keywords:
-- Windows-Steuerelemente für TB_INSERTMARKHITTEST Meldung
+- TB_INSERTMARKHITTEST Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5237d5a13250c3eb95bfe741415a9da245585c78
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cbc231b915d6d71cc22ee3cd98b1c6dd602451cc3c70d2153ba1bee8a0d55657
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061360"
 ---
-# <a name="tb_insertmarkhittest-message"></a>TB \_ insertmarkhittest-Meldung
+# <a name="tb_insertmarkhittest-message"></a>TB \_ INSERTMARKHITTEST-Nachricht
 
-Ruft die einfügemarkierungsinformationen für einen Punkt in einer Symbolleiste ab.
+Ruft die Einfügemarkierungsinformationen für einen Punkt in einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Ruft die einfügemarkierungsinformationen für einen Punkt in einer Symbolleiste
 *wParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Punkt**](/previous-versions//dd162805(v=vs.85)) Struktur, die die Treffer Test Koordinaten relativ zum Client Bereich der Symbolleiste enthält.
+Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85)) die die Treffertestkoordinaten relativ zum Clientbereich der Symbolleiste enthält.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**tbinsertmark**](/windows/desktop/api/Commctrl/ns-commctrl-tbinsertmark) -Struktur, die die einfügemarkierungsinformationen empfängt.
+Zeiger auf eine [**TBINSERTMARK-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbinsertmark) die die Einfügemarkierungsinformationen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, wenn der Punkt eine Einfügemarke ist, andernfalls NULL
+Gibt einen Wert ungleich 0 (null) zurück, wenn der Punkt eine Einfügemarke ist, andernfalls 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt einen Wert ungleich 0 (null) zurück, wenn der Punkt eine Einfügemarke ist
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

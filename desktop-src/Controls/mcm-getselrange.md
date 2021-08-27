@@ -1,9 +1,9 @@
 ---
-title: MCM_GETSELRANGE Meldung (kommstrg. h)
-description: Ruft Datumsinformationen ab, die die obere und untere Grenze des Datums Bereichs darstellen, der derzeit vom Benutzer ausgewählt wird. Sie können diese Nachricht explizit oder mit dem monthcal \_ getselrange-Makro senden.
+title: MCM_GETSELRANGE-Nachricht (Commctrl.h)
+description: Ruft Datumsinformationen ab, die die oberen und unteren Grenzwerte des vom Benutzer derzeit ausgewählten Datumsbereichs darstellen. Sie können diese Nachricht explizit oder mithilfe des \_ MonthCal GetSelRange-Makros senden.
 ms.assetid: a0d0a0d5-a519-4495-a87a-2438c4590e4c
 keywords:
-- Windows-Steuerelemente für MCM_GETSELRANGE Meldung
+- MCM_GETSELRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0d2f922b013a3eab525228bda4f5b99f33e70d8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7e7c446c98a43714a8cd839704050d2aedd1b7eab83b9199700ba24dd4e2be98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061950"
 ---
-# <a name="mcm_getselrange-message"></a>MCM \_ getselrange-Nachricht
+# <a name="mcm_getselrange-message"></a>MCM \_ GETSELRANGE-Nachricht
 
-Ruft Datumsinformationen ab, die die obere und untere Grenze des Datums Bereichs darstellen, der derzeit vom Benutzer ausgewählt wird. Sie können diese Nachricht explizit oder mit dem [**monthcal \_ getselrange**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getselrange) -Makro senden.
+Ruft Datumsinformationen ab, die die oberen und unteren Grenzwerte des vom Benutzer derzeit ausgewählten Datumsbereichs darstellen. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ GetSelRange-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_getselrange) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft Datumsinformationen ab, die die obere und untere Grenze des Datums Bereichs
 *lParam* 
 </dt> <dd>
 
-Zeiger auf ein zwei-Element-Array von [**SYSTEMTIME**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) -Strukturen, das die unteren und oberen Grenzen der Auswahl des Benutzers empfängt. Die unteren und oberen Grenzwerte werden in *lprgsystimearray* \[ 0 \] bzw. *lprgsystimearray* \[ 1 platziert \] . Dieser Parameter muss eine gültige Adresse sein und darf nicht **null** sein.
+Zeiger auf ein Array mit zwei Elementen von [**SYSTEMTIME-Strukturen,**](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) die die unteren und oberen Grenzen der Auswahl des Benutzers erhalten. Die unteren und oberen Grenzwerte werden in *lprgSysTimeArray* \[ 0 \] bzw. *lprgSysTimeArray* \[ 1 \] platziert. Dieser Parameter muss eine gültige Adresse sein und darf nicht **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. **MCM \_ Getselrange** schlägt fehl, wenn es auf ein Monatskalender-Steuerelement angewendet wird, das den [**MCS- \_ MultiSelect**](month-calendar-control-styles.md) -Stil nicht verwendet.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben. **MCM \_ GETSELRANGE** schlägt fehl, wenn es auf ein Monatskalender-Steuerelement angewendet wird, das nicht den [**MCS \_ MULTISELECT-Stil**](month-calendar-control-styles.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,13 +49,13 @@ Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL. **MCM \_
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,21 +1,21 @@
 ---
 title: Konforme Arrays
-description: Die Größe eines konformen Arrays kann je nachdem, wann der Client es an eine Remote Prozedur auf dem Server übergibt.
+description: Die Größe eines konformen Arrays kann jedes Mal variieren oder entsprechen, wenn der Client es an eine Remoteprozedur auf dem Server übergibt.
 ms.assetid: b4aaec77-b7ae-495d-8666-4702017e675f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed6f1491354f9cd26ef6100ab8d21f2ace3133f4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 19766b7b9552bcab08a4d194629892e51d5185ed39b0bedddbaef32f08cececf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073430"
 ---
 # <a name="conformant-arrays"></a>Konforme Arrays
 
-Die Größe eines konformen Arrays kann je nachdem, wann der Client es an eine Remote Prozedur auf dem Server übergibt. Die Schnittstellen Definition in der mittleren l-Datei der Anwendung ermöglicht es dem Client, die Größe des Arrays jedes Mal anzugeben, wenn die Remote Prozedur aufgerufen wird. Verwenden \[ \] Sie in der Array Definition leere eckige Klammern () oder ein Sternchen in den eckigen Klammern ( \[ \* \] ), um ein konformes Array anzugeben.
+Die Größe eines konformen Arrays kann jedes Mal variieren oder entsprechen, wenn der Client es an eine Remoteprozedur auf dem Server übergibt. Die Schnittstellendefinition in der MIDL-Datei der Anwendung ermöglicht es dem Client, bei jedem Aufruf der Remoteprozedur die Größe des Arrays anzugeben. Verwenden Sie leere eckige Klammern ( \[ \] ) oder ein Sternchen in den eckigen Klammern ( \[ \* \] ) in der Arraydefinition, um ein konformes Array anzugeben.
 
-Das folgende Beispiel enthält die Definition einer Remote Prozedur in einer Schnittstelle in einer Mittel l-Datei. Der Client gibt die Größe des Arrays an, das durch den Parameter *arraySize* an den Server übergeben wird.
+Das folgende Beispiel enthält die Definition einer Remoteprozedur in einer Schnittstelle in einer MIDL-Datei. Der Client gibt die Größe des Arrays an, das vom Parameter *arraySize* an den Server übergeben wird.
 
 ``` syntax
 [
@@ -32,9 +32,9 @@ interface MyInterface
 }
 ```
 
-Die Schnittstellen Definition verwendet die mittlere Attribut \[ [**Größe \_**](/windows/desktop/Midl/size-is) \] , um die Größe des Arrays anzugeben, das der Client an den Server übergibt. Wenn Sie den maximalen Wert für die Indexnummern des Arrays angeben möchten, verwenden Sie stattdessen das \[ [**Maximum \_ is**](/windows/desktop/Midl/max-is) - \] Attribut. Weitere Informationen zu diesen Mittelwert Attributen finden Sie unter [Array Attribute](array-attributes.md).
+Die Schnittstellendefinition verwendet die MIDL-Attributgröße, um die Größe des \[ [**\_**](/windows/desktop/Midl/size-is) \] Arrays anzugeben, das der Client an den Server übergibt. Wenn Sie stattdessen den maximalen Wert der Indexnummern des Arrays angeben möchten, verwenden Sie stattdessen das \[ [**Attribut max \_ is.**](/windows/desktop/Midl/max-is) \] Weitere Informationen zu diesen MIDL-Attributen finden Sie unter [Arrayattribute.](array-attributes.md)
 
-Das folgende Code Fragment veranschaulicht, wie ein Client möglicherweise die in der vorhergehenden-Datei definierte Remote Prozedur aufruft.
+Das folgende Codefragment veranschaulicht, wie ein Client die in der vorherigen MIDL-Datei definierte Remoteprozedur aufrufen kann.
 
 
 ```C++
@@ -58,8 +58,8 @@ MyRemoteProc(
 
 
 
-Dieses Fragment Ruft die Remote Prozedur myremoteproc zweimal auf. Beim ersten Aufruf übergibt Sie ein Array von 20 Elementen. Beim zweiten-Befehl übergibt der Client ein Array aus 200 Elementen.
+Dieses Fragment ruft die Remoteprozedur MyRemoteProc zweimal auf. Beim ersten Aufruf wird ein Array von 20 Elementen übergeben. Beim zweiten Aufruf übergibt der Client ein Array von 200 Elementen.
 
- 
+ 
 
- 
+ 

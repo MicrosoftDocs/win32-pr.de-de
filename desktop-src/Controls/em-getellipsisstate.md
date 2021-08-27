@@ -1,9 +1,9 @@
 ---
-title: EM_GETELLIPSISSTATE Meldung (RichEdit. h)
-description: Ruft den aktuellen Ellipsen Zustand ab.
+title: EM_GETELLIPSISSTATE Nachricht (Richedit.h)
+description: Ruft den aktuellen Status der Auslassungszeichen ab.
 ms.assetid: D02AE225-F5BF-401A-9877-55C68946CDBE
 keywords:
-- Windows-Steuerelemente für EM_GETELLIPSISSTATE Meldung
+- EM_GETELLIPSISSTATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 905bc8ecc180189f46e896aa0d9aaa3ba88b3f0b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7aaa02fa5ecfdaa5e9f24a41a28ab696e6f2e76224cff8443fab3aa558d1e5a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049250"
 ---
-# <a name="em_getellipsisstate-message"></a>EM \_ getellipsisstate-Meldung
+# <a name="em_getellipsisstate-message"></a>EM \_ GETELLIPSISSTATE-Nachricht
 
-Ruft den aktuellen Ellipsen Zustand ab.
+Ruft den aktuellen Status der Auslassungszeichen ab.
 
 
 ```C++
@@ -52,7 +52,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist true, wenn ein Auslassungs Zeichen angezeigt wird, andernfalls false.
+Der Rückgabewert ist TRUE, wenn eine Auslassungszeichen angezeigt wird, andernfalls FALSE.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Der Rückgabewert ist true, wenn ein Auslassungs Zeichen angezeigt wird, andernf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -70,10 +70,10 @@ Der Rückgabewert ist true, wenn ein Auslassungs Zeichen angezeigt wird, andernf
 
 <dl> <dt>
 
-[**EM \_ getellipsismode**](em-getellipsismode.md)
+[**EM \_ GETELLIPSISMODE**](em-getellipsismode.md)
 </dt> <dt>
 
-[**EM/ \_ tellipsismode**](em-setellipsismode.md)
+[**EM \_ SETELLIPSISMODE**](em-setellipsismode.md)
 </dt> </dl>
 
  

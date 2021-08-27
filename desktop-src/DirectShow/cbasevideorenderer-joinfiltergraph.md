@@ -1,7 +1,7 @@
 ---
-description: Die joinfiltergraph-Methode sendet \_ eine Ereignis Benachrichtigung für das EC-Fenster, \_ Wenn ein Filter aus dem Filter Diagramm entfernt wird.
+description: Die JoinFilterGraph-Methode sendet eine EC \_ WINDOW \_ DESTROYED-Ereignisbenachrichtigung, wenn ein Filter aus dem Filterdiagramm entfernt wird.
 ms.assetid: b54d2deb-d36f-43a9-aa00-d607f487d8b7
-title: Cbasevideorenderer. joinfiltergraph-Methode (renbase. h)
+title: CBaseVideoRenderer.JoinFilterGraph-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: acabb6deeb6577fa04479fc4014e210d4a5654d5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3aed2c887bc7a452cda978e96cd369a71cad4fab60a72e0c914ebe9d9790a41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052210"
 ---
-# <a name="cbasevideorendererjoinfiltergraph-method"></a>Cbasevideorenderer. joinfiltergraph-Methode
+# <a name="cbasevideorendererjoinfiltergraph-method"></a>CBaseVideoRenderer.JoinFilterGraph-Methode
 
-Die- `JoinFilterGraph` Methode sendet eine Ereignis Benachrichtigung für das [**EC- \_ \_ Fenster**](ec-window-destroyed.md) , wenn ein Filter aus dem Filter Diagramm entfernt wird.
+Die -Methode sendet eine `JoinFilterGraph` EC WINDOW [**\_ \_ DESTROYED-Ereignisbenachrichtigung,**](ec-window-destroyed.md) wenn ein Filter aus dem Filterdiagramm entfernt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT JoinFilterGraph(
 
 <dl> <dt>
 
-*PGraph* 
+*pGraph* 
 </dt> <dd>
 
-Zeiger auf das Filter Diagramm, das verknüpft werden soll.
+Zeiger auf das Filterdiagramm, das verknüpft werden soll.
 
 </dd> <dt>
 
-*PName* \[ in\]
+*pName* \[ In\]
 </dt> <dd>
 
-Zeiger auf den Namen des hinzugefügten Filters.
+Zeiger auf den Namen des filters, der hinzugefügt wird.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Zeiger auf den Namen des hinzugefügten Filters.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion überschreibt die [**cbasefilter:: joinfiltergraph**](cbasefilter-joinfiltergraph.md) -Member-Funktion. Wenn der Filter das Filter Diagramm verlässt (*PGraph* ist **null**), wird eine Ereignis Benachrichtigung für ein [**EC- \_ Fenster \_**](ec-window-destroyed.md) gesendet, sodass der Ressourcen-Manager den Renderer nicht als Fokus Objekt speichert.
+Diese Memberfunktion überschreibt die [**CBaseFilter::JoinFilterGraph-Memberfunktion.**](cbasefilter-joinfiltergraph.md) Wenn der Filter das Filterdiagramm verlässt *(pGraph* ist **NULL),** sendet er eine [**EC WINDOW \_ \_ DESTROYED-Ereignisbenachrichtigung,**](ec-window-destroyed.md) sodass der Ressourcen-Manager nicht als Fokusobjekt an den Renderer hält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Diese Member-Funktion überschreibt die [**cbasefilter:: joinfiltergraph**](cbas
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -80,7 +80,7 @@ Diese Member-Funktion überschreibt die [**cbasefilter:: joinfiltergraph**](cbas
 
 <dl> <dt>
 
-[**Cbasevideorenderer-Klasse**](cbasevideorenderer.md)
+[**CBaseVideoRenderer-Klasse**](cbasevideorenderer.md)
 </dt> </dl>
 
  

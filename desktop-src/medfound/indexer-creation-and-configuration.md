@@ -1,47 +1,47 @@
 ---
-description: Dieses Thema enthält Informationen zum Erstellen des Standardindexer-Objekts, das von Media Foundation bereitgestellt wird.
+description: Dieses Thema enthält Informationen zum Erstellen des standarden Indexerobjekts, das von Media Foundation.
 ms.assetid: 3a2caf11-808b-4910-b83c-a272a026f0d3
-title: Erstellung und Konfiguration von Indexern
+title: Indexererstellung und -konfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 21e97bb558866fda021245b1597ead2a073c659c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e0a341e3074ca44aa4403a3f2f518b4fb9082d4c6eadee1f4ca94a69e17bd98
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061200"
 ---
-# <a name="indexer-creation-and-configuration"></a>Erstellung und Konfiguration von Indexern
+# <a name="indexer-creation-and-configuration"></a>Indexererstellung und -konfiguration
 
-Der ASF- *Indexer* ist eine wmcontainer-Ebenenkomponente, die verwendet wird, um Index Objekte in einer ASF-Datei (Advanced Systems Format) zu lesen oder zu schreiben. Dieses Thema enthält Informationen zum Erstellen des Standardindexer-Objekts, das von Media Foundation bereitgestellt wird.
+Der *ASF-Indexer* ist eine WMContainer-Ebenenkomponente, die zum Lesen oder Schreiben von Indexobjekten in einer ASF-Datei (Advanced Systems Format) verwendet wird. Dieses Thema enthält Informationen zum Erstellen des standarden Indexerobjekts, das von Media Foundation.
 
-Weitere Informationen zur Struktur einer ASF-Datei finden Sie unter [Struktur der ASF-Datei](asf-file-structure.md).
+Informationen zur Struktur einer ASF-Datei finden Sie unter [ASF-Dateistruktur.](asf-file-structure.md)
 
 **So erstellen und initialisieren Sie den ASF-Indexer**
 
-1.  Ruft die [**mfkreateasfindexer**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfindexer) -Funktion auf, um einen [**imfasfindexer**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfindexer) -Zeiger auf das Indexer-Objekt zu empfangen.
-2.  Aufrufen von [**imfasfindexer:: setFlags**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfindexer-setflags) zum Angeben des Lese-oder Schreibmodus für das Indexer-Objekt. Standardmäßig ist der Indexer für die vorwärts Suche konfiguriert.
+1.  Rufen Sie [**die MFCreateASFIndexer-Funktion**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfindexer) auf, um einen [**IMFASFIndexer-Zeiger**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfindexer) auf das Indexerobjekt zu empfangen.
+2.  Rufen [**Sie IMFASFIndexer::SetFlags auf,**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfindexer-setflags) um den Lese- oder Schreibmodus für das Indexerobjekt anzugeben. Standardmäßig ist der Indexer für Vorwärtssuchen konfiguriert.
 
     
 
     | Zweck                       | Flag                                           |
     |---------------------------|------------------------------------------------|
-    | Lesen (vorwärts Suche) | NULL (Standard)                                 |
-    | Lesen (Reverse-Suche) | **mfasf- \_ Indexer- \_ Lesevorgang \_ für \_ reverleplayback** |
-    | Schreiben                   | mfasf- \_ Indexer \_ schreiben \_ neuer \_ Index              |
+    | Lesen (Vorwärtssuche) | 0 (Standard)                                 |
+    | Lesen (Umgekehrtes Suchen) | **LESEN DES \_ MFASF-INDEXERS \_ \_ FÜR \_ REVERSEPLAYBACK** |
+    | Schreiben                   | MFASF \_ INDEXER \_ WRITE \_ NEW \_ INDEX              |
 
     
 
      
 
     > [!Note]  
-    > Die gleiche Instanz des Indexers kann nicht sowohl für Lese-als auch für Schreibvorgänge verwendet werden. Sie müssen den Indexer für einen oder den anderen konfigurieren.
+    > Dieselbe Instanz des Indexers kann nicht sowohl zum Lesen als auch zum Schreiben verwendet werden. Sie müssen den Indexer für das eine oder das andere konfigurieren.
 
      
 
-3.  Zum Initialisieren des [**Indexers wird imfasfindexer:: Initialisieren**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfindexer-initialize) aufgerufen, indem der [**imfasfcontentinfo**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) -Zeiger des ContentInfo-Objekts angegeben wird, das die zu schreibenden oder zu lesende Datei beschreibt. Das ContentInfo-Objekt enthält Informationen, die das [ASF-Header Objekt](asf-file-structure.md)bilden. Das Indexer-Objekt benötigt ein gültiges ContentInfo-Objekt, bevor Indexeinträge einer ASF-Datei erzeugt oder gelesen werden.
+3.  Rufen [**Sie IMFASFIndexer::Initialize**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfindexer-initialize) auf, um den Indexer zu initialisieren, indem Sie den [**IMFASFContentInfo-Zeiger**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfcontentinfo) des ContentInfo-Objekts angeben, das die zu schreibende oder zu lesende Datei beschreibt. Das ContentInfo-Objekt enthält Informationen, die das [ASF-Headerobjekt bilden.](asf-file-structure.md) Das Indexerobjekt erfordert ein gültiges ContentInfo-Objekt, bevor Indexeinträge einer ASF-Datei generiert oder gelesen werden.
 
-Im folgenden Codebeispiel wird gezeigt, wie eine Anwendung das Indexer-Objekt erstellen und initialisieren kann, um mit einem bestimmten ASF-Inhalt zu arbeiten. Das ContentInfo-Objekt stellt das ASF-Header Objekt dar. der Inhalt wird als Bytestream übermittelt.
+Das folgende Codebeispiel zeigt, wie eine Anwendung das Indexerobjekt erstellen und initialisieren kann, um mit bestimmten ASF-Inhalten zu arbeiten. Das ContentInfo-Objekt stellt das ASF-Headerobjekt dar. Der Inhalt wird als Bytestream übergeben.
 
 
 ```C++
@@ -93,7 +93,7 @@ done:
 [ASF-Indexer](asf-index-object.md)
 </dt> <dt>
 
-[Verwenden des Indexers zum Suchen in einer ASF-Datei](using-the-indexer-to-seek.md)
+[Verwenden des Indexers zum Suchen innerhalb einer ASF-Datei](using-the-indexer-to-seek.md)
 </dt> <dt>
 
 [Verwenden des Indexers zum Schreiben eines neuen Indexes](using-the-indexer-to-write-a-new-index.md)

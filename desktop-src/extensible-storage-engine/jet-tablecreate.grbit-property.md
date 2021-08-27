@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_TABLECREATE. grbit-Eigenschaft.
-title: JET_TABLECREATE. grbit-Eigenschaft
+description: 'Weitere Informationen zu: JET_TABLECREATE.grbit-Eigenschaft'
+title: JET_TABLECREATE.grbit-Eigenschaft
 TOCTitle: 'grbit property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_TABLECREATE.grbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_tablecreate.grbit(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dda87fbaa17b0329c3f1c377ba272ecf94c24abb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fc18b415ef168d982f5b00b272a665842f7eb77d9c37d1803906250bdf9fa82b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115850"
 ---
-# <a name="jet_tablecreategrbit-property"></a>JET_TABLECREATE. grbit-Eigenschaft
+# <a name="jet_tablecreategrbit-property"></a>JET_TABLECREATE.grbit-Eigenschaft
 
-Ruft die Tabellen Optionen ab oder legt Sie fest.
+Ruft die Tabellenoptionen ab oder legt sie fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public CreateTableColumnIndexGrbit grbit { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft. ISAM. ESENT. Interop. kreatetablecolumnindexgrbit](./createtablecolumnindexgrbit-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.CreateTableColumnIndexGrbit](./createtablecolumnindexgrbit-enumeration.md)  
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_TABLECREATE-Klasse](./jet-tablecreate-class.md)
 
-[Mitglieder JET_TABLECREATE](./jet-tablecreate-members.md)
+[JET_TABLECREATE-Member](./jet-tablecreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

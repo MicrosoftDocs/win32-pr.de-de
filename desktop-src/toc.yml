@@ -1,4 +1,4 @@
-- name: Desktop-Win32-Apps
+- name: Win32-Desktop-Apps
   href: ./index.yml
   items:
     - name: Erste Schritte
@@ -11,20 +11,20 @@
           href: ./learnwin32/learn-to-program-for-windows.md
         - name: Erstellen Ihrer ersten Windows-App mit DirectX
           href: ./direct3dgetstarted/building-your-first-directx-app.md
-        - name: Verwenden der Windows Header
+        - name: Verwenden der Windows-Header
           href: ./winprog/using-the-windows-headers.md
         - name: Plattformleitfäden
           items:
             - name: Programmierhandbuch für 64-Bit-Windows
               href: ./winprog64/programming-guide-for-64-bit-windows.md
-            - name: Kompatibilitäts cookbook für Windows
+            - name: Kompatibilitäts-Cookbook für Windows
               href: ./w8cookbook/windows-8-and-windows-server-8-compatibility-cookbook-portal.md
-            - name: Windows 7 Handbücher
+            - name: Windows 7 Leitfäden
               href: ./windows-7.md
               items:
                 - name: Windows 7 und Windows Server 2008 R2 Application Quality Cookbook
                   href: ./win7appqual/windows-7-application-quality-cookbook.md
-                - name: Windows 7-Entwicklerhandbuch
+                - name: entwicklerhandbuch für Windows 7
                   href: ./win7devguide/windows-7-developer-guide.md
                 - name: Plattformupdate für Windows Vista
                   href: ./win7ip/platform-update-for-windows-vista-portal.md
@@ -51,7 +51,7 @@
                   href: ./accessibility/accessibility-atdev.md
                 - name: Testen für Barrierefreiheit
                   href: ./accessibility/accessibility-testwithuia.md
-                - name: Legacytechnologie für Barrierefreiheit und Automatisierung
+                - name: Legacy-Barrierefreiheits- und Automatisierungstechnologie
                   href: ./accessibility/accessibility-legacy.md
                 - name: Referenz zu Barrierefreiheits- und Automatisierungsfeatures
                   href: ./accessibility/accessibility-reference-old.md
@@ -67,9 +67,9 @@
                   items:
                     - name: Übersicht
                       href: ./user-interaction.md
-                    - name: Direkte Manipulation
+                    - name: Direkte Bearbeitung
                       href: ./directmanipulation/direct-manipulation-portal.md
-                    - name: Eingabe von Ink
+                    - name: Ink-Eingabe
                       href: ./input_ink/input-ink-portal.md
                     - name: Konfiguration des Eingabefeedbacks
                       href: ./input_feedback/input-feedback-configuration-portal.md
@@ -79,17 +79,17 @@
                       href: ./input_intcontext/interaction-context-portal.md
                     - name: Zeigergerätestapel
                       href: ./input_pointerdevice/pointer-device-stack-portal.md
-                    - name: Zeigereingabemeldungen und Benachrichtigungen
+                    - name: Zeigereingabenachrichten und -benachrichtigungen
                       href: ./inputmsg/messages-and-notifications-portal.md
-                    - name: Radiale Controllereingabe
+                    - name: Radialcontrollereingabe
                       href: ./input_radial/radialcontroller-portal.md
                     - name: Textdienstframework
                       href: ./tsf/text-services-framework.md
-                    - name: Toucheingabe – Treffertests
+                    - name: Treffertests für Toucheingaben
                       href: ./input_touchhittest/touch-hit-testing-portal.md
-                    - name: Toucheingabeinjektion
+                    - name: Einschleusung von Toucheingaben
                       href: ./input_touchinjection/touch-injection-portal.md
-                    - name: Legacyfunktionen der Benutzerinteraktion
+                    - name: Legacy-Benutzerinteraktionsfeatures
                       items:
                         - name: Übersicht
                           href: ./legacy-user-interaction-features.md
@@ -101,7 +101,7 @@
                           href: 'https://msdn.microsoft.com/library/windows/desktop/ff877472.aspx'
                         - name: Tablet PC
                           href: ./tablet/tablet-pc-development-guide.md
-                - name: Windows und Nachrichten
+                - name: Windows und Meldungen
                   href: ./winmsg/windowing.md
                 - name: Desktopfenster-Manager
                   href: ./dwm/dwm-overview.md
@@ -131,7 +131,7 @@
                   href: ./search/windows-search.md
                 - name: Fensterstationen und Desktops
                   href: ./winstation/window-stations-and-desktops.md
-                - name: Legacy Windows Umgebungsfeatures
+                - name: Legacy-Windows-Umgebungsfeatures
                   href: /windows/win32/api/_lwef/
             - name: Anwendungsinstallation und -wartung
               items:
@@ -139,7 +139,7 @@
                   href: ./application-installing-and-servicing.md
                 - name: Isolierte Anwendungen und parallele Assemblys
                   href: ./sbscs/isolated-applications-and-side-by-side-assemblies-portal.md
-                - name: 'Verpacken, Bereitstellung und Abfragen von UWP-Apps'
+                - name: 'Verpacken, Bereitstellen und Abfragen von UWP-Apps'
                   href: ./appxpkg/appx-portal.md
                 - name: Entwicklerlizenzierung
                   href: ./devlic/developer-licensing-portal.md
@@ -159,7 +159,7 @@
                   href: ./directshow/directshow.md
                 - name: Microsoft Media Foundation
                   href: ./medfound/microsoft-media-foundation-sdk.md
-                - name: Windows Medienformat 11 SDK
+                - name: Windows Media Format 11 SDK
                   href: ./wmformat/windows-media-format-11-sdk.md
                 - name: Windows Media Player Sdk
                   href: ./wmp/windows-media-player-sdk.md
@@ -181,7 +181,7 @@
                   href: /windows/win32/api/_dfs/
                 - name: Erweiterbare Storage-Engine
                   href: ./extensible-storage-engine/extensible-storage-engine.md
-                - name: Bildmaster-API
+                - name: ImageMastering-API
                   href: ./imapi/portal.md
                 - name: Imaging-API
                   href: /previous-versions/msdn10/dd851933(v=msdn.10)
@@ -235,13 +235,13 @@
                       href: ./recovery/application-recovery-and-restart-portal.md
                     - name: Fehlerbehandlung
                       href: ./debug/error-handling.md
-                - name: Netzwerkdiagnoseframework
+                - name: Framework für die Netzwerkdiagnose
                   href: ./ndf/portal.md
                 - name: Netzwerkmonitor
                   href: ./netmon2/network-monitor.md
                 - name: Leistungsindikatoren
                   href: ./perfctrs/performance-counters-portal.md
-                - name: Verarbeiten von Momentaufnahmen
+                - name: Prozessmomentaufnahme
                   href: /windows/win32/api/_proc_snap/
                 - name: Prozessstatus-API
                   href: ./psapi/process-status-helper.md
@@ -249,7 +249,7 @@
                   href: ./sens/system-event-notification-service-portal.md
                 - name: Systemmonitor
                   href: ./sysmon/system-monitor-portal.md
-                - name: Hilfebibliothek für Tools
+                - name: Tool Help Library
                   href: ./toolhelp/tool-help-library.md
                 - name: Windows-Fehlerberichterstattung
                   href: ./wer/windows-error-reporting.md
@@ -375,7 +375,7 @@
                   href: ./rras/portal.md
                 - name: Simple Network Management-Protokoll
                   href: ./snmp/snmp-start-page.md
-                - name: Programmierschnittstellen für Telefonieanwendungen
+                - name: Programmierschnittstellen für Telefonieanwendung
                   href: Tapi/telephony-application-programming-interfaces.md
                 - name: Teredo
                   href: ./teredo/portal.md
@@ -417,7 +417,7 @@
                   href: ./amsi/antimalware-scan-interface-portal.md
                 - name: Authentifizierung
                   href: ./secauthn/authentication-portal.md
-                - name: Authorization
+                - name: Autorisierung
                   href: ./secauthz/authorization-portal.md
                 - name: Bewährte Methoden für die Sicherheits-APIs
                   href: ./secbp/best-practices-for-the-security-apis.md
@@ -492,7 +492,7 @@
                   href: ./cossdk/component-services-portal.md
                 - name: Komprimierungs-API
                   href: ./cmpapi/-compression-portal.md
-                - name: Dynamic-Link Bibliotheken
+                - name: Dynamic-Link-Bibliotheken
                   href: ./dlls/dynamic-link-libraries.md
                 - name: Prozessübergreifende Kommunikation
                   href: ./ipc/interprocess-communications.md
@@ -554,7 +554,7 @@
                   items:
                     - name: Übersicht
                       href: ./srvnodes/group-policy.md
-                    - name: GPMC-Klassenbibliotheksreferenz
+                    - name: Referenz zur GPMC-Klassenbibliothek
                       href: /previous-versions/windows/desktop/wmi_v2/class-library/gpmc-class-library-reference
                 - name: Microsoft Management Console (MMC)
                   href: ./srvnodes/microsoft-management-console--mmc-.md
@@ -573,9 +573,9 @@
             - name: Windows Server
               href: ./srvnodes/windows-server.md
               items:
-                - name: Neues bei Windows Server 2012 R2 und Windows Server 2012
+                - name: Neuerungen bei Windows Server 2012 R2 und Windows Server 2012
                   href: ./srvnodes/what-s-new-for-windows-server-2012-r2.md
-                - name: Mobile Geräteverwaltung Registrierung
+                - name: Mobile Geräteverwaltung-Registrierung
                   href: ./mdmreg/mobile-device-management-registration-portal.md
                 - name: Systemwiederherstellung
                   href: ./sr/system-restore-portal.md
@@ -587,12 +587,12 @@
                   href: ./wds/windows-deployment-services-portal.md
                 - name: Windows-Verwaltungsinstrumentation
                   href: ./wmisdk/wmi-start-page.md
-                - name: Windows Verwaltete Verwaltungsinfrastruktur-API
+                - name: Windows Verwaltete API der Verwaltungsinfrastruktur
                   href: /previous-versions/windows/desktop/wmi_v2/mi-managed-api/mt738833(v=vs.85)
                 - name: WMI-Anbieter
                   href: null
                   items:
-                    - name: WMI-Anbieter für den Startereignissammler
+                    - name: WMI-Anbieter für Startereignissammler
                       href: ./bevtcolprov/boot-event-collector-wmi-provider-portal.md
                     - name: Hyper-V-Verwaltung
                       href: ./hyperv_v2/hyper-v-management.md
@@ -600,7 +600,7 @@
                       href: ./dmwmibridgeprov/mdm-bridge-wmi-provider-portal.md
                     - name: Windows Systembewertungstool
                       href: ./winsat/windows-system-assessment-tool-portal.md
-                    - name: WMI-Kernanbieter
+                    - name: WMI Core-Anbieter
                       href: ./wmicoreprov/wmi-core-provider-.md
                 - name: Windows-Remoteverwaltung
                   href: ./winrm/portal.md
@@ -612,5 +612,5 @@
           href: ./winrt/reference.md
         - name: Windows Zertifizierung
           href: ./win_cert/windows-certification-portal.md
-    - name: Desktop-Win32-Codebeispiele
+    - name: Desktop Win32-Codebeispiele
       href: ./desktop-win32-code-samples.md

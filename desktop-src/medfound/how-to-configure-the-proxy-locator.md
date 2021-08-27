@@ -1,34 +1,34 @@
 ---
-description: Konfigurieren des proxylocators
+description: Konfigurieren des Proxylocators
 ms.assetid: ddc28add-ebf5-4a68-bdf4-dc5f33ab74da
-title: Konfigurieren des proxylocators
+title: Konfigurieren des Proxylocators
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a6b383dda9ac78b2c62aa8481a09cc5c0d7b3ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 51dcade0909159856c4286d9c2cd5d4851d10b6d2c5e56054545bdac312e21b1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061540"
 ---
-# <a name="how-to-configure-the-proxy-locator"></a>Konfigurieren des proxylocators
+# <a name="how-to-configure-the-proxy-locator"></a>Konfigurieren des Proxylocators
 
-Die Anwendung kann die Standardkonfiguration des proxylocators ändern, indem die Eigenschaft [mfnetsource \_ proxylocatorfactory](mfnetsource-proxylocatorfactory-property.md) auf das von der Anwendung implementierte objektlocatorfactory-Objekt festgelegt wird. Wenn die Anwendung quellresolver-Methoden zum Erstellen der Netzwerkquelle aufruft, wird Media Foundation die proxylocatorfactory aufruft. Mit diesem Objekt wird der proxylocator mit benutzerdefinierter Konfiguration erstellt.
+Die Anwendung kann die Standardkonfiguration des Proxylocators ändern, indem sie die [MFNETSOURCE \_ PROXYLOCATORFACTORY-Eigenschaft](mfnetsource-proxylocatorfactory-property.md) auf das Proxylocatorfactoryobjekt festlegt, das von der Anwendung implementiert wird. Wenn die Anwendung Quell resolver-Methoden aufruft, um die Netzwerkquelle zu erstellen, ruft Media Foundation die Proxylocatorfactory auf. Dieses Objekt erstellt den Proxylocator mit benutzerdefinierter Konfiguration.
 
-## <a name="to-change-the-default-configuration-setting-of-the-proxy-locator"></a>So ändern Sie die Standard Konfigurationseinstellung des proxylocators
+## <a name="to-change-the-default-configuration-setting-of-the-proxy-locator"></a>So ändern Sie die Standardkonfigurationseinstellung des Proxylocators
 
-1.  Implementieren Sie die [**IMF netproxyloerfactory**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) -Schnittstelle.
-2.  Führen Sie in der [**IMF netproxylocatorfactory:: forateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator) -Methode die folgenden Schritte aus:
-    1.  Erstellen Sie einen Eigenschaften Speicher.
-    2.  Legen Sie die Konfigurationseinstellungen für den proxylocator fest. Weitere Informationen zu diesen Einstellungen finden Sie unter [Proxy Locator-Konfigurationseinstellungen](proxy-locator-configuration-settings.md).
-    3.  Aufrufen der Funktion " [**mfkreateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) ". Übergeben Sie den Eigenschaften Speicher und das Protokoll. Das Protokoll wird im *pszprotocol* -Parameter von " [**kreateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator)" angegeben.
-3.  Erstellen Sie eine Instanz Ihrer proxylocator-Factoryklasse, und rufen Sie einen Zeiger auf Ihre [**imfnetproxylocatorfactory**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) -Schnittstelle ab.
-4.  Erstellen Sie einen weiteren Eigenschafts Speicher, und legen Sie den Wert der Eigenschaft [**mfnetsource \_ proxyloerfactory**](mfnetsource-proxylocatorfactory-property.md) auf den [**imfnetproxylo}**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) -Zeiger aus Schritt 3 fest.
-5.  Wenn Sie die Netzwerkquelle erstellen, übergeben Sie den Eigenschafts Speicher im *prequicparameter* der Quell Konflikt Löser-Methoden, z. b. [**IMF sourceresolver:: beginkreateobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl).
+1.  Implementieren Sie die [**INTERFACESNetProxyLocatorFactory-Schnittstelle.**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory)
+2.  Gehen Sie in der [**METHODE VONNETProxyLocatorFactory::CreateProxyLocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator) wie folgt vor:
+    1.  Erstellen Sie einen Eigenschaftenspeicher.
+    2.  Legen Sie die Konfigurationseinstellungen für den Proxylocator fest. Informationen zu diesen Einstellungen finden Sie unter [Proxylocatorkonfiguration Einstellungen](proxy-locator-configuration-settings.md).
+    3.  Rufen Sie die [**MFCreateProxyLocator-Funktion**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) auf. Übergeben Sie den Eigenschaftenspeicher und das Protokoll. Das Protokoll wird im *pszProtocol-Parameter* von [**CreateProxyLocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator)angegeben.
+3.  Erstellen Sie eine Instanz der Proxylocatorfactoryklasse, und erhalten Sie einen Zeiger auf die [**ZUGEHÖRIGE SCHNITTSTELLE VONNETProxyLocatorFactory.**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory)
+4.  Erstellen Sie einen anderen Eigenschaftenspeicher, und legen Sie den Wert der [**MFNETSOURCE \_ PROXYLOCATORFACTORY-Eigenschaft**](mfnetsource-proxylocatorfactory-property.md) auf den [**POINTERNetProxyLocatorFactory-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) aus Schritt 3 fest.
+5.  Wenn Sie die Netzwerkquelle erstellen, übergeben Sie den Eigenschaftenspeicher im *pProps-Parameter* der Quellresolvermethoden wie [**Z.B. SFCSourceResolver::BeginCreateObjectFromURL**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-begincreateobjectfromurl).
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Codebeispiel wird die [**IMF netproxyloerfactory**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) -Schnittstelle implementiert. Die [**imfnetproxylocatorfactory:: forateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator) -Methode erstellt eine Instanz des standardproxylocators und konfiguriert diese für den Betrieb im Modus für die automatische Erkennung.
+Im folgenden Codebeispiel wird die [**INTERFACESNetProxyLocatorFactory-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) implementiert. Mit der [**METHODE LOCATORNetProxyLocatorFactory::CreateProxyLocator**](/windows/desktop/api/mfidl/nf-mfidl-imfnetproxylocatorfactory-createproxylocator) wird eine Instanz des Standardproxylocators erstellt und für den Betrieb im Automatischerkennungsmodus konfiguriert.
 
 
 ```C++
@@ -109,7 +109,7 @@ public:
 
 
 
-Im nächsten Beispiel wird gezeigt, wie der [**imfnetproxyloskiorfactory**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) -Zeiger an die Netzwerkquelle übergeben wird.
+Im nächsten Beispiel wird gezeigt, wie der [**POINTERNetProxyLocatorFactory-Zeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfnetproxylocatorfactory) an die Netzwerkquelle übergeben wird.
 
 
 ```C++
@@ -164,7 +164,7 @@ HRESULT CreateMediaSourceWithProxyLocator(
 
 <dl> <dt>
 
-[Proxy Unterstützung für Netzwerk Quellen](proxy-support-for-network-sources.md)
+[Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)
 </dt> </dl>
 
  

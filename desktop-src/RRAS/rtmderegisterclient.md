@@ -1,9 +1,9 @@
 ---
-title: Rtmderegisterclient-Funktion (RTM. h)
-description: Die Funktion rtmderegisterclient hebt die Registrierung des Clients auf und gibt die dem Client zugeordneten Ressourcen frei.
+title: RtmDeregisterClient-Funktion (Rtm.h)
+description: Die RtmDeregisterClient-Funktion deregistriert den Client und gibt dem Client zugeordnete Ressourcen frei.
 ms.assetid: 5d04f276-86a7-4e63-8266-e93f0d6e5241
 keywords:
-- Rtmderegisterclient-Funktion (RAS)
+- RtmDeregisterClient-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ab1f56d3d65e13c083d8952f500cfba4638ab83
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a7df18a4fffa2bdc038aaeb980b76523448e33cca5b7f2e2d558720a5cc9a2c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120073860"
 ---
-# <a name="rtmderegisterclient-function"></a>Rtmderegisterclient-Funktion
+# <a name="rtmderegisterclient-function"></a>RtmDeregisterClient-Funktion
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.\]
 
-Die Funktion **rtmderegisterclient** hebt die Registrierung des Clients auf und gibt die dem Client zugeordneten Ressourcen frei.
+Die **RtmDeregisterClient-Funktion** deregistriert den Client und gibt dem Client zugeordnete Ressourcen frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ DWORD RtmDeregisterClient(
 
 <dl> <dt>
 
-*Clienthandle* \[ in\]
+*ClientHandle* \[ In\]
 </dt> <dd>
 
-Handle, das den Client identifiziert, dessen Registrierung aufgehoben werden soll. Rufen Sie dieses Handle durch Aufrufen von [**rtmregisterclient**](rtmregisterclient.md)ab.
+Handle, das den zu registrierenden Client identifiziert. Rufen Sie dieses Handle ab, indem [**Sie RtmRegisterClient aufrufen.**](rtmregisterclient.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert kein \_ Fehler.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NO \_ ERROR.
 
 Wenn die Funktion fehlschlägt, ist der Rückgabewert einer der folgenden Fehlercodes.
 
@@ -59,18 +59,18 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert einer der folgenden Fehler
 
 | Wert                                                                                                       | BESCHREIBUNG                                                    |
 |-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <dl> <dt>**Fehler bei \_ ungültigem \_ handle**</dt> </dl>       | Der *Clienthandle* -Parameter ist kein gültiges Handle.<br/> |
-| <dl> <dt>**Fehler \_ keine \_ System \_ Ressourcen**</dt> </dl> | Nicht genügend Ressourcen, um den Vorgang auszuführen.<br/>  |
+| <dl> <dt>**FEHLER \_ UNGÜLTIGES \_ HANDLE**</dt> </dl>       | Der *ClientHandle-Parameter* ist kein gültiges Handle.<br/> |
+| <dl> <dt>**FEHLER: \_ \_ KEINE \_ SYSTEMRESSOURCEN**</dt> </dl> | Unzureichende Ressourcen zum Durchführen des Vorgangs.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Funktion entfernt alle Routen, die vom Client hinzugefügt wurden.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -78,9 +78,9 @@ Diese Funktion entfernt alle Routen, die vom Client hinzugefügt wurden.
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>RTM. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Rtm.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Rtm.dll</dt> </dl> |
 
 
@@ -89,13 +89,13 @@ Diese Funktion entfernt alle Routen, die vom Client hinzugefügt wurden.
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Routing Table Manager Version 1 Reference](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Funktionen der Routing-Tabellen-Manager-Version 1](routing-table-manager-version-1-functions.md)
+[Routingtabellen-Manager- Version 1-Funktionen](routing-table-manager-version-1-functions.md)
 </dt> <dt>
 
-[**Rtmregisterclient**](rtmregisterclient.md)
+[**RtmRegisterClient**](rtmregisterclient.md)
 </dt> </dl>
 
  

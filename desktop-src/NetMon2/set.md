@@ -1,7 +1,7 @@
 ---
-description: Die Set-Struktur definiert einen Satz von Werten.
+description: Die SET-Struktur definiert einen Satz von Werten.
 ms.assetid: 88e0ffa1-71a2-4a3f-bdf1-964de0adea62
-title: Struktur festlegen (Netmon. h)
+title: SET-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: fdefc6f1233f820321bae6795f457e345fb5d4b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d66ba5dd3a977967d0020a00d5813c3f689142b1e58c631c99f9bd10fceba3ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216029"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120074400"
 ---
-# <a name="set-structure"></a>Struktur festlegen
+# <a name="set-structure"></a>SET-Struktur
 
-Die **Set** -Struktur definiert einen Satz von Werten.
+Die **SET-Struktur** definiert einen Satz von Werten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,116 +53,116 @@ typedef struct _SET {
 
 <dl> <dt>
 
-**nentries**
+**nEntries**
 </dt> <dd>
 
-Die Gesamtanzahl der Einträge in einer Menge.
+Gesamtanzahl der Einträge in einem Satz.
 
 </dd> <dt>
 
-**lpbytetable**
+**lpByteTable**
 </dt> <dd>
 
-Zeiger auf ein Array von Byte Werten.
+Zeiger auf ein Array von BYTE-Werten.
 
 </dd> <dt>
 
-**lpwordtable**
+**lpWordTable**
 </dt> <dd>
 
-Zeiger auf ein Array von Wort Werten.
+Zeiger auf ein Array von WORD-Werten.
 
 </dd> <dt>
 
-**lpdwordtable**
+**lpDwordTable**
 </dt> <dd>
 
 Zeiger auf ein Array von DWORD-Werten.
 
 </dd> <dt>
 
-**lplargeingetbar**
+**lpLargeIntTable**
 </dt> <dd>
 
-Zeiger auf ein Array von [largeint](largeint.md) -Strukturen.
+Zeiger auf ein Array von [LARGEINT-Strukturen.](largeint.md)
 
 </dd> <dt>
 
-**lpsystemplan**
+**lpSystemTimeTable**
 </dt> <dd>
 
 Zeiger auf ein Array von SYSTEMTIME-Werten.
 
 </dd> <dt>
 
-**lplabeledbytetable**
+**lpLabeledByteTable**
 </dt> <dd>
 
-Zeiger auf ein Array von [markierten \_ Byte](labeled-byte.md) Strukturen. Jede **bezeichnete \_ Byte** Struktur definiert einen Wert und eine Bezeichnung. Netzwerkmonitor eine Bezeichnung anzeigt, wenn ein entsprechender Wert im Protokoll Paket gefunden wird.
+Zeiger auf ein Array von [LABELED \_ BYTE-Strukturen.](labeled-byte.md) Jede **LABELED \_ BYTE-Struktur** definiert einen Wert und eine Bezeichnung. Netzwerkmonitor wird eine Bezeichnung angezeigt, wenn ein entsprechender Wert im Protokollpaket gefunden wird.
 
 </dd> <dt>
 
-**lplabeledwordtable**
+**lpLabeledWordTable**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [gekennzeichneten \_ Word](labeled-word.md) -Strukturen, die einen Satz von Wort Werten und Beschriftungen definieren.
+Zeiger auf ein Array von [LABELED \_ WORD-Strukturen,](labeled-word.md) die einen Satz von WORD-Werten und -Bezeichnungen definieren.
 
 </dd> <dt>
 
-**lplabeleddwordtable**
+**lpLabeledDwordTable**
 </dt> <dd>
 
-Ein Zeiger auf ein Array mit [beschrifteten \_ DWORD](labeled-dword.md) -Strukturen, die einen Satz von DWORD-Werten und-Bezeichnungen definieren.
+Zeiger auf ein Array von [ \_ LABELED-DWORD-Strukturen,](labeled-dword.md) die einen Satz von DWORD-Werten und -Bezeichnungen definieren.
 
 </dd> <dt>
 
-**lplabeledlargeintbar**
+**lpLabeledLargeIntTable**
 </dt> <dd>
 
-Zeiger auf ein Array mit [beschrifteten \_ largeint](labeled-largeint.md) -Strukturen, die einen Satz von largeint-Werten und-Bezeichnungen definieren.
+Zeiger auf ein Array von [LABELED \_ LARGEINT-Strukturen,](labeled-largeint.md) die einen Satz von LARGEINT-Werten und -Bezeichnungen definieren.
 
 </dd> <dt>
 
-**lplabeledsystemplan**
+**lpLabeledSystemTimeTable**
 </dt> <dd>
 
-Zeiger auf ein Array von [bezeichneten \_ SYSTEMTIME](labeled-systemtime.md) -Strukturen, die einen Satz von System Werten und Beschriftungen definieren.
+Zeiger auf ein Array von [LABELED \_ SYSTEMTIME-Strukturen,](labeled-systemtime.md) die einen Satz von SYSTEM-Werten und -Bezeichnungen definieren.
 
 </dd> <dt>
 
-**lplabeledbit**
+**lpLabeledBit**
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [beschrifteten \_ bitstrukturen](labeled-bit.md) , die einen Satz von gekennzeichneten Bitpaaren definieren. Jedes Bit kann zwei Bezeichnungen jeweils eine Bezeichnung für jeden Zustand (0 oder 1) des Bits angeben.
+Zeiger auf ein Array von [LABELED \_ BIT-Strukturen,](labeled-bit.md) die einen Satz bezeichneter BIT-Paare definieren. Jedes BIT kann zwei Bezeichnungen angeben, eine Bezeichnung für jeden Zustand (0 oder 1) des BIT.
 
 </dd> <dt>
 
-**lpvoidtable**
+**lpVoidTable**
 </dt> <dd>
 
-Zeiger auf ein Array von-Werten.
+Zeiger auf ein Array von Werten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Set** -Struktur wird verwendet, um einen Satz von Vergleichsdaten zu definieren, die Netzwerkmonitor verwenden können, um den Wert einer Eigenschaft in einem Protokoll Paket zu interpretieren. Wenn ein Satz von Vergleichsdaten erforderlich ist, wird ein Zeiger auf die **festgelegte** Struktur im **lpset** -Member der [PropertyInfo](propertyinfo.md) -Struktur angegeben.
+Die **SET-Struktur** wird verwendet, um einen Satz von Vergleichsdaten zu definieren, Netzwerkmonitor den Wert einer Eigenschaft in einem Protokollpaket interpretieren können. Wenn ein Satz von Vergleichsdaten erforderlich ist, wird ein Zeiger auf die **SET-Struktur** im **lpSet-Member** der [PROPERTYINFO-Struktur](propertyinfo.md) angegeben.
 
-Die Parser-DLL kann einen Werte Satz und einen Bezeichnungs Satz bereitstellen. Der Member der **Union** , den Sie in einer **festgelegten** Struktur auswählen, verweist auf ein Array von-Strukturen, die jeden Member einer Menge definieren.
+Die Parser-DLL kann einen Wertsatz und einen Bezeichnungssatz bereitstellen. Der Member der **UNION,** den Sie in einer **SET-Struktur** auswählen, zeigt auf ein Array von Strukturen, die jeden Member einer Menge definieren.
 
--   Wert festgelegt
+-   Festgelegter Wert
 
-    Ein festgelegter Wert wird verwendet, wenn Netzwerkmonitor einen in-Set-oder einen nicht in-Set-Indikator mit dem Wert enthalten soll, der im Protokoll Paket enthalten ist. Wenn z. b. ein DWORD-Satz angegeben ist, zeigt Netzwerkmonitor eine Bezeichnung für jeden DWORD-Wert an, der im Protokoll Paket enthalten ist, und gibt an, dass das DWORD-oder nicht im Satz angegeben ist.
+    Ein festgelegter Wert wird verwendet, wenn Netzwerkmonitor einen festgelegten oder nicht festgelegten Indikator mit dem Im Protokollpaket gefundenen Wert enthalten soll. Wenn beispielsweise ein DWORD-Satz angegeben wird, zeigt Netzwerkmonitor eine Bezeichnung für jeden im Protokollpaket gefundenen DWORD-Wert an, der angibt, dass das DWORD im Satz angegeben ist oder nicht angegeben ist.
 
-    Ein festgelegtes Wert kann auf den Datentypen Byte, Word, DWORD, largeint und SYSTEMTIME basieren.
+    Ein Wertsatz kann auf den Datentypen BYTE, WORD, DWORD, LARGEINT und SYSTEMTIME basieren.
 
--   Bezeichnungs Satz
+-   Bezeichnungssatz
 
-    Ein Bezeichnungs Satz wird verwendet, wenn Sie Netzwerkmonitor eine benutzerdefinierte Bezeichnung anstelle der in einer Menge angegebenen Eigenschaftswerte anzeigen möchten.
+    Ein Bezeichnungssatz wird verwendet, wenn Netzwerkmonitor benutzerdefinierte Bezeichnung anstelle der in einem Satz angegebenen Eigenschaftswerte anzeigen soll.
 
-    Ein Bezeichnungs Satz kann auf Byte-, Word-, DWORD-, largeint-, SYSTEMTIME-und Bit-Bezeichnungs Paaren basieren.
+    Ein Bezeichnungssatz kann auf BYTE-, WORD-, DWORD-, LARGEINT-, SYSTEMTIME- und BIT-Bezeichnungspaaren basieren.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -170,7 +170,7 @@ Die Parser-DLL kann einen Werte Satz und einen Bezeichnungs Satz bereitstellen. 
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
@@ -178,10 +178,10 @@ Die Parser-DLL kann einen Werte Satz und einen Bezeichnungs Satz bereitstellen. 
 
 <dl> <dt>
 
-[beschriftetes \_ Bit](labeled-bit.md)
+[BEZEICHNETES \_ BIT](labeled-bit.md)
 </dt> <dt>
 
-[PROPERTYINFO](propertyinfo.md)
+[Propertyinfo](propertyinfo.md)
 </dt> </dl>
 
  
