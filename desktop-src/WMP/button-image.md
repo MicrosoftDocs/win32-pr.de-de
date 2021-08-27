@@ -1,9 +1,9 @@
 ---
 title: BUTTON.image
-description: Das Imageattribut gibt das Standardbild von BUTTON an oder ruft es ab.
+description: Das Imageattribut gibt das Standardbild der SCHALTFLÄCHE an oder ruft es ab.
 ms.assetid: d0d97f14-2c4d-4769-b45c-c6cde7282bea
 keywords:
-- BUTTON.image-Windows Media Player
+- BUTTON.image Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118342908"
 ---
 # <a name="buttonimage"></a>BUTTON.image
 
-Das  Imageattribut gibt das Standardbild von BUTTON an oder ruft **es ab.**
+Das  Imageattribut gibt das Standardbild des BUTTON an oder ruft es **ab.**
 
 ``` syntax
         elementID.image
@@ -29,17 +29,17 @@ Das  Imageattribut gibt das Standardbild von BUTTON an oder ruft **es ab.**
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Zeichenfolge mit **Lese-/Schreibzugriff,** die den Namen der Bilddatei enthält.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die den Namen der Bilddatei enthält.
 
 ## <a name="remarks"></a>Hinweise
 
 Die unterstützten Bildformate sind BMP, JPG, PNG und GIF (einschließlich animierter GIFs).
 
-Wenn das **BUTTON-Bild** größer als  der  durch die Breiten- und Höhenattribute definierte Bereich ist, wird das Bild zugeschnitten.
+Wenn das **BUTTON-Bild** größer als der durch die **Breiten-** und **Höhenattribute** definierte Bereich ist, wird das Bild zugeschnitten.
 
-Wenn das Bild nicht angegeben ist, aber **höhe** und **breite,** wird das Bild direkt hinter diesem Steuerelement angezeigt. Dies kann das Zeichnen des Bilds in der ANSICHT selbst **vereinfachen,** was die Anzahl der benötigten separaten Bilddateien reduziert.
+Wenn das Bild nicht angegeben ist, aber **höhe** und **breite** sind, wird das Bild direkt hinter diesem Steuerelement angezeigt. Dies kann das Zeichnen des Bilds auf der **VIEW-Ansicht** selbst vereinfachen, wodurch die Anzahl der benötigten separaten Bilddateien reduziert wird.
 
-Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild) angezeigt.
+Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das bild red-x) angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Wenn das Bild nicht abgerufen werden kann, wird ein Standardbild (das rot-x-Bild
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

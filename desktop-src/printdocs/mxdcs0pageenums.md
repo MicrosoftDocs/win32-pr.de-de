@@ -1,7 +1,7 @@
 ---
-description: Die Enumeration "mxdc \_ S0 \_ Page \_ Enums" wird verwendet, um Typen von Ressourcen anzugeben, die Seiten in XPS-Dokumenten zugeordnet werden können und die von Microsoft XPS Document Converter (mxdc) an Ihre Ausgabe verarbeitet bzw. nicht verarbeitet werden können.
+description: Die MXDC S0 PAGE ENUMS-Enumeration wird verwendet, um Ressourcentypen anzugeben, die Seiten in XPS-Dokumenten zugeordnet werden können und die vom \_ \_ Microsoft XPS Document Converter (MXDC) an die Ausgabe verarbeitet oder nicht verarbeitet übergeben werden \_ können.
 ms.assetid: e111d92e-5102-4b39-b311-f9ff1d1a96f1
-title: MXDC_S0_PAGE_ENUMS-Enumeration (winspool. h)
+title: MXDC_S0_PAGE_ENUMS -Enumeration (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 1b4331210027f7fc23f36fb6b9d13a2c232ccbf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3aa6622ea65e00c1447e6042a41c998e9ab30a29d1172d43e1a1da81feb34c54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118471315"
 ---
-# <a name="mxdc_s0_page_enums-enumeration"></a>Mxdc \_ S0 \_ - \_ Enumeration für Seiten Enumeration
+# <a name="mxdc_s0_page_enums-enumeration"></a>MXDC \_ S0 \_ PAGE \_ ENUMS-Enumeration
 
-Die Enumeration " **mxdc \_ S0 \_ Page \_ Enums** " wird verwendet, um Typen von Ressourcen anzugeben, die Seiten in XPS-Dokumenten zugeordnet werden können und die von Microsoft XPS Document Converter (mxdc) an Ihre Ausgabe verarbeitet bzw. nicht verarbeitet werden können.
+Die **MXDC \_ S0 \_ PAGE \_ ENUMS-Enumeration** wird verwendet, um Ressourcentypen anzugeben, die Seiten in XPS-Dokumenten zugeordnet werden können und die vom Microsoft XPS Document Converter (MXDC) an die Ausgabe verarbeitet oder nicht verarbeitet übergeben werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,79 +48,79 @@ typedef enum tagMxdcS0PageEnums {
 
 <dl> <dt>
 
-<span id="MXDC_RESOURCE_TTF"></span><span id="mxdc_resource_ttf"></span>**mxdc- \_ Ressource \_ ttf**
+<span id="MXDC_RESOURCE_TTF"></span><span id="mxdc_resource_ttf"></span>**MXDC \_ RESOURCE \_ TTF**
 </dt> <dd>
 
-TrueType-oder OpenType-Schriftart.
+TrueType- oder OpenType-Schriftart.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_JPEG"></span><span id="mxdc_resource_jpeg"></span>**mxdc- \_ Ressource \_ JPEG**
+<span id="MXDC_RESOURCE_JPEG"></span><span id="mxdc_resource_jpeg"></span>**MXDC \_ RESOURCE \_ JPEG**
 </dt> <dd>
 
 JPEG-Bild
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_PNG"></span><span id="mxdc_resource_png"></span>**mxdc- \_ Ressource \_ PNG**
+<span id="MXDC_RESOURCE_PNG"></span><span id="mxdc_resource_png"></span>**MXDC \_ RESOURCE \_ PNG**
 </dt> <dd>
 
-PNG-Bild
+PNG-Bild.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_TIFF"></span><span id="mxdc_resource_tiff"></span>**mxdc- \_ Ressource \_ TIFF**
+<span id="MXDC_RESOURCE_TIFF"></span><span id="mxdc_resource_tiff"></span>**MXDC \_ RESOURCE \_ TIFF**
 </dt> <dd>
 
-TIFF-Bild
+TIFF-Image.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_WDP"></span><span id="mxdc_resource_wdp"></span>**mxdc- \_ Ressource ( \_ WDP)**
+<span id="MXDC_RESOURCE_WDP"></span><span id="mxdc_resource_wdp"></span>**MXDC \_ RESOURCE \_ WDP**
 </dt> <dd>
 
-Bild für Windows Media-Foto.
+Windows Medienfotobild.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_DICTIONARY"></span><span id="mxdc_resource_dictionary"></span>**mxdc- \_ Ressourcen \_ Wörterbuch**
+<span id="MXDC_RESOURCE_DICTIONARY"></span><span id="mxdc_resource_dictionary"></span>**MXDC \_ RESOURCE \_ DICTIONARY**
 </dt> <dd>
 
-Das Remote Ressourcen Wörterbuch, das an die nicht verarbeitete Ausgabe von mxdc weitergeleitet werden soll.
+Remoteressourcenverzeichnis, das nicht verarbeitet an die MXDC-Ausgabe übergeben werden soll.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_ICC_PROFILE"></span><span id="mxdc_resource_icc_profile"></span>**mxdc- \_ Ressourcen- \_ ICC- \_ Profil**
+<span id="MXDC_RESOURCE_ICC_PROFILE"></span><span id="mxdc_resource_icc_profile"></span>**MXDC \_ \_ RESOURCEÄTSPROFIL \_**
 </dt> <dd>
 
-Das ICC-Profil, das an die nicht verarbeitete Ausgabe von mxdc übermittelt werden soll.
+DAS PROFIL, das nicht verarbeitet an die MXDC-Ausgabe übergeben werden soll.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_JPEG_THUMBNAIL"></span><span id="mxdc_resource_jpeg_thumbnail"></span>**mxdc- \_ Ressource \_ JPEG- \_ Miniaturansicht**
+<span id="MXDC_RESOURCE_JPEG_THUMBNAIL"></span><span id="mxdc_resource_jpeg_thumbnail"></span>**JPEG-MINIATURANSICHT \_ DER MXDC-RESSOURCE \_ \_**
 </dt> <dd>
 
-JPEG-Miniaturansicht, die an die nicht verarbeitete Ausgabe von mxdc übermittelt werden soll.
+JPEG-Miniaturansicht, die nicht verarbeitet an die MXDC-Ausgabe übergeben werden soll.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_PNG_THUMBNAIL"></span><span id="mxdc_resource_png_thumbnail"></span>**mxdc- \_ Ressource \_ PNG- \_ Miniaturansicht**
+<span id="MXDC_RESOURCE_PNG_THUMBNAIL"></span><span id="mxdc_resource_png_thumbnail"></span>**PNG-MINIATURANSICHT \_ DER MXDC-RESSOURCE \_ \_**
 </dt> <dd>
 
-PNG-Miniaturansicht, die an die nicht verarbeitete Ausgabe von mxdc übermittelt werden soll.
+PNG-Miniaturansicht, die nicht verarbeitet an die MXDC-Ausgabe übergeben werden soll.
 
 </dd> <dt>
 
-<span id="MXDC_RESOURCE_MAX"></span><span id="mxdc_resource_max"></span>**mxdc- \_ Ressource \_ Max**
+<span id="MXDC_RESOURCE_MAX"></span><span id="mxdc_resource_max"></span>**MXDC \_ RESOURCE \_ MAX**
 </dt> <dd>
 
-Die maximale Ressourcen Anzahl für die Überprüfung.
+Die maximale Ressourcenanzahl für die Validierung.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration wird hauptsächlich als **dwresourcetype** -Member der [**mxdc \_ XPS \_ S0PAGE \_ Resource \_ T**](mxdcxpss0pageresource.md) -Struktur verwendet.
+Diese Enumeration wird hauptsächlich als **dwResourceType-Member** der [**MXDC \_ XPS \_ S0PAGE \_ RESOURCE \_ T-Struktur**](mxdcxpss0pageresource.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -128,9 +128,9 @@ Diese Enumeration wird hauptsächlich als **dwresourcetype** -Member der [**mxdc
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 

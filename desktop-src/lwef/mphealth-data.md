@@ -1,10 +1,10 @@
 ---
-title: MPHEALTH_DATA Struktur (mpclient. h)
-description: Integritäts Benachrichtigungs Daten.
+title: MPHEALTH_DATA-Struktur (MpClient.h)
+description: Integritätsbenachrichtigungsdaten.
 ms.assetid: 37A87F77-386A-4508-B338-ED2151518968
 keywords:
-- MPHEALTH_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPHEALTH_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPHEALTH_DATA struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPHEALTH_DATA Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e729bdea82b6a885b64e95ecd77f9deae6bff4e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb04224d38e639d053b8e20370e2b0db0dc15f44cc647e7205911362112e4a49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976000"
 ---
-# <a name="mphealth_data-structure"></a>Mphealth- \_ Datenstruktur
+# <a name="mphealth_data-structure"></a>MPHEALTH \_ DATA-Struktur
 
-Integritäts Benachrichtigungs Daten.
+Integritätsbenachrichtigungsdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct tagMPHEALTH_DATA {
 
 <dl> <dt>
 
-**dwnotificationtype**
+**dwNotificationType**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -53,7 +53,7 @@ Hier wird der Benachrichtigungstyp angegeben.
 
 </dd> <dt>
 
-**dwnotificationflag**
+**dwNotificationFlag**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -70,9 +70,9 @@ Nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Getidentityfolder wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.
+description: GetIdentityFolder wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: cd3370a2-b393-4cb9-ad9c-a46086987aaa
-title: 'Iuseridentity:: getidentityfolder-Methode (Msident. h)'
+title: IUserIdentity::GetIdentityFolder-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: 9f2644570bb7ccc2ae5bee8a37d4471ffb65861a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20357dde27214177a454eb585dcd51182228c247da5aeae5ef887089b73ed85d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977904"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118720606"
 ---
-# <a name="iuseridentitygetidentityfolder-method"></a>Iuseridentity:: getidentityfolder-Methode
+# <a name="iuseridentitygetidentityfolder-method"></a>IUserIdentity::GetIdentityFolder-Methode
 
-\[**Getidentityfolder** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**GetIdentityFolder** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Ruft den Datei Ordner ab, der dieser Identität zugeordnet ist.
+Ruft den Dateiordner ab, der dieser Identität zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,52 +43,52 @@ HRESULT GetIdentityFolder(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Erforderlich. Ein-Wert, der angibt, ob der dieser Identität zugeordnete Ordner roamingbasiert. Muss einen der folgenden Werte aufweisen.
+Erforderlich. Ein -Wert, der angibt, ob der dieser Identität zugeordnete Ordner roamingt. Dabei muss es sich um einen der folgenden Werte handeln.
 
 <dt>
 
 
 
- (GIF \_ \_roamingordner)
+ (GIF) \_ \_ROAMINGORDNER)
 
 
 </dt> <dd>
 
-Der Ordner ist Roaming.
+Der Ordner befindet sich im Roaming.
 
 </dd> <dt>
 
 
 
- (GIF \_ nicht \_ \_ roamingordner)
+ (GIF) \_ NICHT \_ \_ ROAMINGORDNER)
 
 
 </dt> <dd>
 
-Der Ordner ist "local".
+Der Ordner ist lokal.
 
 </dd> </dl> </dd> <dt>
 
-*pszpath* \[ in\]
+*pszPath* \[ In\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
-Ein Zeiger auf eine breit Zeichen-Zeichenfolge, die den Ordner Pfad empfängt.
+Ein Zeiger auf eine Breitzeichenzeichenfolge, die den Ordnerpfad empfängt.
 
 </dd> <dt>
 
-_ulBuffSize * \[ in\]
+*ulBuffSize* \[ In\]
 </dt> <dd>
 
-Typ: **ulong**
+Typ: **ULONG**
 
-Ein-Wert, der die Größe von *pszpath* angibt.
+Ein -Wert, der die Größe von *pszPath angibt.*
 
 </dd> </dl>
 
@@ -96,9 +96,9 @@ Ein-Wert, der die Größe von *pszpath* angibt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -108,8 +108,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/>    | Windows 2000 Server<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -118,10 +118,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iuseridentity**](iuseridentity.md)
+[**IUserIdentity**](iuseridentity.md)
 </dt> <dt>
 
-[**Iuseridentity:: openidentityregkey**](iuseridentity-openidentityregkey.md)
+[**IUserIdentity::OpenIdentityRegKey**](iuseridentity-openidentityregkey.md)
 </dt> </dl>
 
  

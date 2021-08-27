@@ -1,7 +1,7 @@
 ---
 description: Die schreibgeschützte ComponentClients-Eigenschaft gibt ein StringList-Objekt zurück, das den Satz von Clients einer angegebenen Komponente auflistet.
 ms.assetid: 47553360-298f-4be8-819d-18f4df96667c
-title: Installer.ComponentClients-Eigenschaft
+title: Installer.ComponentClients (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118632712"
 ---
-# <a name="installercomponentclients-property"></a>Installer.ComponentClients-Eigenschaft
+# <a name="installercomponentclients-property"></a>Installer.ComponentClients (Eigenschaft)
 
 Die schreibgeschützte **ComponentClients-Eigenschaft** gibt ein [**StringList-Objekt**](stringlist-object.md) zurück, das den Satz von Clients einer angegebenen Komponente auflistet.
 
@@ -37,11 +37,11 @@ propVal = Installer.ComponentClients
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolgen-GUID, die den Komponentencode der Komponente darstellt. Die Komponentencodes werden in der ComponentId -Spalte der [Component-Tabelle](component-table.md)angegeben.
+Eine Zeichenfolgen-GUID, die den Komponentencode der Komponente darstellt. Die Komponentencodes werden in der ComponentId -Spalte der [Component-Tabelle angegeben.](component-table.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Um die Komponentenclients aufzulisten, kann eine Anwendung das [**StringList-Objekt**](stringlist-object.md) mithilfe eines For Each-Konstrukts durchlaufen. Da Clients nicht sortiert sind, verfügen alle neuen Komponenten über einen beliebigen Index. Dies bedeutet, dass die Funktion Clients in beliebiger Reihenfolge zurückgeben kann.
+Um die Komponentenclients aufzählen zu können, kann eine Anwendung das [**StringList-Objekt**](stringlist-object.md) mithilfe eines For Each-Konstrukts durch iterieren. Da Clients nicht geordnet sind, haben alle neuen Komponenten einen beliebigen Index. Dies bedeutet, dass die Funktion Clients in beliebiger Reihenfolge zurückgeben kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,13 +49,13 @@ Um die Komponentenclients aufzulisten, kann eine Anwendung das [**StringList-Obj
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

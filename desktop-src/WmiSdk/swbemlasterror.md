@@ -65,7 +65,7 @@ Das **SWbemLastError-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                                                  |
+| Methode                                                   | Beschreibung                                                                                  |
 |:---------------------------------------------------------|:---------------------------------------------------------------------------------------------|
 | **Associators\_**                                        | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
 | **AssociatorsAsync\_**                                   | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/> |
@@ -97,7 +97,7 @@ Das **SWbemLastError-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                      | Zugriffstyp          | BESCHREIBUNG                                                                                                                                                   |
+| Eigenschaft                                                      | Zugriffstyp          | Beschreibung                                                                                                                                                   |
 |:--------------------------------------------------------------|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Ableitung\_**<br/>                                   | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |
 | **Methoden\_** <br/>                                     | Schreibgeschützt<br/> | Wird nicht verwendet. Das [**SWbemObject-Objekt**](swbemobject.md) bietet die gleiche Methode.<br/>                                                                  |

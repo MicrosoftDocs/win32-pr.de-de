@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: eventlogginglevels-Enumeration'
-title: Eventlogginglevels-Enumeration
+description: Weitere Informationen finden Sie unter EventLoggingLevels-Enumeration.
+title: EventLoggingLevels-Enumeration
 TOCTitle: EventLoggingLevels enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EventLoggingLevels
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.eventlogginglevels(v=EXCHG.10)
@@ -36,19 +36,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7ec0881a7d217cfdcbc3680eaa3054dbb4fb62a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d910e1417ea7c05e86f7e9d6c2a69c8c0e47c212a7956f1d309e895576d4ee96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118768033"
 ---
-# <a name="eventlogginglevels-enumeration"></a>Eventlogginglevels-Enumeration
+# <a name="eventlogginglevels-enumeration"></a>EventLoggingLevels-Enumeration
 
-Optionen für eventlogginglevel.
+Optionen für EventLoggingLevel.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,13 +76,13 @@ public enum EventLoggingLevels
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Deaktivieren</td>
+<td>Disable</td>
 <td>Deaktivieren Sie alle Ereignisse.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Min</td>
-<td>Standard Ebene.</td>
+<td>Standardebene.</td>
 </tr>
 <tr class="odd">
 <td></td>
@@ -96,20 +96,20 @@ public enum EventLoggingLevels
 </tr>
 <tr class="odd">
 <td></td>
-<td>High</td>
+<td>Hoch</td>
 <td>Hohe Ausführlichkeit und niedriger.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Max.</td>
+<td>Max</td>
 <td>Alle Ereignisse.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -4,8 +4,8 @@ description: Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwa
 ms.assetid: 8e838e7b-b19f-4c9e-8fb9-cf9f1076af56
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-NC-Type-Attributs
-- AD-Schema des msDS-NcType-Attributs
+- MS-DS-NC-Type-Attribut AD-Schema
+- MSDS-NcType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die fü
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2024              |
-| System-Id-Guid    | 5a2eacd7-cc2b-48cf-9d9a-b6f1a0024de9 |
+| System-ID-GUID    | 5a2eacd7-cc2b-48cf-9d9a-b6f1a0024de9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -55,7 +55,7 @@ Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die fü
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Richtig                            |
+| Ist einwertig       | Richtig                            |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -76,7 +76,7 @@ Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die fü
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Richtig                            |
+| Ist einwertig       | Richtig                            |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -97,7 +97,7 @@ Ein Bitfeld, das Informationen zu Aspekten eines NC-Replikats verwaltet, die fü
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | Richtig                            |
-| Is-Single-Valued       | Richtig                            |
+| Ist einwertig       | Richtig                            |
 | Ist indiziert             | Falsch                           |
 | Im globalen Katalog      | Falsch                           |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

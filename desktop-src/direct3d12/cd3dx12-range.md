@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_RANGE-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, die die einfache Initialisierung einer D3D12- \_ Bereichs Struktur ermöglicht.
+title: CD3DX12_RANGE-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ RANGE-Struktur zu ermöglichen.
 ms.assetid: 5D5192BF-D14C-487B-A214-F8428E82AF0E
 keywords:
-- CD3DX12_RANGE Struktur
+- CD3DX12_RANGE-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 66b6b92cd24a981d48252f5ad457f7ac0320e2d7
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 371df1fb6c1b6ce9984fbed5bb388d7026ddd193d0ab2d434710df3618da7ca8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367490"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118808516"
 ---
-# <a name="cd3dx12_range-structure"></a>CD3DX12 \_ Range-Struktur
+# <a name="cd3dx12_range-structure"></a>CD3DX12 \_ RANGE-Struktur
 
-Eine hilfsstruktur, die die einfache Initialisierung einer [**D3D12- \_ Bereichs**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range) Struktur ermöglicht.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ RANGE-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,35 +44,35 @@ struct CD3DX12_RANGE  : public D3D12_RANGE{
 
 <dl> <dt>
 
-**CD3DX12 \_ Range ()**
+**CD3DX12 \_ RANGE()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ Bereichs.
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ RANGE.
 
 </dd> <dt>
 
-**expliziter CD3DX12 \_ Bereich (konstant D3D12 \_ Bereich &o)**
+**explicit CD3DX12 \_ RANGE(const D3D12 \_ RANGE &o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Bereichs, der mit dem Inhalt einer anderen D3D12- [**\_ Bereichs**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range) Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ RANGE, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ RANGE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range)
 
 </dd> <dt>
 
-**CD3DX12 \_ Range (size \_ t Begin, size \_ t End)**
+**CD3DX12 \_ RANGE(SIZE \_ T begin, SIZE T \_ end)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12 \_ Bereichs und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ RANGE und initialisiert die folgenden Parameter:
 
-\_Anfangs Größe
+SIZE \_ T begin
 
-Ende der Größe \_
+SIZE \_ T end
 
 </dd> <dt>
 
-**Operator konstant D3D12 \_ Bereichs& () Konstanten**
+**operator const D3D12 \_ RANGE&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & Pass-by-Reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -82,7 +82,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -90,7 +90,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 <dl> <dt>
 
-[**D3D12 \_ Bereich**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range)
+[**D3D12 \_ RANGE**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_range)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

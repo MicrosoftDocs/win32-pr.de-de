@@ -1,19 +1,19 @@
 ---
-title: Iagentcommands getcaption
-description: Iagentcommands getcaption
+title: IAgentCommands GetCaption
+description: IAgentCommands GetCaption
 ms.assetid: bbaaaa20-c8c2-41af-a6fc-cf8849daa399
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f886413ae6bfbfe104306d7280d8c66b08bf311a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: cd6eb40b0be58695e79a02ab0ad67ad0d26a47bd13a1637dc1d1f5a4380a7429
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340897"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118749886"
 ---
-# <a name="iagentcommandsgetcaption"></a>Iagentcommands:: getcaption
+# <a name="iagentcommandsgetcaption"></a>IAgentCommands::GetCaption
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetCaption(
@@ -21,24 +21,24 @@ HRESULT GetCaption(
 );
 ```
 
-Ruft die [**Beschriftung**](caption-property.md) für eine [**Befehls**](/windows/desktop/lwef/the-commands-collection-object) Auflistung ab.
+Ruft die [**Beschriftung für**](caption-property.md) eine [**Commands-Auflistung**](/windows/desktop/lwef/the-commands-collection-object) ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbszCaption"></span><span id="pbszcaption"></span><span id="PBSZCAPTION"></span>*pbszcaption*
+<span id="pbszCaption"></span><span id="pbszcaption"></span><span id="PBSZCAPTION"></span>*pbszCaption*
 </dt> <dd>
 
-Die Adresse eines BSTR-Werts, der den Wert der über [**Schrift**](caption-property.md) Texteinstellung empfängt, der für eine [**Commands**](/windows/desktop/lwef/the-commands-collection-object) -Auflistung angezeigt wird.
+Die Adresse eines BSTR, der den Wert der Texteinstellung [**Caption**](caption-property.md) empfängt, die für eine [**Commands-Auflistung angezeigt**](/windows/desktop/lwef/the-commands-collection-object) wird.
 
 </dd> </dl>
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommands:: setCaption**](iagentcommands--setcaption.md), [**iagentcommands:: getVisible**](iagentcommands--getvisible.md), [**iagentcommands:: getvoice**](iagentcommands--getvoice.md)
+[**IAgentCommands::SetCaption**](iagentcommands--setcaption.md), [**IAgentCommands::GetVisible**](iagentcommands--getvisible.md), [**IAgentCommands::GetVoice**](iagentcommands--getvoice.md)
 
 
- 
+ 
 
- 
+ 

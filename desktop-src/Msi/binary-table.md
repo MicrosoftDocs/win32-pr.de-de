@@ -46,7 +46,7 @@ Die unformatierten Binärdaten.
 
 </dd> </dl>
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

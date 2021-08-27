@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Auflisten von Schema Klassen, Attributen und Syntaxen
-description: Code Beispiele, in denen Schema Klassen, Attribute und Syntaxen aufgelistet werden.
+title: Beispielcode zum Aufzählen von Schemaklassen, Attributen und Syntaxen
+description: Codebeispiele, die Schemaklassen, Attribute und Syntaxen aufzählen.
 ms.assetid: fca0b723-4582-4fe3-933d-b56c016fd324
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Auflisten von Schema Klassen, Attributen und Syntaxen
+- Active Directory-Beispiele Active Directory, Aufzählen von Schemaklassen, Attributen und Syntaxen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ceaea652c2e66b07a12b31096fb06bfe8839f6ee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 282aeea3274e3e7eb8f7b4c71134bd1cbf95aefff58e5fe9c03e459b27671f1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693816"
 ---
-# <a name="example-code-for-enumerating-schema-classes-attributes-and-syntaxes"></a>Beispiel Code für das Auflisten von Schema Klassen, Attributen und Syntaxen
+# <a name="example-code-for-enumerating-schema-classes-attributes-and-syntaxes"></a>Beispielcode zum Aufzählen von Schemaklassen, Attributen und Syntaxen
 
-Im folgenden C++ Beispiel wird gezeigt, wie die Klassen, Attribute und Syntaxen im abstrakten Schema aufgelistet werden.
+Das folgende C++-Beispiel zeigt, wie die Klassen, Attribute und Syntaxen im abstrakten Schema aufzählt werden.
 
 
 ```C++
@@ -167,7 +167,7 @@ cleanup:
 
 
 
-Im folgenden Visual Basic Codebeispiel wird das abstrakte Schema zum Aufzählen der Struktur-, abstrakten und hilfsobjektklassen gelesen. Im Beispiel werden dann die einwertigen und mehrwertigen Attribut Klassen aufgelistet.
+Im folgenden Visual Basic Codebeispiel wird das abstrakte Schema gelesen, um die strukturellen, abstrakten und Hilfsobjektklassen zu aufzählen. Im Beispiel werden dann die einwertigen und mehrwertigen Attributklassen aufzählt.
 
 
 ```VB
@@ -204,9 +204,9 @@ Next aProp
 
 
 
- 
+ 
 
- 
+ 
 
 
 

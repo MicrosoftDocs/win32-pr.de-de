@@ -3,8 +3,8 @@ title: IWMPPlaylistArray count-Eigenschaft
 description: Die count-Eigenschaft ruft die Anzahl der Wiedergabelisten im Wiedergabelistenarray ab.
 ms.assetid: 24603d05-4016-4aac-a623-75be668065c8
 keywords:
-- count-Windows Media Player
-- count-Windows Media Player , IWMPPlaylistArray-Schnittstelle
+- count-Eigenschaft Windows Media Player
+- count-Eigenschaft Windows Media Player , IWMPPlaylistArray-Schnittstelle
 - IWMPPlaylistArray-Schnittstelle Windows Media Player , count-Eigenschaft
 topic_type:
 - apiref
@@ -46,11 +46,11 @@ Public ReadOnly Property count As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System.Int32,** das die Anzahl der Wiedergabelisten im Array ist.
+Eine **System.Int32,die** die Anzahl der Wiedergabelisten im Array ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,7 +58,7 @@ Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher.<br/>                                                                     |
+| Version<br/>   | Windows Media Player serie 9 oder höher.<br/>                                                                     |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 

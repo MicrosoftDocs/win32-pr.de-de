@@ -1,19 +1,19 @@
 ---
-title: Aufhebung der Registrierung durch iagent
-description: Aufhebung der Registrierung durch iagent
+title: IAgent-Registrierung aufheben
+description: IAgent-Registrierung aufheben
 ms.assetid: d81cde72-f9ff-45aa-9dbf-faea9a478c3c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 796e033ac823ee7c79fe5312fab2c57dec36e694
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 6101d0473e8563e8b0899e2f5d0bd2a440c31d17b4a0c142b43f47855ddf166b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103858248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976480"
 ---
-# <a name="iagentunregister"></a>Iagent:: Unregister
+# <a name="iagentunregister"></a>IAgent::Unregister
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT Unregister(
@@ -21,26 +21,26 @@ HRESULT Unregister(
 );
 ```
 
-Entlädt die Zeichendaten für das angegebene Zeichen aus der [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung.
+Entlädt die Zeichendaten für das angegebene Zeichen aus der [**Characters-Auflistung.**](/windows/desktop/lwef/the-characters-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="dwSinkID"></span><span id="dwsinkid"></span><span id="DWSINKID"></span>*dwsink ID*
+<span id="dwSinkID"></span><span id="dwsinkid"></span><span id="DWSINKID"></span>*dwSinkID*
 </dt> <dd>
 
-Die ID der Benachrichtigungs Senke.
+Die ID der Benachrichtigungssenke.
 
 </dd> </dl>
 
-Verwenden Sie diese Methode, wenn Sie die Microsoft-Agent-Dienste nicht mehr benötigen, z. b. wenn die Anwendung heruntergefahren wird.
+Verwenden Sie diese Methode, wenn Sie microsoft-Agent-Dienste nicht mehr benötigen, z. B. wenn Ihre Anwendung heruntergefahren wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagent:: Register**](iagent--register.md)
+[**IAgent::Register**](iagent--register.md)
 
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Gibt einen Wert zurück, der die Funktionen der Tablet-Hardware darstellt.
+description: Gibt einen Wert zurück, der die Funktionen der Tabletthardware darstellt.
 ms.assetid: 68936dab-3df4-42c4-9945-bcd525c996f3
-title: 'ITablet:: gethardwarecaps-Methode'
+title: ITablet::GetHardwareCaps-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 5ada3ad58699952bac5458ddd079abaf84f63bf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6faa286a95c27556427ed62dfebd6b16496b22b2e55263661f529709d546656b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119031908"
 ---
-# <a name="itabletgethardwarecaps-method"></a>ITablet:: gethardwarecaps-Methode
+# <a name="itabletgethardwarecaps-method"></a>ITablet::GetHardwareCaps-Methode
 
-Gibt einen Wert zurück, der die Funktionen der Tablet-Hardware darstellt.
+Gibt einen Wert zurück, der die Funktionen der Tabletthardware darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT GetHardwareCaps(
 
 <dl> <dt>
 
-*pdwcaps* \[ vorgenommen\]
+*pdwCaps* \[ out\]
 </dt> <dd>
 
 Bitflags, die die Funktionen der Tablet-Hardware darstellen.
@@ -56,24 +56,24 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                            | Beschreibung                               |
 |----------------------------------------------------------------------------------------|-------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>   | Erfolg.<br/>                       |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl> | Es ist ein unbekannter Fehler aufgetreten.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *pdwcaps* -Parameter ist ein Satz von Bitflags, die Tablet-Hardwarefunktionen beschreiben. In der folgenden Tabelle werden diese Flags beschrieben.
+Der *pdwCaps-Parameter* ist ein Satz von Bitflags, die Tablet-Hardwarefunktionen beschreiben. In der folgenden Tabelle werden diese Flags beschrieben.
 
 
 
-| FlagName                         | Wert                 | BESCHREIBUNG                                                                                                                    |
+| Flagname                         | Wert                 | Beschreibung                                                                                                                    |
 |-----------------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| Integration in thwc \_<br/>       | 0x00000001<br/> | Gibt an, dass die Anzeige und der Digitalisierer dieselbe Oberfläche verwenden.<br/>                                                    |
-| thwc- \_ CSR \_ muss \_ berühren<br/> | 0x00000002<br/> | Gibt an, dass sich der Cursor in einem physischen Kontakt mit dem Gerät befinden muss, um die Position zu melden.<br/>                           |
-| harte thwc- \_ \_ Nähe<br/>  | 0x00000004<br/> | Gibt an, dass das Gerät Ereignisse generieren kann, wenn der Cursor in den Bereich physischer Erkennungsbereich wechselt und diesen verlässt.<br/> |
-| thwc \_ physid \_ csrs<br/>     | 0x00000008<br/> | Gibt an, dass das Gerät den aktiven Cursor in der Hardware eindeutig identifizieren kann.<br/>                                      |
+| THWC \_ INTEGRATED<br/>       | 0x00000001<br/> | Gibt an, dass die Anzeige und der Digitizer dieselbe Oberfläche gemeinsam haben.<br/>                                                    |
+| THWC \_ CSR \_ MUST \_ TOUCH<br/> | 0x00000002<br/> | Gibt an, dass sich der Cursor in physischem Kontakt mit dem Gerät befindet, um die Position zu melden.<br/>                           |
+| THWC \_ HARD \_ PROXIMITY<br/>  | 0x00000004<br/> | Gibt an, dass das Gerät Ereignisse generieren kann, wenn der Cursor in den physischen Erkennungsbereich eintritt und diesen verlässt.<br/> |
+| THWC \_ PHYSID \_ CSRS<br/>     | 0x00000008<br/> | Gibt an, dass das Gerät den aktiven Cursor in der Hardware eindeutig identifizieren kann.<br/>                                      |
 
 
 
@@ -85,7 +85,7 @@ Der *pdwcaps* -Parameter ist ein Satz von Bitflags, die Tablet-Hardwarefunktione
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

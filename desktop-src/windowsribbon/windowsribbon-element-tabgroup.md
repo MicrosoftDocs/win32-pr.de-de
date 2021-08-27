@@ -3,7 +3,7 @@ title: TabGroup-Element
 description: Stellt einen kontextbezogenen Satz von Tabulatorsteuerelementen dar.
 ms.assetid: f131efe1-b8c4-416e-997a-5e2d3bcc03ea
 keywords:
-- TabGroup-Element Windows-Menüband
+- TabGroup-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6a4c18db72d6b0161842bfde9d5a836d14189c6a
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: cd2d2109abd92f791a14c5d2ba19fc7eaecd73e7f2718623100c6ec3eb0e1e4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706870"
 ---
 # <a name="tabgroup-element"></a>TabGroup-Element
 
 Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-controls-tabgroup.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <TabGroup
@@ -47,9 +47,9 @@ Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -58,7 +58,7 @@ Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -69,7 +69,7 @@ Stellt einen kontextbezogenen Satz von [Tabulatorsteuerelementen](windowsribbon-
 
 
 
-| Element                                             | BESCHREIBUNG                                     |
+| Element                                             | Beschreibung                                     |
 |-----------------------------------------------------|-------------------------------------------------|
 | [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
@@ -95,7 +95,7 @@ Muss mindestens einmal für jedes [**Ribbon.ContextualTabs-Element**](windowsrib
 
 Im folgenden Beispiel wird das grundlegende Markup für das **TabGroup-Element** veranschaulicht.
 
-Dieser Codeabschnitt zeigt eine **TabGroup-Befehlsdeklaration** mit zwei kontextbezogenen Registerkarten.
+Dieser Codeabschnitt zeigt eine **TabGroup** Command-Deklaration mit zwei kontextbezogenen Registerkarten.
 
 
 ```XML
@@ -113,7 +113,7 @@ Dieser Codeabschnitt zeigt eine **TabGroup-Befehlsdeklaration** mit zwei kontext
 
 
 
-Dieser Codeabschnitt zeigt die entsprechenden **TabGroup-Steuerelementdeklarationen.**
+In diesem Codeabschnitt werden die entsprechenden **TabGroup-Steuerelementdeklarationen** angezeigt.
 
 
 ```XML
@@ -162,7 +162,7 @@ Dieser Codeabschnitt zeigt die entsprechenden **TabGroup-Steuerelementdeklaratio
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

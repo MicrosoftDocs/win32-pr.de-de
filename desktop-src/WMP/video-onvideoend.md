@@ -1,9 +1,9 @@
 ---
-title: Video. onvideoend
-description: Der onvideoend-Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video das Rendering beendet und entladen wird.
+title: VIDEO.onvideoend
+description: Der onvideoend-Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video nicht mehr gerendert und entladen wird.
 ms.assetid: 6b9ad6fa-cb7d-44ef-baae-3b6861c9e975
 keywords:
-- Video. onvideoend-Windows-Media Player
+- VIDEO.onvideoend Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 849c993a3bb4770fec08e08088bd055bc68bb850
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1030691da7ddba4a5da36b52461958919acfae2149de8679d0adfb4fa908f6b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106374034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118333046"
 ---
-# <a name="videoonvideoend"></a>Video. onvideoend
+# <a name="videoonvideoend"></a>VIDEO.onvideoend
 
-Der **onvideoend** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn das Video das Rendering beendet und entladen wird.
+Der **onvideoend-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn das Video nicht mehr gerendert und entladen wird.
 
 ``` syntax
 
@@ -34,15 +34,15 @@ onvideoend
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video-Element**](video-element.md)
+[**VIDEO-Element**](video-element.md)
 </dt> </dl>
 
  

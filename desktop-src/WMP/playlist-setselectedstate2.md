@@ -35,14 +35,14 @@ Die **setSelectedState2-Methode** legt den ausgewählten Zustand des Elements mi
 <span id="item"></span><span id="ITEM"></span>*Artikel*
 </dt> <dd>
 
-**Zahl** (**long**), die den Index eines Elements in der Wiedergabeliste angibt.
+**Number** (**long**) gibt den Index eines Elements in der Wiedergabeliste an.
 
 </dd> <dt>
 
 <span id="selected"></span><span id="SELECTED"></span>*Ausgewählten*
 </dt> <dd>
 
-**Boolescher Wert,** der angibt, ob das angegebene Element ausgewählt (TRUE) oder deaktiviert (FALSE) werden soll.
+**Boolescher Wert,** der angibt, ob das angegebene Element ausgewählt (true) oder nicht ausgewählt werden soll (FALSE).
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode kann mit geschachtelten Wiedergabelisten funktionieren und ersetzt die **setSelectedState-Methode,** die dies nicht kann. Sie können alle Elemente auf den angeforderten Zustand festlegen, indem Sie im *Elementparameter* 1 angeben.
+Diese Methode kann mit geschachtelten Wiedergabelisten verwendet werden und ersetzt die **setSelectedState-Methode,** die dies nicht kann. Sie können alle Elemente auf den angeforderten Zustand festlegen, indem Sie 1 im *Elementparameter* angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Diese Methode kann mit geschachtelten Wiedergabelisten funktionieren und ersetzt
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,5 +1,5 @@
 ---
-description: Datenabfragen sind WQL-Anweisungen, die Instanzen von Klassen anfordern. Zum Ausführen einer Datenabfrage rufen Anwendungen die IWbemServices::ExecQuery- oder IWbemServices::ExecQueryAsync-Methode auf.
+description: Datenabfragen sind WQL-Anweisungen, die Instanzen von Klassen anfordern. Um eine Datenabfrage auszugeben, rufen Anwendungen die IWbemServices::ExecQuery- oder IWbemServices::ExecQueryAsync-Methode auf.
 ms.assetid: a8b9bf2f-300d-4570-8b30-7532f3421d39
 ms.tgt_platform: multiple
 title: Anfordern von Klasseninstanzdaten
@@ -14,18 +14,18 @@ ms.locfileid: "118316287"
 ---
 # <a name="requesting-class-instance-data"></a>Anfordern von Klasseninstanzdaten
 
-Datenabfragen sind WQL-Anweisungen, die Instanzen von Klassen anfordern. Zum Ausführen einer Datenabfrage rufen Anwendungen die [**IWbemServices::ExecQuery-**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery) oder [**IWbemServices::ExecQueryAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) auf.
+Datenabfragen sind WQL-Anweisungen, die Instanzen von Klassen anfordern. Um eine Datenabfrage auszugeben, rufen Anwendungen die [**IWbemServices::ExecQuery-**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execquery) oder [**IWbemServices::ExecQueryAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) auf.
 
-Die folgenden Anweisungen werden verwendet, um Datenabfragen zu erstellen:
+Die folgenden Anweisungen werden zum Ausführen von Datenabfragen verwendet:
 
 -   [SELECT](select-statement-for-data-queries.md)
 -   [ASSOZIATOREN VON](associators-of-statement.md)
 -   [VERWEISE VON](references-of-statement.md)
 -   [ISA](isa-operator-for-data-queries.md)
 
-Die WQL SELECT-Anweisung ist die standardmäßige strukturierte Abfragesprache -Anweisung (SQL) zum Abrufen von Informationen mit einigen Einschränkungen und Erweiterungen speziell für WQL. Obwohl die SQL SELECT-Anweisung in der Regel in der Datenbankumgebung verwendet wird, um bestimmte Spalten aus Tabellen abzurufen, wird die WQL SELECT-Anweisung in WMI verwendet, um Instanzen einer einzelnen Klasse abzurufen. WQL unterstützt keine Abfragen über mehrere Klassen hinweg.
+Die WQL SELECT-Anweisung ist die standardmäßige strukturierte Abfragesprache -Anweisung (SQL) zum Abrufen von Informationen mit einigen Einschränkungen und Erweiterungen, die für WQL spezifisch sind. Obwohl die SQL SELECT-Anweisung in der Regel in der Datenbankumgebung verwendet wird, um bestimmte Spalten aus Tabellen abzurufen, wird die WQL SELECT-Anweisung in WMI verwendet, um Instanzen einer einzelnen Klasse abzurufen. WQL unterstützt keine Abfragen über mehrere Klassen hinweg.
 
-Die ASSOCIATORS OF- und REFERENCES OF-Anweisungen sind spezifisch für WQL und nicht Teil der Standard-SQL. Die ASSOCIATORS OF-Anweisung ruft alle Klasseninstanzen ab, die einer bestimmten Quellklasseninstanz zugeordnet sind, und REFERENCES OF ruft alle Instanzen ab, die auf eine bestimmte Quellinstanz verweisen. Zuordnungen werden durch Instanzen einer [Zuordnungsklasse dargestellt.](declaring-an-association-class.md)
+Die ASSOCIATORS OF- und REFERENCES OF-Anweisungen sind WQL-spezifisch und nicht Teil der Standard-SQL. Die ASSOCIATORS OF-Anweisung ruft alle Klasseninstanzen ab, die einer bestimmten Quellklasseninstanz zugeordnet sind, und REFERENCES OF ruft alle Instanzen ab, die auf eine bestimmte Quellinstanz verweisen. Zuordnungen werden durch Instanzen einer [Zuordnungsklasse](declaring-an-association-class.md)dargestellt.
 
  
 

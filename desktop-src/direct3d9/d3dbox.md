@@ -1,7 +1,7 @@
 ---
 description: Definiert ein Volume.
 ms.assetid: 415a96bc-1621-4691-b87a-98ca22f0bf07
-title: D3DBOX-Struktur (D3D9Types. h)
+title: D3DBOX-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 882f6aadf0d49284b30132d4f08a9c583e5c9d73
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9b7e01641348594e962f546a431700db799600a08571bbb7cfaf13396e671036
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118805513"
 ---
 # <a name="d3dbox-structure"></a>D3DBOX-Struktur
 
@@ -47,74 +47,74 @@ typedef struct D3DBOX {
 **Left**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Position der linken Seite des Felds auf der x-Achse.
+Position der linken Seite des Felds auf der x-Achse.
 
 </dd> <dt>
 
 **Top**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Position des oberen Rands auf der y-Achse.
+Position des oberen Rands des Felds auf der y-Achse.
 
 </dd> <dt>
 
 **Right**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Position der rechten Seite des Felds auf der x-Achse.
+Position der rechten Seite des Felds auf der x-Achse.
 
 </dd> <dt>
 
 **bottom**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Position des unteren Feldes des Felds auf der y-Achse.
+Position des unteren Rands des Felds auf der y-Achse.
 
 </dd> <dt>
 
 **Front**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Position der Vorderseite des Felds auf der z-Achse.
+Position der Vorderseite des Felds auf der Z-Achse.
 
 </dd> <dt>
 
 **Zurück**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Position der Rückseite des Felds auf der z-Achse.
+Position der Rückseite des Felds auf der Z-Achse.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D3DBOX** schließt die linken, oberen und vorderen Ränder ein. der Rechte, der untere und der hintere Rand sind jedoch nicht enthalten. Beispielsweise wird ein Feld, das 100 Einheiten breit ist und bei 0 beginnt (d.h. die Punkte bis einschließlich und einschließlich 99), mit dem Wert 0 für das linke Element und dem Wert 100 für das Rechte Element ausgedrückt. Beachten Sie, dass der Wert 99 nicht für das Rechte Element verwendet wird.
+**D3DBOX** enthält die linken, oberen und oberen Ränder. die rechten, unteren und hinteren Ränder sind jedoch nicht enthalten. Beispielsweise wird ein Feld, das 100 Einheiten breit ist und bei 0 beginnt (also einschließlich der Punkte bis einschließlich 99), mit dem Wert 0 für das linke Element und dem Wert 100 für das Rechte Element ausgedrückt. Beachten Sie, dass der Wert 99 nicht für den Right-Member verwendet wird.
 
-Die Einschränkungen bei der für **D3DBOX** beobachteten Seiten Anordnung sind von links nach rechts, von oben nach unten und von vorne nach hinten.
+Die für **D3DBOX** beobachteten Einschränkungen bei der Seitenreihenfolge sind von links nach rechts, von oben nach unten und von vorn nach rechts.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,11 +122,11 @@ Die Einschränkungen bei der für **D3DBOX** beobachteten Seiten Anordnung sind 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

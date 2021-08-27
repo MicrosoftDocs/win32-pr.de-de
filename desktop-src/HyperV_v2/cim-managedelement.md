@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ ManagedElement-Klasse ist eine abstrakte Klasse, die eine allgemeine Oberklasse (oder den Anfang der Vererbungsstruktur) für die Klassen bereitstellt, die keine Zuordnungen im CIM-Schema aufweisen.
+description: Die CIM ManagedElement-Klasse ist eine abstrakte Klasse, die eine allgemeine Oberklasse (oder einen oberen Teil der Vererbungsstruktur) für die Nicht-Zuordnungsklassen im \_ CIM-Schema bietet.
 ms.assetid: 6655a480-37bd-403c-9673-4eaa3d381201
 title: CIM_ManagedElement-Klasse
 ms.topic: reference
@@ -26,7 +26,7 @@ ms.locfileid: "118648182"
 ---
 # <a name="cim_managedelement-class"></a>CIM \_ ManagedElement-Klasse
 
-Die **CIM \_ ManagedElement-Klasse** ist eine abstrakte Klasse, die eine allgemeine Oberklasse (oder den Anfang der Vererbungsstruktur) für die Klassen bereitstellt, die keine Zuordnungen im CIM-Schema aufweisen.
+Die **CIM \_ ManagedElement-Klasse** ist eine abstrakte Klasse, die eine allgemeine Oberklasse (oder einen oberen Teil der Vererbungsstruktur) für die Nicht-Zuordnungsklassen im CIM-Schema bietet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ class CIM_ManagedElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ManagedElement-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ ManagedElement-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -56,7 +56,7 @@ Die **CIM \_ ManagedElement-Klasse** verfügt über diese Eigenschaften.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -72,7 +72,7 @@ Eine kurze Textbeschreibung des Objekts.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -85,38 +85,38 @@ Eine Textbeschreibung des Objekts.
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein benutzerfreundlicher Name für das Objekt. Mit dieser Eigenschaft kann jede Instanz zusätzlich zu den Schlüsseleigenschaften, Identitätsdaten und Beschreibungsinformationen einen benutzerfreundlichen Namen definieren.
+Ein benutzerfreundlicher Name für das Objekt. Mit dieser Eigenschaft kann jede Instanz zusätzlich zu ihren Schlüsseleigenschaften, Identitätsdaten und Beschreibungsinformationen einen benutzerfreundlichen Namen definieren.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse innerhalb des Bereichs des enthaltenden Namespaces eindeutig und nicht transparent.
+Identifiziert eine Instanz dieser Klasse innerhalb des Bereichs des enthaltenden Namespace eindeutig und undurchsichtig.
 
 > [!IMPORTANT]
 >
 > Um die Eindeutigkeit innerhalb des Namespace sicherzustellen, sollte der Wert der **InstanceID-Eigenschaft** im folgenden Muster erstellt werden: *OrgID*:*LocalID*
 >
-> *OrgID* muss einen urheberrechtlich geschützten, markengeschützten oder anderweitig eindeutigen Namen enthalten, der sich im Besitz der Geschäftsentität befindet, die die **Instanz-ID** definiert, oder es muss sich um eine registrierte ID handeln, die von einer anerkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schemaklassennamen. Darüber hinaus muss der erste Doppelpunkt in **InstanceID** zwischen *orgID* und *LocalID* stehen, um eindeutig zu sein. Daher darf die *OrgID* keinen Doppelpunkt (":") enthalten.
+> *OrgID* muss einen urheberrechtlich geschützten, markengebundenen oder anderweitig eindeutigen Namen enthalten, der im Besitz der Geschäftsentität ist, die **die InstanceID** definiert, oder eine registrierte ID sein, die von einer erkannten globalen Autorität zugewiesen wird. Dieses Muster ähnelt der Struktur von Schemaklassennamen. Darüber hinaus muss der erste Doppelpunkt in **InstanceID** zwischen *OrgID* und LocalID liegen, um eindeutig *zu sein.* Daher darf *die OrgID* keinen Doppelpunkt (':') enthalten.
 >
 > *LocalID* wird von der Geschäftsentität ausgewählt und sollte nicht erneut verwendet werden, um verschiedene zugrunde liegende reale Elemente zu identifizieren.
 >
-> Wenn das obige Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceID-Wert** nicht für alle **InstanceID-Eigenschaften** wiederverwendet wird, die von diesem Anbieter oder anderen Anbietern für diesen Namespace erstellt werden.
+> Wenn das oben genannte Muster nicht verwendet wird, muss die definierende Entität sicherstellen, dass der resultierende **InstanceID-Wert** nicht für **InstanceID-Eigenschaften** erneut verwendet wird, die von diesem Anbieter oder anderen Anbietern für diesen Namespace erstellt werden.
 >
-> Für definierte DMTF-Instanzen (Distributed Management Task Force) muss das Muster mit der *OrgID* verwendet werden, die auf CIM festgelegt ist.
+> Für dmtf-definierte Instanzen (Distributed Management Task Force) muss das Muster mit der *OrgID* verwendet werden, die auf CIM festgelegt ist.
 
  
 
@@ -130,7 +130,7 @@ Identifiziert eine Instanz dieser Klasse innerhalb des Bereichs des enthaltenden
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 

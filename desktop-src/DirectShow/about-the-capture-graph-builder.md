@@ -1,27 +1,27 @@
 ---
-description: Informationen zum Erfassungs Diagramm-Generator
+description: Informationen zum Capture Graph Builder
 ms.assetid: 9399a06e-7305-41e8-aefe-3d158052a8ed
-title: Informationen zum Erfassungs Diagramm-Generator
+title: Informationen zum Capture Graph Builder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae321665e0eae65a1d464bf87a12ac33e935d7ac
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 8d6ef82a160ada6e53fe6d2db830efa85118eb699074630905cd41f0b5412ca2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118664517"
 ---
-# <a name="about-the-capture-graph-builder"></a>Informationen zum Erfassungs Diagramm-Generator
+# <a name="about-the-capture-graph-builder"></a>Informationen zum Capture Graph Builder
 
-Ein Filter Diagramm, das Video-oder Audioerfassung durchführt, wird als *Aufzeichnungs Diagramm* bezeichnet. Erfassungs Diagramme sind häufig komplizierter als Diagramme für die Dateiwiedergabe. Um die Erstellung von Erfassungs Diagrammen für Anwendungen zu vereinfachen, stellt DirectShow ein Hilfsobjekt namens Erfassungs Diagramm-Generator bereit. Der Erfassungs Diagramm-Generator macht die [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle verfügbar, die Methoden zum Erstellen und Steuern eines Aufzeichnungs Diagramms enthält. Das folgende Diagramm veranschaulicht den Erfassungs Diagramm-Generator und die **ICaptureGraphBuilder2** -Schnittstelle.
+Ein Filterdiagramm, das Video- oder Audioaufnahmen ausführt, wird als *Erfassungsdiagramm bezeichnet.* Erfassungsdiagramme sind oft komplizierter als Dateiwiedergabediagramme. Um Anwendungen das Erstellen von Erfassungsdiagrammen zu erleichtern, stellt DirectShow ein Hilfsobjekt namens Capture Graph Builder zur Verfügung. Der Capture Graph Builder macht die [**ICaptureGraphBuilder2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) verfügbar, die Methoden zum Erstellen und Steuern eines Erfassungsdiagramms enthält. Das folgende Diagramm veranschaulicht den Capture Graph Builder und die **ICaptureGraphBuilder2-Schnittstelle.**
 
-![Verwenden des Erfassungs Diagramm-Generators](images/cgb01.png)
+![Verwenden des Generators für Erfassungsdiagramme](images/cgb01.png)
 
-Beginnen Sie, indem Sie CoCreateInstance aufrufen, um neue Instanzen des Erfassungs Diagramm-Generators und des Filter-Graph-Managers zu erstellen. Initialisieren Sie dann den Erfassungs Diagramm-Generator, indem Sie [**ICaptureGraphBuilder2:: setfiltergraph**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setfiltergraph) mit einem Zeiger auf die [**igraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) -Schnittstelle des Filter Diagramms aufrufen. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
+Rufen Sie zunächst CoCreateInstance auf, um neue Instanzen von Capture Graph Builder und Filter Graph Manager zu erstellen. Initialisieren Sie dann den Capture Graph Builder, indem [**Sie ICaptureGraphBuilder2::SetFiltergraph**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-setfiltergraph) mit einem Zeiger auf die [**IGraphBuilder-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-igraphbuilder) des Graph-Managers aufrufen. Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
 
-![Initialisieren des Erfassungs Diagramm-Generators](images/cgb03.png)
+![Initialisieren des Generators für Erfassungsdiagramme](images/cgb03.png)
 
-Der folgende Code zeigt eine Hilfsfunktion, um die folgenden Schritte auszuführen:
+Der folgende Code zeigt eine Hilfsfunktion zum Ausführen dieser Schritte:
 
 
 ```C++
@@ -66,13 +66,13 @@ HRESULT InitCaptureGraphBuilder(
 
 
 
-In diesem Abschnitt zur Video Erfassung wird davon ausgegangen, dass Sie den Erfassungs Diagramm-Generator verwenden, um das Aufzeichnungs Diagramm zu erstellen. Es ist jedoch möglich, Erfassungs Diagramme vollständig mithilfe von igraphbuilder-Methoden zu erstellen. Dies wird jedoch als erweitertes Thema angesehen, und die Methoden des Erfassungs Diagramm-Generators werden bevorzugt. Weitere Informationen finden Sie unter [Erweiterte Erfassungs Themen](advanced-capture-topics.md).
+In diesem Abschnitt zur Videoaufnahme wird davon ausgegangen, dass Sie den Capture Graph Builder verwenden, um den Erfassungsgraphen zu erstellen. Es ist jedoch möglich, Erfassungsdiagramme vollständig mithilfe von IGraphBuilder-Methoden zu erstellen. Dies wird jedoch als erweitertes Thema betrachtet, und die Capture Graph Builder-Methoden werden bevorzugt. Weitere Informationen finden Sie unter [Erweiterte Erfassungsthemen.](advanced-capture-topics.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zur Video Erfassung in DirectShow](about-video-capture-in-directshow.md)
+[Informationen zur Videoaufnahme in DirectShow](about-video-capture-in-directshow.md)
 </dt> </dl>
 
  

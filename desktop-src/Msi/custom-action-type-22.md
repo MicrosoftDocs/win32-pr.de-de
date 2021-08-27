@@ -15,13 +15,13 @@ ms.locfileid: "118637904"
 
 Diese benutzerdefinierte Aktion ist in VBScript geschrieben. Siehe auch [Skripts](scripts.md).
 
-## <a name="source"></a>`Source`
+## <a name="source"></a>Quelle
 
-Das Skript wird mit der Anwendung während der aktuellen Sitzung installiert. Das Feld Quelle der [Tabelle CustomAction](customaction-table.md) enthält einen Schlüssel für die [Dateitabelle](file-table.md). Der Speicherort des benutzerdefinierten Aktionscodes wird durch die Auflösung des Zielpfads für diese Datei bestimmt. daher muss diese benutzerdefinierte Aktion aufgerufen werden, nachdem die Datei installiert und entfernt wurde.
+Das Skript wird während der aktuellen Sitzung mit der Anwendung installiert. Das Feld Source der [CustomAction-Tabelle enthält](customaction-table.md) einen Schlüssel für die [Dateitabelle](file-table.md). Der Speicherort des benutzerdefinierten Aktionscodes wird durch die Auflösung des Zielpfads für diese Datei bestimmt. Daher muss diese benutzerdefinierte Aktion aufgerufen werden, nachdem die Datei installiert und entfernt wurde.
 
 ## <a name="type-value"></a>Typwert
 
-Fügen Sie den folgenden Wert in die Spalte Type der [Tabelle CustomAction](customaction-table.md) ein, um den grundlegenden numerischen Typ einer benutzerdefinierten 32-Bit-Aktion anzugeben.
+Fügen Sie den folgenden Wert in die Spalte Typ der [CustomAction-Tabelle](customaction-table.md) ein, um den grundlegenden numerischen Typ einer benutzerdefinierten 32-Bit-Aktion anzugeben.
 
 
 
@@ -33,7 +33,7 @@ Fügen Sie den folgenden Wert in die Spalte Type der [Tabelle CustomAction](cust
 
  
 
-Windows Das Installationsprogramm kann benutzerdefinierte 64-Bit-Aktionen unter 64-Bit-Betriebssystemen verwenden. Eine benutzerdefinierte 64-Bit-Aktion, die auf Skripts basiert, muss das **msidbCustomActionType64BitScript-Bit** in seinem numerischen Typ enthalten. Weitere Informationen finden Sie unter [Benutzerdefinierte 64-Bit-Aktionen.](64-bit-custom-actions.md) Fügen Sie den folgenden Wert in die Spalte Type der [Tabelle CustomAction](customaction-table.md) ein, um den grundlegenden numerischen Typ einer benutzerdefinierten 64-Bit-Aktion anzugeben.
+Windows Das Installationsprogramm kann benutzerdefinierte 64-Bit-Aktionen auf 64-Bit-Betriebssystemen verwenden. Eine benutzerdefinierte 64-Bit-Aktion, die auf Skripts basiert, muss das **bit msidbCustomActionType64BitScript** in seinem numerischen Typ enthalten. Weitere Informationen finden Sie unter [Benutzerdefinierte 64-Bit-Aktionen.](64-bit-custom-actions.md) Fügen Sie den folgenden Wert in die Spalte Typ der [CustomAction-Tabelle](customaction-table.md) ein, um den grundlegenden numerischen Typ einer benutzerdefinierten 64-Bit-Aktion anzugeben.
 
 
 
@@ -47,33 +47,33 @@ Windows Das Installationsprogramm kann benutzerdefinierte 64-Bit-Aktionen unter 
 
 ## <a name="target"></a>Ziel
 
-Das Feld Target der [Tabelle CustomAction](customaction-table.md) enthält eine optionale Skriptfunktion. Die Verarbeitung sendet zuerst das Skript zur Analyse und ruft dann die optionale Skriptfunktion auf.
+Das Feld Target der [CustomAction-Tabelle enthält](customaction-table.md) eine optionale Skriptfunktion. Die Verarbeitung sendet zuerst das Skript für die Analyse und ruft dann die optionale Skriptfunktion auf.
 
 ## <a name="return-processing-options"></a>Optionen für die Rückgabeverarbeitung
 
-Fügen Sie optionale Flagbits in die Spalte Type der [Tabelle CustomAction](customaction-table.md) ein, um Optionen für die Rückgabeverarbeitung anzugeben. Eine Beschreibung der Optionen und Werte finden Sie unter [Benutzerdefinierte Optionen für die Aktionsrückgabeverarbeitung.](custom-action-return-processing-options.md)
+Schließen Sie optionale Flagbits in die Spalte Typ der [CustomAction-Tabelle ein,](customaction-table.md) um Rückgabeverarbeitungsoptionen anzugeben. Eine Beschreibung der Optionen und Werte finden Sie unter Rückgabeverarbeitungsoptionen [für benutzerdefinierte Aktionen.](custom-action-return-processing-options.md)
 
 ## <a name="execution-scheduling-options"></a>Optionen für die Ausführungsplanung
 
-Fügen Sie optionale Flagbits in die Spalte Type der [Tabelle CustomAction](customaction-table.md) ein, um Optionen für die Ausführungsplanung anzugeben. Diese Optionen steuern die mehrfache Ausführung von benutzerdefinierten Aktionen. Eine Beschreibung der Optionen finden Sie unter [Custom Action Execution Scheduling Options](custom-action-execution-scheduling-options.md).
+Schließen Sie optionale Flagbits in die Spalte Typ der [CustomAction-Tabelle ein,](customaction-table.md) um Optionen für die Ausführungsplanung anzugeben. Diese Optionen steuern die mehrfache Ausführung benutzerdefinierter Aktionen. Eine Beschreibung der Optionen finden Sie unter Optionen für die [Benutzerdefinierte Aktionsausführungsplanung.](custom-action-execution-scheduling-options.md)
 
 ## <a name="in-script-execution-options"></a>In-Script Ausführungsoptionen
 
-Fügen Sie optionale Flagbits in die Spalte Type der [Tabelle CustomAction](customaction-table.md) ein, um eine Skriptausführungsoption anzugeben. Diese Optionen kopieren den Aktionscode in das Ausführungs-, Rollback- oder Commitskript. Eine Beschreibung der Optionen finden Sie unter [Benutzerdefinierte Aktion In-Script Ausführungsoptionen.](custom-action-in-script-execution-options.md)
+Schließen Sie optionale Flagbits in die Spalte Typ der [CustomAction-Tabelle ein,](customaction-table.md) um eine Skriptausführungsoption anzugeben. Diese Optionen kopieren den Aktionscode in das Ausführungs-, Rollback- oder Commitskript. Eine Beschreibung der Optionen finden Sie unter [Benutzerdefinierte Aktion In-Script Ausführungsoptionen](custom-action-in-script-execution-options.md).
 
 ## <a name="return-values"></a>Rückgabewerte
 
-In Skript geschriebene optionale Funktionen müssen einen der unter [Rückgabewerte von JScript und benutzerdefinierten VBScript-Aktionen](return-values-of-jscript-and-vbscript-custom-actions.md)beschriebenen Werte zurückgeben.
+Optionale Funktionen, die im Skript geschrieben werden, müssen einen der unter Rückgabewerte von JScript [und benutzerdefinierten VBScript-Aktionen beschriebenen Werte zurückgeben.](return-values-of-jscript-and-vbscript-custom-actions.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Eine benutzerdefinierte Aktion, die in JScript oder VBScript geschrieben ist, erfordert die Installation des [**Sitzungsobjekts**](session-object.md). Dies ist vom Typ **Sitzungsobjekt,** und das Installationsprogramm fügt es mit dem Namen "Session" an das Skript an. Da das **Session-Objekt** während eines Installationsrollbacks möglicherweise nicht vorhanden ist, muss eine im Skript geschriebene verzögerte benutzerdefinierte Aktion eine der Methoden oder Eigenschaften des **Session-Objekts** verwenden, die im Abschnitt [Abrufen von Kontextinformationen für benutzerdefinierte Aktionen mit verzögerter Ausführung](obtaining-context-information-for-deferred-execution-custom-actions.md) beschrieben sind, um den Kontext abzurufen.
+Für eine benutzerdefinierte Aktion, die in JScript ODER VBScript geschrieben ist, ist das [**Sitzungsobjekt installiert.**](session-object.md) Dies ist vom Typ **Sitzungsobjekt,** und das Installationsprogramm hängt es mit dem Namen "Session" an das Skript an. Da das **Session-Objekt** während eines Installationsrollbacks möglicherweise nicht vorhanden ist, muss eine verzögerte benutzerdefinierte Aktion, die im Skript geschrieben wurde, eine der Methoden oder Eigenschaften des **Session-Objekts** verwenden, die im Abschnitt [Abrufen](obtaining-context-information-for-deferred-execution-custom-actions.md) von Kontextinformationen für benutzerdefinierte Aktionen mit verzögerter Ausführung beschrieben sind, um den Kontext abzurufen.
 
-Benutzerdefinierte Aktionen, die auf eine installierte Datei als Quelle verweisen, z. B. benutzerdefinierter Aktionstyp 22 (VBcript), müssen die folgenden Sequenzeinschränkungen einhalten:
+Benutzerdefinierte Aktionen, die auf eine installierte Datei als Quelle verweisen, z. B. Benutzerdefinierter Aktionstyp 22 (VBcript), müssen die folgenden Sequenzierungseinschränkungen einhalten:
 
--   Die benutzerdefinierte Aktion muss nach der [CostFinalize-Aktion](costfinalize-action.md)sequenziert werden. Dies ist so, dass die benutzerdefinierte Aktion den Pfad auflösen kann, der zum Suchen der Quelldatei mit VBScript erforderlich ist.
--   Wenn die Quelldatei noch nicht auf dem Computer installiert ist, müssen verzögerte (skriptbasierte) benutzerdefinierte Aktionen dieses Typs nach der [InstallFiles-Aktion](installfiles-action.md)sequenziert werden.
--   Wenn die Quelldatei nicht bereits auf dem Computer installiert ist, müssen nicht verzögerte benutzerdefinierte Aktionen dieses Typs nach der [InstallFinalize-Aktion](installfinalize-action.md)sequenziert werden.
+-   Die benutzerdefinierte Aktion muss nach der [CostFinalize-Aktion sequenziert werden.](costfinalize-action.md) Dies ist so, dass die benutzerdefinierte Aktion den Pfad auflösen kann, der zum Suchen der Quelldatei mit dem VBScript erforderlich ist.
+-   Wenn die Quelldatei noch nicht auf dem Computer installiert ist, müssen verzögerte (skriptbasierte) benutzerdefinierte Aktionen dieses Typs nach der [InstallFiles-Aktion sequenziert werden.](installfiles-action.md)
+-   Wenn die Quelldatei noch nicht auf dem Computer installiert ist, müssen nicht verzögerte benutzerdefinierte Aktionen dieses Typs nach der [InstallFinalize-Aktion sequenziert werden.](installfinalize-action.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

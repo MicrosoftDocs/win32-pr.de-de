@@ -447,7 +447,7 @@ Schließlich wird **für LoadAssets** ein einzelner Sampler erstellt, um eine St
 <table>
 <thead>
 <tr class="header">
-<th>Anruffluss</th>
+<th>Aufruffluss</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -525,7 +525,7 @@ Der Wert der Stammkonst constant wird in **FrameResource::P opulateCommandLists 
 
 
 
-| Anruffluss                                                                                          | Parameter |
+| Aufruffluss                                                                                          | Parameter |
 |----------------------------------------------------------------------------------------------------|------------|
 | [**SetPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate)                             |            |
 | [**SetGraphicsRoot32BitConstant**](/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsroot32bitconstant)     |            |

@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen zum PageWatermarkTextAngle-Parameter. Dieses Thema ist nicht aktuell. Aktuelle Informationen finden Sie unter Print Schema Specification (Spezifikation des Druckschemas).
+description: Weitere Informationen zum PageWatermarkTextAngle-Parameter finden Sie hier. Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter Spezifikation des Druckschemas.
 ms.assetid: 157bb79c-68d2-4121-8a85-cd2f48095541
 title: PageWatermarkTextAngle
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118470960"
 ---
 # <a name="pagewatermarktextangle"></a>PageWatermarkTextAngle
 
-Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
 Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtung an. Der Winkel wird gegen den Uhrzeigersinn gemessen.
 
@@ -28,7 +28,7 @@ Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtu
 |----------------------------|--------------------------------------------|
 | Elementtyp <br/>   | ParameterDef<br/>                    |
 | Bereichspräfix <br/> | Seite<br/>                            |
-| Hinweise <br/>          | Verknüpft mit dem PageWatermark-Element<br/> |
+| Hinweise <br/>          | Mit PageWatermark-Element verknüpft<br/> |
 
 
 
@@ -36,7 +36,7 @@ Gibt den Winkel des Wasserzeichentexts relativ zur PageImageableSizeWidth-Richtu
 
 ## <a name="structure-content"></a>Strukturieren von Inhalt
 
-Die XML-Struktur dieses Elements sieht wie folgt aus:
+Die XML-Struktur dieses Elements lautet wie folgt:
 
 ``` syntax
 <psf:ParameterDef name="psk:PageWatermarkTextAngle">
@@ -67,7 +67,7 @@ Die XML-Struktur dieses Elements sieht wie folgt aus:
 
 ## <a name="structure-properties"></a>Struktureigenschaften
 
-In der folgenden Tabelle werden die Merkmale der in der XML-Struktur definierten Variablen beschrieben.
+In der folgenden Tabelle werden die Merkmale der Variablen beschrieben, die in der XML-Struktur definiert sind.
 
 
 

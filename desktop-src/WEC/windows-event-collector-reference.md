@@ -1,38 +1,38 @@
 ---
-title: Referenz zur Windows-Ereignis Sammlung
-description: In der folgenden Tabelle sind die Abschnitte der Windows-Ereignis Sammler-Code Referenz aufgeführt.
+title: Windows Ereignissammlerreferenz
+description: In der folgenden Tabelle sind die Abschnitte in der Windows Event Collector-Codereferenz aufgeführt.
 ms.assetid: badc0f00-0979-4a94-9ea6-6f2077119db2
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d87136637c1cc5b69a7a7388e96a4ec6332073c4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7e56b3bed024fb7717c76b27f0d448e0ab24da96861589127df5dd8af9c9a172
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340400"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118121097"
 ---
-# <a name="windows-event-collector-reference"></a>Referenz zur Windows-Ereignis Sammlung
+# <a name="windows-event-collector-reference"></a>Windows Ereignissammlerreferenz
 
-In der folgenden Tabelle sind die Abschnitte der Windows-Ereignis Sammler-Code Referenz aufgeführt.
+In der folgenden Tabelle sind die Abschnitte in der Windows Event Collector-Codereferenz aufgeführt.
 
 
 
 | `Section`                                                                          | BESCHREIBUNG                                                                |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [Windows-Ereignis Sammler Konstanten](windows-event-collector-constants.md)       | Konstanten, die in Funktionsaufrufen und Verarbeiten von Daten verwendet werden.                      |
-| [Windows-Ereignis Sammler Datentypen](windows-event-collector-data-types.md)     | Datentypen, die in der Windows-Ereignis Sammler-API verwendet werden.                        |
-| [Windows-Ereignis Sammler-Enumerationen](windows-event-collector-enumerations.md) | Die in Funktionsaufrufen verwendeten Datentypen und die Verarbeitung von Echt Zeit Ereignisdaten. |
-| [Funktionen der Windows-Ereignis Sammlung](windows-event-collector-functions.md)       | Funktionsaufrufe der Windows-Ereignis Sammlung.                                    |
-| [Strukturen der Windows-Ereignis Sammlung](windows-event-collector-structures.md)     | Strukturen, die in der Windows-Ereignis Sammler-API verwendet werden.                        |
+| [Windows Ereignissammlerkonstanten](windows-event-collector-constants.md)       | Konstanten, die in Funktionsaufrufen und der Verarbeitung von Daten verwendet werden.                      |
+| [Windows Ereignissammlerdatentypen](windows-event-collector-data-types.md)     | Datentypen, die in der Windows Event Collector-API verwendet werden.                        |
+| [Windows Ereignissammlerenumerationen](windows-event-collector-enumerations.md) | Datentypen, die in Funktionsaufrufen und bei der Verarbeitung von Echtzeitereignisdaten verwendet werden. |
+| [Windows Ereignissammlerfunktionen](windows-event-collector-functions.md)       | Windows Ereignissammlerfunktionsaufrufe.                                    |
+| [Windows Ereignissammlerstrukturen](windows-event-collector-structures.md)     | Strukturen, die in der Windows Event Collector-API verwendet werden.                        |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

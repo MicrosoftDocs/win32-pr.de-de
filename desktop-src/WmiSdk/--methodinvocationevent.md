@@ -1,5 +1,5 @@
 ---
-description: Die \_ \_ methodinvocationevent-System Klasse ist definiert, aber nicht implementiert.
+description: Die \_ \_ MethodInvocationEvent-Systemklasse ist definiert, aber nicht implementiert.
 ms.assetid: ea736e44-a6bc-41e5-abc5-9e21a5504f44
 ms.tgt_platform: multiple
 title: __MethodInvocationEvent-Klasse
@@ -20,18 +20,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: bc7e8d70d027caf31a90d49abc490c2de2d52fb8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4cd30e1865ab807f095dbe8a94fa59424131a087360e565207cdeb2d1977ca90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118821135"
 ---
-# <a name="__methodinvocationevent-class"></a>\_\_Methodinvocationevent-Klasse
+# <a name="__methodinvocationevent-class"></a>\_\_MethodInvocationEvent-Klasse
 
-Die **\_ \_ methodinvocationevent** -System Klasse ist definiert, aber nicht implementiert.
+Die **\_ \_ MethodInvocationEvent-Systemklasse** ist definiert, aber nicht implementiert.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,13 +49,13 @@ class __MethodInvocationEvent : __InstanceOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ methodinvocationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ MethodInvocationEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ methodinvocationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ MethodInvocationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -68,7 +68,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Methode, die aufgerufen wird, um das Ereignis zu initiieren.
+Die Methode, die aufgerufen wird, um das Ereignis auszulösen.
 
 </dd> <dt>
 
@@ -81,67 +81,67 @@ Datentyp: **\_ \_ Parameter**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Verweis auf eine-Instanz, die die Eingabe-und Ausgabeparameter des Methoden Aufrufes darstellt.
+Verweis auf eine -Instanz, die die Eingabe- und Ausgabeparameter des Methodenaufrufs darstellt.
 
 </dd> <dt>
 
-**Precallup**
+**PreCall**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das-Ereignis ausgelöst wird, bevor die-Methode aufgerufen wird.
+True **gibt an,** dass das -Ereignis ausgelöst wird, bevor die -Methode aufgerufen wird.
 
 </dd> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt. Weitere Informationen finden Sie unter [Sicherheits Deskriptoren](/windows/desktop/SecAuthZ/security-descriptors).
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md) Weitere Informationen finden Sie unter [Sicherheitsdeskriptoren.](/windows/desktop/SecAuthZ/security-descriptors)
 
 </dd> <dt>
 
 **TargetInstance**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Instanz, für die die Methode aufgerufen wird. Diese Eigenschaft wird von [**\_ \_ instanceoperationevent**](--instanceoperationevent.md)geerbt.
+Instanz, für die die Methode aufgerufen wird. Diese Eigenschaft wird von [**\_ \_ InstanceOperationEvent geerbt.**](--instanceoperationevent.md)
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem ein Ereignis generiert wird. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ methodinvocationevent** -Klasse wird von [**\_ \_ instanceoperationevent**](--instanceoperationevent.md)abgeleitet.
+Die **\_ \_ MethodInvocationEvent-Klasse** wird von [**\_ \_ InstanceOperationEvent abgeleitet.**](--instanceoperationevent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -159,10 +159,10 @@ Die **\_ \_ methodinvocationevent** -Klasse wird von [**\_ \_ instanceoperatione
 
 <dl> <dt>
 
-[**\_\_Instanceoperationevent**](/windows/desktop/WmiSdk/--instanceoperationevent)
+[**\_\_InstanceOperationEvent**](/windows/desktop/WmiSdk/--instanceoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

@@ -39,12 +39,12 @@ HRESULT get_Index(
 
 <dl> <dt>
 
-*wert* \[ out, retval\]
+*value* \[ out, retval\]
 </dt> <dd>
 
 Typ: **unsigned \***
 
-Die nullbasierte Position im Vektor, an der die Änderung aufgetreten ist( falls zutreffend).
+Die nullbasierte Position im Vektor, an der die Änderung aufgetreten ist, falls zutreffend.
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Die nullbasierte Position im Vektor, an der die Änderung aufgetreten ist( falls
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt ein Array installierter SSL-Protokoll Anbieter (Secure Sockets Layer Protocol) zurück.
+description: Gibt ein Array von installierten SSL-Protokollanbietern (Secure Sockets Layer Protocol) zurück.
 ms.assetid: a61ddcf5-b7e3-40b2-82fc-1cf87eb963ec
-title: Sslenenprotocolproviders-Funktion (sslprovider. h)
+title: SslEnumProtocolProviders-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 94c8648950af20a97bcc34b614aee0d0f716b043
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0e20bd98f8f3e76d4185cf2a3aa52985d73f66ff1ea61ed50bf67552330290d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906682"
 ---
-# <a name="sslenumprotocolproviders-function"></a>Sslenenprotocolproviders-Funktion
+# <a name="sslenumprotocolproviders-function"></a>SslEnumProtocolProviders-Funktion
 
-Die **sslenenprotocolproviders** -Funktion gibt ein Array installierter SSL-Protokoll Anbieter ( [*Secure Sockets Layer Protocol*](/windows/desktop/SecGloss/s-gly) ) zurück.
+Die **SslEnumProtocolProviders-Funktion** gibt ein Array von installierten [*SSL-Protokollanbietern (Secure Sockets Layer Protocol)*](/windows/desktop/SecGloss/s-gly) zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ SECURITY_STATUS WINAPI SslEnumProtocolProviders(
 
 <dl> <dt>
 
-*pdwprovidercount* \[ vorgenommen\]
+*pdwProviderCount* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **DWORD** -Wert, der die Anzahl der zurückgegebenen Protokoll Anbieter empfängt.
+Ein Zeiger auf einen **DWORD-Wert,** um die Anzahl der zurückgegebenen Protokollanbieter zu empfangen.
 
 </dd> <dt>
 
-*ppproviderlist* \[ vorgenommen\]
+*ppProviderList* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der das Array von [**ncryptprovidername**](/windows/desktop/api/Ncrypt/ns-ncrypt-ncryptprovidername) -Strukturen empfängt.
+Ein Zeiger auf einen Puffer, der das Array von [**NCryptProviderName-Strukturen**](/windows/desktop/api/Ncrypt/ns-ncrypt-ncryptprovidername) empfängt.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -64,27 +64,27 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültige \_ Flags**</dt> <dt>0x80090009l</dt> </dl>         | Der *dwFlags* -Parameter ist nicht 0 (null).<br/>                              |
-| <dl> <dt>**Ernte \_ Kein Arbeits \_ Speicher**</dt> <dt>0x8009000el</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher verfügbar, um erforderliche Puffer zuzuordnen.<br/>     |
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Der Parameter " *pdwprovidercount* " oder " *ppproviderlist* " ist **null**.<br/> |
+| <dl> <dt>**NTE \_ BAD \_ FLAGS**</dt> <dt>0x80090009L</dt> </dl>         | Der *dwFlags-Parameter* ist nicht 0 (null).<br/>                              |
+| <dl> <dt>**NTE \_ NO \_ MEMORY**</dt> <dt>0x8009000EL</dt> </dl>         | Es ist nicht genügend Arbeitsspeicher verfügbar, um die erforderlichen Puffer zuzuordnen.<br/>     |
+| <dl> <dt>**NTE \_ INVALID \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Der *parameter pdwProviderCount* oder *ppProviderList* ist **NULL.**<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie die Verwendung des Arrays von [**ncryptprovidername**](/windows/desktop/api/Ncrypt/ns-ncrypt-ncryptprovidername) -Strukturen abgeschlossen haben, können Sie die [**sslfreebuffer**](sslfreebuffer.md) -Funktion aufrufen, um das Array freizugeben.
+Wenn Sie das Array der [**NCryptProviderName-Strukturen**](/windows/desktop/api/Ncrypt/ns-ncrypt-ncryptprovidername) verwendet haben, rufen Sie die [**SslFreeBuffer-Funktion**](sslfreebuffer.md) auf, um das Array frei zu machen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,9 +92,9 @@ Wenn Sie die Verwendung des Arrays von [**ncryptprovidername**](/windows/desktop
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

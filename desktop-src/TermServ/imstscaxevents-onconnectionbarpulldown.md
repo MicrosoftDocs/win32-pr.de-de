@@ -1,12 +1,12 @@
 ---
-title: Imstscaxevents onconnectionbarpulldown-Methode
-description: Wird aufgerufen, wenn der Benutzer auf die Verbindungs Leiste gezogen hat.
+title: IMsTscAxEvents OnConnectionBarPullDown-Methode
+description: Wird aufgerufen, wenn der Benutzer auf der Verbindungsleiste nach unten gezogen wurde.
 ms.assetid: D0B66AF8-5AEA-4341-89DF-0C836938F886
 ms.tgt_platform: multiple
 keywords:
-- Onconnectionbarpulldown-Methode Remotedesktopdienste
-- Onconnectionbarpulldown-Methode Remotedesktopdienste, imstscaxevents-Schnittstelle
-- Imstscaxevents-Schnittstelle Remotedesktopdienste, onconnectionbarpulldown-Methode
+- OnConnectionBarPullDown-Remotedesktopdienste
+- OnConnectionBarPullDown-Methode Remotedesktopdienste , IMsTscAxEvents-Schnittstelle
+- IMsTscAxEvents-Schnittstelle Remotedesktopdienste , OnConnectionBarPullDown-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48085703e6c6e9c506eb7a6d158d85633d6f08ee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c2d82ac8433cf66e1ddd283b802be1683da7030f701f1e89cda887a2071d7b20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106484"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118853577"
 ---
-# <a name="imstscaxeventsonconnectionbarpulldown-method"></a>Imstscaxevents:: onconnectionbarpulldown-Methode
+# <a name="imstscaxeventsonconnectionbarpulldown-method"></a>IMsTscAxEvents::OnConnectionBarPullDown-Methode
 
-Wird aufgerufen, wenn der Benutzer auf die Verbindungs Leiste gezogen hat.
+Wird aufgerufen, wenn der Benutzer auf der Verbindungsleiste nach unten gezogen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                         |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | Imstscaxevents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
+| IID<br/>                      | IMsTscAxEvents ist als 336d5562-efa8-482e-8cb3-c5c0fc7a7db6 definiert.<br/>           |
 
 
 
@@ -63,7 +63,7 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**Imstscaxevents**](imstscaxevents-interface.md)
+[**IMsTscAxEvents**](imstscaxevents-interface.md)
 </dt> </dl>
 
  

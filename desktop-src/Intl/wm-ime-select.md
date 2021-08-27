@@ -74,7 +74,7 @@ Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwind
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

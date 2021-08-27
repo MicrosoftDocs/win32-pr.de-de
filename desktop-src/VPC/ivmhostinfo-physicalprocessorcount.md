@@ -1,11 +1,11 @@
 ---
-title: Ivmhostinfo physicalprocessorcount-Eigenschaft (vpccominterfaces. h)
-description: Ruft die Anzahl der physischen Prozessoren auf dem Host Computer ab.
+title: IVMHostInfo PhysicalProcessorCount-Eigenschaft (VPCCOMInterfaces.h)
+description: Ruft die Anzahl der physischen Prozessoren auf dem Hostcomputer ab.
 ms.assetid: b8f805a6-2962-4a48-94e9-bd76220974f0
 keywords:
-- Physicalprocessorcount-Eigenschaft virtueller PC
-- Physicalprocessorcount-Eigenschaft virtueller PC, ivmhostinfo-Schnittstelle
-- Ivmhostinfo Interface Virtual PC, physicalprocessorcount (Eigenschaft)
+- PhysicalProcessorCount-Eigenschaft Virtueller PC
+- PhysicalProcessorCount-Eigenschaft Virtueller PC, IVMHostInfo-Schnittstelle
+- IVMHostInfo-Schnittstelle Virtueller PC, PhysicalProcessorCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b161795a8430b6006d1f6a8aa87e91225430016c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ce989392825261ecc0e898e2632f4556bc4023f9e8ad54c4b2de8cfaf5ad1bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118123720"
 ---
-# <a name="ivmhostinfophysicalprocessorcount-property"></a>Ivmhostinfo::P hysicalprocessorcount-Eigenschaft
+# <a name="ivmhostinfophysicalprocessorcount-property"></a>IVMHostInfo::P hysicalProcessorCount-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft die Anzahl der physischen Prozessoren auf dem Host Computer ab.
+Ruft die Anzahl der physischen Prozessoren auf dem Hostcomputer ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -54,8 +54,8 @@ Die Anzahl der physischen Prozessoren.
 | Name/Wert                                                                                                                                                    | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/>     |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>        |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>        |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ Die Anzahl der physischen Prozessoren.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmhostinfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHostInfo ist als 5b5cf343-05ad-453b-be99-adf4e27b2ebc definiert.<br/>                |
 
 
 
@@ -78,7 +78,7 @@ Die Anzahl der physischen Prozessoren.
 
 <dl> <dt>
 
-[**Ivmhostinfo**](ivmhostinfo.md)
+[**IVMHostInfo**](ivmhostinfo.md)
 </dt> </dl>
 
  

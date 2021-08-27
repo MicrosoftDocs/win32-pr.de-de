@@ -26,7 +26,7 @@ ms.locfileid: "118557924"
 
 Die **\_ \_ Systemklasse EventProviderCacheControl** steuert, wann ein Ereignisanbieter entladen wird. Sie befindet sich nur im \\ Stammnamespace.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,7 +59,7 @@ Datentyp: **datetime**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Das Zeitintervall nach Windows WMI (Management Instrumentation) gibt einen Ereignisanbieter frei. Die Zeit hat das [Intervallformat](interval-format.md). Es kann bis zu zweimal das angegebene Intervall dauern, um den Anbieter zu entladen.
+Zeitintervall nach Windows WMI (Management Instrumentation) gibt einen Ereignisanbieter frei. Die Zeit hat das [Intervallformat](interval-format.md). Es kann bis zu zweimal das angegebene Intervall dauern, um den Anbieter zu entladen.
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [Entladen ei
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

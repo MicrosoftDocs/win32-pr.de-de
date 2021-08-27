@@ -1,5 +1,5 @@
 ---
-description: Ein Tiefenpuffer ist eine Eigenschaft des Geräts. Um einen Tiefenpuffer zu erstellen, der von Direct3D verwaltet wird, legen Sie die entsprechenden Member der D3DPRESENT \_ PARAMETERS-Struktur fest, wie im folgenden Codebeispiel gezeigt.
+description: Ein Tiefenpuffer ist eine Eigenschaft des Geräts. Um einen Tiefenpuffer zu erstellen, der von Direct3D verwaltet wird, legen Sie die entsprechenden Member der D3DPRESENT PARAMETERS-Struktur fest, wie im folgenden \_ Codebeispiel gezeigt.
 ms.assetid: 2b442cf7-2146-4dea-809a-ebb8bcfbec08
 title: Erstellen eines Tiefenpuffers (Direct3D 9)
 ms.topic: article
@@ -27,7 +27,7 @@ d3dpp.AutoDepthStencilFormat = D3DFMT_D16;
 
 
 
-Indem Sie den EnableAutoDepthStencil-Member auf **TRUE** festlegen, weisen Sie Direct3D an, Tiefenpuffer für die Anwendung zu verwalten. Beachten Sie, dass AutoDepthStencilFormat auf ein gültiges Tiefenpufferformat festgelegt werden muss. Das D3DFMT \_ D16-Flag gibt einen 16-Bit-Tiefenpuffer an, sofern verfügbar.
+Durch Festlegen des EnableAutoDepthStencil-Mitglieds auf **TRUE** weisen Sie Direct3D an, Tiefenpuffer für die Anwendung zu verwalten. Beachten Sie, dass AutoDepthStencilFormat auf ein gültiges Tiefenpufferformat festgelegt werden muss. Das D3DFMT \_ D16-Flag gibt einen 16-Bit-Tiefenpuffer an, sofern verfügbar.
 
 Der folgende Aufruf der [**IDirect3D9::CreateDevice-Methode**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-createdevice) erstellt ein Gerät, das dann einen Tiefenpuffer erstellt.
 
@@ -43,9 +43,9 @@ return E_FAIL;
 
 Der Tiefenpuffer wird automatisch als Renderziel des Geräts festgelegt. Wenn das Gerät zurückgesetzt wird, wird der Tiefenpuffer automatisch zerstört und in der neuen Größe neu erstellt.
 
-Um eine neue Tiefenpufferoberfläche zu erstellen, verwenden Sie die [**IDirect3DDevice9::CreateDepthStencilSurface-Methode.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface)
+Verwenden Sie zum Erstellen einer neuen Tiefenpufferoberfläche die [**IDirect3DDevice9::CreateDepthStencilSurface-Methode.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-createdepthstencilsurface)
 
-Verwenden Sie die [**IDirect3DDevice9::SetDepthStencilSurface-Methode,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setdepthstencilsurface) um eine neue Tiefenpufferoberfläche für das Gerät festzulegen.
+Verwenden Sie zum Festlegen einer neuen Tiefenpufferoberfläche für das Gerät die [**IDirect3DDevice9::SetDepthStencilSurface-Methode.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setdepthstencilsurface)
 
 Um den Tiefenpuffer in Ihrer Anwendung zu verwenden, müssen Sie den Tiefenpuffer aktivieren. Weitere Informationen finden Sie unter [Aktivieren der Tiefenpufferung (Direct3D 9).](enabling-depth-buffering.md)
 

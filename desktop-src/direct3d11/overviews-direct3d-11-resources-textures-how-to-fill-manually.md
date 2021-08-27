@@ -1,66 +1,66 @@
 ---
-title: Programm gesteuertes Initialisieren einer Textur
-description: Dieses Thema enthält mehrere Beispiele, die zeigen, wie Texturen initialisiert werden, die mit verschiedenen Arten von Verwendungen erstellt werden.
+title: Programmgesteuertes Initialisieren einer Textur
+description: Dieses Thema enthält mehrere Beispiele, die zeigen, wie Texturen initialisiert werden, die mit verschiedenen Verwendungstypen erstellt werden.
 ms.assetid: 65e8ae82-50aa-4303-853e-3457da18f44f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5584885b885f6026ee32a3e4c52a24aad78c3c08
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 07b7d34e7e85fd647a6f45c93d61b3330825261f59d87b9c13a95547e742e365
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118530562"
 ---
-# <a name="how-to-initialize-a-texture-programmatically"></a>Gewusst wie: Programm gesteuertes Initialisieren einer Textur
+# <a name="how-to-initialize-a-texture-programmatically"></a>How to: Initialize a Texture Programmatically
 
-Sie können während der Objekt Erstellung eine Textur initialisieren, oder Sie können das Objekt Programm gesteuert auffüllen, nachdem es erstellt wurde. Dieses Thema enthält mehrere Beispiele, die zeigen, wie Texturen initialisiert werden, die mit verschiedenen Arten von Verwendungen erstellt werden. In diesem Beispiel wird davon ausgegangen, dass Sie bereits wissen, wie [eine Textur erstellt](overviews-direct3d-11-resources-textures-create.md)wird.
+Sie können eine Textur während der Objekterstellung initialisieren oder das Objekt programmgesteuert füllen, nachdem es erstellt wurde. Dieses Thema enthält mehrere Beispiele, die zeigen, wie Texturen initialisiert werden, die mit verschiedenen Verwendungstypen erstellt werden. In diesem Beispiel wird davon ausgegangen, dass Sie bereits wissen, wie [Sie eine Textur erstellen.](overviews-direct3d-11-resources-textures-create.md)
 
 -   [Standardverwendung](#default-usage)
--   [Dynamische Verwendung](#dynamic-usage)
--   [Staging-Verwendung](#staging-usage)
+-   [Dynamische Nutzung](#dynamic-usage)
+-   [Stagingverwendung](#staging-usage)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="default-usage"></a>Standardverwendung
 
-Die häufigste Art der Verwendung ist die Standardverwendung. Zum Auffüllen einer Standard Textur (mit **D3D11 \_ Usage \_ default**) können Sie Folgendes tun:
+Der gängigste Verwendungstyp ist die Standardverwendung. Um eine Standardtextur zu füllen (eine textur, die mit **D3D11 \_ USAGE \_ DEFAULT** erstellt wurde), können Sie eine der beiden beiden:
 
--   Wenden Sie [**ID3D11Device:: CreateTexture2D**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) an, und initialisieren Sie *pinitialdata* , um auf die von einer Anwendung bereitgestellten Daten zu verweisen.
+-   Rufen [**Sie ID3D11Device::CreateTexture2D**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) auf, und initialisieren Sie *pInitialData,* um auf daten zu verweisen, die von einer Anwendung bereitgestellt werden.
 
     oder
 
--   Verwenden Sie nach dem Aufrufen von [**ID3D11Device:: CreateTexture2D**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) [**Verknüpfung id3d11devicecontext aus:: updatesubresource**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-updatesubresource) , um die Standard Textur mit Daten aus einem von der Anwendung bereitgestellten Zeiger zu füllen.
+-   Verwenden Sie nach dem Aufruf von [**ID3D11Device::CreateTexture2D**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createtexture2d) [**ID3D11DeviceContext::UpdateSubresource,**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-updatesubresource) um die Standardtextur mit Daten aus einem von der Anwendung bereitgestellten Zeiger zu füllen.
 
-## <a name="dynamic-usage"></a>Dynamische Verwendung
+## <a name="dynamic-usage"></a>Dynamische Nutzung
 
-So füllen Sie eine dynamische Textur (eine mit **\_ \_ dynamischer D3D11-Auslastung** erstellt):
+So füllen Sie eine dynamische Textur (eine, die mit **D3D11 \_ USAGE DYNAMIC erstellt \_ wurde):**
 
-1.  Rufen Sie einen Zeiger auf den Texturspeicher ab, indem Sie **D3D11 \_ map \_ Write \_ verwerfen** übergeben, wenn Sie [**Verknüpfung id3d11devicecontext aus:: Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map)aufrufen.
-2.  Schreiben von Daten in den Arbeitsspeicher.
-3.  Wenn Sie mit dem Schreiben von Daten fertig sind, wird [**Verknüpfung id3d11devicecontext aus:: unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) aufgerufen.
+1.  Rufen Sie einen Zeiger auf den Texturspeicher ab, indem **Sie D3D11 \_ MAP WRITE \_ \_ DISCARD** beim Aufrufen von [**ID3D11DeviceContext::Map übergeben.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map)
+2.  Schreiben sie Daten in den Arbeitsspeicher.
+3.  Rufen [**Sie ID3D11DeviceContext::Unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) auf, wenn Sie mit dem Schreiben von Daten fertig sind.
 
-## <a name="staging-usage"></a>Staging-Verwendung
+## <a name="staging-usage"></a>Stagingverwendung
 
-So füllen Sie eine stagingtextur (eine mit **D3D11 \_ Usage \_ Staging** erstellt):
+So füllen Sie eine Stagingtextur (eine, die mit **D3D11 \_ USAGE STAGING erstellt \_ wurde):**
 
-1.  Rufen Sie einen Zeiger auf den Texturspeicher ab, indem Sie beim Aufrufen von [**Verknüpfung id3d11devicecontext aus:: Map**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map)den **D3D11 \_ map- \_ Schreibvorgang** übergeben.
-2.  Schreiben von Daten in den Arbeitsspeicher.
-3.  Wenn Sie mit dem Schreiben von Daten fertig sind, wird [**Verknüpfung id3d11devicecontext aus:: unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) aufgerufen.
+1.  Rufen Sie einen Zeiger auf den Texturspeicher ab, indem **Sie D3D11 \_ MAP \_ WRITE** übergeben, wenn [**ID3D11DeviceContext::Map aufgerufen wird.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-map)
+2.  Schreiben sie Daten in den Arbeitsspeicher.
+3.  Rufen [**Sie ID3D11DeviceContext::Unmap**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-unmap) auf, wenn Sie mit dem Schreiben von Daten fertig sind.
 
-Eine stagingtextur kann dann als Quellparameter für [**Verknüpfung id3d11devicecontext aus:: copyresource**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copyresource) oder [**Verknüpfung id3d11devicecontext aus:: copysubresourceregion**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copysubresourceregion) verwendet werden, um eine Standard-oder dynamische Ressource auszufüllen.
+Eine Stagingtextur kann dann als Quellparameter für [**ID3D11DeviceContext::CopyResource**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copyresource) oder [**ID3D11DeviceContext::CopySubresourceRegion**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-copysubresourceregion) verwendet werden, um eine Standardressource oder eine dynamische Ressource zu füllen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> <dt>
 
 [Texturen](overviews-direct3d-11-resources-textures.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

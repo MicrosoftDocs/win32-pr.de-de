@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_COMMIT_ID. CompareTo-Methode'
-title: JET_COMMIT_ID. CompareTo-Methode (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: Weitere Informationen finden Sie unter JET_COMMIT_ID.CompareTo-Methode.
+title: JET_COMMIT_ID.CompareTo-Methode (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: 'CompareTo method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID.CompareTo(Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.jet_commit_id.compareto(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bb52be18054b0d9da723ca15073868a6baff6b12
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a101cd38eb80598f907068d8fd27d2217ad73db1476dc41d42b2a6caaae3e6ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118766898"
 ---
-# <a name="jet_commit_idcompareto-method"></a>JET_COMMIT_ID. CompareTo-Methode
+# <a name="jet_commit_idcompareto-method"></a>JET_COMMIT_ID.CompareTo-Methode
 
-Gibt einen Wert zurück, der diese Instanz mit einem anderen vergleicht.
+Gibt einen Wert zurück, der diese Instanz mit einer anderen vergleicht.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,26 +61,26 @@ public int CompareTo(
 
 #### <a name="parameters"></a>Parameter
 
-  - andere  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
+  - Sonstige  
+    Typ: [Microsoft.Isam.Esent.Interop.Windows8.JET_COMMIT_ID](./jet-commit-id-class.md)  
     
-    Eine-Instanz, die mit dieser Instanz verglichen werden soll.
+    Eine -Instanz, die mit dieser Instanz verglichen werden soll.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
-Ein signierter Wert, der die relativen Positionen der-Instanzen darstellt.  
+Typ: [System.Int32](/dotnet/api/system.int32)  
+Ein Wert mit Vorzeichen, der die relativen Positionen der -Instanzen darstellt.  
 
 #### <a name="implements"></a>Implementiert
 
-[Nicht vergleichbar \<T\> . CompareTo (T)](/dotnet/api/system.icomparable-1.compareto#System_IComparable_1_CompareTo__0_)  
+[IComparable \<T\> . CompareTo(T)](/dotnet/api/system.icomparable-1.compareto#System_IComparable_1_CompareTo__0_)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_COMMIT_ID-Klasse](./jet-commit-id-class.md)
 
-[Mitglieder JET_COMMIT_ID](./jet-commit-id-members.md)
+[JET_COMMIT_ID-Member](./jet-commit-id-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

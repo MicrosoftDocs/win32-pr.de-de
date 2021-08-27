@@ -1,9 +1,9 @@
 ---
-title: Anzeigen. minimieren
-description: Die minimierte Methode minimiert die Ansicht.
+title: VIEW.minimize
+description: Mit der minimize-Methode wird view minimiert.
 ms.assetid: 97c257fa-aa4f-4e6f-bc49-fa54db63b59b
 keywords:
-- Anzeigen. minimieren von Windows-Media Player
+- VIEW.minimize Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1e01c35ad5a77c5a78a705d0188f771e0466a761
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0351ad27e18750832151e8820dec8594319024791850f1ab92764e175d9582b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332962"
 ---
-# <a name="viewminimize"></a>Anzeigen. minimieren
+# <a name="viewminimize"></a>VIEW.minimize
 
-Die **minimierte Methode minimiert** die **Ansicht**.
+Mit **der** **minimize-Methode** wird view minimiert.
 
 ``` syntax
         elementID.minimize()
@@ -57,18 +57,18 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**View-Element**](view-element.md)
+[**VIEW-Element**](view-element.md)
 </dt> <dt>
 
-[**Anzeigen. maximieren**](view-maximize.md)
+[**VIEW.maximize**](view-maximize.md)
 </dt> </dl>
 
  

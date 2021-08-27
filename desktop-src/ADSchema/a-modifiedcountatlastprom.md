@@ -1,11 +1,11 @@
 ---
 title: Modified-Count-At-Last-Prom-Attribut
-description: Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
+description: Die Seriennummer des Protokolls "Net Logon Change Log" bei der letzten Promotion.
 ms.assetid: 9f907997-ad1a-451c-960d-e5d1d462c00a
 ms.tgt_platform: multiple
 keywords:
 - AD-Schema des modified-Count-At-Last-Prom-Attributs
-- MODIFIEDCountAtLastProm-Attribut AD-Schema
+- modifiedCountAtLastProm-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118687342"
 ---
 # <a name="modified-count-at-last-prom-attribute"></a>Modified-Count-At-Last-Prom-Attribut
 
-Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
+Die Seriennummer des Protokolls "Net Logon Change Log" bei der letzten Promotion.
 
 
 
@@ -121,7 +121,7 @@ Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
 | System-Only            | Falsch                                                                                              |
-| Ist einwertig       | Richtig                                                                                               |
+| Is-Single-Valued       | Richtig                                                                                               |
 | Ist indiziert             | Falsch                                                                                              |
 | Im globalen Katalog      | Falsch                                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
@@ -142,7 +142,7 @@ Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
 | System-Only            | Falsch                                                                                              |
-| Ist einwertig       | Richtig                                                                                               |
+| Is-Single-Valued       | Richtig                                                                                               |
 | Ist indiziert             | Falsch                                                                                              |
 | Im globalen Katalog      | Falsch                                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |
@@ -163,7 +163,7 @@ Die Seriennummer des Anmeldeprotokolls bei der letzten Promotion.
 | Link-ID                | \-                                                                                                 |
 | MAPI-Id                | \-                                                                                                 |
 | System-Only            | Falsch                                                                                              |
-| Ist einwertig       | Richtig                                                                                               |
+| Is-Single-Valued       | Richtig                                                                                               |
 | Ist indiziert             | Falsch                                                                                              |
 | Im globalen Katalog      | Falsch                                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                       |

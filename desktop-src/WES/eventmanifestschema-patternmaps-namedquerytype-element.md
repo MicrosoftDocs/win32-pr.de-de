@@ -1,9 +1,9 @@
 ---
-title: patternmaps (namedquerytype)-Element
-description: Definiert eine Liste von Paaren für reguläre Ausdrücke, die zum Ändern der Meldungs Zeichenfolge verwendet werden.
+title: patternMaps-Element (NamedQueryType)
+description: Definiert eine Liste regulärer Ausdruckspaare, die zum Ändern der Meldungszeichenfolge verwendet werden.
 ms.assetid: d471d61f-3f01-44eb-a61e-e1f5de67a31d
 keywords:
-- patternmaps-Element EventLog
+- patternMaps-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 3cf7832cf0869c6df4779eac463e2e124257db25
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 539c174cb25a83a72de7011c46d527591ec25447410155639deabf17c308aaa8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118841679"
 ---
-# <a name="patternmaps-namedquerytype-element"></a>patternmaps (namedquerytype)-Element
+# <a name="patternmaps-namedquerytype-element"></a>patternMaps-Element (NamedQueryType)
 
-Definiert eine Liste von Paaren für reguläre Ausdrücke, die zum Ändern der Meldungs Zeichenfolge verwendet werden.
+Definiert eine Liste regulärer Ausdruckspaare, die zum Ändern der Meldungszeichenfolge verwendet werden.
 
 ``` syntax
 <xs:element name="patternMaps"
@@ -30,7 +30,7 @@ Definiert eine Liste von Paaren für reguläre Ausdrücke, die zum Ändern der M
  />
 ```
 
-Das **patternmaps** -Element wird durch den komplexen [**namedquerytype**](eventmanifestschema-namedquerytype-complextype.md) -Typ definiert.
+Das **patternMaps-Element** wird durch den komplexen [**NamedQueryType-Typ**](eventmanifestschema-namedquerytype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,22 +38,22 @@ Das **patternmaps** -Element wird durch den komplexen [**namedquerytype**](event
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnete Elemente**
 </dt> <dt>
 
-[**namedqueries (ProviderType)**](eventmanifestschema-namedqueries-providertype-element.md)
+[**namedQueries (ProviderType)**](eventmanifestschema-namedqueries-providertype-element.md)
 </dt> <dt>
 
-[**namedqueries (metadataType)**](eventmanifestschema-namedqueries-metadatatype-element.md)
+[**namedQueries (MetadataType)**](eventmanifestschema-namedqueries-metadatatype-element.md)
 </dt> </dl>
 
  

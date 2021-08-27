@@ -1,6 +1,6 @@
 ---
-title: Beispiel für LOGON-Auslösung (Skripterstellung)
-description: In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn sich ein Benutzer anmeldet.
+title: Beispiel für Anmeldetrigger (Skripterstellung)
+description: In diesem Skriptbeispiel wird veranschaulicht, wie sie eine Aufgabe erstellen, die für die Ausführung Editor Benutzerprotokollierung geplant ist.
 ms.assetid: f25e105f-9439-4646-bdfd-609ee99a5d55
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 72a8c4b5d0d67b59160eb3ed0b13885ee7e0eb51
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6faa60e30974aee9382483f30de5842a842a133135e79add176448e11e93a569
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118859581"
 ---
-# <a name="logon-trigger-example-scripting"></a>Beispiel für LOGON-Auslösung (Skripterstellung)
+# <a name="logon-trigger-example-scripting"></a>Beispiel für Anmeldetrigger (Skripterstellung)
 
-In diesem Skript Beispiel wird gezeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn sich ein Benutzer anmeldet. Der Task enthält einen Logon-Auslösers, der eine Start Grenze für die zu startende Aufgabe und eine Benutzer-ID angibt, die den Benutzer angibt. Der Task wird mithilfe der Gruppe "Administratoren" als Sicherheitskontext zum Ausführen der Aufgabe registriert.
+In diesem Skriptbeispiel wird veranschaulicht, wie sie eine Aufgabe erstellen, die für die Ausführung Editor Benutzerprotokollierung geplant ist. Die Aufgabe enthält einen Logon-Trigger, der eine Startgrenze für den zu startden Task angibt, sowie eine Benutzer-ID, die den Benutzer angibt. Die Aufgabe wird mithilfe der Gruppe Administratoren als Sicherheitskontext registriert, um die Aufgabe auszuführen.
 
-Im folgenden Verfahren wird beschrieben, wie eine ausführbare Datei (z. b. Editor) gestartet wird, wenn ein bestimmter Benutzer sich anmeldet.
+Im folgenden Verfahren wird beschrieben, wie Sie eine ausführbare Datei wie Editor starten, wenn sich ein angegebener Benutzer anmeldet.
 
-**So planen Sie den Start von Notepad, wenn sich ein Benutzer anmeldet**
+**So planen Sie Editor starten, wenn sich ein Benutzer anmeldet**
 
-1.  Erstellen Sie ein [**TaskService**](taskservice.md) -Objekt. Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
-2.  Rufen Sie einen Aufgaben Ordner ab, und erstellen Sie eine Aufgabe. Verwenden Sie die [**TaskService. GetFolder**](taskservice-getfolder.md) -Methode, um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService. newtask**](taskservice-newtask.md) -Methode zum Erstellen des [**Task Definition**](taskdefinition.md) -Objekts, das die Aufgabe darstellt.
-3.  Definieren von Informationen über den Task mithilfe des [**Taskdefinition**](taskdefinition.md) -Objekts. Verwenden Sie die [**Task Definition. Settings**](taskdefinition-settings.md) -Eigenschaft, um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner Dienst den Task ausführt, und die [**Taskdefinition. RegistrationInfo**](taskdefinition-registrationinfo.md) -Eigenschaft, um die Informationen zu definieren, die die Aufgabe beschreiben.
-4.  Erstellen Sie einen Logon-Trigger mithilfe der [**Taskdefinition.**](taskdefinition-triggers.md) Triggers-Eigenschaft. Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection**](triggercollection.md) -Objekt. Verwenden Sie die [**TriggerCollection. Create**](triggercollection-create.md) -Methode (die den Typ des zu erstellenden Auslösers angibt), um einen Logon-Trigger zu erstellen. Beim Erstellen des Auslösers legen Sie die Start-und die Endgrenze des Auslösers zum Aktivieren und Deaktivieren des-Auslösers fest. Sie müssen die [**UserID**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) -Eigenschaft für den-Befehl so festlegen, dass die Aktionen der Aufgabe für die Ausführung geplant werden, wenn sich der angegebene Benutzer nach der Start Grenze anmeldet.
-5.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe, indem Sie die [**Task Definition. Actions**](taskdefinition-actions.md) -Eigenschaft verwenden. Diese Eigenschaft ermöglicht den Zugriff auf das Objekt " [**Aktions Sammlung**](actioncollection.md) ". Verwenden Sie die [**Action Collection. Create**](actioncollection-create.md) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**execaction**](execaction.md) -Objekt verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
-6.  Registrieren Sie die Aufgabe mit der [**Task Folder. RegisterTaskDefinition**](taskfolder-registertaskdefinition.md) -Methode. In diesem Beispiel wird die Aufgabe so registriert, dass Sie die Gruppe "Administratoren" als Sicherheitskontext zum Ausführen der Aufgabe verwendet.
+1.  Erstellen Sie ein [**TaskService-Objekt.**](taskservice.md) Mit diesem Objekt können Sie die Aufgabe in einem angegebenen Ordner erstellen.
+2.  Erstellen Sie einen Taskordner, und erstellen Sie einen Task. Verwenden Sie [**die TaskService.GetFolder-Methode,**](taskservice-getfolder.md) um den Ordner zu erhalten, in dem die Aufgabe gespeichert ist, und die [**TaskService.NewTask-Methode,**](taskservice-newtask.md) um das [**TaskDefinition-Objekt**](taskdefinition.md) zu erstellen, das die Aufgabe darstellt.
+3.  Definieren Sie Informationen zum Task mithilfe des [**TaskDefinition-Objekts.**](taskdefinition.md) Verwenden Sie [**die TaskDefinition.Einstellungen-Eigenschaft,**](taskdefinition-settings.md) um die Einstellungen zu definieren, die bestimmen, wie der Taskplaner-Dienst die Aufgabe ausführt, und die [**TaskDefinition.RegistrationInfo-Eigenschaft,**](taskdefinition-registrationinfo.md) um die Informationen zu definieren, die den Task beschreiben.
+4.  Erstellen Sie mithilfe der [**TaskDefinition.Triggers-Eigenschaft einen Logon-Trigger.**](taskdefinition-triggers.md) Diese Eigenschaft ermöglicht den Zugriff auf das [**TriggerCollection-Objekt.**](triggercollection.md) Verwenden Sie [**die TriggerCollection.Create-Methode**](triggercollection-create.md) (unter Angabe des Triggertyps, den Sie erstellen möchten), um einen Logon-Trigger zu erstellen. Legen Sie beim Erstellen des Triggers die Start- und Endgrenze des Triggers fest, um den Trigger zu aktivieren und zu deaktivieren. Sie müssen die [**UserId-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) für den Trigger so festlegen, dass die Ausführung der Aufgaben geplant wird, wenn sich der angegebene Benutzer nach der Startgrenze anmeldet.
+5.  Erstellen Sie mithilfe der [**TaskDefinition.Actions-Eigenschaft**](taskdefinition-actions.md) eine Aktion für die Auszuführende Aufgabe. Diese Eigenschaft ermöglicht den Zugriff auf das [**ActionCollection-Objekt.**](actioncollection.md) Verwenden Sie [**die ActionCollection.Create-Methode,**](actioncollection-create.md) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**ExecAction-Objekt**](execaction.md) verwendet, das eine Aktion darstellt, die eine ausführbare Datei startet.
+6.  Registrieren Sie die Aufgabe mithilfe der [**TaskFolder.RegisterTaskDefinition-Methode.**](taskfolder-registertaskdefinition.md) In diesem Beispiel wird die Aufgabe so registriert, dass die Gruppe Administratoren als Sicherheitskontext zum Ausführen der Aufgabe verwendet wird.
 
-Im folgenden VBScript-Beispiel wird veranschaulicht, wie eine Aufgabe für die Ausführung von Notepad geplant wird, wenn sich ein Benutzer anmeldet.
+Das folgende VBScript-Beispiel zeigt, wie sie eine Aufgabe so planen, dass sie Editor, wenn sich ein Benutzer anmeldet.
 
 
 ```VB
@@ -124,12 +124,12 @@ WScript.Echo "Task submitted."
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,62 +1,62 @@
 ---
-title: Online Druck-Assistent
-description: Der Windows Vista-Online Druck-Assistent unterstützt Benutzer beim Sortieren von Fotos aus teilnehmenden Online Druck-Einzelhandels Händlern.
+title: Onlinedruck-Assistent
+description: Der Windows Vista Online Printing Wizard unterstützt Benutzer beim Bestellen von Fotos von beteiligten Onlinedruckhändlern.
 ms.assetid: 1e73a5d0-2ca8-4eca-846a-bd69eee257cb
 keywords:
-- Online Druck-Assistent
-- Symbole, Online Druck-Assistent
+- Onlinedruck-Assistent
+- Symbole,Onlinedruck-Assistent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8536eea7a51eddb2dbb46d10c9291a60edfdc74e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bc402f1fe5853c7a255ea45940d62efcd092c424be6905287315c5cfe5fc7504
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315093"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975918"
 ---
-# <a name="online-printing-wizard"></a>Online Druck-Assistent
+# <a name="online-printing-wizard"></a>Onlinedruck-Assistent
 
-Der Windows Vista-Online Druck-Assistent unterstützt Benutzer beim Sortieren von Fotos aus teilnehmenden Online Druck-Einzelhandels Händlern. Dieser Assistent ist so konzipiert, dass er Programm gesteuert von jeder Anwendung aufgerufen werden kann, die Benutzern die Möglichkeit bietet, Fotos von Fotos zu bestellen. Der Fotodruck-Assistent ist unter Windows Vista verfügbar. Pix für Windows
+Der Windows Vista Online Printing Wizard unterstützt Benutzer beim Bestellen von Fotos von beteiligten Onlinedruckhändlern. Dieser Assistent ist so konzipiert, dass er programmgesteuert von jeder Anwendung aufgerufen werden kann, die Benutzern die Möglichkeit bieten möchte, Fotos zu bestellen. Der Fotodruck-Assistent ist auf Windows Vista verfügbar. PIX für Windows
 
--   [Vom Online Druck-Assistenten bereitgestellte Funktionen](#features-provided-by-the-online-print-wizard)
--   [Unterstützte Foto Dateiformate](#supported-photo-file-formats)
--   [Programm gesteuertes Starten des Online Druck-Assistenten](#programmatically-launching-the-online-print-wizard)
--   [Zugreifen auf das Symbol für den Online Druck-Assistenten](#accessing-the-online-print-wizard-icon)
--   [MRU-Eigenschaften des Online Druck-Assistenten](#online-print-wizard-mru-properties)
+-   [Vom Onlinedruck-Assistenten bereitgestellte Funktionen](#features-provided-by-the-online-print-wizard)
+-   [Unterstützte Fotodateiformate](#supported-photo-file-formats)
+-   [Programmgesteuertes Starten des Onlinedruck-Assistenten](#programmatically-launching-the-online-print-wizard)
+-   [Zugreifen auf das Symbol des Onlinedruck-Assistenten](#accessing-the-online-print-wizard-icon)
+-   [MRU-Eigenschaften des Onlinedruck-Assistenten](#online-print-wizard-mru-properties)
 
-## <a name="features-provided-by-the-online-print-wizard"></a>Vom Online Druck-Assistenten bereitgestellte Funktionen
+## <a name="features-provided-by-the-online-print-wizard"></a>Vom Onlinedruck-Assistenten bereitgestellte Funktionen
 
-Der Windows Vista-Online Druck-Assistent ermöglicht Benutzern das Sortieren von Druck Vorgängen aus einer Auswahl von teilnehmenden Online Druck-Einzelhandels Händlern. Wenn der Assistent aufgerufen wird, wird Folgendes ausgeführt:
+Mit Windows Vista Online Printing Wizard können Benutzer Drucke von einer Auswahl teilnehmender Onlinedruckhändler bestellen. Wenn der Assistent aufgerufen wird, führt er die folgenden Schritte aus:
 
-1.  Akzeptiert eine Datei oder eine Liste von Dateien, für die gedruckt werden sollen.
-2.  Ruft automatisch die aktuelle Liste der teilnehmenden Online Druck Händler ab und ermöglicht dem Benutzer, den Einzelhändler auszuwählen, von dem die Foto Abdrücke gekauft werden.
-3.  Führt den Benutzer durch den Prozess oder die Reihenfolge der Ausdrucke.
+1.  Akzeptiert eine Datei oder Liste von Dateien, für die Drucke geordnet werden sollen.
+2.  Ruft automatisch die aktuelle Liste der beteiligten Onlinedruckhändler ab und ermöglicht es dem Benutzer, den Einzelhändler auszuwählen, von dem die Fotodrucke kaufen werden.
+3.  Führt den Benutzer durch den Prozess oder die Reihenfolge der Drucke.
 
-Jede Anwendung kann von den Funktionen profitieren, die vom Windows Vista-Online Druck-Assistenten angeboten werden. Eine Anwendung muss nur die Datei oder Dateien übergeben, für die gedruckt werden, und der Assistent führt den Benutzer durch den Bestellvorgang.
+Jede Anwendung kann von den Features profitieren, die vom Windows Vista Online Printing Wizard angeboten werden. Eine Anwendung muss nur die Dateien übergeben, für die Drucke bestellt werden, und der Assistent führt den Benutzer durch den Bestellvorgang.
 
-Die folgende Abbildung zeigt den Windows Vista-Online Druck-Assistenten, der eine Beispielliste der teilnehmenden Online Druck-Einzelhändler anzeigt.
+Die folgende Abbildung zeigt den Windows Vista Online Printing Wizard mit einer Beispielliste der beteiligten Onlinedruckhändler.
 
-![der Windows Vista-Online Druck-Assistent](images/opw.png)
+![Der Windows Vista-Onlinedruck-Assistent](images/opw.png)
 
-## <a name="supported-photo-file-formats"></a>Unterstützte Foto Dateiformate
+## <a name="supported-photo-file-formats"></a>Unterstützte Fotodateiformate
 
-Der Windows Vista-Online Druck-Assistent unterstützt alle Bild Dateiformate, für die ein WIC-Codec (Windows Imaging Component) installiert ist. WIC bietet mehrere Standard-Codecs, einschließlich:
+Der Windows Vista Online Printing Wizard unterstützt jedes Bilddateiformat, für das ein WIC-Codec (Windows Imaging Component) installiert ist. WIC bietet mehrere Standardcodecs, darunter:
 
 -   Bitmap (BMP)
 -   GIF (Graphics Interchange Format)
--   Symbol Format (ICO)
+-   Symbolformat (ICO)
 -   JPEG (Joint Photographic Experts Group)
 -   PNG (Portable Network Graphics)
 -   TIFF (Tagged Image File Format)
--   Windows Media-Fotoformat
+-   Windows Medienfotoformat
 
-Weitere Informationen zu WIC-und WIC-Codecs finden Sie unter [Windows Imaging Component](https://msdn.microsoft.com/library/ms737408(VS.85).aspx).
+Weitere Informationen zu WIC- und WIC-Codecs finden Sie unter [Windows Imaging Component](https://msdn.microsoft.com/library/ms737408(VS.85).aspx).
 
-Dateiformate, die von Online Druck-Einzelhändlern unterstützt werden, variieren je nach Einzelhändler möglicherweise unterstützt ein bestimmter Einzelhändler nicht alle Dateiformate, die vom Windows Vista-Online Druck-Assistenten unterstützt werden. Wenn der Benutzer versucht, Druck in einem Format zu sortieren, das vom ausgewählten Einzelhändler nicht unterstützt wird, benachrichtigt der Windows Vista-Online Druck-Assistent den Benutzer, dass der ausgewählte Einzelhändler das Format der übermittelten Dateien nicht unterstützt.
+Dateiformate, die von Onlinedruckhändlern unterstützt werden, variieren je nach Einzelhändler. Es ist möglich, dass ein bestimmter Einzelhändler möglicherweise nicht alle Dateiformate unterstützt, die vom Windows Vista Online Printing Wizard unterstützt werden. Wenn der Benutzer versucht, Drucke in einem Format zu bestellen, das vom ausgewählten Einzelhändler nicht unterstützt wird, benachrichtigt der Windows Vista Online Printing Wizard den Benutzer darüber, dass der ausgewählte Einzelhändler das übermittelte Dateiformat nicht unterstützt.
 
-## <a name="programmatically-launching-the-online-print-wizard"></a>Programm gesteuertes Starten des Online Druck-Assistenten
+## <a name="programmatically-launching-the-online-print-wizard"></a>Programmgesteuertes Starten des Onlinedruck-Assistenten
 
-Um den Windows Vista-Online Druck-Assistenten aufzurufen, rufen Sie die [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) -Schnittstelle mit der folgenden Klassen Kennung (CLSID) auf:
+Rufen Sie zum Aufrufen Windows Vista Online Printing Wizard die [IDropTarget-Schnittstelle](/windows/win32/api/oleidl/nn-oleidl-idroptarget) mit dem folgenden Klassenbezeichner (CLSID) auf:
 
 
 ```
@@ -65,9 +65,9 @@ CLSID_PublishDropTarget
 
 
 
-Diese CLSID ist in "shobjidl. h" und "shobjidl. idl" definiert. Die Dateien, die vom Windows Vista-Online Druck-Assistenten verarbeitet werden sollen, werden in einem [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) -Objekt angegeben.
+Diese CLSID wird in Shobjidl.h und Shobjidl.idl definiert. Die Dateien, die vom Assistenten für Windows Vista Online Printing verarbeitet werden sollen, werden in einem [IDataObject-Objekt](/windows/win32/api/objidl/nn-objidl-idataobject) angegeben.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie der Windows Vista-Online Druck-Assistent aufgerufen wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie der Windows Vista Online Printing Wizard aufgerufen wird.
 
 
 ```
@@ -93,13 +93,13 @@ spDropTarget->Drop(pDataObject, MK_LBUTTON, pt, &dwEffect);}
 
 
 
-## <a name="accessing-the-online-print-wizard-icon"></a>Zugreifen auf das Symbol für den Online Druck-Assistenten
+## <a name="accessing-the-online-print-wizard-icon"></a>Zugreifen auf das Symbol des Onlinedruck-Assistenten
 
-Der Windows Vista-Online Druck-Assistent exportiert ein Symbol, auf das zugegriffen werden kann und das von Anwendungen angezeigt wird, die es aufrufen. In der folgenden Abbildung ist das Symbol für den Windows Vista-Online Druck-Assistenten dargestellt.
+Der Windows Vista Online Printing Wizard exportiert ein Symbol, auf das von Anwendungen zugegriffen und angezeigt werden kann, die es aufrufen. Die folgende Abbildung zeigt das Symbol Windows Vista Online Printing Wizard( Vista-Onlinedruck-Assistent).
 
-![Symbol für den Windows Vista-Online Druck-Assistenten](images/opw-icon.png)
+![Das Symbol des Onlinedruck-Assistenten für Windows Vista](images/opw-icon.png)
 
-Im folgenden Codebeispiel wird veranschaulicht, wie der Index für das Windows Vista-Online Druck-Assistenten Symbol abgerufen wird, indem die **opwicon** -Eigenschaft gelesen wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie den Index für das Symbol Windows Vista Online Printing Wizard abrufen, indem Sie die **OPWIcon-Eigenschaft** lesen.
 
 
 ```
@@ -129,23 +129,23 @@ if SUCCEEDED(hr)
 
 
 
-## <a name="online-print-wizard-mru-properties"></a>MRU-Eigenschaften des Online Druck-Assistenten
+## <a name="online-print-wizard-mru-properties"></a>MRU-Eigenschaften des Onlinedruck-Assistenten
 
-Der Windows Vista-Online Druck-Assistent definiert drei Eigenschaften, die mit dem zuletzt verwendeten (MRU) Online Druck-Einzelhändler verknüpft sind.
+Der Windows Vista Online Printing Wizard definiert drei Eigenschaften, die sich auf den zuletzt verwendeten Onlinedruckhändler (MRU) bezieht.
 
 
 
-| Eigenschaftsname | Eigenschafts Wert/-Funktion                                                                                                                                                                                                                                                   |
+| Eigenschaftsname | Eigenschaftswert/Funktion                                                                                                                                                                                                                                                   |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Mruicon**   | Der Index des Symbols für den zuletzt verwendeten Online Druck-Einzelhändler kann aus dieser Eigenschaft gelesen werden.                                                                                                                                                                 |
-| **Mruname**   | Der Name des zuletzt verwendeten Online Druck-Einzelhandels Händlers kann aus dieser Eigenschaft gelesen werden.                                                                                                                                                                               |
-| **Usemru**    | Ein **variabler** **VT- \_ boolescher** Wert, der angibt, ob der Assistent die Auswahl Seite für den Online Druck-Einzelhandel überspringen soll, und stattdessen nur den zuletzt verwendeten Online Druck Händler verwenden. Legen Sie diese Eigenschaft auf **Variant \_ true** fest, um die Auswahl Seite für den Händler zu überspringen |
+| **MRUIcon**   | Der Index des Symbols für den zuletzt verwendeten Onlinedruckhändler kann aus dieser Eigenschaft gelesen werden.                                                                                                                                                                 |
+| **MRUName**   | Der Name des zuletzt verwendeten Onlinedruckhändlers kann aus dieser Eigenschaft gelesen werden.                                                                                                                                                                               |
+| **UseMRU**    | Ein **VARIANT** **VT \_ BOOL-Wert,** der angibt, ob der Assistent die Auswahlseite des Onlinedruckhändlers überspringen und stattdessen nur den zuletzt verwendeten Onlinedruckhändler verwenden soll. Legen Sie diese Eigenschaft auf **VARIANT \_ TRUE fest,** um die Auswahlseite des Einzelhändlers zu überspringen. |
 
 
 
- 
+ 
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die usemru-Eigenschaft festgelegt wird, sodass der Windows Vista-Online Druck-Assistent die Auswahl Seite für den Online Druck-Einzelhandel umgeht und automatisch den zuletzt verwendeten Einzelhändler auswählt.
+Im folgenden Codebeispiel wird veranschaulicht, wie die UseMRU-Eigenschaft so festgelegt wird, dass der Windows Vista Online Printing Wizard die Auswahlseite des Onlinedruckhändlers umgeht und automatisch den zuletzt verwendeten Einzelhändler auswählt.
 
 
 ```
@@ -182,7 +182,7 @@ spDropTarget->Drop(pDataObject, MK_LBUTTON, pt, &dwEffect);
 
 
 
-Im folgenden Codebeispiel wird veranschaulicht, wie die Eigenschaften mruname und mruicon gelesen werden.
+Im folgenden Codebeispiel wird veranschaulicht, wie die Eigenschaften MRUName und MRUIcon gelesen werden.
 
 
 ```
@@ -219,6 +219,6 @@ if SUCCEEDED(hr)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,42 +1,42 @@
 ---
-title: Das Sprechblasen Objekt
-description: Das Sprechblasen Objekt
+title: Das Balloon-Objekt
+description: Das Balloon-Objekt
 ms.assetid: d5b52310-0b4e-4fe3-a481-53687be4a89c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de0c94803e9efadde1ae4a8410273ed49437291a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 2afc2ad1256b040588121dcb92fc8f66fea540b3051b92a6fe5273eb2f81107b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104208889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745972"
 ---
-# <a name="the-balloon-object"></a>Das Sprechblasen Objekt
+# <a name="the-balloon-object"></a>Das Balloon-Objekt
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Der Microsoft-Agent unterstützt die Text Beschriftungen der Sprech Methode mithilfe einer Wort [**Sprech**](speak-method.md) Blase. Die Methode " [**Think**](think-method.md) " ermöglicht es Ihnen, Text ohne Audioausgabe in einer "gedachten" Wort Sprechblase anzuzeigen.
+Microsoft Agent unterstützt die Textbeschriftung der [**Speak-Methode**](speak-method.md) mithilfe eines Sprechblasenworts. Mit [**der Think-Methode**](think-method.md) können Sie Text ohne Audioausgabe in einem "Gedanken"-Wortsprechblasenformat anzeigen.
 
-Die Standardwerte für das anfängliche Wort Sprechblasen Fenster eines Zeichens werden im Microsoft-Agent-Zeichen-Editor definiert und kompiliert. Nach der Ausführung werden die [**aktivierten**](enabled-property.md) und [**Schriftart**](https://www.bing.com/search?q=**Font**) Eigenschaften des Sprechblasen möglicherweise vom Benutzer überschrieben. Wenn ein Benutzer die Eigenschaften der Wort Sprechblase ändert, wirkt sich dies auf alle Zeichen aus. Sowohl für die Sprech [**-als**](think-method.md) auch für die [**Sprech**](speak-method.md) Blasen Verwendung werden dieselben Eigenschaften Einstellungen wie für die Größe verwendet. Sie können auf die Eigenschaften für die Wort Sprechblase eines Zeichens über [**das Sprech**](/windows/desktop/lwef/the-balloon-object) Blasen Objekt zugreifen, das ein untergeordnetes Element des [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objekts ist.
+Die Standardeinstellungen eines Ersten Wortsprechblasenfensters eines Zeichens werden im Microsoft Agent-Zeichen-Editor definiert und kompiliert. Nach der Ausführung können die Eigenschaften [**Aktiviert und**](enabled-property.md) [**Schriftart**](https://www.bing.com/search?q=**Font**) des Balloons vom Benutzer überschrieben werden. Wenn ein Benutzer die Eigenschaften des Wortsprechblasens ändert, wirken sich diese auf alle Zeichen aus. Sowohl die [**Sprachsprechblasen**](speak-method.md) als auch die [**Think**](think-method.md) Word-Sprechblasen verwenden die gleichen Eigenschafteneinstellungen für die Größe. Sie können über das Balloon-Objekt, das [](/windows/desktop/lwef/the-balloon-object) ein untergeordnetes Objekt des Character-Objekts ist, auf die Eigenschaften für die Wortsprechblase [**eines Zeichens**](/windows/desktop/lwef/the-characters-object) zugreifen.
 
-Das Sprech [**Blasen Objekt unterstützt die folgenden**](/windows/desktop/lwef/the-balloon-object) Eigenschaften:
+Das [**Balloon-Objekt**](/windows/desktop/lwef/the-balloon-object) unterstützt die folgenden Eigenschaften:
 
--   [**BackColor**](backcolor-property.md)
+-   [**Backcolor**](backcolor-property.md)
 -   [**BorderColor**](bordercolor-property.md)
--   [**Charsperline**](charsperline-property.md)
+-   [**CharsPerLine**](charsperline-property.md)
 -   [**Aktiviert**](enabled-property.md)
--   [**Fontcharset**](fontcharset-property.md)
+-   [**FontCharSet**](fontcharset-property.md)
 -   [**FontName**](fontname-property-bal.md)
 -   [**SchriftFett**](fontbold-property.md)
 -   [**FontItalic**](fontitalic-property.md)
--   [**FontSize**](fontsize-property-bal.md)
+-   [**Fontsize**](fontsize-property-bal.md)
 -   [**FontStrikeThru**](fontstrikethru-property.md)
--   [**Fontunter Streichung**](fontunderline-property.md)
+-   [**FontUnderline**](fontunderline-property.md)
 -   [**ForeColor**](forecolor-property.md)
--   [**Anzahl von Zeilen**](numberoflines-property.md)
+-   [**NumberOfLines**](numberoflines-property.md)
 -   [**Stil**](style-property.md)
 -   [**Sichtbar**](visible-property-bal.md)
 
- 
+ 
 
- 
+ 

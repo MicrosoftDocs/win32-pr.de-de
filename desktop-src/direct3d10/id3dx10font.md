@@ -37,7 +37,7 @@ Die **ID3DX10Font-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                     | Beschreibung                                                                                                                                           |
+| Methode                                                     | BESCHREIBUNG                                                                                                                                           |
 |:-----------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**Drawtext**](id3dx10font-drawtext.md)                   | Zeichnen von formatiertem Text. Diese Methode unterstützt ANSI- und Unicode-Zeichenfolgen.<br/>                                                                        |
 | [**GetDC**](id3dx10font-getdc.md)                         | Gibt ein Handle an einen Anzeigegerätekontext (DC) zurück, auf dem die Schriftart festgelegt ist.<br/>                                                            |
@@ -78,7 +78,7 @@ typedef interface ID3DX10Font *LPD3DX10FONT;
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

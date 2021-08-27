@@ -5,7 +5,7 @@ ms.assetid: d163b6fd-a64f-4160-95cb-6ac1153f011b
 keywords:
 - Windows Media Player,Playlist-Attribute
 - Windows Media Player Mobil,Wiedergabelistenattribute
-- Windows Media Player-Objektmodell, Wiedergabelistenattribute
+- Windows Media Player Objektmodell, Wiedergabelistenattribute
 - Objektmodell, Wiedergabelistenattribute
 - ActiveX,Wiedergabelistenattribute
 - Windows Media Player ActiveX,Wiedergabelistenattribute

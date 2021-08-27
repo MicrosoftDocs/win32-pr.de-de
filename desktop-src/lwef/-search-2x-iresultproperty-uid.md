@@ -1,11 +1,11 @@
 ---
-title: Iresultproperty Uid-Eigenschaft (wdssharedidl. h)
+title: IResultProperty-UID-Eigenschaft (WdsSharedIDL.h)
 description: Eindeutiger Bezeichner für die Eigenschaft.
 ms.assetid: b5cee5b3-78b4-4d2a-b442-f6624497ef71
 keywords:
-- UID-Eigenschafts Funktionen der Legacy-Windows-Umgebung
-- UID-Eigenschaft Legacy-Windows-Umgebungs Funktionen, iresultproperty-Schnittstelle
-- Iresultproperty-Schnittstelle Legacy Windows-Umgebungs Features, UID-Eigenschaft
+- UID-Eigenschaft Legacy-Windows-Umgebungsfeatures
+- UID-Eigenschaft Legacy Windows Umgebungsfeatures, IResultProperty-Schnittstelle
+- IResultProperty-Schnittstelle Legacy Windows Umgebungsfeatures, UID-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,17 +17,17 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a08921e366cca2be40a8a79fe43d7a15cec54f2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d413a81d6b18091d2e21b4572f5f8e01693829c17942d3e395e2c03a71d467d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118754718"
 ---
-# <a name="iresultpropertyuid-property"></a>Iresultproperty:: UID-Eigenschaft
+# <a name="iresultpropertyuid-property"></a>IResultProperty::UID-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows DesktopSuche 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows-Suche-API.](../search/-search-reference-entry-page.md) 
 
 Eindeutiger Bezeichner für die Eigenschaft.
 
@@ -46,7 +46,7 @@ HRESULT get_UID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt einen Zeiger auf den eindeutigen Bezeichner der Eigenschaft zurück.
+gibt einen Zeiger auf den eindeutigen Eigenschaftenbezeichner zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Gibt einen Zeiger auf den eindeutigen Bezeichner der Eigenschaft zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

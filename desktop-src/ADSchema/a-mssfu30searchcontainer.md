@@ -56,7 +56,7 @@ Enthält den Bezeichner eines Objekts, das angibt, wo jede Suche beginnt.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | Falsch                                                          |
-| Is-Single-Valued       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | Falsch                                                          |
 | Im globalen Katalog      | Falsch                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
@@ -77,7 +77,7 @@ Enthält den Bezeichner eines Objekts, das angibt, wo jede Suche beginnt.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | Falsch                                                          |
-| Is-Single-Valued       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | Falsch                                                          |
 | Im globalen Katalog      | Falsch                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
@@ -98,7 +98,7 @@ Enthält den Bezeichner eines Objekts, das angibt, wo jede Suche beginnt.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | Falsch                                                          |
-| Is-Single-Valued       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | Falsch                                                          |
 | Im globalen Katalog      | Falsch                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
@@ -119,7 +119,7 @@ Enthält den Bezeichner eines Objekts, das angibt, wo jede Suche beginnt.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | Falsch                                                          |
-| Is-Single-Valued       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | Falsch                                                          |
 | Im globalen Katalog      | Falsch                                                          |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                   |

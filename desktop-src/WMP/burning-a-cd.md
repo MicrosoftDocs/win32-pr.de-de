@@ -1,35 +1,35 @@
 ---
-title: Brennen einer CD
-description: Brennen einer CD
+title: Erstellen einer CD
+description: Erstellen einer CD
 ms.assetid: df55479e-d8a7-443d-bf2c-c988bfd0b1be
 keywords:
-- Windows Media Player, CD-brennen
-- Windows Media Player-Objektmodell, CD-brennen
-- Objektmodell, CD-brennen
-- Windows Media Player ActiveX-Steuerelement, CD-brennen
-- ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile, CD-brennen
-- CD-brennen, Informationen zu
-- Brennen von CDs, Informationen zu
+- Windows Media Player,CD-1
+- Windows Media Player Objektmodell,CD-1
+- Objektmodell, CD-1
+- Windows Media Player ActiveX,CD-1
+- ActiveX,CD-1
+- Windows Media Player Mobile ActiveX,CD-Steuerung
+- Windows Media Player Mobil, CD-1
+- CD-2016,About
+- -CDs,About
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 007b7808ff375ab0673592d0d016f8e713321d1a
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 82c7cfee7468b2cd376b7b25d4cff4a04e0d057dcc7a792ac7471843de2b74a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104101274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118840769"
 ---
-# <a name="burning-a-cd"></a>Brennen einer CD
+# <a name="burning-a-cd"></a>Erstellen einer CD
 
-In diesem Abschnitt wird beschrieben, wie Sie die [iwmpcdromburn](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromburn) -Schnittstelle verwenden, um Musik auf eine CD zu brennen. Die **iwmpcdromburn** -Schnittstelle bietet Funktionen zum Brennen von Wiedergabelisten auf CDs als Daten-und Audiospuren sowie zum Löschen von CD-RWs.
+In diesem Abschnitt wird beschrieben, wie Sie die [IWMPC wie eine -Schnittstelle verwenden,](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpcdromburn) um Musik auf eine CD zu verglühen. Die **IWMPC wies** Funktionen für Wiedergabelisten auf CDs als Daten- oder Audiospuren sowie das Löschen von CD-RWs auf.
 
-Code Verwendung
+Codeverwendung
 
-Die Codebeispiele in diesem Abschnitt verwenden Active Template Library (ATL)-Klassen, wie z. b. **CComPtr**.
+In den Codebeispielen in diesem Abschnitt werden Active Template Library (ATL)-Klassen wie **CComPtr verwendet.**
 
-Enthaltene Header
+Eingeschlossene Header
 
 Um den Code in diesem Abschnitt zu verwenden, schließen Sie die folgenden Header ein:
 
@@ -46,9 +46,9 @@ Um den Code in diesem Abschnitt zu verwenden, schließen Sie die folgenden Heade
 
 
 
-Schnittstellen Zeiger
+Schnittstellenzeker
 
-Die Schnittstellen für Windows-Media Player werden in den folgenden Element Variablen gespeichert:
+Die Schnittstellen für Windows Media Player werden in den folgenden Membervariablen gespeichert:
 
 
 ```C++
@@ -65,24 +65,24 @@ CComPtr<IWMPPlaylist>           m_spPlaylist;
 
 
 
-In den folgenden Themen wird die Verwendung der CD-brennen-API beschrieben.
+In den folgenden Themen wird die Verwendung der CD-Api beschrieben.
 
 -   [Abrufen der Schnittstelle zum Brennen von CDs](retrieving-the-cd-burning-interface.md)
--   [Der Verbrennungsprozess wird gestartet.](starting-the-burn-process.md)
+-   [Starten des Burn-Prozesses](starting-the-burn-process.md)
 -   [Löschen einer erneut beschreibbaren CD](erasing-a-rewritable-cd.md)
--   [Abrufen des Laufwerks und des Festplatten Status](retrieving-the-drive-and-disc-status.md)
--   [Abrufen des Verbrauchs Status](retrieving-the-burn-status.md)
+-   [Abrufen des Laufwerk- und Datenträgerstatus](retrieving-the-drive-and-disc-status.md)
+-   [Abrufen des Burn-Status](retrieving-the-burn-status.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Player-Steuerelement Handbuch**](player-control-guide.md)
+[**Leitfaden zum Player-Steuerelement**](player-control-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

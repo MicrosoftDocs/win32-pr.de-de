@@ -1,11 +1,11 @@
 ---
 title: ms-DS-NC-RO-Replica-Locations-Attribut
-description: Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet den DC auf, der die Partition schreibgeschützt hosten soll.
+description: Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet den Domänencontroller auf, der die Partition schreibgeschützt hosten soll.
 ms.assetid: 2473f201-abf7-4fb1-b005-c8db528aeab8
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-NC-RO-Replica-Locations-Attribut AD-Schema
-- MSDS-NC-RO-Replica-Locations-Attribut AD-Schema
+- MS-DS-NC-RO-Replica-Locations-Attribut AD-Schema
+- AD-Schema des msDS-NC-RO-Replica-Locations-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118684357"
 ---
 # <a name="ms-ds-nc-ro-replica-locations-attribute"></a>ms-DS-NC-RO-Replica-Locations-Attribut
 
-Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet den DC auf, der die Partition schreibgeschützt hosten soll.
+Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet den Domänencontroller auf, der die Partition schreibgeschützt hosten soll.
 
 
 
@@ -35,7 +35,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Aktualisieren von Berechtigungen  | \-                                      |
 | Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1967                 |
-| System-ID-GUID    | 3df793df-9858-4417-a701-735a1ecebf74    |
+| System-Id-Guid    | 3df793df-9858-4417-a701-735a1ecebf74    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -55,7 +55,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Link-ID                | 2114                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -63,7 +63,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -76,7 +76,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Link-ID                | 2114                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -84,7 +84,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 
@@ -97,7 +97,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Link-ID                | 2114                                       |
 | MAPI-Id                | \-                                         |
 | System-Only            | Falsch                                      |
-| Ist einwertig       | Falsch                                      |
+| Is-Single-Valued       | Falsch                                      |
 | Ist indiziert             | Falsch                                      |
 | Im globalen Katalog      | Falsch                                      |
 | NT-Security-Descriptor | O:BAG:BAD:S:                               |
@@ -105,7 +105,7 @@ Ein verknüpftes Attribut für ein Querverweisobjekt für eine Partition. Listet
 | Range-Upper            | \-                                         |
 | Search-Flags           | 0x00000000                                 |
 | System-Flags           | 0x00000010                                 |
-| In verwendete Klassen        | [**Cross-Ref**](c-crossref.md)<br/> |
+| In verwendete Klassen        | [**Ref-übergreifend**](c-crossref.md)<br/> |
 
 
 

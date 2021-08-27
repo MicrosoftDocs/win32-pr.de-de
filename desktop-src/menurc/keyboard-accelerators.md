@@ -1,95 +1,95 @@
 ---
 title: Tastaturkürzel
-description: In diesem Abschnitt werden Tastaturbeschleuniger erläutert. Eine Tastenkombination ist eine Tastenkombination oder eine Kombination von Tastatureingaben, die eine Befehls Meldung für eine Anwendung generiert.
+description: In diesem Abschnitt werden Tastenkombinationen erläutert. Eine Tastaturbeschleunigung ist eine Tastatureingabe oder eine Kombination von Tastatureingaben, die eine Befehlsmeldung für eine Anwendung generiert.
 ms.assetid: vs|winui|~\winui\windowsuserinterface\userinput\keyboardaccelerators.htm
 keywords:
-- Benutzereingabe, Tastaturbeschleuniger
-- Erfassen von Benutzereingaben, Tastatur Accelerators
-- Tastaturbeschleuniger
-- Accelerators
+- Benutzereingabe, Zugriffstasten
+- Erfassen von Benutzereingaben, Tastaturbeschleunigungen
+- Tastenkombinationen
+- Beschleuniger
 - WM_COMMAND Meldung
-- WM_SYS Befehls Meldung
+- WM_SYS COMMAND-Meldung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cd8cecd2fc1273750c75b8e5f33106d22343a14
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: df67f4879edc2e0e81a8715155bf2edfac05f1e5ce9d3557f9b051ae682a6afa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118734468"
 ---
 # <a name="keyboard-accelerators"></a>Tastaturkürzel
 
-Eine *Tastatur* EINGABETASTE (oder einfach, Zugriffstaste) ist eine Tastenkombination oder eine Kombination von Tastatureingaben, mit der ein [**WM- \_ Befehl**](wm-command.md) oder eine [**WM- \_ syscommand**](wm-syscommand.md) -Nachricht für eine Anwendung generiert wird.
+Eine *Tastaturbeschleunigung* (oder einfach eine Zugriffstaste) ist eine Tastatureingabe oder eine Kombination von Tastatureingaben, die eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) für eine Anwendung generiert.
 
 ### <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Name                                                                 | BESCHREIBUNG                                                                |
+| Name                                                                 | Beschreibung                                                                |
 |----------------------------------------------------------------------|----------------------------------------------------------------------------|
-| [Informationen zu Tastatur Accelerators](about-keyboard-accelerators.md)       | Erläutert Tastaturbeschleuniger.<br/>                                |
-| [Verwenden von Tastatur Accelerators](using-keyboard-accelerators.md)       | Erläutert Aufgaben, die mit Tastatur Accelerators verknüpft sind.<br/> |
-| [Referenz zur Tastatur Beschleunigung](keyboard-accelerator-reference.md) | Enthält die API-Referenz.<br/>                                     |
+| [Informationen zu Tastaturbeschleunigungen](about-keyboard-accelerators.md)       | Erläutert Tastenkombinationen.<br/>                                |
+| [Verwenden von Tastenkombinationen](using-keyboard-accelerators.md)       | Erläutert Aufgaben, die Tastenkombinationen zugeordnet sind.<br/> |
+| [Referenz zur Tastaturbeschleunigung](keyboard-accelerator-reference.md) | Enthält den API-Verweis.<br/>                                     |
 
 
 
  
 
-### <a name="keyboard-accelerator-functions"></a>Funktionen der Tastatur Beschleunigung
+### <a name="keyboard-accelerator-functions"></a>Tastaturbeschleunigungsfunktionen
 
 
 
-| Name                                                       | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Name                                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Copyacceleratortable**](/windows/desktop/api/Winuser/nf-winuser-copyacceleratortablea)       | Kopiert die angegebene Zugriffstasten Tabelle. Diese Funktion wird verwendet, um die Zugriffstasten Tabellendaten zu erhalten, die einem Zugriffstasten-Tabellen handle entsprechen, oder um die Größe der Datenzugriffs Tabellen-Daten zu ermitteln. <br/>                                                                                                                                                                                                                                                                                                                                                                    |
-| [**"Kreateacceleratortable"**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea)   | Erstellt eine Zugriffstasten Tabelle. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**DestroyAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable) | Zerstört eine Zugriffstasten Tabelle.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| [**LoadAccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa)               | Lädt die angegebene Zugriffstasten Tabelle. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora)       | Verarbeitet Zugriffstasten für Menübefehle. Die Funktion übersetzt eine [**WM- \_ KeyDown**](/windows/desktop/inputdev/wm-keydown) -oder [**WM- \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown) -Nachricht in einen [**WM- \_ Befehl**](wm-command.md) oder eine [**WM- \_ syscommand**](wm-syscommand.md) -Nachricht (wenn ein Eintrag für den Schlüssel in der angegebenen Zugriffstasten Tabelle vorhanden ist) und sendet dann den **WM- \_ Befehl** oder die **WM- \_ syscommand** -Nachricht direkt an die angegebene Fenster Prozedur. [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) gibt erst zurück, wenn die Fenster Prozedur die Meldung verarbeitet hat. <br/> |
+| [**CopyAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-copyacceleratortablea)       | Kopiert die angegebene Zugriffstastentabelle. Diese Funktion wird verwendet, um die Acceleratortabellendaten abzurufen, die einem Accelerator-Tabellenhandle entsprechen, oder um die Größe der Acceleratortabellendaten zu bestimmen. <br/>                                                                                                                                                                                                                                                                                                                                                                    |
+| [**CreateAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-createacceleratortablea)   | Erstellt eine Zugriffstastentabelle. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**DestroyAcceleratorTable**](/windows/desktop/api/Winuser/nf-winuser-destroyacceleratortable) | Zerstört eine Zugriffstastentabelle.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| [**LoadAccelerators**](/windows/desktop/api/Winuser/nf-winuser-loadacceleratorsa)               | Lädt die angegebene Zugriffstastentabelle. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| [**Translateaccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora)       | Verarbeitet Zugriffstasten für Menübefehle. Die Funktion übersetzt eine [**WM \_ KEYDOWN-**](/windows/desktop/inputdev/wm-keydown) oder [**WM \_ SYSKEYDOWN-Nachricht**](/windows/desktop/inputdev/wm-syskeydown) in eine [**WM \_ COMMAND-**](wm-command.md) oder [**WM \_ SYSCOMMAND-Nachricht**](wm-syscommand.md) (wenn ein Eintrag für den Schlüssel in der angegebenen Zugriffstastentabelle vorhanden ist) und sendet dann die **WM \_ COMMAND-** oder **WM \_ SYSCOMMAND-Nachricht** direkt an die angegebene Fensterprozedur. [**TranslateAccelerator**](/windows/desktop/api/Winuser/nf-winuser-translateacceleratora) gibt erst dann zurück, wenn die Fensterprozedur die Nachricht verarbeitet hat. <br/> |
 
 
 
  
 
-### <a name="keyboard-accelerator-messages"></a>Tastaturbeschleuniger-Meldungen
+### <a name="keyboard-accelerator-messages"></a>Tastaturbeschleunigungsmeldungen
 
 
 
-| Name                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                       |
+| Name                                          | Beschreibung                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WM \_ changeuistate**](wm-changeuistate.md) | Wird gesendet, um anzugeben, dass der Benutzeroberflächen Zustand geändert werden soll.<br/>                                                                                                                                                                                                                                                  |
-| [**WM \_ InitMenu**](wm-initmenu.md)           | Wird gesendet, wenn ein Menü aktiv wird. Sie tritt auf, wenn der Benutzer auf ein Element in der Menüleiste klickt oder eine Menü Taste drückt. Dadurch kann die Anwendung das Menü ändern, bevor es angezeigt wird. <br/> Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion. <br/> |
-| [**WM \_ queryuistate**](wm-queryuistate.md)   | Wird gesendet, um den Benutzeroberflächen Zustand für ein Fenster abzurufen.<br/>                                                                                                                                                                                                                                                            |
-| [**WM \_ updateuistate**](wm-updateuistate.md) | Wird gesendet, um den Benutzeroberflächen Status für das angegebene Fenster und alle untergeordneten Fenster zu ändern.<br/>                                                                                                                                                                                                                        |
+| [**WM \_ CHANGEUISTATE**](wm-changeuistate.md) | Wird gesendet, um anzugeben, dass der Benutzeroberflächenzustand geändert werden soll.<br/>                                                                                                                                                                                                                                                  |
+| [**WM \_ INITMENU**](wm-initmenu.md)           | Wird gesendet, wenn ein Menü aktiv wird. Er tritt auf, wenn der Benutzer auf ein Element in der Menüleiste klickt oder eine Menütaste drückt. Dadurch kann die Anwendung das Menü ändern, bevor es angezeigt wird. <br/> Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) <br/> |
+| [**WM \_ QUERYUISTATE**](wm-queryuistate.md)   | Wird gesendet, um den Benutzeroberflächenzustand für ein Fenster abzurufen.<br/>                                                                                                                                                                                                                                                            |
+| [**WM \_ UPDATEUISTATE**](wm-updateuistate.md) | Wird gesendet, um den Benutzeroberflächenzustand für das angegebene Fenster und alle untergeordneten Fenster zu ändern.<br/>                                                                                                                                                                                                                        |
 
 
 
  
 
-### <a name="keyboard-accelerator-notifications"></a>Benachrichtigungen über Tastaturbeschleuniger
+### <a name="keyboard-accelerator-notifications"></a>Tastaturbeschleunigungsbenachrichtigungen
 
 
 
-| Name                                          | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                       |
+| Name                                          | Beschreibung                                                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**WM \_ initmenupopup**](wm-initmenupopup.md) | Wird gesendet, wenn ein Dropdown Menü oder ein Untermenü aktiv werden soll. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern. <br/>                                                                                                                                              |
-| [**WM- \_ menuchar**](wm-menuchar.md)           | Wird gesendet, wenn ein Menü aktiv ist und der Benutzer eine Taste drückt, die keiner mnetmonischen oder Zugriffstaste entspricht. Diese Meldung wird an das Fenster gesendet, das das Menü besitzt. <br/>                                                                                                                                             |
-| [**WM- \_ MenuSelect**](wm-menuselect.md)       | Wird an das Besitzer Fenster eines Menüs gesendet, wenn der Benutzer ein Menü Element auswählt. <br/>                                                                                                                                                                                                                                                      |
-| [**WM- \_ syschar**](wm-syschar.md)             | Wird im Fenster mit dem Tastaturfokus gepostet, wenn eine [**WM- \_ syskeydown**](/windows/desktop/inputdev/wm-syskeydown) -Meldung von der [**translatemess**](/windows/desktop/api/winuser/nf-winuser-translatemessage) -Funktion übersetzt wird. Er gibt den Zeichencode eines System Zeichen Schlüssels an, bei dem es sich um einen Zeichen Schlüssel handelt, der gedrückt wird, während die Alt-Taste gedrückt ist. <br/> |
-| [**WM ( \_ syscommand)**](wm-syscommand.md)       | Ein Fenster empfängt diese Meldung, wenn der Benutzer einen Befehl im Menü **Fenster** auswählt oder wenn der Benutzer die Schaltfläche maximieren, die Schaltfläche Minimieren, die Schaltfläche Wiederherstellen oder die Schaltfläche Schließen auswählt.<br/>                                                                                                                                |
+| [**WM \_ INITMENUPOPUP**](wm-initmenupopup.md) | Wird gesendet, wenn ein Dropdownmenü oder Untermenü aktiv wird. Dadurch kann eine Anwendung das Menü ändern, bevor es angezeigt wird, ohne das gesamte Menü zu ändern. <br/>                                                                                                                                              |
+| [**WM \_ MENUCHAR**](wm-menuchar.md)           | Wird gesendet, wenn ein Menü aktiv ist und der Benutzer eine Taste drückt, die keiner mnemonic- oder accelerator-Taste entspricht. Diese Meldung wird an das Fenster gesendet, das das Menü besitzt. <br/>                                                                                                                                             |
+| [**\_WM-MENÜAUSWAHL**](wm-menuselect.md)       | Wird an das Besitzerfenster eines Menüs gesendet, wenn der Benutzer ein Menüelement auswählt. <br/>                                                                                                                                                                                                                                                      |
+| [**WM \_ SYSCHAR**](wm-syschar.md)             | Wird mit dem Tastaturfokus an das Fenster gesendet, wenn eine [**\_ WM-SYSKEYDOWN-Nachricht**](/windows/desktop/inputdev/wm-syskeydown) von der [**TranslateMessage-Funktion**](/windows/desktop/api/winuser/nf-winuser-translatemessage) übersetzt wird. Sie gibt den Zeichencode einer Systemzeichentaste an, d. h. eine Zeichentaste, die gedrückt wird, während die ALT-Taste gedrückt ist. <br/> |
+| [**WM \_ SYSCOMMAND**](wm-syscommand.md)       | Ein Fenster empfängt diese Meldung, wenn der Benutzer im Menü **Fenster** einen Befehl ausgibt oder wenn der Benutzer die Schaltfläche "Maximieren", "Minimieren", "Wiederherstellen" oder "Schließen" ausgibt.<br/>                                                                                                                                |
 
 
 
  
 
-### <a name="keyboard-accelerator-structures"></a>Tastatur Zugriffstasten
+### <a name="keyboard-accelerator-structures"></a>Tastaturbeschleunigungsstrukturen
 
 
 
-| Name                   | BESCHREIBUNG                                                          |
+| Name                   | Beschreibung                                                          |
 |------------------------|----------------------------------------------------------------------|
-| [**Acceleration**](/windows/win32/api/winuser/ns-winuser-accel) | Definiert eine Zugriffstaste, die in einer Zugriffstasten Tabelle verwendet wird. <br/> |
+| [**Accel**](/windows/win32/api/winuser/ns-winuser-accel) | Definiert einen Zugriffstastenschlüssel, der in einer Zugriffstastentabelle verwendet wird. <br/> |
 
 
 

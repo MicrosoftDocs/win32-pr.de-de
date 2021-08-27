@@ -1,6 +1,6 @@
 ---
 title: IBackgroundCopyJob Resume-Methode (Deliveryoptimization.h)
-description: Aktiviert einen neuen Auftrag oder startet einen angehaltenen Auftrag neu.
+description: Aktiviert einen neuen Auftrag oder startet einen Auftrag neu, der angehalten wurde.
 ms.assetid: B745BDA6-36B9-41FD-9737-61D14150A9E4
 keywords:
 - Resume-Methode
@@ -26,7 +26,7 @@ ms.locfileid: "118543006"
 ---
 # <a name="ibackgroundcopyjobresume-method"></a>IBackgroundCopyJob::Resume-Methode
 
-Aktiviert einen neuen Auftrag oder startet einen angehaltenen Auftrag neu.
+Aktiviert einen neuen Auftrag oder startet einen Auftrag neu, der angehalten wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,9 +49,9 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                          |
 |------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| <dl> <dt>S_OK S_OK</dt> </dl>             | Der Auftrag wurde erfolgreich neu gestartet.<br/>                                                           |
+| <dl> <dt>S_OK</dt> </dl>             | Der Auftrag wurde erfolgreich neu gestartet.<br/>                                                           |
 | <dl> <dt>**DO_E_EMPTY**</dt> </dl>          | Es sind keine zu übertragenden Dateien vorhanden.<br/>                                                           |
-| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED.<br/> |
+| <dl> <dt>**DO_E_INVALID_STATE**</dt> </dl> | Der Status des Auftrags kann nicht BG_JOB_STATE_CANCELLED oder BG_JOB_STATE_ACKNOWLEDGED werden.<br/> |
 
 
 
@@ -59,9 +59,9 @@ Diese Methode gibt die folgenden **HRESULT-Werte** sowie andere zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie einen Auftrag erstellen, wird der Auftrag anfänglich angehalten. Durch **Aufrufen von Resume** wird der Auftrag in den Status Übertragen übertragen. Beachten Sie, dass der Auftrag eine oder mehrere Dateien enthalten muss, bevor diese Methode aufruft.
+Wenn Sie einen Auftrag erstellen, wird der Auftrag zunächst angehalten. Durch Aufrufen von **Resume** wird der Auftrag in den Zustand Übertragen versetzt. Beachten Sie, dass der Auftrag eine oder mehrere Dateien enthalten muss, bevor diese Methode aufgerufen wird.
 
-Wenn sich ein Auftrag im Status BG_JOB_STATE_TRANSIENT_ERROR oder BG_JOB_STATE_ERROR, rufen Sie die **Resume-Methode** auf, um den Auftrag neu zu starten, nachdem Sie den Fehler behoben haben.
+Wenn sich ein Auftrag im BG_JOB_STATE_TRANSIENT_ERROR- oder BG_JOB_STATE_ERROR-Zustand befindet, rufen Sie die **Resume-Methode** auf, um den Auftrag neu zu starten, nachdem Sie den Fehler behoben haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,8 +69,8 @@ Wenn sich ein Auftrag im Status BG_JOB_STATE_TRANSIENT_ERROR oder BG_JOB_STATE_E
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -79,7 +79,7 @@ Wenn sich ein Auftrag im Status BG_JOB_STATE_TRANSIENT_ERROR oder BG_JOB_STATE_E
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

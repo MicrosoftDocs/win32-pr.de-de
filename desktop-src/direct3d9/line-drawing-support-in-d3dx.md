@@ -4,12 +4,12 @@ ms.assetid: 34ad82f2-542c-4342-af02-a767d6d4c96c
 title: Unterstützung für Linienzeichnung in D3DX (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c4cf15eae461d0dbe719e99cfac605a6c8b8d272
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 7c9cf107615410da6dcfba02d6f708129429e31586360183277fb8f669653d75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112407533"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118799681"
 ---
 # <a name="line-drawing-support-in-d3dx-direct3d-9"></a>Unterstützung für Linienzeichnung in D3DX (Direct3D 9)
 
@@ -42,7 +42,7 @@ Die Bibliothek unterstützt das Zeichnen farbiger Linienstreifen mit den folgend
 -   OpenGL-Stillinien
 
 > [!Note]  
-> Es wird keine Vererbung unterstützt.
+> Es wird keine Minderung unterstützt.
 
  
 
@@ -51,15 +51,15 @@ Die Bibliothek verwendet die Native Hardware-Strichzeichnungsunterstützung (sof
 -   Die Linienbreite ist 1.
 -   Es ist kein Linienmuster aktiviert.
 
-Antialiasinglinien mit einer Breite von einem Pixel werden von einigen Hardwarekomponenten unterstützt, daher verwendet die Bibliothek diese, falls verfügbar. Das LineCaps-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) aufzählt Hardwarefunktionen für Grundtypen zum Zeichnen von Linien.
+Antialiasinglinien mit einem Pixel werden von einigen Hardwarekomponenten unterstützt, daher verwendet die Bibliothek diese, falls verfügbar. Das LineCaps-Mitglied der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) aufzählt Hardwarefunktionen für Grundtypen zum Zeichnen von Linien.
 
 Wenn die Softwarelinienzeichnung verwendet wird, wird jede Linie zu einem Rechteck erweitert, und vier Scheitellinien werden an den Treiber gesendet.
 
-Jedes Liniensegment wird mit zwei Dreiecken gezeichnet. Die Breite des Primitivs ist die angegebene Breite plus 1,0, was zu einer zusätzlichen Zeile oder Spalte von Pixeln führen kann. Wenn die Linie breiter wird, wird der Antialias-Farbverlauf in der Textur ungefährer, und in der Mitte werden mehr vollständig deckende Texel repliziert. Der Farbverlauf wird in v-Richtung der Textur codiert und in der Regel entlang der U-Richtung repliziert. Der Texturadrierungsmodus für v ist "Klammer".
+Jedes Liniensegment wird mit zwei Dreiecken gezeichnet. Die Breite des Primitiven ist die angegebene Breite plus 1,0, was zu einer zusätzlichen Zeile oder Spalte von Pixeln führen kann. Wenn die Linie breiter wird, wird der Antialias-Farbverlauf in der Textur ungefährer, und in der Mitte werden mehr vollständig deckende Texel repliziert. Der Farbverlauf wird in v-Richtung der Textur codiert und in der Regel entlang der U-Richtung repliziert. Der Texturadrierungsmodus für v ist "Klammer".
 
 Jedes Liniensegment in der Liste kann als separate Zeile betrachtet werden, die ab dem vorherigen Endpunkt beginnt.
 
-Die Antialiasingqualität entlang der Kanten, die parallel zur Länge der ursprünglichen Linie verlaufen, wird durch die Breite der Linie immer größer. Es wird erwartet, dass Linienbreiten größer als 32,0 Artefakte entlang dieser Ränder zeigen.
+Die Antialiasingqualität entlang der Kanten, die parallel zur Länge der ursprünglichen Linie verlaufen, wird durch die Breite der Linie nicht mehr länger. Es wird erwartet, dass Linienbreiten größer als 32,0 Artefakte entlang dieser Ränder zeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,39 +1,39 @@
 ---
-description: Ausgeben des Befehls "setdevicepropvalue"
+description: Ausgeben des Befehls "SetDevicePropValue"
 ms.assetid: d5917421-fbd4-477c-b29b-9f983c93cfdb
-title: Ausgeben des Befehls "setdevicepropvalue"
+title: Ausgeben des Befehls "SetDevicePropValue"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8949cbf4fe22662de32c4c07de689fec2e6dbad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f30190fc7de07c4ae84bbb53f4b3ddd23fcb438c1f08d497d901bd3185db8e95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118696664"
 ---
-# <a name="issuing-the-setdevicepropvalue-command"></a>Ausgeben des Befehls "setdevicepropvalue"
+# <a name="issuing-the-setdevicepropvalue-command"></a>Ausgeben des Befehls "SetDevicePropValue"
 
-Im Beispiel in diesem Abschnitt wird der Befehl **setdevicepropvalue** MTP aufgerufen. (Eine ausführliche Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation](https://www.usb.org/sites/default/files/MTPv1_1.zip).)
+Im Beispiel in diesem Abschnitt wird der **SetDevicePropValue-MTP-Befehl** aufgerufen. (Eine vollständige Beschreibung dieses Befehls und seiner Parameter finden Sie in der [MTP-Spezifikation.)](https://www.usb.org/sites/default/files/MTPv1_1.zip)
 
-Da dieser Befehl Daten (oder eine Daten Phase) enthält, ist er stärker beteiligt als das vorherige [Beispiel](issuing-the-getnumobjects-command.md). Befehle, die eine Daten Phase enthalten, können in drei Teile unterteilt werden:
+Da dieser Befehl Daten (oder eine Datenphase) enthält, ist er stärker beteiligt als im vorherigen [Beispiel.](issuing-the-getnumobjects-command.md) Befehle, die eine Datenphase enthalten, können in drei Teile unterteilt werden:
 
-1.  Initiierung: die Anwendung initiiert den Befehl, indem das Gerät darüber informiert wird, dass die Daten entweder kommen oder erwartet werden.
-2.  Übertragen: die Anwendung überträgt die Daten (entweder durch Schreiben oder Lesen der Daten).
-3.  Abschluss: die Anwendung (oder das Gerät) signalisiert, dass der Befehl abgeschlossen ist, und Ruft einen Antwort Code ab.
+1.  Initiierung: Die Anwendung initiiert den Befehl, indem sie das Gerät darüber informiert, dass die Daten entweder kommen oder erwartet werden.
+2.  Übertragung: Die Anwendung überträgt die Daten (entweder durch Schreiben oder Lesen der Daten).
+3.  Vervollständigung: Die Anwendung (oder das Gerät) signalisiert, dass der Befehl abgeschlossen ist, und ruft einen Antwortcode ab.
 
 Die vorherige Liste wird in die folgende Befehlssequenz übersetzt:
 
-1.  WPD- \_ Befehl \_ MTP \_ ext Execute- \_ \_ Befehl \_ mit \_ zu schreibende Daten \_ \_ oder WPD- \_ Befehl \_ MTP \_ ext Execute- \_ \_ Befehl \_ mit \_ \_ zu \_ lesenden Daten.
-2.  WPD- \_ Befehl \_ MTP \_ ext Schreiben von \_ \_ Daten oder WPD- \_ Befehl \_ MTP \_ Ext \_ \_ Daten lesen.
-3.  WPD- \_ Befehl \_ MTP \_ ext Ende der \_ \_ Daten \_ Übertragung.
+1.  WPD \_ COMMAND \_ MTP EXT EXECUTE COMMAND \_ WITH DATA TO WRITE ODER \_ \_ \_ \_ \_ \_ WPD COMMAND \_ \_ MTP \_ EXT EXECUTE COMMAND WITH DATA TO \_ \_ \_ \_ \_ \_ READ.
+2.  WPD \_ COMMAND \_ MTP EXT WRITE DATA ODER \_ \_ \_ WPD COMMAND \_ \_ MTP EXT READ \_ \_ \_ DATA.
+3.  \_WPD-BEFEHL \_ MTP \_ EXT \_ \_ \_ END-DATENÜBERTRAGUNG.
 
-Im Fall von **setdevicepropvalue** verwendet der Beispielcode die folgende Sequenz:
+Im Fall von **SetDevicePropValue** verwendet der Beispielcode die folgende Sequenz:
 
-1.  WPD- \_ Befehl \_ MTP \_ ext Execute- \_ \_ Befehl \_ mit \_ \_ zu schreibende Daten \_ .
-2.  WPD- \_ Befehl \_ MTP \_ Ext \_ schreibt \_ Daten.
-3.  WPD- \_ Befehl \_ MTP \_ ext Ende der \_ \_ Daten \_ Übertragung.
+1.  \_WPD-BEFEHL \_ MTP \_ EXT \_ \_ EXECUTE-BEFEHL \_ MIT ZU \_ \_ \_ SCHREIBENDE DATEN.
+2.  \_WPD-BEFEHL \_ MTP \_ EXT WRITE \_ \_ DATA.
+3.  \_WPD-BEFEHL \_ MTP \_ EXT \_ \_ \_ END-DATENÜBERTRAGUNG.
 
-Im folgenden Codebeispiel wird gezeigt, wie eine WPD-Anwendung die Befehlssequenz initiiert.
+Das folgende Codebeispiel zeigt, wie eine WPD-Anwendung die Befehlssequenz initiiert.
 
 
 ```C++
@@ -153,7 +153,7 @@ HRESULT SetDateTime(IPortableDevice* pDevice, LPCWSTR pwszDateTime)
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie eine WPD-Anwendung die Daten überträgt, nachdem Sie den Befehl initiiert hat.
+Das folgende Codebeispiel zeigt, wie eine WPD-Anwendung die Daten überträgt, nachdem sie den Befehl initiiert hat.
 
 
 ```
@@ -222,7 +222,7 @@ Im folgenden Codebeispiel wird gezeigt, wie eine WPD-Anwendung die Daten übertr
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie eine Anwendung einen Antwort Code vom Gerät abruft.
+Das folgende Codebeispiel zeigt, wie eine Anwendung einen Antwortcode vom Gerät abruft.
 
 
 ```

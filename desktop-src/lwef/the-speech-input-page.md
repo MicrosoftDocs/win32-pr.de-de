@@ -1,6 +1,6 @@
 ---
-title: Die Seite "Spracheingabe"
-description: Die Seite "Spracheingabe"
+title: Seite "Spracheingabe"
+description: Seite "Spracheingabe"
 ms.assetid: 9ff59e5b-d5c1-4f92-bd5a-8c525482624a
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118474522"
 ---
-# <a name="the-speech-input-page"></a>Die Seite "Spracheingabe"
+# <a name="the-speech-input-page"></a>Seite "Spracheingabe"
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Ein Benutzer kann spracheingabeoptionen auf dieser Eigenschaftenseite anpassen. Der Benutzer kann die Spracheingabe deaktivieren, die Eingabetaste für das Lauschen festlegen, auswählen, ob das Fenster "Tipp zum Lauschen" angezeigt werden soll, und sich dafür entscheiden, einen TASTE-Ton wiedergeben, um anzugeben, wann die Spracheingabe verfügbar ist.
+Ein Benutzer kann spracheingabeoptionen auf dieser Eigenschaftenseite anpassen. Der Benutzer kann die Spracheingabe deaktivieren, den Lauschen-Eingabeschlüssel festlegen, auswählen, ob das Fenster "Lauschendes Trinkgeld" angezeigt werden soll, und einen NOTE-Ton wiedergeben, um anzugeben, wann die Spracheingabe verfügbar ist.
 
-![Dialogfeld "Erweiterte Zeichenoptionen"](images/f6sipp.gif)
+![Erweiterte Zeichenoptionen (Dialogfeld)](images/f6sipp.gif)
 
  
 

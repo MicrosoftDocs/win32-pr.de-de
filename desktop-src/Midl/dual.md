@@ -1,9 +1,9 @@
 ---
 title: dual-Attribut
-description: Das dual-Attribut identifiziert eine Schnittstelle, die Eigenschaften und Methoden über IDispatch und direkt über die VTBL verfügbar macht.
+description: Das duale Attribut identifiziert eine Schnittstelle, die Eigenschaften und Methoden über IDispatch und direkt über die VTBL verfügbar macht.
 ms.assetid: 1c214f10-57eb-4a05-99a8-a09770666a74
 keywords:
-- MIDL-Attribut mit dualen Attributen
+- MIDL mit dualen Attributen
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118643094"
 ---
 # <a name="dual-attribute"></a>dual-Attribut
 
-Das **dual-Attribut** identifiziert eine Schnittstelle, die Eigenschaften und Methoden über [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) und direkt über die VTBL verfügbar macht.
+Das **duale** Attribut identifiziert eine Schnittstelle, die Eigenschaften und Methoden über [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) und direkt über die VTBL verfügbar macht.
 
 ``` syntax
 [
@@ -63,20 +63,20 @@ Der Name der Schnittstelle, auf die das **duale** Attribut angewendet wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Schnittstellen, die durch das **dual-Attribut** identifiziert werden, müssen mit Automation kompatibel sein und von [**IDispatch abgeleitet werden.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) Dieses Attribut ist für Disp-Interfaces nicht zulässig.
+Schnittstellen, die durch das **duale** Attribut identifiziert werden, müssen mit Automation kompatibel sein und von [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)abgeleitet werden. Dieses Attribut ist für dispinterfaces nicht zulässig.
 
-Das **dual-Attribut** erstellt eine Schnittstelle, die sowohl eine [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) als auch eine Component Object Model -Schnittstelle (COM) ist. Die ersten sieben Einträge der VTBL für eine duale Schnittstelle sind die sieben Member von **IDispatch,** und die restlichen Einträge sind für den direkten Zugriff auf Member der dualen Schnittstelle. Alle Parameter und Rückgabetypen, die für Member einer dualen Schnittstelle angegeben sind, müssen Automation-kompatible Typen sein.
+Das **duale** Attribut erstellt eine Schnittstelle, die sowohl eine [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) als auch eine com-Schnittstelle (Component Object Model) ist. Die ersten sieben Einträge der VTBL für eine duale Schnittstelle sind die sieben Member von **IDispatch,** und die verbleibenden Einträge dienen dem direkten Zugriff auf Member der dualen Schnittstelle. Alle Parameter und Rückgabetypen, die für Member einer dualen Schnittstelle angegeben sind, müssen Automation-kompatible Typen sein.
 
-Alle Member einer dualen Schnittstelle müssen ein HRESULT als Rückgabewert der Funktion übergeben. Member, z. B. Eigenschaftenzugriffsfunktionen, die andere Werte zurückgeben müssen, sollten den letzten Parameter als [**out**](out-idl.md), [**retval**](retval.md)angeben, der einen Ausgabeparameter angibt, der den Wert der Funktion zurückgibt. Darüber hinaus sollten Member, die mehrere Lokale unterstützen müssen, einen [**lcid-Parameter**](lcid.md) übergeben.
+Alle Member einer dualen Schnittstelle müssen ein HRESULT als Rückgabewert der Funktion übergeben. Member, z. B. Eigenschaftenaccessorfunktionen, die andere Werte zurückgeben müssen, sollten den letzten Parameter als [**out**](out-idl.md)angeben, [**erneut**](retval.md)ausführen und einen Ausgabeparameter angeben, der den Wert der Funktion zurückgibt. Darüber hinaus sollten Member, die mehrere Gebietsschemas unterstützen müssen, einen [**lcid-Parameter**](lcid.md) übergeben.
 
 Eine duale Schnittstelle bietet sowohl die Geschwindigkeit der direkten VTBL-Bindung als auch die Flexibilität der [**IDispatch-Bindung.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) Aus diesem Grund werden nach Möglichkeit duale Schnittstellen empfohlen.
 
 > [!Note]  
-> Wenn Ihre Anwendung durch Umwandlung  des this-Zeigers innerhalb des Schnittstellenaufrufs auf Objektdaten zutritt, sollten Sie die VTBL-Zeiger im -Objekt mit Ihren eigenen VTBL-Zeigern überprüfen, um sicherzustellen, dass Sie mit dem entsprechenden Proxy verbunden sind.
+> Wenn Ihre Anwendung auf Objektdaten zugreift, indem sie *diesen* Zeiger innerhalb des Schnittstellenaufrufs umleitet, sollten Sie die VTBL-Zeiger im -Objekt anhand Ihrer eigenen VTBL-Zeiger überprüfen, um sicherzustellen, dass Sie mit dem entsprechenden Proxy verbunden sind.
 
  
 
-Die Angabe **von dual** für eine Schnittstelle impliziert, dass die Schnittstelle mit Automation kompatibel ist, und bewirkt daher, dass sowohl das \_ TYPEFLAG FDUAL- als auch das TYPEFLAG \_ FOLEAUTOMATION-Flag festgelegt werden.
+Die Angabe von **dual** für eine Schnittstelle impliziert, dass die Schnittstelle mit Automation kompatibel ist. Daher werden sowohl die TYPEFLAG-FDUAL- als auch \_ die TYPEFLAG \_ FOLEAUTOMATION-Flags festgelegt.
 
 ### <a name="flags"></a>Flags
 
@@ -114,7 +114,7 @@ interface IHello : IDispatch
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [**out**](out-idl.md)

@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectRasterizerVariable getbackingstore-Methode (D3dx11effect. h)
-description: Ein Zeiger auf eine Variable, die den rasteriser-Zustand enthält, wird angezeigt.
+title: ID3DX11EffectRasterizerVariable GetBackingStore-Methode (D3dx11effect.h)
+description: Sie erhalten einen Zeiger auf eine Variable, die den Rasteriserzustand enthält.
 ms.assetid: aff62a6c-bdef-49ad-9492-5db0878f632e
 keywords:
-- Getbackingstore-Methode Direct3D 11
-- Getbackingstore-Methode Direct3D 11, ID3DX11EffectRasterizerVariable-Schnittstelle
-- ID3DX11EffectRasterizerVariable Interface Direct3D 11, getbackingstore-Methode
+- GetBackingStore-Methode Direct3D 11
+- GetBackingStore-Methode Direct3D 11, ID3DX11EffectRasterizerVariable-Schnittstelle
+- ID3DX11EffectRasterizerVariable-Schnittstelle Direct3D 11 , GetBackingStore-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1941ba93b69f1d07eeebaa6c1f0c9323f5c0a49e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 80912da541d5d5386da4e9612216db3ce62904bdb32ba262b5a2d1ae773201cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118534686"
 ---
-# <a name="id3dx11effectrasterizervariablegetbackingstore-method"></a>ID3DX11EffectRasterizerVariable:: getbackingstore-Methode
+# <a name="id3dx11effectrasterizervariablegetbackingstore-method"></a>ID3DX11EffectRasterizerVariable::GetBackingStore-Methode
 
-Ein Zeiger auf eine Variable, die den rasteriser-Zustand enthält, wird angezeigt.
+Sie erhalten einen Zeiger auf eine Variable, die den Rasteriserzustand enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ HRESULT GetBackingStore(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Indizieren Sie in ein Array von rasteriser-State-Beschreibungen. Wenn nur eine rasteriser-Variable vorhanden ist, verwenden Sie 0.
+Indizieren Sie in ein Array von Rasteriserzustandsbeschreibungen. Wenn nur eine Rasteriservariable im Effekt ist, verwenden Sie 0.
 
 </dd> <dt>
 
-*"prasterizerde"* 
+*pRasterizerDesc* 
 </dt> <dd>
 
-Typ: **[ **D3D11 \_ Rasterizer \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)\***
+Typ: **[ **D3D11 \_ RASTERIZER \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)\***
 
-Ein Zeiger auf eine rasteriser-State Description (siehe [**D3D11 \_ Rasterizer \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)Debug).
+Ein Zeiger auf eine Rasteriserzustandsbeschreibung (siehe [**D3D11 \_ RASTERIZER \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_rasterizer_desc)).
 
 </dd> </dl>
 
@@ -66,29 +66,29 @@ Ein Zeiger auf eine rasteriser-State Description (siehe [**D3D11 \_ Rasterizer \
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Effekt Variablen werden im Sicherungs Speicher im Arbeitsspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Sicherungs Speicher auf das Gerät kopiert. Das Sichern von Speicherdaten kann verwendet werden, um die Variable bei Bedarf neu zu erstellen.
+Effektvariablen werden im Arbeitsspeicher im Hintergrundspeicher gespeichert. Wenn eine Technik angewendet wird, werden die Werte im Hintergrundspeicher auf das Gerät kopiert. Speicherdaten können verwendet werden, um die Variable bei Bedarf neu zu erstellen.
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

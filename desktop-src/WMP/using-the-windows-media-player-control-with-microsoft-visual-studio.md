@@ -1,65 +1,65 @@
 ---
-title: Verwenden des Windows Media Player-Steuer Elements mit Microsoft Visual Studio
-description: Verwenden des Windows Media Player-Steuer Elements mit Microsoft Visual Studio
+title: Verwenden des Windows Media Player-Steuerelements mit Microsoft Visual Studio
+description: Verwenden des Windows Media Player-Steuerelements mit Microsoft Visual Studio
 ms.assetid: e007876e-f215-4976-8a70-018fedc0e67d
 keywords:
-- Windows Media Player, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Objektmodell, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player Mobile, Einbetten des ActiveX-Steuer Elements
-- Windows Media Player ActiveX-Steuerelement, einbetten
-- Windows Media Player Mobile ActiveX-Steuerelement, einbetten
-- ActiveX-Steuerelement, einbetten
-- Windows Media Player,. NET-Framework
-- Windows Media Player-Objektmodell,. NET-Framework
-- Objektmodell,. NET-Framework
-- Windows Media Player Mobile,. NET-Framework
-- Windows Media Player ActiveX-Steuerelement,. NET-Framework
-- Windows Media Player Mobile ActiveX-Steuerelement,. NET-Framework
-- ActiveX-Steuerelement,. NET-Framework
-- Windows Media Player ActiveX-Steuerelement, Visual Studio
-- Windows Media Player Mobile ActiveX-Steuerelement, Visual Studio
-- ActiveX-Steuerelement, Visual Studio
-- .NET Framework, Visual Studio-Programm Einbettung
-- einbetten, Visual Studio-Programme
-- Visual Studio, Programm Einbettung
+- Windows Media Player,einbetten ActiveX Steuerelement
+- Windows Media Player-Objektmodell, Einbetten ActiveX Steuerelement
+- Objektmodell,Einbetten ActiveX Steuerelement
+- Windows Media Player Mobil,einbetten ActiveX Steuerelement
+- Windows Media Player ActiveX,Einbetten
+- Windows Media Player Mobile ActiveX-Steuerelement,Einbetten
+- ActiveX,Einbetten
+- Windows Media Player,.NET Framework
+- Windows Media Player Objektmodell,.NET Framework
+- Objektmodell,.NET Framework
+- Windows Media Player Mobile,.NET Framework
+- Windows Media Player ActiveX,.NET Framework
+- Windows Media Player Mobile ActiveX-Steuerelement,.NET Framework
+- ActiveX,.NET Framework
+- Windows Media Player ActiveX,Visual Studio
+- Windows Media Player Mobile ActiveX-Steuerelement,Visual Studio
+- ActiveX,Visual Studio
+- .NET Framework,Visual Studio-Einbettung des Programms
+- Einbetten, Visual Studio Programme
+- Visual Studio,Programm-Einbettung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 44b01fecd6acdfd5ccc9a7d823740ef3915bf9c6
-ms.sourcegitcommit: e22adfb0dd3bb989e59455baedb4d905a877a240
+ms.openlocfilehash: 73bb9597b8ad5baadbd51625c68a1d7fb7ebc1791c2d6e8015fb79ba2cab3be6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "104037665"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118830449"
 ---
-# <a name="using-the-windows-media-player-control-with-microsoft-visual-studio"></a>Verwenden des Windows Media Player-Steuer Elements mit Microsoft Visual Studio
+# <a name="using-the-windows-media-player-control-with-microsoft-visual-studio"></a>Verwenden des Windows Media Player-Steuerelements mit Microsoft Visual Studio
 
-Mithilfe der Toolbox in Visual Studio können Sie das Windows Media Player 9-oder spätere ActiveX-Steuerelement zu einer .NET Framework Anwendung hinzufügen.
+Sie können das Windows Media Player 9-Serie oder höher ActiveX einer .NET Framework-Anwendung über die Toolbox in Visual Studio.
 
-## <a name="adding-the-windows-media-player-control"></a>Hinzufügen des Windows Media Player-Steuer Elements
+## <a name="adding-the-windows-media-player-control"></a>Hinzufügen des Windows Media Player-Steuerelements
 
-Stellen Sie vor dem Erstellen eines neuen Projekts sicher, dass die neueste Version von Windows Media Player und Windows Media Player SDK auf Ihrem Computer installiert ist.
+Stellen Sie vor dem Erstellen eines neuen Projekts sicher, dass die neueste Version von Windows Media Player und das Windows Media Player SDK auf Ihrem Computer installiert ist.
 
-Starten Sie Visual Studio, und erstellen Sie dann ein neues Projekt.
+Starten Visual Studio, und erstellen Sie dann ein neues Projekt.
 
-Öffnen Sie in Visual Studio die Toolbox.
+Öffnen Visual Studio Die Toolbox.
 
-Wenn Windows Media Player nicht im **Komponenten** Teil der Toolbox angezeigt wird, gehen Sie wie folgt vor:
+Wenn Windows Media Player im Komponentenbereich der  Toolbox nicht angezeigt wird, gehen Sie wie folgt vor:
 
-1.  Klicken Sie mit der rechten Maustaste in die Toolbox, und wählen Sie dann **Elemente auswählen** aus. Dadurch wird das Dialogfeld **Toolbox anpassen** geöffnet.
-2.  Wählen Sie auf der Registerkarte **com-Komponenten** die Option Windows Media Player aus.
+1.  Klicken Sie mit der rechten Maustaste innerhalb der Toolbox, und wählen Sie **elemente auswählen aus.** Dadurch wird das **Dialogfeld Toolbox anpassen** geöffnet.
+2.  Wählen Sie **auf der Registerkarte COM-Komponenten** die Windows Media Player.
 
-    Wenn Windows Media Player nicht in der Liste angezeigt wird, klicken Sie auf **Durchsuchen**, und öffnen Sie dann Wmp.dll, das sich im Ordner Windows System32 befinden sollte \\ .
+    Wenn Windows Media Player nicht in der Liste angezeigt wird, klicken Sie auf Durchsuchen, und öffnen Sie dann Wmp.dll, das sich im Windows \\ System32-Ordner befinden sollte.
 
-3.  Klicken Sie auf **OK**. Das Windows Media Player-Steuerelement wird auf der aktuellen Toolbox Registerkarte platziert.
+3.  Klicken Sie auf **OK**. Das Windows Media Player-Steuerelement wird auf der aktuellen Registerkarte Toolbox platziert.
 
-Nun können Sie Windows Media Player in der Toolbox auswählen und einem Formular hinzufügen.
+Sie können jetzt Windows Media Player Toolbox auswählen und einem Formular hinzufügen.
 
-Visual Studio erteilt dem Windows Media Player-Steuerelement einen Standardnamen, z. b. "axWindowsMediaPlayer1". Möglicherweise möchten Sie den Namen in etwas leicht zu merken, z. b. "Player", ändern.
+Visual Studio dem Windows Media Player-Steuerelement einen Standardnamen wie "axWindowsMediaPlayer1" zu. Möglicherweise möchten Sie den Namen in einen leichter zu merkenden Namen ändern, z. B. "Player".
 
-Durch das Hinzufügen des Windows Media Player-Steuer Elements aus der Toolbox werden auch Verweise auf zwei von Visual Studio, AxWMPLib und WMPLib erstellte Bibliotheken hinzugefügt. Sie finden Sie im Projektmappen-Explorer unter " **Verweise**".
+Wenn Sie das Windows Media Player-Steuerelement aus der Toolbox hinzufügen, werden auch Verweise auf zwei Bibliotheken hinzugefügt, die von Visual Studio, AxWMPLib und WMPLib, erstellt wurden. Sie finden sie im Projektmappen-Explorer unter **Verweise**.
 
-Wenn Sie die Verwendung der Objekte im Player-Namespace vereinfachen möchten, sollten Sie den-Namespace in die using-oder Imports-Direktiven Ihrer Dateien wie folgt einschließen:
+Um die Verwendung der Objekte im Player-Namespace zu vereinfachen, sollten Sie den -Namespace wie folgt in die using- oder imports-Direktiven Ihrer Dateien hinzufügen:
 
 
 ```Csharp
@@ -76,63 +76,63 @@ imports WMPLib
 
 
 
-Die-Direktive stellt sicher, dass Sie auf **Player** Objekte verweisen können, ohne ihre Namen vollständig zu qualifizieren.
+Die -Direktive stellt sicher, dass Sie auf **Player-Objekte** verweisen können, ohne ihre Namen vollständig zu qualifizieren.
 
 > [!Note]  
-> Das Windows Media Player-Steuerelement ist ein **AxWindowsMediaPlayer** -Objekt aus dem **AxWMPLib** -Namespace. Die Klasse **AxWindowsMediaPlayer** verwendet jedoch Datentypen, Schnittstellen und andere Elemente aus dem **WMPLib** -Namespace.
+> Das Windows Media Player-Steuerelement ist ein **AxWindowsMediaPlayer-Objekt** aus dem **AxWMPLib-Namespace.** Die **AxWindowsMediaPlayer-Klasse** verwendet jedoch Datentypen, Schnittstellen und andere Elemente aus dem **WMPLib-Namespace.**
 
- 
+ 
 
-## <a name="configuring-visibility-of-the-control"></a>Konfigurieren der Sichtbarkeit des Steuer Elements
+## <a name="configuring-visibility-of-the-control"></a>Konfigurieren der Sichtbarkeit des Steuerelements
 
-Wenn Sie das Windows Media Player-Steuerelement zum ersten Mal einem Formular hinzufügen, wird es angezeigt. Wenn Sie das sichtbare Bild des Players nicht in Ihrer Anwendung verwenden möchten, blenden Sie den Standard Player aus, indem Sie eine der folgenden Eigenschaften festlegen:
+Wenn Sie das Steuerelement Windows Media Player einem Formular hinzufügen, wird es angezeigt. Wenn Sie das sichtbare Bild des Players in Ihrer Anwendung nicht verwenden möchten, blenden Sie den Standardplayer aus, indem Sie eine der folgenden Eigenschaften festlegen:
 
 
 
 | Eigenschaft        | Wert                                                 |
 |-----------------|-------------------------------------------------------|
-| **uiMode**      | "unsichtbar" (siehe [Player. uiMode](player-uimode.md).) |
+| **uiMode**      | "unsichtbar" (siehe [Player.uiMode](player-uimode.md).) |
 | **Visible**     | „FALSE“                                               |
-| **Size. Width**  | 0                                                     |
-| **Size. Height** | 0                                                     |
+| **Size.Width**  | 0                                                     |
+| **Size.Height** | 0                                                     |
 
 
 
- 
+ 
 
-Sie können diese Eigenschaften entweder im Code oder im Fenster **Eigenschaften** festlegen, wenn das Windows-Media Player Steuerelement im Formular-Designer ausgewählt wird.
+Sie können diese Eigenschaften entweder im  Code oder im Eigenschaftenfenster festlegen, wenn das Windows Media Player-Steuerelement im Formular-Designer ausgewählt ist.
 
-## <a name="object-model-compatibility-of-the-control"></a>Objektmodell Kompatibilität des Steuer Elements
+## <a name="object-model-compatibility-of-the-control"></a>Objektmodellkompatibilität des Steuerelements
 
-Das Objektmodell für das Windows Media Player-Steuerelement ist im .NET Framework identisch wie in nicht verwaltetem Code und Skript. Es gibt jedoch Unterschiede in der Art, wie Elemente verfügbar gemacht werden:
+Das Objektmodell für das Windows Media Player-Steuerelement ist im Prinzip dasselbe in der .NET Framework wie in nicht verwaltetem Code und Skript. Es gibt jedoch Unterschiede in der Art und Weise, wie Elemente verfügbar gemacht werden:
 
--   Die meisten Objekte werden unter dem Namen Ihrer zugrunde liegenden COM-Schnittstelle verfügbar gemacht. Beispielsweise wird das **Wiedergabe** Listen Objekt als **iwmpwiedergabe** verfügbar gemacht.
--   Einige Schnittstellen verfügen über spätere Versionen. Beispielsweise wurde **iwmpmedia** zusätzliche Funktionalität in **IWMPMedia2** und **IWMPMedia3** erhalten. Wenn Sie ein Objekt als **iwmpmedia** deklarieren, haben Sie in der Regel Zugriff auf die Funktionalität aller Versionen der-Schnittstelle. Der IntelliSense-® erkennt die Methoden oder Eigenschaften der Schnittstellen der neueren Version jedoch nicht, und der Visual Basic .net-Editor korrigiert nicht automatisch die Groß-/Kleinschreibung. Um den vollständigen Vorteil von IntelliSense und anderen Features von Visual Studio zu erhalten, deklarieren Sie das-Objekt, indem Sie die neueste Version der-Schnittstelle verwenden, z. b. **IWMPMedia3**.
--   Es sind keine indizierten Eigenschaften (c#) oder Standardeigenschaften (Visual Basic .net) vorhanden. Wenn Sie z **. b. ein Wiedergabelisten Element** abrufen möchten, müssen Sie in c# die **iwmwiedergabe. get \_ Item** -Accessor-Methode aufrufen oder die **iwmplayist. Item** -Eigenschaft in Visual Basic .net abrufen.
--   Aufgrund eines Namens Konflikts zwischen der Windows Media Player **Controls** -Eigenschaft und der Steuerelement Eigenschaft **, die von** jedem Steuerelement verfügbar gemacht wird, wird die Spieler Version dieser Eigenschaft im Kontext des ActiveX-Steuer Elements als **ctlcontrols** bezeichnet. (Dies ist jedoch nicht der Fall, wenn Sie den Player Programm gesteuert anstelle von als ActiveX-Steuerelement erstellen.)
+-   Die meisten Objekte werden unter dem Namen ihrer zugrunde liegenden COM-Schnittstelle verfügbar gemacht. Beispielsweise wird das **Playlist-Objekt** als **IWMPPlaylist verfügbar gemacht.**
+-   Einige Schnittstellen verfügen über spätere Versionen. BEISPIELSWEISE wurde **IWMPMedia zusätzliche** Funktionalität in **IWMPMedia2** und **IWMPMedia3 erteilt.** Wenn Sie ein Objekt als **IWMPMedia** deklarieren, haben Sie in der Regel Zugriff auf die Funktionalität aller Versionen der Schnittstelle. IntelliSense® erkennt jedoch die Methoden oder Eigenschaften der Schnittstellen der späteren Version nicht, und der Visual Basic.NET-Editor korrigiert die Groß-//Ausgabe nicht automatisch. Um den vollen Nutzen von IntelliSense und anderen Features von Visual Studio zu erhalten, deklarieren Sie das -Objekt mithilfe der neuesten Version der -Schnittstelle, z. B. **IWMPMedia3**.
+-   Es gibt keine indizierten Eigenschaften (C#) oder Standardeigenschaften (Visual Basic .NET). Um beispielsweise ein **Playlist.item** abzurufen, müssen Sie die **IWMPlaylist.get Item-Accessormethode \_** in C# aufrufen oder die **IWMPlayist.Item-Eigenschaft** in Visual Basic .NET abrufen.
+-   Aufgrund eines Namenskonflikts zwischen der Windows Media Player **Controls-Eigenschaft** und der **Controls-Eigenschaft,** die von jedem Steuerelement verfügbar gemacht wird, wird die Player-Version dieser Eigenschaft im Kontext des **steuerelements als CtlControls** ActiveX bezeichnet. (Dies ist jedoch nicht der Fall, wenn Sie den Player programmgesteuert und nicht als ActiveX erstellen.)
 
-Verwenden Sie die Objektkatalog in Visual Studio, um die richtigen API-Namen für Methoden und Objekte in den Namespaces " **AxWMPLib** " und " **WMPLib** " zu finden.
+Verwenden Sie den Objektbrowser in Visual Studio, um die richtigen API-Namen für Methoden und Objekte in den **Namespaces AxWMPLib** und **WMPLib** zu finden.
 
 ## <a name="distributing-your-application"></a>Verteilen Ihrer Anwendung
 
-Wenn Sie Ihre Anwendung verteilen, achten Sie darauf, dass Sie AxInterop.WMPLib.dll und Interop.WMPLib.dll im Anwendungsordner installieren. Außerdem müssen Sie sicherstellen, dass die erforderliche Windows Media Player-Version auf dem Computer des Benutzers installiert ist.
+Wenn Sie Ihre Anwendung verteilen, stellen Sie sicher, dass Sie AxInterop.WMPLib.dll und Interop.WMPLib.dll im Anwendungsordner installieren. Sie müssen auch sicherstellen, dass die erforderliche Windows Media Player auf dem Computer des Benutzers installiert ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Programm gesteuertes Erstellen des Windows Media Player-Steuer Elements**](creating-the-windows-media-player-control-programmatically.md)
+[**Programmgesteuertes Erstellen Windows Media Player-Steuerelements**](creating-the-windows-media-player-control-programmatically.md)
 </dt> <dt>
 
-[**Einbetten des Windows Media Player-Steuer Elements in eine c#-Lösung**](embedding-the-windows-media-player-control-in-a-c--solution.md)
+[**Einbetten des Windows Media Player-Steuerelements in eine C#-Projektmappe**](embedding-the-windows-media-player-control-in-a-c--solution.md)
 </dt> <dt>
 
-[**Einbetten des Windows Media Player-Steuer Elements in eine Visual Basic .net-Lösung**](embedding-the-windows-media-player-control-in-a-visual-basic--net-solution.md)
+[**Einbetten des Windows Media Player-Steuerelements in eine Visual Basic .NET-Projektmappe**](embedding-the-windows-media-player-control-in-a-visual-basic--net-solution.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

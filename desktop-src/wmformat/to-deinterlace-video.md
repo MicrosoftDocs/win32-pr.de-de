@@ -1,36 +1,36 @@
 ---
-title: Zum deinterlace-Video
-description: Zum deinterlace-Video
+title: So deinterlace video
+description: So deinterlace video
 ms.assetid: 60e6af09-fde1-4e4a-b54c-4923c0549b6b
 keywords:
-- Windows Media-Format-SDK, Deinterlacing-Video
-- SDK für Windows Media-Format, Inverse Telecine
-- Windows Media-Format-SDK, telecine
-- Advanced Systems Format (ASF), Deinterlacing-Video
-- ASF (Advanced Systems Format), Deinterlacing-Video
-- Advanced Systems Format (ASF), Inverse Telecine
-- ASF (Advanced Systems Format), Inverse Telecine
+- Windows Media Format SDK,deinterlaced video
+- Windows Media Format SDK,inverse telecine
+- Windows Medienformat-SDK, Telecine
+- Advanced Systems Format (ASF), Deinterlaced-Video
+- ASF (Advanced Systems Format), Deinterlaced-Video
+- Advanced Systems Format (ASF), inverse Telecine
+- ASF (Advanced Systems Format), inverse Telecine
 - Advanced Systems Format (ASF), telecine
 - ASF (Advanced Systems Format), telecine
-- Deinterlacing-Video
-- Inverse Telecine, Informationen zu
-- Telecine, Informationen
+- Deinterlaced-Video
+- inverse Telecine,about
+- telecine,about
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 580b8425e5807fefdfa889fcd08deedb4143cf39
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: e4d327ba19ea471f1594410913ebb58f3ac1cfebe048ac418abc7141c1fbee3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038570"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699957"
 ---
-# <a name="to-deinterlace-video"></a>Zum deinterlace-Video
+# <a name="to-deinterlace-video"></a>So deinterlace video
 
-Einige Videoquellen, z. b. Video Erfassungs Karten, liefern Videodaten für die Zeilen Sprung Anzeige. Jeder Frame mit Zeilen Sprung Video besteht aus zwei Feldern. Das oberste Feld enthält die erste Zeile des Videos und anschließend jede andere Zeile. Das untere Feld enthält die zweite Zeile des Videos und anschließend jede andere Zeile. Ein Feld enthält also alle gerade nummerierten Zeilen, das andere enthält alle ungeraden nummerierten Zeilen. Die Felder, die einen Frame bilden, stellen etwas andere Präsentations Zeiten dar, sodass Sie bei überlappenden Daten kein statisches Bild bilden.
+Einige Videoquellen, z. B. Videoaufnahmekarten, liefern Videodaten für die Interlaced-Anzeige. Jeder Frame von Interlacingvideos besteht aus zwei Feldern. Das obere Feld enthält die erste Zeile des Videos und jede andere Zeile danach. Das untere Feld enthält die zweite Zeile des Videos und jede andere Zeile danach. Ein Feld enthält also alle gleichmäßig nummerierten Zeilen, das andere alle ungeraden nummerierten Zeilen. Die Felder, aus denen sich ein Frame zusammenbildet, stellen geringfügig unterschiedliche Präsentationszeiten dar, sodass sie bei Überlappung kein statisches Bild bilden.
 
-Wenn Sie ein Video auf einem Computermonitor anzeigen möchten, sollte jeder Frame des Videos als ein Bild angezeigt werden (diese Methode zum Anzeigen eines gesamten Frame Bilds wird als *progressives* Video bezeichnet). Wenn Sie das Video mit Zeilen Sprung progressiv anzeigen, werden die Frames aufgrund des Zeitunterschieds zwischen den beiden Feldern möglicherweise nicht richtig angezeigt. Der Windows Media Video Codec und der Windows Media Video Advanced Profile Codec unterstützen beide eine Vorverarbeitungs Funktion, mit der Zeilen Sprung Inhalte in progressive Frames konvertiert werden.
+Wenn Sie Videos auf einem Computermonitor anzeigen möchten, sollte jeder Frame des Videos als ein Bild angezeigt werden  (diese Methode zum Anzeigen des Videos wird als progressives Video bezeichnet. Wenn Sie interlaced video progressiv anzeigen, sehen die Frames aufgrund des Zeitunterschieds zwischen den beiden Feldern möglicherweise nicht richtig aus. Der Windows Media Video-Codec und der Windows Media Video Advanced Profile-Codec unterstützen beide eine Vorverarbeitungsfunktion, die Zwischeninhalte in progressive Frames konvertiert.
 
-Um das Eingabe Video "Codec Deinterlacing" zu erhalten, geben Sie die [**IWMWriterAdvanced2::**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) *-Methode ein. Die zu verwendende Einstellung ist g \_ wszdeinterlacemode. Legen Sie den Deinterlacing-Modus auf einen der folgenden Werte fest.
+Um das Codec-Deinterlace-Eingabevideo zu erhalten, rufen Sie [**die IWMWriterAdvanced2::SetInputSetting-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) auf. Die zu verwendende Einstellung ist g \_ wszDeinterlaceMode. Legen Sie den Deinterlacingmodus auf einen der folgenden Werte fest.
 
 
 
@@ -42,51 +42,51 @@ Um das Eingabe Video "Codec Deinterlacing" zu erhalten, geben Sie die [**IWMWrit
 <thead>
 <tr class="header">
 <th>Wert</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>WM_DM_NOTINTERLACED</td>
-<td>Die Eingabe ist progressiv. Verwenden Sie diese Einstellung, um Deinterlacing zu beenden, wenn Sie zuvor den Deinterlacing-Modus auf einen anderen Wert festgelegt haben.</td>
+<td>Die Eingabe ist progressiv. Verwenden Sie diese Einstellung, um das Deinterlacing zu beenden, wenn Sie zuvor den Deinterlacingmodus auf einen anderen Wert festgelegt haben.</td>
 </tr>
 <tr class="even">
 <td>WM_DM_DEINTERLACE_NORMAL</td>
-<td>Wählen Sie diesen Modus aus, um die geraden und ungeraden Felder eines Zeilen Sprung Rahmens (mit einem Bewegungs Kompensationsmechanismus) zu mischen. Davon<br/>
+<td>Wählen Sie diesen Modus aus, um die gleichmäßigen und ungeraden Felder eines Verschachtelungsrahmens (mithilfe eines Mechanismus zur Bewegungskompensation) zu mischen. Vorteile:<br/>
 <ul>
-<li>Die interspitze Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
-<li>Der Windows Media Video Codec erzeugt komprimierte Videos mit höherer Qualität.</li>
+<li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
+<li>Der Windows Media Video-Codec erzeugt komprimiertes Video mit höherer Qualität.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>WM_DM_DEINTERLACE_HALFSIZE</td>
-<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung die Hälfte oder weniger der Eingabe Auflösung ist. Verwenden Sie diesen Modus z. b., wenn die Eingabe Videoauflösung 640 x 480 Pixel und die Ausgabevideo Auflösung 320 x 240 Pixel ist. Davon<br/>
+<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel beträgt und die Auflösung des Ausgabevideos 320 x 240 Pixel beträgt. Vorteile:<br/>
 <ul>
-<li>Die interspitze Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
+<li>Die Interlace-Artefakte der progressiven Anzeige werden erheblich reduziert.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>WM_DM_DEINTERLACE_HALFSIZEDOUBLERATE</td>
-<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung die Hälfte oder weniger der Eingabe Auflösung und die Ausgabe <a href="wmformat-glossary.md"><em>Frame Rate</em></a> doppelt so hoch ist. Verwenden Sie diesen Modus z. b., wenn die Eingabe Videoauflösung 640 x 480 Pixel bei 30 überschneidenden Frames/Sek. und die Ausgabevideo Auflösung 320 x 240 Pixel bei 60 Frames/Sek. Davon<br/>
+<td>Wählen Sie diesen Modus aus, wenn die Ausgabeauflösung halb oder kleiner als die Eingabeauflösung und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Verwenden Sie diesen Modus beispielsweise, wenn die Auflösung des Eingabevideos 640 x 480 Pixel bei 30 Interlaced Frames/s beträgt und die Ausgabevideoauflösung 320 x 240 Pixel bei 60 Frames/s beträgt. Vorteile:<br/>
 <ul>
-<li>Dies erzeugt progressive Frames mit hoher Qualität, da jedes Feld in einen Frame konvertiert wird, sodass keine Informationen in die Mischung einbezogen werden müssen.</li>
-<li>Die vollständige Bewegung der Zeilen Sprung Felder wird aufgezeichnet.</li>
+<li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li>
+<li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>WM_DM_DEINTERLACE_INVERSETELECINE</td>
-<td>Wählen Sie diesen Modus aus, um ein Video mit einer Textliste von 30 Frames/s in die 24 Frames/Sek. des ursprünglichen Films zu konvertieren. Davon<br/>
+<td>Wählen Sie diesen Modus aus, um telered 30 Frames/Sek. Video in die 24 Frames/Sek. des ursprünglichen Videos zu konvertieren. Vorteile:<br/>
 <ul>
-<li>Die Komprimierungs Qualität verbessert sich erheblich, da nur 24 Frames/Sek. anstelle von 30 Frames/Sek. erforderlich sind.</li>
-<li>Da das Ergebnis progressiv ist, werden die gleichen Komprimierungs-und Anzeige Vorteile von Deinterlacing erkannt.</li>
+<li>Die Komprimierungsqualität verbessert sich erheblich, da nur 24 Frames/s anstelle von 30 Frames/s codiert werden müssen.</li>
+<li>Da das Ergebnis progressiv ist, werden die gleichen Komprimierungs- und Anzeigevorteile des Deinterlacings realisiert.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>WM_DM_DEINTERLACE_VERTICALHALFSIZEDOUBLERATE</td>
-<td>Wählen Sie diesen Modus aus, wenn die vertikale Ausgabeauflösung mindestens die Hälfte der Eingabe vertikalen Auflösung und die Ausgabe <a href="wmformat-glossary.md"><em>Frame Rate</em></a> doppelt so hoch ist. Beispielsweise ist die Eingabe vertikale Videoauflösung 640 x 480 Pixel bei 30 Zeilen Sprung Bildern/Sek. und die vertikale Ausgabe des vertikalen Videos beträgt 320 x 240 Pixel bei 60 Frames/Sek. Davon<br/>
+<td>Wählen Sie diesen Modus aus, wenn die vertikale Ausgabeauflösung halb oder kleiner als die vertikale Auflösung der Eingabe ist und die Ausgabebildrate <a href="wmformat-glossary.md"><em>doppelt</em></a> so hoch ist. Die vertikale Videoauflösung der Eingabe beträgt z. B. 640 x 480 Pixel bei 30 Interlacingframes/s, und die vertikale Ausgabevideoauflösung beträgt 320 x 240 Pixel bei 60 Frames/s. Vorteile:<br/>
 <ul>
-<li>Dies erzeugt progressive Frames mit hoher Qualität, da jedes Feld in einen Frame konvertiert wird, sodass keine Informationen in die Mischung einbezogen werden müssen.</li>
-<li>Die vollständige Bewegung der Zeilen Sprung Felder wird aufgezeichnet.</li>
+<li>Dies erzeugt progressive Frames von hoher Qualität, da jedes Feld in einen Frame konvertiert wird und daher keine Informationen gemischt werden müssen.</li>
+<li>Die vollständige Bewegung der verschachtelten Felder wird erfasst.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -96,29 +96,29 @@ Um das Eingabe Video "Codec Deinterlacing" zu erhalten, geben Sie die [**IWMWrit
 
  
 
-Legen Sie für gemischten Inhalt den Deinterlacing-Modus nach Bedarf fest, bevor Sie die Beispiele eines neuen Typs übergeben. Wenn Sie z. b. die Codierung mit progressiver Eingabe starten möchten, müssen Sie keinen Deinterlacing-Modus festlegen. Wenn einige Beispiele ein normales Deinterlacing erfordern, müssen Sie den Deinterlacing-Modus auf WM \_ DM \_ deinterlace \_ Normal festlegen. Um zusätzliche Progressive Beispiele zu verarbeiten, müssen Sie den Deinterlacing-Modus auf WM \_ DM \_ notinterlacing festlegen.
+Legen Sie für gemischten Inhalt den Deinterlacingmodus nach Bedarf fest, bevor Sie Beispiele eines neuen Typs übergeben. Um beispielsweise mit der Codierung mit progressiver Eingabe zu beginnen, müssen Sie keinen Deinterlacingmodus festlegen. Wenn einige Beispiele dann ein normales Deinterlacing erfordern, müssen Sie den Deinterlacingmodus auf WM \_ DM \_ DEINTERLACE \_ NORMAL festlegen. Um dann zusätzliche progressive Beispiele zu verarbeiten, müssen Sie den Deinterlacingmodus auf WM \_ DM \_ NOTINTERLACED festlegen.
 
-## <a name="inverse-telecine-settings"></a>Umgekehrte telecine-Einstellungen
+## <a name="inverse-telecine-settings"></a>Inverse Telecine-Einstellungen
 
-Eine Beschreibung der Inverse Telecine finden [Sie unter So verwenden Sie die umgekehrte telecine](to-use-inverse-telecine.md).
+Eine Beschreibung von inversem Telecine finden Sie unter [To Use Inverse Telecine (So verwenden Sie Inverse Telecine).](to-use-inverse-telecine.md)
 
-Wenn Sie den Deinterlacing-Modus auf WM \_ DM \_ deinterlace \_ inversetelecine festgelegt haben, können Sie das telecine-Muster des ersten Eingabe Rahmens durch Aufrufen von [**IWMWriterAdvanced2:: setinputsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting)angeben. Die zu verwendende Einstellung ist g \_ wszinitialpatternforinvertartelecine. Legen Sie das Anfangs Muster auf einen der folgenden Werte fest.
+Wenn Sie den Deinterlacingmodus auf WM DM DEINTERLACE INVERSETELECINE festlegen, können Sie das Telecinemuster des ersten Eingabeframes angeben, indem Sie \_ \_ \_ [**IWMWriterAdvanced2::SetInputSetting aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) Die zu verwendende Einstellung ist g \_ wszInitialPatternForInverseTelecine. Legen Sie das ursprüngliche Muster auf einen der folgenden Werte fest.
 
 
 
-| Wert                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                   |
+| Wert                                              | Beschreibung                                                                                                                                                                                                                                                                                                   |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| WM- \_ DM- \_ Aktivierung ( \_ \_ kohärenter \_ Modus)                | Gibt an, dass die Eingabemedien den telecine-Prozess durchlaufen haben, die Rahmen jedoch nicht mehr in einem vorhersagbaren Muster vorliegen. Dies weist normalerweise darauf hin, dass das Medium nach der telecine-Verarbeitung bearbeitet wurde. Wenn Sie diese Einstellung verwenden, versucht der Codec, die ursprünglichen Frames eigenständig zu rekonstruieren. |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ AA \_ Top    | Gibt an, dass das oberste Feld des AA-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ BB \_ Top    | Gibt an, dass das oberste Feld des BB-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ BC \_ Top    | Gibt an, dass das oberste Feld des BC-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ CD \_ Top    | Gibt an, dass das oberste Feld des CD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ DD \_ Top    | Gibt an, dass das oberste Feld des DD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ AA \_ unten | Gibt an, dass das untere Feld des AA-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ BB \_ unten | Gibt an, dass das untere Feld des BB-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ BC \_ Bottom | Gibt an, dass das untere Feld des BC-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
-| WM \_ DM \_ \_ der erste \_ Frame \_ in \_ Clip \_ ist \_ CD \_ unten | Gibt an, dass das untere Feld des CD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
-| WM \_ DM \_ \_ der erste \_ Frame \_ im \_ Clip \_ ist \_ TT \_ unten | Gibt an, dass das untere Feld des DD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
+| WM \_ DM DEAKTIVIERT DEN \_ \_ \_ EINHEITLICHEN \_ MODUS                | Gibt an, dass das Eingabemedium den Telecine-Prozess durchgegangen ist, die Frames jedoch nicht mehr in einem vorhersagbaren Muster liegen. Dies gibt in der Regel an, dass die Medien nach der Telecineverarbeitung bearbeitet wurden. Wenn Sie diese Einstellung verwenden, versucht der Codec, die ursprünglichen Frames selbst zu rekonstruieren. |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ AA \_ TOP    | Gibt an, dass das oberste Feld des AA-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ BB \_ TOP    | Gibt an, dass das obere Feld des BB-Rahmens das erste Beispiel ist.                                                                                                                                                                                                                                             |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ BC \_ TOP    | Gibt an, dass das obere Feld des BC-Rahmens das erste Beispiel ist.                                                                                                                                                                                                                                             |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ CD \_ TOP    | Gibt an, dass das obere Feld des CD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ DD \_ TOP    | Gibt an, dass das obere Feld des DD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                             |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ AA \_ BOTTOM | Gibt an, dass das untere Feld des AA-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ BB \_ BOTTOM | Gibt an, dass das untere Feld des BB-Rahmens das erste Beispiel ist.                                                                                                                                                                                                                                          |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ BC \_ BOTTOM | Gibt an, dass das untere Feld des BC-Rahmens das erste Beispiel ist.                                                                                                                                                                                                                                          |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ CD \_ BOTTOM | Gibt an, dass das untere Feld des CD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
+| WM \_ DM \_ IT \_ FIRST \_ FRAME \_ IN \_ CLIP \_ IS \_ DD \_ BOTTOM | Gibt an, dass das untere Feld des DD-Frames das erste Beispiel ist.                                                                                                                                                                                                                                          |
 
 
 

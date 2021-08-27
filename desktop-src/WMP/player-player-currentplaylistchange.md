@@ -100,7 +100,7 @@ Im folgenden JScript Beispiel wird der Text in einem HTML-DIV-Element namens PlI
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

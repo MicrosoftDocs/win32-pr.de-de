@@ -1,5 +1,5 @@
 ---
-description: Die VBScript-WiFilVer.vbs wird in den sdk-Komponenten Windows für Windows Installer-Entwickler bereitgestellt. Das Beispiel zeigt, wie Sie mithilfe eines Skripts Informationen zu Version, Größe und Sprache der Datei melden oder aktualisieren können.
+description: Die VBScript-Datei WiFilVer.vbs wird in den Windows SDK-Komponenten für Windows Installer-Entwickler bereitgestellt. Das Beispiel zeigt, wie Sie mithilfe eines Skripts Die Dateiversion, Größe und Sprachinformationen melden oder aktualisieren können.
 ms.assetid: 21550eea-c30b-4738-9201-ab500356fabf
 title: Verwalten von Dateigrößen und -versionen
 ms.topic: article
@@ -13,12 +13,12 @@ ms.locfileid: "118629041"
 ---
 # <a name="manage-file-sizes-and-versions"></a>Verwalten von Dateigrößen und -versionen
 
-Die VBScript-dateiWiFilVer.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) Das Beispiel zeigt, wie Sie mithilfe eines Skripts Informationen zu Version, Größe und Sprache der Datei melden oder aktualisieren können.
+Die VBScript-Datei WiFilVer.vbs wird in den [Windows SDK-Komponenten für Windows Installer-Entwickler](platform-sdk-components-for-windows-installer-developers.md)bereitgestellt. Das Beispiel zeigt, wie Sie mithilfe eines Skripts Die Dateiversion, Größe und Sprachinformationen melden oder aktualisieren können.
 
-Das Beispiel zeigt ihnen auch Windows Installer-Aktionen, den Zugriff auf eine Windows Installer-Datenbank und die Verwendung der folgenden Aktionen:
+Im Beispiel werden auch Windows Installer-Aktionen, der Zugriff auf eine Windows Installer-Datenbank und die Verwendung der folgenden Aktionen veranschaulicht:
 
 -   [**Installer.OpenDatabase-Methode**](installer-opendatabase.md) des [ **Installer-Objekts**](installer-object.md)
--   [**Installer.FileAttributes(Eigenschaft)**](installer-fileattributes.md)
+-   [**Installer.FileAttributes-Eigenschaft**](installer-fileattributes.md)
 -   [**Installer.FileHash-Methode**](installer-filehash.md)
 -   [**Installer.FileVersion-Methode**](installer-fileversion.md)
 -   [**Installer.LastErrorRecord-Methode**](installer-lasterrorrecord.md) des [ **Installer-Objekts**](installer-object.md)
@@ -26,22 +26,22 @@ Das Beispiel zeigt ihnen auch Windows Installer-Aktionen, den Zugriff auf eine W
 -   [**Database.SummaryInformation-Eigenschaft**](database-summaryinformation.md) des [ **Datenbankobjekts**](database-object.md)
 -   [**Session.DoAction-Methode**](session-doaction.md)
 -   [**Session.Property**](session-session.md)
--   [**Session.SourcePath(Eigenschaft)**](session-sourcepath.md)
+-   [**Session.SourcePath-Eigenschaft**](session-sourcepath.md)
 -   [**Session.Mode-Eigenschaft**](session-mode.md) des [ **Sitzungsobjekts**](session-object.md)
--   [**Record.StringData(Eigenschaft)**](record-stringdata.md)
+-   [**Record.StringData-Eigenschaft**](record-stringdata.md)
 -   [**Record.IntegerData-Eigenschaft**](record-integerdata.md) des [ **Datensatzobjekts**](record-object.md)
 
-Die Verwendung dieses Beispiels erfordert die CScript.exe oder WScript.exe-Version Windows Skripthosts. Um dieses CScript.exe auszuführen, geben Sie an der Eingabeaufforderung mithilfe der folgenden Syntax einen Befehl ein:
+Für die Verwendung dieses Beispiels ist die CScript.exe oder WScript.exe Version von Windows Script Host erforderlich. Um CScript.exe zum Ausführen dieses Beispiels zu verwenden, geben Sie einen Befehl an der Eingabeaufforderung ein, indem Sie die folgende Syntax verwenden:
 
-**cscript WiFilVer.vbs \[ zu optionalen Quellpfaden \] \[ der Datenbank\]**
+**cscript WiFilVer.vbs \[ Pfad zu \] \[ optionalen Quellspeicherorten der Datenbank\]**
 
 Beachten Sie außerdem Folgendes:
 
 -   Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden.
 -   Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ *Pfad zur Datei* \] .
--   Das Beispiel gibt den Wert 0 (null) für den Erfolg zurück, 1 (eins), wenn Hilfe aufgerufen wird, und 2 (zwei), wenn das Skript fehlschlägt.
+-   Das Beispiel gibt den Wert 0 (null) für den Erfolg zurück, 1 (eins), wenn hilfe aufgerufen wird, und 2 (zwei), wenn das Skript fehlschlägt.
 
-Geben Sie Windows Installer-Datenbank an, die Sie aktualisieren möchten, die sich im Stammverzeichnis der Quelldatei befinden muss. Sie können jedoch Quellen für die Datenbank an separaten Speicherorten angeben. Wenn die Quelle komprimiert ist, werden alle Dateien im Stamm geöffnet.
+Geben Sie die zu aktualisierende Windows Installer-Datenbank an, die sich im Stammverzeichnis der Quelldatei befinden muss. Sie können jedoch Quellen für die Datenbank an separaten Speicherorten angeben. Wenn die Quelle komprimiert ist, werden alle Dateien im Stammverzeichnis geöffnet.
 
 Die folgenden Optionen können an einem beliebigen Speicherort in der Befehlszeile angegeben werden.
 
@@ -49,7 +49,7 @@ Die folgenden Optionen können an einem beliebigen Speicherort in der Befehlszei
 
 | Option                | Beschreibung                                                                              |
 |-----------------------|------------------------------------------------------------------------------------------|
-| *Keine Option angegeben* | Zeigt die Dateiinformationen der Datenbank an.                                            |
+| *Keine Option angegeben* | Zeigen Sie die Dateiinformationen der Datenbank an.                                            |
 | /U                    | Aktualisieren Sie die Dateigröße, Version und Sprachinformationen in der Datenbank aus der Quelle. |
 
 

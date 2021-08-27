@@ -1,6 +1,6 @@
 ---
 title: D3DX11CreateAsyncResourceLoader-Funktion (D3DX11async.h)
-description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie ein asynchrones Ressourcenladeprogramm.
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Siehe Hinweise. Erstellen Sie ein asynchrones Ressourcenladeprogramm.
 ms.assetid: b49900a1-866d-4a4a-bf3a-2deb9ce4a208
 keywords:
 - D3DX11CreateAsyncResourceLoader-Funktion Direct3D 11
@@ -100,7 +100,7 @@ Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

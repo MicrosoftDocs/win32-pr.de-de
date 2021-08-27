@@ -1,11 +1,11 @@
 ---
-title: Igathernotify addscope (deprecated)-Methode
-description: Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search-isearchpersistentitemschangedsink-API im Windows SDK abgelöst. | Igathernotify addscope (deprecated)-Methode
+title: IGatherNotify AddScope-Methode (veraltet)
+description: Dieses thema Windows Desktopsuche-Schnittstelle ist veraltet und wird durch die Windows Search ISearchPersistentItemsChangedSink-API im Windows SDK ersetzt. | IGatherNotify AddScope-Methode (veraltet)
 ms.assetid: 3b250818-1876-40b2-9a85-91f2bf6f52ec
 keywords:
-- Addscope (veraltet) Methode Legacy-Windows-Umgebungs Features
-- Addscope (veraltet) Methode Legacy-Windows-Umgebungs Features, igathernotify-Schnittstelle
-- Igathernotify-Schnittstelle ältere Windows-Umgebungs Features, addscope (deprecated)-Methode
+- AddScope-Methode (veraltet) – Legacy-Windows-Umgebungsfeatures
+- AddScope-Methode (veraltet) Legacy Windows Umgebungsfeatures, IGatherNotify-Schnittstelle
+- IGatherNotify interface Legacy Windows Environment Features , AddScope (Deprecated)-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,20 +15,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 967dc4f30acee2f8d8adbcfec04f0508e53bba15
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a49c0cf652b0cfde59167fa98498a978d3c2c41d3a886ee092b8f4a28d35f61b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353009"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118755591"
 ---
-# <a name="igathernotifyaddscope-deprecated-method"></a>Igathernotify:: addscope (deprecated)-Methode
+# <a name="igathernotifyaddscope-deprecated-method"></a>IGatherNotify::AddScope-Methode (veraltet)
 
-\[**Addscope** kann in nachfolgenden Versionen des Betriebssystems oder Produkts geändert werden oder nicht verfügbar sein.\]
+\[**AddScope** kann in nachfolgenden Versionen des Betriebssystems oder Produkts geändert oder nicht verfügbar sein.\]
 
-Dieses Thema der Windows-Desktop Suchschnittstelle ist veraltet und wird durch die Windows Search- [**isearchpersistentitemschangedsink**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) -API im Windows SDK abgelöst.
+Dieses thema Windows Desktopsuche-Schnittstelle ist veraltet und wird durch die Windows Search [**ISearchPersistentItemsChangedSink-API**](/windows/desktop/api/searchapi/nn-searchapi-isearchpersistentitemschangedsink) im Windows SDK ersetzt.
 
-Fügt die Startseite oder die URL hinzu, die Sie überwachen. Dadurch wird eine inkrementelle durch Forstung initiiert, wenn eine Verbindung hergestellt wird
+Fügt die Startseite oder URL hinzu, die Sie überwachen. Dies initiiert eine inkrementelle Durchforstung, wenn Sie eine Verbindung herstellen, und geht dann davon aus, dass alle weiteren URL-Änderungen per Benachrichtigung erfolgen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,12 +45,12 @@ void AddScope (Deprecated)(
 
 <dl> <dt>
 
-*bstrauscope* \[ in\]
+*bstrScope* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Eine Zeichenfolge, die die zu überwachende Startseite oder den zu überwachenden urlangibt.
+Eine Zeichenfolge, die die Startseite oder URLthat angibt, die Sie überwachen.
 
 </dd> </dl>
 
@@ -58,9 +58,9 @@ Eine Zeichenfolge, die die zu überwachende Startseite oder den zu überwachende
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Aufrufen dieser Methode wird ein inkrementelles Crawl gestartet, wenn eine Verbindung mit dem Speicher Danach wird davon ausgegangen, dass alle URL-Änderungen nach dem ersten Update durch eine Benachrichtigung erfolgen.
+Durch Aufrufen dieser Methode wird eine inkrementelle Durchforstung gestartet, wenn eine Verbindung mit dem Speicher hergestellt wird. Danach wird davon ausgegangen, dass alle URL-Änderungen nach der ersten Aktualisierung per Benachrichtigung erfolgen.
 
  
 

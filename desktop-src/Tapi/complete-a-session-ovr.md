@@ -1,27 +1,27 @@
 ---
-description: Mit Abschluss Vorgängen kann eine Anwendung festlegen, wie eine Sitzung behandelt werden soll, wenn Faktoren wie z. b. ein ausgelasteter Ziel eine normale Verbindung verhindern.
+description: Mit Abschlussvorgängen kann eine Anwendung angeben, wie eine Sitzung behandelt werden soll, wenn Faktoren wie ein ausgelastetes Ziel eine normale Verbindung verhindern.
 ms.assetid: 71e61376-7913-42a9-a8e2-2ea6e4918f30
-title: Sitzung beenden
+title: Abschließen einer Sitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5736b6be452413811f3530f44db280fe4e2a682f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20686f89feef5bb73d4ccbb786482f2528d700f42f0c4359fd965418077b8544
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345780"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118867978"
 ---
-# <a name="complete-a-session"></a>Sitzung beenden
+# <a name="complete-a-session"></a>Abschließen einer Sitzung
 
-Mit Abschluss Vorgängen kann eine Anwendung festlegen, wie eine Sitzung behandelt werden soll, wenn Faktoren wie z. b. ein ausgelasteter Ziel eine normale Verbindung verhindern.
+Mit Abschlussvorgängen kann eine Anwendung angeben, wie eine Sitzung behandelt werden soll, wenn Faktoren wie ein ausgelastetes Ziel eine normale Verbindung verhindern.
 
-Die [linecallcomplmode- \_ Konstanten](./linecallcomplmode--constants.md) definieren die möglichen Optionen, die eine Anwendung möglicherweise besitzt, je nach den Funktionen des Dienstanbieters.
+Die [ \_ LINECALLCOMPLMODE-Konstanten](./linecallcomplmode--constants.md) definieren die möglichen Optionen, die eine Anwendung abhängig von den Funktionen des Dienstanbieters haben kann.
 
-Für eine bestimmte Adresse können zu einem beliebigen Zeitpunkt mehrere Anforderungen zum Abrufen von Anforderungen ausgegeben werden. Zum Identifizieren einzelner Anforderungen gibt die Implementierung einen [Vervollständigungs Bezeichner](completion-id-ovr.md)zurück. Wenn eine Anforderung zum Abschließen einer Anforderung in Bearbeitung abgebrochen wird, wird dieser Bezeichner für den Bezeichner verwendet
+Mehrere Aufrufabschlussanforderungen können für eine bestimmte Adresse gleichzeitig ausstehen. Um einzelne Anforderungen zu identifizieren, gibt die Implementierung einen [Abschlussbezeichner zurück.](completion-id-ovr.md) Beim Abbrechen einer Anforderung zur Anruferledigung wird auch dieser Bezeichner für die Anruferledigung verwendet.
 
-**TAPI 2. x:** Siehe [**linecompletecall,**](/windows/win32/api/tapi/nf-tapi-linecompletecall) [**lineuncompletecall.**](/windows/win32/api/tapi/nf-tapi-lineuncompletecall)
+**TAPI 2.x:** Siehe [**lineCompleteCall**](/windows/win32/api/tapi/nf-tapi-linecompletecall), [**lineUncompleteCall**](/windows/win32/api/tapi/nf-tapi-lineuncompletecall).
 
-**TAPI 3. x:** Weitere Informationen finden Sie unter [**itbasiccallcontrol:: Connect**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-connect), [**itbasiccallcontrol::D isconnect**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-disconnect).
+**TAPI 3.x:** Weitere [**Informationen finden Sie unter ITBasicCallControl::Verbinden**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-connect), [**ITBasicCallControl::D isconnect.**](/windows/desktop/api/tapi3if/nf-tapi3if-itbasiccallcontrol-disconnect)
 
  
 

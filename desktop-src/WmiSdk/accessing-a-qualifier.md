@@ -1,26 +1,26 @@
 ---
-description: Ein Qualifizierer ist ein Tag, das weitere Informationen zu einem WMI-Objekt, einer Methode oder einer Eigenschaft bereitstellt.
+description: Ein Qualifizierer ist ein Tag, das weitere Informationen zu einem WMI-Objekt, einer -Methode oder einer -Eigenschaft bereitstellt.
 ms.assetid: 53a307da-2e81-4361-876a-16b51484512e
 ms.tgt_platform: multiple
-title: Aufrufen eines WMI-Qualifizierers
+title: Zugreifen auf einen WMI-Qualifizierer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c88a5826255046bc0898dae43b9aa25ec5c7648
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 45601de8e7b3f8ef7054742812c24f9a81dcedf5417f7b7ba501f2471adedc58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118820618"
 ---
-# <a name="accessing-a-wmi-qualifier"></a>Aufrufen eines WMI-Qualifizierers
+# <a name="accessing-a-wmi-qualifier"></a>Zugreifen auf einen WMI-Qualifizierer
 
-Ein Qualifizierer ist ein Tag, das weitere Informationen zu einem WMI-Objekt, einer Methode oder einer Eigenschaft bereitstellt. Manchmal müssen Sie möglicherweise auf die in einem Qualifizierer gespeicherten Daten zugreifen. Beispielsweise besteht eine häufige Aufgabe darin, zu bestimmen, ob ein Anbieter eine Methode implementiert, indem versucht wird, den **implementierten** Qualifizierer für diese Methode abzurufen. Weitere Informationen finden Sie unter [WMI-Qualifizierer](wmi-qualifiers.md) und [Hinzufügen eines Qualifizierers](adding-a-qualifier.md).
+Ein Qualifizierer ist ein Tag, das weitere Informationen zu einem WMI-Objekt, einer -Methode oder einer -Eigenschaft bereitstellt. Manchmal müssen Sie möglicherweise auf die in einem Qualifizierer gespeicherten Daten zugreifen. Eine häufige Aufgabe besteht beispielsweise darin, zu bestimmen, ob ein Anbieter eine Methode implementiert, indem versucht wird, den **Implementierten** Qualifizierer für diese Methode abzurufen. Weitere Informationen finden Sie unter [WMI-Qualifizierer](wmi-qualifiers.md) und [Hinzufügen eines Qualifizierers.](adding-a-qualifier.md)
 
-Sie können die Qualifizierer für ein WMI-Objekt in PowerShell abrufen, indem Sie zuerst das Objekt abrufen und dann die Qualifizierer wie jede andere Eigenschaft untersuchen.
+Sie können die Qualifizierer für ein WMI-Objekt in PowerShell abrufen, indem Sie zuerst das -Objekt abrufen und dann die Qualifizierer wie jede andere Eigenschaft untersuchen.
 
 **So rufen Sie einen Qualifizierer mithilfe von PowerShell ab**
 
--   Rufen Sie mit [Get-WMIObject](https://technet.microsoft.com/library/dd315379.aspx)das Objekt ab, dessen Qualifizierer Sie anzeigen möchten, und greifen Sie dann über die **qualifizierereigenschaft** auf die Qualifizierer
+-   Rufen Sie das Objekt ab, dessen Qualifizierer Sie mit [Get-WmiObject](https://technet.microsoft.com/library/dd315379.aspx)anzeigen möchten, und greifen Sie dann über die Qualifiers-Eigenschaft auf die **Qualifizierer** zu:
 
     ```PowerShell
     $myDisk = get-wmiObject Win32_LogicalDisk
@@ -39,13 +39,13 @@ Sie können die Qualifizierer für ein WMI-Objekt in PowerShell abrufen, indem S
 
     
 
-    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-Sie können die Qualifizierer für eine WMI-Instanz in c# abrufen, indem Sie zuerst das Objekt abrufen und dann die Qualifizierer als Auflistung überprüfen.
+Sie können die Qualifizierer für eine WMI-Instanz in C# abrufen, indem Sie zuerst das -Objekt abrufen und dann die Qualifizierer als Auflistung untersuchen.
 
-**Zum Abrufen eines Qualifizierers mit c# (Microsoft.System. Personal**
+**So rufen Sie einen Qualifizierer mit C# (Microsoft.System ab. Verwaltung)**
 
-1.  Rufen Sie die Klasse ab, deren Qualifizierer Sie anzeigen möchten, indem Sie ein ciminstance-Objekt mit dem angegebenen Klassennamen und Namespace erstellen.
+1.  Rufen Sie die Klasse ab, deren Qualifizierer Sie anzeigen möchten, indem Sie unter Verwendung des angegebenen Klassennamens und Namespaces ein CimInstance-Objekt erstellen.
 
     ```CSharp
     using Microsoft.Management.Infrastructure;
@@ -58,9 +58,9 @@ Sie können die Qualifizierer für eine WMI-Instanz in c# abrufen, indem Sie zue
 
     
 
-    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-2.  Sie können die Klassen Qualifizierer aus den Klassen " [ciminstance. cimclass. cimclassqualifizierer](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832272(v=vs.85))", den Eigenschaften [Qualifizierern aus "ciminstance. cimclass. cimclassproperties](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832271(v=vs.85))" und den Methoden [Qualifizierern aus "ciminstance. cimclass. cimclassmethods](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832270(v=vs.85))" abrufen
+2.  Sie können die Klassenqualifizierer aus [CimInstance.CimClass.CimClassQualifiers,](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832272(v=vs.85))die Eigenschaftsqualifizierer aus [CimInstance.CimClass.CimClassProperties](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832271(v=vs.85))und die Methodenqualifizierer aus [CimInstance.CimClass.CimClassMethods](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832270(v=vs.85))abrufen.
 
     ```CSharp
     Console.WriteLine("Class: " + myDrive.ToString());
@@ -90,18 +90,18 @@ Sie können die Qualifizierer für eine WMI-Instanz in c# abrufen, indem Sie zue
 
     
 
-    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-Sie können die Qualifizierer für ein WMI-Objekt in c# abrufen, indem Sie zuerst das Objekt abrufen und dann die Qualifizierer als Auflistung überprüfen.
+Sie können die Qualifizierer für ein WMI-Objekt in C# abrufen, indem Sie zuerst das -Objekt abrufen und dann die Qualifizierer als Auflistung untersuchen.
 
 > [!Note]  
-> **System. Management** war der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. die APIs in diesem Namespace sind jedoch in der Regel langsamer und werden relativ zu ihren moderneren **Microsoft. Management. Infrastructure** -Entsprechungen nicht auch skaliert.
+> **System.Management** war der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. die APIs in diesem Namespace sind jedoch im Allgemeinen langsamer und werden nicht so gut skaliert, relativ zu ihren moderneren **Microsoft.Management.Infrastructure-Entsprechungen.**
 
  
 
-**So rufen Sie einen Qualifizierer mit c# ab (System. Management)**
+**So rufen Sie einen Qualifizierer mit C# ab (System.Management)**
 
-1.  Rufen Sie das Objekt, dessen Qualifizierer Sie anzeigen möchten, mithilfe von [ManagementObject](/dotnet/api/system.management.managementobject)ab.
+1.  Rufen Sie das Objekt ab, dessen Qualifizierer Sie mit [ManagementObject](/dotnet/api/system.management.managementobject)anzeigen möchten.
 
     ```CSharp
     using System.Management;
@@ -111,9 +111,9 @@ Sie können die Qualifizierer für ein WMI-Objekt in c# abrufen, indem Sie zuers
 
     
 
-    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-2.  Platzieren Sie die Qualifizierer in einem [QualifierDataCollection](/dotnet/api/system.management.qualifierdatacollection)-Element, und durchlaufen Sie die [QualifierData](/dotnet/api/system.management.qualifierdata) -Werte.
+2.  Platzieren Sie die Qualifizierer in eine [QualifierDataCollection,](/dotnet/api/system.management.qualifierdatacollection)und durchlaufen Sie die [QualifierData-Werte.](/dotnet/api/system.management.qualifierdata)
 
     ```CSharp
     
@@ -127,9 +127,9 @@ Sie können die Qualifizierer für ein WMI-Objekt in c# abrufen, indem Sie zuers
 
     
 
-    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-Im folgenden Verfahren wird beschrieben, wie ein Qualifizierer mithilfe von VBScript abgerufen wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Qualifizierer mit VBScript abrufen.
 
 **So rufen Sie einen Qualifizierer mit VBScript ab**
 
@@ -141,9 +141,9 @@ Im folgenden Verfahren wird beschrieben, wie ein Qualifizierer mithilfe von VBSc
 
     
 
-    Die gängigste Methode zum Abrufen eines Objekts ist die Verwendung der [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) -Methode. Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md).
+    Die gängigste Methode zum Abrufen eines Objekts ist die Verwendung der [**GetObject-Methode.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) Weitere Informationen finden Sie unter [Abrufen einer WMI-Instanz.](retrieving-an-instance.md)
 
-2.  Greifen Sie über die Eigenschaft " [**errbemubject. Qualifizierer \_**](swbemobject-qualifiers-.md) " auf die Qualifizierer des Objekts zu, wie im folgenden Beispiel gezeigt:
+2.  Greifen Sie wie im folgenden Beispiel gezeigt über die [**\_ SWbemObject.Qualifiers-Eigenschaft**](swbemobject-qualifiers-.md) auf die Qualifizierer des Objekts zu:
 
     ```VB
     for each Qualifier in Process.Qualifiers_
@@ -153,7 +153,7 @@ Im folgenden Verfahren wird beschrieben, wie ein Qualifizierer mithilfe von VBSc
 
     
 
-Im folgenden Codebeispiel wird beschrieben, wie auf alle Qualifizierer eines [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process) Objekts zugegriffen wird.
+Im folgenden Codebeispiel wird beschrieben, wie auf alle Qualifizierer für ein [**Win32 \_ Process-Objekt**](/windows/desktop/CIMWin32Prov/win32-process) zugegriffen wird.
 
 
 ```VB
@@ -178,21 +178,21 @@ End if
 
 
 
-Im folgenden Verfahren wird beschrieben, wie ein Qualifizierer mit C++ abgerufen wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Qualifizierer mit C++ abrufen.
 
 **So rufen Sie einen Qualifizierer mit C++ ab**
 
 1.  Rufen Sie das Objekt ab, dessen Qualifizierer Sie anzeigen möchten.
 
-    Die gängigste Methode zum Abrufen eines Objekts ist das Aufrufen von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync). Weitere Informationen finden Sie unter [Abrufen von WMI-Klassen-oder Instanzdaten](retrieving-class-or-instance-data.md).
+    Die gängigste Methode zum Abrufen eines Objekts ist die Verwendung eines Aufrufs von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**GetObjectAsync.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) Weitere Informationen finden Sie unter [Abrufen der WMI-Klasse oder Instanzdaten.](retrieving-class-or-instance-data.md)
 
-2.  Rufen Sie den Qualifizierer Satz für eine angegebene Eigenschaft mit einem Aufruf von [**IWbemClassObject:: getpropertyqualifierset**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) -oder [**IWbemClassObject:: getmethodqualifierset**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) -Methoden ab.
+2.  Rufen Sie den Qualifizierersatz für eine bestimmte Eigenschaft mit einem Aufruf der [**Methoden IWbemClassObject::GetPropertyQualifierSet**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) oder [**IWbemClassObject::GetMethodQualifierSet**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) ab.
 
-3.  Greifen Sie über die zurückgegebene [**iwbemqualifierset**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) -Schnittstelle auf die Qualifizierer des Objekts zu.
+3.  Greifen Sie über die zurückgegebene [**IWbemQualifierSet-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemqualifierset) auf die Qualifizierer des Objekts zu.
 
 ## <a name="examples"></a>Beispiele
 
-Weitere Informationen zum Abrufen von Qualifizierern finden Sie im PowerShell-Codebeispiel [Get-wmiclassmethodsandwrite](https://Gallery.TechNet.Microsoft.Com/10670e14-4cf1-4ce5-99d0-fc4ca80dac2c) in der TechNet Gallery.
+Weitere Informationen zum Abrufen von Qualifizierern finden Sie im [PowerShell-Codebeispiel Get-WmiClassMethodsAndWritableWmiProperties](https://Gallery.TechNet.Microsoft.Com/10670e14-4cf1-4ce5-99d0-fc4ca80dac2c) im TechNet-Katalog.
 
  
 

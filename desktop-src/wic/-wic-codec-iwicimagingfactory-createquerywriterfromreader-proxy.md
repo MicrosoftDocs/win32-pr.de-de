@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatequeryschreiterfromreader".
+description: Proxyfunktion für die CreateQueryWriterFromReader-Methode.
 ms.assetid: 7784c5e9-38e0-43de-83db-4de3361fa20e
 title: IWICImagingFactory_CreateQueryWriterFromReader_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 4fb0d9c2346fe854cf23acee288ee1086828a76e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee6e03da055b5e48e21c044ce1708a8a8871c30fabeb860e486cde398650c23f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711454"
 ---
-# <a name="iwicimagingfactory_createquerywriterfromreader_proxy-function"></a>IWICImagingFactory | \_ atequeryschreiterfromreader- \_ Proxy Funktion
+# <a name="iwicimagingfactory_createquerywriterfromreader_proxy-function"></a>Proxyfunktion "IWICImagingFactory \_ CreateQueryWriterFromReader" \_
 
-Proxy Funktion für die Methode " [**kreatequeryschreiterfromreader**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createquerywriterfromreader) ".
+Proxyfunktion für die [**CreateQueryWriterFromReader-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createquerywriterfromreader)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ HRESULT IWICImagingFactory_CreateQueryWriterFromReader_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_pIQueryReader * \[ in\]
+*pIQueryReader* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader) \** _
+Typ: **[ **IWICMetadataQueryReader**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataqueryreader)\***
 
-Der Metadatenabfrage-Reader, aus dem der metadatenwriter erstellt wird.
+Der Metadatenabfrageleser, aus dem der Metadatenwriter erstellt werden soll.
 
 </dd> <dt>
 
-_pguidVendor * \[ in\]
+*pguidVendor* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Die Anbieter-GUID für den Metadatenabfragewriter.
+Die Hersteller-GUID für den Metadatenabfrage-Writer.
 
 </dd> <dt>
 
-_ppIQueryWriter * \[ out\]
+*ppIQueryWriter* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)\*\***
 
-Ein Zeiger, der einen Zeiger auf ein neues [**IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)empfängt.
+Ein Zeiger, der einen Zeiger auf einen neuen [**IWICMetadataQueryWriter**](/windows/desktop/api/Wincodec/nn-wincodec-iwicmetadataquerywriter)empfängt.
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Ein Zeiger, der einen Zeiger auf ein neues [**IWICMetadataQueryWriter**](/window
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -91,9 +91,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

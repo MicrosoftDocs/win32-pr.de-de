@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung dar, in der eine CIM \_ ResourceAllocationSettingData-Instanz aus einem Ressourcenpool zugeordnet wird.
+description: Stellt eine Zuordnung dar, bei der eine CIM \_ ResourceAllocationSettingData-Instanz aus einem Ressourcenpool zugeordnet wird.
 ms.assetid: ca9060e5-4434-4302-a840-a7d9cf5db714
 title: CIM_ResourceAllocationFromPool-Klasse
 ms.topic: reference
@@ -22,9 +22,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118648172"
 ---
-# <a name="cim_resourceallocationfrompool-class"></a>CIM \_ ResourceAllocationFromPool-Klasse
+# <a name="cim_resourceallocationfrompool-class"></a>\_CIM-Klasse "ResourceAllocationFromPool"
 
-Stellt eine Zuordnung dar, in der eine [**CIM \_ ResourceAllocationSettingData-Instanz**](cim-resourceallocationsettingdata.md) aus einem Ressourcenpool zugeordnet wird.
+Stellt eine Zuordnung dar, bei der eine [**CIM \_ ResourceAllocationSettingData-Instanz**](cim-resourceallocationsettingdata.md) aus einem Ressourcenpool zugeordnet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ class CIM_ResourceAllocationFromPool : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ResourceAllocationFromPool-Klasse** verfügt über folgende Typen von Membern:
+Die **\_ CIM-Klasse ResourceAllocationFromPool** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ ResourceAllocationFromPool-Klasse** verfügt über diese Eigenschaften.
+Die **\_ CIM-Klasse ResourceAllocationFromPool** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -58,7 +58,7 @@ Datentyp: **CIM \_ ResourcePool**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
 Der Ressourcenpool.
@@ -89,13 +89,13 @@ Die Ressourcenzuordnungsdaten.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

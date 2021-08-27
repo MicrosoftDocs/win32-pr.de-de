@@ -1,19 +1,19 @@
 ---
-title: Aktivieren von iagentcharacter
-description: Aktivieren von iagentcharacter
+title: IAgentCharacter Activate
+description: IAgentCharacter Activate
 ms.assetid: a81eb62d-709b-46b4-9ff2-c9017f7f853e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1e86d2c094da484f528750d433e0fb6608790e4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7256b1d155b051985c72120283e60896026218ea81d8b2b9c37dc94fb52bb63a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104516124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118750996"
 ---
-# <a name="iagentcharacteractivate"></a>Iagentcharacter:: Aktivierung
+# <a name="iagentcharacteractivate"></a>IAgentCharacter::Activate
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT Activate(
@@ -21,10 +21,10 @@ HRESULT Activate(
 );
 ```
 
-Legt fest, ob ein Client aktiv ist oder ob ein Zeichen auf oberster Ebene festgelegt ist.
+Legt fest, ob ein Client aktiv oder ein Zeichen ganz oben ist.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
--   Gibt " \_ false" zurück, um anzugeben, dass der Vorgang nicht erfolgreich war.
+-   Gibt S \_ FALSE zurück, um anzugeben, dass der Vorgang nicht erfolgreich war.
 
 <dl> <dt>
 
@@ -38,36 +38,36 @@ Sie können die folgenden Werte für diesen Parameter angeben:
 | Wert | BESCHREIBUNG                   |
 |-------|-------------------------------|
 | 0     | Legen Sie als nicht den aktiven Client fest. |
-| 1     | Wird als aktiver Client festgelegt.     |
-| 2     | Stellen Sie das oberste Zeichen dar.   |
+| 1     | Legen Sie als aktiver Client fest.     |
+| 2     | Stellen Sie das oberste Zeichen ein.   |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-Wenn mehrere Zeichen sichtbar sind, empfängt nur eines der Zeichen Spracheingaben gleichzeitig. Wenn mehrere Client Anwendungen dasselbe Zeichen gemeinsam verwenden, empfängt auch nur einer der Clients Maus Eingaben (z. b. das Click-oder Drag-Ereignis der Microsoft-agentsteuerung) gleichzeitig. Der Zeichensatz für den Empfang von Maus-und Spracheingaben ist das oberste Zeichen, und der Client, der Eingaben empfängt, ist der aktive Client des Zeichens. (Das Fenster des obersten Zeichens wird auch am oberen Rand der z-Reihenfolge des Zeichen Fensters angezeigt.) In der Regel bestimmt der Benutzer, welches Zeichen am höchsten ist, indem es explizit ausgewählt wird. Die oberste Aktivierung ändert sich jedoch auch, wenn ein Zeichen angezeigt oder ausgeblendet wird (das Zeichen wird zu oder ist nicht mehr die oberste Stelle).
+Wenn mehrere Zeichen sichtbar sind, empfängt nur eines der Zeichen spracheingaben gleichzeitig. Wenn mehrere Clientanwendungen dasselbe Zeichen verwenden, empfängt auch nur einer der Clients gleichzeitig Mauseingaben (z. B. Klick- oder Ziehereignisse des Microsoft-Agent-Steuerelements). Der Zeichensatz zum Empfangen von Maus- und Spracheingaben ist das oberste Zeichen, und der Client, der Eingaben empfängt, ist der aktive Client des Zeichens. (Das Fenster des obersten Zeichens wird auch oben in der Z-Reihenfolge des Zeichenfensters angezeigt.) In der Regel bestimmt der Benutzer, welches Zeichen am weitesten oben steht, indem er es explizit auswählt. Die oberste Aktivierung ändert sich jedoch auch, wenn ein Zeichen angezeigt oder ausgeblendet wird (das Zeichen wird bzw. ist nicht mehr das oberste Zeichen).
 
-Sie können diese Methode auch verwenden, um explizit zu verwalten, wenn der Client Eingaben empfängt, die an das Zeichen weitergeleitet werden, z. b. wenn die Anwendung selbst aktiv wird. Wenn Sie z. b. " **State** " auf "2" festlegen, wird das Zeichen am meisten, und der Client empfängt alle Maus-und Spracheingabe Ereignisse, die von der Benutzerinteraktion mit dem Zeichen Daher wird der Client auch zum Eingabe aktiven Client des Zeichens. Sie können jedoch auch den aktiven Client für ein Zeichen festlegen, ohne das Zeichen am höchsten zu setzen, indem Sie **State** auf 1 festlegen. Dadurch kann der Client Eingaben empfangen, die an dieses Zeichen weitergeleitet werden, wenn das Zeichen über den höchsten Wert verfügt. Entsprechend können Sie festlegen, dass der Client nicht der aktive Client (für den Empfang von Eingaben) ist, wenn das Zeichen am höchsten ist, indem Sie **State** auf 0 festlegen. Mithilfe von [**iagentcharacter:: hasotherclients**](iagentcharacter--hasotherclients.md)können Sie feststellen, ob ein Zeichen über andere aktuelle Clients verfügt.
+Sie können diese Methode auch verwenden, um explizit zu verwalten, wann Ihr Client Eingaben empfängt, die an das Zeichen gerichtet sind, z. B. wenn Ihre Anwendung selbst aktiv wird. Wenn Sie beispielsweise **State** auf 2 festlegen, wird das Zeichen ganz oben angezeigt, und Ihr Client empfängt alle Maus- und Spracheingabeereignisse, die aus der Benutzerinteraktion mit dem Zeichen generiert wurden. Aus diesem Grund wird Ihr Client auch zum eingabeaktiven Client des Zeichens. Sie können jedoch auch den aktiven Client für ein Zeichen festlegen, ohne das Zeichen ganz oben zu setzen, indem Sie **State** auf 1 festlegen. Dadurch kann Ihr Client Eingaben empfangen, die an dieses Zeichen geleitet werden, wenn das Zeichen ganz oben wird. Auf ähnliche Weise können Sie festlegen, dass Ihr Client nicht der aktive Client ist (um keine Eingabe zu empfangen), wenn das Zeichen oberster Punkt wird, indem Sie **State** auf 0 festlegen. Sie können mithilfe von [**IAgentCharacter::HasOtherClients**](iagentcharacter--hasotherclients.md)ermitteln, ob ein Zeichen über andere aktuelle Clients verfügt.
 
-Vermeiden Sie das Aufrufen dieser Methode direkt nach einer [**Show**](iagentcharacter--show.md) -Methode. **Anzeigen** legt automatisch den Eingabe aktiven Client fest. Wenn das Zeichen ausgeblendet ist, kann der **Aktivierungs** Befehl fehlschlagen, wenn er verarbeitet wird, bevor die **Show** -Methode abgeschlossen wird.
+Vermeiden Sie den Aufruf dieser Methode direkt nach einer [**Show-Methode.**](iagentcharacter--show.md) **Show** legt den eingabeaktiven Client automatisch fest. Wenn das Zeichen ausgeblendet ist, kann der **Activate-Aufruf** fehlschlagen, wenn er verarbeitet wird, bevor die **Show-Methode** abgeschlossen ist.
 
-Wenn Sie versuchen, diese Methode mit dem auf 2 festgelegten **State** -Parameter aufzurufen (wenn das angegebene Zeichen ausgeblendet ist), tritt ein Fehler auf. Wenn Sie den **Status** auf 0 festlegen und die Anwendung der einzige Client ist, tritt bei diesem Vorgang ein Fehler auf. Ein Zeichen muss immer über einen obersten Client verfügen.
+Beim Versuch, diese Methode mit dem **State-Parameter** auf 2 (wenn das angegebene Zeichen ausgeblendet ist) auf den Wert 2 zu rufen, wird ein Fehler angezeigt. Wenn Sie State  auf 0 festlegen und Ihre Anwendung der einzige Client ist, schlägt dieser Aufruf ebenfalls fehl. Ein Zeichen muss immer über einen obersten Client verfügen.
 
 > [!Note]  
-> Wenn Sie diese Methode mit dem auf 1 festgelegten **Zustand** aufrufen, wird in der Regel kein [**agentnotifysink:: activateinputstate**](https://www.bing.com/search?q=**AgentNotifySink::ActivateInputState**) -Ereignis generiert, es sei denn, es sind keine anderen Zeichen geladen, oder die Anwendung ist bereits Eingabe aktiv.
+> Wenn Sie  diese Methode aufrufen, deren Status auf 1 festgelegt ist, wird in der Regel kein [**AgentNotifySink::ActivateInputState-Ereignis**](https://www.bing.com/search?q=**AgentNotifySink::ActivateInputState**) generiert, es sei denn, es werden keine anderen Zeichen geladen, oder Ihre Anwendung ist bereits eingabeaktiv.
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter:: hasotherclients**](iagentcharacter--hasotherclients.md)
+[**IAgentCharacter::HasOtherClients**](iagentcharacter--hasotherclients.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

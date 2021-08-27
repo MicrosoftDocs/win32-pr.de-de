@@ -44,7 +44,7 @@ Dim transform : transform = Database2.GenerateTransform(Database1,
 
 
 
-Um die Transformationsdatei MNPtrans.mst aus der ursprünglichen MNP2000.msi Datenbank und der MNP2000t.msi Datenbank zu generieren, die Sie unter [Anpassen einer ursprünglichen Datenbank](customizing-an-original-database.md)geändert haben, ändern Sie die Verzeichnisse in den Ordner mit Gen.vbs, der ursprünglichen Datenbank und der aktualisierten Installationsprogrammdatenbank, und geben Sie die folgende Befehlszeile ein.
+Um die Transformationsdatei MNPtrans.mst aus der ursprünglichen MNP2000.msi-Datenbank und der MNP2000t.msi Datenbank zu generieren, die Sie unter [Anpassen einer ursprünglichen Datenbank](customizing-an-original-database.md)geändert haben, wechseln Sie in den Ordner, der Gen.vbs, die ursprüngliche Datenbank und die aktualisierte Installationsprogrammdatenbank enthält, und geben Sie die folgende Befehlszeile ein.
 
 **Cscript.exe Gen.vbs MNP2000.msi MNP2000t.msi MNPtrans.mst**
 

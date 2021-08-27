@@ -1,5 +1,5 @@
 ---
-description: Die SetStream-Methode des Record-Objekts kopiert den Inhalt der angegebenen Datei als Streamdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
+description: Die SetStream-Methode des Record-Objekts kopiert den Inhalt der angegebenen Datei als Datenstromdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
 ms.assetid: feb79371-d0c4-4bb0-b539-2f431ee1051b
 title: Record.SetStream-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118626970"
 ---
 # <a name="recordsetstream-method"></a>Record.SetStream-Methode
 
-Die **SetStream-Methode** des [**Record-Objekts**](record-object.md) kopiert den Inhalt der angegebenen Datei als Streamdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
+Die **SetStream-Methode** des [**Record-Objekts**](record-object.md) kopiert den Inhalt der angegebenen Datei als Datenstromdaten in das angegebene Datensatzfeld. Streamdaten können nicht in temporäre Felder eingefügt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ Erforderliche Feldnummer des Werts innerhalb des Datensatzes, 1-basiert.
 *Filepath* 
 </dt> <dd>
 
-Der Speicherort der zu kopierende Datei. Es wird keine Übersetzung eines Typs ausgeführt.
+Der Speicherort der zu kopierenden Datei. Es wird keine Übersetzung eines beliebigen Typs ausgeführt.
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
+Wenn bei der Methode ein Fehler auftritt, können Sie erweiterte Fehlerinformationen mithilfe der [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) abrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Wenn die Methode fehlschlägt, können Sie erweiterte Fehlerinformationen mithil
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IRecord ist als 000C1093-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                              |
+| IID<br/>     | IID \_ IRecord ist als 000C1093-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                              |
 
 
 

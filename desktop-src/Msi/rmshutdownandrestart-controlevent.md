@@ -1,5 +1,5 @@
 ---
-description: Benachrichtigt den Windows Installer, den Neustart-Manager zu verwenden, um alle Anwendungen, die Dateien verwenden, herunterzufahren und sie am Ende der Installation neu zu starten.
+description: Benachrichtigt den Windows Installer, den Neustart-Manager zu verwenden, um alle Anwendungen herunterzufahren, die Dateien verwenden, und sie am Ende der Installation neu zu starten.
 ms.assetid: bfa19cc8-4cf7-42ed-9e94-acaeca8d707a
 title: RmShutdownAndRestart ControlEvent
 ms.topic: article

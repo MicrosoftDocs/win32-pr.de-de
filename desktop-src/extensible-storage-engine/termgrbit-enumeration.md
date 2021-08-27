@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: termgrbit-Enumeration'
-title: Termgrbit-Enumeration
+description: 'Weitere Informationen zu: TermGrbit-Enumeration'
+title: TermGrbit-Enumeration
 TOCTitle: TermGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.TermGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.termgrbit(v=EXCHG.10)
@@ -30,21 +30,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 49b466b298a78d7bfd6822904aed977e7117b927
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83bf60be88aa1db7bac30c96c0c438d453c6fc24279b18502205ce96e60b9f14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103759085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978370"
 ---
-# <a name="termgrbit-enumeration"></a>Termgrbit-Enumeration
+# <a name="termgrbit-enumeration"></a>TermGrbit-Enumeration
 
-Optionen für [JetTerm2 (JET_INSTANCE, termgrbit)](./api.jetterm2-method.md).
+Optionen für [JetTerm2(JET_INSTANCE, TermGrbit)](./api.jetterm2-method.md).
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,21 +80,21 @@ public enum TermGrbit
 <tr class="even">
 <td></td>
 <td>Abgeschlossen</td>
-<td>Fordert an, dass die Instanz ordnungsgemäß heruntergefahren wird. Alle optionalen Bereinigungs arbeiten, die normalerweise zur Laufzeit im Hintergrund durchgeführt werden, werden sofort abgeschlossen.</td>
+<td>Fordert an, dass die Instanz sauber heruntergefahren wird. Alle optionalen Bereinigungsarbeiten, die normalerweise zur Laufzeit im Hintergrund ausgeführt werden, werden sofort abgeschlossen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Ter</td>
-<td>Fordert an, dass die Instanz so schnell wie möglich heruntergefahren wird. Alle optionalen arbeiten, die normalerweise zur Laufzeit im Hintergrund durchgeführt werden, werden abgebrochen.</td>
+<td>Abrupten</td>
+<td>Fordert an, dass die Instanz so schnell wie möglich heruntergefahren wird. Alle optionalen Arbeiten, die normalerweise zur Laufzeit im Hintergrund ausgeführt werden, werden abgebrochen.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
 
-[TZI](./windows7grbits.dirty-field.md)
+[Schmutzig](./windows7grbits.dirty-field.md)
