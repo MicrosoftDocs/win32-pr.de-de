@@ -1,40 +1,40 @@
 ---
 title: Extensible Authentication-Protokoll
-description: Das Extensible Authentication-Protokoll (EAP) ist ein Standard, der von mehreren Systemkomponenten unterstützt wird. EAP ist für den Schutz der Sicherheit von drahtlosen (802.1 x) und verkabelten LANs, Einwähl-und VPNs (Virtual Private Networks) entscheidend.
+description: Das Extensible Authentication Protocol (EAP) ist ein Standard, der von mehreren Systemkomponenten unterstützt wird. EAP ist entscheidend für den Schutz der Sicherheit von drahtlos (802.1X) und kabelgebundenen LANs, DFÜ und virtuellen privaten Netzwerken (VPNs).
 ms.assetid: bdbac41e-064c-445f-8f86-a6e2eff2a683
 keywords:
 - Extensible Authentication-Protokoll
-- Extensible Authentication-Protokoll, Startseite
+- Extensible Authentication Protocol, Startseite
 - EAP
-- EAP finden Sie unter Extensible Authentication Protocol.
+- EAP finden Sie unter Extensible Authentication-Protokoll.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c79b9585363d74eb50190d0fd6355830a7087aa4
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5cd54a380323fdf5a04add7f28fe18378be8ed375e936c70d2045f2e139ff852
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103724937"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094430"
 ---
 # <a name="extensible-authentication-protocol"></a>Extensible Authentication-Protokoll
 
 ## <a name="purpose"></a>Zweck
 
-Das Extensible Authentication-Protokoll (EAP) ist ein Standard, der von mehreren Systemkomponenten unterstützt wird. EAP ist für den Schutz der Sicherheit von drahtlosen (802.1 x) und verkabelten LANs, Einwähl-und VPNs (Virtual Private Networks) entscheidend.
+Das Extensible Authentication Protocol (EAP) ist ein Standard, der von mehreren Systemkomponenten unterstützt wird. EAP ist entscheidend für den Schutz der Sicherheit von drahtlos (802.1X) und kabelgebundenen LANs, DFÜ und virtuellen privaten Netzwerken (VPNs).
 
 ## <a name="where-applicable"></a>Anwendungsbereich
 
-EAP verbessert frühere Authentifizierungsprotokolle, wie z. b. das Kennwort Authentication Protocol (PAP) und das Challenge Handshake Authentication-Protokoll (CHAP).
+EAP verbessert frühere Authentifizierungsprotokolle wie PASSWORD Authentication Protocol (PAP) und Challenge Handshake Authentication Protocol (CHAP).
 
 Informationen zur Entwicklung neuer EAP-Methoden finden Sie unter [Extensible Authentication Protocol Host](../eaphost/portal.md).
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Die EAP-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Programmierer sollten mit den Netzwerk Konzepten vertraut sein.
+Die EAP-API ist für die Verwendung durch C/C++-Programmierer konzipiert. Programmierer sollten mit Netzwerkkonzepten vertraut sein.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
-EAP wird auf Client-und Server Computern unter Windows 2000 und höher unterstützt. EAP wird auch auf Computern unter Windows 2000 Server und höher unterstützt, wenn der Internet Authentifizierungsdienst (IAS) ausgeführt wird. Weitere Informationen zu unterstützten Betriebssystemen finden Sie im Abschnitt "Anforderungen" in der-Dokumentation.
+EAP wird auf Client- und Servercomputern unterstützt, die auf Windows 2000 und höher ausgeführt werden. EAP wird auch auf Computern unterstützt, die auf Windows Server 2000 und höher ausgeführt werden, wenn sie den Internetauthentifizierungsdienst (INTERNET Authentication Service, IAS) ausführen. Weitere Informationen zu unterstützten Betriebssystemen finden Sie im Abschnitt Anforderungen in der Dokumentation.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,7 +43,7 @@ EAP wird auf Client-und Server Computern unter Windows 2000 und höher unterstü
 
 </dt> <dt>
 
-[RAS-Dienst](/windows/desktop/RRAS/remote-access-start-page)
+[Remotezugriffsdienst](/windows/desktop/RRAS/remote-access-start-page)
 </dt> <dt>
 
 
@@ -61,9 +61,9 @@ EAP wird auf Client-und Server Computern unter Windows 2000 und höher unterstü
 
 </dt> <dt>
 
-[Extensible Authentication-Protokoll Referenz](extensible-authentication-protocol-reference.md)
+[Extensible Authentication-Protokollreferenz](extensible-authentication-protocol-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

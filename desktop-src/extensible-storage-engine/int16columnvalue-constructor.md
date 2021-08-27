@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Int16ColumnValue-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: Int16ColumnValue-Konstruktor'
 title: Int16ColumnValue-Konstruktor
 TOCTitle: 'Int16ColumnValue constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Int16ColumnValue.#ctor
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7e4642dae6a15852d720022b1fc4804f0fb54dd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25d5fd4a9563f3f658d50a3db8070e69e2d41383e36f27f80a0c5e7750f51ec2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218604"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063670"
 ---
 # <a name="int16columnvalue-constructor"></a>Int16ColumnValue-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,10 +52,10 @@ public Int16ColumnValue()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Int16ColumnValue-Klasse](./int16columnvalue-class.md)
 
 [Int16ColumnValue-Member](./int16columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

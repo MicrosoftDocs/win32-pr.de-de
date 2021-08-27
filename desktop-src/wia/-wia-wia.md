@@ -1,7 +1,7 @@
 ---
-description: Das WIA-Objekt ist der Einstiegspunkt für alle WIA-Skriptfunktionen (Windows Image Acquisition).
+description: Das Wia-Objekt ist der Einstiegspunkt für alle WIA-Skriptfunktionen (Windows Image Acquisition).
 ms.assetid: 1905e344-32cc-41ec-885f-bfabd8edd419
-title: WIA-Objekt
+title: Wia-Objekt
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,25 +13,25 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 3ab1a9d150eebe77537e18aebc8ab1a3e342099e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38dc5f7ac4440320827e009a7fd38dd6554ceb70
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129380"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469617"
 ---
-# <a name="wia-object"></a>WIA-Objekt
+# <a name="wia-object"></a>Wia-Objekt
 
-Das **WIA** -Objekt ist der Einstiegspunkt für alle WIA-Skriptfunktionen (Windows Image Acquisition). Jede Anwendung, die das WIA-Skript Modell verwendet, muss ein [**safewia**](-wia-safewia.md) -oder **WIA** -Objekt erstellen. Verwenden Sie dieses Objekt zum Auflisten und Erstellen von Geräten sowie zum Empfangen von Benachrichtigungen über Hardware Ereignisse.
+Das **Wia-Objekt** ist der Einstiegspunkt für alle WIA-Skriptfunktionen (Windows Image Acquisition). Jede Anwendung, die das WIA-Skriptmodell verwendet, muss ein [**SafeWia-**](-wia-safewia.md) oder **Wia-Objekt** erstellen. Verwenden Sie dieses Objekt, um Geräte aufzuzählen und zu erstellen und Benachrichtigungen über Hardwareereignisse zu empfangen.
 
 > [!Note]  
-> Dieses Objekt ist für die Skripterstellung nicht sicher. Eine Version dieses Objekts, die für die Skripterstellung sicher ist, finden Sie unter [**safewia**](-wia-safewia.md).
+> Dieses Objekt ist für Skripts nicht sicher. Eine Version dieses Objekts, die für Skripts sicher ist, finden Sie unter [**SafeWia.**](-wia-safewia.md)
 
  
 
 ## <a name="members"></a>Member
 
-Das **WIA** -Objekt verfügt über diese Typen von Membern:
+Das **Wia-Objekt** verfügt über diese Typen von Membern:
 
 -   [Ereignisse](#events)
 -   [Methoden](#methods)
@@ -39,15 +39,15 @@ Das **WIA** -Objekt verfügt über diese Typen von Membern:
 
 ### <a name="events"></a>Ereignisse
 
-Das **WIA** -Objekt enthält diese Ereignisse.
+Das **Wia-Objekt** verfügt über diese Ereignisse.
 
 
 
 | Ereignis                                                                 | BESCHREIBUNG                                                                  |
 |:----------------------------------------------------------------------|:-----------------------------------------------------------------------------|
-| [**Onde viceconnected**](-wia--iwiaevents-ondeviceconnected.md)       | Das Ereignis tritt auf, wenn ein neues WIA-Hardware Gerät verbunden ist.<br/>    |
-| [**Ondevicegetrennte**](-wia--iwiaevents-ondevicedisconnected.md) | Das Ereignis tritt auf, wenn ein neues WIA-Hardware Gerät getrennt wird.<br/> |
-| [**Ontransfercomplete**](-wia--iwiaevents-ontransfercomplete.md)     | Das Ereignis tritt auf, wenn eine Datenübertragung erfolgreich abgeschlossen wurde.<br/> |
+| [**OnDeviceConnected**](-wia--iwiaevents-ondeviceconnected.md)       | Das Ereignis tritt auf, wenn ein neues WIA-Hardwaregerät verbunden ist.<br/>    |
+| [**OnDeviceDisconnected**](-wia--iwiaevents-ondevicedisconnected.md) | Das Ereignis tritt auf, wenn ein neues WIA-Hardwaregerät getrennt wird.<br/> |
+| [**OnTransferComplete**](-wia--iwiaevents-ontransfercomplete.md)     | Das Ereignis tritt auf, wenn eine Datenübertragung erfolgreich abgeschlossen wurde.<br/> |
 
 
 
@@ -55,13 +55,13 @@ Das **WIA** -Objekt enthält diese Ereignisse.
 
 ### <a name="methods"></a>Methoden
 
-Das **WIA** -Objekt verfügt über diese Methoden.
+Das **Wia-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                             | BESCHREIBUNG                                                                                                                                                                                                |
 |:-----------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Stelle**](-wia-iwia-create.md) | Die [**Create**](-wia-iwia-create.md) -Methode des **WIA** -Objekts stellt eine Verbindung mit dem angegebenen WIA-Gerät her und gibt ein [**Element**](-wia-item.md) Objekt zurück, das das Gerät darstellt.<br/> |
+| [**Erstellen**](-wia-iwia-create.md) | Die [**Create-Methode**](-wia-iwia-create.md) des **Wia-Objekts** stellt eine Verbindung mit dem angegebenen WIA-Gerät her und gibt ein [**Item-Objekt**](-wia-item.md) zurück, das das Gerät darstellt.<br/> |
 
 
 
@@ -69,36 +69,15 @@ Das **WIA** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **WIA** -Objekt verfügt über diese Eigenschaften.
+Das **Wia-Objekt** verfügt über diese Eigenschaften.
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Eigenschaft</th>
-<th style="text-align: left;">Zugriffstyp</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="-wia-iwia-devices.md"><strong>Geräte</strong></a><br/></td>
-<td style="text-align: left;">Schreibgeschützt<br/></td>
-<td style="text-align: left;">Sammlung von " <a href="-wia-deviceinfo.md"><strong>de viceinfo</strong></a> "-Objekten, die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt. <br/>
-<blockquote>
-[!Note]<br />
-Diese Auflistung ist 0-basiert.
-</blockquote>
-<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Eigenschaft | Zugriffstyp | BESCHREIBUNG | 
+|----------|-------------|-------------|
+| <a href="-wia-iwia-devices.md"><strong>Geräte</strong></a><br /> | Schreibgeschützt<br /> | Sammlung von <a href="-wia-deviceinfo.md"><strong>DeviceInfo-Objekten,</strong></a> die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt. <br /><blockquote>[!Note]<br />Diese Auflistung basiert auf 0.</blockquote><br /> | 
+
 
 
 
@@ -110,10 +89,10 @@ Diese Auflistung ist 0-basiert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
-| IID<br/>                      | CLSID- \_ WIA<br/>                                                                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
+| IID<br/>                      | CLSID \_ Wia<br/>                                                                                         |
 
 
 

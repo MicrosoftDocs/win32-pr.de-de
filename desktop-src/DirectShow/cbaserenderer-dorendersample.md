@@ -1,7 +1,7 @@
 ---
-description: Die dorendersample-Methode rendert ein Beispiel.
+description: Die DoRenderSample-Methode rendert ein Beispiel.
 ms.assetid: cf06192c-44c0-4d88-a20e-6501ea48cbfd
-title: Cbaserderderer. dorendersample-Methode (renbase. h)
+title: CBaseRenderer.DoRenderSample-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 935fd7b92cef5d51056b2eb2daa9d2fb775647b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ef91e7ad27d008f5dfdb83e5642ecba8ec68bc424824dca9c8aa068ec055f24f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076430"
 ---
-# <a name="cbaserendererdorendersample-method"></a>Cbaserderderer. dorendersample-Methode
+# <a name="cbaserendererdorendersample-method"></a>CBaseRenderer.DoRenderSample-Methode
 
-Die- `DoRenderSample` Methode rendert ein Beispiel.
+Die `DoRenderSample` -Methode rendert ein Beispiel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ virtual HRESULT DoRenderSample(
 
 <dl> <dt>
 
-*pmediasample* 
+*pMediaSample* 
 </dt> <dd>
 
-Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Beispiels.
+Zeiger auf die [**IMediaSample-Schnittstelle des**](/windows/desktop/api/Strmif/nn-strmif-imediasample) Beispiels.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss von der abgeleiteten Klasse implementiert werden. Das Verhalten hängt vollständig von dem implementierten Filtertyp ab. Ein Videorenderer beispielsweise würde das Video Bild zeichnen, das im Beispiel enthalten ist.
+Die abgeleitete Klasse muss diese Methode implementieren. Das Verhalten hängt vollständig vom Typ des implementierten Filters ab. Ein Videorenderer würde z. B. das im Beispiel enthaltene Videobild zeichnen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode muss von der abgeleiteten Klasse implementiert werden. Das Verhalt
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Die Methode "kreateinzustancefrompropertydata" der MicrosoftDNS_WINSType-Klasse
-description: Die Methode "kreateinstancefrompropertydata" instanziiert einen WINS-Ressourcen Eintrag (Windows Internet Name Service).
+title: CreateInstanceFromPropertyData-Methode der MicrosoftDNS_WINSType-Klasse
+description: Die CreateInstanceFromPropertyData-Methode instanziiert einen Windows WINS-Ressourceneintrag (Internet Name Service).
 ms.assetid: 0b41a6a5-0bb1-467b-9089-2c721d521887
 keywords:
-- Methode "samateinzustancefrompropertydata" (DNS)
-- Methode "-DNS", "MicrosoftDNS_WINSType
-- DNS-MicrosoftDNS_WINSType Klasse, Methode "Methode"
+- CreateInstanceFromPropertyData-Methode DNS
+- CreateInstanceFromPropertyData-Methode DNS, MicrosoftDNS_WINSType-Klasse
+- MicrosoftDNS_WINSType-Klasse DNS, CreateInstanceFromPropertyData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf584bd34f59391a49fd5f7ec13cb49e18ef68fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92f39b360c29ca859c0d0fd0188f0b065dec58293207c27e0a0267572472aabe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077050"
 ---
-# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_winstype-class"></a>Methode "kreateinzustancefrompropertydata" der MicrosoftDNS- \_ winstype-Klasse
+# <a name="createinstancefrompropertydata-method-of-the-microsoftdns_winstype-class"></a>CreateInstanceFromPropertyData-Methode der MicrosoftDNS \_ WINSType-Klasse
 
-Die Methode " **kreateinstancefrompropertydata** " instanziiert einen WINS-Ressourcen Eintrag (Windows Internet Name Service).
+Die **CreateInstanceFromPropertyData-Methode** instanziiert einen Windows WINS-Ressourceneintrag (Internet Name Service).
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,31 +51,31 @@ void CreateInstanceFromPropertyData(
 
 <dl> <dt>
 
-*Dnsservername* \[ in\]
+*DnsServerName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name oder die IP-Adresse des DNS-Servers, der diesen RR enthält.
+FQDN oder IP-Adresse des DNS-Servers, der diese RR enthält.
 
 </dd> <dt>
 
-*Containername* \[ in\]
+*ContainerName* \[ In\]
 </dt> <dd>
 
-Der Name des Containers für die Zone, den Cache oder die roothints-Instanz, die diese RR enthält.
+Name des Containers für die Zone, den Cache oder die RootHints-Instanz, die diese RR enthält.
 
 </dd> <dt>
 
-Besitzer *Name* \[ in\]
+*OwnerName* \[ In\]
 </dt> <dd>
 
-Der Besitzer Name für die RR.
+Besitzername für die RR.
 
 </dd> <dt>
 
-*Recordclass* \[ in, optional\]
+*RecordClass* \[ in, optional\]
 </dt> <dd>
 
-Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
+Klasse der RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 
 
@@ -83,7 +83,7 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 |------------------------------------------------------------------------------------------------------|--------------------------|
 | <span id="1"></span><dl> <dt>**1**</dt> </dl> | IN (Internet)<br/> |
 | <span id="2"></span><dl> <dt>**2**</dt> </dl> | CS (CSNET)<br/>    |
-| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (Chaos)<br/>    |
+| <span id="3"></span><dl> <dt>**3**</dt> </dl> | CH (CHAOS)<br/>    |
 | <span id="4"></span><dl> <dt>**4**</dt> </dl> | HS (Hesiod)<br/>   |
 
 
@@ -92,24 +92,24 @@ Die Klasse von RR. Der Standardwert ist 1. Die folgenden Werte sind gültig.
 
 </dd> <dt>
 
-Gültigkeitsdauer  \[ in, optional\]
+*Gültigkeitsdauer* \[ in, optional\]
 </dt> <dd>
 
-Zeit (in Sekunden), die der RR von einem DNS-Resolver zwischengespeichert werden kann.
+Zeit in Sekunden, in der die RR von einem DNS-Resolver zwischengespeichert werden kann.
 
 </dd> <dt>
 
-*Mappingflag* \[ in\]
+*MappingFlag* \[ In\]
 </dt> <dd>
 
-WINS-ZuordnungsFlag, das angibt, ob der Datensatz in die Zonen Replikation eingeschlossen werden muss. Sie kann nur zwei Werte aufweisen: 0x80000000 und 0x00010000 bis, die den Replikations-und No-Replication-Flags (local Record) entsprechen. Die folgenden Werte sind gültig.
+WINS-Zuordnungsflag, das angibt, ob der Datensatz in die Zonenreplikation eingeschlossen werden muss. Sie kann nur zwei Werte aufweisen: 0x80000000 und 0x00010000 entsprechend den Replikationsflags bzw. Flags ohne Replikation (lokaler Datensatz). Die folgenden Werte sind gültig.
 
 
 
 | Wert                                                                                                                                               | Bedeutung                                       |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | <span id="0x80000000"></span><span id="0X80000000"></span><dl> <dt>**0x80000000**</dt> </dl> | Replikationsflag<br/>                   |
-| <span id="0x00010000"></span><span id="0X00010000"></span><dl> <dt>**0x00010000**</dt> </dl> | Flag "keine Replikation (lokaler Datensatz)"<br/> |
+| <span id="0x00010000"></span><span id="0X00010000"></span><dl> <dt>**0x00010000**</dt> </dl> | Flag "No-Replication (local record)" (Keine Replikation (lokaler Datensatz))<br/> |
 
 
 
@@ -117,31 +117,31 @@ WINS-ZuordnungsFlag, das angibt, ob der Datensatz in die Zonen Replikation einge
 
 </dd> <dt>
 
-*Lookuptimeout* \[ in\]
+*LookupTimeout* \[ In\]
 </dt> <dd>
 
-Zeit (in Sekunden), die ein DNS-Server versucht, mithilfe von WINS eine Auflösung durchsuchen zu können.
+Zeit in Sekunden, in der ein DNS-Server versucht, die Auflösung mithilfe der WINS-Suche zu lösen.
 
 </dd> <dt>
 
-*Cachetimeout* \[ in\]
+*CacheTimeout* \[ In\]
 </dt> <dd>
 
-Zeit in Sekunden, für die ein DNS-Server mit WINS-Suche die Antwort des WINS-Servers zwischenspeichern kann.
+Zeit in Sekunden, in der ein DNS-Server, der WINS Look up verwendet, die Antwort des WINS-Servers zwischenspeichern kann.
 
 </dd> <dt>
 
-*Windows Server* \[ in\]
+*WinsServers* \[ In\]
 </dt> <dd>
 
-Liste mit durch Trennzeichen getrennten IP-Adressen von WINS-Servern, die in WINS-suchen verwendet werden.
+Liste der durch Kommas getrennten IP-Adressen von WINS-Servern, die in WINS-Suchläufen verwendet werden.
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
-Verweis auf das neue-Objekt.
+Verweis auf das neue Objekt.
 
 </dd> </dl>
 
@@ -149,7 +149,7 @@ Verweis auf das neue-Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -157,8 +157,8 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-MicrosoftDNS<br/>                                                          |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -166,13 +166,13 @@ Diese Methode gibt keinen Wert zurück.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ winstype**](microsoftdns-winstype.md)
+[**MicrosoftDNS \_ WINSType**](microsoftdns-winstype.md)
 </dt> <dt>
 
-[**Modify-Methode der MicrosoftDNS- \_ winstype-Klasse**](microsoftdns-winstype-modify.md)
+[**Modify-Methode der MicrosoftDNS \_ WINSType-Klasse**](microsoftdns-winstype-modify.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**\_MicrosoftDNS-RessourceRecord**](microsoftdns-resourcerecord.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: CB_SETMINVISIBLE Meldung (kommstrg. h)
-description: Eine Anwendung sendet eine CB \_ setminvisible-Nachricht, um die Mindestanzahl sichtbarer Elemente in der Dropdown Liste eines Kombinations Felds festzulegen.
+title: CB_SETMINVISIBLE (Commctrl.h)
+description: Eine Anwendung sendet eine CB SETMINVISIBLE-Nachricht, um die Mindestanzahl von sichtbaren Elementen in der \_ Dropdownliste eines Kombinationsfelds festlegen.
 ms.assetid: 3cf9e488-50ce-4825-acf0-4e665d074f9e
 keywords:
-- Windows-Steuerelemente für CB_SETMINVISIBLE Meldung
+- CB_SETMINVISIBLE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac88155424c0b1ecf6c91f398e7a9a2d437eff90
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7a9790c43141ef836c1dec86304f260b0490854b593b7005b594d2a718332296
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102986"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063320"
 ---
-# <a name="cb_setminvisible-message"></a>CB- \_ setminvisible-Nachricht
+# <a name="cb_setminvisible-message"></a>CB \_ SETMINVISIBLE-Nachricht
 
-Eine Anwendung sendet eine **CB \_ setminvisible** -Nachricht, um die Mindestanzahl sichtbarer Elemente in der Dropdown Liste eines Kombinations Felds festzulegen.
+Eine Anwendung sendet eine **CB \_ SETMINVISIBLE-Nachricht,** um die Mindestanzahl von sichtbaren Elementen in der Dropdownliste eines Kombinationsfelds zu festlegen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,28 +32,28 @@ Eine Anwendung sendet eine **CB \_ setminvisible** -Nachricht, um die Mindestanz
 *wParam* 
 </dt> <dd>
 
-Gibt die Mindestanzahl von sichtbaren Elementen an.
+Gibt die Mindestanzahl sichtbarer Elemente an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, ist der Rückgabewert " **true**". Andernfalls ist der Rückgabewert **false**.
+Wenn die Nachricht erfolgreich ist, ist der Rückgabewert **TRUE.** Andernfalls ist der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anzahl der Elemente in der Dropdown Liste den minimalen Wert überschreitet, verwendet das Kombinations Feld eine Schiebe Leiste. Standardmäßig ist 30 die Mindestanzahl sichtbarer Elemente.
+Wenn die Anzahl der Elemente in der Dropdownliste größer als das Minimum ist, verwendet das Kombinationsfeld eine Bildlaufleiste. Standardmäßig ist 30 die Mindestanzahl der sichtbaren Elemente.
 
-Diese Meldung wird ignoriert, wenn das Kombinations Feld-Steuerelement den Stil [**CBS \_ nointegralheight**](combo-box-styles.md)hat.
+Diese Meldung wird ignoriert, wenn das Kombinationsfeld-Steuerelement den Stil [**CBS \_ NOINTEGRALHEIGHT auf hat.**](combo-box-styles.md)
 
-Um **CB \_ setminvisible** verwenden zu können, muss die Anwendung comctl32.dll Version 6 im Manifest angeben. Weitere Informationen finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+Um **CB \_ SETMINVISIBLE verwenden zu** können, muss die Anwendung comctl32.dll 6 im Manifest angeben. Weitere Informationen finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,9 +61,9 @@ Um **CB \_ setminvisible** verwenden zu können, muss die Anwendung comctl32.dll
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -71,13 +71,13 @@ Um **CB \_ setminvisible** verwenden zu können, muss die Anwendung comctl32.dll
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ getminvisible**](cb-getminvisible.md)
+[**CB \_ GETMINVISIBLE**](cb-getminvisible.md)
 </dt> <dt>
 
-[**ComboBox \_ setminvisible**](/windows/desktop/api/Commctrl/nf-commctrl-combobox_setminvisible)
+[**ComboBox \_ SetMinVisible**](/windows/desktop/api/Commctrl/nf-commctrl-combobox_setminvisible)
 </dt> </dl>
 
  

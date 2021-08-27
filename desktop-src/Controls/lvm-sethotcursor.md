@@ -1,9 +1,9 @@
 ---
-title: LVM_SETHOTCURSOR Meldung (kommstrg. h)
-description: Legt den hcursor-Wert fest, den das Listenansicht-Steuerelement verwendet, wenn sich der Zeiger über einem Element befindet, während die Hot-Überwachung aktiviert ist.
+title: LVM_SETHOTCURSOR Meldung (Commctrl.h)
+description: Legt den HCURSOR-Wert fest, den das Listenansichtssteuerelement verwendet, wenn sich der Zeiger über einem Element befindet, während die heiße Nachverfolgung aktiviert ist.
 ms.assetid: e3ff8608-9389-4167-839b-ecc2be01bb64
 keywords:
-- Windows-Steuerelemente für LVM_SETHOTCURSOR Meldung
+- LVM_SETHOTCURSOR Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e743f74eda3b59f04f6f4793b47d76da3bab881
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3407c5d8b53483d3a639fc40959768b3fa8eea0e7b439ab8871d36346b7079d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103739945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077250"
 ---
-# <a name="lvm_sethotcursor-message"></a>LVM- \_ messagecursor-Nachricht
+# <a name="lvm_sethotcursor-message"></a>LVM \_ SETHOTCURSOR-Nachricht
 
-Legt den hcursor-Wert fest, den das Listenansicht-Steuerelement verwendet, wenn sich der Zeiger über einem Element befindet, während die Hot-Überwachung aktiviert ist. Sie können diese Nachricht explizit senden oder das [**ListView- \_ prätcursor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_sethotcursor) -Makro verwenden. Um zu überprüfen, ob Hot Tracking aktiviert ist, aufrufen Sie [**SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa).
+Legt den HCURSOR-Wert fest, den das Listenansichtssteuerelement verwendet, wenn sich der Zeiger über einem Element befindet, während die heiße Nachverfolgung aktiviert ist. Sie können diese Nachricht explizit senden oder das [**\_ ListView-Makro SetHotCursor**](/windows/desktop/api/Commctrl/nf-commctrl-listview_sethotcursor) verwenden. Um zu überprüfen, ob hot tracking aktiviert ist, rufen [**Sie SystemParametersInfo**](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa)auf.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,27 +35,27 @@ Legt den hcursor-Wert fest, den das Listenansicht-Steuerelement verwendet, wenn 
 *lParam* 
 </dt> <dd>
 
-Handle für den Cursor, der festgelegt werden soll.
+Handle für den festzulegenden Cursor.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen hcursor-Wert zurück, der der vorherige Hot-Cursor ist.
+Gibt einen HCURSOR-Wert zurück, der der vorherige Hotcursor ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Listenansicht-Steuerelement verwendet die Hot-Tracking-und Hover-Auswahl, wenn der [**LVS \_ Ex \_ trackselect**](extended-list-view-styles.md) -Stil festgelegt ist.
+Ein Listenansichtssteuerelement verwendet die heiße Nachverfolgung und die Auswahl mit dem Mauszeiger, wenn der [**LVS \_ EX \_ TRACKSELECT-Stil**](extended-list-view-styles.md) festgelegt ist.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

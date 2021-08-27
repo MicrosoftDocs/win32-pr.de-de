@@ -1,7 +1,7 @@
 ---
 description: Die ProvideAssembly-Methode des Installer-Objekts gibt den installierten Pfad einer Assembly zurück.
 ms.assetid: c99b1934-3834-478b-ab1d-7e7583dba779
-title: Installer::P rovideassembly-Methode
+title: Installer::P rovideAssembly-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: f81c9ab9b43b814307242cc828326b2b7e7d79fa
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 45d5c2d6b64936b034d859caddf72ddaaf6fba77451d066205d7f394200311f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371300"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105210"
 ---
-# <a name="installerprovideassembly-method"></a>Installer::P rovideassembly-Methode
+# <a name="installerprovideassembly-method"></a>Installer::P rovideAssembly-Methode
 
-Die **ProvideAssembly** -Methode des [**Installer**](installer-object.md) -Objekts gibt den installierten Pfad einer Assembly zurück.
+Die **ProvideAssembly-Methode** des [**Installer-Objekts**](installer-object.md) gibt den installierten Pfad einer Assembly zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ retVal = .ProvideAssembly(
 
 <dl> <dt>
 
-*Stadtverordneten* 
+*Versammlung* 
 </dt> <dd>
 
 Der starke Name der installierten Assembly, die abgefragt werden soll.
@@ -52,11 +52,11 @@ Der starke Name der installierten Assembly, die abgefragt werden soll.
 *appContext* 
 </dt> <dd>
 
-Legen Sie für globale Assemblys auf NULL fest. Legen Sie für private Assemblys *appContext* auf den vollständigen Pfad der Anwendungs Konfigurationsdatei oder auf den vollständigen Pfad der ausführbaren Datei der Anwendung fest, in der die Assembly als privat erstellt wurde.
+Legen Sie für globale Assemblys auf NULL fest. Legen Sie *appContext* für private Assemblys auf den vollständigen Pfad der Anwendungskonfigurationsdatei oder auf den vollständigen Pfad der ausführbaren Datei der Anwendung fest, für die die Assembly als privat festgelegt wurde.
 
 </dd> <dt>
 
-*' installmode '* 
+*installMode* 
 </dt> <dd>
 
 Definiert den Installationsmodus. Dieser Parameter kann einen der folgenden Werte annehmen.
@@ -65,11 +65,11 @@ Definiert den Installationsmodus. Dieser Parameter kann einen der folgenden Wert
 
 | Wert                                                                                                                                                                                                                                                                                                                                                                              | Bedeutung                                                                                                                                                                                   |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="msiInstallModeDefault"></span><span id="msiinstallmodedefault"></span><span id="MSIINSTALLMODEDEFAULT"></span><dl> <dt>**msiinstallmodedefault**</dt> <dt>0</dt> </dl>                                                                                                | Geben Sie die Komponente an, und führen Sie jede erforderliche Installation aus, um die Komponente bereitzustellen <br/>                                                                                        |
-| <span id="msiInstallModeExisting"></span><span id="msiinstallmodeexisting"></span><span id="MSIINSTALLMODEEXISTING"></span><dl> <dt>**msiinstallmodevorhandenes**</dt> <dt>-1</dt> </dl>                                                                                           | Geben Sie die Komponente nur dann an, wenn das Feature vorhanden ist. Mit dieser Option wird überprüft, ob die Assembly vorhanden ist.<br/>                                                                            |
-| <span id="msiInstallModeNoDetection"></span><span id="msiinstallmodenodetection"></span><span id="MSIINSTALLMODENODETECTION"></span><dl> <dt>**msiinstallmudenoerkennungs**</dt> <dt>-2</dt> </dl>                                                                               | Geben Sie die Komponente nur dann an, wenn das Feature vorhanden ist. Mit dieser Option wird nicht überprüft, ob die Assembly vorhanden ist.<br/>                                                                        |
-| <span id="msiInstallModeNoSourceResolution"></span><span id="msiinstallmodenosourceresolution"></span><span id="MSIINSTALLMODENOSOURCERESOLUTION"></span><dl> <dt>**msiinstallmudenosourceresolution**</dt> <dt>-3</dt> </dl>                                                   | Stellt die Assembly nur dann bereit, wenn die Assembly lokal installiert ist.<br/>                                                                                                                 |
-| <span id="Combination_of_the_flags_used_by_ReinstallFeature"></span><span id="combination_of_the_flags_used_by_reinstallfeature"></span><span id="COMBINATION_OF_THE_FLAGS_USED_BY_REINSTALLFEATURE"></span><dl> <dt>**Kombination der von [ **reinstallfeature** verwendeten Flags](installer-reinstallfeature.md)**</dt> </dl> | Ruft die [**reinstallfeature**](installer-reinstallfeature.md) -Methode auf, um die Funktion mithilfe dieses Parameters für den *REINSTALLMODE* erneut zu installieren, und gibt dann den Assemblypfad zurück.<br/> |
+| <span id="msiInstallModeDefault"></span><span id="msiinstallmodedefault"></span><span id="MSIINSTALLMODEDEFAULT"></span><dl> <dt>**msiInstallModeDefault**</dt> <dt>0</dt> </dl>                                                                                                | Stellen Sie die Komponente bereit, und führen Sie alle installationen aus, die für die Bereitstellung der Komponente erforderlich sind. <br/>                                                                                        |
+| <span id="msiInstallModeExisting"></span><span id="msiinstallmodeexisting"></span><span id="MSIINSTALLMODEEXISTING"></span><dl> <dt>**msiInstallModeExisting**</dt> <dt>-1</dt> </dl>                                                                                           | Geben Sie die Komponente nur an, wenn das Feature vorhanden ist. Mit dieser Option wird überprüft, ob die Assembly vorhanden ist.<br/>                                                                            |
+| <span id="msiInstallModeNoDetection"></span><span id="msiinstallmodenodetection"></span><span id="MSIINSTALLMODENODETECTION"></span><dl> <dt>**msiInstallModeNoDetection**</dt> <dt>-2</dt> </dl>                                                                               | Geben Sie die Komponente nur an, wenn das Feature vorhanden ist. Mit dieser Option wird nicht überprüft, ob die Assembly vorhanden ist.<br/>                                                                        |
+| <span id="msiInstallModeNoSourceResolution"></span><span id="msiinstallmodenosourceresolution"></span><span id="MSIINSTALLMODENOSOURCERESOLUTION"></span><dl> <dt>**msiInstallModeNoSourceResolution**</dt> <dt>-3</dt> </dl>                                                   | Stellt die Assembly nur bereit, wenn die Assembly lokal installiert ist.<br/>                                                                                                                 |
+| <span id="Combination_of_the_flags_used_by_ReinstallFeature"></span><span id="combination_of_the_flags_used_by_reinstallfeature"></span><span id="COMBINATION_OF_THE_FLAGS_USED_BY_REINSTALLFEATURE"></span><dl> <dt>**Kombination der von [ **ReinstallFeature** verwendeten Flags](installer-reinstallfeature.md)**</dt> </dl> | Ruft die [**ReinstallFeature-Methode**](installer-reinstallfeature.md) auf, um das Feature mit diesem Parameter für *ReinstallMode* neu zu installieren, und gibt dann den Assemblypfad zurück.<br/> |
 
 
 
@@ -77,7 +77,7 @@ Definiert den Installationsmodus. Dieser Parameter kann einen der folgenden Wert
 
 </dd> <dt>
 
-*assemblyInfo* 
+*Assemblyinfo* 
 </dt> <dd>
 
 Assemblyinformationen und Assemblytyp. Legen Sie auf einen der folgenden Werte fest.
@@ -86,8 +86,8 @@ Assemblyinformationen und Assemblytyp. Legen Sie auf einen der folgenden Werte f
 
 | Wert                                                                                                                                                                                                                                                                                       | Bedeutung                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|
-| <span id="msiProvideAssemblyNet"></span><span id="msiprovideassemblynet"></span><span id="MSIPROVIDEASSEMBLYNET"></span><dl> <dt>**msiprovide assemblynet**</dt> <dt>0</dt> </dl>         | Eine .NET-Assembly.<br/>               |
-| <span id="msiProvideAssemblyWin32"></span><span id="msiprovideassemblywin32"></span><span id="MSIPROVIDEASSEMBLYWIN32"></span><dl> <dt>**msiProvideAssemblyWin32**</dt> <dt>1</dt> </dl> | Eine parallele Win32-Assembly.<br/> |
+| <span id="msiProvideAssemblyNet"></span><span id="msiprovideassemblynet"></span><span id="MSIPROVIDEASSEMBLYNET"></span><dl> <dt>**msiProvideAssemblyNet**</dt> <dt>0</dt> </dl>         | Eine .NET-Assembly.<br/>               |
+| <span id="msiProvideAssemblyWin32"></span><span id="msiprovideassemblywin32"></span><span id="MSIPROVIDEASSEMBLYWIN32"></span><dl> <dt>**msiProvideAssemblyWin32**</dt> <dt>1</dt> </dl> | Eine win32-seitige Assembly.<br/> |
 
 
 
@@ -99,13 +99,13 @@ Assemblyinformationen und Assemblytyp. Legen Sie auf einen der folgenden Werte f
 
 Der Pfad zur installierten Assembly.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **ProvideAssembly** -Methode verwendet die [**MsiProvideAssembly**](/windows/desktop/api/Msi/nf-msi-msiprovideassemblya) -Funktion.
+Die **ProvideAssembly-Methode** verwendet die [**MsiProvideAssembly-Funktion.**](/windows/desktop/api/Msi/nf-msi-msiprovideassemblya)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispielskript wird die Verwendung der ProvideAssembly-Methode veranschaulicht.
+Das folgende Beispielskript veranschaulicht die Verwendung der ProvideAssembly-Methode.
 
 
 ```VB
@@ -136,9 +136,9 @@ MsgBox Installer.ProvideAssembly("Microsoft.MSXML2,publicKeyToken=""6bd6b9abf345
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 4,5 unter Windows Server 2003 und Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 4.5 auf Windows Server 2003 und Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                           |
-| IID<br/>     | IID \_ iinstaller ist definiert als 000c1090-0000-0000-C000-000000000046<br/>                                                                                                                                                                                |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                                |
 
 
 
@@ -146,10 +146,10 @@ MsgBox Installer.ProvideAssembly("Microsoft.MSXML2,publicKeyToken=""6bd6b9abf345
 
 <dl> <dt>
 
-[**Installationsprogramm**](installer-object.md)
+[**Installer**](installer-object.md)
 </dt> <dt>
 
-[Wird in Windows Installer 3,1 und früheren Versionen nicht unterstützt.](not-supported-in-windows-installer-version-3-1.md)
+[Nicht unterstützt in Windows Installer 3.1 und früheren Versionen](not-supported-in-windows-installer-version-3-1.md)
 </dt> </dl>
 
  

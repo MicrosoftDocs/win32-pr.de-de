@@ -1,36 +1,36 @@
 ---
-description: Der Beispiel-Grabber Filter ist ein Transformations Filter, der zum Erfassen von Medien Beispielen aus einem Stream verwendet werden kann, während diese das Filter Diagramm durchlaufen.
+description: Der Sample Grabber-Filter ist ein Transformationsfilter, der verwendet werden kann, um Medienbeispiele aus einem Stream zu greifen, während sie das Filterdiagramm durchlaufen.
 ms.assetid: ec0e367e-9ef9-4de6-9132-b462c233bc98
-title: Verwenden der Beispiel-Grabber
+title: Verwenden des Beispielgrabbers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d4886c796691e83e02b58ddea129d60d5004c9f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 47318b7bd4dbbad57fb82bec11e0a1293a0284c906c78fc7175d8a758ad477f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083560"
 ---
-# <a name="using-the-sample-grabber"></a>Verwenden der Beispiel-Grabber
+# <a name="using-the-sample-grabber"></a>Verwenden des Beispielgrabbers
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Der [**Beispiel-Grabber**](sample-grabber-filter.md) Filter ist ein Transformations Filter, der zum Erfassen von Medien Beispielen aus einem Stream verwendet werden kann, während diese das Filter Diagramm durchlaufen.
+Der [**Sample Grabber-Filter**](sample-grabber-filter.md) ist ein Transformationsfilter, der verwendet werden kann, um Medienbeispiele aus einem Stream zu greifen, während sie das Filterdiagramm durchlaufen.
 
-Wenn Sie einfach eine Bitmap aus einer Videodatei erfassen möchten, ist es einfacher, das [Media Detector-Objekt (mediadet)](media-detector--mediadet.md) zu verwenden. Ausführliche Informationen finden Sie unter [Erfassen eines Poster-Frames](grabbing-a-poster-frame.md) . Der Beispiel-Grabber ist jedoch flexibler, da er mit nahezu jedem Medientyp funktioniert (siehe [**isamplegrabber:: setmediatype**](isamplegrabber-setmediatype.md) für die wenigen Ausnahmen) und eine größere Kontrolle für die Anwendung bietet.
+Wenn Sie einfach eine Bitmap aus einer Videodatei abrufen möchten, ist es einfacher, das [Media Detector -Objekt (MediaDet)](media-detector--mediadet.md) zu verwenden. Weitere Informationen finden Sie unter [Grabbing a Poster Frame (Greifen](grabbing-a-poster-frame.md) eines Posterrahmens). Der Beispielgrabber ist jedoch flexibler, da er mit nahezu jedem Medientyp funktioniert (einige Ausnahmen finden Sie unter [**ISampleGrabber::SetMediaType),**](isamplegrabber-setmediatype.md) und bietet mehr Kontrolle für die Anwendung.
 
--   [Erstellen des Filter Graph-Managers](#create-the-filter-graph-manager)
--   [Hinzufügen des beispielgrabsteins zum Filter Diagramm](#add-the-sample-grabber-to-the-filter-graph)
+-   [Erstellen des Filter-Graph-Managers](#create-the-filter-graph-manager)
+-   [Hinzufügen des Beispielgrabbers zum Filter Graph](#add-the-sample-grabber-to-the-filter-graph)
 -   [Festlegen des Medientyps](#set-the-media-type)
--   [Erstellen des Filter Diagramms](#build-the-filter-graph)
--   [Ausführen des Diagramms](#run-the-graph)
--   [Holen Sie sich das Beispiel](#grab-the-sample)
--   [Beispiel Code](#example-code)
+-   [Erstellen des filter-Graph](#build-the-filter-graph)
+-   [Ausführen des Graph](#run-the-graph)
+-   [Greifen Sie auf das Beispiel zu.](#grab-the-sample)
+-   [Beispielcode](#example-code)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="create-the-filter-graph-manager"></a>Erstellen des Filter Graph-Managers
+## <a name="create-the-filter-graph-manager"></a>Erstellen des Filter-Graph-Managers
 
-Erstellen Sie zunächst den [Filter Graph-Manager](filter-graph-manager.md) , und Fragen Sie die Schnittstellen [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) und [**imediaeventex**](/windows/desktop/api/Control/nn-control-imediaeventex) ab.
+Erstellen Sie zunächst den [Filter Graph-Manager,](filter-graph-manager.md) und fragen Sie die Schnittstellen [**IMediaControl**](/windows/desktop/api/Control/nn-control-imediacontrol) und [**IMediaEventEx**](/windows/desktop/api/Control/nn-control-imediaeventex) ab.
 
 
 ```C++
@@ -63,9 +63,9 @@ Erstellen Sie zunächst den [Filter Graph-Manager](filter-graph-manager.md) , un
 
 
 
-## <a name="add-the-sample-grabber-to-the-filter-graph"></a>Hinzufügen des beispielgrabsteins zum Filter Diagramm
+## <a name="add-the-sample-grabber-to-the-filter-graph"></a>Hinzufügen des Beispielgrabbers zum Filter Graph
 
-Erstellen Sie eine Instanz des Sample-Grabber Filters und addieren Sie zum Filter Diagramm. Fragen Sie den beispielgrabfilter für die [**isamplegrabber**](isamplegrabber.md) -Schnittstelle ab.
+Erstellen Sie eine Instanz des Beispielgrabberfilters, und fügen Sie dem Filterdiagramm hinzu. Fragen Sie den Sample Grabber-Filter für die [**ISampleGrabber-Schnittstelle**](isamplegrabber.md) ab.
 
 
 ```C++
@@ -100,9 +100,9 @@ Erstellen Sie eine Instanz des Sample-Grabber Filters und addieren Sie zum Filte
 
 ## <a name="set-the-media-type"></a>Festlegen des Medientyps
 
-Wenn Sie die Beispiel-Grabber erstmalig erstellen, hat Sie keinen bevorzugten Medientyp. Dies bedeutet, dass Sie eine Verbindung mit fast jedem Filter im Diagramm herstellen können, aber Sie haben keine Kontrolle über die Art der empfangenen Daten. Bevor Sie den Rest des Diagramms aufbauen, müssen Sie daher einen Medientyp für den beispielgrabber festlegen, indem Sie die [**isamplegrabber:: setmediatype**](isamplegrabber-setmediatype.md) -Methode aufrufen.
+Wenn Sie den Beispielgrabber zum ersten Mal erstellen, hat er keinen bevorzugten Medientyp. Dies bedeutet, dass Sie eine Verbindung mit fast jedem Filter im Diagramm herstellen können, aber Sie haben keine Kontrolle über den Typ der empfangenen Daten. Bevor Sie den Rest des Graphen erstellen, müssen Sie daher einen Medientyp für den Sample Grabber festlegen, indem Sie die [**ISampleGrabber::SetMediaType-Methode**](isamplegrabber-setmediatype.md) aufrufen.
 
-Wenn der Sample Grabber eine Verbindung herstellt, vergleicht dieser den Medientyp mit dem Medientyp, der vom anderen Filter angeboten wird. Die einzigen Felder, die überprüft werden, sind der Haupttyp, der Untertyp und der Formattyp. Für einen dieser Werte bedeutet der Wert GUID \_ NULL, dass "beliebige Werte akzeptieren" angezeigt wird. In den meisten Fällen möchten Sie den Haupttyp und den Untertyp festlegen. Der folgende Code gibt beispielsweise ein unkomprimiertes 24-Bit-RGB-Video an:
+Wenn der Beispielgrabber eine Verbindung herstellt, wird dieser Medientyp mit dem Medientyp verglichen, der vom anderen Filter angeboten wird. Die einzigen Felder, die überprüft werden, sind Haupttyp, Untertyp und Formattyp. Für jede dieser Werte bedeutet der Wert GUID \_ NULL "Accept any value". In den meisten Jahren möchten Sie den Haupttyp und den Untertyp festlegen. Der folgende Code gibt beispielsweise ein nicht komprimiertes 24-Bit-RGB-Video an:
 
 
 ```C++
@@ -120,11 +120,11 @@ Wenn der Sample Grabber eine Verbindung herstellt, vergleicht dieser den Medient
 
 
 
-## <a name="build-the-filter-graph"></a>Erstellen des Filter Diagramms
+## <a name="build-the-filter-graph"></a>Erstellen des filter-Graph
 
-Nun können Sie den Rest des Filter Diagramms erstellen. Da der beispielgrabber nur mithilfe des von Ihnen angegebenen Medientyps eine Verbindung herstellt, können Sie die [intelligenten Verbindungs](intelligent-connect.md) Mechanismen des Filter Graph-Managers nutzen, wenn Sie das Diagramm erstellen.
+Jetzt können Sie den Rest des Filterdiagramms erstellen. Da der Beispielgrabber nur eine Verbindung mit dem angegebenen Medientyp herstellt, können Sie die [Intelligent Verbinden-Mechanismen](intelligent-connect.md) von Filter Graph Manager nutzen, wenn Sie das Diagramm erstellen.
 
-Wenn Sie z. b. nicht komprimierte Videos angegeben haben, können Sie einen Quell Filter mit dem beispielgrabber verbinden, und der Filter Graph-Manager fügt automatisch den Datei Parser und den Decoder hinzu. Im folgenden Beispiel wird die Hilfsfunktion connectfilters verwendet, die unter [Verbinden von zwei Filtern](connect-two-filters.md)aufgeführt ist:
+Wenn Sie beispielsweise unkomprimiertes Video angegeben haben, können Sie einen Quellfilter mit dem Beispielgrabber verbinden, und der Filter Graph Manager fügt automatisch den Dateiparser und den Decoder hinzu. Im folgenden Beispiel wird die ConnectFilters-Hilfsfunktion verwendet, die in [Verbinden Zwei Filter](connect-two-filters.md)aufgeführt ist:
 
 
 ```C++
@@ -165,9 +165,9 @@ Wenn Sie z. b. nicht komprimierte Videos angegeben haben, können Sie einen Quel
 
 
 
-Der Beispiel Grabber ist ein Transformations Filter, sodass die Ausgabe-PIN mit einem anderen Filter verbunden werden muss. Häufig möchten Sie die Beispiele auch verwerfen, wenn Sie Sie nicht mehr benötigen. Verbinden Sie in diesem Fall den Beispiel-Grabber mit dem [**Filter NULL-Renderer**](null-renderer-filter.md), der die empfangenen Daten verwirft.
+Der Beispielgrabber ist ein Transformationsfilter, sodass der Ausgabepin mit einem anderen Filter verbunden werden muss. Häufig möchten Sie die Beispiele einfach verwerfen, nachdem Sie damit fertig sind. Verbinden Sie in diesem Fall den Sample Grabber mit dem [**NULL-Rendererfilter,**](null-renderer-filter.md)der die empfangenen Daten verwirft.
 
-Im folgenden Beispiel wird die Beispiel-Grabber mit dem NULL-rendererfilter verbunden:
+Im folgenden Beispiel wird der Sample Grabber mit dem Filter NULL-Renderer verbunden:
 
 
 ```C++
@@ -198,22 +198,22 @@ Im folgenden Beispiel wird die Beispiel-Grabber mit dem NULL-rendererfilter verb
 
 
 
-Beachten Sie, dass das Platzieren des Beispiel Grabsteins zwischen einem Video Decoder und dem Videorenderer die Renderingleistung erheblich beeinträchtigen kann. Der Beispiel Grabber ist ein übergreifendes Filter, d. h. der Ausgabepuffer ist mit dem Eingabepuffer identisch. Beim Video Rendering befindet sich der Ausgabepuffer wahrscheinlich auf der Grafikkarte, bei der Lesevorgänge im Vergleich zu Lesevorgängen im Hauptspeicher wesentlich langsamer sind.
+Beachten Sie, dass das Platzieren des Beispielgrabbers zwischen einem Videodecoder und dem Videorenderer die Renderingleistung erheblich beeinträchtigen kann. Der Beispielgrabber ist ein trans-in-place-Filter, was bedeutet, dass der Ausgabepuffer mit dem Eingabepuffer identisch ist. Beim Videorendering befindet sich der Ausgabepuffer wahrscheinlich auf der Grafikkarte, wo Lesevorgänge im Vergleich zu Lesevorgängen im Hauptspeicher viel langsamer sind.
 
-## <a name="run-the-graph"></a>Ausführen des Diagramms
+## <a name="run-the-graph"></a>Ausführen des Graph
 
-Der Beispiel Grabber funktioniert in einem von zwei Modi:
+Der Beispielgrabber arbeitet in einem von zwei Modi:
 
--   Der Puffer Modus erstellt eine Kopie jeder Stichprobe, bevor das Beispiel für die downstreamausgabe bereitgestellt wird.
--   Der Rückruf Modus Ruft eine Anwendungs definierte Rückruffunktion für jedes Beispiel auf.
+-   Der Puffermodus erstellt eine Kopie jedes Beispiels, bevor das Beispiel nachgeschaltet wird.
+-   Der Rückrufmodus ruft eine anwendungsdefinierte Rückruffunktion für jedes Beispiel auf.
 
-In diesem Artikel wird der Puffer Modus beschrieben. (Bevor Sie den Rückruf Modus verwenden, beachten Sie, dass die Rückruffunktion sehr eingeschränkt sein muss. Andernfalls kann die Leistung drastisch reduziert werden, und es kann sogar zu Deadlocks führen. Weitere Informationen finden Sie unter [**isamplegrabber:: SetCallback**](isamplegrabber-setcallback.md).) Um den Puffer Modus zu aktivieren, müssen Sie die [**isamplegrabber:: setbuffersamples**](isamplegrabber-setbuffersamples.md) -Methode mit dem Wert " **true**" aufrufen.
+In diesem Artikel wird der Puffermodus beschrieben. (Beachten Sie vor der Verwendung des Rückrufmodus, dass die Rückruffunktion recht eingeschränkt sein muss. Andernfalls kann dies die Leistung drastisch reduzieren oder sogar Deadlocks verursachen. Weitere Informationen finden Sie unter [**ISampleGrabber::SetCallback**](isamplegrabber-setcallback.md).) Um den Puffermodus zu aktivieren, rufen Sie die [**ISampleGrabber::SetBufferSamples-Methode**](isamplegrabber-setbuffersamples.md) mit dem Wert **TRUE** auf.
 
-Optional können Sie die [**isamplegrabber:: setoneshot**](isamplegrabber-setoneshot.md) -Methode mit dem Wert " **true**" aufzurufen. Dies bewirkt, dass der Sample Grabber nach dem Empfang des ersten Medien Beispiels angehalten wird. Dies ist hilfreich, wenn Sie einen einzelnen Frame aus dem Stream ziehen möchten. Suchen Sie nach der gewünschten Zeit, führen Sie das Diagramm aus, und warten Sie auf das " [**EC \_ Complete**](ec-complete.md) "-Ereignis. Beachten Sie, dass die Ebene der Frame Genauigkeit von der Quelle abhängig ist. Beispielsweise ist das Suchen einer MPEG-Datei oft nicht Frame genau.
+Rufen Sie optional die [**ISampleGrabber::SetOneShot-Methode**](isamplegrabber-setoneshot.md) mit dem Wert **TRUE** auf. Dies bewirkt, dass der Sample Grabber angehalten wird, nachdem er das erste Medienbeispiel empfangen hat. Dies ist hilfreich, wenn Sie einen einzelnen Frame aus dem Stream greifen möchten. Suchen Sie nach der gewünschten Zeit, führen Sie das Diagramm aus, und warten Sie auf das [**EC \_ COMPLETE-Ereignis.**](ec-complete.md) Beachten Sie, dass der Grad der Framegenauigkeit von der Quelle abhängt. Beispielsweise ist die Suche nach einer MPEG-Datei häufig nicht framegenau.
 
-Wenn Sie das Diagramm so schnell wie möglich ausführen möchten, schalten Sie die Diagramm Uhr ein, wie unter [Festlegen der Graph-Uhr](setting-the-graph-clock.md)beschrieben.
+Um das Diagramm so schnell wie möglich auszuführen, drehen Sie die Graphuhr wie unter [Festlegen der Graph Uhr](setting-the-graph-clock.md)beschrieben.
 
-Im folgenden Beispiel werden der One-Shot-Modus und der Puffer Modus aktiviert, das Filter Diagramm ausgeführt und auf den Abschluss gewartet.
+Im folgenden Beispiel werden der Einmalmodus und der Puffermodus aktiviert, das Filterdiagramm ausgeführt und auf den Abschluss gewartet.
 
 
 ```C++
@@ -241,9 +241,9 @@ Im folgenden Beispiel werden der One-Shot-Modus und der Puffer Modus aktiviert, 
 
 
 
-## <a name="grab-the-sample"></a>Holen Sie sich das Beispiel
+## <a name="grab-the-sample"></a>Greifen Sie auf das Beispiel zu.
 
-Im Puffer Modus speichert der Beispiel Grabber eine Kopie jeder Stichprobe. Die Methode [**isamplegrabber:: getcurrentbuffer**](isamplegrabber-getcurrentbuffer.md) kopiert den Puffer in ein Array, das vom Aufrufer zugeordnet wird. Um die Größe des benötigten Arrays zu ermitteln, müssen Sie zuerst **getcurrentbuffer** mit einem **null** -Zeiger für die Array Adresse aufrufen. Weisen Sie dann das Array zu, und nennen Sie die Methode ein zweites Mal, um den Puffer zu kopieren. Das folgende Beispiel zeigt die erforderlichen Schritte:
+Im Puffermodus speichert der Beispielgrabber eine Kopie jedes Beispiels. Die [**ISampleGrabber::GetCurrentBuffer-Methode**](isamplegrabber-getcurrentbuffer.md) kopiert den Puffer in ein vom Aufrufer zugeordnetes Array. Um die Größe des benötigten Arrays zu bestimmen, rufen Sie zunächst **GetCurrentBuffer** mit einem **NULL-Zeiger** für die Arrayadresse auf. Ordnen Sie dann das Array zu, und rufen Sie die -Methode ein zweites Mal auf, um den Puffer zu kopieren. Das folgende Beispiel zeigt die erforderlichen Schritte:
 
 
 ```C++
@@ -271,9 +271,9 @@ Im Puffer Modus speichert der Beispiel Grabber eine Kopie jeder Stichprobe. Die 
 
 
 
-Sie müssen das genaue Format der Daten im Puffer kennen. Um diese Informationen abzurufen, nennen Sie die [**isamplegrabber:: getconnectedmediatype**](isamplegrabber-getconnectedmediatype.md) -Methode. Diese Methode füllt eine [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur mit dem-Format auf.
+Sie müssen das genaue Format der Daten im Puffer kennen. Rufen Sie zum Abrufen dieser Informationen die [**ISampleGrabber::GetConnectedMediaType-Methode**](isamplegrabber-getconnectedmediatype.md) auf. Diese Methode füllt eine [**AM \_ MEDIA \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) mit dem Format auf.
 
-Bei einem unkomprimierten Videostream sind die Formatinformationen in einer [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur enthalten. Im folgenden Beispiel wird veranschaulicht, wie die Formatinformationen für einen unkomprimierten Videostream angezeigt werden.
+Bei einem nicht komprimierten Videostream sind die Formatinformationen in einer [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) enthalten. Das folgende Beispiel zeigt, wie Sie die Formatinformationen für einen nicht komprimierten Videostream abrufen.
 
 
 ```C++
@@ -297,16 +297,16 @@ Bei einem unkomprimierten Videostream sind die Formatinformationen in einer [**v
 
 
 > [!Note]  
-> Der Beispiel Grabber unterstützt [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2)nicht.
+> Der Beispielgrabber unterstützt [**VIDEOINFOHEADER2**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2)nicht.
 
  
 
 ## <a name="example-code"></a>Beispielcode
 
-Dies ist der gesamte Code für die vorherigen Beispiele.
+Hier ist der vollständige Code für die vorherigen Beispiele.
 
 > [!Note]  
-> In diesem Beispiel wird die Funktion " [saferelease](../medfound/saferelease.md) " verwendet, um Schnittstellen Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion](../medfound/saferelease.md) verwendet, um Schnittstellenzeiger freizugeben.
 
  
 
@@ -569,7 +569,7 @@ HRESULT WriteBitmap(PCWSTR pszFileName, BITMAPINFOHEADER *pBMI, size_t cbBMI,
 
 <dl> <dt>
 
-[Verwenden von DirectShow-Bearbeitungs Diensten](using-directshow-editing-services.md)
+[Verwenden von DirectShow-Bearbeitungsdiensten](using-directshow-editing-services.md)
 </dt> </dl>
 
  

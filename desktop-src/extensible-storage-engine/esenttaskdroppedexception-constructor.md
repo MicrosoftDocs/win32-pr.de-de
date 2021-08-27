@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esenttaskdroppedexception-Konstruktor'
-title: Esenttaskdroppedexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTaskDroppedException-Konstruktor'
+title: EsentTaskDroppedException-Konstruktor
 TOCTitle: 'EsentTaskDroppedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTaskDroppedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttaskdroppedexception.esenttaskdroppedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5abfef19c870d85977875a21ea6b3c24a6f7241a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c183efc44c057fbb1537282b44b5850068864c9cfe5606755565307b88d3c876
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063819"
 ---
-# <a name="esenttaskdroppedexception-constructor"></a>Esenttaskdroppedexception-Konstruktor
+# <a name="esenttaskdroppedexception-constructor"></a>EsentTaskDroppedException-Konstruktor
 
-Initialisiert eine neue Instanz der esenttaskdroppedexception-Klasse.
+Initialisiert eine neue Instanz der EsentTaskDroppedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentTaskDroppedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esenttaskdroppedexception-Klasse](./esenttaskdroppedexception-class.md)
+[EsentTaskDroppedException-Klasse](./esenttaskdroppedexception-class.md)
 
-[Esenttaskdroppedexception-Elemente](./esenttaskdroppedexception-members.md)
+[EsentTaskDroppedException-Member](./esenttaskdroppedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

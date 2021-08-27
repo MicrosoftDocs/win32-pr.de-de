@@ -1,36 +1,36 @@
 ---
-title: Schnittstellen für Text Objekt Modelle
-description: Schnittstellen für Text Objekt Modelle
+title: Textobjektmodellschnittstellen
+description: Textobjektmodellschnittstellen
 ms.assetid: 477b90fb-d544-4529-8495-87eb88fc2573
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d7476e3fdc6b6bcd885dedadca856d6d734f8b96
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8eb63f06b069f274376a2b4c6e715889858613e3b26df036d1cceb6502bdc476
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063700"
 ---
-# <a name="text-object-model-interfaces"></a>Schnittstellen für Text Objekt Modelle
+# <a name="text-object-model-interfaces"></a>Textobjektmodellschnittstellen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Itextdisplays**](/windows/win32/api/tom/nn-tom-itextdisplays)
+-   [**ITextDisplays**](/windows/win32/api/tom/nn-tom-itextdisplays)
 -   [**ITextDocument**](/windows/desktop/api/Tom/nn-tom-itextdocument)
 -   [**ITextDocument2**](/windows/desktop/api/Tom/nn-tom-itextdocument2)
--   [**Itextfont**](/windows/desktop/api/Tom/nn-tom-itextfont)
+-   [**ITextFont**](/windows/desktop/api/Tom/nn-tom-itextfont)
 -   [**ITextFont2**](/windows/desktop/api/Tom/nn-tom-itextfont2)
--   [**Itextpara**](/windows/desktop/api/Tom/nn-tom-itextpara)
+-   [**ITextPara**](/windows/desktop/api/Tom/nn-tom-itextpara)
 -   [**ITextPara2**](/windows/desktop/api/Tom/nn-tom-itextpara2)
--   [**Itextrange**](/windows/desktop/api/Tom/nn-tom-itextrange)
+-   [**ITextRange**](/windows/desktop/api/Tom/nn-tom-itextrange)
 -   [**ITextRange2**](/windows/desktop/api/Tom/nn-tom-itextrange2)
--   [**Itextrow**](/windows/desktop/api/Tom/nn-tom-itextrow)
--   [**Itextselection**](/windows/desktop/api/Tom/nn-tom-itextselection)
+-   [**ITextRow**](/windows/desktop/api/Tom/nn-tom-itextrow)
+-   [**ITextSelection**](/windows/desktop/api/Tom/nn-tom-itextselection)
 -   [**ITextSelection2**](/windows/win32/api/tom/nn-tom-itextselection2)
--   [**Itextstory**](/windows/desktop/api/tom/nn-tom-itextstory)
--   [**Itextstorybereiche**](/windows/desktop/api/Tom/nn-tom-itextstoryranges)
+-   [**ITextStory**](/windows/desktop/api/tom/nn-tom-itextstory)
+-   [**ITextStoryRanges**](/windows/desktop/api/Tom/nn-tom-itextstoryranges)
 -   [**ITextStoryRanges2**](/windows/desktop/api/Tom/nn-tom-itextstoryranges2)
--   [**Itextstrings**](/windows/desktop/api/Tom/nn-tom-itextstrings)
+-   [**ITextStrings**](/windows/desktop/api/Tom/nn-tom-itextstrings)
 
  
 

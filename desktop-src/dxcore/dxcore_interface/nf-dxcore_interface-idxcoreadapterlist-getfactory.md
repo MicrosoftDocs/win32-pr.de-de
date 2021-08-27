@@ -1,19 +1,19 @@
 ---
 title: IDXCoreAdapterList::GetFactory
-description: 'Ruft einen [idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md) -Schnittstellen Zeiger auf das DXCore-adapterfactoryobjekt ab. | Idxcoreadapterlist:: GetFactory'
+description: Ruft einen [IDXCoreAdapterFactory-Schnittstellenzeiger](./nn-dxcore_interface-idxcoreadapterfactory.md) auf das DXCore-Adapterfactoryobjekt ab. | IDXCoreAdapterList::GetFactory
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 08dc93f5c7e086e33d15f666a2c5b94fd7dd7e58
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 97ae5ef0ba321dafaabf1813d943b738f5af4c586050b91712bf9ad93005cb35
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106371849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094580"
 ---
-# <a name="idxcoreadapterlistgetfactory-method"></a>Idxcoreadapterlist:: GetFactory-Methode
+# <a name="idxcoreadapterlistgetfactory-method"></a>IDXCoreAdapterList::GetFactory-Methode
 
-Ruft einen [idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md) -Schnittstellen Zeiger auf das DXCore-adapterfactoryobjekt ab. Programmieranleitungen und Codebeispiele finden [Sie unter Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md).
+Ruft einen [IDXCoreAdapterFactory-Schnittstellenzeiger](./nn-dxcore_interface-idxcoreadapterfactory.md) auf das DXCore-Adapterfactoryobjekt ab. Programmierleitfäden und Codebeispiele finden Sie unter [Verwenden von DXCore zum Aufzählen von Adaptern.](../dxcore-enum-adapters.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,31 +31,31 @@ HRESULT GetFactory(
 
 ### <a name="riid"></a>riid
 
-Typ: **refID**
+Typ: **REFIID**
 
-Ein Verweis auf die Globally Unique Identifier (GUID) der Schnittstelle, die in *ppvfactory* zurückgegeben werden soll. Dies wird als Schnittstellen Bezeichner (IID) von [idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md)erwartet.
+Ein Verweis auf die GUID (Globally Unique Identifier) der Schnittstelle, die in *ppvFactory* zurückgegeben werden soll. Es wird erwartet, dass dies der Schnittstellenbezeichner (IID) von [IDXCoreAdapterFactory](./nn-dxcore_interface-idxcoreadapterfactory.md)ist.
 
-### <a name="ppvfactory-out"></a>ppvfactory [out]
+### <a name="ppvfactory-out"></a>ppvFactory [out]
 
-Typ: **void \* \***
+Typ: **\* \* void**
 
-Die Adresse eines Zeigers auf eine Schnittstelle mit der im *riid* -Parameter angegebenen IID. Bei erfolgreicher Rückgabe enthält *\* ppvfactory* (die Dereferenzierte Adresse) einen Zeiger auf das vorhandene DXCore-adapterfactoryobjekt. Vor der Rückgabe erhöht die Funktion den Verweis Zähler für die [idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md) -Schnittstelle des Factory-Objekts.
+Die Adresse eines Zeigers auf eine Schnittstelle mit der im *riid-Parameter* angegebenen IID. Nach erfolgreicher Rückgabe enthält *\* ppvFactory* (die dereferenzierte Adresse) einen Zeiger auf das vorhandene DXCore-Adapterfactoryobjekt. Vor der Rückgabe erhöht die Funktion den Verweiszähler für die [IDXCoreAdapterFactory-Schnittstelle](./nn-dxcore_interface-idxcoreadapterfactory.md) des Factoryobjekts.
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](../../com/structure-of-com-error-codes.md) - [Fehlercode](../../com/com-error-codes-10.md)zurückgegeben.
+Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT-Fehlercode**](../../com/structure-of-com-error-codes.md) [](../../com/com-error-codes-10.md)zurückgegeben.
 
 |Rückgabewert|BESCHREIBUNG|
 |-|-|
-|E_NOINTERFACE|Für *riid* wurde ein ungültiger Wert angegeben.|
-|E_POINTER|`nullptr` wurde für *ppvfactory* bereitgestellt.|
+|E_NOINTERFACE|Für *riid* wurde ein ungültiger Wert bereitgestellt.|
+|E_POINTER|`nullptr` wurde für *ppvFactory* bereitgestellt.|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für den Zeitraum, in dem ein Verweis auf einer [idxcoreadapterfactory](./nn-dxcore_interface-idxcoreadapterfactory.md) -Schnittstelle vorhanden ist, eine [idxcoreadapterlist](./nn-dxcore_interface-idxcoreadapterlist.md) -Schnittstelle oder eine [idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md) -Schnittstelle, zusätzliche Aufrufe von [dxcorecreateadapterfactory](../dxcore/nf-dxcore-dxcorecreateadapterfactory.md), [idxcoreadapterlist:: GetFactory]()oder [idxcoreadapter:: GetFactory](./nf-dxcore_interface-idxcoreadapter-getfactory.md) geben Zeiger auf dasselbe Objekt zurück und erhöhen den Verweis Zähler der **idxcoreadapterfactory** -Schnittstelle.
+Für den Zeitraum, in dem ein Verweis auf eine [IDXCoreAdapterFactory-Schnittstelle,](./nn-dxcore_interface-idxcoreadapterfactory.md) eine [IDXCoreAdapterList-Schnittstelle](./nn-dxcore_interface-idxcoreadapterlist.md) oder eine [IDXCoreAdapter-Schnittstelle](./nn-dxcore_interface-idxcoreadapter.md) vorhanden ist, geben zusätzliche Aufrufe von [DXCoreCreateAdapterFactory,](../dxcore/nf-dxcore-dxcorecreateadapterfactory.md) [IDXCoreAdapterList::GetFactory]()oder [IDXCoreAdapter::GetFactory](./nf-dxcore_interface-idxcoreadapter-getfactory.md) Zeiger auf dasselbe Objekt zurück, wodurch die Verweisanzahl der **IDXCoreAdapterFactory-Schnittstelle** erhöht wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Idxcoreadapterlist](./nn-dxcore_interface-idxcoreadapterlist.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapterList](./nn-dxcore_interface-idxcoreadapterlist.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)

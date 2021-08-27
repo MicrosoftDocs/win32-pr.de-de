@@ -1,9 +1,9 @@
 ---
 title: type_strict_context_handle-Attribut
-description: Verwenden Sie den "\ Type \_ Strict \_ context \_ handle \" in einer ACF-Datei, um Einschränkungen für Kontext Handles festzulegen.
+description: Verwenden Sie das \type \_ strict \_ context \_ handle\ in einer ACF-Datei, um Einschränkungen für Kontexthandles festzulegen.
 ms.assetid: b67caad2-e87d-4eba-8555-8f347aadd515
 keywords:
-- type_strict_context_handle Attribut-Mittel l
+- type_strict_context_handle-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e16c9ae74d618b1b0cafef2c5bf618085d79284
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ef7e10c6231ac41287a08df7b9a0fa4e5361eddec9eb72bb6059b9f00dea5106
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104472789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105620"
 ---
-# <a name="type_strict_context_handle-attribute"></a>Typ \_ Strict- \_ Kontext \_ handle-Attribut
+# <a name="type_strict_context_handle-attribute"></a>Type \_ \_ Strict-Kontexthandleat \_
 
-Verwenden Sie den **\[ Typ \_ Strict- \_ Kontext \_ handle \]** in einer ACF-Datei, um Einschränkungen für Kontext Handles festzulegen.
+Verwenden Sie das **\[ \_ \_ Typ-Strict-Kontexthandle \_ \]** in einer ACF-Datei, um Einschränkungen für Kontexthandles festzulegen.
 
 ``` syntax
 [ 
@@ -38,71 +38,71 @@ interface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Andere ACF-Attribute, die auf die gesamte Schnittstelle angewendet werden. Gültige Attribute sind [**Auto \_ handle**](auto-handle.md), [**implizites \_**](implicit-handle.md)handle, [**explizites \_ handle**](explicit-handle.md)und [**Optimierung**](optimize.md), [**Code**](code.md)oder [**NoCode**](nocode.md). Trennen Sie mehrere Attribute durch Kommas.
+Andere ACF-Attribute, die für die gesamte Schnittstelle gelten. Zu den gültigen Attributen gehören [**das automatische \_ Handle,**](auto-handle.md) [**das implizite \_ Handle,**](implicit-handle.md)das [**explizite \_ Handle**](explicit-handle.md)und [**das Optimieren**](optimize.md)von , [**Code**](code.md)oder [**Nocode**](nocode.md). Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Der Name der Schnittstelle.
 
 </dd> <dt>
 
-*Interface-Definition-Anweisungen* 
+*interface-definition-statements* 
 </dt> <dd>
 
-Eine oder mehrere-Mittell-Anweisungen, die die Elemente der- [**Schnittstelle**](interface.md)definieren.
+Eine oder mehrere MIDL-Anweisungen, die die Elemente der [**Schnittstelle**](interface.md)definieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut zu verwenden, muss das-Target-Flag beim Ausführen von midl.exe auf nt60 (oder höher) festgelegt werden.
+Um dieses Attribut verwenden zu können, muss das Flag -target beim Ausführen von midl.exe auf NT60 (oder höher) festgelegt werden.
 
-\[\_der Typ Strict- \_ Kontext \_ handle \] ist eine Funktions Übermenge eines \[ strengen \_ Kontext \_ Handles \] . Im \[ Strict- \_ Kontext \_ handle \] ist die Typ-ID des Handles immer 0. im \[ Typ \_ Strict- \_ Kontext Handle wird \_ \] eine eindeutige Typ-ID vom Mittelwert Compiler zugewiesen.
+\[Type \_ \_ Strict-Kontexthandle \_ ist eine funktionale \] Obermenge des \[ \_ strict-Kontexthandle. \_ \] Im \[ \_ strict-Kontexthandle \_ \] ist die Typ-ID des Handles immer 0. Im \[ Typ \_ \_ strict-Kontexthandle \_ wird vom \] MIDL-Compiler eine eindeutige Typ-ID zugewiesen.
 
-Es wird empfohlen, das \[ \_ typstrikte \_ Kontext \_ handle \] anstelle eines \[ strengen \_ Kontext \_ Handles \] zu verwenden. Kontext Handles sind nicht standardmäßig mit einem bestimmten Typ verknüpft. Wenn im gleichen Prozess mehrere Typen von Kontext Handles verwendet werden, ist es möglich, dass ein böswilliger Client ein Kontext Handle anstelle eines anderen übergibt, um unerwünschte Ergebnisse zu erzielen. Durch die Verwendung \[ des \_ Typs \_ Strict \_ -Kontext Handle \] können Anwendungen die Konsistenz des Kontext Handles erzwingen und jede nicht übereinstimmende Kontext Handle-Typverwendung verhindern.
+Es wird empfohlen, das \[ \_ Typ-Strict-Kontexthandle \_ \_ anstelle des \] \[ \_ strict-Kontexthandle zu \_ \] verwenden. Kontexthandles sind standardmäßig keinem bestimmten Typ zugeordnet. Wenn mehrere Typen von Kontexthandles im gleichen Prozess verwendet werden, kann ein böswilliger Client ein Kontexthandle anstelle eines anderen übergeben, um unerwünschte Ergebnisse zu erzeugen. Durch die Verwendung des \[ Typ \_ \_ \_ \] strict-Kontexthandle können Anwendungen die Kontexthandletypkonsistenz erzwingen und die Verwendung nicht übereinstimmender Kontexthandletypen verhindern.
 
-Ein mit dem Typ Strict-Kontext Handle attributiertes Kontext Handle \[ \_ \_ \_ \] kann nicht auch mit einem \[ Strict-Kontext Handle attributiert werden \_ \_ \] .
+Ein Kontexthandle, das mit \[ einem typ \_ \_ strict-Kontexthandle \_ \] attributiert wird, kann nicht auch mit \[ dem strict-Kontexthandle attributiert \_ \_ \] werden.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
-[**Ordnung**](code.md)
+[**Code**](code.md)
 </dt> <dt>
 
-[Kontext Handles](/windows/desktop/Rpc/context-handles)
+[Kontexthandles](/windows/desktop/Rpc/context-handles)
 </dt> <dt>
 
-[**Kontext \_ handle- \_ Serialisierung**](context-handle-serialize.md)
+[**\_Kontexthandle \_ serialisieren**](context-handle-serialize.md)
 </dt> <dt>
 
-[**Kontext \_ handle \_ noserialize**](context-handle-noserialize.md)
+[**context \_ handle \_ noserialize**](context-handle-noserialize.md)
 </dt> <dt>
 
-[**explizites \_ handle**](explicit-handle.md)
+[**Explizites \_ Handle**](explicit-handle.md)
 </dt> <dt>
 
-[**implizites \_ handle**](implicit-handle.md)
+[**Implizites \_ Handle**](implicit-handle.md)
 </dt> <dt>
 
-[**NoCode**](nocode.md)
+[**nocode**](nocode.md)
 </dt> <dt>
 
-[**optimiert**](optimize.md)
+[**Optimieren**](optimize.md)
 </dt> <dt>
 
-[Strict- \_ Kontext \_ handle](strict-context-handle.md)
+[Striktes \_ \_ Kontexthandle](strict-context-handle.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

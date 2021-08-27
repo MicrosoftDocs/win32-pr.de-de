@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 2e3af4c11922d7433c56b9353482eba8d374d5a5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b811c01f107e73fca6611443569f2ab5115c4156a36f6177f09d89aca19e1197
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102828"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096671"
 ---
 # <a name="d3dxvector4-structure-d3dx10mathh"></a>D3DXVECTOR4-Struktur (D3DX10Math.h)
 
@@ -64,7 +64,7 @@ Die y-Komponente.
 
 </dd> <dt>
 
-**z**
+**Z**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -82,13 +82,13 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die w--Komponente.
+Die w-Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**D3DXVECTOR4 verfügt** über die folgenden C++-Erweiterungen.
+**D3DXVECTOR4** verfügt über die folgenden C++-Erweiterungen.
 
 ### <a name="d3dxvector4-extensions"></a>D3DXVECTOR4-Erweiterungen
 
@@ -142,13 +142,13 @@ public:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

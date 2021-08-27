@@ -1,7 +1,7 @@
 ---
-description: Die triggerthread-Methode aktiviert den Arbeits Thread, der die Planung verarbeitet.
+description: Die TriggerThread-Methode reaktiviert den Arbeitsthread, der die Planung verarbeitet.
 ms.assetid: 296a6b59-fc52-4f5e-8a19-6b534a253a6e
-title: Cbasereferenceclock. triggerthread-Methode (refclock. h)
+title: CBaseReferenceClock.TriggerThread-Methode (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1f18b4f7dee15ea95046091da006f537830fcbb7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8b53af246e029b5142b68840cfde0e776208e3c51093438042dd74f42a1b3a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076440"
 ---
-# <a name="cbasereferenceclocktriggerthread-method"></a>Cbasereferenceclock. triggerthread-Methode
+# <a name="cbasereferenceclocktriggerthread-method"></a>CBaseReferenceClock.TriggerThread-Methode
 
-Die- `TriggerThread` Methode aktiviert den Arbeits Thread, der die Planung verarbeitet.
+Die `TriggerThread` -Methode reaktiviert den Arbeitsthread, der die Planung verarbeitet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,18 +44,18 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Uhr verwendet einen Arbeits Thread, der die Methode " [**camschedule:: Empfehlung**](camschedule-advise.md) " zu den entsprechenden Zeitpunkten aufruft. Von der abgeleiteten Klasse kann aufgerufen `TriggerThread` werden, um den Thread zu reaktivieren.
+Die Uhr verwendet einen Arbeitsthread, der die [**METHODE WEBCAMSchedule::Advise**](camschedule-advise.md) zu geeigneten Zeiten aufruft. Die abgeleitete Klasse kann `TriggerThread` aufrufen, um den Thread zu reaktiven.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Die Uhr verwendet einen Arbeits Thread, der die Methode " [**camschedule:: Empfe
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

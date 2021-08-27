@@ -1,6 +1,6 @@
 ---
-title: Eigenschaften der EAP-Methode (eaptypes. h)
-description: Wird von Supplicants und Authentifikatoren verwendet, um die EAP-Methoden zu ermitteln, die mit einem bestimmten Supplicant oder Authentifikator verwendet werden sollen. Methoden Eigenschaften geben auch die Konfiguration einer Methode an.
+title: EAP-Methodeneigenschaften (Eaptypes.h)
+description: Wird von Unterstützungs- und Authentifikatoren verwendet, um die EAP-Methoden zu bestimmen, die mit einer bestimmten Unterstützung oder einem Authentifikator verwendet werden sollen. Methodeneigenschaften geben auch die Konfiguration einer Methode an.
 ms.assetid: 10407b85-5d2c-4c75-9b65-a0d65d4cc7ab
 topic_type:
 - apiref
@@ -40,24 +40,24 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 844f897456ee21dfa93dfaa5b16b4f218ba5efb0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c88c31d77b666e377cbd1911cde8b5df63d8f5c2fc750cd03a701b03af5b60ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094400"
 ---
 # <a name="eap-method-properties"></a>Eigenschaften der EAP-Methode
 
-Wird von Supplicants und Authentifikatoren verwendet, um die EAP-Methoden zu ermitteln, die mit einem bestimmten Supplicant oder Authentifikator verwendet werden sollen. Methoden Eigenschaften geben auch die Konfiguration einer Methode an.
+Wird von Unterstützungs- und Authentifikatoren verwendet, um die EAP-Methoden zu bestimmen, die mit einer bestimmten Unterstützung oder einem Authentifikator verwendet werden sollen. Methodeneigenschaften geben auch die Konfiguration einer Methode an.
 
-Beispielsweise erfordert der [802.1 x](/previous-versions/windows/embedded/ms890287(v=msdn.10)) -Supplicant möglicherweise, dass Methoden bestimmte Eigenschaften für die Verwendung mit dem [802.1 x](/previous-versions/windows/embedded/ms890287(v=msdn.10)) -Supplicant aufweisen. Das Schlüsselmaterial ist beispielsweise eine Anforderung.
+Beispielsweise erfordert die [802.1X-Supplizierung](/previous-versions/windows/embedded/ms890287(v=msdn.10)) möglicherweise, dass Methoden bestimmte Eigenschaften für die Verwendung mit der [802.1X-Supplikation](/previous-versions/windows/embedded/ms890287(v=msdn.10)) aufweisen. Schlüsselmaterial ist z. B. eine Anforderung.
 
-Die Eigenschaften werden aufgelistet, die von EAP-Methoden unterstützt werden. Eigenschaften werden als Registrierungsschlüssel Werte gespeichert. Weitere Informationen finden Sie im Abschnitt zum Registrierungsschlüssel der EAP-Peer Methode DLL des Themas [Registrierungs Konfiguration für EAP-Methoden.](registry-keys-for-eap-methods.md)
+Die von EAP-Methoden unterstützten Eigenschaften werden aufgelistet. Eigenschaften werden als Registrierungsschlüsselwerte gespeichert. Weitere Informationen finden Sie im Abschnitt EAP-Peermethoden-DLL-Registrierungsschlüssel des [Themas Registrierungskonfiguration für EAP-Methoden.](registry-keys-for-eap-methods.md)
 
 <dl> <dt>
 
-<span id="eapPropCipherSuiteNegotiation"></span><span id="eappropciphersuitenegotiation"></span><span id="EAPPROPCIPHERSUITENEGOTIATION"></span>**eappropciphersuitenegotiation**
+<span id="eapPropCipherSuiteNegotiation"></span><span id="eappropciphersuitenegotiation"></span><span id="EAPPROPCIPHERSUITENEGOTIATION"></span>**eapPropCipherSuiteNegotiation**
 </dt> <dd> <dl> <dt>
 
 0x00000001
@@ -65,18 +65,18 @@ Die Eigenschaften werden aufgelistet, die von EAP-Methoden unterstützt werden. 
 
 
 
-Die-Methode ermöglicht das Aushandeln der Verschlüsselungs Sammlung für den Zweck der Datenverschlüsselung. Windows Server 2008 unterstützt die folgenden [3DES-](/windows/desktop/SecAuthN/tls-cipher-suites)Verschlüsselungs Sammlungen:
+Mit der -Methode kann die Verschlüsselungssammlung zum Zweck der Datenverschlüsselung ausgehandelt werden. Windows Server 2008 unterstützt die folgenden [3DES-Verschlüsselungssammlungen:](/windows/desktop/SecAuthN/tls-cipher-suites)
 
--   TLS \_ RSA \_ mit \_ 3DES \_ Ede \_ CBC \_ SHA (TLS & SSL 3)
--   TLS \_ dhe \_ DSS \_ with \_ 3DES \_ Ede \_ CBC \_ SHA (TLS & SSL 3)
--   SSL \_ CK \_ des \_ 192 \_ EDE3 \_ CBC \_ mit \_ MD5 (SSL 2 bei Aktivierung)
+-   TLS \_ RSA \_ MIT \_ 3DES \_ EDE \_ CBC SHA \_ (TLS & SSL 3)
+-   TLS \_ DHE \_ DSS \_ MIT \_ 3DES \_ EDE \_ CBC SHA \_ (TLS & SSL 3)
+-   SSL \_ CK \_ DES \_ 192 \_ EDE3 \_ CBC WITH \_ \_ MD5 (SSL 2, falls aktiviert)
 
-Weitere Informationen zum TLS 1,0-Sicherheitsprotokoll finden Sie unter [RFC 2246](https://go.microsoft.com/fwlink/p/?linkid=84035).
+Weitere Informationen zum TLS 1.0-Sicherheitsprotokoll finden Sie unter [RFC 2246](https://go.microsoft.com/fwlink/p/?linkid=84035).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropMutualAuth"></span><span id="eappropmutualauth"></span><span id="EAPPROPMUTUALAUTH"></span>**eappropmutualauth**
+<span id="eapPropMutualAuth"></span><span id="eappropmutualauth"></span><span id="EAPPROPMUTUALAUTH"></span>**eapPropMutualAuth**
 </dt> <dd> <dl> <dt>
 
 0x00000002
@@ -84,12 +84,12 @@ Weitere Informationen zum TLS 1,0-Sicherheitsprotokoll finden Sie unter [RFC 224
 
 
 
-Die-Methode stellt einen Austausch bereit, in dem der Authentifikator den Peer authentifiziert und umgekehrt.
+Die -Methode stellt einen Austausch bereit, bei dem der Authentifikator den Peer authentifiziert und umgekehrt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropIntegrity"></span><span id="eappropintegrity"></span><span id="EAPPROPINTEGRITY"></span>**eappropintegrity**
+<span id="eapPropIntegrity"></span><span id="eappropintegrity"></span><span id="EAPPROPINTEGRITY"></span>**eapPropIntegrity**
 </dt> <dd> <dl> <dt>
 
 0x00000004
@@ -97,12 +97,12 @@ Die-Methode stellt einen Austausch bereit, in dem der Authentifikator den Peer a
 
 
 
-Die-Methode bietet Daten Ursprungs Authentifizierung und Schutz vor nicht autorisierten Änderungen von Informationen für EAP-Pakete, einschließlich EAP-Anforderungen und-Antworten. Beim Erstellen dieses Anspruchs muss in einer Methoden Spezifikation die geschützten EAP-Pakete und geschützten Felder in EAP-Paketen angegeben werden.
+Die -Methode bietet datenursprungsbasierte Authentifizierung und Schutz vor nicht autorisierten Änderungen von Informationen für EAP-Pakete, einschließlich EAP-Anforderungen und -Antworten. Beim Erstellen dieses Anspruchs muss eine Methodenspezifikation die geschützten EAP-Pakete und geschützten Felder in EAP-Paketen angeben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropReplayProtection"></span><span id="eappropreplayprotection"></span><span id="EAPPROPREPLAYPROTECTION"></span>**eappropreplayprotection**
+<span id="eapPropReplayProtection"></span><span id="eappropreplayprotection"></span><span id="EAPPROPREPLAYPROTECTION"></span>**eapPropReplayProtection**
 </dt> <dd> <dl> <dt>
 
 0x00000008
@@ -110,12 +110,12 @@ Die-Methode bietet Daten Ursprungs Authentifizierung und Schutz vor nicht autori
 
 
 
-Die-Methode kann vor der Wiedergabe einer EAP-Methode oder Ihrer Nachrichten schützen. Erfolgs-und Fehler Ergebnis Hinweise können nicht wiedergegeben werden.
+Die -Methode kann vor der Wiedergabe einer EAP-Methode oder ihrer Nachrichten schützen. Erfolgs- und Fehlerergebnisanzeigen können nicht wiedergegeben werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropConfidentiality"></span><span id="eappropconfidentiality"></span><span id="EAPPROPCONFIDENTIALITY"></span>**eappropvertraulichkeit**
+<span id="eapPropConfidentiality"></span><span id="eappropconfidentiality"></span><span id="EAPPROPCONFIDENTIALITY"></span>**eapPropConfidentiality**
 </dt> <dd> <dl> <dt>
 
 0x00000010
@@ -123,12 +123,12 @@ Die-Methode kann vor der Wiedergabe einer EAP-Methode oder Ihrer Nachrichten sch
 
 
 
-Die-Methode kann EAP-Nachrichten verschlüsseln. EAP-Anforderungen, EAP-Antworten, Erfolgs Ergebnis Hinweise und Fehler Ergebnis Hinweise werden verschlüsselt. Eine Methode, die diesen Anspruch macht, muss Identitätsschutz unterstützen.
+Die -Methode kann EAP-Nachrichten verschlüsseln. EAP-Anforderungen, EAP-Antworten, Erfolgsergebnisanzeigen und Fehlerergebnisanzeigen werden verschlüsselt. Eine Methode, die diesen Anspruch stellt, muss identitätsschutz unterstützen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropKeyDerivation"></span><span id="eappropkeyderivation"></span><span id="EAPPROPKEYDERIVATION"></span>**eappropkeyderivations**
+<span id="eapPropKeyDerivation"></span><span id="eappropkeyderivation"></span><span id="EAPPROPKEYDERIVATION"></span>**eapPropKeyDerivation**
 </dt> <dd> <dl> <dt>
 
 0x00000020
@@ -136,7 +136,7 @@ Die-Methode kann EAP-Nachrichten verschlüsseln. EAP-Anforderungen, EAP-Antworte
 
 
 
-Die-Methode kann exportier bares Schlüsselmaterial ableiten, z. b. den Master Sitzungsschlüssel (Master Session Key, MSK) und den erweiterten Master Sitzungsschlüssel (emsk). Der MSK wird nur zur weiteren Schlüssel Ableitung verwendet, nicht direkt zum Schutz der EAP-Konversation oder der nachfolgenden Daten. Die Verwendung von emsk ist reserviert.
+Die -Methode kann exportierbares Schlüsselmaterial ableiten, z. B. den Mastersitzungsschlüssel (Master Session Key, MSK) und den erweiterten Mastersitzungsschlüssel (Extended Master Session Key, EMSK). Das MSK wird nur für die weitere Schlüsselableitung verwendet, nicht direkt zum Schutz der EAP-Konversation oder nachfolgender Daten. Die Verwendung des EMSK ist reserviert.
 
 
 </dt> </dl> </dd> <dt>
@@ -149,7 +149,7 @@ Die-Methode kann exportier bares Schlüsselmaterial ableiten, z. b. den Master S
 
 
 
-Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträgt 64 Bits.
+Die von der EAP-Methode unterstützte Mindestschlüssellänge beträgt 64 Bits.
 
 
 </dt> </dl> </dd> <dt>
@@ -162,7 +162,7 @@ Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträ
 
 
 
-Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträgt 128 Bits.
+Die von der EAP-Methode unterstützte Mindestschlüssellänge beträgt 128 Bits.
 
 
 </dt> </dl> </dd> <dt>
@@ -175,7 +175,7 @@ Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträ
 
 
 
-Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträgt 256 Bits.
+Die von der EAP-Methode unterstützte Mindestschlüssellänge beträgt 256 Bit.
 
 
 </dt> </dl> </dd> <dt>
@@ -188,7 +188,7 @@ Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträ
 
 
 
-Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträgt 512 Bits.
+Die von der EAP-Methode unterstützte Mindestschlüssellänge beträgt 512 Bits.
 
 
 </dt> </dl> </dd> <dt>
@@ -201,12 +201,12 @@ Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträ
 
 
 
-Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträgt 1024 Bits.
+Die von der EAP-Methode unterstützte Mindestschlüssellänge beträgt 1024 Bits.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropDictionaryAttackResistance"></span><span id="eappropdictionaryattackresistance"></span><span id="EAPPROPDICTIONARYATTACKRESISTANCE"></span>**eappropdidaktitionaryangreiresistance**
+<span id="eapPropDictionaryAttackResistance"></span><span id="eappropdictionaryattackresistance"></span><span id="EAPPROPDICTIONARYATTACKRESISTANCE"></span>**eapPropDictionaryAngriffResistance**
 </dt> <dd> <dl> <dt>
 
 0x00000800
@@ -214,12 +214,12 @@ Die minimale Schlüssellänge, die von der EAP-Methode unterstützt wird, beträ
 
 
 
-Die-Methode lässt keinen Offline Angriff zu, der einen Arbeits Faktor basierend auf der Anzahl der Kenn Wörter im Wörterbuch eines Angreifers hat. Wenn die Kenn Wort Authentifizierung verwendet wird, werden Kenn Wörter im Allgemeinen aus einer kleinen Gruppe ausgewählt (im Vergleich zu einem Satz von N-Bit-Schlüsseln), was sich auf Wörterbuchangriffe betrifft. Eine Methode kann als Schutz vor Wörterbuchangriffen bezeichnet werden, wenn die Methode bei Verwendung eines Kennworts als geheimer Schlüssel keinen Offline Angriff zulässt, der über einen Arbeits Faktor auf der Grundlage der Anzahl der Kenn Wörter im Wörterbuch eines Angreifers verfügt.
+Die -Methode lässt keinen Offlineangriff zu, der basierend auf der Anzahl der Kennwörter im Wörterbuch eines Angreifers einen Arbeitsfaktor hat. Wenn die Kennwortauthentifizierung verwendet wird, werden Kennwörter häufig aus einer kleinen Gruppe ausgewählt (im Vergleich zu einem Satz von N-Bit-Schlüsseln), was zu Bedenken bei Wörterbuchangriffen führt. Eine Methode kann als Schutz vor Wörterbuchangriffen bezeichnet werden, wenn sie ein Kennwort als Geheimnis verwendet, lässt die Methode keinen Offlineangriff zu, der basierend auf der Anzahl von Kennwörtern im Wörterbuch eines Angreifers einen Arbeitsfaktor hat.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropFastReconnect"></span><span id="eappropfastreconnect"></span><span id="EAPPROPFASTRECONNECT"></span>**eappropfastreconnect**
+<span id="eapPropFastReconnect"></span><span id="eappropfastreconnect"></span><span id="EAPPROPFASTRECONNECT"></span>**eapPropFastReconnect**
 </dt> <dd> <dl> <dt>
 
 0x00001000
@@ -227,12 +227,12 @@ Die-Methode lässt keinen Offline Angriff zu, der einen Arbeits Faktor basierend
 
 
 
-Die-Methode hat die Möglichkeit, in dem Fall, in dem bereits eine Sicherheits Zuordnung eingerichtet wurde, eine neue oder aktualisierte Sicherheits Zuordnung zu erstellen, die effizienter oder in einer geringeren Anzahl von Roundtrips ist.
+Die -Methode kann in fällen, in denen zuvor eine Sicherheitszuordnung eingerichtet wurde, eine neue oder aktualisierte Sicherheitszuordnung effizienter oder in einer kleineren Anzahl von Roundtrips erstellen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropCryptoBinding"></span><span id="eappropcryptobinding"></span><span id="EAPPROPCRYPTOBINDING"></span>**eappropcryptobinding**
+<span id="eapPropCryptoBinding"></span><span id="eappropcryptobinding"></span><span id="EAPPROPCRYPTOBINDING"></span>**eapPropCryptoBinding**
 </dt> <dd> <dl> <dt>
 
 0x00002000
@@ -240,12 +240,12 @@ Die-Methode hat die Möglichkeit, in dem Fall, in dem bereits eine Sicherheits Z
 
 
 
-Die-Methode veranschaulicht den EAP-Server, dass eine einzelne Entität als EAP-Peer für alle Methoden, die innerhalb einer Tunnel Methode ausgeführt werden, agiert hat. Die Bindung kann auch bedeuten, dass der EAP-Server dem Peer zeigt, dass eine einzelne Entität als EAP-Server für alle Methoden, die innerhalb einer Tunnel Methode ausgeführt wurden, agiert hat. Wenn Sie ordnungsgemäß ausgeführt wird, dient die Bindung zur Abwehr von man-in-the-Middle-Sicherheitsrisiken.
+Die -Methode zeigt dem EAP-Server, dass eine einzelne Entität als EAP-Peer für alle Methoden fungiert, die innerhalb einer Tunnelmethode ausgeführt werden. Die Bindung kann auch implizieren, dass der EAP-Server dem Peer zeigt, dass eine einzelne Entität als EAP-Server für alle Methoden fungiert, die innerhalb einer Tunnelmethode ausgeführt werden. Bei ordnungsgemäßer Ausführung dient die Bindung dazu, Man-in-the-Middle-Sicherheitsrisiken zu minimieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropSessionIndependence"></span><span id="eappropsessionindependence"></span><span id="EAPPROPSESSIONINDEPENDENCE"></span>**eappropsessionindependence**
+<span id="eapPropSessionIndependence"></span><span id="eappropsessionindependence"></span><span id="EAPPROPSESSIONINDEPENDENCE"></span>**eapPropSessionIndependence**
 </dt> <dd> <dl> <dt>
 
 0x00004000
@@ -253,12 +253,12 @@ Die-Methode veranschaulicht den EAP-Server, dass eine einzelne Entität als EAP-
 
 
 
-Die-Methode veranschaulicht, dass durch passive Angriffe (z. b. die Erfassung der EAP-Konversation) oder aktive Angriffe (einschließlich Kompromittierung von MSK oder emsk) weder nachfolgende noch vorherige msks oder EMS gefährdet werden.
+Die -Methode zeigt, dass passive Angriffe (z. B. die Erfassung der EAP-Konversation) oder aktive Angriffe (einschließlich kompromittieren des MSK oder EMSK) nachfolgende oder frühere MSKs oder EMSKs nicht gefährden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropFragmentation"></span><span id="eappropfragmentation"></span><span id="EAPPROPFRAGMENTATION"></span>**eappropfragmentierung**
+<span id="eapPropFragmentation"></span><span id="eappropfragmentation"></span><span id="EAPPROPFRAGMENTATION"></span>**eapPropFragmentation**
 </dt> <dd> <dl> <dt>
 
 0x00008000
@@ -266,12 +266,12 @@ Die-Methode veranschaulicht, dass durch passive Angriffe (z. b. die Erfassung de
 
 
 
-Die-Methode kann Fragmentierung unterstützen und neu zuweisen, wenn EAP-Pakete die Mindestanzahl der MTU (maximale Übertragungseinheit) von 1020 Oktette überschreiten.
+Die -Methode kann Fragmentierung und Neuassembly unterstützen, wenn EAP-Pakete die minimale MTU (maximale Übertragungseinheit) von 1.020 Oktetten überschreiten.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropChannelBinding"></span><span id="eappropchannelbinding"></span><span id="EAPPROPCHANNELBINDING"></span>**eappropchannelbinding**
+<span id="eapPropChannelBinding"></span><span id="eappropchannelbinding"></span><span id="EAPPROPCHANNELBINDING"></span>**eapPropChannelBinding**
 </dt> <dd> <dl> <dt>
 
 0x00010000
@@ -279,12 +279,12 @@ Die-Methode kann Fragmentierung unterstützen und neu zuweisen, wenn EAP-Pakete 
 
 
 
-Die-Methode kann Integritäts geschützte Kanaleigenschaften, z. b. Endpunkt Bezeichner, kommunizieren. Diese können mit Werten verglichen werden, die über Out-of-Band-Mechanismen kommuniziert werden, z. b. [Authentifizierung, Autorisierung und Kontoführung](https://go.microsoft.com/fwlink/p/?linkid=84063) (AAA) oder das Protokoll der niedrigeren Ebene.
+Die -Methode kann integritätsgeschützte Kanaleigenschaften kommunizieren, z. B. Endpunktbezeichner, die mithilfe von Out-of-Band-Mechanismen wie [Authentifizierung, Autorisierung und Buchhaltung](https://go.microsoft.com/fwlink/p/?linkid=84063) (AAA) oder dem Protokoll der unteren Ebene verglichen werden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropNap"></span><span id="eappropnap"></span><span id="EAPPROPNAP"></span>**eappropnap**
+<span id="eapPropNap"></span><span id="eappropnap"></span><span id="EAPPROPNAP"></span>**eapPropNap**
 </dt> <dd> <dl> <dt>
 
  0x00020000
@@ -292,12 +292,12 @@ Die-Methode kann Integritäts geschützte Kanaleigenschaften, z. b. Endpunkt Bez
 
 
 
-Die-Methode unterstützt den Netzwerk Zugriffsschutz (NAP).
+Die -Methode unterstützt Network Access Protection (NAP).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropStandalone"></span><span id="eappropstandalone"></span><span id="EAPPROPSTANDALONE"></span>**eappropstandalone**
+<span id="eapPropStandalone"></span><span id="eappropstandalone"></span><span id="EAPPROPSTANDALONE"></span>**eapPropStandalone**
 </dt> <dd> <dl> <dt>
 
 0x00040000
@@ -305,12 +305,12 @@ Die-Methode unterstützt den Netzwerk Zugriffsschutz (NAP).
 
 
 
-Die-Methode kann auf einem eigenständigen Computer verwendet werden.
+Die -Methode kann auf einem eigenständigen Computer verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropMppeEncryption"></span><span id="eappropmppeencryption"></span><span id="EAPPROPMPPEENCRYPTION"></span>**eappropmppeer Encryption**
+<span id="eapPropMppeEncryption"></span><span id="eappropmppeencryption"></span><span id="EAPPROPMPPEENCRYPTION"></span>**eapPropMppeEncryption**
 </dt> <dd> <dl> <dt>
 
  0x00080000
@@ -318,12 +318,12 @@ Die-Methode kann auf einem eigenständigen Computer verwendet werden.
 
 
 
-Die-Methode unterstützt die Protokoll Verschlüsselung von [Microsoft Point-to-Point-Verschlüsselung (MPPE)](https://go.microsoft.com/fwlink/p/?linkid=83915) .
+Die -Methode unterstützt [die MPPE-Protokollverschlüsselung (Point-to-Point Encryption)](https://go.microsoft.com/fwlink/p/?linkid=83915) von Microsoft.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropTunnelMethod"></span><span id="eapproptunnelmethod"></span><span id="EAPPROPTUNNELMETHOD"></span>**eapproptunnelmethod**
+<span id="eapPropTunnelMethod"></span><span id="eapproptunnelmethod"></span><span id="EAPPROPTUNNELMETHOD"></span>**eapPropTunnelMethod**
 </dt> <dd> <dl> <dt>
 
 0x00100000
@@ -331,12 +331,12 @@ Die-Methode unterstützt die Protokoll Verschlüsselung von [Microsoft Point-to-
 
 
 
-Die-Methode unterstützt Tunnelung von anderen EAP-Methoden.
+Die -Methode unterstützt das Tunneln anderer EAP-Methoden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropSupportsConfig"></span><span id="eappropsupportsconfig"></span><span id="EAPPROPSUPPORTSCONFIG"></span>**eappropsupportsconfig**
+<span id="eapPropSupportsConfig"></span><span id="eappropsupportsconfig"></span><span id="EAPPROPSUPPORTSCONFIG"></span>**eapPropSupportsConfig**
 </dt> <dd> <dl> <dt>
 
 0x00200000
@@ -344,12 +344,12 @@ Die-Methode unterstützt Tunnelung von anderen EAP-Methoden.
 
 
 
-Die-Methode unterstützt konfigurierbare Eigenschaften und verfügt über eine Benutzeroberfläche.
+Die -Methode unterstützt konfigurierbare Eigenschaften und verfügt über eine Benutzeroberfläche.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropCertifiedMethod"></span><span id="eappropcertifiedmethod"></span><span id="EAPPROPCERTIFIEDMETHOD"></span>**eappropcertifiedmethod**
+<span id="eapPropCertifiedMethod"></span><span id="eappropcertifiedmethod"></span><span id="EAPPROPCERTIFIEDMETHOD"></span>**eapPropCertifiedMethod**
 </dt> <dd> <dl> <dt>
 
 0x00400000
@@ -357,12 +357,12 @@ Die-Methode unterstützt konfigurierbare Eigenschaften und verfügt über eine B
 
 
 
-Die Methode wurde vom EAP-Zertifizierungsprogramm zertifiziert. Dieses Bit sollte nur von EAP-Methoden gesendet werden, die die Zertifizierung überschritten haben.
+Die Methode wurde vom EAP-Zertifizierungsprogramm zertifiziert. Dieses Bit sollte nur von EAP-Methoden gesendet werden, die die Zertifizierung bestanden haben.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropmachineAuth"></span><span id="eappropmachineauth"></span><span id="EAPPROPMACHINEAUTH"></span>**eappropmachineauth**
+<span id="eapPropmachineAuth"></span><span id="eappropmachineauth"></span><span id="EAPPROPMACHINEAUTH"></span>**eapPropmachineAuth**
 </dt> <dd> <dl> <dt>
 
 0x01000000
@@ -370,12 +370,12 @@ Die Methode wurde vom EAP-Zertifizierungsprogramm zertifiziert. Dieses Bit sollt
 
 
 
-Windows 7 oder höher: die-Methode kann verwendet werden, um einen Computer in einem Netzwerk mithilfe der Computer Anmelde Informationen zu authentifizieren.
+Windows 7 oder höher: Die -Methode kann zum Authentifizieren eines Computers in einem Netzwerk mithilfe der Computeranmeldeinformationen verwendet werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropUserAuth"></span><span id="eappropuserauth"></span><span id="EAPPROPUSERAUTH"></span>**eappropuserauth**
+<span id="eapPropUserAuth"></span><span id="eappropuserauth"></span><span id="EAPPROPUSERAUTH"></span>**eapPropUserAuth**
 </dt> <dd> <dl> <dt>
 
 0x02000000
@@ -383,12 +383,12 @@ Windows 7 oder höher: die-Methode kann verwendet werden, um einen Computer in e
 
 
 
-Windows 7 oder höher: die-Methode kann verwendet werden, um einen Benutzer bei einem Netzwerk mithilfe der Anmelde Informationen des Benutzers zu authentifizieren.
+Windows 7 oder höher: Die -Methode kann verwendet werden, um einen Benutzer mithilfe der Benutzeranmeldeinformationen bei einem Netzwerk zu authentifizieren.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropIdentityPrivacy"></span><span id="eappropidentityprivacy"></span><span id="EAPPROPIDENTITYPRIVACY"></span>**eappropidentityprivacy**
+<span id="eapPropIdentityPrivacy"></span><span id="eappropidentityprivacy"></span><span id="EAPPROPIDENTITYPRIVACY"></span>**eapPropIdentityPrivacy**
 </dt> <dd> <dl> <dt>
 
 0x04000000
@@ -396,12 +396,12 @@ Windows 7 oder höher: die-Methode kann verwendet werden, um einen Benutzer bei 
 
 
 
-Windows 7 oder höher: die-Methode unterstützt das Senden der Benutzeridentität in einem geschützten Kanal.
+Windows 7 oder höher: Die -Methode unterstützt das Senden der Benutzeridentität in einem geschützten Kanal.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropMethodChaining"></span><span id="eappropmethodchaining"></span><span id="EAPPROPMETHODCHAINING"></span>**eappropmethodchaining**
+<span id="eapPropMethodChaining"></span><span id="eappropmethodchaining"></span><span id="EAPPROPMETHODCHAINING"></span>**eapPropMethodChaining**
 </dt> <dd> <dl> <dt>
 
 0x08000000
@@ -409,12 +409,12 @@ Windows 7 oder höher: die-Methode unterstützt das Senden der Benutzeridentitä
 
 
 
-Windows 7 oder höher: bei der Methode handelt es sich um eine getunnelte Methode, die die EAP-Methoden Verkettung innerhalb des Tunnels unterstützt.
+Windows 7 oder höher: Die -Methode ist eine getunnelte Methode und unterstützt die EAP-Methodenkette innerhalb des Tunnels.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropSharedStateEquivalence"></span><span id="eappropsharedstateequivalence"></span><span id="EAPPROPSHAREDSTATEEQUIVALENCE"></span>**eappropsharedstateäquivalenz**
+<span id="eapPropSharedStateEquivalence"></span><span id="eappropsharedstateequivalence"></span><span id="EAPPROPSHAREDSTATEEQUIVALENCE"></span>**eapPropSharedStateEquivalence**
 </dt> <dd> <dl> <dt>
 
 0x10000000
@@ -422,12 +422,12 @@ Windows 7 oder höher: bei der Methode handelt es sich um eine getunnelte Method
 
 
 
-Windows 7 oder höher: die Methode unterstützt die Äquivalenz von freigegebenen Zuständen, wie in [RFC 4017](https://go.microsoft.com/fwlink/p/?linkid=90455)definiert.
+Windows 7 oder höher: Die -Methode unterstützt die Äquivalenz des gemeinsam genutzten Zustands, wie in [RFC 4017 definiert.](https://go.microsoft.com/fwlink/p/?linkid=90455)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="eapPropReserved"></span><span id="eappropreserved"></span><span id="EAPPROPRESERVED"></span>**eapprobewahrt**
+<span id="eapPropReserved"></span><span id="eappropreserved"></span><span id="EAPPROPRESERVED"></span>**eapPropReserved**
 </dt> <dd> <dl> <dt>
 
 0x80000000
@@ -435,7 +435,7 @@ Windows 7 oder höher: die Methode unterstützt die Äquivalenz von freigegebene
 
 
 
-Reserviert. Nicht verwendet.
+Reserviert. Wird nicht verwendet.
 
 
 </dt> </dl> </dd> </dl>
@@ -446,13 +446,13 @@ Reserviert. Nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Eaptypes. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Eaptypes.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

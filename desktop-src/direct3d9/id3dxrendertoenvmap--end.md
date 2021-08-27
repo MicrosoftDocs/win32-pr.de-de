@@ -1,7 +1,7 @@
 ---
-description: Stellen Sie alle Renderziele wieder her, und erstellen Sie, falls erforderlich, alle gerenderten Gesichter in der Umgebungs Zuordnungs Oberfläche.
+description: Stellen Sie alle Renderziele wieder her, und erstellen Sie bei Bedarf alle gerenderten Gesichter in der Umgebungszuordnungsoberfläche.
 ms.assetid: 57c73787-36e7-4088-b5ff-78894e3a5d90
-title: 'ID3DXRenderToEnvMap:: End-Methode (D3dx9core. h)'
+title: ID3DXRenderToEnvMap::End-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 20e62a9d794738ae81ae84a665165f6034958f0c
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: efaf32eb421f6bda38fb922c4a89b1dbbe871842c3b4f07a87ff30c2e6b4dc40
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095790"
 ---
-# <a name="id3dxrendertoenvmapend-method"></a>ID3DXRenderToEnvMap:: End-Methode
+# <a name="id3dxrendertoenvmapend-method"></a>ID3DXRenderToEnvMap::End-Methode
 
-Stellen Sie alle Renderziele wieder her, und erstellen Sie, falls erforderlich, alle gerenderten Gesichter in der Umgebungs Zuordnungs Oberfläche.
+Stellen Sie alle Renderziele wieder her, und erstellen Sie bei Bedarf alle gerenderten Gesichter in der Umgebungszuordnungsoberfläche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT End(
 
 <dl> <dt>
 
-*MipFilter* \[ in\]
+*MipFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine gültige Kombination aus einem oder mehreren [D3DX- \_ Filterflags](d3dx-filter.md) .
+Eine gültige Kombination aus einem oder mehreren [D3DX-FILTER-Flags. \_ ](d3dx-filter.md)
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Eine gültige Kombination aus einem oder mehreren [D3DX- \_ Filterflags](d3dx-fi
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
@@ -73,7 +73,7 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXRenderToEnvMap](id3dxrendertoenvmap.md)
 </dt> <dt>
 
-[**ID3DXRenderToEnvMap:: Face**](id3dxrendertoenvmap--face.md)
+[**ID3DXRenderToEnvMap::Face**](id3dxrendertoenvmap--face.md)
 </dt> </dl>
 
  

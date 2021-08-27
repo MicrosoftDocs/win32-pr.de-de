@@ -1,10 +1,10 @@
 ---
-title: Private-Information Eigenschaften Satz
-description: Private-Information Eigenschaften Satz
+title: Private-Information Eigenschaftensatz
+description: Private-Information Eigenschaftensatz
 ms.assetid: 9b8983a0-cc15-4a3d-b3e8-e7d6414837b0
 ms.tgt_platform: multiple
 keywords:
-- Private-Information-Eigenschaften Satz-AD-Schema
+- Private-Information AD-Schema für Eigenschaftensatz
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 98c29773807063a0fc47046f038a611455f24e5e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d5796cd9ad2bc43330e802aa5108bc92417126a5db250abab4f87b6e2a8a2332
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120065223"
 ---
-# <a name="private-information-property-set"></a>Private-Information Eigenschaften Satz
+# <a name="private-information-property-set"></a>Private-Information Eigenschaftensatz
 
 
 
@@ -28,7 +28,7 @@ ms.locfileid: "103859901"
 |--------------|--------------------------------------|
 | CN           | Private-Information                  |
 | Anzeigename | Private Informationen                  |
-| Rights-GUID  | 91e647-d96f-4b70-9557-d63ff4f3ccd8 |
+| Rechte-GUID  | 91e647de-d96f-4b70-9557-d63ff4f3ccd8 |
 
 
 
@@ -45,8 +45,8 @@ ms.locfileid: "103859901"
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**inetOrgPerson**](c-inetorgperson.md)<br/> [**Benutzer**](c-user.md)<br/>                                                                                                                               |
-| Lokalisierung-Display-ID | 72                                                                                                                                                                                                                  |
-| Eigenschaften Satz Elemente    | [**MS-PKI-roamingtimestamp**](a-mspkiroamingtimestamp.md)<br/> [**MS-PKI-dpapimasterkeys**](a-mspkidpapimasterkeys.md)<br/> [**MS-PKI-accountanmelde Informationen**](a-mspkiaccountcredentials.md)<br/> |
+| Lokalisierungsanzeige-ID | 72                                                                                                                                                                                                                  |
+| Eigenschaftensatzmember    | [**ms-PKI-RoamingTimeStamp**](a-mspkiroamingtimestamp.md)<br/> [**ms-PKI-DPAPIMasterKeys**](a-mspkidpapimasterkeys.md)<br/> [**ms-PKI-AccountCredentials**](a-mspkiaccountcredentials.md)<br/> |
 
 
 
@@ -57,8 +57,8 @@ ms.locfileid: "103859901"
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**inetOrgPerson**](c-inetorgperson.md)<br/> [**Benutzer**](c-user.md)<br/>                                                                                                                                                                                                                      |
-| Lokalisierung-Display-ID | 72                                                                                                                                                                                                                                                                                                         |
-| Eigenschaften Satz Elemente    | [**MS-PKI-Credential-roamingtoken**](a-mspki-credentialroamingtokens.md)<br/> [**MS-PKI-roamingtimestamp**](a-mspkiroamingtimestamp.md)<br/> [**MS-PKI-dpapimasterkeys**](a-mspkidpapimasterkeys.md)<br/> [**MS-PKI-accountanmelde Informationen**](a-mspkiaccountcredentials.md)<br/> |
+| Lokalisierungsanzeige-ID | 72                                                                                                                                                                                                                                                                                                         |
+| Eigenschaftensatzmember    | [**ms-PKI-Credential-Roaming-Tokens**](a-mspki-credentialroamingtokens.md)<br/> [**ms-PKI-RoamingTimeStamp**](a-mspkiroamingtimestamp.md)<br/> [**ms-PKI-DPAPIMasterKeys**](a-mspkidpapimasterkeys.md)<br/> [**ms-PKI-AccountCredentials**](a-mspkiaccountcredentials.md)<br/> |
 
 
 
@@ -69,8 +69,8 @@ ms.locfileid: "103859901"
 | Eingabe | Wert |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Applies-To              | [**inetOrgPerson**](c-inetorgperson.md)<br/> [**Benutzer**](c-user.md)<br/>                                                                                                                                                                                                                      |
-| Lokalisierung-Display-ID | 72                                                                                                                                                                                                                                                                                                         |
-| Eigenschaften Satz Elemente    | [**MS-PKI-Credential-roamingtoken**](a-mspki-credentialroamingtokens.md)<br/> [**MS-PKI-roamingtimestamp**](a-mspkiroamingtimestamp.md)<br/> [**MS-PKI-dpapimasterkeys**](a-mspkidpapimasterkeys.md)<br/> [**MS-PKI-accountanmelde Informationen**](a-mspkiaccountcredentials.md)<br/> |
+| Lokalisierungsanzeige-ID | 72                                                                                                                                                                                                                                                                                                         |
+| Eigenschaftensatzmember    | [**ms-PKI-Credential-Roaming-Tokens**](a-mspki-credentialroamingtokens.md)<br/> [**ms-PKI-RoamingTimeStamp**](a-mspkiroamingtimestamp.md)<br/> [**ms-PKI-DPAPIMasterKeys**](a-mspkidpapimasterkeys.md)<br/> [**ms-PKI-AccountCredentials**](a-mspkiaccountcredentials.md)<br/> |
 
 
 

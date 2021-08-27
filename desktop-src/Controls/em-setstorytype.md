@@ -1,9 +1,9 @@
 ---
-title: EM_SETSTORYTYPE Meldung (RichEdit. h)
-description: Legt den Texttyp fest.
+title: EM_SETSTORYTYPE (Richedit.h)
+description: Legt den Storytyp fest.
 ms.assetid: 8FA335E1-EE0A-4F31-B800-C79F617A6019
 keywords:
-- Windows-Steuerelemente für EM_SETSTORYTYPE Meldung
+- EM_SETSTORYTYPE von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be6d1df04f93fca0119b58f978a6a0cb36ddf464
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b7e09c62c50441857aac6f4018800de7a145081d64de49cdf7e9ca673a5370db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062880"
 ---
-# <a name="em_setstorytype-message"></a>EM \_ setstorytype-Meldung
+# <a name="em_setstorytype-message"></a>EM \_ SETSTORYTYPE-Nachricht
 
-Legt den Texttyp fest.
+Legt den Storytyp fest.
 
 
 ```C++
@@ -39,20 +39,20 @@ Legt den Texttyp fest.
 *wParam* 
 </dt> <dd>
 
-Der Story-Index.
+Der Storyindex.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der neue Story-Typ. Eine Liste der Story-Typen finden Sie unter [**EM \_ getstorytype**](em-getstorytype.md).
+Der neue Storytyp. Eine Liste der Storytypen finden Sie unter [**EM \_ GETSTORYTYPE**](em-getstorytype.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Texttyp, der festgelegt wurde.
+Der Storytyp, der festgelegt wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,9 +60,9 @@ Der Texttyp, der festgelegt wurde.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 

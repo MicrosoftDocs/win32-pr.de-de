@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d244bf16ab02d0bfd6f975f63c2ece32ed40119b30c178e4674037d36f519508
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: e9f037b8c26829d7b1f3a10b05e1d4bd83bd186a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119667420"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469797"
 ---
 # <a name="jetescrowupdate-function"></a>JetEscrowUpdate-Funktion
 
@@ -86,104 +86,36 @@ Empfängt die tatsächliche Menge an Rohwertdaten, die im Ausgabepuffer empfange
 
 Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitEscrowNoRollback</p></td>
-<td><p>Auch wenn für die Sitzung, die das Escrow-Update ausführt, ein Transaktionsrollback ausgeführt wird, wird dieses Update nicht rückgängig. Beachten Sie Folgendes: Da die Protokolldatensätze möglicherweise nicht auf den Datenträger geleert werden, können kürzlich mit diesem Flag durchgeführte Escrow-Updates verlorengehen, wenn ein Absturz vorliegt.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitEscrowNoRollback</p> | <p>Auch wenn für die Sitzung, die das Escrow-Update ausführt, ein Transaktionsrollback ausgeführt wird, wird dieses Update nicht rückgängig. Beachten Sie Folgendes: Da die Protokolldatensätze möglicherweise nicht auf den Datenträger geleert werden, können kürzlich mit diesem Flag durchgeführte Escrow-Updates verlorengehen, wenn ein Absturz vorliegt.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
 Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errAlreadyPrepared</p></td>
-<td><p>Der Cursor verfügt über ein Update, das mit <a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a>vorbereitet wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidBufferSize</p></td>
-<td><p>Eine ungültige Puffergröße wurde übergeben. Derzeit wird nur JET_coltypLong unterstützt, sodass der Puffer 4 Bytes betragen muss.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidOperation</p></td>
-<td><p>Es wurde eine ungültige Spalte angegeben. Die Spalte muss mit JET_bitColumnEscrowUpdate angegeben werden. Nur feste Spalten von JET_coltypLong können als escrow updateable angegeben werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNoCurrentRecord</p></td>
-<td><p>Der Cursor muss sich in einem Datensatz befinden, um eine Spalte zu aktualisieren.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInTransaction</p></td>
-<td><p>Escrow-Updates können nur von Sitzungen in einer Transaktion ausgeführt werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errPermissionDenied</p></td>
-<td><p>Cursor kann nicht schreibbar sein und einen Datensatz aktualisieren.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht von mehreren Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Die Sitzung muss über Schreibberechtigungen zum Aktualisieren eines Datensatzes verfügen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errWriteConflict</p></td>
-<td><p>Der Fehler, der zurückgegeben wird, wenn ein in Konfliktstehendes Update angefordert wird.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errAlreadyPrepared</p> | <p>Für den Cursor wurde ein Update mit <a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a>vorbereitet.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidBufferSize</p> | <p>Eine ungültige Puffergröße wurde übergeben. Derzeit wird nur JET_coltypLong unterstützt, sodass der Puffer 4 Bytes betragen muss.</p> | 
+| <p>JET_errInvalidOperation</p> | <p>Es wurde eine ungültige Spalte angegeben. Die Spalte muss mit JET_bitColumnEscrowUpdate angegeben werden. Nur feste Spalten von JET_coltypLong können als escrow updateable angegeben werden.</p> | 
+| <p>JET_errNoCurrentRecord</p> | <p>Der Cursor muss sich in einem Datensatz befinden, um eine Spalte zu aktualisieren.</p> | 
+| <p>JET_errNotInTransaction</p> | <p>Escrow-Updates können nur von Sitzungen in einer Transaktion ausgeführt werden.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errPermissionDenied</p> | <p>Cursor kann nicht schreibbar sein und einen Datensatz aktualisieren.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht von mehreren Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Die Sitzung muss über Schreibberechtigungen zum Aktualisieren eines Datensatzes verfügen.</p> | 
+| <p>JET_errWriteConflict</p> | <p>Der Fehler, der zurückgegeben wird, wenn ein in Konfliktstehendes Update angefordert wird.</p> | 
+
 
 
 #### <a name="remarks"></a>Hinweise
@@ -194,192 +126,48 @@ Mehrere Spalten im selben Datensatz können aktualisiert werden. Die Updates wir
 
 Nur **JetEscrowUpdate-Vorgänge** sind miteinander kompatibel. Wenn zwei verschiedene Sitzungen versuchen, Updates vorzubereiten oder denselben Datensatz zu löschen, wird ein Schreibkonflikt generiert.
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p></p></th>
-<th><p></p></th>
-<th><p>Sitzung B<br />
-<strong>JetEscrowUpdate</strong></p></th>
-<th><p><a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a></p></th>
-<th><p><a href="gg269315(v=exchg.10).md">JetDelete</a></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p></p></td>
-<td><p><strong>JetEscrowUpdate</strong></p></td>
-<td><p>JET_errSuccess</p></td>
-<td><p>JET_errWriteConflict</p></td>
-<td><p>JET_errWriteConflict</p></td>
-</tr>
-<tr class="even">
-<td><p></p></td>
-<td><p><a href="gg269288(v=exchg.10).md">JetUpdate</a></p></td>
-<td><p>JET_errWriteConflict</p></td>
-<td><p>JET_errWriteConflict</p></td>
-<td><p>JET_errWriteConflict</p></td>
-</tr>
-<tr class="odd">
-<td><p>Sitzung A</p></td>
-<td><p><a href="gg269315(v=exchg.10).md">JetDelete</a></p></td>
-<td><p>JET_errWriteConflict</p></td>
-<td><p>JET_errWriteConflict</p></td>
-<td><p>JET_errWriteConflict</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p></p> | <p></p> | <p>Sitzung B<br /><strong>JetEscrowUpdate</strong></p> | <p><a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a></p> | <p><a href="gg269315(v=exchg.10).md">JetDelete</a></p> | 
+|---------|---------|--------------------------------------------------------|---------------------------------------------------------------|--------------------------------------------------------|
+| <p></p> | <p><strong>JetEscrowUpdate</strong></p> | <p>JET_errSuccess</p> | <p>JET_errWriteConflict</p> | <p>JET_errWriteConflict</p> | 
+| <p></p> | <p><a href="gg269288(v=exchg.10).md">JetUpdate</a></p> | <p>JET_errWriteConflict</p> | <p>JET_errWriteConflict</p> | <p>JET_errWriteConflict</p> | 
+| <p>Sitzung A</p> | <p><a href="gg269315(v=exchg.10).md">JetDelete</a></p> | <p>JET_errWriteConflict</p> | <p>JET_errWriteConflict</p> | <p>JET_errWriteConflict</p> | 
 
 
-Escrow-Vorgänge werden mithilfe von [JetRollback](./jetrollback-function.md) versioniert und rückgängig erklärt (es sei denn, JET_bitEscrowNoRollback wurde angegeben). **JetEscrowUpdate** gibt den Rohwert der in der Datenbank gespeicherten Spalte zurück, da eine Anwendung möglicherweise eine besondere Aktion ausführen möchte, wenn ein Sentinelwert erreicht wird. [JetRetrieveColumn gibt](./jetretrievecolumn-function.md) die Ansicht mit korrekter Versionierung der Spalte zurück und ignoriert updates, die von gleichzeitigen Sitzungen vorgenommen wurden.
 
-Wenn zwei Sitzungen für dieselbe Spalte desselben Datensatzes ausgeführt werden, können wir sehen, wie dies funktioniert. Angenommen, die Spalte beginnt mit dem Wert 0.
+Escrow-Vorgänge werden mithilfe von [JetRollback](./jetrollback-function.md) versioniert und rückgängig erklärt (es sei denn, JET_bitEscrowNoRollback wurde angegeben). **JetEscrowUpdate** gibt den Rohwert der in der Datenbank gespeicherten Spalte zurück, da eine Anwendung möglicherweise eine besondere Aktion ausführen möchte, wenn ein Sentinelwert erreicht wird. [JetRetrieveColumn](./jetretrievecolumn-function.md) gibt die Ansicht mit der richtigen Version der Spalte zurück, wobei Updates von gleichzeitigen Sitzungen ignoriert werden.
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Sitzung</p></th>
-<th><p>Vorgang</p></th>
-<th><p>Gespeicherter Wert</p></th>
-<th><p>Rückgabewert</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Ein</p></td>
-<td><p><a href="gg294083(v=exchg.10).md">JetBeginTransation</a></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>Ein</p></td>
-<td><p><a href="gg294083(v=exchg.10).md">JetBeginTransation</a></p></td>
-<td><p></p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>Ein</p></td>
-<td><p><strong>JetEscrowUpdate</strong> (4)</p></td>
-<td><p>4</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>Ein</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="odd">
-<td><p>B</p></td>
-<td><p><a href="gg294083(v=exchg.10).md">JetBeginTransaction</a></p></td>
-<td><p></p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>B</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>B</p></td>
-<td><p><strong>JetEscrowUpdate</strong> (3)</p></td>
-<td><p>7</p></td>
-<td><p>4</p></td>
-</tr>
-<tr class="even">
-<td><p>B</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="odd">
-<td><p>Ein</p></td>
-<td><p><strong>JetEscrowUpdate</strong> (2)</p></td>
-<td><p>9</p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="even">
-<td><p>Ein</p></td>
-<td><p><strong>JetEscrowUpdate</strong> (-7)</p></td>
-<td><p>2</p></td>
-<td><p>9</p></td>
-</tr>
-<tr class="odd">
-<td><p>B</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="even">
-<td><p>Ein</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>–1</p></td>
-</tr>
-<tr class="odd">
-<td><p>B</p></td>
-<td><p><a href="gg269273(v=exchg.10).md">JetRollback</a></p></td>
-<td><p>–1</p></td>
-<td><p></p></td>
-</tr>
-<tr class="even">
-<td><p>Ein</p></td>
-<td><p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p></td>
-<td><p></p></td>
-<td><p>–1</p></td>
-</tr>
-</tbody>
-</table>
+Bei zwei Sitzungen, die auf derselben Spalte desselben Datensatzes arbeiten, können wir sehen, wie dies funktioniert. Angenommen, die Spalte beginnt mit dem Wert 0.
 
 
-Es wird davon abraten, einen Datensatz in derselben Transaktion zu ersetzen, die Aktualisierungen an einem Datensatz ausführt. Insbesondere wenn ein Update für einen Datensatz mit einer [JET_TABLEID](./jet-tableid.md) vorbereitet wird und eine andere [JET_TABLEID](./jet-tableid.md) verwendet wird, um den Datensatz zu aktualisieren, geht die aktualisierte Escrow verloren, wenn [JetUpdate](./jetupdate-function.md) aufgerufen wird. Dies geschieht auch, wenn die Spalte "escrow" während des Updates nicht festgelegt wurde.
+| <p>Sitzung</p> | <p>Vorgang</p> | <p>Gespeicherter Wert</p> | <p>Rückgabewert</p> | 
+|----------------|------------------|---------------------|-----------------------|
+| <p>Ein</p> | <p><a href="gg294083(v=exchg.10).md">JetBeginTransation</a></p> | <p></p> | <p></p> | 
+| <p>Ein</p> | <p><a href="gg294083(v=exchg.10).md">JetBeginTransation</a></p> | <p></p> | <p>0</p> | 
+| <p>Ein</p> | <p><strong>JetEscrowUpdate</strong> (4)</p> | <p>4</p> | <p>0</p> | 
+| <p>Ein</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>4</p> | 
+| <p>B</p> | <p><a href="gg294083(v=exchg.10).md">JetBeginTransaction</a></p> | <p></p> | <p></p> | 
+| <p>B</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>0</p> | 
+| <p>B</p> | <p><strong>JetEscrowUpdate</strong> (3)</p> | <p>7</p> | <p>4</p> | 
+| <p>B</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>3</p> | 
+| <p>Ein</p> | <p><strong>JetEscrowUpdate</strong> (2)</p> | <p>9</p> | <p>7</p> | 
+| <p>Ein</p> | <p><strong>JetEscrowUpdate</strong> (-7)</p> | <p>2</p> | <p>9</p> | 
+| <p>B</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>3</p> | 
+| <p>Ein</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>-1</p> | 
+| <p>B</p> | <p><a href="gg269273(v=exchg.10).md">JetRollback</a></p> | <p>-1</p> | <p></p> | 
+| <p>Ein</p> | <p><a href="gg269198(v=exchg.10).md">JetRetrieveColumn</a></p> | <p></p> | <p>-1</p> | 
 
-Wenn eine spalte, die aktualisiert werden kann, einen Wert von 0 hat, kann ein spezielles Verhalten ausgelöst werden. Dieses Verhalten tritt nur auf, wenn **ein JetEscrowUpdate-Vorgang** bewirkt, dass die Spalte den Wert 0 hat. Die Aktion erfolgt nicht sofort, sondern irgendwann nach der Transaktion, die dazu führte, dass die Spalte den Wert 0 (null) Commits hatte. Die Spalte muss weiterhin den Wert 0 (null) haben (d. h., wenn die Spalte von keiner anderen Sitzung geändert wurde). Wenn die Spalte mit einem JET_bitColumnDeleteOnZero wurde, wird der Datensatz gelöscht, der die Spalte enthält. Wenn die Spalte mit einem JET_bitColumnFinalize wurde, wird ein Rückruf ausgegeben. Ein Absturz kann dazu führen, dass diese Aktionen nicht ausgeführt werden, aber die Onlinewartung (mit der [JetDefragment-Funktion)](./jetdefragment-function.md) wird die Aktionen ordnungsgemäß wiederholen.
+
+
+Es wird nicht empfohlen, einen Datensatz in derselben Transaktion zu ersetzen, die Escrow-Updates für einen Datensatz ausführt. Insbesondere wenn ein Update für einen Datensatz mit einem [JET_TABLEID](./jet-tableid.md) vorbereitet wird und ein anderer [JET_TABLEID](./jet-tableid.md) verwendet wird, um den Datensatz zu aktualisieren, geht die aktualisierte Füllung verloren, wenn [JetUpdate](./jetupdate-function.md) aufgerufen wird. Dies geschieht auch, wenn die Spalte escrow während des Updates nicht festgelegt wurde.
+
+Wenn eine spalte, die aktualisierbar ist, den Wert 0 hat, kann ein besonderes Verhalten ausgelöst werden. Dieses Verhalten tritt nur auf, wenn ein **JetEscrowUpdate-Vorgang** bewirkt, dass die Spalte den Wert 0 (null) hat. Die Aktion findet nicht sofort statt, sondern tritt irgendwann nach der Transaktion auf, die dazu geführt hat, dass die Spalte den Wert 0 (null) Commits hat. Die Spalte muss weiterhin den Wert 0 (null) aufweisen (d. b. wenn die Spalte von keiner anderen Sitzung geändert wurde). Wenn die Spalte mit JET_bitColumnDeleteOnZero erstellt wurde, wird der Datensatz mit der Spalte gelöscht. Wenn die Spalte mit JET_bitColumnFinalize erstellt wurde, wird ein Rückruf ausgegeben. Ein Absturz kann dazu führen, dass diese Aktionen nicht ausgeführt werden, aber bei der Onlinewartung (mit der [JetDefragment-Funktion)](./jetdefragment-function.md) werden die Aktionen ordnungsgemäß wiederholt.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Wird in Esent.h deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

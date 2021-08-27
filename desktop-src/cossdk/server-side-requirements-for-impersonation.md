@@ -1,38 +1,38 @@
 ---
-description: Server-Side Anforderungen für den Identitätswechsel
+description: Server-Side für Identitätswechsel
 ms.assetid: f6128688-dfd8-40ff-83ec-99d740b9152c
-title: Server-Side Anforderungen für den Identitätswechsel
+title: Server-Side für Identitätswechsel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e30edbebd37035ab7a7f4ca09e1cff73c2afbabe
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 18e43016428f2ff083fc5a783d05c3c79e241dcf299f3af9ca226cb4f6a2cf1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342763"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096800"
 ---
-# <a name="server-side-requirements-for-impersonation"></a>Server-Side Anforderungen für den Identitätswechsel
+# <a name="server-side-requirements-for-impersonation"></a>Server-Side für Identitätswechsel
 
-Der Server führt den Identitätswechsel Programm gesteuert aus. Die Sicherheits Anmelde Informationen des Clients werden mithilfe von " [**CoImpersonateClient**](/windows/desktop/api/combaseapi/nf-combaseapi-coimpersonateclient)" explizit angenommen. Wenn der Client die ausreichende Berechtigung für den Server erteilt hat, besteht die Auswirkung, dass die Sicherheits Anmelde Informationen des Clients anstelle des Prozess Tokens durch das Thread Token des Servers ersetzt werden.
+Der Server führt den Identitätswechsel programmgesteuert aus. Es wird explizit davon ausgegangen, dass die Sicherheitsanmeldeinformationen des Clients mithilfe von [**CoImpersonateClient verwendet werden.**](/windows/desktop/api/combaseapi/nf-combaseapi-coimpersonateclient) Wenn der Client dem Server ausreichende Autorität erteilt hat, hat dies den Effekt, dass die Sicherheitsanmeldeinformationen des Clients durch das Serverthreadtoken und nicht durch das Prozesstoken substituiert werden.
 
-Wenn dies der Fall ist, kann der Server z. b. das Client Token für den Zugriff auf Ressourcen verwenden, die mit einer Sicherheits Beschreibung geschützt werden. Oder es können Aufrufe unter der Client Identität durchführen, wenn das Cloaking aktiviert ist.
+Wenn dies geschehen ist, kann der Server beispielsweise das Clienttoken verwenden, um auf Ressourcen zu zugreifen, die mit einem Sicherheitsdeskriptor geschützt werden. Sie kann auch Aufrufe unter der Clientidentität tätigen, wenn die Verkleinerung aktiviert ist.
 
-Der Server kann das Cloaking Programm gesteuert explizit festlegen, oder er kann sich auf eine administrative Einstellung verlassen. Standardmäßig sind com+-Anwendungen für die Verwendung von dynamischem Cloaking konfiguriert. Weitere Details finden Sie unter [Cloaking](cloaking.md).
+Der Server kann die Cloaking programmgesteuert explizit festlegen, oder er kann sich auf eine administrative Einstellung verlassen. Standardmäßig sind COM+-Anwendungen für die Verwendung der dynamischen Verkleinerung konfiguriert. Weitere Informationen finden Sie unter [Cloaking](cloaking.md).
 
-Wenn der Server die Delegierung im Namen des Clients implementiert – unter Verwendung der Client Identität über das Netzwerk – muss die Server Prozess Identität im Active Directory Dienst als "vertrauenswürdig für die Delegierung" gekennzeichnet werden. Andernfalls tritt bei der Delegierung ein Fehler auf.
+Wenn der Server die Delegierung im Namen des Clients –mithilfe der Clientidentität über das Netzwerk – einlässt, muss die Serverprozessidentität im Active Directory-Dienst als "Vertrauenswürdig für Delegierung" gekennzeichnet werden. Andernfalls ist bei der Delegierung ein Fehler zu sehen.
 
-Wenn die Client Identität nicht mehr verwendet wird, kann der Server mithilfe von [**CoRevertToSelf**](/windows/desktop/api/combaseapi/nf-combaseapi-coreverttoself)auf das eigene Prozess Token zurückgreifen.
+Wenn die Clientidentität nicht mehr verwendet wird, kann der Server mithilfe von CoRevertToSelf auf sein eigenes [**Prozesstoken zurückverwenden.**](/windows/desktop/api/combaseapi/nf-combaseapi-coreverttoself)
 
-Ausführliche Informationen zum Implementieren des Identitäts Wechsels und der Delegierung finden Sie unter [Delegierung und](/windows/desktop/com/delegation-and-impersonation)Identitätswechsel.
+Weitere Informationen zum Implementieren von Identitätswechsel und Delegierung finden Sie unter [Delegierung und Identitätswechsel.](/windows/desktop/com/delegation-and-impersonation)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Client Identitätswechsel und Delegierung](client-impersonation-and-delegation.md)
+[Client-Identitätswechsel und -delegierung](client-impersonation-and-delegation.md)
 </dt> <dt>
 
-[Client seitige Anforderungen für Identitätswechsel](client-side-requirements-for-impersonation.md)
+[Clientseitige Anforderungen für Identitätswechsel](client-side-requirements-for-impersonation.md)
 </dt> <dt>
 
 [Cloaking](cloaking.md)

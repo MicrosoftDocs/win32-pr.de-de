@@ -1,7 +1,7 @@
 ---
-description: Die prev-Methode ruft die vorherige Position in der Liste ab.
+description: Die Prev-Methode ruft die vorherige Position in der Liste ab.
 ms.assetid: 537c3019-373a-4974-a42e-72150da72767
-title: Cbaselist. prev-Methode (wxlist. h)
+title: CBaseList.Prev-Methode (Wxlist.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 03c35a89754b27aa67a5bba33ee694433d74c0fd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d04a63079e401b89286e10e927b540f40d04fc186546dbdbd4e31e8610fe617d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365462"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076600"
 ---
-# <a name="cbaselistprev-method"></a>Cbaselist. prev-Methode
+# <a name="cbaselistprev-method"></a>CBaseList.Prev-Methode
 
-Die- `Prev` Methode ruft die vorherige Position in der Liste ab.
+Die `Prev` -Methode ruft die vorherige Position in der Liste ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ POSITION Prev(
 *pos* 
 </dt> <dd>
 
-Positionswert.
+POSITION-Wert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Positionsindikator zurück, der vor der in *POS* angegebenen Position liegt.
+Gibt den Positionsindikator zurück, der vor der in pos angegebenen *Position liegt.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *POS* die erste Position in der Liste ist, gibt die Methode **null** zurück. Wenn *POS* **null** ist, gibt die Methode die letzte Position in der Liste zurück.
+Wenn *pos* die erste Position in der Liste ist, gibt die Methode **NULL zurück.** Wenn *pos* NULL **ist,** gibt die Methode die letzte Position in der Liste zurück.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wxlist. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wxlist.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn *POS* die erste Position in der Liste ist, gibt die Methode **null** zurüc
 
 <dl> <dt>
 
-[**Cbaselist-Klasse**](cbaselist.md)
+[**CBaseList-Klasse**](cbaselist.md)
 </dt> </dl>
 
  

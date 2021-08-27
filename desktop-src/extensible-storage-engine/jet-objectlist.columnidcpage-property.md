@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_OBJECTLIST. columnidcpage-Eigenschaft'
-title: JET_OBJECTLIST. columnidcpage (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_OBJECTLIST.columnidcPage-Eigenschaft'
+title: JET_OBJECTLIST.columnidcPage-Eigenschaft
 TOCTitle: 'columnidcPage property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_OBJECTLIST.columnidcPage
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_objectlist.columnidcpage(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e8f1be02d225810992c40d57f0fd627c9f8f5543
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 908f2b888e180a1ed4aab4cc72b817c80fd3057797b214bc9b58243026126faa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120093510"
 ---
-# <a name="jet_objectlistcolumnidcpage-property"></a>JET_OBJECTLIST. columnidcpage (Eigenschaft)
+# <a name="jet_objectlistcolumnidcpage-property"></a>JET_OBJECTLIST.columnidcPage-Eigenschaft
 
-Ruft das ColumnID der Spalte in der temporären Tabelle ab, in der die Anzahl der von der Tabelle verwendeten Seiten gespeichert wird.
+Ruft die columnid der Spalte in der temporären Tabelle ab, in der die Anzahl der von der Tabelle verwendeten Seiten gespeichert wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_COLUMNID columnidcPage { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_OBJECTLIST-Klasse](./jet-objectlist-class.md)
 
-[Mitglieder JET_OBJECTLIST](./jet-objectlist-members.md)
+[JET_OBJECTLIST Member](./jet-objectlist-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

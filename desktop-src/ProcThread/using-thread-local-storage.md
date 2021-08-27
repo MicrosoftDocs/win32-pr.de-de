@@ -1,19 +1,19 @@
 ---
-description: Der Thread lokale Speicher (TLS) ermöglicht es mehreren Threads desselben Prozesses, einen von der TlsAlloc-Funktion zugewiesenen Index zum Speichern und Abrufen eines lokalen Werts für den Thread zu verwenden.
+description: Threadlokaler Speicher (Thread Local Storage, TLS) ermöglicht es mehreren Threads desselben Prozesses, einen von der TlsAlloc-Funktion zugeordneten Index zum Speichern und Abrufen eines lokalen Werts für den Thread zu verwenden.
 ms.assetid: b7f5a206-a827-4b6b-86f6-5e3aea1246b7
 title: Verwenden von TLS (threadlokaler Speicher)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e9221d4d0d68891ab8e2d0f2462b7c0aae307c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9bdac1306a4a2da10e6a24ba2e1b2444f6215fdac39be7b41cc6850c1e5a683d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127990"
 ---
 # <a name="using-thread-local-storage"></a>Verwenden von TLS (threadlokaler Speicher)
 
-Der [Thread lokale Speicher](thread-local-storage.md) (TLS) ermöglicht es mehreren Threads desselben Prozesses, einen von der [**TlsAlloc**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) -Funktion zugewiesenen Index zum Speichern und Abrufen eines lokalen Werts für den Thread zu verwenden. In diesem Beispiel wird ein Index zugeordnet, wenn der Prozess gestartet wird. Wenn die einzelnen Threads gestartet werden, wird ein Block dynamischer Arbeitsspeicher zugeordnet, und es wird ein Zeiger auf diesen Speicher im TLS-Slot mithilfe der [**TlsSetValue**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue) -Funktion gespeichert. Die commonfunc-Funktion verwendet die [**TlsGetValue**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) -Funktion, um auf die Daten zuzugreifen, die mit dem lokalen Index des aufrufenden Threads verknüpft sind. Bevor jeder Thread beendet wird, wird der dynamische Arbeitsspeicher freigegeben. Bevor der Prozess beendet wird, ruft er [**TlsFree**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree) auf, um den Index freizugeben.
+[Threadlokaler Speicher (Thread Local Storage,](thread-local-storage.md) TLS) ermöglicht es mehreren Threads desselben Prozesses, einen von der [**TlsAlloc-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) zugeordneten Index zum Speichern und Abrufen eines lokalen Werts für den Thread zu verwenden. In diesem Beispiel wird ein Index zugeordnet, wenn der Prozess gestartet wird. Wenn jeder Thread gestartet wird, ordnet er einen Block mit dynamischem Arbeitsspeicher zu und speichert mithilfe der [**TlsSetValue-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue) einen Zeiger auf diesen Speicher im TLS-Slot. Die CommonFunc-Funktion verwendet die [**TlsGetValue-Funktion,**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) um auf die Daten zuzugreifen, die dem Index zugeordnet sind, der für den aufrufenden Thread lokal ist. Bevor jeder Thread beendet wird, gibt er seinen dynamischen Speicher frei. Bevor der Prozess beendet wird, ruft er [**TlsFree**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree) auf, um den Index freizugeben.
 
 
 ```C++
@@ -114,7 +114,7 @@ VOID ErrorExit (LPCSTR message)
 
 <dl> <dt>
 
-[Verwenden des lokalen Thread Speichers in einer Dynamic-Link-Bibliothek](../dlls/using-thread-local-storage-in-a-dynamic-link-library.md)
+[Verwenden von threadlokalen Storage in einer Dynamic-Link Bibliothek](../dlls/using-thread-local-storage-in-a-dynamic-link-library.md)
 </dt> </dl>
 
  

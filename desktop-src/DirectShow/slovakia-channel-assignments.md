@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für die Slowakei
+description: In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Dies sind die Tabellen.
 ms.assetid: 359ce11e-547d-43ac-82c3-aac9d739b496
-title: Channelzuordnungen in Slowakei
+title: Zuweisungen von Kanalzuweisungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4382b5cd9a3515f68979ae12c9bf63d6fd063175
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 99c9c5df17d5d2f4403382b52f86d238f95630c8737a7476a66df5d6c6015d6c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075720"
 ---
-# <a name="slovakia-channel-assignments"></a>Channelzuordnungen in Slowakei
+# <a name="slovakia-channel-assignments"></a>Zuweisungen von Kanalzuweisungen
 
-In diesem Thema werden die Häufigkeits Tabellen aufgelistet, die für die Optimierung des analogen TV für die Slowakei
+In diesem Thema werden die Häufigkeitstabellen aufgelistet, die für die analoge TV-Optimierung für Dies sind die Tabellen.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle Unicable Frequency](unicable-frequency-table.md) verwendet.
 
--   [Übertragungs Zuweisungen](#broadcast-assignments)
--   [Kabel Zuweisungen](#cable-assignments)
+-   [Broadcastzuweisungen](#broadcast-assignments)
+-   [Kabelzuweisungen](#cable-assignments)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="broadcast-assignments"></a>Übertragungs Zuweisungen
+## <a name="broadcast-assignments"></a>Broadcastzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -102,7 +102,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
        855250000L,      // 71 TV71
 ```
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -250,7 +250,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale Analog TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

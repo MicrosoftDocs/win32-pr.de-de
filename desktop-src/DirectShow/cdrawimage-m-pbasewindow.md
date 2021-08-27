@@ -1,7 +1,7 @@
 ---
-description: Die m \_ pbasewindow-Member-Variable ist ein Zeiger auf das besitzende cbasewindow-Objekt.
+description: Die m \_ pBaseWindow-Membervariable ist ein Zeiger auf das besitzende CBaseWindow-Objekt.
 ms.assetid: 123b020e-cdd6-4db0-93a8-cecef5ff5012
-title: 'Cdrawimage:: m_pBaseWindow Member (winutil. h)'
+title: CDrawImage::m_pBaseWindow-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 367d5fa6ca74cc73dc021470b09dedbe724b195a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9f3f5a27e853cbb0cace1db7520280451d04e16a0470873118039da5ef5fd888
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076380"
 ---
-# <a name="cdrawimagem_pbasewindow-member"></a>Cdrawimage:: m \_ pbasewindow-Member
+# <a name="cdrawimagem_pbasewindow-member"></a>CDrawImage::m \_ pBaseWindow-Mitglied
 
-Die `m_pBaseWindow` Member-Variable ist ein Zeiger auf das besitzende **cbasewindow** -Objekt.
+Die `m_pBaseWindow` Membervariable ist ein Zeiger auf das besitzende **CBaseWindow-Objekt.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ CBaseWindow *m_pBaseWindow;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ CBaseWindow *m_pBaseWindow;
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

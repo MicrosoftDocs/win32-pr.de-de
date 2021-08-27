@@ -2,7 +2,7 @@
 description: Entfernt ein Computersystem aus einer Domäne oder Arbeitsgruppe.
 ms.assetid: 79ee177e-81e2-441b-b39a-2fb53a0145bf
 ms.tgt_platform: multiple
-title: UnjoinDomainOrWorkgroup-Methode der Win32_ComputerSystem-Klasse
+title: UnjoinDomainOrWorkgroup-Methode der Win32_ComputerSystem Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 1c6942c5367b6deb02accd9d06927a4d923fa8f5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 992aa6c84f912f705e02252d1ac6d24422934edb991c049de188ab5fb0ccbfa8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105070"
 ---
-# <a name="unjoindomainorworkgroup-method-of-the-win32_computersystem-class"></a>UnjoinDomainOrWorkgroup-Methode der Win32 \_ Computersystem-Klasse
+# <a name="unjoindomainorworkgroup-method-of-the-win32_computersystem-class"></a>UnjoinDomainOrWorkgroup-Methode der Win32 \_ ComputerSystem-Klasse
 
-Mit der **UnjoinDomainOrWorkgroup** -Methode wird ein Computersystem aus einer Domäne oder Arbeitsgruppe entfernt.
+Die **UnjoinDomainOrWorkgroup-Methode** entfernt ein Computersystem aus einer Domäne oder Arbeitsgruppe.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,34 +44,34 @@ uint32 UnjoinDomainOrWorkgroup(
 
 <dl> <dt>
 
-*Kennwort* \[ in\]
+*Kennwort* \[ In\]
 </dt> <dd>
 
-Wenn der Parameter *username* einen Kontonamen angibt, muss der *Password* -Parameter auf das Kennwort verweisen, das beim Herstellen einer Verbindung mit dem Domänen Controller verwendet werden soll. Andernfalls muss dieser Parameter **null** sein.
+Wenn der *UserName-Parameter* einen Kontonamen angibt, muss der *Password-Parameter* auf das Kennwort verweisen, das beim Herstellen einer Verbindung mit dem Domänencontroller verwendet werden soll. Andernfalls muss dieser Parameter NULL **sein.**
 
 > [!Note]  
-> Das *Kennwort* muss bei der Verbindung mit winmgmt oder [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) auf dem [**IWbemServices**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Zeiger eine hohe Authentifizierungs Ebene und nicht weniger als die **\_ \_ \_ \_ Pkt- \_ Datenschutzebene der RPC-C-authn-Ebene** verwenden. Wenn es sich um ein lokales in WinMgmt handelt, ist dies kein Problem.
+> *Das* Kennwort muss beim Herstellen einer Verbindung mit Winmgmt oder [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) auf dem [**IWbemServices-Zeiger**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) eine hohe Authentifizierungsebene und nicht weniger als RPC **C \_ \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY** verwenden. Wenn es sich um eine lokale Winmgmt-Datei handelt, ist dies kein Problem.
 
  
 
 </dd> <dt>
 
-*Benutzername* \[ in\]
+*UserName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Konstante mit NULL endende Zeichenfolge, die den Kontonamen angibt, der beim Herstellen einer Verbindung mit dem Domänen Controller verwendet werden soll. Sie müssen ein Domänen-und Benutzerkonto angeben, z. b. "Domänen \\ Benutzer" oder " user@domain ". Wenn dieser Parameter **null** ist, wird der Aufruferkontext verwendet.
+Zeiger auf eine konstante Zeichenfolge mit NULL-Terminierung, die den Kontonamen angibt, der beim Herstellen einer Verbindung mit dem Domänencontroller verwendet werden soll. Muss eine Domäne und ein Benutzerkonto angeben, z. B. \\ "Domänenbenutzer" oder " user@domain ". Wenn dieser Parameter **NULL ist,** wird der Aufruferkontext verwendet.
 
 > [!Note]  
-> Der *Benutzername* muss beim Herstellen einer Verbindung mit winmgmt oder [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) auf dem [**IWbemServices**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Zeiger eine hohe Authentifizierungs Ebene und nicht weniger als die **\_ \_ \_ \_ Pkt- \_ Datenschutzebene der RPC-C-authn-Ebene** verwenden. Wenn es sich um ein lokales in WinMgmt handelt, ist dies kein Problem.
+> *UserName* muss beim Herstellen einer Verbindung mit Winmgmt oder [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket) im [**IWbemServices-Zeiger**](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) eine hohe Authentifizierungsebene verwenden, nicht weniger als **RPC C \_ \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY.** Wenn es sich um eine lokale Winmgmt-Datei handelt, ist dies kein Problem.
 
  
 
 </dd> <dt>
 
-*FUnjoinOptions* \[ in\]
+*FUnjoinOptions* \[ In\]
 </dt> <dd>
 
-Ein Satz von Bitflags, die die Optionen für den entfernen definieren.
+Eine Reihe von Bitflags, die die Optionen für die Nichtjoinierung definieren.
 
 <dt>
 
@@ -88,36 +88,36 @@ Standard. Keine Optionen.
 
 <span id="NETSETUP_ACCT_DELETE"></span><span id="netsetup_acct_delete"></span>
 
-<span id="NETSETUP_ACCT_DELETE"></span><span id="netsetup_acct_delete"></span>**Netsetup \_ \_Löschen** (4)
+<span id="NETSETUP_ACCT_DELETE"></span><span id="netsetup_acct_delete"></span>**NETSETUP \_ ACCT \_ DELETE** (4)
 
 
 </dt> <dd>
 
-Deaktivieren Sie das Active Directory Konto nach dem Vorgang zum nicht beitreten, aber löschen Sie das Konto nicht.
+Deaktivieren Sie das Active Directory-Konto nach dem Vorgang zum Abschalten, löschen Sie das Konto jedoch nicht.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die **UnjoinDomainOrWorkgroup** -Methode gibt bei Erfolg 0 (null) zurück oder wenn keine Optionen beteiligt sind. Jeder andere Wert gibt einen Fehler an. Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Die **UnjoinDomainOrWorkgroup-Methode** gibt bei Erfolg oder ohne Optionen 0 (null) zurück. Jeder andere Wert gibt einen Fehler an. Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
 **Erfolg** (0)
 </dt> <dt>
 
-**Sonstige** (1 4294967295)
+**Andere** (1 4294967295)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Starten Sie nach dem Aufrufen dieser Methode den betroffenen Computer neu, um die Änderungen zu übernehmen.
+Starten Sie nach dem Aufrufen dieser Methode den betroffenen Computer neu, um die Änderungen anzuwenden.
 
 ## <a name="examples"></a>Beispiele
 
-[Die Verknüpfung eines Computers aus einer Domäne entfernen](https://Gallery.TechNet.Microsoft.Com/c2025ace-cb51-4136-9de9-db8871f79f62) Im VBScript-Beispiel wird der lokale Computer aus der aktuellen Domäne entfernt, und das Computer Konto wird deaktiviert.
+[Die Unjoin a Computer from a Domain](https://Gallery.TechNet.Microsoft.Com/c2025ace-cb51-4136-9de9-db8871f79f62) Das VBScript-Beispiel entschalten den lokalen Computer von seiner aktuellen Domäne und deaktiviert das Computerkonto.
 
-Das Beispiel zum [Entfernen eines Computers aus einer Domäne mithilfe eines vbskripts](https://Gallery.TechNet.Microsoft.Com/Unjoin-a-Computer-from-a-825249e1) entfernt die Verknüpfung eines angegebenen Computers zu einer Domäne. .
+Im [Beispiel Unjoin a Computer from a Domain using VBS script (Entjoinen](https://Gallery.TechNet.Microsoft.Com/Unjoin-a-Computer-from-a-825249e1) eines Computers aus einer Domäne mithilfe des VBS-Skripts) wird ein angegebener Computer aus einer Domäne entfernt. .
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -127,8 +127,8 @@ Das Beispiel zum [Entfernen eines Computers aus einer Domäne mithilfe eines vbs
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -137,7 +137,7 @@ Das Beispiel zum [Entfernen eines Computers aus einer Domäne mithilfe eines vbs
 
 <dl> <dt>
 
-[**Win32- \_ Computersystem**](win32-computersystem.md)
+[**Win32 \_ ComputerSystem**](win32-computersystem.md)
 </dt> <dt>
 
 [**JoinDomainOrWorkgroup-Methode**](joindomainorworkgroup-method-in-class-win32-computersystem.md)

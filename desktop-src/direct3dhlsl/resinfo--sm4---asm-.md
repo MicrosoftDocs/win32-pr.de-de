@@ -1,23 +1,23 @@
 ---
-title: ResInfo (SM4-ASM)
-description: Abfragen der Dimensionen einer bestimmten Eingabe Ressource.
+title: resinfo (sm4 – asm)
+description: Fragen Sie die Dimensionen einer bestimmten Eingaberessource ab.
 ms.assetid: 5D549AC6-E0CB-4395-953C-5E5ECEEE234D
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9a252195a4b59ed791f6ac625fe1d95bbd9925f1
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
-ms.translationtype: HT
+ms.openlocfilehash: bb23a6790c113702e59fc53f85a4d838907fe5ff658c29d83e37e3f620a9dc79
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095320"
 ---
-# <a name="resinfo-sm4---asm"></a>ResInfo (SM4-ASM)
+# <a name="resinfo-sm4---asm"></a>resinfo (sm4 – asm)
 
-Abfragen der Dimensionen einer bestimmten Eingabe Ressource.
+Fragen Sie die Dimensionen einer bestimmten Eingaberessource ab.
 
 
 
-| ResInfo \[ \_ uint \|\_rcpfloat \] dest \[ . mask \] , srcmiplevel. Select \_ Component, srkresource \[ . Swizzle\] |
+| resinfo \[ \_ uint\|\_rcpFloat \] dest \[ .mask \] , srcMipLevel.select \_ component, srcResource \[ .swizzle\] |
 |-----------------------------------------------------------------------------------------------------|
 
 
@@ -28,57 +28,57 @@ Abfragen der Dimensionen einer bestimmten Eingabe Ressource.
 
 | Element                                                                                                               | BESCHREIBUNG                                                                               |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/>                                                    | \[in \] der Adresse des Vorgangs Ergebnisses.<br/>                             |
-| <span id="srcMipLevel"></span><span id="srcmiplevel"></span><span id="SRCMIPLEVEL"></span>*srcmiplevel*<br/> | \[auf \] der MIP-Ebene.<br/>                                                          |
-| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srkresource*<br/> | \[in \] einer t- \# oder u- \# Eingabe Textur, für die die Dimensionen abgefragt werden. <br/> |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/>                                                    | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/>                             |
+| <span id="srcMipLevel"></span><span id="srcmiplevel"></span><span id="SRCMIPLEVEL"></span>*srcMipLevel*<br/> | \[in \] Die MIP-Ebene.<br/>                                                          |
+| <span id="srcResource"></span><span id="srcresource"></span><span id="SRCRESOURCE"></span>*srcResource*<br/> | \[in \] der Eingabetextur A t \# oder \# u, für die die Dimensionen abgefragt werden. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-*srcmiplevel* wird als ganzzahliger Skalarwert ohne Vorzeichen gelesen, sodass eine einzelne Komponentenauswahl für das Quell Register erforderlich ist, wenn es sich nicht um einen skalaren unmittelbaren Wert handelt.
+*srcMipLevel* wird als ganzzahliger Skalar ohne Vorzeichen gelesen, sodass eine einzelne Komponentenauswahl für das Quellregister erforderlich ist, wenn es sich nicht um einen unmittelbaren Skalarwert handelt.
 
-*dest* empfängt \[ Breite, Höhe, Tiefe oder Array Größe, gesamter MIP-Count \] , von der Schreib Maske ausgewählt.
+*dest empfängt* \[ Breite, Höhe, Tiefe oder Arraygröße, Total-mip-count, \] ausgewählt durch die Schreibmaske.
 
-Die zurückgegebenen Werte für Breite, Höhe und Tiefe gelten für die durch den *srcmiplevel* -Parameter ausgewählte MIP-Ebene und sind unabhängig von der texgrößengröße in der Anzahl von texeln. Bei Multisampling-Ressourcen (texture2D \[ array \] MS \# ) werden Breite und Höhe auch in Texels und nicht in Beispielen zurückgegeben.
+Die zurückgegebenen Werte für Breite, Höhe und Tiefe gelten für die mip-Ebene, die vom *srcMipLevel-Parameter* ausgewählt wird, und sind unabhängig von der Größe der Texeldaten in der Anzahl der Texel. Für Multisampleressourcen (texture2D \[ Array \] \# MS) werden Breite und Höhe auch in Texel zurückgegeben, nicht in Stichproben.
 
-Der *srcmiplevel* -Parameter hat keine Auswirkungen auf die Gesamtanzahl der in *dest. w* zurückgegebenen MIP-Anzahl.
+Die in *dest.w* zurückgegebene MIP-Gesamtanzahl ist vom *srcMipLevel-Parameter* nicht betroffen.
 
-Bei UAVs (u \# ) ist die Anzahl der MIP-Ebenen immer 1.
+Bei UAVs \# (u) beträgt die Anzahl der Mip-Ebenen immer 1.
 
-Alle Aspekte dieser Anweisung basieren auf den Merkmalen der Ressourcen Sicht, die an t \# /u gebunden \# ist, nicht an der zugrunde liegenden Basis Ressource.
+Alle Aspekte dieser Anweisung basieren auf den Merkmalen der Ressourcenansicht, die an t /u gebunden \# \# ist, nicht auf der zugrunde liegenden Basisressource.
 
-Zurückgegebene Werte sind alle Gleit Komma Werte, es sei denn \_ , der uint-Modifizierer wird verwendet. in diesem Fall sind die zurückgegebenen Werte alle Ganzzahlen. Wenn der \_ rcpfloat-Modifizierer verwendet wird, sind alle zurückgegebenen Werte Gleit Komma Werte, und die Breite, Höhe und Tiefe werden als Gegenstücke (1.0 f/Width, 1.0 f/Height, 1.0 f/Tiefe) zurückgegeben, einschließlich inf, wenn "width/height/Tiefe" den Wert "0" für das außerhalb des gültigen *srcmiplevel* Der \_ rcpfloat-Modifizierer gilt nur für Werte vom Typ "width", "Height" und "Tiefe" und gilt nicht für Werte, die auf "0" festgelegt sind und daher nicht zurückgegeben werden, und gilt nicht für die Rückgabe von Array Größen.
+Zurückgegebene Werte sind alle Gleitkommawerte, es sei denn, der \_ uint-Modifizierer wird verwendet. In diesem Fall handelt es sich bei den zurückgegebenen Werten um ganze Zahlen. Wenn der \_ rcpFloat-Modifizierer verwendet wird, sind alle zurückgegebenen Werte Gleitkommawerte, und Breite, Höhe und Tiefe werden als Reziproke zurückgegeben (1,0f/Breite, 1,0f/Höhe, 1,0f/Tiefe), einschließlich INF, wenn Breite/Höhe/Tiefe aus dem *srcMipLevel-Verhalten* außerhalb des Bereichs 0 sind. Der \_ rcpFloat-Modifizierer gilt nur für die zurückgegebenen Werte für Breite, Höhe und Tiefe und gilt nicht für Werte, die auf 0 festgelegt und somit nicht zurückgegeben werden, und gilt auch nicht für Rückgaben der Arraygröße.
 
-Das Swizzle in *srkresource* ermöglicht es, dass die zurückgegebenen Werte willkürlich durchlaufen werden, bevor Sie in das Ziel geschrieben werden.
+Mit swizzle auf *srcResource* können die zurückgegebenen Werte willkürlich swizziert werden, bevor sie in das Ziel geschrieben werden.
 
-Wenn *srkresource* ein Texture1D ist, wird Width in *dest. x* zurückgegeben, und *dest. YZ* wird auf 0 festgelegt.
+Wenn *srcResource* eine Texture1D ist, wird die Breite in *dest.x* zurückgegeben, und *dest.yz* wird auf 0 festgelegt.
 
-Wenn *srkresource* ein Texture1DArray ist, wird "width" in " *dest. x*" zurückgegeben, die Array Größe wird in " *dest. y*" zurückgegeben, und " *dest. z* " wird auf 0 festgelegt.
+Wenn *srcResource* ein Texture1DArray ist, wird die Breite in *dest.x* zurückgegeben, die Arraygröße wird in *dest.y* zurückgegeben, und *dest.z* wird auf 0 festgelegt.
 
-Wenn *srkresource* ein Texture2D-Wert ist, werden Width und height in " *dest. XY*" zurückgegeben, und " *dest. z* " wird auf 0 festgelegt.
+Wenn *srcResource* eine Texture2D ist, werden Breite und Höhe in *dest.xy* zurückgegeben, und *dest.z* wird auf 0 festgelegt.
 
-Wenn *srkresource* ein Texture2DArray ist, werden Width und height in " *dest. XY*" zurückgegeben, und die Array Größe wird in " *dest. z*" zurückgegeben.
+Wenn *srcResource* ein Texture2DArray ist, werden Breite und Höhe in *dest.xy* zurückgegeben, und die Arraygröße wird in *dest.z* zurückgegeben.
 
-Wenn *srkresource* ein Texture3D-Wert ist, werden Width, Height und Tiefe in *dest.XYZ* zurückgegeben.
+Wenn *srcResource* eine Texture3D ist, werden Breite, Höhe und Tiefe in *dest.xyz* zurückgegeben.
 
-Wenn *srkresource* ein texturecube-Element ist, werden die Breite und Höhe der einzelnen Dimensions Abmessungen in " *dest. XY*" zurückgegeben, und " *dest. z* " wird auf 0 festgelegt.
+Wenn *srcResource* ein TextureCube ist, werden die Breite und Höhe der einzelnen Cubegesichtsdimensionen in *dest.xy* zurückgegeben, und *dest.z* wird auf 0 festgelegt.
 
-Wenn *srkresource* ein texturecubearray ist, werden die Dimensionen Breite und Höhe in den Dimensionen " *dest. XY*" zurückgegeben. " *dest. z* " ist auf einen nicht definierten Wert festgelegt.
+Wenn *srcResource* ein TextureCubeArray ist, werden die Breite und Höhe der einzelnen Cubegesichtsdimensionen in *dest.xy* zurückgegeben. *dest.z* ist auf einen nicht definierten Wert festgelegt.
 
-Wenn für *srkresource* die MIP-Klammer pro Ressource angegeben wurde, gibt ResInfo unabhängig von der Klammer immer die Gesamtzahl von Mipmaps in der Ansicht für die MIP-Anzahl zurück. Wenn jedoch die Dimensionen einer bestimmten miplevel von ResInfo angefordert werden und die miplevel-Methode ausgeschaltet wurde (z. b. eine Klammer von 2,2 bedeutet, dass MIPS 0 und 1 geklemmt wurden), sind die zurückgegebenen Dimensionen nicht definiert. Einige Implementierungen geben das Verhalten von außerhalb des gültigen Bereichs für ResInfo zurück, wenn sich die miplevel außerhalb des gültigen Bereichs befindet. Andere Implementierungen geben die Dimensionen des MIP so zurück, als würden Sie nicht geklammert werden.
+Wenn die Mip-Klammer pro Ressource für *srcResource* angegeben wurde, gibt resinfo immer die Gesamtzahl der Mipmaps in der Ansicht für die Mip-Anzahl zurück, unabhängig von der Klammer. Wenn die Dimensionen eines bestimmten miplevels jedoch von resinfo angefordert werden und die miplevel abgesperrt wurden (z. B. bedeutet eine Klammer von 2,2, dass die Mips 0 und 1 gebunden wurden), sind die zurückgegebenen Dimensionen nicht definiert. Einige Implementierungen geben das verhalten außerhalb der Grenzen zurück, das für resinfo angegeben wird, wenn das miplevel außerhalb des Bereichs liegt. Andere Implementierungen geben die Abmessungen des Mip zurück, als ob sie nicht angeklammert worden wären.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   *srkresource* muss ein t- \# oder u-Register sein, \# das kein Puffer ist, sondern eine Textur ist \* .
--   Die relative Adressierung von *srkresource* ist nicht zulässig.
--   *srcmiplevel* muss eine einzelne Komponentenauswahl verwenden, wenn es sich nicht um eine sofortige skalare handelt.
--   Durch das Abrufen von t \# oder u \# , das nichts daran gebunden ist, wird 0 für Breite, Höhe, Tiefe oder arraySize und "Total-MIP-count" zurückgegeben. Der \_ rcpfloat-Modifizierer wird in diesem Fall immer noch berücksichtigt und gibt daher inf für die anwendbaren zurückgegebenen Werte zurück.
--   Wenn *srcmiplevel* außerhalb des Bereichs der verfügbaren Anzahl von miplevels in der Ressource liegt, ist das Verhalten der Größen Rückgabe (*dest.XYZ*) identisch mit der einer ungebundenen t- \# oder u- \# Ressource. Die gesamte MIP-Anzahl wird in diesem Fall weiterhin in " *dest. w* " zurückgegeben.
+-   *srcResource* muss ein t- \# oder \# u-Register sein, das kein Puffer, sondern eine Textur \* ist.
+-   Die relative Adressierung von *srcResource* ist nicht zulässig.
+-   *srcMipLevel* muss eine einzelne Komponentenauswahl verwenden, wenn es sich nicht um einen skalaren unmittelbaren Selektor handelt.
+-   Beim Abrufen von "t" \# oder \# "u", an das nichts gebunden ist, wird 0 für Breite, Höhe, Tiefe oder Arraygröße und gesamter MIP-Wert zurückgegeben. Der \_ rcpFloat-Modifizierer wird in diesem Fall weiterhin berücksichtigt, wodurch INF für die entsprechenden zurückgegebenen Werte zurückgegeben wird.
+-   Wenn *srcMipLevel* außerhalb des Bereichs der verfügbaren Anzahl von miplevels in der Ressource liegt, ist das Verhalten für die Größenrückgabe (*dest.xyz*) mit dem Verhalten einer ungebundenen t- \# oder \# u-Ressource identisch. Die Gesamtanzahl der MIP-Daten wird in diesem Fall weiterhin in *dest.w* zurückgegeben.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -90,20 +90,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -113,7 +113,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

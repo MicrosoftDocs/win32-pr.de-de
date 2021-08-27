@@ -1,41 +1,41 @@
 ---
-description: MPEG-Beispiel Eigenschaften
+description: MPEG-Beispieleigenschaften
 ms.assetid: 339aab84-e5ad-4071-8b67-2b04cb17e450
-title: MPEG-Beispiel Eigenschaften
+title: MPEG-Beispieleigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c20df4b9285a77d00bd98bc6f21558f0d6b3c60
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c78872b41c579f6af594280b064bfbefc65ef13e8b9d4abf8c21ba9b19613bcf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075790"
 ---
-# <a name="mpeg-sample-properties"></a>MPEG-Beispiel Eigenschaften
+# <a name="mpeg-sample-properties"></a>MPEG-Beispieleigenschaften
 
-MPEG-Beispiele weisen die folgenden Eigenschaften auf.
+MPEG-Beispiele weisen die folgenden Merkmale auf.
 
 **Zeitstempel**
 
-Nicht alle Beispiele haben Start-und Endzeit. Die Beispiel Endzeit für Paket-und Nutzlastdaten ist nicht hilfreich. Sie wird in der Regel auf die Startzeit plus 1 festgelegt. Für die Stichproben von MPEG-Paketen oder Nutzlastdaten wird ein Start-und Endzeit Wert festgelegt, wenn das System Schicht Paket, von dem Sie generiert werden, gültige PTS enthält.
+Nicht alle Beispiele haben Start- und Stoppzeiten. Die Beispielstoppzeit für Paket- und Nutzlastdaten ist nicht hilfreich. sie wird in der Regel auf die Startzeit plus eins festgelegt. Für MPEG-Paket- oder Nutzlastdatenbeispiele wird eine Start- und Beendigungszeit festgelegt, wenn das Systemebenenpaket, aus dem sie generiert werden, über ein gültiges PTS verfügt.
 
-Weitere Informationen zu Zeitstempeln finden Sie im Abschnitt 2.4.1 von ISO1 "-11172:" der Paket Header enthält möglicherweise Decodierung und/oder Präsentationszeit Stempel (DTS und PTS), die auf die erste Zugriffs Einheit im Paket verweisen. "
+Weitere Informationen zu Zeitstempeln finden Sie im Abschnitt 2.4.1 von ISO1-11172: "Der Paketheader kann Decodierungs- und/oder Präsentationszeitstempel (DTS und PTS) enthalten, die auf die erste Zugriffseinheit im Paket verweisen."
 
-Bei MPEG- \_ Stream-Haupttypen ist die Startzeit die Byte Position des ersten Byte, bewertet bei 1 Byte pro Sekunde. Die Endzeit ist die Byte Position des letzten Bytes. Folglich sollten aufeinanderfolgende Stichproben die Endzeit des ersten Pakets aufweisen, das der Startzeit des nächsten Pakets entspricht. Bei Video-CD-Daten muss der Ursprung des Mediums dem Format einer Video-CD-Datei entsprechen, die von CDFS mit dem standardmäßigen Riff Block am Anfang verfügbar gemacht wird.
+Bei \_ MPEG Stream-Haupttypen ist die Startzeit die Byteposition des ersten Byte, bewertet mit 1 Byte pro Sekunde. Die Beendigungszeit ist die Byteposition des letzten Byte. Daher sollte für aufeinanderfolgende Stichproben die Beendigungszeit des ersten Pakets gleich der Startzeit des nächsten Pakets sein. Bei Video-CD Daten muss der Ursprung des Mediums mit dem Format einer Video-CD-Datei übereinstimmen, die von CDFS mit dem standardmäßigen CSV-Block am Anfang verfügbar gemacht wird.
 
-Bei MPEG-Video Paketen und Nutz Last Typen ist der Zeitstempel die Präsentationszeit für den ersten Videoframe, dessen Bild Start Code im Beispiel beginnt.
+Bei MPEG-Videopaket- und Nutzlasttypen ist der Zeitstempel die Präsentationszeit für den ersten Videoframe, dessen Bildstartcode im Beispiel beginnt.
 
-Bei MPEG-Audiopaketen und Nutz Last Typen ist der Zeitstempel die Präsentationszeit für den ersten audioframe, dessen Synchronisierungs Code im Beispiel beginnt.
+Bei MPEG-Audiopaket- und Nutzlasttypen ist der Zeitstempel die Präsentationszeit für den ersten Audioframe, dessen Synchronisierungscode im Beispiel beginnt.
 
-Es wird davon ausgegangen, dass Paket-und Nutzlastdaten ohne Zeitstempel von den Behandlungs Filtern erfolgreich vorab durchgeführt werden können.
+Es wird davon ausgegangen, dass Paket- und Nutzlastdaten ohne Zeitstempel erfolgreich von den Behandlungsfiltern vorabrolliert werden können.
 
 **Unterbrechungen**
 
-Wenn eine Unterbrechung im Stream vorliegt (z. b. eine Lücke in den Echtzeitdaten oder ein Fehler in den Daten oder nach einer Suche), wird die Diskontinuität-Eigenschaft im nächsten Medien Beispiel festgelegt. Dadurch wird auch eine Zeitstempel Diskontinuität ermöglicht.
+Wenn der Datenstrom unterbrochen wird (z. B. eine Lücke in den Echtzeitdaten oder ein Fehler in den Daten oder nach einer Suche), wird die Diskontinuitätseigenschaft im nächsten Medienbeispiel festgelegt. Dies ermöglicht auch eine Zeitstempel-Diskontinuität.
 
-**Streamende-Benachrichtigungen**
+**End-of-Stream-Benachrichtigungen**
 
-Wenn der Decoder diese Benachrichtigung empfängt, muss er alle gepufferten Daten verarbeiten. Alle neuen Daten müssen dann mit der Diskontinuität-Eigenschaft beginnen.
+Wenn der Decoder diese Benachrichtigung empfängt, muss er alle gepufferten Daten verarbeiten. Alle neuen Daten müssen dann mit der Diskontinuitätseigenschaft beginnen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

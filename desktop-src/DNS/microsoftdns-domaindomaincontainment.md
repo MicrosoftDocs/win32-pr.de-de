@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_DomainDomainContainment-Klasse
-description: Die MicrosoftDNS- \_ domaindomaincontainment-Klasse wird für die Domänen Kapselung verwendet. DNS-Domänen können andere DNS-Domänen enthalten.
+description: Die MicrosoftDNS \_ DomainDomainContainment-Klasse wird für die Domäneninklassierung verwendet. DNS-Domänen können andere DNS-Domänen enthalten.
 ms.assetid: 43faa046-30bf-4fb3-9698-98d09c424fad
 keywords:
-- DNS-MicrosoftDNS_DomainDomainContainment Klasse
-- DNS-MicrosoftDNS_DomainDomainContainment Klasse, beschrieben
+- MicrosoftDNS_DomainDomainContainment DNS-Klasse
+- MicrosoftDNS_DomainDomainContainment DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a55c5b67ee8026055bc2fa8098cb33e8c767528f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8f96d03f007af463fb4c4f672eb0d1374867636f4a4224469589563b9c5882e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040853"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084750"
 ---
-# <a name="microsoftdns_domaindomaincontainment-class"></a>MicrosoftDNS- \_ domaindomaincontainment-Klasse
+# <a name="microsoftdns_domaindomaincontainment-class"></a>MicrosoftDNS \_ DomainDomainContainment-Klasse
 
-Die **MicrosoftDNS- \_ domaindomaincontainment** -Klasse wird für die Domänen Kapselung verwendet. DNS-Domänen können andere DNS-Domänen enthalten. Jede Instanz der [**MicrosoftDNS- \_ Domänen**](microsoftdns-domain.md) Klasse kann mehrere andere Instanzen der **MicrosoftDNS- \_ Domäne** enthalten. Eine Instanz eines **MicrosoftDNS- \_ Domänen** Objekts ist direkt in höchstens einer **MicrosoftDNS- \_ Domäne** der höheren Ebene enthalten.
+Die **MicrosoftDNS \_ DomainDomainContainment-Klasse** wird für die Domäneninklassierung verwendet. DNS-Domänen können andere DNS-Domänen enthalten. Jede Instanz der [**MicrosoftDNS-Domänenklasse \_**](microsoftdns-domain.md) kann mehrere andere Instanzen der **MicrosoftDNS-Domäne \_ enthalten.** Eine Instanz eines **MicrosoftDNS-Domänenobjekts \_** ist direkt in nicht mehr als einer **höheren MicrosoftDNS-Domäne \_ enthalten.**
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class MicrosoftDNS_DomainDomainContainment : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ domaindomaincontainment** -Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ DomainDomainContainment-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MicrosoftDNS- \_ domaindomaincontainment** -Klasse verfügt über diese Eigenschaften.
+Die **MicrosoftDNS \_ DomainDomainContainment-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **GroupComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS \_ Domain**
+Datentyp: **MicrosoftDNS-Domäne \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, Max (1), override ("GroupComponent")
+Qualifizierer: Key, Max(1), Override("GroupComponent")
 
-Beschreibung: eine Domäne, eine Zone, ein Cache oder eine roothints auf höherer Ebene.
+Beschreibung: Eine Domäne, Zone, Ein Cache oder RootHints auf höherer Ebene.
 
-Von CIM- \_ Komponente geerbt
+Geerbt von \_ CIM-Komponente
 
 </dd> <dt>
 
 **PartComponent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **MicrosoftDNS \_ Domain**
+Datentyp: **MicrosoftDNS-Domäne \_**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Qualifizierer: Key, override ("PartComponent")
+Qualifizierer: Key, Override("PartComponent")
 
-Beschreibung: die Domäne, die sich in einer Domäne, Zone, einem Cache oder in einer höheren Ebene befindet.
+Beschreibung: Die Domäne, die in einer Domäne, Zone, einem Cache oder RootHints auf höherer Ebene enthalten ist.
 
-Geerbt von CIM- \_ Komponente.
+Geerbt von \_ CIM-Komponente.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -95,7 +95,7 @@ Geerbt von CIM- \_ Komponente.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -103,13 +103,13 @@ Geerbt von CIM- \_ Komponente.
 
 <dl> <dt>
 
-[**MicrosoftDNS \_ domainresourcerecordcontainment**](microsoftdns-domainresourcerecordcontainment.md)
+[**MicrosoftDNS \_ DomainResourceRecordContainment**](microsoftdns-domainresourcerecordcontainment.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ resourcerecord**](microsoftdns-resourcerecord.md)
+[**MicrosoftDNS \_ ResourceRecord**](microsoftdns-resourcerecord.md)
 </dt> <dt>
 
-[**MicrosoftDNS \_ serverdomaincontainment**](microsoftdns-serverdomaincontainment.md)
+[**MicrosoftDNS \_ ServerDomainContainment**](microsoftdns-serverdomaincontainment.md)
 </dt> </dl>
 
  

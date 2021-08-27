@@ -1,9 +1,9 @@
 ---
-title: Tlsextensions (v2-Schema)
-description: Weitere Informationen zum tlsextensions (tlsextensionstype)-Element. Dieses Element ermöglicht zukünftige Erweiterungen des Schemas.
+title: TLSExtensions (v2-Schema)
+description: Erfahren Sie mehr über das TLSExtensions-Element (TLSExtensionsType). Dieses Element ermöglicht zukünftige Verbesserungen am Schema.
 ms.assetid: efbb402e-a001-4782-aca8-be4aeca8328c
 keywords:
-- Tlsextensions-Element EAPHost
+- TLSExtensions-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 02ad636f9894f96b9d6e9b2d27952117c7581e69
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: aee5841de491b72481cccd07fd6f4f65ee9cfc6dbd0620dc4558ed6ca3c2b130
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391027"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094380"
 ---
-# <a name="tlsextensions-v2-schema"></a>Tlsextensions (v2-Schema)
+# <a name="tlsextensions-v2-schema"></a>TLSExtensions (v2-Schema)
 
-Die **tlsextensions (tlsextensionstype)** -Element ermöglicht zukünftige Erweiterungen des Schemas.
+Das **TLSExtensions-Element (TLSExtensionsType)** ermöglicht zukünftige Verbesserungen am Schema.
 
 ``` syntax
 <xs:element name="TLSExtensions"
@@ -31,50 +31,50 @@ Die **tlsextensions (tlsextensionstype)** -Element ermöglicht zukünftige Erwei
  />
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **tlsextensions** -Element ist optional.
+Das **TLSExtensions-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Server<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Server<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv2](eaptlsconnectionpropertiesv2schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv2-Schema Elemente](eaptlsconnectionpropertiesv2schema-elements.md)
+[eaptlsconnectionpropertiesv2-Schemaelemente](eaptlsconnectionpropertiesv2schema-elements.md)
 </dt> <dt>
 
-[**Tlsextensions (eaptype)**](eaptlsconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md)
+[**TLSExtensions (EapType)**](eaptlsconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md)
 </dt> </dl>
 
  

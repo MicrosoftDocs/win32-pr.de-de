@@ -1,9 +1,9 @@
 ---
 title: /h-Schalter
-description: Die/h-Option ist funktionell gleichwertig mit der/Header-Option.
+description: Die Option /h entspricht funktional der Option /header.
 ms.assetid: 1b74d5f2-6624-4b71-832d-fb55a0e84c86
 keywords:
-- /h-Schalter-Mittel l
+- /h switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c7ff2cd7aa5e4b8386e0c9faecfaccd860207403
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a71bf02668a583b330684338cbc3f639fbbda5a340c7226e10956233aa8dc9ed
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038085"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105610"
 ---
 # <a name="h-switch"></a>/h-Schalter
 
-Die **/h** -Option ist funktionell gleichwertig mit der [**/Header**](-header.md) -Option.
+Die Option **/h** entspricht funktional der Option [**/header.**](-header.md)
 
 ``` syntax
 midl /h filename
@@ -34,33 +34,33 @@ midl /h filename
 *filename* 
 </dt> <dd>
 
-Gibt einen Header Dateinamen an, der den Standard Header Dateinamen überschreibt. Dateinamen können mit doppelten Anführungszeichen (") explizit angegeben werden, um zu verhindern, dass die Shell Sonderzeichen interpretiert.
+Gibt einen Headerdateinamen an, der den Standardnamen der Headerdatei überschreibt. Dateinamen können explizit mit doppelten Anführungszeichen (") angegeben werden, um zu verhindern, dass die Shell Sonderzeichen interpretiert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Schalter **/h** gibt *filename* als Namen für eine Header Datei an, die alle Definitionen enthält, die in der IDL-Datei enthalten sind, ohne die IDL-Syntax. Diese Datei kann als C-oder C++-Header Datei verwendet werden.
+Der Schalter **/h** gibt *dateiname* als Namen für eine Headerdatei an, die alle definitionen enthält, die in der IDL-Datei enthalten sind, ohne die IDL-Syntax. Diese Datei kann als C- oder C++-Headerdatei verwendet werden.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/h tlibhead. h Dateiname. idl**
+**midl /h tlibhead.h filename.idl**
 
-**Mittel l/h "mittlerer l. h" Dateiname. idl**
+**midl /h "midl.h" filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/Header**](-header.md)
+[**/header**](-header.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

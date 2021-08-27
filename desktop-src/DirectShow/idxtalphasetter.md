@@ -1,7 +1,7 @@
 ---
-description: Die idxtalphasetter-Schnittstelle legt Eigenschaften für den Alpha Setter-Effekt fest. Diese Schnittstelle wird vom DirectShow-Bearbeitungs Dienst (des) intern verwendet, wenn Sie den Alpha Setter-Effekt rendert.
+description: Die IDxtAlphaSetter-Schnittstelle legt Eigenschaften für den Alpha-Setter-Effekt fest. Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Alpha-Setter-Effekt gerendert wird.
 ms.assetid: 9f0439b9-55d2-4526-ae4c-64ab90e11a64
-title: Idxtalphasetter-Schnittstelle (qedit. h)
+title: IDxtAlphaSetter-Schnittstelle (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,56 +14,56 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 0f4ad88d10f4a2538cddbdc31fa90bc5496bc7f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1cc4056733dbd0e46639a921da65e5cb2a81f3601fa1ae00624be7d92ddc0e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051930"
 ---
-# <a name="idxtalphasetter-interface"></a>Idxtalphasetter-Schnittstelle
+# <a name="idxtalphasetter-interface"></a>IDxtAlphaSetter-Schnittstelle
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die- `IDxtAlphaSetter` Schnittstelle legt Eigenschaften für den [Alpha Setter](alpha-setter-effect.md) -Effekt fest.
+Die `IDxtAlphaSetter` -Schnittstelle legt Eigenschaften für den [Alpha-Setter-Effekt](alpha-setter-effect.md) fest.
 
-Diese Schnittstelle wird vom DirectShow-Bearbeitungs Dienst (des) intern verwendet, wenn Sie den Alpha Setter-Effekt rendert. Die-Anwendungen müssen diese Schnittstelle nicht verwenden. Um die Eigenschaften für einen Übergang in des festzulegen, verwenden Sie die [**ipropertysetter**](ipropertysetter.md) -Schnittstelle.
+Diese Schnittstelle wird intern von DirectShow Editing Services (DES) verwendet, wenn der Alpha-Setter-Effekt gerendert wird. DES-Anwendungen müssen diese Schnittstelle nicht verwenden. Verwenden Sie zum Festlegen der Eigenschaften für einen Übergang in DES die [**IPropertySetter-Schnittstelle.**](ipropertysetter.md)
 
 ## <a name="members"></a>Member
 
-Die **idxtalphasetter** -Schnittstelle erbt von **idxeffect**. **Idxtalphasetter** verfügt auch über die folgenden Typen von Membern:
+Die **IDxtAlphaSetter-Schnittstelle** erbt von **IDXEffect**. **IDxtAlphaSetter** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **idxtalphasetter** -Schnittstelle verfügt über diese Methoden.
+Die **IDxtAlphaSetter-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                  | BESCHREIBUNG                                                |
+| Methode                                                  | Beschreibung                                                |
 |:--------------------------------------------------------|:-----------------------------------------------------------|
-| [**\_Alpha**](idxtalphasetter-get-alpha.md)         | Ruft den Alpha-Wert für das gesamte Bild ab.<br/> |
-| [**\_alpharamp erhalten**](idxtalphasetter-get-alpharamp.md) | Ruft die Eigenschaft für die Alpha-Eigenschaft ab.<br/>              |
-| [**\_Alpha platzieren**](idxtalphasetter-put-alpha.md)         | Gibt den Alpha-Wert für das gesamte Bild an.<br/> |
-| [**Put \_ alpharamp**](idxtalphasetter-put-alpharamp.md) | Gibt die Eigenschaft für die Alpha-Eigenschaft an.<br/>              |
+| [**Alpha \_ erhalten**](idxtalphasetter-get-alpha.md)         | Ruft den Alphawert für das gesamte Bild ab.<br/> |
+| [**\_AlphaRamp erhalten**](idxtalphasetter-get-alpharamp.md) | Ruft die Alpha-Rampeneigenschaft ab.<br/>              |
+| [**put \_ Alpha**](idxtalphasetter-put-alpha.md)         | Gibt den Alphawert für das gesamte Bild an.<br/> |
+| [**put \_ AlphaRamp**](idxtalphasetter-put-alpharamp.md) | Gibt die Alpha-Rampeneigenschaft an.<br/>              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -73,8 +73,8 @@ Die **idxtalphasetter** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 

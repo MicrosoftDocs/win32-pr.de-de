@@ -1,11 +1,11 @@
 ---
-title: Idschreitetextlayout determineminwidth-Methode
-description: Bestimmt die minimal mögliche Breite, auf die das Layout festgelegt werden kann, ohne dass ein notfallumbruch zwischen den Zeichen der ganzen Wörter auftritt.
+title: IDWriteTextLayout DetermineMinWidth-Methode
+description: Bestimmt die minimal mögliche Breite, auf die das Layout festgelegt werden kann, ohne dass zwischen den Zeichen ganzer Wörter ein Notfall auftritt.
 ms.assetid: 8efa1471-1b74-46d4-ac6d-fb1839ce2e74
 keywords:
-- Determineminwidth-Methode direkt schreiben
-- Determineminwidth-Methode direkt schreiben, idschreitetextlayout-Schnittstelle
-- Idwrite tetextlayout Interface Direct Write, determineminwidth-Methode
+- DetermineMinWidth-Methode – Direkter Schreibzugriff
+- DetermineMinWidth-Methode Direct Write, IDWriteTextLayout-Schnittstelle
+- IDWriteTextLayout-Schnittstelle Direct Write , DetermineMinWidth-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2525f770030b80f0e9c0d6df9e5ec88becbb394b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 41123f2a5d584341c344248d0af936f34fc04e49c9aabc1cb73ecea0eacc84ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075530"
 ---
-# <a name="idwritetextlayoutdetermineminwidth-method"></a>Idschreitetextlayout::D etermineminwidth-Methode
+# <a name="idwritetextlayoutdetermineminwidth-method"></a>IDWriteTextLayout::D etermineMinWidth-Methode
 
-Bestimmt die minimal mögliche Breite, auf die das Layout festgelegt werden kann, ohne dass ein notfallumbruch zwischen den Zeichen der ganzen Wörter auftritt.
+Bestimmt die minimal mögliche Breite, auf die das Layout festgelegt werden kann, ohne dass zwischen den Zeichen ganzer Wörter ein Notfall auftritt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,12 +42,12 @@ virtual HRESULT DetermineMinWidth(
 
 <dl> <dt>
 
-*MinWidth* \[ vorgenommen\]
+*minWidth* \[ out\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* FLOAT**
 
-Minimale Breite.
+Mindestbreite.
 
 </dd> </dl>
 
@@ -55,15 +55,15 @@ Minimale Breite.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
@@ -72,10 +72,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
+[**Idwritetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 </dt> <dt>
 
-[**Idschreitetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
+[**Idwritetextlayout**](/windows/win32/api/dwrite/nn-dwrite-idwritetextlayout)
 </dt> </dl>
 
  

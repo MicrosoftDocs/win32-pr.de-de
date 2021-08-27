@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: a4fba4c9b832256620dec60852a53b3e2ed17101
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 41de8706ebba3221f5b805b3647afb5b0a46c9a4299d5564ed472a42037b7969
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075120"
 ---
 # <a name="clientcomponentcode-property"></a>Client.ComponentCode-Eigenschaft
 
@@ -30,11 +30,11 @@ Der Komponentencode der betreffenden Komponente. Diese Eigenschaft ruft die [**M
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
 | Version<br/> | Windows Installer 5.0 oder höher.<br/>                                         |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl> |

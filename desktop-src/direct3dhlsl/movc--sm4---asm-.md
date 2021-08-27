@@ -1,23 +1,23 @@
 ---
-title: "\"muvc\" (SM4-ASM)"
-description: Bedingter Wechsel in Komponenten. | "muvc" (SM4-ASM)
+title: movc (sm4 - asm)
+description: Komponentenweises bedingtes Verschieben. | movc (sm4 - asm)
 ms.assetid: B7F19DF5-282F-41D4-AE2D-6ACF61A42088
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91aa3116b7bc13102386c57c9b8c63d3534147a8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 81da36b39f60929bdfbac3b4a37c379189cf358ed4844e1a4cc899f867970065
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995478"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095360"
 ---
-# <a name="movc-sm4---asm"></a>"muvc" (SM4-ASM)
+# <a name="movc-sm4---asm"></a>movc (sm4 - asm)
 
-Bedingter Wechsel in Komponenten.
+Komponentenweises bedingtes Verschieben.
 
 
 
-| der Pfad von "netvc" ist " \[ \_ \] dest \[ . Mask" \] , src0 \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle2 \[ \_ ABS \] \[ . Swizzle \] , |
+| movc \[ \_ sat \] dest \[ .mask \] , src0 \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle , \] \[ - \] src2 abs \[ \_ \] \[ .swizzle \] , |
 |----------------------------------------------------------------------------------------------------------------|
 
 
@@ -28,18 +28,18 @@ Bedingter Wechsel in Komponenten.
 
 | Element                                                            | BESCHREIBUNG                                                                                                                    |
 |-----------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses. <br/> Wenn *src0*, dann *dest*  =  *Quelle1* Else *dest*  =  *Quelle2*<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten, für die die Bedingung getestet werden soll.<br/>                                                               |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den zu Verschieb-Komponenten. <br/>                                                                                     |
-| <span id="src2"></span><span id="SRC2"></span>*Quelle2*<br/> | \[in \] den zu Verschieb-Komponenten.<br/>                                                                                      |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs. <br/> Wenn *src0*, dann *dest*  =  *src1* else *dest*  =  *src2*<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, für die die Bedingung getestet werden soll.<br/>                                                               |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die zu verschiebende Komponenten. <br/>                                                                                     |
+| <span id="src2"></span><span id="SRC2"></span>*src2*<br/> | \[in \] Die zu verschiebende Komponenten.<br/>                                                                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
+Im folgenden Beispiel wird die Verwendung dieser Anweisung veranschaulicht.
 
 ``` syntax
                 for each component in dest[.mask]
@@ -55,9 +55,9 @@ Das folgende Beispiel zeigt die Verwendung dieser Anweisung.
                 endfor
 ```
 
-Bei den Modifizierern auf *Quelle1* und *Quelle2*, mit Ausnahme von Swizzle, wird davon ausgegangen, dass die Daten Gleit Komma sind. Das Fehlen von Modifizierern verschiebt Daten nur, ohne Bits zu ändern.
+Die Modifizierer für *src1* und *src2*, mit Ausnahme von swizzle, setzen voraus, dass es sich bei den Daten um Gleitkommadaten handelt. Das Fehlen von Modifizierern verschiebt nur Daten, ohne Bits zu ändern.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -69,20 +69,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -92,7 +92,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

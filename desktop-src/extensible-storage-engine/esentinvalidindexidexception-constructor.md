@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalidindexidexception-Konstruktor'
-title: Esentinvalidindexidexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentInvalidIndexIdException-Konstruktor'
+title: EsentInvalidIndexIdException-Konstruktor
 TOCTitle: 'EsentInvalidIndexIdException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidIndexIdException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidindexidexception.esentinvalidindexidexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 25245aa7e979cf81fadcbf45ac01125695f8ed03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 014796569d0a85e3d5e076a0f1840b4cdbbb4e7e8595034df2d7fbc8cd2b9436
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064665"
 ---
-# <a name="esentinvalidindexidexception-constructor"></a>Esentinvalidindexidexception-Konstruktor
+# <a name="esentinvalidindexidexception-constructor"></a>EsentInvalidIndexIdException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidindexidexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidIndexIdException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidIndexIdException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalidindexidexception-Klasse](./esentinvalidindexidexception-class.md)
+[EsentInvalidIndexIdException-Klasse](./esentinvalidindexidexception-class.md)
 
-[Esentinvalidindexidexception-Elemente](./esentinvalidindexidexception-members.md)
+[EsentInvalidIndexIdException-Member](./esentinvalidindexidexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

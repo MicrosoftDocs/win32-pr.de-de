@@ -1,34 +1,34 @@
 ---
-description: Die Kerberos-Ticket Richtlinie wird auf Domänen Ebene definiert und durch die Schlüsselverteilungscenter der Domäne (KDC) implementiert.
+description: Die Kerberos-Ticketrichtlinie wird auf Domänenebene definiert und durch den Schlüsselverteilungscenter (KDC) der Domäne implementiert.
 ms.assetid: 4774218b-7cbd-4e8d-a064-44ebdc37e534
 title: Kerberos-Richtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4559353e65a25a380c0c2aa4bb7e5d56f7681af1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 743d1dd394c42028c70f560fcb7f83b42bab506fbd222f877857be362a450041
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127310"
 ---
 # <a name="kerberos-policy"></a>Kerberos-Richtlinie
 
-Die Kerberos-Ticket Richtlinie wird auf Domänen Ebene definiert und durch die [*Schlüsselverteilungscenter*](../secgloss/k-gly.md) der Domäne (KDC) implementiert. Die Kerberos-Richtlinie wird in der Active Directory als eine Teilmenge der Attribute der Domänen Sicherheitsrichtlinie gespeichert. Standardmäßig können Richtlinien Optionen nur von Mitgliedern der Gruppe "Domänen Administratoren" festgelegt werden. Die Domänen Richtlinie umfasst folgende Optionen:
+Die Kerberos-Ticketrichtlinie wird auf Domänenebene definiert und durch den Schlüsselverteilungscenter (KDC) [*der*](../secgloss/k-gly.md) Domäne implementiert. Die Kerberos-Richtlinie wird in Active Directory als Teilmenge der Attribute der Domänensicherheitsrichtlinie gespeichert. Standardmäßig können Richtlinienoptionen nur von Mitgliedern der Gruppe Domänenadministratoren festgelegt werden. Die Domänenrichtlinie enthält Optionen, die Folgendes umfassen:
 
--   Unterstützung von postveralteten Tickets
--   Unterstützung der eingeschränkten Delegierung (nur Windows Server 2003)
--   Support Tickets, die weitergeleitet werden können
--   Unterstützen von erneuerbaren Tickets
--   Festlegen des maximalen Ticket Alters
--   Festlegen des maximalen Erneuerungs Alters
--   Festlegen des maximalen proxyticket-Alters
--   Abmeldung von Benutzern beim Ablaufen von Tickets erzwingen
+-   Support für postdierte Tickets
+-   Eingeschränkte Delegierung unterstützen (nur Windows Server 2003)
+-   Supporttickets, die weitergeleitet werden können
+-   Support für Tickets
+-   Festlegen des maximalen Ticketalters
+-   Festlegen des maximalen Verlängerungsalters
+-   Festlegen des maximalen Proxyticketalters
+-   Er forcibly log off users when tickets expire (Benutzer abmelden, wenn Tickets ablaufen)
 
-Bei der [*eingeschränkten Delegierung*](../secgloss/c-gly.md)kann ein Computer so festgelegt werden, dass die Weiterleitung von Anmelde Informationen nur an eine bestimmte Liste von Diensten zulässig ist. Diese Dienste müssen sich in derselben Domäne befinden wie der Computer, der die Anmelde Informationen weiterleitet. Bei der *eingeschränkten Delegierung* werden Tickets nicht mehr vom Client an den Server gesendet. Der Server Computer erstellt nach Bedarf Dienst Tickets, die zum Authentifizieren des Clients verwendet werden.
+Bei [*eingeschränkter Delegierung*](../secgloss/c-gly.md)kann ein Computer so festgelegt werden, dass die Weiterleitung von Anmeldeinformationen nur an eine bestimmte Liste von Diensten zulässig ist. Diese Dienste müssen sich in derselben Domäne befinden wie der Computer, der die Anmeldeinformationen weiterleiten. Bei *eingeschränkter Delegierung* werden Keine Tickets mehr vom Client an den Server gesendet. Der Servercomputer erstellt Diensttickets, die bei Bedarf aus Informationen weitergeleitet werden, die zum Authentifizieren des Clients verwendet werden.
 
-Obwohl die Kerberos-Richtlinie für eine Domäne die delegierte Authentifizierung zulässt, indem Tickets weitergeleitet werden können, muss dieser Aspekt der Richtlinie nicht für alle Benutzer oder alle Computer gelten. Ein Attribut eines einzelnen Benutzerkontos kann festgelegt werden, um die Weiterleitung der [*Anmelde*](../secgloss/c-gly.md) Informationen dieses Benutzers durch einen beliebigen Server zu deaktivieren. Ein Attribut des Kontos eines einzelnen Computers kann festgelegt werden, um die Weiterleitung von Anmelde Informationen von einem beliebigen Benutzer zu deaktivieren. In beiden Fällen können Sie die Delegierung deaktivieren, indem Sie eine Gruppenrichtlinie erstellen, die für alle Benutzer oder alle Computer in einer Organisationseinheit der Active Directory gilt.
+Obwohl die Kerberos-Richtlinie für eine Domäne möglicherweise eine delegierte Authentifizierung zu ermöglicht, indem Tickets weitergeleitet werden können, muss dieser Aspekt der Richtlinie nicht für alle Benutzer oder alle Computer gelten. Ein Attribut eines einzelnen Benutzerkontos kann festgelegt werden, um die Weiterleitung der Anmeldeinformationen dieses Benutzers durch [*einen*](../secgloss/c-gly.md) beliebigen Server zu deaktivieren. Ein Attribut des Kontos eines einzelnen Computers kann festgelegt werden, um die Weiterleitung von Anmeldeinformationen von einem beliebigen Benutzer zu deaktivieren. In beiden Fällen kann die Delegierung deaktiviert werden, indem eine Gruppenrichtlinie erstellt wird, die für alle Benutzer oder alle Computer in einer Organisationseinheit von Active Directory gilt.
 
-**Windows XP/2000:** Die eingeschränkte Delegierung wird nicht unterstützt.
+**Windows XP/2000:** Eingeschränkte Delegierung wird nicht unterstützt.
 
  
 

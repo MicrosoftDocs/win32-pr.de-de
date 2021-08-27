@@ -1,10 +1,10 @@
 ---
 title: MicrosoftDNS_Cache-Klasse
-description: Die MicrosoftDNS- \_ Cache Klasse beschreibt einen Cache, der auf einem DNS-Server vorhanden ist.
+description: Die MicrosoftDNS \_ Cache-Klasse beschreibt einen Cache, der auf einem DNS-Server vorhanden ist.
 ms.assetid: 139406eb-70f2-4614-9662-703ada032298
 keywords:
-- DNS-MicrosoftDNS_Cache Klasse
-- DNS-MicrosoftDNS_Cache Klasse, beschrieben
+- MicrosoftDNS_Cache DNS-Klasse
+- MicrosoftDNS_Cache DNS-Klasse , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -17,20 +17,20 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e55bda9c38d889fe1b84ef28432b18e5724af09
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 03728a82f7668e38e43c92e3edacff1717333c6b073ee3491389723fb63b5f7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077070"
 ---
-# <a name="microsoftdns_cache-class"></a>MicrosoftDNS- \_ Cache Klasse
+# <a name="microsoftdns_cache-class"></a>MicrosoftDNS \_ Cache-Klasse
 
-Die **MicrosoftDNS- \_ Cache** Klasse beschreibt einen Cache, der auf einem DNS-Server vorhanden ist. Diese Klasse vereinfacht die Visualisierung der Kapselung von DNS-Objekten, anstatt ein reales Objekt darzustellen. Die **MicrosoftDNS- \_ Cache** Klasse ist ein Container für die Ressourcen Datensätze, die vom DNS-Server zwischengespeichert werden. Verwechseln Sie dies nicht mit einer Cache Datei, die Root-Hinweise enthält.
+Die **MicrosoftDNS \_ Cache-Klasse** beschreibt einen Cache, der auf einem DNS-Server vorhanden ist. Diese Klasse vereinfacht das Visualisieren der Containment von DNS-Objekten, anstatt ein echtes Objekt zu darstellen. Die **MicrosoftDNS \_ Cache-Klasse** ist ein Container für die vom DNS-Server zwischengespeicherten Ressourceneinträge. Verwechseln Sie dies nicht mit einer Cachedatei, die Stammhinweise enthält.
 
-Jede Instanz der **MicrosoftDNS \_** -Klasse muss genau einem DNS-Server zugewiesen werden. Sie ist möglicherweise mehreren Instanzen der [**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md) oder der [**MicrosoftDNS- \_ resourcerecord**](microsoftdns-resourcerecord.md) -Klasse zugeordnet.
+Jede Instanz der **MicrosoftDNS \_ Cache-Klasse** muss genau einem DNS-Server zugewiesen werden. Sie kann mehreren Instanzen der [**MicrosoftDNS \_ Domain-**](microsoftdns-domain.md) oder [**MicrosoftDNS \_ ResourceRecord-Klassen zugeordnet**](microsoftdns-resourcerecord.md) sein.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,26 +42,26 @@ class MicrosoftDNS_Cache : MicrosoftDNS_Domain
 
 ## <a name="members"></a>Member
 
-Die **MicrosoftDNS- \_ Cache** Klasse verfügt über diese Typen von Membern:
+Die **MicrosoftDNS \_ Cache-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **MicrosoftDNS- \_ Cache** Klasse verfügt über diese Methoden.
+Die **MicrosoftDNS \_ Cache-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                   | BESCHREIBUNG                                                                                     |
 |:-------------------------|:------------------------------------------------------------------------------------------------|
-| **ClearCache**           | Löscht den DNS-Server Cache von Ressourcen Datensätzen. <br/> Qualifizierer: Implementiert<br/> |
-| **Getchilshedname** | Ruft den Distinguished Name für die Zone ab. <br/> Qualifizierer: Implementiert<br/>   |
+| **ClearCache**           | Leert den DNS-Servercache von Ressourceneinträgen. <br/> Qualifizierer: Implementiert<br/> |
+| **GetDistinguishedName** | Ruft den Distinguished Name für die Zone ab. <br/> Qualifizierer: Implementiert<br/>   |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -70,7 +70,7 @@ Die **MicrosoftDNS- \_ Cache** Klasse verfügt über diese Methoden.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
@@ -78,13 +78,13 @@ Die **MicrosoftDNS- \_ Cache** Klasse verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Domäne**](microsoftdns-domain.md)
+[**MicrosoftDNS-Domäne \_**](microsoftdns-domain.md)
 </dt> <dt>
 
-[**ClearCache-Methode der MicrosoftDNS- \_ Cache Klasse**](microsoftdns-cache-clearcache.md)
+[**ClearCache-Methode der MicrosoftDNS \_ Cache-Klasse**](microsoftdns-cache-clearcache.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Cache Klasse**](microsoftdns-cache-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der MicrosoftDNS \_ Cache-Klasse**](microsoftdns-cache-getdistinguishedname.md)
 </dt> </dl>
 
  

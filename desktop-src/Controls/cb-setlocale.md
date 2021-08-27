@@ -1,9 +1,9 @@
 ---
-title: CB_SETLOCALE Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB- \_ setlocale-Nachricht, um das aktuelle Gebiets Schema des Kombinations Felds festzulegen. Wenn das Kombinations Feld den CBS \_ -Sortier Stil hat und mithilfe von CB \_ AddString Zeichen folgen hinzugefügt werden, wirkt sich das Gebiets Schema eines Kombinations Felds darauf aus, wie Listenelemente sortiert werden.
+title: CB_SETLOCALE (Winuser.h)
+description: Eine Anwendung sendet eine CB \_ SETLOCALE-Nachricht, um das aktuelle Locale des Kombinationsfelds zu festlegen. Wenn das Kombinationsfeld über den CBS SORT-Stil verfügt und Zeichenfolgen mit CB ADDSTRING hinzugefügt werden, wirkt sich das Locale eines Kombinationsfelds darauf aus, wie \_ \_ Listenelemente sortiert werden.
 ms.assetid: 06f9c69d-1220-490f-bc67-6e125f696e87
 keywords:
-- Windows-Steuerelemente für CB_SETLOCALE Meldung
+- CB_SETLOCALE von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 025f33dc8ba236965a98ca984446b04846ecd2ba
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ef1647d8ff4c7a4625151a9ec099800549d831f6b55a7ef6cc6b5ead365e80e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063301"
 ---
-# <a name="cb_setlocale-message"></a>CB- \_ setlocale-Meldung
+# <a name="cb_setlocale-message"></a>CB \_ SETLOCALE-Nachricht
 
-Eine Anwendung sendet eine **CB- \_ setlocale** -Nachricht, um das aktuelle Gebiets Schema des Kombinations Felds festzulegen. Wenn das Kombinations Feld den [**CBS- \_ Sortier**](combo-box-styles.md) Stil hat und mithilfe von [**CB \_ AddString Zeichen**](cb-addstring.md)folgen hinzugefügt werden, wirkt sich das Gebiets Schema eines Kombinations Felds darauf aus, wie Listenelemente sortiert werden.
+Eine Anwendung sendet eine **CB \_ SETLOCALE-Nachricht,** um das aktuelle Locale des Kombinationsfelds zu festlegen. Wenn das Kombinationsfeld über den [**CBS \_ SORT-Stil**](combo-box-styles.md) verfügt und Zeichenfolgen mit [**CB \_ ADDSTRING**](cb-addstring.md)hinzugefügt werden, wirkt sich das -Locale eines Kombinationsfelds darauf aus, wie Listenelemente sortiert werden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet eine **CB- \_ setlocale** -Nachricht, um das aktuelle Gebi
 *wParam* 
 </dt> <dd>
 
-Gibt den Gebiets Schema Bezeichner für das Kombinations Feld an, das beim Hinzufügen von Text zum Sortieren verwendet wird.
+Gibt den Locale Identifier für das Kombinationsfeld an, das beim Hinzufügen von Text zum Sortieren verwendet werden soll.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der vorherige Gebiets Schema Bezeichner. Wenn *wParam* ein Gebiets Schema angibt, das nicht auf dem System installiert ist, ist der Rückgabewert CB \_ Err, und das aktuelle Kombinations Feld-Gebiets Schema wird nicht geändert.
+Der Rückgabewert ist der vorherige Locale Identifier. Wenn *wParam ein* nicht auf dem System installiertes Locale angibt, ist der Rückgabewert CB ERR, und das aktuelle Kombinationsfeld-Locale \_ wird nicht geändert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid) -Makro, um einen Gebiets Schema Bezeichner und das [**makelangid-**](/windows/desktop/api/winnt/nf-winnt-makelangid) Makro zum Erstellen eines sprach Bezeichners zu erstellen. Die Sprach-ID besteht aus einer primär Sprachen-ID und einer unter Sprachen-ID.
+Verwenden Sie [**das MAKELCID-Makro,**](/windows/desktop/api/winnt/nf-winnt-makelcid) um einen Locale Identifier zu erstellen, und das [**MAKELANGID-Makro,**](/windows/desktop/api/winnt/nf-winnt-makelangid) um einen Sprachbezeichner zu erstellen. Der Sprachbezeichner besteht aus einem Bezeichner der primären Sprache und einem Bezeichner für die Untersprache.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Verwenden Sie das [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid) -
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,19 +67,19 @@ Verwenden Sie das [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid) -
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB \_ AddString**](cb-addstring.md)
+[**CB \_ ADDSTRING**](cb-addstring.md)
 </dt> <dt>
 
-[**CB \_ getLocale**](cb-getlocale.md)
+[**CB \_ GETLOCALE**](cb-getlocale.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Makelangid**](/windows/desktop/api/winnt/nf-winnt-makelangid)
+[**MAKELANGID**](/windows/desktop/api/winnt/nf-winnt-makelangid)
 </dt> <dt>
 
 [**MAKELCID**](/windows/desktop/api/winnt/nf-winnt-makelcid)

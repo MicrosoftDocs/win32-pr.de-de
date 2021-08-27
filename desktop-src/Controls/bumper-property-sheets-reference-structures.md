@@ -1,23 +1,23 @@
 ---
-title: Eigenschaften Blattstrukturen
-description: Auf dieser Seite sind die auf Eigenschaften Blätter bezogenen Strukturen aufgeführt.
+title: Eigenschaftenblattstrukturen
+description: Auf dieser Seite werden Strukturen aufgelistet, die sich auf Eigenschaftenblätter beziehen.
 ms.assetid: 92344b68-61c2-4a35-b82a-934afaca5255
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d277fe72bb9db6961232fb98731116fa916d5778
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 00cda57824df7c4abda728a4b58fb6ddf71996885b93c4efbc9fa4d61f7189cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106365143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064061"
 ---
-# <a name="property-sheet-structures"></a>Eigenschaften Blattstrukturen
+# <a name="property-sheet-structures"></a>Eigenschaftenblattstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Propsheetheiader**](pss-propsheetheader.md)
+-   [**PROPSHEETHEADER**](pss-propsheetheader.md)
 -   [**PROPSHEETPAGE**](pss-propsheetpage.md)
--   [**Pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify)
+-   [**PSHNOTIFY**](/windows/desktop/api/Prsht/ns-prsht-pshnotify)
 
  
 

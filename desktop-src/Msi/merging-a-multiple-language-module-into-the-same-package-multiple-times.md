@@ -1,23 +1,23 @@
 ---
-description: Wenn ein Modul mehrere Sprachen unterstützt, können Sie es mehrmals in dieselbe Windows Installer Datenbank zusammenführen, aber stellen Sie sicher, dass für jede Zusammenführung eine andere Sprache verwendet wird.
+description: Wenn ein Modul mehrere Sprachen unterstützt, können Sie es mehrmals in derselben Windows Installer-Datenbank zusammenführen, aber stellen Sie sicher, dass jeder Merge eine andere Sprache verwendet.
 ms.assetid: 816b1f52-1ca2-4332-9a9b-462ea372c3bb
-title: Mehrmals Zusammenführen eines Moduls mit mehreren Sprachen in demselben Paket
+title: Mehrfaches Zusammenführen eines Moduls mit mehreren Sprachen mit demselben Paket
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 52552a68643d52c6aad97ed666b7dc1ae4043fd9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23a96f3830b2caa4069eddc69b0b68de1deff35d00c5b4fdb81d4d21d4355bd0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129260"
 ---
-# <a name="merging-a-multiple-language-module-into-the-same-package-multiple-times"></a>Mehrmals Zusammenführen eines Moduls mit mehreren Sprachen in demselben Paket
+# <a name="merging-a-multiple-language-module-into-the-same-package-multiple-times"></a>Mehrfaches Zusammenführen eines Moduls mit mehreren Sprachen mit demselben Paket
 
-Wenn ein Modul mehrere Sprachen unterstützt, können Sie es mehrmals in dieselbe Windows Installer Datenbank zusammenführen, aber stellen Sie sicher, dass für jede Zusammenführung eine andere Sprache verwendet wird. Fordern Sie vor jeder Zusammenführung eine andere Sprache vom Modul an. Die resultierende MSI-Datenbank hat dann einen Datensatz in der [Tabelle ModuleSignature](modulesignature-table.md) für jede Zusammenführung des Moduls. Komponenten, die von Sprachen gemeinsam genutzt werden, sind nur einmal in der [Component-Tabelle](component-table.md)vorhanden, sind aber jeder Sprache in der [modulecomponents-Tabelle](modulecomponents-table.md)zugeordnet.
+Wenn ein Modul mehrere Sprachen unterstützt, können Sie es mehrmals in derselben Windows Installer-Datenbank zusammenführen, aber stellen Sie sicher, dass jeder Merge eine andere Sprache verwendet. Fordern Sie vor jeder Zusammenführung eine andere Sprache vom Modul an. Die resultierende .msi Datenbank verfügt dann über einen Datensatz in der [Tabelle ModuleSignature](modulesignature-table.md) für jede Zusammenführung des Moduls. Komponenten, die von sprachen gemeinsam verwendet werden, sind nur einmal in der [Komponententabelle](component-table.md)vorhanden, sind jedoch jeder Sprache in der [ModuleComponents-Tabelle](modulecomponents-table.md)zugeordnet.
 
-Wenn Sie mehrere Sprachen eines Moduls in dasselbe Paket zusammenführen, muss jede Zusammenführung dieselben Einschränkungen für Codepages wie einzelne Sprachmodule erfüllen. Die Module können keine Zeichen folgen in unterschiedlichen Codepages enthalten.
+Wenn mehrere Sprachen eines Moduls in demselben Paket zusammengeführt werden, muss jede Zusammenführung die gleichen Einschränkungen auf Codepages erfüllen wie einzelsprachige Module. Die Module dürfen keine Zeichenfolgen in verschiedenen Codepages enthalten.
 
-Wenn Sie ein Modul mehrmals in eine MSI-Datei zusammenführen, müssen Sie ggf. die Reihenfolge der Dateien in der [Dateitabelle](file-table.md) so ändern, dass die vorhandene CAB-Datei direkt in der Installation von dem Modul verwendet wird. Die Reihenfolge der Dateien in der Dateitabelle muss mit der Reihenfolge der Dateien in der CAB-Datei identisch sein. Wenn Sie ein Modul mehrmals in eine Installations Datenbank zusammenführen, kann die Sequenz geändert werden, da Dateien, die von den Sprachen gemeinsam genutzt werden, möglicherweise bereits aus einer vorherigen Zusammenführung im Modul vorhanden sind und eine andere relative Sequenznummer aufweisen.
+Wenn Sie ein Modul mehrmals in einer einzelnen .msi Datei zusammenführen, müssen Sie möglicherweise die Reihenfolge der Dateien in der [Dateitabelle](file-table.md) ändern, um die vorhandenen .cab aus dem Modul direkt in Ihrer Installation zu verwenden. Die Reihenfolge der Dateien in der Dateitabelle muss mit der Reihenfolge der Dateien im .cab übereinstimmen. Beim mehrmaligen Zusammenführen eines Moduls mit einer Installationsdatenbank kann die Sequenz geändert werden, da dateien, die von den Sprachen gemeinsam verwendet werden, möglicherweise bereits aus einer vorherigen Zusammenführung im Modul vorhanden sind und eine andere relative Sequenznummer aufweisen.
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Der Name der PIN.
+description: Pinname.
 ms.assetid: 324cb8cc-7e57-43d0-9358-2683efc4fb1e
-title: 'Cbasepin:: m_pName Member (amfilter. h)'
+title: CBasePin::m_pName-Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Amfilter.h
-ms.openlocfilehash: f2580b9aba379362c39e3d792504434fa18fe076
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d118ed76650b9ea580c0143ff4334a480d110c4a9d9531a23dda60c05c614630
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120052680"
 ---
-# <a name="cbasepinm_pname-member"></a>Cbasepin:: m \_ PName-Member
+# <a name="cbasepinm_pname-member"></a>CBasePin::m \_ pName-Member
 
-Der Name der PIN.
+Pinname.
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,9 +33,9 @@ WCHAR *m_pName;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbasepin:: querypininfo**](cbasepin-querypininfo.md) -Methode gibt diese Zeichenfolge als Pin-Namen zurück, und die [**cbasepin:: QueryId**](cbasepin-queryid.md) -Methode gibt Sie als PIN-Bezeichner zurück. Im Allgemeinen ist es jedoch nicht erforderlich, dass der PIN-Name und der PIN-Bezeichner identisch sind. Der PIN-Bezeichner wird für die Diagramm Persistenz verwendet. Weitere Informationen finden Sie unter [**ibasefilter:: findpin**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin).
+Die [**CBasePin::QueryPinInfo-Methode**](cbasepin-querypininfo.md) gibt diese Zeichenfolge als Pinnamen zurück, und die [**CBasePin::QueryId-Methode**](cbasepin-queryid.md) gibt sie als Pinbezeichner zurück. Im Allgemeinen müssen der Pinname und der Pinbezeichner jedoch nicht identisch sein. Der Pinbezeichner wird für die Graphpersistenz verwendet. Weitere Informationen finden Sie unter [**IBaseFilter::FindPin**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-findpin).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Die [**cbasepin:: querypininfo**](cbasepin-querypininfo.md) -Methode gibt diese 
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ Die [**cbasepin:: querypininfo**](cbasepin-querypininfo.md) -Methode gibt diese 
 
 <dl> <dt>
 
-[**Cbasepin-Klasse**](cbasepin.md)
+[**CBasePin-Klasse**](cbasepin.md)
 </dt> </dl>
 
  

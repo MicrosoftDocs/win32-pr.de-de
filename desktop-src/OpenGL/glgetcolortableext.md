@@ -1,9 +1,9 @@
 ---
-title: glgetcolortableext-Funktion (GL. h)
-description: Die glgetcolortableext-Funktion Ruft die Farbtabellen Daten der aktuellen Ziel Texturpalette ab.
+title: glGetColorTableEXT-Funktion (Gl.h)
+description: Die glGetColorTableEXT-Funktion ruft die Farbtabellendaten der aktuellen Zieltexturpalette ab.
 ms.assetid: 9169c4e1-a22e-48fe-bd45-4549c1a10ff0
 keywords:
-- glgetcolortableext-Funktion OpenGL
+- glGetColorTableEXT-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 811dc53b32c937970fbef8d87fa9a2ef4eb8b978
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 46593ac7b03781288d7d0d3932ced799dbbdfcff
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343894"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469627"
 ---
-# <a name="glgetcolortableext-function"></a>glgetcolortableext-Funktion
+# <a name="glgetcolortableext-function"></a>glGetColorTableEXT-Funktion
 
-Die **glgetcolortableext** -Funktion Ruft die Farbtabellen Daten der aktuellen Ziel Texturpalette ab.
+Die **glGetColorTableEXT-Funktion** ruft die Farbtabellendaten der aktuellen Zieltexturpalette ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ void WINAPI glGetColorTableEXT(
 *Ziel* 
 </dt> <dd>
 
-Die Ziel Textur, deren Palette geändert werden soll. Muss Textur \_ 1D oder Textur \_ 2D sein.
+Die Zieltextur, deren Palette geändert werden soll. Muss TEXTURE \_ 1D oder TEXTURE \_ 2D sein.
 
 </dd> <dt>
 
@@ -57,59 +57,18 @@ Das Format der Pixeldaten. Die folgenden symbolischen Konstanten werden akzeptie
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Wert</th>
-<th>Bedeutung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span id="GL_RGBA"></span><span id="gl_rgba"></span><dl> <dt><strong>GL_RGBA</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von vier Komponenten in der folgenden Reihenfolge: rot, grün, blau, alpha. Das RGBA-Format wird auf diese Weise bestimmt: <br/>
-<ol>
-<li>Die Funktion " <strong>glgetcolortableext</strong> " konvertiert Gleit Komma Werte direkt in ein internes Format mit einer nicht spezifizierten Genauigkeit. Ganzzahlige Werte mit Vorzeichen werden linear dem internen Format zugeordnet, sodass der positivste darstellbare ganzzahlige Wert 1,0 und der negativste darstellbare ganzzahlige Wert-1,0 zugeordnet wird. Ganzzahlige Daten ohne Vorzeichen werden ähnlich zugeordnet: der größte ganzzahlige Wert ist 1,0, und NULL wird 0,0 zugeordnet.</li>
-<li>Die Funktion " <strong>glgetcolortableext</strong> " multipliziert die resultierenden Farbwerte GL_c_SCALE und fügt Sie GL_c_BIAS hinzu, wobei <em>c</em> rot, grün, blau und Alpha für die jeweiligen Farbkomponenten ist. Die Ergebnisse werden an den Bereich [0, 1] gebunden.</li>
-<li>Wenn GL_MAP_COLOR auf <strong>true</strong>festgelegt ist, skaliert <strong>glgetcolortableext</strong> jede Farbkomponente anhand der Größe der Nachschlage Tabelle GL_PIXEL_MAP_c_TO_c und ersetzt dann die Komponente durch den Wert, auf den Sie in dieser Tabelle verweist. <em>c</em> ist R, G, B bzw..</li>
-<li>Die Funktion " <strong>glgetcolortableext</strong> " konvertiert die resultierenden RGBA-Farben in Fragmente, indem die aktuelle Raster Position z-Koordinate und die Texturkoordinaten an jedes Pixel angefügt werden und dann dem <em>n</em>-ten Fragment, z. b. <em>x</em>, <em>x</em> -und <em>y</em> -Fenster Koordinaten zugewiesen werden? = <em>x</em><sub>r</sub> + <em>n</em> mod <em>Breite</em><br/> <em>j</em>? = <em>y</em><sub>r</sub> + <em>n/Breite</em><br/> Where (<em>x</em><sub>r</sub> , <em>y</em><sub>r</sub> ) ist die aktuelle Raster Position.<br/></li>
-<li>Diese Pixel Fragmente werden dann wie die Fragmente behandelt, die durch rasterisierungspunkte, Linien oder Polygone generiert werden. Die <strong>glgetcolortableext</strong> -Funktion wendet Textur Zuordnung, Nebel und alle fragmentvorgänge an, bevor die Fragmente in den Framebuffer geschrieben werden.</li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><span id="GL_RED"></span><span id="gl_red"></span><dl> <dt><strong>GL_RED</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne rote Komponente.<br/> Die Funktion " <strong>glgetcolortableext</strong> " konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die rote Komponente eines RGBA-Pixels, konvertiert Sie dann in ein RGBA-Pixel, wobei Grün und blau auf 0,0 und Alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_GREEN"></span><span id="gl_green"></span><dl> <dt><strong>GL_GREEN</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne grüne Komponente.<br/> Die Funktion " <strong>glgetcolortableext</strong> " konvertiert diese Komponente auf die gleiche Weise wie die grüne Komponente eines RGBA-Pixels in das interne Format und konvertiert Sie dann in ein RGBA-Pixel, bei dem "Red" und "Blue" auf "0,0" und "Alpha" auf 1,0 festgelegt sind. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_BLUE"></span><span id="gl_blue"></span><dl> <dt><strong>GL_BLUE</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne blaue Komponente.<br/> Die Funktion " <strong>glgetcolortableext</strong> " konvertiert diese Komponente auf die gleiche Weise in das interne Format wie die blaue Komponente eines RGBA-Pixels und konvertiert Sie dann in ein RGBA-Pixel, wobei "rot" und "grün" auf "0,0" und "Alpha" auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_ALPHA"></span><span id="gl_alpha"></span><dl> <dt><strong>GL_ALPHA</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine einzelne Alpha Komponente.<br/> Die Funktion " <strong>glgetcolortableext</strong> " konvertiert diese Komponente auf die gleiche Weise wie die Alpha Komponente eines RGBA-Pixels in das interne Format und konvertiert Sie dann in ein RGBA-Pixel, wobei rot, grün und blau auf 0,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_RGB"></span><span id="gl_rgb"></span><dl> <dt><strong>GL_RGB</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: rot, grün, blau.<br/> Die Funktion " <strong>glgetcolortableext</strong> " konvertiert jede Komponente auf die gleiche Weise in das interne Format wie die roten, grünen und blauen Komponenten eines RGBA-Pixels. Die Farbe Triple wird in ein RGBA-Pixel konvertiert, bei dem Alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br/></td>
-</tr>
-<tr class="odd">
-<td><span id="GL_BGR_EXT"></span><span id="gl_bgr_ext"></span><dl> <dt><strong>GL_BGR_EXT</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: blau, grün, rot.<br/> GL_BGR_EXT bietet ein Format, das dem Arbeitsspeicher Layout von Microsoft Windows-geräteunabhängigen Bitmaps (Disb) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows-Funktionsaufrufen und OpenGL-Pixel Funktionsaufrufen verwenden.<br/></td>
-</tr>
-<tr class="even">
-<td><span id="GL_BGRA_EXT"></span><span id="gl_bgra_ext"></span><dl> <dt><strong>GL_BGRA_EXT</strong></dt> </dl></td>
-<td>Jedes Pixel ist eine Gruppe von vier Komponenten in dieser Reihenfolge: blau, grün, rot, alpha.<br/> GL_BGRA_EXT bietet ein Format, das dem Arbeitsspeicher Layout von Windows-geräteunabhängigen Bitmaps (Disb) entspricht. Daher können Ihre Anwendungen dieselben Daten mit Windows-Funktionsaufrufen und OpenGL-Pixel Funktionsaufrufen verwenden.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <span id="GL_RGBA"></span><span id="gl_rgba"></span><dl><dt><strong>GL_RGBA</strong></dt></dl> | Jedes Pixel ist eine Gruppe von vier Komponenten in der folgenden Reihenfolge: Rot, Grün, Blau, Alpha. Das RGBA-Format wird auf diese Weise bestimmt: <br /><ol><li>Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert Gleitkommawerte direkt in ein internes Format mit nicht angegebener Genauigkeit. Ganzzahlige Werte mit Vorzeichen werden linear dem internen Format zugeordnet, sodass der positivste darstellbare ganzzahlige Wert 1,0 und der negativste darstellbare ganzzahlige Wert -1,0 zugeordnet wird. Ganzzahlige Daten ohne Vorzeichen werden ähnlich zugeordnet: Der größte ganzzahlige Wert wird 1,0 und 0,0 zugeordnet.</li><li>Die <strong>glGetColorTableEXT-Funktion</strong> multipliziert die resultierenden Farbwerte mit GL_c_SCALE und fügt sie GL_c_BIAS hinzu, wobei <em>c</em> für die jeweiligen Farbkomponenten ROT, GRÜN, BLAU und ALPHA ist. Die Ergebnisse werden an den Bereich [0,1] klammern.</li><li>Wenn GL_MAP_COLOR <strong>TRUE</strong>ist, skaliert <strong>glGetColorTableEXT</strong> jede Farbkomponente nach der Größe der Nachschlagetabelle GL_PIXEL_MAP_c_TO_c und ersetzt dann die Komponente durch den Wert, auf den sie in dieser Tabelle verweist. <em>c</em> ist R, G, B bzw. A.</li><li>Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert die resultierenden RGBA-Farben in Fragmente, indem sie die aktuelle Rasterposition z-Koordinate und Texturkoordinaten an jedes Pixel anfügt und dann dem <em>n-ten</em>Fragment <em>x-</em> und y-Fensterkoordinaten zuweist, sodass <em>x</em>? <em></em> = <em>x</em><sub>r</sub>  +  <em>n</em> mod <em>width</em><br /><em>y</em>? = <em>y</em><sub>r</sub>  +  <em>n/width</em><br /> wobei (<em>x</em><sub>r</sub> , <em>y</em><sub>r</sub> ) die aktuelle Rasterposition ist.<br /></li><li>Diese Pixelfragmente werden dann genau wie die Fragmente behandelt, die durch Rastern von Punkten, Linien oder Polygonen generiert werden. Die <strong>glGetColorTableEXT-Funktion</strong> wendet Texturzuordnung, Oberfläche und alle Fragmentvorgänge an, bevor die Fragmente in den Framepuffer geschrieben werden.</li></ol> | 
+| <span id="GL_RED"></span><span id="gl_red"></span><dl><dt><strong>GL_RED</strong></dt></dl> | Jedes Pixel ist eine einzelne rote Komponente.<br /> Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die rote Komponente eines RGBA-Pixels. Anschließend wird sie in ein RGBA-Pixel konvertiert, wobei grün und blau auf 0,0 und alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_GREEN"></span><span id="gl_green"></span><dl><dt><strong>GL_GREEN</strong></dt></dl> | Jedes Pixel ist eine einzelne grüne Komponente.<br /> Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die grüne Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, wobei rot und blau auf 0,0 und alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_BLUE"></span><span id="gl_blue"></span><dl><dt><strong>GL_BLUE</strong></dt></dl> | Jedes Pixel ist eine einzelne blaue Komponente.<br /> Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die blaue Komponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, wobei rot und grün auf 0,0 und alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_ALPHA"></span><span id="gl_alpha"></span><dl><dt><strong>GL_ALPHA</strong></dt></dl> | Jedes Pixel ist eine einzelne Alphakomponente.<br /> Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert diese Komponente in das interne Format auf die gleiche Weise wie die Alphakomponente eines RGBA-Pixels und konvertiert sie dann in ein RGBA-Pixel, wobei rot, grün und blau auf 0,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_RGB"></span><span id="gl_rgb"></span><dl><dt><strong>GL_RGB</strong></dt></dl> | Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: rot, grün, blau.<br /> Die <strong>glGetColorTableEXT-Funktion</strong> konvertiert jede Komponente in das interne Format auf die gleiche Weise wie die roten, grünen und blauen Komponenten eines RGBA-Pixels. Die Dreierfarbe wird in ein RGBA-Pixel konvertiert, wobei alpha auf 1,0 festgelegt ist. Nach dieser Konvertierung wird das Pixel so behandelt, als ob es als RGBA-Pixel gelesen worden wäre.<br /> | 
+| <span id="GL_BGR_EXT"></span><span id="gl_bgr_ext"></span><dl><dt><strong>GL_BGR_EXT</strong></dt></dl> | Jedes Pixel ist eine Gruppe von drei Komponenten in dieser Reihenfolge: blau, grün, rot.<br /> GL_BGR_EXT stellt ein Format bereit, das dem Speicherlayout von Microsoft Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen die gleichen Daten mit Windows Funktionsaufrufen und OpenGL-Pixelfunktionsaufrufen verwenden.<br /> | 
+| <span id="GL_BGRA_EXT"></span><span id="gl_bgra_ext"></span><dl><dt><strong>GL_BGRA_EXT</strong></dt></dl> | Jedes Pixel ist eine Gruppe von vier Komponenten in dieser Reihenfolge: blau, grün, rot, alpha.<br /> GL_BGRA_EXT stellt ein Format bereit, das dem Speicherlayout von Windows geräteunabhängigen Bitmaps (DIBs) entspricht. Daher können Ihre Anwendungen die gleichen Daten mit Windows Funktionsaufrufen und OpenGL-Pixelfunktionsaufrufen verwenden.<br /> | 
+
 
 
 
@@ -120,19 +79,19 @@ Das Format der Pixeldaten. Die folgenden symbolischen Konstanten werden akzeptie
 *type* 
 </dt> <dd>
 
-Der Datentyp für *Daten*. Im folgenden finden Sie die akzeptierten symbolischen Konstanten und ihre Bedeutung.
+Der Datentyp für *die Daten.* Im Folgenden sind die akzeptierten symbolischen Konstanten und ihre Bedeutungen.
 
 
 
 | Wert                                                                                                                                                                      | Bedeutung                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| <span id="GL_UNSIGNED_BYTE"></span><span id="gl_unsigned_byte"></span><dl> <dt>**GL- \_ Byte ohne Vorzeichen \_**</dt> </dl>    | 8-Bit-Ganzzahl ohne Vorzeichen<br/>                |
-| <span id="GL_BYTE"></span><span id="gl_byte"></span><dl> <dt>**GL \_ Byte**</dt> </dl>                                | Ganze 8-Bit-Zahl mit Vorzeichen<br/>                  |
-| <span id="GL_UNSIGNED_SHORT"></span><span id="gl_unsigned_short"></span><dl> <dt>**GL \_ unsigned \_ Short**</dt> </dl> | 16-Bit-Ganzzahl ohne Vorzeichen<br/>               |
-| <span id="GL_SHORT"></span><span id="gl_short"></span><dl> <dt>**GL \_ Short**</dt> </dl>                             | Ganze 16-Bit-Zahl mit Vorzeichen<br/>                 |
-| <span id="GL_UNSIGNED_INT"></span><span id="gl_unsigned_int"></span><dl> <dt>**GL \_ unsigned \_ int**</dt> </dl>       | 32-Bit Ganzzahl ohne Vorzeichen<br/>               |
-| <span id="GL_INT"></span><span id="gl_int"></span><dl> <dt>**GL \_ int**</dt> </dl>                                   | 32-bit integer<br/>                        |
-| <span id="GL_FLOAT"></span><span id="gl_float"></span><dl> <dt>**GL \_ float**</dt> </dl>                             | Gleitkommawert mit einfacher Genauigkeit<br/> |
+| <span id="GL_UNSIGNED_BYTE"></span><span id="gl_unsigned_byte"></span><dl> <dt>**GL \_ UNSIGNED \_ BYTE**</dt> </dl>    | 8-Bit-Ganzzahl ohne Vorzeichen<br/>                |
+| <span id="GL_BYTE"></span><span id="gl_byte"></span><dl> <dt>**GL \_ BYTE**</dt> </dl>                                | Ganze 8-Bit-Zahl mit Vorzeichen<br/>                  |
+| <span id="GL_UNSIGNED_SHORT"></span><span id="gl_unsigned_short"></span><dl> <dt>**GL \_ UNSIGNED \_ SHORT**</dt> </dl> | 16-Bit-Ganzzahl ohne Vorzeichen<br/>               |
+| <span id="GL_SHORT"></span><span id="gl_short"></span><dl> <dt>**GL \_ SHORT**</dt> </dl>                             | Ganze 16-Bit-Zahl mit Vorzeichen<br/>                 |
+| <span id="GL_UNSIGNED_INT"></span><span id="gl_unsigned_int"></span><dl> <dt>**GL \_ UNSIGNED \_ INT**</dt> </dl>       | 32-Bit Ganzzahl ohne Vorzeichen<br/>               |
+| <span id="GL_INT"></span><span id="gl_int"></span><dl> <dt>**GL \_ INT**</dt> </dl>                                   | 32-bit integer<br/>                        |
+| <span id="GL_FLOAT"></span><span id="gl_float"></span><dl> <dt>**GL \_ FLOAT**</dt> </dl>                             | Gleitkommawert mit einfacher Genauigkeit<br/> |
 
 
 
@@ -143,7 +102,7 @@ Der Datentyp für *Daten*. Im folgenden finden Sie die akzeptierten symbolischen
 *data* 
 </dt> <dd>
 
-Zeigt auf den Speicherort, an dem die zurückgegebenen Farbtabellen Informationen gespeichert werden sollen. Jeder Farbtabellen Eintrag wird so gespeichert, als ob es sich um ein einzelnes Pixel einer 1-D-Textur handelt. Da alle Texturen über eine Standardpalette verfügen, gibt **glgetcolortableext** immer Paletteninformationen zurück, auch wenn die Textur Daten nicht in einem Palettenformat vorliegen.
+Zeigt auf den Speicherort, an dem die zurückgegebenen Farbtabelleninformationen gespeichert werden sollen. Jeder Farbtabelleneintrag wird so gespeichert, als wäre er ein einzelnes Pixel einer 1D-Textur. Da alle Texturen über eine Standardpalette verfügen, gibt **glGetColorTableEXT** immer Paletteninformationen zurück, auch wenn die Texturdaten nicht in einem Palettenformat vorliegen.
 
 </dd> </dl>
 
@@ -153,22 +112,22 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *Ziel*, *Format* oder *Typ* war kein akzeptierter Wert.<br/>                                                                   |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *Ziel,* *Format* oder *Typ* war kein akzeptierter Wert.<br/>                                                                   |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glgetcolortableext** " Ruft die tatsächlichen Farbtabellen Daten ab, die von [**glcolortableext**](glcolortableext.md) und [**glcolorsubtableext**](glcolorsubtableext.md)angegeben werden.
+Die **glGetColorTableEXT-Funktion** ruft die tatsächlichen Farbtabellendaten ab, die von [**glColorTableEXT**](glcolortableext.md) und [**glColorSubTableEXT**](glcolorsubtableext.md)angegeben werden.
 
-Bei der **glgetcolortableext** -Funktion handelt es sich um eine Erweiterungs Funktion, die nicht Teil der OpenGL-Standardbibliothek ist, aber Bestandteil der \_ \_ Struktur Erweiterung von GL ext ist \_ . Um zu überprüfen, ob die Implementierung von OpenGL **glgetcolortableext** unterstützt, nennen Sie [**glgetstring**](glgetstring.md)(GL \_ Extensions). Wenn Sie die Struktur von GL ext in der Struktur zurückgibt \_ \_ \_ , wird **glgetcolortableext** unterstützt. Rufen Sie zum Abrufen der Funktions Adresse einer Erweiterungs Funktion [**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)auf.
+Die **glGetColorTableEXT-Funktion** ist eine Erweiterungsfunktion, die nicht Teil der OpenGL-Standardbibliothek ist, sondern Teil der \_ GL \_ EXT-Palettentexturerweiterung \_ ist. Um zu überprüfen, ob Ihre OpenGL-Implementierung **glGetColorTableEXT** unterstützt, rufen Sie [**glGetString**](glgetstring.md)(GL \_ EXTENSIONS) auf. Wenn die Textur der GL \_ EXT-Palette zurückgegeben \_ \_ wird, wird **glGetColorTableEXT** unterstützt. Rufen Sie [**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)auf, um die Funktionsadresse einer Erweiterungsfunktion abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -178,27 +137,27 @@ Bei der **glgetcolortableext** -Funktion handelt es sich um eine Erweiterungs Fu
 |-------------------------------------|---------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glcolorsubtableext**](glcolorsubtableext.md)
+[**glColorSubTableEXT**](glcolorsubtableext.md)
 </dt> <dt>
 
-[**glcolortableext**](glcolortableext.md)
+[**glColorTableEXT**](glcolortableext.md)
 </dt> <dt>
 
-[**glgetcolortableparameterfvext**](glgetcolortableparameterfvext.md)
+[**glGetColorTableParameterfvEXT**](glgetcolortableparameterfvext.md)
 </dt> <dt>
 
-[**glgetcolortableparameterivext**](glgetcolortableparameterivext.md)
+[**glGetColorTableParameterivEXT**](glgetcolortableparameterivext.md)
 </dt> <dt>
 
-[**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
+[**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
 </dt> </dl>
 
  

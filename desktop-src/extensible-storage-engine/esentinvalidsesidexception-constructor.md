@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentinvalid-sidexception-Konstruktor'
-title: Esentinvalid-sidexception-Konstruktor
+description: 'Weitere Informationen zu: EsentInvalidSesidException-Konstruktor'
+title: EsentInvalidSesidException-Konstruktor
 TOCTitle: 'EsentInvalidSesidException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidSesidException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentinvalidsesidexception.esentinvalidsesidexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 4d7e6b3f4113ff642b597259fb6abb18f68bb1a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ad0ac79a67420d827f3df4f95225c6ca45df49e206648251e67bea2bee22065
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064380"
 ---
-# <a name="esentinvalidsesidexception-constructor"></a>Esentinvalid-sidexception-Konstruktor
+# <a name="esentinvalidsesidexception-constructor"></a>EsentInvalidSesidException-Konstruktor
 
-Initialisiert eine neue Instanz der esentinvalidsegsidexception-Klasse.
+Initialisiert eine neue Instanz der EsentInvalidSesidException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentInvalidSesidException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentinvalid* sidexception-Klasse](./esentinvalidsesidexception-class.md)
+[EsentInvalidSesidException-Klasse](./esentinvalidsesidexception-class.md)
 
-[Esentinvalid-sidexception-Elemente](./esentinvalidsesidexception-members.md)
+[EsentInvalidSesidException-Member](./esentinvalidsesidexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

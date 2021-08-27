@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdatahasangedexception-Konstruktor'
-title: Esentdatahasangedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDataHasChangedException-Konstruktor'
+title: EsentDataHasChangedException-Konstruktor
 TOCTitle: 'EsentDataHasChangedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDataHasChangedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdatahaschangedexception.esentdatahaschangedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f2dec198503ae52074dcea8f1941af2597fcdc24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5aea48dff6c767769b5e21e8b3276833d612a15cb1337c3da2c5b4841616f728
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117275"
 ---
-# <a name="esentdatahaschangedexception-constructor"></a>Esentdatahasangedexception-Konstruktor
+# <a name="esentdatahaschangedexception-constructor"></a>EsentDataHasChangedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdatahasangedexception-Klasse.
+Initialisiert eine neue Instanz der EsentDataHasChangedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentDataHasChangedException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdatahasangedexception-Klasse](./esentdatahaschangedexception-class.md)
+[EsentDataHasChangedException-Klasse](./esentdatahaschangedexception-class.md)
 
-[Esentdatahaschangedexception-Member](./esentdatahaschangedexception-members.md)
+[EsentDataHasChangedException-Member](./esentdatahaschangedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

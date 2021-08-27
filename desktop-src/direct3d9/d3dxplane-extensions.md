@@ -1,7 +1,7 @@
 ---
-description: Stellt die folgenden Operator Überladungen und Typumwandlungen für D3DXPLANE-Strukturen bereit.
+description: Stellt die folgenden Operatorüberladungen und Typcasts für D3DXPLANE-Strukturen zur Folge.
 ms.assetid: 05f80b68-fb2b-4fd7-94e9-e5b40968c4aa
-title: D3DXPLANE Extensions (D3dx9math. h)
+title: D3DXPLANE-Erweiterungen (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9math.h
-ms.openlocfilehash: 3ff8f68283cd81e6647fcdea480ac19b48547cab
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ec6d2724c9c151aca203592cb0bf3caf0b30c4f359b4f95ec2ac734500e59197
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106354983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096110"
 ---
 # <a name="d3dxplane-extensions"></a>D3DXPLANE-Erweiterungen
 
-Stellt die folgenden Operator Überladungen und Typumwandlungen für [**D3DXPLANE**](d3dxplane.md) -Strukturen bereit.
+Stellt die folgenden Operatorüberladungen und Typcasts für [**D3DXPLANE-Strukturen**](d3dxplane.md) zur Folge.
 
 ``` syntax
 typedef struct D3DXPLANE
@@ -62,11 +62,11 @@ public:
 
 Abgeleitete Typen: \* LPD3DXPLANE
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Strukturmembern finden Sie unter [**D3DXPLANE**](d3dxplane.md).
+Weitere Informationen zu Strukturmitgliedern finden Sie unter [**D3DXPLANE**](d3dxplane.md).
 
-Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9math. INL implementiert.
+Operatorüberladungen und Typcasts für diese Struktur werden in d3dx9math.inl implementiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,7 +74,7 @@ Operator Überladungen und Typumwandlungen für diese Struktur werden in d3dx9ma
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9math. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9math.h</dt> </dl> |
 
 
 

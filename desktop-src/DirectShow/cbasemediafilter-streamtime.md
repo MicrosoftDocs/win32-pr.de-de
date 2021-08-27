@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a90bb7d97825c14f11c75dd42d696fa302f8e3d4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 99205cb7065b7bd57d0f49a7f4942df8c1548ba5d4b4f8b26c8a13387ddc7d1e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096248"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076590"
 ---
 # <a name="cbasemediafilterstreamtime-method"></a>CBaseMediaFilter.StreamTime-Methode
 
@@ -64,22 +64,22 @@ Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden T
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Streamzeit wird als aktuelle Referenzzeit (wie von der Referenzuhr angegeben) abzüglich der Startzeit (angegeben durch [**CBaseMediaFilter::m \_ tStart**](cbasemediafilter-m-tstart.md)) definiert. Der Zeitstempel eines Medienbeispiels gibt die Streamzeit an, zu der es gerendert werden soll. Wenn ein Beispiel mit einem Zeitstempel, der kleiner als die aktuelle Streamzeit ist, noch nicht gerendert wurde, ist es zu spät.
+Die Streamzeit wird als die aktuelle Referenzzeit (wie durch die Verweisuhr angegeben) abzüglich der Startzeit (angegeben durch [**CBaseMediaFilter::m \_ tStart**](cbasemediafilter-m-tstart.md)) definiert. Der Zeitstempel eines Medienbeispiels gibt die Streamzeit an, zu der es gerendert werden soll. Wenn ein Beispiel mit einem Zeitstempel kleiner als die aktuelle Streamzeit noch nicht gerendert wurde, kommt es zu einem späteren Zeitpunkt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
