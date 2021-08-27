@@ -1,15 +1,15 @@
 ---
-description: "The following table lists formats that are available for each factoid used in Spanish.FactoidDefinitionExamplesCurrencyCurrency in euros, dollars, pounds, and yen as written in Spanish.1.234 €1.234,50 €236,50 €123 €0,25 €22 pta, Pta, ptas, Ptas, or PTADateDates as written in Spanish.lunes, 19 octubre, 200119 de octubre de 200119 de octubre de 0119 de oct de 20016 de diciembre19 oct.09/05 (dd/mm)9/5 (d/m)09/05/2002 (dd/mm/yyyy)09/05/02 (dd/mm/yy)9/5/2002 (d/m/yyyy)9/5/02 (d/m/yy)9-5 (d-m)09-05-2002 (dd-mm-yyyy)09-05-02 (dd-mm-yy)9-5-2002 (d-m-yyyy)9-5-02 (d-m-yy)2002-05-09 (yyyy-mm-dd)NumberAll numbers, including common suffixes such as mm and kg, and math symbols. DATUM, UHRZEIT, TELEFON, Die Factoidformate und CURRENCY sind ebenfalls in diesem Factoid enthalten.820-6,5-123.4569,02%5,825 m1340 mm25 Km300kg5300+20=32012/4=325%(1+3)/51+1=2OneCharA single American National Standards Institute (ANSI) character.! &\\#0034; \\# $ % & ' ( ) \\* + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \\[ \\\\ \\]  ^  \\_ a b c d e f g h i j k l m n o p q r s t u v w x y z { } ~ € × × ° × × × \\| );&\\# 233; Ó Ó Ó Ó Ü ó ó ó ü ü ° ° 4PercentA-Zahl gefolgt vom Prozentsymbol.87%5,9%PostalCodePostalcodes, wie in Spanisch geschrieben.58802TelephoneTele Telefonnummern in spanischer Sprache.987 12345987 123456987 1234567987 12 34 56987 123 456798 1234598 12345698 123456798 123 4567Hinweis Jedem der oben genannten Formate kann einer der folgenden internationalen Länder-/Regioncodes und ein Leerzeichen voran stehen. 00 100 11TimeTime wie in Spanisch geschrieben.19:4406:05:306:2422:222:125:427.00 h08 :03 h5.13 h17 h3:45 a.m.6:49 p.m.3:45 A.M.6:49 P.M.UpperCharA single uppercharA single uppercase character. A B C D E F G H I J K L M N O P Q R S T U V W X Y ZLVA&\\# 233; ÓÓÓÓÜ "
+description: "The following table lists formats that are available for each factoid used in Spanish.FactoidDefinitionExamplesCurrencyCurrency in euros, dollars, pounds, and yen as written in Spanish.1.234 €1.234,50 €236,50 €123 €0,25 €22 pta, Pta, ptas, Ptas, or PTADateDates as written in Spanish.lunes, 19 octubre, 200119 de octubre de 200119 de octubre de 0119 de oct de 20016 de diciembre19 oct.09/05 (dd/mm)9/5 (d/m)09/05/2002 (dd/mm/yyyy)09/05/02 (dd/mm/yy)9/5/2002 (d/m/yyyy)9/5/02 (d/m/yy)9-5 (d-m)09-05-2002 (dd-mm-yyyy)09-05-02 (dd-mm-yy)9-5-2002 (d-m-yyyy)9-5-02 (d-m-yy)2002-05-09 (yyyy-mm-dd)NumberAll numbers, including common suffixes such as mm and kg, and math symbols. DATUM, UHRZEIT, TELEFON, Die Factoidformate und CURRENCY sind ebenfalls in diesem Factoid enthalten.820-6,5-123.4569,02%5,825 m1340 mm25 Km300kg5300+20=32012/4=325%(1+3)/51+1=2OneCharA single American National Standards Institute (ANSI) character.! &\\#0034; \\# $ % & ' ( ) \\* + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \\[ \\\\ \\]  ^  \\_ a b c d e f g h i j k l m n o p q r s t u v w x y z { \\| } ~ € ° × × × HZ &\\# 233; Ó Ó Ó Ó Ü ó ó ó ü ü ° ° 4PercentA-Zahl gefolgt vom Prozentsymbol.87%5,9%PostalCodePostalcodes, wie in Spanisch geschrieben.58802TelephoneTelephone Zahlen wie in Spanisch.987 12345987 123456987 1234567987 12 34 56987 123 456798 1234598 12345698 123456798 123 4567Hinweis Jedem der oben genannten Formate kann einer der folgenden internationalen Länder-/Regioncodes und ein Leerzeichen voran stehen. 00 100 11TimeTime wie in Spanisch geschrieben.19:4406:05:306:2422:222:125:427.00 h08 :03 h5.13 h17 h3:45 a.m.6:49 p.m.3:45 A.M.6:49 P.M.UpperCharA single uppercharA single uppercase character. A B C D E F G H I J K L M N O P Q R S T U V W X Y ZLVA&\\# 233; ÓÓÓÓÜ "
 ms.assetid: ab607429-d845-4ca6-9aa2-b68c66c58738
 title: Spanisch (Factoids)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c09490ddb9b3dee6ae55d50bc21968ab15be2e201842370b7d46f91a857f544
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 8be17adb8b254a5e99e02acd77ccab4274019ad5
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118715510"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621936"
 ---
 # <a name="spanish-factoids"></a>Spanisch (Factoids)
 
@@ -19,9 +19,9 @@ In der folgenden Tabelle sind die Formate aufgeführt, die für jedes in Spanisc
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -44,7 +44,7 @@ In der folgenden Tabelle sind die Formate aufgeführt, die für jedes in Spanisc
 <tr class="odd">
 <td><strong>Number</strong></td>
 <td>Alle Zahlen, einschließlich gängiger Suffixe wie mm undkg sowie mathematische Symbole. Die Faktenformate DATE, TIME, TELEPHONE und CURRENCY sind ebenfalls in diesem Factoid enthalten.<br/></td>
-<td>820<br/> -6,5<br/> -123.456<br/> 9,02%<br/> 5,825 m<br/> 1340 mm<br/> 25 Km<br/> 300kg<br/> 5<br/> 300+20=320<br/> 12/4=3<br/> 25 %<br/> (1+3)/5<br/> 1+1=2<br/></td>
+<td>820<br/> -6,5<br/> -123.456<br/> 9,02%<br/> 5,825 m<br/> 1340 mm<br/> 25 Km<br/> 300kg<br/> 5<br/> 300+20=320<br/> 12/4=3<br/> 25%<br/> (1+3)/5<br/> 1+1=2<br/></td>
 </tr>
 <tr class="even">
 <td><strong>OneChar</strong></td>

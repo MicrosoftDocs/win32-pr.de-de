@@ -1,6 +1,6 @@
 ---
-description: Zeigt eine Fehlermeldung in der Sprechblasen Info an, die dem Netzwerk Adress Steuerelement zugeordnet ist.
-title: NCM_DISPLAYERRORTIP Meldung (shellapi. h)
+description: Zeigt eine Fehlermeldung in der Sprechblasenspitze an, die dem Netzwerkadressen-Steuerelement zugeordnet ist.
+title: NCM_DISPLAYERRORTIP (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 5ECAB6C3-69FC-4f2a-A9E6-80BC37ED3119
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 8a3968b9001d74721938190369e6b52cf2368835
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 046119c93ec6a80fcfcedbd562d04665d5642fd832f2385bab914cc732499e5a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104993775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111470"
 ---
-# <a name="ncm_displayerrortip-message"></a>NCM- \_ displayerrortip-Meldung
+# <a name="ncm_displayerrortip-message"></a>NCM \_ DISPLAYERRORTIP-Meldung
 
-Zeigt eine Fehlermeldung in der Sprechblasen Info an, die dem Netzwerk Adress Steuerelement zugeordnet ist.
+Zeigt eine Fehlermeldung in der Sprechblasenspitze an, die dem Netzwerkadressen-Steuerelement zugeordnet ist.
 
 
 ```C++
@@ -49,29 +49,29 @@ NCM_DISPLAYERRORTIP
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Nachricht erfolgreich ist, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Meldung erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Senden Sie diese Meldung, um eine Fehlermeldung anzuzeigen, wenn eine Adresse, die in das Steuerelement eingegeben wird, nicht anhand der zulässigen Netzwerk Adresstypen überprüft wird, die mit der [**NCM \_ setallowtype**](ncm-setallowtype.md) -Nachricht festgelegt Verwenden Sie die [**NCM \_ GetAddress**](ncm-getaddress.md) -Nachricht, um die Adresse zu überprüfen.
+Senden Sie diese Meldung, um eine Fehlermeldung anzuzeigen, wenn eine in das Steuerelement typifizierte Adresse nicht anhand der zulässigen Netzwerkadressentypen überprüft wird, die mit der [**NCM \_ SETALLOWTYPE-Meldung festgelegt**](ncm-setallowtype.md) wurden. Verwenden Sie die [**NCM \_ GETADDRESS-Nachricht,**](ncm-getaddress.md) um die Adresse zu überprüfen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Shellapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**NETADDR \_ displayerrortip**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_displayerrortip)
+[**NetAddr \_ DisplayErrorTip**](/windows/desktop/api/Shellapi/nf-shellapi-netaddr_displayerrortip)
 </dt> </dl>
 
  

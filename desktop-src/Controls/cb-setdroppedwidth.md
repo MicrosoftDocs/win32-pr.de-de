@@ -1,9 +1,9 @@
 ---
-title: CB_SETDROPPEDWIDTH Meldung (Winuser. h)
-description: Eine Anwendung sendet die CB- \_ setdroppeer-DTH-Nachricht, um die minimale zulässige Breite (in Pixel) des Listen Felds eines Kombinations Felds mit dem Format "CBS \_ Dropdown" oder "CBS \_ DropDownList" festzulegen.
+title: CB_SETDROPPEDWIDTH Meldung (Winuser.h)
+description: Eine Anwendung sendet die CB \_ SETDROPPEDWIDTH-Nachricht, um die minimal zulässige Breite des Listenfelds eines Kombinationsfelds im \_ CBS-DROPDOWN- oder \_ CBS-DROPDOWNLIST-Stil in Pixel festzulegen.
 ms.assetid: 89f44733-aebe-44ea-b62d-8bd988f1bd6f
 keywords:
-- Windows-Steuerelemente für CB_SETDROPPEDWIDTH Meldung
+- CB_SETDROPPEDWIDTH Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4c4f5ce64bfb1b48e9e811027792a11e4358edc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 05d59aee89c4be18ba8e5013fa1a1e685a56b727d293c833c7f99140b683efeb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089050"
 ---
-# <a name="cb_setdroppedwidth-message"></a>CB- \_ setdroppeer-DTH-Meldung
+# <a name="cb_setdroppedwidth-message"></a>CB \_ SETDROPPEDWIDTH-Nachricht
 
-Eine Anwendung sendet die **CB- \_ setdroppeer-DTH** -Nachricht, um die minimale zulässige Breite (in Pixel) des Listen Felds eines Kombinations Felds mit dem Format " [**CBS \_ Dropdown**](combo-box-styles.md) " oder " [**CBS \_ DropDownList**](combo-box-styles.md) " festzulegen.
+Eine Anwendung sendet die **CB \_ SETDROPPEDWIDTH-Nachricht,** um die minimal zulässige Breite des Listenfelds eines Kombinationsfelds im [**\_ CBS-DROPDOWN-**](combo-box-styles.md) oder [**\_ CBS-DROPDOWNLIST-Stil**](combo-box-styles.md) in Pixel festzulegen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet die **CB- \_ setdroppeer-DTH** -Nachricht, um die minimale
 *wParam* 
 </dt> <dd>
 
-Die minimale zulässige Breite des Listen Felds in Pixel.
+Die minimal zulässige Breite des Listenfelds in Pixel.
 
 </dd> <dt>
 
@@ -45,13 +45,13 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der neuen Breite des Listen Felds.
+Wenn die Meldung erfolgreich ist, entspricht der Rückgabewert der neuen Breite des Listenfelds.
 
-Wenn die Nachricht fehlschlägt, ist der Rückgabewert CB \_ Err.
+Wenn die Nachricht fehlschlägt, lautet der Rückgabewert CB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig ist die zulässige Mindestbreite für das Dropdown-Listenfeld NULL. Die Breite des Listen Felds ist entweder die minimale zulässige Breite oder die Kombinations Feldbreite, je nachdem, welcher Wert größer ist.
+Standardmäßig ist die zulässige Mindestbreite des Dropdownlistenfelds 0 (null). Die Breite des Listenfelds ist entweder die mindestens zulässige Breite oder die Breite des Kombinationsfelds, je nachdem, welcher Wert größer ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Standardmäßig ist die zulässige Mindestbreite für das Dropdown-Listenfeld NU
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Standardmäßig ist die zulässige Mindestbreite für das Dropdown-Listenfeld NU
 
 <dl> <dt>
 
-[**CB \_ getdroppeer-DTH**](cb-getdroppedwidth.md)
+[**CB \_ GETDROPPEDWIDTH**](cb-getdroppedwidth.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Ein Rückruf, der den Host benachrichtigt, von welchen Pipelinestufen keine Meshdaten für das in der zugeordneten Anforderung angegebene Ereignis zurückgegeben werden können.
+description: Ein Rückruf, der den Host darüber benachrichtigt, welche Pipelinestufen keine Meshdaten für das in der zugeordneten Anforderung angegebene Ereignis zurückgeben können.
 MS-HAID: vspixengine.IPipeLineStagesCallback\_MeshDataNotAvailableCallback\_UINT\_PipeLineStageError\_arr\_UINT\_UINT\_EventID
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 41fbedaa6deaf2a799f8d721309bfbe1b44bc2110dfae0a3cf30a4afbe0fa1f0
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 9c95f661c5a18f2573fe477f3aa1ef4d0035ee1e
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119276080"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622136"
 ---
 # <a name="span-idvspixengineipipelinestagescallback_meshdatanotavailablecallback_uint_pipelinestageerror_arr_uint_uint_eventidspanipipelinestagescallbackmeshdatanotavailablecallback-method"></a><span id="vspixengine.ipipelinestagescallback_meshdatanotavailablecallback_uint_pipelinestageerror_arr_uint_uint_eventid"></span>IPipeLineStagesCallback::MeshDataNotAvailableCallback-Methode
 
-Ein Rückruf, der den Host benachrichtigt, von welchen Pipelinestufen keine Meshdaten für das in der zugeordneten Anforderung angegebene Ereignis zurückgegeben werden können.
+Ein Rückruf, der den Host darüber benachrichtigt, welche Pipelinestufen keine Meshdaten für das in der zugeordneten Anforderung angegebene Ereignis zurückgeben können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT MeshDataNotAvailableCallback(
 Die Anzahl der zurückgegebenen Phasenfehler.
 
 *\_count0-Fehler*   
-Die Pipelinephasenfehler.
+Die Fehler in der Pipelinephase.
 
 *Breite*   
-Die Breite der Vertauschkette, die mit dem Zeichnen-Aufruf assocaited wurde. Dies wird verwendet, wenn Pipelinevorschauimages angefordert werden.
+Die Breite der Swapkette, die mit dem Zeichnen-Aufruf assocaitiert ist. Dies wird beim Anfordern von Pipelinevorschaubildern verwendet.
 
 *Höhe*   
-Die Höhe der Swapkette, die mit dem Draw-Aufruf assocaited wurde. Dies wird verwendet, wenn Pipelinevorschauimages angefordert werden.
+Die Höhe der Swapkette, die mit dem Zeichnen-Aufruf assocaitiert wurde. Dies wird beim Anfordern von Pipelinevorschaubildern verwendet.
 
-*im 19.*   
+*eid*   
 Das in den Ergebnissen dargestellte Ereignis.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

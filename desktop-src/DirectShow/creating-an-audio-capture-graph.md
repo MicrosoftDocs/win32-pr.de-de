@@ -1,57 +1,57 @@
 ---
-description: Erstellen eines audioerfassungs Diagramms
+description: Erstellen eines Graph
 ms.assetid: 2302bb40-a5db-473a-afeb-71905ac41f47
-title: Erstellen eines audioerfassungs Diagramms
+title: Erstellen eines Graph
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bd3c731a7dc498fcb7180bc56ae6a7f94dbec6d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: f8ff89cff8662bb5da81860053221596b18e89ab2300134cf2ff8826ae99b787
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108220"
 ---
-# <a name="creating-an-audio-capture-graph"></a>Erstellen eines audioerfassungs Diagramms
+# <a name="creating-an-audio-capture-graph"></a>Erstellen eines Graph
 
-Der erste Schritt für eine audioerfassungs Anwendung ist die Erstellung eines Filter Diagramms. Die Konfiguration des Diagramms hängt von dem Typ der Datei ab, die Sie erstellen möchten.
+Der erste Schritt für eine Audioerfassungsanwendung ist das Erstellen eines Filterdiagramms. Die Konfiguration des Diagramms hängt vom Typ der Datei ab, die Sie erstellen möchten.
 
--   Reine Audiodatei: audioerfassungs Filter nach [AVI MUX](avi-mux-filter.md) -Filter und AVI MUX in [File Writer](file-writer-filter.md) Filter.
--   WAV-Datei: audioerfassungs Filter für [wavdest Filter Sample](wavdest-filter-sample.md) to File Writer Filter
--   Windows Media Audio Datei (. WMA): audioerfassungs Filter für den [WM-ASF-Writer](wm-asf-writer-filter.md) -Filter.
+-   Rein audiobasierte AVI-Datei: Filter für Audioaufnahme nach [AVI Mux-Filter](avi-mux-filter.md) und AVI Mux zu [File Writer-Filter.](file-writer-filter.md)
+-   WAV-Datei: Audio Capture Filter to [WavDest Filter Sample](wavdest-filter-sample.md) to File Writer Filter
+-   Windows Medienaudiodatei (WMA): Audioaufnahmefilter für [WM ASF](wm-asf-writer-filter.md) Writer-Filter.
 
-Der wavdest-Filter wird als SDK-Beispiel bereitgestellt. Um es zu verwenden, müssen Sie den Filter erstellen und registrieren.
+Der WavDest-Filter wird als SDK-Beispiel bereitgestellt. Um ihn zu verwenden, müssen Sie den Filter erstellen und registrieren.
 
-Wenn Sie den ASF-Writer-Filter verwenden möchten, müssen Sie das Windows Media SDK installieren und einen Software Schlüssel abrufen, um den Filter zu entsperren. Weitere Informationen finden Sie unter [Verwenden von Windows Media in DirectShow](using-windows-media-in-directshow.md).
+Um den ASF Writer-Filter zu verwenden, müssen Sie das Windows Media SDK installieren und einen Softwareschlüssel abrufen, um den Filter zu entsperren. Weitere Informationen finden Sie unter [Verwenden von Windows Medien in DirectShow.](using-windows-media-in-directshow.md)
 
-Sie können das Filter Diagramm mit dem [Erfassungs Diagramm](capture-graph-builder.md) -Generator-Objekt erstellen, oder Sie können das Diagramm manuell erstellen. Das heißt, dass die Anwendung jeden Filterprogramm gesteuert hinzufügen und verbinden kann. In diesem Artikel wird die manuelle Vorgehensweise beschrieben. Weitere Informationen zur Verwendung des Erfassungs Diagramm-Generators finden Sie unter [Video Aufzeichnung](video-capture.md). Ein Großteil der Informationen in diesem Artikel gilt für reine audiodiagramme.
+Sie können das Filterdiagramm mithilfe des [Capture Graph Builder-Objekts](capture-graph-builder.md) erstellen, oder Sie können das Diagramm "manuell" erstellen. Das heißt, die Anwendung muss jeden Filter programmgesteuert hinzufügen und verbinden. In diesem Artikel wird der manuelle Ansatz beschrieben. Weitere Informationen zur Verwendung von Capture Graph Builder finden Sie unter [Video capture](video-capture.md). Ein Großteil der Informationen in diesem Artikel gilt für rein audiobasierte Diagramme.
 
-Hinzufügen des audioerfassungs Geräts
+Hinzufügen des Audioaufnahmegeräts
 
-Da der audioerfassungs Filter mit einem bestimmten Hardware Gerät kommuniziert, können Sie nicht einfach **cokreateinstance** aufrufen, um den Filter zu erstellen. Verwenden Sie stattdessen den [Enumerator "System Geräte](system-device-enumerator.md) ", um alle Geräte in der Kategorie "audioerfassungs Quellen" aufzulisten, die durch den Klassen Bezeichner CLSID \_ audioinputdevicecategory gekennzeichnet wird.
+Da der Audioaufnahmefilter mit einem bestimmten Hardwaregerät kommuniziert, können Sie **CoCreateInstance** nicht einfach aufrufen, um den Filter zu erstellen. Verwenden Sie stattdessen den [Systemgeräte-Enumerator,](system-device-enumerator.md) um alle Geräte in der Kategorie "Audioaufnahmequellen" aufzuzählen, die durch den Klassenbezeichner CLSID \_ AudioInputDeviceCategory identifiziert wird.
 
-Der Enumerator für System Geräte gibt eine Liste der Moniker für die Geräte zurück. der Anzeige Name jedes Monikers entspricht dem Namen des Geräts. Wählen Sie einen der zurückgegebenen Moniker aus, und verwenden Sie ihn zum Erstellen einer Instanz des audioerfassungs Filters für dieses Gerät. Fügen Sie den Filter dem Filter Diagramm hinzu. Das bevorzugte audioaufzeichnungs Gerät des Benutzers wird zuerst in der monikerliste angezeigt. (Der Benutzer wählt ein bevorzugtes Gerät aus, indem er in der Systemsteuerung auf Sounds und Multimedia klickt.)
+Der Systemgeräte-Enumerator gibt eine Liste von Monikern für die Geräte zurück. Der Anzeigename jedes Monikers entspricht dem Namen des Geräts. Wählen Sie einen der zurückgegebenen Moniker aus, und verwenden Sie ihn, um eine Instanz des Audioaufnahmefilters für dieses Gerät zu erstellen. Fügen Sie den Filter dem Filterdiagramm hinzu. Das bevorzugte Audioaufzeichnungsgerät des Benutzers wird zuerst in der Monikerliste angezeigt. (Der Benutzer wählt ein bevorzugtes Gerät aus, indem er in Systemsteuerung auf Sounds und Multimedia klickt.)
 
-Weitere Informationen finden Sie unter [using the System Device Enumerator](using-the-system-device-enumerator.md).
+Weitere Informationen finden Sie unter [Verwenden des Systemgeräte-Enumerators](using-the-system-device-enumerator.md).
 
-Zum Angeben der Eingabe, die von erfasst werden soll, rufen Sie die [**IAMAudioInputMixer**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) -Schnittstelle aus dem audioerfassungs Filter ab und rufen die **Put \_ enable** -Methode auf, um die Eingabe anzugeben. Eine Einschränkung dieser Methode besteht jedoch darin, dass unterschiedliche Hardware Geräte verschiedene Zeichen folgen verwenden können, um Ihre Eingaben zu identifizieren. Beispielsweise kann eine Karte "Mikrofon" verwenden, um die Mikrofon Eingabe zu identifizieren, und eine andere Karte kann "MIC" verwenden. Um den Zeichen folgen Bezeichner für eine bestimmte Eingabe zu ermitteln, verwenden Sie die Windows Multimedia Functions [**WaveOutOpen**](/previous-versions//dd743866(v=vs.85)), [**mixeropen**](/previous-versions//dd757308(v=vs.85))und [**mixergetlineinfo**](/previous-versions//dd757303(v=vs.85)). Weitere Informationen finden Sie im MSDN-Thema [Mixer Geräte Abfragen](/windows/desktop/Multimedia/mixer-device-queries) .
+Rufen Sie zum Angeben der zu erfassenden Eingabe die [**IAMAudioInputMixer-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) aus dem Audio capture-Filter ab, und rufen Sie die **\_ put Enable-Methode** auf, um die Eingabe anzugeben. Eine Einschränkung dieser Methode besteht jedoch darin, dass verschiedene Hardwaregeräte unterschiedliche Zeichenfolgen verwenden können, um ihre Eingaben zu identifizieren. Beispielsweise kann eine Karte "Mikrofon" verwenden, um die Mikrofoneingabe zu identifizieren, und eine andere Karte kann "Mikrofon" verwenden. Um den Zeichenfolgenbezeichner für eine bestimmte Eingabe zu bestimmen, verwenden Sie die Windows Multimediafunktionen [**waveOutOpen**](/previous-versions//dd743866(v=vs.85)), [**mixerOpen**](/previous-versions//dd757308(v=vs.85))und [**mixerGetLineInfo**](/previous-versions//dd757303(v=vs.85)). Weitere Informationen finden Sie im MSDN-Thema [Mixer Geräteabfragen.](/windows/desktop/Multimedia/mixer-device-queries)
 
-Hinzufügen von Multiplexer und dateiwriter
+Hinzufügen des Multiplexers und des Dateiwriters
 
-Ein audioerfassungs Diagramm muss einen Multiplexer und einen dateiwriter enthalten.
+Ein Audioaufnahmegraph muss einen Multiplexer und einen Dateiwriter enthalten.
 
-Ein *Multiplexer* ist ein Filter, der einen oder mehrere Streams in einem einzigen Stream mit einem bestimmten Format kombiniert. Der AVI MUX-Filter kombiniert z. b. Audio-und Videostreams in einem verschachtelten AVI-Stream. Für die Audioerfassung gibt es in der Regel nur einen einzigen Audiostream, aber die Audiodaten müssen immer noch in ein Format gepackt werden, das auf dem Datenträger gespeichert werden kann. hierfür ist ein Multiplexer erforderlich. Die Auswahl von Multiplexer ist vom Zielformat abhängig:
+Ein *Multiplexer* ist ein Filter, der einen oder mehrere Datenströme in einem einzelnen Stream mit einem bestimmten Format kombiniert. Beispielsweise kombiniert der AVI Mux-Filter Audio- und Videostreams in einem verschachtelten AVI-Stream. Für die Audioaufnahme gibt es in der Regel nur einen einzelnen Audiodatenstrom, aber die Audiodaten müssen weiterhin in einem Format gepackt werden, das auf dem Datenträger gespeichert werden kann, was einen Multiplexer erfordert. Die Wahl des Multiplexers hängt vom Zielformat ab:
 
 -   AVI: AVI Multiplexer
--   WAV: wavdest
--   WMA: ASF-Writer
+-   WAV: WavDest
+-   WMA: ASF Writer
 
-Ein *dateiwriter* ist ein Filter, der eingehende Daten in eine Datei schreibt. Verwenden Sie für AVI-oder WAV-Dateien den [dateiwriter-Filter](file-writer-filter.md). Bei WMA-Dateien fungiert der ASF-Writer sowohl als Multiplexer als auch als dateiwriter.
+Ein *Dateiwriter* ist ein Filter, der eingehende Daten in eine Datei schreibt. Verwenden Sie für AVI- oder WAV-Dateien den [Dateiwriterfilter](file-writer-filter.md). Bei WMA-Dateien fungiert der ASF Writer sowohl als Multiplexer als auch als Dateiwriter.
 
-Nachdem Sie die Filter erstellt und dem Diagramm hinzugefügt haben, verbinden Sie die Ausgabe-PIN des audioerfassungs Filters mit der Eingabe-PIN des Multiplexers, und verbinden Sie die Ausgabe-PIN des Multiplexers mit der Eingabe-PIN des filterwriters (angenommen, dies sind separate Filter). Um den Dateinamen anzugeben, Fragen Sie den dateiwriter nach der [**ifilesinkfilter**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) -Schnittstelle ab, und nennen Sie die [**ifilesinkfilter:: setFileName**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) -Methode.
+Nachdem Sie die Filter erstellt und dem Diagramm hinzugefügt haben, verbinden Sie den Ausgabepin des Audioaufnahmefilters mit dem Eingabepin des Multiplexers, und verbinden Sie den Ausgabepin des Multiplexers mit dem Eingabepin des Filterwriters (vorausgesetzt, es handelt sich dabei um separate Filter). Um den Dateinamen anzugeben, fragen Sie den Dateiwriter nach der [**IFileSinkFilter-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ifilesinkfilter) ab, und rufen Sie die [**IFileSinkFilter::SetFileName-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifilesinkfilter-setfilename) auf.
 
 ### <a name="example-code"></a>Beispielcode
 
-Im folgenden Beispiel wird gezeigt, wie ein audioerfassungs Diagramm mit dem wavdest-Filter erstellt wird. Die gleichen Prinzipien gelten für die anderen Dateitypen.
+Das folgende Beispiel zeigt, wie Sie mithilfe des WavDest-Filters ein Audioaufnahmediagramm erstellen. Die gleichen Prinzipien gelten für die anderen Dateitypen.
 
 
 ```C++
@@ -89,13 +89,13 @@ hr = ConnectFilters(pGraph, pWaveDest, pWriter);
 
 
 
-In diesem Beispiel `AddFilterByCLSID` wird die unter [Hinzufügen eines Filters nach CLSID](add-a-filter-by-clsid.md)beschriebene Funktion und die `ConnectFilters` in Verbinden von [zwei Filtern](connect-two-filters.md)beschriebene Funktion verwendet. Keines dieser APIs ist eine DirectShow-API.
+In diesem Beispiel werden die `AddFilterByCLSID` unter Hinzufügen eines Filters nach [CLSID](add-a-filter-by-clsid.md)beschriebene Funktion und die `ConnectFilters` in Verbinden Zwei [Filter](connect-two-filters.md)beschriebene Funktion verwendet. Keine dieser ApIs ist eine DirectShow-API.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Audioerfassung](audio-capture.md)
+[Audioaufnahme](audio-capture.md)
 </dt> </dl>
 
  

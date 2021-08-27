@@ -1,11 +1,11 @@
 ---
 title: IMsRdpDeviceCollection2-Schnittstelle
-description: Stellt eine Auflistung von Geräte Objekten dar. Dies ist eine Erweiterung der imsrdpdebug-Schnittstelle.
+description: Stellt eine Auflistung von Geräteobjekten dar. Dies ist eine Erweiterung der IMsRdpDeviceCollection-Schnittstelle.
 ms.assetid: df4d704c-e031-4df1-aed1-11aacf8a6992
 ms.tgt_platform: multiple
 keywords:
 - IMsRdpDeviceCollection2-Schnittstelle Remotedesktopdienste
-- IMsRdpDeviceCollection2 Interface Remotedesktopdienste, beschrieben
+- IMsRdpDeviceCollection2-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,33 +16,33 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ea35c0a66ad8bf5d291062eafb7be3ceae4ac58
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ebfadf28cf6dc389ac615554e704f90a2b6b86533ce58018bdec5623f2637af
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099440"
 ---
 # <a name="imsrdpdevicecollection2-interface"></a>IMsRdpDeviceCollection2-Schnittstelle
 
-Stellt eine Auflistung von Geräte Objekten dar. Dies ist eine Erweiterung der [**imsrdpdebug**](imsrdpdevicecollection.md) -Schnittstelle.
+Stellt eine Auflistung von Geräteobjekten dar. Dies ist eine Erweiterung der [**IMsRdpDeviceCollection-Schnittstelle.**](imsrdpdevicecollection.md)
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpDeviceCollection2** -Schnittstelle erbt von [**imsrdpde vicecollection**](imsrdpdevicecollection.md). **IMsRdpDeviceCollection2** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpDeviceCollection2-Schnittstelle** erbt von [**IMsRdpDeviceCollection.**](imsrdpdevicecollection.md) **IMsRdpDeviceCollection2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IMsRdpDeviceCollection2** -Schnittstelle verfügt über diese Methoden.
+Die **IMsRdpDeviceCollection2-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                         | BESCHREIBUNG                                                                                                 |
 |:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| [**Adddevicebyinstanceid**](imsrdpdevicecollection2-adddevicebyinstanceid.md) | Fügt der Geräte Sammlung ein nicht aufgeführtes Gerät hinzu.<br/>                                                |
-| [**Redirectnow**](imsrdpdevicecollection2-redirectnow.md)                     | Erzwingt das umgeleitet oder Entfernen von Geräten, die in der Sammlung ausgewählt oder nicht ausgewählt wurden.<br/> |
+| [**AddDeviceByInstanceId**](imsrdpdevicecollection2-adddevicebyinstanceid.md) | Fügt der Gerätesammlung ein nicht aufgelistetes Gerät hinzu.<br/>                                                |
+| [**RedirectNow**](imsrdpdevicecollection2-redirectnow.md)                     | Erzwingt, dass Geräte, die aus der Sammlung ausgewählt oder nicht ausgewählt wurden, umgeleitet oder entfernt werden.<br/> |
 
 
 

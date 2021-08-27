@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für einfache Datei Vorgangs Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für einfache Dateivorgangereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 5b6374e0-b39a-4d5a-acbd-25b410f1ba52
 title: FileIo_SimpleOp-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f7ff09830653278c9b37cfefa81b182b0f1dc054
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 246bf356786b1b884380faa1feaad11db4d3f406a296d3292c571ff02698f454
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130570"
 ---
-# <a name="fileio_simpleop-class"></a>Klasse "fleio \_ simpleop"
+# <a name="fileio_simpleop-class"></a>FileIo \_ SimpleOp-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für einfache Datei Vorgangs Ereignisse.
+Diese Klasse ist die Ereignistypklasse für einfache Dateivorgangereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,96 +44,96 @@ class FileIo_SimpleOp : FileIo
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ simpleop** " verfügt über diese Typen von Membern:
+Die **FileIo \_ SimpleOp-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **fleio \_ simpleop** " verfügt über diese Eigenschaften.
+Die **FileIo \_ SimpleOp-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Filekey**
+**FileKey**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4), Zeiger
+Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Um den Dateinamen zu ermitteln, vergleichen Sie den Wert dieser Eigenschaft mit der **FileObject** -Eigenschaft eines [**FileIO- \_ namens**](fileio-name.md) Ereignisses.
+Um den Dateinamen zu bestimmen, passen Sie den Wert dieser Eigenschaft mit der **FileObject-Eigenschaft** eines [**FileIo \_ Name-Ereignisses**](fileio-name.md) an.
 
 </dd> <dt>
 
-**File Object**
+**FileObject**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3), Zeiger
+Qualifizierer: WmiDataId(3), Zeiger
 </dt> </dl>
 
-Ein Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Datei Objektinstanz zwischen Ereignissen zum Erstellen und Schließen von Dateien verwendet werden kann.
+Bezeichner, der zum Korrelieren von Vorgängen mit derselben geöffneten Dateiobjektinstanz zwischen Ereignissen zum Erstellen und Schließen von Dateien verwendet werden kann.
 
 </dd> <dt>
 
-**Unpptr**
+**IrpPtr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität.
+E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität.
 
 </dd> <dt>
 
-**TTiD**
+**TTID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Thread Bezeichner des Threads, der den Vorgang ausführt.
+Threadbezeichner des Threads, der den Vorgang ausgeführt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Bereinigungs Ereignis wird protokolliert, wenn das letzte Handle der Datei geschlossen wird. Das Close-Ereignis gibt an, dass ein Datei Objekt freigegeben wird. Das Flush-Ereignis gibt an, wann die Datei Puffer vollständig auf den Datenträger geleert werden.
+Das Cleanup-Ereignis wird protokolliert, wenn das letzte Handle für die Datei geschlossen wird. Das Close-Ereignis gibt an, dass ein Dateiobjekt freigibt. Das Flush-Ereignis gibt an, wann die Dateipuffer vollständig auf den Datenträger geleert werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

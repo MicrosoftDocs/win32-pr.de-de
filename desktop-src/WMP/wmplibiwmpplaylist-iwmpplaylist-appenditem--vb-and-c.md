@@ -1,11 +1,11 @@
 ---
-title: Iwmpwiedergabe appendItem-Methode
-description: Mit der appendItem-Methode wird am Ende einer Wiedergabeliste ein Medien Element hinzugefügt.
+title: IWMPPlaylist appendItem-Methode
+description: Die appendItem-Methode fügt ein Medienelement am Ende einer Wiedergabeliste hinzu.
 ms.assetid: d659298b-ec4e-4771-8e9b-8cfd7b3e0eb2
 keywords:
-- appendItem-Methode, Windows Media Player
-- appendItem-Methode, Windows Media Player, iwmpwiedergabe-Schnittstelle
-- Iwmpwiedergabe Interface, Windows Media Player, appendItem-Methode
+- appendItem-Methode Windows Media Player
+- appendItem-Methode Windows Media Player , IWMPPlaylist-Schnittstelle
+- IWMPPlaylist-Schnittstelle Windows Media Player , appendItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a94e1b515ec6301830af2de06bae32602bdf66e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de67c7bbd3448e4b4fcdb562b2b10ace68ed7a2c92020650c79fdd90b05366b2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098700"
 ---
-# <a name="iwmpplaylistappenditem-method"></a>Iwmpwiedergabe:: appendItem-Methode
+# <a name="iwmpplaylistappenditem-method"></a>IWMPPlaylist::appendItem-Methode
 
-Mit der **appendItem** -Methode wird am Ende einer Wiedergabeliste ein Medien Element hinzugefügt.
+Die **appendItem-Methode** fügt ein Medienelement am Ende einer Wiedergabeliste hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,10 +53,10 @@ Implements IWMPPlaylist.appendItem
 
 <dl> <dt>
 
-*piwmpmedia* \[ in\]
+*pIWMPMedia* \[ In\]
 </dt> <dd>
 
-Eine **WMPLib. iwmpmedia** -Schnittstelle, die das anzufügende Medien Element darstellt.
+Eine **WMPLib.IWMPMedia-Schnittstelle,** die das anzufügende Medienelement darstellt.
 
 </dd> </dl>
 
@@ -64,13 +64,13 @@ Eine **WMPLib. iwmpmedia** -Schnittstelle, die das anzufügende Medien Element d
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Vollzugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Vollzugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **appendItem** verwendet, um der Wiedergabeliste das aktuelle Medien Element mit dem Namen "threelist" hinzuzufügen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **appendItem** verwendet, um das aktuelle Medienelement der Wiedergabeliste mit dem Namen "ThreeList" hinzuzufügen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -107,7 +107,7 @@ plThreeList.appendItem(currMedia)
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
@@ -117,10 +117,10 @@ plThreeList.appendItem(currMedia)
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpwiedergabe-Schnittstelle (VB und c#)**](iwmpplaylist--vb-and-c.md)
+[**IWMPPlaylist-Schnittstelle (VB und C#)**](iwmpplaylist--vb-and-c.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: 0a380854-f3a9-4077-a481-dda67737d4c8
 title: Implementieren von IAMErrorLog
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 446e193a6a28fc1cbd5515414b9914f2653e8bc27bb9b5a57e69d05dfc947d62
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 378d48ec9047da6068e8d95143f8b10b7016faea
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118398080"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122465237"
 ---
 # <a name="implementing-iamerrorlog"></a>Implementieren von IAMErrorLog
 
@@ -31,7 +31,7 @@ STDMETHODIMP LogError(
 
 Der Fehlercode und die Fehlerzeichenfolge werden von DirectShow Editing Services definiert. Eine Liste der Fehler finden Sie unter [Renderingfehler.](rendering-errors.md)
 
-Der *pExtraInfo-Parameter* enthält einen Zeiger auf einen VARIANT-Typ, der zusätzliche Informationen zum Fehler enthält. Der Datentyp und der Inhalt der VARIANT-Datei hängen vom spezifischen Aufgetretenen Fehler ab. Wenn der Fehler beispielsweise durch einen falschen Dateinamen verursacht wurde, ist variant eine Zeichenfolge mit dem ungültigen Dateinamen. Einige Fehler verfügen nicht über zusätzliche Informationen, *sodass pExtraInfo* möglicherweise **NULL** ist. Der folgende Code zeigt, wie sie den **vt-Member** des VARIANT testen, der den Datentyp angibt, und eine Nachricht entsprechend formatieren.
+Der *pExtraInfo-Parameter* enthält einen Zeiger auf einen VARIANT-Typ, der zusätzliche Informationen zum Fehler enthält. Der Datentyp und der Inhalt der VARIANT-Datei hängen vom spezifischen Aufgetretenen Fehler ab. Wenn der Fehler beispielsweise durch einen falschen Dateinamen verursacht wurde, ist variant eine Zeichenfolge mit dem ungültigen Dateinamen. Einige Fehler enthalten keine zusätzlichen Informationen, sodass *pExtraInfo* möglicherweise **NULL ist.** Der folgende Code zeigt, wie sie den **vt-Member** der VARIANT-Datei testen, die den Datentyp angibt, und eine Meldung entsprechend formatieren.
 
 
 ```C++
@@ -63,20 +63,15 @@ if( pExtraInfo )    // Report extra information, if any.
 
 
 > [!Note]  
-> Geben Sie den VARIANT, auf den von gezeigt wird, nicht frei.
+> Geben Sie den VARIANT-Wert, auf den zeigt, nicht frei.
 >
 > <span codelanguage=""></span>
 >
-> <table>
-> <colgroup>
-> <col style="width: 100%" />
-> </colgroup>
-> <tbody>
-> <tr class="odd">
-> <td><pre><code>pExtraInfo</code></pre></td>
-> </tr>
-> </tbody>
-> </table> 
+> 
+| | | <pre><code>pExtraInfo</code></pre> | 
+
+>
+> 
 >
 > . Außerdem wird der VARIANT-Wert ungültig, nachdem die Methode zurückgegeben wurde. Verweisen Sie daher später nicht darauf.
 

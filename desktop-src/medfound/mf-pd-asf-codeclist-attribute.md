@@ -1,119 +1,65 @@
 ---
-description: Enthält Informationen über die Codecs und Formate, die zum Codieren des Inhalts in einer ASF-Datei (Advanced Systems Format) verwendet wurden. Dieses Attribut entspricht dem Codec List-Objekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
+description: Enthält Informationen zu den Codecs und Formaten, die zum Codieren des Inhalts in einer ASF-Datei (Advanced Systems Format) verwendet wurden. Dieses Attribut entspricht dem Codec-Listenobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 ms.assetid: 6dde30d3-dbdc-469c-ad7e-5e670b7e0a64
-title: MF_PD_ASF_CODECLIST-Attribut (wmcontainer. h)
+title: MF_PD_ASF_CODECLIST-Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 402c53c082ae57fed444168c559f99718322f8a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c512dee499dbd2d006fb695c89d59add449e64fb
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366099"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471306"
 ---
-# <a name="mf_pd_asf_codeclist-attribute"></a>MF \_ PD, \_ ASF \_ codeclist-Attribut
+# <a name="mf_pd_asf_codeclist-attribute"></a>MF \_ PD \_ ASF \_ CODECLIST-Attribut
 
-Enthält Informationen über die Codecs und Formate, die zum Codieren des Inhalts in einer ASF-Datei (Advanced Systems Format) verwendet wurden. Dieses Attribut entspricht dem Codec List-Objekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
+Enthält Informationen zu den Codecs und Formaten, die zum Codieren des Inhalts in einer ASF-Datei (Advanced Systems Format) verwendet wurden. Dieses Attribut entspricht dem Codec-Listenobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 
 ## <a name="data-type"></a>Datentyp
 
 Bytearray
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalt.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode erstellt den Präsentations Deskriptor und generiert dieses Attribut aus dem Codec List-Objekt im ASF-Header. Eine Anwendung, die die [ASF-Medienquelle](asf-media-source.md) verwendet, kann dieses Attribut abrufen, indem [**imfmediasource:: createpresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) aufgerufen und anschließend das-Attribut aus dem Präsentations Deskriptor abgerufen wird.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) erstellt den Präsentationsdeskriptor und generiert dieses Attribut aus dem Codec-Listenobjekt im ASF-Header. Eine Anwendung, die die [ASF-Medienquelle](asf-media-source.md) verwendet, kann dieses Attribut abrufen, indem [**SIE DIE ATTRIBUTEMediaSource::CreatePresentationDescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor) aufruft und dann das Attribut aus dem Präsentationsdeskriptor abruft.
 
-In der folgenden Tabelle wird das Layout des Attribut-BLOBs gezeigt.
+Die folgende Tabelle zeigt das Layout des Attributblobs.
 
 
 
-| Objektfeld für die Codec-Liste | Datentyp    | Size    | BESCHREIBUNG                           |
+| Feld "Codecliste-Objekt" | Datentyp    | Size    | BESCHREIBUNG                           |
 |-------------------------|--------------|---------|---------------------------------------|
-| Anzahl der Codec-Einträge     | **DWORD**    | 4 Bytes | Anzahl von Codecs                      |
-| Codec-Einträge           | **Hobby**\[\] | Varies  | Array von Codec-Informationsstrukturen |
+| Anzahl von Codeceinträgen     | **DWORD**    | 4 Bytes | Anzahl der Codecs                      |
+| Codeceinträge           | **BYTE**\[\] | Varies  | Array von Codecinformationsstrukturen |
 
 
 
  
 
-Das Feld Code Einträge ist ein Array von-Strukturen. In der folgenden Tabelle wird das Format der einzelnen Einträge angezeigt:
+Das Feld Codeeinträge ist ein Array von -Strukturen. Die folgende Tabelle zeigt das Format der einzelnen Einträge:
 
 
 
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Objektfeld für die Codec-Liste</th>
-<th>Datentyp</th>
-<th>Size</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>type</td>
-<td><strong>DWORD</strong></td>
-<td>4 Bytes</td>
-<td>Der Codec-Typ. Mögliche Werte:<br/>
-<ul>
-<li>0x0001: Audiocodec</li>
-<li>0x0002: Videocodec</li>
-<li>0xFFFF: unbekannt</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Länge des Codec-namens</td>
-<td><strong>DWORD</strong></td>
-<td>4 Bytes</td>
-<td>Größe der Codec-namens Zeichenfolge in Bytes, einschließlich des <strong>null</strong> -Zeichens.</td>
-</tr>
-<tr class="odd">
-<td>Codec-Name</td>
-<td><strong>WCHAR</strong>[]</td>
-<td>Varies</td>
-<td>Eine mit NULL beendete Unicode-Zeichenfolge, die den Namen des Codecs enthält, z &quot; . b. Windows Media Video 9 &quot; .</td>
-</tr>
-<tr class="even">
-<td>Länge der Codec-Beschreibung</td>
-<td><strong>DWORD</strong></td>
-<td>4 Bytes</td>
-<td>Größe der Codec-Beschreibungs Zeichenfolge in Bytes, einschließlich des <strong>null</strong> -Zeichens.</td>
-</tr>
-<tr class="odd">
-<td>Codec-Beschreibung</td>
-<td><strong>WCHAR</strong>[]</td>
-<td>Varies</td>
-<td>Eine NULL-terminierte Unicode-Zeichenfolge, die eine Beschreibung des Codecs enthält.</td>
-</tr>
-<tr class="even">
-<td>Länge der Codec-Informationen</td>
-<td><strong>DWORD</strong></td>
-<td>4 Bytes</td>
-<td>Größe des Codec-Informations Felds in Bytes.</td>
-</tr>
-<tr class="odd">
-<td>Codec-Informationen</td>
-<td><strong>Byte</strong>[]</td>
-<td>Varies</td>
-<td>Codec-Daten. Die Bedeutung dieser Daten hängt vom Codec ab. In der Regel wird mit diesen Daten das Format angegeben.</td>
-</tr>
-</tbody>
-</table>
+
+| Feld "Codecliste-Objekt" | Datentyp | Size | BESCHREIBUNG | 
+|-------------------------|-----------|------|-------------|
+| type | <strong>DWORD</strong> | 4 Bytes | Codectyp. Mögliche Werte:<br /><ul><li>0x0001: Audiocodec</li><li>0x0002: Videocodec</li><li>0xFFFF: Unbekannt</li></ul> | 
+| Länge des Codecnamens | <strong>DWORD</strong> | 4 Bytes | Größe der Zeichenfolge "Codecname" in Bytes, einschließlich des <strong>NULL-Zeichens.</strong> | 
+| Codecname | <strong>WCHAR</strong>[] | Varies | Mit NULL endende Unicode-Zeichenfolge, die den Namen des Codecs enthält, z. B. "Windows Media Video 9". | 
+| Länge der Codecbeschreibung | <strong>DWORD</strong> | 4 Bytes | Größe der Zeichenfolge codec description in Bytes, einschließlich des <strong>NULL-Zeichens.</strong> | 
+| Codecbeschreibung | <strong>WCHAR</strong>[] | Varies | Eine auf NULL endende Unicode-Zeichenfolge, die eine Beschreibung des Codecs enthält. | 
+| Länge der Codecinformationen | <strong>DWORD</strong> | 4 Bytes | Größe des Felds Codecinformationen in Bytes. | 
+| Codecinformationen | <strong>BYTE</strong>[] | Varies | Codecdaten. Die Bedeutung dieser Daten hängt vom Codec ab. In der Regel geben diese Daten das Format an. | 
+
 
 
 
  
 
 > [!Note]  
-> Das Layout des Attribut-BLOBs entspricht nicht exakt dem Layout des Codec-Listen Objekts im ASF-Header. Insbesondere werden Zeichen folgen Längen in Bytes angegeben und enthalten die Größe des **null** -Terminator.
+> Das Layout des Attributblobs stimmt nicht genau mit dem Layout des Codec-Listenobjekts im ASF-Header überein. Insbesondere werden Zeichenfolgenlängen in Bytes angegeben und  enthalten die Größe des NULL-Abschlusszeichens.
 
  
 
@@ -123,35 +69,35 @@ Das Feld Code Einträge ist ein Array von-Strukturen. In der folgenden Tabelle w
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEAttributes::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**Imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEAttributes::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**PRESENTPresentationDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Darstellungsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

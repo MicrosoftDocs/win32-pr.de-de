@@ -1,23 +1,23 @@
 ---
-description: Dieses Thema enthält ein Beispiel für die Verwendung der Geometrie bezogenen Schnittstellen in einem XPS-om.
+description: Dieses Thema enthält ein Beispiel für die Verwendung der geometriebezogenen Schnittstellen in einer XPS OM.
 ms.assetid: 2663c6fc-301e-4765-b37c-b5e29a714ce8
-title: XPS OM-Geometry-Objekte
+title: XPS OM Geometry Objects
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cca767de311d2f2d49b0b194c372c0e69eaa637c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db68127535b37e216d28423a034083e979f58c714cbbbee875bc3f1621974bfe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120112090"
 ---
-# <a name="xps-om-geometry-objects"></a>XPS OM-Geometry-Objekte
+# <a name="xps-om-geometry-objects"></a>XPS OM Geometry Objects
 
-Dieses Thema enthält ein Beispiel für die Verwendung der Geometrie bezogenen Schnittstellen in einem XPS-om.
+Dieses Thema enthält ein Beispiel für die Verwendung der geometriebezogenen Schnittstellen in einer XPS OM.
 
 ## <a name="create-a-rectangular-geometry"></a>Erstellen einer rechteckigen Geometrie
 
-Im folgenden Codebeispiel wird ein Geometry-Objekt erstellt, das eine geschlossene rechteckige Form beschreibt.
+Im folgenden Codebeispiel wird ein geometry-Objekt erstellt, das eine geschlossene rechteckige Form beschreibt.
 
 
 ```C++
@@ -92,25 +92,25 @@ Im folgenden Codebeispiel wird ein Geometry-Objekt erstellt, das eine geschlosse
 
 
 
-Weitere Informationen zum Hinzufügen von Segmenten zu einer Geometrie Abbildung finden Sie in den Codebeispielen in den Referenz Themen für die Methode [**ixpsomgeometryfigure:: getsegmentdata**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdata) und [**ixpsomgeometryfigure:: setsegments**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setsegments) .
+Weitere Informationen zum Hinzufügen von Segmenten zu einer Geometriefigur finden Sie in den Codebeispielen in den Referenzthemen [**IXpsOMGeometryFigure::GetSegmentData-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdata) und [**IXpsOMGeometryFigure::SetSegments-Methode.**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setsegments)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Ixpsomgeometry-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
+[**IXpsOMGeometry-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometry)
 </dt> <dt>
 
-[**Ixpsomgeometryfigure-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
+[**IXpsOMGeometryFigure-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigure)
 </dt> <dt>
 
-[**Ixpsomgeometryfigure:: getsegmentdata-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdata)
+[**IXpsOMGeometryFigure::GetSegmentData-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-getsegmentdata)
 </dt> <dt>
 
-[**Ixpsomgeometryfigure:: setsegments-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setsegments)
+[**IXpsOMGeometryFigure::SetSegments-Methode**](/windows/desktop/api/xpsobjectmodel/nf-xpsobjectmodel-ixpsomgeometryfigure-setsegments)
 </dt> <dt>
 
-[**Ixpsomgeometryfiguerinnerungs-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
+[**IXpsOMGeometryFigureCollection-Schnittstelle**](/windows/desktop/api/xpsobjectmodel/nn-xpsobjectmodel-ixpsomgeometryfigurecollection)
 </dt> </dl>
 
  

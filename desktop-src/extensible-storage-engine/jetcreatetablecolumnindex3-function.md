@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetCreateTableColumnIndex3-Funktion'
+description: Weitere Informationen finden Sie unter JetCreateTableColumnIndex3-Funktion.
 title: JetCreateTableColumnIndex3-Funktion
 TOCTitle: JetCreateTableColumnIndex3 Function
 ms:assetid: c1a1b091-b4a6-4cdc-a0ea-af21c1462449
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bf1d6aed3178f5593826097f8c5d6b01bd8c72d9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa165ddc7655ec195f276b96e0e841d52e01e9de
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355441"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466637"
 ---
 # <a name="jetcreatetablecolumnindex3-function"></a>JetCreateTableColumnIndex3-Funktion
 
@@ -34,9 +34,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetcreatetablecolumnindex3-function"></a>JetCreateTableColumnIndex3-Funktion
 
-Die **JetCreateTableColumnIndex3** -Funktion erstellt eine Tabelle in einer ESE-Datenbank mit einem anfänglichen Satz von Indizes und einem anfänglichen Satz von Spalten aus einem Array von [JET_TABLECREATE3](./jet-tablecreate3-structure.md) Strukturen. Die [JET_TABLECREATE3](./jet-tablecreate3-structure.md) -Struktur ermöglicht das Angeben einer Rückruffunktion.
+Die **JetCreateTableColumnIndex3-Funktion** erstellt eine Tabelle in einer ESE-Datenbank mit einem anfänglichen Satz von Indizes und einem anfänglichen Satz [von](./jet-tablecreate3-structure.md) Spalten aus einem Array JET_TABLECREATE3 Strukturen. Die [JET_TABLECREATE3-Struktur](./jet-tablecreate3-structure.md) ermöglicht die Angabe einer Rückruffunktion.
 
-**Windows 7:** **JetCreateTableColumnIndex3** wird im Betriebssystem Windows 7 eingeführt.
+**Windows 7:** **JetCreateTableColumnIndex3** wird im Windows 7 eingeführt.
 
 ```cpp
     JET_ERR JET_API JetCreateTableColumnIndex3(
@@ -48,224 +48,69 @@ Die **JetCreateTableColumnIndex3** -Funktion erstellt eine Tabelle in einer ESE-
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der für den API-Befehl zu verwendende Daten Bank Sitzungs Kontext.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*DBID*
+*Dbid*
 
-Der für den API-Befehl zu verwendende Daten Bank Bezeichner.
+Der Datenbankbezeichner, der für den API-Aufruf verwendet werden soll.
 
 *ptablecreate*
 
-Ein Zeiger auf eine [JET_TABLECREATE3](./jet-tablecreate3-structure.md) -Struktur, die die zu erstellende Tabelle definiert. Weitere Informationen finden Sie unter [JET_TABLECREATE3](./jet-tablecreate3-structure.md) .
+Ein Zeiger auf eine [JET_TABLECREATE3](./jet-tablecreate3-structure.md) Struktur, die die zu erstellende Tabelle definiert. Weitere [JET_TABLECREATE3](./jet-tablecreate3-structure.md) finden Sie unter .2016.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errCallbackNotResolved</p></td>
-<td><p>Die Rückruffunktion konnte nicht aufgelöst werden. Die dll wurde möglicherweise nicht gefunden, oder die Funktion in der dll wurde nicht gefunden. Wenn eine ausreichende Protokollierung aktiviert ist, werden im Ereignisprotokoll weitere Details angezeigt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errCannotIndex</p></td>
-<td><p>Es wurde versucht, über eine Spalte vom Typ "Escrow-Update" oder "SLV" zu indizieren (Beachten Sie, dass SLV-Spalten veraltet sind).</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errCannotNestDDL</p></td>
-<td><p>, Wenn ptablecreate- &gt; grbit JET_bitTableCreateTemplateTable angibt, ptablecreate- &gt; sztemplatetablename jedoch auf NULL festgelegt ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errColumnDuplicate</p></td>
-<td><p>Eine Spalte ist bereits vorhanden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errColumnNotFound</p></td>
-<td><p>Es wurde versucht, eine nicht vorhandene Spalte zu indizieren. Der Versuch, bedingt eine Indizierung über eine nicht vorhandene Spalte durchführen zu können, kann ebenfalls diesen Fehler verursachen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errColumnRedundant</p></td>
-<td><p>Es wurde versucht, eine redundante Spalte hinzuzufügen. Es darf nicht mehr als eine AUTOINCREMENT-Spalte und höchstens eine Versions Spalte pro Tabelle vorhanden sein.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errDensityInvalid</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn der <strong>uldensity</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur auf eine Zahl kleiner als 20 oder mehr als 100 festgelegt ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errDDLNotInheritable</p></td>
-<td><p>Gibt an, dass die Tabelle im <strong>sztemplatetablename</strong> -Member der <a href="gg269264(v=exchg.10).md">JET_TABLECREATE3</a> Struktur nicht als Vorlagen Tabelle gekennzeichnet ist (d. h., dass die Tabelle nicht über JET_bitTableCreateTemplateTable festgelegt wurde).</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexDuplicate</p></td>
-<td><p>Es wurde versucht, zwei identische Indizes zu definieren.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errIndexHasPrimary</p></td>
-<td><p>Es wurde versucht, mehr als einen primären Index für eine Tabelle anzugeben. Eine Tabelle muss genau einen primären Index aufweisen. Wenn kein primärer Index angegeben ist, wird von der Datenbank-Engine eine transparente Erstellung erstellt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexInvalidDef</p></td>
-<td><p>Es wurde eine ungültige Index Definition angegeben. Im folgenden finden Sie einige der möglichen Gründe für den Empfang dieses Fehlers:</p>
-<ul>
-<li><p>Ein primärer Index ist bedingt (d. h., das <strong>grbit</strong> -Element der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur verfügt über JET_bitIndexPrimary Menge, und der <strong>cconditionalcolumn</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur ist größer als 0 (null)).</p></li>
-<li><p>Windows Server 2003 und höhere Versionen von Windows. Es wurde versucht, einen Tupelindex mit tupellimits zu erstellen, ohne den <strong>ptuplelimits</strong> -Member in der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur zu übergeben (d. h., der <strong>grbit</strong> -Member der JET_INDEXCREATE2 Struktur hat JET_bitIndexTupleLimits festgelegt, der <strong>ptuplelimits</strong> -Zeiger ist jedoch NULL).</p></li>
-<li><p>Übergeben einer ungültigen Schlüssel Definition im <strong>szkey</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur. Eine Erörterung gültiger Definitionen finden Sie unter <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> .</p></li>
-<li><p>Das Festlegen des <strong>cbvarsegmac</strong> -Members in <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> auf größer als JET_cbPrimaryKeyMost (für einen primären Index) oder größer als JET_cbSecondaryKeyMost (für einen sekundären Index).</p></li>
-<li><p>Übergeben einer ungültigen Kombination für einen benutzerdefinierten Unicode-Index (einen, bei dem das JET_bitIndexUnicode Bit im <strong>grbit</strong> -Member von <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a>festgelegt ist). Zu den häufigsten Gründen gehören das <strong>pidxunicode</strong> -Element der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur ist NULL, oder die in der <strong>pidxunicode</strong> -Struktur angegebene LCID ist ungültig.</p></li>
-<li><p>Angeben einer mehrwertigen Spalte für einen primären Index.</p></li>
-<li><p>Es wird versucht, zu viele bedingte Spalten zu indizieren. Der <strong>cconditionalcolumn</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur darf nicht größer als JET_ccolKeyMost sein.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errIndexTuplesInvalidLimits</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Es wurde eine <a href="gg269207(v=exchg.10).md">JET_TUPLELIMITS</a> Struktur angegeben, und ihre Grenzen werden nicht unterstützt. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <a href="gg269207(v=exchg.10).md">JET_TUPLELIMITS</a> Struktur.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexTuplesNonUniqueOnly</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Ein Tupelindex kann nicht eindeutig sein (d. h., der <em>grbit</em> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur darf nicht sowohl JET_bitIndexPrimary als auch JET_bitIndexUnique festgelegt werden).</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errIndexTuplesOneColumnOnly</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Ein Tupelindex kann nur über eine einzelne Spalte verfügen (d. h., wenn der <strong>grbit</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur JET_bitIndexTuples festgelegt hat und der <strong>szkey</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur mehr als eine Spalte angibt).</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexTuplesSecondaryIndexOnly</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Bei einem Tupelindex kann es sich nicht um einen primären Index handeln (d. h., der <strong>grbit</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur darf nicht sowohl JET_bitIndexPrimary als auch JET_bitIndexTuples festgelegt werden).</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errIndexTuplesTextColumnsOnly</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Ein Tupelindex kann nur für eine Text-oder Unicode-Spalte gelten. Der Versuch, andere Spalten (z. b. binäre Spalten) zu indizieren, führt zu JET_errIndexTuplesTextColumnsOnly.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexTuplesVarSegMacNotAllowed</p></td>
-<td><p>Windows XP und höhere Versionen von Windows. Ein Tupelindex lässt nicht zu, dass der <strong>cbvarsegmac</strong> -Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur festgelegt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInTransaction</p></td>
-<td><p>Es wurde versucht, einen Index ohne Versionsinformationen zu erstellen, während eine Transaktion durchgeführt wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidCodePage</p></td>
-<td><p>Der <strong>CP</strong> -Member der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE</a> Struktur wurde nicht auf eine gültige Codepage festgelegt. Die einzigen gültigen Werte für Textspalten sind Englisch (1252) und Unicode (1200). Der Wert 0 bedeutet, dass der Standardwert verwendet wird (Englisch, 1252).</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidColumnType</p></td>
-<td><p>Der <strong>colttmember</strong> der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE</a> Struktur wurde nicht auf einen gültigen Spaltentyp festgelegt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidCreateIndex</p></td>
-<td><p>Im folgenden sind einige Gründe aufgeführt, warum dieser Fehler auftreten kann:</p>
-<ul>
-<li><p>Der <strong>rgindexcreate</strong> -Member der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2</a> Struktur wurde auf NULL festgelegt.</p></li>
-<li><p>Der <strong>rgcolumncreate</strong> -Member der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2</a> Struktur wurde auf NULL festgelegt.</p></li>
-<li><p>Der <strong>cbStruct</strong> -Member einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur wurde nicht auf einen gültigen Wert festgelegt.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidgrbit</p></td>
-<td><p>In <a href="gg269264(v=exchg.10).md">JET_TABLECREATE3</a>wurde eine ungültige Kombination von <strong>grbit</strong> -Membern angegeben.</p>
-<p>Die Index Definition ist ungültig, da der <strong>grbit</strong> -Member inkonsistente Werte enthält. Folgende Ursachen sind möglich:</p>
-<ul>
-<li><p>Für einen primären Index wurde ein Ignore-Bit angegeben (d. h. JET_bitIndexPrimary mit JET_bitIndexIgnoreNull, JET_bitIndexIgnoreAnyNull oder JET_bitIndexIgnoreFirstNull).</p></li>
-<li><p>Ein leerer Index ignoriert keine NULL-Elemente (d. h., das <strong>grbit</strong> -Element der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur hat JET_bitIndexEmpty festgelegt, aber nicht JET_bitIndexIgnoreAnyNull festgelegt).</p></li>
-<li><p>Übergeben einer <a href="gg269214(v=exchg.10).md">JET_CONDITIONALCOLUMN</a> -Struktur mit einem ungültigen <strong>grbit</strong> -Member.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidLanguageId</p></td>
-<td><p>Es wurde eine ungültige Gebiets Schema-ID (LCID) übergeben (entweder über den <strong>LCID</strong> -Member der <a href="gg294097(v=exchg.10).md">JET_UNICODEINDEX</a> -Struktur, auf die durch das <strong>pidxunicode</strong> -Element in der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur verwiesen wird, oder über das <strong>LCID</strong> -Feld der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur).</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Ein ungültiger Parameter wurde angegeben. Folgende Ursachen sind möglich:</p>
-<ul>
-<li><p>Der <strong>rgcolumncreate</strong> -Member der <a href="gg269264(v=exchg.10).md">JET_TABLECREATE3</a> -Struktur ist NULL.</p></li>
-<li><p>Der <strong>cbStruct</strong> -Member einer der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE</a> Strukturen, die im <strong>rgcolumncreate</strong> -Member der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2</a> -Struktur angegeben sind, wurde nicht auf sizeof (JET_COLUMNCREATE) festgelegt.</p></li>
-<li><p>Der <strong>cbkey</strong> -Member einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> -Struktur ist auf 0 (null) festgelegt.</p></li>
-<li><p>Der <strong>cbStruct</strong> -Member einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> Struktur ist nicht auf sizeof (JET_INDEXCREATE2) festgelegt.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRecordTooBig</p></td>
-<td><p>Der Datensatz ist zu groß. Die Summe des <strong>cbmax</strong> -Members der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE</a> Struktur für alle festgelegten Spalten darf einen bestimmten Wert nicht überschreiten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTableDuplicate</p></td>
-<td><p>Die Tabelle ist bereits vorhanden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTooManyColumns</p></td>
-<td><p>Es wurde versucht, der Tabelle zu viele Spalten hinzuzufügen. Eine Tabelle kann nicht mehr als JET_ccolFixedMost fester Spalten, nicht mehr als JET_ccolVarMost Spalten variabler Länge und nicht mehr als JET_ccolTaggedMost markierte Spalten aufweisen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errUnicodeTranslationFail</p></td>
-<td><p>Fehler beim Versuch, eine Unicode-Spalte zu normalisieren. Dies kann darauf zurückzuführen sein, dass die Systemressourcen nicht mehr ausreichen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSpaceHintsInvalid</p></td>
-<td><p>Ein Element der Jet-Raum Hinweise-Struktur war nicht korrekt oder kann nicht ausgeführt werden.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-#### <a name="remarks"></a>Bemerkungen
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errCallbackNotResolved</p> | <p>Die Rückruffunktion konnte nicht aufgelöst werden. Die DLL wurde möglicherweise nicht gefunden, oder die Funktion in der DLL wurde möglicherweise nicht gefunden. Wenn eine ausreichende Protokollierung aktiviert ist, werden im Ereignisprotokoll weitere Details angezeigt.</p> | 
+| <p>JET_errCannotIndex</p> | <p>Es wurde versucht, eine Escrow-Update- oder SLV-Spalte zu indizieren (beachten Sie, dass SLV-Spalten veraltet sind).</p> | 
+| <p>JET_errCannotNestDDL</p> | <p>Wenn ptablecreate- &gt; grbit JET_bitTableCreateTemplateTable, ptablecreate- &gt; szTemplateTableName ist jedoch auf NULL festgelegt.</p> | 
+| <p>JET_errColumnDuplicate</p> | <p>Eine Spalte ist bereits vorhanden.</p> | 
+| <p>JET_errColumnNotFound</p> | <p>Es wurde versucht, eine Indizierung über eine nicht vorhandene Spalte zu erstellen. Der Versuch, eine nicht vorhandene Spalte bedingt zu indizieren, kann ebenfalls zu diesem Fehler führen.</p> | 
+| <p>JET_errColumnRedundant</p> | <p>Es wurde versucht, eine redundante Spalte hinzuzufügen. Es sollte nicht mehr als eine Spalte für die automatische Inkrementierung und nicht mehr als eine Versionsspalte pro Tabelle geben.</p> | 
+| <p>JET_errDensityInvalid</p> | <p>Dieser Fehler wird zurückgegeben, wenn der <strong>ulDensity-Member</strong> der JET_INDEXCREATE2-Struktur auf eine Zahl kleiner als 20 oder mehr als 100 festgelegt ist. <a href="gg294082(v=exchg.10).md"></a></p> | 
+| <p>JET_errDDLNotInheritable</p> | <p>Gibt an, dass die Tabelle mit dem Namen im <strong>szTemplateTableName-Element</strong> der <a href="gg269264(v=exchg.10).md">JET_TABLECREATE3-Struktur</a> nicht als Vorlagentabelle markiert wurde (d. h., für diese Tabelle wurde JET_bitTableCreateTemplateTable festgelegt).</p> | 
+| <p>JET_errIndexDuplicate</p> | <p>Es wurde versucht, zwei identische Indizes zu definieren.</p> | 
+| <p>JET_errIndexHasPrimary</p> | <p>Es wurde versucht, mehrere primäre Indizes für eine Tabelle anzugeben. Eine Tabelle muss genau einen primären Index haben. Wenn kein primärer Index angegeben wird, erstellt die Datenbank-Engine transparent einen.</p> | 
+| <p>JET_errIndexInvalidDef</p> | <p>Es wurde eine ungültige Indexdefinition angegeben. Im Folgenden finden Sie einige mögliche Gründe für den Empfang dieses Fehlers:</p><ul><li><p>Ein primärer Index ist bedingt (d. h., das <strong>Grbit-Member</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> hat JET_bitIndexPrimary festgelegt, und das <strong>cConditionalColumn-Member</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> ist größer als 0 (null).</p></li><li><p>Windows Server 2003 und neuere Versionen von Windows. Es wurde versucht, einen Tupelindex mit Tupelgrenzwerten zu erstellen, ohne jedoch das <strong>ptuplelimits-Member</strong> in der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> zu übergeben (d. h., der <strong>Grbit-Member</strong> der JET_INDEXCREATE2-Struktur hat JET_bitIndexTupleLimits festgelegt, aber der <strong>ptuplelimits-Zeiger</strong> ist NULL).</p></li><li><p>Übergeben einer ungültigen Schlüsseldefinition im <strong>szKey-Member</strong> <a href="gg294082(v=exchg.10).md">der</a> JET_INDEXCREATE2 Struktur. Unter <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> finden Sie eine Erörterung gültiger Definitionen.</p></li><li><p>Festlegen des <strong>cbVarSegMac-Mitglieds</strong> in <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> auf größer als JET_cbPrimaryKeyMost (für einen primären Index) oder größer als JET_cbSecondaryKeyMost (für einen sekundären Index).</p></li><li><p>Übergeben einer ungültigen Kombination für einen benutzerdefinierten Unicode-Index (einer, bei dem das JET_bitIndexUnicode-Bit im <strong>Grbit-Member</strong> von <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2.</a> Einige häufige Ursachen sind das pidxunicode-Member der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> struktur ist NULL, oder die in der <strong>pidxunicode-Struktur</strong> angegebene LCID ist ungültig. <strong></strong></p></li><li><p>Angeben einer mehrwertigen Spalte für einen primären Index.</p></li><li><p>Es wird versucht, zu viele bedingte Spalten zu indizieren. Das <strong>cConditionalColumn-Member</strong> der JET_INDEXCREATE2 <a href="gg294082(v=exchg.10).md">darf</a> nicht größer als JET_ccolKeyMost.</p></li></ul> | 
+| <p>JET_errIndexTuplesInvalidLimits</p> | <p>Windows XP und neuere Versionen Windows. Eine <a href="gg269207(v=exchg.10).md">JET_TUPLELIMITS-Struktur</a> wurde angegeben, und ihre Grenzwerte werden nicht unterstützt. Weitere Informationen finden Sie im Abschnitt "Hinweise" <a href="gg269207(v=exchg.10).md">der JET_TUPLELIMITS</a> Struktur.</p> | 
+| <p>JET_errIndexTuplesNonUniqueOnly</p> | <p>Windows XP und neuere Versionen Windows. Ein Tupelindex kann nicht eindeutig sein (d. h. der <em>Grbit-Member</em> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> darf nicht sowohl JET_bitIndexPrimary als auch JET_bitIndexUnique haben).</p> | 
+| <p>JET_errIndexTuplesOneColumnOnly</p> | <p>Windows XP und neuere Versionen Windows. Ein Tupelindex kann sich nur über einer einzelnen Spalte (d. h., wenn für das <strong>Grbitelement</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> JET_bitIndexTuples festgelegt ist und das <strong>szKey-Element</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> mehr als eine Spalte angibt).</p> | 
+| <p>JET_errIndexTuplesSecondaryIndexOnly</p> | <p>Windows XP und neuere Versionen Windows. Ein Tupelindex kann kein primärer Index sein (d.h. das <strong>Grbit-Member</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> darf nicht sowohl JET_bitIndexPrimary als auch JET_bitIndexTuples haben).</p> | 
+| <p>JET_errIndexTuplesTextColumnsOnly</p> | <p>Windows XP und neuere Versionen Windows. Ein Tupelindex kann nur für eine Text- oder Unicode-Spalte verwendet werden. Der Versuch, andere Spalten (z. B. binäre Spalten) zu indizieren, führt zu JET_errIndexTuplesTextColumnsOnly.</p> | 
+| <p>JET_errIndexTuplesVarSegMacNotAllowed</p> | <p>Windows XP und neuere Versionen Windows. Ein Tupelindex lässt das Festlegen des <strong>cbVarSegMac-JET_INDEXCREATE2</strong> struktur nicht zu. <a href="gg294082(v=exchg.10).md"></a></p> | 
+| <p>JET_errInTransaction</p> | <p>Es wurde versucht, während einer Transaktion einen Index ohne Versionsinformationen zu erstellen.</p> | 
+| <p>JET_errInvalidCodePage</p> | <p>Der <strong>cp-Member</strong> der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE-Struktur</a> wurde nicht auf eine gültige Codepage festgelegt. Die einzigen gültigen Werte für Textspalten sind Englisch (1252) und Unicode (1200). Der Wert 0 bedeutet, dass der Standardwert verwendet wird (Englisch, 1252).</p> | 
+| <p>JET_errInvalidColumnType</p> | <p>Der <strong>Coltyp-Member</strong> der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE</a> wurde nicht auf einen gültigen Spaltentyp festgelegt.</p> | 
+| <p>JET_errInvalidCreateIndex</p> | <p>Im Folgenden finden Sie einige Gründe, warum dieser Fehler auftreten kann:</p><ul><li><p>Der <strong>rgindexcreate-Member</strong> der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2-Struktur</a> wurde auf NULL festgelegt.</p></li><li><p>Der <strong>rgcolumncreate-Member</strong> der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2</a> wurde auf NULL festgelegt.</p></li><li><p>Der <strong>cbStruct-Member</strong> einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2</a> wurde nicht auf einen gültigen Wert festgelegt.</p></li></ul> | 
+| <p>JET_errInvalidgrbit</p> | <p>Eine ungültige Kombination von <strong>Grbit-Membern</strong> wurde <a href="gg269264(v=exchg.10).md">in</a>JET_TABLECREATE3.</p><p>Die Indexdefinition ist ungültig, da <strong>das Grbit-Member</strong> inkonsistente Werte enthält. Im Folgenden finden Sie einige mögliche Gründe:</p><ul><li><p>Für einen primären Index wurde ein Ignore-Bit angegeben (d. b. JET_bitIndexPrimary wurde mit JET_bitIndexIgnoreNull, JET_bitIndexIgnoreAnyNull oder JET_bitIndexIgnoreFirstNull übergeben).</p></li><li><p>Ein leerer Index ignoriert keine NULL-Member (das heißt, der <strong>grbit-Member</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> hat JET_bitIndexEmpty festgelegt, verfügt jedoch nicht über JET_bitIndexIgnoreAnyNull).</p></li><li><p>Übergeben einer <a href="gg269214(v=exchg.10).md">JET_CONDITIONALCOLUMN-Struktur</a> mit einem ungültigen <strong>Grbitmember.</strong></p></li></ul> | 
+| <p>JET_errInvalidLanguageId</p> | <p>Eine ungültige Gebietsschema-ID (LCID) wurde übergeben (entweder über den <strong>lcid-Member</strong> der <a href="gg294097(v=exchg.10).md">JET_UNICODEINDEX-Struktur,</a> auf den der <strong>pidxunicode-Member</strong> in der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> zeigt, oder über das <strong>lcid-Feld</strong> der <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur).</a></p> | 
+| <p>JET_errInvalidParameter</p> | <p>Ein ungültiger Parameter wurde angegeben. Folgende Gründe sind möglich:</p><ul><li><p>Der <strong>rgcolumncreate-Member</strong> der <a href="gg269264(v=exchg.10).md">JET_TABLECREATE3-Struktur</a> ist NULL.</p></li><li><p>Der <strong>cbStruct-Member</strong> einer der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE-Strukturen,</a> die im <strong>rgcolumncreate-Member</strong> der <a href="gg269203(v=exchg.10).md">JET_TABLECREATE2</a> -Struktur angegeben sind, wurde nicht auf sizeof( JET_COLUMNCREATE ) festgelegt.</p></li><li><p>Der <strong>cbKey-Member</strong> einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> ist auf 0 (null) festgelegt.</p></li><li><p>Der <strong>cbStruct-Member</strong> einer <a href="gg294082(v=exchg.10).md">JET_INDEXCREATE2-Struktur</a> ist nicht auf sizeof( JET_INDEXCREATE2 ) festgelegt.</p></li></ul> | 
+| <p>JET_errRecordTooBig</p> | <p>Der Datensatz ist zu groß. Die Summe des <strong>cbMax-Elements</strong> der <a href="gg269252(v=exchg.10).md">JET_COLUMNCREATE-Struktur</a> für alle festen Spalten darf einen bestimmten Wert nicht überschreiten.</p> | 
+| <p>JET_errTableDuplicate</p> | <p>Die Tabelle ist bereits vorhanden.</p> | 
+| <p>JET_errTooManyColumns</p> | <p>Es wurde versucht, der Tabelle zu viele Spalten hinzuzufügen. Eine Tabelle darf nicht mehr als JET_ccolFixedMost festen Spalten, nicht mehr als JET_ccolVarMost Spalten variabler Länge und nicht mehr als JET_ccolTaggedMost markierten Spalten enthalten.</p> | 
+| <p>JET_errUnicodeTranslationFail</p> | <p>Fehler beim Normalisieren einer Unicode-Spalte. Dies kann dadurch verursacht werden, dass nicht mehr die Systemressourcen verfügbar sind.</p> | 
+| <p>JET_errSpaceHintsInvalid</p> | <p>Ein Element der JET-Raumhinweisstruktur war nicht richtig oder veranstellbar.</p> | 
 
-Der Name **JetCreateTableColumnIndex3** stammt aus der Reihenfolge der Erstellung der Objekte: er erstellt zuerst eine Tabelle, Spalten und schließlich Indizes. **JetCreateTableColumnIndex3** erstellt eine Tabelle mit einem anfänglichen Satz von Spalten und Indizes. Weitere Spalten und Indizes können mit [jetaddcolumn](./jetaddcolumn-function.md), [jetdeletecolumn](./jetdeletecolumn-function.md), [JetDeleteColumn2](./jetdeletecolumn2-function.md), [jetkreateindex](./jetcreateindex-function.md), [JetCreateIndex2](./jetcreateindex2-function.md), [JetCreateIndex3](./jetcreateindex3-function.md)und [jetdeleteindex](./jetdeleteindex-function.md)dynamisch hinzugefügt und entfernt werden.
 
-Wie [jetopentable](./jetopentable-function.md), wenn die Anwendung mit der zurückgegebenen *TableID* ausgeführt wird, sollte Sie in der Regel mit [jetclosetable](./jetclosetable-function.md)geschlossen werden.
+
+#### <a name="remarks"></a>Hinweise
+
+Der Name **JetCreateTableColumnIndex3** stammt aus der Reihenfolge der Erstellung der Objekte: Er erstellt zunächst eine Tabelle, Spalten und schließlich Indizes. **JetCreateTableColumnIndex3** erstellt eine Tabelle mit einem anfänglichen Satz von Spalten und Indizes. Zusätzliche Spalten und Indizes können dynamisch mit [JetAddColumn,](./jetaddcolumn-function.md) [JetDeleteColumn,](./jetdeletecolumn-function.md) [JetDeleteColumn2,](./jetdeletecolumn2-function.md) [JetCreateIndex,](./jetcreateindex-function.md) [JetCreateIndex2,](./jetcreateindex2-function.md) [JetCreateIndex3](./jetcreateindex3-function.md)und [JetDeleteIndex](./jetdeleteindex-function.md)hinzugefügt und entfernt werden.
+
+Wenn die Anwendung wie [JetOpenTable](./jetopentable-function.md)die zurückgegebene *tableid* verwendet, sollte sie in der Regel mit [JetCloseTable](./jetclosetable-function.md)geschlossen werden.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>JetCreateTableColumnIndex3W</strong> (Unicode) und <strong>JetCreateTableColumnIndex3A</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetCreateTableColumnIndex3W</strong> (Unicode) und <strong>JetCreateTableColumnIndex3A</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -281,11 +126,11 @@ Wie [jetopentable](./jetopentable-function.md), wenn die Anwendung mit der zurü
 [JET_TABLECREATE2](./jet-tablecreate2-structure.md)  
 [JET_TABLECREATE3](./jet-tablecreate3-structure.md)  
 [JET_TUPLELIMITS](./jet-tuplelimits-structure.md)  
-[Jetaddcolumn](./jetaddcolumn-function.md)  
-[Jetkreateingedex](./jetcreateindex-function.md)  
+[JetAddColumn](./jetaddcolumn-function.md)  
+[JetCreateIndex](./jetcreateindex-function.md)  
 [JetCreateIndex2](./jetcreateindex2-function.md)  
 [JetCreateIndex3](./jetcreateindex3-function.md)  
-[Jetkreatetable](./jetcreatetable-function.md)  
-[Jetkreatetablecolumnindex](./jetcreatetablecolumnindex-function.md)  
-[Jetdeletecolumn](./jetdeletecolumn-function.md)  
+[JetCreateTable](./jetcreatetable-function.md)  
+[JetCreateTableColumnIndex](./jetcreatetablecolumnindex-function.md)  
+[JetDeleteColumn](./jetdeletecolumn-function.md)  
 [JetDeleteColumn2](./jetdeletecolumn2-function.md)

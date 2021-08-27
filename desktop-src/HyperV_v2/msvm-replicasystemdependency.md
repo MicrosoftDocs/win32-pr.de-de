@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einer Instanz der CIM \_ Computersystem-Klasse dar, die das Replikat des virtuellen Computers und eine Instanz der CIM \_ Computersystem-Klasse darstellt, die das Replikat des virtuellen Computers darstellt.
+description: Stellt eine Zuordnung zwischen einer Instanz der CIM ComputerSystem-Klasse dar, die das Replikat des virtuellen Computers darstellt, und einer Instanz der CIM ComputerSystem-Klasse, die das Replikat des \_ \_ virtuellen Testcomputers darstellt.
 ms.assetid: c3216ddd-7f70-4287-9f7e-1fd7a60b1a0a
 title: Msvm_ReplicaSystemDependency-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: d8c0db6e476cb883ee1179fcfcc9ac4b212f0b09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f6bb3f4879ee0e1c7babaf8f85b8455716ee1b2e61db4e0764d6b28583efefd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130430"
 ---
-# <a name="msvm_replicasystemdependency-class"></a>MSVM \_ replicasystem-Abhängigkeits Klasse
+# <a name="msvm_replicasystemdependency-class"></a>Msvm \_ ReplicaSystemDependency-Klasse
 
-Stellt eine Zuordnung zwischen einer Instanz der [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Klasse dar, die das Replikat des virtuellen Computers und eine Instanz der **CIM \_ Computersystem** -Klasse darstellt, die das Replikat des virtuellen Computers darstellt.
+Stellt eine Zuordnung zwischen einer Instanz der [**CIM \_ ComputerSystem-Klasse**](/windows/desktop/CIMWin32Prov/cim-computersystem) dar, die das Replikat des virtuellen Computers darstellt, und einer Instanz der **CIM \_ ComputerSystem-Klasse,** die das Replikat des virtuellen Testcomputers darstellt.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_ReplicaSystemDependency : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM- \_ replicasystemdepeng-Klasse** verfügt über diese Typen von Membern:
+Die **Msvm \_ ReplicaSystemDependency-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM- \_ replicasystemdepeng-Klasse** verfügt über diese Eigenschaften.
+Die **Msvm \_ ReplicaSystemDependency-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. Vorgänger")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Antecedent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Klasse, die das Replikat des virtuellen Computers darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf eine Instanz der [**\_ CIM-ComputerSystem-Klasse,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die das Replikat des virtuellen Computers darstellt. Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ Computersystem**
+Datentyp: **CIM \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. abhängig")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Dependent")
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**CIM \_ Computersystem**](/windows/desktop/CIMWin32Prov/cim-computersystem) -Klasse, die das virtuelle Test Replikat darstellt, das von der [**MSVM \_ replicationservice. testreplicasystem**](testreplicasystem-msvm-replicationservice.md) -Methode erstellt wurde. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)geerbt.
+Ein Verweis auf eine Instanz der [**\_ CIM-ComputerSystem-Klasse,**](/windows/desktop/CIMWin32Prov/cim-computersystem) die das von der [**Msvm \_ ReplicationService.TestReplicaSystem-Methode**](testreplicasystem-msvm-replicationservice.md) erstellte Testreplikat des virtuellen Computers darstellt. Diese Eigenschaft wird von der [**CIM-Abhängigkeit \_ geerbt.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Ein Verweis auf eine Instanz der [**CIM \_ Computersystem**](/windows/desktop/CI
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

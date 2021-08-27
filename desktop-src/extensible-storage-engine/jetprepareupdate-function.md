@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetprepareupdate-Funktion'
-title: Jetprepareupdate-Funktion
+description: Weitere Informationen finden Sie unter JetPrepareUpdate-Funktion.
+title: JetPrepareUpdate-Funktion
 TOCTitle: JetPrepareUpdate Function
 ms:assetid: 90cbaa83-47f2-4a65-b561-3bdecb7fd95a
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269339(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 16362463194d945d7b451f784bc0942bda2d03e1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 98b14688b42c3e29bbbbab5b96466ad6c97f98e3
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369086"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477546"
 ---
-# <a name="jetprepareupdate-function"></a>Jetprepareupdate-Funktion
+# <a name="jetprepareupdate-function"></a>JetPrepareUpdate-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetprepareupdate-function"></a>Jetprepareupdate-Funktion
+## <a name="jetprepareupdate-function"></a>JetPrepareUpdate-Funktion
 
-Die **jetprepareupdate** -Funktion ist der erste Vorgang, bei dem ein Update durchgeführt wird, um einen neuen Datensatz einzufügen oder einen vorhandenen Datensatz durch neue Werte zu ersetzen. Updates werden durch Aufrufen von **jetprepareupdate** und anschließendes Aufrufen von [jetsetcolumn](./jetsetcolumn-function.md) oder [jetsetcolumns](./jetsetcolumns-function.md) (null oder mehrmals) und schließlich durch Aufrufen von [jetupdate](./jetupdate-function.md) zum Durchführen des Vorgangs durchgeführt. **Jetprepareupdate** und [jetupdate](./jetupdate-function.md) legen die Grenzen für einen Aktualisierungs Vorgang fest und sind wichtig, wenn nur der endgültige Aktualisierungs Status eines Datensatzes in Indizes eingegeben werden soll. Dies ist sowohl effizienter als auch bei Fällen erforderlich, in denen Daten mit einem gültigen Zustand über mehr als den Vorgang zum Festlegen von Spalten verglichen werden müssen.
+Die **JetPrepareUpdate-Funktion** ist der erste Vorgang bei der Durchführung eines Updates, um einen neuen Datensatz einzufügen oder einen vorhandenen Datensatz durch neue Werte zu ersetzen. Updates werden durchgeführt, indem **JetPrepareUpdate** aufgerufen wird, [jetSetColumn](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md) 0 oder mehr Mal aufgerufen wird und schließlich [JetUpdate](./jetupdate-function.md) aufgerufen wird, um den Vorgang abzuschließen. **JetPrepareUpdate** und [JetUpdate](./jetupdate-function.md) legen die Grenzen für einen Updatevorgang fest und sind wichtig, damit nur der endgültige Updatestatus eines Datensatzes in Indizes eingegeben wird. Dies ist effizienter, aber auch in Fällen erforderlich, in denen Daten mit einem gültigen Zustand übereinstimmen müssen, indem mehr als bei einem Set Column-Vorgang durchgeführt wird.
 
-Es gibt verschiedene Optionen zum Einfügen oder Austauschen von Datensätzen. Diese werden im folgenden ausführlicher beschrieben.
+Es gibt einige verschiedene Optionen zum Einfügen oder Ersetzen von Datensätzen, die im Folgenden ausführlicher beschrieben werden.
 
 ```cpp
     JET_ERR JET_API JetPrepareUpdate(
@@ -46,166 +46,67 @@ Es gibt verschiedene Optionen zum Einfügen oder Austauschen von Datensätzen. D
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
-*vorzubereiten*
+*Prep*
 
-Die Optionen, die verwendet werden können, um ein Update vorzubereiten, einschließlich der folgenden.
+Die Optionen, die zur Vorbereitung auf ein Update verwendet werden können, einschließlich der folgenden.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_prepCancel</p></td>
-<td><p>Dieses Flag bewirkt, dass <strong>jetprepareupdate</strong> das Update für diesen Cursor abbricht.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_prepInsert</p></td>
-<td><p>Dieses Flag bewirkt, dass der Cursor eine Einfügung eines neuen Datensatzes vorbereitet. Alle Daten werden auf den Standardstatus für den Datensatz initialisiert. Wenn die Tabelle eine automatische Inkrement-Spalte aufweist, wird diesem Datensatz ein neuer Wert zugewiesen, unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_prepInsertCopy</p></td>
-<td><p>Dieses Flag bewirkt, dass der Cursor eine Einfügung einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz vorhanden sein. Der ursprüngliche Zustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die außerhalb des Datensatzes gespeichert werden, werden virtuell kopiert.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_prepInsertCopyDeleteOriginal</p></td>
-<td><p>Dieses Flag bewirkt, dass der Cursor eine Einfügung desselben Datensatzes und einen Löschvorgang oder den ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_prepReplace</p></td>
-<td><p>Dieses Flag bewirkt, dass der Cursor eine Ersetzung des aktuellen Datensatzes vorbereitet. Wenn die Tabelle eine Versions Spalte aufweist, wird die Versions Spalte auf den nächsten Wert in der zugehörigen Reihenfolge festgelegt. Wenn dieses Update nicht vollständig ausgeführt wird, ist der Versions Wert im Datensatz nicht betroffen. Es wird eine Update Sperre für den Datensatz erstellt, um zu verhindern, dass dieser Datensatz von anderen Sitzungen aktualisiert wird, bevor diese Sitzung abgeschlossen ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_prepReplaceNoLock</p></td>
-<td><p>Dieses Flag ähnelt JET_prepReplace, es wird jedoch keine Sperre erstellt, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn <a href="gg269288(v=exchg.10).md">jetupdate</a> aufgerufen wird, um das Update abzuschließen.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_prepCancel</p> | <p>Dieses Flag bewirkt, dass <strong>JetPrepareUpdate</strong> das Update für diesen Cursor abbricht.</p> | 
+| <p>JET_prepInsert</p> | <p>Dieses Flag bewirkt, dass der Cursor sich auf das Einfügen eines neuen Datensatzes vorbereitet. Alle Daten werden mit dem Standardzustand für den Datensatz initialisiert. Wenn die Tabelle über eine Spalte mit automatischer Inkrementierung verfügt, wird diesem Datensatz ein neuer Wert zugewiesen, unabhängig davon, ob das Update letztendlich erfolgreich ist, fehlschlägt oder abgebrochen wird.</p> | 
+| <p>JET_prepInsertCopy</p> | <p>Dieses Flag bewirkt, dass der Cursor sich auf das Einfügen einer Kopie des vorhandenen Datensatzes vorbereitet. Wenn diese Option verwendet wird, muss ein aktueller Datensatz vorhanden sein. Der Anfangszustand des neuen Datensatzes wird aus dem aktuellen Datensatz kopiert. Lange Werte, die außerhalb des Datensatzes gespeichert werden, werden virtuell kopiert.</p> | 
+| <p>JET_prepInsertCopyDeleteOriginal</p> | <p>Dieses Flag bewirkt, dass der Cursor sich auf ein Einfügen desselben Datensatzes und einen Lösch- oder ursprünglichen Datensatz vorbereitet. Sie wird in Fällen verwendet, in denen sich der Primärschlüssel geändert hat.</p> | 
+| <p>JET_prepReplace</p> | <p>Dieses Flag bewirkt, dass der Cursor sich auf eine Ersetzung des aktuellen Datensatzes vorbereitet. Wenn die Tabelle über eine Versionsspalte verfügt, wird die Versionsspalte auf den nächsten Wert in ihrer Sequenz festgelegt. Wenn dieses Update nicht abgeschlossen ist, ist der Versionswert im Datensatz nicht betroffen. Es wird eine Updatesperre für den Datensatz eingerichtet, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren, bevor diese Sitzung abgeschlossen wird.</p> | 
+| <p>JET_prepReplaceNoLock</p> | <p>Dieses Flag ähnelt JET_prepReplace, aber es wird keine Sperre eingerichtet, um zu verhindern, dass andere Sitzungen diesen Datensatz aktualisieren. Stattdessen erhält diese Sitzung möglicherweise JET_errWriteConflict, wenn <a href="gg269288(v=exchg.10).md">Sie JetUpdate</a> aufruft, um das Update abzuschließen.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errAlreadyPrepared</p></td>
-<td><p><strong>Jetprepareupdate</strong> wurde mit einem gültigen Flag für prep aufgerufen, aber nicht JET_prepCancel, und der Cursor war bereits im vorbereiteten Zustand.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Das angegebene prep-Flag ist kein gültiges Flag.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInTransaction</p></td>
-<td><p><strong>Jetprepareupdate</strong> wurde aufgerufen, um einen Datensatz zu ersetzen, der über SLV-Spalten verfügte. SLV-Spalten. Beachten Sie, dass SLV-Spalten ein Feature sind, das nicht für die allgemeine Verwendung vorgesehen ist. Diese Funktion wird zur Unterstützung der Microsoft Exchange-Infrastruktur verwendet und ist nicht für die Verwendung in Ihrer Anwendung vorgesehen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRollbackError</p></td>
-<td><p><strong>Jetprepareupdate</strong> wurde mit JET_prepCancel aufgerufen, konnte aber nicht alle Änderungen zurücksetzen, die an Spalten vom Typ JET_coltypLongText und/oder Spalten vom Typ JET_coltypLongBinary vorgenommen wurden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieses Flag kann nicht mit derselben Sitzung von mehreren Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errUpdateNotPrepared</p></td>
-<td><p><strong>Jetprepareupdate</strong> wurde mit JET_prepCancel aufgerufen, aber der Cursor befand sich nicht im vorbereiteten Zustand.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wechselt der Cursor zum Zweck der gewünschten Aktualisierung in den vorbereiteten Zustand, oder im Fall von JET_prepCancel wird der Cursor in den Zustand "nicht vorbereitet" versetzt, und alle Änderungen werden verworfen.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errAlreadyPrepared</p> | <p><strong>JetPrepareUpdate</strong> wurde mit einem gültigen Flag für die Vorbereitung aufgerufen, aber nicht JET_prepCancel, und der Cursor befand sich bereits im vorbereiteten Zustand.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Das angegebene Vorbereitungsflag ist kein gültiges Flag.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errNotInTransaction</p> | <p><strong>JetPrepareUpdate</strong> wurde aufgerufen, um einen Datensatz mit SLV-Spalten zu ersetzen. SLV-Spalten. Beachten Sie, dass SLV-Spalten ein Feature sind, das nicht für die allgemeine Verwendung vorgesehen ist. Dieses Feature wird zur Unterstützung der Microsoft Exchange-Infrastruktur verwendet und ist nicht für die Verwendung in Ihrer Anwendung vorgesehen.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errRollbackError</p> | <p><strong>JetPrepareUpdate</strong> wurde mit JET_prepCancel aufgerufen, konnte aber nicht alle Änderungen zurücksetzen, die an Spalten vom Typ JET_coltypLongText und/oder Spalten vom Typ JET_coltypLongBinary vorgenommen wurden.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieses Flag kann nicht mit derselben Sitzung von mehreren Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errUpdateNotPrepared</p> | <p><strong>JetPrepareUpdate</strong> wurde mit JET_prepCancel aufgerufen, aber der Cursor befand sich nicht im vorbereiteten Zustand.</p> | 
 
-Bei einem Fehler bleibt der Cursor Zustand unverändert. Wenn der Fehler JET_errRollbackError wurde, wird der Cursor Zustand in den Zustand "nicht vorbereitet" geändert, aber nicht alle Änderungen wurden zurückgesetzt.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Das Einfügen einer Kopie eines Datensatzes ist eine wichtige Optimierung, wenn Datensätze Daten vom Typ JET_coltypLongText und/oder JET_coltypLongBinary gemeinsam verwenden. Diese Daten werden bei großen Datensätzen außerhalb des Datensatzes gespeichert, und es ist möglich, dass mehrere Datensätze dieselbe physische Darstellung der Daten gemeinsam nutzen. In diesem Fall können die Daten von jedem Datensatz aus aktualisiert werden. Dies führt jedoch dazu, dass die Daten so Burst werden, dass jeder Datensatz über eine eigene Kopie verfügt. Es ist nicht möglich, Daten in einem Datensatz durch eine Änderung eines anderen Datensatzes zu ändern. Außerdem ist es nicht möglich, ein Update eines einzelnen Datensatzes durch Aktualisieren eines anderen Datensatzes zu blockieren. Dies ist ein zentrales Feature von ESE und wird als Sperren auf Datensatzebene bezeichnet.
+Bei Erfolg wird der Cursor für das gewünschte Update in den vorbereiteten Zustand geändert, oder im Fall von JET_prepCancel wird der Cursor in den nicht vorbereiteten Zustand zurückgesetzt, und alle Änderungen werden verworfen.
 
-Bei [jetupdate](./jetupdate-function.md) -Vorgängen, bei denen der Cursor nicht erfolgreich ist Dadurch können einige Fehler korrigiert werden, z. b. ein falscher Spaltenwert, ohne dass der Aktualisierungs Status neu erstellt werden muss. Dies bedeutet, dass in allen Fällen, in denen ein Cursor ein Update abbricht, " **jetprepareupdate** " explizit mit JET_prepCancel aufgerufen werden muss.
+Bei einem Fehler bleibt der Cursorzustand unverändert. Wenn der Fehler JET_errRollbackError wurde, wird der Cursorzustand in den nicht vorbereiteten Zustand geändert, aber nicht alle Änderungen wurden zurückgesetzt.
+
+#### <a name="remarks"></a>Hinweise
+
+Das Einfügen einer Kopie eines Datensatzes ist eine wichtige Optimierung, wenn Datensätze Daten vom Typ JET_coltypLongText und/oder JET_coltypLongBinary gemeinsam nutzen. Diese Daten werden außerhalb des Datensatzes gespeichert, wenn sie groß sind, und es ist möglich, dass mehrere Datensätze dieselbe physische Darstellung der Daten gemeinsam nutzen. In diesem Fall können die Daten aus beiden Datensätzen aktualisiert werden. Dies führt jedoch dazu, dass die Daten so überhäuft werden, dass jeder Datensatz über eine eigene Kopie verfügt. Es ist nicht möglich, Daten in einem Datensatz durch eine Änderung eines anderen Datensatzes zu ändern. Außerdem ist es nicht möglich, ein Update eines Datensatzes durch ein Update eines anderen Datensatzes zu blockieren. Dies ist ein zentrales Feature für ESE und wird als Sperren auf Datensatzebene bezeichnet.
+
+[JetUpdate-Vorgänge,](./jetupdate-function.md) bei denen ein Fehler vorschlägt, belassen den Cursor im zustand "Update vorbereitet". Dies ermöglicht die Korrektur einiger Fehler, z. B. eines falschen Spaltenwerts, ohne dass der Aktualisierungszustand neu erstellt werden muss. Dies bedeutet, dass in allen Fällen, in denen ein Cursor ein Update abbricht, **JetPrepareUpdate** explizit mit JET_prepCancel aufgerufen werden muss.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -213,6 +114,6 @@ Bei [jetupdate](./jetupdate-function.md) -Vorgängen, bei denen der Cursor nicht
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetretrievecolumschlag](./jetretrievecolumn-function.md)  
-[Jetsetcolumn](./jetsetcolumn-function.md)  
-[Jetupdate](./jetupdate-function.md)
+[JetRetrieveColumn](./jetretrievecolumn-function.md)  
+[JetSetColumn](./jetsetcolumn-function.md)  
+[JetUpdate](./jetupdate-function.md)

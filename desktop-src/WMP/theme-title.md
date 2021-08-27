@@ -1,9 +1,9 @@
 ---
-title: Design. Title
-description: Das Title-Attribut gibt den Titel der Skin an oder ruft ihn ab.
+title: THEME.title
+description: Das title-Attribut gibt den Titel der Skin an oder ruft sie ab.
 ms.assetid: d0940d5a-d256-47f3-b222-ceba1c829540
 keywords:
-- Design. Title-Fenster Media Player
+- THEME.title Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 84608ce794c3172f3cbbf3103c5ccedd89a77e3f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f88f572c57b2dba768655248335f1c32e03abbb69bfed94d2b7ed1bc1a983d71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122830"
 ---
-# <a name="themetitle"></a>Design. Title
+# <a name="themetitle"></a>THEME.title
 
-Das **Title** -Attribut gibt den Titel der Skin an oder ruft ihn ab.
+Das **title-Attribut** gibt den Titel der Skin an oder ruft sie ab.
 
 ``` syntax
 theme.title
@@ -29,7 +29,7 @@ theme.title
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff ohne Standardwert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,7 +45,7 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** ohne Standardwert.
 
 <dl> <dt>
 
-[**Design-Element**](theme-element.md)
+[**THEME-Element**](theme-element.md)
 </dt> </dl>
 
  

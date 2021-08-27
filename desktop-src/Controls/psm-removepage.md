@@ -1,9 +1,9 @@
 ---
-title: PSM_REMOVEPAGE Meldung (prsht. h)
-description: Entfernt eine Seite aus einem Eigenschaftenblatt. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ RemovePage-Makros senden.
+title: PSM_REMOVEPAGE-Nachricht (Prsht.h)
+description: Entfernt eine Seite aus einem Eigenschaftenblatt. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ RemovePage-Makros senden.
 ms.assetid: 2f387e97-4db4-4ad5-8600-7325da674e33
 keywords:
-- Windows-Steuerelemente für PSM_REMOVEPAGE Meldung
+- PSM_REMOVEPAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1cae1611e1ed9540fce23d20681f44849903e5c8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e1493fe8a4f6a3b8e8ac93103d27e67ae984221bdc6efd584130879d17249c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088610"
 ---
-# <a name="psm_removepage-message"></a>PSM- \_ RemovePage-Nachricht
+# <a name="psm_removepage-message"></a>PSM \_ REMOVEPAGE-Nachricht
 
-Entfernt eine Seite aus einem Eigenschaftenblatt. Sie können diese Nachricht explizit oder mithilfe des [**propsheet- \_ RemovePage**](/windows/desktop/api/Prsht/nf-prsht-propsheet_removepage) -Makros senden.
+Entfernt eine Seite aus einem Eigenschaftenblatt. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ RemovePage-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_removepage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Entfernt eine Seite aus einem Eigenschaftenblatt. Sie können diese Nachricht ex
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index der zu entfernenden Seite.
+Nullbasierter Index der zu entfernenden Seite.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das hpropsheetpage-Handle der zu entfernenden Seite.
+Das HPROPSHEETPAGE-Handle der zu entfernenden Seite.
 
 </dd> </dl>
 
@@ -47,29 +47,29 @@ Das hpropsheetpage-Handle der zu entfernenden Seite.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann den Index oder das Handle oder beides angeben. Wenn beide angegeben sind, hat *LPARAM* Vorrang.
+Eine Anwendung kann den Index, das Handle oder beides angeben. Wenn beide angegeben werden, hat *lParam* Vorrang.
 
-Beim Senden von **PSM \_ RemovePage** wird die zu entfernende Eigenschaften Blattseite zerstört.
+Das Senden von **PSM \_ REMOVEPAGE** zerstört die Eigenschaftenblattseite, die entfernt wird.
 
-Eine Reihe von Nachrichten und ein Funktions aufruftritt auf, während das Eigenschaften Blatt die Liste der Seiten bearbeitet. Während diese Aktion ausgeführt wird, kann der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen führen. Dementsprechend sollten Sie die **PSM- \_ RemovePage** -Nachricht nicht in der Implementierung von [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Behandlung der folgenden Benachrichtigungen und Windows-Meldungen verwenden.
+Eine Reihe von Nachrichten und ein Funktionsaufruf treten auf, während das Eigenschaftenblatt die Seitenliste bearbeitet. Während diese Aktion durchgeführt wird, führt der Versuch, die Liste der Seiten zu ändern, zu unvorhersehbaren Ergebnissen. Daher sollten Sie die **PSM \_ REMOVEPAGE-Nachricht** nicht in Ihrer [*PropSheetPageProc-Implementierung*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) oder bei der Verarbeitung der folgenden Benachrichtigungen und Windows Nachrichten verwenden.
 
--   [PSN- \_ Anwendung](psn-apply.md)
--   [PSN- \_ killactive](psn-killactive.md)
--   [PSN- \_ zurück Setzung](psn-reset.md)
--   [PSN- \_ SETACTIVE](psn-setactive.md)
--   [**WM \_ zerstören**](/windows/desktop/winmsg/wm-destroy)
--   [**WM \_ InitDialog**](/windows/desktop/dlgbox/wm-initdialog)
+-   [PSN \_ APPLY](psn-apply.md)
+-   [PSN \_ KILLACTIVE](psn-killactive.md)
+-   [\_PSN-ZURÜCKSETZUNG](psn-reset.md)
+-   [PSN \_ SETACTIVE](psn-setactive.md)
+-   [**WM \_ DESTROY**](/windows/desktop/winmsg/wm-destroy)
+-   [**WM \_ INITDIALOG**](/windows/desktop/dlgbox/wm-initdialog)
 
-Wenn Sie eine Eigenschaften Blattseite ändern müssen, während Sie eine dieser Nachrichten verarbeiten, oder wenn [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, stellen Sie selbst eine private Windows-Meldung bereit. Die Anwendung empfängt diese Nachricht erst, nachdem die Aufgaben des Eigenschaften Blatt-Managers beendet wurden. Anschließend können Sie die Seitenliste ändern.
+Wenn Sie eine Eigenschaftenblattseite ändern müssen, während Sie eine dieser Nachrichten verarbeiten oder [*PropSheetPageProc*](/windows/win32/api/prsht/nc-prsht-lpfnpspcallbacka) in Betrieb ist, posten Sie sich selbst eine private Windows Nachricht. Ihre Anwendung empfängt diese Meldung erst, nachdem der Eigenschaftenblatt-Manager seine Aufgaben abgeschlossen hat. Anschließend können Sie die Liste der Seiten ändern.
 
-Die folgenden Benachrichtigungen sind auch von der Änderung von Eigenschaften Seiten betroffen.
+Die folgenden Benachrichtigungen sind auch von der Änderung des Eigenschaftenblatts betroffen.
 
--   [PSN- \_ witzback](psn-wizback.md)
--   [PSN- \_ nächstes](psn-wiznext.md)
+-   [PSN \_ WIZBACK](psn-wizback.md)
+-   [PSN \_ WIZNEXT](psn-wiznext.md)
 
-Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder entfernen, vorausgesetzt, dass Sie (über DWL \_ msgresult) einen Wert ungleich 0 (null) zurückgeben, um die gewünschte neue Seite anzugeben. Beachten Sie jedoch Folgendes: Wenn Sie eine Seite entfernen, die sich vor der aktuellen Seite befindet (die einen kleineren Index als die aktuelle Seite aufweist), wird " [PSN \_ killactive](psn-killactive.md) " möglicherweise an die falsche Seite gesendet.
+Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder entfernen, vorausgesetzt, Sie geben (über DWL \_ MSGRESULT) einen Wert ungleich 0 (null) zurück, um die gewünschte neue Seite anzugeben. Beachten Sie jedoch Folgendes: Wenn Sie eine Seite entfernen, die sich vor der aktuellen Seite befindet (die über einen kleineren Index als die aktuelle Seite verfügt), wird [PSN \_ KILLACTIVE](psn-killactive.md) möglicherweise an die falsche Seite gesendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,9 +77,9 @@ Sie können Seiten als Reaktion auf diese Benachrichtigungen hinzufügen oder en
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

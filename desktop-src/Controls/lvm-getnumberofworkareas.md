@@ -1,9 +1,9 @@
 ---
-title: LVM_GETNUMBEROFWORKAREAS Meldung (kommstrg. h)
-description: Ruft die Anzahl der Arbeitsbereiche in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ getnumofworkareas-Makro verwenden.
+title: LVM_GETNUMBEROFWORKAREAS (Commctrl.h)
+description: Ruft die Anzahl der Arbeitsbereiche in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das \_ ListView-Makro GetNumberOfWorkAreas verwenden.
 ms.assetid: ce0bcccd-62a2-45a4-959e-9959c9ca0c46
 keywords:
-- Windows-Steuerelemente für LVM_GETNUMBEROFWORKAREAS Meldung
+- LVM_GETNUMBEROFWORKAREAS von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a73c62b7184ba60b979356a98a93d2579c8f74a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 735dbb808755857df3dec4c5e8a021b9fe873e555607dc547bc77e67e123b948
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088880"
 ---
-# <a name="lvm_getnumberofworkareas-message"></a>LVM \_ getnumofworkareas-Meldung
+# <a name="lvm_getnumberofworkareas-message"></a>LVM \_ GETNUMBEROFWORKAREAS-Meldung
 
-Ruft die Anzahl der Arbeitsbereiche in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ getnumofworkareas**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getnumberofworkareas) -Makro verwenden.
+Ruft die Anzahl der Arbeitsbereiche in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ ListView-Makro GetNumberOfWorkAreas**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getnumberofworkareas) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,13 +35,13 @@ Ruft die Anzahl der Arbeitsbereiche in einem Listenansicht-Steuerelement ab. Sie
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf einen uint-Wert, der die Anzahl der Arbeitsbereiche im Listenansicht-Steuerelement empfängt. Wenn NULL in diese Variable eingefügt wird, sind derzeit keine Arbeitsbereiche festgelegt. Dieser Wert darf nicht **null** sein.
+Zeiger auf einen UINT-Wert, der die Anzahl der Arbeitsbereiche im Listenansicht-Steuerelement empfängt. Wenn in dieser Variablen 0 (null) platziert wird, sind derzeit keine Arbeitsbereiche festgelegt. Dieser Wert darf nicht **NULL sein.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Der Rückgabewert für diese Nachricht wird nicht verwendet.
 
 <dl> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden List-View-Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

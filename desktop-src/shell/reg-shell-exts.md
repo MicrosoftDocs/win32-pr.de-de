@@ -1,25 +1,25 @@
 ---
-description: Ein shellerweiterungshandlerobjekt muss registriert werden, bevor es von der Shell verwendet werden kann. In diesem Thema wird eine allgemeine Erörterung der Registrierung eines Shellerweiterungs Handlers erläutert.
+description: Ein Shell-Erweiterungshandlerobjekt muss registriert werden, bevor die Shell es verwenden kann. In diesem Thema wird allgemein beschrieben, wie Ein Shell-Erweiterungshandler registriert wird.
 ms.assetid: e4b98c18-746b-4909-8821-f25de9d15373
-title: Registrieren von Shellerweiterungs Handlern
+title: Registrieren von Shellerweiterungshandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ca50bfaff984884b74ecc8572d4af9d96c55d0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec883f6e843bdfbf663108c0acda123d786262916f4a347d9433e7fd5f77baca
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111210"
 ---
-# <a name="registering-shell-extension-handlers"></a>Registrieren von Shellerweiterungs Handlern
+# <a name="registering-shell-extension-handlers"></a>Registrieren von Shellerweiterungshandlern
 
-Ein shellerweiterungshandlerobjekt muss registriert werden, bevor es von der Shell verwendet werden kann. In diesem Thema wird eine allgemeine Erörterung der Registrierung eines Shellerweiterungs Handlers erläutert.
+Ein Shell-Erweiterungshandlerobjekt muss registriert werden, bevor die Shell es verwenden kann. In diesem Thema wird allgemein beschrieben, wie Ein Shell-Erweiterungshandler registriert wird.
 
-Jedes Mal, wenn Sie einen Shellerweiterungs Handler erstellen oder ändern, ist es wichtig, das System zu benachrichtigen, dass Sie eine Änderung vorgenommen haben. Rufen Sie hierzu " [**shchangenotify**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shchangenotify)" auf, und geben Sie das **shcne-Ereignis " \_ assocchanged** " an. Wenn Sie **shchangenotify** nicht aufrufen, wird die Änderung möglicherweise erst erkannt, wenn das System neu gestartet wird.
+Jedes Mal, wenn Sie einen Shell-Erweiterungshandler erstellen oder ändern, ist es wichtig, das System zu benachrichtigen, dass Sie eine Änderung vorgenommen haben. Rufen Sie dazu [**SHChangeNotify**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shchangenotify)auf, und geben Sie dabei das **SHCNE \_ ASSOCCHANGED-Ereignis** an. Wenn Sie **SHChangeNotify nicht aufrufen,** wird die Änderung möglicherweise erst erkannt, wenn das System neu gestartet wird.
 
-Für Windows 2000-Systeme gelten einige zusätzliche Faktoren. Weitere Informationen finden Sie im Abschnitt [Registrieren von Shellerweiterungs Handlern auf Windows 2000-Systemen](#registering-shell-extension-handlers) .
+Es gibt einige zusätzliche Faktoren, die für Windows 2000-Systeme gelten. Weitere Informationen finden Sie im Abschnitt [Registrieren von Shell-Erweiterungshandlern für Windows 2000-Systeme.](#registering-shell-extension-handlers)
 
-Wie bei Component Object Model allen COM-Objekten müssen Sie mithilfe eines Tools wie Guidgen.exe, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird, eine GUID für den Handler erstellen. Erstellen Sie unter **HKEY \_ Classes \_ root** \\ **CLSID** einen Unterschlüssel, dessen Name die Zeichen folgen Form dieser GUID ist. Da es sich bei Shellerweiterungs Handlern um Prozess interne Server handelt, müssen Sie auch unter diesem GUID-Unterschlüssel einen **InProcServer32** -Unterschlüssel erstellen, wobei der (standardmäßige) Wert auf den Pfad der DLL des Handler festgelegt ist. Verwenden Sie das Apartment Threading Modell. Das folgende Beispiel soll dies erläutern:
+Wie bei allen Component Object Model-Objekten (COM) müssen Sie eine GUID für den Handler erstellen, indem Sie ein Tool wie Guidgen.exe verwenden, das mit dem Windows Software Development Kit (SDK) bereitgestellt wird. Erstellen Sie unter **HKEY \_ CLASSES \_ ROOT** CLSID einen Unterschlüssel, dessen Name die Zeichenfolgenform \\  dieser GUID ist. Da Es sich bei Shell-Erweiterungshandlern um Prozessserver handelt, müssen Sie auch einen **InprocServer32-Unterschlüssel** unter diesem GUID-Unterschlüssel erstellen, bei dem der (Standard)-Wert auf den Pfad der DLL des Handlers festgelegt ist. Verwenden Sie das Apartmentthreadingmodell. Das folgende Beispiel soll dies erläutern:
 
 ```
 HKEY_CLASSES_ROOT
@@ -30,21 +30,21 @@ HKEY_CLASSES_ROOT
             ThreadingModel = Apartment
 ```
 
-Jedes Mal, wenn die Shell eine Aktion ausführt, die einen Shellerweiterungs Handler einschließen kann, prüft Sie den entsprechenden Registrierungs Unterschlüssel. Der Unterschlüssel, unter dem ein Erweiterungs Handler registriert ist, wenn er aufgerufen wird. Beispielsweise ist es üblich, dass ein Kontextmenü Handler aufgerufen wird, wenn die Shell ein Kontextmenü für einen Member eines [Dateityps](fa-file-types.md)anzeigt. In diesem Fall muss der Handler unter dem **ProgID** -Unterschlüssel des Dateityps registriert werden.
+Jedes Mal, wenn die Shell eine Aktion mit einem Shell-Erweiterungshandler durchführen kann, überprüft sie den entsprechenden Registrierungsunterschlüssel. Der Unterschlüssel, unter dem ein Erweiterungshandler registriert ist, steuert, wann er aufgerufen wird. Beispielsweise ist es üblich, einen Kontextmenühandler namens zu verwenden, wenn die Shell ein Kontextmenü für einen Member eines [Dateityps anzeigt.](fa-file-types.md) In diesem Fall muss der Handler unter dem Unterschlüssel **ProgID** des Dateityps registriert werden.
 
 In diesem Thema werden die folgenden Themen behandelt:
 
 -   [Handlernamen](#handler-names)
 -   [Vordefinierte Shellobjekte](#predefined-shell-objects)
--   [Beispiel für eine erweiterungshandlerregistrierung](#example-of-an-extension-handler-registration)
-    -   [Registrieren von Shellerweiterungs Handlern](#registering-shell-extension-handlers)
+-   [Beispiel für eine Erweiterungshandlerregistrierung](#example-of-an-extension-handler-registration)
+    -   [Registrieren von Shellerweiterungshandlern](#registering-shell-extension-handlers)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="handler-names"></a>Handlernamen
 
-Erstellen Sie zum Aktivieren eines Shellerweiterungs Handlers einen Unterschlüssel mit dem Namen des unter Schlüssels des Handlers (siehe unten) unter dem **shellex** -Unterschlüssel der **ProgID** (für Dateitypen) oder dem shellobjekttypnamen (für [vordefinierte \_ \_ Shellobjekte](handlers.md)).
+Um einen Shell-Erweiterungshandler zu aktivieren, erstellen Sie einen Unterschlüssel mit dem Namen des Handlerunterschlüssels (siehe unten) unter dem **ShellEx-Unterschlüssel** der **ProgID** (für Dateitypen) oder des Shell-Objekttypnamens (für vordefinierte Shellobjekte). [ \_ \_](handlers.md)
 
-Wenn Sie z. b. einen Erweiterungs Handler für das Kontextmenü für MyProgram. 1 registrieren möchten, erstellen Sie zunächst den folgenden Unterschlüssel:
+Wenn Sie beispielsweise einen Kontextmenü-Erweiterungshandler für MyProgram.1 registrieren möchten, erstellen Sie zunächst den folgenden Unterschlüssel:
 
 ```
 HKEY_CLASSES_ROOT
@@ -53,49 +53,49 @@ HKEY_CLASSES_ROOT
          ContextMenuHandlers
 ```
 
-Erstellen Sie für die folgenden Handler einen Unterschlüssel unter dem Unterschlüssel Name des unter Schlüssels "Handler", der als Zeichen folgen Version des Klassen Bezeichners (CLSID) der Shellerweiterung bezeichnet wird. Mehrere Erweiterungen können unter dem Namen des unter Schlüssels des Handlers registriert werden, indem mehrere Unterschlüssel erstellt werden.
+Erstellen Sie für die folgenden Handler unterhalb des Unterschlüssels "HandlerUnterschlüsselname" einen Unterschlüssel namens als Zeichenfolgenversion des Klassenbezeichners (CLSID) der Shellerweiterung. Mehrere Erweiterungen können unter dem Namen des Handlerunterschlüssels registriert werden, indem mehrere Unterschlüssel erstellt werden.
 
 
 
-| Handler                 | Schnittstelle          | Name des unter Schlüssels des Handlers       |
+| Handler                 | Schnittstelle          | Name des Handlerunterschlüssels       |
 |-------------------------|--------------------|---------------------------|
-| Spalten Anbieter Handler | Icolumnprovider    | **Columnhandlers**        |
-| Kontextmenü Handler   | IContextMenu       | **ContextMenuHandlers**   |
-| Copyhook-Handler        | Icopyhook          | **Copyhuokhandlers**      |
-| Drag &amp; Drop-Handler   | IContextMenu       | **Dragdrophandlers**      |
-| Eigenschaftenblatthandler  | Ishellpropsheetext | **Propertysheethandlers** |
+| Spaltenanbieterhandler | IColumnProvider    | **ColumnHandlers**        |
+| Kontextmenühandler   | IContextMenu       | **ContextMenuHandlers**   |
+| Copyhook-Handler        | ICopyHook          | **CopyHookHandlers**      |
+| Drag &amp; Drop-Handler   | IContextMenu       | **DragDropHandlers**      |
+| Eigenschaftenblatthandler  | IShellPropSheetExt | **PropertySheetHandlers** |
 
 
 
  
 
-Bei den folgenden Handlern ist der Standardwert für den Schlüssel Name des unter Schlüssels "Handler" die Zeichen folgen Version der CLSID der Shellerweiterung. Für diese Handler kann nur eine Erweiterung registriert werden.
+Für die folgenden Handler ist der Standardwert des Schlüssels "Handler Subkey Name" die Zeichenfolgenversion der CLSID der Shellerweiterung. Für diese Handler kann nur eine Erweiterung registriert werden.
 
 
 
-| Handler                 | Schnittstelle            | Name des unter Schlüssels des Handlers                        |
+| Handler                 | Schnittstelle            | Name des Handlerunterschlüssels                        |
 |-------------------------|----------------------|--------------------------------------------|
-| Daten Handler            | IDataObject          | **DataHandler**                            |
-| Drop-Handler            | IDropTarget          | **Drophandler**                            |
-| Symbol Handler            | Iextracticona/W      | **Iconhandler**                            |
-| Miniatur Ansichts Bild Handler | IThumbnailProvider   | **{E357FCCD-A995-4576-B01F-234630154E96}** |
-| QuickInfo-Handler         | Iqueryinfo           | **{00021500-0000-0000-C000-000000000046}** |
-| Shelllink (ANSI)       | IShellLinkA          | **{000214ee-0000-0000-C000-000000000046}** |
-| Shelllink (Unicode)    | Ishelllinkw          | **{0002149-0000-0000-C000-000000000046}** |
-| Strukturierter Speicher      | IStorage             | **{0000000b-0000-0000-C000-000000000046}** |
-| Metadaten                | IPropertySetStorage  | **Propertyhandler**                        |
-| An Startmenü anheften       | Istartmenupinnedlist | **{a2a9545d-a0c2-42b4-9708-a0b2badd77c8}** |
-| An Taskleiste anheften          |                      | **{90aa3a4e-1cba-4233-B8BB-535773d48449}** |
+| Datenhandler            | Idataobject          | **Datahandler**                            |
+| Drop-Handler            | Idroptarget          | **DropHandler**                            |
+| Symbolhandler            | IExtractIconA/W      | **IconHandler**                            |
+| Handler für Miniaturansichtsbilder | IThumbnailProvider   | **{E357FCCD-A995-4576-B01F-234630154E96}** |
+| QuickInfo-Handler         | IQueryInfo           | **{00021500-0000-0000-C000-000000000046}** |
+| Shelllink (ANSI)       | IShellLinkA          | **{000214EE-0000-0000-C000-000000000046}** |
+| Shelllink (UNICODE)    | IShellLinkW          | **{000214F9-0000-0000-C000-000000000046}** |
+| Strukturierter Speicher      | Istorage             | **{0000000B-0000-0000-C000-000000000046}** |
+| Metadaten                | IPropertySetStorage  | **PropertyHandler**                        |
+| An Startmenü anheften       | IStartMenuPinnedList | **{a2a9545d-a0c2-42b4-9708-a0b2badd77c8}** |
+| An Taskleiste anheften          |                      | **{90AA3A4E-1CBA-4233-B8BB-535773D48449}** |
 
 
 
  
 
-Die angegebenen Unterschlüssel zum Hinzufügen einer **PIN zum Startmenü** und zum Anheften **an die Taskleiste** an das Kontextmenü eines Elements sind nur für Dateitypen erforderlich, die den [IsShortcut](./links.md) -Eintrag enthalten.
+Die Unterschlüssel, die zum Hinzufügen  von **"An Startmenü** anheften" und "An Taskleiste an Taskleiste anheften" zum Kontextmenü eines Elements angegeben werden, sind nur für Dateitypen erforderlich, die den [Eintrag IsShortCut](./links.md) enthalten.
 
 ## <a name="predefined-shell-objects"></a>Vordefinierte Shellobjekte
 
-Die Shell definiert zusätzliche Objekte unter **HKEY \_ Classes \_ root** , die auf die gleiche Weise wie Dateitypen erweitert werden können. Wenn Sie z. b. einen Eigenschaften Blatt Handler für alle Dateien hinzufügen möchten, können Sie sich unter dem **propertysheethandlers** -Unterschlüssel registrieren.
+Die Shell definiert zusätzliche Objekte unter **HKEY \_ CLASSES \_ ROOT,** die auf die gleiche Weise wie Dateitypen erweitert werden können. Um beispielsweise einen Eigenschaftenblatthandler für alle Dateien hinzuzufügen, können Sie sich unter dem **Unterschlüssel PropertySheetHandlers** registrieren.
 
 ```
 HKEY_CLASSES_ROOT
@@ -104,44 +104,44 @@ HKEY_CLASSES_ROOT
          PropertySheetHandlers
 ```
 
-In der folgenden Tabelle sind die verschiedenen Unterschlüssel von **HKEY- \_ Klassen \_ root** , unter denen Erweiterungs Handler registriert werden können, zu finden. Beachten Sie, dass viele Erweiterungs Handler nicht unter allen aufgelisteten unter Schlüsseln registriert werden können. Weitere Informationen finden Sie in der Dokumentation des jeweiligen Handlers.
+Die folgende Tabelle enthält die verschiedenen Unterschlüssel von **HKEY \_ CLASSES \_ ROOT,** unter denen Erweiterungshandler registriert werden können. Beachten Sie, dass viele Erweiterungshandler nicht unter allen aufgelisteten Unterschlüsseln registriert werden können. Weitere Informationen finden Sie in der Dokumentation des jeweiligen Handlers.
 
 
 
-| Unterschlüssel                    | BESCHREIBUNG                                                          | Mögliche Handler                                |
+| Unterschlüssel                    | Beschreibung                                                          | Mögliche Handler                                |
 |---------------------------|----------------------------------------------------------------------|--------------------------------------------------|
-| **\** _                    | Alle Dateien                                                            | Kontextmenü, Eigenschaften Blatt, Verben (siehe unten) |
-| _ *AllFilesystemObjects**  | Alle Dateien und Datei Ordner                                           | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Ordner**                | Alle Ordner                                                          | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Verzeichnis**             | Datei Ordner                                                         | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Verzeichnis \\ Hintergrund** | Hintergrund des Datei Ordners                                               | Nur Kontextmenü                               |
-| **DesktopBackground**     | Desktop Hintergrund (Windows 7 und höher)                            | Kontextmenü, Verben                             |
-| **Laufwerk**                 | Alle Laufwerke in "MyComputer", z. b. "C: \\ "                             | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Network**               | Gesamtes Netzwerk (unter "meine Netzwerk Plätze")                             | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **\\Netzwerktyp\\\#**     | Alle Objekte des Typs \# (siehe unten)                                   | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **NetShare**              | Alle Netzwerkfreigaben                                                   | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Netserver**             | Alle Netzwerkserver                                                  | Kontextmenü, Eigenschaften Blatt, Verben             |
-| *Name des Netzwerk \_ Anbieters \_* | Alle Objekte, die vom Netzwerkanbieter "*Netzwerk \_ Anbieter \_ Name*" bereitgestellt werden | Kontextmenü, Eigenschaften Blatt, Verben             |
-| **Drucker**              | Alle Drucker                                                         | Kontextmenü, Eigenschaften Blatt                    |
-| **AudioCD**               | AudioCD in CD-Laufwerk                                                 | Nur Verben                                       |
-| **DVD**                   | DVD-Laufwerk (Windows 2000)                                             | Kontextmenü, Eigenschaften Blatt, Verben             |
+| **\***                    | Alle Dateien                                                            | Kontextmenü, Eigenschaftenblatt, Verben (siehe unten) |
+| **AllFileSystemObjects**  | Alle Dateien und Dateiordner                                           | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **Ordner**                | Alle Ordner                                                          | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **Verzeichnis**             | Dateiordner                                                         | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **\\Verzeichnishintergrund** | Hintergrund des Dateiordners                                               | Nur Kontextmenü                               |
+| **DesktopBackground**     | Desktophintergrund (Windows 7 und höher)                            | Kontextmenü, Verben                             |
+| **Laufwerk**                 | Alle Laufwerke in MyComputer, z. B. "C: \\ "                             | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **Network**               | Gesamtes Netzwerk (unter "Meine Netzwerkorte")                             | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **\\Netzwerktyp\\\#**     | Alle Objekte vom Typ \# (siehe unten)                                   | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **Netshare**              | Alle Netzwerkfreigaben                                                   | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **NetServer**             | Alle Netzwerkserver                                                  | Kontextmenü, Eigenschaftenblatt, Verben             |
+| *\_ \_ Netzwerkanbietername* | Alle vom Netzwerkanbieter bereitgestellten Objekte "*\_ \_ Netzwerkanbietername*" | Kontextmenü, Eigenschaftenblatt, Verben             |
+| **Drucker**              | Alle Drucker                                                         | Kontextmenü, Eigenschaftenblatt                    |
+| **Audiocd**               | Audio-CD auf CD-Laufwerk                                                 | Nur Verben                                       |
+| **Dvd**                   | DVD-Laufwerk (Windows 2000)                                             | Kontextmenü, Eigenschaftenblatt, Verben             |
 
 
 
  
 
-### <a name="notes"></a>Notizen
+### <a name="notes"></a>Hinweise
 
--   Der Zugriff auf das Kontextmenü des Datei Ordners wird durch einen Rechtsklick innerhalb eines Datei Ordners, aber nicht über den Inhalt des Ordners erreicht.
--   "Verbs" sind spezielle Befehle, die unter **HKEY \_ Classes \_ root** \\ *subkey* \\ **Shell** \\ **Verb** registriert sind.
--   Für den \\ **Netzwerktyp** \\ **\#** \# ist "" ein Netzwerk Anbietertyp Code in Dezimal. Der Typ Code des Netzwerk Anbieters ist das hohe Wort eines Netzwerk Typs. Die Liste der Netzwerktypen wird in der "winnetwk. h"-Header Datei (wnnc \_ net \_ \* Values) angegeben. Beispielsweise ist wnnc \_ net \_ Shiva 0x00330000, daher wäre der entsprechende typunter Schlüssel **HKEY \_ Classes \_ root** \\ **Network** \\ **Type** \\ **51**.
--   der *Name \_ des \_ Netzwerk Anbieters wird* von [**wnetgetprovidername**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetprovidernamea)angegeben, wobei die Leerzeichen in Unterstriche konvertiert werden. Wenn z. b. der Microsoft-Netzwerk Netzwerkanbieter installiert ist, lautet sein Anbieter Name "Microsoft Windows-Netzwerk", und der entsprechende *Netzwerk \_ Anbieter \_ Name* lautet **Microsoft \_ Windows- \_ Netzwerk**.
+-   Auf das Kontextmenü des Dateiordners wird zugegriffen, indem Sie mit der rechten Maustaste auf einen Dateiordner klicken, jedoch nicht auf den Inhalt des Ordners.
+-   "Verben" sind spezielle Befehle, die unter **HKEY \_ CLASSES \_ ROOT** \\ *Subkey* Shell Verb registriert \\  \\ sind.
+-   Für **Den** \\ **Netzwerktyp** \\ **\#** ist " " ein \# Netzwerkanbietertypcode im Dezimalformat. Der Typcode des Netzwerkanbieters ist das obere Wort eines Netzwerktyps. Die Liste der Netzwerktypen wird in der Headerdatei Winnetwk.h angegeben (WNNC \_ \_ \* NET-Werte). Beispielsweise ist WNNC \_ NET \_ SHIVA 0x00330000, sodass der entsprechende Typunterschlüssel **HKEY \_ CLASSES \_ ROOT** \\ **Network** \\ **Type** \\ **51** wäre.
+-   "*\_ \_ Netzwerkanbietername*" ist ein Netzwerkanbietername, wie durch [**WNetGetProviderName**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetprovidernamea)angegeben, wobei die Leerzeichen in Unterstriche konvertiert werden. Wenn beispielsweise der Microsoft-Netzwerknetzwerkanbieter installiert ist, lautet der Anbietername "Microsoft Windows Network" und der entsprechende *\_ \_ Netzwerkanbietername* **Microsoft Windows \_ \_ Network.**
 
-## <a name="example-of-an-extension-handler-registration"></a>Beispiel für eine erweiterungshandlerregistrierung
+## <a name="example-of-an-extension-handler-registration"></a>Beispiel für die Registrierung eines Erweiterungshandlers
 
-Um einen bestimmten Handler zu aktivieren, erstellen Sie unter dem Typ Unterschlüssel des Erweiterungs Handlers einen Unterschlüssel mit dem Namen des Handlers. Die Shell verwendet nicht den Namen des Handlers, aber Sie muss sich von allen anderen Namen unter diesem typunter Schlüssel unterscheiden. Legen Sie den Standardwert des Namens unter Schlüssels auf die Zeichen folgen Form der GUID des Handlers fest.
+Um einen bestimmten Handler zu aktivieren, erstellen Sie einen Unterschlüssel unter dem Unterschlüssel des Erweiterungshandlertyps mit dem Namen des Handlers. Die Shell verwendet nicht den Namen des Handlers, muss sich jedoch von allen anderen Namen unter diesem Typunterschlüssel unterscheiden. Legen Sie den Standardwert des Unterschlüssels name auf die Zeichenfolgenform der GUID des Handlers fest.
 
-Das folgende Beispiel veranschaulicht Registrierungseinträge, die Erweiterungs Handler für Kontextmenü und Eigenschaften Seiten mithilfe des Dateityps example. MYP ermöglichen.
+Das folgende Beispiel veranschaulicht Registrierungseinträge, die Kontextmenü- und Eigenschaftenblatterweiterungshandler mithilfe eines Beispieldateityps vom Typ ".myp" aktivieren.
 
 ```
 HKEY_CLASSES_ROOT
@@ -167,16 +167,16 @@ HKEY_CLASSES_ROOT
                (Default) = {11111111-2222-3333-4444-555555555555}
 ```
 
-### <a name="registering-shell-extension-handlers"></a>Registrieren von Shellerweiterungs Handlern
+### <a name="registering-shell-extension-handlers"></a>Registrieren von Shellerweiterungshandlern
 
-Das in diesem Abschnitt beschriebene Registrierungsverfahren muss für alle Windows-Systeme befolgt werden. Bei späteren Systemen ist jedoch möglicherweise ein zusätzlicher Schritt erforderlich. Da diese neueren Versionen von Windows für die Verwendung in einer verwalteten Umgebung entworfen wurden, kann der Zugriff auf die Registrierung administrativ eingeschränkt werden, was einen etwas anderen Ansatz für die Installation erfordert, als im vorherigen Abschnitt beschrieben.
+Das in diesem Abschnitt beschriebene Registrierungsverfahren muss für alle Windows Systeme befolgt werden. Bei späteren Systemen kann jedoch ein zusätzlicher Schritt erforderlich sein. Da diese neueren Versionen von Windows für die Verwendung in einer verwalteten Umgebung konzipiert sind, kann der Zugriff auf die Registrierung administratorisch eingeschränkt werden, was einen etwas anderen Installationsansatz erfordert als im vorherigen Abschnitt beschrieben.
 
 > [!Note]  
-> Setup Programme sollten in der Regel nicht direkt in die Registrierung schreiben. Stattdessen sollte Setup mit Windows Installer Paketen durchgeführt werden. Diese Tools stellen sicher, dass die Software ordnungsgemäß ausgeführt wird und den Zugriff auf Funktionen wie die benutzerspezifische Klassen Registrierung ermöglicht.
+> Setupprogramme sollten in der Regel nicht direkt in die Registrierung schreiben. Stattdessen sollte das Setup mit Windows Installer-Paketen durchgeführt werden. Mit diesen Tools wird sichergestellt, dass Software gut ausgeführt wird und Zugriff auf Funktionen wie die Benutzerklassenregistrierung bietet.
 
  
 
-Shellerweiterungs Handler werden im Shellprozess ausgeführt. Da es sich um einen System Prozess handelt, kann der Administrator eines Systems shellerweiterungshandler auf die in einer genehmigten Liste beschränken, indem der EnforceShellExtensionSecurity-Wert des **Explorer** -Schlüssels auf 1 festgelegt wird, wie hier gezeigt:
+Shellerweiterungshandler werden im Shellprozess ausgeführt. Da es sich um einen Systemprozess handelt, kann der Administrator eines Systems Shellerweiterungshandler auf die Handler  in einer genehmigten Liste beschränken, indem er den Wert EnforceShellExtensionSecurity des Explorer-Schlüssels auf 1 festlegt, wie hier gezeigt:
 
 ```
 HKEY_CURRENT_USER
@@ -189,7 +189,7 @@ HKEY_CURRENT_USER
                      EnforceShellExtensionSecurity = 1
 ```
 
-Zum Platzieren eines Shellerweiterungs Handlers in der genehmigten Liste erstellen Sie einen **reg \_ SZ** -Wert, dessen Name die Zeichen folgen Form der GUID des Handlers unter dem **genehmigten** Unterschlüssel ist.
+Um einen Shellerweiterungshandler in der genehmigten Liste zu platzieren, erstellen Sie einen **REG \_ SZ-Wert,** dessen Name die Zeichenfolgenform der GUID des Handlers unter dem Unterschlüssel **Genehmigt** ist.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -201,7 +201,7 @@ HKEY_LOCAL_MACHINE
                   Approved
 ```
 
-Im folgenden Beispiel werden z. b. die Handler *myCommand* und *mypropsheet* der genehmigten Liste hinzugefügt.
+Im folgenden Beispiel werden beispielsweise die Handler *MyCommand* und *MyPropSheet* der genehmigten Liste hinzugefügt.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -215,15 +215,15 @@ HKEY_LOCAL_MACHINE
                      {11111111-2222-3333-4444-555555555555} = MyPropSheet
 ```
 
-Die Shell verwendet nicht den Wert, der der GUID zugewiesen ist, sondern sollte so festgelegt werden, dass die Überprüfung der Registrierung erleichtert wird.
+Die Shell verwendet nicht den Wert, der der GUID zugewiesen ist, sollte jedoch festgelegt werden, um die Überprüfung der Registrierung zu vereinfachen.
 
-Die Setup Anwendung kann dem **genehmigten** Unterschlüssel nur Werte hinzufügen, wenn die Person, die die Anwendung installiert, über ausreichende Berechtigungen verfügt. Wenn beim Versuch, einen Erweiterungs Handler hinzuzufügen, ein Fehler auftritt, sollten Sie den Benutzer darüber informieren, dass Administratorrechte erforderlich sind, um die Anwendung vollständig zu installieren. Wenn der Handler für die Anwendung unverzichtbar ist, sollten Sie das Setup fehlschlagen und den Benutzer bitten, sich an einen Administrator zu wenden.
+Ihre Setupanwendung kann dem Unterschlüssel **Genehmigt** nur Werte hinzufügen, wenn die Person, die die Anwendung installiert, über ausreichende Berechtigungen verfügt. Wenn beim Versuch, einen Erweiterungshandler hinzuzufügen, ein Fehler auftritt, sollten Sie den Benutzer darüber informieren, dass Administratorrechte erforderlich sind, um die Anwendung vollständig zu installieren. Wenn der Handler für die Anwendung wichtig ist, sollten Sie das Setup nicht erfolgreich ausführen und den Benutzer benachrichtigen, sich an einen Administrator zu wenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Initialisieren von Shellerweiterungs Handlern](int-shell-exts.md)
+[Initialisieren von Shellerweiterungshandlern](int-shell-exts.md)
 </dt> </dl>
 
  

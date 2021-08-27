@@ -1,7 +1,7 @@
 ---
-description: 'Flag zum angeben, ob der releaserückruf aktiviert ist. Dieses Flag wird in der Konstruktormethode festgelegt. Wenn der Wert false ist, bewirkt das Aufrufen der cbasezucator:: setnotify-Methode, dass eine-Assertion ausgelöst wird (in Debugbuilds).'
+description: Flag, das angibt, ob der Releaserückruf aktiviert ist. Dieses Flag wird in der Konstruktormethode festgelegt. Wenn der Wert FALSE ist, löst der Aufruf der CBaseAllocator::SetNotify-Methode eine Assertion aus (in Debugbuilds).
 ms.assetid: cc9adc7c-ec44-41e7-875a-b3e553120804
-title: 'Cbasezucator:: m_fEnableReleaseCallback Member (amfilter. h)'
+title: CBaseAllocator::m_fEnableReleaseCallback Member (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 626f1e8f4101eb48e79bc1cf679d1b91be9b2b31
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2fc1dfebb051ddffffce341547562901153b47bd5da002ebd847965593a73d93
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131460"
 ---
-# <a name="cbaseallocatorm_fenablereleasecallback-member"></a>Cbasezucator:: m \_ fenablereleasecallback-Member
+# <a name="cbaseallocatorm_fenablereleasecallback-member"></a>CBaseAllocator::m \_ fEnableReleaseCallback-Member
 
-Flag zum angeben, ob der releaserückruf aktiviert ist. Dieses Flag wird in der Konstruktormethode festgelegt. Wenn der Wert **false** ist, bewirkt das Aufrufen der [**cbasezucator:: setnotify**](cbaseallocator-setnotify.md) -Methode, dass eine-Assertion ausgelöst wird (in Debugbuilds).
+Flag, das angibt, ob der Releaserückruf aktiviert ist. Dieses Flag wird in der Konstruktormethode festgelegt. Wenn der Wert **FALSE ist,** bewirkt der Aufruf der [**CBaseAllocator::SetNotify-Methode,**](cbaseallocator-setnotify.md) dass eine Assertion (in Debugbuilds) ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,8 +42,8 @@ BOOL m_fEnableReleaseCallback;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -51,7 +51,7 @@ BOOL m_fEnableReleaseCallback;
 
 <dl> <dt>
 
-[**Cbasezucator-Klasse**](cbaseallocator.md)
+[**CBaseAllocator-Klasse**](cbaseallocator.md)
 </dt> </dl>
 
  

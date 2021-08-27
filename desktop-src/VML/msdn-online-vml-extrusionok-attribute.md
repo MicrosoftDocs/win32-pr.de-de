@@ -1,41 +1,41 @@
 ---
-title: VML-Attribut "extrusionok"
-description: VML-Attribut "extrusionok"
+title: VML-ExtrusionOK-Attribut
+description: VML-ExtrusionOK-Attribut
 ms.assetid: 7060c744-5227-4a1e-b073-c5b5a823f8cd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f69fedeeb39790f7ae982f577b6d58f5c01ab3d0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ab4323e70ccfe5a30ceffb613438a575940b3913f1858c593cc68ed70fc9ac4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099270"
 ---
-# <a name="vml-extrusionok-attribute"></a>VML-Attribut "extrusionok"
+# <a name="vml-extrusionok-attribute"></a>VML-ExtrusionOK-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob eine-Extrusion angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob eineExtrusion angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* o:extrusionok = " *Ausdruck* " >
+<v: o:extrusionok="-Ausdruck ">  
 
 **Anmerkungen**
 
-**False** gibt an, dass der Pfad keine-Extrusion aufweisen kann. Der Standardwert ist **True**. Dieses Attribut überschreibt alle anderen extrusionattribute im übergeordneten Element oder im **extrusionselement** .
+False **gibt an,** dass der Pfad keineExtrusion haben darf. Der Standardwert ist **True**. Dieses Attribut überschreibt alle anderen Attributextrusionsattribute im übergeordneten Element oder **ImTrusionselement.**
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

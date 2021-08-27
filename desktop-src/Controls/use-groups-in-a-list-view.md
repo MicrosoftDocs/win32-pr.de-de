@@ -1,39 +1,39 @@
 ---
-title: Vorgehensweise beim Verwenden von Gruppen in einer List-View
-description: In diesem Thema wird beschrieben, wie eine Instanz einer Gruppe erstellt und einem Listenansicht-Steuerelement hinzugefügt wird.
+title: Verwenden von Gruppen in einem List-View
+description: In diesem Thema wird beschrieben, wie Eine Instanz einer Gruppe erstellt und einem Listenansicht-Steuerelement hinzugefügt wird.
 ms.assetid: 8486B9A2-C519-4912-9E88-3BAFCC4D51CF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ec47d73c3e8b808eaf1909bdafb015c7eebc37de
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: edaad657d9ea6b71bac1d06a34a0aa29b99c26e204629e503a9e55531da162b7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103858557"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120132120"
 ---
-# <a name="how-to-use-groups-in-a-list-view"></a>Vorgehensweise beim Verwenden von Gruppen in einer List-View
+# <a name="how-to-use-groups-in-a-list-view"></a>Verwenden von Gruppen in einem List-View
 
-In diesem Thema wird beschrieben, wie eine Instanz einer Gruppe erstellt und einem Listenansicht-Steuerelement hinzugefügt wird. Mithilfe von Gruppierungen kann ein Benutzer Listen in Gruppen von Elementen anordnen, die mithilfe eines horizontalen unter Teilers und eines Gruppen Titels visuell auf der Seite aufgeteilt sind.
+In diesem Thema wird beschrieben, wie Eine Instanz einer Gruppe erstellt und einem Listenansicht-Steuerelement hinzugefügt wird. Das Gruppieren ermöglicht es einem Benutzer, Listen mithilfe eines horizontalen Unterteilers und eines Gruppentitels in Gruppen von Elementen zu ordnen, die visuell auf der Seite unterteilt sind.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Um Gruppen in einem Listenansicht-Steuerelement zu verwenden, stellen Sie sicher, dass das Steuerelement den [**LVS \_ AlignTop**](list-view-window-styles.md) -Fenster Stil enthält.
+Um Gruppen in einem Listenansicht-Steuerelement zu verwenden, stellen Sie sicher, dass das Steuerelement den [**LVS \_ ALIGNTOP-Fensterstil**](list-view-window-styles.md) enthält.
 
-Wenn Sie der Liste ein Element hinzufügen, weisen Sie es einer Gruppe zu, indem Sie den **igroupid** -Member der [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur des Elements auf den Wert des **igroupid** -Members der Struktur der [**Gruppe "LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) " festlegen. Ein Element, das keiner Gruppe zugewiesen ist, wird nicht in der Liste angezeigt, wenn die Gruppenansicht aktiviert ist. Verwenden Sie das [**ListView \_ enablegroupview**](/windows/desktop/api/Commctrl/nf-commctrl-listview_enablegroupview) -Makro, um die Gruppenansicht zu aktivieren oder zu deaktivieren.
+Wenn Sie der Liste ein Element hinzufügen, weisen Sie es einer Gruppe zu, indem Sie das **iGroupId-Element** der [**LVITEM-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvitema) des Elements auf den Wert des **iGroupId-Elements** der [**LVGROUP-Struktur**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) der Gruppen festlegen. Ein Element, das einer Gruppe nicht zugewiesen ist, wird nicht in der Liste angezeigt, wenn die Gruppenansicht aktiviert ist. Verwenden Sie das [**Makro ListView \_ EnableGroupView,**](/windows/desktop/api/Commctrl/nf-commctrl-listview_enablegroupview) um die Gruppenansicht zu aktivieren oder zu deaktivieren.
 
-Im folgenden Beispiel wird gezeigt, wie eine Gruppe mit einem Header erstellt und einem Listenansicht-Steuerelement hinzugefügt wird.
+Das folgende Beispiel zeigt, wie Sie eine Gruppe mit einem Header erstellen und einem Listenansicht-Steuerelement hinzufügen.
 
 
 ```C++
@@ -54,13 +54,13 @@ Im folgenden Beispiel wird gezeigt, wie eine Gruppe mit einem Header erstellt un
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[List-View-Steuerelementreferenz](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen List-View Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden List-View Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

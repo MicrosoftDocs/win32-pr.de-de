@@ -4,75 +4,42 @@ ms.assetid: dd7c4bc9-e2a6-49cd-8f29-865a44d5b5c9
 title: Medienmetadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05ce2ba0881dc37d9b026625961635eeaf4561bfe0d6dc37328e12451e1d8bf2
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9ef9f8a852bbce2dfb8d38a5883acc219cde8019
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118062233"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122477085"
 ---
 # <a name="media-metadata"></a>Medienmetadaten
 
 Mediendateien enthalten Eigenschaften, die den Inhalt der Datei beschreiben. In Microsoft Media Foundation können diese Eigenschaften wie folgt kategorisiert werden:
 
--   **Medientypattribute** geben die Codierungsparameter an, z. B. den Codierungsalgorithmus (Medienuntertyp), die Videoframegröße, die Videobildrate, die Audiobitrate und die Audioabtastrate. Weitere Informationen zu Medientypattributen finden Sie unter [Medientypen.](media-types.md)
--   **Metadaten** enthalten beschreibende Informationen zu Medieninhalten wie Titel, Interpret, Composer und Genre. Metadaten können auch Codierungsparameter beschreiben. Es kann schneller sein, über Metadaten auf diese Informationen zuzugreifen als über Medientypattribute.
--   **DRM-Eigenschaften** enthalten Informationen zu Verwendungseinschränkungen. Derzeit unterstützt Media Foundation keine DRM-Eigenschaften über Metadaten, mit Ausnahme der **PKEY \_ DRM \_ IsProtected-Eigenschaft.**
+-   **Medientypattribute** geben die Codierungsparameter an, z. B. den Codierungsalgorithmus (Medienuntertyp), die Videoframegröße, die Videobildrate, die Audiobitrate und die Audio-Abtastrate. Weitere Informationen zu Medientypattributen finden Sie unter [Medientypen.](media-types.md)
+-   **Metadaten** enthalten beschreibende Informationen für den Medieninhalt, z. B. Titel, Interpret, Composer und Genre. Metadaten können auch Codierungsparameter beschreiben. Es kann schneller sein, über Metadaten auf diese Informationen zu zugreifen als über Medientypattribute.
+-   **DRM-Eigenschaften** enthalten Informationen zu Nutzungseinschränkungen. Derzeit Media Foundation keine DRM-Eigenschaften über Metadaten unterstützt, mit Ausnahme der **PKEY \_ DRM \_ IsProtected-Eigenschaft.**
 
-Es gibt zwei Möglichkeiten, Metadaten in Media Foundation zu lesen:
+Es gibt zwei Möglichkeiten zum Lesen von Metadaten in Media Foundation:
 
--   DIE [**INTERFACESMetadata-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadata) (Media Foundation Metadaten der Version 1).
+-   Die [**BENUTZEROBERFLÄCHEMetadata-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadata) (Media Foundation Metadaten der Version 1).
 -   Die Windows [**Shell-IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) (Shellmetadaten).
 
-Shellmetadaten beziehen sich nicht nur auf Mediendateien, sondern auch auf einen viel größeren Bereich von Dateien auf dem System.
+Shellmetadaten beziehen sich nicht nur auf Mediendateien, sondern auch auf einen viel größeren Bereich von Dateien im System.
 
 In der folgenden Tabelle werden die Features und Einschränkungen der einzelnen Metadaten-APIs verglichen.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Media Foundation v1-Metadaten</th>
-<th>Shellmetadaten</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Erfordert Windows Vista oder höher.</td>
-<td>Erfordert Windows 7.
-<blockquote>
-[!Note]<br />
-Shellmetadaten erfordern im Allgemeinen nicht Windows 7, aber Media Foundation haben shell-Metadaten vor Windows 7 nicht unterstützt.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td>Eigenschaften sind nicht mit dem Shell-Eigenschaftensystem kompatibel.</td>
-<td>Eigenschaften sind mit dem Shell-Eigenschaftensystem kompatibel.</td>
-</tr>
-<tr class="odd">
-<td>Eigenschaften können für die gesamte Datei oder auf Streamebene gelten.</td>
-<td>Es werden nur Eigenschaften auf Dateiebene unterstützt. Eigenschaften auf Streamebene werden nicht unterstützt.</td>
-</tr>
-<tr class="even">
-<td>Eigenschaften können Werte in mehreren Sprachen aufweisen.</td>
-<td>Werte in mehreren Sprachen werden nicht unterstützt.</td>
-</tr>
-<tr class="odd">
-<td>Eigenschaftsschlüssel sind Breitzeichenzeichenfolgen.</td>
-<td>Eigenschaftsschlüssel sind <a href="/windows/desktop/api/wtypes/ns-wtypes-propertykey"><strong>PROPERTYKEY-Werte.</strong></a></td>
-</tr>
-<tr class="even">
-<td>Eigenschaftswerte sind <a href="/windows/win32/api/propidl/ns-propidl-propvariant"><strong>PROPVARIANT-Werte.</strong></a></td>
-<td>Eigenschaftswerte sind <a href="/windows/win32/api/propidl/ns-propidl-propvariant"><strong>PROPVARIANT-Werte.</strong></a></td>
-</tr>
-</tbody>
-</table>
+
+| Media Foundation v1-Metadaten | Shellmetadaten | 
+|------------------------------|----------------|
+| Erfordert Windows Vista oder höher. | Erfordert Windows 7.<blockquote>[!Note]<br />Shellmetadaten erfordern im Allgemeinen keine Windows 7, aber Media Foundation shell metadata did not support Shell metadata prior to Windows 7.</blockquote><br /> | 
+| Eigenschaften sind nicht mit dem Shell-Eigenschaftensystem kompatibel. | Eigenschaften sind mit dem Shell-Eigenschaftensystem kompatibel. | 
+| Eigenschaften können auf die gesamte Datei oder auf Streamebene angewendet werden. | Nur Eigenschaften auf Dateiebene werden unterstützt. Eigenschaften auf Streamebene werden nicht unterstützt. | 
+| Eigenschaften können Werte in mehreren Sprachen enthalten. | Werte in mehreren Sprachen werden nicht unterstützt. | 
+| Eigenschaftsschlüssel sind Breitzeichenzeichenfolgen. | Eigenschaftsschlüssel sind <a href="/windows/desktop/api/wtypes/ns-wtypes-propertykey"><strong>PROPERTYKEY-Werte.</strong></a> | 
+| Eigenschaftswerte sind <a href="/windows/win32/api/propidl/ns-propidl-propvariant"><strong>PROPVARIANT-Werte.</strong></a> | Eigenschaftswerte sind <a href="/windows/win32/api/propidl/ns-propidl-propvariant"><strong>PROPVARIANT-Werte.</strong></a> | 
+
 
 
 
@@ -86,7 +53,7 @@ Shellmetadaten erfordern im Allgemeinen nicht Windows 7, aber Media Foundation h
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | [Shellmetadatenanbieter](shell-metadata-providers.md)<br/>                       | Ab Windows 7 macht Media Foundation Metadaten über die [**IPropertyStore-Schnittstelle**](/windows/win32/api/propsys/nn-propsys-ipropertystore) verfügbar.<br/> |
 | [Metadateneigenschaften für Mediendateien](metadata-properties-for-media-files.md)<br/> | In diesem Thema werden die gängigsten Metadateneigenschaften für Mediendateien aufgeführt.<br/>                                                           |
-| [Metadatenanbieter in Windows Vista](metadata-providers-in-windows-vista.md)<br/> | In Windows Vista macht Media Foundation Metadaten über die [**INTERFACESMetadata-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadata) verfügbar.<br/>                   |
+| [Metadatenanbieter in Windows Vista](metadata-providers-in-windows-vista.md)<br/> | In Windows Vista macht Media Foundation Metadaten über die [**BEFMetadata-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfmetadata) verfügbar.<br/>                   |
 
 
 
@@ -98,7 +65,7 @@ Wenn Sie eine benutzerdefinierte Medienquelle implementieren und Shellmetadaten 
 
 <dl> <dt>
 
-[Media Foundation Programmierhandbuch](media-foundation-programming-guide.md)
+[Media Foundation-Programmierhandbuch](media-foundation-programming-guide.md)
 </dt> </dl>
 
  

@@ -1,18 +1,18 @@
 ---
 title: IMsRdpClient7 AdvancedSettings8-Eigenschaft
-description: Ruft ein Objekt ab, das die IMsRdpClientAdvancedSettings7-Schnittstelle unterstützt.
+description: Ruft ein -Objekt ab, das die IMsRdpClientAdvancedSettings7-Schnittstelle unterstützt.
 ms.assetid: e3bb3b74-52db-4ec2-999c-9d12c24f65be
 ms.tgt_platform: multiple
 keywords:
 - AdvancedSettings8-Eigenschaft Remotedesktopdienste
-- AdvancedSettings8-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, AdvancedSettings8-Eigenschaft
-- AdvancedSettings8-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, AdvancedSettings8-Eigenschaft
-- AdvancedSettings8-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, AdvancedSettings8-Eigenschaft
-- AdvancedSettings8-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, AdvancedSettings8-Eigenschaft
+- AdvancedSettings8-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , AdvancedSettings8-Eigenschaft
+- AdvancedSettings8-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , AdvancedSettings8-Eigenschaft
+- AdvancedSettings8-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , AdvancedSettings8-Eigenschaft
+- AdvancedSettings8-Eigenschaft Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , AdvancedSettings8-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -30,16 +30,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 887306216682ba1555739a4258b8337694fabe0d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 07fb08feba16331f02390ca65f1823d162b19204ddc099ea48e7672209766d01
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099450"
 ---
-# <a name="imsrdpclient7advancedsettings8-property"></a>IMsRdpClient7:: AdvancedSettings8-Eigenschaft
+# <a name="imsrdpclient7advancedsettings8-property"></a>IMsRdpClient7::AdvancedSettings8-Eigenschaft
 
-Ruft ein Objekt ab, das die [**IMsRdpClientAdvancedSettings7**](imsrdpclientadvancedsettings7.md) -Schnittstelle unterstützt.
+Ruft ein -Objekt ab, das die [**IMsRdpClientAdvancedSettings7-Schnittstelle**](imsrdpclientadvancedsettings7.md) unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -56,7 +56,7 @@ HRESULT get_AdvancedSettings8(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse eines [**IMsRdpClientAdvancedSettings7**](imsrdpclientadvancedsettings7.md) -Schnittstellen Zeigers, der das-Objekt empfängt.
+Die Adresse eines [**IMsRdpClientAdvancedSettings7-Schnittstellenzeigers,**](imsrdpclientadvancedsettings7.md) der das Objekt empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 

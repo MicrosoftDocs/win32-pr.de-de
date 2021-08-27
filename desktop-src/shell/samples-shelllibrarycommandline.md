@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht die Verwendung der ishelllibrary-Schnittstelle zum Erstellen einer Befehlszeilen Anwendung, die programmgesteuerten Zugriff auf die Untersuchung und Bearbeitung von Bibliotheken und Bibliotheksdateien ermöglicht.
+description: Veranschaulicht die Verwendung der IShellLibrary-Schnittstelle zum Erstellen einer Befehlszeilenanwendung, die programmgesteuerten Zugriff zum Überprüfen und Bearbeiten von Bibliotheken und Bibliotheksdateien bietet.
 title: Beispiel für die Befehlszeile der Shellbibliothek
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: c9db182498791fee344061c91ea570ed770f3a2a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e85595de3e7dab60be7741f95598f5d4e4d53276d5eff62f499874dea79bb99e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104485771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111190"
 ---
 # <a name="shell-library-command-line-sample"></a>Beispiel für die Befehlszeile der Shellbibliothek
 
-Veranschaulicht die Verwendung der [**ishelllibrary**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary) -Schnittstelle zum Erstellen einer Befehlszeilen Anwendung, die programmgesteuerten Zugriff auf die Untersuchung und Bearbeitung von Bibliotheken und Bibliotheksdateien ermöglicht.
+Veranschaulicht die Verwendung der [**IShellLibrary-Schnittstelle**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary) zum Erstellen einer Befehlszeilenanwendung, die programmgesteuerten Zugriff zum Überprüfen und Bearbeiten von Bibliotheken und Bibliotheksdateien bietet.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows 7               |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -40,21 +40,21 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Shelllibrarycommandline-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/ShellLibraryCommandLine) |
+| GitHub  | [ShellLibraryCommandLine-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/ShellLibraryCommandLine) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

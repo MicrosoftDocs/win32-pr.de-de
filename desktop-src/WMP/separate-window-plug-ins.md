@@ -1,38 +1,38 @@
 ---
-title: Separate Fenster-Plug-ins
-description: Separate Fenster-Plug-ins
+title: Separate Fenster-Plug-Ins
+description: Separate Fenster-Plug-Ins
 ms.assetid: 14bcf4de-5f3d-4e38-be15-64107440350f
 keywords:
-- Windows Media Player-Plug-ins, separates Fenster
-- Plug-ins, separates Fenster
-- Benutzeroberflächen-Plug-ins, separates Fenster
-- UI-Plug-ins, separates Fenster
-- separate Fenster-Plug-ins
+- Windows Media Player-Plug-Ins,separates Fenster
+- Plug-Ins, separates Fenster
+- Benutzeroberflächen-Plug-Ins, separates Fenster
+- Benutzeroberflächen-Plug-Ins, separates Fenster
+- Separate Fenster-Plug-Ins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15433bb58daead913cec4a39bb2951516552260f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0141f97c421f793b2b6916ccd6224e34890576116badd7cd25b67ea40b8ebe8a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123210"
 ---
-# <a name="separate-window-plug-ins"></a>Separate Fenster-Plug-ins
+# <a name="separate-window-plug-ins"></a>Separate Fenster-Plug-Ins
 
-Separate Fenster-UI-Plug-ins werden in ihren eigenen Fenstern angezeigt. Diese Fenster können in Größe oder Größe geändert werden. Es können mehrere separate UI-Plug-in-Fenster gleichzeitig geöffnet werden.
+Separate Windows-Benutzeroberflächen-Plug-Ins werden in ihren eigenen Fenstern angezeigt. Diese Fenster können in der Größe festgelegt oder als größenvergrößerbar festgelegt werden. Mehrere separate Benutzeroberflächen-Plug-In-Fenster können gleichzeitig geöffnet werden.
 
-Separate Fenster-Benutzeroberflächen-Plug-ins sind hilfreich, wenn Sie möchten, dass die von Ihnen bereitgestellten Informationen oder Steuerelemente sichtbar bleiben, wenn der Benutzer aus dem Bereich der wieder **Gabe** wechselt oder ein anderes UI-Plug-in lädt. Alle separaten Fenster-Benutzeroberflächen-Plug-ins, die ausgeführt werden, wenn Windows Media Player geschlossen wird, werden erneut geladen und in derselben Größe und Position angezeigt, wenn der Player erneut gestartet wird.
+Separate Windows-Benutzeroberflächen-Plug-Ins sind nützlich, wenn die von Ihnen zur Verfügung  stellenden Informationen oder Steuerelemente sichtbar bleiben sollen, wenn der Benutzer aus dem Bereich Jetzt wieder verwendet wechselt oder ein anderes Benutzeroberflächen-Plug-In lädt. Alle separaten Windows-Benutzeroberflächen-Plug-Ins, die ausgeführt werden, wenn Windows Media Player geschlossen wird, werden erneut geladen und in der gleichen Größe und Position angezeigt, wenn der Player erneut gestartet wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über das UI-Plug-in**](ui-plug-in-overview.md)
+[**Übersicht über das Benutzeroberflächen-Plug-In**](ui-plug-in-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

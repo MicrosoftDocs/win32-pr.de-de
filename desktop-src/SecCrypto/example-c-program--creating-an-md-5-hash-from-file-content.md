@@ -1,19 +1,19 @@
 ---
-description: 'Beispiel-C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalt'
+description: 'Beispiel C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalten'
 ms.assetid: 3186e292-87fd-425b-b9cf-92a294a57b69
-title: 'Beispiel-C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalt'
+title: 'Beispiel C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalten'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aea252a0afe41574e7636e163e20e024719c4617
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9256436516aafb33d26c73a6e94b463c75ecd3c3c54606bd57ebf2add21652fc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960703"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100820"
 ---
-# <a name="example-c-program-creating-an-md5-hash-from-file-content"></a>Beispiel-C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalt
+# <a name="example-c-program-creating-an-md5-hash-from-file-content"></a>Beispiel C-Programm: Erstellen eines MD5-Hashs aus Dateiinhalten
 
-Im folgenden Beispiel wird die Verwendung von CryptoAPI zum Berechnen des [*MD5*](../secgloss/m-gly.md) -Hashs des Inhalts einer Datei veranschaulicht. Dieses Beispiel führt die Berechnung der Inhalte einer Datei aus, die zur Laufzeit angegeben wird.
+Im folgenden Beispiel wird die Verwendung von CryptoAPI zum Berechnen des [*MD5-Hashs*](../secgloss/m-gly.md) des Inhalts einer Datei veranschaulicht. In diesem Beispiel wird die Berechnung des Inhalts einer Datei ausgeführt, die zur Laufzeit angegeben wird.
 
 
 ```C++

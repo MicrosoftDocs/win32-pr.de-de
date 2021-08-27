@@ -1,7 +1,7 @@
 ---
-description: Die notifyfilterstate-Methode benachrichtigt die PIN, wenn der Zustand des Filters geändert wird.
+description: Die NotifyFilterState-Methode benachrichtigt den Pin, wenn sich der Status des Filters ändert.
 ms.assetid: 0eb3b0e5-9c44-464e-b4ca-bcded731e813
-title: Cbasestreamcontrol. notifyfilterstate-Methode ("strinmctl. h")
+title: CBaseStreamControl.NotifyFilterState-Methode (Strmctl.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ccb96361c8f4938bd95ffdc29229a035a239cc25
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a3433e5c40f86a9e333696774fe671eb7bb90d9803cb9cd6501d7971111e5d36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358716"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131420"
 ---
-# <a name="cbasestreamcontrolnotifyfilterstate-method"></a>Cbasestreamcontrol. notifyfilterstate-Methode
+# <a name="cbasestreamcontrolnotifyfilterstate-method"></a>CBaseStreamControl.NotifyFilterState-Methode
 
-Die `NotifyFilterState` -Methode benachrichtigt die PIN, wenn der Zustand des Filters geändert wird.
+Die `NotifyFilterState` -Methode benachrichtigt den Pin, wenn sich der Status des Filters ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ void NotifyFilterState(
 
 <dl> <dt>
 
-*neuer \_ Status* 
+*Neuer \_ Zustand* 
 </dt> <dd>
 
-Gibt den neuen Zustand als Member der [**Filter \_ Status**](/windows/win32/api/strmif/ne-strmif-filter_state) -Enumeration an.
+Gibt den neuen Zustand als Member der [**FILTER \_ STATE-Enumeration**](/windows/win32/api/strmif/ne-strmif-filter_state) an.
 
 </dd> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Gibt die Startzeit an. Wenn der neue Filter Zustand State \_ Running ist, übergeben Sie den Wert aus der [**imediafilter:: Run**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) -Methode. Andernfalls verwenden Sie den Standardwert.
+Gibt die Startzeit an. Wenn der neue Filterstatus Status \_ Wird ausgeführt lautet, übergeben Sie den Wert aus der [**IMediaFilter::Run-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediafilter-run) Andernfalls verwenden Sie den Standardwert.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Gibt die Startzeit an. Wenn der neue Filter Zustand State \_ Running ist, überg
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bewirkt, dass die [**cbasestreamcontrol:: checkstreamstate**](cbasestreamcontrol-checkstreamstate.md) -Methode nicht mehr wartet. Ruft diese Methode auf, sobald der besitzende Filter den Zustand ändert.
+Diese Methode bewirkt, dass die [**CBaseStreamControl::CheckStreamState-Methode**](cbasestreamcontrol-checkstreamstate.md) das Warten beendet. Rufen Sie diese Methode auf, wenn sich der Zustand des besitzenden Filters ändert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -99,8 +99,8 @@ STDMETHODIMP CMyFilter::Stop()
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Strauch. h" (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Strmctl.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -108,7 +108,7 @@ STDMETHODIMP CMyFilter::Stop()
 
 <dl> <dt>
 
-[**Cbasestreamcontrol-Klasse**](cbasestreamcontrol.md)
+[**CBaseStreamControl-Klasse**](cbasestreamcontrol.md)
 </dt> </dl>
 
  

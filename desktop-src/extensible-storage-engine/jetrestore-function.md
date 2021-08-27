@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9b6699a6241f41b8bd2ef2aa07025e86454c0e6c
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 22aef03477e0a489b27a544255f6583fbe2a60b9
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985673"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122466235"
 ---
 # <a name="jetrestore-function"></a>JetRestore-Funktion
 
@@ -66,7 +66,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war.</p> | 
 | <p>JET_errInvalidPath</p> | <p>Der Vorgang ist fehlgeschlagen, weil einige der bereitgestellten Pfade ungültig sind (der Sicherungspfad, der Zielpfad, der Protokoll- oder Systempfad für die Instanz).</p> | 
 | <p>JET_errPageSizeMismatch</p> | <p>Fehler beim Vorgang, weil die Engine für die Verwendung einer Datenbankseitengröße konfiguriert ist (mit <a href="gg294044(v=exchg.10).md">JetSetSystemParameter</a> für <a href="gg269337(v=exchg.10).md">JET_paramDatabasePageSize</a>), die nicht mit der Datenbankseitengröße übereinstimmt, die zum Erstellen der Transaktionsprotokolldateien oder der Datenbanken verwendet wird, die den Transaktionsprotokolldateien zugeordnet sind.</p> | 
-| <p>JET_errRunningInMultiInstanceMode</p> | <p>Fehler beim Vorgang, weil die Parameter den Einzelinstanzmodus (Windows 2000-Kompatibilitätsmodus) impliziert haben und sich die Engine bereits im Modus mit mehreren Instanzen befindet.</p> | 
+| <p>JET_errRunningInMultiInstanceMode</p> | <p>Fehler beim Vorgang, weil die Parameter den Einzelinstanzmodus implizierten (Windows Kompatibilitätsmodus 2000), und die Engine sich bereits im Modus mit mehreren Instanzen befindet.</p> | 
 
 
 
@@ -74,27 +74,20 @@ Bei Erfolg werden Datenbankdateien aus dem Sicherungssatz an ihrem Speicherort w
 
 Bei einem Fehler verbleibt die Instanz in einem nicht initialisierten Zustand. Der Status der Transaktionsprotokolldateien und aller Datenbanken, auf die von diesen Transaktionsprotokolldateien verwiesen wird, wurde wahrscheinlich geändert, wenn versucht wird, die Wiederherstellung und Wiederherstellung der Datenbanken zu initialisieren.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Der Wiederherstellungsprozess rekonstruiert die Datenbanken, die während der Sicherung an die Instanz angefügt wurden, und speichert die Änderungen wieder in den Datenbankdateien. Das Ergebnis sind Datenbanken, die transaktionskonsynt sind. Nach Möglichkeit werden auch die Änderungen, die seit der Sicherung vorgenommen wurden, bis zur letzten Änderung in den Transaktionsprotokollen in der Datenbank gespeichert. Dies wäre möglich, wenn die seit der Sicherung generierten Transaktionsprotokolle weiterhin im Transaktionsprotokollverzeichnis vorhanden sind. Beachten Sie, dass die generierten Transaktionsprotokolle wiederverwendet werden, wenn die zirkuläre Protokollierung für die Instanz aktiviert wurde, sodass die Wiederherstellung die Änderungen speichern kann, die bis zum Zeitpunkt der Sicherung vorgenommen wurden. In jedem Fall kann dieser Vorgang einige Zeit in Anspruch nehmen, wenn die Anzahl der Transaktionsprotokolldateien, die für die Datenbanken wiedergegeben werden sollen, groß ist.
+Der Wiederherstellungsprozess rekonstruiert die Datenbanken, die während der Sicherung an die Instanz angefügt wurden, und speichert die Änderungen wieder in den Datenbankdateien. Das Ergebnis sind Datenbanken, die transaktionskonsynt sind. Nach Möglichkeit werden auch die Änderungen, die seit der Sicherung vorgenommen wurden, bis zur letzten Änderung in den Transaktionsprotokollen in der Datenbank gespeichert. Dies ist möglich, wenn die seit der Sicherung generierten Transaktionsprotokolle weiterhin im Transaktionsprotokollverzeichnis vorhanden sind. Beachten Sie, dass die generierten Transaktionsprotokolle wiederverwendet werden, wenn die zirkuläre Protokollierung für die Instanz aktiviert wurde, sodass die Wiederherstellung die Änderungen speichern kann, die bis zum Zeitpunkt der Sicherung vorgenommen wurden. In jedem Fall kann dieser Vorgang einige Zeit in Anspruch nehmen, wenn die Anzahl der Transaktionsprotokolldateien, die für die Datenbanken wiedergegeben werden sollen, groß ist.
 
 **JetRestore-Funktionen** müssen für eine Instanz aufgerufen werden, bevor [JetInit](./jetinit-function.md) für diese Instanz aufgerufen wird.
 
-Da während der Wiederherstellung eine erhebliche Anzahl von Datenbankseiten und Transaktionsprotokollen verwendet wird, gibt es eine ganze Reihe von Fehlern, die von diesen Funktionen zurückgegeben werden können. Solche Fehler können von temporären Ressourcenzuordnungsfehlern wie Jet_errOutOfMemory zu Fehlern führen, die physische Beschädigungen wie JET_errReadVerifyFailure, JET_errLogFileCorrupt oder JET_errBadPageLink darstellen. Diese Fehler werden fast immer durch Hardwareprobleme verursacht und können daher nicht vermieden werden. Dateifehler treten am häufigsten als JET_errMissingLogFile oder JET_errAttachedDatabaseMismatch oder JET_errDatabaseSharingViolation oder JET_errInvalidLogSequence auf. Diese Fehler können von der Anwendung verhindert werden. Die Anwendung muss darauf achten, das Repository dieser Dateien vor manipulation durch externe Zwingen wie den Benutzer oder andere Anwendungen zu schützen. Wenn die Anwendung eine Instanz vollständig zerstören möchte, müssen alle der Instanz zugeordneten Dateien gelöscht werden. Dazu gehören die Prüfpunktdatei, die Transaktionsprotokolldateien und alle Datenbankdateien, die an die Instanz angefügt sind.
+Da während der Wiederherstellung eine erhebliche Anzahl von Datenbankseiten und Transaktionsprotokollen verwendet wird, gibt es eine ganze Reihe von Fehlern, die von diesen Funktionen zurückgegeben werden können. Solche Fehler können von temporären Ressourcenzuordnungsfehlern wie Jet_errOutOfMemory zu Fehlern führen, die physische Beschädigungen wie JET_errReadVerifyFailure, JET_errLogFileCorrupt oder JET_errBadPageLink darstellen. Diese Fehler werden fast immer durch Hardwareprobleme verursacht und können daher nicht vermieden werden. Dateifehler treten am häufigsten als JET_errMissingLogFile, JET_errAttachedDatabaseMismatch oder JET_errDatabaseSharingViolation oder JET_errInvalidLogSequence auf. Diese Fehler können von der Anwendung verhindert werden. Die Anwendung muss darauf achten, das Repository dieser Dateien vor manipulation durch externe Zwingen wie den Benutzer oder andere Anwendungen zu schützen. Wenn die Anwendung eine Instanz vollständig zerstören möchte, müssen alle der Instanz zugeordneten Dateien gelöscht werden. Dazu gehören die Prüfpunktdatei, die Transaktionsprotokolldateien und alle Datenbankdateien, die an die Instanz angefügt sind.
 
 Für die verschiedenen Schritte der Wiederherstellung werden Ereignisprotokolleinträge generiert, einschließlich des Fortschritts der Transaktionsprotokollwiedergabe und des Endergebnisses der Wiederherstellung.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetRestoreW</strong> (Unicode) und <strong>JetRestoreA</strong> (ANSI).</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetRestoreW</strong> (Unicode) und <strong>JetRestoreA</strong> (ANSI).</p> | 
 
 
 

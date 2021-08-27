@@ -1,9 +1,9 @@
 ---
-title: SB_SIMPLE Meldung (kommstrg. h)
-description: Gibt an, ob ein Statusfenster einfachen Text anzeigt oder alle durch eine vorherige SB SetParts-Meldung festgelegten Fensterteile anzeigt \_ .
+title: SB_SIMPLE (Commctrl.h)
+description: Gibt an, ob in einem Statusfenster einfacher Text oder alle Fensterteile angezeigt werden, die durch eine vorherige SB \_ SETPARTS-Meldung festgelegt wurden.
 ms.assetid: 457209cb-67d4-4a9f-8d18-75aa5eb9ca1d
 keywords:
-- Windows-Steuerelemente für SB_SIMPLE Meldung
+- SB_SIMPLE von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f7a462a917c86531cd70f5f5c8ea60bf448ff6f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 229f0a896c9adcab6886151753761c62aefb8f4dc6ee21b7e85bb7507bda11f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105063"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120132210"
 ---
-# <a name="sb_simple-message"></a>Einfache SB- \_ Nachricht
+# <a name="sb_simple-message"></a>SB \_ SIMPLE-Nachricht
 
-Gibt an, ob ein Statusfenster einfachen Text anzeigt oder alle durch eine vorherige [**SB \_ SetParts**](sb-setparts.md) -Meldung festgelegten Fensterteile anzeigt.
+Gibt an, ob in einem Statusfenster einfacher Text oder alle Fensterteile angezeigt werden, die durch eine vorherige [**SB \_ SETPARTS-Meldung festgelegt**](sb-setparts.md) wurden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Gibt an, ob ein Statusfenster einfachen Text anzeigt oder alle durch eine vorher
 *wParam* 
 </dt> <dd>
 
-Flag des Anzeige Typs. Wenn dieser Parameter **true** ist, wird im Fenster einfacher Text angezeigt. Wenn der Wert **false** ist, werden mehrere Teile angezeigt.
+Anzeigetypflag. Wenn dieser Parameter **TRUE ist,** zeigt das Fenster einfachen Text an. Wenn der Wert **FALSE ist,** werden mehrere Teile angezeigt.
 
 </dd> <dt>
 
@@ -43,9 +43,9 @@ Flag des Anzeige Typs. Wenn dieser Parameter **true** ist, wird im Fenster einfa
 
 Der Rückgabewert wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Statusfenster von nicht einfache in Simple geändert wird oder umgekehrt, wird das Fenster sofort neu gezeichnet.
+Wenn das Statusfenster von "nonsimple" in "simple" oder umgekehrt geändert wird, wird das Fenster sofort neu gezeichnet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn das Statusfenster von nicht einfache in Simple geändert wird oder umgekehr
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

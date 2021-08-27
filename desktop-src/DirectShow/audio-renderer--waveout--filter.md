@@ -1,91 +1,29 @@
 ---
-description: Filter für audiorenderer (waveout)
+description: Filter für Audiorenderer (WaveOut)
 ms.assetid: a3f2776b-974b-4886-82a3-38e00b607a07
-title: Filter für audiorenderer (waveout)
+title: Filter für Audiorenderer (WaveOut)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5f47018d22bcbbdcf884f5eb4356d1d0b3fe60d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: eef79acb21221c1a0b91efc2da67773534fe54ca
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346612"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470157"
 ---
-# <a name="audio-renderer-waveout-filter"></a>Filter für audiorenderer (waveout)
+# <a name="audio-renderer-waveout-filter"></a>Filter für Audiorenderer (WaveOut)
 
-Dieser Filter verwendet die waveout \* -API zum Rendering von Wellenform-Audiodaten. Der [DirectSound-rendererfilter](directsound-renderer-filter.md) bietet jedoch die gleiche Funktionalität mithilfe von DirectSound. Standardmäßig verwendet der Filter Graph-Manager den DirectSound-Renderer anstelle dieses Filters. Die Audiomischung ist im waveout-audiorenderer deaktiviert. Wenn Sie also mehrere Audiostreams während der Wiedergabe mischen müssen, verwenden Sie den DirectSound-Renderer.
+Dieser Filter verwendet die \* waveOut-API, um Waveformaudio zu rendern. Der [DirectSound-Rendererfilter](directsound-renderer-filter.md) bietet jedoch die gleiche Funktionalität mit DirectSound. Standardmäßig verwendet der Filter Graph Manager anstelle dieses Filters den DirectSound-Renderer. Die Audiomischung ist im WaveOut-Audiorenderer deaktiviert. Wenn Sie also während der Wiedergabe mehrere Audiostreams mischen müssen, verwenden Sie den DirectSound-Renderer.
 
-Dieser Filter überprüft den Untertyp des Audiostreams nicht. Die im Format übergebenen [**wellenformat**](/windows/win32/api/mmreg/ns-mmreg-waveformat) -oder [**WaveFormatEx**](/previous-versions/dd757713(v=vs.85)) -Struktur enthält die Informationen, die für die Verbindung erforderlich sind.
+Dieser Filter überprüft nicht den Untertyp des Audiostreams. Die im Format [**übergebene WAVEFORMAT-**](/windows/win32/api/mmreg/ns-mmreg-waveformat) oder [**WAVEFORMATEX-Struktur**](/previous-versions/dd757713(v=vs.85)) enthält die für die Verbindung erforderlichen Informationen.
 
-Dieser Filter unterstützt eine Reihe von Stichproben Raten, die vom Audiotreiber abhängig sind.
+Dieser Filter unterstützt eine Reihe von Abtastraten, die vom Audiotreiber abhängen.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Filter Schnittstellen</td>
-<td><ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamaudiorendererstats"><strong>Iamaudiorendererstats</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamclockslave"><strong>Iamclockslave</strong></a></li>
-<li><a href="/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound"><strong>Iamdirectsound</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol"><strong>Iamresourcecontrol</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>Ibasefilter</strong></a></li>
-<li><a href="/windows/desktop/api/Control/nn-control-ibasicaudio"><strong>Ibasicaudiodatei</strong></a></li>
-<li><a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>Imediaposition</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>Imediaseeking</strong></a></li>
-<li>IPersistPropertyBag</li>
-<li>IPersistStream</li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>Iqualitycontrol</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ireferenceclock"><strong>IReferenceClock</strong></a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Eingabe-PIN-Medientypen</td>
-<td><strong>MEDIATYPE_Audio</strong></td>
-</tr>
-<tr class="odd">
-<td>PIN-Eingabeschnittstellen</td>
-<td><ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a></li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>Iqualitycontrol</strong></a></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Ausgabe-PIN-Medientypen</td>
-<td>Nicht zutreffend</td>
-</tr>
-<tr class="odd">
-<td>PIN-Schnittstellen</td>
-<td>Nicht zutreffend</td>
-</tr>
-<tr class="even">
-<td>CLSID Filtern</td>
-<td><strong>CLSID_AudioRender</strong></td>
-</tr>
-<tr class="odd">
-<td>CLSID der Eigenschaften Seite</td>
-<td><strong>CLSID_AudioProperties</strong> <strong>CLSID_AudioRendererAdvancedProperties</strong></td>
-</tr>
-<tr class="even">
-<td>Ausführbare Datei</td>
-<td>quartz.dll</td>
-</tr>
-<tr class="odd">
-<td><a href="merit.md">Verdienst</a></td>
-<td><strong>MERIT_DO_NOT_USE</strong></td>
-</tr>
-<tr class="even">
-<td><a href="filter-categories.md">Filter Kategorie</a></td>
-<td><strong>CLSID_AudioRendererCategory</strong></td>
-</tr>
-</tbody>
-</table>
+
+| | | Filterschnittstellen | <ul><li><a href="/windows/desktop/api/Strmif/nn-strmif-iamaudiorendererstats"><strong>IAMAudioRendererStats</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iamclockslave"><strong>IAMClockSlave</strong></a></li><li><a href="/previous-versions/windows/desktop/api/Amaudio/nn-amaudio-iamdirectsound"><strong>IAMDirectSound</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iamresourcecontrol"><strong>IAMResourceControl</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a></li><li><a href="/windows/desktop/api/Control/nn-control-ibasicaudio"><strong>IBasicAudio</strong></a></li><li><a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>IMediaPosition</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a></li><li>IPersistPropertyBag</li><li>Ipersiststream</li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ireferenceclock"><strong>IReferenceClock</strong></a></li></ul> | | Eingabepinmedientypen | <strong>MEDIATYPE_Audio</strong> | | Eingabepinschnittstellen | <ul><li><a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>Ipin</strong></a></li><li><a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a></li></ul> | | Ausgabepinmedientypen | Nicht zutreffend. | | Ausgabepinschnittstellen | Nicht zutreffend. | | Filtern von CLSID-| <strong>CLSID_AudioRender</strong> | | CLSID-| der Eigenschaftenseite <strong>CLSID_AudioProperties</strong> <strong>, CLSID_AudioRendererAdvancedProperties</strong> | | Ausführbare | quartz.dll | | <a href="merit.md">Vorteile</a>  |  <strong>MERIT_DO_NOT_USE</strong> | | <a href="filter-categories.md">Filterkategorie</a>  |  <strong>CLSID_AudioRendererCategory</strong> | 
+
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Sessionstatechangetrigger (triggergroup)-Element
-description: Gibt einen-Endpunkt an, der einen Task startet, wenn sich der Status einer Terminal Server Sitzung ändert.
+title: SessionStateChangeTrigger (triggerGroup)-Element
+description: Gibt einen Trigger an, der eine Aufgabe startet, wenn sich der Status einer Terminalserversitzung ändert.
 ms.assetid: 38b0da3c-205f-48c5-83e6-ff7c432c02b9
 keywords:
-- Sessionstatechange-Element Taskplaner
+- SessionStateChangeTrigger-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d21847a929e79e2da53b1e66a23aec0c2f1c630f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d22b2f47584f437c01575ffecfb6d5c25e312b9584ba46abc9d6997e14187eaf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099820"
 ---
-# <a name="sessionstatechangetrigger-triggergroup-element"></a>Sessionstatechangetrigger (triggergroup)-Element
+# <a name="sessionstatechangetrigger-triggergroup-element"></a>SessionStateChangeTrigger (triggerGroup)-Element
 
-Gibt einen-Endpunkt an, der einen Task startet, wenn sich der Status einer Terminal Server Sitzung ändert.
+Gibt einen Trigger an, der eine Aufgabe startet, wenn sich der Status einer Terminalserversitzung ändert.
 
 ``` syntax
 <xs:element name="SessionStateChangeTrigger"
@@ -30,7 +30,7 @@ Gibt einen-Endpunkt an, der einen Task startet, wenn sich der Status einer Termi
  />
 ```
 
-Das **sessionstatechangetrigger** -Element wird von [**triggergroup**](taskschedulerschema-triggergroup-group.md) definiert.
+Das **SessionStateChangeTrigger-Element** wird durch die [**triggerGroup definiert.**](taskschedulerschema-triggergroup-group.md)
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,7 +38,7 @@ Das **sessionstatechangetrigger** -Element wird von [**triggergroup**](tasksched
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------|
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
+| [**Auslöser**](taskschedulerschema-triggers-tasktype-element.md) | [**triggersType**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die die Aufgabe starten.<br/> |
 
 
 
@@ -48,17 +48,17 @@ Das **sessionstatechangetrigger** -Element wird von [**triggergroup**](tasksched
 
 | Element                                                                                      | type                                                                                    | BESCHREIBUNG                                                                                                                                           |
 |----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-sessionstatechangetriggertype-element.md)             | duration                                                                                | Gibt einen Wert an, der die Länge der Verzögerung angibt, bevor ein Task gestartet wird, wenn eine Terminal Server-Sitzungs Zustandsänderung erkannt wird.<br/> |
-| [**StateChange**](taskschedulerschema-statechange-sessionstatechangetriggertype-element.md) | [**sessionstatechangetype**](taskschedulerschema-sessionstatechangetype-simpletype.md) | Gibt die Art der Terminal Server-Sitzungs Änderung an, die einen Task Start auslöst.<br/>                                                     |
-| [**UserID**](taskschedulerschema-userid-sessionstatechangetriggertype-element.md)           | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md)                 | Gibt den Benutzer für die Terminal Server Sitzung an. Wenn eine Sitzungs Zustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.<br/>              |
+| [**Verzögern**](taskschedulerschema-delay-sessionstatechangetriggertype-element.md)             | duration                                                                                | Gibt einen Wert an, der die Länge der Verzögerung angibt, bevor ein Task gestartet wird, wenn eine Änderung des Sitzungszustands des Terminalservers erkannt wird.<br/> |
+| [**StateChange**](taskschedulerschema-statechange-sessionstatechangetriggertype-element.md) | [**sessionStateChangeType**](taskschedulerschema-sessionstatechangetype-simpletype.md) | Gibt die Art der Terminalserver-Sitzungsänderung an, die einen Taskstart auslösen würde.<br/>                                                     |
+| [**Userid**](taskschedulerschema-userid-sessionstatechangetriggertype-element.md)           | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md)                 | Gibt den Benutzer für die Terminalserversitzung an. Wenn eine Änderung des Sitzungszustands für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.<br/>              |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird ein Sitzungs Status Änderungs-Auslösung mithilfe des [**sessionstatechangeghost**](sessionstatechangetrigger.md) -Objekts angegeben.
+Für die Skriptentwicklung wird ein Sitzungszustandsänderungstrigger mithilfe des [**SessionStateChangeTrigger-Objekts**](sessionstatechangetrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird ein Sitzungs Status Änderungs-Auslösung mithilfe der [**isessionstatechange-**](/windows/desktop/api/taskschd/nn-taskschd-isessionstatechangetrigger) Schnittstelle angegeben.
+Für die C++-Entwicklung wird ein Sitzungszustandsänderungstrigger mithilfe der [**ISessionStateChangeTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-isessionstatechangetrigger) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,8 +66,8 @@ Bei der C++-Entwicklung wird ein Sitzungs Status Änderungs-Auslösung mithilfe 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

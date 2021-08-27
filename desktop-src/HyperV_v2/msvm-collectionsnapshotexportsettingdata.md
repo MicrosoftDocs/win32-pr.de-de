@@ -1,5 +1,5 @@
 ---
-description: Exportieren von Einstellungsdaten, die an die exportsnapshot-Methode der MSVM \_ collectionsnapshotservice-Klasse übermittelt werden sollen.
+description: Exportieren Sie Einstellungsdaten, die an die ExportSnapshot-Methode der Msvm \_ CollectionSnapshotService-Klasse übergeben werden sollen.
 ms.assetid: 03b448ed-72bc-485e-bb31-4445c53baa1c
 title: Msvm_CollectionSnapshotExportSettingData-Klasse
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 3e146fe2e2af17223e792d86cff16bf1c4149dd6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd148b7ea73bf7c2eaff7f648c7084c37a8669779515749611c675e7f5564d1c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130630"
 ---
-# <a name="msvm_collectionsnapshotexportsettingdata-class"></a>MSVM \_ collectionsnapshotexportsettingdata-Klasse
+# <a name="msvm_collectionsnapshotexportsettingdata-class"></a>Msvm \_ CollectionSnapshotExportSettingData-Klasse
 
-Exportieren von Einstellungsdaten, die an die exportsnapshot-Methode der [**MSVM \_ collectionsnapshotservice**](msvm-collectionsnapshotservice.md) -Klasse übermittelt werden sollen.
+Exportieren Sie Einstellungsdaten, die an die ExportSnapshot-Methode der [**Msvm \_ CollectionSnapshotService-Klasse übergeben werden**](msvm-collectionsnapshotservice.md) sollen.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -43,67 +43,67 @@ class Msvm_CollectionSnapshotExportSettingData : CIM_SettingData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ collectionsnapshotexportsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ CollectionSnapshotExportSettingData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ collectionsnapshotexportsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ CollectionSnapshotExportSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Backupintent**
+**BackupIntent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Gibt die Absicht an, wie die exportierten Sicherungs Sätze verwendet werden sollen:
+Gibt die Absicht an, wie die exportierten Sicherungssätze verwendet werden:
 
 <dt>
 
 <span id="BackupIntentPreserveChain"></span><span id="backupintentpreservechain"></span><span id="BACKUPINTENTPRESERVECHAIN"></span>
 
-<span id="BackupIntentPreserveChain"></span><span id="backupintentpreservechain"></span><span id="BACKUPINTENTPRESERVECHAIN"></span>**Backupintentpreservechain** (1)
+<span id="BackupIntentPreserveChain"></span><span id="backupintentpreservechain"></span><span id="BACKUPINTENTPRESERVECHAIN"></span>**BackupIntentPreserveChain** (1)
 
 
 </dt> <dd>
 
-Alle exportierten vollständigen und differenziellen Sicherungs Sätze werden unverändert beibehalten.
+Alle exportierten vollständigen und differenziellen Sicherungssätze bleiben erhalten.
 
 </dd> <dt>
 
 <span id="BackupIntentMerge"></span><span id="backupintentmerge"></span><span id="BACKUPINTENTMERGE"></span>
 
-<span id="BackupIntentMerge"></span><span id="backupintentmerge"></span><span id="BACKUPINTENTMERGE"></span>**Backupintentmerge** (2)
+<span id="BackupIntentMerge"></span><span id="backupintentmerge"></span><span id="BACKUPINTENTMERGE"></span>**BackupIntentMerge** (2)
 
 
 </dt> <dd>
 
-Die exportierten vollständigen und differenziellen Sicherungs Sätze werden zusammengeführt, um vollständige Sicherungs Sätze zu synthetisieren.
+Die exportierten vollständigen und differenziellen Sicherungssätze werden zusammengeführt, um vollständige Sicherungssätze zu synthetisieren.
 
 </dd> </dl>
 
 </dd> <dt>
 
-**Copyvmstorage**
+**CopyVmStorage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Wenn der Wert **true** ist, wird der VM-Speicher beim Exportieren des virtuellen Computers kopiert. Andernfalls **false.**
+true **gibt an,** dass der VM-Speicher kopiert wird, wenn der virtuelle Computer exportiert wird. Andernfalls **false.**
 
 </dd> <dt>
 
-**Differenalbackupbase**
+**DifferentialBackupBase**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -112,7 +112,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Basis für differenziellen Export. Dies ist entweder ein Pfad zu einer [**MSVM \_ referencepointcollection**](msvm-referencepointcollection.md) -Instanz, die den Verweis Punkt darstellt, oder ein Pfad zu einer [**MSVM- \_ snapshotcollection**](msvm-snapshotcollection.md) -Instanz, die die Momentaufnahme darstellt, die als Basis für den differenziellen Export verwendet werden soll.
+Basis für differenziellen Export. Dies ist entweder der Pfad zu einer [**Msvm \_ ReferencePointCollection-Instanz,**](msvm-referencepointcollection.md) die den Verweispunkt darstellt, oder der Pfad zu einer [**Msvm \_ SnapshotCollection-Instanz,**](msvm-snapshotcollection.md) die die Momentaufnahme darstellt, die als Basis für den differenziellen Export verwendet werden soll.
 
 </dd> </dl>
 
@@ -122,10 +122,10 @@ Basis für differenziellen Export. Dies ist entweder ein Pfad zu einer [**MSVM \
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -134,7 +134,7 @@ Basis für differenziellen Export. Dies ist entweder ein Pfad zu einer [**MSVM \
 
 <dl> <dt>
 
-[**CIM- \_ SettingData**](cim-settingdata.md)
+[**CIM \_ SettingData**](cim-settingdata.md)
 </dt> </dl>
 
  

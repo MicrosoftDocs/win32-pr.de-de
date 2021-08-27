@@ -1,7 +1,7 @@
 ---
-description: Fügt zwei Oberflächen Darstellungen im Kernel Modus an.
+description: Fügt zwei Oberflächendarstellungen im Kernelmodus an.
 ms.assetid: f1b1859f-8b62-4385-9e8a-296086446fe7
-title: Ntgdiddattachsurface-Funktion (ntgdi. h)
+title: NtGdiDdAttachSurface-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: a3d099e7b3a3106e0e1e4285b37d2ea205baf3d5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 8ec07f539cfa2a99338d8366f10f7c3d79dbdd5ef26a6de0ee0296941e2c84ff
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088030"
 ---
-# <a name="ntgdiddattachsurface-function"></a>Ntgdiddattachsurface-Funktion
+# <a name="ntgdiddattachsurface-function"></a>NtGdiDdAttachSurface-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Fügt zwei Oberflächen Darstellungen im Kernel Modus an.
+Fügt zwei Oberflächendarstellungen im Kernelmodus an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,41 +45,41 @@ BOOL APIENTRY NtGdiDdAttachSurface(
 
 <dl> <dt>
 
-*hsurfacefrom* \[ in\]
+*hSurfaceFrom* \[ In\]
 </dt> <dd>
 
-Handle für das kernelmodusobjekt, das als Ausgangspunkt der neuen Anlage verwendet wird.
+Handle für das Kernelmodus-Oberflächenobjekt, das der Startpunkt der neuen Anlage ist.
 
 </dd> <dt>
 
-*hsurfaceto* \[ in\]
+*hSurfaceTo* \[ In\]
 </dt> <dd>
 
-Handle für das kernelmodusobjekt, das der Endpunkt der neuen Anlage ist.
+Handle für das Kernelmodus-Oberflächenobjekt, das der Endpunkt der neuen Anlage ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ntgdiddattachsurface** gibt eine der folgenden Elemente zurück:
+**NtGdiDdAttachSurface** gibt eine der folgenden Angaben zurück:
 
 
 
 | Rückgabecode                                                                          | Beschreibung                             |
 |--------------------------------------------------------------------------------------|-----------------------------------------|
-| <dl> <dt>**Fall**</dt> </dl>  | Der Funktions Aufrufvorgang war erfolgreich.<br/> |
-| <dl> <dt>**Alarm**</dt> </dl> | Fehler beim Funktions Aufruf.<br/>    |
+| <dl> <dt>**STIMMT**</dt> </dl>  | Der Funktionsaufruf war erfolgreich.<br/> |
+| <dl> <dt>**FALSE**</dt> </dl> | Fehler beim Funktionsaufruf.<br/>    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine vollständige Beschreibung der oberflächenanlagen finden Sie unter DirectDraw Software Development Kit (SDK) und Driver Development Kit (DDK).
+Eine vollständige Beschreibung der Oberflächenanlagen finden Sie unter DirectDraw Software Development Kit (SDK) und Driver Development Kit (DDK).
 
 > [!Note]  
-> Wie bei anderen oberflächenanlagen ist die resultierende Anlage unidirektional. Nachdem diese Funktion aufgerufen wurde, wird *hsurfaceto* nicht an *hsurfacefrom* angefügt.
+> Wie bei anderen Oberflächenanlagen ist die resultierende Anlage eine einseitige Anlage. Nachdem diese Funktion aufgerufen wurde, wird *hSurfaceTo* nicht an *hSurfaceFrom* angefügt.
 
  
 
@@ -91,7 +91,7 @@ Eine vollständige Beschreibung der oberflächenanlagen finden Sie unter DirectD
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
@@ -99,7 +99,7 @@ Eine vollständige Beschreibung der oberflächenanlagen finden Sie unter DirectD
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

@@ -1,85 +1,85 @@
 ---
-title: Manuelles SA
-description: Mit dem IPSec-Richtlinien Szenario "manuelle Sicherheits Zuordnung (SA)" können Aufrufer die integrierten IPsec-Schlüssel Bindungs Module (IKE und AuthIP) umgehen, indem Sie die IPSec-SAS direkt angeben, um den Netzwerkverkehr zu sichern.
+title: Manuelle Sa
+description: Das IPsec-Richtlinienszenario für die manuelle Sicherheitszuordnung (Manual Security Association, SA) ermöglicht Aufrufern, die integrierten IPsec-Schlüsselmodule (IKE und AuthIP) zu umgehen, indem sie IPsec-SAs direkt angeben, um jeglichen Netzwerkdatenverkehr zu schützen.
 ms.assetid: 2bcc0b40-ca43-43c6-b1e4-b64426ef7ff4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: beeef4486e3a07dea2e83d924c2354a3dabca241
-ms.sourcegitcommit: 78b64f3865e64768b5319d4f010032ee68924a98
+ms.openlocfilehash: 20cdb3d7c67d9cfa513cbdff846c02fd6ba61ebf031672fb86887bc01c90455b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107314573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083320"
 ---
-# <a name="manual-sa"></a>Manuelles SA
+# <a name="manual-sa"></a>Manuelle Sa
 
-Mit dem IPSec-Richtlinien Szenario "manuelle Sicherheits Zuordnung (SA)" können Aufrufer die integrierten IPsec-Schlüssel Bindungs Module (IKE und AuthIP) umgehen, indem Sie die IPSec-SAS direkt angeben, um den Netzwerkverkehr zu sichern.
+Das IPsec-Richtlinienszenario für die manuelle Sicherheitszuordnung (Manual Security Association, SA) ermöglicht Aufrufern, die integrierten IPsec-Schlüsselmodule (IKE und AuthIP) zu umgehen, indem sie IPsec-SAs direkt angeben, um jeglichen Netzwerkdatenverkehr zu schützen.
 
-Ein Beispiel für ein mögliches Manuelles SA-Szenario ist "Hinzufügen eines IPSec-SA-Paars zum Sichern des gesamten unicastdatenverkehrs zwischen IP-Adressen 1.1.1.1 & 2.2.2.2, mit Ausnahme von ICMP, mit IPSec-Transportmodus".
+Ein Beispiel für ein mögliches Szenario mit manueller SA ist das Hinzufügen eines IPsec-SA-Paars, um den gesamten Unicastdatenverkehr zwischen den IP-Adressen 1.1.1 & 2.2.2.2 mit Ausnahme von ICMP mithilfe des IPsec-Transportmodus zu schützen.
 
 > [!Note]  
-> Die folgenden Schritte müssen auf beiden Computern ausgeführt werden, auf denen die IP-Adressen entsprechend festgelegt sind.
+> Die folgenden Schritte müssen auf beiden Computern mit entsprechend festgelegten IP-Adressen ausgeführt werden.
 
  
 
-Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgende WFP-Konfiguration.
+Verwenden Sie die folgende WFP-Konfiguration, um dieses Beispiel programmgesteuert zu implementieren.
 
 <dl>
 
-**Auf der swpm- \_ Schicht \_ eingehender \_ Transport \_ V {4 \| 6} einrichten eingehender Filterregeln pro Paket**  
+**Richten Sie auf FWPM \_ LAYER \_ INBOUND \_ TRANSPORT \_ V{4 6} Regeln für \| die Filterung eingehender Pakete ein.**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
 
     | Filter-Eigenschaft                                                   | Wert                                                         |
     |-------------------------------------------------------------------|---------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | [Nlatunicast](/windows/win32/api/nldef/ne-nldef-nl_address_type) |
-    | **\_ \_ lokale IP-Adresse der Bedingung für die lokale IP- \_ \_ Adresse**                           | Die entsprechende lokale Adresse (1.1.1.1 oder 2.2.2.2).           |
-    | **\_ \_ IP-Adresse für die IP- \_ Adresse der Bedingung \_**                          | Die entsprechende Remote Adresse (1.1.1.1 oder 2.2.2.2).          |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                         |
-    | **Action. calloutkey**                                             | **Swpm-Legende \_ \_ IPSec- \_ Eingangs \_ Transport \_ V {4 \| 6}**         |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | [NlatUnicast](/windows/win32/api/nldef/ne-nldef-nl_address_type) |
+    | **\_ \_ LOKALE \_ \_ IP-ADRESSE DER FWPM-BEDINGUNG**                           | Die entsprechende lokale Adresse (1.1.1.1 oder 2.2.2.2).           |
+    | **IP-REMOTEADRESSE DER \_ \_ FWPM-BEDINGUNG \_ \_**                          | Die entsprechende Remoteadresse (1.1.1.1 oder 2.2.2.2).          |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                         |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ INBOUND \_ TRANSPORT \_ V{4 \| 6}**         |
 
         
-2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
+2.  Ausschließen von ICMP-Datenverkehr von IPsec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
 
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ ICMP {V6}** diese Konstanten werden in Winsock2. h definiert.<br/> |
-    | **Action. Type**                                                   | **f/a- \_ Aktion \_ zulassen**                                                    |
-    | **weight**                                                        | [**IKE-Ausnahmen für den f- \_ Gewichtungs \_ Bereich \_ \_**](filter-weight-identifiers.md)  |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ ICMP{V6}** Diese Konstanten werden in winsock2.h definiert.<br/> |
+    | **action.type**                                                   | **FWP \_ ACTION \_ PERMIT**                                                    |
+    | **weight**                                                        | [**\_ \_ IKE-AUSNAHMEN FÜR DEN FWPM-GEWICHTUNGSBEREICH \_ \_**](filter-weight-identifiers.md)  |
 
         
 
-**Bei der WPM- \_ Schicht \_ ausgehende \_ Transport \_ V {4 \| 6} Einrichten von ausgehenden Regeln pro Paket Filtern**  
+**Richten Sie auf der FWPM \_ LAYER \_ OUTBOUND \_ TRANSPORT \_ V{4 6} Regeln für \| die Filterung ausgehender Daten pro Paket ein.**  
 
 1.  Fügen Sie einen Filter mit den folgenden Eigenschaften hinzu. 
 
     | Filter-Eigenschaft                                                   | Wert                                                  |
     |-------------------------------------------------------------------|--------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                            |
-    | "F" **\_ Bedingung für die \_ \_ lokale \_ Adress** Filterung der Bedingung       | Die entsprechende lokale Adresse (1.1.1.1 oder 2.2.2.2).    |
-    | "F" **\_ Bedingung zum Filtern der Bedingung \_ IP- \_ Remote \_ Adresse**      | Die entsprechende Remote Adresse (1.1.1.1 oder 2.2.2.2).   |
-    | **Action. Type**                                                   | **aufrufende f- \_ Aktions Legende \_ \_**                  |
-    | **Action. calloutkey**                                             | **WPM-Legende \_ \_ IPSec- \_ ausgehenden \_ Transport \_ V {4 \| 6}** |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                            |
+    | **FWPM \_ BEDINGUNG \_ IP \_ LOCAL \_ ADDRESS** filtering condition       | Die entsprechende lokale Adresse (1.1.1.1 oder 2.2.2.2).    |
+    | **FWPM \_ BEDINGUNG \_ IP \_ REMOTE \_ ADDRESS** Filterungsbedingung      | Die entsprechende Remoteadresse (1.1.1.1 oder 2.2.2.2).   |
+    | **action.type**                                                   | **\_FWP-AKTIONSAUFRUF \_ \_ BEENDET**                  |
+    | **action.calloutKey**                                             | **FWPM \_ CALLOUT \_ IPSEC \_ AUSGEHENDER \_ TRANSPORT \_ V{4 \| 6}** |
 
         
-2.  Ausnehmen von ICMP-Datenverkehr von IPSec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
+2.  Ausschließen von ICMP-Datenverkehr von IPsec durch Hinzufügen eines Filters mit den folgenden Eigenschaften. 
 
     | Filter-Eigenschaft                                                   | Wert                                                                      |
     |-------------------------------------------------------------------|----------------------------------------------------------------------------|
-    | "F" **\_ Bedingung für die Filterbedingung für die \_ \_ lokale \_ Adress \_ Typen Bedingung** | Nlatunicast                                                                |
-    | "F" **\_ Bedingung für Bedingung \_ -IP- \_ Protokoll** Filterung             | **Ipproto \_ ICMP {V6}** diese Konstanten werden in Winsock2. h definiert.<br/> |
-    | **Action. Type**                                                   | **f/a- \_ Aktion \_ zulassen**                                                    |
-    | **weight**                                                        | **IKE-Ausnahmen für den f- \_ Gewichtungs \_ Bereich \_ \_**                                   |
+    | **FWPM \_ BEDINGUNG \_ IP LOCAL ADDRESS \_ \_ \_ TYPE** Filterbedingung | NlatUnicast                                                                |
+    | **FWPM \_ BEDINGUNG \_ IP \_ PROTOCOL** Filterungsbedingung             | **IPPROTO \_ ICMP{V6}** Diese Konstanten werden in winsock2.h definiert.<br/> |
+    | **action.type**                                                   | **FWP \_ ACTION \_ PERMIT**                                                    |
+    | **weight**                                                        | **\_ \_ IKE-AUSNAHMEN FÜR DEN FWPM-GEWICHTUNGSBEREICH \_ \_**                                   |
 
         
 
-**Einrichten von eingehenden und ausgehenden Sicherheits Zuordnungen**
+**Einrichten von Eingangs- und Ausgangssicherheitszuordnungen**
 
-1.  Rufen Sie [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)mit dem Parameter *outboundtraffic* auf, der die IP-Adressen as 1.1.1.1 & 2.2.2.2 und **ipsecfilterid** als LUID des oben hinzugefügten IPSec-Legenden Filters der ausgehenden Transportschicht enthält.
-2.  Rufen Sie [**IPsecSaContextGetSpi0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextgetspi0)mit dem *ID* -Parameter auf, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und den *getspi* -Parameter mit den IP-Adressen 1.1.1.1 & 2.2.2.2 und **ipsecfilterid** als LUID des oben hinzugefügten IPSec-Legenden Filters der eingehenden Transportschicht. Der zurückgegebene SPI-Wert ist für die Verwendung als eingehende SA-SPI durch den lokalen Computer und als ausgehende SA-SPI durch den entsprechenden Remote Computer vorgesehen. Beide Computer müssen Out-of-Band-Mittel zum Austauschen der SPI-Werte verwenden.
-3.  Aufrufen von [**IPsecSaContextAddInbound0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextaddinbound0)mit dem *ID* -Parameter, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und dem *inboundbundle* -Parameter, der die Eigenschaften des eingehenden SA-Bundles beschreibt (z. b. der eingehende SA-SPI, der Transformationstyp, Algorithmustypen, Schlüssel usw.
-4.  Aufrufen von [**IPsecSaContextAddOutbound0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextaddoutbound0)mit dem *ID* -Parameter, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und dem *outboundbundle* -Parameter, der die Eigenschaften des ausgehenden SA-Pakets beschreibt (z. b. die ausgehende SA-SPI, der Transformationstyp, Algorithmustypen, Schlüssel usw.).
+1.  Rufen Sie [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)mit dem *Parameter outboundTraffic* auf, der die IP-Adressen als 1.1.1.1 & 2.2.2.2 enthält, und **ipsecFilterId** als LUID des oben hinzugefügten IPsec-Rückruffilters der ausgehenden Transportebene.
+2.  Rufen Sie [**IPsecSaContextGetSpi0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextgetspi0)mit dem *ID-Parameter* auf, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und den *Parameter getSpi,* der die IP-Adressen als 1.1.1.1 & 2.2.2.2 enthält, und **ipsecFilterId** als LUID des oben hinzugefügten IPsec-Rückruffilters für eingehende Transportebene. Der zurückgegebene SPI-Wert soll vom lokalen Computer als eingehende SA SPI und vom entsprechenden Remotecomputer als ausgehende SA SPI verwendet werden. Beide Computer müssen einige Out-of-Band-Mittel verwenden, um die SPI-Werte auszutauschen.
+3.  Rufen Sie [**IPsecSaContextAddInbound0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextaddinbound0)mit dem *ID-Parameter* auf, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und dem *Parameter inboundBundle,* der die Eigenschaften des eingehenden SA-Pakets beschreibt (z. B. die eingehende SA SPI, den Transformationstyp, Algorithmustypen, Schlüssel usw.).
+4.  Rufen Sie [**IPsecSaContextAddOutbound0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextaddoutbound0)mit dem *ID-Parameter* auf, der die von [**IPsecSaContextCreate0**](/windows/desktop/api/Fwpmu/nf-fwpmu-ipsecsacontextcreate0)zurückgegebene Kontext-ID enthält, und dem *Parameter outboundBundle,* der die Eigenschaften des ausgehenden SA-Pakets beschreibt (z. B. die ausgehende SA SPI, den Transformationstyp, Algorithmustypen, Schlüssel usw.).
 
   
 </dl>
@@ -88,16 +88,16 @@ Um dieses Beispielprogramm gesteuert zu implementieren, verwenden Sie die folgen
 
 <dl> <dt>
 
-[Beispielcode: manuelle SA-Schlüssel Erstellung](manual-sa-keying.md)
+[Beispielcode: Manuelle SA-Schlüsselung](manual-sa-keying.md)
 </dt> <dt>
 
-[**Integrierte Legenden Bezeichner**](built-in-callout-identifiers.md)
+[**Integrierte Aufrufbezeichner**](built-in-callout-identifiers.md)
 </dt> <dt>
 
-[**Filtern von ebenenbezeichgern**](management-filtering-layer-identifiers-.md)
+[**Filtern von Ebenenbezeichnern**](management-filtering-layer-identifiers-.md)
 </dt> <dt>
 
-[**\_ACTION0**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_action0)
+[**FWPM \_ ACTION0**](/windows/desktop/api/Fwpmtypes/ns-fwpmtypes-fwpm_action0)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-description: Initiiert den clientseitigen ausgehenden [*Sicherheitskontext*](../secgloss/s-gly.md) aus einem Anmeldeinformationshandle mithilfe der [*eingeschränkten Kerberos-Delegierung.*](../secgloss/s-gly.md)
+description: Initiiert den clientseitigen [](../secgloss/s-gly.md) ausgehenden Sicherheitskontext von einem Anmeldeinformationshand handle mithilfe der eingeschränkten [*Kerberos-Delegierung.*](../secgloss/s-gly.md)
 ms.assetid: b5c968dc-9343-44ed-acbc-a89c58c14e4a
-title: InitializeSecurityContext(Kerberos)-Funktion (Sspi.h)
+title: InitializeSecurityContext-Funktion (Kerberos) (Sspi.h)
 ms.topic: reference
 ms.date: 07/25/2019
-ms.openlocfilehash: f2a88fd930e58be418afa9d508adf9cda73912a8c0c5ea6731c06af5ec41a997
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 8c558174c168b17b67c9c08b1aee92e6dc10161f
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119482600"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470535"
 ---
 # <a name="initializesecuritycontext-kerberos-function"></a>InitializeSecurityContext-Funktion (Kerberos)
 
-Die **Funktion InitializeSecurityContext (Kerberos)** initiiert den clientseitigen ausgehenden [*Sicherheitskontext*](../secgloss/s-gly.md) aus einem Anmeldeinformationshandle. Die -Funktion wird verwendet, um einen [*Sicherheitskontext*](../secgloss/s-gly.md) zwischen der Clientanwendung und einem Remotespeer zu erstellen. **InitializeSecurityContext (Kerberos)** gibt ein Token zurück, das der Client an den Remotespeer übergeben muss, den der Peer wiederum über den [**AcceptSecurityContext-Aufruf (Kerberos)**](acceptsecuritycontext--kerberos.md) an die lokale Sicherheitsimplementierungen übermittelt. Das generierte Token sollte von allen Aufrufern als nicht transparent betrachtet werden.
+Die **InitializeSecurityContext-Funktion (Kerberos)** initiiert den clientseitigen ausgehenden Sicherheitskontext [*von*](../secgloss/s-gly.md) einem Anmeldeinformationshand handle. Die -Funktion wird verwendet, um einen [*Sicherheitskontext zwischen*](../secgloss/s-gly.md) der Clientanwendung und einem Remote-Peer zu erstellen. **InitializeSecurityContext (Kerberos)** gibt ein Token zurück, das der Client an den Remote-Peer übergeben muss, den der Peer wiederum über den [**AcceptSecurityContext-Aufruf (Kerberos)**](acceptsecuritycontext--kerberos.md) an die lokale Sicherheitsimplementierung übermittelt. Das generierte Token sollte von allen Aufrufern als nicht transparent betrachtet werden.
 
-In der Regel wird die **Funktion InitializeSecurityContext (Kerberos)** in einer Schleife aufgerufen, bis ein ausreichender [*Sicherheitskontext*](../secgloss/s-gly.md) eingerichtet ist.
+In der Regel wird die **InitializeSecurityContext-Funktion (Kerberos)** in einer Schleife aufgerufen, bis ein ausreichender [*Sicherheitskontext*](../secgloss/s-gly.md) eingerichtet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ SECURITY_STATUS SEC_Entry InitializeSecurityContext(
 *phCredential* \[ in, optional\]
 </dt> <dd>
 
-Ein Handle für die anmeldeinformationen, die von [**AcquireCredentialsHandle (Kerberos)**](acquirecredentialshandle--kerberos.md)zurückgegeben werden. Dieses Handle wird verwendet, um den [*Sicherheitskontext*](../secgloss/s-gly.md)zu erstellen. Die **Funktion InitializeSecurityContext (Kerberos)** erfordert mindestens OUTBOUND-Anmeldeinformationen.
+Ein Handle für die Anmeldeinformationen, die [**von AcquireCredentialsHandle (Kerberos) zurückgegeben werden.**](acquirecredentialshandle--kerberos.md) Dieses Handle wird verwendet, um den [*Sicherheitskontext zu erstellen.*](../secgloss/s-gly.md) Die **InitializeSecurityContext-Funktion (Kerberos)** erfordert mindestens OUTBOUND-Anmeldeinformationen.
 
 </dd> <dt>
 
@@ -60,27 +60,41 @@ Ein Zeiger auf eine [CTXTHandle-Struktur.](sspi-handles.md) Beim ersten Aufruf v
 *pszTargetName* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Dienstprinzipalnamen (Service Principal Name, SPN) oder den [*Sicherheitskontext*](../secgloss/s-gly.md) des Zielservers angibt.
+Ein Zeiger auf eine auf NULL beendete Zeichenfolge, die den Dienstprinzipalnamen (SERVICE Principal Name, SPN) oder den Sicherheitskontext [*des*](../secgloss/s-gly.md) Zielservers angibt.
 
-Verwenden Sie einen vollqualifizierten Zielnamen, da Kurznamen nicht gesamtstrukturübergreifend unterstützt werden.
+Verwenden Sie einen vollqualifizierten Zielnamen, da Kurznamen gesamtstrukturenübergreifend nicht unterstützt werden.
 
 </dd> <dt>
 
 *fContextReq* \[ In\]
 </dt> <dd>
 
-Bitflags, die Anforderungen für den Kontext angeben. Nicht alle Pakete können alle Anforderungen unterstützen. Flags, die für diesen Parameter verwendet werden, haben das Präfix ISC \_ \_ REQ, z. B. ISC \_ REQ \_ DELEGATE. Dieser Parameter kann mindestens eines der folgenden Attributflags sein.
+Bitflags, die Anforderungen für den Kontext angeben. Nicht alle Pakete können alle Anforderungen unterstützen. Flags, die für diesen Parameter verwendet werden, haben das Präfix ISC REQ, z. \_ \_ B. ISC \_ REQ \_ DELEGATE. Dieser Parameter kann mindestens eines der folgenden Attributflags sein.
 
 
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th>Wert</th><th>Bedeutung</th></tr></thead><tbody><tr class="odd"><td><span id="ISC_REQ_ALLOCATE_MEMORY"></span><span id="isc_req_allocate_memory"></span><dl> <dt><strong>ISC_REQ_ALLOCATE_MEMORY</strong></dt> </dl></td><td>Das [*Sicherheitspaket*](../secgloss/s-gly.md) ordnet Ihnen Ausgabepuffer zu. Wenn Sie die Verwendung der Ausgabepuffer abgeschlossen haben, können Sie sie freigeben, indem Sie die Funktion<strong>[FreeContextBuffer</strong>](/windows/win32/api/sspi/nf-sspi-freecontextbuffer) aufrufen.<br/></td></tr><tr class="even"><td><span id="ISC_REQ_CONFIDENTIALITY"></span><span id="isc_req_confidentiality"></span><dl> <dt><strong>ISC_REQ_CONFIDENTIALITY</strong></dt> </dl></td><td>Verschlüsseln Sie Nachrichten mithilfe der Funktion<strong>[EncryptMessage</strong>](encryptmessage--general.md).<br/></td></tr><tr class="odd"><td><span id="ISC_REQ_CONNECTION"></span><span id="isc_req_connection"></span><dl> <dt><strong>ISC_REQ_CONNECTION</strong></dt> </dl></td><td>Der [*Sicherheitskontext*](../secgloss/s-gly.md) verarbeitet keine Formatierungsmeldungen. Dieser Wert ist die Standardeinstellung.<br/></td></tr><tr class="even"><td><span id="ISC_REQ_DELEGATE"></span><span id="isc_req_delegate"></span><dl> <dt><strong>ISC_REQ_DELEGATE</strong></dt> </dl></td><td>Der Server kann den Kontext verwenden, um sich bei anderen Servern als Client zu authentifizieren. Das ISC_REQ_MUTUAL_AUTH-Flag muss festgelegt werden, damit dieses Flag funktioniert. Gültig für Kerberos. Ignorieren Sie dieses Flag für [*die eingeschränkte Delegierung.*](../secgloss/c-gly.md)<br/></td></tr><tr class="odd"><td><span id="ISC_REQ_EXTENDED_ERROR"></span><span id="isc_req_extended_error"></span><dl> <dt><strong>ISC_REQ_EXTENDED_ERROR</strong></dt> </dl></td><td>Wenn Fehler auftreten, wird die Remotepartei benachrichtigt.<br/></td></tr><tr class="even"><td><span id="ISC_REQ_INTEGRITY"></span><span id="isc_req_integrity"></span><dl> <dt><strong>ISC_REQ_INTEGRITY</strong></dt> </dl></td><td>Signieren Sie Nachrichten, und überprüfen Sie Signaturen mithilfe der Funktionen [<strong>EncryptMessage</strong>](encryptmessage--general.md) und [<strong>MakeSignature</strong>](makesignature.md).<br/></td></tr><tr class="odd"><td><span id="ISC_REQ_MUTUAL_AUTH"></span><span id="isc_req_mutual_auth"></span><dl> <dt><strong>ISC_REQ_MUTUAL_AUTH</strong></dt> </dl></td><td>Die gegenseitige Authentifizierungsrichtlinie des Diensts wird erfüllt.<br/><blockquote>[!Caution]<br />
-Dies bedeutet nicht unbedingt, dass die gegenseitige Authentifizierung ausgeführt wird, sondern nur, dass die Authentifizierungsrichtlinie des Diensts erfüllt ist. Um sicherzustellen, dass die gegenseitige Authentifizierung durchgeführt wird, rufen Sie die Funktion<strong>[QueryContextAttributes (Kerberos)</strong>](querycontextattributes--kerberos.md) auf.</blockquote><br/></td></tr><tr class="even"><td><span id="ISC_REQ_NO_INTEGRITY"></span><span id="isc_req_no_integrity"></span><dl> <dt><strong>ISC_REQ_NO_INTEGRITY</strong></dt> </dl></td><td>Wenn dieses Flag festgelegt ist, wird das <strong>ISC_REQ_INTEGRITY-Flag</strong> ignoriert.<br/></td></tr><tr class="odd"><td><span id="ISC_REQ_REPLAY_DETECT"></span><span id="isc_req_replay_detect"></span><dl> <dt><strong>ISC_REQ_REPLAY_DETECT</strong></dt> </dl></td><td>Erkennen sie wiedergegebene Nachrichten, die mithilfe der Funktionen [<strong>EncryptMessage</strong>](encryptmessage--general.md) oder [<strong>MakeSignature</strong>](makesignature.md) codiert wurden.<br/></td></tr><tr class="even"><td><span id="ISC_REQ_SEQUENCE_DETECT"></span><span id="isc_req_sequence_detect"></span><dl> <dt><strong>ISC_REQ_SEQUENCE_DETECT</strong></dt> </dl></td><td>Erkennen von Nachrichten, die außerhalb der Sequenz empfangen wurden.<br/></td></tr><tr class="odd"><td><span id="ISC_REQ_STREAM"></span><span id="isc_req_stream"></span><dl> <dt><strong>ISC_REQ_STREAM</strong></dt> </dl></td><td>Unterstützung einer streamorientierten Verbindung.<br/></td></tr><tr class="even"><td><span id="ISC_REQ_USE_SESSION_KEY"></span><span id="isc_req_use_session_key"></span><dl> <dt><strong>ISC_REQ_USE_SESSION_KEY</strong></dt> </dl></td><td>Ein neuer [*Sitzungsschlüssel*](../secgloss/s-gly.md) muss ausgehandelt werden.<br/></td></tr></tbody></table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <span id="ISC_REQ_ALLOCATE_MEMORY"></span><span id="isc_req_allocate_memory"></span><dl><dt><strong>ISC_REQ_ALLOCATE_MEMORY</strong></dt></dl> | Das [*Sicherheitspaket*](../secgloss/s-gly.md) ordnet Ausgabepuffer für Sie zu. Wenn Sie die Ausgabepuffer nicht mehr verwenden, geben Sie sie frei, indem Sie die [<strong>FreeContextBuffer-Funktion</strong>](/windows/win32/api/sspi/nf-sspi-freecontextbuffer) aufrufen.<br /> | 
+| <span id="ISC_REQ_CONFIDENTIALITY"></span><span id="isc_req_confidentiality"></span><dl><dt><strong>ISC_REQ_CONFIDENTIALITY</strong></dt></dl> | Verschlüsseln Sie Nachrichten mithilfe der [<strong>EncryptMessage-Funktion.</strong>](encryptmessage--general.md)<br /> | 
+| <span id="ISC_REQ_CONNECTION"></span><span id="isc_req_connection"></span><dl><dt><strong>ISC_REQ_CONNECTION</strong></dt></dl> | Der [*Sicherheitskontext*](../secgloss/s-gly.md) verarbeitet keine Formatierungsmeldungen. Dieser Wert ist die Standardeinstellung.<br /> | 
+| <span id="ISC_REQ_DELEGATE"></span><span id="isc_req_delegate"></span><dl><dt><strong>ISC_REQ_DELEGATE</strong></dt></dl> | Der Server kann den Kontext verwenden, um sich bei anderen Servern als Client zu authentifizieren. Das ISC_REQ_MUTUAL_AUTH-Flag muss festgelegt werden, damit dieses Flag funktioniert. Gültig für Kerberos. Ignorieren Sie dieses Flag für [*die eingeschränkte Delegierung.*](../secgloss/c-gly.md)<br /> | 
+| <span id="ISC_REQ_EXTENDED_ERROR"></span><span id="isc_req_extended_error"></span><dl><dt><strong>ISC_REQ_EXTENDED_ERROR</strong></dt></dl> | Wenn Fehler auftreten, wird die Remote-Partei benachrichtigt.<br /> | 
+| <span id="ISC_REQ_INTEGRITY"></span><span id="isc_req_integrity"></span><dl><dt><strong>ISC_REQ_INTEGRITY</strong></dt></dl> | Signieren Sie Nachrichten, und überprüfen Sie Signaturen mithilfe der [<strong>Funktionen EncryptMessage</strong>](encryptmessage--general.md) und [<strong>MakeSignature.</strong>](makesignature.md)<br /> | 
+| <span id="ISC_REQ_MUTUAL_AUTH"></span><span id="isc_req_mutual_auth"></span><dl><dt><strong>ISC_REQ_MUTUAL_AUTH</strong></dt></dl> | Die Richtlinie für gegenseitige Authentifizierung des Diensts wird erfüllt.<br /><blockquote>[!Caution]<br />Dies bedeutet nicht notwendigerweise, dass die gegenseitige Authentifizierung erfolgt, sondern nur, dass die Authentifizierungsrichtlinie des Diensts erfüllt ist. Um sicherzustellen, dass gegenseitige Authentifizierung ausgeführt wird, rufen Sie die [<strong>Funktion QueryContextAttributes (Kerberos)</strong>](querycontextattributes--kerberos.md) auf.</blockquote><br /> | 
+| <span id="ISC_REQ_NO_INTEGRITY"></span><span id="isc_req_no_integrity"></span><dl><dt><strong>ISC_REQ_NO_INTEGRITY</strong></dt></dl> | Wenn dieses Flag festgelegt ist, wird <strong>ISC_REQ_INTEGRITY</strong> Flag ignoriert.<br /> | 
+| <span id="ISC_REQ_REPLAY_DETECT"></span><span id="isc_req_replay_detect"></span><dl><dt><strong>ISC_REQ_REPLAY_DETECT</strong></dt></dl> | Erkennen von wiedergegebenen Nachrichten, die mithilfe der [<strong>Funktionen EncryptMessage</strong>](encryptmessage--general.md) oder [<strong>MakeSignature codiert</strong>](makesignature.md) wurden.<br /> | 
+| <span id="ISC_REQ_SEQUENCE_DETECT"></span><span id="isc_req_sequence_detect"></span><dl><dt><strong>ISC_REQ_SEQUENCE_DETECT</strong></dt></dl> | Erkennen von Nachrichten, die nicht sequenziert empfangen werden.<br /> | 
+| <span id="ISC_REQ_STREAM"></span><span id="isc_req_stream"></span><dl><dt><strong>ISC_REQ_STREAM</strong></dt></dl> | Unterstützt eine streamorientierte Verbindung.<br /> | 
+| <span id="ISC_REQ_USE_SESSION_KEY"></span><span id="isc_req_use_session_key"></span><dl><dt><strong>ISC_REQ_USE_SESSION_KEY</strong></dt></dl> | Ein neuer [*Sitzungsschlüssel*](../secgloss/s-gly.md) muss ausgehandelt werden.<br /> | 
+
 
 
 
  
 
-Die angeforderten Attribute werden vom Client möglicherweise nicht unterstützt. Weitere Informationen finden Sie unter dem *pfContextAttr-Parameter.*
+Die angeforderten Attribute werden vom Client möglicherweise nicht unterstützt. Weitere Informationen finden Sie unter dem *parameter pfContextAttr.*
 
 Weitere Beschreibungen der verschiedenen Attribute finden Sie unter [Kontextanforderungen.](context-requirements.md)
 
@@ -96,18 +110,18 @@ Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
 *TargetDataRep* \[ In\]
 </dt> <dd>
 
-Die Datendarstellung, z. B. die Bytereihenfolge, auf dem Ziel. Dieser Parameter kann entweder SECURITY \_ NATIVE \_ DREP oder SECURITY \_ NETWORK \_ DREP sein.
+Die Datendarstellung, z. B. die Byte reihenfolge, auf dem Ziel. Dieser Parameter kann entweder SECURITY \_ NATIVE \_ DREP oder SECURITY \_ NETWORK \_ DREP sein.
 
 </dd> <dt>
 
 *pInput* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**SecBufferDesc-Struktur,**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) die Zeiger auf die Puffer enthält, die als Eingabe für das Paket bereitgestellt werden. Sofern der Clientkontext nicht vom Server initiiert wurde, muss der Wert dieses Parameters beim ersten Aufruf der Funktion **NULL** sein. Bei nachfolgenden Aufrufen der Funktion oder wenn der Clientkontext vom Server initiiert wurde, ist der Wert dieses Parameters ein Zeiger auf einen Puffer, der mit genügend Arbeitsspeicher für das vom Remotecomputer zurückgegebene Token zugeordnet ist.
+Ein Zeiger auf eine [**SecBufferDesc-Struktur,**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) die Zeiger auf die Puffer enthält, die als Eingabe für das Paket bereitgestellt werden. Sofern der Clientkontext nicht vom Server initiiert wurde, muss der Wert dieses Parameters beim ersten Aufruf der Funktion **NULL** sein. Bei nachfolgenden Aufrufen der Funktion oder wenn der Clientkontext vom Server initiiert wurde, ist der Wert dieses Parameters ein Zeiger auf einen Puffer, der mit genügend Arbeitsspeicher zum Speichern des vom Remotecomputer zurückgegebenen Tokens zugeordnet ist.
 
 </dd> <dt>
 
-*Reserviert2* \[ In\]
+*Reserved2* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
@@ -117,28 +131,28 @@ Dieser Parameter ist reserviert und muss auf 0 (null) festgelegt werden.
 *phNewContext* \[ in, out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine [CTXTHandle-Struktur.](sspi-handles.md) Beim ersten Aufruf von **InitializeSecurityContext (Kerberos)** empfängt dieser Zeiger das neue Kontexthandle. Beim zweiten Aufruf kann *phNewContext* mit dem im *phContext-Parameter* angegebenen Handle identisch sein.
+Ein Zeiger auf eine [CTXTHandle-Struktur.](sspi-handles.md) Beim ersten Aufruf von **InitializeSecurityContext (Kerberos)** empfängt dieser Zeiger das neue Kontexthand handle. Beim zweiten Aufruf kann *phNewContext* mit dem im *phContext-Parameter* angegebenen Handle identisch sein.
 
 </dd> <dt>
 
 *pOutput* \[ in, out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**SecBufferDesc-Struktur,**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) die Zeiger auf die [**SecBuffer-Struktur**](/windows/win32/api/sspi/ns-sspi-secbuffer) enthält, die die Ausgabedaten empfängt. Wenn ein Puffer in der Eingabe als SEC \_ READWRITE eingegeben wurde, ist er bei der Ausgabe vorhanden. Das System ordnet auf Anforderung (über ISC REQ ALLOCATE MEMORY) einen Puffer für das Sicherheitstoken zu \_ und füllt die Adresse im \_ \_ Pufferdeskriptor für das Sicherheitstoken aus.
+Ein Zeiger auf eine [**SecBufferDesc-Struktur,**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) die Zeiger auf die [**SecBuffer-Struktur**](/windows/win32/api/sspi/ns-sspi-secbuffer) enthält, die die Ausgabedaten empfängt. Wenn ein Puffer in der Eingabe als SEC \_ READWRITE eingegeben wurde, ist er in der Ausgabe vorhanden. Das System ordnet bei Eineranforderung (über ISC REQ ALLOCATE MEMORY) einen Puffer für das Sicherheitstoken zu und füllt die Adresse im Pufferdeskriptor für das \_ \_ \_ Sicherheitstoken aus.
 
 </dd> <dt>
 
 *pfContextAttr* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, um einen Satz von Bitflags zu empfangen, die die [*Attribute*](../secgloss/a-gly.md#_security_attribute_gly) des eingerichteten Kontexts angeben. Eine Beschreibung der verschiedenen Attribute finden Sie unter [Kontextanforderungen.](context-requirements.md)
+Ein Zeiger auf eine Variable, um einen Satz von Bitflags zu empfangen, die die Attribute des eingerichteten [*Kontexts*](../secgloss/a-gly.md#_security_attribute_gly) angeben. Eine Beschreibung der verschiedenen Attribute finden Sie unter [Kontextanforderungen.](context-requirements.md)
 
-Flags, die für diesen Parameter verwendet werden, haben das Präfix ISC \_ RET, z. B. ISC \_ RET \_ DELEGATE. Eine Liste gültiger Werte finden Sie im *fContextReq-Parameter.*
+Flags, die für diesen Parameter verwendet werden, wird ISC \_ RET vorangestellt, z. B. ISC \_ RET \_ DELEGATE. Eine Liste der gültigen Werte finden Sie unter *dem fContextReq-Parameter.*
 
-Suchen Sie erst nach sicherheitsrelevanten Attributen, wenn der letzte Funktionsaufruf erfolgreich zurückgegeben wurde. Attributflags, die nicht mit der Sicherheit in Zusammenhang stehen, z. B. das \_ ASC RET \_ ALLOCATED \_ MEMORY-Flag, können vor der endgültigen Rückgabe überprüft werden.
+Überprüfen Sie erst nach sicherheitsbezogenen Attributen, wenn der letzte Funktionsaufruf erfolgreich zurückgegeben wird. Attributflags, die sich nicht auf die Sicherheit bezieht, z. B. das ASC \_ RET ALLOCATED MEMORY-Flag, können vor der \_ \_ endgültigen Rückgabe überprüft werden.
 
 > [!Note]  
-> Bestimmte Kontextattribute können sich während der Aushandlung mit einem Remotespeer ändern.
+> Bestimmte Kontextattribute können sich während der Aushandlung mit einem Remote-Peer ändern.
 
  
 
@@ -147,7 +161,7 @@ Suchen Sie erst nach sicherheitsrelevanten Attributen, wenn der letzte Funktions
 *ptsExpiry* \[ out, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**TimeStamp-Struktur,**](timestamp.md) die die Ablaufzeit des Kontexts empfängt. Es wird empfohlen, dass das [*Sicherheitspaket*](../secgloss/s-gly.md) diesen Wert immer in Ortszeit zurückgibt. Da dieser Parameter optional ist, sollte **NULL** für kurzlebige Clients übergeben werden.
+Ein Zeiger auf eine [**TimeStamp-Struktur,**](timestamp.md) die die Ablaufzeit des Kontexts empfängt. Es wird empfohlen, [*dass das Sicherheitspaket*](../secgloss/s-gly.md) diesen Wert immer in Ortszeit zurück gibt. Da dieser Parameter optional ist, **sollte NULL** für kurzlebige Clients übergeben werden.
 
 </dd> </dl>
 
@@ -159,7 +173,7 @@ Wenn die Funktion erfolgreich ist, gibt die Funktion einen der folgenden Erfolgs
 
 | Rückgabecode                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**SEC \_ E \_ OK**</dt> </dl>                      | Der [*Sicherheitskontext*](../secgloss/s-gly.md) wurde erfolgreich initialisiert. Es ist kein weiterer [**InitializeSecurityContext-Aufruf (Kerberos)**](initializesecuritycontext--kerberos.md) erforderlich. Wenn die Funktion ein Ausgabetoken zurückgibt, d. h., wenn das \_ SECBUFFER-TOKEN in *pOutput* eine Länge von ungleich 0 (null) hat, muss dieses Token an den Server gesendet werden.<br/> |
+| <dl> <dt>**SEC \_ E \_ OK**</dt> </dl>                      | Der [*Sicherheitskontext*](../secgloss/s-gly.md) wurde erfolgreich initialisiert. Ein weiterer [**InitializeSecurityContext-Aufruf (Kerberos) ist nicht**](initializesecuritycontext--kerberos.md) erforderlich. Wenn die Funktion ein Ausgabetoken zurückgibt, d. h., wenn das \_ SECBUFFER-TOKEN in *pOutput* eine Länge von ungleich 0 (null) hat, muss dieses Token an den Server gesendet werden.<br/> |
 | <dl> <dt>**SEC \_ I \_ COMPLETE \_ AND \_ CONTINUE**</dt> </dl> | Der Client muss [**CompleteAuthToken**](/windows/win32/api/sspi/nf-sspi-completeauthtoken) aufrufen und dann die Ausgabe an den Server übergeben. Der Client wartet dann auf ein zurückgegebenes Token und übergibt es in einem anderen Aufruf an [**InitializeSecurityContext (Kerberos).**](initializesecuritycontext--kerberos.md)<br/>                                                                                                                                  |
 | <dl> <dt>**SEC \_ I \_ COMPLETE \_ NEEDED**</dt> </dl>        | Der Client muss die Erstellung der Nachricht abschließen und dann die [**CompleteAuthToken-Funktion**](/windows/win32/api/sspi/nf-sspi-completeauthtoken) aufrufen.<br/>                                                                                                                                                                                                                                                                                           |
 | <dl> <dt>**SEC \_ I \_ CONTINUE \_ NEEDED**</dt> </dl>        | Der Client muss das Ausgabetoken an den Server senden und auf ein Rückgabetoken warten. Das zurückgegebene Token wird dann in einem anderen Aufruf von [**InitializeSecurityContext (Kerberos)**](initializesecuritycontext--kerberos.md)übergeben. Das Ausgabetoken kann leer sein.<br/>                                                                                                                                                       |
@@ -202,14 +216,14 @@ Für einen zweistufigen [*Sicherheitskontext*](../secgloss/s-gly.md)sieht die au
 
 1.  Der Client ruft die Funktion auf, wobei *phContext* auf **NULL** festgelegt ist, und füllt den Pufferdeskriptor mit der Eingabenachricht aus.
 2.  Das [*Sicherheitspaket*](../secgloss/s-gly.md) untersucht die Parameter und erstellt ein nicht transparentes Token und platziert es im TOKEN-Element im Pufferarray. Wenn der *fContextReq-Parameter* das ISC \_ REQ \_ ALLOCATE \_ MEMORY-Flag enthält, ordnet das [*Sicherheitspaket*](../secgloss/s-gly.md) den Arbeitsspeicher zu und gibt den Zeiger im TOKEN-Element zurück.
-3.  Der Client sendet das im *pOutput-Puffer* zurückgegebene Token an den Zielserver. Der Server übergibt dann das Token als Eingabeargument in einem Aufruf der [**AcceptSecurityContext (Kerberos)-Funktion.**](acceptsecuritycontext--kerberos.md)
+3.  Der Client sendet das im *pOutput-Puffer* zurückgegebene Token an den Zielserver. Der Server übergibt das Token dann als Eingabeargument in einem Aufruf der [**AcceptSecurityContext(Kerberos)-Funktion.**](acceptsecuritycontext--kerberos.md)
 4.  [**AcceptSecurityContext (Kerberos)**](acceptsecuritycontext--kerberos.md) gibt möglicherweise ein Token zurück, das der Server für einen zweiten Aufruf von **InitializeSecurityContext (Kerberos)** an den Client sendet, wenn der erste Aufruf SEC I CONTINUE NEEDED zurückgegeben \_ \_ \_ hat.
 
 Für mehrstufige [*Sicherheitskontexte,*](../secgloss/s-gly.md)z. B. gegenseitige Authentifizierung, sieht die aufrufende Sequenz wie folgt aus:
 
 1.  Der Client ruft die Funktion wie zuvor beschrieben auf, aber das Paket gibt den Erfolgscode SEC \_ I CONTINUE \_ NEEDED \_ zurück.
 2.  Der Client sendet das Ausgabetoken an den Server und wartet auf die Antwort des Servers.
-3.  Nach Erhalt der Antwort des Servers ruft der Client **erneut InitializeSecurityContext (Kerberos)** auf, wobei *phContext* auf das Handle festgelegt ist, das vom letzten Aufruf zurückgegeben wurde. Das vom Server empfangene Token wird im *pInput-Parameter* bereitgestellt.
+3.  Nach Empfang der Antwort des Servers ruft der Client **erneut InitializeSecurityContext (Kerberos)** auf, wobei *phContext* auf das Handle festgelegt ist, das vom letzten Aufruf zurückgegeben wurde. Das vom Server empfangene Token wird im *pInput-Parameter* bereitgestellt.
 
 Wenn der Server erfolgreich geantwortet hat, gibt das [*Sicherheitspaket*](../secgloss/s-gly.md) SEC \_ E OK \_ zurück, und es wird eine sichere Sitzung eingerichtet.
 
@@ -229,7 +243,7 @@ Das Eingabetoken kann z. B. die Herausforderung eines LAN-Managers sein. In dies
 
 Die Aktion, die der Client vornimmt, hängt vom Rückgabecode dieser Funktion ab. Wenn der Rückgabecode SEC \_ E \_ OK lautet, erfolgt kein zweiter **InitializeSecurityContext-Aufruf (Kerberos),** und es wird keine Antwort vom Server erwartet. Wenn der Rückgabecode SEC \_ I \_ CONTINUE NEEDED \_ lautet, erwartet der Client ein Token als Antwort vom Server und übergibt es in einem zweiten Aufruf an **InitializeSecurityContext (Kerberos).** Der \_ SEC I \_ COMPLETE \_ NEEDED-Rückgabecode gibt an, dass der Client die Erstellung der Nachricht abschließen und die [**CompleteAuthToken-Funktion**](/windows/win32/api/sspi/nf-sspi-completeauthtoken) aufrufen muss. Der \_ SEC I \_ COMPLETE AND \_ \_ CONTINUE-Code umfasst beide Aktionen.
 
-Wenn **InitializeSecurityContext (Kerberos)** beim ersten (oder nur) Aufruf erfolglos zurückgibt, muss der Aufrufer schließlich die [**DeleteSecurityContext-Funktion**](/windows/win32/api/sspi/nf-sspi-deletesecuritycontext) für das zurückgegebene Handle aufrufen, auch wenn der Aufruf in einem späteren Abschnitt des Authentifizierungsaustauschs fehlschlägt.
+Wenn **InitializeSecurityContext (Kerberos)** den Erfolg beim ersten (oder nur) Aufruf zurückgibt, muss der Aufrufer schließlich die [**DeleteSecurityContext-Funktion**](/windows/win32/api/sspi/nf-sspi-deletesecuritycontext) für das zurückgegebene Handle aufrufen, auch wenn der Aufruf in einem späteren Abschnitt des Authentifizierungsaustauschs fehlschlägt.
 
 Der Client kann **InitializeSecurityContext (Kerberos)** erneut aufrufen, nachdem er erfolgreich abgeschlossen wurde. Dies gibt dem [*Sicherheitspaket*](../secgloss/s-gly.md) an, dass eine erneute Authentifizierung gewünscht ist.
 

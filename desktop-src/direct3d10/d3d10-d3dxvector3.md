@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Math.h
-ms.openlocfilehash: 7b43348b6b5683e9fe75c5340fd0c2cab5efe719
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 61c9791f4e97fbde77f3b42154b2855f2fc31694efd19087dd78fdced9908e56
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108102849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120220"
 ---
 # <a name="d3dxvector3-structure-d3dx10mathh"></a>D3DXVECTOR3-Struktur (D3DX10Math.h)
 
@@ -63,7 +63,7 @@ Die y-Komponente.
 
 </dd> <dt>
 
-**z**
+**Z**
 </dt> <dd>
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
@@ -74,7 +74,7 @@ Die z-Komponente.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 **D3DXVECTOR3 verfügt** über die folgenden C++-Erweiterungen.
 
@@ -131,13 +131,13 @@ typedef struct _D3DVECTOR D3DXVECTOR3, *LPD3DXVECTOR3;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3DX10Math.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: CD3DX12_TEXTURE_COPY_LOCATION-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, mit der die einfache Initialisierung einer D3D12- \_ Textur \_ Kopie- \_ Speicherort Struktur aktiviert werden kann.
+title: CD3DX12_TEXTURE_COPY_LOCATION-Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ TEXTURE \_ COPY \_ LOCATION-Struktur zu ermöglichen.
 ms.assetid: 8BA93729-2FFB-4C09-88B0-779049BAF385
 keywords:
-- CD3DX12_TEXTURE_COPY_LOCATION Struktur
+- CD3DX12_TEXTURE_COPY_LOCATION-Struktur
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5143137f92e38662660588dd89a527f59644126
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4d0a1ee179d2400bc04df9c3214d97d3c7a861357f33b7805e492a24f769bdba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119640"
 ---
-# <a name="cd3dx12_texture_copy_location-structure"></a>\_Struktur des CD3DX12-Textur \_ Kopier \_ Orts
+# <a name="cd3dx12_texture_copy_location-structure"></a>CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION-Struktur
 
-Eine hilfsstruktur, mit der die einfache Initialisierung einer [**D3D12- \_ Textur Kopie- \_ \_ Speicherort**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location) Struktur aktiviert werden kann.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ TEXTURE \_ COPY \_ LOCATION-Struktur**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location) zu ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,48 +45,48 @@ struct CD3DX12_TEXTURE_COPY_LOCATION  : public D3D12_TEXTURE_COPY_LOCATION{
 
 <dl> <dt>
 
-**Speicherort der CD3DX12- \_ Textur \_ Kopie \_ ()**
+**CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12- \_ Textur \_ Kopier Speicher \_ Orts.
+Erstellt eine neue, nicht initialisierte Instanz eines CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION.
 
 </dd> <dt>
 
-**expliziter CD3DX12 \_ Textur \_ Kopier \_ Speicherort (konstant D3D12 \_ Textur \_ Kopier \_ Speicherort &o)**
+**Explicit CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION(const D3D12 \_ TEXTURE COPY LOCATION &\_ \_ o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12- \_ Textur \_ Kopier Speicher \_ Orts, der mit dem Inhalt einer anderen [**D3D12- \_ Textur Kopie- \_ \_ Speicherort**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location) Struktur initialisiert wird.
+Erstellt eine neue Instanz eines CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION, initialisiert mit dem Inhalt einer anderen [**D3D12 \_ TEXTURE COPY \_ \_ LOCATION-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location)
 
 </dd> <dt>
 
-**Speicherort der CD3DX12- \_ Textur \_ Kopie \_ (ID3D12Resource \* pRes)**
+**CD3DX12 \_ TEXTURE COPY LOCATION \_ \_ (ID3D12Resource \* pRes)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12- \_ Textur \_ Kopier Speicher \_ Orts und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ TEXTURE COPY LOCATION und \_ \_ initialisiert die folgenden Parameter:
 
-[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Prä
+[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Pres
 
 </dd> <dt>
 
-**Speicherort der CD3DX12- \_ Textur \_ Kopie \_ (ID3D12Resource \* pRes, D3D12 Speicherort der unter \_ \_ Quelle \_& Speicherbedarf)**
+**CD3DX12 \_ TEXTURE COPY LOCATION \_ \_ (ID3D12Resource \* pRes, D3D12 \_ PLACED \_ SUBRESOURCE \_ FOOTPRINT const& Footprint)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12- \_ Textur \_ Kopier Speicher \_ Orts und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ TEXTURE COPY LOCATION und \_ \_ initialisiert die folgenden Parameter:
 
-[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Prä
+[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Pres
 
-[**D3D12 \_ Der \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint) Speicherplatz der untergeordneten Quelle& Speicherbedarf.
+[**D3D12 \_ PLACED \_ SUBRESOURCE \_ FOOTPRINT**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_placed_subresource_footprint) const& Footprint
 
 </dd> <dt>
 
-**Speicherort der CD3DX12- \_ Textur \_ Kopie \_ (ID3D12Resource \* pRes, uint Sub)**
+**CD3DX12 \_ TEXTURE \_ COPY \_ LOCATION(ID3D12Resource \* pRes, UINT Sub)**
 </dt> <dd>
 
-Erstellt eine neue Instanz eines CD3DX12- \_ Textur \_ Kopier Speicher \_ Orts und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz eines CD3DX12 \_ TEXTURE COPY LOCATION und \_ \_ initialisiert die folgenden Parameter:
 
-[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Prä
+[**ID3D12Resource**](/windows/desktop/api/d3d12/nn-d3d12-id3d12resource) \* Pres
 
-Uint Sub
+UINT Sub
 
 </dd> </dl>
 
@@ -96,7 +96,7 @@ Uint Sub
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -104,7 +104,7 @@ Uint Sub
 
 <dl> <dt>
 
-[**Speicherort der D3D12- \_ Textur \_ Kopie \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location)
+[**D3D12 \_ TEXTURE \_ COPY \_ LOCATION**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_texture_copy_location)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

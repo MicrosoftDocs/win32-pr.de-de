@@ -1,9 +1,9 @@
 ---
-title: PSM_SETFINISHTEXT Meldung (prsht. h)
-description: Legt den Text der Schaltfläche Fertigstellen in einem Assistenten fest, zeigt die Schaltfläche an und aktiviert Sie und blendet die Schaltflächen weiter und zurück aus. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ Makros setfinishtext senden.
+title: PSM_SETFINISHTEXT-Nachricht (Prsht.h)
+description: Legt den Text der Schaltfläche Fertig stellen in einem Assistenten fest, zeigt die Schaltfläche an und aktiviert sie und blendet die Schaltflächen Weiter und Zurück aus. Sie können diese Nachricht explizit oder mithilfe des \_ PropSheet-Makros SetFinishText senden.
 ms.assetid: fa89c6d7-9ab7-4e7c-ba08-d665420492a3
 keywords:
-- Windows-Steuerelemente für PSM_SETFINISHTEXT Meldung
+- PSM_SETFINISHTEXT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08195cddc96c8b92f403be6940f31099e21151f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a08cafbeafeccb2235cb9b653f997aa8c60bd5fd21a3ccbc92e572fa5d3d0db
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088560"
 ---
-# <a name="psm_setfinishtext-message"></a>PSM \_ setfinishtext-Nachricht
+# <a name="psm_setfinishtext-message"></a>PSM \_ SETFINISHTEXT-Nachricht
 
-Legt den Text der Schaltfläche **Fertig** stellen in einem Assistenten fest, zeigt die Schaltfläche an und aktiviert Sie und blendet die Schaltflächen **weiter** und **zurück** aus. Sie können diese Nachricht explizit oder mithilfe des [**propsheet-Makros \_ setfinishtext**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setfinishtext) senden.
+Legt den Text der Schaltfläche **Fertig stellen** in einem Assistenten fest, zeigt die Schaltfläche an und aktiviert sie und blendet die Schaltflächen **Weiter** und **Zurück** aus. Sie können diese Nachricht explizit oder mithilfe des [**\_ PropSheet-Makros SetFinishText**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setfinishtext) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,7 +41,7 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf den neuen Text für die Schaltfläche **Fertig** stellen.
+Zeiger auf den neuen Text für die Schaltfläche **Fertig stellen.**
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf den neuen Text für die Schaltfläche **Fertig** stellen.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig verfügt die Schaltfläche **Fertig** stellen nicht über eine Tastatur Beschleunigung. Sie können eine Zugriffstaste mit dieser Meldung erstellen, indem Sie in die Text Zeichenfolge, die Sie *LPARAM* zuweisen, ein kaufmännisches und-Zeichen (&) einschließen. Beispielsweise definiert "&Finish" F als Zugriffstaste.
+Standardmäßig verfügt die Schaltfläche **Fertig stellen** nicht über eine Tastaturbeschleunigung. Sie können eine Tastaturbeschleunigung mit dieser Meldung erstellen, indem Sie ein ampersand (&) in die Textzeichenfolge einfügen, die Sie *lParam* zuweisen. Beispielsweise definiert "&Finish" F als Zugriffstaste.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,10 +59,10 @@ Standardmäßig verfügt die Schaltfläche **Fertig** stellen nicht über eine T
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **PSM \_ Setfinishtextw** (Unicode) und **PSM \_ setfinishtexta** (ANSI)<br/>    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **PSM \_ SETFINISHTEXTW** (Unicode) und **PSM \_ SETFINISHTEXTA** (ANSI)<br/>    |
 
 
 

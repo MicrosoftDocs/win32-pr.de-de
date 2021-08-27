@@ -1,19 +1,19 @@
 ---
-description: Der Rückgabewert für C++-Schnittstellen Methoden ist immer vom Typ HRESULT. Dieser Wert kann geprüft werden, um den Erfolg oder Misserfolg zu ermitteln.
+description: Der Rückgabewert für C++-Schnittstellenmethoden ist immer vom Typ HRESULT. Dieser Wert kann überprüft werden, um den Erfolg oder Fehler zu ermitteln.
 ms.assetid: f6478e72-0fe9-4c3b-b08a-f71c9c943910
-title: Methoden Rückgabewerte
+title: Rückgabewerte der Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3871cf00bd48c7fbe1432ec86b503fba7795592
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 073df1d306fb991d7e1347ff90a21d578bf42583c642a694de3160b405963a28
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100760"
 ---
-# <a name="method-return-values"></a>Methoden Rückgabewerte
+# <a name="method-return-values"></a>Rückgabewerte der Methode
 
-Der Rückgabewert für C++-Schnittstellen Methoden ist immer vom Typ **HRESULT**. Dieser Wert kann geprüft werden, um den Erfolg oder Misserfolg zu ermitteln. Die Verwendung von "Output"-Parametern ermöglicht das Zuweisen von Werten zu Variablen während des Methoden-oder Eigenschafts Aufrufes. Das folgende Beispiel zeigt einen C++-Methoden Aufrufzum Aufzählen von Anbietern.
+Der Rückgabewert für C++-Schnittstellenmethoden ist immer vom Typ **HRESULT**; Dieser Wert kann überprüft werden, um den Erfolg oder Fehler zu ermitteln. Die Verwendung von Ausgabeparametern ermöglicht es, Variablen während des Methoden- oder Eigenschaftsaufrufs Werte zuzuweisen. Das folgende Beispiel zeigt einen C++-Methodenaufruf zum Aufzählen von Anbietern.
 
 
 ```C++
@@ -27,9 +27,9 @@ hr = pEnroll->enumProviders(ucEnumProvIndex, 0, &bstrProvider);
 
 
 
-Im vorangehenden Code Fragment wird Erfolg oder Fehler an die Variablen "HR" zurückgegeben. Wenn der-Befehl erfolgreich ausgeführt wurde, wird HR auf ' OK ' festgelegt, \_ und die Variable ' bstrauch Provider ' enthält den Namen des enumerationsanbieters.
+Im vorangehenden Codefragment wird Erfolg oder Fehler an die Variable "hr" zurückgegeben. Wenn der Aufruf erfolgreich war, wird hr auf S OK festgelegt, \_ und die Variable bstrProvider enthält den Namen des aufzählten Anbieters.
 
-Ein C++-Befehl zum Abrufen eines Eigenschafts Werts wäre wie folgt.
+Ein C++-Aufruf zum Abrufen eines Eigenschaftswerts würde wie folgt aussehen.
 
 
 ```C++
@@ -46,7 +46,7 @@ hr = pEnroll->get_CAStoreName( &bstrStoreName );
 
 
 
-Ein C++-Befehl, um einen Eigenschafts Wert festzulegen, wäre wie folgt.
+Ein C++-Aufruf zum Festlegen eines Eigenschaftswerts würde wie folgt aussehen.
 
 
 ```C++

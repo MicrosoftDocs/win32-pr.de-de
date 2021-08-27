@@ -1,6 +1,6 @@
 ---
-title: NOP-PS
-description: Es wird kein Vorgang ausgeführt. | NOP-PS
+title: nop - ps
+description: Es wird kein Vorgang ausgeführt. | nop - ps
 ms.assetid: db2a383e-9a4d-4409-8801-483622c124ae
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 61c72ca8adcff50e40be9fa73eb70d41a185af06
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f9aaa485026b9aac3cf3714ba50b336e0075588e2662dd522178cec11f227f90
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104530698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118330"
 ---
-# <a name="nop---ps"></a>NOP-PS
+# <a name="nop---ps"></a>nop - ps
 
 Es wird kein Vorgang ausgeführt.
 
@@ -24,26 +24,26 @@ Es wird kein Vorgang ausgeführt.
 
 
 
-| NOP |
+| Nop |
 |-----|
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixelshaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
-| NOP                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
+| Nop                   | x    | x    | x    | x    | x    | x    | x     | x    | x     |
 
 
 
  
 
-Diese Anweisung führt einen No-op-Vorgang oder keinen-Vorgang aus. Die Syntax für den Aufruf lautet wie folgt:
+Diese Anweisung führt einen No-Op- oder no-Vorgang aus. Die Syntax für den Aufruf lautet wie folgt:
 
 
 ```
