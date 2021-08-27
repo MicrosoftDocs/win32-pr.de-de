@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der jetstopbackupinstance-Funktion.
-title: Jetstopbackupinstance-Funktion
+description: 'Weitere Informationen zu: JetStopBackupInstance-Funktion'
+title: JetStopBackupInstance-Funktion
 TOCTitle: JetStopBackupInstance Function
 ms:assetid: 7d008eac-2a32-402b-91ef-965ed3c3b0de
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269309(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c1813658ed1fb569795bdfa65ccada3ef8ee629c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c4dae676cfbbb0f2509a7d86fbb6507b8e2110f1
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128632"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987243"
 ---
-# <a name="jetstopbackupinstance-function"></a>Jetstopbackupinstance-Funktion
+# <a name="jetstopbackupinstance-function"></a>JetStopBackupInstance-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetstopbackupinstance-function"></a>Jetstopbackupinstance-Funktion
+## <a name="jetstopbackupinstance-function"></a>JetStopBackupInstance-Funktion
 
-Die **jetstopbackupinstance** -Funktion verhindert, dass streamingsicherungsbezogene Aktivitäten auf einer bestimmten laufenden Instanz fortgesetzt werden, sodass die Streamingsicherung auf vorhersagbare Weise beendet wird.
+Die **JetStopBackupInstance-Funktion** verhindert, dass sicherungsbezogene Streamingaktivitäten auf einer bestimmten ausgeführten Instanz fortgesetzt werden, wodurch die Streamingsicherung auf vorhersagbare Weise beendet wird.
 
-**Windows XP:**  **jetstopbackupinstance** wird in Windows XP eingeführt.
+**Windows XP:****JetStopBackupInstance** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetStopBackupInstance(
@@ -44,83 +44,47 @@ Die **jetstopbackupinstance** -Funktion verhindert, dass streamingsicherungsbezo
 
 ### <a name="parameters"></a>Parameter
 
-*lichen*
+*Instanz*
 
-Identifiziert die für den API-Befehl zu verwendende laufende Instanz.
+Identifiziert die ausgeführte Instanz, die für den API-Aufruf verwendet werden soll.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Der angegebene Instanzparameter weist einen ungültigen Wert auf (keine Instanz, die derzeit ausgeführt wird).</p>
-<p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, startet die Instanz, die angegeben wurde, alle neuen Streamingsicherungs-APIs.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Der angegebene Instanzparameter weist einen ungültigen Wert auf (keine Instanz, die derzeit ausgeführt wird).</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
 
-Wenn diese Funktion fehlschlägt, werden keine Schritte zur Vorbereitung der Sicherung auf der-Instanz ausgeführt, und es wird keine Änderung am Instanzzustand vorgenommen.
+
+
+Wenn diese Funktion erfolgreich ist, schlägt die angegebene Instanz alle neuen Streamingsicherungs-APIs fehl.
+
+Wenn diese Funktion fehlschlägt, werden keine Schritte zur Vorbereitung auf die Sicherungsbeendigung auf der Instanz ausgeführt, und es erfolgt keine Änderung des Instanzzustands.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Die Sicherung wird in der Regel durch ein Ereignis außerhalb des Prozess Mechanismus ausgelöst. durch die Verwendung dieser API führt die ESENT-Anwendung selbst weitere Aufrufe an die Streamingsicherungs-APIs aus. Der Großteil der APIs für die Streaming-Sicherung beginnt mit dem JET_errBackupAbortByServer. Daher wird bei allen streamingsicherungsweiterungen (z. b. [jetreadfilanstance](./jetreadfileinstance-function.md)) ein Fehler zurückgegeben. Sicherungs Vorgänge, die Teil der Sicherungs Beendigung sind (z. b. [jetendexternalbackupinstance](./jetendexternalbackupinstance-function.md)), sind weiterhin zulässig.
+Die Sicherung wird in der Regel durch ein Ereignis außerhalb des Prozessmechanismus ausgelöst, und mithilfe dieser API führt die ESENT-Anwendung selbst alle weiteren Aufrufe der Streamingsicherungs-APIs aus, um einen Fehler zu erzielen. Die meisten Streamingsicherungs-APIs treten mit JET_errBackupAbortByServer auf. Daher gibt jeder Fortschritt der Streamingsicherung (z. [B. JetReadFileInstance)](./jetreadfileinstance-function.md)einen Fehler zurück. Sicherungsvorgänge, die Teil der Sicherungsbeendigung sind (z. B. [JetEndExternalBackupInstance),](./jetendexternalbackupinstance-function.md)sind weiterhin zulässig.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetendexternalbackupinstance](./jetendexternalbackupinstance-function.md)  
-[Jetreadfilinput Stance](./jetreadfileinstance-function.md)  
-[Jetstopservice](./jetstopservice-function.md)
+[JetEndExternalBackupInstance](./jetendexternalbackupinstance-function.md)  
+[JetReadFileInstance](./jetreadfileinstance-function.md)  
+[JetStopService](./jetstopservice-function.md)

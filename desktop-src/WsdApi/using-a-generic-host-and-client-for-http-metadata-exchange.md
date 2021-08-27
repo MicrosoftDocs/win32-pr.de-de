@@ -1,31 +1,31 @@
 ---
 description: Wenn der Client und der Host keine Metadaten austauschen können, können ein generischer Host und Client durch den benutzerdefinierten Host und Client ersetzt werden, um das Problem zu beheben.
 ms.assetid: 7e5c8444-b3ee-4e9c-984f-13d54f2bbfc0
-title: Verwenden eines generischen Hosts und Clients für den HTTP-Metadatenaustausch
+title: Verwenden eines generischen Hosts und Clients für HTTP-Exchange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 36827dde8aa03fa15fc4beaa5917f1f2c3c36eca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10040f4834df1a77115a361d23d82ec3dfcc6c57
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345804"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883181"
 ---
-# <a name="using-a-generic-host-and-client-for-http-metadata-exchange"></a>Verwenden eines generischen Hosts und Clients für den HTTP-Metadatenaustausch
+# <a name="using-a-generic-host-and-client-for-http-metadata-exchange"></a>Verwenden eines generischen Hosts und Clients für HTTP-Exchange
 
-Wenn der Client und der Host keine Metadaten austauschen können, können ein generischer Host und Client durch den benutzerdefinierten Host und Client ersetzt werden, um das Problem zu beheben. Wenn die Geräteadresse oder die Geräte Metadaten nicht in der WSD-debugclientausgabe angezeigt werden, kann der Fehler von den angegebenen Transport Adressen oder der Netzwerkumgebung verursacht werden. Weitere Informationen zum generischen Host und Client finden Sie unter [Debugtools](debugging-tools.md).
+Wenn der Client und der Host keine Metadaten austauschen können, können ein generischer Host und Client durch den benutzerdefinierten Host und Client ersetzt werden, um das Problem zu beheben. Wenn die Geräteadresse oder die Gerätemetadaten nicht in der Ausgabe des WSD-Debugclients angezeigt werden, können die angegebenen Transportadressen oder die Netzwerkumgebung den Fehler verursachen. Weitere Informationen zum generischen Host und Client finden Sie unter [Debugtools](debugging-tools.md).
 
-Wenn überprüft wurde, ob ein generischer Host und ein Client sowohl WS-Discovery als auch http-Metadatenaustausch durchführen können, kann diese Diagnose Prozedur übersprungen und die Problembehandlung fortgesetzt werden, indem die Verfahren unter [Verwenden der WinHTTP-Protokollierung zum Überprüfen von Datenverkehr](using-winhttp-logging-to-verify-get-traffic.md)durchgeführt werden.
+Wenn überprüft wurde, ob ein generischer Host und Client sowohl den WS-Discovery- als auch den HTTP-Metadatenaustausch abschließen können, kann dieses Diagnoseverfahren übersprungen werden, und die Problembehandlung kann fortgesetzt werden, indem die Verfahren unter Verwenden der [WinHTTP-Protokollierung](using-winhttp-logging-to-verify-get-traffic.md)zum Überprüfen des Datenverkehrs abrufen fortgesetzt werden.
 
-Wenn entweder der Host oder der Client eine Anwendung ist, die auf einem PC ausgeführt wird, sollte der generische Host oder Client im gleichen Sicherheitskontext wie der tatsächliche Host oder Client ausgeführt werden. Wenn der tatsächliche Host oder Client beispielsweise als Administrator ausgeführt wird, muss der generische Host oder Client als Administrator ausgeführt werden. Auch wenn der Host oder der Client ein eigenständiges Gerät ist, sollte es vollständig durch einen PC ersetzt werden, auf dem ein generischer Host oder Client in einem Sicherheitskontext ausgeführt wird, der unbegrenzten Netzwerk Zugriff garantiert (z. b. als Administrator).
+Wenn es sich bei dem Host oder Client um eine Anwendung handelt, die auf einem PC ausgeführt wird, sollte der generische Host oder Client im gleichen Sicherheitskontext wie der tatsächliche Host oder Client ausgeführt werden. Wenn der tatsächliche Host oder Client beispielsweise als Administrator ausgeführt wird, muss der generische Host oder Client als Administrator ausgeführt werden. Wenn es sich bei dem Host oder Client um ein eigenständiges Gerät handelt, sollte es vollständig durch einen PC ersetzt werden, auf dem ein generischer Host oder Client in einem Sicherheitskontext ausgeführt wird, der unbegrenzten Netzwerkzugriff garantiert (z. B. als Administrator ausgeführt).
 
-**So verwenden Sie einen generischen Host und Client für die Problembehandlung von http-Metadatenaustausch**
+**So verwenden Sie einen generischen Host und Client für die Problembehandlung beim HTTP-Metadatenaustausch**
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster.
-2.  Führen Sie den folgenden Befehl aus: **wsddebug \_host.exe/Mode Metadata/Start**
+2.  Führen Sie den folgenden Befehl aus: **WSDDebug \_host.exe /mode metadata /start**
 
     > [!Note]  
-    > Möglicherweise wird ein Dialogfeld mit der **Windows-Sicherheitswarnung** angezeigt. Wenn dies der Fall ist **, klicken Sie auf Entsperren** , um das Ausführen des WSD-debughosts zuzulassen.
+    > Möglicherweise **wird Windows-Sicherheit Dialogfeld** Warnung angezeigt. Wenn ja, klicken Sie **auf Blockierung** entsperren, um die Ausführung des WSD-Debughosts zu ermöglichen.
 
      
 
@@ -38,9 +38,9 @@ Wenn entweder der Host oder der Client eine Anwendung ist, die auf einem PC ausg
     Host metadata>
     ```
 
-3.  Führen Sie den folgenden Befehl **aus: wsddebug \_client.exe/Mode Metadata/Hello off/Resolve** *<id>* . Ersetzen Sie *<id>* durch die in Schritt 2 identifizierte Geräte-ID.
+3.  Führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode metadata /hello off /resolve** *&lt; id &gt;*. Ersetzen *&lt; Sie id &gt;* durch die in Schritt 2 identifizierte Geräte-ID.
     > [!Note]  
-    > Möglicherweise wird ein Dialogfeld mit der **Windows-Sicherheitswarnung** angezeigt. Wenn dies der Fall ist **, klicken Sie auf Entsperren** , um das Ausführen des WSD-Debugclients zuzulassen.
+    > Möglicherweise **wird Windows-Sicherheit Dialogfeld** Warnung angezeigt. Wenn ja, klicken Sie **auf Blockierung** entsperren, um die Ausführung des WSD-Debugclients zu ermöglichen.
 
      
 
@@ -98,34 +98,34 @@ End of metadata
 Client metadata>
 ```
 
-Der WSD-Debugclient generiert möglicherweise eine Menge Ausgabe in einem Netzwerk mit vielen DPWS-Geräten. Die Ausgabe kann zur einfacheren Analyse an eine Datei umgeleitet werden. Geben Sie **Log Tee** *<filename>* an der WSD Debug Client-Eingabeaufforderung ein, um die Ausgabe an eine Datei umzuleiten. Die Ausgabe Umleitung kann beendet werden, indem Sie an der WSD-Debug-Client-Eingabeaufforderung " **Log Tee-Stopp**
+Der WSD-Debugclient generiert möglicherweise viele Ausgaben in einem Netzwerk mit vielen DPWS-Geräten. Die Ausgabe kann zur einfacheren Analyse an eine Datei umgeleitet werden. Geben **Sie an der WSD-Debugclient-Eingabeaufforderung** log tee *&lt; filename &gt;* ein, um die Ausgabe an eine Datei umzuleiten. Die Ausgabeumleitung kann beendet werden, indem Sie **log tee stop an** der WSD Debug Client-Eingabeaufforderung eingeben.
 
-Notieren Sie sich die Endpunkt Verweisadresse (EPR). Diese EPR-Adresse sollte mit der in Schritt 2 oben identifizierten Geräte-ID identisch sein. Vergewissern Sie sich außerdem, dass der WSD-Debugclient die Metadaten für das Gerät vollständig gedruckt hat. Die Geräte Metadaten beginnen mit `Metadata for host` und enden mit `End of metadata` .
+Notieren Sie sich die Adresse des Endpunktverweises (Endpoint Reference, EPR). Diese EPR-Adresse sollte mit der geräte-ID übereinstimmen, die in Schritt 2 oben identifiziert wurde. Überprüfen Sie außerdem, ob der WSD-Debugclient die Metadaten für das Gerät vollständig gedruckt hat. Die Gerätemetadaten beginnen mit `Metadata for host` und enden mit `End of metadata` .
 
-Wenn die Geräte-ID und die Geräte Metadaten in der WSD-debugclientausgabe ordnungsgemäß angezeigt werden, ist der Anwendungsfehler wahrscheinlich nicht mit den angegebenen Transport Adressen, dem Betriebssystem oder der Netzwerkumgebung verknüpft. Ersetzen Sie den generischen Host und Client durch den benutzerdefinierten Host und Client, und setzen Sie die Problembehandlung fort, indem Sie die Schritte unter [Verwenden von WinHTTP-Protokollierung zum Überprüfen](using-winhttp-logging-to-verify-get-traffic.md)von
+Wenn die Geräte-ID und die Gerätemetadaten in der Ausgabe des WSD-Debugclients korrekt angezeigt werden, bezieht sich der Anwendungsfehler wahrscheinlich nicht auf die angegebenen Transportadressen, das Betriebssystem oder die Netzwerkumgebung. Ersetzen Sie den generischen Host und Client durch den benutzerdefinierten Host und Client, und fahren Sie mit der Problembehandlung fort, indem Sie die Schritte unter Verwenden der WinHTTP-Protokollierung zum Überprüfen des Get [Traffic-Befehls durchführen.](using-winhttp-logging-to-verify-get-traffic.md)
 
-Wenn die Geräteadresse und die Geräte Metadaten nicht in der WSD-debugclientausgabe angezeigt werden, kann der Fehler eine oder mehrere der folgenden Gründe haben:
+Wenn die Geräteadresse und die Gerätemetadaten nicht in der Ausgabe des WSD-Debugclients angezeigt werden, kann der Fehler eine oder mehrere der folgenden Ursachen haben:
 
--   Die vom Host angekündigte Transport Adresse ist falsch oder falsch formatiert. Der WSD-Debugclient versucht, die Geräte Metadaten aus der URL zu erhalten, die im **xaddrs** -Element einer [Probe Matches](probematches-message.md) -oder [resolvematches](resolvematches-message.md) -Meldung angegeben ist. Die für den Metadatenaustausch verwendete URL wird in der WSD-debugclientausgabe angezeigt, die dem Ausdruck vorangestellt ist `Using xAddr` . Das folgende Beispiel zeigt die xaddrs, die für den Metadatenaustausch in der obigen WSD-debugclientausgabe verwendet werden.
+-   Die vom Host angekündigte Transportadresse ist falsch oder falsch formatiert. Der WSD-Debugclient versucht, Gerätemetadaten aus der URL zu erhalten, die im **XAddrs-Element** einer [ProbeMatches-](probematches-message.md) oder [ResolveMatches-Nachricht angegeben](resolvematches-message.md) ist. Die für den Metadatenaustausch verwendete URL wird in der Ausgabe des WSD-Debugclients mit dem Präfix `Using xAddr` angezeigt. Das folgende Beispiel zeigt die XAddrs, die für den Metadatenaustausch in der obigen Ausgabe des WSD-Debugclients verwendet werden.
 
     ``` syntax
     Using xAddr: https://[::1]:5357/37f86d35-e6ac-4241-964f-1d9ae46fb366
     ```
 
-    Wenn die angegebenen xaddrs nicht den [xaddr-Validierungsregeln](xaddr-validation-rules.md)entsprechen, kann der WSD-Debugclient die Metadaten des Geräts nicht erhalten.
+    Wenn die angegebenen XAddrs nicht den [XAddr-Validierungsregeln](xaddr-validation-rules.md)entsprechen, kann der WSD-Debugclient die Metadaten des Geräts nicht abrufen.
 
--   Die Anwendung wird im falschen Sicherheitskontext ausgeführt. Vergewissern Sie sich, dass die Anwendung die richtigen Anmelde Informationen verwendet und dass der Client und der Host über ausreichende Zugriffsberechtigungen für das Netzwerk verfügen.
--   Die Firewallkonfiguration ist falsch. Befolgen Sie die Anweisungen unter Überprüfen der [Adapter-und Firewalleinstellungen](inspecting-adapter-and-firewall-settings.md) , um sicherzustellen, dass die Windows-Firewall-Einstellungen korrekt sind und keine anderen Regeln zum Löschen der Pakete vorhanden sind. Der Client und der Host können auch auf einen "unverfälschten" Computer kopiert werden (einer mit einer Standardinstallation des Betriebssystems, der noch nie einer Domäne hinzugefügt wurde), um den Fehler zu reproduzieren.
--   Eine IPSec-Richtlinie blockiert die Anwendung. Kopieren Sie den Client und den Host auf einen Computer, der keine IPSec-Richtlinien unterliegt, und versuchen Sie, den Fehler zu reproduzieren.
+-   Die Anwendung wird im falschen Sicherheitskontext ausgeführt. Stellen Sie sicher, dass die Anwendung die richtigen Anmeldeinformationen verwendet und dass client und host über ausreichende Berechtigungen für den Zugriff auf das Netzwerk verfügen.
+-   Die Firewallkonfiguration ist falsch. Befolgen Sie die Anweisungen unter Überprüfen von [Adapter-](inspecting-adapter-and-firewall-settings.md) und Firewall-Einstellungen, um sicherzustellen, dass die Windows Firewall-Einstellungen richtig sind und keine anderen Regeln zum Löschen der Pakete gelten. Client und Host können auch auf einen "ursprünglichen" Computer kopiert werden (einer mit einer Standardinstallation des Betriebssystems, die nie einer Domäne beigetreten ist), um zu versuchen, den Fehler zu reproduzieren.
+-   Eine IPSec-Richtlinie blockiert die Anwendung. Kopieren Sie den Client und den Host auf einen Computer, der nicht den IPSec-Richtlinien unterliegt, und versuchen Sie, den Fehler zu reproduzieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WSDAPI-Diagnose Prozeduren](wsdapi-diagnostic-procedures.md)
+[WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)
 </dt> <dt>
 
-[Ersten Schritte mit der WSDAPI-Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+[Erste Schritte mit WSDAPI – Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
 </dt> </dl>
 
  

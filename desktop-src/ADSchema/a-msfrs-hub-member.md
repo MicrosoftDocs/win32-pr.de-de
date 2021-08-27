@@ -1,11 +1,11 @@
 ---
 title: ms-FRS-Hub-Member-Attribut
-description: Das attribut ms-FRS-Hub-Member wird verwendet, um die bevorzugten NTFRS-Topologieeinstellungen aufzuzeichnen.
+description: Das attribut ms-FRS-Hub-Member wird verwendet, um die bevorzugten NTFRS-Topologieeinstellungen zu erfassen.
 ms.assetid: df8623e0-745a-46f8-a696-8f6e7014fd2b
 ms.tgt_platform: multiple
 keywords:
-- MS-FRS-Hub-Member-Attribut AD-Schema
-- MSFRS-Hub-Member-Attribut AD-Schema
+- AD-Schema des ms-FRS-Hub-Member-Attributs
+- AD-Schema des msFRS-Hub-Member-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fa08d1eb3cbb8086149192e6ecd5fa3880f01e6cfa1800468d2825c243b211e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: c2f2cc1014b081ac13183144fca34c2087539de0
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119803309"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885708"
 ---
 # <a name="ms-frs-hub-member-attribute"></a>ms-FRS-Hub-Member-Attribut
 
-Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topologieeinstellungen aufzuzeichnen. Wenn ein FRS-Mitglied einer Replikatgruppe hinzugefügt oder gelöscht wird, wird auf diese Attribute verwiesen, und die Verbindungen zwischen den restlichen FRS-Membern in der Replikatgruppe werden entsprechend angepasst.
+Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topologieeinstellungen zu erfassen. Wenn ein FRS-Mitglied einer Replikatgruppe hinzugefügt oder gelöscht wird, werden auf diese Attribute verwiesen, und es werden entsprechende Anpassungen an den Verbindungen zwischen den restlichen FRS-Membern in der Replikatgruppe vorgenommen.
 
 
 
@@ -35,7 +35,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Aktualisieren von Berechtigungen  | Domänenadministrator                                               |
 | Updatehäufigkeit  | Wenn die Replikatgruppe erstellt wird oder sich die bevorzugte Topologie ändert. |
 | Attribute-Id      | 1.2.840.113556.1.4.1693                                            |
-| System-ID-GUID    | 5643ff81-35b6-4ca9-9512-baf0bd0a2772                               |
+| System-Id-Guid    | 5643ff81-35b6-4ca9-9512-baf0bd0a2772                               |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md)                            |
 
 
@@ -57,7 +57,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Link-ID                | 1046                                                      |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -78,7 +78,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Link-ID                | 1046                                                      |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -99,7 +99,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Link-ID                | 1046                                                      |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Ist einwertig       | True                                                      |
+| Is-Single-Valued       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -120,7 +120,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Link-ID                | 1046                                                      |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Is-Single-Valued       | True                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -141,7 +141,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 | Link-ID                | 1046                                                      |
 | MAPI-Id                | \-                                                        |
 | System-Only            | False                                                     |
-| Is-Single-Valued       | True                                                      |
+| Ist einwertig       | True                                                      |
 | Ist indiziert             | False                                                     |
 | Im globalen Katalog      | False                                                     |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                              |
@@ -155,7 +155,7 @@ Das **attribut ms-FRS-Hub-Member** wird verwendet, um die bevorzugten NTFRS-Topo
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist der vollqualifizierte Distinguished Name eines [**NTFRS-Member-Objekts.**](c-ntfrsmember.md) Der Distinguished Name hat das Format "CN= *<computerGuid>* , CN= *<Dfs Link Name>* , CN= *<Dfs Root name>* , CN=DFS Volumes, CN=File Replication Service,CN=System, DC=..."
+Dies ist der vollqualifizierte Distinguished Name eines [**NTFRS-Member-Objekts.**](c-ntfrsmember.md) Der Distinguished Name weist das Format "CN=*&lt; &gt; computerGuid*, CN= *<Dfs Link Name>* , CN= *<Dfs Root name>* , CN=DFS Volumes, CN=File Replication Service,CN=System, DC=..." auf.
 
  
 

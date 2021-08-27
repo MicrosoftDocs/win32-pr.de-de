@@ -1,42 +1,28 @@
 ---
-description: Filter Zuordnung
+description: Filterzuordnung
 ms.assetid: cb8f25b3-a0f0-48fa-843f-88a5a5d17019
-title: Filter Zuordnung
+title: Filterzuordnung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6713b62e25e735b0cef0cec66e78097c1e5e5456
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3eb106312f24e3267e9e62631c6475ac4ae1b4c6
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480811"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986833"
 ---
-# <a name="filter-mapper"></a>Filter Zuordnung
+# <a name="filter-mapper"></a>Filterzuordnung
 
-Der Filter Mapper durchsucht die Registrierung nach registrierten filtern. Der Filter Graph-Manager verwendet diese Komponente zum Erstellen von Filter Diagrammen. Anwendungen können diese zum Suchen von Filtern verwenden, die den angegebenen Suchkriterien entsprechen. Erstellen Sie dieses Objekt durch Aufrufen von **CoCreateInstance**.
+Der Filter-Mapper durchsucht die Registrierung nach registrierten Filtern. Der Filter Graph-Manager verwendet diese Komponente, um Filterdiagramme zu erstellen. Anwendungen können damit Filter suchen, die den angegebenen Suchkriterien entsprechen. Erstellen Sie dieses Objekt, indem Sie **CoCreateInstance aufrufen.**
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Klassen Bezeichner</td>
-<td>CLSID_FilterMapper2</td>
-</tr>
-<tr class="even">
-<td>Schnittstellen</td>
-<td><ul>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2"><strong>IFilterMapper2</strong></a></li>
-<li><a href="iamfilterdata.md"><strong>Iamfilterdata</strong></a> (veraltet)</li>
-<li><a href="/windows/desktop/api/Strmif/nn-strmif-ifiltermapper3"><strong>IFilterMapper3</strong></a> (veraltet)</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Bezeichnung | Wert |
+|--------|-------|
+| Klassenbezeichner | CLSID_FilterMapper2 | 
+| Schnittstellen | <ul><li><a href="/windows/desktop/api/Strmif/nn-strmif-ifiltermapper2"><strong>IFilterMapper2</strong></a></li><li><a href="iamfilterdata.md"><strong>IAMFilterData</strong></a> (veraltet)</li><li><a href="/windows/desktop/api/Strmif/nn-strmif-ifiltermapper3"><strong>IFilterMapper3</strong></a> (veraltet)</li></ul> | 
+
 
 
 
@@ -49,7 +35,7 @@ Der Filter Mapper durchsucht die Registrierung nach registrierten filtern. Der F
 [DirectShow-Objekte](directshow-objects.md)
 </dt> <dt>
 
-[Verwenden des Filter Mappers](using-the-filter-mapper.md)
+[Verwenden der Filterzuordnung](using-the-filter-mapper.md)
 </dt> </dl>
 
  

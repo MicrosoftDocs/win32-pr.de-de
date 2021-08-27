@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: jetmakekey-Funktion'
+description: 'Weitere Informationen zu: JetMakeKey-Funktion'
 title: JetMakeKey-Funktion
 TOCTitle: JetMakeKey Function
 ms:assetid: 8c1cff2f-2f24-4990-a9d8-fb4f822e50b1
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e3d121ed83f096baad249aab8677bb9f5e72e301
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a642a103d67b023fdf42aa532cc328964c7734a4
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217851"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122482846"
 ---
 # <a name="jetmakekey-function"></a>JetMakeKey-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetmakekey-function"></a>JetMakeKey-Funktion
 
-Die **jetmakekey** -Funktion erstellt Suchschlüssel, die dann verwendet werden können, um einen Satz von Einträgen in einem Index durch einige einfache Suchkriterien für Ihre Schlüssel Spaltenwerte zu suchen. Ein Suchschlüssel ist auch eine der systeminternen Eigenschaften eines Cursors und wird von den [JetSeek](./jetseek-function.md) -und [jetsetindexrange](./jetsetindexrange-function.md) -Vorgängen verwendet, um Indexeinträge zu suchen, die mit diesen Suchkriterien für den aktuellen Index dieses Cursors übereinstimmen. Ein kompletter Suchschlüssel wird in einer Reihe von **jetmakekey** -aufrufen erstellt, wobei jeder Aufruf verwendet wird, um den Spaltenwert für die nächste Schlüssel Spalte des aktuellen Index eines Cursors zu laden. Es ist auch möglich, einen zuvor erstellten Suchschlüssel zu laden, der mithilfe von [jetretrievekey](./jetretrievekey-function.md)aus dem Cursor abgerufen wurde.
+Die **JetMakeKey-Funktion** erstellt Suchschlüssel, die dann verwendet werden können, um einen Satz von Einträgen in einem Index anhand einiger einfacher Suchkriterien für ihre Schlüsselspaltenwerte zu finden. Ein Suchschlüssel ist auch eine der systeminternen Eigenschaften eines Cursors und wird von den [Vorgängen JetSeek](./jetseek-function.md) und [JetSetIndexRange](./jetsetindexrange-function.md) verwendet, um Indexeinträge zu suchen, die diesen Suchkriterien für den aktuellen Index dieses Cursors entsprechen. Ein vollständiger Suchschlüssel wird in einer Reihe von **JetMakeKey-Aufrufen** erstellt, wobei jeder Aufruf verwendet wird, um den Spaltenwert für die nächste Schlüsselspalte des aktuellen Indexes eines Cursors zu laden. Es ist auch möglich, einen zuvor erstellten Suchschlüssel zu laden, der mithilfe von [JetRetrieveKey](./jetretrievekey-function.md)aus dem Cursor abgerufen wurde.
 
 ```cpp
     JET_ERR JET_API JetMakeKey(
@@ -46,265 +46,102 @@ Die **jetmakekey** -Funktion erstellt Suchschlüssel, die dann verwendet werden 
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
 *pvData*
 
-Der Eingabepuffer, der die Spaltendaten für die aktuelle Schlüssel Spalte des aktuellen Index des Cursors enthält, für den der Suchschlüssel erstellt wird.
+Der Eingabepuffer, der die Spaltendaten für die aktuelle Schlüsselspalte des aktuellen Indexes des Cursors enthält, für den der Suchschlüssel erstellt wird.
 
-Der Datentyp der Spaltendaten im Eingabepuffer muss exakt mit dem Datentyp und anderen Eigenschaften der Spaltendefinition der aktuellen Schlüssel Spalte übereinstimmen. Für die Spaltendaten wird keinerlei Typumwandlung durchgeführt.
+Der Datentyp der Spaltendaten im Eingabepuffer muss genau mit dem Datentyp und anderen Eigenschaften der Spaltendefinition der aktuellen Schlüsselspalte übereinstimmen. Es wird keine Typkoersion für die Spaltendaten ausgeführt.
 
-Wenn JET_bitNormalizedKey im *grbit* -Parameter angegeben wird, muss der Eingabepuffer einen zuvor erstellten Suchschlüssel enthalten. Diese Schlüssel werden mit einem [calltretrievekey](./jetretrievekey-function.md)-Befehl abgerufen.
+Wenn JET_bitNormalizedKey im *grbit-Parameter* angegeben ist, muss der Eingabepuffer einen zuvor erstellten Suchschlüssel enthalten. Solche Schlüssel werden mithilfe eines Aufrufs von [JetRetrieveKey](./jetretrievekey-function.md)abgerufen.
 
 *cbData*
 
-Die Größe der Spaltendaten in Bytes, die im Eingabepuffer bereitgestellt werden.
+Die Größe der im Eingabepuffer bereitgestellten Spaltendaten in Bytes.
 
-Wenn JET_bitNormalizedKey im *grbit* -Parameter angegeben wird, ist dies die Größe des Suchschlüssels, der im Eingabepuffer angegeben wird.
+Wenn JET_bitNormalizedKey im *grbit-Parameter* angegeben ist, entspricht dies der Größe des im Eingabepuffer bereitgestellten Suchschlüssels.
 
-Wenn die Größe der Spaltendaten 0 (null) ist, wird der Inhalt des Eingabe Puffers ignoriert. Wenn JET_bitKeyDataZeroLength im *grbit* -Parameter angegeben wird und die aktuelle Schlüssel Spalte des aktuellen Index des Cursors eine Spalte variabler Länge ist, wird davon ausgegangen, dass die Daten der Eingabe Spalte einen Wert von 0 (null) aufweisen. Andernfalls wird davon ausgegangen, dass die Eingabe Spaltendaten ein NULL-Wert sind.
+Wenn die Größe der Spaltendaten 0 (null) ist, wird der Inhalt des Eingabepuffers ignoriert. Wenn JET_bitKeyDataZeroLength im *grbit-Parameter* angegeben ist und die aktuelle Schlüsselspalte des aktuellen Index des Cursors eine Spalte variabler Länge ist, wird davon ausgegangen, dass es sich bei den Eingabespaltendaten um einen Wert der Länge 0 (null) handelt. Andernfalls wird davon ausgegangen, dass die Eingabespaltendaten ein NULL-Wert sind.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitFullColumnEndLimit</p></td>
-<td><p>Der Suchschlüssel sollte so erstellt werden, dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für diese Schlüssel Spalte und alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Alle Spaltenwerte, die für nachfolgende Schlüssel Spalten erforderlich sind.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Ende eines Indexes am nächsten sind. Das Ende des Indexes ist der Index Eintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wurde. Das Ende des Indexes ist nicht mit dem hohen Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Diese Option ist nur unter Windows XP und höheren Versionen verfügbar.</p></td>
-</tr>
-<tr class="even">
-<td><p>Jetbitfullcolumnstartlimit</p></td>
-<td><p>Der Suchschlüssel sollte so erstellt werden, dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für diese Schlüssel Spalte und alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Alle Spaltenwerte, die für nachfolgende Schlüssel Spalten erforderlich sind.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Anfang eines Indexes am nächsten sind. Der Index Anfang ist der Index Eintrag, der beim Verschieben in den ersten Datensatz in diesem Index gefunden wird. Der Index Anfang ist nicht mit dem unteren Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Diese Option ist nur unter Windows XP und höheren Versionen verfügbar.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitKeyDataZeroLength</p></td>
-<td><p>Wenn die Größe des Eingabe Puffers NULL und die aktuelle Schlüssel Spalte eine Spalte variabler Länge ist, gibt diese Option an, dass der Eingabepuffer den Wert 0 (null) enthält. Andernfalls würde eine Eingabepuffergröße von NULL einen NULL-Wert angeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitNewKey</p></td>
-<td><p>Es muss ein neuer Suchschlüssel erstellt werden. Alle bereits vorhandenen Suchschlüssel werden verworfen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitNormalizedKey</p></td>
-<td><p>Wenn diese Option angegeben wird, werden alle anderen Optionen ignoriert, alle bereits vorhandenen Suchschlüssel werden verworfen, und der Inhalt des Eingabe Puffers wird als neuer Suchschlüssel geladen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitPartialColumnEndLimit</p></td>
-<td><p>Der Suchschlüssel sollte so erstellt werden, dass die aktuelle Schlüssel Spalte als Präfix-Platzhalter angesehen wird und dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden sollen. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für diese Schlüssel Spalte und alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Alle Spaltenwerte, die für nachfolgende Schlüssel Spalten erforderlich sind.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Ende eines Indexes am nächsten sind. Das Ende des Indexes ist der Index Eintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wurde. Das Ende des Indexes ist nicht mit dem hohen Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Diese Option kann nicht verwendet werden, wenn die aktuelle Schlüssel Spalte weder eine Text Spalte noch eine binäre Variablen Spalte ist. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn ein Versuch unternommen wird.</p>
-<p>Diese Option ist nur unter Windows XP und höheren Versionen verfügbar.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitPartialColumnStartLimit</p></td>
-<td><p>Diese Option gibt an, dass der Suchschlüssel so erstellt werden soll, dass die aktuelle Schlüssel Spalte als Präfix-Platzhalter angesehen wird und dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden sollen. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für diese Schlüssel Spalte und alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Alle Spaltenwerte, die für nachfolgende Schlüssel Spalten erforderlich sind.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Anfang eines Indexes am nächsten sind. Der Index Anfang ist der Index Eintrag, der beim Verschieben in den ersten Datensatz in diesem Index gefunden wird. Der Index Anfang ist nicht mit dem unteren Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Diese Option kann nicht verwendet werden, wenn die aktuelle Schlüssel Spalte weder eine Text Spalte noch eine binäre Variablen Spalte ist. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn ein Versuch unternommen wird.</p>
-<p>Diese Option ist nur unter Windows XP und höheren Versionen verfügbar.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitStrLimit</p></td>
-<td><p>Diese Option gibt an, dass der Suchschlüssel so erstellt werden soll, dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden sollen. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für diese Schlüssel Spalte und alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Alle Spaltenwerte, die für nachfolgende Schlüssel Spalten erforderlich sind.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Ende eines Indexes am nächsten sind. Das Ende des Indexes ist der Index Eintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wurde. Das Ende des Indexes ist nicht mit dem hohen Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Wenn diese Option in Kombination mit JET_bitSubStrLimit angegeben wird und die aktuelle Schlüssel Spalte eine Text Spalte ist, wird diese Option ignoriert. Dieses Verhalten soll ermöglichen, dass der Typ der aktuellen Schlüssel Spalte bei der Erstellung des Suchschlüssels abgeleitet wird.</p>
-<p>Wenn Sie einen ähnlichen Suchschlüssel für den Anfang eines Indexes erstellen möchten, sollten Sie einen ähnlichen Befehl von <strong>jetmakekey</strong> für die letzte Schlüssel Spalte, die kein Platzhalter ist, aber ohne festgelegte Platzhalter Optionen erstellen. Der Suchschlüssel befindet sich dann in einem geeigneten Zustand, der für eine solche Suche verwendet werden kann. Dies entspricht der Verwendung von JET_bitFullColumnStartLimit, mit dem Unterschied, dass der Suchschlüssel nicht ordnungsgemäß abgeschlossen ist, da er nach der Verwendung einer Platzhalter Option verwendet wird.</p>
-<p>Diese Option wurde für Windows XP und spätere Versionen als veraltet markiert, um diese umständliche Semantik zu beheben. JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit sollten immer dann verwendet werden, wenn dies möglich ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitSubStrLimit</p></td>
-<td><p>Diese Option gibt an, dass der Suchschlüssel so erstellt werden soll, dass die aktuelle Schlüssel Spalte als Präfix-Platzhalter angesehen wird und dass alle Schlüssel Spalten, die nach der aktuellen Schlüssel Spalte liegen, als Platzhalter betrachtet werden sollen. Dies bedeutet, dass der erstellte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die über Folgendes verfügen:</p>
-<ul>
-<li><p>Die genauen Spaltenwerte, die für alle vorherigen Schlüssel Spalten bereitgestellt werden.</p></li>
-<li><p>Die angegebenen Spaltendaten als Präfix des Spaltenwerts für die aktuelle Schlüssel Spalte.</p></li>
-<li><p>Alle Spaltenwerte für nachfolgende Schlüssel Spalten.</p></li>
-</ul>
-<p>Diese Option sollte zum Entwickeln von Platzhalter-Suchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden, die dem Ende eines Indexes am nächsten sind. Das Ende des Indexes ist der Index Eintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wurde. Das Ende des Indexes ist nicht mit dem hohen Ende des Indexes identisch, was sich je nach Sortierreihenfolge der Schlüssel Spalten im Index ändern kann.</p>
-<p>Wenn diese Option in Kombination mit JET_bitStrLimit angegeben wird und die aktuelle Schlüssel Spalte eine Text Spalte ist, hat diese Option Vorrang. Diese Option wird ignoriert, wenn es sich bei der aktuellen Schlüssel Spalte nicht um eine Text Spalte handelt. Dieses Verhalten soll ermöglichen, dass der Typ der aktuellen Schlüssel Spalte bei der Erstellung des Suchschlüssels abgeleitet wird.</p>
-<p>Wenn Sie einen ähnlichen Suchschlüssel für den Anfang eines Indexes erstellen möchten, sollten Sie einen ähnlichen <strong>jetmakekey</strong> -Befehl für die Schlüssel Spalte erstellen, die als Präfix-Platzhalter festgelegt wird, wobei jedoch keine Platzhalter Optionen angegeben werden. Der Suchschlüssel befindet sich dann in einem geeigneten Zustand, der für eine solche Suche verwendet werden kann. Dies entspricht der Verwendung von JET_bitPartialColumnStartLimit, mit dem Unterschied, dass der Suchschlüssel nicht ordnungsgemäß abgeschlossen ist, da er nach der Verwendung einer Platzhalter Option verwendet wird.</p>
-<p>Diese Option wurde für Windows XP und spätere Versionen als veraltet markiert, um diese umständliche Semantik zu beheben. JET_bitPartialColumnStartLimit und JET_bitPartialColumnEndLimit sollten stattdessen verwendet werden, wenn möglich.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitFullColumnEndLimit</p> | <p>Der Suchschlüssel sollte so erstellt werden, dass alle Schlüsselspalten, die nach der aktuellen Schlüsselspalte stammen, als Platzhalter betrachtet werden. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für diese Schlüsselspalte und alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Alle Spaltenwerte, die für nachfolgende Schlüsselspalten benötigt werden.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Ende eines Indexes liegen. Das Ende des Indexes ist der Indexeintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wird. Das Ende des Indexes ist nicht dasselbe wie das obere Ende des Indexes, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Diese Option ist nur für Windows XP und höhere Versionen verfügbar.</p> | 
+| <p>JETbitFullColumnStartLimit</p> | <p>Der Suchschlüssel sollte so konstruiert werden, dass alle Schlüsselspalten, die nach der aktuellen Schlüsselspalte stammen, als Platzhalter betrachtet werden sollten. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für diese Schlüsselspalte und alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Alle Spaltenwerte, die für nachfolgende Schlüsselspalten benötigt werden.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Anfang eines Indexes liegen. Der Anfang des Indexes ist der Indexeintrag, der beim Verschieben zum ersten Datensatz in diesem Index gefunden wird. Der Anfang des Indexes entspricht nicht dem unteren Indexende, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Diese Option ist nur für Windows XP und höhere Versionen verfügbar.</p> | 
+| <p>JET_bitKeyDataZeroLength</p> | <p>Wenn die Größe des Eingabepuffers 0 (null) und die aktuelle Schlüsselspalte eine Spalte variabler Länge ist, gibt diese Option an, dass der Eingabepuffer einen Längenwert von 0 (null) enthält. Andernfalls würde eine Eingabepuffergröße von 0 (null) einen NULL-Wert angeben.</p> | 
+| <p>JET_bitNewKey</p> | <p>Ein neuer Suchschlüssel sollte erstellt werden. Alle zuvor vorhandenen Suchschlüssel werden verworfen.</p> | 
+| <p>JET_bitNormalizedKey</p> | <p>Wenn diese Option angegeben wird, werden alle anderen Optionen ignoriert, alle zuvor vorhandenen Suchschlüssel verworfen, und der Inhalt des Eingabepuffers wird als neuer Suchschlüssel geladen.</p> | 
+| <p>JET_bitPartialColumnEndLimit</p> | <p>Der Suchschlüssel sollte so konstruiert werden, dass die aktuelle Schlüsselspalte als Präfix-Platzhalter betrachtet wird und dass alle Schlüsselspalten, die nach der aktuellen Schlüsselspalte stehen, als Platzhalter betrachtet werden sollten. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für diese Schlüsselspalte und alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Alle Spaltenwerte, die für nachfolgende Schlüsselspalten benötigt werden.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Ende eines Indexes liegen. Das Ende des Indexes ist der Indexeintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wird. Das Ende des Indexes ist nicht dasselbe wie das obere Ende des Indexes, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Diese Option kann nicht verwendet werden, wenn die aktuelle Schlüsselspalte keine Textspalte oder variable binäre Spalte ist. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn dies versucht wird.</p><p>Diese Option ist nur für Windows XP und höhere Versionen verfügbar.</p> | 
+| <p>JET_bitPartialColumnStartLimit</p> | <p>Diese Option gibt an, dass der Suchschlüssel so konstruiert werden soll, dass die aktuelle Schlüsselspalte als Präfix-Platzhalter betrachtet wird und dass alle Schlüsselspalten, die nach der aktuellen Schlüsselspalte stehen, als Platzhalter betrachtet werden sollten. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für diese Schlüsselspalte und alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Alle Spaltenwerte, die für nachfolgende Schlüsselspalten benötigt werden.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Anfang eines Indexes liegen. Der Anfang des Indexes ist der Indexeintrag, der beim Verschieben zum ersten Datensatz in diesem Index gefunden wird. Der Anfang des Indexes entspricht nicht dem unteren Indexende, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Diese Option kann nicht verwendet werden, wenn die aktuelle Schlüsselspalte keine Textspalte oder variable binäre Spalte ist. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn dies versucht wird.</p><p>Diese Option ist nur für Windows XP und höhere Versionen verfügbar.</p> | 
+| <p>JET_bitStrLimit</p> | <p>Diese Option gibt an, dass der Suchschlüssel so konstruiert werden soll, dass alle Schlüsselspalten, die hinter der aktuellen Schlüsselspalte stehen, als Platzhalter betrachtet werden sollen. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für diese Schlüsselspalte und alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Alle Spaltenwerte, die für nachfolgende Schlüsselspalten benötigt werden.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Ende eines Indexes liegen. Das Ende des Indexes ist der Indexeintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wird. Das Ende des Indexes ist nicht dasselbe wie das obere Ende des Indexes, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Wenn diese Option in Kombination mit JET_bitSubStrLimit angegeben wird und die aktuelle Schlüsselspalte eine Textspalte ist, wird diese Option ignoriert. Dieses Verhalten soll es ermöglichen, dass der Typ der aktuellen Schlüsselspalte beim Erstellen des Suchschlüssels abgeleitet wird.</p><p>Wenn Sie einen ähnlichen Suchschlüssel für den Anfang eines Indexes erstellen möchten, sollte ein ähnlicher Aufruf von <strong>JetMakeKey</strong> für die letzte Schlüsselspalte erfolgen, bei der es sich nicht um einen Platzhalter handelt, aber keine Platzhalteroptionen angegeben sind. Der Suchschlüssel befindet sich dann in einem geeigneten Zustand, der für eine solche Suche verwendet werden soll. Dies entspricht der Verwendung von JET_bitFullColumnStartLimit, mit dem Unterschied, dass der Suchschlüssel nicht wie nach der Verwendung einer Platzhalteroption sauber abgeschlossen ist.</p><p>Diese Option ist für Windows XP und höhere Versionen veraltet, um diese umständliche Semantik zu beheben. stattdessen sollten nach Möglichkeit JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit verwendet werden.</p> | 
+| <p>JET_bitSubStrLimit</p> | <p>Diese Option gibt an, dass der Suchschlüssel so konstruiert werden soll, dass die aktuelle Schlüsselspalte als Präfix-Platzhalter betrachtet wird und dass alle Schlüsselspalten, die nach der aktuellen Schlüsselspalte stehen, als Platzhalter betrachtet werden sollten. Dies bedeutet, dass der konstruierte Suchschlüssel verwendet werden kann, um Indexeinträge abzugleichen, die Folgendes aufweisen:</p><ul><li><p>Die genauen Spaltenwerte, die für alle vorherigen Schlüsselspalten bereitgestellt werden.</p></li><li><p>Die angegebenen Spaltendaten als Präfix ihres Spaltenwerts für die aktuelle Schlüsselspalte.</p></li><li><p>Alle Spaltenwerte für nachfolgende Schlüsselspalten.</p></li></ul><p>Diese Option sollte beim Erstellen von Platzhaltersuchschlüsseln verwendet werden, die zum Suchen von Indexeinträgen verwendet werden sollen, die am nächsten am Ende eines Indexes liegen. Das Ende des Indexes ist der Indexeintrag, der beim Verschieben zum letzten Datensatz in diesem Index gefunden wird. Das Ende des Indexes ist nicht dasselbe wie das obere Ende des Indexes, das sich je nach Sortierreihenfolge der Schlüsselspalten im Index ändern kann.</p><p>Wenn diese Option in Kombination mit JET_bitStrLimit angegeben wird und die aktuelle Schlüsselspalte eine Textspalte ist, hat diese Option Vorrang. Diese Option wird ignoriert, wenn die aktuelle Schlüsselspalte keine Textspalte ist. Dieses Verhalten soll es ermöglichen, dass der Typ der aktuellen Schlüsselspalte beim Erstellen des Suchschlüssels abgeleitet wird.</p><p>Wenn Sie einen ähnlichen Suchschlüssel für den Anfang eines Indexes erstellen möchten, sollte ein ähnlicher Aufruf von <strong>JetMakeKey</strong> für die Schlüsselspalte erfolgen, die als Präfix-Platzhalter verwendet werden soll, wobei jedoch keine Platzhalteroptionen angegeben sind. Der Suchschlüssel befindet sich dann in einem geeigneten Zustand, der für eine solche Suche verwendet werden soll. Dies entspricht der Verwendung von JET_bitPartialColumnStartLimit, mit dem Unterschied, dass der Suchschlüssel nicht wie nach der Verwendung einer Platzhalteroption sauber abgeschlossen ist.</p><p>Diese Option ist für Windows XP und höhere Versionen veraltet, um diese umständliche Semantik zu beheben. stattdessen sollten nach Möglichkeit JET_bitPartialColumnStartLimit und JET_bitPartialColumnEndLimit verwendet werden.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errIndexTuplesKeyTooSmall</p></td>
-<td><p>Die angegebenen Spaltendaten waren zu klein, um einen gültigen Schlüssel für den aktuellen Index zu erstellen, da es sich bei diesem Index um einen Tupelindex handelt und die minimale Tupelgröße größer als die angegebenen Spaltendaten war. Weitere Informationen zu tupelindizes finden Sie unter <a href="gg294099(v=exchg.10).md">jetkreateindex</a> . Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidBufferSize</p></td>
-<td><p>Die angegebenen Spaltendaten entsprechen nicht der Größe, die für die Spaltendefinition erforderlich ist. Dies kann vorkommen, wenn der Datentyp der Spalte intrinsisch eine bestimmte Größe hat. Dies kann auch vorkommen, wenn der Datentyp der Spalte nicht intrinsisch eine bestimmte Größe hat, aber die Definition der Spalte eine festgelegte Länge deklariert. Eine Ausnahme besteht darin, dass dieser Fehler nicht auftritt, wenn für eine Text Spalte mit fester Länge zu wenig Daten bereitgestellt werden, da fehlende Daten automatisch mit Leerzeichen aufgefüllt werden. Eine zweite Ausnahme besteht darin, dass dieser Fehler nicht auftritt, wenn zu wenig Daten für eine binäre Spalte mit fester Länge bereitgestellt werden, da fehlende Daten automatisch mit Nullen aufgefüllt werden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidgrbit</p></td>
-<td><p>Eine der angeforderten Optionen war ungültig, wird in unzulässiger Weise verwendet oder nicht implementiert. Dies kann bei <strong>jetmakekey</strong> vorkommen, wenn Folgendes geschieht:</p>
-<ul>
-<li><p>JET_bitPartialColumnStartLimit oder JET_bitPartialColumnEndLimit werden angegeben, und die entsprechende Schlüssel Spalte ist keine Text Spalte und keine binäre Spalte variabler Länge. Dieser Fall tritt nur unter Windows XP und höheren Versionen auf.</p></li>
-<li><p>Es wird versucht, mehr als eine der folgenden Optionen zu verwenden: JET_bitPartialColumnStartLimit, JET_bitPartialColumnEndLimit, JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit. Dieser Fall tritt nur unter Windows XP und höheren Versionen auf.</p></li>
-<li><p>Es wurde versucht, JET_bitStrLimit oder JET_bitSubStrLimit zu verwenden, wenn eine der folgenden Optionen verwendet wird: JET_bitPartialColumnStartLimit, JET_bitPartialColumnEndLimit, JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit. Dieser Fall tritt nur unter Windows XP und höheren Versionen auf.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde.</p>
-<p>Dies kann bei <strong>jetmakekey</strong> vorkommen, wenn JET_bitNormalizedKey angegeben wurde und der im Eingabepuffer angegebene Wert zu groß ist, um ein gültiger Suchschlüssel zu sein.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errKeyIsMade</p></td>
-<td><p>Die für <strong>jetmakekey</strong> bereitgestellten Spaltendaten wurden zurückgewiesen, weil Spaltendaten bereits für alle Schlüssel Spalten im aktuellen Index bereitgestellt wurden. Dies kann auf drei Arten erfolgen. Die erste Möglichkeit ist, wenn Spaltendaten für jede Schlüssel Spalte im aktuellen Index bereitgestellt werden. Die zweite Möglichkeit ist, wenn Spaltendaten für mindestens eine Schlüssel Spalte bereitgestellt wurden und für den letzten-Befehl eine Platzhalter Option ausgewählt wurde. Die dritte Möglichkeit ist, dass ein zuvor erstellter Suchschlüssel mit JET_bitNormalizedKey bereitgestellt wurde, der alle Schlüssel Spalten abdeckt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errKeyNotMade</p></td>
-<td><p>Es ist kein aktueller Suchschlüssel für den Cursor vorhanden. Dies geschieht für <strong>jetmakekey</strong> , wenn JET_bitNewKey nicht angegeben ist und ein Suchschlüssel für diesen Cursor nicht mithilfe eines vorherigen Aufrufes von <strong>jetmakekey</strong>erstellt wurde. Der Suchschlüssel wird durch einen vorherigen-Aufrufvorgang für eine beliebige Navigations-API auf dem Cursor außer <a href="gg294117(v=exchg.10).md">jetmove</a>gelöscht.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNoCurrentIndex</p></td>
-<td><p>Es ist kein aktueller Index für den Cursor vorhanden. Dies geschieht für <strong>jetmakekey</strong> , wenn sich der Cursor auf dem gruppierten Index einer Tabelle befindet, kein primärer Index definiert wurde und JET_bitNormalizedKey nicht angegeben wurde. Es ist nicht möglich, einen Suchschlüssel zu erstellen, wenn sich der Cursor in einem Index befindet, der keine Schlüssel Spalten besitzt, es sei denn, es wurde ein zuvor erstellter Suchschlüssel bereitgestellt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg, wenn JET_bitNormalizedKey und JET_bitNewKey nicht angegeben wurden, wird der Suchschlüssel anhand der Suchkriterien für eine weitere Schlüssel Spalte im aktuellen Index erstellt. Wenn JET_bitNormalizedKey nicht angegeben wurde und JET_bitNewKey angegeben wurde, wurde ein zuvor vorhandener Suchschlüssel verworfen und ein neuer, der durch die Suchkriterien für die erste Schlüssel Spalte im aktuellen Index erstellt wurde. Wenn JET_bitNormalizedKey angegeben wurde, wurde ein zuvor vorhandener Suchschlüssel verworfen und ein neuer, der aus dem Eingabepuffer geladen wurde. In jedem Fall erfolgt keine Änderung des Daten Bank Status.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
+| <p>JET_errIndexTuplesKeyTooSmall</p> | <p>Die bereitgestellten Spaltendaten waren zu klein, um einen gültigen Schlüssel für den aktuellen Index zu erstellen, da dieser Index ein Tupelindex ist und die minimale Tupelgröße größer als die bereitgestellten Spaltendaten war. Weitere Informationen zu Tupelindizes finden Sie unter <a href="gg294099(v=exchg.10).md">JetCreateIndex.</a> Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInvalidBufferSize</p> | <p>Die bereitgestellten Spaltendaten stimmten nicht mit der größe überein, die für die Spaltendefinition erforderlich ist. Dies kann passieren, wenn der Datentyp der Spalte intrinsisch eine bestimmte Größe hat. Dies kann auch der Fall sein, wenn der Datentyp der Spalte nicht intrinsisch eine bestimmte Größe hat, die Definition der Spalte sie jedoch als feste Länge deklariert. Eine Ausnahme besteht darin, dass dieser Fehler nicht auftritt, wenn für eine Textspalte mit fester Länge zu wenig Daten bereitgestellt werden, da fehlende Daten automatisch mit Leerzeichen aufgefüllt werden. Eine zweite Ausnahme besteht darin, dass dieser Fehler nicht auftritt, wenn für eine binäre Spalte mit fester Länge zu wenig Daten bereitgestellt werden, da fehlende Daten automatisch mit Nullen aufgefüllt werden.</p> | 
+| <p>JET_errInvalidgrbit</p> | <p>Eine der angeforderten Optionen war ungültig, wurde auf unzulässige Weise verwendet oder nicht implementiert. Dies kann für <strong>JetMakeKey</strong> passieren, wenn:</p><ul><li><p>JET_bitPartialColumnStartLimit oder JET_bitPartialColumnEndLimit angegeben werden, und die entsprechende Schlüsselspalte ist keine Textspalte und keine binäre Spalte variabler Länge. Dieser Fall tritt nur bei Windows XP und späteren Versionen auf.</p></li><li><p>Es wird versucht, mehrere der folgenden Optionen zusammen zu verwenden: JET_bitPartialColumnStartLimit, JET_bitPartialColumnEndLimit, JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit. Dieser Fall tritt nur bei Windows XP und späteren Versionen auf.</p></li><li><p>Es wird versucht, JET_bitStrLimit oder JET_bitSubStrLimit zu verwenden, wenn eine der folgenden Optionen verwendet wird: JET_bitPartialColumnStartLimit, JET_bitPartialColumnEndLimit, JET_bitFullColumnStartLimit und JET_bitFullColumnEndLimit. Dieser Fall tritt nur bei Windows XP und späteren Versionen auf.</p></li></ul> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war.</p><p>Dies kann für <strong>JetMakeKey</strong> passieren, wenn JET_bitNormalizedKey angegeben wurde und der im Eingabepuffer angegebene Wert zu groß war, um ein gültiger Suchschlüssel zu sein.</p> | 
+| <p>JET_errKeyIsMade</p> | <p>Die für <strong>JetMakeKey</strong> bereitgestellten Spaltendaten wurden abgelehnt, da die Spaltendaten bereits für alle Schlüsselspalten im aktuellen Index bereitgestellt wurden. Dies kann auf drei Arten geschehen. Die erste Möglichkeit ist, wenn Spaltendaten für jede Schlüsselspalte im aktuellen Index bereitgestellt werden. Die zweite Möglichkeit ist, wenn Spaltendaten für mindestens eine Schlüsselspalte bereitgestellt wurden und eine Platzhalteroption für den letzten Aufruf ausgewählt wurde. Die dritte Möglichkeit besteht darin, dass ein zuvor erstellter Suchschlüssel mit JET_bitNormalizedKey bereitgestellt wurde, der alle Schlüsselspalten abdeckt.</p> | 
+| <p>JET_errKeyNotMade</p> | <p>Es gibt keinen aktuellen Suchschlüssel für den Cursor. Dies geschieht für <strong>JetMakeKey,</strong> wenn JET_bitNewKey nicht angegeben ist und kein Suchschlüssel für diesen Cursor mit einem vorherigen Aufruf von <strong>JetMakeKey</strong>erstellt wurde. Der Suchschlüssel wird durch einen vorherigen Aufruf einer beliebigen Navigations-API auf dem Cursor außer <a href="gg294117(v=exchg.10).md">JetMove</a>gelöscht.</p> | 
+| <p>JET_errNoCurrentIndex</p> | <p>Es gibt keinen aktuellen Index für den Cursor. Dies geschieht für <strong>JetMakeKey,</strong> wenn sich der Cursor im gruppierten Index einer Tabelle befindet, kein primärer Index definiert wurde und JET_bitNormalizedKey nicht angegeben wurde. Es ist nicht möglich, einen Suchschlüssel zu erstellen, wenn sich der Cursor in einem Index befindet, der keine Schlüsselspalten aufweist, es sei denn, es wird ein zuvor konstruierter Suchschlüssel bereitgestellt.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da ein Wiederherstellungsvorgang für die Instanz ausgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht für mehrere Threads gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
 
-Bei einem Fehler, wenn JET_bitNormalizedKey oder JET_bitNewKey angegeben wurde, ist der Status des Suchschlüssels nicht definiert. Wenn weder JET_bitNormalizedKey noch JET_bitNewKey angegeben wurden, erfolgt keine Änderung des Zustands des Suchschlüssels. In jedem Fall erfolgt keine Änderung des Daten Bank Status.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Schlüssel sollten als nicht transparente Datenblöcke behandelt werden. Es sollte nicht versucht werden, die interne Struktur dieser Daten auszunutzen. Allerdings sind die folgenden Informationen zu allen ESENT-Schlüsseln bekannt:
+Wenn bei Erfolg JET_bitNormalizedKey und JET_bitNewKey nicht angegeben wurden, wurde der Suchschlüssel durch die Suchkriterien für eine weitere Schlüsselspalte im aktuellen Index erstellt. Wenn JET_bitNormalizedKey nicht angegeben wurde und JET_bitNewKey angegeben wurde, wurde jeder zuvor vorhandene Suchschlüssel verworfen, und ein neuer Suchschlüssel wurde anhand der Suchkriterien für die erste Schlüsselspalte im aktuellen Index erstellt. Wenn JET_bitNormalizedKey angegeben wurde, wurde jeder zuvor vorhandene Suchschlüssel verworfen und ein neuer aus dem Eingabepuffer geladen. In jedem Fall erfolgt keine Änderung des Datenbankzustands.
 
-  - Schlüssel können mit [memcmp](/previous-versions/visualstudio/visual-studio-6.0/aa246467(v=vs.60)) miteinander verglichen werden, um ihre relative Reihenfolge im Ursprungs Index für die Tabelle der Quell Indexeinträge festzulegen.
+Wenn bei einem Fehler JET_bitNormalizedKey oder JET_bitNewKey angegeben wurde, ist der Status des Suchschlüssels nicht definiert. Wenn weder JET_bitNormalizedKey noch JET_bitNewKey angegeben wurden, erfolgt keine Änderung des Status des Suchschlüssels. In jedem Fall erfolgt keine Änderung des Datenbankzustands.
+
+#### <a name="remarks"></a>Hinweise
+
+Schlüssel sollten als nicht transparente Datenblöcke behandelt werden. Es sollte nicht versucht werden, die interne Struktur dieser Daten auszunutzen. Folgendes ist jedoch über alle ESENT-Schlüssel bekannt:
+
+  - Schlüssel können miteinander verglichen werden, indem [sie memcmp](/previous-versions/visualstudio/visual-studio-6.0/aa246467(v=vs.60)) verwenden, um ihre relative Reihenfolge im ursprünglichen Index über der Tabelle der Quellindexeinträge herzustellen.
 
   - Es ist bedeutungslos, Schlüssel von Indexeinträgen aus verschiedenen Indizes miteinander zu vergleichen.
 
-  - Ein Schlüssel ist immer kleiner oder gleich JET_cbKeyMost (255) Bytes in der Länge vor Windows Vista. Unter Windows Vista und späteren Versionen können Schlüssel größer sein. Die maximale Größe eines Schlüssels ist gleich dem aktuellen Wert JET_paramKeyMost.
+  - Ein Schlüssel ist immer kleiner oder gleich JET_cbKeyMost (255) Bytes vor Windows Vista. Bei Windows Vista und höheren Versionen können die Schlüssel größer sein. Die maximale Größe eines Schlüssels entspricht dem aktuellen Wert von JET_paramKeyMost.
 
-Suchschlüssel können ein Byte länger sein, wenn eine Platzhalter Option verwendet wurde. In diesem Fall ist der Suchschlüssel bis zu JET_cbLimitKeyMost (256) Bytes für Releases vor Windows Vista und JET_paramKeyMost + 1 Bytes für Windows Vista und spätere Versionen.
+Suchschlüssel können ein Byte länger sein, wenn eine Platzhalteroption verwendet wurde. In diesem Fall beträgt der Suchschlüssel bis zu JET_cbLimitKeyMost (256) Bytes für Releases vor Windows Vista und JET_paramKeyMost + 1 Bytes für Windows Vista und höhere Versionen.
 
-Diese maximale Schlüsselgröße ist äußerst wichtig. Jedes Mal, wenn ein Index Eintrag mit Spaltenwerten vorhanden ist, die groß genug sind, um zu bewirken, dass für diesen Index ein Schlüssel generiert wird, der andernfalls größer als diese maximale Größe ist, wird der Schlüssel automatisch mit dieser maximalen Größe abgeschnitten. Dies hat zwei Auswirkungen:
+Diese maximale Schlüsselgröße hat eine sehr wichtige Bedeutung. Wenn ein Indexeintrag mit Spaltenwerten vorhanden ist, die groß genug sind, um die Generierung eines Schlüssels für diesen Index zu bewirken, der andernfalls größer als diese maximale Größe wäre, wird dieser Schlüssel automatisch bei dieser maximalen Größe abgeschnitten. Dies hat zwei Auswirkungen:
 
-  - Bei Einträgen in einem eindeutigen Index führt dies dazu, dass Einträge, die andernfalls eindeutig sind, als Duplikate deklariert werden.
+  - Bei Einträgen in einem eindeutigen Index werden Einträge, die andernfalls eindeutig sind, als Duplikate deklariert.
 
-  - Bei Einträgen in allen Indizes bewirkt das Abschneiden von Schlüsseln, dass Indexeinträge, die andernfalls nicht mit den Suchkriterien eines bestimmten Suchschlüssels übereinstimmen, als Übereinstimmungen deklariert werden.
+  - Bei Einträgen in allen Indizes führt das Abschneiden von Schlüsseln dazu, dass Indexeinträge, die andernfalls nicht den Suchkriterien eines bestimmten Suchschlüssels entsprechen, als Übereinstimmungen deklariert werden.
 
-Anwendungen müssen diese Abkürzung vorhersehen und entweder vermeiden oder ihre Auswirkungen kompensieren. In Windows Vista wurde ein neues indexflag ("JET_bitIndexDisallowTruncation") hinzugefügt, um es Anwendungen zu vereinfachen, schlüsseltruncations zu verhindern. Weitere Informationen zu dieser Indizierungs Option finden Sie in der [JET_INDEXCREATE](./jet-indexcreate-structure.md) -Struktur.
+Anwendungen müssen diese Kürzung antizipieren und sie entweder vermeiden oder ihre Auswirkungen kompensieren. In Windows Vista wurde ein neues Indexflag JET_bitIndexDisallowTruncation hinzugefügt, um Anwendungen das Verhindern von Schlüsselkürzungen zu erleichtern. Weitere [](./jet-indexcreate-structure.md) Informationen zu dieser Indizierungsoption finden Sie in der JET_INDEXCREATE-Struktur.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -313,7 +150,7 @@ Anwendungen müssen diese Abkürzung vorhersehen und entweder vermeiden oder ihr
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetkreateingedex](./jetcreateindex-function.md)  
-[Jetretrievekey](./jetretrievekey-function.md)  
+[JetCreateIndex](./jetcreateindex-function.md)  
+[JetRetrikey](./jetretrievekey-function.md)  
 [JetSeek](./jetseek-function.md)  
-[Jetsetindexrange](./jetsetindexrange-function.md)
+[JetSetIndexRange](./jetsetindexrange-function.md)

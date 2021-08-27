@@ -1,8 +1,8 @@
 ---
-description: Gibt eine XML-Darstellung eines Objekts oder einer Instanz zurück. Die Textdatei ist im XML-Format formatiert, das in WbemObjectTextFormatEnum angegeben ist.
+description: Gibt eine XML-Darstellung eines Objekts oder einer Instanz zurück. Die Textdatei wird in dem XML-Format formatiert, das wie in WbemObjectTextFormatEnum angegeben ist.
 ms.assetid: 98961d94-8360-4ed7-b1b1-20b4fca45d45
 ms.tgt_platform: multiple
-title: SWbemObjectEx.GetText_ -Methode (Wbemdisp.h)
+title: SWbemObjectEx.GetText_-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 8feace72eeb51ed0904ad748892ca3c1b3adea9c8ca6c97ac7a76ea11890dd08
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2f5772429fa0cd7f2f45009ff1867141a845088b
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117922428"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885486"
 ---
 # <a name="swbemobjectexgettext_-method"></a>SWbemObjectEx.GetText-Methode \_
 
-Die **GetText-Methode \_** des [**SWbemObjectEx-Objekts**](swbemobjectex.md) gibt eine XML-Darstellung eines Objekts oder einer Instanz zurück. Die Textdatei ist im XML-Format formatiert, das in [**WbemObjectTextFormatEnum angegeben ist.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemobjecttextformatenum)
+Die **GetText-Methode \_** des [**SWbemObjectEx-Objekts**](swbemobjectex.md) gibt eine XML-Darstellung eines Objekts oder einer Instanz zurück. Die Textdatei wird in dem XML-Format formatiert, das wie in [**WbemObjectTextFormatEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemobjecttextformatenum)angegeben ist.
 
 Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
@@ -63,7 +63,7 @@ Reservierte Vorgangsflags. Der Standardwert ist 0 (null).
 *objWbemNamedValueSet* \[ in, optional\]
 </dt> <dd>
 
-Ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das den Kontext für den Vorgang fest legt. Der Standardwert ist NULL. Weitere Informationen zu den zulässigen Name-Wert-Paaren finden Sie weiter unten in den Anmerkungen.
+Ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das den Kontext für den Vorgang festlegt. Der Standardwert ist NULL. Weitere Informationen zu den zulässigen Name-Wert-Paaren finden Sie weiter unten in den Hinweisen.
 
 </dd> </dl>
 
@@ -113,8 +113,8 @@ Beim Erstellen ihres [**SWbemNamedValueSet**](swbemnamedvalueset.md)sind nur die
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -125,29 +125,29 @@ Beim Erstellen ihres [**SWbemNamedValueSet**](swbemnamedvalueset.md)sind nur die
 <tbody>
 <tr class="odd">
 <td>Localonly</td>
-<td><strong>VT_BOOL</strong><br/> True <strong>gibt an,</strong>dass nur lokal definierte Eigenschaften und Methoden im resultierenden XML-Code vorhanden sind. Der Standardwert ist <strong>FALSE.</strong><br/></td>
+<td><strong>VT_BOOL</strong><br/> True <strong></strong>gibt an, dass nur lokal definierte Eigenschaften und Methoden im resultierenden XML vorhanden sind. Der Standardwert ist <strong>FALSE.</strong><br/></td>
 </tr>
 <tr class="even">
 <td>IncludeQualifiers</td>
-<td><strong>VT_BOOL</strong><br/> True <strong>gibt</strong>an, dass Qualifizierer von Klassen, Instanzen, Eigenschaften und Methoden im resultierenden XML-Code enthalten sind. Der Standardwert ist <strong>FALSE.</strong><br/></td>
+<td><strong>VT_BOOL</strong><br/> True <strong></strong>gibt an, dass Qualifizierer von Klassen, Instanzen, Eigenschaften und Methoden im resultierenden XML-Code enthalten sind. Der Standardwert ist <strong>FALSE.</strong><br/></td>
 </tr>
 <tr class="odd">
 <td>PathLevel</td>
 <td><strong>VT-I4</strong><br/> Der Standardwert ist 0 (null). Mögliche Werte:<br/>
 <ul>
-<li>0: Ein <CLASS> - oder <INSTANCE> -Element wird erstellt, je nachdem, ob das Objekt eine Klasse oder Instanz ist.</li>
-<li>1: Ein <VALUE.NAMEDOBJECT> -Element wird generiert.</li>
-<li>2: Ein <VALUE.OBJECTWITHLOCALPATH> -Element wird generiert.</li>
-<li>3: Ein <VALUE.OBJECTWITHPATH> -Element wird generiert.</li>
+<li>0: Eine KLASSE oder ein &lt; &gt; Element wird <INSTANCE> erstellt, je nachdem, ob das Objekt eine Klasse oder Instanz ist.</li>
+<li>1: Ein <VALUE.NAMEDOBJECT> Element wird generiert.</li>
+<li>2: Ein <VALUE.OBJECTWITHLOCALPATH> Element wird generiert.</li>
+<li>3: Ein <VALUE.OBJECTWITHPATH> Element wird generiert.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td>ExcludeSystemProperties</td>
-<td><strong>VT-BOOL</strong><br/> True <strong>gibt</strong>an, dass Systemeigenschaften wie __NAMESPACE aus der Ausgabe ausgeschlossen werden.<br/></td>
+<td><strong>VT-BOOL</strong><br/> True <strong></strong>gibt an, dass Systemeigenschaften wie __NAMESPACE aus der Ausgabe ausgeschlossen werden.<br/></td>
 </tr>
 <tr class="odd">
 <td>IncludeClassOrigin</td>
-<td><strong>VT_BOOL</strong><br/> True <strong>gibt an,</strong>dass das Ursprungsattribut der Klasse für die Elemente <PROPERTY> und festgelegt <METHOD> wird. Der Standardwert ist <strong>FALSE.</strong><br/></td>
+<td><strong>VT_BOOL</strong><br/> True <strong></strong>gibt an, dass das Ursprungsattribut der Klasse für die Elemente und festgelegt <PROPERTY> <METHOD> wird. Der Standardwert ist <strong>FALSE.</strong><br/></td>
 </tr>
 </tbody>
 </table>
@@ -156,11 +156,11 @@ Beim Erstellen ihres [**SWbemNamedValueSet**](swbemnamedvalueset.md)sind nur die
 
  
 
-Weitere Informationen zum Erstellen eines [**SWbemNamedValueSet**](swbemnamedvalueset.md)finden Sie unter [**SWbemNamedValueSet.Add.**](swbemnamedvalueset-add.md)
+Weitere Informationen zum Erstellen eines [**SWbemNamedValueSet**](swbemnamedvalueset.md)finden Sie unter [**SWbemNamedValueSet.Add**](swbemnamedvalueset-add.md).
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Skript zeigt, wie Sie eine XML-Darstellung der [**Win32 \_ Bios-Klassendefinition**](/windows/desktop/CIMWin32Prov/win32-bios) abrufen. Durch Angeben einer bestimmten Instanz von **Win32 \_ Bios** können Sie die Daten dieses Objekts in XML abrufen.
+Das folgende Skript zeigt, wie Sie eine XML-Darstellung der [**Win32 \_ Bios-Klassendefinition**](/windows/desktop/CIMWin32Prov/win32-bios) abrufen. Indem Sie eine bestimmte Instanz von **Win32 \_ Bios** angeben, können Sie die Daten dieses Objekts in XML abrufen.
 
 
 ```VB
@@ -177,7 +177,7 @@ wscript.echo Text
 
 
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

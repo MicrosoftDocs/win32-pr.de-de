@@ -1,19 +1,19 @@
 ---
-description: Die Fotometadatenrichtlinie für die System.Comment-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Comment-Eigenschaft.
 ms.assetid: 02a6ac18-ad69-4880-a267-8330d648c0d9
-title: Richtlinie für System.Comment-Fotometadaten
+title: System.Comment Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45b3511e0a459a2b652b29828060be6f0a92a36639aef63d4fa087e54ec9d80b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2aa1a62fd5afa131a714c365ed2fda2c307bc955
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118205629"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883904"
 ---
-# <a name="systemcomment-photo-metadata-policy"></a>Richtlinie für System.Comment-Fotometadaten
+# <a name="systemcomment-photo-metadata-policy"></a>System.Comment Photo Metadata Policy
 
-Die Fotometadatenrichtlinie für die [System.Comment-Eigenschaft.](../properties/props-system-comment.md)
+Die Richtlinie für Fotometadaten für die [System.Comment-Eigenschaft.](../properties/props-system-comment.md)
 
 ### <a name="pkey"></a>PKEY
 
@@ -31,13 +31,13 @@ Nein
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Propvariant-Eingabetyp
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
 VT \_ LPWSTR oder VT \_ LPSTR
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas werden abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
@@ -45,11 +45,11 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                | Datenträgerformat    |
+| Order | Pfad                                | Datenträgerformat    |
 |-------|-------------------------------------|----------------|
-| 1     | /app1/ifd/{ushort=40092}            | \_Unicodebytes |
+| 1     | /app1/ifd/{ushort=40092}            | \_Unicode-Bytes |
 | 2     | /app1/ifd/{ushort=37510}            | Unicode        |
-| 3     | /xmp/ <xmpalt> exif:UserComment | Unicode        |
+| 3     | /xmp/ &lt; xmpalt &gt; exif:UserComment | Unicode        |
 
 
 
@@ -59,9 +59,9 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                     | Datenträgerformat    |
+| Order | Pfad                     | Datenträgerformat    |
 |-------|--------------------------|----------------|
-| 1     | /app1/ifd/{ushort=40092} | \_Unicodebytes |
+| 1     | /app1/ifd/{ushort=40092} | \_Unicode-Bytes |
 
 
 
@@ -71,7 +71,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                          |
+| Order | Pfad                          |
 |-------|-------------------------------|
 | 1     | /app1/ifd/{ushort=40092}      |
 | 2     | /app1/ifd/exif/{ushort=37510} |
@@ -87,11 +87,11 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                                    | Datenträgerformat    |
+| Order | Pfad                                    | Datenträgerformat    |
 |-------|-----------------------------------------|----------------|
-| 1     | /ifd/{ushort=40092}                     | \_Unicodebytes |
+| 1     | /ifd/{ushort=40092}                     | \_Unicode-Bytes |
 | 2     | /ifd/{ushort=37510}                     | Unicode        |
-| 3     | /ifd/xmp/ <xmpalt> exif:UserComment | Unicode        |
+| 3     | /ifd/xmp/ &lt; xmpalt &gt; exif:UserComment | Unicode        |
 
 
 
@@ -101,9 +101,9 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                | Datenträgerformat    |
+| Order | Pfad                | Datenträgerformat    |
 |-------|---------------------|----------------|
-| 1     | /ifd/{ushort=40092} | \_Unicodebytes |
+| 1     | /ifd/{ushort=40092} | \_Unicode-Bytes |
 
 
 
@@ -113,7 +113,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 
 
-| Auftrag | Pfad                      |
+| Order | Pfad                      |
 |-------|---------------------------|
 | 1     | /ifd/{ushort=40092}       |
 | 2     | /ifd/{ushort=37510}       |

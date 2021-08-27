@@ -4,12 +4,12 @@ ms.assetid: f2b666d6-bf22-47b5-87e1-8de5ff51c152
 title: Programmgesteuerte Bezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cdc29a3981461a178bdf528768bb12b1840ac5dbed46f310c10718fa9429153
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: bf982f865fa8b856bc29c00a9b2371b88b34615b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117860807"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122467287"
 ---
 # <a name="programmatic-identifiers"></a>Programmgesteuerte Bezeichner
 
@@ -31,57 +31,18 @@ Ein ProgID-Unterschlüssel sollte die folgenden Elemente enthalten. Beachten Sie
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Element</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>(Standard)</strong></td>
-<td>Legen Sie den Standardeintrag des Unterschlüssels ProgID auf einen Anzeigenamen für diese ProgID fest, der dem Benutzer angezeigt werden kann. Die Verwendung dieses Eintrags zum Verwenden des Beschriftungsnamens ist auf Systemen, auf denen Windows 2000 oder höher ausgeführt wird, durch den Eintrag FriendlyTypeName veraltet. Sie sollten diesen Wert jedoch aus Gründen der Abwärtskompatibilität festlegen.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>AllowSilentDefaultTakeOver</strong> (eingeführt in Windows 8)</td>
-<td>Legen Sie diesen optionalen Eintrag fest, um zu signalisieren, Windows diese ProgID beim Bestimmen eines Standardhandlers für einen öffentlichen Dateityp ignorieren soll. Unabhängig davon, ob dieser Wert festgelegt ist, wird die ProgID weiterhin im OpenWith-Kontextmenü und -dialogfeld angezeigt. Dies ist ein REG_NONE Wert.</td>
-</tr>
-<tr class="odd">
-<td><strong>AppUserModelID</strong> (eingeführt in Windows 7)</td>
-<td>Legen Sie diesen optionalen Eintrag auf die explizite Anwendungsbenutzermodell-ID (AppUserModelID) der Anwendung fest, wenn die <strong></strong> Anwendung eine explizite AppUserModelID verwendet und entweder die automatisch generierten Recent- oder <strong>Frequent</strong> Jump Lists des Systems verwendet oder eine benutzerdefinierte Sprungliste. Wenn eine Anwendung eine explizite AppUserModelID verwendet und diesen Wert nicht festgelegt, werden elemente nicht in den Sprunglisten dieser Anwendung angezeigt. Dies ist eine REG_SZ Zeichenfolge. Weitere Informationen finden Sie unter <a href="appids.md">Anwendungsbenutzermodell-IDs (AppUserModelIDs).</a><br/></td>
-</tr>
-<tr class="even">
-<td><strong>EditFlags</strong></td>
-<td>Legen Sie diesen optionalen Eintrag mithilfe von Flags aus der <a href="/windows/desktop/api/Shlwapi/ne-shlwapi-filetypeattributeflags"><strong>FILETYPEATTRIBUTEFLAGS-Enumeration</strong></a> fest. Der EditFlags-Eintrag steuert einige Aspekte der Shellbehandlung der Dateitypen, die mit dieser ProgID verknüpft sind. Sie können auch den EditFlags-Eintrag verwenden, um zu begrenzen, wie viel der Benutzer bestimmte Aspekte dieser Dateitypen mithilfe des Eigenschaftenblatts einer Datei ändern kann. Die <strong>für EditFlags verwendeten FILETYPEATTRIBUTEFLAGS-Werte</strong> sind binäre Werte, die so entworfen wurden, dass Sie mehrere Attribute in einem bitweisem OR-Vorgang zu einem einzelnen Wert kombinieren können. Dies ist ein REG_DWORD oder REG_BINARY Wert.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>FriendlyTypeName</strong></td>
-<td>Legen Sie diesen Eintrag auf einen Anzeigenamen für die ProgID fest, der dem Benutzer angezeigt werden kann. Aus Konsistenz-Grund sollte diese Zeichenfolge die gleichen Daten wie der Standardeintrag für diesen ProgID-Schlüssel enthalten. Dieser Eintrag kann entweder eine REG_SZ- oder REG_EXPAND_SZ-Zeichenfolge sein, muss jedoch als indirekte Zeichenfolge formatiert sein (ein vollqualifizierter Dateiname und Ressourcenwert, dem das @-Symbol vorangegangen ist), z. B. <em>@%SystemRoot%\shell32.dll,-154</em>.<br/></td>
-</tr>
-<tr class="even">
-<td><strong>InfoTip</strong></td>
-<td>Legen Sie diesen Eintrag auf eine kurze Hilfemeldung fest, die die Shell für diese ProgID anzeigt. Der InfoTip-Eintrag wird in einem Dialogfeld mit der Maus angezeigt. Dieser Wert kann entweder eine REG_SZ oder REG_EXPAND_SZ sein, muss aber wie FriendlyTypeName als indirekte Zeichenfolge formatiert werden.<br/></td>
-</tr>
-<tr class="odd">
-<td><strong>CurVer</strong></td>
-<td>Legen Sie den Eintrag (Standard) dieses Unterschlüssels auf die aktuelle Version dieser ProgID fest.<br/>
-<blockquote>
-[!Note]<br />
-Unless you have side-by-side application versions, that is, multiple versions installed on the same system, you should avoid using <strong>CurVer</strong>.
-</blockquote>
-<br/></td>
-</tr>
-<tr class="even">
-<td><strong>DefaultIcon</strong>.</td>
-<td>Legen Sie den Eintrag (Standard) dieses Unterschlüssels auf das Standardsymbol fest, das Sie für Dateitypen anzeigen möchten, die dieser ProgID zugeordnet sind. Dieser Wert kann entweder eine REG_SZ- oder REG_EXPAND_SZ-Zeichenfolge sein, muss jedoch als vollqualifizierter Dateiname mit seinem ressourcenbasierten Wert angegeben werden, z. B. <em>%SystemRoot%\shell32.dll,-154</em>.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Element | BESCHREIBUNG | 
+|---------|-------------|
+| <strong>(Standard)</strong> | Legen Sie den Standardeintrag des Unterschlüssels ProgID auf einen Anzeigenamen für diese ProgID fest, der dem Benutzer angezeigt werden kann. Die Verwendung dieses Eintrags zum Verwenden des Angezeigtennamens wird auf Systemen, auf denen Windows 2000 oder höher ausgeführt wird, durch den Eintrag FriendlyTypeName als veraltet festgelegt. Sie sollten diesen Wert jedoch aus Gründen der Abwärtskompatibilität festlegen.<br /> | 
+| <strong>AllowSilentDefaultTakeOver</strong> (eingeführt in Windows 8) | Legen Sie diesen optionalen Eintrag fest, um zu signalisieren, Windows diese ProgID beim Bestimmen eines Standardhandlers für einen öffentlichen Dateityp ignorieren soll. Unabhängig davon, ob dieser Wert festgelegt ist, wird die ProgID weiterhin im OpenWith-Kontextmenü und -dialogfeld angezeigt. Dies ist ein REG_NONE Wert. | 
+| <strong>AppUserModelID</strong> (eingeführt in Windows 7) | Legen Sie diesen optionalen Eintrag auf die explizite Anwendungsbenutzermodell-ID (AppUserModelID) der Anwendung fest, wenn die <strong></strong> Anwendung <strong></strong> eine explizite AppUserModelID verwendet und entweder die automatisch generierten Aktuellen oder häufigen Sprunglisten des Systems verwendet oder eine benutzerdefinierte Sprungliste. Wenn eine Anwendung eine explizite AppUserModelID verwendet und diesen Wert nicht festgelegt, werden elemente nicht in den Sprunglisten dieser Anwendung angezeigt. Dies ist eine REG_SZ Zeichenfolge. Weitere Informationen finden Sie unter <a href="appids.md">Anwendungsbenutzermodell-IDs (AppUserModelIDs).</a><br /> | 
+| <strong>EditFlags</strong> | Legen Sie diesen optionalen Eintrag mithilfe von Flags aus der <a href="/windows/desktop/api/Shlwapi/ne-shlwapi-filetypeattributeflags"><strong>FILETYPEATTRIBUTEFLAGS-Enumeration</strong></a> fest. Der EditFlags-Eintrag steuert einige Aspekte der Shellbehandlung der Dateitypen, die mit dieser ProgID verknüpft sind. Sie können auch den EditFlags-Eintrag verwenden, um zu begrenzen, wie viel der Benutzer bestimmte Aspekte dieser Dateitypen mithilfe des Eigenschaftenblatts einer Datei ändern kann. Die <strong>für EditFlags verwendeten FILETYPEATTRIBUTEFLAGS-Werte</strong> sind binäre Werte, die so entworfen wurden, dass Sie mehrere Attribute in einem bitweisem OR-Vorgang zu einem einzelnen Wert kombinieren können. Dies ist ein REG_DWORD oder REG_BINARY Wert.<br /> | 
+| <strong>FriendlyTypeName</strong> | Legen Sie diesen Eintrag auf einen Anzeigenamen für die ProgID fest, der dem Benutzer angezeigt werden kann. Aus Konsistenz-Grund sollte diese Zeichenfolge die gleichen Daten wie der Standardeintrag für diesen ProgID-Schlüssel enthalten. Dieser Eintrag kann entweder eine REG_SZ- oder REG_EXPAND_SZ-Zeichenfolge sein, muss jedoch als indirekte Zeichenfolge formatiert sein (ein vollqualifizierter Dateiname und Ressourcenwert, dem das @-Symbol vorangegangen ist), z. B. <em>@%SystemRoot%\shell32.dll,-154</em>.<br /> | 
+| <strong>InfoTip</strong> | Legen Sie diesen Eintrag auf eine kurze Hilfemeldung fest, die die Shell für diese ProgID anzeigt. Der InfoTip-Eintrag wird in einem Dialogfeld mit der Maus angezeigt. Dieser Wert kann entweder eine REG_SZ oder REG_EXPAND_SZ sein, muss aber wie FriendlyTypeName als indirekte Zeichenfolge formatiert werden.<br /> | 
+| <strong>CurVer</strong> | Legen Sie den Eintrag (Standard) dieses Unterschlüssels auf die aktuelle Version dieser ProgID fest.<br /><blockquote>[!Note]<br />Unless you have side-by-side application versions, that is, multiple versions installed on the same system, you should avoid using <strong>CurVer</strong>.</blockquote><br /> | 
+| <strong>DefaultIcon</strong>. | Legen Sie den Eintrag (Standard) dieses Unterschlüssels auf das Standardsymbol fest, das Sie für Dateitypen anzeigen möchten, die dieser ProgID zugeordnet sind. Dieser Wert kann entweder eine REG_SZ- oder REG_EXPAND_SZ-Zeichenfolge sein, muss jedoch als vollqualifizierter Dateiname mit seinem ressourcenbasierten Wert angegeben werden, z. B. <em>%SystemRoot%\shell32.dll,-154</em>.<br /> | 
+
 
 
 

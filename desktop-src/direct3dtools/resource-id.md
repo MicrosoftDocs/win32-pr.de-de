@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5c0652796061b7875bca068bf72d53da541b941518990b4616ae1d1948c0d3e1
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 5012a6dc40f47a396139eb29f2f88151b4a10ffb
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119787970"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623156"
 ---
 # <a name="span-idvspixengineresource_idspanresource_id-enumeration"></a><span id="vspixengine.resource_id"></span>\_Ressourcen-ID-Enumeration
 
@@ -38,13 +38,13 @@ Definiert Ressourcen-IDs für freigegebene Zeichenfolgenressourcen. Diese werden
 ## <a name="constants"></a>Konstanten
 
 <span id="IDS_ENGINEDISCONNECTED"></span><span id="ids_enginedisconnected"></span>**\_IDS-ENGINEDISCONNECTED**  
-Wird nicht verwendet. Ressourcen-ID für zeichenfolge, die zuvor verwendet wurde, um anzugeben, dass der Druckbildschirm nach Abschluss der Aufzeichnungssitzung erreicht wurde.
+Nicht verwendet. Ressourcen-ID für zeichenfolge, die zuvor verwendet wurde, um anzugeben, dass der Druckbildschirm nach Abschluss der Aufzeichnungssitzung erreicht wurde.
 
 <span id="IDR_RCDATA1"></span><span id="idr_rcdata1"></span>**IDR \_ RCDATA1**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_DEFAULTEXPFILE_CONTENT"></span><span id="ids_defaultexpfile_content"></span>**IDS \_ \_ DEFAULTEXPFILE-INHALT**  
-Wird nicht verwendet. Ressourcen-ID für Zeichenfolge, die früher für XML-Daten in Legacyerfassungsszenarien verwendet wurde.
+Nicht verwendet. Ressourcen-ID für Zeichenfolge, die zuvor in Legacyerfassungsszenarien für XML-Daten verwendet wurde.
 
 <span id="IDS_CAPTURE_MESSAGE"></span><span id="ids_capture_message"></span>**IDS \_ CAPTURE \_ MESSAGE**  
 Ressourcen-ID für die Zeichenfolge "Erfasster Frame".
@@ -62,19 +62,19 @@ Ressourcen-ID für die Zeichenfolge "Gerätefunktionsebene wird nicht unterstüt
 Ressourcen-ID für die Zeichenfolge "DirectX-Version kann nicht erfasst werden"
 
 <span id="IDS_DCOMP_NOT_SUPPORTED"></span><span id="ids_dcomp_not_supported"></span>**IDS \_ DCOMP \_ NICHT \_ UNTERSTÜTZT**  
-Ressourcen-ID für die Zeichenfolge "DCOMP wird von der App verwendet, aber unter diesem Betriebssystem nicht unterstützt"
+Ressourcen-ID für die Zeichenfolge "DCOMP wird von der App verwendet, wird aber unter diesem Betriebssystem nicht unterstützt"
 
 <span id="IDS_DWRITE_NOT_SUPPORTED"></span><span id="ids_dwrite_not_supported"></span>**IDS \_ DWRITE \_ WIRD NICHT \_ UNTERSTÜTZT**  
 Ressourcen-ID für die Zeichenfolge "DWRITE wird von der App verwendet, wird aber unter diesem Betriebssystem nicht unterstützt"
 
 <span id="IDS_EXPECTED_FAILURE_FORMAT"></span><span id="ids_expected_failure_format"></span>**IDS \_ EXPECTED \_ FAILURE \_ FORMAT**  
-Ressourcen-ID für die Zeichenfolge "%s hat während der Wiedergabe einen Fehler zurückgegeben. (HRESULT=%s) \\ r \\ n".
+Die Ressourcen-ID für die Zeichenfolge "%s hat während der Wiedergabe einen Fehler zurückgegeben. (HRESULT=%s) \\ r \\ n".
 
 <span id="IDS_CAPTURETOOLTIP_MESSAGE"></span><span id="ids_capturetooltip_message"></span>**IDS \_ CAPTURETOOLTIP \_ MESSAGE**  
 Ressourcen-ID für die Zeichenfolge "Verwenden Sie die Taste "Druckbildschirm", um einen Frame zu erfassen."
 
 <span id="IDS_D2D_AND_D10_NOT_SUPPORTED"></span><span id="ids_d2d_and_d10_not_supported"></span>**IDS \_ D2D \_ UND \_ D10 \_ WERDEN NICHT \_ UNTERSTÜTZT**  
-Ressourcen-ID für die Zeichenfolge "D2D und D10 werden unter diesem Betriebssystem nicht zusammen unterstützt"
+Ressourcen-ID für die Zeichenfolge "D2D und D10 werden auf diesem Betriebssystem nicht gemeinsam unterstützt"
 
 <span id="IDS_HUD_STATISTICS"></span><span id="ids_hud_statistics"></span>**IDS \_ HUD \_ STATISTICS**  
 Ressourcen-ID für zeichenfolge "Frames captured %d. Framezeit (ms) %0,00f"
@@ -86,58 +86,58 @@ Ressourcen-ID für die Zeichenfolge "Directx Internal Method"
 Ressourcen-ID für die Zeichenfolge "Captured Frame %ld"
 
 <span id="PIPELINESTAGE_INPUTASSEMBLER"></span><span id="pipelinestage_inputassembler"></span>**PIPELINESTAGE \_ INPUTASSEMBLER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_VERTEXSHADER"></span><span id="pipelinestage_vertexshader"></span>**PIPELINESTAGE \_ VERTEXSHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_HULLSHADER"></span><span id="pipelinestage_hullshader"></span>**PIPELINESTAGE \_ HULLSHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_TESSELATOR"></span><span id="pipelinestage_tesselator"></span>**\_PIPELINESTAGE-TESSELATOR**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_DOMAINSHADER"></span><span id="pipelinestage_domainshader"></span>**PIPELINESTAGE \_ DOMAINSHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_GEOMETRYSHADER"></span><span id="pipelinestage_geometryshader"></span>**PIPELINESTAGE \_ GEOMETRYSHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_STREAMOUTPUT"></span><span id="pipelinestage_streamoutput"></span>**PIPELINESTAGE \_ STREAMOUTPUT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_RASTERIZER"></span><span id="pipelinestage_rasterizer"></span>**\_PIPELINESTAGE-RASTERIZER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_PIXELSHADER"></span><span id="pipelinestage_pixelshader"></span>**PIPELINESTAGE \_ PIXELSHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_OUTPUTMERGER"></span><span id="pipelinestage_outputmerger"></span>**PIPELINESTAGE \_ OUTPUTMERGER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="PIPELINESTAGE_COMPUTESHADER"></span><span id="pipelinestage_computeshader"></span>**PIPELINESTAGE \_ COMPUTESHADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_SUPPORTEDFORMAT"></span><span id="bufferobject_supportedformat"></span>**BUFFEROBJECT \_ SUPPORTEDFORMAT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_CURRENTFORMAT"></span><span id="bufferobject_currentformat"></span>**BUFFEROBJECT \_ CURRENTFORMAT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_HEADER"></span><span id="bufferobject_header"></span>**\_BUFFEROBJECT-HEADER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_LINE"></span><span id="bufferobject_line"></span>**BUFFEROBJECT \_ LINE**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_INVALIDFORMAT"></span><span id="bufferobject_invalidformat"></span>**BUFFEROBJECT \_ INVALIDFORMAT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_INVALIDEMPTYFORMAT"></span><span id="bufferobject_invalidemptyformat"></span>**BUFFEROBJECT \_ INVALIDEMPTYFORMAT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="BUFFEROBJECT_INVALIDFORMATSIZE"></span><span id="bufferobject_invalidformatsize"></span>**BUFFEROBJECT \_ INVALIDFORMATSIZE**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="SUMMARYINFO_TARGETAPPLICATION"></span><span id="summaryinfo_targetapplication"></span>**SUMMARYINFO \_ TARGETAPPLICATION**  
 Im Vsglog-Eigenschaftenfenster angezeigter Text – Zielanwendung
@@ -152,7 +152,7 @@ Im vsglog-Eigenschaftenfenster – Zielversion angezeigter Text
 Im vsglog-Eigenschaftenfenster angezeigter Text – Datum der letzten Änderung
 
 <span id="SUMMARYINFO_PROCESSID"></span><span id="summaryinfo_processid"></span>**SUMMARYINFO \_ PROCESSID**  
-Im vsglog-Eigenschaftenfenster – Prozess-ID angezeigter Text
+Im vsglog-Eigenschaftenfenster angezeigter Text – Prozess-ID
 
 <span id="SUMMARYINFO_EXPERIMENTFILE"></span><span id="summaryinfo_experimentfile"></span>**SUMMARYINFO \_ EXPERIMENTFILE**  
 Im vsglog-Eigenschaftenfenster – Experimentdatei angezeigter Text
@@ -173,10 +173,10 @@ Im vsglog-Eigenschaftenfenster angezeigter Text – Startzeit der Sitzung
 Text, der im vsglog-Eigenschaftenfenster - Systeminformationen
 
 <span id="SUMMARYINFO_PROCESSOR"></span><span id="summaryinfo_processor"></span>**\_SUMMARYINFO-PROZESSOR**  
-Text, der im vsglog-Eigenschaftenfenster – Prozessor angezeigt wird
+Im vsglog-Eigenschaftenfenster – Prozessor angezeigter Text
 
 <span id="SUMMARYINFO_MEMORY"></span><span id="summaryinfo_memory"></span>**\_SUMMARYINFO-ARBEITSSPEICHER**  
-Im vsglog-Eigenschaftenfenster – Arbeitsspeicher angezeigter Text
+Text, der im vsglog-Eigenschaftenfenster – Arbeitsspeicher angezeigt wird
 
 <span id="SUMMARYINFO_OSVERSION"></span><span id="summaryinfo_osversion"></span>**SUMMARYINFO \_ OSVERSION**  
 Text, der im vsglog-Eigenschaftenfenster – Betriebssystemversion angezeigt wird
@@ -185,7 +185,7 @@ Text, der im vsglog-Eigenschaftenfenster – Betriebssystemversion angezeigt wir
 Im Vsglog-Eigenschaftenfenster – Betriebssystemarchitektur angezeigter Text
 
 <span id="SUMMARYINFO_TARGETAPPARCHITECTURE"></span><span id="summaryinfo_targetapparchitecture"></span>**SUMMARYINFO \_ TARGETAPPARCHITECTURE**  
-Im vsglog-Eigenschaftenfenster – Ziel-App-Architektur angezeigter Text
+Text, der im vsglog-Eigenschaftenfenster – Architektur der Ziel-App angezeigt wird
 
 <span id="SUMMARYINFO_MAXHWFEATURELEVEL"></span><span id="summaryinfo_maxhwfeaturelevel"></span>**SUMMARYINFO \_ MAXHWFEATURELEVEL**  
 Text, der im vsglog-Eigenschaftenfenster – Max. Hardwarefeatureebene angezeigt wird
@@ -212,7 +212,7 @@ Text, der im vsglog-Eigenschaftenfenster – Unterstützung für erweitertes Far
 Im Vsglog angezeigter Text Eigenschaftenfenster – Anzeigen von Informationen
 
 <span id="SUMMARYINFO_DISPLAYNINFORMATION"></span><span id="summaryinfo_displayninformation"></span>**SUMMARYINFO \_ DISPLAYNINFORMATION**  
-Text, der im vsglog-Eigenschaftenfenster – N-Informationen anzeigen angezeigt wird
+Im vsglog-Eigenschaftenfenster – N-Informationen anzeigen angezeigter Text
 
 <span id="SUMMARYINFO_NAME"></span><span id="summaryinfo_name"></span>**\_SUMMARYINFO-NAME**  
 Text, der im vsglog-Eigenschaftenfenster – Name angezeigt wird
@@ -236,7 +236,7 @@ Im vsglog-Modul angezeigter Text Eigenschaftenfenster Modulinformationen
 Im vsglog-Eigenschaftenfenster – Direct3D-Informationen angezeigter Text
 
 <span id="SUMMARYINFO_VSGVERSION"></span><span id="summaryinfo_vsgversion"></span>**SUMMARYINFO \_ VSGVERSION**  
-Im vsglog-Eigenschaftenfenster vsglog- VSG-Version angezeigter Text
+Text, der im vsglog-Eigenschaftenfenster VSG-Version angezeigt wird
 
 <span id="SUMMARYINFO_CAPTUREMACHINE"></span><span id="summaryinfo_capturemachine"></span>**SUMMARYINFO \_ CAPTUREMACHINE**  
 Text, der im vsglog-Eigenschaftenfenster – Capture Machine angezeigt wird
@@ -251,25 +251,25 @@ Im vsglog-Eigenschaftenfenster – Remotedaten angezeigter Text
 Text, der im vsglog-Eigenschaftenfenster – Andere Direct3D-Informationen angezeigt wird
 
 <span id="SUMMARYINFO_SIZEGB"></span><span id="summaryinfo_sizegb"></span>**SUMMARYINFO \_ SIZEGB**  
-Text, der im vsglog-Eigenschaftenfenster – Größe GB angezeigt wird
+Im Vsglog angezeigter Text Eigenschaftenfenster – Größe GB
 
 <span id="SUMMARYINFO_SIZEMB"></span><span id="summaryinfo_sizemb"></span>**SUMMARYINFO \_ SIZEMB**  
 Text, der im vsglog-Eigenschaftenfenster – Größe MB angezeigt wird
 
 <span id="SUMMARYINFO_SIZEBYTES"></span><span id="summaryinfo_sizebytes"></span>**SUMMARYINFO \_ SIZEBYTES**  
-Im Vsglog angezeigter Text Eigenschaftenfenster - Size Bytes
+Im Vsglog angezeigter Text Eigenschaftenfenster – Größe Bytes
 
 <span id="SUMMARYINFO_MEMORYMB"></span><span id="summaryinfo_memorymb"></span>**SUMMARYINFO \_ MEMORYMB**  
-Text, der im vsglog-Eigenschaftenfenster – Arbeitsspeicher MB angezeigt wird
+Im vsglog-Bereich angezeigter Text Eigenschaftenfenster – Arbeitsspeicher MB
 
 <span id="SUMMARYINFO_X86"></span><span id="summaryinfo_x86"></span>**SUMMARYINFO \_ X86**  
-Text, der im vsglog-Eigenschaftenfenster X86 angezeigt wird
+Im vsglog-Eigenschaftenfenster X86 angezeigter Text
 
 <span id="SUMMARYINFO_X64"></span><span id="summaryinfo_x64"></span>**SUMMARYINFO \_ X64**  
 Im vsglog-Eigenschaftenfenster X64 angezeigter Text
 
 <span id="SUMMARYINFO_TRUE"></span><span id="summaryinfo_true"></span>**SUMMARYINFO \_ TRUE**  
-Text, der im vsglog-Eigenschaftenfenster – True angezeigt wird
+Im vsglog-Eigenschaftenfenster angezeigter Text : True
 
 <span id="SUMMARYINFO_FALSE"></span><span id="summaryinfo_false"></span>**SUMMARYINFO \_ FALSE**  
 Im vsglog-Bereich angezeigter Text Eigenschaftenfenster False
@@ -278,7 +278,7 @@ Im vsglog-Bereich angezeigter Text Eigenschaftenfenster False
 Im vsglog-Eigenschaftenfenster – ARM 32 angezeigter Text
 
 <span id="SUMMARYINFO_UNKNOWNCPUARCHITECTURE"></span><span id="summaryinfo_unknowncpuarchitecture"></span>**SUMMARYINFO \_ UNKNOWNCPUARCHITECTURE**  
-Text, der im vsglog-Eigenschaftenfenster – Unbekannte CPU-Architektur angezeigt wird
+Im vsglog-Eigenschaftenfenster – Unbekannte CPU-Architektur angezeigter Text
 
 <span id="SUMMARYINFO_AllDXGIFormatValues"></span><span id="summaryinfo_alldxgiformatvalues"></span><span id="SUMMARYINFO_ALLDXGIFORMATVALUES"></span>**SUMMARYINFO \_ AllDXGIFormatValues**  
 Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster – Alle DXGI-Formatwerte
@@ -299,7 +299,7 @@ Im vsglog-Abschnitt angezeigter Text Eigenschaftenfenster – Treiberbefehlslist
 Im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ DOUBLES angezeigter Text
 
 <span id="SUMMARYINFO_DoublePrecisionFloatShaderOps"></span><span id="summaryinfo_doubleprecisionfloatshaderops"></span><span id="SUMMARYINFO_DOUBLEPRECISIONFLOATSHADEROPS"></span>**SUMMARYINFO \_ DoublePrecisionFloatShaderOps**  
-Text, der im vsglog-Eigenschaftenfenster – Float-Shader-Ops mit doppelter Genauigkeit angezeigt wird
+Text, der im vsglog-Eigenschaftenfenster – Gleitkomma-Shader-Ops mit doppelter Genauigkeit angezeigt wird
 
 <span id="SUMMARYINFO_D3D11_FEATURE_D3D10_X_HARDWARE_OPTIONS"></span><span id="summaryinfo_d3d11_feature_d3d10_x_hardware_options"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ D3D10 \_ X \_ \_ HARDWAREOPTIONEN**  
 Text, der im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D10 \_ X HARDWARE \_ \_ OPTIONS
@@ -317,19 +317,19 @@ Text, der im vsglog-Eigenschaftenfenster - Output Merger Logic Op angezeigt wird
 Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster – Nur UAV Rendering Forced Sample Count
 
 <span id="SUMMARYINFO_DiscardAPIsSeenByDriver"></span><span id="summaryinfo_discardapisseenbydriver"></span><span id="SUMMARYINFO_DISCARDAPISSEENBYDRIVER"></span>**SUMMARYINFO \_ DiscardAPIsSeenByDriver**  
-Text, der im vsglog-Eigenschaftenfenster – ApIs verwerfen angezeigt wird, die vom Treiber angezeigt werden
+Text, der im vsglog-Eigenschaftenfenster – Vom Treiber angezeigte APIs verwerfen angezeigt wird
 
 <span id="SUMMARYINFO_FlagsForUpdateAndCopySeenByDriver"></span><span id="summaryinfo_flagsforupdateandcopyseenbydriver"></span><span id="SUMMARYINFO_FLAGSFORUPDATEANDCOPYSEENBYDRIVER"></span>**\_SUMMARYINFO-FlagsForUpdateAndCopySeenByDriver**  
-Text, der im vsglog-Eigenschaftenfenster flags for update and copy Seen By Driver
+Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster flags for update and copy Seen By Driver (Flags für Update und Kopie, die vom Treiber angezeigt werden)
 
 <span id="SUMMARYINFO_ClearView"></span><span id="summaryinfo_clearview"></span><span id="SUMMARYINFO_CLEARVIEW"></span>**SUMMARYINFO \_ ClearView**  
-Text, der im vsglog-Eigenschaftenfenster – Ansicht löschen angezeigt wird
+Im Vsglog angezeigter Text Eigenschaftenfenster - Clear View
 
 <span id="SUMMARYINFO_CopyWithOverlap"></span><span id="summaryinfo_copywithoverlap"></span><span id="SUMMARYINFO_COPYWITHOVERLAP"></span>**SUMMARYINFO \_ CopyWithOverlap**  
 Text, der im vsglog-Eigenschaftenfenster – Kopieren mit Überlappung angezeigt wird
 
 <span id="SUMMARYINFO_ConstantBufferPartialUpdate"></span><span id="summaryinfo_constantbufferpartialupdate"></span><span id="SUMMARYINFO_CONSTANTBUFFERPARTIALUPDATE"></span>**SUMMARYINFO \_ ConstantBufferPartialUpdate**  
-Text, der im vsglog-Eigenschaftenfenster : Partielle Aktualisierung des konstanten Puffers angezeigt wird
+Text, der im vsglog-Eigenschaftenfenster - Constant Buffer Partial Update (Teilaktualisierung des konstanten Puffers) angezeigt wird
 
 <span id="SUMMARYINFO_ConstantBufferOffsetting"></span><span id="summaryinfo_constantbufferoffsetting"></span><span id="SUMMARYINFO_CONSTANTBUFFEROFFSETTING"></span>**SUMMARYINFO \_ ConstantBufferOffsetting**  
 Text, der im vsglog-Eigenschaftenfenster - Constant Buffer Offsetting angezeigt wird
@@ -338,34 +338,34 @@ Text, der im vsglog-Eigenschaftenfenster - Constant Buffer Offsetting angezeigt 
 Text, der im vsglog-Eigenschaftenfenster - Map No Overwrite On Dynamic Constant Buffer (Keine Überschreibung für dynamischen Konstantenpuffer zuordnen) angezeigt wird
 
 <span id="SUMMARYINFO_MapNoOverwriteOnDynamicBufferSRV"></span><span id="summaryinfo_mapnooverwriteondynamicbuffersrv"></span><span id="SUMMARYINFO_MAPNOOVERWRITEONDYNAMICBUFFERSRV"></span>**SUMMARYINFO \_ MapNoOverwriteOnDynamicBufferSRV**  
-Im vsglog-Abschnitt angezeigter Text Eigenschaftenfenster - Map No Overwrite On Dynamic Buffer SRV
+Text, der im vsglog-Eigenschaftenfenster – Zuordnung kein Überschreiben auf dynamischem Puffer SRV angezeigt wird
 
 <span id="SUMMARYINFO_MultisampleRTVWithForcedSampleCountOne"></span><span id="summaryinfo_multisamplertvwithforcedsamplecountone"></span><span id="SUMMARYINFO_MULTISAMPLERTVWITHFORCEDSAMPLECOUNTONE"></span>**SUMMARYINFO \_ MultisampleRTVWithForcedSampleCountOne**  
-Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster - Multisample RTV with Forced Sample Count One
+Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster – Multisample RTV with Forced Sample Count One
 
 <span id="SUMMARYINFO_SAD4ShaderInstructions"></span><span id="summaryinfo_sad4shaderinstructions"></span><span id="SUMMARYINFO_SAD4SHADERINSTRUCTIONS"></span>**SUMMARYINFO \_ SAD4ShaderInstructions**  
 Text, der im vsglog-Eigenschaftenfenster – SAD4-Shaderanweisungen angezeigt wird
 
 <span id="SUMMARYINFO_ExtendedDoublesShaderInstructions"></span><span id="summaryinfo_extendeddoublesshaderinstructions"></span><span id="SUMMARYINFO_EXTENDEDDOUBLESSHADERINSTRUCTIONS"></span>**SUMMARYINFO \_ ExtendedDoublesShaderInstructions**  
-Text, der in der Vsglog-Eigenschaftenfenster - Extended Doubles Shader Instructions (Anweisungen zum erweiterten Doubles-Shader) angezeigt wird
+Text, der im vsglog-Eigenschaftenfenster - Extended Doubles Shader Instructions (Anweisungen zum erweiterten Doubles-Shader) angezeigt wird
 
 <span id="SUMMARYINFO_ExtendedResourceSharing"></span><span id="summaryinfo_extendedresourcesharing"></span><span id="SUMMARYINFO_EXTENDEDRESOURCESHARING"></span>**SUMMARYINFO \_ ExtendedResourceSharing**  
-Text im vsglog-Eigenschaftenfenster : Erweiterte Ressourcenfreigabe
+Text, der im vsglog-Eigenschaftenfenster – Erweiterte Ressourcenfreigabe angezeigt wird
 
 <span id="SUMMARYINFO_D3D11_FEATURE_ARCHITECTURE_INFO"></span><span id="summaryinfo_d3d11_feature_architecture_info"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ ARCHITECTURE \_ INFO**  
-Text, der im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ ARCHITECTURE \_ INFO
+Text im VSGLOG-Eigenschaftenfenster – D3D11 \_ FEATURE \_ ARCHITECTURE \_ INFO
 
 <span id="SUMMARYINFO_TileBasedDeferredRenderer"></span><span id="summaryinfo_tilebaseddeferredrenderer"></span><span id="SUMMARYINFO_TILEBASEDDEFERREDRENDERER"></span>**SUMMARYINFO \_ TileBasedDeferredRenderer**  
-Im vsglog-Eigenschaftenfenster – kachelbasierter verzögerter Renderer angezeigter Text
+Text, der im vsglog-Eigenschaftenfenster - Tile Based Deferred Renderer (Auf Kacheln basierender verzögerter Renderer) angezeigt wird
 
 <span id="SUMMARYINFO_D3D11_FEATURE_D3D9_OPTIONS"></span><span id="summaryinfo_d3d11_feature_d3d9_options"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ D3D9 \_ OPTIONS**  
 Text im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D9 \_ OPTIONS
 
 <span id="SUMMARYINFO_FullNonPow2TextureSupport"></span><span id="summaryinfo_fullnonpow2texturesupport"></span><span id="SUMMARYINFO_FULLNONPOW2TEXTURESUPPORT"></span>**SUMMARYINFO \_ FullNonPow2TextureSupport**  
-Text, der im vsglog-Eigenschaftenfenster – vollständige Nicht-Pow2-Texturunterstützung angezeigt wird
+Text, der im vsglog-Eigenschaftenfenster - Full Non-Pow2 Texture Support (Vollständige Texturunterstützung ohne Pow2) angezeigt wird
 
 <span id="SUMMARYINFO_D3D11_FEATURE_SHADER_MIN_PRECISION_SUPPORT"></span><span id="summaryinfo_d3d11_feature_shader_min_precision_support"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ SHADER \_ MIN \_ PRECISION \_ SUPPORT**  
-Im VSGLOG-Eigenschaftenfenster – D3D11 \_ FEATURE \_ SHADER \_ MIN PRECISION \_ \_ SUPPORT
+Text, der im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ SHADER \_ MIN PRECISION \_ \_ SUPPORT
 
 <span id="SUMMARYINFO_PixelShaderMinPrecision"></span><span id="summaryinfo_pixelshaderminprecision"></span><span id="SUMMARYINFO_PIXELSHADERMINPRECISION"></span>**SUMMARYINFO \_ PixelShaderMinPrecision**  
 Im Vsglog angezeigter Text Eigenschaftenfenster – Pixel-Shader– Mindestgenauigkeit
@@ -377,16 +377,16 @@ Im Vsglog angezeigter Text Eigenschaftenfenster – Alle anderen Shaderstufen–
 Text im VSGLOG-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D9 \_ SHADOW \_ SUPPORT
 
 <span id="SUMMARYINFO_SupportsDepthAsTextureWithLessEqualComparisonFilter"></span><span id="summaryinfo_supportsdepthastexturewithlessequalcomparisonfilter"></span><span id="SUMMARYINFO_SUPPORTSDEPTHASTEXTUREWITHLESSEQUALCOMPARISONFILTER"></span>**SUMMARYINFO \_ SupportsDepthAsTextureWithLessEqualComparisonFilter**  
-Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster – Unterstützt Depth as Texture with Less Equal Comparison Filter (Tiefe als Textur mit einem weniger gleichgestellten Vergleichsfilter)
+Text, der im vsglog-Eigenschaftenfenster angezeigt wird: Unterstützt Depth as Texture with Less Equal Comparison Filter (Tiefe als Textur mit weniger gleich einem Vergleichsfilter)
 
 <span id="SUMMARYINFO_D3D11_FEATURE_D3D11_OPTIONS1"></span><span id="summaryinfo_d3d11_feature_d3d11_options1"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ D3D11 \_ OPTIONS1**  
-Im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D11 OPTIONS1 angezeigter \_ Text
+Text im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D11 \_ OPTIONS1
 
 <span id="SUMMARYINFO_TiledResourcesTier"></span><span id="summaryinfo_tiledresourcestier"></span><span id="SUMMARYINFO_TILEDRESOURCESTIER"></span>**SUMMARYINFO \_ TiledResourcesTier**  
 Text, der im vsglog-Eigenschaftenfenster – Ebene "Gekachelte Ressourcen" angezeigt wird
 
 <span id="SUMMARYINFO_MinMaxFiltering"></span><span id="summaryinfo_minmaxfiltering"></span><span id="SUMMARYINFO_MINMAXFILTERING"></span>**SUMMARYINFO \_ MinMaxFiltering**  
-Text, der im vsglog-Eigenschaftenfenster – Min Max Filtering (Max. Filterung) angezeigt wird
+Im vsglog-Text angezeigter text Eigenschaftenfenster – Min Max Filtering
 
 <span id="SUMMARYINFO_ClearViewAlsoSupportsDepthOnlyFormats"></span><span id="summaryinfo_clearviewalsosupportsdepthonlyformats"></span><span id="SUMMARYINFO_CLEARVIEWALSOSUPPORTSDEPTHONLYFORMATS"></span>**SUMMARYINFO \_ ClearViewAlsoSupportsDepthOnlyFormats**  
 Text, der im vsglog-Eigenschaftenfenster - Clear View angezeigt wird, unterstützt auch nur Tiefenformate.
@@ -395,7 +395,7 @@ Text, der im vsglog-Eigenschaftenfenster - Clear View angezeigt wird, unterstüt
 Text, der im vsglog-Eigenschaftenfenster – Zuordnung zu Standardpuffern angezeigt wird
 
 <span id="SUMMARYINFO_D3D11_FEATURE_D3D9_SIMPLE_INSTANCING_SUPPORT"></span><span id="summaryinfo_d3d11_feature_d3d9_simple_instancing_support"></span>**SUMMARYINFO \_ D3D11 \_ FEATURE \_ D3D9 \_ SIMPLE \_ INSTANCING \_ SUPPORT**  
-Text im VSGLOG-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D9 \_ SIMPLE \_ INSTANCING \_ SUPPORT
+Text, der im VSGLOG-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D9 \_ SIMPLE \_ INSTANCING \_ SUPPORT
 
 <span id="SUMMARYINFO_SimpleInstancingSupported0"></span><span id="summaryinfo_simpleinstancingsupported0"></span><span id="SUMMARYINFO_SIMPLEINSTANCINGSUPPORTED0"></span>**SUMMARYINFO \_ SimpleInstancingSupported0**  
 Text, der im vsglog-Eigenschaftenfenster – Simple Instancing Supported 0 (Einfache Instancing unterstützt 0) angezeigt wird
@@ -410,19 +410,19 @@ Im vsglog-Profil Eigenschaftenfenster angezeigter Text
 Text im vsglog-Eigenschaftenfenster – D3D11 \_ FEATURE \_ D3D9 \_ OPTIONS1
 
 <span id="SUMMARYINFO_FullNonPow2TextureSupported"></span><span id="summaryinfo_fullnonpow2texturesupported"></span><span id="SUMMARYINFO_FULLNONPOW2TEXTURESUPPORTED"></span>**SUMMARYINFO \_ FullNonPow2TextureSupported**  
-Text, der im vsglog-Eigenschaftenfenster - Full Non-Pow2 Texture Supported (Vollständige Nicht-Pow2-Textur unterstützt) angezeigt wird
+Text, der im vsglog-Eigenschaftenfenster – Vollständige Nicht-Pow2-Textur unterstützt
 
 <span id="SUMMARYINFO_DepthAsTextureWithLessEqualComparisonFilterSupported"></span><span id="summaryinfo_depthastexturewithlessequalcomparisonfiltersupported"></span><span id="SUMMARYINFO_DEPTHASTEXTUREWITHLESSEQUALCOMPARISONFILTERSUPPORTED"></span>**SUMMARYINFO \_ DepthAsTextureWithLessEqualComparisonFilterSupported**  
 Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster - Depth As Texture with Less Equal Comparison Filter Supported
 
 <span id="SUMMARYINFO_SimpleInstancingSupported1"></span><span id="summaryinfo_simpleinstancingsupported1"></span><span id="SUMMARYINFO_SIMPLEINSTANCINGSUPPORTED1"></span>**SUMMARYINFO \_ SimpleInstancingSupported1**  
-Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster – Simple Instancing Supported 1
+Text, der im vsglog-Eigenschaftenfenster – Simple Instancing Supported 1
 
 <span id="SUMMARYINFO_TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported"></span><span id="summaryinfo_texturecubefacerendertargetwithnoncubedepthstencilsupported"></span><span id="SUMMARYINFO_TEXTURECUBEFACERENDERTARGETWITHNONCUBEDEPTHSTENCILSUPPORTED"></span>**SUMMARYINFO \_ TextureCubeFaceRenderTargetWithNonCubeDepthStencilSupported**  
-Text, der im vsglog-Eigenschaftenfenster - Texture Cube Face Render Target with Non-Cube Depth Stencil Supported
+Text, der im vsglog-Eigenschaftenfenster – Renderziel für Texturcube-Gesichtserkennung mit unterstützter Nicht-Cube-Tiefen-Schablone angezeigt wird
 
 <span id="SUMMARYINFO_DXGIFormat"></span><span id="summaryinfo_dxgiformat"></span><span id="SUMMARYINFO_DXGIFORMAT"></span>**SUMMARYINFO \_ DXGIFormat**  
-Text, der im vsglog-Eigenschaftenfenster – DXGIFormat angezeigt wird
+Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster DXGIFormat
 
 <span id="SUMMARYINFO_DXGIFormat1"></span><span id="summaryinfo_dxgiformat1"></span><span id="SUMMARYINFO_DXGIFORMAT1"></span>**SUMMARYINFO \_ DXGIFormat1**  
 Im vsglog-Beispiel angezeigter Text Eigenschaftenfenster DXGIFormat1
@@ -470,129 +470,129 @@ Im Dialogfeld "Firewall konfigurieren" angezeigter Text – Konfigurations abbre
 Text im Dialogfeld "Firewall konfigurieren" – Textfirewall nicht konfiguriert
 
 <span id="IDS_TEXT_FW_CONFIGURED"></span><span id="ids_text_fw_configured"></span>**IDS \_ TEXT \_ FW \_ CONFIGURED**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Textfirewall konfiguriert
+Im Dialogfeld "Firewall konfigurieren" angezeigter Text – Konfigurierte Textfirewall
 
 <span id="IDS_FIREWALL_RULE_NAME"></span><span id="ids_firewall_rule_name"></span>**NAME DER \_ IDS-FIREWALLREGEL \_ \_**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Firewallregelname
+Text, der im Dialogfeld Firewall konfigurieren – Name der Firewallregel angezeigt wird
 
-<span id="IDS_FIREWALL_RULE_DESCRIPTION"></span><span id="ids_firewall_rule_description"></span>**BESCHREIBUNG DER \_ IDS-FIREWALLREGEL \_ \_**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Firewallregelbeschreibung
+<span id="IDS_FIREWALL_RULE_DESCRIPTION"></span><span id="ids_firewall_rule_description"></span>**BESCHREIBUNG DER \_ \_ IDS-FIREWALLREGEL \_**  
+Text im Dialogfeld "Firewall konfigurieren" – Beschreibung der Firewallregel
 
 <span id="IDS_STATIC_HEADER"></span><span id="ids_static_header"></span>**STATISCHER \_ \_ IDS-HEADER**  
-Im Dialogfeld Firewall konfigurieren – Statischer Header angezeigter Text
+Text im Dialogfeld "Firewall konfigurieren" – Statischer Header
 
 <span id="IDS_CONFIGURATION_TITLE"></span><span id="ids_configuration_title"></span>**\_IDS-KONFIGURATIONSTITEL \_**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Konfigurationstitel
+Im Dialogfeld "Firewall konfigurieren" – Konfigurationstitel angezeigter Text
 
 <span id="IDS_STATIC_FW_HEADER"></span><span id="ids_static_fw_header"></span>**STATISCHER \_ \_ IDS-FW-HEADER \_**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Statischer Firewallheader
+Im Dialogfeld Firewall konfigurieren – Statischer Firewallheader angezeigter Text
 
 <span id="IDS_STATIC_GROUPBOX_FW"></span><span id="ids_static_groupbox_fw"></span>**IDS \_ STATIC \_ GROUPBOX \_ FW**  
-Text, der im Dialogfeld Firewall konfigurieren – Statische Gruppenfeldfirewall angezeigt wird
+Im Dialogfeld Firewall konfigurieren – Statische Groupbox-Firewall angezeigter Text
 
 <span id="IDS_CHECK_FW_DOMAIN_NETWORKS"></span><span id="ids_check_fw_domain_networks"></span>**IDS \_ CHECK \_ FW \_ DOMAIN \_ NETWORKS**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Überprüfen von Firewalldomänennetzwerken
+Text im Dialogfeld "Firewall konfigurieren" – Überprüfen von Firewalldomänennetzwerken
 
 <span id="IDS_CHECK_FW_PRIVATE_NETWORKS"></span><span id="ids_check_fw_private_networks"></span>**IDS \_ CHECK \_ FW \_ PRIVATE \_ NETWORKS**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text: Überprüfen privater Firewallnetzwerke
+Text im Dialogfeld "Firewall konfigurieren" – Überprüfen privater Firewallnetzwerke
 
 <span id="IDS_CHECK_FW_PUBLIC_NETWORKS"></span><span id="ids_check_fw_public_networks"></span>**IDS \_ CHECK \_ FW \_ PUBLIC \_ NETWORKS**  
-Text, der im Dialogfeld Firewall konfigurieren angezeigt wird: Überprüfen von öffentlichen Firewallnetzwerken
+Text im Dialogfeld "Firewall konfigurieren" – Überprüfen der öffentlichen Firewallnetzwerke
 
-<span id="IDS_BUTTON_CONFIGURE"></span><span id="ids_button_configure"></span>**SCHALTFLÄCHE \_ "IDS" \_ KONFIGURIEREN**  
-Im Dialogfeld Firewall konfigurieren angezeigter Text – Buttom Confiture
+<span id="IDS_BUTTON_CONFIGURE"></span><span id="ids_button_configure"></span>**IDS \_ BUTTON CONFIGURE (IDS-SCHALTFLÄCHE \_ KONFIGURIEREN)**  
+Text im Dialogfeld "Firewall konfigurieren" – Buttom-Konfiture
 
-<span id="IDS_CONFIGURATION_CANCEL"></span><span id="ids_configuration_cancel"></span>**IDS \_ CONFIGURATION \_ CANCEL**  
-Im Dialogfeld "Firewall konfigurieren" angezeigter Text : Konfigurations abbrechen
+<span id="IDS_CONFIGURATION_CANCEL"></span><span id="ids_configuration_cancel"></span>**\_IDS-KONFIGURATION \_ ABBRECHEN**  
+Im Dialogfeld "Firewall konfigurieren" angezeigter Text– Konfigurations abbrechen
 
 <span id="IDS_CAPTURETOOLTIP_MESSAGE_CORESYSTEM"></span><span id="ids_capturetooltip_message_coresystem"></span>**IDS \_ CAPTURETOOLTIP \_ MESSAGE \_ CORESYSTEM**  
-Ressourcen-ID für zeichenfolge "Use the capture button in Visual Studio to capture frame(s)." (Verwenden Sie die Erfassungsschaltfläche in Visual Studio, um Frames zu erfassen.)
+Ressourcen-ID für die Zeichenfolge "Use the capture button in Visual Studio to capture frame(s)".
 
 <span id="IDS_ET_NONE"></span><span id="ids_et_none"></span>**IDS \_ ET \_ NONE**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_SESSIONSTART"></span><span id="ids_et_sessionstart"></span>**IDS \_ ET \_ SESSIONSTART**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_SESSIONEND"></span><span id="ids_et_sessionend"></span>**IDS \_ ET \_ SESSIONEND**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_PROCESSSTART"></span><span id="ids_et_processstart"></span>**IDS \_ ET \_ PROCESSSTART**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_PROCESSEND"></span><span id="ids_et_processend"></span>**IDS \_ ET \_ PROCESSEND**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_FRAMEBEGIN"></span><span id="ids_et_framebegin"></span>**IDS \_ ET \_ FRAMEBEGIN**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_FRAMEEND"></span><span id="ids_et_frameend"></span>**IDS \_ ET \_ FRAMEEND**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_USEREVENTBEGIN"></span><span id="ids_et_usereventbegin"></span>**IDS \_ ET \_ USEREVENTBEGIN**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_USEREVENTEND"></span><span id="ids_et_usereventend"></span>**IDS \_ ET \_ USEREVENTEND**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_USERMARKER"></span><span id="ids_et_usermarker"></span>**IDS \_ ET \_ USERMARKER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_CALL"></span><span id="ids_et_call"></span>**IDS \_ ET \_ CALL**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_OBJECTPOPULATION"></span><span id="ids_et_objectpopulation"></span>**IDS \_ ET \_ OBJECTPOPULATION**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_OBJECTCREATION"></span><span id="ids_et_objectcreation"></span>**IDS \_ ET \_ OBJECTCREATION**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_CALLSYNC"></span><span id="ids_et_callsync"></span>**IDS \_ ET \_ CALLSYNC**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ET_UNKNOWN"></span><span id="ids_et_unknown"></span>**IDS \_ ET \_ UNKNOWN**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_NONE"></span><span id="ids_trigger_none"></span>**IDS \_ TRIGGER \_ NONE**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_PROGRAMSTART"></span><span id="ids_trigger_programstart"></span>**IDS \_ TRIGGER \_ PROGRAMSTART**  
-Wird nicht verwendet.
+Nicht verwendet.
 
-<span id="IDS_TRIGGER_FRAME"></span><span id="ids_trigger_frame"></span>**IDS \_ TRIGGER \_ FRAME**  
-Wird nicht verwendet.
+<span id="IDS_TRIGGER_FRAME"></span><span id="ids_trigger_frame"></span>**\_IDS-TRIGGERFRAME \_**  
+Nicht verwendet.
 
-<span id="IDS_TRIGGER_TIME"></span><span id="ids_trigger_time"></span>**IDS \_ TRIGGER \_ TIME**  
-Wird nicht verwendet.
+<span id="IDS_TRIGGER_TIME"></span><span id="ids_trigger_time"></span>**\_IDS-TRIGGERZEIT \_**  
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_USERMARKER"></span><span id="ids_trigger_usermarker"></span>**IDS \_ TRIGGER \_ USERMARKER**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_BEGINUSEREVENT"></span><span id="ids_trigger_beginuserevent"></span>**IDS \_ TRIGGER \_ BEGINUSEREVENT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_ENDUSEREVENT"></span><span id="ids_trigger_enduserevent"></span>**IDS \_ TRIGGER \_ ENDUSEREVENT**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_CAPTUREFRAME"></span><span id="ids_trigger_captureframe"></span>**IDS \_ TRIGGER \_ CAPTUREFRAME**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_TRIGGER_APICAPTURE"></span><span id="ids_trigger_apicapture"></span>**IDS \_ TRIGGER \_ APICAPTURE**  
-Wird nicht verwendet.
+Nicht verwendet.
 
 <span id="IDS_ERROR_CALLDATA"></span><span id="ids_error_calldata"></span>**\_IDS-FEHLER \_ CALLDATA**  
-Wird nicht verwendet.
+Nicht verwendet.
 
-<span id="IDS_ERROR_CREATINGLOG"></span><span id="ids_error_creatinglog"></span>**IDS \_ ERROR \_ CREATINGLOG**  
-Wird nicht verwendet.
+<span id="IDS_ERROR_CREATINGLOG"></span><span id="ids_error_creatinglog"></span>**\_IDS-FEHLER \_ CREATINGLOG**  
+Nicht verwendet.
 
 <span id="IDS_UNKNOWNCALL"></span><span id="ids_unknowncall"></span>**IDS \_ UNKNOWNCALL**  
-Wird nicht verwendet.
+Nicht verwendet.
 
-<span id="IDS_WARN_FEATURE_LEVEL_CHANGED"></span><span id="ids_warn_feature_level_changed"></span>**IDS \_ WARN \_ FEATURE \_ LEVEL \_ CHANGED**  
-Wird nicht verwendet.
+<span id="IDS_WARN_FEATURE_LEVEL_CHANGED"></span><span id="ids_warn_feature_level_changed"></span>**IDS \_ \_ WARNFUNKTIONSEBENE \_ \_ GEÄNDERT**  
+Nicht verwendet.
 
-<span id="ID_STATUS_FREQUENCY"></span><span id="id_status_frequency"></span>**HÄUFIGKEIT \_ DES ID-STATUS \_**  
+<span id="ID_STATUS_FREQUENCY"></span><span id="id_status_frequency"></span>**\_ \_ ID-STATUSHÄUFIGKEIT**  
 
 <span id="ID_DISABLE_HUD"></span><span id="id_disable_hud"></span>**ID \_ DISABLE \_ HUD**  
 
@@ -600,11 +600,11 @@ Wird nicht verwendet.
 
 <span id="ID_COLLECT_CALLSTACKS"></span><span id="id_collect_callstacks"></span>**ID \_ COLLECT \_ CALLSTACKS**  
 
-<span id="ID_ENABLE_SDKERROR_STOP"></span><span id="id_enable_sdkerror_stop"></span>**ID \_ ENABLE \_ SDKERROR \_ STOP**  
+<span id="ID_ENABLE_SDKERROR_STOP"></span><span id="id_enable_sdkerror_stop"></span>**ID: \_ \_ SDKERROR BEENDEN \_ AKTIVIEREN**  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

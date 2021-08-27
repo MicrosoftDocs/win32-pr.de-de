@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ca8b05c0eeac88521d03b95a94f7d2363d5746e9
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 84f9b90d617c11e3e304aa375e25a96b446114da
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122468947"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984582"
 ---
 # <a name="jetgotosecondaryindexbookmark-function"></a>JetGotoSecondaryIndexBookmark-Funktion
 
@@ -93,7 +93,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>Rückgabecode</p> | <p>Beschreibung</p> | 
 |--------------------|--------------------|
 | <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
-| <p>JET_errClientRequestToStopJetService</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>ausgeführt wurden.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>beendet wurden.</p> | 
 | <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, einen schwerwiegenden Fehler festgestellt hat, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Rückgabewert wird in Windows XP eingeführt.</p> | 
 | <p>JET_errInvalidBookmark</p> | <p>Das sekundäre Indexlesezeichen, das bereitgestellt wurde, war ungültig. Dieser Fehler ist möglicherweise aufgetreten, weil der sekundäre Schlüssel 0 (null) oder der sekundäre Schlüsselpufferzeiger <strong>NULL</strong>ist. Dieser Fehler tritt auf, weil</p><ul><li><p>Der aktuelle sekundäre Index verfügt nicht über eine Eindeutigkeitseinschränkung, und die Größe des bereitgestellten Lesezeichens ist 0 (null).</p></li><li><p>Der Lesezeichenpufferzeiger ist <strong>NULL.</strong></p></li></ul> | 
 | <p>JET_errNoCurrentIndex</p> | <p>Der Cursor befindet sich derzeit nicht in einem sekundären Index. Es ist nicht sinnvoll, zu einem sekundären Indexlesezeichen zu wechseln, wenn der Cursor derzeit keinen sekundären Index verwendet. <a href="gg294053(v=exchg.10).md">JetGotoBookmark</a> sollte verwendet werden, wenn sich der Cursor nicht in einem sekundären Index befindet.</p> | 
@@ -114,7 +114,13 @@ Wenn ein Datensatz für das Update vorbereitet wurde, wird dieses Update abgebro
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

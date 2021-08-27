@@ -1,29 +1,29 @@
 ---
-description: Wenn client und host sich im Netzwerk nicht sehen können, können der benutzerdefinierte Host und der Client durch einen generischen Host und client ersetzt werden, um das Problem zu beheben.
+description: Wenn sich Client und Host im Netzwerk nicht gegenseitig sehen können, können ein generischer Host und ein generischer Client durch den benutzerdefinierten Host und Client ersetzt werden, um das Problem zu beheben.
 ms.assetid: e82ce911-b2a7-4a57-a2f0-9aca6b74478f
 title: Verwenden eines generischen Hosts und Clients für UDP-WS-Discovery
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae6af77529116e21848e22812e04322273e08f1f0cf4d107787b4039b2442b19
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 3a7b9f42cd76e54c3ee04a3299e9f23eecbfdd73
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118991490"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122883078"
 ---
 # <a name="using-a-generic-host-and-client-for-udp-ws-discovery"></a>Verwenden eines generischen Hosts und Clients für UDP-WS-Discovery
 
-Wenn client und host sich im Netzwerk nicht sehen können, können der benutzerdefinierte Host und der Client durch einen generischen Host und client ersetzt werden, um das Problem zu beheben. Wenn die Geräteadresse nicht in der Ausgabe des WSD-Debugclients angezeigt wird, verursacht die Netzwerkumgebung wahrscheinlich den Fehler. Weitere Informationen zum generischen Host und Client finden Sie unter [Debugtools.](debugging-tools.md)
+Wenn sich Client und Host im Netzwerk nicht gegenseitig sehen können, können ein generischer Host und ein generischer Client durch den benutzerdefinierten Host und Client ersetzt werden, um das Problem zu beheben. Wenn die Geräteadresse nicht in der Ausgabe des WSD-Debugclients angezeigt wird, verursacht die Netzwerkumgebung wahrscheinlich den Fehler. Weitere Informationen zum generischen Host und Client finden Sie unter [Debugtools](debugging-tools.md).
 
-Wenn der Host oder Client eine Anwendung ist, die auf einem PC ausgeführt wird, sollte der generische Host oder Client im gleichen Sicherheitskontext wie der tatsächliche Host oder Client ausgeführt werden. Wenn der tatsächliche Host oder Client beispielsweise als Administrator ausgeführt wird, muss der generische Host oder Client als Administrator ausgeführt werden. Wenn es sich bei dem Host oder Client um ein eigenständiges Gerät handelt, sollte es vollständig durch einen PC ersetzt werden, auf dem ein generischer Host oder Client ausgeführt wird.
+Wenn es sich bei dem Host oder Client um eine Anwendung handelt, die auf einem PC ausgeführt wird, sollte der generische Host oder Client im gleichen Sicherheitskontext wie der tatsächliche Host oder Client ausgeführt werden. Wenn der tatsächliche Host oder Client beispielsweise als Administrator ausgeführt wird, muss der generische Host oder Client als Administrator ausgeführt werden. Wenn es sich bei dem Host oder Client um ein eigenständiges Gerät handelt, sollte es vollständig durch einen PC ersetzt werden, auf dem ein generischer Host oder Client ausgeführt wird.
 
-**So verwenden Sie einen generischen Host und Client zur Problembehandlung bei der UDP-WS-Ermittlung**
+**So verwenden Sie einen generischen Host und Client für die Problembehandlung bei der UDP-WS-Ermittlung**
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster.
 2.  Führen Sie den folgenden Befehl aus: **WSDDebug \_host.exe /mode metadata /start**
 
     > [!Note]  
-    > Möglicherweise wird **ein Windows-Sicherheit** Dialogfeld Warnung angezeigt. Klicken Sie in diesem Falle auf **Blockierung aufheben,** um die Ausführung des WSD-Debughosts zuzulassen.
+    > Möglicherweise **wird Windows-Sicherheit Dialogfeld** Warnung angezeigt. Wenn ja, klicken Sie **auf Blockierung** entsperren, um die Ausführung des WSD-Debughosts zu ermöglichen.
 
      
 
@@ -36,9 +36,9 @@ Wenn der Host oder Client eine Anwendung ist, die auf einem PC ausgeführt wird,
     Host metadata>
     ```
 
-3.  Führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode metadata /hello off /resolve** *<id>* . Ersetzen Sie durch *<id>* die in Schritt 2 identifizierte Geräte-ID.
+3.  Führen Sie den folgenden Befehl aus: **WSDDebug \_client.exe /mode metadata /hello off /resolve** *&lt; id &gt;*. Ersetzen *&lt; Sie id &gt;* durch die in Schritt 2 identifizierte Geräte-ID.
     > [!Note]  
-    > Möglicherweise wird **ein Windows-Sicherheit** Dialogfeld Warnung angezeigt. Wenn ja, klicken Sie auf **Blockierung aufheben,** um die Ausführung des WSD-Debugclients zuzulassen.
+    > Möglicherweise **wird Windows-Sicherheit Dialogfeld** Warnung angezeigt. Wenn ja, klicken Sie **auf Blockierung** entsperren, um die Ausführung des WSD-Debugclients zu ermöglichen.
 
      
 
@@ -67,15 +67,15 @@ Add at 02/28/07 15:16:51
 Client metadata>
 ```
 
-Der WSD-Debugclient generiert möglicherweise viele Ausgaben in einem Netzwerk mit vielen DPWS-Geräten. Die Ausgabe kann zur einfacheren Analyse an eine Datei umgeleitet werden. Geben Sie **log tee** an *<filename>* der WSD-Debugclientaufforderung ein, um die Ausgabe an eine Datei umzuleiten. Die Ausgabeumleitung kann beendet werden, indem Sie an der Eingabeaufforderung des WSD-Debugclients log **tee stop** eingeben.
+Der WSD-Debugclient generiert möglicherweise viele Ausgaben in einem Netzwerk mit vielen DPWS-Geräten. Die Ausgabe kann zur einfacheren Analyse an eine Datei umgeleitet werden. Geben **Sie an der WSD-Debugclient-Eingabeaufforderung** log tee *&lt; filename &gt;* ein, um die Ausgabe an eine Datei umzuleiten. Die Ausgabeumleitung kann beendet werden, indem Sie **log tee stop an** der WSD Debug Client-Eingabeaufforderung eingeben.
 
-Notieren Sie sich die Adresse des Endpunktverweis (EPR). Diese EPR-Adresse sollte mit der in Schritt 2 oben angegebenen Geräte-ID übereinstimmen. Wenn dies der Fall ist, hängt der Anwendungsfehler wahrscheinlich nicht mit dem Betriebssystem oder der Netzwerkumgebung zusammen. Ersetzen Sie den generischen Host und Client durch den benutzerdefinierten Host und Client, und setzen Sie die Problembehandlung fort, indem Sie die Schritte unter Verwenden des [WSD-Debugclients zum Überprüfen von Multicastdatenverkehr](using-wsddebug-client-to-verify-multicast-traffic.md)befolgen.
+Notieren Sie sich die Adresse des Endpunktverweises (Endpoint Reference, EPR). Diese EPR-Adresse sollte mit der geräte-ID übereinstimmen, die in Schritt 2 oben identifiziert wurde. Wenn dies der Fall ist, bezieht sich der Anwendungsfehler wahrscheinlich nicht auf das Betriebssystem oder die Netzwerkumgebung. Ersetzen Sie den generischen Host und Client durch den benutzerdefinierten Host und Client, und fahren Sie mit der Problembehandlung fort, indem Sie die Schritte unter Verwenden des WSD-Debugclients zum Überprüfen des [Multicastdatenverkehrs durchführen.](using-wsddebug-client-to-verify-multicast-traffic.md)
 
-Wenn die Geräte-ID nicht mit der EPR-Adresse übereinstimmt, hängt der Anwendungsfehler wahrscheinlich mit dem Betriebssystem oder der Netzwerkumgebung zusammen. Der Fehler kann eine oder mehrere der folgenden Ursachen haben:
+Wenn die Geräte-ID nicht mit der EPR-Adresse übereinstimmen, bezieht sich der Anwendungsfehler wahrscheinlich auf das Betriebssystem oder die Netzwerkumgebung. Der Fehler kann eine oder mehrere der folgenden Ursachen haben:
 
--   Die Anwendung wird im falschen Sicherheitskontext ausgeführt. Stellen Sie sicher, dass die Anwendung die richtigen Anmeldeinformationen verwendet und der Client und der Host über ausreichende Berechtigungen für den Zugriff auf das Netzwerk verfügen.
--   Die Firewallkonfiguration ist falsch. Befolgen Sie die Anweisungen unter [Überprüfen des Adapters und der Firewall Einstellungen,](inspecting-adapter-and-firewall-settings.md) um zu überprüfen, ob die Windows Firewalleinstellungen korrekt sind und dass keine anderen Regeln zum Löschen der Pakete vorhanden sind. Der Client und der Host können auch auf einen "klammer" Computer kopiert werden (einen Computer mit einer Standardbetriebssysteminstallation, die noch nie in eine Domäne eingebunden wurde), um zu versuchen, den Fehler zu reproduzieren.
--   Eine IPSec-Richtlinie blockiert die Anwendung. Kopieren Sie den Client und den Host auf einen Computer, der nicht den IPSec-Richtlinien unterliegt, und versuchen Sie, den Fehler zu reproduzieren.
+-   Die Anwendung wird im falschen Sicherheitskontext ausgeführt. Stellen Sie sicher, dass die Anwendung die richtigen Anmeldeinformationen verwendet und dass client und host über ausreichende Berechtigungen für den Zugriff auf das Netzwerk verfügen.
+-   Die Firewallkonfiguration ist falsch. Befolgen Sie die Anweisungen unter Überprüfen von Adapter- und [Firewall-Einstellungen,](inspecting-adapter-and-firewall-settings.md) um sicherzustellen, dass die Windows Firewall-Einstellungen richtig sind und keine anderen Regeln zum Löschen der Pakete gelten. Client und Host können auch auf einen "ursprünglichen" Computer kopiert werden (einer mit einer Standardinstallation des Betriebssystems, die nie einer Domäne beigetreten ist), um zu versuchen, den Fehler zu reproduzieren.
+-   Eine IPSec-Richtlinie blockiert die Anwendung. Kopieren Sie den Client und den Host auf einen Computer, der nicht IPSec-Richtlinien unterliegt, und versuchen Sie, den Fehler zu reproduzieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -84,7 +84,7 @@ Wenn die Geräte-ID nicht mit der EPR-Adresse übereinstimmt, hängt der Anwendu
 [WSDAPI-Diagnoseverfahren](wsdapi-diagnostic-procedures.md)
 </dt> <dt>
 
-[Erste Schritte mit WSDAPI–Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
+[Erste Schritte mit WSDAPI – Problembehandlung](getting-started-with-wsdapi-troubleshooting.md)
 </dt> </dl>
 
  

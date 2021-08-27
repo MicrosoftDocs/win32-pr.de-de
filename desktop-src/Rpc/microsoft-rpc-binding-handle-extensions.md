@@ -1,106 +1,64 @@
 ---
-title: Microsoft RPC-Binding-Handle Erweiterungen
-description: Die Microsoft-Erweiterungen der IDL-Sprache unterstützen mehrere handle-Parameter, die in anderen Positionen als dem ersten, äußersten linken Parameter angezeigt werden.
+title: Microsoft RPC Binding-Handle Extensions
+description: Die Microsoft-Erweiterungen für die IDL-Sprache unterstützen mehrere Handleparameter, die an anderen Positionen als dem ersten, am weitesten links angezeigten Parametern angezeigt werden.
 ms.assetid: 084b0d8e-0c8a-43b9-b3ae-4f69cab3a2c2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a947c10465cb24012be9c3f845fbd874f9de0567
-ms.sourcegitcommit: ae73f4dd3cf5a3c6a1ea7d191ca32a5b01f6686b
+ms.openlocfilehash: 8c93b68b20628bf6f7f65cee026412846e0b497d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "104039753"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475366"
 ---
-# <a name="microsoft-rpc-binding-handle-extensions"></a>Microsoft RPC-Binding-Handle Erweiterungen
+# <a name="microsoft-rpc-binding-handle-extensions"></a>Microsoft RPC Binding-Handle Extensions
 
-Die Microsoft-Erweiterungen der IDL-Sprache unterstützen mehrere handle-Parameter, die in anderen Positionen als dem ersten, äußersten linken Parameter angezeigt werden. In den folgenden Schritten wird die Sequenz beschrieben, die der-Mittelwert Compiler durchläuft, um den Bindungs handle-Parameter im DCE-Kompatibilitätsmodus (/**eines Zertifikats**) und im Standardmodus (Microsoft-erweiterter Modus) aufzulösen.
+Die Microsoft-Erweiterungen für die IDL-Sprache unterstützen mehrere Handleparameter, die an anderen Positionen als dem ersten, am weitesten links angezeigten Parametern angezeigt werden. Die folgenden Schritte beschreiben die Sequenz, die der MIDL-Compiler durchläuft, um den Binding Handle-Parameter im DCE-Kompatibilitätsmodus (/**osf)** und im Standardmodus (Erweitert von Microsoft) aufzulösen.
 
 ## <a name="dce-compatibility-mode"></a>DCE-Kompatibilitätsmodus
 
--   Bindungs handle, das an erster Stelle angezeigt wird.
--   Ganz links \[ [**in**](/windows/desktop/Midl/in), [**Kontext \_ handle**](/windows/desktop/Midl/context-handle) - \] Parameter.
--   Implizites Bindungs handle, das vom \[ [**impliziten \_ handle**](/windows/desktop/Midl/implicit-handle) \] oder \[ [**automatischen \_ handle**](/windows/desktop/Midl/auto-handle)angegeben wird \] .
--   Wenn keine ACF vorhanden ist, wird die Verwendung des \[ **automatischen \_ Handles** standardmäßig verwendet \] .
+-   Bindungshand handle, das an der ersten Position angezeigt wird.
+-   Ganz links \[ [**in**](/windows/desktop/Midl/in), [**\_ Kontexthand handle-Parameter.**](/windows/desktop/Midl/context-handle) \]
+-   Implizites Bindungshand handle, das \[ [**durch \_ implizites Handle oder**](/windows/desktop/Midl/implicit-handle) \] \[ [**automatisches Handle angegeben \_ wird.**](/windows/desktop/Midl/auto-handle) \]
+-   Wenn kein ACF vorhanden ist, wird standardmäßig das automatische \[ **\_ Handle verwendet.** \]
 
 ## <a name="default-mode"></a>Standardmodus
 
--   Ganz links explizites Bindungs handle.
--   Implizites Bindungs handle, das vom \[ [**impliziten \_ handle**](/windows/desktop/Midl/implicit-handle) \] oder \[ [**automatischen \_ handle**](/windows/desktop/Midl/auto-handle)angegeben wird \] .
--   Wenn keine ACF vorhanden ist, wird die Verwendung des \[ [**automatischen \_ Handles**](/windows/desktop/Midl/auto-handle)standardmäßig verwendet \] .
+-   Linkes, explizites Bindungshand handle.
+-   Implizites Bindungshand handle, das \[ [**durch \_ implizites Handle oder**](/windows/desktop/Midl/implicit-handle) \] \[ [**automatisches Handle angegeben \_ wird.**](/windows/desktop/Midl/auto-handle) \]
+-   Wenn kein ACF vorhanden ist, wird standardmäßig das automatische \[ [**\_ Handle verwendet.**](/windows/desktop/Midl/auto-handle) \]
 
-DCE-IDL-Compiler suchen nach einem expliziten Bindungs Handle als ersten Parameter. Wenn der erste Parameter kein Bindungs Handle und mindestens ein Kontext Handle angegeben ist, wird das äußerste Kontext Handle als Bindungs Handle verwendet. Wenn der erste Parameter kein Handle ist und keine Kontext Handles vorhanden sind, verwendet die Prozedur die implizite Bindung mithilfe des \[ [**impliziten \_ Handles**](/windows/desktop/Midl/implicit-handle) \] oder \[ [**automatischen \_ Handles**](/windows/desktop/Midl/auto-handle)des ACF-Attributs \] .
+DCE-IDL-Compiler suchen nach einem expliziten Bindungshandl als ersten Parameter. Wenn der erste Parameter kein Bindungshandles ist und mindestens ein Kontexthandles angegeben wird, wird das linke Kontexthandles als Bindungshandles verwendet. Wenn der erste Parameter kein Handle ist und es keine Kontexthandles gibt, verwendet die Prozedur die implizite Bindung mithilfe des impliziten Handles des ACF-Attributs \[ [**\_**](/windows/desktop/Midl/implicit-handle) oder \] des \[ [**automatischen \_ Handles.**](/windows/desktop/Midl/auto-handle) \]
 
-Die Microsoft-Erweiterungen für die IDL ermöglichen, dass das Bindungs Handle an einer anderen Position als der erste Parameter steht. Der am weitesten links stehende \[ [](/windows/desktop/Midl/in) \] Parameter des expliziten Handles – ob es sich um ein Primitives, vom Programmierer definiertes oder Kontext Handle handelt – ist das Bindungs handle. Wenn keine handle-Parameter vorhanden sind, verwendet die Prozedur die implizite Bindung mithilfe des \[ [**impliziten \_ Handles**](/windows/desktop/Midl/implicit-handle) \] oder des \[ [**automatischen \_ Handles**](/windows/desktop/Midl/auto-handle)des ACF-Attributs \] .
+Mit den Microsoft-Erweiterungen für die IDL kann sich das Bindungshandl an einer anderen Position als dem ersten Parameter positionieren. Der am \[ [**weitesten links im**](/windows/desktop/Midl/in) explicit-handle-Parameter – unabhängig davon, ob es sich um ein primitives, vom Programmierer definiertes oder Kontexthand handle handelt \] – ist das Bindungshand handle. Wenn keine Handleparameter enthalten sind, verwendet die Prozedur die implizite Bindung mithilfe des impliziten Handles des \[ [**\_ ACF-Attributs**](/windows/desktop/Midl/implicit-handle) \] oder des \[ [**automatischen \_ Handles.**](/windows/desktop/Midl/auto-handle) \]
 
-Die folgenden Regeln gelten sowohl für den DCE-Kompatibilitätsmodus (/OSF) als auch für den Standardmodus:
+Die folgenden Regeln gelten sowohl für den DCE-Kompatibilitätsmodus (/osf) als auch für den Standardmodus:
 
--   Die automatische handle-Bindung wird verwendet, wenn keine ACF vorhanden ist.
--   Explizit \[ [**in**](/windows/desktop/Midl/in) \] oder \[ **in**, [**out**](/windows/desktop/Midl/out-idl) - \] Handles für eine einzelne Funktion vor allen impliziten Bindungen, die für die Schnittstelle angegeben sind.
--   Mehrere \[ [](/windows/desktop/Midl/in) \] primitive Handles in oder \[ **in** \] werden nicht unterstützt.
--   Mehrere \[ [](/windows/desktop/Midl/in) \] \[ explizite Kontext Handles in oder **in** \] sind zulässig.
--   Alle vom Programmierer definierten handle-Parameter Außer dem Parameter für den Bindungs handle werden als Daten behandelt, die für den Programmierer definiert sind.
+-   Die automatische Handlebindung wird verwendet, wenn kein ACF vorhanden ist.
+-   Explizit \[ [**in**](/windows/desktop/Midl/in) oder in werden out-Handles für eine einzelne Funktion alle impliziten Bindungen, die \] für die Schnittstelle angegeben \[  [](/windows/desktop/Midl/out-idl) \] sind, vorab ausgeschlossen.
+-   Mehrere \[ [**in oder**](/windows/desktop/Midl/in) \] \[ **in**, out primitive Handles \] werden nicht unterstützt.
+-   Mehrere \[ [**in oder**](/windows/desktop/Midl/in) \] \[ **in** sind \] explizite Kontexthandles zulässig.
+-   Alle vom Programmierer definierten Handleparameter mit Ausnahme des Binding Handle-Parameters werden als transmissible Daten behandelt.
 
-Die folgende Tabelle enthält Beispiele, und es wird beschrieben, wie Bindungs Handles in den einzelnen compilermodi zugewiesen werden.
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Beispiel</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><pre class="syntax" data-space="preserve"><code>void proc1( void );</code></pre></td>
-<td>Es wurde kein explizites handle angegeben. Das implizite Bindungs handle, das durch [ <a href="/windows/desktop/Midl/implicit-handle">implicit_handle</a>] oder [ <a href="/windows/desktop/Midl/auto-handle">auto_handle</a>] angegeben wird, wird verwendet. Wenn keine ACF vorhanden ist, wird ein automatisches Handle verwendet.</td>
-</tr>
-<tr class="even">
-<td><pre class="syntax" data-space="preserve"><code>void proc2([in] handle_t H,
-           [in] short s );</code></pre></td>
-<td>Es wurde ein explizites Handle vom Typ handle_t angegeben. Der Parameter <em>H</em> ist das Bindungs Handle für die Prozedur.</td>
-</tr>
-<tr class="odd">
-<td><pre class="syntax" data-space="preserve"><code>void proc3([in] short s,
-           [in] handle_t H );</code></pre></td>
-<td>Der erste Parameter ist kein handle. Im Standardmodus ist der am weitesten links stehende handle-Parameter <em>H</em>, der Bindungs handle. Im/OSF-Modus wird die implizite Bindung verwendet. Ein Fehler wird gemeldet, da der zweite Parameter als nicht zulässig erwartet wird und handle_t nicht übertragen werden können.</td>
-</tr>
-<tr class="even">
-<td><pre class="syntax" data-space="preserve"><code>typedef [handle] short * MY_HDL;
-
-void proc1([in] short s,
-           [in] MY_HDL H );</code></pre></td>
-<td>Der erste Parameter ist kein handle. Im Standardmodus ist der am weitesten links stehende handle-Parameter <em>H</em>, der Bindungs handle. Die stufs nennen die vom Benutzer bereitgestellten Routinen MY_HDL_bind und MY_HDL_unbind. Im/OSF-Modus wird die implizite Bindung verwendet. Der vom Programmierer definierte handle-Parameter <em>H</em> wird als nicht übertragbare Daten behandelt.</td>
-</tr>
-<tr class="odd">
-<td><pre class="syntax" data-space="preserve"><code>Typedef [handle] short * MY_HDL;
-
-void proc1([in] MY_HDL H, 
-           [in] MY_HDL p );</code></pre></td>
-<td>Der erste Parameter ist ein Bindungs handle. Der Parameter <em>H</em> ist der Bindungs handle-Parameter. Der zweite von einem Programmierer definierte handle-Parameter wird als Transaktionsdaten behandelt.</td>
-</tr>
-<tr class="even">
-<td><pre class="syntax" data-space="preserve"><code>Typedef [context_handle] 
-void * CTXT_HDL;
-
-void proc1([in] short s,
-           [in] long l,
-           [in] CTXT_HDL H ,
-           [in] char c);</code></pre></td>
-<td>Das Bindungs Handle ist ein Kontext handle. Der Parameter <em>H</em> ist das Bindungs handle.</td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle enthält Beispiele und beschreibt, wie Bindungshandles in jedem Compilermodus zugewiesen werden.
 
 
 
- 
 
- 
+| Beispiel | BESCHREIBUNG | 
+|---------|-------------|
+| <pre class="syntax" data-space="preserve"><code>void proc1( void );</code></pre> | Es wird kein explizites Handle angegeben. Das implizite Bindungshand handle, das durch [ <a href="/windows/desktop/Midl/implicit-handle">implicit_handle</a>] oder [ <a href="/windows/desktop/Midl/auto-handle">auto_handle</a>] angegeben wird, wird verwendet. Wenn kein ACF vorhanden ist, wird ein automatisches Handle verwendet. | 
+| <pre class="syntax" data-space="preserve"><code>void proc2([in] handle_t H,           [in] short s );</code></pre> | Ein explizites Handle vom Typ handle_t angegeben. Der Parameter <em>H</em> ist das Bindungshand handle für die Prozedur. | 
+| <pre class="syntax" data-space="preserve"><code>void proc3([in] short s,           [in] handle_t H );</code></pre> | Der erste Parameter ist kein Handle. Im Standardmodus ist der handle-Parameter am weitesten links, <em>H,</em>das Bindungshand handle. Im /osf-Modus wird die implizite Bindung verwendet. Ein Fehler wird gemeldet, da erwartet wird, dass der zweite Parameter transmissierbar ist und handle_t übertragen werden kann. | 
+| <pre class="syntax" data-space="preserve"><code>typedef [handle] short * MY_HDL;void proc1([in] short s,           [in] MY_HDL H );</code></pre> | Der erste Parameter ist kein Handle. Im Standardmodus ist der handle-Parameter am weitesten links, <em>H,</em>das Bindungshand handle. Die Stubs rufen die vom Benutzer bereitgestellten Routinen MY_HDL_bind und MY_HDL_unbind. Im/Osf-Modus wird die implizite Bindung verwendet. Der vom Programmierer definierte Handleparameter <em>H</em> wird als transmissible Daten behandelt. | 
+| <pre class="syntax" data-space="preserve"><code>Typedef [handle] short * MY_HDL;void proc1([in] MY_HDL H,            [in] MY_HDL p );</code></pre> | Der erste Parameter ist ein Bindungshand handle. Der Parameter <em>H</em> ist der Binding-Handle-Parameter. Der zweite vom Programmierer definierte Handleparameter wird als transmissible Daten behandelt. | 
+| <pre class="syntax" data-space="preserve"><code>Typedef [context_handle] void * CTXT_HDL;void proc1([in] short s,           [in] long l,           [in] CTXT_HDL H ,           [in] char c);</code></pre> | Das Bindungshand handle ist ein Kontexthand handle. Der Parameter <em>H</em> ist das Bindungshand handle. | 
 
- 
+
+
+
+ 
+
+ 
+
+ 

@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0b99f5aa60f90a753a9c5d095e7a63417485b1fd
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: c187d57149b7f0589d56439bfacbf7129ab4fe4a
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122469837"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987833"
 ---
 # <a name="jet_recsize2-structure"></a>JET_RECSIZE2 Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_recsize2-structure"></a>JET_RECSIZE2 Struktur
 
-Die **JET_RECSIZE2-Struktur** wird von [JetGetRecordSize2](./jetgetrecordsize2-function.md) verwendet, um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl von Werten und den Mehraufwand für die ESE-Datensatzstruktur zurück zu geben.
+Die **JET_RECSIZE2-Struktur** wird von [JetGetRecordSize2](./jetgetrecordsize2-function.md) verwendet, um Informationen über die Nutzungsanforderungen eines Datensatzes im Benutzerdatenbereich, die Anzahl der festgelegten Spalten, die Anzahl der Werte und den Mehraufwand für die ESE-Datensatzstruktur zurück zu geben.
 
 **Windows 7:** Die **JET_RECSIZE2-Struktur** wird im Windows 7-Betriebssystem eingeführt.
 
@@ -103,7 +103,7 @@ Die komprimierte Größe der Benutzerdaten in diesem Datensatz. Dies ist identis
 
 Die komprimierte Größe der Benutzerdaten in der Long-Value-Struktur. Dies ist identisch mit cbLongValue-Daten, wenn keine getrennten long-Werte komprimiert werden.
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Die Gesamtzahl der Werte im Datensatz wäre **cMultiValues**  +  **cNonTaggedColumns**  +  **cTaggedColumns**.
 
@@ -112,7 +112,11 @@ Die logischen Daten im Datensatz sind (cbData+cbLongValueData), und die physisch
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista-Betriebssystem.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008-Betriebssystem.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista-Betriebssystem.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008-Betriebssystem.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

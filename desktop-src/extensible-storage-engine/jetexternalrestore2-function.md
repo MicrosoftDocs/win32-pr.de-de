@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6d2cbd4a13555d754cdbc1f9c02011b5891d6d6fcfae3fea822ddf6ad9953b78
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: ad8cad0cfc31c77b3cc8e960153bda14b4f431e5
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119719190"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122475816"
 ---
 # <a name="jetexternalrestore2-function"></a>JetExternalRestore2-Funktion
 
@@ -99,64 +99,21 @@ Der Statusrückruf, der den Fortschritt der Wiederherstellung meldet.
 
 Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errBadRestoreTargetInstance</p></td>
-<td><p>Der angegebene <em>szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errDatabaseCorrupted</p></td>
-<td><p>Dies weist darauf hin, dass die Datenbank beschädigt oder eine nicht erkannte Datei ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errEndingRestoreLogTooLow</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine für die Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung über der in <em>genHigh</em> oder <em>pLogInfo.ulGenHigh</em>angegebenen Protokollgenerierung aufweist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errFileNotFound</p></td>
-<td><p>Fehler beim Vorgang, weil die angeforderte Datei nicht geöffnet werden konnte, weil sie nicht unter dem angegebenen Pfad gefunden werden konnte.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <a href="gg294088(v=exchg.10).md">JetExternalRestore</a>usw. passieren, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch nicht angegeben werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidPath</p></td>
-<td><p>Fehler beim Vorgang, weil der angegebene Pfad nicht gefunden werden konnte.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errOutOfMemory</p></td>
-<td><p>Fehler beim Vorgang, weil nicht genügend Arbeitsspeicher zugeordnet werden konnte, um ihn abzuschließen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreOfNonBackupDatabase</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn die während der Wiederherstellung angegebene Datenbankdatei keine Datenbank ist, die mit einer externen Sicherung gesichert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Die Datenbank-Engine kann keine externe Wiederherstellung oder eine harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errStartingRestoreLogTooHigh</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung unterhalb der durch <em>genLow</em> oder <em>pLogInfo.ulGenLow</em>angegebenen Protokollgenerierung aufweist.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errBadRestoreTargetInstance</p> | <p>Der angegebene <em>szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p> | 
+| <p>JET_errDatabaseCorrupted</p> | <p>Dies weist darauf hin, dass die Datenbank beschädigt oder eine nicht erkannte Datei ist.</p> | 
+| <p>JET_errEndingRestoreLogTooLow</p> | <p>Dieser Fehler wird zurückgegeben, wenn eine für die Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung über der in <em>genHigh</em> oder <em>pLogInfo.ulGenHigh</em>angegebenen Protokollgenerierung aufweist.</p> | 
+| <p>JET_errFileNotFound</p> | <p>Fehler beim Vorgang, weil die angeforderte Datei nicht geöffnet werden konnte, weil sie nicht unter dem angegebenen Pfad gefunden werden konnte.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <a href="gg294088(v=exchg.10).md">JetExternalRestore</a>usw. passieren, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch nicht angegeben werden.</p> | 
+| <p>JET_errInvalidPath</p> | <p>Fehler beim Vorgang, weil der angegebene Pfad nicht gefunden werden konnte.</p> | 
+| <p>JET_errOutOfMemory</p> | <p>Fehler beim Vorgang, weil nicht genügend Arbeitsspeicher zugeordnet werden konnte, um den Vorgang abzuschließen.</p> | 
+| <p>JET_errRestoreOfNonBackupDatabase</p> | <p>Dieser Fehler wird zurückgegeben, wenn die während der Wiederherstellung angegebene Datenbankdatei keine Datenbank ist, die mit einer externen Sicherung gesichert wurde.</p> | 
+| <p>JET_errRunningInOneInstanceMode</p> | <p>Die Datenbank-Engine kann keine externe Wiederherstellung oder eine harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p> | 
+| <p>JET_errStartingRestoreLogTooHigh</p> | <p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung unterhalb der durch <em>genLow</em> oder <em>pLogInfo.ulGenLow</em>angegebenen Protokollgenerierung aufweist.</p> | 
+
 
 
 Bei Erfolg werden alle Datenbanken aus der *rgrstmap* vollständig wiederhergestellt und befinden sich in einem bereinigten oder konsistenten Zustand. An diesem Punkt kann die Datenbank einer vorhandenen Instanz erneut bereitgestellt werden.
@@ -169,38 +126,9 @@ Weitere Informationen finden Sie unter [JetExternalRestore.](./jetexternalrestor
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>Deklariert in Esent.h.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT.lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Dll</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JetExternalRestore2W</strong> (Unicode) und <strong>JetExternalRestore2A</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetExternalRestore2W</strong> (Unicode) und <strong>JetExternalRestore2A</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

@@ -4,12 +4,12 @@ ms.assetid: f7973019-0a80-498e-adf1-c66267c813f4
 title: Assemblymanifeste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5d7c6739bc83e56a42a926ca6aecb739fc41bbf39225cc531afc7afc6706ccc
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 94310ce3fdbb05706f889ea9755f7a47320ada56
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119142513"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122884888"
 ---
 # <a name="assembly-manifests"></a>Assemblymanifeste
 
@@ -82,7 +82,7 @@ Assemblymanifesten verfügen über die folgenden Elemente und Attribute.
 
 Assemblymanifeste können an drei Speicherorten installiert werden:
 
--   Als Manifeste, die [freigegebene Assemblys](/windows/desktop/Msi/shared-assemblies)begleitet, sollten Assemblymanifeste als separate Datei im parallelen Assemblycache installiert werden. Dies ist normalerweise der WinSxS-Ordner im Windows Verzeichnis.
+-   Als Manifeste, die [freigegebene Assemblys](/windows/desktop/Msi/shared-assemblies)begleitet, sollten Assemblymanifeste als separate Datei im parallelen Assemblycache installiert werden. Dies ist in der Regel der WinSxS-Ordner im Windows Verzeichnis.
 -   Als Manifeste, die [private Assemblys](/windows/desktop/Msi/private-assemblies)begleitet, sollten Assemblymanifeste in der Verzeichnisstruktur der Anwendung installiert werden. Dies ist in der Regel eine separate Datei im selben Ordner wie die ausführbare Datei der Anwendung.
 -   Als Ressource in einer DLL ist die Assembly für die private Verwendung der DLL verfügbar. Ein Assemblymanifest kann nicht als Ressource in eine EXE-Datei eingeschlossen werden. Eine EXE-Datei kann ein [Anwendungsmanifest](application-manifests.md) als Ressource enthalten.
 
@@ -165,31 +165,31 @@ Dieses Element verfügt über keine Unterelemente. Das **assemblyIdentity-Elemen
 <span id="dependency"></span><span id="DEPENDENCY"></span>**Abhängigkeit**
 </dt> <dd>
 
-Ein Containerelement, das mindestens ein **dependentAssembly-Element** enthält. Das erste Unterelement muss ein **dependentAssembly-Element** sein. Eine **Abhängigkeit** weist keine Attribute auf. Optional.
+Ein Containerelement, das mindestens ein **dependentAssembly-Element** enthält. Das erste Unterelement muss ein **dependentAssembly-Element** sein. Eine **Abhängigkeit** verfügt über keine Attribute. Optional.
 
 </dd> <dt>
 
 <span id="dependentAssembly"></span><span id="dependentassembly"></span><span id="DEPENDENTASSEMBLY"></span>**Dependentassembly**
 </dt> <dd>
 
-Das erste Unterelement muss ein **assemblyIdentity-Element** sein, das eine side-by-side-Assembly beschreibt und eindeutig identifiziert, die von der side-by-side-Assembly verwendet wird, die dieses Assemblymanifest besitzt. Jede **dependentAssembly** muss sich innerhalb genau einer **Abhängigkeit** befinden. Optional.
+Das erste Unterelement muss ein **assemblyIdentity-Element** sein, das eine side-by-side-Assembly beschreibt und eindeutig identifiziert, die von der seiteseitigen Assembly verwendet wird, die dieses Assemblymanifest besitzt. Jede **dependentAssembly muss** sich in genau einer Abhängigkeit **befindet.** Optional.
 
 </dd> <dt>
 
 <span id="file"></span><span id="FILE"></span>**Datei**
 </dt> <dd>
 
-Enthält Dateien, die von einer nebeneinander verwendeten Assembly verwendet werden. Enthält **comClass-,** **typelib-, windowClass-,**  **comInterfaceProxyStub-Unterelemente.** Optional.
+Enthält Dateien, die von einer seiteseitigen Assembly verwendet werden. Enthält **comClass,** **typelib,** **windowClass,** **comInterfaceProxyStub-Unterelemente.** Optional.
 
-Das **Dateielement** weist die folgenden Attribute auf.
+Das **Dateielement** verfügt über die folgenden Attribute.
 
 
 
 | attribute   | Beschreibung                                                                                             |
 |-------------|---------------------------------------------------------------------------------------------------------|
-| **name**    | Name der Datei, z. B. Conctl32.dll.                                                            |
-| **Hashalg** | Algorithmus, der zum Erstellen eines Hashs der Datei verwendet wird. Dieser Wert sollte SHA1 sein.                                 |
-| **hash**    | Ein Hash der Datei, auf die durch den Namen verwiesen wird. Eine hexadezimale Zeichenfolge der Länge, die vom Hashalgorithmus abhängt. |
+| **name**    | Der Name der Datei, z. B. Conctl32.dll.                                                            |
+| **Hashalg** | Algorithmus, der verwendet wird, um einen Hash der Datei zu erstellen. Dieser Wert sollte SHA1 sein.                                 |
+| **hash**    | Ein Hash der Datei, auf die durch den Namen verwiesen wird. Eine hexadezimale Zeichenfolge der Länge, abhängig vom Hashalgorithmus. |
 
 
 
@@ -200,7 +200,7 @@ Das **Dateielement** weist die folgenden Attribute auf.
 <span id="comClass"></span><span id="comclass"></span><span id="COMCLASS"></span>**comClass**
 </dt> <dd>
 
-Ein Unterelement  eines Dateielements. Optional.
+Ein Unterelement eines **Dateielements.** Optional.
 
 Das **comClass-Element** verfügt über die folgenden Attribute.
 
@@ -209,23 +209,23 @@ Das **comClass-Element** verfügt über die folgenden Attribute.
 | attribute               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **description**         | Klassenname.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Clsid**               | Die GUID, die die Klasse eindeutig identifiziert. Erforderlich. Der Wert muss das Format einer gültigen GUID aufweisen.                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **threadingModel**      | Das threadingmodell, das von prozessübergreifenden COM-Klassen verwendet wird. Wenn diese Eigenschaft NULL ist, wird kein Threadingmodell verwendet. Die Komponente wird im Hauptthread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt. Optional. Gültige Werte sind: "Apartment", "Free", "Both" und "Neutral".                                                                                                                                                                                                                         |
-| **tlbid**               | GUID für die Typbibliothek für diese COM-Komponente. Der Wert muss das Format einer GUID aufweisen. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Progid**              | Versionsabhängige programmgesteuerter Bezeichner, der der COM-Komponente zugeordnet ist. Das Format einer ProgID ist <*Hersteller*>.<*Komponente*>.<*Version*>.                                                                                                                                                                                                                                                                                                                                                                      |
-| **miscStatus**          | Dupliziert im Assemblymanifest die Informationen, die vom MiscStatus-Registrierungsschlüssel bereitgestellt werden. Wenn werte für die **MiscStatusIcon-,** **miscStatusContent-,** **miscStatusDocprint-** oder **miscStatusThumbnail-Attribute** nicht gefunden werden, wird der entsprechende Standardwert, der in **miscStatus** aufgeführt ist, für die fehlenden Attribute verwendet. Der Wert kann eine durch Kommas getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert. |
-| **miscStatusIcon**      | Duplikate in der Assembly manifestieren die vom DVASPECT-SYMBOL bereitgestellten \_ Informationen. Sie kann ein Symbol eines Objekts bereitstellen. Der Wert kann eine durch Kommas getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                                                                |
-| **miscStatusContent**   | Duplikate in der Assembly manifestieren die von DVASPECT CONTENT bereitgestellten \_ Informationen. Es kann ein zusammengesetztes Dokument bereitstellen, das für einen Bildschirm oder Drucker angezeigt werden kann. Der Wert kann eine durch Kommas getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                          |
-| **miscStatusDocprint**  | Duplikate in der Assembly manifestieren die von DVASPECT DOCPRINT bereitgestellten \_ Informationen. Sie kann eine Objektdarstellung bereitstellen, die auf dem Bildschirm angezeigt werden kann, als ob sie auf einem Drucker ausgegeben würde. Der Wert kann eine durch Kommas getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                               |
-| **miscStatusThumbnail** | Duplikate in einer Assembly manifestieren die von DVASPECT THUMBNAIL bereitgestellten \_ Informationen. Sie kann eine Miniaturansicht eines Objekts bereitstellen, das in einem Browsertool angezeigt werden kann. Der Wert kann eine durch Kommas getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                         |
+| **Clsid**               | Die GUID, die die Klasse eindeutig identifiziert. Erforderlich. Der Wert muss das Format einer gültigen GUID haben.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **threadingModel**      | Das threading-Modell, das von in-process-COM-Klassen verwendet wird. Wenn diese Eigenschaft NULL ist, wird kein Threadingmodell verwendet. Die Komponente wird im Hauptthread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt. Optional. Gültige Werte sind: "Apartment", "Free", "Both" und "Neutral".                                                                                                                                                                                                                         |
+| **tlbid**               | GUID für die Typbibliothek für diese COM-Komponente. Der Wert muss das Format einer GUID haben. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Progid**              | Versionsabhängiger programmgesteuerter Bezeichner, der der COM-Komponente zugeordnet ist. Das Format einer ProgID ist <*>.<-Komponente*>.<*Version>.*                                                                                                                                                                                                                                                                                                                                                                       |
+| **miscStatus**          | Dupliziert im Assemblymanifest die Vom MiscStatus-Registrierungsschlüssel bereitgestellten Informationen. Wenn werte für die **Attribute miscStatusIcon,** **miscStatusContent,** **miscStatusDocprint** oder **miscStatusThumbnail** nicht gefunden werden, wird der entsprechende Standardwert, der in **miscStatus** aufgeführt ist, für die fehlenden Attribute verwendet. Der Wert kann eine durch Trennzeichen getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert. |
+| **miscStatusIcon**      | Duplikate in der Assembly manifestieren die von DVASPECT ICON bereitgestellten \_ Informationen. Sie kann ein Symbol für ein Objekt bereitstellen. Der Wert kann eine durch Trennzeichen getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                                                                |
+| **miscStatusContent**   | Duplikate in der Assembly manifestieren die von DVASPECT CONTENT bereitgestellten \_ Informationen. Es kann ein zusammengesetztes Dokument bereitstellen, das für einen Bildschirm oder Drucker angezeigt werden kann. Der Wert kann eine durch Trennzeichen getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                          |
+| **miscStatusDocprint**  | Duplikate in der Assembly manifestieren die informationen, die von DVASPECT \_ DOCPRINT bereitgestellt werden. Sie kann eine Objektdarstellung bereitstellen, die auf dem Bildschirm angezeigt wird, als ob sie auf einem Drucker gedruckt worden wäre. Der Wert kann eine durch Trennzeichen getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                               |
+| **miscStatusThumbnail** | Duplikate in einer Assembly manifestieren die von DVASPECT THUMBNAIL bereitgestellten \_ Informationen. Es kann eine Miniaturansicht eines Objekts bereitstellen, das in einem Browsertool angezeigt werden kann. Der Wert kann eine durch Trennzeichen getrennte Liste der Attributwerte aus der folgenden Tabelle sein. Sie können dieses Attribut verwenden, wenn die COM-Klasse eine OCX-Klasse ist, die Miscstatus-Registrierungsschlüsselwerte erfordert.                                                                                                                                                                         |
 
 
 
  
 
-Das **comClass-Element** kann <progid>...</progid> -Elemente als untergeordnete Elemente aufweisen, die die versionsabhängigen Progids auflisten.
+Das **comClass-Element** kann &lt; über progid ...-Elemente als children verfügen, die &gt; die </progid> versionsabhängigen Progids auflisten.
 
-Das folgende Beispiel zeigt ein **comClass-Element,** das in einem **Dateielement** enthalten ist.
+Das folgende Beispiel zeigt ein **comClass-Element,** das in einem **Dateielement enthalten** ist.
 
 ``` syntax
 <file name="sampleu.dll">
@@ -239,13 +239,13 @@ Das folgende Beispiel zeigt ein **comClass-Element,** das in einem **Dateielemen
     </file>
 ```
 
-Wenn ihre COM-Klasse eine OCX-Klasse ist, die den MiscStatus-Registrierungsunterschlüssel erfordert, um anzugeben, wie ein Objekt erstellt und angezeigt werden soll, können Sie das Objekt aktivieren, indem Sie diese Informationen im Assemblymanifest duplizieren. Geben Sie die Merkmale des Objekts an, indem Sie die Attribute **miscStatus,** **miscStatusIcon,** **miscStatusContent,** **miscStatusDocprint** und **miscStatusThumbnail** des **comClass-Elements** verwenden. Legen Sie diese Attribute auf eine durch Trennzeichen getrennte Liste von Attributwerten aus der folgenden Tabelle fest. Diese Attribute duplizieren die Informationen, die von einer DVASPECT-Enumeration bereitgestellt werden. Wenn für **miscStatusIcon,** **miscStatusContent,** **miscStatusDocprint** oder **miscStatusThumbnail** kein Wert gefunden wird, werden die in **miscStatus** angegebenen Standardwerte verwendet. Verwenden Sie Attributwerte aus der folgenden Tabelle. Diese entsprechen den Bitflags einer [**OLEMISC-Enumeration.**](/windows/win32/api/oleidl/ne-oleidl-olemisc)
+Wenn ihre COM-Klasse eine OCX-Klasse ist, die den MiscStatus-Registrierungsunterschlüssel erfordert, um anzugeben, wie ein Objekt erstellt und angezeigt werden soll, können Sie das Objekt aktivieren, indem Sie diese Informationen im Assemblymanifest duplizieren. Geben Sie die Eigenschaften des Objekts mit den **Attributen miscStatus**, **miscStatusIcon**, **miscStatusContent**, **miscStatusDocprint** und **miscStatusThumbnail** des **comClass-Elements** an. Legen Sie diese Attribute auf eine durch Komma getrennte Liste von Attributwerten aus der folgenden Tabelle fest. Diese Attribute duplizieren die Informationen, die von einer DVASPECT-Enumeration bereitgestellt würden. Wenn für **miscStatusIcon,** **miscStatusContent,** **miscStatusDocprint** oder **miscStatusThumbnail** kein Wert gefunden wird, werden die in **miscStatus** angegebenen Standardwerte verwendet. Verwenden Sie Attributwerte aus der folgenden Tabelle. Diese entsprechen den Bitflags einer [**OLEMISC-Enumeration.**](/windows/win32/api/oleidl/ne-oleidl-olemisc)
 
 
 
 | Attributwert              | OLEMISC-Konstante                      |
 |------------------------------|---------------------------------------|
-| recomposeonresize            | OLEMISC \_ RECOMPOSEONRESIZE            |
+| Recomposeonresize            | OLEMISC \_ RECOMPOSEONRESIZE            |
 | onlyiconic                   | OLEMISC \_ ONLYICONIC                   |
 | insertnotreplace             | OLEMISC \_ INSERTNOTREPLACE             |
 | static                       | OLEMISC \_ STATIC                       |
@@ -266,7 +266,7 @@ Wenn ihre COM-Klasse eine OCX-Klasse ist, die den MiscStatus-Registrierungsunter
 | Imemode                      | TOLEMISC \_ IMEMODE                     |
 | ignoreativatewhenvisible     | OLEMISC \_ IGNOREACTIVATEWHENVISIBLE    |
 | wantstomenumerge             | OLEMISC \_ WANTSTOMENUMERGE             |
-| supportsmultilevelundo       | OLEMISC \_ UNTERSTÜTZTMULTILEVELUNDO       |
+| supportsmultilevelundo       | OLEMISC \_ SUPPORTSMULTILEVELUNDO       |
 
 
 
@@ -277,25 +277,25 @@ Wenn ihre COM-Klasse eine OCX-Klasse ist, die den MiscStatus-Registrierungsunter
 <span id="typelib"></span><span id="TYPELIB"></span>**Typelib**
 </dt> <dd>
 
-Ein Unterelement  eines Dateielements. Optional.
+Ein Unterelement eines **Dateielements.** Optional.
 
-Das **typelib-Element** verfügt über die Attribute, die in der folgenden Tabelle dargestellt sind.
+Das **typelib-Element** verfügt über die in der folgenden Tabelle gezeigten Attribute.
 
 
 
 | attribute      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **tlbid**      | Die eindeutige ID der Typbibliothek. Erforderlich.                                                                                                                                                                                                                                                                                                                                                                                    |
-| **version**    | Die zweiteilige Versionsnummer der Typbibliothek. Wenn nur die Nebenversionsnummer zunimmt, werden alle Features der vorherigen Typbibliothek auf kompatible Weise unterstützt. Wenn sich die Hauptversionsnummer ändert, muss Code, der für die Typbibliothek kompiliert wurde, erneut kompiliert werden. Die Versionsnummer der Typbibliothek kann sich von der Versionsnummer der Anwendung unterscheiden. Erforderlich.                                      |
-| **helpdir**    | Das Verzeichnis, in dem sich die Hilfedatei für die Typen in der Typbibliothek befindet. Wenn die Anwendung Typbibliotheken für mehrere Sprachen unterstützt, verweisen die Bibliotheken möglicherweise auf verschiedene Dateinamen im Hilfedateiverzeichnis. Wenn kein Wert vorhanden ist, geben Sie "" an. Erforderlich.                                                                                                                                                          |
-| **Resourceid** | Die hexadezimale Zeichenfolgendarstellung des Gebietsschemabezeichners (LCID). Es handelt sich um eine bis vier Hexadezimalziffern ohne 0x-Präfix und ohne führende Nullen. Die LCID kann einen neutralen Untersprachenbezeichner aufweisen. Weitere Informationen finden Sie unter [Gebietsschemabezeichner.](/windows/desktop/Intl/locale-identifiers) Optional.                                                                                                                                      |
-| **flags**      | Die Zeichenfolgendarstellung der Typbibliotheksflags für diese Typbibliothek. Insbesondere sollte es sich um "RESTRICTED", "CONTROL", "HIDDEN" und "HASDISKIMAGE" handelt. Dies sind die Werte der [**LIBFLAGS-Enumeration**](/windows/win32/api/oaidl/ne-oaidl-libflags) und die gleichen Flags, die im *uLibFlags-Parameter* der [**ICreateTypeLib::SetLibFlags-Methode**](/windows/win32/api/oaidl/nf-oaidl-icreatetypelib-setlibflags) angegeben sind. Optional. |
+| **version**    | Die zweiteile Versionsnummer der Typbibliothek. Wenn nur die Nebenversionsnummer zunimmt, werden alle Features der vorherigen Typbibliothek auf kompatible Weise unterstützt. Wenn sich die Hauptversionsnummer ändert, muss Code, der für die Typbibliothek kompiliert wurde, neu kompiliert werden. Die Versionsnummer der Typbibliothek kann sich von der Versionsnummer der Anwendung unterscheiden. Erforderlich.                                      |
+| **helpdir**    | Das Verzeichnis, in dem sich die Hilfedatei für die Typen in der Typbibliothek befindet. Wenn die Anwendung Typbibliotheken für mehrere Sprachen unterstützt, verweisen die Bibliotheken möglicherweise auf verschiedene Dateinamen im Hilfedateiverzeichnis. Wenn kein Wert angegeben wird, geben Sie "" an. Erforderlich.                                                                                                                                                          |
+| **Resourceid** | Die hexadezimale Zeichenfolgendarstellung des Locale Identifier (LCID). Es handelt sich um eine bis vier Hexadezimalziffern ohne 0x-Präfix und ohne führende Nullen. Die LCID kann einen neutralen Bezeichner für die Untersprache haben. Weitere Informationen finden Sie unter [Locale Identifiers](/windows/desktop/Intl/locale-identifiers). Optional.                                                                                                                                      |
+| **flags**      | Die Zeichenfolgendarstellung der Typbibliotheksflags für diese Typbibliothek. Dies sollte insbesondere "RESTRICTED", "CONTROL", "HIDDEN" und "HASDISKIMAGE" sein. Dies sind die Werte der [**LIBFLAGS-Enumeration**](/windows/win32/api/oaidl/ne-oaidl-libflags) und die gleichen Flags, die im *uLibFlags-Parameter* der [**ICreateTypeLib::SetLibFlags-Methode**](/windows/win32/api/oaidl/nf-oaidl-icreatetypelib-setlibflags) angegeben sind. Optional. |
 
 
 
  
 
-Das folgende Beispiel zeigt ein **typelib-Element,** das in einem **Dateielement** enthalten ist.
+Das folgende Beispiel zeigt ein **typelib-Element,** das in einem **Dateielement enthalten** ist.
 
 ``` syntax
 <file name="sampleu.dll">
@@ -309,20 +309,20 @@ Das folgende Beispiel zeigt ein **typelib-Element,** das in einem **Dateielement
 <span id="comInterfaceExternalProxyStub"></span><span id="cominterfaceexternalproxystub"></span><span id="COMINTERFACEEXTERNALPROXYSTUB"></span>**comInterfaceExternalProxyStub**
 </dt> <dd>
 
-**ComInterfaceExternalProxyStub** ist ein Unterelement eines **Assemblyelements** und wird für Automatisierungsschnittstellen verwendet. Beispiel: [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) und die abgeleiteten Schnittstellen. Optional.
+**ComInterfaceExternalProxyStub** ist ein Unterelement  eines Assemblyelements und wird für Automatisierungsschnittstellen verwendet. Beispielsweise [**IDispatch und**](/windows/win32/api/oaidl/nn-oaidl-idispatch) die abgeleiteten Schnittstellen. Optional.
 
-Die Standardmäßige Proxystubimplementierungen sind für die meisten Automatisierungsschnittstellen geeignet, z. B. von [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)abgeleitete Schnittstellen. Der Schnittstellenproxystub und alle anderen externen Proxy-Stub-Schnittstellenimplementierungen müssen in **comInterfaceExternalProxyStub** aufgeführt werden. Das **comInterfaceExternalProxyStub-Element** verfügt über die in der folgenden Tabelle gezeigten Attribute.
+Die standardmäßige Proxystubimplementierung ist für die meisten Automatisierungsschnittstellen geeignet, z. B. Schnittstellen, die von [**IDispatch abgeleitet wurden.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) Der Schnittstellenproxystub und alle anderen externen Proxystub-Schnittstellenimplementierungen müssen im **comInterfaceExternalProxyStub aufgeführt werden.** Das **comInterfaceExternalProxyStub-Element** enthält die in der folgenden Tabelle gezeigten Attribute.
 
 
 
 | attribute         | Beschreibung                                                                                                                                                                                 |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Iid**           | Die IID der Schnittstelle, für die der Proxy deklariert wird. Erforderlich. Der Wert sollte folgendes Format aufweisen: "{iid}".                                                                         |
-| **baseInterface** | Die IID der Schnittstelle, von der das durch das **iid-Attribut beschriebene** abgeleitet wird. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "{iid}".                            |
-| **numMethods**    | Die Anzahl der von der -Schnittstelle implementierten Methoden. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "n".                                                                       |
-| **name**          | Name der Schnittstelle, wie er im Code angezeigt wird. Beispiel: "IViewObject". Dies sollte keine beschreibende Zeichenfolge sein. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "name". |
-| **tlbid**         | Die Typbibliothek, die die Beschreibung der vom **iid-Attribut** angegebenen Schnittstelle enthält. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "{tlbid}" .                |
-| proxyStubClsid32  | Karten eine IID zu einer CLSID in 32-Bit-Proxy-DLLs.                                                                                                                                                |
+| **Iid**           | Die IID der Schnittstelle, für die der Proxy deklariert wird. Erforderlich. Der Wert sollte das formular "{iid}" haben.                                                                         |
+| **baseInterface** | Die IID der Schnittstelle, von der die durch das **iid-Attribut beschriebene** schnittstelle abgeleitet wird. Dieses Attribut ist optional. Der Wert sollte das formular "{iid}" haben.                            |
+| **numMethods**    | Die Anzahl der methoden, die von der -Schnittstelle implementiert werden. Dieses Attribut ist optional. Der Wert sollte im folgenden Formular sein: "n".                                                                       |
+| **name**          | Der Name der Schnittstelle, wie er im Code angezeigt wird. Beispiel: "IViewObject". Dies sollte keine beschreibende Zeichenfolge sein. Dieses Attribut ist optional. Der Wert sollte das formular "name" haben. |
+| **tlbid**         | Die Typbibliothek, die die Beschreibung der durch das **iid-Attribut angegebenen Schnittstelle** enthält. Dieses Attribut ist optional. Der Wert sollte in der Form "{tlbid}" sein.                |
+| proxyStubClsid32  | Karten einer IID zu einer CLSID in 32-Bit-Proxy-DLLs.                                                                                                                                                |
 
 
 
@@ -343,23 +343,23 @@ Das folgende Beispiel zeigt ein **comInterfaceExternalProxyStub-Element.**
 <span id="comInterfaceProxyStub"></span><span id="cominterfaceproxystub"></span><span id="COMINTERFACEPROXYSTUB"></span>**comInterfaceProxyStub**
 </dt> <dd>
 
-Ein Unterelement  eines Dateielements. Optional.
+Ein Unterelement eines **Dateielements.** Optional.
 
-Wenn eine Datei in der Assembly einen Proxystub implementiert, muss das entsprechende Dateitag ein **comInterfaceProxyStub-Unterelement** mit Attributen enthalten, die mit einem **comInterfaceProxyStub-Element** identisch sind. Das Marshallen von Schnittstellen zwischen Prozessen und Threads funktioniert möglicherweise nicht wie erwartet, wenn Sie einige der **comInterfaceProxyStub-Abhängigkeiten** für Ihre Komponente weglassen.
+Wenn eine Datei in der Assembly einen Proxystub implementiert, muss das entsprechende Dateitag ein **comInterfaceProxyStub-Unterelement** mit Attributen enthalten, die mit einem **comInterfaceProxyStub-Element identisch** sind. Das Marshallen von Schnittstellen zwischen Prozessen und Threads funktioniert möglicherweise nicht wie erwartet, wenn Sie einige der **comInterfaceProxyStub-Abhängigkeiten** für Ihre Komponente weglassen.
 
-Das **comInterfaceProxyStub-Element** weist die folgenden Attribute auf.
+Das **comInterfaceProxyStub-Element** verfügt über die folgenden Attribute.
 
 
 
 | attribute            | Beschreibung                                                                                                                                                                                                                                                                                                 |
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Iid**              | das. IID der Schnittstelle, für die der Proxy deklariert wird. Erforderlich. Der Wert sollte folgendes Format aufweisen: "{iid}".                                                                                                                                                                                        |
-| **name**             | Name der Schnittstelle, wie er im Code angezeigt wird. Beispiel: "IViewObject". Dies sollte keine beschreibende Zeichenfolge sein. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "name".                                                                                                                 |
-| **tlbid**            | Die Typbibliothek, die die Beschreibung der vom **iid-Attribut** angegebenen Schnittstelle enthält. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "{tlbid}".                                                                                                                                 |
-| **baseInterface**    | Die IID der Schnittstelle, von der das durch das **iid-Attribut beschriebene** abgeleitet wird. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "{iid}".                                                                                                                                            |
-| **numMethods**       | Die Anzahl der von der -Schnittstelle implementierten Methoden. Dieses Attribut ist optional. Der Wert sollte folgendes Format aufweisen: "n".                                                                                                                                                                                       |
-| **proxyStubClsid32** | Karten eine IID zu einer CLSID in 32-Bit-Proxy-DLLs.                                                                                                                                                                                                                                                                |
-| **threadingModel**   | Das threadingmodell, das von prozessübergreifenden COM-Klassen verwendet wird. Wenn diese Eigenschaft NULL ist, wird kein Threadingmodell verwendet. Die Komponente wird im Hauptthread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt. Optional. Gültige Werte sind: "Apartment", "Free", "Both" und "Neutral". |
+| **Iid**              | Das. IID der Schnittstelle, für die der Proxy deklariert wird. Erforderlich. Der Wert sollte das formular "{iid}" haben.                                                                                                                                                                                        |
+| **name**             | Der Name der Schnittstelle, wie er im Code angezeigt wird. Beispiel: "IViewObject". Dies sollte keine beschreibende Zeichenfolge sein. Dieses Attribut ist optional. Der Wert sollte das formular "name" haben.                                                                                                                 |
+| **tlbid**            | Die Typbibliothek, die die Beschreibung der durch das **iid-Attribut angegebenen Schnittstelle** enthält. Dieses Attribut ist optional. Der Wert sollte das formular "{tlbid}" haben.                                                                                                                                 |
+| **baseInterface**    | Die IID der Schnittstelle, von der die durch das **iid-Attribut beschriebene** schnittstelle abgeleitet wird. Dieses Attribut ist optional. Der Wert sollte das formular "{iid}" haben.                                                                                                                                            |
+| **numMethods**       | Die Anzahl der methoden, die von der -Schnittstelle implementiert werden. Dieses Attribut ist optional. Der Wert sollte im folgenden Formular sein: "n".                                                                                                                                                                                       |
+| **proxyStubClsid32** | Karten einer IID zu einer CLSID in 32-Bit-Proxy-DLLs.                                                                                                                                                                                                                                                                |
+| **threadingModel**   | Das threading-Modell, das von in-process-COM-Klassen verwendet wird. Wenn diese Eigenschaft NULL ist, wird kein Threadingmodell verwendet. Die Komponente wird im Hauptthread des Clients erstellt, und Aufrufe von anderen Threads werden an diesen Thread gemarshallt. Optional. Gültige Werte sind: "Apartment", "Free", "Both" und "Neutral". |
 
 
 
@@ -370,19 +370,19 @@ Das **comInterfaceProxyStub-Element** weist die folgenden Attribute auf.
 <span id="windowclass"></span><span id="WINDOWCLASS"></span>**Windowclass**
 </dt> <dd>
 
-Der Name einer Windows-Klasse, die versioniert werden soll. Das **windowclass-Element** weist das folgende Attribut auf.
+Der Name einer Windows-Klasse, die versioniert werden soll. Das **windowclass-Element** verfügt über das folgende Attribut.
 
 
 
 | attribute     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Versionierte** | Dieses Attribut steuert, ob der in der Registrierung verwendete interne Fensterklassenname die Version der Assembly enthält, die die Fensterklasse enthält. Der Wert dieses Attributs kann "yes" oder "no" sein. Der Standardwert ist "yes". Der Wert "no" sollte nur verwendet werden, wenn dieselbe Fensterklasse von einer parallelen Komponente und einer entsprechenden nicht parallelen Komponente definiert wird und Sie sie als dieselbe Fensterklasse behandeln möchten. Beachten Sie, dass die üblichen Regeln für die Fensterklassenregistrierung nur die erste Komponente anwenden, die die Fensterklasse registriert, die sie registrieren kann, da sie nicht versioniert ist. |
+| **Versionierte** | Dieses Attribut steuert, ob der in der Registrierung verwendete interne Fensterklassenname die Version der Assembly enthält, die die Window-Klasse enthält. Der Wert dieses Attributs kann "yes" oder "no" sein. Der Standardwert ist "Yes". Der Wert "no" sollte nur verwendet werden, wenn die gleiche Fensterklasse durch eine side-by-side-Komponente und eine entsprechende nicht-side-by-side-Komponente definiert ist und Sie sie als dieselbe Fensterklasse behandeln möchten. Beachten Sie, dass die üblichen Regeln für die Fensterklassenregistrierung nur die erste Komponente anwenden, die die Fensterklasse registriert, sie registrieren kann, da sie nicht versioniert ist. |
 
 
 
  
 
-Das folgende Beispiel zeigt ein **windowclass-Element,** das in einem **Dateielement** enthalten ist.
+Das folgende Beispiel zeigt ein **windowclass-Element,** das in einem **Dateielement enthalten** ist.
 
 ``` syntax
 <file name="comctl32.dll">
@@ -394,7 +394,7 @@ Das folgende Beispiel zeigt ein **windowclass-Element,** das in einem **Dateiele
 
 ## <a name="example"></a>Beispiel
 
-Im Folgenden wird ein Beispiel für ein Assemblymanifest beschrieben.
+Im Folgenden finden Sie ein Beispiel für ein Assemblymanifest.
 
 ``` syntax
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

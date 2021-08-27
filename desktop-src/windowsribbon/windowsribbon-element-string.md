@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 80558bed1e2152454df46d8a8dc6ab4fc40056f0257a08c91026504ec64f1722
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 7a34a417b6ad4d57bea83fcae13d810b22114271
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118439408"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630956"
 ---
 # <a name="string-element"></a>String-Element
 
 Stellt eine Zeichenfolgenressource dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <String
@@ -41,17 +41,17 @@ Stellt eine Zeichenfolgenressource dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -73,7 +73,7 @@ Stellt eine Zeichenfolgenressource dar.
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Das Ressourcensymbol für die Zeichenfolge.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern oder Unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Ein Buchstabe oder Unterstrich, gefolgt von einer beliebigen Sequenz von Buchstaben, Ziffern oder Unterstrichen.<br/> Die maximale Länge beträgt 100 Zeichen.<br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -84,7 +84,7 @@ Stellt eine Zeichenfolgenressource dar.
 
 
 
-| Element                                                                   | BESCHREIBUNG                                   |
+| Element                                                                   | Beschreibung                                   |
 |---------------------------------------------------------------------------|-----------------------------------------------|
 | [**String.Content**](windowsribbon-element-string-content.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 | [**String.Id**](windowsribbon-element-string-id.md)<br/>           | Kann höchstens einmal auftreten.<br/> <br/> |

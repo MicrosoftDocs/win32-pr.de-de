@@ -21,12 +21,12 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: c8ff905475863df11c6fb6529f030f73a4f1b785792be4c5fe8c7ce1142096c3
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 763e14d0ebd0aab33aef252b883009567df727cd
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119068480"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122887151"
 ---
 # <a name="msvm_replicationrelationship-class"></a>Msvm \_ ReplicationRelationship-Klasse
 
@@ -109,7 +109,7 @@ Der Failovertyp, der für die Replikationsbeziehung ausgeführt wurde.
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -122,7 +122,7 @@ Identifiziert die Replikationsbeziehung. Diese Eigenschaft wird von [**CIM \_ Ma
 
 Diese Eigenschaft hat das formatierte Format:
 
-**Microsoft: <vmid> \\ HVR \\<0/1>**
+**Microsoft: &lt; vmid &gt; \\ HVR \\<0/1>**
 
 0 gibt die primäre und 1 die erweiterte [Replikation an.](#extended-replication)
 
@@ -479,7 +479,7 @@ Mit dem Hyper-V-Replikationsfeature in Windows 8 können virtuelle Computer, die
 
 Das Hyper-V-Replikationsfeature in Windows 8.1 ermöglicht es einem Benutzer, die Replikationsbeziehung vom sekundären Standort auf einen dritten Standort zu erweitern. Der dritte Standort kann ein Hyper-V-Host sein, der vorab als Wiederherstellungsserver oder externer Replikationsanbieter bereitgestellt wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -493,7 +493,7 @@ Das Hyper-V-Replikationsfeature in Windows 8.1 ermöglicht es einem Benutzer, di
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

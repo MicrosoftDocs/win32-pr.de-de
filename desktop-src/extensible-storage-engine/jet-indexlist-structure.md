@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c57fda6eaea161839cdaa758c41f13749d4c5eda
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: e21353fb780ed7346c1ff82cbc5057469da25a4b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122480046"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987483"
 ---
 # <a name="jet_indexlist-structure"></a>JET_INDEXLIST-Struktur
 
@@ -59,7 +59,7 @@ Die **JET_INDEXLIST-Struktur** enthält die erforderlichen Informationen, um ein
 
 **cbStruct**
 
-Die Größe der -Struktur in Bytes. Der API-Aufruf aktualisiert dieses Feld, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_INDEXLIST ) übereinstimmt.
+Die Größe der -Struktur in Bytes. Durch den API-Aufruf wird dieses Feld aktualisiert, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_INDEXLIST ) übereinstimmt.
 
 **tableid**
 
@@ -73,7 +73,7 @@ Die Anzahl der Datensätze in der temporären Tabelle, die erstellt wurde.
 
 Der Spaltenbezeichner des Indexnamens.
 
-Diese Spalte ist ein [JET_coltypText](./jet-coltyp.md).
+Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
 
 **columnidgrbitIndex**
 
@@ -130,25 +130,25 @@ Der Spaltenbezeichner des Coltyps der indizierten Spalte. Weitere Informationen 
 
 Der Spaltenbezeichner des Ländercodes der indizierten Spalte. Der Ländercode ist veraltet.
 
-Diese Spalte ist eine [JET_coltypShort](./jet-coltyp.md).
+Diese Spalte ist ein [JET_coltypShort](./jet-coltyp.md).
 
 **columnidLangid**
 
 Der Spaltenbezeichner des Sprachbezeichners (LCID), unter dem der Index erstellt wurde. Weitere Informationen finden Sie unter [JET_INDEXCREATE](./jet-indexcreate-structure.md).
 
-Diese Spalte ist eine [JET_coltypShort](./jet-coltyp.md).
+Diese Spalte ist ein [JET_coltypShort](./jet-coltyp.md).
 
 **columnidCp**
 
 Der Spaltenbezeichner der Codepage, unter der der Index erstellt wurde. Weitere Informationen finden Sie unter [JET_COLUMNCREATE](./jet-columncreate-structure.md).
 
-Diese Spalte ist eine [JET_coltypShort](./jet-coltyp.md).
+Diese Spalte ist ein [JET_coltypShort](./jet-coltyp.md).
 
 **columnidCollate**
 
 Der Spaltenbezeichner der Sortierungssequenz, unter der der Index erstellt wurde. Die Sortierungssequenz ist veraltet.
 
-Diese Spalte ist eine [JET_coltypShort](./jet-coltyp.md).
+Diese Spalte ist ein [JET_coltypShort](./jet-coltyp.md).
 
 **columnidgrbitColumn**
 
@@ -170,7 +170,7 @@ Die folgenden Optionen sind für dieses Element gültig.
 
 Der Spaltenbezeichner des Spaltennamens.
 
-Diese Spalte ist ein [JET_coltypText](./jet-coltyp.md).
+Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
 
 **columnidLCMapFlags**
 
@@ -178,13 +178,13 @@ Der Spaltenbezeichner der Flags, die zum Erstellen des Indexes verwendet werden.
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
-### <a name="remarks"></a>Hinweise
+### <a name="remarks"></a>Bemerkungen
 
 Jede Zeile in der temporären Tabelle entspricht einer Spalte in einem bestimmten Index.
 
-Der Index "+A \\ 0+B \\ 0+C \\ 0+D \\ 0+E \\ 0" ist beispielsweise mehr als fünf Spalten und belegt fünf Zeilen in der temporären Tabelle. Jede dieser fünf Zeilen hat den Wert 5 in der Spalte, der durch die columnid-Spalte identifiziert wird. Jede Zeile hat jedoch einen anderen Wert für die columnid-Spalte im Bereich von 0 bis 4.
+Beispielsweise ist der Index "+A \\ 0+B \\ 0+C \\ 0+D \\ 0+E \\ 0" mehr als fünf Spalten und belegt fünf Zeilen in der temporären Tabelle. Jede dieser fünf Zeilen hat den Wert 5 in der Spalte, der durch die columnid-Spalte identifiziert wird. Jede Zeile hat jedoch einen anderen Wert für die columnid-Spalte im Bereich von 0 bis 4.
 
-Die Anzahl der Schlüssel in einem bestimmten Index entspricht der Anzahl eindeutiger Werte, für die ein Aufrufer eine genaue Übereinstimmung suchen und abrufen kann. Die Anzahl der Einträge ist die Anzahl der Zeilen, mit denen ein Index übereinstimmt. Wenn ein Index über eine Eindeutigkeitseinschränkung verfügt, entspricht die Anzahl der Schlüssel der Anzahl der Einträge. Wenn eine Tabelle beispielsweise die folgenden Informationen enthält und ein Index für die Spalte mit dem Namen "key" erstellt wird, gibt es drei Schlüssel (100, 200 und 500), aber es gibt vier Einträge ("this", "is", "an" und "example").
+Die Anzahl der Schlüssel in einem bestimmten Index entspricht der Anzahl eindeutiger Werte, für die ein Aufrufer eine genaue Übereinstimmung suchen und abrufen kann. Die Anzahl der Einträge ist die Anzahl der Zeilen, mit denen ein Index übereinstimmt. Wenn ein Index über eine Eindeutigkeitseinschränkung verfügt, entspricht die Anzahl der Schlüssel der Anzahl der Einträge. Wenn beispielsweise eine Tabelle die folgenden Informationen enthält und ein Index für die Spalte "key" erstellt wird, gibt es drei Schlüssel (100, 200 und 500), aber es gibt vier Einträge ("this", "is", "an" und "example").
 
 
 | <p>Schlüssel</p> | <p>Eingabe</p> | 
@@ -199,7 +199,11 @@ Die Anzahl der Schlüssel in einem bestimmten Index entspricht der Anzahl eindeu
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
 
 
 

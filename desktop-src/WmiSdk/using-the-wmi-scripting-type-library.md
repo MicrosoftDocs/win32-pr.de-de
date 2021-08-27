@@ -1,5 +1,5 @@
 ---
-description: Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skript-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
+description: Sie können die WMI-Skripttypbibliothek verwenden, um WMI Scripting-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
 ms.assetid: 6ef4e210-0733-4f2a-89c1-1a7aca5a19d9
 ms.tgt_platform: multiple
 title: Verwenden der WMI-Skripttypbibliothek
@@ -10,16 +10,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0d53f74db0ff4b744077c4e208be52dd749c2f4f150d867c3cfc7214c0e66ae2
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 20e5a2aa10bccfbd91b003f1db120691b6c61bb4
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "120120770"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122881176"
 ---
 # <a name="using-the-wmi-scripting-type-library"></a>Verwenden der WMI-Skripttypbibliothek
 
-Sie können die WMI-Skripttypbibliothek verwenden, um WMI-Skript-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
+Sie können die WMI-Skripttypbibliothek verwenden, um WMI Scripting-API-Methoden aus Microsoft Visual Studio und in Windows WSF-Skripthostdateien aufzurufen.
 
 ## <a name="using-the-wmi-scripting-type-library-with-microsoft-visual-studio"></a>Verwenden der WMI-Skripttypbibliothek mit Microsoft Visual Studio
 
@@ -48,7 +48,7 @@ Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-A
 
 -   Angeben der WbemScripting-GUID in den VBScript-Methoden [CreateObject](/previous-versions//xzysf6hc(v=vs.85)) und [**GetObject.**](https://msdn.microsoft.com/library/e9waz863(v=VS.71).aspx)
 
-    Dadurch wird Windows Skripthost benachrichtigt, um eine Verbindung mit dem WMI-Objektsatz herzustellen.
+    Diese Warnung Windows Skripthost, um eine Verbindung mit dem WMI-Objektsatz herzustellen.
 
     Im folgenden VBScript-Codebeispiel wird ein neues [**SWbemDateTime-Objekt**](swbemdatetime.md) erstellt.
 
@@ -68,7 +68,7 @@ Skripts können mithilfe der folgenden Methoden eine Verbindung mit der Skript-A
 
     
 
--   Verweisen auf die WMI-Typbibliothek mit dem <reference> -Tag des WSH 2.0-XML-Dateiformats. Wenn Sie das <reference> Tag verwenden, muss das Tag entweder über ein **uuid-Attribut** verfügen, dessen Wert der **GUID** der WMI-Typbibliothek entspricht, oder (empfohlen) ein Objektattribut, dessen Wert der **PROGID** eines beliebigen WMI-Skriptobjekts entspricht, das Sie erstellen können.
+-   Verweisen auf die WMI-Typbibliothek mit dem &lt; &gt; Verweistag des WSH 2.0-XML-Dateiformats. Wenn Sie das &lt; &gt; Verweistag verwenden, muss das Tag entweder über ein **uuid-Attribut** verfügen, dessen Wert der **GUID** der WMI-Typbibliothek entspricht, oder (empfohlen) ein Objektattribut, dessen Wert der **PROGID** eines beliebigen WMI-Skriptobjekts entspricht, das Sie erstellen können.
 
     Im folgenden VBScript-Codebeispiel wird die PROGID von "WbemScripting" verwendet. Um das Skript auszuführen, speichern Sie den Text in einer Datei mit der Erweiterung WSF.
 

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen: Fehler Behandlungs Konstanten'
-title: Fehler Behandlungs Konstanten
+description: 'Weitere Informationen finden Sie unter: Fehlerbehandlungskonst konstanten.'
+title: Fehlerbehandlungskonst constants
 TOCTitle: Error Handling Constants
 ms:assetid: 5a1f9438-2d36-483e-9820-d0de30ee5e01
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269258(v=EXCHG.10)
@@ -15,72 +15,41 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1ab59a8e0c721558e5c056d25798c5d1273bd86c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4480b54277c1586ca05d4a5db2ca6fdb9e045055
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366208"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122987633"
 ---
-# <a name="error-handling-constants"></a>Fehler Behandlungs Konstanten
+# <a name="error-handling-constants"></a>Fehlerbehandlungskonst constants
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="error-handling-constants"></a>Fehler Behandlungs Konstanten
+## <a name="error-handling-constants"></a>Fehlerbehandlungskonst constants
 
-Die folgenden Konstanten werden verwendet, um den Bereich für die [JET_paramExceptionAction](./error-handling-parameters.md) Systemparameter festzulegen.
+Mit den folgenden Konstanten wird der Bereich für die JET_paramExceptionAction [festgelegt.](./error-handling-parameters.md)
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Konstante/Wert</p></th>
-<th><p>BESCHREIBUNG</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_ExceptionMsgBox<br />
-0x0001</p></td>
-<td><p>Zeigt ein Meldungs Feld an, wenn eine Ausnahme auftritt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_ExceptionNone<br />
-0x0002</p></td>
-<td><p>Führt keine Aktion aus, wenn eine Ausnahme auftritt.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Konstante/Wert</p> | <p>BESCHREIBUNG</p> | 
+|-----------------------|--------------------|
+| <p>JET_ExceptionMsgBox<br />0x0001</p> | <p>Zeigt ein Meldungsfeld an, wenn eine Ausnahme auftritt.</p> | 
+| <p>JET_ExceptionNone<br />0x0002</p> | <p>Führt nichts aus, wenn eine Ausnahme auftritt.</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Fehler Behandlungsparameter](./error-handling-parameters.md)
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)

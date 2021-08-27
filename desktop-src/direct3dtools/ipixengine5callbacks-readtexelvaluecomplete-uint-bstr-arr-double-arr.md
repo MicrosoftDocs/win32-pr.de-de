@@ -1,10 +1,10 @@
 ---
-description: Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Texttyp gelesen wurde.
+description: Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Gelesener texel-Wert abgeschlossen wurde.
 MS-HAID: vspixengine.IPixEngine5Callbacks\_ReadTexelValueComplete\_UINT\_BSTR\_arr\_double\_arr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'IPixEngine5Callbacks:: Read texelvaluecomplete-Methode'
+title: IPixEngine5Callbacks::ReadTexelValueComplete-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 3CAC08D8-0E4F-40B5-B91C-5C9159665C96
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 7069d286cf65d87ba7bf4c576de3692b2a51d1a0
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b79abda0c76e20933465c3611431761e07a5a963
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521899"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624906"
 ---
-# <a name="span-idvspixengineipixengine5callbacks_readtexelvaluecomplete_uint_bstr_arr_double_arrspanipixengine5callbacksreadtexelvaluecomplete-method"></a><span id="vspixengine.ipixengine5callbacks_readtexelvaluecomplete_uint_bstr_arr_double_arr"></span>IPixEngine5Callbacks:: Read texelvaluecomplete-Methode
+# <a name="span-idvspixengineipixengine5callbacks_readtexelvaluecomplete_uint_bstr_arr_double_arrspanipixengine5callbacksreadtexelvaluecomplete-method"></a><span id="vspixengine.ipixengine5callbacks_readtexelvaluecomplete_uint_bstr_arr_double_arr"></span>IPixEngine5Callbacks::ReadTexelValueComplete-Methode
 
-Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Texttyp gelesen wurde.
+Eine Rückruffunktion, die verwendet wird, um den Host zu benachrichtigen, wenn ein Gelesener texel-Wert abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,22 +41,22 @@ HRESULT ReadTexelValueComplete(
 
 ## <a name="parameters"></a>Parameter
 
-*numchannels*   
-Die Anzahl der Kanäle, die das Texel hat.
+*numChannels*   
+Die Anzahl der Kanäle, über die das Texel verfügt.
 
-*count0 \_ channelnames*   
-COM-Zeichen folgen, die die Namen der Channels enthalten.
+*count0 \_ channelNames*   
+COM-Zeichenfolgen, die die Namen der Kanäle enthalten.
 
-*count0 \_ channelvalues*   
-Die Werte der Channels.
+*count0 \_ channelValues*   
+Die Werte der Kanäle.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

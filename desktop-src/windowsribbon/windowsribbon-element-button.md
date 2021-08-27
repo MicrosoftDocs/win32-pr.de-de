@@ -1,5 +1,5 @@
 ---
-title: Schaltflächenelement (Windows Menübandframework)
+title: Button-Element (Windows Menübandframework)
 description: Stellt ein Schaltflächen-Steuerelement dar.
 ms.assetid: a17d4dd8-9b0d-4b4a-93f4-f2a8c008fc58
 keywords:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ccd6084fef3c06c62e5dc780f526965a24966e9d36b5c249f57984921d9276c4
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 066327000d490ac1615fe1e1447e1579939670d5
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118964299"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122630683"
 ---
 # <a name="button-element"></a>Button-Element
 
 Stellt ein [Schaltflächen-Steuerelement](windowsribbon-controls-button.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <Button
@@ -39,15 +39,15 @@ Stellt ein [Schaltflächen-Steuerelement](windowsribbon-controls-button.md) dar.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -57,22 +57,22 @@ Stellt ein [Schaltflächen-Steuerelement](windowsribbon-controls-button.md) dar.
 <td><strong>ApplicationDefaults.IsChecked</strong><br/></td>
 <td>Boolesch<br/></td>
 <td>Nein<br/></td>
-<td>Dieses Attribut ist nur gültig, wenn <strong>das Button-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults ist.</strong></a> <br/> Auf einen der folgenden Werte beschränkt:<br/> <br/>
+<td>Dieses Attribut ist nur gültig, wenn das <strong>Button-Element</strong> ein untergeordnetes Element von <a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults</strong></a>ist. <br/> Beschränkt auf einen der folgenden Werte:<br/> <br/>
 <dt><span></span><span></span><strong></strong> (true)<br/> </dt> <dd> Standard. <br/> </dd> <dt><span></span><span></span><strong></strong> (false)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>ApplicationModes</strong><br/></td>
 <td>xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Nur gültig, <a href="windowsribbon-element-menugroup.md"><strong>wenn MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Komma getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerzeichen sind gültig und werden ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
+<td>Nur gültig, wenn <a href="windowsribbon-element-menugroup.md"><strong>MenuGroup</strong></a> das übergeordnete Element ist.<br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die eine durch Trennzeichen getrennte Liste von ganzen Zahlen zwischen 0 und 31 enthält.<br/> Leerraum ist gültig und wird ignoriert.<br/> Maximale Länge: 250 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 </tbody>
 </table>
@@ -105,17 +105,17 @@ Es gibt keine untergeordneten Elemente.
 
 Optional.
 
-Kann für jedes [**SplitButton.ButtonItem-Element nur einmal auftreten.**](windowsribbon-element-splitbutton-buttonitem.md)
+Kann höchstens einmal für jedes [**SplitButton.ButtonItem-Element**](windowsribbon-element-splitbutton-buttonitem.md) auftreten.
 
-Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-,**](windowsribbon-element-menugroup.md) [**QuickAccessToolbar.ApplicationDefaults-,**](windowsribbon-element-quickaccesstoolbar-applicationdefaults.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
 
-**Die** Schaltfläche [unterstützt Anwendungsmodi,](ribbon-applicationmodes.md) wenn sie in der linken Spalte des Anwendungsmenüs gehostet wird.
+**Schaltfläche** unterstützt [Anwendungsmodi,](ribbon-applicationmodes.md) wenn sie in der linken Spalte des Anwendungsmenüs gehostet wird.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für die **Schaltfläche veranschaulicht.**
+Im folgenden Beispiel wird das grundlegende Markup für die **Schaltfläche** veranschaulicht.
 
-Dieser Codeabschnitt zeigt die **Button** Command-Deklarationen mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **Button-Element** fungiert.
+Dieser Codeabschnitt zeigt die **Button Command-Deklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **Button-Element** fungiert.
 
 
 ```XML
@@ -188,7 +188,7 @@ Dieser Codeabschnitt zeigt die **Button** Command-Deklarationen mit einer zugeor
 
 
 
-In diesem Codeabschnitt werden die **Button-Steuerelementdeklarationen** angezeigt.
+Dieser Codeabschnitt zeigt die **Button-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -209,7 +209,7 @@ In diesem Codeabschnitt werden die **Button-Steuerelementdeklarationen** angezei
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -22,12 +22,12 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c367e9c00caff78bb3e64263c1622de45fa6e640e78d88239e1ed25a6f68558
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: ec8224106fad6031a18bf061020a259813db639e
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119989860"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122983923"
 ---
 # <a name="itssbtargettargetload-property"></a>ITsSbTarget::TargetLoad-Eigenschaft
 
@@ -50,9 +50,9 @@ HRESULT get_TargetLoad(
 
 Eine Zahl, die die relative Last auf einem Ziel darstellt.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
-Die Gewichtung einer ausstehenden Sitzung relativ zu einer aktiven Sitzung kann durch Festlegen des Werts des *Parameters LB \_ ConnectionEstablishmentPenalty* für den Verbindungsbroker geändert werden. Dieser Parameter befindet sich unter dem **Registrierungsschlüssel HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ Parameters.** Der Standardwert 1 gibt an, dass ausstehende Sitzungen die gleiche Gewichtung wie aktive Sitzungen haben.
+Die Gewichtung einer ausstehenden Sitzung relativ zu einer aktiven Sitzung kann durch Festlegen des Werts des *Parameters LB \_ ConnectionEstablishmentPenalty* für den Verbindungsbroker geändert werden. Dieser Parameter befindet sich unter dem **Registrierungsschlüssel HKLM \\ System \\ CurrentControlSet \\ Services \\ Tssdis \\ Parameters.** Der Standardwert 1 gibt an, dass ausstehende Sitzungen dieselbe Gewichtung wie aktive Sitzungen haben.
 
 Diese Eigenschaft ist auf Windows Server 2012 R2 verfügbar, wobei [KB3091411](https://support.microsoft.com/kb/3091411) in der [**ITsSbTargetEx-Schnittstelle**](itssbtargetex.md) installiert ist.
 
@@ -60,38 +60,18 @@ Diese Eigenschaft ist auf Windows Server 2012 R2 verfügbar, wobei [KB3091411](h
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Unterstützte Mindestversion (Client)<br/></td>
-<td>Nicht unterstützt<br/></td>
-</tr>
-<tr class="even">
-<td>Unterstützte Mindestversion (Server)<br/></td>
-<td>Windows Server 2016<br/></td>
-</tr>
-<tr class="odd">
-<td>Idl<br/></td>
-<td><dl> <dt>Sbtsv.idl</dt> </dl></td>
-</tr>
-<tr class="even">
-<td>IID<br/></td>
-<td>IID_ITsSbTarget wird wie folgt definiert:
-<ul>
-<li>16616ECC-272D-411D-B324-126893033856</li>
-<li>e85e10ea-db0b-4752-b456-5fd5840901c0 auf Windows Server 2008 R2</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|--------|-------|
+| Unterstützte Mindestversion (Client)<br /> | Nicht unterstützt<br /> | 
+| Unterstützte Mindestversion (Server)<br /> | Windows Server 2016<br /> | 
+| IDL<br /> | <dl><dt>Sbtsv.idl</dt></dl> | 
+| IID<br /> | IID_ITsSbTarget ist wie folgt definiert:<ul><li>16616ECC-272D-411D-B324-126893033856</li><li>e85e10ea-db0b-4752-b456-5fd5840901c0 auf Windows Server 2008 R2</li></ul> | 
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

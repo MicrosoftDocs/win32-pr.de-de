@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Funktion "jeto ssnapshotend".
-title: Jeto ssnapshotend-Funktion
+description: Weitere Informationen finden Sie unter JetOSSnapshotEnd-Funktion.
+title: JetOSSnapshotEnd-Funktion
 TOCTitle: JetOSSnapshotEnd Function
 ms:assetid: f7f4db8b-8e40-48d7-bc7b-0c80d0d0f77f
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294136(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: de1237de9af0b1b75f645346fc30a128a1b8e907
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b57528899b8d78ecee31f6dd54c2ac8decece383
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128169"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984433"
 ---
-# <a name="jetossnapshotend-function"></a>Jeto ssnapshotend-Funktion
+# <a name="jetossnapshotend-function"></a>JetOSSnapshotEnd-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetossnapshotend-function"></a>Jeto ssnapshotend-Funktion
+## <a name="jetossnapshotend-function"></a>JetOSSnapshotEnd-Funktion
 
-Die **jedessnapshotend** -Funktion benachrichtigt die Engine, dass die Momentaufnahme Sitzung abgeschlossen wurde.
+Die **JetOSSnapshotEnd-Funktion** benachrichtigt die Engine, dass die Momentaufnahmesitzung beendet wurde.
 
-**Windows Vista:**  **jedessnapshotend** wird in Windows Vista eingeführt:.
+**Windows Vista:****JetOSSnapshotEnd** wird in Windows Vista: eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotEnd(
@@ -45,123 +45,63 @@ Die **jedessnapshotend** -Funktion benachrichtigt die Engine, dass die Momentauf
 
 ### <a name="parameters"></a>Parameter
 
-*snapid*
+*snapId*
 
-Der Bezeichner der Momentaufnahme Sitzung.
+Der Bezeichner der Momentaufnahmesitzung.
 
 *grbit*
 
-Die Optionen für diesen-Befehl. Dieser Parameter kann eine Kombination der folgenden Werte aufweisen.
+Die Optionen für diesen Aufruf. Dieser Parameter kann eine Kombination der folgenden Werte enthalten.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>0</p></td>
-<td><p>Das erfolgreiche Ende der Momentaufnahme Sitzung.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitAbortSnapshot</p></td>
-<td><p>Die Momentaufnahme Sitzung wurde abgebrochen.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>0</p> | <p>Das erfolgreiche Ende der Momentaufnahmesitzung.</p> | 
+| <p>JET_bitAbortSnapshot</p> | <p>Die Momentaufnahmesitzung wurde abgebrochen.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidGrbit</p></td>
-<td><p>Eine der angeforderten Optionen ist ungültig, wird falsch oder nicht implementiert.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotInvalidSequence</p></td>
-<td><p>Eine Momentaufnahme Sitzung wird bereits ausgeführt. Dies ist nicht zulässig.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errOSSnapshotInvalidSnapId</p></td>
-<td><p>Der Bezeichner für die Momentaufnahme Sitzung ist ungültig.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotTimeOut</p></td>
-<td><p>In der Momentaufnahme Sitzung war vor dem Auftreten dieses Aufrufes ein internes Timeout aufgetreten. Folglich werden die e/a-Vorgänge vor dem Auftreten dieses Aufrufes normal zurückgegeben.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Wenn diese Funktion erfolgreich ausgeführt wird, wird eine Momentaufnahme Sitzung abgeschlossen, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahme Sitzung kann später gestartet werden.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidGrbit</p> | <p>Eine der angeforderten Optionen ist ungültig, wird falsch verwendet oder nicht implementiert.</p> | 
+| <p>JET_errOSSnapshotInvalidSequence</p> | <p>Eine Momentaufnahmesitzung wird bereits erstellt. Dies ist nicht zulässig.</p> | 
+| <p>JET_errOSSnapshotInvalidSnapId</p> | <p>Der Bezeichner für die Momentaufnahmesitzung ist ungültig.</p> | 
+| <p>JET_errOSSnapshotTimeOut</p> | <p>Für die Momentaufnahmesitzung ist ein internes Timeout aufgetreten, bevor dieser Aufruf aufgetreten ist. Daher wurden die E/A-Vorgänge wieder normal, bevor dieser Aufruf erfolgt ist.</p> | 
 
-Wenn diese Funktion fehlschlägt, gibt der JET_errOSSnapshotTimeOut Rückgabecode zurück, und die aktuelle Momentaufnahme Sitzung wird beendet, aber das Einfrieren von IOS während des Momentaufnahme Zeitraums wurde intern nicht berücksichtigt. Bei allen anderen Fehlern wird der Sitzungs Status der Momentaufnahme nicht geändert.
+
+
+Wenn diese Funktion erfolgreich ist, wird eine Momentaufnahmesitzung abgeschlossen, und das normale Engine-Verhalten wird fortgesetzt. Eine neue Momentaufnahmesitzung kann später gestartet werden.
+
+Wenn diese Funktion fehlschlägt, wird der JET_errOSSnapshotTimeOut zurückgegeben, und die aktuelle Momentaufnahmesitzung wird beendet, aber das Einfrieren von E/A-Daten während des Momentaufnahmezeitraums wurde intern nicht beachtet. Bei allen anderen Fehlern wird der Momentaufnahmesitzungsstatus nicht geändert.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion wird nur aufgerufen, wenn [jeto ssnapshotthaw](./jetossnapshotthaw-function.md) mit JET_bitContinueAfterThaw aufgerufen wurde.
+Diese Funktion wird nur aufgerufen, wenn [JetOSSnapshotThaw](./jetossnapshotthaw-function.md) mit einem JET_bitContinueAfterThaw.
 
-Die Momentaufnahme Sitzung muss fertiggestellt werden, damit die Momentaufnahme Überprüfung und das Abschneiden des Protokolls stattfinden. Ereignisprotokoll Einträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
+Die Momentaufnahmesitzung muss abgeschlossen sein, damit die Momentaufnahmeüberprüfung und die Protokoll abgeschnitten werden. Ereignisprotokolleinträge werden für die verschiedenen Schritte der Momentaufnahme generiert.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Fehler Behandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)  
+[Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
-[Jejessnapshotthaw](./jetossnapshotthaw-function.md)
+[JetOSSnapshotThaw](./jetossnapshotthaw-function.md)
