@@ -1,7 +1,7 @@
 ---
-description: Gibt das Caching eines Handles für einen mit OpenPrinter2 geöffneten Drucker an.
+description: Gibt das Zwischenspeichern eines Handles für einen mit OpenPrinter2 geöffneten Drucker an.
 ms.assetid: e5a62322-723c-490d-8de1-f74dcac9e22d
-title: PRINTER_OPTION_FLAGS-Enumeration (winspool. h)
+title: PRINTER_OPTION_FLAGS -Enumeration (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 683ad70b5db12c11a2bccd11905e7ef87fce1bc7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8541ec00f0d53bf58a826ceb7d8b8a821008fb6a66c0fe3917ebc12822e0e5f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091800"
 ---
-# <a name="printer_option_flags-enumeration"></a>\_Druckeroptionsflags- \_ Enumeration
+# <a name="printer_option_flags-enumeration"></a>PRINTER \_ OPTION \_ FLAGS-Enumeration
 
-Gibt das Caching eines Handles für einen mit [**OpenPrinter2**](openprinter2.md)geöffneten Drucker an.
+Gibt das Zwischenspeichern eines Handles für einen mit [**OpenPrinter2 geöffneten Drucker an.**](openprinter2.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ typedef enum tagPRINTER_OPTION_FLAGS {
 
 <dl> <dt>
 
-<span id="PRINTER_OPTION_NO_CACHE"></span><span id="printer_option_no_cache"></span>**Drucker \_ Option " \_ kein \_ Cache"**
+<span id="PRINTER_OPTION_NO_CACHE"></span><span id="printer_option_no_cache"></span>**DRUCKEROPTION \_ \_ KEIN \_ CACHE**
 </dt> <dd>
 
-Das Handle wird nicht zwischengespeichert. Alle Funktionen, die auf ein von [**OpenPrinter2**](openprinter2.md) zurück gegebenes handle angewendet werden, werden auf den Remote Computer übertragen.
+Das Handle wird nicht zwischengespeichert. Alle Funktionen, die auf ein von [**OpenPrinter2**](openprinter2.md) zurückgegebenes Handle angewendet werden, werden an den Remotecomputer übertragen.
 
 </dd> <dt>
 
-<span id="PRINTER_OPTION_CACHE"></span><span id="printer_option_cache"></span>**Drucker \_ options \_ Cache**
+<span id="PRINTER_OPTION_CACHE"></span><span id="printer_option_cache"></span>**\_ \_ DRUCKEROPTIONSCACHE**
 </dt> <dd>
 
-Das Handle wird zwischengespeichert. Alle Funktionen, die auf ein von [**OpenPrinter2**](openprinter2.md) zurück gegebenes handle angewendet werden, werden in den lokalen Cache übertragen.
+Das Handle wird zwischengespeichert. Alle Funktionen, die auf ein von [**OpenPrinter2**](openprinter2.md) zurückgegebenes Handle angewendet werden, werden in den lokalen Cache übertragen.
 
 </dd> <dt>
 
-<span id="PRINTER_OPTION_CLIENT_CHANGE"></span><span id="printer_option_client_change"></span>**Drucker \_ Option \_ Client \_ Änderung**
+<span id="PRINTER_OPTION_CLIENT_CHANGE"></span><span id="printer_option_client_change"></span>**\_DRUCKEROPTION \_ \_ CLIENTÄNDERUNG**
 </dt> <dd>
 
-Das von [**OpenPrinter2**](openprinter2.md) zurückgegebene Handle kann von [**SetPrinter**](setprinter.md) zum Umbenennen der Druckerverbindung verwendet werden.
+Das von [**OpenPrinter2 zurückgegebene**](openprinter2.md) Handle kann von [**SetPrinter**](setprinter.md) verwendet werden, um die Druckerverbindung umzubenennen.
 
 </dd> </dl>
 
@@ -68,20 +68,20 @@ Das von [**OpenPrinter2**](openprinter2.md) zurückgegebene Handle kann von [**S
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                      |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
 [**OpenPrinter2**](openprinter2.md)

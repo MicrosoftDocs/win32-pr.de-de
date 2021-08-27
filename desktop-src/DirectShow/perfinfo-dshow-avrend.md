@@ -1,7 +1,7 @@
 ---
-description: Die perfinfo \_ DShow \_ avrend-Struktur enthält Daten für ein Ablauf Verfolgungs Ereignis vom Typ GUID \_ videorend. VMR protokolliert dieses Ereignis unmittelbar vor dem Rendern eines Frames.
+description: Die PERFINFO \_ \_ DSHOW-A ADRND-Struktur enthält Daten für ein Ablaufverfolgungsereignis vom Typ GUID \_ VIDEOREND. Die VMR protokolliert dieses Ereignis unmittelbar vor dem Rendern eines Frames.
 ms.assetid: 95deda21-0ef4-4bf0-9fa3-826a813757b9
-title: PERFINFO_DSHOW_AVREND-Struktur (perfstruct. h)
+title: PERFINFO_DSHOW_AVREND-Struktur (Perfstruct.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Perfstruct.h
-ms.openlocfilehash: ee2d944d086f9c1a4ea7944f023321dfbc06d547
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 49cc76f4db1a5fae76678ee2d81f3e2fff0a6c5ca3d5c5532adebaec23f48215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372452"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050710"
 ---
-# <a name="perfinfo_dshow_avrend-structure"></a>Perfinfo \_ DShow- \_ avrend-Struktur
+# <a name="perfinfo_dshow_avrend-structure"></a>PERFINFO \_ \_ DSHOW-AMILLND-Struktur
 
-Die `PERFINFO_DSHOW_AVREND` Struktur enthält Daten für ein Ablauf Verfolgungs Ereignis vom Typ GUID \_ videorend.
+Die `PERFINFO_DSHOW_AVREND` -Struktur enthält Daten für ein Ablaufverfolgungsereignis vom Typ GUID \_ VIDEOREND.
 
-VMR protokolliert dieses Ereignis unmittelbar vor dem Rendern eines Frames.
+Die VMR protokolliert dieses Ereignis unmittelbar vor dem Rendern eines Frames.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,32 +43,32 @@ typedef struct PERFINFO_DSHOW_AVREND {
 
 <dl> <dt>
 
-**CycleCounter**
+**cycleCounter**
 </dt> <dd>
 
-Letzte Anzahl von Uhrzyklen (RDTSC-Anweisung).
+Aktuelle Taktzyklusanzahl (RDTSC-Anweisung).
 
 </dd> <dt>
 
-**dshowclock**
+**dshowClock**
 </dt> <dd>
 
-Aktuelle Verweis Zeit, wie von der [**IReferenceClock:: getTime**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) -Methode zurückgegeben.
+Aktuelle Referenzzeit, wie von der [**IReferenceClock::GetTime-Methode**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclock-gettime) zurückgegeben.
 
 </dd> <dt>
 
-**sampletime**
+**sampleTime**
 </dt> <dd>
 
-Die Startzeit des Beispiels.
+Startzeit des Beispiels.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um dieses Ereignis zu aktivieren, müssen Sie beim Aufrufen von EnableTrace das Flag "dxmperf \_ videorend" im  *EnableFlag* -Parameter festlegen. Dieses Flag ist in der Header Datei dxmperf. h definiert, die in den DirectShow-Basisklassen enthalten ist.
+Um dieses Ereignis zu aktivieren, müssen Sie das DXMPERF \_ VIDEOREND-Flag im *EnableFlag-Parameter* festlegen, wenn Sie **EnableTrace** aufrufen. Dieses Flag wird in der Headerdatei Dxmperf.h definiert, die in den DirectShow-Basisklassen enthalten ist.
 
-Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie das **Perflog \_ videorend** -Makro, das in "dxmperf. h" definiert ist.
+Um dieses Ereignis aus einem DirectShow-Filter zu protokollieren, verwenden Sie das **PERFLOG \_ VIDEOREND-Makro,** das in Dxmperf.h definiert ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie 
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Perfstruct. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Perfstruct.h</dt> </dl> |
 
 
 
@@ -87,10 +87,10 @@ Um dieses Ereignis von einem DirectShow-Filter zu protokollieren, verwenden Sie 
 [DirectShow-Strukturen](directshow-structures.md)
 </dt> <dt>
 
-[Ereignis Ablauf Verfolgung in DirectShow](event-tracing-in-directshow.md)
+[Ereignisablaufverfolgung in DirectShow](event-tracing-in-directshow.md)
 </dt> <dt>
 
-[GUIDs der Ablauf Verfolgungs Ereignisse](trace-guids.md)
+[GUIDs für Ablaufverfolgungsereignisse](trace-guids.md)
 </dt> </dl>
 
  

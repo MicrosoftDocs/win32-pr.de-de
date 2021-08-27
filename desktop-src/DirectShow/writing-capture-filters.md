@@ -1,27 +1,27 @@
 ---
-description: Schreiben von Erfassungs Filtern
+description: Schreiben von Erfassungsfiltern
 ms.assetid: 7dfd1009-da09-49dc-a200-3d7a9f1c70c1
-title: Schreiben von Erfassungs Filtern
+title: Schreiben von Erfassungsfiltern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8de1a64de2b56dbc0728432307036fc46387f539
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0aa4807f381dc925a68fa3c60e45d5c8c5c444653230f366895b370e97aaccb8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049090"
 ---
-# <a name="writing-capture-filters"></a>Schreiben von Erfassungs Filtern
+# <a name="writing-capture-filters"></a>Schreiben von Erfassungsfiltern
 
-Das Schreiben eines Audiofilters oder Video Erfassungs Filters für DirectShow wird nicht empfohlen. Stattdessen bietet DirectShow automatische Unterstützung für Audiogeräte und Video Erfassungsgeräte, mithilfe von Wrapper Filtern und dem [Enumerator des System Geräts](system-device-enumerator.md). Weitere Informationen zum Implementieren eines Gerätetreibers finden Sie in der Dokumentation zum Windows-Treiberkit (WDK).
+Das Schreiben eines Audio- oder Videoaufnahmefilters für DirectShow wird nicht empfohlen. Stattdessen bietet DirectShow automatische Unterstützung für Audio- und Videoerfassungsgeräte mit Wrapperfiltern und dem [Systemgeräte-Enumerator](system-device-enumerator.md). Weitere Informationen zum Implementieren eines Gerätetreibers finden Sie in der WDK-Dokumentation (Windows Driver Kit).
 
-Dieser Abschnitt ist nur für Entwickler gedacht, die benutzerdefinierte Daten von einem ungewöhnlichen Hardware Gerät erfassen müssen.
+Dieser Abschnitt richtet sich nur an Entwickler, die eine Art benutzerdefinierter Daten von einem ungewöhnlichen Hardwaregerät erfassen müssen.
 
 Dieser Artikel enthält folgende Abschnitte:
 
--   [PIN-Anforderungen für Erfassungs Filter](pin-requirements-for-capture-filters.md)
--   [Implementieren einer Vorschau-PIN (optional)](implementing-a-preview-pin--optional.md)
--   [Erstellen von Daten in einem Erfassungs Filter](producing-data-in-a-capture-filter.md)
+-   [Anforderungen für Erfassungsfilter anheften](pin-requirements-for-capture-filters.md)
+-   [Implementieren eines Vorschaupins (optional)](implementing-a-preview-pin--optional.md)
+-   [Erstellen von Daten in einem Erfassungsfilter](producing-data-in-a-capture-filter.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
-title: PSM_IDTOINDEX Meldung (prsht. h)
-description: Übernimmt die Ressourcen-ID einer Eigenschaften Blattseite und gibt ihren Null basierten Index zurück. Sie können diese Nachricht explizit senden oder das propsheet- \_ iddeindex-Makro verwenden.
+title: PSM_IDTOINDEX (Prsht.h)
+description: Verwendet die Ressourcen-ID einer Eigenschaftenblattseite und gibt ihren nullbasierten Index zurück. Sie können diese Nachricht explizit senden oder das PropSheet \_ IdToIndex-Makro verwenden.
 ms.assetid: vs|controls|~\controls\propsheet\messages\psm_idtoindex.htm
 keywords:
-- Windows-Steuerelemente für PSM_IDTOINDEX Meldung
+- PSM_IDTOINDEX-Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f098c37ba30e33685abedf9dccd3ffc7c303acb9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83bce0bfeecd2f233b2108133b08e49c27c90625c1bd07f2d4273bd77bbd0b54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120061520"
 ---
-# <a name="psm_idtoindex-message"></a>PSM- \_ idumindex-Meldung
+# <a name="psm_idtoindex-message"></a>PSM \_ IDTOINDEX-Nachricht
 
-Übernimmt die Ressourcen-ID einer Eigenschaften Blattseite und gibt ihren Null basierten Index zurück. Sie können diese Nachricht explizit senden oder das [**propsheet- \_ iddeindex**](/windows/desktop/api/Prsht/nf-prsht-propsheet_idtoindex) -Makro verwenden.
+Verwendet die Ressourcen-ID einer Eigenschaftenblattseite und gibt ihren nullbasierten Index zurück. Sie können diese Nachricht explizit senden oder das [**PropSheet \_ IdToIndex-Makro**](/windows/desktop/api/Prsht/nf-prsht-propsheet_idtoindex) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,13 +39,13 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Die Ressourcen-ID der Seite.
+Ressourcen-ID der Seite.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung den NULL basierten Index der Eigenschaften Blattseite zurück, die von *LPARAM* angegeben wird. Andernfalls wird –1 zurückgegeben.
+Gibt bei Erfolg den nullbasierten Index der Eigenschaftenblattseite zurück, die *von lParam* angegeben wird. Andernfalls wird –1 zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt bei erfolgreicher Ausführung den NULL basierten Index der Eigenschaften Bl
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Überprüft, ob die Replikation vom aktuellen Host System für das angegebene Wiederherstellungs System aktiviert werden kann.
+description: Überprüft, ob die Replikation vom aktuellen Hostsystem zum angegebenen Wiederherstellungssystem aktiviert werden kann.
 ms.assetid: 404855d5-9a1f-4079-b46d-b378fafff5bb
-title: Testreplicationconnection-Methode der Msvm_ReplicationService-Klasse
+title: TestReplicationConnection-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 6644ead653509d879e779928030ff8912a124ad5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 729412ea2b506aedf09bcc77385c4c8b22d560d8cd8e6fc88b12c059c0bf049c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050380"
 ---
-# <a name="testreplicationconnection-method-of-the-msvm_replicationservice-class"></a>Testreplicationconnection-Methode der MSVM- \_ replicationservice-Klasse
+# <a name="testreplicationconnection-method-of-the-msvm_replicationservice-class"></a>TestReplicationConnection-Methode der Msvm \_ ReplicationService-Klasse
 
-Überprüft, ob die Replikation vom aktuellen Host System für das angegebene Wiederherstellungs System aktiviert werden kann.
+Überprüft, ob die Replikation vom aktuellen Hostsystem zum angegebenen Wiederherstellungssystem aktiviert werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,24 +44,24 @@ uint32 TestReplicationConnection(
 
 <dl> <dt>
 
-*Wiederherstellungsconnectionpoint* \[ in\]
+*RecoveryConnectionPoint* \[ In\]
 </dt> <dd>
 
-Der Name des Verbindungs Punkts. Bei einem Wiederherstellungs Cluster ist dies der Name des Broker-Cap. Bei einem eigenständigen Wiederherstellungs Server handelt es sich hierbei um den Namen des Host Systems.
+Der Name des Verbindungspunkts. Bei einem Wiederherstellungscluster ist dies der Broker-CAP-Name. Bei einem eigenständigen Wiederherstellungsserver ist dies der Hostsystemname.
 
 </dd> <dt>
 
-*Wiederherstellserverportnummer* \[ in\]
+*RecoveryServerPortNumber* \[ In\]
 </dt> <dd>
 
-Die Portnummer des Wiederherstellungs Verbindungs Punkts.
+Die Portnummer des Wiederherstellungsverbindungspunkts.
 
 </dd> <dt>
 
-*AuthenticationType* \[ in\]
+*AuthenticationType* \[ In\]
 </dt> <dd>
 
-Das Wiederherstellungs Authentifizierungsschema. Dabei muss es sich um einen der folgenden Werte handeln:
+Das Wiederherstellungsauthentifizierungsschema. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -78,33 +78,33 @@ Kerberos-Authentifizierung.
 
 <span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>
 
-<span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>**Zertifikat basierte Authentifizierung** (2)
+<span id="Certificate_based_authentication"></span><span id="certificate_based_authentication"></span><span id="CERTIFICATE_BASED_AUTHENTICATION"></span>**Zertifikatbasierte Authentifizierung** (2)
 
 
 </dt> <dd>
 
-Zertifikat basierte Authentifizierung.
+Zertifikatbasierte Authentifizierung.
 
 </dd> </dl> </dd> <dt>
 
-*Certifi-ethumschlag-Druck* \[ in\]
+*CertificateThumbPrint* \[ In\]
 </dt> <dd>
 
-Der Zertifikat Fingerabdruck, der verwendet werden soll, wenn der *AuthenticationType* -Parameter eine Zertifikat basierte Authentifizierung ist.
+Zertifikatfingerabdruck, der verwendet werden soll, wenn der *AuthenticationType-Parameter* die zertifikatbasierte Authentifizierung ist.
 
 </dd> <dt>
 
-*Bypassproxyserver* \[ in\]
+*BypassProxyServer* \[ In\]
 </dt> <dd>
 
-Umgehen Sie den Proxy Server beim Herstellen einer Verbindung mit dem Replikat Server.
+Umgehen Sie den Proxyserver, wenn Sie eine Verbindung mit dem Replikatserver herstellen.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -117,10 +117,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -129,7 +129,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -141,19 +141,19 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> <dt>
 
-Die **Datei wurde nicht gefunden** (32779).
+**Datei nicht gefunden** (32779)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -162,10 +162,10 @@ Die **Datei wurde nicht gefunden** (32779).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -174,7 +174,7 @@ Die **Datei wurde nicht gefunden** (32779).
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

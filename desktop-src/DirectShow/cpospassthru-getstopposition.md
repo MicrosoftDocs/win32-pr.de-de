@@ -1,7 +1,7 @@
 ---
-description: 'Die getstoppositionelle-Methode ruft die Zeit ab, zu der die Wiedergabe in Relation zur Dauer des Streams beendet wird. Diese Methode implementiert die imediaseeking:: getstoppositionelle-Methode.'
+description: Die GetStopPosition-Methode ruft den Zeitpunkt ab, zu dem die Wiedergabe relativ zur Dauer des Streams stoppt. Diese Methode implementiert die IMediaSeeking::GetStopPosition-Methode.
 ms.assetid: 11486371-da0a-4b83-956b-ef6b92721e74
-title: Cpospassthru. getstoppositionelle-Methode (ctlutil. h)
+title: CPosPassThru.GetStopPosition-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7ee704a47074db032badfa1f02ffbf2db8c7efa4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f9c6798d03e2935c991e12cded4d85a4972d54e7800d6aa79c70525b10276f91
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084070"
 ---
-# <a name="cpospassthrugetstopposition-method"></a>Cpospassthru. getstoppositionelle-Methode
+# <a name="cpospassthrugetstopposition-method"></a>CPosPassThru.GetStopPosition-Methode
 
-Die- `GetStopPosition` Methode ruft den Zeitpunkt ab, zu dem die Wiedergabe in Relation zur Dauer des Streams beendet wird. Diese Methode implementiert die [**imediaseeking:: getstoppositionelle**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getstopposition) -Methode.
+Die -Methode ruft den Zeitpunkt ab, zu dem die `GetStopPosition` Wiedergabe relativ zur Dauer des Streams anzuhalten ist. Diese Methode implementiert die [**IMediaSeeking::GetStopPosition-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediaseeking-getstopposition)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetStopPosition(
 
 <dl> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Endzeit in Einheiten des aktuellen Zeit Formats empfängt.
+Zeiger auf eine Variable, die die Stoppzeit in Einheiten des aktuellen Zeitformats empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
+Gibt den **HRESULT-Wert** vom verbundenen Pin zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,8 +59,8 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -68,7 +68,7 @@ Gibt den **HRESULT** -Wert aus der verbundenen PIN zurück.
 
 <dl> <dt>
 
-[**Cpospassthru-Klasse**](cpospassthru.md)
+[**CPosPassThru-Klasse**](cpospassthru.md)
 </dt> </dl>
 
  

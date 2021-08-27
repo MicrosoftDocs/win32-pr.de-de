@@ -1,7 +1,7 @@
 ---
-description: Die get \_ Filter-Methode ruft einen Zeiger auf den Quell Filter ab, der derzeit vom Medien Erkennungs Modul verwendet wird.
+description: Die get \_ Filter-Methode ruft einen Zeiger auf den Quellfilter ab, der derzeit von der Medienerkennung verwendet wird.
 ms.assetid: 23d603c1-445d-425a-973e-7bfe0a2d19f2
-title: 'Imediadet:: get_Filter-Methode (qedit. h)'
+title: IMediaDet::get_Filter-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 5f80b5d5021ca7f04cd56dc319fb5416c3361108
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c3d4622438dbb8c8dfc54183550c274fcd4555de8b75435b85bbbebfae9c2c1a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083760"
 ---
-# <a name="imediadetget_filter-method"></a>Imediadet:: get- \_ Filter Methode
+# <a name="imediadetget_filter-method"></a>IMediaDet::get-Filtermethode \_
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `get_Filter` Methode ruft einen Zeiger auf den Quell Filter ab, der derzeit vom Medien Erkennungs Modul verwendet wird.
+Die `get_Filter` -Methode ruft einen Zeiger auf den Quellfilter ab, der derzeit vom Medienerkennungsgerät verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,39 +45,39 @@ HRESULT get_Filter(
 
 <dl> <dt>
 
-*ppval* \[ Out, retval\]
+*ppVal* \[ out, retval\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die **IUnknown** -Schnittstelle des Filters. Wenn kein Quell Filter verwendet wird, wird der Wert auf **null** festgelegt.
+Empfängt einen Zeiger auf die **IUnknown-Schnittstelle** des Filters. Wenn kein Quellfilter verwendet wird, wird der Wert auf **NULL** festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert der-Methode zurückgegeben wird, verfügt die **IUnknown** -Schnittstelle über einen ausstehenden Verweis Zähler, wenn *\* ppval* nicht **null** ist. Geben Sie die Schnittstelle frei, wenn Sie Sie nicht mehr benötigen.
+Wenn *\* ppVal* nicht **NULL** ist, verfügt die **IUnknown-Schnittstelle** über einen ausstehenden Verweiszähler, wenn die Methode zurückgegeben wird. Geben Sie die Schnittstelle frei, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Wenn der Wert der-Methode zurückgegeben wird, verfügt die **IUnknown** -Schnit
 
 <dl> <dt>
 
-[**Imediadet-Schnittstelle**](imediadet.md)
+[**IMediaDet-Schnittstelle**](imediadet.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

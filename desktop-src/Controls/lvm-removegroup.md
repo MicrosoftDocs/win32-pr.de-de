@@ -1,9 +1,9 @@
 ---
-title: LVM_REMOVEGROUP Meldung (kommstrg. h)
-description: Entfernt eine Gruppe aus einem Listenansicht-Steuerelement.
+title: LVM_REMOVEGROUP Nachricht (Commctrl.h)
+description: Entfernt eine Gruppe aus einem Listenansichtssteuerelement.
 ms.assetid: c6f4f54c-4cf8-47d0-8e96-fa8a1df0501b
 keywords:
-- Windows-Steuerelemente für LVM_REMOVEGROUP Meldung
+- LVM_REMOVEGROUP Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,39 +14,39 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa631593e791f90c76a9f74aa1d967d9678540f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c644a0367747ad63eb15a2b83a8df3078c1c89ca1c51875b178aa22d054de2b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120062320"
 ---
-# <a name="lvm_removegroup-message"></a>LVM- \_ removegroup-Nachricht
+# <a name="lvm_removegroup-message"></a>LVM \_ REMOVEGROUP-Meldung
 
-Entfernt eine Gruppe aus einem Listenansicht-Steuerelement.
+Entfernt eine Gruppe aus einem Listenansichtssteuerelement.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
 *wParam* 
-</dt> <dd>ID, die die Gruppe angibt, die entfernt werden soll.</dd> <dt>
+</dt> <dd>ID, die die zu entfernende Gruppe angibt.</dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Muss **null** sein.
+Muss **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index der Gruppe zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index der Gruppe zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung verwenden zu können, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -56,9 +56,9 @@ Gibt den Index der Gruppe zurück, wenn erfolgreich, andernfalls-1.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

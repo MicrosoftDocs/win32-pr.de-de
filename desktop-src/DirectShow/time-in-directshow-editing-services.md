@@ -1,75 +1,75 @@
 ---
-description: Zeit in DirectShow-Bearbeitungs Diensten
+description: Zeit in DirectShow-Bearbeitungsdiensten
 ms.assetid: 4e8cc766-97f3-45d5-9c4a-5cd6e9ad9c09
-title: Zeit in DirectShow-Bearbeitungs Diensten
+title: Zeit in DirectShow-Bearbeitungsdiensten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 421831742a2805f58d61c2258dad89d339131f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: afc99ff2391ea7975daed7b4152e869741f9990561417131942c4d86e904fca8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352796"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083620"
 ---
-# <a name="time-in-directshow-editing-services"></a>Zeit in DirectShow-Bearbeitungs Diensten
+# <a name="time-in-directshow-editing-services"></a>Zeit in DirectShow-Bearbeitungsdiensten
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-Zum Bearbeiten von Videos müssen Sie mit einigen wichtigen Zeit Steuerungskonzepten arbeiten. Beispiel:
+Zum Bearbeiten von Videos müssen Sie mit einigen wichtigen Zeitsteuerungskonzepten arbeiten. Beispiel:
 
 -   Jeder Clip hat eine Dauer.
--   Clips, Übergänge und Effekte werden zu bestimmten Zeitpunkten in einem Projekt angezeigt.
--   Video hat eine Frame Rate, ausgedrückt in Frames pro Sekunde (fps).
+-   Clips, Übergänge und Effekte werden zu bestimmten Zeiten in einem Projekt angezeigt.
+-   Video hat eine Bildfrequenz, ausgedrückt in Frames pro Sekunde (FPS).
 
-[DirectShow-Bearbeitungs Dienste](directshow-editing-services.md) (des) stellen verschiedene Methoden bereit, mit denen Zeiten und Frameraten festgelegt oder abgerufen werden. Die Bedeutung dieser Werte hängt vom Kontext ab.
+[DirectShow Editing Services](directshow-editing-services.md) (DES) stellt verschiedene Methoden zum Festlegen oder Abrufen von Zeiten und Frameraten zur Verfügung. Die Bedeutung dieser Werte hängt vom Kontext ab.
 
-**Uhrzeitwerte**
+**Zeitwerte**
 
-Wenn ein Parameter einen Zeitpunkt ausdrückt, sind drei unterschiedliche Bedeutungen möglich:
+Wenn ein Parameter eine Uhrzeit ausdrückt, sind drei unterschiedliche Bedeutungen möglich:
 
--   Zeitachsen *Zeit*: die Zeit relativ zum Anfang der Zeitachse. Beispielsweise kann ein Clip 2 Sekunden in der Zeitachse beginnen, oder es kann 15 Sekunden in der Zeitachse passieren. Die Zeitachse bestimmt das endgültige gerenderte Projekt, sodass Sie sich die Zeitachsen Zeit auch als "Projektzeit" vorstellen können.
--   *Medien Zeit*: ein Punkt in einer Quelldatei relativ zum Anfang der Datei, wie bei normaler Wiedergabe erreicht. Wenn Sie z. b. über eine Videodatei mit 10 Sekunden verfügen, wird der Punkt, der sich in der Datei befindet, 5 Sekunden lang angezeigt.
--   Über *geordnete Zeit*: Zeit relativ zu einem Objekt in der Zeitachse. Wenn ein Objekt z. b. bei 8 Sekunden auf der Zeitachse beginnt und ein anderes Objekt enthält, das bei 10 Sekunden auf der Zeitachse beginnt, beginnt das untergeordnete Objekt in Relation zum übergeordneten Element um 2 Sekunden. Virtuelle Spuren beginnen bei Zeit NULL, relativ zur Zeitachse. Daher ist die übergeordnete Zeit für jedes Objekt in einer virtuellen Spur gleich der Zeitachsen Zeit.
+-   *Zeitachse:* Die Zeit relativ zum Anfang der Zeitachse. Beispielsweise kann ein Clip 2 Sekunden in der Zeitachse beginnen, oder ein Übergang kann 15 Sekunden in die Zeitachse erfolgen. Die Zeitachse bestimmt das endgültige gerenderte Projekt, sodass Sie die Zeitachse auch als "Projektzeit" einplanen können.
+-   *Medienzeit:* Ein Punkt in einer Quelldatei relativ zum Anfang der Datei, der während der normalen Wiedergabe erreicht wird. Wenn Sie beispielsweise über eine 10-Sekunden-Videodatei verfügen, erfolgt der Punkt in der Mitte der Datei bei 5 Sekunden, ausgedrückt als Medienzeit.
+-   *Übergeordnete Zeit:* Zeit relativ zu einem Objekt auf der Zeitachse. Wenn ein Objekt beispielsweise bei 8 Sekunden auf der Zeitachse beginnt und ein weiteres Objekt enthält, das bei 10 Sekunden auf der Zeitachse beginnt, beginnt das untergeordnete Objekt bei 2 Sekunden relativ zum übergeordneten Objekt. Die virtuellen Spuren beginnen alle zum Zeitpunkt 0 (null) relativ zur Zeitachse. Daher entspricht die übergeordnete Zeit für jedes Objekt in einer virtuellen Spur der Zeitachse.
 
-Die Medien Zeit gilt nur für Quell Objekte. Jedes Quell Objekt verfügt über eine Start Zeit für Medien und eine Medien Endzeit. Angenommen, Sie haben einen Video Clip mit 10 Sekunden, und Sie möchten nur 5 Sekunden von der Mitte des Clips verwenden, wobei die ersten 2 Sekunden und die letzten 3 Sekunden des Clips gekürzt werden. Wenn Sie möchten, dass der Clip 20 Sekunden im Projekt angezeigt wird (und eine normale Wiedergabe Rate annehmen), geben Sie die folgenden Start-und Endzeit Zeiten an.
+Die Medienzeit gilt nur für Quellobjekte. Jedes Quellobjekt verfügt über eine Medienstartzeit und eine Medienstoppzeit. Angenommen, Sie verfügen über einen 10-Sekunden-Videoclip und möchten nur 5 Sekunden ab der Mitte des Clips verwenden, um die ersten 2 Sekunden und die letzten 3 Sekunden vom Clip zu kürzen. Wenn der Clip 20 Sekunden im Projekt angezeigt werden soll (und eine normale Wiedergaberate angenommen wird), geben Sie die folgenden Start- und Stoppzeiten an.
 
--   Medien Start: 2 Sekunden
--   Medien Ende: 7 Sekunden
--   Zeitachse: 20 Sekunden
--   Zeitachsen Ende: 25 Sekunden
+-   Medienstart: 2 Sekunden
+-   Medienstopp: 7 Sekunden
+-   Zeitachsenstart: 20 Sekunden
+-   Zeitachsenstopp: 25 Sekunden
 
-    ![Einfügen eines Quell Clips in eine Zeitachse](images/des-time1.png)
+    ![Einfügen eines Quellclips auf einer Zeitachse](images/des-time1.png)
 
-**Frame Raten**
+**Frameraten**
 
-Die Framerate ist die "Geschwindigkeit" eines Mediendaten Stroms, gemessen in Frames pro Sekunde. Wie bei Zeitwerten hängt die Bedeutung einer Framerate vom Kontext ab:
+Die Bildfrequenz ist die "Geschwindigkeit" eines Medienstreams, gemessen in Frames pro Sekunde. Wie bei Zeitwerten hängt die Bedeutung einer Framerate vom Kontext ab:
 
--   **Ausgabe Rahmenrate:** Die Framerate des endgültigen gerenderten Projekts, das von der Gruppe definiert wird. Wenn Sie das Projekt gerendern, wird jede Gruppe zu einem separaten Mediendaten Strom mit eigener Framerate.
--   **Quellbildrate:** Die Framerate, in der die Quelldatei ursprünglich erstellt wurde. Die erstellte Frame Rate muss nicht mit der Ausgabe Frame Rate der Gruppe identisch sein. Des führt das automatische Upsampling oder Downsampling der Datei nach Bedarf aus. Bei den meisten Medienformaten kann der die Framerate ermitteln, indem er das Format untersucht. Eine DIB-Sequenz ist eine Ausnahme. Sie müssen die Framerate einer DIB-Sequenz angeben. (Weitere Informationen finden Sie unter [Arbeiten mit Quellen](working-with-sources.md).)
+-   **Ausgabebildrate:** Die Framerate des endgültigen gerenderten Projekts, definiert durch die Gruppe. Wenn Sie das Projekt rendern, wird jede Gruppe zu einem separaten Medienstream mit eigener Bildfrequenz.
+-   **Quellframerate:** Die Framerate, in der die Quelldatei ursprünglich verfasst wurde. Die Erstellungsbildrate muss nicht mit der Ausgabebildrate der Gruppe übereinstimmen. DES führt bei Bedarf automatisch eine Upsample- oder Downsampple-Anweisung für die Datei durch. Bei den meisten Medienformaten kann DES die Bildfrequenz ermitteln, indem das Format untersucht wird. Eine DIB-Sequenz ist eine Ausnahme. Sie müssen die Framerate einer DIB-Sequenz angeben. (Weitere Informationen finden Sie unter [Arbeiten mit Quellen](working-with-sources.md).)
 
-**Wiedergabe Rate:** Die sichtbare Geschwindigkeit eines Quell Clips, wenn er im Projekt angezeigt wird. Beispielsweise können 10 Sekunden "Video" auf der Zeitachse in 5 Sekunden passen. Folglich steigt die Geschwindigkeit des Clips um den Faktor 2, wie im folgenden Diagramm veranschaulicht.
+**Wiedergaberate:** Die offensichtliche Geschwindigkeit eines Quellclips, wenn er im Projekt angezeigt wird. Beispielsweise kann ein Video von 10 Sekunden auf der Zeitachse in 5 Sekunden passen. Daher erhöht sich die Geschwindigkeit des Clips um den Faktor 2, wie im folgenden Diagramm veranschaulicht.
 
-![schnellere Wiedergabe einer Quelle](images/des-time2.png)
+![Schnelleres Wiedereinspielen einer Quelle](images/des-time2.png)
 
-(Bei einer Audioquelle würde die Tonhöhe ebenfalls verschoben werden.) Die folgende Formel bestimmt die Wiedergabe Rate eines Quell Clips:
+(Bei einer Audioquelle würde sich auch die Tonhöhe verschieben.) Die folgende Formel bestimmt die Wiedergaberate eines Quellclips:
 
--   Wiedergabe Rate = (Medien Start – Medien Start)/(Zeitachsen Ende – Zeitachse starten)
+-   Wiedergaberate = (Medienstopp – Medienstart) / (Zeitachsenstopp – Zeitachsenstart)
 
-Beachten Sie, dass jede dieser drei Raten unabhängig von den anderen Sätzen ist:
+Beachten Sie, dass jeder dieser drei Tarife unabhängig von den anderen tarifen ist:
 
--   Sie können einen Clip beschleunigen oder verlangsamen, indem Sie die Medien Zeiten anpassen. Dies wirkt sich nicht auf die Framerate der endgültigen Ausgabe aus.
--   Sie können die Ausgabe Frame Rate erhöhen oder verringern, ohne zu beeinflussen, wie schnell eine Datei wiedergegeben wird.
--   Sie können innerhalb derselben Gruppe die Quelldateien kombinieren, die unterschiedliche erstellte Frameraten aufweisen, und des führt einen Upsample-oder Downsample-Vorgang für jeden Clip aus, der mit der Framerate der Gruppe übereinstimmt.
+-   Sie können einen Clip beschleunigen oder verlangsamen, indem Sie die Medienzeiten anpassen. Dies wirkt sich nicht auf die Framerate der endgültigen Ausgabe aus.
+-   Sie können die Ausgabebildrate erhöhen oder verringern, ohne die Geschwindigkeit einer Datei zu beeinträchtigen.
+-   Innerhalb derselben Gruppe können Sie Quelldateien mit unterschiedlichen Bildfrequenzen kombinieren, und DES wird jeden Clip upsample oder downsample, um die Framerate der Gruppe zu verwenden.
 
-Wenn Sie ein Projekt erstellen, werden alle Uhrzeiten auf die nächste Frame Grenze gerundet, wie durch die Gruppen Rahmenrate festgelegt. Nehmen wir beispielsweise an, dass eine Videogruppe eine Frame Rate von 30 fps hat. Jeder Frame beträgt ungefähr 33 Millisekunden (MS). Angenommen, Sie fügen der Zeitachse einen 1,68-Sekunden-Quellclip hinzu, beginnend bei Zeit NULL. Die Quelle endet nicht genau an einer Frame Grenze, sodass die Endzeit auf 1,6666 Sekunden (50 Frames) gerundet. Wenn Sie bis zu 1,68 Sekunden im gerenderten Projekt suchen, suchen Sie tatsächlich nach dem Ende der Quelle bis zum 51-Frame.
+Wenn Sie ein Projekt rendern, werden alle Zeiten auf die nächste Rahmengrenze gerundet, wie durch die Gruppenbildrate festgelegt. Angenommen, eine Videogruppe hat eine Bildfrequenz von 30 Fps. Jeder Frame beträgt ungefähr 33 Millisekunden (ms). Angenommen, Sie fügen der Zeitachse einen 1,68-Sekunden-Quellclip hinzu, beginnend mit dem Zeitpunkt 0 (null). Da die Quelle nicht genau an einer Rahmengrenze endet, rundet DES die Stoppzeit auf 1,6666 Sekunden (50 Frames) ab. Wenn Sie im gerenderten Projekt nach 1,68 Sekunden suchen, suchen Sie tatsächlich nach dem Ende der Quelle bis zum 51. Frame.
 
-Allerdings wird die Endzeit der Quelle von des nicht überschrieben. Sie können später die Gruppen Rahmenrate ändern oder die Quelle an eine neue Stelle in der Zeitachse verschieben, auf der Sie anders gerundet wird. Daher behält der die ursprüngliche Endzeit bei und rundet nur bei Bedarf auf. Weitere Informationen finden Sie unter [**iamtimelineobj:: fixtimes**](iamtimelineobj-fixtimes.md).
+Des überschreibt jedoch nicht die Stopzeit der Quelle. Sie können später die Bildfrequenz der Gruppe ändern oder die Quelle an eine neue Stelle in der Zeitachse verschieben, wo sie anders gerundet wird. Daher behält DES die ursprüngliche Stoppzeit bei und rundet nur bei Bedarf. Weitere Informationen finden Sie unter [**IAMTimelineObj::FixTimes**](iamtimelineobj-fixtimes.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Einführung in DirectShow-Bearbeitungs Dienste](getting-started-with-directshow-editing-services.md)
+[Erste Schritte mit DirectShow-Bearbeitungsdiensten](getting-started-with-directshow-editing-services.md)
 </dt> </dl>
 
  

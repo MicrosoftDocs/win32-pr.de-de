@@ -1,23 +1,23 @@
 ---
-title: Einzelne Frames aus einem Bild mit mehreren Frames kopieren
+title: Kopieren einzelner Frames aus einem Bild mit mehreren Frames
 description: Im folgenden Beispiel werden die einzelnen Frames aus einer TIFF-Datei mit mehreren Frames abgerufen.
 ms.assetid: dfed0b61-2230-4911-a642-0a6e4beb08d6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d6bdb5668bcebb9babcbcb7d07839694750aec4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8398df806ad56b65114b0cc9a986ea53061183fa4658872b65b7d08ef7e38a9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120115100"
 ---
-# <a name="copy-individual-frames-from-a-multiple-frame-image"></a>Einzelne Frames aus einem Bild mit mehreren Frames kopieren
+# <a name="copy-individual-frames-from-a-multiple-frame-image"></a>Kopieren einzelner Frames aus einem Bild mit mehreren Frames
 
-Im folgenden Beispiel werden die einzelnen Frames aus einer TIFF-Datei mit mehreren Frames abgerufen. Beim Erstellen der TIFF-Datei wurden die einzelnen Frames der Seiten Dimension hinzugefügt (Weitere Informationen finden Sie unter [Erstellen und Speichern eines Multiple-Frame Bilds](-gdiplus-creating-and-saving-a-multiple-frame-image-use.md)). Der Code zeigt jede der vier Seiten an und speichert jede Seite in einer separaten PNG-Datenträger Datei.
+Im folgenden Beispiel werden die einzelnen Frames aus einer TIFF-Datei mit mehreren Frames abgerufen. Beim Erstellen der TIFF-Datei wurden die einzelnen Frames der Page-Dimension hinzugefügt (siehe [Erstellen und Speichern eines Multiple-Frame Bilds).](-gdiplus-creating-and-saving-a-multiple-frame-image-use.md) Der Code zeigt jede der vier Seiten an und speichert jede Seite in einer separaten PNG-Datenträgerdatei.
 
-Der Code erstellt ein [**Image**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) -Objekt aus der TIFF-Datei mit mehreren Frames. Um die einzelnen Frames (Seiten) abzurufen, ruft der Code die [**Image:: SelectActiveFrame**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-selectactiveframe) -Methode dieses **Bild** Objekts auf. Das erste Argument, das an die **Image:: SelectActiveFrame** -Methode übermittelt wird, ist die Adresse einer GUID, die die Dimension angibt, in der die Frames zuvor der TIFF-Datei mit mehreren Frames hinzugefügt wurden. Die GUID ' framedimensionpage ' ist in ' gdiplusimaging. h ' definiert. Andere GUIDs, die in der Header Datei definiert sind, sind framedimensiontime und framedimensionresolution. Das zweite Argument, das an die Methode **Image:: SelectActiveFrame** übermittelt wird, ist der null basierte Index der gewünschten Seite.
+Der Code erstellt ein [**Image-Objekt**](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-image) aus der TIFF-Datei mit mehreren Frames. Um die einzelnen Frames (Seiten) abzurufen, ruft der Code die [**Image::SelectActiveFrame-Methode**](/windows/desktop/api/Gdiplusheaders/nf-gdiplusheaders-image-selectactiveframe) dieses **Bildobjekts** auf. Das erste Argument, das an die **Image::SelectActiveFrame-Methode** übergeben wird, ist die Adresse einer GUID, die die Dimension angibt, in der die Frames zuvor der TIFF-Datei mit mehreren Frames hinzugefügt wurden. Die GUID FrameDimensionPage ist in Gdiplusimaging.h definiert. Andere GUIDs, die in dieser Headerdatei definiert sind, sind FrameDimensionTime und FrameDimensionResolution. Das zweite Argument, das an die **Image::SelectActiveFrame-Methode** übergeben wird, ist der nullbasierte Index der gewünschten Seite.
 
-Der Code basiert auf der Hilfsfunktion getencoderclsid, die unter [Abrufen des Klassen Bezeichners für einen Encoder](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)angezeigt wird.
+Der Code basiert auf der Hilfsfunktion GetEncoderClsid, die unter [Abrufen des Klassenbezeichners für einen Encoder](-gdiplus-retrieving-the-class-identifier-for-an-encoder-use.md)gezeigt wird.
 
 
 ```
@@ -51,9 +51,9 @@ multi.Save(L"Page3.png", &encoderClsid, NULL);
 
 
 
-In der folgenden Abbildung werden die einzelnen Seiten dargestellt, die im vorangehenden Code angezeigt werden.
+Die folgende Abbildung zeigt die einzelnen Seiten, wie sie im vorangehenden Code angezeigt werden.
 
-![Darstellung einer geometrischen Form, eines Farbfotos, eines monochrome Fotos und einer anderen geometrischen Form](images/multiframe1.png)
+![Abbildung einer geometrischen Form, eines Farbfotos, eines monocoloren Fotos und einer anderen geometrischen Form](images/multiframe1.png)
 
  
 

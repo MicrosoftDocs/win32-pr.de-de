@@ -1,9 +1,9 @@
 ---
-title: TCM_GETCURSEL Meldung (kommstrg. h)
-description: Bestimmt die derzeit ausgewählte Registerkarte in einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des tabstrg \_ getcurrsel-Makros senden.
+title: TCM_GETCURSEL (Commctrl.h)
+description: Bestimmt die aktuell ausgewählte Registerkarte in einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des TabCtrl \_ GetCurSel-Makros senden.
 ms.assetid: 1caa7fad-da5a-4b26-8e78-12110c126691
 keywords:
-- Windows-Steuerelemente für TCM_GETCURSEL Meldung
+- TCM_GETCURSEL von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3103931e29d150412192a745f8dde7681cff0e94
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6555194972467486789296377b5aaf87ca5520846ec9bf4c03ec345f635b6557
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338785"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104900"
 ---
-# <a name="tcm_getcursel-message"></a>TCM \_ getcurrsel-Nachricht
+# <a name="tcm_getcursel-message"></a>TCM \_ GETCURSEL-Nachricht
 
-Bestimmt die derzeit ausgewählte Registerkarte in einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**tabstrg \_ getcurrsel**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcursel) -Makros senden.
+Bestimmt die aktuell ausgewählte Registerkarte in einem Registerkarten-Steuerelement. Sie können diese Nachricht explizit oder mithilfe des [**TabCtrl \_ GetCurSel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcursel) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Bestimmt die derzeit ausgewählte Registerkarte in einem Registerkarten-Steuerel
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index der ausgewählten Registerkarte zurück, wenn erfolgreich, oder-1, wenn keine Registerkarte ausgewählt ist.
+Gibt den Index der ausgewählten Registerkarte zurück, falls erfolgreich, oder -1, wenn keine Registerkarte ausgewählt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt den Index der ausgewählten Registerkarte zurück, wenn erfolgreich, oder-1
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

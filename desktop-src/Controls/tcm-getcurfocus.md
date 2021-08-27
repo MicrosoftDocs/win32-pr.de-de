@@ -1,9 +1,9 @@
 ---
-title: TCM_GETCURFOCUS Meldung (kommstrg. h)
-description: Gibt den Index des Elements zurück, das in einem Registerkarten-Steuerelement den Fokus besitzt. Sie können diese Nachricht explizit oder mithilfe des tabstrg \_ getcurrfocus-Makros senden.
+title: TCM_GETCURFOCUS Meldung (Commctrl.h)
+description: Gibt den Index des Elements zurück, das den Fokus in einem Registerkartensteuerelement hat. Sie können diese Nachricht explizit oder mithilfe des \_ GetCurFocus-Makros TabCtrl senden.
 ms.assetid: ae6ee159-c769-41d6-b0bb-2a9ade4c0e71
 keywords:
-- Windows-Steuerelemente für TCM_GETCURFOCUS Meldung
+- TCM_GETCURFOCUS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0b0d0f3d2bbd4a7cf0ab2a63c5a988f60768eec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 694fb64b033d279292a687c39959925a68999c0b232c847bdf6ec6b476c725e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104940"
 ---
-# <a name="tcm_getcurfocus-message"></a>TCM \_ getcurrfocus-Nachricht
+# <a name="tcm_getcurfocus-message"></a>TCM \_ GETCURFOCUS-Nachricht
 
-Gibt den Index des Elements zurück, das in einem Registerkarten-Steuerelement den Fokus besitzt. Sie können diese Nachricht explizit oder mithilfe des [**tabstrg \_ getcurrfocus**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcurfocus) -Makros senden.
+Gibt den Index des Elements zurück, das den Fokus in einem Registerkartensteuerelement hat. Sie können diese Nachricht explizit oder mithilfe des [**\_ GetCurFocus-Makros TabCtrl**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_getcurfocus) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,9 +37,9 @@ Gibt den Index des Elements zurück, das in einem Registerkarten-Steuerelement d
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index des Registerkarten Elements zurück, das den Fokus besitzt.
+Gibt den Index des Registerkartenelements zurück, das den Fokus besitzt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Element, das den Fokus besitzt, kann sich von dem ausgewählten Element unterscheiden.
 
@@ -49,9 +49,9 @@ Das Element, das den Fokus besitzt, kann sich von dem ausgewählten Element unte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

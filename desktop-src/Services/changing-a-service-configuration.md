@@ -1,21 +1,21 @@
 ---
-description: Ein Dienst Konfigurationsprogramm verwendet die Funktionen ChangeServiceConfig und ChangeServiceConfig2, um die Konfigurationsparameter eines installierten Dienstanbieter zu ändern.
+description: Ein Dienstkonfigurationsprogramm verwendet die Funktionen ChangeServiceConfig und ChangeServiceConfig2, um die Konfigurationsparameter eines installierten Diensts zu ändern.
 ms.assetid: 79aa4ad5-87ee-4f5d-9c8e-4e788f4c7182
-title: Ändern einer Dienst Konfiguration
+title: Ändern einer Dienstkonfiguration
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed7afffcb896e7732536ad308ccd54f0ae1f0a05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88cb7fe3739e1ff6cc47a548f5a40111c2383c27f2da34496e3038acbe835a4a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126460"
 ---
-# <a name="changing-a-services-configuration"></a>Ändern der Konfiguration eines Dienstanbieter
+# <a name="changing-a-services-configuration"></a>Ändern der Konfiguration eines Diensts
 
-Ein [Dienst Konfigurationsprogramm](service-configuration-programs.md) verwendet die Funktionen [**ChangeServiceConfig**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) und [**ChangeServiceConfig2**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfig2a) , um die Konfigurationsparameter eines installierten Dienstanbieter zu ändern. Das Programm öffnet ein Handle für das Dienst Objekt, ändert seine Konfiguration und schließt dann das Dienst Objekt handle.
+Ein [Dienstkonfigurationsprogramm](service-configuration-programs.md) verwendet die [**Funktionen ChangeServiceConfig**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) und [**ChangeServiceConfig2,**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfig2a) um die Konfigurationsparameter eines installierten Diensts zu ändern. Das Programm öffnet ein Handle für das Dienstobjekt, ändert seine Konfiguration und schließt dann das Dienstobjekthand handle.
 
-Im folgenden Beispiel verwendet die dodisablesvc-Funktion [**ChangeServiceConfig**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) , um den Dienst Starttyp in "deaktiviert" zu ändern. die doenablesvc- [**Funktion verwendet "**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfig2a) **ChangeServiceConfig** ", um den Starttyp des dienstyps in "aktiviert" zu ändern Die szsvcname-Variable ist eine globale Variable, die den Namen des Dienstanbieter enthält. Das komplette Beispiel, in dem diese Variable festgelegt wird, finden Sie unter [svcconfig. cpp](svcconfig-cpp.md).
+Im folgenden Beispiel verwendet die DoDisableSvc-Funktion [**ChangeServiceConfig,**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfiga) um den Dienststarttyp in "Disabled" zu ändern, die DoEnableSvc-Funktion verwendet **ChangeServiceConfig,** um den Dienststarttyp in "Enabled" zu ändern, und die DoUpdateSvcDesc-Funktion verwendet [**ChangeServiceConfig2,**](/windows/desktop/api/Winsvc/nf-winsvc-changeserviceconfig2a) um die Dienstbeschreibung auf "Dies ist eine Testbeschreibung" zu setzen. Die variable szSvcName ist eine globale Variable, die den Namen des Diensts enthält. Das vollständige Beispiel, in dem diese Variable definiert wird, finden Sie unter [SvcConfig.cpp](svcconfig-cpp.md).
 
 
 ```C++
@@ -220,7 +220,7 @@ VOID __stdcall DoUpdateSvcDesc()
 [Dienstkonfiguration:](service-configuration.md)
 </dt> <dt>
 
-[Das Complete Service-Beispiel](the-complete-service-sample.md)
+[Das vollständige Dienstbeispiel](the-complete-service-sample.md)
 </dt> </dl>
 
  
