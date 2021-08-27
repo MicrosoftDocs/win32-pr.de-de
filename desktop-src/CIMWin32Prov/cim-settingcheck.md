@@ -1,5 +1,5 @@
 ---
-description: Die CIM SettingCheck-Klasse gibt Informationen an, die erforderlich sind, um eine bestimmte Einstellungsdatei auf einen bestimmten Eintrag zu überprüfen, der einen Wert enthält, der dem \_ angegebenen Wert entspricht. Bei allen Vergleichen wird davon ausgegangen, dass die Groß-/Kleinschreibung nicht beachtet wird.
+description: Die CIM \_ SettingCheck-Klasse gibt Informationen an, die erforderlich sind, um eine bestimmte Einstellungsdatei auf einen bestimmten Eintrag zu überprüfen, der einen Wert enthält, der dem angegebenen Wert entspricht. Bei allen Vergleichen wird davon ausgegangen, dass die Groß-/Kleinschreibung nicht beachtet wird.
 ms.assetid: 0e40276c-e794-4ea1-8937-c6d7f110f97d
 ms.tgt_platform: multiple
 title: CIM_SettingCheck-Klasse
@@ -28,23 +28,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: fa6ff603e126c99e1912635687be34f1f9dcf4e8a96a3977277436fcf328b0d9
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 2be1e96bc47889387e760ec082e50207c496cdeb
+ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119919540"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122885274"
 ---
 # <a name="cim_settingcheck-class"></a>CIM \_ SettingCheck-Klasse
 
 Die **CIM \_ SettingCheck-Klasse** gibt Informationen an, die erforderlich sind, um eine bestimmte Einstellungsdatei auf einen bestimmten Eintrag zu überprüfen, der einen Wert enthält, der dem angegebenen Wert entspricht. Bei allen Vergleichen wird davon ausgegangen, dass die Groß-/Kleinschreibung nicht beachtet wird.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
+Die folgende Syntax wird aus Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ class CIM_SettingCheck : CIM_Check
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ SettingCheck-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ SettingCheck-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -82,7 +82,7 @@ Die **CIM \_ SettingCheck-Klasse** verfügt über diese Methoden.
 
 
 
-| Methode                                                    | BESCHREIBUNG                                                   |
+| Methode                                                    | Beschreibung                                                   |
 |:----------------------------------------------------------|:--------------------------------------------------------------|
 | [**Invoke**](invoke-method-in-class-cim-settingcheck.md) | Führt eine bestimmte Aktion aus. Nicht von WMI implementiert.<br/> |
 
@@ -99,7 +99,7 @@ Die **CIM \_ SettingCheck-Klasse** verfügt über diese Eigenschaften.
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -110,23 +110,23 @@ Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 
 Kurze Textbeschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **CheckID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Schlüssel,**](/windows/desktop/WmiSdk/key-qualifier) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Bezeichner, der in Verbindung mit anderen Schlüsseln verwendet wird, um die Überprüfung eindeutig zu identifizieren. Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Bezeichner, der in Verbindung mit anderen Schlüsseln verwendet wird, um die Überprüfung eindeutig zu identifizieren. Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
@@ -139,9 +139,9 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt** an, dass die Bedingung in der Umgebung vorhanden ist (wenn sich z. B. eine Datei auf einem System befindet, sollte die [**Invoke-Methode**](invoke-method-in-class-cim-settingcheck.md) **TRUE zurückgeben).** False **gibt** an, dass die Bedingung nicht vorhanden sein sollte (wenn sich beispielsweise eine Datei nicht auf einem System befindet, sollte die **Invoke-Methode** **FALSE zurückgeben).**
+True gibt an, dass die Bedingung in der Umgebung vorhanden ist (wenn sich beispielsweise eine Datei auf einem System befindet, sollte die [**Invoke-Methode**](invoke-method-in-class-cim-settingcheck.md) **TRUE** zurückgeben). False gibt an, dass die Bedingung nicht vorhanden sein sollte (wenn sich z. B. eine Datei nicht auf einem System befindet, sollte die **Invoke-Methode** **FALSE** zurückgeben).
 
-Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
@@ -154,7 +154,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Art und Weise, in der der Einstellungswert verglichen werden soll.
+Art und Weise, in der der Einstellungswert verglichen werden soll.
 
 <dt>
 
@@ -177,7 +177,7 @@ Die Art und Weise, in der der Einstellungswert verglichen werden soll.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -185,14 +185,14 @@ Zugriffstyp: Schreibgeschützt
 
 Eine Beschreibung des Objekts.
 
-Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **Entryname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -208,20 +208,20 @@ Name des zu überprüfenden Eintrags
 **EntryValue**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Wert, der dem benannten Eintrag zugeordnet ist, der überprüft werden soll.
+Wert, der dem benannten eintrag zugeordnet ist, der überprüft werden soll.
 
 </dd> <dt>
 
 **FileName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -230,30 +230,30 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (1024)
 </dt> </dl>
 
-Dateiname der zu überprüfenden Einstellungsdatei.
+Dateiname der einstellungsdatei, die überprüft werden soll.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Name**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Name, der zum Identifizieren des Softwareelements verwendet wird. Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Der Name, der zum Identifizieren des Softwareelements verwendet wird. Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
 **SectionKey**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -262,25 +262,25 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Schlüssel des Abschnitts, der die zu überprüfenden Einstellungen enthält.
+Schlüssel des Abschnitts, der die zu überprüfende Einstellung enthält.
 
 </dd> <dt>
 
 **SoftwareElementID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementID**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
 Bezeichner für das Softwareelement.
 
-Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 </dd> <dt>
 
@@ -293,23 +293,23 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**SoftwareElementState**"), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
 Status eines Softwareelements.
 
-Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
+Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 <dt>
 
 <span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>
 
-<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellungsfähig** (0)
+<span id="Deployable"></span><span id="deployable"></span><span id="DEPLOYABLE"></span>**Bereitstellbar** (0)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installierbaren Zustand (d. h. dem nächsten Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im installationsfähigen Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
 
 </dd> <dt>
 
@@ -320,18 +320,18 @@ Beschreibt die Details, die für eine erfolgreiche Verteilung erforderlich sind,
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, sowie die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d. h. im nächsten Zustand) erforderlich sind.
+Beschreibt die Details, die für eine erfolgreiche Installation erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im ausführbaren Zustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
 
 </dd> <dt>
 
 <span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>
 
-<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare** Datei (2)
+<span id="Executable"></span><span id="executable"></span><span id="EXECUTABLE"></span>**Ausführbare Datei** (2)
 
 
 </dt> <dd>
 
-Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die erforderlich sind, um ein Softwareelement im Ausführungszustand (d. h. im nächsten Zustand) zu erstellen.
+Beschreibt die Details, die für eine erfolgreiche Ausführung erforderlich sind, und die Details (Bedingungen und Aktionen), die zum Erstellen eines Softwareelements im Ausführungszustand (d.amp;n.b. der nächste Zustand) erforderlich sind.
 
 </dd> <dt>
 
@@ -357,12 +357,12 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**TargetOperatingSystem**), [**\_ CIM-Schlüssel**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.5")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**TargetOperatingSystem**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Software Component Information \| 002.5")
 </dt> </dl>
 
 Zielbetriebssystem des Softwareelements.
 
-Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
+Diese Eigenschaft wird von [**CIM Check \_ geerbt.**](cim-check.md)
 
 <dt>
 
@@ -375,7 +375,7 @@ Diese Eigenschaft wird von [**CIM \_ Check**](cim-check.md)geerbt.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -398,7 +398,7 @@ Mac OS
 
 </dt> <dd>
 
-ATT UNIX
+ATT-UNIX
 
 </dd> <dt>
 
@@ -418,7 +418,7 @@ ATT UNIX
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital Unix** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digitales Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -430,7 +430,7 @@ ATT UNIX
 
 </dt> <dd>
 
-Öffnen von VMs
+Öffnen von VMS
 
 </dd> <dt>
 
@@ -652,7 +652,7 @@ A-Serie
 
 </dt> <dd>
 
-Verbund-NSK
+Tandem NSK
 
 </dd> <dt>
 
@@ -663,7 +663,7 @@ Verbund-NSK
 
 </dt> <dd>
 
-Nt-Verbund
+Tandem NT
 
 </dd> <dt>
 
@@ -701,14 +701,14 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/VM/VM** (39)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>
 
-<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interactive UNIX** (40)
+<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interaktive UNIX** (40)
 
 
 </dt> <dd></dd> <dt>
@@ -720,7 +720,7 @@ BS2000/OSD
 
 </dt> <dd>
 
-BSD UNIX
+BSD-UNIX
 
 </dd> <dt>
 
@@ -740,7 +740,7 @@ BSD UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Gnud** (44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU** Gnu(44)
 
 
 </dt> <dd></dd> <dt>
@@ -779,7 +779,7 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**ESAC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**OBC** (49)
 
 
 </dt> <dd></dd> <dt>
@@ -853,7 +853,7 @@ Handflächenbetriebssystem
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedizierend** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedicated** (59)
 
 
 </dt> <dd></dd> <dt>
@@ -877,23 +877,23 @@ Handflächenbetriebssystem
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
+Qualifizierer: [**Propagated**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ SoftwareElement**](cim-softwareelement.md).**Version**"), [**\_ CIM-Taste,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**Maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte eine der folgenden Formen haben:
+Die Version des Vorgangs sollte in einer der folgenden Formen sein:
 
--   <major>.<minor>.<revision>
--   <major>.<minor><letter><revision>
+-   &lt;Haupt- &gt; . &lt; neben &gt; . &lt; Revision&gt;
+-   &lt;Haupt- &gt; . &lt; &gt; &lt; &gt; &lt; Nebenbuchstabenrevision&gt;
 
-Diese Eigenschaft wird von der [**CIM \_ Check-Klasse**](cim-check.md) geerbt.
+Diese Eigenschaft wird von der [**CIM \_ Check-Klasse geerbt.**](cim-check.md)
 
 </dd> </dl>
 
@@ -901,9 +901,9 @@ Diese Eigenschaft wird von der [**CIM \_ Check-Klasse**](cim-check.md) geerbt.
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -917,7 +917,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von d
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

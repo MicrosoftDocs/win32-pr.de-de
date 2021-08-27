@@ -1,6 +1,6 @@
 ---
 title: MDM_VPNv2_CryptographySuite03-Klasse
-description: Die MDM \_ VPNv2 \_ CryptographySuite03-Klasse enthält Kryptografieinformationen für das Native VPN-Profil.
+description: Die MDM \_ VPNv2 \_ CryptographySuite03-Klasse enthält Kryptografieinformationen für das native VPN-Profil.
 ms.assetid: d8d16d43-bd54-4ca8-a850-ce48390df7d6
 keywords:
 - MDM_VPNv2_CryptographySuite03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 553f2dcddd4d7c7e0926945a80f74f6aba2a9467
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81d428ce346e7acc741287d5a8c0452923c8befb3ef86a12e1d34547fce84051
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120104080"
 ---
 # <a name="mdm_vpnv2_cryptographysuite03-class"></a>MDM \_ VPNv2 \_ CryptographySuite03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ VPNv2 \_ CryptographySuite03** -Klasse enthält Kryptografieinformationen für das Native VPN-Profil.
+Die **MDM \_ VPNv2 \_ CryptographySuite03-Klasse** enthält Kryptografieinformationen für das native VPN-Profil.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -51,20 +51,20 @@ class MDM_VPNv2_CryptographySuite03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ VPNv2 \_ CryptographySuite03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ VPNv2 \_ CryptographySuite03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ VPNv2 \_ CryptographySuite03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ VPNv2 \_ CryptographySuite03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Authenticationtransformconstants](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-authenticationtransformconstants)
+[AuthenticationTransformConstants](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-authenticationtransformconstants)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,10 +72,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Ciphertransformconstants](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-ciphertransformconstants)
+[CipherTransformConstants](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-ciphertransformconstants)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -86,7 +86,7 @@ Zugriffstyp: Lesen/Schreiben
 [DHGroup](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-dhgroup)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -94,10 +94,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Verschlüsselungsmethode](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-encryptionmethod)
+[Encryptionmethod](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-encryptionmethod)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -108,7 +108,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -121,10 +121,10 @@ Knoten, der die Eigenschaften von IPSec-Tunneln enthält.
 
 </dd> <dt>
 
-[Integritycheckmethod](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-integritycheckmethod)
+[IntegrityCheckMethod](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-integritycheckmethod)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -132,10 +132,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -144,14 +144,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "*./Vendor/MSFT/VPNv2/profile* Name/NativeProfile".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/VPNv2/*ProfileName*/NativeProfile".
 
 </dd> <dt>
 
-[Pfsgroup](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-pfsgroup)
+[PfsGroup](/windows/client-management/mdm/vpnv2-csp#vpnv2-profilename-nativeprofile-cryptographysuite-pfsgroup)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -165,10 +165,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

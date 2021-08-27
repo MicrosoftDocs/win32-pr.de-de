@@ -1,7 +1,7 @@
 ---
-description: Gibt die angegebenen Datei Attributdaten frei.
+description: Gibt die angegebenen Dateiattributdaten frei.
 ms.assetid: c1a4dcf8-614f-49a5-a923-8d7d610e6406
-title: Sdbfrefileattribute-Funktion
+title: SdbFreeFileAttributes-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 6f28812fbbec83dd1a41c8a21cb4c9544dbefea5
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7e99180198f8f23ba6b6872502710b2af28aaff3999a9f315c33ef2d1874d987
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103747688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103670"
 ---
-# <a name="sdbfreefileattributes-function"></a>Sdbfrefileattribute-Funktion
+# <a name="sdbfreefileattributes-function"></a>SdbFreeFileAttributes-Funktion
 
-Gibt die angegebenen Datei Attributdaten frei.
+Gibt die angegebenen Dateiattributdaten frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ BOOL WINAPI SdbFreeFileAttributes(
 
 <dl> <dt>
 
-*pfileattribute* \[ in\]
+*pFileAttributes* \[ In\]
 </dt> <dd>
 
-Eine [**attrinfo**](attrinfo.md) -Struktur, die von der [**sdbgetfileattribute**](sdbgetfileattributes.md) -Funktion zurückgegeben wird.
+Eine [**ATTRINFO-Struktur,**](attrinfo.md) die von der [**SdbGetFileAttributes-Funktion zurückgegeben**](sdbgetfileattributes.md) wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
+Die Funktion gibt **TRUE bei** Erfolg oder **FALSE bei** Einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -66,7 +66,7 @@ Bei einem Fehler gibt die Funktion **true** oder **false** zurück.
 
 <dl> <dt>
 
-[**Sdbgetfileattribute**](sdbgetfileattributes.md)
+[**SdbGetFileAttributes**](sdbgetfileattributes.md)
 </dt> </dl>
 
  

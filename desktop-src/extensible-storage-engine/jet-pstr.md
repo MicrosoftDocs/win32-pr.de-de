@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JET_PSTR'
+description: 'Weitere Informationen finden Sie unter: JET_PSTR'
 title: JET_PSTR
 TOCTitle: JET_PSTR
 ms:assetid: acb1143f-a5ee-4088-9f05-cc2aeef23442
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 71e5c60b07c7152cf52d1e2ab68925b181d4b356
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 442af61595f8bfdd81d0d36d0d8687f0e0418761
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122467237"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986093"
 ---
 # <a name="jet_pstr"></a>JET_PSTR
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_pstr"></a>JET_PSTR
 
-Der JET_PSTR Datentyp enthält eine AUF NULL endende ASCII-Zeichenfolge (char \* ).
+Der JET_PSTR Datentyp enthält eine AUF NULL terminte ASCII-Zeichenfolge (char \* ).
 
 **Windows Vista: JET_PSTR** wird in Windows Vista eingeführt.
 
@@ -46,6 +46,10 @@ NULL-terminiert, ASCII-Zeichenfolge (char \* ).
 ### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 

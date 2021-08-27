@@ -1,7 +1,7 @@
 ---
-description: Endzeit. Standardmäßig ist der Wert auf eine sehr große Zahl festgelegt. Die abgeleitete Klasse kann den Wert im Konstruktor zurücksetzen oder wenn der Filter initialisiert wird.
+description: Stoppzeit. Standardmäßig ist der Wert auf eine sehr große Zahl festgelegt. Die abgeleitete Klasse kann den Wert in ihrem Konstruktor oder beim Initialisieren des Filters zurücksetzen.
 ms.assetid: 1fddcf84-fd9a-4dad-892c-1b0abbb0ca55
-title: 'Csourceseeking:: m_rtStop Member (ctlutil. h)'
+title: CSourceSeeking::m_rtStop Member (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 28031f245ef877eca38129df2a86210f90093db4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a4408fddf42070012aa6e1eb3a0268e8e449b571828c0904524f3cc8d27df3bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103000"
 ---
-# <a name="csourceseekingm_rtstop-member"></a>Csourceseeking:: m \_ rtstoppt-Member
+# <a name="csourceseekingm_rtstop-member"></a>CSourceSeeking::m \_ rtStop-Member
 
-Endzeit. Standardmäßig ist der Wert auf eine sehr große Zahl festgelegt. Die abgeleitete Klasse kann den Wert im Konstruktor zurücksetzen oder wenn der Filter initialisiert wird.
+Stoppzeit. Standardmäßig ist der Wert auf eine sehr große Zahl festgelegt. Die abgeleitete Klasse kann den Wert in ihrem Konstruktor oder beim Initialisieren des Filters zurücksetzen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ CRefTime m_rtStop;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Variable gedrückt.
+Halten Sie den **Abschnitt "m \_ pLock** critical" vor dem Zugriff auf diese Variable.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Halten Sie den kritischen Abschnitt **m \_ Plock** vor dem Zugriff auf diese Var
 
 <dl> <dt>
 
-[**Csourceseeking-Klasse**](csourceseeking.md)
+[**CSourceSeeking-Klasse**](csourceseeking.md)
 </dt> </dl>
 
  

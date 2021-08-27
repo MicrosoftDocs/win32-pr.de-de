@@ -1,19 +1,19 @@
 ---
-description: Die TAPI-Zeilen \_ Antwortnachricht wird gesendet, um die Ergebnisse von Funktionsaufrufen zu melden, die asynchron abgeschlossen wurden.
+description: Die TAPI LINE REPLY-Nachricht wird gesendet, um die Ergebnisse von Funktionsaufrufen zu \_ melden, die asynchron abgeschlossen wurden.
 ms.assetid: 5d98ed8b-b75e-49f8-aba3-c6eee89e91c1
-title: LINE_REPLY Meldung (TAPI. h)
+title: LINE_REPLY (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ed963a777a5073b0182e809eec83fb7f904768e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: febe10c822a469465984b715c7b6f23d150f1f068730d4e92190b05ce50cd535
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126240"
 ---
-# <a name="line_reply-message"></a>Zeilen \_ Antwortnachricht
+# <a name="line_reply-message"></a>LINE \_ REPLY-Nachricht
 
-Die TAPI- **Zeilen \_ Antwort** Nachricht wird gesendet, um die Ergebnisse von Funktionsaufrufen zu melden, die asynchron abgeschlossen wurden.
+Die TAPI **LINE \_ REPLY-Nachricht** wird gesendet, um die Ergebnisse von Funktionsaufrufen zu melden, die asynchron abgeschlossen wurden.
 
 
 ```C++
@@ -26,31 +26,31 @@ Die TAPI- **Zeilen \_ Antwort** Nachricht wird gesendet, um die Ergebnisse von F
 
 <dl> <dt>
 
-*hdevice* 
+*hDevice* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
-*dwcallbackinstance* 
+*dwCallbackInstance* 
 </dt> <dd>
 
-Gibt die Rückruf Instanz der Anwendung zurück.
+Gibt die Rückrufinstanz der Anwendung zurück.
 
 </dd> <dt>
 
 *dwParam1* 
 </dt> <dd>
 
-Der Anforderungs Bezeichner, für den dies die Antwort ist.
+Der Anforderungsbezeichner, für den dies die Antwort ist.
 
 </dd> <dt>
 
 *dwParam2* 
 </dt> <dd>
 
-Die Erfolgs-oder Fehlermeldung. Die Anwendung sollte diesen Parameter in einen Long-Typ umwandeln. NULL gibt den Erfolg an; eine negative Zahl gibt einen Fehler an.
+Die Erfolgs- oder Fehleranzeige. Die Anwendung sollte diesen Parameter in einen LONG-Wert um casten. 0 (null) gibt den Erfolg an. Eine negative Zahl gibt einen Fehler an.
 
 </dd> <dt>
 
@@ -65,14 +65,14 @@ Nicht verwendet.
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Funktionen, die asynchron agieren, geben einen positiven Anforderungs-ID-Wert an die Anwendung zurück. Dieser Anforderungs Bezeichner wird mit der Antwortnachricht zurückgegeben, um die abgeschlossene Anforderung zu identifizieren. Der andere Parameter für die **Zeilen \_ Antwort** Nachricht enthält die Erfolgs-oder Fehlermeldung. Mögliche Fehler sind identisch mit denen, die von der entsprechenden Funktion definiert werden. Diese Meldung kann nicht deaktiviert werden.
+Funktionen, die asynchron arbeiten, geben einen positiven Anforderungsbezeichnerwert an die Anwendung zurück. Dieser Anforderungsbezeichner wird mit der Antwortnachricht zurückgegeben, um die abgeschlossene Anforderung zu identifizieren. Der andere Parameter für die **LINE \_ REPLY-Nachricht** enthält die Erfolgs- oder Fehleranzeige. Mögliche Fehler sind identisch mit denen, die von der entsprechenden Funktion definiert werden. Diese Meldung kann nicht deaktiviert werden.
 
-In einigen Fällen kann es vorkommen, dass eine Anwendung die **Zeilen \_ Antwort** Nachricht nicht empfängt, die einem Rückruf einer asynchronen Funktion entspricht. Dies tritt auf, wenn die Zuordnung des entsprechenden Telefon Handles aufgehoben wird, bevor die Nachricht empfangen wurde.
+In einigen Fällen kann es sein, dass eine Anwendung die **LINE \_ REPLY-Nachricht** nicht empfangen kann, die einem Aufruf einer asynchronen Funktion entspricht. Dies tritt auf, wenn das entsprechende Aufrufhand handle dieLociert, bevor die Nachricht empfangen wurde.
 
 > [!Note]  
-> Wenn eine Anwendung einen asynchronen Vorgang aufruft, mit dem Daten in den Anwendungs Speicher geschrieben werden, muss die Anwendung diesen Arbeitsspeicher für das Schreiben verfügbar halten, bis eine **Zeilen \_ Antwort** oder eine [**Zeile \_ gatherdigits**](line-gatherdigits.md) -Nachricht empfangen wird.
+> Wenn eine Anwendung einen asynchronen Vorgang aufruft, der Daten zurück in den Anwendungsspeicher schreibt, muss die Anwendung diesen Arbeitsspeicher für das Schreiben verfügbar halten, bis eine **LINE \_ REPLY-** oder [**LINE \_ GATHERDIGITS-Nachricht**](line-gatherdigits.md) empfangen wird.
 
  
 
@@ -82,8 +82,8 @@ In einigen Fällen kann es vorkommen, dass eine Anwendung die **Zeilen \_ Antwor
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
@@ -91,7 +91,7 @@ In einigen Fällen kann es vorkommen, dass eine Anwendung die **Zeilen \_ Antwor
 
 <dl> <dt>
 
-[**Zeilen \_ gatherziffern**](line-gatherdigits.md)
+[**LINE \_ GATHERDIGITS**](line-gatherdigits.md)
 </dt> </dl>
 
  

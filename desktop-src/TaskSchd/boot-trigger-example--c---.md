@@ -1,48 +1,48 @@
 ---
-title: Beispiel für einen Start Auslösers (C++)
-description: Dieses Thema enthält ein C++-Codebeispiel, das veranschaulicht, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad.exe geplant ist, wenn das System gestartet wird.
+title: Beispiel für Starttrigger (C++)
+description: Dieses Thema enthält ein C++-Codebeispiel, das zeigt, wie eine Aufgabe erstellt wird, die Notepad.exe System gestartet wird.
 ms.assetid: d4dbbfe5-bde9-4a1c-8e11-24cd1e14646c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bdbd5a5a73d100394b90e91f8b9c30c1bd495ac0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1b1f556b2b0754d913e44c2874a7fa01f9aea7ea50f5ccc0aa15fa769dfdca95
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120100501"
 ---
-# <a name="boot-trigger-example-c"></a>Beispiel für einen Start Auslösers (C++)
+# <a name="boot-trigger-example-c"></a>Beispiel für Starttrigger (C++)
 
-Dieses Thema enthält ein C++-Codebeispiel, das veranschaulicht, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad.exe geplant ist, wenn das System gestartet wird. Der Task enthält einen Start--Vorgang, der eine Start Grenze und eine Verzögerungszeit angibt, nach der der Task gestartet wird, nachdem das System gestartet wurde. Der Task enthält auch eine Aktion, die die Task Ausführung Notepad.exe angibt. Der Task wird mit dem lokalen Dienst Konto als Sicherheitskontext registriert, um den Task auszuführen.
+Dieses Thema enthält ein C++-Codebeispiel, das zeigt, wie eine Aufgabe erstellt wird, die Notepad.exe System gestartet wird. Der Task enthält einen Starttrigger, der eine Startgrenze und eine Verzögerungszeit für den Start des Task nach dem Systemstart angibt. Der Task enthält auch eine Aktion, die angibt, dass der Task ausgeführt Notepad.exe. Die Aufgabe wird mithilfe des lokalen Dienstkontos als Sicherheitskontext registriert, um die Aufgabe auszuführen.
 
-Im folgenden Verfahren wird beschrieben, wie ein Task zum Starten einer ausführbaren Datei geplant wird, wenn das System gestartet wird.
+Im folgenden Verfahren wird beschrieben, wie sie einen Task zum Starten einer ausführbaren Datei planen, wenn das System gestartet wird.
 
-**So planen Sie den Start von Notepad, wenn das System gestartet wird**
+**So planen Sie Editor starten, wenn das System gestartet wird**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt.
+1.  Initialisieren Sie COM, und legen Sie allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice)
 
     Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
 
-3.  Rufen Sie einen Aufgaben Ordner ab, in dem eine Aufgabe erstellt werden soll.
+3.  Sie können einen Aufgabenordner zum Erstellen einer Aufgabe in erstellen.
 
-    Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten, und die [**ITaskService:: newtask**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) -Methode zum Erstellen des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts.
+    Verwenden Sie [**die ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner zu erhalten, und die [**ITaskService::NewTask-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) um das [**ITaskDefinition-Objekt zu**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) erstellen.
 
-4.  Definieren von Informationen über den Task mithilfe des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts, z. b. Registrierungsinformationen für den Task.
+4.  Definieren Sie Informationen zur Aufgabe mithilfe des [**ITaskDefinition-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) z. B. die Registrierungsinformationen für den Task.
 
-    Verwenden Sie die [**RegistrationInfo-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Schnittstelle, um die Aufgabeninformationen zu definieren.
+    Verwenden Sie [**die RegistrationInfo-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der [**ITaskDefinition-Schnittstelle,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) um die Aufgabeninformationen zu definieren.
 
-5.  Erstellen Sie einen Start Trigger mithilfe der Triggers- [**Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) , um auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen.
+5.  Erstellen Sie einen Starttrigger mithilfe [**der Triggers-Eigenschaft von ITaskDefinition,**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) um auf [**die ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zu zugreifen.
 
-    Verwenden Sie die [**ITriggerCollection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) -Methode, um anzugeben, dass Sie einen Start Trigger erstellen möchten. Sie können die Start Grenze und die Verzögerung für den-Befehl festlegen, sodass die Ausführung der Task Aktionen zu einem bestimmten Zeitpunkt geplant wird, zu dem das System gestartet wird.
+    Verwenden Sie [**die ITriggerCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) um anzugeben, dass Sie einen Starttrigger erstellen möchten. Sie können die Startgrenze und die Verzögerung für den Trigger so festlegen, dass die Ausführung der Taskaktionen zu einem bestimmten Zeitpunkt geplant wird, wenn das System gestartet wird.
 
-6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe mithilfe der [**Actions-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) für den Zugriff auf die [**IAction Collection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Auflistung für den Task.
+6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe, indem Sie mithilfe der Actions-Eigenschaft von [**ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) auf die [**IActionCollection-Sammlung**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) für die Aufgabe zugreifen.
 
-    Verwenden Sie die [**IAction Collection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
+    Verwenden Sie [**die IActionCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausgeführt.
 
-7.  Registrieren Sie die Aufgabe mit der [**ITaskFolder:: RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode.
+7.  Registrieren Sie die Aufgabe mithilfe der [**ITaskFolder::RegisterTaskDefinition-Methode.**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition)
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie eine Aufgabe geplant wird, die Notepad.exe 30 Sekunden nach dem Start des Systems ausgeführt wird.
+Das folgende C++-Codebeispiel zeigt, wie sie eine Aufgabe 30 Sekunden Notepad.exe, nachdem das System gestartet wurde, ausgeführt wird.
 
 
 ```C++
@@ -374,12 +374,12 @@ int __cdecl wmain()
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

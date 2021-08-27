@@ -1,43 +1,43 @@
 ---
-description: Die Aktion RemoveFolders entfernt alle Ordner, die mit Komponenten verknüpft sind, die entfernt oder aus der Quelle ausgeführt werden sollen. Diese Ordner werden nur entfernt, wenn Sie leer sind. Wenn ein Ordner entfernt wird, wird die Registrierung mit dem entsprechenden Komponenten Bezeichner aufgehoben.
+description: Die Aktion RemoveFolders entfernt alle Ordner, die mit Komponenten verknüpft sind, die entfernt oder aus der Quelle ausgeführt werden sollen. Diese Ordner werden nur entfernt, wenn sie leer sind. Wenn ein Ordner entfernt wird, wird die Registrierung mit dem entsprechenden Komponentenbezeichner aufgehoben.
 ms.assetid: 0f68458e-ae9a-4ca5-bc60-06d4de91e2e9
 title: RemoveFolders-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69648fbae333f0e7b989f2e989f0982d49736317
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b476de044ef48b50120575a8d6991d27bf063dec37a026a2f5d2ea0e604abee0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082540"
 ---
 # <a name="removefolders-action"></a>RemoveFolders-Aktion
 
-Die Aktion RemoveFolders entfernt alle Ordner, die mit Komponenten verknüpft sind, die entfernt oder aus der Quelle ausgeführt werden sollen. Diese Ordner werden nur entfernt, wenn Sie leer sind. Wenn ein Ordner entfernt wird, wird die Registrierung mit dem entsprechenden Komponenten Bezeichner aufgehoben.
+Die Aktion RemoveFolders entfernt alle Ordner, die mit Komponenten verknüpft sind, die entfernt oder aus der Quelle ausgeführt werden sollen. Diese Ordner werden nur entfernt, wenn sie leer sind. Wenn ein Ordner entfernt wird, wird die Registrierung mit dem entsprechenden Komponentenbezeichner aufgehoben.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Die RemoveFolders-Aktion muss nach der [RemoveFiles](removefiles-action.md) -Aktion oder einer beliebigen Aktion erfolgen, die möglicherweise Dateien aus Ordnern entfernt.
+Die RemoveFolders-Aktion muss nach der [RemoveFiles-Aktion](removefiles-action.md) oder einer beliebigen Aktion folgen, die Dateien aus Ordnern entfernen kann.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
 
 
-| Feld | Beschreibung der Aktions Daten    |
+| Feld | Beschreibung der Aktionsdaten    |
 |-------|-------------------------------|
-| \[1\] | Der Bezeichner des entfernten Ordners. |
+| \[1\] | Bezeichner des entfernten Ordners. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Installer entfernt nicht automatisch die Ordner, die von der [Aktion](createfolders-action.md) "Erstellungs Ordner" während einer Deinstallieren der Anwendung erstellt wurden. Das Installationsprogramm muss angewiesen werden, diese Ordner zu entfernen, indem Sie die RemoveFolders-Aktion in der Aktions Sequenz erstellen.
+Das Installationsprogramm entfernt nicht automatisch die Ordner, die während einer Deinstallation der Anwendung durch die [CreateFolders-Aktion](createfolders-action.md) erstellt wurden. Das Installationsprogramm muss angewiesen werden, diese Ordner zu entfernen, indem die Aktion RemoveFolders in der Aktionssequenz erstellt wird.
 
-Um den Namen und den Speicherort des Ordners anzugeben, verwenden Sie die \_ Spalte Verzeichnis der [Tabelle "Tabelle](createfolder-table.md)". Es wird davon ausgegangen, dass jeder Ordnername in der Tabelle "foratefolder" eine Eigenschaft ist, die den Ordner Speicherort definiert.
+Um den Namen und Speicherort des Ordners anzugeben, verwenden Sie die \_ Directory-Spalte der [CreateFolder-Tabelle](createfolder-table.md). Jeder Ordnername in der CreateFolder-Tabelle wird als Eigenschaft angenommen, die den Speicherort des Ordners definiert.
 
-Um die Komponente anzugeben, die den Ordner besitzt, verwenden Sie die Spalte ComponentID der [Component-Tabelle](component-table.md).
+Um die Komponente anzugeben, die den Ordner besitzt, verwenden Sie die ComponentId -Spalte der [Component-Tabelle](component-table.md).
 
  
 

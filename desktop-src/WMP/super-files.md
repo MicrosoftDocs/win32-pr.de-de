@@ -1,51 +1,51 @@
 ---
-title: Super Dateien
-description: Super Dateien
+title: Superdateien
+description: Superdateien
 ms.assetid: a5005d1a-4b87-482d-914e-3184a2c93267
 keywords:
-- Windows Media Player Mobile Skins, Art Dateien
-- Skins, Art Dateien
+- Windows Media Player Mobile Skins, Grafikdateien
+- Skins, Art-Dateien
 - Dateien für Skins, Art
-- kunstdateien für Skins, Super files-Dateien
-- Windows Media Player Mobile Skins, Super files-Dateien
-- Skins, Super files
-- Super Dateien in Skins
+- Grafikdateien für Skins, Superdateien
+- Windows Media Player Mobile Skins, Superdateien
+- Skins, Superdateien
+- Superdateien in Skins
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ece533f81f8866eb0f9848d7296cc23bcd37f453
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fcbd6734e0491b5fc0e6552db14b3c0ab4489e466e7851ef4b474e84d2d85183
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122864"
 ---
-# <a name="super-files"></a>Super Dateien
+# <a name="super-files"></a>Superdateien
 
-Super Dateien werden zum Speichern der deaktivierten Images für trackbars verwendet. Da das TrackBar-Haupt Bild in der Hintergrund Datei angezeigt wird und der Benutzer auf das Thumb-Bild und nicht auf das TrackBar-Bild tippt, wird nur das deaktivierte Bild für trackbars benötigt. Sie wird in der Datei gespeichert, die von Super im Abschnitt Bitmaps der Skin-Definitionsdatei definiert ist. Eine Super-Datei kann auch die über drückten und deaktivierten Bilder für andere Schaltflächen wie stumm speichern. Dies ist nicht erforderlich, um eine Schaltfläche vom Typ "Treffer" zu sein.
+Superdateien werden verwendet, um die deaktivierten Images für Trackbars zu speichern. Da das Hauptbild der Trackleiste in der Hintergrunddatei angezeigt wird und der Benutzer auf das Bild mit dem Daumen tippt und nicht auf das Trackleistenbild, wird nur das Bild Deaktiviert für Trackleisten benötigt. Sie wird in der von Super definierten Datei im Abschnitt Bitmaps der Skindefinitionsdatei gespeichert. Eine Super-Datei kann auch die Bilder Pushed und Disabled für andere Schaltflächen speichern, z. B. Mute, was nicht als Schaltfläche vom Typ "Treffer" erforderlich ist.
 
 > [!Note]  
-> Super kunstdateien werden in Skins für Windows Media Player 10 Mobile oder höher nicht verwendet, da sich die deaktivierten Images für Such trackbars in der seekthumb-Datei befinden.
+> SuperArt-Dateien werden nicht in Skins für Windows Media Player 10 Mobile oder höher verwendet, da sich die deaktivierten Bilder für Suchspurleisten in der Seekthumb-Datei befinden.
 
- 
+ 
 
-Das folgende Bild ist eine typische Super-Datei.
+Die folgende Abbildung ist eine typische Superdatei.
 
-![Super-Datei](images/cesdksup.png)
+![Superdatei](images/cesdksup.png)
 
-Dadurch werden die deaktivierten Bilder für die trackbars und die stumm Schaltfläche gespeichert. Diese Bilder sind im Abschnitt Bitmaps definiert.
+Dadurch werden die deaktivierten Bilder für die Trackleisten und die Stummschaltungsschaltfläche gespeichert. Diese Bilder werden entsprechend der Definition im Abschnitt Bitmaps versetzt.
 
-Der Hintergrundbereich des deaktivierten TrackBar-Bilds stimmt exakt mit dem entsprechenden Bereich in der Hintergrund Datei überein. Dies ist wichtig, da das gesamte Rechteck, das für das deaktivierte TrackBar-Bild definiert ist, den entsprechenden Bereich in der Hintergrund Datei ersetzt. Dadurch wird sichergestellt, dass das deaktivierte TrackBar-Bild nahtlos in das Hintergrundbild integriert ist.
+Der Hintergrundbereich des deaktivierten Trackbarbilds stimmt genau mit dem entsprechenden Bereich in der Hintergrunddatei überein. Dies ist wichtig, da das gesamte Rechteck, das für das deaktivierte Trackbarbild definiert ist, den entsprechenden Bereich in der Hintergrunddatei ersetzt. Dadurch wird sichergestellt, dass das deaktivierte Trackbarbild nahtlos in das Hintergrundbild integriert wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Kunstdateien**](art-files-mobile.md)
+[**Art Files**](art-files-mobile.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

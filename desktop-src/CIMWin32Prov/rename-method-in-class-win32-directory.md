@@ -1,8 +1,8 @@
 ---
-description: Benennt die im Objekt Pfad angegebene Verzeichniseintrags Datei um.
+description: Benennt die im Objektpfad angegebene Verzeichniseintragsdatei um.
 ms.assetid: 8bfe1b69-5f93-4408-a742-f03a9cb16bfe
 ms.tgt_platform: multiple
-title: Rename-Methode der Win32_Directory-Klasse
+title: Umbenennen der Win32_Directory-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 874151e1ff8c9feca375df3eb441665863d1070d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 86b6bd35b14ee2a342dee27615c1ff21d9274a5f3020c4f804df5065f430813f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120077440"
 ---
-# <a name="rename-method-of-the-win32_directory-class"></a>Rename-Methode der Win32- \_ Verzeichnis Klasse
+# <a name="rename-method-of-the-win32_directory-class"></a>Rename-Methode der Win32 \_ Directory-Klasse
 
-Die Methode zum **Umbenennen** der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) benennt die Verzeichniseintrags Datei um, die im Objekt Pfad angegeben ist. Ein umbenennen wird nicht unterstützt, wenn sich das Ziel auf einem anderen Laufwerk befindet oder wenn eine vorhandene logische Datei überschrieben werden muss.
+Die **Methode** [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) umbenennen benennt die im Objektpfad angegebene Verzeichniseintragsdatei um. Eine Umbenennung wird nicht unterstützt, wenn sich das Ziel auf einem anderen Laufwerk befindet oder wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ uint32 Rename(
 *FileName* 
 </dt> <dd>
 
-Voll qualifizierter neuer Name der Datei (oder des Verzeichnisses). Beispiel: c: \\ Temp \\newfile.txt.
+Vollqualifizierter neuer Name der Datei (oder des Verzeichnisses). Beispiel: c: \\ temp \\newfile.txt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich umbenannt wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich umbenannt wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -72,7 +72,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -121,7 +121,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -135,7 +135,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -146,21 +146,21 @@ Ein angegebener Parameter ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zum Umbenennen eines Ordners müssen Sie zuerst eine Bindung an den fraglichen Ordner herstellen und dann die Rename-Methode aufzurufen. Übergeben Sie als einzigen Parameter für die-Methode den neuen Namen für den Ordner als einen kompletten Pfadnamen. Wenn beispielsweise der Ordner in der Datei "c: Scripts" die \\ \\ Sicherung " \\ c: Scripts Archive" umbenennen soll \\ \\ , müssen Sie c: \\ Scripts \\ Archive als den gesamten Ordnernamen übergeben. Wenn nur der Ordnername-Archive übergeben wird, führt dies zu einem ungültigen Pfad Fehler.
+Um einen Ordner umzubenennen, binden Sie zunächst an den in Frage gestellten Ordner, und rufen Sie dann die Rename-Methode auf. Übergeben Sie als einziger Parameter für die -Methode den neuen Namen für den Ordner als vollständigen Pfadnamen. Wenn der Ordner in der Sicherung von C: Skriptprotokollen beispielsweise in C: Skriptarchiv umbenannt werden soll, müssen Sie C: Scripts Archive als vollständigen \\ \\ \\ \\ \\ \\ \\ Ordnernamen übergeben. Die Übergabe des Ordnernamens Archive führt zu einem Fehler mit ungültigen Pfaden.
 
-Die Win32- \_ Verzeichnis Klasse bietet keine einstufige Methode zum Verschieben von Ordnern. Stattdessen umfasst das Verschieben eines Ordners im Allgemeinen zwei Schritte:
+Die Win32 \_ Directory-Klasse stellt keine einstufige Methode zum Verschieben von Ordnern zur Verfügung. Stattdessen umfasst das Verschieben eines Ordners in der Regel zwei Schritte:
 
-<dl> 1. Der Ordner wird an den neuen Speicherort kopiert.  
+<dl> 1. Kopieren des Ordners an den neuen Speicherort  
 2. Löschen des ursprünglichen Ordners  
 </dl>
 
-Die einzige Ausnahme zu diesem zweistufigen Prozess besteht darin, einen Ordner an einen neuen Speicherort auf demselben Laufwerk zu verschieben. Nehmen Sie beispielsweise an, dass Sie "c: \\ Temp" in "c: \\ Scripts \\ temporäre Dateien \\ Archive" verschieben möchten. Solange sich der aktuelle Speicherort und der neue Speicherort auf demselben Laufwerk befinden, können Sie den Ordner verschieben, indem Sie einfach die Rename-Methode aufrufen und den neuen Speicherort als Methoden Parameter übergeben. Diese Vorgehensweise ermöglicht es Ihnen, den Ordner in einem einzigen Schritt zu verschieben. Das Skript schlägt jedoch fehl, wenn sich das aktuelle Laufwerk und das neue Laufwerk unterscheiden. Der Versuch, C: \\ Temp in D: Temp umzubenennen, \\ schlägt mit dem Fehler "Laufwerk nicht identisch" fehl.
+Die einzige Ausnahme dieses zweistufigen Prozesses besteht darin, einen Ordner an einen neuen Speicherort auf demselben Laufwerk zu verschieben. Angenommen, Sie möchten C: Temp in \\ C: \\ Scripts Temporary Files \\ Archive \\ verschieben. Solange sich der aktuelle und der neue Speicherort auf demselben Laufwerk befinden, können Sie den Ordner verschieben, indem Sie einfach die Rename-Methode aufrufen und den neuen Speicherort als Methodenparameter übergeben. Mit diesem Ansatz können Sie den Ordner in einem einzigen Schritt verschieben. Das Skript schlägt jedoch fehl, wenn sich das aktuelle Laufwerk und das neue Laufwerk unterscheiden. Fehler beim Umbenennen von C: Temp in D: Temp mit dem Fehler \\ \\ "Laufwerk nicht identisch".
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Code aus dem Beispiel zum [Verschieben eines Ordners mit WMI](https://Gallery.TechNet.Microsoft.Com/f4f9643c-d7ed-4f54-b155-c6515396431f) VBScript in der TechNet Gallery verwendet die Rename-Methode, um den Ordner c: \\ Scripts in c: \\ Admins \\ Documents \\ Archive \\ VBScript zu verschieben.
+Der folgende Code aus dem Beispiel Verschieben eines Ordners [mithilfe](https://Gallery.TechNet.Microsoft.Com/f4f9643c-d7ed-4f54-b155-c6515396431f) von WMI VBScript im TechNet-Katalog verwendet die Rename-Methode, um den Ordner C: \\ Scripts nach C: \\ Admins Documents Archive VBScript zu \\ \\ \\ verschieben.
 
 
 ```VB
@@ -186,8 +186,8 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -199,7 +199,7 @@ Next
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Verzeichnis**](win32-directory.md)
+[**Win32-Verzeichnis \_**](win32-directory.md)
 </dt> </dl>
 
  

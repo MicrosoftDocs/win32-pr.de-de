@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_USERDEFINEDDEFAULT Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_USERDEFINEDDEFAULT Struktur'
 title: JET_USERDEFINEDDEFAULT Struktur
 TOCTitle: JET_USERDEFINEDDEFAULT Structure
 ms:assetid: 1f0a5419-9fae-4a93-a271-2f9772ecc996
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e5f588588a1a6769e997264321f8911a86e169c9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8c34c7677a100488dfbc533aed3ca07f5b3af4c
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355387"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988093"
 ---
 # <a name="jet_userdefineddefault-structure"></a>JET_USERDEFINEDDEFAULT Struktur
 
@@ -29,9 +29,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_userdefineddefault-structure"></a>JET_USERDEFINEDDEFAULT Struktur
 
-Die **JET_USERDEFINEDDEFAULT** Struktur wird in Verbindung mit JET_bitColumnUserDefinedDefault angegeben, um einer neuen Spalte einen Standardwert zu übergeben, der mithilfe eines Rückrufs bestimmt wird. Diese Technik kann zum Implementieren berechneter Spalten verwendet werden.
+Die **JET_USERDEFINEDDEFAULT-Struktur** wird in Verbindung mit JET_bitColumnUserDefinedDefault angegeben, um einer neuen Spalte einen Standardwert zu geben, der mithilfe eines Rückrufs bestimmt wird. Diese Technik kann verwendet werden, um berechnete Spalten zu implementieren.
 
-**Windows XP:** Die **JET_USERDEFINEDDEFAULT** Struktur wird in Windows XP eingeführt.
+**Windows XP:** Die **JET_USERDEFINEDDEFAULT-Struktur** wird in xp Windows eingeführt.
 
 ```cpp
     typedef struct tag_JET_USERDEFINEDDEFAULT {
@@ -44,35 +44,35 @@ Die **JET_USERDEFINEDDEFAULT** Struktur wird in Verbindung mit JET_bitColumnUser
 
 ### <a name="members"></a>Member
 
-**szcallback**
+**szCallback**
 
-Der Export Name der Funktion, die den Rückruf im Format "Modul \! Funktion" implementiert.
+Der Exportname der Funktion, die den Rückruf im Modulfunktionsformat \! implementiert.
 
-Der Rückruf wird als Teil des Spalten Schemas beibehalten. Die tatsächliche ausführbare Hostdatei und der Export Name der Funktion müssen persistent gespeichert werden, um die Suche nach der tatsächlichen Adresse der Funktion zur Laufzeit zu ermöglichen.
+Der Rückruf wird als Teil des Spaltenschemas beibehalten. Die tatsächliche ausführbare Hostdatei und der Exportname der Funktion müssen beibehalten werden, um die Suche nach der tatsächlichen Adresse der Funktion zur Laufzeit zu ermöglichen.
 
-Der Modulname ist der Name der Host Binärdatei, die die Funktion enthält. Der Name der Funktion ist der Name des Exports für diese Funktion. Diese beiden Informationen werden von der Datenbank-Engine zur Laufzeit verwendet, um die tatsächliche Adresse des Rückrufs zu ermitteln, indem Sie einen [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Befehl für den Modulnamen gefolgt von einem [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Aufrufs für den Funktionsnamen ausführen.
+Der Modulname ist der Name der Hostbinärdatei, die die Funktion enthält. Der Funktionsname ist der Name des Exports für diese Funktion. Diese beiden Informationen werden von der Datenbank-Engine zur Laufzeit verwendet, um die echte Adresse des Rückrufs zu ermitteln, indem ein [LoadLibrary-Aufruf](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) für den Modulnamen gefolgt von einem [GetProcAddress-Aufruf](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) für den Funktionsnamen ausgeführt wird.
 
-Wenn der Rückruf z. b. in einer DLL mit dem Namen MyCallback.DLL implementiert wurde und diese DLL in C: \\ MyApplication gespeichert wurde und die Funktion, die den Rückruf implementiert, als userdefineddefaultcallback von der dll exportiert wurde, lautet die erforderliche Zeichenfolge "C: \\ MyApplication \\MyCallback.DLL\! userdefineddefaultcallback".
+Wenn der Rückruf beispielsweise in einer DLL namens MyCallback.DLL implementiert und diese DLL in C: MyApplication gespeichert wurde und die Funktion, die den Rückruf implementiert, aus der DLL als UserDefinedDefaultCallback exportiert wurde, wäre die erforderliche Zeichenfolge \\ "C: \\ MyApplication \\MyCallback.DLL\! UserDefinedDefaultCallback".
 
-**Hinweis**  Eingebettet " \! " Zeichen im Modulteil des Rückruf namens werden nicht unterstützt.
+**Hinweis:**  Embedded " \! " " -Zeichen im Modulteil des Rückrufnamens werden nicht unterstützt.
 
-Es wird dringend empfohlen, einen Rückruf Namen zu verwenden, der keine Funktion der Host Architektur ist. Verwenden Sie beispielsweise keine als stdcall () ergänzten Exporte, UserDefinedDefaultCallback@32 da diese Aufruf Konvention nur auf x86-Computern unterstützt wird. Wenn ein solcher Rückruf verwendet wurde, konnte die Datenbank nur auf einem x86-Computer verwendet werden. Ein Alias sollte in diesem Fall verwendet werden, um einen plattformunabhängigen Export vorzunehmen.
+Es wird dringend empfohlen, einen Rückrufnamen zu verwenden, der keine Funktion der Hostarchitektur ist. Verwenden Sie beispielsweise keine Exporte, die als stdcall ( ) verziert sind, da diese Aufrufkonvention nur auf UserDefinedDefaultCallback@32 x86-Computern unterstützt wird. Wenn ein solcher Rückruf verwendet wird, kann die Datenbank nur auf einem x86-Computer verwendet werden. In diesem Fall sollte ein Alias verwendet werden, um einen plattformunabhängigen Export zu erstellen.
 
-Es wird dringend empfohlen, dass Sie den vollständigen Pfad des Modul namens verwenden, der den Rückruf implementiert. Wenn ein relativer Pfad verwendet wird, kann der Prozess, der die Datenbank gehostet, anfällig für Angriffe durch eine nicht autorisierte Binärdatei sein.
+Es wird dringend empfohlen, den vollständigen Pfad des Modulnamens zu verwenden, der den Rückruf implementieren soll. Wenn ein relativer Pfad verwendet wird, kann der Prozess, der die Datenbank hosten, anfällig für Angriffe durch eine nicht autorisierte Binärdatei sein.
 
-Die Anwendung sollte nur vertrauenswürdige Rückrufe an die Datenbank-Engine übergeben. Die Datenbank-Engine lädt die Binärdatei, um deren vorhanden sein zu überprüfen, wenn die zugehörige Spalte erstellt wird. Wenn der Pfad zur Binärdatei nicht überprüft wird oder bekannt ist, dass Sie vertrauenswürdig ist, könnte Sie den Prozess angreifen, der die Datenbank gehostet.
+Die Anwendung sollte nur vertrauenswürdige Rückrufe an die Datenbank-Engine übergeben. Die Datenbank-Engine geladen die Binärdatei, um zu überprüfen, ob sie vorhanden ist, wenn die zugeordnete Spalte erstellt wird. Wenn der Pfad zur Binärdatei nicht überprüft wird oder als vertrauenswürdig eingestuft wird, kann er den Prozess angreifen, der die Datenbank hosten soll.
 
-**pbuserdata**
+**pbUserData**
 
-Ein eigenständiger Block von benutzerdefinierten Daten, die beim Aufrufen an den Rückruf übermittelt werden sollen. Der bereitgestellte Datenblock wird als Teil des Spalten Schemas beibehalten. Folglich muss der Datenblock vollständig eigenständig sein und kann nicht auf Daten verweisen, die sich außerhalb des Gültigkeits Bereichs der Datenbank befinden.
+Ein eigenständiger Block von benutzerdefinierten Daten, die beim Aufrufen an den Rückruf übergeben werden sollen. Der bereitgestellte Datenblock wird als Teil des Spaltenschemas beibehalten. Daher muss der Datenblock vollständig in sich geschlossen sein und darf nicht auf Daten verweisen, die außerhalb des Gültigkeitsbereichs der Datenbank sind.
 
-Wenn **pbuserdata** NULL ist, wird der Wert von **cbUserData** ignoriert. In diesem Fall werden keine benutzerdefinierten Daten an den Rückruf übermittelt, wenn Sie aufgerufen werden.
+Wenn **pbUserData** 0 (null) ist, wird der **Wert von cbUserData** ignoriert. In diesem Fall werden keine benutzerdefinierten Daten an den Rückruf übergeben, wenn sie aufgerufen werden.
 
 **cbUserData**
 
-Siehe **pbuserdata**.
+Weitere Informationen **finden Sie unter pbUserData.**
 
-**szdependantcolumns**
+**szDependantColumns**
 
 Für die zukünftige Verwendung reserviert.
 
@@ -80,30 +80,14 @@ Dieser Member sollte immer auf NULL festgelegt werden.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Wird als <strong>JET_ USERDEFINEDDEFAULT_W</strong> (Unicode) und <strong>JET_ USERDEFINEDDEFAULT_A</strong> (ANSI) implementiert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JET_ USERDEFINEDDEFAULT_W</strong> (Unicode) und JET_ USERDEFINEDDEFAULT_A (ANSI) implementiert. <strong></strong></p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen

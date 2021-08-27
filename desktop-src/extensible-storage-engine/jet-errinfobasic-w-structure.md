@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_ERRINFOBASIC_W Struktur'
-title: JET_ERRINFOBASIC_W Struktur
+description: 'Weitere Informationen zu: JET_ERRINFOBASIC_W-Struktur'
+title: JET_ERRINFOBASIC_W-Struktur
 TOCTitle: JET_ERRINFOBASIC_W Structure
 ms:assetid: fcc55cb7-718d-419a-a473-15e030c23abd
 ms:mtpsurl: https://msdn.microsoft.com/library/Hh475861(v=EXCHG.10)
 ms:contentKeyID: 37033567
 ms.date: 04/11/2016
 ms.topic: article
-ms.openlocfilehash: f6a91d14fe636a2ccf3b00935af53db7caa0bf257833e72780d706e14822d5a3
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: c02d9f8081040293bd154137163e13cc9d313a32
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119401840"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984033"
 ---
-# <a name="jet_errinfobasic_w-structure"></a>JET_ERRINFOBASIC_W Struktur
+# <a name="jet_errinfobasic_w-structure"></a>JET_ERRINFOBASIC_W-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_errinfobasic_w-structure"></a>JET_ERRINFOBASIC_W Struktur
+## <a name="jet_errinfobasic_w-structure"></a>JET_ERRINFOBASIC_W-Struktur
 
-Die **JET_ERRINFOBASIC_W** definiert die Daten, die von der [JetGetErrorInfo()-Methode](./jetgeterrorinfow-function.md) zurückgegeben werden, wenn der JET_ErrorInfoSpecificErr InfoLevel übergeben wird.
+Die **JET_ERRINFOBASIC_W-Struktur** definiert die Daten, die von der [JetGetErrorInfo()-Methode](./jetgeterrorinfow-function.md) zurückgegeben werden, wenn die JET_ErrorInfoSpecificErr InfoLevel übergeben wird.
 
 Hinweis: Diese Dokumentation basiert auf einer vorläufigen Version der Extensible Storage Engine. Diese Informationen können geändert werden.
 
@@ -44,15 +44,15 @@ Die Größe der -Struktur in Bytes. Sie muss auf sizeof( JET_ERRINFOBASIC ) fest
 
 **errValue**
 
-Der Fehlerwert, der ausgewertet wurde, wie für das *pvResult-Argument* an [JetGetErrorInfo() übergeben.](./jetgeterrorinfow-function.md)
+Der Fehlerwert, der ausgewertet wurde, wie für das *pvResult-Argument* an [JetGetErrorInfo()](./jetgeterrorinfow-function.md)übergeben.
 
 **errcatMostSpecific**
 
-Die Konstante der niedrigsten [JET_ERRCAT,](./jet-errcat.md) die dem Fehler zugeordnet ist. Das heißt, die Kategorie auf Blattebene in der Kategoriehierarchie, die [in](./jet-errcat.md)JET_ERRCAT.
+Die niedrigste Ebene [JET_ERRCAT](./jet-errcat.md) Konstante, die dem Fehler zugeordnet ist. Das heißt, die Kategorie auf Blattebene in der Kategoriehierarchie, die in [JET_ERRCAT](./jet-errcat.md)dokumentiert ist.
 
 **rgCategoricalHierarchy \[ 8\]**
 
-Die Hierarchie der Fehlerkategorien, die dem Fehler zugeordnet ist. Position 0 ist die höchste Ebene in der Hierarchie von [JET_ERRCAT,](./jet-errcat.md)und die übrigen sind Unterkategorien, bis die spezifischste Kategorie festgelegt ist, nach der alle Kategorien JET_errcatUnknown.
+Die Hierarchie der Fehlerkategorien, die dem Fehler zugeordnet ist. Position 0 ist die höchste Ebene in der Hierarchie von [JET_ERRCAT,](./jet-errcat.md)und die übrigen sind Unterkategorien, bis die spezifischste Kategorie festgelegt ist, nach der alle Kategorien JET_errcatUnknown werden.
 
 **lSourceLine**
 
@@ -64,23 +64,10 @@ Reserviert.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows 8.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows 8 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows 8 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+

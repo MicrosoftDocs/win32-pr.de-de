@@ -1,5 +1,5 @@
 ---
-description: Weitere Informationen zu PWM-Enumerationstypen
+description: Weitere Informationen finden Sie unter PWM-Enumerationstypen.
 ms.assetid: DB87CDA5-E536-4884-BF60-3E7DB8C67A19
 title: PWM-Enumerationstypen
 ms.topic: article
@@ -9,18 +9,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 1cd1c9ad1b32c965610295a3b42d8dbb2a3899e7
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 2be9abd990baa5beefb17da63cd951fafe344c947ceed7db466715f1cf833b50
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088060"
 ---
 # <a name="pwm-enumeration-types"></a>PWM-Enumerationstypen
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die folgenden Enumerationstypen werden mit der Pulse Width-Modulation verwendet:
+Die folgenden Enumerationstypen werden mit Pulse Width Pulse verwendet:
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -28,7 +28,7 @@ Die folgenden Enumerationstypen werden mit der Pulse Width-Modulation verwendet:
 
 | Thema                                            | BESCHREIBUNG                                                                                                  |
 |--------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [**PWM- \_ Polarität**](/windows/desktop/api/Pwm/ne-pwm-pwm_polarity)<br/> | Stellt die Polarität der Pulse Width-Modulation (PWM)-Signalebene in Bezug auf den Duty-Cycle dar.<br/> |
+| [**PWM \_ POLARITY**](/windows/desktop/api/Pwm/ne-pwm-pwm_polarity)<br/> | Stellt die PwM-Signalebenen-Polarität (Pulse Width Pw) in Bezug auf den Arbeitszyklus dar.<br/> |
 
 
 

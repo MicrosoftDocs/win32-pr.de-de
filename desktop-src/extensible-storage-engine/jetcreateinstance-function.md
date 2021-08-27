@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetkreateinzustance-Funktion'
+description: Weitere Informationen finden Sie unter JetCreateInstance-Funktion.
 title: JetCreateInstance-Funktion
 TOCTitle: JetCreateInstance Function
 ms:assetid: 9d6c8c9f-3d3b-4308-87d3-84b1ef270262
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: aa64c9aadd9402ee8356a8f4db81f878022b838b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f22c411dd68b29b0cf305888f9dcce16add9a2dc
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366484"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985043"
 ---
 # <a name="jetcreateinstance-function"></a>JetCreateInstance-Funktion
 
@@ -34,9 +34,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetcreateinstance-function"></a>JetCreateInstance-Funktion
 
-Die **jetkreateinstance** -Funktion weist eine neue Instanz der Datenbank-Engine für die Verwendung in einem einzelnen Prozess zu.
+Die **JetCreateInstance-Funktion** ordnet eine neue Instanz der Datenbank-Engine für die Verwendung in einem einzelnen Prozess zu.
 
-**Windows XP: jetkreateinstance** wird in Windows XP eingeführt.
+**Windows XP: JetCreateInstance** wird in Windows XP eingeführt.
 
 ```cpp
     JET_ERR JET_API JetCreateInstance(
@@ -47,127 +47,80 @@ Die **jetkreateinstance** -Funktion weist eine neue Instanz der Datenbank-Engine
 
 ### <a name="parameters"></a>Parameter
 
-*pinstance*
+*Pinstance*
 
-Der Ausgabepuffer, der die neu erstellte-Instanz empfängt.
+Der Ausgabepuffer, der die neu erstellte Instanz empfängt.
 
-*szinstancename*
+*szInstanceName*
 
-Ein eindeutiger Zeichen folgen Bezeichner für die zu erstellende-Instanz. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine gehostet, eindeutig sein.
+Ein eindeutiger Zeichenfolgenbezeichner für die zu erstellende Instanz. Diese Zeichenfolge muss innerhalb eines bestimmten Prozesses, der die Datenbank-Engine hosten, eindeutig sein.
 
-**Hinweis** Ein NULL-Wert wird als gültiger Zeichen folgen Bezeichner für eine-Instanz behandelt. Es darf nur eine Instanz eine NULL-Zeichen folgen Kennung enthalten.
+**Hinweis:** Ein NULL-Wert wird als gültiger Zeichenfolgenbezeichner für eine -Instanz behandelt. Nur eine Instanz kann einen NULL-Zeichenfolgenbezeichner haben.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceNameInUse</p></td>
-<td><p>Der angegebene Instanzname wird bereits für diesen Vorgang verwendet.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann bei <strong>jetkreateinstance</strong> vorkommen, wenn <em>pinstance</em> <strong>null</strong>ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, weil er nicht verwendet werden kann, wenn die Datenbank-Engine im Einzel Instanz-Modus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTooManyInstances</p></td>
-<td><p>Es konnte keine neue Instanz erstellt werden, da die maximale Anzahl von Instanzen erreicht wurde. Die maximale Anzahl unterstützter Instanzen wird mithilfe von <a href="gg294044(v=exchg.10).md">jetsetsystemparameter</a> mithilfe von <em>JET_paramMaxInstances</em>konfiguriert.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wird eine neue Instanz zugewiesen, und der Bezeichner für die Instanz wird zurückgegeben. An diesem Punkt verfügen alle Systemparameter für die-Instanz über die Werte der globalen Standardsystem Parameter. Sobald eine Instanz zugewiesen wird, muss Sie beendet und/oder später freigegeben werden.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInstanceNameInUse</p> | <p>Der angegebene Instanzname wird für diesen Prozess bereits verwendet.</p> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetCreateInstance passieren,</strong> wenn <em>pinstance</em> NULL <strong>ist.</strong></p> | 
+| <p>JET_errRunningInOneInstanceMode</p> | <p>Der Vorgang ist fehlgeschlagen, da er nicht verwendet werden kann, wenn die Datenbank-Engine im Einzelinstanzmodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird.</p> | 
+| <p>JET_errTooManyInstances</p> | <p>Eine neue Instanz konnte nicht erstellt werden, da die maximale Anzahl von Instanzen erreicht wurde. Die maximale Anzahl unterstützter Instanzen wird mit <a href="gg294044(v=exchg.10).md">JetSetSystemParameter mithilfe</a> <em>von</em>JET_paramMaxInstances.</p> | 
 
-Bei einem Fehler wird ein Fehler zurückgegeben, der die Ursache des Fehlers darstellt, und es wird keine Instanz zugeordnet.
+
+
+Bei Erfolg wird eine neue Instanz zugeordnet, und der Bezeichner dafür wird zurückgegeben. An diesem Punkt verfügen alle Systemparameter für die Instanz über die Werte der globalen Standardsystemparameter. Nachdem eine Instanz zugeordnet wurde, muss sie später beendet und/oder wieder aufgehoben werden.
+
+Bei einem Fehler wird ein Fehler zurückgegeben, der die Fehlerursache darstellt, und es wird keine Instanz zugeordnet.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Eine Instanz muss mit einem [calltinit](./jetinit-function.md) -Namen initialisiert werden, bevor Sie von einem anderen als [jetsetsystemparameter](./jetsetsystemparameter-function.md)verwendet werden kann.
+Eine -Instanz muss mit einem Aufruf von [JetInit](./jetinit-function.md) initialisiert werden, bevor sie von etwas anderem als [JetSetSystemParameter verwendet werden kann.](./jetsetsystemparameter-function.md)
 
-Eine Instanz wird durch einen-Rückruf der [jetterm](./jetterm-function.md) -Funktion zerstört, auch wenn diese Instanz nicht mit [jetinit](./jetinit-function.md)initialisiert wurde. Die maximale Anzahl von Instanzen, die zu einem beliebigen Zeitpunkt erstellt werden können, wird durch [JET_paramMaxInstances](./resource-parameters.md)gesteuert, der durch einen Aufruf von [jetsetsystemparameter](./jetsetsystemparameter-function.md)konfiguriert werden kann. Eine Instanz ist die Wiederherstellbarkeits Einheit für die Datenbank-Engine. Er steuert den Lebenszyklus aller Dateien, mit denen die Integrität der Daten in einem Satz von Datenbankdateien geschützt wird. Diese Dateien enthalten die Prüf Punkt Datei und die Transaktionsprotokoll Dateien.
+Eine -Instanz wird durch einen Aufruf der [JetTerm-Funktion](./jetterm-function.md) zerstört, auch wenn diese Instanz nie mit [JetInit initialisiert wurde.](./jetinit-function.md) Die maximale Anzahl von Instanzen, die zu einem beliebigen Zeitpunkt erstellt werden können, wird durch [JET_paramMaxInstances](./resource-parameters.md)gesteuert, das durch einen Aufruf von [JetSetSystemParameter konfiguriert werden kann.](./jetsetsystemparameter-function.md) Eine -Instanz ist die Einheit der Wiederherstellbarkeit für die Datenbank-Engine. Sie steuert den Lebenszyklus aller Dateien, die zum Schutz der Integrität der Daten in einer Gruppe von Datenbankdateien verwendet werden. Zu diesen Dateien gehören die Prüfpunktdatei und die Transaktionsprotokolldateien.
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird die Datenbank-Engine als Nebeneffekt dieses Aufrufes automatisch in den Modus für mehrere Instanzen geändert. Wenn die Anwendung nur eine Instanz im Prozess zulassen möchte, sollte [jetinit](./jetinit-function.md) verwendet werden, um die Datenbank-Engine im Windows 2000-Kompatibilitätsmodus zu starten.
+Wenn die Funktion erfolgreich ausgeführt wird, wird die Datenbank-Engine als Nebeneffekt dieses Aufrufs automatisch in den Modus mit mehreren Instanzen geändert. Wenn die Anwendung nur eine Instanz im Prozess zulassen möchte, sollte [JetInit](./jetinit-function.md) verwendet werden, um die Datenbank-Engine im Windows 2000-Kompatibilitätsmodus zu starten.
 
-Falls vorhanden, wird der *szDisplayName* verwendet, um die Instanz an Orten wie dem Ereignisprotokoll oder an anderen Aufrufern wie Sicherungs Anwendungen (über Funktionen wie [jetgetinstanceinfo](./jetgetinstanceinfo-function.md) oder [jetossnapshotfreeze](./jetossnapshotfreeze-function.md)) zu identifizieren. Wenn der Anzeige Name nicht angegeben wird, wird stattdessen der eindeutige *szinstancename* verwendet, sofern vorhanden. andernfalls wird eine leere Zeichenfolge zurückgegeben. Wenn für die Engine nicht der laufende Modus festgelegt wurde, wird Sie nach diesem-Befehl auf den Modus für mehrere Instanzen festgelegt.
+Falls vorhanden, wird *szDisplayName* verwendet, um die Instanz an Stellen wie dem Ereignisprotokoll oder für andere Aufrufer wie Sicherungsanwendungen (über Funktionen wie [JetGetInstanceInfo](./jetgetinstanceinfo-function.md) oder [JetOSSnapshotFreeze) zu identifizieren.](./jetossnapshotfreeze-function.md) Wenn der Anzeigename nicht angegeben wird, wird stattdessen der eindeutige *szInstanceName* verwendet, sofern vorhanden. Andernfalls wird eine leere Zeichenfolge zurückgegeben. Wenn für die Engine der Ausführungsmodus nicht festgelegt wurde, wird sie nach diesem Aufruf auf den Modus mit mehreren Instanzen festgelegt.
 
-Die typische Startsequenz für einen Prozess, bei dem möglicherweise mehrere Jet-Instanzen ausgeführt werden, wäre Folgendes:
+Die typische Startsequenz für einen Prozess, der möglicherweise mehrere Jet-Instanzen ausführen kann, wäre:
 
-  - Ein [JetCreateInstance2](./jetcreateinstance2-function.md) -Befehl, der die-Instanz zuweist und deren Namen bezeichnet.
+  - Ein Aufruf von [JetCreateInstance2,](./jetcreateinstance2-function.md) der die Instanz zuteilen und benennen wird.
 
-  - Mehrere Aufrufe von [jetsetsystemparameter](./jetsetsystemparameter-function.md) für diese Instanz, um unterschiedliche Systemparameter festzulegen. Beachten Sie, dass einige Systemparameter pro Instanz eindeutig sein müssen (wie z. b. [JET_paramSystemPath](./transaction-log-parameters.md) oder [JET_paramLogFilePath](./transaction-log-parameters.md)), sodass wahrscheinlich eine dieser Parameter festgelegt werden muss.
+  - Mehrere Aufrufe von [JetSetSystemParameter für](./jetsetsystemparameter-function.md) diese Instanz, um unterschiedliche Systemparameter festlegen zu können. Beachten Sie, dass einige Systemparameter pro Instanz eindeutig sein müssen (z. B. [JET_paramSystemPath](./transaction-log-parameters.md) oder [JET_paramLogFilePath),](./transaction-log-parameters.md)sodass sie höchstwahrscheinlich jeweils festgelegt werden müssen.
 
-  - Starten Sie die Instanz mit [jetinit](./jetinit-function.md) oder [JetInit2](./jetinit2-function.md). Um eine Instanz zu beenden und/oder freizugeben, muss [jetterm](./jetterm-function.md), [JetTerm2](./jetterm2-function.md) verwendet werden.
+  - Starten Sie die Instanz mit [JetInit](./jetinit-function.md) oder [JetInit2.](./jetinit2-function.md) Um eine Instanz zu beenden und/oder frei zu geben, müssen [JetTerm](./jetterm-function.md)und [JetTerm2](./jetterm2-function.md) verwendet werden.
 
-Wenn dies die erste Instanz ist, die gestartet werden soll, gibt es eine Reihe zusätzlicher Schritte, die während dieses Aufrufes ausgeführt werden, um eine grundlegende Systeminitialisierung und Konfiguration zu ermöglichen. Einige dieser Schritte können zu bestimmten Fehlern führen, die mit JET_errOutOfMemory beginnen, aber auch andere (siehe Fehler oben).
+Wenn dies die erste Instanz ist, die gestartet werden soll, gibt es eine Reihe zusätzlicher Schritte, die während dieses Aufrufs ausgeführt werden, um grundlegende Systemin initialisierung und Konfiguration auszuführen. Eine Reihe dieser Schritte kann zu bestimmten Fehlern führen, die mit JET_errOutOfMemory, aber auch anderen (siehe Fehler oben).
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetkreateingestancew</strong> (Unicode) und <strong>jetkreateingestancea</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetCreateInstanceW</strong> (Unicode) und <strong>JetCreateInstanceA</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Extensible Storage Engine-Dateien](./extensible-storage-engine-files.md)  
+[Erweiterbare Storage-Engine-Dateien](./extensible-storage-engine-files.md)  
 [JET_ERR](./jet-err.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JetCreateInstance2](./jetcreateinstance2-function.md)  
-[Jetenablemultiinstance](./jetenablemultiinstance-function.md)  
-[Jetgetinstanceingefo](./jetgetinstanceinfo-function.md)  
+[JetEnableMultiInstance](./jetenablemultiinstance-function.md)  
+[JetGetInstanceInfo](./jetgetinstanceinfo-function.md)  
 [JetInit](./jetinit-function.md)  
 [JetInit2](./jetinit2-function.md)  
-[Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[Jetterm](./jetterm-function.md)  
+[JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[JetTerm](./jetterm-function.md)  
 [JetTerm2](./jetterm2-function.md)

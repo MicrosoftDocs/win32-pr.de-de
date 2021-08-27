@@ -4,12 +4,12 @@ description: Es gibt zwei Versionen des Serialisierungsformats für Eigenschafte
 ms.assetid: 10544118-5e80-47e2-b75b-c1a43be15b2e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9412fd2a83ab7c71b97888d4ae7911a96fdc4cfe5a9ebbceb5d985b3a5e2b418
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: d9f340b31252bfc3d99f72746e8ae791f313498c
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118886475"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122989153"
 ---
 # <a name="property-set-serialization"></a>Serialisierung von Eigenschaftensatz
 
@@ -31,7 +31,7 @@ Die folgenden Elemente identifizieren die Unterschiede zwischen den Serialisieru
 
     VT_DECIMAL
 
-    Darüber hinaus können SafeArrays in einem Eigenschaftensatz serialisiert werden. Das Vorhandensein eines SafeArray wird durch das VT_ARRAY Bit kombiniert, wobei ein **OR-Vorgang** mit den Arrayelementen im **vt-Member** der [**PROPVARIANT-Struktur**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) verwendet wird. Ein SafeArray mit 4-Byte-Ganzzahlen mit Vorzeichen hat beispielsweise den Typ VT_ARRAY \| VT_I4.
+    Darüber hinaus können SafeArrays in einem Eigenschaftensatz serialisiert werden. Das Vorhandensein eines SafeArray-Elements wird durch das VT_ARRAY Bit kombiniert, wobei ein **OR-Vorgang** mit den Arrayelementen im **vt-Member** der [**PROPVARIANT-Struktur**](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) verwendet wird. Ein SafeArray mit 4-Byte-Ganzzahlen mit Vorzeichen hat beispielsweise den Typ VT_ARRAY \| VT_I4.
 
     Die folgenden Elementtypen sind für safeArray in einem serialisierten Eigenschaftensatz gültig:
 

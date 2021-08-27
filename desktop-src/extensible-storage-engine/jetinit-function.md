@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetinit-Funktion'
+description: Weitere Informationen finden Sie unter JetInit-Funktion.
 title: JetInit-Funktion
 TOCTitle: JetInit Function
 ms:assetid: b7f78cca-7268-4045-bda2-20746b1d6370
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 308c012bc5eb144e0ac0d608c64d63ccf39aeca1
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: d074e07dec88bf0b33ec56b1391986758fbd388c
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104356216"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984533"
 ---
 # <a name="jetinit-function"></a>JetInit-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetinit-function"></a>JetInit-Funktion
 
-Die **jetinit** -Funktion versetzt die Datenbank-Engine in einen Zustand, in dem Sie die Anwendungs Verwendung von Datenbankdateien unterstützen kann. Die Engine muss für die Initialisierung mit [jetsetsystemparameter](./jetsetsystemparameter-function.md)bereits ordnungsgemäß konfiguriert sein. Die Daten Bank Absturz Wiederherstellung wird automatisch als Teil des Initialisierungs Prozesses ausgeführt.
+Die **JetInit-Funktion** versetzt die Datenbank-Engine in einen Zustand, in dem sie die Anwendungsnutzung von Datenbankdateien unterstützen kann. Die Engine muss bereits ordnungsgemäß für die Initialisierung mit [JetSetSystemParameter konfiguriert sein.](./jetsetsystemparameter-function.md) Die Datenbankabsturzwiederherstellung wird automatisch als Teil des Initialisierungsprozesses ausgeführt.
 
 ```cpp
 JET_ERR JET_API JetInit(
@@ -42,26 +42,26 @@ JET_ERR JET_API JetInit(
 
 ### <a name="parameters"></a>Parameter
 
-*pinstance*
+*Pinstance*
 
-Die-Instanz, die für diesen Befehl verwendet werden soll.
+Die -Instanz, die für diesen Aufruf verwendet werden soll.
 
 Für Windows 2000 wird dieser Parameter ignoriert und sollte immer NULL sein.
 
-Für Windows XP und spätere Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacy Modus betrieben wird (Windows 2000-Kompatibilitätsmodus), in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein, oder er kann auf einen gültigen Ausgabepuffer festgelegt werden, der das globale Instanzhandle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieser Ausgabepuffer muss auf NULL oder JET_instanceNil festgelegt werden. Dieser Instanzhandle kann dann an jede andere Funktion weitergegeben werden, die eine-Instanz verwendet. Wenn die Engine im Modus für mehrere Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das Instanzhandle enthält, das von der initialisierten [jetkreateinstance](./jetcreateinstance-function.md) -Funktions Instanz zurückgegeben wird.
+Bei Windows XP und späteren Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein oder auf einen gültigen Ausgabepuffer festgelegt werden, der das globale Instanzhand handle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieser Ausgabepuffer muss auf NULL oder JET_instanceNil. Dieses Instanzhand handle kann dann an jede andere Funktion übergeben werden, die eine -Instanz verwendet. Wenn die Engine im Modus mit mehreren Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das Instanzhandl enthält, das von der [initialisierten JetCreateInstance-Funktionsinstanz](./jetcreateinstance-function.md) zurückgegeben wird.
 
 
 #### <a name="remarks"></a>Bemerkungen
 
-Eine Instanz muss mit einem **calltinit** -Namen initialisiert werden, bevor Sie von einem anderen als [jetsetsystemparameter](./jetsetsystemparameter-function.md)verwendet werden kann.
+Eine -Instanz muss mit einem Aufruf von **JetInit** initialisiert werden, bevor sie von etwas anderem als [JetSetSystemParameter verwendet werden kann.](./jetsetsystemparameter-function.md)
 
-Eine Instanz wird durch einen-Rückruf der [jetterm](./jetterm-function.md) -Funktion zerstört, auch wenn diese Instanz nicht mit **jetinit** initialisiert wurde. Eine Instanz ist die Wiederherstellbarkeits Einheit für die Datenbank-Engine. Er steuert den Lebenszyklus aller Dateien, mit denen die Integrität der Daten in einem Satz von Datenbankdateien geschützt wird. Diese Dateien enthalten die Prüf Punkt Datei und die Transaktionsprotokoll Dateien.
+Eine -Instanz wird durch einen Aufruf der [JetTerm-Funktion](./jetterm-function.md) zerstört, auch wenn diese Instanz nie mit **JetInit initialisiert wurde.** Eine -Instanz ist die Einheit der Wiederherstellbarkeit für die Datenbank-Engine. Sie steuert den Lebenszyklus aller Dateien, die zum Schutz der Integrität der Daten in einer Gruppe von Datenbankdateien verwendet werden. Zu diesen Dateien gehören die Prüfpunktdatei und die Transaktionsprotokolldateien.
 
-Die maximale Anzahl von Instanzen, die zu einem beliebigen Zeitpunkt erstellt werden können, wird durch [JET_paramMaxInstances](./resource-parameters.md)gesteuert, der durch einen Aufruf von [jetsetsystemparameter](./jetsetsystemparameter-function.md)konfiguriert werden kann. Wenn die Datenbank-Engine zum ersten Mal initialisiert wird, erstellt **jetinit** einen anfänglichen Satz von Dateien, um diese Instanz zu unterstützen. Diese Dateien enthalten eine Prüf Punkt Datei (mit dem Namen) \<[JET_paramBaseName](./transaction-log-parameters.md)\> . CHK), eine Reihe von reservierten Transaktionsprotokoll Dateien (mit dem Namen RES1. Log und RES2. Log), eine anfängliche Transaktionsprotokoll Datei (mit dem Namen) \<[JET_paramBaseName](./transaction-log-parameters.md)\> . Log) und eine temporäre Datenbankdatei (benannt nach [JET_paramTempPath](./temporary-database-parameters.md)). Wenn [JET_paramRecovery](./transaction-log-parameters.md) auf "Off" festgelegt ist, werden die Prüf Punkt Datei und die Protokolldateien nicht erstellt. Wenn [JET_paramMaxTemporaryTables](./temporary-database-parameters.md) auf NULL festgelegt ist, wird die temporäre Datenbankdatei nicht erstellt. Diese Dateien stellen den Speicherbedarf einer Instanz auf einem Datenträger dar und müssen mit Bedacht verwaltet werden. Wenn diese Dateien einzeln oder in Bezug auf einen anderen beschädigt werden, gehen die Daten, die in den Datenbanken gespeichert sind, die der Instanz zugeordnet sind, möglicherweise verloren.
+Die maximale Anzahl von Instanzen, die zu einem beliebigen Zeitpunkt erstellt werden können, wird durch [JET_paramMaxInstances](./resource-parameters.md)gesteuert, die durch einen Aufruf von [JetSetSystemParameter konfiguriert werden kann.](./jetsetsystemparameter-function.md) Wenn die Datenbank-Engine zum ersten Mal initialisiert wird, erstellt **JetInit** einen anfänglichen Satz von Dateien zur Unterstützung dieser Instanz. Diese Dateien enthalten eine Prüfpunktdatei (mit dem Namen \<[JET_paramBaseName](./transaction-log-parameters.md)\> ). CHK), eine Gruppe reservierter Transaktionsprotokolldateien (mit dem Namen RES1. LOG und RES2. LOG), eine anfängliche Transaktionsprotokolldatei (mit dem Namen \<[JET_paramBaseName](./transaction-log-parameters.md)\> ). LOG) und eine temporäre Datenbankdatei (benannt nach [JET_paramTempPath](./temporary-database-parameters.md)). Wenn [JET_paramRecovery](./transaction-log-parameters.md) auf "Aus" festgelegt ist, werden die Prüfpunktdatei und die Protokolldateien nicht erstellt. Wenn [JET_paramMaxTemporaryTables](./temporary-database-parameters.md) auf 0 (null) festgelegt ist, wird die temporäre Datenbankdatei nicht erstellt. Diese Dateien stellen die auf dem Datenträger einer Instanz dar und müssen mit Vorsicht verwaltet werden. Wenn diese Dateien einzeln oder in Bezug aufeinander beschädigt sind, gehen die daten, die in den datenbanken gespeichert sind, die der Instanz zugeordnet sind, möglicherweise verloren.
 
-Wenn die Datenbank-Engine mit einem vorhandenen Satz von Transaktionsprotokoll Dateien initialisiert wird, werden diese Dateien überprüft, um festzustellen, ob die vorherige Inkarnation der Instanz durch einen Absturz verursacht wurde. Wenn ein Absturz erkannt wird, wird automatisch die Wiederherstellung von Abstürzen ausgeführt. Bei diesem Vorgang werden die Datenbanken, die während der vorherigen Inkarnation der Engine an die Instanz angefügt sind, rekonstruiert und die Änderungen in den Datenbankdateien wieder hergestellt. Das Ergebnis sind Datenbanken, die Transaktions konsistent sind. Dieser Vorgang kann einige Zeit in Anspruch nehmen, wenn die Anzahl der Transaktionsprotokoll Dateien, die für die Datenbanken wiedergegeben werden sollen, sehr groß ist.
+Wenn die Datenbank-Engine mit einem vorhandenen Satz von Transaktionsprotokolldateien initialisiert wird, werden diese Dateien überprüft, um zu überprüfen, ob die vorherige Incarnation der Instanz nach einem Absturz kam. Wenn ein Absturz erkannt wird, wird automatisch die Wiederherstellung des Absturzes durchgeführt. Bei diesem Vorgang werden die Datenbanken rekonstruiert, die während der vorherigen Inkarnation der Engine an die Instanz angefügt wurden, und die Änderungen werden in den Datenbankdateien gespeichert. Das Ergebnis sind Datenbanken, die transaktions konsistent sind. Dieser Prozess kann einige Zeit in Dauern dauern, wenn die Anzahl der Transaktionsprotokolldateien, die für die Datenbanken wiedergegeben werden, groß ist.
 
-Aufgrund der Tatsache, dass **jetinit** die Wiederherstellung von Abstürzen ausführt, ist es möglich, dass im Falle eines Fehlers fast jeder Datenbank-Engine-Fehler zurückgegeben wird. In der Praxis werden die meisten Fehler in der Bereitstellung in zwei Kategorien unterteilt: Daten Beschädigung und Datei Misswirtschaft. Daten Beschädigungen werden am häufigsten in den folgenden oder ähnlichen Fehlern angezeigt:
+Aufgrund der Tatsache, dass **JetInit** eine Absturzwiederherstellung durchführt, ist es möglich, dass im Falle eines Fehlers fast jeder Datenbank-Engine-Fehler zurückgegeben wird. In der Praxis fallen die meisten Fehler, die bei der Bereitstellung auftreten, in zwei Kategorien: Datenbeschädigung und Dateifehlverwaltung. Datenbeschädigungen treten am häufigsten in den folgenden oder ähnlichen Fehlern auf:
 
   - JET_errReadVerifyFailure
 
@@ -69,7 +69,7 @@ Aufgrund der Tatsache, dass **jetinit** die Wiederherstellung von Abstürzen aus
 
   - JET_errCheckpointCorrupt
 
-Diese Fehler werden fast immer durch Hardwareprobleme verursacht und können daher nicht vermieden werden. Die Datei Misswirtschaft wird am häufigsten in den folgenden oder ähnlichen Fehlern angezeigt:
+Diese Fehler werden fast immer durch Hardwareprobleme verursacht und können daher nicht vermieden werden. Die Fehlverwaltung von Dateien wird sich am häufigsten in den folgenden oder ähnlichen Fehlern manifestieren:
 
   - JET_errMissingLogFile
 
@@ -79,57 +79,38 @@ Diese Fehler werden fast immer durch Hardwareprobleme verursacht und können dah
 
   - JET_errInvalidLogSequence
 
-Wenn die Wiederherstellung für eine Gruppe von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (was den Fehler JET_errAttachedDatabaseMismatch unter normalen Umständen zurückgibt), und der Client wünscht, dass die Wiederherstellung trotz fehlender Datenbanken fortgesetzt wird, kann die JET_ bitreplayignoremissingdb verwendet werden, um die Wiederherstellung der verfügbaren Datenbanken fortzusetzen. Diese Fehler können von der Anwendung verhindert werden. Die Anwendung muss darauf achten, das Repository dieser Dateien vor der Bearbeitung durch externe Kräfte wie z. b. den Benutzer oder andere Anwendungen zu schützen. Wenn die Anwendung eine Instanz vollständig zerstören möchte, müssen alle Dateien, die der Instanz zugeordnet sind, gelöscht werden. Hierzu gehören die Prüf Punkt Datei, die Transaktionsprotokoll Dateien und alle Datenbankdateien, die an die Instanz angefügt sind.
+Wenn die Wiederherstellung für eine Gruppe von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (wodurch unter normalen Umständen der Fehler JET_errAttachedDatabaseMismatch zurückgegeben wird) und der Client die Wiederherstellung trotz fehlender Datenbanken fortsetzen möchte, kann die JET_ bitReplayIgnoreMissingDB verwendet werden, um die Wiederherstellung für die verfügbaren Datenbanken fortzufahren. Diese Fehler können von der Anwendung verhindert werden. Die Anwendung muss darauf achten, das Repository dieser Dateien vor manipulation durch externe Erzwingungen wie den Benutzer oder andere Anwendungen zu schützen. Wenn die Anwendung eine Instanz vollständig zerstören möchte, müssen alle der Instanz zugeordneten Dateien gelöscht werden. Dazu gehören die Prüfpunktdatei, die Transaktionsprotokolldateien und alle Datenbankdateien, die an die Instanz angefügt sind.
 
-Die **jetinit** -Funktion verhält sich in Bezug auf die Datenbankdateien, die an die Instanz angefügt sind, zwischen Windows 2000 und neueren Versionen anders.
+Die **JetInit-Funktion** verhält sich in Bezug auf Datenbankdateien, die an die -Instanz angefügt sind, zwischen Windows 2000 und späteren Versionen unterschiedlich.
 
-**Windows 2000:**  In Windows 2000 bleibt jede Datenbank, die während einer früheren Inkarnation dieser Instanz an die Instanz angefügt ist, nach der erfolgreichen Ausführung von **jetinit** an die Instanz angefügt. Es ist nicht erforderlich, [jetattachdatabase](./jetattachdatabase-function.md) nach **jetinit** aufzurufen, um den späteren Datenbankzugriff zu gewährleisten. Wenn die [jetattachdatabase](./jetattachdatabase-function.md) -Funktion nach der **jetinit** -Funktion aufgerufen wird, wird die JET_wrnDatabaseAttached Warnung zurückgegeben. Diese Warnung gibt an, dass die Daten Bank Anlage beibehalten wurde und ignoriert werden kann.
+**Windows 2000:**  In Windows 2000 bleibt jede Datenbank, die während einer vorherigen Inkarnation dieser Instanz an die Instanz angefügt wurde, an die Instanz angefügt, nachdem **JetInit** erfolgreich abgeschlossen wurde. Es ist nicht erforderlich, [JetAttachDatabase nach](./jetattachdatabase-function.md) **JetInit aufzurufen,** um späteren Datenbankzugriff zu schützen. Wenn die [JetAttachDatabase-Funktion](./jetattachdatabase-function.md) nach der **JetInit-Funktion** aufgerufen wird, JET_wrnDatabaseAttached Warnung zurückgegeben. Diese Warnung gibt an, dass die Datenbankanlage beibehalten wurde und ignoriert werden kann.
 
-**Windows XP:**  In Windows XP und späteren Versionen werden alle Datenbanken von **jetinit** automatisch von der Instanz getrennt. Dies bedeutet, dass [jetattachdatabase](./jetattachdatabase-function.md) in diesem Fall immer nach **jetinit** aufgerufen werden muss.
+**Windows XP:**  In Windows XP und späteren Versionen werden alle Datenbanken automatisch von der -Instanz durch **JetInit getrennt.** Dies bedeutet, [dass JetAttachDatabase](./jetattachdatabase-function.md) in diesem Fall immer nach **JetInit** aufgerufen werden muss.
 
-Jede Anwendung, die für die Ausführung unter Windows 2000 und späteren Versionen geschrieben wird, muss [jetattachdatabase](./jetattachdatabase-function.md) nach **jetinit** immer anrufen. Wenn die Anwendung unter Windows 2000 ausgeführt wird, muss Sie in einigen Fällen JET_wrnDatabaseAttached erwarten. Weitere Informationen finden Sie unter [jetattachdatabase](./jetattachdatabase-function.md) .
+Jede Anwendung, die für die Ausführung in Windows 2000 und in späteren Releases geschrieben wurde, muss [immer JetAttachDatabase](./jetattachdatabase-function.md) nach **JetInit aufrufen.** Wenn die Anwendung auf Windows 2000 ausgeführt wird, muss sie in einigen Fällen mit JET_wrnDatabaseAttached rechnen. Weitere Informationen finden Sie unter [JetAttachDatabase.](./jetattachdatabase-function.md)
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Extensible Storage Engine-Dateien](./extensible-storage-engine-files.md)  
+[Erweiterbare Storage-Engine-Dateien](./extensible-storage-engine-files.md)  
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_INSTANCE](./jet-instance.md)  
 [JET_paramMaxTemporaryTables](./temporary-database-parameters.md)  
 [JET_paramRecovery](./transaction-log-parameters.md)  
-[Jetattachdatabase](./jetattachdatabase-function.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetAttachDatabase](./jetattachdatabase-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit3](./jetinit3-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)

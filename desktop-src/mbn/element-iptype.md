@@ -1,32 +1,32 @@
 ---
-description: Mbnprofileext \/ ... \/ Iptype (v4)
+description: MBNProfileExt \/ ... \/ IPType (v4)
 MS-HAID: WWAN\_profile\_v4.element\_IPType
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Iptype
+title: IPType
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 918355cdfc90863539da5f29aff542654a95f5e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2a7823fc62bea228ec2a1f7e50629d74ce29dde3
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526627"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988753"
 ---
-# <a name="span-idwwan_profile_v4element_iptypespanmbnprofileextiptype-v4"></a><span id="WWAN_profile_v4.element_IPType"></span>Mbnprofileext \/ ... \/ Iptype (v4)
+# <a name="span-idwwan_profile_v4element_iptypespanmbnprofileextiptype-v4"></a><span id="WWAN_profile_v4.element_IPType"></span>MBNProfileExt \/ ... \/ IPType (v4)
 
 Gibt den IP-Typ an, der für diese Datenverbindung verwendet werden soll.
 
-Dieses Element ist neu in v4 des Schemas. Das-Element kann einen der folgenden Werte aufweisen.
+Dieses Element ist neu in Version 4 des Schemas. Das -Element kann einen der folgenden Werte aufweisen.
 
 | Wert   | Bedeutung                                       |
 |---------|-----------------------------------------------|
-| Standard | Der IP-Typ muss von niedrigeren Ebenen ausgewählt werden.     |
-| IPv4    | IPv4 verwenden                                      |
+| Standard | IP-Typ muss von niedrigeren Ebenen ausgewählt werden     |
+| IPv4    | Verwenden von IPv4                                      |
 | IPv6    | IPv6 verwenden                                      |
-| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6 als verfügbar.           |
-| Xlat    | Verwenden von 464xlat zum Tunneln von IPv4 über IPv6-Netzwerke |
+| IPv4v6  | Verwenden Sie IPv4 und/oder IPv6, sofern verfügbar.           |
+| XLAT    | Verwenden von 464XLAT zum Tunneln von IPv4 über IPv6-Netzwerke |
 
  
 
@@ -62,41 +62,21 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-context.md">Context</a></td>
-<td><p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-context.md">Context</a> | <p>Gibt die Parameter an, die zum Herstellen einer Datenverbindung erforderlich sind.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

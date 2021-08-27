@@ -1,41 +1,41 @@
 ---
-title: Anforderungen an Online Music Stores
-description: Anforderungen an Online Music Stores
+title: Anforderungen für Online Musik Stores
+description: Anforderungen für Online Musik Stores
 ms.assetid: 0595e7e0-6da9-4caa-a305-cfedd81e217e
 keywords:
-- Windows Media Player Online Stores
+- Windows Media Player Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff9896bc9c715ed0c7bda22bf28e95ef8d887b04
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 9613f3c050cd8783c956067e98b07b2c51c3dc15c32230ed44a46c085a4c91e0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104039767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123230"
 ---
-# <a name="requirements-for-online-music-stores"></a>Anforderungen an Online Music Stores
+# <a name="requirements-for-online-music-stores"></a>Anforderungen für Online Musik Stores
 
-Alle Anforderungen, die Ihr Online Store erfüllen muss, finden Sie im Online Media Service-Auflistungs Vertrag für Windows Media Player. Um sicherzustellen, dass Ihr Online Store eine gute Benutzererfahrung bietet, haben wir einige wichtige Anforderungen bezüglich Anpassung und Wiedergabe hervorgehoben.
+Alle Anforderungen, die Ihr Onlineshop erfüllen muss, sind im Online Media Service Listing Agreement für Windows Media Player aufgeführt. Um sicherzustellen, dass Ihr Onlineshop eine hervorragende Benutzererfahrung bietet, haben wir einige wichtige Anforderungen in Bezug auf Anpassung und Wiedergabe hervorgehoben.
 
--   Die Anfangs Seite des Stores, die auf der Windows-Media Player-Benutzeroberfläche verfügbar gemacht wird, muss funktionsfähig sein, ohne dass sich der Benutzer anmelden muss.
--   Popup-Werbeeinblendungen, die ein separates Browserfenster starten, sind nicht zulässig.
--   Die gesamte Benutzeroberfläche zum Durchsuchen, kaufen und wiedergeben muss innerhalb der Benutzeroberfläche des Windows-Media Player und nicht in einem separaten Popup Browserfenster oder in einem eingebetteten Media Player gerendert werden.
--   Die Systray-Installation einer Anwendung und Hintergrundprozesse, die fortlaufend ausgeführt werden, sind nicht zulässig.
--   Diskrete Aktionen wie z. b. das anmelden, die Abrechnung, der Erwerb physischer CDs oder andere verwandte Features außerhalb des primären Digital Media-Dienstanbieter können eine Verknüpfung mit einer Browser Instanz außerhalb des Players für das Feature für nicht digitale Medien herstellen.
--   Lizenzen, die vom Speicher bereitgestellt werden, müssen unabhängig von der Verbindung des Stores mit Windows Media Player gültig bleiben. Weitere Informationen finden Sie im Abschnitt "Begriff und Beendigung" der Online Media Service-Auflistungs Vereinbarung für Windows Media Player.
+-   Die anfängliche Seite des Speichers, der auf der Windows Media Player Benutzeroberfläche verfügbar gemacht wird, muss funktionsfähig sein, ohne dass sich der Benutzer anmelden muss.
+-   Popupanzeigen, die ein separates Browserfenster starten, sind nicht zulässig.
+-   Die gesamte Oberfläche zum Durchsuchen, Kaufen und Wiedergeben muss auf der Benutzeroberfläche des Windows Media Player und nicht in einem separaten Popupbrowserfenster oder eingebetteten Media Player gerendert werden.
+-   Die Systray-Installation einer Anwendung und von Hintergrundprozessen, die kontinuierlich ausgeführt werden, sind nicht zulässig.
+-   Diskrete Aktionen wie Anmeldung, Abrechnung, Erwerb physischer CDs oder andere verwandte Features außerhalb des primären digitalen Mediendiensts können mit einer Browserinstanz außerhalb des Players für das Feature "Nicht digitale Medien" verknüpft werden.
+-   Vom Store bereitgestellte Lizenzen müssen unabhängig von der Verbindung des Geschäfts mit Windows Media Player gültig bleiben. Weitere Informationen finden Sie im Abschnitt Laufzeit und Beendigung des Online Media Service-Auflistungsvertrags für Windows Media Player.
 
-Von Zeit zu Zeit kann Microsoft die Anforderungen für die Eignung und den Onboarding aktualisieren und auf der [Windows Media-Website](https://www.microsoft.com/windows/windowsmedia/default.mspx) () veröffentlichen https://www.microsoft.com/windows/windowsmedia/default.mspx) .
+Von Zeit zu Zeit kann Microsoft die Berechtigungs- und Onboardinganforderungen aktualisieren und sie auf der [Windows Media-Website](https://www.microsoft.com/windows/windowsmedia/default.mspx) veröffentlichen ( https://www.microsoft.com/windows/windowsmedia/default.mspx) .
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Willkommens-Kit für Online Stores](online-stores-welcome-kit.md)
+[Welcome Kit für Onlineshops](online-stores-welcome-kit.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

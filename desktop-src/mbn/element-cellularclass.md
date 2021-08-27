@@ -7,12 +7,12 @@ MSHAttr:
 title: CellularClass
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 42eedf13be21ca641d4a5b23d572c62db3a1996821a497645a61904309d216fa
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 6d8f0fbbd2ab8548eec9550f83fc15d1461ed56a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118745131"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122474776"
 ---
 # <a name="span-idwwan_profile_v4element_cellularclassspancellularclass"></a><span id="WWAN_profile_v4.element_CellularClass"></span>CellularClass
 
@@ -46,42 +46,19 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-profileconditionedon.md">ProfileConditionedOn</a></td>
-<td><p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p>
-<p>Dieses Element ist neu für v4. Sie können mehrere Profile angeben, die unter verschiedenen Bedingungen gelten, und das richtige Profil automatisch verwenden, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie es nicht angeben, ist das Profil immer in Bezug auf die aufgeführten Bedingungen anwendbar.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-profileconditionedon.md">ProfileConditionedOn</a> | <p>Gibt die Bedingungen an, die erfüllt sein müssen, damit ein Profil anwendbar ist.</p><p>Dieses Element ist neu für v4. Sie können mehrere Profile angeben, die unter verschiedenen Bedingungen gelten, und das richtige Profil automatisch verwenden, wenn es anwendbar ist. Dieses Element ist optional. Wenn Sie es nicht angeben, ist das Profil immer in Bezug auf die aufgeführten Bedingungen anwendbar.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

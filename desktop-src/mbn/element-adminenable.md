@@ -1,22 +1,22 @@
 ---
-description: Mbnprofileext \/ adminenable (v4)
+description: MBNProfileExt \/ AdminEnable (v4)
 MS-HAID: WWAN\_profile\_v4.element\_AdminEnable
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Adminenable
+title: AdminEnable
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31feff50a8af55e8958db593f4bc31d6788483a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: da0ee7a0a281ed9639618875845816348be1a8f6
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041711"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122986343"
 ---
-# <a name="span-idwwan_profile_v4element_adminenablespanadminenablembnprofileextadminenable-v4"></a><span id="WWAN_profile_v4.element_AdminEnable"></span>Adminenablembnprofileext \/ adminenable (v4)
+# <a name="span-idwwan_profile_v4element_adminenablespanadminenablembnprofileextadminenable-v4"></a><span id="WWAN_profile_v4.element_AdminEnable"></span>AdminEnableMBNProfileExt \/ AdminEnable (v4)
 
-Gibt an, ob das Profil administrativ aktiviert ist. Dies ist ein neues Element für v4.
+Gibt an, ob das Profil administratorisch aktiviert ist. Dies ist ein neues Element für v4.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -48,46 +48,22 @@ Keine.
 
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
-</tr>
-<tr class="even">
-<td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Übergeordnetes Element | BESCHREIBUNG | 
+|----------------|-------------|
+| <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
+| <a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a> | <p>Modem-DM-Konfigurationsprofil.</p> | 
+
 
  
 
 ## <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Namespace</p></td>
-<td><p>https://www.microsoft.com/networking/WWAN/profile/v4</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 
+
 
  
 

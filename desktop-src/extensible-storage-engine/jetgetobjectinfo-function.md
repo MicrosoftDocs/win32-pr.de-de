@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetgetobjectinfo-Funktion'
+description: Weitere Informationen finden Sie unter JetGetObjectInfo-Funktion.
 title: JetGetObjectInfo-Funktion
 TOCTitle: JetGetObjectInfo Function
 ms:assetid: 3e069c61-6dab-4b79-8bf2-7844d017598f
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: cf4c3c9806d4dcf898d6daeb903eb6fc4322fee7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e6317280c5e794e9809c15f47f01d55ffd48eeb
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358945"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122982423"
 ---
 # <a name="jetgetobjectinfo-function"></a>JetGetObjectInfo-Funktion
 
@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetgetobjectinfo-function"></a>JetGetObjectInfo-Funktion
 
-Die **jetgetobjectinfo** -Funktion Ruft Informationen zu Datenbankobjekten ab. Derzeit werden nur Tabellen unterstützt. [Jetgettableinfo](./jetgettableinfo-function.md) kann zum Abrufen von mehr Informationen als **jetgetobjectinfo** verwendet werden.
+Die **JetGetObjectInfo-Funktion** ruft Informationen zu Datenbankobjekten ab. Derzeit werden nur Tabellen unterstützt. [JetGetTableInfo](./jetgettableinfo-function.md) kann verwendet werden, um mehr Informationen als **JetGetObjectInfo zu erhalten.**
 
 ```cpp
     JET_ERR JET_API JetGetObjectInfo(
@@ -51,178 +51,93 @@ Die **jetgetobjectinfo** -Funktion Ruft Informationen zu Datenbankobjekten ab. D
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der zu verwendende Daten Bank Sitzungs Kontext.
+Der zu verwendende Datenbanksitzungskontext.
 
-*DBID*
+*Dbid*
 
 Die Datenbank, aus der die Informationen abgerufen werden.
 
-*objyp*
+*objtyp*
 
-Die-Objekte, die Informationen enthalten, die abgerufen werden sollen. Derzeit werden nur JET_objtypNil und JET_objtypTable unterstützt, die beide identisch sind. Es werden nur Tabellen abgerufen.
+Die Objekte, die abzurufende Informationen enthalten. Derzeit werden nur JET_objtypNil und JET_objtypTable unterstützt, die sich beide identisch verhalten. Es werden nur Tabellen abgerufen.
 
-*szcontainername*
+*szContainerName*
 
-Dieser Parameter ist für die zukünftige Verwendung reserviert und übergibt **null**. Der Name der Objekttypen, für die Informationen abgerufen werden sollen.
+Dieser Parameter ist für die zukünftige Verwendung reserviert und übergibt **NULL.** Der Name der Objekttypen, über die Informationen abgerufen werden.
 
-*szobjectname*
+*szObjectName*
 
-Der Name des Objekts, das Informationen enthält, die abgerufen werden sollen. Wenn *infolevel* die Optionen JET_ObjInfoList oder JET_ObjInfoListNoStats verwendet, um eine Liste aller Objekte abzurufen, muss dieser Wert **null** oder eine leere Zeichenfolge sein.
+Der Name des Objekts, das abzurufende Informationen enthält. Wenn *InfoLevel* die optionen JET_ObjInfoList oder JET_ObjInfoListNoStats verwendet, um eine Liste aller Objekte abzurufen, sollte dieser Wert **NULL** oder eine leere Zeichenfolge sein.
 
-Zurzeit werden nur Tabellennamen unterstützt.
+Derzeit werden nur Tabellennamen unterstützt.
 
-*pvresult*
+*pvResult*
 
 Zeiger auf einen Puffer, der die angegebenen Informationen empfängt.
 
-Die Größe des Puffers in Bytes wird in *cbmax* übermittelt. Bei einem Fehler ist der Inhalt von *pvresult* nicht definiert.
+Die Größe des Puffers in Bytes wird in *cbMax übergeben.* Bei einem Fehler ist der Inhalt *von pvResult* nicht definiert.
 
-Die in *pvresult* gespeicherten Informationen hängen von *infolevel* ab.
+Die in *pvResult* gespeicherten Informationen hängen von *InfoLevel ab.*
 
-*cbmax*
+*cbMax*
 
-Die Größe (in Bytes) des Puffers, der in *pvresult* übergeben wird.
+Die Größe des in pvResult übergebenen Puffers in *Bytes.*
 
-*Infolevel*
+*InfoLevel*
 
-Gibt an, welche Art von Informationen für das angegebene Objekt abgerufen werden sollen. Dies wirkt sich darauf aus, wie *pvresult* interpretiert wird.
+Gibt an, welche Art von Informationen für das angegebene Objekt abgerufen werden soll. Dies wirkt sich darauf *aus, wie pvResult* interpretiert wird.
 
 Die folgenden Optionen können für diesen Parameter festgelegt werden.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_ObjInfo</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO</a> Struktur interpretiert.</p>
-<p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO</a> -Struktur wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szobjectname</em>benannt ist.</p>
-<p>Wenn der Aufrufer nicht die Anzahl der Datensätze und Seiten für das Objekt kennen möchte, sollten Sie JET_ObjInfoNoStats Informationsebene verwenden, die möglicherweise schneller ist, da keine Statistik enthalten ist.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_ObjInfoList</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> Struktur interpretiert. Informationen zu allen Objekten werden abgerufen. Es wird eine temporäre Tabelle erstellt, und die Informationen, die für die Durchführung der temporären Tabelle erforderlich sind, werden in der <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> Struktur beschrieben. Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. Wenn der Aufrufer nicht die Anzahl der Datensätze und Seiten für das Objekt kennen möchte, sollten Sie JET_ObjInfoListNoStats verwenden, die möglicherweise schneller ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_ObjInfoListACM</p></td>
-<td><p>Veraltet und wird derzeit nicht unterstützt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_ObjInfoListNoStats</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> Struktur interpretiert. Informationen zu allen Objekten werden abgerufen. Es wird eine temporäre Tabelle erstellt, und die Informationen, die für die Durchführung der temporären Tabelle erforderlich sind, werden in der <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> Struktur beschrieben. Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. JET_ObjInfoListNoStats ist mit JET_ObjInfoList identisch, mit der Ausnahme, dass die Spalten, die die Anzahl von Datensätzen (<em>columnidcrecord</em>) und Pages (<em>columnidcpage</em>) melden, nicht aktualisiert werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_ObjInfoMax</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO</a>interpretiert. Die maximale Größe des Objekts befindet sich auf Seiten. Zurzeit werden nur Tabellen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_ObjInfoNoStats</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO</a>interpretiert. Informationen zu nur dem in " <em>szobjectname</em> " angegebenen Objekt werden abgerufen.</p>
-<p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO</a> Struktur wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szobjectname</em>benannt ist.</p>
-<p>JET_ObjInfoNoStats ist mit JET_ObjInfo identisch, mit dem Unterschied, dass die Felder, die die Anzahl von Datensätzen und Seiten melden, auf NULL festgelegt sind.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_ObjInfoRulesLoaded</p></td>
-<td><p>Veraltet und wird derzeit nicht unterstützt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_ObjInfoSysTabCursor</p></td>
-<td><p>Veraltet und wird derzeit nicht unterstützt.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_ObjInfoSysTabReadOnly</p></td>
-<td><p>Veraltet und wird derzeit nicht unterstützt.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_ObjInfo</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">eine</a> JET_OBJECTINFO interpretiert.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die JET_ObjInfoNoStats verwenden. Dies kann schneller sein, da Statistiken nicht enthalten sind.</p> | 
+| <p>JET_ObjInfoList</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der JET_OBJECTLIST <a href="gg269348(v=exchg.10).md">beschrieben.</a> Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die Verwendung von JET_ObjInfoListNoStats verwenden, was möglicherweise schneller ist.</p> | 
+| <p>JET_ObjInfoListACM</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
+| <p>JET_ObjInfoListNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der JET_OBJECTLIST <a href="gg269348(v=exchg.10).md">beschrieben.</a> Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. JET_ObjInfoListNoStats ist mit JET_ObjInfoList identisch, außer dass die Spalten, die die Anzahl der Datensätze (<em>columnidcRecord</em>) und Seiten (<em>columnidcPage</em>) melden, nicht aktualisiert werden.</p> | 
+| <p>JET_ObjInfoMax</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO.</a> Die maximale Größe des Objekts ist in Seiten. Derzeit werden nur Tabellen zurückgegeben.</p> | 
+| <p>JET_ObjInfoNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO.</a> Es werden nur Informationen zu dem in <em>szObjectName</em> angegebenen Objekt abgerufen.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>JET_ObjInfoNoStats ist mit JET_ObjInfo identisch, mit der Ausnahme, dass die Felder, die die Anzahl von Datensätzen und Seiten melden, auf 0 (null) festgelegt sind.</p> | 
+| <p>JET_ObjInfoRulesLoaded</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
+| <p>JET_ObjInfoSysTabCursor</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
+| <p>JET_ObjInfoSysTabReadOnly</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errBufferTooSmall</p></td>
-<td><p>Die Größe des in <em>cbmax</em> angegebenen Puffers war zu klein, um die gewünschten Informationen zu speichern.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidName</p></td>
-<td><p>In " <em>szobjectname</em> " oder " <em>szcontainername</em>" wurde ein ungültiger Name angegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Ein ungültiger Parameter wurde angegeben. Es ist möglich, dass eine ungültige Ebene an <em>infolevel</em>übermittelt wurde.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errBufferTooSmall</p> | <p>Die Größe des Puffers, der in <em>cbMax angegeben</em> wurde, war zu klein, um die gewünschten Informationen zu enthalten.</p> | 
+| <p>JET_errInvalidName</p> | <p>In <em>szObjectName</em> oder szContainerName wurde ein <em>ungültiger Name angegeben.</em></p> | 
+| <p>JET_errInvalidParameter</p> | <p>Ein fehlerhafter Parameter wurde angegeben. Es ist möglich, dass eine fehlerhafte Ebene an <em>InfoLevel übergeben wurde.</em></p> | 
+
 
 
 #### <a name="remarks"></a>Bemerkungen
 
-Wenn **jetgetobjectinfo** erfolgreich eine temporäre Tabelle erstellt (z. b. JET_ObjInfoList oder JET_ObjInfoNoStats), ist der Aufrufer für das Schließen der temporären Tabelle mit [jetclosetable](./jetclosetable-function.md)verantwortlich.
+Wenn **JetGetObjectInfo** erfolgreich eine temporäre Tabelle erstellt (z. B. JET_ObjInfoList oder JET_ObjInfoNoStats), ist der Aufrufer dafür verantwortlich, die temporäre Tabelle mit [JetCloseTable zu schließen.](./jetclosetable-function.md)
 
-**Jetgetobjectinfo** unterstützt derzeit nur das Abrufen von Informationen zu Tabellen.
+**JetGetObjectInfo unterstützt** derzeit nur das Abrufen von Informationen zu Tabellen.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetgetobjectinfow</strong> (Unicode) und <strong>jetgetobjectinfoa</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetGetObjectInfoW</strong> (Unicode) und <strong>JetGetObjectInfoA</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -234,5 +149,5 @@ Wenn **jetgetobjectinfo** erfolgreich eine temporäre Tabelle erstellt (z. b. JE
 [JET_TABLEID](./jet-tableid.md)  
 [JET_OBJECTINFO](./jet-objectinfo-structure.md)  
 [JET_OBJECTLIST](./jet-objectlist-structure.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetgettableinfo](./jetgettableinfo-function.md)
+[JetCloseTable](./jetclosetable-function.md)  
+[JetGetTableInfo](./jetgettableinfo-function.md)

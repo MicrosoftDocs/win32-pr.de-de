@@ -1,11 +1,11 @@
 ---
-title: Registeredtask. lasttaskresult-Eigenschaft
-description: Ruft bei der Skripterstellung die Ergebnisse ab, die bei der letzten Durchführung der registrierten Aufgabe zurückgegeben wurden.
+title: RegisteredTask.LastTaskResult (Eigenschaft)
+description: Für die Skripterstellung ruft die Ergebnisse ab, die bei der letzten Ausführung der registrierten Aufgabe zurückgegeben wurden.
 ms.assetid: 203cf320-6d97-48d6-a559-2419ed1e1fb9
 keywords:
-- Lasttaskresult-Eigenschaft Taskplaner
-- Lasttaskresult-Eigenschaft Taskplaner, registeredtask-Objekt
-- Registeredtask-Objekt Taskplaner, lasttaskresult-Eigenschaft
+- LastTaskResult-Taskplaner
+- LastTaskResult-Eigenschaft Taskplaner , RegisteredTask-Objekt
+- RegisteredTask-Objekt Taskplaner , LastTaskResult-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c1e676d5d5969824a4b9fec4e0b1882c6886128
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d73f9502c1c5568eb32cb4f3375ab3e83cce2fa957e62b18635f77cbcbace4c8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120126050"
 ---
-# <a name="registeredtasklasttaskresult-property"></a>Registeredtask. lasttaskresult-Eigenschaft
+# <a name="registeredtasklasttaskresult-property"></a>RegisteredTask.LastTaskResult (Eigenschaft)
 
-Ruft bei der Skripterstellung die Ergebnisse ab, die bei der letzten Durchführung der registrierten Aufgabe zurückgegeben wurden.
+Für die Skripterstellung ruft die Ergebnisse ab, die bei der letzten Ausführung der registrierten Aufgabe zurückgegeben wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,7 +38,7 @@ RegisteredTask.LastTaskResult As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Ergebnisse, die beim letzten Ausführen der registrierten Aufgabe zurückgegeben wurden.
+Die Ergebnisse, die bei der letzten Ausführung der registrierten Aufgabe zurückgegeben wurden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,9 +46,9 @@ Die Ergebnisse, die beim letzten Ausführen der registrierten Aufgabe zurückgeg
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
@@ -60,7 +60,7 @@ Die Ergebnisse, die beim letzten Ausführen der registrierten Aufgabe zurückgeg
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Registeredtask**](registeredtask.md)
+[**RegisteredTask**](registeredtask.md)
 </dt> </dl>
 
  

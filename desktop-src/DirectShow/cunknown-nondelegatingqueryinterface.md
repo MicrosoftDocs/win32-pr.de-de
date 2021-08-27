@@ -1,7 +1,7 @@
 ---
-description: 'Ruft einen Schnittstellen Zeiger ab und erhöht den Verweis Zähler. Diese Methode implementiert die inondelegatingunknown:: nondelegatingqueryinterface-Methode.'
+description: Ruft einen Schnittstellenzeiger ab und erhöht die Verweisanzahl. Diese Methode implementiert die INonDelegatingUnknown::NonDelegatingQueryInterface-Methode.
 ms.assetid: 451ca350-f40b-4cbf-ac39-e86dadb48a24
-title: Cunknown. nondelegatingqueryinterface-Methode (ComBase. h)
+title: CUnknown.NonDelegatingQueryInterface-Methode (Combase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b41810eb52db38644bda472907228cd812f76f6a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 26e13d9d30c3da208bb702427ee99a9648a7f538ba0d5a6a1b359db41e2cd155
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362057"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076010"
 ---
-# <a name="cunknownnondelegatingqueryinterface-method"></a>Cunknown. nondelegatingqueryinterface-Methode
+# <a name="cunknownnondelegatingqueryinterface-method"></a>CUnknown.NonDelegatingQueryInterface-Methode
 
-Ruft einen Schnittstellen Zeiger ab und erhöht den Verweis Zähler. Diese Methode implementiert die **inondelegatingunknown:: nondelegatingqueryinterface** -Methode.
+Ruft einen Schnittstellenzeiger ab und erhöht die Verweisanzahl. Diese Methode implementiert die **INonDelegatingUnknown::NonDelegatingQueryInterface-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,45 +46,45 @@ HRESULT NonDelegatingQueryInterface(
 *riid* 
 </dt> <dd>
 
-Der Bezeichner der Schnittstelle.
+Bezeichner der Schnittstelle.
 
 </dd> <dt>
 
-*PPV* 
+*Ppv* 
 </dt> <dd>
 
-Adresse eines Zeigers, der die Schnittstelle empfängt.
+Adresse eines Zeigers zum Empfangen der Schnittstelle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                        |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                                |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | Diese Schnittstelle wird vom Objekt nicht unterstützt.<br/> |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument.<br/>              |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | Das -Objekt unterstützt diese Schnittstelle nicht.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     |  NULL-Zeigerargument.<br/>              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **cunknown** -Klasse macht nur die **iuknown** -Schnittstelle verfügbar. Überschreiben Sie diese Methode, um zusätzliche Schnittstellen bereitzustellen Informationen dazu, wie Sie diese Methode überschreiben, finden Sie unter Gewusst [wie: Implementieren von IUnknown](how-to-implement-iunknown.md).
+Die **CUnknown-Klasse** macht nur die **IUknown-Schnittstelle** verfügbar. Überschreiben Sie diese Methode, um zusätzliche Schnittstellen verfügbar zu machen. Informationen zum Überschreiben dieser Methode finden Sie unter [Implementieren von IUnknown](how-to-implement-iunknown.md).
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>ComBase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Combase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

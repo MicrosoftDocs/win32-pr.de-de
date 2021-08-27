@@ -1,7 +1,7 @@
 ---
-description: Sucht das nächste gültige Verfahren, beginnend bei der Technik nach der angegebenen Technik.
+description: Sucht nach der nächsten gültigen Technik, beginnend bei der Technik nach der angegebenen Technik.
 ms.assetid: 0d2f3f80-90fd-495d-acb8-075f50e9a974
-title: 'ID3DXEffect:: findnextvalidtechnique-Methode (D3DX9Effect. h)'
+title: ID3DXEffect::FindNextValidTechnique-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: adcaaa5194abeb17d110118de922811eb84af7fa
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f65a08d1f1ec8a1f7710272d2a1c48e936f211b3bcdee8b84652b9a7196f39e3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394145"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118700"
 ---
-# <a name="id3dxeffectfindnextvalidtechnique-method"></a>ID3DXEffect:: findnextvalidtechnique-Methode
+# <a name="id3dxeffectfindnextvalidtechnique-method"></a>ID3DXEffect::FindNextValidTechnique-Methode
 
-Sucht das nächste gültige Verfahren, beginnend bei der Technik nach der angegebenen Technik.
+Sucht nach der nächsten gültigen Technik, beginnend bei der Technik nach der angegebenen Technik.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT FindNextValidTechnique(
 
 <dl> <dt>
 
-*htechnik* \[ in\]
+*hTechnique* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für eine Technik. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md). Geben Sie **null** für diesen Parameter an, um das erste gültige Verfahren zu suchen.
+Eindeutiger Bezeichner für eine Technik. Siehe [Handles (Direct3D 9).](handles.md) Geben **Sie NULL** für diesen Parameter an, um das erste gültige Verfahren zu finden.
 
 </dd> <dt>
 
-*ptechnique* \[ vorgenommen\]
+*pTechnique* \[ out\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)\***
 
-Zeiger auf einen Bezeichner für die nächste Technik. **Null** wird zurückgegeben, wenn dies die letzte Methode ist. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Zeiger auf einen Bezeichner für die nächste Technik. **NULL** wird zurückgegeben, wenn dies die letzte Technik ist. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf einen Bezeichner für die nächste Technik. **Null** wird zurückgege
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,8 +71,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -83,10 +83,10 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 [ID3DXEffect](id3dxeffect.md)
 </dt> <dt>
 
-[**D3DXTECHNIQUE- \_ Abteilung**](d3dxtechnique-desc.md)
+[**D3DXTECHNIQUE \_ DESC**](d3dxtechnique-desc.md)
 </dt> <dt>
 
-[**ID3DXEffect:: validatetechnique**](id3dxeffect--validatetechnique.md)
+[**ID3DXEffect::ValidateTechnique**](id3dxeffect--validatetechnique.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECORDLIST Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_RECORDLIST Struktur'
 title: JET_RECORDLIST Struktur
 TOCTitle: JET_RECORDLIST Structure
 ms:assetid: 6b4d97a0-4b42-4f7c-bb18-b6db3c92668a
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 16aca3a13bbae7c61bfe03aca49acea775820d39
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e83145f74d5edf97658fdadc62f018a151ee8b55
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868372"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988227"
 ---
 # <a name="jet_recordlist-structure"></a>JET_RECORDLIST Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_recordlist-structure"></a>JET_RECORDLIST Struktur
 
-Die **JET_RECORDLIST** -Struktur findet Datensätze, die sich in der Schnittmenge der angegebenen Index Bereiche befinden, wenn Sie mit der [jetintersectindexes](./jetintersectindexes-function.md) -Funktion verwendet werden.
+Die **JET_RECORDLIST-Struktur** sucht Datensätze, die sich in der Schnittmenge der angegebenen Indexbereiche befinden, wenn sie mit der [JetIntersectIndexes-Funktion verwendet](./jetintersectindexes-function.md) werden.
 
 ```cpp
     typedef struct {
@@ -44,46 +44,33 @@ Die **JET_RECORDLIST** -Struktur findet Datensätze, die sich in der Schnittmeng
 
 **cbStruct**
 
-Die Größe der **JET_RECORDLIST** Struktur in Bytes.
+Die Größe  der JET_RECORDLIST-Struktur in Bytes.
 
-**TableID**
+**tableid**
 
-Der Tabellen Bezeichner einer temporären Tabelle, die die Lesezeichen für die Ergebnisse der Abfrage enthält. Die Tabelle wird automatisch geschlossen, wenn für die aktuelle Transaktion ein Rollback mit [jetrollback](./jetrollback-function.md)durchgeführt wird. Andernfalls muss Sie mit [jetclosetable](./jetclosetable-function.md)geschlossen werden.
+Der Tabellenbezeichner einer temporären Tabelle, die die Lesezeichen für die Ergebnisse der Abfrage enthält. Die Tabelle wird automatisch geschlossen, wenn für die aktuelle Transaktion ein Rollback mit [JetRollback ausgeführt wird.](./jetrollback-function.md) Andernfalls muss sie mit [JetCloseTable geschlossen werden.](./jetclosetable-function.md)
 
-**crecord**
+**cRecord**
 
 Die Anzahl der Zeilen in der temporären Tabelle.
 
-**columnidbookmark**
+**columnidBookmark**
 
-Der Spalten Bezeichner der Lesezeichen Spalte in der temporären Tabelle.
+Der Spaltenbezeichner der Lesezeichenspalte in der temporären Tabelle.
 
 ### <a name="remarks"></a>Bemerkungen
 
-Die temporäre Tabelle, die von **TableID** identifiziert wird, verfügt über eine einzelne Spalte. Diese einzelne Spalte enthält Lesezeichen, und jeder Datensatz sollte in einen Puffer der Größe JET_cbBookmarkMost Bytes passen.
+Die temporäre Tabelle, die durch **tableid identifiziert wird,** verfügt über eine einzelne Spalte. Diese einzelne Spalte enthält Lesezeichen, und jeder Datensatz sollte in einen Puffer mit einer Größe von JET_cbBookmarkMost passen.
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
@@ -91,6 +78,6 @@ Die temporäre Tabelle, die von **TableID** identifiziert wird, verfügt über e
 [JET_COLUMNID](./jet-columnid.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetintersectindexes](./jetintersectindexes-function.md)  
-[Jetrollback](./jetrollback-function.md)
+[JetCloseTable](./jetclosetable-function.md)  
+[JetIntersectIndexes](./jetintersectindexes-function.md)  
+[JetRollback](./jetrollback-function.md)

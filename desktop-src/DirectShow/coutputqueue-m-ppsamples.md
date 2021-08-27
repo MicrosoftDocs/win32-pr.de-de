@@ -1,7 +1,7 @@
 ---
-description: 'Array von Stichproben der Größe coutputqueue:: m \_ lbatchsize.'
+description: Array von Beispielen der Größe COutputQueue::m \_ lBatchSize.
 ms.assetid: 5c4b904d-480b-4393-a799-63989669ea1c
-title: 'Coutputqueue:: m_ppSamples-Member (outputq. h)'
+title: COutputQueue::m_ppSamples Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3659c4a71cacb839caaa1b6ac89e46cd4e42a249
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d0b27a356727fc317eb1818ecd548d944e3c4b2ace9cc11e0834bf1cf551c9f0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361983"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103150"
 ---
-# <a name="coutputqueuem_ppsamples-member"></a>Coutputqueue:: m \_ ppsamples-Member
+# <a name="coutputqueuem_ppsamples-member"></a>COutputQueue::m \_ ppSamples-Member
 
-Array von Stichproben der Größe [**coutputqueue:: m \_ lbatchsize**](coutputqueue-m-lbatchsize.md).
+Array von Beispielen der Größe [**COutputQueue::m \_ lBatchSize**](coutputqueue-m-lbatchsize.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ IMediaSample **m_ppSamples;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Arbeits Thread ruft Beispiele aus der Warteschlange ab und platziert Sie in diesem Array. Er übergibt das Array an die [**IMemInputPin:: receivemultiple**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple) -Methode. Wenn das Objekt keinen Arbeits Thread verwendet, platziert das Objekt Samples direkt in dieses Array. Die Member-Variable [**coutputqueue \_ :: m**](coutputqueue-m-list.md) enthält die Warteschlange.
+Der Arbeitsthread pullt Stichproben aus der Warteschlange und platziert sie in diesem Array. Das Array wird an die [**IMemInputPin::ReceiveMultiple-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivemultiple) übergeben. Wenn das Objekt keinen Arbeitsthread verwendet, platziert das -Objekt Beispiele direkt in diesem Array. Die [**COutputQueue::m \_ List-Membervariable**](coutputqueue-m-list.md) enthält die Warteschlange.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Der Arbeits Thread ruft Beispiele aus der Warteschlange ab und platziert Sie in 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Der Arbeits Thread ruft Beispiele aus der Warteschlange ab und platziert Sie in 
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

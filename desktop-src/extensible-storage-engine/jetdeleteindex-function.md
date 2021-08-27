@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetdelta eteindex-Funktion'
-title: Jetdelta eteindex-Funktion
+description: 'Weitere Informationen zu: JetDeleteIndex-Funktion'
+title: JetDeleteIndex-Funktion
 TOCTitle: JetDeleteIndex Function
 ms:assetid: c540503b-d5a6-47f2-9113-9650891c4b6d
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294081(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 52a29e619d6643df4984bd7f296dcef4ef0a5ccf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a934581754477f336415926716a9a8c7e6097d81
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361701"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122985893"
 ---
-# <a name="jetdeleteindex-function"></a>Jetdelta eteindex-Funktion
+# <a name="jetdeleteindex-function"></a>JetDeleteIndex-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetdeleteindex-function"></a>Jetdelta eteindex-Funktion
+## <a name="jetdeleteindex-function"></a>JetDeleteIndex-Funktion
 
-Die **jetdelta eteindex** -Funktion löscht einen Index aus einer Tabelle.
+Die **JetDeleteIndex-Funktion** löscht einen Index aus einer Tabelle.
 
 ```cpp
     JET_ERR JET_API JetDeleteIndex(
@@ -46,106 +46,53 @@ Die **jetdelta eteindex** -Funktion löscht einen Index aus einer Tabelle.
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der für den API-Befehl zu verwendende Daten Bank Sitzungs Kontext.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Die Tabelle, die die Spalte enthält, die gelöscht werden soll.
+Die Tabelle, die die zu löschende Spalte enthält.
 
-*szindexname*
+*szIndexName*
 
 Der Name des zu löschenden Indexes.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errFixedDDL</p></td>
-<td><p>Es wurde versucht, einen Index aus einer Tabelle mit fester Größe (z. b. mit JET_bitTableCreateFixedDDL erstellt) zu löschen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errFixedInheritedDDL</p></td>
-<td><p>Es wurde versucht, einen Index aus einer Vorlagen Tabelle zu löschen. Eine Vorlagen Tabelle verfügt über eine festgelegte DDL.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIndexNotFound</p></td>
-<td><p>Der in <em>szindexname</em> benannte Index wurde nicht gefunden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errPermissionDenied</p></td>
-<td><p>Die Tabelle kann nicht aktualisiert werden, da sie schreibgeschützt geöffnet wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Mehrere Threads haben versucht, dieselbe Daten banksitzung zu verwenden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Die Transaktion wurde als schreibgeschützte Transaktion geöffnet.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errFixedDDL</p> | <p>Es wurde versucht, einen Index aus einer festen Tabelle zu löschen (z. B. einen Index, der mit JET_bitTableCreateFixedDDL erstellt wurde).</p> | 
+| <p>JET_errFixedInheritedDDL</p> | <p>Es wurde versucht, einen Index aus einer Vorlagentabelle zu löschen. Eine Vorlagentabelle verfügt über eine feste DDL.</p> | 
+| <p>JET_errIndexNotFound</p> | <p>Der Index mit dem Namen in <em>szIndexName</em> wurde nicht gefunden.</p> | 
+| <p>JET_errPermissionDenied</p> | <p>Die Tabelle kann nicht aktualisiert werden, da sie schreibgeschützt geöffnet wurde.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Mehrere Threads haben versucht, dieselbe Datenbanksitzung zu verwenden.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Die Transaktion wurde als schreibgeschützte Transaktion geöffnet.</p> | 
+
 
 
 #### <a name="remarks"></a>Bemerkungen
 
-Bei erfolgreicher Ausführung wird der Index gelöscht und kann daher nicht verwendet werden. Es darf keine aktive Transaktion vorhanden sein, die den Index verwendet.
+Wenn der Index erfolgreich ist, wird er gelöscht und kann daher später nicht mehr verwendet werden. Es darf keine aktive Transaktion mit dem Index geben.
 
 Bei Erfolg wird die Währung vor dem ersten Datensatz festgelegt.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetdelta eteindexw</strong> (Unicode) und <strong>jetdelta-eindexa</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetDeleteIndexW</strong> (Unicode) und <strong>JetDeleteIndexA</strong> (ANSI).</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -154,5 +101,5 @@ Bei Erfolg wird die Währung vor dem ersten Datensatz festgelegt.
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetkreateingedex](./jetcreateindex-function.md)  
+[JetCreateIndex](./jetcreateindex-function.md)  
 [JetCreateIndex2](./jetcreateindex2-function.md)

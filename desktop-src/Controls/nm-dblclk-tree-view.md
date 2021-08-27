@@ -1,9 +1,9 @@
 ---
-title: Benachrichtigungs Code für NM_DBLCLK (Strukturansicht) (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_DBLCLK -Benachrichtigungscode (Strukturansicht) (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass der Benutzer auf die linke Maustaste im Steuerelement doppelklickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 2ed3b3ad-a252-496a-bfcf-0cec5678f192
 keywords:
-- NM_DBLCLK (Strukturansicht) Windows-Steuerelemente für Benachrichtigungs Code
+- NM_DBLCLK -Benachrichtigungscode (Strukturansicht) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 78f89671e1a26962eacf255d4c98ea0baa1578de
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2c18fa9409365aa55b2410f16ae51ddbdcc1113c730b11293f997e1c641277c0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088790"
 ---
-# <a name="nm_dblclk-tree-view-notification-code"></a>NM- \_ dblclk-Benachrichtigungs Code (Strukturansicht)
+# <a name="nm_dblclk-tree-view-notification-code"></a>NM \_ DBLCLK -Benachrichtigungscode (Strukturansicht)
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass der Benutzer die linke Maustaste im Steuerelement doppelt geklickt hat. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansichtssteuerelements, dass der Benutzer auf die linke Maustaste im Steuerelement doppelklickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_DBLCLK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur, die zusätzliche Informationen zu dieser Benachrichtigung enthält.
+Zeiger auf eine [**NMHDR-Struktur,**](/windows/desktop/api/richedit/ns-richedit-nmhdr) die zusätzliche Informationen zu dieser Benachrichtigung enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung zu verhindern, oder NULL, um die Standard Verarbeitung
+Gibt einen Wert ungleich 0 (null) zurück, um die Standardverarbeitung zu verhindern, oder 0 (null), um die Standardverarbeitung zuzulassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt einen Wert ungleich 0 (null) zurück, um die Standard Verarbeitung zu verhi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

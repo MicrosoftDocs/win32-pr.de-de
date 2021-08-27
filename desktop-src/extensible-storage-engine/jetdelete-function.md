@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetdelete-Funktion'
+description: Weitere Informationen finden Sie unter JetDelete-Funktion.
 title: JetDelete-Funktion
 TOCTitle: JetDelete Function
 ms:assetid: 807de5ba-2f4b-4779-ab29-a1f094beecc1
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9f3422bc623bbd4f0cc99365df51bb797100811c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 039ddcb0610b6a958e9c45be7e3a898631d2a0fc
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362840"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122984953"
 ---
 # <a name="jetdelete-function"></a>JetDelete-Funktion
 
@@ -32,7 +32,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetdelete-function"></a>JetDelete-Funktion
 
-Die **jetdelete** -Funktion löscht den aktuellen Datensatz in einer Datenbanktabelle.
+Die **JetDelete-Funktion** löscht den aktuellen Datensatz in einer Datenbanktabelle.
 
 ```cpp
     JET_ERR JET_API JetDelete(
@@ -43,144 +43,70 @@ Die **jetdelete** -Funktion löscht den aktuellen Datensatz in einer Datenbankta
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der Daten Bank Sitzungs Kontext, der für den API-Befehl verwendet wird.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet wird.
 
-*TableID*
+*tableid*
 
 Der Cursor in einer Datenbanktabelle. Die aktuelle Zeile wird gelöscht.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errCallbackFailed</p></td>
-<td><p>Fehler bei der Rückruffunktion. Zugriffs Verletzungen in Rückruf Funktionen werden z. b. abgefangen und in JET_errCallbackFailed übersetzt. Dieser Fehler wird nur von Windows XP und höher zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errIllegalOperation</p></td>
-<td><p>Der von <em>TableID</em> angegebene Cursor unterstützt das Löschen nicht. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNoCurrentRecord</p></td>
-<td><p>Der von <em>TableID</em> angegebene Cursor befindet sich nicht in einem Datensatz.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errPermissionDenied</p></td>
-<td><p>Die Datenbank-Engine verfügt nicht über ausreichende Berechtigungen zum Löschen des Datensatzes. Dies kann vorkommen, wenn die Datenbankdatei mit Schreib geschütztem Zugriff geöffnet wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRollbackError</p></td>
-<td><p>Ein Update Puffer (siehe <a href="gg269339(v=exchg.10).md">jetprepareupdate</a>) ist vorhanden, aber nicht alle Änderungen, die an Spalten vom Typ JET_coltypLongText und/oder Spalten vom Typ JET_coltypLongBinary vorgenommen werden, können zurückgesetzt werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Es ist nicht zulässig, dieselbe Sitzung von mehr als einem Thread gleichzeitig zu verwenden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Bei der Transaktion handelt es sich um eine schreibgeschützte Transaktion, die Löschvorgänge nicht unterstützt.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errVersionStoreOutOfMemory</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da nicht genügend Arbeitsspeicher vorhanden ist, um transaktionale Informationen zum Update beizubehalten.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errWriteConflict</p></td>
-<td><p>Eine andere Sitzung hat den Datensatz bereits für das Update gesperrt. Das von dieser Sitzung versuchte Update schlägt fehl.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wird die Währung direkt vor dem nächsten Datensatz verbleiben. Wenn der gelöschte Datensatz der letzte in der Tabelle war, bleibt die Währung am Ende der Tabelle (d. h. nach dem neuen letzten Datensatz). Wenn der gelöschte Datensatz der einzige Datensatz in der Tabelle war, wird die Währung auf den Anfang festgelegt.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errCallbackFailed</p> | <p>Die Rückruffunktion ist in irgendeiner Weise fehlgeschlagen. Zugriffsverletzungen in Rückruffunktionen werden beispielsweise erfasst und in JET_errCallbackFailed. Dieser Fehler wird nur von xp Windows und höher zurückgegeben.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errIllegalOperation</p> | <p>Der durch <em>tableid angegebene Cursor</em> unterstützt das Löschen nicht. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errNoCurrentRecord</p> | <p>Der durch <em>tableid angegebene Cursor</em> befindet sich nicht in einem Datensatz.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errPermissionDenied</p> | <p>Die Datenbank-Engine verfügt nicht über ausreichende Berechtigungen zum Löschen des Datensatzes. Dies kann passieren, wenn die Datenbankdatei mit schreibgeschützten Zugriff geöffnet wurde.</p> | 
+| <p>JET_errRollbackError</p> | <p>Ein Updatepuffer (siehe <a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a>) ist vorhanden, aber nicht für alle Änderungen an Spalten vom Typ JET_coltypLongText und/oder Spalten des Typs JET_coltypLongBinary kann ein Rollback ausgeführt werden.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Es ist unzulässig, dieselbe Sitzung von mehr als einem Thread gleichzeitig zu verwenden. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Die Transaktion ist eine schreibgeschützte Transaktion und unterstützt keine Löschungen.</p> | 
+| <p>JET_errVersionStoreOutOfMemory</p> | <p>Fehler beim Vorgang, da nicht genügend Arbeitsspeicher vorhanden ist, um Transaktionsinformationen zum Update zu speichern.</p> | 
+| <p>JET_errWriteConflict</p> | <p>Eine andere Sitzung hat den Datensatz zuvor für das Update gesperrt. Das von dieser Sitzung versuchte Update ist fehlgeschlagen.</p> | 
+
+
+
+Bei Erfolg bleibt die Währung direkt vor dem nächsten Datensatz. Wenn der gelöschte Datensatz der letzte in der Tabelle war, bleibt die Währung am Ende der Tabelle (d. h. nach dem neuen letzten Datensatz). Wenn der gelöschte Datensatz der einzige Datensatz in der Tabelle war, wird die Währung auf den Anfang festgelegt.
 
 Die entsprechenden Indizes werden automatisch aktualisiert.
 
-Wenn ein Update vorbereitet wird (mithilfe von [jetprepareupdate](./jetprepareupdate-function.md)), wird es abgebrochen. Der Update Puffer wird zurückgesetzt.
+Wenn ein Update vorbereitet wird [(mit JetPrepareUpdate),](./jetprepareupdate-function.md)wird es abgebrochen. Der Updatepuffer wird zurückgesetzt.
 
-Bei einem Fehler bleibt die Währung unverändert. Wenn ein Update vorbereitet wird (siehe [jetprepareupdate](./jetprepareupdate-function.md)), wird der Update Puffer möglicherweise zurückgesetzt.
+Bei einem Ausfall bleibt die Währung unverändert. Wenn ein Update vorbereitet ist (siehe [JetPrepareUpdate),](./jetprepareupdate-function.md)kann der Updatepuffer zurückgesetzt werden.
 
 #### <a name="remarks"></a>Bemerkungen
 
-Nicht alle Tabellen unterstützen das Löschen von Zeilen. In einer temporären Tabelle wird das Löschen von Zeilen normalerweise nicht unterstützt. Das Löschen von Datensätzen kann für temporäre Tabellen aus vielen Gründen aktiviert werden. einige davon sind:
+Nicht alle Tabellen unterstützen das Löschen von Zeilen. Eine temporäre Tabelle unterstützt normalerweise nicht das Löschen von Zeilen. Das Löschen von Datensätzen kann für temporäre Tabellen aus vielen Gründen aktiviert werden. Einige davon sind:
 
   - JET_bitTTUpdatable wurde während der Erstellung angegeben.
 
-  - Große temporäre Tabellen können das Löschen unterstützen, wenn Sie mit JET_bitTTScrollable oder JET_bitTTIndexed erstellt wurden. Der Schwellenwert, bei dem eine temporäre Tabelle "Large" ist, beträgt derzeit 64 Kilobyte, kann jedoch in zukünftigen Versionen geändert werden.
+  - Große temporäre Tabellen können das Löschen unterstützen, wenn sie mit einem JET_bitTTScrollable oder JET_bitTTIndexed. Der Schwellenwert, bei dem eine temporäre Tabelle "groß" wird, beträgt derzeit 64 KB, kann aber in zukünftigen Versionen geändert werden.
 
-Windows XP und höher. Rückruf Funktionen können von **jetdelete** aufgerufen werden, einschließlich JET_cbtypBeforeDelete und JET_cbtypAfterDelete.
+Windows XP und höher. Rückruffunktionen können von **JetDelete** aufgerufen werden, einschließlich JET_cbtypBeforeDelete und JET_cbtypAfterDelete.
 
-Es ist wichtig, die Auswirkungen der Ausführung einer großen Anzahl von Aktualisierungs Vorgängen in einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Live Datensatz aller verschiedenen Versionen der einzelnen Datensatz-oder Indexeinträge in der Datenbank, die von allen aktiven Transaktionen angezeigt werden können. Diese Versionen werden zur Unterstützung der Parallelitäts Steuerung mit mehreren Versionsverwaltung verwendet, die von der Datenbank-Engine verwendet wird, um Transaktionen mithilfe der Momentaufnahme Isolation zu unterstützen. Sobald die Datenbank-Engine die Ressourcen erschöpft hat, die zum Speichern dieser Versionen verwendet werden, kann Sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, damit diese Ressourcen freigegeben werden können. Wenn sich die Engine in diesem Zustand befindet, schlagen alle Updates mit Jet_errVersionStoreOutOfMemory fehl. Die Ressourcen, die für die Datenbank-Engine zum Speichern dieser Versionen verfügbar sind, können mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md) mit *JET_paramMaxVerPages* und *JET_paramGlobalMinVerPages* gesteuert werden.
+Es ist wichtig, die Auswirkungen einer großen Anzahl von Aktualisierungsvorgängen innerhalb einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Livedatensatz aller verschiedenen Versionen jedes Datensatzes oder Indexeintrags in der Datenbank, die von allen aktiven Transaktionen angezeigt werden können. Diese Versionen werden verwendet, um die Parallelitätssteuerung mit mehreren Versionen zu unterstützen, die von der Datenbank-Engine verwendet wird, um Transaktionen mithilfe der Momentaufnahmeisolation zu unterstützen. Sobald die Datenbank-Engine die zum Speichern dieser Versionen verwendeten Ressourcen ausgeschöpft hat, kann sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, um das Wiederverlangen dieser Ressourcen zu ermöglichen. Wenn sich die Engine in diesem Zustand befindet, sind alle Updates nicht JET_errVersionStoreOutOfMemory. Die für die Datenbank-Engine verfügbaren Ressourcen zum Speichern dieser Versionen können mit [JetSetSystemParameter mit](./jetsetsystemparameter-function.md) JET_paramMaxVerPages *und* *JET_paramGlobalMinVerPages.*
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -188,6 +114,6 @@ Es ist wichtig, die Auswirkungen der Ausführung einer großen Anzahl von Aktual
 [JET_ERR](./jet-err.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetopumtemptable](./jetopentemptable-function.md)  
-[Jetprepareupdate](./jetprepareupdate-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetOpenTempTable](./jetopentemptable-function.md)  
+[JetPrepareUpdate](./jetprepareupdate-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

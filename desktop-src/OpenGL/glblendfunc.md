@@ -1,9 +1,9 @@
 ---
-title: glblendfunc-Funktion (GL. h)
-description: Die Funktion "glblendfunc" gibt Pixel Arithmetik an.
+title: glBlendFunc-Funktion (Gl.h)
+description: Die glBlendFunc-Funktion gibt die Pixelarithmetik an.
 ms.assetid: 6756774b-5eef-419a-a653-0b251aed65a0
 keywords:
-- glblendfunc-Funktion OpenGL
+- glBlendFunc-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6300543bbf589c704da6d941bd743f693e0ed5fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e4b079d0eb83f401eb7e906cb399fab18e5b2fd22f06299fcc62b1e6b4a02e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344476"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082130"
 ---
-# <a name="glblendfunc-function"></a>glblendfunc-Funktion
+# <a name="glblendfunc-function"></a>glBlendFunc-Funktion
 
-Die Funktion " **glblendfunc** " gibt Pixel Arithmetik an.
+Die **glBlendFunc-Funktion** gibt die Pixelarithmetik an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,17 +41,17 @@ void WINAPI glBlendFunc(
 
 <dl> <dt>
 
-*sfactor* 
+*SFACTOR* 
 </dt> <dd>
 
-Gibt an, wie die Quell Mischungs Faktoren für Rot, grün, blau und Alpha berechnet werden. Neun symbolische Konstanten werden akzeptiert: GL \_ zero, GL \_ One, GL \_ DST \_ Color, GL \_ One \_ minus \_ DST \_ Color, GL \_ src \_ Alpha, GL \_ One \_ minus \_ src \_ Alpha, GL \_ DST \_ Alpha, GL \_ One \_ minus \_ DST \_ Alpha und GL \_ src \_ alpha \_ inteate.
+Gibt an, wie die Faktoren rot, grün, blau und alpha für die Quellenmischung berechnet werden. Neun symbolische Konstanten werden akzeptiert: GL \_ ZERO, GL \_ ONE, GL \_ DST \_ COLOR, GL \_ ONE MINUS \_ \_ DST \_ COLOR, GL \_ SRC \_ ALPHA, GL ONE MINUS \_ \_ \_ SRC \_ ALPHA, GL \_ DST \_ ALPHA, GL ONE MINUS \_ \_ \_ DST ALPHA und GL \_ \_ SRC ALPHA \_ \_ SATURATE.
 
 </dd> <dt>
 
-*Dfactor* 
+*dfactor* 
 </dt> <dd>
 
-Gibt an, wie die roten, grünen, blauen und Alpha-zielmischungs Faktoren berechnet werden. Acht symbolische Konstanten werden akzeptiert: GL \_ zero, GL \_ One, GL \_ src \_ Color, GL \_ One \_ minus \_ src \_ Color, GL \_ src \_ Alpha, GL \_ One \_ minus \_ src \_ Alpha, GL \_ DST \_ Alpha und GL \_ One minus \_ \_ DST \_ alpha.
+Gibt an, wie die Rot-, Grün-, Blau- und Alpha-Zielmischungsfaktoren berechnet werden. Acht symbolische Konstanten werden akzeptiert: GL \_ ZERO, GL \_ ONE, GL \_ SRC \_ COLOR, GL \_ ONE MINUS \_ \_ SRC \_ COLOR, GL \_ SRC \_ ALPHA, GL ONE MINUS \_ \_ \_ SRC \_ ALPHA, GL \_ DST ALPHA und GL ONE \_ MINUS \_ \_ \_ DST \_ ALPHA.
 
 </dd> </dl>
 
@@ -61,52 +61,52 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | *Sfactor* oder *Dfactor* war kein akzeptierter Wert.<br/>                                                                   |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *Sfactor* oder *dfactor* war kein akzeptierter Wert.<br/>                                                                   |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im RGB-Modus können Pixel mithilfe einer Funktion gezeichnet werden, die die eingehenden (Quell-) RGBA-Werte mit den RGBA-Werten kombiniert, die bereits im Frame Puffer (den Zielwerten) vorhanden sind. Standardmäßig ist Blending deaktiviert. Verwenden Sie [**glEnable**](glenable.md) und [**glEnable**](gldisable.md) mit dem GL- \_ Argument GL, um das Mischen zu aktivieren und zu deaktivieren.
+Im RGB-Modus können Pixel mithilfe einer Funktion gezeichnet werden, die die eingehenden RGBA-Werte (Quelle) mit den RGBA-Werten kombiniert, die sich bereits im Framepuffer (den Zielwerten) befinden. Das Mischen ist standardmäßig deaktiviert. Verwenden Sie [**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem GL \_ BLEND-Argument, um blending zu aktivieren und zu deaktivieren.
 
-Wenn diese Option aktiviert ist, definiert **glblendfunc** den Mischungs Vorgang. Der *sfactor* -Parameter gibt an, welche von neun Methoden zum Skalieren der Quell Farbkomponenten verwendet werden. Der *Dfactor* -Parameter gibt an, welche von acht Methoden zum Skalieren der Ziel Farbkomponenten verwendet werden. Die elf möglichen Methoden werden in der folgenden Tabelle beschrieben. Jede Methode definiert vier Skalierungsfaktoren für Rot, grün, blau und alpha.
+Wenn diese Option aktiviert ist, definiert **glBlendFunc** den Vorgang des Mischens. Der *sfactor-Parameter* gibt an, welche von neun Methoden zum Skalieren der Quellfarbkomponenten verwendet wird. Der *dfactor-Parameter* gibt an, welche von acht Methoden zum Skalieren der Zielfarbkomponenten verwendet wird. Die elf möglichen Methoden werden in der folgenden Tabelle beschrieben. Jede Methode definiert jeweils vier Skalierungsfaktoren für Rot, Grün, Blau und Alpha.
 
-In der Tabelle und in nachfolgenden Gleichungen werden Quell-und Ziel Farbkomponenten als (*R*? , *G*? , *B*? , *A*? ) und (*R*<sub>d</sub> , *G*<sub>d</sub> , *B*<sub>d</sub> , *a*<sub>d</sub> ). Sie haben einen ganzzahligen Wert zwischen 0 (null) und (*k*<sub>r</sub> , *k*<sub>G</sub> , *k*<sub>r</sub> , *k*<sub>A</sub> ), wobei
+In der Tabelle und in nachfolgenden Gleichungen werden Quell- und Zielfarbkomponenten als (*R*? , *G*? , *B*? , *A*? ) und (*R*<sub>d</sub> , *G*<sub>d</sub> , *B*<sub>d</sub> , *A*<sub>d</sub> ). Es wird davon ausgegangen, dass sie ganzzahlige Werte zwischen 0 *(null)* und (k <sub>R,</sub> *k*<sub>G,</sub> *k*<sub>R,</sub> *k*<sub>A)</sub> aufweisen, wobei
 
-*k*<sub>r</sub> = 2 <sup>m</sup>*r* -1
+*k*<sub>R</sub> = 2 <sup>m</sup>*R* - 1
 
-*k*<sub>g</sub> = 2 <sup>m</sup>*g* -1
+*k*<sub>G</sub> = 2 <sup>m</sup>*G* - 1
 
-*k*<sub>b</sub> = 2 <sup>Mio</sup>.*b* -1
+*k*<sub>B</sub> = 2 <sup>m</sup>*B* - 1
 
-*k*<sub>a</sub> = 2 <sup>m</sup>*a* -1
+*k*<sub>A</sub> = 2 <sup>m</sup>*A* - 1
 
-und (*m*<sub>R</sub> , *m*<sub>G</sub> , *m*<sub>B</sub> , *m*<sub>a</sub> ) ist die Anzahl von roten, grünen, blauen und Alpha-bitflächen.
+und (*m*<sub>R</sub> , *m*<sub>G</sub> , *m*<sub>B</sub> , *m*<sub>A</sub> ) ist die Anzahl der Rot-, Grün-, Blau- und Alphabitebenen.
 
-Quell-und zielskalierungs Faktoren werden als (*s*<sub>r</sub> , *s*<sub>g</sub> , *s*<sub>B</sub> , *s*<sub>a</sub> ) und (*d*<sub>r</sub> , *d*<sub>G</sub> , *d*<sub>b</sub> , *d*<sub>a</sub> ) bezeichnet. Die in der Tabelle beschriebenen Skalierungsfaktoren (*f*<sub>R</sub> , *f*<sub>G</sub> , *f*<sub>B</sub> , *f*<sub>A</sub> ) stellen entweder den Quell-oder den Ziel Faktor dar. Alle Skalierungsfaktoren haben den Bereich \[ 0, 1 \] .
+Quell- und Zielskalierenfaktoren werden als (*s*<sub>R</sub> , *s*<sub>G</sub> , *s*<sub>B</sub> , *s*<sub>A</sub> ) und (*d*<sub>R</sub> , *d*<sub>G</sub> , *d*<sub>B</sub> , *d*<sub>A</sub> ) bezeichnet. Die in der Tabelle beschriebenen Skalierungsfaktoren (*f*<sub>R</sub> , *f*<sub>G</sub> , *f*<sub>B</sub> , *f*<sub>A</sub> ) stellen entweder Quell- oder Zielfaktoren dar. Alle Skalierungsfaktoren haben einen Bereich von \[ 0,1 \] .
 
 
 
-| Parameter                  | (*f*<sub>R</sub>  , *f*<sub>G</sub>  , *f*<sub>B</sub>  , *f*<sub>a</sub>  )                                                                                 |
+| Parameter                  | (*f*<sub>R</sub>  , *f*<sub>G</sub>  , *f*<sub>B</sub>  , *f*<sub>A</sub>  )                                                                                 |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| GL \_ null                   | (0, 0, 0, 0)                                                                                                                                                    |
-| GL \_ 1                    | (1, 1, 1, 1)                                                                                                                                                    |
-| GL- \_ src- \_ Farbe             | (*R*? / *k*<sub>R</sub> , *G*? / *k*<sub>G</sub> , *B*? / *k*<sub>B</sub> , *A*? / *k*<sub>A</sub> )                                                         |
-| GL \_ 1 \_ minus \_ src- \_ Farbe | (1, 1, 1, 1)-(*R*? / *k*<sub>R</sub> , *G*? / *k*<sub>G</sub> , *B*? / *k*<sub>B</sub> , *A*? / *k*<sub>A</sub> )                                             |
-| GL- \_ DST- \_ Farbe             | (*R*<sub>d</sub>  /  *k*<sub>R</sub> , *G*<sub>d</sub>  /  *k*<sub>G</sub> , *B*<sub>d</sub>  /  *k*<sub>B</sub> , *a*<sub>d</sub>  /  *k*<sub>a</sub> )             |
-| GL \_ 1 \_ minus \_ DST- \_ Farbe | (1, 1, 1, 1)-(*R*<sub>d</sub>  /  *k*<sub>R</sub> , *G*<sub>d</sub>  /  *k*<sub>G</sub> , *B*<sub>d</sub>  /  *k*<sub>B</sub> , *a*<sub>d</sub>  /  *k*<sub>a</sub> ) |
-| GL \_ src \_ Alpha             | (*A*? / *k*<sub>a</sub> , *a*? / *k*<sub>a</sub> , *a*? / *k*<sub>a</sub> , *a*? / *k*<sub>A</sub> )                                                         |
-| GL \_ One \_ minus \_ src \_ Alpha | (1, 1, 1, 1)-(*A*? / *k*<sub>a</sub> , *a*? / *k*<sub>a</sub> , *a*? / *k*<sub>a</sub> , *a*? / *k*<sub>A</sub> )                                             |
-| GL- \_ DST- \_ Alpha             | (*A*<sub>d</sub>  /  *k*<sub>A</sub> , *a*<sub>d</sub>  /  *k*<sub>a</sub> , <sub>d</sub>  /  *k*<sub>a</sub> , <sub>d</sub>  /  *k*<sub>a</sub> )             |
-| GL \_ 1 \_ minus \_ DST- \_ Alpha | (1, 1, 1, 1)-(*a*<sub>d</sub>  /  *k*<sub>a</sub> , *a*<sub>d</sub>  /  *k*<sub>a</sub> , <sub>d</sub>  /  *k*<sub>a</sub> , <sub>d</sub>  /  *k*<sub>a</sub> ) |
-| GL \_ src \_ alpha- \_ vollständig   | (*i, i, i* , 1)                                                                                                                                                 |
+| GL \_ ZERO                   | (0,0,0,0)                                                                                                                                                    |
+| GL \_ ONE                    | (1,1,1,1)                                                                                                                                                    |
+| GL \_ SRC \_ COLOR             | (*R*? / *k*<sub>R</sub> , *G*? / *k*<sub>G</sub> , *B*? / *k*<sub>B</sub> , *A*? / *k*<sub>A</sub> )                                                         |
+| GL \_ ONE \_ MINUS \_ SRC \_ COLOR | (1,1,1,1) - (*R*? / *k*<sub>R</sub> , *G*? / *k*<sub>G</sub> , *B*? / *k*<sub>B</sub> , *A*? / *k*<sub>A</sub> )                                             |
+| GL \_ DST \_ COLOR             | (*R*<sub>d</sub>  /  *k*<sub>R</sub> , *G*<sub>d</sub>  /  *k*<sub>G</sub> , *B*<sub>d</sub>  /  *k*<sub>B</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> )             |
+| GL \_ ONE \_ MINUS \_ DST \_ COLOR | (1,1,1,1) – (*R*<sub>d</sub>  /  *k*<sub>R</sub> , *G*<sub>d</sub>  /  *k*<sub>G</sub> , *B*<sub>d</sub>  /  *k*<sub>B</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> ) |
+| GL \_ SRC \_ ALPHA             | (*A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> )                                                         |
+| GL \_ ONE \_ MINUS \_ SRC \_ ALPHA | (1,1,1,1) - (*A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> , *A*? / *k*<sub>A</sub> )                                             |
+| GL \_ DST \_ ALPHA             | (*A*<sub>d</sub>  /  *k*<sub>A</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> )             |
+| GL \_ ONE \_ MINUS \_ DST \_ ALPHA | (1,1,1,1) – (*A*<sub>d</sub>  /  *k*<sub>A</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> , *A*<sub>d</sub>k A , A d  /  *k*<sub>A</sub> , *A*<sub>d</sub>  /  *k*<sub>A</sub> ) |
+| GL \_ SRC \_ ALPHA \_ SATURATE   | (*i,i,i,* 1)                                                                                                                                                 |
 
 
 
@@ -114,49 +114,49 @@ Quell-und zielskalierungs Faktoren werden als (*s*<sub>r</sub> , *s*<sub>g</sub>
 
 In der Tabelle
 
-*i* = min (*A*? , *k*<sub>a</sub>   -  <sub>d</sub> )/ *k*<sub>a</sub>
+*i* = min (*A*? , *k*<sub>A</sub>   -  *A*<sub>d</sub> ) / *k*<sub>A</sub>
 
-Zum Ermitteln der gemischten RGBA-Werte eines Pixels beim Zeichnen im RGBA-Modus verwendet das System die folgenden Gleichungen:
+Um die kombinierten RGBA-Werte eines Pixels beim Zeichnen im RGBA-Modus zu bestimmen, verwendet das System die folgenden Gleichungen:
 
-*R* (*d*) = min ( *k*<sub>r</sub> , *r*? *s*<sub>r</sub>  +  *r*<sub>d</sub> <sub>r</sub> )
+*R* (*d*) = min( *k*<sub>R</sub> , *R*? *s*<sub>R</sub>  +  *R*<sub>d</sub> *d*<sub>R</sub> )
 
-*G* (*d*) = min ( *k*<sub>g</sub> , *g*? *s*<sub>g</sub>  +  *g*<sub>d</sub> *d*<sub>g</sub> )
+*G* (*d*) = min( *k*<sub>G</sub> , *G*? *s*<sub>G</sub>  +  *G*<sub>d</sub> *d*<sub>G</sub> )
 
-*B* (*d*) = min ( *k*<sub>B</sub> *, b*? *s*<sub>b</sub>  +  *b*<sub>d</sub> *b*<sub></sub> )
+*B* (*d*) = min( *k*<sub>B</sub> *, B*? *s*<sub>B</sub>  +  *B*<sub>d</sub> *d*<sub>B</sub> )
 
-*A* (*d*) = min ( *k*<sub>A</sub> , *a*? *s*<sub>a</sub>  +  <sub>d</sub> <sub></sub> a)
+*A* (*d*) = min( *k*<sub>A</sub> , *A*? *s*<sub>A</sub>  +  *A*<sub>d</sub> *d*<sub>A</sub> )
 
-Trotz der offensichtlichen Genauigkeit der obigen Gleichungen ist das Mischen von Arithmetik nicht genau angegeben, da die Mischung mit unpräzisen ganzzahligen Farbwerten arbeitet. Ein Blend-Faktor, der gleich 1 sein sollte, ist jedoch garantiert, dass seine multipktivität nicht geändert wird, und ein Blend-Faktor, der gleich 0 (null) ist, reduziert seinen Multiplikand auf NULL. Wenn *sfactor* z. b. "GL \_ src Alpha" ist \_ , ist " *Dfactor* " GL \_ One \_ minus \_ src \_ Alpha und "?" gleich *k*<sub>A</sub>. die Gleichungen verringern die einfache Ersetzung: 
+Trotz der offensichtlichen Genauigkeit der obigen Gleichungen wird die Arithmetik nicht genau angegeben, da das Mischen mit unpräzise ganzzahligen Farbwerten funktioniert. Es ist jedoch garantiert, dass ein Mischungsfaktor, der gleich 1 sein sollte, seine Multiplikand nicht ändert, und ein Mischungsfaktor gleich 0 (null) reduziert die Multiplikand auf 0 (null). Wenn z. *B. Sfactor* GL \_ SRC \_ ALPHA ist, *dfactor* GL \_ ONE MINUS \_ \_ SRC ALPHA und \_ *A*? gleich *k*<sub>A</sub>ist, reduzieren sich die Gleichungen auf einfache Ersetzung:
 
-*R*<sub>d</sub>  =  *r*?
+*R*<sub>d</sub>  =  *R*?
 
-*G*<sub>d</sub>  =  *g*?
+*G*<sub>d</sub>  =  *G*?
 
-B <sub>d</sub>  =  *b*?
+B <sub>d</sub>  =  *B*?
 
-*A*<sub>d</sub>  =  *a*?
+*A*<sub>d</sub>  =  *A*?
 
 ## <a name="examples"></a>Beispiele
 
-Transparenz wird am besten mithilfe von **glblendfunc**(GL \_ src \_ Alpha, GL \_ One \_ minus \_ src \_ Alpha) implementiert, wobei primitive vom weitesten zum nächsten sortiert werden. Beachten Sie, dass diese Transparenz Berechnung nicht erfordert, dass Alpha-bitflächen im Framebuffer vorhanden sind.
+Transparenz wird am besten mit **glBlendFunc**(GL \_ SRC \_ ALPHA, GL \_ ONE MINUS \_ \_ SRC \_ ALPHA) mit Primitiven implementiert, die vom längsten zum nächsten sortiert sind. Beachten Sie, dass diese Transparenzberechnung nicht das Vorhandensein von Alphabitplanen im Framepuffer erfordert.
 
-Sie können auch **glblendfunc**(GL \_ src \_ Alpha, GL \_ One \_ minus \_ src \_ Alpha) zum Rendern von Antialiasing Punkten und Zeilen in beliebiger Reihenfolge verwenden.
+Sie können auch **glBlendFunc**(GL \_ SRC ALPHA, GL ONE MINUS SRC ALPHA) verwenden, um \_ \_ \_ \_ Antialiasingpunkte und Linien in \_ beliebiger Reihenfolge zu rendern.
 
-Um das Polygon-Antialiasing zu optimieren, verwenden Sie **glblendfunc**(GL \_ src \_ alpha \_ sätate, GL \_ One) mit Polygonen, die von der nächstgelegenen zu weit entfernten sortiert sind. (Siehe GL \_ . Polygon- \_ Smooth-Argument in [**glEnable**](glenable.md) für Informationen zum Polygon-Antialiasing.) Ziel-Alpha bitflächen, die vorhanden sein müssen, damit diese Blend-Funktion ordnungsgemäß funktioniert, speichern die akkumulierte Abdeckung.
+Um polygonale Antialiasing zu optimieren, verwenden Sie **glBlendFunc**(GL \_ SRC \_ ALPHA \_ SATURATE, GL ONE) mit Polygonen, die vom nächsten zum \_ längsten sortiert sind. (Siehe GL \_ POLYGON \_ SMOOTH-Argument in [**glEnable**](glenable.md) für Informationen zum Antialiasing von Polygonen.) Ziel-Alphabitplanen, die vorhanden sein müssen, damit diese Blend-Funktion ordnungsgemäß funktioniert, speichern die akkumulierte Abdeckung.
 
-Ein eingehender (Quelle) Alpha ist eine Material Deckkraft im Bereich von 1,0 (*K*<sub>a</sub> ), die eine komplette Deckkraft darstellt, bis 0,0 (0), die eine umfassende Transparenz darstellt.
+Eingehendes Alpha (Quell alpha) ist eine Materialdurchlässigkeit im Bereich von 1,0 (*K*<sub>A</sub> ), die die vollständige Deckkraft darstellt, bis zu 0,0 (0), die vollständige Transparenz darstellt.
 
-Wenn Sie mehr als einen Farb Puffer für das Zeichnen aktivieren, wird jeder aktivierte Puffer separat gemischt, und der Inhalt des Puffers wird für die Zielfarbe verwendet. (Siehe [**gldrawbuffer**](gldrawbuffer.md).)
+Wenn Sie mehrere Farbpuffer zum Zeichnen aktivieren, wird jeder aktivierte Puffer separat gemischt, und der Inhalt des Puffers wird für die Zielfarbe verwendet. (Siehe [**glDrawBuffer**](gldrawbuffer.md).)
 
-Blending wirkt sich nur auf das RGBA-Rendering aus. Sie wird von farbindexrenderatoren ignoriert.
+Blending wirkt sich nur auf das RGBA-Rendering aus. Sie wird von Farbindexrenderern ignoriert.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glblendfunc** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glBlendFunc ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Blend \_ src
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ BLEND \_ SRC
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Blend \_ DST
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ BLEND \_ DST
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ Blend
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ BLEND
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -166,8 +166,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glblendf
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -176,7 +176,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glblendf
 
 <dl> <dt>
 
-[**glalphafunc**](glalphafunc.md)
+[**glAlphaFunc**](glalphafunc.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
@@ -185,25 +185,25 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glblendf
 [**glClear**](glclear.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
-[**gldrawbuffer**](gldrawbuffer.md)
+[**glDrawBuffer**](gldrawbuffer.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**gllogicop**](gllogicop.md)
+[**glLogicOp**](gllogicop.md)
 </dt> <dt>
 
-[**glstencilfunc**](glstencilfunc.md)
+[**glStencilFunc**](glstencilfunc.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetInit2-Funktion'
+description: 'Weitere Informationen zu: JetInit2-Funktion'
 title: JetInit2-Funktion
 TOCTitle: JetInit2 Function
 ms:assetid: b5541429-6ce6-457b-88cf-673d267f6209
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 00cc3402567a7c1342e78d3c84a1d6cfca8ab4d8
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 9b5d2a62aa448a84d539d8d2d557d06befacfbba
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "103961788"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122988953"
 ---
 # <a name="jetinit2-function"></a>JetInit2-Funktion
 
@@ -32,11 +32,11 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetinit2-function"></a>JetInit2-Funktion
 
-Die **JetInit2** -Funktion versetzt die Datenbank-Engine in einen Zustand, in dem Sie die Anwendungs Verwendung von Datenbankdateien unterstützen kann. Die Engine muss für die Initialisierung mit [jetsetsystemparameter](./jetsetsystemparameter-function.md)bereits ordnungsgemäß konfiguriert sein. Die Daten Bank Absturz Wiederherstellung wird automatisch als Teil des Initialisierungs Prozesses ausgeführt.
+Die **JetInit2-Funktion** versetzt die Datenbank-Engine in einen Zustand, in dem sie die Anwendungsverwendung von Datenbankdateien unterstützen kann. Die Engine muss bereits ordnungsgemäß für die Initialisierung mit [JetSetSystemParameter](./jetsetsystemparameter-function.md)konfiguriert sein. Die Datenbankabsturzwiederherstellung wird automatisch als Teil des Initialisierungsprozesses ausgeführt.
 
-**Windows XP:**  **JetInit2** wird in Windows XP eingeführt.
+**Windows XP:****JetInit2** wird in Windows XP eingeführt.  
 
-Diese Funktion ist veraltet. Verwenden Sie stattdessen [JetInit3](./jetinit3-function.md) .
+Diese Funktion ist veraltet. Verwenden Sie stattdessen [JetInit3.](./jetinit3-function.md)
 
 ```cpp
 JET_ERR JET_API JetInit2(
@@ -47,118 +47,67 @@ JET_ERR JET_API JetInit2(
 
 ### <a name="parameters"></a>Parameter
 
-*pinstance*
+*Pinstance*
 
-Die-Instanz, die für diesen Befehl verwendet werden soll.
+Die -Instanz, die für diesen Aufruf verwendet werden soll.
 
 Für Windows 2000 wird dieser Parameter ignoriert und sollte immer NULL sein.
 
-Für Windows XP und spätere Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacy Modus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein, oder er kann auf einen gültigen Ausgabepuffer festgelegt werden, der NULL oder JET_instanceNil enthält, der das globale Instanzhandle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieser Instanzhandle kann dann an jede andere API weitergegeben werden, die eine-Instanz annimmt. Wenn die Engine im Modus für mehrere Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das von der zu initialisierende [jetkreateinstance](./jetcreateinstance-function.md) zurückgegebene Instanzhandle enthält.
+Für Windows XP und höhere Versionen hängt die Verwendung dieses Parameters vom Betriebsmodus der Engine ab. Wenn die Engine im Legacymodus (Windows 2000-Kompatibilitätsmodus) ausgeführt wird, in dem nur eine Instanz unterstützt wird, kann dieser Parameter entweder NULL sein oder auf einen gültigen Ausgabepuffer mit NULL oder JET_instanceNil festgelegt werden, der das globale Instanzhandle zurückgibt, das als Nebeneffekt der Initialisierung erstellt wurde. Dieses Instanzhandle kann dann an jede andere API übergeben werden, die eine -Instanz annimmt. Wenn die Engine im Modus mit mehreren Instanzen ausgeführt wird, muss dieser Parameter auf einen gültigen Eingabepuffer festgelegt werden, der das Instanzhandle enthält, das von der [initialisierten JetCreateInstance](./jetcreateinstance-function.md) zurückgegeben wird.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der folgenden Optionen angibt.
+Eine Gruppe von Bits, die null oder mehr der folgenden Optionen angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitReplayReplicatedLogFiles</p></td>
-<td><p>Für die zukünftige Verwendung reserviert.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitCreateSFSVolumeIfNotExist</p></td>
-<td><p>Für die zukünftige Verwendung reserviert.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitReplayIgnoreMissingDB</p></td>
-<td><p>Mit dieser Option kann der Benutzer die Wiederherstellung für einen Satz von Protokolldateien ausführen, ohne dass alle Datenbanken vorhanden sind, die an einem Punkt des Protokoll Satzes angefügt wurden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitRecoveryWithoutUndo</p></td>
-<td><p>Führen Sie die Wiederherstellung aus, aber stoppen Sie die Roll Back Phase. Dadurch können zusätzliche Transaktionsprotokolle in kopiert und angewendet werden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitTruncateLogsAfterRecovery</p></td>
-<td><p>Bei erfolgreicher Soft-Wiederherstellung kürzen Sie die Protokolldateien.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitReplayMissingMapEntryDB</p></td>
-<td><p>Fehlender Daten Bank Zuordnungs Eintrag ist standardmäßig derselbe Speicherort.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitReplayIgnoreLostLogs</p></td>
-<td><p>Ignorieren Sie die Protokolle, die am Ende des Protokolldaten Stroms verloren gegangen sind.</p>
-<p><strong>Windows 7: JET_bitReplayIgnoreLostLogs</strong> wurde in Windows 7 eingeführt.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitReplayReplicatedLogFiles</p> | <p>Für die zukünftige Verwendung reserviert.</p> | 
+| <p>JET_bitCreateSFSVolumeIfNotExist</p> | <p>Für die zukünftige Verwendung reserviert.</p> | 
+| <p>JET_bitReplayIgnoreMissingDB</p> | <p>Mit dieser Option kann der Benutzer die Wiederherstellung für einen Satz von Protokolldateien ausführen, ohne dass alle Datenbanken vorhanden sind, die an einem Punkt des Protokollsatzes angefügt wurden.</p> | 
+| <p>JET_bitRecoveryWithoutUndo</p> | <p>Führen Sie die Wiederherstellung durch, aber halten Sie in der Rückgängig-Phase an. Dadurch können zusätzliche Transaktionsprotokolle kopiert und angewendet werden.</p> | 
+| <p>JET_bitTruncateLogsAfterRecovery</p> | <p>Kürzen Sie protokolldateien bei erfolgreicher soft recovery ab.</p> | 
+| <p>JET_bitReplayMissingMapEntryDB</p> | <p>Fehlender Datenbankzuordnungseintrag wird standardmäßig an demselben Speicherort verwendet.</p> | 
+| <p>JET_bitReplayIgnoreLostLogs</p> | <p>Ignorieren Sie Protokolle, die am Ende des Protokolldatenstroms verloren gegangen sind.</p><p><strong>Windows 7:JET_bitReplayIgnoreLostLogs</strong> wird in Windows 7 eingeführt.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
 #### <a name="remarks"></a>Bemerkungen
 
-Eine Instanz muss mit einem **JetInit2** -Aufrufvorgang initialisiert werden, bevor Sie von einem anderen als [jetsetsystemparameter](./jetsetsystemparameter-function.md)verwendet werden kann.
+Eine -Instanz muss mit einem Aufruf von **JetInit2** initialisiert werden, bevor sie von anderen Instanzen als [JetSetSystemParameter](./jetsetsystemparameter-function.md)verwendet werden kann.
 
-Eine Instanz wird durch einen-Rückruf der [jetterm](./jetterm-function.md) -Funktion zerstört, auch wenn diese Instanz nicht mit [jetinit](./jetinit-function.md)initialisiert wurde. Eine Instanz ist die Wiederherstellbarkeits Einheit für die Datenbank-Engine. Er steuert den Lebenszyklus aller Dateien, mit denen die Integrität der Daten in einem Satz von Datenbankdateien geschützt wird. Diese Dateien enthalten die Prüf Punkt Datei und die Transaktionsprotokoll Dateien.
+Eine -Instanz wird durch einen Aufruf der [JetTerm-Funktion](./jetterm-function.md) zerstört, auch wenn diese Instanz nie mit [JetInit](./jetinit-function.md)initialisiert wurde. Eine -Instanz ist die Einheit der Wiederherstellbarkeit für die Datenbank-Engine. Sie steuert den Lebenszyklus aller Dateien, die zum Schutz der Integrität der Daten in einem Satz von Datenbankdateien verwendet werden. Zu diesen Dateien gehören die Prüfpunktdatei und die Transaktionsprotokolldateien.
 
-Wenn die Wiederherstellung für eine Gruppe von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (was den Fehler JET_errAttachedDatabaseMismatch unter normalen Umständen zurückgibt), und der Client wünscht, dass die Wiederherstellung trotz fehlender Datenbanken fortgesetzt wird, wird die JET_ bitreplayignoremissingdb verwendet, um die Wiederherstellung für die verfügbaren Datenbanken fortzusetzen.
+Wenn die Wiederherstellung in einem Satz von Protokollen ausgeführt wird, für die nicht alle Datenbanken vorhanden sind (wodurch der Fehler unter normalen Umständen JET_errAttachedDatabaseMismatch zurückgegeben wird) und der Client die Wiederherstellung trotz fehlender Datenbanken fortsetzen möchte, wird die JET_ bitReplayIgnoreMissingDB verwendet, um die Wiederherstellung für die verfügbaren Datenbanken fortzusetzen.
 
-Weitere Informationen finden Sie im Abschnitt "Hinweise" in [jetinit](./jetinit-function.md) .
+Weitere Informationen finden Sie im Abschnitt "Hinweise" in [JetInit.](./jetinit-function.md)
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Extensible Storage Engine-Dateien](./extensible-storage-engine-files.md)  
+[Erweiterbare Storage-Engine-Dateien](./extensible-storage-engine-files.md)  
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_INSTANCE](./jet-instance.md)  
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)  
 [JetInit3](./jetinit3-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
 [Ressourcenparameter](./resource-parameters.md)

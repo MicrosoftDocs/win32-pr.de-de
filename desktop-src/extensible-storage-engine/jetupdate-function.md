@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3e02550fb40987906e21d588263daed9dc68aa5d
-ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
+ms.openlocfilehash: 5b66c80f506942e2815c8b8795c32250c827527b
+ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2021
-ms.locfileid: "122478246"
+ms.lasthandoff: 08/26/2021
+ms.locfileid: "122982343"
 ---
 # <a name="jetupdate-function"></a>JetUpdate-Funktion
 
@@ -34,7 +34,7 @@ _**Gilt für:** Windows | Windows Server_
 
 Die **JetUpdate-Funktion** führt einen Aktualisierungsvorgang aus, einschließlich einfügen einer neuen Zeile in eine Tabelle oder Aktualisieren einer vorhandenen Zeile. Das Löschen einer Tabellenzeile erfolgt durch Aufrufen von [JetDelete.](./jetdelete-function.md)
 
-**JetUpdate** ist der letzte Schritt beim Ausführen eines Einfüge- oder Aktualisierungsschritts. Das Update wird gestartet, indem [JetPrepareUpdate](./jetprepareupdate-function.md) und dann [jetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md) einmal oder mehrmals aufgerufen werden, um den Datensatzzustand festzulegen. Schließlich wird **JetUpdate** aufgerufen, um den Updatevorgang abzuschließen. Indizes werden nur von **JetUpdate** oder [JetUpdate2](./jetupdate2-function.md)und nicht während [JetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md)aktualisiert.
+**JetUpdate** ist der letzte Schritt beim Ausführen eines Einfüge- oder Aktualisierungsschritts. Das Update wird gestartet, indem [JetPrepareUpdate](./jetprepareupdate-function.md) aufgerufen und [jetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md) einmal oder mehrmals aufgerufen wird, um den Datensatzzustand festzulegen. Schließlich wird **JetUpdate** aufgerufen, um den Updatevorgang abzuschließen. Indizes werden nur von **JetUpdate** oder [JetUpdate2](./jetupdate2-function.md)und nicht während [JetSetColumns](./jetsetcolumn-function.md) oder [JetSetColumns](./jetsetcolumns-function.md)aktualisiert.
 
 ```cpp
     JET_ERR JET_API JetUpdate(
@@ -80,7 +80,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, als Ergebnis eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService</a>aufgetreten sind.</p> | 
 | <p>JET_errColumnIllegalNull</p> | <p>Entspricht JET_errNullInvalid.</p> | 
 | <p>JET_errDiskFull</p> | <p>Der Aktualisierungsvorgang erfordert eine Vergrößerung der Datenbankdatei oder eine Protokolldateizuordnung, aber das Laufwerk, auf dem sich die Datenbankdatei oder Protokollreihe befindet, ist voll. Alternativ befindet sich die Datenbankdatei auf einem FAT32-formatierten Volume, und die Datenbankdatei ist bereits auf 4 GB festgelegt. Dies ist der Grenzwert pro Datei für FAT32.</p> | 
-| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die Instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Es ist nicht möglich, den Vorgang abzuschließen, da für die instanz, die der Sitzung zugeordnet ist, ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errInvalidParameter</p> | <p>Der angegebene <em>prep-Parameter</em> in der <a href="gg269339(v=exchg.10).md">JetPrepareUpdate-Funktion</a> ist kein gültiges Flag.</p> | 
 | <p>JET_errKeyDuplicate</p> | <p>Ein Indexschlüssel für diesen Datensatz ist ein Duplikat eines anderen Indexschlüssels für einen anderen Datensatz, der sich bereits in der Tabelle befindet, und der Index lässt keine Duplikate zu.</p> | 
 | <p>JET_errKeyTruncated</p> | <p>Der eingefügte oder aktualisierte Datensatz verfügt über einen oder mehrere Indizes, für die der generierte Schlüssel die maximal zulässige Größe überschritten hätte. Daher konnte der Vorgang das Abschneiden von Schlüsseln nicht verhindern.</p> | 
@@ -95,7 +95,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 | <p>JET_errTransReadOnly</p> | <p>Es ist unzulässig, ein Update zu versuchen, wenn es sich innerhalb des Bereichs einer schreibgeschützten Transaktion befindet. Eine schreibgeschützte Transaktion ist eine Transaktion, die mithilfe eines Aufrufs von <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> mit JET_bitTransactionReadOnly gestartet wurde.</p><p><strong>Windows XP:</strong>  Dieser Fehler wird nur von Windows XP und späteren Versionen zurückgegeben.</p> | 
 | <p>JET_errUpdateNotPrepared</p> | <p><a href="gg269339(v=exchg.10).md">JetPrepareUpdate</a> wurde mit JET_prepCancel aufgerufen, aber der Cursor befand sich nicht im vorbereiteten Zustand.</p> | 
 | <p>JET_errVersionStoreOutOfMemory</p> | <p>Fehler beim Vorgang, weil nicht genügend Arbeitsspeicher vorhanden ist, um Transaktionsinformationen zum Update beizubehalten.</p> | 
-| <p>JET_errWriteConflict</p> | <p>In einer anderen Sitzung wurde der Datensatz zuvor für das Update gesperrt. Das von dieser Sitzung versuchten Update schlägt fehl.</p> | 
+| <p>JET_errWriteConflict</p> | <p>Eine andere Sitzung hat den Datensatz zuvor für das Update gesperrt. Das von dieser Sitzung versuchten Update schlägt fehl.</p> | 
 
 
 
@@ -103,18 +103,24 @@ Bei Erfolg wird der Vorgang zum Öffnen des Updates für den Cursor abgeschlosse
 
 Bei einem Fehler werden keineRlei Änderungen an der Datenbank vorgenommen. Vor dem Einfügen und vor dem Ersetzen wurden möglicherweise Rückruffunktionen aufgerufen, aber nach dem Einfügen und nach dem Ersetzen wurden rückrufe nicht aufgerufen, da letzteres nicht dazu führen kann, dass ein Update fehlschlägt. Der Cursorkopierpuffer befindet sich im vorbereiteten Zustand, sodass die Möglichkeit besteht, die Probleme, die Fehler verursacht haben, inkrementell zu beheben und den Updatevorgang zu wiederholen.
 
-#### <a name="remarks"></a>Hinweise
+#### <a name="remarks"></a>Bemerkungen
 
 Rückruffunktionen können registriert werden, um vor oder nach dem Einfügen und vor oder nach dem Update aufgerufen zu werden.
 
-Einschränkungen der Datensatzgröße werden von [JetSetColumn](./jetsetcolumn-function.md)erzwungen, nicht im Allgemeinen durch **JetUpdate.**
+Einschränkungen der Datensatzgröße werden von [JetSetColumn](./jetsetcolumn-function.md)erzwungen, und nicht im Allgemeinen durch **JetUpdate.**
 
-Es ist wichtig, die Auswirkungen einer großen Anzahl von Updatevorgängen innerhalb einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Livedatensatz aller verschiedenen Versionen jedes Datensatzes oder Indexeintrags in der Datenbank, der von allen aktiven Transaktionen angezeigt werden kann. Diese Versionen werden verwendet, um die parallele Steuerung mit mehreren Versionen zu unterstützen, die von der Datenbank-Engine verwendet wird, um Transaktionen mit Momentaufnahmeisolation zu unterstützen. Sobald die Datenbank-Engine die Zum Speichern dieser Versionen verwendeten Ressourcen erschöpft hat, kann sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, um die Wiederverwendung dieser Ressourcen zu ermöglichen. Wenn sich die Engine in diesem Zustand befindet, schlagen alle Updates mit JET_errVersionStoreOutOfMemory fehl. Die ressourcen, die der Datenbank-Engine zum Speichern dieser Versionen zur Verfügung stehen, können mit [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit [JET_paramMaxVerPages](./resource-parameters.md) und [JET_paramGlobalMinVerPages](./resource-parameters.md)gesteuert werden.
+Es ist wichtig, die Auswirkungen einer großen Anzahl von Updatevorgängen innerhalb einer einzelnen Transaktion zu verstehen. Jedes Update der Datenbank muss von der Datenbank-Engine im Versionsspeicher nachverfolgt werden. Der Versionsspeicher enthält einen Livedatensatz aller verschiedenen Versionen jedes Datensatzes oder Indexeintrags in der Datenbank, der von allen aktiven Transaktionen angezeigt werden kann. Diese Versionen werden verwendet, um die parallele Steuerung mit mehreren Versionen zu unterstützen, die von der Datenbank-Engine verwendet wird, um Transaktionen mit Momentaufnahmeisolation zu unterstützen. Sobald die Datenbank-Engine die Zum Speichern dieser Versionen verwendeten Ressourcen erschöpft hat, kann sie keine weiteren Änderungen mehr akzeptieren, bis einige Transaktionen abgeschlossen sind, um die Wiederverwendung dieser Ressourcen zu ermöglichen. Wenn sich die Engine in diesem Zustand befindet, schlagen alle Updates mit JET_errVersionStoreOutOfMemory fehl. Die Ressourcen, die der Datenbank-Engine zum Speichern dieser Versionen zur Verfügung stehen, können mit [JetSetSystemParameter](./jetsetsystemparameter-function.md) mit [JET_paramMaxVerPages](./resource-parameters.md) und [JET_paramGlobalMinVerPages](./resource-parameters.md)gesteuert werden.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+| Anforderung | Wert |
+|------------|----------|
+| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
+| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
+| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
+| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
 

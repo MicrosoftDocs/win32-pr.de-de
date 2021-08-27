@@ -1,9 +1,9 @@
 ---
-title: Startmarker-Element
-description: Das Startmarker-Element gibt einen Marker an, aus dem Windows Media Player mit dem Rendern des Streams beginnt.
+title: STARTMARKER-Element
+description: Das STARTMARKER-Element gibt einen Marker an, von dem Windows Media Player mit dem Rendern des Streams beginnen.
 ms.assetid: b5c2422b-a59c-43f7-bac3-5722418192dc
 keywords:
-- Startmarker-Element, Windows Media Player
+- STARTMARKER-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4c3b3afbc3ab4a922d17f6a0269ed89c22f4dfeb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2fa80da249edc4b9e3ab7d8796bc6ff135cb7cfb2b19a1cb11216ebe4a9c122c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123040"
 ---
-# <a name="startmarker-element"></a>Startmarker-Element
+# <a name="startmarker-element"></a>STARTMARKER-Element
 
-Das **Startmarker** -Element gibt einen Marker an, aus dem Windows Media Player mit dem Rendern des Streams beginnt.
+Das **STARTMARKER-Element** gibt einen Marker an, von dem Windows Media Player mit dem Rendern des Streams beginnen.
 
 ``` syntax
 <STARTMARKER
@@ -33,21 +33,21 @@ Das **Startmarker** -Element gibt einen Marker an, aus dem Windows Media Player 
 
 ## <a name="attributes"></a>Attribute
 
-**Einigen**
+**Anzahl**
 
-Die Nummer eines numerischen Markers im Index. Der Standardwert ist der Anfang von on-Demand-Inhalten oder die aktuelle Position in einem Echtzeitdaten Strom.
+Die Nummer eines numerischen Markers im Index. Der Standardwert ist der Anfang von bedarfsorientiertem Inhalt oder die aktuelle Position in einem Echtzeitstream.
 
 **NAME**
 
-Der Name eines benannten Markers im Index. Der Standardwert ist der Anfang von on-Demand-Inhalten oder die aktuelle Position in einem Echtzeitdaten Strom.
+Der Name eines benannten Markers im Index. Der Standardwert ist der Anfang von bedarfsorientiertem Inhalt oder die aktuelle Position in einem Echtzeitstream.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy       | Elemente           |
 |-----------------|--------------------|
-| Übergeordnete Elemente | **Eintrag**, **ref** |
+| Übergeordnete Elemente | **ENTRY**, **REF** |
 | Untergeordnete Elemente  | Keine               |
 
 
@@ -56,15 +56,15 @@ Der Name eines benannten Markers im Index. Der Standardwert ist der Anfang von o
 
 ## <a name="remarks"></a>Bemerkungen
 
-Dieses Element gibt den Marker an, von dem Windows-Media Player das Rendern des Datenstroms beginnen soll, der im übergeordneten **Eintrag** oder **ref** -Element definiert ist.
+Dieses Element gibt den Marker an, von dem Windows Media Player mit dem Rendern des im übergeordneten **ENTRY-** oder **REF-Element** definierten Streams beginnen soll.
 
 **Hinweis**
 
-Verwenden Sie dieses Element entweder mit dem **Number** -oder dem **Name** -Attribut, jedoch nicht mit beiden.
+Verwenden Sie dieses Element entweder mit dem **NUMBER-** oder **DEM NAME-Attribut,** aber nicht mit beiden.
 
-Ein in einem **ref** -Element definiertes **Startmarker** -Element hat Vorrang vor einem **Startmarker** -Element, das im übergeordneten **Entry** -Element des **ref** -Elements definiert ist. Ein **Startmarker** -Element hat auch Vorrang vor einem **StartTime** -Element.
+Ein innerhalb eines **REF-Elements** definiertes **STARTMARKER-Element** hat Vorrang vor einem **STARTMARKER-Element,** das im übergeordneten **ENTRY-Element** des **REF-Elements** definiert ist. Ein **STARTMARKER-Element** hat auch Vorrang vor einem **STARTTIME-Element.**
 
-Wenn der von einem **Startmarker** -Element angegebene Marker später im Stream als der von einem **endmarkerelement** definierte Marker auftritt, wird kein Inhalt wiedergegeben, aber es wird kein Fehler generiert.
+Wenn der von einem **STARTMARKER-Element** angegebene Marker später im Stream auftritt als der marker, der durch ein **ENDMARKER-Element** definiert wird, wird kein Inhalt wiedergegeben, aber es wird kein Fehler generiert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -82,7 +82,7 @@ Wenn der von einem **Startmarker** -Element angegebene Marker später im Stream 
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
@@ -90,10 +90,10 @@ Wenn der von einem **Startmarker** -Element angegebene Marker später im Stream 
 
 <dl> <dt>
 
-[**Verweis auf Windows Media-Metadateielemente**](windows-media-metafile-elements-reference.md)
+[**Windows Referenz zu Medienmetadateielementen**](windows-media-metafile-elements-reference.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Metadateien**](windows-media-metafile-reference.md)
+[**Windows Referenz zu Medienmetadateien**](windows-media-metafile-reference.md)
 </dt> </dl>
 
  
