@@ -1,64 +1,64 @@
 ---
 title: Routerverwaltungsfunktionen
-description: Verwenden Sie die folgenden Funktionen bei der Entwicklung von Software zum Verwalten von Routern in Windows 2000 und höher.
+description: Verwenden Sie beim Entwickeln von Software die folgenden Funktionen, um Router in Windows 2000 und höher zu verwalten.
 ms.assetid: a61734a7-b171-4e38-8dec-46be9a9c08ee
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c07b1b875b3faebf830327291008b437f3d8564f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 31e498dbf55f1723e950003a848c9d8362aa5efc45b2fd709797cb60103c38e7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081230"
 ---
 # <a name="router-administration-functions"></a>Routerverwaltungsfunktionen
 
-Verwenden Sie die folgenden Funktionen bei der Entwicklung von Software zum Verwalten von Routern in Windows 2000 und höher.
+Verwenden Sie beim Entwickeln von Software die folgenden Funktionen, um Router in Windows 2000 und höher zu verwalten.
 
--   [**Mpradminbufferfree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminbufferfree)
--   [**Mpradminderegisterconnectionnotification**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminderegisterconnectionnotification)
--   [**Mpradminmenshdomainrasserver**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminestablishdomainrasserver)
--   [**Mpradmindeviceaufumum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmindeviceenum)
--   [**Mpradmingeterrorstring**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmingeterrorstring)
--   [**Mpradmininterfakeconnetct**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceconnect)
--   [**Mpradmininterfacedelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete)
--   [**Mpradmininterfakecreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate)
--   [**Mpradmininterfacedevicegetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicegetinfo)
--   [**Mpradmininterfacedevicesetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicesetinfo)
--   [**Mpradmininterfacedisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedisconnect)
--   [**Mpradmininterfaceerum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceenum)
--   [**Mpradmininterfacegetanmeldeinformationen**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentials)
--   [**Mpradmininterfacegetkredentialsex**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentialsex)
--   [**Mpradmininterfacegetcustominfoex**](/windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacegetcustominfoex)
--   [**Mpradmininterfacegethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegethandle)
--   [**Mpradmininterfacegetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetinfo)
--   [**Mpradmininterfakequeryupdateresult**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacequeryupdateresult)
--   [**Mpradmininterfakesetanmelde Informationen**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentials)
--   [**Mpradmininterfakesetkredentialsex**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentialsex)
--   [**Mpradmininterfakesetcustominfoex**](/windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacesetcustominfoex)
--   [**Mpradmininterfakesetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetinfo)
--   [**Mpradmininterfacetransportadd**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportadd)
--   [**Mpradmininterfacetransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportgetinfo)
--   [**Mpradmininterfacetransportremove**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportremove)
--   [**Mpradmininterfacetransportabfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportsetinfo)
--   [**Mpradmininterfakeupdatephonebookinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdatephonebookinfo)
--   [**Mpradmininterfakeupdateroutes**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdateroutes)
--   [**Mpradminisdomainrasserver**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminisdomainrasserver)
--   [**Mpradminisserviceinitialized**](/windows/desktop/api/mprapi/nf-mprapi-mpradminisserviceinitialized)
--   [**Mpradminisservicerunning**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminisservicerunning)
--   [**Mpradminregisterconnectionnotification**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminregisterconnectionnotification)
--   [**Mpradminserverconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserverconnect)
--   [**Mpradminserverdisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserverdisconnect)
--   [**Mpradminservergetanmeldeinformationen**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetcredentials)
--   [**Mpradminservergetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfo)
--   [**Mpradminservergetinfoex**](/windows/desktop/api/mprapi/nf-mprapi-mpradminservergetinfoex)
--   [**Mpradminserversetanmelde Informationen**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetcredentials)
--   [**Mpradminserverminfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetinfo)
--   [**Mpradminservermentinfoex**](/windows/desktop/api/mprapi/nf-mprapi-mpradminserversetinfoex)
--   [**Mpradmintransportcreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportcreate)
--   [**Mpradmintransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportgetinfo)
--   [**Mpradmintransporteintinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportsetinfo)
+-   [**MprAdminBufferFree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminbufferfree)
+-   [**MprAdminDeregisterConnectionNotification**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminderegisterconnectionnotification)
+-   [**MprAdminEstablishDomainRasServer**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminestablishdomainrasserver)
+-   [**MprAdminDeviceEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmindeviceenum)
+-   [**MprAdminGetErrorString**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmingeterrorstring)
+-   [**MprAdminInterfaceConnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceconnect)
+-   [**MprAdminInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete)
+-   [**MprAdminInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate)
+-   [**MprAdminInterfaceDeviceGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicegetinfo)
+-   [**MprAdminInterfaceDeviceSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedevicesetinfo)
+-   [**MprAdminInterfaceDisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedisconnect)
+-   [**MprAdminInterfaceEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceenum)
+-   [**MprAdminInterfaceGetCredentials**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentials)
+-   [**MprAdminInterfaceGetCredentialsEx**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetcredentialsex)
+-   [**MprAdminInterfaceGetCustomInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacegetcustominfoex)
+-   [**MprAdminInterfaceGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegethandle)
+-   [**MprAdminInterfaceGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacegetinfo)
+-   [**MprAdminInterfaceQueryUpdateResult**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacequeryupdateresult)
+-   [**MprAdminInterfaceSetCredentials**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentials)
+-   [**MprAdminInterfaceSetCredentialsEx**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetcredentialsex)
+-   [**MprAdminInterfaceSetCustomInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mpradmininterfacesetcustominfoex)
+-   [**MprAdminInterfaceSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacesetinfo)
+-   [**MprAdminInterfaceTransportAdd**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportadd)
+-   [**MprAdminInterfaceTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportgetinfo)
+-   [**MprAdminInterfaceTransportRemove**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportremove)
+-   [**MprAdminInterfaceTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacetransportsetinfo)
+-   [**MprAdminInterfaceUpdatePhonebookInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdatephonebookinfo)
+-   [**MprAdminInterfaceUpdateRoutes**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfaceupdateroutes)
+-   [**MprAdminIsDomainRasServer**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminisdomainrasserver)
+-   [**MprAdminIsServiceInitialized**](/windows/desktop/api/mprapi/nf-mprapi-mpradminisserviceinitialized)
+-   [**MprAdminIsServiceRunning**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminisservicerunning)
+-   [**MprAdminRegisterConnectionNotification**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminregisterconnectionnotification)
+-   [**MprAdminServerConnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserverconnect)
+-   [**MprAdminServerDisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserverdisconnect)
+-   [**MprAdminServerGetCredentials**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetcredentials)
+-   [**MprAdminServerGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminservergetinfo)
+-   [**MprAdminServerGetInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mpradminservergetinfoex)
+-   [**MprAdminServerSetCredentials**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetcredentials)
+-   [**MprAdminServerSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminserversetinfo)
+-   [**MprAdminServerSetInfoEx**](/windows/desktop/api/mprapi/nf-mprapi-mpradminserversetinfoex)
+-   [**MprAdminTransportCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportcreate)
+-   [**MprAdminTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportgetinfo)
+-   [**MprAdminTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportsetinfo)
 
- 
+ 
 
- 
+ 

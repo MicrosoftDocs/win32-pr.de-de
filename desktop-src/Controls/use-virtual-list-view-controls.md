@@ -1,28 +1,28 @@
 ---
-title: Vorgehensweise beim Verwenden von Virtual List-View-Steuerelementen
-description: In diesem Thema wird veranschaulicht, wie Sie mit virtuellen Listenansicht-Steuerelementen arbeiten.
+title: Verwenden von Virtual List-View-Steuerelementen
+description: In diesem Thema wird das Arbeiten mit virtuellen Listenansichtssteuerelementen veranschaulicht.
 ms.assetid: DA32D7B3-5FDB-4D73-9A72-0D4EEB2A0C4F
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3baf5e37d0d4f6da0cdf596dd8ba3c71e852a99
-ms.sourcegitcommit: e584514ced7396dde55e58501c8c8a872229acc4
+ms.openlocfilehash: f6ed847d7cb8a41e4cb1c255290ff660eb278bcd99126605a2874c52b279e694
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "106363064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059700"
 ---
-# <a name="how-to-use-virtual-list-view-controls"></a>Vorgehensweise beim Verwenden von Virtual List-View-Steuerelementen
+# <a name="how-to-use-virtual-list-view-controls"></a>Verwenden von Virtual List-View-Steuerelementen
 
-In diesem Thema wird veranschaulicht, wie Sie mit virtuellen Listenansicht-Steuerelementen arbeiten. In den begleitenden C++-Codebeispielen wird veranschaulicht, wie Sie die Benachrichtigungs Meldungen des virtuellen Listen-Ansichts Steuer Elements verarbeiten, den Cache optimieren und ein Element aus dem Cache abrufen.
+In diesem Thema wird das Arbeiten mit virtuellen Listenansichtssteuerelementen veranschaulicht. Die zugehörigen C++-Codebeispiele zeigen, wie Benachrichtigungsmeldungen zu virtuellen Listenansichtssteuerelements, wie der Cache optimiert wird und wie ein Element aus dem Cache abgerufen wird.
 
--   [Was Sie wissen müssen](#what-you-need-to-know)
--   [Benachrichtigungs Codes für die virtuelle List-View Steuerung verarbeiten](#process-virtual-list-view-control-notification-codes)
+-   [Wichtige Informationen](#what-you-need-to-know)
+-   [Verarbeiten von Benachrichtigungscodes List-View virtuellen Steuerelementen](#process-virtual-list-view-control-notification-codes)
 -   [Optimieren des Caches](#optimize-the-cache)
 -   [Abrufen eines Elements aus dem Cache](#retrieve-an-item-from-the-cache)
 -   [Zugehörige Themen](#related-topics)
 
 > [!Note]  
-> Der Beispielcode in diesem Abschnitt setzt voraus, dass der Cache ein dynamisch zugewiesenes Array von Anwendungs definierten Strukturen ist. Die Struktur wird im folgenden C++-Codebeispiel definiert.
+> Im Beispielcode in diesem Abschnitt wird davon ausgegangen, dass der Cache ein dynamisch zugeordnetes Array von anwendungsdefinierten Strukturen ist. Die -Struktur wird im folgenden C++-Codebeispiel definiert.
 
  
 
@@ -41,24 +41,24 @@ struct RndItem
 
 
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="process-virtual-list-view-control-notification-codes"></a>Benachrichtigungs Codes für die virtuelle List-View Steuerung verarbeiten
+### <a name="process-virtual-list-view-control-notification-codes"></a>Verarbeiten von Benachrichtigungscodes List-View virtuellen Steuerelementen
 
-Zusätzlich zu den von anderen Listenansicht-Steuerelementen gesendeten Benachrichtigungs Codes können auch virtuelle Listenansicht-Steuerelemente die [LVN- \_ odcachehint](lvn-odcachehint.md) -und LVN-Benachrichtigungs Codes von [**\_ odfinditem**](lvn-odfinditem.md) senden.
+Zusätzlich zu den Benachrichtigungscodes, die von anderen Listenansichtssteuerelementen gesendet werden, können virtuelle Listenansichtssteuerelemente auch die [LVN \_ ODCACHEHINT-](lvn-odcachehint.md) und [**LVN \_ ODFINDITEM-Benachrichtigungscodes**](lvn-odfinditem.md) senden.
 
-Diese Anwendungs definierte Funktion verarbeitet Benachrichtigungs Meldungen, die häufig von einem Virtual List-View-Steuerelement gesendet werden.
+Diese anwendungsdefinierte Funktion verarbeitet Benachrichtigungsmeldungen, die häufig von einem virtuellen Listenansicht-Steuerelement gesendet werden.
 
 
 ```C++
@@ -185,9 +185,9 @@ LRESULT OnNotify(HWND hwnd, NMHDR* pnmhdr)
 
 ### <a name="optimize-the-cache"></a>Optimieren des Caches
 
-Ein virtuelles Listenansicht-Steuerelement sendet eine [LVN- \_ odcachehint](lvn-odcachehint.md) -Benachrichtigungs Meldung, wenn sich der Inhalt seines Anzeige Bereichs geändert hat. Die Meldung enthält Informationen über den Bereich von Elementen, die zwischengespeichert werden sollen. Nachdem Sie die Benachrichtigungs Meldung erhalten haben, muss Ihre Anwendung darauf vorbereitet sein, den Cache mit Element Informationen für den angeforderten Bereich zu laden, damit die Informationen sofort verfügbar sind, wenn eine [LVN \_ getdispinfo](lvn-getdispinfo.md) -Benachrichtigungs Meldung gesendet wird.
+Ein virtuelles Listenansicht-Steuerelement sendet eine [LVN \_ ODCACHEHINT-Benachrichtigungsmeldung,](lvn-odcachehint.md) wenn sich der Inhalt des Anzeigebereichs geändert hat. Die Meldung enthält Informationen über den Bereich von Elementen, die zwischengespeichert werden sollen. Beim Empfang der Benachrichtigungsmeldung muss Ihre Anwendung darauf vorbereitet sein, den Cache mit Elementinformationen für den angeforderten Bereich zu laden, damit die Informationen sofort verfügbar sind, wenn eine [LVN \_ GETDISPINFO-Benachrichtigungsmeldung](lvn-getdispinfo.md) gesendet wird.
 
-Im folgenden C++-Codebeispiel nimmt die Anwendungs definierte Funktion den Bereich der Elemente für den Cache an, der von einem virtuellen Listenansicht-Steuerelement gesendet wird. Es wird eine Überprüfung durchgeführt, um zu bestimmen, dass der angeforderte Bereich von Elementen nicht bereits zwischengespeichert ist, und dann wird der erforderliche globale Speicher zugewiesen und ggf. der Cache ausgefüllt.
+Im folgenden C++-Codebeispiel akzeptiert die anwendungsdefinierte Funktion den Bereich von Elementen für den Cache, der von einem virtuellen Listenansicht-Steuerelement gesendet wird. Er führt eine Überprüfung durch, um zu ermitteln, ob der angeforderte Bereich von Elementen noch nicht zwischengespeichert ist. Anschließend wird der erforderliche globale Arbeitsspeicher reserviert und der Cache bei Bedarf auffüllt.
 
 
 ```C++
@@ -294,7 +294,7 @@ void PrepCache(int iFrom, int iTo)
 
 ### <a name="retrieve-an-item-from-the-cache"></a>Abrufen eines Elements aus dem Cache
 
-Diese Beispiel Funktion akzeptiert zwei Parameter: die Adresse der Anwendungs definierten Struktur und einen ganzzahligen Wert, der den Index des Elements in der Liste darstellt. Der Indexwert wird überprüft, um zu ermitteln, ob das gewünschte Element zwischengespeichert wird. Wenn dies der Fall ist, wird der Zeiger, der an die Funktion übermittelt wurde, auf einen Speicherort im Cache festgelegt. Wenn sich das Element nicht im Haupt-oder endcache befindet, müssen die Element Informationen manuell gefunden werden.
+Diese Beispielfunktion akzeptiert zwei Parameter, die Adresse der anwendungsdefinierten Struktur und einen ganzzahligen Wert, der den Index des Elements in der Liste darstellt. Der Indexwert wird überprüft, um zu prüfen, ob das gewünschte Element zwischengespeichert wird. Wenn dies der Ansicht ist, wird der Zeiger, der an die Funktion übergeben wurde, auf einen Speicherort im Cache festgelegt. Wenn sich das Element nicht im Haupt- oder Endcache befindet, müssen die Elementinformationen manuell gespeichert werden.
 
 
 ```C++
@@ -330,9 +330,9 @@ void RetrieveItem( RndItem * prndItem, int index )
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste der Fenster Meldungen, die von einem Listenansicht-Steuerelement verarbeitet werden, finden Sie unter [Standard List-View Nachrichtenverarbeitung](listview-message-processing.md).
+Eine Liste der Fenstermeldungen, die von einem Listenansicht-Steuerelement verarbeitet werden, finden Sie unter [List-View Message Processing](listview-message-processing.md).
 
 ## <a name="complete-example"></a>Vollständiges Beispiel
 
@@ -340,13 +340,13 @@ Eine Liste der Fenster Meldungen, die von einem Listenansicht-Steuerelement vera
 
 <dl> <dt>
 
-[Listenansicht-Steuerelement Verweis](bumper-list-view-list-view-control-reference.md)
+[List-View-Steuerelementreferenz](bumper-list-view-list-view-control-reference.md)
 </dt> <dt>
 
-[Informationen zu List-View Steuerelementen](list-view-controls-overview.md)
+[Informationen List-View Steuerelementen](list-view-controls-overview.md)
 </dt> <dt>
 
-[Verwenden von List-View Steuerelementen](using-list-view-controls.md)
+[Verwenden List-View Steuerelementen](using-list-view-controls.md)
 </dt> </dl>
 
  

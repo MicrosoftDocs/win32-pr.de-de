@@ -1,9 +1,9 @@
 ---
-title: gldrawbuffer-Funktion (GL. h)
-description: Die gldrawbuffer-Funktion gibt an, in welche Farb Puffer gezeichnet werden soll.
+title: glDrawBuffer-Funktion (Gl.h)
+description: Die glDrawBuffer-Funktion gibt an, in welche Farbpuffer gezeichnet werden soll.
 ms.assetid: ea625699-303b-4e60-b9aa-771949a8d52d
 keywords:
-- gldrawbuffer-Funktion OpenGL
+- glDrawBuffer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a99bd2b184766f1621d89b2c8d642902d300e14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bc5bc715aad24198031ed096d53f1a468b6672532e4df4ae1ef66b416002a65b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081610"
 ---
-# <a name="gldrawbuffer-function"></a>gldrawbuffer-Funktion
+# <a name="gldrawbuffer-function"></a>glDrawBuffer-Funktion
 
-Die **gldrawbuffer** -Funktion gibt an, in welche Farb Puffer gezeichnet werden soll.
+Die **glDrawBuffer-Funktion** gibt an, in welche Farbpuffer gezeichnet werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,29 +43,29 @@ void WINAPI glDrawBuffer(
 *mode* 
 </dt> <dd>
 
-Gibt bis zu vier Farb Puffer an, die in mit den folgenden akzeptablen symbolischen Konstanten gezeichnet werden sollen.
+Gibt bis zu vier Farbpuffer an, in die mit den folgenden zulässigen symbolischen Konstanten gezeichnet werden soll.
 
 
 
 | Wert                                                                                                                                                                       | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                      |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_NONE"></span><span id="gl_none"></span><dl> <dt>**GL \_ keine**</dt> </dl>                                 | Es wurden keine Farb Puffer geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                                     |
-| <span id="GL_FRONT_LEFT"></span><span id="gl_front_left"></span><dl> <dt>**GL- \_ Front- \_ Links**</dt> </dl>              | Nur der Front-Left-Farb Puffer wird geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                      |
-| <span id="GL_FRONT_RIGHT"></span><span id="gl_front_right"></span><dl> <dt>**GL- \_ Front- \_ right**</dt> </dl>           | Nur der Front-Right-Farb Puffer wird geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                     |
-| <span id="GL_BACK_LEFT"></span><span id="gl_back_left"></span><dl> <dt>**GL \_ zurück \_ Links**</dt> </dl>                 | Nur der linke Farb Puffer wird geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                       |
-| <span id="GL_BACK_RIGHT"></span><span id="gl_back_right"></span><dl> <dt>**GL \_ zurück \_ Rechts**</dt> </dl>              | Nur der Hintergrund Farb Puffer wird geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                      |
-| <span id="GL_FRONT"></span><span id="gl_front"></span><dl> <dt>**GL. \_ Front**</dt> </dl>                              | Nur die Front-Left-und Front-Right-Farb Puffer werden geschrieben. Wenn kein Vordergrund rechter Farb Puffer vorhanden ist, wird nur der vordere linke Farb Puffer geschrieben.<br/>                                                                                                                                                                                                                                              |
-| <span id="GL_BACK"></span><span id="gl_back"></span><dl> <dt>**GL \_ zurück**</dt> </dl>                                 | Es werden nur die Hintergrund-und Hintergrund Farb Puffer geschrieben. Wenn kein Hintergrund Farb Puffer vorhanden ist, wird nur der Hintergrund Farb Puffer geschrieben.<br/>                                                                                                                                                                                                                                                  |
-| <span id="GL_LEFT"></span><span id="gl_left"></span><dl> <dt>**GL \_ Links**</dt> </dl>                                 | Es werden nur die Vorder-und Hintergrundfarben geschrieben. Wenn kein Hintergrund Farb Puffer vorhanden ist, wird nur der linke Farb Puffer in der Vorderseite geschrieben.<br/>                                                                                                                                                                                                                                                  |
-| <span id="GL_RIGHT"></span><span id="gl_right"></span><dl> <dt>**GL \_ right**</dt> </dl>                              | Es werden nur die Vorder-und Hintergrundfarben geschrieben. Wenn kein Hintergrund Farb Puffer vorhanden ist, wird nur der Front-Right-Farb Puffer geschrieben.<br/>                                                                                                                                                                                                                                              |
-| <span id="GL_FRONT_AND_BACK"></span><span id="gl_front_and_back"></span><dl> <dt>**GL \_ vor \_ und \_ zurück**</dt> </dl> | Alle Vorder-und Hintergrund Farbpuffer (Front-Left, Front-Right, Back-Left, Back-right) werden geschrieben. Wenn keine Hintergrundfarben vorhanden sind, werden nur die Front-Left-und Front-Right-Farb Puffer geschrieben. Wenn keine rechten Farb Puffer vorhanden sind, werden nur die Front-Left-und Back-Left-Farb Puffer geschrieben. Wenn keine Rechte oder Hintergrundfarben Puffer vorhanden sind, wird nur der linke Farb Puffer in der Vorderseite geschrieben.<br/> |
-| <span id="GL_AUXi"></span><span id="gl_auxi"></span><span id="GL_AUXI"></span><dl> <dt>**GL \_ Auxi**</dt> </dl>       | Nur der Zusatz Farb Puffer, den *ich geschrieben habe* . der *Wert liegt zwischen* 0 und GL, \_ aux \_ -Puffer-1. (GL \_ AUX- \_ Puffer ist nicht die Obergrenze. verwenden Sie " [**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) ", um die Anzahl der verfügbaren zusätzlichen Puffer abzufragen.)<br/>                                                                                                                            |
+| <span id="GL_NONE"></span><span id="gl_none"></span><dl> <dt>**GL \_ NONE**</dt> </dl>                                 | Es werden keine Farbpuffer geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                                     |
+| <span id="GL_FRONT_LEFT"></span><span id="gl_front_left"></span><dl> <dt>**GL \_ FRONT \_ LEFT**</dt> </dl>              | Es wird nur der Farbpuffer links vorn geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                      |
+| <span id="GL_FRONT_RIGHT"></span><span id="gl_front_right"></span><dl> <dt>**GL \_ FRONT \_ RIGHT**</dt> </dl>           | Es wird nur der Rechts-Rechts-Puffer geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                     |
+| <span id="GL_BACK_LEFT"></span><span id="gl_back_left"></span><dl> <dt>**GL \_ ZURÜCK \_ LINKS**</dt> </dl>                 | Es wird nur der Hintergrund-Links-Farbpuffer geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                       |
+| <span id="GL_BACK_RIGHT"></span><span id="gl_back_right"></span><dl> <dt>**GL \_ ZURÜCK \_ RECHTS**</dt> </dl>              | Es wird nur der Hintergrund-rechts-Farbpuffer geschrieben.<br/>                                                                                                                                                                                                                                                                                                                                                      |
+| <span id="GL_FRONT"></span><span id="gl_front"></span><dl> <dt>**GL \_ FRONT**</dt> </dl>                              | Es werden nur die Farbpuffer "front-left" und "front-right" geschrieben. Wenn kein Farbpuffer rechts von vorne vorn angezeigt wird, wird nur der Puffer für die linke Frontfarbe geschrieben.<br/>                                                                                                                                                                                                                                              |
+| <span id="GL_BACK"></span><span id="gl_back"></span><dl> <dt>**GL \_ BACK**</dt> </dl>                                 | Es werden nur die Farbpuffer "zurück links" und "zurück rechts" geschrieben. Wenn kein hintergrundrechter Farbpuffer vorüber ist, wird nur der Hintergrund-Links-Farbpuffer geschrieben.<br/>                                                                                                                                                                                                                                                  |
+| <span id="GL_LEFT"></span><span id="gl_left"></span><dl> <dt>**GL \_ LEFT**</dt> </dl>                                 | Es werden nur die Farbpuffer "front-left" und "back-left" geschrieben. Wenn kein Hintergrund-Links-Farbpuffer vorüber ist, wird nur der Linke-Hintergrund-Farbpuffer geschrieben.<br/>                                                                                                                                                                                                                                                  |
+| <span id="GL_RIGHT"></span><span id="gl_right"></span><dl> <dt>**GL \_ RIGHT**</dt> </dl>                              | Es werden nur die Farbpuffer "front-right" und "back-right" geschrieben. Wenn kein Farbpuffer rechts nach rechts angezeigt wird, wird nur der Rechts-Rechts-Puffer geschrieben.<br/>                                                                                                                                                                                                                                              |
+| <span id="GL_FRONT_AND_BACK"></span><span id="gl_front_and_back"></span><dl> <dt>**GL \_ FRONT \_ AND \_ BACK**</dt> </dl> | Alle Vorder- und Hintergrundfarbpuffer (front-left, front-right, back-left, back-right) werden geschrieben. Wenn es keine Hintergrundfarbpuffer gibt, werden nur die Farbpuffer "front-left" und "front-right" geschrieben. Wenn es keine rechten Farbpuffer gibt, werden nur die Farbpuffer von vorn links und zurück links geschrieben. Wenn keine Rechts- oder Hintergrundfarbpuffer angezeigt werden, wird nur der Farbpuffer links vorn geschrieben.<br/> |
+| <span id="GL_AUXi"></span><span id="gl_auxi"></span><span id="GL_AUXI"></span><dl> <dt>**GL \_ AUXi**</dt> </dl>       | Es wird nur der zusätzliche *Farbpuffer i* geschrieben. *i* liegt zwischen 0 und GL \_ AUX \_ BUFFERS - 1. (GL) \_ AUX BUFFERS ist nicht die Obergrenze. Verwenden Sie glGet, um die Anzahl der verfügbaren \_ Hilfspuffer abfragt.) [](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)<br/>                                                                                                                            |
 
 
 
  
 
-Der Standardwert ist "GL \_ Front" für Einzel gepufferte Kontexte und "GL \_ Back" für doppelt gepufferte Kontexte.
+Der Standardwert ist GL \_ FRONT für Einzelpufferkontexte und GL BACK für doppelt \_ gepufferte Kontexte.
 
 </dd> </dl>
 
@@ -75,34 +75,34 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Modus* war kein akzeptierter Wert.<br/>                                                                                          |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Keiner der durch den *Modus* gekennzeichneten Puffer war vorhanden.<br/>                                                                           |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *mode* war kein akzeptierter Wert.<br/>                                                                                          |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Keiner der vom Modus *angegebenen* Puffer war vorhanden.<br/>                                                                           |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Farben in den Framebuffer geschrieben werden, werden Sie in die von **gldrawbuffer** angegebenen Farb Puffer geschrieben.
+Wenn Farben in den Framepuffer geschrieben werden, werden sie in die von **glDrawBuffer** angegebenen Farbpuffer geschrieben.
 
-Wenn mehr als ein Farb Puffer zum Zeichnen ausgewählt ist, werden Mischungs-oder logische Operationen berechnet und für jeden Farb Puffer unabhängig voneinander angewendet und können in jedem Puffer zu unterschiedlichen Ergebnissen führen.
+Wenn mehr als ein Farbpuffer zum Zeichnen ausgewählt ist, werden Blending- oder logische Vorgänge unabhängig für jeden Farbpuffer berechnet und angewendet und können in jedem Puffer unterschiedliche Ergebnisse erzeugen.
 
-Zu den monetischen Kontexten zählen nur linke Puffer, und stereoskopischen Kontexte enthalten sowohl den linken als auch den rechten Puffer. Ebenso umfassen Einzel gepufferte Kontexte nur Front-Puffer, und doppelt gepufferte Kontexte enthalten sowohl den vorderen als auch den Hintergrund Puffer. Der Kontext wird bei der OpenGL-Initialisierung ausgewählt.
+Monotone Kontexte enthalten nur linke Puffer, und stereotone Kontexte enthalten sowohl linke als auch rechte Puffer. Ebenso enthalten einzelpufferte Kontexte nur Frontpuffer, und doppelt gepufferte Kontexte enthalten sowohl Front- als auch Backpuffer. Der Kontext wird bei der OpenGL-Initialisierung ausgewählt.
 
-Es ist immer der Fall, dass GL \_ aux *i* = GL \_ AUX0 + *i*.
+Es ist immer der Fall, dass GL \_ AUX *i* = GL \_ AUX0 + *i* ist.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " **gldrawbuffer** " ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glDrawBuffer-Funktion** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ Zeichnungs \_ Puffer
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) dem Argument GL \_ DRAW \_ BUFFER
 
-**glget** mit dem Argument GL \_ aux- \_ Puffer
+**glGet** mit argument GL \_ AUX \_ BUFFERS
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -110,8 +110,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -123,25 +123,25 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glblendfunc**](glblendfunc.md)
+[**glBlendFunc**](glblendfunc.md)
 </dt> <dt>
 
-[**glcolormask**](glcolormask.md)
+[**glColorMask**](glcolormask.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glindexmask**](glindexmask.md)
+[**glIndexMask**](glindexmask.md)
 </dt> <dt>
 
-[**gllogicop**](gllogicop.md)
+[**glLogicOp**](gllogicop.md)
 </dt> <dt>
 
-[**glread Buffer**](glreadbuffer.md)
+[**glReadBuffer**](glreadbuffer.md)
 </dt> </dl>
 
  

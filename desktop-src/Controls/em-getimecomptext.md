@@ -1,9 +1,9 @@
 ---
-title: EM_GETIMECOMPTEXT Meldung (RichEdit. h)
-description: Ruft den Eingabemethoden-Editor (IME)-Kompositions Text ab.
+title: EM_GETIMECOMPTEXT (Richedit.h)
+description: Ruft den Kompositionstext des Eingabemethode-Editors (Input Method Editor, IME) ab.
 ms.assetid: 1516305c-5f87-4ae0-97db-8709c71abacc
 keywords:
-- Windows-Steuerelemente für EM_GETIMECOMPTEXT Meldung
+- EM_GETIMECOMPTEXT message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 834c55d6b5e40de7dcacfeb3e2d0c2e0878a0f3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5dd915f037275d428df37ca02a206b936a63bfd2f6ac8fbb605d1573b9535789
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120049070"
 ---
-# <a name="em_getimecomptext-message"></a>EM \_ getimecomptext-Nachricht
+# <a name="em_getimecomptext-message"></a>EM \_ GETIMECOMPTEXT-Nachricht
 
-Ruft den Eingabemethoden-Editor (IME)-Kompositions Text ab.
+Ruft den Kompositionstext des Eingabemethode-Editors (Input Method Editor, IME) ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,26 +32,26 @@ Ruft den Eingabemethoden-Editor (IME)-Kompositions Text ab.
 *wParam* 
 </dt> <dd>
 
-Die [**imecomptext**](/windows/desktop/api/Richedit/ns-richedit-imecomptext) -Struktur.
+Die [**IMECOMPTEXT-Struktur.**](/windows/desktop/api/Richedit/ns-richedit-imecomptext)
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der Puffer, der den Kompositions Text empfängt. Die Größe dieses Puffers ist im **CB** -Member der *wParam* -Struktur enthalten.
+Der Puffer, der den Kompositionstext empfängt. Die Größe dieses Puffers ist im **cb-Member** der *wParam-Struktur* enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung ist der Rückgabewert die Anzahl von Unicode-Zeichen, die in den Puffer kopiert werden. Andernfalls ist der Wert 0 (null).
+Bei Erfolg ist der Rückgabewert die Anzahl der Unicode-Zeichen, die in den Puffer kopiert werden. Andernfalls ist es 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung nimmt nur Unicode-Zeichen folgen an.
+Diese Meldung verwendet nur Unicode-Zeichenfolgen.
 
-**Sicherheitswarnung:** Stellen Sie sicher, dass ein Puffer für die Größe der Eingabe ausreichend ist. Wenn dies nicht der Fall ist, kann dies zu Problemen mit Ihrer Anwendung führen.
+**Sicherheitswarnung:** Stellen Sie sicher, dass ein Puffer vorhanden ist, der für die Größe der Eingabe ausreicht. Wenn Sie dies nicht tun, kann dies zu Problemen für Ihre Anwendung führen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Diese Meldung nimmt nur Unicode-Zeichen folgen an.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP1 \[ Desktop-Apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP1-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -69,7 +69,7 @@ Diese Meldung nimmt nur Unicode-Zeichen folgen an.
 
 <dl> <dt>
 
-[**Imecomptext**](/windows/desktop/api/Richedit/ns-richedit-imecomptext)
+[**IMECOMPTEXT**](/windows/desktop/api/Richedit/ns-richedit-imecomptext)
 </dt> </dl>
 
  

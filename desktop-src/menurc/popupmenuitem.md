@@ -1,9 +1,9 @@
 ---
-title: Popupmenuitem-Struktur
-description: Enthält Informationen zu den Menü Elementen in einer Menü Ressource, mit der ein Menü oder ein Untermenü geöffnet wird. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: POPUPMENUITEM-Struktur
+description: Enthält Informationen zu den Menüelementen in einer Menüressource, die ein Menü oder ein Untermenü öffnen. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: cb8faeb2-bca9-4ff5-8f80-d273c3fca504
 keywords:
-- Popupmenuitem-Struktur Menüs und weitere Ressourcen
+- POPUPMENUITEM-Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: faa755c2ec7a2b9eeb2f123d7fd3e169b2df1be1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 62d769e9756f0d15e7377a79f9aa94802a469746807e3a32b5ba329f76484b82
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011700"
 ---
-# <a name="popupmenuitem-structure"></a>Popupmenuitem-Struktur
+# <a name="popupmenuitem-structure"></a>POPUPMENUITEM-Struktur
 
-Enthält Informationen zu den Menü Elementen in einer Menü Ressource, mit der ein Menü oder ein Untermenü geöffnet wird. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält Informationen zu den Menüelementen in einer Menüressource, die ein Menü oder ein Untermenü öffnen. Die hier bereitgestellte Strukturdefinition ist nur zur Erklärung vorgesehen. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,9 +50,9 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Beschreibt das Menü Element. Einige der Werte, die dieser Member enthalten kann, sind die in der folgenden Liste aufgeführten Werte.
+Beschreibt das Menüelement. Einige der Werte, die dieses Member haben kann, enthalten die werte, die in der folgenden Liste angezeigt werden.
 
-Zusätzlich zu den angezeigten Werten kann dieser Member auch eine Kombination der Typwerte sein, die mit dem **ftype** -Member der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur aufgelistet sind. Die Typwerte sind diejenigen, die mit MFT beginnen \_ . Um diese vordefinierten MFT- \_ \* Typwerte zu verwenden, fügen Sie die folgende Anweisung in die RC-Datei ein:
+Zusätzlich zu den angezeigten Werten kann dieser Member auch eine Kombination der Typwerte sein, die mit dem **fType-Member** der [**MENUITEMINFO-Struktur aufgelistet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) sind. Die Typwerte beginnen mit \_ MFT. Um diese vordefinierten \_ \* MFT-Typwerte zu verwenden, schließen Sie die folgende Anweisung in ihre RC-Datei ein:
 
 `#include "winuser.h"`
 
@@ -60,8 +60,8 @@ Zusätzlich zu den angezeigten Werten kann dieser Member auch eine Kombination d
 
 | Wert                                                                                                                                                                                                    | Bedeutung                                                                                         |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <span id="MF_END"></span><span id="mf_end"></span><dl> <dt>**MF \_ Ende**</dt> <dt>0x80</dt> </dl>       | Das Menü Element ist das letzte im Menü. das-Flag wird intern vom System verwendet. <br/>   |
-| <span id="MF_POPUP"></span><span id="mf_popup"></span><dl> <dt>**MF \_ Popup**</dt> - <dt>0x01</dt> </dl> | Das Menü Element öffnet ein Menü oder ein Untermenü. das-Flag wird intern vom System verwendet. <br/> |
+| <span id="MF_END"></span><span id="mf_end"></span><dl> <dt>**MF \_ END**</dt> <dt>0x80</dt> </dl>       | Das Menüelement ist das letzte im Menü. das Flag wird intern vom System verwendet. <br/>   |
+| <span id="MF_POPUP"></span><span id="mf_popup"></span><dl> <dt>**MF \_ POPUP**</dt> <dt>0x01</dt> </dl> | Das Menüelement öffnet ein Menü oder ein Untermenü. das Flag wird intern vom System verwendet. <br/> |
 
 
 
@@ -76,7 +76,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Beschreibt das Menü Element. Dieser Member kann eine Kombination der Zustands Werte sein, die mit dem **dwstate** -Member der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur aufgelistet werden. Die Statuswerte sind diejenigen, die mit MFS beginnen \_ . Um diese vordefinierten MFS- \_ \* Zustands Werte zu verwenden, fügen Sie die folgende Anweisung in die RC-Datei ein:
+Beschreibt das Menüelement. Dieser Member kann eine Kombination der Zustandswerte sein, die mit dem **dwState-Element** der [**MENUITEMINFO-Struktur aufgelistet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) sind. Bei den Zustandswerten handelt es sich um die Werte, die mit MFS \_ beginnen. Um diese vordefinierten MFS-Zustandswerte \_ \* zu verwenden, schließen Sie die folgende Anweisung in ihre RC-Datei ein:
 
 `#include "winuser.h"`
 
@@ -89,25 +89,25 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Ein numerischer Ausdruck, der das Menü Element identifiziert, das in der [**WM- \_ Befehls**](wm-command.md) Meldung ausgegeben wird.
+Ein numerischer Ausdruck, der das Menüelement identifiziert, das in der [**WM \_ COMMAND-Meldung übergeben**](wm-command.md) wird.
 
 </dd> <dt>
 
-**resInfo**
+**Resinfo**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Ein Satz von Bitflags, die den Typ des Menü Elements angeben. Dieser Member kann einen der folgenden Werte aufweisen.
+Ein Satz von Bitflags, die den Typ des Menüelements angeben. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                       | Bedeutung                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| <span id="MFR_END"></span><span id="mfr_end"></span><dl> <dt>**MFR \_ Ende**</dt> <dt>0x80</dt> </dl>       | Das Menü Element ist das letzte in diesem Untermenü oder in der Menü Ressource. Dieses Flag wird intern vom System verwendet.<br/> |
-| <span id="MFR_POPUP"></span><span id="mfr_popup"></span><dl> <dt>**MFR \_ Popup**</dt> - <dt>0x01</dt> </dl> | Das Menü Element öffnet ein Menü oder ein Untermenü. das-Flag wird intern vom System verwendet.<br/>                     |
+| <span id="MFR_END"></span><span id="mfr_end"></span><dl> <dt>**BESEN \_ END**</dt> <dt>0x80</dt> </dl>       | Das Menüelement ist das letzte in diesem Untermenü oder dieser Menüressource. dieses Flag wird intern vom System verwendet.<br/> |
+| <span id="MFR_POPUP"></span><span id="mfr_popup"></span><dl> <dt>**BESEN \_ POPUP**</dt> <dt>0x01</dt> </dl> | Das Menüelement öffnet ein Menü oder ein Untermenü. das Flag wird intern vom System verwendet.<br/>                     |
 
 
 
@@ -115,24 +115,24 @@ Ein Satz von Bitflags, die den Typ des Menü Elements angeben. Dieser Member kan
 
 </dd> <dt>
 
-**MenuText**
+**menuText**
 </dt> <dd>
 
-Typ: **szorord**
+Typ: **szOrOrd**
 
 </dd> <dd>
 
-Eine NULL-terminierte Unicode-Zeichenfolge, die den Text für dieses Menü Element enthält. Es gibt keine Beschränkung für die Größe dieser Zeichenfolge.
+Eine mit NULL beendete Unicode-Zeichenfolge, die den Text für dieses Menüelement enthält. Es gibt keine feste Beschränkung für die Größe dieser Zeichenfolge.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt eine **popupmenuitem** -Struktur für jedes Menü Element, das ein Menü oder ein Untermenü öffnet. Identifizieren Sie diesen Typ von Menü Element durch Festlegen des **Typmembers** auf das **MF- \_ Popup** und durch Festlegen des **MFR- \_ Popup** Bits im **ResInfo** -Member auf 0x0001. In diesem Fall handelt es sich bei den letzten Daten, die in die [**RT- \_ Menü**](/windows/desktop/menurc/resource-types) Ressource für das Menü oder Untermenü geschrieben werden, um die [**menuhelpid**](menuhelpid.md) -Struktur. **Menuhelpid** enthält einen numerischen Ausdruck, der das Menü während der [**WM- \_ Hilfe**](../shell/wm-help.md) Verarbeitung identifiziert.
+Es gibt eine **POPUPMENUITEM-Struktur** für jedes Menüelement, das ein Menü oder ein Untermenü öffnet. Identifizieren Sie diese Art von  Menüelement, indem Sie das Typelement auf **MF \_ POPUP** und das **POPUP-Bit im \_** **resInfo-Element** auf 0x0001. In diesem Fall sind die endgültigen Daten, die in die [**RESSOURCE RT \_ MENU**](/windows/desktop/menurc/resource-types) für das Menü oder Untermenü geschrieben werden, die [**MENUHELPID-Struktur.**](menuhelpid.md) **MENUHELPID enthält** einen numerischen Ausdruck, der das Menü während der [**WM \_ HELP-Verarbeitung**](../shell/wm-help.md) identifiziert.
 
-Außerdem folgt jede **popupmenuitem** -Struktur, der das **MFR- \_ Popup** -Bit im **ResInfo** -Member festgelegt ist, eine [**menuhelpid**](menuhelpid.md) -Struktur plus eine zusätzliche Anzahl von **popupmenuitem** -Strukturen, eine für jedes Menü Element in diesem Untermenü. In der letzten **popupmenuitem** -Struktur im Untermenü wird das **MFR- \_ Endbit** im **ResInfo** -Member festgelegt. Um das Ende der Ressource zu ermitteln, suchen Sie nach einem passenden **MFR- \_ Ende** für jedes **MFR- \_ Popup** plus ein zusätzliches **MFR- \_ Ende** , das mit dem äußersten Satz von Menü Elementen übereinstimmt.
+Darüber hinaus folgt auf jede **POPUPMENUITEM-Struktur,** für die **das POPUP \_ POPUP-Bit** im **resInfo-Element** festgelegt ist, eine [**MENUHELPID-Struktur**](menuhelpid.md) sowie eine zusätzliche Anzahl von **POPUPMENUITEM-Strukturen,** eine für jedes Menüelement in diesem Untermenü. Für die **letzte POPUPMENUITEM-Struktur** im Untermenü wird im resInfo-Member **das BIT DES \_ ENDES** **festgelegt.** Um das Ende der Ressource zu finden, suchen Sie nach einem passenden BEENDEN für jedes **\_ POPUP-Popup** und nach einem zusätzlichen **DANN \_ END,** das mit dem äußersten Satz von Menüelementen übereinstimmen. **\_**
 
-Geben Sie das letzte Menü Element an, indem Sie das **Typelement** auf das **\_ Ende von MF** festlegen. Da Untermenüs geschachtelt werden können, können mehrere Ebenen von **MF \_ enden**. In diesen Fällen sind die Menü Elemente sequenziell.
+Geben Sie das letzte Menüelement an, indem Sie **das Typelement** auf **MF \_ END festlegen.** Da Sie Untermenüs schachteln können, kann es mehrere Ebenen von **MF \_ END geben.** In diesen Fällen sind die Menüelemente sequenziell.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -149,22 +149,22 @@ Geben Sie das letzte Menü Element an, indem Sie das **Typelement** auf das **\_
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Menuheader**](menuheader.md)
+[**MENUHEADER**](menuheader.md)
 </dt> <dt>
 
-[**Menuhelpid**](menuhelpid.md)
+[**MENUHELPID**](menuhelpid.md)
 </dt> <dt>
 
-[**Menuiteminfo zuordnet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
+[**MENUITEMINFO**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
 </dt> <dt>
 
-[**Normalmenuitem**](normalmenuitem.md)
+[**NORMALMENUITEM**](normalmenuitem.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

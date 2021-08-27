@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_RECSIZE. Add-Methode'
-title: JET_RECSIZE. Add-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Erfahren Sie mehr über: JET_RECSIZE. Methode hinzufügen'
+title: JET_RECSIZE. Methode hinzufügen (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'Add method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.Add(Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE,Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.add(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7e12a78a0a32bcca02afec100b0b238f4444a6ec
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c14166f267a0a648c6ddf826f8c13277add9542a186010d015fc20e39ee4d5de
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120093470"
 ---
-# <a name="jet_recsizeadd-method"></a>JET_RECSIZE. Add-Methode
+# <a name="jet_recsizeadd-method"></a>JET_RECSIZE. Methode hinzufügen
 
-Fügen Sie die Größen in zwei JET_RECSIZE Strukturen hinzu.
+Fügen Sie die Größen in zwei JET_RECSIZE-Strukturen hinzu.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,28 +64,28 @@ public static JET_RECSIZE Add(
 #### <a name="parameters"></a>Parameter
 
   - s1  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
     
     Der erste JET_RECSIZE.
 
 <!-- end list -->
 
   - s2  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
     
     Der zweite JET_RECSIZE.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
-Eine JET_RECSIZE, die das Ergebnis der Hinzufügung der Größen in S1 und S2 enthält.  
+Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
+Ein JET_RECSIZE, der das Ergebnis des Hinzufügens der Größen in s1 und s2 enthält.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE-Member](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

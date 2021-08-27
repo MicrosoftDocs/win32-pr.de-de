@@ -1,6 +1,6 @@
 ---
-description: Legt den Zustand der Datenträgerkontingente des Volumes fest oder ruft den Status ab.
-title: DiskQuotaControl.QuotaState-Eigenschaft
+description: Legt den Status der Datenträgerkontingente des Volumes fest oder ruft sie ab.
+title: DiskQuotaControl.QuotaState (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: b0766ecf-6e22-4481-a6a7-df873a277bc2
-ms.openlocfilehash: 3580ad47a5ec6a5d0276dc0e30a4a6463aca2fb3
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: cb2117237cd3072163447ee80895cbbb8bb854d7ad4424da83854b28ffa96196
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090630"
 ---
-# <a name="diskquotacontrolquotastate-property"></a>DiskQuotaControl.QuotaState-Eigenschaft
+# <a name="diskquotacontrolquotastate-property"></a>DiskQuotaControl.QuotaState (Eigenschaft)
 
-Legt den Zustand der Datenträgerkontingente des Volumes fest oder ruft den Status ab.
+Legt den Status der Datenträgerkontingente des Volumes fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -46,7 +46,7 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 |----------------|-------|---------------------------|
 | dqStateDisable | 0     | Datenträgerkontingente sind deaktiviert. |
 | dqStateTrack   | 1     | Datenträgerkontingente sind deaktiviert. |
-| dqStateEnforce | 2     | Erzwingen Sie das Kontingentlimit.      |
+| dqStateEnforce | 2     | Erzwingen sie eine Kontingentgrenze.      |
 
 
 
@@ -64,7 +64,7 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,23 +1,23 @@
 ---
-title: dcl_tgsm_raw (SM5-ASM)
-description: Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Compute-Shader s-Thread Gruppe verfügbar ist.
+title: dcl_tgsm_raw (sm5 – asm)
+description: Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Threadgruppe des Compute-Shaders verfügbar ist.
 ms.assetid: 8EA6931C-5B13-431F-A886-04F8C73CD22D
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dd20d8a0d8d2309b9b895a5cb5439877bb10d31a
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 0945cde7719129ca43368e50258c02727103209b8d467932e79acd1e1150c89f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024690"
 ---
-# <a name="dcl_tgsm_raw-sm5---asm"></a>DCL \_ TGSM \_ RAW (SM5-ASM)
+# <a name="dcl_tgsm_raw-sm5---asm"></a>dcl \_ tgsm \_ raw (sm5 – asm)
 
-Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Compute-Shader s-Thread Gruppe verfügbar ist.
+Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatzes, der für die Threadgruppe des Compute-Shaders verfügbar ist.
 
 
 
-| DCL \_ TGSM \_ RAW g \# , byteCount |
+| dcl \_ tgsm \_ raw g , \# byteCount |
 |-------------------------------|
 
 
@@ -28,31 +28,31 @@ Deklarieren Sie einen Verweis auf einen Bereich des freigegebenen Speicherplatze
 
 | Element                                                                                                       | BESCHREIBUNG                                                                             |
 |------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| <span id="g_"></span><span id="G_"></span>*selbst\#*<br/>                                                 | \[in \] einem Verweis auf einen Block der Größe *byteCount* des nicht typisierten freigegebenen Speichers. <br/> |
-| <span id="byteCount"></span><span id="bytecount"></span><span id="BYTECOUNT"></span>*byteCount*<br/> | \[in \] muss ein Vielfaches von 4 sein. <br/>                                             |
+| <span id="g_"></span><span id="G_"></span>*G\#*<br/>                                                 | \[in \] Ein Verweis auf einen Block der Größe *byteCount* des nicht typierten freigegebenen Arbeitsspeichers. <br/> |
+| <span id="byteCount"></span><span id="bytecount"></span><span id="BYTECOUNT"></span>*Bytecount*<br/> | \[in \] muss ein Vielfaches von 4 sein. <br/>                                             |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Gesamtspeicher für alle g \# muss <= der pro Thread Gruppe verfügbare freigegebene Arbeitsspeicher (32 KB) sein.
+Der Gesamtspeicher für alle g \# muss <= die Menge des pro Threadgruppe verfügbaren freigegebenen Arbeitsspeichers (32 KB) betragen.
 
-In einem Extremfall können Sie 8192 Gesamt-g s deklarieren \# , jeweils mit einem *byteCount* von 4.
+Im Extremfall können Sie 8192 g gesamt deklarieren, \# jeweils mit einem *byteCount-Wert* von 4.
 
-Im umgekehrten Extremfall können Sie ein einzelnes g \# mit einem *byteCount* von 32768 deklarieren.
+Im entgegengesetzten Extremfall können Sie ein einzelnes g \# mit einem *byteCount* von 32768 deklarieren.
 
 > [!Note]  
-> CS \_ 4 \_ 0 und CS \_ 4 \_ 1 unterstützen die [strukturierte DCL- \_ TGSM \_](dcl-tgsm-structured--sm5---asm-.md), aber nicht die **DCL- \_ TGSM- \_ Rohdaten**.
+> cs \_ 4 \_ 0 und cs \_ 4 \_ 1 unterstützt [dcl \_ tgsm \_ structured](dcl-tgsm-structured--sm5---asm-.md), aber nicht **dcl \_ tgsm \_ raw**.
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | X       |
 
@@ -60,20 +60,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -83,7 +83,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TVM_SETAUTOSCROLLINFO Meldung (kommstrg. h)
-description: Legt Informationen fest, die zum Bestimmen von Auto Bild Lauf Merkmalen verwendet werden. Sie können diese Nachricht explizit oder mithilfe des TreeView- \_ Makros "seetautoscrollinfo" senden.
+title: TVM_SETAUTOSCROLLINFO (Commctrl.h)
+description: Legt Informationen fest, die zum Bestimmen der Merkmale des automatischen Bildlaufs verwendet werden. Sie können diese Nachricht explizit oder mithilfe des \_ TreeView-Makros SetAutoScrollInfo senden.
 ms.assetid: de55933f-1caa-4193-84de-0486c41e8f1f
 keywords:
-- Windows-Steuerelemente für TVM_SETAUTOSCROLLINFO Meldung
+- TVM_SETAUTOSCROLLINFO meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: faa1f7920d2ec8c443b2ec5f1ff9189c22c5f21e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d8840045900fdbd63930219d199889cde018406779426cd767b49ab41a399efc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060160"
 ---
-# <a name="tvm_setautoscrollinfo-message"></a>TVM- \_ Meldung "abtautoscrollinfo"
+# <a name="tvm_setautoscrollinfo-message"></a>TVM \_ SETAUTOSCROLLINFO-Meldung
 
-Legt Informationen fest, die zum Bestimmen von Auto Bild Lauf Merkmalen verwendet werden. Sie können diese Nachricht explizit oder mithilfe des [**TreeView-Makros " \_ seetautoscrollinfo**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setautoscrollinfo) " senden.
+Legt Informationen fest, die zum Bestimmen der Merkmale des automatischen Bildlaufs verwendet werden. Sie können diese Nachricht explizit oder mithilfe des [**\_ TreeView-Makros SetAutoScrollInfo**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_setautoscrollinfo) senden.
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Gibt Pixel pro Sekunde an. Der Offset für den Bildlauf wird durch den *wParam* dividiert, um die Gesamtdauer des automatischen Bildlaufs zu bestimmen.
+Gibt Pixel pro Sekunde an. Der offset, der gescrollt werden soll, wird durch *den wParam* geteilt, um die Gesamtdauer des automatischen Bildlaufs zu bestimmen.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Gibt das umzeichnungs Zeitintervall an. Zeichnen Sie bei jedem abgefragten Intervall neu, bis der Artikel in der Ansicht angezeigt wird. Bei Angabe von *wParam* wird der Speicherort des Elements berechnet und ein Repaint-Vorgang durchgeführt. Legen Sie diesen Wert fest, um einen Smooth Scroll zu erstellen
+Gibt das neu gezeichnete Zeitintervall an. In jedem elasierten Intervall neu gezeichnet, bis das Element in die Ansicht gescrollt wird. Bei *wParam* wird die Position des Elements berechnet, und es wird ein Neupaint angezeigt. Legen Sie diesen Wert fest, um einen reibungslosen Bildlauf zu erstellen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück.
+Gibt **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-AutoScroll-Informationen werden verwendet, um einen Bildlauf in einem nicht sichtbaren Element durchführen. Das Steuerelement muss über den erweiterten [**\_ \_ autohscroll**](tree-view-control-window-extended-styles.md) -Stil "TVs" verfügen. Weitere Informationen zu erweiterten Stilen finden Sie unter Tree-View Steuerelement erweiterter Stile.
+Informationen zur automatischen Registrierung werden verwendet, um einen Bildlauf für ein nichtvisibles Element in die Ansicht zu durchführen. Das Steuerelement muss den erweiterten [**TVS \_ EX \_ AUTOHSCROLL-Stil**](tree-view-control-window-extended-styles.md) haben. Informationen zu erweiterten Stilen finden Sie unter Tree-View Von Steuerelementen erweiterte Stile.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ AutoScroll-Informationen werden verwendet, um einen Bildlauf in einem nicht sich
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

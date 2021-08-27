@@ -1,9 +1,9 @@
 ---
-title: Mpscancontrol-Funktion (mpclient. h)
-description: Ermöglicht das Steuern einer Überprüfung, die asynchron über mpscanstart initiiert wurde.
+title: MpScanControl-Funktion (MpClient.h)
+description: Ermöglicht die Steuerung eines Scans, der asynchron über MpScanStart initiiert wurde.
 ms.assetid: 00855686-8C46-4B58-829C-AEAB53888704
 keywords:
-- Mpscancontrol-Funktion Legacy Funktionen der Windows-Umgebung
+- Legacy-Windows-Umgebungsfeatures der MpScanControl-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ce74736c4ca8c589e2ffa5570f2b6666838d820f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 893fe1d01f9004c9dc2933a5bbb23c4b13fb8933a6121c41810c6e447e5eebac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476497"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114550"
 ---
-# <a name="mpscancontrol-function"></a>Mpscancontrol-Funktion
+# <a name="mpscancontrol-function"></a>MpScanControl-Funktion
 
-Ermöglicht das Steuern einer Überprüfung, die asynchron über [**mpscanstart**](mpscanstart.md)initiiert wurde.
+Ermöglicht die Steuerung eines Scans, der asynchron über [**MpScanStart**](mpscanstart.md)initiiert wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,29 +41,29 @@ HRESULT WINAPI MpScanControl(
 
 <dl> <dt>
 
-*hscanhandle* \[ in\]
+*hScanHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für einen asynchronen Scanvorgang. Dieses Handle wird von der [**mpscanstart**](mpscanstart.md) -Funktion zurückgegeben. Dieser Parameter kann auch auf das von der [**mpmanageropen**](mpmanageropen.md) -Funktion zurückgegebene Malware Protection Manager-Schnittstellen handle festgelegt werden, um eine vom System initiierte Überprüfung zu steuern. in diesem Fall muss der Aufrufer über Administrator Berechtigungen verfügen.
+Handle für einen asynchronen Scanvorgang. Dieses Handle wird von der [**MpScanStart-Funktion**](mpscanstart.md) zurückgegeben. Dieser Parameter kann auch auf das Schnittstellenhandle des Schadsoftwareschutz-Managers festgelegt werden, das von der [**MpManagerOpen-Funktion**](mpmanageropen.md) zurückgegeben wird, um eine vom System initiierte Überprüfung zu steuern. In diesem Fall muss der Aufrufer über Administratorrechte verfügen.
 
 </dd> <dt>
 
-*SCANcontrol* \[ in\]
+*ScanControl* \[ In\]
 </dt> <dd>
 
-Typ: **MPControl**
+Typ: **MPCONTROL**
 
-Gibt eine Scan Steuerungs Option an. Dieser Parameter muss eine der folgenden Steuerungs Optionen sein:
+Gibt eine Scansteuerelementoption an. Dieser Parameter muss eine der folgenden Steuerelementoptionen sein:
 
 
 
 | Wert                                                                                                                                                                  | Bedeutung                                      |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <span id="MPCONTROL_ABORT"></span><span id="mpcontrol_abort"></span><dl> <dt>**Mpcontrol- \_ Abbruch**</dt> </dl>    | Abbrechen des Scanvorgangs.<br/>         |
-| <span id="MPCONTROL_PAUSE"></span><span id="mpcontrol_pause"></span><dl> <dt>**Mpcontrol- \_ Pause**</dt> </dl>    | Hält den Scanvorgang an.<br/>         |
-| <span id="MPCONTROL_RESUME"></span><span id="mpcontrol_resume"></span><dl> <dt>**Mpcontrol-Fortsetzung \_**</dt> </dl> | Setzen Sie den angehaltenen Scanvorgang fort.<br/> |
+| <span id="MPCONTROL_ABORT"></span><span id="mpcontrol_abort"></span><dl> <dt>**MPCONTROL \_ ABORT**</dt> </dl>    | Abbrechen des Scanvorgangs.<br/>         |
+| <span id="MPCONTROL_PAUSE"></span><span id="mpcontrol_pause"></span><dl> <dt>**MPCONTROL \_ PAUSE**</dt> </dl>    | Halten Sie den Scanvorgang an.<br/>         |
+| <span id="MPCONTROL_RESUME"></span><span id="mpcontrol_resume"></span><dl> <dt>**MPCONTROL \_ RESUME**</dt> </dl> | Setzen Sie den angehaltenen Scanvorgang fort.<br/> |
 
 
 
@@ -75,9 +75,9 @@ Gibt eine Scan Steuerungs Option an. Dieser Parameter muss eine der folgenden St
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert **S \_ OK.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,9 +85,9 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
@@ -96,13 +96,13 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpmanageropen**](mpmanageropen.md)
+[**MpManagerOpen**](mpmanageropen.md)
 </dt> <dt>
 
-[**Mpscanstart**](mpscanstart.md)
+[**MpScanStart**](mpscanstart.md)
 </dt> </dl>
 
  

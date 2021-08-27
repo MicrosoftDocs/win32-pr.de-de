@@ -1,19 +1,19 @@
 ---
-description: Wird von IME an eine Anwendung gesendet, um die Anwendung über eine schlüsselfreigabe zu benachrichtigen und die Reihenfolge der Nachrichten zu erhalten. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+description: Wird vom IME an eine Anwendung gesendet, um die Anwendung über eine Schlüsselfreigabe zu benachrichtigen und die Nachrichten reihenfolge zu behalten. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: 652f951f-4e9f-407c-844c-b250b6a9e6f5
-title: WM_IME_KEYUP Meldung (Winuser. h)
+title: WM_IME_KEYUP (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e0eb6c6701510a373573ff6d85d5b50a8541b4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f65d80876643cc27136223c112c1e045bc797adbd0bf160adda1c3cea894767e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102070"
 ---
-# <a name="wm_ime_keyup-message"></a>WM- \_ IME- \_ KeyUp-Meldung
+# <a name="wm_ime_keyup-message"></a>WM \_ IME \_ KEYUP-Meldung
 
-Wird von IME an eine Anwendung gesendet, um die Anwendung über eine schlüsselfreigabe zu benachrichtigen und die Reihenfolge der Nachrichten zu erhalten. Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Wird vom IME an eine Anwendung gesendet, um die Anwendung über eine Schlüsselfreigabe zu benachrichtigen und die Nachrichten reihenfolge zu behalten. Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,35 +31,35 @@ LRESULT CALLBACK WindowProc(
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Ein Handle für Fenster.
+Ein Handle für ein Fenster.
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Der virtuelle Schlüsselcode des Schlüssels.
+Virtueller Schlüsselcode des Schlüssels.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Wiederholungs Anzahl, Überprüfungs Code, erweitertes schlüsselflag, Kontext Code, Vorheriges schlüsselstatusflag und Übergangs Zustands Kennzeichen, wie unten gezeigt.
+Wiederholungsanzahl, Scancode, erweitertes Schlüsselflag, Kontextcode, vorheriges Schlüsselzustandsflag und Übergangszustandsflag, wie unten dargestellt.
 
 
 
 | bit   | Bedeutung                                                                     |
 |-------|-----------------------------------------------------------------------------|
-| 0-15  | Wiederholungs Anzahl. Dieser Wert ist immer 1.                                       |
-| 16-23 | Scannen Sie den Code.                                                                  |
+| 0-15  | Wiederholungsanzahl. Dieser Wert ist immer 1.                                       |
+| 16-23 | Scancode.                                                                  |
 | 24    | Erweiterter Schlüssel. Dieser Wert ist 1, wenn es sich um einen erweiterten Schlüssel handelt. Andernfalls ist der Wert 0. |
-| 25-28 | Nicht verwendet.                                                                   |
-| 29    | Kontext Code. Dieser Wert ist immer 0.                                       |
-| 30    | Vorheriger Schlüssel Zustand. Dieser Wert ist immer 1.                                 |
+| 25-28 | Wird nicht verwendet.                                                                   |
+| 29    | Kontextcode. Dieser Wert ist immer 0.                                       |
+| 30    | Vorheriger Schlüsselzustand. Dieser Wert ist immer 1.                                 |
 | 31    | Übergangsstatus. Dieser Wert ist immer 1.                                   |
 
 
@@ -70,11 +70,11 @@ Wiederholungs Anzahl, Überprüfungs Code, erweitertes schlüsselflag, Kontext C
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung sollte 0 zurückgeben, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung sollte 0 zurückgeben, wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung kann diese Nachricht verarbeiten oder an die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)  -Funktion übergeben, um eine übereinstimmende [**WM- \_ KeyUp**](../inputdev/wm-keyup.md) -Nachricht zu generieren.
+Eine Anwendung kann diese Nachricht verarbeiten oder an die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)  übergeben, um eine entsprechende [**WM \_ KEYUP-Nachricht zu**](../inputdev/wm-keyup.md) generieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,7 +84,7 @@ Eine Anwendung kann diese Nachricht verarbeiten oder an die [**defwindowproc**](
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -92,10 +92,10 @@ Eine Anwendung kann diese Nachricht verarbeiten oder an die [**defwindowproc**](
 
 <dl> <dt>
 
-[Eingabemethoden-Manager](input-method-manager.md)
+[Eingabemethode-Manager](input-method-manager.md)
 </dt> <dt>
 
-[Eingabemethoden-Manager-Meldungen](input-method-manager-messages.md)
+[Meldungen des Eingabemethode-Managers](input-method-manager-messages.md)
 </dt> </dl>
 
  

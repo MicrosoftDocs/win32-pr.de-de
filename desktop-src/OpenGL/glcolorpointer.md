@@ -1,9 +1,9 @@
 ---
-title: glcolorpointer-Funktion (GL. h)
-description: Die glcolorpointer-Funktion definiert ein Array von Farben.
+title: glColorPointer-Funktion (Gl.h)
+description: Die glColorPointer-Funktion definiert ein Array von Farben.
 ms.assetid: 4d9d05fb-691d-4b71-b079-c42dc7103055
 keywords:
-- glcolorpointer-Funktion OpenGL
+- glColorPointer-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9abced52f0d0664e998ad8380e33d43d4af36bcc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b8e08f046cc1bd41293a076f36389506320e85025e415b264bed1ed0de14f9a3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081710"
 ---
-# <a name="glcolorpointer-function"></a>glcolorpointer-Funktion
+# <a name="glcolorpointer-function"></a>glColorPointer-Funktion
 
-Die **glcolorpointer** -Funktion definiert ein Array von Farben.
+Die **glColorPointer-Funktion** definiert ein Array von Farben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ void WINAPI glColorPointer(
 *size* 
 </dt> <dd>
 
-Die Anzahl der Komponenten pro Farbe. Der Wert muss 3 oder 4 sein.
+Die Anzahl der Komponenten pro Farbe. Der Wert muss entweder 3 oder 4 sein.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Datentyp jeder Farbkomponente in einem Farbarray. Zulässige Datentypen werden mit den folgenden Konstanten angegeben: GL \_ Byte, GL \_ unsigned \_ Byte, GL \_ Short, GL \_ unsigned \_ Short, GL \_ int, GL \_ unsigned \_ int, GL \_ float oder GL \_ Double.
+Der Datentyp jeder Farbkomponente in einem Farbarray. Zulässige Datentypen werden mit den folgenden Konstanten angegeben: GL \_ BYTE, GL \_ UNSIGNED \_ BYTE, GL \_ SHORT, GL \_ UNSIGNED \_ SHORT, GL \_ INT, GL \_ UNSIGNED \_ INT, GL \_ FLOAT oder GL \_ DOUBLE.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Der Byte Offset zwischen aufeinander folgenden Farben. Wenn *Stride* 0 (null) ist, werden die Farben im Array eng verpackt.
+Der Byteoffset zwischen aufeinanderfolgenden Farben. Wenn *stride* 0 (null) ist, werden die Farben eng in das Array gepackt.
 
 </dd> <dt>
 
 *Zeiger* 
 </dt> <dd>
 
-Ein Zeiger auf die erste Komponente des ersten Farb Elements in einem Farbarray.
+Ein Zeiger auf die erste Komponente des ersten Farbelements in einem Farbarray.
 
 </dd> </dl>
 
@@ -77,41 +77,41 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                              | Bedeutung                                      |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | *Größe* war nicht 3 oder 4.<br/>            |
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>  | der *Typ* war kein akzeptierter Wert.<br/> |
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl> | " *Stride* " oder " *count* " war negativ.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | *size* war nicht 3 oder 4.<br/>            |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>  | *type* war kein akzeptierter Wert.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl> | *stride* oder *count* war negativ.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glcolorpointer** -Funktion gibt den Speicherort und das Datenformat eines Arrays von Farbkomponenten an, die beim Rendern verwendet werden sollen. Der *Stride* -Parameter bestimmt den Byte Offset von einer Farbe zum nächsten und ermöglicht das Packen von Scheitelpunkt Attributen in einem einzelnen Array oder Speicher in separaten Arrays. In einigen Implementierungen kann das Speichern von Vertex-Attributen in einem einzelnen Array effizienter als die Verwendung separater Arrays sein.
+Die **glColorPointer-Funktion** gibt den Speicherort und das Datenformat eines Arrays von Farbkomponenten an, die beim Rendern verwendet werden. Der *stride-Parameter* bestimmt den Byteoffset von einer Farbe zur nächsten, wodurch das Packen von Vertexattributen in einem einzelnen Array oder Speicher in separaten Arrays ermöglicht wird. In einigen Implementierungen kann das Speichern von Scheitelpunktattributen in einem einzelnen Array effizienter sein als die Verwendung separater Arrays.
 
-Aktivieren Sie das Farbarray, indem Sie die GL- \_ Farb \_ Array Konstante mit [**glenableclientstate**](glenableclientstate.md)angeben. Beim Aufrufen von " [**glarrayelement**](glarrayelement.md)", " [**gldrawelements**](gldrawelements.md)" oder " [**gldrawarrays**](gldrawarrays.md) " wird das Farb Array verwendet, das daher aktiviert ist. Standardmäßig ist das Farbarray deaktiviert. Die **glcolorpointer** -Aufrufe können nicht in Anzeigelisten eingegeben werden.
+Das Farbarray wurde aktiviert, indem die GL \_ COLOR \_ ARRAY-Konstante mit [**glEnableClientState angegeben wird.**](glenableclientstate.md) Beim [**Aufrufen von glArrayElement,**](glarrayelement.md) [**glDrawElements**](gldrawelements.md)oder [**glDrawArrays**](gldrawarrays.md) wird das Farbarray verwendet, das aktiviert ist. Standardmäßig ist das Farbarray deaktiviert. Die **glColorPointer-Aufrufe** können nicht durch Eingabe in Anzeigelisten ausgeführt werden.
 
-Wenn Sie ein Farb Array mithilfe von **glcolorpointer** angeben, werden die Werte aller Farb Array Parameter der Funktion in einem Client seitigen Zustand gespeichert, und Sie können statische Array Elemente Zwischenspeichern. Da sich die Farb Array Parameter in einem Client seitigen Zustand befinden, speichern oder wiederherstellen die Werte der Parameter von [**glpushatpub**](glpushattrib.md) und [**glpopatpub**](glpopattrib.md) nicht.
+Wenn Sie ein Farbarray mit **glColorPointer** angeben, werden die Werte aller Farbarrayparameter der Funktion in einem clientseitigen Zustand gespeichert, und Sie können statische Arrayelemente zwischenspeichern. Da sich die Farbarrayparameter in einem clientseitigen Zustand befinden, speichern oder wiederherstellen [**glPushAttrib**](glpushattrib.md) und [**glPopAttrib**](glpopattrib.md) die Werte der Parameter nicht.
 
-Obwohl die Angabe des farbarrays innerhalb von [**glBegin**](glbegin.md) -und [**glEnd**](glend.md) -Paaren keinen Fehler generiert, sind die Ergebnisse nicht definiert.
+Obwohl die Angabe des Farbarrays innerhalb [**von glBegin-Paaren**](glbegin.md) und [**-Paaren**](glend.md) keinen Fehler generiert, sind die Ergebnisse nicht definiert.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " **glcolorpointer** " ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glColorPointer-Funktion** ab:
 
-[**glisenabled**](glisenabled.md) mit Argument GL \_ - \_ Farbarray
+[**glIsEnabled mit Argument**](glisenabled.md) GL \_ COLOR \_ ARRAY
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit der \_ \_ array \_ Größe des Argument GL
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ COLOR \_ ARRAY \_ SIZE
 
-**glget** mit Argument GL \_ Color \_ array \_ Type
+**glGet** mit argument GL \_ COLOR \_ ARRAY \_ TYPE
 
-**glget** mit Argument GL \_ Color \_ array \_ Stride
+**glGet mit** Argument GL \_ COLOR ARRAY \_ \_ STRIDE
 
-**glget** mit Argument GL \_ Color \_ array \_ count
+**glGet** mit Argument GL \_ COLOR \_ ARRAY \_ COUNT
 
-[**glgetpointerv**](glgetpointerv.md) mit Argument GL \_ Color \_ array- \_ Zeiger
+[**glGetPointerv mit**](glgetpointerv.md) Argument GL \_ COLOR ARRAY \_ \_ POINTER
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,8 +121,8 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -131,52 +131,52 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit der Funktion " 
 
 <dl> <dt>
 
-[**glarrayelement**](glarrayelement.md)
+[**glArrayElement**](glarrayelement.md)
 </dt> <dt>
 
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldrawarrays**](gldrawarrays.md)
+[**glDrawArrays**](gldrawarrays.md)
 </dt> <dt>
 
-[**gledgeflagpointer**](gledgeflagpointer.md)
+[**glEdgeFlagPointer**](gledgeflagpointer.md)
 </dt> <dt>
 
-[**glenableclientstate**](glenableclientstate.md)
+[**glEnableClientState**](glenableclientstate.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glgetstring**](glgetstring.md)
+[**glGetString**](glgetstring.md)
 </dt> <dt>
 
-[**glgetpointerv**](glgetpointerv.md)
+[**glGetPointerv**](glgetpointerv.md)
 </dt> <dt>
 
-[**glindexpointer**](glindexpointer.md)
+[**glIndexPointer**](glindexpointer.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> <dt>
 
-[**glnormalpointer**](glnormalpointer.md)
+[**glNormalPointer**](glnormalpointer.md)
 </dt> <dt>
 
-[**glpopattenb**](glpopattrib.md)
+[**glPopAttrib**](glpopattrib.md)
 </dt> <dt>
 
-[**glpushatpub**](glpushattrib.md)
+[**glPushAttrib**](glpushattrib.md)
 </dt> <dt>
 
-[**gltexcoordpointer**](gltexcoordpointer.md)
+[**glTexCoordPointer**](gltexcoordpointer.md)
 </dt> <dt>
 
-[**glvertexpointer**](glvertexpointer.md)
+[**glVertexPointer**](glvertexpointer.md)
 </dt> </dl>
 
  

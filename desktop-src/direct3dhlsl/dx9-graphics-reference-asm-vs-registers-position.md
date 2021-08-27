@@ -1,6 +1,6 @@
 ---
-title: Positions Register
-description: Dieses Vertex-Shader-Ausgabe Register enthält Daten pro Scheitelpunkt Position.
+title: Positionsregister
+description: Dieses Vertex-Shader-Ausgaberegister enthält Daten zur Scheitelpunktposition pro Scheitelpunkt.
 ms.assetid: 98f71027-d94b-4dd0-a6b6-4b263954eff9
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,42 +9,42 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 89470bb920db7c612b21cefb2c44c2c89d48ce28
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cda82431990ed3ea545adfcc5e6eb2801be0607d8bac45aa1bcd8c0e121f3d68
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023900"
 ---
-# <a name="position-register"></a>Positions Register
+# <a name="position-register"></a>Positionsregister
 
-Dieses Vertex-Shader-Ausgabe Register enthält Daten pro Scheitelpunkt Position.
+Dieses Vertex-Shader-Ausgaberegister enthält Daten zur Scheitelpunktposition pro Scheitelpunkt.
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ SW | 2 \_ x | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ sw | 2 \_ x | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|-------|------|------|-------|
-| Positions Register      | x    | x    | x     | x    | x    | x     |
+| Positionsregister      | x    | x    | x     | x    | x    | x     |
 
 
 
- 
+ 
 
-Ein Register besteht aus Eigenschaften, die bestimmen, wie sich die einzelnen Register Verhalten.
+Ein Register besteht aus Eigenschaften, die bestimmen, wie sich jedes Register verhält.
 
 
 
 | Eigenschaft        | BESCHREIBUNG |
 |-----------------|-------------|
-| Name            | OPOS        |
+| Name            | Opos        |
 | Anzahl           | 1 Vektor    |
-| E/a-Berechtigungen | Nur Schreibzugriff. |
+| E/A-Berechtigungen | Nur Schreibzugriff. |
 
 
 
- 
+ 
 
-Der Wert ist die Position im homogenen Clippingbereich. Dieser Wert muss vom Vertex-Shader geschrieben werden.
+Der Wert ist die Position im homogenen Ausschneidebereich. Dieser Wert muss vom Vertex-Shader geschrieben werden.
 
 Beispiel
 
@@ -66,12 +66,12 @@ Beispiel
 
 <dl> <dt>
 
-[Vertex-Shader-Register](dx9-graphics-reference-asm-vs-registers.md)
+[Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

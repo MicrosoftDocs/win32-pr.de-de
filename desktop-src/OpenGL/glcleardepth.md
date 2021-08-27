@@ -1,9 +1,9 @@
 ---
-title: glcleartiefe-Funktion (GL. h)
-description: Die glcleartiefe-Funktion gibt den undeutlichen Wert für den tiefen Puffer an.
+title: glClearDepth-Funktion (Gl.h)
+description: Die glClearDepth-Funktion gibt den eindeutigen Wert für den Tiefenpuffer an.
 ms.assetid: 8e26ae78-edc1-4201-a0db-d5bc8ae6dc82
 keywords:
-- glcleartiefe-Funktion OpenGL
+- glClearDepth-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cf968c7ae172bf4ce354c84b2071d62304327ac
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ed8efc8585da717349705bc13db920a707e16a66def2b026a3237b778f78575
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082060"
 ---
-# <a name="glcleardepth-function"></a>glcleartiefe-Funktion
+# <a name="glcleardepth-function"></a>glClearDepth-Funktion
 
-Die **glcleartiefe** -Funktion gibt den undeutlichen Wert für den tiefen Puffer an.
+Die **glClearDepth-Funktion** gibt den eindeutigen Wert für den Tiefenpuffer an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,10 +40,10 @@ void WINAPI glClearDepth(
 
 <dl> <dt>
 
-*Eingeh* 
+*Tiefe* 
 </dt> <dd>
 
-Der tiefen Wert, der verwendet wird, wenn der tiefen Puffer gelöscht wird.
+Der Beim Löschen des Tiefenpuffers verwendete Tiefenwert.
 
 </dd> </dl>
 
@@ -53,25 +53,25 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glcleartiefe** -Funktion gibt den Tiefen Wert an, der von [**glClear**](glclear.md) verwendet wird, um den tiefen Puffer zu löschen. Die von **glcleartiefe** angegebenen Werte werden an den Bereich \[ 0, 1 gebunden \] .
+Die **glClearDepth-Funktion** gibt den Tiefenwert an, der von [**glClear**](glclear.md) zum Löschen des Tiefenpuffers verwendet wird. Die von **glClearDepth** angegebenen Werte werden an den Bereich \[ 0,1 \] gebunden.
 
-Die folgende Funktion Ruft Informationen im Zusammenhang mit der Funktion " **glcleartiefe** " ab:
+Die folgende Funktion ruft Informationen im Zusammenhang mit der **glClearDepth-Funktion** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL- \_ Tiefe \_ Clear- \_ Wert
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ DEPTH \_ CLEAR \_ VALUE
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -79,8 +79,8 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit der Funktion " **gl
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -98,7 +98,7 @@ Die folgende Funktion Ruft Informationen im Zusammenhang mit der Funktion " **gl
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> </dl>
 
  

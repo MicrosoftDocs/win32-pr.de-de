@@ -4,12 +4,12 @@ ms.assetid: e2561be1-03ce-41f7-9ad4-197d75411c48
 title: ContentGroup-Gruppe
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 02e4291da1912c43674871c06fb803e1936f7178
-ms.sourcegitcommit: c3f669dc1d52278432bf75ad9fddba3257d26aa2
+ms.openlocfilehash: c0085cc52a8fc29d3a51f4d1e1c8f42128b63db9e166a7a1c436dc15bff70a36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111432612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009010"
 ---
 # <a name="contentgroup-group"></a>ContentGroup-Gruppe
 
@@ -52,9 +52,9 @@ Definiert eine Gruppe, die einen Satz gruppierter Inhalte in einer Journalnotiz 
 
 
 
-| attribute  | Typ                      | Erforderlich | BESCHREIBUNG                                                                                        | PossibleValues                       |
+| attribute  | type                      | Erforderlich | Beschreibung                                                                                        | PossibleValues                       |
 |------------|---------------------------|----------|----------------------------------------------------------------------------------------------------|--------------------------------------|
-| **Left**   | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum äußersten linken Punkt im begrenzungsfeld für das Element.<br/> | Eine beliebige ganze Zahl.<br/>              |
+| **Left**   | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum äußersten linken Punkt im Begrenzungsfeld für das Element.<br/> | Eine beliebige ganze Zahl.<br/>              |
 | **Top**    | **xs:integer**            | Erforderlich | Der Abstand vom Ursprung zum obersten Punkt im Begrenzungsfeld für das Element.<br/>  | Eine beliebige ganze Zahl.<br/>              |
 | **Width**  | **xs:nonNegativeInteger** | Erforderlich | Die Breite des Begrenzungsfelds für das Element.<br/>                                          | Eine beliebige nicht negative ganze Zahl.<br/> |
 | **Height** | **xs:nonNegativeInteger** | Erforderlich | Die Höhe des Begrenzungsfelds für das Element.<br/>                                         | Eine beliebige nicht negative ganze Zahl.<br/> |

@@ -1,29 +1,29 @@
 ---
-title: Entwerfen von Remote fähigen Schnittstellen
-description: Mit der Einführung des Objektmodells für verteilte Komponenten ist es wichtig, dass die benutzerdefinierte Schnittstelle Remote fähig ist, auch wenn Sie Sie nur in-Process verwenden möchten.
+title: Entwerfen von remotable-Schnittstellen
+description: Mit der Einführung des verteilten Komponentenobjektmodells ist es wichtig, dass Ihre benutzerdefinierte Schnittstelle remotable ist, auch wenn Sie sie nur in Der Prozess verwenden möchten.
 ms.assetid: 2ee4d950-dfd5-4965-bd77-a600e878be59
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3502604d62e6a5129ca3e3538761722909c0198f
-ms.sourcegitcommit: 85688bbfbe5b121bc05ddf112d54c23a469dfbc0
+ms.openlocfilehash: 52df6deb3f83f253fc46436ba992dc3fc10f74d84e43c6027fd4426b3171a838
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "103857952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071000"
 ---
-# <a name="designing-remotable-interfaces"></a>Entwerfen von Remote fähigen Schnittstellen
+# <a name="designing-remotable-interfaces"></a>Entwerfen von remotable-Schnittstellen
 
-Mit der Einführung des Objektmodells für verteilte Komponenten ist es wichtig, dass die benutzerdefinierte Schnittstelle Remote fähig ist, auch wenn Sie Sie nur in-Process verwenden möchten.
+Mit der Einführung des verteilten Komponentenobjektmodells ist es wichtig, dass Ihre benutzerdefinierte Schnittstelle remotable ist, auch wenn Sie sie nur in Der Prozess verwenden möchten.
 
-Die Mittel l ist mehr als nur eine Möglichkeit zum Generieren von Header Dateien für ihre Schnittstellen. Es handelt sich um eine Programmiersprache für Remoting, mit der Sie Ihre Schnittstellen über die verschiedenen Computer-, Prozess-und Thread Grenzen hinweg verwenden können. Dies bedeutet, dass Sie das Verhalten ihrer Mittelwert definierten Schnittstellen unter diesen Bedingungen überprüfen müssen, bevor Sie Ihr Programm für Kunden freigeben. Wenn Sie in ihrer IDL einen Fehler gemacht haben und die Schnittstelle nicht ordnungsgemäß Remote ist, kann es schwierig sein, diesen Fehler zu beheben. Entweder müssen Sie Ihre Schnittstelle mit einer neuen IID überarbeiten und die alte in aus Gründen der Abwärtskompatibilität belassen, oder Sie müssen jeden Client und jeden Server Computer gleichzeitig konvertieren.
+MIDL ist mehr als nur eine Möglichkeit, Headerdateien für Ihre Schnittstellen zu generieren. Es ist eine Programmiersprache für Remoting, mit der Sie Ihre Schnittstellen über Computer-, Prozess- und Threadgrenzen hinweg verwenden können. Dies bedeutet, dass Sie das Verhalten Ihrer MIDL-definierten Schnittstellen unter diesen Bedingungen überprüfen müssen, bevor Sie Ihr Programm für Kunden veröffentlichen. Wenn Sie einen Fehler in Ihrer IDL gemacht haben und die Schnittstelle nicht ordnungsgemäß entfernt wird, kann es schwierig sein, diesen Fehler zu beheben. Entweder müssen Sie die Schnittstelle mit einer neuen IID überarbeiten und die alte schnittstelle aus Gründen der Abwärtskompatibilität in lassen, oder Sie müssen jeden Client und jeden Servercomputer überall gleichzeitig konvertieren.
 
-Auch wenn Ihre Schnittstelle nie außerhalb des Prozesses verwendet wird, kann Sie Thread übergreifend verwendet werden. Das schlimmste Problem für eine nicht überprüfte IDL-Datei kann für Prozess interne Server auftreten, die mehrere [Single Thread-Apartments](single-threaded-apartments.md)nicht unterstützen. Ein Server, der kein Threading Modell angibt, ist implizit Single Thread. Alles markierte als Single Thread wird für den Thread erzwungen, der zuerst [**CoInitialize**](/windows/desktop/api/Objbase/nf-objbase-coinitialize) oder [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)aufgerufen hat. Wenn es sich bei einem anderen Thread um den Thread handelt, der das Objekt aktiviert hat, müssen alle Schnittstellen auf diesem Single Thread-Server auf den Aktivierungs Thread zurückgesetzt werden. Dies kann zu einer Rückgabe von RegDB \_ E \_ iidnotreg als Reaktion auf einen aufzurufenden [**QueryInterface**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q))-Auflistungen führen. Es sei denn, Sie können sicherstellen, dass Ihre Schnittstelle in-Process ist und immer im gleichen Thread aufgerufen wird.
+Auch wenn Ihre Schnittstelle nie prozessintern verwendet wird, kann sie threadübergreifend verwendet werden. Das schlechteste Problem für eine nicht überprüfte IDL-Datei kann für Prozessserver auftreten, die nicht mehrere [Singlethread-Apartment unterstützen).](single-threaded-apartments.md) Ein Server, auf dem kein Threadingmodell angegeben ist, ist implizit ein Singlethreading. Alles, was als Singlethreading gekennzeichnet ist, wird auf den Thread erzwungen, der zuerst [**CoInitialize**](/windows/desktop/api/Objbase/nf-objbase-coinitialize) oder [**CoInitializeEx genannt hat.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) Wenn ein anderer Thread das Objekt aktiviert hat, müssen alle Schnittstellen auf diesem Singlethreadserver an den aktivierenden Thread zurückverleitet werden, was als Reaktion auf einen Aufruf von QueryInterface zu einer Rückgabe von REGDB \_ E \_ IIDNOTREG führen [**kann.**](/windows/desktop/api/Unknwn/nf-unknwn-iunknown-queryinterface(q)) Sofern Sie nicht unbedingt sicher sein können, dass Ihre Schnittstelle sowohl in Bearbeitung ist als auch immer im selben Thread aufgerufen wird, werden Sie zu einem bestimmten Zeitpunkt remote enfernt.
 
-Als Schnittstellen Designer müssen Sie schließlich die Verwendung Ihrer Schnittstelle durch Client Anwendungen in Erwägung gezogen werden. Zwei Dinge bestimmen, ob eine Schnittstelle über Prozess-und Computer Grenzen hinweg effizient sein wird: die Häufigkeit von Methoden aufrufen über die Schnittstellen Grenze hinweg und die Menge an Daten, die in einem bestimmten Methodenaufruf übertragen werden. Obwohl com prozessübergreifende und Netzwerk übergreifende Aufrufe für Programme transparent macht, kann der Aufruf von hoch-und Hochbandbreite nicht über Adressräume hinweg effizient erfolgen. In einigen Fällen ist es besser, Schnittstellen zu entwerfen, die normalerweise nur als Prozess interne Server implementiert werden, während andere Schnittstellen besser für die Remote Verwendung geeignet sind.
+Schließlich müssen Sie als Schnittstellen-Designer überlegen, wie Clientanwendungen Ihre Schnittstelle verwenden. Zwei Dinge bestimmen zusammen, ob eine Schnittstelle über Prozess- und Computergrenzen hinweg effizient ist: die Häufigkeit von Methodenaufrufen über die Schnittstellengrenze hinweg und die Menge an Daten, die in einem bestimmten Methodenaufruf übertragen werden sollen. Obwohl COM prozess- und netzwerkübergreifende Aufrufe für Programme transparent macht, können Aufrufe mit hoher Frequenz und hoher Bandbreite nicht über Adressräume hinweg effizient sein. In einigen Fällen ist es besser, Schnittstellen zu entwerfen, die normalerweise nur als Prozessserver implementiert werden, während andere Schnittstellen für die Remotenutzung besser geeignet sind.
 
- 
+ 
 
- 
+ 
 
 
 

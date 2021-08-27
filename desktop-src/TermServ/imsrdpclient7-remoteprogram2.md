@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClient7 RemoteProgram2-Eigenschaft
+title: IMsRdpClient7 RemoteProgram2 (Eigenschaft)
 description: Ruft ein Objekt ab, das die ITSRemoteProgram2-Schnittstelle unterstützt.
 ms.assetid: fabdc933-c941-487f-9e49-c20a39e0c86e
 ms.tgt_platform: multiple
 keywords:
-- RemoteProgram2-Eigenschaft Remotedesktopdienste
-- RemoteProgram2-Eigenschaften Remotedesktopdienste, IMsRdpClient7-Schnittstelle
-- IMsRdpClient7-Schnittstelle Remotedesktopdienste, RemoteProgram2-Eigenschaft
-- RemoteProgram2-Eigenschaften Remotedesktopdienste, IMsRdpClient8-Schnittstelle
-- IMsRdpClient8-Schnittstelle Remotedesktopdienste, RemoteProgram2-Eigenschaft
-- RemoteProgram2-Eigenschaften Remotedesktopdienste, IMsRdpClient9-Schnittstelle
-- IMsRdpClient9-Schnittstelle Remotedesktopdienste, RemoteProgram2-Eigenschaft
-- RemoteProgram2-Eigenschaften Remotedesktopdienste, IMsRdpClient10-Schnittstelle
-- IMsRdpClient10-Schnittstelle Remotedesktopdienste, RemoteProgram2-Eigenschaft
+- RemoteProgram2-Remotedesktopdienste
+- RemoteProgram2-Eigenschaft Remotedesktopdienste , IMsRdpClient7-Schnittstelle
+- IMsRdpClient7-Schnittstelle Remotedesktopdienste , RemoteProgram2-Eigenschaft
+- RemoteProgram2-Eigenschaft Remotedesktopdienste , IMsRdpClient8-Schnittstelle
+- IMsRdpClient8-Schnittstelle Remotedesktopdienste , RemoteProgram2-Eigenschaft
+- RemoteProgram2-Eigenschaft Remotedesktopdienste , IMsRdpClient9-Schnittstelle
+- IMsRdpClient9-Schnittstelle Remotedesktopdienste , RemoteProgram2-Eigenschaft
+- RemoteProgram2-Remotedesktopdienste , IMsRdpClient10-Schnittstelle
+- IMsRdpClient10-Schnittstelle Remotedesktopdienste , RemoteProgram2-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -30,16 +30,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1572aada1384a7edfe88b198826050927ae3cff5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a88e0ee2aff2a2804468e3ceba589f20221fe5ca75fea0bbcc37a423edb23959
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080040"
 ---
-# <a name="imsrdpclient7remoteprogram2-property"></a>IMsRdpClient7:: RemoteProgram2-Eigenschaft
+# <a name="imsrdpclient7remoteprogram2-property"></a>IMsRdpClient7::RemoteProgram2-Eigenschaft
 
-Ruft ein Objekt ab, das die [**ITSRemoteProgram2**](itsremoteprogram2.md) -Schnittstelle unterstützt.
+Ruft ein Objekt ab, das die [**ITSRemoteProgram2-Schnittstelle**](itsremoteprogram2.md) unterstützt.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -56,9 +56,9 @@ HRESULT get_RemoteProgram2(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse eines [**ITSRemoteProgram2**](itsremoteprogram2.md) -Schnittstellen Zeigers, der das-Objekt empfängt.
+Die Adresse eines [**ITSRemoteProgram2-Schnittstellenzeigers,**](itsremoteprogram2.md) der das -Objekt empfängt.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

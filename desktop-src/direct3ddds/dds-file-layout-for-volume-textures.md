@@ -1,59 +1,59 @@
 ---
-title: Beispiel für DDS-volumetextur
-description: Verwenden Sie für eine volumetextur die DDSCAPS \_ Complex, DDSCAPS2 \_ Volume, ddsd \_ -Tiefe, Flags und Set und dwtiefe. Eine volumetextur ist eine Erweiterung einer Standard Textur für Direct3D 9; eine volumetextur kann mit oder ohne Mipmaps definiert werden.
+title: Beispiel für DDS-Volumetextur
+description: Verwenden Sie für eine Volumetextur DDSCAPS \_ COMPLEX, DDSCAPS2 \_ VOLUME, DDSD \_ DEPTH, flags and set und dwDepth. Eine Volumentextur ist eine Erweiterung einer Standardtextur für Direct3D 9. Eine Volumetextur kann mit oder ohne Mipmaps definiert werden.
 ms.assetid: c1675a6d-129a-4e95-993f-e1be905781cc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03d82faa8041f2b5c99ef57ee2386ff5de84d787
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 79501ea3ffa6f4a660f4ab3b248fedbdc7df17bf8af94520cad5808c3c611fd2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025740"
 ---
-# <a name="dds-volume-texture-example"></a>Beispiel für DDS-volumetextur
+# <a name="dds-volume-texture-example"></a>Beispiel für DDS-Volumetextur
 
-Verwenden Sie für eine volumetextur die DDSCAPS \_ Complex, DDSCAPS2 \_ Volume, ddsd \_ -Tiefe, Flags und Set und dwtiefe. Eine volumetextur ist eine Erweiterung einer Standard Textur für Direct3D 9; eine volumetextur kann mit oder ohne Mipmaps definiert werden.
+Verwenden Sie für eine Volumetextur DDSCAPS \_ COMPLEX, DDSCAPS2 \_ VOLUME, DDSD \_ DEPTH, flags and set und dwDepth. Eine Volumentextur ist eine Erweiterung einer Standardtextur für Direct3D 9. Eine Volumetextur kann mit oder ohne Mipmaps definiert werden.
 
-Für Volumes ohne Mipmaps wird jedes tiefen Slice in der richtigen Reihenfolge in die Datei geschrieben. Wenn Mipmaps eingeschlossen werden, werden alle tiefen Slices für eine bestimmte MipMap-Ebene miteinander geschrieben, wobei jede Ebene die Hälfte so viele Slices wie die vorherige Ebene mit einem Mindestwert von 1 enthält.
+Bei Volumes ohne Mipmaps wird jeder Tiefenslice in der Reihenfolge in die Datei geschrieben. Wenn Mipmaps eingeschlossen werden, werden alle Tiefenslices für eine bestimmte Mipmapebene zusammen geschrieben, und jede Ebene enthält halb so viele Slices wie die vorherige Ebene mit mindestens 1.
 
-Beispielsweise würde eine 64-by-64 von-4-volumekarte, die das Pixel Format R8G8B8 (3 Bytes pro Pixel) mit allen MipMap-Ebenen verwendet, Folgendes enthalten:
+Eine 64-by-64-by-4-Volumezuordnung mit dem Pixelformat R8G8B8 (3 Bytes pro Pixel) mit allen Mipmap-Ebenen würde beispielsweise Folgendes enthalten:
 
 
 
-| DDS-Komponenten                      | \# Satz    |
+| DDS-Komponenten                      | \# Bytes    |
 |-------------------------------------|-------------|
 | header                              | 128 Bytes   |
-| 64-bis-64 Slice 1 von 4 Hauptbild.   | 12288 bytes |
-| 64-bis-64 Slice 2 von 4 Hauptbild.   | 12288 bytes |
-| 64-bis-64 Slice 3 von 4 Hauptbild.   | 12288 bytes |
-| 64-bis-64 Slice 4 von 4 Hauptbild.   | 12288 bytes |
-| 32-bis-32 Slice 1 von 2 MipMap-Bild. | 3072 bytes  |
-| 32-bis-32 Slice 2 von 2 MipMap-Bild. | 3072 bytes  |
-| 16-bis-16-Slice 1 von 1 MipMap-Bild. | 768 Bytes   |
-| 8 x 8 Slice 1 von 1 MipMap-Bild.   | 192 Bytes   |
-| 4 x 4 Slice 1 von 1 MipMap-Bild.   | 48 Bytes    |
-| 2:2 Slice 1 von 1 MipMap-Bild.   | 12 Bytes    |
-| 1 bis 1 Slice 1 von 1 MipMap-Bild.   | 3 Byte     |
+| 64 by-64 Slice 1 von 4 Hauptimages.   | 12288 Bytes |
+| 64 by-64 Slice 2 von 4 Hauptimages.   | 12288 Bytes |
+| 64 by-64 Slice 3 von 4 Hauptimages.   | 12288 Bytes |
+| 64 by-64 Slice 4 von 4 Hauptimages.   | 12288 Bytes |
+| 32 by-32 Slice 1 von 2 Mipmap-Bildern. | 3072 Bytes  |
+| 32 by-32 Slice 2 von 2 Mipmap-Bildern. | 3072 Bytes  |
+| 16 by-16 Slice 1 von 1 Mipmap-Bild. | 768 Bytes   |
+| 8-by-8 Slice 1 von 1 Mipmap-Bild.   | 192 Bytes   |
+| 4-by-4 Slice 1 von 1 Mipmap-Bild.   | 48 Bytes    |
+| 2-by-2 Slice 1 von 1 Mipmap-Bild.   | 12 Bytes    |
+| 1-by-1 Slice 1 von 1 Mipmap-Bild.   | 3 Byte     |
 
 
 
- 
+ 
 
-Beachten Sie, dass die kleinste MipMap-Ebene nur 3 Bytes beträgt, da die Bitzahl 24 beträgt und auf dieser Ebene keine Komprimierung hinzugefügt wird.
+Beachten Sie, dass die kleinste Mipmapebene nur 3 Bytes beträgt, da die Bitanzahl 24 beträgt und auf dieser Ebene keine zusätzliche Komprimierung hinzugefügt wird.
 
-Unterstützung für Volumentexturen wurde in DirectX 8 hinzugefügt.
+Unterstützung für Volumetexturen wurde in DirectX 8 hinzugefügt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Programmier Handbuch für DDS](dx-graphics-dds-pguide.md)
+[Programmierhandbuch für DDS](dx-graphics-dds-pguide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

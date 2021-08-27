@@ -1,9 +1,9 @@
 ---
-title: EM_SETFONTSIZE Meldung (RichEdit. h)
-description: Legt den Schrift Grad für den ausgewählten Text in einem Rich-Edit-Steuerelement fest.
+title: EM_SETFONTSIZE Nachricht (Richedit.h)
+description: Legt den Schriftgrad für den ausgewählten Text in einem Rich Edit-Steuerelement fest.
 ms.assetid: 18d91370-12c0-4e5f-a0e9-ffde02abc966
 keywords:
-- Windows-Steuerelemente für EM_SETFONTSIZE Meldung
+- EM_SETFONTSIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8eb75276acbb86cbd452a8ad97698f1cd7382bd2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e646d58626a034f4764d6b9636e5b4b3eedba5befd7986eade9979c1f4a4fd5a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048460"
 ---
-# <a name="em_setfontsize-message"></a>EM \_ SetFontSize-Meldung
+# <a name="em_setfontsize-message"></a>EM \_ SETFONTSIZE-Meldung
 
-Legt den Schrift Grad für den ausgewählten Text in einem Rich-Edit-Steuerelement fest.
+Legt den Schriftgrad für den ausgewählten Text in einem Rich Edit-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,34 +32,34 @@ Legt den Schrift Grad für den ausgewählten Text in einem Rich-Edit-Steuereleme
 *wParam* 
 </dt> <dd>
 
-Ändern der Punktgröße des ausgewählten Texts. Das Ergebnis wird entsprechend den in der folgenden Tabelle gezeigten Werten gerundet. Dieser Parameter sollte im Bereich von-1637 bis 1638 liegen. Die resultierende Schriftgröße liegt im Bereich von 1 bis 1638.
+Ändern Sie die Punktgröße des ausgewählten Texts. Das Ergebnis wird entsprechend den in der folgenden Tabelle dargestellten Werten gerundet. Dieser Parameter sollte im Bereich von -1637 bis 1638 liegen. Der resultierende Schriftgrad liegt im Bereich von 1 bis 1638.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn kein Fehler aufgetreten ist, ist der Rückgabewert " **true**".
+Wenn kein Fehler aufgetreten ist, ist der Rückgabewert **TRUE.**
 
-Wenn ein Fehler aufgetreten ist, ist der Rückgabewert **false**.
+Wenn ein Fehler aufgetreten ist, lautet der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können den Schrift Grad auf einfache Weise durch Senden der [**EM \_ getcharformat**](em-getcharformat.md) -Meldung erhalten.
+Sie können den Schriftgrad problemlos abrufen, indem Sie die [**EM \_ GETCHARFORMAT-Nachricht**](em-getcharformat.md) senden.
 
-Rich Edit fügt zuerst dem aktuellen Schrift Grad *wParam* hinzu und verwendet dann die resultierende Größe und die folgende Tabelle, um den Rundungs Wert zu bestimmen.
+Rich Edit fügt zuerst *wParam* zum aktuellen Schriftgrad hinzu und verwendet dann die resultierende Größe und die folgende Tabelle, um den Rundungswert zu bestimmen.
 
 
 
-| Kreuz    | Rundungs Wert |
+| Band    | Rundungswert |
 |---------|----------------|
-| <= 12 | 1              |
+| <=12 | 1              |
 | 28      | 2              |
 | 36      | 0              |
 | 48      | 0              |
@@ -71,17 +71,17 @@ Rich Edit fügt zuerst dem aktuellen Schrift Grad *wParam* hinzu und verwendet d
 
  
 
-Wenn die resultierende Schriftgröße durch den Rundungs Wert nicht gleichmäßig teilbar ist, wird der Schrift Grad auf eine Zahl gerundet, die durch den Rundungs Wert gleichmäßig erkennbar ist. Wenn die Schriftgröße also kleiner oder gleich 12 ist, lautet der Rundungs Wert 1. Ebenso ist der Rundungs Wert 2, wenn der Schrift Grad kleiner oder gleich 28 ist. Bei Werten, die größer als 28 sind, werden die Schriftgrößen auf das nächste Band gerundet. Daher springt die Schriftgröße zu 36, 48, 72, 80. Nach 80 werden alle Rundungen in Schritten von zehn Punkten durchgeführt.
+Wenn der resultierende Schriftgrad durch den Rundungswert nicht gleichmäßig geteilt werden kann, wird der Schriftgrad auf eine Zahl gerundet, die durch den Rundungswert gleichmäßig dividiert werden kann. Wenn der Schriftgrad also kleiner oder gleich 12 ist, ist der Rundungswert 1. Ebenso ist der Rundungswert 2, wenn der Schriftgrad kleiner oder gleich 28 ist. Bei Werten größer als 28 werden Schriftgrade auf das nächste Band gerundet. Der Schriftgrad springt also zu 36, 48, 72, 80. Nach 80 erfolgt die gesamte Rundung in Schritten von zehn Punkten.
 
-Der Schrift Grad ist abhängig vom Vorzeichen von *wParam* nach oben oder unten aufgerundet. Wenn *wParam* positiv ist, ist die Rundung immer auf dem neuesten Stand. Andernfalls ist die Rundung immer herunter. Wenn die aktuelle Schriftgröße den Wert 10 hat und *wParam* den Wert 3 hat, beträgt die resultierende Schriftgröße 14 (10 + 3 = 13, die nicht durch 2 teilbar ist, sodass die Größe auf 14 aufgerundet wird). Wenn die aktuelle Schriftgröße den Wert 14 hat und *wParam* den Wert-3 hat, ist die resultierende Schriftgröße 10 (14-3 = 11, der nicht durch 2 teilbar ist, sodass die Größe auf 10 gerundet).
+Der Schriftgrad wird abhängig vom Vorzeichen von *wParam aufgerundet* oder heruntergerundet. Wenn *wParam* positiv ist, wird die Rundung immer hochgerundet. Andernfalls ist die Rundung immer nach unten. Wenn der aktuelle Schriftgrad also 10 und *wParam* 3 ist, beträgt der resultierende Schriftgrad 14 (10 + 3 = 13, was nicht durch 2 geteilt werden kann, sodass die Größe auf 14 aufgerundet wird). Wenn der aktuelle Schriftgrad dagegen 14 und *wParam* -3 ist, beträgt der resultierende Schriftgrad 10 (14 - 3 = 11, was nicht durch 2 geteilt werden kann, sodass die Größe auf 10 abgerundet wird).
 
-Die Änderung wird auf jeden Teil der Auswahl angewendet. Wenn ein Teil des Texts 10 pt und 20 PT ist, werden die Schriftgrößen nach einem *wParam* -Aufrufsatz auf 1 festgelegt.
+Die Änderung wird auf jeden Teil der Auswahl angewendet. Wenn also ein Teil des Texts 10pt und einige 20pt sind, werden die Schriftgrade nach einem Aufruf mit *wParam* auf 1 festgelegt, 11pt bzw. 22pt.
 
-Weitere Beispiele sind in der folgenden Tabelle aufgeführt.
+Weitere Beispiele finden Sie in der folgenden Tabelle.
 
 
 
-| Ursprünglicher Schrift Grad | *wParam* | Resultierende Schriftgröße |
+| Ursprünglicher Schriftgrad | *wParam* | Resultierender Schriftgrad |
 |--------------------|----------|---------------------|
 | 7                  | 1        | 8                   |
 | 7                  | 3        | 10                  |
@@ -90,7 +90,7 @@ Weitere Beispiele sind in der folgenden Tabelle aufgeführt.
 | 28                 | 1        | 36                  |
 | 28                 | 3        | 36                  |
 | 80                 | 1        | 90                  |
-| 80                 | -1       | 72                  |
+| 80                 | –1       | 72                  |
 
 
 
@@ -102,10 +102,10 @@ Weitere Beispiele sind in der folgenden Tabelle aufgeführt.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Verteilbare Komponente<br/>          | Rich Edit 3,0<br/>                                                              |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Verteilbare Komponente<br/>          | Rich Edit 3.0<br/>                                                              |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -113,16 +113,16 @@ Weitere Beispiele sind in der folgenden Tabelle aufgeführt.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getcharformat**](em-getcharformat.md)
+[**EM \_ GETCHARFORMAT**](em-getcharformat.md)
 </dt> <dt>
 
 [**CHARFORMAT2**](/windows/desktop/api/Richedit/ns-richedit-charformat2a)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Informationen zu Rich Edit-Steuerelementen](about-rich-edit-controls.md)

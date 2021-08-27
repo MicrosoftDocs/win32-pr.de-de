@@ -1,19 +1,19 @@
 ---
-title: Abrufen der Adresse einer virtuellen Funktions Tabelle
-description: Abrufen der Adresse einer virtuellen Funktions Tabelle
+title: Abrufen der Adresse einer virtuellen Funktionstabelle
+description: Abrufen der Adresse einer virtuellen Funktionstabelle
 ms.assetid: c9e9e2df-75e6-4684-a465-6905e76b10a2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c0d618e75d2c3a4fcc2550fca7cb90bd2a51d2f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 39a0fbf941114cfff2b930ed329f7a35962b9ef07158fd5fda16a19a73c0f692
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038430"
 ---
-# <a name="obtaining-the-address-of-a-virtual-function-table"></a>Abrufen der Adresse einer virtuellen Funktions Tabelle
+# <a name="obtaining-the-address-of-a-virtual-function-table"></a>Abrufen der Adresse einer virtuellen Funktionstabelle
 
-In einer Anwendung, die in der Programmiersprache C geschrieben wurde, können Sie die Adresse der **iavistreamvtbl** -Struktur mithilfe der Newball-Funktion abrufen. Diese Funktion gibt die Adresse einer Struktur zurück, die einen Zeiger auf **iavistreamvtbl** enthält. Die nach dem **iavistreamvtbl** -Zeiger folgenden Informationen geben Daten an, die intern von aviball verwendet werden. Der Stream-Handler kann seine eigenen Informationen nach dem **iavistreamvtbl** -Zeiger anfügen. Diese Informationen werden in nachfolgenden Aufrufen Ihres Stream-Handlers zurückgegeben.
+In einer Anwendung, die in der Programmiersprache C geschrieben wurde, können Sie die Adresse der **IAVIStreamVtbl-Struktur** mithilfe der NewBall-Funktion abrufen. Diese Funktion gibt die Adresse einer -Struktur zurück, die einen Zeiger auf **IAVIStreamVtbl** enthält. Informationen, die auf den **IAVIStreamVtbl-Zeiger** folgen, geben intern von AVIBall verwendete Daten an. Ihr Streamhandler kann nach dem **IAVIStreamVtbl-Zeiger** eigene Informationen anfügen. Diese Informationen werden in nachfolgenden Aufrufen des Streamhandlers zurückgegeben.
 
 
 ```C++
@@ -31,9 +31,9 @@ PAVISTREAM WINAPI NewBall(VOID)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

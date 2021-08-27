@@ -1,9 +1,9 @@
 ---
-title: PBM_GETSTATE Meldung (kommstrg. h)
-description: Ruft den Status der Statusanzeige ab.
+title: PBM_GETSTATE (Commctrl.h)
+description: Ruft den Status der Statusleiste ab.
 ms.assetid: ff240160-7db6-4711-8d4e-25a77dfba118
 keywords:
-- Windows-Steuerelemente für PBM_GETSTATE Meldung
+- PBM_GETSTATE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07d4f7029fca46a046545efd1cea8e0eab99c757
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1cd157ccb6ab8a1fe4cd4a31bf1f8a033f0e591288338e21cc322a8ac10bfc41
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047010"
 ---
-# <a name="pbm_getstate-message"></a>PBM \_ GetState-Nachricht
+# <a name="pbm_getstate-message"></a>PBM \_ GETSTATE-Nachricht
 
-Ruft den Status der Statusanzeige ab.
+Ruft den Status der Statusleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,15 +37,15 @@ Ruft den Status der Statusanzeige ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den aktuellen Status der Statusanzeige zurück. Einer der folgenden Werte.
+Gibt den aktuellen Status der Statusleiste zurück. Einer der folgenden Werte.
 
 
 
 | Rückgabecode                                                                                 | Beschreibung             |
 |---------------------------------------------------------------------------------------------|-------------------------|
-| <dl> <dt>**PBST \_ Normal**</dt> </dl> | Läuft.<br/> |
-| <dl> <dt>**PBST- \_ Fehler**</dt> </dl>  | Fehler.<br/>       |
-| <dl> <dt>**PBST \_ angehalten**</dt> </dl> | Angehalten.<br/>      |
+| <dl> <dt>**PBST \_ NORMAL**</dt> </dl> | Läuft.<br/> |
+| <dl> <dt>**\_PBST-FEHLER**</dt> </dl>  | Fehler.<br/>       |
+| <dl> <dt>**PBST \_ PAUSED**</dt> </dl> | Angehalten.<br/>      |
 
 
 
@@ -57,9 +57,9 @@ Gibt den aktuellen Status der Statusanzeige zurück. Einer der folgenden Werte.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

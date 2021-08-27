@@ -5,12 +5,12 @@ metadata:
   ms.assetid: da3022ca-b120-d0d7-6747-65b946dbc73c
   ms.topic: article
   ms.date: 05/31/2018
-  ms.openlocfilehash: e4d83f20d5dac1c067144e715dee7331cabe2ce7
-  ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+  ms.openlocfilehash: 28a2fd6bb4065c420048837dffd238999502c0a9fa88b75d80ca86a7c3e4c758
+  ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
   ms.translationtype: MT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 06/09/2021
-  ms.locfileid: "111852726"
+  ms.lasthandoff: 08/11/2021
+  ms.locfileid: "120051130"
 title: Häufig gestellte Fragen zu Direct3D 10
 summary: >
   Dieser Artikel enthält einige der häufig gestellten Fragen zu Direct3D 10 aus Sicht eines Entwicklers, der eine vorhandene Anwendung von Direct3D 9 (D3D9) auf Direct3D 10 (D3D10) portiert.
@@ -43,14 +43,14 @@ sections:
 
       Der Puffer beträgt 6.560 Bytes. Angenommen, es gibt eine Anwendung mit 1.000 zu rendernden Objekten, von denen 100 skinned meshes und 900 statische Gitter sind. Gehen Sie außerdem davon aus, dass diese Anwendung die Schattenzuordnung mit einer Lichtquelle verwendet. Dies bedeutet, dass es zwei Durchläufe gibt: einen für die tiefen Karte, die aus dem Licht gerendert wird, und einen für den Vorwärtsrenderingpass. Dies führt zu 2000 Zeichnen-Aufrufen. Obwohl jeder Zeichnen-Aufruf nicht jeden Teil des konstanten Puffers aktualisieren muss, wird der gesamte Konstantenpuffer immer noch aktualisiert und an die Karte gesendet. Dies führt zum Update von 13 MB Daten pro Frame (2.000 Zeichnen-Aufrufe mit einer Zeit von 6560 KB).
   - question: Wie lassen sich meine konstanten Puffer am besten organisieren?
-    answer: "Die beste Möglichkeit besteht im Organisieren konstanter Puffer nach Aktualisierungshäufigkeit. Konstanten, die mit ähnlichen Häufigkeiten aktualisiert werden, sollten sich im gleichen Puffer befinden. Betrachten Sie beispielsweise das Szenario, das unter \"Was ist die schlechteste Methode zum Organisieren konstanter Puffer?\" dargestellt wird, aber mit einem besseren konstanten Layout:\n\n``` syntax\ncbuffer VSGlobalPerFrameCB\n  { \n    float   AppTime; \n  };\ncbuffer VSPerSkinnedCB\n  { \n    matrix  Bones[100]; \n  };\ncbuffer VSPerStaticCB\n  {\n    matrix  World;\n  };\ncbuffer VSPerPassCB\n  {\n    matrix  ViewProj;\n    uint2   RenderTargetSize;\n  };\ncbuffer VSPerMaterialCB\n  {\n    float   SpecPower;\n    float4  BDRFCoefficients;\n  };    \n```\n\nKonstante Puffer werden nach ihrer Aktualisierungshäufigkeit aufgeteilt, aber dies ist nur die Hälfte der Lösung. Die Anwendung muss die konstanten Puffer ordnungsgemäß aktualisieren, um die Teilung voll nutzen zu können. Wir gehen von der gleichen Szene wie oben aus: 900 statische Gitter, 100 skinnierte Gitter, ein Lichtpass und ein Vorwärtspass. Außerdem wird davon ausgegangen, dass einige konstante Puffer pro Objekt gespeichert werden. Dies bedeutet, dass jedes Objekt entweder ein VSPerSkinnedCB oder ein VSPerStaticCB enthält, je nachdem, ob es skinned oder static ist. Wir tun dies, um zu vermeiden, dass die Menge der über die Pipeline gesendeten Matrizen verdoppelt wird.\n\nWir teilen den Rahmen in drei Phasen auf. Die erste Phase ist der Anfang des Frames und umfasst kein Rendering, sondern nur konstante Updates.\n\n\n\n**Frame starten**\n\n\n-   Aktualisieren von VSGlobalPerFrameCB für die Anwendungszeit (4 Bytes)\n-   Update 100 VSPerSkinnedCB für die 100 skinnierten Objekte (640.000 Byte)\n-   Aktualisieren von VSPerStaticCB für 900 statische Objekte (57600 Bytes)\n\nAls Nächstes wird der Schattenkartenpass angezeigt. Beachten Sie, dass VSPerPassCB der einzige konstante Puffer ist, der tatsächlich aktualisiert wird. Alle anderen konstanten Puffer wurden während des Startframe-Durchlaufs aktualisiert. Diese konstanten Puffer müssen zwar noch gebunden werden, aber die Menge der an die Grafikkarte übergebenen Informationen ist minimal, da die Puffer bereits aktualisiert wurden.\n\n\n**Schattenpass**\n\n\n-   Aktualisieren von VSPerPassCB (72 Bytes)\n-   Zeichnen von 100 skinnierten Gittern (100 Bindungen, keine Updates)\n-   Zeichnen von 900 statischen Gittern (100 Bindungen, keine Updates)\n\nEbenso muss der Vorwärtsrendering-Pass nur materialspezifische Daten aktualisieren, da sie nicht pro Netz gespeichert wurden. Wenn angenommen wird, dass in der Szene 500 Materialien verwendet werden:\n\n\n**Forward Pass**\n\n\n-   Aktualisieren von VSPerPassCB (72 Bytes)\n-   Update 500 VSPerMaterialCBs (10000 Bytes)\n\nDies ergibt insgesamt nur 707 KB. Obwohl es sich dabei um ein sehr verkningungsfähiges Szenario handelt, veranschaulicht es, wie viel konstanter Updateaufwand reduziert werden kann, indem Konstanten nach Aktualisierungshäufigkeit sortiert werden.\n\n \n"
+    answer: "Die beste Möglichkeit besteht in der Organisation konstanter Puffer nach Aktualisierungshäufigkeit. Konstanten, die mit ähnlicher Häufigkeit aktualisiert werden, sollten sich im gleichen Puffer befinden. Betrachten Sie beispielsweise das Szenario, das unter \"Was ist die schlechteste Methode zum Organisieren konstanter Puffer?\" dargestellt wird, aber mit einem besseren konstanten Layout:\n\n``` syntax\ncbuffer VSGlobalPerFrameCB\n  { \n    float   AppTime; \n  };\ncbuffer VSPerSkinnedCB\n  { \n    matrix  Bones[100]; \n  };\ncbuffer VSPerStaticCB\n  {\n    matrix  World;\n  };\ncbuffer VSPerPassCB\n  {\n    matrix  ViewProj;\n    uint2   RenderTargetSize;\n  };\ncbuffer VSPerMaterialCB\n  {\n    float   SpecPower;\n    float4  BDRFCoefficients;\n  };    \n```\n\nKonstante Puffer werden nach ihrer Aktualisierungshäufigkeit aufgeteilt, aber dies ist nur die Hälfte der Lösung. Die Anwendung muss die konstanten Puffer ordnungsgemäß aktualisieren, um die Teilung voll nutzen zu können. Wir gehen von der gleichen Szene wie oben aus: 900 statische Gitter, 100 skinnierte Gitter, ein Lichtpass und ein Vorwärtspass. Außerdem wird davon ausgegangen, dass einige konstante Puffer pro Objekt gespeichert werden. Dies bedeutet, dass jedes Objekt entweder ein VSPerSkinnedCB oder ein VSPerStaticCB enthält, je nachdem, ob es skinned oder static ist. Wir tun dies, um zu vermeiden, dass die Menge der über die Pipeline gesendeten Matrizen verdoppelt wird.\n\nWir teilen den Rahmen in drei Phasen auf. Die erste Phase ist der Anfang des Frames und umfasst kein Rendering, sondern nur konstante Updates.\n\n\n\n**Begin Frame**\n\n\n-   Aktualisieren von VSGlobalPerFrameCB für die Anwendungszeit (4 Byte)\n-   Update 100 VSPerSkinnedCB für die 100 skinnierten Objekte (640.000 Byte)\n-   Aktualisieren von VSPerStaticCB für 900 statische Objekte (57600 Bytes)\n\nAls Nächstes wird der Schattenkartenpass angezeigt. Beachten Sie, dass VSPerPassCB der einzige konstante Puffer ist, der tatsächlich aktualisiert wird. Alle anderen konstanten Puffer wurden während des Startframe-Durchlaufs aktualisiert. Diese konstanten Puffer müssen zwar noch gebunden werden, aber die Menge der an die Grafikkarte übergebenen Informationen ist minimal, da die Puffer bereits aktualisiert wurden.\n\n\n**Schattenpass**\n\n\n-   Aktualisieren von VSPerPassCB (72 Bytes)\n-   Zeichnen von 100 skinnierten Gittern (100 Bindungen, keine Updates)\n-   Zeichnen von 900 statischen Gittern (100 Bindungen, keine Updates)\n\nEbenso muss der Vorwärtsrendering-Pass nur materialspezifische Daten aktualisieren, da sie nicht pro Netz gespeichert wurden. Gehen wir davon aus, dass in der Szene 500 Materialien verwendet werden:\n\n\n**Forward Pass**\n\n\n-   Aktualisieren von VSPerPassCB (72 Bytes)\n-   Update 500 VSPerMaterialCBs (10000 Bytes)\n\nDies ergibt insgesamt nur 707 KB. Obwohl es sich dabei um ein sehr verkningungsfähiges Szenario handelt, veranschaulicht es, wie viel konstanter Updateaufwand reduziert werden kann, indem Konstanten nach Aktualisierungshäufigkeit sortiert werden.\n\n \n"
   - question: Was passiert, wenn ich nicht genügend Speicherplatz zum Speichern einzelner konstanter Puffer für meine Gitternetze, mein Material und so weiter habe?
     answer: >
       Sie können immer ein mehrstufiges System mit konstanten Puffern verwenden. Erstellen Sie konstante Puffer variabler Größe (16 Byte, 32 Byte, 64 Bytes und so weiter) bis zur größten erforderlichen konstanten Puffergröße. Wenn es an der Zeit ist, einen konstanten Puffer an einen Shader zu binden, wählen Sie den kleinsten konstanten Puffer aus, der die vom Shader benötigten Daten halten kann. Obwohl dieser Ansatz etwas weniger effizient ist, ist er ein guter Zwischenschritt.
-  - question: Ich verknance konstanten Puffer zwischen verschiedenen Shadern. Ein Shader kann alle Konstanten verwenden, ein anderer kann jedoch einige der Konstanten verwenden. Was ist die beste Möglichkeit, diese zu aktualisieren?
+  - question: Ich verknance konstante Puffer zwischen verschiedenen Shadern. Ein Shader kann alle Konstanten verwenden, ein anderer kann jedoch einige der Konstanten verwenden. Was ist die beste Möglichkeit, diese zu aktualisieren?
     answer: >
       Ein Ansatz besteht in der weiteren Aufteilung des Konstantenpuffers. Es kommt jedoch zu einem Punkt, an dem zu viele konstante Puffer gebunden sind. Verschieben Sie in diesem Fall die Konstanten, die wahrscheinlich von mehreren Shadern nicht verwendet werden, an das Ende des konstanten Puffers. Wenn Sie die Variablendaten aus dem Shader abrufen, verwenden Sie das \_ D3D10 SVF USED-Flag aus \_ D3D10 \_ SHADER \_ VARIABLE DESC, um zu bestimmen, ob die Variable verwendet \_ wird. Indem Sie nicht verwendete Variablen am Ende des konstanten Puffers platzieren, können Sie einen kleineren Puffer an den Shader binden, der diese Variablen nicht verwendet, wodurch die Aktualisierungskosten sparen.
-  - question: Wie viel kann ich meine Bildfrequenz verbessern, wenn ich die Bilder meines Zeichens nur einmal pro Frame statt einmal pro Durchgang/Zeichnen hochlade?
+  - question: Wie viel kann ich meine Bildfrequenz verbessern, wenn ich die Bilder meines Zeichens nur einmal pro Frame und nicht einmal pro Durchgang/Zeichnen hochlade?
     answer: >
       Sie können die Bildfrequenz je nach Menge redundanter Daten zwischen 8 und 50 Prozent verbessern. Im schlimmsten Fall wird die Leistung nicht reduziert.
   - question: Wie viele konstanten Puffer sollte ich gleichzeitig gebunden haben?
@@ -59,12 +59,12 @@ sections:
   - question: Gibt es Kosten für das Binden konstanter Puffer, ohne sie zu verwenden?
     answer: >
       Ja, wenn Sie den Puffer nicht tatsächlich verwenden möchten, rufen Sie VSSetConsantBuffer oder PSSetConstantBuffer nicht auf. Dieser zusätzliche API-Aufwand kann sich im Laufe mehrerer Zeichnen-Aufrufe addieren.
-- name: Zustand
+- name: State
   questions:
   - question: Was ist die beste Möglichkeit zum Verwalten des Zustands in D3D10?
     answer: >
-      Die beste Lösung besteht im Vorhinauf kennen Und die Zustandsobjekte im Vorhinhin zu erstellen. Dies bedeutet, dass zur Renderzeit die Zustandsbindung der einzige Vorgang ist, der durchgeführt werden muss. D3D10 filtert auch Duplikate heraus.
-  - question: Mein Spiel wurde dynamisch geladen oder verfügt über benutzergenerierte Inhalte. Ich kann nicht alle meine Zustandsobjekte im Vorhinhin laden.   Wie sollte ich vorgehen?
+      Die beste Lösung besteht in der Vor- und Nacherkung Ihres Zustands und dem Erstellen der Zustandsobjekte im Vorhinhin. Dies bedeutet, dass zur Renderzeit die Zustandsbindung der einzige Vorgang ist, der durchgeführt werden muss. D3D10 filtert auch Duplikate heraus.
+  - question: Mein Spiel wurde dynamisch geladen oder verfügt über benutzergenerierte Inhalte. Ich kann nicht alle meine Zustandsobjekte im Vorhinhin laden. Wie sollte ich vorgehen?
     answer: >
       Hier gibt es zwei Lösungen. Die erste besteht im einfachen Erstellen von Zustandsobjekten während der Zeit und dem Herausfiltern von Duplikaten durch D3D10. Dies wird jedoch nicht für Szenarien mit vielen Zustandsobjektänderungen pro Frame empfohlen. Eine bessere Lösung ist, die Zustandsobjekte selbst zu hashen und nur dann ein Zustandsobjekt zu erstellen, wenn ein Objekt, das die Anforderungen erfüllt, nicht in der Hashtabelle gefunden wird. Der Grund für die Verwendung einer benutzerdefinierten Hashtabelle ist, dass eine Anwendung basierend auf dem für diese Anwendung bestimmten Verwendungsszenario einen schnellen Hash auswählen kann. Wenn eine Anwendung beispielsweise nur die rendertargetwritemask im BlendState ändert und alle anderen Werte gleich hält, kann die Anwendung einen Hash aus der rendertargetwritemask anstelle der gesamten Struktur generieren.
   - question: Der AlphaTest-Status ist nicht mehr. Wo ist es hin?
@@ -75,7 +75,7 @@ sections:
       Benutzerclipebenen wurden in den Shader verschoben. Es gibt zwei Möglichkeiten, dies zu behandeln. Die erste besteht in der Ausgabe von SV \_ ClipDistance aus dem Vertex-Shader oder dem Geometrie-Shader. Die andere Möglichkeit besteht in der Verwendung von discard im Pixel-Shader basierend auf einem Wert, der vom Vertex-Shader oder dem Geometrie-Shader übergeben wird. Experimentieren Sie mit beiden, um zu sehen, was für Ihr spezielles Szenario schneller ist. Die Verwendung von SV ClipDistance kann dazu führen, dass die Hardware eine geometriebasierte Clippingroutine verwendet, die dazu führen kann, dass geometry-gebundene Zeichnen-Aufrufe \_ langsamer ausgeführt werden. Ebenso verschiebt die Verwendung von discard die Arbeit auf den Pixel-Shader, was dazu führen kann, dass pixelgebundene Zeichnen-Aufrufe langsamer ausgeführt werden.
   - question: Clears beachtet keine Zustandseinstellungen, z. B. meine Scissor rect-Einstellungen in meinem Rasterizerzustand.
     answer: >
-      Clears wurden vom Pipelinezustand getrennt. Um das Verhalten im D3D9-Stil zu erhalten, emuliert durch Zeichnen eines Vollbild-Quads das Löschen.
+      Clears wurden vom Pipelinezustand getrennt. Um das Verhalten im D3D9-Stil zu erhalten, emuliert clears, indem ein Vollbild-Quader gezeichnungt wird.
   - question: Ich habe meine Zustände wieder auf den Standardwert festgelegt, um zu versuchen, einen Renderingfehler zu diagnostizieren. Jetzt wird mein Bildschirm nur schwarz angezeigt, obwohl ich weiß, dass ich Objekte auf den Bildschirm ziehe.
     answer: >
       Stellen Sie beim Zurücksetzen des Zustands auf Standardwerte (NULL) sicher, dass sampleMask im Aufruf von OMSetBlendState nie 0 (null) ist. Wenn SampleMask auf 0 (null) festgelegt ist, werden alle Stichproben logisch AND mit 0 (null) durchgeführt. In diesem Szenario bestehen keine Stichproben den Mischungstest.
@@ -89,7 +89,7 @@ sections:
       Weitere Informationen finden Sie unter [Überlegungen zu Direct3D 9 zu Direct3D 10.](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-d3d9-to-d3d10-considerations)
   - question: Was ist mit A8R8G8B8-Texturformaten passiert?
     answer: >
-      Sie sind in D3D10 veraltet. Sie können Ihre Texturen als R8G8B8A8 erneut beziehen, oder Sie können beim Laden schwanken, oder Sie können im Shader swizzle verwenden.
+      Sie sind in D3D10 veraltet. Sie können Ihre Texturen als R8G8B8A8 erneut beziehen, oder Sie können beim Laden swizzle oder im Shader swizzle verwenden.
   - question: Gewusst wie palettierte Texturen verwenden?
     answer: >
       Platzieren Sie Ihre Farbpalette in einer Textur oder einem konstanten Puffer, und binden Sie sie an die Pipeline. Im Pixel-Shader wird eine indirekte Suche mithilfe des Indexes in Ihrer palettierten Textur erstellt.
@@ -101,12 +101,12 @@ sections:
       Dreiecks-Lüfter sind in D3D10 veraltet. Dreiecks-Lüfter müssen entweder in der Inhaltspipeline oder beim Laden konvertiert werden.
 - name: Shaderverknüpfung
   questions:
-  - question: Meine Direct3D 9-Shader kompilieren gut zu Shader Model 4.0, aber wenn ich sie an die Pipeline bindet, werden Verknüpfungsfehler angezeigt, die in der Debugausgabe mit der Debuglaufzeit angezeigt werden.
+  - question: Meine Direct3D 9-Shader werden gut zu Shader Model 4.0 kompiliert, aber wenn ich sie an die Pipeline bindet, werden Verknüpfungsfehler angezeigt, die in der Debugausgabe mit der Debuglaufzeit angezeigt werden.
     answer: >
       Die Shaderverknüpfung ist in D3D10 wesentlich strenger. Elemente in einer nachfolgenden Phase müssen in der Reihenfolge gelesen werden, in der sie aus der vorherigen Phase ausgegeben werden. Beispiel:
 
 
-      Ein Vertex-Shader gibt Aus:
+      Ein Vertex-Shader gibt:
 
 
       ``` syntax
@@ -116,7 +116,7 @@ sections:
       ```
 
 
-      Ein Pixel-Shader liest Ein:
+      Ein Pixel-Shader liest:
 
 
       ``` syntax
@@ -128,7 +128,7 @@ sections:
       Obwohl die Position im Pixel-Shader nicht benötigt wird, verursacht dies einen Verknüpfungsfehler, da die Position vom Vertex-Shader ausgegeben, aber nicht vom Pixel-Shader gelesen wird. Die korrektere Version würde wie die folgenden aussehen:
 
 
-      Ein Vertex-Shader gibt Aus:
+      Ein Vertex-Shader gibt:
 
 
       ``` syntax
@@ -138,7 +138,7 @@ sections:
       ```
 
 
-      Ein Pixel-Shader liest Ein:
+      Ein Pixel-Shader liest:
 
 
       ``` syntax
@@ -153,7 +153,7 @@ sections:
       Eine Lösung besteht im Wechseln der Reihenfolge und Laden von Shadern vor dem Laden von Gitternetzen. Dies ist jedoch viel einfacher gesagt als fertig. Sie können die Eingabelayouts bei Bedarf bei Bedarf von der Anwendung erstellen. Sie müssen eine Version der Shadersignatur behalten. Sie sollten einen Hash erstellen, der auf dem Shader- und Pufferlayout basiert, und nur dann das Eingabelayout erstellen, wenn noch kein Übereinstimmungslayout vorhanden ist.
 - name: Zeichnen von Aufrufen
   questions:
-  - question: Wie ist mein Grenzwert für Zeichnen-Aufrufe von D3D10 auf 60 Hz? 30 Hz?
+  - question: Wie ist mein Grenzwert für Zeichnen-Aufrufe für D3D10 auf 60 Hz? 30 Hz?
     answer: >
       Direct3D 9 war aufgrund der CPU-Kosten pro Zeichnen-Aufruf auf die Anzahl der Zeichnen-Aufrufe beschränkt. Bei Direct3D 10 wurden die Kosten für jeden Zeichnen-Aufruf reduziert. Es gibt jedoch keine eindeutige Korrelation mehr zwischen Zeichnen-Aufrufen und Frameraten. Da Zeichnen-Aufrufe häufig viele Unterstützungsaufrufe erfordern (konstante Pufferaktualisierungen, Texturbindungen, Zustandseinstellungen und so weiter), ist die Auswirkung der Bildfrequenz der API jetzt stärker von der api-Gesamtnutzung abhängig, anstatt einfach die Aufrufanzahl zu zeichnen.
 - name: Ressourcen
@@ -178,7 +178,7 @@ sections:
       Sie sind nicht mehr in D3D10. Verwenden Sie für dynamische Geometrie einen großen D3D10 \_ USAGE \_ DYNAMIC-Puffer. Ordnen Sie ihn am Anfang des Frames D3D10 \_ MAP \_ WRITE DISCARD \_ zu. Für jeden nachfolgenden Zeichnen-Aufruf wird der Schreibzeiger über die Position der zuvor gezeichneten Scheitelpunkt hinaus schreiten und den Puffer D3D10 \_ MAP \_ WRITE NO \_ \_ OVERWRITE zuordnen. Wenn Sie sich dem Ende des Puffers vor dem Ende des Frames nähern, umschließen Sie den Schreibzeiger um den Anfang, und ordnen Sie D3D10 \_ MAP \_ WRITE DISCARD \_ zu.
   - question: Kann ich 16-Bit-Indizes und 32-Bit-Indizes in den gleichen dynamischen Geometriepuffer schreiben?
     answer: >
-      Ja, dies ist zwar der Fall, aber dies kann bei bestimmter Hardware zu Leistungssentität führen. Es ist sicherer, separate Puffer für dynamische 16-Bit-Indexdaten und 32-Bit-Indexdaten zu erstellen.
+      Ja, dies ist zwar der Fall, aber dies kann zu Leistungssentität bei bestimmter Hardware führen. Es ist sicherer, separate Puffer für dynamische 16-Bit-Indexdaten und 32-Bit-Indexdaten zu erstellen.
   - question: Gewusst wie daten aus der GPU in die CPU zurücklesen?
     answer: >
       Sie müssen eine Stagingressource verwenden. Kopieren Sie die Daten aus der GPU-Ressource mit CopyResource in die Stagingressource. Ordnen Sie die Stagingressource zu, um die Daten zu lesen.
@@ -190,9 +190,9 @@ sections:
       Die Offsets und Größen für Sperraufrufe auf Direct3D 9 waren im Grunde unübersichtlich und wurden vom Treiber häufig ignoriert. Offsets sollten stattdessen von der Anwendung aus dem Zeiger berechnet werden, der im Map-Aufruf zurückgegeben wird.
 - name: Tiefe als Textur
   questions:
-  - question: Was ist schneller? Verwenden von Tiefe als Textur oder Schreiben von Tiefe in Alpha und Lesen dieser Struktur?
+  - question: Was ist schneller? Tiefe als Textur verwenden oder Tiefe in Alpha schreiben und lesen?
     answer: >
-      Dies ist anwendungs- und hardwarespezifisch. Verwenden Sie den, der die größte Bandbreite spart. Wenn Sie bereits mehrere Renderziele verwenden und über einen zusätzlichen Kanal verfügen, ist das Schreiben der Tiefe aus dem Shader möglicherweise eine bessere Lösung. Darüber hinaus können Sie durch das Schreiben von Tiefe in alpha oder ein anderes Renderziel lineare Tiefenwerte schreiben, die Berechnungen beschleunigen können, die auf den Tiefenpuffer zugreifen müssen.
+      Dies ist anwendungs- und hardwarespezifisch. Verwenden Sie den, der die größte Bandbreite spart. Wenn Sie bereits mehrere Renderziele verwenden und über einen zusätzlichen Kanal verfügen, ist das Schreiben der Tiefe aus dem Shader möglicherweise eine bessere Lösung. Darüber hinaus können Sie beim Schreiben von Tiefe in alpha oder ein anderes Renderziel lineare Tiefenwerte schreiben, die Berechnungen beschleunigen können, die auf den Tiefenpuffer zugreifen müssen.
   - question: Kann ich eine Textur als Eingabe und als Tiefen-Schablonentextur gebunden haben, solange ich Tiefeneingaben deaktiviere?
     answer: >
       Nicht in D3D10.
@@ -214,7 +214,7 @@ sections:
       Der erste Schritt besteht im Aktivieren der Debuglaufzeit ([**D3D10 \_ CREATE \_ DEVICE \_ DEBUG-Flag,**](/windows/desktop/api/d3d10/ne-d3d10-d3d10_create_device_flag) das an [**D3D10CreateDevice übergeben wird).**](/windows/desktop/api/d3d10misc/nf-d3d10misc-d3d10createdevice) PIX hat eine viel höhere Wahrscheinlichkeit, dass abstürzt, wenn die Debugausgabe nicht bereinigt ist.
   - question: Für mein Spiel ist der virtuelle Adressraum unter 32-Bit Vista unter D3D10 nicht mehr verfügbar. Es gibt keine Probleme mit D3D9.
     answer: >
-      Es gab einige Probleme mit D3D10 und dem virtuellen Adressraum. Dies wurde in [KB940105 behoben.](https://support.microsoft.com/kb/940105) Wenn das Problem nicht behoben wird, stellen Sie sicher, dass Sie nicht mehr Ressourcen erstellen, die in D3D10 zugeordnet (gesperrt) werden können, als sie in D3D9 erstellt haben. Denken Sie auch an die Portierung auf 64-Bit,da dies in Zukunft häufiger vorkommen wird.
+      Es gab einige Probleme mit D3D10 und dem virtuellen Adressraum. Dies wurde in [KB940105 behoben.](https://support.microsoft.com/kb/940105) Wenn das Problem nicht behoben wird, stellen Sie sicher, dass Sie nicht mehr Ressourcen erstellen, die in D3D10 zugeordnet (gesperrt) werden können, als Sie in D3D9 erstellt haben. Denken Sie auch an die Portierung auf 64-Bit,da dies in Zukunft häufiger vorkommen wird.
 - name: Prädikatrendering
   questions:
   - question: Ich habe Prädikatrendering verwendet (basierend auf Okklusionsabfrageergebnissen). Warum ist meine App immer noch die gleiche Geschwindigkeit?
@@ -233,16 +233,16 @@ sections:
       Nein. Der Geometrie-Shader sollte NICHT für mosaik verwendet werden.
   - question: Kann ich den Geometrie-Shader verwenden, um Geometrie zu erstellen?
     answer: >
-      Ja, in sehr eingeschränkten Szenarien. Der Geometrie-Shader in den aktuellen D3D10 -Teilen (2008) ist nicht für eine große Erweiterung ausgestattet. Dies kann sich in Zukunft ändern. Grafikkartenhersteller haben aufgrund vorhandener Punkt-Sprite-Hardware möglicherweise einen speziellen Pfad für ein bis vier Erweiterungen. Jede andere Erweiterung müsste sehr begrenzt sein. Die Beispielbeispiele Für Partikel-Gs und PipesGS erzielen sie hohe Bildraten, indem nur eine begrenzte Erweiterung durchgeführt wird. Pro Frame werden nur wenige Punkte erweitert.
+      Ja, in sehr eingeschränkten Szenarien. Der Geometrie-Shader in den aktuellen D3D10 -Teilen (2008) ist nicht für eine große Erweiterung ausgestattet. Dies kann sich in Zukunft ändern. Grafikkartenhersteller haben aufgrund vorhandener Punkt-Sprite-Hardware möglicherweise einen speziellen Pfad für ein bis vier Erweiterungen. Jede andere Erweiterung müsste sehr eingeschränkt sein. Die Beispielbeispiele Für Die Partikel-Gs und PipesGS erzielen hohe Frameraten, indem nur eine begrenzte Erweiterung durchgeführt wird. Pro Frame werden nur wenige Punkte erweitert.
   - question: Wofür sollte ich den Geometrie-Shader verwenden?
     answer: >
       Alles, was Vorgänge auf einem ganzen Primitiv erfordert, z. B. Die Erkennung von Primitiven, baryzentrierte Koordinaten und so weiter. Verwenden Sie sie auch, um auszuwählen, an welchen Slice eines Renderzielarrays Primitive gesendet werden.
   - question: Kann ich variable Mengen an Geometrie aus dem Geometrie-Shader ausausgaben?
     answer: >
       Ja, aber dies kann zu Leistungsproblemen führen. Sehen Sie sich das Beispiel für die Ausgabe von 1 Punkt für einen Aufruf und 4 Punkte für einen anderen an. Dies kann dazu führen, dass die Geometrie-Shaderthreads seriell ausgeführt werden, während sie den Erweiterungsrichtlinien entsprechen.
-  - question: Woher weiß D3D10, wie Adjacency-Indizes für mein Netz generiert werden? Oder warum wird D3D10 nicht ordnungsgemäß gerendert, wenn ich anknance, dass der Geometrie-Shader Adjacency-Informationen benötigt.
+  - question: Woher weiß D3D10, wie Adjacency-Indizes für mein Netz generiert werden? Oder warum wird D3D10 nicht ordnungsgemäß gerendert, wenn ich anknance, dass der Geometrie-Shader Adjazienzinformationen benötigt.
     answer: >
-      Die Adjacency-Informationen werden nicht von D3D10, sondern von der Anwendung erstellt. Adjacency-Indizes werden von der Anwendung generiert und müssen sechs Indizes pro Primitivem enthalten. der sechs sind die ungeraden nummerierten Indizes die kantenangrenzenden Scheitelungen. ID3DX10Mesh::GenerateAdjacencyAndPointsReps kann zum Generieren dieser Daten verwendet werden.
+      Die Adjacency-Informationen werden nicht von D3D10, sondern von der Anwendung erstellt. Adjacency-Indizes werden von der Anwendung generiert und müssen sechs Indizes pro Primitiv enthalten. der sechs sind die ungeraden nummerierten Indizes die kantenangrenzenden Scheitelungen. ID3DX10Mesh::GenerateAdjacencyAndPointsReps kann zum Generieren dieser Daten verwendet werden.
 - name: HLSL
   questions:
   - question: Sind ganzzahlige und bitweise Anweisungen langsam?
@@ -251,7 +251,7 @@ sections:
   - question: Was ist mit VPOS passiert?
     answer: >
       Wenn Sie eine Eingabe für Ihren Pixel-Shader als SV POSITION deklarieren, erhalten Sie das gleiche Verhalten wie das Deklarieren \_ als VPOS.
-  - question: Gewusst wie beispiel einer MSAA-Textur?
+  - question: Gewusst wie Beispiel für eine MSAA-Textur?
     answer: >
       Deklarieren Sie ihre Textur in Ihrem Shader als Texture2DMS. Anschließend können Sie einzelne Stichproben mithilfe der Sample-Methoden aus dem Texture2DMS-Objekt abrufen.
   - question: Gewusst wie, ob eine Shadervariable in einem konstanten Puffer tatsächlich verwendet wird?
@@ -263,7 +263,7 @@ sections:
   - question: Ich habe keine Kontrolle über konstante Puffer, die FX10 erstellt. Wie werden sie erstellt und aktualisiert?
     answer: >
       Alle mit FX10 verwalteten Konstantenpuffer werden als D3D10 USAGE DEFAULT-Ressourcen erstellt und mit \_ \_ UpdateSubresource aktualisiert. Da FX10 einen Hintergrundspeicher aller konstanten Daten speichert, ist UpdateSubresource der beste Ansatz zum Aktualisieren dieser Daten.
-  - question: Gewusst wie die Feste Funktionspipeline mit Shadern emulieren?
+  - question: Gewusst wie die Feste Funktionspipeline mithilfe von Shadern emulieren?
     answer: >
       Siehe FixedFuncEMU-Beispiel.
   - question: Sollte ich die neuen Compilerhinweise zum Entrollen, schleifen, branch \[ und so weiter \] \[ \] \[ \] verwenden?
@@ -299,4 +299,4 @@ sections:
       ```
 
 
-      In diesem konstanten Puffer wird IWaste2Floats am dritten Float (12. Byte) im konstanten Puffer platziert. IWasteMore wird am 13. float4- oder 52. float-Wert im konstanten Puffer platziert.
+      In diesem konstanten Puffer wird IWaste2Floats am dritten Float (12. Byte) im konstanten Puffer platziert. IWasteMore wird am 13. float4- oder 52. float im konstanten Puffer platziert.

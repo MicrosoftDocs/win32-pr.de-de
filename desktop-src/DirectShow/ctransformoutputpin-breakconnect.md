@@ -1,5 +1,5 @@
 ---
-description: 'CTransformOutputPin.BreakConnect-Methode: Die BreakConnect-Methode gibt den Pin von einer Verbindung frei.'
+description: 'CTransformOutputPin.BreakConnect-Methode: Die BreakConnect-Methode gibt den Pin aus einer Verbindung frei.'
 ms.assetid: bf68aca3-93e5-4f9d-9980-1a5eed1513f5
 title: CTransformOutputPin.BreakConnect-Methode (Transfrm.h)
 ms.topic: reference
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 92854041e1d553945d0a1ab1755ef3557bd4a8b2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cf468e9f7d9cb439cfe369e3034f76b044001b31be3fd9c7a72ca475aa77d1a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108084958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120103010"
 ---
 # <a name="ctransformoutputpinbreakconnect-method"></a>CTransformOutputPin.BreakConnect-Methode
 
@@ -44,18 +44,18 @@ Diese Methode hat keine Parameter.
 
 Gibt S \_ OK oder einen anderen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode überschreibt die [**CBaseOutputPin::BreakConnect-Methode.**](cbaseoutputpin-breakconnect.md) Sie ruft die [**CTransformFilter::BreakConnect-Methode**](ctransformfilter-breakconnect.md) des Filters auf, die \_ S OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::BreakConnect-Methode** überschreiben.
+Diese Methode überschreibt die [**CBaseOutputPin::BreakConnect-Methode.**](cbaseoutputpin-breakconnect.md) Sie ruft die [**CTransformFilter::BreakConnect-Methode**](ctransformfilter-breakconnect.md) des Filters auf, die S \_ OK in der Basisklasse zurückgibt. Die abgeleitete Klasse kann die **CTransformFilter::BreakConnect-Methode** überschreiben.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

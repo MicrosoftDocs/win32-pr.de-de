@@ -1,6 +1,6 @@
 ---
 title: MDM_PassportForWork-Klasse
-description: MDM \_ passportforwork wird zur Bereitstellung von Windows Hello for Business verwendet.
+description: Mdm \_ PassportForWork wird zum Bereitstellen von Windows Hello for Business verwendet.
 ms.assetid: 49bba780-e26f-463d-97ae-e095ea16be87
 keywords:
 - MDM_PassportForWork-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7df7f061c0ab8f0405e8f0e6a6d43d8d896c62f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61fe697b02dccd8e3c07f2f675206f28f621ce879b5c169d0908c7323aed0aa4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045730"
 ---
-# <a name="mdm_passportforwork-class"></a>MDM \_ passportforwork-Klasse
+# <a name="mdm_passportforwork-class"></a>MDM \_ PassportForWork-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-**MDM \_ passportforwork** wird zur Bereitstellung von Windows Hello for Business verwendet.
+**Mdm \_ PassportForWork** wird zum Bereitstellen von Windows Hello for Business verwendet.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -46,52 +46,52 @@ class MDM_PassportForWork
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ passportforwork** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ PassportForWork-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ passportforwork** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ PassportForWork-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt die Mandanten-ID im Format eines global eindeutigen Bezeichners (GUID) ohne geschweifte Klammern ({,}) an, die als Teil der Windows Hello for Business-Bereitstellung und-Verwaltung verwendet werden.
+Gibt die Mandanten-ID im Format einer GUID (Globally Unique Identifier) ohne geschweifte Klammern ( { , } ) an, die als Teil Windows Hello für die Bereitstellung und Verwaltung von Unternehmen verwendet wird.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/PassPortForWork/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse lautet die Zeichenfolge "./Vendor/MSFT/PassPortForWork/".
 
 </dd> <dt>
 
 [UseBiometrics](/windows/client-management/mdm/passportforwork-csp#usebiometrics)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -105,10 +105,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -117,7 +117,7 @@ Zugriffstyp: Lesen/Schreiben
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

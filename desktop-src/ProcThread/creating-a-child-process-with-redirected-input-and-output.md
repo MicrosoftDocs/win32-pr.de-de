@@ -1,25 +1,25 @@
 ---
-description: Im Beispiel in diesem Thema wird veranschaulicht, wie ein untergeordneter Prozess mithilfe der Funktion "-Funktion" in einem Konsolen Prozess erstellt wird.
+description: Im Beispiel in diesem Thema wird veranschaulicht, wie ein untergeordneter Prozess mithilfe der CreateProcess-Funktion aus einem Konsolenprozess erstellt wird.
 ms.assetid: a4e37069-2b3a-4b6d-9cfd-eb1700ab3bc6
 title: Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af3a8e922c37baf20dae2d3a26b8cd0705e4c1a5
-ms.sourcegitcommit: 005593a756bad634e35a57e4fea9167566d4a550
+ms.openlocfilehash: 5ec7c7761bd73386285a4e911be13ff3ab46a479cb78442b1d8b14ac9e1b1368
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "104218895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081440"
 ---
 # <a name="creating-a-child-process-with-redirected-input-and-output"></a>Erstellen eines untergeordneten Prozesses mit umgeleiteter Eingabe und Ausgabe
 
-Im Beispiel in diesem Thema wird veranschaulicht, wie ein untergeordneter Prozess mithilfe [**der Funktion "**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) -Funktion" in einem Konsolen Prozess erstellt wird. Außerdem wird ein Verfahren für die Verwendung anonymer Pipes zum Umleiten der standardmäßigen Eingabe-und Ausgabe Handles des untergeordneten Prozesses veranschaulicht. Beachten Sie, dass benannte Pipes auch verwendet werden können, um Prozess-e/a umzuleiten.
+Im Beispiel in diesem Thema wird veranschaulicht, wie ein untergeordneter Prozess mithilfe der [**CreateProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) aus einem Konsolenprozess erstellt wird. Außerdem wird ein Verfahren für die Verwendung anonymer Pipes zum Umleiten der Standardeingabe- und -ausgabehandles des untergeordneten Prozesses veranschaulicht. Beachten Sie, dass Named Pipes auch zum Umleiten von Prozess-E/A verwendet werden können.
 
-Die [**CreatePipe**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-createpipe) -Funktion verwendet die Struktur der [**Sicherheits \_ Attribute**](/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)) , um vererbbare Handles für die Lese-und schreibenden von zwei Pipes zu erstellen. Das leseende einer Pipe dient als Standardeingabe für den untergeordneten Prozess, und das schreibende der anderen Pipe ist die Standardausgabe für den untergeordneten Prozess. Diese Senk Zieh Punkte werden in der [**STARTUPINFO**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfoa) -Struktur angegeben, wodurch Sie zu den vom untergeordneten Prozess geerbten Standard Handles werden.
+Die [**CreatePipe-Funktion**](/windows/desktop/api/namedpipeapi/nf-namedpipeapi-createpipe) verwendet die [**SECURITY \_ ATTRIBUTES-Struktur,**](/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)) um vererbbare Handles für die Lese- und Schreibenden von zwei Pipes zu erstellen. Das Leseende einer Pipe dient als Standardeingabe für den untergeordneten Prozess, und das Schreibende der anderen Pipe ist die Standardausgabe für den untergeordneten Prozess. Diese Pipehandles werden in der [**STARTUPINFO-Struktur**](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfoa) angegeben, wodurch sie zu den Standardhandles werden, die vom untergeordneten Prozess geerbt werden.
 
-Der übergeordnete Prozess verwendet die gegenüberliegenden Enden dieser beiden Pipes, um in die Eingabe des untergeordneten Prozesses zu schreiben und aus der Ausgabe des untergeordneten Prozesses zu lesen. Wie in der Struktur der [**Sicherheits \_ Attribute**](/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)) angegeben, sind diese Handles ebenfalls vererbbar. Diese Handles dürfen jedoch nicht vererbt werden. Daher verwendet der übergeordnete Prozess vor dem Erstellen des untergeordneten Prozesses [**die Funktion "**](/windows/desktop/api/handleapi/nf-handleapi-sethandleinformation) -Funktion", um sicherzustellen, dass das Schreib Handle für die Standardeingabe des untergeordneten Prozesses und das Lese Handle für die Standardausgabe des untergeordneten Prozesses nicht vererbt werden kann. Weitere Informationen finden Sie unter [Pipes](/windows/desktop/ipc/pipes).
+Der übergeordnete Prozess verwendet die entgegengesetzten Enden dieser beiden Pipes, um in die Eingabe des untergeordneten Prozesses zu schreiben und aus der Ausgabe des untergeordneten Prozesses zu lesen. Wie in der [**SECURITY \_ ATTRIBUTES-Struktur**](/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)) angegeben, sind diese Handles auch vererbbar. Diese Handles dürfen jedoch nicht geerbt werden. Daher verwendet der übergeordnete Prozess vor dem Erstellen des untergeordneten Prozesses die [**SetHandleInformation-Funktion,**](/windows/desktop/api/handleapi/nf-handleapi-sethandleinformation) um sicherzustellen, dass das Schreibhandle für die Standardeingabe des untergeordneten Prozesses und das Lesehandle für die Standardausgabe des untergeordneten Prozesses nicht geerbt werden können. Weitere Informationen finden Sie unter [Pipes](/windows/desktop/ipc/pipes).
 
-Im folgenden finden Sie den Code für den übergeordneten Prozess. Es wird ein einzelnes Befehlszeilenargument benötigt: der Name einer Textdatei.
+Im Folgenden finden Sie den Code für den übergeordneten Prozess. Es wird ein einzelnes Befehlszeilenargument verwendet: der Name einer Textdatei.
 
 
 ```C++
@@ -252,7 +252,7 @@ void ErrorExit(PTSTR lpszFunction)
 
 
 
-Im folgenden finden Sie den Code für den untergeordneten Prozess. Er verwendet die geerbten Handles für stdin und stdout, um auf die Pipe zuzugreifen, die vom übergeordneten Element erstellt wurde. Der übergeordnete Prozess liest aus der Eingabedatei und schreibt die Informationen in eine Pipe. Das untergeordnete Element empfängt mithilfe von stdin Text über die Pipe und schreibt mithilfe von stdout in die Pipe. Das übergeordnete Element liest vom leseende der Pipe und zeigt die Informationen für seinen stdout an.
+Im Folgenden finden Sie den Code für den untergeordneten Prozess. Er verwendet die geerbten Handles für STDIN und STDOUT, um auf die vom übergeordneten Element erstellte Pipe zu zugreifen. Der übergeordnete Prozess liest aus seiner Eingabedatei und schreibt die Informationen in eine Pipe. Das untergeordnete -System empfängt Text über die Pipe mitHILFE von STDIN und schreibt mitHILFE von STDOUT in die Pipe. Das übergeordnete Element liest vom Leseende der Pipe und zeigt die Informationen in seinem STDOUT an.
 
 
 ```C++

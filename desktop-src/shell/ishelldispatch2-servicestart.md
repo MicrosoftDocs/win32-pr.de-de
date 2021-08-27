@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: c0f4fa218c4def993025ff18bffd0cc54def9818
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f48d13e593898b7b4f91fc9246745b183b928ffaa0a799100990a327a3f670ba
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090340"
 ---
 # <a name="ishelldispatch2servicestart-method"></a>IShellDispatch2.ServiceStart-Methode
 
@@ -65,7 +65,7 @@ Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 Typ: **Variant**
 
-Legen Sie auf **TRUE** fest, damit der Dienst während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet wird. Legen Sie auf **FALSE fest,** um die Dienstkonfiguration unverändert zu lassen.
+Legen Sie diese Einstellung auf **TRUE** fest, damit der Dienst während des Systemstarts automatisch vom Dienststeuerungs-Manager gestartet wird. Legen Sie diese Einstellung auf **FALSE** fest, um die Dienstkonfiguration unverändert zu lassen.
 
 </dd> </dl>
 
@@ -75,27 +75,27 @@ Legen Sie auf **TRUE** fest, damit der Dienst während des Systemstarts automati
 
 Typ: **\* Variant**
 
-Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
 Typ: **\* Variant**
 
-Gibt **true zurück,** wenn erfolgreich; andernfalls **FALSE.**
+Gibt **true** zurück, wenn erfolgreich. andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.ServiceStart-Methode aufgerufen.**](./shell-servicestart.md)
+Diese Methode wird implementiert und über die [**Shell.ServiceStart-Methode**](./shell-servicestart.md) aufgerufen.
 
-Die -Methode **gibt FALSE** zurück, wenn der Dienst bereits gestartet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
+Die Methode gibt **FALSE** zurück, wenn der Dienst bereits gestartet wurde. Vor dem Aufrufen dieser Methode können Sie [**Shell.IsServiceRunning**](./shell-isservicerunning.md) aufrufen, um den Status des Diensts zu ermitteln.
 
-Diese Methode ist derzeit in Microsoft Visual Basic.
+Diese Methode ist in Microsoft Visual Basic derzeit nicht verfügbar.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Beispiele zeigen die Verwendung von **ServiceStart zum** Starten des Messenger-Diensts. Die Verwendung wird für JScript und VBScript angezeigt.
+In den folgenden Beispielen wird die Verwendung von **ServiceStart** zum Starten des Messenger-Diensts gezeigt. Die Verwendung wird für JScript und VBScript angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -136,10 +136,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

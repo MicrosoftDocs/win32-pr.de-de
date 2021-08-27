@@ -1,9 +1,9 @@
 ---
-title: EM_GETSTORYTYPE Meldung (RichEdit. h)
-description: Ruft den Story-Typ ab.
+title: EM_GETSTORYTYPE Nachricht (Richedit.h)
+description: Ruft den Storytyp ab.
 ms.assetid: 06D87AA1-5AA3-4235-AC1D-045CE9975384
 keywords:
-- Windows-Steuerelemente für EM_GETSTORYTYPE Meldung
+- EM_GETSTORYTYPE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7fed85183f292bd1c69e3bbebdadb4b38f9f3bdc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e4e6d501fffca857e1e283f2678c1b42e5d3d12e587e51a3a58585041489f8b6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048780"
 ---
-# <a name="em_getstorytype-message"></a>EM \_ getstorytype-Meldung
+# <a name="em_getstorytype-message"></a>EM \_ GETSTORYTYPE-Nachricht
 
-Ruft den Story-Typ ab.
+Ruft den Storytyp ab.
 
 
 ```C++
@@ -39,66 +39,66 @@ Ruft den Story-Typ ab.
 *wParam* 
 </dt> <dd>
 
-Der Story-Index.
+Der Storyindex.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Bleiben muss 0 sein.
+Reserviert; muss 0 sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Story-Typ zurück, bei dem es sich um einen vom Client definierten benutzerdefinierten Wert oder einen der folgenden Werte handeln kann:
+Gibt den Storytyp zurück, der ein vom Client definierter benutzerdefinierter Wert oder einer der folgenden Werte sein kann:
 
 <dl> <dt>
 
-**[**tomcommentsstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomCommentsStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomendnotesstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomEndnotesStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomevenpgesfooterstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomEvenPagesFooterStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomevenpagesheaderstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomEvenPagesHeaderStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomfindstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomFindStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomfirstpagefooterstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomFirstPageFooterStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomfirstpageheaderstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomFirstPageHeaderStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomfootnotesstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomFootnotesStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tommaintextstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomMainTextStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomprimaryfooterstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomPrimaryFooterStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomprimaryheaderstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomPrimaryHeaderStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomreplacestory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomReplaceStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomscratchstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomScratchStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomtextframestory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomTextFrameStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> <dt>
 
-**[**tomunknownstory**](/windows/win32/api/tom/ne-tom-tomconstants)**
+**[**tomUnknownStory**](/windows/win32/api/tom/ne-tom-tomconstants)**
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -107,9 +107,9 @@ Gibt den Story-Typ zurück, bei dem es sich um einen vom Client definierten benu
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
@@ -117,10 +117,10 @@ Gibt den Story-Typ zurück, bei dem es sich um einen vom Client definierten benu
 
 <dl> <dt>
 
-[**EM \_ setstorytype**](em-setstorytype.md)
+[**EM \_ SETSTORYTYPE**](em-setstorytype.md)
 </dt> <dt>
 
-[**Itextstoryranges:: Item**](/windows/desktop/api/Tom/nf-tom-itextstoryranges-item)
+[**ITextStoryRanges::Item**](/windows/desktop/api/Tom/nf-tom-itextstoryranges-item)
 </dt> </dl>
 
  

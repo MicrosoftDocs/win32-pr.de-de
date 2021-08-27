@@ -1,34 +1,34 @@
 ---
-description: Schreiben eines Projekts in eine Datei
+description: Schreiben eines Project in eine Datei
 ms.assetid: 84499e4f-4f45-4aa6-aa89-d95c3b6b47d0
-title: Schreiben eines Projekts in eine Datei
+title: Schreiben eines Project in eine Datei
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b8f63ddbc6a021362134d420220f7e25c662553f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3efea1d0949c419ba6f595e7a381b689d8a8ce69836609d328b555ee695743b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051370"
 ---
-# <a name="writing-a-project-to-a-file"></a>Schreiben eines Projekts in eine Datei
+# <a name="writing-a-project-to-a-file"></a>Schreiben eines Project in eine Datei
 
-\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein.\]
+\[Diese API wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein.\]
 
-In diesem Artikel wird beschrieben, wie Sie ein [DirectShow-Bearbeitungs Dienst](directshow-editing-services.md) Projekt in eine Datei schreiben. Zunächst wird beschrieben, wie Sie eine Datei mit der grundlegenden Renderingengine schreiben. Anschließend wird die intelligente Neukomprimierung mit dem intelligenten Renderingmodul beschrieben.
+In diesem Artikel wird beschrieben, wie Sie ein [DirectShow Editing Services-Projekt](directshow-editing-services.md) in eine Datei schreiben. Zunächst wird beschrieben, wie eine Datei mit der einfachen Render-Engine geschrieben wird. Anschließend wird die intelligente Neukomprimierung mit der intelligenten Render-Engine beschrieben.
 
-Einen Überblick darüber, wie DirectShow-Bearbeitungs Dienste Projekte rendern, finden Sie unter [Informationen zu den renderingmodulen](about-the-render-engines.md).
+Eine Übersicht darüber, wie DirectShow Editing Services Projekte rendert, finden Sie unter [Informationen zu Render-Engines.](about-the-render-engines.md)
 
-**Verwenden der grundlegenden Renderingengine**
+**Verwenden der einfachen Render-Engine**
 
-Beginnen Sie, indem Sie das Front-End des Diagramms wie folgt aufbauen:
+Erstellen Sie zunächst das Front-End des Diagramms wie folgt:
 
-1.  Erstellen Sie die Rendering-Engine.
-2.  Angeben der Zeitachse.
-3.  Legen Sie den Rendering-Bereich fest. (Optional)
+1.  Erstellen Sie die Render-Engine.
+2.  Geben Sie die Zeitachse an.
+3.  Legen Sie den Renderbereich fest. (Optional)
 4.  Erstellen Sie das Front-End des Diagramms.
 
-Das folgende Codebeispiel zeigt diese Schritte.
+Im folgenden Codebeispiel werden diese Schritte veranschaulicht.
 
 
 ```C++
@@ -42,13 +42,13 @@ hr = pRender->ConnectFrontEnd( );
 
 
 
-Fügen Sie als nächstes Multiplexer-und Datei Schreib Filter zum Filter Diagramm hinzu. Dies lässt sich am einfachsten mit dem [Erfassungs Diagramm](capture-graph-builder.md)-Generator, einer DirectShow-Komponente zum Erstellen von Erfassungs Diagrammen, erreichen. Der Erfassungs Diagramm-Generator macht die [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle verfügbar. Führen Sie die folgenden Schritte aus:
+Fügen Sie als Nächstes dem Filterdiagramm Multiplexer- und Dateischreibfilter hinzu. Die einfachste Möglichkeit hierfür ist die [Erfassung Graph Builder,](capture-graph-builder.md)einer DirectShow-Komponente zum Erstellen von Erfassungsdiagrammen. Der Aufzeichnungsgraph-Generator macht die [**ICaptureGraphBuilder2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) verfügbar. Führen Sie die folgenden Schritte aus:
 
-1.  Erstellen Sie eine Instanz des Erfassungs Diagramm-Generators.
-2.  Rufen Sie einen Zeiger auf das Diagramm ab, und übergeben Sie ihn an den Diagramm-Generator.
-3.  Geben Sie den Namen und den Medientyp der Ausgabedatei an. In diesem Schritt wird auch ein Zeiger auf den MUX-Filter abgerufen, der später erforderlich ist.
+1.  Erstellen Sie eine Instanz des Aufzeichnungsgraph-Generators.
+2.  Rufen Sie einen Zeiger auf das Diagramm ab, und übergeben Sie ihn an den Graph-Generator.
+3.  Geben Sie den Namen und den Medientyp der Ausgabedatei an. Dieser Schritt ruft auch einen Zeiger auf den mux-Filter ab, der später erforderlich ist.
 
-Das folgende Codebeispiel zeigt diese Schritte.
+Im folgenden Codebeispiel werden diese Schritte veranschaulicht.
 
 
 ```C++
@@ -68,15 +68,15 @@ pBuilder->SetOutputFileName(&MEDIASUBTYPE_Avi,
 
 
 
-Verbinden Sie schließlich die Ausgabe Pins auf dem Front-End mit dem MUX-Filter.
+Verbinden Sie abschließend die Ausgabepins am Front-End mit dem Mux-Filter.
 
-1.  Abrufen der Anzahl von Gruppen.
-2.  Rufen Sie für jede PIN einen Zeiger auf die PIN ab.
-3.  Erstellen Sie optional eine Instanz eines Komprimierungs Filters, um den Stream zu komprimieren. Der Typ des-Kompressors hängt vom Medientyp der Gruppe ab. Sie können den [Enumerator "System Geräte](system-device-enumerator.md) " verwenden, um die verfügbaren Komprimierungs Filter aufzuzählen. Weitere Informationen finden Sie unter Auflisten von [Geräten und Filtern](enumerating-devices-and-filters.md).
-4.  Legen Sie optional Komprimierungs Parameter fest, z. b. die Keyframe-Rate. Dieser Schritt wird weiter unten in diesem Artikel ausführlich erläutert.
-5.  [**ICaptureGraphBuilder2:: RenderStream**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream)aufzurufen. Diese Methode nimmt Zeiger auf die PIN, den Komprimierungs Filter (falls vorhanden) und den Multiplexer.
+1.  Ruft die Anzahl der Gruppen ab.
+2.  Rufen Sie für jede Stecknadel einen Zeiger auf den Stecknadel ab.
+3.  Erstellen Sie optional eine Instanz eines Komprimierungsfilters, um den Stream zu komprimieren. Der Typ der Gruppierung hängt vom Medientyp der Gruppe ab. Sie können den [Systemgeräte-Enumerator](system-device-enumerator.md) verwenden, um die verfügbaren Komprimierungsfilter aufzuzählen. Weitere Informationen finden Sie unter [Aufzählen von Geräten und Filtern.](enumerating-devices-and-filters.md)
+4.  Legen Sie optional Komprimierungsparameter wie die Keyframerate fest. Dieser Schritt wird weiter unten in diesem Artikel ausführlich erläutert.
+5.  Rufen Sie [**ICaptureGraphBuilder2::RenderStream auf.**](/windows/desktop/api/Strmif/nf-strmif-icapturegraphbuilder2-renderstream) Diese Methode verwendet Zeiger auf den Pin, den Komprimierungsfilter (falls vorhanden) und den Multiplexer.
 
-Im folgenden Codebeispiel wird gezeigt, wie die Ausgabe Pins verbunden werden.
+Das folgende Codebeispiel zeigt, wie Die Ausgabepins verbunden werden.
 
 
 ```C++
@@ -103,29 +103,29 @@ for (i = 0; i < NumGroups; i++)
 
 
 
-Verwenden Sie zum Festlegen von Komprimierungs Parametern (Schritt 4, früher) die [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) -Schnittstelle. Diese Schnittstelle wird auf den Ausgabe Pins von Komprimierungs Filtern verfügbar gemacht. Zählen Sie die Pins des Komprimierungs Filters auf, und Fragen Sie jede Ausgabe-PIN für **IAMVideoCompression** ab. (Informationen zum Auflisten von Pins finden Sie unter [Enumerieren von Pins](enumerating-pins.md).) Achten Sie darauf, alle Schnittstellen Zeiger freizugeben, die Sie während dieses Schritts abgerufen haben.
+Verwenden Sie die [**IAMVideoCompression-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) um Komprimierungsparameter (Schritt 4, zuvor) festzulegen. Diese Schnittstelle wird auf den Ausgabepins von Komprimierungsfiltern verfügbar gemacht. Aufzählen sie die Pins des Komprimierungsfilters, und fragen Sie jeden Ausgabepin nach **IAMVideoCompression ab.** (Informationen zum Aufzählen von Pins finden Sie unter [Enumerating Pins](enumerating-pins.md).) Stellen Sie sicher, dass Sie alle Schnittstellenzeiger freigeben, die Sie während dieses Schritts abgerufen haben.
 
-Nachdem Sie das Filter Diagramm erstellt haben, können Sie die [**IMediaControl:: Run**](/windows/desktop/api/Control/nf-control-imediacontrol-run) -Methode für den Filter Graph-Manager aufruft. Während der Ausführung des Filter Diagramms werden die Daten in eine Datei geschrieben. Verwenden Sie die Ereignis Benachrichtigung, um die Wiedergabe zu warten. (Weitere Informationen finden [Sie unter reagieren auf Ereignisse](responding-to-events.md).) Wenn die Wiedergabe abgeschlossen ist, müssen Sie [**IMediaControl:: beenden**](/windows/desktop/api/Control/nf-control-imediacontrol-stop) explizit zum Beenden des Filter Diagramms aufruft. Andernfalls wird die Datei nicht ordnungsgemäß geschrieben.
+Nachdem Sie das Filterdiagramm erstellt haben, rufen Sie die [**IMediaControl::Run-Methode**](/windows/desktop/api/Control/nf-control-imediacontrol-run) im Filterdiagramm-Manager auf. Während der Ausführung des Filterdiagramms werden die Daten in eine Datei geschrieben. Verwenden Sie die Ereignisbenachrichtigung, um auf den Abschluss der Wiedergabe zu warten. (Siehe [Reagieren auf Ereignisse](responding-to-events.md).) Wenn die Wiedergabe abgeschlossen ist, müssen Sie [**IMediaControl::Stop**](/windows/desktop/api/Control/nf-control-imediacontrol-stop) explizit aufrufen, um das Filterdiagramm zu beenden. Andernfalls wird die Datei nicht ordnungsgemäß geschrieben.
 
-**Verwenden der intelligenten Renderingengine**
+**Verwenden der intelligenten Render-Engine**
 
-Um die Vorteile der intelligenten Neukomprimierung zu nutzen, verwenden Sie die Smart-Rendering-Engine anstelle der grundlegenden Renderingengine. Die Schritte zum Aufbau des Diagramms sind fast identisch. Der Hauptunterschied besteht darin, dass die Komprimierung am Front-End des Diagramms erfolgt, nicht im Abschnitt zum Schreiben von Dateien.
+Um die Vorteile der intelligenten Neukomprimierung zu nutzen, verwenden Sie die intelligente Render-Engine anstelle der grundlegenden Render-Engine. Die Schritte zum Erstellen des Diagramms sind fast identisch. Der Hauptunterschied besteht darin, dass die Komprimierung im Front-End des Diagramms und nicht im Abschnitt zum Schreiben von Dateien erfolgt.
 
 > [!IMPORTANT]
-> Verwenden Sie die Smart-Rendering-Engine nicht zum Lesen oder Schreiben von Windows Media-Dateien.
+> Verwenden Sie die intelligente Render-Engine nicht, um Windows Mediendateien zu lesen oder zu schreiben.
 
  
 
-Jede Videogruppe verfügt über eine-Eigenschaft, die das Komprimierungs Format für diese Gruppe angibt. Das Komprimierungs Format muss in Höhe, Breite, Bittiefe und Framerate genau mit dem unkomprimierten Format der Gruppe übereinstimmen. Das Smart-Renderingmodul verwendet das Komprimierungs Format beim Erstellen des Diagramms. Bevor Sie das Komprimierungs Format festlegen, stellen Sie sicher, dass das unkomprimierte Format für diese Gruppe durch Aufrufen von [**iamtimelinegroup:: setmediatype**](iamtimelinegroup-setmediatype.md)festgelegt wird.
+Jede Videogruppe verfügt über eine -Eigenschaft, die das Komprimierungsformat für diese Gruppe angibt. Das Komprimierungsformat muss genau mit dem nicht komprimierten Format der Gruppe in Höhe, Breite, Bittiefe und Bildfrequenz übereinstimmen. Die intelligente Render-Engine verwendet beim Erstellen des Diagramms das Komprimierungsformat. Stellen Sie vor dem Festlegen des Komprimierungsformats sicher, dass Sie das nicht komprimierte Format für diese Gruppe festlegen, indem Sie [**IAMTimelineGroup::SetMediaType**](iamtimelinegroup-setmediatype.md)aufrufen.
 
-Um das Komprimierungs Format einer Gruppe festzulegen, rufen Sie die [**iamtimelinegroup:: sezmartrecompressformat**](iamtimelinegroup-setsmartrecompressformat.md) -Methode auf. Diese Methode nimmt einen Zeiger auf eine [**SCompFmt0**](scompfmt0.md) -Struktur. Die **SCompFmt0** -Struktur verfügt über zwei Member: **nformatid**, die 0 (null) sein muss, und **mediaType**, die eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur ist. Initialisieren Sie die **am- \_ \_ Medientyp** Struktur mit den Formatinformationen.
+Um das Komprimierungsformat einer Gruppe festzulegen, rufen Sie die [**IAMTimelineGroup::SetSmartRecompressFormat-Methode**](iamtimelinegroup-setsmartrecompressformat.md) auf. Diese Methode verwendet einen Zeiger auf eine [**SCompFmt0-Struktur.**](scompfmt0.md) Die **SCompFmt0-Struktur** verfügt über zwei Member: **nFormatId**, die null sein muss, und **MediaType**, eine [**AM MEDIA \_ \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type) Initialisieren Sie die **AM \_ MEDIA \_ TYPE-Struktur** mit den Formatinformationen.
 
 > [!Note]  
-> Wenn Sie möchten, dass das endgültige Projekt das gleiche Format wie eine der Quelldateien hat, können Sie die am- \_ \_ Medientyp Struktur mithilfe des Medien Detektors direkt aus der Quelldatei beziehen. Weitere Informationen finden [**Sie unter imediadet:: get \_ streammediatype**](imediadet-get-streammediatype.md).
+> Wenn das endgültige Projekt das gleiche Format wie eine Ihrer Quelldateien aufweisen soll, können Sie die AM \_ MEDIA \_ TYPE-Struktur direkt aus der Quelldatei abrufen, indem Sie die Medienerkennung verwenden. Siehe [**IMediaDet::get \_ StreamMediaType**](imediadet-get-streammediatype.md).
 
  
 
-Wandeln Sie die [**SCompFmt0**](scompfmt0.md) -Variable in einen Zeiger vom Typ **Long** um, wie im folgenden Beispiel gezeigt.
+Wandeln Sie die [**Variable SCompFmt0**](scompfmt0.md) in einen Zeiger vom Typ **long** um, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -140,19 +140,19 @@ pGroup->SetSmartRecompressFormat( (long*) pFormat );
 
 
 
-Die intelligente Renderingengine sucht automatisch nach einem kompatiblen Komprimierungs Filter. Sie können auch einen Komprimierungs Filter für eine Gruppe angeben, indem Sie [**ismartrenderengine:: setgroupkompressor**](ismartrenderengine-setgroupcompressor.md)aufrufen.
+Die intelligente Render-Engine sucht automatisch nach einem kompatiblen Komprimierungsfilter. Sie können auch einen Komprimierungsfilter für eine Gruppe angeben, indem [**Sie ISmartRenderEngine::SetGroupCompressor**](ismartrenderengine-setgroupcompressor.md)aufrufen.
 
-Um das Diagramm zu erstellen, verwenden Sie die gleichen Schritte, die im vorherigen Abschnitt für die grundlegende Renderingengine beschrieben wurden. Die einzigen Unterschiede sind die folgenden:
+Führen Sie zum Erstellen des Diagramms die gleichen Schritte aus, die im vorherigen Abschnitt für die Grundlegende Render-Engine beschrieben wurden. Die einzigen Unterschiede sind die folgenden:
 
--   Verwenden Sie die Smart-Rendering-Engine, nicht die grundlegende Rendering-Engine. Der Klassen Bezeichner ist CLSID \_ smartrenderengine.
--   Legen Sie Komprimierungs Parameter fest, nachdem Sie das Front-End erstellt haben, aber bevor Sie die Ausgabe Pins renden Rufen Sie die [**ismartrenderengine:: getgroupcompressor**](ismartrenderengine-getgroupcompressor.md) -Methode auf, um einen Zeiger auf den Komprimierungs Filter einer Gruppe zu erhalten. Fragen Sie dann die [**IAMVideoCompression**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) -Schnittstelle ab, wie zuvor beschrieben.
--   Wenn Sie die Ausgabe Pins rendernen, ist es nicht erforderlich, einen Komprimierungs Filter einzufügen. Der Stream ist bereits komprimiert.
+-   Verwenden Sie die intelligente Render-Engine, nicht die einfache Render-Engine. Der Klassenbezeichner ist CLSID \_ SmartRenderEngine.
+-   Legen Sie Komprimierungsparameter fest, nachdem Sie das Front-End erstellt haben, aber bevor Sie die Ausgabepins rendern. Rufen Sie die [**ISmartRenderEngine::GetGroupCompressor-Methode**](ismartrenderengine-getgroupcompressor.md) auf, um einen Zeiger auf den Komprimierungsfilter einer Gruppe abzurufen. Fragen Sie dann die [**IAMVideoCompression-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamvideocompression) ab, wie zuvor beschrieben.
+-   Wenn Sie die Ausgabepins rendern, ist es nicht erforderlich, einen Komprimierungsfilter einzufügen. Der Stream ist bereits komprimiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Rendern eines Projekts](rendering-a-project.md)
+[Rendern eines Project](rendering-a-project.md)
 </dt> </dl>
 
  

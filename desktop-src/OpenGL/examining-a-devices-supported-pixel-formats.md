@@ -1,21 +1,21 @@
 ---
-title: Untersuchen eines von Geräten unterstützten Pixel Formats
-description: Die Funktion "describepixelformat" erhält Pixel Format Daten für einen Gerätekontext.
+title: Untersuchen von unterstützten Pixelformaten für Geräte
+description: Die DescribePixelFormat-Funktion ruft Pixelformatdaten für einen Gerätekontext ab.
 ms.assetid: 1ebeb051-2dc9-4753-a0f3-7d2737b5f7f2
 keywords:
-- OpenGL unter Windows, Pixel
+- OpenGL auf Windows Pixeln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05ee45212111354d79b7a23fd35490a08f0aead4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6deb7dbb0f54a50bea4da5ba8f583a97442648096dbabc937a16a9aeaf49b645
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388633"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082470"
 ---
-# <a name="examining-a-devices-supported-pixel-formats"></a>Untersuchen eines von Geräten unterstützten Pixel Formats
+# <a name="examining-a-devices-supported-pixel-formats"></a>Untersuchen von unterstützten Pixelformaten für Geräte
 
-Die Funktion " [**describepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat) " erhält Pixel Format Daten für einen Gerätekontext. Außerdem wird eine ganze Zahl zurückgegeben, bei der es sich um den maximalen Pixel Format Index für den Gerätekontext handelt. Im folgenden Codebeispiel wird gezeigt, wie Sie dieses Ergebnis verwenden, um die von einem Gerät unterstützten Pixel Formate zu durchlaufen und zu untersuchen:
+Die [**DescribePixelFormat-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat) ruft Pixelformatdaten für einen Gerätekontext ab. Außerdem wird eine ganze Zahl zurückgegeben, die den maximalen Pixelformatindex für den Gerätekontext darstellt. Das folgende Codebeispiel zeigt, wie Sie dieses Ergebnis verwenden, um die von einem Gerät unterstützten Pixelformate schrittweise zu durchlaufen und zu untersuchen:
 
 
 ```C++
@@ -50,9 +50,9 @@ while (++iPixelFormat <= iMax);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,21 +1,21 @@
 ---
-description: Die Get-Methode ruft den Wert einer angegebenen Stream Quality-Eigenschaft ab.
+description: Die Get-Methode ruft den Wert einer angegebenen Streamqualitätseigenschaft ab.
 ms.assetid: a8b5b8c7-47c9-4561-be96-af8416d854dc
-title: 'Itstreamqualitycontrol:: Get-Methode (ipmsp. h)'
+title: ITStreamQualityControl::Get-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6758678dfacc8e0fe169189beaa8e890e801c907
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c1a82a448320115664ab0664c2f7d8cde9f8049c7ee2cb86ccf7e46f856ceafe
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080500"
 ---
-# <a name="itstreamqualitycontrolget-method"></a>Itstreamqualitycontrol:: Get-Methode
+# <a name="itstreamqualitycontrolget-method"></a>ITStreamQualityControl::Get-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Get** -Methode ruft den Wert einer angegebenen [**Stream Quality-Eigenschaft**](streamqualityproperty.md)ab.
+Die **Get-Methode** ruft den Wert einer angegebenen [**Streamqualitätseigenschaft ab.**](streamqualityproperty.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,24 +34,24 @@ HRESULT Get(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**streamqualityproperty**](streamqualityproperty.md) -Enumeration.
+Member der [**StreamQualityProperty-Aufenumerung.**](streamqualityproperty.md)
 
 </dd> <dt>
 
-*plvalue* \[ vorgenommen\]
+*plValue* \[ out\]
 </dt> <dd>
 
-Der Wert der input- *Eigenschaft*.
+Wert der *Eingabeeigenschaft*.
 
 </dd> <dt>
 
-*plflags* \[ vorgenommen\]
+*plFlags* \[ out\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der- *Eigenschafts* Wert gesteuert wird.
+Der Wert der [**TAPIControlFlags-Aufenumerierung,**](tapicontrolflags.md) der angibt, wie der *Eigenschaftswert* gesteuert wird.
 
 </dd> </dl>
 
@@ -64,21 +64,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
  
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
@@ -87,13 +87,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Itstreamqualitycontrol**](itstreamqualitycontrol.md)
+[**ITStreamQualityControl**](itstreamqualitycontrol.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Streamqualityproperty**](streamqualityproperty.md)
+[**StreamQualityProperty**](streamqualityproperty.md)
 </dt> </dl>
 
  

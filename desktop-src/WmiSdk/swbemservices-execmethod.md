@@ -16,12 +16,12 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 452c42c37e8dcb9f2b37b660b1f8899e587b5579
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e8cce3f7f190ded1b86fef5ea5b43016d5f8b08ebc9c1e5483280a2b4305200a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995596"
 ---
 # <a name="swbemservicesexecmethod-method"></a>SWbemServices.ExecMethod-Methode
 
@@ -81,7 +81,7 @@ Reserviert. Dieser Wert muss null (0) sein.
 *objWbemNamedValueSet* \[ Optional\]
 </dt> <dd>
 
-In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung bedient. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
+In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung wartet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> </dl>
 
@@ -102,24 +102,24 @@ Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidClass** - 2147749904 (0x80041010)
+**wbemErrInvalidClass** – 2147749904 (0x80041010)
 </dt> <dd>
 
 Die angegebene Klasse war ungültig.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** - 2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** - 2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> <dt>
 
@@ -133,13 +133,13 @@ Die angeforderte Methode war nicht verfügbar.
 **wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer war nicht berechtigt, die Methode auszuführen.
+Der aktuelle Benutzer war nicht berechtigt, die -Methode auszuführen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden **SWbemServices.ExecMethod** als Alternative zum direkten Zugriff zum Ausführen einer Anbietermethode [*in*](gloss-p.md) Fällen, in denen es nicht möglich ist, eine Methode direkt auszuführen. Mit **der ExecMethod-Methode** können Sie Ausgabeparameter mit einer Skriptsprache abrufen, die keine Ausgabeparameter unterstützt, wenn sie vom Anbieter angegeben werden. Andernfalls wird empfohlen, einen direkten Zugriff zu verwenden, um eine Methode auf den Weg zu bringen. Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen.](manipulating-class-and-instance-information.md)
+Verwenden Sie **SWbemServices.ExecMethod** als Alternative zum direkten Zugriff für die Ausführung einer [*Anbietermethode*](gloss-p.md) in Fällen, in denen es nicht möglich ist, eine Methode direkt auszuführen. Mit der **ExecMethod-Methode** können Sie Ausgabeparameter abrufen, wenn sie vom Anbieter bereitgestellt werden, mit einer Skriptsprache, die keine Ausgabeparameter unterstützt. Andernfalls wird empfohlen, einen direkten Zugriff zu verwenden, um eine Methode auf den Weg zu bringen. Weitere Informationen finden Sie unter [Bearbeiten von Klassen- und Instanzinformationen.](manipulating-class-and-instance-information.md)
 
 Das folgende Codebeispiel, das die [**StartService-Anbietermethode**](/windows/desktop/CIMWin32Prov/startservice-method-in-class-win32-service) in [**Win32 \_ Service**](/windows/desktop/CIMWin32Prov/win32-service) aufruft, verwendet beispielsweise direkten Zugriff.
 
@@ -167,7 +167,7 @@ Die **SWbemServices.ExecMethod-Methode** erfordert einen Objektpfad. Wenn das Sk
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die **ExecMethod-Methode.** Das Skript erstellt ein [**\_ Win32-Prozessobjekt,**](/windows/desktop/CIMWin32Prov/win32-process) das einen Prozess darstellt, der Editor ausführt. Es zeigt die Einrichtung eines [**InParameters-Objekts**](swbemmethod-inparameters.md) und das Abrufen von Ergebnissen aus einem [**OutParameters-Objekt.**](swbemmethod-outparameters.md) Ein Skript, das die gleichen asynchron ausgeführten Vorgänge anzeigt, finden Sie unter [**SWbemServices.ExecMethodAsync**](swbemservices-execmethodasync.md). Ein Beispiel für die Verwendung des direkten Zugriffs finden Sie unter [Create Method in Class Win32 \_ Process](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process). Ein Beispiel für den gleichen Vorgang mit einem [**SWbemObject**](swbemobject.md)finden Sie unter [**SWbemObject.ExecMethod**](swbemobject-execmethod-.md).
+Das folgende Beispiel zeigt die **ExecMethod-Methode.** Das Skript erstellt ein [**\_ Win32-Prozessobjekt,**](/windows/desktop/CIMWin32Prov/win32-process) das einen Prozess darstellt, der Editor ausgeführt wird. Es zeigt die Einrichtung eines [**InParameters-Objekts**](swbemmethod-inparameters.md) und das Abrufen von Ergebnissen aus einem [**OutParameters-Objekt.**](swbemmethod-outparameters.md) Ein Skript, das die gleichen asynchron ausgeführten Vorgänge anzeigt, finden Sie unter [**SWbemServices.ExecMethodAsync**](swbemservices-execmethodasync.md). Ein Beispiel für die Verwendung des direkten Zugriffs finden Sie unter [Create Method in Class Win32 \_ Process](/windows/desktop/CIMWin32Prov/create-method-in-class-win32-process). Ein Beispiel für den gleichen Vorgang mit einem [**SWbemObject**](swbemobject.md)finden Sie unter [**SWbemObject.ExecMethod**](swbemobject-execmethod-.md).
 
 
 ```VB
@@ -217,7 +217,7 @@ End If
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

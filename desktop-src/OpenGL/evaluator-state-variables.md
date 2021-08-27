@@ -1,6 +1,6 @@
 ---
-title: Auswertungszustandsvariablen
-description: Auswertungszustandsvariablen
+title: Statusvariablen für Auswertungen
+description: Statusvariablen für Auswertungen
 ms.assetid: e7d710be-de17-46a0-8ad8-0f65b943ece8
 keywords:
 - Auswertungszustandsvariablen OpenGL
@@ -12,20 +12,20 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f2895f773721f7c900003cbaa0f070c277a0e260
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 747ed7c19817757570d6517c68a987c2c75aa340c74ecfbac9fe258b1091f00e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082510"
 ---
-# <a name="evaluator-state-variables"></a>Auswertungszustandsvariablen
+# <a name="evaluator-state-variables"></a>Statusvariablen für Auswertungen
 
 <dl> <dt><span id="GL_ORDER"></span><span id="gl_order"></span>GL \_ ORDER</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------|
-| Beschreibung:     | 1D-Zuordnungs reihenfolge                  |
+| Beschreibung:     | 1D-Karten reihenfolge                  |
 | Attributgruppe: |                                |
 | Anfangswert:   | 1                              |
 | Get-Befehl:     | [**glGetMapiv**](glgetmap.md) |
@@ -138,7 +138,7 @@ ms.locfileid: "107909258"
 
  
 
-</dd> <dt><span id="GL_MAP2_GRID_DOMAIN"></span><span id="gl_map2_grid_domain"></span>GL \_ MAP2 \_ \_ GRID-DOMÄNE</dt> <dd> 
+</dd> <dt><span id="GL_MAP2_GRID_DOMAIN"></span><span id="gl_map2_grid_domain"></span>GL \_ MAP2 \_ GRID \_ DOMAIN</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|

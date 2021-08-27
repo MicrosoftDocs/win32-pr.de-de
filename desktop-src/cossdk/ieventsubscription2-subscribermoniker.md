@@ -1,7 +1,7 @@
 ---
-description: Der Abonnenten Moniker.
+description: Der Abonnentenmoniker.
 ms.assetid: d33d8c80-3251-4ec7-9cf3-d0b60d91ed5a
-title: IEventSubscription2SubscriberMoniker-Eigenschaft
+title: IEventSubscription2SubscriberMoniker (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 9496a3046b4bb0e99a88322892e557588a92aab8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cdd783a4e3f8d29d3ffc4ae279602db71c3ee16247ad58c6f23aa10bb3ba5350
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748304"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070670"
 ---
-# <a name="ieventsubscription2subscribermoniker-property"></a>IEventSubscription2:: abonniert-Eigenschaft
+# <a name="ieventsubscription2subscribermoniker-property"></a>IEventSubscription2::SubscriberMoniker (Eigenschaft)
 
 Der Moniker des Abonnenten.
 
@@ -48,9 +48,9 @@ Eine Monikerzeichenfolge, die den Abonnenten angibt.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

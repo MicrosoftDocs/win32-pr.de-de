@@ -1,33 +1,33 @@
 ---
-description: Sie können Registrierungsschlüssel in die Systemregistrierung schreiben, nachdem alle ausgewählten Komponenten und die zugehörigen Dateien installiert wurden.
+description: Registrierungsschlüssel können in die Systemregistrierung geschrieben werden, nachdem alle ausgewählten Komponenten und die zugehörigen Dateien installiert wurden.
 ms.assetid: b3b39471-85b1-4361-94fd-19d0f0ee2b78
 title: Ändern der Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff6ff79ce340b0487c179cb37e44dff9f42e4be8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 06f1bd6145811097fcaf74f0622ac35412891d6aa0007c4411099ade6afddd36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082860"
 ---
 # <a name="modifying-the-registry"></a>Ändern der Registrierung
 
-Sie können Registrierungsschlüssel in die Systemregistrierung schreiben, nachdem alle ausgewählten Komponenten und die zugehörigen Dateien installiert wurden. Die Standard Aktionen im Zusammenhang mit der Änderung der Registrierung müssen nach den Standard Aktionen für die Datei Installation sequenziert werden, da Registrierungsschlüssel nicht geschrieben werden können, es sei denn, die entsprechende Komponente und Datei wurde erfolgreich installiert.
+Registrierungsschlüssel können in die Systemregistrierung geschrieben werden, nachdem alle ausgewählten Komponenten und die zugehörigen Dateien installiert wurden. Die Standardaktionen im Zusammenhang mit dem Ändern der Registrierung müssen nach den Standardaktionen für die Dateiinstallation sequenziert werden, da Registrierungsschlüssel nur geschrieben werden können, wenn die entsprechende Komponente und Datei erfolgreich installiert wurden.
 
-Die [RegisterClassInfo-Aktion](registerclassinfo-action.md) greift auf die [Klassen Tabelle](class-table.md) zu, um die com-Klassen Informationen der installierten Komponenten zu registrieren.
+Die [RegisterClassInfo-Aktion](registerclassinfo-action.md) greift auf die [Klassentabelle](class-table.md) zu, um die COM-Klasseninformationen der installierten Komponenten zu registrieren.
 
-Mit der [RegisterExtensionInfo-Aktion](registerextensioninfo-action.md) werden die [Erweiterungs Tabelle](extension-table.md) und die [Verb Tabelle](verb-table.md) abgefragt, und die entsprechenden Erweiterungen und Befehls-Verb-Informationen werden mit dem Betriebssystem registriert.
+Die [Aktion RegisterExtensionInfo](registerextensioninfo-action.md) fragt die [Erweiterungstabelle](extension-table.md) und die [Verbtabelle](verb-table.md) ab und registriert die entsprechenden Erweiterungen und Befehlsverbinformationen beim Betriebssystem.
 
-Mit der [registerprogidinfo-Aktion](registerprogidinfo-action.md) wird die Registrierung von OLE-ProgID-Informationen beim Betriebssystem verwaltet.
+Die [RegisterProgIdInfo-Aktion](registerprogidinfo-action.md) verwaltet die Registrierung von OLE ProgId-Informationen beim Betriebssystem.
 
-Die [registermimeinfo-Aktion](registermimeinfo-action.md) verarbeitet die [MIME-Tabelle](mime-table.md) , um die Zuordnung zwischen einem MIME-Kontexttyp, der Dateinamenerweiterung und der CLSID zu registrieren.
+Die [RegisterMIMEInfo-Aktion](registermimeinfo-action.md) verarbeitet die [MIME-Tabelle,](mime-table.md) um die Zuordnung zwischen einem MIME-Kontexttyp, der Dateinamenerweiterung und der CLSID zu registrieren.
 
-Die [Aktion "beschreiteregistryvalues](writeregistryvalues-action.md) " verarbeitet die [Registrierungs Tabelle](registry-table.md) und schreibt die Schlüssel für alle Komponenten, die entweder lokal oder aus der Quelle installiert wurden. In der Registrierungs Tabelle können Schlüssel in die Registrierungs Strukturen der **HKEY- \_ Klassen \_ root**, **HKEY \_ Current \_ User**, **HKEY \_ local \_ Machine** und **HKEY \_ Users** geschrieben werden.
+Die [WriteRegistryValues-Aktion](writeregistryvalues-action.md) verarbeitet die [Registrierungstabelle](registry-table.md) und schreibt die Schlüssel für alle Komponenten, die entweder lokal installiert wurden oder aus der Quelle ausgeführt werden sollen. Die Registrierungstabelle ermöglicht das Schreiben von Schlüsseln in die Registrierungsstrukturen **"HKEY \_ CLASSES \_ ROOT",** **"HKEY \_ CURRENT \_ USER",** **"HKEY \_ LOCAL \_ MACHINE"** und **"HKEY \_ USERS".**
 
-Mit der [Aktion removeregistryvalues](removeregistryvalues-action.md) werden die Schlüssel, die zum Löschen markiert wurden, in der Spalte Name der [Registrierungs Tabelle](registry-table.md) oder der [Tabelle removeregistry](removeregistry-table.md)entfernt.
+Die [RemoveRegistryValues-Aktion](removeregistryvalues-action.md) entfernt die Schlüssel, die in der Spalte Name der Registrierungstabelle oder der [RemoveRegistry-Tabelle](removeregistry-table.md)als gelöscht markiert wurden. [](registry-table.md)
 
-Die [Aktion registertypelibraries](registertypelibraries-action.md) verarbeitet die [typelib-Tabelle](typelib-table.md) und registriert die installierten Typbibliotheken beim System.
+Die [RegisterTypeLibraries-Aktion](registertypelibraries-action.md) verarbeitet die [TypeLib-Tabelle](typelib-table.md) und registriert die installierten Typbibliotheken beim System.
 
  
 

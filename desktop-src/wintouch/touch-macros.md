@@ -1,27 +1,27 @@
 ---
-title: Makros (Windows-Eingabe Eingabe)
-description: Die folgenden Makros werden für Windows-Berührungs Eingaben verwendet.
+title: Makros (Windows Toucheingabe)
+description: Die folgenden Makros werden für Windows Toucheingabe verwendet.
 ms.assetid: 3f10887f-5679-43b6-8bd0-f30e3bf715a1
 keywords:
-- Windows-Fingereingabe, Makros
+- Windows Toucheingabe, Makros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c00d7352f7f04a86556fb2769ce41d7fba2793cb
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: d201b432698b4c9aafe04fa69251d4b3fb2c35048be067dd1905fd600c300d6a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "106341343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089870"
 ---
-# <a name="macros-windows-touch-input"></a>Makros (Windows-Eingabe Eingabe)
+# <a name="macros-windows-touch-input"></a>Makros (Windows Toucheingabe)
 
-Die folgenden Makros werden für Windows-Berührungs Eingaben verwendet.
+Die folgenden Makros werden für Windows Toucheingabe verwendet.
 
 
 
 | Makro                                                   | Beschreibung                                      |
 |---------------------------------------------------------|--------------------------------------------------|
-| [**\_ \_ an \_ Pixel berühren**](/windows/desktop/api/winuser/nf-winuser-touch_coord_to_pixel) | Konvertiert Berührungs Koordinaten in Pixelkoordinaten. |
+| [**TOUCH \_ COORD \_ TO \_ PIXEL**](/windows/desktop/api/winuser/nf-winuser-touch_coord_to_pixel) | Konvertiert Touchkoordinaten in Pixelkoordinaten. |
 
 
 
@@ -31,10 +31,10 @@ Die folgenden Makros werden für Windows-Berührungs Eingaben verwendet.
 
 <dl> <dt>
 
-[Windows-Eingabe Eingabe](multi-touch-input.md)
+[Windows Toucheingabe](multi-touch-input.md)
 </dt> <dt>
 
-[Leitfaden zur Eingabe der Windows-Eingabe Eingabe](guide-multi-touch-input.md)
+[Windows Programmierhandbuch für Toucheingaben](guide-multi-touch-input.md)
 </dt> </dl>
 
  

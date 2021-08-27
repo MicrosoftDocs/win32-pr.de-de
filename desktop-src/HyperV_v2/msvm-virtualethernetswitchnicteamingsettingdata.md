@@ -1,5 +1,5 @@
 ---
-description: Stellt die Einstellungen für die Switch NIC-Team Vorgang dar.
+description: Stellt die Switch-nic-Teameinstellungen dar.
 ms.assetid: 7a48bdae-1953-4011-aaa8-1e3ca73494ff
 title: Msvm_VirtualEthernetSwitchNicTeamingSettingData-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 45f306f9ddb388ef4e8124d7ab2c8dd125a62e01
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c1c6294ecca73448c58b48d54c7f23504921e5ef520a53092649d0be362b27f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120050690"
 ---
-# <a name="msvm_virtualethernetswitchnicteamingsettingdata-class"></a>MSVM \_ virtualethernetzwitchnicteamingsettingdata-Klasse
+# <a name="msvm_virtualethernetswitchnicteamingsettingdata-class"></a>Msvm \_ VirtualEthernetSwitchNicTeamingSettingData-Klasse
 
-Stellt die Einstellungen für die Switch NIC-Team Vorgang dar.
+Stellt die Switch-nic-Teameinstellungen dar.
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,45 +41,45 @@ class Msvm_VirtualEthernetSwitchNicTeamingSettingData : Msvm_EthernetSwitchFeatu
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ virtualethernetzwitchnicteamingsettingdata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ VirtualEthernetSwitchNicTeamingSettingData-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ virtualethernetzwitchnicteamingsettingdata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ VirtualEthernetSwitchNicTeamingSettingData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Loadbalancingalgorithmus**
+**LoadBalancingAlgorithm**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **UINT32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Lasten Ausgleichs Algorithmus.
+Der Lastenausgleichsalgorithmus.
 
 </dd> <dt>
 
-**Teamingmode**
+**TeamingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **UINT32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der Team Vorgangs Modus.
+Der Teammodus.
 
 </dd> </dl>
 
@@ -89,19 +89,19 @@ Der Team Vorgangs Modus.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ ethernetzwitchfeaturesettingdata**](msvm-ethernetswitchfeaturesettingdata.md)
+[**Msvm \_ EthernetSwitchFeatureSettingData**](msvm-ethernetswitchfeaturesettingdata.md)
 </dt> </dl>
 
  

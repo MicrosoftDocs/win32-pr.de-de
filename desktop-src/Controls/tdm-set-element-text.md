@@ -3,7 +3,7 @@ title: TDM_SET_ELEMENT_TEXT (Commctrl.h)
 description: 'TDM_SET_ELEMENT_TEXT Meldung: Aktualisiert ein Textelement in einem Aufgabendialogfeld.'
 ms.assetid: e3f15805-5d48-4549-9959-69ec01345e57
 keywords:
-- TDM_SET_ELEMENT_TEXT Meldung Windows-Steuerelemente
+- TDM_SET_ELEMENT_TEXT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6d0c8830a6d8a1057ab283a9e096434a6184151
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7bb0f81867bcff4fd5f7d533c156c8af17d0f4a761b6f8560aa584a85c62b7c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060770"
 ---
 # <a name="tdm_set_element_text-message"></a>TDM \_ SET \_ ELEMENT \_ TEXT-Meldung
 
@@ -60,7 +60,7 @@ Der zu verwendende neue Text.
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die Größe oder das Layout des Aufgabendialogfelds kann sich ändern, um den neuen Text zu unterstützen.
 
@@ -79,19 +79,19 @@ SendMessage(hwnd, TDM_SET_ELEMENT_TEXT, (WPARAM)TDE_FOOTER, (LPARAM)L"New footer
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**TDM \_ \_ UPDATE-ELEMENTTEXT \_**](tdm-update-element-text.md)
+[**TDM \_ UPDATE \_ ELEMENT \_ TEXT**](tdm-update-element-text.md)
 </dt> </dl>
 
  

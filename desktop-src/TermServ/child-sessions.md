@@ -1,20 +1,20 @@
 ---
 title: Untergeordnete Sitzungen
-description: Ab Windows Server 2012 und Windows 8 unterstützt Remotedesktop das Konzept einer untergeordneten Sitzung, bei der es sich um eine spezielle Loopback Remotedesktop Sitzung handelt, die an die vorhandene Sitzung eines Benutzers gebunden ist.
+description: Ab Windows Server 2012 Windows 8 unterstützt Remotedesktop das Konzept einer untergeordneten Sitzung. Dabei handelt es sich um eine spezielle Loopback-Remotedesktop-Sitzung, die an die vorhandene Sitzung eines Benutzers gebunden ist.
 ms.assetid: 65B9DB67-4EE8-40B5-B465-CA425792C62B
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 788b36bf9799da9b0cb7486963f3154451ca5392
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 53d79fa6e18cece69c672b60a65e679441ce986a6cd8a0ad46524440738c3844
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010420"
 ---
 # <a name="child-sessions"></a>Untergeordnete Sitzungen
 
-Ab Windows Server 2012 und Windows 8 unterstützt Remotedesktop das Konzept einer untergeordneten *Sitzung*, bei der es sich um eine spezielle Loopback Remotedesktop Sitzung handelt, die an die vorhandene Sitzung eines Benutzers gebunden ist.
+Ab Windows Server 2012 und Windows 8 unterstützt Remotedesktop das Konzept einer untergeordneten Sitzung, bei der es sich um eine spezielle Loopback-Remotedesktop-Sitzung handelt, die an die vorhandene Sitzung eines Benutzers gebunden ist.
 
 Untergeordnete Sitzungen werden unter den folgenden Betriebssystemen nicht unterstützt:
 
@@ -25,24 +25,24 @@ Microsoft Hyper-V Server 2012
 
 Ein System kann zu einem bestimmten Zeitpunkt nur eine aktive und verbundene untergeordnete Sitzung haben.
 
-Die untergeordnete Sitzung kann beendet werden, indem Sie sich direkt von ihr abmelden, oder Sie wird beendet, wenn die übergeordnete Sitzung beendet wird.
+Die untergeordnete Sitzung kann durch direkte Abmelden beendet werden, oder sie wird beendet, wenn die übergeordnete Sitzung beendet wird.
 
-Bevor untergeordnete Sitzungen in einem System verwendet werden können, müssen Sie die Funktion der untergeordneten Sitzung aktivieren, indem Sie die [**wtsenablechildsessions**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsenablechildsessions) -Funktion aufrufen. Mithilfe der [**wtsischildsessionsenabled**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsischildsessionsenabled) -Funktion können Sie auch feststellen, ob untergeordnete Sitzungen aktiviert wurden.
+Bevor untergeordnete Sitzungen auf einem System verwendet werden können, müssen Sie die Funktionalität der untergeordneten Sitzung aktivieren, indem Sie die [**WTSEnableChildSessions-Funktion**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsenablechildsessions) aufrufen. Sie können auch mithilfe der [**WTSIsChildSessionsEnabled-Funktion**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsischildsessionsenabled) ermitteln, ob untergeordnete Sitzungen aktiviert wurden.
 
-Eine untergeordnete Sitzung kann nur aus einer vorhandenen Benutzersitzung erstellt werden, indem das [Remotedesktop ActiveX-Steuer](remote-desktop-activex-control.md) Element verwendet wird und die Eigenschaft "connectdechildsession" mit [**imsrdpextendedsettings. Property**](imsrdpextendedsettings-property.md) vor dem Herstellen der Verbindung festgelegt wird. Wenn die [**imstscax. Connect**](imstscax-connect.md) -Methode aufgerufen wird, meldet sich das Remotedesktop ActiveX-Steuerelement automatisch bei der untergeordneten Sitzung an, ohne zur Eingabe von Anmelde Informationen aufgefordert zu werden, es sei denn, der Benutzer ist über eine Smartcard bei der übergeordneten Sitzung angemeldet. Anders als bei einer regulären Remotedesktop Sitzung benötigt ein Benutzer nicht das interaktive Remote Recht, um sich bei der untergeordneten Sitzung anzumelden, da es sich um eine Loopback Sitzung handelt.
+Eine untergeordnete Sitzung kann nur innerhalb der Sitzung eines vorhandenen Benutzers erstellt werden, indem das [Remotedesktop ActiveX-Steuerelement](remote-desktop-activex-control.md) verwendet und die ConnectToChildSession-Eigenschaft mit [**IMsRdpExtendedSettings.Property**](imsrdpextendedsettings-property.md) vor dem Herstellen der Verbindung eingerichtet wird. Wenn die [**IMsTscAx.Verbinden-Methode**](imstscax-connect.md) aufgerufen wird, anmeldet sich das Remotedesktop ActiveX-Steuerelement automatisch bei der untergeordneten Sitzung, ohne anmeldeinformationen einzugeben, es sei denn, der Benutzer wird mithilfe einer Smartcard bei der übergeordneten Sitzung angemeldet. Im Gegensatz zu einer Remotedesktop-Sitzung benötigt ein Benutzer nicht das Remote Interactive-Recht, um sich bei der untergeordneten Sitzung anmelden zu können, da es sich um eine Loopbacksitzung handelt.
 
-Eine untergeordnete Sitzung kann nicht gesperrt werden. Sie verfügt über keinen Bildschirmschoner und keinen Anmeldebildschirm. Anders als bei einer regulären Sitzung wird der Anmelde Text in dieser untergeordneten Sitzung nicht angezeigt, wenn die Winlogon-Anmelde Text Richtlinie festgelegt ist. Außerdem werden Remotedesktopverbindung Timeout-Gruppenrichtlinien in der untergeordneten Sitzung nicht wirksam, wenn diese Richtlinien festgelegt sind.
+Eine untergeordnete Sitzung kann nicht gesperrt werden. Es wird kein Bildschirmschoner und kein Anmeldebildschirm angezeigt. Im Gegensatz zu einer regulären Sitzung wird der Anmeldetext auch nicht in dieser untergeordneten Sitzung angezeigt, wenn die Richtlinie für den WinLogon-Anmeldetext festgelegt ist. Wenn diese Richtlinien festgelegt sind, Remotedesktopverbindung auch keine Auswirkungen von Timeoutgruppenrichtlinien auf die untergeordnete Sitzung.
 
 Die folgenden APIs werden in Verbindung mit untergeordneten Sitzungen verwendet:
 
--   [**Wtsenablechildsessions**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsenablechildsessions)
--   [**Wtsischildsessionsenabled**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsischildsessionsenabled)
--   [**Wout getchildsessionid**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsgetchildsessionid)
--   Eigenschaft "connectdechildsession" in [ **imsrdpextendedsettings. Property**](imsrdpextendedsettings-property.md)
+-   [**WTSEnableChildSessions**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsenablechildsessions)
+-   [**WTSIsChildSessionsEnabled**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsischildsessionsenabled)
+-   [**WTSGetChildSessionId**](/windows/desktop/api/Wtsapi32/nf-wtsapi32-wtsgetchildsessionid)
+-   ConnectToChildSession-Eigenschaft in [ **IMsRdpExtendedSettings.Property**](imsrdpextendedsettings-property.md)
 
- 
+ 
 
- 
+ 
 
 
 

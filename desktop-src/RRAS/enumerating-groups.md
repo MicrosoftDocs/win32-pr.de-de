@@ -1,31 +1,31 @@
 ---
-title: Auflisten von Gruppen (RRAS)
-description: In der folgenden Tabelle werden eine Reihe von Schritten in einer Interaktion zwischen einem Routing Protokoll und dem Multicast-Gruppen-Manager zusammengefasst.
+title: Aufzählen von Gruppen (RRAS)
+description: In der folgenden Tabelle sind eine Reihe von Schritten in einer Interaktion zwischen einem Routingprotokoll und dem Multicastgruppen-Manager zusammengefasst.
 ms.assetid: 30a81946-fa60-4424-9a16-a9b4dfe1961e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d3860c6876ed6ea5caef4941efcdd949eb9890d
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: 4df3731e8370a213636ea12ad2a9b072903908888eba6983909c01201c655ef2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "104472037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101840"
 ---
-# <a name="enumerating-groups"></a>Auflisten von Gruppen
+# <a name="enumerating-groups"></a>Aufzählen von Gruppen
 
-In der folgenden Tabelle werden eine Reihe von Schritten in einer Interaktion zwischen einem Routing Protokoll und dem Multicast-Gruppen-Manager zusammengefasst. In der ersten Spalte werden die Aktionen beschrieben, die das Routing Protokoll ausführt, und die Antwort des Routing Protokolls an den Multicast-Gruppen-Manager. In der zweiten Spalte werden die Antworten des Multicast-Gruppen-Managers auf das Routing Protokoll beschrieben. Die dritte Spalte enthält alle zusätzlichen Informationen.
+In der folgenden Tabelle sind eine Reihe von Schritten in einer Interaktion zwischen einem Routingprotokoll und dem Multicastgruppen-Manager zusammengefasst. Die erste Spalte beschreibt die Aktionen, die das Routingprotokoll ausführt, und die Antworten des Routingprotokolls an den Multicastgruppen-Manager. In der zweiten Spalte werden die Antworten des Multicastgruppen-Managers auf das Routingprotokoll beschrieben. Die dritte Spalte enthält alle zusätzlichen Informationen.
 
 Jede Zeile der Tabelle stellt einen Schritt dar.
 
 
 
-| Routing Protokoll Aktion                                                                                                                                                    | Multicast-Gruppen-Manager-Aktion                                                                                                                                                                                                                                                                               |
+| Routingprotokollaktion                                                                                                                                                    | Multicast-Gruppen-Manager-Aktion                                                                                                                                                                                                                                                                               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Abrufen eines Handles für eine Enumeration mithilfe der [**mgmgroupumerationstart**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart) -Funktion.                                                         | Gibt ein Handle zurück.                                                                                                                                                                                                                                                                                             |
-| Abrufen einer oder mehrerer Gruppen mithilfe der [**mgmgroupumschlag**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) -Funktion                                                             | Gibt beliebig viele Gruppen zurück, die in den vom Client bereitgestellten Puffer passen. Wenn im bereitgestellten Puffer keine Gruppen zurückgegeben werden können, geben \_ Sie nicht ausreichenden \_ Puffer und die Größe des Puffers zurück, der zum Zurückgeben einer Gruppe benötigt wird.<br/> Gibt einen Fehler zurück, \_ \_ \_ Wenn keine weiteren Gruppen vorhanden sind.<br/> |
-| Wenn \_ \_ der Puffer nicht ausreichend ist, können Sie die Funktion [**mgmgroupenerationgetnext**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) erneut aufrufen, indem Sie einen Puffer der angegeben Größe verwenden. |                                                                                                                                                                                                                                                                                                              |
-| Fahren Sie mit dem Aufruf der [**mgmgroupenerationgetnext**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) -Funktion fort, bis der Fehler \_ nicht \_ mehr \_ angezeigt wird.                                   |                                                                                                                                                                                                                                                                                                              |
-| Beenden Sie den [**enumerationsprozess mithilfe der mgmgroupumerationend**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationend) -Funktion.                                                                   | Zerstören Sie das handle.                                                                                                                                                                                                                                                                                          |
+| Rufen Sie mithilfe der [**MgmGroupEnumerationStart-Funktion**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationstart) ein Handle für eine Enumeration ab.                                                         | Gibt ein Handle zurück.                                                                                                                                                                                                                                                                                             |
+| Rufen Sie mithilfe der [**MgmGroupEnumerationGetNext-Funktion**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) eine oder mehrere Gruppen ab.                                                             | Gibt so viele Gruppen zurück, wie in den vom Client bereitgestellten Puffer passen. Wenn im angegebenen Puffer keine Gruppen zurückgegeben werden können, geben Sie ERROR \_ INSUFFICIENT BUFFER und die Größe des \_ Puffers zurück, der zum Zurückgeben einer Gruppe erforderlich ist.<br/> Gibt ERROR \_ NO \_ MORE ITEMS \_ zurück, wenn keine Weiteren Gruppen vorhanden sind.<br/> |
+| Wenn ERROR \_ INSUFFICIENT \_ BUFFER empfangen wird, rufen Sie die [**MgmGroupEnumerationGetNext-Funktion**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) erneut auf, indem Sie einen Puffer der angegebenen Größe verwenden. |                                                                                                                                                                                                                                                                                                              |
+| Fahren Sie mit dem Aufrufen der [**MgmGroupEnumerationGetNext-Funktion**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationgetnext) fort, bis ERROR \_ NO MORE ITEMS empfangen \_ \_ wird.                                   |                                                                                                                                                                                                                                                                                                              |
+| Beenden Sie den Enumerationsprozess mithilfe der [**MgmGroupEnumerationEnd-Funktion.**](/windows/desktop/api/Mgm/nf-mgm-mgmgroupenumerationend)                                                                   | Zerstören Sie das Handle.                                                                                                                                                                                                                                                                                          |
 
 
 

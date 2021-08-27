@@ -1,26 +1,26 @@
 ---
-description: Die gängigste Methode, eine WMI-Klasseninstanz zu aktualisieren, besteht darin, die gesamte Instanz gleichzeitig zu aktualisieren.
+description: Die gängigste Möglichkeit zum Aktualisieren einer WMI-Klasseninstanz ist das gleichzeitige Aktualisieren der gesamten Instanz.
 ms.assetid: fca5f102-0823-4900-b147-9b29ca036607
 ms.tgt_platform: multiple
 title: Aktualisieren einer gesamten Instanz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae81b334d1d89a7e936e2c9d80aebfbeecb430bd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41cac29805eeff1f8c659c0bee6832eb65e9e6b5bdee8cd15bd0a052247a70e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119995539"
 ---
 # <a name="updating-an-entire-instance"></a>Aktualisieren einer gesamten Instanz
 
-Die gängigste Methode, eine WMI-Klasseninstanz zu aktualisieren, besteht darin, die gesamte Instanz gleichzeitig zu aktualisieren. Wenn Sie eine gesamte Instanz aktualisieren, muss die Instanz von WMI nicht in einzelne Eigenschaften analysiert und an Ihre Anwendung gesendet werden. Stattdessen kann WMI Ihnen einfach die gesamte-Instanz senden. Wenn Sie fertig sind, kann die gesamte geänderte Instanz von WMI über die ursprüngliche Instanz kopiert werden.
+Die gängigste Möglichkeit zum Aktualisieren einer WMI-Klasseninstanz ist das gleichzeitige Aktualisieren der gesamten Instanz. Durch aktualisieren einer gesamten Instanz muss WMI die Instanz nicht in einzelne Eigenschaften analysieren und an Ihre Anwendung senden. Stattdessen kann WMI ihnen einfach die gesamte Instanz senden. Wenn Sie fertig sind, kann WMI dann ihre gesamte geänderte Instanz über die ursprüngliche Instanz kopieren.
 
 Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von PowerShell ändern oder aktualisieren.
 
 **So ändern oder aktualisieren Sie eine Instanz mithilfe von PowerShell**
 
-1.  Rufen Sie eine lokale Kopie des Objekts mit einem Get-WMIObject-Befehl ab.
+1.  Rufen Sie eine lokale Kopie des -Objekts mit einem Aufruf von Get-WmiObject ab.
 
     ```PowerShell
     $mySettings = get-WMIObject Win32_WmiSetting
@@ -28,9 +28,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-2.  Zeigen Sie ggf. die Eigenschaften des-Objekts an, indem Sie die Properties-Auflistung aufzurufen.
+2.  Zeigen Sie bei Bedarf die Eigenschaften des -Objekts mit einem Aufruf der Properties-Auflistung an.
 
-    Obwohl es nicht erforderlich ist, sollten Sie den Wert der-Eigenschaft kennen, bevor Sie ihn ändern.
+    Obwohl dies nicht erforderlich ist, möchten Sie möglicherweise den Wert der Eigenschaft kennen, bevor Sie ihn ändern.
 
     ```PowerShell
     $mySettings.Properties
@@ -38,9 +38,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-3.  Nehmen Sie Änderungen an den Eigenschaften des lokalen Objekts vor.
+3.  Nehmen Sie Änderungen an den eigenschaften des lokalen Objekts vor.
 
-    Dadurch wird nur die lokale Kopie geändert. Zum Speichern der Änderungen an WMI müssen Sie die gesamte Kopie wieder im WMI-Repository platzieren.
+    Dadurch wird nur die lokale Kopie geändert. Um Ihre Änderungen an WMI zu speichern, müssen Sie die gesamte Kopie wieder in das WMI-Repository platzieren.
 
     ```PowerShell
     $mySettings.LoggingLevel = 1
@@ -48,7 +48,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-4.  Versetzen Sie das Objekt mithilfe eines Aufrufens der Put-Methode wieder in das WMI-Repository.
+4.  Platzieren Sie das Objekt mithilfe eines Aufrufs der Put-Methode wieder im WMI-Repository.
 
     ```PowerShell
     $mySettings.Put()
@@ -56,11 +56,11 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit c# ändern oder aktualisieren.
+Im folgenden Verfahren wird beschrieben, wie Eine -Instanz mithilfe von C# geändert oder aktualisiert wird.
 
-**So ändern oder aktualisieren Sie eine Instanz mit c# (Microsoft. Management. Infrastructure)**
+**So ändern oder aktualisieren Sie eine Instanz mit C# (Microsoft.Management.Infrastructure)**
 
-1.  Rufen Sie eine lokale Kopie des-Objekts mit einem [cimsession. GetInstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832585(v=vs.85))-Befehl ab, wie unter [Abrufen einer WMI-Instanz](retrieving-an-instance.md)beschrieben.
+1.  Rufen Sie eine lokale Kopie des -Objekts mit einem Aufruf von [CimSession.GetInstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832585(v=vs.85))ab, wie unter [Abrufen einer WMI-Instanz beschrieben.](retrieving-an-instance.md)
 
     ```CSharp
     using Microsoft.Management.Infrastructure;
@@ -77,9 +77,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit c# ändern ode
 
     
 
-2.  Zeigen Sie ggf. die Eigenschaften des-Objekts an, indem Sie die Properties-Auflistung aufzurufen.
+2.  Zeigen Sie bei Bedarf die Eigenschaften des -Objekts mit einem Aufruf der Properties-Auflistung an.
 
-    Obwohl es nicht erforderlich ist, sollten Sie den Wert der-Eigenschaft kennen, bevor Sie ihn ändern.
+    Obwohl dies nicht erforderlich ist, möchten Sie möglicherweise den Wert der Eigenschaft kennen, bevor Sie ihn ändern.
 
     ```CSharp
     foreach (CimProperty property in myDisk.CimInstanceProperties)
@@ -92,9 +92,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit c# ändern ode
 
     
 
-3.  Nehmen Sie Änderungen an den Eigenschaften des lokalen Objekts vor.
+3.  Nehmen Sie Änderungen an den eigenschaften des lokalen Objekts vor.
 
-    Dadurch wird nur die lokale Kopie geändert. Zum Speichern der Änderungen an WMI müssen Sie die gesamte Kopie wieder im WMI-Repository platzieren.
+    Dadurch wird nur die lokale Kopie geändert. Um Ihre Änderungen an WMI zu speichern, müssen Sie die gesamte Kopie wieder in das WMI-Repository platzieren.
 
     ```CSharp
     myDisk.CimInstanceProperties["VolumeName"].Value = "NewName";
@@ -102,7 +102,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit c# ändern ode
 
     
 
-4.  Versetzen Sie das Objekt mithilfe eines Aufrufens von [cimsession. modifyinstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832593(v=vs.85))wieder in das WMI-Repository.
+4.  Platzieren Sie das Objekt mithilfe eines Aufrufs von [CimSession.ModifyInstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832593(v=vs.85))wieder im WMI-Repository.
 
     ```CSharp
     session.ModifyInstance(Namespace,myDisk);
@@ -113,13 +113,13 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit c# ändern ode
 Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von PowerShell ändern oder aktualisieren.
 
 > [!Note]  
-> **System. Management** war der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. die APIs in diesem Namespace sind jedoch in der Regel langsamer und werden relativ zu ihren moderneren **Microsoft. Management. Infrastructure** -Entsprechungen nicht auch skaliert.
+> **System.Management war** der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. Die APIs in diesem Namespace sind jedoch im Allgemeinen langsamer und werden im Vergleich zu ihren moderneren **Microsoft.Management.Infrastructure-Entsprechungen** nicht so gut skaliert.
 
  
 
-**So ändern oder aktualisieren Sie eine Instanz mit c# (Microsoft. Management)**
+**So ändern oder aktualisieren Sie eine Instanz mit C# (Microsoft.Management)**
 
-1.  Rufen Sie eine lokale Kopie des Objekts mit einem-Befehl von [ManagementObject. Get](/dotnet/api/system.management.managementobject.get#System_Management_ManagementObject_Get)ab.
+1.  Rufen Sie eine lokale Kopie des -Objekts mit einem Aufruf von [ManagementObject.Get ab.](/dotnet/api/system.management.managementobject.get#System_Management_ManagementObject_Get)
 
     ```CSharp
     using System.Management;
@@ -130,9 +130,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-2.  Zeigen Sie ggf. die Eigenschaften des-Objekts an, indem Sie die Properties-Auflistung aufzurufen.
+2.  Zeigen Sie bei Bedarf die Eigenschaften des -Objekts mit einem Aufruf der Properties-Auflistung an.
 
-    Obwohl es nicht erforderlich ist, sollten Sie den Wert der-Eigenschaft kennen, bevor Sie ihn ändern.
+    Obwohl dies nicht erforderlich ist, möchten Sie möglicherweise den Wert der Eigenschaft kennen, bevor Sie ihn ändern.
 
     ```CSharp
     foreach (PropertyData property in myDisk.Properties)
@@ -145,9 +145,9 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-3.  Nehmen Sie Änderungen an den Eigenschaften des lokalen Objekts vor.
+3.  Nehmen Sie Änderungen an den eigenschaften des lokalen Objekts vor.
 
-    Dadurch wird nur die lokale Kopie geändert. Zum Speichern der Änderungen an WMI müssen Sie die gesamte Kopie wieder im WMI-Repository platzieren.
+    Dadurch wird nur die lokale Kopie geändert. Um Ihre Änderungen an WMI zu speichern, müssen Sie die gesamte Kopie wieder in das WMI-Repository platzieren.
 
     ```CSharp
     myDisk["VolumeName"] = "newName";
@@ -155,7 +155,7 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-4.  Versetzen Sie das Objekt mithilfe eines Aufrufens der [ManagementObject. Put](/dotnet/api/system.management.managementobject.put#System_Management_ManagementObject_Put) -oder-Methode wieder in das WMI-Repository.
+4.  Platzieren Sie das Objekt mithilfe eines Aufrufs von [ManagementObject.Put](/dotnet/api/system.management.managementobject.put#System_Management_ManagementObject_Put) oder der -Methode wieder im WMI-Repository.
 
     ```CSharp
     myDisk.Put();
@@ -163,46 +163,46 @@ Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mithilfe von Power
 
     
 
-Im folgenden Verfahren wird beschrieben, wie Sie eine Instanz mit VBScript ändern oder aktualisieren.
+Im folgenden Verfahren wird beschrieben, wie Eine -Instanz mit VBScript geändert oder aktualisiert wird.
 
 **So ändern oder aktualisieren Sie eine Instanz mit VBScript**
 
-1.  Rufen Sie eine lokale Kopie des Objekts mit einem Aufrufen von **GetObject** ab.
-2.  Zeigen Sie ggf. die Eigenschaften des-Objekts an, indem Sie [**die \_ Properties**](swbemobject-properties-.md) -Methode aufzurufen.
+1.  Rufen Sie eine lokale Kopie des -Objekts mit einem Aufruf von **GetObject ab.**
+2.  Zeigen Sie bei Bedarf die Eigenschaften des -Objekts mit einem Aufruf der [**Properties-Methode \_**](swbemobject-properties-.md) an.
 
-    Obwohl es nicht erforderlich ist, sollten Sie den Wert der-Eigenschaft kennen, bevor Sie ihn ändern.
+    Obwohl dies nicht erforderlich ist, möchten Sie möglicherweise den Wert der Eigenschaft kennen, bevor Sie ihn ändern.
 
-3.  Nehmen Sie Änderungen an den Objekteigenschaften vor, indem Sie die Methode " [**Swap-Eigenschaft. Value**](swbemproperty-value.md) " aufzurufen.
+3.  Nehmen Sie änderungen an den Objekteigenschaften mit einem Aufruf der [**SWbemProperty.Value-Methode**](swbemproperty-value.md) vor.
 
-    Die **value** -Methode ändert nur die lokale Kopie. Zum Speichern der Änderungen an WMI müssen Sie die gesamte Kopie wieder im WMI-Repository platzieren.
+    Die **Value-Methode** ändert nur die lokale Kopie. Um Ihre Änderungen an WMI zu speichern, müssen Sie die gesamte Kopie wieder in das WMI-Repository platzieren.
 
-4.  Versetzen Sie das Objekt wieder in das WMI-Repository, indem Sie die Methoden " [**errbewbject. Put \_**](swbemobject-put-.md) " oder " [**errbewbject. putasync \_**](swbemobject-putasync-.md) " aufrufen.
+4.  Platzieren Sie das Objekt mit einem Aufruf der [**Methoden SWbemObject.Put \_**](swbemobject-put-.md) oder [**SWbemObject.PutAsync \_**](swbemobject-putasync-.md) wieder im WMI-Repository.
 
-Wie die Namen impliziert, werden Updates synchron [**eingefügt \_**](swbemobject-put-.md) , während [**putasync \_**](swbemobject-putasync-.md) asynchron aktualisiert wird. Beide Methoden kopieren die ursprüngliche Instanz mit der geänderten Instanz. Um die Nutzung der asynchronen Verarbeitung zu nutzen, müssen Sie jedoch ein " [**taubemsink**](swbemsink.md) "-Objekt erstellen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Wie die Namen implizieren, [**werden \_ Updates**](swbemobject-put-.md) synchron und [**PutAsync \_**](swbemobject-putasync-.md) asynchron aktualisiert. Beide Methoden kopieren die ursprüngliche Instanz mit Ihrer geänderten Instanz. Um jedoch die asynchrone Verarbeitung nutzen zu können, müssen Sie ein [**SWbemSink-Objekt**](swbemsink.md) erstellen. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Im folgenden Verfahren wird beschrieben, wie eine Instanz mit C++ geändert oder aktualisiert wird.
+Im folgenden Verfahren wird beschrieben, wie Eine -Instanz mit C++ geändert oder aktualisiert wird.
 
-**So ändern oder aktualisieren Sie eine Instanz mithilfe von C++**
+**So ändern oder aktualisieren Sie eine Instanz mit C++**
 
-1.  Rufen Sie eine lokale Kopie der-Instanz mit einem Befehl zum Aufrufen von [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices:: GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync)ab.
-2.  Zeigen Sie ggf. die Eigenschaften des Objekts mit einem Befehl an, um [**IWbemClassObject:: Get**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get)aufzurufen.
+1.  Rufen Sie eine lokale Kopie der -Instanz mit einem Aufruf von [**IWbemServices::GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) oder [**IWbemServices::GetObjectAsync ab.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync)
+2.  Zeigen Sie bei Bedarf die Eigenschaften des -Objekts mit einem Aufruf von [**IWbemClassObject::Get an.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-get)
 
-    Obwohl es nicht erforderlich ist, sollten Sie den Wert der-Eigenschaft kennen, bevor Sie ihn ändern.
+    Obwohl dies nicht erforderlich ist, möchten Sie möglicherweise den Wert der Eigenschaft kennen, bevor Sie ihn ändern.
 
-3.  Nehmen Sie alle notwendigen Änderungen an der Kopie mit einem Befehl [**IWbemClassObject::P UT**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put)vor.
+3.  Nehmen Sie alle erforderlichen Änderungen an der Kopie mit einem Aufruf von [**IWbemClassObject::P ut vor.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemclassobject-put)
 
-    Mit der **Put** -Methode wird nur die lokale Kopie geändert. Zum Speichern der Änderungen an WMI müssen Sie die gesamte Kopie wieder im WMI-Repository platzieren.
+    Die **Put-Methode** ändert nur die lokale Kopie. Um Ihre Änderungen an WMI zu speichern, müssen Sie die gesamte Kopie wieder in das WMI-Repository platzieren.
 
-4.  Fügen Sie die Kopie zurück in das WMI-Repository ein, indem Sie die Methoden [**IWbemServices::P utinstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) oder [**IWbemServices::P utinstanceasync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) aufrufen.
+4.  Platzieren Sie Ihre Kopie wieder im WMI-Repository, und rufen Sie die Methoden [**IWbemServices::P utInstance**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstance) oder [**IWbemServices::P utInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) auf.
 
-    Wie die Namen impliziert, aktualisiert **PutInstance** synchron, während [**PutInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) asynchron aktualisiert wird. Beide Methoden kopieren die ursprüngliche Instanz mit der geänderten Instanz. Um die asynchrone Verarbeitung zu nutzen, müssen Sie jedoch die [**iwbebobjectsink**](iwbemobjectsink.md) -Schnittstelle implementieren.
+    Wie die Namen implizieren, **wird PutInstance** synchron aktualisiert, während [**PutInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) asynchron aktualisiert wird. Beide Methoden kopieren die ursprüngliche Instanz mit Ihrer geänderten Instanz. Um jedoch die asynchrone Verarbeitung nutzen zu können, müssen Sie die [**IWbemObjectSink-Schnittstelle**](iwbemobjectsink.md) implementieren.
 
-    Beachten Sie, dass ein Aktualisierungs Vorgang für eine Instanz, die zu einer Klassenhierarchie gehört, aufgrund eines Fehlers, der eine andere Klasse in der Hierarchie einschließt, möglicherweise nicht erfolgreich ist. WMI Ruft die [**PutInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) -Methode für jeden Anbieter auf, der für die Klassen verantwortlich ist, von denen die Klasse, die die ursprüngliche Instanz besitzt, abgeleitet ist. Wenn einer dieser Anbieter ausfällt, tritt bei der ursprünglichen Update Anforderung ein Fehler auf. Weitere Informationen finden Sie im Abschnitt "Hinweise" von [**PutInstanceAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync).
+    Beachten Sie, dass ein Aktualisierungsvorgang für eine Instanz, die zu einer Klassenhierarchie gehört, aufgrund eines Fehlers im Zusammenhang mit einer anderen Klasse in der Hierarchie möglicherweise nicht erfolgreich ist. WMI ruft die [**PutInstanceAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync) jedes Anbieters auf, der für die Klassen verantwortlich ist, von denen die Klasse, die die ursprüngliche Instanz besitzt, leitet. Wenn einer dieser Anbieter fehlschlägt, schlägt die ursprüngliche Updateanforderung fehl. Weitere Informationen finden Sie im Abschnitt "Hinweise" von [**PutInstanceAsync.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-putinstanceasync)
 
-Weitere Informationen finden Sie unter [Aufrufen einer Anbieter Methode](calling-a-provider-method.md).
+Weitere Informationen finden Sie unter [Aufrufen einer Anbietermethode.](calling-a-provider-method.md)
 
 > [!Note]  
-> Da der Rückruf für die Senke möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Client zurückgegeben wird, wird empfohlen, semisynchrone anstelle der asynchronen Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Da der Rückruf an die Senke möglicherweise nicht auf derselben Authentifizierungsebene zurückgegeben wird, wie der Client erfordert, wird empfohlen, anstelle der asynchronen Kommunikation semisynchrone zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 

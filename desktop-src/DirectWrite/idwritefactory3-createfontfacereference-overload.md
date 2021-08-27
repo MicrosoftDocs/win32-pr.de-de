@@ -1,9 +1,9 @@
 ---
-title: IDWriteFactory3-Methoden für die Methode "kreatefontfacereferenzierung" (dwrite \_ 3. h)
+title: IDWriteFactory3 CreateFontFaceReference-Methoden (Dwrite \_ 3.h)
 description: Erstellt einen Verweis auf eine Schriftart.
 ms.assetid: e4f73eff-84f8-3e86-08b1-aa513fad9a61
 keywords:
-- Methoden für "kreatefontfacereferenzierung" Direct2D
+- CreateFontFaceReference-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,14 +12,14 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: ff52c9e8516117932de899b27d9bc4e028c2973e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f11c8a07e31d7136ae54d34ca8f04215b5b4a882cdd5ddd91f6334ba535c335b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120051360"
 ---
-# <a name="idwritefactory3createfontfacereference-methods"></a>IDWriteFactory3:: kreatefontfacereferenzierungsmethoden
+# <a name="idwritefactory3createfontfacereference-methods"></a>IDWriteFactory3::CreateFontFaceReference-Methoden
 
 Erstellt einen Verweis auf eine Schriftart.
 
@@ -27,10 +27,10 @@ Erstellt einen Verweis auf eine Schriftart.
 
 
 
-| Methode                                                                                                                                                                         | BESCHREIBUNG                                                 |
+| Methode                                                                                                                                                                         | Beschreibung                                                 |
 |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------|
-| [**"Kreatefontfakereferenzierung" (idschreitefontfile \* , UInt32, dwrite, \_ Schriftart \_ Simulationen, idschreitefontfakereferenzierung \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory3-createfontfacereference(idwritefontfile_uint32_dwrite_font_simulations_idwritefontfacereference))               | Erstellt einen Verweis auf eine Schriftart, wenn eine Datei angegeben wird.<br/>      |
-| [**"Kreatefontfakereferenzierung" (WChar Konstanten \* , FILETIME-Konstante \* , UInt32, dwrite- \_ Schriftart \_ Simulationen, idschreitefontfakereferenzierung \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory3-createfontfacereference(idwritefontfile_uint32_dwrite_font_simulations_idwritefontfacereference)) | Erstellt einen Verweis auf eine Schriftart, wenn ein vollständiger Pfad angegeben ist.<br/> |
+| [**CreateFontFaceReference (IDWriteFontFile \* , UINT32, DWRITE \_ FONT \_ SIMULATIONS, IDWriteFontFaceReference \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory3-createfontfacereference(idwritefontfile_uint32_dwrite_font_simulations_idwritefontfacereference))               | Erstellt einen Verweis auf eine Schriftart, wenn eine Datei angegeben ist.<br/>      |
+| [**CreateFontFaceReference (WCHAR \* const, FILETIME \* const, UINT32, DWRITE \_ FONT \_ SIMULATIONS, IDWriteFontFaceReference \* \* )**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritefactory3-createfontfacereference(idwritefontfile_uint32_dwrite_font_simulations_idwritefontfacereference)) | Erstellt einen Verweis auf eine Schriftart mit einem vollständigen Pfad.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Erstellt einen Verweis auf eine Schriftart.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dwrite \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dwrite \_ 3.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
