@@ -1,9 +1,9 @@
 ---
-title: PGM_GETBORDER Meldung (kommstrg. h)
-description: Ruft die aktuelle Rahmengröße für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das Pager- \_ GetBorder-Makro verwenden.
+title: PGM_GETBORDER (Commctrl.h)
+description: Ruft die aktuelle Rahmengröße für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das \_ Pager-Makro GetBorder verwenden.
 ms.assetid: 5d2f49ad-d940-4a0b-b5a0-05d742151b1c
 keywords:
-- Windows-Steuerelemente für PGM_GETBORDER Meldung
+- PGM_GETBORDER von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: be510af44c9cf53000420531843a79e9856c40dd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 148b3d840548116d3082e27b5a760650c5802bdb2c6dbc1fc7c94f1df3a3d5b5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046860"
 ---
-# <a name="pgm_getborder-message"></a>PGM \_ GetBorder-Nachricht
+# <a name="pgm_getborder-message"></a>PGM \_ GETBORDER-Nachricht
 
-Ruft die aktuelle Rahmengröße für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**Pager- \_ GetBorder**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getborder) -Makro verwenden.
+Ruft die aktuelle Rahmengröße für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**\_ Pager-Makro GetBorder**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getborder) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die aktuelle Rahmengröße für das Pager-Steuerelement ab. Sie können die
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen int-Wert zurück, der die aktuelle Rahmengröße in Pixel enthält.
+Gibt einen INT-Wert zurück, der die aktuelle Rahmengröße in Pixel enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen int-Wert zurück, der die aktuelle Rahmengröße in Pixel enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Gibt einen int-Wert zurück, der die aktuelle Rahmengröße in Pixel enthält.
 
 <dl> <dt>
 
-[**PGM- \_ setborder**](pgm-setborder.md)
+[**PGM \_ SETBORDER**](pgm-setborder.md)
 </dt> </dl>
 
  

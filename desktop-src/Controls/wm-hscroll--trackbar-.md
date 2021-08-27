@@ -1,9 +1,9 @@
 ---
-title: WM_HSCROLL (TrackBar)-Benachrichtigungs Code (Winuser. h)
-description: Die WM- \_ HScroll-Nachricht wird an den Besitzer eines horizontalen TrackBar-Steuer Elements gesendet, wenn die Position des Schiebereglers geändert wird. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+title: WM_HSCROLL -Benachrichtigungscode (Trackbar) (Winuser.h)
+description: Die WM HSCROLL-Meldung wird an den Besitzer eines horizontalen \_ Trackbar-Steuerelements gesendet, wenn der Schieberegler die Position ändert. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: EC4AF407-E13F-4562-A0A6-FA109C15101B
 keywords:
-- WM_HSCROLL (TrackBar)-Benachrichtigungs Code Windows-Steuerelemente
+- WM_HSCROLL -Benachrichtigungscode (Trackbar) Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 10727b745900520e8af31561236c8e93eeeb3a81
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5a21000f9eeeb3ff83d4fb65456b21447aa3fd604412f3b4d6d3b94fda58606b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059310"
 ---
-# <a name="wm_hscroll-trackbar-notification-code"></a>WM- \_ HScroll-Benachrichtigungs Code (TrackBar)
+# <a name="wm_hscroll-trackbar-notification-code"></a>WM \_ HSCROLL-Benachrichtigungscode (Trackbar)
 
-Die **WM- \_ HScroll** -Nachricht wird an den Besitzer eines horizontalen TrackBar-Steuer Elements gesendet, wenn die Position des Schiebereglers geändert wird.
+Die **WM \_ HSCROLL-Meldung** wird an den Besitzer eines horizontalen Trackbar-Steuerelements gesendet, wenn der Schieberegler die Position ändert.
 
-Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -44,23 +44,23 @@ WM_HSCROLL
 *wParam* 
 </dt> <dd>
 
-Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt die aktuelle Position des Schiebereglers an, wenn das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) eine TB- \_ Fingerposition oder TB-Finger \_ Abdruck aufweist. Für alle anderen Benachrichtigungs Codes ist das höchst wertige Wort 0 (null). sendet die [**TBM- \_ GetPos**](tbm-getpos.md) -Nachricht, um die Position des Schiebereglers zu ermitteln
+Das [**HIWORD gibt**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) die aktuelle Position des Schiebereglers an, wenn [**das LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) TB \_ THUMBPOSITION oder TB \_ THUMBTRACK ist. Für alle anderen Benachrichtigungscodes ist das obere Wort 0 (null). Senden Sie die [**TBM \_ GETPOS-Nachricht,**](tbm-getpos.md) um die Position des Schiebereglers zu bestimmen.
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gibt einen Benachrichtigungs Code an, der die Interaktion des Benutzers mit der TrackBar angibt. Bei diesem Wort kann es sich um einen der folgenden Werte handeln:
+Das [**LOWORD gibt**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) einen Benachrichtigungscode an, der die Interaktion des Benutzers mit der Trackleiste angibt. Dieses Wort kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                  | Bedeutung                                                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="TB_BOTTOM"></span><span id="tb_bottom"></span><dl> <dt>**TB \_ unten**</dt> </dl>                      | Der Benutzer hat die endtaste gedrückt ([**VK- \_ Ende**](/windows/desktop/inputdev/virtual-key-codes)).<br/>                                                                                          |
-| <span id="TB_ENDTRACK"></span><span id="tb_endtrack"></span><dl> <dt>**TB- \_ EndTrack**</dt> </dl>                | Die TrackBar erhielt eine [**WM- \_ KeyUp**](/windows/desktop/inputdev/wm-keyup), was bedeutet, dass der Benutzer einen Schlüssel freigegeben hat, der einen relevanten Code für den virtuellen Schlüssel gesendet hat <br/>                                           |
-| <span id="TB_LINEDOWN"></span><span id="tb_linedown"></span><dl> <dt>**TB \_ nach unten**</dt> </dl>                | Der Benutzer hat den Pfeil nach rechts ([**VK \_ Rechts**](/windows/desktop/inputdev/virtual-key-codes)) oder die nach-unten-Taste ([**VK- \_ ab**](/windows/desktop/inputdev/virtual-key-codes)) gedrückt.<br/> |
-| <span id="TB_LINEUP"></span><span id="tb_lineup"></span><dl> <dt>**TB \_ -Auflistung**</dt> </dl>                      | Der Benutzer hat den Pfeil nach links ([**VK \_ Links**](/windows/desktop/inputdev/virtual-key-codes)) oder nach oben (nach [**oben) gedrückt \_**](/windows/desktop/inputdev/virtual-key-codes).<br/>             |
-| <span id="TB_PAGEDOWN"></span><span id="tb_pagedown"></span><dl> <dt>**TB- \_ PageDown**</dt> </dl>                | Der Benutzer hat auf den Kanal unten oder rechts neben dem Schieberegler geklickt ("[**VK \_ Next**](/windows/desktop/inputdev/virtual-key-codes)").<br/>                                                   |
-| <span id="TB_PAGEUP"></span><span id="tb_pageup"></span><dl> <dt>**TB- \_ PageUp**</dt> </dl>                      | Der Benutzer hat auf den Kanal oberhalb oder links neben dem Schieberegler geklickt ([**VK \_ vor**](/windows/desktop/inputdev/virtual-key-codes)).<br/>                                                 |
-| <span id="TB_THUMBPOSITION"></span><span id="tb_thumbposition"></span><dl> <dt>**TB-Finger \_ Position**</dt> </dl> | Die TrackBar erhielt [**WM \_ lbuttonup**](/windows/desktop/inputdev/wm-lbuttonup) nach einem Finger \_ Abdruck-Benachrichtigungs Code von TB.<br/>                                                                   |
-| <span id="TB_THUMBTRACK"></span><span id="tb_thumbtrack"></span><dl> <dt>**TB-Finger \_ Abdruck**</dt> </dl>          | Der Benutzer hat den Schieberegler gezogen.<br/>                                                                                                                                                     |
-| <span id="TB_TOP"></span><span id="tb_top"></span><dl> <dt>**TB ( \_ oben)**</dt> </dl>                               | Der Benutzer hat die Start Taste gedrückt ([**VK \_ Home**](/windows/desktop/inputdev/virtual-key-codes)). <br/>                                                                                     |
+| <span id="TB_BOTTOM"></span><span id="tb_bottom"></span><dl> <dt>**TB \_ BOTTOM**</dt> </dl>                      | Der Benutzer hat die END-TASTE [**(VK \_ END ) gedrückt.**](/windows/desktop/inputdev/virtual-key-codes)<br/>                                                                                          |
+| <span id="TB_ENDTRACK"></span><span id="tb_endtrack"></span><dl> <dt>**TB \_ ENDTRACK**</dt> </dl>                | Die Trackleiste hat [**WM \_ KEYUP**](/windows/desktop/inputdev/wm-keyup)empfangen. Dies bedeutet, dass der Benutzer einen Schlüssel freigegeben hat, der einen relevanten virtuellen Schlüsselcode gesendet hat. <br/>                                           |
+| <span id="TB_LINEDOWN"></span><span id="tb_linedown"></span><dl> <dt>**\_TB-LINEDOWN**</dt> </dl>                | Der Benutzer hat die NACH-RECHTS-TASTE [**(VK \_ NACH-RECHTS)**](/windows/desktop/inputdev/virtual-key-codes)oder DIE NACH-UNTEN-TASTE [**(VK \_ NACH-UNTEN)**](/windows/desktop/inputdev/virtual-key-codes)gedrückt.<br/> |
+| <span id="TB_LINEUP"></span><span id="tb_lineup"></span><dl> <dt>**TB \_ LINEUP**</dt> </dl>                      | Der Benutzer hat die NACH-LINKS-TASTE [**(VK \_ LEFT)**](/windows/desktop/inputdev/virtual-key-codes)oder DIE NACH-OBEN-TASTE [**(VK \_ NACH OBEN)**](/windows/desktop/inputdev/virtual-key-codes)gedrückt.<br/>             |
+| <span id="TB_PAGEDOWN"></span><span id="tb_pagedown"></span><dl> <dt>**TB \_ PAGEDOWN**</dt> </dl>                | Der Benutzer hat auf den Kanal unten oder rechts neben dem Schieberegler [**(VK \_ NEXT ) geklickt.**](/windows/desktop/inputdev/virtual-key-codes)<br/>                                                   |
+| <span id="TB_PAGEUP"></span><span id="tb_pageup"></span><dl> <dt>**TB \_ PAGEUP**</dt> </dl>                      | Der Benutzer hat auf den Kanal oben oder links vom Schieberegler geklickt [**(VK \_ PRIOR**](/windows/desktop/inputdev/virtual-key-codes)).<br/>                                                 |
+| <span id="TB_THUMBPOSITION"></span><span id="tb_thumbposition"></span><dl> <dt>**TB \_ THUMBPOSITION**</dt> </dl> | Die Trackleiste hat [**WM \_ LBUTTONUP nach**](/windows/desktop/inputdev/wm-lbuttonup) einem TB \_ THUMBTRACK-Benachrichtigungscode empfangen.<br/>                                                                   |
+| <span id="TB_THUMBTRACK"></span><span id="tb_thumbtrack"></span><dl> <dt>**TB \_ THUMBTRACK**</dt> </dl>          | Der Benutzer hat den Schieberegler gezogen.<br/>                                                                                                                                                     |
+| <span id="TB_TOP"></span><span id="tb_top"></span><dl> <dt>**TB \_ TOP**</dt> </dl>                               | Der Benutzer hat die HOME-TASTE gedrückt ([**VK \_ HOME**](/windows/desktop/inputdev/virtual-key-codes)). <br/>                                                                                     |
 
 
 
@@ -71,19 +71,19 @@ Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) gi
 *lParam* 
 </dt> <dd>
 
-Das Handle für das TrackBar-Steuerelement.
+Das Handle für das Trackbar-Steuerelement.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der TB-Finger \_ Abdruck Code wird in der Regel von Anwendungen verwendet, die Feedback geben, wenn der Benutzer das Bild Lauf Feld zieht.
+Der TB THUMBTRACK-Code wird in der Regel von Anwendungen verwendet, die Feedback geben, wenn der \_ Benutzer das Bildlauffeld zieht.
 
-Beachten Sie, dass die **WM- \_ HScroll** -Nachricht nur 16 Bits an Positionsdaten enthält. Daher haben Anwendungen, die ausschließlich von **WM \_ HScroll** (und [**WM \_ VScroll**](wm-vscroll--trackbar-.md)) für Schieberegler-Positionsdaten abhängen, einen praktischen maximalen Positionswert von 65.535.
+Beachten Sie, dass **die WM \_ HSCROLL-Nachricht** nur 16 Bits von Positionsdaten enthält. Daher haben Anwendungen, die ausschließlich **WM \_ HSCROLL** (und [**WM \_ VSCROLL)**](wm-vscroll--trackbar-.md)für Schiebereglerpositionsdaten verwenden, einen praktischen maximalen Positionswert von 65.535.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,9 +91,9 @@ Beachten Sie, dass die **WM- \_ HScroll** -Nachricht nur 16 Bits an Positionsdat
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -101,10 +101,10 @@ Beachten Sie, dass die **WM- \_ HScroll** -Nachricht nur 16 Bits an Positionsdat
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM- \_ VScroll**](wm-vscroll--trackbar-.md)
+[**WM \_ VSCROLL**](wm-vscroll--trackbar-.md)
 </dt> </dl>
 
  

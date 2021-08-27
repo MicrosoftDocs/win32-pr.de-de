@@ -1,9 +1,9 @@
 ---
 title: tan
-description: Gibt den Tangens des angegebenen-Werts zurück.
+description: Gibt den Tangens des angegebenen Werts zurück.
 ms.assetid: ca03b184-9e1a-4152-9292-f8af38aa9423
 keywords:
-- Tan HLSL
+- tan HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cf9451a2bf1a5759470e87343f1b4a15583b470a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1abdf0ea751064b6fdfcc73983490f61580a2f4aeb369ab4a096ea8e5d4791fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068130"
 ---
 # <a name="tan"></a>tan
 
-Gibt den Tangens des angegebenen-Werts zurück.
+Gibt den Tangens des angegebenen Werts zurück.
 
 
 
-| *ret* Tan (*x*) |
+| *ret* tan(*x*) |
 |----------------|
 
 
@@ -39,7 +39,7 @@ Gibt den Tangens des angegebenen-Werts zurück.
 
 | Element                                                   | BESCHREIBUNG                                        |
 |--------------------------------------------------------|----------------------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert im Bogenmaße.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert im Bogenmaß.<br/> |
 
 
 
@@ -47,7 +47,7 @@ Gibt den Tangens des angegebenen-Werts zurück.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Tangens des *x* -Parameters.
+Der Tangens  des x-Parameters.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -55,33 +55,33 @@ Der Tangens des *x* -Parameters.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md) | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**Hafen**](/windows/desktop/WinProg/windows-data-types)                        | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | any                            |
+| *Ret* | identisch mit eingabe *x*                                                                                              | [**schweben**](/windows/desktop/WinProg/windows-data-types)                        | Gleiche Dimension(en) wie eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt           |
 |------------------------------------------------------------------------------------|---------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                 |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | Ja ( \_ nur vs 1 \_ 1) |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | Ja                 |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | ja (im Vergleich \_ \_ zu nur 1 1) |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

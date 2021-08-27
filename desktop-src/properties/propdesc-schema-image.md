@@ -1,19 +1,19 @@
 ---
 description: image
 ms.assetid: 89893C4E-4F4E-4d85-9623-08607B4383E5
-title: image-Element (Schema der Eigenschaftenbeschreibung)
+title: image-Element (Eigenschaftenbeschreibungsschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c24ecb1b88b8b724ce299a81281f926972180743
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 39145ebf4db2bab4ffffeeec31db15e26a881a5bf63b752096a5732522ff8d9d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108104988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011500"
 ---
 # <a name="image"></a>image
 
-Es sollte nur ein [Bildelement für]() jedes übergeordnete Element geben.
+Es sollte nur ein [Bildelement]() für jedes übergeordnete Element vorhanden sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ Es sollte nur ein [Bildelement für]() jedes übergeordnete Element geben.
 
  
 
-## <a name="attributes"></a>Attributes
+## <a name="attributes"></a>Attribute
 
 
 

@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentafterinitializationexception-Konstruktor'
-title: Esentafterinitializationexception-Konstruktor
+description: 'Weitere Informationen zu: EsentAfterInitializationException-Konstruktor'
+title: EsentAfterInitializationException-Konstruktor
 TOCTitle: 'EsentAfterInitializationException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentAfterInitializationException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentafterinitializationexception.esentafterinitializationexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d14faf4af15d04a02c80f10a86b310a47b799640
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e18d834c6e0623ade2f19e8494c5cb90dbe01d05b76701c5c4addcb6635b9390
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120066740"
 ---
-# <a name="esentafterinitializationexception-constructor"></a>Esentafterinitializationexception-Konstruktor
+# <a name="esentafterinitializationexception-constructor"></a>EsentAfterInitializationException-Konstruktor
 
-Initialisiert eine neue Instanz der esentafterinitializationexception-Klasse.
+Initialisiert eine neue Instanz der EsentAfterInitializationException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentAfterInitializationException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentafterinitializationexception-Klasse](./esentafterinitializationexception-class.md)
+[EsentAfterInitializationException-Klasse](./esentafterinitializationexception-class.md)
 
-[Esentafterinitializationexception-Member](./esentafterinitializationexception-members.md)
+[EsentAfterInitializationException-Member](./esentafterinitializationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

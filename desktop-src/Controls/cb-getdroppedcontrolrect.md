@@ -1,9 +1,9 @@
 ---
-title: CB_GETDROPPEDCONTROLRECT Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB \_ getdroppedcontrolrect-Nachricht, um die Bildschirm Koordinaten eines Kombinations Felds im Dropdown Zustand abzurufen.
+title: CB_GETDROPPEDCONTROLRECT-Nachricht (Winuser.h)
+description: Eine Anwendung sendet eine CB \_ GETDROPPEDCONTROLRECT-Nachricht, um die Bildschirmkoordinaten eines Kombinationsfelds im abgelegten Zustand abzurufen.
 ms.assetid: fd8d78c0-e1a8-49c8-9e35-a105d00b863c
 keywords:
-- Windows-Steuerelemente für CB_GETDROPPEDCONTROLRECT Meldung
+- CB_GETDROPPEDCONTROLRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: adff5ad10ff91557b2579006dae6e1258650d74e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c140abb139cc47020f333ccf66f71cf36d890449be91d66f51b646db22091c39
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477334"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089280"
 ---
-# <a name="cb_getdroppedcontrolrect-message"></a>CB \_ getdroppedcontrolrect-Meldung
+# <a name="cb_getdroppedcontrolrect-message"></a>CB \_ GETDROPPEDCONTROLRECT-Nachricht
 
-Eine Anwendung sendet eine **CB \_ getdroppedcontrolrect** -Nachricht, um die Bildschirm Koordinaten eines Kombinations Felds im Dropdown Zustand abzurufen.
+Eine Anwendung sendet eine **CB \_ GETDROPPEDCONTROLRECT-Nachricht,** um die Bildschirmkoordinaten eines Kombinationsfelds im abgelegten Zustand abzurufen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,7 +39,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Koordinaten des Kombinations Felds im abgehaltenten Zustand empfängt.
+Ein Zeiger auf die RECT-Struktur, die die Koordinaten des Kombinationsfelds im abgelegten Zustand [**empfängt.**](/previous-versions//dd162897(v=vs.85))
 
 </dd> </dl>
 
@@ -47,7 +47,7 @@ Ein Zeiger auf die [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, 
 
 Wenn die Nachricht erfolgreich ist, ist der Rückgabewert ungleich 0 (null).
 
-Wenn die Meldung fehlschlägt, ist der Rückgabewert 0 (null).
+Wenn die Nachricht fehlschlägt, ist der Rückgabewert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn die Meldung fehlschlägt, ist der Rückgabewert 0 (null).
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 

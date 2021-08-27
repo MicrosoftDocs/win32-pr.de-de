@@ -1,11 +1,11 @@
 ---
-title: IDWriteFactory2-Methode "comateglyphrunanalysis"
-description: Erstellt ein Symbol zum Ausführen von Symbolen, das Informationen kapselt, die zum renderischen Ausführen von Symbolen verwendet werden.
+title: IDWriteFactory2 CreateGlyphRunAnalysis-Methode
+description: Erstellt ein Glyphenlaufanalyseobjekt, das Informationen kapselt, die zum Rendern einer Glyphenlauf verwendet werden.
 ms.assetid: 13cecfbf-8bb6-88a2-c8b2-3243f6cb92fd
 keywords:
-- Methode "comateglyphrunanalysis" direkt schreiben
-- Methode "IDWriteFactory2" der Methode "" der Methode ""
-- IDWriteFactory2 Interface Direct Write, Methode "kreateglyphrunanalysis"
+- CreateGlyphRunAnalysis-Methode Direct Write
+- CreateGlyphRunAnalysis-Methode Direct Write , IDWriteFactory2-Schnittstelle
+- IDWriteFactory2-Schnittstelle Direct Write , CreateGlyphRunAnalysis-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: abd944c45fc271a22a0942556038073ebcc591cc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c4ea5c2dc4cb97b1b9ba02e786efc20a4e2a44990b9a1d28b862aeab254079a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048830"
 ---
-# <a name="idwritefactory2createglyphrunanalysis-method"></a>IDWriteFactory2:: kreateglyphrunanalysis-Methode
+# <a name="idwritefactory2createglyphrunanalysis-method"></a>IDWriteFactory2::CreateGlyphRunAnalysis-Methode
 
-Erstellt ein Symbol zum Ausführen von Symbolen, das Informationen kapselt, die zum renderischen Ausführen von Symbolen verwendet werden.
+Erstellt ein Glyphenlaufanalyseobjekt, das Informationen kapselt, die zum Rendern einer Glyphenlauf verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,84 +50,84 @@ virtual HRESULT CreateGlyphRunAnalysis(
 
 <dl> <dt>
 
-*GlyphRun* \[ in\]
+*glyphRun* \[ In\]
 </dt> <dd>
 
-Typ: * Konstante *[**dwrite- \_ Glyphe \_ Ausführen**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_run) \** _
+Typ: **const [**DWRITE \_ GLYPH \_ RUN**](/windows/win32/api/dwrite/ns-dwrite-dwrite_glyph_run) \***
 
--Struktur, die die Eigenschaften der Symbol Führung angibt.
+Struktur, die die Eigenschaften der Glyphen-Ausführung angibt.
 
 </dd> <dt>
 
-_transform * \[ in, optional\]
+*transformieren* \[ in, optional\]
 </dt> <dd>
 
-Typ: * Konstante *[**dwrite- \_ Matrix**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \** _
+Typ: **const [**DWRITE \_ MATRIX**](/windows/win32/api/dwrite/ns-dwrite-dwrite_matrix) \***
 
-Optionale Transformation, die auf die Symbole und deren Positionen angewendet wird. Diese Transformation wird nach der durch "emSize" und "pixelsperdip" angegebenen Skalierung angewendet.
+Optionale Transformation, die auf die Glyphen und ihre Positionen angewendet wird. Diese Transformation wird nach der durch emSize und pixelsPerDip angegebenen Skalierung angewendet.
 
 </dd> <dt>
 
-_renderingMode * 
+*renderingMode* 
 </dt> <dd>
 
-Typ: **dwrite- \_ Renderingmodus \_**
+Typ: **\_ DWRITE-RENDERINGMODUS \_**
 
-Gibt den Renderingmodus an, bei dem es sich um einen der Raster Renderingmodi handeln muss (d. h. nicht default und Not Umriss).
+Gibt den Renderingmodus an, bei dem es sich um einen der Rasterrenderingmodi (d. h. nicht standard und not outline) sein muss.
 
 </dd> <dt>
 
-*measuringmode* 
+*measuringMode* 
 </dt> <dd>
 
-Typ: **[ **dwrite \_ - \_ Messmodus**](/windows/win32/api/dcommon/ne-dcommon-dwrite_measuring_mode)**
+Typ: **[ **DWRITE-MESSMODUS \_ \_**](/windows/win32/api/dcommon/ne-dcommon-dwrite_measuring_mode)**
 
-Gibt die Methode an, mit der Symbole gemessen werden.
+Gibt die Methode zum Messen von Glyphen an.
 
 </dd> <dt>
 
-*gridfitmode* 
+*gridFitMode* 
 </dt> <dd>
 
-Type: **[ **dwrite \_ Grid \_ fit \_ Mode**](/windows/win32/api/dwrite_2/ne-dwrite_2-dwrite_grid_fit_mode)**
+Typ: **[ **DWRITE \_ GRID \_ FIT \_ MODE**](/windows/win32/api/dwrite_2/ne-dwrite_2-dwrite_grid_fit_mode)**
 
-Gewusst wie: Symbole mit Rasteranpassung. Dies darf nicht der Standardwert sein.
+Vorgehensweise zum Anpassen von Glyphengliederungen mit Rastern. Dies muss nicht standardmäßig sein.
 
 </dd> <dt>
 
-*antialiasmode* 
+*antialiasMode* 
 </dt> <dd>
 
-Type: **[ **dwrite \_ Text \_ Antialias \_ Mode**](/windows/win32/api/Dwrite_1/ne-dwrite_1-dwrite_text_antialias_mode)**
+Typ: **[ **DWRITE \_ TEXT \_ ANTIALIAS \_ MODE**](/windows/win32/api/Dwrite_1/ne-dwrite_1-dwrite_text_antialias_mode)**
 
-Gibt den AntiAlias Modus an.
+Gibt den Antialiasmodus an.
 
 </dd> <dt>
 
-*baselineoriginx* 
+*baselineOriginX* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
-Die horizontale Position des Basis Linien Ursprungs in Dips.
+Horizontale Position des Baselineursprungs in DIPs.
 
 </dd> <dt>
 
-*baselineoriginy* 
+*baselineOriginY* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
-Vertikale Position des Basis Linien Ursprungs in Dips.
+Vertikale Position des Baselineursprungs in DIPs.
 
 </dd> <dt>
 
-*glyphrunanalysis* \[ vorgenommen\]
+*glyphRunAnalysis* \[ out\]
 </dt> <dd>
 
-Typ: **[ **idschreiteglyphrunanalysis**](/windows/win32/api/dwrite/nn-dwrite-idwriteglyphrunanalysis)\*\***
+Typ: **[ **IDWriteGlyphRunAnalysis**](/windows/win32/api/dwrite/nn-dwrite-idwriteglyphrunanalysis)\*\***
 
-Empfängt einen Zeiger auf das neu erstellte-Objekt.
+Empfängt einen Zeiger auf das neu erstellte Objekt.
 
 </dd> </dl>
 
@@ -135,7 +135,7 @@ Empfängt einen Zeiger auf das neu erstellte-Objekt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,10 +143,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 

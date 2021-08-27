@@ -1,7 +1,7 @@
 ---
-description: 'Ienumumuseridentity:: Clone wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.'
+description: IEnumUserIdentity::Clone wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: dde9afca-db8d-41ba-afa0-94eadecb695b
-title: 'Ienumumuseridentity:: Clone-Methode (Msident. h)'
+title: IEnumUserIdentity::Clone-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: ebdec426fe7ab591c801c00b637211e903cf5356
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e6b0903029fa44e26651ad1df99ceb0c6bd83253bcd1d139bb6513d65e3ca3f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994614"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009410"
 ---
-# <a name="ienumuseridentityclone-method"></a>Ienumumuseridentity:: Clone-Methode
+# <a name="ienumuseridentityclone-method"></a>IEnumUserIdentity::Clone-Methode
 
-\[**Ienumumuseridentity:: Clone** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**IEnumUserIdentity::Clone** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
 Ruft eine Kopie der aktuellen Enumeration ab.
 
@@ -41,10 +41,10 @@ HRESULT Clone(
 
 <dl> <dt>
 
-*ppum* \[ vorgenommen\]
+*ppenum* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iumumuseridentity**](ienumuseridentity.md)\*\***
+Typ: **[ **IEnumUserIdentity**](ienumuseridentity.md)\*\***
 
 Die Adresse eines Zeigers, der eine Kopie dieser Enumeration empfängt.
 
@@ -54,24 +54,24 @@ Die Adresse eines Zeigers, der eine Kopie dieser Enumeration empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[**Ienumumuseridentity**](ienumuseridentity.md) behält eine interne Anzahl bei, die angibt, welche Schnittstelle als nächstes abgerufen wird. Der Wert dieser Anzahl wird auf die von *ppum* empfangene Schnittstelle angewendet. Um die Anzahl zurückzusetzen, nennen Sie [**ienumumuseridentity:: Reset**](ienumuseridentity-reset.md).
+[**IEnumUserIdentity behält**](ienumuseridentity.md) eine interne Anzahl bei, die angibt, welche Schnittstelle als Nächstes abgerufen werden soll. Der Wert dieser Anzahl wird auf die schnittstelle angewendet, die von *ppenum empfangen wird.* Rufen Sie zum Zurücksetzen der Anzahl [**IEnumUserIdentity::Reset auf.**](ienumuseridentity-reset.md)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                  |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                         |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -80,10 +80,10 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iumumuseridentity**](ienumuseridentity.md)
+[**IEnumUserIdentity**](ienumuseridentity.md)
 </dt> <dt>
 
-[**Ienumumuseridentity:: Reset**](ienumuseridentity-reset.md)
+[**IEnumUserIdentity::Reset**](ienumuseridentity-reset.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-description: Verwenden des Enumerators für System Geräte
+description: Verwenden des Systemgeräte-Enumerators
 ms.assetid: 70db139c-2c5b-4574-bec3-dfe758b16715
-title: Verwenden des Enumerators für System Geräte
+title: Verwenden des Systemgeräte-Enumerators
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 88f8f66cb64e9f7bb51d6b0716b9fa23cf531435
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7192a1ea85d807dd388b79eef455edf59c83d3c22ab3a4a330799b3491253bb6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104556421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120083534"
 ---
-# <a name="using-the-system-device-enumerator"></a>Verwenden des Enumerators für System Geräte
+# <a name="using-the-system-device-enumerator"></a>Verwenden des Systemgeräte-Enumerators
 
-Der Enumerator für System Geräte bietet eine einheitliche Möglichkeit zum Auflisten der auf dem System eines Benutzers registrierten Filter, nach Kategorie. Außerdem unterscheidet es sich zwischen einzelnen Hardware Geräten, auch wenn Sie vom gleichen Filter unterstützt werden. Dies ist besonders nützlich für Geräte, die die Windows-Treibermodell (WDM) und den ksproxy-Filter verwenden. Der Benutzer kann z. b. über mehrere WDM-Video Erfassungsgeräte verfügen, die alle vom gleichen Filter unterstützt werden. Der Enumerator für System Geräte behandelt diese als separate Geräte Instanzen.
+Der Systemgeräte-Enumerator bietet eine einheitliche Möglichkeit, die auf dem System eines Benutzers registrierten Filter nach Kategorie zu aufzählen. Darüber hinaus wird zwischen einzelnen Hardwaregeräten unterschieden, auch wenn sie vom gleichen Filter unterstützt werden. Dies ist besonders nützlich für Geräte, die das Windows Driver Model (WDM) und den KSProxy-Filter verwenden. Beispielsweise kann der Benutzer über mehrere WDM-Videoaufnahmegeräte verfügen, die alle vom gleichen Filter unterstützt werden. Der Systemgeräte-Enumerator behandelt sie als separate Geräteinstanzen.
 
-Der Enumerator für System Geräte erstellt einen Enumerator für eine bestimmte Kategorie, z. b. Audioerfassung oder Video Komprimierung. Der kategorieenumerator gibt einen eindeutigen Moniker für jedes Gerät in der Kategorie zurück. Der kategorieenumerator enthält automatisch alle relevanten Plug & Play Geräte in der Kategorie. Eine Liste der Kategorien finden Sie unter [Filter Kategorien](filter-categories.md).
+Der Systemgeräte-Enumerator erstellt einen Enumerator für eine bestimmte Kategorie, z. B. Audioaufnahme oder Videokomprimierung. Der Kategorie-Enumerator gibt einen eindeutigen Moniker für jedes Gerät in der Kategorie zurück. Der Kategorie-Enumerator enthält automatisch alle relevanten Plug & Play geräte in der Kategorie. Eine Liste der Kategorien finden Sie unter [FilterKategorien](filter-categories.md).
 
-Gehen Sie folgendermaßen vor, um den Enumerator für System Geräte zu verwenden:
+Gehen Sie wie folgt vor, um den Systemgeräte-Enumerator zu verwenden:
 
-1.  Erstellen Sie den Enumerator für Systemgeräte durch Aufrufen von **CoCreateInstance**. Der Klassen Bezeichner (CLSID) ist CLSID \_ systemdeviceenum.
-2.  Abrufen eines kategorieenumerators durch Aufrufen von [**icreatedevenum:: createclassenumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) mit der CLSID der gewünschten Kategorie. Diese Methode gibt einen **IEnumMoniker** -Schnittstellen Zeiger zurück. Wenn die Kategorie leer ist (oder nicht vorhanden ist), gibt die Methode " \_ false" anstelle eines Fehlercodes zurück. Wenn dies der Fall ist, ist der zurückgegebene **IEnumMoniker** -Zeiger **null** , und Dereferenzierung führt zu einer Ausnahme. Testen Sie daher explizit auf " \_ OK", wenn Sie " **createclassenumschlag**" aufrufen, statt das übliche Makro " **erfolgreich** " aufzurufen.
-3.  Verwenden Sie die **IEnumMoniker:: Next** -Methode, um jeden Moniker aufzuzählen. Diese Methode gibt einen **IMoniker** -Schnittstellen Zeiger zurück. Wenn die **nächste** Methode das Ende der Enumeration erreicht, gibt Sie auch s \_ false zurück. Überprüfen Sie daher erneut auf \_ OK.
-4.  Rufen Sie zum Abrufen des anzeigen Amens des Geräts (z. b. zur Anzeige auf der Benutzeroberfläche) die **IMoniker:: bindesstorage** -Methode auf.
-5.  Um den DirectShow-Filter zu erstellen und zu initialisieren, der das Gerät verwaltet, rufen Sie **IMoniker:: bindjeobject** für den Moniker auf. Nennen Sie [**ifiltergraph:: AddFilter**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) , um dem Diagramm den Filter hinzuzufügen.
+1.  Erstellen Sie den Systemgeräte-Enumerator, indem Sie **CoCreateInstance aufrufen.** Der Klassenbezeichner (CLSID) ist CLSID \_ SystemDeviceEnum.
+2.  Rufen Sie einen Kategorieenumerator ab, indem Sie [**ICreateDevEnum::CreateClassEnumerator**](/windows/desktop/api/Strmif/nf-strmif-icreatedevenum-createclassenumerator) mit der CLSID der gewünschten Kategorie aufrufen. Diese Methode gibt einen **IEnumMoniker-Schnittstellenzeiger** zurück. Wenn die Kategorie leer ist (oder nicht vorhanden ist), gibt die Methode anstelle eines Fehlercodes S \_ FALSE zurück. Wenn dies der Wert ist, ist der **zurückgegebene IEnumMoniker-Zeiger** **NULL,** und eine Deferencierung verursacht eine Ausnahme. Testen Sie daher explizit auf S OK, wenn Sie \_ **CreateClassEnumerator** aufrufen, anstatt das übliche **SUCCEEDED-Makro auf** aufruft.
+3.  Verwenden Sie **die IEnumMoniker::Next-Methode,** um jeden Moniker zu aufzählen. Diese Methode gibt einen **IMoniker-Schnittstellenzeiger** zurück. Wenn die **Next-Methode** das Ende der Enumeration erreicht, gibt sie auch S FALSE zurück. Überprüfen Sie daher erneut \_ auf S \_ OK.
+4.  Um den Anzeigenamen des Geräts abzurufen (z. B. zur Anzeige auf der Benutzeroberfläche), rufen Sie die **IMoniker::BindToStorage-Methode** auf.
+5.  Um den DirectShow-Filter zu erstellen und zu initialisieren, der das Gerät verwaltet, rufen Sie **IMoniker::BindToObject für** den Moniker auf. Rufen [**Sie IFilterGraph::AddFilter auf,**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph-addfilter) um dem Diagramm den Filter hinzuzufügen.
 
 Dieser Prozess wird anhand des folgenden Diagramms veranschaulicht.
 
-![Auflisten von Geräten](images/sysdevenum.png)
+![Aufzählen von Geräten](images/sysdevenum.png)
 
-Im folgenden Beispiel wird gezeigt, wie die auf dem System des Benutzers installierten Video-Kompressoren aufgelistet werden. Aus Gründen der Übersichtlichkeit führt das Beispiel eine minimale Fehlerüberprüfung durch.
+Im folgenden Beispiel wird gezeigt, wie Sie die video-Videos aufzählen, die auf dem System des Benutzers installiert sind. Zur Besserung führt das Beispiel eine minimale Fehlerüberprüfung aus.
 
 
 ```C++
@@ -86,13 +86,13 @@ pSysDevEnum->Release();
 
 
 
-**Gerätermoniker**
+**Gerätemoniker**
 
-Für gerätermoniker können Sie den Moniker an die [**IFilterGraph2:: addsourcefilterformoniker**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-addsourcefilterformoniker) -Methode übergeben, um einen Erfassungs Filter für das Gerät zu erstellen. Beispielcode finden Sie in der Dokumentation für diese Methode.
+Für Gerätemoniker können Sie den Moniker an die [**IFilterGraph2::AddSourceFilterForMoniker-Methode**](/windows/desktop/api/Strmif/nf-strmif-ifiltergraph2-addsourcefilterformoniker) übergeben, um einen Erfassungsfilter für das Gerät zu erstellen. Beispielcode finden Sie in der Dokumentation für diese Methode.
 
-Die **IMoniker:: GetDisplayName** -Methode gibt den anzeigen Amen für den Moniker zurück. Obwohl der Anzeige Name lesbar ist, wird er in der Regel keinem Endbenutzer angezeigt. Verwenden Sie stattdessen den anzeigen Amen aus dem Eigenschaften Behälter, wie zuvor beschrieben.
+Die **IMoniker::GetDisplayName-Methode** gibt den Anzeigenamen des Monikers zurück. Obwohl der Anzeigename lesbar ist, wird er in der Regel nicht für Endbenutzer angezeigt. Sie können stattdessen den Benutzerfreundlichen Namen aus der Eigenschaftentüte erhalten, wie zuvor beschrieben.
 
-Mit der **IMoniker::P artardisplayname** -Methode oder der **mkparser-DisplayName** -Funktion kann ein standardgerätermoniker für eine bestimmte Filterkategorie erstellt werden. Verwenden Sie einen anzeigen Amen mit dem Formular `@device:*:{category-clsid}` , wobei `category-clsid` die Zeichen folgen Darstellung der Kategorie-GUID ist. Der standardmoniker ist der erste Moniker, der vom Geräte Enumerator für diese Kategorie zurückgegeben wurde.
+Mit **der IMoniker::P arseDisplayName-Methode** oder der **MkParseDisplayName-Funktion** kann ein Standardgerätemoniker für eine bestimmte Filterkategorie erstellt werden. Verwenden Sie einen Anzeigenamen im Formular `@device:*:{category-clsid}` , wobei `category-clsid` die Zeichenfolgendarstellung der Kategorie-GUID ist. Der Standardmoniker ist der erste Moniker, der vom Geräteenumerator für diese Kategorie zurückgegeben wird.
 
  
 

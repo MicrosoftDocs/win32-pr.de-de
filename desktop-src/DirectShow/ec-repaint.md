@@ -1,19 +1,19 @@
 ---
-description: Ein Videorenderer erfordert ein Repaint.
+description: Ein Videorenderer erfordert einen Neupaint.
 ms.assetid: 2e756dea-366c-4024-8fc8-6feabaef1954
-title: EC_REPAINT (DShow. h)
+title: EC_REPAINT (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba86b54d6d465330ec1635ed7301ce774ef7cb27
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7edd498d84aaace460a10c88d5579c2f5a87bba42e1a5f393786134bbe727af3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102790"
 ---
-# <a name="ec_repaint"></a>EC- \_ Repaint
+# <a name="ec_repaint"></a>EC \_ REPAINT
 
-Ein Videorenderer erfordert ein Repaint.
+Ein Videorenderer erfordert einen Neupaint.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,7 +22,7 @@ Ein Videorenderer erfordert ein Repaint.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-(**IUnknown** \* ) Ein Zeiger auf die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle der Eingabe-PIN des Video-Renderers oder **null**.
+(**IUnknown** \* ) Zeiger auf die [**IPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ipin) des Eingabepins des Videorenderers oder **NULL.**
 
 </dd> <dt>
 
@@ -35,19 +35,19 @@ Keinen.
 
 ## <a name="default-action"></a>Standardaktion
 
-Der *lParam1* -Parameter kann die Eingabe-PIN des Video-Renderers angeben. Wenn dies der Fall ist, sucht der Filter Diagramm-Manager nach der mit dieser Pin verbundenen Ausgabe-PIN und fragt Sie nach der [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) -Schnittstelle ab. Wenn die Ausgabe-PIN **imediaeventsink** unterstützt, ruft der Filter Graph-Manager [**imediaeventsink:: notify**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify) mit dem EC \_ Repaint-Ereignis Code auf. Dadurch erhält der Upstream-Filter die Möglichkeit, das letzte Beispiel erneut zu senden.
+Der *Parameter lParam1* kann den Eingabepin des Videorenderers angeben. Wenn dies der Fall ist, sucht der Filterdiagramm-Manager den Ausgabepin, der mit diesem Pin verbunden ist, und fragt ihn für die [**IMediaEventSink-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink) ab. Wenn der Ausgabepin **IMediaEventSink unterstützt,** ruft der Filterdiagramm-Manager [**IMediaEventSink::Notify**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify) mit dem EC \_ REPAINT-Ereigniscode auf. Dadurch erhält der Upstreamfilter die Möglichkeit, das letzte Beispiel erneut zu senden.
 
-Wenn *lParam1* **null** ist oder wenn die PIN [**imediaeventsink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink)nicht unterstützt, oder wenn die [**Benachrichtigungs**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify) Methode fehlschlägt, verarbeitet der Filter Graph-Manager das EC \_ Repaint-Ereignis allein. Das Verhalten hängt vom Status des Diagramms ab:
+Wenn *lParam1* **NULL** ist, oder wenn der Pin [**IMediaEventSink**](/windows/desktop/api/Strmif/nn-strmif-imediaeventsink)nicht unterstützt, oder wenn die [**Notify-Methode**](/windows/desktop/api/Strmif/nf-strmif-imediaeventsink-notify) fehlschlägt, behandelt der Filterdiagramm-Manager das EC \_ REPAINT-Ereignis allein. Sein Verhalten hängt vom Zustand des Diagramms ab:
 
--   Wird ausgeführt: ignoriert das Ereignis. (Der Renderer empfängt das nächste Beispiel im Stream.)
--   Angehalten: sucht im Diagramm nach dem aktuellen Speicherort, wodurch der Filter geleert und die Daten erneut in die Warteschlange eingereiht werden.
--   Beendet: hält das Diagramm an und hält es an, sodass die Daten erneut in die Warteschlange eingereiht werden.
+-   Wird ausgeführt: Ignoriert das -Ereignis. (Der Renderer erhält das nächste Beispiel im Stream.)
+-   Angehalten: Sucht das Diagramm an seine aktuelle Position, wodurch der Filter geleert und die Daten erneut in die Warteschlange warteschlangen.
+-   Beendet: Hält das Diagramm an und hält es an, wodurch die Daten erneut in die Warteschlange warteschlangen.
 
-Standardmäßig übergibt der Filter Graph-Manager dieses Ereignis nicht an die Anwendung.
+Standardmäßig über gibt der Filterdiagramm-Manager dieses Ereignis nicht an die Anwendung weiter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Videorenderer senden diese Nachricht, wenn Sie eine [**WM \_ Paint**](/windows/desktop/gdi/wm-paint) -Meldung empfangen und keine anzuzeigenden Daten aufweisen.
+Videorenderer senden diese Nachricht, wenn sie eine [**WM \_ PAINT-Nachricht**](/windows/desktop/gdi/wm-paint) empfangen und keine Daten anzeigen können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,7 +55,7 @@ Videorenderer senden diese Nachricht, wenn Sie eine [**WM \_ Paint**](/windows/d
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -63,10 +63,10 @@ Videorenderer senden diese Nachricht, wenn Sie eine [**WM \_ Paint**](/windows/d
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

@@ -1,34 +1,34 @@
 ---
-title: Such Filter Syntax
-description: Durch Suchfilter können Sie Suchkriterien definieren und effizientere und effektive suchen bereitstellen.
+title: Suchfiltersyntax
+description: Mit Suchfiltern können Sie Suchkriterien definieren und effizientere und effektivere Suchvorgänge bereitstellen.
 ms.assetid: 3ce4709c-5ef7-4713-8fb7-b46ab284339f
 ms.tgt_platform: multiple
 keywords:
-- Such Filter Syntax ADSI
-- Abfragen, Suchfilter Syntax
+- Search Filter Syntax ADSI
+- Abfragen, Suchfiltersyntax
 ms.topic: article
 ms.date: 09/25/2020
-ms.openlocfilehash: 28875bd49a3d1df7418c37706e58852066bbe08a
-ms.sourcegitcommit: 4570ac533e129ff88b23f2c2b69e0140ead3a4a4
+ms.openlocfilehash: 9ea6b347da1c840ef6bd1dd32bb32f96e7be86dfb93e6c1e71cdbb06bd52ba97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "106372523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005490"
 ---
-# <a name="search-filter-syntax"></a>Such Filter Syntax
+# <a name="search-filter-syntax"></a>Suchfiltersyntax
 
-Durch Suchfilter können Sie Suchkriterien definieren und effizientere und effektive suchen bereitstellen.
+Mit Suchfiltern können Sie Suchkriterien definieren und effizientere und effektivere Suchvorgänge bereitstellen.
 
-ADSI unterstützt die LDAP-Suchfilter gemäß der Definition in RFC2254. Diese Suchfilter werden durch Unicode-Zeichen folgen dargestellt. In der folgenden Tabelle sind einige Beispiele für LDAP-Suchfilter aufgeführt.
+ADSI unterstützt die IN RFC2254 definierten LDAP-Suchfilter. Diese Suchfilter werden durch Unicode-Zeichenfolgen dargestellt. In der folgenden Tabelle sind einige Beispiele für LDAP-Suchfilter aufgeführt.
 
 
 
 | Suchfilter                                                               | BESCHREIBUNG                                                |
 |-----------------------------------------------------------------------------|------------------------------------------------------------|
-| "(objectClass = \* )"                                                          | Alle-Objekte.                                               |
-| "(& (objectCategory = Person) (objectClass = User) (! ( CN = Andy))) "                  | Alle Benutzer Objekte, aber "Andy".                               |
-| "(SN = SM \* )"                                                                 | Alle Objekte mit einem Nachnamen, der mit "SM" beginnt.          |
-| "(& (objectCategory = Person) (objectClass = Contact) ( \| (SN = Smith) (SN = Johnson)))" | Alle Kontakte mit einem Nachnamen gleich "Smith" oder "Johnson". |
+| "(objectClass= \* )"                                                          | Alle -Objekte.                                               |
+| "(&(objectCategory=person)(objectClass=user)(!( cn=andy)))                  | Alle Benutzerobjekte außer "andy".                               |
+| "(sn=sm \* )"                                                                 | Alle Objekte mit einem Nachnamen, der mit "sm" beginnt.          |
+| "(&(objectCategory=person)(objectClass=contact)( \| (sn=Smith)(sn=Smith)))" | Alle Kontakte mit einem Nachnamen gleich "Smith" oder "Smith". |
 
 
 
@@ -52,11 +52,11 @@ oder
 
 
 
-Die ADSI-Suchfilter werden auf zweierlei Weise verwendet. Sie bilden einen Teil des LDAP-Dialekts zum Übermitteln von Abfragen über den OLE DB-Anbieter. Sie werden auch mit der [**idirector ysearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle verwendet.
+Die ADSI-Suchfilter werden auf zwei Arten verwendet. Sie bilden einen Teil des LDAP-Dialekts zum Übermitteln von Abfragen über den OLE DB-Anbieter. Sie werden auch mit der [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) verwendet.
 
 ## <a name="operators"></a>Operatoren
 
-In der folgenden Tabelle werden häufig verwendete Suchfilter Operatoren aufgelistet.
+In der folgenden Tabelle sind häufig verwendete Suchfilteroperatoren aufgeführt.
 
 
 
@@ -64,8 +64,8 @@ In der folgenden Tabelle werden häufig verwendete Suchfilter Operatoren aufgeli
 |------------------|--------------------------------------------|
 | =                | Gleich                                   |
 | ~=               | Ungefähr gleich                     |
-| <=            | Lexikografisch kleiner als oder gleich    |
-| >=            | Lexikografisch größer als oder gleich |
+| <=            | Lexikografischer Kleiner als oder gleich    |
+| >=            | Lexikografischer Größer als oder gleich |
 | &                | AND                                        |
 | \|               | oder                                         |
 | !                | NICHT                                        |
@@ -74,7 +74,7 @@ In der folgenden Tabelle werden häufig verwendete Suchfilter Operatoren aufgeli
 
  
 
-Zusätzlich zu den oben aufgeführten Operatoren definiert LDAP zwei übereinstimmende Regel Objekt-IDs (OIDs), die verwendet werden können, um bitweise Vergleiche numerischer Werte auszuführen. Abgleichsregeln haben die folgende Syntax.
+Zusätzlich zu den oben genannten Operatoren definiert LDAP zwei übereinstimmende Regelobjektbezeichner (OIDs), die zum Durchführen bitweiser Vergleiche numerischer Werte verwendet werden können. Abgleichsregeln weisen die folgende Syntax auf.
 
 
 ```C++
@@ -83,23 +83,23 @@ Zusätzlich zu den oben aufgeführten Operatoren definiert LDAP zwei übereinsti
 
 
 
-" &lt; Attribut Name &gt; " ist der **ldapDisplayName** des Attributs, " &lt; rule OID &gt; " ist die OID für die abgleichsregel und " &lt; Value &gt; " ist der Wert, der für den Vergleich verwendet werden soll. Beachten Sie, dass in dieser Zeichenfolge keine Leerzeichen verwendet werden können. " &lt; Value &gt; " muss eine Dezimalzahl sein. es kann sich nicht um eine hexadezimale Zahl oder um einen konstanten Namen handeln, wie z. b. die **\_ \_ \_ \_ aktivierte Gruppentyp Sicherheit**. Weitere Informationen zu den verfügbaren Active Directory Attributen finden Sie unter [alle Attribute](/windows/desktop/ADSchema/attributes-all).
+" &lt; Attributname &gt; " ist der **lDAPDisplayName** des Attributs, " &lt; Rule OID " ist die &gt; OID für die übereinstimmende Regel, und " &lt; value " ist der &gt; Wert, der für den Vergleich verwendet werden soll. Beachten Sie, dass in dieser Zeichenfolge keine Leerzeichen verwendet werden können. " &lt; value " muss eine &gt; Dezimalzahl sein. Es darf keine Hexadezimalzahl oder ein konstanter Name wie **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** sein. Weitere Informationen zu den verfügbaren Active Directory-Attributen finden Sie unter [Alle Attribute.](/windows/desktop/ADSchema/attributes-all)
 
-In der folgenden Tabelle sind die von LDAP implementierten übereinstimmenden Regel-OIDs aufgeführt.
+In der folgenden Tabelle sind die von LDAP implementierten Übereinstimmenden Regel-OIDs aufgeführt.
 
 
 
-| Abgleichsregel OID       | Zeichen folgen Bezeichner (von ntldap. h)   | BESCHREIBUNG                                                                                                                                                                                   |
+| Abgleichsregel-OID       | Zeichenfolgenbezeichner (aus Ntldap.h)   | BESCHREIBUNG                                                                                                                                                                                   |
 |-------------------------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.840.113556.1.4.803  | **Bit der LDAP \_ -abgleichsregel \_ \_ \_**  | Eine Entsprechung wird nur gefunden, wenn alle Bits aus dem Attribut dem Wert entsprechen. Diese Regel entspricht einem bitweisen **and-** Operator.                                                                  |
-| 1.2.840.113556.1.4.804  | **Bit der LDAP- \_ abgleichsregel \_ \_ \_**   | Eine Entsprechung wird gefunden, wenn Bits aus dem Attribut mit dem Wert verglichen werden. Diese Regel entspricht einem bitweisen **or** -Operator.                                                                        |
-| 1.2.840.113556.1.4.1941 | **LDAP \_ - \_ abgleichsregel \_ in \_ Kette** | Diese Regel ist auf Filter beschränkt, die für den DN gelten. Dies ist ein spezieller "Erweiterter" Übereinstimmungs Operator, der die Kette der Herkunft in Objekten bis zum Stamm durchläuft, bis eine Entsprechung gefunden wird. |
+| 1.2.840.113556.1.4.803  | **\_ \_ LDAP-ABGLEICHSREGELBIT \_ \_ UND**  | Eine Übereinstimmung wird nur gefunden, wenn alle Bits aus dem Attribut mit dem Wert übereinstimmen. Diese Regel entspricht einem  bitweisen AND-Operator.                                                                  |
+| 1.2.840.113556.1.4.804  | **\_ \_ LDAP-ABGLEICHSREGELBIT \_ \_ ODER**   | Eine Übereinstimmung wird gefunden, wenn Bits aus dem Attribut mit dem Wert übereinstimmen. Diese Regel entspricht einem  bitweisen OR-Operator.                                                                        |
+| 1.2.840.113556.1.4.1941 | **\_LDAP-ABGLEICHSREGEL \_ \_ IN \_ KETTE** | Diese Regel ist auf Filter beschränkt, die für den DN gelten. Dies ist ein spezieller "erweiterter" Übereinstimmungsoperator, der die Kette der Ketten in Objekten bis zum Stamm durchläuft, bis eine Übereinstimmung gefunden wird. |
 
 
 
  
 
-Im folgenden Beispiel wird die Abfrage Zeichenfolge nach Gruppen Objekten durchsucht, für die das Flag für die **\_ \_ \_ Sicherheits \_ aktivierte ADS-Gruppentyp** Beachten Sie, dass der dezimale Wert der **ADS- \_ \_ Gruppentyp \_ Sicherheit \_ aktiviert** (0x80000000 = 2147483648) als Vergleichswert verwendet wird.
+Die folgende Beispielabfragezeichenfolge sucht nach Gruppenobjekten, für die das **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED-Flag** festgelegt ist. Beachten Sie, dass der Dezimalwert **ADS GROUP TYPE SECURITY \_ \_ \_ \_ ENABLED** (0x80000000 = 2147483648) für den Vergleichswert verwendet wird.
 
 
 ```C++
@@ -108,9 +108,9 @@ Im folgenden Beispiel wird die Abfrage Zeichenfolge nach Gruppen Objekten durchs
 
 
 
-Die **LDAP-abgleichsregel \_ \_ \_ in \_ Kette** ist eine passende Regel-OID, die eine Methode zur Suche nach der Herkunft eines Objekts bereitstellen soll. Viele Anwendungen, die AD und AD LDS verwenden, arbeiten in der Regel mit hierarchischen Daten, die nach über-und untergeordneten Beziehungen geordnet sind. Bisher haben Anwendungen transitiv Gruppen Erweiterungen durchgeführt, um die Gruppenmitgliedschaft zu ermitteln, die zu viel Netzwerkbandbreite verbraucht hat. Anwendungen, die benötigt werden, um mehrere Roundtrips auszuführen, um herauszufinden, ob ein Objekt "in der Kette" verfällt, wenn eine Verknüpfung bis zum Ende durchlaufen wird.
+Die **\_ LDAP-ABGLEICHSREGEL \_ \_ IN \_ CHAIN** ist eine Abgleichsregel-OID, die eine Methode zum Suchen der Empfindlichkeit eines Objekts bereitstellt. Viele Anwendungen, die AD und AD LDS verwenden, arbeiten in der Regel mit hierarchischen Daten, die nach Über-/Unterordnungsbeziehungen sortiert sind. Zuvor führten Anwendungen eine transitive Gruppenerweiterung durch, um die Gruppenmitgliedschaft zu herausfinden, die zu viel Netzwerkbandbreite beanspruchte. -Anwendungen mussten mehrere Roundtrips durchführen, um herauszufinden, ob ein Objekt "in der Kette" sinkt, wenn ein Link bis zum Ende durchlaufen wird.
 
-Ein Beispiel für eine solche Abfrage soll überprüft werden, ob ein Benutzer "user1" Mitglied der Gruppe "group1" ist. Legen Sie die Basis auf den Benutzer-DN `(cn=user1, cn=users, dc=x)` und den Bereich auf fest `base` , und verwenden Sie die folgende Abfrage.
+Ein Beispiel für eine solche Abfrage ist eine Abfrage, die überprüft, ob ein Benutzer "user1" Mitglied der Gruppe "group1" ist. Sie würden die Basis auf den Benutzer-DN und den Bereich auf festlegen `(cn=user1, cn=users, dc=x)` und die folgende Abfrage `base` verwenden.
 
 
 ```C++
@@ -119,7 +119,7 @@ Ein Beispiel für eine solche Abfrage soll überprüft werden, ob ein Benutzer "
 
 
 
-Um alle Gruppen zu suchen, in denen "user1" Mitglied ist, legen Sie die Basis auf den Gruppen Container-DN fest. `(OU=groupsOU, dc=x)` verwenden Sie z. b. und den Bereich auf `subtree` , und verwenden Sie den folgenden Filter.
+Um alle Gruppen zu finden, denen "user1" angehört, legen Sie die Basis auf den Gruppencontainer DN fest. verwenden Sie z. B. `(OU=groupsOU, dc=x)` und den Bereich auf , und verwenden Sie den folgenden `subtree` Filter.
 
 
 ```C++
@@ -128,13 +128,13 @@ Um alle Gruppen zu suchen, in denen "user1" Mitglied ist, legen Sie die Basis au
 
 
 
-Beachten Sie, dass der Bereich bei Verwendung der **LDAP-abgleichsregel \_ \_ \_ in der \_ Kette** nicht begrenzt ist – es kann `base` sich um, oder handeln `one-level` `subtree` . Einige solcher Abfragen für Teil Strukturen können mehr Prozessor intensiv sein, z. b. das Nachverfolgen von Links mit einem hohen Lüfter. Das heißt, alle Gruppen, in denen ein Benutzer Mitglied ist. Durch ineffiziente suchen werden entsprechende Ereignisprotokoll Meldungen protokolliert, wie bei jedem anderen Abfragetyp.
+Beachten Sie, dass bei Verwendung der **\_ LDAP-ABGLEICHSREGEL \_ \_ IN \_ CHAIN** der Bereich nicht beschränkt ist– er kann `base` , oder `one-level` `subtree` sein. Einige solche Abfragen für Teilstrukturen sind möglicherweise prozessorintensiver, z. B. das Suchen nach Links mit einem hohen Auffächern; Das heißt, alle Gruppen aufzulisten, denen ein Benutzer angehört. Ineffiziente Suchvorgänge protokollieren entsprechende Ereignisprotokollmeldungen, wie bei jedem anderen Abfragetyp.
 
 ## <a name="wildcards"></a>Platzhalter
 
-Sie können einem LDAP-Suchfilter auch Platzhalter und Bedingungen hinzufügen. In den folgenden Beispielen werden Teil Zeichenfolgen gezeigt, die zum Durchsuchen des Verzeichnisses verwendet werden können.
+Sie können einem LDAP-Suchfilter auch Platzhalter und Bedingungen hinzufügen. Die folgenden Beispiele zeigen Teilzeichenfolgen, die zum Durchsuchen des Verzeichnisses verwendet werden können.
 
-Alle Einträge erhalten:
+Abrufen aller Einträge:
 
 
 ```C++
@@ -143,7 +143,7 @@ Alle Einträge erhalten:
 
 
 
-Einträge mit "Bob" an einer beliebigen Stelle im allgemeinen Namen erhalten:
+Abrufen von Einträgen, die "bob" im allgemeinen Namen enthalten:
 
 
 ```C++
@@ -152,7 +152,7 @@ Einträge mit "Bob" an einer beliebigen Stelle im allgemeinen Namen erhalten:
 
 
 
-Einträge mit einem gemeinsamen Namen erhalten, der größer oder gleich "Bob" ist:
+Abrufen von Einträgen mit einem allgemeinen Namen, der größer oder gleich "bob" ist:
 
 
 ```C++
@@ -161,7 +161,7 @@ Einträge mit einem gemeinsamen Namen erhalten, der größer oder gleich "Bob" i
 
 
 
-Alle Benutzer mit einem e-Mail-Attribut erhalten:
+Abrufen aller Benutzer mit einem E-Mail-Attribut:
 
 
 ```C++
@@ -170,7 +170,7 @@ Alle Benutzer mit einem e-Mail-Attribut erhalten:
 
 
 
-Alle Benutzereinträge mit einem e-Mail-Attribut und einem Nachnamen mit dem Namen "Smith" erhalten:
+Abrufen aller Benutzereinträge mit einem E-Mail-Attribut und einem Nachnamen gleich "smith":
 
 
 ```C++
@@ -179,7 +179,7 @@ Alle Benutzereinträge mit einem e-Mail-Attribut und einem Nachnamen mit dem Nam
 
 
 
-Hiermit werden alle Benutzereinträge mit einem allgemeinen Namen, der mit "Andy", "Steve" oder "Margaret" beginnt, angezeigt:
+Abrufen aller Benutzereinträge mit einem allgemeinen Namen, der mit "andy", "steve" oder "soll" beginnt:
 
 
 ```C++
@@ -188,7 +188,7 @@ Hiermit werden alle Benutzereinträge mit einem allgemeinen Namen, der mit "Andy
 
 
 
-Alle Einträge ohne e-Mail-Attribut erhalten:
+Abrufen aller Einträge ohne E-Mail-Attribut:
 
 
 ```C++
@@ -197,7 +197,7 @@ Alle Einträge ohne e-Mail-Attribut erhalten:
 
 
 
-Die formale Definition des Suchfilters lautet wie folgt (aus [RFC 2254](https://tools.ietf.org/html/rfc2254)):
+Die formale Definition des Suchfilters lautet wie folgt (aus [RFC 2254):](https://tools.ietf.org/html/rfc2254)
 
 
 ```C++
@@ -222,35 +222,35 @@ Die formale Definition des Suchfilters lautet wie folgt (aus [RFC 2254](https://
 
 
 
-Das Token &lt; attr &gt; ist eine Zeichenfolge, die einen attributeType darstellt. Der &lt; Tokenwert &gt; ist eine Zeichenfolge, die einen AttributeValue darstellt, dessen Format vom zugrunde liegenden Verzeichnisdienst definiert wird.
+Das Token &lt; attr &gt; ist eine Zeichenfolge, die einen AttributeType darstellt. Der &lt; Tokenwert &gt; ist eine Zeichenfolge, die einen AttributeValue darstellt, dessen Format vom zugrunde liegenden Verzeichnisdienst definiert wird.
 
-Wenn ein &lt; Wert &gt; das Sternchen ( \* ), das linke Klammern Zeichen (() oder das schließende Klammer Zeichen () enthalten muss, sollte dem Zeichen ein umgekehrter Schrägstrich () vorangestellt werden \\ .
+Wenn ein &lt; Wert &gt; das Sternchen \* (), die linke Klammer (() oder die rechte Klammer ()) enthalten muss, sollte dem Zeichen der umgekehrte Schrägstrich () vorangestellt \\ werden.
 
 ## <a name="special-characters"></a>Sonderzeichen
 
-Wenn eines der folgenden Sonderzeichen als Literale im Suchfilter angezeigt werden muss, müssen Sie durch die aufgeführte Escapesequenz ersetzt werden.
+Wenn eines der folgenden Sonderzeichen im Suchfilter als Literale angezeigt werden muss, müssen sie durch die aufgelistete Escapesequenz ersetzt werden.
 
 
 
-| ASCII-Zeichen | Escapesequenzersatz |
+| ASCII-Zeichen | Escapesequenz-Ersatz |
 |-----------------|----------------------------|
 | \*              | \\2a                       |
 | (               | \\28                       |
-| )               | \\27                       |
-| \\              | \\5C                       |
-| NUL             | \\4,00                       |
-| /               | \\2F                       |
+| )               | \\29                       |
+| \\              | \\5c                       |
+| NUL             | \\00                       |
+| /               | \\2f                       |
 
 
 
  
 
 > [!Note]  
-> In Fällen, in denen ein Multibyte-Zeichensatz verwendet wird, müssen die oben aufgeführten Escapesequenzen verwendet werden, wenn die Suche von ADO mit dem SQL-Dialekt ausgeführt wird.
+> In Fällen, in denen ein Multibyte-Zeichensatz verwendet wird, müssen die oben aufgeführten Escapesequenzen verwendet werden, wenn die Suche von ADO mit dem SQL Dialekt ausgeführt wird.
 
  
 
-Darüber hinaus können beliebige Binärdaten mithilfe der Escapesequenzsyntax dargestellt werden, indem jedes Byte der Binärdaten mit dem umgekehrten Schrägstrich ( \\ ) gefolgt von zwei hexadezimalen Ziffern codiert wird. Beispielsweise wird der vier-Byte-Wert 0x00000004 \\ \\ \\ \\ in einer Filter Zeichenfolge als 00 00 00 00.
+Darüber hinaus können beliebige binäre Daten mithilfe der Escapesequenzsyntax dargestellt werden, indem jedes Byte binärer Daten mit dem umgekehrten Schrägstrich ( \\ ) codiert wird, gefolgt von zwei Hexadezimalziffern. Beispielsweise wird der 4-Byte-Wert 0x00000004 \\ in einer Filterzeichenfolge als 00 \\ \\ 00 \\ 00 04 codiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -259,13 +259,13 @@ Darüber hinaus können beliebige Binärdaten mithilfe der Escapesequenzsyntax d
 [LDAP-Dialekt](ldap-dialect.md)
 </dt> <dt>
 
-[SQL-Dialekt](sql-dialect.md)
+[SQL Dialekt](sql-dialect.md)
 </dt> <dt>
 
-[Suchen mit der idirector ysearch-Schnittstelle](searching-with-idirectorysearch.md)
+[Suchen mit der IDirectorySearch-Schnittstelle](searching-with-idirectorysearch.md)
 </dt> <dt>
 
-[Suchen mit ActiveX Data Objects](searching-with-activex-data-objects-ado.md)
+[Suchen mit ActiveX-Datenobjekten](searching-with-activex-data-objects-ado.md)
 </dt> <dt>
 
 [Suchen mit OLE DB](searching-with-ole-db.md)

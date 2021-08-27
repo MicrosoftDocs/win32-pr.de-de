@@ -1,12 +1,12 @@
 ---
-title: Getexportpath-Methode der Win32_RDMSDeploymentSettings-Klasse
-description: Ruft den Verzeichnispfad ab, in dem virtuelle Maschinen für eine Sammlung virtueller Desktops bereitgestellt werden.
+title: GetExportPath-Methode der Win32_RDMSDeploymentSettings-Klasse
+description: Ruft den Verzeichnispfad ab, in dem virtuelle Computer für eine Sammlung virtueller Desktops bereitgestellt werden.
 ms.assetid: 8df79e31-b960-46ae-b49c-8052b356e1a8
 ms.tgt_platform: multiple
 keywords:
-- Getexportpath-Methode Remotedesktopdienste
-- Getexportpath-Methode Remotedesktopdienste, Win32_RDMSDeploymentSettings-Klasse
-- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste, getexportpath-Methode
+- GetExportPath-Methode Remotedesktopdienste
+- GetExportPath-Methode Remotedesktopdienste , Win32_RDMSDeploymentSettings-Klasse
+- Win32_RDMSDeploymentSettings-Klasse Remotedesktopdienste , GetExportPath-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: baf96d1d71554f1b8ea310759d36d0918a511cbf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1b77db7a72ff91ee4c161f847f5021cc4dcfe1ad8ee46d08fb8b67be1f341850
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080120"
 ---
-# <a name="getexportpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>Getexportpath-Methode der Win32 \_ rdmsdeploymentsettings-Klasse
+# <a name="getexportpath-method-of-the-win32_rdmsdeploymentsettings-class"></a>GetExportPath-Methode der Win32 \_ RDMSDeploymentSettings-Klasse
 
-Ruft den Verzeichnispfad ab, in dem virtuelle Maschinen für eine Sammlung virtueller Desktops bereitgestellt werden.
+Ruft den Verzeichnispfad ab, in dem virtuelle Computer für eine Sammlung virtueller Desktops bereitgestellt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ uint32 GetExportPath(
 
 <dl> <dt>
 
-*Directoriypath* \[ vorgenommen\]
+*DirectoryPath* \[ out\]
 </dt> <dd>
 
 Empfängt den Verzeichnispfad.
@@ -52,9 +52,9 @@ Empfängt den Verzeichnispfad.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
+Gibt bei Erfolg 0 zurück, andernfalls einen WMI-Fehlercode.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -62,8 +62,8 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                   |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                              |
-| Namespace<br/>                | Root \\ CIMv2 \\ RDMs<br/>                                                                |
-| MOF<br/>                      | <dl> <dt>Rdmanagement. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ rdms<br/>                                                                |
+| MOF<br/>                      | <dl> <dt>RDManagement.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>RDMS.dll</dt> </dl>         |
 
 
@@ -72,7 +72,7 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben.
 
 <dl> <dt>
 
-[**Win32 \_ rdmsdeploymentsettings**](win32-rdmsdeploymentsettings.md)
+[**Win32 \_ RDMSDeploymentSettings**](win32-rdmsdeploymentsettings.md)
 </dt> </dl>
 
  

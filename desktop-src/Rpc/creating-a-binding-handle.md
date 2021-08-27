@@ -1,23 +1,23 @@
 ---
-title: Erstellen eines Bindungs Handles
-description: Das Client Programm einer verteilten Anwendung muss ein Bindungs Handle erstellen, das der RPC-Laufzeit mitteilt, mit welchem Server eine Verbindung hergestellt werden soll und wie eine Verbindung mit dem Server hergestellt werden soll.
+title: Erstellen eines Bindungshandpunkts
+description: Das Clientprogramm einer verteilten Anwendung muss ein Bindungshand handle erstellen, das die RPC-Laufzeit darüber informiert, welcher Server kontaktiert werden soll und wie der Server kontaktiert werden soll.
 ms.assetid: 52c5d0bd-f9b4-4d3f-ac7f-f9b4fb919846
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, Erstellen eines Bindungs Handles
+- Remoteprozeduraufruf RPC , Aufgaben, Erstellen eines Bindungshandpunkts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9eddced351642d916f90cd5c127d0e51b764f7ca
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 50b1d805a765649f640ff10f8cb825264e3402c8938786d183b0be351036c971
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036666"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101710"
 ---
-# <a name="creating-a-binding-handle"></a>Erstellen eines Bindungs Handles
+# <a name="creating-a-binding-handle"></a>Erstellen eines Bindungshandpunkts
 
-Das Client Programm einer verteilten Anwendung muss ein Bindungs Handle erstellen, das der RPC-Laufzeit mitteilt, mit welchem Server eine Verbindung hergestellt werden soll und wie eine Verbindung mit dem Server hergestellt werden soll.
+Das Clientprogramm einer verteilten Anwendung muss ein Bindungshand handle erstellen, das die RPC-Laufzeit darüber informiert, welcher Server kontaktiert werden soll und wie der Server kontaktiert werden soll.
 
-Das folgende Code Fragment veranschaulicht eine gängige Vorgehensweise beim Erstellen eines Bindungs Handles:
+Im folgenden Codefragment wird ein gängiger Ansatz zum Erstellen eines Bindungshandpunkts veranschaulicht:
 
 
 ```C++
@@ -41,9 +41,9 @@ RpcStringFree(&StringBinding);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

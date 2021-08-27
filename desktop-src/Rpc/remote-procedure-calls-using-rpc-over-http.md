@@ -1,39 +1,39 @@
 ---
 title: Remoteprozeduraufrufe mit dem RPC-über-HTTP-Proxy
-description: Internet Browser Programme verwenden normalerweise das Hypertext Transport-Protokoll (http) als primäres Mittel zum Durchsuchen der World Wide Web.
+description: In Webbrowserprogrammen wird häufig das Hypertext-Transportprotokoll (HTTP) als primäres Mittel zum Durchsuchen der World Wide Web verwendet.
 ms.assetid: f87262f6-fd82-4e8c-bf83-8f93791deec0
 keywords:
-- Remote Prozedur Aufruf RPC, Tasks, Verwendung von RPC/http
+- Remoteprozeduraufruf RPC , Tasks, mit RPC/HTTP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c84551500af712b1126d8f9a65cb3d02eba8c9d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2fedeb1700d798a616d3441b356f6f31867eed0399f412ed1f82923bcc4ac5f3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947311"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101660"
 ---
 # <a name="remote-procedure-calls-using-rpc-over-http"></a>Remoteprozeduraufrufe mit dem RPC-über-HTTP-Proxy
 
-Internet Browser Programme verwenden normalerweise das Hypertext Transport-Protokoll (http) als primäres Mittel zum Durchsuchen der World Wide Web. HTTP sieht daher auf den meisten Computern heute eine umfassende Nutzung vor. Microsoft hat die Funktionen seines Internet Informations Servers (IIS) erweitert, um Remote Prozedur Aufrufe mithilfe von http bereitzustellen.
+In Webbrowserprogrammen wird häufig das Hypertext-Transportprotokoll (HTTP) als primäres Mittel zum Durchsuchen der World Wide Web verwendet. HTTP wird daher derzeit auf den meisten Computern umfassend genutzt. Microsoft hat die Funktionen des Internetinformationsservers (IIS) erweitert, um Remoteprozeduraufrufdienste über HTTP bereitzustellen.
 
-Mit der Microsoft RPC-over-HTTP-Implementierung (RPC über HTTP) können RPC-Clients eine sichere und effiziente Internet Verbindung mit RPC-Serverprogrammen herstellen und Remote Prozedur Aufrufe ausführen. Dies wird durch einen Vermittler, der als RPC-über-HTTP-Proxy bezeichnet wird, oder einfach durch den RPC-Proxy erreicht.
+Mit der Rpc-over-HTTP-Implementierung von Microsoft (RPC über HTTP) können RPC-Clients eine sichere und effiziente Verbindung über das Internet mit RPC-Serverprogrammen herstellen und Remoteprozeduraufrufe ausführen. Dies erfolgt mithilfe eines Vermittlers, der als RPC-over-HTTP-Proxy oder einfach als RPC-Proxy bezeichnet wird.
 
-Der RPC-Proxy wird auf einem IIS-Computer ausgeführt. Er akzeptiert RPC-Anforderungen aus dem Internet, führt Authentifizierungs-, Validierungs-und Zugriffs Überprüfungen für diese Anforderungen aus. wenn die Anforderung alle Tests bestanden hat, leitet der RPC-Proxy die Anforderung an den RPC-Server weiter, der die tatsächliche Verarbeitung ausführt. Mit RPC über HTTP kommunizieren der RPC-Client und-Server nicht direkt. Stattdessen verwenden Sie den RPC-Proxy als Vermittler. Dieses Modell wurde aus vielen Gründen ausgewählt. Weitere Informationen finden Sie unter [RPC-über-HTTP-Sicherheit](rpc-over-http-security.md).
+Der RPC-Proxy wird auf einem IIS-Computer ausgeführt. Sie akzeptiert RPC-Anforderungen aus dem Internet, führt Authentifizierungs-, Validierungs- und Zugriffsüberprüfungen für diese Anforderungen durch. Wenn die Anforderung alle Tests besteht, leitet der RPC-Proxy die Anforderung an den RPC-Server weiter, der die eigentliche Verarbeitung ausführt. Mit RPC über HTTP kommunizieren RPC-Client und -Server nicht direkt. Stattdessen verwenden sie den RPC-Proxy als Vermittler. Dieses Modell wurde aus vielen Gründen ausgewählt. Weitere Informationen finden Sie unter [RPC über HTTP-Sicherheit.](rpc-over-http-security.md)
 
-Dieser Abschnitt bietet eine Übersicht über RPC über http in den folgenden Themen:
+Dieser Abschnitt enthält eine Übersicht über RPC über HTTP in den folgenden Themen:
 
--   [Verwenden von http als RPC-Transport](using-http-as-an-rpc-transport.md)
--   [RPC-über-HTTP-Sicherheit](rpc-over-http-security.md)
--   [System Anforderungen und Interoperabilität für RPC über http](system-requirements-and-interoperability-for-rpc-over-http.md)
--   [Konfigurieren von Computern für RPC über http](configuring-computers-for-rpc-over-http.md)
--   [Empfehlungen für RPC-over-HTTP](rpc-over-http-deployment-recommendations.md)
+-   [Verwenden von HTTP als RPC-Transport](using-http-as-an-rpc-transport.md)
+-   [RPC über HTTP-Sicherheit](rpc-over-http-security.md)
+-   [Systemanforderungen und Interoperabilität für RPC über HTTP](system-requirements-and-interoperability-for-rpc-over-http.md)
+-   [Konfigurieren von Computern für RPC über HTTP](configuring-computers-for-rpc-over-http.md)
+-   [RPC über HTTP-Bereitstellungs-Empfehlungen](rpc-over-http-deployment-recommendations.md)
 
-Informationen zu großen RPC-über-HTTP-Szenarios finden Sie unter [Microsoft RPC-Lastenausgleich](rpc-load-balancing.md).
+Informationen zu RPC über HTTP-Szenarien mit hohem Volumen finden Sie unter [Microsoft RPC Load Balancing](rpc-load-balancing.md).
 
- 
+ 
 
- 
+ 
 
 
 

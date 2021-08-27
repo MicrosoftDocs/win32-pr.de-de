@@ -1,38 +1,38 @@
 ---
-title: Registrierungs auslöserbeispiel (C++)
-description: Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn ein Task registriert wird.
+title: Beispiel für Registrierungstrigger (C++)
+description: In diesem C++-Beispiel wird veranschaulicht, wie eine Aufgabe erstellt wird, die geplant ist, Editor, wenn ein Task registriert wird.
 ms.assetid: 5e2e8fa6-66c7-4356-8fd6-22f7974791b9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 090a690601e24e1245040d0e7b394123afa94b07
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cb9b87f21f2d301bcd500b4f28e41d1e2fada63ddaa8e7c9a4c833c6359f0b15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120011330"
 ---
-# <a name="registration-trigger-example-c"></a>Registrierungs auslöserbeispiel (C++)
+# <a name="registration-trigger-example-c"></a>Beispiel für Registrierungstrigger (C++)
 
-Dieses C++-Beispiel zeigt, wie eine Aufgabe erstellt wird, die für die Ausführung von Notepad geplant ist, wenn ein Task registriert wird. Der Task enthält einen Registrierungs--Vorgang, der eine Start Grenze und eine Endgrenze für den Task sowie eine Verzögerung für den Task angibt. Die Start Grenze gibt an, wann der-Aufruf aktiviert ist, und die Verzögerung legt die Zeitspanne zwischen dem Registrieren der Aufgabe und dem Start der Aufgabe fest. Der Task enthält auch eine Aktion, die den Task zum Ausführen von Notepad angibt.
+In diesem C++-Beispiel wird veranschaulicht, wie eine Aufgabe erstellt wird, die geplant ist, Editor, wenn ein Task registriert wird. Die Aufgabe enthält einen Registrierungstrigger, der eine Start- und eine Endgrenze für den Task sowie eine Verzögerung für den Task angibt. Die Startgrenze gibt an, wann der Trigger aktiviert wird, und die Verzögerung legt die Zeit zwischen der Registrierung und dem Start des Task fest. Der Task enthält auch eine Aktion, die den Task angibt, der ausgeführt Editor.
 
 > [!Note]  
-> Wenn eine Aufgabe mit einem Registrierungs-ausgelöst wird, wird die Aufgabe ausgeführt, nachdem das Update ausgeführt wurde.
+> Wenn eine Aufgabe mit einem Registrierungstrigger aktualisiert wird, wird die Aufgabe nach dem Update ausgeführt.
 
- 
+ 
 
-Im folgenden Verfahren wird beschrieben, wie ein Task zum Starten einer ausführbaren Datei geplant wird, wenn der Task registriert wird.
+Im folgenden Verfahren wird beschrieben, wie Sie einen Task so planen, dass eine ausführbare Datei gestartet wird, wenn der Task registriert wird.
 
-**So planen Sie den Start von Notepad, wenn ein Task registriert wird**
+**So planen Sie Editor, wenn eine Aufgabe registriert wird**
 
-1.  Initialisieren Sie com, und legen Sie allgemeine com-Sicherheit fest.
-2.  Erstellen Sie das [**ITaskService**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) -Objekt. Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
-3.  Rufen Sie einen Aufgaben Ordner ab, in dem eine Aufgabe erstellt werden soll. Verwenden Sie die [**ITaskService:: GetFolder**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) -Methode, um den Ordner zu erhalten, und die [**ITaskService:: newtask**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) -Methode zum Erstellen des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts.
-4.  Definieren von Informationen über den Task mithilfe des [**itaskdefinition**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) -Objekts, z. b. Registrierungsinformationen für den Task. Verwenden Sie die [**RegistrationInfo-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der **itaskdefinition** -Schnittstelle, um die Aufgabeninformationen zu definieren.
-5.  Erstellen Sie einen Registrierungs Trigger mithilfe der Triggers- [**Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) , um auf die [**ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zuzugreifen. Verwenden Sie die [**ITriggerCollection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) -Methode (geben Sie den Typ des zu erstellenden Triggers an), um einen Registrierungs Trigger zu erstellen.
-6.  Erstellen Sie eine Aktion für die Ausführung der Aufgabe mithilfe der [**Actions-Eigenschaft von itaskdefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) , um auf die [**IAction Collection**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) -Schnittstelle für den Task zuzugreifen. Verwenden Sie die [**IAction Collection:: Create**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) -Methode, um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) -Objekt verwendet, das eine Aktion darstellt, die einen Befehlszeilen Vorgang ausführt.
-7.  Registrieren Sie die Aufgabe mit der [**ITaskFolder:: RegisterTaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition) -Methode.
+1.  Initialisieren Sie COM, und legen Sie allgemeine COM-Sicherheit fest.
+2.  Erstellen Sie das [**ITaskService-Objekt.**](/windows/desktop/api/taskschd/nn-taskschd-itaskservice) Mit diesem Objekt können Sie Aufgaben in einem angegebenen Ordner erstellen.
+3.  Sie können einen Aufgabenordner zum Erstellen einer Aufgabe in erstellen. Verwenden Sie [**die ITaskService::GetFolder-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-getfolder) um den Ordner zu erhalten, und die [**ITaskService::NewTask-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-itaskservice-newtask) um das [**ITaskDefinition-Objekt zu**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) erstellen.
+4.  Definieren Sie Informationen zur Aufgabe mithilfe des [**ITaskDefinition-Objekts,**](/windows/desktop/api/taskschd/nn-taskschd-itaskdefinition) z. B. die Registrierungsinformationen für den Task. Verwenden Sie [**die RegistrationInfo-Eigenschaft von ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_registrationinfo) und andere Eigenschaften der **ITaskDefinition-Schnittstelle,** um die Aufgabeninformationen zu definieren.
+5.  Erstellen Sie einen Registrierungstrigger mithilfe [**der Trigger-Eigenschaft von ITaskDefinition,**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_triggers) um auf [**die ITriggerCollection**](/windows/desktop/api/taskschd/nn-taskschd-itriggercollection) für die Aufgabe zu zugreifen. Verwenden Sie [**die ITriggerCollection::Create-Methode**](/windows/desktop/api/taskschd/nf-taskschd-itriggercollection-create) (unter Angabe des Triggertyps, den Sie erstellen möchten), um einen Registrierungstrigger zu erstellen.
+6.  Erstellen Sie eine Aktion für die auszuführende Aufgabe, indem Sie mithilfe der Actions-Eigenschaft von [**ITaskDefinition**](/windows/desktop/api/taskschd/nf-taskschd-itaskdefinition-get_actions) auf die [**IActionCollection-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-iactioncollection) für die Aufgabe zugreifen. Verwenden Sie [**die IActionCollection::Create-Methode,**](/windows/desktop/api/taskschd/nf-taskschd-iactioncollection-create) um den Typ der Aktion anzugeben, die Sie erstellen möchten. In diesem Beispiel wird ein [**IExecAction-Objekt**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) verwendet, das eine Aktion darstellt, die einen Befehlszeilenvorgang ausgeführt.
+7.  Registrieren Sie die Aufgabe mithilfe der [**ITaskFolder::RegisterTaskDefinition-Methode.**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertaskdefinition)
 
-Im folgenden Beispiel wird gezeigt, wie Sie einen Task so planen, dass der Editor 30 Sekunden nach der Registrierung der Aufgabe ausgeführt wird.
+Das folgende C++-Beispiel zeigt, wie sie eine Aufgabe 30 Sekunden Editor, nachdem die Aufgabe registriert wurde, ausgeführt wird.
 
 
 ```C++
@@ -386,12 +386,12 @@ int __cdecl wmain()
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_PLAYTO Meldung (VFW. h)
-description: Die mciwndm \_ playto-Nachricht gibt den Inhalt eines MCI-Geräts von der aktuellen Position bis zur angegebenen Endposition oder bis zur Wiedergabe durch einen anderen Befehl wieder.
+title: MCIWNDM_PLAYTO (Vfw.h)
+description: Die MCIWNDM PLAYTO-Nachricht gibt den Inhalt eines MCI-Geräts von der aktuellen Position bis zum angegebenen Endspeicherort oder so lange wieder, bis die Wiedergabe durch einen anderen \_ Befehl beendet wird.
 ms.assetid: ed940ee7-7b96-47da-99d3-6697f8a2e3d5
 keywords:
-- MCIWNDM_PLAYTO-Nachricht (Multimedia)
+- MCIWNDM_PLAYTO von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7cf0104204dc0306615ead91be036459cdf3c11d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 61004706c8dfacb05ad47c6ddf261ac813d58f5076dfdd4e134896b3f8c646e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105429"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037940"
 ---
-# <a name="mciwndm_playto-message"></a>Mciwndm \_ playto-Meldung
+# <a name="mciwndm_playto-message"></a>MCIWNDM \_ PLAYTO-Nachricht
 
-Die **mciwndm \_ playto** -Nachricht gibt den Inhalt eines MCI-Geräts von der aktuellen Position bis zur angegebenen Endposition oder bis zur Wiedergabe durch einen anderen Befehl wieder. Wenn die angegebene Endposition hinter dem Ende des Inhalts liegt, wird die Wiedergabe am Ende des Inhalts angehalten. Sie können diese Nachricht explizit oder mithilfe des Makros [**mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto) senden.
+Die **MCIWNDM \_ PLAYTO-Nachricht** gibt den Inhalt eines MCI-Geräts von der aktuellen Position bis zum angegebenen Endspeicherort oder so lange wieder, bis die Wiedergabe durch einen anderen Befehl beendet wird. Wenn sich die angegebene Endposition hinter dem Ende des Inhalts befindet, wird die Wiedergabe am Ende des Inhalts beendet. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndPlayTo-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto) senden.
 
 
 ```C++
@@ -38,7 +38,7 @@ lParam = (LPARAM) (LONG) lEnd;
 
 <dl> <dt>
 
-<span id="lEnd"></span><span id="lend"></span><span id="LEND"></span>*auszu*
+<span id="lEnd"></span><span id="lend"></span><span id="LEND"></span>*Verleihen*
 </dt> <dd>
 
 Endposition. Die Einheiten für die Endposition hängen vom aktuellen Zeitformat ab.
@@ -47,13 +47,13 @@ Endposition. Die Einheiten für die Endposition hängen vom aktuellen Zeitformat
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Makro wird mithilfe der Makros " [**mciwndseek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek) " und " [**mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto) " definiert, die wiederum den MCI-Befehl " [ \_ Seek](mci-seek.md) " und die **mciwndm- \_ playto** -Nachricht verwenden.
+Dieses Makro wird mithilfe der [**Makros MCIWndSeek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek) und [**MCIWndPlayTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto) definiert, die wiederum den [MCI \_ SEEK-Befehl](mci-seek.md) und die **MCIWNDM \_ PLAYTO-Nachricht** verwenden.
 
-Sie können auch einen Start-und einen endspeicherort für die Wiedergabe angeben, indem Sie das [**mciwndplayfromto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto) -Makro verwenden.
+Sie können auch mithilfe des [**MCIWndPlayFromTo-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto) sowohl einen Start- als auch einen Endort für die Wiedergabe angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,7 +63,7 @@ Sie können auch einen Start-und einen endspeicherort für die Wiedergabe angebe
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
@@ -71,16 +71,16 @@ Sie können auch einen Start-und einen endspeicherort für die Wiedergabe angebe
 
 <dl> <dt>
 
-[MCI- \_ Suche](mci-seek.md)
+[MCI \_ SEEK](mci-seek.md)
 </dt> <dt>
 
-[**Mciwndplayfromto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
+[**MCIWndPlayFromTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
 </dt> <dt>
 
-[**Mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
+[**MCIWndPlayTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
 </dt> <dt>
 
-[**Mciwndseek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek)
+[**MCIWndSeek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TBM_GETSELSTART Meldung (kommstrg. h)
-description: Ruft die Anfangsposition des aktuellen Auswahl Bereichs in einer TrackBar ab.
+title: TBM_GETSELSTART-Nachricht (Commctrl.h)
+description: Ruft die Anfangsposition des aktuellen Auswahlbereichs in einer Trackleiste ab.
 ms.assetid: 0000df2a-c40d-40c2-b120-e5d4fe6c5016
 keywords:
-- Windows-Steuerelemente für TBM_GETSELSTART Meldung
+- TBM_GETSELSTART Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0af796c57adb3615241a8f5b702ff58062468509
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a654bfcf8756bee5b39ec9fc97b82ffe84e8e48ba39f4ca2f9fab732d0d1962e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046420"
 ---
-# <a name="tbm_getselstart-message"></a>TBM \_ getselstart-Nachricht
+# <a name="tbm_getselstart-message"></a>TBM \_ GETSELSTART-Nachricht
 
-Ruft die Anfangsposition des aktuellen Auswahl Bereichs in einer TrackBar ab.
+Ruft die Anfangsposition des aktuellen Auswahlbereichs in einer Trackleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Anfangsposition des aktuellen Auswahl Bereichs in einer TrackBar ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen 32-Bit-Wert zurück, der die Anfangsposition des aktuellen Auswahl Bereichs angibt.
+Gibt einen 32-Bit-Wert zurück, der die Anfangsposition des aktuellen Auswahlbereichs angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatvorlagen [**\_ Bereich**](trackbar-control-styles.md) bei der Erstellung angegeben haben.
+Eine Trackleiste kann nur einen Auswahlbereich aufweisen, wenn Sie beim Erstellen den [**\_ TBS-STIL "ENABLESELRANGE"**](trackbar-control-styles.md) angegeben haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatv
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,19 +59,19 @@ Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatv
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM- \_ getselend**](tbm-getselend.md)
+[**TBM \_ GETSELEND**](tbm-getselend.md)
 </dt> <dt>
 
-[**TBM- \_ Sekunden**](tbm-setsel.md)
+[**TBM \_ SETSEL**](tbm-setsel.md)
 </dt> <dt>
 
-[**TBM- \_ setselend**](tbm-setselend.md)
+[**TBM \_ SETSELEND**](tbm-setselend.md)
 </dt> <dt>
 
-[**TBM- \_ setselstart**](tbm-setselstart.md)
+[**TBM \_ SETSELSTART**](tbm-setselstart.md)
 </dt> </dl>
 
  

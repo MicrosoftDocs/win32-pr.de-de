@@ -1,21 +1,21 @@
 ---
-title: Plug-in-Wrapper Funktionen
-description: Wrapper Funktionen, die es Ihnen ermöglichen, eine öffentliche Funktion auf jedem Adapter aufzurufen, der an die Pipeline angefügt ist, ohne manuell einen Zeiger auf den Adapter zu beschaffen.
+title: Plug-In-Wrapperfunktionen
+description: Wrapperfunktionen, mit denen Sie eine öffentliche Funktion auf jedem Adapter aufrufen können, der an die Pipeline angefügt ist, ohne manuell einen Zeiger auf den Adapter zu erhalten.
 ms.assetid: a87536bf-3a10-4062-a509-db7f03172307
 keywords:
-- API-Windows-Biometrieframework API (Windows-Biometrieframework API), Plug-in-Wrapper Funktionen
+- Windows Biometric Framework API Windows Biometric Framework API , Plug-In-Wrapperfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e73d7f935ebe1a2dab047f8dd3a09e0bf6ed3855
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e2b3f6991d0723f284bb95ecfd40d7931c48aa8647fb52e2b34a959791a7338b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856711"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101250"
 ---
-# <a name="plug-in-wrapper-functions"></a>Plug-in-Wrapper Funktionen
+# <a name="plug-in-wrapper-functions"></a>Plug-In-Wrapperfunktionen
 
-Die Windows-Biometrieframework-API umfasst Wrapper Funktionen, die es Ihnen ermöglichen, eine öffentliche Funktion auf jedem an die Pipeline angefügten Adapter aufzurufen, ohne manuell einen Zeiger auf den Adapter zu beschaffen. Jeder Wrapper überprüft die Eingabeargumente, Ruft einen Adapter Zeiger ab und ruft die angeforderte Funktion auf. Der **wbioenginesethashalgorithm** -Wrapper hat z. b. die folgende Signatur.
+Die Windows Biometric Framework-API enthält Wrapperfunktionen, mit denen Sie eine öffentliche Funktion auf jedem Adapter aufrufen können, der an die Pipeline angefügt ist, ohne manuell einen Zeiger auf den Adapter zu erhalten. Jeder Wrapper überprüft die Eingabeargumente, ruft einen Adapterzeiger ab und ruft die angeforderte Funktion auf. Der **WbioEngineSetHashAlgorithm-Wrapper** verfügt beispielsweise über die folgende Signatur.
 
 
 ```C++
@@ -45,7 +45,7 @@ WbioEngineSetHashAlgorithm(
 
 
 
-Die Funktion überprüft, ob das *Pipeline* Argument nicht **null** ist, dass ein Engine-Adapter vorhanden ist, und dass die [**engineadaptersethashalgorithm**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_set_hash_algorithm_fn) -Funktion vorhanden ist. Alle Wrapper Funktionen sind in der Header Datei "winbio \_ Adapter. h" definiert. In den folgenden Themen werden die verfügbaren Wrapper erläutert.
+Die Funktion überprüft, ob das *Pipeline-Argument* nicht **NULL** ist, ob ein Engine-Adapter vorhanden ist und dass die [**EngineAdapterSetHashAlgorithm-Funktion**](/windows/desktop/api/Winbio_adapter/nc-winbio_adapter-pibio_engine_set_hash_algorithm_fn) vorhanden ist. Alle Wrapperfunktionen werden in der Headerdatei Winbio \_ adapter.h definiert. In den folgenden Themen werden die verfügbaren Wrapper behandelt.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -53,9 +53,9 @@ Die Funktion überprüft, ob das *Pipeline* Argument nicht **null** ist, dass ei
 
 | Thema                                                               | BESCHREIBUNG                                                                                                                        |
 |---------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [Engine-Adapter Wrapper](engine-adapter-wrappers.md)<br/>   | Funktionen, die Sie verwenden können, um Funktionen für den Engine-Adapter aufzurufen. Diese Funktionen sind in winbio \_ Adapter. h definiert.<br/>  |
-| [Sensor Adapter-Wrapper](sensor-adapter-wrappers.md)<br/>   | Funktionen, die Sie verwenden können, um Funktionen auf dem Sensor Adapter aufzurufen. Diese Funktionen sind in winbio \_ Adapter. h definiert.<br/>  |
-| [Wrapper für Speicher Adapter](storage-adapter-wrappers.md)<br/> | Funktionen, die Sie verwenden können, um Funktionen auf Ihrem Speicher Adapter aufzurufen. Diese Funktionen sind in winbio \_ Adapter. h definiert.<br/> |
+| [Wrapper des Engine-Adapters](engine-adapter-wrappers.md)<br/>   | Funktionen, die Sie zum Aufrufen von Funktionen auf dem Engine-Adapter verwenden können. Diese Funktionen werden in Winbio \_ adapter.h definiert.<br/>  |
+| [Wrapper für Sensoradapter](sensor-adapter-wrappers.md)<br/>   | Funktionen, die Sie verwenden können, um Funktionen auf Ihrem Sensoradapter aufzurufen. Diese Funktionen werden in Winbio \_ adapter.h definiert.<br/>  |
+| [Storage Adapterwrapper](storage-adapter-wrappers.md)<br/> | Funktionen, mit denen Sie Funktionen auf Ihrem Speicheradapter aufrufen können. Diese Funktionen werden in Winbio \_ adapter.h definiert.<br/> |
 
 
 
@@ -65,7 +65,7 @@ Die Funktion überprüft, ob das *Pipeline* Argument nicht **null** ist, dass ei
 
 <dl> <dt>
 
-[Plug-in-Referenz](plug-in-reference.md)
+[Plug-In-Referenz](plug-in-reference.md)
 </dt> </dl>
 
  

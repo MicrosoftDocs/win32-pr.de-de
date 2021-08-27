@@ -1,15 +1,15 @@
 ---
 title: Attribute (VML)
-description: In diesem Artikel werden die Attribute des Shape-Elements in VML aufgeführt. VML ist seit Windows Internet Explorer 9 veraltet.
+description: In diesem Artikel werden die Attribute des Shape-Elements in VML aufgelistet. VML ist seit Windows Internet Explorer 9 veraltet.
 ms.assetid: 0EBA02C8-3F44-492E-BC55-AD56849093D2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a369ce7e5ec416ec3e9c36588dc1fc58a7d0701
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: 111594db2e210166521b2b770dee886f1cfee37a7cc9b20866d19930b96ac5e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007910"
 ---
 # <a name="attributes-vml"></a>Attribute (VML)
 
@@ -24,7 +24,7 @@ ms.locfileid: "112262742"
 -   [BorderRightColor](msdn-online-vml-borderrightcolor-attribute.md)
 -   [BorderTopColor](msdn-online-vml-bordertopcolor-attribute.md)
 -   [Kugel](msdn-online-vml-bullet-attribute.md)
--   [Button](msdn-online-vml-button-attribute.md) (Schaltfläche)
+-   [Schaltfläche](msdn-online-vml-button-attribute.md)
 -   [BWMode](msdn-online-vml-bwmode-attribute.md)
 -   [BWNormal](msdn-online-vml-bwnormal-attribute.md)
 -   [BWPure](msdn-online-vml-bwpure-attribute.md)
@@ -48,10 +48,10 @@ ms.locfileid: "112262742"
 -   [HRWidth](msdn-online-vml-hrwidth-attribute.md)
 -   [ID](id-attribute--vml.md)
 -   [Left](msdn-online-vml-left-attribute.md)
--   [Margin-Bottom](msdn-online-vml-margin-bottom-attribute.md)
+-   [Rand-unten](msdn-online-vml-margin-bottom-attribute.md)
 -   [Rand links](msdn-online-vml-margin-left-attribute.md)
--   [Rand-rechts](msdn-online-vml-margin-right-attribute.md)
--   [Rand oben](msdn-online-vml-margin-top-attribute.md)
+-   [Rand nach rechts](msdn-online-vml-margin-right-attribute.md)
+-   [Margin-Top](msdn-online-vml-margin-top-attribute.md)
 -   [Onmouseover](msdn-online-vml-onmouseover-attribute.md)
 -   [MSO-Position-Horizontal-Relative](msdn-online-vml-mso-position-horizontal-relative-attribute.md)
 -   [MSO-Position-Vertical-Relative](msdn-online-vml-mso-position-vertical-relative-attribute.md)
@@ -65,7 +65,7 @@ ms.locfileid: "112262742"
 -   [MSO-Wrap-Distance-Top](msdn-online-vml-mso-wrap-distance-top-attribute.md)
 -   [OLEIcon](msdn-online-vml-oleicon-attribute.md)
 -   [OnEd](msdn-online-vml-oned-attribute.md)
--   [Pfad](msdn-online-vml-path-attribute.md)
+-   [Path](msdn-online-vml-path-attribute.md)
 -   [Position](position-attribute--shape--vml.md)
 -   [PreferRelative](msdn-online-vml-preferrelative-attribute.md)
 -   [Drucken](msdn-online-vml-print-attribute.md)

@@ -1,19 +1,19 @@
 ---
-title: An eine GDI-Oberfläche Renderen
-description: An eine GDI-Oberfläche Renderen
+title: Rendern auf einer GDI-Oberfläche
+description: Rendern auf einer GDI-Oberfläche
 ms.assetid: a6096ff5-1e6e-4edb-b455-ea5d205072ff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ff292feb2250a4dd81abeb62d8ee48ebfb4488b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 20df241e379e9a133cb662ea141fa27c86a4bb486c8ffba311423cb9afd83fbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048490"
 ---
-# <a name="render-to-a-gdi-surface"></a>An eine GDI-Oberfläche Renderen
+# <a name="render-to-a-gdi-surface"></a>Rendern auf einer GDI-Oberfläche
 
-In einigen Fällen möchten Sie möglicherweise in der Lage sein, [DirectWrite](direct-write-portal.md) -Text auf einer GDI-Oberfläche anzuzeigen. Die [**idschreitebitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) -Schnittstelle kapselt eine Bitmap und einen Gerätekontext zum renderingtext. Sie erstellen ein **idwrite-bitmaprendertarget** -Objekt, indem Sie die [**idschreitegdiinterop:: deatebitmaprendertarget**](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createbitmaprendertarget) -Methode verwenden, wie im folgenden Code gezeigt.
+In einigen Fällen möchten Sie möglicherweise [](direct-write-portal.md) in der Lage sein, DirectWrite auf einer GDI-Oberfläche anzuzeigen. Die [**IDWriteBitmapRenderTarget-Schnittstelle kapselt**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) eine Bitmap und einen Gerätekontext zum Rendern von Text. Sie erstellen eine **IDWriteBitmapRenderTarget** mithilfe der [**IDWriteGdiInterop::CreateBitmapRenderTarget-Methode,**](/windows/win32/api/dwrite/nf-dwrite-idwritegdiinterop-createbitmaprendertarget) wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -25,13 +25,13 @@ if (SUCCEEDED(hr))
 
 
 
-Um mit [**idwrite-bitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget)geresgt werden zu können, müssen Sie eine benutzerdefinierte Rückruf Schnittstelle für TextRenderer implementieren, die von der [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) -Schnittstelle abgeleitet ist. Sie müssen Methoden zum Zeichnen von Symbol Lauf-, unterstrichen, durchgestrichen, Inline Objekten usw. implementieren. Eine umfassende Liste der Methoden finden Sie auf der Referenzseite zu [**idschreitetextrenderer**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) . Nicht jede Methode muss implementiert werden, Sie kann einfach " **E \_ notimpl**" zurückgeben, und das Zeichnen wird fortgesetzt.
+Zum Rendern mit einer [**IDWriteBitmapRenderTarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget)müssen Sie eine benutzerdefinierte Textrenderer-Rückrufschnittstelle implementieren, die von der [**IDWriteTextRenderer-Schnittstelle abgeleitet**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) wird. Sie müssen Methoden zum Zeichnen einer Glyphen-Ausführung, einer Unterstreichung, eines Durchstrichs, von Inlineobjekten und so weiter implementieren. Eine vollständige Liste der Methoden finden Sie auf der [**Referenzseite zu IDWriteTextRenderer.**](/windows/win32/api/dwrite/nn-dwrite-idwritetextrenderer) Nicht jede Methode muss implementiert werden, sie kann einfach **E \_ NOTIMPL zurückgeben,** und das Zeichnen wird fortgesetzt.
 
-Anschließend können Sie den Text mithilfe der [**idwrite-Textlayout::D RAW**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) -Methode zeichnen und die Rückruf Schnittstelle übergeben, die Sie als Parameter implementiert haben. Die **idwrite-Textlayout::D RAW** -Methode ruft die Methoden des von Ihnen bereitgestellten benutzerdefinierten rendererrückrufs auf. Die [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun), [**drawunder Line**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline)-, [**drawinlineobject**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)-und [**drawstrikethrough**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) -Methoden führen die Zeichnungsfunktionen aus.
+Anschließend können Sie den Text zeichnen, indem Sie die [**IDWriteTextLayout::D raw-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextlayout-draw) verwenden und die Rückrufschnittstelle übergeben, die Sie als Parameter implementiert haben. Die **IDWriteTextLayout::D raw-Methode** ruft die Methoden des von Ihnen zur Verfügung stellenden benutzerdefinierten Rendererrückrufs auf. Die [**DrawGlyphRun-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) [**DrawUnderline-,**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawunderline) [**DrawInlineObject-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawinlineobject)und [**DrawStrikethrough-Methoden**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawstrikethrough) führen die Zeichnungsfunktionen aus.
 
-In ihrer Implementierung von [**DrawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun)können Sie die [**idwrite-bitmaprendertarget::D rawglyphrun-**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) Methode aufrufen, um die Symbole zu zeichnen. Das Rendering des unterstrichen, durchgestrichen und von Inline Objekten muss von Ihrem benutzerdefinierten Renderer erfolgen.
+Rufen Sie in Ihrer Implementierung von [**DrawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun)die [**IDWriteBitmapRenderTarget::D rawGlyphRun-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) auf, um die Glyphen zu zeichnen. Das Rendern der Unterstreichungs-, Durchgestrichen- und Inlineobjekte muss von Ihrem benutzerdefinierten Renderer durchgeführt werden.
 
-[**Idwrite-bitmaprendertarget::D rawglyphrun**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) weist einen optionalen Wiederholungs Parameter auf, der die Begrenzungen des Bereichs enthält, in dem der Text gezeichnet wurde. Sie können diese Informationen verwenden, um das Begrenzungs Rechteck für den Gerätekontext mit der [**setboundsrect**](/windows/win32/api/wingdi/nf-wingdi-setboundsrect) -Funktion festzulegen, die von GDI bereitgestellt wird. Der folgende Code ist ein Beispiel für die Implementierung der [**DrawGlyphRun-**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) Methode eines benutzerdefinierten Renderers.
+[**IDWriteBitmapRenderTarget::D rawGlyphRun**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-drawglyphrun) verfügt über einen optionalen RECT out-Parameter, der die Begrenzungen des Bereichs enthält, in dem der Text gezeichnet wurde. Sie können diese Informationen verwenden, um das umgebundene Rechteck für den Gerätekontext mit der Von GDI bereitgestellten [**SetBoundsRect-Funktion**](/windows/win32/api/wingdi/nf-wingdi-setboundsrect) zu setzen. Der folgende Code ist eine Beispielimplementierung der [**DrawGlyphRun-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritetextrenderer-drawglyphrun) eines benutzerdefinierten Renderers.
 
 
 ```C++
@@ -67,9 +67,9 @@ STDMETHODIMP GdiTextRenderer::DrawGlyphRun(
 
 
 
-Die [**idschreitebitmaprendertarget**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) -Schnittstelle wird in einen Gerätekontext (DC) im Arbeitsspeicher gerendert. Sie erhalten ein Handle für diesen Domänen Controller, indem Sie die [**idschreitebitmaprendertarget:: getmemorydc**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-getmemorydc) -Methode verwenden. Sobald die Zeichnung ausgeführt wurde, muss der Speicher-DC des Objekts **idschreitebitmaprendertarget** auf die Ziel-GDI-Oberfläche kopiert werden.
+Die [**IDWriteBitmapRenderTarget-Schnittstelle**](/windows/win32/api/dwrite/nn-dwrite-idwritebitmaprendertarget) wird in einem Gerätekontext (DC) im Arbeitsspeicher gerendert. Sie erhalten mithilfe der [**IDWriteBitmapRenderTarget::GetMemoryDC-Methode**](/windows/win32/api/dwrite/nf-dwrite-idwritebitmaprendertarget-getmemorydc) ein Handle für diesen DC. Sobald die Zeichnung ausgeführt wurde, muss der Arbeitsspeicher-DC des **IDWriteBitmapRenderTarget-Objekts** auf die GDI-Zieloberfläche kopiert werden.
 
-Sie können das umschließende Rechteck mithilfe der [**getboundsrect**](/windows/win32/api/wingdi/nf-wingdi-getboundsrect) -Funktion abrufen und dann das umschließende Rechteck mit der [**BitBLT**](/windows/win32/api/wingdi/nf-wingdi-bitblt) -Funktion verwenden, um den gerenderten [DirectWrite](direct-write-portal.md) -Text aus dem Arbeitsspeicher-DC auf die GDI-Oberfläche zu kopieren, wie im folgenden Code gezeigt.
+Sie können das umgebundene Rechteck mithilfe der [**GetBoundsRect-Funktion**](/windows/win32/api/wingdi/nf-wingdi-getboundsrect) abrufen und dann das umgebundene Rechteck mit der [**BitBlt-Funktion**](/windows/win32/api/wingdi/nf-wingdi-bitblt) verwenden, um den gerenderten [DirectWrite-Text](direct-write-portal.md) aus dem Speicherdomänencontroller auf die GDI-Oberfläche zu kopieren, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -86,6 +86,6 @@ BitBlt(
 
 
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-title: Iagentspeechinputproperties GetEnabled
-description: Iagentspeechinputproperties GetEnabled
+title: IAgentSpeechInputProperties GetEnabled
+description: IAgentSpeechInputProperties GetEnabled
 ms.assetid: 5731f9ad-eb2e-4a79-a724-b3c263235c8c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c95613398bf79b2446d2bc572864f69ad1ad92ad
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 404bd6f0348487c8e039c247f5a9368359133be9e3df76b884115679a2961a97
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114670"
 ---
-# <a name="iagentspeechinputpropertiesgetenabled"></a>Iagentspeechinputproperties:: GetEnabled
+# <a name="iagentspeechinputpropertiesgetenabled"></a>IAgentSpeechInputProperties::GetEnabled
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT GetEnabled(
@@ -27,16 +27,16 @@ Ruft einen Wert ab, der angibt, ob die installierte Spracherkennungs-Engine akti
 
 <dl> <dt>
 
-<span id="pbEnabled"></span><span id="pbenabled"></span><span id="PBENABLED"></span>*pbenabled*
+<span id="pbEnabled"></span><span id="pbenabled"></span><span id="PBENABLED"></span>*pbEnabled*
 </dt> <dd>
 
-Adresse einer Variablen, die **true** empfängt, wenn die Sprach-Engine aktuell aktiviert ist, und **false** , wenn Sie deaktiviert ist.
+Adresse einer Variablen, die **True** empfängt, wenn die Sprach-Engine derzeit aktiviert ist, und **FALSE,** wenn diese deaktiviert ist.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

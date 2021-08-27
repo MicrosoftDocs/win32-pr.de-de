@@ -1,9 +1,9 @@
 ---
 title: WMDM_PROP_VALUES_ENUM Struktur
-description: Die Enum-Struktur der WMDM- \_ Prop- \_ Werte \_ enthält einen Aufzählungs Satz gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaften Konfiguration.
+description: Die WMDM PROP VALUES ENUM-Struktur enthält einen aufzählten Satz gültiger Werte für eine bestimmte Eigenschaft \_ \_ in einer \_ bestimmten Eigenschaftenkonfiguration.
 ms.assetid: 8094f3c0-a7ed-4e63-8503-aaac3fd9c012
 keywords:
-- WMDM_PROP_VALUES_ENUM Struktur von Windows-Medien Device Manager
+- WMDM_PROP_VALUES_ENUM Struktur von Windows Media Geräte-Manager
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1c70088d57189dd36d360bc8910a15717d964ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 35766ed71b864c5eb7f0bbbebf5eda384a25e174501aa2a56e790840a4c636c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004790"
 ---
-# <a name="wmdm_prop_values_enum-structure"></a>Enumerationsstruktur der WMDM- \_ Prop- \_ Werte \_
+# <a name="wmdm_prop_values_enum-structure"></a>WMDM \_ PROP \_ VALUES \_ ENUM-Struktur
 
-Die **\_ \_ \_ enum-Struktur der WMDM-Prop-Werte** enthält einen Aufzählungs Satz gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaften Konfiguration.
+Die **WMDM \_ PROP VALUES \_ \_ ENUM-Struktur** enthält einen aufzählten Satz gültiger Werte für eine bestimmte Eigenschaft in einer bestimmten Eigenschaftenkonfiguration.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,25 +41,25 @@ typedef struct _WMDM_PROP_VALUES_ENUM {
 
 <dl> <dt>
 
-**cenum Values**
+**cEnumValues**
 </dt> <dd>
 
-Anzahl von Enumerationswerten.
+Anzahl der aufgezählten Werte.
 
 </dd> <dt>
 
-**pvalues**
+**pValues**
 </dt> <dd>
 
-Zeiger auf ein Array von-Werten. Die Größe des Arrays ist gleich dem Wert von " **cenum Values**".
+Zeiger auf ein Array von Werten. Die Größe des Arrays entspricht dem Wert von **cEnumValues**.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird in der-Struktur der **WMDM- \_ Prop \_** -Struktur verwendet, um einen enumerierten Satz gültiger Werte zu beschreiben. Ein aufgelisteter Satz gültiger Werte ist anwendbar, wenn \_ \_ \_ \_ \_ die Enumeration für die Enumeration der Werte für die WMDM-Enumeration gültige Werte aus der WMDM-Enumeration gültig ist. **\_ \_ \_ \_ \_**
+Diese Struktur wird in der **WMDM \_ PROP \_ DESC-Struktur** verwendet, um einen enumerierten Satz gültiger Werte zu beschreiben. Ein aufzählter Satz gültiger Werte ist anwendbar, wenn WMDM \_ ENUM PROP VALID VALUES ENUM aus der \_ \_ \_ \_ **WMDM \_ ENUM \_ PROP VALID VALUES \_ \_ \_ FORM-Enumeration ausgewählt** wird.
 
-Der Aufrufer muss den von **pvalues** verwendeten Arbeitsspeicher freigeben. Ein Beispiel hierfür finden Sie unter [**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md).
+Der Aufrufer ist erforderlich, um den von **pValues** verwendeten Arbeitsspeicher frei zu geben. Ein Beispiel hierfür finden Sie unter [**WMDM \_ FORMAT \_ CAPABILITY**](wmdm-format-capability.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,30 +67,30 @@ Der Aufrufer muss den von **pvalues** verwendeten Arbeitsspeicher freigeben. Ein
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>WMDM. idl</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdm.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMDMDevice3:: getformatcapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
+[**IWMDMDevice3::GetFormatCapability**](/windows/desktop/api/mswmdm/nf-mswmdm-iwmdmdevice3-getformatcapability)
 </dt> <dt>
 
-[**\_ \_ \_ Formular für gültige \_ Werte \_ für WMDM-Enumeration**](wmdm-enum-prop-valid-values-form.md)
+[**WMDM \_ ENUM \_ PROP \_ VALID \_ VALUES \_ FORM**](wmdm-enum-prop-valid-values-form.md)
 </dt> <dt>
 
-[**WMDM- \_ Format \_ Funktion**](wmdm-format-capability.md)
+[**\_WMDM-FORMATFUNKTION \_**](wmdm-format-capability.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop- \_ Konfiguration**](wmdm-prop-config.md)
+[**WMDM \_ PROP \_ CONFIG**](wmdm-prop-config.md)
 </dt> <dt>
 
-[**WMDM- \_ Prop- \_ Abteilung**](wmdm-prop-desc.md)
+[**WMDM \_ PROP \_ DESC**](wmdm-prop-desc.md)
 </dt> <dt>
 
-[**Bereich der WMDM- \_ Prop- \_ Werte \_**](wmdm-prop-values-range.md)
+[**WMDM \_ PROP \_ VALUES \_ RANGE**](wmdm-prop-values-range.md)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

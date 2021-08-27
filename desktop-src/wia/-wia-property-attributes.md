@@ -1,31 +1,31 @@
 ---
-description: Alle Element Objekte verfügen über Eigenschaften.
+description: Alle Elementobjekte verfügen über Eigenschaften.
 ms.assetid: 00e04790-e319-41b3-b88f-8064912b91b1
-title: Eigenschafts Attribute (WIA)
+title: Eigenschaftenattribute (WIA)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 47c635cb0d4e21fe2a1d65a3f21254f8e9c04d64
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cdee1cdee48bba6183f9bcae2abc521ac9f53dfb33eec544ab3ed6bead4947b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007530"
 ---
-# <a name="property-attributes-wia"></a>Eigenschafts Attribute (WIA)
+# <a name="property-attributes-wia"></a>Eigenschaftenattribute (WIA)
 
-Alle Element Objekte verfügen über Eigenschaften. Die Eigenschaften verfügen über Attribute. Beispielsweise geben Eigenschafts Attribute an, ob eine Eigenschaft aus gelesen, geschrieben oder gelöscht wird. Sie geben auch die gültigen Eigenschaftswerte an. Die folgenden Konstanten sind gültige Eigenschafts Attribute: 
+Alle Elementobjekte verfügen über Eigenschaften. Die Eigenschaften verfügen über Attribute. Eigenschaftsattribute geben beispielsweise an, ob eine Eigenschaft gelesen, geschrieben oder gelöscht wird. Sie geben auch die gültigen Eigenschaftswerte an. Die folgenden Konstanten sind gültige Eigenschaftsattribute: 
 
-| Property-Attribut        | Bedeutung                                                                                                  |
+| Eigenschaftsattribut        | Bedeutung                                                                                                  |
 |---------------------------|----------------------------------------------------------------------------------------------------------|
-| WIA-Unterstützung zwischen speicherbar \_ \_      | Das Gerät kann den Wert der Eigenschaft Zwischenspeichern.                                                               |
-| WIA- \_ Prop- \_ Flag           | Die-Eigenschaft verfügt über eine Liste der zulässigen Flagwerte. Flagwerte werden mithilfe einer bitweisen **or** -Operation kombiniert. |
-| WIA- \_ Prop- \_ Liste           | Die-Eigenschaft verfügt über eine Liste der zulässigen Werte.                                                                 |
-| WIA- \_ Prop \_ None           | Der-Eigenschaft sind keine gültigen Werte zugeordnet.                                          |
-| WIA- \_ Prop- \_ Bereich          | Die-Eigenschaft weist einen Bereich gültiger Werte auf.                                                                |
-| WIA- \_ Prop- \_ Lesevorgang           | Die Anwendung kann den Wert der Eigenschaft lesen.                                                           |
-| WIA- \_ Prop- \_ RW             | Die Anwendung kann den Wert der Eigenschaft lesen und schreiben.                                                 |
-| WIA- \_ Prop- \_ Synchronisierung \_ erforderlich | Darf nicht verwendet werden.                                                                                              |
-| WIA- \_ Prop- \_ Schreibvorgang          | Die Anwendung kann den Wert der Eigenschaft schreiben.                                                          |
+| WIA \_ PROP \_ CACHEABLE      | Das Gerät kann den Wert der Eigenschaft zwischenspeichern.                                                               |
+| \_WIA-PROP-FLAG \_           | Die -Eigenschaft verfügt über eine Liste der Legal Flag-Werte. Flagwerte werden mithilfe einer bitweise **OR-Operation** kombiniert. |
+| WIA \_ PROP \_ LIST           | Die -Eigenschaft verfügt über eine Liste der rechtlichen Werte.                                                                 |
+| WIA \_ PROP \_ NONE           | Der Eigenschaft sind keine gültigen Werte zugeordnet.                                          |
+| WIA \_ PROP \_ RANGE          | Die -Eigenschaft verfügt über einen Bereich gültiger Werte.                                                                |
+| WIA \_ PROP \_ READ           | Die Anwendung kann den Wert der Eigenschaft lesen.                                                           |
+| WIA \_ PROP \_ RW             | Die Anwendung kann den Wert der Eigenschaft lesen und schreiben.                                                 |
+| WIA \_ PROP \_ SYNC \_ ERFORDERLICH | Darf nicht verwendet werden.                                                                                              |
+| WIA \_ PROP \_ WRITE          | Die Anwendung kann den Wert der Eigenschaft schreiben.                                                          |
 
 
 

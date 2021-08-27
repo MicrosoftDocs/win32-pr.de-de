@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetintersectindexes-Methode.
-title: API. jetintersectindexes-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetIntersectIndexes-Methode'
+title: Api.JetIntersectIndexes-Methode
 TOCTitle: 'JetIntersectIndexes method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetIntersectIndexes(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_INDEXRANGE[],System.Int32,Microsoft.Isam.Esent.Interop.JET_RECORDLIST@,Microsoft.Isam.Esent.Interop.IntersectIndexesGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetintersectindexes(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3bae632f386ef944e79a17813d1cc86451441e86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b2e9e259d9c90a3067931fbba425ab1b21e5c2a36a73563f593d3b280a40496
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978030"
 ---
-# <a name="apijetintersectindexes-method"></a>API. jetintersectindexes-Methode
+# <a name="apijetintersectindexes-method"></a>Api.JetIntersectIndexes-Methode
 
-Berechnet die Schnittmenge zwischen mehreren Sätzen von Indexeinträgen aus unterschiedlichen sekundären Indizes für dieselbe Tabelle. Dieser Vorgang ist nützlich, um die Gruppe von Datensätzen in einer Tabelle zu suchen, die mit zwei oder mehr Kriterien übereinstimmen, die mithilfe von Index Bereichen ausgedrückt werden können. Siehe auch [intersectindexes (JET_SESID, \[ \] )](./api.intersectindexes-method.md).
+Berechnet die Schnittmenge zwischen mehreren Sätzen von Indexeinträgen aus verschiedenen sekundären Indizes für dieselbe Tabelle. Dieser Vorgang ist nützlich, um den Satz von Datensätzen in einer Tabelle zu finden, die zwei oder mehr Kriterien entsprechen, die mithilfe von Indexbereichen ausgedrückt werden können. Siehe auch [IntersectIndexes(JET_SESID, \[ \] )](./api.intersectindexes-method.md).
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -70,45 +70,45 @@ public static void JetIntersectIndexes(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - ranges  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Ein, der die zu Intersect Ende Index Bereiche ist. Für den TableIDs-Wert in den Bereichen müssen Index Bereiche festgelegt sein. Verwenden Sie [jetsetindexrange (JET_SESID, JET_TABLEID, setindexrangegrbit)](./api.jetsetindexrange-method.md) , um einen Index Bereich zu erstellen.
+    Ein der zu überschneidenden Indexbereiche. Für die tableids in den Bereichen müssen Indexbereiche festgelegt sein. Verwenden Sie [JetSetIndexRange(JET_SESID, JET_TABLEID, SetIndexRangeGrbit),](./api.jetsetindexrange-method.md) um einen Indexbereich zu erstellen.
 
 <!-- end list -->
 
-  - numbereiche  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - numRanges  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Die Anzahl der Index Bereiche.
+    Die Anzahl der Indexbereiche.
 
 <!-- end list -->
 
-  - RecordList  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_RECORDLIST](./jet-recordlist-class.md)  
+  - Eintragsliste  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_RECORDLIST](./jet-recordlist-class.md)  
     
-    Gibt Informationen über die temporäre Tabelle zurück, die die Überschneidungs Ergebnisse enthält.
+    Gibt Informationen zur temporären Tabelle zurück, die die Schnittmengenergebnisse enthält.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. intersectindexesgrbit](./intersectindexesgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.IntersectIndexesGrbit](./intersectindexesgrbit-enumeration.md)  
     
-    Schnittstellen Optionen.
+    Schnittmengenoptionen.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

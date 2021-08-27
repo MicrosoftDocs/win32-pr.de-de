@@ -1,6 +1,6 @@
 ---
 title: SV_DispatchThreadID
-description: Indizes für die kombinierte Thread- und Threadgruppe, in der ein Compute-Shader ausgeführt wird.
+description: Indizes, für die kombinierter Thread und Threadgruppe ein Compute-Shader ausgeführt wird.
 ms.assetid: bad697f6-26d9-47cd-93e5-127621a161e8
 keywords:
 - SV_DispatchThreadID HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8e2713aaa50206660f7672688a43e644873b1c13
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: a5f7dbc7f4aa4b508d801736529628dbb25c29fb6c37f1db04f91874e85ee9a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111827059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120023390"
 ---
 # <a name="sv_dispatchthreadid"></a>SV \_ DispatchThreadID
 
-Indizes für die kombinierte Thread- und Threadgruppe, in der ein Compute-Shader ausgeführt wird. SV \_ DispatchThreadID ist die Summe aus SV \_ GroupID \* numthreads und GroupThreadID. Sie variiert über den unter [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) und [numthreads angegebenen](sm5-attributes-numthreads.md)Bereich. Wenn z. B. Dispatch(2,2,2) für einen Compute-Shader mit numthreads(3,3,3) SV \_ DispatchThreadID aufgerufen wird, hat für jede Dimension einen Bereich von 0,.5.
+Indizes, für die kombinierter Thread und Threadgruppe ein Compute-Shader ausgeführt wird. SV \_ DispatchThreadID ist die Summe aus SV \_ GroupID \* numthreads und GroupThreadID. Sie variiert im bereich, der in [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch) und [numthreads angegeben ist.](sm5-attributes-numthreads.md) Wenn z. B. Dispatch(2,2,2) für einen Compute-Shader mit numthreads(3,3,3) SV DispatchThreadID aufgerufen wird, hat für jede Dimension einen Bereich \_ von 0,5.
 
 ## <a name="type"></a>Typ
 
@@ -40,7 +40,7 @@ Indizes für die kombinierte Thread- und Threadgruppe, in der ein Compute-Shader
 
 Dieser Systemwert ist optional.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den parametern, die an [**Dispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergeben werden, den im [numthreads-Attribut angegebenen](sm5-attributes-numthreads.md) Werten, numthreads(10,8,3) und Werten, die an den Compute-Shader für die threadbezogenen Systemwerte übergeben werden ([SV \_ GroupIndex](sv-groupindex.md), SV \_ DispatchThreadID,[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID](sv-groupid.md)).
+Die folgende Abbildung zeigt die Beziehung zwischen den parametern, die an [**Dispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch), Dispatch(5,3,2), die im [numthreads-Attribut](sm5-attributes-numthreads.md) angegebenen Werte, numthreads(10,8,3) und Werte übergeben werden, die an den Compute-Shader für die threadbezogenen Systemwerte übergeben werden ([SV \_ GroupIndex](sv-groupindex.md), SV \_ DispatchThreadID,[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID](sv-groupid.md)).
 
 ![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 

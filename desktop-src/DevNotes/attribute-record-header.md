@@ -1,7 +1,7 @@
 ---
-description: Stellt einen Attributdaten Satz dar.
+description: Stellt einen Attributdatensatz dar.
 ms.assetid: f9d9458c-b179-441c-9f62-ff0ac2f75329
-title: ATTRIBUTE_RECORD_HEADER Struktur
+title: ATTRIBUTE_RECORD_HEADER-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: ae710ca04f11cb70c1bad9b5e6fec25f8fb5e94f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9664af36448bb125dc8d5fde3c4d22b04e58b1ca341acad561b94708acbf143c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860615"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045389"
 ---
-# <a name="attribute_record_header-structure"></a>Attribut \_ Daten Satz- \_ Header Struktur
+# <a name="attribute_record_header-structure"></a>ATTRIBUTE \_ RECORD \_ HEADER-Struktur
 
-\[Diese Struktur gilt nur für Version 3 von NTFS-Volumes. Sie kann in zukünftigen Versionen geändert werden.\]
+\[Diese Struktur ist nur für Version 3 von NTFS-Volumes gültig. sie kann in zukünftigen Versionen geändert werden.\]
 
-Stellt einen Attributdaten Satz dar.
+Stellt einen Attributdatensatz dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,23 +66,23 @@ typedef struct _ATTRIBUTE_RECORD_HEADER {
 **TypeCode**
 </dt> <dd>
 
-Der Attributtyp Code.
+Der Attributtypcode.
 
 
 
 | Wert                                                                                                                                                                                                                                           | Bedeutung                                                                                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="_STANDARD_INFORMATION"></span><span id="_standard_information"></span><dl> <dt>**$Standard \_ Informationen**</dt> <dt>0x10</dt> </dl> | Dateiattribute (z. b. "schreibgeschützt" und "Archiv"), Zeitstempel (z. b. Dateierstellung und Letzte Änderung) und die Anzahl der festen Links.<br/> |
-| <span id="_ATTRIBUTE_LIST"></span><span id="_attribute_list"></span><dl> <dt>**$Attribute \_ Liste**</dt> <dt>0x20</dt> </dl>                   | Eine Liste der Attribute, die die Datei bilden, und der Datei Verweis des MFT-Datei Datensatzes, in dem sich die einzelnen Attribute befinden.<br/>     |
-| <span id="_FILE_NAME"></span><span id="_file_name"></span><dl> <dt>**$File \_ Name**</dt> <dt>0x30</dt> </dl>                                  | Der Name der Datei in Unicode-Zeichen.<br/>                                                                                     |
-| <span id="_OBJECT_ID"></span><span id="_object_id"></span><dl> <dt>**$Object \_ ID**</dt> <dt>0x40</dt> </dl>                                  | Ein 64-Byte-Objekt Bezeichner, der vom Link Überwachungsdienst zugewiesen wird.<br/>                                                              |
-| <span id="_VOLUME_NAME"></span><span id="_volume_name"></span><dl> <dt>**$Volume \_ Name**</dt> <dt>0x60</dt> </dl>                            | Die Volumebezeichnung. In der $Volume-Datei vorhanden.<br/>                                                                                   |
-| <span id="_VOLUME_INFORMATION"></span><span id="_volume_information"></span><dl> <dt>**$Volume \_ Informationen**</dt> <dt>0x70</dt> </dl>       | Die Volumeinformationen. In der $Volume-Datei vorhanden.<br/>                                                                             |
-| <span id="_DATA"></span><span id="_data"></span><dl> <dt>**$Data**</dt> <dt>0x80</dt> </dl>                                                  | Der Inhalt der Datei.<br/>                                                                                                        |
-| <span id="_INDEX_ROOT"></span><span id="_index_root"></span><dl> <dt>**$Index \_**</dt>Stamm <dt>0x90</dt> </dl>                               | Wird verwendet, um die Dateinamen Zuordnung für große Verzeichnisse zu implementieren.<br/>                                                                     |
-| <span id="_INDEX_ALLOCATION"></span><span id="_index_allocation"></span><dl> <dt>**$Index \_ Zuordnung**</dt> <dt>0xa0</dt> </dl>             | Wird verwendet, um die Dateinamen Zuordnung für große Verzeichnisse zu implementieren.<br/>                                                                     |
-| <span id="_BITMAP"></span><span id="_bitmap"></span><dl> <dt>**$Bitmap**</dt> <dt>0xb0</dt> </dl>                                            | Ein Bitmapindex für ein großes Verzeichnis.<br/>                                                                                            |
-| <span id="_REPARSE_POINT"></span><span id="_reparse_point"></span><dl> <dt>**$REPARSE \_ Punkt**</dt> <dt>0xC0</dt> </dl>                      | Die Daten des Analyse Punkts.<br/>                                                                                                          |
+| <span id="_STANDARD_INFORMATION"></span><span id="_standard_information"></span><dl> <dt>**$STANDARD \_ INFORMATIONEN**</dt> <dt>0x10</dt> </dl> | Dateiattribute (z. B. schreibgeschützt und archivieren), Zeitstempel (z. B. Dateierstellung und letzte Änderung) und die Anzahl der hardlinks.<br/> |
+| <span id="_ATTRIBUTE_LIST"></span><span id="_attribute_list"></span><dl> <dt>**$ATTRIBUTE \_ LIST**</dt> <dt>0x20</dt> </dl>                   | Eine Liste der Attribute, aus denen die Datei besteht, und der Dateiverweis des MFT-Dateidatensatz, in dem sich jedes Attribut befindet.<br/>     |
+| <span id="_FILE_NAME"></span><span id="_file_name"></span><dl> <dt>**$FILE \_ NAME**</dt> <dt>0x30</dt> </dl>                                  | Der Name der Datei in Unicode-Zeichen.<br/>                                                                                     |
+| <span id="_OBJECT_ID"></span><span id="_object_id"></span><dl> <dt>**$OBJECT \_ ID-0x40**</dt> <dt></dt> </dl>                                  | Ein vom Linkverfolgungsdienst zugewiesener 64-Byte-Objektbezeichner.<br/>                                                              |
+| <span id="_VOLUME_NAME"></span><span id="_volume_name"></span><dl> <dt>**$VOLUME \_ NAME**</dt> <dt>0x60</dt> </dl>                            | Die Volumebezeichnung. In der $Volume vorhanden.<br/>                                                                                   |
+| <span id="_VOLUME_INFORMATION"></span><span id="_volume_information"></span><dl> <dt>**$VOLUME \_ INFORMATION**</dt> <dt>0X70</dt> </dl>       | Die Volumeinformationen. In der $Volume vorhanden.<br/>                                                                             |
+| <span id="_DATA"></span><span id="_data"></span><dl> <dt>**$DATA**</dt> <dt>0x80</dt> </dl>                                                  | Der Inhalt der Datei.<br/>                                                                                                        |
+| <span id="_INDEX_ROOT"></span><span id="_index_root"></span><dl> <dt>**$INDEX \_ ROOT-0x90**</dt> <dt></dt> </dl>                               | Wird zum Implementieren der Dateinamenzuordnung für große Verzeichnisse verwendet.<br/>                                                                     |
+| <span id="_INDEX_ALLOCATION"></span><span id="_index_allocation"></span><dl> <dt>**$INDEX \_**</dt> <dt>ZUORDNUNGs 0xA0</dt> </dl>             | Wird zum Implementieren der Dateinamenzuordnung für große Verzeichnisse verwendet.<br/>                                                                     |
+| <span id="_BITMAP"></span><span id="_bitmap"></span><dl> <dt>**$BITMAP**</dt> <dt>0xB0</dt> </dl>                                            | Ein Bitmapindex für ein großes Verzeichnis.<br/>                                                                                            |
+| <span id="_REPARSE_POINT"></span><span id="_reparse_point"></span><dl> <dt>**$REPARSE \_ POINT**</dt> <dt>0xC0</dt> </dl>                      | Die Reparsepunktdaten.<br/>                                                                                                          |
 
 
 
@@ -90,24 +90,24 @@ Der Attributtyp Code.
 
 </dd> <dt>
 
-**RecordLength**
+**Recordlength**
 </dt> <dd>
 
-Die Größe des Attributdaten Satzes in Byte. Dieser Wert gibt die erforderliche Größe für die Daten Satz Variante an und wird immer auf die nächstgelegene Quadword-Grenze gerundet.
+Die Größe des Attributdatensatz in Bytes. Dieser Wert gibt die erforderliche Größe für die Datensatzvariante an und wird immer auf die nächste Quadwordgrenze gerundet.
 
 </dd> <dt>
 
 **FormCode**
 </dt> <dd>
 
-Der Attribut Formular Code.
+Der Attributformularcode.
 
 
 
 | Wert                                                                                                                                                                                                                            | Bedeutung                                                                                                   |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-| <span id="RESIDENT_FORM"></span><span id="resident_form"></span><dl> <dt>**Residente \_ Formular**</dt> <dt>0x00</dt> </dl>          | Der Wert ist im Datei Daten Satz enthalten und folgt unmittelbar dem Attributdaten Satz Header.<br/> |
-| <span id="NONRESIDENT_FORM"></span><span id="nonresident_form"></span><dl> <dt>**Nicht residente \_ Formular**</dt> <dt>0x01</dt> </dl> | Der Wert ist in anderen Sektoren auf dem Datenträger enthalten.<br/>                                           |
+| <span id="RESIDENT_FORM"></span><span id="resident_form"></span><dl> <dt>**RESIDENT \_ FORMULAR**</dt> <dt>0X00</dt> </dl>          | Der Wert ist im Dateidatensatz enthalten und folgt unmittelbar auf den Attributdatensatzheader.<br/> |
+| <span id="NONRESIDENT_FORM"></span><span id="nonresident_form"></span><dl> <dt>**NONRESIDENT \_ FORMULAR**</dt> <dt>0X01</dt> </dl> | Der Wert ist in anderen Sektoren auf dem Datenträger enthalten.<br/>                                           |
 
 
 
@@ -118,14 +118,14 @@ Der Attribut Formular Code.
 **NameLength**
 </dt> <dd>
 
-Die Größe des optionalen Attribut namens in Zeichen oder 0, wenn kein Attribut Name vorhanden ist. Die maximale Länge des Attribut namens beträgt 255 Zeichen.
+Die Größe des optionalen Attributnamens in Zeichen oder 0, wenn kein Attributname vor liegt. Die maximale Länge des Attributnamens beträgt 255 Zeichen.
 
 </dd> <dt>
 
-**Nameoffset**
+**NameOffset**
 </dt> <dd>
 
-Der Offset des Attribut namens vom Anfang des Attributdaten Satzes in Byte. Wenn der **namelength** -Member 0 ist, ist dieser Member nicht definiert.
+Der Offset des Attributnamens vom Anfang des Attributdatensatzes in Bytes. Wenn das **NameLength-Member** 0 ist, ist dieser Member nicht definiert.
 
 </dd> <dt>
 
@@ -136,43 +136,43 @@ Die Attributflags.
 
 <dl> <dt>
 
-<span id="ATTRIBUTE_FLAG_COMPRESSION_MASK"></span><span id="attribute_flag_compression_mask"></span>**Attribut \_ Flag- \_ Komprimierungs \_ Maske** (0x00FF)
+<span id="ATTRIBUTE_FLAG_COMPRESSION_MASK"></span><span id="attribute_flag_compression_mask"></span>**ATTRIBUTE \_ FLAG \_ COMPRESSION \_ MASK** (0x00FF)
 </dt> <dt>
 
-<span id="ATTRIBUTE_FLAG_SPARSE"></span><span id="attribute_flag_sparse"></span>**Attribut \_ \_Sparse-Flag** (0X8000)
+<span id="ATTRIBUTE_FLAG_SPARSE"></span><span id="attribute_flag_sparse"></span>**ATTRIBUTE \_ FLAG \_ SPARSE** (0x8000)
 </dt> <dt>
 
-<span id="ATTRIBUTE_FLAG_ENCRYPTED"></span><span id="attribute_flag_encrypted"></span>**Attribut \_ Flag \_ verschlüsselt** (0x4000)
+<span id="ATTRIBUTE_FLAG_ENCRYPTED"></span><span id="attribute_flag_encrypted"></span>**ATTRIBUTE \_ FLAG \_ ENCRYPTED** (0x4000)
 </dt> </dl> </dd> <dt>
 
 **Instanz**
 </dt> <dd>
 
-Die eindeutige Instanz für dieses Attribut im Datei Daten Satz.
+Die eindeutige Instanz für dieses Attribut im Dateidatensatz.
 
 </dd> <dt>
 
 **Form**
 </dt> <dd>
 
-Wenn sich der **FormCode** -Member in einem Residenten \_ Formular befindet, ist die Union eine **residente** Struktur. Wenn **FormCode** nicht residente \_ Form ist, ist die Union eine **nicht residente** Struktur.
+Wenn der **FormCode-Member** RESIDENT \_ FORM ist, ist die Union eine **Resident-Struktur.** Wenn **FormCode** NONRESIDENT \_ FORM ist, ist die Union eine **nonresident-Struktur.**
 
 <dl> <dt>
 
-**Bewohnten**
+**Wohnsitz**
 </dt> <dd> <dl> <dt>
 
-**Valuelength**
+**ValueLength**
 </dt> <dd>
 
-Die Größe des Attribut Werts in Bytes.
+Die Größe des Attributwerts in Bytes.
 
 </dd> <dt>
 
-**Valueoffset**
+**ValueOffset**
 </dt> <dd>
 
-Der Offset bis zum Wert vom Anfang des Attributdaten Satzes in Byte.
+Der Offset zum Wert vom Anfang des Attributdatensatz in Bytes.
 
 </dd> <dt>
 
@@ -183,27 +183,27 @@ Reserviert.
 
 </dd> </dl> </dd> <dt>
 
-**Nicht residente**
+**Nonresident**
 </dt> <dd> <dl> <dt>
 
-**Lowestvcn**
+**LowestVcn**
 </dt> <dd>
 
-Die niedrigste virtuelle Cluster Nummer (VCN), die von diesem Attributdaten Satz abgedeckt wird.
+Die niedrigste virtuelle Clusternummer (VCN), die von diesem Attributdatensatz abgedeckt wird.
 
 </dd> <dt>
 
-**Highestvcn**
+**HighestVcn**
 </dt> <dd>
 
-Die höchste VCN, die von diesem Attributdaten Satz abgedeckt wird.
+Der höchste VCN, der von diesem Attributdatensatz abgedeckt wird.
 
 </dd> <dt>
 
-**Mappingpaare**
+**MappingPairsOffset**
 </dt> <dd>
 
-Der Offset für das Array der Zuordnungspaare vom Anfang des Attributdaten Satzes (in Bytes). Weitere Informationen finden Sie in den Hinweisen.
+Der Offset zum Zuordnungspaararray vom Anfang des Attributdatensatz in Bytes. Weitere Informationen finden Sie in den Hinweisen.
 
 </dd> <dt>
 
@@ -214,66 +214,66 @@ Reserviert.
 
 </dd> <dt>
 
-**Zu"zuder Länge"**
+**AllocatedLength**
 </dt> <dd>
 
-Die zugeordnete Größe der Datei in Bytes. Dieser Wert ist ein gleich Vielfaches der Clustergröße. Dieser Member ist ungültig, wenn der **lowestvcn** -Member ungleich NULL ist.
+Die zugeordnete Größe der Datei in Bytes. Dieser Wert ist ein sogar vielfaches der Clustergröße. Dieser Member ist ungültig, wenn **das LowestVcn-Member** ungleich 0 (null) ist.
 
 </dd> <dt>
 
 **FileSize**
 </dt> <dd>
 
-Die Dateigröße (das höchste Byte, das gelesen werden kann, plus 1) in Bytes. Dieser Member ist ungültig, wenn **lowestvcn** ungleich 0 (null) ist.
+Die Dateigröße (höchstes Byte, das gelesen werden kann, plus 1) in Bytes. Dieser Member ist ungültig, wenn **LowestVcn** ungleich 0 (null) ist.
 
 </dd> <dt>
 
-**Validdatalength**
+**ValidDataLength**
 </dt> <dd>
 
-Die gültige Daten Länge (das höchste initialisierte Byte plus 1) in Bytes. Dieser Wert wird auf die nächste Cluster Grenze gerundet. Dieser Member ist ungültig, wenn **lowestvcn** ungleich 0 (null) ist.
+Die gültige Datenlänge (höchstes initialisiertes Byte plus 1) in Bytes. Dieser Wert wird auf die nächste Clustergrenze gerundet. Dieser Member ist ungültig, wenn **LowestVcn** ungleich 0 (null) ist.
 
 </dd> <dt>
 
-**Total zugeordnet**
+**TotalAllocated**
 </dt> <dd>
 
-Die Gesamtmenge, die für die Datei zugewiesen wurde (die Summe der zugewiesenen Cluster).
+Die Gesamtsumme, die für die Datei zugeordnet ist (die Summe der zugeordneten Cluster).
 
 </dd> </dl> </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass es für diese Struktur keine zugeordnete Header Datei gibt.
+Beachten Sie, dass keine zugeordnete Headerdatei für diese -Struktur enthalten ist.
 
-Diese Struktur Definition ist nur für die Hauptversion 3 und die neben Version 0 oder 1 gültig, wie von [**FSCTL \_ get \_ NTFS \_ Volume \_ Data**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)berichtet.
+Diese Strukturdefinition ist nur für Hauptversion 3 und Nebenversion 0 oder 1 gültig, wie von [**FSCTL \_ GET NTFS VOLUME DATA \_ \_ \_ gemeldet.**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)
 
-Attributdaten Sätze werden immer an einer Quadword-Grenze ausgerichtet.
+Attributdatensätze werden immer an einer Quadwordgrenze ausgerichtet.
 
-Wenn das Attribut nicht Resident ist, enthält der Attributdaten Satz Header eine Liste mit Abruf Informationen, die eine Zuordnung zwischen VCN und logischer Cluster Nummer (LCN) für das Attribut bereitstellt. Wenn die Abruf Informationen nicht in das Basisdatei Segment passen, können Sie in einem externen Datei Daten Satz Segment eigenständig gespeichert werden. Wenn es immer noch nicht in ein externes Datei Daten Satz Segment passt, gibt es eine Bereitstellung in der Attribut Liste, die mehrere Einträge für ein Attribut enthält, das zusätzliche Abruf Informationen erfordert.
+Wenn das Attribut nichtresident ist, enthält der Attributdatensatzheader eine Liste von Abrufinformationen, die eine Zuordnung zwischen VCN und logischer Clusternummer (LOGICAL Cluster Number, LCN) für das Attribut ermöglicht. Wenn die Abrufinformationen nicht in das Basisdateisegment passen, können sie selbst in einem externen Dateidatensatzsegment gespeichert werden. Wenn er immer noch nicht in ein externes Dateidatensatzsegment passt, gibt es eine Bereitstellung in der Attributliste, die mehrere Einträge für ein Attribut enthält, das zusätzliche Abrufinformationen erfordert.
 
-Das Array der Zuordnungspaare wird in komprimierter Form gespeichert und geht davon aus, dass die Informationen dekomprimiert und vom System zwischengespeichert werden. Sie besteht aus einer Reihe von nextvcn/currentlcn-Paaren. Wenn eine Datei z. b. eine einzelne Ausführen von 8 Clustern, beginnend bei LCN 128, und die Datei bei lowestvcn 0 startet, verfügt das Array der Zuordnungspaare nur über einen Eintrag (nextvcn = 8 und currentlcn = 128). Das Array ist ein Bytestream, der die Änderungen an den Arbeits Variablen speichert, wenn Sie sequenziell verarbeitet werden. Der Bytestream muss wie folgt als ein null terminierter Stream von drei-ELN interpretiert werden:
+Das Zuordnungspaararray wird in komprimierter Form gespeichert und setzt voraus, dass die Informationen dekomprimiert und vom System zwischengespeichert werden. Sie besteht aus einer Reihe von NextVcn-/CurrentLcn-Paaren. Wenn eine Datei z. B. eine einzelne Ausführung von 8 Clustern ab LCN 128 aufweise und die Datei bei LowestVcn 0 beginnt, hat das Array der Zuordnungspaare nur einen Eintrag, also NextVcn=8 und CurrentLcn=128. Das Array ist ein Bytestream, der die Änderungen an den Arbeitsvariablen speichert, wenn es sequenziell verarbeitet wird. Der Bytestream ist wie folgt als nullendpunktr terminierten Datenstrom mit Dreiern zu interpretieren:
 
-count Byte = *v* + (*l* \* 16)
+count byte = *v* + (*l* \* 16)
 
-Dabei ist *v* die Anzahl der geänderten VCN-Bytes mit niedriger Ordnung und *l* die Anzahl der geänderten LCN-Bytes mit niedriger Reihenfolge.
+Wobei *v* die Anzahl der geänderten VCN-Bytes in niedriger Reihenfolge und *l* die Anzahl der geänderten low-order LCN-Bytes ist.
 
-Der Dekomprimierungs Algorithmus lautet wie folgt:
+Der Dekomprimierungsalgorithmus lautet wie folgt:
 
-1.  Initialisieren Sie nextvcn auf `Attribute->LowestVcn` und currentlcn auf 0.
-2.  Initialisieren Sie den bytestreamzeiger auf `(PCHAR)Attribute + Attribute->AttributeForm->Nonresident->MappingPairsOffset` .
-3.  Legen Sie currentvcn auf nextvcn fest.
-4.  Liest das nächste Byte aus dem Datenstrom. Wenn der Wert 0 ist, dann unterbrechen. Extrahieren Sie andernfalls *v* und *l* wie zuvor beschrieben.
-5.  Interpretieren Sie die nächsten *v* Bytes als signierte Menge mit dem nieder wertigen Byte zuerst. Entpacken Sie die Anmelde Informationen in 64 Bits, und fügen Sie Sie nextvcn hinzu.
-6.  Interpretieren Sie die nächsten *l* -Bytes als signierte Menge mit dem nieder wertigen Byte First. Entpacken Sie Sign-Extended in 64 Bits, und fügen Sie es currentlcn hinzu. Wenn dies eine currentlcn von 0 ergibt, wird der vcns von currentvcn zu nextvcn – 1 nicht zugeordnet.
-7.  Aktualisieren Sie die zwischengespeicherten Mapping-Informationen von currentvcn, nextvcn und currentlcn.
+1.  Initialisieren Sie NextVcn auf `Attribute->LowestVcn` und CurrentLcn auf 0.
+2.  Initialisieren Sie den Bytestreamzeiger auf `(PCHAR)Attribute + Attribute->AttributeForm->Nonresident->MappingPairsOffset` .
+3.  Legen Sie CurrentVcn auf NextVcn fest.
+4.  Liest das nächste Byte aus dem Stream. Wenn es 0 ist, brechen Sie ab. else extrahieren *Sie v* und *l* wie zuvor beschrieben.
+5.  Interpretieren Sie die *nächsten v* Bytes als Menge mit Vorsignieren, bei der zuerst das niedrig geordnete Byte angegeben wird. Entpacken Sie es sign-extended in 64 Bits, und fügen Sie es NextVcn hinzu.
+6.  Interpretieren Sie die *nächsten l* Bytes als Menge mit Vorsignieren, und zuerst das niedrig geordnete Byte. Entpacken Sie die Anmeldung in 64 Bits, und fügen Sie sie CurrentLcn hinzu. Wenn dies einen CurrentLcn von 0 erzeugt, werden die VCNs von CurrentVcn zu NextVcn-1 nicht zugewiesen.
+7.  Aktualisieren Sie die zwischengespeicherten Zuordnungsinformationen aus CurrentVcn, NextVcn und CurrentLcn.
 8.  Fahren Sie mit Schritt 3 fort.
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Master Dateitabelle](master-file-table.md)
+[Masterdateitabelle](master-file-table.md)
 </dt> </dl>
 
  

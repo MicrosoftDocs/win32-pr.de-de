@@ -1,7 +1,7 @@
 ---
-description: Die Funktion StartDocPrinter benachrichtigt den Druck Spooler, dass ein Dokument zum Drucken gespoolt werden soll.
+description: Die StartDocPrinter-Funktion benachrichtigt den Druckspooler, dass ein Dokument zum Drucken in einen Pool poolt werden soll.
 ms.assetid: caa2bd80-4af3-4968-a5b9-d12f16cac6fc
-title: StartDocPrinter-Funktion (winspool. h)
+title: StartDocPrinter-Funktion (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,16 +17,16 @@ api_location:
 - Winspool.drv
 - Ext-MS-Win-Printer-WinSpool-l1-1-2.dll
 - Ext-MS-Win-Printer-WinSpool-L1-1-3.dll
-ms.openlocfilehash: f8bdb0ae08c88e553dad3a91f0f1a578bed4ad39
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 047784a7debd0c12fa7a5ad144dbc1e81c4715d990be794c180e86555c8e9f37
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120060010"
 ---
 # <a name="startdocprinter-function"></a>StartDocPrinter-Funktion
 
-Die Funktion **StartDocPrinter** benachrichtigt den Druck Spooler, dass ein Dokument zum Drucken gespoolt werden soll.
+Die **StartDocPrinter-Funktion** benachrichtigt den Druckspooler, dass ein Dokument zum Drucken spoolt werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,56 +45,56 @@ DWORD StartDocPrinter(
 
 <dl> <dt>
 
-*hprinter* \[ in\]
+*hPrinter* \[ In\]
 </dt> <dd>
 
-Ein Handle für den Drucker. Verwenden Sie die Funktion [**OpenPrinter**](openprinter.md) oder [**addprinter**](addprinter.md) zum Abrufen eines Drucker Handles.
+Ein Handle für den Drucker. Verwenden Sie [**die OpenPrinter-**](openprinter.md) [**oder AddPrinter-Funktion,**](addprinter.md) um einen Druckerhandpunkt abzurufen.
 
 </dd> <dt>
 
-*Ebene* \[ in\]
+*Ebene* \[ In\]
 </dt> <dd>
 
-Die Version der-Struktur, auf die *pdocinfo* verweist. Dieser Wert muss 1 sein.
+Die Version der -Struktur, auf die *pDocInfo* verweist. Dieser Wert muss 1 sein.
 
 </dd> <dt>
 
-*pdocinfo* \[ in\]
+*pDocInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**doc \_ Info \_ 1**](doc-info-1.md) -Struktur, die das zu druckende Dokument beschreibt.
+Ein Zeiger auf eine [**DOC \_ INFO \_ 1-Struktur,**](doc-info-1.md) die das zu druckende Dokument beschreibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, identifiziert der Rückgabewert den Druckauftrag.
+Wenn die Funktion erfolgreich ist, identifiziert der Rückgabewert den Druckauftrag.
 
 Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückgegeben wird. Wie schnell diese Funktion zurückgibt, hängt von Lauf Zeitfaktoren ab, wie z. b. Netzwerkstatus, Druckserver Konfiguration und Implementierungs Faktoren für Druckertreiber, die beim Schreiben einer Anwendung schwierig vorhergesagt werden können. Wenn diese Funktion von einem Thread aufgerufen wird, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte die Anwendung scheinbar nicht mehr reagiert.
+> Dies ist eine blockierende oder synchrone Funktion, die möglicherweise nicht sofort zurückkehrt. Wie schnell diese Funktion zurückgegeben wird, hängt von Laufzeitfaktoren wie Netzwerkstatus, Druckerserverkonfiguration und Implementierungsfaktoren des Druckertreibers ab, die beim Schreiben einer Anwendung schwer vorherzusagen sind. Das Aufrufen dieser Funktion aus einem Thread, der die Interaktion mit der Benutzeroberfläche verwaltet, könnte dazu kommen, dass die Anwendung nicht reagiert.
 
  
 
-Die typische Reihenfolge für einen Druckauftrag lautet wie folgt:
+Die typische Sequenz für einen Druckauftrag lautet wie folgt:
 
-1.  Zum Starten eines Druckauftrags aufrufen Sie **StartDocPrinter**.
-2.  Um jede Seite zu starten, aufrufen Sie [**startpageprinter**](startpageprinter.md).
-3.  Um Daten auf eine Seite zu schreiben, müssen Sie " [**Write-Printer**](writeprinter.md)" anrufen.
-4.  Um jede Seite zu beenden, nennen Sie [**endpageprinter**](endpageprinter.md).
-5.  Wiederholen Sie den Vorgang 2, 3 und 4 für beliebig viele Seiten.
-6.  Um den Druckauftrag zu beenden, nennen Sie [**enddocprinter**](enddocprinter.md).
+1.  Um einen Druckauftrag zu starten, rufen **Sie StartDocPrinter auf.**
+2.  Um jede Seite zu starten, rufen [**Sie StartPagePrinter auf.**](startpageprinter.md)
+3.  Um Daten auf eine Seite zu schreiben, rufen Sie [**WritePrinter auf.**](writeprinter.md)
+4.  Um jede Seite zu beenden, rufen Sie [**EndPagePrinter auf.**](endpageprinter.md)
+5.  Wiederholen Sie 2, 3 und 4 für so viele Seiten wie erforderlich.
+6.  Um den Druckauftrag zu beenden, rufen Sie [**EndDocPrinter auf.**](enddocprinter.md)
 
-Beachten Sie, dass das Aufrufen von [**startpageprinter**](startpageprinter.md) und [**endpageprinter**](endpageprinter.md) möglicherweise nicht erforderlich ist, z. b. wenn der Print-Datentyp die Seiten Informationen enthält.
+Beachten Sie, dass das Aufrufen von [**StartPagePrinter**](startpageprinter.md) und [**EndPagePrinter**](endpageprinter.md) möglicherweise nicht erforderlich ist, z. B. wenn der Print-Datentyp die Seiteninformationen enthält.
 
-Wenn eine Seite in einer Spooldatei ungefähr 350 MB überschreitet, kann Sie nicht gedruckt werden, und es wird keine Fehlermeldung gesendet. Dies kann z. b. vorkommen, wenn große EMF-Dateien gedruckt werden. Der Grenzwert für die Seitengröße hängt von vielen Faktoren ab, z. b. von der Menge des verfügbaren virtuellen Speichers, von der durch den Aufruf von Prozessen belegten Arbeitsspeicher Menge und von der Fragmentierung im Prozess Heap.
+Wenn eine Seite in einer Spooldatei ca. 350 MB überschreitet, kann sie nicht gedruckt werden und sendet keine Fehlermeldung. Dies kann beispielsweise beim Drucken großer EMF-Dateien auftreten. Die Seitengrößenbeschränkung hängt von vielen Faktoren ab, einschließlich der Menge des verfügbaren virtuellen Arbeitsspeichers, der Durch aufrufenden Prozesse zugewiesenen Arbeitsspeichermenge und der Fragmentierung im Prozesshap.
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wie: Drucken mit der GDI-Druck-API](how-to--print-using-the-gdi-print-api.md).
+Ein Beispielprogramm, das diese Funktion verwendet, finden Sie unter How To: Print Using the GDI Print API (How [To: Drucken mithilfe der GDI-Druck-API).](how-to--print-using-the-gdi-print-api.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,10 +104,10 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Winspool. lib</dt> </dl>                   |
-| DLL<br/>                      | <dl> <dt>Winspool. drv</dt> </dl>                   |
-| Unicode- und ANSI-Name<br/>   | **Startdocprinterw** (Unicode) und **startdocprintera** (ANSI)<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Winspool.lib</dt> </dl>                   |
+| DLL<br/>                      | <dl> <dt>Winspool.drv</dt> </dl>                   |
+| Unicode- und ANSI-Name<br/>   | **StartDocPrinterW** (Unicode) und **StartDocPrinterA** (ANSI)<br/>                                 |
 
 
 
@@ -115,19 +115,19 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 
 <dl> <dt>
 
-[**AddJob**](addjob.md)
+[**Addjob**](addjob.md)
 </dt> <dt>
 
-[**DOC \_ Info \_ 1**](doc-info-1.md)
+[**DOC \_ INFO \_ 1**](doc-info-1.md)
 </dt> <dt>
 
-[**DOC \_ Info \_ 2**](doc-info-2.md)
+[**DOC \_ INFO \_ 2**](doc-info-2.md)
 </dt> <dt>
 
-[**Enddocprinter**](enddocprinter.md)
+[**EndDocPrinter**](enddocprinter.md)
 </dt> <dt>
 
-[**Endpageprinter**](endpageprinter.md)
+[**EndPagePrinter**](endpageprinter.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -142,10 +142,10 @@ Ein Beispielprogramm, das diese Funktion verwendet, finden [Sie unter Gewusst wi
 [**StartDocPrinter**](startdocprinter.md)
 </dt> <dt>
 
-[**Startpageprinter**](startpageprinter.md)
+[**StartPagePrinter**](startpageprinter.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> </dl>
 
  

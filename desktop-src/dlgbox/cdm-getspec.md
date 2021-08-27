@@ -1,9 +1,9 @@
 ---
-title: CDM_GETSPEC Nachricht (Commdlg.h)
-description: Ruft den Dateinamen (ohne Den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As (Öffnen oder Speichern unter) ab.
+title: CDM_GETSPEC (Commdlg.h)
+description: Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei im Dialogfeld Öffnen oder Speichern unter im Explorer-Stil ab.
 ms.assetid: 22a67c92-bd24-4cba-bef8-291d241e6ec8
 keywords:
-- Dialogfelder für CDM_GETSPEC Meldung
+- CDM_GETSPEC-Dialogfelder
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27eff7e9a14f39554fa6c1a69846bbaca7c39990
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: 66e919ccbdabbb19745b172082eed5cc2b0b8a36555587cda59bd7e24fca3247
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110548875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022520"
 ---
 # <a name="cdm_getspec-message"></a>CDM \_ GETSPEC-Nachricht
 
-\[Ab Windows Vista wurden die Dialogfelder **Öffnen** und **Speichern unter** allgemein durch das [Dialogfeld "Allgemeines Element"](../shell/common-file-dialog.md)ersetzt. Es wird empfohlen, die Dialogfeld-API für allgemeine Elemente anstelle dieser Dialogfelder aus der Common Dialog Box Library zu verwenden.\]
+\[Ab Windows Vista wurden die  allgemeinen  Dialogfelder Öffnen und Speichern unter durch den Allgemeinen [Elementdialog ersetzt.](../shell/common-file-dialog.md) Es wird empfohlen, anstelle dieser Dialogfelder aus der Common Dialog Box Library die API für den Allgemeinen Elementdialog zu verwenden.\]
 
-Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten Datei in einem Dialogfeld im Explorer-Stil open or Save As **(Öffnen** oder **Speichern unter)** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
+Ruft den Dateinamen (ohne den Pfad) der aktuell ausgewählten  Datei im Dialogfeld Öffnen oder Speichern unter im **Explorer-Stil** ab. Das Dialogfeld muss mit dem **\_ OFN-EXPLORER-Flag** erstellt worden sein. Andernfalls schlägt die Meldung fehl.
 
 
 ```C++
@@ -56,7 +56,7 @@ Ein Zeiger auf den Puffer, der den Dateinamen empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Nachricht erfolgreich ist, entspricht der Rückgabewert der Größe der Dateinamenzeichenfolge in Zeichen, einschließlich des abschließenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
+Wenn die Meldung erfolgreich ist, ist der Rückgabewert die Größe der Dateinamenzeichenfolge in Zeichen, einschließlich des beendenden NULL-Zeichens. Dies ist entweder die Anzahl von Bytes oder Zeichen, die in den Puffer kopiert werden, oder die erforderliche Puffergröße, wenn der Puffer zu klein ist.
 
 Wenn ein Fehler auftritt, ist der Rückgabewert kleiner als 0 (null).
 
@@ -76,7 +76,7 @@ int CommDlg_OpenSave_GetSpec(hwnd, lparam, wparam);
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Commdlg.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 

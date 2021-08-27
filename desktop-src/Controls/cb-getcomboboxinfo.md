@@ -1,9 +1,9 @@
 ---
-title: CB_GETCOMBOBOXINFO Meldung (Winuser. h)
-description: Ruft Informationen über das angegebene Kombinations Feld ab.
+title: CB_GETCOMBOBOXINFO Meldung (Winuser.h)
+description: Ruft Informationen zum angegebenen Kombinationsfeld ab.
 ms.assetid: 3239dfa8-7301-48e3-ba8e-29c5d5f43b39
 keywords:
-- Windows-Steuerelemente für CB_GETCOMBOBOXINFO Meldung
+- CB_GETCOMBOBOXINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd7052ef4feca8a8704258c7c34d6516c7cd6cd4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ce6227df0031c01b15892daa14eea9cc8d25bd2c7eede68af275063d7201505
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089290"
 ---
-# <a name="cb_getcomboboxinfo-message"></a>CB \_ getcomboboxinfo-Meldung
+# <a name="cb_getcomboboxinfo-message"></a>CB \_ GETCOMBOBOXINFO-Nachricht
 
-Ruft Informationen über das angegebene Kombinations Feld ab.
+Ruft Informationen zum angegebenen Kombinationsfeld ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,10 +36,10 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> <dt>
 
-*LPARAM* \[ vorgenommen\]
+*lParam* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**comboboxinfo**](/windows/win32/api/winuser/ns-winuser-comboboxinfo) -Struktur, die die Informationen empfängt.
+Ein Zeiger auf eine [**COMBOBOXINFO-Struktur,**](/windows/win32/api/winuser/ns-winuser-comboboxinfo) die die Informationen empfängt.
 
 </dd> </dl>
 
@@ -51,7 +51,7 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehl
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Meldung entspricht [**getcomboboxinfo**](/windows/desktop/api/Winuser/nf-winuser-getcomboboxinfo).
+Diese Meldung entspricht [**GetComboBoxInfo.**](/windows/desktop/api/Winuser/nf-winuser-getcomboboxinfo)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Diese Meldung entspricht [**getcomboboxinfo**](/windows/desktop/api/Winuser/nf-w
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Diese Meldung entspricht [**getcomboboxinfo**](/windows/desktop/api/Winuser/nf-w
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Comboboxinfo**](/windows/win32/api/winuser/ns-winuser-comboboxinfo)
+[**COMBOBOXINFO**](/windows/win32/api/winuser/ns-winuser-comboboxinfo)
 </dt> <dt>
 
-[**Getcomboboxinfo**](/windows/desktop/api/Winuser/nf-winuser-getcomboboxinfo)
+[**GetComboBoxInfo**](/windows/desktop/api/Winuser/nf-winuser-getcomboboxinfo)
 </dt> </dl>
 
  

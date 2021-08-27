@@ -1,43 +1,43 @@
 ---
-title: Portieren von Pick-Funktionen
-description: Alle IRIS GL-Pick-Funktionen verfügen über OpenGL-Entsprechungen, mit Ausnahme von clearhitcode. In der folgenden Tabelle werden die Funktionen von IRIS GL Picking und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+title: Portieren von Auswahlfunktionen
+description: Alle IRIS GL-Auswahlfunktionen verfügen über OpenGL-Entsprechungen, mit Ausnahme von clearhitcode. In der folgenden Tabelle sind die IRIS GL-Auswahlfunktionen und die entsprechenden OpenGL-Funktionen aufgeführt.
 ms.assetid: f8fbd0c2-14bf-47bc-be7f-eeef346dbac1
 keywords:
-- IRIS GL Porting, Picking
-- Portieren von IRIS GL, auswählen
-- Portieren auf OpenGL von IRIS GL, auswählen
-- OpenGL-Portierung von IRIS GL, Auswahl
-- Pick
+- IRIS GL-Portierung, Auswählen
+- Portieren von IRIS GL, Auswählen
+- Portieren von IRIS GL zu OpenGL, Auswählen
+- OpenGL-Portierung von IRIS GL,Auswählen
+- Kommissionierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db4c0ea6011860f7d5010dd0bb7d5d23b671d99a
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5be2cbeed54a18e7f1d3f26ec01dca2ad352aa4e190fbdc667ed75a60badec29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120034810"
 ---
-# <a name="porting-picking-functions"></a>Portieren von Pick-Funktionen
+# <a name="porting-picking-functions"></a>Portieren von Auswahlfunktionen
 
-Alle IRIS GL-Pick-Funktionen verfügen über OpenGL-Entsprechungen, mit Ausnahme von **clearhitcode**. In der folgenden Tabelle werden die Funktionen von IRIS GL Picking und ihre entsprechenden OpenGL-Funktionen aufgelistet.
+Alle IRIS GL-Auswahlfunktionen verfügen über OpenGL-Entsprechungen, mit Ausnahme von **clearhitcode**. In der folgenden Tabelle sind die IRIS GL-Auswahlfunktionen und die entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
 | IRIS GL-Funktion                | OpenGL-Funktion                                                                           | Bedeutung                                |
 |---------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------|
-| **clearhitcode**                | Wird nicht unterstützt.                                                                            | Löscht die globale Variable und den hitcode.    |
-| **pickselect**<br/>       | [**glrendermode**](glrendermode.md) (GL \_ Select)                                       | Wechselt zum Auswahl-oder Pick-Modus. |
-| **endpickendselect**<br/> | [**glrendermode**](glrendermode.md) (GL- \_ Rendering)                                       | Wechselt in den Renderingmodus.            |
-| **picksize**                    | [**glupickmatrix**](glupickmatrix.md)-[**glselectbuffer**](glselectbuffer.md)<br/> | Legt das Rückgabe Array fest.                 |
-| **initnames**                   | [**glinitnames**](glinitnames.md)                                                        |                                        |
-| **pushnamepopname**<br/>  | [**glpushname**](glpushname.md)([**glpopname** )](glpopname.md)<br/>                 |                                        |
-| **loadname**                    | [**glloadname**](glloadname.md)                                                          |                                        |
+| **clearhitcode**                | Wird nicht unterstützt.                                                                            | Löscht die globale Variable und den Hitcode.    |
+| **pickselect**<br/>       | [**glRenderMode**](glrendermode.md) ( GL \_ SELECT )                                       | Wechselt zum Auswahl- oder Auswahlmodus. |
+| **endpickendselect**<br/> | [**glRenderMode**](glrendermode.md) ( GL \_ RENDER )                                       | Wechselt in den Renderingmodus.            |
+| **picksize**                    | [**gluPickMatrix**](glupickmatrix.md)[**glSelectBuffer**](glselectbuffer.md)<br/> | Legt das Rückgabearray fest.                 |
+| **initnames**                   | [**glInitNames**](glinitnames.md)                                                        |                                        |
+| **pushnamepopname**<br/>  | [**glPushName**](glpushname.md)[**glPopName**](glpopname.md)<br/>                 |                                        |
+| **loadname**                    | [**glLoadName**](glloadname.md)                                                          |                                        |
 
 
 
  
 
-Weitere Informationen zum Auswählen von finden Sie unter [**glupickmatrix**](glupickmatrix.md).
+Weitere Informationen zur Auswahl finden Sie unter [**gluPickMatrix**](glupickmatrix.md).
 
  
 

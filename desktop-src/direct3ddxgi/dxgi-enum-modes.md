@@ -1,36 +1,36 @@
 ---
-description: Optionen für das Auflisten der Anzeigemodi.
+description: Optionen zum Aufzählen von Anzeigemodi.
 ms.assetid: 7e0f5629-f8e2-478b-b8eb-00780a3dcf1f
-title: DXGI_ENUM_MODES (dxgi. h)
+title: DXGI_ENUM_MODES (DXGI.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 056ad959f0b86fb6f357d690f2daab908275e038
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 568e3919955c2f5612cf88896a2cb6389ebc58fcb427e159824c1dc2feeebca6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025630"
 ---
-# <a name="dxgi_enum_modes"></a>DXGI- \_ Enum- \_ Modi
+# <a name="dxgi_enum_modes"></a>\_DXGI-ENUM-MODI \_
 
-Optionen für das Auflisten der Anzeigemodi.
+Optionen zum Aufzählen von Anzeigemodi.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                     |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="DXGI_ENUM_MODES_INTERLACED"></span><span id="dxgi_enum_modes_interlaced"></span><dl> <dt>**DXGI \_ Enum \_ - \_ Modi**</dt> mit Zeilen Sprung <dt>1UL</dt> </dl>                 | Zeilen Sprung Modi einschließen.<br/>                                                                                                                                                                                                                                                                                                            |
-| <span id="DXGI_ENUM_MODES_SCALING"></span><span id="dxgi_enum_modes_scaling"></span><dl> <dt>**DXGI \_ Enum- \_ Modi \_ skalieren**</dt> von <dt>2ul</dt> </dl>                          | Schließt den Modus für die gestreckte Skalierung ein<br/>                                                                                                                                                                                                                                                                                                     |
-| <span id="DXGI_ENUM_MODES_STEREO"></span><span id="dxgi_enum_modes_stereo"></span><dl> <dt>**DXGI \_ Enum- \_ Modi \_ Stereo**</dt> <dt>4ul</dt> </dl>                             | Fügen Sie Stereo Modi ein.<br/> **Direct3D 11:** Dieser Enumerationswert wird ab Windows 8 unterstützt.<br/>                                                                                                                                                                                                                       |
-| <span id="DXGI_ENUM_MODES_DISABLED_STEREO"></span><span id="dxgi_enum_modes_disabled_stereo"></span><dl> <dt>**DXGI \_ Enum- \_ Modi \_ deaktiviert \_ Stereo**</dt> <dt>8ul</dt> </dl> | Fügen Sie Stereo Modi ein, die ausgeblendet sind, da der Benutzer Stereo deaktiviert hat. System Steuerungsanwendungen können diese Option verwenden, um Stereo Funktionen anzuzeigen, die als Teil einer Benutzeroberfläche deaktiviert wurden, die Stereo aktiviert und deaktiviert.<br/> **Direct3D 11:** Dieser Enumerationswert wird ab Windows 8 unterstützt.<br/> |
+| <span id="DXGI_ENUM_MODES_INTERLACED"></span><span id="dxgi_enum_modes_interlaced"></span><dl> <dt>**DXGI \_ ENUM \_ MODES \_ INTERLACED**</dt> <dt>1UL</dt> </dl>                 | Schließen Sie Interlaced-Modi ein.<br/>                                                                                                                                                                                                                                                                                                            |
+| <span id="DXGI_ENUM_MODES_SCALING"></span><span id="dxgi_enum_modes_scaling"></span><dl> <dt>**DXGI \_ ENUM MODES \_ SCALING \_**</dt> <dt>2UL</dt> </dl>                          | Schließen Sie Stretchingskalierungsmodi ein.<br/>                                                                                                                                                                                                                                                                                                     |
+| <span id="DXGI_ENUM_MODES_STEREO"></span><span id="dxgi_enum_modes_stereo"></span><dl> <dt>**DXGI \_ ENUM \_ MODES \_ STEREO**</dt> <dt>4UL</dt> </dl>                             | Schließen Sie Stereomodi ein.<br/> **Direct3D 11:** Dieser Enumerationswert wird ab Windows 8.<br/>                                                                                                                                                                                                                       |
+| <span id="DXGI_ENUM_MODES_DISABLED_STEREO"></span><span id="dxgi_enum_modes_disabled_stereo"></span><dl> <dt>**DXGI \_ DEAKTIVIERTE \_ ENUM-MODI \_ \_ STEREO**</dt> <dt>8UL</dt> </dl> | Schließen Sie Stereomodi ein, die ausgeblendet sind, weil der Benutzer Stereo deaktiviert hat. Systemsteuerungsanwendungen können diese Option verwenden, um Stereofunktionen zu zeigen, die als Teil einer Benutzeroberfläche deaktiviert wurden, die Stereo aktiviert und deaktiviert.<br/> **Direct3D 11:** Dieser Enumerationswert wird ab Windows 8.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Flagoptionen werden in [**idxgioutput:: getdisplaymodelist**](/windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getdisplaymodelist) zum Auflisten der Anzeigemodi verwendet.
+Diese Flagoptionen werden in [**IDXGIOutput::GetDisplayModeList**](/windows/desktop/api/DXGI/nf-dxgi-idxgioutput-getdisplaymodelist) verwendet, um Anzeigemodi aufzählen.
 
-Diese Flagoptionen werden auch in [**IDXGIOutput1:: GetDisplayModeList1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-getdisplaymodelist1) zum Auflisten der Anzeigemodi verwendet.
+Diese Flagoptionen werden auch in [**IDXGIOutput1::GetDisplayModeList1**](/windows/desktop/api/DXGI1_2/nf-dxgi1_2-idxgioutput1-getdisplaymodelist1) verwendet, um Anzeigemodi aufzählen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,7 +38,7 @@ Diese Flagoptionen werden auch in [**IDXGIOutput1:: GetDisplayModeList1**](/wind
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DXGI. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DXGI.h</dt> </dl> |
 
 
 

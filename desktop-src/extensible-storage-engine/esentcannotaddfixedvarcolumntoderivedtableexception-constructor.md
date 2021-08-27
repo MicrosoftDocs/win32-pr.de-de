@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcannotaddfixedvarcolumndederivedtableexception-Konstruktor'
-title: Esentcannotaddfixedvarcolumndederivedtableexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentCannotAddFixedVarColumnToDerivedTableException-Konstruktor'
+title: EsentCannotAddFixedVarColumnToDerivedTableException-Konstruktor
 TOCTitle: 'EsentCannotAddFixedVarColumnToDerivedTableException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCannotAddFixedVarColumnToDerivedTableException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotaddfixedvarcolumntoderivedtableexception.esentcannotaddfixedvarcolumntoderivedtableexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d89acf1af0550bc181d6154e303a63115e68406b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 27e81f1e3415947129257c8cf4f952bfe033f00d04f2b24963207ef446ffe38b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120021230"
 ---
-# <a name="esentcannotaddfixedvarcolumntoderivedtableexception-constructor"></a>Esentcannotaddfixedvarcolumndederivedtableexception-Konstruktor
+# <a name="esentcannotaddfixedvarcolumntoderivedtableexception-constructor"></a>EsentCannotAddFixedVarColumnToDerivedTableException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcannotaddfixedvarcolumndederivedtableexception-Klasse.
+Initialisiert eine neue Instanz der EsentCannotAddFixedVarColumnToDerivedTableException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentCannotAddFixedVarColumnToDerivedTableException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotaddfixedvarcolumndederivedtableexception-Klasse](./esentcannotaddfixedvarcolumntoderivedtableexception-class.md)
+[EsentCannotAddFixedVarColumnToDerivedTableException-Klasse](./esentcannotaddfixedvarcolumntoderivedtableexception-class.md)
 
-[Esentcannotaddfixedvarcolumnabderivedtableexception-Member](./esentcannotaddfixedvarcolumntoderivedtableexception-members.md)
+[EsentCannotAddFixedVarColumnToDerivedTableException-Member](./esentcannotaddfixedvarcolumntoderivedtableexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

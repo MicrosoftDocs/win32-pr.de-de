@@ -1,8 +1,8 @@
 ---
-description: Ruft ein Objekt ab, das eine Klassendefinition oder eine-Instanz ist, basierend auf dem Objekt Pfad.
+description: Ruft ein Objekt ab, bei dem es sich um eine Klassendefinition oder eine Instanz handelt, basierend auf dem Objektpfad.
 ms.assetid: 8da46851-52b8-4b5a-8c9d-1d492f57f4b6
 ms.tgt_platform: multiple
-title: Swap Services. getasync-Methode (wbemdisp. h)
+title: SWbemServices.GetAsync-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,22 +16,22 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 451f13bde9458e7d57ec393f42b92a4092c99924
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d507779493563556d250823cc1be0228731c55ced66911b4f530936b75afdf70
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071480"
 ---
-# <a name="swbemservicesgetasync-method"></a>Swap Services. getasync-Methode
+# <a name="swbemservicesgetasync-method"></a>SWbemServices.GetAsync-Methode
 
-Die **getasync** -Methode des [**Swap Services**](swbemservices.md) -Objekts Ruft ein Objekt ab, das eine Klassendefinition oder eine-Instanz ist, die auf dem Objekt Pfad basiert.
+Die **GetAsync-Methode** des [**SWbemServices-Objekts**](swbemservices.md) ruft basierend auf dem Objektpfad ein Objekt ab, das eine Klassendefinition oder eine Instanz ist.
 
-Diese Methode ruft nur Objekte aus dem Namespace ab, der dem aktuellen ' [**Swap Services**](swbemservices.md) '-Objekt zugeordnet ist.
+Diese Methode ruft nur Objekte aus dem Namespace ab, der dem aktuellen [**SWbemServices-Objekt**](swbemservices.md) zugeordnet ist.
 
-Diese Methode wird im asynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Diese Methode wird im asynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,133 +52,133 @@ SWbemServices.GetAsync( _
 
 <dl> <dt>
 
-*objwbemsink* 
+*objWbemSink* 
 </dt> <dd>
 
-Erforderlich. Objekt Senke, die Objekte asynchron abruft. Erstellen Sie ein " [**Swap**](swbemsink.md) "-Objekt, um die Objekte zu empfangen.
+Erforderlich. Objektsenke, die Objekte asynchron erhält. Erstellen Sie ein [**SWbemSink-Objekt,**](swbemsink.md) um die Objekte zu empfangen.
 
 </dd> <dt>
 
-*strobjectpath* \[ optionale\]
+*strObjectPath* \[ Optional\]
 </dt> <dd>
 
-Der Pfad des Objekts, das Sie abrufen möchten. Wenn dieser Wert leer ist, kann das leere Objekt, das zurückgegeben wird, eine neue Klasse werden. Weitere Informationen finden Sie unter [beschreiben des Speicher Orts eines WMI-Objekts](describing-the-location-of-a-wmi-object.md).
+Pfad des Objekts, das Sie abrufen möchten. Wenn dieser Wert leer ist, kann das leere Objekt, das zurückgegeben wird, zu einer neuen Klasse werden. Weitere Informationen finden Sie unter [Beschreiben des Speicherorts eines WMI-Objekts.](describing-the-location-of-a-wmi-object.md)
 
 </dd> <dt>
 
-*IFlags* \[ optionale\]
+*iFlags* \[ Optional\]
 </dt> <dd>
 
-Eine ganze Zahl, die das Verhalten des Aufrufes bestimmt. Dieser Parameter kann die folgenden Werte annehmen.
+Ganze Zahl, die das Verhalten des Aufrufs bestimmt. Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
 <span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>
 
-<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemflagsendstatus * * * * (128 (0x80))
+<span id="wbemFlagSendStatus"></span><span id="wbemflagsendstatus"></span><span id="WBEMFLAGSENDSTATUS"></span>wbemFlagSendStatus** (128 (0x80))
 
 
 </dt> <dd>
 
-Bewirkt, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Bewirkt, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>
 
-<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemflagdontsendstatus * * * * (0 (0x0))
+<span id="wbemFlagDontSendStatus"></span><span id="wbemflagdontsendstatus"></span><span id="WBEMFLAGDONTSENDSTATUS"></span>wbemFlagDontSendStatus( (0 (0x0))
 
 
 </dt> <dd>
 
-Verhindert, dass asynchrone Aufrufe Statusaktualisierungen an den [**OnProgress**](swbemsink-onprogress.md) -Ereignishandler für die Objekt Senke senden.
+Verhindert, dass asynchrone Aufrufe Statusupdates an den [**OnProgress-Ereignishandler**](swbemsink-onprogress.md) für die Objektsenke senden.
 
 </dd> <dt>
 
 <span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>
 
-<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemflaguseamendedqualifizierer * * * * (131072 (0x20000))
+<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemFlagUseAmendedQualifiers" (131072 (0x20000))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI Klassen Änderungs Daten mit der Basisklassen Definition zurückgibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klassen Informationen](localizing-wmi-class-information.md).
+Bewirkt, dass WMI Klassenänderungsdaten mit der Basisklassendefinition zurückgibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klasseninformationen.](localizing-wmi-class-information.md)
 
 </dd> </dl> </dd> <dt>
 
-*objwbemnamedvalueset* \[ optionale\]
+*objwbemNamedValueSet* \[ Optional\]
 </dt> <dd>
 
-In der Regel ist dieser Wert nicht definiert. Andernfalls handelt es sich hierbei um ein-Objekt vom [**typswap namedvalueset**](swbemnamedvalueset.md) , dessen Elemente die Kontextinformationen darstellen, die von dem Anbieter verwendet werden können, der die Anforderung verarbeitet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, zulässige Werte und die Semantik dokumentieren.
+In der Regel ist dieser Wert nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung wartet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> <dt>
 
-*objwbemasynccontext* \[ optionale\]
+*objWbemAsyncContext* \[ Optional\]
 </dt> <dd>
 
-Ein " [**taubemnamedvalueset**](swbemnamedvalueset.md) "-Objekt, das zur Objekt Senke zurückkehrt, um die Quelle des ursprünglichen asynchronen Aufrufes aufzurufen. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mithilfe derselben Objekt Senke durchführen. Um diesen Parameter zu verwenden, erstellen Sie ein Objekt vom Typ " **Swap namedvalueset** ", und verwenden Sie die Methode " [**taubemnamedvalueset. Add**](swbemnamedvalueset-add.md) ", um einen Wert hinzuzufügen, der den von Ihnen ausgeführten asynchronen Befehl identifiziert. Dieses Objekt vom Typ " **Swap namedvalueset** " wird an die Objekt Senke zurückgegeben, und die Quelle des Aufrufes kann mithilfe der Methode " [**Swap Name. Item**](swbemnamedvalueset-item.md) " extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das zur Objektsenke zurückkehrt, um die Quelle des ursprünglichen asynchronen Aufrufs zu identifizieren. Verwenden Sie diesen Parameter, wenn Sie mehrere asynchrone Aufrufe mit derselben Objektsenke vornehmen. Um diesen Parameter zu verwenden, erstellen Sie ein **SWbemNamedValueSet-Objekt,** und verwenden Sie die [**SWbemNamedValueSet.Add-Methode,**](swbemnamedvalueset-add.md) um einen Wert hinzuzufügen, der den asynchronen Aufruf identifiziert, den Sie vornehmen. Dieses **SWbemNamedValueSet-Objekt** wird an die Objektsenke zurückgegeben, und die Quelle des Aufrufs kann mithilfe der [**SWbemNamedValueSet.Item-Methode**](swbemnamedvalueset-item.md) extrahiert werden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt keinen Wert zurück. Bei erfolgreicher Ausführung empfängt die Senke ein [**onobjectready**](swbemsink-onobjectready.md) -Ereignis, wenn das Objekt verfügbar ist.
+Diese Methode gibt keinen Wert zurück. Bei Erfolg empfängt die Senke ein [**OnObjectReady-Ereignis,**](swbemsink-onobjectready.md) wenn das Objekt verfügbar ist.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **getasync** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **GetAsync-Methode** kann das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrAccessDenied** -2147749891 (0x80041003)
+**wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
 Der aktuelle Benutzer verfügt nicht über die Berechtigung für den Zugriff auf das Objekt.
 
 </dd> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrInvalidParameter** -2147749896 (0x80041008)
+**wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
 Ein angegebener Parameter ist ungültig.
 
 </dd> <dt>
 
-**wbemErrInvalidObjectPath** -2147749946 (0x8004103a)
+**wbemErrInvalidObjectPath** – 2147749946 (0x8004103A)
 </dt> <dd>
 
 Der angegebene Pfad war ungültig.
 
 </dd> <dt>
 
-**wbemErrNotFound** -2147749890 (0x80041002 angezeigt)
+**wbemErrNotFound** – 2147749890 (0x80041002)
 </dt> <dd>
 
-Das angeforderte Objekt wurde nicht gefunden.
+Das angeforderte Objekt konnte nicht gefunden werden.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** -2147749894 (0x80041006)
+**wbemErrOutOfMemory** – 2147749894 (0x80041006)
 </dt> <dd>
 
-Der Arbeitsspeicher reicht nicht aus, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Rückruf wird sofort zurückgegeben. Das angeforderte Objekt und der Status werden mithilfe eines Rückrufs an den Aufrufer zurückgegeben, der an die in *objwbemsink* angegebene Senke gesendet wird. Um das Objekt zu verarbeiten, wenn es zurückgegeben wird, erstellen Sie eine *objwbemsink*. " [**Onobjectready**](swbemsink-onobjectready.md)" oder " *objwbemsink*". [**Onabgeschlossene**](swbemsink-oncompleted.md) Ereignis Unterroutine.
+Dieser Aufruf wird sofort zurückgegeben. Das angeforderte Objekt und der Status werden dem Aufrufer über einen Rückruf zurückgegeben, der an die Senke übermittelt wird, die in *objWbemSink* angegeben ist. Um das Objekt zu verarbeiten, wenn es zurückgegeben wird, erstellen Sie einen *objWbemSink*. [**OnObjectReady**](swbemsink-onobjectready.md)oder ein *objWbemSink*. [**OnCompleted-Ereignisunterroutine.**](swbemsink-oncompleted.md)
 
-Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das Bereitstellen von Daten für die Senke. Dies birgt Sicherheitsrisiken für Ihre Skripts und Anwendungen. Um die Risiken auszuschließen, verwenden Sie die semisynchrone oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen](setting-security-on-an-asynchronous-call.md)-Befehl.
+Ein asynchroner Rückruf ermöglicht es einem nicht authentifizierten Benutzer, Daten für die Senke bereitzustellen. Dies stellt Sicherheitsrisiken für Ihre Skripts und Anwendungen dar. Um die Risiken zu vermeiden, verwenden Sie semisynchrone oder synchrone Kommunikation. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -186,11 +186,11 @@ Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das 
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austauschdienste<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemservices<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemServices<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemServices<br/>                                                          |
 
 
 
@@ -198,10 +198,10 @@ Ein asynchroner Rückruf ermöglicht einem nicht authentifizierten Benutzer das 
 
 <dl> <dt>
 
-[**SWbemServices**](swbemservices.md)
+[**Swbemservices**](swbemservices.md)
 </dt> <dt>
 
-[**Austausch Objekt**](swbemobject.md)
+[**Swbemobject**](swbemobject.md)
 </dt> </dl>
 
  

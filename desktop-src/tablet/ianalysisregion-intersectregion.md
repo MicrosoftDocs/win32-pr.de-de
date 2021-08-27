@@ -1,7 +1,7 @@
 ---
-description: Schränkt den Bereich von ianalysisregion auf den Bereich ein, der durch die Schnittmenge mit der angegebenen ianalysisregion erstellt wurde.
+description: Schränkt den Bereich von IAnalysisRegion auf den Bereich ein, der durch seine Schnittmenge mit der angegebenen IAnalysisRegion erstellt wurde.
 ms.assetid: 02b3049f-ada9-4de3-a7a2-f9ff8313fbab
-title: 'Ianalysisregion:: intersectregion-Methode (iacom. h)'
+title: IAnalysisRegion::IntersectRegion-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 7ff3caad382e54f41685f6102edafdeb86b813c4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0db58dcc7fc1c1e7458cf804eb82af236de8f1997ddcc658391da19641d1cfdb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058080"
 ---
-# <a name="ianalysisregionintersectregion-method"></a>Ianalysisregion:: intersectregion-Methode
+# <a name="ianalysisregionintersectregion-method"></a>IAnalysisRegion::IntersectRegion-Methode
 
-Schränkt den Bereich von [**ianalysisregion**](ianalysisregion.md) auf den Bereich ein, der durch die Schnittmenge mit der angegebenen **ianalysisregion** erstellt wurde.
+Schränkt den Bereich von [**IAnalysisRegion**](ianalysisregion.md) auf den Bereich ein, der durch seine Schnittmenge mit dem angegebenen **IAnalysisRegion** erstellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ HRESULT IntersectRegion(
 
 <dl> <dt>
 
-*pregionintersect* \[ in\]
+*pRegionToIntersect* \[ In\]
 </dt> <dd>
 
-Der [**ianalysisregion**](ianalysisregion.md) , mit der die Schnittmenge gebildet werden soll.
+Die [**IAnalysisRegion,**](ianalysisregion.md) mit der sich die Daten überschneiden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn sich die beiden Bereiche nicht überschneiden, ist der neue Bereich leer.
 
@@ -60,9 +60,9 @@ Wenn sich die beiden Bereiche nicht überschneiden, ist der neue Bereich leer.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
@@ -71,25 +71,25 @@ Wenn sich die beiden Bereiche nicht überschneiden, ist der neue Bereich leer.
 
 <dl> <dt>
 
-[**Ianalysisregion**](ianalysisregion.md)
+[**IAnalysisRegion**](ianalysisregion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: excluderectangle**](ianalysisregion-excluderectangle.md)
+[**IAnalysisRegion::ExcludeRectangle**](ianalysisregion-excluderectangle.md)
 </dt> <dt>
 
-[**Ianalysisregion:: excluderegion-Methode**](ianalysisregion-excluderegion.md)
+[**IAnalysisRegion::ExcludeRegion-Methode**](ianalysisregion-excluderegion.md)
 </dt> <dt>
 
-[**Ianalysisregion:: intersectrechteck-Methode**](ianalysisregion-intersectrectangle.md)
+[**IAnalysisRegion::IntersectRectangle-Methode**](ianalysisregion-intersectrectangle.md)
 </dt> <dt>
 
-[**Ianalysisregion:: unionrechteck-Methode**](ianalysisregion-unionrectangle.md)
+[**IAnalysisRegion::UnionRectangle-Methode**](ianalysisregion-unionrectangle.md)
 </dt> <dt>
 
-[**Ianalysisregion:: unionregion-Methode**](ianalysisregion-unionregion.md)
+[**IAnalysisRegion::UnionRegion-Methode**](ianalysisregion-unionregion.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

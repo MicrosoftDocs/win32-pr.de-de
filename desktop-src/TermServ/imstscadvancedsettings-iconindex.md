@@ -1,28 +1,28 @@
 ---
-title: Imstscadvancedsettings IconIndex-Eigenschaft
-description: Gibt den Index des Symbols in der aktuellen Symbol Datei an.
+title: IMsTscAdvancedSettings IconIndex-Eigenschaft
+description: Gibt den Index des Symbols in der aktuellen Symboldatei an.
 ms.assetid: c29ae1a7-9c54-4e56-bb69-4e929e8a4e5c
 ms.tgt_platform: multiple
 keywords:
 - IconIndex-Eigenschaft Remotedesktopdienste
-- IconIndex-Eigenschaft Remotedesktopdienste, imstscadvancedsettings-Schnittstelle
-- Imstscadvancedsettings-Schnittstelle Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, IconIndex-Eigenschaft
-- IconIndex-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsTscAdvancedSettings-Schnittstelle
+- IMsTscAdvancedSettings-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
+- IconIndex-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , IconIndex-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -50,19 +50,19 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3be56eab5dbe7f03155c6082e4e70fc4bd439253
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a7c1c53a073f218666ab44eb926b9a92f835078c50a88bc488cc1da4b70b056f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125460"
 ---
-# <a name="imstscadvancedsettingsiconindex-property"></a>Imstscadvancedsettings:: IconIndex-Eigenschaft
+# <a name="imstscadvancedsettingsiconindex-property"></a>IMsTscAdvancedSettings::IconIndex-Eigenschaft
 
-Gibt den Index des Symbols in der aktuellen Symbol Datei an.
+Gibt den Index des Symbols in der aktuellen Symboldatei an.
 
 > [!Note]  
-> Diese Eigenschaft wird im ActiveX-Steuerelement (Msrdp. ocx) nicht unterstützt. Sie wird in der MsTscAx.dll-Bibliothek unterstützt, die im Standard Client (MsTsc.exe) enthalten ist.
+> Diese Eigenschaft wird im ActiveX-Steuerelement (MsRdp.ocx) nicht unterstützt. Sie wird in der MsTscAx.dll Bibliothek unterstützt, die im Standardclient (MsTsc.exe) enthalten ist.
 
  
 
@@ -85,9 +85,9 @@ Der Index des Symbols.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **" \_ false**" zurück.
+Gibt **S \_ FALSE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -101,7 +101,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ imstscadvancedsettings ist als 809945cc-4b3b-4a92-a6b0-DBF 9b5s2ef2d definiert.<br/> |
+| IID<br/>                      | \_IID-IMsTscAdvancedSettings ist als 809945cc-4b3b-4a92-a6b0-dbf9b5f2ef2d definiert.<br/> |
 
 
 
@@ -109,7 +109,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
@@ -133,7 +133,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> </dl>
 
  

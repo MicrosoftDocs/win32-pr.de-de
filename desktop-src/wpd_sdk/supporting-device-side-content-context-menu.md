@@ -1,21 +1,21 @@
 ---
-title: Unterstützen von geräteseitigem WPD-Inhalt (ContextMenu)
-description: Erfahren Sie, wie Sie die Windows Shell-API oder die WPD-API verwenden, um Daten für WPD-Geräteobjekte abzurufen, auf die nicht über das Dateisystem in Windows Vista zugegriffen werden kann.
+title: Unterstützen geräteseitiger WPD-Inhalte (ContextMenu)
+description: Erfahren Sie, wie Sie die Windows Shell-API oder die WPD-API verwenden, um Daten für WPD-Geräteobjekte zu erhalten, auf die über das Dateisystem in Windows Vista nicht zugegriffen werden kann.
 ms.assetid: 47fb7f49-9026-43c1-be46-8a520c048862
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 626c92633b1aa215c0e826a4b720de0375aa6048
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 8672793f75df7e1364827e42da4d427013a2dd89bcbb9653d1e74287a63367dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006180"
 ---
 # <a name="supporting-wpd-device-side-content"></a>Unterstützen geräteseitiger WPD-Inhalte
 
-Da auf geräteseitige Inhalte nicht über das Dateisystem in Windows Vista zugegriffen werden kann, müssen Sie entweder die Windows Shell-API oder die WPD-API verwenden, um Daten für Geräteobjekte abzurufen. Dies ist der Hauptunterschied zwischen einem normalen Kontextmenühandler und einem WPD-Kontextmenühandler. Der folgende Beispielcode veranschaulicht das Abrufen von geräteseitigem Inhalt mithilfe der Windows Shell-API.
+Da auf geräteseitige Inhalte nicht über das Dateisystem in Windows Vista zugegriffen werden kann, müssen Sie entweder die Windows Shell-API oder die WPD-API verwenden, um Daten für Geräteobjekte abzurufen. Dies ist der Hauptunterschied zwischen einem normalen Kontextmenühandler und einem WPD-Kontextmenühandler. Der folgende Beispielcode veranschaulicht das Abrufen geräteseitiger Inhalte mithilfe der Windows Shell-API.
 
-Der erste Schritt ist die Initialisierung der Elementbezeichnerliste oder PIDL. (Diese Liste enthält den eindeutigen Bezeichner für das angegebene Geräteobjekt.)
+Der erste Schritt ist die Initialisierung der Elementbezeichnerliste oder PIDL. (Diese Liste enthält den eindeutigen Bezeichner für das gegebene Geräteobjekt.)
 
 
 ```C++
@@ -62,7 +62,7 @@ HRESULT CWPDContextMenu::_InitializePIDLArray(IDataObject *pDataObj)
 
 
 
-Die Initialisierungsfunktion ruft die \_ ExaminePIDLArray-Funktion auf, die die Eigenschaften für das Objekt abruft, das durch eine PIDL im PIDL-Array identifiziert wird.
+Die Initialisierungsfunktion ruft die ExaminePIDLArray-Funktion auf, die die Eigenschaften für das Objekt abruft, das durch eine PIDL im \_ PIDL-Array identifiziert wird.
 
 
 ```C++

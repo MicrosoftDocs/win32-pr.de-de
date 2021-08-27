@@ -1,9 +1,9 @@
 ---
-title: glcullface-Funktion (GL. h)
-description: Mit der Funktion "glcullface" wird angegeben, ob Front-of-und Back-of-factorins gefiltert werden können.
+title: glCullFace-Funktion (Gl.h)
+description: Die glCullFace-Funktion gibt an, ob front- oder back-facing Facets gecullt werden können.
 ms.assetid: 53bf05b5-a68b-4d96-b4e7-2878a0a86a13
 keywords:
-- glcullface-Funktion OpenGL
+- glCullFace-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c20370e0fa8bcf746d1b835ee45725f76158fb2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 70fd983e9a5921d96ba487f7eb8d6f631b000019e8ff566eb1ecc79e05ce4fb8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120081670"
 ---
-# <a name="glcullface-function"></a>glcullface-Funktion
+# <a name="glcullface-function"></a>glCullFace-Funktion
 
-Mit der Funktion " **glcullface** " wird angegeben, ob Front-of-und Back-of-factorins gefiltert werden können.
+Die **glCullFace-Funktion** gibt an, ob front- oder back-facing Facets gecullt werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ void WINAPI glCullFace(
 *mode* 
 </dt> <dd>
 
-Gibt an, ob Vordergrund-oder Hintergrund Facetten als Kandidaten für die Berechnung dienen. Die symbolischen Konstanten GL \_ Front, GL \_ Back und GL \_ Front \_ und \_ Back werden akzeptiert. Der Standardwert ist "GL \_ Back".
+Gibt an, ob front- oder back-facing Facets Kandidaten für das Culling sind. Die symbolischen Konstanten GL \_ FRONT, GL \_ BACK und GL FRONT AND BACK werden \_ \_ \_ akzeptiert. Der Standardwert ist GL \_ BACK.
 
 </dd> </dl>
 
@@ -53,30 +53,30 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | der *Modus* war kein akzeptierter Wert.<br/>                                                                                          |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *mode* war kein akzeptierter Wert.<br/>                                                                                          |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glcullface** " gibt an, ob Front-und Hintergrund Facetten (wie im Modus festgelegt) durch ein-und facetentergebnissen (im *Modus* festgelegt) gefiltert werden. Sie aktivieren und deaktivieren die faceterelung mithilfe von [**glEnable**](glenable.md) und [**gldeaktivieren**](gldisable.md) mit dem Argument GL \_ cull \_ Face. Facetten sind Dreiecke, Vierecke, Polygone und Rechtecke.
+Die **glCullFace-Funktion** gibt an, ob front- oder zurück gerichtete Facets gecullt werden (wie im -Modus *angegeben),* wenn Facet-Culling aktiviert ist. Sie aktivieren und deaktivieren facet culling mit [**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ CULL \_ FACE. Facets umfassen Dreiecke, Quadrieren, Polygone und Rechtecke.
 
-Die [**glfrontface**](glfrontface.md) -Funktion gibt an, welcher der Uhrzeigersinn-und gegen Uhrzeigersinn-Facetten Front-und rückwärts-ausgerichtet ist.
+Die [**glFrontFace-Funktion**](glfrontface.md) gibt an, welche facets im Uhrzeigersinn und gegen den Uhrzeigersinn nach vorne und nach hinten ausgerichtet sind.
 
-Wenn der *Modus* "GL" \_ vor \_ und hinten ist \_ , werden keine Facetten gezeichnet, aber andere primitive, z. b. Punkte und Linien, werden gezeichnet.
+Wenn *der Modus* GL FRONT AND BACK ist, werden keine \_ \_ Facets gezeichnet, aber andere Primitive wie Punkte und \_ Linien werden gezeichnet.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glcullface** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glCullFace ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument "GL \_ cull \_ Face \_ Mode"
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) Argument GL \_ CULL \_ FACE \_ MODE
 
-[**glisenabled**](glisenabled.md) mit dem Argument GL \_ cull \_ Face
+[**glIsEnabled mit**](glisenabled.md) Argument GL \_ CULL \_ FACE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,8 +86,8 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glcullfa
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -99,7 +99,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glcullfa
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**gldeaktivieren**](gldisable.md)
+[**glDisable**](gldisable.md)
 </dt> <dt>
 
 [**glEnable**](glenable.md)
@@ -108,13 +108,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glcullfa
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glfrontface**](glfrontface.md)
+[**glFrontFace**](glfrontface.md)
 </dt> <dt>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md)
 </dt> <dt>
 
-[**glisenabled**](glisenabled.md)
+[**glIsEnabled**](glisenabled.md)
 </dt> </dl>
 
  

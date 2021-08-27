@@ -1,44 +1,44 @@
 ---
 title: Fragmentcache
-description: Die HTTP-Server-API stellt Funktionen bereit, mit denen Benutzerdaten Fragmente in einem Cache für die schnelle Bildung von HTTP-Antworten speichern können.
+description: Die HTTP-Server-API bietet Benutzern Funktionen zum Speichern von Datenfragmenten in einem Cache für die schnelle Bildung von HTTP-Antworten.
 ms.assetid: 0f9a768e-723c-4c7b-a746-6b817441409c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a3979fb03c4f8898644329fd27eafb7007adbcc9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6659ead1139bd1b35a466a56c44357dd1f7f30cbac5fad8669445208be0e5136
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047250"
 ---
 # <a name="fragment-cache"></a>Fragmentcache
 
-Die HTTP-Server-API stellt Funktionen bereit, mit denen Benutzerdaten Fragmente in einem Cache für die schnelle Bildung von HTTP-Antworten speichern können.
+Die HTTP-Server-API bietet Benutzern Funktionen zum Speichern von Datenfragmenten in einem Cache für die schnelle Bildung von HTTP-Antworten.
 
-Fragmente können dem Cache hinzugefügt werden, indem die [**httpaddfragmenttocache**](/windows/desktop/api/Http/nf-http-httpaddfragmenttocache) -Funktion aufgerufen wird. Ein Fragment wird durch eine URL identifiziert, die im *purlprefix* -Parameter enthalten ist. Ein Aufrufen dieser Funktion mit der URL eines vorhandenen Fragments überschreibt das vorhandene Fragment.
+Fragmente können dem Cache durch Aufrufen der [**HttpAddFragmentToCache-Funktion hinzugefügt**](/windows/desktop/api/Http/nf-http-httpaddfragmenttocache) werden. Ein Fragment wird durch eine URL identifiziert, die im *pUrlPrefix-Parameter* enthalten ist. Ein Aufruf dieser Funktion mit der URL eines vorhandenen Fragments überschreibt das vorhandene Fragment.
 
-Ein Fragment kann vom Besitzer der Anforderungs Warteschlange gelöscht oder überschrieben werden, die anfänglich das Fragment hinzugefügt hat. Die [**httpflushresponsecache**](/windows/desktop/api/Http/nf-http-httpflushresponsecache) -Funktion, die mit einem URLPrefix aufgerufen wird, löscht alle Fragmente innerhalb dieses Präfixes sowie die hierarchischen Nachfolger dieses URLPrefix. Die [**httpreadfragmentfromcache**](/windows/desktop/api/Http/nf-http-httpreadfragmentfromcache) -Funktion liest das gesamte Fragment oder einen angegebenen Byte Bereich innerhalb des Fragments.
+Ein Fragment kann vom Besitzer der Anforderungswarteschlange, die das Fragment ursprünglich hinzugefügt hat, gelöscht oder überschrieben werden. Die [**HttpFlushResponseCache-Funktion,**](/windows/desktop/api/Http/nf-http-httpflushresponsecache) die mit einem UrlPrefix aufgerufen wird, löscht alle Fragmente innerhalb dieses Präfixes sowie die hierarchischen Nachfolger dieses UrlPrefix. Die [**HttpReadFragmentFromCache-Funktion**](/windows/desktop/api/Http/nf-http-httpreadfragmentfromcache) liest das gesamte Fragment oder einen angegebenen Bytebereich innerhalb des Fragments ein.
 
 > [!Note]  
-> Durch das Hinzufügen eines Fragments zum Cache wird nicht garantiert, dass es für zukünftige Aufrufe verfügbar ist, um eine Antwort zu senden. Fragment-Cache Einträge können jederzeit nicht mehr verfügbar sein. Ein-Befehl, der ein nicht verfügbares Fragment verwendet, schlägt fehl. Anwendungen, die den Fragmentcache verwenden, müssen darauf vorbereitet sein, diesen Fehler zu behandeln.
+> Das Hinzufügen eines Fragments zum Cache garantiert nicht, dass es für zukünftige Aufrufe zum Senden einer Antwort verfügbar ist. Fragmentcacheeinträge können jederzeit nicht mehr verfügbar sein. Ein Aufruf, der ein nicht verfügbares Fragment verwendet, schlägt fehl. Anwendungen, die den Fragmentcache verwenden, müssen darauf vorbereitet sein, diesen Fehler zu behandeln.
 
- 
+ 
 
 ## <a name="sending-a-response-with-a-fragment"></a>Senden einer Antwort mit einem Fragment
 
-Fragmente können verwendet werden, um alle-oder-Teile eines HTTP-Antwort-Entitäts Texts zu bilden. Sie können eine Antwort und einen Entitäts Text in einem-Rückruf an die [**HttpSendHttpResponse**](/windows/desktop/api/Http/nf-http-httpsendhttpresponse) -Funktion senden, indem Sie ein Array von [**http- \_ Daten \_**](/windows/desktop/api/Http/ns-http-http_data_chunk) Block Strukturen in der [**http- \_ Antwort**](http-response.md) Struktur angeben.
+Fragmente können verwendet werden, um den entitätskörper einer HTTP-Antwort ganz oder einen Teil davon zu bilden. Sie können eine Antwort und einen Entitätskörper in einem Aufruf an die [**HttpSendHttpResponse-Funktion**](/windows/desktop/api/Http/nf-http-httpsendhttpresponse) senden, indem Sie ein Array von [**HTTP DATA \_ \_ CHUNK-Strukturen**](/windows/desktop/api/Http/ns-http-http_data_chunk) in der [**HTTP \_ RESPONSE-Struktur**](http-response.md) angeben.
 
-Ein [**http \_ - \_ Daten**](/windows/desktop/api/Http/ns-http-http_data_chunk) Block kann einen Speicherblock angeben, ein Handle für eine bereits geöffnete Datei oder einen fragmentcacheeintrag. Diese entsprechen den **http- \_ Daten \_** Segmenttypen: **httpdatachunkfrommemory**, **httpdatachunkfromfilehandle**, bzw. **httpdatachunkfromfragmentcache**. Vollständige Antworten im HTTP-Cache können auch als Fragmente in der [**http- \_ Antwort**](http-response.md) Struktur verwendet werden, obwohl diese Vorgehensweise nicht empfohlen wird.
+Ein [**HTTP \_ DATA \_ CHUNK**](/windows/desktop/api/Http/ns-http-http_data_chunk) kann einen Speicherblock, ein Handle für eine bereits geöffnete Datei oder einen Fragmentcacheeintrag angeben. Diese entsprechen den **HTTP \_ DATA \_ CHUNK-Typen:** **HttpDataChunkFromMemory**, **HttpDataChunkFromFileHandle** bzw. **HttpDataChunkFromFragmentCache.** Vollständige Antworten im HTTP-Cache können auch als Fragmente in der [**HTTP \_ RESPONSE-Struktur**](http-response.md) verwendet werden, obwohl diese Vorgehensweise nicht empfohlen wird.
 
-Die [**http- \_ Antwort**](http-response.md) Struktur enthält einen Zeiger auf ein Array von [**http- \_ Daten \_**](/windows/desktop/api/Http/ns-http-http_data_chunk) Block Strukturen, die den Entitäts Text der Antwort bilden. Die **http- \_ Antwort** Struktur enthält auch eine übereinstimmende Anzahl, die die Dimension des Arrays von **http- \_ Daten \_** Block Strukturen angibt. Der httpdatachunkfromfragmentcache-Wert in der **http- \_ Daten \_** Segmentstruktur gibt den fragmentcachetyp des Datensegments an. Die **http \_ - \_ Daten** Segmentstruktur gibt auch den fragmentnamen an.
+Die [**HTTP \_ RESPONSE-Struktur**](http-response.md) enthält einen Zeiger auf ein Array von [**HTTP DATA \_ \_ CHUNK-Strukturen,**](/windows/desktop/api/Http/ns-http-http_data_chunk) die den Entitätskörper der Antwort bilden. Die **HTTP \_ RESPONSE-Struktur** enthält auch eine übereinstimmende Anzahl, die die Dimension des Arrays von **HTTP DATA \_ \_ CHUNK-Strukturen angibt.** Der HttpDataChunkFromFragmentCache-Wert in der **HTTP \_ DATA \_ CHUNK-Struktur** gibt den Fragmentcachetyp des Daten chunks an. Die **HTTP \_ DATA \_ CHUNK-Struktur** gibt auch den Fragmentnamen an.
 
-Eine Antwort, die ein zwischengespeichertes Fragment enthält, schlägt fehl, und \_ \_ es wird kein Fehler Pfad \_ gefunden, wenn eine der Fragmente-Cache Einträge nicht verfügbar ist. Da es nicht garantiert wird, dass die Fragmentcache Einträge verfügbar sind, müssen Anwendungen darauf vorbereitet sein, diesen Fall zu verarbeiten. Eine Möglichkeit, diesen Fall zu behandeln, besteht darin, den Fragment-Cache Eintrag erneut hinzuzufügen und die Antwort erneut zu senden. Wenn wiederholte Fehler auftreten, kann die Anwendung Datenblöcke verwenden, die in Arbeitsspeicher Puffern gespeichert sind, anstelle von Fragment-Cache Einträgen.
+Eine Antwort, die ein zwischengespeichertes Fragment enthält, schlägt mit dem Fehler PATH NOT FOUND fehl, wenn keines der \_ \_ \_ Fragmentcacheeinträge verfügbar ist. Da die Fragmentcacheeinträge nicht garantiert verfügbar sind, müssen Anwendungen darauf vorbereitet sein, diesen Fall zu behandeln. Eine Möglichkeit, diesen Fall zu behandeln, besteht im Versuch, den Fragmentcacheeintrag erneut hinzuzufügen und die Antwort erneut zu senden. Wenn wiederholte Fehler auftreten, kann die Anwendung in Speicherpuffern gespeicherte Datenfragmente anstelle von Fragmentcacheeinträgen verwenden.
 
-Fragment-Cache Einträge können auch in der [**httpsendresponlentitybody**](/windows/desktop/api/Http/nf-http-httpsendresponseentitybody) -Funktion angegeben werden. Das Fragment wird dem Entitäts Text in der [**http- \_ Daten \_**](/windows/desktop/api/Http/ns-http-http_data_chunk) Segmentstruktur hinzugefügt, wie oben beschrieben. Auch hier kann der Sendevorgang fehlschlagen, wenn eine der angegebenen Fragmente des Fragmentcaches nicht verfügbar ist.
+Fragmentcacheeinträge können auch in der [**HttpSendResponseEntityBody-Funktion angegeben**](/windows/desktop/api/Http/nf-http-httpsendresponseentitybody) werden. Das Fragment wird dem Entitätskörper in der [**HTTP \_ DATA \_ CHUNK-Struktur**](/windows/desktop/api/Http/ns-http-http_data_chunk) wie oben beschrieben hinzugefügt. Auch hier kann das Senden fehlschlagen, wenn einer der angegebenen Fragmentcacheeinträge nicht verfügbar ist.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8678f9b18e40f529da282909015a7c75695770ea
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a714d3dba30b3038d6c04ecedd51db4196a3c4d899d7c607dd12f9a068f8a803
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108094808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120079300"
 ---
 # <a name="ctransinplacefiltergetmediatype-method"></a>CTransInPlaceFilter.GetMediaType-Methode
 
@@ -61,22 +61,22 @@ Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp empfän
 
 Gibt E \_ UNEXPECTED zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Methode überschreibt die [**CTransformFilter::GetMediaType-Methode.**](ctransformfilter-getmediatype.md) In der **CTransInPlaceFilter-Klasse** ruft jeder Pin den gegenüberliegenden verbundenen Pin auf, um bevorzugte Medientypen zu aufzählen. Der Eingabepin ruft den Eingabepin des Downstreamfilters auf, und der Ausgabepin ruft den Ausgabepin des Upstreamfilters auf. Daher wird die -Methode `GetMediaType` des Filters nie aufgerufen.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transip.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Transip.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

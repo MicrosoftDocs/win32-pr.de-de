@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 33d45beda51a7a2c80debafbab864c2accb33653
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: fcb542c5c7bb4edb4dafffa1254b76504aaf0f256a9d694db9d55724f2c94c2d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120069280"
 ---
 # <a name="d3dxintersecttri-function-d3dx9meshh"></a>D3DXIntersectTri-Funktion (D3DX9Mesh.h)
 
@@ -125,7 +125,7 @@ Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
 Gibt **TRUE** zurück, wenn der Strahl den Bereich des Dreiecks überschneidet. Andernfalls gibt **FALSE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die [**D3DXIntersect-Funktion**](d3dxintersect.md) bietet eine Möglichkeit, Punkte in und um ein Dreieck zu verstehen, unabhängig davon, wo sich das Dreieck tatsächlich befindet. Diese Funktion gibt den resultierenden Punkt mithilfe der folgenden Gleichung zurück: V1 + U(V2 - V1) + V(V3 - V1).
 
@@ -133,13 +133,13 @@ Jeder Punkt in der Ebene V1V2V3 kann durch die baryzentrische Koordinate (U,V) d
 
 Barycentric-Koordinaten sind eine Form allgemeiner Koordinaten. In diesem Kontext stellt die Verwendung von baryzentrischen Koordinaten eine Änderung der Koordinatensysteme dar. Was für kartesische Koordinaten gilt, gilt für baryzentrische Koordinaten.
 
-Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine detailliertere Beschreibung der baryzentrierten Koordinaten finden Sie unter [Beschreibung der baryzentrierten Koordinaten von Mathworld.](https://mathworld.wolfram.com/BarycentricCoordinates.html)
+Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug auf die Scheitelpunkte des Dreiecks. Eine ausführlichere Beschreibung der baryzentrischen Koordinaten finden Sie unter [Mathworld es Barycentric Coordinates Description](https://mathworld.wolfram.com/BarycentricCoordinates.html).
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
@@ -150,7 +150,7 @@ Barycentric-Koordinaten definieren einen Punkt innerhalb eines Dreiecks in Bezug
 
 <dl> <dt>
 
-[Mesh-Funktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
+[Meshfunktionen](dx9-graphics-reference-d3dx-functions-mesh.md)
 </dt> </dl>
 
  

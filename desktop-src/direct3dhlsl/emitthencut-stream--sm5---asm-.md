@@ -1,23 +1,23 @@
 ---
-title: emitThenCut_stream (SM5-ASM)
-description: Entspricht einem Ausgabe Befehl gefolgt von einem Befehl zum Ausschneiden. | emitThenCut_stream (SM5-ASM)
+title: emitThenCut_stream (sm5 – asm)
+description: Entspricht einem Emit-Befehl gefolgt von einem Ausschneidebefehl. | emitThenCut_stream (sm5 – asm)
 ms.assetid: E9D84647-E29B-4E31-9E95-9F7A173293D4
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ae3129f2a3fb50664a5dbf070c7a1dae9bf5d6e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 522d2be28ae1d63617b8ba775f8f8839c270668aeeded8a4944ef9ae7554d598
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981209"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120067960"
 ---
-# <a name="emitthencut_stream-sm5---asm"></a>emitthenausschneide Daten \_ Strom (SM5-ASM)
+# <a name="emitthencut_stream-sm5---asm"></a>emitThenCut-Stream \_ (sm5 – asm)
 
-Entspricht einem Ausgabe [Befehl gefolgt von einem Befehl zum](emit--sm4---asm-.md) [Ausschneiden](cut--sm4---asm-.md) .
+Entspricht einem [Emit-Befehl](emit--sm4---asm-.md) gefolgt von einem [Ausschneidebefehl.](cut--sm4---asm-.md)
 
 
 
-| emitthencut \_ Stream streamindex |
+| emitThenCut \_ stream streamIndex |
 |---------------------------------|
 
 
@@ -28,23 +28,23 @@ Entspricht einem Ausgabe [Befehl gefolgt von einem Befehl zum](emit--sm4---asm-.
 
 | Element                                                                                                               | BESCHREIBUNG                         |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[im \] Stream-Index.<br/> |
+| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[in \] Der Streamindex.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang ist nützlich, wenn der letzte Scheitelpunkt in einer Topologie wissentlich ausgegeben wird.
+Dieser Vorgang ist nützlich, wenn sie wissentlich den letzten Scheitelpunkt in einer Topologie ausgibt.
 
-Wenn Streams nicht deklariert wurden, müssen Sie [emitthencut](emitthencut--sm4---asm-.md) anstelle des **emitthencut- \_ Streams** verwenden.
+Wenn Streams nicht deklariert wurden, müssen Sie [emitThenCut](emitthencut--sm4---asm-.md) anstelle des **emitThenCut-Streams \_** verwenden.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        | X        |       |         |
 
@@ -52,20 +52,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -75,7 +75,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

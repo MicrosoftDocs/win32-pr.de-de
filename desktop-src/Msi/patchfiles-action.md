@@ -1,33 +1,33 @@
 ---
-description: Mit der Aktion PATCHFILES wird die patchtabelle abgefragt, um zu bestimmen, welche Patches angewendet werden sollen. Die Aktion "PATCHFILES" führt auch das Byte Weise Patchen der Dateien aus.
+description: Die PatchFiles-Aktion fragt die Patchtabelle ab, um zu bestimmen, welche Patches angewendet werden sollen. Die PatchFiles-Aktion führt auch das byteweise Patchen der Dateien aus.
 ms.assetid: 4026755e-a006-40c0-8816-de5358f4582e
-title: Aktion "PATCHFILES"
+title: PatchFiles-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53583a93089444f014d9cc837fb18acf21cec82d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6186f150df1871e424b1dc6e4f466d148a1ce2ed51ffd9cd8170a1221e2f0b7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103865212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120082670"
 ---
-# <a name="patchfiles-action"></a>Aktion "PATCHFILES"
+# <a name="patchfiles-action"></a>PatchFiles-Aktion
 
-Mit der Aktion PATCHFILES wird die [patchtabelle](patch-table.md) abgefragt, um zu bestimmen, welche Patches angewendet werden sollen. Die Aktion "PATCHFILES" führt auch das Byte Weise Patchen der Dateien aus.
+Die PatchFiles-Aktion fragt die [Patchtabelle ab,](patch-table.md) um zu bestimmen, welche Patches angewendet werden sollen. Die PatchFiles-Aktion führt auch das byteweise Patchen der Dateien aus.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Wenn die Datei, die gepatcht werden soll, nicht installiert ist, muss die PATCHFILES-Aktion nach der [InstallFiles-Aktion](installfiles-action.md) erfolgen, mit der die Datei installiert wird. Zuvor installierte Dateien können an einem beliebigen Punkt in der Aktions Sequenz gepatcht werden. Die [duplicatefiles-Aktion](duplicatefiles-action.md) muss nach der PATCHFILES-Aktion erfolgen, um zu verhindern, dass die nicht gepatchte Version der Datei duplizieren.
+Wenn die datei, die gepatcht werden soll, nicht installiert ist, muss die PatchFiles-Aktion nach der [InstallFiles-Aktion,](installfiles-action.md) die die Datei installiert, angezeigt werden. Zuvor installierte Dateien können jederzeit in der Aktionssequenz gepatcht werden. Die [DuplicateFiles-Aktion](duplicatefiles-action.md) muss nach der PatchFiles-Aktion angezeigt werden, um zu verhindern, dass die ungepatchte Version der Datei dupliziert wird.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Meldungen
 
 
 
-| Feld | Beschreibung der Aktions Daten                    |
+| Feld | Beschreibung der Aktionsdaten                    |
 |-------|-----------------------------------------------|
 | \[1\] | Bezeichner der gepatchten Datei.                   |
-| \[2\] | Der Bezeichner des Verzeichnisses mit gepatchten Datei. |
-| \[3\] | Größe des Patches in Bytes.                       |
+| \[2\] | Bezeichner des Verzeichnisses mit gepatchter Datei. |
+| \[3\] | Patchgröße in Bytes.                       |
 
 
 

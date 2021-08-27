@@ -1,33 +1,33 @@
 ---
-title: Client-Specific Routenliste verwenden
-description: In den folgenden Verfahren werden die Schritte zum Verwenden der Client spezifischen Routenlisten erläutert. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+title: Verwenden einer Client-Specific Routenliste
+description: In den folgenden Verfahren werden die Schritte zum Verwenden der clientspezifischen Routenlisten beschrieben. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 ms.assetid: aa9b7b2a-259f-4ce1-afb6-c04875e8ffe3
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77cfa893bda9e850527c7ebe35590dbe2d08a490
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2ca4b1036115c49c2045121d16f09c55a3fa611153a9b1337a0437c9e2196800
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025300"
 ---
-# <a name="use-a-client-specific-route-list"></a>Client-Specific Routenliste verwenden
+# <a name="use-a-client-specific-route-list"></a>Verwenden einer Client-Specific Routenliste
 
-In den folgenden Verfahren werden die Schritte zum Verwenden der Client spezifischen Routenlisten erläutert. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+In den folgenden Verfahren werden die Schritte zum Verwenden der clientspezifischen Routenlisten beschrieben. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 
-**Um dieses Feature verwenden zu können, muss ein Client die folgenden Schritte ausführen:**
+**Um dieses Feature zu verwenden, sollte ein Client die folgenden Schritte ausführen:**
 
-1.  Rufen Sie [**rtmkreateroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelist) auf, um ein Handle vom Routing Tabellen-Manager zu erhalten.
-2.  Ruft [**rtminsertinroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminsertinroutelist) immer dann auf, wenn der Client eine Route zu dieser Liste hinzufügen muss.
-3.  Wenn der Client die Liste nicht mehr benötigt, sollte er [**rtmdeleteroutelist**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutelist) aufrufen, um die Liste zu entfernen.
+1.  Rufen Sie [**RtmCreateRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelist) auf, um ein Handle vom Routingtabellen-Manager abzurufen.
+2.  Rufen Sie [**RtmInsertInRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtminsertinroutelist) auf, wenn der Client dieser Liste eine Route hinzufügen muss.
+3.  Wenn der Client die Liste nicht mehr benötigt, sollte er [**RtmDeleteRouteList**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutelist) aufrufen, um die Liste zu entfernen.
 
-**Wenn der Client die Routen in der Liste auflisten muss, muss der Client die folgenden Schritte ausführen:**
+**Wenn der Client die Routen in der Liste auflisten muss, sollte der Client die folgenden Schritte ausführen:**
 
-1.  Rufen Sie [**rtmkreateroutelistenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelistenum) auf, um ein enumerationshandle aus dem Routing Tabellen-Manager abzurufen.
-2.  Rufen Sie [**rtmgetlistenumroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlistenumroutes) auf, um die Handles für die Routen in der Liste zu erhalten.
-3.  Wenden Sie [**rtmreleaseroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes) an, um die Handles freizugeben, wenn Sie nicht mehr benötigt werden.
+1.  Rufen Sie [**RtmCreateRouteListEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreateroutelistenum) auf, um ein Enumerationshandle vom Routingtabellen-Manager abzurufen.
+2.  Rufen Sie [**RtmGetListEnumRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetlistenumroutes) auf, um die Handles für die Routen in der Liste abzurufen.
+3.  Rufen Sie [**RtmReleaseRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes) auf, um die Handles freizugeben, wenn sie nicht mehr benötigt werden.
 
-Der folgende Beispielcode zeigt, wie eine Client spezifische Routenliste erstellt und verwendet wird.
+Der folgende Beispielcode zeigt, wie Sie eine clientspezifische Routenliste erstellen und verwenden.
 
 
 ```C++
@@ -124,9 +124,9 @@ ASSERT(Status == NO_ERROR);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachine attachingbdevice-Methode (vpccominterfaces. h)
+title: IVMVirtualMachine AttachUSBDevice-Methode (VPCCOMInterfaces.h)
 description: Fügt ein USB-Gerät an einen virtuellen Computer an.
 ms.assetid: 505078ee-9159-407d-ab8c-a9aba86dec48
 keywords:
-- Attachingbdevice-Methode Virtual PC
-- Attachingbdevice-Methode Virtual PC, ivmvirtualmachine-Schnittstelle
-- Ivmvirtualmachine Interface Virtual PC, attachingbdevice-Methode
+- AttachUSBDevice-Methode Virtueller PC
+- AttachUSBDevice-Methode Virtueller PC, IVMVirtualMachine-Schnittstelle
+- IVMVirtualMachine-Schnittstelle Virtueller PC , AttachUSBDevice-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c3c36224823e4bd74b6a1c757816d55608e6d95a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5c62f3e6862e14a7faa70719d1238500ab5dfe1de10801e7aea390e24a07210
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006900"
 ---
-# <a name="ivmvirtualmachineattachusbdevice-method"></a>Ivmvirtualmachine:: attachingbdevice-Methode
+# <a name="ivmvirtualmachineattachusbdevice-method"></a>IVMVirtualMachine::AttachUSBDevice-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Fügt ein USB-Gerät an einen virtuellen Computer (VM) an.
 
@@ -44,10 +44,10 @@ HRESULT AttachUSBDevice(
 
 <dl> <dt>
 
-*in-bdevice* \[ in\]
+*inUSBDevice* \[ In\]
 </dt> <dd>
 
-Ein [**ivmusbdevice**](ivmusbdevice.md) -Zeiger, der das USB-Gerät darstellt, das mit dem Host verbunden ist.
+Ein [**IVMUSBDevice-Zeiger,**](ivmusbdevice.md) der das USB-Gerät darstellt, das mit dem Host verbunden ist.
 
 </dd> </dl>
 
@@ -60,17 +60,17 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                             | BESCHREIBUNG                                                                        |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                                   | Der Vorgang wurde durchgeführt.<br/>                                           |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                     | Der-Parameter ist **null**.<br/>                                              |
-| <dl> <dt>**VM \_ E \_ - \_ VM \_ führt**</dt> <dt>0xa0040206</dt> nicht aus </dl>                        | Der virtuelle Computer wird nicht ausgeführt.<br/>                                                  |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>                             | Die Konfiguration ist unbekannt.<br/>                                           |
-| <dl> <dt>**VM \_ E- \_ Ergänzungen \_ nicht in \_ Anspruch**</dt> nehmen <dt>0xa0040504</dt> </dl>                   | Integrations Komponenten sind im Gast Betriebssystem nicht verfügbar.<br/> |
-| <dl> <dt>**VM \_ E \_ ADDITIONS \_ - \_ Funktion \_ nicht**</dt> " <dt>uxa0040505</dt> " </dl>          | Das USB-Feature ist nicht verfügbar.<br/>                                       |
-| <dl> <dt>**VM \_ E \_ USB- \_ Connector- \_ Treiber \_ Fehler**</dt> <dt>0xa00400925</dt> </dl>          | Fehler beim USB-Connector-Treiber.<br/>                                 |
-| <dl> <dt>**VM \_ E \_ USB- \_ Anfüge Fehler \_ \_ Weitere \_ Geräte**</dt> <dt>0xa00400931</dt> </dl>     | Weitere Geräte können nicht an die VM angefügt werden.<br/>                                   |
-| <dl> <dt>**VM \_ \_ \_ \_ \_ \_ Fehler beim Anfügen des USB-**</dt> Anfügens. <dt></dt> </dl>         | Die USB-Umleitung wird von einer Gruppenrichtlinien Einstellung verhindert.<br/>               |
-| <dl> <dt>**VM \_ Fehler beim E \_ -USB- \_ Anfügen \_ \_ \_**</dt> mit <dt>0xa00400933</dt> . </dl> | Ein USB-Gerät wurde bereits von einem anderen Client angefügt.<br/>            |
-| <dl> <dt>**VM \_ E \_ USB \_ - \_ Anfüge**</dt> Fehler <dt>0xa00400926</dt> </dl>                    | Der Anfüge Vorgang ist fehlgeschlagen.<br/>                                            |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                             | Ein unerwarteter Fehler ist aufgetreten.<br/>                                       |
+| <dl> <dt>**E \_ POINTER**</dt> <dt>0x80004003</dt> </dl>                                     | Der Parameter ist **NULL.**<br/>                                              |
+| <dl> <dt>**VM \_ E \_ VM WIRD NICHT \_ \_ AUSGEFÜHRT,**</dt> <dt>0xA0040206</dt> </dl>                        | Der virtuelle Computer wird nicht ausgeführt.<br/>                                                  |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>                             | Die Konfiguration ist unbekannt.<br/>                                           |
+| <dl> <dt>**VM \_ E \_ ADDITIONEN \_ NICHT \_ VERFÜGBAR**</dt> <dt>0XA0040504</dt> </dl>                   | Integrationskomponenten sind im Gastbetriebssystem nicht verfügbar.<br/> |
+| <dl> <dt>**VM \_ E \_ ADDITIONS \_ FEATURE NOT \_ \_ AVAIL**</dt> <dt>0XA0040505</dt> </dl>          | Das USB-Feature ist nicht verfügbar.<br/>                                       |
+| <dl> <dt>**VM \_ E \_ USB CONNECTOR DRIVER \_ \_ \_ ERROR**</dt> <dt>0xA00400925</dt> </dl>          | Fehler beim USB-Connectortreiber.<br/>                                 |
+| <dl> <dt>**VM \_ E \_ USB ATTACH FAILED MORE \_ \_ \_ \_ DEVICES**</dt> <dt>0xA00400931</dt> </dl>     | Es können keine weiteren Geräte an den virtuellen Computer angefügt werden.<br/>                                   |
+| <dl> <dt>**VM \_ E \_ USB ATTACH FAILED GP \_ \_ \_ \_ ERROR**</dt> <dt>0xA00400932</dt> </dl>         | Eine Gruppenrichtlinieneinstellung verhindert die USB-Umleitung.<br/>               |
+| <dl> <dt>**VM \_ \_E USB ATTACH FAILED ALREADY \_ \_ \_ \_ ASSIGNED**</dt> <dt>0XA00400933</dt> </dl> | Ein USB-Gerät wurde bereits von einem anderen Client angeschlossen.<br/>            |
+| <dl> <dt>**VM \_ E \_ USB \_ ATTACH \_ FAILED**</dt> <dt>0xA00400926</dt> </dl>                    | Fehler beim Anfügen.<br/>                                            |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                             | Ein unerwarteter Fehler ist aufgetreten.<br/>                                       |
 
 
 
@@ -82,12 +82,12 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 
@@ -95,7 +95,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 <dl> <dt>
 
-[**Ivmvirtualmachine**](ivmvirtualmachine.md)
+[**IVMVirtualMachine**](ivmvirtualmachine.md)
 </dt> </dl>
 
  

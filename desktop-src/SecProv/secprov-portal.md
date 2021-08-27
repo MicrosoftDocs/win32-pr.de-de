@@ -4,18 +4,18 @@ ms.assetid: c3f7bd91-6cea-43ee-b8a7-1506dbd7926d
 title: WMI-Sicherheitsanbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d81833abff5160847678d094694702e4711de90
-ms.sourcegitcommit: 822413efb4a70dd464e5db4d9e8693ef74f8132f
+ms.openlocfilehash: 8acc0ecff578f687b7a0473fc5ecbbeae6b3a5503deb795da3bddfe6bf761042
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "113581988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120080620"
 ---
 # <a name="security-wmi-providers"></a>WMI-Sicherheitsanbieter
 
 ## <a name="purpose"></a>Zweck
 
-Die WMI-Sicherheitsanbieter ermöglichen Es Administratoren und Programmierern, BitLocker-Laufwerkverschlüsselung (BDE) und die Trusted Platform Module (TPM) mithilfe Windows Management Instrumentation (WMI) zu konfigurieren.
+Die WMI-Sicherheitsanbieter ermöglichen Es Administratoren und Programmierern, BitLocker-Laufwerkverschlüsselung (BDE) und die Trusted Platform Module (TPM) mithilfe der Windows Management Instrumentation (WMI) zu konfigurieren.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
@@ -44,9 +44,9 @@ Im Folgenden finden Sie zusätzliche Ressourcen.
 
 
 
-| Resource     | BESCHREIBUNG                                                                                                                                               |
+| Ressource     | BESCHREIBUNG                                                                                                                                               |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Klassen      | Weitere Informationen zu den WMI-Sicherheitsanbietern finden Sie unter [**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md) und [**Win32 \_ Tpm**](win32-tpm.md). |
+| Klassen      | Weitere Informationen zu den WMI-Sicherheitsanbietern finden Sie unter [**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md) und [**Win32 \_ Tpm.**](win32-tpm.md) |
 
 
 

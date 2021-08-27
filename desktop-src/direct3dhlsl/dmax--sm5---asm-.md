@@ -1,23 +1,23 @@
 ---
-title: DMax (SM5-ASM)
-description: Die Komponenten Weise maximale Genauigkeit mit doppelter Genauigkeit.
+title: dmax (sm5 - asm)
+description: Komponentenweiser Höchstwert mit doppelter Genauigkeit.
 ms.assetid: 34ED8B34-2592-4BBB-BCF0-F2222E4D51D9
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 703b277a98b16570de6f5ab7e0e7643ddfdcc705
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 2b6846da6fbf3ad5d42be5131322e1214fc49fe2627b824775798e4527de3d24
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120068370"
 ---
-# <a name="dmax-sm5---asm"></a>DMax (SM5-ASM)
+# <a name="dmax-sm5---asm"></a>dmax (sm5 - asm)
 
-Die Komponenten Weise maximale Genauigkeit mit doppelter Genauigkeit.
+Komponentenweiser Höchstwert mit doppelter Genauigkeit.
 
 
 
-| DMAX \[ \_ Sat \] dest \[ . mask \] , \[ - \] src0 \[ \_ ABS \] \[ . Swizzle \] , \[ - \] Quelle1 \[ \_ ABS \] \[ . Swizzle\] |
+| dmax \[ \_ sat \] dest \[ .mask \] , \[ - \] src0 \[ \_ abs \] \[ .swizzle \] , \[ - \] src1 abs \[ \_ \] \[ .swizzle\] |
 |---------------------------------------------------------------------------------------------|
 
 
@@ -28,29 +28,29 @@ Die Komponenten Weise maximale Genauigkeit mit doppelter Genauigkeit.
 
 | Element                                                            | BESCHREIBUNG                                                                                                                                                                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse der Ergebnisse des Vorgangs.<br/> *dest*  =  *src0*  >=  *Quelle1* ? *src0* : *Quelle1*<br/> >= wird anstelle von > verwendet, sodass, wenn min (x, y) = x, dann Max (x, y) = y ist. <br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Wert, der mit *Quelle1* verglichen werden soll.<br/>                                                                                                                                                           |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[im \] Wert, der mit *src0* verglichen werden soll.<br/>                                                                                                                                                           |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse der Ergebnisse des Vorgangs.<br/> *dest*  =  *src0*  >=  *src1* ? *src0* : *src1*<br/> >= wird anstelle von > verwendet, sodass bei min(x,y) = x dann max(x,y) = y. <br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der Wert, der mit *src1* verglichen werden soll.<br/>                                                                                                                                                           |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Der Wert, der mit *src0* verglichen werden soll.<br/>                                                                                                                                                           |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nan hat eine besondere Behandlung. Wenn ein Quell Operand NaN ist, wird der andere Quell Operand zurückgegeben. Die Auswahl erfolgt pro Komponente. Wenn beide Nan sind, wird eine Nan-Darstellung zurückgegeben.
+NaN verfügt über eine spezielle Behandlung. Wenn ein Quelloperand NaN ist, wird der andere Quelloperand zurückgegeben. Die Auswahl erfolgt pro Komponente. Wenn beide NaN sind, wird eine beliebige NaN-Darstellung zurückgegeben.
 
-Die gültigen Werte für die Quellparameter lauten ". xyzw", ". xyxy", ". zwxy", ". zwzw". Die gültigen *dest* -Masken sind. XY,. zw und. xyzw. Die folgenden *src* -Zuordnungen sind Post-Swizzle:
+Die gültigen Swizzles für die Quellparameter sind .xyzw, .xyxy, .zwxy, .zwzw. Gültige *Dest-Masken* sind .xy, .zw und .xyzw. Die folgenden *src-Zuordnungen* sind post-swizzle:
 
--   *dest* ist eine doppelte vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
--   *src0* ist ein doppeltes vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
--   *Quelle1* ist ein doppeltes vec2 über (x 32lsb, y 32msb) und (z 32lsb, w 32msb).
+-   *dest* ist ein double vec2 across (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
+-   *src0* ist ein double vec2 across (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
+-   *src1* ist ein double vec2 across (x 32LSB, y 32MSB) und (z 32LSB, w 32MSB).
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | X      | X    | X      | X        | X     | X       |
 
@@ -58,20 +58,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -81,7 +81,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

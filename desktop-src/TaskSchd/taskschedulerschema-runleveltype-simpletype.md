@@ -1,9 +1,9 @@
 ---
-title: einfacher runleveltype-Typ
-description: Definiert die möglichen Werte für das Runlevel-Element (principaltype).
+title: runLevelType Simple Type
+description: Definiert die möglichen Werte für das RunLevel -Element (principalType).
 ms.assetid: d6b73dc5-97ac-4f94-99c1-c241a25cc252
 keywords:
-- einfacher runleveltype-Typ Taskplaner
+- runLevelType simple type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d037dceeb3e6e4957cc96a17a2ac511a03a94b94
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8ce534008ce0138293a773e4f5fa4a5270a2d4b27aad54dd062eafe286ab8ba6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342863"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991070"
 ---
-# <a name="runleveltype-simple-type"></a>einfacher runleveltype-Typ
+# <a name="runleveltype-simple-type"></a>runLevelType Simple Type
 
-Definiert die möglichen Werte für das [**Runlevel-Element (principaltype)**](taskschedulerschema-runlevel-principaltype-element.md) .
+Definiert die möglichen Werte für das [**RunLevel -Element (principalType).**](taskschedulerschema-runlevel-principaltype-element.md)
 
 ``` syntax
 <xs:simpleType name="runLevelType">
@@ -41,14 +41,14 @@ Definiert die möglichen Werte für das [**Runlevel-Element (principaltype)**](t
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache **runleveltype** -Typ definiert die folgenden Werte.
+Der einfache **runLevelType-Typ** definiert die folgenden Werte.
 
 
 
-| Wert            | BESCHREIBUNG                                               |
+| Wert            | Beschreibung                                               |
 |------------------|-----------------------------------------------------------|
-| Leastprivilege   | Tasks werden mit den geringsten Berechtigungen (LUA) ausgeführt.<br/> |
-| HighestAvailable | Tasks werden mit den höchsten Berechtigungen ausgeführt.<br/>     |
+| LeastPrivilege   | Aufgaben werden mit den geringsten Berechtigungen (LUA) ausgeführt.<br/> |
+| HighestAvailable | Aufgaben werden mit den höchsten Berechtigungen ausgeführt.<br/>     |
 
 
 
@@ -58,8 +58,8 @@ Der einfache **runleveltype** -Typ definiert die folgenden Werte.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

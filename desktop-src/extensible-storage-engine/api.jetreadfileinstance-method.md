@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetreadfilanstance-Methode'
-title: API. jetreadfilinput Stance-Methode
+description: 'Weitere Informationen zu: Api.JetReadFileInstance-Methode'
+title: Api.JetReadFileInstance-Methode
 TOCTitle: 'JetReadFileInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetReadFileInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.JET_HANDLE,System.Byte[],System.Int32,System.Int32@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetreadfileinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 80eaf61fd9cd07fce80d32fddf7056f6bff683c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ea64b78f36ac8dc29df7c98fa3f8c8ade484017d07dbc833b9809c766892b09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352335"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977900"
 ---
-# <a name="apijetreadfileinstance-method"></a>API. jetreadfilinput Stance-Methode
+# <a name="apijetreadfileinstance-method"></a>Api.JetReadFileInstance-Methode
 
-Ruft den Inhalt einer Datei ab, die mit [jetopenfileinstance (JET_INSTANCE, String, JET_HANDLE, Int64, Int64)](./api.jetopenfileinstance-method.md)geöffnet wurde.
+Ruft den Inhalt einer Datei ab, die mit [JetOpenFileInstance(JET_INSTANCE, String, JET_HANDLE, Int64, Int64)](./api.jetopenfileinstance-method.md)geöffnet wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,44 +71,44 @@ public static void JetReadFileInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die zu verwendende-Instanz.
+    Die zu verwendende -Instanz.
 
 <!-- end list -->
 
   - file  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_HANDLE](./jet-handle-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_HANDLE](./jet-handle-structure.md)  
     
     Die Datei, aus der gelesen werden soll.
 
 <!-- end list -->
 
   - Puffer  
-    Sorte \[\]  
+    Typ: \[\]  
     
-    Der Puffer, in den gelesen werden soll.
+    Der Puffer, in den eingelesen werden soll.
 
 <!-- end list -->
 
   - bufferSize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Die Größe des Puffers.
 
 <!-- end list -->
 
   - bytesRead  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Gibt die Menge der Daten zurück, die in den Puffer gelesen werden.
+    Gibt die Menge der in den Puffer gelesenen Daten zurück.
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

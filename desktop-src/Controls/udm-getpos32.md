@@ -1,9 +1,9 @@
 ---
-title: UDM_GETPOS32 Meldung (kommstrg. h)
-description: Gibt die 32-Bit-Position eines auf-ab-Steuer Elements zurück.
+title: UDM_GETPOS32 Nachricht (Commctrl.h)
+description: Gibt die 32-Bit-Position eines Auf-Ab-Steuerelements zurück.
 ms.assetid: 90feffbd-a472-446f-8a67-5da408cde002
 keywords:
-- Windows-Steuerelemente für UDM_GETPOS32 Meldung
+- UDM_GETPOS32 Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15f316b6833c67cd01d4e01910399a8730691f35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a11d043ca4f6b69a554b43d5abeaf35e4c2a2a6d72797e829900529df70b6c47
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475726"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120059790"
 ---
-# <a name="udm_getpos32-message"></a>UDM \_ GETPOS32 Meldung
+# <a name="udm_getpos32-message"></a>UDM \_ GETPOS32-Nachricht
 
-Gibt die 32-Bit-Position eines auf-ab-Steuer Elements zurück.
+Gibt die 32-Bit-Position eines Auf-Ab-Steuerelements zurück.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,19 +39,19 @@ Muss Null sein.
 *lParam* 
 </dt> <dd>
 
-Zeiger auf einen **booleschen** Wert, der auf 0 (null) festgelegt wird, wenn der Wert erfolgreich abgerufen wird, oder ungleich NULL, wenn ein Fehler auftritt. Wenn dieser Parameter auf **null** festgelegt ist, werden keine Fehler gemeldet.
+Zeiger auf einen **BOOL-Wert,** der auf 0 (null) festgelegt ist, wenn der Wert erfolgreich abgerufen wurde, oder auf einen Wert ungleich 0 (null), wenn ein Fehler auftritt. Wenn dieser Parameter auf **NULL** festgelegt ist, werden keine Fehler gemeldet.
 
-Wenn **UDM \_ GETPOS32** in einer prozessübergreifenden Situation verwendet wird, muss dieser Parameter **null** sein.
+Wenn **UDM \_ GETPOS32** in einer prozessübergreifenden Situation verwendet wird, muss dieser Parameter **NULL** sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Position eines auf-ab-Steuer Elements mit 32-Bit-Genauigkeit zurück. Anwendungen müssen den *LPARAM* -Wert überprüfen, um zu bestimmen, ob der Rückgabewert gültig ist.
+Gibt die Position eines Auf-Ab-Steuerelements mit 32-Bit-Genauigkeit zurück. Anwendungen müssen den *lParam-Wert* überprüfen, um zu bestimmen, ob der Rückgabewert gültig ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Nachricht verarbeitet wird, aktualisiert das auf-ab-Steuerelement die aktuelle Position basierend auf der Beschriftung des Buddy-Fensters. Es wird ein Fehler zurückgegeben, wenn kein Buddy-Fenster vorhanden ist oder wenn die Beschriftung einen ungültigen Wert oder außerhalb des gültigen Bereichs angibt.
+Wenn diese Meldung verarbeitet wird, aktualisiert das Auf-Ab-Steuerelement seine aktuelle Position basierend auf der Beschriftung des Fensters "fenster". Es wird ein Fehler zurückgegeben, wenn kein Fenster vorhanden ist oder wenn die Beschriftung einen ungültigen oder außerhalb des Bereichs liegenden Wert angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Wenn diese Nachricht verarbeitet wird, aktualisiert das auf-ab-Steuerelement die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -69,13 +69,13 @@ Wenn diese Nachricht verarbeitet wird, aktualisiert das auf-ab-Steuerelement die
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**UDM- \_ GetPos**](udm-getpos.md)
+[**UDM \_ GETPOS**](udm-getpos.md)
 </dt> <dt>
 
-[**UDM- \_ SetPos**](udm-setpos.md)
+[**UDM \_ SETPOS**](udm-setpos.md)
 </dt> <dt>
 
 [**UDM \_ SETPOS32**](udm-setpos32.md)

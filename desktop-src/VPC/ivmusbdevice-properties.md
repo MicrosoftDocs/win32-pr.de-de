@@ -1,31 +1,31 @@
 ---
-title: Ivmusbdevice-Eigenschaften
-description: Die ivmusbdevice-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IVMUSBDevice-Eigenschaften
+description: Die IVMUSBDevice-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: D542A0BA-0AC0-40E4-B06E-682952DB9DF4
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 05f8b5fc320baae530a34cd180c51c56ff85dbe6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 324c811db3e92cbb0f46f1acbac571ad5d64e76103b2082490fae60309d7107e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120006890"
 ---
-# <a name="ivmusbdevice-properties"></a>Ivmusbdevice-Eigenschaften
+# <a name="ivmusbdevice-properties"></a>IVMUSBDevice-Eigenschaften
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmusbdevice**](ivmusbdevice.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IVMUSBDevice-Schnittstelle**](ivmusbdevice.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Eigenschaft "AttachedTo VM"**](ivmusbdevice-attachedtovm.md)
+-   [**AttachedToVM-Eigenschaft**](ivmusbdevice-attachedtovm.md)
 -   [**DeviceClass-Eigenschaft**](ivmusbdevice-deviceclass.md)
--   [**Devicestring (Eigenschaft)**](ivmusbdevice-devicestring.md)
--   [**Hubid-Eigenschaft**](ivmusbdevice-hubid.md)
--   [**Manufacturerstring (Eigenschaft)**](ivmusbdevice-manufacturerstring.md)
--   [**Port (Eigenschaft)**](ivmusbdevice-port.md)
+-   [**DeviceString-Eigenschaft**](ivmusbdevice-devicestring.md)
+-   [**HubID-Eigenschaft**](ivmusbdevice-hubid.md)
+-   [**ManufacturerString-Eigenschaft**](ivmusbdevice-manufacturerstring.md)
+-   [**Port-Eigenschaft**](ivmusbdevice-port.md)
 
- 
+ 
 
- 
+ 

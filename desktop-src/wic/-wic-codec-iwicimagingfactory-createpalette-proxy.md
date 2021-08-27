@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die CreatePalette-Methode.
+description: Proxyfunktion für die CreatePalette-Methode.
 ms.assetid: c83b4239-ce6b-4a4c-ab70-df31dfcdd26c
 title: IWICImagingFactory_CreatePalette_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 626c05ec5e4e365cf61304c4b33e621967cea5e4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 23f970acdd6166547322714cdcf5cd5cd8c4d0875616f5bbe692a02d06f8a8fb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056610"
 ---
-# <a name="iwicimagingfactory_createpalette_proxy-function"></a>IWICImagingFactory \_ CreatePalette \_ Proxy Funktion
+# <a name="iwicimagingfactory_createpalette_proxy-function"></a>IWICImagingFactory \_ \_ CreatePalette-Proxyfunktion
 
-Proxy Funktion für die [**CreatePalette**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createpalette) -Methode.
+Proxyfunktion für die [**CreatePalette-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createpalette)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,19 +41,19 @@ HRESULT IWICImagingFactory_CreatePalette_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_ppIPalette * \[ out\]
+*ppIPalette* \[ out\]
 </dt> <dd>
 
-Typ: **[ **iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\*\***
+Typ: **[ **IWICPalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)\*\***
 
-Ein Zeiger, der einen Zeiger auf eine neue [**iwicpalette**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)empfängt.
+Ein Zeiger, der einen Zeiger auf eine neue [**IWICPalette empfängt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpalette)
 
 </dd> </dl>
 
@@ -61,7 +61,7 @@ Ein Zeiger, der einen Zeiger auf eine neue [**iwicpalette**](/windows/desktop/ap
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -71,9 +71,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Die protocoltable-Struktur enthält eine Liste von Protokollen.
+description: Die PROTOCOLTABLE-Struktur enthält eine Liste von Protokollen.
 ms.assetid: dad2b228-5916-44fe-b78e-ebc6507dc555
-title: Protocoltable-Struktur (Netmon. h)
+title: PROTOCOLTABLE-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 3ad79beca7ce79611747a02704ffc05da5fc3d4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a30d890fa5b6dcbbca1797a53722b97b2109cc9943ce07260c7f47514cfeb7b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036980"
 ---
-# <a name="protocoltable-structure"></a>Protocoltable-Struktur
+# <a name="protocoltable-structure"></a>PROTOCOLTABLE-Struktur
 
-Die **protocoltable** -Struktur enthält eine Liste von Protokollen.
+Die **PROTOCOLTABLE-Struktur** enthält eine Liste von Protokollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ typedef struct _PROTOCOLTABLE {
 
 <dl> <dt>
 
-**nprotokolle**
+**nProtocols**
 </dt> <dd>
 
 Anzahl der aktivierten Protokolle.
 
 </dd> <dt>
 
-**hprotocol**
+**hProtocol**
 </dt> <dd>
 
 Array von Handles für aktivierte Protokolle.
@@ -62,7 +62,7 @@ Array von Handles für aktivierte Protokolle.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
