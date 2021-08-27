@@ -1,10 +1,10 @@
 ---
-description: Stellt ein Paket mit vier aufrufen dar.
+description: Stellt ein Paket mit vier Aufrufen dar.
 MS-HAID: vspixengine.PackedCallPkg
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Packedcallpkg-Struktur
+title: PackedCallPkg-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: BE345C1A-9F6E-4FE0-99C7-6B332A1ED079
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 104e764725213f7030c90a0240641c7c9b063785
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 39be8828cf3ea0fbf773965db7272d566d43546b
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103957876"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122626526"
 ---
-# <a name="span-idvspixenginepackedcallpkgspanpackedcallpkg-structure"></a><span id="vspixengine.packedcallpkg"></span>Packedcallpkg-Struktur
+# <a name="span-idvspixenginepackedcallpkgspanpackedcallpkg-structure"></a><span id="vspixengine.packedcallpkg"></span>PackedCallPkg-Struktur
 
-Stellt ein Paket mit vier aufrufen dar.
+Stellt ein Paket mit vier Aufrufen dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ typedef struct PackedCallPkg {
 ## <a name="members"></a>Member
 
 **pcp1**  
-Der erste aufzurufende Paket.
+Der erste Aufruf im Paket.
 
 **pcp2**  
-Der zweite-Befehl im Paket.
+Der zweite Aufruf im Paket.
 
 **pcp3**  
-Der dritte aufzurufende Paket.
+Der dritte Aufruf im Paket.
 
 **pcp4**  
-Der vierte-Befehl im Paket.
+Der vierte Aufruf im Paket.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

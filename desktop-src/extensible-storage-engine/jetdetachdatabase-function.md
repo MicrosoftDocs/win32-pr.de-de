@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 028e156cffd5eef0d4baa1f043dddf5105fd1023
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: a66010b5d056301e368f7221380966adc2f31180
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985873"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470465"
 ---
 # <a name="jetdetachdatabase-function"></a>JetDetachDatabase-Funktion
 
@@ -68,23 +68,16 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Wenn eine angefügte Datenbank geöffnet wurde (mit [JetAttachDatabase](./jetattachdatabase-function.md)), muss sie vor dem Trennen mit [JetCloseDatabase](./jetclosedatabase-function.md) geschlossen werden.
 
-Windows nur 2000: Datenbanken, die vor dem Aufrufen von [JetTerm](./jetterm-function.md) nicht getrennt wurden, werden automatisch erneut angefügt, wenn [JetInit](./jetinit-function.md) das nächste Mal aufgerufen wird.
+Windows 2000: Datenbanken, die vor dem Aufrufen von [JetTerm](./jetterm-function.md) nicht getrennt wurden, werden automatisch erneut angefügt, wenn [JetInit](./jetinit-function.md) das nächste Mal aufgerufen wird.
 
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetDetachDatabaseW</strong> (Unicode) und <strong>JetDetachDatabaseA</strong> (ANSI) implementiert.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetDetachDatabaseW</strong> (Unicode) und <strong>JetDetachDatabaseA</strong> (ANSI) implementiert.</p> | 
 
 
 

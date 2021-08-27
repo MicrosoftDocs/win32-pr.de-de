@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6e731582364df23bdef800ab5d2cf15dd5c882ae
-ms.sourcegitcommit: b3a9abea47dea7374eac0f9a95a652ac6977fb2e
+ms.openlocfilehash: 2362a5d6ec1a6a9d0d876ef0673f4775e2db3ade0a83696ad2b993e31e02a9ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "107734185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099990"
 ---
 # <a name="interval-restarttype-element"></a>Interval (restartType)-Element
 
@@ -53,7 +53,7 @@ Das -Element wird durch den komplexen [**restartType-Typ**](taskschedulerschema-
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Wenn dieses Element angegeben wird, muss auch [**das Count-Element**](taskschedulerschema-count-restarttype-element.md) angegeben werden, um dem Benutzer Taskplaner, wie oft versucht werden soll, den Task neu zu starten.
 
@@ -67,12 +67,12 @@ Informationen zur Skriptentwicklung finden Sie [**unter TaskSettings.RestartInte
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

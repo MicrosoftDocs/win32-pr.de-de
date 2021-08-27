@@ -6,12 +6,12 @@ keywords:
 - Skalierungseffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d3a28e71dfb552a35bf138c245a82937bd600e61acd8b4a82b42cbc8d9d66a65
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: db3a4ef93fcdd2e93580157e0bb73b172975fe4a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118003661"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472931"
 ---
 # <a name="scale-effect"></a>Skalierungseffekt
 
@@ -20,11 +20,11 @@ Verwenden Sie diesen Effekt, um ein Bild nach oben oder unten zu skalieren. Der 
 Die CLSID für diesen Effekt ist CLSID \_ D2D1Scale.
 
 -   [Beispielbild](#example-image)
--   [Effect-Eigenschaften](#effect-properties)
+-   [Effekteigenschaften](#effect-properties)
     -   [Rahmenmodi](#border-modes)
 -   [Interpolationsmodi](#interpolation-modes)
 -   [Ausgabebitmap](#output-bitmap)
--   [Requirements](#requirements)
+-   [Anforderungen](#requirements)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="example-image"></a>Beispielbild
@@ -60,49 +60,19 @@ m_d2dContext->EndDraw();
 
 
 
-## <a name="effect-properties"></a>Effect-Eigenschaften
+## <a name="effect-properties"></a>Effekteigenschaften
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Anzeigename und Indexenumeration</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Skalieren<br/> D2D1_SCALE_PROP_SCALE<br/></td>
-<td>Die Skalierungsmenge in X- und Y-Richtung als Verhältnis der Ausgabegröße zur Eingabegröße. Diese Eigenschaft D2D1_VECTOR_2Fdefined wie: (X-Skalierung, Y-Skalierung). Die Skalierungsbeträge sind FLOAT, einheitenlos und müssen positiv oder 0 sein.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {1.0f, 1.0f}.<br/></td>
-</tr>
-<tr class="even">
-<td>CenterPoint<br/> D2D1_SCALE_PROP_CENTER_POINT<br/></td>
-<td>Der Mittelpunkt der Bildskalierung. Diese Eigenschaft ist ein D2D1_VECTOR_2F definiert als : (Punkt X, Punkt Y). Die Einheiten befinden sich in DIPs.<br/> Verwenden Sie die Eigenschaft Mittelpunkt, um einen anderen Punkt als die linke obere Ecke zu skalieren.<br/> Der Typ ist D2D1_VECTOR_2F.<br/> Der Standardwert ist {0.0f, 0.0f}.<br/></td>
-</tr>
-<tr class="odd">
-<td>BorderMode<br/> D2D1_SCALE_PROP_BORDER_MODE<br/></td>
-<td>Der Modus, der zum Berechnen des Rahmens des Bilds verwendet wird( soft oder hard). Weitere Informationen finden Sie unter <a href="#border-modes">Border modes (Rahmenmodi).</a> <br/> Der Typ ist D2D1_BORDER_MODE.<br/> Der Standardwert ist D2D1_BORDER_MODE_SOFT.<br/></td>
-</tr>
-<tr class="even">
-<td>Schärfe<br/> D2D1_SCALE_PROP_SHARPNESS<br/></td>
-<td>Im kubischen Interpolationsmodus von hoher Qualität die Schärfestufe des Skalierungsfilters als Gleitkommawert zwischen 0 und 1. Die Werte sind einheitenlos. Sie können die Schärfe verwenden, um die Qualität eines Bilds anzupassen, wenn Sie das Bild herunterskalieren.<br/> Der Schärfefaktor wirkt sich auf die Form des Kernels aus. Je höher der Schärfefaktor, desto kleiner der Kernel.<br/>
-<blockquote>
-[!Note]<br />
-Diese Eigenschaft wirkt sich nur auf den kubischen Interpolationsmodus hoher Qualität aus.
-</blockquote>
-<br/> Der Typ ist FLOAT.<br/> Der Standardwert ist 0,0f.<br/></td>
-</tr>
-<tr class="odd">
-<td>Interpolationmode<br/> D2D1_SCALE_PROP_INTERPOLATION_MODE<br/></td>
-<td>Der Interpolationsmodus, den der Effekt zum Skalieren des Bilds verwendet. Es gibt sechs Skalierungsmodi, die in Qualität und Geschwindigkeit reichen. Weitere Informationen finden Sie <a href="#interpolation-modes">unter Interpolationsmodi.</a> <br/> Der Typ ist D2D1_SCALE_INTERPOLATION_MODE.<br/> Der Standardwert ist D2D1_SCALE_INTERPOLATION_MODE_LINEAR.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| Anzeigename und Indexenumeration | BESCHREIBUNG | 
+|------------------------------------|-------------|
+| Skalieren<br /> D2D1_SCALE_PROP_SCALE<br /> | Die Skalierungsmenge in X- und Y-Richtung als Verhältnis der Ausgabegröße zur Eingabegröße. Diese Eigenschaft D2D1_VECTOR_2Fdefined wie: (X-Skalierung, Y-Skalierung). Die Skalierungsbeträge sind FLOAT, einheitenlos und müssen positiv oder 0 sein.<br /> Der Typ ist D2D1_VECTOR_2F.<br /> Der Standardwert ist {1.0f, 1.0f}.<br /> | 
+| CenterPoint<br /> D2D1_SCALE_PROP_CENTER_POINT<br /> | Der Mittelpunkt der Bildskalierung. Diese Eigenschaft ist ein D2D1_VECTOR_2F definiert als : (Punkt X, Punkt Y). Die Einheiten befinden sich in DIPs.<br /> Verwenden Sie die Eigenschaft Mittelpunkt, um einen anderen Punkt als die linke obere Ecke zu skalieren.<br /> Der Typ ist D2D1_VECTOR_2F.<br /> Der Standardwert ist {0.0f, 0.0f}.<br /> | 
+| BorderMode<br /> D2D1_SCALE_PROP_BORDER_MODE<br /> | Der Modus, der zum Berechnen des Rahmens des Bilds verwendet wird( soft oder hard). Weitere Informationen finden Sie unter <a href="#border-modes">Border modes (Rahmenmodi).</a> <br /> Der Typ ist D2D1_BORDER_MODE.<br /> Der Standardwert ist D2D1_BORDER_MODE_SOFT.<br /> | 
+| Schärfe<br /> D2D1_SCALE_PROP_SHARPNESS<br /> | Im kubischen Interpolationsmodus von hoher Qualität die Schärfestufe des Skalierungsfilters als Gleitkommawert zwischen 0 und 1. Die Werte sind einheitenlos. Sie können die Schärfe verwenden, um die Qualität eines Bilds anzupassen, wenn Sie das Bild herunterskalieren.<br /> Der Schärfefaktor wirkt sich auf die Form des Kernels aus. Je höher der Schärfefaktor, desto kleiner der Kernel.<br /><blockquote>[!Note]<br />Diese Eigenschaft wirkt sich nur auf den kubischen Interpolationsmodus hoher Qualität aus.</blockquote><br /> Der Typ ist FLOAT.<br /> Der Standardwert ist 0,0f.<br /> | 
+| Interpolationmode<br /> D2D1_SCALE_PROP_INTERPOLATION_MODE<br /> | Der Interpolationsmodus, den der Effekt zum Skalieren des Bilds verwendet. Es gibt sechs Skalierungsmodi, die in Qualität und Geschwindigkeit reichen. Weitere Informationen finden Sie <a href="#interpolation-modes">unter Interpolationsmodi.</a> <br /> Der Typ ist D2D1_SCALE_INTERPOLATION_MODE.<br /> Der Standardwert ist D2D1_SCALE_INTERPOLATION_MODE_LINEAR.<br /> | 
+
 
 
 
@@ -146,7 +116,7 @@ Diese Eigenschaft wirkt sich nur auf den kubischen Interpolationsmodus hoher Qua
  
 
 > [!Note]  
-> Der Anisotropiemodus generiert bei der Skalierung Mipmaps. Wenn Sie jedoch die **Cached-Eigenschaft** für die Effekte, die für diesen Effekt eingegeben werden, auf TRUE festlegen, werden die Mipmaps nicht jedes Mal für ausreichend kleine Bilder generiert.
+> Im Anisotropiemodus werden bei der Skalierung Mipmaps generiert. Wenn Sie jedoch die **Cached-Eigenschaft** für die Effekte, die für diesen Effekt eingegeben werden, auf TRUE festlegen, werden die Mipmaps nicht jedes Mal für ausreichend kleine Bilder generiert.
 
  
 

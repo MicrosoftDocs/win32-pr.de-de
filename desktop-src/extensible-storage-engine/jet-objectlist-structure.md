@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 21a3ea030421406a5bc571bb5cc1887f77b4710d
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: a2f035a15c0f0f2861c7c6698878e0782feb35ce
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122983123"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476536"
 ---
 # <a name="jet_objectlist-structure"></a>JET_OBJECTLIST-Struktur
 
@@ -52,7 +52,7 @@ Die **JET_OBJECTLIST-Struktur** durchläuft eine temporäre Tabelle, die mit [Je
 
 **cbStruct**
 
-Die Größe der -Struktur in Bytes. Durch den API-Aufruf wird dieses Feld aktualisiert, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_INDEXLIST ) übereinstimmt.
+Die Größe der -Struktur in Bytes. Der API-Aufruf aktualisiert dieses Feld, sodass der Aufrufer sicherstellen sollte, dass dieser Wert mit sizeof( JET_INDEXLIST ) übereinstimmt.
 
 **tableid**
 
@@ -66,13 +66,13 @@ Die Anzahl der Datensätze in der temporären Tabelle, die erstellt wurde.
 
 Der Spaltenbezeichner des Namens des Typs des Containers.
 
-Die einzigen Container, die derzeit unterstützt werden, sind Tabellen. Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
+Die einzigen Container, die derzeit unterstützt werden, sind Tabellen. Diese Spalte ist ein [JET_coltypText](./jet-coltyp.md).
 
 **columnidobjectname**
 
 Der Spaltenbezeichner des Namens des Objekts.
 
-Diese Spalte ist eine [JET_coltypText](./jet-coltyp.md).
+Diese Spalte ist ein [JET_coltypText](./jet-coltyp.md).
 
 **columnidobjtyp**
 
@@ -112,7 +112,7 @@ Der Spaltenbezeichner der Vom -Objekt verwendeten Seitenanzahl.
 
 Diese Spalte ist eine [JET_coltypLong](./jet-coltyp.md).
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
 Jede Zeile in der temporären Tabelle entspricht einem Objekt in der Datenbank.
 
@@ -123,11 +123,7 @@ Derzeit befinden sich nur Informationen zu Tabellen in der temporären Tabelle.
 ### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
 
 
 

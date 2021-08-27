@@ -1,7 +1,7 @@
 ---
-description: Gibt die Menge der Auswirkung an, die ein bestimmter Knochen über einem bestimmten Scheitelpunkt hat.
+description: Abrufen des Einflusses, den ein bestimmter Wermut auf einen bestimmten Scheitelpunkt hat.
 ms.assetid: 0586fdfd-e5b1-4699-b489-c54a0f305ee4
-title: 'ID3DX10SkinInfo:: getboneingefluence-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::GetBoneInfluence-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: b2f7e6b75e9c0f9f08463b6dacf9d7c9d72f4f28
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9b53f642b6e62bb37c6979602b1ae66e09ffc2eb42a6d47c70c6b895a01ba273
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351973"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096550"
 ---
-# <a name="id3dx10skininfogetboneinfluence-method"></a>ID3DX10SkinInfo:: getboneingefluence-Methode
+# <a name="id3dx10skininfogetboneinfluence-method"></a>ID3DX10SkinInfo::GetBoneInfluence-Methode
 
-Gibt die Menge der Auswirkung an, die ein bestimmter Knochen über einem bestimmten Scheitelpunkt hat.
+Abrufen des Einflusses, den ein bestimmter Wermut auf einen bestimmten Scheitelpunkt hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT GetBoneInfluence(
 
 <dl> <dt>
 
-*Boneingedex* \[ in\]
+*Unterindex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der einen vorhandenen Knochen Wert angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der einen vorhandenen Auswerter angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen**](id3dx10skininfo-getnumbones.md)Wert sein.
 
 </dd> <dt>
 
-*Einflussfaktor ceindex* \[ in\]
+*InfluenceIndex* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index in der Liste der in der Liste der von ihm Einfluss enden Scheitel Punkte.
+Ein Index in der Liste der Scheitelpunkte, die es beeinflusst.
 
 </dd> <dt>
 
-*pweight* \[ in\]
+*pWeight* \[ In\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Die Menge der Auswirkung zwischen 0 und 1, die der Knochen über dem Scheitelpunkt hat.
+Die Menge der Einflussmöglichkeiten zwischen 0 und 1, die der Würfe über den Scheitelpunkt hat.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Die Menge der Auswirkung zwischen 0 und 1, die der Knochen über dem Scheitelpun
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ invalidArg lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ INVALIDARG sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie ID3DX10SkinInfo:: getboneinfluencecount, um herauszufinden, wie viele Scheitel Punkte der Knochen Einfluss hat.
+Verwenden Sie ID3DX10SkinInfo::GetBoneInfluenceCount, um herauszufinden, wie viele Scheitelpunkte die Folie beeinflusst.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,8 +85,8 @@ Verwenden Sie ID3DX10SkinInfo:: getboneinfluencecount, um herauszufinden, wie vi
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

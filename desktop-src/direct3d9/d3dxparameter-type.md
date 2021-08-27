@@ -1,7 +1,7 @@
 ---
-description: Beschreibt die Daten, die in der-Enumeration enthalten sind.
+description: Beschreibt die in der -Enumeration enthaltenen Daten.
 ms.assetid: 6d494fe6-fcd5-4e71-939c-257978b41499
-title: D3DXPARAMETER_TYPE-Enumeration (D3dx9shader. h)
+title: D3DXPARAMETER_TYPE -Enumeration (D3dx9shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9shader.h
-ms.openlocfilehash: 16ff89feb694bb6aae550422b6f9546c2268fc07
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 2d342e664aac81cf337cde2de7669c94a4ac6c94ce85c564a29da1f38dd93bd0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104354156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096190"
 ---
-# <a name="d3dxparameter_type-enumeration"></a>D3DXPARAMETER- \_ Typenumeration
+# <a name="d3dxparameter_type-enumeration"></a>D3DXPARAMETER \_ TYPE-Enumeration
 
-Beschreibt die Daten, die in der-Enumeration enthalten sind.
+Beschreibt die in der -Enumeration enthaltenen Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,150 +59,150 @@ typedef enum D3DXPARAMETER_TYPE {
 
 <dl> <dt>
 
-<span id="D3DXPT_VOID"></span><span id="d3dxpt_void"></span>**D3DXPT \_ void**
+<span id="D3DXPT_VOID"></span><span id="d3dxpt_void"></span>**D3DXPT \_ VOID**
 </dt> <dd>
 
-Der Parameter ist ein void-Zeiger.
+Parameter ist ein void-Zeiger.
 
 </dd> <dt>
 
-<span id="D3DXPT_BOOL"></span><span id="d3dxpt_bool"></span>**D3DXPT \_ bool**
+<span id="D3DXPT_BOOL"></span><span id="d3dxpt_bool"></span>**D3DXPT \_ BOOL**
 </dt> <dd>
 
-Der-Parameter ist ein boolescher Wert. Alle Werte ungleich 0 (null), die an [**ID3DXConstantTable:: SetBool**](id3dxconstanttable--setbool.md), [**ID3DXConstantTable:: setboolarray**](id3dxconstanttable--setboolarray.md), [**ID3DXConstantTable:: SetValue**](id3dxconstanttable--setvalue.md), [**ID3DXConstantTable:: setvector**](id3dxconstanttable--setvector.md)oder [**ID3DXConstantTable:: setvectorarray**](id3dxconstanttable--setvectorarray.md) weitergegeben werden, werden 1 (true) zugeordnet, bevor Sie in die Konstante Tabelle geschrieben werden. Andernfalls wird der Wert in der Konstanten Tabelle auf 0 festgelegt.
+Parameter ist ein boolescher Wert. Jeder Wert, der nicht null ist und an [**ID3DXConstantTable::SetBool,**](id3dxconstanttable--setbool.md) [**ID3DXConstantTable::SetBoolArray,**](id3dxconstanttable--setboolarray.md) [**ID3DXConstantTable::SetValue,**](id3dxconstanttable--setvalue.md) [**ID3DXConstantTable::SetVector**](id3dxconstanttable--setvector.md)oder [**ID3DXConstantTable::SetVectorArray**](id3dxconstanttable--setvectorarray.md) übergeben wird, wird 1 (TRUE) zugeordnet, bevor er in die konstante Tabelle geschrieben wird. Andernfalls wird der Wert in der konstanten Tabelle auf 0 festgelegt.
 
 </dd> <dt>
 
-<span id="D3DXPT_INT"></span><span id="d3dxpt_int"></span>**D3DXPT \_ int**
+<span id="D3DXPT_INT"></span><span id="d3dxpt_int"></span>**D3DXPT \_ INT**
 </dt> <dd>
 
-Der-Parameter ist eine ganze Zahl. Alle Gleit Komma Werte, die an [**ID3DXConstantTable:: SetValue**](id3dxconstanttable--setvalue.md), [**ID3DXConstantTable:: setvector**](id3dxconstanttable--setvector.md)oder [**ID3DXConstantTable:: setvector Array**](id3dxconstanttable--setvectorarray.md) weitergegeben werden, werden vor dem Schreiben in die Konstante Tabelle abgerundet (auf NULL Dezimalstellen).
+Der Parameter ist eine ganze Zahl. Alle Gleitkommawerte, die an [**ID3DXConstantTable::SetValue,**](id3dxconstanttable--setvalue.md) [**ID3DXConstantTable::SetVector**](id3dxconstanttable--setvector.md)oder [**ID3DXConstantTable::SetVectorArray**](id3dxconstanttable--setvectorarray.md) übergeben werden, werden vor dem Schreiben in die Konstantentabelle abgerundet (auf null Dezimalstellen).
 
 </dd> <dt>
 
-<span id="D3DXPT_FLOAT"></span><span id="d3dxpt_float"></span>**D3DXPT \_ float**
+<span id="D3DXPT_FLOAT"></span><span id="d3dxpt_float"></span>**D3DXPT \_ FLOAT**
 </dt> <dd>
 
-Der-Parameter ist eine Gleit Komma Zahl.
+Parameter ist eine Gleitkommazahl.
 
 </dd> <dt>
 
-<span id="D3DXPT_STRING"></span><span id="d3dxpt_string"></span>**D3DXPT- \_ Zeichenfolge**
+<span id="D3DXPT_STRING"></span><span id="d3dxpt_string"></span>**D3DXPT \_ STRING**
 </dt> <dd>
 
 Der Parameter ist eine Zeichenfolge.
 
 </dd> <dt>
 
-<span id="D3DXPT_TEXTURE"></span><span id="d3dxpt_texture"></span>**D3DXPT- \_ Textur**
+<span id="D3DXPT_TEXTURE"></span><span id="d3dxpt_texture"></span>**D3DXPT-TEXTUR \_**
 </dt> <dd>
 
-Der-Parameter ist eine Textur.
+Parameter ist eine Textur.
 
 </dd> <dt>
 
 <span id="D3DXPT_TEXTURE1D"></span><span id="d3dxpt_texture1d"></span>**D3DXPT \_ TEXTURE1D**
 </dt> <dd>
 
-Der-Parameter ist eine 1D-Textur.
+Parameter ist eine 1D-Textur.
 
 </dd> <dt>
 
 <span id="D3DXPT_TEXTURE2D"></span><span id="d3dxpt_texture2d"></span>**D3DXPT \_ TEXTURE2D**
 </dt> <dd>
 
-Der-Parameter ist eine 2D-Textur.
+Parameter ist eine 2D-Textur.
 
 </dd> <dt>
 
 <span id="D3DXPT_TEXTURE3D"></span><span id="d3dxpt_texture3d"></span>**D3DXPT \_ TEXTURE3D**
 </dt> <dd>
 
-Der-Parameter ist eine 3D-Textur.
+Parameter ist eine 3D-Textur.
 
 </dd> <dt>
 
-<span id="D3DXPT_TEXTURECUBE"></span><span id="d3dxpt_texturecube"></span>**D3DXPT \_ texturecube**
+<span id="D3DXPT_TEXTURECUBE"></span><span id="d3dxpt_texturecube"></span>**D3DXPT \_ TEXTURECUBE**
 </dt> <dd>
 
-Der-Parameter ist eine Cube-Textur.
+Der Parameter ist eine Cubetextur.
 
 </dd> <dt>
 
-<span id="D3DXPT_SAMPLER"></span><span id="d3dxpt_sampler"></span>**D3DXPT- \_ Sampler**
+<span id="D3DXPT_SAMPLER"></span><span id="d3dxpt_sampler"></span>**D3DXPT \_ SAMPLER**
 </dt> <dd>
 
-Der Parameter ist ein Sampler.
+Parameter ist ein Sampler.
 
 </dd> <dt>
 
 <span id="D3DXPT_SAMPLER1D"></span><span id="d3dxpt_sampler1d"></span>**D3DXPT \_ SAMPLER1D**
 </dt> <dd>
 
-Der Parameter ist ein 1D-Sampler.
+Parameter ist ein 1D-Sampler.
 
 </dd> <dt>
 
 <span id="D3DXPT_SAMPLER2D"></span><span id="d3dxpt_sampler2d"></span>**D3DXPT \_ SAMPLER2D**
 </dt> <dd>
 
-Der Parameter ist ein 2D-Sampler.
+Parameter ist ein 2D-Sampler.
 
 </dd> <dt>
 
 <span id="D3DXPT_SAMPLER3D"></span><span id="d3dxpt_sampler3d"></span>**D3DXPT \_ SAMPLER3D**
 </dt> <dd>
 
-Der Parameter ist ein 3D-Sampler.
+Parameter ist ein 3D-Sampler.
 
 </dd> <dt>
 
-<span id="D3DXPT_SAMPLERCUBE"></span><span id="d3dxpt_samplercube"></span>**D3DXPT \_ samplercube**
+<span id="D3DXPT_SAMPLERCUBE"></span><span id="d3dxpt_samplercube"></span>**D3DXPT \_ SAMPLERCUBE**
 </dt> <dd>
 
-Der Parameter ist ein Cube-Sampler.
+Parameter ist ein Cube-Sampler.
 
 </dd> <dt>
 
-<span id="D3DXPT_PIXELSHADER"></span><span id="d3dxpt_pixelshader"></span>**D3DXPT \_ Pixelshader**
+<span id="D3DXPT_PIXELSHADER"></span><span id="d3dxpt_pixelshader"></span>**D3DXPT \_ PIXELSHADER**
 </dt> <dd>
 
-Der Parameter ist ein Pixelshader.
+Parameter ist ein Pixel-Shader.
 
 </dd> <dt>
 
-<span id="D3DXPT_VERTEXSHADER"></span><span id="d3dxpt_vertexshader"></span>**D3DXPT \_ Vertexshader**
+<span id="D3DXPT_VERTEXSHADER"></span><span id="d3dxpt_vertexshader"></span>**D3DXPT \_ VERTEXSHADER**
 </dt> <dd>
 
-Der Parameter ist ein Scheitelpunkt-Shader.
+Parameter ist ein Vertex-Shader.
 
 </dd> <dt>
 
-<span id="D3DXPT_PIXELFRAGMENT"></span><span id="d3dxpt_pixelfragment"></span>**D3DXPT \_ Pixel Fragment**
+<span id="D3DXPT_PIXELFRAGMENT"></span><span id="d3dxpt_pixelfragment"></span>**D3DXPT \_ PIXELFRAGMENT**
 </dt> <dd>
 
-Der Parameter ist ein Pixel-Shader-Fragment.
+Parameter ist ein Pixel-Shaderfragment.
 
 </dd> <dt>
 
-<span id="D3DXPT_VERTEXFRAGMENT"></span><span id="d3dxpt_vertexfragment"></span>**D3DXPT \_ vertexfragment**
+<span id="D3DXPT_VERTEXFRAGMENT"></span><span id="d3dxpt_vertexfragment"></span>**D3DXPT \_ VERTEXFRAGMENT**
 </dt> <dd>
 
-Der Parameter ist ein Scheitelpunkt-Shader-Fragment.
+Parameter ist ein Vertex-Shaderfragment.
 
 </dd> <dt>
 
-<span id="D3DXPT_UNSUPPORTED"></span><span id="d3dxpt_unsupported"></span>**D3DXPT \_ nicht unterstützt**
+<span id="D3DXPT_UNSUPPORTED"></span><span id="d3dxpt_unsupported"></span>**D3DXPT \_ NICHT UNTERSTÜTZT**
 </dt> <dd>
 
-Der-Parameter wird nicht unterstützt.
+Der Parameter wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="D3DXPT_FORCE_DWORD"></span><span id="d3dxpt_force_dword"></span>**D3DXPT \_ Erzwingen von \_ DWORD**
+<span id="D3DXPT_FORCE_DWORD"></span><span id="d3dxpt_force_dword"></span>**D3DXPT \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -212,7 +212,7 @@ Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert könne
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9shader. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9shader.h</dt> </dl> |
 
 
 
@@ -223,10 +223,10 @@ Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert könne
 [D3DX-Enumerationen](dx9-graphics-reference-d3dx-enums.md)
 </dt> <dt>
 
-[**D3DXSHADER \_ TypInfo**](d3dxshader-typeinfo.md)
+[**D3DXSHADER \_ TYPEINFO**](d3dxshader-typeinfo.md)
 </dt> <dt>
 
-[**D3DXCONSTANT- \_ Abteilung**](d3dxconstant-desc.md)
+[**D3DXCONSTANT \_ DESC**](d3dxconstant-desc.md)
 </dt> </dl>
 
  

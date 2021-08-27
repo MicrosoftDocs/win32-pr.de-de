@@ -1,123 +1,123 @@
 ---
-title: Benachrichtigungen (Entwurfsgrundlagen)
-description: Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz eine Sprechblase von einem Symbol im Infobereich angezeigt wird.
+title: Benachrichtigungen (Entwurfgrundkenntnisse)
+description: Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz ein Balloon von einem Symbol im Benachrichtigungsbereich angezeigt wird.
 ms.assetid: dcac2fb7-e503-4ea3-a2c5-e3cb660c040a
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: caf25d24759826bbd593d7a4fa0763e91d304ac5f1211b00bbd4af55abb6ee71
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 48b32da195663d42024a9febed5451e2fd3f0840
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119842131"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471616"
 ---
-# <a name="notifications-design-basics"></a>Benachrichtigungen (Entwurfsgrundlagen)
+# <a name="notifications-design-basics"></a>Benachrichtigungen (Entwurfgrundkenntnisse)
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz eine Sprechblase von einem Symbol im Infobereich angezeigt wird. Die Benachrichtigung kann sich aus einer Benutzeraktion oder einem signifikanten Systemereignis ergeben oder potenziell nützliche Informationen von Microsoft Windows oder einer Anwendung bieten.
+Eine Benachrichtigung informiert Benutzer über Ereignisse, die nicht mit der aktuellen Benutzeraktivität in Zusammenhang stehen, indem kurz ein Balloon von einem Symbol im Benachrichtigungsbereich angezeigt wird. Die Benachrichtigung kann sich aus einer Benutzeraktion oder einem erheblichen Systemereignis ergeben oder potenziell nützliche Informationen von Microsoft Windows Anwendung enthalten.
 
-Die Informationen in einer Benachrichtigung sind **nützlich und relevant, aber nie kritisch.** Folglich erfordern Benachrichtigungen keine sofortige Benutzeraktion, und Benutzer können sie frei ignorieren.
+Die Informationen in einer Benachrichtigung **sind nützlich und relevant, aber nie kritisch.** Daher erfordern Benachrichtigungen keine sofortige Benutzeraktion, und Benutzer können sie frei ignorieren.
 
-![Screenshot der Sprechblase mit "neuen Updates" im Titel ](images/mess-notif-image1.png)
+![Screenshot des Balloons mit "neuen Updates" im Titel ](images/mess-notif-image1.png)
 
 Eine typische Benachrichtigung.
 
-In Windows Vista und höher werden Benachrichtigungen für eine feste Dauer von 9 Sekunden angezeigt. Benachrichtigungen werden nicht sofort angezeigt, wenn Benutzer inaktiv sind oder Bildschirmschoner ausgeführt werden. Windows stellt Benachrichtigungen während dieser Zeit automatisch in die Warteschlange und zeigt die Benachrichtigungen in der Warteschlange an, wenn der Benutzer die reguläre Aktivität fortnimmt. Daher müssen Sie nichts unternehmen, um diese besonderen Umstände zu behandeln.
+In Windows Vista und höher werden Benachrichtigungen für eine feste Dauer von 9 Sekunden angezeigt. Benachrichtigungen werden nicht sofort angezeigt, wenn Benutzer inaktiv sind oder Bildschirmschoner ausgeführt werden. Windows Benachrichtigungen während dieser Zeiten automatisch in die Warteschlange ein und zeigt die Benachrichtigungen in der Warteschlange an, wenn der Benutzer die reguläre Aktivität wieder aufnehmen kann. Daher müssen Sie nichts unternehmen, um diese besonderen Umstände zu behandeln.
 
 **Entwickler:** Sie können mithilfe der SHQueryUserNotificationState-API ermitteln, wann der Benutzer aktiv ist.
 
-**Hinweis:** Richtlinien im Zusammenhang mit [Benachrichtigungsbereich,](winenv-notification.md) [Taskleiste](winenv-taskbar.md)und [Sprechblasen](ctrl-balloons.md) werden in separaten Artikeln vorgestellt.
+**Hinweis:** Richtlinien für [Benachrichtigungsbereich,](winenv-notification.md) [Taskleiste](winenv-taskbar.md)und Sprechblasen werden in separaten Artikeln vorgestellt. [](ctrl-balloons.md)
 
 ## <a name="is-this-the-right-user-interface"></a>Ist dies die richtige Benutzeroberfläche?
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Sind die Informationen das unmittelbare direkte Ergebnis der Interaktion der Benutzer mit Ihrer Anwendung?** Wenn ja, zeigen Sie diese synchronen Informationen direkt in Ihrer Anwendung an. Verwenden Sie stattdessen ein [Dialogfeld,](win-dialog-box.md) [ein Meldungsfeld,](glossary.md) [eine Sprechblase](ctrl-balloons.md)oder eine [direkte](glossary.md) Benutzeroberfläche. Benachrichtigungen dienen nur asynchronen Informationen.
+-   **Sind die Informationen das unmittelbare, direkte Ergebnis der Benutzerinteraktion mit Ihrer Anwendung?** Wenn dies der Fall ist, zeigen Sie diese synchronen Informationen direkt in Ihrer Anwendung an, anstatt ein [Dialogfeld,](win-dialog-box.md)ein Meldungsfeld, [](glossary.md)eine Sprechblase [oder](ctrl-balloons.md)eine direkte [Benutzeroberfläche](glossary.md) zu verwenden. Benachrichtigungen gelten nur für asynchrone Informationen.
 
 ![Screenshot der Windows-Sicherheitswarnung ](images/mess-notif-image2.png)
 
-In diesem Beispiel wird das Dialogfeld Firewallausnahmen Windows als direktes Ergebnis der Benutzerinteraktion angezeigt. Eine Benachrichtigung wäre hier nicht geeignet.
+In diesem Beispiel wird das Windows Firewallausnahmen als direktes Ergebnis der Benutzerinteraktion angezeigt. Eine Benachrichtigung wäre hier nicht geeignet.
 
--   **Sind die Informationen nur relevant, wenn Benutzer Ihre Anwendung aktiv verwenden?** Wenn ja, zeigen Sie die Informationen in der [Statusleiste](ctrl-status-bars.md) Ihrer Anwendung oder in einem anderen Statusbereich an.
+-   **Sind die Informationen nur relevant, wenn Benutzer Ihre Anwendung aktiv verwenden?** Wenn ja, zeigen Sie die Informationen in der Statusleiste Ihrer Anwendung [oder](ctrl-status-bars.md) in einem anderen Statusbereich an.
 
 ![Screenshot der Outlook-Statusleiste ](images/mess-notif-image3.png)
 
-In diesem Beispiel zeigt Outlook den Verbindungs- und Synchronisierungsstatus auf der Statusleiste an.
+In diesem Beispiel wird Outlook Verbindungs- und Synchronisierungsstatus auf der Statusleiste angezeigt.
 
--   **Ändern sich die Informationen schnell, kontinuierlich und in Echtzeit?** Beispiele hierfür sind Verarbeitungsfortschritt, Kursnotierungen und Sportbewertungen. Verwenden Sie in diesem Falle keine Benachrichtigungen, da sie nicht für sich schnell ändernde Informationen geeignet sind.
--   **Sind die Informationen nützlich und relevant? Werden Benutzer ihr Verhalten wahrscheinlich ändern oder Beeinträchtigungen aufgrund des Empfangs der Informationen vermeiden?** Andernfalls werden die Informationen entweder nicht angezeigt oder in einem Statusfenster oder in einer Protokolldatei gespeichert.
--   **Sind die Informationen wichtig? Ist sofortige Aktion erforderlich?** Wenn ja, zeigen Sie die Informationen über eine Schnittstelle an, die Aufmerksamkeit erfordert und nicht einfach ignoriert werden kann, z. B. ein modales Dialogfeld oder Meldungsfeld. Wenn das Programm nicht aktiv ist, können Sie die Aufmerksamkeit auf die kritischen Informationen lenken, indem Sie [die Taskleistenschaltfläche des Programms](winenv-taskbar.md) dreimal blinken lassen und diese hervorgehoben lassen, bis das Programm aktiv ist.
--   **Sind die IT-Experten der primären Zielbenutzer?** Verwenden Sie in diesem Falle einen alternativen Feedbackmechanismus, z. B. [Protokolldateieinträge](glossary.md) oder E-Mail-Nachrichten. IT-Experten bevorzugen Protokolldateien dringend für nicht kritische Informationen. Darüber hinaus werden Server häufig remote verwaltet und in der Regel ohne angemeldete Benutzer ausgeführt, sodass Benachrichtigungen ineffektiv sind.
+-   **Ändern sich die Informationen schnell, kontinuierlich und in Echtzeit?** Beispiele hierfür sind Verarbeitungsfortschritt, Aktienkurse und Sportergebnisse. Wenn ja, verwenden Sie keine Benachrichtigungen, da sie nicht für sich schnell ändernde Informationen geeignet sind.
+-   **Sind die Informationen nützlich und relevant? Werden Benutzer wahrscheinlich ihr Verhalten ändern oder Beeinträchtigungen durch den Empfang der Informationen vermeiden?** Falls nicht, zeigen Sie die Informationen entweder nicht an, oder speichern Sie sie in einem Statusfenster oder in einer Protokolldatei.
+-   **Sind die Informationen wichtig? Ist sofortiges Handeln erforderlich?** Wenn ja, zeigen Sie die Informationen mithilfe einer Schnittstelle an, die Aufmerksamkeit erfordert und nicht einfach ignoriert werden kann, z. B. ein modales Dialogfeld oder Meldungsfeld. Wenn das Programm nicht aktiv ist, können Sie auf [](winenv-taskbar.md) die kritischen Informationen aufmerksam machen, indem Sie die Taskleistenschaltfläche des Programms dreimal blinken lassen und sie so lange hervorgehoben lassen, bis das Programm aktiv ist.
+-   **Sind die primären Zielbenutzer IT-Experten?** Verwenden Sie in diesem Fällen einen alternativen Feedbackmechanismus, z. B. [Protokolldateieinträge](glossary.md) oder E-Mail-Nachrichten. IT-Experten bevorzugen Protokolldateien für nicht kritische Informationen. Darüber hinaus werden Server häufig remote verwaltet und in der Regel ohne angemeldete Benutzer ausgeführt, wodurch Benachrichtigungen ineffektiv werden.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Effektive Benachrichtigungen, die eine gute Benutzererfahrung fördern, sind:
+Effektive Benachrichtigungen, die eine gute Benutzerfreundlichkeit fördern, sind:
 
--   **Asynchronen.** Das Ereignis ist kein unmittelbares direktes Ergebnis der aktuellen Interaktion der Benutzer mit Microsoft Windows oder Ihrer Anwendung.
+-   **Asynchronen.** Das Ereignis ist kein unmittelbares, direktes Ergebnis der aktuellen Benutzerinteraktion mit Microsoft Windows Anwendung.
 -   **Nützlich.** Es besteht eine angemessene Wahrscheinlichkeit, dass Benutzer eine Aufgabe ausführen oder ihr Verhalten als Ergebnis der Benachrichtigung ändern.
--   **Relevanten.** Die Benachrichtigung zeigt hilfreiche Informationen an, die Benutzern wichtig sind und die sie nicht bereits kennen.
+-   **Relevanten.** In der Benachrichtigung werden hilfreiche Informationen angezeigt, die Benutzern am Meisten am Meisten bekannt sind und die sie noch nicht kennen.
 -   **Nicht kritisch.** Benachrichtigungen sind nicht modal und erfordern keine Benutzerinteraktion, sodass Benutzer sie frei ignorieren können.
 -   **Umsetzbare.** Bei Benachrichtigungen, die das Ausführen einer Aktion vorschlagen, wird diese Aktion durch Klicken auf die Benachrichtigung initiiert. Die Aktion kann jedoch immer zurückgestellt werden.
 -   **Entsprechend dargestellt.** Die Darstellung der Benachrichtigung (Dauer, Häufigkeit, Text, Symbol und Interaktivität) entspricht ihren Umständen.
--   **Nicht ärmlich!** Es gibt eine Feinlinie zwischen der Informierung von Benutzern über ein Ereignis und derEntschädigung.
+-   **Nicht lästig!** Es gibt eine gute Linie zwischen der lässig informierten Benutzer über ein Ereignis und deren Lässig.
 
-Leider gibt es zu viele benachrichtigungen, die unpassend, unbrauchbar und irrelevant sind. Beachten Sie diese Benachrichtigungen von der Windows XP Hall of Notifications:
+Leider gibt es zu viele überflüssige, ungeeignete, überflüssige und irrelevante Benachrichtigungen. Betrachten Sie diese Benachrichtigungen von Windows XP Hall of 2017:
 
-![Screenshot der Benachrichtigung "Tour windows xp" ](images/mess-notif-image4.png)
+![Screenshot der Benachrichtigung "Tour Windows XP" ](images/mess-notif-image4.png)
 
 ![Screenshot der Benachrichtigung "Nicht verwendete Symbole" ](images/mess-notif-image5.png)
 
 ![Screenshot der Benachrichtigung ".NET Passport hinzufügen" ](images/mess-notif-image6.png)
 
-In diesen Beispielen versucht Windows XP scheinbar, Benutzer bei ihrer Erstkonfiguration zu unterstützen. Diese Benachrichtigungen werden jedoch viel zu oft und gut angezeigt, nachdem sie nützlich sind, sodass sie wenig mehr sind als unaufgeforderte Featureanzeigen.
+In diesen Beispielen Windows XP scheinbar versucht, Benutzer bei der Erstkonfiguration zu unterstützen. Diese Benachrichtigungen werden jedoch viel zu häufig und gut angezeigt, nachdem sie nützlich sind, sodass sie nur wenig mehr als unerwünschte Featureanmeldungen sind.
 
-## <a name="user-flow-must-be-maintained"></a>Der Benutzerflow muss beibehalten werden.
+## <a name="user-flow-must-be-maintained"></a>Der Benutzerfluss muss beibehalten werden.
 
-**Im Idealfall sehen Benutzer, die mit ihrer Arbeit gearbeitet haben, ihre Benachrichtigungen überhaupt nicht. Stattdessen werden Ihre Benachrichtigungen nur angezeigt, wenn ihr Flow bereits unterbrochen ist.**
+**Im Idealfall werden Benutzern, die an ihrer Arbeit arbeiten, Ihre Benachrichtigungen überhaupt nicht angezeigt. Stattdessen werden ihre Benachrichtigungen nur angezeigt, wenn ihr Flow bereits unterbrochen ist.**
 
-Mihaly Csikszentmihalyi gibt in Flow: The Satisfaction of Optimal Experience an, dass Benutzer in einen Flowzustand gelangen, wenn sie vollständig in Aktivitäten aufgenommen werden, während denen sie das Gefühl der Zeit verlieren und sich sehr zufrieden fühlen.
+In Flow: TheUng of Optimal Experience (Das Ergebnis der optimalen Erfahrung) sagt Mihaly Csikszentmihalyi, dass Benutzer in einen Flowzustand eintreten, wenn sie in ihrer Aktivität voll sind, in der sie ihren Zeitzustand verlieren und eine große Zufriedenheit haben.
 
-**Effektive Benachrichtigungen helfen Benutzern, ihren Flow beizubehalten, indem sie nützliche, relevante Informationen präsentieren, die leicht ignoriert werden können.** Die Benachrichtigungen werden auf eine Peripheriegeräte-Weise mit geringem Schlüssel angezeigt, und sie erfordern keine Interaktion.
+**Effektive Benachrichtigungen helfen Benutzern, ihren Flow zu verwalten, indem sie nützliche, relevante Informationen präsentieren, die leicht ignoriert werden können.** Die Benachrichtigungen werden mit geringem Schlüssel und Peripheriegerät angezeigt, und sie erfordern keine Interaktion.
 
-Gehen Sie nicht davon aus, dass Benachrichtigungen keine unterbrechungsfreie Unterbrechung sein können, wenn sie [moduslos](glossary.md) sind. Benachrichtigungen erfordern keine Aufmerksamkeit der Benutzer, aber sie fordern sie auf jeden Fall an. Sie können den Benutzerflow wie folgt unterbrechen:
+Gehen Sie nicht davon aus, dass es sich bei [Benachrichtigungen nicht](glossary.md) um eine unterbrechungsfreie Unterbrechung handelt. Benachrichtigungen erfordern nicht die Aufmerksamkeit der Benutzer, aber sie fordern sie sicherlich an. Sie können den Benutzerfluss durch:
 
 -   Anzeigen von Benachrichtigungen, die Benutzern egal sind.
--   Eine Benachrichtigung wird zu oft angezeigt.
--   Verwenden mehrerer Benachrichtigungen, wenn eine einzelne Benachrichtigung ausreicht.
+-   Zu häufiges Anzeigen einer Benachrichtigung.
+-   Verwenden mehrerer Benachrichtigungen, wenn eine einzelne Benachrichtigung ausreichend ist.
 -   Verwenden von Sound beim Anzeigen einer Benachrichtigung.
 
-In Windows 7 haben Benutzer die endgültige Kontrolle über Benachrichtigungen. **Wenn Benutzer feststellen, dass die Benachrichtigungen eines Programms zu ängstlich sind, können sie alle Benachrichtigungen von diesem Programm unterdrücken.** Stellen Sie sicher, dass Benutzer dies nicht für Ihr Programm tun, indem Sie nützliche, relevante Informationen präsentieren und diese Richtlinien befolgen.
+In Windows 7 haben Benutzer die endgültige Kontrolle über Benachrichtigungen. **Wenn Benutzer feststellen, dass die Benachrichtigungen eines Programms zu lästig sind, können sie alle Benachrichtigungen dieses Programms unterdrücken.** Stellen Sie sicher, dass Benutzer dies nicht für Ihr Programm tun, indem Sie nützliche, relevante Informationen präsentieren und diese Richtlinien befolgen.
 
-## <a name="notifications-must-be-ignorable"></a>Benachrichtigungen müssen ignoriert werden können.
+## <a name="notifications-must-be-ignorable"></a>Benachrichtigungen müssen ignorierbar sein
 
 **Benachrichtigungen erfordern keine sofortige Benutzeraktion, und Benutzer können sie frei ignorieren.**
 
-Entwickler und Designer möchten ihre Benachrichtigungen häufig so darstellen, dass sie von Benutzern nicht ignoriert werden können. Dieses Ziel macht den Hauptvorteil von Benachrichtigungen vollständig aus, da dadurch der Benutzerflow beeinträchtigt würde. Wenn Benutzer von Ihren Benachrichtigungen ablenkt werden oder sich dazu aufgefordert sehen, sie zu lesen, ist ihr Benachrichtigungsentwurf fehlgeschlagen.
+Entwickler und Designer möchten ihre Benachrichtigungen häufig auf eine Weise präsentieren, die Benutzer nicht ignorieren können. Dieses Ziel beeinträchtigt den Hauptvorteil von Benachrichtigungen vollständig, da dies den Benutzerfluss beeinträchtigen würde. Wenn Benutzer von Ihren Benachrichtigungen abgelenkt sind oder sich dazu verpflichtet fühlen, sie zu lesen, ist Ihr Benachrichtigungsentwurf fehlgeschlagen.
 
-**Wenn Sie Bedenken haben, dass Benutzer Ihre Benachrichtigungen ignorieren, sollten Sie Folgendes berücksichtigen:**
+**Wenn Sie Bedenken haben, dass Benutzer Ihre Benachrichtigungen ignorieren, beachten Sie Folgendes:**
 
--   Wenn Sie Benachrichtigungen ordnungsgemäß verwenden und sie keine sofortige Benutzeraktion erfordern, ist es entwurfsgemäß, dass Benutzer sie ignorieren möchten. Ändern Sie dies nicht.
--   Wenn für das Ereignis eine sofortige Benutzeraktion erforderlich ist, verwenden Sie eine alternative Benutzeroberfläche , die Benutzer nicht ignorieren können. Weitere Informationen finden Sie unter Ist dies die richtige Benutzeroberfläche? für die Alternativen.
+-   Wenn Sie Benachrichtigungen ordnungsgemäß verwenden und keine sofortige Benutzeraktion erfordern, ist es standardmäßig so, dass Benutzer diese ignorieren. Ändern Sie dies nicht.
+-   Wenn das Ereignis eine sofortige Benutzeraktion erfordert, verwenden Sie eine alternative Benutzeroberfläche(UI), die Benutzer nicht ignorieren können. Siehe Ist dies die richtige Benutzeroberfläche? für die Alternativen.
 
 ## <a name="use-progressive-escalation-where-applicable"></a>Verwenden Sie ggf. progressive Eskalation.
 
-Wenn eine Benachrichtigung für ein Ereignis verwendet wird, das Benutzer zunächst problemlos ignorieren können, dies aber letztendlich behoben werden muss, sollte eine alternative Benutzeroberfläche verwendet werden, wenn die Situation kritisch wird. Diese Technik wird als progressive Eskalation bezeichnet.
+Wenn eine Benachrichtigung für ein Ereignis verwendet wird, das Benutzer zunächst sicher ignorieren können, dies aber letztendlich behoben werden muss, sollte eine alternative Benutzeroberfläche verwendet werden, wenn die Situation kritisch wird. Diese Technik wird als progressive Eskalation bezeichnet.
 
-Beispielsweise weist das Windows Energieverwaltungssystem anfänglich auf eine niedrige Akkukapazität hin, indem einfach das Symbol für den Benachrichtigungsbereich geändert wird.
+Beispielsweise weist das Windows energieverwaltungssystem anfänglich auf einen niedrigen Akkustand hin, indem er einfach das Symbol für den Benachrichtigungsbereich ändert.
 
 ![Screenshot von sechs Symbolen mit Akkustatus ](images/mess-notif-image7.png)
 
-In diesen Beispielen verwendet Windows Energieverwaltung das Symbol für den Benachrichtigungsbereich, um Benutzer über einen zunehmend geringeren Akkubetrieb zu benachrichtigen.
+In diesen Beispielen Windows energieverwaltung das Symbol für den Benachrichtigungsbereich, um Benutzer über progressiv niedrigere Akkuleistung zu benachrichtigen.
 
-Wenn die Akkuleistung geringer wird, warnt Windows Benutzer mithilfe einer Benachrichtigung vor schwacher Akkuleistung.
+Wenn die Akkuleistung niedriger wird, Windows Benutzer mithilfe einer Benachrichtigung vor schwacher Akkuleistung warnen.
 
-![Screenshot der Benachrichtigung über niedrigen Akkubetrieb](images/mess-notif-image8.png)
+![Screenshot der Benachrichtigung bei niedriger Akkuleistung](images/mess-notif-image8.png)
 
-In diesem Beispiel verwendet Windows Energieverwaltung eine Benachrichtigung, um Benutzer darüber zu informieren, dass ihre Akkuleistung schwach ist.
+In diesem Beispiel verwendet Windows Energieverwaltung eine Benachrichtigung, um Benutzer darüber zu informieren, dass die Akkuleistung schwach ist.
 
-Diese Benachrichtigung wird angezeigt, während Benutzer noch über mehrere Optionen verfügen. Benutzer können ihre Energieoptionen anschließen, ändern, ihre Arbeit packen und den Computer herunterfahren oder die Benachrichtigung ignorieren und die Arbeit fortsetzen. Wenn der Akkubetrieb weiter abgelassen wird, spiegeln der Text und das Symbol der Benachrichtigung die zusätzliche Dringlichkeit wider. Sobald die Akkuleistung jedoch so niedrig ist, dass Benutzer sofort handeln müssen, benachrichtigt Windows Die Energieverwaltung die Benutzer über ein [modales Meldungsfeld.](glossary.md)
+Diese Benachrichtigung wird angezeigt, während Benutzer noch über mehrere Optionen verfügen. Benutzer können ihre Energieoptionen anschließen, ändern, ihre Arbeit packen und den Computer herunterfahren oder die Benachrichtigung ignorieren und die Arbeit fortsetzen. Wenn der Akkubetrieb weiter abgelassen wird, spiegeln der Text und das Symbol der Benachrichtigung die zusätzliche Dringlichkeit wider. Sobald die Akkuleistung jedoch so niedrig ist, dass Benutzer sofort handeln müssen, benachrichtigt Windows die Energieverwaltung die Benutzer über ein [modales Meldungsfeld.](glossary.md)
 
 ![Screenshot der Warnung zu stark niedriger Akkuleistung](images/mess-notif-image9.png)
 
@@ -135,43 +135,9 @@ Benachrichtigungen haben mehrere Verwendungsmuster:
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Aktion erfolgreich</strong><br/> Benachrichtigt Benutzer, wenn eine asynchrone, vom Benutzer initiierte Aktion erfolgreich abgeschlossen wurde. <br/></td>
-<td><strong>Richtig:</strong><br/> <img src="images/mess-notif-image10.png" alt="Screen shot of balloon showing successful updates " /><br/> In diesem Beispiel benachrichtigt Windows Update Benutzer, wenn ihr Computer erfolgreich aktualisiert wurde.<br/> <strong>Falsch:</strong><br/> <img src="images/mess-notif-image11.png" alt="Screen shot of balloon showing file check complete " /><br/> In diesem Beispiel benachrichtigt Microsoft Outlook Benutzer, wenn eine Datendateiprüfung abgeschlossen ist. Was sollen Benutzer jetzt tun? Warum sollten Benutzer vor einem erfolgreichen Abschluss ge warnen?<br/> <strong>Anzeigen, wenn:</strong> Nach Abschluss einer asynchronen Aufgabe. Benachrichtigen Sie Benutzer nur dann über erfolgreiche Aktionen, wenn sie wahrscheinlich auf den Abschluss oder nach kürzlichen Fehlern warten.<br/> <strong>Zeigen Sie, wie:</strong> Verwenden Sie die Echtzeitoption, damit diese Benachrichtigungen nicht in die Warteschlange gestellt werden, wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.<br/> <strong>Zeigen Sie an, wie oft:</strong> Einmal.<br/> <strong>Verärgerungsfaktor:</strong> Niedrig, wenn der Erfolg aufgrund von kürzlichen Fehlern nicht zu erwarten ist, ist der Erfolg nach einem kritischen oder höchst ungewöhnlichen Fehler, sodass der Benutzer zusätzliches Feedback benötigt oder auf den Abschluss wartet. hoch, wenn dies nicht der Dert ist.<br/> <strong>Alternativen:</strong> Geben Sie bei Bedarf Feedback, indem Sie ein Symbol (oder ein vorhandenes Symbol) im Benachrichtigungsbereich anzeigen, während der Vorgang ausgeführt wird. Entfernen Sie das Symbol (oder stellen Sie das vorherige Symbol wieder auf), wenn der Vorgang &quot; &quot; abgeschlossen ist. <br/></td>
-</tr>
-<tr class="even">
-<td><strong>Aktionsfehler</strong><br/> Benachrichtigt Benutzer, wenn eine asynchrone, vom Benutzer initiierte Aktion fehlschlägt. <br/></td>
-<td><strong>Richtig:</strong><br/> <img src="images/mess-notif-image12.png" alt="Screen shot of notification of failure to install " /><br/> In diesem Beispiel benachrichtigt Windows Benutzer über einen Fehler.<br/> <strong>Falsch:</strong><br/> <img src="images/mess-notif-image13.png" alt="Screen shot of notification of failure to update " /><br/> In diesem Beispiel wird Microsoft Outlook verwendet, um Benutzer über einen Fehler zu benachrichtigen, der für sie wahrscheinlich unwahrscheinlich ist.<br/> <strong>Anzeigen, wenn:</strong> Bei Einem Fehler einer asynchronen Aufgabe.<br/> <strong>Zeigen Sie an, wie oft:</strong> Einmal.<br/> <strong>Verärgerungsfaktor:</strong> Niedrig, wenn nützlich und relevant; hoch, wenn sich das Problem sofort selbst löst, oder benutzern andernfalls egal ist.<br/> <strong>Alternativen:</strong> Verwenden Sie ein modales Dialogfeld, wenn Benutzer den Fehler sofort bearbeiten müssen. <br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Nicht kritisches Systemereignis</strong><br/> Benachrichtigt Benutzer über wichtige Systemereignisse oder den Status, die zumindest vorübergehend ignoriert werden können. <br/></td>
-<td><img src="images/mess-notif-image8.png" alt="Screen shot of notification of low battery power " /><br/> In diesem Beispiel Windows Benutzer vor wenig Akkustand warnen, aber es gibt noch viel Zeit, bevor sie Maßnahmen ergreifen.<br/> <strong>Anzeigen, wenn:</strong> Wenn ein Ereignis auftritt und der Benutzer aktiv ist oder eine Bedingung weiterhin besteht. Wenn dies auf ein Problem zurückt, entfernen Sie die aktuell angezeigten Benachrichtigungen sofort, sobald das Problem behoben wurde. Wie bei Aktionsbenachrichtigungen benachrichtigen Sie Benutzer nur dann über erfolgreiche Systemereignisse, wenn Benutzer wahrscheinlich auf das Ereignis warten oder nach kürzlichen Fehlern.<br/> <strong>Zeigen Sie an, wie oft:</strong> Einmal, wenn das Ereignis zum ersten Mal auftritt. Wenn dies aus einem Problem resultiert, das Benutzer lösen müssen, zeigen Sie einmal täglich erneut an.<br/> <strong>Verärgerungsfaktor:</strong> Niedrig, solange die Benachrichtigung nicht zu oft angezeigt wird.<br/> <strong>Alternativen:</strong> Wenn Benutzer ein Problem letztendlich lösen müssen, verwenden Sie progressive Eskalation, indem Sie letztendlich ein modales Dialogfeld anzeigen, wenn die Lösung obligatorisch wird. <br/></td>
-</tr>
-<tr class="even">
-<td><strong>Optionale Benutzeraufgabe</strong><br/> Benachrichtigt Benutzer über asynchrone Aufgaben, die sie ausführen sollten. Unabhängig davon, ob die Aufgabe optional oder erforderlich ist, kann sie sicher verschoben werden. <br/></td>
-<td><img src="images/mess-notif-image14.png" alt="Screen shot of notification of available updates " /><br/> In diesem Beispiel benachrichtigt Windows Update Benutzer über ein neues Sicherheitsupdate.<br/> <strong>Anzeigen, wenn:</strong> Wenn die Notwendigkeit zum Ausführen einer Aufgabe bestimmt wird und der Benutzer aktiv ist.<br/> <strong>Zeigen Sie an, wie oft:</strong> Einmal täglich für maximal drei Mal.<br/> <strong>Verärgerungsfaktor:</strong> Niedrig, solange Benutzer die Aufgabe als wichtig betrachten und die Benachrichtigung nicht zu häufig angezeigt wird.<br/> <strong>Alternativen:</strong> Wenn Benutzer die Aufgabe letztendlich ausführen müssen, verwenden Sie progressive Eskalation, indem Sie letztendlich ein modales Dialogfeld anzeigen, wenn die Aufgabe obligatorisch wird. <br/></td>
-</tr>
-<tr class="odd">
-<td><strong>Fyi</strong><br/> Benachrichtigt Benutzer über potenziell nützliche, relevante Informationen. Sie können Benutzer über Informationen von marginaler Relevanz benachrichtigen, wenn sie optional sind und benutzer sich dafür entscheiden. <br/></td>
-<td><strong>Richtig:</strong><br/> <img src="images/mess-notif-image15.png" alt="Screen shot of notification of new e-mail message " /><br/> In diesem Beispiel werden Benutzer benachrichtigt, wenn eine neue E-Mail-Nachricht empfangen wird.<br/> <strong>Richtig:</strong><br/> <img src="images/mess-notif-image16.png" alt="Screen shot of notification of contact signed in " /><br/> In diesem Beispiel werden Benutzer benachrichtigt, wenn Kontakte online benachrichtigungen, und sie haben sich entschieden, diese optionalen Informationen zu erhalten.<br/> <strong>Falsch:</strong><br/> <img src="images/mess-notif-image17.png" alt="Screen shot of notification for faster performance " /><br/> In diesem Beispiel sind die Informationen nur nützlich, wenn der Benutzer bereits hochgeschwindigkeitsbasierte USB-Anschlüsse installiert hat. Andernfalls wird der Benutzer wahrscheinlich keine anderen Möglichkeiten als das Ergebnis haben.<br/> <strong>Anzeigen, wenn:</strong> Wenn das auslösende Ereignis auftritt.<br/> <strong>Zeigen Sie, wie:</strong> Verwenden Sie die Echtzeitoption, damit diese Benachrichtigungen nicht in die Warteschlange gestellt werden, wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.<br/> <strong>Zeigen Sie an, wie oft:</strong> Einmal.<br/> <strong>Verärgerungsfaktor:</strong> Mittel bis hoch, je nachdem, wie nützlich und relevant die Benutzer sind. Nicht zu empfehlen, wenn eine geringe Wahrscheinlichkeit von Benutzer interessant ist.<br/> <strong>Alternativen:</strong> Benachrichtigen Sie Benutzer nicht. <br/></td>
-</tr>
-<tr class="even">
-<td><strong>Featureanzeige</strong><br/> Benachrichtigt Benutzer über neu installierte, nicht verwendete System- oder Anwendungsfeatures.<br/></td>
-<td><strong>Verwenden Sie keine Benachrichtigungen für Featureanzeigen!</strong> Verwenden Sie stattdessen eine andere Möglichkeit, um das Feature erkennbar zu machen, z. B.: <br/>
-<ul>
-<li>Entwerfen Sie das Feature so, dass es in Kontexten leichter zu finden ist, in denen es benötigt wird.</li>
-<li>Machen Sie nichts Besonderes, und lassen Sie Benutzer das Feature selbst entdecken.</li>
-</ul>
-<strong>Falsch:</strong><br/> <img src="images/mess-notif-image4.png" alt="Screen shot of notification of new features " /><br/> Verwenden Sie keine Benachrichtigungen für Featureanzeigen.<br/></td>
-</tr>
-</tbody>
-</table>
+
+| | | <strong>Aktion erfolgreich</strong><br /> Benachrichtigt Benutzer, wenn eine asynchrone, vom Benutzer initiierte Aktion erfolgreich abgeschlossen wurde. <br /> | <strong>Richtig:</strong><br /><img src="images/mess-notif-image10.png" alt="Screen shot of balloon showing successful updates " /><br /> In diesem Beispiel benachrichtigt Windows Update Benutzer, wenn ihr Computer erfolgreich aktualisiert wurde.<br /><strong>Falsch:</strong><br /><img src="images/mess-notif-image11.png" alt="Screen shot of balloon showing file check complete " /><br /> In diesem Beispiel benachrichtigt Microsoft Outlook Benutzer, wenn eine Datendateiprüfung abgeschlossen ist. Was sollen Benutzer jetzt tun? Und warum sollten Benutzer vor einem erfolgreichen Abschluss ge warnen?<br /><strong>Anzeigen, wenn:</strong> Nach Abschluss einer asynchronen Aufgabe. Benachrichtigen Sie Benutzer nur dann über erfolgreiche Aktionen, wenn sie wahrscheinlich auf den Abschluss oder nach kürzlichen Fehlern warten.<br /><strong>Zeigen Sie, wie:</strong> Verwenden Sie die Echtzeitoption, damit diese Benachrichtigungen nicht in die Warteschlange gestellt werden, wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.<br /><strong>Zeigen Sie an, wie oft:</strong> Einmal.<br /><strong>Verärgerungsfaktor:</strong> Niedrig, wenn der Erfolg aufgrund von kürzlichen Fehlern nicht zu erwarten ist, ist der Erfolg nach einem kritischen oder höchst ungewöhnlichen Fehler, sodass der Benutzer zusätzliches Feedback benötigt oder auf den Abschluss wartet. hoch, wenn dies nicht der Dert ist.<br /><strong>Alternativen:</strong> Senden Sie Feedback "bei Bedarf", indem Sie ein Symbol (oder ein vorhandenes Symbol) im Benachrichtigungsbereich anzeigen, während der Vorgang ausgeführt wird. Entfernen Sie das Symbol (oder stellen Sie das vorherige Symbol wieder wieder auf), wenn der Vorgang abgeschlossen ist. <br /> | | <strong>Aktionsfehler</strong><br /> Benachrichtigt Benutzer, wenn eine asynchrone, vom Benutzer initiierte Aktion fehlschlägt. <br /> | <strong>Richtig:</strong><br /><img src="images/mess-notif-image12.png" alt="Screen shot of notification of failure to install " /><br /> In diesem Beispiel benachrichtigt Windows Benutzer über einen Fehler.<br /><strong>Falsch:</strong><br /><img src="images/mess-notif-image13.png" alt="Screen shot of notification of failure to update " /><br /> In diesem Beispiel wird Microsoft Outlook verwendet, um Benutzer über einen Fehler zu benachrichtigen, der für sie wahrscheinlich unwahrscheinlich ist.<br /><strong>Anzeigen, wenn:</strong> Bei Einem Fehler einer asynchronen Aufgabe.<br /><strong>Zeigen Sie an, wie oft:</strong> Einmal.<br /><strong>Verärgerungsfaktor:</strong> Niedrig, wenn nützlich und relevant; hoch, wenn sich das Problem sofort selbst löst, oder benutzern andernfalls egal ist.<br /><strong>Alternativen:</strong> Verwenden Sie ein modales Dialogfeld, wenn Benutzer den Fehler sofort bearbeiten müssen. <br /> | | <strong>Nicht kritisches Systemereignis</strong><br /> Benachrichtigt Benutzer über wichtige Systemereignisse oder Status, die zumindest vorübergehend ignoriert werden können. <br /> | <img src="images/mess-notif-image8.png" alt="Screen shot of notification of low battery power " /><br /> In diesem Beispiel Windows Benutzer vor wenig Akkustand warnen, aber es gibt noch viel Zeit, bevor sie Maßnahmen ergreifen.<br /><strong>Anzeigen, wenn:</strong> Wenn ein Ereignis auftritt und der Benutzer aktiv ist, oder eine Bedingung weiterhin vorhanden ist. Wenn dies auf ein Problem zurückt, entfernen Sie die aktuell angezeigten Benachrichtigungen sofort, sobald das Problem behoben wurde. Wie bei Aktionsbenachrichtigungen benachrichtigen Sie Benutzer nur dann über erfolgreiche Systemereignisse, wenn Benutzer wahrscheinlich auf das Ereignis warten oder nach kürzlichen Fehlern.<br /><strong>Zeigen Sie an, wie oft:</strong> Einmal, wenn das Ereignis zum ersten Mal auftritt. Wenn dies aus einem Problem resultiert, das Benutzer lösen müssen, zeigen Sie einmal täglich erneut an.<br /><strong>Verärgerungsfaktor:</strong> Niedrig, solange die Benachrichtigung nicht zu oft angezeigt wird.<br /><strong>Alternativen:</strong> Wenn Benutzer ein Problem letztendlich lösen müssen, verwenden Sie progressive Eskalation, indem Sie letztendlich ein modales Dialogfeld anzeigen, wenn die Lösung obligatorisch wird. <br /> | | <strong>Optionale Benutzeraufgabe</strong><br /> Benachrichtigt Benutzer über asynchrone Aufgaben, die sie ausführen sollten. Unabhängig davon, ob die Aufgabe optional oder erforderlich ist, kann sie sicher verschoben werden. <br /> | <img src="images/mess-notif-image14.png" alt="Screen shot of notification of available updates " /><br /> In diesem Beispiel benachrichtigt Windows Update Benutzer über ein neues Sicherheitsupdate.<br /><strong>Anzeigen, wenn:</strong> Wenn die Notwendigkeit zum Ausführen einer Aufgabe bestimmt wird und der Benutzer aktiv ist.<br /><strong>Zeigen Sie an, wie oft:</strong> Einmal täglich für maximal drei Mal.<br /><strong>Verärgerungsfaktor:</strong> Niedrig, solange Benutzer die Aufgabe als wichtig betrachten und die Benachrichtigung nicht zu häufig angezeigt wird.<br /><strong>Alternativen:</strong> Wenn Benutzer die Aufgabe letztendlich ausführen müssen, verwenden Sie progressive Eskalation, indem Sie letztendlich ein modales Dialogfeld anzeigen, wenn die Aufgabe obligatorisch wird. <br /> | | <strong>YI</strong><br /> Benachrichtigt Benutzer über potenziell nützliche, relevante Informationen. Sie können Benutzer über Informationen von marginaler Relevanz benachrichtigen, wenn sie optional sind und benutzer sich dafür entscheiden. <br /> | <strong>Richtig:</strong><br /><img src="images/mess-notif-image15.png" alt="Screen shot of notification of new e-mail message " /><br /> In diesem Beispiel werden Benutzer benachrichtigt, wenn eine neue E-Mail-Nachricht empfangen wird.<br /><strong>Richtig:</strong><br /><img src="images/mess-notif-image16.png" alt="Screen shot of notification of contact signed in " /><br /> In diesem Beispiel werden Benutzer benachrichtigt, wenn Kontakte online benachrichtigungen, und sie haben sich dafür entschieden, diese optionalen Informationen zu erhalten.<br /><strong>Falsch:</strong><br /><img src="images/mess-notif-image17.png" alt="Screen shot of notification for faster performance " /><br /> In diesem Beispiel sind die Informationen nur nützlich, wenn der Benutzer bereits hochgeschwindigkeitsbasierte USB-Anschlüsse installiert hat. Andernfalls wird der Benutzer wahrscheinlich keine anderen Möglichkeiten als das Ergebnis haben.<br /><strong>Anzeigen, wenn:</strong> Wenn das auslösende Ereignis auftritt.<br /><strong>Zeigen Sie, wie:</strong> Verwenden Sie die Echtzeitoption, damit diese Benachrichtigungen nicht in die Warteschlange gestellt werden, wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.<br /><strong>Zeigen Sie an, wie oft:</strong> Einmal.<br /><strong>Verärgerungsfaktor:</strong> Mittel bis hoch, je nachdem, wie nützlich und relevant die Benutzer sind. Nicht zu empfehlen, wenn eine geringe Wahrscheinlichkeit für benutzerfreundliche Benutzer besteht.<br /><strong>Alternativen:</strong> Benachrichtigen Sie Benutzer nicht. <br /> | | <strong>Featureanzeige</strong><br /> Benachrichtigt Benutzer über neu installierte, nicht verwendete System- oder Anwendungsfeatures.<br /> | <strong>Verwenden Sie keine Benachrichtigungen für Featureanzeigen!</strong> Verwenden Sie stattdessen eine andere Möglichkeit, um das Feature erkennbar zu machen, z. B.: <br /><ul><li>Entwerfen Sie das Feature so, dass es in Kontexten leichter zu finden ist, in denen es benötigt wird.</li><li>Machen Sie nichts Besonderes, und lassen Sie Benutzer das Feature selbst entdecken.</li></ul><strong>Falsch:</strong><br /><img src="images/mess-notif-image4.png" alt="Screen shot of notification of new features " /><br /> Verwenden Sie keine Benachrichtigungen für Featureanzeigen.<br /> | 
+
 
 
 
@@ -182,38 +148,38 @@ Benachrichtigungen haben mehrere Verwendungsmuster:
 ### <a name="general"></a>Allgemein
 
 -   **Wählen Sie das Benachrichtigungsmuster basierend auf seiner Verwendung aus.** Eine Beschreibung der einzelnen Verwendungsmuster finden Sie in der vorherigen Tabelle.
--   **Verwenden Sie keine Benachrichtigungen während der Windows Benutzererfahrung.** Um die erste Erfahrung zu verbessern, unterdrückt Windows 7 alle Benachrichtigungen, die während der ersten Nutzungsstunden angezeigt werden. Entwerfen Sie Ihr Programm unter der Annahme, dass Benutzern keine solchen Benachrichtigungen angezeigt werden.
+-   **Verwenden Sie während der ersten Windows keine Benachrichtigungen.** Um die erste Erfahrung zu verbessern, unterdrückt Windows 7 alle Benachrichtigungen, die während der ersten Nutzungsstunden angezeigt werden. Entwerfen Sie Ihr Programm so, dass Benutzern keine solchen Benachrichtigungen angezeigt werden.
 
 ### <a name="what-to-notify"></a>Zu benachrichtigende Informationen
 
 -   **Benachrichtigen Sie nicht über erfolgreiche Vorgänge, außer unter den folgenden Umständen:**
     -   **Sicherheit.** Benutzer betrachten Sicherheitsvorgänge als von größter Wichtigkeit, sodass Benutzer über erfolgreiche Sicherheitsvorgänge benachrichtigt werden.
-    -   **Aktueller Fehler.** Benutzer nehmen erfolgreiche Vorgänge nicht als selbstverständlich an, wenn sie unmittelbar zuvor einen Fehler hatten. Benachrichtigen Sie daher die Benutzer über den Erfolg, wenn der Vorgang vor Kurzem fehlgeschlagen ist.
+    -   **Aktueller Fehler.** Benutzer nehmen erfolgreiche Vorgänge nicht als selbstverständlich an, wenn sie unmittelbar zuvor fehlgeschlagen sind. Benachrichtigen Sie daher die Benutzer über den Erfolg, wenn der Vorgang vor Kurzem fehlgeschlagen ist.
     -   **Vermeiden Sie Beeinträchtigungen.** Wenn Sie erfolgreiche Vorgänge melden, kann dies zu unnötigen Benutzern werden. Benachrichtigen Sie daher Benutzer, wenn ein erfolgreicher Vorgang auf unerwartete Weise ausgeführt wird, z. B. wenn ein Vorgang lang ist oder früher oder später als erwartet abgeschlossen wird.
--   **In anderen Fällen geben Sie entweder kein Feedback für den Erfolg oder feedback "on demand".** Angenommen, Benutzer nehmen erfolgreiche Vorgänge als selbstverständlich an. Sie können bei Bedarf Feedback geben, indem Sie ein Symbol im Benachrichtigungsbereich anzeigen (oder ein vorhandenes Symbol ändern), während der Vorgang ausgeführt wird, und das Symbol entfernen (oder das vorherige Symbol wiederherstellen), wenn der Vorgang abgeschlossen ist.
--   Geben Sie für das FYI-Muster keine Benachrichtigung aus, wenn Benutzer weiterhin normal arbeiten können oder aufgrund **der Benachrichtigung wahrscheinlich keine anderen Benachrichtigungen durchführen werden.**
+-   **In anderen Fällen geben Sie entweder kein Feedback für den Erfolg oder feedback "on demand".** Angenommen, Benutzer nehmen erfolgreiche Vorgänge als selbstverständlich an. Sie können Feedback bei Bedarf geben, indem Sie ein Symbol (oder ein vorhandenes Symbol) im Benachrichtigungsbereich anzeigen, während der Vorgang ausgeführt wird, und das Symbol entfernen (oder das vorherige Symbol wiederherstellen), wenn der Vorgang abgeschlossen ist.
+-   Geben Sie für das FYI-Muster keine Benachrichtigung aus, wenn Benutzer weiterhin normal arbeiten können oder sich als Ergebnis der Benachrichtigung wahrscheinlich nicht **anders verhalten.**
 
     **Falsch:**
 
     ![Screenshot der Benachrichtigung für schnellere Leistung ](images/mess-notif-image17.png)
 
-    In diesem Beispiel sind die Informationen nur nützlich, wenn der Benutzer bereits die Ports installiert hat. Andernfalls ist es wahrscheinlich, dass der Benutzer als Ergebnis nichts anderes tut.
+    In diesem Beispiel sind die Informationen nur nützlich, wenn der Benutzer die Ports bereits installiert hat. Andernfalls wird der Benutzer wahrscheinlich keine anderen Möglichkeiten als das Ergebnis haben.
 
-    -   Ausnahme: **Sie können Benutzer über Informationen benachrichtigen, die von fraglicher Relevanz sind, wenn sie optional sind und Benutzer sich dafür entscheiden.**
+    -   Ausnahme: Sie können Benutzer über Informationen von fragebarer Relevanz benachrichtigen, wenn sie optional sind und **Benutzer sich dafür entscheiden.**
 
         **Richtig:**
 
         ![Screenshot der Benachrichtigung über den angemeldeten Kontakt ](images/mess-notif-image16.png)
 
-        In diesem Beispiel werden Benutzer benachrichtigt, wenn Kontakte online geschaltet werden und diese optionalen Informationen erhalten.
+        In diesem Beispiel werden Benutzer benachrichtigt, wenn Kontakte online benachrichtigungen, und sie haben sich dafür entschieden, diese optionalen Informationen zu erhalten.
 
--   Verwenden Sie für nicht kritische Systemereignisse und FYI-Muster **vollständige Benachrichtigungen für ein einzelnes Ereignis.** Stellen Sie nicht mehrere Teilteiler dar.
+-   Verwenden Sie für das nicht kritische Systemereignis und die FYI-Muster vollständige **Benachrichtigungen für ein einzelnes Ereignis.** Geben Sie nicht mehrere teilielle an.
 
     **Falsch:**
 
-    ![Screenshot der Benachrichtigungen zu "Gefundene neue Hardware" ](images/mess-notif-image18.png)
+    ![Screenshot der Benachrichtigungen zu "Neue Hardware gefunden" ](images/mess-notif-image18.png)
 
-    Diese Beispiele zeigen nur vier der acht Benachrichtigungen, die von Windows XP angezeigt wurden, wenn ein Benutzer eine bestimmte USB-Tastatur anfügt, die jeweils inkrementell weitere Informationen darstellen.
+    Diese Beispiele zeigen nur vier der acht Benachrichtigungen, die von Windows XP angezeigt wurden, wenn ein Benutzer eine bestimmte USB-Tastatur anfügen, von denen jede inkrementell weitere Informationen enthält.
 
     **Richtig:**
 
@@ -221,97 +187,97 @@ Benachrichtigungen haben mehrere Verwendungsmuster:
 
     In diesem Beispiel führt das Anfügen einer USB-Tastatur zu zwei vollständigen Benachrichtigungen.
 
-### <a name="when-to-notify"></a>Zeitpunkt der Benachrichtigung
+### <a name="when-to-notify"></a>Benachrichtigungs wann
 
--   **Zeigen Sie eine Benachrichtigung basierend auf ihrem Entwurfsmuster an:**
+-   **Anzeigen einer Benachrichtigung basierend auf dem Entwurfsmuster:**
 
 
 
-| Muster              | Zeitpunkt der Benachrichtigung          |
+| Muster              | Benachrichtigungs wann          |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Aktion erfolgreich<br/>            | Nach Abschluss einer asynchronen Aufgabe. Benachrichtigen Sie Benutzer nur dann über erfolgreiche Aktionen, wenn sie wahrscheinlich auf den Abschluss oder nach kürzlichen Fehlern warten.<br/>                                             |
-| Aktionsfehler<br/>            | Bei einem Fehler einer asynchronen Aufgabe.<br/>                                                                                                                                                                   |
-| Nicht kritisches Systemereignis<br/> | Wenn ein Ereignis auftritt und der Benutzer aktiv ist oder die Bedingung weiterhin vorhanden ist. Wenn dies auf ein Problem hinweist, entfernen Sie die aktuell angezeigte Benachrichtigung sofort, sobald das Problem behoben wurde.<br/> |
+| Aktionsfehler<br/>            | Bei Einem Fehler einer asynchronen Aufgabe.<br/>                                                                                                                                                                   |
+| Nicht kritisches Systemereignis<br/> | Wenn ein Ereignis auftritt und der Benutzer aktiv ist, oder die Bedingung weiterhin vorhanden ist. Wenn dies auf ein Problem hinweist, entfernen Sie die aktuell angezeigte Benachrichtigung sofort, sobald das Problem behoben wurde.<br/> |
 | Optionale Benutzeraufgabe<br/>        | Wenn die Notwendigkeit zum Ausführen einer Aufgabe bestimmt wird und der Benutzer aktiv ist.<br/>                                                                                                                                   |
-| Fyi<br/>                       | Wenn das auslösende Ereignis auftritt.<br/>                                                                                                                                                                       |
+| FYI<br/>                       | Wenn das auslösende Ereignis auftritt.<br/>                                                                                                                                                                       |
 
 
 
  
 
--   Wenn sich das Problem für das Aktionsfehlermuster innerhalb von Sekunden beheben lässt, verzögern Sie **die Fehlerbenachrichtigung um einen angemessenen Zeitraum.** Wenn sich das Problem selbst behebt, melden Sie nichts. Benachrichtigen Sie erst, nachdem genügend Zeit verstrichen ist, dass der Fehler wahrnehmbar ist. Wenn Sie zu früh melden, werden Benutzer das gemeldete Problem wahrscheinlich nicht bemerken, aber sie bemerken die unnötige Benachrichtigung.
+-   Wenn das Problem innerhalb von Sekunden behoben werden kann, verzögern Sie die Fehlerbenachrichtigung für das Aktionsfehlermuster um einen **angemessenen Zeitraum.** Wenn sich das Problem selbst korrigiert, melden Sie nichts. Benachrichtigen Sie erst, wenn genügend Zeit verstrichen ist, dass der Fehler erkennbar ist. Wenn Sie zu früh melden, werden Benutzer das gemeldete Problem wahrscheinlich nicht bemerken, aber sie werden die unnötige Benachrichtigung bemerken.
 
 **Falsch:**
 
-![Screenshot: Keine Netzwerkverbindungsbenachrichtigung ](images/mess-notif-image20.png)
+![Screenshot: Benachrichtigung über keine Netzwerkverbindung ](images/mess-notif-image20.png)
 
-Wenn unmittelbar darauf Folgendes folgt:
+Wenn unmittelbar darauf folgt:
 
-![Screenshot der erfolgreichen Benachrichtigung über die Verbindung ](images/mess-notif-image21.png)
+![Screenshot der Benachrichtigung zur erfolgreichen Verbindung ](images/mess-notif-image21.png)
 
-In diesem Beispiel ist in Windows Vista die Benachrichtigung, dass keine Drahtloskonnektivität vorhanden ist, vorzeitig, da häufig unmittelbar darauf eine Benachrichtigung über eine gute Konnektivität folgt.
+In diesem Beispiel ist in Windows Vista die Benachrichtigung über keine Drahtlosverbindung vorzeitig, da häufig sofort eine Benachrichtigung über eine gute Konnektivität folgt.
 
--   Verwenden Sie für die Aktionserfolgs- und **FYI-Muster die Echtzeitoption, damit veraltete Benachrichtigungen nicht in die Warteschlange eingereiht werden,** wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.
--   Erstellen Sie für das nicht kritische Systemereignismuster **nicht das Potenzial für Benachrichtigungss storms, indem Sie Ereignisse staffeln, die an bekannte Ereignisse wie die Benutzeranmeldung gebunden sind.** Binden Sie das Ereignis stattdessen an einen Bestimmten Zeitraum nach dem Ereignis. Beispielsweise können Sie Benutzer fünf Minuten nach der Benutzeranmeldung daran erinnern, Ihr Produkt zu registrieren.
+-   Verwenden Sie für den Erfolg der Aktion und die **FYI-Muster** die Echtzeitoption, damit veraltete Benachrichtigungen nicht in die Warteschlange gestellt werden, wenn Benutzer eine Vollbildanwendung ausführen oder ihren Computer nicht aktiv verwenden.
+-   Für das nicht kritische Systemereignismuster schaffen Sie nicht das Potenzial für **Benachrichtigungss storms,** indem Sie Ereignisse, die an bekannte Ereignisse wie die Benutzeranmeldung gebunden sind, staffeln. Binden Sie stattdessen das Ereignis an einen bestimmten Zeitraum nach dem Ereignis. Beispielsweise können Sie Benutzer daran erinnern, Ihr Produkt fünf Minuten nach der Benutzeranmeldung zu registrieren.
 
-### <a name="how-long-to-notify"></a>Benachrichtigungsdauer
+### <a name="how-long-to-notify"></a>Wie lange die Benachrichtigung dauern soll
 
 In Windows Vista und höher werden Benachrichtigungen für eine feste Dauer von 9 Sekunden angezeigt.
 
-### <a name="how-often-to-notify"></a>Benachrichtigungshäufige Benachrichtigung
+### <a name="how-often-to-notify"></a>Benachrichtigungs häufig
 
--   **Die Anzahl der Anzeigezeiten einer Benachrichtigung basiert auf ihrem Entwurfsmuster:**
+-   **Die Anzahl der Anzeigezeiten für eine Benachrichtigung basiert auf dem Entwurfsmuster:**
 
 
 
-| Muster           | Benachrichtigungshäufige Benachrichtigung  |
+| Muster           | Benachrichtigungs häufig  |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | Aktion erfolgreich<br/>            | Einmal.<br/>                                                                                                            |
 | Aktionsfehler<br/>            | Einmal.<br/>                                                                                                            |
-| Nicht kritisches Systemereignis<br/> | Einmal, wenn das Ereignis zum ersten Mal auftritt. Wenn dies auf ein Problem resultiert, das Benutzer lösen müssen, sollten Sie es einmal täglich erneut anzeigen.<br/> |
-| Optionale Benutzeraufgabe<br/>        | Maximal dreimal pro Tag.<br/>                                                                         |
-| Fyi<br/>                       | Einmal.<br/>                                                                                                            |
+| Nicht kritisches Systemereignis<br/> | Einmal, wenn das Ereignis zum ersten Mal auftritt. Wenn dies aus einem Problem resultiert, das Benutzer lösen müssen, zeigen Sie einmal täglich erneut an.<br/> |
+| Optionale Benutzeraufgabe<br/>        | Einmal täglich für maximal drei Mal.<br/>                                                                         |
+| FYI<br/>                       | Einmal.<br/>                                                                                                            |
 
 
 
  
 
--   **Versuchen Sie bei optionalen Benutzeraufgaben nicht, Benutzer durch ständiges Anzeigen von Benachrichtigungen in die Übermittlung zu überfallen.** Wenn die Aufgabe erforderlich ist, zeigen Sie sofort ein modales Dialogfeld an, anstatt Benachrichtigungen zu verwenden.
+-   **Versuchen Sie bei optionalen Benutzeraufgaben nicht, Benutzer durch ständiges Anzeigen von Benachrichtigungen in die Übermittlung zu lässig zu machen.** Wenn die Aufgabe erforderlich ist, zeigen Sie sofort ein modales Dialogfeld an, anstatt Benachrichtigungen zu verwenden.
 
-### <a name="notification-escalation"></a>Eskalation von Benachrichtigungen
+### <a name="notification-escalation"></a>Benachrichtigungseskalation
 
--   **Gehen Sie nicht davon aus, dass Benutzern Ihre Benachrichtigungen angezeigt werden.** Benutzer werden in den folgenden Folgenden nicht angezeigt:
-    -   Sie werden in ihrer Arbeit unterstützt.
-    -   Sie achten nicht darauf.
-    -   Sie sind von ihrem Computer entfernt.
-    -   Sie führen eine Vollbildanwendung aus.
-    -   Der Administrator hat alle Benachrichtigungen für den Computer deaktiviert.
--   **Wenn Benutzer letztendlich eine Aktion ausführen müssen, verwenden Sie die progressive Eskalation,** um eine alternative Benutzeroberfläche anzuzeigen, die Benutzer nicht ignorieren können.
+-   **Gehen Sie nicht davon aus, dass Benutzern Ihre Benachrichtigungen angezeigt werden.** Benutzer sehen sie nicht in den:
+    -   Sie sind in ihrer Arbeit versunken.
+    -   Sie achten nicht auf sie.
+    -   Sie sind von ihrem Computer weg.
+    -   Es wird eine Vollbildanwendung ausgeführt.
+    -   Der Administrator hat alle Benachrichtigungen für seinen Computer deaktiviert.
+-   **Wenn Benutzer irgendwann eine Aktion ergreifen müssen,** verwenden Sie progressive Eskalation, um eine alternative Benutzeroberfläche anzuzeigen, die Benutzer nicht ignorieren können.
 
 ### <a name="interaction"></a>Interaktion
 
--   **Aktivieren Sie Benachrichtigungen, wenn:**
-    -   **Benutzer sollten eine Aktion ausführen.** Wenn Sie auf die Benachrichtigung klicken, sollte ein Fenster angezeigt werden, in dem Benutzer die Aktion ausführen können. Dieser Ansatz wird für den Aktionsfehler und optionale Entwurfsmuster für Benutzeraufgaben bevorzugt.
+-   **Machen Sie Benachrichtigungen klickbar, wenn:**
+    -   **Benutzer sollten eine Aktion ausführen.** Wenn Sie auf die Benachrichtigung klicken, sollte ein Fenster angezeigt werden, in dem Benutzer die Aktion ausführen können. Dieser Ansatz wird für Aktionsfehler und optionale Entwurfsmuster für Benutzeraufgabe bevorzugt.
     -   **Benutzer möchten möglicherweise weitere Informationen anzeigen.** Wenn Sie auf die Benachrichtigung klicken, sollte ein Fenster angezeigt werden, in dem Benutzer zusätzliche Informationen anzeigen können.
--   **Zeigen Sie immer ein Fenster an, wenn Benutzer auf klicken, um eine Aktion auszuführen.** Wenn Sie nicht klicken, führen Sie eine Aktion direkt aus.
--   **Wenn Sie auf klicken, um weitere Informationen anzuzeigen, sollten immer weitere Informationen angezeigt werden.** Rephrase nicht nur die Informationen, die bereits in der Benachrichtigung enthalten sind.
+-   **Zeigt immer ein Fenster an, wenn Benutzer klicken, um eine Aktion durchzuführen.** Klicken Sie nicht direkt auf Aktion ausführen.
+-   **Wenn Sie auf klicken, um weitere Informationen anzeigen zu können, sollten immer weitere Informationen enthalten sein.** Umformulieren Sie nicht nur die Informationen, die bereits in der Benachrichtigung enthalten sind.
 
 ### <a name="icons"></a>Symbole
 
 -   **Verwenden Sie für das Aktionsfehlermuster das Standardfehlersymbol.**
 -   **Verwenden Sie für die nicht kritischen Systemereignismuster das Standardwarnungssymbol.**
--   Verwenden Sie für **andere Muster Symbole, die Objekte zeigen, die sich auf das Subjekt beziehen oder vorschlagen,** z. B. einen Schutz für die Sicherheit oder einen Akku für den Strom.
+-   **Verwenden Sie für andere Muster Symbole,** die Objekte anzeigen, die sich auf das Subjekt beziehen oder vorschlagen, z. B. ein Schild für die Sicherheit oder eine Stromakku.
 -   **Verwenden Sie Symbole basierend auf Ihrer Anwendung oder Ihrem Unternehmensbranding, wenn Ihre Zielbenutzer sie erkennen und es keine bessere Alternative gibt.**
--   Erwägen Sie für die progressive Eskalation die **Verwendung von Symbolen mit einer zunehmend emphatischen Darstellung, wenn die Situation dringender wird.**
--   **Verwenden Sie nicht das Standardinformationssymbol.** Dass es sich bei Benachrichtigungen um Informationen handelt, ist selbstverständlich.
--   **Erwägen Sie die Verwendung großer Symbole (32 x 32 Pixel), wenn:**
-    -   Benutzer werden das Symbol und nicht den Text schnell verstehen.
+-   Erwägen Sie bei einer progressiven Eskalation die Verwendung von Symbolen mit einer progressiv emphatischen Darstellung, wenn die Situation **dringender wird.**
+-   **Verwenden Sie nicht das Standardinformationssymbol.** Dass Benachrichtigungen Informationen sind, versteht sich von selbst.
+-   **Erwägen Sie die Verwendung großer Symbole (32 x 32 Pixel), wenn Folgendes zu beachten ist:**
+    -   Benutzer werden das Symbol schnell und nicht den Text verstehen.
     -   Die großen Symbole vermitteln ihre Bedeutung eindeutiger und effektiver als die standardmäßigen Symbole mit 16 x 16 Pixeln.
-    -   Das Symbol verwendet die [Stilvorlage " "](vis-icons.md)" .
+    -   Das Symbol verwendet [das Stilsymbol](vis-icons.md).
 
 ![Screenshot der Benachrichtigung "Wichtige Nachrichten" ](images/mess-notif-image22.png)
 
-In diesem Beispiel können Benutzer die Art der Benachrichtigung mit einem Blick auf das große Symbol schnell nachvollziehen.
+In diesem Beispiel können Benutzer die Art der Benachrichtigung schnell mit einem Blick auf das große Symbol nachvollziehen.
 
 ### <a name="notification-queuing"></a>Notification Queuing
 
@@ -348,14 +314,14 @@ In diesem Beispiel können Benutzer die Art der Benachrichtigung mit einem Blick
         -   Der Objektname kann leicht aus dem Kontext bestimmt werden.
 -   **Wenn Sie Objektnamen auf eine feste maximale Größe abschneiden müssen, um die Lokalisierung zu ermöglichen, verwenden Sie eine Auslassungszeichen, um auf abgeschnittene Daten hinzuweisen.**
 
-    ![Screenshot der Meldung, die den verkürzten Namen enthält ](images/mess-notif-image23.png)
+    ![Screenshot der Meldung mit gekürzten Namen ](images/mess-notif-image23.png)
 
     In diesem Beispiel wird ein Objektname mithilfe von Auslassungszeichen abgeschnitten.
 
 -   **Verwenden Sie den folgenden Ausdruck, wenn die Benachrichtigung umsetzbar ist:**
     -   Wenn Benutzer auf die Benachrichtigung klicken können, um eine Aktion auszuführen:
 
-        < kurze Beschreibung der grundlegenden Informationen>
+        < kurze Beschreibung wichtiger Informationen>
 
         <optional details>
 
@@ -367,7 +333,7 @@ In diesem Beispiel können Benutzer die Art der Benachrichtigung mit einem Blick
 
     -   Wenn Benutzer auf die Benachrichtigung klicken können, um weitere Informationen anzuzeigen:
 
-        < kurze Beschreibung der grundlegenden Informationen>
+        < kurze Beschreibung wichtiger Informationen>
 
         <optional details>
 

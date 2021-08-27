@@ -1,9 +1,9 @@
 ---
-title: /Error-Schalter
-description: Der Schalter/Error bestimmt die Typen der Fehlerüberprüfung, die von den generierten stubvorschauen zur Laufzeit ausgeführt werden.
+title: /error-Schalter
+description: Der Schalter /error bestimmt die Typen der Fehlerüberprüfung, die die generierten Stubs zur Laufzeit ausführen.
 ms.assetid: abd3616a-2d2c-4a7d-bf3a-c84a43387894
 keywords:
-- /Error-Schalter-Mittel l
+- /error switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f84a56c1ae3d57ab1931ec175aa8dc9010ea6b8a
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f7af27de3d83171c8f1f89d0b860bf0b38ddfb6639a12bf40f90a58f06a273cd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105630"
 ---
-# <a name="error-switch"></a>/Error-Schalter
+# <a name="error-switch"></a>/error-Schalter
 
-Der Schalter **/Error** bestimmt die Typen der Fehlerüberprüfung, die von den generierten stubvorschauen zur Laufzeit ausgeführt werden.
+Der Schalter **/error** bestimmt die Typen der Fehlerüberprüfung, die die generierten Stubs zur Laufzeit ausführen.
 
 > [!Note]  
-> Diese Funktion ist veraltet und wird nicht mehr unterstützt. Die Verwendung des [**/robust**](-robust.md) -Schalters wird empfohlen.
+> Dieses Feature ist veraltet und wird nicht mehr unterstützt. Die Verwendung des Schalters [**/robust**](-robust.md) wird empfohlen.
 
- 
+ 
 
 ``` syntax
 midl /error { allocation | stub_data | ref | bounds_check | none | all }
@@ -43,51 +43,51 @@ midl /error { allocation | stub_data | ref | bounds_check | none | all }
 
 <span id="allocation"></span><span id="ALLOCATION"></span>
 
-<span id="allocation"></span><span id="ALLOCATION"></span>Zuordnung * * * *
+<span id="allocation"></span><span id="ALLOCATION"></span>allocation(
 
 
 </dt> <dd>
 
-Überprüft, ob der Wert für die [**mittlere \_ Benutzer \_ Zuteilung**](midl-user-allocate-1.md) einen **null** -Wert zurückgibt, der auf einen Fehler wegen nicht genügend Arbeitsspeichers hinweist.
+Überprüft, ob [**midl \_ user \_ allocate**](midl-user-allocate-1.md) einen **NULL-Wert** zurückgibt, der auf einen Fehler mit nicht genügend Arbeitsspeicher hinweist.
 
 </dd> <dt>
 
 <span id="stub_data"></span><span id="STUB_DATA"></span>
 
-<span id="stub_data"></span><span id="STUB_DATA"></span>Stub- \_ Daten * * * *
+<span id="stub_data"></span><span id="STUB_DATA"></span>stub \_ data(
 
 
 </dt> <dd>
 
-Generiert einen Stub, der das Marshalling von Ausnahmen auf der Serverseite abfängt und Sie an den Client zurückgibt.
+Generiert einen Stub, der Ausnahmen auf serverseitiger Seite abfängt und an den Client zurücksendet.
 
 </dd> <dt>
 
 <span id="ref"></span><span id="REF"></span>
 
-<span id="ref"></span><span id="REF"></span>Ref * * * *
+<span id="ref"></span><span id="REF"></span>ref!
 
 
 </dt> <dd>
 
-Generiert Code, der zur Laufzeit eine Überprüfung ausführt, um sicherzustellen, dass keine **null** -Verweis Zeiger an die clientstubwerte übermittelt werden, und löst eine RPC-X-NULL-Verweis \_ Zeiger Ausnahme aus, \_ \_ \_ Wenn eine gefunden wird.
+Generiert Code, der zur Laufzeit eine Überprüfung ausführt, um sicherzustellen, dass keine **NULL-Verweiszeiger** an die Clientstubs übergeben werden, und löst ggf. eine RPC \_ X NULL REF \_ \_ \_ POINTER-Ausnahme aus.
 
 </dd> <dt>
 
 <span id="bounds_check"></span><span id="BOUNDS_CHECK"></span>
 
-<span id="bounds_check"></span><span id="BOUNDS_CHECK"></span>Begrenzungen \_ Überprüfung * * * *
+<span id="bounds_check"></span><span id="BOUNDS_CHECK"></span>bounds \_ check(
 
 
 </dt> <dd>
 
-Überprüft die Größe des konformen und variierenden Arrays anhand der Angabe der Übertragungs Länge.
+Überprüft die Größe konformer und variierender Arrays anhand der Spezifikation der Übertragungslänge.
 
 </dd> <dt>
 
 <span id="none"></span><span id="NONE"></span>
 
-<span id="none"></span><span id="NONE"></span>keine * * * *
+<span id="none"></span><span id="NONE"></span>none(
 
 
 </dt> <dd>
@@ -98,48 +98,48 @@ Führt keine Fehlerüberprüfung aus.
 
 <span id="all"></span><span id="ALL"></span>
 
-<span id="all"></span><span id="ALL"></span>Alle * * * *
+<span id="all"></span><span id="ALL"></span>all(
 
 
 </dt> <dd>
 
-Führt alle Fehlerprüfungen aus. Dies ist eine standardmäßige Compileroption, die mit der mittleren Version 5,0 wirksam ist.
+Führt alle Fehlerüberprüfungen aus. Ab MIDL-Version 5.0 ist dies ein Standardcompilerschalter.
 
 </dd> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Schalter **/Error** wählt die Anzahl der Fehlerüberprüfungen aus, die von den generierten Stub-Dateien durchgeführt werden. Gültig mit der mittleren Version 5,0, ist die Standardeinstellung " **/Error all**".
+Der Schalter **/error** wählt die Anzahl der Fehlerüberprüfungen aus, die die generierten Stubdateien ausführen. Ab MIDL Version 5.0 ist die Standardeinstellung **/error all**.
 
-Die aktivierten Enumerationsfehler (standardmäßig in allen Versionen von "Mittel l") sind abkürzen, die bei der Umstellung zwischen **langen** Enumerationstypen (32-Bit-Ganzzahlen) und **kurzen** Enumerationstypen (der Netzwerkdaten [**Darstellung der**](enum.md)Enumeration) und der Anzahl der Bezeichner in einer Enumeration, die 32.767 überschreitet, verursacht werden.
+Bei den überprüften Enumerationsfehlern (standardmäßig in allen Versionen von MIDL) handelt es sich um Kürzungsfehler, die beim Konvertieren zwischen **langen Enumerationstypen** (32-Bit-Ganzzahlen) und kurzen Enumerationstypen (die Darstellung von **Enumerationen** im Netzwerkdaten) und der Anzahl von Bezeichnern in einer Enumeration, die 32.767 überschreiten, verursacht werden. [](enum.md)
 
-Die Speicherzugriffs Fehlerüberprüfung (auch standardmäßig in allen Versionen von "Mittel l") ist für Zeiger vorgesehen, die das Ende des Puffers im Marshalling von Code überschreiten, sowie für konforme Arrays, deren Größe kleiner als 0 (null) ist. Verwenden **\_ Sie das Kontroll Flag/Error Bounds** , um andere ungültige Array Begrenzungen zu überprüfen.
+Die Speicherzugriffsfehlerüberprüfung (auch standardmäßig in allen Versionen von MIDL) gilt für Zeiger, die das Ende des Puffers im Marshallingcode überschreiten, und für konforme Arrays, deren Größe kleiner als 0 (null) ist. Verwenden Sie das **\_ Häkchen /error bounds,** um nach anderen ungültigen Arraygrenzen zu suchen.
 
-Wenn Sie die **/Error-Zuordnung** angeben, enthalten die stubsteine Code, der eine Ausnahme auslöst, wenn die [**mittlere \_ Benutzer \_ Zuordnung**](midl-user-allocate-1.md) 0 zurückgibt.
+Wenn Sie **/error allocation** angeben, enthalten die Stubs Code, der eine Ausnahme auslöst, wenn [**midl user \_ \_ allocate**](midl-user-allocate-1.md) 0 zurückgibt.
 
-Mit der **/Error Stub \_ Data** -Option wird verhindert, dass Client Daten während des Unmarshalling auf den Server abstürzen und somit eine stabilere Methode zur Behandlung des nicht Marshallingvorgangs bereitstellen.
+Die **\_ Stubdatenoption /error** verhindert, dass Clientdaten während des Unmarshalings auf den Server abstürzten, was effektiv eine stabilere Methode zur Behandlung des Unmarshalingvorgangs bietet.
 
-Mit Windows-2000 werden die meisten dieser Überprüfungen von der zugrunde liegenden Lauf Zeit-NDR-Mars Hall-Engine ausgeführt. Dies bedeutet Folgendes: Wenn Sie einen der voll interpretierten Modi ([**/Oi**](-oi.md), **/OIF**) der Stub-Generierung verwenden, hat die Auswahl verschiedener Optionen für die Fehlerüberprüfung keine markierte Auswirkung auf die Leistung.
+Ab Windows 2000 führt die zugrunde liegende NDR-Marshalling-Engine zur Laufzeit die meisten dieser Überprüfungen durch. Dies bedeutet Folgendes: Wenn Sie einen der vollständig interpretierten Modi [**(/Oi**](-oi.md), **/Oif**) der Stubgenerierung verwenden, hat die Auswahl verschiedener Optionen für die Fehlerüberprüfung keine markierten Auswirkungen auf die Leistung.
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Error Zuordnungs Dateiname. idl**
+**midl /error allocation filename.idl**
 
-**Mittel l/Error keine Datei Name. idl**
+**midl /error none filename.idl**
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
 [**/robust**](-robust.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

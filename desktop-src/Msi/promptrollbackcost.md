@@ -1,39 +1,39 @@
 ---
-description: Die promptrollbackcost-Eigenschaft gibt die Aktion an, die das Installationsprogramm durchführt, wenn Rollback-Installationsfunktionen aktiviert sind und nicht genügend Speicherplatz vorhanden ist, um die Installation abzuschließen. Die möglichen Werte von promptrollbackcost lauten wie folgt. Valueaktionpdisplay ein Dialogfeld mit der Frage, ob der Vorgang ohne Rollback fortgesetzt werden soll. Ddeaktivieren Sie das Rollback, und fahren Sie fort, ohne den Benutzer Ffail mit der Fehlermeldung "nicht genügend Speicherplatz".
+description: Die PROMPTROLLBACKCOST-Eigenschaft gibt die Aktion an, die das Installationsprogramm ausführen soll, wenn Rollbackinstallationsfunktionen aktiviert sind und nicht genügend Speicherplatz vorhanden ist, um die Installation abzuschließen. Die möglichen Werte von PROMPTROLLBACKCOST lauten wie folgt. ValueActionPAnzeigen Sie ein Dialogfeld, in dem Sie gefragt werden, ob ohne Rollback fortzufahren ist. DDisable rollback and continue without asking user(DDisable rollback and continue without asking user) (DDisable rollback and continue without asking user(D FFail mit der Fehleraufforderung für nicht verfügbaren Speicherplatz.
 ms.assetid: 6ffd0b3f-79b8-4ce3-a262-4d27ffc5a175
-title: Promptrollbackcost (Eigenschaft)
+title: PROMPTROLLBACKCOST(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3801ee894a66ad6e458cbad37252e289f724b9ba
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 71cca3134593039354735e2e306a924620db8100eb0fd0e0a51f392c58f61897
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356074"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129040"
 ---
-# <a name="promptrollbackcost-property"></a>Promptrollbackcost (Eigenschaft)
+# <a name="promptrollbackcost-property"></a>PROMPTROLLBACKCOST(Eigenschaft)
 
-Die **promptrollbackcost** -Eigenschaft gibt die Aktion an, die das Installationsprogramm durchführt, wenn [Rollback-Installations](rollback-installation.md) Funktionen aktiviert sind und nicht genügend Speicherplatz vorhanden ist, um die Installation abzuschließen.
+Die **PROMPTROLLBACKCOST-Eigenschaft** gibt die Aktion an, die das Installationsprogramm ausführen soll, wenn [Rollbackinstallationsfunktionen](rollback-installation.md) aktiviert sind und nicht genügend Speicherplatz vorhanden ist, um die Installation abzuschließen.
 
-Die möglichen Werte von **promptrollbackcost** lauten wie folgt.
+Die möglichen Werte **von PROMPTROLLBACKCOST** lauten wie folgt.
 
 
 
 | Wert | Aktion                                                              |
 |-------|---------------------------------------------------------------------|
-| P     | Zeigt ein Dialogfeld an, in dem Sie gefragt werden, ob ohne Rollback fortgefahren werden |
-| D     | Deaktivieren Sie Rollback, und fahren Sie ohne Benutzer ab.                  |
-| F     | Fehler bei der Eingabeaufforderung für nicht genügend Speicherplatz.                       |
+| P     | Zeigen Sie ein Dialogfeld an, in dem Sie gefragt werden, ob sie ohne Rollback fortgesetzt werden soll. |
+| D     | Deaktivieren Sie das Rollback, und fahren Sie fort, ohne den Benutzer zu fragen.                  |
+| F     | Fehler bei der Fehleraufforderung für nicht verfügbaren Speicherplatz.                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Benutzeroberfläche auf der Ebene "Standard" oder "keine Benutzeroberfläche" ausgeführt wird, verarbeitet das Installationsprogramm automatisch die gesamte Logik für nicht genügend Speicherplatz.
+Wenn die Benutzeroberfläche auf der Benutzeroberflächenebene "Basic" oder "no" ausgeführt wird, verarbeitet das Installationsprogramm automatisch die logik für den speicherplatzbasierten Out-of-Disk-Bereich.
 
-Wenn die Benutzeroberfläche vollständig ausgeführt wird, können dem Benutzer zusätzliche Optionen zugewiesen werden, z. b. eine Eingabeaufforderung, bevor ein Rollback ausgeführt wird, ein Rollback deaktiviert wird oder der Vorgang ohne Rollback fortgesetzt wird, wenn der Datenträger voll ist. Der Paket Entwickler muss die Dialogfeld Sequenz verfassen, um dem Benutzer die entsprechenden Optionen bereitzustellen. Die Elemente, die hierfür verfügbar sind, sind die [enablerollback ControlEvent](enablerollback-controlevent.md)-, [**outo fdiskspace**](outofdiskspace.md) -Eigenschaft, [**ouesfnorbdiskspace**](outofnorbdiskspace.md) -Eigenschaft und die **promptrollbackcost** -Eigenschaft.
+Wenn die Benutzeroberfläche auf der Ebene Vollständig ausgeführt wird, können dem Benutzer zusätzliche Optionen zur Verfügung stehen, z. B. die Eingabeaufforderung vor dem Fortsetzen eines Rollbacks, das Deaktivieren des Rollbacks oder das Fortsetzen ohne Rollback, wenn der Datenträger voll ist. Der Paketentwickler muss die Dialogfeldsequenz erstellen, um dem Benutzer die entsprechenden Optionen zur Verfügung zu stellen. Dazu stehen die [EnableRollback ControlEvent-Eigenschaft,](enablerollback-controlevent.md) [**die OutOfDiskSpace-Eigenschaft,**](outofdiskspace.md) die [**OutOfNoRbDiskSpace-Eigenschaft**](outofnorbdiskspace.md) und die **PROMPTROLLBACKCOST-Eigenschaft zur** Verfügung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn die Benutzeroberfläche vollständig ausgeführt wird, können dem Benutzer
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

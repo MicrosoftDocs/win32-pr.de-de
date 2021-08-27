@@ -1,28 +1,28 @@
 ---
-description: In der Tabelle ControlCondition kann ein Autor spezielle Aktionen angeben, die auf die Steuerelemente basierend auf dem Ergebnis einer Bedingungs Anweisung angewendet werden sollen. Wenn Sie diese Tabelle verwenden, könnte der Autor z. b. ein Steuerelement auf der Grundlage der VersionNT-Eigenschaft ausblenden.
+description: Mit der ControlCondition-Tabelle kann ein Autor spezielle Aktionen angeben, die basierend auf dem Ergebnis einer bedingten Anweisung auf Steuerelemente angewendet werden sollen. Bei Verwendung dieser Tabelle kann der Autor beispielsweise ein Steuerelement basierend auf der VersionNT-Eigenschaft ausblenden.
 ms.assetid: e36d20ec-cd7b-494f-b517-c07b40d2a338
 title: ControlCondition-Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 671dcdee6e2ed1067c51a04084693c276b8db2d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 637d9470af21ad1f8a15c2697ba34a6c9866c822c21c6f3a85241bac1309f76b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960157"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105250"
 ---
 # <a name="controlcondition-table"></a>ControlCondition-Tabelle
 
-In der Tabelle ControlCondition kann ein Autor spezielle Aktionen angeben, die auf die Steuerelemente basierend auf dem Ergebnis einer Bedingungs Anweisung angewendet werden sollen. Wenn Sie diese Tabelle verwenden, könnte der Autor z. b. ein Steuerelement auf der Grundlage der [**VersionNT**](versionnt.md) -Eigenschaft ausblenden.
+Mit der ControlCondition-Tabelle kann ein Autor spezielle Aktionen angeben, die basierend auf dem Ergebnis einer bedingten Anweisung auf Steuerelemente angewendet werden sollen. Bei Verwendung dieser Tabelle kann der Autor beispielsweise ein Steuerelement basierend auf der [**VersionNT-Eigenschaft ausblenden.**](versionnt.md)
 
-Die Tabelle "ControlCondition" enthält die folgenden Spalten.
+Die ControlCondition-Tabelle enthält die folgenden Spalten.
 
 
 
-| Spalte    | Typ                         | Schlüssel | Nullwerte zulässig |
+| Spalte    | Typ                         | Key | Nullwerte zulässig |
 |-----------|------------------------------|-----|----------|
-| Dialog\_  | [Bezeichner](identifier.md) | J   | N        |
-| Steuerelement\_ | [Bezeichner](identifier.md) | J   | N        |
+| Dialog\_  | [Identifier](identifier.md) | J   | N        |
+| Steuerelement\_ | [Identifier](identifier.md) | J   | N        |
 | Aktion    | [Text](text.md)             | J   | N        |
 | Bedingung | [Condition](condition.md)   | J   | N        |
 
@@ -34,34 +34,34 @@ Die Tabelle "ControlCondition" enthält die folgenden Spalten.
 
 <dl> <dt>
 
-<span id="Dialog_"></span><span id="dialog_"></span><span id="DIALOG_"></span>Dialog\_
+<span id="Dialog_"></span><span id="dialog_"></span><span id="DIALOG_"></span>Dialogfeld\_
 </dt> <dd>
 
-Ein externer Schlüssel für die erste Spalte der [Dialog Feld Tabelle](dialog-table.md). Durch kombinieren dieses Felds mit dem Steuerelement Feld wird ein eindeutiges \_ Steuerelement identifiziert.
+Ein externer Schlüssel für die erste Spalte der [Dialogtabelle](dialog-table.md). Wenn Sie dieses Feld mit dem Feld Steuerelement \_ kombinieren, wird ein eindeutiges Steuerelement identifiziert.
 
 </dd> <dt>
 
-<span id="Control_"></span><span id="control_"></span><span id="CONTROL_"></span>Steuerelement\_
+<span id="Control_"></span><span id="control_"></span><span id="CONTROL_"></span>Steuerung\_
 </dt> <dd>
 
-Ein externer Schlüssel für die zweite Spalte der [Steuerelement Tabelle](control-table.md). Durch kombinieren dieses Felds wird das Dialog \_ Feld mit einem eindeutigen Steuerelement identifiziert.
+Ein externer Schlüssel für die zweite Spalte der [Control-Tabelle.](control-table.md) Durch Kombinieren dieses Felds identifiziert das Feld Dialog \_ ein eindeutiges Steuerelement.
 
 </dd> <dt>
 
-<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Hinspiel
+<span id="Action"></span><span id="action"></span><span id="ACTION"></span>Aktion
 </dt> <dd>
 
-Die Aktion, die für das-Steuerelement ausgeführt werden soll. Die möglichen Aktionen sind in der folgenden Tabelle aufgeführt.
+Die Aktion, die für das Steuerelement übernommen werden soll. Die möglichen Aktionen sind in der folgenden Tabelle aufgeführt.
 
 
 
 | Wert   | Bedeutung                     |
 |---------|-----------------------------|
 | Standard | Legen Sie das Steuerelement als Standard fest. |
-| Deaktivieren | Deaktivieren Sie das-Steuerelement.        |
-| Aktivieren  | Aktivieren Sie das-Steuerelement.         |
-| Ausblenden    | Blenden Sie das Steuerelement aus.           |
-| Anzeigen    | Zeigen Sie das Steuerelement an.        |
+| Disable | Deaktivieren Sie das Steuerelement.        |
+| Aktivieren  | Aktivieren Sie das Steuerelement.         |
+| Ausblenden    | Blendet das Steuerelement aus.           |
+| Anzeigen    | Zeigt das Steuerelement an.        |
 
 
 
@@ -69,33 +69,33 @@ Die Aktion, die für das-Steuerelement ausgeführt werden soll. Die möglichen A
 
 </dd> <dt>
 
-<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Anlage
+<span id="Condition"></span><span id="condition"></span><span id="CONDITION"></span>Zustand
 </dt> <dd>
 
-Eine Bedingungs Anweisung, die angibt, unter welchen Bedingungen die Aktion ausgelöst werden soll. Diese Spalte darf nicht leer bleiben. Wenn diese Anweisung nicht als true ausgewertet wird, wird die Aktion nicht ausgeführt. Wenn der Wert auf 1 festgelegt ist, wird die Aktion immer angewendet. Weitere Informationen zur Syntax von Bedingungs Anweisungen finden Sie unter [Syntax für bedingte](conditional-statement-syntax.md)Anweisungen.
+Eine bedingte Anweisung, die angibt, unter welchen Bedingungen die Aktion ausgelöst werden soll. Diese Spalte darf nicht leer gelassen werden. Wenn diese Anweisung nicht zu TRUE ausgewertet wird, wird die Aktion nicht stattfinden. Wenn sie auf 1 festgelegt ist, wird die Aktion immer angewendet. Informationen zur Syntax von bedingten Anweisungen finden Sie unter [Syntax für bedingte Anweisungen.](conditional-statement-syntax.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie ein [PUSHBUTTON-Steuer](pushbutton-control.md) Element oder ein CheckBox- [Steuer](checkbox-control.md) Element auf der Grundlage einer Bedingungs Anweisung im Bedingungs Feld der ControlCondition-Tabelle ausblenden und deaktivieren möchten, sollten Sie für jedes Steuerelement vier Datensätze verwenden, um das Steuerelement zu deaktivieren und das Steuerelement auszublenden. Auf PUSHBUTTON-oder CheckBox-Steuerelemente, die nur ausgeblendet wurden, kann weiterhin über Tastenkombinationen zugegriffen werden.
+Wenn Sie ein [PushButton-Steuerelement](pushbutton-control.md) oder [CheckBox-Steuerelement](checkbox-control.md) basierend auf einer Bedingungsanweisung im Feld Bedingung der ControlCondition -Tabelle ausblenden und deaktivieren möchten, sollten Sie vier Datensätze für jedes Steuerelement verwenden, um das Steuerelement zu deaktivieren und auszublenden. Auf PushButton- oder CheckBox-Steuerelemente, die nur ausgeblendet wurden, kann weiterhin über Tastenkombinationen zugegriffen werden.
 
-Die folgenden Datensätze Blenden z. b. die ControlA in dialoga aus und deaktivieren Sie, wenn das Produkt installiert wird. Das-Steuerelement ist sichtbar und wird aktiviert, wenn das Produkt nicht installiert ist.
+Die folgenden Datensätze blenden beispielsweise ControlA in DialogA aus und deaktivieren sie, wenn das Produkt installiert wird. Das Steuerelement ist sichtbar und aktiviert, wenn das Produkt nicht installiert ist.
 
 
 
 | Dialog  | Control  | Aktion  | Bedingung                      |
 |---------|----------|---------|--------------------------------|
-| Dialoga | ControlA | Ausblenden    | [**Installiert**](installed.md) |
-| Dialoga | ControlA | Deaktivieren | Installiert                      |
-| Dialoga | ControlA | Anzeigen    | Nicht installiert                  |
-| Dialoga | ControlA | Aktivieren  | Nicht installiert                  |
+| DialogA | Controla | Ausblenden    | [**Installiert**](installed.md) |
+| DialogA | Controla | Disable | Installiert                      |
+| DialogA | Controla | Anzeigen    | NICHT installiert                  |
+| DialogA | Controla | Aktivieren  | NICHT installiert                  |
 
 
 
  
 
-## <a name="validation"></a>Überprüfen
+## <a name="validation"></a>Überprüfung
 
 <dl>
 

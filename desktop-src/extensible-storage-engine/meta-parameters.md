@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Meta Parameters'
-title: Meta-Parameter
+description: Weitere Informationen finden Sie unter Metaparameter.
+title: Metaparameter
 TOCTitle: Meta Parameters
 ms:assetid: 947e9342-7916-4e62-85e5-2d18805000c0
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269346(v=EXCHG.10)
@@ -15,227 +15,87 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 82b5fac0cc59e9a0511344e72b3f316af9013965
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 455b46465733a906b879dcedc4b5a2f4e6ef1f9e
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345675"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472476"
 ---
-# <a name="meta-parameters"></a>Meta-Parameter
+# <a name="meta-parameters"></a>Metaparameter
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="meta-parameters"></a>Meta-Parameter
+## <a name="meta-parameters"></a>Metaparameter
 
-Dieses Thema enthält Parameter, die verwendet werden, um andere Parameter zu steuern.
+Dieses Thema enthält Parameter, die zum Steuern anderer Parameter verwendet werden.
 
 JET_paramConfiguration  
 129  
-Dieser Parameter macht mehrere Sätze von Standardwerten für den gesamten Satz von Systemparametern verfügbar. Wenn dieser Parameter auf eine bestimmte Konfiguration festgelegt ist, werden alle Systemparameter Werte auf ihre Standardwerte für diese Konfiguration zurückgesetzt. Wenn die Konfiguration für eine bestimmte Instanz festgelegt ist, werden die globalen Systemparameter nicht auf ihre Standardwerte zurückgesetzt.
+Dieser Parameter macht mehrere Sätze von Standardwerten für den gesamten Satz von Systemparametern verfügbar. Wenn dieser Parameter auf eine bestimmte Konfiguration festgelegt ist, werden alle Systemparameterwerte auf ihre Standardwerte für diese Konfiguration zurückgesetzt. Wenn die Konfiguration für eine bestimmte Instanz festgelegt ist, werden globale Systemparameter nicht auf ihre Standardwerte zurückgesetzt.
 
-Außerdem kann der Parameter selbst andere Auswirkungen auf das Verhalten der Datenbank-Engine haben.
+Darüber hinaus kann der Parameter selbst andere Auswirkungen auf das Verhalten der Datenbank-Engine haben.
 
-Zurzeit werden zwei Konfigurationen unterstützt:
+Derzeit werden zwei Konfigurationen unterstützt:
 
-  - Kleine Konfiguration (0): die Datenbank-Engine ist für die Speichernutzung optimiert.
+  - Kleine Konfiguration (0): Die Datenbank-Engine ist für die Speichernutzung optimiert.
 
-  - Legacy Konfiguration (1): die Datenbank-Engine verfügt über die herkömmlichen Standardeinstellungen.
+  - Legacykonfiguration (1): Die Datenbank-Engine hat ihre herkömmlichen Standardwerte.
 
-Bei der kleinen Konfiguration werden die Standardwerte der folgenden Systemparameter auf die angegebenen Werte geändert:
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>System Parameter</p></th>
-<th><p>Neuer Standardwert</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_paramMaxSessions</p></td>
-<td><p>30.000</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramMaxOpenTables</p></td>
-<td><p>2147483647</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramMaxCursors</p></td>
-<td><p>2147483647</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramMaxVerPages</p></td>
-<td><p>2147483647</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramMaxTemporaryTables</p></td>
-<td><p>2147483647</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramLogFileSize</p></td>
-<td><p>64</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramLogBuffers</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramDbExtensionSize</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramPageTempDBMin</p></td>
-<td><p>14</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramCacheSizeMax</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramCheckpointDepthMax</p></td>
-<td><p>65536</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramLRUKHistoryMax</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramOutstandingIOMax</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramStartFlushThreshold</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramStopFlushThreshold</p></td>
-<td><p>2</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramNoInformationEvent</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramCacheSizeMin</p></td>
-<td><p>16</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramPreferredVerPages</p></td>
-<td><p>2147483647</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramLogFileCreateAsynch</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramGlobalMinVerPages</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramPageHintCacheSize</p></td>
-<td><p>32</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramDisablePerfmon</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramEnableFileCache</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramEnableViewCache</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramVerPageSize</p></td>
-<td><p>1024</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_paramEnableAdvanced</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_paramCheckpointIOMax</p></td>
-<td><p>8</p></td>
-</tr>
-</tbody>
-</table>
+Small Configuration ändert die Standardwerte der folgenden Systemparameter in die angegebenen Werte:
 
 
-Die kleine Konfiguration hat auch eine Reihe weiterer Auswirkungen auf die Datenbank-Engine, einschließlich:
+| <p>Systemparameter</p> | <p>Neuer Standardwert</p> | 
+|-------------------------|--------------------------|
+| <p>JET_paramMaxSessions</p> | <p>30.000</p> | 
+| <p>JET_paramMaxOpenTables</p> | <p>2147483647</p> | 
+| <p>JET_paramMaxCursors</p> | <p>2147483647</p> | 
+| <p>JET_paramMaxVerPages</p> | <p>2147483647</p> | 
+| <p>JET_paramMaxTemporaryTables</p> | <p>2147483647</p> | 
+| <p>JET_paramLogFileSize</p> | <p>64</p> | 
+| <p>JET_paramLogBuffers</p> | <p>1</p> | 
+| <p>JET_paramDbExtensionSize</p> | <p>16</p> | 
+| <p>JET_paramPageTempDBMin</p> | <p>14</p> | 
+| <p>JET_paramCacheSizeMax</p> | <p>16</p> | 
+| <p>JET_paramCheckpointDepthMax</p> | <p>65536</p> | 
+| <p>JET_paramLRUKHistoryMax</p> | <p>10</p> | 
+| <p>JET_paramOutstandingIOMax</p> | <p>16</p> | 
+| <p>JET_paramStartFlushThreshold</p> | <p>1</p> | 
+| <p>JET_paramStopFlushThreshold</p> | <p>2</p> | 
+| <p>JET_paramNoInformationEvent</p> | <p>1</p> | 
+| <p>JET_paramCacheSizeMin</p> | <p>16</p> | 
+| <p>JET_paramPreferredVerPages</p> | <p>2147483647</p> | 
+| <p>JET_paramLogFileCreateAsynch</p> | <p>0</p> | 
+| <p>JET_paramGlobalMinVerPages</p> | <p>1</p> | 
+| <p>JET_paramPageHintCacheSize</p> | <p>32</p> | 
+| <p>JET_paramDisablePerfmon</p> | <p>1</p> | 
+| <p>JET_paramEnableFileCache</p> | <p>1</p> | 
+| <p>JET_paramEnableViewCache</p> | <p>1</p> | 
+| <p>JET_paramVerPageSize</p> | <p>1024</p> | 
+| <p>JET_paramEnableAdvanced</p> | <p>0</p> | 
+| <p>JET_paramCheckpointIOMax</p> | <p>8</p> | 
 
-  - Alle durch Systemparameter verwalteten Ressourcen werden nach Bedarf aus dem Heap zugeordnet.
 
-  - Andere interne Ressourcen, die von der Datenbank-Engine verwendet werden, werden zentral herunterskaliert.
 
-  - Verschiedene Wartungsaktivitäten werden wieder herunterskaliert, um Hintergrund Thread Aktivitäten zu vermeiden.
+Small Configuration hat auch mehrere andere Auswirkungen auf die Datenbank-Engine, z. B.:
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>1 (Legacy)</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Integer</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>0 – 1</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Ab Windows Server 2008 und Windows Vista</p></td>
-</tr>
-</tbody>
-</table>
+  - Alle von Systemparametern verwalteten Ressourcen werden nach Bedarf aus dem Heap zugeordnet.
+
+  - Andere interne Ressourcen, die von der Datenbank-Engine verwendet werden, werden in der Größe herunterskaliert.
+
+  - Verschiedene Wartungsaktivitäten werden zurückskaliert, um Hintergrundthreadaktivitäten zu vermeiden.
+
+
+| | | <p>Standardwert:</p> | <p>1 (Legacy)</p> | | <p>Typ:</p> | <p>Integer</p> | | <p>Gültiger Bereich:</p> | <p>0 – 1</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Nein</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Ja</p> | | <p>Betrifft Ressourcen:</p> | <p>Ja</p> | | <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
+
 
 
 JET_paramEnableAdvanced  
 130  
-Dieser Parameter wird verwendet, um zu steuern, wann die Datenbank-Engine Änderungen an einer Teilmenge der Systemparameter akzeptiert oder ablehnt. Dieser Parameter wird zusammen mit JET_paramConfiguration verwendet, um zu verhindern, dass einige Systemparameter aus den Standardeinstellungen der ausgewählten Konfiguration entfernt werden.
+Dieser Parameter wird verwendet, um zu steuern, wann die Datenbank-Engine Änderungen an einer Teilmenge der Systemparameter akzeptiert oder zurückgibt. Dieser Parameter wird in Verbindung mit JET_paramConfiguration verwendet, um zu verhindern, dass einige Systemparameter von den Standardeinstellungen der ausgewählten Konfiguration entfernt werden.
 
-Die folgenden Systemparameter werden vor der Festlegung geschützt, wenn dieser Parameter auf "false" festgelegt ist:
+Die folgenden Systemparameter werden vor dem Festlegen geschützt, wenn dieser Parameter auf False festgelegt ist:
 
   - JET_paramMaxSessionsfon
 
@@ -317,85 +177,19 @@ Die folgenden Systemparameter werden vor der Festlegung geschützt, wenn dieser 
 
   - JET_paramCheckpointIOMax
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>Standardwert:</p></td>
-<td><p>Richtig</p></td>
-</tr>
-<tr class="even">
-<td><p>Typ:</p></td>
-<td><p>Boolean</p></td>
-</tr>
-<tr class="odd">
-<td><p>Gültiger Bereich:</p></td>
-<td><p>False, True</p></td>
-</tr>
-<tr class="even">
-<td><p>Umfang:</p></td>
-<td><p>Instanz</p></td>
-</tr>
-<tr class="odd">
-<td><p>Nach <a href="gg269354(v=exchg.10).md">jetkreateinstance</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="even">
-<td><p>Nach <a href="gg294068(v=exchg.10).md">jetinit</a>festlegen:</p></td>
-<td><p>Ja</p></td>
-</tr>
-<tr class="odd">
-<td><p>Hat Auswirkungen auf das physische Layout:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Beeinträchtigt die Zuverlässigkeit:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Beeinträchtigt die Leistung:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="even">
-<td><p>Betrifft Ressourcen:</p></td>
-<td><p>Nein</p></td>
-</tr>
-<tr class="odd">
-<td><p>Verfügbarkeit:</p></td>
-<td><p>Ab Windows Server 2008 und Windows Vista</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p>Standardwert:</p> | <p>True</p> | | <p>Typ:</p> | <p>Boolesch</p> | | <p>Gültiger Bereich:</p> | <p>False, True</p> | | <p>Umfang:</p> | <p>Instanz</p> | | <p>Legen Sie nach <a href="gg269354(v=exchg.10).md">JetCreateInstance fest:</a></p> | <p>Ja</p> | | <p>Legen Sie nach <a href="gg294068(v=exchg.10).md">JetInit fest:</a></p> | <p>Ja</p> | | <p>Wirkt sich auf das physische Layout aus:</p> | <p>Nein</p> | | <p>Wirkt sich auf die Zuverlässigkeit aus:</p> | <p>Nein</p> | | <p>Beeinträchtigt die Leistung:</p> | <p>Nein</p> | | <p>Betrifft Ressourcen:</p> | <p>Nein</p> | | <p>Verfügbarkeit:</p> | <p>Ab Windows Server 2008 und Windows Vista</p> | 
+
 
 
 ### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
+
 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[Jetkreateingestance](./jetcreateinstance-function.md)  
+[JetCreateInstance](./jetcreateinstance-function.md)  
 [JetInit](./jetinit-function.md)

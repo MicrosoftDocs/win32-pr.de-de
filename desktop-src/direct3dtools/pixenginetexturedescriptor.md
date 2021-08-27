@@ -1,10 +1,10 @@
 ---
-description: Stellt eine Beschreibung einer Textur Ressource dar.
+description: Stellt eine Beschreibung einer Texturressource dar.
 MS-HAID: vspixengine.PixEngineTextureDescriptor
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Pixenginetexturedescriptor-Struktur
+title: PixEngineTextureDescriptor-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: E28D5707-C4C4-4C99-9AA2-3397FEDC388B
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: c7e7afe8ad9a0f5b2660872f0301dd9a2d6a0ddd
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 41f16744754286d38b195bffe530aed297fcf52a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521115"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623346"
 ---
-# <a name="span-idvspixenginepixenginetexturedescriptorspanpixenginetexturedescriptor-structure"></a><span id="vspixengine.pixenginetexturedescriptor"></span>Pixenginetexturedescriptor-Struktur
+# <a name="span-idvspixenginepixenginetexturedescriptorspanpixenginetexturedescriptor-structure"></a><span id="vspixengine.pixenginetexturedescriptor"></span>PixEngineTextureDescriptor-Struktur
 
-Stellt eine Beschreibung einer Textur Ressource dar.
+Stellt eine Beschreibung einer Texturressource dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,23 +37,23 @@ Stellt eine Beschreibung einer Textur Ressource dar.
 
 ## <a name="members"></a>Member
 
-**formatdebug**  
+**formatDesc**  
 Beschreibt das Format der Textur.
 
 **mipmapCount**  
-Die Anzahl der der Textur zugeordneten Mipmaps.
+Die Anzahl der Mipmaps, die der Textur zugeordnet sind.
 
-**Array count**  
-Wenn die Textur ein Textur Array ist, die Anzahl der Texturen im Array.
+**arrayCount**  
+Wenn die Textur ein Texturarray ist, die Anzahl der Texturen im Array.
 
-**Eingeh**  
+**Tiefe**  
 
-**Sample count**  
-Die Anzahl der der Textur zugeordneten Stichproben.
+**sampleCount**  
+Die Anzahl von Stichproben, die der Textur zugeordnet sind.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

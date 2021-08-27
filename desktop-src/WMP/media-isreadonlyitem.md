@@ -1,11 +1,11 @@
 ---
-title: Media. isread onlyitem-Methode
-description: Die isread onlyitem-Methode gibt einen Wert zurück, der angibt, ob das angegebene Attribut des Medien Elements bearbeitet werden kann.
+title: Media.isReadOnlyItem-Methode
+description: Die isReadOnlyItem-Methode gibt einen Wert zurück, der angibt, ob das angegebene Attribut des Medienelements bearbeitet werden kann.
 ms.assetid: 5e398e76-f64a-45b5-9b4f-679c65e5a0d1
 keywords:
-- isread onlyitem-Methode, Windows Media Player
-- isleseronlyitem-Methode, Windows Media Player, Medienklasse
-- Media Class Windows Media Player, isumonlyitem-Methode
+- isReadOnlyItem-Windows Media Player
+- isReadOnlyItem-Methode Windows Media Player , Media-Klasse
+- Medienklasse Windows Media Player , isReadOnlyItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0ac5bb8d445c3ba6418be4ee5c0c5e7a96f507d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 501aacb7b9a56fd9780aba75a15aa9f717640ebff7619df020bad432cdffd459
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106363199"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123390"
 ---
-# <a name="mediaisreadonlyitem-method"></a>Media. isread onlyitem-Methode
+# <a name="mediaisreadonlyitem-method"></a>Media.isReadOnlyItem-Methode
 
-Die **isread onlyitem** -Methode gibt einen Wert zurück, der angibt, ob das angegebene Attribut des Medien Elements bearbeitet werden kann.
+Die **isReadOnlyItem-Methode** gibt einen Wert zurück, der angibt, ob das angegebene Attribut des Medienelements bearbeitet werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,28 +42,28 @@ bRetVal = Media.isReadOnlyItem(
 
 <dl> <dt>
 
-*Attribut* \[ in\]
+*Attribut* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des zu testenden Attributs angibt. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Eine Zeichenfolge,** die den Namen des zu testenden Attributs angibt. Informationen zu den attributes, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attribute Reference](attribute-reference.md)..
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **booleschen** Wert zurück.
+Diese Methode gibt einen **booleschen zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Attribut schreibgeschützt ist, kann es nicht mit der **setiteminfo** -Methode festgelegt werden. Beachten Sie, dass diese Methode möglicherweise unterschiedliche Werte für ein bestimmtes Attribut zurückgibt, wenn Sie mit verschiedenen Versionen von Windows Media Player verwendet wird.
+Wenn ein Attribut schreibgeschützt ist, kann es nicht mit der **setItemInfo-Methode festgelegt** werden. Beachten Sie, dass diese Methode unterschiedliche Werte für ein bestimmtes Attribut zurückgeben kann, wenn sie mit verschiedenen Versionen von Windows Media Player.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-**Windows Media Player 10 Mobile:** Diese Eigenschaft gibt immer **true** zurück.
+**Windows Media Player 10 Mobile:** Diese Eigenschaft gibt immer **true zurück.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel werden *Medien* verwendet. " **isinfoonlyitem** ", um ein HTML-TEXTAREA-Element mit dem Namen "rwtext" mit Informationen zum aktuellen Medien Element auszufüllen. Der Code gibt jedes Attribut des aktuellen Medien Elements zusammen mit Text aus, der angibt, ob das Attribut schreibgeschützt ist oder Lese-/Schreibzugriff hat. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript Media *verwendet.* **isReadOnlyItem,** um ein HTML-TEXTAREA-Element namens rwText mit Informationen zum aktuellen Medienelement zu füllen. Der Code gibt jedes Attribut des aktuellen Medienelements zusammen mit Text aus, der angibt, ob das Attribut schreibgeschützt ist oder gelesen/geschrieben wird. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -97,7 +97,7 @@ for(var i = 0; i < cm.attributeCount; i++){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -109,13 +109,13 @@ for(var i = 0; i < cm.attributeCount; i++){
 [**Medienobjekt**](media-object.md)
 </dt> <dt>
 
-[**"Media. mentiteminfo"**](media-setiteminfo.md)
+[**Media.setItemInfo**](media-setiteminfo.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

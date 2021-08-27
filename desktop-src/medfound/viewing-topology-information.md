@@ -4,12 +4,12 @@ ms.assetid: d687ecd3-9ad6-46d5-b927-d9b99af2002f
 title: Anzeigen von Topologieinformationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 78fd1d7d28de3d7fa5420241abf793295323532dca29d3d68d1271545aa460dd
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 9bf29f28ac419da7df14d90efb50919634d7409b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118237372"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122468007"
 ---
 # <a name="viewing-topology-information"></a>Anzeigen von Topologieinformationen
 
@@ -19,41 +19,13 @@ Die folgende Tabelle zeigt das Topologieelement und die Attribute, die im Bereic
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Topologieelement</th>
-<th>Attribute</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Topologieknoten</td>
-<td><ul>
-<li><a href="topology-node-attributes.md">Topologieknotenattribute für</a> alle Knoten.<br/></li>
-<li><a href="presentation-descriptor-attributes.md">Präsentationsdeskriptorattribute nur</a> für Quellknoten.<br/></li>
-<li>Informationen zur Eingabe- und Ausgabevertrauensstellungsstelle für Transformations- und Ausgabeknoten.<br/></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Knoteneingabe</td>
-<td><ul>
-<li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Knotenausgabe</td>
-<td><ul>
-<li><a href="stream-descriptor-attributes.md">Streamdeskriptorattribute nur</a> für Quellknoten.<br/></li>
-<li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.<br/></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Topologieelement | Attribute | 
+|---------------|------------|
+| Topologieknoten | <ul><li><a href="topology-node-attributes.md">Topologieknotenattribute für</a> alle Knoten.<br /></li><li><a href="presentation-descriptor-attributes.md">Präsentationsdeskriptorattribute nur</a> für Quellknoten.<br /></li><li>Informationen zur Eingabe- und Ausgabevertrauensstellungsstelle für Transformations- und Ausgabeknoten.<br /></li></ul> | 
+| Knoteneingabe | <ul><li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.</li></ul> | 
+| Knotenausgabe | <ul><li><a href="stream-descriptor-attributes.md">Streamdeskriptorattribute nur</a> für Quellknoten.<br /></li><li><a href="media-type-attributes.md">Medientypattribute für</a> alle Knoten.<br /></li></ul> | 
+
 
 
 
@@ -69,7 +41,7 @@ Die Attributwerte, mit Ausnahme von Zeigerverweisen und Arraywerten, können ge�
 
 2.  Klicken Sie **im Bereich Attribute** auf **Hinzufügen.**
 
-    Dadurch wird das **Dialogfeld Attribut** hinzufügen geöffnet.
+    Dadurch wird das **Dialogfeld Attribut hinzufügen** geöffnet.
 
 3.  Wählen Sie in der ersten Dropdownliste die Kategorie Attribut aus.
 
@@ -81,7 +53,7 @@ Die Attributwerte, mit Ausnahme von Zeigerverweisen und Arraywerten, können ge�
 
 6.  Klicken **Sie auf** Hinzufügen, um das Attribut hinzuzufügen und zum Hauptfenster zurückzukehren, oder klicken Sie **auf** Abbrechen, um den Vorgang abzubricht.
 
-7.  Klicken Sie **im Menü** Topologie auf **Topologie auflösen,** um das neue Attribut auf die Topologie zu setzen.
+7.  Klicken Sie **im Menü Topologie** auf Topologie **auflösen,** um das neue Attribut auf die Topologie zu setzen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

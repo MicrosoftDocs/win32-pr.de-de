@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Abschnitte enthalten die C/C++-Referenz für Microsoft Windows HTTP-Dienste (WinHTTP).
+description: Die folgenden Abschnitte enthalten die C/C++-Referenz für Microsoft Windows HTTP Services (WinHTTP).
 ms.assetid: 29f1e97a-542c-425e-aa22-ace423217b46
-title: WinHTTP C/C++-API-Referenz
+title: WinHTTP-C/C++-API-Referenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: acbbfd81e747f9eeba8e41637e7e68fc92cbe874
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97d3b78892dfbe128c63fabd47562556fed1d394bc89ae9b942c584d7776ac32
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121960"
 ---
-# <a name="winhttp-cc-api-reference"></a>WinHTTP C/C++-API-Referenz
+# <a name="winhttp-cc-api-reference"></a>WinHTTP-C/C++-API-Referenz
 
-Die folgenden Abschnitte enthalten die C/C++-Referenz für Microsoft Windows HTTP-Dienste (WinHTTP).
+Die folgenden Abschnitte enthalten die C/C++-Referenz für Microsoft Windows HTTP Services (WinHTTP).
 
 -   [WinHTTP-Schnittstellen](winhttp-interfaces.md)
 -   [WinHTTP-Funktionen](winhttp-functions.md)

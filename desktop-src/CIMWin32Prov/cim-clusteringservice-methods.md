@@ -1,32 +1,32 @@
 ---
-description: Die CIM \_ clusteringservice-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ ClusteringService-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 3980A393-23CF-4D59-92D1-E1B8FB361D33
 ms.tgt_platform: multiple
-title: CIM_ClusteringService Methoden
+title: CIM_ClusteringService-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d92bc90cd49a1ab490e4090408e56c71ee8b1971
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ee6a6dc5c78f071899595c28d2a12d43b6387f5508996ce6fa917644767d66b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120065191"
 ---
-# <a name="cim_clusteringservice-methods"></a>CIM \_ clusteringservice-Methoden
+# <a name="cim_clusteringservice-methods"></a>CIM \_ ClusteringService-Methoden
 
-Die [**CIM \_ clusteringservice**](cim-clusteringservice.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ ClusteringService-Klasse**](cim-clusteringservice.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**AddNode-Methode**](addnode-method-in-class-cim-clusteringservice.md)
--   [**Evictnode-Methode**](evictnode-method-in-class-cim-clusteringservice.md)
+-   [**EvictNode-Methode**](evictnode-method-in-class-cim-clusteringservice.md)
 -   [**StartService-Methode**](startservice-method-in-class-cim-clusteringservice.md)
--   [**Stop Service-Methode**](stopservice-method-in-class-cim-clusteringservice.md)
+-   [**StopService-Methode**](stopservice-method-in-class-cim-clusteringservice.md)
 
  
 

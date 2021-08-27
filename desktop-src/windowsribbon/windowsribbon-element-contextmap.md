@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: aa8fd3a6b082d4bba54fdc3d43848d6a6cbe5ff6deacb4e041dba5cb4c0e3b09
-ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.openlocfilehash: 9e4db4db1940da3f8df26eb0151344eef99e0de2
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119931460"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122623106"
 ---
 # <a name="contextmap-element"></a>ContextMap-Element
 
 Stellt eine [**ContextMenu-**](windowsribbon-element-contextmenu.md) und [**MiniToolbar-Paarzuordnung**](windowsribbon-element-minitoolbar.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <ContextMap
@@ -39,15 +39,15 @@ Stellt eine [**ContextMenu-**](windowsribbon-element-contextmenu.md) und [**Mini
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
 <th>Beschreibung</th>
 </tr>
@@ -198,7 +198,7 @@ Dieser Codeabschnitt zeigt eine Reihe von **ContextMap-Steuerelementdeklaratione
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

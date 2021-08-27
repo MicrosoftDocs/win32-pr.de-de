@@ -1,12 +1,12 @@
 ---
-title: Convertlicenses-Methode der Win32_TSLicenseKeyPack-Klasse
-description: Konvertiert die Lizenzen im aktuellen Schlüssel Paket.
+title: ConvertLicenses-Methode der Win32_TSLicenseKeyPack Klasse
+description: Konvertiert die Lizenzen im aktuellen Schlüsselpaket.
 ms.assetid: 38600144-8fa2-4f9a-b7a4-7fafc304e7cb
 ms.tgt_platform: multiple
 keywords:
-- Convertlicenses-Methode Remotedesktopdienste
-- Convertlicenses-Methode Remotedesktopdienste, Win32_TSLicenseKeyPack-Klasse
-- Win32_TSLicenseKeyPack-Klasse Remotedesktopdienste, convertlicenses-Methode
+- ConvertLicenses-Remotedesktopdienste
+- ConvertLicenses-Methode Remotedesktopdienste , Win32_TSLicenseKeyPack-Klasse
+- Win32_TSLicenseKeyPack klasse Remotedesktopdienste , ConvertLicenses-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 54f37b1d9804c5f14f89a7ff6b48f5f8fcbdc60b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: edfb65ea7429af14e633c8dee655b4977427e3a685e1404856fd9b5f2daf2ce4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099570"
 ---
-# <a name="convertlicenses-method-of-the-win32_tslicensekeypack-class"></a>Convertlicenses-Methode der Win32- \_ Klasse "zlicenabkeypack"
+# <a name="convertlicenses-method-of-the-win32_tslicensekeypack-class"></a>ConvertLicenses-Methode der Win32 \_ TSLicenseKeyPack-Klasse
 
-Konvertiert die Lizenzen im aktuellen Schlüssel Paket. Wenn die Lizenz eine benutzerspezifische Lizenz ist, wird Sie in eine pro-Gerät-Lizenz konvertiert. Wenn die Lizenz eine pro-Gerät-Lizenz ist, wird Sie in eine benutzerspezifische Lizenz konvertiert.
+Konvertiert die Lizenzen im aktuellen Schlüsselpaket. Wenn es sich bei der Lizenz um eine Benutzerlizenz handelt, wird sie in eine Gerätelizenz konvertiert. Wenn es sich bei der Lizenz um eine Gerätelizenz pro Gerät handelt, wird sie in eine Benutzerlizenz konvertiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ uint32 ConvertLicenses(
 
 <dl> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Die Anzahl der zu konvertierenden Lizenzen.
+Die Anzahl der lizenzen, die konvertiert werden sollen.
 
 </dd> <dt>
 
-*Keypackid* \[ vorgenommen\]
+*KeypackID* \[ out\]
 </dt> <dd>
 
-Der Bezeichner des resultierenden Schlüssel Pakets.
+Der Bezeichner des resultierenden Schlüsselpakets.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,7 +71,7 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
@@ -80,7 +80,7 @@ Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode ni
 
 <dl> <dt>
 
-[**Win32-Schlüssel-Lizenz-Schlüssel \_ ACK**](win32-tslicensekeypack.md)
+[**Win32 \_ TSLicenseKeyPack**](win32-tslicensekeypack.md)
 </dt> </dl>
 
  

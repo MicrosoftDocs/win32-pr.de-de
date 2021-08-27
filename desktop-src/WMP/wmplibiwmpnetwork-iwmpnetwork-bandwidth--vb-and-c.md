@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork-Bandbreiten Eigenschaft
-description: Die Bandbreiten Eigenschaft ruft die aktuelle Bandbreite des Medien Elements ab.
+title: IWMPNetwork bandWidth (Eigenschaft)
+description: Die bandWidth-Eigenschaft ruft die aktuelle Bandbreite des Medienelements ab.
 ms.assetid: 4355aa14-bca7-4b46-aad5-3e3796a54735
 keywords:
-- Bandbreiten Eigenschaften Fenster Media Player
-- Bandbreiten Eigenschaft Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, Bandbreiten Eigenschaft
+- bandWidth-Windows Media Player
+- bandWidth-Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , bandWidth-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df9a55f9d5c6724c428b75a4171c2e8b7ca13d18
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fd3cccc47d16f272a28fb732641a9fca743003f716e79a340df8de5d55e9ce6a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098730"
 ---
-# <a name="iwmpnetworkbandwidth-property"></a>Iwmpnetwork:: bandWidth (Eigenschaft)
+# <a name="iwmpnetworkbandwidth-property"></a>IWMPNetwork::bandWidth (Eigenschaft)
 
-Die **Bandbreiten** Eigenschaft ruft die aktuelle Bandbreite des Medien Elements ab.
+Die **bandWidth-Eigenschaft** ruft die aktuelle Bandbreite des Medienelements ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,15 +46,15 @@ Public ReadOnly Property bandWidth As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System. Int32** , die die Bandbreite ist.
+Ein **System.Int32,** das die Bandbreite ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der durch **AxWindowsMediaPlayer. URL** abgerufene Wert ist 0 (null), wenn die URL nicht festgelegt ist. Diese Eigenschaft ist nur für Streamingmedien gültig.
+Der über **AxWindowsMediaPlayer.URL** abgerufene Wert ist 0 (null), wenn die URL nicht festgelegt ist. Diese Eigenschaft ist nur für Streamingmedien gültig.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Bandbreite** verwendet, um die aktuelle Medien Bandbreite anzuzeigen. Die Informationen werden in einer Bezeichnung als Reaktion auf das **PlayStateChange** -Ereignis angezeigt. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **bandWidth verwendet,** um die aktuelle Medienbandbreite anzuzeigen. Die Informationen werden als Reaktion auf das **PlayStateChange-Ereignis** in einer Bezeichnung angezeigt. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -130,10 +130,10 @@ End Sub
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer. URL (VB und c#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
+[**AxWindowsMediaPlayer.URL (VB und C#)**](axwmplib-axwindowsmediaplayer-url--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> </dl>
 
  

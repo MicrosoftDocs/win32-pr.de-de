@@ -1,93 +1,93 @@
 ---
-title: Überprüfungsprotokoll Meldungen
-description: In diesem Abschnitt werden die Überprüfungsprotokoll Meldungen für die UI-Zugriffs Prüfung (accchecker) beschrieben.
+title: Überprüfungsprotokollmeldungen
+description: In diesem Abschnitt werden die Überprüfungsprotokollmeldungen für die Benutzeroberflächen-Barrierefreiheitsprüfung (AccChecker) beschrieben.
 ms.assetid: 27BA13D8-162B-4604-A048-2C8D49060FA9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c4d0d9afd30307c77ebebb1039ba2f2e0817884
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 44bef7e2372fe3374971bf9cf26c8cc420ad94ad679e8dcc4489f559ac337e25
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097950"
 ---
-# <a name="verification-log-messages"></a>Überprüfungsprotokoll Meldungen
+# <a name="verification-log-messages"></a>Überprüfungsprotokollmeldungen
 
-In diesem Abschnitt werden die Überprüfungsprotokoll Meldungen für die UI-Zugriffs Prüfung (accchecker) beschrieben.
+In diesem Abschnitt werden die Überprüfungsprotokollmeldungen für die Benutzeroberflächen-Barrierefreiheitsprüfung (AccChecker) beschrieben.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Accessibleobjectfrompointreturnetdnullilaccessible](accessibleobjectfrompointreturnednulliaccessible.md)
--   [Accessibleobjectfrompointreturnednot \_ S \_ OK](accessibleobjectfrompointreturnednot-s-ok.md)
--   [Accessibleobjectfrompointreturnetdnullchildid](accessibleobjectfrompointreturnednullchildid.md)
--   [Accnamecontainsinvalidstring](accnamecontainsinvalidstring.md)
--   [Accnamelengthtoolong](accnamelengthtoolong.md)
--   [Accnameshouldnotcontainrole](accnameshouldnotcontainrole.md)
--   [AccNavigate- \_ rückkehrelement-withincorrectparent](accnavigate-returnedelementwithincorrectparent.md)
--   ["Erscheinungsbild"](appearstonotsupporttabbing.md)
--   [TabIndex-Fehler bei Aria-Container](aria-container-tabindex.md)
--   [Zugriffsfehler bei der Rolle "Aria Container Role"](aria-container-keyboard-events.md)
--   [TabIndex Fehler bei der Aria-Container Rolle (ohne aktiven Nachfolger)](aria-container--no-active-descendant--tabindex.md)
--   ["Aria Container Role" (ohne aktiven Nachfolger) Tastatur Zugriffsfehler](aria-container--no-active-descendants--keyboard-events.md)
--   [Fehler bei der Aria-Container Rolle](aria-container-role.md)
--   [Aria-Datentabellen Fehler](aria-table-name-and-header.md)
--   [Warnung zu Aria-Datentabelle](aria-data-table-description.md)
--   [Fehler bei der Aria-Raster Struktur](aria-grid-structure.md)
--   [Aria-Bezeichnungs Fehler](aria-label.md)
--   [Fehler bei der Aria-Präsentations Tabelle](aria-layout-table.md)
--   [Aria-Bereichs Steuerungs Attribute fehlen](aria-range-control-attributes-missing.md)
--   [Nicht kompatible Aria-Bereichs Steuerungs Attribute.](aria-range-control-attribute-out-of-range.md)
--   [Aria-Rollen Fehler](aria-role-invalid.md)
--   [Aria-Rollen Fehler für Elemente mit Ereignis Handlern](aria-role-missing.md)
--   [Aria-TabIndex-Fehler](aria-click-tabindex.md)
--   [Boundingrectisincorrect](boundingrectisincorrect.md)
--   [Boundingrectnothittestable](boundingrectnothittestable.md)
--   [Checktreetiefe](checktreedepth.md)
--   [Controlschuldhavevalue](controlshouldhavevalue.md)
--   [Controltypoexpectedpatternssupported](controltypenoexpectedpatternssupported.md)
--   [Controltyperequiredpatternnotsupported](controltyperequiredpatternnotsupported.md)
--   [Customcontroltypewithoutlocalizedcontroltype](customcontroltypewithoutlocalizedcontroltype.md)
--   [Dragpattern/dragdroppattern-Elemente benötigen einen Namen](dragpattern-dragdroppattern-elements-requires-name-.md)
--   [Dragpattern/dragdroppattern-Elemente erfordern gültiges dropffect](dragpattern-dragdroppattern-elements-requires-valid-dropeffect.md)
--   [Duplicateaccesskey](duplicateaccesskey.md)
--   [Duplialisierten blingids](duplicatesiblingids.md)
--   [Dupligonesiblingnames](duplicatesiblingnames.md)
--   [Elementfrompointreturnednull](elementfrompointreturnednull.md)
--   [Elementhasnoname](elementhasnoname.md)
--   [ElementIsChildOfParentMulipleTimes](elementischildofparentmulipletimes.md)
--   [Elementisnotchildofelementsparent](elementisnotchildofelementsparent.md)
--   [Elementisorphaned](elementisorphaned.md)
--   [Elementschildhasdifferenentparent](elementschildhasdifferentparent.md)
--   [Elementschuldbeoffscreen](elementshouldbeoffscreen.md)
--   [Firstchildlastchildmismatch](firstchildlastchildmismatch.md)
--   [Gatheringelements](gatheringelement.md)
--   [Inkonsistentstate, inkonsistentproperties](inconsistentstate--inconsistentproperties.md)
--   [Incorrectroundtrip](incorrectroundtrip.md)
--   [Ungültig](invalidrole.md)
--   [Mitgliednotimplememented](membernotimplememented.md)
--   [Methodexceptionoccured](methodexceptionoccured.md)
--   [Methodreturnedunexpectedhresult](methodreturnedunexpectedhresult.md)
--   [Missingitemintaborder](missingitemintaborder.md)
--   [Nullparent](nullparent.md)
--   [Startingtab](startingtab.md)
--   [Tabbedbackwardto](tabbedbackwardto.md)
--   [Tabbedforwardto](tabbedforwardto.md)
--   [Tabbedtoinfo](tabbedtoinfo.md)
--   [Tabbedbackunknownelement](tabbedtounknownelement.md)
--   [Tabbingnotzyklische](tabbingnotcyclic.md)
--   [Tabbingnotsymmetric](tabbingnotsymmetric.md)
--   [Taborderinquestion](taborderinquestion.md)
--   ["Zu untergeordnete Elemente"](toomanychildren.md)
--   [Treemightbecyclic](treemightbecyclic.md)
--   [Treetoodeep](treetoodeep.md)
--   [Uiaduplicateaccesskey](uiaduplicateaccesskey.md)
--   [Uiaelementdoesnotparametritor](uiaelementdoesnotparenttoroot.md)
--   [Uiaelementisorphaned](uiaelementisorphaned.md)
--   [Uianamelengthtoolong](uianamelengthtoolong.md)
--   [Uianameshouldnotcontaincontroltype](uianameshouldnotcontaincontroltype.md)
--   [Unexpectedtesterror](unexpectedtesterror.md)
--   [Variantnotint (checkrole)](variantnotint.md)
--   [Variantnotint (CheckState)](variantnotint--checkstate-.md)
+-   [AccessibleObjectFromPointReturnedNullIAccessible](accessibleobjectfrompointreturnednulliaccessible.md)
+-   [AccessibleObjectFromPointReturnedNot \_ S \_ OK](accessibleobjectfrompointreturnednot-s-ok.md)
+-   [AccessibleObjectFromPointReturnedNullChildId](accessibleobjectfrompointreturnednullchildid.md)
+-   [AccNameContainsInvalidString](accnamecontainsinvalidstring.md)
+-   [AccNameLengthTooLong](accnamelengthtoolong.md)
+-   [AccNameShouldNotContainRole](accnameshouldnotcontainrole.md)
+-   [AccNavigate \_ ReturnedElementWithIncorrectParent](accnavigate-returnedelementwithincorrectparent.md)
+-   [AppearsToNotSupportTabbing](appearstonotsupporttabbing.md)
+-   [Tabindexfehler des ARIA-Containers](aria-container-tabindex.md)
+-   [ARIA-Containerrolle: Tastaturzugriffsfehler](aria-container-keyboard-events.md)
+-   [Tabindexfehler der ARIA-Containerrolle (ohne aktiven Nachfolger)](aria-container--no-active-descendant--tabindex.md)
+-   [ARIA-Containerrolle (ohne aktive Nachfolger) Tastaturzugriffsfehler](aria-container--no-active-descendants--keyboard-events.md)
+-   [Fehler bei ARIA-Containerrolle](aria-container-role.md)
+-   [ARIA-Datentabellenfehler](aria-table-name-and-header.md)
+-   [ARIA-Datentabellenwarnung](aria-data-table-description.md)
+-   [ARIA-Rasterstrukturfehler](aria-grid-structure.md)
+-   [ARIA-Bezeichnungsfehler](aria-label.md)
+-   [ARIA Presentation Table Error](aria-layout-table.md)
+-   [Fehlende Attribute der ARIA-Bereichssteuerung](aria-range-control-attributes-missing.md)
+-   [Inkompatible ARIA-Bereichssteuerungsattribute](aria-range-control-attribute-out-of-range.md)
+-   [ARIA-Rollenfehler](aria-role-invalid.md)
+-   [ARIA-Rollenfehler für Elemente mit Ereignishandlern](aria-role-missing.md)
+-   [Tabindexfehler bei ARIA](aria-click-tabindex.md)
+-   [BoundingRectIsIncorrect](boundingrectisincorrect.md)
+-   [BoundingRectNotHitTestable](boundingrectnothittestable.md)
+-   [CheckTreeDepth](checktreedepth.md)
+-   [ControlShouldHaveValue](controlshouldhavevalue.md)
+-   [ControlTypeNoExpectedPatternsSupported](controltypenoexpectedpatternssupported.md)
+-   [ControlTypeRequiredPatternNotSupported](controltyperequiredpatternnotsupported.md)
+-   [CustomControlTypeWithoutLocalizedControlType](customcontroltypewithoutlocalizedcontroltype.md)
+-   [DragPattern/DragDropPattern-Elemente erfordern Name](dragpattern-dragdroppattern-elements-requires-name-.md)
+-   [DragPattern/DragDropPattern-Elemente erfordern gültige DropEffect-Elemente.](dragpattern-dragdroppattern-elements-requires-valid-dropeffect.md)
+-   [DuplicateAccessKey](duplicateaccesskey.md)
+-   [DuplicateSiblingIDs](duplicatesiblingids.md)
+-   [DuplicateSiblingNames](duplicatesiblingnames.md)
+-   [ElementFromPointReturnedNull](elementfrompointreturnednull.md)
+-   [ElementHasNoName](elementhasnoname.md)
+-   [ElementIsChildOfParentMmupleTimes](elementischildofparentmulipletimes.md)
+-   [ElementIsNotChildOfElementsParent](elementisnotchildofelementsparent.md)
+-   [ElementIsOrphaned](elementisorphaned.md)
+-   [ElementeChildHasDifferentParent](elementschildhasdifferentparent.md)
+-   [ElementShouldBeOffScreen](elementshouldbeoffscreen.md)
+-   [FirstChildLastChildMismatch](firstchildlastchildmismatch.md)
+-   [GatheringElement](gatheringelement.md)
+-   [InconsistentState, InconsistentProperties](inconsistentstate--inconsistentproperties.md)
+-   [IncorrectRoundTrip](incorrectroundtrip.md)
+-   [InvalidRole](invalidrole.md)
+-   [MemberNotImplememented](membernotimplememented.md)
+-   [MethodExceptionOccured](methodexceptionoccured.md)
+-   [MethodReturnedUnexpectedHResult](methodreturnedunexpectedhresult.md)
+-   [MissingItemInTabOrder](missingitemintaborder.md)
+-   [NullParent](nullparent.md)
+-   [StartingTab](startingtab.md)
+-   [TabbedBackwardTo](tabbedbackwardto.md)
+-   [TabbedForwardTo](tabbedforwardto.md)
+-   [TabbedToInfo](tabbedtoinfo.md)
+-   [TabbedToUnknownElement](tabbedtounknownelement.md)
+-   [TabbingNotCyclic](tabbingnotcyclic.md)
+-   [TabbingNotSymmetric](tabbingnotsymmetric.md)
+-   [TabOrderInQuestion](taborderinquestion.md)
+-   [TooManyChildren](toomanychildren.md)
+-   [TreeMightBeCyclic](treemightbecyclic.md)
+-   [TreeTooDeep](treetoodeep.md)
+-   [UiaDuplicateAccessKey](uiaduplicateaccesskey.md)
+-   [UiaElementDoesNotParentToRoot](uiaelementdoesnotparenttoroot.md)
+-   [UiaElementIsOrphaned](uiaelementisorphaned.md)
+-   [UiaNameLengthTooLong](uianamelengthtoolong.md)
+-   [UiaNameShouldNotContainControlType](uianameshouldnotcontaincontroltype.md)
+-   [UnexpectedTestError](unexpectedtesterror.md)
+-   [VariantNotInt (CheckRole)](variantnotint.md)
+-   [VariantNotInt (CheckState)](variantnotint--checkstate-.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -96,9 +96,9 @@ In diesem Abschnitt werden die Überprüfungsprotokoll Meldungen für die UI-Zug
 [UI Accessibility Checker](ui-accessibility-checker.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

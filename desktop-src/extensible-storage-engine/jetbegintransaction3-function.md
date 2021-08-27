@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JetBeginTransaction3-Funktion'
+description: Weitere Informationen finden Sie unter JetBeginTransaction3-Funktion.
 title: JetBeginTransaction3-Funktion
 TOCTitle: JetBeginTransaction3 Function
 ms:assetid: 7f8ed059-0b97-46fa-9925-e46cdcbee6ea
@@ -19,21 +19,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b263cb18c09df8205a49e1c4a1a683e339803f35
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed7c963da40f72fb7ea54c5614836a1de81a0b3d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346677"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122479236"
 ---
 # <a name="jetbegintransaction3-function"></a>JetBeginTransaction3-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-Die **JetBeginTransaction3** -Funktion bewirkt, dass eine Sitzung eine Transaktion eingibt und einen neuen Sicherungspunkt erstellt. Diese Funktion kann mehrmals in einer einzelnen Sitzung aufgerufen werden, um zusätzliche Speicherpunkte zu erstellen. Diese Speicherpunkte können verwendet werden, um die Änderungen an der Datenbank selektiv beizubehalten oder zu verwerfen.
+Die **JetBeginTransaction3-Funktion** bewirkt, dass eine Sitzung eine Transaktion einträgt und einen neuen Speicherpunkt erstellt. Diese Funktion kann in einer einzelnen Sitzung mehr als einmal aufgerufen werden, um zusätzliche Speicherpunkte zu erstellen. Diese Speicherpunkte können verwendet werden, um Änderungen an der Datenbank selektiv zu speichern oder zu verwerfen.
 
-Die **JetBeginTransaction3** -Funktion wurde im Windows 8-Betriebssystem eingeführt.
+Die **JetBeginTransaction3-Funktion** wurde im Windows 8 eingeführt.
 
 ``` c++
 JET_ERR JET_API JetBeginTransaction3(
@@ -45,140 +45,67 @@ JET_ERR JET_API JetBeginTransaction3(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
 *trxid*
 
-Ein optionaler Bezeichner, der vom Benutzer zur Identifizierung der Transaktion bereitgestellt wird.
+Ein optionaler Bezeichner, der vom Benutzer bereitgestellt wird, um die Transaktion zu identifizieren.
 
 *grbit*
 
-Eine Gruppe von Bits, die NULL oder mehr der in der folgenden Tabelle aufgeführten aufrufoptions Werte angibt.
+Eine Gruppe von Bits, die null oder mehr der in der folgenden Tabelle aufgeführten Aufrufoptionswerte angibt.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitTransactionReadOnly</p></td>
-<td><p>Die Datenbank wird von der Transaktion nicht geändert. Wenn ein Update versucht wird, schlägt dieser Vorgang mit JET_errTransReadOnly Antwort Codes fehl. Diese Option wird ignoriert, es sei denn, Sie wird angefordert, wenn die angegebene Sitzung nicht bereits in einer Transaktion vorhanden ist. Diese Option ist ab Windows XP in Versionen des Windows-Betriebssystems verfügbar.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitTransactionReadOnly</p> | <p>Die Datenbank wird von der Transaktion nicht geändert. Wenn ein Update versucht wird, wird dieser Vorgang mit JET_errTransReadOnly nicht durchgeführt. Diese Option wird ignoriert, es sei denn, sie wird angefordert, wenn sich die gegebene Sitzung nicht bereits in einer Transaktion befindet. Diese Option ist in Versionen des Betriebssystems Windows ab xp Windows verfügbar.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) -Datentyp mit einem der in der folgenden Tabelle aufgelisteten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Fehler Behandlungsparameter](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens der <a href="gg269240(v=exchg.10).md">jetstopservice</a> -Funktion beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen.</p>
-<p>Dieser Rückgabecode wird von Windows-Versionen ab Windows XP zurückgegeben.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird von Windows-Versionen ab Windows XP zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTransTooDeep</p></td>
-<td><p>Eine neue Transaktion kann nicht gestartet werden, da die Sitzung bereits die maximale Speicherpunkt Tiefe hat, die von der Datenbank-Engine zulässig ist.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der in der folgenden Tabelle aufgeführten Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern (Extensible Storage Engine) finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wird die angegebene Sitzung innerhalb einer Transaktion ausgeführt. Wenn sich die Sitzung zuvor in einer Transaktion befunden hat, wird ein neuer Sicherungspunkt erstellt.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs der <a href="gg269240(v=exchg.10).md">JetStopService-Funktion beendet</a> wurden.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen.</p><p>Dieser Rückgabecode wird von Versionen von zurückgegeben, die Windows XP Windows werden.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird von Versionen von zurückgegeben, die Windows xp Windows xp.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransTooDeep</p> | <p>Eine neue Transaktion kann nicht gestartet werden, da die Sitzung bereits die maximale Speicherpunkttiefe hat, die von der Datenbank-Engine zulässig ist.</p> | 
 
-Bei einem Fehler bleibt der Transaktionsstatus der Sitzung unverändert. Es erfolgt keine Änderung des Daten Bank Status.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Weitere Informationen zur Funktionsweise von Transaktionen finden Sie unter [jetbegintransaction](./jetbegintransaction-function.md).
+Bei Erfolg befindet sich die bereitgestellte Sitzung innerhalb einer Transaktion. Wenn sich die Sitzung zuvor innerhalb einer Transaktion befindet, wird ein neuer Speicherpunkt erstellt.
+
+Bei einem Fehler bleibt der Transaktionszustand der Sitzung unverändert. Es erfolgt keine Änderung des Datenbankstatus.
+
+#### <a name="remarks"></a>Hinweise
+
+Weitere Informationen zur Funktionsweise von Transaktionen finden Sie unter [JetBeginTransaction](./jetbegintransaction-function.md).
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows 8.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2012.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows 8.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2012.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
 
 
-#### <a name="see-also"></a>Siehe auch
+
+#### <a name="see-also"></a>Weitere Informationen
 
 [JET_ERR](./jet-err.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
-[Jetbegintransaction](./jetbegintransaction-function.md)  
-[Jetcommittransaction](./jetcommittransaction-function.md)  
-[Jetgetsystemparameter](./jetgetsystemparameter-function.md)  
-[Jetresessioncontext](./jetresetsessioncontext-function.md)  
-[Jetrollback](./jetrollback-function.md)  
-[Jetabessioncontext](./jetsetsessioncontext-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetBeginTransaction](./jetbegintransaction-function.md)  
+[JetCommitTransaction](./jetcommittransaction-function.md)  
+[JetGetSystemParameter](./jetgetsystemparameter-function.md)  
+[JetResetSessionContext](./jetresetsessioncontext-function.md)  
+[JetRollback](./jetrollback-function.md)  
+[JetSetSessionContext](./jetsetsessioncontext-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

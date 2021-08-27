@@ -1,6 +1,6 @@
 ---
-title: glNormal3f-Funktion (GL. h)
-description: Legt den aktuellen normalen Vektor fest. | glNormal3f-Funktion (GL. h)
+title: glNormal3f-Funktion (Gl.h)
+description: Legt den aktuellen normalen Vektor fest. | glNormal3f-Funktion (Gl.h)
 ms.assetid: 8407996e-47fd-4c30-91f6-53d4341a1fca
 keywords:
 - glNormal3f-Funktion OpenGL
@@ -14,12 +14,12 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72e83b874b1588ad8bd91da9e5c9f831062de9cc
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2de6edaab0f83c9b05a561eb8f857086fea76f41a84a4869d5d9f99149482df1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128150"
 ---
 # <a name="glnormal3f-function"></a>glNormal3f-Funktion
 
@@ -42,24 +42,24 @@ void WINAPI glNormal3f(
 
 <dl> <dt>
 
-*NX* 
+*Nx* 
 </dt> <dd>
 
 Gibt die x-Koordinate für den neuen aktuellen normalen Vektor an.
 
 </dd> <dt>
 
-*geile* 
+*Ny* 
 </dt> <dd>
 
 Gibt die y-Koordinate für den neuen aktuellen normalen Vektor an.
 
 </dd> <dt>
 
-*NZ* 
+*Nz* 
 </dt> <dd>
 
-Gibt die z-Koordinate für den neuen aktuellen normalen Vektor an.
+Gibt die Z-Koordinate für den neuen aktuellen normalen Vektor an.
 
 </dd> </dl>
 
@@ -67,17 +67,17 @@ Gibt die z-Koordinate für den neuen aktuellen normalen Vektor an.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der aktuelle Normalwert ist auf die angegebenen Koordinaten festgelegt, wenn Sie die **glNormal3f** -Funktion aufzurufen.
+Die aktuelle Normalität wird auf die angegebenen Koordinaten festgelegt, wenn Sie die **glNormal3f-Funktion** aufrufen.
 
-Byte-, kurz-oder ganzzahlige Argumente werden in das Gleit Komma Format mit einer linearen Zuordnung konvertiert, die den positivsten darstellbaren ganzzahligen Wert 1,0 und den am meisten negativen darstellbaren ganzzahligen Wert zu-1,0 zuordnet.
+Byte-, Short- oder Integerargumente werden mit einer linearen Zuordnung, die den positivsten darstellbaren ganzzahligen Wert 1,0 und der negativste darstellbare ganzzahlige Wert -1,0 zuzuordnen, in das Gleitkommaformat konvertiert.
 
-Mit **glNormal3f** angegebene normale müssen keine Einheitslänge aufweisen. Wenn Normalisierung aktiviert ist, werden normale, die mit **glNormal3f** angegeben werden, nach der Transformation normalisiert. Sie können die Normalisierung mithilfe von [**glEnable**](glenable.md) und [**gldeaktivieren**](gldisable.md) mit dem Argument GL \_ normalize steuern. Standardmäßig ist die Normalisierung deaktiviert. Sie können die aktuelle Normalzeit jederzeit aktualisieren. Vor allem können Sie **glNormal3f** zwischen einem " [**glBegin**](glbegin.md) "-Befehl und dem entsprechenden " [**glEnd**](glend.md)"-Aufrufe aufzurufen. Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glNormal3f** ab:
+Normals, die mit **glNormal3f** angegeben werden, benötigen keine Einheitenlänge. Wenn die Normalisierung aktiviert ist, werden mit **glNormal3f** angegebene Normalitäten nach der Transformation normalisiert. Sie können die Normalisierung steuern, indem Sie [**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ NORMALIZE verwenden. Standardmäßig ist die Normalisierung deaktiviert. Sie können die aktuelle Normalität jederzeit aktualisieren. Insbesondere können Sie **glNormal3f** zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufrufen. Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glNormal3f** ab:
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Current \_ Normal
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ CURRENT \_ NORMAL
 
-[**glisenable**](glisenabled.md) mit dem Argument GL \_ normalize
+[**glIsEnable**](glisenabled.md) mit dem Argument GL \_ NORMALIZE
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Mit **glNormal3f** angegebene normale müssen keine Einheitslänge aufweisen. We
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -100,16 +100,16 @@ Mit **glNormal3f** angegebene normale müssen keine Einheitslänge aufweisen. We
 [**glBegin**](glbegin.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> <dt>
 
 [**glVertex**](glvertex-functions.md)

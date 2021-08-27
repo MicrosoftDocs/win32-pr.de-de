@@ -1,9 +1,9 @@
 ---
 title: user_marshal-Attribut
-description: Das \_ ACF-Attribut User Marshal ordnet einen benannten lokalen Typ in der Zielsprache (User m-Type) einem Übertragungstyp (Wire-Type) zu, der zwischen Client und Server übertragen wird.
+description: Das ACF-Attribut des Benutzers ordnet einen benannten lokalen Typ in der Zielsprache (userm-type) einem Übertragungstyp (Wire-Type) zu, der zwischen Client und Server \_ übertragen wird.
 ms.assetid: a2407aa3-574d-4690-8cdf-cb1c01ca8c49
 keywords:
-- user_marshal Attribut-Mittel l
+- user_marshal MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5326c9390362193a1be9dc06ee3a57f174474cc2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 3f17b4ef9d4376309307403ee12e2c5aae507556beaf091f9d742998d18671a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105570"
 ---
-# <a name="user_marshal-attribute"></a>Benutzer \_ Mars Hall Attribut
+# <a name="user_marshal-attribute"></a>User \_ Marshal-Attribut
 
-Das ACF-Attribut **User \_ Marshal** ordnet einen benannten lokalen Typ in der Zielsprache (*User m-Type*) einem Übertragungstyp (*Wire-* Type) zu, der zwischen Client und Server übertragen wird.
+Das **\_ ACF-Attribut** des Benutzers ordnet einen benannten lokalen Typ in der Zielsprache (*userm-type*) einem Übertragungstyp (*wire-type*) zu, der zwischen Client und Server übertragen wird.
 
 ``` syntax
 typedef [user_marshal(userm_type)] wire-type; 
@@ -46,55 +46,55 @@ void __RPC_USER  < userm_type >_UserFree(
 
 <dl> <dt>
 
-*User m-Type* 
+*userm-type* 
 </dt> <dd>
 
-Gibt den Bezeichner des Benutzer Datentyps an, der gemarshallt werden soll. Der *userm-Typ* muss nicht transaktierbar sein und muss kein Typ sein, der dem mittlerer l-Compiler bekannt ist.
+Gibt den Bezeichner des benutzerdatentyps an, der gemarshallt werden soll. Der *userm-type muss* nicht übertragbar sein und muss kein Typ sein, der dem MIDL-Compiler bekannt ist.
 
 </dd> <dt>
 
-*Wire-Type* 
+*wire-type* 
 </dt> <dd>
 
-Gibt den benannten Übertragungs Datentyp an, der zwischen Client und Server tatsächlich übertragen wird. Der Netzwerktyp muss ein Basistyp der Mitte, ein vordefinierter Typ oder ein Typbezeichner eines Typs sein, der über das Netzwerk übertragen werden kann.
+Gibt den benannten Übertragungsdatentyp an, der tatsächlich zwischen Client und Server übertragen wird. Der Wire-Typ muss ein MIDL-Basistyp, ein vordefinierter Typ oder ein Typbezeichner eines Typs sein, der über das Netzwerk übertragen werden kann.
 
 </dd> <dt>
 
-*pflags* 
+*pFlags* 
 </dt> <dd>
 
-Gibt einen Zeiger auf ein Flagfeld an ( [**Ganzzahl ohne Vorzeichen**](unsigned.md) [**Long**](long.md)). Das höchst wertige Wort gibt die von DCE für Gleit Komma-, Big-oder Little-Endian-und Zeichen Darstellung definierten Daten darstellungenflags der NDR-Daten an. Mit dem nieder wertigen Wort wird ein marshallingkontextflag angegeben. Das genaue Layout der Flags wird in [der Type \_ usersize-Funktion](/windows/desktop/Rpc/the-type-usersize-function)beschrieben.
+Gibt einen Zeiger auf ein Flagfeld an ( [**unsigned**](unsigned.md) [**long**](long.md)). Das obere Wort gibt NDR-Datendarstellungsflags an, die von DCE für Gleitkomma-, Big- oder Little-Endian- und Zeichendarstellung definiert werden. Das niedrige Wort gibt ein Marshallingkontextflag an. Das genaue Layout der Flags wird unter Der Typ [ \_ UserSize-Funktion beschrieben.](/windows/desktop/Rpc/the-type-usersize-function)
 
 </dd> <dt>
 
-*Startingsize* 
+*StartingSize* 
 </dt> <dd>
 
-Gibt die aktuelle Puffergröße (Offset) vor der Größenanpassung des Objekts an.
+Gibt die aktuelle Puffergröße (Offset) an, bevor die Größe des Objekts festgelegt wird.
 
 </dd> <dt>
 
-*puser \_ TypeObject* 
+*pUser \_ typeObject* 
 </dt> <dd>
 
-Gibt einen Zeiger auf ein Objekt des *userm- \_ Typs* an.
+Gibt einen Zeiger auf ein Objekt vom *Typ userm \_ an.*
 
 </dd> <dt>
 
 *Buffer* 
 </dt> <dd>
 
-Gibt den aktuellen Puffer Zeiger an.
+Gibt den aktuellen Pufferzeiger an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder benannte lokale Typ, *userm-Type*, weist eine eins-zu-eins-Entsprechung mit einem *Wire-Typ* auf, der die Wire-Darstellung des Typs definiert. Sie müssen Routinen bereitstellen, um die Größe der Daten für das Marshalling, das Mars Hallen und das Entsperren der Daten und das Freigeben von Arbeitsspeicher zu verkleinern. Weitere Informationen zu diesen Routinen finden Sie [unter User \_ Marshal Attribute](/windows/desktop/Rpc/the-user-marshal-attribute). Beachten Sie Folgendes: Wenn in den Daten eingebettete Typen vorhanden sind, die auch mit dem **Benutzer \_ Mars** Hall oder \[ dem [**\[ Wire \_ \] Marshal**](wire-marshal.md)definiert sind, müssen Sie die Wartung dieser eingebetteten Typen ebenfalls verwalten.
+Jeder benannte lokale Typ, *userm-type,* verfügt über eine 1:1-Entsprechung mit einem Wire-Typ, der die *Wire-Darstellung* des Typs definiert. Sie müssen Routinen zur Größengröße der Daten für das Marshalling, zum Marshallen und Zum Unmarshalieren der Daten und zum Freien von Arbeitsspeicher verwenden. Weitere Informationen zu diesen Routinen finden Sie unter [Das \_ Benutzer-Marshallattribut](/windows/desktop/Rpc/the-user-marshal-attribute). Beachten Sie, dass Sie die Wartung dieser **\_** eingebetteten Typen auch verwalten müssen, wenn ihre Daten eingebettete Typen sind, die auch mit dem Marshalling oder dem \[ [**\[ Wire \_ Marshal \]**](wire-marshal.md)des Benutzers definiert sind.
 
-Der *Wire-Type* darf kein Schnittstellen Zeiger oder ein vollständiger Zeiger sein. Der *Wire-Typ* muss eine klar definierte Arbeitsspeicher Größe aufweisen. Ausführliche Informationen zum Mars Hallen eines bestimmten Netzwerk *Typs* finden Sie unter [Mars Hallen von Regeln für Benutzer \_ Mars Hall und Wire \_ Marshal](/windows/desktop/Rpc/marshaling-rules-for-user-marshal-and-wire-marshal) .
+Der *wire-type darf* kein Schnittstellenzeiger oder ein vollständiger Zeiger sein. Der *Wire-Typ muss* eine klar definierte Arbeitsspeichergröße haben. Weitere Informationen zum Marshallen eines bestimmten *Wire-Typs* finden Sie unter Marshallingregeln für das Marshallen von Benutzer und [ \_ Wire \_ Marshal.](/windows/desktop/Rpc/marshaling-rules-for-user-marshal-and-wire-marshal)
 
-Der *userm-Type* darf kein Schnittstellen Zeiger sein, da diese direkt gemarshallt werden können. Wenn der Benutzertyp ein vollständiger Zeiger ist, müssen Sie das Aliasing selbst verwalten.
+Der *userm-type sollte* kein Schnittstellenzeiger sein, da diese direkt gemarshallt werden können. Wenn der Benutzertyp ein vollständiger Zeiger ist, müssen Sie das Aliasing selbst verwalten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -144,30 +144,30 @@ void __RPC_USER FOUR_BYTE_DATA_UserFree(
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
-[**lange**](long.md)
+[**long**](long.md)
 </dt> <dt>
 
-[**Darstellung \_ als**](represent-as.md)
+[**darstellen \_ als**](represent-as.md)
 </dt> <dt>
 
-[**Ganzzahl ohne Vorzeichen**](unsigned.md)
+[**Unsigned**](unsigned.md)
 </dt> <dt>
 
-[Das Mars-Attribut des Benutzers \_](/windows/desktop/Rpc/the-user-marshal-attribute)
+[Das \_ Marshallattribut des Benutzers](/windows/desktop/Rpc/the-user-marshal-attribute)
 </dt> <dt>
 
 [**Wire \_ Marshal**](wire-marshal.md)
 </dt> <dt>
 
-[**Ndrgetusermarshalinfo**](/windows/desktop/api/rpcndr/nf-rpcndr-ndrgetusermarshalinfo)
+[**NdrGetUserMarshalInfo**](/windows/desktop/api/rpcndr/nf-rpcndr-ndrgetusermarshalinfo)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

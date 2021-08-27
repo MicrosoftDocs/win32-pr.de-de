@@ -16,12 +16,12 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d0453a7fdf5bb7253b1d2abd063b98a7964c4c8e
-ms.sourcegitcommit: 61a4c522182aa1cacbf5669683d9570a3bf043b2
+ms.openlocfilehash: 7171d30cfe02509619a56d7d986487adab5b5cae
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122880232"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478206"
 ---
 # <a name="description-mobile-broadband"></a>Beschreibung (Mobiles Breitband)
 
@@ -29,8 +29,8 @@ Eine Beschreibung des Profils.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
-[&lt;MBNProfileExt&gt;](element-mbnprofileext.md)  
-**&lt;BESCHREIBUNG&gt;**
+[<MBNProfileExt>](element-mbnprofileext.md)  
+**<Description>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,14 +55,14 @@ Keine.
 ### <a name="span-idparent_elementsspanspan-idparent_elementsspanparent-elements"></a><span id="parent_elements"></span><span id="PARENT_ELEMENTS"></span>Übergeordnete Elemente
 
 
-| Übergeordnetes Element | Beschreibung | 
+| Übergeordnetes Element | BESCHREIBUNG | 
 |----------------|-------------|
 | <a href="element-mbnprofileext.md">MBNProfileExt</a> | <p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p><p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p> | 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 | | | <p>Namespace</p> | <p>https://www.microsoft.com/networking/WWAN/profile/v4</p> | 

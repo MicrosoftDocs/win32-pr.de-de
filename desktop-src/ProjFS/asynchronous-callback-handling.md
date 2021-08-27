@@ -1,33 +1,33 @@
 ---
-title: Asynchroner Rückruf Abschluss
-description: Beschreibt, wie der Anbieter asynchron Dienst Rückrufe bedienen kann.
+title: Asynchroner Rückrufabschluss
+description: Beschreibt, wie der Anbieter Rückrufe asynchron bedienen kann.
 ms.assetid: <GUID-GOES-HERE>
 ms.date: 10/12/2018
 ms.topic: article
-ms.openlocfilehash: 8ec23f5ea6e8ec55be2eaa2811d9dee8b1870edc
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f2262e803d1ee3d071538dc6e520517c6fd7b800c4d7fdc4a7404748b9f9f0dc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106337459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127950"
 ---
-# <a name="asynchronous-callback-handling"></a>Asynchrone Rückruf Behandlung
+# <a name="asynchronous-callback-handling"></a>Asynchrone Rückrufbehandlung
 
-Wenn ein Client mit den Dateien und Verzeichnissen unterhalb des virtualisierungsstamms des Anbieters interagiert, führen diese Interaktionen in der Regel dazu, dass die Rückrufe des Anbieters aufgerufen werden.  Projfs ruft Anbieter Rückrufe auf, indem eine Nachricht aus dem Kernel Modus an die projfs-benutzermodusbibliothek gesendet wird, in der ein Arbeits Thread die Nachricht empfängt und den entsprechenden Rückruf aufruft.  Nachdem der Rückruf zurückgegeben wurde, wartet der Arbeits Thread, bis eine andere Nachricht aus dem Kernel Modus eintrifft.  Wenn alle Arbeitsthreads mit dem Ausführen von Anbieter Rückruf Code ausgelastet sind, werden alle weiteren Client-e/a-Vorgänge, die einen Rückruf auslösen, blockiert, bis ein Arbeits Thread verfügbar ist, um die Nachricht zu empfangen und den entsprechenden Rückruf aufzurufen.  Wenn ein Anbieter gestartet wird, kann er die Anzahl der Arbeitsthreads angeben, die von projfs für die Dienst Rückrufe erstellt werden sollen, indem der _options_ -Parameter von **[prjstartvirtualisiert](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstartvirtualizing)** wird.  Ein Anbieter kann die Effizienz der Nachrichten empfangenden Arbeitsthreads verbessern, indem er die Rückrufe asynchron verarbeitet.
+Wenn ein Client mit den Dateien und Verzeichnissen unterhalb des Virtualisierungsstamms des Anbieters interagiert, führen diese Interaktionen in der Regel dazu, dass die Rückrufe des Anbieters aufgerufen werden.  ProjFS ruft Anbieterrückrufe auf, indem eine Nachricht aus dem Kernelmodus an die ProjFS-Benutzermodusbibliothek gesendet wird, wo ein Arbeitsthread die Nachricht empfängt und den entsprechenden Rückruf aufruft.  Sobald der Rückruf zurückgegeben wurde, wartet der Arbeitsthread darauf, dass eine andere Nachricht aus dem Kernelmodus eintrifft.  Wenn alle Arbeitsthreads mit der Ausführung des Anbieterrückrufcodes ausgelastet sind, wird jede weitere Client-E/A, die einen Rückruf auslöst, blockiert, bis ein Arbeitsthread verfügbar ist, um die Nachricht zu empfangen und den entsprechenden Rückruf aufzurufen.  Wenn ein Anbieter gestartet wird, kann er die Anzahl der Arbeitsthreads angeben, die ProjFS für Dienstrückrufe erstellen soll, über den _Optionsparameter_ von **[PrjStartVirtualizing](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjstartvirtualizing)**.  Ein Anbieter kann die Effizienz der Nachrichten empfangenden Arbeitsthreads verbessern, indem er seine Rückrufe asynchron bedient.
 
-> Wenn der Anbieter den _options_ -Parameter für **prjstartvirtualisieren** nicht angibt oder 0 für den concurrentthreadcount-Member des _options_ -Parameters angibt, verwendet projfs die Anzahl der logischen Prozessoren im System für den Wert von concurrentthreadcount.
+> Wenn der Anbieter den _Optionsparameter_ für **PrjStartVirtualizing** nicht angibt oder 0 für den ConcurrentThreadCount-Member des _Optionsparameters_ angibt, verwendet ProjFS die Anzahl logischer Prozessoren im System für den Wert concurrentThreadCount.
 >
-> Wenn der Anbieter den _options_ -Parameter für **prjstartvirtualisieren** nicht angibt oder 0 für das poolthreadcount-Element des _options_ -Parameters angibt, verwendet projfs den doppelten Wert von concurrentthreadcount für den Wert von poolthreadcount.
+> Wenn der Anbieter nicht den _Optionsparameter_ für **PrjStartVirtualizing** angibt oder 0 für den PoolThreadCount-Member des _Optionsparameters_ angibt, verwendet ProjFS den doppelten Wert von ConcurrentThreadCount für den Wert von PoolThreadCount.
 
-Ein Anbieter Dienst Rückrufe asynchron, indem er HRESULT_FROM_WIN32 (ERROR_IO_PENDING) von seinen Rückrufen zurückgibt und Sie später mithilfe von **[prjcompletecommand](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjcompletecommand)** vervollständigt.  Ein Anbieter, der Rückrufe asynchron verarbeitet, sollte auch den Rückruf Abbruch durch Implementieren des **[PRJ_CANCEL_COMMAND_CB](/windows/desktop/api/projectedfslib/nc-projectedfslib-prj_cancel_command_cb)** Rückrufs unterstützen.
+Ein Anbieterdienst ruft asynchron zurück, indem er HRESULT_FROM_WIN32(ERROR_IO_PENDING) aus seinen Rückrufen zurückgibt und diese später mit **[PrjCompleteCommand abschließt.](/windows/desktop/api/projectedfslib/nf-projectedfslib-prjcompletecommand)**  Ein Anbieter, der Rückrufe asynchron verarbeitet, sollte auch den Rückrufabbruch unterstützen, indem er den **[PRJ_CANCEL_COMMAND_CB](/windows/desktop/api/projectedfslib/nc-projectedfslib-prj_cancel_command_cb)** Rückruf implementiert.
 
-Wenn projfs den Rückruf eines Anbieters aufruft, identifiziert es den Aufruf des Rückrufs mit dem CommandID-Member des _callBackData_ -Parameters des Rückrufs.  Wenn der Anbieter beschließt, diesen Rückruf asynchron zu verarbeiten, muss er den Wert des CommandID-Members speichern und HRESULT_FROM_WIN32 (ERROR_IO_PENDING) aus dem Rückruf zurückgeben.  Nachdem der Anbieter die Verarbeitung des Rückrufs abgeschlossen hat, ruft er **prjcompletecommand** auf und übergibt dabei den gespeicherten Bezeichner im _CommandID_ -Parameter.  Dies weist projfs an, dass Rückruf Aufrufe abgeschlossen wurden.
+Wenn ProjFS den Rückruf eines Anbieters aufruft, identifiziert es den spezifischen Aufruf des Rückrufs mithilfe des CommandId-Members des _callbackData-Parameters_ des Rückrufs.  Wenn der Anbieter entscheidet, diesen Rückruf asynchron zu verarbeiten, muss er den Wert des CommandId-Members speichern und HRESULT_FROM_WIN32(ERROR_IO_PENDING) aus dem Rückruf zurückgeben.  Nachdem der Anbieter die Verarbeitung des Rückrufs abgeschlossen hat, ruft er **PrjCompleteCommand** auf und übergibt den gespeicherten Bezeichner im _commandId-Parameter._  Dadurch wird ProjFS mitgeteilt, welcher Rückrufaufruf abgeschlossen wurde.
 
-Ein Anbieter, der den **PRJ_CANCEL_COMMAND_CB** Rückruf implementiert, muss nachverfolgen, welche Rückrufe er noch nicht abgeschlossen hat.  Wenn der Anbieter diesen Rückruf empfängt, weist dies darauf hin, dass die e/a-Vorgänge, die dazu geführt haben, dass eine dieser Rückrufe ausgelöst wurde, entweder explizit oder weil der Thread, bei dem Sie ausgestellt wurde, abgebrochen wurde. Der Anbieter sollte die Verarbeitung des von CommandID identifizierten Rückruf Aufrufs so bald wie möglich abbrechen.
+Ein Anbieter, der die **PRJ_CANCEL_COMMAND_CB** Rückruf implementiert, muss nachverfolgen, welche Rückrufe noch nicht abgeschlossen wurden.  Wenn der Anbieter diesen Rückruf empfängt, gibt er an, dass die E/A, die den Aufruf eines dieser Rückrufe verursacht hat, entweder explizit abgebrochen wurde oder weil der Thread, für den er ausgegeben wurde, beendet wurde. Der Anbieter sollte die Verarbeitung des durch CommandId identifizierten Rückrufaufrufs so bald wie möglich abbrechen.
 
-> Obwohl projfs **PRJ_CANCEL_COMMAND_CB** nur für einen bestimmten CommandID aufruft, nachdem der Rückruf abgebrochen wurde, werden der Abbruch und der ursprüngliche Aufruf möglicherweise gleichzeitig in einem Multithread-Anbieter ausgeführt.  Der Anbieter muss in der Lage sein, diese Situation ordnungsgemäß zu verarbeiten.
+> Obwohl ProjFS **PRJ_CANCEL_COMMAND_CB** für eine bestimmte CommandId erst aufruft, nachdem der abzubrechende Rückruf aufgerufen wurde, können der Abbruch und der ursprüngliche Aufruf gleichzeitig in einem Multithreadanbieter ausgeführt werden.  Der Anbieter muss in der Lage sein, diese Situation ordnungsgemäß zu behandeln.
 
-Das folgende Beispiel ist eine Version des Beispiels für das Thema Auflisten von [Dateien und Verzeichnissen](enumerating-files-and-directories.md) , die geändert wurde, um die asynchrone Rückruf Behandlung zu veranschaulichen.
+Das folgende Beispiel ist eine Version des Beispiels für das Thema [Enumerating Files and Directories ( Dateien und Verzeichnisse aufzählen),](enumerating-files-and-directories.md) geändert, um die asynchrone Rückrufbehandlung zu veranschaulichen.
 
 ```C++
 typedef struct MY_ENUM_ENTRY MY_ENUM_ENTRY;
@@ -324,7 +324,7 @@ CompleteCallback:
 }
 ```
 
-Und hier ist ein kurzes Beispiel PRJ_CANCEL_COMMAND_CB, das mit dem vorangehenden Beispielcode funktioniert.
+Hier ist ein kurzes Beispiel PRJ_CANCEL_COMMAND_CB, das mit dem vorherigen Beispielcode funktioniert.
 
 ```C++
 void

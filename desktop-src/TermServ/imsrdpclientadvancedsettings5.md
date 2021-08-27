@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientAdvancedSettings5-Schnittstelle
-description: Verwaltet erweiterte Client Einstellungen. Wird von der IMsRdpClientAdvancedSettings4-Schnittstelle abgeleitet.
+description: Verwaltet erweiterte Clienteinstellungen. Wird von der IMsRdpClientAdvancedSettings4-Schnittstelle abgeleitet.
 ms.assetid: a927cd4c-7f70-493e-a4f6-056d0352d56e
 ms.tgt_platform: multiple
 keywords:
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, beschrieben
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,80 +16,80 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14e37eb28c1fb7a272291c44661c52ec3548708b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 49ad2b26697cd3985cc0e39a8ed7345bc4bbe941
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340332"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622346"
 ---
 # <a name="imsrdpclientadvancedsettings5-interface"></a>IMsRdpClientAdvancedSettings5-Schnittstelle
 
-Verwaltet erweiterte Client Einstellungen. Wird von der [**IMsRdpClientAdvancedSettings4**](imsrdpclientadvancedsettings4.md) -Schnittstelle abgeleitet.
+Verwaltet erweiterte Clienteinstellungen. Wird von der [**IMsRdpClientAdvancedSettings4-Schnittstelle**](imsrdpclientadvancedsettings4.md) abgeleitet.
 
-Um eine Instanz dieser Schnittstelle abzurufen, verwenden Sie die [**imstscax:: advancedsettings**](imstscax-advancedsettings.md) -Eigenschaft, um einen [**imstscadvancedsettings**](imstscadvancedsettings-interface.md) -Schnittstellen Zeiger zu erhalten. Nennen Sie dann [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **imstscadvancedsettings** -Zeiger, und übergeben Sie **IID \_ IMsRdpClientAdvancedSettings5** an **QueryInterface**.
+Verwenden Sie zum Abrufen einer Instanz dieser Schnittstelle die [**IMsTscAx::AdvancedSettings-Eigenschaft,**](imstscax-advancedsettings.md) um einen [**IMsTscAdvancedSettings-Schnittstellenzeiger**](imstscadvancedsettings-interface.md) abzurufen. Rufen Sie dann [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) für den **IMsTscAdvancedSettings-Zeiger** auf, und übergeben Sie **IID \_ IMsRdpClientAdvancedSettings5** an **QueryInterface**.
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClientAdvancedSettings5** -Schnittstelle erbt von [**IMsRdpClientAdvancedSettings4**](imsrdpclientadvancedsettings4.md). **IMsRdpClientAdvancedSettings5** verfügt auch über die folgenden Typen von Membern:
+Die **IMsRdpClientAdvancedSettings5-Schnittstelle** erbt von [**IMsRdpClientAdvancedSettings4**](imsrdpclientadvancedsettings4.md). **IMsRdpClientAdvancedSettings5** verfügt auch über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **IMsRdpClientAdvancedSettings5** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IMsRdpClientAdvancedSettings5-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Eigenschaft</th>
-<th style="text-align: left;">Zugriffstyp</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th >Eigenschaft</th>
+<th >Zugriffstyp</th>
+<th >Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-audioredirectionmode.md"><strong>Audioredirectionmode</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Der audioumleitungs Modus. Die <a href="imsrdpclientadvancedsettings5-audioredirectionmode.md"><strong>audioredirectionmode</strong></a> -Eigenschaft verfügt über die folgenden möglichen Werte.<br/>
-<dt><span id="AUDIO_MODE_REDIRECT___0"></span><span id="audio_mode_redirect___0"></span><strong>AUDIO_MODE_REDIRECT 0</strong> (die Audioumleitung ist aktiviert, und die Option für die Umleitung wird &quot; auf diesen Computer übertragen &quot; . Dies ist der Standardmodus.)<br/> </dt> <dd></dd> <dt><span id="AUDIO_MODE_PLAY_ON_SERVER_1"></span><span id="audio_mode_play_on_server_1"></span><strong>AUDIO_MODE_PLAY_ON_SERVER 1</strong> (die Audioumleitung ist aktiviert, und die Option ist &quot; auf dem Remote Computer belassen &quot; . Die &quot; Option auf Remote Computer belassen &quot; wird nur unterstützt, wenn eine Remote Verbindung mit einem Host Computer hergestellt wird, auf dem Windows Vista ausgeführt wird. Wenn die Verbindung mit einem Host Computer hergestellt wird, auf dem Windows Server 2008 ausgeführt wird, wird die Option &quot; auf dem Remote Computer belassen &quot; nicht wieder &quot; geben geändert &quot; .)<br/> </dt> <dd></dd> <dt><span id="AUDIO_MODE_NONE_2"></span><span id="audio_mode_none_2"></span><strong>AUDIO_MODE_NONE 2</strong> (die Audioumleitung ist aktiviert, und der Modus ist &quot; nicht wiedergeben &quot; .)<br/> </dt> <dd></dd> </dl></td>
+<td ><a href="imsrdpclientadvancedsettings5-audioredirectionmode.md"><strong>AudioRedirectionMode</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Der Audioumleitungsmodus. Die <a href="imsrdpclientadvancedsettings5-audioredirectionmode.md"><strong>AudioRedirectionMode-Eigenschaft</strong></a> verfügt über die folgenden möglichen Werte.<br/>
+<dt><span id="AUDIO_MODE_REDIRECT___0"></span><span id="audio_mode_redirect___0"></span><strong>AUDIO_MODE_REDIRECT 0</strong> (audio redirection is enabled and the option for redirection is &quot; Bring to this computer &quot; . Dies ist der Standardmodus.)<br/> </dt> <dd></dd> <dt><span id="AUDIO_MODE_PLAY_ON_SERVER_1"></span><span id="audio_mode_play_on_server_1"></span><strong>AUDIO_MODE_PLAY_ON_SERVER 1</strong> (audio redirection is enabled and the option is &quot; Leave at remote computer &quot; . Die &quot; Option Auf Remotecomputer verlassen wird nur unterstützt, wenn eine &quot; Remoteverbindung mit einem Hostcomputer hergestellt wird, auf dem Windows Vista ausgeführt wird. Wenn die Verbindung mit einem Hostcomputer besteht, auf dem Windows Server 2008 ausgeführt wird, wird die Option Auf Remotecomputer verlassen &quot; in Nicht wiedergeben &quot; &quot; &quot; geändert.)<br/> </dt> <dd></dd> <dt><span id="AUDIO_MODE_NONE_2"></span><span id="audio_mode_none_2"></span><strong>AUDIO_MODE_NONE 2</strong> (Die Audioumleitung ist aktiviert, und der Modus ist &quot; Nicht &quot; wiedergeben.)<br/> </dt> <dd></dd> </dl></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-bitmapvirtualcache32bppsize.md"><strong>BitmapVirtualCache32BppSize</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt die Größe der virtuellen Cachedatei für bpp-Bitmaps (32 Bits pro Pixel) an. Der Höchstwert beträgt 48 Megabyte (MB).<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-bitmapvirtualcache32bppsize.md"><strong>BitmapVirtualCache32BppSize</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt die Größe der virtuellen Cachedatei für Bitmaps mit 32 Bits pro Pixel (bpp) an. Der Maximalwert beträgt 48 Megabyte (MB).<br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-connectionbarshowpinbutton.md"><strong>Connectionbarshowpinbutton</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob die PIN-Schaltfläche auf der Verbindungs Leiste angezeigt werden soll. Standardmäßig ist der Wert <strong>true</strong>.<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-connectionbarshowpinbutton.md"><strong>ConnectionBarShowPinButton</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt an, ob die Stecknadelschaltfläche auf der Verbindungsleiste angezeigt werden soll. Standardmäßig ist der Wert <strong>TRUE.</strong><br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-publicmode.md"><strong>Publicmode</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob der öffentliche Modus aktiviert oder deaktiviert werden soll. Der öffentliche Modus ist standardmäßig auf <strong>false</strong>festgelegt.<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-publicmode.md"><strong>PublicMode</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt an, ob der öffentliche Modus aktiviert oder deaktiviert werden soll. Standardmäßig ist der öffentliche Modus auf <strong>FALSE</strong>festgelegt.<br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-redirectclipboard.md"><strong>Redirectclipboard</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob die Umleitung der Zwischenablage aktiviert oder deaktiviert werden soll. Standardmäßig ist der Umleitungs Modus für die Zwischenablage auf <strong>true</strong> (aktiviert) festgelegt.<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-redirectclipboard.md"><strong>RedirectClipboard</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt an, ob die Umleitung in der Zwischenablage aktiviert oder deaktiviert werden soll. Standardmäßig ist der Zwischenablageumleitungsmodus auf <strong>TRUE</strong> (aktiviert) festgelegt.<br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-redirectdevices.md"><strong>Redirectdevices</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob umgeleitete Geräte aktiviert oder deaktiviert werden sollen. Standardmäßig ist der Modus für umgeleitete Geräte auf <strong>false</strong>festgelegt.<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-redirectdevices.md"><strong>RedirectDevices</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt an, ob umgeleitete Geräte aktiviert oder deaktiviert werden sollen. Standardmäßig ist der Modus für umgeleitete Geräte auf <strong>FALSE</strong>festgelegt.<br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="imsrdpclientadvancedsettings5-redirectposdevices.md"><strong>Redirectposdevices</strong></a><br/></td>
-<td style="text-align: left;">Lesen/Schreiben<br/></td>
-<td style="text-align: left;">Gibt an, ob die Dienst Punkte, die umgeleitet werden sollen, aktiviert oder deaktiviert werden sollen. Standardmäßig ist der Modus für umgeleitete Geräte des Dienstanbieter auf <strong>false</strong>festgelegt.<br/></td>
+<td ><a href="imsrdpclientadvancedsettings5-redirectposdevices.md"><strong>RedirectPOSDevices</strong></a><br/></td>
+<td >Lesen/Schreiben<br/></td>
+<td >Gibt an, ob umgeleitete Point of Service-Geräte aktiviert oder deaktiviert werden sollen. Standardmäßig ist der Modus für umgeleitete Point of Service-Geräte auf <strong>FALSE</strong>festgelegt.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -98,7 +98,7 @@ Die **IMsRdpClientAdvancedSettings5** -Schnittstelle verfügt über diese Eigens
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, wobei jede neue Schnittstelle alle Methoden und Eigenschaften der vorherigen Schnittstellen erbt:
 
@@ -106,7 +106,7 @@ Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, wobei je
 -   [**IMsRdpClientAdvancedSettings7**](imsrdpclientadvancedsettings7.md)
 -   [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
@@ -120,7 +120,7 @@ Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, wobei je
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
@@ -133,13 +133,13 @@ Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, wobei je
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> <dt>
 
-[Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
+[Remotedesktop-Webverbindung-Referenz](remote-desktop-web-connection-reference.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getmedianame-Methode ruft den Namen der Quelldatei ab, die durch dieses Quell Objekt dargestellt wird.
+description: Die GetMediaName-Methode ruft den Namen der Quelldatei ab, die durch dieses Quellobjekt dargestellt wird.
 ms.assetid: 6f468628-10e1-4746-9c3a-6dae9aa3f6ad
-title: 'Iamtimelinesrc:: getmedianame-Methode (qedit. h)'
+title: IAMTimelineSrc::GetMediaName-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 3727d57371e5c7bab4f9d693a247b6b62a3ada17
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9919e89c61a07f9dd4c539bfb2bd04cbaefde1be3f06eae501a1c03c8df285bc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131090"
 ---
-# <a name="iamtimelinesrcgetmedianame-method"></a>Iamtimelinesrc:: getmedianame-Methode
+# <a name="iamtimelinesrcgetmedianame-method"></a>IAMTimelineSrc::GetMediaName-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetMediaName` Methode ruft den Namen der Quelldatei ab, die durch dieses Quell Objekt dargestellt wird.
+Die -Methode ruft den Namen der Quelldatei ab, `GetMediaName` die durch dieses Quellobjekt dargestellt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetMediaName(
 
 <dl> <dt>
 
-*PVal* \[ Out, retval\]
+*pVal* \[ out, retval\]
 </dt> <dd>
 
 Empfängt den Namen der Datei.
@@ -54,19 +54,19 @@ Empfängt den Namen der Datei.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFreeString** aufzurufen, um den Arbeitsspeicher freizugeben.
+Die -Methode belegt Arbeitsspeicher für die Zeichenfolge. Die Anwendung muss **SysFreeString** aufrufen, um den Arbeitsspeicher freizugeben.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFr
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Die-Methode ordnet Speicher für die Zeichenfolge zu. Die Anwendung muss **SysFr
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

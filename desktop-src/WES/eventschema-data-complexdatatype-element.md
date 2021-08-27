@@ -1,9 +1,9 @@
 ---
-title: Data (complexdatatype)-Element
-description: Die Liste der Datenelemente in der-Struktur. Die Liste der Elemente wird in derselben Reihenfolge wie in der Vorlage definiert.
+title: Data(ComplexDataType)-Element
+description: Die Liste der Datenelemente in der Struktur. Die Liste der Elemente hat die gleiche Reihenfolge wie in der Vorlage definiert.
 ms.assetid: f2d7c2e4-0daa-4413-b23b-e1fd70dc4fc1
 keywords:
-- Datenelement-Ereignisprotokoll
+- Datenelement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 34481c7cc784a20cb59a146c5f23cf21d8c51b3e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8425b4ec69fc596e510554c589c58247837476389d1b7dbb9ab39de2dfbc7ff8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124240"
 ---
-# <a name="data-complexdatatype-element"></a>Data (complexdatatype)-Element
+# <a name="data-complexdatatype-element"></a>Data(ComplexDataType)-Element
 
-Die Liste der Datenelemente in der-Struktur. Die Liste der Elemente wird in derselben Reihenfolge wie in der Vorlage definiert.
+Die Liste der Datenelemente in der Struktur. Die Liste der Elemente hat die gleiche Reihenfolge wie in der Vorlage definiert.
 
 ``` syntax
 <xs:element name="Data"
@@ -30,7 +30,7 @@ Die Liste der Datenelemente in der-Struktur. Die Liste der Elemente wird in ders
  />
 ```
 
-Das **Data** -Element wird durch den komplexen [**complexdatatype**](eventschema-complexdatatype-complextype.md) -Typ definiert.
+Das **Data-Element** wird durch den komplexen [**ComplexDataType-Typ**](eventschema-complexdatatype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Data** -Element wird durch den komplexen [**complexdatatype**](eventschema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -50,7 +50,7 @@ Das **Data** -Element wird durch den komplexen [**complexdatatype**](eventschema
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Complexdata (eventdatatype)**](eventschema-complexdata-eventdatatype-element.md)
+[**ComplexData (EventDataType)**](eventschema-complexdata-eventdatatype-element.md)
 </dt> </dl>
 
  

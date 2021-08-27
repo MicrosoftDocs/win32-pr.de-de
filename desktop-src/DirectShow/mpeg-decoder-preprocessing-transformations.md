@@ -4,12 +4,12 @@ ms.assetid: c7ae0137-0d02-46da-9532-738d805e327d
 title: Vorverarbeitungstransformationen für MPEG-Decoder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 82d7bcf8eeda8062606ce0046a55e34d3c2d90fe
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: d0c05ecf25bedb2a90af239715a3becb9a0adc198ed315d2b2c4deea4b380711
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075810"
 ---
 # <a name="mpeg-decoder-preprocessing-transformations"></a>Vorverarbeitungstransformationen für MPEG-Decoder
 
@@ -21,11 +21,11 @@ Im Folgenden finden Sie eine Beschreibung der korrekten Anzeige der einzelnen Mo
 
 -   **Widescreen:** Das Quellvideo wurde in den größten 16x9-Bereich des Ausgabefensters gestreckt. Die Highlights sind relativ zum Inneren des Bereichs 16x9. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 16x9-Bereich zu erhalten.
 -   **Schwenkscan:** Verwenden Sie aus dem 16x9-Video den horizontalen Offset, der im MPEG2-Stream bereitgestellt wird, um ein 4x3-Unterfenster zu extrahieren. Platzieren Sie das 4x3-Unterfenster im größten 4x3-Bereich des Ausgabeclientfensters. Die Koordinaten der Hervorhebung sind relativ zum 4x3-Ausgabefenster und haben keine Beziehung zum 16x9-Quellvideo. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 4x3-Bereich zu erhalten.
--   **Letterbox:** Berechnen Sie den größten 4x3-Bereich des Ausgabefensters. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 4x3-Bereich zu erhalten. Das anamorphe 4x3-Quellvideo (das ein 16x9-Bild darstellt) wird im größten 16x9-Unterfenster innerhalb des Bereichs 4x3 platziert. Am oberen und unteren Rand des Unterfensters sollten schwarze Balken hinzugefügt werden, um einen 16x9-Bereich zu erhalten. Die Koordinaten der Hervorhebung sind relativ zum 4x3-Bereich und haben keine Beziehung zum 16x9-Quellvideo. Es ist möglich, dass ein Datenträger eine Hervorhebung angibt, die sich außerhalb des Bereichs 16 x 9 befindet (aber immer noch im 4x3-Fenster). Bei 4x3-Videos wird das Video im größten 4x3-Ausgabebereich des Ausgabeclientfensters platziert. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 4x3-Bereich beizubehalten.
+-   **Letterbox:** Berechnen Sie den größten 4x3-Bereich des Ausgabefensters. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 4x3-Bereich zu erhalten. Das anamorphe 4x3-Quellvideo (das ein 16x9-Bild darstellt) wird im größten 16x9-Unterfenster innerhalb des Bereichs 4x3 platziert. Am oberen und unteren Rand des Unterfensters sollten schwarze Balken hinzugefügt werden, um einen 16x9-Bereich zu erhalten. Die Koordinaten der Hervorhebung sind relativ zum Bereich 4x3 und haben keine Beziehung zum 16x9-Quellvideo. Es ist möglich, dass ein Datenträger eine Hervorhebung außerhalb des 16x9-Bereichs (aber immer noch im 4x3-Fenster) ankn. Für 4x3-Videos wird das Video im größten 4x3-Ausgabebereich des Ausgabeclientfensters platziert. Schwarze Balken sollten entweder am oberen und unteren Rand oder an den Seiten hinzugefügt werden, um einen 4x3-Bereich zu erhalten.
 
-**MPEG-Vorverarbeitung mit dvd navigator und VMR**
+**MPEG-Vorverarbeitung mit dem DVD-Navigator und VMR**
 
-Derzeit wird dem Decoder ein FORMAT \_ MPEG2 \_ VIDEO-Medientyp übergeben (dessen Formatblock auf eine [**MPEG2VIDEOINFO-Struktur**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-mpeg2videoinfo) zeigt). An den Ausgabepins erzeugt der Decoder einen \_ Format VideoInfo2-Medientyp, dessen Formatblock auf eine [**VIDEOINFOHEADER2-Struktur**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) zeigt. Das **dwReserved-Feld** der Struktur wurde in **dwControls-Flags** umbenannt.
+Derzeit wird dem Decoder ein FORMAT \_ MPEG2 VIDEO-Medientyp \_ übergeben (dessen Formatblock auf eine [**MPEG2VIDEOINFO-Struktur verweist).**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-mpeg2videoinfo) Auf den Ausgabepins erzeugt der Decoder einen Format VideoInfo2-Medientyp, dessen Formatblock \_ auf eine [**VIDEOINFOHEADER2-Struktur zeigt.**](/previous-versions/windows/desktop/api/dvdmedia/ns-dvdmedia-videoinfoheader2) Das **dwReserved-Feld der** Struktur wurde in **dwControls-Flags** umbenannt.
 
 Der **dwControlFlags-Member** enthält jetzt die neuen Bits.
 
@@ -33,42 +33,42 @@ Der **dwControlFlags-Member** enthält jetzt die neuen Bits.
 
 | Bezeichnung | Wert |
 |--------------------------|------------|
-| AMCONTROL \_ VERWENDET          | 0x00000001 |
+| AMCONTROL \_ USED          | 0x00000001 |
 | AMCONTROL \_ PAD \_ TO \_ 4x3  | 0x00000002 |
-| AMCONTROL \_ PAD \_ TO \_ 16x9 | 0x00000004 |
+| AMCONTROL \_ PAD \_ BIS \_ 16x9 | 0x00000004 |
 
 
 
  
 
-AMCONTROL \_ USED wird verwendet, um zu testen, ob diese neuen Flags unterstützt werden. Ein Quellfilter sollte das AMCONTROL \_ USED-Flag festlegen und prüfen, ob QueryAccept(MediaType) auf dem Downstreampin erfolgreich ausgeführt wird. Wenn sie abgelehnt wird, können die AMCONTROL-Flags nicht verwendet werden, und dwReserved1 muss auf 0 festgelegt werden.
+AMCONTROL \_ USED wird verwendet, um zu testen, ob diese neuen Flags unterstützt werden. Ein Quellfilter sollte das AMCONTROL USED-Flag festlegen und sehen, ob \_ QueryAccept(MediaType) auf dem Downstreampin erfolgreich ist. Wenn sie abgelehnt wird, können die AMCONTROL-Flags nicht verwendet werden, und dwReserved1 muss auf 0 festgelegt werden.
 
-AMCONTROL \_ PAD \_ TO \_ 4x3 gibt an, dass das Bild aufgefüllt und in einem 4x3-Bereich angezeigt werden soll.
+AMCONTROL PAD TO 4x3 gibt an, dass das Bild aufpaddiert und in einem \_ \_ \_ 4x3-Bereich angezeigt werden soll.
 
-AMCONTROL \_ PAD \_ TO \_ 16x9 gibt an, dass das Bild aufgefüllt und in einem 16x9-Bereich angezeigt werden soll.
+AMCONTROL PAD TO 16x9 gibt an, dass das Bild aufpaddiert und in einem \_ \_ \_ 16x9-Bereich angezeigt werden soll.
 
-Der Decoder sollte die Bits entweder blind kopieren oder verarbeiten. Wenn der Decoder das Letterboxing selbst ausführt, muss er das Pixelseitenverhältnis ändern, das Bild aufpadieren und die entsprechenden \_ \* AMCONTROL-Bits entfernen.
+Der Decoder sollte die Bits entweder blind kopieren oder verarbeiten. Wenn der Decoder das Letterboxing selbst ausführt, muss er das Pixel-Seitenverhältnis ändern, das Bild aufhängen und die entsprechenden AMCONTROL-Bits \_ \* entfernen.
 
 MPEG2VIDEOINFO.dwFlags enthält jetzt drei Flags zum Steuern der Anzeige des Inhalts:
 
 -   `AMMPEG2_DoPanScan (0x00000001)`: Wenn dieses Flag festgelegt ist, sollte der MPEG-2-Videodecoder das Ausgabebild basierend auf Schwenkscanvektoren in der Bildanzeigeerweiterung zuschneiden und das Seitenverhältnis des Bilds in \_ \_ 4x3 ändern. Die VMR sollte kein 16x9-Beispiel mit diesem Flag erhalten. Eine einfache Implementierung kann das Quellrechteck ändern, um einen 540-breiten Quellbereich mit einem linken Rand anzugeben, der dem Anzeigeoffset in der \_ Bildanzeigeerweiterung \_ entspricht.
--   `AMMPEG2_LetterboxAnalogOut (0x00000020)`: Wenn ein Hardwaredecoder diesen Stream in einer Videoausgabe anzeigt (in der Regel ein SVIDEO-Connector auf der Karte), sollte er die Regeln zum Anzeigen eines 16x9-Beispiels auf einem 4x3-Display anwenden.
+-   `AMMPEG2_LetterboxAnalogOut (0x00000020)`: Wenn ein Hardwaredecoder diesen Datenstrom in einer Videoausgabe anzeigt (in der Regel ein SVIDEO-Connector auf der Karte), sollte er die Regeln zum Anzeigen eines 16x9-Beispiels auf einem 4x3-Display anwenden.
 
     Ein Softwaredecoder (oder ein Hardwaredecoder, der die Ausgabe erzeugt, die an die VMR gesendet wird) verfügt über zwei Optionen bei der Verarbeitung von Images:
 
     1.  Ignorieren Sie dieses Flag, und übergeben Sie den VideoInfoHeader2-Inhalt an die VMR (das AMCONTROL \_ PAD \_ TO 4x3-Flag wird bereits vom \_ [DVD-Navigator](dvd-navigator-filter.md) im Beispiel festgelegt). VmR findet ein 16x9-Videobeispiel mit dem Flag AMCONTROL PAD TO 4x3 und einem \_ \_ \_ 4x3-Unterbildstream. Die Anwendung muss festlegen, dass die ausgabenormierten Zielrechtecke der beiden Datenströme die gleiche Breite haben.
-    2.  Konvertieren Sie den anamorphen Stream in ein 4x3-Bild, indem Sie den oberen und unteren Rand des Bilds aufpaddieren und das Seitenverhältnis des Bilds auf 4x3 festlegen (siehe Letterbox oben) und das AMCONTROL \_ PAD \_ TO \_ 4x3 Bit aus VIDEOINFOHEADER2 entfernen.
+    2.  Konvertieren Sie den anamorphen Stream in ein 4x3-Bild, indem Sie den oberen und unteren Rand des Bilds aufpaddieren und das Bild-Seitenverhältnis auf 4x3 festlegen (siehe Letterbox oben) und das AMCONTROL \_ PAD \_ TO \_ 4x3 Bit aus VIDEOINFOHEADER2 entfernen.
 
-    DirectXVA-Decoder, die video- und subpicture-Streams mischen, müssen dieses Flag verarbeiten. Wenn die Hardware das gemischten Unterbild nicht skalieren kann, sollte der Decoder einen separaten Unterbilddatenstrom erzeugen, damit die VMR mit dem Video kombiniert wird.
+    DirectXVA-Decoder, die video- und subpicture-Streams mischen, müssen dieses Flag verarbeiten. Wenn die Hardware das gemischten Unterbild nicht skalieren kann, sollte der Decoder einen separaten Unterbilddatenstrom erzeugen, damit die VMR mit dem Video kombiniert werden kann.
 
 -   `AMMPEG2_WidescreenAnalogOut (0x00000200)`: Wenn ein Hardwaredecoder diesen Datenstrom in einer Videoausgabe anzeigt (in der Regel ein SVIDEO-Connector auf der Karte), sollte ein 16x9-Display (anamorph) angenommen werden.
 
-    Ein Softwaredecoder (oder ein Hardwaredecoder, der die Ausgabe erzeugt, die an die VMR gesendet wird) verfügt über zwei Optionen bei der Verarbeitung eines anamorphen Bilds:
+    Ein Softwaredecoder (oder ein Hardwaredecoder, der die Ausgabe erzeugt, die an den virtuellen Computer gesendet wird) verfügt über zwei Optionen bei der Verarbeitung eines anamorphen Bilds:
 
-    1.  Ignorieren Sie dieses Flag, und kopieren Sie den VideoInfoHeader2-Inhalt auf die VMR. Die VMR padt 4x3-Images auf 16 x 9, wenn das \_ AMCONTROL-PAD \_ auf \_ 16 x 9 festgelegt ist.
-    2.  Auflisten des Ausgabebilds auf ein 16x9-Bild und Entfernen des \_ AMCONTROL-PAD \_ auf \_ 16 x 9 Bit.
+    1.  Ignorieren Sie dieses Flag, und kopieren Sie den VideoInfoHeader2-Inhalt in die VMR. Der VMR padt 4x3 Images auf 16x9, wenn das AMCONTROL \_ PAD \_ TO \_ 16x9 festgelegt ist.
+    2.  Pad the output image to a 16x9 image and remove the AMCONTROL \_ PAD \_ TO \_ 16x9 bit.
 
-Die meisten Decoder sollten **GetMediaType** verwenden, um eine Medienänderung am Eingabepin zu erkennen und den Inhalt von **VIDEOINFOHEADER2** (in **MPEG2INFOHEADER** enthalten) an den Ausgabepin zu kopieren. Sie verarbeiten wahrscheinlich nur das PanScan-Bit.
+Die meisten Decoder sollten **GetMediaType** verwenden, um eine Medienänderung am Eingabepin zu erkennen und den **VIDEOINFOHEADER2-Inhalt** (im **MPEG2INFOHEADER** enthalten) auf den Ausgabepin zu kopieren. Wahrscheinlich werden sie nur das PanScan-Bit verarbeiten.
 
 Der folgende Beispielcode zeigt, wie der **VIDEOINFOHEADER2-Inhalt** von einem Eingabepin in einen Ausgabepin kopiert wird.
 

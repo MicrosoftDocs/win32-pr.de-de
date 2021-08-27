@@ -12,18 +12,18 @@ keywords:
 - Steuerelementtypen, AppBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7067e73d9f38ba62893d6ba2746f8f84c846daf1a90f63b6e72bd09337f47a1e
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 3fc8cf562b125267e9b35239e8490f11ed6ae830
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118826445"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472886"
 ---
 # <a name="appbar-control-type"></a>AppBar-Steuerelementtyp
 
 Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den **AppBar-Steuerelementtyp.**
 
-Eine App-Leiste ist ein Benutzeroberflächenelement, das dem Benutzer Navigation, Befehle und Tools präsentiert. Für Windows Store Apps können App-Balken für Apps angezeigt werden, indem Sie Windows+Z drücken.
+Eine App-Leiste ist ein Benutzeroberflächenelement, das dem Benutzer Navigation, Befehle und Tools präsentiert. Für Windows Store Apps können App-Balken für Apps angezeigt werden, indem Sie Windows+ Z drücken.
 
 In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **AppBar-Steuerelementtyp** definiert.
 
@@ -41,36 +41,11 @@ Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht d
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>AppBar
-<ul>
-<li>Schaltfläche (0 oder viele)</li>
-<li>Andere Steuerelemente (0 oder viele)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>Nicht zutreffend
-<ul>
-<li>Schaltfläche (0 oder viele)</li>
-<li>Andere Steuerelemente (0 oder viele)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>AppBar<ul><li>Schaltfläche (0 oder viele)</li><li>Andere Steuerelemente (0 oder viele)</li></ul></li></ul> | <ul><li>Nicht zutreffend<ul><li>Schaltfläche (0 oder viele)</li><li>Andere Steuerelemente (0 oder viele)</li></ul></li></ul> | 
+
 
 
 
@@ -92,7 +67,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführ
 | [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen. Steuerelemente in der App-Leiste können in der Regel den Tastaturfokus haben.                                                                                    |
 | [**UIA \_ IsOffscreenPropertyId**](uiauto-automation-element-propids.md)                   | Siehe Hinweise. | Der Wert dieser Eigenschaft ist hängt davon ab, ob das Steuerelement auf dem Bildschirm angezeigt werden kann.                                                                                                                                        |
 | [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | Null       | App-Leistensteuerelemente verfügen in der Regel nicht über eine Bezeichnung.                                                                                                                                                                               |
-| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **AppBar-Steuerelementtyp** entspricht. Der Standardwert ist "app bar" für en-US oder English (USA).                                                                                         |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise. | Lokalisierte Zeichenfolge, die dem **AppBar-Steuerelementtyp** entspricht. Der Standardwert ist "App-Leiste" für en-US oder Englisch (USA).                                                                                         |
 | [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise. | Das App-Leisten-Steuerelement benötigt keinen Namen, es sei denn, eine Anwendung verfügt über mehr als eine App-Leiste. Wenn eine Anwendung mehrere App-Leisten auflistet, verwenden Sie diese Eigenschaft, um verschiedene Namen verfügbar zu machen, z. B. "Top" oder "Bottom". |
 
 
@@ -101,7 +76,7 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführ
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die App-Balkensteuerelemente unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die von App-Balkensteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 

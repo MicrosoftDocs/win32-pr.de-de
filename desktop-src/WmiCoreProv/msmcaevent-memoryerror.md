@@ -1,5 +1,5 @@
 ---
-description: Stellt ein MCA-Speicherfehler Ereignis dar. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+description: Stellt ein McA-Arbeitsspeicherfehlerereignis (Machine Check Architecture) dar. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 ms.assetid: 0db1d526-e2c3-4e48-90c8-cbcd9121040e
 title: MSMCAEvent_MemoryError-Klasse
 ms.topic: reference
@@ -39,18 +39,18 @@ api_type:
 - DllExport
 api_location:
 - Wmiprov.dll
-ms.openlocfilehash: 8dce82b8fa7a87676c34a9c6f26f43e4db10e227
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f93ac9ddda978a56ceb0e258766c2e60703acc94e92c551e673a9294e2cb984c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120120980"
 ---
-# <a name="msmcaevent_memoryerror-class"></a>Msmcaevent \_ MemoryError-Klasse
+# <a name="msmcaevent_memoryerror-class"></a>MSMCAEvent \_ MemoryError-Klasse
 
-Die **msmcaevent \_ MemoryError** -Klasse stellt ein MCA-Speicherfehler Ereignis dar. Diese Klasse ist nur in 64-Bit-Windows-Systemen verfügbar.
+Die **MSMCAEvent \_ MemoryError-Klasse** stellt ein McA-Arbeitsspeicherfehlerereignis (Machine Check Architecture) dar. Diese Klasse ist nur in 64-Bit-Systemen Windows verfügbar.
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -88,33 +88,33 @@ class MSMCAEvent_MemoryError : WMIEvent
 
 ## <a name="members"></a>Member
 
-Die **msmcaevent \_ MemoryError** -Klasse verfügt über diese Typen von Membern:
+Die **MSMCAEvent \_ MemoryError-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **msmcaevent \_ MemoryError** -Klasse verfügt über diese Eigenschaften.
+Die **MSMCAEvent \_ MemoryError-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Aktiv**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True**, wenn diese Instanz der-Klasse aktiv ist. andernfalls **false**.
+**TRUE**, wenn diese Instanz der -Klasse aktiv ist; andernfalls **FALSE**.
 
 </dd> <dt>
 
-**Additionalerrors**
+**AdditionalErrors**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -124,52 +124,52 @@ Anzahl zusätzlicher Fehler im MCA-Datensatz.
 
 </dd> <dt>
 
-**\_Busspezifische \_ Daten**
+**BUSSPEZIFISCHE \_ \_ DATEN**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-OEM-spezifische, Bus abhängige Daten.
+OEM-spezifische, busabhängige Daten.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**CPU**
+**Cpu**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, dem dem ersten Prozessor die Zahl 0 zugewiesen ist, dem zweiten Prozessor die Zahl 1 zugewiesen wird usw.
+CPU, die den Fehler gemeldet hat. Diese Eigenschaft gilt nur für ein Multiprozessorsystem, in dem dem ersten Prozessor die Zahl 0, dem zweiten Prozessor die Zahl 1 zugewiesen wird, und so weiter.
 
 </dd> <dt>
 
-**Errorschwere Grad**
+**ErrorSeverity**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Schweregrad des gemeldeten Fehlers.
+Schweregrad des gemeldeten Fehlers.
 
 
 
 | Wert                                                                                                | Bedeutung                |
 |------------------------------------------------------------------------------------------------------|------------------------|
 | <span id="0"></span><dl> <dt>**0**</dt> </dl> | Wiederherstellbar<br/> |
-| <span id="1"></span><dl> <dt>**1**</dt> </dl> | FAT<br/>       |
-| <span id="2"></span><dl> <dt>**2**</dt> </dl> | KORRIGIER barer<br/> |
+| <span id="1"></span><dl> <dt>**1**</dt> </dl> | Schwerwiegend<br/>       |
+| <span id="2"></span><dl> <dt>**2**</dt> </dl> | Korrigierbar<br/> |
 
 
 
@@ -189,320 +189,320 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Eindeutiger Bezeichner dieser Instanz der Klasse.
+Eindeutiger Bezeichner dieser Instanz der -Klasse.
 
 </dd> <dt>
 
-**Logtoeventlog**
+**LogToEventlog**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert NULL ist, wird dieses Ereignis nicht im System Ereignisprotokoll protokolliert.
+Wenn 0 (null) ist, wird dieses Ereignis nicht im Systemereignisprotokoll protokolliert.
 
 </dd> <dt>
 
-**Arbeitsspeicher- \_ Bank**
+**MEM \_ BANK**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das Modul oder die Rang Nummer des Speicherfehler Speicher Orts.
+Die Modul- oder RANK-Nummer des Speicherfehlerspeicherorts.
 
 </dd> <dt>
 
-**Arbeitsspeicher- \_ \_ Bitposition**
+**\_ \_ MEM-BITPOSITION**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Bitposition im Arbeitsspeicher Wort, die den Fehler enthält.
+Bitposition im Speicherwort, das den Fehler enthält.
 
 </dd> <dt>
 
-**Arbeitsspeicher \_ Karte**
+**\_MEM-KARTE**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Kartennummer des Speicherfehler Speicher Orts.
+Kartennummer der Speicherfehlerposition.
 
 </dd> <dt>
 
-**Arbeitsspeicher \_ Spalte**
+**\_MEM-SPALTE**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Spaltennummer des Speicherfehler Speicher Orts.
+Spaltennummer der Speicherfehlerposition.
 
 </dd> <dt>
 
-**Arbeits \_ Speichergerät**
+**\_MEM-GERÄT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gerätenummer des Speicherfehler Speicher Orts.
+Gerätenummer des Speicherfehlerspeicherorts.
 
 </dd> <dt>
 
-**Status des Arbeitsspeicher \_ Fehlers \_**
+**\_ \_ MEM-FEHLERSTATUS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Fehlerstatus des Speichers.
+Arbeitsspeicherfehlerstatus.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**Arbeitsspeicher \_ Modul**
+**\_MEM-MODUL**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Modul oder Rang Nummer des Speicherfehler Speicher Orts.
+Modul- oder Rangnummer des Speicherfehlerspeicherorts.
 
 </dd> <dt>
 
-**\_Knoten "Knoten"**
+**\_MEM-KNOTEN**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Knoten, der den Arbeitsspeicher Fehler enthält. Diese Eigenschaft ist nur in einem System mit mehreren Knoten anwendbar. Diese Eigenschaft ist Anbieter spezifisch.
+Knoten, der den Speicherfehler enthält. Diese Eigenschaft gilt nur in einem System mit mehreren Knoten. Diese Eigenschaft ist herstellerspezifisch.
 
 </dd> <dt>
 
-**physische Arbeitsspeicher- \_ \_ addr**
+**MEM \_ PHYSICAL \_ ADDR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die physische Adresse des Arbeitsspeicher Fehlers.
+Physische Adresse des Arbeitsspeicherfehlers.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**physische Arbeitsspeicher \_ \_ Maske**
+**MEM \_ PHYSICAL \_ MASK**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gültige Adress Bits in der physischen 64-Bit-Adresse des Arbeitsspeicher Fehlers.
+Gültige Adressbits in der physischen 64-Bit-Adresse des Speicherfehlers.
 
 > [!Note]  
-> Die physische Maske gibt die Granularität der physischen Adresse an. Die physische Adresse des Arbeitsspeicher Fehlers hängt von den Hardware Implementierungs Faktoren ab.
+> Die physische Maske gibt die Granularität der physischen Adresse an. Die physische Adresse des Arbeitsspeicherfehlers hängt von Hardwareimplementierungsfaktoren ab.
 
  
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**Arbeitsspeicher \_ Zeile**
+**MEM \_ ROW**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Zeilennummer des Speicherfehler Speicher Orts.
+Zeilennummer des Speicherorts für Speicherfehler.
 
 </dd> <dt>
 
-**Rawrecord**
+**RawRecord**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Bytearray, das den unformatierten Fehler Daten Satz enthält, wie Windows von der System Abstraktion Layer (SAL) dargestellt wird. Die Anzahl der Elemente im Array wird durch die **size** -Eigenschaft angegeben.
+Bytearray, das den unformatierten Fehlerdatensatz enthält, der von der Systemabstraktionsschicht (SAL) Windows wird. Die Anzahl der Elemente im Array wird von der **Size-Eigenschaft** angegeben.
 
 </dd> <dt>
 
-**Datensatz**
+**Recordid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Datensatz-ID des Fehler Datensatzes für diesen Fehler.
+Datensatzbezeichner des Fehlerdatensatzes für diesen Fehler.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**\_RequestId-ID**
+**\_ANFORDERER-ID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Hardware Adresse des Geräts oder der Komponente, von der die Transaktion initiiert wird.
+Hardwareadresse des Geräts oder der Komponente, das bzw. die die Transaktion initiiert.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**Responder- \_ ID**
+**\_ANTWORT-ID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Hardware Adresse des Responders für die Transaktion.
+Hardwareadresse des Antwortstellers für die Transaktion.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
 **Größe**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Größe des unformatierten Fehler Datensatzes in Byte.
+Größe des unformatierten Fehlerdatensatzes in Bytes.
 
 </dd> <dt>
 
-**Ziel- \_ ID**
+**\_ZIEL-ID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Hardware Adresse des beabsichtigten Ziels der Transaktion.
+Hardwareadresse des beabsichtigten Ziels der Transaktion.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Typ der Ereignisprotokoll Meldung. Diese Meldungen entsprechen den Ereignisprotokoll-Nachrichten Codes, die zum Einfügen von Ereignisprotokoll Meldungen vom Windows-Ereignisprotokoll-Consumeranbieter verwendet werden, wenn ein Ereignis empfangen wird.
+Typ der Ereignisprotokollmeldung. Diese Nachrichten entsprechen den Ereignisprotokoll-Nachrichtencodes, die vom Windows Ereignisprotokoll-Consumeranbieter zum Einfügen von Ereignisprotokollmeldungen verwendet werden, wenn eines der Ereignisse empfangen wird.
 
 </dd> <dt>
 
-**Validierungs \_ Bits**
+**\_VALIDIERUNGSBITS**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Validierungs Bits zum Angeben der Gültigkeit der nachfolgenden Felder.
+Validierungsbits, die verwendet werden, um die Gültigkeit der nachfolgenden Felder anzugeben.
 
 
 
 | Werte                                                                                     | Bedeutung                                                 |
 |--------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| <dl> <dt>1 (0x1)</dt> </dl>         | Der Status des Arbeitsspeicher \_ Fehlers \_ ist gültig.<br/>                 |
-| <dl> <dt>2 (0x2)</dt> </dl>         | Die physische Arbeitsspeicher- \_ \_ addr ist gültig.<br/>                |
-| <dl> <dt>4 (0x4)</dt> </dl>         | Die "Mem \_ addr \_ Mask" ist gültig.<br/>                    |
-| <dl> <dt>8 (0x8)</dt> </dl>         | Der Arbeitsspeicher \_ Knoten ist gültig.<br/>                          |
-| <dl> <dt>16 (0x10)</dt> </dl>       | Die Arbeitsspeicher \_ Karte ist gültig.<br/>                          |
-| <dl> <dt>32 (0x20)</dt> </dl>       | Das Speicher \_ Modul ist gültig.<br/>                        |
-| <dl> <dt>64 (0x40)</dt> </dl>       | Die Arbeitsspeicher- \_ Bank ist gültig.<br/>                          |
-| <dl> <dt>128 (0x80)</dt> </dl>      | Das Arbeits \_ Speichergerät ist gültig.<br/>                        |
-| <dl> <dt>256 (0x100)</dt> </dl>     | Die Arbeitsspeicher \_ Zeile ist gültig.<br/>                           |
-| <dl> <dt>512 (0x200)</dt> </dl>     | Die Arbeitsspeicher \_ Spalte ist gültig.<br/>                        |
-| <dl> <dt>1024 (0x400)</dt> </dl>    | Die Arbeitsspeicher- \_ \_ Bitposition ist gültig.<br/>                 |
-| <dl> <dt>2048 (0x800)</dt> </dl>    | Die ID der Arbeitsspeicher \_ Plattform \_ \_ ist gültig.<br/>       |
-| <dl> <dt>4096 (0x1000)</dt> </dl>   | Die \_ Antwort-ID der Arbeitsspeicher Plattform \_ \_ ist gültig.<br/>       |
-| <dl> <dt>8192 (0x2000)</dt> </dl>   | Das Ziel der G4- \_ Plattform \_ ist gültig.<br/>              |
-| <dl> <dt>16384 (0x4000)</dt> </dl>  | Die \_ spezifischen Daten des G4-Platt Form \_ Busses \_ \_ sind gültig.<br/> |
-| <dl> <dt>32768 (0X8000)</dt> </dl>  | Die OEM-ID der Arbeitsspeicher \_ Plattform \_ \_ ist gültig.<br/>             |
-| <dl> <dt>65536 (0x10000)</dt> </dl> | Die \_ OEM-Datenstruktur der Arbeitsspeicher Plattform \_ \_ \_ ist gültig.<br/>   |
+| <dl> <dt>1 (0x1)</dt> </dl>         | MEM \_ ERROR STATUS ist \_ gültig.<br/>                 |
+| <dl> <dt>2 (0x2)</dt> </dl>         | MEM \_ PHYSICAL \_ ADDR ist gültig.<br/>                |
+| <dl> <dt>4 (0x4)</dt> </dl>         | MEM \_ ADDR \_ MASK ist gültig.<br/>                    |
+| <dl> <dt>8 (0x8)</dt> </dl>         | MEM \_ NODE ist gültig.<br/>                          |
+| <dl> <dt>16 (0x10)</dt> </dl>       | MEM \_ CARD ist gültig.<br/>                          |
+| <dl> <dt>32 (0x20)</dt> </dl>       | MEM \_ MODULE ist gültig.<br/>                        |
+| <dl> <dt>64 (0x40)</dt> </dl>       | MEM \_ BANK ist gültig.<br/>                          |
+| <dl> <dt>128 (0x80)</dt> </dl>      | MEM \_ DEVICE ist gültig.<br/>                        |
+| <dl> <dt>256 (0x100)</dt> </dl>     | MEM \_ ROW ist gültig.<br/>                           |
+| <dl> <dt>512 (0x200)</dt> </dl>     | MEM \_ COLUMN ist gültig.<br/>                        |
+| <dl> <dt>1024 (0x400)</dt> </dl>    | MEM \_ BIT POSITION ist \_ gültig.<br/>                 |
+| <dl> <dt>2048 (0x800)</dt> </dl>    | DIE MEM \_ PLATFORM \_ \_ REQUESTOR-ID ist gültig.<br/>       |
+| <dl> <dt>4096 (0x1000)</dt> </dl>   | DIE MEM \_ PLATFORM \_ \_ RESPONDER-ID ist gültig.<br/>       |
+| <dl> <dt>8192 (0x2000)</dt> </dl>   | MEM \_ PLATFORM TARGET ist \_ gültig.<br/>              |
+| <dl> <dt>16384 (0x4000)</dt> </dl>  | MEM \_ PLATFORM \_ \_ BUS-SPEZIFISCHE \_ DATEN sind gültig.<br/> |
+| <dl> <dt>32768 (0x8000)</dt> </dl>  | DIE MEM \_ \_ PLATFORM-OEM-ID \_ ist gültig.<br/>             |
+| <dl> <dt>65536 (0x10000)</dt> </dl> | MEM \_ PLATFORM OEM DATA \_ \_ \_ STRUCT ist gültig.<br/>   |
 
 
 
  
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/previous-versions//aa393262(v=vs.85)).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/previous-versions//aa393262(v=vs.85))
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **msmcaevent \_ MemoryError** -Klasse wird von [**wmievent**](wmievent.md)abgeleitet.
+Die **MSMCAEvent \_ MemoryError-Klasse** wird von [**WMIEvent**](wmievent.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -511,9 +511,9 @@ Die **msmcaevent \_ MemoryError** -Klasse wird von [**wmievent**](wmievent.md)ab
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
-| Namespace<br/>                | WMI-Stammdatei \\<br/>                                                                   |
-| MOF<br/>                      | <dl> <dt>WMI Core. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                         |
+| Namespace<br/>                | Root \\ wmi<br/>                                                                   |
+| MOF<br/>                      | <dl> <dt>Wmicore.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wmiprov.dll</dt> </dl> |
 
 

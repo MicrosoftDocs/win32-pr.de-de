@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentfixedddlexception-Konstruktor'
-title: Esentfixedddlexception-Konstruktor
+description: 'Weitere Informationen zu: EsentFixedDDLException-Konstruktor'
+title: EsentFixedDDLException-Konstruktor
 TOCTitle: 'EsentFixedDDLException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFixedDDLException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfixedddlexception.esentfixedddlexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b72e1620a88cd6805bebea4e3299e90128cdc2ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c502397025e24a5fac2e94a8efb64cdbf3e16dceeddad7ed558e98428880f457
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393797"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120065310"
 ---
-# <a name="esentfixedddlexception-constructor"></a>Esentfixedddlexception-Konstruktor
+# <a name="esentfixedddlexception-constructor"></a>EsentFixedDDLException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfixedddlexception-Klasse.
+Initialisiert eine neue Instanz der EsentFixedDDLException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,10 +54,10 @@ public EsentFixedDDLException()
 
 ## <a name="see-also"></a>Siehe auch
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentfixedddlexception-Klasse](./esentfixedddlexception-class.md)
+[EsentFixedDDLException-Klasse](./esentfixedddlexception-class.md)
 
-[Esentfixedddlexception-Elemente](./esentfixedddlexception-members.md)
+[EsentFixedDDLException-Member](./esentfixedddlexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

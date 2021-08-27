@@ -1,71 +1,71 @@
 ---
-title: Legacyauthenticationlevel
-description: Legt die Standard Authentifizierungs Ebene für Anwendungen fest, die CoInitializeSecurity nicht aufzurufen.
+title: LegacyAuthenticationLevel
+description: Legt die Standardauthentifizierungsebene für Anwendungen fest, die CoInitializeSecurity nicht aufrufen.
 ms.assetid: e14d2203-c84e-46af-befd-d82ef1936c9d
 keywords:
-- Legacyauthenticationlevel-Registrierungs Wert com
+- LegacyAuthenticationLevel-Registrierungswert COM
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f2d87d808287418f635629e15324f2f517619be6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ae6be9f562a543e4750695ec2bf967b5a261209aae70d0bf91269bc2a074a9e8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037612"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096950"
 ---
-# <a name="legacyauthenticationlevel"></a>Legacyauthenticationlevel
+# <a name="legacyauthenticationlevel"></a>LegacyAuthenticationLevel
 
-Legt die Standard Authentifizierungs Ebene für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)nicht aufzurufen.
+Legt die Standardauthentifizierungsebene für Anwendungen fest, die [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)nicht aufrufen.
 
 > [!Caution]  
-> Es wird nicht empfohlen, diesen Wert zu ändern, da dies Auswirkungen auf alle com-Server Anwendungen hat, die nicht Ihre eigene Prozess weite Sicherheit festlegen, und möglicherweise verhindern, dass Sie ordnungsgemäß funktionieren. Wenn Sie diesen Wert ändern, um die Sicherheitseinstellungen für eine bestimmte COM-Anwendung zu beeinflussen, sollten Sie stattdessen die Prozess weiten Sicherheitseinstellungen für die jeweilige COM-Anwendung ändern. Weitere Informationen zum Festlegen der Prozess weiten Sicherheit finden Sie unter [Festlegen der Prozess weiten Sicherheit](setting-processwide-security.md).
+> Es wird nicht empfohlen, diesen Wert zu ändern, da sich dies auf alle COM-Serveranwendungen auswirkt, die keine eigene prozessweite Sicherheit festlegen und möglicherweise verhindern, dass sie ordnungsgemäß funktionieren. Wenn Sie diesen Wert ändern, um die Sicherheitseinstellungen für eine bestimmte COM-Anwendung zu beeinflussen, sollten Sie stattdessen die prozessweiten Sicherheitseinstellungen für diese bestimmte COM-Anwendung ändern. Weitere Informationen zum Festlegen der prozessweiten Sicherheit finden Sie unter [Festlegen der prozessweiten Sicherheit.](setting-processwide-security.md)
 
- 
+ 
 
 ## <a name="registry-entry"></a>Registrierungseintrag
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole
-   LegacyAuthenticationLevel = value
+   LegacyAuthenticationLevel = value
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist ein **reg \_ Word** -Wert, der den Konstanten der RPC- \_ C- \_ authn- \_ Ebene entspricht.
+Dies ist ein **REG \_ WORD-Wert,** der den RPC \_ \_ \_ C-AUTHN LEVEL-Konstanten entspricht.
 
 
 
 | Wert | Konstante                             |
 |-------|--------------------------------------|
-| 1     | RPC- \_ C- \_ authn- \_ Ebene \_ None           |
-| 2     | RPC- \_ C \_ authn \_ Level \_ Connect        |
-| 3     | RPC- \_ C \_ authn-Ebene- \_ \_ Aufruf           |
-| 4     | Pkt der RPC- \_ C- \_ authn- \_ Ebene \_            |
-| 5     | \_Pkt-Integrität der RPC C- \_ authn- \_ Ebene \_ \_ |
-| 6     | \_ \_ \_ \_ Pkt- \_ Datenschutz auf RPC-C-Ebene   |
+| 1     | RPC \_ C \_ AUTHN \_ LEVEL \_ NONE           |
+| 2     | RPC \_ C \_ AUTHN \_ LEVEL \_ CONNECT        |
+| 3     | RPC \_ \_ \_ C-AUFRUF AUF AUTHENTIFIZIERUNGSEBENE \_           |
+| 4     | RPC \_ C \_ AUTHN \_ LEVEL \_ PKT            |
+| 5     | \_ \_ \_ \_ PKT-INTEGRITÄT AUF RPC-C-AUTHENTIFIZIERUNGSEBENE \_ |
+| 6     | RPC \_ C \_ AUTHN \_ LEVEL \_ PKT \_ PRIVACY   |
 
 
 
- 
+ 
 
-Wenn dieser Registrierungs Wert nicht vorhanden ist, ist die vom System festgelegte Standard Authentifizierungs Ebene 2 (RPC \_ C \_ authn \_ Connect).
+Wenn dieser Registrierungswert nicht vorhanden ist, ist die vom System festgelegte Standardauthentifizierungsebene 2 (RPC \_ C \_ AUTHN \_ CONNECT).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**AuthenticationLevel**](authenticationlevel.md)
+[**Authenticationlevel**](authenticationlevel.md)
 </dt> <dt>
 
-[Registrieren von com-Servern](registering-com-servers.md)
+[Registrieren von COM-Servern](registering-com-servers.md)
 </dt> <dt>
 
-[Festlegen der Prozess weiten Sicherheit](setting-processwide-security.md)
+[Festlegen der prozessweiten Sicherheit](setting-processwide-security.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,39 +1,39 @@
 ---
-title: Gegenseitige Ausschluss Typen
-description: Gegenseitige Ausschluss Typen
+title: Gegenseitige Ausschlusstypen
+description: Gegenseitige Ausschlusstypen
 ms.assetid: bfe6cfe6-3df4-49c4-8015-fe4479b693c1
 keywords:
-- Windows Media-Format-SDK, gegenseitiger Ausschluss
+- Windows Medienformat-SDK, gegenseitiger Ausschluss
 - Advanced Systems Format (ASF), gegenseitiger Ausschluss
 - ASF (Advanced Systems Format), gegenseitiger Ausschluss
 - gegenseitiger Ausschluss, Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c425e69c2aa3eac012874837a6970dbc26d1a51
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: da546c753696144c68348c61d01473c7d6414290b5971c220ac8c983317b3b15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120110270"
 ---
-# <a name="mutual-exclusion-types"></a>Gegenseitige Ausschluss Typen
+# <a name="mutual-exclusion-types"></a>Gegenseitige Ausschlusstypen
 
-Sie können gegenseitige Ausschluss Typen verwenden, um die Art eines gegenseitigen Ausschluss Objekts in einem Profil zu identifizieren. Gegenseitige Ausschluss Typen werden als Parameter für " [**iwmmutualexclusion:: GetType**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-gettype) " und " [**iwmmutualexclusion:: settype**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype)" verwendet.
+Sie können typen des gegenseitigen Ausschlusses verwenden, um die Art eines gegenseitigen Ausschlussobjekts in einem Profil zu identifizieren. Gegenseitige Ausschlusstypen werden als Parameter für [**IWMMutualExclusion::GetType**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-gettype) und [**IWMMutualExclusion::SetType**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmmutualexclusion-settype)verwendet.
 
-In der folgenden Tabelle werden die Bezeichner für die gegenseitigen Ausschluss Typen aufgelistet.
+In der folgenden Tabelle sind die Bezeichner für gegenseitige Ausschlusstypen aufgeführt.
 
 
 
-| Gegenseitige Ausschluss-typkonstante | GUID                                 |
+| Konstante des gegenseitigen Ausschlusstyps | GUID                                 |
 |--------------------------------|--------------------------------------|
-| CLSID- \_ wmmutex- \_ Sprache       | D6E22A00-35DA-11D1-9034-00A0C90349BE |
-| CLSID- \_ wmmutex- \_ Bitrate        | D6E22A01-35DA-11D1-9034-00A0C90349BE |
-| CLSID- \_ wmmutex- \_ Präsentation   | D6E22A02-35DA-11D1-9034-00A0C90349BE |
-| CLSID- \_ wmmutex \_ unbekannt        | D6E22A03-35DA-11D1-9034-00A0C90349BE |
+| CLSID \_ \_ WMMUTEX-Sprache       | D6E22A00-35DA-11D1-9034-00A0C90349BE |
+| CLSID \_ \_ WMMUTEX-Bitrate        | D6E22A01-35DA-11D1-9034-00A0C90349BE |
+| CLSID \_ WMMUTEX \_ Presentation   | D6E22A02-35DA-11D1-9034-00A0C90349BE |
+| CLSID \_ WMMUTEX \_ Unbekannt        | D6E22A03-35DA-11D1-9034-00A0C90349BE |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -42,9 +42,9 @@ In der folgenden Tabelle werden die Bezeichner für die gegenseitigen Ausschluss
 [**GUID-Werte**](guid-values.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

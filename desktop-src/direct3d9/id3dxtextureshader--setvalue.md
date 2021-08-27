@@ -1,7 +1,7 @@
 ---
-description: Legt die Konstante Tabelle mit den Daten im Puffer fest.
+description: Legt die konstante Tabelle mit den Daten im Puffer fest.
 ms.assetid: 55cf5456-8f23-405d-9329-8ff737c5c139
-title: 'ID3DXTextureShader:: SetValue-Methode (D3DX9Shader. h)'
+title: ID3DXTextureShader::SetValue-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 2f18902c73f44bc4294e5152f8da5ea3e37f27ba
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9ba652d4fd295103409c073287264d3a01b6352c465532719f01e427ad4dedcd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095640"
 ---
-# <a name="id3dxtextureshadersetvalue-method"></a>ID3DXTextureShader:: SetValue-Methode
+# <a name="id3dxtextureshadersetvalue-method"></a>ID3DXTextureShader::SetValue-Methode
 
-Legt die Konstante Tabelle mit den Daten im Puffer fest.
+Legt die konstante Tabelle mit den Daten im Puffer fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT SetValue(
 
 <dl> <dt>
 
-*hconstant* \[ in\]
+*hConstant* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
@@ -51,19 +51,19 @@ Eindeutiger Bezeichner für eine Konstante. Siehe [D3DXHANDLE](d3dxfx.md).
 
 </dd> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf einen Puffer, der die Konstanten Daten enthält.
+Ein Zeiger auf einen Puffer, der die konstanten Daten enthält.
 
 </dd> <dt>
 
-*Bytes* \[ in\]
+*Bytes* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 Größe des Puffers in Bytes.
 
@@ -73,7 +73,7 @@ Größe des Puffers in Bytes.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,8 +81,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. 
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

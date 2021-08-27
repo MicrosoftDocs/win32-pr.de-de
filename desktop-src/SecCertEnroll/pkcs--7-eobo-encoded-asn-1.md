@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel enthält eine \# im ASN. 1-Format angezeigte Anforderung "PKCS 7 ENROLL für den (eobo)". Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine PKCS \# 7-EOBO-Anforderung (Enroll On Behalf Of), die im ASN.1-Format angezeigt wird. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 ms.assetid: b6945071-8019-40bb-9f71-13ae3bd57948
-title: PKCS \# 7 eobo-codierte ASN. 1
+title: PKCS \# 7 EOBO-codiert ASN.1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 165c0ac9f1924a8cde0298ae1d21c3d8cd330cda
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b95d2d8901b1ca1eff5a7e88fa776dab1815627d970bb83a8d1e231fe5ab010a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127206"
 ---
-# <a name="pkcs-7-eobo-encoded-asn1"></a>PKCS \# 7 eobo-codierte ASN. 1
+# <a name="pkcs-7-eobo-encoded-asn1"></a>PKCS \# 7 EOBO-codiert ASN.1
 
-Das folgende Beispiel enthält eine \# im ASN. 1-Format angezeigte Anforderung "PKCS 7 ENROLL für den (eobo)". Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine PKCS \# 7-EOBO-Anforderung (Enroll On Behalf Of), die im ASN.1-Format angezeigt wird. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für die Certreq.exe enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -24,11 +24,11 @@ RequesterName=Domain\TargetUser
 CertificateTemplate=User
 ```
 
-Mit dieser Konfiguration wird die folgende Beispielausgabe generiert. Die Konfiguration gibt den Typ der Anforderung (PKCS \# 7), den Namen der Entität an, die die Registrierung anfordert, und den Namen der Vorlage. Die Benutzer Vorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Anforderungstyp (PKCS 7), den Namen der Entität, die die Registrierung angibt, und den \# Namen der Vorlage an. Die Benutzervorlage gibt An:
 
--   Die Anforderung muss entweder den Kryptografieanbieter von Microsoft Base 1,0 oder den Microsoft Enhanced Cryptographic Provider 1,0 verwenden.
--   Der Antragsteller Name muss aus Active Directory erstellt werden.
--   Die Anforderung enthält den Namen der Zertifikat Vorlage, die erweiterte Schlüssel Verwendung (Enhanced Key Usage, EKU) und Schlüssel Verwendungs Erweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für Verschlüsselndes Dateisystem (EFS), sichere e-Mail und Client Authentifizierung verwendet werden kann.
+-   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
+-   Der Name des Betreffs muss aus Active Directory erstellt werden.
+-   Die Anforderung enthält den Zertifikatvorlagennamen, die Erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mail-Adresse und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 0000: 30 82 0a de               ; SEQUENCE (ade Bytes)
@@ -536,7 +536,7 @@ CertUtil: -asn command completed successfully.
 
 <dl> <dt>
 
-[Beispiel Anforderungen](sample-requests.md)
+[Beispielanforderungen](sample-requests.md)
 </dt> </dl>
 
  

@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 53445bc3f57f8a861800f9edcd95d8af2ecfbd54f4055cf8787695dab1f25cb0
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 07bc97a3c75a16c1a11783a13514a8ab5b3478c6
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "117850772"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622736"
 ---
 # <a name="splitbutton-element"></a>SplitButton-Element
 
 Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls-splitbutton.md) dar.
 
-## <a name="usage"></a>Verbrauch
+## <a name="usage"></a>Verwendung
 
 ``` syntax
 <SplitButton
@@ -40,17 +40,17 @@ Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
-<th>type</th>
+<th>Attribut</th>
+<th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -77,10 +77,10 @@ Stellt ein Standardmäßiges [Split Button-Steuerelement](windowsribbon-controls
 
 
 
-| Element                                                                                   | BESCHREIBUNG                                        |
+| Element                                                                                   | Beschreibung                                        |
 |-------------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
-| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**CheckBox**](windowsribbon-element-checkbox.md)<br/>                             | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**DropDownButton**](windowsribbon-element-dropdownbutton.md)<br/>                 | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)<br/>       | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)<br/>               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -120,7 +120,7 @@ Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element
 [**SplitButton.MenuGroups**](windowsribbon-element-splitbutton-menugroups.md) muss einmal auftreten, wenn folgende Elemente nicht als untergeordnete Elemente von **SplitButton vorhanden sind:**
 
 -   [**Schaltfläche**](windowsribbon-element-button.md)
--   [**Checkbox**](windowsribbon-element-checkbox.md)
+-   [**CheckBox**](windowsribbon-element-checkbox.md)
 -   [**DropDownButton**](windowsribbon-element-dropdownbutton.md)
 -   [**DropDownColorPicker**](windowsribbon-element-dropdowncolorpicker.md)
 -   [**DropDownGallery**](windowsribbon-element-dropdowngallery.md)
@@ -216,7 +216,7 @@ In diesem Codeabschnitt werden die **SplitButton-Steuerelementdeklarationen** ge
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: einfacher sessionstatechangetype-Typ
-description: Definiert Werte für die Art der Sitzungs Zustandsänderung des Terminal Servers, die Sie verwenden können, um einen Task zu starten.
+title: sessionStateChangeType Simple Type
+description: Definiert Werte für die Art der Terminalserver-Sitzungszustandsänderung, die Sie verwenden können, um einen Task zum Starten auszulösen.
 ms.assetid: 56e19ec0-ea6c-4434-ab9d-a1069108920f
 keywords:
-- sessionstatechangetype-Typ "Simple" Taskplaner
+- sessionStateChangeType simple type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7a77fb563b59ccd8d63d38c6c85f16ff74ac404b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a67334b2e8d51404a0e5e78a7d2b3e49908cd1c6ce74f499e66272d2db9be910
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120099810"
 ---
-# <a name="sessionstatechangetype-simple-type"></a>einfacher sessionstatechangetype-Typ
+# <a name="sessionstatechangetype-simple-type"></a>sessionStateChangeType Simple Type
 
-Definiert Werte für die Art der Sitzungs Zustandsänderung des Terminal Servers, die Sie verwenden können, um einen Task zu starten.
+Definiert Werte für die Art der Terminalserver-Sitzungszustandsänderung, die Sie verwenden können, um einen Task zum Starten auszulösen.
 
 ``` syntax
 <xs:simpleType name="sessionStateChangeType">
@@ -53,18 +53,18 @@ Definiert Werte für die Art der Sitzungs Zustandsänderung des Terminal Servers
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache Typ **sessionstatechangetype** definiert die folgenden Werte:
+Der einfache **sessionStateChangeType-Typ** definiert die folgenden Werte.
 
 
 
 | Wert             | BESCHREIBUNG                                                                                                                                                                                       |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Consoleconnetct    | Statusänderung der Terminal Server-Konsolen Verbindung. Wenn Sie z. b. eine Verbindung mit einer Benutzersitzung auf dem lokalen Computer herstellen, indem Sie die Benutzer auf dem Computer wechseln. <br/>                            |
-| Consoledisconnect | Statusänderung der Terminal Server Konsole wird getrennt. Wenn Sie z. b. eine Verbindung mit einer Benutzersitzung auf dem lokalen Computer trennen, indem Sie die Benutzer auf dem Computer wechseln. <br/>                      |
-| Verbindung "     | Statusänderung für Terminal Server-Remote Verbindung. Dies ist beispielsweise der Fall, wenn ein Benutzer mithilfe des Remotedesktopverbindung Programms von einem Remote Computer aus eine Verbindung mit einer Benutzersitzung herstellt. <br/>            |
-| Remotedisconnect  | Statusänderung des Terminal Server-Remote Verbindungs Wechsels. Dies ist beispielsweise der Fall, wenn ein Benutzer die Verbindung mit einer Benutzersitzung trennt, während das Remotedesktopverbindung Programm von einem Remote Computer aus verwendet wird. <br/> |
-| Sessionlock       | Statusänderung für Terminal Server Sitzung gesperrt. Diese Statusänderung bewirkt beispielsweise, dass die Aufgabe ausgeführt wird, wenn der Computer gesperrt wird. <br/>                                                       |
-| Sessionunlock     | Die Statusänderung der Terminal Server Sitzung wurde aufgehoben. Diese Statusänderung bewirkt beispielsweise, dass die Aufgabe ausgeführt wird, wenn der Computer entsperrt wird.<br/>                                                    |
+| ConsoleConnect    | Verbindungsstatusänderung der Terminalserverkonsole. Wenn Sie beispielsweise eine Verbindung mit einer Benutzersitzung auf dem lokalen Computer herstellen, indem Sie benutzer auf dem Computer wechseln. <br/>                            |
+| ConsoleDisconnect | Statusänderung beim Trennen der Verbindung mit der Terminalserverkonsole. Wenn Sie beispielsweise die Verbindung mit einer Benutzersitzung auf dem lokalen Computer trennen, indem Sie die Benutzer auf dem Computer wechseln. <br/>                      |
+| RemoteConnect     | Statusänderung des Remoteverbindungsstatus des Terminalservers. Wenn ein Benutzer beispielsweise eine Verbindung mit einer Benutzersitzung mithilfe des Remotedesktopverbindung Programms von einem Remotecomputer herstellt. <br/>            |
+| RemoteDisconnect  | Statusänderung der Remoteverbindung des Terminalservers. Beispiel: Wenn ein Benutzer bei Verwendung des Remotedesktopverbindung Programms von einem Remotecomputer die Verbindung mit einer Benutzersitzung trennt. <br/> |
+| SessionLock       | Änderung des gesperrten Zustands der Terminalserversitzung. Diese Zustandsänderung bewirkt beispielsweise, dass die Aufgabe ausgeführt wird, wenn der Computer gesperrt ist. <br/>                                                       |
+| SessionUnlock     | Zustandsänderung bei Entsperrung der Terminalserversitzung. Diese Zustandsänderung bewirkt beispielsweise, dass die Aufgabe ausgeführt wird, wenn der Computer entsperrt wird.<br/>                                                    |
 
 
 
@@ -74,8 +74,8 @@ Der einfache Typ **sessionstatechangetype** definiert die folgenden Werte:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

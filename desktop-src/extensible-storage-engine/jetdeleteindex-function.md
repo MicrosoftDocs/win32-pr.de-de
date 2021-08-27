@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: JetDeleteIndex-Funktion'
+description: Weitere Informationen finden Sie unter JetDeleteIndex-Funktion.
 title: JetDeleteIndex-Funktion
 TOCTitle: JetDeleteIndex Function
 ms:assetid: c540503b-d5a6-47f2-9113-9650891c4b6d
@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a934581754477f336415926716a9a8c7e6097d81
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 4170bd4def6ad60953189923252e2d775765b03d
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122985893"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478016"
 ---
 # <a name="jetdeleteindex-function"></a>JetDeleteIndex-Funktion
 
@@ -75,7 +75,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Wenn der Index erfolgreich ist, wird er gelöscht und kann daher später nicht mehr verwendet werden. Es darf keine aktive Transaktion mit dem Index geben.
 
@@ -84,14 +84,7 @@ Bei Erfolg wird die Währung vor dem ersten Datensatz festgelegt.
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetDeleteIndexW</strong> (Unicode) und <strong>JetDeleteIndexA</strong> (ANSI).</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetDeleteIndexW</strong> (Unicode) und <strong>JetDeleteIndexA</strong> (ANSI).</p> | 
 
 
 

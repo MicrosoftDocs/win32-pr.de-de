@@ -1,6 +1,6 @@
 ---
-description: 'In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrierung als einen der folgenden Client Typen registrieren: Browser, e-Mail, Medienwiedergabe, Instant Messaging oder virtueller Computer für Java.'
-title: Registrieren von Programmen mit Client Typen
+description: 'In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrierung als einen der folgenden Clienttypen registrieren: Browser, E-Mail, Medienwiedergabe, Instant Messaging oder virtueller Computer für Java.'
+title: Registrieren von Programmen mit Clienttypen
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 33fcb63c-3db2-44df-acfe-8c88e2e634e4
@@ -9,16 +9,16 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 71dd4e3192dc75821fd0a3e8c0d4742e1a8d571a
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: c9c2d9a4589b684580250c487a6f83c3c9e79dbc
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "103869627"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470418"
 ---
-# <a name="registering-programs-with-client-types"></a>Registrieren von Programmen mit Client Typen
+# <a name="registering-programs-with-client-types"></a>Registrieren von Programmen mit Clienttypen
 
-In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrierung als einen der folgenden Client Typen registrieren: Browser, e-Mail, Medienwiedergabe, Instant Messaging oder virtueller Computer für Java.
+In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrierung als einen der folgenden Clienttypen registrieren: Browser, E-Mail, Medienwiedergabe, Instant Messaging oder virtueller Computer für Java.
 
 > [!Note]  
 > Diese Informationen gelten für die folgenden Betriebssysteme:
@@ -28,7 +28,7 @@ In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrieru
 > -   Windows XP Service Pack 1 (SP1)
 > -   Windows XP Service Pack 2 (SP2)
 > -   Windows XP Service Pack 3 (SP3)
-> -   Windows Server 2003
+> -   Windows Server 2003
 > -   Windows Vista
 > -   Windows Vista Service Pack 1 (SP1)
 > -   Windows 8
@@ -37,43 +37,43 @@ In diesem Thema wird erläutert, wie Sie ein Programm in der Windows-Registrieru
 
 Das Thema enthält folgende Abschnitte:
 
--   [Allgemeine Registrierungs Elemente für alle Client Typen](#common-registration-elements-for-all-client-types)
+-   [Allgemeine Registrierungselemente für alle Clienttypen](#common-registration-elements-for-all-client-types)
     -   [Auswählen eines kanonischen Namens](#selecting-a-canonical-name)
-    -   [Registrieren des anzeigen Amens eines Programms](#registering-a-programs-display-name)
-    -   [Registrieren eines Programm Symbols](#registering-a-programs-icon)
-    -   [Registrieren eines geöffneten Verbs](#registering-an-open-verb)
-    -   [Installationsinformationen werden registriert](#registering-installation-information)
--   [Registrierungs Elemente für bestimmte Client Typen](#registration-elements-for-specific-client-types)
-    -   [Start Menü Registrierung](#start-menu-registration)
-    -   [Mail Client Registrierung](#mail-client-registration)
--   [Vervollständigen von Beispiel Registrierungen](#complete-sample-registrations)
-    -   [Ein Beispiel Browser](#a-sample-browser)
-    -   [Beispiel-e-Mail-Browser](#a-sample-mail-browser)
-    -   [Ein Beispiel Media Player](#a-sample-media-player)
-    -   [Ein Instant Messenger-Beispielprogramm](#a-sample-instant-messenger-program)
-    -   [Ein Beispiel für einen virtuellen Computer für Java](#a-sample-virtual-machine-for-java)
+    -   [Registrieren des Anzeigenamens eines Programms](#registering-a-programs-display-name)
+    -   [Registrieren des Symbols eines Programms](#registering-a-programs-icon)
+    -   [Registrieren eines offenen Verbs](#registering-an-open-verb)
+    -   [Registrieren von Installationsinformationen](#registering-installation-information)
+-   [Registrierungselemente für bestimmte Clienttypen](#registration-elements-for-specific-client-types)
+    -   [Registrierung im Startmenü](#start-menu-registration)
+    -   [Registrierung des E-Mail-Clients](#mail-client-registration)
+-   [Vollständige Beispielregistrierungen](#complete-sample-registrations)
+    -   [Beispielbrowser](#a-sample-browser)
+    -   [Ein Beispiel-E-Mail-Browser](#a-sample-mail-browser)
+    -   [Beispiel Media Player](#a-sample-media-player)
+    -   [Ein Beispiel für ein Instant Messenger-Programm](#a-sample-instant-messenger-program)
+    -   [Ein virtueller Beispielcomputer für Java](#a-sample-virtual-machine-for-java)
 -   [Zugehörige Themen](#related-topics)
 
-Dieses Thema erweitert die vorhandene Dokumentation zum Registrieren eines Programms als bestimmten Clienttyp. Links zu dieser Dokumentation finden Sie im Abschnitt Verwandte Themen.
+In diesem Thema wird die vorhandene Dokumentation zum Registrieren eines Programms als bestimmter Clienttyp erweitert. Links zu dieser Dokumentation finden Sie im Abschnitt Verwandte Themen.
 
-## <a name="common-registration-elements-for-all-client-types"></a>Allgemeine Registrierungs Elemente für alle Client Typen
+## <a name="common-registration-elements-for-all-client-types"></a>Allgemeine Registrierungselemente für alle Clienttypen
 
-Wenn Sie ein Programm als Clienttyp registrieren, sind die meisten Registrierungseinträge unabhängig vom Clienttyp identisch. Einige Registrierungseinträge sind jedoch spezifisch für den Clienttyp, und Sie sind im Abschnitt [Registrierungs Elemente für bestimmte Client Typen](#registration-elements-for-specific-client-types) vermerkt.
+Wenn Sie ein Programm als Clienttyp registrieren, sind die meisten Registrierungseinträge unabhängig vom Clienttyp identisch. Einige Registrierungseinträge sind jedoch spezifisch für den Clienttyp, und diese sind im Abschnitt [Registrierungselemente für bestimmte Clienttypen](#registration-elements-for-specific-client-types) angegeben.
 
-In diesem Abschnitt werden die folgenden Themen behandelt:
+In diesem Abschnitt werden die folgenden Themen erläutert:
 
 -   [Auswählen eines kanonischen Namens](#selecting-a-canonical-name)
--   [Registrieren des anzeigen Amens eines Programms](#registering-a-programs-display-name)
--   [Registrieren eines Programm Symbols](#registering-a-programs-icon)
--   [Registrieren eines geöffneten Verbs](#registering-an-open-verb)
--   [Installationsinformationen werden registriert](#registering-installation-information)
+-   [Registrieren des Anzeigenamens eines Programms](#registering-a-programs-display-name)
+-   [Registrieren des Symbols eines Programms](#registering-a-programs-icon)
+-   [Registrieren eines offenen Verbs](#registering-an-open-verb)
+-   [Registrieren von Installationsinformationen](#registering-installation-information)
 
 > [!Note]  
-> Unterschlüssel Namen, die in diesem Thema kursiv angegeben sind, sind Platzhalter für benutzerdefinierte Unterschlüssel Namen oder einen Satz möglicher Werte. Vollständige Beispiele mit Beispiel Namen finden Sie im Abschnitt [vollständige Beispiel Registrierungen](#complete-sample-registrations) .
+> Unterschlüsselnamen, die in diesem Thema in italisch angegeben werden, sind Platzhalter für benutzerdefinierte Unterschlüsselnamen oder eine Reihe möglicher Werte. Vollständige Beispiele mit Beispielnamen finden Sie im Abschnitt [Vollständige Beispielregistrierungen.](#complete-sample-registrations)
 
  
 
-Alle Clienttyp-Registrierungsinformationen werden unter dem folgenden Unterschlüssel gespeichert:
+Alle Registrierungsinformationen des Clienttyps werden unter dem folgenden Unterschlüssel gespeichert:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -82,32 +82,32 @@ HKEY_LOCAL_MACHINE
          ClientTypeName
 ```
 
-*Clienttypname* ist einer der folgenden Unterschlüssel Namen:
+*ClientTypeName* ist einer der folgenden Unterschlüsselnamen:
 
--   Startmenü Internet (für Browser)
--   E-Mail (für e-Mail)
--   Medien (für Medienwiedergabe)
+-   StartMenuInternet (für Browser)
+-   E-Mail (für E-Mail)
+-   Medien (für die Medienwiedergabe)
 -   IM (für Instant Messaging)
--   JavaVM (für virtuellen Computer für Java)
+-   JavaVM (für virtuelle Computer für Java)
 
-In diesem Thema finden Sie Verweise auf ein fiktives Computerprogramm mit dem Namen "Lit View" von Litware Inc. mit einer ausführbaren Datei namens Litview.exe. Dieses hypothetische Programm wird als Instant Messenger, Browser oder ein anderer Typ von Client Programm verwendet, der für die Veranschaulichung benötigt wird.
+In diesem Thema werden Sie Verweise auf ein fiktives Computerprogramm namens "Lit View" von Litware Inc. mit einer ausführbaren Datei namens Litview.exe. Dieses hypothetische Programm wird austauschbar als Instant Messenger, als Browser oder als andere Art von Clientprogramm verwendet, wenn dies zu Veranschaulichungszwecken erforderlich ist.
 
 ### <a name="selecting-a-canonical-name"></a>Auswählen eines kanonischen Namens
 
-Der Anbieter muss einen *kanonischen Namen* für das Programm auswählen. Der kanonische Name wird dem Benutzer nie angezeigt und muss daher nicht lokalisiert werden. Der einzige Zweck besteht darin, eine eindeutige Zeichenfolge bereitzustellen, die zum Identifizieren des Programms verwendet werden kann. Er ist in der Regel mit dem englischen Namen des Programms identisch, aber dies ist lediglich eine Konvention.
+Der Hersteller muss einen *kanonischen Namen für* das Programm auswählen. Der kanonische Name wird dem Benutzer nie angezeigt, sodass er nicht lokalisiert werden muss. Der einzige Zweck besteht in der Bereitstellung einer eindeutigen Zeichenfolge, die zum Identifizieren des Programms verwendet werden kann. Es ist in der Regel identisch mit dem englischen Namen des Programms, aber dies ist lediglich eine Konvention.
 
-Für andere Client Typen als Browser kann der kanonische Name eine beliebige Zeichenfolge sein. Wählen Sie einen eindeutigen Namen aus, der nicht wahrscheinlich von einem anderen Anbieter verwendet werden soll.
+Für andere Clienttypen als Browser kann der kanonische Name eine beliebige Zeichenfolge sein. Wählen Sie einen eindeutigen Namen aus, der wahrscheinlich nicht von einem anderen Anbieter verwendet wird.
 
-Bei Browser Clients muss der kanonische Name der Name – einschließlich der Erweiterung – der zugeordneten ausführbaren Datei sein. Beispiel: "Litview.exe".
+Bei Browserclients muss der kanonische Name der Name der zugeordneten ausführbaren Datei sein , einschließlich der Erweiterung. Beispiel: "Litview.exe".
 
-Im folgenden finden Sie einige Beispiele für kanonische Namen.
+Hier sind einige Beispiele für kanonische Namen.
 
 -   Iexplore.exe (Browser)
--   Windows Mail (e-Mail)
--   Windows-Media Player (Medien)
+-   Windows E-Mail (E-Mail)
+-   Windows Media Player (Medien)
 -   Windows Messenger (Instant Messaging)
 
-Registrieren Sie den kanonischen Namen, indem Sie wie hier gezeigt einen Unterschlüssel erstellen. Der Name des unter Schlüssels ist der kanonische Name. Alle Informationen im Zusammenhang mit der Registrierung dieses Programms sind unter diesem Unterschlüssel vorhanden.
+Registrieren Sie den kanonischen Namen, indem Sie wie hier gezeigt einen Unterschlüssel erstellen. Der Name des Unterschlüssels ist der kanonische Name. Alle Informationen im Zusammenhang mit der Registrierung dieses Programms sind unter diesem Unterschlüssel vorhanden.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -117,12 +117,12 @@ HKEY_LOCAL_MACHINE
             CanonicalName
 ```
 
-### <a name="registering-a-programs-display-name"></a>Registrieren des anzeigen Amens eines Programms
+### <a name="registering-a-programs-display-name"></a>Registrieren des Anzeigenamens eines Programms
 
-Der nächste Schritt bei der Registrierung besteht darin, den anzeigen amen des Programms anzugeben. Sie wird als Wert unter dem kanonischen Namens Schlüssel angegeben, wie hier gezeigt. Beachten Sie, dass *CanonicalName* und *clienttykame* nicht die tatsächlichen Namen der Schlüssel sind, sondern nur Platzhalter für die tatsächlichen Namen, wie z. b. die *Beleuchtung*.
+Der nächste Schritt bei der Registrierung besteht im Angeben des Anzeigenamens des Programms. Sie wird wie hier gezeigt als Wert unter dem kanonischen Namensschlüssel angegeben. Beachten Sie *erneut, dass CanonicalName* und *ClientTypeName* nicht die tatsächlichen Namen der Schlüssel sind, sondern nur Platzhalter für die tatsächlichen Namen, z. B. *Lit View*.
 
 > [!Note]  
-> Ab Windows 8 sollte der Name, der für die Registrierung für [Set Program Access und Computer Standards (SPAD)](cpl-setprogramaccess.md) und für [Standardprogramme](default-programs.md) verwendet wird, identisch sein, damit SPAD-Änderungen Standardprogramm Registrierungen auslöst.
+> Ab Windows 8 sollte der Name, der zum Registrieren für Set Program Access [](default-programs.md) [and Computer Defaults (SPAD)](cpl-setprogramaccess.md) und für Standardprogramme verwendet wird, übereinstimmen, damit SPAD-Änderungen Standardprogrammregistrierungen auslösen.
 
  
 
@@ -135,11 +135,11 @@ HKEY_LOCAL_MACHINE
                LocalizedString = @FilePath,-StringID
 ```
 
-Der **LocalizedString** -Wert ist eine reg \_ SZ-Zeichenfolge und besteht aus einem "at"-Zeichen (@), dem vollständigen Pfad zu einer DLL-oder exe-Datei, einem Komma, einem Minuszeichen und einer ganzen Dezimalzahl. Die ganzzahlige Ganzzahl ist die ID einer Zeichen folgen Ressource –, die in der DLL-oder exe-Datei enthalten ist –, deren Wert dem Benutzer als Name dieses Clients angezeigt werden soll. Beachten Sie, dass der Dateipfad keine Anführungszeichen erfordert, auch wenn er Leerzeichen enthält.
+Der **LocalizedString-Wert** ist eine REG SZ-Zeichenfolge und besteht aus einem "at"-Zeichen (@), dem vollständigen Pfad zu einer .dll- oder .exe-Datei, einem Komma, einem Minuszeichen und einer dezimalen ganzen \_ Zahl. Die ganze Dezimalzahl ist die ID einer Zeichenfolgenressource, die in der .dll- oder .exe-Datei enthalten ist, deren Wert dem Benutzer als Name dieses Clients angezeigt werden soll. Beachten Sie, dass der Dateipfad keine Anführungszeichen erfordert, auch wenn er Leerzeichen enthält.
 
-Wenn Sie die Zeichenfolge für den anzeigen Amen auf diese Weise registrieren, kann dieselbe Registrierung für mehrere Sprachen verwendet werden. Jede sprach Installation bietet eine andere Ressourcen Datei mit dem anzeigen Amen, der in derselben Ressourcen-ID gespeichert ist.
+Wenn Sie die Anzeigenamenzeichenfolge auf diese Weise registrieren, kann dieselbe Registrierung für mehrere Sprachen verwendet werden. Jede Sprachinstallation bietet eine andere Ressourcendatei mit dem Anzeigenamen, der unter der gleichen Ressourcen-ID gespeichert ist.
 
-Im folgenden Beispiel wird die Registrierung für ein fiktives beleuchtetes Ansichts-Instant Messaging-Programm gezeigt. Da es sich um ein Instant Messaging-Programm handelt, wird der Unterschlüssel " *CanonicalName* " (in diesem Fall " *lit View*") unter dem **im** -Unterschlüssel gespeichert.
+Das folgende Beispiel zeigt die Registrierung für ein fiktives Lit View-Instant Messaging-Programm. Da es sich um ein Instant Messaging-Programm handelt, wird der *Unterschlüssel CanonicalName* (in diesem Fall *Lit View)* unter dem **Im-Unterschlüssel** gespeichert.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -151,20 +151,20 @@ HKEY_LOCAL_MACHINE
                LocalizedString = @C:\Program Files\LitwareInc\ResourceDLL.dll,-123
 ```
 
-Beachten Sie die Verwendung des (Standard-) Eintrags als sekundäre Deklaration des Client anzeigen Amens. Wenn die **LocalizedString** nicht vorhanden ist, wird stattdessen der (standardmäßige) Wert verwendet. Dies funktioniert bei allen Client Typen (Internet Browser, e-Mail-Browser, Instant Messenger und Media Players). Aus Gründen der Abwärtskompatibilität mit dem [Internet Explorer-Client Registrierungs Layout](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753633(v=vs.85))sollte der (Standardwert)-Wert des unter Schlüssels " *CanonicalName* " von e-Mail-Programmen in der aktuell installierten Sprache auf den anzeigen amen des Clients festgelegt werden.
+Beachten Sie die Verwendung des Eintrags (Standard) als sekundäre Deklaration des Anzeigenamens des Clients. Wenn **LocalizedString nicht** vorhanden ist, wird stattdessen der (Standard)-Wert verwendet. Dies funktioniert mit allen Clienttypen (Internetbrowser, E-Mail-Browser, Instant Messenger und Media Player). Aus Gründen der Abwärtskompatibilität mit dem [Internet Explorer-Clientregistrierungslayout](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753633(v=vs.85))sollten E-Mail-Programme den (Standard)-Wert des *Unterschlüssels CanonicalName* auf den Anzeigenamen des Clients in der aktuell installierten Sprache festlegen.
 
-### <a name="registering-a-programs-icon"></a>Registrieren eines Programm Symbols
+### <a name="registering-a-programs-icon"></a>Registrieren des Symbols eines Programms
 
 > [!Note]  
 > Dieser Abschnitt gilt nicht für Windows 2000.
 
  
 
-Standardmäßig enthält der obere Abschnitt des **Start** Menüs von Windows XP und Windows Vista **Internet** -und **e-Mail-** Symbole. Diese Symbole sind in Windows 7 und höher nicht vorhanden. Wenn für Browser-und e-Mail-Clients ein Programm als Standardwert für den Clienttyp zugewiesen ist, wird das registrierte Symbol dieses Programms für diese Einträge im **Startmenü** angezeigt.
+Standardmäßig enthält der obere Abschnitt Windows XP- und Windows **Vista-Startmenü** **Internet-** und **E-Mail-Symbole.** Diese Symbole sind in Windows 7 und höher nicht vorhanden. Wenn für Browser- und E-Mail-Clients ein Programm als Standard für seinen Clienttyp zugewiesen wird, wird das registrierte Symbol dieses Programms für diese **Startmenüeinträge** angezeigt.
 
-Das Registrieren eines Programm Symbols ist für Browser-und e-Mail-Clients obligatorisch. Das Registrieren eines Symbols für die Medienwiedergabe, das Instant Messaging oder den virtuellen Computer für Java-Client Typen ist optional, und registrierte Symbole für diese Client Typen werden zurzeit nicht von Windows verwendet und nicht im oberen Abschnitt der **Start** Menüs von Windows XP oder Windows Vista angezeigt.
+Das Registrieren des Symbols eines Programms ist für Browser- und E-Mail-Clients obligatorisch. Das Registrieren eines Symbols für die Medienwiedergabe, das Instant Messaging oder den virtuellen Computer für Java-Clienttypen ist optional, und registrierte Symbole für diese Clienttypen werden derzeit nicht von Windows verwendet und nicht im oberen Abschnitt des Windows XP- oder Windows **Vista-Startmenüs** angezeigt.
 
-Zum Registrieren eines Symbols für ein Client Programm fügen Sie einen **DefaultIcon** -Unterschlüssel mit einem Standardwert hinzu, wie hier gezeigt.
+Um ein Symbol für ein Clientprogramm zu registrieren, fügen Sie einen **DefaultIcon-Unterschlüssel** mit einem Standardwert hinzu, wie hier gezeigt.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -176,14 +176,14 @@ HKEY_LOCAL_MACHINE
                   (Default) = FilePath,IconIndex
 ```
 
-Der Wert **FilePath** ist der vollständige Pfad zu der Datei, die das Symbol enthält. Für diesen Pfad sind keine Anführungszeichen erforderlich, auch wenn er Leerzeichen enthält.
+Der **FilePath-Wert** ist der vollständige Pfad zu der Datei, die das Symbol enthält. Dieser Pfad erfordert keine Anführungszeichen, auch wenn er Leerzeichen enthält.
 
-Der **IconIndex** -Wert wird wie folgt interpretiert:
+Der **IconIndex-Wert** wird wie folgt interpretiert:
 
--   Wenn **IconIndex** eine positive Zahl ist, wird die Zahl als Index des *NULL basierten* Arrays von Symbolen verwendet, das in der Datei gespeichert ist. Wenn **IconIndex** z. b. 1 ist, wird das zweite Symbol aus der Datei geladen.
--   Wenn **IconIndex** eine negative Zahl ist, wird der absolute Wert von **IconIndex** als Ressourcen Bezeichner (anstelle des Indexes) für das Symbol verwendet. Wenn **IconIndex** beispielsweise den Wert-3 hat, wird das Symbol, dessen Ressourcen Bezeichner den Wert 3 hat, aus der Datei geladen.
+-   Wenn **IconIndex** eine positive Zahl ist, wird die Zahl als Index des *nullbasierten* Arrays von Symbolen verwendet, die in der Datei gespeichert sind. Wenn **IconIndex** beispielsweise 1 ist, wird das zweite Symbol aus der Datei geladen.
+-   Wenn **IconIndex eine** negative Zahl ist, wird der absolute Wert von **IconIndex** als Ressourcenbezeichner (anstelle des Indexes) für das Symbol verwendet. Wenn **IconIndex** beispielsweise -3 ist, wird das Symbol, dessen Ressourcenbezeichner 3 ist, aus der Datei geladen.
 
-Das folgende Beispiel zeigt die Registrierung eines hypothetischen beleuchteten Ansichts Browsers. Das zweite Symbol, das in der Litview.exe-Datei gespeichert wird, wird als Standard verwendet.
+Das folgende Beispiel zeigt die Registrierung eines hypothetischen Lit View-Browsers. Das zweite Symbol, das in der Litview.exe gespeichert ist, wird als Standard verwendet.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -195,14 +195,14 @@ HKEY_LOCAL_MACHINE
                   (Default) = C:\Program Files\LitwareInc\Litview.exe,1
 ```
 
-### <a name="registering-an-open-verb"></a>Registrieren eines geöffneten Verbs
+### <a name="registering-an-open-verb"></a>Registrieren eines offenen Verbs
 
 > [!Note]  
-> Dieser Abschnitt gilt nicht für Windows 2000. Der folgende Schritt ist nur für Browser-und e-Mail-Clients erforderlich.
+> Dieser Abschnitt gilt nicht für Windows 2000. Der folgende Schritt ist nur für Browser- und E-Mail-Clients erforderlich.
 
  
 
-Angenommen, ein Benutzer hat Ihr Programm als standardmäßiges Internet oder e-Mail-Programm ausgewählt. Dieser Benutzer klickt im **Startmenü** von Windows XP oder Windows Vista auf das **Internet** oder das **e-Mail-** Symbol, um das Programm zu öffnen. An diesem Punkt wird die Befehlszeile, die wie hier gezeigt registriert ist, ausgeführt.
+Angenommen, ein Benutzer hat Ihr Programm als Standard-Internet- oder E-Mail-Programm ausgewählt. Dieser Benutzer klickt auf das **Internet-** oder **E-Mail-Symbol** im Windows XP oder Windows **Vista-Startmenü,** um das Programm zu öffnen. An diesem Punkt wird die hier registrierte Befehlszeile ausgeführt.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -216,9 +216,9 @@ HKEY_LOCAL_MACHINE
                         (Default) = command line
 ```
 
-Die Befehlszeile muss einen voll qualifizierten absoluten Pfad zur Datei angeben, gefolgt von optionalen Befehlszeilenoptionen. Wenn der Eintragstyp reg \_ Expand- \_ SZ ist, können Umgebungsvariablen im Pfad verwendet werden. Verwenden Sie Anführungszeichen entsprechend, um sicherzustellen, dass Leerzeichen in der Befehlszeile nicht falsch interpretiert werden. Die Befehlszeile sollte das Programm mit den entsprechenden Standardeinstellungen ausführen. Browser werden im Allgemeinen standardmäßig auf die Startseite des Benutzers eingestellt. E-Mail-Programme öffnen den **Posteingangs** des Benutzers.
+Die Befehlszeile muss einen vollqualifizierten absoluten Pfad zur Datei gefolgt von optionalen Befehlszeilenoptionen angeben. Wenn der Eintragstyp REG EXPAND SZ ist, können \_ \_ Umgebungsvariablen im Pfad verwendet werden. Verwenden Sie anführungszeichen entsprechend, um sicherzustellen, dass Leerzeichen in der Befehlszeile nicht falsch interpretiert werden. Die Befehlszeile sollte das Programm mit den entsprechenden Standardwerten ausführen. Browser verwenden in der Regel standardmäßig die Startseite des Benutzers. E-Mail-Programme öffnen in der Regel den **Posteingang des Benutzers.**
 
-Das folgende Beispiel zeigt die Registrierung eines `open` Verbs für einen hypothetischen beleuchteten Ansichts Browser. Es gibt keine Befehlszeilenoptionen an.
+Das folgende Beispiel zeigt die Registrierung eines `open` Verbs für einen hypothetischen Lit View-Browser. Sie gibt keine Befehlszeilenoptionen an.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -232,85 +232,46 @@ HKEY_LOCAL_MACHINE
                         (Default) = "C:\Program Files\LitwareInc\Litview.exe"
 ```
 
-Beachten Sie, dass in diesem Wert Anführungszeichen um den Pfad platziert werden, da Sie eingebettete Leerzeichen enthält. Wenn Sie diese Anführungszeichen weglassen, kann dies dazu führen, dass die Befehlszeile falsch interpretiert wird.
+Beachten Sie, dass in diesem Wert Anführungszeichen um den Pfad platziert werden, da er eingebettete Leerzeichen enthält. Das Weglassen dieser Anführungszeichen kann dazu führen, dass die Befehlszeile falsch interpretiert wird.
 
-### <a name="registering-installation-information"></a>Installationsinformationen werden registriert
+### <a name="registering-installation-information"></a>Registrieren von Installationsinformationen
 
 > [!Note]  
 > Dieser Abschnitt gilt nicht für Windows Server 2003.
 
  
 
--   [Der Befehl "neu installieren"](#the-reinstall-command)
--   [Befehl zum Ausblenden von Symbolen](#the-hide-icons-command)
--   [Der Befehl "Symbole anzeigen"](#the-show-icons-command)
--   [Gruppenprogramm Konfiguration](#group-program-configuration)
--   [Beispiel für eine Browser Registrierung](#browser-registration-example)
+-   [Befehl "Neu installieren"](#the-reinstall-command)
+-   [Befehl "Symbole ausblenden"](#the-hide-icons-command)
+-   [Befehl "Symbole anzeigen"](#the-show-icons-command)
+-   [Konfiguration des Gruppenprogramms](#group-program-configuration)
+-   [Beispiel für die Browserregistrierung](#browser-registration-example)
 
-Die Funktion, mit der der Benutzer Computer spezifische Standardprogramme auswählt, wird benannt und darauf zugegriffen, wie in der folgenden Tabelle dargestellt. (In Windows Vista wurde ein neues Feature eingeführt, das **Standardprogramm wird festgelegt**, mit dem ein Benutzer benutzerspezifische Standardeinstellungen festlegen kann.)
+Das Feature, mit dem der Benutzer computerspezifische Standardprogramme auswählt, wird benannt, und es wird darauf zugegriffen, wie in der folgenden Tabelle gezeigt. (Windows Vista das neue Feature Set **your default programs**(Standardprogramme festlegen) eingeführt, mit dem benutzerspezifische Standardwerte festgelegt werden können.)
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Betriebssystem</th>
-<th>Titel</th>
-<th>Zugriffs Speicherort</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Windows 7</td>
-<td>Festlegen des Programm Zugriffs und der Standardeinstellungen des Computers</td>
-<td><ul>
-<li><strong>Start</strong> Menü ( <strong>Standardprogramme</strong> -Option)</li>
-<li><strong>Standardprogramme</strong> System Steuerungselement</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Windows Vista</td>
-<td>Festlegen des Programm Zugriffs und der Standardeinstellungen des Computers</td>
-<td><ul>
-<li><strong>Start</strong> Menü ( <strong>Standardprogramme</strong> -Option)</li>
-<li><strong>Standardprogramme</strong> System Steuerungselement</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>Windows XP SP2</td>
-<td>Festlegen des Programm Zugriffs und der Standardeinstellungen</td>
-<td><ul>
-<li><strong>Startmenü</strong></li>
-<li>Software <strong>Hinzufügen oder entfernen</strong> System Steuerungselement</li>
-</ul></td>
-</tr>
-<tr class="even">
-<td>Windows XP SP1</td>
-<td>Konfigurieren von Programmen</td>
-<td><ul>
-<li>Software <strong>Hinzufügen oder entfernen</strong> System Steuerungselement</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Betriebssystem | Titel | Zugriffsort | 
+|------------------|-------|-----------------|
+| Windows 7 | Festlegen der Standardeinstellungen für Programmzugriff und Computer | <ul><li>Option <strong>"Standardprogramme" im Startmenü</strong> <strong></strong></li><li><strong>Standardprogramme</strong> Systemsteuerung Element</li></ul> | 
+| Windows Vista | Festlegen der Standardeinstellungen für Programmzugriff und Computer | <ul><li>Option <strong>"Standardprogramme" im Startmenü</strong> <strong></strong></li><li><strong>Standardprogramme</strong> Systemsteuerung Element</li></ul> | 
+| Windows XP SP2 | Festlegen von Programmzugriff und Standardwerten | <ul><li><strong>Startmenü</strong></li><li><strong>Hinzufügen oder Entfernen von Programmen</strong> Systemsteuerung Element</li></ul> | 
+| Windows XP SP1 | Konfigurieren von Programmen | <ul><li><strong>Hinzufügen oder Entfernen von Programmen</strong> Systemsteuerung Element</li></ul> | 
+
 
 
 
  
 
-Der Einfachheit halber wird in diesem Thema der Windows 7-Titel des Features verwendet. Alle Versionen der Funktion werden als SPAD bezeichnet.
+Der Einfachheit halber wird in diesem Thema der titel Windows 7 des Features verwendet. Alle Versionen des Features werden häufig als SPAD bezeichnet.
 
 > [!Note]  
-> Wenn Sie Windows 2000 oder Windows XP ausführen, muss mindestens Windows 2000 SP3 oder Windows XP SP1 installiert sein, damit die Seite " **Programm Zugriff und Standardeinstellungen festlegen** " angezeigt wird. In Windows Vista und höher sind für den Zugriff auf die Seite " **Programm Zugriff und Computer Standards festlegen** " Administrator Rechte erforderlich. Aus diesem Grund wird Entwicklern empfohlen, sich für das System Steuerungselement " [Standardprogramme festlegen](default-programs.md) " zu registrieren, damit jeder Benutzer Anwendungs Standardwerte verwalten kann.
+> Wenn Sie Windows 2000 oder Windows XP ausführen, muss mindestens Windows 2000 SP3 oder Windows XP SP1 installiert  sein, um die Seite Programmzugriff und Standardwerte festlegen anzuzeigen. In Windows Vista und höher sind für den Zugriff auf die Seite Programmzugriff und **Computereinstellungen** festlegen Administratorrechte erforderlich. Aus diesem Grund wird Entwicklern empfohlen, sich für das Element Set [your default programs](default-programs.md) Systemsteuerung (Standardprogramme festlegen) zu registrieren, damit jeder Benutzer die Standardeinstellungen der Anwendung verwalten kann.
 
  
 
-Die folgende Registrierungs Struktur zeigt die Vielzahl der Informationen, die im **installinfo** -Schlüssel des Programms registriert werden müssen, damit das Programm auf der Seite **Programm Zugriff und Computer Standards festlegen** als Option für den Clienttyp angezeigt wird. Diese Werte werden in den folgenden Abschnitten ausführlich erläutert.
+Die folgende Registrierungsstruktur zeigt die Vielzahl von Informationen, die im **InstallInfo-Schlüssel** des Programms registriert werden müssen, damit das Programm auf der Seite Programmzugriff und **Computereinstellungen** festlegen als Option für seinen Clienttyp angezeigt wird. Jeder dieser Werte wird in den folgenden Abschnitten ausführlich erläutert.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -325,42 +286,42 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 1
 ```
 
-Die Befehlszeile muss einen voll qualifizierten absoluten Pfad zur Datei angeben, gefolgt von optionalen Befehlszeilenoptionen. Verwenden Sie Anführungszeichen entsprechend, um sicherzustellen, dass Leerzeichen in der Befehlszeile nicht falsch interpretiert werden.
+Die Befehlszeile muss einen vollqualifizierten absoluten Pfad zur Datei gefolgt von optionalen Befehlszeilenoptionen angeben. Verwenden Sie anführungszeichen entsprechend, um sicherzustellen, dass Leerzeichen in der Befehlszeile nicht falsch interpretiert werden.
 
-### <a name="the-reinstall-command"></a>Der Befehl "neu installieren"
+### <a name="the-reinstall-command"></a>Befehl "Neu installieren"
 
-Die im reinstallcommand-Wert deklarierte Befehlszeile für die erneute Installation wird ausgeführt, wenn der Benutzer die Seite " **Programm Zugriff und Computer Standards festlegen** " verwendet, um das Programm als Standardwert für den Clienttyp auszuwählen. In Windows Vista und höher ist für den Zugriff auf diese Seite eine Administrator Berechtigungsstufe erforderlich. Wenn Sie in Windows 8 Ihre Anwendung mit dem gleichen Namen sowohl für den **Programm Zugriffs Satz als** auch für **Standardprogramme** registriert haben, werden die in **Standardprogrammen** für diese Anwendung angegebenen Standardwerte auf den aktuellen Benutzer angewendet, und der Befehl "neu installieren" wird ausgeführt.
+Die im Wert ReinstallCommand deklarierte **Neuinstallationsbefehlszeile** wird ausgeführt, wenn der Benutzer auf der Seite Programmzugriff und Computereinstellungen festlegen ihr Programm als Standard für seinen Clienttyp auswählt. In Windows Vista und höher erfordert der Zugriff auf diese Seite eine Administratorberechtigungsstufe. Wenn Sie in Windows 8 Ihre Anwendung mit demselben Namen sowohl für Programmzugriff festlegen als auch für **Computereinstellungen** und Standardprogramme registriert haben, werden die **in** Standardprogramme für diese Anwendung angegebenen Standardwerte für den aktuellen Benutzer angewendet und der **Neuinstallationsbefehl** ausgeführt.
 
-Das Programm, das von der neu [Installationsbefehlszeile](fa-intro.md) gestartet wird, muss die Anwendung mit dem kompletten Satz von Datei-und [Protokoll](/previous-versions//aa767743(v=vs.85)) Typen verknüpfen, die die Anwendung verarbeiten kann. Alle Anwendungen müssen die Handlerfunktion im Befehl Neuinstallation einrichten. Anwendungen können den Befehl "neu installieren" verwenden, um die Funktion zu registrieren und optional den Standardstatus festzulegen. Wenn eine Anwendung sowohl den Funktions-als auch den standardhandlerstatus im installieren Sie-Befehl implementiert, sollte Sie auch alle gewünschten sichtbaren Verknüpfungen oder Verknüpfungen wiederherstellen. Die sichtbaren Einstiegspunkte, die von den meisten Anwendungen ausgewählt werden, werden im [Befehl Symbole ausblenden](#the-hide-icons-command)aufgeführt.
+Das von der Neuinstallationsbefehlszeile gestartete Programm [](fa-intro.md) muss [](/previous-versions//aa767743(v=vs.85)) die Anwendung dem vollständigen Satz von Datei- und Protokolltypen zuordnen, die die Anwendung verarbeiten kann. Alle Anwendungen müssen die Handlerfunktion im Neuinstallationsbefehl einrichten. Anwendungen können den Befehl "neu installieren" verwenden, um funktionen zu registrieren und optional den Standardstatus zu erstellen. Wenn sich eine Anwendung dafür entscheidet, sowohl den Funktions- als auch den Standardhandlerstatus im Neuinstallationsbefehl zu implementieren, sollte sie auch alle gewünschten sichtbaren Links oder Tastenkombinationen bzw. Verknüpfungen erneut ausführen. Die sichtbaren Einstiegspunkte, die von den meisten Anwendungen verwendet werden, sind im [Befehl Symbole ausblenden aufgeführt.](#the-hide-icons-command)
 
 > [!Note]  
-> Es wird dringend empfohlen, dass Anwendungen die Verarbeitungs Funktion im Befehl "neu installieren" implementieren.
+> Es wird dringend empfohlen, dass Anwendungen die Behandlungsfunktion im Neuinstallationsbefehl implementieren.
 
  
 
-Nach Abschluss des Neuinstallations Vorgangs sollte das von der Befehlszeile für die erneute Installation gestartete Programm beendet werden. Das entsprechende Programm sollte nicht gestartet werden. Es sollten nur Standardwerte registriert werden. Beispielsweise sollte der Befehl "neu installieren" für einen Browser nicht die Startseite des Benutzers öffnen.
+Sobald der Neuinstallationsvorgang abgeschlossen ist, sollte das von der Neuinstallationsbefehlszeile gestartete Programm beendet werden. Das entsprechende Programm sollte nicht gestartet werden. Es sollten lediglich Standardwerte registriert werden. Beispielsweise sollte der Neuinstallationsbefehl für einen Browser die Startseite des Benutzers nicht öffnen.
 
 > [!Note]  
-> Bei Browser-und e-Mail-Clients unter Windows XP und Windows Vista sollte sich eine Registrierung für das entsprechende Symbol am oberen Rand des Start Menüs durchführen. Weitere Informationen finden Sie unter [Start Menü Registrierung](#start-menu-registration) .
+> Für Browser- und E-Mail-Clients in Windows XP und Windows Vista sollten Sich Anwendungen, die sowohl die Behandlungsfunktion als auch den Standardstatus im Neuinstallationsbefehl festlegen, für das entsprechende Symbol am oberen Startmenü. Weitere [Informationen finden Sie unter Startmenüregistrierung.](#start-menu-registration)
 
  
 
-### <a name="the-hide-icons-command"></a>Befehl zum Ausblenden von Symbolen
+### <a name="the-hide-icons-command"></a>Befehl "Symbole ausblenden"
 
-Die Befehlszeile, die im hideidescommand-Wert deklariert wird, wird ausgeführt, wenn der Benutzer das **Kontrollkästchen Zugriff auf dieses Programm aktivieren** auf der Seite **Programm Zugriff und Computer Standards festlegen** deaktiviert. Diese Befehlszeile muss alle Zugriffspunkte Ihres Programms ausblenden, die auf der Benutzeroberfläche sichtbar sind. Die spezifischen Richtlinien sind das Entfernen von Verknüpfungen und Symbolen aus den folgenden Speicherorten:
+Die im HideIconsCommand-Wert deklarierte Befehlszeile wird ausgeführt,  wenn der Benutzer das Feld Zugriff auf dieses Programm aktivieren auf der Seite Programmzugriff und **Computereinstellungen festlegen deaktiviert.** Diese Befehlszeile muss alle Zugriffspunkte Ihres Programms ausblenden, die auf der Benutzeroberfläche sichtbar sind. Die spezifischen Richtlinien sind das Entfernen von Verknüpfungen und Symbolen aus den folgenden Speicherorten:
 
--   Desktop Symbole
--   Startmenü Links, einschließlich der **Start** Gruppe
--   Links für die Schnellstartleiste
+-   Desktopsymbole
+-   Startmenü, einschließlich der **Startgruppe**
+-   Schnellstart von Balkenlinks
 -   Benachrichtigungsbereich
 -   Kontextmenüs
--   Ordnertaskband
+-   Ordner-Taskband
 
-Diese Befehlszeile muss auch automatische Aufrufe des Programms verhindern, z. b. die im Registrierungsschlüssel **Ausführen** angegebenen. Es wird empfohlen, diese Richtlinien in der Anwendung zum Ausblenden des Zugriffs Rückrufs zu implementieren.
+Diese Befehlszeile muss auch automatische Aufrufe des Programms verhindern, z. B. die im Registrierungsschlüssel **Ausführen** angegebenen Aufrufe. Anbietern wird empfohlen, diese Richtlinien im Rückruf Zugriff ausblenden der Anwendung zu implementieren.
 
-Wenn Symbole ausgeblendet werden, müssen Sie die Registrierung (Anwendungsfunktion) von Dateitypen nicht aufgeben. Außerdem müssen Sie den Standardstatus der Anwendung für Datei-und Protokolltypen nicht aufgeben. Dies kann zu einer ungültigen Benutzeroberfläche führen, wenn diese Typen in der Benutzeroberfläche gefunden werden.
+Sie müssen die Registrierung (Anwendungsfunktion) von Dateitypen nicht abgeben, wenn Symbole ausgeblendet sind. Sie müssen auch nicht den Standardstatus der Anwendung für Datei- und Protokolltypen abgeben. Dies kann zu einer schlechten Benutzererfahrung führen, wenn diese Typen auf der Benutzeroberfläche auftreten.
 
-Nach dem erfolgreichen Ausblenden von Symbolen müssen Sie den iconsvisible-Registrierungs Wert wie folgt auf 0 aktualisieren:
+Nach dem erfolgreichen Ausblenden von Symbolen müssen Sie den Registrierungswert IconsVisible wie gezeigt auf 0 (0) aktualisieren:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -372,31 +333,31 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 0
 ```
 
-Der iconsvisible-Eintrag ist vom Typ " **reg \_ DWORD**".
+Der Eintrag IconsVisible ist vom Typ **REG \_ DWORD.**
 
 ### <a name="an-alternate-hide-icons-method-in-spad"></a>Eine alternative Methode zum Ausblenden von Symbolen in SPAD
 
-Bei einigen Legacy Anwendungen ist eine vollständige Implementierung des Ausblenden des Zugriffs möglicherweise nicht praktikabel. Eine alternative Methode, die denselben Effekt erzielt, ist die Deinstallation der Anwendung. Der nachfolgende Abschnitt zeigt Beispiel Verhalten und Beispielcode zum Implementieren dieser Alternativen. Im Allgemeinen sollten unabhängige Softwarehersteller (ISVs) diese Alternative vermeiden, da Sie Folgendes bietet:
+Bei einigen Legacyanwendungen ist eine vollständige Implementierung von Zugriff ausblenden möglicherweise nicht praktikabel. Eine alternative Methode, die den gleichen Effekt erzielt, ist die Deinstallation der Anwendung. Der folgende Abschnitt zeigt Beispielverhalten und Beispielcode zum Implementieren dieser Alternative. Im Allgemeinen sollten unabhängige Softwarehersteller (INDEPENDENT Software Vendors, ISVs) diese Alternative vermeiden, da sie:
 
 -   Deinstallieren Sie die Anwendung vollständig aus dem System.
 -   Entfernt zuvor ausgewählte Standardwerte.
--   Lassen Sie die Option keine Benutzeroberfläche zur erneuten Installation der Anwendung.
--   Aktivieren Sie das Feature "Zugriff aktivieren" nicht mehr, da die Anwendung durch eine Deinstallation vollständig aus SPAD entfernt wird.
+-   Lassen Sie keine Benutzeroberflächenoption, um die Anwendung neu zu installieren.
+-   Stellen Sie das Feature "Zugriff aktivieren" nicht mehr zur Verfügung, da eine Deinstallation die Anwendung vollständig aus SPAD entfernt.
 
-Die empfohlene Benutzer Darstellung lautet wie folgt:
+Die empfohlene Benutzeroberfläche lautet wie folgt:
 
--   Wenn der Benutzer das Kontrollkästchen **Zugriff auf dieses Programm aktivieren** in SPAD deaktivieren, wird die folgende Benutzeroberfläche angezeigt.
+-   Wenn der Benutzer das Kontrollkästchen Zugriff **auf** dieses Programm aktivieren in SPAD deaktiviert, wird die folgende Benutzeroberfläche angezeigt.
 
-    ![Dialogfeld zum Ausblenden des Programm Zugriffs](images/hideaccessvista.png)
+    ![Dialogfeld zum Ausblenden des Zugriffs auf das Programm](images/hideaccessvista.png)
 
--   Wenn der Benutzer **OK** auswählt, wird das System Steuerungselement **Programme und Funktionen** gestartet, um dem Benutzer die Deinstallation der Anwendung zu ermöglichen.
--   In diesem Dialogfeld sollten Windows XP-Benutzer angezeigt werden.
+-   Wenn der Benutzer OK **auswählt,** **wird** das Systemsteuerung gestartet, damit der Benutzer die Anwendung deinstallieren kann.
+-   Windows Xp-Benutzern sollte dieses Dialogfeld angezeigt werden.
 
-    ![entsprechendes Windows XP-Dialogfeld](images/hideaccessxp.png)
+    ![Entsprechendes Windows XP-Dialogfeld](images/hideaccessxp.png)
 
--   Wenn der Windows XP-Benutzer **OK** auswählt, wird **das System Steuerungs** Element Software gestartet, um dem Benutzer die Deinstallation der Anwendung zu ermöglichen.
+-   Wenn der Windows XP-Benutzer **OK** auswählt, wird das Element **Software** Systemsteuerung gestartet, damit der Benutzer die Anwendung deinstallieren kann.
 
-Der folgende Code stellt eine wiederverwendbare Implementierung für die Funktion "Zugriff ausblenden" bereit, wie oben beschrieben. Sie kann unter Windows XP, Windows Vista und Windows 7 verwendet werden.
+Der folgende Code stellt eine wiederverwendbare Implementierung für das Feature Zugriff ausblenden bereit, wie oben beschrieben. Sie kann auf Windows XP, Windows Vista und Windows 7 verwendet werden.
 
 
 ```
@@ -469,11 +430,11 @@ int _tmain(int argc, WCHAR* argv[])
 
 
 
-### <a name="the-show-icons-command"></a>Der Befehl "Symbole anzeigen"
+### <a name="the-show-icons-command"></a>Befehl "Symbole anzeigen"
 
-Die Befehlszeile, die im Eintrag showiconfiguration Command deklariert ist, wird ausgeführt, wenn der Benutzer das Kontrollkästchen **Zugriff auf dieses Programm aktivieren** auf der Seite **Programm Zugriff und Computer Standards festlegen** prüft. Mit dieser Befehlszeile können Sie die Zugriffspunkte Ihres Programms, einschließlich der im **Startmenü** , auf dem Desktop und in der **Start** Gruppe, sowie der normalen automatischen Aufrufe, wie z. b. der im Registrierungsschlüssel **Ausführen** angegeben, wiederherstellen. Die sichtbaren Zugriffspunkte, die für die meisten Anwendungen von Interesse sind, werden im [Befehl Symbole ausblenden](#the-hide-icons-command)aufgeführt. Die Anwendung sollte keine benutzerspezifischen Standardeinstellungen ändern. Diese Änderung sollte vom Benutzer über **Standardprogramme** durchgeführt werden.
+Die im Eintrag ShowIconsCommand deklarierte Befehlszeile wird ausgeführt, wenn der Benutzer auf der Seite **Programmzugriff und Computerstandardeinstellungen festlegen** das Feld **Zugriff auf dieses Programm aktivieren** überprüft. Über diese Befehlszeile können die Zugriffspunkte Ihres Programms wiederhergestellt werden, einschließlich derer im **Startmenü,** auf dem Desktop und in der **Startgruppe** sowie normale automatische Aufrufe, z. B. die im Registrierungsschlüssel **Ausführen** angegebenen. Die sichtbaren Zugriffspunkte, die für die meisten Anwendungen von Interesse sind, sind im [Befehl Symbole ausblenden](#the-hide-icons-command)aufgeführt. Die Standardeinstellungen pro Benutzer sollten von der Anwendung nicht geändert werden. Diese Änderung sollte vom Benutzer über **Standardprogramme** vorgenommen werden.
 
-Nachdem Sie Ihre Symbole erfolgreich angezeigt haben, müssen Sie den iconsvisible-Registrierungs Wert auf 1 aktualisieren, wie im folgenden gezeigt:
+Nachdem Sie Ihre Symbole erfolgreich angezeigt haben, müssen Sie den Registrierungswert IconsVisible wie gezeigt auf 1 aktualisieren:
 
 ```
 HKEY_LOCAL_MACHINE
@@ -485,16 +446,16 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 1
 ```
 
-Beachten Sie Folgendes: Wenn Sie den Eintrag hideiencommand verwendet haben, um eine Deinstallation der Anwendung einzugeben, wird der Eintrag showiencommand nicht verwendet. Er sollte bei der Deinstallation aus der Registrierung mit den restlichen Informationen der Anwendung entfernt werden.
+Beachten Sie Folgendes: Wenn Sie den Eintrag HideIconsCommand verwendet haben, um eine Deinstallation der Anwendung anzufordern, wird der Eintrag ShowIconsCommand nicht verwendet. Sie sollte während der Deinstallation mit den restlichen Informationen der Anwendung aus der Registrierung entfernt werden.
 
-### <a name="group-program-configuration"></a>Gruppenprogramm Konfiguration
+### <a name="group-program-configuration"></a>Konfiguration des Gruppenprogramms
 
 > [!Note]  
 > Dieser Abschnitt gilt nicht für Windows 2000.
 
  
 
-Im Rahmen der System Vorbereitung kann ein OEM eine Konfiguration einrichten, die Zugriffspunkte für den Microsoft-Browser, die e-Mail, die Medienwiedergabe, das Instant Messaging oder den virtuellen Computer für Java-Client Programme verbirgt und seine eigenen Standardprogramme angibt. OEMs können es Benutzern ermöglichen, ihre Computer zu einem beliebigen Zeitpunkt auf diese Standardkonfiguration zurückzusetzen, indem Sie die folgenden Registrierungs Werte festlegen.
+Im Rahmen der Systemvorbereitung kann ein OEM eine Konfiguration einrichten, die Zugriffspunkte für den Microsoft-Browser, E-Mail, Medienwiedergabe, Instant Messaging oder den virtuellen Computer für Java-Clientprogramme ausblendet und eigene Standardprogramme angibt. OEMs können es Benutzern ermöglichen, ihre Computer jederzeit auf diese Standardkonfiguration zurückzusetzen, indem sie die folgenden Registrierungswerte festlegen.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -507,23 +468,23 @@ HKEY_LOCAL_MACHINE
                   OEMDefault = 1
 ```
 
-Wenn diese Schlüssel festgelegt sind, können Benutzer die OEM-Konfiguration wiederherstellen, indem Sie die Option **Computer Hersteller** auf der Seite **Programm Zugriff und Computer Standards festlegen** auswählen. Wenn diese Schlüssel nicht festgelegt sind, wird die Option **Computer Hersteller** nicht angezeigt.
+Wenn diese Schlüssel festgelegt sind, können Benutzer die OEM-Konfiguration wiederherstellen, indem sie auf der Seite **Programmzugriff und Computerstandardeinstellungen festlegen** die Option **Computerhersteller** auswählen. Wenn diese Schlüssel nicht festgelegt sind, wird die Option **Computerhersteller** nicht angezeigt.
 
-Der **oemshowicons** -Eintrag, falls vorhanden, legt den Symbol Anzeige Status für den angegebenen Client fest, der angewendet wird, wenn der Benutzer den **Computer Hersteller** auswählt. Der Wert 1 bewirkt, dass Symbole angezeigt werden, und der Wert 0 bewirkt, dass Symbole nicht angezeigt werden. Wenn **oemshowicons** nicht vorhanden ist, hat die Auswahl von **Computer Hersteller** keine Auswirkung auf die Symbol Anzeige Einstellung. **Oemshowicons** ist vom Typ " **reg \_ DWORD**".
+Der Eintrag **OEMShowIcons** legt ggf. das Symbol zum Anzeigen des Zustands für den angegebenen Client fest, der angewendet wird, wenn der Benutzer **Computerhersteller** auswählt. Der Wert 1 bewirkt, dass Symbole angezeigt werden, und der Wert 0 bewirkt, dass Symbole nicht angezeigt werden. Wenn **OEMShowIcons** nicht vorhanden ist, wirkt sich die Auswahl von **Computerhersteller** nicht auf die Einstellung symbol show aus. **OEMShowIcons** ist vom Typ **REG \_ DWORD.**
 
-Der **oemdefault** -Eintrag, falls vorhanden und auf 1 festgelegt, legt die OEM-Voreinstellung für den Standard Client des festgelegten Typs fest. Nur ein Client eines bestimmten Typs kann als OEM-Standard gekennzeichnet werden. Wenn mehr als die Registrierung eines Clients den **oemdefault** -Eintrag enthält, werden alle ignoriert, und der aktuelle Client wird weiterhin als Standard Client verwendet. Wenn der **oemdefault** -Eintrag nicht vorhanden oder vorhanden und auf 0 festgelegt ist, wird der jeweilige Client nicht als Standard Client verwendet, wenn der Benutzer den **Computer Hersteller** auswählt. **Oemdefault** ist vom Typ " **reg \_ DWORD**".
+Wenn der **OEMDefault-Eintrag** vorhanden und auf 1 festgelegt ist, wird die OEM-Einstellung für den Standardclient des angegebenen Typs festgelegt. Nur ein Client eines bestimmten Typs kann als OEM-Standard markiert werden. Wenn mehr als die Registrierung eines Clients den **OEMDefault-Eintrag** enthält, werden alle ignoriert, und der aktuelle Client wird weiterhin als Standardclient verwendet. Wenn der **OEMDefault-Eintrag** nicht vorhanden oder vorhanden ist und auf 0 festgelegt ist, wird dieser bestimmte Client nicht als Standardclient verwendet, wenn der Benutzer **Computerhersteller** auswählt. **OEMDefault** ist vom Typ **REG \_ DWORD.**
 
-Zusätzlich zur Option, ihre Computer auf die vom OEM festgelegte Standardkonfiguration zurückzusetzen, haben die Benutzer drei weitere Konfigurationsoptionen:
+Zusätzlich zur Option, ihre Computer auf die vom OEM festgelegte Standardkonfiguration zurückzusetzen, haben Benutzer drei weitere Konfigurationsoptionen:
 
--   Legen Sie Ihren Computer auf eine Microsoft Windows-Konfiguration fest. In diesem Fall wird auf der Seite **Programm Zugriff und Computer Standards festlegen** der Zugriff auf alle Microsoft-und nicht-Microsoft-Software auf dem Computer ermöglicht, der in den relevanten Produktkategorien registriert ist. Microsoft Windows-Programme werden als Standardoption für jede Kategorie ausgewählt.
--   Legen Sie Ihren Computer auf eine nicht-Microsoft-Konfiguration fest. Diese Konfiguration verbirgt Zugriffspunkte (z. b. das **Startmenü** ) für Windows Internet Explorer, Windows Media Player, Windows Messenger und Microsoft Outlook Express. Er ermöglicht den Zugriff auf die Software, die nicht von Microsoft ist, auf dem Computer in diesen Kategorien. Wenn außerdem ein nicht-Microsoft-Programm in einer Kategorie verfügbar ist, wird es als Standardwert für diese Kategorie festgelegt. Wenn in einer Kategorie mehr als ein nicht-Microsoft-Programm verfügbar ist, wird der Benutzer aufgefordert zu entscheiden, welches nicht-Microsoft-Programm als Standard verwendet werden soll.
--   Richten Sie eine benutzerdefinierte Konfiguration ein. Benutzer nehmen Ihre eigene Auswahl vor, um den Zugriff zu aktivieren oder zu entfernen, und kombinieren Microsoft-und nicht-Microsoft-Programme, wenn Sie passen. Benutzer legen Standardoptionen auf kategoriebasis fest.
+-   Legen Sie ihren Computer auf eine Microsoft Windows-Konfiguration fest. In diesem Fall ermöglicht die Seite **Programmzugriff und Computerstandardeinstellungen festlegen** den Zugriff auf alle Microsoft- und Nicht-Microsoft-Software auf dem Computer, der in den relevanten Produktkategorien registriert ist. Microsoft Windows-Programme werden als Standardoption für jede Kategorie ausgewählt.
+-   Legen Sie ihren Computer auf eine Nicht-Microsoft-Konfiguration fest. Diese Konfiguration blendet Zugriffspunkte (z. B. das **Startmenü)** für Windows Internet Explorer, Windows Media Player, Windows Messenger und Microsoft Outlook Express aus. Sie ermöglicht den Zugriff auf die Nicht-Microsoft-Software auf dem Computer in diesen Kategorien. Wenn außerdem ein Nicht-Microsoft-Programm in einer Kategorie verfügbar ist, wird es als Standard für diese Kategorie festgelegt. Wenn mehrere Nicht-Microsoft-Programme in einer Kategorie verfügbar sind, wird der Benutzer aufgefordert, auszuwählen, welches Nicht-Microsoft-Programm als Standard verwendet werden soll.
+-   Richten Sie eine benutzerdefinierte Konfiguration ein. Benutzer treffen ihre eigene Auswahl zum Aktivieren oder Entfernen des Zugriffs, indem sie Microsoft- und Nicht-Microsoft-Programme nach Bedarf kombinieren. Benutzer richten Standardoptionen kategorieweise ein.
 
-Benutzer können jede dieser Optionen jederzeit ändern.
+Benutzer können diese Optionen jederzeit ändern.
 
-### <a name="browser-registration-example"></a>Beispiel für eine Browser Registrierung
+### <a name="browser-registration-example"></a>Beispiel für die Browserregistrierung
 
-Das folgende Beispiel zeigt die vollständige **installinfo** -Registrierung für einen fiktiven beleuchteten Ansichts Browser. In diesem Fall ermöglichen die Befehls Zeilenschalter, dass die Litview.exe Datei alle Aktionen ausführt, die für jeden Wert erforderlich sind.
+Das folgende Beispiel zeigt die vollständige **InstallInfo-Registrierung** für einen fiktiven Lit View-Browser. In diesem Fall ermöglichen die Befehlszeilenschalter dem Litview.exe Datei, alle aktionen auszuführen, die für jeden Wert erforderlich sind.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -538,29 +499,29 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 1
 ```
 
-Beachten Sie, dass die Pfade in Anführungszeichen eingefügt werden, da Sie eingebettete Leerzeichen enthalten.
+Beachten Sie, dass anführungszeichen um die Pfade platziert werden, da sie eingebettete Leerzeichen enthalten.
 
-## <a name="registration-elements-for-specific-client-types"></a>Registrierungs Elemente für bestimmte Client Typen
+## <a name="registration-elements-for-specific-client-types"></a>Registrierungselemente für bestimmte Clienttypen
 
-Die folgenden Informationen finden Sie auch in den Ressourcen, die im Abschnitt Verwandte Themen am Ende dieses Themas aufgelistet sind.
+Die folgenden Informationen finden Sie auch in den Ressourcen, die am Ende dieses Themas im Abschnitt Verwandte Themen aufgeführt sind.
 
--   [Start Menü Registrierung](#start-menu-registration)
--   [Mail Client Registrierung](#mail-client-registration)
+-   [Registrierung im Startmenü](#start-menu-registration)
+-   [E-Mail-Clientregistrierung](#mail-client-registration)
 
-### <a name="start-menu-registration"></a>Start Menü Registrierung
+### <a name="start-menu-registration"></a>Registrierung im Startmenü
 
-Unter Windows XP haben Anwendungen normalerweise standardmäßig standardmäßig auf einem Computer weiten (**HKEY \_ local \_ Machine**) und nicht in einem Benutzerbereich (**Aktueller HKEY- \_ \_ Benutzer**) registriert. Mit der Einführung der Benutzerkontensteuerung (User Account Control, UAC) in Windows Vista müssen Anwendungen, die die **Internet** **-und e-Mail-** Slots im **Startmenü** beanspruchen, den Befehl "neu installieren" im richtigen Ausführungs Kontext implementieren.
+Unter Windows XP registrierten Anwendungen in der Regel Standardwerte auf einem computerweiten Bereich **(HKEY \_ LOCAL \_ MACHINE)** anstelle eines Benutzerbereichs **(HKEY \_ CURRENT \_ USER).** Mit dem Windows Vista-Einführung der Benutzerkontensteuerung (User Account Control, UAC) müssen Anwendungen, die die **Internet-** und **E-Mail-Slots** im **Startmenü** beanspruchen, den Neuinstallationsbefehl im richtigen Ausführungskontext implementieren.
 
 > [!Note]  
-> Der Link für den Startmenü **-e-Mail-** Link wurde ab Windows 7 entfernt. Die in diesem Abschnitt erörterte Registrierung sollte jedoch weiterhin ausgeführt werden, da Sie den standardmäßigen MAPI-Client zuweist.
+> Der Startmenü **E-Mail-Link** wurde ab Windows 7 entfernt. Die in diesem Abschnitt beschriebene Registrierung sollte jedoch weiterhin ausgeführt werden, da der MAPI-Standardclient zugewiesen wird.
 
  
 
-Ein eingeschränkter Benutzer unter Windows XP, Windows Vista oder Windows 7 kann nicht auf SPAD zugreifen. Aus diesem Grund wird Entwicklern empfohlen, sich für das System Steuerungselement " **Standardprogramme festlegen** " zu registrieren, sodass jeder Benutzer Standard Anwendungs Standardwerte verwalten kann.
+Ein eingeschränkter Benutzer auf Windows XP, Windows Vista oder Windows 7 kann nicht auf SPAD zugreifen. Aus diesem Grund wird Entwicklern empfohlen, sich für das Element Set your default programs Systemsteuerung **(Standardprogramme** Systemsteuerung festlegen) zu registrieren, damit benutzerspezifische Anwendungsstandardeinstellungen von jedem Benutzer verwaltet werden können.
 
-Die in SPAD vorgenommene Auswahl wirkt sich nur auf die computerspezifischen Einstellungen aus.
+Die in SPAD getroffene Auswahl sollte sich nur auf die Einstellungen pro Computer auswirken.
 
-Legen Sie den Registrierungs Wert wie folgt fest.
+Legen Sie den Registrierungswert wie folgt fest.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -574,7 +535,7 @@ HKEY_LOCAL_MACHINE
 > 
 > **Die folgenden Informationen gelten nur für Windows XP.**
 > 
-> Wenn die Registrierung des Standardwerts auf Computer Ebene unter HKEY \_ local \_ Machine, wie oben gezeigt, erfolgreich ist, sollte die Anwendung den Wert löschen, der dem Standardeintrag unter dem folgenden Unterschlüssel zugewiesen ist:
+> Wenn die Registrierung des Standardwerts auf Computerebene unter HKEY \_ LOCAL MACHINE wie oben gezeigt erfolgreich \_ ist, sollte die Anwendung den Wert löschen, der dem Standardeintrag unter dem folgenden Unterschlüssel zugewiesen ist:
 > 
 > ```
 > HKEY_CURRENT_USER
@@ -583,7 +544,7 @@ HKEY_LOCAL_MACHINE
 >          ClientTypeName
 > ```
 > 
-> Wenn die Registrierung des Standardwerts auf Computer Ebene unter HKEY \_ local \_ Machine, wie oben gezeigt, fehlschlägt, in der Regel, weil der Benutzer nicht über Schreibberechtigungen für den Unterschlüssel verfügt, sollte die Anwendung den folgenden Wert festlegen:
+> Wenn bei der Registrierung der Standardeinstellung auf Computerebene unter HKEY \_ LOCAL MACHINE wie oben gezeigt ein Fehler \_ auftritt, in der Regel, weil der Benutzer keine Schreibberechtigung für den Unterschlüssel hat, sollte die Anwendung den folgenden Wert festlegen:
 > 
 > ```
 > HKEY_CURRENT_USER
@@ -597,11 +558,11 @@ HKEY_LOCAL_MACHINE
 
  
 
-Nach dem Aktualisieren der Registrierungsschlüssel sollte das Programm die [**WM- \_ settingchange**](../winmsg/wm-settingchange.md) -Nachricht mit **wParam** = 0 und **LPARAM** übertragen, um das \\ \\ Betriebssystem zu benachrichtigen, dass sich der Standard Client geändert hat.
+Nach dem Aktualisieren der Registrierungsschlüssel sollte das Programm die [**WM \_ SETTINGCHANGE-Nachricht**](../winmsg/wm-settingchange.md) mit **wParam** = 0 und **lParam** übertragen, die auf die auf NULL endende Zeichenfolge "SoftwareClientTypeName" \\ \\ zeigt, um das Betriebssystem zu benachrichtigen, dass der Standardclient geändert wurde.
 
-### <a name="mail-client-registration"></a>Mail Client Registrierung
+### <a name="mail-client-registration"></a>E-Mail-Clientregistrierung
 
-Bei einem e-Mail-Client muss das Programm unter dem Stamm-mailto-Schlüssel der **HKEY- \_ Klassen \_** über registrierte Einstellungen verfügen, um \\  URLs zu verwenden, die das `mailto` Protokoll verwenden. Legen Sie Werte und Schlüssel fest, die diese Einstellungen unter dem folgenden Schlüssel widerspiegeln.
+Für einen E-Mail-Client muss das Programm über registrierte Einstellungen unter dem **\_ \_ HKEY CLASSES ROOT** \\ **mailto-Schlüssel** verfügen, um URLs zu bedienen, die das `mailto` Protokoll verwenden. Legen Sie Werte und Schlüssel fest, die diese Einstellungen unter dem folgenden Schlüssel spiegeln.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -613,9 +574,9 @@ HKEY_LOCAL_MACHINE
                   mailto
 ```
 
-Diese Registrierungs Hierarchie ersetzt die vorhandene `mailto` Registrierungs Hierarchie, die unter **HKEY \_ Classes \_ root** \\ **mailto** gefunden wurde. Die Hierarchie bleibt unverändert, nur der Speicherort wurde geändert. Das Format dieser Hierarchie ist auf MSDN unter [asynchroner austauschbarer Protokoll Übersichten und Tutorials](/previous-versions//aa767913(v=vs.85))dokumentiert. In der Regel `mailto` wird das Protokoll für ein Programm und nicht für ein asynchrones Protokoll registriert. in diesem Fall gilt die Dokumentation zum [Registrieren einer Anwendung in einem URI-Schema](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85)) .
+Diese Registrierungshierarchie ersetzt die vorhandene `mailto` Registrierungshierarchie unter **HKEY \_ CLASSES \_ ROOT** \\ **mailto**. Die Hierarchie bleibt unverändert, nur der Speicherort wurde geändert. Das Format dieser Hierarchie ist auf MSDN unter [Asynchronous Pluggable Protocol Overviews and Tutorials (Übersichten zu asynchronen austauschbaren Protokollen und Tutorials)](/previous-versions//aa767913(v=vs.85))dokumentiert. In der Regel wird das `mailto` Protokoll bei einem Programm und nicht bei einem asynchronen Protokoll registriert. In diesem Fall gilt die Dokumentation zum Registrieren einer Anwendung bei einem [URI-Schema.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85))
 
-Das folgende Beispiel zeigt den `mailto` Abschnitt der Registrierung für einen `mailto` Handler, der für ein Programm registriert ist.
+Das folgende Beispiel zeigt den `mailto` Abschnitt der Registrierung für einen Handler, der bei einem Programm registriert `mailto` ist.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -636,19 +597,19 @@ HKEY_LOCAL_MACHINE
                               (Default) = command line
 ```
 
-Der EditFlags-Registrierungs Wert ist in den [Dateitypen](fa-file-types.md) im Abschnitt "Definieren von Dateityp Attributen" dokumentiert.
+Der Registrierungswert EditFlags ist in [Dateitypen](fa-file-types.md) im Abschnitt "Definieren von Dateitypattributen" dokumentiert.
 
-## <a name="complete-sample-registrations"></a>Vervollständigen von Beispiel Registrierungen
+## <a name="complete-sample-registrations"></a>Abschließen von Beispielregistrierungen
 
-In den folgenden Beispielen werden die kompletten Registrierungsanforderungen für die verschiedenen Client Typen veranschaulicht.
+Die folgenden Beispiele zeigen die vollständigen Registrierungsanforderungen für die verschiedenen Clienttypen.
 
--   [Ein Beispiel Browser](#a-sample-browser)
--   [Beispiel-e-Mail-Browser](#a-sample-mail-browser)
--   [Ein Beispiel Media Player](#a-sample-media-player)
+-   [Beispielbrowser](#a-sample-browser)
+-   [Beispiel für einen E-Mail-Browser](#a-sample-mail-browser)
+-   [Beispiel Media Player](#a-sample-media-player)
 -   [Ein Instant Messenger-Beispielprogramm](#a-sample-instant-messenger-program)
--   [Ein Beispiel für einen virtuellen Computer für Java](#a-sample-virtual-machine-for-java)
+-   [Ein virtueller Beispielcomputer für Java](#a-sample-virtual-machine-for-java)
 
-### <a name="a-sample-browser"></a>Ein Beispiel Browser
+### <a name="a-sample-browser"></a>Ein Beispielbrowser
 
 ```
 HKEY_LOCAL_MACHINE
@@ -671,7 +632,7 @@ HKEY_LOCAL_MACHINE
                            (Default) = "C:\Program Files\LitwareInc\LITVIEW.EXE" /homepage
 ```
 
-### <a name="a-sample-mail-browser"></a>Beispiel-e-Mail-Browser
+### <a name="a-sample-mail-browser"></a>Beispiel für einen E-Mail-Browser
 
 ```
 HKEY_LOCAL_MACHINE
@@ -706,7 +667,7 @@ HKEY_LOCAL_MACHINE
                               (Default) = "C:\Program Files\LitwareInc\LITVIEW.EXE" /mailto:%1
 ```
 
-### <a name="a-sample-media-player"></a>Ein Beispiel Media Player
+### <a name="a-sample-media-player"></a>Beispiel Media Player
 
 ```
 HKEY_LOCAL_MACHINE
@@ -744,7 +705,7 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 1
 ```
 
-### <a name="a-sample-virtual-machine-for-java"></a>Ein Beispiel für einen virtuellen Computer für Java
+### <a name="a-sample-virtual-machine-for-java"></a>Beispiel für einen virtuellen Computer für Java
 
 ```
 HKEY_LOCAL_MACHINE
@@ -763,7 +724,7 @@ HKEY_LOCAL_MACHINE
                   IconsVisible = 1
 ```
 
-*Die hier dargestellten Beispiel Unternehmen, Organisationen, Produkte, Domänen Namen, e-Mail-Adressen, Logos, Personen, Orte und Ereignisse sind frei erfunden. Keine Zuordnung zu echten Unternehmen, Organisationen, Produkten, Domänen Namen, e-Mail-Adressen, Logos, Personen, stellen oder Ereignissen ist beabsichtigt oder sollte abgeleitet werden.*
+*Die hier dargestellten Beispielunternehmen, Organisationen, Produkte, Domänennamen, E-Mail-Adressen, Logos, Personen, Orte und Ereignisse sind fiktive Namen. Es ist keine Zuordnung zu einem echten Unternehmen, einer Organisation, einem Produkt, einem Domänennamen, einer E-Mail-Adresse, einem Logo, einer Person, einem Ort oder einem Ereignis beabsichtigt oder sollte abgeleitet werden.*
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -772,16 +733,16 @@ HKEY_LOCAL_MACHINE
 [Standardprogramme](default-programs.md)
 </dt> <dt>
 
-[Registrieren eines Internet Browsers oder e-Mail-Clients über das Windows-Startmenü](start-menu-reg.md)
+[Registrieren eines Internetbrowsers oder E-Mail-Clients mit dem Windows Startmenü](start-menu-reg.md)
 </dt> <dt>
 
-[Internet Explorer-Client Registrierungs Layout (siehe Abschnitt "Definitionen von Client Registrierungs Schlüsseln")](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753633(v=vs.85))
+[Internet Explorer Layout der Clientregistrierung (siehe Abschnitt "Clientregistrierungsschlüsseldefinitionen")](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753633(v=vs.85))
 </dt> <dt>
 
-[Asynchrone austauschbare Protokoll Übersichten und Tutorials](/previous-versions//aa767913(v=vs.85))
+[Übersichten und Tutorials zu asynchronen austauschbaren Protokollen](/previous-versions//aa767913(v=vs.85))
 </dt> <dt>
 
-[Registrieren einer Anwendung in einem URI-Schema](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85))
+[Registrieren einer Anwendung bei einem URI-Schema](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767914(v=vs.85))
 </dt> </dl>
 
  
