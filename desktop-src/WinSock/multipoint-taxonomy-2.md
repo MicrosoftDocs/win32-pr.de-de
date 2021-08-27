@@ -1,56 +1,56 @@
 ---
-description: Die in diesem Abschnitt beschriebene Taxonomie unterscheidet zunächst die Steuerungsebene, die sich auf die Art und Weise der Einrichtung einer Multipoint-Sitzung bezieht, von der Datenebene, die die Übertragung von Daten zwischen Sitzungsteilnehmern behandelt.
+description: Die in diesem Abschnitt beschriebene Taxonomie unterscheidet zunächst die Steuerungsebene, die sich mit der Art und Weise befasst, wie eine Multipointsitzung eingerichtet wird, von der Datenebene, die sich mit der Übertragung von Daten zwischen Sitzungsteilnehmern befasst.
 ms.assetid: f411acd7-5e33-4760-8a12-31c2d615426f
 title: Multipoint-Taxonomie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f97159312a2e431cb82b73336a13904c6b5ab021
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a9d1928dde2935ab803d95d73db225f7b3be0bc051a082d3bdae937e9b8e7da0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862559"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097720"
 ---
 # <a name="multipoint-taxonomy"></a>Multipoint-Taxonomie
 
-Die in diesem Abschnitt beschriebene Taxonomie unterscheidet zunächst die Steuerungsebene, die sich auf die Art und Weise der Einrichtung einer Multipoint-Sitzung bezieht, von der Datenebene, die die Übertragung von Daten zwischen Sitzungsteilnehmern behandelt.
+Die in diesem Abschnitt beschriebene Taxonomie unterscheidet zunächst die Steuerungsebene, die sich mit der Art und Weise befasst, wie eine Multipointsitzung eingerichtet wird, von der Datenebene, die sich mit der Übertragung von Daten zwischen Sitzungsteilnehmern befasst.
 
-## <a name="session-establishment-in-the-control-plane"></a>Einrichtung der Sitzung auf der Steuerungsebene
+## <a name="session-establishment-in-the-control-plane"></a>Sitzungseinrichtung in der Steuerungsebene
 
-Auf der Steuerungsebene gibt es zwei unterschiedliche Arten der Sitzungs Einrichtung:
+Auf der Steuerungsebene gibt es zwei unterschiedliche Arten der Sitzungseinrichtung:
 
--   zeln
--   nicht Stamm
+-   Verwurzelt
+-   nichtrooted
 
-Im Fall von rootsteuerelementen ist ein spezieller Teilnehmer, c \_ root, vorhanden, der sich von den restlichen Membern dieser Multipoint-Sitzung unterscheidet, die jeweils als c- \_ Blatt bezeichnet werden. Der c-Stamm \_ muss für die gesamte Dauer der Multipoint-Sitzung vorhanden sein, da die Sitzung in Abwesenheit des c-Stamms untergliedert ist \_ . Der c-Stamm \_ initiiert in der Regel die Multipoint-Sitzung, indem er die Verbindung mit einem c- \_ Blatt oder eine Reihe von c-Blättern einrichtet \_ . Der c-Stamm kann \_ Weitere c-Blätter hinzufügen \_ , oder (in einigen Fällen) kann ein c- \_ Blatt \_ zu einem späteren Zeitpunkt dem c-Stamm beitreten. Beispiele für die Stamm Steuerungsebene finden Sie unter ATM und St-II.
+Im Fall der Root-Steuerung gibt es einen speziellen Teilnehmer, c root, der sich von den restlichen Mitgliedern dieser Multipointsitzung abschneidet, von denen jeder als \_ C-Blatt \_ bezeichnet wird. Der c-Stamm muss für die gesamte Dauer der Multipointsitzung vorhanden bleiben, da die Sitzung ohne den \_ c-Stamm zerbrochen \_ wird. Der c-Stamm initiiert in der Regel die Multipointsitzung, indem die Verbindung mit einem Blatt c oder einer Anzahl von \_ \_ \_ C-Blattknoten eingerichtet wird. Der c-Stamm kann weitere c-Blätter hinzufügen, oder (in einigen Fällen) kann ein c-Blatt zu einem späteren Zeitpunkt mit dem \_ \_ \_ \_ c-Stamm beitreten. Beispiele für die Steuerungsebene mit Stamm sind in ATM und ST-II zu finden.
 
-Bei einer nicht stammenden Steuerungsebene werden alle Member, die zu einer Multipoint-Sitzung gehören, verlassen, d. h., es ist kein spezieller Teilnehmer vorhanden, der als c-Stamm fungiert \_ . Jedes c- \_ Blatt muss sich selbst einer bereits vorhandenen Multipoint-Sitzung hinzufügen, die immer verfügbar ist (wie bei einer IP-Multicast Adresse) oder durch einen Out-of-Band-Mechanismus (OOB) eingerichtet wurde, der außerhalb des Bereichs der Windows Sockets-Spezifikation liegt.
+Bei einer steuerungsebene ohne Stamm sind alle Mitglieder, die zu einer Multipointsitzung gehören, Blättern, d. B. es gibt keinen speziellen Teilnehmer, der als \_ c-Stamm agiert. Jedes c-Blatt muss sich selbst zu einer bereits vorhandene Multipointsitzung hinzufügen, die immer verfügbar ist (wie bei einer IP-Multicastadresse) oder über einen Out-of-Band-Mechanismus (OOB) eingerichtet wurde, der außerhalb des Bereichs der \_ Windows Sockets-Spezifikation liegt.
 
-Eine andere Möglichkeit, dies zu überprüfen, besteht darin, dass ein c-Stamm \_ weiterhin vorhanden ist, aber als Teilnehmer in der netzwerkcloud betrachtet werden kann. Da immer noch ein Steuerelement Stamm vorhanden ist, kann eine nicht-Stamm Steuerungsebene auch als implizit zu einem Stamm angesehen werden. Beispiele für diese Art von implizit stammenden Multipoint-Schemas:
+Eine weitere Möglichkeit, dies zu betrachten, ist, dass ein c-Stamm immer noch vorhanden ist, aber als in der Netzwerk-Cloud im Gegensatz zu einem \_ der Teilnehmer betrachtet werden kann. Da immer noch ein Steuerelementstamm vorhanden ist, kann auch eine Nichtstammsteuerungsebene als implizite Stammebene betrachtet werden. Beispiele für diese Art von impliziten Multipointschemas sind:
 
--   Eine teleconferferenzierungsbrücke.
--   Das IP-Multicast System.
--   Eine Multipoint-Steuerungseinheit (MCU) in einer H. 320-Videokonferenz.
+-   Eine Teleferencing-Brücke.
+-   Das IP-Multicastsystem.
+-   Eine Multipoint Control Unit (MCU) in einer H.320-Videokonferenz.
 
-## <a name="data-transfer-in-the-data-plane"></a>Datenübertragung in der Datenebene
+## <a name="data-transfer-in-the-data-plane"></a>Datenübertragung auf der Datenebene
 
-In der Datenebene gibt es zwei Arten von Daten Übertragungs Stilen:
+Auf der Datenebene gibt es zwei Arten von Datenübertragungsstilen:
 
--   zeln
--   nicht Stamm
+-   Verwurzelt
+-   nichtrooted
 
-In einer Datenebene mit Stamms ist ein spezieller Teilnehmer namens d \_ root vorhanden. Die Datenübertragung erfolgt nur zwischen dem d-Stamm \_ und den restlichen Membern dieser Multipoint-Sitzung, die jeweils als d-Blatt bezeichnet werden \_ . Der Datenverkehr kann unidirektional oder bidirektional sein. Die Daten, die aus dem Stammverzeichnis von d gesendet \_ werden, werden (falls erforderlich) dupliziert und an jedes d-Blatt übermittelt \_ , während die Daten von d- \_ Leafs nur in den d-Stamm fließen \_ . Bei einer Datenebene mit Stammdaten ist kein Datenverkehr unter d- \_ Blätter zulässig. Ein Beispiel für ein Protokoll, das in der Datenebene verankert ist, ist St-II.
+Auf einer Datenebene mit Rooting ist ein spezieller Teilnehmer namens d \_ root vorhanden. Die Datenübertragung erfolgt nur zwischen dem Stamm d und den restlichen Mitgliedern dieser Multipointsitzung, die jeweils als \_ Blatt d bezeichnet \_ werden. Der Datenverkehr kann unidirektional oder bidirektional sein. Die vom d-Stamm gesendeten Daten werden dupliziert (falls erforderlich) und an jedes Blatt d übermittelt, während die Daten von d Leafs nur an den \_ \_ \_ d-Stamm \_ gesendet werden. Im Fall einer Datenebene mit Stamm ist kein Datenverkehr zwischen \_ D-Blatt zugelassen. Ein Beispiel für ein Protokoll, das auf der Datenebene basiert, ist ST-II.
 
-In einer Datenebene ohne Stamm sind alle Teilnehmer gleich, d. h. alle Daten, die Sie senden, werden an alle anderen Teilnehmer in derselben Multipoint-Sitzung übermittelt. Ebenso kann jeder d- \_ Blattknoten Daten von allen anderen d- \_ Blättern empfangen und in einigen Fällen von anderen Knoten, die nicht an der Multipoint-Sitzung teilnehmen. Es ist kein spezieller d-Stamm \_ Knoten vorhanden. IP-Multicast ist nicht in der Datenebene verankert.
+Auf einer Nicht-Rooted-Datenebene sind alle Teilnehmer gleich, d.&a; alle daten, die sie senden, werden an alle anderen Teilnehmer derselben Multipointsitzung übermittelt. Ebenso kann jeder Blattknoten Daten von allen anderen Blattknoten und in einigen Fällen von anderen Knoten empfangen, die nicht an der \_ \_ Multipointsitzung teilnehmen. Es ist kein spezieller \_ d-Stammknoten vorhanden. IP-Multicast ist in der Datenebene nichtrooted.
 
-Beachten Sie, dass die Frage, wo die Duplizierung von Dateneinheiten auftritt oder ob eine freigegebene Struktur oder mehrere kürzeste Pfad Strukturen für die Multipoint-Verteilung verwendet werden, Protokoll Probleme sind und für die Schnittstelle, die die Anwendung zum Ausführen von Multipoint-Kommunikationen verwenden würde, irrelevant ist. Diese Probleme werden daher in diesem Anhang oder der Windows Sockets-Schnittstelle nicht behandelt.
+Beachten Sie, dass die Frage, wo dateneinheitsdupliziert wird oder ob eine freigegebene einzelne Struktur oder mehrere Strukturen mit dem kürzesten Pfad für die Multipointverteilung verwendet werden, Protokollprobleme sind und für die Schnittstelle, die die Anwendung für die Multipointkommunikation verwenden würde, irrelevant ist. Daher werden diese Probleme in diesem Anhang oder in der Windows Sockets-Schnittstelle nicht behandelt.
 
-Die folgende Tabelle zeigt die oben beschriebene Taxonomie und gibt an, wie vorhandene Schemas in die einzelnen Kategorien passen. Beachten Sie, dass es anscheinend keine vorhandenen Schemas gibt, die eine nicht-rooting-Steuerungsebene und eine Datenebene mit Stamm Ebene verwenden.
+Die folgende Tabelle zeigt die oben beschriebene Taxonomie und gibt an, wie vorhandene Schemas in die einzelnen Kategorien passen. Beachten Sie, dass es keine vorhandenen Schemas zu geben scheint, die eine nichtrooted-Steuerungsebene zusammen mit einer Stammdatenebene verwenden.
 
-|                      | Stamm Steuerungsebene | Nicht-Stamm Steuerungsebene (impliziter Stamm) |
+|                      | Steuerungsebene mit Stamm | Steuerungsebene ohne Stamm (implizite Stammsteuerung) |
 |----------------------|----------------------|-------------------------------------------|
-| Datenebene mit Stamm    | ATM, St-II           | Keine bekannten Beispiele.                        |
-| Datenebene ohne Stamm | T. 120                | IP-Multicast, H. 320 (MCU)                 |
+| Datenebene mit Stamm    | ATM, ST-II           | Keine bekannten Beispiele.                        |
+| Nicht rootierte Datenebene | T.120                | IP-Multicast, H.320 (MCU)                 |
 
 
 

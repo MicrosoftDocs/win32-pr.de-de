@@ -1,7 +1,7 @@
 ---
-description: Die setdefaulttimerresolution-Methode legt die Auflösung des Zeit Gebers der verweisuhr fest.
+description: Die SetDefaultTimerResolution-Methode legt die Auflösung des Zeitgebers der Verweisuhr fest.
 ms.assetid: 891b809a-15d3-41f3-853e-aca9ddcd56e8
-title: Cbasereferenceclock. setdefaulttimerresolution-Methode (Ref. h)
+title: CBaseReferenceClock.SetDefaultTimerResolution-Methode (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 146162784ad52a7f7930613ec5c648e40d22900f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 980f31856aba14079da0f5b9625dca40846255d6f02361b2798d7c38c1cd4f94
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087420"
 ---
-# <a name="cbasereferenceclocksetdefaulttimerresolution-method"></a>Cbasereferenceclock. setdefaulttimerresolution-Methode
+# <a name="cbasereferenceclocksetdefaulttimerresolution-method"></a>CBaseReferenceClock.SetDefaultTimerResolution-Methode
 
-Die `SetDefaultTimerResolution` -Methode legt die Auflösung des Zeit Gebers der verweisuhr fest.
+Die `SetDefaultTimerResolution` -Methode legt die Auflösung des Zeitgebers der Verweisuhr fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ STDMETHODIMP SetDefaultTimerResolution(
 
 <dl> <dt>
 
-*timerresolution* 
+*timerResolution* 
 </dt> <dd>
 
-Minimale Zeit Geber Auflösung in 100-Nanosecond-Einheiten. Wenn der Wert 0 (null) ist, bricht die Referenzuhr die vorherige Anforderung ab.
+Minimale Timerauflösung in Einheiten von 100 Nanosekunden. Wenn der Wert 0 (null) ist, bricht die Referenzuhr ihre vorherige Anforderung ab.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode implementiert die [**ireferenceclocktimercontrol:: setdefaulttimerresolution**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclocktimercontrol-setdefaulttimerresolution) -Methode.
+Diese Methode implementiert die [**IReferenceClockTimerControl::SetDefaultTimerResolution-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ireferenceclocktimercontrol-setdefaulttimerresolution)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode implementiert die [**ireferenceclocktimercontrol:: setdefaulttimer
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode implementiert die [**ireferenceclocktimercontrol:: setdefaulttimer
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

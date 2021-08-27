@@ -1,35 +1,35 @@
 ---
-description: In diesem Abschnitt werden Shader beschrieben, die für das programmierbare Streamingmodell verwendet werden können.
+description: In diesem Abschnitt werden Shader beschrieben, die für das programmierbare Streammodell verwendet werden können.
 ms.assetid: 800aaa27-e1e6-4d35-8de4-7ac94d646870
-title: Programmieren von mindestens einem Stream (Direct3D 9)
+title: Programmieren eines oder mehrerer Streams (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43210823911648ed11227faef44d980b60d0a335
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 92440abfb6e343bdd3440f5608d6446c0390b1271e5c4c6686a3a46e578476ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118599"
 ---
-# <a name="programming-one-or-more-streams-direct3d-9"></a>Programmieren von mindestens einem Stream (Direct3D 9)
+# <a name="programming-one-or-more-streams-direct3d-9"></a>Programmieren eines oder mehrerer Streams (Direct3D 9)
 
-In diesem Abschnitt werden Shader beschrieben, die für das programmierbare Streamingmodell verwendet werden können.
+In diesem Abschnitt werden Shader beschrieben, die für das programmierbare Streammodell verwendet werden können.
 
 ## <a name="using-streams"></a>Verwenden von Streams
 
-In DirectX 8 wurde das Konzept eines Datenstroms eingeführt, um Daten an Eingabe Register zur Verwendung durch Shader zu binden. Ein Datenstrom ist ein einheitliches Array von Komponenten Daten, wobei jede Komponente aus mindestens einem Element besteht, das eine einzelne Entität (z. b. Position, normal, Farbe usw.) darstellt. Mithilfe von Streams können Grafikchips einen direkten Speicherzugriff von mehreren Scheitelpunkt Puffern parallel ausführen und außerdem eine natürlichere Zuordnung von Anwendungsdaten bereitstellen. Außerdem ermöglichen Sie eine triviale Multitextur im Vergleich zu Multipass. Sehen Sie sich dies wie folgt an:
+In DirectX 8 wurde das Konzept eines Streams eingeführt, um Daten an Eingaberegister zur Verwendung durch Shader zu binden. Ein Stream ist ein einheitliches Array von Komponentendaten, wobei jede Komponente aus einem oder mehreren Elementen besteht, die eine einzelne Entität darstellen, z. B. Position, Normal, Farbe usw. Streams grafikgrafischen Chips ermöglichen, einen direkten Speicherzugriff von mehreren Scheitelpunktpuffern parallel auszuführen und eine natürlichere Zuordnung aus Anwendungsdaten bereitzustellen. Sie ermöglichen auch triviale Multitextur im Vergleich zu Multipass. Stellen Sie sich dies wie folgt vor:
 
 -   Ein Scheitelpunkt besteht aus n Streams.
 -   Ein Stream besteht aus m-Elementen.
--   Ein Element ist \[ Position, Farbe, normal, Textur Koordinate \] .
+-   Ein Element ist \[ Position, Farbe, Normal, Texturkoordinate. \]
 
-Die [**IDirect3DDevice9:: SetStreamSource**](/windows/desktop/api) -Methode bindet einen Scheitelpunkt Puffer an einen Gerätedaten Strom, wobei eine Zuordnung zwischen den Scheitelpunkt Daten und einem von mehreren datenstreamports erstellt wird, die die primitiven Verarbeitungsfunktionen übertragen. Die tatsächlichen Verweise auf die Streamdaten treten erst auf, wenn eine Zeichnungs Methode, z. b. [**IDirect3DDevice9::D rawprimitiv**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive), aufgerufen wird.
+Die [**IDirect3DDevice9::SetStreamSource-Methode**](/windows/desktop/api) bindet einen Scheitelpunktpuffer an einen Gerätedatenstrom und erstellt eine Zuordnung zwischen den Scheitelpunktdaten und einem von mehreren Datenstromports, die die primitiven Verarbeitungsfunktionen unterstützen. Die tatsächlichen Verweise auf die Streamdaten treten erst auf, wenn eine Zeichnungsmethode wie [**IDirect3DDevice9::D rawPrimitive**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)aufgerufen wird.
 
-Die Zuordnung der eingegebenen Scheitelpunkt Elemente zu den Vertex-Eingabe Registern für programmierbare Vertex-Shader wird in der Shader-Deklaration definiert, aber die eingegebenen Scheitelpunkt Elemente weisen keine bestimmte Semantik hinsichtlich ihrer Verwendung auf. Die Interpretation der eingegebenen Scheitelpunkt Elemente wird mithilfe der shaderanweisungen programmiert. Die Vertex-Shader-Funktion wird durch ein Array von Anweisungen definiert, die auf jeden Scheitelpunkt angewendet werden. Die Vertex-Ausgabe Register werden explizit mithilfe von Anweisungen in der Shader-Funktion in geschrieben.
+Die Zuordnung der Eingabevertexelemente zu den Scheitelpunkteingaberegistern für programmierbare Vertex-Shader wird in der Shaderdeklaration definiert, aber die Eingabevertexelemente haben keine spezifische Semantik über ihre Verwendung. Die Interpretation der Eingabevertexelemente wird mithilfe der Shaderanweisungen programmiert. Die Vertex-Shaderfunktion wird durch ein Array von Anweisungen definiert, die auf jeden Scheitelpunkt angewendet werden. Die Scheitelpunktausgaberegister werden mithilfe von Anweisungen in der Shaderfunktion explizit in geschrieben.
 
-Für diese Erörterung sollten Sie jedoch weniger mit der semantischen Zuordnung von Elementen zu Registern und mehr über den Grund für die Verwendung von Streams und das Problem, das durch die Verwendung von Streams gelöst wird, befassen. Der Hauptvorteil von Streams besteht darin, dass Sie die Vertex-Datenkosten entfernen, die zuvor mit der multitexturierung verknüpft waren. Vor Streams musste ein Benutzer entweder Vertex-Datasets duplizieren, um den Single-und Multitextur-Fall ohne nicht verwendete Datenelemente zu verarbeiten, oder es wurden keine Datenelemente übertragen, die mit Ausnahme des Multitextur-Falls nicht verwendet werden würden.
+In dieser Diskussion geht es jedoch weniger um die semantische Zuordnung von Elementen zu Registern und mehr um den Grund für die Verwendung von Streams und um das Problem, das mithilfe von Streams gelöst wird. Der Hauptvorteil von Streams besteht darin, dass sie die Scheitelpunktdatenkosten entfernen, die zuvor dem Multitexturing zugeordnet waren. Vor Streams musste ein Benutzer entweder vertex-Datasets duplizieren, um den einzel- und multitexture-Fall ohne nicht verwendete Datenelemente zu behandeln, oder Datenelemente enthalten, die außer im Multitexture-Fall nicht verwendet werden würden.
 
-Im folgenden finden Sie ein Beispiel für die Verwendung von zwei Sätzen von Vertex-Daten: eine für eine einzelne Textur und eine für die multitexturierung.
+Hier sehen Sie ein Beispiel für die Verwendung von zwei Sätzen von Scheitelpunktdaten, eine für eine einzelne Textur und eine für die Multitexturing.
 
 
 ```
@@ -52,7 +52,7 @@ struct CUSTOMVERTEX_TEX2
 
 
 
-Die Alternative war, ein einzelnes Vertex-Element zu haben, das beide Sätze von Texturkoordinaten enthielt.
+Die Alternative bestand darin, ein einzelnes Vertexelement zu haben, das beide Sätze von Texturkoordinaten enthielt.
 
 
 ```
@@ -68,9 +68,9 @@ struct CUSTOMVERTEX_TEX2
 
 
 
-Mit diesen Vertex-Daten wird nur eine Kopie der Positions-und Farbdaten in den Arbeitsspeicher übertragen. dabei werden beide Sätze von Texturkoordinaten für das Rendering selbst in der einzelnen Textur Groß-/Kleinschreibung durchgeführt.
+Bei diesen Scheitelpunktdaten wird nur eine Kopie der Positions- und Farbdaten im Arbeitsspeicher übertragen. Dies geht auf Kosten beider Texturkoordinatensätze, die auch im einzelnen Texturfall gerendert werden.
 
-Nachdem der Kompromiss eindeutig ist, bieten Streams eine elegante Lösung für dieses Problem. Im folgenden finden Sie eine Reihe von Vertex-Definitionen zur Unterstützung von drei Streams: eine mit der Position und der Farbe, eine mit dem ersten Satz von Texturkoordinaten und eine mit dem zweiten Satz von Texturkoordinaten.
+Nun, da der Kompromiss klar ist, bieten Streams eine elegante Lösung für dieses Hotfix. Im Folgenden finden Sie eine Reihe von Scheitelpunktdefinitionen zur Unterstützung von drei Datenströmen: einen mit Position und Farbe, einen mit dem ersten Satz Texturkoordinaten und einen mit dem zweiten Satz von Texturkoordinaten.
 
 
 ```
@@ -99,7 +99,7 @@ struct TEXC1VERTEX
 
 
 
-Die Vertex-Deklaration sieht folgendermaßen aus:
+Die Scheitelpunktdeklaration sieht wie folgt aus:
 
 
 ```
@@ -123,7 +123,7 @@ D3DVERTEXELEMENT9 dwDecl3[] =
 
 
 
-Erstellen Sie nun das Vertex-Deklarations Objekt, und legen Sie es wie folgt fest:
+Erstellen Sie nun das Scheitelpunktdeklarationsobjekt, und legen Sie es wie gezeigt fest:
 
 
 ```
@@ -137,9 +137,9 @@ m_pd3dDevice->SetVertexDeclaration(m_pVertexDeclaration);
 
 ## <a name="examples-of-combinations"></a>Beispiele für Kombinationen
 
-### <a name="one-stream-diffuse-color"></a>Diffuse Farbe für einen Datenstrom
+### <a name="one-stream-diffuse-color"></a>Eine diffuse Streamfarbe
 
-Die Vertex-Deklaration und die streameinstellungen für das Rendering diffuses Farben würden wie folgt aussehen:
+Die Vertexdeklaration und die Streameinstellungen für diffuses Farbrendering sehen wie folgt aus:
 
 
 ```
@@ -163,7 +163,7 @@ D3DVERTEXELEMENT9 dwDecl3[] =
 
 ### <a name="two-streams-with-color-and-texture"></a>Zwei Streams mit Farbe und Textur
 
-Die Vertex-Deklaration und die streameinstellungen für ein einzelnes Textur Rendering würden wie folgt aussehen:
+Die Scheitelpunktdeklaration und die Streameinstellungen für das Rendern einzelner Texturen sehen wie folgt aus:
 
 
 ```
@@ -190,9 +190,9 @@ D3DVERTEXELEMENT9 dwDecl3[] =
 
 
 
-### <a name="two-streams-with-color-and-two-textures"></a>Zwei Streams mit Farben und zwei Texturen
+### <a name="two-streams-with-color-and-two-textures"></a>Zwei Streams mit Farbe und zwei Texturen
 
-Die Vertex-Deklaration und die streameinstellungen für das zwei-Textur-Rendering mit mehreren Texturen würden wie folgt aussehen:
+Die Vertexdeklaration und die Streameinstellungen für das Rendering mehrerer Texturen mit zwei Texturen sehen wie folgt aus:
 
 
 ```
@@ -224,7 +224,7 @@ m_pd3dDevice->SetStreamSource(2, m_pVBTexC1, 0,
 
 
 
-In jedem Fall genügt der folgende [**IDirect3DDevice9::D rawprimitiver**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Aufruf.
+In jedem Fall reicht der folgende [**IDirect3DDevice9::D rawPrimitive-Aufruf**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) aus.
 
 
 ```
@@ -233,13 +233,13 @@ In jedem Fall genügt der folgende [**IDirect3DDevice9::D rawprimitiver**](/wind
 
 
 
-Dies zeigt die Flexibilität von Datenströmen bei der Lösung des Problems bei der Datenübertragung über den Bus (d. h. zur Verschwendung von Bandbreite).
+Dies zeigt die Flexibilität von Streams bei der Lösung des Problems der Datenduplizierung/redundanten Datenübertragung über den Bus (d. h. der Auslastung der Bandbreite).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Deklaration](vertex-declaration.md)
+[Vertexdeklaration](vertex-declaration.md)
 </dt> </dl>
 
  

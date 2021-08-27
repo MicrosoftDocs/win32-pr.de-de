@@ -1,31 +1,31 @@
 ---
-title: ScrollBar-Funktionen
-description: ScrollBar-Funktionen
+title: Scrollleistenfunktionen
+description: Scrollleistenfunktionen
 ms.assetid: ed40b2c7-da99-4fff-bdb9-df682b3cc860
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f9e60159d65ab301953608fff3775b50c3814fe
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 69c817f89740bd4143fc6d4f881301a0349f39cf29691d02e1ce2b72ae306144
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120064105"
 ---
-# <a name="scroll-bar-functions"></a>ScrollBar-Funktionen
+# <a name="scroll-bar-functions"></a>Scrollleistenfunktionen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Enablescrollbar**](/windows/desktop/api/Winuser/nf-winuser-enablescrollbar)
+-   [**EnableScrollBar**](/windows/desktop/api/Winuser/nf-winuser-enablescrollbar)
 -   [**GetScrollBarInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollbarinfo)
--   [**Getscrollinfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
--   [**Getscrollpos**](/windows/desktop/api/Winuser/nf-winuser-getscrollpos)
--   [**Getscrollrange**](/windows/desktop/api/Winuser/nf-winuser-getscrollrange)
--   [**Scrolldc**](/windows/desktop/api/Winuser/nf-winuser-scrolldc)
--   [**Scrollwindow**](/windows/desktop/api/Winuser/nf-winuser-scrollwindow)
--   [**Scrollwindowex**](/windows/desktop/api/Winuser/nf-winuser-scrollwindowex)
+-   [**GetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-getscrollinfo)
+-   [**GetScrollPos**](/windows/desktop/api/Winuser/nf-winuser-getscrollpos)
+-   [**GetScrollRange**](/windows/desktop/api/Winuser/nf-winuser-getscrollrange)
+-   [**ScrollDC**](/windows/desktop/api/Winuser/nf-winuser-scrolldc)
+-   [**ScrollWindow**](/windows/desktop/api/Winuser/nf-winuser-scrollwindow)
+-   [**ScrollWindowEx**](/windows/desktop/api/Winuser/nf-winuser-scrollwindowex)
 -   [**SetScrollInfo**](/windows/desktop/api/Winuser/nf-winuser-setscrollinfo)
--   [**Setscrollpos**](/windows/desktop/api/Winuser/nf-winuser-setscrollpos)
--   [**Setscrollrange**](/windows/desktop/api/Winuser/nf-winuser-setscrollrange)
+-   [**SetScrollPos**](/windows/desktop/api/Winuser/nf-winuser-setscrollpos)
+-   [**SetScrollRange**](/windows/desktop/api/Winuser/nf-winuser-setscrollrange)
 -   [**ShowScrollBar**](/windows/desktop/api/Winuser/nf-winuser-showscrollbar)
 
  

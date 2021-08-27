@@ -1,9 +1,9 @@
 ---
-title: Bibliotheks Attribut
-description: Die Library-Anweisung enthält alle Informationen, die vom-Mittelwert Compiler zum Generieren einer Typbibliothek verwendet werden.
+title: Bibliothekattribut
+description: Die Library-Anweisung enthält alle Informationen, die der MIDL-Compiler zum Generieren einer Typbibliothek verwendet.
 ms.assetid: d73acb17-abe4-4c31-a264-a131d1f9fa51
 keywords:
-- Bibliotheks Attribut-Mittel l
+- Bibliotheksattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 100c901c6b5d86ed3420d51e459627bdb5b461b8
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 4fc1f836174a57f6edfddd0575a10d40367c061c034369a1582cc8bf8ce17a53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106338659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086370"
 ---
-# <a name="library-attribute"></a>Bibliotheks Attribut
+# <a name="library-attribute"></a>Bibliothekattribut
 
-Die **Library** -Anweisung enthält alle Informationen, die vom-Mittelwert Compiler zum Generieren einer Typbibliothek verwendet werden.
+Die **Library-Anweisung** enthält alle Informationen, die der MIDL-Compiler zum Generieren einer Typbibliothek verwendet.
 
 ``` syntax
 [
@@ -38,37 +38,37 @@ library library-name
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige Identifikationsnummer für die Bibliothek an.
+Gibt eine universell eindeutige ID für die Bibliothek an.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt zusätzliche Attribute an, die auf die gesamte **Bibliotheks** Anweisung angewendet werden. Zulässige Attribute sind **\[** [**Control**](control.md) **\]** , **\[** [**HelpContext**](helpcontext.md) **\]** , **\[** [**HelpFile**](helpfile.md) **\]** , **\[** [**HelpString**](helpstring.md) **\]** , **\[** [**Hidden**](hidden.md) **\]** , **\[** [**LCID**](lcid.md) **\]** , **\[** [**restricted**](restricted.md) **\]** und **\[** [**Version**](version.md) **\]** .
+Gibt zusätzliche Attribute an, die für die gesamte **Bibliotheks-Anweisung gelten.** Zulässige Attribute sind **\[** [**Steuerelement,**](control.md) **\]** **\[** [**HelpContext,**](helpcontext.md) **\]** **\[** [**Helpfile,**](helpfile.md) **\]** **\[** [**HelpString,**](helpstring.md) **\]** **\[** [**ausgeblendet,**](hidden.md) **\]** **\[** [**lcid,**](lcid.md)eingeschränkt **\]** **\[** [**und**](restricted.md) **\]** **\[** [**Version**](version.md) **\]** .
 
 </dd> <dt>
 
 *Bibliotheksname* 
 </dt> <dd>
 
-Der Name, mit dem Softwarekomponenten auf die **Bibliothek** verweisen.
+Der Name, mit dem Softwarekomponenten auf die Bibliothek **verweisen.**
 
 </dd> <dt>
 
-*Library-Definition-Anweisungen* 
+*library-definition-statements* 
 </dt> <dd>
 
-Eine oder mehrere-Mittell-Anweisungen, die den Inhalt der **Bibliothek** definieren.
+Eine oder mehrere MIDL-Anweisungen, die den Inhalt der Bibliothek **definieren.**
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
--Anweisungen innerhalb des Bibliotheks Blocks können Elemente verwenden, die innerhalb oder außerhalb des Bibliotheks Blocks deklariert werden. Bibliotheks Anweisungen können diese Elemente als Basis Typen verwenden, von diesen Elementen erben oder einfach in einer Zeile auf Sie verweisen, wie im folgenden dargestellt:
+Anweisungen innerhalb des Bibliotheksblocks können Elemente verwenden, die innerhalb oder außerhalb des Bibliotheksblocks deklariert werden. Bibliotheksanweisungen können diese Elemente als Basistypen verwenden, von diesen Elementen erben oder einfach wie folgt in einer Zeile darauf verweisen:
 
 ``` syntax
 interface MyFace 
@@ -87,9 +87,9 @@ library
 };
 ```
 
-Der mittlerer l-Compiler erstellt eine Typbibliothek, die Definitionen für jedes Element innerhalb des Bibliotheks Blocks sowie Definitionen für alle Elemente enthält, die außerhalb des Bibliotheks Blocks definiert sind und auf die verwiesen wird.
+Der MIDL-Compiler erstellt eine Typbibliothek, die Definitionen für jedes Element innerhalb des Bibliotheksblocks sowie Definitionen für alle Elemente enthält, die außerhalb des Bibliotheksblocks definiert sind und auf die innerhalb des Bibliotheksblocks verwiesen wird.
 
-Informationen zum Erstellen eines Typbibliothek-und proxystubys und von Headern aus einer einzelnen IDL-Datei finden Sie unter [Erstellen einer Proxy-dll und einer Typbibliothek aus einer einzelnen IDL-Datei](generating-a-proxy-dll-and-a-type-library-from-a-single-idl-file-2.md).
+Informationen zum Generieren einer Typbibliothek sowie von Proxystubs und Headern aus einer einzelnen IDL-Datei finden Sie unter Generieren einer Proxy-DLL und einer Typbibliothek aus einer einzelnen [IDL-Datei.](generating-a-proxy-dll-and-a-type-library-from-a-single-idl-file-2.md)
 
 ## <a name="examples"></a>Beispiele
 
@@ -113,10 +113,10 @@ library Hello
 [Inhalt einer Typbibliothek](/previous-versions/windows/desktop/automat/contents-of-a-type-library)
 </dt> <dt>
 
-[**Steuerelement**](control.md)
+[**Steuerung**](control.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
 [**helpcontext**](helpcontext.md)
@@ -128,21 +128,21 @@ library Hello
 [**helpstring**](helpstring.md)
 </dt> <dt>
 
-[**verbirgt**](hidden.md)
+[**Versteckte**](hidden.md)
 </dt> <dt>
 
-[**LCID**](lcid.md)
+[**Lcid**](lcid.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[**begrenz**](restricted.md)
+[**Beschränkt**](restricted.md)
 </dt> <dt>
 
-[**version**](version.md)
+[**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

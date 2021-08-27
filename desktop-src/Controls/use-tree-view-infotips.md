@@ -1,36 +1,36 @@
 ---
-title: Verwenden von Tree-View infotips
-description: Wenn Sie den \_ infotip-Stil für das TV auf ein Strukturansicht-Steuerelement anwenden, werden TVN \_ getinfotip-Benachrichtigungen generiert, wenn sich der Cursor über einem Element in der Strukturansicht befindet. Wenn Sie auf diese Benachrichtigung reagieren, können Sie den Text festlegen, der im infotip angezeigt wird.
+title: Verwenden von Tree-View Infos
+description: Wenn Sie den TVS INFOTIP-Stil auf ein \_ Strukturansicht-Steuerelement anwenden, werden TVN GETINFOTIP-Benachrichtigungen generiert, wenn sich der Cursor über einem Element in der \_ Strukturansicht befindet. Wenn Sie auf diese Benachrichtigung reagieren, können Sie den Text festlegen, der in der Infotip angezeigt wird.
 ms.assetid: 779BEAC1-877E-43DD-AE1C-6D71C3013384
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0f0ef862d68cfd9f6ac5a97e82c80622e9c02121
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 6ff9273b28b614e7935f6ac507288a5733271fb455a6be1e85b52c5b0ba8bbb3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "106340687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120132030"
 ---
-# <a name="how-to-use-tree-view-infotips"></a>Verwenden von Tree-View infotips
+# <a name="how-to-use-tree-view-infotips"></a>Verwenden von Tree-View Infos
 
-Wenn Sie den [**\_ infotip**](tree-view-control-window-styles.md) -Stil für das TV auf ein Strukturansicht-Steuerelement anwenden, werden [TVN \_ getinfotip](tvn-getinfotip.md) -Benachrichtigungen generiert, wenn sich der Cursor über einem Element in der Strukturansicht befindet. Wenn Sie auf diese Benachrichtigung reagieren, können Sie den Text festlegen, der im infotip angezeigt wird.
+Wenn Sie den [**TVS \_ INFOTIP-Stil**](tree-view-control-window-styles.md) auf ein Strukturansicht-Steuerelement anwenden, werden [TVN \_ GETINFOTIP-Benachrichtigungen](tvn-getinfotip.md) generiert, wenn sich der Cursor über einem Element in der Strukturansicht befindet. Wenn Sie auf diese Benachrichtigung reagieren, können Sie den Text festlegen, der in der Infotip angezeigt wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="use-tree-view-infotips"></a>Verwenden von Tree-View infotips
+### <a name="use-tree-view-infotips"></a>Verwenden Tree-View Infotips
 
-Der folgende Beispielcode zeigt, wie eine Anwendung auf die Benachrichtigung reagieren könnte. Der Einfachheit halber kopiert das Beispiel lediglich den Text für das Element in den infotip.
+Der folgende Beispielcode zeigt, wie eine Anwendung auf die Benachrichtigung reagieren kann. Der Einfachheit halber kopiert das Beispiel nur den Text für das Element in die Infotip.
 
 
 ```
@@ -66,15 +66,15 @@ Der folgende Beispielcode zeigt, wie eine Anwendung auf die Benachrichtigung rea
 
 <dl> <dt>
 
-[Verwenden von Tree-View Steuerelementen](using-treeview.md)
+[Verwenden Tree-View-Steuerelementen](using-treeview.md)
 </dt> <dt>
 
-[Custdtv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View-Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
+[CustDTv-Beispiel veranschaulicht benutzerdefiniertes Zeichnen in einem Tree-View Steuerelement](https://support.microsoft.com/default.aspx?scid=kb;EN-US;q248496)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

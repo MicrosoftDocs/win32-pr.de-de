@@ -4,12 +4,12 @@ description: Komponentenweise Multiplikation.
 ms.assetid: DB95A38F-54E4-4BB6-81DF-CFFEBB4D425B
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a020666c3ce59cb368271aaf09f958d8a40af56c
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 0185f0d11807ddc8cfc7b057cf9a8af1bc49e199d187c01bf16029e0ce54d018
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107998257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118350"
 ---
 # <a name="mul-sm4---asm"></a>mul (sm4 - asm)
 
@@ -26,10 +26,10 @@ Komponentenweise Multiplikation.
 
 
 
-| Element                                                            | BESCHREIBUNG                                                        |
+| Element                                                            | Beschreibung                                                        |
 |-----------------------------------------------------------------|--------------------------------------------------------------------|
 | <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs. dest = src0 \* src1<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der Multiplikation.<br/>                                |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Multiplicand.<br/>                                |
 | <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Der Multiplikator.<br/>                                  |
 
 
@@ -38,9 +38,9 @@ Komponentenweise Multiplikation.
 
 ## <a name="remarks"></a>Hinweise
 
-Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Zahlenklassen erzielt werden, vorausgesetzt, dass weder ein Überlauf noch ein Unterlauf auftritt.
+Die folgende Tabelle zeigt die Ergebnisse, die beim Ausführen der Anweisung mit verschiedenen Klassen von Zahlen erzielt werden, vorausgesetzt, dass weder Überlauf noch Unterlauf auftreten.
 
-F bedeutet endliche reale Zahl.
+F bedeutet endliche reelle Zahl.
 
 
 
@@ -82,12 +82,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

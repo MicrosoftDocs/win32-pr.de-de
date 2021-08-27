@@ -1,5 +1,5 @@
 ---
-description: Eine abstrakte Klasse, von der alle Ereignis Ablauf Verfolgungs Klassen abgeleitet werden.
+description: Eine abstrakte Klasse, von der alle Ereignisablaufverfolgungsklassen abgeleitet werden.
 ms.assetid: 03eea902-5050-4ab2-8a72-9bff7777e234
 title: EventTrace-Klasse
 ms.topic: reference
@@ -27,18 +27,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: f04399942b39a2da5b746933884a436a65bb370c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37124a1c5ef23782261cbe94462c737d137dc6965363d9c907ea895e289237d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130610"
 ---
 # <a name="eventtrace-class"></a>EventTrace-Klasse
 
-Eine abstrakte Klasse, von der alle Ereignis Ablauf Verfolgungs Klassen abgeleitet werden.
+Eine abstrakte Klasse, von der alle Ereignisablaufverfolgungsklassen abgeleitet werden.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,261 +66,261 @@ class EventTrace
 
 ## <a name="members"></a>Member
 
-Die **EventTrace** -Klasse verfügt über diese Typen von Membern:
+Die **EventTrace-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **EventTrace** -Klasse verfügt über diese Eigenschaften.
+Die **EventTrace-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Eventguid**
+**EventGuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **Max** (16)
+Qualifizierer: **WmiDataId** (8), **Max** (16)
 </dt> </dl>
 
-Die Ereignis-Ablaufverfolgungs-Klassen-GUID dieses Ereignisses.
+Die GUID der Ereignisablaufverfolgungsklasse dieses Ereignisses.
 
 </dd> <dt>
 
-**Eventsize**
+**EventSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1)
+Qualifizierer: **WmiDataId** (1)
 </dt> </dl>
 
-Gesamtanzahl der Bytes des Ereignisses.
+Gesamtzahl der Bytes des Ereignisses.
 
 </dd> <dt>
 
 **EventType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3)
+Qualifizierer: **WmiDataId** (3)
 </dt> </dl>
 
-Vom Anbieter definierter Ereignistyp. Gibt Aufschluss darüber, welche Ereignistyp Klasse zum Entschlüsseln der von einem Anbieter definierten Ereignisdaten verwendet werden soll (die Daten, auf die von " **mufdata**" verwiesen wird.
+Vom Anbieter definierter Ereignistyp. Teilt Ihnen mit, welche Ereignistypklasse verwendet werden soll, um die vom Anbieter definierten Ereignisdaten zu entschlüsseln (die Daten, auf die **mofData** zeigt).
 
 </dd> <dt>
 
 **InstanceId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11)
+Qualifizierer: **WmiDataId** (11)
 </dt> </dl>
 
-Der Bezeichner dieser Ereignis Instanz.
+Bezeichner dieser Ereignisinstanz.
 
 </dd> <dt>
 
-**Kernelzeit**
+**KernelTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9)
+Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-Verstrichene Ausführungszeit für Kernel Modus-Anweisungen in CPU-Ticks.
+Verstrichene Ausführungszeit für Kernelmodusanweisungen in CPU-Ticks.
 
 </dd> <dt>
 
-**"MUF"**
+**MofData**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **Zeiger**
+Qualifizierer: **WmiDataId** (14), **Zeiger**
 </dt> </dl>
 
 Zeiger auf die anbieterspezifischen Ereignisdaten.
 
 </dd> <dt>
 
-**"Muength"**
+**MofLength**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15)
+Qualifizierer: **WmiDataId** (15)
 </dt> </dl>
 
-Die Länge der anbieterspezifischen Ereignisdaten.
+Länge der anbieterspezifischen Ereignisdaten.
 
 </dd> <dt>
 
-**Parametriguid**
+**ParentGuid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12), **Max** (16)
+Qualifizierer: **WmiDataId** (12), **Max** (16)
 </dt> </dl>
 
-Die Ereignis-Ablauf Verfolgungs Klassen-GUID der übergeordneten Instanz.
+GUID der Ereignisablaufverfolgungsklasse der übergeordneten Instanz.
 
 </dd> <dt>
 
 **ParentInstanceId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13)
+Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
-Der Bezeichner der übergeordneten Instanzdaten.
+Bezeichner der Daten der übergeordneten Instanz.
 
 </dd> <dt>
 
-**Reservedheaderfield**
+**ReservedHeaderField**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2)
+Qualifizierer: **WmiDataId** (2)
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-**ThreadID**
+**Threadid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **Zeiger**
+Qualifizierer: **WmiDataId** (6), **Zeiger**
 </dt> </dl>
 
 Gibt den Thread an, der das Ereignis generiert hat
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7)
+Qualifizierer: **WmiDataId** (7)
 </dt> </dl>
 
 Enthält das Datum und die Uhrzeit des Auftretens des Ereignisses.
 
 </dd> <dt>
 
-**TraceLevel**
+**Tracelevel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4)
+Qualifizierer: **WmiDataId** (4)
 </dt> </dl>
 
 Vom Anbieter definierter Wert, der den Schweregrad definiert, der zum Generieren des Ereignisses verwendet wird.
 
 </dd> <dt>
 
-**Traceversion**
+**TraceVersion**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5)
+Qualifizierer: **WmiDataId** (5)
 </dt> </dl>
 
-Anbieter definierte Versionsnummer der Ereignis Ablauf Verfolgungs Klasse, die zum Generieren des Ereignisses verwendet wird.
+Vom Anbieter definierte Versionsnummer der Ereignisablaufverfolgungsklasse, die zum Generieren des Ereignisses verwendet wird.
 
 </dd> <dt>
 
-**Usertime**
+**UserTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10)
+Qualifizierer: **WmiDataId** (10)
 </dt> </dl>
 
-Verstrichene Ausführungszeit für benutzermodusanweisungen in CPU-Ticks.
+Verstrichene Ausführungszeit für Benutzermodusanweisungen in CPU-Ticks.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie diese Eigenschaften nicht.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -328,7 +328,7 @@ Verwenden Sie diese Eigenschaften nicht.
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| MOF<br/>                      | <dl> <dt>WMI. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Wmi.mof</dt> </dl> |
 
 
 

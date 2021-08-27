@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Datei Vorgangs Ende-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Dateivorgang-Endereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 3925d5bf-f412-4248-a61f-e667efa9debd
 title: FileIo_OpEnd-Klasse
 ms.topic: reference
@@ -15,18 +15,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: d3f1c495cf44b84f8d7661b40cadec6ea255c6a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74042df74f8e128c4d92b6e4f1c886a7bba2f673c1a8a998a4b7f251475c3f93
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758430"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130590"
 ---
-# <a name="fileio_opend-class"></a>Fleio \_ opend-Klasse
+# <a name="fileio_opend-class"></a>FileIo \_ OpEnd-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Datei Vorgangs Ende-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Dateivorgang-Endereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,80 +42,80 @@ class FileIo_OpEnd : FileIo
 
 ## <a name="members"></a>Member
 
-Die Klasse " **fleio \_ opend** " verfügt über diese Typen von Membern:
+Die **FileIo \_ OpEnd-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die Klasse " **fleio \_ opend** " verfügt über diese Eigenschaften.
+Die **FileIo \_ OpEnd-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **ExtraInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Zeiger
+Qualifizierer: WmiDataId(2), Zeiger
 </dt> </dl>
 
-Zusätzliche Informationen, die vom Dateisystem für den Vorgang zurückgegeben werden. Beispielsweise eine Lese Anforderung, die tatsächliche Anzahl von gelesenen Bytes.
+Zusätzliche Informationen, die vom Dateisystem für den Vorgang zurückgegeben werden. Beispiel für eine Leseanforderung: die tatsächliche Anzahl der gelesenen Bytes.
 
 </dd> <dt>
 
-**Unpptr**
+**IrpPtr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Zeiger
+Qualifizierer: WmiDataId(1), Zeiger
 </dt> </dl>
 
-E/a-Anforderungspaket. Diese Eigenschaft identifiziert die e/a-Aktivität, die beendet wird.
+E/A-Anforderungspaket. Diese Eigenschaft identifiziert die E/A-Aktivität, die beendet wird.
 
 </dd> <dt>
 
-**NTSTATUS**
+**NtStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Rückgabewert des Vorgangs.
+Gibt den Wert aus dem Vorgang zurück.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Am Anfang des Vorgangs werden die [**-Ereignisse des**](fileio.md) -Vorgangs protokolliert. Opend-Ereignisse können separat aktiviert werden, um das Ende dieser Vorgänge anzugeben. Mit "unp" können die BEGIN-und End-Ereignisse korreliert werden.
+[**FileIo-Ereignisse**](fileio.md) werden zu Beginn des Vorgangs protokolliert. OpEnd-Ereignisse können separat aktiviert werden, um das Ende dieser Vorgänge anzugeben. Irp kann verwendet werden, um die Anfangs- und Endereignisse zu korrelieren.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

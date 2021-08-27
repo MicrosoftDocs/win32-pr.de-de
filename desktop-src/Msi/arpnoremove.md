@@ -1,29 +1,29 @@
 ---
-description: Wenn Sie die Eigenschaft ARPNOREMOVE festlegen, wird die Funktion "Software" in der Systemsteuerung deaktiviert, mit der das Produkt entfernt wird.
+description: Durch Festlegen der ARPNOREMOVE-Eigenschaft wird die Funktion "Programme hinzufügen" oder "Software entfernen" in Systemsteuerung, die das Produkt entfernt.
 ms.assetid: f86c1af8-c984-4075-9c6b-0a71000b01a1
-title: ARPNOREMOVE (Eigenschaft)
+title: ARPNOREMOVE-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cbf8960234456a7010fb81cb195d63d4c5c79bb8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9d69e066aeb96861be220a40334d44bf55fe0569e855029d2a19399b56a1c205
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361914"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105430"
 ---
-# <a name="arpnoremove-property"></a>ARPNOREMOVE (Eigenschaft)
+# <a name="arpnoremove-property"></a>ARPNOREMOVE-Eigenschaft
 
-Wenn **Sie** die Eigenschaft **ARPNOREMOVE** festlegen, wird die Funktion "Software" in der **Systemsteuerung** deaktiviert, mit der das Produkt entfernt wird. Bei Windows 2000 wird die Schaltfläche **Entfernen** für das **Produkt in der** **Systemsteuerung** unter Software deaktiviert. Bei früheren Betriebssystemen hat dies den Effekt, das Produkt aus der Liste der installierten Produkte in der Systemsteuerung **in der** **Systemsteuerung** zu entfernen.
+Durch Festlegen **der ARPNOREMOVE-Eigenschaft** wird die Funktion "Programme hinzufügen" oder "Software entfernen" **in** Systemsteuerung die das Produkt entfernt.  Für Windows 2000 deaktiviert **dies**  die Schaltfläche Entfernen für das Produkt aus der Option Programme hinzufügen oder entfernen in **Systemsteuerung.** Bei früheren Betriebssystemen hat **dies** den Effekt, dass das Produkt aus der Liste der installierten Produkte auf der Seite Programme hinzufügen oder entfernen **in** Systemsteuerung.
 
-Wenn die **ARPNOREMOVE** -Eigenschaft festgelegt ist, schreibt die [registerproduct-Aktion](registerproduct-action.md) den Wert "NoRemove" unter den folgenden Registrierungsschlüssel:
+Wenn die **ARPNOREMOVE-Eigenschaft** festgelegt ist, schreibt die [RegisterProduct-Aktion](registerproduct-action.md) den Wert "NoRemove" unter den Registrierungsschlüssel:
 
 **HKLM** \\ **Software** \\ **Microsoft** \\ **Windows** \\ **CurrentVersion** \\ **Deinstallieren** \\ **{*Product Key*}**
 
-Wenn Sie die **ARPNOREMOVE** -Eigenschaft festlegen, wird verhindert, dass der UninstallString-Wert unter diesem Schlüssel geschrieben wird. Der unistallstring-Wert ist eine Befehlszeile zum Entfernen des Produkts, anstatt das Produkt neu zu konfigurieren.
+Das Festlegen **der ARPNOREMOVE-Eigenschaft** verhindert, dass der UninstallString-Wert unter diesem Schlüssel geschrieben wird. Der UnidirektionString-Wert ist eine Befehlszeile zum Entfernen des Produkts, anstatt das Produkt neu zu konfigurieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft kann z. b. während einer Anpassungs Transformation festgelegt werden, um Benutzer daran zu hindern, eine Administrator Anpassung zu entfernen.
+Diese Eigenschaft kann beispielsweise während einer Anpassungstransformation festgelegt werden, um zu verhindern, dass Benutzer eine Administratoranpassung entfernen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Diese Eigenschaft kann z. b. während einer Anpassungs Transformation festgelegt
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 oder höher unter Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 oder höher auf Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

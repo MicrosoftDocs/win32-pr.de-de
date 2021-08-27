@@ -1,19 +1,19 @@
 ---
-description: Das optionale- <property> Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector. Daher gibt es keine vordefinierte Gruppe von Namen, die verwendet werden können. Dieses Element hat keine untergeordneten Elemente.
+description: Das <property> optionale -Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
 ms.assetid: 33854123-d4c0-4385-910b-a32d6922423f
-title: Property-Element von PropertyStore (Suchconnector-Schema)
+title: property-Element von propertyStore (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: df2e4cee6f26ee65ba03d9225eafcea4a03a7c55
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0319e86674eb91bf8915ce6218bb387ac9d79e87
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525451"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122464997"
 ---
-# <a name="property-element-of-propertystore-search-connector-schema"></a>Property-Element von PropertyStore (Suchconnector-Schema)
+# <a name="property-element-of-propertystore-search-connector-schema"></a>property-Element von propertyStore (Connectorschema suchen)
 
-Das optionale- <property> Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector. Daher gibt es keine vordefinierte Gruppe von Namen, die verwendet werden können. Dieses Element hat keine untergeordneten Elemente.
+Das <property> optionale -Element gibt eine Eigenschaft an, die vom Suchconnector verwendet wird. Diese Eigenschaften sind spezifisch für diesen Suchconnector, sodass kein vordefinierter Satz von Namen verwendet werden kann. Dieses Element verfügt über keine untergeordneten Elemente.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Das optionale- <property> Element gibt eine Eigenschaft an, die vom Suchconnecto
 
 | Übergeordnetes Element                                                                           | Untergeordnete Elemente |
 |------------------------------------------------------------------------------------------|----------------|
-| [PropertyStore-Element (Suchconnector-Schema)](search-schema-sconn-propertystore.md) |                |
+| [propertyStore-Element (Connectorschema suchen)](search-schema-sconn-propertystore.md) |                |
 
 
 
@@ -52,69 +52,25 @@ Das optionale- <property> Element gibt eine Eigenschaft an, die vom Suchconnecto
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
-<th>Werte</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name</td>
-<td>Öffentlich. Erforderlich. Der Anzeigename der Eigenschaft.</td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>type</td>
-<td>Öffentlich. Erforderlich. Der Typ der Eigenschaft.</td>
-<td>Beliebig: Standardwert. Der Wert wird vom Eigenschafts Subsystem nicht erzwungen. VT_NULL wird von GetPropertyType zurückgegeben.
-<ul>
-<li>NULL: für diese Eigenschaft ist kein Wert vorhanden. VT_NULL wird von GetPropertyType zurückgegeben.</li>
-<li>String: der Wert muss ein VT_LPWSTR sein.</li>
-<li>Boolescher Wert: der Wert muss ein VT_BOOL sein.</li>
-<li>Byte: der Wert muss ein VT_UI1 sein.</li>
-<li>Buffer: der Wert muss ein VT_UI1 sein | VT_VECTOR Puffer bytes.</li>
-<li>Int16: der Wert muss ein VT_I2 sein.</li>
-<li>UInt16: der Wert muss ein VT_UI2 sein.</li>
-<li>Int32: der Wert muss ein VT_I4 sein.</li>
-<li>UInt32: der Wert muss ein VT_UI4 sein.</li>
-<li>Int64: der Wert muss ein VT_I8 sein.</li>
-<li>UInt64: der Wert muss ein VT_UI8</li>
-<li>Double: der Wert muss ein VT_R8 sein.</li>
-<li>DateTime: der Wert muss ein VT_FILETIME sein.</li>
-<li>GUID: der Wert muss ein VT_CLSID sein.</li>
-<li>BLOB: der Wert muss ein VT_BLOB sein.</li>
-<li>Objekt: der Wert muss ein VT_UNKNOWN sein.</li>
-<li>Stream: der Wert muss ein VT_STREAM sein.</li>
-<li>Zwischenablage: der Wert muss ein VT_CF sein.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>schema</td>
-<td>Öffentlich. Dies ist optional. Das Schema, in dem die Eigenschaft definiert ist.</td>
-<td> </td>
-</tr>
-</tbody>
-</table>
+
+| Attribut | BESCHREIBUNG | Werte | 
+|-----------|-------------|--------|
+| name | Öffentlich. Erforderlich. Der Anzeigename der Eigenschaft. |   | 
+| Typ | Öffentlich. Erforderlich. Der Typ der Eigenschaft. | Any: Standard. Der Wert wird nicht vom Eigenschaftensubsystem umerciert. VT_NULL wird von GetPropertyType zurückgegeben.<ul><li>NULL: Für diese Eigenschaft ist kein Wert enthalten. VT_NULL wird von GetPropertyType zurückgegeben.</li><li>Zeichenfolge: Der Wert muss ein VT_LPWSTR.</li><li>Boolescher Wert: Der Wert muss ein VT_BOOL.</li><li>Byte: Der Wert muss ein VT_UI1.</li><li>Puffer: Der Wert muss ein VT_UI1 | VT_VECTOR Puffer von Bytes.</li><li>Int16: Der Wert muss ein VT_I2.</li><li>UInt16: Der Wert muss ein VT_UI2.</li><li>Int32: Der Wert muss ein VT_I4.</li><li>UInt32: Der Wert muss ein VT_UI4.</li><li>Int64: Der Wert muss ein VT_I8.</li><li>UInt64: Der Wert muss ein VT_UI8</li><li>Double: Der Wert muss eine VT_R8.</li><li>DateTime: Der Wert muss ein VT_FILETIME.</li><li>GUID: Der Wert muss ein VT_CLSID.</li><li>Blob: Der Wert muss ein VT_BLOB.</li><li>Objekt: Der Wert muss ein VT_UNKNOWN.</li><li>Stream: Der Wert muss ein VT_STREAM.</li><li>Zwischenablage: Der Wert muss ein VT_CF.</li></ul> | 
+| schema | Öffentlich. Optional. Das Schema, in dem die Eigenschaft definiert ist. |   | 
+
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-OpenSearch-Suchconnectors können die opensearchhtmlrollovertemplate-Eigenschaft verwenden. Diese Eigenschaft identifiziert eine Vorlage, die nach der OpenSearch-Vorlagen Konvention formatiert ist. Die Vorlage "opensearchhtmlrollovertemplate" wird verwendet, wenn der Benutzer in der Befehlsleiste auf die Schaltfläche "Suche nach Website" klickt.
+OpenSearch-Connectors können die OpenSearchHTMLRolloverTemplate-Eigenschaft verwenden. Diese Eigenschaft identifiziert eine Vorlage, die nach der OpenSearch formatiert ist. Die Vorlage OpenSearchHTMLRolloverTemplate wird verwendet, wenn der Benutzer in der Befehlsleiste auf die Schaltfläche "Auf Website suchen" klickt.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt ein- <propertyStore> Element mit zwei- <property> Elementen.
+Das folgende Beispiel zeigt ein <propertyStore> -Element mit zwei <property> -Elementen.
 
 
 ```

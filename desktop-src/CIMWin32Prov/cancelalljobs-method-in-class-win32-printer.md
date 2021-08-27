@@ -1,8 +1,8 @@
 ---
-description: Entfernt alle Aufträge, einschließlich der derzeit aus der Warteschlange druckbaren Aufträge.
+description: Entfernt alle Aufträge, einschließlich der aufträge, die derzeit aus der Warteschlange gedruckt werden.
 ms.assetid: d7466513-b123-43af-ab17-b3213ba80284
 ms.tgt_platform: multiple
-title: Cancelalljobs-Methode der Win32_Printer-Klasse
+title: CancelAllJobs-Methode der Win32_Printer Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d2d816dab837aafd7b6e9c6beff75c4e62b19b2f
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 06aae96cec4e38c7ff9c213cd19dc35e9843a077c262aafcaf0aed43160505a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103860767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085840"
 ---
-# <a name="cancelalljobs-method-of-the-win32_printer-class"></a>Cancelalljobs-Methode der Win32- \_ Drucker Klasse
+# <a name="cancelalljobs-method-of-the-win32_printer-class"></a>CancelAllJobs-Methode der Win32 \_ Printer-Klasse
 
-Die [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode **cancelalljobs** entfernt alle Aufträge, einschließlich der derzeit aus der Warteschlange druckbaren Aufträge.
+Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **CancelAllJobs** entfernt alle Aufträge, einschließlich des aktuell aus der Warteschlange gedruckten.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehler Konstanten**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT** -Werte finden Sie unter [System Fehler Codes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -62,9 +62,9 @@ Zugriff verweigert
 
 ## <a name="examples"></a>Beispiele
 
-Die [Meldung Benutzer benachrichtigen, wenn eine Druck Warteschlange gelöscht wird](https://Gallery.TechNet.Microsoft.Com/9f8ad84e-239d-45bf-a14f-ad8f3fc4988a) verwendet Msg.exe, um eine Netzwerk Warnung an alle Benutzer zu senden, die Dokumente in einer Druck Warteschlange für den Löschvorgang verwendet haben. Nach dem Senden der Warnungen löscht das Skript die Druck Warteschlange.
+Die [Benachrichtigung von Benutzern,](https://Gallery.TechNet.Microsoft.Com/9f8ad84e-239d-45bf-a14f-ad8f3fc4988a) wenn eine Druckwarteschlange gelöscht wird, verwendet Msg.exe, um eine Netzwerkwarnung an alle Benutzer zu senden, die Dokumente in einer Druckwarteschlange hatten, die gelöscht werden sollen. Nach dem Senden der Warnungen wird die Druckwarteschlange vom Skript gelöscht.
 
-Das Codebeispiel [delete all Print Jobs](https://Gallery.TechNet.Microsoft.Com/0e89fa7c-a837-4607-b421-c870142e7323) VBScript löscht alle Druckaufträge auf dem lokalen Computer.
+Im [VBScript-Codebeispiel](https://Gallery.TechNet.Microsoft.Com/0e89fa7c-a837-4607-b421-c870142e7323) Alle Druckaufträge löschen werden alle Druckaufträge auf dem lokalen Computer gelöscht.
 
 Im folgenden VBScript-Beispiel werden alle Druckaufträge für einen Drucker mit dem Namen HP QuietJet gelöscht.
 
@@ -92,8 +92,8 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                        |
-| MOF<br/>                      | <dl> <dt>Win32 \_ Printer. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                        |
+| MOF<br/>                      | <dl> <dt>Win32 \_ Printer.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl>       |
 
 
@@ -102,10 +102,10 @@ Next
 
 <dl> <dt>
 
-[Computer System-Hardware Klassen](computer-system-hardware-classes.md)
+[Hardwareklassen des Computersystems](computer-system-hardware-classes.md)
 </dt> <dt>
 
-[**Win32- \_ Drucker**](win32-printer.md)
+[**Win32-Drucker \_**](win32-printer.md)
 </dt> </dl>
 
  

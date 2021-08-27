@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5fbc91a4134fb0a024e66dfc1a46806aa531893f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 2ea00f208baaec20f5bc65782b863a58c58811cf3dabb5e9dbd2077020a53606
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108111008"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075270"
 ---
 # <a name="stopservice-method-of-the-msvm_virtualethernetswitchmanagementservice-class"></a>StopService-Methode der Msvm \_ VirtualEthernetSwitchManagementService-Klasse
 
@@ -49,11 +49,11 @@ Diese Methode gibt einen der folgenden Werte zurück:
 **Nicht unterstützt** (1)
 </dt> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -63,7 +63,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

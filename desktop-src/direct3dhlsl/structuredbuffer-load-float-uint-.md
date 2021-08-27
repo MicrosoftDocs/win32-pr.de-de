@@ -1,9 +1,9 @@
 ---
-title: 'Structuredbuffer:: Load (int, uint)-Funktion'
-description: 'Liest Puffer Daten und gibt den Status des Vorgangs zurück. | Structuredbuffer:: Load (int, uint)-Funktion'
+title: StructuredBuffer::Load(int,uint)-Funktion
+description: Liest Pufferdaten und gibt den Status des Vorgangs zurück. | StructuredBuffer::Load(int,uint)-Funktion
 ms.assetid: d71c6057-6651-4b70-91cf-892fde6d0188
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 957b85631bbd19742cb7afe52f6bf061de323614
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 76e710a4d43c04f8b00b19522d274c66c7acade03387026388dc1a9c6f37ac67
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094960"
 ---
-# <a name="structuredbufferloadintuint-function"></a>Structuredbuffer:: Load (int, uint)-Funktion
+# <a name="structuredbufferloadintuint-function"></a>StructuredBuffer::Load(int,uint)-Funktion
 
-Liest Puffer Daten und gibt den Status des Vorgangs zurück.
+Liest Pufferdaten und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ Liest Puffer Daten und gibt den Status des Vorgangs zurück.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort des Puffers.
+Die Position des Puffers.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 
@@ -62,15 +62,15 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**structuredbuffer**](sm5-object-structuredbuffer.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**StructuredBuffer-Objekt.**](sm5-object-structuredbuffer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -82,7 +82,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Lade Methoden](structuredbuffer-load.md)
+[Laden von Methoden](structuredbuffer-load.md)
 </dt> </dl>
 
  

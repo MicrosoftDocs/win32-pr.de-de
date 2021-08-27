@@ -1,7 +1,7 @@
 ---
-description: Anzahl der Abtastungen, die momentan verarbeitet werden und auf die Verarbeitung warten
+description: Anzahl von Stichproben, die derzeit als Batch verarbeitet werden und auf die Verarbeitung wartet.
 ms.assetid: 1a2d2144-b32c-49e8-8d6e-9d81e7f7be81
-title: 'Coutputqueue:: m_nBatched-Member (outputq. h)'
+title: COutputQueue::m_nBatched Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Outputq.h
-ms.openlocfilehash: eee06554e23afb1f5b4ed6025de3431ab060edd5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3a51b8a89bfe2dd99bfff8113d93e8914231cad5863e7c63a9efdf76e537a465
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087090"
 ---
-# <a name="coutputqueuem_nbatched-member"></a>Coutputqueue:: m \_ nbatch-Member
+# <a name="coutputqueuem_nbatched-member"></a>COutputQueue::m \_ nBatched-Member
 
-Anzahl der Abtastungen, die momentan verarbeitet werden und auf die Verarbeitung warten
+Anzahl von Stichproben, die derzeit als Batch verarbeitet werden und auf die Verarbeitung wartet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ LONG m_nBatched;
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl> |
 
 
 
@@ -47,7 +47,7 @@ LONG m_nBatched;
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

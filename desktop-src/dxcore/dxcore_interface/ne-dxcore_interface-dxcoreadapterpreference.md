@@ -1,21 +1,21 @@
 ---
 title: DXCoreAdapterPreference
-description: Definiert Konstanten, die DXCore-Adapter Einstellungen angeben, die als Listen Sortierkriterien verwendet werden sollen.
+description: Definiert Konstanten, die DXCore-Adaptereinstellungen angeben, die als Listensortierkriterien verwendet werden sollen.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 09/03/2019
-ms.openlocfilehash: 4301bdc1fe0ece8d9594ec3287e2ea8ddcce8f0a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a58f2c948751d5217a89e52bc862057ac6a67c85bdf2fabed96c2b5ad68364cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117730"
 ---
-# <a name="dxcoreadapterpreference-enum"></a>Dxcoreadapterpreference-Aufzählung
+# <a name="dxcoreadapterpreference-enum"></a>DXCoreAdapterPreference-Enum
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Definiert Konstanten, die DXCore-Adapter Einstellungen angeben, die als Listen Sortierkriterien verwendet werden sollen. Sie können eine DXCore-Adapter Liste sortieren, indem Sie ein Array von **dxcoreadapterpreference** an [idxcoreadapterlist:: Sort](./nf-dxcore_interface-idxcoreadapterlist-sort.md)übergeben.
+Definiert Konstanten, die DXCore-Adaptereinstellungen angeben, die als Listensortierkriterien verwendet werden sollen. Sie können eine DXCore-Adapterliste sortieren, indem Sie ein Array von **DXCoreAdapterPreference** an [IDXCoreAdapterList::Sort übergeben.](./nf-dxcore_interface-idxcoreadapterlist-sort.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,20 +28,20 @@ enum class DXCoreAdapterPreference : uint32_t
 };
 ```
 
-## <a name="enum-fields"></a>Aufzählungs Felder
+## <a name="enum-fields"></a>Aufzählfelder
 
 ### <a name="hardware"></a>Hardware
 
-Gibt eine bevorzugte Einstellung für Hardware Adapter an (im Gegensatz zu Software Adaptern).
+Gibt eine Einstellung für Hardwareadapter an (im Gegensatz zu Softwareadaptern).
 
-### <a name="minimumpower"></a>Minimumpower
+### <a name="minimumpower"></a>MinimumPower
 
-Gibt eine bevorzugte GPU (z. b. einen integrierten Grafikprozessor oder igpu) an.
+Gibt eine Einstellung für die minimal betriebene GPU an (z. B. einen integrierten Grafikprozessor oder iGPU).
 
 ### <a name="highperformance"></a>HighPerformance
 
-Gibt die bevorzugte GPU an, z. b. einen externen Grafikprozessor (xgpu), falls verfügbar, oder einen diskreten Grafikprozessor (dGPU), falls verfügbar.
+Gibt eine Einstellung für die GPU mit der höchsten Leistung an, z. B. einen externen Grafikprozessor (xGPU), sofern verfügbar, oder einen diskreten Grafikprozessor (Discrete Graphics Processor, dGPU), sofern verfügbar.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Idxcoreadapterlist:: Sort](./nf-dxcore_interface-idxcoreadapterlist-sort.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapterList::Sort](./nf-dxcore_interface-idxcoreadapterlist-sort.md), [DXCore-Referenz](../dxcore-reference.md), Verwenden von DXCore zum [Auflisten von Adaptern](../dxcore-enum-adapters.md)

@@ -1,7 +1,7 @@
 ---
-description: Die checkpaletteheader-Methode überprüft die Paletteneinträge in einer videoinfo-Struktur.
+description: Die CheckPaletteHeader-Methode überprüft die Paletteneinträge in einer VIDEOINFO-Struktur.
 ms.assetid: bc18cbe6-0446-43a6-a50c-e587815b789d
-title: Cimagedisplay. checkpaletteheader-Methode (winutil. h)
+title: CImageDisplay.CheckPaletteHeader-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 54c4f401d2e75aeb35ffc19d26690fa04a769c27
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6378a93ffced86546b8e95071e7f9bdc1398cdd1831aa18d41d62c6ea97caff0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087290"
 ---
-# <a name="cimagedisplaycheckpaletteheader-method"></a>Cimagedisplay. checkpaletteheader-Methode
+# <a name="cimagedisplaycheckpaletteheader-method"></a>CImageDisplay.CheckPaletteHeader-Methode
 
-Die- `CheckPaletteHeader` Methode überprüft die Paletteneinträge in einer [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Struktur.
+Die `CheckPaletteHeader` -Methode überprüft die Paletteneinträge in einer [**VIDEOINFO-Struktur.**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ BOOL CheckPaletteHeader(
 
 <dl> <dt>
 
-*pinput* 
+*pInput* 
 </dt> <dd>
 
-Zeiger auf eine **videoinfo** -Struktur.
+Zeiger auf eine **VIDEOINFO-Struktur.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn die Paletteneinträge gültig sind, andernfalls **false** .
+Gibt **TRUE zurück,** wenn die Paletteneinträge gültig sind, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Bildformat nicht palettisiert ist, überprüft die Methode, ob **biclrused** gleich 0 (null) ist. Andernfalls überprüft die Methode, ob das **bicompression** -Flag BI \_ RGB ist. **biclrimportant** ist nicht größer als **biclrused**. und die Anzahl der Paletteneinträge unter Berücksichtigung der Farbtiefe den maximalen Wert nicht überschreitet.
+Wenn das Bildformat nicht palettiert ist, überprüft die Methode, ob **biClrUsed** gleich 0 (null) ist. Andernfalls überprüft die -Methode, ob **das biCompression-Flag** BI \_ RGB ist. **biClrImportant** ist nicht größer als **biClrUsed;** und die Anzahl der Paletteneinträge überschreitet den Maximalwert nicht, wenn die Farbtiefe angegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Wenn das Bildformat nicht palettisiert ist, überprüft die Methode, ob **biclru
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Wenn das Bildformat nicht palettisiert ist, überprüft die Methode, ob **biclru
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

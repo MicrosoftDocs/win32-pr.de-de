@@ -1,7 +1,7 @@
 ---
 description: Die IsActive-Methode bestimmt, ob der Filter derzeit aktiv ist (wird ausgeführt oder angehalten).
 ms.assetid: 3bbb50d5-6a07-4932-940c-4466b95e6412
-title: Cbasefilter. IsActive-Methode (amfilter. h)
+title: CBaseFilter.IsActive-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 63cf2cd78bb61562c9b4d6a09de3d88c88d4c643
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fbbd9fedf94816d518ef9f8826542399d1d1e97f97137b2d86581d36c4a33e53
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369208"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120076640"
 ---
-# <a name="cbasefilterisactive-method"></a>Cbasefilter. IsActive-Methode
+# <a name="cbasefilterisactive-method"></a>CBaseFilter.IsActive-Methode
 
-Die- `IsActive` Methode bestimmt, ob der Filter derzeit aktiv ist (wird ausgeführt oder angehalten).
+Die `IsActive` -Methode bestimmt, ob der Filter derzeit aktiv ist (wird ausgeführt oder angehalten).
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn der Filter angehalten oder ausgeführt wird, oder **false** , wenn er angehalten wurde.
+Gibt **TRUE** zurück, wenn der Filter angehalten oder ausgeführt wird, oder **FALSE,** wenn er beendet wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Gibt **true** zurück, wenn der Filter angehalten oder ausgeführt wird, oder **
 
 <dl> <dt>
 
-[**Cbasefilter-Klasse**](cbasefilter.md)
+[**CBaseFilter-Klasse**](cbasefilter.md)
 </dt> </dl>
 
  

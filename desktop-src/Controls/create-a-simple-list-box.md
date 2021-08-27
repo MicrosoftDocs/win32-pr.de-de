@@ -1,44 +1,44 @@
 ---
-title: Erstellen eines einfachen Listen Felds
+title: Erstellen eines einfachen Listenfelds
 description: In diesem Thema wird veranschaulicht, wie Elemente aus einem einfachen Listenfeld initialisiert und abgerufen werden.
 ms.assetid: 4A717010-A1D3-4FFB-8E4E-D5C4F9D8D952
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ca2230b265d61e9a59a8892e14127d25bf2cfd2
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 83a037bfbdb5232cd30d3e13fbc251c22c18c71a76398a351939602301a745d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120063174"
 ---
-# <a name="how-to-create-a-simple-list-box"></a>Erstellen eines einfachen Listen Felds
+# <a name="how-to-create-a-simple-list-box"></a>Erstellen eines einfachen Listenfelds
 
 In diesem Thema wird veranschaulicht, wie Elemente aus einem einfachen Listenfeld initialisiert und abgerufen werden.
 
-Das C++-Codebeispiel in diesem Thema enthält eine Dialogfeld Prozedur, in der ein Listenfeld mit Informationen zu Playern in einem Sport Team ausgefüllt wird. Wenn der Benutzer den Namen eines Players aus der Liste auswählt, werden Informationen über den Player im Dialogfeld angezeigt. Der Fenster Stil für das Listenfeld enthält die [**lbs- \_ Sortierung**](list-box-styles.md), die zu einer sortierten Liste von Elementen führt. Der folgende Screenshot zeigt das Dialogfeld.
+Das C++-Codebeispiel in diesem Thema enthält eine Dialogfeldprozedur, die ein Listenfeld mit Informationen über Spieler in einem Sportteam füllt. Wenn der Benutzer den Namen eines Players aus der Liste auswählt, werden Informationen zum Spieler im Dialogfeld angezeigt. Das Fensterformat für das Listenfeld enthält [**LBS \_ SORT,**](list-box-styles.md)was zu einer sortierten Liste von Elementen führt. Der folgende Screenshot zeigt das Dialogfeld.
 
-![Screenshot eines Dialog Felds mit einem beschrifteten Listenfeld, Text zum ausgewählten Listenfeld Element und einer Schaltfläche "OK"](images/lb-roster.png)
+![Screenshot eines Dialogfelds mit einem gekennzeichneten Listenfeld, Text zum ausgewählten Listenfeldelement und einer Schaltfläche "OK"](images/lb-roster.png)
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Die Anwendung muss die folgenden Aufgaben im Listenfeld – Verwandte Aufgaben ausführen:
+Die Anwendung muss die folgenden Aufgaben im Zusammenhang mit Listenfelden ausführen:
 
--   Listenfeld initialisieren
--   Abrufen der Auswahl des Benutzers aus dem Listenfeld
+-   Initialisieren des Listenfelds
+-   Abrufen der Benutzerauswahl aus dem Listenfeld
 
-Im folgenden C++-Codebeispiel werden Informationen zu Playern in einem Array von-Strukturen gespeichert. Während der Initialisierung verwendet die Dialogfeld Prozedur die [**lb- \_ AddString**](lb-addstring.md) -Nachricht, um die Namen der Teammitglieder dem Listenfeld (**IDC- \_ ListBox- \_ Beispiel**) einzeln hinzuzufügen. Außerdem wird mit der LB-Nachricht " [**\_ abtitemdata**](lb-setitemdata.md) " der Array Index des Players als Elementdaten dem Listenfeld hinzugefügt. Wenn der Benutzer später einen Player aus dem Listenfeld auswählt, verwendet die Dialogfeld Prozedur die [**lb- \_ GetItemData**](lb-getitemdata.md) -Nachricht, um den entsprechenden Array Index abzurufen. Anschließend wird der Array Index verwendet, um Player Informationen aus dem Array abzurufen.
+Im folgenden C++-Codebeispiel werden Informationen zu Playern in einem Array von -Strukturen gespeichert. Während der Initialisierung verwendet die Dialogfeldprozedur die [**LB \_ ADDSTRING-Meldung,**](lb-addstring.md) um dem Listenfeld **(IDC \_ LISTBOX \_ EXAMPLE)** nach und nach die Namen von Teammitgliedern hinzuzufügen. Außerdem wird die [**LB \_ SETITEMDATA-Nachricht**](lb-setitemdata.md) verwendet, um dem Listenfeld den Arrayindex des Players als Elementdaten hinzuzufügen. Wenn der Benutzer später einen Player aus dem Listenfeld auswählt, verwendet die Dialogfeldprozedur die [**LB \_ GETITEMDATA-Meldung,**](lb-getitemdata.md) um den entsprechenden Arrayindex abzurufen. Anschließend wird der Arrayindex verwendet, um Playerinformationen aus dem Array abzurufen.
 
 
 
@@ -137,7 +137,7 @@ INT_PTR CALLBACK ListBoxExampleProc(HWND hDlg, UINT message,
 
 <dl> <dt>
 
-[Listenfeld-Steuerelement Verweis](bumper-list-box-list-box-control-reference.md)
+[Referenz zum Listenfeld-Steuerelement](bumper-list-box-list-box-control-reference.md)
 </dt> <dt>
 
 [Informationen zu Listenfeldern](about-list-boxes.md)

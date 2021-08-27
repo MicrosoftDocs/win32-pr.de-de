@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXConstantTable::SetMatrixPointerArray-Methode: Legt ein Array von Zeigern auf nicht übersetzte Matrizen fest.'
+description: 'ID3DXConstantTable::SetMatrixPointerArray-Methode: Legt ein Array von Zeigern auf nicht transposierte Matrizen fest.'
 ms.assetid: 1b985e03-b5cb-48e5-969f-115ca165acdc
 title: ID3DXConstantTable::SetMatrixPointerArray-Methode (D3DX9Shader.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: bd9505f82674efc822d4921d7116c8eab17198c1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 766f9f51baeaa7d3f210be96bfec5e7638123b8519a92314d79503b04a0908a5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118760"
 ---
 # <a name="id3dxconstanttablesetmatrixpointerarray-method"></a>ID3DXConstantTable::SetMatrixPointerArray-Methode
 
-Legt ein Array von Zeigern auf nicht übersetzte Matrizen fest.
+Legt ein Array von Zeigern auf nicht transposte Matrizen fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,7 +57,7 @@ Zeiger auf eine [**IDirect3DDevice9-Schnittstelle,**](/windows/win32/api/d3d9hel
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner für ein Array von konstanten Matrizen. Siehe [D3DXHANDLE](dx9-graphics-reference-effects-constants.md).
+Eindeutiger Bezeichner für ein Array konstanter Matrizen. Siehe [D3DXHANDLE](dx9-graphics-reference-effects-constants.md).
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Eindeutiger Bezeichner für ein Array von konstanten Matrizen. Siehe [D3DXHANDLE
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \* \***
 
-Array von Zeigern auf nicht übersetzte Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Array von Zeigern auf nicht transposierte Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> <dt>
 
@@ -83,24 +83,24 @@ Anzahl der Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine nicht übersetzte Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
+Eine nicht transposed Matrix enthält Zeilen-Hauptdaten. Das heißt, jeder Vektor ist in einer Zeile enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

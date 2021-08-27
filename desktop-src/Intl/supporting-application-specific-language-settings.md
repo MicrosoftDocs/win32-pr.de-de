@@ -1,25 +1,25 @@
 ---
-description: Die Anwendung kann eine andere Gruppe von Benutzeroberflächen Sprachen als die vom Ziel Betriebssystem unterstützten Sprachen unterstützen. In diesem Thema wird diese Art der Unterstützung mithilfe von Code Ausschnitten aus kompletten Beispielen erläutert.
+description: Ihre Anwendung kann einen anderen Satz von Benutzeroberflächensprachen unterstützen als die sprachen, die vom Zielbetriebssystem unterstützt werden. In diesem Thema wird diese Art von Unterstützung mithilfe von Codeausschnitten aus vollständigen Beispielen erläutert.
 ms.assetid: cb9f2a5f-3bb8-4287-a542-c71d20b37194
-title: Unterstützen von Application-Specific Spracheinstellungen
+title: Unterstützen von Application-Specific Language Einstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6bddfe94586751d3b0f4757c670c006317e49b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 96c934ea2f01c37eb2f9e846382447a50ccbedcd9b69fe20069216fa46521b02
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130060"
 ---
-# <a name="supporting-application-specific-language-settings"></a>Unterstützen von Application-Specific Spracheinstellungen
+# <a name="supporting-application-specific-language-settings"></a>Unterstützen von Application-Specific Language Einstellungen
 
-Die Anwendung kann eine andere Gruppe von Benutzeroberflächen Sprachen als die vom Ziel Betriebssystem unterstützten Sprachen unterstützen. In diesem Thema wird diese Art der Unterstützung mithilfe von Code Ausschnitten aus kompletten Beispielen erläutert.
+Ihre Anwendung kann einen anderen Satz von Benutzeroberflächensprachen unterstützen als die sprachen, die vom Zielbetriebssystem unterstützt werden. In diesem Thema wird diese Art von Unterstützung mithilfe von Codeausschnitten aus vollständigen Beispielen erläutert.
 
-## <a name="interpret-users-language-preference"></a>Spracheinstellung des Benutzers interpretieren
+## <a name="interpret-users-language-preference"></a>Interpretieren der Spracheinstellung des Benutzers
 
-Die Anwendung muss zuerst festlegen, welche Benutzeroberflächen Sprache auf der Grundlage der Benutzereinstellung angezeigt werden soll. Der Code kann die Einstellungen aus einer Konfigurationsdatei oder aus Registrierungs Einstellungen lesen.
+Ihre Anwendung muss zunächst anhand der Benutzerpräferenz bestimmen, welche Sprache der Benutzeroberfläche angezeigt werden soll. Der Code kann die Einstellungen aus einer Konfigurationsdatei oder aus Registrierungseinstellungen lesen.
 
-Im folgenden Beispiel werden zwei Funktionen definiert, die verwendet werden, um die Spracheinstellung des Benutzers zu interpretieren. Die erste Funktion veranschaulicht das Lesen einer durch Trennzeichen getrennten Liste von Sprachen aus einer Datei, die im Code als "langs.txt" dargestellt wird. Die im Beispiel unterstützten Trennzeichen sind ",", ";", "." und "". Die zweite Funktion konvertiert die aus der Datei gelesene Zeichenfolge in einen Wert mit mehreren Zeichen folgen. Dieser Vorgang ist erforderlich, da die MUI-Funktionen, die zum Festlegen von Sprachen verwendet werden, nur Werte für mehrere Zeichen folgen akzeptieren.
+Im folgenden Beispiel werden zwei Funktionen definiert, die zum Interpretieren der Spracheinstellung des Benutzers verwendet werden. Die erste Funktion veranschaulicht das Lesen einer durch Trennzeichen getrennten Liste von Sprachen aus einer Datei, die im Code als "langs.txt" dargestellt wird. Die im Beispiel unterstützten Trennzeichen sind ",",";";"." und " ". Die zweite Funktion konvertiert die aus der Datei gelesene Zeichenfolge in einen Wert mit mehreren Zeichenfolgen. Dieser Vorgang ist erforderlich, da die ZUM Festlegen von Sprachen verwendeten FUNKTIONEN nur Werte mit mehreren Zeichenfolgen akzeptieren.
 
 
 ```C++
@@ -89,9 +89,9 @@ BOOL ConvertMyLangStrToMultiLangStr(WCHAR * langStr, WCHAR * langMultiStr, DWORD
 
 
 
-## <a name="set-the-application-language"></a>Festlegen der Anwendungs Sprache
+## <a name="set-the-application-language"></a>Festlegen der Anwendungssprache
 
-Nachdem Sie die sprach Einstellungs Informationen gelesen haben, muss der Anwendungscode die abgerufene Einstellung verwenden, um die Anwendungs Sprache festzulegen. Unter Windows 7 und höher kann die Anwendung die Sprache auf Prozessebene festlegen, indem Sie die Funktion [**setprocesliniferreduilanguages**](/windows/desktop/api/Winnls/nf-winnls-setprocesspreferreduilanguages) aufruft.
+Nach dem Lesen der Spracheinstellungsinformationen muss der Anwendungscode die abgerufene Einstellung verwenden, um die Anwendungssprache festzulegen. Ab Windows 7 kann die Anwendung die Sprache auf Prozessebene festlegen, indem sie die [**SetProcessPreferredUILanguages-Funktion aufruft.**](/windows/desktop/api/Winnls/nf-winnls-setprocesspreferreduilanguages)
 
 
 ```C++
@@ -108,7 +108,7 @@ if(!SetProcessPreferredUILanguages(MUI_LANGUAGE_NAME, userLanguagesMultiString, 
 
 
 
-Unter Windows Vista und höher wird die Anwendungs Sprache auf Thread Ebene festgelegt, indem die Funktion [**setthreadpreferreduilanguages**](/windows/desktop/api/Winnls/nf-winnls-setthreadpreferreduilanguages) aufgerufen wird.
+Auf Windows Vista und höher wird die Anwendungssprache auf Threadebene festgelegt, indem die [**SetThreadPreferredUILanguages-Funktion**](/windows/desktop/api/Winnls/nf-winnls-setthreadpreferreduilanguages) aufgerufen wird.
 
 
 ```C++
@@ -130,13 +130,13 @@ return 1;
 
 <dl> <dt>
 
-[Festlegen der Einstellungen für die Anwendungs Sprache](setting-application-language-preferences.md)
+[Festlegen von Einstellungen für die Anwendungssprache](setting-application-language-preferences.md)
 </dt> <dt>
 
-[Beispiel für MUI: Application-Specific Einstellungen (Windows Vista)](mui-application-specific-settings-sample-vista.md)
+[WÄHREND: Application-Specific Einstellungen-Beispiel (Windows Vista)](mui-application-specific-settings-sample-vista.md)
 </dt> <dt>
 
-[Beispiel für MUI: Application-Specific Einstellungen (Pre-Windows Vista)](mui-application-specific-settings-sample-pre-vista.md)
+[WÄHREND: Application-Specific Einstellungen-Beispiel (Pre-Windows Vista)](mui-application-specific-settings-sample-pre-vista.md)
 </dt> </dl>
 
  

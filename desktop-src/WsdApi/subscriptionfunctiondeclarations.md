@@ -1,19 +1,19 @@
 ---
-description: Generiert Implementierungsdeklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
+description: Generiert Implementierungsdeklarationen für Abonnieren/Kündigen von Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 ms.assetid: 0e5b2232-c9bf-4741-921d-bb3bce4ee293
 title: subscriptionFunctionDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb7389b30ef7da17f9466fa8aefd24fa04f4c99f
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 1326750ece2f8dceff171890d107a7efad5f7432be2c201bf182e4406cb7fe6b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097100"
 ---
 # <a name="subscriptionfunctiondeclarations-element"></a>subscriptionFunctionDeclarations-Element
 
-Generiert Implementierungsdeklarationen für Subscribe/Unsubscribe-Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
+Generiert Implementierungsdeklarationen für Abonnieren/Kündigen von Proxyfunktionen für Porttypbenachrichtigungsvorgänge.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -28,9 +28,9 @@ Generiert Implementierungsdeklarationen für Subscribe/Unsubscribe-Proxyfunktion
 
 
 
-| Attribut                 | type               | Erforderlich      | BESCHREIBUNG                                                                                                                   |
+| attribute                 | type               | Erforderlich      | BESCHREIBUNG                                                                                                                   |
 |---------------------------|--------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|
-| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterungspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
+| **Extensible**<br/> | boolean<br/> | Nein<br/> | Die Möglichkeit, Erweiterbarkeitspunkte zu Funktionen und Schnittstellen hinzuzufügen. Dieser Wert ist immer auf TRUE festgelegt.<br/> <br/> |
 
 
 

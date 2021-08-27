@@ -1,7 +1,7 @@
 ---
-description: Flag, das angibt, ob das Objekt Stichproben in exakten Batches bereitstellt.
+description: Flag, das angibt, ob das Objekt Stichproben in genauen Batches liefert.
 ms.assetid: 1a37c78f-4499-4ebb-92b4-b71ba3ff1a02
-title: 'Coutputqueue:: m_bBatchExact-Member (outputq. h)'
+title: COutputQueue::m_bBatchExact Member (Outputq.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a5f38d8a0e7335025688f52015ff9ed4d4892820
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6b5859744c3670ccc789ae5d87a619b3b32c3731580d473ff8cc6d775348771f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087250"
 ---
-# <a name="coutputqueuem_bbatchexact-member"></a>Coutputqueue:: m \_ bbatchexact-Member
+# <a name="coutputqueuem_bbatchexact-member"></a>COutputQueue::m \_ bBatchExact-Member
 
-Flag, das angibt, ob das Objekt Stichproben in exakten Batches bereitstellt.
+Flag, das angibt, ob das Objekt Stichproben in genauen Batches liefert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ const BOOL m_bBatchExact;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **true** ist, wartet das Objekt, bis es über einen kompletten Batch von Medien Beispielen verfügt, bevor es bereitgestellt wird. Andernfalls werden bei ihrer Ankunft Beispiele bereitstellt. Die Element Variable [**coutputqueue:: m \_ lbatchsize**](coutputqueue-m-lbatchsize.md) definiert die Batch Größe.
+Wenn der Wert **TRUE ist,** wartet das Objekt, bis es über einen vollständigen Batch von Medienbeispielen verfügt, bevor ein beliebiges -Objekt zutrifft. Andernfalls werden Stichproben bei Ihrer Ankunft zu verfügung stellt. Die [**COutputQueue::m \_ lBatchSize-Membervariable**](coutputqueue-m-lbatchsize.md) definiert die Batchgröße.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,8 +46,8 @@ Wenn der Wert **true** ist, wartet das Objekt, bis es über einen kompletten Bat
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Wenn der Wert **true** ist, wartet das Objekt, bis es über einen kompletten Bat
 
 <dl> <dt>
 
-[**Coutputqueue-Klasse**](coutputqueue.md)
+[**COutputQueue-Klasse**](coutputqueue.md)
 </dt> </dl>
 
  

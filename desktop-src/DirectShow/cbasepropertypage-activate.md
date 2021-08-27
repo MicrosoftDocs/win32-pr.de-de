@@ -1,7 +1,7 @@
 ---
-description: 'Mit der Methode "aktivieren" wird das Dialogfeld Fenster erstellt. Diese Methode implementiert die IPropertyPage:: Aktivierungs-Methode.'
+description: Die Activate-Methode erstellt das Dialogfeldfenster. Diese Methode implementiert die IPropertyPage::Activate-Methode.
 ms.assetid: 8f030dc5-1d14-46b5-9d40-7f07a1177dbe
-title: Cbasepropertypage. Aktivierungs-Methode (cprop. h)
+title: CBasePropertyPage.Activate-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4b851cfc4490d25e7e30dfd2cf0e7c33b0e76224
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b525eb16f534f0da8c847f50365c43124cb9e37d89f16629842fa202925a0674
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108520"
 ---
-# <a name="cbasepropertypageactivate-method"></a>Cbasepropertypage. Aktivierungs-Methode
+# <a name="cbasepropertypageactivate-method"></a>CBasePropertyPage.Activate-Methode
 
-Mit der- `Activate` Methode wird das Dialogfeld Fenster erstellt. Diese Methode implementiert die **IPropertyPage:: Aktivierungs** -Methode.
+Die `Activate` -Methode erstellt das Dialogfeldfenster. Diese Methode implementiert die **IPropertyPage::Activate-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,36 +47,36 @@ HRESULT Activate(
 *hwndParent* 
 </dt> <dd>
 
-Handle für das übergeordnete Fenster des Dialog Felds.
+Handle für das übergeordnete Fenster des Dialogfelds.
 
 </dd> <dt>
 
-*vorab ausführen* 
+*prect* 
 </dt> <dd>
 
-Ein Zeiger auf eine **Rect** -Struktur, die Positionsinformationen für das Dialogfeld enthält.
+Zeiger auf eine **RECT-Struktur,** die Positionierungsinformationen für das Dialogfeld enthält.
 
 </dd> <dt>
 
-*für den modalen* 
+*fModal* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob der Dialogfeld Rahmen Modal (**true**) oder nicht modelliert (**false**) ist.
+Boolescher Wert, der angibt, ob der Dialogfeldrahmen modal (**TRUE**) oder moduslos ( FALSE )**ist.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                           |
 |-----------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>       |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | **Null** -Zeigerargument.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl>  | Unerwarteter Fehler.<br/>        |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>       |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     |  NULL-Zeigerargument.<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl>  | Unerwarteter Fehler.<br/>        |
 
 
 
@@ -88,8 +88,8 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -97,10 +97,10 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> <dt>
 
-[**Cbasepropertypage:: onaktivierungs**](cbasepropertypage-onactivate.md)
+[**CBasePropertyPage::OnActivate**](cbasepropertypage-onactivate.md)
 </dt> </dl>
 
  

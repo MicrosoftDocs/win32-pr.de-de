@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b61b6179aa6364ebddd940b8853e22d628463e56
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e71047b5063a5975266e5e24db936a0baf9e7b65e81ce29b402ccce4638267a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108640"
 ---
 # <a name="cbasepinsetmediatype-method"></a>CBasePin.SetMediaType-Methode
 
@@ -53,9 +53,9 @@ Zeiger auf ein [**CMediaType-Objekt,**](cmediatype.md) das den Medientyp angibt.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode legt das Format für eine Stecknadelverbindung fest. Vor dem Aufrufen dieser Methode ruft der Pin die [**CBasePin::CheckMediaType-Methode**](cbasepin-checkmediatype.md) auf, um zu bestimmen, ob der Medientyp akzeptabel ist. Daher wird angenommen, dass der *pmt-Parameter* ein zulässiger Medientyp ist.
+Diese Methode legt das Format für eine Stecknadelverbindung fest. Vor dem Aufrufen dieser Methode ruft der Pin die [**CBasePin::CheckMediaType-Methode**](cbasepin-checkmediatype.md) auf, um zu bestimmen, ob der Medientyp akzeptabel ist. Daher wird davon ausgegangen, dass der *pmt-Parameter* ein akzeptabler Medientyp ist.
 
 In der Basisklasse legt diese Methode die [**CBasePin::m \_ mt-Membervariable**](cbasepin-m-mt.md) fest und gibt S \_ OK zurück. Eine abgeleitete Klasse kann diese Methode überschreiben, wenn sie eine Benachrichtigung erfordert, wenn der Medientyp festgelegt ist.
 
@@ -63,14 +63,14 @@ In der Basisklasse legt diese Methode die [**CBasePin::m \_ mt-Membervariable**]
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter.h (streams.h enthalten)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

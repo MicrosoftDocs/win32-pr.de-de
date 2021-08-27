@@ -1,56 +1,56 @@
 ---
-description: Windows Installer können Dateien reparieren, ersetzen und überprüfen, die in einer Anwendung enthalten sind. Eine teilweise oder vollständige Neuinstallation der Anwendung ist möglicherweise erforderlich, wenn Dateien oder Registrierungseinträge, die einer Funktion zugeordnet sind, fehlen oder beschädigt sind.
+description: Windows Das Installationsprogramm kann Dateien reparieren, ersetzen und überprüfen, die in einer Anwendung enthalten sind. Eine teilweise oder vollständige Neuinstallation der Anwendung ist möglicherweise erforderlich, wenn Dateien oder Registrierungseinträge, die einem Feature zugeordnet sind, fehlen oder beschädigt sind.
 ms.assetid: fab23ab9-f1ab-4743-b883-cffc29b0124b
-title: Neuinstallieren eines Features oder einer Anwendung
+title: Erneutes Installieren eines Features oder einer Anwendung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 645f7dbf95204d96202c71a120eafb6e6e054ac6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 803fc3271cb69280ae84ae096e7a411dbf599f0a321bf15baac6dbd5ca8e1512
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086000"
 ---
-# <a name="reinstalling-a-feature-or-application"></a>Neuinstallieren eines Features oder einer Anwendung
+# <a name="reinstalling-a-feature-or-application"></a>Erneutes Installieren eines Features oder einer Anwendung
 
-Windows Installer können Dateien reparieren, ersetzen und überprüfen, die in einer Anwendung enthalten sind. Eine teilweise oder vollständige Neuinstallation der Anwendung ist möglicherweise erforderlich, wenn Dateien oder Registrierungseinträge, die einer Funktion zugeordnet sind, fehlen oder beschädigt sind.
+Windows Das Installationsprogramm kann Dateien reparieren, ersetzen und überprüfen, die in einer Anwendung enthalten sind. Eine teilweise oder vollständige Neuinstallation der Anwendung ist möglicherweise erforderlich, wenn Dateien oder Registrierungseinträge, die einem Feature zugeordnet sind, fehlen oder beschädigt sind.
 
-Wenn ein Feature oder eine Anwendung neu installiert wird, werden alle Dienste, Umgebungsvariablen und benutzerdefinierten Aktionen, die zu dem Feature oder der Anwendung gehören, ebenfalls neu installiert. Dies bedeutet, dass alle Änderungen, die an Umgebungsvariablen zwischen der ursprünglichen Installation und der Neuinstallation vorgenommen wurden, verloren gehen.
+Wenn ein Feature oder eine Anwendung neu installiert wird, werden auch alle Dienste, Umgebungsvariablen und benutzerdefinierten Aktionen, die zum Feature oder zur Anwendung gehören, neu installiert. Beachten Sie, dass dies bedeutet, dass alle Änderungen an Umgebungsvariablen zwischen der ursprünglichen Installation und der Neuinstallation verloren gehen.
 
-In der folgenden Liste sind die Methoden zum Neuinstallieren eines Features oder Produkts enthalten. Die ersten beiden Methoden wurden vom Installationsprogramm automatisiert:
+Die folgende Liste enthält Methoden zum erneuten Installieren eines Features oder Produkts. Die ersten beiden Methoden wurden vom Installationsprogramm automatisiert:
 
--   Reparieren, ersetzen oder überprüfen Sie Dateien, indem Sie die Funktion [**msireinstallfeature**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea) aufrufen.
--   Installieren Sie das gesamte Produkt neu, indem Sie die [**msireinstallproduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta) -Funktion aufrufen.
--   Neuinstallieren, ersetzen oder Überprüfen von Dateien mit der Schaltfläche "Installer UI Control" durch die [REINSTALL ControlEvent](reinstall-controlevent.md).
--   Sie können Dateien über eine Befehlszeile neu installieren, ersetzen oder überprüfen, indem Sie die Eigenschaft [**neu installieren**](reinstall.md) und die Eigenschaft [**REINSTALLMODE**](reinstallmode.md) festlegen.
+-   Reparieren, ersetzen oder überprüfen Sie Dateien, indem Sie die [**MsiReinstallFeature-Funktion**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea) aufrufen.
+-   Installieren Sie das gesamte Produkt erneut, indem Sie die [**MsiReinstallProduct-Funktion**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta) aufrufen.
+-   Installieren Sie Dateien erneut, ersetzen oder überprüfen Sie sie über die Schaltfläche Install [ControlEvent (ControlEvent neu installieren)](reinstall-controlevent.md)mit einem Benutzeroberflächen-Steuerelement für das Installationsprogramm.
+-   Installieren, ersetzen oder überprüfen Sie Dateien über eine Befehlszeile, indem Sie die [**REINSTALL-Eigenschaft**](reinstall.md) und die [**REINSTALLMODE-Eigenschaft**](reinstallmode.md) festlegen.
 
 Weitere Informationen zum erneuten Installieren eines Features oder einer Anwendung finden Sie unter [Resilienz](resiliency.md).
 
 **So installieren Sie ein Produkt mithilfe des Installationsprogramms neu**
 
--   [**Msireinstallproduct**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta)abrufen.
+-   Rufen Sie [**MsiReinstallProduct auf.**](/windows/desktop/api/Msi/nf-msi-msireinstallproducta)
 
 **So installieren Sie ein Feature mithilfe des Installationsprogramms neu**
 
--   [**Msireinstallfeature**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea)aufruft.
+-   Rufen [**Sie MsiReinstallFeature auf.**](/windows/desktop/api/Msi/nf-msi-msireinstallfeaturea)
 
-**So installieren Sie ein Produkt oder eine Funktion mit einer Installer-Benutzeroberfläche neu**
+**So installieren Sie ein Produkt oder Feature mit einer Installer-Benutzeroberfläche neu**
 
-1.  Fügen Sie dem angegebenen Dialogfeld eine Schaltfläche hinzu, indem Sie der [Steuerelement Tabelle](control-table.md)einen Eintrag hinzufügen.
-2.  Fügen Sie der ControlEvent-Tabelle eine [REINSTALLMODE-ControlEvent](reinstallmode-controlevent.md) hinzu, wobei die Dialog Feld \_ -und Steuerelement \_ Felder auf das in Schritt 1 erstellte Schaltflächen-Steuerelement verweisen. Geben Sie im Feld Argument eine Zeichenfolge mit den Buchstaben ein, die den gewünschten Neuinstallations Modi entsprechen (die zulässigen Werte für dieses Feld sind identisch mit denen, die für die Eigenschaft [**REINSTALLMODE**](reinstallmode.md) akzeptiert werden). Der Wert in der Spalte Reihenfolge für dieses Ereignis sollte 1 lauten.
-3.  Fügen Sie der [ControlEvent-Tabelle](controlevent-table.md)ein [REINSTALL ControlEvent](reinstall-controlevent.md) -Ereignis hinzu, das wiederum auf dasselbe Schaltflächen-Steuerelement verweist. Das Argument Feld für dieses Ereignis ist normalerweise alle, um eine Neuinstallation aller Features zu erzwingen, aber Sie können den Namen eines bestimmten Features hier platzieren. Der Wert in der Spalte Reihenfolge für dieses Ereignis sollte 2 lauten.
-4.  Fügen Sie ein Ereignis hinzu, das an dasselbe Schaltflächen-Steuerelement gebunden ist, um die Neuinstallation tatsächlich zu initiieren. Dabei kann es sich um ein EndDialog-Ereignis (mit dem Argument Return) handeln. In der Regel wird jedoch hier ein newdialog-Ereignis verwendet, um zu einer zu wechseln, **die Sie wirklich neu installieren möchten?** Bestätigungs Dialogfeld. Der Wert in der Spalte Reihenfolge für dieses Ereignis sollte 3 lauten.
+1.  Fügen Sie dem angegebenen Dialogfeld eine Schaltfläche hinzu, indem Sie der [Control-Tabelle einen Eintrag hinzufügen.](control-table.md)
+2.  Fügen Sie der ControlEvent-Tabelle ein [ReinstallMode ControlEvent](reinstallmode-controlevent.md) hinzu, und verweisen die Felder Dialog und Control auf das in Schritt 1 erstellte \_ \_ Schaltflächen-Steuerelement. Geben Sie im Feld Argument eine Zeichenfolge ein, die die Buchstaben enthält, die den von Ihnen unterstützten Neuinstallationsmodi (die zulässigen Werte für dieses Feld sind identisch mit denen, die für die [**REINSTALLMODE-Eigenschaft akzeptiert**](reinstallmode.md) werden). Der Wert in der Spalte Ordering für dieses Ereignis sollte 1 sein.
+3.  Fügen Sie der [ControlEvent-Tabelle](reinstall-controlevent.md) ein Neuinstallationsereignis für [ControlEvent hinzu,](controlevent-table.md)das wiederum auf das gleiche Schaltflächensteuerfeld zeigt. Das Argumentfeld für dieses Ereignis ist normalerweise ALL, um die Neuinstallation aller Features zu erzwingen. Sie können den Namen eines bestimmten Features jedoch hier platzieren. Der Wert in der Spalte Ordering für dieses Ereignis sollte 2 sein.
+4.  Fügen Sie ein zusätzliches Ereignis hinzu, das an dasselbe Schaltflächensteuerfeld gebunden ist, um die Neuinstallation tatsächlich zu initiieren. Dies kann ein EndDialog-Ereignis (mit dem Argument Return) sein. In der Regel wird hier jedoch ein NewDialog-Ereignis verwendet, um zum Bestätigungsdialogfeld Möchten Sie sicher sein, dass Sie neu installieren **möchten?** zu springen. Der Wert in der Spalte Ordering für dieses Ereignis sollte 3 sein.
 
-    Wenn gewünscht, können mehrere [**Neuinstallations Schaltflächen**](reinstall.md) für ein einzelnes Dialogfeld erstellt werden, sodass der Benutzer den Typ der durchgeführten Neuinstallation auswählen kann. In diesem Fall wird jede Schaltfläche wie in der vorherigen Prozedur beschrieben erstellt, mit einem anderen [REINSTALLMODE-ControlEvent](reinstallmode-controlevent.md) -Parameter für jede Schaltfläche.
+    Bei Wunsch können mehrere [**REINSTALL-Schaltflächen**](reinstall.md) für ein einzelnes Dialogfeld erstellt werden, sodass der Benutzer den Typ der durchgeführten Neuinstallation auswählen kann. In diesem Fall wird jede Schaltfläche wie im vorherigen Verfahren beschrieben mit einem anderen [ReinstallMode ControlEvent-Parameter](reinstallmode-controlevent.md) für jede Schaltfläche verfasst.
 
-Nachdem ein bestimmtes Produkt installiert wurde (mit einigen oder allen Features des Produkts), kann eine erneute Installation über die Befehlszeile ausgeführt werden:
+Nachdem ein bestimmtes Produkt installiert wurde (mit einigen oder allen Features des Produkts), kann eine Neuinstallation über die Befehlszeile durchgeführt werden:
 
 **So installieren Sie ein Produkt oder Feature über eine Befehlszeile neu**
 
-1.  Geben Sie an der Eingabeaufforderung die Eigenschaft [**neu installieren**](reinstall.md) an.
-2.  Geben Sie an der Eingabeaufforderung die [**REINSTALLMODE**](reinstallmode.md) -Eigenschaft an.
+1.  Geben Sie an der Eingabeaufforderung die [**REINSTALL-Eigenschaft**](reinstall.md) an.
+2.  Geben Sie an der Eingabeaufforderung die [**REINSTALLMODE-Eigenschaft**](reinstallmode.md) an.
 
-    Wenn Sie diese Eigenschaften angeben, kann der Benutzer alle Features des Produkts neu installieren. Der Typ der erneuten Installation kann auch angegeben werden. Sie können z. b. angeben, dass nur die Dateien, die vollständig fehlen, neu installiert werden sollen, oder dass nur beschädigte Dateien (z. b. jede ausführbare Datei, deren Prüfsumme nicht mit dem tatsächlichen Dateiinhalt identisch ist) ersetzt werden sollen.
+    Wenn Sie diese Eigenschaften angeben, kann der Benutzer alle Features des Produkts neu installieren. Der Typ der Neuinstallation kann ebenfalls angegeben werden. Beispielsweise können Sie angeben, dass nur die Dateien, die vollständig fehlen, neu installiert werden sollen oder dass nur beschädigte Dateien (z. B. ausführbare Dateien, deren Prüfsumme nicht mit dem tatsächlichen Dateiinhalt übereinstimmen) ersetzt werden sollen.
 
  
 

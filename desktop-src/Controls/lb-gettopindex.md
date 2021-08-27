@@ -1,9 +1,9 @@
 ---
-title: LB_GETTOPINDEX Meldung (Winuser. h)
+title: LB_GETTOPINDEX (Winuser.h)
 description: Ruft den Index des ersten sichtbaren Elements in einem Listenfeld ab.
 ms.assetid: vs|controls|~\controls\listboxes\listboxreference\listboxmessages\lb_gettopindex.htm
 keywords:
-- Windows-Steuerelemente für LB_GETTOPINDEX Meldung
+- LB_GETTOPINDEX meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bdeca8e3f40ab3105bb9703db9355d09a214f5fc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5e4b23360da45041e5a728f370e54f8250f216507dd439291a2ffce5ed383d80
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956505"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085380"
 ---
-# <a name="lb_gettopindex-message"></a>LB- \_ gettopindex-Nachricht
+# <a name="lb_gettopindex-message"></a>LB \_ GETTOPINDEX-Nachricht
 
-Ruft den Index des ersten sichtbaren Elements in einem Listenfeld ab. Anfänglich befindet sich das Element mit dem Index 0 am oberen Rand des Listen Felds, aber wenn für den Listenfeld Inhalt ein Bildlauf ausgeführt wurde, befindet sich möglicherweise ein anderes Element im oberen Bereich. Das erste sichtbare Element in einem Listenfeld mit mehreren Spalten ist das linke obere Element.
+Ruft den Index des ersten sichtbaren Elements in einem Listenfeld ab. Anfänglich befindet sich das Element mit index 0 oben im Listenfeld, aber wenn der Inhalt des Listenfelds gescrollt wurde, befindet sich möglicherweise ein anderes Element oben. Das erste sichtbare Element in einem Listenfeld mit mehreren Spalten ist das element oben links.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,15 +47,15 @@ Nicht verwendet; muss 0 (null) sein.
 
 Der Rückgabewert ist der Index des ersten sichtbaren Elements im Listenfeld.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -63,7 +63,7 @@ Der Rückgabewert ist der Index des ersten sichtbaren Elements im Listenfeld.
 
 <dl> <dt>
 
-[**LB- \_ settopindex**](lb-settopindex.md)
+[**LB \_ SETTOPINDEX**](lb-settopindex.md)
 </dt> </dl>
 
  

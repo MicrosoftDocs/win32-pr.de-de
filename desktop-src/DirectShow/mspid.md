@@ -1,24 +1,24 @@
 ---
-description: Beachten Sie, dass diese API veraltet ist. Diese sollten von neuen Anwendungen nicht verwendet werden. Der mspid-Datentyp identifiziert den Zweck eines Medien Dampfes.
+description: Hinweis Diese API ist veraltet. Neue Anwendungen sollten sie nicht verwenden. Der MSPID-Datentyp identifiziert den Zweck eines Medientous.
 ms.assetid: 83a84eb7-a72c-4ca7-b152-8cc81a5bfdaf
-title: Mspid (mmstream. h)
+title: MSPID (Mmstream.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8464882aa018a373345f15c0a5639107d9beebf9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: dc9d274fc4131c0aa4494d610cbe1145ad79b848b5f6280d4ad6a10b298a8b7f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075750"
 ---
-# <a name="mspid"></a>Mspid
+# <a name="mspid"></a>MSPID
 
 > [!Note]  
-> Diese API ist veraltet. Diese sollten von neuen Anwendungen nicht verwendet werden.
+> Diese API ist veraltet. Neue Anwendungen sollten sie nicht verwenden.
 
  
 
-Der **mspid-** Datentyp identifiziert den Zweck eines Medien Dampfes.
+Der **MSPID-Datentyp** identifiziert den Zweck eines Medientous.
 
 
 ```C++
@@ -28,30 +28,30 @@ typedef REFGUID REFMSPID;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Mspid** ist einfach eine typedef für GUID. Die folgenden mspids sind definiert.
+**MSPID** ist einfach eine Typedef für GUID. Die folgenden MSPIDs sind definiert.
 
 
 
 | Wert               | BESCHREIBUNG           |
 |---------------------|-----------------------|
-| Mspid \_ primaryvideo | Primärer Videostream. |
-| Mspid \_ primaryaudio | Primärer Audiodatenstrom. |
+| MSPID \_ PrimaryVideo | Primärer Videostream. |
+| MSPID \_ PrimaryAudio | Primärer Audiostream. |
 
 
 
  
 
-Der **refmspid-** Typ definiert einen Verweis auf eine **mspid**.
+Der **REFMSPID-Typ** definiert einen Verweis auf eine **MSPID.**
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Mmstream. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Mmstream.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Der **refmspid-** Typ definiert einen Verweis auf eine **mspid**.
 
 <dl> <dt>
 
-[Multimedia-streamingdatentypen](multimedia-streaming-data-types.md)
+[Multimediastreamingdatentypen](multimedia-streaming-data-types.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetrenamecolenn-Funktion'
-title: Jetrenamecolenn-Funktion
+description: Weitere Informationen finden Sie unter JetRenameColumn-Funktion.
+title: JetRenameColumn-Funktion
 TOCTitle: JetRenameColumn Function
 ms:assetid: 30967765-355b-417c-b0d6-8b59e677cc98
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269218(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9ab2dee1895e4148bb2ea0600464d7e9c4a6a358
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c60418a0723214b2d2312ebe67a4f47184814e0a
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364200"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122470237"
 ---
-# <a name="jetrenamecolumn-function"></a>Jetrenamecolenn-Funktion
+# <a name="jetrenamecolumn-function"></a>JetRenameColumn-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetrenamecolumn-function"></a>Jetrenamecolenn-Funktion
+## <a name="jetrenamecolumn-function"></a>JetRenameColumn-Funktion
 
-Die **jetrenamecolumn** -Funktion kann verwendet werden, um den Namen einer vorhandenen Spalte in einer Tabelle zu ändern.
+Die **JetRenameColumn-Funktion** kann verwendet werden, um den Namen einer vorhandenen Spalte in einer Tabelle zu ändern.
 
-**Windows XP:**  **jetrenamecolumschlag** wird in Windows XP eingeführt.
+**Windows XP:****JetRenameColumn** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetRenameColumn(
@@ -48,21 +48,21 @@ Die **jetrenamecolumn** -Funktion kann verwendet werden, um den Namen einer vorh
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
-*szName*
+*Szname*
 
 Der aktuelle Name der Spalte, die umbenannt wird.
 
-*sznamenew*
+*szNameNew*
 
-Der neue Name der Spalte, die umbenannt wird.
+Der neue Name für die Spalte, die umbenannt wird.
 
 *grbit*
 
@@ -70,128 +70,41 @@ Dieser Parameter muss 0 sein.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errColumnNotFound</p></td>
-<td><p>Diese angegebene Spalte ist für diese Tabelle nicht vorhanden.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidName</p></td>
-<td><p>Einer der angegebenen Objektnamen war ungültig. Alle Objektnamen müssen mit demselben Regelsatz übereinstimmen. Nachfolgend sind diese Regeln aufgeführt:</p>
-<ul>
-<li><p>Objektnamen müssen aus ASCII-Zeichen bestehen.</p></li>
-<li><p>Objektnamen müssen mindestens ein Zeichen lang sein.</p></li>
-<li><p>Objektnamen dürfen nicht mehr als JET_cbNameMost (64) Zeichen lang sein.</p></li>
-<li><p>Objektnamen dürfen nicht mit einem Leerzeichen beginnen. Objektnamen dürfen keine ASCII-Steuerzeichen (0x00 bis 0x1F) enthalten.</p></li>
-<li><p>Objektnamen dürfen keine Ausrufezeichen (!), Punkte (.), linke eckige Klammer ([) oder rechte eckige Klammer (]) enthalten.</p></li>
-<li><p>Nach der Validierung wird nur der Teil der Zeichenfolge bis zum ersten Leerzeichen (sofern vorhanden) für den Objektnamen verwendet. Dies bedeutet, dass Objektnamen keine Leerzeichen enthalten dürfen.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann bei <strong>jetrenamecolumschlag</strong> vorkommen, wenn Folgendes geschieht:</p>
-<ul>
-<li><p><em>szName</em> ist NULL.</p></li>
-<li><p><em>sznamenew</em> ist NULL.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInTransaction</p></td>
-<td><p>Dieser Vorgang kann nur ausgeführt werden, wenn die Sitzung derzeit nicht innerhalb einer Transaktion ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errSessionSharingViolation</p></td>
-<td><p>Dieselbe Sitzung kann nicht für mehr als einen Thread gleichzeitig verwendet werden. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errTransReadOnly</p></td>
-<td><p>Ein Update kann nicht innerhalb des Gültigkeits Bereichs einer schreibgeschützten Transaktion durchgeführt werden. Eine schreibgeschützte Transaktion ist eine Transaktion, die mit einem <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> -Aufrufvorgang mit JET_bitTransactionReadOnly gestartet wurde. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errColumnNotFound</p> | <p>Diese angegebene Spalte ist für diese Tabelle nicht vorhanden.</p> | 
+| <p>JET_errInvalidName</p> | <p>Einer der angegebenen Objektnamen war ungültig. Alle Objektnamen müssen demselben Satz von Regeln entsprechen. Nachfolgend sind diese Regeln aufgeführt:</p><ul><li><p>Objektnamen müssen aus ASCII-Zeichen bestehen.</p></li><li><p>Objektnamen müssen mindestens ein Zeichen lang sein.</p></li><li><p>Objektnamen dürfen die Länge JET_cbNameMost (64) Zeichen nicht überschreiten.</p></li><li><p>Objektnamen dürfen nicht mit einem Leerzeichen beginnen. Objektnamen enthalten möglicherweise keine ASCII-Steuerzeichen (0x00 bis 0x1F).</p></li><li><p>Objektnamen dürfen kein Ausrufezeichen (!), Punkt (.), linke Klammer ([) oder rechte Klammer (]) enthalten.</p></li><li><p>Nach der Überprüfung wird nur der Teil der Zeichenfolge bis zum ersten Leerzeichen (falls möglich) für den Objektnamen verwendet. Dies bedeutet, dass Objektnamen möglicherweise auch kein Leerzeichen enthalten.</p></li></ul> | 
+| <p>JET_errInvalidParameter</p> | <p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetRenameColumn passieren, wenn:</strong></p><ul><li><p><em>szName</em> ist NULL.</p></li><li><p><em>szNameNew</em> ist NULL.</p></li></ul> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errInTransaction</p> | <p>Dieser Vorgang kann nur ausgeführt werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errSessionSharingViolation</p> | <p>Dieselbe Sitzung kann nicht gleichzeitig für mehrere Threads verwendet werden. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
+| <p>JET_errTransReadOnly</p> | <p>Ein Update kann nicht innerhalb des Bereichs einer schreibgeschützten Transaktion ausgeführt werden. Eine schreibgeschützte Transaktion ist eine Transaktion, die mit einem Aufruf von <a href="gg269268(v=exchg.10).md">JetBeginTransaction2</a> mit JET_bitTransactionReadOnly. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+
 
 
 Bei Erfolg wird der Name der angegebenen Spalte in der Tabelle, die dem Cursor zugeordnet ist, dauerhaft in den neuen Namen geändert. Alle Indizes, die auf diese Spalte verweisen, werden ebenfalls aktualisiert.
 
-Bei einem Fehler tritt keine Änderung am Daten Bank Status auf.
+Bei einem Fehler erfolgt keine Änderung des Datenbankstatus.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Der Spalten Umbenennungs Vorgang ist ungewöhnlich, weil er im Gegensatz zu anderen Schema Vorgängen nicht als Transaktion ausgeführt wird. Wenn eine Spalte in einer bestimmten Tabelle in einer Sitzung umbenannt wird, wird die Änderung in allen anderen Sitzungen, die diese Tabelle verwenden, sofort angezeigt, auch wenn Sie sich in einer Transaktion befinden, durch die verhindert wird, dass von der Sitzung andere Änderungen angezeigt werden, die den Umbenennungs Vorgang durchgeführt haben.
+Der Umbenennungsvorgang für Spalten ist ungewöhnlich, da er im Gegensatz zu anderen Schemavorgängen nicht als Transaktion ausgeführt wird. Wenn eine Spalte in einer bestimmten Tabelle in einer Sitzung umbenannt wird, wird jede andere Sitzung, die diese Tabelle verwendet, sofort die Änderung sehen, selbst wenn sie sich in einer Transaktion befinden, die verhindert, dass diese Sitzung andere Änderungen sieht, die von der Sitzung vorgenommen werden, die den Umbenennungsvorgang vor sich geht.
 
-Der Umbenennungs Vorgang hat keine Auswirkung auf die Spalten-ID einer Spalte.
+Die Spalten-ID einer Spalte ist vom Umbenennungsvorgang nicht betroffen.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetrenamecolumnw</strong> (Unicode) und <strong>jetrenamecolumna</strong> (ANSI).</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetRenameColumnW</strong> (Unicode) und <strong>JetRenameColumnA</strong> (ANSI) implementiert.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen

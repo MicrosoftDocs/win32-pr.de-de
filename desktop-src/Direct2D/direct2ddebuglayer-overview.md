@@ -1,17 +1,17 @@
 ---
-title: Übersicht über direct2D-Debugebenen
-description: Übersicht über direct2D-Debugebenen
+title: Übersicht über Direct2D-Debugebenen
+description: Übersicht über Direct2D-Debugebenen
 ms.assetid: 7c28e00b-ebb9-4b79-939c-64eade1351ad
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 833174e0d18b11e2384d838930d5508601cfceaf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6ad960c50cd125ec8c335d836949457bb05ef65aba4b2edaff1dfbbd3a9cf6d7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108099988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087770"
 ---
-# <a name="direct2d-debug-layer-overview"></a>Übersicht über direct2D-Debugebenen
+# <a name="direct2d-debug-layer-overview"></a>Übersicht über Direct2D-Debugebenen
 
 Die Direct2D-Debugebene stellt Debugmeldungen zur Entwurfszeit bereit, mit deren Hilfe Sie Laufzeitanwendungsfehler minimieren können. In dieser Übersicht werden die Grundlagen der Direct2D-Debugebene beschrieben. Es wird davon ausgegangen, dass Sie mit der Erstellung grundlegender Direct2D-Anwendungen vertraut sind.
 
@@ -40,7 +40,7 @@ Um die Debugebene in Ihrer Anwendung zu aktivieren, geben Sie einen anderen [**D
 
  
 
-Wenn Sie die Debugebene für eine Factory aktivieren, werden auch Debuginformationen für jedes objekt aktiviert, das von dieser Factory erstellt wurde.
+Das Aktivieren der Debugebene für eine Factory ermöglicht auch das Debuggen von Informationen für jedes objekt, das von dieser Factory erstellt wird.
 
 Im folgenden Beispiel wird die Debugebene für eine Factory aktiviert, wenn die Anwendung für die DEBUG-Buildkonfiguration kompiliert wird.
 
@@ -78,9 +78,9 @@ Im nächsten Abschnitt werden die verschiedenen Debugebenen beschrieben, die dur
 
 Die [**D2D1 \_ DEBUG \_ LEVEL-Enumeration**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_debug_level) gibt drei Debugebenen an: D2D1 \_ DEBUG LEVEL ERROR \_ \_ (Fehler), D2D1 \_ DEBUG LEVEL WARNING \_ \_ (Warnung) und D2D1 \_ DEBUG LEVEL INFORMATION \_ \_ (Information). Diese Ebenen werden wie folgt interpretiert:
 
--   **Fehler:** Direct2D sendet schwerwiegende Fehlermeldungen an die Debugebene. Wenn Sie z. B. eine Threadingeinschränkung durchbrechen, wird ein schwerwiegender Fehler generiert.
+-   **Fehler:** Direct2D sendet schwerwiegende Fehlermeldungen an die Debugebene. Wenn Sie z. B. eine Threadingeinschränkung aufbrechen, wird ein schwerwiegender Fehler generiert.
 
--   **Warnung:** Direct2D sendet Fehlermeldungen und Warnungen an die Debugebene, sodass Sie jede dieser Meldungen beheben können.
+-   **Warnung:** Direct2D sendet Fehlermeldungen und Warnungen an die Debugebene, damit Sie diese Meldungen beheben können.
 
 -   **Informationen:** Direct2D sendet Fehlermeldungen, Warnungen und zusätzliche Diagnoseinformationen an die Debugebene. Beispielsweise werden Meldungen zur Leistungsverbesserung auf dieser Debugebene gesendet.
 
@@ -90,7 +90,7 @@ Der Wert D2D1 \_ DEBUG \_ LEVEL NONE \_ (none) gibt an, dass Direct2D keine Debu
 
 <dl> <dt>
 
-[Debuggen von Nachrichten](direct2ddebuglayer-debugmessages.md)
+[Debugmeldungen](direct2ddebuglayer-debugmessages.md)
 </dt> </dl>
 
  

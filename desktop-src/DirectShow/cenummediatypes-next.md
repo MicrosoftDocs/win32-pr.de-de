@@ -1,7 +1,7 @@
 ---
-description: 'Die Next-Methode ruft eine angegebene Anzahl von Medientypen ab. Diese Methode implementiert die ienummediatypes:: Next-Methode.'
+description: Die Next-Methode ruft eine angegebene Anzahl von Medientypen ab. Diese Methode implementiert die IEnumMediaTypes::Next-Methode.
 ms.assetid: d59dea48-e36c-4ee6-9935-5a47e8a12a9e
-title: Cenum mediatypes. Next-Methode (amfilter. h)
+title: CEnumMediaTypes.Next-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 6b5eaa75a52f88539438cec58f024919577518e2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f8dd593fe6ca550c55ffc1f769a303dd2d5cbf7a8d8c986be8a39278d7f334ce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131290"
 ---
-# <a name="cenummediatypesnext-method"></a>Cenum mediatypes. Next-Methode
+# <a name="cenummediatypesnext-method"></a>CEnumMediaTypes.Next-Methode
 
-Die- `Next` Methode ruft eine angegebene Anzahl von Medientypen ab. Diese Methode implementiert die [**ienummediatypes:: Next**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-next) -Methode.
+Die `Next` -Methode ruft eine angegebene Anzahl von Medientypen ab. Diese Methode implementiert die [**IEnumMediaTypes::Next-Methode.**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-next)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,50 +44,50 @@ HRESULT Next(
 
 <dl> <dt>
 
-*cmediatypes* 
+*cMediaTypes* 
 </dt> <dd>
 
 Anzahl der abzurufenden Medientypen.
 
 </dd> <dt>
 
-*ppmediatypes* 
+*ppMediaTypes* 
 </dt> <dd>
 
-Array von Zeigern auf die [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Strukturen der Größe von *cpins*.
+Array von Zeigern auf [**AM \_ MEDIA \_ TYPE-Strukturen**](/windows/win32/api/strmif/ns-strmif-am_media_type) der Größe *cPins*.
 
 </dd> <dt>
 
-*pcfetch* 
+*pcFetched* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die die Anzahl der Medientypen empfängt, die von der Methode zurückgegeben wurden. Kann **null** sein, wenn *cmediatypes* den Wert 1 hat.
+Zeiger auf eine Variable, die die Anzahl der von der Methode zurückgegebenen Medientypen empfängt. Kann NULL **sein,** wenn *cMediaTypes* gleich 1 ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                                                         |
 |------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| <dl> <dt>**S \_ false**</dt> </dl>                    | Es wurden nicht so viele Medientypen wie angefordert abgerufen.<br/>                       |
+| <dl> <dt>**S \_ FALSE**</dt> </dl>                    | Es wurden nicht so viele Medientypen wie angefordert abgerufen.<br/>                       |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Erfolg.<br/>                                                                 |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>               | Ungültiges Argument.<br/>                                                        |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>                  | **Null** -Zeigerargument.<br/>                                               |
-| <dl> <dt>**VFW \_ E \_ Enum \_ nicht \_ \_ synchron**</dt> </dl> | Der Zustand der PIN wurde geändert und ist nun inkonsistent mit dem Enumerator.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>               | Ungültiges Argument.<br/>                                                        |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>                  |  NULL-Zeigerargument.<br/>                                               |
+| <dl> <dt>**VFW \_ \_ E-ENUM \_ NICHT \_ \_ SYNCHRON**</dt> </dl> | Der Zustand des Pins hat sich geändert und ist jetzt inkonsistent mit dem Enumerator.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich ausgeführt wird, enthält das von *ppmediatypes* angegebene Array Zeiger \_ auf \_ Medientyp Strukturen. Die Anzahl der Strukturen ist gleich *\* pcfetch*. Geben Sie jeden Medientyp frei, indem Sie die Funktion [**deletemediatype**](deletemediatype.md) aufrufen.
+Wenn die Methode erfolgreich ist, enthält das von *ppMediaTypes* angegebene Array Zeiger auf AM \_ MEDIA \_ TYPE-Strukturen. Die Anzahl der Strukturen ist gleich *\* pcFetched.* Geben Sie jeden Medientyp frei, indem Sie die [**DeleteMediaType-Funktion**](deletemediatype.md) aufrufen.
 
-Diese Methode ruft die [**cbasepin:: getmediatype**](cbasepin-getmediatype.md) -Methode der PIN auf, um die Medientypen abzurufen.
+Diese Methode ruft die [**CBasePin::GetMediaType-Methode**](cbasepin-getmediatype.md) des Pins auf, um die Medientypen abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,8 +95,8 @@ Diese Methode ruft die [**cbasepin:: getmediatype**](cbasepin-getmediatype.md) -
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -104,7 +104,7 @@ Diese Methode ruft die [**cbasepin:: getmediatype**](cbasepin-getmediatype.md) -
 
 <dl> <dt>
 
-[**Cenum mediatypes-Klasse**](cenummediatypes.md)
+[**CEnumMediaTypes-Klasse**](cenummediatypes.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen Knochen.
+description: Entfernen sie einen 160er.
 ms.assetid: efb88108-5c76-47c8-b8ce-1ba29cb18ba4
-title: 'ID3DX10SkinInfo:: removebone-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::RemoveBone-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 49fd24c5661bbedb7fb839171fa4a835f07e446a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 8f26a19c0903056c6de62ae72852b19557b0926fe5b2616adfa8d77bd945cba4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119940"
 ---
-# <a name="id3dx10skininforemovebone-method"></a>ID3DX10SkinInfo:: removebone-Methode
+# <a name="id3dx10skininforemovebone-method"></a>ID3DX10SkinInfo::RemoveBone-Methode
 
-Entfernt einen Knochen.
+Entfernen sie einen 160er.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT RemoveBone(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der angibt, welcher zu entfernende Knochen Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der angibt, welches Element entfernt werden soll. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen**](id3dx10skininfo-getnumbones.md)Wert sein.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Ein Index, der angibt, welcher zu entfernende Knochen Muss zwischen 0 und dem vo
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: E \_ invalidArg.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert E \_ INVALIDARG sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,8 +61,8 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 

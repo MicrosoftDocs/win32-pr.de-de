@@ -1,11 +1,11 @@
 ---
-title: Storeingestallmethod-Methode der MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
-description: Methode zum Ausführen einer App-Installation und einer Lizenz aus dem Windows Store. Siehe auch storeingestall.
+title: StoreInstallMethod-Methode der MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
+description: Methode zum Ausführen einer Installation einer App und einer Lizenz aus dem Windows Store. Siehe auch StoreInstall.
 ms.assetid: 4f8aff47-ad16-4fe5-85be-7ddb55ddff24
 keywords:
-- Storeingestallmethod-Methode
-- Storeingestallmethod-Methode, MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
-- MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse, storeingestallmethod-Methode
+- StoreInstallMethod-Methode
+- StoreInstallMethod-Methode, MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse
+- MDM_EnterpriseModernAppManagement_AppInstallation01_01-Klasse, StoreInstallMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c4ae34e8502b7d408a7fb4d96fb9c2c4fadb509
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6a8e60134da45982773c0219ade8e0e0f12f37ec9e6d16cd97f4595ae8b507a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084940"
 ---
-# <a name="storeinstallmethod-method-of-the-mdm_enterprisemodernappmanagement_appinstallation01_01-class"></a>Storeinstallmethod-Methode der MDM \_ enterprismodernappmanagement \_ AppInstallation01 \_ 01-Klasse
+# <a name="storeinstallmethod-method-of-the-mdm_enterprisemodernappmanagement_appinstallation01_01-class"></a>StoreInstallMethod-Methode der MDM \_ EnterpriseModernAppManagement \_ AppInstallation01 \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Methode zum Ausführen einer App-Installation und einer Lizenz aus dem Windows Store. Siehe auch [storeingestall](/windows/client-management/mdm/enterprisemodernappmanagement-csp).
+Methode zum Ausführen einer Installation einer App und einer Lizenz aus dem Windows Store. Siehe auch [StoreInstall](/windows/client-management/mdm/enterprisemodernappmanagement-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,19 +44,19 @@ uint32 StoreInstallMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd></dd> </dl>
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -65,10 +65,10 @@ uint32 StoreInstallMethod(
 
 <dl> <dt>
 
-[**MDM \_ enterprinappmanagement \_ AppInstallation01 \_ 01**](mdm-enterprisemodernappmanagement-appinstallation01-01.md)
+[**MDM \_ EnterpriseModernAppManagement \_ AppInstallation01 \_ 01**](mdm-enterprisemodernappmanagement-appinstallation01-01.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

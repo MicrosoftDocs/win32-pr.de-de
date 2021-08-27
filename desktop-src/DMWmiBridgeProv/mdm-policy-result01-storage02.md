@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_Storage02-Klasse
-description: Die MDM- \_ Richtlinie \_ Result01 \_ Storage02-Klasse stellt die verfügbaren Speicher Richtlinien dar.
+description: Die Klasse MDM \_ Policy \_ Result01 \_ Storage02 stellt die verfügbaren Speicherrichtlinien dar.
 ms.assetid: e0e3b867-38b5-4b10-a13e-6f99b8ff6db3
 keywords:
 - MDM_Policy_Result01_Storage02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 63381b34c88ebc590577eec9a11f603ea5325649
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e0db0209f4087c119079098e7c1e004f2847198c7ee79841d71443d0f574c21
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120109270"
 ---
-# <a name="mdm_policy_result01_storage02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ Storage02-Klasse
+# <a name="mdm_policy_result01_storage02-class"></a>MDM \_ Policy \_ Result01 \_ Storage02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Result01 \_ Storage02-Klasse stellt die verfügbaren Speicher Richtlinien dar.
+Die Klasse MDM \_ Policy \_ Result01 \_ Storage02 stellt die verfügbaren Speicherrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,17 +47,17 @@ class MDM_Policy_Result01_Storage02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Storage02** -Klasse verfügt über diese Typen von Membern:
+Die **Mdm \_ Policy \_ Result01 \_ Storage02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ Storage02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ Storage02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Allowdiskhealthmodelupdates](/windows/client-management/mdm/policy-csp-storage#storage-allowdiskhealthmodelupdates)
+[AllowDiskHealthModelUpdates](/windows/client-management/mdm/policy-csp-storage#storage-allowdiskhealthmodelupdates)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -68,10 +68,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Enhancedstoragedevices](/windows/client-management/mdm/policy-csp-storage#storage-enhancedstoragedevices)
+[EnhancedStorageDevices](/windows/client-management/mdm/policy-csp-storage#storage-enhancedstoragedevices)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -82,27 +82,27 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> </dl>
@@ -113,10 +113,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

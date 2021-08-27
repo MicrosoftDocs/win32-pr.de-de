@@ -1,37 +1,37 @@
 ---
-description: Com+ bietet eine Unternehmens Entwicklungsumgebung, die auf dem Microsoft-Component Object Model (com) basiert, um komponentenbasierte, verteilte Anwendungen zu erstellen.
+description: COM+ bietet eine Unternehmensentwicklungsumgebung, die auf dem Microsoft Component Object Model (COM) basiert, um komponentenbasierte, verteilte Anwendungen zu erstellen.
 ms.assetid: 141982d4-1e6c-4f01-8b0e-8b94f20dd82c
 title: Übersicht über die COM+-Programmierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c225b5ebb6f04f74d6071dc0305d219993fa606e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3421fd6a52eade351eaab09ececff8fc63cc687002dede350ab9f06fa0b2c20e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096890"
 ---
 # <a name="com-programming-overview"></a>Übersicht über die COM+-Programmierung
 
-Com+ bietet eine Unternehmens Entwicklungsumgebung, die auf dem Microsoft-Component Object Model (com) basiert, um komponentenbasierte, verteilte Anwendungen zu erstellen. Außerdem stehen Ihnen die Tools zum Erstellen von transaktionalen Anwendungen mit mehreren Ebenen zur Verfügung. Com+ kombiniert Erweiterungen der herkömmlichen COM-basierten Entwicklung mit vielen nützlichen Programmierungs-und Verwaltungsdiensten. Eine umfassende Liste dieser Dienste finden Sie unter [com+-Dienste](com--services.md) .
+COM+ bietet eine Unternehmensentwicklungsumgebung, die auf dem Microsoft Component Object Model (COM) basiert, um komponentenbasierte, verteilte Anwendungen zu erstellen. Außerdem erhalten Sie die Tools zum Erstellen transaktionaler Anwendungen mit mehreren Ebenen. COM+ kombiniert Erweiterungen der herkömmlichen COM-basierten Entwicklung mit vielen nützlichen Programmier- und Verwaltungsdiensten. Eine [vollständige Liste dieser Dienste](com--services.md) finden Sie unter COM+-Dienste.
 
-Zu den com-Erweiterungen gehören Verbesserungen beim Threading und der Sicherheit sowie die Einführung der Synchronisierungs Dienste. Die Dienste umfassen das Verwaltungs Programmkomponenten Dienste.
+Die COM-Erweiterungen umfassen Verbesserungen bei Threading und Sicherheit sowie die Einführung von Synchronisierungsdiensten. Die Dienste umfassen das Verwaltungstool Komponentendienste.
 
-Für diejenigen, die mit der com-Programmierung vertraut sind, sind die com+-Verbesserungen wichtig, darunter:
+Für Diejenigen, die mit der COM-Programmierung vertraut sind, sind die COM+-Verbesserungen von Bedeutung, einschließlich der folgenden:
 
--   Com+ implementiert ein Threading Modell mit dem Namen "neutral Apartment Threading", das es einer Komponente ermöglicht, serialisierten Zugriff zusammen mit der Möglichkeit zu haben, in einem beliebigen Thread auszuführen.
--   Com+ unterstützt Komponenten mit einer speziellen Umgebung, die als [Kontext](com--contexts.md)bezeichnet wird und eine erweiterbare Gruppe von Eigenschaften bereitstellt, die die Ausführungsumgebung für die Komponente definieren.
--   Com+ bietet rollenbasierte Sicherheit, asynchrone Objekt Ausführung und einen integrierten Moniker, der einen Verweis auf eine Objektinstanz darstellt, die auf einem Out-of-Process-Server ausgeführt wird.
+-   COM+ implementiert ein Threadingmodell namens neutrales Apartmentthreading, das es einer Komponente ermöglicht, serialisierten Zugriff sowie die Möglichkeit zur Ausführung in jedem Thread zu erhalten.
+-   COM+ unterstützt Komponenten mit einer [](com--contexts.md)speziellen Umgebung, die als Kontext bezeichnet wird und einen erweiterbaren Satz von Eigenschaften bietet, die die Ausführungsumgebung für die Komponente definieren.
+-   COM+ bietet rollenbasierte Sicherheit, asynchrone Objektausführung und einen integrierten Moniker, der einen Verweis auf eine Objektinstanz darstellt, die auf einem Out-of-Process-Server ausgeführt wird.
 
-## <a name="application-and-component-administration"></a>Anwendungs-und Komponenten Verwaltung
+## <a name="application-and-component-administration"></a>Anwendungs- und Komponentenverwaltung
 
-In com+ speichert eine Registrierungsdatenbank mit dem Namen RegDB die Metadaten, die Komponenten beschreiben. Diese Datenbank ist für die Art der Informationen, die com+ zur Aktivierung von Komponenten benötigt, stark optimiert und wird anstelle der Systemregistrierung verwendet. Außerdem macht com+ den *com+-Katalog* verfügbar, der auf Informationen in der RegDB zugreift. Der com+-Katalog ist ein Systemdaten Speicher, der Konfigurationsinformationen für COM+-Anwendungen auf einem bestimmten Server Computer enthält.
+In COM+ speichert eine Registrierungsdatenbank mit dem Namen RegDB die Metadaten, die Komponenten beschreiben. Diese Datenbank ist stark für den Informationstyp optimiert, den COM+ für die Aktivierung von Komponenten benötigt, und wird anstelle der Systemregistrierung verwendet. Darüber hinaus macht COM+ den *COM+-Katalog verfügbar,* der auf Informationen in der RegDB zutritt. Der COM+-Katalog ist ein Systemdatenspeicher, der Konfigurationsinformationen für COM+-Anwendungen auf einem bestimmten Servercomputer enthält.
 
-Zum Schluss stellt das Verwaltungs Programmkomponenten Dienste eine vollständig Skript fähige Benutzeroberfläche für Entwickler und Administratoren zur Verwaltung von Komponenten sowie zum Bereitstellen von Client seitigen und serverseitigen Anwendungen mit mehreren Ebenen bereit. Weitere Informationen finden Sie unter Bereitstellen von [com+-Anwendungen](deploying-com--applications.md).
+Schließlich bietet das Component Services-Verwaltungstool eine vollständig skriptfähige Benutzeroberfläche für Entwickler und Administratoren zum Verwalten von Komponenten sowie zum Bereitstellen clientseitiger und serverseitiger Anwendungen mit mehreren Tieringen. Weitere Informationen finden Sie unter [Bereitstellen von COM+-Anwendungen.](deploying-com--applications.md)
 
 ## <a name="automatic-transactions"></a>Automatische Transaktionen
 
-Com+ unterstützt alle Microsoft Transaction Server (MTS) 2,0-Semantik und fügt die Funktion für [Automatische](enabling-auto-done-for-a-method.md) Ausführung hinzu, die Sie mit dem Verwaltungs Programmkomponenten Dienste festlegen können. Diese Funktion ermöglicht es dem System, eine Transaktion automatisch abzubrechen, wenn eine Ausnahme ausgelöst wird, oder ein Commit durch den Commit erfolgt. Weitere Informationen finden Sie unter [com+-Transaktionen](com--transactions.md)und [com+-Just-in-Time-Aktivierung](com--just-in-time-activation.md).
+COM+ unterstützt die semantische Komponente von Microsoft Transaction Server [](enabling-auto-done-for-a-method.md) (MTS) 2.0 und fügt die Funktion "Automatisch erledigt" hinzu, die Sie mit dem Verwaltungstool für Komponentendienste festlegen können. Mit diesem Feature kann das System eine Transaktion automatisch abbrechen, wenn eine Ausnahme ausgelöst wird, oder andernorts einen Commit. Weitere Informationen finden Sie unter [COM+-Transaktionen](com--transactions.md)und [COM+ Just-in-Time-Aktivierung.](com--just-in-time-activation.md)
 
  
 

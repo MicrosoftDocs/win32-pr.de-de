@@ -1,8 +1,8 @@
 ---
-description: Ändert ein Dienst Objekt, das von Win32 \_ baseservice abgeleitet ist.
+description: Ändert ein von Win32 BaseService abgeleitetes \_ Dienstobjekt.
 ms.assetid: d5f4f472-e7d9-4664-9430-9c77034a5978
 ms.tgt_platform: multiple
-title: Change-Methode der Win32_BaseService-Klasse (mbnapi. h)
+title: Change-Methode der Win32_BaseService -Klasse (Mbnapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: a70ee83229a830e22fba4241a6c50eb8d971c5ad
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 306f771df0e44cb11ec61631b2d6b51f11ccefac9a719776d3a483d5cc861133
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085830"
 ---
-# <a name="change-method-of-the-win32_baseservice-class"></a>Change-Methode der Win32 \_ baseservice-Klasse
+# <a name="change-method-of-the-win32_baseservice-class"></a>Change-Methode der Win32 \_ BaseService-Klasse
 
-Die **Change** [WMI class](/windows/desktop/WmiSdk/retrieving-a-class) -Methode ändert ein Dienst Objekt, das von [**Win32 \_ baseservice**](win32-baseservice.md)abgeleitet ist. Der [**Win32 \_ LoadOrderGroup**](win32-loadordergroup.md) -Parameter stellt eine Gruppe von System Diensten dar, die Ausführungs Abhängigkeiten definieren. Die Dienste müssen in der von der Gruppe "Lade Reihenfolge" angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern, dass Vorgänger Dienste ordnungsgemäß funktionieren.
+Die **Change** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) ändert ein von [**Win32 BaseService abgeleitetes \_ Dienstobjekt.**](win32-baseservice.md) Der [**Win32 \_ LoadOrderGroup-Parameter**](win32-loadordergroup.md) stellt eine Gruppe von Systemdiensten dar, die Ausführungsabhängigkeiten definieren. Die Dienste müssen in der von der Load Order Group angegebenen Reihenfolge initiiert werden, da die Dienste voneinander abhängig sind. Diese abhängigen Dienste erfordern voraussente Dienste, um ordnungsgemäß zu funktionieren.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,43 +52,43 @@ uint32 Change(
 
 <dl> <dt>
 
-*Display Name* \[ in\]
+*DisplayName* \[ In\]
 </dt> <dd>
 
-Der Anzeige Name für einen Dienst. Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager beibehalten. Bei *Display Name* -vergleichen wird immer die Groß-/Kleinschreibung beachtet
+Der Anzeigename für einen Dienst. Die maximale Länge der Zeichenfolge beträgt 256 Zeichen. Der Name wird im Dienststeuerungs-Manager beibehalten. *Bei DisplayName-Vergleichen* wird die Groß-/Kleinschreibung immer nicht beachtet.
 
-Einschränkungen: akzeptiert denselben Wert wie der *Name* -Parameter.
+Einschränkungen: Akzeptiert den gleichen Wert wie der *Name-Parameter.*
 
-Beispiel: "ATDISK".
+Beispiel: "Atdisk".
 
 </dd> <dt>
 
-*Pfadname* \[ in\]
+*PathName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Pfad zur ausführbaren Datei, die einen Dienst implementiert.
+Der vollqualifizierte Pfad zur ausführbaren Datei, die einen Dienst implementiert.
 
-Beispiel: " \\ systemroot \\ system32 \\ Drivers \\afd.sys".
+Beispiel: \\ "SystemRoot \\ \\ System32-Treiber \\afd.sys".
 
 </dd> <dt>
 
-*ServiceType* \[ in\]
+*ServiceType* \[ In\]
 </dt> <dd>
 
-Typ der Dienste, die für Prozesse bereitgestellt werden, die Sie anrufen.
+Typ der Dienste, die für Prozesse bereitgestellt werden, die sie aufrufen.
 
 <dt>
 
 <span id="Kernel_Driver"></span><span id="kernel_driver"></span><span id="KERNEL_DRIVER"></span>
 
-<span id="Kernel_Driver"></span><span id="kernel_driver"></span><span id="KERNEL_DRIVER"></span>**Kernel Treiber** (1)
+<span id="Kernel_Driver"></span><span id="kernel_driver"></span><span id="KERNEL_DRIVER"></span>**Kerneltreiber** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="File_System_Driver"></span><span id="file_system_driver"></span><span id="FILE_SYSTEM_DRIVER"></span>
 
-<span id="File_System_Driver"></span><span id="file_system_driver"></span><span id="FILE_SYSTEM_DRIVER"></span>**Datei System Treiber** (2)
+<span id="File_System_Driver"></span><span id="file_system_driver"></span><span id="FILE_SYSTEM_DRIVER"></span>**Dateisystemtreiber** (2)
 
 
 </dt> <dd></dd> <dt>
@@ -102,7 +102,7 @@ Typ der Dienste, die für Prozesse bereitgestellt werden, die Sie anrufen.
 
 <span id="Recognizer_Driver"></span><span id="recognizer_driver"></span><span id="RECOGNIZER_DRIVER"></span>
 
-<span id="Recognizer_Driver"></span><span id="recognizer_driver"></span><span id="RECOGNIZER_DRIVER"></span>**Erkennungs Treiber** (8)
+<span id="Recognizer_Driver"></span><span id="recognizer_driver"></span><span id="RECOGNIZER_DRIVER"></span>**Recognizer Driver** (8)
 
 
 </dt> <dd></dd> <dt>
@@ -132,16 +132,16 @@ Interaktiver Prozess
 
 </dd> </dl> </dd> <dt>
 
-*ErrorControl* \[ in\]
+*ErrorControl* \[ In\]
 </dt> <dd>
 
-Schweregrad eines Fehlers, wenn dieser Dienst nicht während des Starts gestartet wird. Der Wert gibt die Aktion an, die das Start Programm durchführt, wenn ein Fehler auftritt. Das System protokolliert alle Fehler.
+Schweregrad eines Fehlers, wenn dieser Dienst während des Starts nicht gestartet wird. Der Wert gibt die Aktion an, die das Startprogramm bei einem Fehler vorgibt. Das System protokolliert alle Fehler.
 
 <dt>
 
 <span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>
 
-<span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>**Ignorieren** (0)
+<span id="Ignore"></span><span id="ignore"></span><span id="IGNORE"></span>**Ignore** (0)
 
 
 </dt> <dd>
@@ -183,60 +183,60 @@ Das System versucht, mit einer fehlerfreien Konfiguration zu neu starten.
 
 </dd> </dl> </dd> <dt>
 
-*StartMode* \[ in\]
+*StartMode* \[ In\]
 </dt> <dd>
 
-Der Start Modus des Windows-Basis Dienstanbieter.
+Startmodus des Windows Basisdiensts.
 
 <dt>
 
 <span id="Boot_Start"></span><span id="boot_start"></span><span id="BOOT_START"></span>
 
-<span id="Boot_Start"></span><span id="boot_start"></span><span id="BOOT_START"></span>**Start Start** ("Start")
+<span id="Boot_Start"></span><span id="boot_start"></span><span id="BOOT_START"></span>**Startstart** ("Start")
 
 
 </dt> <dd>
 
-Gerätetreiber, der vom Betriebssystem Lader gestartet wird.
+Gerätetreiber, der vom Betriebssystemlader gestartet wird.
 
 </dd> <dt>
 
 <span id="System_Start"></span><span id="system_start"></span><span id="SYSTEM_START"></span>
 
-<span id="System_Start"></span><span id="system_start"></span><span id="SYSTEM_START"></span>**System Start** ("System")
+<span id="System_Start"></span><span id="system_start"></span><span id="SYSTEM_START"></span>**Systemstart** ("System")
 
 
 </dt> <dd>
 
-Der Gerätetreiber wurde durch den Initialisierungs Prozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
+Der Gerätetreiber wurde durch den Initialisierungsprozess des Betriebssystems gestartet. Dieses Wert ist nur für Treiberdienste gültig.
 
 </dd> <dt>
 
 <span id="Auto_Start"></span><span id="auto_start"></span><span id="AUTO_START"></span>
 
-<span id="Auto_Start"></span><span id="auto_start"></span><span id="AUTO_START"></span>Automatischer **Start** ("automatisch")
+<span id="Auto_Start"></span><span id="auto_start"></span><span id="AUTO_START"></span>**Automatischer Start** ("Automatisch")
 
 
 </dt> <dd>
 
-Dienst, der vom Dienststeuerungs-Manager beim Systemstart automatisch gestartet wird.
+Der Dienst wird automatisch vom Dienststeuerungs-Manager während des Systemstarts gestartet.
 
 </dd> <dt>
 
 <span id="Demand_Start"></span><span id="demand_start"></span><span id="DEMAND_START"></span>
 
-<span id="Demand_Start"></span><span id="demand_start"></span><span id="DEMAND_START"></span>**Bedarfs Start** ("manuell")
+<span id="Demand_Start"></span><span id="demand_start"></span><span id="DEMAND_START"></span>**Demand Start** ("Manuell")
 
 
 </dt> <dd>
 
-Dienst, der vom Dienststeuerungs-Manager gestartet wird, wenn ein Prozess die [**StartService**](startservice-method-in-class-win32-baseservice.md) -Methode aufruft.
+Dienst, der vom Dienststeuerungs-Manager gestartet wird, wenn ein Prozess die [**StartService-Methode**](startservice-method-in-class-win32-baseservice.md) aufruft.
 
 </dd> <dt>
 
 <span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>
 
-<span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** ("deaktiviert")
+<span id="Disabled"></span><span id="disabled"></span><span id="DISABLED"></span>**Deaktiviert** ("Deaktiviert")
 
 
 </dt> <dd>
@@ -245,58 +245,58 @@ Dienst, der nicht gestartet werden kann.
 
 </dd> </dl> </dd> <dt>
 
-*DesktopInteract* \[ in\]
+*DesktopInteract* \[ In\]
 </dt> <dd>
 
-**True** gibt an, dass der Dienst ein Fenster auf dem Desktop erstellen oder mit diesem kommunizieren kann.
+True **gibt an,** dass der Dienst ein Fenster auf dem Desktop erstellen oder mit diesem kommunizieren kann.
 
 </dd> <dt>
 
-*StartName* \[ in\]
+*StartName* \[ In\]
 </dt> <dd>
 
-Der Kontoname, unter dem der Dienst ausgeführt wird, der vom Diensttyp abhängig ist. Der Kontoname kann in der Form Domänen Name \\ Benutzername oder lauten \\ . User. Bei der Ausführung wird der Dienst Prozess mit einer der beiden vorherigen Formen protokolliert. , Wenn das Konto zur integrierten Domäne gehört. \\ Der Benutzername kann angegeben werden. Wenn eine leere Zeichenfolge angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Treiber auf Kernel-oder Systemebene enthält *StartName* den Treiber Objektnamen, z \\ . b. Dateisystem- \\ rdr oder \\ Treiber- \\ xns, die vom Eingabe-und Ausgabesystem zum Laden des Gerätetreibers verwendet werden. Wenn **null** angegeben wird, wird der Treiber mit einem Standard Objektnamen ausgeführt, den das e/a-System basierend auf dem Dienstnamen erstellt, z. b. dwdom \\ Admin.
+Kontoname, unter dem der Dienst ausgeführt wird, abhängig vom Diensttyp. Der Kontoname kann in Form von DomainName \\ Username oder sein. \\ Nutzername. Wenn er ausgeführt wird, wird der Dienstprozess mithilfe eines der beiden vorherigen Formulare protokolliert. Wenn das Konto zur integrierten Domäne gehört, . \\ Der Benutzername kann angegeben werden. Wenn eine leere Zeichenfolge angegeben wird, wird der Dienst als LocalSystem-Konto angemeldet. Für Treiber auf Kernel- oder Systemebene enthält *StartName* den Namen des Treiberobjekts, z. B. FileSystem Rdr oder Driver Xns, das vom Eingabe- und Ausgabesystem \\ \\ \\ (E/A) zum Laden des Gerätetreibers verwendet \\ wird. Wenn **NULL** angegeben ist, wird der Treiber mit einem Standardobjektnamen ausgeführt, den das E/A-System basierend auf dem Dienstnamen erstellt, z. B. DWDOM \\ Admin.
 
-Sie können auch das UPN-Format (User Principal Name, Benutzer Prinzipal Name) verwenden, um den **StartName** anzugeben, z *Username@DomainName* . b..
+Sie können auch das UPN-Format (User Principal Name) verwenden, um **den StartName** anzugeben, z. *Username@DomainName* B. .
 
 </dd> <dt>
 
-*Startpassword* \[ in\]
+*StartPassword* \[ In\]
 </dt> <dd>
 
-Kennwort für den Kontonamen, den der *StartName* -Parameter angibt. Geben Sie **null** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort besitzt.
+Kennwort für den Kontonamen, den *der StartName-Parameter* angibt. Geben **Sie NULL** an, wenn Sie das Kennwort nicht ändern. Geben Sie eine leere Zeichenfolge an, wenn der Dienst kein Kennwort hat.
 
 > [!Note]  
-> Wenn Sie einen Dienst von einem lokalen System in ein Netzwerk oder von einem Netzwerk in ein lokales System ändern, muss *startpassword* eine leere Zeichenfolge ("") und nicht **null** sein.
+> Wenn Sie einen Dienst vom lokalen System zum Netzwerk oder vom Netzwerk zum lokalen System ändern, muss *StartPassword* eine leere Zeichenfolge ("") und nicht **NULL sein.**
 
  
 
 </dd> <dt>
 
-*LoadOrderGroup* \[ in\]
+*LoadOrderGroup* \[ In\]
 </dt> <dd>
 
-Der Gruppenname, dem er zugeordnet ist. Lade Auftrags Gruppen sind in der Systemregistrierung enthalten und bestimmen die Reihenfolge, in der die Dienste in ein Betriebssystem geladen werden. Wenn der Zeiger **null** ist oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Abhängigkeiten zwischen Gruppen sollten im *loadordergroupdependen-* Parameter aufgeführt werden. Dienste in der Liste der Auslastungs Reihen folgen Gruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die sich nicht in der Liste der Auslastungs Reihen folgen Gruppen befinden, gefolgt von Diensten, die nicht zu einer Gruppe gehören. Die Systemregistrierung enthält eine Liste der Lade Auftrags Gruppen, die sich unter **HKEY \_ local \_ Machine** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **servicegrouporder** befinden.
+Gruppenname, dem er zugeordnet ist. Ladereihenfolgegruppen sind in der Systemregistrierung enthalten und bestimmen die Reihenfolge, in der Dienste in ein Betriebssystem geladen werden. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, gehört der Dienst nicht zu einer Gruppe. Abhängigkeiten zwischen Gruppen sollten im *LoadOrderGroupDependencies-Parameter aufgeführt* werden. Dienste in der Liste der Last reihenfolgengruppen werden zuerst gestartet, gefolgt von Diensten in Gruppen, die nicht in der Liste der Last reihenfolgengruppen enthalten sind, gefolgt von Diensten, die nicht zu einer Gruppe gehören. Die Systemregistrierung verfügt über eine Liste von Lade reihenfolgengruppen unter **HKEY \_ LOCAL \_ MACHINE** \\ **System** \\ **CurrentControlSet** \\ **Control** \\ **ServiceGroupOrder**.
 
 </dd> <dt>
 
-*Loadordergroupabhängigkeiten* \[ in\]
+*LoadOrderGroupDependencies* \[ In\]
 </dt> <dd>
 
-Liste der Lade Gruppen, die vor dem Start dieses Dienstanbieter gestartet werden müssen. Das Array ist doppelt **null**-terminiert. Wenn der Zeiger **null** ist, oder wenn er auf eine leere Zeichenfolge zeigt, hat der Dienst keine Abhängigkeiten. Gruppennamen müssen dem **SC- \_ Gruppen \_ Bezeichner** (definiert in der Datei "winsvc. h") vorangestellt werden, um Sie von Dienstnamen zu unterscheiden, weil Dienste und Dienstgruppen denselben Namespace verwenden. Die Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
+Liste der Last reihenfolgengruppen, die gestartet werden müssen, bevor dieser Dienst gestartet wird. Das Array ist doppelt NULL-terminiert. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Gruppennamen muss das SC **\_ GROUP \_ IDENTIFIER-Zeichen** (definiert in der Datei Winsvc.h) vorangestellt werden, um sie von Dienstnamen zu unterscheiden, da Dienste und Dienstgruppen denselben Namespace verwenden. Abhängigkeit von einer Gruppe bedeutet, dass dieser Dienst ausgeführt werden kann, wenn mindestens ein Mitglied der Gruppe ausgeführt wird, nachdem versucht wurde, alle Mitglieder der Gruppe zu starten.
 
 </dd> <dt>
 
-*Service Abhängigkeiten* \[ in\]
+*ServiceDependencies* \[ In\]
 </dt> <dd>
 
-Liste mit den Namen der Dienste, die vor dem Start dieses Diensts gestartet werden müssen. Das Array ist doppelt **null**-terminiert. Wenn der Zeiger **null** ist oder auf eine leere Zeichenfolge zeigt, hat der Dienst keine Abhängigkeiten. Die Abhängigkeit von einem Dienst bedeutet, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst, von dem er abhängt, ausgeführt wird.
+Liste, die die Namen der Dienste enthält, die gestartet werden müssen, bevor dieser Dienst gestartet wird. Das Array ist doppelt NULL-terminiert. Wenn der Zeiger NULL **ist** oder auf eine leere Zeichenfolge zeigt, weist der Dienst keine Abhängigkeiten auf. Abhängigkeit von einem Dienst bedeutet, dass dieser Dienst nur ausgeführt werden kann, wenn der Dienst ausgeführt wird, von dem er abhängig ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der Werte zurück, der in der folgenden Liste aufgeführt ist, oder einen anderen Wert, um einen Fehler anzugeben.
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -327,7 +327,7 @@ Der Benutzer verfügt nicht über die erforderlichen Zugriffsberechtigungen.
 
 </dd> <dt>
 
-**Abhängige Dienste werden ausgeführt**
+**Ausgeführte abhängige Dienste**
 </dt> <dd>
 
 3
@@ -336,21 +336,21 @@ Der Dienst kann nicht beendet werden, da andere ausgeführte Dienste davon abhä
 
 </dd> <dt>
 
-**Ungültige Dienst Kontrolle.**
+**Ungültiges Dienststeuerelement**
 </dt> <dd>
 
 4
 
-Der angeforderte Steuerungs Code ist ungültig oder für den Dienst nicht zulässig.
+Der angeforderte Steuerungscode ist ungültig oder für den Dienst nicht akzeptabel.
 
 </dd> <dt>
 
-**Der Dienst kann keine Steuerung akzeptieren.**
+**Dienst kann Steuerelement nicht akzeptieren**
 </dt> <dd>
 
 5
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, da die [**State**](win32-baseservice.md) -Eigenschaft im [**Win32- \_ baseservice**](win32-baseservice.md) -Objekt gleich 0, 1 oder 2 ist.
+Der angeforderte Steuerelementcode kann nicht an den Dienst gesendet werden, da die [**State-Eigenschaft**](win32-baseservice.md) im [**Win32 \_ BaseService-Objekt**](win32-baseservice.md) gleich 0, 1 oder 2 ist.
 
 </dd> <dt>
 
@@ -363,16 +363,16 @@ Der Dienst wurde nicht gestartet.
 
 </dd> <dt>
 
-**Service Request-Timeout**
+**Timeout für Dienstanforderungen**
 </dt> <dd>
 
 7
 
-Der Dienst antwortet nicht schnell auf die Start Anforderung.
+Der Dienst reagiert nicht schnell auf die Startanforderung.
 
 </dd> <dt>
 
-**Unbekannter Fehler.**
+**Unbekannter Fehler**
 </dt> <dd>
 
 8
@@ -386,11 +386,11 @@ Interaktiver Prozess.
 
 9
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Datei des Diensts wurde nicht gefunden.
 
 </dd> <dt>
 
-**Dienst wird bereits ausgeführt.**
+**Dienst wird bereits ausgeführt**
 </dt> <dd>
 
 10
@@ -399,7 +399,7 @@ Der Dienst wird schon ausgeführt.
 
 </dd> <dt>
 
-**Dienst Datenbank gesperrt**
+**Dienstdatenbank gesperrt**
 </dt> <dd>
 
 11
@@ -408,21 +408,21 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 
 </dd> <dt>
 
-**Dienst Abhängigkeit gelöscht**
+**Dienstabhängigkeit gelöscht**
 </dt> <dd>
 
 12
 
-Eine Abhängigkeit, von der dieser Dienst abhängig ist, wird aus dem System entfernt.
+Eine Abhängigkeit, auf die dieser Dienst angewiesen ist, wird aus dem System entfernt.
 
 </dd> <dt>
 
-**Dienst Abhängigkeitsfehler**
+**Dienstabhängigkeitsfehler**
 </dt> <dd>
 
 13
 
-Der Dienst findet den von einem abhängigen Dienst benötigten Dienst nicht.
+Der Dienst findet den Dienst, der von einem abhängigen Dienst benötigt wird, nicht.
 
 </dd> <dt>
 
@@ -431,11 +431,11 @@ Der Dienst findet den von einem abhängigen Dienst benötigten Dienst nicht.
 
 14
 
-Der Dienst ist im System deaktiviert.
+Der Dienst ist vom System deaktiviert.
 
 </dd> <dt>
 
-**Fehler bei der Dienst Anmeldung**
+**Fehler bei der Dienstanmeldung**
 </dt> <dd>
 
 15
@@ -444,7 +444,7 @@ Der Dienst hat nicht die richtige Authentifizierung, um im System ausgeführt zu
 
 </dd> <dt>
 
-**Der Dienst wurde zum Löschen markiert.**
+**Dienst, der für den Löschvorgang markiert ist**
 </dt> <dd>
 
 16
@@ -462,7 +462,7 @@ Es gibt keinen Ausführungsthread für den Dienst.
 
 </dd> <dt>
 
-**Status zirkuläre Abhängigkeit**
+**Status Circular Dependency**
 </dt> <dd>
 
 18
@@ -471,7 +471,7 @@ Es gibt Ringabhängigkeiten beim Starten des Diensts.
 
 </dd> <dt>
 
-**Doppelter Name des Status**
+**Doppelter Statusname**
 </dt> <dd>
 
 19
@@ -480,34 +480,34 @@ Es wird ein Dienst unter dem gleichen Namen ausgeführt.
 
 </dd> <dt>
 
-**Ungültiger Name**
+**Ungültiger Statusname**
 </dt> <dd>
 
 20
 
-Der Name des diensdienstanbieter enthält ungültige Zeichen.
+Der Name des Diensts enthält ungültige Zeichen.
 
 </dd> <dt>
 
-**Ungültiger Parameter.**
+**Ungültiger Parameter "Status"**
 </dt> <dd>
 
 21
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
-**Ungültiges Dienst Konto.**
+**Status Ungültiges Dienstkonto**
 </dt> <dd>
 
 22
 
-Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
-**Status Dienst vorhanden**
+**Statusdienst ist vorhanden**
 </dt> <dd>
 
 23
@@ -516,7 +516,7 @@ Der Dienst ist in der Datenbank der im System verfügbaren Dienste vorhanden.
 
 </dd> <dt>
 
-**Der Dienst wurde bereits angehalten.**
+**Dienst wurde bereits angehalten**
 </dt> <dd>
 
 24
@@ -532,9 +532,9 @@ Der Dienst ist im System derzeitig angehalten.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um einen Dienst von einem Netzwerk auf ein lokales System zu ändern, verwenden Sie die folgenden Werte für die Parameter " *StartName* " und " *startpassword* ":
+Um einen Dienst von einem Netzwerk in ein lokales System zu ändern, verwenden Sie die folgenden Werte für die Parameter *StartName* und *StartPassword:*
 
 
 ```C++
@@ -544,7 +544,7 @@ StartPassword = "" // - empty string, not NULL
 
 
 
-Um einen Dienst von einem lokalen System in ein Netzwerk zu ändern, verwenden Sie die folgenden Werte für die Parameter " *StartName* " und " *startpassword* ":
+Um einen Dienst von einem lokalen System in ein Netzwerk zu ändern, verwenden Sie die folgenden Werte für die Parameter *StartName* und *StartPassword:*
 
 
 ```C++
@@ -562,9 +562,9 @@ StartPassword = "" // - empty string, not NULL
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Mbnapi. h</dt> </dl>     |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| Header<br/>                   | <dl> <dt>Mbnapi.h</dt> </dl>     |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
@@ -576,7 +576,7 @@ StartPassword = "" // - empty string, not NULL
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ baseservice**](win32-baseservice.md)
+[**Win32 \_ BaseService**](win32-baseservice.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Gibt den Verweis \_ Zeitwert an.
+description: Gibt den REFERENCE \_ TIME-Wert an.
 ms.assetid: 8004f7a2-c882-40dd-a248-cf8da06eebec
-title: 'Kreftime:: m_time Member (reftime. h)'
+title: CRefTime::m_time-Member (Reftime.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 560373f0f0eca57b17210befc052a0d2c4d9ddbc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 15c0222bf22937be08d450f5b3f050e458c1bb4234015a895b3939019165a59d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369580"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108120"
 ---
-# <a name="creftimem_time-member"></a>Kreftime:: m- \_ Zeitelement
+# <a name="creftimem_time-member"></a>CRefTime::m-Zeitmember \_
 
-Gibt den [**Verweis \_ Zeitwert**](reference-time.md) an.
+Gibt den [**REFERENCE \_ TIME-Wert**](reference-time.md) an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,9 +42,9 @@ REFERENCE_TIME m_time;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Klasse "up"<br/>                                                                                                                                                                  |
-| Header<br/>  | <dl> <dt>Ref time. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Version<br/> | CRefTime-Klasse<br/>                                                                                                                                                                  |
+| Header<br/>  | <dl> <dt>Reftime.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

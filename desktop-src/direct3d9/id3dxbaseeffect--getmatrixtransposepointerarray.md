@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Array von Zeigern auf umgesetzte Matrizen ab.
+description: Ruft ein Array von Zeigern auf transponierte Matrizen ab.
 ms.assetid: b859ff2f-cf62-4619-b8be-b940fa0513b3
-title: 'ID3DXBaseEffect:: getmatrixtranspotarpointerarray-Methode (D3DX9Shader. h)'
+title: ID3DXBaseEffect::GetMatrixTransposePointerArray-Methode (D3DX9Shader.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: e69c01395582691e6fdd0a695991ff1f726a362b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 42014ed5a829f6dc0d45d7fe0dbcc96f52e945d47ae02b8effd217329e92bda8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219695"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120118830"
 ---
-# <a name="id3dxbaseeffectgetmatrixtransposepointerarray-method"></a>ID3DXBaseEffect:: getmatrixtranspotarpointerarray-Methode
+# <a name="id3dxbaseeffectgetmatrixtransposepointerarray-method"></a>ID3DXBaseEffect::GetMatrixTransposePointerArray-Methode
 
-Ruft ein Array von Zeigern auf umgesetzte Matrizen ab.
+Ruft ein Array von Zeigern auf transponierte Matrizen ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT GetMatrixTransposePointerArray(
 
 <dl> <dt>
 
-*hparameter* \[ in\]
+*hParameter* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Eindeutiger Bezeichner. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Eindeutiger Bezeichner. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*ppmatrix* \[ vorgenommen\]
+*ppMatrix* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXMATRIX**](d3dxmatrix.md)\*\***
 
-Array von Zeigern auf umgesetzte Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
+Array von Zeigern auf transponierte Matrizen. Siehe [**D3DXMATRIX**](d3dxmatrix.md).
 
 </dd> <dt>
 
-*Anzahl* \[ in\]
+*Anzahl* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl von Matrizen im Array.
+Anzahl der Matrizen im Array.
 
 </dd> </dl>
 
@@ -73,13 +73,13 @@ Anzahl von Matrizen im Array.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine umgesetzte Matrix enthält Spalten Hauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
+Eine transponierte Matrix enthält Spalten-Hauptdaten. Das heißt, jeder Vektor ist in einer Spalte enthalten.
 
-Wenn die Ziel Matrizen größer als die Quell Matrizen sind, werden nur die linken oberen Komponenten der einzelnen Ziel Matrix gefüllt, und die restlichen Ziel Matrixkomponenten werden auf 0 (null) festgelegt.
+Wenn die Zielmatrizen größer als die Quellmatrizen sind, werden nur die linken oberen Komponenten jeder Zielmatrix gefüllt, und die verbleibenden Zielmatrixkomponenten werden auf 0 (null) festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,8 +87,8 @@ Wenn die Ziel Matrizen größer als die Quell Matrizen sind, werden nur die link
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Shader. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
@@ -99,7 +99,7 @@ Wenn die Ziel Matrizen größer als die Quell Matrizen sind, werden nur die link
 [ID3DXBaseEffect](id3dxbaseeffect.md)
 </dt> <dt>
 
-[**Getmatrixtransposearray**](id3dxbaseeffect--getmatrixtransposearray.md)
+[**GetMatrixTransposeArray**](id3dxbaseeffect--getmatrixtransposearray.md)
 </dt> </dl>
 
  

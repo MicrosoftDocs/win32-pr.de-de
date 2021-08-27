@@ -1,23 +1,23 @@
 ---
-description: Das Dialogfeld Abbrechen bestätigt, dass der Benutzer die Installation beenden möchte. Dies ist ein modales Dialogfeld.
+description: Im Dialogfeld Abbrechen wird bestätigt, dass der Benutzer die Installation beenden möchte. Dies ist ein modales Dialogfeld.
 ms.assetid: 5dab4315-721e-417d-91e0-b38653a65c23
-title: Dialog Feld Abbrechen
+title: Dialogfeld "Abbrechen"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1022a7613f3f5341d8c833b7cbe2645ce871aeb7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ac2f0ba12c442b8b0f4445077497c26649b79714d1a1d77af7b2a82e6c1a3f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120105390"
 ---
-# <a name="cancel-dialog"></a>Dialog Feld Abbrechen
+# <a name="cancel-dialog"></a>Dialogfeld "Abbrechen"
 
-Das Dialogfeld **Abbrechen** bestätigt, dass der Benutzer die Installation beenden möchte. Dies ist ein modales Dialogfeld.
+Im **Dialogfeld** Abbrechen wird bestätigt, dass der Benutzer die Installation beenden möchte. Dies ist ein modales Dialogfeld.
 
-Diese Art von Dialogfeld enthält im Allgemeinen ein [Text Steuer](text-control.md) Element und zwei [Pushbuttons](pushbutton-control.md). Die beiden Schaltflächen geben dem Benutzer die Möglichkeit, entweder zum letzten Dialogfeld zurückzukehren oder die Beendigung der Installation zu bestätigen.
+Diese Art von Dialogfeld enthält in der Regel ein [Text-Steuerelement und](text-control.md) zwei [PushButtons.](pushbutton-control.md) Mit den beiden Schaltflächen kann der Benutzer entweder zum letzten Dialogfeld zurückkehren oder die Beendigung der Installation bestätigen.
 
-Das [EndDialog](enddialog-controlevent.md) -ControlEvent ist mit diesen beiden Schaltflächen in der [ControlEvent-Tabelle](controlevent-table.md)verknüpft. Der *Rückgabe* Parameter des EndDialog-ControlEvent ist mit einer der Schaltflächen verknüpft und bewirkt, dass das Dialogfeld **Abbrechen** beendet wird und der Fokus auf das vorherige Dialogfeld zurückkehrt. Der *Exit* -Parameter ist mit der anderen Schaltfläche verknüpft und bewirkt, dass die Benutzeroberfläche die Steuerung an das Installationsprogramm zurückgibt, wobei der entsprechende Code angibt, dass der Benutzer den Vorgang beenden möchte Der Installer wird dann heruntergefahren und zeigt das [Userexit-Dialog](userexit-dialog.md)Feld an.
+Das [EndDialog](enddialog-controlevent.md) ControlEvent ist mit diesen beiden Schaltflächen in der [ControlEvent-Tabelle verknüpft.](controlevent-table.md) Der *Return-Parameter* von EndDialog ControlEvent ist mit einer  der Schaltflächen verknüpft und bewirkt, dass das Dialogfeld Abbrechen beendet wird und der Fokus zum vorherigen Dialogfeld zurückgibt. Der *Exit-Parameter* ist mit der anderen Schaltfläche verknüpft und bewirkt, dass die Benutzeroberfläche die Steuerung an das Installationsprogramm mit dem entsprechenden Code zurückgibt, der angibt, dass der Benutzer beenden möchte. Das Installationsprogramm wird dann heruntergefahren und zeigt das [UserExit-Dialogfeld an.](userexit-dialog.md)
 
  
 

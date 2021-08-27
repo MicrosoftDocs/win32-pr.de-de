@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Zuordnung zwischen einer Instanz von MSVM \_ guestserviceinterfacecomponent und einer Instanz von MSVM \_ guestservice dar, die einen Dienst darstellt, der im Gast Betriebssystem ausgeführt wird.
+description: Stellt eine Zuordnung zwischen einer Instanz von Msvm GuestServiceInterfaceComponent und einer Instanz von \_ Msvm GuestService dar, die einen im Gast ausgeführten \_ Dienst darstellt.
 ms.assetid: 246CFAC1-7D83-4DE7-B9D3-96326511E08B
 title: Msvm_RegisteredGuestService-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 850d7f081b070fd34ef11bc56e8cd1f914e498b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf2e551a30f169477f9dc73e58ecd9e6c3a78b708c047eb0088f36782623da3c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103756894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120130440"
 ---
-# <a name="msvm_registeredguestservice-class"></a>MSVM \_ registeredguestservice-Klasse
+# <a name="msvm_registeredguestservice-class"></a>Msvm \_ RegisteredGuestService-Klasse
 
-Stellt eine Zuordnung zwischen einer Instanz von [**MSVM \_ guestserviceinterfacecomponent**](msvm-guestserviceinterfacecomponent.md) und einer Instanz von [**MSVM \_ guestservice**](msvm-guestservice.md)dar, die einen Dienst darstellt, der im Gast Betriebssystem ausgeführt wird. Diese Klasse wird von der [**CIM- \_ Abhängigkeits**](/windows/desktop/CIMWin32Prov/cim-dependency) Klasse abgeleitet.
+Stellt eine Zuordnung zwischen einer Instanz von [**Msvm \_ GuestServiceInterfaceComponent**](msvm-guestserviceinterfacecomponent.md) und einer Instanz von [**Msvm \_ GuestService dar,**](msvm-guestservice.md)die einen im Gast ausgeführten Dienst darstellt. Diese Klasse wird von der [**\_ CIM-Abhängigkeitsklasse**](/windows/desktop/CIMWin32Prov/cim-dependency) ableiten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -41,45 +41,45 @@ class Msvm_RegisteredGuestService : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ registeredguestservice** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ RegisteredGuestService-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ registeredguestservice** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ RegisteredGuestService-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ guestserviceinterfacecomponent**](msvm-guestserviceinterfacecomponent.md)**
+Datentyp: **[ **Msvm \_ GuestServiceInterfaceComponent**](msvm-guestserviceinterfacecomponent.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. Vorgänger")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Antecedent")
 </dt> </dl>
 
-Verweis auf die Komponente der Gast Dienst Schnittstelle in dieser Zuordnung.
+Verweis auf die Gastdienstschnittstellenkomponente in dieser Zuordnung.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ guestservice**](msvm-guestservice.md)**
+Datentyp: **[ **Msvm \_ GuestService**](msvm-guestservice.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM- \_ Abhängigkeit. abhängig")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("CIM \_ Dependency.Dependent")
 </dt> </dl>
 
-Verweis auf den registrierten Gast Dienst, der von der **Vorgänger** Eigenschaft abhängt.
+Verweis auf den registrierten Gastdienst, der von der **Antecedent-Eigenschaft abhängig** ist.
 
 </dd> </dl>
 
@@ -89,10 +89,10 @@ Verweis auf den registrierten Gast Dienst, der von der **Vorgänger** Eigenschaf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -101,10 +101,10 @@ Verweis auf den registrierten Gast Dienst, der von der **Vorgänger** Eigenschaf
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dt>
 
-[**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)
+[**\_CIM-Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: jetsetls-Funktion'
+description: Weitere Informationen finden Sie unter JetSetLS-Funktion.
 title: JetSetLS-Funktion
 TOCTitle: JetSetLS Function
 ms:assetid: 4fc77e09-7173-42e8-9dfd-9a8d8de2fb9b
@@ -18,12 +18,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 7ae1c68a039c11cd8a3f9b1299494c5057513caa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c24a0d1cf45d370482b4890451569900aac946e3
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525556"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122465297"
 ---
 # <a name="jetsetls-function"></a>JetSetLS-Funktion
 
@@ -32,9 +32,9 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jetsetls-function"></a>JetSetLS-Funktion
 
-Die **jetsetls** -Funktion ermöglicht es der Anwendung, ein Kontext Handle, das als lokaler Speicher bezeichnet wird, einem Cursor oder der diesem Cursor zugeordneten Tabelle zuzuordnen. Dieses Kontext Handle kann von der Anwendung verwendet werden, um zusätzliche Daten zu speichern, die einem Cursor oder einer Tabelle zugeordnet sind. Die Anwendung wird später mithilfe eines Lauf Zeit Rückrufs benachrichtigt, wenn das Kontext Handle freigegeben werden muss. Dadurch ist es möglich, einem Cursor oder einer Tabelle dynamisch zugeordneten Zustand zuzuordnen.
+Mit **der JetSetLS-Funktion** kann die Anwendung einem Cursor oder der tabelle, die diesem Cursor zugeordnet ist, ein Kontexthandl mit dem Namen Local Storage zuordnen. Dieses Kontexthand handle kann von der Anwendung verwendet werden, um zusätzliche Daten zu speichern, die einem Cursor oder einer Tabelle zugeordnet sind. Die Anwendung wird später mithilfe eines Laufzeitrückrufs benachrichtigt, wenn das Kontexthand handle freigegeben werden muss. Dadurch kann einem Cursor oder einer Tabelle ein dynamisch zugeordneter Zustand zugeordnet werden.
 
-**Windows XP:**  **jetsetls** wird in Windows XP eingeführt.
+**Windows XP:****JetSetLS** wird in Windows XP eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetSetLS(
@@ -47,152 +47,67 @@ Die **jetsetls** -Funktion ermöglicht es der Anwendung, ein Kontext Handle, das
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, die für diesen-Befehl verwendet werden soll.
+Die Sitzung, die für diesen Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Der Cursor, der für diesen-Befehl verwendet werden soll.
+Der Cursor, der für diesen Aufruf verwendet werden soll.
 
 *ls*
 
-Das Kontext Handle, das dem Cursor oder der Tabelle zugeordnet werden soll.
+Das Kontexthand handle, das dem Cursor oder der Tabelle zugeordnet werden soll.
 
 Wenn JET_bitLSReset angegeben wird, wird der tatsächliche Wert dieses Parameters ignoriert und JET_LSNil verwendet.
 
 *grbit*
 
-Eine Gruppe von Bits, die die für diesen-Befehl zu verwendenden Optionen enthalten, die NULL oder mehr der folgenden Elemente enthalten.
+Eine Gruppe von Bits, die die für diesen Aufruf zu verwendenden Optionen enthalten, die null oder mehr der folgenden Elemente enthalten.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitLSCursor</p></td>
-<td><p>Diese Option gibt an, dass das Kontext Handle dem angegebenen Cursor zugeordnet werden soll.</p>
-<p>Wenn weder JET_bitLSCursor noch JET_bitLSTable angegeben wird, wird JET_bitLSCursor angenommen.</p>
-<p>Diese Option kann nicht mit JET_bitLSTable verwendet werden. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn ein Versuch unternommen wird.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_bitLSReset</p></td>
-<td><p>Diese Option gibt an, dass das angegebene Kontext Handle ignoriert werden soll und dass das Kontext Handle für das ausgewählte Objekt auf JET_LSNil zurückgesetzt werden soll.</p>
-<p>Beachten Sie, dass diese Aktion nicht zu einem Rückruf führt, um den vorherigen Wert des Kontext Handles für das ausgewählte Objekt zu bereinigen. Eine ordnungsgemäße Bereinigung des vorherigen Kontext Handles kann mithilfe von <a href="gg269234(v=exchg.10).md">jetgetls</a> mit JET_bitLSReset erreicht werden. Weitere Informationen finden Sie unter <a href="gg269234(v=exchg.10).md">jetgetls</a> .</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_bitLSTable</p></td>
-<td><p>Diese Option gibt an, dass das Kontext Handle der Tabelle zugeordnet werden soll, die dem angegebenen Cursor zugeordnet ist.</p>
-<p>Diese Option kann nicht mit JET_bitLSCursor verwendet werden. Der Vorgang schlägt mit JET_errInvalidgrbit fehl, wenn ein Versuch unternommen wird.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitLSCursor</p> | <p>Diese Option gibt an, dass das Kontexthand handle dem angegebenen Cursor zugeordnet werden soll.</p><p>Wenn weder JET_bitLSCursor noch JET_bitLSTable angegeben wird, wird JET_bitLSCursor angenommen.</p><p>Es ist unzulässig, diese Option mit einem JET_bitLSTable. Der Vorgang kann nicht durchgeführt werden JET_errInvalidgrbit wenn dies versucht wird.</p> | 
+| <p>JET_bitLSReset</p> | <p>Diese Option gibt an, dass das angegebene Kontexthand handle ignoriert werden soll und dass das Kontexthandy für das ausgewählte Objekt auf die JET_LSNil.</p><p>Es ist wichtig zu beachten, dass diese Aktion nicht zu einem Rückruf führt, um den vorherigen Wert des Kontexthandpunkts für das ausgewählte Objekt zu bereinigen. Eine ordnungsgemäße Bereinigung des vorherigen Kontexthandls kann mit <a href="gg269234(v=exchg.10).md">JetGetLS</a> mit JET_bitLSReset. Weitere <a href="gg269234(v=exchg.10).md">Informationen finden Sie unter JetGetLS.</a></p> | 
+| <p>JET_bitLSTable</p> | <p>Diese Option gibt an, dass das Kontexthand handle der Tabelle zugeordnet werden soll, die dem angegebenen Cursor zugeordnet ist.</p><p>Es ist unzulässig, diese Option mit einem JET_bitLSCursor. Der Vorgang kann nicht durchgeführt werden JET_errInvalidgrbit wenn dies versucht wird.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errClientRequestToStopJetService</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da alle Aktivitäten auf der Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufens von <a href="gg269240(v=exchg.10).md">jetstopservice</a>beendet wurden.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errInvalidgrbit</p></td>
-<td><p>Eine der angeforderten Optionen war ungültig, wurde falsch verwendet oder nicht implementiert. Dies kann bei <strong>jetsetls</strong> vorkommen, wenn JET_bitLSCursor und JET_bitLSTable angegeben sind.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInstanceUnavailable</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da bei der der Sitzung zugeordneten Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität der Daten zu schützen. Dieser Fehler wird nur von Windows XP und höheren Versionen zurückgegeben.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errLSAlreadySet</p></td>
-<td><p>Das angegebene Kontext Handle konnte dem angeforderten Objekt nicht zugeordnet werden, da ihm bereits ein Kontext Handle zugeordnet wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errLSCallbackNotSpecified</p></td>
-<td><p>Das angegebene Kontext Handle konnte dem angeforderten Objekt nicht zugeordnet werden, weil der Lauf Zeit Rückruf nicht für die Instanz konfiguriert wurde, die der Sitzung zugeordnet ist.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errNotInitialized</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da die Instanz, die der Sitzung zugeordnet ist, noch nicht initialisiert wurde.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errRestoreInProgress</p></td>
-<td><p>Der Vorgang kann nicht abgeschlossen werden, da für die-Instanz, die der Sitzung zugeordnet ist, ein Wiederherstellungs Vorgang ausgeführt wird.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errTermInProgress</p></td>
-<td><p>Der Vorgang kann nicht ausgeführt werden, da die Instanz, die der Sitzung zugeordnet ist, heruntergefahren wird.</p></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg wurde das angegebene Kontext Handle erfolgreich dem angeforderten Objekt zugeordnet. Es erfolgt keine Änderung des Daten Bank Status.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errClientRequestToStopJetService</p> | <p>Es ist nicht möglich, den Vorgang abschließen, da alle Aktivitäten auf der -Instanz, die der Sitzung zugeordnet ist, aufgrund eines Aufrufs von <a href="gg269240(v=exchg.10).md">JetStopService beendet wurden.</a></p> | 
+| <p>JET_errInvalidgrbit</p> | <p>Eine der angeforderten Optionen war ungültig, wurde falsch verwendet oder nicht implementiert. Dies kann für <strong>JetSetLS</strong> passieren, wenn JET_bitLSCursor und JET_bitLSTable angegeben sind.</p> | 
+| <p>JET_errInstanceUnavailable</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da für die der Sitzung zugeordnete Instanz ein schwerwiegender Fehler aufgetreten ist, der erfordert, dass der Zugriff auf alle Daten widerrufen wird, um die Integrität dieser Daten zu schützen. Dieser Fehler wird nur von xp Windows und späteren Versionen zurückgegeben.</p> | 
+| <p>JET_errLSAlreadySet</p> | <p>Das kontextorientierte Handle konnte dem angeforderten Objekt nicht zugeordnet werden, da ihm bereits ein Kontexthand handle zugeordnet war.</p> | 
+| <p>JET_errLSCallbackNotSpecified</p> | <p>Das kontextorientierte Handle konnte dem angeforderten Objekt nicht zugeordnet werden, da der Laufzeitrückruf nicht für die -Instanz konfiguriert wurde, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errNotInitialized</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz noch nicht initialisiert wurde.</p> | 
+| <p>JET_errRestoreInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da ein Wiederherstellungsvorgang für die -Instanz durchgeführt wird, die der Sitzung zugeordnet ist.</p> | 
+| <p>JET_errTermInProgress</p> | <p>Der Vorgang kann nicht abgeschlossen werden, da die der Sitzung zugeordnete Instanz heruntergefahren wird.</p> | 
 
-Bei einem Fehler ist keine Änderung des Zustands des angeforderten Objekts aufgetreten. Es erfolgt keine Änderung des Daten Bank Status.
 
-#### <a name="remarks"></a>Bemerkungen
 
-Der lokale Speicher für einen Cursor oder eine Tabelle sollte als flüchtiger Cache angezeigt werden. Die Anwendung sollte zuerst versuchen, das Kontext Handle mithilfe von [jetgetls](./jetgetls-function.md)abzurufen. Wenn der Wert nicht festgelegt ist (d. h., er ist JET_LSNil), sollte die Anwendung einen neuen Kontext erstellen und mithilfe von **jetsetls** in den Cache laden. Die Anwendung kann den Cache mithilfe eines Aufrufens von [jetgetls](./jetgetls-function.md) mit JET_bitLSReset löschen. Wenn die Datenbank-Engine den Cache löscht, wird ein Lauf Zeit Rückruf generiert, um der Anwendung die Möglichkeit zu geben, diesen Kontext zu bereinigen. Der Rückruftyp wird für ein Kontext Handle JET_cbtypFreeCursorLS, das einem Cursor zugeordnet ist, und JET_cbtypFreeTableLS für ein Kontext Handle, das einer Tabelle zugeordnet ist. In beiden Fällen wird das Kontext Handle als pvArg1. Weitere Informationen finden Sie unter [JET_CALLBACK](./jet-callback-callback-function.md) .
+Bei Erfolg wurde das kontextorientierte Handle erfolgreich dem angeforderten Objekt zugeordnet. Es erfolgt keine Änderung des Datenbankstatus.
 
-Der Lauf Zeit Rückruf muss für die-Instanz, die der angegebenen Sitzung zugeordnet ist, ordnungsgemäß konfiguriert werden, bevor der lokale Speicher verwendet werden kann. Dieser Rückruf kann mithilfe von [jetsetsystemparameter](./jetsetsystemparameter-function.md) mit [JET_paramRuntimeCallback](./callback-parameters.md)festgelegt werden. Weitere Informationen finden Sie unter [jetsetsystemparameter](./jetsetsystemparameter-function.md) und [JET_paramRuntimeCallback](./callback-parameters.md) in System Parametern.
+Bei einem Fehler ist keine Änderung des Zustands des angeforderten Objekts aufgetreten. Es erfolgt keine Änderung des Datenbankstatus.
+
+#### <a name="remarks"></a>Hinweise
+
+Die lokale Storage für einen Cursor oder eine Tabelle sollte als flüchtiger Cache angezeigt werden. Die Anwendung sollte zunächst versuchen, das Kontexthandl mit [JetGetLS abzurufen.](./jetgetls-function.md) Wenn der Wert nicht festgelegt ist (d. h. JET_LSNil), sollte die Anwendung einen neuen Kontext erstellen und ihn mit **jetSetLS** in den Cache laden. Die Anwendung kann den Cache mithilfe eines Aufrufs von [JetGetLS](./jetgetls-function.md) mit JET_bitLSReset. Wenn die Datenbank-Engine den Cache bereinigt, wird ein Laufzeitrückruf generiert, um der Anwendung die Möglichkeit zu geben, diesen Kontext zu bereinige. Der Rückruftyp wird für JET_cbtypFreeCursorLS Kontexthand handle verwendet, das einem Cursor zugeordnet ist, und JET_cbtypFreeTableLS für ein Kontexthand handle, das einer Tabelle zugeordnet ist. In beiden Fällen wird das Kontexthandler als pvArg1 übergeben. Weitere [JET_CALLBACK](./jet-callback-callback-function.md) finden Sie unter .
+
+Der Laufzeitrückruf muss ordnungsgemäß für die Instanz konfiguriert werden, die der angegebenen Sitzung zugeordnet ist, bevor lokale Storage verwendet werden können. Dieser Rückruf kann mithilfe von [JetSetSystemParameter mit JET_paramRuntimeCallback.](./jetsetsystemparameter-function.md) [](./callback-parameters.md) Weitere Informationen finden Sie unter [JetSetSystemParameter](./jetsetsystemparameter-function.md) [JET_paramRuntimeCallback](./callback-parameters.md) unter Systemparameter.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista oder Windows XP.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008 oder Windows Server 2003.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista oder Windows XP.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008 oder Windows Server 2003.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
@@ -203,6 +118,6 @@ Der Lauf Zeit Rückruf muss für die-Instanz, die der angegebenen Sitzung zugeor
 [JET_LS](./jet-ls.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetgetls](./jetgetls-function.md)  
-[Jetsetsystemparameter](./jetsetsystemparameter-function.md)  
-[System Parameter](./extensible-storage-engine-system-parameters.md)
+[JetGetLS](./jetgetls-function.md)  
+[JetSetSystemParameter](./jetsetsystemparameter-function.md)  
+[Systemparameter](./extensible-storage-engine-system-parameters.md)

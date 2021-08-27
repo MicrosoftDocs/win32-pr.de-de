@@ -1,7 +1,7 @@
 ---
-description: Gibt an, wie spät die Stichproben am Renderer in Bezugszeit Einheiten eintreffen. Syntax.
+description: Gibt an, wie spät die Beispiele beim Renderer in Referenzzeiteinheiten eintreffen. Syntax.
 ms.assetid: 7b30fbe1-5e57-4aa4-8e87-ddd584f186e4
-title: 'Cvideotransformfilter:: m_itrLate Member (vtrans. h)'
+title: CVideoTransformFilter::m_itrLate-Member (Vtrans.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a3ed93a4612d8fa5d4fe79239c6a7f4f5e479717
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6ba2d14d19849768538184e54de5ca84b9495371783d57231ab9ad6aa7738718
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120075950"
 ---
-# <a name="cvideotransformfilterm_itrlate-member"></a>Cvideotransformfilter:: m \_ itrlate-Element
+# <a name="cvideotransformfilterm_itrlate-member"></a>CVideoTransformFilter::m \_ itrLate-Member
 
-Gibt an, wie spät die Stichproben am Renderer in Bezugszeit Einheiten eintreffen. Syntax
+Gibt an, wie spät die Beispiele beim Renderer in Referenzzeiteinheiten eintreffen. Syntax
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,18 +36,18 @@ int m_itrLate;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Filter eine Qualitäts Nachricht von Downstream empfängt, speichert er den oder bei Verzögerung-Wert in dieser Variablen. Beim Löschen des Filters wird dieser Wert aktualisiert, indem die Dauer der einzelnen Frames subtrahieren.
+Wenn der Filter eine Qualitätsmeldung von downstream empfängt, speichert er den Lateness-Wert in dieser Variablen. Wenn der Filter Frames löscht, aktualisiert er diesen Wert, indem die Dauer der einzelnen Frames subtrahiert wird.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Vtrans. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Vtrans.h (einschließlich Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -55,7 +55,7 @@ Wenn der Filter eine Qualitäts Nachricht von Downstream empfängt, speichert er
 
 <dl> <dt>
 
-[**Cvideotransformfilter-Klasse**](cvideotransformfilter.md)
+[**CVideoTransformFilter-Klasse**](cvideotransformfilter.md)
 </dt> </dl>
 
  

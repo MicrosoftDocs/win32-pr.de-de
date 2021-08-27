@@ -1,19 +1,19 @@
 ---
-description: Ein Filter hat eine Frame-Schritt Ausführung abgeschlossen.
+description: Ein Filter hat die Frameschritte abgeschlossen.
 ms.assetid: 61c3c343-3754-40b7-9f85-9a96d3faf4a2
-title: EC_STEP_COMPLETE (DShow. h)
+title: EC_STEP_COMPLETE (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a436d0cb32161e5e9d5782990146b03e0605b700
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 04920f29570344412fab15f0f94feceef9539e004f9e8b94228a8cab0097d3aa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107890"
 ---
-# <a name="ec_step_complete"></a>EC- \_ Schritt ist \_ beendet
+# <a name="ec_step_complete"></a>\_EC-SCHRITT \_ ABGESCHLOSSEN
 
-Ein Filter hat eine Frame-Schritt Ausführung abgeschlossen.
+Ein Filter hat die Frameschritte abgeschlossen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,20 +22,20 @@ Ein Filter hat eine Frame-Schritt Ausführung abgeschlossen.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="default-action"></a>Standardaktion
 
-Der Filter Graph-Manager hält das Diagramm an und übergibt das Ereignis an die Anwendung.
+Der Filtergraph-Manager hält das Diagramm an und übergibt das Ereignis an die Anwendung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,7 +43,7 @@ Der Filter Graph-Manager hält das Diagramm an und übergibt das Ereignis an die
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
@@ -51,13 +51,13 @@ Der Filter Graph-Manager hält das Diagramm an und übergibt das Ereignis an die
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> <dt>
 
-[**Ivideoframestep:: Step**](/windows/desktop/api/Strmif/nf-strmif-ivideoframestep-step)
+[**IVideoFrameStep::Step**](/windows/desktop/api/Strmif/nf-strmif-ivideoframestep-step)
 </dt> </dl>
 
  

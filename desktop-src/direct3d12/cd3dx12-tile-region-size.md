@@ -1,6 +1,6 @@
 ---
-title: CD3DX12_TILE_REGION_SIZE-Struktur (D3dx12. h)
-description: Eine hilfsstruktur, um die einfache Initialisierung einer D3D12 \_ Tile- \_ Regions \_ Größen Struktur zu ermöglichen.
+title: CD3DX12_TILE_REGION_SIZE -Struktur (D3dx12.h)
+description: Eine Hilfsstruktur, um eine einfache Initialisierung einer D3D12 \_ TILE \_ REGION \_ SIZE-Struktur zu ermöglichen.
 ms.assetid: 07D2D8DE-C35C-48EE-8E9E-36545B60C594
 keywords:
 - CD3DX12_TILE_REGION_SIZE Struktur
@@ -15,16 +15,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40f64046f2a7efa32af8b43adbcf7349f43b6ec3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9cc1b96ae4d7d33101068a1ba08f0314b99950146e91a352ab49fea714376471
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353701"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119610"
 ---
-# <a name="cd3dx12_tile_region_size-structure"></a>Struktur der CD3DX12- \_ Kachel \_ Regions \_ Größe
+# <a name="cd3dx12_tile_region_size-structure"></a>STRUKTUR DER GRÖßE DER CD3DX12-KACHELREGION \_ \_ \_
 
-Eine hilfsstruktur, um die einfache Initialisierung einer [**D3D12 \_ Tile- \_ Regions \_ Größen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size) Struktur zu ermöglichen.
+Eine Hilfsstruktur, um eine einfache Initialisierung einer [**D3D12 \_ TILE \_ REGION \_ SIZE-Struktur zu**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size) ermöglichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,41 +44,41 @@ struct CD3DX12_TILE_REGION_SIZE  : public D3D12_TILE_REGION_SIZE{
 
 <dl> <dt>
 
-**CD3DX12 \_ Tile- \_ Regions \_ Größe ()**
+**CD3DX12 \_ TILE \_ REGION \_ SIZE()**
 </dt> <dd>
 
-Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12- \_ Kachel \_ Bereichs \_ Größe.
+Erstellt eine neue, nicht initialisierte Instanz einer CD3DX12 \_ TILE \_ REGION \_ SIZE.
 
 </dd> <dt>
 
-**explizite CD3DX12- \_ Kachel \_ Regions \_ Größe (konstant D3D12 \_ Kachel \_ Regions \_ Größe &o)**
+**explizite CD3DX12 \_ TILE \_ REGION \_ SIZE(const D3D12 \_ TILE REGION SIZE &\_ \_ o)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ Kachel \_ Regions \_ Größe, die mit dem Inhalt einer anderen [**D3D12 \_ Tile- \_ Regions \_ Größen**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size) Struktur initialisiert wird.
+Erstellt eine neue Instanz einer CD3DX12 TILE REGION SIZE, initialisiert mit dem Inhalt einer anderen \_ \_ \_ [**D3D12 \_ TILE \_ REGION \_ SIZE-Struktur.**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size)
 
 </dd> <dt>
 
-**CD3DX12 \_ Tile \_ Regions \_ size (uint numtiles, bool usebox, uint Width, UInt16 Height, UInt16 Tiefe)**
+**CD3DX12 \_ TILE \_ REGION \_ SIZE(UINT numTiles, BOOL useBox, UINT width, UINT16 height, UINT16 depth)**
 </dt> <dd>
 
-Erstellt eine neue Instanz einer CD3DX12- \_ Kachel \_ Regions \_ Größe und initialisiert die folgenden Parameter:
+Erstellt eine neue Instanz einer CD3DX12 \_ TILE REGION SIZE und \_ \_ initialisiert die folgenden Parameter:
 
-Uint-numtiles
+UINT numTiles
 
-Boolesche usebox
+BOOL useBox
 
-Uint-Breite
+UINT-Breite
 
-UInt16-Höhe
+UINT16-Höhe
 
-UInt16 Tiefe
+UINT16-Tiefe
 
 </dd> <dt>
 
-**Operator Konstanten D3D12 \_ Kachel \_ Regions \_ Größe& () konstant**
+**operator const D3D12 \_ TILE \_ REGION SIZE \_&() const**
 </dt> <dd>
 
-Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturtyp.
+Definiert den & pass-by-reference-Operator für den übergeordneten Strukturtyp.
 
 </dd> </dl>
 
@@ -88,7 +88,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 | Anforderung | Wert |
 |-------------------|-------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx12. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx12.h</dt> </dl> |
 
 
 
@@ -96,7 +96,7 @@ Definiert den & Operator "Pass-by-Reference" für den übergeordneten Strukturty
 
 <dl> <dt>
 
-[**D3D12 \_ Tile- \_ Regions \_ Größe**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size)
+[**GRÖßE DES \_ D3D12-KACHELBEREICHS \_ \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_tile_region_size)
 </dt> <dt>
 
 [Strukturen des Hilfsprogramms für D3D12](helper-structures-for-d3d12.md)

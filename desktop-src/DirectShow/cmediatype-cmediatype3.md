@@ -1,7 +1,7 @@
 ---
-description: Erfahren Sie mehr über die cmediatype. cmediatype-Konstruktormethode (mtype. h). Diese Methode verwendet die Parameter "mtype" und "PHR".
+description: Erfahren Sie mehr über die CMediaType.CMediaType-Konstruktormethode (Mtype.h). Diese Methode verwendet die Parameter "mtype" und "phr".
 ms.assetid: b7d5264a-2a5f-4111-96bb-1ea2b13405be
-title: 'Cmediatype. cmediatype-Konstruktor (mtype. h): mtype-Parameter und PHR-Parameter'
+title: CMediaType.CMediaType-Konstruktor (Mtype.h) – mtype- und phr-Parameter
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 12ef9012e59dfce1f45d21aa720ae13bd660f2d8
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 0c399073794f025122e1cfade3f15b3a96784f28e171482e4dcfb7bcec6a8271
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106373553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120084480"
 ---
-# <a name="cmediatypecmediatype-constructor-mtypeh---mtype-and-phr-parameters"></a>Cmediatype. cmediatype-Konstruktor (mtype. h): mtype-Parameter und PHR-Parameter
+# <a name="cmediatypecmediatype-constructor-mtypeh---mtype-and-phr-parameters"></a>CMediaType.CMediaType-Konstruktor (Mtype.h) – mtype- und phr-Parameter
 
 Konstruktormethode.
 
@@ -43,36 +43,36 @@ CMediaType(
 
 <dl> <dt>
 
-*mtype* \[ atur\]
+*mtype* \[ Ref\]
 </dt> <dd>
 
-Verweis auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) -Struktur. Der-Konstruktor kopiert den Medientyp in das neue-Objekt, einschließlich des-Format Blocks, sofern vorhanden.
+Verweis auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type) Der Konstruktor kopiert den Medientyp in das neue Objekt, einschließlich des Formatblocks, sofern vorhanden.
 
 </dd> <dt>
 
-*PHR* 
+*Phr* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die einen HRESULT-Wert empfängt. Dieser Parameter kann ein **null** -Zeiger sein. Andernfalls muss der Aufrufer den Wert vor dem \_ Aufrufen des Konstruktors auf S OK festlegen. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
+Zeiger auf eine Variable, die einen HRESULT-Wert empfängt. Dieser Parameter kann ein **NULL-Zeiger** sein. Andernfalls muss der Aufrufer den Wert auf S OK festlegen, \_ bevor der Konstruktor aufgerufen wird. Wenn der Konstruktor fehlschlägt, wird der Wert auf einen Fehlercode festgelegt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Konstruktor ruft die [**cmediatype:: initmediatype**](cmediatype-initmediatype.md) -Methode auf, um den Medientyp zu initialisieren.
+Der Konstruktor ruft die [**CMediaType::InitMediaType-Methode**](cmediatype-initmediatype.md) auf, um den Medientyp zu initialisieren.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 | Anforderung                   | Wert                                                                                                                                                                                           |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header  | Mtype. h (Include Streams. h)                                                                                     |
-| Bibliothek | "Straumbase. lib" (Einzelhandels Builds); "Straumbasd. lib" (Debugbuilds) |
+| Header  | Mtype.h (include Streams.h)                                                                                     |
+| Bibliothek | Strmbase.lib (Verkaufsbuilds); Strmbasd.lib (Debugbuilds) |
 
 ## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Cmediatype-Klasse**](cmediatype.md)
+[**CMediaType-Klasse**](cmediatype.md)
 </dt> </dl>
 
  
