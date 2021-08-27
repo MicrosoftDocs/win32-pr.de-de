@@ -1,5 +1,5 @@
 ---
-description: 'D3DXPlaneTransformArray-Funktion (D3DX10Math.h): Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die die einzelnen Ebenen beschreiben, müssen normalisiert werden.'
+description: 'D3DXPlaneTransformArray-Funktion (D3DX10Math.h): Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die jede Ebene beschreiben, müssen normalisiert werden.'
 ms.assetid: 9529b06a-0575-4115-8d35-fc35a7bfb0bd
 title: D3DXPlaneTransformArray-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: d8b02b64fd13e7466980340056fceccc1da784cf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 04cda233d777f05dec44b4fc93537cc33b0369d14d95c104773f0f33ef03498d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108103258"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070040"
 ---
 # <a name="d3dxplanetransformarray-function-d3dx10mathh"></a>D3DXPlaneTransformArray-Funktion (D3DX10Math.h)
 
-Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die die einzelnen Ebenen beschreiben, müssen normalisiert werden.
+Transformiert ein Array von Ebenen durch eine Matrix. Die Vektoren, die jede Ebene beschreiben, müssen normalisiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -105,7 +105,7 @@ Typ: **[ **D3DXPLANE**](../direct3d9/d3dxplane.md)\***
 
 Zeiger auf eine D3DXPLANE-Struktur, die die transformierte Ebene darstellt. Dies ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird, sodass diese Funktion als Parameter für eine andere Funktion verwendet werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 In diesem Beispiel wird eine Ebene transformiert, indem eine nicht einheitliche Skala angewendet wird.
 
@@ -131,7 +131,7 @@ D3DXPlaneTransformArray( &planeNew, sizeof (D3DXPLANE), &plane,
 
 
 
-Eine Ebene wird durch ax + by + soll + dw = 0 beschrieben werden. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt. Dabei handelt es sich um eine Ebene, die durch y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene anzeigt, die durch 0,353y + 0,235z = 0 beschrieben werden soll.
+Eine Ebene wird durch ax + by + tg + dw = 0 beschrieben. Die erste Ebene wird mit (a,b,c,d) = (0,1,1,0) erstellt, wobei es sich um eine Ebene handelt, die durch y + z = 0 beschrieben wird. Nach der Skalierung enthält die neue Ebene (a,b,c,d) = (0, 0,353f, 0,235f, 0), die die neue Ebene anzeigt, die durch 0,353y + 0,235z = 0 beschrieben werden soll.
 
 Der Parameter pM enthält die umgekehrte Transponierung der Transformationsmatrix. Die umgekehrte Transponieren ist für diese Methode erforderlich, damit auch der normale Vektor der transformierten Ebene ordnungsgemäß transformiert werden kann.
 
@@ -139,14 +139,14 @@ Der Parameter pM enthält die umgekehrte Transponierung der Transformationsmatri
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

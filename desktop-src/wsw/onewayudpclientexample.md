@@ -1,29 +1,29 @@
 ---
-title: Onewayudpcliumtexample
-description: Dieses Beispiel zeigt einen UDP-Client, der unidirektionale Nachrichten sendet.
+title: OneWayUdpClientExample
+description: Dieses Beispiel zeigt einen UDP-Client, der eine einseitige Nachricht sendet.
 ms.assetid: 245876f7-dc79-4ecd-b510-cf5e60eaa9fc
 keywords:
-- Onewayudpclieintexample Native Webdienste
-- Wwsapi
+- OneWayUdpClientExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 23d67fe1ff26f315ea2afbb39b2e4845033316b6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2dadc2d0448f5fe0a162d5d3e63bf9bad3bd06aded7e2e5687e5ff3e66e4d0ab
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103948014"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089470"
 ---
-# <a name="onewayudpclientexample"></a>Onewayudpcliumtexample
+# <a name="onewayudpclientexample"></a>OneWayUdpClientExample
 
-Dieses Beispiel zeigt einen UDP-Client, der unidirektionale Nachrichten sendet.
+Dieses Beispiel zeigt einen UDP-Client, der eine einseitige Nachricht sendet.
 
--   [Onewayudpclient. cpp](#onewayudpclientcpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [OneWayUdpClient.cpp](#onewayudpclientcpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="onewayudpclientcpp"></a>Onewayudpclient. cpp
+## <a name="onewayudpclientcpp"></a>OneWayUdpClient.cpp
 
 
 ```C++
@@ -247,7 +247,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -391,9 +391,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

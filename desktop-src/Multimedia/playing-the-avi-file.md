@@ -1,21 +1,21 @@
 ---
-title: Abspielen der AVI-Datei
-description: Abspielen der AVI-Datei
+title: Wiedergabe der AVI-Datei
+description: Wiedergabe der AVI-Datei
 ms.assetid: 6b3845c4-40ec-4824-88c8-6e4ac458f720
 keywords:
 - mciSendCommand-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31754bd5f66b455abc76d363c5ff3e5e286e8040
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: b9e0c490a61bbd53dd62a8223a3ded1aa047ce071d1d2544a2b26d1a9152450b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038016"
 ---
-# <a name="playing-the-avi-file"></a>Abspielen der AVI-Datei
+# <a name="playing-the-avi-file"></a>Wiedergabe der AVI-Datei
 
-Bevor Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion verwenden, um den [**MCI- \_ Wiedergabe**](mci-play.md) Befehl zu senden, ordnet die Anwendung den Speicher für die Struktur zu, initialisiert die verwendeten Member und legt die Flags fest, die den in der Struktur verwendeten Membern entsprechen. (Wenn Ihre Anwendung kein Flag für einen Strukturmember festgelegt hat, ignorieren MCI-Treiber den Member.) Im folgenden Beispiel wird z. b. ein Film von der von **dwfrom** angegebenen Startposition bis zur von **dwto** angegebenen Endposition abgespielt. (Wenn eine der beiden Positionen NULL ist, wird das Beispiel so geschrieben, dass die Position nicht verwendet wird.)
+Bevor Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) zum Senden des [**MCI \_ PLAY-Befehls**](mci-play.md) verwenden, ordnet Ihre Anwendung den Arbeitsspeicher für die Struktur zu, initialisiert die zu verwendenden Member und legt die Flags fest, die den in der Struktur verwendeten Membern entspricht. (Wenn Ihre Anwendung kein Flag für ein Strukturmitglied festgelegt, ignorieren MCI-Treiber den Member.) Im folgenden Beispiel wird beispielsweise ein Film von der von **dwFrom** angegebenen Anfangsposition bis zur von dwTo angegebenen **Endposition abspielt.** (Wenn eine der beiden Positionen 0 (null) ist, wird das Beispiel so geschrieben, dass die Position nicht verwendet wird.)
 
 
 ```C++
@@ -44,6 +44,6 @@ DWORD PlayMovie(WORD wDevID, DWORD dwFrom, DWORD dwTo)
 
 
 
- 
+ 
 
- 
+ 

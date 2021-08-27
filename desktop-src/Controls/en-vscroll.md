@@ -1,9 +1,9 @@
 ---
-title: EN_VSCROLL Benachrichtigungs Code (Winuser. h)
-description: Wird gesendet, wenn der Benutzer auf die vertikale Schiebe Leiste eines Bearbeitungs Steuer Elements klickt oder wenn der Benutzer den Mauszeiger über das Bearbeitungs Steuerelement bewegt.
+title: EN_VSCROLL Benachrichtigungscode (Winuser.h)
+description: Wird gesendet, wenn der Benutzer auf die vertikale Scrollleiste eines Bearbeitungssteuerelements klickt oder wenn der Benutzer mit dem Mausrad über das Bearbeitungssteuerelement scrollt.
 ms.assetid: 46307dee-3c5c-4020-9c2b-ec4638a0cea5
 keywords:
-- Windows-Steuerelemente für EN_VSCROLL Benachrichtigungs
+- EN_VSCROLL Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de1f99b9ea05d037b5c00562a24bda1e434ce08d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c716ecb36c0d27b445446a30eb0a026edf3fd88641f469e50daef1763cd6ca66
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047380"
 ---
-# <a name="en_vscroll-notification-code"></a>EN \_ VScroll-Benachrichtigungs Code
+# <a name="en_vscroll-notification-code"></a>EN \_ VSCROLL-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer auf die vertikale Schiebe Leiste eines Bearbeitungs Steuer Elements klickt oder wenn der Benutzer den Mauszeiger über das Bearbeitungs Steuerelement bewegt. Das übergeordnete Fenster des Bearbeitungs Steuer Elements empfängt diesen Benachrichtigungs Code über eine [**WM- \_ Befehls**](/windows/desktop/menurc/wm-command) Meldung. Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
+Wird gesendet, wenn der Benutzer auf die vertikale Scrollleiste eines Bearbeitungssteuerelements klickt oder wenn der Benutzer mit dem Mausrad über das Bearbeitungssteuerelement scrollt. Das übergeordnete Fenster des Bearbeitungssteuerelements empfängt diesen Benachrichtigungscode über eine [**WM \_ COMMAND-Meldung.**](/windows/desktop/menurc/wm-command) Das übergeordnete Fenster wird benachrichtigt, bevor der Bildschirm aktualisiert wird.
 
 
 ```C++
@@ -42,24 +42,24 @@ EN_VSCROLL
 *wParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungs Steuer Elements. Das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungs Code an.
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält den Bezeichner des Bearbeitungssteuerelements. [**Hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) gibt den Benachrichtigungscode an.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Handle für das Bearbeitungs Steuerelement.
+Ein Handle für das Bearbeitungssteuerelement.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird für die folgenden Mausereignisse auf der vertikalen Schiebe Leiste gesendet: Klicken Sie auf die Pfeil Schaltfläche, oder klicken Sie auf die Pfeil Schaltfläche und den Ziehpunkt. Die Meldung wird jedoch nicht gesendet, wenn Sie auf die Schiebe Leiste mit der Maus selbst klicken. Die Meldung wird auch gesendet, wenn ein Tastaturereignis eine Änderung im Ansichts Bereich des Bearbeitungs Steuer Elements bewirkt, z. b. durch Drücken von Start, Ende, Bild-auf, Bild-ab, Pfeil nach oben oder nach-unten-Taste.
+Diese Meldung wird für die folgenden Mausereignisse auf der vertikalen Bildlaufleiste gesendet: Klicken sie entweder auf die Pfeilschaltfläche oder zwischen der Pfeilschaltfläche und dem Daumen. Die Nachricht wird jedoch nicht gesendet, wenn Sie auf die Scrollleistenmaus selbst klicken. Die Meldung wird auch gesendet, wenn ein Tastaturereignis eine Änderung im Ansichtsbereich des Bearbeitungssteuerelements verursacht, z. B. durch Drücken von HOME, END, PAGE UP, PAGE DOWN, UP ARROW oder DOWN ARROW.
 
-Das Mausrad ist eine Maus mit einem mittelrad, das einen Bildlauf durchführt. Weitere Informationen finden Sie unter "das Mausrad" in [etwa Maus Eingaben](/windows/desktop/inputdev/about-mouse-input).
+Das Mausrad ist eine Maus mit einem Mittelpunktrad, das scrollt. Weitere Informationen finden Sie unter "Das Mausrad" unter [Informationen zur Mauseingabe.](/windows/desktop/inputdev/about-mouse-input)
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Um en \_ VScroll-Benachrichtigungs Codes zu erhalten, geben Sie [**ENM- \_ Scroll**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der Nachricht [**EM \_**](em-seteventmask.md) -Nachricht gesendet wird. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Rich Edit:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Um EN \_ VSCROLL-Benachrichtigungscodes zu empfangen, geben Sie [**ENM \_ SCROLL**](rich-edit-control-event-mask-flags.md) in der Maske an, die mit der [**EM \_ SETEVENTMASK-Nachricht**](em-seteventmask.md) gesendet wird. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,9 +67,9 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -77,22 +77,22 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[EN \_ HScroll](en-hscroll.md)
+[EN \_ HSCROLL](en-hscroll.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Verwenden von Bearbeitungs Steuerelementen](using-edit-controls.md)
+[Verwenden von Bearbeitungssteuerelementen](using-edit-controls.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**WM- \_ Befehl**](/windows/desktop/menurc/wm-command)
+[**\_WM-BEFEHL**](/windows/desktop/menurc/wm-command)
 </dt> </dl>
 
  

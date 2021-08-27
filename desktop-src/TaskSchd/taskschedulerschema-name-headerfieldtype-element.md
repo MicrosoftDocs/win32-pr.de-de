@@ -1,6 +1,6 @@
 ---
-title: Name (headerfieldtype)-Element
-description: Enthält den Namen eines Header Felds in einer e-Mail-Nachricht.
+title: Name (headerFieldType)-Element
+description: Enthält den Namen eines Headerfelds in einer E-Mail-Nachricht.
 ms.assetid: 1c2b3677-7a58-4f90-aa3c-c9e25e4415a1
 keywords:
 - Name-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2aa2a34ac3c5a75407c14b1888ea4125e4e2aaed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aa41aa7906051180340c62217fab070710bcf57fa4166063d86749e9dfc13008
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125780"
 ---
-# <a name="name-headerfieldtype-element"></a>Name (headerfieldtype)-Element
+# <a name="name-headerfieldtype-element"></a>Name (headerFieldType)-Element
 
-Enthält den Namen eines Header Felds in einer e-Mail-Nachricht.
+Enthält den Namen eines Headerfelds in einer E-Mail-Nachricht.
 
 ``` syntax
 <xs:element name="Name"
@@ -30,15 +30,15 @@ Enthält den Namen eines Header Felds in einer e-Mail-Nachricht.
  />
 ```
 
-Das **Name** -Element wird durch den komplexen [**Header FieldType**](taskschedulerschema-headerfieldtype-complextype.md) definiert.
+Das **Name-Element** wird durch den komplexen [**headerFieldType-Typ**](taskschedulerschema-headerfieldtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 
 
-| Element                                                                         | Abgeleitet von                                                               | BESCHREIBUNG                                                    |
+| Element                                                                         | Abgeleitet von                                                               | Beschreibung                                                    |
 |---------------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**Headerfield**](taskschedulerschema-headerfield-headerfieldstype-element.md) | [**headerfieldtype**](taskschedulerschema-headerfieldtype-complextype.md) | Enthält ein Feld für einen Header in einer e-Mail-Nachricht. <br/> |
+| [**HeaderField**](taskschedulerschema-headerfield-headerfieldstype-element.md) | [**headerFieldType**](taskschedulerschema-headerfieldtype-complextype.md) | Enthält ein Feld für einen Header in einer E-Mail-Nachricht. <br/> |
 
 
 
@@ -48,8 +48,8 @@ Das **Name** -Element wird durch den komplexen [**Header FieldType**](taskschedu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

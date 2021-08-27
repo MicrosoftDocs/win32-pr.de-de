@@ -1,28 +1,28 @@
 ---
-title: Imstscadvancedsettings-Eigenschaft komprimieren
+title: IMsTscAdvancedSettings Compress-Eigenschaft
 description: Gibt an, ob die Komprimierung aktiviert ist.
 ms.assetid: 274774b3-0442-4a46-95f8-7857f885bfdb
 ms.tgt_platform: multiple
 keywords:
-- Eigenschaften Remotedesktopdienste komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, imstscadvancedsettings-Schnittstelle
-- Imstscadvancedsettings-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
-- Eigenschaften Remotedesktopdienste komprimieren, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, Eigenschaft komprimieren
+- Eigenschaftseigenschaft komprimieren Remotedesktopdienste
+- Komprimieren Remotedesktopdienste , IMsTscAdvancedSettings-Schnittstelle
+- IMsTscAdvancedSettings-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
+- Komprimieren Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , Compress-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -59,14 +59,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c588784d9b06bd2e8e1605a96c8aa9fd157c10eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d954fc039ec8edf4a43b391df29e79fe3a064cbbc856f0b14a011acc517e3d75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120125490"
 ---
-# <a name="imstscadvancedsettingscompress-property"></a>Imstscadvancedsettings:: Compress-Eigenschaft
+# <a name="imstscadvancedsettingscompress-property"></a>IMsTscAdvancedSettings::Compress-Eigenschaft
 
 Gibt an, ob die Komprimierung aktiviert ist.
 
@@ -89,13 +89,13 @@ HRESULT get_Compress(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legen Sie diesen Parameter auf 0 fest, um die Komprimierung zu deaktivieren oder einen Wert ungleich 0 (null) zu aktivieren
+Legen Sie diesen Parameter auf 0 fest, um die Komprimierung zu deaktivieren, oder legen Sie einen Wert ungleich 0 fest, um die Komprimierung zu aktivieren.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -109,7 +109,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                            |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>    |
-| IID<br/>                      | IID \_ imstscadvancedsettings ist als 809945cc-4b3b-4a92-a6b0-DBF 9b5s2ef2d definiert.<br/> |
+| IID<br/>                      | IID \_ IMsTscAdvancedSettings ist als 809945cc-4b3b-4a92-a6b0-dbf9b5f2ef2d definiert.<br/> |
 
 
 
@@ -117,7 +117,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 
 <dl> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientAdvancedSettings2**](imsrdpclientadvancedsettings2.md)
@@ -141,7 +141,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imstscadvancedsettings**](imstscadvancedsettings-interface.md)
+[**IMsTscAdvancedSettings**](imstscadvancedsettings-interface.md)
 </dt> </dl>
 
  

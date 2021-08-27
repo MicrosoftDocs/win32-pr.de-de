@@ -1,7 +1,7 @@
 ---
-description: Trennt die NPP vom Netzwerk.
+description: Trennt die Verbindung zwischen dem NPP und dem Netzwerk.
 ms.assetid: 01ff8fc2-aa27-4df8-a499-c7b00c1fa2e8
-title: IStats::D isconnect-Methode (Netmon. h)
+title: IStats::D isconnect-Methode (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: a5fa56c05036380b5dba42089979b43d776a4b57
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eabba7b5cf234d48b2839074ec1ad07380a7ed14858f6bd43b07f7d2eaa033b3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037190"
 ---
 # <a name="istatsdisconnect-method"></a>IStats::D isconnect-Methode
 
-Mit der **Disconnect** -Methode wird die Netzwerkverbindung mit dem Netzwerk getrennt.
+Die **Disconnect-Methode** trennt den Netzwerk-NPP vom Netzwerk.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes:
 
@@ -48,17 +48,17 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                            | Beschreibung                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**nmerr- \_ Erfassung**</dt> </dl>        | Der NPP erfasst derzeit Daten. Die Verbindung mit dem Netzwerk kann während der Datenerfassung nicht getrennt werden.<br/> |
-| <dl> <dt>**nmerr \_ nicht \_ verbunden**</dt> </dl>   | Der npp ist nicht mit dem Netzwerk verbunden.<br/>                                                                         |
-| <dl> <dt>**nmerr \_ nicht \_ \_ nur Statistiken**</dt> </dl> | Der npp ist mit dem Netzwerk verbunden, jedoch nicht mit der [**iStats:: Connect**](istats-connect.md) -Methode.<br/>          |
+| <dl> <dt>**NMERR-ERFASSUNG \_**</dt> </dl>        | Das NPP erfasst derzeit Daten. Sie können die Verbindung mit dem Netzwerk nicht trennen, während eine Datenerfassung in Bearbeitung ist.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl>   | Der NPP ist nicht mit dem Netzwerk verbunden.<br/>                                                                         |
+| <dl> <dt>**NMERR \_ NICHT \_ NUR STATISTIKEN \_**</dt> </dl> | Das NPP ist mit dem Netzwerk verbunden, aber nicht mit der [**IStats::Verbinden-Methode.**](istats-connect.md)<br/>          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode kann nicht aufgerufen werden, wenn der NPP Daten erfasst. Nennen Sie zuerst die **iStats::D isconnect** -Methode, und klicken Sie dann auf [**iStats:: Beendigung**](istats-stop.md).
+Diese Methode kann nicht aufgerufen werden, wenn der NPP Daten erfasst. Rufen Sie **zuerst die IStats::D isconnect-Methode** und dann [**IStats::Stop auf.**](istats-stop.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Diese Methode kann nicht aufgerufen werden, wenn der NPP Daten erfasst. Nennen S
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>                                                                      |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>                                                                      |
 | DLL<br/>                      | <dl> <dt>Ndisnpp.dll; </dt> <dt>Rmtnpp.dll</dt> </dl> |
 
 
@@ -80,10 +80,10 @@ Diese Methode kann nicht aufgerufen werden, wenn der NPP Daten erfasst. Nennen S
 [**IStats**](istats.md)
 </dt> <dt>
 
-[**IStats:: Connect**](istats-connect.md)
+[**IStats::Verbinden**](istats-connect.md)
 </dt> <dt>
 
-[**IStats:: Beendigung**](istats-stop.md)
+[**IStats::Stop**](istats-stop.md)
 </dt> </dl>
 
  

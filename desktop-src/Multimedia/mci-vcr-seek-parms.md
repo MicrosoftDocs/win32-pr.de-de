@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_SEEK_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR- \_ Such \_ Parameter enthält Parameter für den MCI- \_ Suchbefehl für Video-Kassetten-Recorder.
+title: MCI_VCR_SEEK_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ SEEK \_ PARMS-Struktur enthält Parameter für den MCI \_ SEEK-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: 40a9cef0-abdb-4698-b11e-5c3f67ea846b
 keywords:
 - MCI_VCR_SEEK_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 302011a3e4bf10eb3a81db4a163f94f4322dea98
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ee25352925681ef548310d9e009808499ce0a36f80472e50ee2a0daa71ed8dd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038200"
 ---
-# <a name="mci_vcr_seek_parms-structure"></a>Struktur der MCI- \_ VCR- \_ Such \_ Teilwerte
+# <a name="mci_vcr_seek_parms-structure"></a>MCI \_ VCR \_ SEEK \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR- \_ Such \_** Parameter enthält Parameter für den [**MCI- \_ Such**](mci-seek.md) Befehl für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ SEEK \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SEEK-Befehl**](mci-seek.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ typedef struct tagMCI_VCR_SEEK_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Position, an der gesucht werden soll.
+Position, nach der gesucht werden soll.
 
 </dd> <dt>
 
-**dwmark**
+**dwMark**
 </dt> <dd>
 
 Nummerierte Markierung, nach der gesucht werden soll.
 
 </dd> <dt>
 
-**dwat**
+**dwAt**
 </dt> <dd>
 
-Zeitpunkt, zu dem die Suche beginnt.
+Zeit, zu der die Suche beginnt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Positionen werden im aktuellen Zeitformat angegeben.
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,7 +85,7 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
@@ -93,13 +93,13 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Suche**](mci-seek.md)
+[**MCI \_ SEEK**](mci-seek.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

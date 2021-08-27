@@ -1,5 +1,5 @@
 ---
-description: Stellt einen Ethernet-Anschluss dar.
+description: Stellt einen Ethernetport dar.
 ms.assetid: c9a148c2-cf02-466f-b8ca-b1bf616d75dc
 title: CIM_EthernetPort-Klasse
 ms.topic: reference
@@ -20,16 +20,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: a44e93f84178fa2714d3c823735b3d90922e04be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f9ca0f3c0ff8919c8f9614efee5d60e450f458f533e637ab3c364e31a52d05b0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046937"
 ---
-# <a name="cim_ethernetport-class"></a>CIM- \_ Ethernetport-Klasse
+# <a name="cim_ethernetport-class"></a>CIM \_ EthernetPort-Klasse
 
-Stellt einen Ethernet-Anschluss dar.
+Stellt einen Ethernetport dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,32 +49,32 @@ class CIM_EthernetPort : CIM_NetworkPort
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Ethernetport** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ EthernetPort-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Ethernetport** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ EthernetPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Capabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Ethernetport**".**Capabilitybeschreibungen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EthernetPort**.**CapabilityDescriptions**")
 </dt> </dl>
 
-Die Funktionen des Ethernet-Ports.
+Die Funktionen des Ethernetports.
 
 > [!Note]  
-> Wenn Failover-oder Lasten Ausgleichs Funktionen aktiviert sind, sollte auch ein [**CIM- \_ SpareGroup**](/windows/desktop/CIMWin32Prov/cim-sparegroup) -Objekt (Failover) oder [**CIM \_ extracapacitygroup**](/windows/desktop/CIMWin32Prov/cim-extracapacitygroup) -Objekt (Lasten Ausgleichs Objekt) definiert werden, um die Funktion vollständig zu beschreiben.
+> Wenn Failover- oder Lastenausgleichsfunktionen aktiviert sind, sollte auch ein [**CIM \_ SpareGroup**](/windows/desktop/CIMWin32Prov/cim-sparegroup) -Objekt (Failover) oder [**CIM \_ ExtraCapacityGroup-Objekt**](/windows/desktop/CIMWin32Prov/cim-extracapacitygroup) (Lastenausgleich) definiert werden, um die Funktion vollständig zu beschreiben.
 
  
 
@@ -89,70 +89,70 @@ Die Funktionen des Ethernet-Ports.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AlertOnLan"></span><span id="alertonlan"></span><span id="ALERTONLAN"></span>
 
-**Alertonlan** (2)
+**AlertOnLan** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WakeOnLan"></span><span id="wakeonlan"></span><span id="WAKEONLAN"></span>
 
-**Wake-on-LAN** (3)
+**WakeOnLan** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FailOver"></span><span id="failover"></span><span id="FAILOVER"></span>
 
-**Failover** (4)
+**FailOver** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="LoadBalancing"></span><span id="loadbalancing"></span><span id="LOADBALANCING"></span>
 
-**Loadbalancing** (5)
+**LoadBalancing** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Capabilitybeschreibungen**
+**CapabilityDescriptions**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Ethernetport**".**Funktionen**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EthernetPort**.**Funktionen**")
 </dt> </dl>
 
-Ein Array von Freiform-Zeichen folgen, das Ausführlichere Erläuterungen zu allen Features bereitstellt, die im Funktions Array angegeben sind. Die Elemente in diesem Array entsprechen den Elementen im Funktions Array.
+Ein Array von Freiformzeichenfolgen, das ausführlichere Erklärungen für alle Features bereitstellt, die im Capabilities-Array angegeben sind. Die Elemente in diesem Array entsprechen den Elementen im Capabilities-Array.
 
 </dd> <dt>
 
-**Enabled-Funktionen**
+**EnabledCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16** Array
+Datentyp: **uint16-Array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Ethernetport**".**Funktionen**","**CIM- \_ Ethernetport**.**Otherenabledfunktionalitäten**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EthernetPort**.**Capabilities**", "**CIM \_ EthernetPort**.**OtherEnabledCapabilities**")
 </dt> </dl>
 
-Gibt an, welche Funktionen im Funktions Array aktiviert sind. Die Elemente in diesem Array entsprechen den Elementen im Funktions Array.
+Gibt an, welche Funktionen im Capabilities-Array aktiviert sind. Die Elemente in diesem Array entsprechen den Elementen im Capabilities-Array.
 
 <dt>
 
@@ -165,102 +165,102 @@ Gibt an, welche Funktionen im Funktions Array aktiviert sind. Die Elemente in di
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AlertOnLan"></span><span id="alertonlan"></span><span id="ALERTONLAN"></span>
 
-**Alertonlan** (2)
+**AlertOnLan** (2)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="WakeOnLan"></span><span id="wakeonlan"></span><span id="WAKEONLAN"></span>
 
-**Wake-on-LAN** (3)
+**WakeOnLan** (3)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="FailOver"></span><span id="failover"></span><span id="FAILOVER"></span>
 
-**Failover** (4)
+**FailOver** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="LoadBalancing"></span><span id="loadbalancing"></span><span id="LOADBALANCING"></span>
 
-**Loadbalancing** (5)
+**LoadBalancing** (5)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Maxdatasize**
+**MaxDataSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Bridge-MIB. dot1dTpPortMaxInfo ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| BRIDGE-MIB.dot1dTpPortMaxInfo")
 </dt> </dl>
 
-Die maximale Größe des Felds Info (nicht-Mac), das empfangen oder übertragen wird.
+Die maximale Größe des Felds INFO (nicht MAC), das empfangen oder übertragen wird.
 
 </dd> <dt>
 
-**"Networkaddresses"**
+**NetworkAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Netzwerkadressen")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("NetworkAddresses")
 </dt> </dl>
 
-Die dem Port zugewiesenen Netzwerkadressen. Die Adresse ist ein 802,3-Mac, der als zwölf hexadezimal Ziffern formatiert ist (z. b. "010203040506"), wobei jedes Ziffern Paar eines der sechs Oktette der Mac-Adresse in kanonischer bitreihenfolge darstellt.
+Die Netzwerkadressen, die dem Port zugewiesen sind. Die Adresse ist ein MAC 802.3, der als zwölf Hexadezimalziffern formatiert ist (z.B. "010203040506"), wobei jedes Ziffernpaar eines der sechs Oktette der MAC-Adresse in kanonischer Bitreihenfolge darstellt.
 
 </dd> <dt>
 
-**Otherenabled-Funktionen**
+**OtherEnabledCapabilities**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**arrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("indiziert"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM- \_ Ethernetport**".**Enabledfunktionalitäten**")
+Qualifizierer: [**ArrayType**](/windows/desktop/WmiSdk/standard-qualifiers) ("Indexed"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ EthernetPort**.**EnabledCapabilities**")
 </dt> </dl>
 
-Ein Array von Freiform-Zeichen folgen, die Ausführlichere Erläuterungen zu allen **enabledfunktionalitäten** -Array Elementen bereitstellen, die auf 1 (Sonstiges) festgelegt sind. Die Elemente in diesem Array entsprechen den Elementen im **enabledfunktionalitäten** -Array.
+Ein Array von Freiformzeichenfolgen, die ausführlichere Erklärungen für alle **EnabledCapabilities-Arrayelemente** bereitstellen, die auf 1 (Sonstige) festgelegt sind. Die Elemente in diesem Array entsprechen den Elementen im **EnabledCapabilities-Array.**
 
 </dd> <dt>
 
-**PortType**
+**Porttype**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PortType")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PortType")
 </dt> </dl>
 
-Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) beschreibt die **otherporttype** -Eigenschaft den-Modus.
+Der Modus, der am Port aktiviert ist. Wenn sie auf 1 (Other) festgelegt ist, beschreibt die **OtherPortType-Eigenschaft** den Modus.
 
 <dt>
 
@@ -273,7 +273,7 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -287,35 +287,35 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="10-100BaseT"></span><span id="10-100baset"></span><span id="10-100BASET"></span>
 
-**10-100-BaseT** (51)
+**10-100BaseT** (51)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="100BaseT"></span><span id="100baset"></span><span id="100BASET"></span>
 
-**100 BaseT** (52)
+**100BaseT** (52)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="1000BaseT"></span><span id="1000baset"></span><span id="1000BASET"></span>
 
-**1000 BaseT** (53)
+**1000BaseT** (53)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="2500BaseT"></span><span id="2500baset"></span><span id="2500BASET"></span>
 
-**2500baset** (54)
+**2500BaseT** (54)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="10GBaseT"></span><span id="10gbaset"></span><span id="10GBASET"></span>
 
-**10gbaset** (55)
+**10GBaseT** (55)
 
 
 </dt> <dd></dd> <dt>
@@ -336,35 +336,35 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="100Base-SX"></span><span id="100base-sx"></span><span id="100BASE-SX"></span>
 
-**100BASE-SX** (101)
+**100Base-SX** (101)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="1000Base-SX"></span><span id="1000base-sx"></span><span id="1000BASE-SX"></span>
 
-**1000 Base-SX** (102)
+**1000Base-SX** (102)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="1000Base-LX"></span><span id="1000base-lx"></span><span id="1000BASE-LX"></span>
 
-**1000 Base-LX** (103)
+**1000Base-LX** (103)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="1000Base-CX"></span><span id="1000base-cx"></span><span id="1000BASE-CX"></span>
 
-**1000 Base-CX** (104)
+**1000Base-CX** (104)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="10GBase-SR"></span><span id="10gbase-sr"></span><span id="10GBASE-SR"></span>
 
-**10GBASE-SR** (105)
+**10GBase-SR** (105)
 
 
 </dt> <dd></dd> <dt>
@@ -378,14 +378,14 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="10GBase-LX4"></span><span id="10gbase-lx4"></span><span id="10GBASE-LX4"></span>
 
-**10GBASE-LX4** (107)
+**10GBase-LX4** (107)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="10GBase-LR"></span><span id="10gbase-lr"></span><span id="10GBASE-LR"></span>
 
-**10GBASE-LR** (108)
+**10GBase-LR** (108)
 
 
 </dt> <dd></dd> <dt>
@@ -399,7 +399,7 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="10GBase-ER"></span><span id="10gbase-er"></span><span id="10GBASE-ER"></span>
 
-**10GBase-er** (110)
+**10GBase-ER** (110)
 
 
 </dt> <dd></dd> <dt>
@@ -413,7 +413,7 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Anbieter reserviert** (16000.65535)
+**Reservierter Anbieter** (16000..65535)
 
 
 </dt> <dd></dd> </dl>
@@ -428,8 +428,8 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -438,7 +438,7 @@ Der Modus, der für den Port aktiviert ist. Bei Festlegung auf 1 (Sonstiges) bes
 
 <dl> <dt>
 
-[**CIM- \_ Netzwerkport**](cim-networkport.md)
+[**CIM \_ NetworkPort**](cim-networkport.md)
 </dt> </dl>
 
  

@@ -1,22 +1,22 @@
 ---
-title: Abrufen des Status eines Aufzeichnungs Fensters
-description: Abrufen des Status eines Aufzeichnungs Fensters
+title: Abrufen des Status eines Erfassungsfensters
+description: Abrufen des Status eines Erfassungsfensters
 ms.assetid: 5095dbd2-7cd4-48b6-bbb4-1f0bddfcfd06
 keywords:
-- capgetstatus-Makro
-- Capstatus-Struktur
+- capGetStatus-Makro
+- CAPSTATUS-Struktur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 01f848898247ad8ea2ddbb0dde7a13c08b6a7274
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8effedac3950f0f57aaa6e57ccd5a93fe3044982c3d6ec6d6bb69b56024a1255
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948652"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038370"
 ---
-# <a name="obtaining-the-status-of-a-capture-window"></a>Abrufen des Status eines Aufzeichnungs Fensters
+# <a name="obtaining-the-status-of-a-capture-window"></a>Abrufen des Status eines Erfassungsfensters
 
-Im folgenden Beispiel wird die [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) -Funktion verwendet, um die Größe des Aufzeichnungs Fensters auf die Gesamtabmessungen des eingehenden Videostreams basierend auf Informationen festzulegen, die vom [**capgetstatus**](/windows/desktop/api/Vfw/nf-vfw-capgetstatus) -Makro in der [**capstatus**](/windows/win32/api/vfw/ns-vfw-capstatus) -Struktur zurückgegeben werden.
+Im folgenden Beispiel wird die [SetWindowPos-Funktion](/windows/win32/api/winuser/nf-winuser-setwindowpos) verwendet, um die Größe des Erfassungsfensters auf die Gesamtdimensionen des eingehenden Videodatenstroms basierend auf Informationen festzulegen, die vom [**capGetStatus-Makro**](/windows/desktop/api/Vfw/nf-vfw-capgetstatus) in der [**CAPSTATUS-Struktur**](/windows/win32/api/vfw/ns-vfw-capstatus) zurückgegeben werden.
 
 
 ```C++
@@ -34,9 +34,9 @@ SetWindowPos(hWndC, NULL, 0, 0, CapStatus.uiImageWidth,
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-description: Legen Sie die arpnorepair-Eigenschaft fest, um die Reparatur Schaltfläche im Assistenten für Programme zu deaktivieren. Weitere Informationen finden Sie unter "erhalten und Festlegen von Eigenschaften".
+description: Legen Sie die Eigenschaft ARPNOREPAIR fest, um die Schaltfläche Reparieren im Programm-Assistenten zu deaktivieren. Weitere Informationen finden Sie unter Abrufen und Festlegen von Eigenschaften.
 ms.assetid: 3fcaad7e-f868-4209-b494-a0b570a104c0
-title: Arpnorepair (Eigenschaft)
+title: ARPNOREPAIR-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d086b45483c6e1b1fbb7ee08070236fdbb05f7ed
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fd1e861bc26c2438ecf28cfab2aa0de039e562de085cb6eac7539198633e135d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045630"
 ---
-# <a name="arpnorepair-property"></a>Arpnorepair (Eigenschaft)
+# <a name="arpnorepair-property"></a>ARPNOREPAIR-Eigenschaft
 
-Legen Sie die **arpnorepair** -Eigenschaft fest, um die **Reparatur** Schaltfläche im **Assistenten für Programme** zu deaktivieren. Weitere Informationen finden Sie unter " [erhalten und Festlegen von Eigenschaften](getting-and-setting-properties.md)".
+Legen Sie die **Eigenschaft ARPNOREPAIR fest,** um die Schaltfläche **Reparieren** im **Programm-Assistenten zu deaktivieren.** Weitere Informationen finden Sie unter [Getting and Setting Properties (Abrufen und Festlegen von Eigenschaften).](getting-and-setting-properties.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Legen Sie die **arpnorepair** -Eigenschaft fest, um die **Reparatur** Schaltflä
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

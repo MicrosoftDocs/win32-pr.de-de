@@ -1,9 +1,9 @@
 ---
-title: CB_FINDSTRING Meldung (Winuser. h)
-description: Durchsucht das Listenfeld eines Kombinations Felds nach einem Element, beginnend mit den Zeichen in einer angegebenen Zeichenfolge.
+title: CB_FINDSTRING (Winuser.h)
+description: Durchsucht das Listenfeld eines Kombinationsfelds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt.
 ms.assetid: 872a72d5-4d8e-41c7-ac6b-eeb571403623
 keywords:
-- Windows-Steuerelemente für CB_FINDSTRING Meldung
+- CB_FINDSTRING meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 295300790a27a956bce953e4e293c07c22ec0d81
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1af584e04a108c39a76a54c05c311d26e107c132d0c132e7b8fcc99a7cd7321b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089353"
 ---
-# <a name="cb_findstring-message"></a>CB- \_ FindString-Nachricht
+# <a name="cb_findstring-message"></a>CB \_ FINDSTRING-Nachricht
 
-Durchsucht das Listenfeld eines Kombinations Felds nach einem Element, beginnend mit den Zeichen in einer angegebenen Zeichenfolge.
+Durchsucht das Listenfeld eines Kombinationsfelds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Durchsucht das Listenfeld eines Kombinations Felds nach einem Element, beginnend
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche das Ende des Listen Felds erreicht, wird Sie von der obersten Position des Listen Felds zurück zu dem durch den *wParam* -Parameter angegebenen Element weiter angezeigt. Wenn *wParam* den Wert-1 hat, wird das gesamte Listenfeld von Anfang an durchsucht.
+Der nullbasierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche den unteren Rand des Listenfelds erreicht, wird sie vom oberen Rand des Listenfelds zurück zu dem Element fortgesetzt, das durch den *wParam-Parameter angegeben* wird. Wenn *wParam* -1 ist, wird das gesamte Listenfeld von Anfang an durchsucht.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die NULL-terminierte Zeichenfolge, die die zu durchsuchenden Zeichen enthält. Bei der Suche wird die Groß-/Kleinschreibung nicht beachtet, sodass diese Zeichenfolge eine beliebige Kombination von Groß-und Kleinbuchstaben enthalten kann.
+Ein Zeiger auf die auf NULL beendete Zeichenfolge, die die zu suchden Zeichen enthält. Bei der Suche wird die Groß-/Kleinschreibung nicht beachtet, sodass diese Zeichenfolge eine beliebige Kombination aus Groß- und Kleinbuchstaben enthalten kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist der null basierte Index des übereinstimmenden Elements. Wenn die Suche nicht erfolgreich ist, ist Sie CB \_ Err.
+Der Rückgabewert ist der nullbasierte Index des übereinstimmenden Elements. Wenn die Suche nicht erfolgreich ist, ist dies CB \_ ERR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie das Kombinations Feld mit einem vom Besitzer gezeichneten Stil, aber ohne den [**CBS \_ hasstrings**](combo-box-styles.md) -Stil erstellen, hängt die **CB- \_ FindString** -Nachricht davon ab, ob die Anwendung den CBS- [**\_ Sortier**](combo-box-styles.md) Stil verwendet. Bei Verwendung des **CBS- \_ Sortier** Stils werden [**WM \_ compareitem**](wm-compareitem.md) -Nachrichten an den Besitzer des Kombinations Felds gesendet, um zu bestimmen, welches Element mit der angegebenen Zeichenfolge übereinstimmt. Wenn Sie den **Sortierungstyp \_ CBS** nicht verwenden, sucht die **CB- \_ FindString** -Nachricht nach einem Listenelement, das mit dem Wert des *LPARAM* -Parameters übereinstimmt.
+Wenn Sie das Kombinationsfeld mit einem vom Besitzer gezeichneten Stil erstellen, aber ohne den [**CBS \_ HASSTRINGS-Stil,**](combo-box-styles.md) hängt die **CB \_ FINDSTRING-Meldung** davon ab, ob Ihre Anwendung den [**CBS \_ SORT-Stil verwendet.**](combo-box-styles.md) Wenn Sie den **CBS \_ SORT-Stil** verwenden, werden [**WM \_ COMPAREITEM-Nachrichten**](wm-compareitem.md) an den Besitzer des Kombinationsfelds gesendet, um zu bestimmen, welches Element der angegebenen Zeichenfolge entspricht. Wenn Sie nicht den **CBS \_ SORT-Stil** verwenden, sucht die **CB \_ FINDSTRING-Meldung** nach einem Listenelement, das dem Wert des *lParam-Parameters* entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn Sie das Kombinations Feld mit einem vom Besitzer gezeichneten Stil, aber oh
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -67,19 +67,19 @@ Wenn Sie das Kombinations Feld mit einem vom Besitzer gezeichneten Stil, aber oh
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB- \_ FindStringExact**](cb-findstringexact.md)
+[**CB \_ FINDSTRINGEXACT**](cb-findstringexact.md)
 </dt> <dt>
 
-[**CB- \_ SelectString**](cb-selectstring.md)
+[**CB \_ SELECTSTRING**](cb-selectstring.md)
 </dt> <dt>
 
-[**CB \_ setcurrsel**](cb-setcursel.md)
+[**CB \_ SETCURSEL**](cb-setcursel.md)
 </dt> <dt>
 
-[**WM- \_ compareitem**](wm-compareitem.md)
+[**WM \_ COMPAREITEM**](wm-compareitem.md)
 </dt> </dl>
 
  

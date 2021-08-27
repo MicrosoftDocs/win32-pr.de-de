@@ -1,41 +1,41 @@
 ---
-description: Das Skript Beispiel in diesem Thema veranschaulicht, wie Sie den Windows Update-Agent (WUA) verwenden, um ein bestimmtes Update zu scannen, herunterzuladen und zu installieren. Das Update kann anhand seines Titels angegeben werden.
+description: Das Skriptbeispiel in diesem Thema zeigt, wie Sie den Windows Update-Agent (WUA) verwenden, um ein bestimmtes Update zu überprüfen, herunterzuladen und zu installieren. Das Update kann anhand des Titels angegeben werden.
 ms.assetid: 4a5bb920-fc51-48a0-8f66-bb2fcc72589f
-title: Suchen, herunterladen und installieren spezifischer Updates
+title: Suchen, Herunterladen und Installieren bestimmter Updates
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aadd7903303356c3937f41e44aa7a47e71192409
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70c2da9569ed6fe34b18264ee59e91965877d63e422ae20e25fc27fbc025e812
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104343808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120071284"
 ---
-# <a name="searching-downloading-and-installing-specific-updates"></a>Suchen, herunterladen und installieren spezifischer Updates
+# <a name="searching-downloading-and-installing-specific-updates"></a>Suchen, Herunterladen und Installieren bestimmter Updates
 
-Das Skript Beispiel in diesem Thema veranschaulicht, wie Sie den Windows Update-Agent (WUA) verwenden, um ein bestimmtes Update zu scannen, herunterzuladen und zu installieren. Das Update kann anhand seines Titels angegeben werden.
+Das Skriptbeispiel in diesem Thema zeigt, wie Sie den Windows Update-Agent (WUA) verwenden, um ein bestimmtes Update zu überprüfen, herunterzuladen und zu installieren. Das Update kann anhand des Titels angegeben werden.
 
-Das Beispiel sucht nach einem bestimmten Software Update, lädt das Update herunter und installiert dann das Update. Beispielsweise kann ein Benutzer mit dieser Methode ermitteln, ob ein kritisches Sicherheitsupdate auf einem Computer installiert ist. Wenn das Update nicht installiert ist, kann der Benutzer sicherstellen, dass das Update heruntergeladen und installiert wird. Der Benutzer kann außerdem sicherstellen, dass er über den Status der Installation benachrichtigt wird.
+Im Beispiel wird nach einem bestimmten Softwareupdate gesucht, das Update heruntergeladen und dann das Update installiert. Beispielsweise kann ein Benutzer diese Methode verwenden, um zu bestimmen, ob ein kritisches Sicherheitsupdate auf einem Computer installiert ist. Wenn das Update nicht installiert ist, kann der Benutzer sicherstellen, dass das Update heruntergeladen und installiert wird. Der Benutzer kann auch sicherstellen, dass er über den Status der Installation benachrichtigt wird.
 
-Das Beispiel Update wird durch den Update Titel in der [**Title-Eigenschaft von iupdate**](/windows/desktop/api/Wuapi/nf-wuapi-iupdate-get_title)identifiziert. Der Titel des Updates, das in diesem Beispiel empfohlen wird, ist "Update for Windows Rights Management Client 1,0."
+Das Beispielupdate wird durch den Updatetitel in [**der Titeleigenschaft von IUpdate**](/windows/desktop/api/Wuapi/nf-wuapi-iupdate-get_title)identifiziert. Der Titel des Updates, das in diesem Beispiel vorgeschlagen wird, lautet "Update für Windows Rights Management Client 1.0".
 
 > [!Note]  
-> Informationen zum Suchen, herunterladen und Installieren aller Updates, die für eine bestimmte Anwendung gelten, finden Sie unter [suchen, herunterladen und Installieren von Updates](searching--downloading--and-installing-updates.md).
+> Informationen zum Suchen, Herunterladen und Installieren aller Updates, die für eine bestimmte Anwendung gelten, finden Sie unter [Suchen, Herunterladen und Installieren von Updates.](searching--downloading--and-installing-updates.md)
 
  
 
 Beachten Sie Folgendes, bevor Sie versuchen, dieses Beispiel auszuführen:
 
--   WUA muss auf dem Computer installiert sein. Weitere Informationen zum Ermitteln der installierten Version von WUA finden Sie unter [bestimmen der aktuellen WUA](determining-the-current-version-of-wua.md)-Version.
+-   WUA muss auf dem Computer installiert sein. Weitere Informationen zum Ermitteln der installierten WUA-Version finden Sie unter [Bestimmen der aktuellen Version von WUA.](determining-the-current-version-of-wua.md)
 -   Das Beispiel bietet keine eigene Benutzeroberfläche. WUA fordert den Benutzer auf, den Computer neu zu starten, wenn ein Update einen Neustart erfordert.
--   Das Beispiel kann nur Updates von WUA herunterladen. Updates können nicht von einem Server mit der Software Update Services (SUS) 1,0 heruntergeladen werden.
--   Das Ausführen dieses Beispiels erfordert Windows Script Host (WSH). Weitere Informationen zu WSH finden Sie im Abschnitt "WSH" des Platform Software Development Kit (SDK). Wenn das Beispiel in eine Datei mit dem Namen WUA \_SpecificUpdate.vbs kopiert wird, können Sie es ausführen, indem Sie ein Eingabe Aufforderungs Fenster öffnen und den folgenden Befehl eingeben: **cscript WUA \_SpecificUpdate.vbs**  
+-   Das Beispiel kann Updates nur von WUA herunterladen. Updates können nicht von einem SOFTWARE UPDATE SERVICES-Server (SUS) 1.0-Server heruntergeladen werden.
+-   Zum Ausführen dieses Beispiels ist Windows Script Host (WSH) erforderlich. Weitere Informationen zu WSH finden Sie im WSH-Abschnitt des Platform Software Development Kit (SDK). Wenn das Beispiel in eine Datei mit dem Namen WUASpecificUpdate.vbs kopiert \_ wird, können Sie es ausführen, indem Sie ein Eingabeaufforderungsfenster öffnen und den folgenden Befehl eingeben: **cscript WUA \_SpecificUpdate.vbs**  
     
 
 ## <a name="example"></a>Beispiel
 
 > [!IMPORTANT]
-> Dieses Skript soll die Verwendung der Windows Update-Agent-APIs veranschaulichen und bietet ein Beispiel dafür, wie Entwickler diese APIs zum Lösen von Problemen verwenden können. Dieses Skript ist nicht als Produktionscode gedacht, und das Skript selbst wird nicht von Microsoft unterstützt (obwohl die zugrunde liegenden Windows Update-Agent-APIs unterstützt werden).
+> Dieses Skript soll die Verwendung der Windows Update-Agent-APIs veranschaulichen und ein Beispiel dafür bereitstellen, wie Entwickler diese APIs zum Lösen von Problemen verwenden können. Dieses Skript ist nicht als Produktionscode vorgesehen, und das Skript selbst wird von Microsoft nicht unterstützt (obwohl die zugrunde liegenden Windows Update-Agent-APIs unterstützt werden).
 
  
 

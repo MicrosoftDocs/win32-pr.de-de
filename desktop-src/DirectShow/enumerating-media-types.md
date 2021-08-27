@@ -1,21 +1,21 @@
 ---
-description: Auflisten von Medientypen
+description: Aufzählen von Medientypen
 ms.assetid: 7878885f-c285-4744-8eab-445678dcfd49
-title: Auflisten von Medientypen
+title: Aufzählen von Medientypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3909c25e9ae5f90a3084eebb531431cc93ef46cd
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: a4e2f063fc243d081b930a1bf47f85904dfbc2fc7eef00fb595d5f0fb3a451ec
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102800"
 ---
-# <a name="enumerating-media-types"></a>Auflisten von Medientypen
+# <a name="enumerating-media-types"></a>Aufzählen von Medientypen
 
-Pins unterstützen die [**IPin:: enummediatypes**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) -Methode, die die bevorzugten Medientypen einer PIN auflistet. Er gibt einen Zeiger auf die [**ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) -Schnittstelle zurück. Die [**ienummediatypes:: Next**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-next) -Methode ruft Zeiger auf [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Strukturen ab, die Medientypen beschreiben.
+Pins unterstützen die [**IPin::EnumMediaTypes-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ipin-enummediatypes) die die bevorzugten Medientypen eines Pins aufzählt. Sie gibt einen Zeiger auf die [**IEnumMediaTypes-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) zurück. Die [**IEnumMediaTypes::Next-Methode**](/windows/desktop/api/Strmif/nf-strmif-ienummediatypes-next) ruft Zeiger auf [**AM MEDIA \_ \_ TYPE-Strukturen**](/windows/win32/api/strmif/ns-strmif-am_media_type) ab, die Medientypen beschreiben.
 
-Der Medientyp-Enumerator ist hauptsächlich vorhanden, um den Filter Graph-Manager beim Erstellen intelligenter Verbindungen zu unterstützen, und ihre Anwendungen verwenden ihn wahrscheinlich nicht. Eine PIN gibt nicht notwendigerweise bevorzugte Medientypen zurück. Darüber hinaus kann es sein, dass die zurückgegebenen Medientypen vom Verbindungsstatus des Filters abhängig sind. Beispielsweise gibt die Ausgabepin eines Filters möglicherweise einen anderen Satz von Medientypen zurück, je nachdem, welcher Medientyp für die Eingabe-PIN des Filters festgelegt wurde.
+Der Medientyp-Enumerator dient in erster Linie dazu, den Filter Graph Manager beim Herstellen intelligenter Verbindungen zu unterstützen, und Ihre Anwendungen verwenden ihn wahrscheinlich nicht. Ein Pin gibt nicht unbedingt bevorzugte Medientypen zurück. Darüber hinaus können die zurückgegebenen Medientypen vom Verbindungsstatus des Filters abhängen. Beispielsweise kann der Ausgabepin eines Filters einen anderen Satz von Medientypen zurückgeben, je nachdem, welcher Medientyp für den Eingabepin des Filters festgelegt wurde.
 
 Im folgenden Beispiel wird ein bevorzugter Medientyp gefunden, der mit einem angegebenen Haupttyp, Untertyp oder Formattyp übereinstimmt.
 
@@ -96,7 +96,7 @@ HRESULT GetPinMediaType(
 
 
 > [!Note]  
-> In diesem Beispiel wird die Funktion " [saferelease](/windows/desktop/medfound/saferelease) " verwendet, um Schnittstellen Zeiger freizugeben.
+> In diesem Beispiel wird die [SafeRelease-Funktion](/windows/desktop/medfound/saferelease) verwendet, um Schnittstellenzeiger freizugeben.
 
  
 
@@ -104,10 +104,10 @@ HRESULT GetPinMediaType(
 
 <dl> <dt>
 
-[Auflisten von Objekten in einem Filter Diagramm](enumerating-objects-in-a-filter-graph.md)
+[Aufzählen von Objekten in einem Filter Graph](enumerating-objects-in-a-filter-graph.md)
 </dt> <dt>
 
-[**Ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes)
+[**IEnumMediaTypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes)
 </dt> </dl>
 
  

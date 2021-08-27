@@ -1,23 +1,23 @@
 ---
-title: dcl_hs_fork_phase_instance_count (SM5-ASM)
-description: Deklarieren Sie die Instanzanzahl der Verzweigungs Phase in einer Hull-shaderphase.
+title: dcl_hs_fork_phase_instance_count (sm5 - asm)
+description: Deklarieren Sie die Anzahl der Forkphaseninstanzen in einer Hüllen-Shader-Forkphase.
 ms.assetid: E38C48BB-3439-4F63-8DF8-21CF562CF5E6
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e3459b43c22f60699445f3ef05e5323e268eeb71
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 4d87117da3947ef9993a5e4d84616f8e62957b591848cf8b9668bfe8f7cba378
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389605"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120024880"
 ---
-# <a name="dcl_hs_fork_phase_instance_count-sm5---asm"></a>Anzahl der DCL \_ HS \_ -Verzweigungs \_ Phasen \_ \_ (SM5-ASM)
+# <a name="dcl_hs_fork_phase_instance_count-sm5---asm"></a>Anzahl der dcl \_ hs \_ \_ fork-Phaseninstanzen \_ \_ (sm5 - asm)
 
-Deklarieren Sie die Instanzanzahl der Verzweigungs Phase in einer Hull-shaderphase.
+Deklarieren Sie die Anzahl der Forkphaseninstanzen in einer Hüllen-Shader-Forkphase.
 
 
 
-| Anzahl der Instanzen der DCL \_ HS \_ -Verzweigungs \_ Phase \_ \_ {1... Max. 32-Bit-uint} |
+| dcl \_ hs \_ fork \_ phase instance count \_ \_ {1...max 32-bit UINT} |
 |-------------------------------------------------------------|
 
 
@@ -28,19 +28,19 @@ Deklarieren Sie die Instanzanzahl der Verzweigungs Phase in einer Hull-shaderpha
 
 | Element                                                   | BESCHREIBUNG                           |
 |--------------------------------------------------------|---------------------------------------|
-| <span id="N"></span><span id="n"></span>*Nr*<br/> | \[in \] der Instanzanzahl.<br/> |
+| <span id="N"></span><span id="n"></span>*N*<br/> | \[in \] Die Anzahl der Instanzen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        | X    |        |          |       |         |
 
@@ -48,20 +48,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

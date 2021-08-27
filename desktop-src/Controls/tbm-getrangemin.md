@@ -1,9 +1,9 @@
 ---
-title: TBM_GETRANGEMIN Meldung (kommstrg. h)
-description: Ruft die minimale Position für den Schieberegler in einer TrackBar ab.
+title: TBM_GETRANGEMIN (Commctrl.h)
+description: Ruft die Mindestposition für den Schieberegler in einer Trackleiste ab.
 ms.assetid: 64334aed-0403-4785-829e-693292734d10
 keywords:
-- Windows-Steuerelemente für TBM_GETRANGEMIN Meldung
+- TBM_GETRANGEMIN von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fddef597f7b129f8334f75136f56404a8ef117fa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92b79cfcf589dcd246699e0eb79c30368a3cad0e72eb74a76528967d3a0683d0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046540"
 ---
-# <a name="tbm_getrangemin-message"></a>TBM- \_ getrangemin-Nachricht
+# <a name="tbm_getrangemin-message"></a>TBM \_ GETRANGEMIN-Nachricht
 
-Ruft die minimale Position für den Schieberegler in einer TrackBar ab.
+Ruft die Mindestposition für den Schieberegler in einer Trackleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft die minimale Position für den Schieberegler in einer TrackBar ab.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen 32-Bit-Wert zurück, der die minimale Position im Bereich von minimalen bis maximalen Schieberegler der TrackBar angibt.
+Gibt einen 32-Bit-Wert zurück, der die minimale Position im Bereich von minimalen bis maximalen Schiebereglerpositionen der Trackleiste angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt einen 32-Bit-Wert zurück, der die minimale Position im Bereich von minimal
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -55,16 +55,16 @@ Gibt einen 32-Bit-Wert zurück, der die minimale Position im Bereich von minimal
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM- \_ getrangemax**](tbm-getrangemax.md)
+[**TBM \_ GETRANGEMAX**](tbm-getrangemax.md)
 </dt> <dt>
 
-[**TBM-über \_ Tragung**](tbm-setrange.md)
+[**TBM \_ SETRANGE**](tbm-setrange.md)
 </dt> <dt>
 
-[**TBM-Objekt- \_ Max**](tbm-setrangemax.md)
+[**TBM \_ SETRANGEMAX**](tbm-setrangemax.md)
 </dt> </dl>
 
  

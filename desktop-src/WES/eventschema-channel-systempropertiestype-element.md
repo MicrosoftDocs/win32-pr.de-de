@@ -1,9 +1,9 @@
 ---
-title: Channel-Element (systempropertiestype)
-description: Der Kanal, auf dem das Ereignis protokolliert wurde.
+title: Channel -Element (SystemPropertiesType)
+description: Der Kanal, in dem das Ereignis protokolliert wurde.
 ms.assetid: 8df935f9-1372-4b77-a809-282ceea6ed44
 keywords:
-- Channel-Element-Ereignisprotokoll
+- Channel-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ce198208e453ecb6697cd08266e53c2045ab5849
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c1ec744efde09ea49350a5f7a9d429dc7114d8025df64b1ad125f5962cec543
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005600"
 ---
-# <a name="channel-systempropertiestype-element"></a>Channel-Element (systempropertiestype)
+# <a name="channel-systempropertiestype-element"></a>Channel -Element (SystemPropertiesType)
 
-Der Kanal, auf dem das Ereignis protokolliert wurde.
+Der Kanal, in dem das Ereignis protokolliert wurde.
 
 ``` syntax
 <xs:element name="Channel"
@@ -31,7 +31,7 @@ Der Kanal, auf dem das Ereignis protokolliert wurde.
  />
 ```
 
-Das **Channel** -Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **Channel-Element** wird durch den komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,8 +39,8 @@ Das **Channel** -Element wird durch den komplexen [**systempropertiestype**](eve
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

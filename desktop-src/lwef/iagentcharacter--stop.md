@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter-Vorgang wird beendet
-description: Iagentcharacter-Vorgang wird beendet
+title: IAgentCharacter Stop
+description: IAgentCharacter Stop
 ms.assetid: 3064bb3e-37a6-4022-bffb-130735736889
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 356c81996a9410eccb2007dc5261913e30a1b414
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 297f187b7045b1da5773643f2765160c71fbca0d4eb7c6ec12c4032e2f1d5806
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114780"
 ---
-# <a name="iagentcharacterstop"></a>Iagentcharacter:: Beendigung
+# <a name="iagentcharacterstop"></a>IAgentCharacter::Stop
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT Stop(
@@ -21,29 +21,29 @@ HRESULT Stop(
 );
 ```
 
-Beendet die angegebene Animation (Anforderung) und entfernt Sie aus der Animations Warteschlange des Zeichens.
+Beendet die angegebene Animation (Anforderung) und entfernt sie aus der Animationswarteschlange des Zeichens.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="dwReqID"></span><span id="dwreqid"></span><span id="DWREQID"></span>*dwreqid*
+<span id="dwReqID"></span><span id="dwreqid"></span><span id="DWREQID"></span>*dwReqID*
 </dt> <dd>
 
-Die ID der Anforderung, die angehalten werden soll.
+Die ID der zu beendenden Anforderung.
 
 </dd> </dl>
 
-**Stop** kann auch verwendet werden, um alle [**Vorbereitungs**](iagentcharacter--prepare.md) Aufrufe in der Warteschlange anzuhalten.
+**Stop** kann auch verwendet werden, um alle Aufrufe der Prepare-Vorbereitung in der [**Warteschlange anzuhalten.**](iagentcharacter--prepare.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter::P repare**](iagentcharacter--prepare.md), [ **iagentcharacter:: stopAll**](iagentcharacter--stopall.md)
+[**IAgentCharacter::P repare**](iagentcharacter--prepare.md), [ **IAgentCharacter::StopAll**](iagentcharacter--stopall.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

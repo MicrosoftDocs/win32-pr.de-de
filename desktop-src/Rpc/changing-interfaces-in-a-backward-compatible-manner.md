@@ -1,47 +1,47 @@
 ---
-title: Ändern von Schnittstellen in abwärts kompatibler Weise
-description: Die in der Versions Verwaltungs Theorie für RPC und com erläuterten Methoden sind aus vielen Gründen möglicherweise nicht akzeptabel.
+title: Ändern von Schnittstellen auf abwärtskompatible Weise
+description: Die in The Versioning Theory for RPC and COM (Die Versionsthematik für RPC und COM) erläuterten Methoden können aus vielen Gründen nicht akzeptabel sein.
 ms.assetid: 7dec4b67-3d50-453f-b0ef-290d091186fd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 314daecc6b55aaf4a348411010eb578149f86921
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8fbe06be3106b4c599baed2d625eefa1f9c7d035c70ef89ac325406bb8c2037d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729801"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120022960"
 ---
-# <a name="changing-interfaces-in-a-backward-compatible-manner"></a>Ändern von Schnittstellen in abwärts kompatibler Weise
+# <a name="changing-interfaces-in-a-backward-compatible-manner"></a>Ändern von Schnittstellen auf abwärtskompatible Weise
 
-Die in [der Versions Verwaltungs Theorie für RPC und com](the-versioning-theory-for-rpc-and-com.md) erläuterten Methoden sind aus vielen Gründen möglicherweise nicht akzeptabel. Das Ändern einer Schnittstellen Version gemäß den Regeln erfordert im Wesentlichen, dass neue Clients nicht mit alten Servern kommunizieren. Dies ist bei kommerziellen Software, die im-Feld bereitgestellt wurde, oft nicht möglich. Manchmal hat Windows Schnittstellen Änderungen eingeführt, die sich auf geänderte GUIDs oder Versionen fehlen. Dies war darauf zurückzuführen, dass neue Clients mit Legacy Servern kommunizieren mussten und dass die Lösung, die ein neuer Client sowohl die alte als auch die neue Schnittstelle unterstützen würde, als unerwünscht eingestuft wurde.
+Die in [The Versioning Theory for RPC and COM (Die Versionsthematik für RPC und COM)](the-versioning-theory-for-rpc-and-com.md) erläuterten Methoden können aus vielen Gründen nicht akzeptabel sein. Das Ändern einer Schnittstellenversion gemäß den Regeln erfordert im Wesentlichen, dass neue Clients nicht mit alten Servern kommunizieren. Dies ist bei kommerzieller Software, die vor Ort bereitgestellt wird, häufig nicht möglich. Manchmal wurden durch Windows Schnittstellenänderungen eingeführt, die nicht in geänderten GUIDs oder Versionen vorhanden sind. Dies war das Ergebnis neuer Clients, die mit Legacyservern kommunizieren mussten, und weil die Lösung, die ein neuer Client sowohl die alte als auch die neue Schnittstelle unterstützen würde, als unerwünscht betrachtet wurde.
 
 ## <a name="best-practice"></a>Bewährte Methode
 
-Dies sind die angemessenen Methoden, um das Problem bei der Netzwerkverbindung zu umgehen, wenn die Schnittstellen-GUID und die Version nicht geändert werden können.
+Dies sind die sinnvollen Methoden zum Umgehen des Wire Incompatibility-Problems, wenn die Schnittstellen-GUID und die Version nicht geändert werden können.
 
-1.  Beachten Sie, dass die Anwendung die Funktionen der anderen Seite kennt.
+1.  Achten Sie darauf, dass die Anwendung die Funktionen der anderen Seite kennt.
 
-    Der Client und der Server verfügen über ein Protokoll, mit dem jede (oder zumindest der neue Client) die Identität des Partners einrichten kann. In der Regel genügt es, dass der neue Client die von alten und neuen Servern unterstützten Funktionen kennt. Dies kann problemlos erfolgen, wenn eine Anwendung einen Verbindungs Kontext einnimmt und durch einen vom Client ausgeführten Funktionsaufruf vom Typ *xxxgetinfo* vor der Ausführung von RPC-Vorgängen unterstützt wird. Wenn eine Anwendung die Features pro Server-Freigabe verwaltet, kann ein Aufruf mit einer Inkompatibilität mit dem alten Server/Client niemals erfolgen, da die Anwendung steuert, welche Aufrufe an welchen Server ausgegeben werden. Die untere Zeile besteht darin, dass die Anwendung proaktiv verhindert, dass eine Übereinstimmung auftritt. Dies kann in Verbindung mit der zweiten Vorgehensweise erfolgen.
+    Der Client und der Server verfügen über ein Protokoll, mit dem jeder (oder zumindest der neue Client) die Identität des Partners einrichten kann. In der Regel ist es ausreichend, dass der neue Client die von alten und neuen Servern unterstützten Features kennt. Dies kann problemlos erfolgen, wenn eine Anwendung an einem Verbindungskontext gebunden ist, und kann über einen vom Client ausgeführten *XxxGetInfo-Funktionsaufruftyp* unterstützt werden, bevor RPC-Vorgänge ausgeführt werden. Wenn eine Anwendung die Features pro Serverversion verwaltet, kann nie ein Aufruf mit Inkompatibilität mit dem alten Server/Client erfolgen, da die Anwendung steuert, welche Aufrufe an welchen Server ausgegeben werden. Unterm Strich verhindert die Anwendung proaktiv einen Konflikt. Dies kann in Verbindung mit der zweiten Übung erfolgen.
 
 2.  Führen Sie eine neue Remote-API ein.
 
-    Eine neue Remote Methode steht nicht in Konflikt mit vorhandenen Methoden, wenn Sie am Ende der-Schnittstelle hinzugefügt wird. Alte Clients können jederzeit neue Server abrufen. Der neue Client kann die neue Methode aufrufen, ohne die Identität des Servers zu kennen. Voraussetzung ist, dass die Fehler von dem aufgerufenen Server überwacht werden. Die RPC-Laufzeit prüft stets die Methoden Nummer für jede Schnittstelle vor einer Verteilung, um sicherzustellen, dass die Methode in einer geeigneten v-Tabelle liegt. Bei einer Methode, die einem Server unbekannt ist, löst die RPC-Laufzeit die Ausnahme RPC \_ S \_ procnum \_ außerhalb \_ des gültigen \_ Bereichs aus. Diese Ausnahme wird nur in dieser speziellen Situation ausgelöst. Aus diesem Grund kann ein neuer Client die Ausnahme als Vorzeichen ansehen, dass der-Befehl an einen alten Server gesendet wurde und das Verhalten ordnungsgemäß ändern kann.
+    Eine neue Remotemethode tritt nicht mit vorhandenen Methoden in Konflikt, wenn sie ganz am Ende der Schnittstelle hinzugefügt wird. Alte Clients können neue Server wie gewohnt aufrufen. Der neue Client kann die neue Methode aufrufen, ohne die Identität des Servers zu kennen, vorausgesetzt, er überwacht die Fehler, die vom aufgerufenen Server stammen. Die RPC-Laufzeit überprüft immer die Methodennummer für jede Schnittstelle vor einem Dispatch, um sicherzustellen, dass sich die Methode innerhalb einer geeigneten v-Tabelle befindet. Bei einer Methode, die einem Server unbekannt ist, löst die RPC-Laufzeit die Ausnahme RPC \_ S \_ PROCNUM \_ OUT OF RANGE \_ \_ aus. Diese Ausnahme wird nur in dieser speziellen Situation ausgelöst. Daher kann ein neuer Client auf die Ausnahme als Hinweis darauf achten, dass der Aufruf an einen alten Server gesendet wurde, und sein Verhalten ordnungsgemäß ändern.
 
 3.  Führen Sie neue Parameter oder neue Datentypen nur in den neuen Methoden ein.
 
-    Ein Grund, eine neue Methode einzuführen, besteht darin, die Daten Inkompatibilität zu vermeiden. Wenn ein neuer Datentyp eingeführt oder einfach geändert wird, sollte er grundsätzlich nur in einer neuen Methode (oder Methoden) verwendet werden. Beispiele für nicht kompatible Datentyp Änderungen finden Sie [unter Beispiele für inkompatible Änderungen](examples-of-incompatible-changes.md) . Die einzige relevante Ausnahme von dieser Regel wird in Element 4 beschrieben.
+    Ein Grund für die Einführung einer neuen Methode ist die Vermeidung von Dateninkompatibilität. Wenn ein neuer Datentyp eingeführt oder einfach geändert wird, sollte er im Prinzip nur in einer neuen Methode (oder Methode) verwendet werden. Beispiele für inkompatible Datentypänderungen finden Sie unter Beispiele für inkompatible [Änderungen.](examples-of-incompatible-changes.md) Die einzige wichtige Ausnahme von dieser Regel wird in Element 4 beschrieben.
 
 4.  Ordnen Sie neue Parameter oder neue Datentypen über einen Wrapper zu.
 
-    Diese Lösung ist anwendbar, wenn ein neuer Parameter oder Datentyp für einen Benutzer verfügbar gemacht werden muss, aber nicht separat oder separat oder in den alten Datentypen oder-Parametern zugeordnet werden muss. Beispielsweise wird ein Remote-Befehl von vielen System-APIs umschlossen und ausgeführt. Sie werden möglicherweise eine Art von Zuordnung von den Benutzer bekannten Datentypen zu den Datentypen, die tatsächlich im zugrunde liegenden RPC-Aufruf verwendet werden, durchgeführt. Daher ist es immer sinnvoll, zu überprüfen, ob die Änderung in der Benutzeroberfläche als Änderung an eine Remote Schnittstelle weitergegeben werden muss.
+    Diese Lösung gilt, wenn ein neuer Parameter oder Datentyp für einen Benutzer verfügbar gemacht werden muss, aber nicht separat remote sein muss oder den alten Datentypen oder Parametern zugeordnet werden kann. Viele System-APIs drehen sich beispielsweise um und führen einen Remoteaufruf aus. Es kann sein, dass sie eine Art von Zuordnung von bekannten Datentypen des Benutzers zu den Datentypen durchführen, die tatsächlich im zugrunde liegenden RPC-Aufruf verwendet werden. Daher ist es immer sinnvoll, zu prüfen, ob die Änderung in der Benutzeroberfläche als Änderung an eine Remoteschnittstelle verbreitet werden muss.
 
-    Eine ähnliche Situation kann auftreten, wenn der Benutzer eine Remote-API direkt aufruft, aber ein Wrapper eingefügt werden kann, um eine neue Typzuordnung oder andere zusätzliche Aktionen durchzuführen, die notwendig sind. Interface Definition Language (IDL) bietet mehrere Möglichkeiten, eine solche Neuzuordnung zu ermöglichen, d \[ . r. [**aufrufen \_ als**](/windows/desktop/Midl/call-as) \] , über \[ [**tragen \_ als und Übertragungs**](/windows/desktop/Midl/transmit-as) \] \[ [**\_ Mars Hall**](/windows/desktop/Midl/wire-marshal) \] . Der " \[ **\_ Callas** " \] -Attribut führt einen Funktions Wrapper auf dem Client und dem Server ein. Beide werden zwischen dem Benutzercode und dem Mars Haller platziert. Die anderen Attribute befassen sich mit der direkten Typzuordnung. Wenn Sie Erweiterungs Probleme haben, \[ **wenden Sie sich \_ so** \] an, wie es am häufigsten verwendet wird, und ist am einfachsten zu verstehen und zu bearbeiten.
+    Eine ähnliche Situation kann auftreten, wenn der Benutzer eine Remote-API direkt aufruft, aber ein Wrapper eingeführt werden kann, um eine neue Typzuordnung oder einige andere zusätzliche Aktionen durchzuführen, die notwendig geworden sind. Die Schnittstellendefinitionssprache (Interface Definition Language, IDL) bietet mehrere Möglichkeiten, diese Neuzuordnung zu vereinfachen, nämlich \[ [**aufrufen \_ als**](/windows/desktop/Midl/call-as) \] , übertragen \[ [**\_ als**](/windows/desktop/Midl/transmit-as) \] und Kabel \[ [**\_ marshallen.**](/windows/desktop/Midl/wire-marshal) \] Der \[ **Aufruf \_ als** \] Attribut führt einen Funktionswrapper auf dem Client und Server ein. Beide werden zwischen dem Benutzercode und dem Marshaller platziert. Die anderen Attribute behandeln die direkte Typzuordnung. Rufen Sie bei Erweiterungsproblemen \[ **\_ wie** \] am häufigsten verwendet auf, und ist am einfachsten zu verstehen und ohne Fallstricke zu bearbeiten.
 
-5.  Ändern von Datentypen durch eine defaultless-Union.
+5.  Ändern von Datentypen über eine standardlose Union.
 
-    Das Ändern eines Attributs oder Datentyps führt in der Regel zu Netzwerk Inkompatibilität. Beispiele finden Sie [unter Beispiele für nicht kompatible Änderungen](examples-of-incompatible-changes.md) . Im Fall einer Union ohne eine DEFAULT-Klausel kann die Inkompatibilität jedoch ähnlich wie bei einer Prozedur außerhalb des gültigen Bereichs verwaltet werden, wie zuvor beschrieben. Dieses Schema kann problemlos auf die gängigen *xxxinfo* -Typen angewendet werden, die Unions verwenden.
+    Das Ändern eines Attributs oder Datentyps führt in der Regel zu einer Inkompatibilität von Kabeln. Beispiele finden Sie unter [Beispiele für inkompatible Änderungen.](examples-of-incompatible-changes.md) Im Fall einer Union ohne Standardklausel kann die Inkompatibilität jedoch ähnlich wie bei einer Prozedur außerhalb des zulässigen Bereichs verwaltet werden, wie zuvor beschrieben. Dieses Schema kann problemlos auf die beliebten *XxxINFO-Typen* angewendet werden, die Unions verwenden.
 
-    Beispielsweise ein solcher Beispiel
+    Beispiel: Ein Aufruf wie dieser
 
     ```C++
     XxxGetInfo( [in] level, [out] XxxINFO  * pInfo );
@@ -49,11 +49,11 @@ Dies sind die angemessenen Methoden, um das Problem bei der Netzwerkverbindung z
 
     
 
-    gibt möglicherweise Informationen auf Ebene 1, 2 oder 3 zurück, wobei *xxxinfo* eine Union mit drei Verzweigungen ist: 1, 2 und 3.
+    kann Informationen auf Ebene 1, 2 oder 3 zurückgeben, wobei *XxxINFO* eine Union mit drei Verzweigungen ist: 1, 2 und 3.
 
-6.  Verwenden Sie das \[ [**Range**](/windows/desktop/Midl/range) - \] Attribut, um den Bereich anzugeben.
+6.  Verwenden Sie das \[ [](/windows/desktop/Midl/range) \] Bereichsattribut, um den Bereich anzugeben.
 
-    Sie können das \[ [**Range**](/windows/desktop/Midl/range) - \] Attribut für einen einfachen Skalierungstyp ohne Unterbrechung der Abwärtskompatibilität angeben. Dieses Attribut hat keine Auswirkung auf das Wire-Format, aber während des Unmarshalling prüft RPC den Wert bei der Übertragung, um zu bestätigen, dass er innerhalb des in der IDL-Datei angegebenen Bereichs liegt. Andernfalls \_ wird eine ungültige RPC X- \_ \_ gebundene Ausnahme ausgelöst. Dies ist besonders nützlich, wenn der Server die maximale Größe eines Arrays in der Größe kennt.
+    Sie können das \[ [](/windows/desktop/Midl/range) \] Bereichsattribut für einen einfachen Skalierungstyp angeben, ohne die Abwärtskompatibilität zu beeinträchtigen. Dieses Attribut wirkt sich nicht auf das Wire-Format aus, aber während des Aufhebens der Zuordnung überprüft RPC den Wert bei der Verkabelung, um sicherzustellen, dass er innerhalb des in der IDL-Datei angegebenen Bereichs liegt. Wenn dies nicht der Fall ist, wird eine RPC \_ X \_ INVALID \_ BOUND-Ausnahme ausgelöst. Dies ist besonders nützlich, wenn der Server die maximale Größe eines Arrays mit größe kennt.
 
     Beispiel:
 
@@ -63,14 +63,14 @@ Dies sind die angemessenen Methoden, um das Problem bei der Netzwerkverbindung z
 
     
 
-Das RPC-Verhalten, wenn die festgestellte Ebene 4 ist und der Arm fehlt, hängt von der Definition der Union ab. Bei einer Union, bei der die default-Klausel definiert ist, überträgt RPC einen Typ, der in der default-Klausel für alle anderen als die bekannten Arm-Bezeichnungen angegeben ist (in diesem Fall etwas anderes als 1, 2 oder 3). Für eine defaultless-Union löst der unmars Haller eine Ausnahme aus, da es in der Definition keinen Standardwert gibt, auf den zurückgegriffen wird. Die Ausnahme ist ein \_ Ungültiges RPC S- \_ \_ Tag.
+Das RPC-Verhalten, wenn die angegebene Ebene 4 ist und der Arm fehlt, hängt von der Definition der Union ab. Bei einer Union mit der definierten Standardklausel überträgt RPC einen in der Standardklausel angegebenen Typ für alles, was sich von den bekannten Armbezeichnungen unterscheidet (in diesem Fall alles andere als 1, 2 oder 3). Bei einer standardlosen Union löst der Unmarshaler eine Ausnahme aus, da es definitionsgemäß keinen Standardwert gibt, auf den ein Fallback erfolgt. Die Ausnahme ist RPC \_ S \_ INVALID \_ TAG.
 
-Auch hier kann ein neuer Client sein Verhalten anpassen, wenn er feststellt, dass er als Alter Server bezeichnet wurde.
+Auch hier kann ein neuer Client sein Verhalten anpassen, wenn festgestellt wird, dass er einen alten Server aufgerufen hat.
 
-Aus diesen empfohlenen Vorgehensweisen besteht folgendes: Wenn ein Remote barer Datentyp entworfen werden muss, der in Zukunft erweitert werden kann, verwenden Sie eine defaultless-Union in der IDL-Datei. Wenn Sie eine Auswahl treffen, ist eine gekapselte Union etwas sauberer.
+Aus diesen empfohlenen Methoden ergibt sich Folgendes: Wenn ein remotabler Datentyp entworfen werden muss, der in Zukunft erweitert werden kann, verwenden Sie eine standardlose Union in der IDL-Datei. Bei einer Auswahl ist eine gekapselte Union etwas übersichtlicher.
 
-Aufgrund von quirllie interner Darstellung des NDR64 Wire-Protokolls muss die Empfehlung zum Hinzufügen von Waffen, die weiter oben in diesem Abschnitt bereitgestellt wurde, wie folgt qualifiziert werden: der neue Arm, der hinzugefügt wird, kann die Ausrichtung der Union nicht ändern, und insbesondere sollte die größte Ausrichtung der Waffen nicht geändert werden. Dies ist in der Regel kein Problem, da ein Zeiger in einem Arm die Ausrichtung auf 8 erzwingt. Ein Entwurf, bei dem jeder Arm ein Zeiger auf einen Arm-Typ ist, ist eine saubere Methode zum erfüllen der Anforderung.
+Aufgrund der Eigenheiten der internen Darstellung des NDR64-Wire-Protokolls muss die Empfehlung zum Hinzufügen von Armen, die weiter oben in diesem Abschnitt bereitgestellt wurden, wie folgt qualifiziert werden: Der neue Arm, der hinzugefügt wird, kann die Ausrichtung der Union nicht ändern, und insbesondere die größte Ausrichtung der Arme sollte sich nicht ändern. Dies ist in der Regel kein Problem, da ein Zeiger in einem Arm die Ausrichtung auf 8 erzwingt. Ein Entwurf, bei dem jeder Arm ein Zeiger auf einen Armtyp ist, ist eine saubere Möglichkeit, die Anforderung zu erfüllen.
 
- 
+ 
 
- 
+ 

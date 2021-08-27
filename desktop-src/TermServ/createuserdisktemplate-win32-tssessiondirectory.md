@@ -1,12 +1,12 @@
 ---
-title: Methode "kreateuserdisktemplate" der Win32_TSSessionDirectory-Klasse
-description: Erstellt eine Vorlage für Benutzer Datenträger.
+title: CreateUserDiskTemplate-Methode der Win32_TSSessionDirectory Klasse
+description: Erstellt eine Benutzerdatenträgervorlage.
 ms.assetid: 4036a418-b082-4376-a400-16f48b98f071
 ms.tgt_platform: multiple
 keywords:
-- Remotedesktopdienste der Methode "kreateuserdisktemplate"
-- Methode Remotedesktopdienste der Methode "kreateuserdisktemplate", Win32_TSSessionDirectory Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, Methode "kreateuserdisktemplate"
+- CreateUserDiskTemplate-Remotedesktopdienste
+- CreateUserDiskTemplate-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory klasse Remotedesktopdienste , CreateUserDiskTemplate-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e7c142834b4501639499cd0bcf102dadcc1b07d9
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cdc16d293f901efb6fc684d03ec7b47aa7496120c462a32414c747d15c02810a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120010230"
 ---
-# <a name="createuserdisktemplate-method-of-the-win32_tssessiondirectory-class"></a>Methode "| ateuserdisktemplate" der Win32- \_ Klasse "tssessiondirectory"
+# <a name="createuserdisktemplate-method-of-the-win32_tssessiondirectory-class"></a>CreateUserDiskTemplate-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Erstellt eine Vorlage für Benutzer Datenträger.
+Erstellt eine Benutzerdatenträgervorlage.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ uint32 CreateUserDiskTemplate(
 
 <dl> <dt>
 
-*Userdisksstorageurl* \[ in\]
+*UserDisksStorageUrl* \[ In\]
 </dt> <dd>
 
-Der Speicherort der Freigabe, auf der alle Benutzer Datenträger gespeichert werden.
+Der Speicherort der Freigabe, in der alle Benutzerdatenträger gespeichert werden.
 
 </dd> <dt>
 
-*Userdiskmaxsizzugb* \[ in\]
+*UserDiskMaxSizeInGB* \[ In\]
 </dt> <dd>
 
-Die maximale Größe in Gigabyte für alle Benutzer Datenträger.
+Die maximale Größe in Gigabyte für alle Benutzerdatenträger.
 
 </dd> </dl>
 
@@ -66,17 +66,17 @@ Die maximale Größe in Gigabyte für alle Benutzer Datenträger.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

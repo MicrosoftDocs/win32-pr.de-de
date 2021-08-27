@@ -1,9 +1,9 @@
 ---
-title: HDM_GETOVERFLOWRECT Meldung (kommstrg. h)
-description: Ruft das umgebende Rechteck der Überlauf Schaltfläche ab, wenn der HDS \_ -Überlauf Stil für das Header Steuerelement festgelegt ist und die Überlauf Schaltfläche sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des GetOverflowRect-Makros des Headers \_ .
+title: HDM_GETOVERFLOWRECT Meldung (Commctrl.h)
+description: Ruft das umschließende Rechteck der Überlaufschaltfläche ab, wenn der HDS \_ OVERFLOW-Stil für das Headersteuerelement festgelegt und die Überlaufschaltfläche sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des \_ Header-Makros GetOverflowRect.
 ms.assetid: 52fb3dc3-ce22-40da-8222-20fd75c005ae
 keywords:
-- Windows-Steuerelemente für HDM_GETOVERFLOWRECT Meldung
+- HDM_GETOVERFLOWRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58f521bb6b188a10bb7af52ead46423e7ae0cf58
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0f48088ad6c4a1d8cc5b843eeafb167f790bdd8eac06c56e6cb74e8afc18d082
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518119"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047050"
 ---
-# <a name="hdm_getoverflowrect-message"></a>HDM \_ GETOVERFLOWRECT Meldung
+# <a name="hdm_getoverflowrect-message"></a>HDM \_ GETOVERFLOWRECT-Nachricht
 
-Ruft das umgebende Rechteck der Überlauf Schaltfläche ab, wenn der [**HDS- \_ Überlauf**](header-control-styles.md) Stil für das Header Steuerelement festgelegt ist und die Überlauf Schaltfläche sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ GetOverflowRect**](/windows/desktop/api/Commctrl/nf-commctrl-header_getoverflowrect) -Makros des Headers.
+Ruft das umschließende Rechteck der Überlaufschaltfläche ab, wenn der [**HDS \_ OVERFLOW-Stil**](header-control-styles.md) für das Headersteuerelement festgelegt und die Überlaufschaltfläche sichtbar ist. Senden Sie diese Nachricht explizit oder mithilfe des [**\_ Header-Makros GetOverflowRect.**](/windows/desktop/api/Commctrl/nf-commctrl-header_getoverflowrect)
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Ruft das umgebende Rechteck der Überlauf Schaltfläche ab, wenn der [**HDS- \_ 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet. Muss Null sein.
+Wird nicht verwendet. Muss Null sein.
 
 </dd> <dt>
 
-*LPARAM* \[ in\]
+*lParam* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, um die umschließenden Rechteck Informationen zu erhalten. Der Absender der Nachricht ist für die Zuordnung dieser Struktur verantwortlich. Die in der **Rect** -Struktur zurückgegebenen Koordinaten werden als Bildschirm Koordinaten ausgedrückt.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) um die Umgebenden Rechteckinformationen zu empfangen. Der Absender der Nachricht ist für die Zuordnung dieser Struktur verantwortlich. Die in der **RECT-Struktur** zurückgegebenen Koordinaten werden als Bildschirmkoordinaten ausgedrückt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich; andernfalls **false**.
+Gibt **TRUE** zurück, wenn erfolgreich. Andernfalls **FALSE**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Header Steuerelement muss den Stil **HDF \_ SplitButton** aufweisen.
+Das Headersteuerelement muss ein **HDF \_ SPLITBUTTON-Format** aufweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Das Header Steuerelement muss den Stil **HDF \_ SplitButton** aufweisen.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -67,7 +67,7 @@ Das Header Steuerelement muss den Stil **HDF \_ SplitButton** aufweisen.
 
 <dl> <dt>
 
-[Informationen über Header Steuerelemente](header-controls.md)
+[Informationen zu Headersteuerelementen](header-controls.md)
 </dt> </dl>
 
  

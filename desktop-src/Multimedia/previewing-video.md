@@ -1,22 +1,22 @@
 ---
-title: Vorschau von Videos (Windows Multimedia)
-description: In diesem Beispiel in Windows Multimedia wird capPreviewRate verwendet, um die Bildanzeigerate für den Vorschaumodus und capPreview so zu festlegen, dass das Erfassungsfenster in den Vorschaumodus gesetzt wird.
+title: Videovorschau (Windows Multimedia)
+description: In diesem Beispiel in Windows Multimedia wird capPreviewRate verwendet, um die Bildanzeigerate für den Vorschaumodus festzulegen, und capPreview, um das Erfassungsfenster in den Vorschaumodus zu versetzen.
 ms.assetid: 33ae7d07-5fea-47d7-b60d-4ee412e91dec
 keywords:
 - capPreview-Makro
 - capPreviewRate-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bdc3aaeb9a8ff0f040218fca4822af93ab8bfe29
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 0e70d0520af3bb71906c6b0ea4d1c0a61464559eedfd2385753b228841fa6af4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405543"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037910"
 ---
-# <a name="previewing-video-windows-multimedia"></a>Vorschau von Videos (Windows Multimedia)
+# <a name="previewing-video-windows-multimedia"></a>Videovorschau (Windows Multimedia)
 
-Im folgenden Beispiel wird das [**Makro capPreviewRate**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) verwendet, um die Bildanzeigerate für den Vorschaumodus auf 66 Millisekunden pro Frame zu setzen. Anschließend wird das [**CapPreview-Makro**](/windows/desktop/api/Vfw/nf-vfw-cappreview) verwendet, um das Erfassungsfenster im Vorschaumodus zu platzieren.
+Im folgenden Beispiel wird das [**capPreviewRate-Makro**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) verwendet, um die Bildanzeigerate für den Vorschaumodus auf 66 Millisekunden pro Frame festzulegen. Anschließend wird das [**CapPreview-Makro**](/windows/desktop/api/Vfw/nf-vfw-cappreview) verwendet, um das Erfassungsfenster im Vorschaumodus zu platzieren.
 
 
 ```C++
@@ -38,7 +38,7 @@ capPreview(hWndC, FALSE);        // disables preview
 
 <dl> <dt>
 
-[Verwenden von Video Capture](using-video-capture.md)
+[Verwenden von Video capture](using-video-capture.md)
 </dt> </dl>
 
  

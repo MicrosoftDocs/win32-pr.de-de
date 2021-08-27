@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - winioctl.h.h
-ms.openlocfilehash: e7aa3d33f744b00fc742a2862add83149cb265b4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1b9aa008e108f1282f8f61aaeacdce11eba7016632fa9643ae3db5550efb1e10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120047910"
 ---
 # <a name="storage_hw_firmware_info-structure"></a>\_SPEICHER HW \_ FIRMWARE \_ INFO-Struktur
 
@@ -81,7 +81,7 @@ Für die zukünftige Verwendung reserviert.
 **SlotCount**
 </dt> <dd>
 
-Die Anzahl der Firmwareslots auf dem Gerät. Dies ist die Dimension des Slot-Arrays.
+Die Anzahl der Firmwareslots auf dem Gerät. Dies ist die Dimension des Slotarrays.
 
 > [!Note]  
 > Einige Geräte können mehr als ein Firmwareimage speichern, wenn sie über mehr als einen Firmwareslot verfügen.
@@ -121,14 +121,14 @@ Für die zukünftige Verwendung reserviert.
 **ImagePayloadAlignment**
 </dt> <dd>
 
-Die Ausrichtung der Bildnutzlast in Byteanzahl. Der Höchstwert ist PAGE \_ SIZE. Die Übertragungsgröße ist ein Mutliple dieser Größe. Einige Protokolle erfordern mindestens die Sektorgröße. Wenn dieser Wert auf 0 festgelegt ist, bedeutet dies, dass dieser Wert ungültig ist.
+Die Ausrichtung der Bildnutzlast in Anzahl von Bytes. Der Höchstwert ist PAGE \_ SIZE. Die Übertragungsgröße ist ein Mutliple dieser Größe. Einige Protokolle erfordern mindestens die Sektorgröße. Wenn dieser Wert auf 0 festgelegt ist, bedeutet dies, dass dieser Wert ungültig ist.
 
 </dd> <dt>
 
 **ImagePayloadMaxSize**
 </dt> <dd>
 
-Die maximale Größe der Bildnutzlast, die für einen einzelnen Befehl verwendet wird.
+Die maximale Größe der Imagenutzlast, die für einen einzelnen Befehl verwendet wird.
 
 </dd> <dt>
 
@@ -143,34 +143,34 @@ Enthält die Slotinformationen für jeden Slot auf dem Gerät vom Typ [**STORAGE
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 \[ Desktop-Apps\]<br/>                                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Winioctl.h.h (einschließlich Windows.h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Winioctl.h.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**IOCTL \_ STORAGE \_ FIRMWARE \_ ACTIVATE**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
+[**AKTIVIEREN DER \_ IOCTL-SPEICHERFIRMWARE \_ \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_activate)
 </dt> <dt>
 
-[**STORAGE \_ HW \_ FIRMWARE \_ ACTIVATE**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_activate)
+[**AKTIVIEREN DER \_ SPEICHER-HW-FIRMWARE \_ \_**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_activate)
 </dt> <dt>
 
-[**HERUNTERLADEN DER \_ \_ IOCTL-SPEICHERFIRMWARE \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
+[**HERUNTERLADEN DER \_ IOCTL-SPEICHERFIRMWARE \_ \_**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_download)
 </dt> <dt>
 
 [**DOWNLOAD DER \_ SPEICHER-HW-FIRMWARE \_ \_**](/windows/desktop/api/winioctl/ns-winioctl-storage_hw_firmware_download)
 </dt> <dt>
 
-[**\_IOCTL-SPEICHERFIRMWARE \_ \_ – \_ GET-INFORMATIONEN**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
+[**\_IOCTL-SPEICHERFIRMWARE \_ \_ – ABRUFEN VON \_ INFORMATIONEN**](/windows/desktop/api/WinIoctl/ni-winioctl-ioctl_storage_firmware_get_info)
 </dt> <dt>
 
-[**ABFRAGE \_ DER SPEICHER-HW-FIRMWAREINFORMATIONEN \_ \_ \_**](storage-hw-firmware-info-query.md)
+[**\_SPEICHER HW FIRMWARE INFO QUERY (ABFRAGE DER \_ SPEICHER-HW-FIRMWAREINFORMATIONEN) \_ \_**](storage-hw-firmware-info-query.md)
 </dt> <dt>
 
 [**INFORMATIONEN ZUM \_ SPEICHER-HW-FIRMWARESLOT \_ \_ \_**](storage-hw-firmware-slot-info.md)

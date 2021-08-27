@@ -1,9 +1,9 @@
 ---
-title: glrectfv-Funktion (GL. h)
-description: Die Funktion "glrectfv" zeichnet ein Rechteck.
+title: glRectfv-Funktion (Gl.h)
+description: Die glRectfv-Funktion zeichnet ein Rechteck.
 ms.assetid: 2053890e-bae7-4c06-98e7-5ce4314fe95c
 keywords:
-- glrectfv-Funktion OpenGL
+- glRectfv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 871cd3edc44598ba66fb686d9957af7322d77730
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2e51c98bd420680892bdcdc1a7c234892afd87fb281c7f26b62771084b6a2ebb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120036640"
 ---
-# <a name="glrectfv-function"></a>glrectfv-Funktion
+# <a name="glrectfv-function"></a>glRectfv-Funktion
 
-Die Funktion " [**glrectfv**](glrectdv.md) " zeichnet ein Rechteck.
+Die [**glRectfv-Funktion**](glrectdv.md) zeichnet ein Rechteck.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Ein Zeiger auf einen Scheitelpunkt eines Rechtecks.
 *v2* 
 </dt> <dd>
 
-Ein Zeiger auf den umgekehrten Scheitelpunkt des Rechtecks.
+ein Zeiger auf den umgekehrten Scheitelpunkt des Rechtecks.
 
 </dd> </dl>
 
@@ -61,35 +61,35 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glrectf** -Funktion unterstützt die effiziente Angabe von Rechtecke als zwei Eckpunkte. Jeder Rechteck Befehl benötigt vier Argumente, die entweder als zwei aufeinander folgende Paare von (*x*, *y*)-Koordinaten oder als zwei Zeiger auf Arrays angeordnet sind, die jeweils ein (*x*, *y*)-Paar enthalten. Das resultierende Rechteck wird in der *z* = 0-Ebene definiert.
+Die **glRectf-Funktion** unterstützt die effiziente Spezifikation von Rechtecke als zwei Eckpunkte. Jeder Rechteckbefehl verwendet vier Argumente, die entweder als zwei aufeinander folgende Paare von (*x*, *y*) Koordinaten oder als zwei Zeiger auf Arrays organisiert sind, die jeweils ein (*x*, *y*) -Paar enthalten. Das resultierende Rechteck wird in der *Ebene z* = 0 definiert.
 
-Die Funktion " **glrectf**(*x1,* *Y1,* *x2,* *Y2*)" entspricht genau der folgenden Reihenfolge:
+Die **glRectf**-Funktion (*x1,* *y1,* *x2,* *y2*) entspricht genau der folgenden Sequenz:
 
-**glBegin**(GL- \_ Polygon);
+**glBegin**(GL \_ POLYGON);
 
-**glVertex2**( *x1,* *Y1* );
+**glVertex2**( *x1,* *y1* );
 
-**glVertex2**( *x2,* *Y1* );
+**glVertex2**( *x2,* *y1* );
 
-**glVertex2**( *x2,* *Y2* );
+**glVertex2**( *x2,* *y2* );
 
-**glVertex2**( *x1,* *Y2* );
+**glVertex2**( *x1,* *y2* );
 
-**glEnd**();
+**glEnd**( );
 
-Beachten Sie Folgendes: Wenn sich der zweite Scheitelpunkt oberhalb und rechts vom ersten Scheitelpunkt befindet, wird das Rechteck mit einem gegen Uhrzeigersinn konstruiert.
+Beachten Sie, dass, wenn sich der zweite Scheitelpunkt oberhalb und rechts neben dem ersten Scheitelpunkt befindet, das Rechteck mit einer Windung gegen den Uhrzeigersinn erstellt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -99,8 +99,8 @@ Beachten Sie Folgendes: Wenn sich der zweite Scheitelpunkt oberhalb und rechts v
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 

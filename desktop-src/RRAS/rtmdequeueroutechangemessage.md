@@ -1,9 +1,9 @@
 ---
-title: Rtmde queueroutechangemess-Funktion (RTM. h)
-description: Die rtmdequeueroutechangemess-Funktion gibt die nächste Weiterleitungs Änderungs Meldung in der Warteschlange zurück, die dem angegebenen Client zugeordnet ist.
+title: RtmDequeueRouteChangeMessage-Funktion (Rtm.h)
+description: Die RtmDequeueRouteChangeMessage-Funktion gibt die nächste Routenänderungsnachricht in der Warteschlange zurück, die dem angegebenen Client zugeordnet ist.
 ms.assetid: 44f2116a-3c8d-4ac6-896e-b12930b218a5
 keywords:
-- Rtmde queueroutechangemess-Funktion (RAS)
+- RtmDequeueRouteChangeMessage-Funktion RAS
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 448df230742b03f82294de102bf14b50fefa035c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5ad69b711568fd8233a60e829da8fb6fd6ce5f74d3556afa82c721a835b98e60
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104390"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035880"
 ---
-# <a name="rtmdequeueroutechangemessage-function"></a>Rtmde queueroutechangemess-Funktion
+# <a name="rtmdequeueroutechangemessage-function"></a>RtmDequeueRouteChangeMessage-Funktion
 
-\[Diese API wurde durch die API für [Routing Table Manager, Version 2](about-routing-table-manager-version-2.md) , ersetzt und ist nicht über Windows Server 2003 verfügbar. Anwendungen sollten die API für Routing Table Manager Version 2 verwenden.\]
+\[Diese API wurde von der Routing Table Manager Version [2-API](about-routing-table-manager-version-2.md) abgelöst und ist nicht mehr als Windows Server 2003 verfügbar. Anwendungen sollten die Routing Table Manager Version 2-API verwenden.\]
 
-Die **rtmdequeueroutechangemess** -Funktion gibt die nächste Weiterleitungs Änderungs Meldung in der Warteschlange zurück, die dem angegebenen Client zugeordnet ist.
+Die **RtmDequeueRouteChangeMessage-Funktion** gibt die nächste Routenänderungsnachricht in der Warteschlange zurück, die dem angegebenen Client zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,49 +45,49 @@ DWORD RtmDequeueRouteChangeMessage(
 
 <dl> <dt>
 
-*Clienthandle* \[ in\]
+*ClientHandle* \[ In\]
 </dt> <dd>
 
-Handle, das den Client identifiziert, für den der Vorgang ausgeführt wird. Rufen Sie dieses Handle durch Aufrufen von [**rtmregisterclient**](rtmregisterclient.md)ab.
+Handle, das den Client identifiziert, für den der Vorgang ausgeführt wird. Rufen Sie dieses Handle ab, indem [**Sie RtmRegisterClient**](rtmregisterclient.md)aufrufen.
 
 </dd> <dt>
 
-*Flags* \[ vorgenommen\]
+*Flags* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine **DWORD** -Variable. Der Wert dieser Variablen wird vom Routing Tabellen-Manager festgelegt. Der-Wert gibt den Typ der Änderungs Meldung an und gibt an, welche Informationen in den bereitgestellten Puffern zurückgegeben wurden. Bei diesem Parameter handelt es sich um einen der folgenden Parameter.
+Zeiger auf eine **DWORD-Variable.** Der Wert dieser Variablen wird vom Routingtabellen-Manager festgelegt. Der Wert gibt den Typ der Änderungsnachricht und die Informationen an, die in den bereitgestellten Puffern zurückgegeben wurden. Dieser Parameter ist einer der folgenden.
 
 
 
 | Flags                                                                                                                                                                      | Bedeutung                                                                                                                                                                                                                                                                                                           |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="RTM_ROUTE_ADDED"></span><span id="rtm_route_added"></span><dl> <dt>**RTM- \_ Route \_ hinzugefügt**</dt> </dl>       | Die erste Route wurde für ein bestimmtes Zielnetzwerk hinzugefügt. Der Parameter " *currbestroute* " verweist auf die Informationen für die hinzugefügte Route.<br/>                                                                                                                                                            |
-| <span id="RTM_ROUTE_DELETED"></span><span id="rtm_route_deleted"></span><dl> <dt>**RTM- \_ Route \_ gelöscht**</dt> </dl> | Die einzige Route, die für ein bestimmtes Zielnetzwerk verfügbar ist, wurde gelöscht. Der *prevbestroute* -Parameter verweist auf die Informationen für die gelöschte Route.<br/>                                                                                                                                              |
-| <span id="RTM_ROUTE_CHANGED"></span><span id="rtm_route_changed"></span><dl> <dt>**RTM- \_ Route \_ geändert**</dt> </dl> | Mindestens einer der wichtigen Parameter wurde für eine optimale Route zu einem bestimmten Zielnetzwerk geändert. Die wichtigsten Parameter sind: <br/> Protokoll Bezeichner<br/> Schnittstellen Index<br/> Adresse des nächsten Hops<br/> Protokoll familienspezifische Daten (einschließlich Routingmetriken)<br/> |
+| <span id="RTM_ROUTE_ADDED"></span><span id="rtm_route_added"></span><dl> <dt>**\_RTM-ROUTE \_ HINZUGEFÜGT**</dt> </dl>       | Die erste Route wurde für ein bestimmtes Zielnetzwerk hinzugefügt. Der *CurBestRoute-Parameter* verweist auf die Informationen für die hinzugefügte Route.<br/>                                                                                                                                                            |
+| <span id="RTM_ROUTE_DELETED"></span><span id="rtm_route_deleted"></span><dl> <dt>**RTM \_ ROUTE DELETED (RTM-ROUTE \_ GELÖSCHT)**</dt> </dl> | Die einzige für ein bestimmtes Zielnetzwerk verfügbare Route wurde gelöscht. Der *PrevBestRoute-Parameter* verweist auf die Informationen für die gelöschte Route.<br/>                                                                                                                                              |
+| <span id="RTM_ROUTE_CHANGED"></span><span id="rtm_route_changed"></span><dl> <dt>**\_RTM-ROUTE \_ GEÄNDERT**</dt> </dl> | Mindestens einer der signifikanten Parameter wurde für eine optimale Route zu einem bestimmten Zielnetzwerk geändert. Die wichtigsten Parameter sind: <br/> Protokollbezeichner<br/> Schnittstellenindex<br/> Adresse des nächsten Hops<br/> Protokollfamilienspezifische Daten (einschließlich Routenmetriken)<br/> |
 
 
 
  
 
-Der *prevbestroute* -Parameter verweist auf die Routeninformationen wie vor der Änderung. Der Parameter " *currbestroute* " zeigt auf die aktuellen Routeninformationen (d. h. nach Änderung).
+Der *PrevBestRoute-Parameter* verweist auf die Routeninformationen wie vor der Änderung. Der *CurBestRoute-Parameter* verweist auf aktuelle Routeninformationen (d. h. nach der Änderung).
 
 </dd> <dt>
 
-*Cursor Route* \[ vorgenommen\]
+*CurBestRoute* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die die aktuellen Informationen zur optimalen Route (sofern vorhanden) empfängt. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. b. IP oder IPX.
+Zeiger auf eine -Struktur, die die aktuellen Informationen zur besten Route empfängt (sofern vorhanden). Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. B. IP oder IPX.
 
-Dieser Parameter ist optional. Wenn der Aufrufer **null** für diesen Parameter angibt, werden die aktuellen Informationen zur optimalen Route nicht zurückgegeben.
+Dieser Parameter ist optional. Wenn der Aufrufer **NULL** für diesen Parameter angibt, werden die aktuellen Informationen zur besten Route nicht zurückgegeben.
 
 </dd> <dt>
 
-*Prevbestroute* \[ vorgenommen\]
+*PrevBestRoute* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine-Struktur, die die vorherigen Informationen über die beste Route empfängt, sofern vorhanden. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. b. IP oder IPX.
+Zeiger auf eine -Struktur, die ggf. die vorherigen Informationen zur besten Route empfängt. Der Typ der Struktur ist spezifisch für die Protokollfamilie, z. B. IP oder IPX.
 
-Dieser Parameter ist optional. Wenn der Aufrufer **null** für diesen Parameter angibt, werden die vorherigen Informationen mit der besten Route nicht zurückgegeben.
+Dieser Parameter ist optional. Wenn der Aufrufer **NULL** für diesen Parameter angibt, werden die vorherigen Informationen zur besten Route nicht zurückgegeben.
 
 </dd> </dl>
 
@@ -99,11 +99,11 @@ Der Rückgabewert ist einer der folgenden Codes.
 
 | Wert                                                                                                       | BESCHREIBUNG                                                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**kein \_ Fehler**</dt> </dl>                    | Diese Meldung war die letzte Meldung in der Warteschlange des Clients. Das Ereignis Objekt wird zurückgesetzt.<br/>                                                                                                                                               |
-| <dl> <dt>**Fehler bei \_ ungültigem \_ handle**</dt> </dl>       | Der *Clienthandle* -Parameter ist kein gültiges Handle, oder der Client hat bei der Registrierung kein Ereignis Objekt für die Benachrichtigung von Änderungs Meldungen bereitgestellt (siehe [**rtmregisterclient**](rtmregisterclient.md)).<br/>                           |
-| <dl> <dt>**\_Weitere Fehler \_ Meldungen**</dt> </dl>        | Die Warteschlange des Clients enthält zusätzliche Nachrichten. Der Client sollte **rtmdequeueroutechangemessage** so bald wie möglich erneut abrufen, damit der Routing Tabellen-Manager die Ressourcen freigeben kann, die den ausstehenden Nachrichten zugeordnet sind.<br/> |
-| <dl> <dt>**Fehler \_ \_ Meldungen**</dt> </dl>          | Die Warteschlange des Clients enthält keine Nachrichten. der-Befehl wurde nicht angefordert. Das Ereignis wird zurückgesetzt.<br/>                                                                                                                                            |
-| <dl> <dt>**Fehler \_ keine \_ System \_ Ressourcen**</dt> </dl> | Es sind nicht genügend Ressourcen vorhanden, um den Vorgang auszuführen.<br/>                                                                                                                                                                      |
+| <dl> <dt>**KEIN \_ FEHLER**</dt> </dl>                    | Diese Nachricht war die letzte Nachricht in der Warteschlange des Clients. Das Ereignisobjekt wird zurückgesetzt.<br/>                                                                                                                                               |
+| <dl> <dt>**FEHLER: \_ UNGÜLTIGES \_ HANDLE**</dt> </dl>       | Der *ClientHandle-Parameter* ist kein gültiges Handle, oder bei der Registrierung hat der Client kein Ereignisobjekt für die Änderungsmeldungsbenachrichtigung (siehe [**RtmRegisterClient)**](rtmregisterclient.md)zur Verfügung stellen.<br/>                           |
+| <dl> <dt>**\_WEITERE \_ FEHLERMELDUNGEN**</dt> </dl>        | Die Warteschlange des Clients enthält zusätzliche Nachrichten. Der Client sollte **RtmDequeueRouteChangeMessage** so bald wie möglich erneut aufrufen, damit der Routingtabellen-Manager die Ressourcen freigeben kann, die den ausstehenden Nachrichten zugeordnet sind.<br/> |
+| <dl> <dt>**\_FEHLER: KEINE \_ MELDUNGEN**</dt> </dl>          | Die Warteschlange des Clients enthält keine Nachrichten. der Aufruf nicht angefordert wurde. Das Ereignis wird zurückgesetzt.<br/>                                                                                                                                            |
+| <dl> <dt>**FEHLER \_ KEINE \_ \_ SYSTEMRESSOURCEN**</dt> </dl> | Es sind nicht genügend Ressourcen vorhanden, um den Vorgang auszuführen.<br/>                                                                                                                                                                      |
 
 
 
@@ -117,9 +117,9 @@ Der Rückgabewert ist einer der folgenden Codes.
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
-| Header<br/>                   | <dl> <dt>RTM. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>RTM. lib</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Rtm.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Rtm.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Rtm.dll</dt> </dl> |
 
 
@@ -128,13 +128,13 @@ Der Rückgabewert ist einer der folgenden Codes.
 
 <dl> <dt>
 
-[Referenz für Routing Tabellen-Manager Version 1](routing-table-manager-version-1-reference.md)
+[Referenz zu Routingtabellen-Manager, Version 1](routing-table-manager-version-1-reference.md)
 </dt> <dt>
 
-[Funktionen der Routing-Tabellen-Manager-Version 1](routing-table-manager-version-1-functions.md)
+[Funktionen des Routingtabellen-Managers, Version 1](routing-table-manager-version-1-functions.md)
 </dt> <dt>
 
-[**Rtmregisterclient**](rtmregisterclient.md)
+[**RtmRegisterClient**](rtmregisterclient.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: dowipeer Method-Methode der MDM_RemoteWipe-Klasse
-description: Hiermit wird das Gerät ausgelöst, um die Remote Löschung zu starten.
+title: doWipeMethod-Methode der MDM_RemoteWipe-Klasse
+description: Löst das Gerät aus, um die Remotelöschung zu starten.
 ms.assetid: dc25dc09-6a74-4c08-b452-b1d83085bb41
 keywords:
-- dowipeer Method-Methode
-- dowipeer Method-Methode, MDM_RemoteWipe-Klasse
-- MDM_RemoteWipe-Klasse, dowipeer Method-Methode
+- doWipeMethod-Methode
+- doWipeMethod-Methode, MDM_RemoteWipe-Klasse
+- MDM_RemoteWipe, doWipeMethod-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f31dcc9dde2fe51ca0d8677df8b27637edd06c8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6cff9cb831931c96fa8df1b376f96ea4c20b05bafdb12a85dec00b4f505af4e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475285"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045640"
 ---
-# <a name="dowipemethod-method-of-the-mdm_remotewipe-class"></a>dowipeer Method-Methode der MDM \_ RemoteWipe-Klasse
+# <a name="dowipemethod-method-of-the-mdm_remotewipe-class"></a>doWipeMethod-Methode der MDM \_ RemoteWipe-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Hiermit wird das Gerät ausgelöst, um die Remote Löschung zu starten. Siehe auch [dowipe](/windows/client-management/mdm/remotewipe-csp).
+Löst das Gerät aus, um die Remotelöschung zu starten. Siehe auch [doWipe](/windows/client-management/mdm/remotewipe-csp).
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 doWipeMethod(
 
 <dl> <dt>
 
-*param* \[ in\]
+*param* \[ In\]
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -53,10 +53,10 @@ uint32 doWipeMethod(
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\ \\ Stamm-CIMv2-MDM-DMMap \\<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
@@ -65,10 +65,10 @@ uint32 doWipeMethod(
 
 <dl> <dt>
 
-[**MDM- \_ Remotelöschung**](mdm-remotewipe.md)
+[**MDM \_ RemoteWipe**](mdm-remotewipe.md)
 </dt> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

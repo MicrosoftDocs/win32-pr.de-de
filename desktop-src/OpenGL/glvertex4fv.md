@@ -1,6 +1,6 @@
 ---
-title: glVertex4fv-Funktion (GL. h)
-description: Gibt einen Scheitelpunkt an. | glVertex4fv-Funktion (GL. h)
+title: glVertex4fv-Funktion (Gl.h)
+description: Gibt einen Scheitelpunkt an. | glVertex4fv-Funktion (Gl.h)
 ms.assetid: c2a766fd-3ad8-463b-8f09-36d0673e6716
 keywords:
 - glVertex4fv-Funktion OpenGL
@@ -14,12 +14,12 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e05551268b697ba4444c29d5f2b9bdfb0e832e4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 31f840c6d3e69e809fe4ae504cb322d0d0a6b3bbc28b495df9a17df94f891836
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106361807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120035610"
 ---
 # <a name="glvertex4fv-function"></a>glVertex4fv-Funktion
 
@@ -40,10 +40,10 @@ void WINAPI glVertex4fv(
 
 <dl> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array aus vier Elementen. Die Elemente sind die x-, y-, z-und w-Koordinaten eines Scheitel Punkts.
+Ein Zeiger auf ein Array von vier Elementen. Die Elemente sind die x-, y-, z- und w-Koordinaten eines Scheitelpunkts.
 
 </dd> </dl>
 
@@ -59,8 +59,8 @@ Diese Funktion gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
@@ -75,31 +75,31 @@ Diese Funktion gibt keinen Wert zurück.
 [**glCallList**](glcalllist.md)
 </dt> <dt>
 
-[**glcolor**](glcolor-functions.md)
+[**glColor**](glcolor-functions.md)
 </dt> <dt>
 
-[**gledgeflag**](gledgeflag-functions.md)
+[**glEdgeFlag**](gledgeflag-functions.md)
 </dt> <dt>
 
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[**glindex**](glindex-functions.md)
+[**glIndex**](glindex-functions.md)
 </dt> <dt>
 
-[**glmaterial**](glmaterial-functions.md)
+[**glMaterial**](glmaterial-functions.md)
 </dt> <dt>
 
-[**glnormal**](glnormal-functions.md)
+[**glNormal**](glnormal-functions.md)
 </dt> <dt>
 
-[**glrect**](glrect-functions.md)
+[**glRect**](glrect-functions.md)
 </dt> <dt>
 
-[**gltexcoord**](gltexcoord-functions.md)
+[**glTexCoord**](gltexcoord-functions.md)
 </dt> </dl>
 
  

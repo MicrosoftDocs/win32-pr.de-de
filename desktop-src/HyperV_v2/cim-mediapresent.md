@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Beziehung dar, in der über ein Medien Zugriffsgerät auf einen Speicherblock zugegriffen werden muss.
+description: Stellt eine Beziehung dar, in der über ein Medienzugriffsgerät auf einen Speicherbereich zugegriffen werden muss.
 ms.assetid: 436a7e2d-2c14-4058-aca0-669373b8004a
 title: CIM_MediaPresent-Klasse (Hyper-V-Verwaltung)
 ms.topic: reference
@@ -16,16 +16,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 0e26c36231edaf3ca4b8accf844a3c58b3d70bc7
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 6694c945594f0ea5008f6b5f574b84accd338f89a45819a8fb02793bc619ea1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106354899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046800"
 ---
 # <a name="cim_mediapresent-class-hyper-v-management"></a>CIM_MediaPresent-Klasse (Hyper-V-Verwaltung)
 
-Stellt eine Beziehung dar, in der über ein Medien Zugriffsgerät auf einen Speicherblock zugegriffen werden muss.
+Stellt eine Beziehung dar, in der über ein Medienzugriffsgerät auf einen Speicherbereich zugegriffen werden muss.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,58 +41,58 @@ class CIM_MediaPresent : CIM_Dependency
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ mediapresent** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ MediaPresent-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ mediapresent** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ MediaPresent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ mediaaccessdevice**
+Datentyp: **CIM \_ MediaAccessDevice**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger")
 </dt> </dl>
 
-Das Medien Zugriffsgerät.
+Das Medienzugriffsgerät.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Der Speicherblock, auf den zugegriffen wird, wenn das Medien Zugriffsgerät verwendet wird.
+Der Speicherbereich, auf den bei Verwendung des Medienzugriffsgeräts zugegriffen wird.
 
 </dd> <dt>
 
-**Fixedmedia**
+**FixedMedia**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**true** , wenn der Speicherblock im Medien Zugriffsgerät korrigiert wurde und nicht ausgewiesen werden kann. andernfalls **false**.
+**TRUE,** wenn der Speicherbereich auf dem Medienzugriffsgerät festgelegt ist und nicht eingefügt werden kann. andernfalls **FALSE.**
 
 </dd> </dl>
 
@@ -104,8 +104,8 @@ Zugriffstyp: Schreibgeschützt
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
@@ -114,7 +114,7 @@ Zugriffstyp: Schreibgeschützt
 
 <dl> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> </dl>
 
  

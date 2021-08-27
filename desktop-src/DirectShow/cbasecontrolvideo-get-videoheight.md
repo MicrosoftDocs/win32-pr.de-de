@@ -1,7 +1,7 @@
 ---
-description: Die get \_ videoheight-Methode ruft die Höhe des nativen Videos ab.
+description: Die get \_ VideoHeight-Methode ruft die Höhe des nativen Videos ab.
 ms.assetid: f33ba789-f9c6-47f1-879b-241bfdc72010
-title: CBaseControlVideo.get_VideoHeight-Methode (ctlutil. h)
+title: CBaseControlVideo.get_VideoHeight -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4e738636cecd8031962ae31ebf54ac258d868013
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 31a7ca4b87a9196a8b59ec00cdc0e458855fa1db4e1e8f7b5bfd233924475519
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120057080"
 ---
-# <a name="cbasecontrolvideoget_videoheight-method"></a>Cbasecontrolvideo. get \_ videoheight-Methode
+# <a name="cbasecontrolvideoget_videoheight-method"></a>CBaseControlVideo.get \_ VideoHeight-Methode
 
-Die- `get_VideoHeight` Methode ruft die Höhe des nativen Videos ab.
+Die `get_VideoHeight` -Methode ruft die Höhe des nativen Videos ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT get_VideoHeight(
 
 <dl> <dt>
 
-*pvideoheight* 
+*pVideoHeight* 
 </dt> <dd>
 
 Zeiger auf die Höhe des nativen Videos in Pixel.
@@ -51,11 +51,11 @@ Zeiger auf die Höhe des nativen Videos in Pixel.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn \_ nicht genügend Arbeitsspeicher verfügbar ist, wird noError zurückgegeben, wenn der Vorgang erfolgreich war.
+Gibt NOERROR zurück, wenn erfolgreich, oder E \_ OUTOFMEMORY, wenn nicht genügend Arbeitsspeicher verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ videoheight**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_videoheight) -Methode. Er ruft den reinen virtuellen [**cbasecontrolvideo:: getvideoformat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**videoinfoheader**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) -Struktur aus der abgeleiteten Klasse abzurufen.
+Diese Memberfunktion implementiert die [**IBasicVideo::get \_ VideoHeight-Methode.**](/windows/desktop/api/Control/nf-control-ibasicvideo-get_videoheight) Sie ruft das rein virtuelle [**CBaseControlVideo::GetVideoFormat**](cbasecontrolvideo-getvideoformat.md) auf, um die [**VIDEOINFOHEADER-Struktur**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfoheader) aus der abgeleiteten Klasse abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ videoheight**](/
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Member-Funktion implementiert die [**ibasicvideo:: get \_ videoheight**](/
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

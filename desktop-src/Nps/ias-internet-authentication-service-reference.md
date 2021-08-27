@@ -1,32 +1,32 @@
 ---
-title: NPS-Erweiterungs Referenz
-description: In den folgenden Abschnitten werden die API-Programmier Elemente der NPS-Erweiterungen beschrieben.
+title: NPS-Erweiterungsreferenz
+description: In den folgenden Abschnitten werden die Programmierelemente der NPS-Erweiterungs-API beschrieben.
 ms.assetid: 2b7a16cb-bc64-4e81-8149-82f51c451312
 ms.tgt_platform: multiple
 keywords:
-- Internet Authentication Service IAS, Referenz
+- Internet authentication service IAS ,reference
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db029016fed4cb23178ca0861b589bb28c6995c2
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: eaec89c9c3b3434be67623750d6d9e708641b22ec0af3baf19a56af9ff87ac57
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101940"
 ---
-# <a name="nps-extensions-reference"></a>NPS-Erweiterungs Referenz
+# <a name="nps-extensions-reference"></a>NPS-Erweiterungsreferenz
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS.
+> Internet Authentication Service (IAS) wurde ab Windows Server 2008 in Network Policy Server (NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS.
 
- 
+ 
 
-In den folgenden Abschnitten werden die API-Programmier Elemente der NPS-Erweiterungen beschrieben.
+In den folgenden Abschnitten werden die Programmierelemente der NPS-Erweiterungs-API beschrieben.
 
--   [NPS-Erweiterungs Enumerationen](/windows/desktop/Nps/ias-internet-authentication-service-enumerations)
+-   [NPS-Erweiterungsenumeration](/windows/desktop/Nps/ias-internet-authentication-service-enumerations)
 -   [NPS-Erweiterungsfunktionen](/windows/desktop/Nps/ias-internet-authentication-service-functions)
--   [NPS-Erweiterungs Strukturen](/windows/desktop/Nps/ias-internet-authentication-service-structures)
+-   [NPS-Erweiterungsstrukturen](/windows/desktop/Nps/ias-internet-authentication-service-structures)
 
- 
+ 
 
- 
+ 

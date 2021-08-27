@@ -1,23 +1,23 @@
 ---
-title: Produkt Bezeichner
-description: Produkt Bezeichner
+title: Produktbezeichner
+description: Produktbezeichner
 ms.assetid: 671440bb-0ed7-44fe-873c-fcefda8380bc
 keywords:
-- Windows-Multimedia, Produkt Bezeichner
-- Multimedia, Produkt Bezeichner
-- Produkt Bezeichner
-- Multimedia-Produkt Bezeichner
-- Multimedia-Unternehmen
+- Windows Multimedia,Produktbezeichner
+- Multimedia,Produktbezeichner
+- Produktbezeichner
+- Multimedia-Produktbezeichner
+- Multimediaunternehmen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed7046ffae1b8cf3031548abbc778955127e27a5
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 20bb5a4e958e53c8dda6df71360d5512be0a61ff2ddb42fb77065ee7ce38f8a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037600"
 ---
-# <a name="product-identifiers"></a>Produkt Bezeichner
+# <a name="product-identifiers"></a>Produktbezeichner
 
 
 
@@ -29,7 +29,7 @@ ms.locfileid: "104311087"
 <thead>
 <tr class="header">
 <th>Company</th>
-<th>Produkt Bezeichner</th>
+<th>Produktbezeichner</th>
 </tr>
 </thead>
 <tbody>
@@ -41,7 +41,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Audioverarbeitungs Technologie</td>
+<td>Audioverarbeitungstechnologie</td>
 <td><ul>
 <li>MM_APT_ACE100CD</li>
 </ul></td>
@@ -67,7 +67,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Computer gestützte Technologie, Inc.</td>
+<td>Computer Aided Technology, Inc.</td>
 <td><ul>
 <li>MM_CAT_WAVEOUT</li>
 </ul></td>
@@ -99,13 +99,13 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>DSP-Gruppe, Inc.</td>
+<td>DSP Group, Inc.</td>
 <td><ul>
 <li>MM_DSP_GROUP_TRUESPEECH</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>DSP-Lösungen, Inc.</td>
+<td>DSP Solutions, Inc.</td>
 <td><ul>
 <li>MM_DSP_SOLUTIONS_AUX</li>
 <li>MM_DSP_SOLUTIONS_SYNTH</li>
@@ -153,7 +153,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Scheren. C. Olivetti & C., S.p.A.</td>
+<td>Ing. C. Olivtti & C., S.p.A.</td>
 <td><ul>
 <li>MM_OLIVETTI_ACM_ADPCM</li>
 <li>MM_OLIVETTI_ACM_CELP</li>
@@ -171,7 +171,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Integrierte Circuit Systems, Inc.</td>
+<td>Integrated Circuit Systems, Inc.</td>
 <td><ul>
 <li>MM_ICS_WAVEDECK_AUX</li>
 <li>MM_ICS_WAVEDECK_MIXER</li>
@@ -181,14 +181,14 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Interaktiv, Inc.</td>
+<td>InterActive, Inc.</td>
 <td><ul>
 <li>MM_INTERACTIVE_WAVEIN</li>
 <li>MM_INTERACTIVE_WAVEOUT</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Internationale Geschäftscomputer</td>
+<td>International Business Machines</td>
 <td><ul>
 <li>MM_IBM_PCMCIA_AUX</li>
 <li>MM_IBM_PCMCIA_MIDIIN</li>
@@ -202,7 +202,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Iterierte Systeme, Inc.</td>
+<td>Iterated Systems, Inc.</td>
 <td><ul>
 <li>MM_ITERATEDSYS_FUFCODEC</li>
 </ul></td>
@@ -214,7 +214,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>Matsushita Electric Corporation of America</td>
+<td>Mshishita Electric Corporation of America</td>
 <td><ul>
 <li>MM_MATSUSHITA_AUX</li>
 <li>MM_MATSUSHITA_FMSYNTH_STEREO</li>
@@ -345,13 +345,13 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="even">
-<td>mikroengineering-Labs</td>
+<td>microEngineering Labs</td>
 <td><ul>
 <li>MM_MELABS_MIDI2GO</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Moscom Corporation</td>
+<td>MOSCOM Corporation</td>
 <td><ul>
 <li>MM_MOSCOM_VPC2400</li>
 </ul></td>
@@ -367,13 +367,13 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Neue Medien Corporation</td>
+<td>New Media Corporation</td>
 <td><ul>
 <li>MM_NEWMEDIA_WAVJAMMER</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Opti, Inc.</td>
+<td>OPTi, Inc.</td>
 <td><ul>
 <li>MM_OPTI_M16_AUX</li>
 <li>MM_OPTI_M16_FMSYNTH_STEREO</li>
@@ -399,7 +399,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Roland Corporation</td>
+<td>Bei der Corporation</td>
 <td><ul>
 <li>MM_ROLAND_MPU401_MIDIIN</li>
 <li>MM_ROLAND_MPU401_MIDIOUT</li>
@@ -454,7 +454,7 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Toshihiko okuhura, Korg, Inc.</td>
+<td>Toshihoku Okuhura, Korg, Inc.</td>
 <td><ul>
 <li>MM_KORG_PCIF_MIDIIN</li>
 <li>MM_KORG_PCIF_MIDIOUT</li>
@@ -482,14 +482,14 @@ ms.locfileid: "104311087"
 </ul></td>
 </tr>
 <tr class="odd">
-<td>Vocaltec, Inc.</td>
+<td>Tec, Inc.</td>
 <td><ul>
 <li>MM_VOCALTEC_WAVEIN</li>
 <li>MM_VOCALTEC_WAVEOUT</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>Wang-Laboratorien</td>
+<td>Gegenkn.</td>
 <td><ul>
 <li>MM_WANGLABS_WAVEIN1</li>
 <li>MM_WANGLABS_WAVEOUT1</li>
@@ -521,11 +521,11 @@ ms.locfileid: "104311087"
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

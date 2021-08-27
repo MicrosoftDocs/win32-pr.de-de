@@ -1,9 +1,9 @@
 ---
-title: 'Basieeapparameters komplexer Typ: Benutzereigenschaften'
-description: Definiert das Element, das die ausgewählte Legacy Methode und die Methoden spezifischen Anmelde Informationen angegeben hat.
+title: Komplexer BaseEapParameters-Typ – Benutzereigenschaften
+description: Definiert das Element, das die ausgewählte Legacymethode und methodenspezifische Anmeldeinformationen angegeben hat.
 ms.assetid: bc42e536-f741-4821-8453-6c0631daad3e
 keywords:
-- Baseeapparameters komplexer Typ EAPHost
+- Komplexer BaseEapParameters-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 451c03123634dd98a1f4a49292db0a807009f6f5
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 80ae1dc749d1c31ee11809b530fe1b04a59ce3e4e4dc76e84323b7dc078ec44a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106365360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978290"
 ---
-# <a name="baseeapparameters-complex-type---user-properties"></a>Basieeapparameters komplexer Typ: Benutzereigenschaften
+# <a name="baseeapparameters-complex-type---user-properties"></a>Komplexer BaseEapParameters-Typ – Benutzereigenschaften
 
-Der komplexe Typ **baseeapparameters** definiert das Element, das die ausgewählte Legacy Methode und die Methoden spezifischen Anmelde Informationen angegeben hat.
+Der komplexe **BaseEapParameters-Typ** definiert das Element, das die ausgewählte Legacymethode und methodenspezifische Anmeldeinformationen angegeben hat.
 
-Die-Methode kann die konstituierenden Elemente innerhalb von **baseeapparameters** definieren. die-Methode führt auch eine Schema Validierung für die Elemente in **baseeapparameters** aus.
+Die -Methode kann die konstituierenden Elemente in **BaseEapParameters** definieren. Die -Methode führt auch eine Schemavalidierung für die Elemente in **BaseEapParameters durch.**
 
 ``` syntax
 <xs:complexType name="BaseEapParameters">
@@ -47,9 +47,9 @@ Die-Methode kann die konstituierenden Elemente innerhalb von **baseeapparameters
 
 
 
-| Element                                                                      | type    | BESCHREIBUNG                                                                                               |
+| Element                                                                      | type    | Beschreibung                                                                                               |
 |------------------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------|
-| [**type**](baseeapuserpropertiesv1schema-type-baseeapparameters-element.md) | integer | Definiert das Platzhalter Element für den ausgewählten Methodentyp und die Methoden spezifischen Anmelde Informationen. <br/> |
+| [**type**](baseeapuserpropertiesv1schema-type-baseeapparameters-element.md) | integer | Definiert das Platzhalterelement für den ausgewählten Methodentyp und methodenspezifische Anmeldeinformationen. <br/> |
 
 
 
@@ -59,16 +59,16 @@ Die-Methode kann die konstituierenden Elemente innerhalb von **baseeapparameters
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapuserpropertiesv1-Schema](baseeapuserpropertiesv1schema-schema.md)

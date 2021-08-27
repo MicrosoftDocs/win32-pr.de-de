@@ -1,7 +1,7 @@
 ---
-description: Die Partitions-GUID des Ereignis Klassen Objekts.
+description: Die Partitions-GUID des Ereignisklassenobjekts.
 ms.assetid: 154849ac-350c-4b2f-bb51-ac6973f0a8fa
-title: 'IEventSubscription3:: eventclasspartitionid (Eigenschaft)'
+title: IEventSubscription3::EventClassPartitionID-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: d41d3e2a170deffb73f1f533226421d88f150c01
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a305e18677c6a12e14b71b062324630021407231dac6b749f289b58396f4c1f4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524203"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070650"
 ---
-# <a name="ieventsubscription3eventclasspartitionid-property"></a>IEventSubscription3:: eventclasspartitionid (Eigenschaft)
+# <a name="ieventsubscription3eventclasspartitionid-property"></a>IEventSubscription3::EventClassPartitionID-Eigenschaft
 
-Die Partitions-GUID des Ereignis Klassen Objekts.
+Die Partitions-GUID des Ereignisklassenobjekts.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -44,11 +44,11 @@ HRESULT get_EventClassPartitionID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die GUID der Ereignis Klassen Partition enthält.
+Eine Zeichenfolge, die die GUID der Ereignisklassenpartition enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standardrückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 

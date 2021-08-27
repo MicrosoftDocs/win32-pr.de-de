@@ -1,7 +1,7 @@
 ---
-description: Die nmeventdata-Struktur enthält Informationen zu einer Ereignis Bedingung, die an Netzwerkmonitor übermittelt wird, um eine Zeile in den expertenviewer einzufügen.
+description: Die NMEVENTDATA-Struktur enthält Informationen zu einer Ereignisbedingung, die an Netzwerkmonitor übergeben wird, um eine Zeile in den Expert Viewer einzufügungen.
 ms.assetid: 35cda410-d45a-4a51-91b7-8bd4a0c9957f
-title: Nmeventdata-Struktur (Netmon. h)
+title: NMEVENTDATA-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 6258b1b1bfde5b159165de2efb9a010053c0421a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af2a4775be7d9e123974fbab865a8171d9bc9dec7dacae7692054bc6db0d3085
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037040"
 ---
-# <a name="nmeventdata-structure"></a>Nmeventdata-Struktur
+# <a name="nmeventdata-structure"></a>NMEVENTDATA-Struktur
 
-Die **nmeventdata** -Struktur enthält Informationen zu einer Ereignis Bedingung, die an Netzwerkmonitor übermittelt wird, um eine Zeile in den expertenviewer einzufügen.
+Die **NMEVENTDATA-Struktur** enthält Informationen zu einer Ereignisbedingung, die an Netzwerkmonitor übergeben wird, um eine Zeile in den Expert Viewer einzufügungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -54,34 +54,34 @@ typedef struct {
 **Version**
 </dt> <dd>
 
-Die Versionsnummer der **nmeventdata** -Struktur. Die Versionsnummer muss NULL sein. In zukünftigen Versionen von Netzwerkmonitor wird möglicherweise eine höhere Versionsnummer unterstützt.
+Versionsnummer der **NMEVENTDATA-Struktur.** Die Versionsnummer muss 0 (null) sein. Zukünftige Versionen von Netzwerkmonitor unterstützen möglicherweise eine höhere Versionsnummer.
 
 </dd> <dt>
 
-**Eventident**
+**EventIdent**
 </dt> <dd>
 
-Bezeichner des Ereignisses **Eventident** ist für jeden Experten eindeutig und verweist auf eine [Ereignis Referenzseite](event-reference-page.md).
+Bezeichner des Ereignisses **EventIdent** ist für jeden Experten eindeutig und verweist auf eine [Ereignisreferenzseite.](event-reference-page.md)
 
 </dd> <dt>
 
 **Flags**
 </dt> <dd>
 
-Ein Satz von Flags, der beschreibt, wer die Ereignisdaten sendet und wie das Ereignis angezeigt wird.
+Eine Gruppe von Flags, die beschreiben, wer die Ereignisdaten sendet und wie das Ereignis angezeigt wird.
 
 
 
 | Wert                                                                                                                                                                                                                                              | Bedeutung                                                                                                                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="EVENT_FLAG_EXPERT"></span><span id="event_flag_expert"></span><dl> <dt>**\_ereignisflag- \_ Experte**</dt> </dl>                                                                         | Das Ereignis stammt von einem Experten. <br/>                                                                                                                                  |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_SEVERITY"></span><span id="nmeventflag_do_not_display_severity"></span><dl> <dt>**nmeventflag \_ \_ zeigt keinen \_ \_ Schweregrad an**</dt> </dl>                 | Der Schweregrad für das Ereignis wird nicht angezeigt. <br/>                                                                                                                |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_SOURCE"></span><span id="nmeventflag_do_not_display_source"></span><dl> <dt>**nmeventflag \_ \_ keine \_ Quelle anzeigen \_**</dt> </dl>                       | Der Quell Name für das Ereignis wird nicht angezeigt. <br/>                                                                                                                   |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_EVENT_NAME"></span><span id="nmeventflag_do_not_display_event_name"></span><dl> <dt>**nmeventflag \_ \_ zeigt den \_ \_ Ereignis \_ Namen nicht an**</dt> </dl>          | Der Ereignis Name für das Ereignis wird nicht angezeigt. <br/>                                                                                                                    |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_DESCRIPTION"></span><span id="nmeventflag_do_not_display_description"></span><dl> <dt>**nmeventflag \_ \_ keine \_ Beschreibung anzeigen \_**</dt> </dl>        | Die Beschreibung für das Ereignis nicht anzeigen. <br/>                                                                                                                   |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_MACHINE"></span><span id="nmeventflag_do_not_display_machine"></span><dl> <dt>**nmeventflag \_ keinen \_ \_ Computer anzeigen \_**</dt> </dl>                    | Der Computername für das Ereignis wird nicht angezeigt. <br/>                                                                                                                  |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_TIME"></span><span id="nmeventflag_do_not_display_time"></span><dl> <dt>**nmeventflag \_ \_ zeigt keine \_ \_ Zeit an**</dt> </dl>                             | Zeit für das Ereignis nicht anzeigen <br/>                                                                                                                           |
-| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_FIXED_COLUMNS"></span><span id="nmeventflag_do_not_display_fixed_columns"></span><dl> <dt>**"nmeventflag" \_ \_ \_ zeigt keine \_ festgelegten \_ Spalten an.**</dt> </dl> | Die Spalten Schweregrad, Quelle, Ereignis Name, Beschreibung, Computer oder Zeit werden nicht angezeigt. Dabei handelt es sich nicht um ein einzelnes Flag, aber es handelt sich um eine Union der vorherigen sechs Flags. <br/> |
+| <span id="EVENT_FLAG_EXPERT"></span><span id="event_flag_expert"></span><dl> <dt>**EVENT \_ FLAG \_ EXPERT**</dt> </dl>                                                                         | Die Veranstaltung stammt von einem Experten. <br/>                                                                                                                                  |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_SEVERITY"></span><span id="nmeventflag_do_not_display_severity"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT KEINEN SCHWEREGRAD \_ \_ \_ AN**</dt> </dl>                 | Zeigen Sie den Schweregrad für das Ereignis nicht an. <br/>                                                                                                                |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_SOURCE"></span><span id="nmeventflag_do_not_display_source"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT QUELLE NICHT \_ \_ \_ AN**</dt> </dl>                       | Zeigen Sie den Quellnamen für das Ereignis nicht an. <br/>                                                                                                                   |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_EVENT_NAME"></span><span id="nmeventflag_do_not_display_event_name"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT \_ KEINEN \_ \_ EREIGNISNAMEN \_ AN**</dt> </dl>          | Zeigen Sie den Ereignisnamen für das Ereignis nicht an. <br/>                                                                                                                    |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_DESCRIPTION"></span><span id="nmeventflag_do_not_display_description"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT KEINE BESCHREIBUNG \_ \_ \_ AN**</dt> </dl>        | Zeigen Sie die Beschreibung für das Ereignis nicht an. <br/>                                                                                                                   |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_MACHINE"></span><span id="nmeventflag_do_not_display_machine"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT COMPUTER NICHT \_ \_ \_ AN**</dt> </dl>                    | Zeigen Sie den Computernamen für das Ereignis nicht an. <br/>                                                                                                                  |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_TIME"></span><span id="nmeventflag_do_not_display_time"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT KEINE ZEIT \_ \_ \_ AN**</dt> </dl>                             | Zeit für das Ereignis nicht anzeigen <br/>                                                                                                                           |
+| <span id="NMEVENTFLAG_DO_NOT_DISPLAY_FIXED_COLUMNS"></span><span id="nmeventflag_do_not_display_fixed_columns"></span><dl> <dt>**NMEVENTFLAG \_ ZEIGT KEINE FESTEN SPALTEN \_ \_ \_ \_ AN**</dt> </dl> | Die Spalten Schweregrad, Quelle, Ereignisname, Beschreibung, Computer oder Uhrzeit werden nicht angezeigt. Dies ist kein einzelnes Flag, aber es ist eine Vereinigung der vorherigen sechs Flags. <br/> |
 
 
 
@@ -92,72 +92,72 @@ Ein Satz von Flags, der beschreibt, wer die Ereignisdaten sendet und wie das Ere
 **Severity**
 </dt> <dd>
 
-Schweregrad des Ereignisses. Der Schweregrad kann einen der folgenden Werte aufweisen:
+Schweregrad des Ereignisses. Der Schweregrad kann einen der folgenden Werte haben:
 
-nmevent \_ Schweregrad \_ Information nmevent \_ Schweregrad \_ Warnung nmevent \_ Schweregrad \_ Strong \_ Warnung nmevent \_ schwere \_ Fehler nmevent Schweregrad \_ \_ schwerwiegender Fehler \_ nmevent \_ Schweregrad \_ kritisch \_
+NMEVENT \_ SEVERITY \_ INFORMATIONAL NMEVENT \_ SEVERITY \_ WARNING NMEVENT \_ SEVERITY \_ STRONG \_ WARNING NMEVENT \_ SEVERITY \_ ERROR NMEVENT \_ SEVERITY \_ SEVERE \_ ERROR NMEVENT \_ SEVERITY \_ CRITICAL \_ ERROR
 
 </dd> <dt>
 
 **NumColumns**
 </dt> <dd>
 
-Anzahl der in der aktuellen-Struktur bezeichneten Spalten.
+Anzahl der spalten, die in der aktuellen Struktur angegeben sind.
 
 </dd> <dt>
 
-**szsourcename**
+**szSourceName**
 </dt> <dd>
 
-Der Name des angezeigten Experten.
+Name des angezeigten Experten.
 
 </dd> <dt>
 
-**szeventname**
+**szEventName**
 </dt> <dd>
 
-Der Name des angezeigten Ereignisses.
+Name des angezeigten Ereignisses.
 
 </dd> <dt>
 
 **szDescription**
 </dt> <dd>
 
-Die Beschreibung des angezeigten Ereignisses.
+Beschreibung des angezeigten Ereignisses.
 
 </dd> <dt>
 
-**szmachine**
+**szMachine**
 </dt> <dd>
 
-Veraltet, sollte **null** sein.
+Veraltet, sollte NULL **sein.**
 
 </dd> <dt>
 
 **Begründung**
 </dt> <dd>
 
-Informationen, die im zweiten Fenster der Ereignisanzeige angezeigt werden. Der  ausrichtungmember kann **null** sein. Wenn der Wert **null** ist, ist das zweite Fenster nicht sichtbar.
+Informationen, die im zweiten Fenster der -Ereignisanzeige. Der **Justification-Member** kann **NULL sein.** Wenn es NULL **ist,** ist das zweite Fenster nicht sichtbar.
 
 </dd> <dt>
 
-**szURL**
+**szUrl**
 </dt> <dd>
 
-Bleiben Dieser Member muss **null** sein.
+Reserviert; dieser Member muss NULL **sein.**
 
 </dd> <dt>
 
-**SysTime**
+**Systime**
 </dt> <dd>
 
-Der Zeitpunkt, zu dem die Ereignis Bedingung auftritt. Die Zeit wird relativ zum Anfang der Erfassung gemessen.
+Zeitpunkt, zu dem die Ereignisbedingung auftritt. Die Zeit wird relativ zum Anfang der Erfassung gemessen.
 
 </dd> <dt>
 
 **Spalte**
 </dt> <dd>
 
-Tabelle mit Spalten Strukturen, die im oberen Bereich der Ereignisanzeige angezeigt wird.
+Tabelle mit Spaltenstrukturen, die im oberen Bereich der Tabelle Ereignisanzeige.
 
 </dd> </dl>
 
@@ -169,7 +169,7 @@ Tabelle mit Spalten Strukturen, die im oberen Bereich der Ereignisanzeige angeze
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

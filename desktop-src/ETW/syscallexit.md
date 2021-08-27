@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Systemaufrufe von Beendigungs Ereignissen. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Beendigungsereignisse von Systemaufrufen. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: bb9a2770-f37b-4055-8811-59ba117adf82
-title: Syscallexit-Klasse
+title: SysCallExit-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: af46f374d4532efc15185a4716526beabfe5ced1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa297ced8f6c0d17c0c01da9ce11705d30fe7448c8bc2f2ae6358ddc85f653be
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980073"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120102060"
 ---
-# <a name="syscallexit-class"></a>Syscallexit-Klasse
+# <a name="syscallexit-class"></a>SysCallExit-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Systemaufrufe von Beendigungs Ereignissen.
+Diese Klasse ist die Ereignistypklasse für Beendigungsereignisse von Systemaufrufen.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,40 +38,40 @@ class SysCallExit : PerfInfo
 
 ## <a name="members"></a>Member
 
-Die **syscallexit** -Klasse verfügt über diese Typen von Membern:
+Die **SysCallExit-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **syscallexit** -Klasse verfügt über diese Eigenschaften.
+Die **SysCallExit-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Syscallntstatus**
+**SysCallNtStatus**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Der vom NT-System Aufrufwert zurückgegebene Status Code.
+Statuscode, der vom NT-Systemaufruf zurückgegeben wird.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

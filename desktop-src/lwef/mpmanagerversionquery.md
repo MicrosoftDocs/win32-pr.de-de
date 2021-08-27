@@ -1,9 +1,9 @@
 ---
-title: Mpmanagerversionquery-Funktion (mpclient. h)
-description: Gibt Versionsinformationen zu verschiedenen Komponenten des Malware Schutz-Managers zurück.
+title: MpManagerVersionQuery-Funktion (MpClient.h)
+description: Gibt Versionsinformationen zu verschiedenen Komponenten des Schadsoftwareschutz-Managers zurück.
 ms.assetid: 47DE12BF-D7A4-468B-B0E7-79B5C27E56F5
 keywords:
-- Mpmanagerversionquery-Funktion Legacy Funktionen der Windows-Umgebung
+- Legacy-Windows-Umgebungsfeatures der MpManagerVersionQuery-Funktion
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a841a83d8ceb828de0a5a9cd80f5f5bdc7f5c914
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b6407f36650b699f6bcdc9cbdd832ff2db38f68e9db758411d42aa5e81564ea4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341409"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114540"
 ---
-# <a name="mpmanagerversionquery-function"></a>Mpmanagerversionquery-Funktion
+# <a name="mpmanagerversionquery-function"></a>MpManagerVersionQuery-Funktion
 
-Gibt Versionsinformationen zu verschiedenen Komponenten des Malware Schutz-Managers zurück.
+Gibt Versionsinformationen zu verschiedenen Komponenten des Schadsoftwareschutz-Managers zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT WINAPI MpManagerVersionQuery(
 
 <dl> <dt>
 
-*hmphandle* \[ in\]
+*hMpHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für die Malware Protection Manager-Schnittstelle. Dieses Handle wird von der [**mpmanageropen**](mpmanageropen.md) -Funktion zurückgegeben.
+Behandeln Sie die Schnittstelle des Schadsoftwareschutz-Managers. Dieses Handle wird von der [**MpManagerOpen-Funktion**](mpmanageropen.md) zurückgegeben.
 
 </dd> <dt>
 
-*pversioninfo* \[ vorgenommen\]
+*pVersionInfo* \[ out\]
 </dt> <dd>
 
-Typ: **pmpversion \_ Info**
+Typ: **PMPVERSION \_ INFO**
 
-Zeiger auf eine-Struktur, die Versionsinformationen zu verschiedenen Komponenten des Malware Schutz-Managers enthält. Siehe [**mpversion \_ Info**](mpversion-info.md).
+Zeiger auf eine Struktur, die Versionsinformationen zu verschiedenen Komponenten des Schadsoftwareschutz-Managers enthält. Weitere Informationen finden Sie unter [**MPVERSION \_ INFO**](mpversion-info.md).
 
 </dd> </dl>
 
@@ -63,9 +63,9 @@ Zeiger auf eine-Struktur, die Versionsinformationen zu verschiedenen Komponenten
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert **S \_ OK.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,9 +73,9 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
@@ -84,13 +84,13 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpmanageropen**](mpmanageropen.md)
+[**MpManagerOpen**](mpmanageropen.md)
 </dt> <dt>
 
-[**mpversion- \_ Informationen**](mpversion-info.md)
+[**MPVERSION \_ INFO**](mpversion-info.md)
 </dt> </dl>
 
  

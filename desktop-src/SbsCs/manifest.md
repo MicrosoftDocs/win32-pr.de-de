@@ -1,7 +1,7 @@
 ---
-description: Die Manifest-Eigenschaft wird verwendet, um den aktiven Aktivierungs Kontext festzulegen oder zu erhalten.
+description: Die Manifest-Eigenschaft wird verwendet, um den aktiven Aktivierungskontext festzulegen oder abzurufen.
 ms.assetid: 5ad16c7b-3d66-4083-bc0f-f8294757764f
-title: ActCtx. Manifest (Eigenschaft)
+title: ActCtx.Manifest-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Sxsoa.dll
-ms.openlocfilehash: 2ebc671bbfcdfc951343e7f92cc0385ace43997e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 77d45bd0dc97ed99ee976da4e262ed3d4819b0ec4c744a4e0a8d76b98f5bacd7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119977230"
 ---
-# <a name="actctxmanifest-property"></a>ActCtx. Manifest (Eigenschaft)
+# <a name="actctxmanifest-property"></a>ActCtx.Manifest-Eigenschaft
 
-Die **Manifest** -Eigenschaft wird verwendet, um den aktiven Aktivierungs Kontext festzulegen oder zu erhalten.
+Die **Manifest-Eigenschaft** wird verwendet, um den aktiven Aktivierungskontext festzulegen oder abzurufen.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,15 +37,15 @@ propVal = ActCtx.Manifest
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Aktivierungs Kontext mit der angegebenen Manifestressource erstellt werden kann, wird die Manifestressource durch das folgende Skript festgelegt und die durch das Manifest angegebene Aktivierungs Konstante aktiviert. Wenn kein Aktivierungs Kontext aus dem Manifest erstellt werden kann, bleibt der Aktivierungs Kontext auf den aktuell aktiven Aktivierungs Kontext festgelegt.
+Wenn ein Aktivierungskontext mit der bereitgestellten Manifestdatei erstellt werden kann, legt das folgende Skript die Manifest-Eigenschaft fest und aktiviert die vom Manifest angegebene Aktivierungskonstante. Wenn ein Aktivierungskontext nicht über das Manifest erstellt werden kann, bleibt der Aktivierungskontext auf den derzeit aktiven Aktivierungskontext festgelegt.
 
-Actctxobj. Manifest = "<*Manifest-Dateiname*>";
+ActCtxObj.Manifest = "<*Manifestdateiname*>";
 
-Wenn zuvor ein Aktivierungs Kontext erstellt oder aktiviert wurde, legt das folgende Skript die **Manifest** -Eigenschaft auf den aktuellen Aktivierungs Kontext fest. Wenn zuvor kein Aktivierungs Kontext erstellt oder aktiviert wurde, wird die Eigenschaft **Manifest** auf eine leere Zeichenfolge festgelegt.
+Wenn zuvor ein Aktivierungskontext erstellt oder aktiviert wurde, legt das folgende Skript die **Manifest-Eigenschaft** auf den aktuellen Aktivierungskontext fest. Wenn zuvor kein Aktivierungskontext erstellt oder aktiviert wurde, wird die **Manifest-Eigenschaft** auf eine leere Zeichenfolge festgelegt.
 
-"BSTR bstrinmanifest = actctxobj. Manifest"
+"BSTR bstrManifest = ActCtxObj.Manifest"
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,10 +53,10 @@ Wenn zuvor ein Aktivierungs Kontext erstellt oder aktiviert wurde, legt das folg
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Sxsoa.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iactctx ist als 8fa7728f-b69b-4ee5-99f 2-e2aa021bef 28 definiert.<br/>           |
+| IID<br/>                      | IID \_ IActCtx ist als 8FA7728F-B69B-4EE5-99F2-E2AA021BEF28 definiert.<br/>           |
 
 
 

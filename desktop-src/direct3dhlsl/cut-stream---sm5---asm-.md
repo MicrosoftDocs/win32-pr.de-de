@@ -1,23 +1,23 @@
 ---
-title: cut_stream (SM5-ASM)
-description: Die Geometry-Shader-Anweisung, die die aktuelle primitive Topologie im angegebenen Stream abschließt, wenn eine beliebige Scheitel Punkte ausgegeben wurden, und startet eine neue Topologie des Typs, der vom Geometry-Shader in diesem Stream deklariert wird.
+title: cut_stream (sm5 - asm)
+description: Die Geometry-Shaderanweisung, mit der die aktuelle primitive Topologie am angegebenen Stream abgeschlossen wird, wenn Scheitelungen ausgegeben wurden, und startet eine neue Topologie des Typs, der vom Geometrie-Shader in diesem Stream deklariert wird.
 ms.assetid: CEFDD13B-34FD-4E9C-94A0-CB8879A7DBDE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4650628d7f6b66130568f885e008a5163a9ee44f
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: c019785d121bfb504b447456ad2376deb9c9c63357621513f42dcdf09351f465
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104389508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025020"
 ---
-# <a name="cut_stream-sm5---asm"></a>Ausschneide Daten \_ Strom (SM5-ASM)
+# <a name="cut_stream-sm5---asm"></a>cut \_ stream (sm5 - asm)
 
-Die Geometry-Shader-Anweisung, die die aktuelle primitive Topologie im angegebenen Stream abschließt, wenn eine beliebige Scheitel Punkte ausgegeben wurden, und startet eine neue Topologie des Typs, der vom Geometry-Shader in diesem Stream deklariert wird.
+Die Geometry-Shaderanweisung, mit der die aktuelle primitive Topologie am angegebenen Stream abgeschlossen wird, wenn Scheitelungen ausgegeben wurden, und startet eine neue Topologie des Typs, der vom Geometrie-Shader in diesem Stream deklariert wird.
 
 
 
-| \_Stream streamindex Ausschneiden |
+| Stream \_ streamIndex ausschneiden |
 |-------------------------|
 
 
@@ -28,32 +28,32 @@ Die Geometry-Shader-Anweisung, die die aktuelle primitive Topologie im angegeben
 
 | Element                                                                                                               | BESCHREIBUNG                         |
 |--------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[im \] Stream-Index.<br/> |
+| <span id="streamIndex"></span><span id="streamindex"></span><span id="STREAMINDEX"></span>*streamIndex*<br/> | \[in \] Der Streamindex.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Anweisung ausgeführt wird, wird jede zuvor ausgegebene Topologie durch den Geometry-Shader-Aufruf abgeschlossen. Wenn nicht genügend Scheitel Punkte für die vorherige primitive Topologie ausgegeben werden, werden Sie verworfen. Da die einzigen verfügbaren ausgabetopologien für den Geometry-Shader PointList, linestrip und Trianglestrip sind, gibt es nie übrig gebliebene Scheitel Punkte.
+Wenn diese Anweisung ausgeführt wird, wird jede zuvor vom Aufruf des Geometrie-Shaders ausgegebene Topologie abgeschlossen. Wenn nicht genügend Scheitelungen für die vorherige primitive Topologie ausgegeben werden, werden sie verworfen. Da die einzigen verfügbaren Ausgabetopologien für den Geometrie-Shader Pointlist, Linestrip und Trianglestrip sind, gibt es nie übrige Scheitelpunkt.
 
-*streamindex* muss ein unmittelbarer Wert \[ von 0.. 3 \] für einen deklarierten Stream sein.
+*streamIndex* muss für einen deklarierten Stream den unmittelbaren Wert \[ 0..3 \] haben.
 
-Nachdem die vorherige Topologie (sofern vorhanden) abgeschlossen ist, bewirkt diese Anweisung, dass eine neue Topologie beginnt, wobei die Topologie verwendet wird, die als Ausgabe für den Geometry-Shader deklariert ist.
+Wenn die vorherige Topologie abgeschlossen ist, bewirkt diese Anweisung, dass eine neue Topologie beginnt und die Topologie verwendet wird, die als Ausgabe für den Geometrie-Shader deklariert ist.
 
 ### <a name="restrictions"></a>Beschränkungen
 
--   Diese Anweisung gilt nur für den Geometry-Shader.
--   **Ausschneide Daten \_ Ströme** können beliebig oft im Geometry-Shader vorkommen, einschließlich innerhalb der Fluss Steuerung.
--   Wenn der Geometrie-Shader endet und Scheitel Punkte ausgegeben wurden, wird die Topologie, die Sie aufbauen, abgeschlossen, als ob eine Anweisung zum **Ausschneiden eines \_ Streams** als letzte Anweisung ausgeführt wurde.
--   Wenn Streams nicht deklariert wurden, müssen Sie [Ausschneiden](cut--sm4---asm-.md) anstelle von **Ausschneide Daten \_ Strom** verwenden.
+-   Diese Anweisung gilt nur für den Geometrie-Shader.
+-   **der \_ Ausschneidedatenstrom** kann im Geometrie-Shader eine beliebige Anzahl von Malen angezeigt werden, auch innerhalb der Flusssteuerung.
+-   Wenn der Geometrie-Shader endet und Scheitelungen ausgegeben wurden, wird die topologie, die er erstellt, abgeschlossen, als ob eine Ausschneidestreamanweisung als letzte Anweisung ausgeführt wurde. **\_**
+-   Wenn Streams nicht deklariert wurden, müssen Sie [cut](cut--sm4---asm-.md) anstelle von **cut stream \_ verwenden.**
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        | X        |       |         |
 
@@ -61,20 +61,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

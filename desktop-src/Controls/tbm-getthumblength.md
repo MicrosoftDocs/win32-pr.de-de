@@ -1,9 +1,9 @@
 ---
-title: TBM_GETTHUMBLENGTH Meldung (kommstrg. h)
-description: Ruft die Länge des Schiebereglers in einer TrackBar ab.
+title: TBM_GETTHUMBLENGTH (Commctrl.h)
+description: Ruft die Länge des Schiebereglers in einer Trackleiste ab.
 ms.assetid: 290187a2-7bf7-4a4b-a4cf-132f8ad38020
 keywords:
-- Windows-Steuerelemente für TBM_GETTHUMBLENGTH Meldung
+- TBM_GETTHUMBLENGTH von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 320789c7d3fb94cb4e8afa9abab412887533de9e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c14f7f64ff288c7e3266919bfcd0444e394077d28f515cb9bc255164db3e8819
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046410"
 ---
-# <a name="tbm_getthumblength-message"></a>TBM \_ getthumblength-Meldung
+# <a name="tbm_getthumblength-message"></a>TBM \_ GETTHUMBLENGTH-Nachricht
 
-Ruft die Länge des Schiebereglers in einer TrackBar ab.
+Ruft die Länge des Schiebereglers in einer Trackleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,9 +45,9 @@ Gibt die Länge des Schiebereglers in Pixel zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -55,13 +55,13 @@ Gibt die Länge des Schiebereglers in Pixel zurück.
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM \_ getthumbrect**](tbm-getthumbrect.md)
+[**TBM \_ GETTHUMBRECT**](tbm-getthumbrect.md)
 </dt> <dt>
 
-[**TBM \_ setthumblength**](tbm-setthumblength.md)
+[**TBM \_ SETTHUMBLENGTH**](tbm-setthumblength.md)
 </dt> </dl>
 
  

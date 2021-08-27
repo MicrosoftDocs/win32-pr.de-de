@@ -1,9 +1,9 @@
 ---
-title: TBM_GETPAGESIZE Meldung (kommstrg. h)
-description: Ruft die Anzahl logischer Positionen ab, die der Schieberegler der TrackBar als Reaktion auf Tastatureingaben bewegt, z. b. die-Taste oder die-Taste, oder Maus Eingaben, z. b. Klicks im Kanal der Trackleiste.
+title: TBM_GETPAGESIZE-Nachricht (Commctrl.h)
+description: Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben wie die Tasten oder die Mauseingabe bewegt, z. B. Klicks im Kanal der Trackleiste.
 ms.assetid: f0c5feac-2723-440e-96c0-dac37b0531ed
 keywords:
-- Windows-Steuerelemente für TBM_GETPAGESIZE Meldung
+- TBM_GETPAGESIZE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac58c0b935b468cf8af565fba2db67c88418ee4f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b1aa3ef3412fd00c18972b62d4d868ff1dbc97cb4787693b3746281b4884706e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046500"
 ---
-# <a name="tbm_getpagesize-message"></a>TBM- \_ getpagesize-Meldung
+# <a name="tbm_getpagesize-message"></a>TBM \_ GETPAGESIZE-Nachricht
 
-Ruft die Anzahl logischer Positionen ab, die der Schieberegler der TrackBar als Reaktion auf Tastatureingaben bewegt, z. b. die-Taste oder die-Taste, oder Maus Eingaben, z. b. Klicks im Kanal der Trackleiste. Bei den logischen Positionen handelt es sich um die ganzzahligen Inkremente in der TrackBar im Bereich der minimalen bis zum maximalen Schieberegler.
+Ruft die Anzahl der logischen Positionen ab, die der Schieberegler der Trackleiste als Reaktion auf Tastatureingaben wie die Tasten oder die Mauseingabe bewegt, z. B. Klicks im Kanal der Trackleiste. Die logischen Positionen sind die ganzzahligen Inkremente im Bereich der Trackleiste von minimalen bis maximalen Schiebereglerpositionen.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die Anzahl logischer Positionen ab, die der Schieberegler der TrackBar als 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen 32-Bit-Wert zurück, der die Seitengröße für die TrackBar angibt.
+Gibt einen 32-Bit-Wert zurück, der die Seitengröße für die Trackleiste angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die TrackBar sendet außerdem eine [**WM- \_ HScroll**](wm-hscroll.md) -oder [**WM- \_ VScroll**](wm-vscroll.md) -Nachricht mit den e \_ -v-Nachrichten-und TB- \_ PageDown-Benachrichtigungs Codes an das übergeordnete Fenster, wenn Sie Tastatur-oder Maus Eingaben empfängt, die die Seite
+Die Trackleiste sendet auch eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) mit den TB \_ PAGEUP- und TB \_ PAGEDOWN-Benachrichtigungscodes an das übergeordnete Fenster, wenn sie Tastatur- oder Mauseingaben empfängt, die auf der Seite scrollen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Die TrackBar sendet außerdem eine [**WM- \_ HScroll**](wm-hscroll.md) -oder [**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -59,7 +59,7 @@ Die TrackBar sendet außerdem eine [**WM- \_ HScroll**](wm-hscroll.md) -oder [**
 
 <dl> <dt>
 
-[**TBM \_ setPageSize**](tbm-setpagesize.md)
+[**TBM \_ SETPAGESIZE**](tbm-setpagesize.md)
 </dt> </dl>
 
  

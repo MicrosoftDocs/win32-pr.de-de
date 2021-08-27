@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getchannelmask-Methode.
+description: Proxyfunktion für die GetChannelMask-Methode.
 ms.assetid: c96e6078-4648-4333-8a25-bcb03a2cd50b
 title: IWICPixelFormatInfo_GetChannelMask_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 0db2c14e89aba2b13cb95209b81f6d0da5d9d949
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee200dddf0b2cd736ca2ad435b63e774076465ad3d1f6215f1c558f1abb6c194
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120056600"
 ---
-# <a name="iwicpixelformatinfo_getchannelmask_proxy-function"></a>Iwicpixelformatinfo- \_ Funktion "getchannelmask" \_
+# <a name="iwicpixelformatinfo_getchannelmask_proxy-function"></a>IWICPixelFormatInfo \_ \_ GetChannelMask-Proxyfunktion
 
-Proxy Funktion für die [**getchannelmask**](/windows/desktop/api/Wincodec/nf-wincodec-iwicpixelformatinfo-getchannelmask) -Methode.
+Proxyfunktion für die [**GetChannelMask-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicpixelformatinfo-getchannelmask)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,56 +44,56 @@ HRESULT IWICPixelFormatInfo_GetChannelMask_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwicpixelformatinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpixelformatinfo) \** _
+Typ: **[ **IWICPixelFormatInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpixelformatinfo)\***
 
-Zeiger auf dieses [_ *iwicpixelformatinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwicpixelformatinfo) -Objekt.
+Zeiger auf dieses [**IWICPixelFormatInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwicpixelformatinfo)
 
 </dd> <dt>
 
-*uichannelindex* \[ in\]
+*uiChannelIndex* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 Der Index für die abzurufende Kanalmaske.
 
 </dd> <dt>
 
-*cbmaskbuffer* \[ in\]
+*cbMaskBuffer* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des *pbmaskbuffer* -Puffers.
+Die Größe des *pbMaskBuffer-Puffers.*
 
 </dd> <dt>
 
-*pbmaskbuffer* \[ in, out\]
+*pbMaskBuffer* \[ in, out\]
 </dt> <dd>
 
-Typ: **Byte \** _
+Typ: **BYTE \***
 
-Zeiger auf den Masken Puffer.
+Zeiger auf den Maskenpuffer.
 
 </dd> <dt>
 
-_pcbActual * \[ out\]
+*beiactual* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Die tatsächliche Puffergröße, die zum Abrufen der Kanalmaske benötigt wird.
+Die tatsächliche Puffergröße, die zum Abrufen der Kanalmaske erforderlich ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -103,9 +103,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

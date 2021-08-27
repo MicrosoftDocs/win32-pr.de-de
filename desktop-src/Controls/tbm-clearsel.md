@@ -1,9 +1,9 @@
 ---
-title: TBM_CLEARSEL Meldung (kommstrg. h)
-description: Löscht den aktuellen Auswahlbereich in einer TrackBar.
+title: TBM_CLEARSEL (Commctrl.h)
+description: Löschen des aktuellen Auswahlbereichs in einer Trackleiste.
 ms.assetid: ccf69fb7-d616-4a7a-8c7c-7a82827758b1
 keywords:
-- Windows-Steuerelemente für TBM_CLEARSEL Meldung
+- TBM_CLEARSEL meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d9d2474f3978dc80b2611bd6b454c45e515ee159
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 627f2c872b47bf76312856fd81d42bfe8f2739e53efb3c37492b203b150b8e8b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046760"
 ---
-# <a name="tbm_clearsel-message"></a>TBM- \_ ClearSEL-Meldung
+# <a name="tbm_clearsel-message"></a>TBM \_ CLEARSEL-Meldung
 
-Löscht den aktuellen Auswahlbereich in einer TrackBar.
+Löschen des aktuellen Auswahlbereichs in einer Trackleiste.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Löscht den aktuellen Auswahlbereich in einer TrackBar.
 *wParam* 
 </dt> <dd>
 
-Flag neu zeichnen. Wenn dieser Parameter **true** ist, wird die TrackBar nach dem Löschen der Auswahl neu gezeichnet.
+Flag neu gezeichnet. Wenn dieser Parameter **TRUE ist,** wird die Trackleiste neu gezeichnet, nachdem die Auswahl wieder ausgewählt wurde.
 
 </dd> <dt>
 
@@ -43,9 +43,9 @@ Flag neu zeichnen. Wenn dieser Parameter **true** ist, wird die TrackBar nach de
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatvorlagen [**\_ Bereich**](trackbar-control-styles.md) bei der Erstellung angegeben haben.
+Eine Trackleiste kann nur dann einen Auswahlbereich haben, wenn Sie beim Erstellen den [**TBS \_ ENABLESELRANGE-Stil**](trackbar-control-styles.md) angegeben haben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatv
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
@@ -63,16 +63,16 @@ Eine TrackBar kann nur dann einen Auswahlbereich haben, wenn Sie den TSB-Formatv
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TBM- \_ Sekunden**](tbm-setsel.md)
+[**TBM \_ SETSEL**](tbm-setsel.md)
 </dt> <dt>
 
-[**TBM- \_ setselend**](tbm-setselend.md)
+[**TBM \_ SETSELEND**](tbm-setselend.md)
 </dt> <dt>
 
-[**TBM- \_ setselstart**](tbm-setselstart.md)
+[**TBM \_ SETSELSTART**](tbm-setselstart.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft die Binärdaten für die angegebene TagID ab.
+description: Ruft die Binärdaten für die angegebene TAGID ab.
 ms.assetid: 18992406-67b4-4c48-9629-04d6bf1c5824
-title: Sdbgetbinarytagdata-Funktion
+title: SdbGetBinaryTagData-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Apphelp.dll
-ms.openlocfilehash: 028b073b149482b79b848216e44b8a425d6ffb56
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 5bb2155c7fe2ff1ae2d9784777e39740e5b3224cfc60881fbe0d961ddb422360
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058520"
 ---
-# <a name="sdbgetbinarytagdata-function"></a>Sdbgetbinarytagdata-Funktion
+# <a name="sdbgetbinarytagdata-function"></a>SdbGetBinaryTagData-Funktion
 
-Ruft die Binärdaten für die angegebene **TagID** ab.
+Ruft die Binärdaten für die angegebene **TAGID** ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ PVOID WINAPI SdbGetBinaryTagData(
 
 <dl> <dt>
 
-*PDB* \[ in\]
+*pdb* \[ In\]
 </dt> <dd>
 
-Ein Handle für die Shimdatenbank.
+Ein Handle für die Shim-Datenbank.
 
 </dd> <dt>
 
-*tiwhat* \[ in\]
+*tiWhich* \[ In\]
 </dt> <dd>
 
-Die **TagID** , die den abzurufenden Daten entspricht.
+Die **TAGID,** die den abzurufenden Daten entspricht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt einen Zeiger auf die Binärdaten oder **null** zurück, wenn die **TagID** ungültig ist.
+Die Funktion gibt einen Zeiger auf die Binärdaten oder **NULL** zurück, wenn die **TAGID** ungültig ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Die-Funktion gibt einen Zeiger auf die Binärdaten oder **null** zurück, wenn d
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                   |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | DLL<br/>                      | <dl> <dt>Apphelp.dll</dt> </dl> |
 
 
@@ -74,16 +74,16 @@ Die-Funktion gibt einen Zeiger auf die Binärdaten oder **null** zurück, wenn d
 
 <dl> <dt>
 
-[**Sdbgetstringtagptr**](sdbgetstringtagptr.md)
+[**SdbGetStringTagPtr**](sdbgetstringtagptr.md)
 </dt> <dt>
 
-[**Sdbreaddwordtag**](sdbreaddwordtag.md)
+[**SdbReadDWORDTag**](sdbreaddwordtag.md)
 </dt> <dt>
 
-[**Sdbreadqwordtag**](sdbreadqwordtag.md)
+[**SdbReadQWORDTag**](sdbreadqwordtag.md)
 </dt> <dt>
 
-[**Sdbreadstringtag**](sdbreadstringtag.md)
+[**SdbReadStringTag**](sdbreadstringtag.md)
 </dt> </dl>
 
  

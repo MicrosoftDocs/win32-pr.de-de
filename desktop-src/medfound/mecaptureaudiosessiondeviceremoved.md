@@ -1,37 +1,37 @@
 ---
-description: Wird von einer audioerfassungs-Quelle gesendet, wenn das Gerät entfernt wird.
+description: Wird von einer Audioerfassungsquelle gesendet, wenn das Gerät entfernt wird.
 ms.assetid: A249D8B4-15A8-4AD3-8316-2886E5C37825
-title: Mecaptureaudiosessiondeviceremoved-Ereignis (mfobjects. h)
+title: MECaptureAudioSessionDeviceRemoved-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa0cf1b9a7536affed5a4665f6f2e364e1f872e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c1c3b0e9acbf627800f69ad8ba374edc4b6f075268e61d2c71618c07e8c95645
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114200"
 ---
-# <a name="mecaptureaudiosessiondeviceremoved-event"></a>Mecaptureaudiosessiondeviceremoved-Ereignis
+# <a name="mecaptureaudiosessiondeviceremoved-event"></a>MECaptureAudioSessionDeviceRemoved-Ereignis
 
-Wird von einer audioerfassungs-Quelle gesendet, wenn das Gerät entfernt wird.
+Wird von einer Audioerfassungsquelle gesendet, wenn das Gerät entfernt wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
-| VARTYPE               | BESCHREIBUNG                           |
+| VARTYPE               | Beschreibung                           |
 |-----------------------|---------------------------------------|
-| VT \_ leer <br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY <br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis wird vom Mediendaten Strom der audioerfassungs Quelle gesendet.
+Dieses Ereignis wird vom Medienstream der Audioerfassungsquelle gesendet.
 
-Die Erfassungs Quelle sendet dieses Ereignis, wenn es ein [**iaudiosessionevents:: onsessiondevi-**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected) Ereignis von der Audiositzung empfängt, bei der der Trennungsgrund gleich **disconnecsquondeviceremoval** ist.
+Die Erfassungsquelle sendet dieses Ereignis, wenn sie ein [**IAudioSessionEvents::OnSessionDisconnected-Ereignis**](/windows/win32/api/audiopolicy/nf-audiopolicy-iaudiosessionevents-onsessiondisconnected) aus der Audiositzung empfängt, deren Trennungsgrund **disconnectreasonDeviceRemoval** entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Die Erfassungs Quelle sendet dieses Ereignis, wenn es ein [**iaudiosessionevents
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Die Erfassungs Quelle sendet dieses Ereignis, wenn es ein [**iaudiosessionevents
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

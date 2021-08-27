@@ -1,31 +1,31 @@
 ---
-description: Der anypath-Datentyp ist eine Text Zeichenfolge, die entweder einen vollständigen Pfad oder einen relativen Pfad enthält.
+description: Der AnyPath-Datentyp ist eine Textzeichenfolge, die entweder einen vollständigen oder einen relativen Pfad enthält.
 ms.assetid: fe8a4d2a-1960-40af-a0e4-4d65accdd388
-title: Anypath
+title: AnyPath
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80ab6265874616bb0bb1a2f61098cdbabfa8ea24
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ab5d8e7aaf4e92c2b33379b92b00263df07366ff340346aa19518478f8f2394
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120045780"
 ---
-# <a name="anypath"></a>Anypath
+# <a name="anypath"></a>AnyPath
 
-Der anypath-Datentyp ist eine Text Zeichenfolge, die entweder einen vollständigen Pfad oder einen relativen Pfad enthält. Wenn Sie einen relativen Pfad angeben, können Sie einen langen Dateinamen mit dem kurzen Dateinamen einschließen, indem Sie die kurz-und lange Namen durch einen senkrechten Strich ( \| ) trennen. Beachten Sie, dass auf diese Weise nicht mehrere Ebenen eines Verzeichnisses oder voll qualifizierte Pfade angegeben werden können. Der Pfad kann Eigenschaften enthalten, die in eckigen Klammern () eingeschlossen sind \[ \] .
+Der AnyPath-Datentyp ist eine Textzeichenfolge, die entweder einen vollständigen oder einen relativen Pfad enthält. Wenn Sie einen relativen Pfad angeben, können Sie einen langen Dateinamen mit dem kurzen Dateinamen angeben, indem Sie die kurzen und langen Namen durch einen vertikalen Balken ( ) \| trennen. Beachten Sie, dass Sie auf diese Weise nicht mehrere Ebenen eines Verzeichnisses oder vollqualifizierter Pfade angeben können. Der Pfad kann Eigenschaften enthalten, die in eckige Klammern () eingeschlossen \[ \] sind.
 
-Beispiele für gültige anypath-Daten:
+Beispiele für gültige AnyPath-Daten:
 
--   \\\\temporäre Server \\ Freigabe \\
--   c: \\ Temp
+-   \\\\server \\ share \\ temp
+-   c: \\ temp
 -   \\Temp
--   PROJEC ~ 1 \| Projekt Status
+-   projec~1 \| Project Status
 
-Beispiele für ungültige anypath-Daten:
+Beispiele für ungültige AnyPath-Daten:
 
--   c: \\ Temp \\ PROJEC ~ 1 \| c: \\ Temp ein \\ Projekt Status
--   \\Temp- \\ PROJEC ~ 1 \| \\ Temp ein \\ Projekt Status
+-   c: \\ temp \\ projec~1 \| c: temp one Project \\ \\ Status
+-   \\temp \\ projec~1 \| \\ temp one Project \\ Status
 
  
 

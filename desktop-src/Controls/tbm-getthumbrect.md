@@ -1,9 +1,9 @@
 ---
-title: TBM_GETTHUMBRECT Meldung (kommstrg. h)
-description: Ruft die Größe und Position des umgebenden Rechtecks für den Schieberegler in einer TrackBar ab.
+title: TBM_GETTHUMBRECT Meldung (Commctrl.h)
+description: Ruft die Größe und Position des umschließenden Rechtecks für den Schieberegler in einer Trackleiste ab.
 ms.assetid: f53fd7af-36f8-4490-aa95-f1fa20f34efb
 keywords:
-- Windows-Steuerelemente für TBM_GETTHUMBRECT Meldung
+- TBM_GETTHUMBRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dce1bba8af9a65f297aa0515c1103c50daa1626d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f4d2582ccfb5276f65cbf1187458774622e62f6dd87d8dcadd2e16a7447f769a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046360"
 ---
-# <a name="tbm_getthumbrect-message"></a>TBM- \_ getthumbrect-Nachricht
+# <a name="tbm_getthumbrect-message"></a>TBM \_ GETTHUMBRECT-Nachricht
 
-Ruft die Größe und Position des umgebenden Rechtecks für den Schieberegler in einer TrackBar ab.
+Ruft die Größe und Position des umschließenden Rechtecks für den Schieberegler in einer Trackleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Ruft die Größe und Position des umgebenden Rechtecks für den Schieberegler in
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Die Meldung füllt diese-Struktur mit dem umgebenden Rechteck des Schiebe leisten-Schiebereglers in Client Koordinaten des TrackBar-Fensters.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Die Nachricht füllt diese Struktur mit dem umschließenden Rechteck des Schiebereglers der Trackleiste in Clientkoordinaten des Fensters der Trackleiste.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

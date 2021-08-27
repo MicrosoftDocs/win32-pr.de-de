@@ -1,56 +1,56 @@
-- name: Netzwerkfreigabe Verwaltung
+- name: Netzwerkfreigabeverwaltung
   href: network-share-management.md
   items:
-    - name: Informationen zur Netzwerkfreigabe Verwaltung
+    - name: Informationen zur Netzwerkfreigabeverwaltung
       href: about-network-share-management.md
       items:
-        - name: Neuerungen bei der Netzwerkfreigabe Verwaltung in Windows Server 2008 R2 und Windows 7
+        - name: Neuerungen bei der Netzwerkfreigabeverwaltung in Windows Server 2008 R2 und Windows 7
           href: what-s-new-in-network-share-management-in-windows-server-2008-r2-and-windows-7.md
-        - name: Netfile-Funktionen
+        - name: NetFile-Funktionen
           href: netfile-functions.md
-        - name: Netzwerkfreigabe Funktionen
+        - name: Netzwerkfreigabefunktionen
           href: network-share-functions.md
-        - name: Sitzungs Funktionen
+        - name: Sitzungsfunktionen
           href: session-functions.md
         - name: Statistikfunktionen
           href: statistics-functions.md
-    - name: Referenz zur Netzwerkfreigabe Verwaltung
+    - name: Referenz zur Netzwerkfreigabeverwaltung
       href: network-share-management-reference.md
       items:
-        - name: Funktionen für die Netzwerkfreigabe Verwaltung
+        - name: Verwaltungsfunktionen für Netzwerkfreigaben
           href: network-share-management-functions.md
           items:
-            - name: Netconnectionenum
+            - name: NetConnectionEnum
               href: /windows/desktop/api/Lmshare/nf-lmshare-netconnectionenum
-            - name: Netfileclose
+            - name: NetFileClose
               href: /windows/desktop/api/Lmshare/nf-lmshare-netfileclose
-            - name: Netfileaufumum
+            - name: NetFileEnum
               href: /windows/desktop/api/Lmshare/nf-lmshare-netfileenum
-            - name: Netfilegetinfo
+            - name: NetFileGetInfo
               href: /windows/desktop/api/Lmshare/nf-lmshare-netfilegetinfo
-            - name: '"Netzessiondel"'
+            - name: NetSessionDel
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsessiondel
-            - name: '"Netzessionaufumum"'
+            - name: NetSessionEnum
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsessionenum
-            - name: '"Netzessiongetinfo"'
+            - name: NetSessionGetInfo
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsessiongetinfo
             - name: NetShareAdd
               href: /windows/desktop/api/Lmshare/nf-lmshare-netshareadd
-            - name: Netsharecheck
+            - name: NetShareCheck
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsharecheck
-            - name: Netsharedel
+            - name: NetShareDel
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsharedel
-            - name: Netsharedelta Ex
+            - name: NetShareDelEx
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsharedelex
-            - name: Netshareaufumum
+            - name: NetShareEnum
               href: /windows/desktop/api/Lmshare/nf-lmshare-netshareenum
             - name: NetShareGetInfo
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsharegetinfo
             - name: NetShareSetInfo
               href: /windows/desktop/api/Lmshare/nf-lmshare-netsharesetinfo
-            - name: Netstatisticsget
+            - name: NetStatisticsGet
               href: /windows/desktop/api/Lmstats/nf-lmstats-netstatisticsget
-        - name: Strukturen der Netzwerkfreigabe Verwaltung
+        - name: Verwaltungsstrukturen für Netzwerkfreigaben
           href: network-share-management-structures.md
           items:
             - name: CONNECTION_INFO_0

@@ -12,14 +12,14 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 1e5602aa7384c8de6c33b407e9a536141d8d002b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c05e71e485eaaf3ff309dc3a0df3d792ccd18c1438964d387afe969adbfd3fc6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104522952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120058600"
 ---
-# <a name="path_type-enumeration"></a>Pfadtyp- \_ Enumeration
+# <a name="path_type-enumeration"></a>PATH \_ TYPE-Enumeration
 
 Stellt den Typ des Pfads dar, der als Argument verwendet wird.
 
@@ -39,14 +39,14 @@ typedef enum _PATH_TYPE {
 
 <dl> <dt>
 
-<span id="DOS_PATH"></span><span id="dos_path"></span>**DOS- \_ Pfad**
+<span id="DOS_PATH"></span><span id="dos_path"></span>**\_DOS-PFAD**
 </dt> <dd>
 
-Standard Pfad.
+Standardpfad.
 
 </dd> <dt>
 
-<span id="NT_PATH"></span><span id="nt_path"></span>**NT- \_ Pfad**
+<span id="NT_PATH"></span><span id="nt_path"></span>**NT \_ PATH**
 </dt> <dd>
 
 Interner Pfad.
@@ -59,8 +59,8 @@ Interner Pfad.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -68,10 +68,10 @@ Interner Pfad.
 
 <dl> <dt>
 
-[**Sdbkreatedatabase**](sdbcreatedatabase.md)
+[**SdbCreateDatabase**](sdbcreatedatabase.md)
 </dt> <dt>
 
-[**Sdbopendatabase**](sdbopendatabase.md)
+[**SdbOpenDatabase**](sdbopendatabase.md)
 </dt> </dl>
 
  

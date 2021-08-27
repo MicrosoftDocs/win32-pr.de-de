@@ -1,11 +1,11 @@
 ---
-title: Inapservermanagement unregistersystemhealthvalidator-Methode (napservermanagement. h)
-description: Wird verwendet, um die Registrierung eines SHV beim NAP-Server aufzuheben.
+title: INapServerManagement UnregisterSystemHealthValidator-Methode (NapServerManagement.h)
+description: Wird zum Aufheben der Registrierung einer SHV beim NAP-Server verwendet.
 ms.assetid: f4148df1-a230-4845-ac8b-9e04be9e0d6c
 keywords:
-- Unregistersystemhealthvalidator-Methode NAP
-- Unregistersystemhealthvalidator-Methode NAP, inapservermanagement-Schnittstelle
-- Inapservermanagement Interface NAP, unregistersystemhealthvalidator-Methode
+- UnregisterSystemHealthValidator-Methode NAP
+- UnregisterSystemHealthValidator-Methode NAP, INapServerManagement-Schnittstelle
+- INapServerManagement-Schnittstelle NAP, UnregisterSystemHealthValidator-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0715445504b862d9ae9e8478b543f8e80378f08
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 116bcf2d2eec17389cf230bf0a1ad24ba386d2a6e35872570efda092e5992869
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037830"
 ---
-# <a name="inapservermanagementunregistersystemhealthvalidator-method"></a>Inapservermanagement:: unregistersystemhealthvalidator-Methode
+# <a name="inapservermanagementunregistersystemhealthvalidator-method"></a>INapServerManagement::UnregisterSystemHealthValidator-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapservermanagement:: unregistersystemhealthvalidator** -Methode wird verwendet, um die Registrierung eines SHV beim NAP-Server aufzuheben.
+Mit **der INapServerManagement::UnregisterSystemHealthValidator-Methode** wird die Registrierung einer SHV beim NAP-Server aufgehoben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT UnregisterSystemHealthValidator(
 
 <dl> <dt>
 
-*ID* \[ in\]
+*id* \[ in\]
 </dt> <dd>
 
-Eine [**systemhealthentityid**](nap-type-constants.md) , die den eindeutigen Bezeichner des SHV enthält, dessen Registrierung aufgehoben werden soll.
+Eine [**SystemHealthEntityId,**](nap-type-constants.md) die den eindeutigen Bezeichner der SHV enthält, deren Registrierung aufgehoben werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn asynchrone Aufrufe für den SHV ausstehen, werden Sie zu einem späteren Zeitpunkt abgeschlossen und verworfen.
+Wenn asynchrone Aufrufe für die SHV ausstehen, werden sie zu einem späteren Zeitpunkt abgeschlossen und verworfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Wenn asynchrone Aufrufe für den SHV ausstehen, werden Sie zu einem späteren Ze
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                               |
-| Header<br/>                   | <dl> <dt>Napservermanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napservermanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                               |
+| Header<br/>                   | <dl> <dt>NapServerManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapServerManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qsvrmgmt.dll</dt> </dl>            |
 
 
@@ -92,7 +92,7 @@ Wenn asynchrone Aufrufe für den SHV ausstehen, werden Sie zu einem späteren Ze
 
 <dl> <dt>
 
-[**Inapservermanagement**](inapservermanagement.md)
+[**INapServerManagement**](inapservermanagement.md)
 </dt> </dl>
 
  

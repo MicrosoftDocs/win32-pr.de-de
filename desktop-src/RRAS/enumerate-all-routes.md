@@ -1,33 +1,33 @@
 ---
-title: Alle Routen aufzählen
-description: Im folgenden Verfahren werden die Schritte beschrieben, die zum Auflisten von Entitäten verwendet werden, die von der RTMv2-API verwendet werden. Der folgende Beispielcode zeigt, wie alle Routen aufgelistet werden.
+title: Aufzählen aller Routen
+description: Das folgende Verfahren beschreibt die Schritte zum Aufzählen aller Entitäten, die von der RTMv2-API verwendet werden. Der folgende Beispielcode zeigt, wie alle Routen aufzählt werden.
 ms.assetid: 78a50e4a-f3c7-4a0d-a528-18d35b66369d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6c927665cab8d4db492d3a2c5f8e9363fc1fe7be
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c5f8707c7cf78f274fedaca3fb4882ae36dbd569ab5fa1260ec3b6cb663aced3
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711340"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101850"
 ---
-# <a name="enumerate-all-routes"></a>Alle Routen aufzählen
+# <a name="enumerate-all-routes"></a>Aufzählen aller Routen
 
-Im folgenden Verfahren werden die Schritte beschrieben, die zum Auflisten von Entitäten verwendet werden, die von der RTMv2-API verwendet werden. Der folgende Beispielcode zeigt, wie alle Routen aufgelistet werden.
+Das folgende Verfahren beschreibt die Schritte zum Aufzählen aller Entitäten, die von der RTMv2-API verwendet werden. Der folgende Beispielcode zeigt, wie alle Routen aufzählt werden.
 
 **Der grundlegende Prozess für jede Enumeration lautet wie folgt:**
 
-1.  Starten Sie die-Enumeration, indem Sie ein Handle vom Routing Tabellen-Manager abrufen. Aufrufen von [**rtmkreatedestenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatedestenum), [**rtmkreaterouteenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreaterouteenum) und [**rtmkreatenexthopenum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatenexthopenum) die Kriterien, die die Art der aufzuzählenden Informationen angeben. Dieses Kriterium umfasst, ist aber nicht auf eine Reihe von Zielen, eine bestimmte Schnittstelle und die Sichten beschränkt, in denen sich die Informationen befinden.
-2.  Aufrufen von [**rtmgetenumdebug**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumdests), [**rtmgetenumroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumroutes) und [**rtmgetenumnexthops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumnexthops) einmal oder mehrmals zum Abrufen von Daten, bis der Routing Tabellen-Manager Fehler \_ keine \_ weiteren Elemente zurückgibt \_ . Die Routen-, Ziel-und Next-Hop-Daten werden in der Reihenfolge der Adressinformationen (und die Werte für die Präferenz und Metrik, wenn Routen aufgelistet werden) zurückgegeben.
-3.  Aufrufen von [**rtmreleasedests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedests), [**rtmreleaseroutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes) und [**rtmreleasenexthops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthops) , wenn die mit der-Enumeration verknüpften Handles oder Informationsstrukturen nicht mehr benötigt werden.
-4.  Aufrufen von [**rtmdeleteenumhandle**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteenumhandle) zum Freigeben des enumerationshandles, das beim Erstellen der Enumeration zurückgegeben wurde. Diese Funktion wird verwendet, um das Handle für alle Typen von Enumerationen freizugeben.
+1.  Starten Sie die -Enumeration, indem Sie ein Handle vom Routingtabellen-Manager abrufen. Rufen [**Sie RtmCreateDestEnum,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatedestenum) [**RtmCreateRouteEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreaterouteenum) und [**RtmCreateNextHopEnum**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmcreatenexthopenum) auf, um die Kriterien zur Angabe der Art der aufzählten Informationen zu geben. Diese Kriterien umfassen unter anderem einen Bereich von Zielen, eine bestimmte Schnittstelle und die Ansichten, in denen sich die Informationen befinden.
+2.  Rufen [**Sie RtmGetEnumDests,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumdests) [**RtmGetEnumRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumroutes) und [**RtmGetEnumNextHops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetenumnexthops) mindestens einmal auf, um Daten abzurufen, bis der Routingtabellen-Manager ERROR NO MORE ITEMS zurückgibt. \_ \_ \_ Die Routen-, Ziel- und Nächsten-Hop-Daten werden in der Reihenfolge der Adressinformationen (und der Einstellungs- und Metrikwerte, wenn Routen aufzählt werden) zurückgegeben.
+3.  Rufen [**Sie RtmReleaseDests,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasedests) [**RtmReleaseRoutes**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleaseroutes) und [**RtmReleaseNextHops**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasenexthops) auf, wenn die der Enumeration zugeordneten Handles oder Informationsstrukturen nicht mehr benötigt werden.
+4.  Rufen [**Sie RtmDeleteEnumHandle auf,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteenumhandle) um das Enumerationshandle frei zu geben, das beim Erstellen der Enumeration zurückgegeben wurde. Diese Funktion wird verwendet, um das Handle für alle Enumerationstypen frei zu geben.
 
 > [!Note]  
-> Routen, die den Status "Hold-Down" aufweisen, werden nur aufgelistet, wenn ein Client mithilfe der RTM- \_ Ansicht \_ Maske beliebige Daten von allen Sichten anfordert \_ .
+> Routen, die sich im zurückhaltenden Zustand befinden, werden nur aufzählt, wenn ein Client Daten aus allen Ansichten mit RTM \_ VIEW MASK ANY an \_ \_ fordert.
 
- 
+ 
 
-Der folgende Beispielcode zeigt, wie alle Routen in der Routing Tabelle aufgelistet werden.
+Der folgende Beispielcode zeigt, wie sie alle Routen in der Routingtabelle aufzählen.
 
 
 ```C++
@@ -88,9 +88,9 @@ if (Status == NO_ERROR)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

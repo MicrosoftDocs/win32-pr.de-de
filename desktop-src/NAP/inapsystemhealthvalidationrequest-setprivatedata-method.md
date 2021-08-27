@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthvalidationrequest setprivatedata-Methode (napsystemhealthvalidator. h)
-description: Ermöglicht dem napserver das Speichern von Zustandsinformationen.
+title: INapSystemHealthValidationRequest SetPrivateData-Methode (NapSystemHealthValidator.h)
+description: Ermöglicht dem NapServer das Speichern von Zustandsinformationen.
 ms.assetid: 128f9beb-e5da-4b20-bf5e-fcf064209da3
 keywords:
-- Setprivatedata-Methode NAP
-- Setprivatedata-Methode NAP, inapsystemhealthvalidationrequest-Schnittstelle
-- Inapsystemhealthvalidationrequest-Schnittstelle NAP, setprivatedata-Methode
+- SetPrivateData-Methode NAP
+- SetPrivateData-Methode NAP, INapSystemHealthValidationRequest-Schnittstelle
+- INapSystemHealthValidationRequest-Schnittstelle NAP, SetPrivateData-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: da50ca236c08388632e17916decee162b3b71743
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bf0e362eb3732d18c0e98b89f834dfe9efbc2a70ca82b7c211a96459d46a9f1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120037690"
 ---
-# <a name="inapsystemhealthvalidationrequestsetprivatedata-method"></a>Inapsystemhealthvalidationrequest:: setprivatedata-Methode
+# <a name="inapsystemhealthvalidationrequestsetprivatedata-method"></a>INapSystemHealthValidationRequest::SetPrivateData-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsystemhealthvalidationrequest:: setprivatedata** -Methode ermöglicht dem napserver das Speichern von Zustandsinformationen.
+Die **INapSystemHealthValidationRequest::SetPrivateData-Methode** ermöglicht dem NapServer das Speichern von Zustandsinformationen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,32 +47,32 @@ HRESULT SetPrivateData(
 
 <dl> <dt>
 
-*PRIVATEDATA* \[ in\]
+*privateData* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein [**PRIVATEDATA**](/windows/win32/api/naptypes/ns-naptypes-privatedata) -datenblob, das die nicht transparenten Zustandsinformationen enthält.
+Ein Zeiger auf ein [**PrivateData-Datenblob,**](/windows/win32/api/naptypes/ns-naptypes-privatedata) das die nicht transparenten Zustandsinformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Es können auch andere COM-spezifische Fehlercodes zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur der napserver kann das datenblob interpretieren.
+Nur der NapServer kann das Datenblob interpretieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,9 +81,9 @@ Nur der napserver kann das datenblob interpretieren.
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qshvhost.dll</dt> </dl>                 |
 
 
@@ -92,7 +92,7 @@ Nur der napserver kann das datenblob interpretieren.
 
 <dl> <dt>
 
-[**Inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md)
+[**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md)
 </dt> </dl>
 
  

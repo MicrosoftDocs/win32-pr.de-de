@@ -1,33 +1,33 @@
 ---
-description: Eine Anwendung kann den Inhalt eines Verzeichnisses und seiner Unterverzeichnisse mithilfe von Änderungs Benachrichtigungen überwachen.
+description: Eine Anwendung kann den Inhalt eines Verzeichnisses und seiner Unterverzeichnisse mithilfe von Änderungsbenachrichtigungen überwachen.
 ms.assetid: ad884b15-e040-478b-aa99-d8622198f62a
-title: Abrufen von Benachrichtigungen über Verzeichnisänderungen
+title: Abrufen von Verzeichnisänderungsbenachrichtigungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c44375c334c3630aee09bf4a13fc23f87cc91e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6d94bd2b86aacaf7b32191fd68208bd1400a4b56cf4c55b13102210ffb50f7ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120048000"
 ---
-# <a name="obtaining-directory-change-notifications"></a>Abrufen von Benachrichtigungen über Verzeichnisänderungen
+# <a name="obtaining-directory-change-notifications"></a>Abrufen von Verzeichnisänderungsbenachrichtigungen
 
-Eine Anwendung kann den Inhalt eines Verzeichnisses und seiner Unterverzeichnisse mithilfe von Änderungs Benachrichtigungen überwachen. Das warten auf eine Änderungs Benachrichtigung ähnelt dem Ausführen eines Lesevorgangs für ein Verzeichnis und ggf. seiner Unterverzeichnisse. Wenn sich im zu überwachenden Verzeichnis etwas ändert, wird der Lesevorgang abgeschlossen. Beispielsweise kann eine Anwendung diese Funktionen verwenden, um ein Verzeichnis aufzulisten, wenn ein Dateiname im überwachten Verzeichnis geändert wird.
+Eine Anwendung kann den Inhalt eines Verzeichnisses und seiner Unterverzeichnisse mithilfe von Änderungsbenachrichtigungen überwachen. Das Warten auf eine Änderungsbenachrichtigung ähnelt dem Warten auf einen ausstehenden Lesevorgang für ein Verzeichnis und bei Bedarf dessen Unterverzeichnisse. Wenn sich etwas innerhalb des verzeichnisses ändert, das beobachtet wird, wird der Lesevorgang abgeschlossen. Beispielsweise kann eine Anwendung diese Funktionen verwenden, um eine Verzeichnisauflistung zu aktualisieren, wenn sich ein Dateiname innerhalb des überwachten Verzeichnisses ändert.
 
-Eine Anwendung kann eine Reihe von Bedingungen angeben, die eine Änderungs Benachrichtigung mithilfe der [**findfirstchangenotifi-**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstchangenotificationa) Funktion auslöst. Zu den Bedingungen zählen Änderungen an Dateinamen, Verzeichnisnamen, Attributen, Dateigröße, Zeitpunkt des letzten Schreibzugriffs und Sicherheit. Diese Funktion gibt auch ein Handle zurück, auf das mithilfe der Wait- [Funktionen](/windows/desktop/Sync/wait-functions)gewartet werden kann. Wenn die Warte Bedingung erfüllt ist, kann [**findnextchangenotifiverwendet**](/windows/desktop/api/FileAPI/nf-fileapi-findnextchangenotification) werden, um ein Benachrichtigungs handle bereitzustellen, das auf nachfolgende Änderungen gewartet werden soll. Diese Funktionen geben jedoch nicht die tatsächliche Änderung an, die die Warte Bedingung erfüllt hat.
+Eine Anwendung kann mithilfe der [**FindFirstChangeNotification-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstchangenotificationa) eine Reihe von Bedingungen angeben, die eine Änderungsbenachrichtigung auslösen. Die Bedingungen umfassen Änderungen an Dateinamen, Verzeichnisnamen, Attributen, Dateigröße, Zeitpunkt des letzten Schreibzugriffs und Sicherheit. Diese Funktion gibt auch ein Handle zurück, auf das mithilfe der [Wartefunktionen gewartet werden kann.](/windows/desktop/Sync/wait-functions) Wenn die Wartebedingung erfüllt ist, [**kann FindNextChangeNotification**](/windows/desktop/api/FileAPI/nf-fileapi-findnextchangenotification) verwendet werden, um ein Benachrichtigungshand handle zum Warten auf nachfolgende Änderungen zur Verfügung zu stellen. Diese Funktionen geben jedoch nicht die tatsächliche Änderung an, die die Wartebedingung erfüllt hat.
 
-Verwenden Sie [**findclosechangenotifi,**](/windows/desktop/api/FileAPI/nf-fileapi-findclosechangenotification) um das Benachrichtigungs Handle zu schließen.
+Verwenden [**Sie FindCloseChangeNotification,**](/windows/desktop/api/FileAPI/nf-fileapi-findclosechangenotification) um das Benachrichtigungshand handle zu schließen.
 
-Um Informationen über die jeweilige Änderung im Rahmen der Benachrichtigung abzurufen, verwenden Sie die Funktion "read [**directorychangesw**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw) ". Mit dieser Funktion können Sie auch eine Vervollständigungs Routine bereitstellen.
+Verwenden Sie die [**ReadDirectoryChangesW-Funktion,**](/windows/desktop/api/WinBase/nf-winbase-readdirectorychangesw) um Informationen über die spezifische Änderung als Teil der Benachrichtigung abzurufen. Mit dieser Funktion können Sie auch eine Vervollständigungsroutine bereitstellen.
 
-Informationen zum Nachverfolgen von Änderungen auf einem Volume finden Sie unter [Change Journals](change-journals.md).
+Informationen zum Nachverfolgen von Änderungen auf einem Volume finden Sie unter [Change Journal](change-journals.md).
 
-Im folgenden Beispiel wird die Verzeichnisstruktur auf Änderungen des Verzeichnis namens überwacht. Außerdem wird ein Verzeichnis für Dateinamen Änderungen überwacht. Im Beispiel wird die [**findfirstchangenotifi-**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstchangenotificationa) Funktion verwendet, um zwei Benachrichtigungs Handles zu erstellen, und die [**WaitForMultipleObjects**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects) -Funktion, die auf die Handles gewartet werden soll. Wenn ein Verzeichnis in der Struktur erstellt oder gelöscht wird, sollte im Beispiel die gesamte Verzeichnisstruktur aktualisiert werden. Wenn eine Datei im Verzeichnis erstellt oder gelöscht wird, sollte im Beispiel das Verzeichnis aktualisiert werden.
+Im folgenden Beispiel wird die Verzeichnisstruktur auf Verzeichnisnamenänderungen überwacht. Außerdem wird ein Verzeichnis auf Dateinamenänderungen überwacht. Im Beispiel wird die [**FindFirstChangeNotification-Funktion**](/windows/desktop/api/FileAPI/nf-fileapi-findfirstchangenotificationa) verwendet, um zwei Benachrichtigungshandles zu erstellen, und die [**WaitForMultipleObjects-Funktion,**](/windows/desktop/api/synchapi/nf-synchapi-waitformultipleobjects) um auf die Handles zu warten. Wenn ein Verzeichnis in der Struktur erstellt oder gelöscht wird, sollte im Beispiel die gesamte Verzeichnisstruktur aktualisiert werden. Wenn eine Datei im Verzeichnis erstellt oder gelöscht wird, sollte das Verzeichnis im Beispiel aktualisiert werden.
 
 > [!Note]
 >
-> Dieses vereinfachte Beispiel verwendet die [**ExitProcess**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) -Funktion für das Beenden und bereinigen. komplexere Anwendungen sollten jedoch immer eine geeignete Ressourcenverwaltung wie z. b. " [**findclosechangenotifi"**](/windows/desktop/api/FileAPI/nf-fileapi-findclosechangenotification) verwenden.
+> In diesem einfachen Beispiel wird die [**ExitProcess-Funktion**](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitprocess) zum Beenden und Bereinigten verwendet. Komplexere Anwendungen sollten jedoch immer eine ordnungsgemäße Ressourcenverwaltung wie [**FindCloseChangeNotification**](/windows/desktop/api/FileAPI/nf-fileapi-findclosechangenotification) verwenden, wenn dies angemessen ist.
 
  
 

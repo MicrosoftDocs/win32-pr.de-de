@@ -1,28 +1,28 @@
 ---
-title: Verwenden des Remote Zugriffs Dienstanbieter
-description: Im folgenden Thema wird erläutert, wie RAS-Funktionen (Remote Access Service) in einer-Anwendung verwendet werden.
+title: Verwenden des Remotezugriffsdiensts
+description: Im folgenden Thema wird erläutert, wie Sie RAS-Features (Remote Access Service) in einer Anwendung verwenden.
 ms.assetid: 4f88a829-45ae-4ce9-9c6f-9ec5509ff997
 keywords:
-- RAS-Dienst-RAS, Tasks
+- RAS des Ras-Ras-Diensts, Aufgaben
 - Verwenden von RAS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f08b18c10fef339b20beb2454f0aad1488544e3c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40a19d810b14fd7b4d833c773c9e9fdcfa630ab1fa9c8dc656b4ee106cf5a39d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120025030"
 ---
-# <a name="using-remote-access-service"></a>Verwenden des Remote Zugriffs Dienstanbieter
+# <a name="using-remote-access-service"></a>Verwenden des Remotezugriffsdiensts
 
-Im folgenden Thema wird erläutert, wie RAS-Funktionen (Remote Access Service) in einer-Anwendung verwendet werden.
+Im folgenden Thema wird erläutert, wie Sie RAS-Features (Remote Access Service) in einer Anwendung verwenden.
 
--   [Verknüpfen mit der Remote Zugriffs-dll](linking-to-the-remote-access-dll.md)
+-   [Verknüpfen mit der REMOTEZUGRIFFS-DLL](linking-to-the-remote-access-dll.md)
 
- 
+ 
 
- 
+ 
 
 
 

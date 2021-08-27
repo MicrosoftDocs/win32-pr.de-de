@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientNonScriptable7 Clipboard-Eigenschaft
-description: Ruft den Zwischenablage Controller ab, der zum Synchronisieren der lokalen und Remote-zwischen Ablagen verwendet wird, wenn die manuelle Zwischenablage Synchronisierung aktiviert
+description: Ruft den Zwischenablagecontroller ab, der zum Synchronisieren der lokalen und Remotezwischenablage verwendet wird, wenn die manuelle Synchronisierung der Zwischenablage aktiviert ist.
 ms.tgt_platform: multiple
 keywords:
-- Eigenschaften Remotedesktopdienste der Zwischenablage
-- Eigenschaften Remotedesktopdienste der Zwischenablage, IMsRdpClientNonScriptable7-Schnittstelle
-- IMsRdpClientNonScriptable7 Interface-Remotedesktopdienste, Clipboard-Eigenschaft
+- Remotedesktopdienste der Zwischenablageeigenschaft
+- Zwischenablageeigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable7-Schnittstelle
+- IMsRdpClientNonScriptable7-Schnittstelle Remotedesktopdienste , Clipboard-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 12/16/2020
-ms.openlocfilehash: 770930eb780b3ce8684608ffcdc0c13c1630cab0
-ms.sourcegitcommit: 04e801237156e90b48111d60bddf437f87f5cdfe
+ms.openlocfilehash: 236666cbef369c4f2353ff524ceb7544e62f50d4a7e4a7ac59f3882057a92f48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2020
-ms.locfileid: "103957689"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009640"
 ---
-# <a name="imsrdpclientnonscriptable7clipboard-property"></a>IMsRdpClientNonScriptable7:: Clipboard (Eigenschaft)
+# <a name="imsrdpclientnonscriptable7clipboard-property"></a>IMsRdpClientNonScriptable7::Clipboard-Eigenschaft
 
-Ruft den Zwischenablage Controller ab, der zum Synchronisieren der lokalen und Remote-zwischen Ablagen verwendet wird, wenn die manuelle Zwischenablage Synchronisierung aktiviert
+Ruft den Zwischenablagecontroller ab, der zum Synchronisieren der lokalen und Remotezwischenablage verwendet wird, wenn die manuelle Synchronisierung der Zwischenablage aktiviert ist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ HRESULT get_Clipboard(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine [imsrdpclipboard](imsrdpclipboard.md) , die den Zwischenablage Controller darstellt, der zum Synchronisieren der lokalen und Remote-zwischen Ablagen verwendet wird, wenn die manuelle Zwischenablage Synchronisierung aktiviert ist (d. h., der [manualclipboardsyncenabled](imsrdpextendedsettings-property.md) -Eigenschafts Wert ist auf **true** festgelegt
+Eine [IMsRdpClipboard,](imsrdpclipboard.md) die den Zwischenablagecontroller darstellt, der zum Synchronisieren der lokalen und Remotezwischenablage verwendet wird, wenn die manuelle Zwischenablagesynchronisierung aktiviert ist (d. h. der Eigenschaftswert [ManualClipboardSyncEnabled](imsrdpextendedsettings-property.md) ist auf **True** festgelegt).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Eine [imsrdpclipboard](imsrdpclipboard.md) , die den Zwischenablage Controller d
 | Unterstützte Mindestversion (Client)| Windows 10, Version 1803 (Build 17134)      |
 | Typbibliothek            | MsTscAx.dll                        |
 | DLL                  | MsTscAx.dll     |
-| IID                      | IID \_ IMsRdpClientNonScriptable7 ist als 71b4a60a-fe21-46d8-a39b-8e32ba0c5ecc definiert.          |
+| IID                      | IID \_ IMsRdpClientNonScriptable7 ist als 71B4A60A-FE21-46D8-A39B-8E32BA0C5ECC definiert.          |
 
 ## <a name="see-also"></a>Siehe auch
 

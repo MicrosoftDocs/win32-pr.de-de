@@ -1,11 +1,11 @@
 ---
-title: Ivmnetworkadaptercollection-_NewEnum-Eigenschaft (vpccominterfaces. h)
-description: Ruft einen Enumerator für die Auflistung ab. | Ivmnetworkadaptercollection-_NewEnum-Eigenschaft (vpccominterfaces. h)
+title: IVMNetworkAdapterCollection_NewEnum eigenschaft (VPCCOMInterfaces.h)
+description: Ruft einen Enumerator für die Auflistung ab. | IVMNetworkAdapterCollection _NewEnum -Eigenschaft (VPCCOMInterfaces.h)
 ms.assetid: 9b970fc6-f8a3-4a16-9d59-789a59a99b68
 keywords:
-- Virtual PC für _NewEnum-Eigenschaft
-- _NewEnum-Eigenschaft Virtual PC, ivmnetworkadaptercollection-Schnittstelle
-- Ivmnetworkadaptercollection-Schnittstelle Virtual PC, _NewEnum-Eigenschaft
+- _NewEnum-Eigenschaft Virtueller PC
+- _NewEnum Virtual PC, IVMNetworkAdapterCollection-Schnittstelle
+- IVMNetworkAdapterCollection-Schnittstelle Virtueller PC , _NewEnum-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: caf118700a81865ff93ee581cbb2efd07d237805
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d05924b793d281cc190eed434c70efa37f1a930e905751973a6b0285920e1aa1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106370378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120007090"
 ---
-# <a name="ivmnetworkadaptercollection_newenum-property"></a>Ivmnetworkadaptercollection:: \_ netwenum-Eigenschaft
+# <a name="ivmnetworkadaptercollection_newenum-property"></a>IVMNetworkAdapterCollection:: \_ NewEnum-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
 Ruft einen Enumerator für die Auflistung ab.
 
@@ -45,7 +45,7 @@ HRESULT get__NewEnum(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
+Der [IEnumVARIANT-Enumerator.](/windows/win32/api/oaidl/nn-oaidl-ienumvariant)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -54,8 +54,8 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 | Name/Wert                                                                                                                                                    | Bedeutung                                  |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt.<br/> |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der-Parameter ist **null**.<br/>    |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
+| <dl> <dt>E \_ ZEIGER 0X80004003</dt> <dt></dt> </dl>         | Der Parameter ist **NULL.**<br/>    |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/> |
 
 
 
@@ -65,12 +65,12 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                           |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl>  |
-| IID<br/>                      | IID \_ ivmnetworkadaptercollection ist als ebaeafe9-EBCD-47cf-866e-ad87d735e479 definiert.<br/> |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                  |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl>  |
+| IID<br/>                      | IID \_ IVMNetworkAdapterCollection ist definiert als solleneafe9-ebcd-47cf-866e-ad87d735e479<br/> |
 
 
 
@@ -78,7 +78,7 @@ Der [IEnumVARIANT](/windows/win32/api/oaidl/nn-oaidl-ienumvariant) -Enumerator.
 
 <dl> <dt>
 
-[**Ivmnetworkadaptercollection**](ivmnetworkadaptercollection.md)
+[**IVMNetworkAdapterCollection**](ivmnetworkadaptercollection.md)
 </dt> </dl>
 
  

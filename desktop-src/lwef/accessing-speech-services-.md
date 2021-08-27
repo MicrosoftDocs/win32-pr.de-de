@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über den Zugriff auf Sprachdienste mit Microsoft
 ms.assetid: c6c10f2a-a433-4a8e-a069-48e3c2032fb8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 035bde03d18b77ce43c47375f2075bba02416c39
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: 617da522912e2fbae361fb3addf569d5164894fc2b98a901686b2458d4d0a8e4
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120114940"
 ---
 # <a name="accessing-speech-services-microsoft-agent-control"></a>Zugreifen auf Speech-Dienste (Microsoft-Agent-Steuerung)
 
@@ -17,7 +17,7 @@ ms.locfileid: "112262712"
 
 Obwohl die Dienste des Microsoft-Agents Unterstützung für die Spracheingabe enthalten, muss eine kompatible Spracherkennungs-Engine für Befehle und Steuerungen installiert werden, um auf die Spracheingabedienste des -Agents zuzugreifen. Wenn Sie die Sprachdienste des Microsoft-Agents verwenden möchten, um die synthetisierte Sprachausgabe für ein Zeichen zu unterstützen, müssen Sie eine kompatible Sprachsynthese-Engine (Text-to-Speech, TTS) für Ihr Zeichen installieren.
 
-Um die Spracheingabeunterstützung in Ihrer Anwendung zu aktivieren, definieren Sie ein [**Command-Objekt,**](https://www.bing.com/search?q=**Command**) und legen Sie dessen [**Voice-Eigenschaft**](https://www.bing.com/search?q=**Voice**) fest. Der -Agent lädt automatisch Sprachdienste, sodass die Spracherkennungs-Engine geladen wird, wenn der Benutzer die Überwachungsschlüssel drückt oder [**Sie Lauschen**](https://www.bing.com/search?q=**Listen**)aufrufen. Standardmäßig bestimmt die [**LanguageID**](https://www.bing.com/search?q=**LanguageID**) des Zeichens, welche Engine geladen wird. Der Agent versucht, die erste Engine zu laden, die von der Microsoft Speech API (SAPI) als übereinstimmung mit dieser Sprache zurückgegeben wird. Verwenden Sie [**SRModeID,**](https://www.bing.com/search?q=**SRModeID**) wenn Sie eine bestimmte Engine laden möchten.
+Um die Spracheingabeunterstützung in Ihrer Anwendung zu aktivieren, definieren Sie ein [**Command-Objekt,**](https://www.bing.com/search?q=**Command**) und legen Sie dessen [**Voice-Eigenschaft**](https://www.bing.com/search?q=**Voice**) fest. Der -Agent lädt automatisch Sprachdienste, sodass die Spracherkennungs-Engine geladen wird, wenn der Benutzer die Überwachungsschlüssel drückt oder [**Sie Lauschen**](https://www.bing.com/search?q=**Listen**)aufrufen. Standardmäßig bestimmt die [**LanguageID**](https://www.bing.com/search?q=**LanguageID**) des Zeichens, welche Engine geladen wird. Der Agent versucht, die erste Engine zu laden, die die Microsoft Speech-API (SAPI) als übereinstimmung mit dieser Sprache zurückgibt. Verwenden Sie [**SRModeID,**](https://www.bing.com/search?q=**SRModeID**) wenn Sie eine bestimmte Engine laden möchten.
 
 Verwenden Sie die Speak-Methode, [](https://www.bing.com/search?q=**Speak**) um die Sprachtextausgabe zu aktivieren. Der Agent versucht automatisch, eine Engine zu laden, die der [**LanguageID**](https://www.bing.com/search?q=**LanguageID**)des Zeichens entspricht. Wenn die Definition des Zeichens eine bestimmte ID des TTS-Engine-Modus enthält und diese Engine verfügbar ist und mit der **LanguageID** des Zeichens übereinstimmt, lädt der -Agent diese Engine für das Zeichen. Wenn nicht, lädt es die erste TTS-Engine, die SAPI zurückgibt, entsprechend der Spracheinstellung des Zeichens. Sie können auch [**TTSModeID**](https://www.bing.com/search?q=**TTSModeID**) verwenden, um eine bestimmte Engine zu laden.
 

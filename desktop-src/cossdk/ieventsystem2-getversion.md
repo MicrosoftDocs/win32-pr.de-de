@@ -1,7 +1,7 @@
 ---
-description: Ruft die Versionsnummer des Ereignis Systems ab.
+description: Ruft die Versionsnummer des Ereignissystems ab.
 ms.assetid: 6355f1b3-e1e7-435f-9795-d92464e004ae
-title: 'IEventSystem2:: GetVersion-Methode'
+title: IEventSystem2::GetVersion-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 2c75538d9fd71cb8ee81e454249fd5116ccd090c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 77452ccebac71cb8de8357fee0199bc04b690d59cf8d113d57a5850db0771315
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070620"
 ---
-# <a name="ieventsystem2getversion-method"></a>IEventSystem2:: GetVersion-Methode
+# <a name="ieventsystem2getversion-method"></a>IEventSystem2::GetVersion-Methode
 
-Ruft die Versionsnummer des Ereignis Systems ab.
+Ruft die Versionsnummer des Ereignissystems ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,18 +38,18 @@ HRESULT GetVersion(
 
 <dl> <dt>
 
-*pnVersion* \[ vorgenommen\]
+*pnVersion* \[ out\]
 </dt> <dd>
 
-Die Versionsnummer des Ereignis Systems.
+Die Versionsnummer des Ereignissystems.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standardrückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
 
 

@@ -1,19 +1,19 @@
 ---
-title: Wiedergeben einer MIDI-Datei
-description: Wiedergeben einer MIDI-Datei
+title: Wiedergeben einer ANWEISUNG-Datei
+description: Wiedergeben einer ANWEISUNG-Datei
 ms.assetid: a11b432f-de31-4637-a9cd-eef5fad7591a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7ce9638a5f26a2d701798f72229877dc2758829
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 44ea4b42a6bb0143005352f08af7c0498546ea37697e1a5114820964143e5c48
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120038030"
 ---
-# <a name="playing-a-midi-file"></a>Wiedergeben einer MIDI-Datei
+# <a name="playing-a-midi-file"></a>Wiedergeben einer ANWEISUNG-Datei
 
-Im folgenden Beispiel wird ein Gerät mit dem Typ "MIDI Sequencer" geöffnet, und es wird überprüft, ob der MIDI-Mapper als Ausgabeport ausgewählt wurde, die vom Parameter " *lpszmidifilename* " angegebene Datei wieder gibt und das Gerät nach Abschluss der Wiedergabe schließt. Er verwendet die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion.
+Im folgenden Beispiel wird ein SEQUENCE-Sequencergerät geöffnet, überprüft, ob die MAPPer-Eigenschaft des MAPPers als Ausgabeport ausgewählt wurde, gibt die durch den *lpszMIDIFileName-Parameter* angegebene DATEI wieder und schließt das Gerät, nachdem die Wiedergabe abgeschlossen ist. Sie verwendet die [**mciSendCommand-Funktion.**](/previous-versions//dd757160(v=vs.85))
 
 
 ```C++
@@ -88,6 +88,6 @@ DWORD playMIDIFile(HWND hWndNotify, LPSTR lpszMIDIFileName)
 
 
 
- 
+ 
 
- 
+ 

@@ -1,145 +1,145 @@
 ---
 title: Sicherheitsübersicht
-description: Das Sicherheits Framework in der Windows-Webdienste-API (wwsapi) bietet Nachrichten Integrität, Vertraulichkeit, Wiedergabe Erkennung und Server Authentifizierung mithilfe der Transportsicherheit.
+description: Das Sicherheitsframework in Windows Web Services API (WWSAPI) bietet Nachrichtenintegrität, Vertraulichkeit, Wiedergabeerkennung und Serverauthentifizierung mit Transportsicherheit.
 ms.assetid: 2681bffc-ba07-4822-b265-2bf7f95297d4
 keywords:
 - Sicherheitsübersicht Webdienste für Windows
-- Wwsapi
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 741e98ef023c0bae146b5fde582484f2dd133df6
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: b6928afd51ded7104e909994f8b625b931da6a157e859c890066c73074ae7d16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120089440"
 ---
 # <a name="security-overview"></a>Sicherheitsübersicht
 
-Das Sicherheits Framework in der Windows-Webdienste-API (wwsapi) bietet Folgendes:
+Das Sicherheitsframework in Windows Web Services API (WWSAPI) bietet:
 
--   Nachrichten Integrität, Vertraulichkeit, Wiedergabe Erkennung und Server Authentifizierung mit Transportsicherheit.
--   Client Authentifizierung, z. b. Überprüfung des Sicherheits Tokens, Zertifikats Vertrauensstellung und Sperr Überprüfungen usw. mithilfe von SOAP-Nachrichten Sicherheit oder Transportsicherheit
+-   Nachrichtenintegrität, Vertraulichkeit, Wiedergabeerkennung und Serverauthentifizierung mit Transportsicherheit.
+-   Clientauthentifizierung, z. B. Sicherheitstokenüberprüfung, Zertifikatvertrauens- und Sperrüberprüfungen usw. mit SOAP-Nachrichtensicherheit oder Transportsicherheit.
 
-## <a name="the-security-programming-model"></a>Das Sicherheits Programmiermodell
+## <a name="the-security-programming-model"></a>Das Sicherheitsprogrammiermodell
 
-Die Sicherheit ist mit [Kommunikationskanälen](channel-layer-overview.md)verknüpft. Das Sichern eines Kanals besteht aus den folgenden Schritten.
+Sicherheit ist [Kommunikationskanälen zugeordnet.](channel-layer-overview.md) Das Sichern eines Kanals umfasst die folgenden Schritte.
 
--   Erstellen und initialisieren Sie eine oder mehrere [**Sicherheits Bindungen**](/windows/desktop/api/WebServices/ns-webservices-ws_security_binding) , die den Sicherheitsanforderungen der Anwendung entsprechen.
--   Erstellen Sie eine [**Sicherheits Beschreibung**](/windows/desktop/api/WebServices/ns-webservices-ws_security_description) , die diese Sicherheits Bindungen enthält.
--   Erstellen Sie einen [**Kanal**](/windows/desktop/api/WebServices/nf-webservices-wscreatechannel) -oder [**Dienst Proxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) (auf der Clientseite), oder erstellen Sie einen [**Listener**](/windows/desktop/api/WebServices/nf-webservices-wscreatelistener) oder [**Dienst Host**](/windows/desktop/api/WebServices/nf-webservices-wscreateservicehost) (auf der Serverseite), und übergeben Sie die Sicherheits Beschreibung.
--   Führen Sie die üblichen Schritte zur Kanal Programmierung von öffnen, annehmen, senden, empfangen, schließen usw. aus.
+-   Erstellen und initialisieren Sie eine oder mehrere [**Sicherheitsbindungen,**](/windows/desktop/api/WebServices/ns-webservices-ws_security_binding) die für die Sicherheitsanforderungen der Anwendung geeignet sind.
+-   Erstellen Sie [**eine Sicherheitsbeschreibung,**](/windows/desktop/api/WebServices/ns-webservices-ws_security_description) die diese Sicherheitsbindungen enthält.
+-   Erstellen Sie einen [**Kanal**](/windows/desktop/api/WebServices/nf-webservices-wscreatechannel) [**oder Dienstproxy**](/windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy) (auf [](/windows/desktop/api/WebServices/nf-webservices-wscreatelistener) clientseitiger Seite), oder erstellen Sie einen Listener oder [**Diensthost**](/windows/desktop/api/WebServices/nf-webservices-wscreateservicehost) (auf Serverseite), der diese Sicherheitsbeschreibung über gibt.
+-   Führen Sie die normalen Schritte für die Kanalprogrammierung unter Öffnen, Akzeptieren, Senden, Empfangen, Schließen usw. aus.
 
-Nachrichten, die auf dem Kanal gesendet und empfangen werden, werden von der Laufzeit automatisch entsprechend der angegebenen Sicherheits Beschreibung gesichert. Optional können diese Schritte optimiert werden, indem Sie eine oder mehrere [Kanal weite Sicherheitseinstellungen](security-channel-settings.md) in der Sicherheits Beschreibung oder die [Bindungs weiten Sicherheitseinstellungen](security-binding-settings.md) in einer Sicherheitsbindung angeben.
+Nachrichten, die über den Kanal gesendet und empfangen werden, werden automatisch von der Laufzeit gemäß der angegebenen Sicherheitsbeschreibung gesichert. Optional können diese Schritte optimiert werden, indem eine oder mehrere kanalweite Sicherheitseinstellungen [in](security-channel-settings.md) der Sicherheitsbeschreibung oder bindungsweite Sicherheitseinstellungen [in](security-binding-settings.md) einer Sicherheitsbindung angegeben werden.
 
-Jede erforderliche Autorisierung von Absender Identitäten muss von der Anwendung mithilfe der an jede empfangene Nachricht angefügten [sicherheitsverarbeitungs Ergebnisse](security-processing-results.md) durchgeführt werden. In der Sicherheits Beschreibung sind keine Autorisierungs Schritte angegeben, und Sie werden nicht automatisch von der Laufzeit ausgeführt.
+Jede erforderliche Autorisierung von Absenderidentitäten muss von der Anwendung mithilfe der Sicherheitsverarbeitungsergebnisse durchgeführt werden, [die](security-processing-results.md) an jede empfangene Nachricht angefügt sind. Autorisierungsschritte werden nicht in der Sicherheitsbeschreibung angegeben und auch nicht automatisch von der Laufzeit ausgeführt.
 
-Fehler in der Sicherheits Beschreibung, z. b. nicht unterstützte Bindungen, nicht anwendbare Eigenschaften/Felder, fehlende erforderliche Eigenschaften/Felder oder ungültige Eigenschafts-/Feldwerte, führen zu einem Fehler bei der Kanal-oder listenererstellung.
+Fehler in der Sicherheitsbeschreibung, z. B. nicht unterstützte Bindungen, nicht anwendungsfähige Eigenschaften/Felder, fehlende erforderliche Eigenschaften/Felder oder ungültige Eigenschafts-/Feldwerte, führen dazu, dass die Kanal- oder Listenererstellung fehlschlägt.
 
-## <a name="selecting-security-bindings"></a>Auswählen von Sicherheits Bindungen
+## <a name="selecting-security-bindings"></a>Auswählen von Sicherheitsbindungen
 
-Beim Entwerfen der Sicherheit für eine Anwendung ist die wichtigste Entscheidung die Auswahl der Sicherheits Bindungen, die in die Sicherheits Beschreibung eingeschlossen werden sollen. Im folgenden finden Sie einige Richtlinien für die Auswahl von Sicherheits Bindungen, die für das Sicherheitsszenario einer Anwendung geeignet sind. Eine nützliche heuristische Aufgabe besteht darin, zuerst zu verstehen, welche Sicherheits Anmelde Informationstypen (z [**. b. X. 509-Zertifikate**](/windows/desktop/api/WebServices/ns-webservices-ws_cert_credential), [**Windows-Domänen Benutzernamen/-Kenn Wörter**](/windows/desktop/api/WebServices/ns-webservices-ws_windows_integrated_auth_credential), [**Anwendungs definierter Benutzername/**](/windows/desktop/api/WebServices/ns-webservices-ws_username_credential)Kennwort) für die Anwendung verfügbar sind, und dann eine Sicherheitsbindung auszuwählen, die diesen Anmelde Informationstyp verwenden kann.
+Beim Entwerfen der Sicherheit für eine Anwendung ist die wichtigste Entscheidung die Auswahl der Sicherheitsbindungen, die in die Sicherheitsbeschreibung aufgenommen werden sollen. Im Folgenden finden Sie einige Richtlinien für die Auswahl von Sicherheitsbindungen, die für das Sicherheitsszenario einer Anwendung geeignet sind. Eine nützliche Heuristik ist es, zunächst zu verstehen, welche Sicherheits-Anmeldeinformationstypen (z. B. [**X.509-Zertifikate,**](/windows/desktop/api/WebServices/ns-webservices-ws_cert_credential) [**Windows Domänenbenutzername/-kennwörter,**](/windows/desktop/api/WebServices/ns-webservices-ws_windows_integrated_auth_credential)anwendungsdefinierte [**Benutzernamen/Kennwörter)**](/windows/desktop/api/WebServices/ns-webservices-ws_username_credential)für die Anwendung verfügbar sein werden, und dann eine Sicherheitsbindung zu wählen, die diesen Anmeldeinformationstyp verwenden kann.
 
--   Die Transportsicherheit, bei der Sicherheit auf der Transport Byte Datenstrom-Ebene (unterhalb der SOAP-Nachrichten Grenzen) angewendet wird, ist die erste zu berücksichtigende Option.
-    -   Für Internet Szenarios und für Intranetszenarien, in denen ein X. 509-Zertifikat auf dem Server bereitgestellt werden kann, verwendet die Anwendung möglicherweise die [**WS \_ SSL- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding). Diese Option wird im folgenden Beispiel veranschaulicht. Client: [httpclientwithsslexample](httpclientwithsslexample.md) Server: [httpserverwithsslexample](httpserverwithsslexample.md).
+-   Transportsicherheit, bei der die Sicherheit auf der Ebene des Transport bytestreams (unterhalb der SOAP-Nachrichtengrenzen) angewendet wird, ist die erste zu berücksichtigende Option.
+    -   Für Internetszenarien und für Intranetszenarien, in denen ein X.509-Zertifikat auf dem Server bereitgestellt werden kann, kann die Anwendung [**WS \_ SSL TRANSPORT SECURITY BINDING \_ \_ \_ verwenden.**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding) Im folgenden Beispiel wird diese Option veranschaulicht. Client: [HttpClientWithSslExample](httpclientwithsslexample.md) Server: [HttpServerWithSslExample](httpserverwithsslexample.md).
 
-        Wenn die Client Authentifizierung über die HTTP-Header Authentifizierung gewünscht ist, kann eine WS-HTTP-Header Authentifizierung- [**\_ \_ \_ \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_http_header_auth_security_binding) hinzugefügt werden, um diese Funktionalität bereitzustellen.
+        Wenn die Clientauthentifizierung über die HTTP-Headerauthentifizierung gewünscht ist, kann eine [**WS \_ HTTP HEADER \_ \_ AUTH SECURITY \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_http_header_auth_security_binding) hinzugefügt werden, um diese Funktionalität zu bieten.
 
-    -   Bei Intranetszenarien, in denen integrierte Windows-Authentifizierungsprotokolle wie Kerberos, NTLM und SPNEGO geeignet sind, verwendet die Anwendung möglicherweise die [**WS \_ TCP- \_ SSPI- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding). Das folgende Beispiel veranschaulicht diese Option: Client: [requestreplytcpclientwithwindowstransportsecurityexample](requestreplytcpclientwithwindowstransportsecurityexample.md) Server: [requestreplytcpserverwithwindowstransportsecurityexample](requestreplytcpserverwithwindowstransportsecurityexample.md).
+    -   Für Intranetszenarien, Windows integrierte Authentifizierungsprotokolle wie Kerberos, NTLM und SPNEGO geeignet sind, kann die Anwendung [**WS \_ TCP \_ SSPI \_ TRANSPORT SECURITY BINDING \_ \_ verwenden.**](/windows/desktop/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding) Das folgende Beispiel veranschaulicht diese Option: Client: [RequestReplyTcpClientWithWindowsTransportSecurityExample](requestreplytcpclientwithwindowstransportsecurityexample.md) Server: [RequestReplyTcpServerWithWindowsTransportSecurityExample](requestreplytcpserverwithwindowstransportsecurityexample.md).
 
-        Client über Named Pipes: [requestreplynamedpipesclientwithwindowstransportsecurityexample](requestreplynamedpipesclientwithwindowstransportsecurityexample.md)
+        Client über Named Pipes: [RequestReplyNamedPipesClientWithWindowsTransportSecurityExample](requestreplynamedpipesclientwithwindowstransportsecurityexample.md)
 
-        Server over Named Pipes: [requestreplynamedpipesserverwithwindowstransportsecurityexample](requestreplynamedpipesserverwithwindowstransportsecurityexample.md)
+        Server über Named Pipes: [RequestReplyNamedPipesServerWithWindowsTransportSecurityExample](requestreplynamedpipesserverwithwindowstransportsecurityexample.md)
 
-    -   Für Szenarien mit lokalen Computern, in denen integrierte Windows-Authentifizierungsprotokolle wie Kerberos, NTLM und SPNEGO geeignet sind, verwendet die Anwendung möglicherweise die [**WS \_ TCP- \_ SSPI- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding) oder die [**WS- \_ NamedPipe- \_ SSPI- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_namedpipe_sspi_transport_security_binding). Die [**WS- \_ NamedPipe- \_ Kanal \_ Bindung**](/windows/desktop/api/WebServices/ne-webservices-ws_channel_binding) wird in solchen Szenarien bevorzugt, da sie sicherstellt, dass der Datenverkehr den Computer nicht verlässt (Dies ist die Eigenschaft der **WS- \_ NamedPipe- \_ \_ channelbindung**).
+    -   Für Lokale Computer, in denen Windows integrierte Authentifizierungsprotokolle wie Kerberos, NTLM und SPNEGO geeignet sind, kann die Anwendung [**WS \_ TCP \_ SSPI \_ TRANSPORT SECURITY \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_tcp_sspi_transport_security_binding) oder [**WS \_ NAMEDPIPE \_ SSPI \_ TRANSPORT SECURITY BINDING \_ \_ verwenden.**](/windows/desktop/api/WebServices/ns-webservices-ws_namedpipe_sspi_transport_security_binding) Die [**WS \_ \_ NAMEDPIPE-KANALBINDUNG \_**](/windows/desktop/api/WebServices/ne-webservices-ws_channel_binding) wird in solchen Szenarien bevorzugt, da sie garantiert, dass der Datenverkehr den Computer nicht verlässt (dies ist die Eigenschaft von **WS \_ NAMEDPIPE \_ CHANNEL \_ BINDING**).
 
--   Die Sicherheit im gemischten Modus, bei der die-Transportsicherheit die Verbindung schützt und ein WS-Security-Header in der SOAP-Nachricht die Client Authentifizierung bereitstellt, ist die nächste zu berücksichtigende Option. Die folgenden Bindungen werden in Verbindung mit einer der Transport Sicherheits Bindungen verwendet, die im vorherigen Abschnitt beschrieben wurden.
-    -   Wenn der Client durch ein Benutzername/Kennwort-Paar auf Anwendungsebene authentifiziert wird, kann die Anwendung eine [**WS \_ username \_ Message- \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_username_message_security_binding) verwenden, um die Authentifizierungsdaten bereitzustellen. In den folgenden Beispielen wird die Verwendung dieser Bindung in Verbindung mit einer [**WS \_ SSL- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding)veranschaulicht:
-        -   Client: [httpclientwithusernameoversslexample](httpclientwithusernameoversslexample.md)
-        -   Server: [httpserverwithusernameoversslexample](httpserverwithusernameoversslexample.md)
-    -   Wenn der Client durch ein Kerberos-Ticket authentifiziert wird, kann die Anwendung eine [**WS- \_ Kerberos- \_ apreq- \_ Nachrichten \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding) verwenden, um die Authentifizierungsdaten bereitzustellen.
-    -   Wenn ein [Sicherheitskontext](security-context.md)verwendet wird, erstellt der Client zunächst einen Sicherheitskontext mit dem Server und verwendet diesen Kontext zum Authentifizieren von Nachrichten. Um diese Funktionalität zu aktivieren, muss die Sicherheits Beschreibung eine [**WS- \_ Sicherheits \_ Kontext- \_ Nachrichten \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_security_context_message_security_binding)enthalten. Nach der Einrichtung können Sicherheits Kontexte mithilfe von Lightweight-Token übertragen werden, wodurch vermieden wird, dass die potenziell großen und rechenintensiven Client Anmelde Informationen mit jeder Nachricht gesendet werden müssen.
-    -   Bei einem [Verbund Sicherheits](federation.md) Szenario ruft der Client zuerst ein Sicherheits Token ab, das von einem Sicherheitstokendienst (STS) ausgegeben wird, und zeigt dann das ausgestellte Token für einen Dienst an. Client seitig: um das Sicherheits Token vom STS abzurufen, verwendet die Anwendung möglicherweise [**wsrequestsecuritytoken**](/windows/desktop/api/WebServices/nf-webservices-wsrequestsecuritytoken). Alternativ kann die Anwendung eine Client seitige sicherheitstokenanbieterbibliothek, z. b. CardSpace oder LiveID, verwenden und dann Ihre Ausgabe verwenden, um mithilfe von [**wscreatexmlsecuritytoken**](/windows/desktop/api/WebServices/nf-webservices-wscreatexmlsecuritytoken)lokal ein Sicherheits Token zu erstellen. Wenn das Sicherheits Token für den Client verfügbar ist, kann es in beiden Fällen dem Dienst mithilfe einer Sicherheits Beschreibung angezeigt werden, die eine [**WS- \_ XML- \_ \_ tokennachrichtensicherheitsbindung \_ \_**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_token_message_security_binding)enthält. Serverseitig: Wenn das vom STS ausgegebene Sicherheits Token ein SAML-Token ist, kann der Server eine Sicherheits Beschreibung mit einer [**WS \_ SAML Message- \_ \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_saml_message_security_binding)verwenden.
+-   Sicherheit im gemischten Modus, bei der die Transportsicherheit die Verbindung schützt und ein WS-Security-Header in der SOAP-Nachricht clientauthentifizierung bietet, ist die nächste Zu berücksichtigende Option. Die folgenden Bindungen werden in Verbindung mit einer der im vorherigen Abschnitt beschriebenen Transportsicherheitsbindungen verwendet.
+    -   Wenn der Client durch ein Benutzername-Kennwort-Paar auf Anwendungsebene authentifiziert wird, kann die Anwendung eine [**WS \_ USERNAME MESSAGE SECURITY \_ \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_username_message_security_binding) verwenden, um die Authentifizierungsdaten zur Verfügung zu stellen. Die folgenden Beispiele veranschaulichen die Verwendung dieser Bindung in Verbindung mit einer [**WS \_ SSL TRANSPORT \_ SECURITY \_ \_ BINDING:**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding)
+        -   Client: [HttpClientWithUsernameOverSslExample](httpclientwithusernameoversslexample.md)
+        -   Server: [HttpServerWithUsernameOverSslExample](httpserverwithusernameoversslexample.md)
+    -   Wenn der Client durch ein Kerberos-Ticket authentifiziert wird, kann die Anwendung eine [**WS \_ KERBEROS \_ APREQ \_ MESSAGE SECURITY \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding) verwenden, um die Authentifizierungsdaten bereitzustellen.
+    -   Bei Verwendung eines [Sicherheitskontexts](security-context.md)richtet der Client zunächst einen Sicherheitskontext mit dem Server ein und verwendet diesen Kontext dann zum Authentifizieren von Nachrichten. Um diese Funktionalität zu aktivieren, muss die Sicherheitsbeschreibung eine [**WS \_ SECURITY CONTEXT MESSAGE SECURITY BINDING \_ \_ \_ \_ enthalten.**](/windows/desktop/api/WebServices/ns-webservices-ws_security_context_message_security_binding) Nach dem Erstellen können Sicherheitskontexte mit einfachen Token übertragen werden, wodurch vermieden wird, dass die potenziell großen und rechenintensiven Clientanmeldeinformationen mit jeder Nachricht gesendet werden müssen.
+    -   In [](federation.md) einem Verbundsicherheitsszenario erhält der Client zunächst ein Sicherheitstoken, das von einem Sicherheitstokendienst (STS) ausgestellt wurde, und präsentiert das ausgestellte Token dann einem Dienst. Clientseitig: Zum Abrufen des Sicherheitstokens vom STS kann die Anwendung [**WsRequestSecurityToken verwenden.**](/windows/desktop/api/WebServices/nf-webservices-wsrequestsecuritytoken) Alternativ kann die Anwendung eine clientseitige Sicherheitstokenanbieterbibliothek wie CardSpace oder LiveID verwenden und dann ihre Ausgabe verwenden, um mithilfe von [**WsCreateXmlSecurityToken**](/windows/desktop/api/WebServices/nf-webservices-wscreatexmlsecuritytoken)lokal ein Sicherheitstoken zu erstellen. Sobald das Sicherheitstoken für den Client verfügbar ist, kann es dem Dienst mithilfe einer Sicherheitsbeschreibung angezeigt werden, die eine [**WS \_ XML TOKEN MESSAGE SECURITY BINDING \_ \_ \_ \_ enthält.**](/windows/desktop/api/WebServices/ns-webservices-ws_xml_token_message_security_binding) Serverseitig: Wenn das vom STS ausgestellte Sicherheitstoken ein SAML-Token ist, kann der Server eine Sicherheitsbeschreibung mit einer [**WS \_ SAML \_ MESSAGE SECURITY \_ BINDING \_ verwenden.**](/windows/desktop/api/WebServices/ns-webservices-ws_saml_message_security_binding)
         > [!Note]  
-        > Windows 7 und Windows Server 2008 R2: wwsapi unterstützt nur [WS-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/WS-Trust.pdf) und [WS-SecureConversation](http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf) gemäß der Definition durch [Lightweight Webdienstesicherheit profile (lwssp)](/openspecs/windows_protocols/ms-lwssp/376af2f8-f4fe-4577-bfd5-370ac12cac2e). Ausführliche Informationen zur Implementierung von Microsoft finden Sie im Abschnitt zur [Nachrichten Syntax](/openspecs/windows_protocols/ms-lwssp/d4f0f509-e14a-47b5-81e8-ade06a51d1ed) von lwssp.
+        > Windows 7 und Windows Server 2008 R2: WWSAPI unterstützt nur [Ws-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/WS-Trust.pdf) und [Ws-SecureConversation,](http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf) wie von [Lightweight Webdienstesicherheit Profile (LWSSP) definiert.](/openspecs/windows_protocols/ms-lwssp/376af2f8-f4fe-4577-bfd5-370ac12cac2e) Weitere Informationen zur Implementierung von Microsoft finden Sie im Abschnitt [MESSAGE Syntax (NACHRICHTENsyntax)](/openspecs/windows_protocols/ms-lwssp/d4f0f509-e14a-47b5-81e8-ade06a51d1ed) von LWSSP.
 
-         
--   Die letzte zu berücksichtigende Option ist die Verwendung von Authentifizierungs Bindungen ohne Verwendung einer Schutz Bindung, wie z. b. [**WS \_ SSL- \_ Transport \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding) Dies führt dazu, dass die Anmelde Informationen in Klartext übertragen werden und die Auswirkungen auf die Sicherheit haben können. Die Verwendung dieser Option sollte sorgfältig ausgewertet werden, um sicherzustellen, dass keine Schwachstellen vorhanden sind. Ein Beispiel für eine mögliche Verwendung ist der Austausch von Nachrichten zwischen Back-End-Servern über ein sicheres privates Netzwerk. Diese Option wird von den folgenden Konfigurationen unterstützt.
+         
+-   Die letzte zu berücksichtigende Option ist die Verwendung von Authentifizierungsbindungen ohne Verwendung einer Schutzbindung wie [**WS \_ SSL TRANSPORT \_ SECURITY \_ \_ BINDING.**](/windows/desktop/api/WebServices/ns-webservices-ws_ssl_transport_security_binding) Dies führt dazu, dass die Anmeldeinformationen in Klartext übertragen werden, was sich auf die Sicherheit auswirken kann. Die Verwendung dieser Option sollte sorgfältig ausgewertet werden, um sicherzustellen, dass keine Sicherheitsrisiken entstehen. Ein Beispiel für eine mögliche Verwendung ist der Austausch von Nachrichten zwischen Back-End-Servern über ein sicheres privates Netzwerk. Diese Option wird von den folgenden Konfigurationen unterstützt.
 
-    -   [**WS \_ Die \_ \_ \_ Sicherheits \_ Bindung der HTTP-Header**](/windows/desktop/api/WebServices/ns-webservices-ws_http_header_auth_security_binding) Authentifizierung unterstützt diese Option in allen Konfigurationen.
-    -   [**WS \_ Die Benutzernamen- \_ Nachrichten \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_username_message_security_binding) unterstützt diese Option auf dem Server bei Verwendung von http als Transport.
-    -   [**WS \_ Die Kerberos- \_ apreq- \_ Nachrichten \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding) unterstützt diese Option auf dem Server bei Verwendung von http als Transport.
-    -   [**WS \_ Sicherheits \_ Kontext \_ Nachrichten- \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_security_context_message_security_binding) unterstützt diese Option auf dem Server bei Verwendung von http als Transport.
-    -   [**WS \_ Die SAML- \_ Nachrichten \_ Sicherheits \_ Bindung**](/windows/desktop/api/WebServices/ns-webservices-ws_saml_message_security_binding) unterstützt diese Option auf dem Server bei Verwendung von http als Transport.
+    -   [**WS \_ HTTP \_ HEADER \_ AUTH SECURITY \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_http_header_auth_security_binding) unterstützt diese Option in allen Konfigurationen.
+    -   [**WS \_ USERNAME \_ MESSAGE \_ SECURITY \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_username_message_security_binding) unterstützt diese Option auf dem Server, wenn HTTP als Transport verwendet wird.
+    -   [**WS \_ KERBEROS \_ APREQ \_ MESSAGE SECURITY \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_kerberos_apreq_message_security_binding) unterstützt diese Option auf dem Server, wenn HTTP als Transport verwendet wird.
+    -   [**WS \_ SECURITY \_ CONTEXT MESSAGE SECURITY \_ \_ \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_security_context_message_security_binding) unterstützt diese Option auf dem Server, wenn HTTP als Transport verwendet wird.
+    -   [**WS \_ SAML \_ MESSAGE \_ SECURITY \_ BINDING**](/windows/desktop/api/WebServices/ns-webservices-ws_saml_message_security_binding) unterstützt diese Option auf dem Server, wenn HTTP als Transport verwendet wird.
 
-    Wenn Sie diese Option aktivieren, ist es erforderlich, die [**WS- \_ Schutz \_ Ebene**](/windows/desktop/api/WebServices/ne-webservices-ws_protection_level) explizit auf einen anderen Wert als **WS \_ \_ -Schutzgrad \_ \_ und- \_ Verschlüsselung** festzulegen
+    Zum Aktivieren dieser Option müssen Sie [**die WS \_ PROTECTION \_ LEVEL**](/windows/desktop/api/WebServices/ne-webservices-ws_protection_level) explizit auf einen anderen Wert als **WS PROTECTION LEVEL SIGN \_ AND ENCRYPT \_ \_ \_ \_ festlegen.**
 
 ## <a name="channels-and-security"></a>Kanäle und Sicherheit
 
-Wie bereits erwähnt, ist die Sicherheit auf Kanäle beschränkt. Darüber hinaus werden Kanal Vorgänge Sicherheits Schritten konsistent über alle Sicherheits Bindungen zugeordnet.
+Wie bereits erwähnt, ist die Sicherheit auf Kanäle zu sehen. Darüber hinaus werden Kanalvorgänge den Sicherheitsschritten konsistent über alle Sicherheitsbindungen hinweg zuordnen.
 
--   Channel Create: der in der Sicherheits Beschreibung angegebene Satz von Sicherheits Bindungen wird überprüft und bleibt anschließend für den Kanal korrigiert. Die Form des Kanal Stapels, einschließlich der für WS-Trust basierten Verhandlungen zu verwendenden seitenkanäle, wird ebenfalls festgelegt.
--   Channel geöffnet: alle Anmelde Informationen, die als Teil der Sicherheits Bindungen bereitgestellt werden, werden geladen, und es werden Sicherheits Sitzungen eingerichtet. Im Allgemeinen enthält ein offener Kanal den Sicherheitsstatus "Live". Durch das Öffnen eines Client Kanals wird auch die Endpunkt Adresse des Servers angegeben, mit der die Server Authentifizierung durch die Laufzeit erfolgt.
--   Zwischen dem Öffnen und Schließen von Kanälen: Nachrichten können in dieser Phase sicher gesendet und empfangen werden.
--   Message Send: Sicherheitskontext Token werden bei Bedarf abgerufen oder erneuert, und die Sicherheit wird auf jede übertragene Nachricht entsprechend der Sicherheits Beschreibung angewendet. Fehler, die beim Anwenden der Sicherheit auftreten, werden als Sende Fehler an die Anwendung zurückgegeben.
--   Nachrichten Empfang: die Sicherheit wird für jede empfangene Nachricht entsprechend der Sicherheits Beschreibung überprüft. Alle Fehler bei der Überprüfung der Nachrichten Sicherheit werden als Empfangs Fehler an die Anwendung zurückgegeben. Diese Nachrichten Nachrichten Fehler wirken sich nicht auf den Kanalstatus oder nachfolgende Empfangs Vorgänge aus. Die Anwendung kann einen fehlgeschlagenen Empfang verwerfen und einen Empfangsvorgang für eine andere Nachricht neu starten.
--   Kanal Abbruch: der Kanal kann jederzeit abgebrochen werden, damit alle e/a-Vorgänge auf dem Kanal angehalten werden. Beim Abbrechen wechselt der Kanal in einen fehlerhaften Zustand und lässt keine weiteren Sende-oder Empfangs Vorgänge zu. Der Kanal behält jedoch möglicherweise weiterhin den Sicherheitsstatus "Live" bei, sodass eine nachfolgende Kanal Schließung notwendig ist, um den gesamten Zustand sauber zu löschen.
--   Channel Close: der bei Open erstellte Sicherheitszustand wird verworfen, und die Sitzungen werden abgebrochen. Sicherheitskontext Token werden abgebrochen. Der Kanal Stapel bleibt bestehen, enthält jedoch keinen "Live"-Sicherheitszustand oder geladene Anmelde Informationen.
--   Channel Free: der in erstellte Kanal Stapel und alle Sicherheitsressourcen werden freigegeben.
+-   Kanalerstelle: Der Satz von Sicherheitsbindungen, die in der Sicherheitsbeschreibung angegeben sind, wird überprüft und bleibt danach für den Kanal korrigiert. Außerdem wird die Form des Kanalstapels bestimmt, einschließlich aller Seitenkanäle, die für WS-Trust auf Der Basis von Effekten verwendet werden sollen.
+-   Kanal geöffnet: Alle Anmeldeinformationen, die als Teil von Sicherheitsbindungen bereitgestellt werden, werden geladen, und Sicherheitssitzungen werden eingerichtet. Im Allgemeinen enthält ein offener Kanal den Sicherheitsstatus "Live". Beim Öffnen eines Clientkanals wird auch die Endpunktadresse des Servers angegeben, für die die Serverauthentifizierung von der Laufzeit durchgeführt wird.
+-   Zwischen geöffneten und schließenden Kanälen: Während dieser Phase können Nachrichten sicher gesendet und empfangen werden.
+-   Nachrichtensendung: Sicherheitskontexttoken werden bei Bedarf erhalten oder erneuert, und die Sicherheit wird gemäß der Sicherheitsbeschreibung auf jede übertragene Nachricht angewendet. Fehler, die beim Anwenden der Sicherheit auftreten, werden als Sendefehler an die Anwendung zurückgegeben.
+-   Nachrichten empfangen: Die Sicherheit wird für jede empfangene Nachricht gemäß der Sicherheitsbeschreibung überprüft. Alle Fehler bei der Nachrichtensicherheitsüberprüfung werden als Empfangsfehler an die Anwendung zurückgegeben. Diese Pro-Nachricht-Fehler wirken sich nicht auf den Kanalzustand oder nachfolgende Empfangene aus. Die Anwendung kann einen fehlgeschlagenen Empfang verwerfen und einen Empfang für eine andere Nachricht neu starten.
+-   Kanalabbruch: Der Kanal kann jederzeit abgebrochen werden, um alle E/A-Nachrichten im Kanal anzuhalten. Bei einem Abbruch geht der Kanal in einen fehlerhaften Zustand über und lässt keine weitere Sende- oder Sende- oder Sende empfangene Daten zu. Der Kanal behält jedoch möglicherweise weiterhin einen "live"-Sicherheitsstatus bei, sodass ein nachfolgender Kanalschluss erforderlich ist, um den zustandsbereinigungsbereinigten Zustand zu veräussern.
+-   Kanal schließen: Der beim Öffnen erstellte Sicherheitsstatus wird verworfen, und Sitzungen werden heruntergefahren. Sicherheitskontexttoken werden abgebrochen. Der Kanalstapel bleibt erhalten, enthält aber keinen "Live"-Sicherheitsstatus oder geladene Anmeldeinformationen.
+-   Kanalfrei: Der bei der Erstellung erstellte Kanalstapel wird zusammen mit allen Sicherheitsressourcen frei.
 
 ## <a name="security-apis"></a>Sicherheits-APIs
 
-Die API-Dokumentation für die Sicherheit wird in die folgenden Themen eingeteilt.
+Die API-Dokumentation für die Sicherheit ist in die folgenden Themen eingekreist.
 
--   [Sicherheits Beschreibung](security-description.md)
-    -   [Sicherheits Kanaleinstellungen](security-channel-settings.md)
-    -   [Sicherheits Bindungen](security-bindings.md)
+-   [Sicherheitsbeschreibung](security-description.md)
+    -   [Sicherheitskanal-Einstellungen](security-channel-settings.md)
+    -   [Sicherheitsbindungen](security-bindings.md)
         -   [Sicherheitsanmeldeinformationen](security-credentials.md)
         -   [Sicherheitsbindungseinstellungen](security-binding-settings.md)
 -   [Verbund](federation.md)
 -   [Sicherheitskontext](security-context.md)
 -   [Endpunktidentität](endpoint-identity.md)
--   [Ergebnisse der Sicherheits Verarbeitung](security-processing-results.md)
+-   [Ergebnisse der Sicherheitsverarbeitung](security-processing-results.md)
 
 ## <a name="security"></a>Sicherheit
 
-Bei der Verwendung der wwsapi-Sicherheits-API haben Anwendungen verschiedene Sicherheitsrisiken:
+Bei Verwendung der WWSAPI-Sicherheits-API sind Anwendungen mehreren Sicherheitsrisiken ausgesetzt:
 
 <dl> <dt>
 
 <span id="Accidental_misconfiguration"></span><span id="accidental_misconfiguration"></span><span id="ACCIDENTAL_MISCONFIGURATION"></span>Versehentliche Fehlkonfiguration
 </dt> <dd>
 
-Wwsapi unterstützt eine Reihe von sicherheitsbezogenen Konfigurationsoptionen. Siehe beispielsweise [**die \_ Eigenschaften \_ - \_ \_ ID der WS-Sicherheitsbindung**](/windows/desktop/api/WebServices/ne-webservices-ws_security_binding_property_id). Durch einige dieser Optionen, wie z. b. die **WS- \_ \_ sicherheitsbindungs \_ Eigenschaft \_ zulassen \_ Anonymer \_ Clients** , kann die Anwendung die Standard Sicherheitsstufe verringern, die von den verschiedenen Sicherheits Bindungen bereitgestellt wird. Die Verwendung solcher Optionen sollte sorgfältig ausgewertet werden, um sicherzustellen, dass keine resultierenden Angriffsvektoren vorhanden sind.
+WWSAPI unterstützt eine Reihe von sicherheitsbezogenen Konfigurationsoptionen. Siehe z.B. [**WS \_ SECURITY BINDING PROPERTY \_ \_ \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_security_binding_property_id). Einige dieser Optionen, z. **B. WS \_ SECURITY BINDING PROPERTY ALLOW ANONYMOUS \_ \_ \_ \_ \_ CLIENTS,** ermöglichen es der Anwendung, die Standardsicherheitsstufe zu verringern, die von den verschiedenen Sicherheitsbindungen bereitgestellt wird. Die Verwendung solcher Optionen sollte sorgfältig ausgewertet werden, um sicherzustellen, dass keine resultierenden Angriffsvektoren vorhanden sind.
 
-Außerdem ermöglicht wwsapi, wie oben beschrieben, die absichtliche Deaktivierung bestimmter Schritte, die erforderlich sind, um einen Nachrichtenaustausch vollständig zu schützen, z. b. das Deaktivieren der Verschlüsselung, auch wenn Anmelde Informationen übertragen werden. Dies ermöglicht die Aktivierung bestimmter spezifischer Szenarien und sollte nicht für die allgemeine Kommunikation verwendet werden. Die [**WS- \_ Schutz \_ Ebene**](/windows/desktop/api/WebServices/ne-webservices-ws_protection_level) muss speziell gesenkt werden, um diese Szenarios zu ermöglichen, und Anwendungen sollten diesen Wert nur ändern, wenn dies unbedingt erforderlich ist. Dadurch werden viele Überprüfungen deaktiviert, die zur Sicherstellung einer sicheren Konfiguration entworfen wurden.
+Darüber hinaus ermöglicht WWSAPI einer Anwendung, wie oben beschrieben, bestimmte Schritte absichtlich zu deaktivieren, die zum vollständigen Schützen eines Nachrichtenaustauschs erforderlich sind, z. B. das Deaktivieren der Verschlüsselung, obwohl Sicherheitsanmeldeinformationen übertragen werden. Dies ist zulässig, um bestimmte Szenarien zu ermöglichen und sollte nicht für die allgemeine Kommunikation verwendet werden. Die [**\_ WS-SCHUTZEBENE \_**](/windows/desktop/api/WebServices/ne-webservices-ws_protection_level) muss speziell herabgesetzt werden, um diese Szenarien zu ermöglichen, und Anwendungen sollten diesen Wert nur ändern, wenn dies unbedingt erforderlich ist, da dadurch viele Überprüfungen deaktiviert werden, die eine sichere Konfiguration gewährleisten.
 
 </dd> <dt>
 
 <span id="Storing_confidential_information_in_memory"></span><span id="storing_confidential_information_in_memory"></span><span id="STORING_CONFIDENTIAL_INFORMATION_IN_MEMORY"></span>Speichern vertraulicher Informationen im Arbeitsspeicher
 </dt> <dd>
 
-Vertrauliche Informationen, wie z. b. Kenn Wörter, die im Arbeitsspeicher gespeichert sind, sind anfällig für das Extrahieren durch einen privilegierten Angreifer, z. b. die Auslagerungs Datei. Wwsapi erstellt eine Kopie der angegebenen Anmelde Informationen und verschlüsselt diese Kopie, sodass die ursprünglichen Daten nicht geschützt sind. Die Anwendung ist dafür verantwortlich, die ursprüngliche Instanz zu schützen. Außerdem wird die verschlüsselte Kopie bei der Verwendung kurz entschlüsselt und ein Fenster geöffnet, in dem Sie extrahiert werden kann.
+Vertrauliche Informationen, z. B. Kennwörter, die im Arbeitsspeicher gespeichert sind, sind anfällig für die Extraktion durch einen privilegierten Angreifer, z. B. die Auslagerungsdatei. WWSAPI erstellt eine Kopie der angegebenen Anmeldeinformationen und verschlüsselt diese Kopie, sodass die ursprünglichen Daten nicht geschützt sind. Es liegt in der Verantwortung der Anwendung, die ursprüngliche Instanz zu schützen. Darüber hinaus wird die verschlüsselte Kopie kurz entschlüsselt, während sie verwendet wird, und öffnet ein Fenster, um sie zu extrahieren.
 
 </dd> <dt>
 
-<span id="Denial_of_service"></span><span id="denial_of_service"></span><span id="DENIAL_OF_SERVICE"></span>Denial-of-Service
+<span id="Denial_of_service"></span><span id="denial_of_service"></span><span id="DENIAL_OF_SERVICE"></span>Denial-of-Service-Angriffe
 </dt> <dd>
 
-Die Sicherheits Verarbeitung kann beträchtliche Ressourcen beanspruchen. Jede zusätzliche Sicherheitsbindung erhöht diese Kosten. Wwsapi bricht die Sicherheits Verarbeitung ab, sobald ein Fehler bei der Sicherheitsüberprüfung aufgetreten ist, aber bestimmte Überprüfungen, wie z. b. Autorisierungs Entscheidungen, werden möglicherweise erst nach dem Ausführen wichtiger Arbeiten durchgeführt.
+Die Sicherheitsverarbeitung kann erhebliche Ressourcen verbrauchen. Jede zusätzliche Sicherheitsbindung erhöht diese Kosten. WWSAPI bricht die Sicherheitsverarbeitung ab, sobald ein Fehler bei der Sicherheitsüberprüfung auftritt. Bestimmte Überprüfungen wie Autorisierungsentscheidungen werden jedoch erst durchgeführt, nachdem umfangreiche Arbeit ausgeführt wurde.
 
-Während eine Nachricht auf dem Server verarbeitet wird, wird der Sicherheitsstatus auf dem Nachrichten Heap gespeichert. Die Anwendung kann den Arbeitsspeicher Verbrauch während der Sicherheits Verarbeitung begrenzen, indem die Größe dieses Heaps über die \_ \_ \_ \_ Eigenschaften Heap Eigenschaften von WS-Nachrichten Eigenschaften reduziert wird. Darüber hinaus können bestimmte Sicherheits Bindungen, wie z. b. die WS- \_ Sicherheits \_ Kontext \_ Nachrichten-Sicherheitsbindung, bewirken, dass \_ \_ der Server im Auftrag des Clients Ressourcen zuweist. Die Grenzwerte für diese Ressourcen können mithilfe der folgenden [**WS- \_ \_ sicherheitsbindungs- \_ Eigenschafts- \_ ID**](/windows/desktop/api/WebServices/ne-webservices-ws_security_binding_property_id) -Werte konfiguriert werden:
+Während eine Nachricht auf dem Server verarbeitet wird, wird der Sicherheitsstatus auf dem Nachrichtenheap gespeichert. Die Anwendung kann den Arbeitsspeicherverbrauch während der Sicherheitsverarbeitung einschränken, indem sie die Größe dieses Heaps über WS \_ MESSAGE PROPERTY HEAP PROPERTIES \_ \_ \_ reduziert. Darüber hinaus können bestimmte Sicherheitsbindungen, z. B. die WS \_ SECURITY CONTEXT MESSAGE SECURITY \_ \_ \_ \_ BINDING, dazu führen, dass der Server Ressourcen im Auftrag des Clients zuweist. Die Grenzwerte für diese Ressourcen können mithilfe der folgenden [**WS \_ SECURITY BINDING \_ PROPERTY \_ \_ ID-Werte**](/windows/desktop/api/WebServices/ne-webservices-ws_security_binding_property_id) konfiguriert werden:
 
--   Sicherheitskontext der WS- \_ Sicherheits \_ Bindung \_ Max. \_ \_ \_ \_ ausstehende \_ Kontexte
--   Sicherheitskontext der WS- \_ Sicherheits \_ Bindung \_ Max. \_ \_ \_ \_ aktive \_ Kontexte
--   \_ \_ \_ \_ Sicherheits \_ Kontext- \_ Erneuerungs \_ Intervall für WS-Sicherheitsbindung
--   \_ \_ \_ \_ Sicherheits \_ Kontext- \_ Rollover- \_ Intervall der WS-Sicherheitsbindung
+-   \_ \_ WS-SICHERHEITSBINDUNGSEIGENSCHAFT \_ \_ \_ SICHERHEITSKONTEXT \_ \_ MAX. AUSSTEHENDE \_ KONTEXTE
+-   \_ \_ WS-SICHERHEITSBINDUNGSEIGENSCHAFT \_ \_ \_ SICHERHEITSKONTEXT \_ \_ MAX. AKTIVE \_ KONTEXTE
+-   ERNEUERUNGSINTERVALL FÜR SICHERHEITSKONTEXT DER WS-SICHERHEITSBINDUNGSEIGENSCHAFT \_ \_ \_ \_ \_ \_ \_
+-   \_ \_ \_ \_ WS-SICHERHEITSBINDUNGSEIGENSCHAFTENSICHERHEITSKONTEXTROLLOVERINTERVALL \_ \_ \_
 
-Das Festlegen dieser Grenzwerte auf niedrige Werte reduziert den maximalen Arbeitsspeicher Verbrauch, kann jedoch dazu führen, dass legitime Clients zurückgewiesen werden, wenn das Kontingent erreicht wird.
+Wenn Sie diese Grenzwerte auf niedrige Werte festlegen, wird der maximale Arbeitsspeicherverbrauch verringert, aber es kann dazu führen, dass legitime Clients abgelehnt werden, wenn das Kontingent erreicht wird.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

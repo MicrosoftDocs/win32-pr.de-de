@@ -15,14 +15,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: cbe95658556be8a15bed0e7e5b5b32dda23ff21d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1dbfe81dede2e3a6eb8b902ff03fe034deda1b5ab8160e830376e3380fe811c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120046400"
 ---
-# <a name="msvm_referencedprofile-class"></a>MSVM \_ referencedprofile-Klasse
+# <a name="msvm_referencedprofile-class"></a>Msvm \_ ReferencedProfile-Klasse
 
 Beschreibt ein Profil, auf das von einem anderen registrierten Profil verwiesen wird.
 
@@ -40,33 +40,33 @@ class Msvm_ReferencedProfile : CIM_ReferencedProfile
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ referencedprofile** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ ReferencedProfile-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ referencedprofile** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ ReferencedProfile-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))**
+Datentyp: **[ **CIM \_ RegisteredProfile**](/previous-versions//ee309375(v=vs.85))**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Das registrierte Profil, auf das vom **abhängigen** Profil verwiesen wird.
+Das registrierte Profil, auf das das abhängige **Profil** verweist.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **CIM \_ registeredprofile**](/previous-versions//ee309375(v=vs.85))**
+Datentyp: **[ **CIM \_ RegisteredProfile**](/previous-versions//ee309375(v=vs.85))**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -82,10 +82,10 @@ Ein registriertes Profil, das auf andere Profile verweist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                                 |
-| Namespace<br/>                | Root- \\ Interop<br/>                                                                                |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                                 |
+| Namespace<br/>                | \\Stamm-Interop<br/>                                                                                |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
