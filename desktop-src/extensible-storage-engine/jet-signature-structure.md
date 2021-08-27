@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_SIGNATURE-Struktur'
-title: JET_SIGNATURE-Struktur
+description: 'Weitere Informationen finden Sie unter: JET_SIGNATURE Struktur'
+title: JET_SIGNATURE Struktur
 TOCTitle: JET_SIGNATURE Structure
 ms:assetid: 90d3fd56-be65-4126-b50c-b53e3c3f38f6
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269340(v=EXCHG.10)
@@ -15,19 +15,19 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 456eadecbaba7295753a18ec2ca739f5e3fc8391
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: da4684872358d9d6751812b2adb2b2bea819a2e3
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122987823"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476476"
 ---
-# <a name="jet_signature-structure"></a>JET_SIGNATURE-Struktur
+# <a name="jet_signature-structure"></a>JET_SIGNATURE Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_signature-structure"></a>JET_SIGNATURE-Struktur
+## <a name="jet_signature-structure"></a>JET_SIGNATURE Struktur
 
 Die **JET_SIGNATURE-Struktur** enthält Informationen, die eine Datenbank eindeutig identifizieren.
 
@@ -53,18 +53,14 @@ Die [JET_LOGTIME](./jet-logtime-structure.md) zum Zeitpunkt der Ausführung von 
 
 Der optionale Zeichenfolgenwert des NetBIOS-Namens für den Computer. Dieser Wert kann nicht festgelegt werden.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Dies kann als Element von [JET_DBINFOMISC](./jet-dbinfomisc-structure.md)gefunden werden.
+Diese kann als Element von gefunden [JET_DBINFOMISC.](./jet-dbinfomisc-structure.md)
 
 ### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
 
 
 

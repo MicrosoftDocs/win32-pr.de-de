@@ -17,7 +17,7 @@ Der Programmierleitfaden enthält Informationen zur Verwendung der programmierba
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
 | [Geräte](overviews-direct3d-11-devices.md) | In diesem Abschnitt werden Direct3D 11-Geräte- und Gerätekontextobjekte beschrieben. |
 | [Ressourcen](overviews-direct3d-11-resources.md) | In diesem Abschnitt werden Aspekte von Direct3D 11-Ressourcen beschrieben. |

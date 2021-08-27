@@ -1,9 +1,9 @@
 ---
-title: Slider. disabledcolor
-description: Das disabledcolor-Attribut gibt die Farbe des Schieberegler-Steuer Elements an oder ruft es ab, wenn es deaktiviert ist.
+title: SLIDER.disabledColor
+description: Das disabledColor-Attribut gibt die Farbe des Schieberegler-Steuerelements an, wenn es deaktiviert ist, oder ruft diese ab.
 ms.assetid: 47b9f5c6-12ea-4654-a9c0-d15d41ea2766
 keywords:
-- Slider. disabledcolor-Fenster Media Player
+- SLIDER.disabledColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8887ca510eb9b3d668a79eda9cf1ec8f387eb91
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1623c1c22493722deb67d30db2c4d59ed0a28430968c989d145cbe6105d35030
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123060"
 ---
-# <a name="sliderdisabledcolor"></a>Slider. disabledcolor
+# <a name="sliderdisabledcolor"></a>SLIDER.disabledColor
 
-Das **disabledcolor** -Attribut gibt die Farbe des Schieberegler-Steuer Elements an oder ruft es ab, wenn es deaktiviert ist.
+Das **disabledColor-Attribut** gibt die Farbe des Schieberegler-Steuerelements an, wenn es deaktiviert ist, oder ruft diese ab.
 
 ``` syntax
         elementID.disabledColor
@@ -29,11 +29,11 @@ Das **disabledcolor** -Attribut gibt die Farbe des Schieberegler-Steuer Elements
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Er besitzt keinen Standardwert.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er besitzt keinen Standardwert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Schieberegler-Steuerelement mithilfe der Vordergrund-und Hintergrundfarben angegeben wird, gibt die deaktivierte Farbe die Farbe des Steuer Elements an, wenn **aktiviert** auf false festgelegt ist
+Wenn das Schieberegler-Steuerelement mitHilfe von Vordergrund- und Hintergrundfarben angegeben wird, gibt die deaktivierte Farbe die Farbe des Steuerelements an, wenn **es aktiviert** ist, auf FALSE festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,7 +41,7 @@ Wenn das Schieberegler-Steuerelement mithilfe der Vordergrund-und Hintergrundfar
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -49,13 +49,13 @@ Wenn das Schieberegler-Steuerelement mithilfe der Vordergrund-und Hintergrundfar
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Slider-Element**](slider-element.md)
+[**SLIDER-Element**](slider-element.md)
 </dt> <dt>
 
-[**Ambientattribute. aktiviert**](ambientattributes-enabled.md)
+[**AmbientAttributes.enabled**](ambientattributes-enabled.md)
 </dt> </dl>
 
  

@@ -4,12 +4,12 @@ ms.assetid: 4AEBE391-4121-44B2-B15B-0032645D7053
 title: Internationale Komponenten für Unicode (ICU)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 560a2f344a3024685e17df0f434f8ffa040b5c8b
-ms.sourcegitcommit: d5f16b9d3d5d2e2080ba7b6837eb37250fa67a30
+ms.openlocfilehash: 5c7fec661b24e352c24abddf687e6b119752e39ce80c12dc409000afa179f1f7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "111349989"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120107024"
 ---
 # <a name="international-components-for-unicode-icu"></a>Internationale Komponenten für Unicode (ICU)
 
@@ -65,7 +65,7 @@ Es gibt drei Hauptschritte: (Windows 10 Creators Update oder höher)
 
 <dl>
 
-1. Ihre Anwendung muss auf Version 1703 Windows 10 Version 1703 (Creators Update) oder höher.
+1. Ihre Anwendung muss auf Version 1703 Windows 10 Version 1703 (Creators Update) oder höher sein.
 
 2. Fügen Sie in den Headern Hinzu:
 
@@ -94,7 +94,7 @@ Es gibt drei Hauptschritte: (Windows 10 Creators Update oder höher)
 Anschließend können Sie die ICU-C-API aus diesen Bibliotheken aufrufen, die Sie wünschen. (Es werden keine C++-APIs verfügbar gemacht.)
 
 > [!IMPORTANT]
-> Wenn Sie die älteren Importbibliotheken icuuc.lib und icuin.lib verwenden, stellen Sie sicher, dass sie vor den Schirmbibliotheken wie onecoreuap.lib oder WindowsApp.lib in der Einstellung Linker für zusätzliche Abhängigkeiten aufgeführt sind (siehe Abbildung unten). Andernfalls wird der Linker mit "icu.lib" verlinkt, was dazu führt, dass versucht wird, icu.dll Laufzeit zu laden. Diese DLL ist nur ab Version 1903 vorhanden. Wenn also ein Benutzer das Windows 10 SDK auf einem Windows-Computer vor Version 1903 aktualisiert, kann die App nicht geladen und ausgeführt werden. Einen Verlauf der ICU-Bibliotheken in Windows finden Sie unter Verlauf der Änderungen an der [ICU-Bibliothek in Windows.](#history-of-changes-to-the-icu-library-in-windows)
+> Wenn Sie die älteren Importbibliotheken icuuc.lib und icuin.lib verwenden, stellen Sie sicher, dass sie vor den Schirmbibliotheken wie onecoreuap.lib oder WindowsApp.lib in der Einstellung Linker für zusätzliche Abhängigkeiten aufgeführt sind (siehe Abbildung unten). Andernfalls wird der Linker mit "icu.lib" verlinkt. Dies führt dazu, dass versucht wird, icu.dll Laufzeit zu laden. Diese DLL ist nur ab Version 1903 vorhanden. Wenn also ein Benutzer das Windows 10 SDK auf einem Computer vor Version 1903 Windows aktualisiert, kann die App nicht geladen und ausgeführt werden. Einen Verlauf der ICU-Bibliotheken in Windows Sie unter Verlauf der Änderungen an der [ICU-Bibliothek in Windows.](#history-of-changes-to-the-icu-library-in-windows)
 
 ![icu-Beispiel](images/icu-example.png)
 
@@ -102,7 +102,7 @@ Anschließend können Sie die ICU-C-API aus diesen Bibliotheken aufrufen, die Si
 >
 > - Dies ist die Konfiguration für "Alle Plattformen".
 > - Damit Win32-Apps ICU verwenden können, müssen sie [zuerst CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) aufrufen. In Windows 10 Version 1903 und höher, in der die kombinierte ICU-Bibliothek (icu.dll/icu.lib) verfügbar ist, können Sie den CoInitializeEx-Aufruf weglassen, indem Sie die kombinierte Bibliothek verwenden.
-> - Nicht alle von ICU-APIs zurückgegebenen Daten stimmen mit dem Windows-Betriebssystem ab, da diese Ausrichtung noch ausgeführt wird. 
+> - Nicht alle daten, die von ICU-APIs zurückgegeben werden, stimmen mit dem Windows-Betriebssystem ab, da diese Ausrichtung noch in Bearbeitung ist. 
 
 ## <a name="icu-example-app"></a>ICU-Beispiel-App
 

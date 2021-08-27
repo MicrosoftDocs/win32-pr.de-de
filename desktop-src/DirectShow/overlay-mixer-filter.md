@@ -4,145 +4,89 @@ ms.assetid: e80938b7-31f0-467b-a3fa-c4511d14758d
 title: Filter für Überlagerungsmixer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d26ad8ba8a41a1cdb94eec0f4406c4845f25cda5
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 475726607f282ce4b7885ec6c5aea562c0380cb0
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103859980"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476986"
 ---
 # <a name="overlay-mixer-filter"></a>Filter für Überlagerungsmixer
 
-Der Überlagerungs-Mischungs Filter ist ein Videorenderer, der speziell für die DVD-Wiedergabe und Broadcast-Videostreams mit Zeilen 21 Untertiteln entwickelt wurde. Der Überlagerungs-Mixer unterstützt auch Video Port Erweiterungen (vpes) und ermöglicht es, mit Hardware-MPEG-2-Decodern oder analogen TV-Tunern zu arbeiten, die Videos direkt an die Grafikkarte anstatt über den PCI-Bus senden.
+Der Filter Overlay Mixer ist ein Videorenderer, der speziell für die DVD-Wiedergabe und übertragung von Videostreams mit Untertiteln in Zeile 21 entwickelt wurde. Die Overlay-Mixer unterstützt auch Videoporterweiterungen (Video Port Extensions, VPEs), sodass sie mit MPEG-2-Hardwaredecodern oder analogen TV-Tunern arbeiten kann, die Videos direkt an die Grafikkarte senden, anstatt über den PCI-Bus.
 
 > [!Note]  
-> Der [Video Mischungs-Renderer 9](video-mixing-renderer-filter-9.md) wird jetzt über den Überlagerungs-Mischungs Filter bevorzugt, außer in VPE-Szenarios.
+> Der [Video Mixing Renderer 9](video-mixing-renderer-filter-9.md) wird jetzt dem Filter Overlay Mixer bevorzugt, mit Ausnahme von VPE-Szenarien.
 
  
 
-Der Overlay-Mixer verwendet DirectDraw zum Rendern. Es ist eine Überlagerungs Oberfläche auf der Grafikkarte erforderlich. Der primäre Videostream sollte mit PIN 0 verbunden sein. Sekundäre Datenströme (geschlossene Beschriftungs Grafiken oder DVD-Teilbilder) sind mit Pins 1 und höher verbunden. Der Overlay-Mixer blitet die sekundären Datenströme direkt auf das primäre untergeordnete Element. Sie werden nicht gemischt oder Alpha gemischt.
+Der Overlay-Mixer verwendet DirectDraw für das Rendering. Hierfür ist eine Überlagerungsoberfläche auf der Grafikkarte erforderlich. Der primäre Videostream sollte mit Pin 0 verbunden sein. Sekundäre Streams (Untertitelgrafiken oder DVD-Unterbilder) sind mit Pins 1 und höher verbunden. Der Overlay-Mixer blitt die sekundären Streams direkt auf die primäre Oberfläche. sie werden nicht gemischt oder alphanal gemischt.
 
-Der Overlay-Mixer verwendet den Videorenderer für die Fensterverwaltung. Der Videorenderer stellt eine Verbindung mit dem Auslagerungs-PIN des Überlagerungs-
+Der Overlay-Mixer verwendet den Videorenderer für die Fensterverwaltung. Der Videorenderer stellt eine Verbindung mit dem Ausgabepin des Overlay-Mixer her.
 
-Dieser Filter wird automatisch dem Filter Diagramm hinzugefügt, wenn Anwendungen die [**idvdgraphbuilder**](/windows/desktop/api/Strmif/nn-strmif-idvdgraphbuilder) -Schnittstelle und die [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) -Schnittstelle zum Erstellen des Diagramms verwenden. Der Diagramm-Manager des Filters fügt dem Diagramm nicht automatisch den Overlay-Mixer hinzu.
+Dieser Filter wird dem Filterdiagramm automatisch hinzugefügt, wenn Anwendungen die Schnittstellen [**IDvdGraphBuilder**](/windows/desktop/api/Strmif/nn-strmif-idvdgraphbuilder) und [**ICaptureGraphBuilder2**](/windows/desktop/api/Strmif/nn-strmif-icapturegraphbuilder2) verwenden, um das Diagramm zu erstellen. Der Filter Graph Manager fügt dem Diagramm nicht automatisch die Overlay-Mixer hinzu.
 
 > [!Note]  
-> In der folgenden Tabelle sind die für die Eingabe-PIN 0 zulässigen Medien Teil Typen Hardware abhängig. Der Überlagerungs Mixer kann nicht bestimmen, ob ein bestimmter Untertyp unterstützt wird, bis die DirectDraw-Oberfläche erstellt wird. Daher kann ein upstreamfilter nur dann ermitteln, ob ein Untertyp unterstützt wird, indem versucht wird, eine Verbindung mit diesem Untertyp herzustellen.
+> In der folgenden Tabelle sind die Medienuntertypen, die auf Eingabepin 0 akzeptiert werden, hardwareabhängig. Der Overlay-Mixer kann erst bestimmen, ob ein bestimmter Untertyp unterstützt wird, wenn die DirectDraw-Oberfläche erstellt wird. Daher kann ein Upstreamfilter nur ermitteln, ob ein Untertyp unterstützt wird, wenn versucht wird, eine Verbindung mit diesem Untertyp herzustellen.
 
  
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Filter Schnittstellen</td>
-<td><a href="/windows/desktop/api/Strmif/nn-strmif-iamoverlayfx"><strong>Iamoverlayfx</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamvideodecimationproperties"><strong>iamvideodecimationproperties</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>ibasefilter</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iddrawexclmodevideo"><strong>iddrawexclmodevideo</strong></a>, <a href="ikspropertyset.md"><strong>ikspropertyset</strong></a>, <a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>imediaposition</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>imediaseeking</strong></a>, <a href="/previous-versions/windows/desktop/api/Mixerocx/nn-mixerocx-imixerocx"><strong>imixerocx</strong></a>, <a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>iqualprop</strong></a>, <a href="/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify"><strong>ivpnotify</strong></a>, <a href="/previous-versions/windows/desktop/api/vpnotify/nn-vpnotify-ivpnotify2"><strong>IVPNotify2</strong></a></td>
-</tr>
-<tr class="even">
-<td>Eingabe-PIN-Medientypen</td>
-<td>Haupttyp: MEDIATYPE_Video<br/> Untertypen<br/>
-<ul>
-<li>MEDIASUBTYPE_Overlay (nur Pin 0)</li>
-<li>DirectDraw-YUV-Formate (nur Pin 0)</li>
-<li>DirectDraw-Video Beschleunigungs Formate (nur Pin 0)</li>
-<li>DirectDraw RGB-Formate (alle Eingabe Pins)</li>
-</ul>
-Format Typen:<br/>
-<ul>
-<li>Format_VIDEOINFO</li>
-<li>Format_VIDEOINFO2</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td>PIN-Eingabeschnittstellen</td>
-<td><a href="/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator"><strong>Iamvideoaccelerator</strong></a>, <a href="ikspin.md"><strong>ikspin</strong></a>, <a href="ikspropertyset.md"><strong>ikspropertyset</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a>, <a href="/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig"><strong>imixerpinconfig</strong></a>, <a href="/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2"><strong>IMixerPinConfig2</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ioverlay"><strong>IOverlay</strong></a> (nur Pin 0), <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipinconnection"><strong>ipinconnection</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>iqualitycontrol</strong></a>, <a href="/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify"><strong>ivpnotify</strong></a>, <a href="/previous-versions/windows/desktop/api/vpnotify/nn-vpnotify-ivpnotify2"><strong>IVPNotify2</strong></a></td>
-</tr>
-<tr class="even">
-<td>Ausgabe-PIN-Medientypen</td>
-<td>MEDIATYPE_Video MEDIASUBTYPE_Overlay</td>
-</tr>
-<tr class="odd">
-<td>PIN-Schnittstellen</td>
-<td><a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>Imediaposition</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>imediaseeking</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>iqualitycontrol</strong></a></td>
-</tr>
-<tr class="even">
-<td>CLSID Filtern</td>
-<td>CLSID_OverlayMixer</td>
-</tr>
-<tr class="odd">
-<td>CLSID der Eigenschaften Seite</td>
-<td>Keine Eigenschaften Seite.</td>
-</tr>
-<tr class="even">
-<td>Ausführbare Datei</td>
-<td>qdvd.dll</td>
-</tr>
-<tr class="odd">
-<td><a href="merit.md">Verdienst</a></td>
-<td>MERIT_DO_NOT_USE</td>
-</tr>
-<tr class="even">
-<td><a href="filter-categories.md">Filter Kategorie</a></td>
-<td>CLSID_LegacyAmFilterCategory</td>
-</tr>
-</tbody>
-</table>
+
+| | | Filterschnittstellen | <a href="/windows/desktop/api/Strmif/nn-strmif-iamoverlayfx"><strong>IAMOverlayFX</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iamvideodecimationproperties"><strong>IAMVideoDecimationProperties</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ibasefilter"><strong>IBaseFilter</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iddrawexclmodevideo"><strong>IDDrawExclModeVideo</strong></a>, <a href="ikspropertyset.md"><strong>IKsPropertySet</strong></a>, <a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>IMediaPosition</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking</strong></a>, <a href="/previous-versions/windows/desktop/api/Mixerocx/nn-mixerocx-imixerocx"><strong>IMixerOCX</strong></a>, <a href="/previous-versions/windows/desktop/api/Amvideo/nn-amvideo-iqualprop"><strong>IQualProp</strong></a>, <a href="/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify"><strong>IVPNotify</strong></a>, <a href="/previous-versions/windows/desktop/api/vpnotify/nn-vpnotify-ivpnotify2"><strong>IVPNotify2</strong></a> | | Eingabepinmedientypen | Haupttyp: MEDIATYPE_Video<br /> Untertypen:<br /><ul><li>MEDIASUBTYPE_Overlay (nur Pin 0)</li><li>DirectDraw YUV-Formate (nur Pin 0)</li><li>DirectDraw Video Acceleration-Formate (nur Pin 0)</li><li>DirectDraw RGB-Formate (alle Eingabepins)</li></ul>Formattypen:<br /><ul><li>Format_VIDEOINFO</li><li>Format_VIDEOINFO2</li></ul> | | Eingabepinschnittstellen | <a href="/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator"><strong>IAMVideoAccelerator</strong></a>, <a href="ikspin.md"><strong>IKsPin</strong></a>, <a href="ikspropertyset.md"><strong>IKsPropertySet</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-imeminputpin"><strong>IMemInputPin</strong></a>, <a href="/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig"><strong>IMixerPinConfig</strong></a>, <a href="/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2"><strong>IMixerPinConfig2</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ioverlay"><strong>IOverlay</strong></a> (nur Pin 0), <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-ipinconnection"><strong>IPinConnection</strong></a>, <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a>, <a href="/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify"><strong>IVPNotify</strong></a>, <a href="/previous-versions/windows/desktop/api/vpnotify/nn-vpnotify-ivpnotify2"><strong>IVPNotify2</strong></a> | | Ausgabepinmedientypen | MEDIATYPE_Video, MEDIASUBTYPE_Overlay | | Ausgabepinschnittstellen | <a href="/windows/desktop/api/Control/nn-control-imediaposition"><strong>IMediaPosition,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-imediaseeking"><strong>IMediaSeeking,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-ipin"><strong>IPin,</strong></a> <a href="/windows/desktop/api/Strmif/nn-strmif-iqualitycontrol"><strong>IQualityControl</strong></a> | | Filtern von CLSID-| CLSID_OverlayMixer | | CLSID-| der Eigenschaftenseite Keine Eigenschaftenseite. | | Ausführbare | qdvd.dll | | <a href="merit.md">|</a> MERIT_DO_NOT_USE | | <a href="filter-categories.md">| "Filterkategorie"</a> CLSID_LegacyAmFilterCategory | 
+
 
 
 
  
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Der Overlay-Mixer verwendet die Zielfarbe, um Video Oberflächen mit Überlagerungen zu kombinieren. Es blierte den Farbschlüssel und das sekundäre Video auf die primäre Oberfläche und sendet das primäre Video an die über Lagerungs Oberfläche. Die Grafikkarte kombiniert dann die beiden Oberflächen in ihren Frame Puffer.
+Der Overlay-Mixer verwendet die Zielfarbtaste, um Videooberflächen mit Überlagerungen zu mischen. Es blitt den Farbschlüssel und das sekundäre Video auf die primäre Oberfläche und sendet das primäre Video an die Überlagerungsoberfläche. Die Grafikkarte zusammengesetzt dann die beiden Oberflächen in ihren Rahmenpuffer.
 
-Um zu testen, ob der Grafiktreiber die Hardware Überlagerung unterstützt, müssen Sie **IDirectDraw7:: getcaps** aufrufen. Wenn das Feld **dwmaxvisibleoverlays** in der **ddcaps** -Struktur größer als 0 (null) ist, unterstützt der Treiber die Hardware Überlagerung.
+Um zu testen, ob der Grafiktreiber Hardwareüberlagerungen unterstützt, rufen **Sie IDirectDraw7::GetCaps auf.** Wenn das **DwMaxVisibleOverlays-Feld** in der **DDCAPS-Struktur** größer als 0 (null) ist, unterstützt der Treiber die Hardwareüberlagerung.
 
-Anwendungen können einige Verhaltensweisen auf dem Überlagerungs Mixer über die [**IMixerPinConfig2**](/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2) -Schnittstelle steuern. Spieleentwickler können den Overlay-Mixer zum Anzeigen von Videos im exklusiven DirectDraw-Modus verwenden, wie weiter unten in diesem Abschnitt beschrieben. Der [Video Mischungs Filter 9](video-mixing-renderer-filter-9.md) (VMR-9) bietet jetzt bessere Unterstützung für Videos in spielen. Weitere Informationen finden Sie unter [using the Video mischungsrenderer](using-the-video-mixing-renderer.md).
+Anwendungen können einige Verhaltensweisen auf dem Overlay-Mixer über die [**IMixerPinConfig2-Schnittstelle**](/windows/desktop/api/Mpconfig/nn-mpconfig-imixerpinconfig2) steuern. Spieleentwickler können das Overlay Mixer verwenden, um Videos im exklusiven DirectDraw-Modus anzuzeigen, wie weiter unten in diesem Abschnitt beschrieben. Der [Video Mixing Renderer Filter 9](video-mixing-renderer-filter-9.md) (VMR-9) bietet jetzt jedoch eine bessere Unterstützung für Videos in Spielen. Weitere Informationen finden Sie unter [Verwenden des VideoMischungsrenderers.](using-the-video-mixing-renderer.md)
 
-Die folgenden Informationen werden für den Vorteil der Filter Entwickler und Spielentwickler bereitgestellt, die den Overlay-Mixer im exklusiven DirectDraw-Modus verwenden möchten.
+Die folgenden Informationen dienen dem Vorteil von Filterentwicklern und Spieleentwicklern, die die Overlay-Mixer im exklusiven DirectDraw-Modus verwenden möchten.
 
-**Interne Überlagerungs Mixer-Vorgänge**
+**Überlagern Mixer interne Vorgänge**
 
-Der Overlay-Mixer macht eine Eingabe-PIN für jeden eingehenden Stream verfügbar. In der Regel gibt es drei Eingabe Pins: Pin 0 für Videodaten und Pins 1 und 2 für die Daten in Zeile 21 und DVD-subbild. Intern erstellt der Overlay-Mixer ein DirectDraw-Objekt mit einer primären Oberfläche, die den gesamten Desktop umfasst, sowie eine Überlagerungs Oberfläche, deren Rechteck durch die Größe des Videodaten Stroms auf Pin 0 definiert wird. Wenn der Decoder keinen Farbschlüssel angibt, verwendet der Überlagerungs Mixer Standard Farbtasten: dunkelgrau für neuere Grafikkarten und Magenta für ältere 256-farbige Karten.
+Der Overlay-Mixer macht einen Eingabepin für jeden eingehenden Datenstrom verfügbar. In der Regel gibt es drei Eingabepins: Pin 0 für Videodaten und Stecknadeln 1 und 2 für Daten aus Zeile 21 und DVD-Unterbilddaten. Intern erstellt das Overlay-Mixer ein DirectDraw-Objekt mit einer primären Oberfläche, die den gesamten Desktop umfasst, sowie eine Überlagerungsoberfläche, deren Rechteck durch die Größe des Videostreams auf Pin 0 definiert ist. Wenn der Decoder keinen Farbschlüssel angibt, verwendet der Overlay-Mixer Standardfarbtasten: dunkelgrau für neuere Grafikkarten und Magenta für ältere Karten mit 256 Farben.
 
 > [!Note]  
-> Die Ergebnisse sind nicht definiert, wenn der Decoder zwei sekundäre Videostreams gleichzeitig an derselben Stelle auf der über Lagerungs Oberfläche bereitstellt. (Dies tritt manchmal bei DVDs auf, die subbild-und Zeile 21-Streams enthalten.) Das Video kann Flimmern oder nur einen der Streams anzeigen.
+> Die Ergebnisse sind nicht definiert, wenn der Decoder zwei sekundäre Videostreams gleichzeitig an derselben Stelle auf der Überlagerungsoberfläche übermittelt. (Dies tritt manchmal bei DVDs auf, die Unterbild- und Zeilen-21-Streams enthalten.) Das Video kann flackern oder nur einen der Streams anzeigen.
 
  
 
-Unter Windows Vista oder höher deaktiviert der Überlagerungs-Mixer die Komposition von Desktopfenster-Manager (DWM), wenn der Anzeigetreiber die Hardware Überlagerung unterstützt. Anwendungen sollten die Verwendung des Überlagerungs-Mischungs Filters vermeiden. Verwenden Sie stattdessen VMR-9 oder den erweiterten Videorenderer (EVR).
+Auf Windows Vista oder höher deaktiviert die Overlay-Mixer Desktopfenster-Manager (DWM), wenn der Anzeigetreiber Hardwareüberlagerungen unterstützt. Anwendungen sollten die Verwendung des Filters Overlay Mixer vermeiden. Verwenden Sie stattdessen VMR-9 oder enhanced video renderer (EVR).
 
-**Upstreamverbindung mit dem Video Decoder**
+**Upstreamverbindung mit dem Videodecoder**
 
-In der Regel stellen die Eingabe Pins des Overlay-Mixers eine Verbindung mit einem upstreamvideodecoder her Der primäre Videostream muss eine Verbindung mit der PIN 0 herstellen. Die Zeilen 21-oder subbildstreams stellen eine Verbindung mit PIN 1 oder höher her. Wenn der Decoder ein Software Decoder ist, der die Host-CPU exklusiv verwendet, ist die Verbindung zwischen dem Decoder und der PIN 0 eine [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Verbindung. Wenn der Decoder die Hardwarebeschleunigung verwendet, muss für die Verbindung mit PIN 0 das Inferface [**iamvideoaccelerator**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator) verwendet werden. Diese beiden Verbindungstypen schließen sich gegenseitig aus.
+In der Regel stellen die Eingabepins des Overlay-Mixer eine Verbindung mit einem Upstreamvideodecoder her. Der primäre Videostream muss eine Verbindung mit dem Pin 0 herstellen. Die Datenströme der Zeile 21 oder der Unterbilddatenströme stellen eine Verbindung mit Pin 1 oder höher her. Wenn der Decoder ein Softwaredecoder ist, der die Host-CPU ausschließlich verwendet, ist die Verbindung zwischen dem Decoder und dem Pin 0 eine [**IMemInputPin-Verbindung.**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) Wenn der Decoder die Hardwarebeschleunigung verwendet, muss die Verbindung mit Pin 0 die [**IAMVideoAccelerator-Rückschlussfläche**](/previous-versions/windows/desktop/api/videoacc/nn-videoacc-iamvideoaccelerator) verwenden. Diese beiden Verbindungstypen schließen sich gegenseitig aus.
 
-Wenn der Decoder direkt auf die Überlagerungs Oberfläche verweist, sollte er die [**IOverlay**](/windows/desktop/api/Strmif/nn-strmif-ioverlay) -Schnittstelle für PIN 0 verwenden und die [**ioverlaynotify**](/windows/desktop/api/Strmif/nn-strmif-ioverlaynotify) -Schnittstelle implementieren.
+Wenn der Decoder direkt auf die Überlagerungsoberfläche zeichnet, sollte er die [**IOverlay-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ioverlay) an Pin 0 verwenden und die [**IOverlayNotify-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ioverlaynotify) implementieren.
 
-Filter, bei denen ein Hardware Decoder umschlossen und über einen Videoport eine Verbindung mit dem Overlay-Mixer hergestellt wird, müssen die [**ivpconfig**](/previous-versions/windows/desktop/api/Vpconfig/nn-vpconfig-ivpconfig) -Schnittstelle implementieren Der Overlay-Mixer implementiert die [**ivpnotify**](/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify) -Schnittstelle. Diese beiden Schnittstellen ermöglichen es dem Decoder, die erforderlichen Überlagerungs Oberflächen anzugeben, und ermöglichen dem Überlagerungs-Mixer, den Decoder über den Speicherort dieser Oberflächen im Videospeicher zu informieren.
+Filter, die einen Hardwaredecoder umschließen und über einen Videoport eine Verbindung mit der Overlay-Mixer herstellen, müssen die [**IVPConfig-Schnittstelle**](/previous-versions/windows/desktop/api/Vpconfig/nn-vpconfig-ivpconfig) implementieren. Der Overlay-Mixer implementiert die [**IVPNotify-Schnittstelle.**](/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify) Diese beiden Schnittstellen ermöglichen es dem Decoder, die benötigten Überlagerungsoberflächen anzugeben, und sie ermöglichen dem Overlay-Mixer, den Decoder über die Position dieser Oberflächen im Videospeicher zu informieren.
 
-Der Overlay-Mixer stellt außerdem sicher, dass das Video Rechteck ordnungsgemäß skaliert wird. Die Video Erfassung umfasst bestimmte Probleme in Bezug auf das Skalieren des Vorschaubilds und das Erfassen von verschachtelten Video Frames. Wenn Sie einen Filter oder einen WDM-Treiber für ein Hardware Video Erfassungsgerät entwickeln, finden Sie weitere Informationen zu diesen Themen in den Referenzseiten [**ivpconfig**](/previous-versions/windows/desktop/api/Vpconfig/nn-vpconfig-ivpconfig) und [**ivpnotify**](/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify) .
+Das Overlay Mixer stellt außerdem sicher, dass das Videorechteck ordnungsgemäß skaliert wird. Die Videoaufnahme umfasst bestimmte Probleme in Bezug auf die Skalierung des Vorschaubilds und die Erfassung verschachtelter Videoframes. Wenn Sie einen Filter- oder WDM-Treiber für ein Hardware-Videoaufnahmegerät entwickeln, finden Sie weitere Informationen zu diesen Themen auf den Referenzseiten [**zu IVPConfig**](/previous-versions/windows/desktop/api/Vpconfig/nn-vpconfig-ivpconfig) und [**IVPNotify.**](/previous-versions/windows/desktop/api/Vpnotify/nn-vpnotify-ivpnotify)
 
-Der Overlay-Mixer wird nicht in 1394-oder USB-Aufzeichnungs Szenarien verwendet. Sie wird bei der Video Erfassung über den PCI-Bus verwendet.
+Die Overlay-Mixer wird in 1394- oder USB-Erfassungsszenarien nicht verwendet. Sie wird in der Videoaufzeichnung über den PCI-Bus verwendet.
 
-**Downstream-Verbindung mit dem Videorenderer**
+**Downstreamverbindung mit dem Videorenderer**
 
-Der Overlay-Mixer verfügt über eine Ausgabe-PIN, die eine Verbindung mit dem [Videorenderer](video-renderer-filter.md) -Filter herstellt. Der Videorenderer in diesem Fall renderdas Video nicht. das Videofenster wird einfach verwaltet.
+Der Overlay-Mixer verfügt über einen Ausgabepin, der eine Verbindung mit dem [Videorendererfilter](video-renderer-filter.md) herstellt. Der Videorenderer rendert das Video in diesem Fall nicht. es verwaltet einfach das Videofenster.
 
-Die PIN-Verbindung verwendet anstelle der [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle die [**IOverlay**](/windows/desktop/api/Strmif/nn-strmif-ioverlay) -Schnittstelle. Der Videorenderer übergibt seinen Fenster Handle über den Überlagerungs Mixer an DirectDraw, das das Rechteck Clipping verwaltet. Anwendungen können den Videorenderer über die [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) -und [**IBasicVideo2**](/windows/desktop/api/Control/nn-control-ibasicvideo2) -Schnittstellen im Filter Graph-Manager steuern.
+Die Pinverbindung verwendet die [**IOverlay-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-ioverlay) anstelle der [**IMemInputPin-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) Der Videorenderer übergibt sein Fensterhandle durch die Überlagerungs-Mixer an DirectDraw, die die Rechteckausschneidung verwaltet. Anwendungen können den Videorenderer über die Schnittstellen [**IVideoWindow**](/windows/desktop/api/Control/nn-control-ivideowindow) und [**IBasicVideo2**](/windows/desktop/api/Control/nn-control-ibasicvideo2) im Filter Graph Manager steuern.
 
 **Exklusiver DirectDraw-Modus**
 
-Der exklusive DirectDraw-Modus des Overlay-Mischers ermöglicht spielen, Videos in einem Teil des Bildschirms anzuzeigen. In diesem Modus rendert der Überlagerungs-Mixer das Video direkt in eine von der Spiel Anwendung erstellte DirectDraw-Oberfläche und nicht in ein Fenster, das vom Videorenderer bereitgestellt wird. Dies ermöglicht spielen, den Farbschlüssel zu steuern. Der Overlay-Mixer macht nur eine Eingabe-PIN im exklusiven DirectDraw-Modus verfügbar. Dies bedeutet, dass in diesem Modus keine Mischung aus Zeile 21 oder DVD-subbild ausgeführt werden kann.
+Im exklusiven DirectDraw-Modus der Overlay Mixer können Spiele Video auf einem Teil des Bildschirms anzeigen. In diesem Modus rendert das Overlay-Mixer das Video direkt auf einer DirectDraw-Oberfläche, die von der Spielanwendung erstellt wurde, und nicht in einem Fenster, das vom Videorenderer bereitgestellt wird. Dadurch können Spiele den Farbschlüssel steuern. Der Overlay-Mixer macht nur einen Eingabepin im exklusiven DirectDraw-Modus verfügbar. Dies bedeutet, dass in diesem Modus keine Mischung aus Line 21- oder DVD-Unterbild durchgeführt werden kann.
 
-Um den Overlay-Mixer im exklusiven DirectDraw-Modus zu verwenden, erstellen Sie eine Instanz des Overlay-Mischers und Fragen Sie diese nach der [**iddrawexclmodevideo**](/windows/desktop/api/Strmif/nn-strmif-iddrawexclmodevideo) -Schnittstelle ab, bevor Sie das Filter Diagramm erstellen. Anschließend können Sie [**iddrawexclmodevideo:: setddrawsurface**](/windows/desktop/api/Strmif/nf-strmif-iddrawexclmodevideo-setddrawsurface) aufrufen, um die DirectDraw-Oberfläche für das Rendering anzugeben. Eine wesentliche Einschränkung dieses Modus besteht darin, dass das Spiel keinen Zugriff auf die eigentlichen Video Bits erhält. Wenn Sie **iddrawexclmodevideo** verwenden, wird die primäre Oberfläche von der Anwendung erstellt, und der Überlagerungs-Mixer erstellt die Überlagerungs Oberfläche.
+Um die Overlay-Mixer im exklusiven DirectDraw-Modus zu verwenden, erstellen Sie eine Instanz des Overlay-Mixer und fragen sie nach der [**IDDrawExclModeVideo-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iddrawexclmodevideo) ab, bevor Sie den Filtergraphen erstellen. Rufen Sie dann [**IDDrawExclModeVideo::SetDDrawSurface**](/windows/desktop/api/Strmif/nf-strmif-iddrawexclmodevideo-setddrawsurface) auf, um die DirectDraw-Oberfläche für das Rendering anzugeben. Eine wesentliche Einschränkung dieses Modus ist, dass das Spiel keinen Zugriff auf die tatsächlichen Videobits erhält. Wenn Sie **IDDrawExclModeVideo** verwenden, erstellt Ihre Anwendung die primäre Oberfläche und die Overlay-Mixer die Überlagerungsoberfläche.
 
-Sie können auch den exklusiven DirectDraw-Modus verwenden, um fensterlose Rendering auszuführen – z. b. auf einer Webseite – aber dies wird nicht empfohlen, da der Überlagerungs-Mixer in diesem Modus keine Vermischung ausführt. Dies bedeutet, dass keine Daten der Zeile 21 oder eines teilbilds angezeigt werden können.
+Sie können auch den exklusiven DirectDraw-Modus verwenden, um fensterloses Rendering durchzuführen , z. B. auf einer Webseite. Dies wird jedoch nicht empfohlen, da das Overlay-Mixer in diesem Modus keine Mischung durchführt. Dies bedeutet, dass keine Zeile 21- oder Unterbilddaten angezeigt werden können.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

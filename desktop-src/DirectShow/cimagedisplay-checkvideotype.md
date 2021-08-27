@@ -1,7 +1,7 @@
 ---
-description: Die checkvideotype-Methode überprüft, ob ein bestimmtes videoinfo-Format mit dem Anzeige Format kompatibel ist.
+description: Die CheckVideoType-Methode überprüft, ob ein angegebenes VIDEOINFO-Format mit dem Anzeigeformat kompatibel ist.
 ms.assetid: a8593c7d-bde0-4c44-b450-10c129dd0007
-title: Cimagedisplay. checkvideotype-Methode (winutil. h)
+title: CImageDisplay.CheckVideoType-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 7db198270804053993352c4969b924fa7edc891f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de6389e22868fe529b5038fe6be1403748dd5a01d22a242c41f9e6c6b8f86808
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372680"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108490"
 ---
-# <a name="cimagedisplaycheckvideotype-method"></a>Cimagedisplay. checkvideotype-Methode
+# <a name="cimagedisplaycheckvideotype-method"></a>CImageDisplay.CheckVideoType-Methode
 
-Die- `CheckVideoType` Methode überprüft, ob ein angegebenes [**videoinfo**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) -Format mit dem Anzeige Format kompatibel ist.
+Die `CheckVideoType` -Methode überprüft, ob ein angegebenes [**VIDEOINFO-Format**](/previous-versions/windows/desktop/api/amvideo/ns-amvideo-videoinfo) mit dem Anzeigeformat kompatibel ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ HRESULT CheckVideoType(
 
 <dl> <dt>
 
-*pinput* 
+*pInput* 
 </dt> <dd>
 
-Zeiger auf eine **videoinfo** -Struktur.
+Zeiger auf eine **VIDEOINFO-Struktur.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt S \_ OK zurück, wenn das Format kompatibel ist, \_ andernfalls E invalidArg.
+Gibt S \_ OK zurück, wenn das Format kompatibel ist, \_ andernfalls E INVALIDARG.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt S \_ OK zurück, wenn der vorgeschlagene Typ unter den aktuellen Anzeigeeinstellungen problemlos angezeigt werden kann.
+Diese Methode gibt S OK zurück, wenn der vorgeschlagene Typ problemlos unter \_ den aktuellen Anzeigeeinstellungen angezeigt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,8 +63,8 @@ Diese Methode gibt S \_ OK zurück, wenn der vorgeschlagene Typ unter den aktuel
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
@@ -72,7 +72,7 @@ Diese Methode gibt S \_ OK zurück, wenn der vorgeschlagene Typ unter den aktuel
 
 <dl> <dt>
 
-[**Cimagedisplay-Klasse**](cimagedisplay.md)
+[**CImageDisplay-Klasse**](cimagedisplay.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: WM-/Wm-Attribut
-description: Das WM-Attribut/Das Wm-Attribut ist der Inhalt.
+description: Das WM/Wms-Attribut ist der Inhalt.
 ms.assetid: 125a2a51-81f2-478a-a9e9-234662a17bc0
 keywords:
 - WM/Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "120122640"
 ---
 # <a name="wmlyrics-attribute"></a>WM-/Wm-Attribut
 
-Das **WM-Attribut/Das Wm-Attribut** ist der Inhalt.
+Das **WM/Wms-Attribut** ist der Inhalt.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -33,11 +33,11 @@ Das **WM-Attribut/Das Wm-Attribut** ist der Inhalt.
 
 Dieses Attribut wird sowohl in der Bibliothek (oder im Cache) als auch in der digitalen Mediendatei gespeichert.
 
-**Dies** ist ein Alias für dieses Attribut.
+**"Bes"** ist ein Alias für dieses Attribut.
 
 Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMLyrics.
 
-Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,11 +49,11 @@ Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[**Attributverweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

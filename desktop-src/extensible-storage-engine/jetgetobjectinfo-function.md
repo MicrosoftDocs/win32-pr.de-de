@@ -20,12 +20,12 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9e6317280c5e794e9809c15f47f01d55ffd48eeb
-ms.sourcegitcommit: 4665ebce0c106bdb52eef36e544280b496b6f50b
+ms.openlocfilehash: 824c19fbb1fb1e479b805eb45bf8ff56458110d0
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2021
-ms.locfileid: "122982423"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122469787"
 ---
 # <a name="jetgetobjectinfo-function"></a>JetGetObjectInfo-Funktion
 
@@ -94,12 +94,12 @@ Die folgenden Optionen können für diesen Parameter festgelegt werden.
 
 | <p>Wert</p> | <p>Bedeutung</p> | 
 |--------------|----------------|
-| <p>JET_ObjInfo</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">eine</a> JET_OBJECTINFO interpretiert.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die JET_ObjInfoNoStats verwenden. Dies kann schneller sein, da Statistiken nicht enthalten sind.</p> | 
-| <p>JET_ObjInfoList</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der JET_OBJECTLIST <a href="gg269348(v=exchg.10).md">beschrieben.</a> Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die Verwendung von JET_ObjInfoListNoStats verwenden, was möglicherweise schneller ist.</p> | 
+| <p>JET_ObjInfo</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">eine</a> JET_OBJECTINFO interpretiert.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die JET_ObjInfoNoStats-Informationsebene verwenden, die möglicherweise schneller ist, da Statistiken nicht enthalten sind.</p> | 
+| <p>JET_ObjInfoList</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> beschrieben. Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. Wenn der Aufrufer die Anzahl der Datensätze und Seiten für das Objekt nicht kennen möchte, sollten Sie die Verwendung von JET_ObjInfoListNoStats verwenden, was möglicherweise schneller ist.</p> | 
 | <p>JET_ObjInfoListACM</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
-| <p>JET_ObjInfoListNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der JET_OBJECTLIST <a href="gg269348(v=exchg.10).md">beschrieben.</a> Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. JET_ObjInfoListNoStats ist mit JET_ObjInfoList identisch, außer dass die Spalten, die die Anzahl der Datensätze (<em>columnidcRecord</em>) und Seiten (<em>columnidcPage</em>) melden, nicht aktualisiert werden.</p> | 
+| <p>JET_ObjInfoListNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269348(v=exchg.10).md">eine</a> JET_OBJECTLIST interpretiert. Informationen zu allen Objekten werden abgerufen. Eine temporäre Tabelle wird erstellt, und die Informationen, die zum Durchlaufen der temporären Tabelle erforderlich sind, werden in der <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a> beschrieben. Weitere Informationen finden Sie unter <a href="gg269348(v=exchg.10).md">JET_OBJECTLIST</a>. JET_ObjInfoListNoStats ist mit JET_ObjInfoList identisch, außer dass die Spalten, die die Anzahl der Datensätze (<em>columnidcRecord</em>) und Seiten (<em>columnidcPage</em>) melden, nicht aktualisiert werden.</p> | 
 | <p>JET_ObjInfoMax</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO.</a> Die maximale Größe des Objekts ist in Seiten. Derzeit werden nur Tabellen zurückgegeben.</p> | 
-| <p>JET_ObjInfoNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO.</a> Es werden nur Informationen zu dem in <em>szObjectName</em> angegebenen Objekt abgerufen.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>JET_ObjInfoNoStats ist mit JET_ObjInfo identisch, mit der Ausnahme, dass die Felder, die die Anzahl von Datensätzen und Seiten melden, auf 0 (null) festgelegt sind.</p> | 
+| <p>JET_ObjInfoNoStats</p> | <p><em>pvResult</em> wird als <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO.</a> Es werden nur Informationen zu dem in <em>szObjectName</em> angegebenen Objekt abgerufen.</p><p>Die <a href="gg269353(v=exchg.10).md">JET_OBJECTINFO-Struktur</a> wird mit Informationen zu dem Objekt aufgefüllt, das in <em>szObjectName benannt ist.</em></p><p>JET_ObjInfoNoStats ist identisch mit JET_ObjInfo, mit der Ausnahme, dass die Felder, die die Anzahl der Datensätze und Seiten melden, auf 0 (null) festgelegt sind.</p> | 
 | <p>JET_ObjInfoRulesLoaded</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
 | <p>JET_ObjInfoSysTabCursor</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
 | <p>JET_ObjInfoSysTabReadOnly</p> | <p>Veraltet und derzeit nicht unterstützt.</p> | 
@@ -120,7 +120,7 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) datentyp mit einem der folgenden
 
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
 Wenn **JetGetObjectInfo** erfolgreich eine temporäre Tabelle erstellt (z. B. JET_ObjInfoList oder JET_ObjInfoNoStats), ist der Aufrufer dafür verantwortlich, die temporäre Tabelle mit [JetCloseTable zu schließen.](./jetclosetable-function.md)
 
@@ -129,14 +129,7 @@ Wenn **JetGetObjectInfo** erfolgreich eine temporäre Tabelle erstellt (z. B. JE
 #### <a name="requirements"></a>Anforderungen
 
 
-| Anforderung | Wert |
-|------------|----------|
-| <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | 
-| <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | 
-| <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | 
-| <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | 
-| <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
-| <p><strong>Unicode</strong></p> | <p>Implementiert als <strong>JetGetObjectInfoW</strong> (Unicode) und <strong>JetGetObjectInfoA</strong> (ANSI).</p> | 
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista, Windows XP oder Windows 2000 Professional.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008, Windows Server 2003 oder Windows 2000 Server.</p> | | <p><strong>Header</strong></p> | <p>Wird in Esent.h deklariert.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | | <p><strong>Unicode</strong></p> | <p>Wird als <strong>JetGetObjectInfoW</strong> (Unicode) und <strong>JetGetObjectInfoA</strong> (ANSI) implementiert.</p> | 
 
 
 

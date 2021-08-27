@@ -1,7 +1,7 @@
 ---
-description: Die cenummediatypes-Klasse implementiert einen Enumerator für bevorzugte Medientypen.
+description: Die CEnumMediaTypes-Klasse implementiert einen Enumerator für bevorzugte Medientypen.
 ms.assetid: 50a90926-0bc7-4204-8000-81894bd154ac
-title: Cenumschlag mediatypes-Klasse (amfilter. h)
+title: CEnumMediaTypes-Klasse (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,33 +16,33 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ad5e1de9eb2edbdb63eb6f476391ae8387c8d01e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1729407f1022c2781fc97f8638ea8748323c151e9bd67c5ad31b30ae05fdff0f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120131274"
 ---
-# <a name="cenummediatypes-class"></a>Cenum mediatypes-Klasse
+# <a name="cenummediatypes-class"></a>CEnumMediaTypes-Klasse
 
-![cenenmediatypes-Klassenhierarchie](images/filter04.png)
+![cenummediatypes-Klassenhierarchie](images/filter04.png)
 
-Die- `CEnumMediaTypes` Klasse implementiert einen Enumerator für bevorzugte Medientypen.
+Die `CEnumMediaTypes` -Klasse implementiert einen Enumerator für bevorzugte Medientypen.
 
-Diese Klasse implementiert die [**ienummediatypes**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) -Schnittstelle. Die folgenden [**cbasepin**](cbasepin.md) -Methoden werden aufgerufen:
+Diese Klasse implementiert die [**IEnumMediaTypes-Schnittstelle.**](/windows/desktop/api/Strmif/nn-strmif-ienummediatypes) Sie ruft die folgenden [**CBasePin-Methoden**](cbasepin.md) auf:
 
--   [**Cbasepin:: getmediatype**](cbasepin-getmediatype.md): Ruft einen Medientyp ab, auf den von einem NULL basierten Index verwiesen wird.
--   [**Cbasepin:: getmediatyetversion**](cbasepin-getmediatypeversion.md): bestimmt, ob sich der Satz bevorzugter Typen geändert hat.
+-   [**CBasePin::GetMediaType:**](cbasepin-getmediatype.md)Ruft einen Medientyp ab, auf den von einem nullbasierten Index verwiesen wird.
+-   [**CBasePin::GetMediaTypeVersion:**](cbasepin-getmediatypeversion.md)Bestimmt, ob sich der Satz der bevorzugten Typen geändert hat.
 
-Wenn eine PIN die Liste der bevorzugten Medientypen ändert, erhöht die PIN die Medientyp-Versionsnummer. In diesem Fall wird das Enumeratorobjekt nicht mehr mit der PIN synchronisiert, und die Klassen Methoden geben die Vfw E-Enumeration nicht \_ \_ synchron zurück \_ \_ \_ . Aufrufen der Methode [**cenummediatypes:: Reset**](cenummediatypes-reset.md) zum erneuten Synchronisieren des Enumerators.
+Wenn ein Pin seine Liste der bevorzugten Medientypen ändert, erhöht der Pin die Versionsnummer des Medientyps. In diesem Fall wird das Enumeratorobjekt nicht mehr mit dem Pin synchronisiert, und die Klassenmethoden geben VFW \_ E \_ ENUM \_ OUT OF SYNC \_ \_ zurück. Rufen Sie die [**CEnumMediaTypes::Reset-Methode**](cenummediatypes-reset.md) auf, um den Enumerator erneut zu synchronisieren.
 
 
 
-| Öffentliche Methoden                                               | BESCHREIBUNG                                                     |
+| Öffentliche Methoden                                               | Beschreibung                                                     |
 |--------------------------------------------------------------|-----------------------------------------------------------------|
-| [**Cenum mediatypes**](cenummediatypes-cenummediatypes.md)   | Konstruktormethode.                                             |
-| [**~ Cenum mediatypes**](cenummediatypes--cenummediatypes.md) | Dekonstruktormethode. Virtu.                                     |
-| Ienummediatypes-Methoden                                      | BESCHREIBUNG                                                     |
+| [**CEnumMediaTypes**](cenummediatypes-cenummediatypes.md)   | Konstruktormethode.                                             |
+| [**~CEnumMediaTypes**](cenummediatypes--cenummediatypes.md) | Destruktormethode. Virtuellen.                                     |
+| IEnumMediaTypes-Methoden                                      | Beschreibung                                                     |
 | [**Klon**](cenummediatypes-clone.md)                       | Erstellt eine Kopie des Enumerators mit dem gleichen Enumerationszustand. |
 | [**Weiter**](cenummediatypes-next.md)                         | Ruft eine angegebene Anzahl von Medientypen ab.                    |
 | [**Zurücksetzen**](cenummediatypes-reset.md)                       | Setzt die Enumerationsfolge auf den Anfang zurück.               |
@@ -58,8 +58,8 @@ Wenn eine PIN die Liste der bevorzugten Medientypen ändert, erhöht die PIN die
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

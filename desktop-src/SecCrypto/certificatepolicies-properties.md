@@ -1,23 +1,23 @@
 ---
-description: Das certificatepolicies-Objekt macht die folgenden Eigenschaften verfügbar.
+description: Das CertificatePolicies-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 1301BAAE-5206-4755-9E56-B65A79876EDE
-title: Certificatepolicies-Eigenschaften
+title: CertificatePolicies-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6542809c3aadebb22b8554fe073498d9e3299a1e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a315a2a40deb5797c6b9f15c5a55d9624437abf3ace8fa8a0526e481648be0c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120101060"
 ---
-# <a name="certificatepolicies-properties"></a>Certificatepolicies-Eigenschaften
+# <a name="certificatepolicies-properties"></a>CertificatePolicies-Eigenschaften
 
-Das [**certificatepolicies**](certificatepolicies.md) -Objekt macht die folgenden Eigenschaften verfügbar.
+Das [**CertificatePolicies-Objekt**](certificatepolicies.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**\_Eigenschaft "netwenum"**](certificatepolicies-newenum.md)
+-   [**\_NewEnum-Eigenschaft**](certificatepolicies-newenum.md)
 -   [**Count-Eigenschaft**](certificatepolicies-count.md)
 -   [**Item-Eigenschaft**](certificatepolicies-item.md)
 

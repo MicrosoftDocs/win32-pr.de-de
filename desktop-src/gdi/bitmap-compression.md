@@ -4,12 +4,12 @@ ms.assetid: 14d14662-910a-4f3f-914e-6ccfc602c822
 title: Bitmapkomprimierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a3fa089401e77e882cf62472d007495e3e6c686d52259f095cb5a2758204736
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: dcefec93bb5583ba066e35d5143410d1c249bb09
+ms.sourcegitcommit: 0dec0044816af3f2b2e6403659e1cf11138c90cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "119105769"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121812846"
 ---
 # <a name="bitmap-compression"></a>Bitmapkomprimierung
 

@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 9e307527f93c153f0f78ce58b4d70ead4f7c1bc4
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: 44d71469cf5fd3246a0bb038cf369227cb3a3017
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113120555"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625826"
 ---
 # <a name="calculatelevelofdetail-directx-hlsl-texture-object"></a>CalculateLevelOfDetail (DirectX HLSL-Texturobjekt)
 
@@ -32,8 +32,8 @@ ret Object.CalculateLevelOfDetail( sampler \_ state S, float x );
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
@@ -44,7 +44,7 @@ ret Object.CalculateLevelOfDetail( sampler \_ state S, float x );
 <tbody>
 <tr class="odd">
 <td><span id="Object"></span><span id="object"></span><span id="OBJECT"></span><em>Objekt</em><br/></td>
-<td>Beliebiger <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (außer Texture2DMS und Texture2DMSArray).<br/></td>
+<td>Jeder <a href="dx-graphics-hlsl-to-type.md">Texturobjekttyp</a> (mit Ausnahme von Texture2DMS und Texture2DMSArray).<br/></td>
 </tr>
 <tr class="even">
 <td><span id="S"></span><span id="s"></span><em>S</em><br/></td>
@@ -52,11 +52,11 @@ ret Object.CalculateLevelOfDetail( sampler \_ state S, float x );
 </tr>
 <tr class="odd">
 <td><span id="x"></span><span id="X"></span><em>X</em><br/></td>
-<td>[in] Der oder die linearen Interpolationswerte, bei denen es sich um eine Gleitkommazahl zwischen 0,0 und einschließlich 1,0 handelt. Die Anzahl der Komponenten hängt vom Texturobjekttyp ab. <br/> 
+<td>[in] Der lineare Interpolationswert oder -werte, bei dem es sich um eine Gleitkommazahl zwischen 0,0 und einschließlich 1,0 handelt. Die Anzahl der Komponenten hängt vom Texturobjekttyp ab. <br/> 
 <table>
 <thead>
 <tr class="header">
-<th>Texture-Object Typ</th>
+<th>Texture-Object-Typ</th>
 <th>Parametertyp</th>
 </tr>
 </thead>
@@ -89,13 +89,13 @@ ret Object.CalculateLevelOfDetail( sampler \_ state S, float x );
 
 Gibt die berechnete LOD zurück, einen einzelnen Gleitkommawert.
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
-| vs \_ 4 \_ 0 | vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
+| Vs \_ 4 \_ 0 | Vs \_ 4 \_ 1  | ps \_ 4 \_ 0 | ps \_ 4 \_ 1  | gs \_ 4 \_ 0 | gs \_ 4 \_ 1  |
 |----------|-----------|----------|-----------|----------|-----------|
 |          |           |          | x         |          |           |
 
@@ -103,14 +103,14 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
  
 
-1.  TextureCubeArray ist in Shader Model 4.1 oder höher verfügbar.
-2.  ShaderModell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
+1.  TextureCubeArray ist im Shadermodell 4.1 oder höher verfügbar.
+2.  Shadermodell 4.1 ist in Direct3D 10.1 oder höher verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Texture-Object](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

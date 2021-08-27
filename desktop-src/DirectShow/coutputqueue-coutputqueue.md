@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 17a795bf4ec33ec904b83f6621fc0bc4f43b4b15
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1bf50314fd0ceb1afbe00c5a6a63708cc79ab38d77931c80b086039c7ca9704c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108095328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087240"
 ---
 # <a name="coutputqueuecoutputqueue-constructor"></a>COutputQueue.COutputQueue-Konstruktor
 
@@ -105,9 +105,9 @@ Priorität des Threads, der Beispiele liefert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn *bAuto* **true ist,** ruft das Objekt die [**IMemInputPin::ReceiveCanBlock-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock) auf dem Downstreampin auf. Wenn **ReceiveCanBlock** S OK zurückgibt (d. h., der Pin könnte bei \_ [**IMemInputPin::Receive-Aufrufen**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) blockiert werden), erstellt das Objekt einen Thread für die Bereitstellung von Beispielen. Andernfalls wird kein Thread erstellt.
+Wenn *bAuto* **true ist,** ruft das Objekt die [**IMemInputPin::ReceiveCanBlock-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receivecanblock) auf dem Downstreampin auf. Wenn **ReceiveCanBlock** S OK zurückgibt (was bedeutet, dass die Pin bei \_ [**IMemInputPin::Receive-Aufrufen**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-receive) blockiert werden kann), erstellt das Objekt einen Thread für die Bereitstellung von Beispielen. Andernfalls wird kein Thread erstellt.
 
 Wenn *bAuto* **FALSE ist,** bestimmt der Wert *von bQueue,* ob ein Thread erstellt werden soll.
 
@@ -117,14 +117,14 @@ Wenn das -Objekt einen Thread erstellt, wird das Threadhandles der [**Membervari
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Outputq.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
+| Header<br/>  | <dl> <dt>Outputq.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

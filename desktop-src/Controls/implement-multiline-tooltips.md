@@ -1,47 +1,47 @@
 ---
-title: So implementieren Sie mehrzeilige Quick Infos
-description: Mehrzeilige Quick Infos ermöglichen das Anzeigen von Text in mehr als einer Zeile.
+title: Implementieren von mehrstufigen QuickInfos
+description: Mehrzeilen-QuickInfos ermöglichen das Anzeigen von Text in mehr als einer Zeile.
 ms.assetid: 62B10B44-C1C2-4C86-8648-AE6B606BACBB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0d6f32d638b2d33ea6270aa5f8ce2c09f0f4174
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3cd0d9f4172b256d2e6b72fb59ace4dc377fa3a0061e3ee0e6c0f234a74aad06
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708663"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120085625"
 ---
-# <a name="how-to-implement-multiline-tooltips"></a>So implementieren Sie mehrzeilige Quick Infos
+# <a name="how-to-implement-multiline-tooltips"></a>Implementieren von mehrstufigen QuickInfos
 
-Mehrzeilige Quick Infos ermöglichen das Anzeigen von Text in mehr als einer Zeile.
+Mehrzeilen-QuickInfos ermöglichen das Anzeigen von Text in mehr als einer Zeile.
 
-Sie werden von [Version 4,70](common-control-versions.md) und höher der allgemeinen Steuerelemente unterstützt. Die Anwendung erstellt eine mehrzeilige QuickInfo, indem eine [**TTM- \_ SetMaxTipWidth**](ttm-setmaxtipwidth.md) -Meldung gesendet wird, die die Breite des Anzeige Rechtecks angibt. Text, der diese Breite überschreitet, wird in die nächste Zeile umschlossen, anstatt den Anzeigebereich zu erweitern. Die Rechtecks Höhe wird nach Bedarf erweitert, um den zusätzlichen Zeilen Rechnung zu tragen. Das QuickInfo-Steuerelement umschließt die Linien automatisch, oder Sie können eine Kombination aus Wagen Rücklauf/Zeilenvorschub, \\ r \\ n, verwenden, um Zeilenumbrüche an bestimmten Positionen zu erzwingen
+Sie werden von [Version 4.70](common-control-versions.md) und höher der allgemeinen Steuerelemente unterstützt. Ihre Anwendung erstellt eine mehrzweckige QuickInfo, indem sie eine [**TTM \_ SETMAXTIPWIDTH-Nachricht**](ttm-setmaxtipwidth.md) sendet und dabei die Breite des Anzeigerechtecks angibt. Text, der diese Breite überschreitet, wird mit der nächsten Zeile umschließen, anstatt den Anzeigebereich zu verbreitern. Die Rechteckhöhe wird nach Bedarf erhöht, um die zusätzlichen Linien aufzunehmen. Das QuickInfo-Steuerelement umbricht die Zeilen automatisch, oder Sie können eine Wagenrücklauf-/Zeilenfeedkombination (r n) verwenden, um Zeilenumbrüche an \\ \\ bestimmten Stellen zu erzwingen.
 
 Die resultierende Anzeige wird in der folgenden Abbildung dargestellt.
 
-![Screenshot eines Dialog Felds mit einer QuickInfo, die Text wie einen mehrzeiligen Absatz enthält](images/tt-multiline.png)
+![Screenshot eines Dialogfelds mit einer QuickInfo, die Text enthält, der wie ein mehrzeiler Absatz angeordnet ist](images/tt-multiline.png)
 
 > [!Note]  
-> Der Text Puffer, der vom **szText** -Member der [**nmttdispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfoa) -Struktur angegeben wird, kann nur 80 Zeichen umfassen. Wenn Sie eine längere Zeichenfolge verwenden müssen, verweisen Sie auf den **lpszText** -Member von **nmttdispinfo** auf einen Puffer, der den gewünschten Text enthält.
+> Der vom **szText-Member** der [**NMTTDISPINFO-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfoa) angegebene Textpuffer kann nur 80 Zeichen aufnehmen. Wenn Sie eine längere Zeichenfolge verwenden müssen, verweisen Sie den **lpszText-Member** von **NMTTDISPINFO** auf einen Puffer, der den gewünschten Text enthält.
 
- 
+ 
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="implement-multiline-tooltips"></a>Implementieren von mehrzeiligen Quick Infos
+### <a name="implement-multiline-tooltips"></a>Implementieren von mehrstufigen QuickInfos
 
-Das folgende Code Fragment ist ein Beispiel für einen einfachen [TTN \_ getdispinfo](ttn-getdispinfo.md) -Benachrichtigungs Handler. Dadurch wird eine mehrzeilige QuickInfo aktiviert, indem das Anzeige Rechteck auf 150 Pixel festgelegt wird. Ein manueller Zeilenumbruch wird nach dem ersten Wort eingefügt, um anzuzeigen, dass Zeilenumbrüche schwierig und weich sind.
+Das folgende Codefragment ist ein Beispiel für einen einfachen [TTN \_ GETDISPINFO-Benachrichtigungshandler.](ttn-getdispinfo.md) Sie ermöglicht eine mehrstufige QuickInfo, indem das Anzeigerechteck auf 150 Pixel festgelegt wird. Nach dem ersten Wort wird ein manueller Zeilenumbruch eingefügt, um zu zeigen, dass Zeilenumbrüche schwierig und weich sein können.
 
 
 ```C++
@@ -67,12 +67,12 @@ Das folgende Code Fragment ist ein Beispiel für einen einfachen [TTN \_ getdisp
 
 <dl> <dt>
 
-[Verwenden von Quick Infos](using-tooltip-contro.md)
+[Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

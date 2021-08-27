@@ -1,10 +1,10 @@
 ---
-description: Fordert an, den Rohdaten Inhalt eines Objekts (Puffer, Textur, renderzielansicht usw.) zu erhalten.
+description: Anforderungen zum Erhalten des Rohinhalts eines Objekts (Puffer, Textur, Renderzielansicht usw.).
 MS-HAID: vspixengine.IBufferObjectDataRequest\_RequestAsync\_EventID\_DWORD\_BSTR\_BSTR\_IBufferObjectDataCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ibufferobjectdatarequest:: requestasync-Methode'
+title: IBufferObjectDataRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 899954DC-6196-4F79-AFB4-5E692DAA03EC
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 97d35f656f373f2f0040d49a78a2c0d376bc4266
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7c021627fd3a5c7d7f0e5f014437bd376c08e7c1
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124171"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624936"
 ---
-# <a name="span-idvspixengineibufferobjectdatarequest_requestasync_eventid_dword_bstr_bstr_ibufferobjectdatacallback_ptr_dword_dwordspanibufferobjectdatarequestrequestasync-method"></a><span id="vspixengine.ibufferobjectdatarequest_requestasync_eventid_dword_bstr_bstr_ibufferobjectdatacallback_ptr_dword_dword"></span>Ibufferobjectdatarequest:: requestasync-Methode
+# <a name="span-idvspixengineibufferobjectdatarequest_requestasync_eventid_dword_bstr_bstr_ibufferobjectdatacallback_ptr_dword_dwordspanibufferobjectdatarequestrequestasync-method"></a><span id="vspixengine.ibufferobjectdatarequest_requestasync_eventid_dword_bstr_bstr_ibufferobjectdatacallback_ptr_dword_dword"></span>IBufferObjectDataRequest::RequestAsync-Methode
 
-Fordert an, den Rohdaten Inhalt eines Objekts (Puffer, Textur, renderzielansicht usw.) zu erhalten.
+Anforderungen zum Erhalten des Rohinhalts eines Objekts (Puffer, Textur, Renderzielansicht usw.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,38 +45,38 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*EventID*   
-Das angegebene Ereignis, mit dem der Inhalt des Puffers verglichen werden soll (z. b. kann sich ein Renderziel im Laufe der Zeit ändern).
+*Eventid*   
+Das angegebene Ereignis, mit dem der Inhalt des Puffers übereinstimmen soll (z. B. kann sich ein Renderziel im Laufe der Zeit ändern).
 
-*Requesteddatauid*   
+*RequestedDataUID*   
 Die Adresse des angegebenen Objekts.
 
 *Datei*   
-Eine com-Zeichenfolge, die den Pfadnamen der Datei enthält, in die Ergebnisse geschrieben werden.
+Eine COM-Zeichenfolge, die den Pfadnamen der Datei enthält, in die Ergebnisse geschrieben werden.
 
-*Ges*   
-Derzeit nicht verwendet. Eine com-Zeichenfolge, die das Ausgabeformat angibt.
+*Format*   
+Derzeit nicht verwendet. Eine COM-Zeichenfolge, die das Ausgabeformat angibt.
 
 *requestCallback*   
-Die Adresse des Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse des Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
+*progressIntervalMsecs*   
 Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Ibufferobjectdatarequest**](/windows/desktop/direct3dtools/ibufferobjectdatarequest)
+[**IBufferObjectDataRequest**](/windows/desktop/direct3dtools/ibufferobjectdatarequest)
 
  
 

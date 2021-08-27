@@ -1,17 +1,17 @@
 ---
 description: Gibt die Qualit채tsstufe f체r die Codierung an.
 ms.assetid: 2c7f3836-2392-47c6-9a56-d5a9b52560ff
-title: Avenccommonquality-Eigenschaft (codecapi. h)
+title: AVEncCommonQuality-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a0e69d797f2e26e830158c969c8fcf4ec0b242a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 99202391e919fa1da9028a15a57154834feddd3039160b9b0562a713fe59ddaa
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120087670"
 ---
-# <a name="avenccommonquality-property"></a>Avenccommonquality (Eigenschaft)
+# <a name="avenccommonquality-property"></a>AVEncCommonQuality-Eigenschaft
 
 Gibt die Qualit채tsstufe f체r die Codierung an.
 
@@ -19,15 +19,15 @@ Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**UInt32** (**VT \_ UI4**)
+**UINT32** (**VT \_ UI4**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avenccommonquality**
+**CODECAPI \_ AVEncCommonQuality**
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Wert dieser Eigenschaft hat den folgenden Bereich.
+Der Wert dieser Eigenschaft weist den folgenden Bereich auf.
 
 
 
@@ -40,9 +40,9 @@ Der Wert dieser Eigenschaft hat den folgenden Bereich.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft steuert die Qualit채tsstufe, wenn der Encoder keine eingeschr채nkte Bitrate verwendet. Die Eigenschaft " [**avenccommonratecontrolmode**](avenccommonratecontrolmode-property.md) " bestimmt, ob die Bitrate eingeschr채nkt ist.
+Diese Eigenschaft steuert die Qualit채tsstufe, wenn der Encoder keine eingeschr채nkte Bitrate verwendet. Die [**AVEncCommonRateControlMode-Eigenschaft**](avenccommonratecontrolmode-property.md) bestimmt, ob die Bitrate eingeschr채nkt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,9 +50,9 @@ Diese Eigenschaft steuert die Qualit채tsstufe, wenn der Encoder keine eingeschr�
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterst체tzte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterst체tzte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterst체tzte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterst체tzte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
@@ -60,10 +60,10 @@ Diese Eigenschaft steuert die Qualit채tsstufe, wenn der Encoder keine eingeschr�
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

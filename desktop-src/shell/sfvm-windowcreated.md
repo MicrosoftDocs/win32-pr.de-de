@@ -1,6 +1,6 @@
 ---
-description: 'Benachrichtigt das Rückruf Objekt, dass das Fenster der Ordneransicht erstellt wird. Wird von ishellfolderviewcb:: messagesfvcb verwendet.'
-title: SFVM_WINDOWCREATED Meldung (shlobj. h)
+description: Benachrichtigt das Rückrufobjekt, dass das Ordneransichtsfenster erstellt wird. Wird von IShellFolderViewCB::MessageSFVCB verwendet.
+title: SFVM_WINDOWCREATED Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: b57eb1d8-a897-4358-a855-89e152035eff
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 9d545feadecdaadbf776f94e653df8b71150ac05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d09957e1164d5caacbddc23c9a72cb33ef80ffa156dd0538c0be1e24f192018
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980865"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120111160"
 ---
-# <a name="sfvm_windowcreated-message"></a>Sfvm- \_ WindowCreated-Nachricht
+# <a name="sfvm_windowcreated-message"></a>SFVM \_ WINDOWCREATED-Meldung
 
-Benachrichtigt das Rückruf Objekt, dass das Fenster der Ordneransicht erstellt wird. Wird von [**ishellfolderviewcb:: messagesfvcb**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
+Benachrichtigt das Rückrufobjekt, dass das Ordneransichtsfenster erstellt wird. Wird von [**IShellFolderViewCB::MessageSFVCB**](/windows/win32/api/shlobj_core/nf-shlobj_core-ishellfolderviewcb-messagesfvcb)verwendet.
 
 
 ```C++
@@ -39,14 +39,14 @@ SFVM_WINDOWCREATED
 
 <dl> <dt>
 
-*hwndview* \[ in\]
+*hwndView* \[ In\]
 </dt> <dd>
 
-Das Fenster Handle der Ordneransicht.
+Das Fensterhandle der Ordneransicht.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -54,7 +54,7 @@ Das Fenster Handle der Ordneransicht.
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

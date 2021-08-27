@@ -17,12 +17,12 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 5eab7942f62f67d9023ced3cfde82974c3ee824eb83d2570023bde02fbc1cbab
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: ad86b5b1cd16be6fa5ca112a7f332b45e9e5c870
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118986080"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122625496"
 ---
 # <a name="span-idvspixengineipixengine5_loadhistogramasync_uint_pixenginetexturesliceindex_int_bstr_ipixengine5callbacks_ptr_dword_dwordspanipixengine5loadhistogramasync-method"></a><span id="vspixengine.ipixengine5_loadhistogramasync_uint_pixenginetexturesliceindex_int_bstr_ipixengine5callbacks_ptr_dword_dword"></span>IPixEngine5::LoadHistogramAsync-Methode
 
@@ -46,10 +46,10 @@ HRESULT LoadHistogramAsync(
 ## <a name="parameters"></a>Parameter
 
 *textureId*   
-Die ID der Textur, für die Histogrammdaten geladen werden.
+Die ID der Textur, für die Histogrammdaten geladen werden sollen.
 
 *sliceIndex*   
-Der Index des Slices, für den Histogrammdaten geladen werden.
+Der Index des Slices, für den Histogrammdaten geladen werden sollen.
 
 *formatOverride*   
 Gibt die Formatüberschreibung an.
@@ -58,21 +58,21 @@ Gibt die Formatüberschreibung an.
 Eine COM-Zeichenfolge, die den Namen der Histogrammdatendatei enthält.
 
 *Rückrufe*   
-Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle anordnt.
+Die Adresse eines Objekts, das die IPixEngine5-Rückrufschnittstelle bereitstellt.
 
 *requestCookie*   
 Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
 *progressIntervalMsecs*   
-Wird nicht verwendet.
+Nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen
+## <a name="requirements"></a>Requirements (Anforderungen)
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
+<table><colgroup><col  /><col  /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 

@@ -1,7 +1,7 @@
 ---
 description: RequestStateChange-Methode der Msvm_ReplicationService - Fordert eine Zustandsänderung an.
 ms.assetid: ae799e76-5177-42a5-8591-ceaf15dd7eaf
-title: RequestStateChange-Methode der Msvm_ReplicationService Klasse
+title: RequestStateChange-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -128,7 +128,7 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 *Auftrag* \[ out\]
 </dt> <dd>
 
-Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den durch den Methodenaufruf initiierten Zustandsübergang nachverfolgung zu verfolgen.
+Kann einen Verweis auf den [**CIM \_ ConcreteJob**](cim-concretejob.md) enthalten, der erstellt wurde, um den zustandsübergang zu verfolgen, der durch den Methodenaufruf initiiert wurde.
 
 </dd> <dt>
 
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

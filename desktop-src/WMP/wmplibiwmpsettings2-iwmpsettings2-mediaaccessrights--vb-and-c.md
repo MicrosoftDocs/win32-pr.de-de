@@ -1,9 +1,9 @@
 ---
 title: IWMPSettings2 mediaAccessRights-Eigenschaft
-description: Die mediaAccessRights-Eigenschaft ruft einen Wert ab, der die derzeit für den Bibliothekszugriff gewährten Berechtigungen angibt.
+description: Die mediaAccessRights-Eigenschaft ruft einen Wert ab, der die Berechtigungen angibt, die derzeit für den Bibliothekszugriff gewährt werden.
 ms.assetid: c4289a2c-e343-405d-9bf5-0e97f6617916
 keywords:
-- mediaAccessRights-Eigenschaft Windows Media Player
+- mediaAccessRights-Windows Media Player
 - mediaAccessRights-Eigenschaft Windows Media Player , IWMPSettings2-Schnittstelle
 - IWMPSettings2-Schnittstelle Windows Media Player , mediaAccessRights-Eigenschaft
 topic_type:
@@ -26,7 +26,7 @@ ms.locfileid: "120122490"
 ---
 # <a name="iwmpsettings2mediaaccessrights-property"></a>IWMPSettings2::mediaAccessRights-Eigenschaft
 
-Die **mediaAccessRights-Eigenschaft** ruft einen Wert ab, der die derzeit für den Bibliothekszugriff gewährten Berechtigungen angibt.
+Die **mediaAccessRights-Eigenschaft** ruft einen Wert ab, der die Berechtigungen angibt, die derzeit für den Bibliothekszugriff gewährt werden.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,13 +49,13 @@ Public ReadOnly Property mediaAccessRights As System.String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System.String,die** einer der folgenden Werte ist.
+Eine **System.String,** bei der es sich um einen der folgenden Werte handelt.
 
 
 
-| Wert | BESCHREIBUNG                      |
+| Wert | Beschreibung                      |
 |-------|----------------------------------|
-| Keine  | Nur aktuelle Elementzugriffsrechte. |
+| Keine  | Nur Zugriffsrechte für aktuelle Elemente. |
 | Lesen  | Nur Lesezugriffsrechte.         |
 | Voll  | Lese-/Schreibzugriffsrechte.        |
 
@@ -65,7 +65,7 @@ Eine **System.String,die** einer der folgenden Werte ist.
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Webseite muss zunächst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in die Bibliothek zu schreiben. Dies bedeutet, dass der Code auf bestimmte Methoden, Eigenschaften und Ereignisse nicht zugreifen kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Um Zugriffsrechte zu erhalten, ruft die Anwendung **IWMPSettings2.get \_ requestMediaAccessRights** auf und übergibt einen Parameter, der die gewünschte Zugriffsrechteebene angibt.
+Eine Webseite muss zunächst die Berechtigung des Benutzers anfordern, Informationen aus der Bibliothek zu lesen oder Daten in diese zu schreiben. Dies bedeutet, dass auf bestimmte Methoden, Eigenschaften und Ereignisse im Code nicht zugegriffen werden kann, wenn die entsprechenden Zugriffsrechte nicht erteilt wurden. Um Zugriffsrechte zu erhalten, ruft die Anwendung **IWMPSettings2.get \_ requestMediaAccessRights** auf und übergibt einen Parameter, der die gewünschte Zugriffsrechteebene angibt.
 
 Anwendungen, die auf dem Computer des Benutzers ausgeführt werden, verfügen immer über Vollzugriffsrechte.
 
@@ -81,7 +81,7 @@ Anwendungen, die auf dem Computer des Benutzers ausgeführt werden, verfügen im
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

@@ -1,7 +1,7 @@
 ---
-description: Die getTimeline-Methode ruft die Zeitachse ab, zu der diese Gruppe gehört.
+description: Die GetTimeline-Methode ruft die Zeitachse ab, zu der diese Gruppe gehört.
 ms.assetid: a57d75c9-6e2e-426f-9403-ad32188b2211
-title: 'Iamtimelinegroup:: getTimeline-Methode (qedit. h)'
+title: IAMTimelineGroup::GetTimeline-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 6b85b0c6f1730c2946134a36d33537f311b6603f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da9064969cc026ebffb91ccbdb70bcaebab2b5d696bcb04d6c6281548721c522
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120086840"
 ---
-# <a name="iamtimelinegroupgettimeline-method"></a>Iamtimelinegroup:: getTimeline-Methode
+# <a name="iamtimelinegroupgettimeline-method"></a>IAMTimelineGroup::GetTimeline-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `GetTimeline` Methode ruft die Zeitachse ab, zu der diese Gruppe gehört.
+Die `GetTimeline` -Methode ruft die Zeitachse ab, zu der diese Gruppe gehört.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT GetTimeline(
 
 <dl> <dt>
 
-*pptimeline* \[ vorgenommen\]
+*ppTimeline* \[ out\]
 </dt> <dd>
 
-Empfängt die [**iamtimeline**](iamtimeline.md) -Schnittstelle der Zeitachse. Wenn die Gruppe nicht Teil einer Zeitachse ist, wird der Wert auf **null** festgelegt.
+Empfängt die [**IAMTimeline-Schnittstelle**](iamtimeline.md) der Zeitachse. Wenn die Gruppe nicht Teil einer Zeitachse ist, wird der Wert auf **NULL** festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der in *pptimeline* zurückgegebene Wert nicht **null** ist, weist die **iamtimeline** -Schnittstelle einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn der in *ppTimeline* zurückgegebene Wert nicht **NULL** ist, verfügt die **IAMTimeline-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie die Schnittstelle freigeben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,8 +76,8 @@ Wenn der in *pptimeline* zurückgegebene Wert nicht **null** ist, weist die **ia
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
@@ -85,10 +85,10 @@ Wenn der in *pptimeline* zurückgegebene Wert nicht **null** ist, weist die **ia
 
 <dl> <dt>
 
-[**Iamtimelinegroup-Schnittstelle**](iamtimelinegroup.md)
+[**IAMTimelineGroup-Schnittstelle**](iamtimelinegroup.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

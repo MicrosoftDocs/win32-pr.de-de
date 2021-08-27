@@ -4,16 +4,16 @@ description: Ruft den aktuellen Zustand des angegebenen Elements auf dem Adapter
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 06/20/2019
-ms.openlocfilehash: 61fc5c601904011de8f343777a95385a16ec3d7e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2e5c585c249141c1491ddf36ee798d8b11148425026e9011bd0653169f998fb9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338283"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117720"
 ---
-# <a name="idxcoreadapterquerystate-method"></a>Idxcoreadapter:: querystate-Methode
+# <a name="idxcoreadapterquerystate-method"></a>IDXCoreAdapter::QueryState-Methode
 
-Ruft den aktuellen Zustand des angegebenen Elements auf dem Adapter ab. Rufen Sie vor dem Aufrufen von **querystate** für einen Eigenschaftentyp [isquerystaatupportiert](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) auf, um zu bestätigen, dass für diesen Adapter und dieses Betriebssystem eine Abfrage der Art des Zustands verfügbar ist.
+Ruft den aktuellen Zustand des angegebenen Elements auf dem Adapter ab. Rufen Sie vor dem Aufrufen von **QueryState** für einen Eigenschaftentyp [IsQueryStateSupported](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) auf, um zu bestätigen, dass das Abfragen der Zustandsart für diesen Adapter und das Betriebssystem verfügbar ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,52 +41,52 @@ HRESULT QueryState(
 
 ### <a name="state"></a>state
 
-Typ: **[dxcoreadapterstate](./ne-dxcore_interface-dxcoreadapterstate.md)**
+Typ: **[DXCoreAdapterState](./ne-dxcore_interface-dxcoreadapterstate.md)**
 
-Die Art des Zustands Elements auf dem Adapter, dessen Zustand Sie abrufen möchten. Weitere Informationen zu den einzelnen adapterstatusarten finden Sie in der Tabelle unter [dxcoreadapterstate](./ne-dxcore_interface-dxcoreadapterstate.md) .
+Die Art des Zustandselements auf dem Adapter, dessen Zustand Sie abrufen möchten. Weitere Informationen zu den einzelnen Adapterzustandsarten finden Sie in der Tabelle in [DXCoreAdapterState.](./ne-dxcore_interface-dxcoreadapterstate.md)
 
-### <a name="inputstatedetailssize"></a>Input statedetailssize
-
-Typ: **size_t**
-
-Die Größe (in Bytes) des Eingangs Zustands Details-Puffers, den Sie (optional) zuordnen und in *inputstatedetails* angeben können.
-
-### <a name="inputstatedetails-in"></a>Input statedetails [in]
-
-Typ: **void konstant \***
-
-Ein optionaler Zeiger auf einen konstanten Eingabe Zustands Details-Puffer, den Sie in der Anwendung zuordnen, der alle Informationen zu Ihrer Anforderung enthält, die für die im *Status* angegebene Zustands Angabe erforderlich sind. Weitere Informationen zu allen Eingabepuffer Anforderungen für eine bestimmte Statusart finden Sie in der Tabelle unter [dxcoreadapterstate](./ne-dxcore_interface-dxcoreadapterstate.md) .
-
-### <a name="outputbuffersize"></a>outputbuffersize
+### <a name="inputstatedetailssize"></a>inputStateDetailsSize
 
 Typ: **size_t**
 
-Die Größe (in Bytes) des Ausgabepuffers, den Sie zuordnen und in *OUTPUTBUFFER* bereitstellen.
+Die Größe des Eingabezustandsdetailspuffers in Bytes, den Sie (optional) zuordnen und in *inputStateDetails bereitstellen.*
 
-### <a name="outputbuffer-out"></a>OUTPUTBUFFER [out]
+### <a name="inputstatedetails-in"></a>inputStateDetails [in]
 
-Typ: **void \***
+Typ: **void \* const**
 
-Ein Zeiger auf einen Ausgabepuffer, den Sie in der Anwendung zuordnen, und der die Funktion ausfüllt. Weitere Informationen zu den Anforderungen des Ausgabepuffers für eine bestimmte Art von Zustand finden Sie in der Tabelle unter [dxcoreadapterstate](./ne-dxcore_interface-dxcoreadapterstate.md) .
+Ein optionaler Zeiger auf einen Puffer mit konstanten Eingabezustandsdetails, den Sie in Ihrer Anwendung zuordnen, der alle Informationen zu Ihrer Anforderung enthält, die für die Zustandsart erforderlich sind, die Sie im Zustand *angeben.* Weitere Informationen zu eingabepufferanforderungen für eine bestimmte Zustandsart finden Sie in der Tabelle in [DXCoreAdapterState.](./ne-dxcore_interface-dxcoreadapterstate.md)
+
+### <a name="outputbuffersize"></a>outputBufferSize
+
+Typ: **size_t**
+
+Die Größe des Ausgabepuffers in Bytes, den Sie zuordnen und in *outputBuffer bereitstellen.*
+
+### <a name="outputbuffer-out"></a>outputBuffer [out]
+
+Typ: **\* void**
+
+Ein Zeiger auf einen Ausgabepuffer, den Sie in Ihrer Anwendung zuordnen und den die Funktion ausfüllt. Weitere Informationen zur Ausgabepufferanforderung für eine bestimmte Zustandsart finden Sie in der Tabelle in [DXCoreAdapterState.](./ne-dxcore_interface-dxcoreadapterstate.md)
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **[HRESULT](../../com/structure-of-com-error-codes.md)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, wird **S_OK** zurückgegeben. Andernfalls wird ein [**HRESULT**](../../com/structure-of-com-error-codes.md) - [Fehlercode](../../com/com-error-codes-10.md)zurückgegeben.
+Wenn die Funktion erfolgreich ist, gibt **sie** S_OK. Andernfalls wird ein [**HRESULT-Fehlercode**](../../com/structure-of-com-error-codes.md) [zurückgegeben.](../../com/com-error-codes-10.md)
 
-|Rückgabewert|BESCHREIBUNG|
+|Rückgabewert|Beschreibung|
 |-|-|
 |DXGI_ERROR_DEVICE_REMOVED|Der Adapter befindet sich nicht mehr in einem gültigen Zustand.|
-|DXGI_ERROR_INVALID_CALL|Die im *Status* angegebene Zustands Angabe wird von diesem Betriebssystem (OS) nicht erkannt. Wenden Sie sich an [isquerystaatupportiert](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) , um zu bestätigen, dass für diesen Adapter und dieses Betriebssystem eine Abfrage der Art des Zustands verfügbar ist.|
-|DXGI_ERROR_UNSUPPORTED|Die im *Status* angegebene Statusart wird vom Adapter nicht unterstützt. Wenden Sie sich an [isquerystaatupportiert](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) , um zu bestätigen, dass für diesen Adapter und dieses Betriebssystem eine Abfrage der Art des Zustands verfügbar ist.|
-|E_INVALIDARG|Eine unzureichende Puffergröße wird für *OUTPUTBUFFER* bereitgestellt (oder für input *statedetails* , wenn ein Eingabe Zustands Details-Puffer erforderlich ist).|
-|E_POINTER|`nullptr` wurde für *OUTPUTBUFFER* bereitgestellt (oder für *inputstatedetails* , wenn ein Eingabe Zustands Details-Puffer erforderlich ist).|
+|DXGI_ERROR_INVALID_CALL|Die im Zustand angegebene *Zustandsart* wird von diesem Betriebssystem nicht erkannt. Rufen [Sie IsQueryStateSupported auf,](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) um zu bestätigen, dass das Abfragen der Zustandsart für diesen Adapter und das Betriebssystem verfügbar ist.|
+|DXGI_ERROR_UNSUPPORTED|Die im Zustand angegebene *Zustandsart* wird vom Adapter nicht unterstützt. Rufen [Sie IsQueryStateSupported auf,](./nf-dxcore_interface-idxcoreadapter-isquerystatesupported.md) um zu bestätigen, dass das Abfragen der Zustandsart für diesen Adapter und das Betriebssystem verfügbar ist.|
+|E_INVALIDARG|Für *outputBuffer* wird eine unzureichende Puffergröße bereitgestellt (oder für *inputStateDetails,* bei denen ein Eingabezustandsdetails-Puffer erforderlich ist).|
+|E_POINTER|`nullptr` wurde für *outputBuffer* bereitgestellt (oder für *inputStateDetails,* bei denen ein Eingabezustandsdetails-Puffer erforderlich ist).|
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu den einzelnen adapterstatusart und den verwendeten Eingaben und Ausgaben finden Sie unter [dxcoreadapterstate](./ne-dxcore_interface-dxcoreadapterstate.md) . Diese Funktion gibt den *OUTPUTBUFFER* -Puffer aus, bevor Sie aufgefüllt wird.
+Unter [DXCoreAdapterState](./ne-dxcore_interface-dxcoreadapterstate.md) finden Sie weitere Informationen zu den einzelnen Adapterzustandsart und zu den verwendeten Ein- und Ausgaben. Diese Funktion 0 (null) gibt den *OutputBuffer-Puffer* aus, bevor er gefüllt wird.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Idxcoreadapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Auflisten von Adaptern](../dxcore-enum-adapters.md)
+[IDXCoreAdapter](./nn-dxcore_interface-idxcoreadapter.md), [DXCore-Referenz](../dxcore-reference.md), [Verwenden von DXCore zum Aufzählen von Adaptern](../dxcore-enum-adapters.md)

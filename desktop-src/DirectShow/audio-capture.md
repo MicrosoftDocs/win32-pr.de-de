@@ -1,33 +1,33 @@
 ---
-description: Audioerfassung
+description: Audioaufnahme
 ms.assetid: 2b7fbdcb-7b59-407e-8e82-e66bd5606507
-title: Audioerfassung
+title: Audioaufnahme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e91c9063d96a5e56d078651c338b0ffd80f5aa79
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 62f76924e170c29e4488e2b7bd31bddbe8702ebe78d9ed146471bdfa21598d12
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104342018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120108710"
 ---
-# <a name="audio-capture"></a>Audioerfassung
+# <a name="audio-capture"></a>Audioaufnahme
 
-Eine Anwendung kann mithilfe von DirectShow Audiodaten von Mikrofonen, Band Playern und anderen Geräten über die Eingaben auf der Soundkarte erfassen. Zu den typischen Szenarien gehören:
+Eine Anwendung kann DirectShow verwenden, um Audiodaten von Mikrofonen, Bandplayern und anderen Geräten über die Eingaben auf der Soundkarte zu erfassen. Zu den typischen Szenarien gehören:
 
--   Aufzeichnen von VoiceOver-Erzählungen zum späteren DUBBING über einen Videostream.
--   Die typinstallation von Inhalt von Legacy-Inhalt in das digitale Format.
+-   Aufzeichnen einer Sprachausgabe zur späteren Färbung über einen Videostream.
+-   Konvertieren von analogen Legacyaudioinhalten in ein digitales Format.
 -   Erfassen von Stimme oder Musik für die Übertragung über ein Netzwerk.
 
-Endbenutzer haben mehrere Optionen zum Erfassen von Audio von der Soundkarte auf der Festplatte. Bei den meisten Karten werden Anwendungen zum Mischen und Aufzeichnen von Audioeingaben bereitgestellt. Windows bietet Sound Recorder, eine einfache hilfsprogrammanwendung für die Aufzeichnung von einem Mikrofon. Der Windows Media Encoder kann als [DirectX-Medienobjekt](directx-media-objects.md) (DMO) in eine DirectShow-Anwendung integriert werden. In diesem Abschnitt wird beschrieben, wie Sie die audioerfassungs Funktionalität in Ihre eigene Anwendung mithilfe von DirectShow integrieren.
+Endbenutzer haben mehrere Optionen zum Erfassen von Audiodaten von der Soundkarte auf der Festplatte. Die meisten Karten bieten Anwendungen zum Mischen und Aufzeichnen aus ihren Audioeingaben. Windows bietet Sound Recorder, eine einfache Hilfsprogrammanwendung für die Aufzeichnung über ein Mikrofon. Der Windows Media Encoder kann in eine DirectShow-Anwendung als [DirectX](directx-media-objects.md) Media Object (DMO) integriert werden. In diesem Abschnitt wird beschrieben, wie Sie die Audioerfassungsfunktionen mit DirectShow in Ihre eigene Anwendung integrieren.
 
 Dieser Abschnitt enthält die folgenden Themen:
 
--   [Informationen zum audioerfassungs Filter](about-the-audio-capture-filter.md)
--   [Auswählen eines Erfassungs Geräts](selecting-a-capture-device.md)
--   [Erstellen eines audioerfassungs Diagramms](creating-an-audio-capture-graph.md)
--   [Erstellen eines audioerfassungs Diagramms mit Vorschau](creating-an-audio-capture-graph-with-preview.md)
--   [Festlegen von Eigenschaften für die Audioerfassung](setting-audio-capture-properties.md)
+-   [Informationen zum Audioaufnahmefilter](about-the-audio-capture-filter.md)
+-   [Auswählen eines Erfassungsgeräts](selecting-a-capture-device.md)
+-   [Erstellen eines Audioaufnahme-Graph](creating-an-audio-capture-graph.md)
+-   [Erstellen eines Audio capture-Graph mit Vorschauversion](creating-an-audio-capture-graph-with-preview.md)
+-   [Festlegen von Audioaufnahmeeigenschaften](setting-audio-capture-properties.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,9 +1,9 @@
 ---
 title: DropDownColorPicker-Element
-description: Stellt ein Drop-Down Farbauswahlsteuerfeld dar, das beim Klicken eine Palette von Farbmustern anzeigt.
+description: Stellt ein Drop-Down Farbauswahlsteuerfeld dar, das eine Palette von Farbmustern anzeigt, wenn darauf geklickt wird.
 ms.assetid: fc4df978-9c52-43d5-8a5e-e015aa7058cd
 keywords:
-- DropDownColorPicker-Element Windows-Menüband
+- DropDownColorPicker-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ce2fd1d9ff12b56d87955304fad24af23209ff91
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 31525ee1b7233f0bf49668856d917ef14bc034b6
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111442901"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122622886"
 ---
 # <a name="dropdowncolorpicker-element"></a>DropDownColorPicker-Element
 
@@ -45,17 +45,17 @@ Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdownc
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col  />
+<col  />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
-<th>attribute</th>
+<th>Attribut</th>
 <th>Typ</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -75,10 +75,10 @@ Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdownc
 <ul>
 <li>SplitButton-Anker.</li>
 <li>Die <strong>automatische</strong> Farbschaltfläche wird standardmäßig angezeigt.</li>
-<li><strong>Fensterdesignfarben–</strong> Farbmusterraster.</li>
+<li>Windows Farbmusterraster <strong>für Designfarben.</strong></li>
 <li><strong>Standardfarben–</strong> Musterraster.</li>
 <li>Das Farbmusterraster <strong>"Zuletzt verwendet"</strong> ist optional.</li>
-<li><strong>Dialogfeldstartfeld "Weitere Farben".</strong></li>
+<li><strong>Startfeld</strong> für weitere Farben.</li>
 <li>Standardmäßig wird <strong>keine Farbfarbe</strong> angezeigt.</li>
 </ul>
 </dd> <dt><span></span><span></span><strong></strong> (StandardColors)<br/> </dt> <dd> <img src="images/markup/colortemplate.standardcolors.3.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;StandardColors&#39;." /><br/> Das Festlegen des <em>ColorTemplate-Attributs</em> auf <code>StandardColors</code> ermöglicht die folgende Funktionalität:<br/>
@@ -86,7 +86,7 @@ Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdownc
 <li>SplitButton-Anker.</li>
 <li>Die <strong>automatische</strong> Farbschaltfläche wird standardmäßig angezeigt.</li>
 <li><strong>Standardfarben–</strong> Musterraster.</li>
-<li><strong>Dialogfeldstartfeld "Weitere Farben".</strong></li>
+<li><strong>Startfeld</strong> für weitere Farben.</li>
 <li>Standardmäßig wird <strong>keine Farbfarbe</strong> angezeigt.</li>
 </ul>
 </dd> <dt><span></span><span></span><strong></strong> (HighlightColors)<br/> </dt> <dd> <img src="images/markup/colortemplate.highlightcolors.2.png" alt="Screen shot of the DropDownColorPicker element with the ColorTemplate attribute set to &#39;HighlightColors&#39;." /><br/> Das Festlegen des <em>ColorTemplate-Attributs</em> auf <code>HighlightColors</code> ermöglicht die folgende Funktionalität:<br/>
@@ -109,7 +109,7 @@ Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdownc
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>IsAutomaticColorButtonVisible</strong><br/></td>
@@ -129,7 +129,7 @@ Stellt ein [Dropdown-Farbwähler-Steuerelement](windowsribbon-controls-dropdownc
 <td><strong>RecentColorGridRows</strong><br/></td>
 <td>xs:positiveInteger<br/></td>
 <td>Nein<br/></td>
-<td>Die Anzahl von Farbchipzeilen (oder Farbmusterzeilen) im Bereich <strong>Zuletzt verwendeter Farben.</strong> <br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>ColorTemplate-Attribut</em> angegeben ist.<br/> <br/>
+<td>Die Anzahl von Farbchipzeilen (oder Farbmusterzeilen) im Bereich <strong>Zuletzt verwendeten Farben.</strong> <br/> Nur gültig, wenn <code>ThemeColors</code> für das <em>ColorTemplate-Attribut</em> angegeben ist.<br/> <br/>
 <dt><span></span><span></span><strong></strong> (xs:positiveInteger)<br/> </dt> <dd> Ein beliebiger positiver ganzzahliger Wert zwischen 1 und 256 einschließlich.<br/> </dd> </dl></td>
 </tr>
 <tr class="even">
@@ -173,7 +173,7 @@ Es gibt keine untergeordneten Elemente.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-,**](windowsribbon-element-menugroup.md) [**SplitButton-**](windowsribbon-element-splitbutton.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
@@ -210,7 +210,7 @@ Dieser Codeabschnitt zeigt die Befehlsdeklarationen für drei **DropDownColorPic
 
 
 
-Dieser Codeabschnitt zeigt die drei Typen von **DropDownColorPicker-Steuerelementdeklarationen.**
+In diesem Codeabschnitt werden die drei Typen von **DropDownColorPicker-Steuerelementdeklarationen** veranschaulicht.
 
 
 ```XML
@@ -238,7 +238,7 @@ Dieser Codeabschnitt zeigt die drei Typen von **DropDownColorPicker-Steuerelemen
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

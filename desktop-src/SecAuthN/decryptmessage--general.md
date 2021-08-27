@@ -1,26 +1,26 @@
 ---
-description: Entschlüsselt eine Meldung.
+description: Entschlüsselt eine Nachricht.
 ms.assetid: ea271d0c-9167-41c5-8919-09611206fc71
-title: DecryptMessage (General)-Funktion (SSPI. h)
+title: DecryptMessage(General)-Funktion (Sspi.h)
 ms.topic: reference
 ms.date: 07/25/2019
-ms.openlocfilehash: a05906c721d9046920c465fdfdf6b1c790b06640
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9dfbde6c0b4a8c46920428af3d7f700268f11690
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214822"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122476916"
 ---
-# <a name="decryptmessage-general-function"></a>DecryptMessage (allgemein)-Funktion
+# <a name="decryptmessage-general-function"></a>DecryptMessage(General)-Funktion
 
-Mit der **DecryptMessage (General)** -Funktion wird eine Nachricht entschlüsselt. Einige Pakete verschlüsseln und entschlüsseln Nachrichten nicht, sondern führen einen Integritäts [*Hash*](../secgloss/h-gly.md)aus und überprüfen Sie.
+Die **DecryptMessage (General)-Funktion** entschlüsselt eine Nachricht. Einige Pakete verschlüsseln und entschlüsseln Nachrichten nicht, sondern führen stattdessen einen [*Integritätshash*](../secgloss/h-gly.md)aus und überprüfen sie.
 
-Die Digest- [*Security Support Provider*](../secgloss/s-gly.md) (SSP) ermöglicht die Verschlüsselung und Entschlüsselung von Nachrichten, die zwischen Client und Server als SASL-Mechanismus ausgetauscht werden.
+Der [*Digestsicherheits-Supportanbieter*](../secgloss/s-gly.md) (SSP) bietet Verschlüsselungs- und Entschlüsselungsvertraulichkeit für Nachrichten, die zwischen Client und Server als SASL-Mechanismus ausgetauscht werden.
 
-Diese Funktion wird auch mit dem Schannel SSP verwendet, um eine Anforderung von einem Nachrichten Absender für eine erneute Aushandlung (Wiederholung) der Verbindungs Attribute oder für das Herunterfahren der Verbindung zu signalisieren.
+Diese Funktion wird auch mit dem Schannel-SSP verwendet, um eine Anforderung von einem Nachrichtensender für eine Neuaushandlung (Wiederholung) der Verbindungsattribute oder für das Herunterfahren der Verbindung zu signalisieren.
 
 > [!Note]  
-> [**Verschlüsselungsmessage (allgemein)**](encryptmessage--general.md) und **DecryptMessage (allgemein)** können gleichzeitig von zwei verschiedenen Threads in einem SSPI-Kontext (Single [*Security Support Provider Interface*](../secgloss/s-gly.md) ) aufgerufen werden, wenn ein Thread verschlüsselt und der andere entschlüsselt wird. Wenn mehrere Threads verschlüsselt werden oder mehr als ein Thread entschlüsselt wird, sollte jeder Thread einen eindeutigen Kontext erhalten.
+> [**EncryptMessage (Allgemein)**](encryptmessage--general.md) und **DecryptMessage (Allgemein)** können gleichzeitig von zwei verschiedenen Threads in einem SSPI-Kontext [*(Security Support Provider Interface)*](../secgloss/s-gly.md) aufgerufen werden, wenn ein Thread verschlüsselt und der andere entschlüsselt wird. Wenn mehr als ein Thread verschlüsselt wird oder mehrere Threads entschlüsselt werden, sollte jeder Thread einen eindeutigen Kontext erhalten.
 
  
 
@@ -30,11 +30,11 @@ Informationen zur Verwendung dieser Funktion mit einem bestimmten SSP finden Sie
 
 | Thema                                                            | BESCHREIBUNG                            |
 |------------------------------------------------------------------|----------------------------------------|
-| [**DecryptMessage (Digest)**](decryptmessage--digest.md)       | Entschlüsselt eine Nachricht mit Digest.    |
-| [**DecryptMessage (Kerberos)**](decryptmessage--kerberos.md)   | Entschlüsselt eine Nachricht mithilfe von Kerberos.  |
-| [**DecryptMessage (aushandeln)**](decryptmessage--negotiate.md) | Entschlüsselt eine Nachricht mithilfe von "aushandeln". |
-| [**DecryptMessage (NTLM)**](decryptmessage--ntlm.md)           | Entschlüsselt eine Nachricht mithilfe von NTLM.      |
-| [**DecryptMessage (SChannel)**](decryptmessage--schannel.md)   | Entschlüsselt eine Nachricht mithilfe von Schannel.  |
+| [**DecryptMessage (Digest)**](decryptmessage--digest.md)       | Entschlüsselt eine Nachricht mithilfe von Digest.    |
+| [**DecryptMessage (Kerberos)**](decryptmessage--kerberos.md)   | Entschlüsselt eine Nachricht mit kerberos.  |
+| [**DecryptMessage (Negotiate)**](decryptmessage--negotiate.md) | Entschlüsselt eine Nachricht mit negotiate. |
+| [**DecryptMessage (NTLM)**](decryptmessage--ntlm.md)           | Entschlüsselt eine Nachricht mit NTLM.      |
+| [**DecryptMessage (Schannel)**](decryptmessage--schannel.md)   | Entschlüsselt eine Nachricht mithilfe von Schannel.  |
 
 
 
@@ -58,48 +58,52 @@ SECURITY_STATUS SEC_Entry DecryptMessage(
 
 <dl> <dt>
 
-*phcontext* \[ in\]
+*phContext* \[ In\]
 </dt> <dd>
 
-Ein Handle für den [*Sicherheitskontext*](../secgloss/s-gly.md) , der zum Entschlüsseln der Nachricht verwendet werden soll.
+Ein Handle für den [*Sicherheitskontext,*](../secgloss/s-gly.md) der zum Entschlüsseln der Nachricht verwendet werden soll.
 
 </dd> <dt>
 
 *pMessage* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**secbufferdebug**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) -Struktur. Bei der Eingabe verweist die Struktur auf eine oder mehrere [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) -Strukturen. Eine dieser Typen kann vom Typ "secbuffer \_ Data" sein. Dieser Puffer enthält die verschlüsselte Nachricht. Die verschlüsselte Nachricht wird direkt entschlüsselt und überschreibt den ursprünglichen Inhalt Ihres Puffers.
+Ein Zeiger auf eine [**SecBufferDesc-Struktur.**](/windows/win32/api/sspi/ns-sspi-secbufferdesc) Bei der Eingabe verweist die -Struktur auf eine oder mehrere [**SecBuffer-Strukturen.**](/windows/win32/api/sspi/ns-sspi-secbuffer) Eine dieser Daten kann vom Typ SECBUFFER \_ DATA sein. Dieser Puffer enthält die verschlüsselte Nachricht. Die verschlüsselte Nachricht wird vor Ort entschlüsselt und überschreibt den ursprünglichen Inhalt des Puffers.
 
-Wenn Sie den Digest-SSP verwenden, verweist die Struktur bei der Eingabe auf eine oder mehrere [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) -Strukturen. Eines dieser Typen muss vom Typ "secbuffer \_ Data" oder "secbuffer Stream" sein \_ , und die verschlüsselte Nachricht muss enthalten sein.
+Bei Verwendung des Digest-SSP verweist die Struktur bei der Eingabe auf eine oder mehrere [**SecBuffer-Strukturen.**](/windows/win32/api/sspi/ns-sspi-secbuffer) Eine dieser Nachrichten muss vom Typ SECBUFFER \_ DATA oder SECBUFFER STREAM sein und die verschlüsselte Nachricht \_ enthalten.
 
-Wenn der Schannel-SSP mit Kontexten verwendet wird, die nicht verbindungsorientiert sind, muss die Struktur bei der Eingabe vier [**secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer) -Strukturen enthalten. Genau ein Puffer muss den Typ "secbuffer \_ Data" aufweisen und eine verschlüsselte Nachricht enthalten, die an Ort und Stelle entschlüsselt wird. Die restlichen Puffer werden für die Ausgabe verwendet und müssen den Typ "secbuffer Empty" aufweisen \_ . Bei Verbindungs orientierten Kontexten muss ein secbuffer \_ -Datentyp Puffer angegeben werden, wie für nicht Verbindungs orientierte Kontexte angegeben. Darüber hinaus muss auch ein zweiter Typ eines secbuffer- \_ Tokentyps, der ein Sicherheits Token enthält, bereitgestellt werden.
-
-</dd> <dt>
-
-*Messageseqno* \[ in\]
-</dt> <dd>
-
-Die Sequenznummer, die von der Transport Anwendung erwartet wird, falls vorhanden. Wenn die Transport Anwendung keine Sequenznummern beibehält, muss dieser Parameter auf 0 (null) festgelegt werden.
-
-Wenn Sie den Digest-SSP verwenden, muss dieser Parameter auf 0 (null) festgelegt werden. Der Digest-SSP verwaltet die Sequenz Nummerierung intern.
-
-Bei Verwendung des Schannel-SSP muss dieser Parameter auf 0 (null) festgelegt werden. Der Schannel-SSP verwendet keine Sequenznummern.
+Wenn Sie den Schannel-SSP mit Kontexten verwenden, die nicht verbindungsorientiert sind, muss die -Struktur bei der Eingabe vier [**SecBuffer-Strukturen**](/windows/win32/api/sspi/ns-sspi-secbuffer) enthalten. Genau ein Puffer muss vom Typ SECBUFFER DATA sein \_ und eine verschlüsselte Nachricht enthalten, die vor Ort entschlüsselt wird. Die verbleibenden Puffer werden für die Ausgabe verwendet und müssen vom Typ SECBUFFER \_ EMPTY sein. Für verbindungsorientierte Kontexte muss ein \_ SECBUFFER-DATENTYPpuffer bereitgestellt werden, wie für nicht verbindungsorientierte Kontexte angegeben. Darüber hinaus muss ein zweiter SECBUFFER \_ TOKEN-Typpuffer angegeben werden, der ein Sicherheitstoken enthält.
 
 </dd> <dt>
 
-*pfqop* \[ vorgenommen\]
+*MessageSeqNo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable vom Typ **ulong** , die Paket spezifische Flags empfängt, die die Qualität des Schutzes angeben.
+Die von der Transportanwendung erwartete Sequenznummer, sofern vorhanden. Wenn die Transportanwendung keine Sequenznummern verwaltet, muss dieser Parameter auf 0 (null) festgelegt werden.
 
-Wenn der Schannel SSP verwendet wird, wird dieser Parameter nicht verwendet und sollte auf **null** festgelegt werden.
+Bei Verwendung des Digest-SSP muss dieser Parameter auf 0 (null) festgelegt werden. Der Digest-SSP verwaltet die Sequenznummerierung intern.
+
+Wenn Sie den Schannel-SSP verwenden, muss dieser Parameter auf 0 (null) festgelegt werden. Der Schannel-SSP verwendet keine Sequenznummern.
+
+</dd> <dt>
+
+*pfQOP* \[ out\]
+</dt> <dd>
+
+Ein Zeiger auf eine Variable vom Typ **ULONG,** die paketspezifische Flags empfängt, die die Qualität des Schutzes angeben.
+
+Bei Verwendung des Schannel-SSP wird dieser Parameter nicht verwendet und sollte auf **NULL** festgelegt werden.
 
 Dieser Parameter kann eines der folgenden Flags sein.
 
 
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th>Wert</th><th>Bedeutung</th></tr></thead><tbody><tr class="odd"><td><span id="SECQOP_WRAP_NO_ENCRYPT"></span><span id="secqop_wrap_no_encrypt"></span><dl> <dt><strong>SECQOP_WRAP_NO_ENCRYPT</strong></dt> </dl></td><td>Die Nachricht wurde nicht verschlüsselt, aber es wurde ein Header oder ein Nachspann erzeugt.<br/><blockquote>[!Note]<br />
-KERB_WRAP_NO_ENCRYPT hat denselben Wert und dieselbe Bedeutung.</blockquote><br/></td></tr><tr class="even"><td><span id="SIGN_ONLY_"></span><span id="sign_only_"></span><dl> <dt><strong>SIGN_ONLY</strong></dt> </dl></td><td>Wenn Sie den Digest-SSP verwenden, verwenden Sie dieses Flag, wenn der [*Sicherheitskontext*](../secgloss/s-gly.md) festgelegt ist, um nur die [*Signatur*](../secgloss/s-gly.md) zu überprüfen. Weitere Informationen finden Sie unter [Quality of Protection](quality-of-protection.md).<br/></td></tr></tbody></table>
+
+| Wert | Bedeutung | 
+|-------|---------|
+| <span id="SECQOP_WRAP_NO_ENCRYPT"></span><span id="secqop_wrap_no_encrypt"></span><dl><dt><strong>SECQOP_WRAP_NO_ENCRYPT</strong></dt></dl> | Die Nachricht wurde nicht verschlüsselt, aber ein Header oder Nachspann wurde erstellt.<br /><blockquote>[!Note]<br />KERB_WRAP_NO_ENCRYPT hat den gleichen Wert und dieselbe Bedeutung.</blockquote><br /> | 
+| <span id="SIGN_ONLY_"></span><span id="sign_only_"></span><dl><dt><strong>SIGN_ONLY</strong></dt></dl> | Wenn Sie den Digest-SSP verwenden, verwenden Sie dieses Flag, wenn der [*Sicherheitskontext*](../secgloss/s-gly.md) festgelegt ist, um nur die [*Signatur*](../secgloss/s-gly.md) zu überprüfen. Weitere Informationen finden Sie unter [Quality of Protection](quality-of-protection.md).<br /> | 
+
 
 
 
@@ -109,7 +113,7 @@ KERB_WRAP_NO_ENCRYPT hat denselben Wert und dieselbe Bedeutung.</blockquote><br/
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion überprüft, ob die Nachricht in der richtigen Reihenfolge empfangen wurde, gibt die Funktion sec \_ E \_ OK zurück.
+Wenn die Funktion überprüft, ob die Nachricht in der richtigen Reihenfolge empfangen wurde, gibt die Funktion SEC \_ E \_ OK zurück.
 
 Wenn die Funktion die Nachricht nicht entschlüsseln kann, wird einer der folgenden Fehlercodes zurückgegeben.
 
@@ -117,28 +121,28 @@ Wenn die Funktion die Nachricht nicht entschlüsseln kann, wird einer der folgen
 
 | Rückgabecode                                                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**Sekunde \_ E \_ Puffer \_ zu \_ klein**</dt> </dl>      | Der Nachrichten Puffer ist zu klein. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| <dl> <dt>**s \_ E \_ \_ Kryptografiesystem \_ ungültig**</dt> </dl> | Die für den [*Sicherheitskontext*](../secgloss/s-gly.md) ausgewählte [*Chiffre*](../secgloss/c-gly.md) wird nicht unterstützt. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| <dl> <dt>**Sekunde \_ E \_ unvollständige \_ Nachricht**</dt> </dl>     | Die Daten im Eingabepuffer sind unvollständig. Die Anwendung muss weitere Daten vom Server lesen und [**DecryptMessage (allgemein)**](decryptmessage--general.md) erneut aufzurufen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| <dl> <dt>**s \_ E \_ ungültiges \_ handle**</dt> </dl>         | Im Parameter " *phcontext* " wurde ein ungültiges Kontext Handle angegeben. Wird mit dem Digest-und SChannel-SSPs verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| <dl> <dt>**s \_ E \_ ungültiges \_ Token**</dt> </dl>          | Die Puffer weisen den falschen Typ auf, oder es wurde kein Puffer vom Typ "secbuffer \_ Data" gefunden. Wird mit dem Schannel SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| <dl> <dt>**Sek. \_ E- \_ Nachricht \_ geändert**</dt> </dl>        | Die Nachricht wurde geändert. Wird mit dem Digest-und SChannel-SSPs verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <dl> <dt>**Sek. \_ E \_ außerhalb \_ der \_ Reihenfolge**</dt> </dl>       | Die Nachricht wurde nicht in der richtigen Reihenfolge empfangen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| <dl> <dt>**Sek. \_ E- \_ QoP \_ nicht \_ unterstützt**</dt> </dl>     | Die Vertraulichkeit und [*Integrität*](../secgloss/i-gly.md) werden vom [*Sicherheitskontext*](../secgloss/s-gly.md)nicht unterstützt. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| <dl> <dt>**Sek., \_ \_ Kontext \_ abgelaufen**</dt> </dl>        | Der Absender der Nachricht hat die Verbindung nicht mehr hergestellt und hat ein Herunterfahren initiiert. Informationen zum initiieren oder erkennen eines herunter Fahrens finden Sie unter Herunterfahren [einer SChannel-Verbindung](shutting-down-an-schannel-connection.md). Wird mit dem Schannel SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| <dl> <dt>**Sekunde, die \_ ich erneut \_ verhandate**</dt> </dl>             | Die Remote Partei benötigt eine neue Hand Shake Sequenz, oder die Anwendung hat gerade ein Herunterfahren initiiert. Kehren Sie zur Aushandlungs Schleife zurück, und geben Sie " [**akzeptsecuritycontext (allgemein)**](acceptsecuritycontext--general.md) " oder " [**InitializeSecurityContext (allgemein)**](initializesecuritycontext--general.md)" an, indem Sie leere Eingabepuffer übergeben. <br/> Wenn die Funktion einen Puffer vom Typ " **sec- \_ Puffer \_ extra**" zurückgibt, sollte dieser als Eingabepuffer an die Funktion " [**akzeptsecuritycontext (allgemein)**](acceptsecuritycontext--general.md) " übermittelt werden.<br/> Wird mit dem Schannel SSP verwendet.<br/> Die Neuverhandlung wird für den SChannel-Kernel Modus nicht unterstützt. Der Aufrufer sollte entweder diesen Rückgabewert ignorieren oder die Verbindung beenden. Wenn der Wert ignoriert wird, kann die Verbindung entweder vom Client oder vom Server beendet werden.<br/> |
+| <dl> <dt>**SEC \_ E \_ BUFFER \_ TOO \_ SMALL**</dt> </dl>      | Der Nachrichtenpuffer ist zu klein. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| <dl> <dt>**SEC \_ E \_ CRYPTO \_ SYSTEM \_ INVALID**</dt> </dl> | Das für den [*Sicherheitskontext*](../secgloss/s-gly.md) ausgewählte [*Verschlüsselungsverfahren*](../secgloss/c-gly.md) wird nicht unterstützt. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| <dl> <dt>**SEC \_ E \_ INCOMPLETE \_ MESSAGE**</dt> </dl>     | Die Daten im Eingabepuffer sind unvollständig. Die Anwendung muss weitere Daten vom Server lesen und [**DecryptMessage (Allgemein)**](decryptmessage--general.md) erneut aufrufen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| <dl> <dt>**SEC \_ E \_ INVALID \_ HANDLE**</dt> </dl>         | Ein ungültiges Kontexthandle wurde im *phContext-Parameter* angegeben. Wird mit den Digest- und Schannel-SSPs verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| <dl> <dt>**SEC \_ E \_ INVALID \_ TOKEN**</dt> </dl>          | Die Puffer haben den falschen Typ, oder es wurde kein Puffer vom Typ SECBUFFER \_ DATA gefunden. Wird mit dem Schannel-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| <dl> <dt>**SEC \_ E \_ MESSAGE \_ ALTERED**</dt> </dl>        | Die Nachricht wurde geändert. Wird mit den Digest- und Schannel-SSPs verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**SEC \_ E \_ OUT \_ OF \_ SEQUENCE**</dt> </dl>       | Die Nachricht wurde nicht in der richtigen Reihenfolge empfangen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| <dl> <dt>**SEC \_ E \_ QOP NICHT \_ \_ UNTERSTÜTZT**</dt> </dl>     | Weder Vertraulichkeit noch [*Integrität*](../secgloss/i-gly.md) werden vom [*Sicherheitskontext*](../secgloss/s-gly.md)unterstützt. Wird mit dem Digest-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| <dl> <dt>**SEC \_ I \_ CONTEXT \_ EXPIRED**</dt> </dl>        | Der Absender der Nachricht hat die Verbindung beendet und das Herunterfahren initiiert. Informationen zum Initiieren oder Erkennen eines Herunterfahrens finden Sie unter [Herunterfahren einer Schannel-Verbindung.](shutting-down-an-schannel-connection.md) Wird mit dem Schannel-SSP verwendet.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| <dl> <dt>**SEC \_ I \_ NEU AUSHANDELN**</dt> </dl>             | Die Remotepartei erfordert eine neue Handshakesequenz, oder die Anwendung hat gerade das Herunterfahren initiiert. Kehren Sie zur Aushandlungsschleife zurück, und rufen [**Sie AcceptSecurityContext (General)**](acceptsecuritycontext--general.md) oder [**InitializeSecurityContext (General)**](initializesecuritycontext--general.md)auf, und übergeben Sie leere Eingabepuffer. <br/> Wenn die Funktion einen Puffer vom Typ **SEC \_ BUFFER \_ EXTRA** zurückgibt, sollte dieser als Eingabepuffer an die [**AcceptSecurityContext (General)-Funktion**](acceptsecuritycontext--general.md) übergeben werden.<br/> Wird mit dem Schannel-SSP verwendet.<br/> Neuverhandlung wird für den Schannel-Kernelmodus nicht unterstützt. Der Aufrufer sollte diesen Rückgabewert entweder ignorieren oder die Verbindung beenden. Wenn der Wert ignoriert wird, kann entweder der Client oder der Server die Verbindung als Ergebnis herunterfahren.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie Schannel SSP verwenden, gibt die Funktion **DecryptMessage (allgemein)** den Wert Sekunde zurück, den der \_ \_ Kontext \_ abgelaufen ist, wenn der Absender der Nachricht die Verbindung beendet hat. Informationen zum initiieren oder erkennen eines herunter Fahrens finden Sie unter Herunterfahren [einer SChannel-Verbindung](shutting-down-an-schannel-connection.md).
+Wenn Sie den Schannel-SSP verwenden, gibt die **DecryptMessage (General)-Funktion** SEC \_ I CONTEXT EXPIRED \_ \_ zurück, wenn der Absender der Nachricht die Verbindung beendet hat. Informationen zum Initiieren oder Erkennen eines Herunterfahrens finden Sie unter [Herunterfahren einer Schannel-Verbindung.](shutting-down-an-schannel-connection.md)
 
-Wenn Sie Schannel SSP verwenden, gibt **DecryptMessage (allgemein)** Sekunde zurück, die \_ ich \_ neu aushandeln muss, wenn der Absender der Nachricht die Verbindung erneut aushandeln möchte ([*Sicherheitskontext*](../secgloss/s-gly.md)). Eine Anwendung verarbeitet eine angeforderte Neuverhandlung durch Aufrufen von " [**Accept-SecurityContext (allgemein)**](acceptsecuritycontext--general.md) (serverseitig)" oder " [**InitializeSecurityContext (allgemein)**](initializesecuritycontext--general.md) " (Client seitig) und durch Übergabe leerer Eingabepuffer. Nachdem dieser anfängliche-Befehl einen Wert zurückgegeben hat, fahren Sie so fort, als ob die Anwendung eine neue Verbindung erstellt hat. Weitere Informationen finden Sie unter [Erstellen eines SChannel- [*Sicherheits Kontexts*](../secgloss/s-gly.md)](creating-an-schannel-security-context.md).
+Wenn Sie den Schannel-SSP verwenden, gibt **DecryptMessage (Allgemein)** SEC \_ I \_ MOONGOTIATE zurück, wenn der Absender der Nachricht die Verbindung neu aushandeln möchte ([*Sicherheitskontext*](../secgloss/s-gly.md)). Eine Anwendung verarbeitet eine angeforderte Neuverhandlung, indem [**AcceptSecurityContext (Allgemein) (serverseitig)**](acceptsecuritycontext--general.md) oder [**InitializeSecurityContext (allgemein) (clientseitig)**](initializesecuritycontext--general.md) aufgerufen und leere Eingabepuffer übergeben werden. Nachdem dieser anfängliche Aufruf einen Wert zurückgegeben hat, fahren Sie so fort, als würde Ihre Anwendung eine neue Verbindung erstellen. Weitere Informationen finden Sie unter [Erstellen eines Schannel-Sicherheitskontexts. [](../secgloss/s-gly.md)](creating-an-schannel-security-context.md)
 
-Weitere Informationen zum interagieren mit GSSAPI finden Sie unter [SSPI/Kerberos-Interoperabilität mit GSSAPI](sspi-kerberos-interoperability-with-gssapi.md).
+Informationen zur Interoperabilität mit GSSAPI finden Sie unter [SSPI-/Kerberos-Interoperabilität mit GSSAPI.](sspi-kerberos-interoperability-with-gssapi.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -146,28 +150,28 @@ Weitere Informationen zum interagieren mit GSSAPI finden Sie unter [SSPI/Kerbero
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                   |
-| Header<br/>                   | <dl> <dt>SSPI. h (Include Security. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Secur32. lib</dt> </dl>                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                   |
+| Header<br/>                   | <dl> <dt>Sspi.h (include Security.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Secur32.lib</dt> </dl>                 |
 | DLL<br/>                      | <dl> <dt>Secur32.dll</dt> </dl>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [SSPI-Funktionen](authentication-functions.md#sspi-functions)
 </dt> <dt>
 
-[**Verschlüsselungsnachricht (allgemein)**](encryptmessage--general.md)
+[**EncryptMessage (Allgemein)**](encryptmessage--general.md)
 </dt> <dt>
 
-[**Secbuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer)
+[**SecBuffer**](/windows/win32/api/sspi/ns-sspi-secbuffer)
 </dt> <dt>
 
-[**Secbufferdebug**](/windows/win32/api/sspi/ns-sspi-secbufferdesc)
+[**SecBufferDesc**](/windows/win32/api/sspi/ns-sspi-secbufferdesc)
 </dt> </dl>
 
  

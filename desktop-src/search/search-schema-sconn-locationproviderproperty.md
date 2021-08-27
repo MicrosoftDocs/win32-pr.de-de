@@ -1,19 +1,19 @@
 ---
-description: Das optionale- <property> Element gibt die Eigenschaften an, die vom Speicherort Anbieter verwendet werden.
+description: Das <property> optionale -Element gibt die eigenschaften an, die vom Speicherortanbieter verwendet werden.
 ms.assetid: c1120dea-cb0b-4746-a5c1-4c83cda6dd7c
-title: Property-Element von locationprovider (Suchconnector-Schema)
+title: property-Element von locationProvider (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 71081b8b04ec999daa90958a29708b8efc64bee0
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 623d54ef98986c603acc709bcd39ca1ac5504b89
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106351913"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471556"
 ---
-# <a name="property-element-of-locationprovider-search-connector-schema"></a>Property-Element von locationprovider (Suchconnector-Schema)
+# <a name="property-element-of-locationprovider-search-connector-schema"></a>property-Element von locationProvider (Search Connector Schema)
 
-Das optionale- <property> Element gibt die Eigenschaften an, die vom Speicherort Anbieter verwendet werden. Diese Eigenschaften sind spezifisch für diesen Speicherort Anbieter. Daher gibt es keine vordefinierte Gruppe von Namen, die verwendet werden können. Das- <property> Element verfügt über zwei Attribute, wie in diesem Thema beschrieben.
+Das <property> optionale -Element gibt die eigenschaften an, die vom Speicherortanbieter verwendet werden. Diese Eigenschaften sind spezifisch für diesen Standortanbieter, sodass keine vordefinierten Namen verwendet werden müssen. Das <property> -Element verfügt über zwei Attribute, wie in diesem Thema beschrieben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,82 +36,42 @@ Das optionale- <property> Element gibt die Eigenschaften an, die vom Speicherort
 
 
 
-## <a name="property-element-information"></a><property> Element Informationen
+## <a name="property-element-information"></a><property> Elementinformationen
 
 
 
 | Übergeordnetes Element                                                                                 | Untergeordnete Elemente                     |
 |------------------------------------------------------------------------------------------------|------------------------------------|
-| [locationprovider-Element (Suchconnector-Schema)](search-schema-sconn-locationprovider.md) | -Eigenschaft, die in diesem Thema beschrieben wird. |
+| [locationProvider-Element (Connectorschema suchen)](search-schema-sconn-locationprovider.md) | -Eigenschaft, die in diesem Thema beschrieben wird. |
 
 
 
  
 
 
-## <a name="property-attributes"></a><property> Legt
+## <a name="property-attributes"></a><property> Attribute
 
 
 
-<table>
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Attribut</th>
-<th>BESCHREIBUNG</th>
-<th>Werte</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>name</td>
-<td>Erforderlich. Der Anzeigename der Eigenschaft.</td>
-<td> </td>
-</tr>
-<tr class="even">
-<td>type</td>
-<td>Erforderlich. Der Typ der Eigenschaft.</td>
-<td>Beliebig: Standardwert. Der Wert wird vom Eigenschafts Subsystem nicht erzwungen. VT_NULL wird von GetPropertyType zurückgegeben.
-<ul>
-<li>NULL: für diese Eigenschaft ist kein Wert vorhanden. VT_NULL wird von GetPropertyType zurückgegeben.</li>
-<li>String: der Wert muss ein VT_LPWSTR sein.</li>
-<li>Boolescher Wert: der Wert muss ein VT_BOOL sein.</li>
-<li>Byte: der Wert muss ein VT_UI1 sein.</li>
-<li>Buffer: der Wert muss ein VT_UI1 sein | VT_VECTOR Puffer bytes.</li>
-<li>Int16: der Wert muss ein VT_I2 sein.</li>
-<li>UInt16: der Wert muss ein VT_UI2 sein.</li>
-<li>Int32: der Wert muss ein VT_I4 sein.</li>
-<li>UInt32: der Wert muss ein VT_UI4 sein.</li>
-<li>Int64: der Wert muss ein VT_I8 sein.</li>
-<li>UInt64: der Wert muss ein VT_UI8</li>
-<li>Double: der Wert muss ein VT_R8 sein.</li>
-<li>DateTime: der Wert muss ein VT_FILETIME sein.</li>
-<li>GUID: der Wert muss ein VT_CLSID sein.</li>
-<li>BLOB: der Wert muss ein VT_BLOB sein.</li>
-<li>Objekt: der Wert muss ein VT_UNKNOWN sein.</li>
-<li>Stream: der Wert muss ein VT_STREAM sein.</li>
-<li>Zwischenablage: der Wert muss ein VT_CF sein.</li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+
+| Attribut | BESCHREIBUNG | Werte | 
+|-----------|-------------|--------|
+| name | Erforderlich. Der Anzeigename der Eigenschaft. |   | 
+| Typ | Erforderlich. Der Typ der Eigenschaft. | Any: Standard. Der Wert wird nicht vom Eigenschaftensubsystem umerciert. VT_NULL wird von GetPropertyType zurückgegeben.<ul><li>NULL: Für diese Eigenschaft ist kein Wert enthalten. VT_NULL wird von GetPropertyType zurückgegeben.</li><li>Zeichenfolge: Der Wert muss ein VT_LPWSTR.</li><li>Boolescher Wert: Der Wert muss ein VT_BOOL.</li><li>Byte: Der Wert muss ein VT_UI1.</li><li>Puffer: Der Wert muss ein VT_UI1 | VT_VECTOR Puffer von Bytes.</li><li>Int16: Der Wert muss ein VT_I2.</li><li>UInt16: Der Wert muss ein VT_UI2.</li><li>Int32: Der Wert muss ein VT_I4.</li><li>UInt32: Der Wert muss ein VT_UI4.</li><li>Int64: Der Wert muss ein VT_I8.</li><li>UInt64: Der Wert muss ein VT_UI8</li><li>Double: Der Wert muss eine VT_R8.</li><li>DateTime: Der Wert muss ein VT_FILETIME.</li><li>GUID: Der Wert muss ein VT_CLSID.</li><li>Blob: Der Wert muss ein VT_BLOB.</li><li>Objekt: Der Wert muss ein VT_UNKNOWN.</li><li>Stream: Der Wert muss ein VT_STREAM.</li><li>Zwischenablage: Der Wert muss ein VT_CF.</li></ul> | 
+
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für den OpenSearch-Anbieter werden die folgenden Eigenschaften verwendet:
+Für den OpenSearch werden die folgenden Eigenschaften verwendet:
 
--   Opensearchshortname: Kurzname des Such Dienstanbieter
--   Opensearchquerytemplate: Vorlage, die nach der OpenSearch-Vorlagen Konvention formatiert ist, für den Abfragedienst
--   Maximumresultcount: (Anzahl) maximale Anzahl von Ergebnissen, die vom Suchdienst zurückgegeben werden.
--   Linkisfilepath: (Boolean) Wenn true, versucht der Anbieter, die zurückgegebenen Elemente als Dateien zu interpretieren, wobei die Erweiterungen verwendet werden, um das richtige shellitem in der Ansicht zu erstellen. Bei "false" werden Elemente als URL-Verknüpfungen behandelt.
+-   OpenSearchShortName: Kurzname des Suchdiensts
+-   OpenSearchQueryTemplate: Vorlage, formatiert nach OpenSearch Vorlagenkonvention für den Abfragedienst
+-   MaximumResultCount: (Anzahl) Maximale Anzahl von Ergebnissen, die vom Suchdienst zurückgegeben werden
+-   LinkIsFilePath: (Boolean): Wenn true, versucht der Anbieter, zurückgegebene Elemente als Dateien zu interpretieren, und verwendet deren Erweiterungen, um das richtige ShellItem in der Ansicht zu erstellen. False gibt an, dass Elemente als URL-Verknüpfungen behandelt werden.
 
  
 

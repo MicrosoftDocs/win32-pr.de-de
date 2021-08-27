@@ -4,12 +4,12 @@ ms.assetid: 5ee02af1-1dc9-4d21-868f-4c439970b1ba
 title: Testen von Filterhandlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62b77fe098c2413e4f582ebfd98985dd09bf0ab9b5fc2def85fc7e954804dc1b
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: bf58f14f0f8de4458dd887bf52b32fb68f869d64
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118463094"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122621946"
 ---
 # <a name="testing-filter-handlers"></a>Testen von Filterhandlern
 
@@ -56,20 +56,20 @@ Im Beispiel werden die folgenden Aufgaben ausgeführt:
 
 - Weist das Programm an, die Datei test.htm
 - Leitet die Protokollmeldungen an test.htm.log um.
-- Leitet die Speicherabbildmeldungen an test.htm.dmp um.
+- Leitet die Dumpnachrichten an test.htm.dmp um.
 - Legt die Ausführlichkeit auf 1 fest.
 
 Damit der vorherige Befehl funktioniert, müssen sich drei Dateien im aktuellen Arbeitsverzeichnis befinden: `test.htm` , [ifilttst.exe](#ifilttstexe)und [ifilttst.ini](#ifilttstini). Befehlszeilenschalter sind in der folgenden Tabelle aufgeführt.
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Switch und mögliche Variablen</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -100,7 +100,7 @@ Damit der vorherige Befehl funktioniert, müssen sich drei Dateien im aktuellen 
 <li>0 : Der Test protokolliert <a href="https://www.bing.com/search?q=<strong>IFilter</strong>"><strong></strong></a> nur Meldungen zu bestimmten IFilter-Schnittstellenfehlern. Der Test dumpt den Blockinhalt.</li>
 <li>1 – Der Test protokolliert Warnmeldungen sowie warnungsmeldungen für Ebene 0.</li>
 <li>2 – Der Test protokolliert Meldungen zu erfolgreichen Tests sowie zu Tests für Ebene 1.</li>
-<li>3 – Der Test protokolliert Informationsmeldungen sowie meldungen für Ebene 2. Darüber hinaus gibt der Test die Struktur des Blockes aus.</li>
+<li>3 – Der Test protokolliert Informationsmeldungen sowie meldungen für Ebene 2. Darüber hinaus gibt der Test die Struktur des Blockes ab.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -123,7 +123,7 @@ Damit der vorherige Befehl funktioniert, müssen sich drei Dateien im aktuellen 
 
 ### <a name="filtdumpexe"></a>filtdump.exe
 
-Das filtdump.exe Programm lädt einen Filterhandler für ein angegebenes Dokument und gibt die von der [**IFilter-DLL**](/windows/win32/api/filter/nn-filter-ifilter) erzeugte Ausgabe aus. Im folgenden Beispiel wird veranschaulicht, wie das filtdump.exe Programm aufgerufen wird.
+Das filtdump.exe Programm lädt einen Filterhandler für ein angegebenes Dokument und gibt die von der [**IFilter-DLL**](/windows/win32/api/filter/nn-filter-ifilter) erzeugte Ausgabe aus. Im folgenden Beispiel wird veranschaulicht, wie das filtdump.exe-Programm aufgerufen wird.
 
 ```
 filtdump filename.ext
@@ -153,16 +153,16 @@ Eine [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter) wi
 3. *aAttributes*
 4. *pdwFlags*
 
-Der Benutzer des ifilttst.exe Programms der [**IFilter-Testsammlung**](/windows/win32/api/filter/nn-filter-ifilter) kann die Werte für diese Parameter in einer Datei namens ifilttst.ini angeben. In der folgenden Tabelle werden die Einträge in der ifilttst.ini-Datei beschrieben, die die ersten drei Parameter (die Eingabeparameter) angeben. Eine Beispieldatei finden Sie unter [Beispieldatei ifilttst.ini.](#sample-ifilttstini-file)
+Der Benutzer des ifilttst.exe Programms der [**IFilter-Testsammlung**](/windows/win32/api/filter/nn-filter-ifilter) kann die Werte für diese Parameter in einer Datei namens ifilttst.ini angeben. In der folgenden Tabelle werden die Einträge in der ifilttst.ini-Datei beschrieben, die die ersten drei Parameter (die Eingabeparameter) angeben. Eine Beispieldatei finden Sie unter [Beispiel ifilttst.ini Datei](#sample-ifilttstini-file).
 
 > [!NOTE]  
 > Es gibt keinen Tabelleneintrag für den *pdwFlags-Parameter,* da es sich um einen Ausgabeparameter handelt. vor dem Aufruf der [**IFilter::Init-Methode**](/windows/win32/api/filter/nf-filter-ifilter-init) muss kein spezieller Wert vorhanden sein.
 
- | Eingabe         | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+ | Eingabe         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Flags         | Die Namen der [**IFILTER \_ INIT-Flags,**](/previous-versions/windows/desktop/legacy/bb266511(v=vs.85)) die vom OR-Operator verknüpft werden sollen, um den *grfFlags-Parameter* der [**IFilter::Init-Methode**](/windows/win32/api/filter/nf-filter-ifilter-init) zu bilden. Die Flagnamen müssen in Großbuchstaben und in derselben Zeile stehen.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | *cAttributes* | Eine ganze Dezimalzahl, die den Wert des *cAttributes-Parameters* darstellt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| *aAttributes* | Dieser Eintrag muss mit *aAttributes* beginnen und sich von den anderen *aAttributes-Einträgen* innerhalb des Abschnitts unterscheiden. Die rechtlichen Namen für den Eintrag *aAttributes* sind: *aAttributes,* *aAttributes1,* *aAttributes2* usw. Das erste Token muss eine GUID sein. Die GUID muss genau wie im `[Test3]` Abschnitt des [Beispiels ifilttst.ini Datei](#sample-ifilttstini-file)dargestellt formatiert werden. Das zweite Token kann entweder ein Eigenschaftenbezeichner (PID) sein, der aus einer Zahl in Hexadezimalschreibweise besteht, oder ein Zeiger auf eine Breitzeichenfolge (lpwstr). Ein lpwstr kann durch Einschließen der Zeichenfolge in doppelte Anführungszeichen angegeben werden, wie im `[Test6]` Abschnitt des Beispiels ifilttst.ini Datei veranschaulicht. |
+| *aAttributes* | Dieser Eintrag muss mit *aAttributes* beginnen und sich von den anderen *aAttributes-Einträgen* innerhalb des Abschnitts unterscheiden. Rechtliche Namen für den Eintrag *aAttributes* sind: *aAttributes,* *aAttributes1,* *aAttributes2* usw. Das erste Token muss eine GUID sein. Die GUID muss genau wie im `[Test3]` Abschnitt des [Beispiels ifilttst.ini Datei](#sample-ifilttstini-file)dargestellt formatiert werden. Das zweite Token kann entweder ein Eigenschaftenbezeichner (PID) sein, der aus einer Zahl in Hexadezimalschreibweise besteht, oder ein Zeiger auf eine Breitzeichenfolge (lpwstr). Ein lpwstr kann durch Einschließen der Zeichenfolge in doppelte Anführungszeichen angegeben werden, wie im `[Test6]` Abschnitt des Beispiels ifilttst.ini Datei veranschaulicht. |
 
 Wenn die Einträge Flags und *cAttributes* nicht angegeben sind, werden sie standardmäßig auf 0 festgelegt. Wenn Sie *cAttributes* auf 2 festlegen, sollten Sie zwei *aAttributes-Namen* angeben. Im `[Test5]` Abschnitt des Beispiels ist *cAttributes* 1, aber es wurden keine *aAttributes* angegeben. Der Test ruft dann die [**IFilter::Init-Methode**](/windows/win32/api/filter/nf-filter-ifilter-init) mit *cAttributes* gleich 1 und *aAttributes* gleich **NULL** auf. Dies ist ein nützlicher Testfall, da er wahrscheinlich eine Zugriffsverletzung in der **IFilter::Init-Methode** verursacht.
 
@@ -177,7 +177,7 @@ Wenn ifilttst.exe keine Datei mit dem Namen ifilttst.ini im Arbeitsverzeichnis f
 
 ### <a name="sample-ifilttstini-file"></a>Beispieldatei für ifilttst.ini
 
-Die ifilttst.ini Datei ist in Abschnitten organisiert, wobei der Abschnittsname in eckige Klammern eingeschlossen ist. In diesem Beispiel heißen die Abschnitte `[Test1]` , `[Test2]` usw. Alle Abschnittsnamen müssen eindeutig sein. Der Test liest die Werte aus dem ersten Abschnitt und initialisiert den [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) mit diesen Werten. Anschließend werden alle Tests mit dieser **IFilter-Konfiguration** ausgeführt. Anschließend wird der **IFilter** mithilfe der oben aufgeführten Parameter freigegeben und erneut initialisiert. Der Prozess wird wiederholt, bis alle Konfigurationen getestet wurden.
+Die ifilttst.ini Datei ist in Abschnitten organisiert, wobei der Abschnittsname in eckige Klammern eingeschlossen ist. Im Beispiel heißen die Abschnitte `[Test1]` , `[Test2]` usw. Alle Abschnittsnamen müssen eindeutig sein. Der Test liest die Werte aus dem ersten Abschnitt und initialisiert den [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) mit diesen Werten. Anschließend werden alle Tests mit dieser **IFilter-Konfiguration** ausgeführt. Anschließend wird der **IFilter** mithilfe der oben aufgeführten Parameter freigegeben und erneut initialisiert. Der Prozess wird wiederholt, bis alle Konfigurationen getestet wurden.
 
 ```
 ; Only extract text from the object
@@ -218,7 +218,7 @@ Die ifilttst.ini Datei ist in Abschnitten organisiert, wobei der Abschnittsname 
 
 ## <a name="ifilter-test-procedure"></a>IFilter-Testprozedur
 
-Nachdem der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) initialisiert wurde, führt das ifilttst.exe Programm eine Reihe von Tests für den **IFilter** durch. Stellen Sie zusätzlich zu den **IFilter-Testverfahren** sicher, dass Ihre **IFilter-Implementierung** sichere Codemethoden verwendet. Weitere Informationen finden Sie unter "Sichere Codemethoden für Windows Suche" unter [Implementieren von Filterhandlern in Windows Suche.](-search-ifilter-constructing-filters.md)
+Nachdem der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) initialisiert wurde, führt das ifilttst.exe Programm eine Reihe von Tests für den **IFilter** durch. Stellen Sie neben den **IFilter-Testverfahren** sicher, dass Ihre **IFilter-Implementierung** sichere Codemethoden verwendet. Weitere Informationen finden Sie unter "Sichere Codemethoden für Windows Suche" unter [Implementieren von Filterhandlern in Windows Suche.](-search-ifilter-constructing-filters.md)
 
 ### <a name="validation-test"></a>Validierungstest
 
@@ -247,18 +247,18 @@ Der Konsistenztest überprüft die folgenden Bedingungen:
 
 ### <a name="invalid-input-test"></a>Ungültiger Eingabetest
 
-Das ifilttst.exe Programm initialisiert die [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter) erneut mit den gleichen Parametern und führt einen ungültigen Eingabetest aus. Bei diesem Test wird das Dokument segmentweise durchlaufen, wobei Funktionsaufrufe falsch erfolgt, z. B. durch aufrufen der [**IFilter::GetValue-Methode,**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) wenn der aktuelle Chuck Text enthält. Der Test überprüft alle Rückgabecodes auf Konformität mit der **IFilter-Spezifikation.**
+Das ifilttst.exe Programm initialisiert die [**IFilter-Schnittstelle**](/windows/win32/api/filter/nn-filter-ifilter) mit den gleichen Parametern erneut und führt einen ungültigen Eingabetest aus. Bei diesem Test wird das Dokument segmentweise durchlaufen, sodass Funktionsaufrufe falsch sind, z. B. das Aufrufen der [**IFilter::GetValue-Methode,**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) wenn der aktuelle Chuck Text enthält. Der Test überprüft alle Rückgabecodes auf Konformität mit der **IFilter-Spezifikation.**
 
 Der ungültige Eingabetest überprüft die folgenden Bedingungen:
 
 - Wenn der aktuelle Block Text enthält, gibt [**IFilter::GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) FILTER \_ E NO VALUES \_ \_ zurück, und ein Aufruf von [**IFilter::GetText**](/windows/win32/api/filter/nf-filter-ifilter-gettext) ist erfolgreich.
 - Wenn der aktuelle Block einen Wert enthält, gibt [**IFilter::GetText**](/windows/win32/api/filter/nf-filter-ifilter-gettext) FILTER \_ E NO TEXT \_ \_ zurück, und ein Aufruf von [**IFilter::GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) ist erfolgreich.
 - Wenn der vorherige Aufruf von [**IFilter::GetText**](/windows/win32/api/filter/nf-filter-ifilter-gettext) FILTER E NO MORE TEXT zurückgegeben \_ \_ \_ \_ hat, geben aufeinander folgende Aufrufe von **IFilter::GetText** FILTER \_ E NO MORE TEXT \_ \_ \_ zurück.
-- Wenn beim vorherigen Aufruf von [**IFilter::GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) FILTER E NO MORE VALUES zurückgegeben \_ \_ \_ \_ wurde, geben aufeinander folgende Aufrufe von **IFilter::GetValue** FILTER \_ E NO MORE VALUES \_ \_ \_ zurück.
+- Wenn der vorherige Aufruf von [**IFilter::GetValue**](/windows/win32/api/filter/nf-filter-ifilter-getvalue) FILTER E NO MORE VALUES zurückgegeben \_ \_ \_ \_ hat, geben aufeinander folgende Aufrufe von **IFilter::GetValue** FILTER \_ E NO MORE VALUES \_ \_ \_ zurück.
 - Wenn der vorherige Aufruf von [**IFilter::GetChunk**](/windows/win32/api/filter/nf-filter-ifilter-getchunk) FILTER \_ E END OF \_ CHUNKS zurückgegeben \_ \_ hat, geben aufeinander folgende Aufrufe von **IFilter::GetChunk** FILTER \_ E END OF \_ \_ \_ CHUNKS zurück.
 
 > [!NOTE]  
-> Der ungültige Eingabetest vergleicht die aktuellen Blockstrukturen mit den im Validierungstest zurückgegebenen, um sicherzustellen, dass sie identisch sind.
+> Der ungültige Eingabetest vergleicht die aktuellen Blockstrukturen mit denen, die im Validierungstest zurückgegeben werden, um sicherzustellen, dass sie identisch sind.
 
 ### <a name="testing-different-ifilter-configurations"></a>Testen verschiedener IFilter-Konfigurationen
 
@@ -299,7 +299,7 @@ Auf Anforderung kann das Ifilttst.exe-Programm ein Protokoll mit einer Beschreib
 
 ```
 
-Die erste Zeile ist eine Informationsmeldung, die angibt, dass eine neue Konfiguration aus der datei ifilttst.ini geladen wurde. Zeile (3) gibt den Abschnittsnamen in der ifilttst.ini Datei an, aus der die aktuelle Konfiguration gelesen wurde. Zeilen (4) bis (7) listen die Parameter für [**IFilter::Init**](/windows/win32/api/filter/nf-filter-ifilter-init)auf. Die Zeilen, die mit `INFO` beginnen, sind Informationsmeldungen über die Bindung von [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) und den Beginn des Validierungstests. Zeilen, die mit `PASS` beginnen, sind Meldungen zu bestimmten Tests, die bestanden wurden.
+Die erste Zeile ist eine Informationsmeldung, die angibt, dass eine neue Konfiguration aus der ifilttst.ini-Datei geladen wurde. Zeile (3) gibt den Abschnittsnamen in der ifilttst.ini Datei an, aus der die aktuelle Konfiguration gelesen wurde. Zeilen (4) bis (7) listen die Parameter für [**IFilter::Init**](/windows/win32/api/filter/nf-filter-ifilter-init)auf. Die Zeilen, die mit `INFO` beginnen, sind Informationsmeldungen über die Bindung von [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) und den Beginn des Validierungstests. Zeilen, die mit `PASS` beginnen, sind Meldungen zu bestimmten tests, die bestanden wurden.
 
 Die Zeile im folgenden Protokollbeispiel ist eine Warnung. Warnungen rufen die Aufmerksamkeit auf [**das IFilter-Verhalten**](/windows/win32/api/filter/nn-filter-ifilter) auf, das problematisch ist, obwohl es zulässig ist. Diese Warnung gibt an, dass die [**IFilter::GetChunk-Methode**](/windows/win32/api/filter/nf-filter-ifilter-getchunk) einen Textabschnitt zurückgegeben hat, der keinen Text enthält.
 
@@ -319,7 +319,7 @@ Im Fall dieser Beispielfehlermeldung hat der [**IFilter**](/windows/win32/api/fi
 
 ### <a name="sample-dump-file"></a>Beispieldumpdatei
 
-Auf Anforderung kann das Ifilttst.exe Programm ein Dump mit den gefundenen Blöcken und ihrem Inhalt erstellen. Das folgende Beispiel ist ein Auszug aus einer solchen Dumpdatei.
+Auf Anforderung kann das Ifilttst.exe Programm ein Dump erstellen, das die gefundenen Blöcke und deren Inhalt enthält. Das folgende Beispiel ist ein Auszug aus einer solchen Dumpdatei.
 
 ```
                 1. Chunk ID: ........... 2
@@ -359,7 +359,7 @@ Auf Anforderung kann das Ifilttst.exe Programm ein Dump mit den gefundenen Blöc
                 30. This is an HTML IFilter test page
 ```
 
-Die ersten neun Zeilen beschreiben die aktuelle Blockstruktur. Die GUID und die PID entsprechen DEM \_ PSGUID-SPEICHER/PID-STG-INHALT. \_ \_ Dies ist ein Block, der Nur-Text enthält. Der Text befindet sich in der folgenden Blockstruktur:
+Die ersten neun Zeilen beschreiben die aktuelle Blockstruktur. Die GUID und die PID entsprechen DEM \_ PSGUID-SPEICHER-/PID-STG-INHALT. \_ \_ Dies ist ein Block, der Nur-Text enthält. Der Text befindet sich in der folgenden Blockstruktur:
 
 ```
 10. This is an HTML IFilter test page
@@ -371,7 +371,7 @@ Der nächste Block, beginnend mit Zeile 21, hat die gleiche GUID und PID, aber s
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-- Das [IFilterSample-Codebeispiel,](-search-sample-ifiltersample.md) das auf [GitHub](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)verfügbar ist, veranschaulicht, wie eine IFilter-Basisklasse zum Implementieren der [**IFilter-Schnittstelle erstellt**](/windows/win32/api/filter/nn-filter-ifilter) wird.
+- Das [IFilterSample-Codebeispiel,](-search-sample-ifiltersample.md) das auf GitHub verfügbar [ist,](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/IFilterSample)veranschaulicht, wie eine IFilter-Basisklasse zum Implementieren der [**IFilter-Schnittstelle erstellt**](/windows/win32/api/filter/nn-filter-ifilter) wird.
 - Eine Übersicht über den Indizierungsprozess finden Sie unter [Der Indizierungsprozess](-search-indexing-process-overview.md).
 - Eine Übersicht über Dateitypen finden Sie unter [Dateitypen.](../shell/fa-file-types.md)
 - Informationen zum Abfragen von Dateiassoziationsattributen für einen Dateityp finden Sie unter [PerceivedTypes, SystemFileAssociations und Application Registration.](/previous-versions/windows/desktop/legacy/cc144150(v=vs.85))

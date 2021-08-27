@@ -1,35 +1,35 @@
 ---
-description: Texturfilterkonstanten.
+description: Texturfilterkonst konstanten.
 ms.assetid: 4434e456-670e-46a9-ba78-affdc195fe1c
 title: D3DPTFILTERCAPS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e86645ca1d0f8c1904307b80c27c2b8ce8d635229d3bb15b0f8178d6a9d70dcc
-ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.openlocfilehash: 06624f4f8779a866d440212c205baa9b4a84839a
+ms.sourcegitcommit: c276a8912787b2cda74dcf54eb96df961bb1188b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "118804668"
+ms.lasthandoff: 08/20/2021
+ms.locfileid: "122624546"
 ---
 # <a name="d3dptfiltercaps"></a>D3DPTFILTERCAPS
 
-Texturfilterkonstanten.
+Texturfilterkonst konstanten.
 
 
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col  />
+<col  />
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>#Definieren</td>
-<td>BESCHREIBUNG</td>
+<td>Beschreibung</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_CONVOLUTIONMONO</td>
-<td>Das Gerät unterstützt monocolore Konvolutionsfilterung. Dieser Filter wird durch den D3DTEXF_CONVOLUTIONMONO Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt. 
+<td>Das Gerät unterstützt monotone Konvolutionsfilterung. Dieser Filter wird durch den D3DTEXF_CONVOLUTIONMONO des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt. 
 <table>
 <tbody>
 <tr class="odd">
@@ -42,51 +42,51 @@ Texturfilterkonstanten.
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MAGFPOINT</td>
-<td>Das Gerät unterstützt die Punktsamplingfilterung pro Phase zum Vergrößern von Texturen. Der Vergrößerungsfilter für Punktbeispiele wird durch den D3DTEXF_POINT Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die punktbasierte Stichprobenfilterung pro Stufe für die Vergrößerung von Texturen. Der Punktbeispiel-Vergrößerungsfilter wird durch den D3DTEXF_POINT des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MAGFLINEAR</td>
-<td>Das Gerät unterstützt die bilineare Interpolationsfilterung pro Phase zum Vergrößern von Mipmaps. Der bilineare Interpolationsfilter mipmapping wird durch den D3DTEXF_LINEAR Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die mehrstufige bilineare Interpolationsfilterung für die Vergrößerung von Mipmaps. Der mipmapping-Filter für die bilineare Interpolation wird durch den D3DTEXF_LINEAR des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MAGFANISOTROPIC</td>
-<td>Das Gerät unterstützt die phasenspezifische Anisotrope Filterung zum Vergrößern von Texturen. Der Anisotrope Vergrößerungsfilter wird durch den D3DTEXF_ANISOTROPIC Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die phasenbasierte anisotrope Filterung für die Vergrößerung von Texturen. Der anisotrope Vergrößerungsfilter wird durch den D3DTEXF_ANISOTROPIC des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MAGFPYRAMIDALQUAD</td>
-<td>Das Gerät unterstützt das filtern von pyramidalen Stichproben pro Stufe zum Vergrößern von Texturen. Der pyramidale Lupenfilter wird durch den D3DTEXF_PYRAMIDALQUAD Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt das filtern von pyramidalen Stichproben pro Stufe für Lupentexturen. Der pyramidale Lupenfilter wird durch den D3DTEXF_PYRAMIDALQUAD des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MAGFGAUSSIANQUAD</td>
-<td>Das Gerät unterstützt die Pro-Stage-Filterung von Gaußschen Quadern zum Vergrößern von Texturen.</td>
+<td>Das Gerät unterstützt die gaußsche Quadratfilterung pro Stufe für die Vergrößerung von Texturen.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MINFPOINT</td>
-<td>Das Gerät unterstützt die Punktsamplingfilterung pro Phase, um Texturen zu verminen. Der Point-Sample-Filter für die Minierung wird durch den D3DTEXF_POINT Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die punktbasierte Stichprobenfilterung pro Stufe zum Vereinheitlichen von Texturen. Der Punktbeispiel-Minierungsfilter wird durch den D3DTEXF_POINT des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MINFLINEAR</td>
-<td>Das Gerät unterstützt die lineare Filterung pro Stufe zum Verminen von Texturen. Der lineare Minderungsfilter wird durch den D3DTEXF_LINEAR Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die mehrstufige lineare Filterung zum Vereinheitlichen von Texturen. Der lineare Minierungsfilter wird durch den D3DTEXF_LINEAR des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MINFANISOTROPIC</td>
-<td>Das Gerät unterstützt die phasenspezifische Anisotrope Filterung für die Vergrößerung von Texturen. Der Anisotrope Minderungsfilter wird durch den D3DTEXF_ANISOTROPIC Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die phasenbasierte anisotrope Filterung zur Minierung von Texturen. Der anisotrope Minierungsfilter wird durch den D3DTEXF_ANISOTROPIC des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MINFPYRAMIDALQUAD</td>
-<td>Das Gerät unterstützt das filtern von pyramidalen Stichproben pro Stufe, um Texturen zu verminen.</td>
+<td>Das Gerät unterstützt das filtern von pyramidalen Stichproben pro Stufe zum Vereinheitlichen von Texturen.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MINFGAUSSIANQUAD</td>
-<td>Das Gerät unterstützt die Pro-Stage-Filterung von Gaußschen Quadern zum Verminen von Texturen.</td>
+<td>Das Gerät unterstützt die gaußsche Quadfilterung pro Stufe zum Verfälschen von Texturen.</td>
 </tr>
 <tr class="odd">
 <td>D3DPTFILTERCAPS_MIPFPOINT</td>
-<td>Das Gerät unterstützt die Punktbeispielfilterung pro Phase für Mipmaps. Der point-sample mipmapping-Filter wird durch den D3DTEXF_POINT Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die punktbasierte Punktbeispielfilterung für Mipmaps. Der mipmapping-Punktbeispielfilter wird durch den D3DTEXF_POINT des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 <tr class="even">
 <td>D3DPTFILTERCAPS_MIPFLINEAR</td>
-<td>Das Gerät unterstützt die bilineare Interpolationsfilterung pro Phase für Mipmaps. Der bilineare Interpolationsfilter mipmapping wird durch den D3DTEXF_LINEAR Member des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>D3DTEXTUREFILTERTYPE-Enumerationstyps</strong></a> dargestellt.</td>
+<td>Das Gerät unterstützt die mehrstufige bilineare Interpolationsfilterung für Mipmaps. Der mipmapping-Filter für die bilineare Interpolation wird durch den D3DTEXF_LINEAR des <a href="/windows/desktop/direct3d9/d3dtexturefiltertype"><strong>aufzählten D3DTEXTUREFILTERTYPE-Typs</strong></a> dargestellt.</td>
 </tr>
 </tbody>
 </table>
@@ -95,9 +95,9 @@ Texturfilterkonstanten.
 
  
 
-Diese Konstanten werden von TextureFilterCaps-, CubeTextureFilterCaps-, VolumeTextureFilterCaps- und VertexTextureFilterCaps-Membern von [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)verwendet.
+Diese Konstanten werden von TextureFilterCaps-, CubeTextureFilterCaps-, VolumeTextureFilterCaps- und VertexTextureFilterCaps-Membern von [**D3DCAPS9 verwendet.**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9)
 
-## <a name="constant-information"></a>Konstanteninformationen
+## <a name="constant-information"></a>Konstante Informationen
 
 
 

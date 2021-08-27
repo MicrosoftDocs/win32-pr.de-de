@@ -1,151 +1,128 @@
 ---
-title: ToolBar-Steuerelement Typen
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Steuerelement-Steuerelement-Typ Symbolleisten-Steuerelemente ermöglichen Endbenutzern das Aktivieren von Befehlen und Tools, die in einer Anwendung enthalten sind.
+title: ToolBar-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Unterstützung für den ToolBar-Steuerelementtyp. Symbolleisten-Steuerelemente ermöglichen Endbenutzern das Aktivieren von Befehlen und Tools, die in einer Anwendung enthalten sind.
 ms.assetid: e2a72ce3-5263-43f8-be4d-715a78224b68
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für Steuerelement Typen
-- UI-Automatisierung, Symbolleisten-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Struktur für Symbolleisten-Steuerelement Typen
-- Benutzeroberflächenautomatisierungs, Eigenschaften für Symbolleisten-Steuerelement
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für den ToolBar-Steuerelement
-- Benutzeroberflächenautomatisierungs, Ereignisse für ToolBar-Steuerelement Typen
-- Struktur Strukturen, Symbolleisten-Steuerelement Typen
-- Eigenschaften, Symbolleisten-Steuerelement Typen
-- Steuerelement Muster, Symbolleisten-Steuerelement Typen
-- Ereignisse, Symbolleisten-Steuerelement Typen
-- Unterstützung für Symbolleisten-Steuerelement
+- Benutzeroberflächenautomatisierung,Unterstützung für den ToolBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,ToolBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den ToolBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den ToolBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den ToolBar-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für den ToolBar-Steuerelementtyp
+- Strukturstrukturen,ToolBar-Steuerelementtyp
+- Properties,ToolBar-Steuerelementtyp
+- Steuerelementmuster, ToolBar-Steuerelementtyp
+- events,ToolBar-Steuerelementtyp
+- Unterstützung für den ToolBar-Steuerelementtyp
 - ToolBar-Steuerelementtyp
-- Steuerelement Typen, Baumstruktur für Symbolleisten-Steuerelement Typen
-- Steuerelement Typen, Steuerelement Muster für ToolBar-Steuerelement Typen
-- Steuerelement Typen, Unterstützung für Symbolleiste
-- Steuerelement Typen, Symbolleiste
+- Steuerelementtypen,Struktur für ToolBar-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für den ToolBar-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für ToolBar
+- Steuerelementtypen, ToolBar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4327c187a86ace6f02b93082675c345eae4d4edf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1194c9aabaa684370b99d23d91c979ff3410305b
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388688"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122471156"
 ---
-# <a name="toolbar-control-type"></a>ToolBar-Steuerelement Typen
+# <a name="toolbar-control-type"></a>ToolBar-Steuerelementtyp
 
-Dieses Thema enthält **Informationen zur Unterstützung der Microsoft** -Benutzeroberflächen Automatisierung für den Steuerelement-Steuerelement-Typ Symbolleisten-Steuerelemente ermöglichen Endbenutzern das Aktivieren von Befehlen und Tools, die in einer Anwendung enthalten sind.
+Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung-Unterstützung für den **ToolBar-Steuerelementtyp.** Symbolleisten-Steuerelemente ermöglichen Endbenutzern das Aktivieren von Befehlen und Tools, die in einer Anwendung enthalten sind.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse **für den Steuer** Element-Steuerelement Typen definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Symbolleisten-Steuerelemente, in denen Benutzeroberflächen-Framework/Plattform die Unterstützung der Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **ToolBar-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung gelten für alle Symbolleistensteuerelemente, bei denen das Benutzeroberflächenframework/die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Strukturstruktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Strukturstruktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für ToolBar-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
-
-
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Steuerelementansicht</th>
-<th>Inhaltsansicht</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><ul>
-<li>ToolBar
-<ul>
-<li>Verschiedene Steuerelemente (0 oder mehr)</li>
-</ul></li>
-</ul></td>
-<td><ul>
-<li>ToolBar
-<ul>
-<li>Verschiedene Steuerelemente (0 oder mehr)</li>
-</ul></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+Die folgende Tabelle zeigt ein typisches Steuerelement und eine Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur, die sich auf Symbolleistensteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Struktur Benutzeroberflächenautomatisierung Struktur finden Sie unter [Benutzeroberflächenautomatisierung Strukturübersicht.](uiauto-treeoverview.md)
 
 
 
- 
 
-Ein ToolBar-Steuerelement kann jede Art von Steuerelement in seiner Unterstruktur enthalten. Am häufigsten enthalten sie Schaltflächen, Kombinationsfelder und unterteilte Schaltflächen.
+| Steuerelementansicht | Inhaltsansicht | 
+|--------------|--------------|
+| <ul><li>ToolBar<ul><li>Verschiedene Steuerelemente (0 oder mehr)</li></ul></li></ul> | <ul><li>ToolBar<ul><li>Verschiedene Steuerelemente (0 oder mehr)</li></ul></li></ul> | 
+
+
+
+
+ 
+
+Ein Symbolleisten-Steuerelement kann einen beliebigen Steuerelementtyp in seiner Unterstruktur enthalten. Am häufigsten enthalten sie Schaltflächen, Kombinationsfelder und unterteilte Schaltflächen.
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition **für den Steuer** Element-Steuerelement Typ besonders relevant ist Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, deren Wert oder Definition für den **ToolBar-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Eigenschaften Benutzeroberflächenautomatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements.](uiauto-propertiesforclients.md)
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert       | Notizen                                                                                                                                                                                                      |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert       | Hinweise                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.  | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                               |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.  | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                   |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.  | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen.       |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **Suchfeld** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                              |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE        | Das Symbolleisten-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                      |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE        | Das Symbolleisten-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                                      |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                                  |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL        | Ein Symbolleisten-Steuerelement hat nie eine Bezeichnung.                                                                                                                                                                       |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.  | Lokalisierte Zeichenfolge für den Steuerelement-Typ der **Symbolleiste** . Der Standardwert ist "Symbolleiste" für en-US oder Englisch (USA).                                                                      |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Depends (Abhängig)     | Das Symbolleisten-Steuerelement benötigt keinen Namen, es sei denn, in einer Anwendung wird mehr als ein Name verwendet. Wenn mehr als ein Wert vorhanden ist, muss jeder über einen eindeutigen Namen verfügen (z. b. "Formatierung" oder "Gliederung"). |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.  | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung sein.                                                                                               |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.  | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                                   |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.  | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebundenen Rechtecks angeklickt werden kann und das Element spezielle Treffertests ausführt, überschreiben Und stellen Sie einen klickbaren Punkt zur Verfügung.       |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **Symbolleiste** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                              |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE        | Das Symbolleisten-Steuerelement ist immer in der Inhaltsansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                      |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE        | Das Symbolleisten-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung enthalten.                                                                                                                      |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.  | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                                  |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL        | Ein Symbolleisten-Steuerelement hat nie eine Bezeichnung.                                                                                                                                                                       |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.  | Lokalisierte Zeichenfolge, die dem **ToolBar-Steuerelementtyp** entspricht. Der Standardwert ist "Toolleiste" für en-US oder Englisch (USA).                                                                      |
+| [**UIA \_ NamePropertyId**](uiauto-automation-element-propids.md)                                 | Depends (Abhängig)     | Das Symbolleisten-Steuerelement benötigt nur dann einen Namen, wenn in einer Anwendung mehr als ein Name verwendet wird. Wenn mehr als ein Name vorhanden ist, muss jeder einen unterscheidenden Namen haben (z. B. "Formatierung" oder "Lining"). |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von Toolbar-Steuerelementen unterstützt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung, die von Symbolleisten-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                                                   | Support | Notizen                                                                                                                                                         |
 |-------------------------------------------------------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IDockProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idockprovider)                     | Depends (Abhängig) | Wenn die Symbolleiste an verschiedenen Teilen des Bildschirms angedockt werden kann, muss Sie das [Dock](uiauto-implementingdock.md) -Steuerelement Muster unterstützen.                       |
-| [**IExpandCollapseProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iexpandcollapseprovider) | Depends (Abhängig) | Wenn die Symbolleiste erweitert und reduziert werden kann, um weitere Elemente anzuzeigen, muss Sie das [ExpandCollapse](uiauto-implementingexpandcollapse.md) -Steuerelement Muster unterstützen. |
-| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider)           | Depends (Abhängig) | Wenn die Größe der Symbolleiste geändert, gedreht oder verschoben werden kann, muss Sie das [Transform](uiauto-implementingtransform.md) -Steuerelement Muster unterstützen.                          |
+| [**IDockProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-idockprovider)                     | Depends (Abhängig) | Wenn die Symbolleiste an verschiedene Teile des Bildschirms angedockt werden kann, muss sie das [Dock-Steuerelementmuster](uiauto-implementingdock.md) unterstützen.                       |
+| [**IExpandCollapseProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iexpandcollapseprovider) | Depends (Abhängig) | Wenn die Symbolleiste erweitert und reduziert werden kann, um weitere Elemente anzuzeigen, muss sie das [ExpandCollapse-Steuerelementmuster](uiauto-implementingexpandcollapse.md) unterstützen. |
+| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider)           | Depends (Abhängig) | Wenn die Größe der Symbolleiste geändert, gedreht oder verschoben werden kann, muss sie das [Transformationssteuermuster](uiauto-implementingtransform.md) unterstützen.                          |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die von Symbolleisten-Steuerelementen unterstützt Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung aufgeführt, die von Symbolleisten-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                                                | Notizen                                                                                                                            |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                                                | Hinweise                                                                                                                            |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                                                   |                                                                                                                                  |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                              |                                                                                                                                  |
-| [**UIA \_ Expandredugenexpandredugenstatepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis. | Wenn das Steuerelement das [ExpandCollapse](uiauto-implementingexpandcollapse.md) -Steuerelement Muster unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                              | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.         |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                          | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.       |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                                               |                                                                                                                                  |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                                                   |                                                                                                                                  |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                              |                                                                                                                                  |
+| [**UIA \_ ExpandCollapseExpandCollapseStatePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md) | Wenn das Steuerelement das [ExpandCollapse-Steuerelementmuster](uiauto-implementingexpandcollapse.md) unterstützt, muss es dieses Ereignis unterstützen. |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                              | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.         |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                          | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.       |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                                               |                                                                                                                                  |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -154,9 +131,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

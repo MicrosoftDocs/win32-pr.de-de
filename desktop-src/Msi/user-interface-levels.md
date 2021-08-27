@@ -1,67 +1,40 @@
 ---
-description: Windows Installer bietet Paket Entwicklern die Möglichkeit, eine interne Benutzeroberfläche zu erstellen, die über mehrere Funktionsebenen verfügt.
+description: Windows Das Installationsprogramm bietet Paketentwicklern die Möglichkeit, eine interne Benutzeroberfläche zu erstellen, die über mehrere Funktionalitätsebenen verfügt.
 ms.assetid: 9f5796a7-e244-4fc8-af85-52a147bb2c0b
-title: Benutzeroberflächen Ebenen
+title: Benutzeroberfläche Ebenen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a835d1b11a4db4393041e83c1b1dc885018610f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bbe932ea10b62d20ca06a027b935ff04289cdef
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218516"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122478066"
 ---
-# <a name="user-interface-levels"></a>Benutzeroberflächen Ebenen
+# <a name="user-interface-levels"></a>Benutzeroberfläche Ebenen
 
-Windows Installer bietet Paket Entwicklern die Möglichkeit, eine interne Benutzeroberfläche zu erstellen, die über mehrere Funktionsebenen verfügt. Da die interne Benutzeroberfläche vom Autor des Pakets erstellt werden muss, hängt das Verhalten der vollständigen Benutzeroberfläche, der reduzierten Benutzeroberfläche, der Standardbenutzer Oberfläche und der Ebene "None" vom Installationspaket ab. In der folgenden Tabelle werden die Funktionen beschrieben, die häufig für UI-Ebenen bezeichnet werden.
+Windows Das Installationsprogramm bietet Paketentwicklern die Möglichkeit, eine interne Benutzeroberfläche zu erstellen, die über mehrere Funktionalitätsebenen verfügt. Da die interne Benutzeroberfläche vom Autor des Pakets erstellt werden muss, hängt das Verhalten der Ebenen vollständige Benutzeroberfläche, reduzierte Benutzeroberfläche, Einfache Benutzeroberfläche und Keine vom Installationspaket ab. In der folgenden Tabelle werden die Funktionen beschrieben, die benutzeroberflächenebenen häufig zugeschrieben werden.
 
 
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>UI-Ebene</th>
-<th>BESCHREIBUNG</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Vollständige Benutzeroberfläche</td>
-<td>Zeigt modale und nicht modale Dialogfelder an, die in der internen Benutzeroberfläche erstellt wurden. Zeigt die <a href="error-dialog.md">Dialog</a> Felder der erstellten Fehler an.
-<blockquote>
-[!Note]<br />
-Modale Dialogfelder erfordern Benutzereingaben, bevor die Installation fortgesetzt werden kann. Sie werden durch Festlegen des <a href="modal-dialog-style-bit.md">modalen Dialog Felds Bit</a> in der Spalte Attribute der <a href="dialog-table.md">Dialog</a> Tabelle angegeben. Für ein nicht modalem Dialogfeld sind keine Benutzereingaben erforderlich, damit die Installation fortgesetzt werden kann.
-</blockquote>
-<br/> Eine vollständige Benutzeroberfläche zeigt im Allgemeinen das <a href="user-interface-wizard-behavior.md">Verhalten der Benutzeroberfläche</a>an.<br/></td>
-</tr>
-<tr class="even">
-<td>Reduzierte Benutzeroberfläche</td>
-<td>Zeigt alle nicht modalem Dialogfelder an, die in der Benutzeroberfläche erstellt wurden. In werden keine erstellten modalen Dialogfelder angezeigt. Zeigt die <a href="error-dialog.md">Dialog</a> Felder der erstellten Fehler an. Zeigt <a href="authoring-disk-prompt-messages.md">Eingabe</a> Aufforderungs Meldungen an. Zeigt <a href="filesinuse-dialog.md">FilesInUse-Dialog</a> Felder an.</td>
-</tr>
-<tr class="odd">
-<td>Standardbenutzeroberfläche</td>
-<td>Zeigt die integrierten Dialogfelder ohne Modus an, in denen Statusmeldungen angezeigt werden. Zeigt integrierte Fehler Dialogfelder an. In werden keine erstellten Dialogfelder angezeigt. Fordert Benutzer auf, einen Datenträger einzufügen, indem ein Dialogfeld mit dem Wert der <a href="diskprompt.md"><strong>diskprompt</strong></a> -Eigenschaft angezeigt wird.</td>
-</tr>
-<tr class="even">
-<td>Keine</td>
-<td>None bedeutet eine unbeaufsichtigte Installation, die keine Benutzeroberfläche anzeigt.</td>
-</tr>
-</tbody>
-</table>
+
+| Benutzeroberflächenebene | BESCHREIBUNG | 
+|----------|-------------|
+| Vollständige Benutzeroberfläche | Zeigt modale und moduslose Dialogfelder an, die in der internen Benutzeroberfläche verfasst wurden. Zeigt die Dialogfelder <a href="error-dialog.md">für den erstellungsbeladenen</a> Fehler an.<blockquote>[!Note]<br />Modale Dialogfelder erfordern Benutzereingaben, bevor die Installation fortgesetzt werden kann, und werden durch Festlegen des <a href="modal-dialog-style-bit.md">Modal Dialog Style Bit</a> in der Spalte Attribute der Tabelle <a href="dialog-table.md">Dialog</a> angegeben. Ein nicht modusloses Dialogfeld erfordert keine Benutzereingaben, damit die Installation fortgesetzt werden kann.</blockquote><br /> Eine vollständige Benutzeroberfläche weist in der Regel Benutzeroberfläche <a href="user-interface-wizard-behavior.md">Assistentenverhalten auf.</a><br /> | 
+| Reduzierte Benutzeroberfläche | Zeigt alle nicht moduslosen Dialogfelder an, die in der Benutzeroberfläche verfasst wurden. Es werden keine selbst verfassten modalen Dialogfelder angezeigt. Zeigt die Dialogfelder <a href="error-dialog.md">für den erstellungsbeladenen</a> Fehler an. Zeigt <a href="authoring-disk-prompt-messages.md">Datenträger-Eingabeaufforderungsmeldungen</a> an. Zeigt <a href="filesinuse-dialog.md">FilesInUse-Dialogfelder</a> an. | 
+| Standardbenutzeroberfläche | Zeigt die integrierten dialogfelder ohne Modus an, in denen Statusmeldungen angezeigt werden. Zeigt integrierte Fehlerdialogfelder an. Es werden keine selbst verfassten Dialogfelder angezeigt. Fordert Benutzer zum Einfügen eines Datenträgers auf, indem ein Dialogfeld mit dem <a href="diskprompt.md"><strong>DiskPrompt-Eigenschaftswert</strong></a> angezeigt wird. | 
+| Keine | Keine bedeutet eine automatische Installation, bei der keine Benutzeroberfläche angezeigt wird. | 
+
 
 
 
  
 
-Die Ebene der internen Benutzeroberfläche kann mithilfe von " [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui)" festgelegt werden. Der Installer legt die [**uilevel**](uilevel.md) -Eigenschaft auf die aktuelle Ebene der Benutzeroberfläche fest.
+Die Ebene der internen Benutzeroberfläche kann mit [**msiSetInternalUI festgelegt werden.**](/windows/desktop/api/Msi/nf-msi-msisetinternalui) Das Installationsprogramm legt die [**UILevel-Eigenschaft**](uilevel.md) auf die aktuelle Ebene der Benutzeroberfläche fest.
 
-Wenn die [**limitui**](limitui.md) -Eigenschaft festgelegt ist, ist die Benutzeroberflächen Ebene, die bei der Installation des Pakets verwendet wird, auf Basic beschränkt.
+Wenn die [**LIMITUI-Eigenschaft**](limitui.md) festgelegt ist, ist die Benutzeroberflächenebene, die beim Installieren des Pakets verwendet wird, auf Basic beschränkt.
 
-Ein Beispiel für die Benutzeroberflächen Erstellung finden Sie unter [einem Installations Beispiel](an-installation-example.md).
+Ein Beispiel für die Benutzeroberflächenerstellung finden Sie unter [Beispiel für eine Installation.](an-installation-example.md)
 
  
 

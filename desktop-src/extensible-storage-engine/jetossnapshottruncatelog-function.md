@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jeesssnapshottruneurelog-Funktion'
-title: Jeto ssnapshottruneurelog-Funktion
+description: 'Weitere Informationen zu: JetOSSnapshotTruncateLog-Funktion'
+title: JetOSSnapshotTruncateLog-Funktion
 TOCTitle: JetOSSnapshotTruncateLog Function
 ms:assetid: 3df8f5b2-8083-49b7-a325-fd13187f785c
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269231(v=EXCHG.10)
@@ -18,23 +18,23 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f0a3cebd743a3c8cd9a3d86f1f637dcb5b2c9c91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: adda7e97fd9a8e1a65740f4fb82c22b52cfad979
+ms.sourcegitcommit: 9b5faa61c38b2d0c432b7f2dbee8c127b0e28a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364152"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "122472506"
 ---
-# <a name="jetossnapshottruncatelog-function"></a>Jeto ssnapshottruneurelog-Funktion
+# <a name="jetossnapshottruncatelog-function"></a>JetOSSnapshotTruncateLog-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetossnapshottruncatelog-function"></a>Jeto ssnapshottruneurelog-Funktion
+## <a name="jetossnapshottruncatelog-function"></a>JetOSSnapshotTruncateLog-Funktion
 
-Die **jetossnapshottruneurelog** -Funktion ermöglicht das Abschneiden von Protokollen für alle Instanzen, die Teil der Momentaufnahme Sitzung sind.
+Die **JetOSSnapshotTruncateLog-Funktion** ermöglicht die Protokollkürzung für alle Instanzen, die Teil der Momentaufnahmesitzung sind.
 
-**Windows Vista:**  **jedessnapshottruneurelog** wird in Windows Vista eingeführt.
+**Windows Vista:****JetOSSnapshotTruncateLog** wird in Windows Vista eingeführt.  
 
 ```cpp
     JET_ERR JET_API JetOSSnapshotTruncateLog(
@@ -45,118 +45,54 @@ Die **jetossnapshottruneurelog** -Funktion ermöglicht das Abschneiden von Proto
 
 ### <a name="parameters"></a>Parameter
 
-*snapid*
+*snapId*
 
-Der Bezeichner der Momentaufnahme Sitzung.
+Der Bezeichner der Momentaufnahmesitzung.
 
 *grbit*
 
-Die Optionen für diesen-Befehl. Dieser Parameter kann eine Kombination der folgenden Werte aufweisen.
+Die Optionen für diesen Aufruf. Dieser Parameter kann eine Kombination der folgenden Werte aufweisen.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Wert</p></th>
-<th><p>Bedeutung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_bitAllDatabasesSnapshot</p></td>
-<td><p>Alle Datenbanken werden angefügt, sodass die Speicher-Engine die Protokoll Verkürzung berechnen und durchführen kann.</p></td>
-</tr>
-<tr class="even">
-<td><p>0 (null)</p></td>
-<td><p>Es erfolgt kein abschneiden.</p></td>
-</tr>
-</tbody>
-</table>
+
+| <p>Wert</p> | <p>Bedeutung</p> | 
+|--------------|----------------|
+| <p>JET_bitAllDatabasesSnapshot</p> | <p>Alle Datenbanken sind angefügt, damit die Speicher-Engine die Protokollkürzung berechnen und durchführen kann.</p> | 
+| <p>0 (Null)</p> | <p>Es erfolgt keine Kürzung.</p> | 
+
 
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><p>Rückgabecode</p></th>
-<th><p>Beschreibung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>JET_errSuccess</p></td>
-<td><p>Der Vorgang wurde erfolgreich abgeschlossen.</p></td>
-</tr>
-<tr class="even">
-<td><p>JET_errInvalidGrbit</p></td>
-<td><p>Der <em>grbit</em> -Parameter ist ungültig.</p></td>
-</tr>
-<tr class="odd">
-<td><p>JET_errOSSnapshotInvalidSequence</p></td>
-<td><p>Die Momentaufnahme Sitzung befindet sich nicht in dem Status, in dem ein Abschneiden erfolgen kann. Mögliche Ursachen sind:</p>
-<ul>
-<li><p>der-Vorgang erfolgt nach dem Timeout der Momentaufnahme Sitzung.</p></li>
-<li><p>die Sitzung wurde als Kopier Momentaufnahme angegeben.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 
-Bei Erfolg werden die Protokolldateien für eine oder alle Instanzen, die Teil der Momentaufnahme Sitzung sind, nach Möglichkeit abgeschnitten.
+| <p>Rückgabecode</p> | <p>Beschreibung</p> | 
+|--------------------|--------------------|
+| <p>JET_errSuccess</p> | <p>Der Vorgang wurde erfolgreich abgeschlossen.</p> | 
+| <p>JET_errInvalidGrbit</p> | <p>Der <em>grbit-Parameter</em> ist ungültig.</p> | 
+| <p>JET_errOSSnapshotInvalidSequence</p> | <p>Die Momentaufnahmesitzung befindet sich nicht in dem Zustand, in dem eine Kürzung erfolgen kann. Mögliche Ursachen sind:</p><ul><li><p>Der Aufruf erfolgt nach dem Time out der Momentaufnahmesitzung.</p></li><li><p>Die Sitzung wurde als Kopiermomentaufnahme angegeben.</p></li></ul> | 
 
-#### <a name="remarks"></a>Bemerkungen
 
-Diese Funktion sollte nur aufgerufen werden, wenn die Momentaufnahme mit der JET_bitContinueAfterThaw-Option erstellt wurde. Andernfalls würde die Momentaufnahme Sitzung nach dem [jedessnapshotthaw](./jetossnapshotthaw-function.md) -Befehl beendet werden.
+
+Bei Erfolg werden die Protokolldateien für eine oder alle Instanzen, die Teil der Momentaufnahmesitzung sind, nach Möglichkeit abgeschnitten.
+
+#### <a name="remarks"></a>Hinweise
+
+Diese Funktion sollte nur aufgerufen werden, wenn die Momentaufnahme mit der Option JET_bitContinueAfterThaw erstellt wurde. Andernfalls wäre die Momentaufnahmesitzung nach dem [JetOSSnapshotThaw-Aufruf](./jetossnapshotthaw-function.md) beendet worden.
 
 #### <a name="requirements"></a>Anforderungen
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p><strong>Client</strong></p></td>
-<td><p>Erfordert Windows Vista.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Server</strong></p></td>
-<td><p>Erfordert Windows Server 2008.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
-</tr>
-<tr class="even">
-<td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
-</tr>
-<tr class="odd">
-<td><p><strong>DLL</strong></p></td>
-<td><p>Erfordert ESENT.dll.</p></td>
-</tr>
-</tbody>
-</table>
+
+| | | <p><strong>Client</strong></p> | <p>Erfordert Windows Vista.</p> | | <p><strong>Server</strong></p> | <p>Erfordert Windows Server 2008.</p> | | <p><strong>Header</strong></p> | <p>Deklariert in Esent.h.</p> | | <p><strong>Bibliothek</strong></p> | <p>Verwenden Sie ESENT.lib.</p> | | <p><strong>DLL</strong></p> | <p>Erfordert ESENT.dll.</p> | 
+
 
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Fehler Behandlungsparameter](./error-handling-parameters.md)  
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)  
+[Erweiterbare Storage-Engine-Fehler](./extensible-storage-engine-errors.md)  
 [JET_ERR](./jet-err.md)  
-[Jeto ssnapshotend](./jetossnapshotend-function.md)  
-[Jeto ssnapshotfreeze](./jetossnapshotfreeze-function.md)  
-[Jejessnapshotprepare](./jetossnapshotprepare-function.md)  
-[Jejessnapshotthaw](./jetossnapshotthaw-function.md)
+[JetOSSnapshotEnd](./jetossnapshotend-function.md)  
+[JetOSSnapshotFreeze](./jetossnapshotfreeze-function.md)  
+[JetOSSnapshotPrepare](./jetossnapshotprepare-function.md)  
+[JetOSSnapshotThaw](./jetossnapshotthaw-function.md)

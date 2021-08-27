@@ -1,11 +1,11 @@
 ---
-title: Ivmvirtualmachine-Methode ("vpccominterfaces. h")
-description: Legt den Wert der angegebenen Aktivierungs Einstellung für diesen virtuellen Computer fest.
+title: IVMVirtualMachine SetActivationValue-Methode (VPCCOMInterfaces.h)
+description: Legt den Wert der angegebenen Aktivierungseinstellung für diesen virtuellen Computer fest.
 ms.assetid: 6d664a80-1777-42ca-8454-df84c64ab505
 keywords:
-- Methode "stactivationvalue" Virtual PC
-- Ctactivationvalue-Methode Virtual PC, ivmvirtualmachine-Schnittstelle
-- Ivmvirtualmachine Interface Virtual PC, Methode "-Methode"
+- SetActivationValue-Methode Virtueller PC
+- SetActivationValue-Methode Virtual PC, IVMVirtualMachine-Schnittstelle
+- IVMVirtualMachine-Schnittstelle Virtueller PC, SetActivationValue-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4c7cb48b5691a9ca99a0fca5b696d8b545a40e46
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a3f7c669db848a668d294e509ad65a56ef19aebd53d0c718f12e524cfc16a940
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478333"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120124720"
 ---
-# <a name="ivmvirtualmachinesetactivationvalue-method"></a>Ivmvirtualmachine:: abtactivationvalue-Methode
+# <a name="ivmvirtualmachinesetactivationvalue-method"></a>IVMVirtualMachine::SetActivationValue-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Legt den Wert der angegebenen Aktivierungs Einstellung für diesen virtuellen Computer fest.
+Legt den Wert der angegebenen Aktivierungseinstellung für diesen virtuellen Computer fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ HRESULT SetActivationValue(
 
 <dl> <dt>
 
-*activationkey* \[ in\]
+*activationKey* \[ In\]
 </dt> <dd>
 
-Der Schlüssel, der verwendet wird, um den Aktivierungs Wert zu identifizieren, wie er in der \* VMC-Datei gespeichert ist.
+Der Schlüssel, der verwendet wird, um den Aktivierungswert zu identifizieren, der in der \* VMC-Datei gespeichert ist.
 
 </dd> <dt>
 
-*activationvalue* \[ in\]
+*activationValue* \[ In\]
 </dt> <dd>
 
-Der Aktivierungs Wert. Bei diesem Wert kann es sich um einen der folgenden **Variant** -Typen handeln: **VT \_ Array** \| **VT \_ UI1** (RAW Bytes), **VT \_ BSTR** (String), **VT \_ UI4** (Integer) oder **VT \_ bool** (Boolean).
+Der Aktivierungswert. Dieser Wert kann einer der folgenden **VARIANT-Typen** sein: **VT \_ ARRAY** \| **VT \_ UI1** (unformatierte Bytes), **VT \_ BSTR** (Zeichenfolge), **VT \_ UI4** (integer) oder **VT \_ BOOL** (boolescher Wert).
 
 </dd> </dl>
 
@@ -68,27 +68,27 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                      | BESCHREIBUNG                                                                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                            | Der Vorgang wurde durchgeführt.<br/>                                                                                       |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>0x80000003</dt> </dl>           | Der *activationkey* -Parameter ist **null** oder leer, oder der *activationvalue* -Parameter ist kein gültiger VARIANT-Typ.<br/> |
-| <dl> <dt>**VM \_ E \_ VM \_ unbekannt**</dt> <dt>0xa0040207</dt> </dl>      | Die Konfiguration ist unbekannt.<br/>                                                                                       |
-| <dl> <dt>**VM \_ E \_ Pref \_ nicht \_ gefunden**</dt> <dt>0xa0040300</dt> </dl> | Die Konfiguration hat keine gültige Aktivierung.<br/>                                                                          |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                   |
+| <dl> <dt>**E \_ INVALIDARG-0x80000003**</dt> <dt></dt> </dl>           | Der *activationKey-Parameter* ist **NULL** oder leer, oder der *activationValue-Parameter* ist kein gültiger Variantentyp.<br/> |
+| <dl> <dt>**VM \_ E \_ VM \_ UNKNOWN**</dt> <dt>0xA0040207</dt> </dl>      | Die Konfiguration ist unbekannt.<br/>                                                                                       |
+| <dl> <dt>**VM \_ E \_ PREF \_ NOT \_ FOUND**</dt> <dt>0xA0040300</dt> </dl> | Die Konfiguration verfügt über keine gültige Aktivierung.<br/>                                                                          |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>      | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bietet Zugriff auf niedriger Ebene auf jeden Aktivierungs Wert. Sie kann verwendet werden, um Aktivierungs Werte für Kunden definierte Schlüssel festzulegen. Gehen Sie vorsichtig vor, wenn Sie diese Methode verwenden, um System Aktivierungs Werte festzulegen, da für den Aktivierungs Wert keine Fehlerüberprüfung durchgeführt wird. Außerdem können einige Aktivierungs Werte nicht geändert werden, während der virtuelle Computer ausgeführt wird. Wenn ein virtueller Computer gestartet wird, wird eine Kopie seiner Konfigurationswerte erstellt, die zu dem Satz von Aktivierungs Werten wird. Aktivierungs Werte werden so lange beibehalten, bis der virtuelle Computer heruntergefahren oder neu gestartet wird. Beachten Sie, dass Windows Virtual PC die Konfiguration möglicherweise nur zum Speichern von Werten für bestimmte Schlüssel verwendet, d. h., der Aktivierungs Wert darf nie verwendet werden.
+Diese Methode ermöglicht den Zugriff auf einen beliebigen Aktivierungswert auf niedriger Ebene. Sie kann verwendet werden, um Aktivierungswerte für kundendefinierte Schlüssel festzulegen. Seien Sie vorsichtig, wenn Sie diese Methode zum Festlegen von Systemaktivierungswerten verwenden, da keine Fehlerüberprüfung für den Aktivierungswert ausgeführt wird. Außerdem können einige Aktivierungswerte nicht geändert werden, während der virtuelle Computer ausgeführt wird. Wenn ein virtueller Computer gestartet wird, wird eine Kopie seiner Konfigurationswerte vorgenommen, die zu einem Satz von Aktivierungswerten wird. Aktivierungswerte werden beibehalten, bis der virtuelle Computer heruntergefahren oder neu gestartet wird. Beachten Sie, Windows virtueller PC die Konfiguration nur zum Speichern von Werten für bestimmte Schlüssel verwenden darf, d.&Windows der Aktivierungswert möglicherweise nie verwendet wird.
 
 > [!Note]  
-> Die Sitzung für virtuelle Computer muss ausgeführt werden, bevor Aktivierungs Werte geändert werden können.
+> Die Sitzung des virtuellen Computers muss ausgeführt werden, bevor Aktivierungswerte geändert werden können.
 
  
 
-Aktivierungsschlüssel werden auf hierarchische Weise wie die Registrierungsschlüssel in Windows gespeichert. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüssel Pfad" erstellt, der die verschiedenen Schlüssel in einem durch Trennzeichen getrennten Format angibt.
+Aktivierungsschlüssel werden intern in einer hierarchischen Weise gespeichert, ähnlich wie die Registrierungsschlüssel in Windows. Um einen bestimmten Unterschlüssel anzugeben, wird ein "Schlüsselpfad" erstellt, der die verschiedenen Schlüssel in einem durch Schrägstrich getrennten Format angibt.
 
-So legen Sie z. b. den Wert des Schlüssels "Default Action" fest, der \_ sich in der folgenden Schlüsselstruktur befindet:
+So legen Sie beispielsweise den Wert des Schlüssels "Default \_ Action" fest, der sich in der folgenden Schlüsselstruktur befindet:
 
 ``` syntax
 <settings>
@@ -96,7 +96,7 @@ So legen Sie z. b. den Wert des Schlüssels "Default Action" fest, der \_ sich i
         <default_action type="integer">1</default_action>
 ```
 
-Die Pfad Zeichenfolge von *activationkey* wird wie folgt angegeben:
+Die *ActivationKey-Pfadzeichenfolge* wird wie folgt angegeben:
 
 ``` syntax
 "settings/undo_drives/default_action"
@@ -108,12 +108,12 @@ Die Pfad Zeichenfolge von *activationkey* wird wie folgt angegeben:
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmvirtualmachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMVirtualMachine ist als f7092aa1-33ed-4f78-a59f-c00adfc2edd7 definiert.<br/>          |
 
 
 
@@ -121,7 +121,7 @@ Die Pfad Zeichenfolge von *activationkey* wird wie folgt angegeben:
 
 <dl> <dt>
 
-[**Ivmvirtualmachine**](ivmvirtualmachine.md)
+[**IVMVirtualMachine**](ivmvirtualmachine.md)
 </dt> </dl>
 
  

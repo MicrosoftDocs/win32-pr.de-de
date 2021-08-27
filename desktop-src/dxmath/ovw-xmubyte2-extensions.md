@@ -1,19 +1,19 @@
 ---
-description: Beschreibt einen 2D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (1 Byte).
+description: Beschreibt einen 2D-Vektor, der aus ganzen Zahlen ohne Vorzeichen und einer Länge von 8 Bits (1 Byte) besteht.
 ms.assetid: 552af402-2995-4b07-b982-83be27caa017
 title: XMUBYTE2-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19e9b04b08cd618159fac11ac261a43a1d479439
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 498d754a80870e4401fe3106e4794040574cb1f743ad86d540967cd667379b36
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863500"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120117620"
 ---
 # <a name="xmubyte2-extensions"></a>XMUBYTE2-Erweiterungen
 
-Beschreibt einen 2D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (1 Byte).
+Beschreibt einen 2D-Vektor, der aus ganzen Zahlen ohne Vorzeichen und einer Länge von 8 Bits (1 Byte) besteht.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ Beschreibt einen 2D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (
 
 
 
-| Thema                                                       | BESCHREIBUNG                                    |
+| Thema                                                       | Beschreibung                                    |
 |-------------------------------------------------------------|------------------------------------------------|
-| [**XMUBYTE2-Konstruktoren**](xmubyte2-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMUBYTE2` .<br/> |
-| [XMUBYTE2-Operatoren](ovw-xmubyte2-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMUBYTE2` .<br/>    |
+| [**XMUBYTE2-Konstruktoren**](xmubyte2-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMUBYTE2` werden.<br/> |
+| [XMUBYTE2-Operatoren](ovw-xmubyte2-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMUBYTE2` werden.<br/>    |
 
 
 
